@@ -5,17 +5,17 @@ _chem_comp_synonym_atom.comp_alternative_id
 _chem_comp_synonym_atom.atom_id
 _chem_comp_synonym_atom.atom_alternative_id
 NDG          .        O1       O1L
-NDG          .        O5       O  
+NDG          .        O5       O
 NDG          .        H61     H6C1
 NDG          .        H62     H6C2
 NDG          .        H81     H8C1
 NDG          .        H82     H8C2
 NDG          .        H83     H8C3
-NDG          .        HN2     HA  
-NDG          .        HO1     H1L 
-NDG          .        HO3     HB  
-NDG          .        HO4     HC  
-NDG          .        HO6     H6  
+NDG          .        HN2     HA
+NDG          .        HO1     H1L
+NDG          .        HO3     HB
+NDG          .        HO4     HC
+NDG          .        HO6     H6
 #
 data_link_list
 loop_
@@ -57,3 +57,111 @@ _chem_link_angle.value_angle_esd
  ALPHA2-6 1 O6      2 C2      2 O5      112.300    3.000
  ALPHA2-6 1 O6      2 C2      2 C3      109.470    3.000
  ALPHA2-6 1 O6      2 C2      2 H1      109.470    3.000
+#
+data_mod_NH3
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ NH3      change   N      N      .    NT3    -0.200
+ NH3      add      .      H1     H    HNT3    0.100
+ NH3      add      .      H2     H    HNT3    0.100
+ NH3      add      .      H3     H    HNT3    0.100
+ NH3      delete   H      .      .    .        .
+loop_
+_chem_mod_tree.mod_id
+_chem_mod_tree.function
+_chem_mod_tree.atom_id
+_chem_mod_tree.atom_back
+_chem_mod_tree.back_type
+_chem_mod_tree.atom_forward
+_chem_mod_tree.connect_type
+ NH3      change   N      n/a    .        CA     START
+ NH3      add      H1     N      .        .      .
+ NH3      add      H2     N      .        .      .
+ NH3      add      H3     N      .        .      .
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+ NH3      add      N       H1        single       0.890    0.020
+ NH3      add      N       H2        single       0.890    0.020
+ NH3      add      N       H3        single       0.890    0.020
+ NH3      change   N       CA        single       1.491    0.021
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+ NH3      add      H2      N       H3      109.470    3.000
+ NH3      add      H3      N       CA      109.470    3.000
+ NH3      add      H2      N       CA      109.470    3.000
+ NH3      add      H1      N       H2      109.470    3.000
+ NH3      add      H1      N       H3      109.470    3.000
+ NH3      add      H1      N       CA      109.470    3.000
+#
+data_mod_3*END
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ 3*END    change   O3*    O3*    .    OH1    -0.257
+ 3*END    add      .      HO3*   H    HOH1    0.156
+loop_
+_chem_mod_tree.mod_id
+_chem_mod_tree.function
+_chem_mod_tree.atom_id
+_chem_mod_tree.atom_back
+_chem_mod_tree.back_type
+_chem_mod_tree.atom_forward
+_chem_mod_tree.connect_type
+ 3*END    change   O3*    C3*    .        .      END
+ 3*END    add      HO3*   O3*    .        .      .
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+ 3*END    add      O3*     HO3*      single       0.820    0.020
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+ 3*END    add      C3*     O3*     HO3*    120.000    3.000
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.id
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+_chem_mod_tor.new_period
+ 3*END    add      hh       C4*    C3*    O3*    HO3*      0.00  30.0 3
+#
