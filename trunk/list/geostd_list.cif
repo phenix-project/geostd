@@ -114,6 +114,54 @@ _chem_mod_angle.new_value_angle_esd
  NH3      add      H1      N       H3      109.470    3.000
  NH3      add      H1      N       CA      109.470    3.000
 #
+data_mod_5*END
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ 5*END    delete   P      .      .    .       0.000
+ 5*END    delete   O1P    .      .    .       0.000
+ 5*END    delete   O2P    .      .    .       0.000
+ 5*END    change   O5*    O5*    .    OH1    -0.212
+ 5*END    add      .      HO5*   H    HOH1    0.142
+loop_
+_chem_mod_tree.mod_id
+_chem_mod_tree.function
+_chem_mod_tree.atom_id
+_chem_mod_tree.atom_back
+_chem_mod_tree.back_type
+_chem_mod_tree.atom_forward
+_chem_mod_tree.connect_type
+ 5*END    delete   P      n/a    .        .      .
+ 5*END    delete   O1P    n/a    .        .      .
+ 5*END    delete   O2P    n/a    .        .      .
+ 5*END    change   O5*    n/a    .        C5*    START
+ 5*END    add      HO5*   O5*    .        .      .
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+ 5*END    add      O5*     HO5*      single       0.840    0.020
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+ 5*END    add      C5*     O5*     HO5*    120.000    3.000
+#
+#
 data_mod_3*END
 #
 loop_
