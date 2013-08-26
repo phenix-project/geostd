@@ -2,6 +2,7 @@
 # ALPHA2-6 added naively (not really tested)
 # NH3, 3*END added by J.J.Headd with neutron distances
 # Other glcosidic links added from Monomer Library with removal of torsions
+# moved ACID-ASP, ACID-GLU and added neutron_value
 data_comp_synonym_atom_list
 loop_
 _chem_comp_synonym_atom.comp_id
@@ -20,6 +21,7 @@ _chem_comp_synonym_atom.atom_alternative_id
  NDG  .  HO3  HB
  NDG  .  HO4  HC
  NDG  .  HO6  H6
+ TYR  .  HB3  HB1
 
 data_link_list
 loop_
@@ -154,7 +156,8 @@ _chem_mod_bond.atom_id_2
 _chem_mod_bond.new_type
 _chem_mod_bond.new_value_dist
 _chem_mod_bond.new_value_dist_esd
- 5*END  add  O5*  HO5*  single  0.840  0.020
+_chem_mod_bond.new_value_dist_neutron
+ 5*END  add  O5*  HO5*  single  0.840  0.020 1.020
 
 loop_
 _chem_mod_angle.mod_id
@@ -197,7 +200,8 @@ _chem_mod_bond.atom_id_2
 _chem_mod_bond.new_type
 _chem_mod_bond.new_value_dist
 _chem_mod_bond.new_value_dist_esd
- 3*END  add  O3*  HO3*  single  0.840  0.020
+_chem_mod_bond.new_value_dist_neutron
+ 3*END  add  O3*  HO3*  single  0.840  0.020 1.020
 
 loop_
 _chem_mod_angle.mod_id
@@ -591,4 +595,194 @@ _chem_link_angle.value_angle
 _chem_link_angle.value_angle_esd
  BETA2-3  1  C2  2  O3  2  C1  108.700  3.000
  BETA2-3  1  C1  1  C2  2  O3  112.300  3.000
-
+#
+data_mod_COOH
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ COOH      change   C      C      .    C       0.340
+ COOH      change   O      O      .    OC     -0.350
+ COOH      add      .      OXT    O    OC     -0.350
+ COOH      add      .      HXT    H    HOH1    0.250
+loop_
+_chem_mod_tree.mod_id
+_chem_mod_tree.function
+_chem_mod_tree.atom_id
+_chem_mod_tree.atom_back
+_chem_mod_tree.back_type
+_chem_mod_tree.atom_forward
+_chem_mod_tree.connect_type
+ COOH      add      OXT    C      .        .      END
+ COOH      change   C      n/a    .        OXT    .
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_neutron
+ COOH      change   C       O         double       1.185    0.020 1.185
+ COOH      add      C       OXT       single       1.330    0.020 1.330
+ COOH      add      OXT     HXT       single       0.948    0.020 1.020
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+ COOH      change   CA      C       O       118.600    3.000
+ COOH      add      CA      C       OXT     118.600    3.000
+ COOH      add      O       C       OXT     122.800    3.000
+ COOH      add      C       OXT     HXT     108.000    3.000
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.id
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+_chem_mod_tor.new_period
+ COOH      add      psi      N      CA     C      OXT     160.00  30.0 2
+ COOH      add      psi      O      C      OXT    HXT       0.00  30.0 0
+loop_
+_chem_mod_plane_atom.mod_id
+_chem_mod_plane_atom.function
+_chem_mod_plane_atom.plane_id
+_chem_mod_plane_atom.atom_id
+_chem_mod_plane_atom.new_dist_esd
+ COOH        add       oxt      C         0.020
+ COOH        add       oxt      CA        0.020
+ COOH        add       oxt      O         0.020
+ COOH        add       oxt      OXT       0.020
+ COOH        add       oxt      HXT       0.020
+#
+data_mod_ACID-ASP
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ ACID-ASP      change   CG     CG     .    C       0.340
+ ACID-ASP      change   OD1    OD1    .    OC     -0.350
+ ACID-ASP      change   OD2    OD2    .    OC     -0.350
+ ACID-ASP      add      .      HD2    H    HOH1    0.250
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_neutron
+ ACID-ASP      change   CG      OD1       double       1.185    0.020 1.185
+ ACID-ASP      change   CG      OD2       single       1.330    0.020 1.330
+ ACID-ASP      add      OD2     HD2       single       0.948    0.020 1.020
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+ ACID-ASP      add      CG      OD2     HD2     108.320    3.000
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.id
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+_chem_mod_tor.new_period
+ ACID-ASP      add      psi      CB     CG     OD2    HD2     180.00  30.0 0
+loop_
+_chem_mod_plane_atom.mod_id
+_chem_mod_plane_atom.function
+_chem_mod_plane_atom.plane_id
+_chem_mod_plane_atom.atom_id
+_chem_mod_plane_atom.new_dist_esd
+ ACID-ASP        add       cooh      CB        0.020
+ ACID-ASP        add       cooh      CG        0.020
+ ACID-ASP        add       cooh      OD1       0.020
+ ACID-ASP        add       cooh      OD2       0.020
+ ACID-ASP        add       cooh      HD2       0.020
+#
+data_mod_ACID-GLU
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ ACID-GLU      change   CD     CD     .    C       0.340
+ ACID-GLU      change   OE1    OE1    .    OC     -0.350
+ ACID-GLU      change   OE2    OE2    .    OC     -0.350
+ ACID-GLU      add      .      HE2    H    HOH1    0.250
+loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_neutron
+ ACID-GLU      change   CD      OE1       double       1.185    0.020 1.185
+ ACID-GLU      change   CD      OE2       single       1.330    0.020 1.330
+ ACID-GLU      add      OE2     HE2       single       0.948    0.020 1.020
+loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+ ACID-GLU      add      CD      OE2     HE2     108.320    3.000
+loop_
+_chem_mod_tor.mod_id
+_chem_mod_tor.function
+_chem_mod_tor.id
+_chem_mod_tor.atom_id_1
+_chem_mod_tor.atom_id_2
+_chem_mod_tor.atom_id_3
+_chem_mod_tor.atom_id_4
+_chem_mod_tor.new_value_angle
+_chem_mod_tor.new_value_angle_esd
+_chem_mod_tor.new_period
+ ACID-GLU      add      psi      CG     CD     OE2    HE2     180.00  30.0 0
+loop_
+_chem_mod_plane_atom.mod_id
+_chem_mod_plane_atom.function
+_chem_mod_plane_atom.plane_id
+_chem_mod_plane_atom.atom_id
+_chem_mod_plane_atom.new_dist_esd
+ ACID-GLU        add       cooh      CG        0.020
+ ACID-GLU        add       cooh      CD        0.020
+ ACID-GLU        add       cooh      OE1       0.020
+ ACID-GLU        add       cooh      OE2       0.020
+ ACID-GLU        add       cooh      HE2       0.020
