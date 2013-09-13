@@ -1,0 +1,104 @@
+data_comp_list
+loop_
+_chem_comp.id
+_chem_comp.three_letter_code
+_chem_comp.name
+_chem_comp.group
+_chem_comp.number_atoms_all
+_chem_comp.number_atoms_nh
+_chem_comp.desc_level
+_chem_comp.initial_date
+_chem_comp.modified_date
+_chem_comp.source
+ OEX  OEC  'OXYGEN EVOLVING SYSTEM              '  non-polymer  9  9  .  2013-09-13  2013-09-13  
+;
+  Geometry restraints for OEX (Mn4CaO5 cluster in Photosystem II)
+  Bond distances based on EXAFS experiments.  Angles are just guesses; the
+  real structure should not be this box-like, but we don't have good data
+  at high resolution that isn't radiation-damaged.  There is a separate CIF
+  for the XRD-derived restraints based on 3arc, but I don't trust those angles.
+  Derived from CCP4 monomer library entry for OEX; the coordinates listed
+  here are from the original file, and are probably not reliable!
+  Note that only 3arc (so far) contains this residue, due to errors
+  in an earlier PSII structure which resulted in the chemical component
+  dictionary for "OEX" ending up with one fewer oxygen.  However, all
+  PSII complexes do in fact contain the entity described here.
+  The EXAFS experiments indicate that 2-3 Mn-Ca distances are 3.4A, and
+  1-2 distances are 3.9A.  I am assuming here that there are 3 of the first
+  and 1 of the latter, since this is closest to the high-resolution SR
+  structure (3arc), but it may be wise to try the other way too.
+  Neutron distances added
+;
+
+data_comp_OEX
+loop_
+_chem_comp_atom.comp_id
+_chem_comp_atom.atom_id
+_chem_comp_atom.type_symbol
+_chem_comp_atom.type_energy
+_chem_comp_atom.partial_charge
+_chem_comp_atom.x
+_chem_comp_atom.y
+_chem_comp_atom.z
+ OEX  CA1  CA  CA  0.000   0.000   0.000  0.000
+ OEX  O1   O   O   0.000   0.571  -2.042  0.959
+ OEX  O2   O   O   0.000  -1.692  -0.358  1.784
+ OEX  O3   O   O   0.000   0.203  -1.678  3.555
+ OEX  O4   O   O   0.000  -1.730   2.012  2.935
+ OEX  O5   O   O   0.000   1.205   0.665  2.078
+ OEX  MN1  MN  MN  0.000   1.647  -1.867  2.479
+ OEX  MN2  MN  MN  0.000  -1.121  -2.390  2.084
+ OEX  MN3  MN  MN  0.000  -0.771   0.196  3.317
+ OEX  MN4  MN  MN  0.000   0.119   2.891  2.443
+
+loop_
+_chem_comp_bond.comp_id
+_chem_comp_bond.atom_id_1
+_chem_comp_bond.atom_id_2
+_chem_comp_bond.type
+_chem_comp_bond.value_dist
+_chem_comp_bond.value_dist_esd
+_chem_comp_bond.value_dist_neutron
+ OEX  MN1  O1   single  1.870  0.030  1.870
+ OEX  MN1  O3   single  1.870  0.030  1.870
+ OEX  MN1  O5   single  1.870  0.030  1.870
+ OEX  MN2  O1   single  1.870  0.030  1.870
+ OEX  MN2  O2   single  1.870  0.030  1.870
+ OEX  MN2  O3   single  1.870  0.030  1.870
+ OEX  MN3  O2   single  1.870  0.030  1.870
+ OEX  MN3  O3   single  1.870  0.030  1.870
+ OEX  MN3  O4   single  1.870  0.030  1.870
+ OEX  MN3  O5   single  1.870  0.030  1.870
+ OEX  MN4  O4   single  1.870  0.030  1.870
+ OEX  MN4  O5   single  1.870  0.030  1.870
+ OEX  MN1  MN2  single  2.750  0.050  2.750
+ OEX  MN1  MN3  single  2.750  0.050  2.750
+ OEX  MN2  MN3  single  3.300  0.050  3.300
+ OEX  MN3  MN4  single  2.750  0.050  2.750
+ OEX  CA1  MN1  single  3.400  0.050  3.400
+ OEX  CA1  MN2  single  3.400  0.050  3.400
+ OEX  CA1  MN3  single  3.400  0.050  3.400
+ OEX  CA1  MN4  single  3.900  0.050  3.900
+
+loop_
+_chem_comp_angle.comp_id
+_chem_comp_angle.atom_id_1
+_chem_comp_angle.atom_id_2
+_chem_comp_angle.atom_id_3
+_chem_comp_angle.value_angle
+_chem_comp_angle.value_angle_esd
+ OEC  MN1  O1   MN2   90.000  1.000
+ OEC  MN1  O3   MN2   90.000  1.000
+ OEC  MN1  O5   MN3   90.000  1.000
+ OEC  MN1  O3   MN3   90.000  1.000
+ OEC  MN2  O2   MN3   90.000  1.000
+ OEC  MN2  O3   MN3   90.000  1.000
+ OEC  MN3  O4   MN4   90.000  1.000
+ OEC  MN3  O5   MN4   90.000  1.000
+ OEC  O1   MN1  O5    90.000  1.000
+ OEC  O2   MN2  O1    90.000  1.000
+ OEC  O2   MN3  O3    90.000  1.000
+ OEC  MN1  O5   MN4  180.000  2.000
+ OEC  O3   MN3  O4   180.000  2.000
+ OEC  O2   MN3  O4    90.000  2.000
+
