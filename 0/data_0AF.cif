@@ -191,14 +191,16 @@ _chem_comp_tor.period
 0AF CONST_20       CE3     CD2     CG      CB            0.00   0.0 0
 0AF CONST_21       O1      CZ2     CE2     CD2        -180.00   0.0 0
 0AF CONST_22       O1      CZ2     CE2     NE1           0.00   0.0 0
-0AF CONST_23       CZ3     CH2     CZ2     O1          180.00   0.0 0
 0AF CONST_24      HE1      NE1     CD1     CG          180.00   0.0 0
+0AF CONST_23       CZ3     CH2     CZ2     O1          180.00   0.0 0
+0AF CONST_32       CH2     CZ2     O1      H1            0.00   0.0 0
 0AF CONST_25      HE3      CE3     CD2     CG           -0.00   0.0 0
 0AF CONST_26      HD1      CD1     CG      CD2         180.00   0.0 0
 0AF CONST_27      HZ3      CZ3     CE3     CD2        -180.00   0.0 0
 0AF CONST_28      HH2      CH2     CZ2     CE2        -180.00   0.0 0
 0AF CONST_29       HXT     OXT     C       CA          180.00   0.0 0
-0AF Var_01         CD1     CG      CB      CA           59.84  30.0 2
+ 0AF      chi1     N      CA     CB     CG       180.000   15.000   3
+ 0AF      chi2     CA     CB     CG     CD1       90.000   20.000   2
 #
 loop_
 _chem_comp_chir.comp_id
@@ -224,6 +226,7 @@ _chem_comp_plane_atom.dist_esd
 0AF plan-1    CE3 0.020
 0AF plan-1    CZ2 0.020
 0AF plan-1     O1 0.020
+0AF plan-1     H1 0.020
 0AF plan-1    CZ3 0.020
 0AF plan-1    CH2 0.020
 0AF plan-1    HD1 0.020
@@ -236,3 +239,46 @@ _chem_comp_plane_atom.dist_esd
 0AF plan-2      O 0.020
 0AF plan-2    OXT 0.020
 0AF plan-2    HXT 0.020
+loop_
+_chem_comp_rotamer_info.comp_id
+_chem_comp_rotamer_info.phil_str
+ 0AF
+;
+tor_ids = chi1 chi2
+rotamer {
+ id = p-90
+ frequency = 0.11
+ angles = 58 -87
+}
+rotamer {
+ id = p90
+ frequency = 0.06
+ angles = 60 92
+}
+rotamer {
+ id = t-105
+ frequency = 0.16
+ angles = 178 -105
+}
+rotamer {
+ id = t90
+ frequency = 0.18
+ angles = -178 88
+}
+rotamer {
+ id = m-90
+ frequency = 0.05
+ angles = -70 -87
+}
+rotamer {
+ id = m0
+ frequency = 0.08
+ angles = -66 -4
+}
+rotamer {
+ id = m95
+ frequency = 0.32
+ angles = -69 95
+}
+;
+
