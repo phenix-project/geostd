@@ -863,7 +863,6 @@ _chem_mod_plane_atom.new_dist_esd
  ACID-GLU        add       cooh      OE1       0.020
  ACID-GLU        add       cooh      OE2       0.020
  ACID-GLU        add       cooh      HE2       0.020
-
 #
 data_link_ACE_C-N
 #
@@ -962,4 +961,51 @@ _chem_link_tor.period
  SS       ss       1 CB     1 SG  2 SG  2 CB   93.0  -86.0        10.0 1
  SS       chi2_1   1 CA     1 CB  1 SG  2 SG   79.0  183.0,-73.0  20.0 1
  SS       chi2_2   1 SG     2 SG  2 CB  1 CA  -79.0 -183.0,73.0   20.0 1
+#
+data_mod_NH2NOTPRO # same as NH2 but without the HN2-N-CD angle
+#
+loop_
+_chem_mod_atom.mod_id
+_chem_mod_atom.function
+_chem_mod_atom.atom_id
+_chem_mod_atom.new_atom_id
+_chem_mod_atom.new_type_symbol
+_chem_mod_atom.new_type_energy
+_chem_mod_atom.new_partial_charge
+ NH2      change   N      N       .    NH2     0.000
+ NH2      add      .      HN1     H    HNH2    0.000
+ NH2      add      .      HN2     H    HNH2    0.000
+ loop_
+_chem_mod_tree.mod_id
+_chem_mod_tree.function
+_chem_mod_tree.atom_id
+_chem_mod_tree.atom_back
+_chem_mod_tree.back_type
+_chem_mod_tree.atom_forward
+_chem_mod_tree.connect_type
+ NH2      change   N       n/a    .        CA     START
+ NH2      add      HN1     N      .        .      .
+ NH2      add      HN2     N      .        .      .
+  loop_
+_chem_mod_bond.mod_id
+_chem_mod_bond.function
+_chem_mod_bond.atom_id_1
+_chem_mod_bond.atom_id_2
+_chem_mod_bond.new_type
+_chem_mod_bond.new_value_dist
+_chem_mod_bond.new_value_dist_esd
+_chem_mod_bond.new_value_dist_neutron
+ NH2      add      N       HN1       single       0.860    0.020 0.960
+ NH2      add      N       HN2       single       0.860    0.020 0.960
+  loop_
+_chem_mod_angle.mod_id
+_chem_mod_angle.function
+_chem_mod_angle.atom_id_1
+_chem_mod_angle.atom_id_2
+_chem_mod_angle.atom_id_3
+_chem_mod_angle.new_value_angle
+_chem_mod_angle.new_value_angle_esd
+ NH2      add      HN1      N       CA      109.470    3.000
+ NH2      add      HN2      N       CA      109.470    3.000
+ NH2      add      HN1      N       HN2     109.470    3.000
 #
