@@ -1,3 +1,13 @@
+# electronic Ligand Builder and Optimisation Workbench (eLBOW)
+#   - a module of PHENIX version dev-svn-
+#   - file written: Thu Nov  2 11:32:29 2017
+#
+#   Inital geometry file: a 26 line input string
+#   Ligand name: acetic acid
+#   Quantum optimisation: True
+#   Method: AM1
+#   Random seed: 3628800
+#   SMILES string: CC(O)=O
 #
 data_comp_list
 loop_
@@ -11,11 +21,10 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
-ACY   ACY 'Acetic acid' non-polymer     7   4 .
-2011-04-12 2011-04-12
+ACY        ACY 'acetic acid              ' ligand 7 4 .
+2011-04-12 2017-11-02
 ;
-Generated using eLBOW with both the Chemical Components and
-Monomer Library entry for the ligand as input.
+CIF prepared directly in eLBOW for partial charges
 ;
 #
 data_comp_ACY
@@ -25,17 +34,19 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
+_chem_comp_atom.charge
 _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- ACY           O      O    O         0.000      1.011      0.840     -0.000
- ACY           C      C    C         0.000      0.012     -0.056      0.002
- ACY           OXT    O    OC        0.000      0.261     -1.238     -0.000
- ACY           CH3    C    CH3       0.000     -1.421      0.412     -0.000
- ACY           H3     H    HCH3      0.000     -2.042     -0.320     -0.517
- ACY           H2     H    HCH3      0.000     -1.489      1.372     -0.512
- ACY           H1     H    HCH3      0.000     -1.768      0.523      1.027
+ACY         C      C   C      0   0.394   -0.0375    0.0012    0.0723
+ACY         O      O   O      0  -0.653    1.2442   -0.0030   -0.0239
+ACY         OXT    O   OC    -1  -0.585   -0.6673   -0.0028    1.1211
+ACY         CH3    C   CH3    0  -0.242   -0.7408    0.0117   -1.2893
+ACY         H1     H   HCH3   0   0.027   -0.9317   -1.0109   -1.6303
+ACY         H2     H   HCH3   0   0.022   -1.7131    0.5209   -1.1854
+ACY         H3     H   HCH3   0   0.037   -0.1753    0.5154   -2.0691
+#
 loop_
 _chem_comp_bond.comp_id
 _chem_comp_bond.atom_id_1
@@ -43,12 +54,14 @@ _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- ACY      C      O         deloc       1.250    0.020
- ACY      OXT    C         deloc       1.250    0.020
- ACY      CH3    C         single      1.500    0.020
- ACY      H3     CH3       single      1.090    0.020
- ACY      H2     CH3       single      1.090    0.020
- ACY      H1     CH3       single      1.090    0.020
+_chem_comp_bond.value_dist_neutron
+ACY   C       O     deloc         1.285 0.013     1.285
+ACY   C       OXT   deloc         1.223 0.013     1.223
+ACY   C       CH3   single        1.533 0.040     1.533
+ACY   CH3     H1    single        0.970 0.040     1.095
+ACY   CH3     H2    single        0.970 0.039     1.102
+ACY   CH3     H3    single        0.970 0.040     1.087
+#
 loop_
 _chem_comp_angle.comp_id
 _chem_comp_angle.atom_id_1
@@ -56,15 +69,16 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- ACY      O      C      OXT     124.000    3.000
- ACY      O      C      CH3     118.000    3.000
- ACY      OXT    C      CH3     118.000    3.000
- ACY      C      CH3    H3      109.470    3.000
- ACY      C      CH3    H2      109.470    3.000
- ACY      C      CH3    H1      109.470    3.000
- ACY      H3     CH3    H2      109.470    3.000
- ACY      H3     CH3    H1      109.470    3.000
- ACY      H2     CH3    H1      109.470    3.000
+ACY   CH3     C       OXT         121.70 1.924
+ACY   CH3     C       O           113.03 2.219
+ACY   OXT     C       O           125.28 2.444
+ACY   H3      CH3     H2          108.20 3.000
+ACY   H3      CH3     H1          107.46 2.940
+ACY   H2      CH3     H1          107.88 2.938
+ACY   H3      CH3     C           113.69 2.675
+ACY   H2      CH3     C           108.92 1.610
+ACY   H1      CH3     C           110.51 2.444
+#
 loop_
 _chem_comp_tor.comp_id
 _chem_comp_tor.id
@@ -75,14 +89,14 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ACY      var_2    O      C      CH3    H1         0.000   20.000   1
- ACY      Var_01   H3     CH3    C      OXT      -30.000   30.000   3
+ACY Var_01         H1      CH3     C       O            90.69  30.0 3
+#
 loop_
 _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- ACY      plan-1    C         0.020
- ACY      plan-1    O         0.020
- ACY      plan-1    OXT       0.020
- ACY      plan-1    CH3       0.020
+ACY plan-1      C 0.020
+ACY plan-1      O 0.020
+ACY plan-1    OXT 0.020
+ACY plan-1    CH3 0.020
