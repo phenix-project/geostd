@@ -122,11 +122,25 @@ _lib_atom.vdw_radius_neutron
 #                     H=hydrogen candidate to hydrogen bonding
 #   _vdw_radius  Van-Der-Waals radius
 #   _vdwh_radius  Van-Der-Waals radius for atom+H
-#  Ionic radii for most of the atoms without hydrogens are
-#  http://www.webelements.com/webelements/elements/text/radii/N.html
-#
-#  or
-#  Chemstry of the elements by Greenwood and Earnshaw
+#  Ionic radii for the metallic atoms are from the following sources:
+#   for most common metals we use Pauling's ionic radii
+#    "VdW radii" = ionic + 0.74 (i.e., oxygenVDW(1.4) - oxygenCov(0.66))
+#    because the ionic radii are usually calculated from Oxygen-Metal distance
+#     (Li, Na, Al, K, Mg, Ca, Mn, Fe, Co, Ni, Cu, Zn, Rb, Sr, Mo, Ag, Cd, In,
+#      Cs, Ba, Au, Hg, Tl, Pb)
+#   for other metals we use Shannon's ionic radii
+#    Acta Crystallogr. (1975) A32, pg751.
+#     (V, Cr, Te, Sm, Gd, Yb, W, Pt, U)
+#   Cotton & Wilkinson and also-
+#    L.E. Sutton (ed.) in Table of interatomic distances and configuration in molecules
+#    and ions, Supplement 1956-1959, Special publication No. 18, Chemical Society,
+#    London, UK, 1965 (as listed in web-elements by Mark Winter)
+#     (Be, Si, Sc, Ti, Ga, Ge, Y, Zr, Sn, Sb, La, Ce, Fr, Ra, Th)
+#   finally, we have a set of elements where the radii are unknown
+#    so we use estimates and extrapolations based on web-elements data
+#     (Nb, Tc, Ru, Rh, Pd, Pr, Nd, Pm, Eu, Tb, Dy, Ho, Er, Tm, Lu, Hf,
+#      Ta, Re, Os, Ir, Bi, Po, At, Ac, Pa, Np, Pu, Am, Cm, Bk, Cf, Es, Fm,
+#      Md, No)
 #  VDW radii of carbon atoms with hydrogen have been taken from paper
 #   Li and Nussinov, Proteins, 32 111-127 (1998)
 #
@@ -173,18 +187,20 @@ _lib_atom.vdw_radius_neutron
  NR16    14.00670  D     1.550     1.600    1.32   N   3  2  .
  NRD6    14.00670  A     1.550     1.600    1.32   N   3  2  .
 #
- OS      15.99940  A     1.400     1.520    1.28   O   2  2  .
- O       15.99940  A     1.400     1.520    1.28   O   2  2  .
- O2      15.99940  A     1.400     1.520    1.28   O   2  3  .
- OH1     15.99940  B     1.400     1.520    1.28   O   2  3  .
- OH2     15.99940  B     1.400     1.520    1.28   O   2  3  .
- OHA     15.99940  B     1.400     1.680    1.28   O   2  3  .
- OHB     15.99940  B     1.400     1.680    1.28   O   2  3  .
- OHC     15.99940  B     1.400     1.680    1.28   O   2  3  .
- OC2     15.99940  A     1.400     1.520    1.28   O   2  2  .
- OC      15.99940  A     1.400     1.520    1.28   O   2  2  .
- OP      15.99940  A     1.400     1.520    1.28   O   2  2  .
- OB      15.99940  A     1.400     1.520    1.28   O   2  2  .
+# superceded by values in geostd_ener_lib.cif
+#
+# OS      15.99940  A     1.400     1.520    1.28   O   2  2  .
+# O       15.99940  A     1.400     1.520    1.28   O   2  2  .
+# O2      15.99940  A     1.400     1.520    1.28   O   2  3  .
+# OH1     15.99940  B     1.400     1.520    1.28   O   2  3  .
+# OH2     15.99940  B     1.400     1.520    1.28   O   2  3  .
+# OHA     15.99940  B     1.400     1.680    1.28   O   2  3  .
+# OHB     15.99940  B     1.400     1.680    1.28   O   2  3  .
+# OHC     15.99940  B     1.400     1.680    1.28   O   2  3  .
+# OC2     15.99940  A     1.400     1.520    1.28   O   2  2  .
+# OC      15.99940  A     1.400     1.520    1.28   O   2  2  .
+# OP      15.99940  A     1.400     1.520    1.28   O   2  2  .
+# OB      15.99940  A     1.400     1.520    1.28   O   2  2  .
 #
  P       30.97380  N     1.800     1.88     0.59   P   5  .  .
  P1      30.97380  N     1.800     1.88     0.59   P   5  .  .
@@ -223,123 +239,123 @@ _lib_atom.vdw_radius_neutron
  HOHC     1.00800  H     1.050      .     .     H   1  .  1.0
  HSH1     1.00800  H     1.050      .     .     H   1  .  1.0
 #
- SI      28.0855   N     2.10       .    0.40   SI   4  3  .
- SI1     28.0855   N     2.10       .    0.40   SI   4  .  .
- GE      72.59     N     2.10       .    0.40   GE   1  .  .
- GE1     72.59     N     2.10       .    0.40   GE   1  .  .
- SN     118.69     N     2.17       .    0.69   SN   1  .  .
- PB     207.2      N     2.02       .    0.79   PB   1  .  .
+ SI      28.0855   N     1.17       .   2.10    SI   4  3  .
+ SI1     28.0855   N     1.17       .   2.10    SI   4  .  .
+ GE      72.59     N     1.34       .   0.60    GE   1  .  .
+ GE1     72.59     N     1.34       .   0.60    GE   1  .  .
+ SN     118.69     N     1.45       .   0.71    SN   1  .  .
+ PB     207.2      N     1.58       .   0.84    PB   1  .  .
 #
- LI       6.941    N     1.82       .    0.73   LI   1  .  .
- NA      22.990    N     2.27       .    1.13   NA   1  .  .
- K       30.0983   N     2.75       .    1.51   K    1  .  .
- RB      85.468    N     2.00       .    1.48   RB   1  .  .
- CS     132.905    N     2.98       .    1.81   CS   1  .  .
- FR     223.0      N     .          .    1.94   FR   1  .  .
+ LI       6.941    N     1.34       .   0.60    LI   1  .  .
+ NA      22.990    N     1.69       .   0.95    NA   1  .  .
+ K       30.0983   N     2.07       .   1.33    K    1  .  .
+ RB      85.468    N     2.22       .   1.48    RB   1  .  .
+ CS     132.905    N     2.43       .   1.69    CS   1  .  .
+ FR     223.0      N     2.68       .   1.94    FR   1  .  .
 #
- BE       9.0123   N     1.12       .    0.41   BE   1  .  .
- MG      24.30500  N     1.73       .    0.71   MG   1  .  .
- CA      40.08000  N     1.94       .    1.14   CA   1  .  .
- SR      87.62     N     2.19       .    1.32   SR   1  .  .
- BA     137.33     N     2.53       .    1.49   BA   1  .  .
- RA     226.025    N     2.15       .    1.62   RA   1  .  .
+ BE       9.0123   N     0.90       .   0.31    BE   1  .  .
+ MG      24.30500  N     1.39       .   0.65    MG   1  .  .
+ CA      40.08000  N     1.73       .   0.99    CA   1  .  .
+ SR      87.62     N     1.84       .   1.10    SR   1  .  .
+ BA     137.33     N     2.03       .   1.29    BA   1  .  .
+ RA     226.025    N     2.36       .   1.62    RA   1  .  .
 #
- SC      44.9559   N     1.60       .    0.885  SC   1  .  .
- Y       88.9059   N     1.80       .    1.04   Y    1  .  .
- LA     138.9055   N     1.95       .    1.172  LA   1  .  .
- CE     140.12     N     1.85       .    1.01   CE   1  .  .
- PR     140.9077   N     1.85       .    0.99   PR   1  .  .
- ND     144.24     N     1.85       .    1.123  ND   1  .  .
- PM        .       N      .         .    1.11   PM   1  .  .
- SM     150.36     N     1.85       .    1.098  SM   1  .  .
- EU     151.96     N     1.85       .    1.087  EU   1  .  .
- GD     157.25     N     1.80       .    1.078  GD   1  .  .
- TB     158.9254   N     1.75       .    0.90   TB   1  .  .
- DY     162.50     N     1.75       .    1.052  DY   1  .  .
- HO     164.9304   N     1.75       .    1.041  HO   1  .  .
- ER     167.26     N     1.75       .    1.03   ER   1  .  .
- TM     168.9342   N     1.75       .    1.02   TM   1  .  .
- YB     173.04     N     1.75       .    1.008  YB   1  .  .
- LU     174.967    N     1.75       .    1.001  LU   1  .  .
+ SC      44.9559   N     0.44       .   0.68    SC   1  .  .
+ Y       88.9059   N     1.64       .   0.90    Y    1  .  .
+ LA     138.9055   N     1.77       .   1.03    LA   1  .  .
+ CE     140.12     N     1.61       .   0.87    CE   1  .  .
+ PR     140.9077   N     1.65       .   1.11    PR   1  .  .
+ ND     144.24     N     1.64       .   1.10    ND   1  .  .
+ PM        .       N     1.89       .   1.15    PM   1  .  .
+ SM     150.36     N     1.82       .   1.08    SM   1  .  .
+ EU     151.96     N     1.85       .   1.31    EU   1  .  .
+ GD     157.25     N     1.79       .   1.05    GD   1  .  .
+ TB     158.9254   N     1.59       .   1.05    TB   1  .  .
+ DY     162.50     N     1.59       .   1.05    DY   1  .  .
+ HO     164.9304   N     1.58       .   1.04    HO   1  .  .
+ ER     167.26     N     1.57       .   1.03    ER   1  .  .
+ TM     168.9342   N     1.56       .   1.02    TM   1  .  .
+ YB     173.04     N     1.88       .   1.14    YB   1  .  .
+ LU     174.967    N     1.56       .   1.02    LU   1  .  .
 #
- AC     227.028    N     1.95       .    1.26   AC   1  .  .
- TH     232.0      N     1.80       .    1.08   TH   1  .  .
- PA     231.0      N     1.80       .    0.92   PA   1  .  .
- U      238.0      N     1.86       .    0.66   U    1  .  .
- NP     237.0      N     1.75       .    0.85   NP   1  .  .
- PU     239.0      N     1.75       .    0.85   PU   1  .  .
- AM     241.0      N     1.75       .    0.99   AM   1  .  .
- CM     244.0      N      .         .    0.99   CM   1  .  .
- BK     249.0      N      .         .    0.97   BK   1  .  .
- CF     252.0      N      .         .    0.961  CF   1  .  .
- ES     253.0      N      .         .     .     ES   1  .  .
- FM     257.0      N      .         .     .     FM   1  .  .
- MD     256.0      N      .         .     .     MD   1  .  .
- NO     255.0      N      .         .     .     NO   1  .  .
+ AC     227.028    N     2.00       .   1.30    AC   1  .  .
+ TH     232.0      N     1.82       .   1.08    TH   1  .  .
+ PA     231.0      N     1.85       .   1.10    PA   1  .  .
+ U      238.0      N     1.77       .   1.03    U    1  .  .
+ NP     237.0      N     1.72       .   1.00    NP   1  .  .
+ PU     239.0      N     1.67       .   1.00    PU   1  .  .
+ AM     241.0      N     1.63       .   1.00    AM   1  .  .
+ CM     244.0      N     1.60       .   1.00    CM   1  .  .
+ BK     249.0      N     1.58       .   1.00    BK   1  .  .
+ CF     252.0      N     1.57       .   1.00    CF   1  .  .
+ ES     253.0      N     1.56       .   1.00    ES   1  .  .
+ FM     257.0      N     1.55       .   1.00    FM   1  .  .
+ MD     256.0      N     1.55       .   1.00    MD   1  .  .
+ NO     255.0      N     1.55       .   1.00    NO   1  .  .
  LR     256.0      N      .         .     .     LR   1  .  .
 #
- TI     47.88      N     1.40       .    0.56   TI   1  .  .
- ZR     91.22      N     1.55       .    0.73   ZR   1  .  .
- HF    178.49      N     1.55       .    0.72   HF   1  .  .
+ TI     47.88      N     1.49       .   0.75    TI   1  .  .
+ ZR     91.22      N     1.51       .   0.77    ZR   1  .  .
+ HF    178.49      N     1.46       .   0.85    HF   1  .  .
  RF      .         N      .         .     .     RF   1  .  .
 #
- V      50.9415    N     1.35       .    0.68   V    1  .  .
- NB     92.9064    N     1.45       .    0.62   NB   1  .  .
- TA    180.9479    N     1.45       .    0.78   TA   1  .  .
+ V      50.9415    N     1.53       .   0.79    V    1  .  .
+ NB     92.9064    N     1.40       .   0.86    NB   1  .  .
+ TA    180.9479    N     1.40       .   0.86    TA   1  .  .
  DB       .        N      .         .     .     DB   1  .  .
 #
- CR     51.996     N     1.40       .    0.53   CR   1  .  .
- MO     95.94      N     1.45       .    0.55   MO   1  .  .
- W     183.85      N     1.35       .    0.56   W    1  .  .
+ CR     51.996     N     1.47       .   0.73    CR   1  .  .
+ MO     95.94      N     1.67       .   0.93    MO   1  .  .
+ W     183.85      N     1.40       .   0.66    W    1  .  .
  SG       .        N      .         .     .     SG   1  .  .
 #
- MN     54.938     N     1.40       .   0.46    MN   1  .  .
- TC     98.906     N     1.35       .   0.51    TC   1  .  .
- RE    186.207     N     1.35       .   0.52    RE   1  .  .
+ MN     54.938     N     1.54       .   0.80    MN   1  .  .
+ TC     98.906     N     1.25       .   0.71    TC   1  .  .
+ RE    186.207     N     1.31       .   0.77    RE   1  .  .
  BH      .         N      .         .    .      BH   1  .  .
 #
- FE     55.847     N     1.40       .   0.68    FE   1  .  .
- RU    101.07      N     1.30       .   0.52    RU   1  .  .
- OSE   190.2       N     1.30       .   0.53    OS   1  .  .
+ FE     55.847     N     1.48       .   0.74    FE   1  .  .
+ RU    101.07      N     1.36       .   0.82    RU   1  .  .
+ OSE   190.2       N     1.32       .   0.78    OS   1  .  .
  HS       .        N      .         .    .      HS   1  .  .
 #
- CO     58.9332    N     1.35       .   0.54    CO   1  .  .
- RH    102.9055    N     1.35       .   0.69    RH   1  .  .
- IR    192.22      N     1.35       .   0.71    IR   1  .  .
+ CO     58.9332    N     1.44       .   0.70    CO   1  .  .
+ RH    102.9055    N     1.30       .   0.76    RH   1  .  .
+ IR    192.22      N     1.34       .   0.80    IR   1  .  .
  MT       .        N      .         .    .      MT   1  .  .
 #
- NI    58.69       N     1.63       .   0.63    NI   1  .  .
- PD   106.42       N     1.63       .   0.78    PD   1  .  .
- PT   195.08       N     1.75       .   0.71    PT   1  .  .
+ NI    58.69       N     1.40       .   0.66    NI   1  .  .
+ PD   106.42       N     1.59       .   1.05    PD   1  .  .
+ PT   195.08       N     1.37       .   0.63    PT   1  .  .
 #
- CU    63.546      N     1.40       .   0.71    CU   1  .  .
- AG   107.868      N     1.72       .   0.81    AG   1  .  .
- AU   196.9665     N     1.66       .   0.71    AU   1  .  .
+ CU    63.546      N     1.46       .   0.72    CU   1  .  .
+ AG   107.868      N     2.00       .   1.26    AG   1  .  .
+ AU   196.9665     N     1.84       .   1.10    AU   1  .  .
 #
- ZN    65.38       N     1.39       .   0.74    ZN   1  .  .
- CD   112.41       N     1.58       .   0.92    CD   1  .  .
- HG   200.59       N     1.55       .   1.10    HG   1  .  .
+ ZN    65.38       N     1.45       .   0.71    ZN   1  .  .
+ CD   112.41       N     1.65       .   0.91    CD   1  .  .
+ HG   200.59       N     1.74       .   1.00    HG   1  .  .
 #
  B       10.81     N     0.85       .   0.25    B    1  .  .
- AL      26.98154  N     1.25       .   0.53    AL   1  .  .
- GA      69.72     N     1.87       .   0.61    GA   1  .  .
- IN     114.82     N     1.93       .   0.76    IN   1  .  .
- TL     204.383    N     1.96       .   0.89    TL   1  .  .
+ AL      26.98154  N     1.24       .   0.50    AL   1  .  .
+ GA      69.72     N     1.27       .   0.53    GA   1  .  .
+ IN     114.82     N     1.55       .   0.81    IN   1  .  .
+ TL     204.383    N     2.18       .   1.44    TL   1  .  .
 #
  AS     74.9216    N     1.85       .   0.475   AS   1  .  .
  AS1    74.9216    N     1.85       .   0.475   AS   1  .  .
- SB    121.75      N     1.8        .   0.90    SB   1  .  .
- BI    208.9804    N     1.8        .   0.90    BI   1  .  .
+ SB    121.75      N     1.41       .   2.20    SB   1  .  .
+ BI    208.9804    N     1.71       .   1.17    BI   1  .  .
 #
  SE     78.96      N     1.90       .   0.42    SE   1  .  .
- TE    127.60      N     2.06       .   0.57    TE   1  .  .
- PO    210.0       N     2.0        .   0.81    PO   1  .  .
+ TE    127.60      N     1.71       .   0.97    TE   1  .  .
+ PO    210.0       N     1.53       .   0.99    PO   1  .  .
 #
  F      18.998     B     1.47       .   1.19    F    1  .  .
  CL     35.453     A     1.75       .   1.67    CL   1  .  .
  BR     79.904     N     1.85       .   0.73    BR   1  .  .
  I     126.9045    N     1.98       .   0.56    I    1  .  .
- AT    210.0       N     1.80       .   0.76    AT   1  .  .
+ AT    210.0       N     1.45       .   0.91    AT   1  .  .
 #
  HE      4.0026    N     1.40       .    .      HE   1  .  .
  NE     20.179     N     1.54       .   1.12    NE   1  .  .
