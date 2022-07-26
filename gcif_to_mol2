@@ -1,0 +1,15 @@
+#!/bin/sh
+
+res=$1
+filename=data_$res.cif
+
+$AMBERHOME/bin/antechamber -i $filename -fi ccif -o $res.mol2 -fo mol2  \
+    -bk comp_$res -s 0 -dr no \
+   -at gaff2 -c bcc -ek 'qm_theory="AM1", maxcyc=0, ndiis_attempts=700,'
+status=$?
+
+if [ "$status" == 0 ]; then
+    $AMBERHOME/bin/parmchk2 -s 2 -i $res.mol2 -f mol2 -o $res.frcmod
+fi
+
+/bin/rm -f ANTECH* ATOMTYP* sqm.*
