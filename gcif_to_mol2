@@ -6,8 +6,10 @@ res=${filename:5:3}
 echo "Residue $res"
 
 if [ -f "$res.mol2" ]; then
-   echo "    already done: skipping"
-   exit 0
+   if [ "$filename" -ot "$res.mol2" ]; then
+      echo "    already done: skipping"
+      exit 0
+   fi
 fi
 
 # Check if PBEh-3c method was used:
