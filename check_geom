@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo $1
+
 #============================================================================
 #  Use tleap to create the Amber prmtop file:
 #============================================================================
@@ -28,7 +30,7 @@ cat tleap.out >> $1.geom.log
 #  Do a constrained minimization to regularize the local geometries:
 #============================================================================
 
-./txmin $1.parm7 $1.x $1.min.x > $1.min.o
+../txmin $1.parm7 $1.x $1.min.x > $1.min.o
 
 if [ "$?" -gt 0 ]; then 
    echo "Error in txmin: check $1.min.o"
