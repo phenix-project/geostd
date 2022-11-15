@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo $1
+# echo $1
 
 #============================================================================
 #  Use tleap to create the Amber prmtop file:
@@ -18,7 +18,7 @@ EOF
 
 tleap -f leap.in > tleap.out
 if [ ! -s $1.parm7 ]; then 
-   echo "Error in tleap: check tleap.out or leap.log "
+   echo "Error in tleap for $1: check tleap.out or leap.log "
    exit 1
 fi
 echo "====== tleap.out =====================================================" \
@@ -56,11 +56,17 @@ rms all_heavy reference !@H= out rms.dat
 EOF
 
 if [ "$?" -gt 0 ]; then 
-   echo "Error in cpptraj: check cpptraj.out"
+   echo "Error in cpptraj for $1: check cpptraj.out"
    exit 1
 fi
 echo "====== rms.dat  ======================================================" \
      >> $1.geom.log
-cat rms.dat >> $1.geom.log
 
-/bin/rm cpptraj.out rms.dat $1.parm7 $1.min.x
+if [ -s rms.dat ]; then
+   cat rms.dat >> $1.geom.log
+else
+   echo "rms.dat missing for $1"
+fi
+
+
+/bin/rm -f cpptraj.out rms.dat $1.parm7 $1.min.x
