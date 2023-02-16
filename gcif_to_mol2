@@ -1,0 +1,42 @@
+#!/bin/bash
+
+filename=$1
+res=${filename:5:3}
+
+# echo "Residue $res"
+
+if [ -f "$res.mol2" ]; then
+   if [ "$filename" -ot "$res.mol2" ]; then
+      echo "    already done: skipping"
+      exit 0
+   fi
+fi
+
+# Check if PBEh-3c method was used:
+grep PBEh-3c $filename > /dev/null
+status=$?
+if [ "$status" != 0 ]; then
+   echo "    does not use PBEh-3c"
+   exit 0
+fi
+
+# Check for fullerenes
+grep fullerene $filename > /dev/null
+status=$?
+if [ "$status" == 0 ]; then
+   echo "    contains fullerene"
+   exit 0
+fi
+
+# N.B.: right now (Nov. 22) one needs to be on the "geostd" branch for
+#   this to work.
+$AMBERHOME/bin/antechamber -i $filename -fi ccif -o $res.mol2 -fo mol2  \
+    -bk comp_$res -s 0 -dr no \
+   -at gaff2 -c bcc -ek 'qm_theory="AM1", maxcyc=0, ndiis_attempts=700,'
+
+status=$?
+if [ "$status" == 0 ]; then
+    $AMBERHOME/bin/parmchk2 -s 2 -i $res.mol2 -f mol2 -o $res.frcmod
+fi
+
+/bin/rm -f ANTECH* ATOMTYP* sqm.*
