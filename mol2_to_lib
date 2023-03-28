@@ -1,0 +1,16 @@
+#!/bin/bash
+
+filename=$1
+res=${filename:0:3}
+
+cat <<EOF > tleap.in
+mxx = loadMol2 $res.mol2
+saveOff mxx mxx.lib
+quit
+EOF
+
+tleap -f tleap.in > tleap.log
+
+sed "s/mxx/$res/" mxx.lib > $res.lib 
+
+/bin/rm mxx.lib tleap.in tleap.log
