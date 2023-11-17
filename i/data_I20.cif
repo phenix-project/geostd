@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- I20  I20  '(2S)-2-({(2S)-3-[(R)-[(1R)-1-({(4S)-4-amino-5-[(2S)-2-cyanopyrrolidin-1-yl]-5-oxopentanoyl}amino)ethyl](hydroxy)phosphoryl]-2-benzylpropanoyl}amino)propanoic acid (non-preferred name)'  ligand  72  38  .  2021-08-11  2021-08-11  
+ I20  I20  '(2S)-2-({(2S)-3-[(R)-[(1R)-1-({(4S)-4-amino-5-[(2S)-2-cyanopyrrolidin-1-yl]-5-oxopentanoyl}amino)ethyl](hydroxy)phosphoryl]-2-benzylpropanoyl}amino)propanoic acid (non-preferred name)'  ligand  72  38  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_I20
@@ -343,36 +344,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- I20  CONST_01  C14   C15  C16  C11    0.00   0.0  0
- I20  CONST_02  C14   C13  C12  C11    0.00   0.0  0
- I20  CONST_03  C15   C16  C11  C12    0.00   0.0  0
- I20  CONST_04  C15   C14  C13  C12    0.00   0.0  0
- I20  CONST_05  C16   C11  C12  C13    0.00   0.0  0
- I20  CONST_06  C16   C15  C14  C13    0.00   0.0  0
- I20  CONST_07  C15   C16  C11  C9   180.00   0.0  0
- I20  CONST_08  C13   C12  C11  C9   180.00   0.0  0
- I20  CONST_09  H15   C15  C16  C11  180.00   0.0  0
- I20  CONST_10  H13   C13  C12  C11  180.00   0.0  0
- I20  CONST_11  H16   C16  C11  C12  180.00   0.0  0
- I20  CONST_12  H14   C14  C13  C12  180.00   0.0  0
- I20  CONST_13  H12   C12  C13  C14  180.00   0.0  0
- I20  CONST_14  C28   C    N    CD   180.00   0.0  0
- I20  CONST_15  O     C    N    CD     0.00   0.0  0
- I20  CONST_16  C28   C    N    CA     0.00   0.0  0
- I20  CONST_17  O     C    N    CA   180.00   0.0  0
- I20  CONST_18  C32   C30  N3   C2   180.00   0.0  0
- I20  CONST_19  O31   C30  N3   C2     0.00   0.0  0
- I20  CONST_20  C35   N34  C10  C8   180.00   0.0  0
- I20  CONST_21  O33   C10  N34  C35    0.00   0.0  0
- I20  CONST_22  HN34  N34  C10  C8     0.00   0.0  0
- I20  CONST_23  HN3   N3   C30  C32    0.00   0.0  0
- I20  Var_01    CA    CB   CG   CD    38.60  30.0  1
- I20  Var_02    CB    CA   N    CD    19.39  30.0  1
- I20  Var_03    N     CA   CB   CG   -35.59  30.0  1
- I20  Var_04    C16   C11  C9   C8   -99.88  30.0  2
- I20  Var_05    C8    C7   P4   C2   165.05  30.0  3
- I20  Var_06    O31   C30  C32  C27  -34.69  30.0  3
- I20  Var_07    C28   C27  C32  C30  175.53  30.0  1
+ I20  CONST_01  C14   C15  C16  C11     0.00   0.0  0
+ I20  CONST_02  C14   C13  C12  C11     0.00   0.0  0
+ I20  CONST_03  C15   C16  C11  C12     0.00   0.0  0
+ I20  CONST_04  C15   C14  C13  C12     0.00   0.0  0
+ I20  CONST_05  C16   C11  C12  C13     0.00   0.0  0
+ I20  CONST_06  C16   C15  C14  C13     0.00   0.0  0
+ I20  CONST_07  C15   C16  C11  C9    180.00   0.0  0
+ I20  CONST_08  C13   C12  C11  C9    180.00   0.0  0
+ I20  CONST_09  H15   C15  C16  C11   180.00   0.0  0
+ I20  CONST_10  H13   C13  C12  C11   180.00   0.0  0
+ I20  CONST_11  H16   C16  C11  C12   180.00   0.0  0
+ I20  CONST_12  H14   C14  C13  C12   180.00   0.0  0
+ I20  CONST_13  H12   C12  C13  C14   180.00   0.0  0
+ I20  CONST_14  C28   C    N    CD    180.00   0.0  0
+ I20  CONST_15  O     C    N    CD      0.00   0.0  0
+ I20  CONST_16  C28   C    N    CA      0.00   0.0  0
+ I20  CONST_17  O     C    N    CA    180.00   0.0  0
+ I20  CONST_18  C32   C30  N3   C2    180.00   0.0  0
+ I20  CONST_19  O31   C30  N3   C2      0.00   0.0  0
+ I20  CONST_20  C35   N34  C10  C8    180.00   0.0  0
+ I20  CONST_21  O33   C10  N34  C35     0.00   0.0  0
+ I20  CONST_22  HN34  N34  C10  C8      0.00   0.0  0
+ I20  CONST_23  HN3   N3   C30  C32     0.00   0.0  0
+ I20  Var_01    CA    CB   CG   CD     38.60  30.0  1
+ I20  Var_02    CB    CA   N    CD     19.39  30.0  1
+ I20  Var_03    N     CA   CB   CG    -35.59  30.0  1
+ I20  Var_04    C16   C11  C9   C8    -99.88  30.0  2
+ I20  Var_05    C8    C7   P4   C2    165.05  30.0  3
+ I20  Var_06    O31   C30  C32  C27   -34.69  30.0  3
+ I20  Var_07    C28   C27  C32  C30   175.53  30.0  1
+ I20  Var_08    CA    N    CD   CG      4.73  30.0  1
+ I20  Var_09    N     CD   CG   CB    -26.86  30.0  1
+ I20  Var_10    C     N    CD   CG    179.47  30.0  1
+ I20  Var_11    CE    CD   CG   CB   -148.01  30.0  1
+ I20  Var_12    CE    CD   N    CA    125.66  30.0  1
+ I20  Var_13    HD    CD   CG   CB     92.49  30.0  1
+ I20  Var_14    CG    CD   CE   NZ    -24.96  30.0  1
+ I20  Var_15    N     CD   CE   NZ   -141.46  30.0  1
+ I20  Var_16    CE    CD   N    C     -59.60  30.0  1
+ I20  Var_17    C11   C9   C8   C7   -178.23  30.0  3
+ I20  Var_18    C11   C9   C8   C10    59.32  30.0  3
+ I20  Var_19    N     C    C28  C27   -75.18  30.0  1
+ I20  Var_20    N     C    C28  N29   161.96  30.0  1
+ I20  Var_21    H8    C8   C9   C11   -59.25  30.0  1
+ I20  Var_22    H28   C28  C    N      42.56  30.0  3
+ I20  Var_23    C30   N3   C2   C1    140.74  30.0  1
+ I20  Var_24    O5    P4   C2   C1    176.24  30.0  3
+ I20  Var_25    O6    P4   C2   C1     47.19  30.0  2
+ I20  Var_26    C7    P4   C2   C1    -67.41  30.0  3
+ I20  Var_27    N3    C2   P4   O5     54.63  30.0  1
+ I20  Var_28    N3    C2   P4   C7    170.97  30.0  1
+ I20  Var_29    O33   C10  C8   C7    -63.50  30.0  3
+ I20  Var_30    N34   C10  C8   C7    116.31  30.0  3
+ I20  Var_31    P4    C7   C8   C9     68.25  30.0  1
+ I20  Var_32    O33   C10  C8   C9     60.79  30.0  3
+ I20  Var_33    N34   C10  C8   C9   -119.40  30.0  3
+ I20  Var_34    P4    C7   C8   C10  -169.77  30.0  1
+ I20  Var_35    C37   C35  N34  C10  -161.61  30.0  3
+ I20  Var_36    C36   C35  N34  C10    76.04  30.0  3
+ I20  Var_37    O     C    C28  C27   102.55  30.0  1
+ I20  Var_38    O     C    C28  N29   -20.30  30.0  1
+ I20  Var_39    C32   C27  C28  N29   -61.95  30.0  3
+ I20  Var_40    P4    C2   N3   C30   -95.35  30.0  3
+ I20  Var_41    C     C28  C27  C32   173.56  30.0  2
+ I20  Var_42    O6    P4   C2   N3    -74.42  30.0  2
+ I20  Var_43    O38   C37  C35  N34    -8.64  30.0  2
+ I20  Var_44    O39   C37  C35  N34   172.44  30.0  2
+ I20  Var_45    C36   C35  C37  O39   -64.02  30.0  2
+ I20  Var_46    C36   C35  C37  O38   114.90  30.0  2
+ I20  Var_47    H2    C2   P4   O5    -60.87  30.0  1
+ I20  Var_48    H35   C35  N34  C10   -43.94  30.0  3
+ I20  Var_49    H291  N29  C28  C27   172.81  30.0  3
+ I20  Var_50    H292  N29  C28  C27   -70.61  30.0  3
+ I20  Var_51    H271  C27  C28  N29   176.28  30.0  3
+ I20  Var_52    H272  C27  C28  N29    60.21  30.0  3
+ I20  Var_53    H11   C1   C2   N3     62.83  30.0  3
+ I20  Var_54    H12A  C1   C2   N3   -177.47  30.0  3
+ I20  Var_55    H13A  C1   C2   N3    -57.78  30.0  3
+ I20  Var_56    H361  C36  C35  N34  -178.99  30.0  3
+ I20  Var_57    H362  C36  C35  N34   -59.19  30.0  3
+ I20  Var_58    H363  C36  C35  N34    61.04  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

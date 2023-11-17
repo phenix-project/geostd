@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- WEG  WEG  2-phenyl-5-(1H-pyrazol-4-yl)-1H-pyrrolo[2,3-b]pyridine  ligand  32  20  .  2022-03-29  2022-03-29
+ WEG  WEG  2-phenyl-5-(1H-pyrazol-4-yl)-1H-pyrrolo[2,3-b]pyridine  ligand  32  20  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_WEG
@@ -188,54 +189,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- WEG  CONST_01  C11  C9   C7   C5     0.00  0.0  0
- WEG  CONST_02  C11  C1   C3   C5     0.00  0.0  0
- WEG  CONST_03  C1   C3   C5   C7     0.00  0.0  0
- WEG  CONST_04  C1   C11  C9   C7     0.00  0.0  0
- WEG  CONST_05  C14  C11  C9   C7   180.00  0.0  0
- WEG  CONST_08  C17  C15  C14  N12    0.00  0.0  0
- WEG  CONST_09  C29  N31  C32  N12  180.00  0.0  0
- WEG  CONST_10  C15  C17  C32  N12    0.00  0.0  0
- WEG  CONST_11  C18  C17  C32  N12  180.00  0.0  0
- WEG  CONST_14  C32  N12  C14  C15    0.00  0.0  0
- WEG  CONST_15  N31  C32  C17  C15  180.00  0.0  0
- WEG  CONST_16  C28  C18  C17  C15  180.00  0.0  0
- WEG  CONST_17  C11  C14  C15  C17  180.00  0.0  0
- WEG  CONST_18  C14  N12  C32  C17    0.00  0.0  0
- WEG  CONST_19  C29  N31  C32  C17    0.00  0.0  0
- WEG  CONST_20  C29  C28  C18  C17    0.00  0.0  0
- WEG  CONST_21  C27  C28  C18  C17  180.00  0.0  0
- WEG  CONST_24  N23  C25  C27  C20    0.00  0.0  0
- WEG  CONST_25  C25  N23  N22  C20    0.00  0.0  0
- WEG  CONST_26  C32  N31  C29  C28    0.00  0.0  0
- WEG  CONST_27  C32  C17  C18  C28    0.00  0.0  0
- WEG  CONST_28  N23  C25  C27  C28  180.00  0.0  0
- WEG  CONST_29  N22  C20  C27  C28  180.00  0.0  0
- WEG  CONST_30  C32  N12  C14  C11  180.00  0.0  0
- WEG  CONST_31  C3   C1   C11  C14  180.00  0.0  0
- WEG  CONST_32  N31  C32  N12  C14  180.00  0.0  0
- WEG  CONST_33  C32  C17  C15  C14    0.00  0.0  0
- WEG  CONST_34  C18  C17  C15  C14  180.00  0.0  0
- WEG  CONST_35  N31  C32  C17  C18    0.00  0.0  0
- WEG  CONST_36  N31  C29  C28  C18    0.00  0.0  0
- WEG  CONST_39  N22  C20  C27  C25    0.00  0.0  0
- WEG  CONST_40  N31  C29  C28  C27  180.00  0.0  0
- WEG  CONST_41  N22  N23  C25  C27    0.00  0.0  0
- WEG  CONST_42  N23  N22  C20  C27    0.00  0.0  0
- WEG  CONST_43  C9   C7   C5   C3     0.00  0.0  0
- WEG  CONST_44  C9   C11  C1   C3     0.00  0.0  0
- WEG  CONST_45  H11  C9   C7   C5   180.00  0.0  0
- WEG  CONST_46  H6   C1   C3   C5   180.00  0.0  0
- WEG  CONST_47  H10  C3   C5   C7   180.00  0.0  0
- WEG  CONST_48  H4   C15  C14  N12  180.00  0.0  0
- WEG  CONST_49  H3   N12  C14  C15  180.00  0.0  0
- WEG  CONST_50  H7   C18  C17  C15    0.00  0.0  0
- WEG  CONST_51  H8   C25  C27  C20  180.00  0.0  0
- WEG  CONST_52  H5   C20  C27  C28    0.00  0.0  0
- WEG  CONST_53  H1   C5   C3   C1   180.00  0.0  0
- WEG  CONST_54  H2   C7   C9   C11  180.00  0.0  0
- WEG  CONST_55  H9   C29  C28  C18  180.00  0.0  0
- WEG  CONST_56  H12  N22  N23  C25  180.00  0.0  0
+ WEG  CONST_01  C11  C9   C7   C5      0.00   0.0  0
+ WEG  CONST_02  C11  C1   C3   C5      0.00   0.0  0
+ WEG  CONST_03  C1   C3   C5   C7      0.00   0.0  0
+ WEG  CONST_04  C1   C11  C9   C7      0.00   0.0  0
+ WEG  CONST_05  C14  C11  C9   C7    180.00   0.0  0
+ WEG  CONST_06  C17  C15  C14  N12     0.00   0.0  0
+ WEG  CONST_07  C29  N31  C32  N12   180.00   0.0  0
+ WEG  CONST_08  C15  C17  C32  N12     0.00   0.0  0
+ WEG  CONST_09  C18  C17  C32  N12   180.00   0.0  0
+ WEG  CONST_10  C32  N12  C14  C15     0.00   0.0  0
+ WEG  CONST_11  N31  C32  C17  C15   180.00   0.0  0
+ WEG  CONST_12  C28  C18  C17  C15   180.00   0.0  0
+ WEG  CONST_13  C11  C14  C15  C17   180.00   0.0  0
+ WEG  CONST_14  C14  N12  C32  C17     0.00   0.0  0
+ WEG  CONST_15  C29  N31  C32  C17     0.00   0.0  0
+ WEG  CONST_16  C29  C28  C18  C17     0.00   0.0  0
+ WEG  CONST_17  C27  C28  C18  C17   180.00   0.0  0
+ WEG  CONST_18  N23  C25  C27  C20     0.00   0.0  0
+ WEG  CONST_19  C25  N23  N22  C20     0.00   0.0  0
+ WEG  CONST_20  C32  N31  C29  C28     0.00   0.0  0
+ WEG  CONST_21  C32  C17  C18  C28     0.00   0.0  0
+ WEG  CONST_22  N23  C25  C27  C28   180.00   0.0  0
+ WEG  CONST_23  N22  C20  C27  C28   180.00   0.0  0
+ WEG  CONST_24  C32  N12  C14  C11   180.00   0.0  0
+ WEG  CONST_25  C3   C1   C11  C14   180.00   0.0  0
+ WEG  CONST_26  N31  C32  N12  C14   180.00   0.0  0
+ WEG  CONST_27  C32  C17  C15  C14     0.00   0.0  0
+ WEG  CONST_28  C18  C17  C15  C14   180.00   0.0  0
+ WEG  CONST_29  N31  C32  C17  C18     0.00   0.0  0
+ WEG  CONST_30  N31  C29  C28  C18     0.00   0.0  0
+ WEG  CONST_31  N22  C20  C27  C25     0.00   0.0  0
+ WEG  CONST_32  N31  C29  C28  C27   180.00   0.0  0
+ WEG  CONST_33  N22  N23  C25  C27     0.00   0.0  0
+ WEG  CONST_34  N23  N22  C20  C27     0.00   0.0  0
+ WEG  CONST_35  C9   C7   C5   C3      0.00   0.0  0
+ WEG  CONST_36  C9   C11  C1   C3      0.00   0.0  0
+ WEG  CONST_37  H11  C9   C7   C5    180.00   0.0  0
+ WEG  CONST_38  H6   C1   C3   C5    180.00   0.0  0
+ WEG  CONST_39  H10  C3   C5   C7    180.00   0.0  0
+ WEG  CONST_40  H4   C15  C14  N12   180.00   0.0  0
+ WEG  CONST_41  H3   N12  C14  C15   180.00   0.0  0
+ WEG  CONST_42  H7   C18  C17  C15     0.00   0.0  0
+ WEG  CONST_43  H8   C25  C27  C20   180.00   0.0  0
+ WEG  CONST_44  H5   C20  C27  C28     0.00   0.0  0
+ WEG  CONST_45  H1   C5   C3   C1    180.00   0.0  0
+ WEG  CONST_46  H2   C7   C9   C11   180.00   0.0  0
+ WEG  CONST_47  H9   C29  C28  C18   180.00   0.0  0
+ WEG  CONST_48  H12  N22  N23  C25   180.00   0.0  0
+ WEG  Var_01    C9   C11  C14  N12    21.20  30.0  3
+ WEG  Var_02    C1   C11  C14  N12  -159.43  30.0  3
+ WEG  Var_03    C9   C11  C14  C15  -157.76  30.0  3
+ WEG  Var_04    C1   C11  C14  C15    21.61  30.0  3
+ WEG  Var_05    C29  C28  C27  C20  -153.68  30.0  2
+ WEG  Var_06    C18  C28  C27  C20    26.24  30.0  2
+ WEG  Var_07    C25  C27  C28  C18  -153.68  30.0  2
+ WEG  Var_08    C29  C28  C27  C25    26.40  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

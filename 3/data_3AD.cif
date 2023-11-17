@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3AD  3AD  '3'-deoxyadenosine        '  ligand  31  18  .  2021-08-04  2021-08-04  
+ 3AD  3AD  '3'-deoxyadenosine        '  ligand  31  18  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3AD
@@ -186,33 +187,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3AD  CONST_01  C5    N7  C8  N9     0.00  0.0  0
- 3AD  CONST_02  N7    C5  C4  N9     0.00  0.0  0
- 3AD  CONST_03  C6    C5  C4  N9   180.00  0.0  0
- 3AD  CONST_04  C2    N3  C4  N9   180.00  0.0  0
- 3AD  CONST_05  C5    C4  N9  C8     0.00  0.0  0
- 3AD  CONST_06  N3    C4  N9  C8   180.00  0.0  0
- 3AD  CONST_07  C6    C5  N7  C8   180.00  0.0  0
- 3AD  CONST_08  C4    C5  N7  C8     0.00  0.0  0
- 3AD  CONST_09  C4    N9  C8  N7     0.00  0.0  0
- 3AD  CONST_10  N1    C6  C5  N7   180.00  0.0  0
- 3AD  CONST_11  N3    C4  C5  N7   180.00  0.0  0
- 3AD  CONST_12  C2    N1  C6  C5     0.00  0.0  0
- 3AD  CONST_13  C2    N3  C4  C5     0.00  0.0  0
- 3AD  CONST_14  N3    C4  C5  C6     0.00  0.0  0
- 3AD  CONST_15  N3    C2  N1  C6     0.00  0.0  0
- 3AD  CONST_16  C4    C5  C6  N1     0.00  0.0  0
- 3AD  CONST_17  C4    N3  C2  N1     0.00  0.0  0
- 3AD  CONST_18  N7    C8  N9  C1'  180.00  0.0  0
- 3AD  CONST_19  C5    C4  N9  C1'  180.00  0.0  0
- 3AD  CONST_20  N3    C4  N9  C1'    0.00  0.0  0
- 3AD  CONST_21  N6    C6  C5  N7     0.00  0.0  0
- 3AD  CONST_22  C4    C5  C6  N6   180.00  0.0  0
- 3AD  CONST_23  C2    N1  C6  N6   180.00  0.0  0
- 3AD  CONST_24  H8    C8  N9  C1'    0.00  0.0  0
- 3AD  CONST_25  H2    C2  N1  C6   180.00  0.0  0
- 3AD  CONST_26  HN61  N6  C6  C5   180.00  0.0  0
- 3AD  CONST_27  HN62  N6  C6  C5     0.00  0.0  0
+ 3AD  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ 3AD  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ 3AD  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ 3AD  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ 3AD  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ 3AD  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ 3AD  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ 3AD  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ 3AD  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ 3AD  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ 3AD  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ 3AD  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ 3AD  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ 3AD  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ 3AD  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ 3AD  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ 3AD  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ 3AD  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ 3AD  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ 3AD  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ 3AD  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ 3AD  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ 3AD  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ 3AD  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ 3AD  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ 3AD  CONST_26  HN61  N6   C6   C5    180.00   0.0  0
+ 3AD  CONST_27  HN62  N6   C6   C5      0.00   0.0  0
+ 3AD  Var_01    C2'   C1'  O4'  C4'    15.43  30.0  1
+ 3AD  Var_02    N9    C1'  O4'  C4'  -104.78  30.0  1
+ 3AD  Var_03    C1'   C2'  C3'  C4'    36.57  30.0  1
+ 3AD  Var_04    C2'   C3'  C4'  O4'   -28.93  30.0  1
+ 3AD  Var_05    C3'   C2'  C1'  O4'   -32.75  30.0  1
+ 3AD  Var_06    C8    N9   C1'  O4'    -0.05  30.0  2
+ 3AD  Var_07    C4    N9   C1'  O4'  -175.33  30.0  2
+ 3AD  Var_08    C1'   O4'  C4'  C3'     8.66  30.0  1
+ 3AD  Var_09    N9    C1'  C2'  C3'    86.32  30.0  1
+ 3AD  Var_10    C8    N9   C1'  C2'  -117.32  30.0  2
+ 3AD  Var_11    C4    N9   C1'  C2'    67.41  30.0  2
+ 3AD  Var_12    C1'   O4'  C4'  C5'   131.37  30.0  1
+ 3AD  Var_13    C2'   C3'  C4'  C5'  -150.08  30.0  1
+ 3AD  Var_14    O2'   C2'  C3'  C4'   -75.76  30.0  1
+ 3AD  Var_15    O2'   C2'  C1'  O4'    84.60  30.0  1
+ 3AD  Var_16    N9    C1'  C2'  O2'  -156.32  30.0  1
+ 3AD  Var_17    H1'   C1'  O4'  C4'   137.18  30.0  1
+ 3AD  Var_18    H2'   C2'  C3'  C4'   156.66  30.0  1
+ 3AD  Var_19    H3'1  C3'  C4'  O4'    88.68  30.0  1
+ 3AD  Var_20    H3'2  C3'  C4'  O4'  -150.56  30.0  1
+ 3AD  Var_21    H4'   C4'  C3'  C2'    87.07  30.0  1
+ 3AD  Var_22    O4'   C4'  C5'  O5'    60.31  30.0  3
+ 3AD  Var_23    C3'   C4'  C5'  O5'   178.18  30.0  3
+ 3AD  Var_24    H5'1  C5'  C4'  O4'  -178.08  30.0  2
+ 3AD  Var_25    H5'2  C5'  C4'  O4'   -62.68  30.0  2
+ 3AD  Var_26    HO2'  O2'  C2'  C3'   -59.61  30.0  3
+ 3AD  Var_27    HO5'  O5'  C5'  C4'   178.97  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

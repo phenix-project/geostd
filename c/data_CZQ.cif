@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CZQ  CZQ  2-[(~{E})-[4-[bis(fluoranyl)methoxy]-3-cyclopentyloxy-phenyl]methylideneamino]oxy-1-[(2~{R},6~{R})-2,6-dimethylmorpholin-4-yl]ethanone  ligand  58  30  .  2021-08-07  2021-08-07  
+ CZQ  CZQ  2-[(~{E})-[4-[bis(fluoranyl)methoxy]-3-cyclopentyloxy-phenyl]methylideneamino]oxy-1-[(2~{R},6~{R})-2,6-dimethylmorpholin-4-yl]ethanone  ligand  58  30  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CZQ
@@ -293,36 +294,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CZQ  CONST_01  C16  C18  C19  C06    0.00   0.0  0
- CZQ  CONST_02  C16  C09  C07  C06    0.00   0.0  0
- CZQ  CONST_03  C18  C19  C06  C07    0.00   0.0  0
- CZQ  CONST_04  C18  C16  C09  C07    0.00   0.0  0
- CZQ  CONST_05  C19  C18  C16  C09    0.00   0.0  0
- CZQ  CONST_06  C19  C06  C07  C09    0.00   0.0  0
- CZQ  CONST_07  C18  C16  C09  O02  180.00   0.0  0
- CZQ  CONST_08  C06  C07  C09  O02  180.00   0.0  0
- CZQ  CONST_09  C19  C18  C16  O03  180.00   0.0  0
- CZQ  CONST_10  C07  C09  C16  O03  180.00   0.0  0
- CZQ  CONST_11  C18  C19  C06  C04  180.00   0.0  0
- CZQ  CONST_12  C09  C07  C06  C04  180.00   0.0  0
- CZQ  CONST_13  H18  C18  C19  C06  180.00   0.0  0
- CZQ  CONST_14  H20  C19  C06  C07  180.00   0.0  0
- CZQ  CONST_15  H04  C07  C09  C16  180.00   0.0  0
- CZQ  CONST_16  C02  C01  N01  C10  180.00   0.0  0
- CZQ  CONST_17  O05  C01  N01  C10    0.00   0.0  0
- CZQ  CONST_18  C03  N01  C01  C02    0.00   0.0  0
- CZQ  CONST_19  O05  C01  N01  C03  180.00   0.0  0
- CZQ  Var_01    C05  C03  N01  C10  -56.31  30.0  1
- CZQ  Var_02    C11  C15  C14  C13   42.76  30.0  1
- CZQ  Var_03    C12  C13  C14  C15  -36.41  30.0  1
- CZQ  Var_04    C08  C10  N01  C03   54.94  30.0  1
- CZQ  Var_05    C14  C13  C12  C11   16.09  30.0  1
- CZQ  Var_06    C16  C09  O02  C11  173.94  30.0  2
- CZQ  Var_07    C18  C16  O03  C17   85.07  30.0  2
- CZQ  Var_08    C19  C06  C04  N02   -6.22  30.0  2
- CZQ  Var_09    C06  C04  N02  O01  179.06   0.0  2
- CZQ  Var_10    O01  C02  C01  N01  178.28  30.0  2
- CZQ  Var_11    F02  C17  O03  C16   51.01  30.0  2
+ CZQ  CONST_01  C16  C18  C19  C06     0.00   0.0  0
+ CZQ  CONST_02  C16  C09  C07  C06     0.00   0.0  0
+ CZQ  CONST_03  C18  C19  C06  C07     0.00   0.0  0
+ CZQ  CONST_04  C18  C16  C09  C07     0.00   0.0  0
+ CZQ  CONST_05  C19  C18  C16  C09     0.00   0.0  0
+ CZQ  CONST_06  C19  C06  C07  C09     0.00   0.0  0
+ CZQ  CONST_07  C18  C16  C09  O02   180.00   0.0  0
+ CZQ  CONST_08  C06  C07  C09  O02   180.00   0.0  0
+ CZQ  CONST_09  C19  C18  C16  O03   180.00   0.0  0
+ CZQ  CONST_10  C07  C09  C16  O03   180.00   0.0  0
+ CZQ  CONST_11  C18  C19  C06  C04   180.00   0.0  0
+ CZQ  CONST_12  C09  C07  C06  C04   180.00   0.0  0
+ CZQ  CONST_13  H18  C18  C19  C06   180.00   0.0  0
+ CZQ  CONST_14  H20  C19  C06  C07   180.00   0.0  0
+ CZQ  CONST_15  H04  C07  C09  C16   180.00   0.0  0
+ CZQ  CONST_16  C02  C01  N01  C10   180.00   0.0  0
+ CZQ  CONST_17  O05  C01  N01  C10     0.00   0.0  0
+ CZQ  CONST_18  C03  N01  C01  C02     0.00   0.0  0
+ CZQ  CONST_19  O05  C01  N01  C03   180.00   0.0  0
+ CZQ  Var_01    C05  C03  N01  C10   -56.31  30.0  1
+ CZQ  Var_02    C11  C15  C14  C13    42.76  30.0  1
+ CZQ  Var_03    C12  C13  C14  C15   -36.41  30.0  1
+ CZQ  Var_04    C08  C10  N01  C03    54.94  30.0  1
+ CZQ  Var_05    C14  C13  C12  C11    16.09  30.0  1
+ CZQ  Var_06    C16  C09  O02  C11   173.94  30.0  2
+ CZQ  Var_07    C18  C16  O03  C17    85.07  30.0  2
+ CZQ  Var_08    C19  C06  C04  N02    -6.22  30.0  2
+ CZQ  Var_09    C06  C04  N02  O01   179.06   0.0  2
+ CZQ  Var_10    O01  C02  C01  N01   178.28  30.0  2
+ CZQ  Var_11    F02  C17  O03  C16    51.01  30.0  2
+ CZQ  Var_12    C05  O04  C08  C10    55.63  30.0  1
+ CZQ  Var_13    C15  C11  C12  C13    10.26  30.0  1
+ CZQ  Var_14    O04  C05  C03  N01    55.20  30.0  1
+ CZQ  Var_15    O04  C08  C10  N01   -52.62  30.0  1
+ CZQ  Var_16    C08  O04  C05  C03   -56.74  30.0  1
+ CZQ  Var_17    C14  C15  C11  C12   -32.75  30.0  1
+ CZQ  Var_18    O02  C11  C12  C13   129.88  30.0  1
+ CZQ  Var_19    C09  O02  C11  C15  -164.53  30.0  2
+ CZQ  Var_20    N01  C03  C05  C20   -71.51  30.0  1
+ CZQ  Var_21    C08  O04  C05  C20    69.68  30.0  1
+ CZQ  Var_22    N01  C10  C08  C21  -172.49  30.0  1
+ CZQ  Var_23    C05  O04  C08  C21   177.59  30.0  1
+ CZQ  Var_24    C14  C15  C11  O02  -155.85  30.0  1
+ CZQ  Var_25    C12  C11  O02  C09    77.67  30.0  3
+ CZQ  Var_26    H05  C11  C12  C13  -107.36  30.0  1
+ CZQ  Var_27    H07  C12  C11  C15  -111.18  30.0  1
+ CZQ  Var_28    H06  C12  C11  C15   130.56  30.0  1
+ CZQ  Var_29    H14  C05  C03  N01   169.25  30.0  1
+ CZQ  Var_30    H19  C08  C10  N01    68.01  30.0  1
+ CZQ  Var_31    H25  C21  C08  C10    59.48  30.0  3
+ CZQ  Var_32    H23  C21  C08  C10  -179.75  30.0  3
+ CZQ  Var_33    H24  C21  C08  C10   -60.49  30.0  3
+ CZQ  Var_34    H27  C20  C05  C03    56.40  30.0  3
+ CZQ  Var_35    H28  C20  C05  C03   177.57  30.0  3
+ CZQ  Var_36    H26  C20  C05  C03   -63.71  30.0  3
+ CZQ  Var_37    N02  O01  C02  C01   177.59  30.0  1
+ CZQ  Var_38    C04  N02  O01  C02   173.04  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

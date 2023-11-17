@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MX1  MX1  '(2R)-2-[(R)-carboxy{[(2R)-2-carboxy-2-(4-hydroxyphenyl)acetyl]amino}methoxymethyl]-5-methylidene-5,6-dihydro-2H-1,3-oxazine-4-carboxylic acid'  ligand  48  30  .  2022-11-17  2022-11-17
+ MX1  MX1  '(2R)-2-[(R)-carboxy{[(2R)-2-carboxy-2-(4-hydroxyphenyl)acetyl]amino}methoxymethyl]-5-methylidene-5,6-dihydro-2H-1,3-oxazine-4-carboxylic acid'  ligand  48  30  .  2022-11-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_MX1
@@ -241,31 +242,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MX1  CONST_01  C16  C15  C14  C13    0.00   0.0  0
- MX1  CONST_02  C16  C17  C18  C13    0.00   0.0  0
- MX1  CONST_03  C17  C18  C13  C14    0.00   0.0  0
- MX1  CONST_04  C17  C16  C15  C14    0.00   0.0  0
- MX1  CONST_05  C15  C14  C13  C18    0.00   0.0  0
- MX1  CONST_06  C15  C16  C17  C18    0.00   0.0  0
- MX1  CONST_07  C15  C14  C13  C11  180.00   0.0  0
- MX1  CONST_08  C17  C18  C13  C11  180.00   0.0  0
- MX1  CONST_09  O9   C16  C15  C14  180.00   0.0  0
- MX1  CONST_10  O9   C16  C17  C18  180.00   0.0  0
- MX1  CONST_11  H15  C15  C14  C13  180.00   0.0  0
- MX1  CONST_12  H17  C17  C18  C13  180.00   0.0  0
- MX1  CONST_13  H18  C18  C13  C14  180.00   0.0  0
- MX1  CONST_14  H14  C14  C13  C18  180.00   0.0  0
- MX1  CONST_15  HO4  O4   C7   C4   180.00   0.0  0
- MX1  CONST_16  O6   C10  N2   C2     0.00   0.0  0
- MX1  CONST_17  C11  C10  N2   C2   180.00   0.0  0
- MX1  CONST_18  HN2  N2   C10  O6   180.00   0.0  0
- MX1  CONST_19  H32  O32  C1   C2   180.00   0.0  0
- MX1  CONST_20  HO8  O8   C12  C11  180.00   0.0  0
- MX1  Var_01    O2   C6   C5   C4    43.21  30.0  1
- MX1  Var_02    C6   C5   C4   N1   -12.53  30.0  1
- MX1  Var_03    N1   C4   C7   O4   -34.12  30.0  2
- MX1  Var_04    H81  C8   C5   C4     2.81  30.0  2
- MX1  Var_05    H91  C9   O5   C2   -43.23  30.0  3
+ MX1  CONST_01  C16  C15  C14  C13     0.00   0.0  0
+ MX1  CONST_02  C16  C17  C18  C13     0.00   0.0  0
+ MX1  CONST_03  C17  C18  C13  C14     0.00   0.0  0
+ MX1  CONST_04  C17  C16  C15  C14     0.00   0.0  0
+ MX1  CONST_05  C15  C14  C13  C18     0.00   0.0  0
+ MX1  CONST_06  C15  C16  C17  C18     0.00   0.0  0
+ MX1  CONST_07  C15  C14  C13  C11   180.00   0.0  0
+ MX1  CONST_08  C17  C18  C13  C11   180.00   0.0  0
+ MX1  CONST_09  O9   C16  C15  C14   180.00   0.0  0
+ MX1  CONST_10  O9   C16  C17  C18   180.00   0.0  0
+ MX1  CONST_11  H15  C15  C14  C13   180.00   0.0  0
+ MX1  CONST_12  H17  C17  C18  C13   180.00   0.0  0
+ MX1  CONST_13  H18  C18  C13  C14   180.00   0.0  0
+ MX1  CONST_14  H14  C14  C13  C18   180.00   0.0  0
+ MX1  CONST_15  HO4  O4   C7   C4    180.00   0.0  0
+ MX1  CONST_16  O6   C10  N2   C2      0.00   0.0  0
+ MX1  CONST_17  C11  C10  N2   C2    180.00   0.0  0
+ MX1  CONST_18  HN2  N2   C10  O6    180.00   0.0  0
+ MX1  CONST_19  H32  O32  C1   C2    180.00   0.0  0
+ MX1  CONST_20  HO8  O8   C12  C11   180.00   0.0  0
+ MX1  Var_01    O2   C6   C5   C4     43.21  30.0  1
+ MX1  Var_02    C6   C5   C4   N1    -12.53  30.0  1
+ MX1  Var_03    N1   C4   C7   O4    -34.12  30.0  2
+ MX1  Var_04    H81  C8   C5   C4      2.81  30.0  2
+ MX1  Var_05    H91  C9   O5   C2    -43.23  30.0  3
+ MX1  Var_06    O2   C3   N1   C4    -14.57  30.0  1
+ MX1  Var_07    C6   O2   C3   N1     47.89  30.0  1
+ MX1  Var_08    C3   N1   C4   C5     -2.55  30.0  1
+ MX1  Var_09    C3   O2   C6   C5    -61.35  30.0  1
+ MX1  Var_10    C3   N1   C4   C7   -177.11  30.0  1
+ MX1  Var_11    C2   C3   N1   C4   -131.69  30.0  1
+ MX1  Var_12    C2   C3   O2   C6    167.13  30.0  1
+ MX1  Var_13    H3   C3   N1   C4    109.53  30.0  1
+ MX1  Var_14    C1   C2   C3   N1    177.80  30.0  3
+ MX1  Var_15    O5   C2   C3   N1     60.65  30.0  3
+ MX1  Var_16    N2   C2   C3   N1    -61.33  30.0  3
+ MX1  Var_17    C1   C2   C3   O2     53.45  30.0  3
+ MX1  Var_18    O5   C2   C3   O2    -63.70  30.0  3
+ MX1  Var_19    N2   C2   C3   O2    174.32  30.0  3
+ MX1  Var_20    C14  C13  C11  C10  -108.84  30.0  2
+ MX1  Var_21    C18  C13  C11  C10    70.73  30.0  2
+ MX1  Var_22    C14  C13  C11  C12   129.51  30.0  2
+ MX1  Var_23    C18  C13  C11  C12   -50.92  30.0  2
+ MX1  Var_24    H11  C11  C13  C14    12.31  30.0  2
+ MX1  Var_25    HO9  O9   C16  C17   178.60  30.0  2
+ MX1  Var_26    O32  C1   C2   C3     67.71  30.0  3
+ MX1  Var_27    O31  C1   C2   C3   -112.07  30.0  3
+ MX1  Var_28    C9   O5   C2   C3   -168.57  30.0  3
+ MX1  Var_29    C10  N2   C2   C3    -26.34  30.0  3
+ MX1  Var_30    C13  C11  C10  N2    150.44  30.0  3
+ MX1  Var_31    C13  C11  C10  O6    -29.99  30.0  3
+ MX1  Var_32    C13  C11  C12  O8    -71.15  30.0  1
+ MX1  Var_33    C13  C11  C12  O7    107.72  30.0  1
+ MX1  Var_34    HN2  N2   C2   C3    163.72  30.0  3
+ MX1  Var_35    C9   O5   C2   C1     76.05  30.0  3
+ MX1  Var_36    C10  N2   C2   C1     93.55  30.0  3
+ MX1  Var_37    O5   C2   C1   O32  -178.52  30.0  2
+ MX1  Var_38    N2   C2   C1   O32   -55.80  30.0  2
+ MX1  Var_39    O5   C2   C1   O31     1.69  30.0  2
+ MX1  Var_40    N2   C2   C1   O31   124.41  30.0  2
+ MX1  Var_41    C10  N2   C2   O5   -144.60  30.0  3
+ MX1  Var_42    N2   C2   O5   C9    -45.32  30.0  2
+ MX1  Var_43    C12  C11  C10  N2    -87.03  30.0  3
+ MX1  Var_44    O8   C12  C11  C10   165.16  30.0  3
+ MX1  Var_45    O7   C12  C11  C10   -15.96  30.0  3
+ MX1  Var_46    C12  C11  C10  O6     92.55  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

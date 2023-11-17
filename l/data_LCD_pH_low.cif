@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LCD  LCD  '{[(2Z)-2-(3,4-dimethoxybenzylidene)-3-oxo-2,3-dihydro-1-benzofuran-6-yl]oxy}acetic acid'  ligand  42  26  .  2021-08-13  2021-08-13  
+ LCD  LCD  '{[(2Z)-2-(3,4-dimethoxybenzylidene)-3-oxo-2,3-dihydro-1-benzofuran-6-yl]oxy}acetic acid'  ligand  42  26  .  2021-08-13  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LCD
@@ -222,41 +223,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LCD  CONST_01  CAG  CAS  CAK  CAV    0.00   0.0  0
- LCD  CONST_02  CAG  CAH  CAU  CAV    0.00   0.0  0
- LCD  CONST_03  CAH  CAG  CAS  CAK    0.00   0.0  0
- LCD  CONST_04  CAH  CAU  CAV  CAK    0.00   0.0  0
- LCD  CONST_05  CAS  CAK  CAV  CAU    0.00   0.0  0
- LCD  CONST_06  CAS  CAG  CAH  CAU    0.00   0.0  0
- LCD  CONST_07  CAI  CAJ  CAZ  CAY    0.00   0.0  0
- LCD  CONST_08  CAI  CAT  CAL  CAY    0.00   0.0  0
- LCD  CONST_09  CAJ  CAI  CAT  CAL    0.00   0.0  0
- LCD  CONST_10  CAJ  CAZ  CAY  CAL    0.00   0.0  0
- LCD  CONST_11  CAT  CAI  CAJ  CAZ    0.00   0.0  0
- LCD  CONST_12  CAT  CAL  CAY  CAZ    0.00   0.0  0
- LCD  CONST_13  CAS  CAK  CAV  OAO  180.00   0.0  0
- LCD  CONST_14  CAH  CAU  CAV  OAO  180.00   0.0  0
- LCD  CONST_15  CAF  CAS  CAK  CAV  180.00   0.0  0
- LCD  CONST_16  OAN  CAU  CAV  CAK  180.00   0.0  0
- LCD  CONST_17  CAG  CAH  CAU  OAN  180.00   0.0  0
- LCD  CONST_18  CAF  CAS  CAG  CAH  180.00   0.0  0
- LCD  CONST_19  OAP  CAT  CAL  CAY  180.00   0.0  0
- LCD  CONST_20  OAP  CAT  CAI  CAJ  180.00   0.0  0
- LCD  CONST_21  H8   CAH  CAU  CAV  180.00   0.0  0
- LCD  CONST_22  H9   CAG  CAS  CAK  180.00   0.0  0
- LCD  CONST_23  H4   CAK  CAV  CAU  180.00   0.0  0
- LCD  CONST_24  H12  CAJ  CAZ  CAW    0.00   0.0  0
- LCD  CONST_25  H11  CAL  CAY  OAQ    0.00   0.0  0
- LCD  CONST_26  H13  CAI  CAT  CAL  180.00   0.0  0
- LCD  CONST_27  H16  OAC  CAR  CAM  180.00   0.0  0
- LCD  Var_01    CAX  CAF  CAS  CAK  179.08  30.0  3
- LCD  Var_02    CAW  CAX  CAF  CAS  179.99  30.0  3
- LCD  Var_03    CAK  CAV  OAO  CAB    0.61  30.0  2
- LCD  Var_04    CAH  CAU  OAN  CAA   -0.09  30.0  2
- LCD  Var_05    CAR  CAM  OAP  CAT  178.66  30.0  1
- LCD  Var_06    H1   CAB  OAO  CAV  179.74  30.0  3
- LCD  Var_07    H5   CAA  OAN  CAU  -61.33  30.0  3
- LCD  Var_08    OAE  CAR  CAM  OAP   -0.40  30.0  3
+ LCD  CONST_01  CAG  CAS  CAK  CAV     0.00   0.0  0
+ LCD  CONST_02  CAG  CAH  CAU  CAV     0.00   0.0  0
+ LCD  CONST_03  CAH  CAG  CAS  CAK     0.00   0.0  0
+ LCD  CONST_04  CAH  CAU  CAV  CAK     0.00   0.0  0
+ LCD  CONST_05  CAS  CAK  CAV  CAU     0.00   0.0  0
+ LCD  CONST_06  CAS  CAG  CAH  CAU     0.00   0.0  0
+ LCD  CONST_07  CAI  CAJ  CAZ  CAY     0.00   0.0  0
+ LCD  CONST_08  CAI  CAT  CAL  CAY     0.00   0.0  0
+ LCD  CONST_09  CAJ  CAI  CAT  CAL     0.00   0.0  0
+ LCD  CONST_10  CAJ  CAZ  CAY  CAL     0.00   0.0  0
+ LCD  CONST_11  CAT  CAI  CAJ  CAZ     0.00   0.0  0
+ LCD  CONST_12  CAT  CAL  CAY  CAZ     0.00   0.0  0
+ LCD  CONST_13  CAS  CAK  CAV  OAO   180.00   0.0  0
+ LCD  CONST_14  CAH  CAU  CAV  OAO   180.00   0.0  0
+ LCD  CONST_15  CAF  CAS  CAK  CAV   180.00   0.0  0
+ LCD  CONST_16  OAN  CAU  CAV  CAK   180.00   0.0  0
+ LCD  CONST_17  CAG  CAH  CAU  OAN   180.00   0.0  0
+ LCD  CONST_18  CAF  CAS  CAG  CAH   180.00   0.0  0
+ LCD  CONST_19  OAP  CAT  CAL  CAY   180.00   0.0  0
+ LCD  CONST_20  OAP  CAT  CAI  CAJ   180.00   0.0  0
+ LCD  CONST_21  H8   CAH  CAU  CAV   180.00   0.0  0
+ LCD  CONST_22  H9   CAG  CAS  CAK   180.00   0.0  0
+ LCD  CONST_23  H4   CAK  CAV  CAU   180.00   0.0  0
+ LCD  CONST_24  H12  CAJ  CAZ  CAW     0.00   0.0  0
+ LCD  CONST_25  H11  CAL  CAY  OAQ     0.00   0.0  0
+ LCD  CONST_26  H13  CAI  CAT  CAL   180.00   0.0  0
+ LCD  CONST_27  H16  OAC  CAR  CAM   180.00   0.0  0
+ LCD  Var_01    CAX  CAF  CAS  CAK   179.08  30.0  3
+ LCD  Var_02    CAW  CAX  CAF  CAS   179.99  30.0  3
+ LCD  Var_03    CAK  CAV  OAO  CAB     0.61  30.0  2
+ LCD  Var_04    CAH  CAU  OAN  CAA    -0.09  30.0  2
+ LCD  Var_05    CAR  CAM  OAP  CAT   178.66  30.0  1
+ LCD  Var_06    H1   CAB  OAO  CAV   179.74  30.0  3
+ LCD  Var_07    H5   CAA  OAN  CAU   -61.33  30.0  3
+ LCD  Var_08    OAE  CAR  CAM  OAP    -0.40  30.0  3
+ LCD  CONST_28  CAJ  CAZ  CAW  CAX   180.00   0.0  0
+ LCD  CONST_29  CAY  CAZ  CAW  CAX     0.00   0.0  0
+ LCD  CONST_30  CAZ  CAY  OAQ  CAX     0.00   0.0  0
+ LCD  CONST_31  CAL  CAY  OAQ  CAX   180.00   0.0  0
+ LCD  CONST_32  CAY  OAQ  CAX  CAW     0.00   0.0  0
+ LCD  CONST_33  CAZ  CAW  CAX  OAQ     0.00   0.0  0
+ LCD  CONST_34  CAZ  CAW  CAX  CAF   180.00   0.0  0
+ LCD  CONST_35  CAY  OAQ  CAX  CAF   180.00   0.0  0
+ LCD  CONST_36  CAJ  CAZ  CAW  OAD     0.00   0.0  0
+ LCD  CONST_37  CAY  CAZ  CAW  OAD   180.00   0.0  0
+ LCD  CONST_38  OAQ  CAX  CAW  OAD   180.00   0.0  0
+ LCD  Var_09    CAM  OAP  CAT  CAL  -179.49  30.0  2
+ LCD  Var_10    CAM  OAP  CAT  CAI     0.43  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QAN  QAN  (3~{R},4~{R})-~{N}-cyclohexyl-4-[[5-(furan-2-yl)-3-methyl-2-oxidanylidene-1~{H}-1,7-naphthyridin-8-yl]amino]-1-methyl-piperidine-3-carboxamide  ligand  67  34  .  2022-03-23  2022-03-23
+ QAN  QAN  (3~{R},4~{R})-~{N}-cyclohexyl-4-[[5-(furan-2-yl)-3-methyl-2-oxidanylidene-1~{H}-1,7-naphthyridin-8-yl]amino]-1-methyl-piperidine-3-carboxamide  ligand  67  34  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QAN
@@ -334,46 +335,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QAN  CONST_01  C24  C08  N09  C10    0.00   0.0  0
- QAN  CONST_02  C24  C17  C11  C10    0.00   0.0  0
- QAN  CONST_06  C15  O16  C12  C13    0.00   0.0  0
- QAN  CONST_07  O16  C15  C14  C13    0.00   0.0  0
- QAN  CONST_08  C12  C13  C14  C15    0.00   0.0  0
- QAN  CONST_09  C11  C12  O16  C15  180.00   0.0  0
- QAN  CONST_10  N09  C08  C24  C17    0.00   0.0  0
- QAN  CONST_11  N09  C10  C11  C17    0.00   0.0  0
- QAN  CONST_13  C12  C11  C17  C24  180.00   0.0  0
- QAN  CONST_14  C11  C10  N09  C08    0.00   0.0  0
- QAN  CONST_15  C11  C17  C24  C08    0.00   0.0  0
- QAN  CONST_16  C12  C11  C10  N09  180.00   0.0  0
- QAN  CONST_17  C14  C13  C12  C11  180.00   0.0  0
- QAN  CONST_18  C14  C15  O16  C12    0.00   0.0  0
- QAN  CONST_19  O16  C12  C13  C14    0.00   0.0  0
- QAN  CONST_20  C18  C17  C11  C12    0.00   0.0  0
- QAN  CONST_21  C19  C21  N23  C24    0.00   0.0  0
- QAN  CONST_22  N07  C08  N09  C10  180.00   0.0  0
- QAN  CONST_23  N07  C08  C24  C17  180.00   0.0  0
- QAN  CONST_24  N23  C24  C08  N07    0.00   0.0  0
- QAN  CONST_25  C05  N07  C08  C24  180.00   0.0  0
- QAN  CONST_26  N09  C08  N07  C05    0.00   0.0  0
- QAN  CONST_27  O22  C21  N23  C24  180.00   0.0  0
- QAN  CONST_28  H3   C15  C14  C13  180.00   0.0  0
- QAN  CONST_29  H2   C13  C14  C15  180.00   0.0  0
- QAN  CONST_30  H1   C10  C11  C17  180.00   0.0  0
- QAN  CONST_31  H19  C14  C13  C12  180.00   0.0  0
- QAN  CONST_32  H21  N23  C21  C19  180.00   0.0  0
- QAN  CONST_33  C30  N29  C27  C25  180.00   0.0  0
- QAN  CONST_35  C30  N29  C27  O28    0.00   0.0  0
- QAN  CONST_36  H23  N29  C27  C25    0.00   0.0  0
- QAN  Var_01    C04  C03  N02  C26  -59.32  30.0  1
- QAN  Var_02    C05  C04  C03  N02   57.00  30.0  1
- QAN  Var_03    C25  C26  N02  C03   59.87  30.0  1
- QAN  Var_04    C33  C34  C35  C30  -55.78  30.0  1
- QAN  Var_05    C33  C32  C31  C30   55.27  30.0  1
- QAN  Var_06    C34  C33  C32  C31  -55.07  30.0  1
- QAN  Var_07    C35  C34  C33  C32   55.31  30.0  1
- QAN  Var_08    H4   C20  C19  C21  178.40  30.0  3
- QAN  Var_09    H9   C01  N02  C26  176.95  30.0  3
+ QAN  CONST_01  C24  C08  N09  C10     0.00   0.0  0
+ QAN  CONST_02  C24  C17  C11  C10     0.00   0.0  0
+ QAN  CONST_03  C15  O16  C12  C13     0.00   0.0  0
+ QAN  CONST_04  O16  C15  C14  C13     0.00   0.0  0
+ QAN  CONST_05  C12  C13  C14  C15     0.00   0.0  0
+ QAN  CONST_06  C11  C12  O16  C15   180.00   0.0  0
+ QAN  CONST_07  N09  C08  C24  C17     0.00   0.0  0
+ QAN  CONST_08  N09  C10  C11  C17     0.00   0.0  0
+ QAN  CONST_09  C12  C11  C17  C24   180.00   0.0  0
+ QAN  CONST_10  C11  C10  N09  C08     0.00   0.0  0
+ QAN  CONST_11  C11  C17  C24  C08     0.00   0.0  0
+ QAN  CONST_12  C12  C11  C10  N09   180.00   0.0  0
+ QAN  CONST_13  C14  C13  C12  C11   180.00   0.0  0
+ QAN  CONST_14  C14  C15  O16  C12     0.00   0.0  0
+ QAN  CONST_15  O16  C12  C13  C14     0.00   0.0  0
+ QAN  CONST_16  C18  C17  C11  C12     0.00   0.0  0
+ QAN  CONST_17  C19  C21  N23  C24     0.00   0.0  0
+ QAN  CONST_18  N07  C08  N09  C10   180.00   0.0  0
+ QAN  CONST_19  N07  C08  C24  C17   180.00   0.0  0
+ QAN  CONST_20  N23  C24  C08  N07     0.00   0.0  0
+ QAN  CONST_21  C05  N07  C08  C24   180.00   0.0  0
+ QAN  CONST_22  N09  C08  N07  C05     0.00   0.0  0
+ QAN  CONST_23  O22  C21  N23  C24   180.00   0.0  0
+ QAN  CONST_24  H3   C15  C14  C13   180.00   0.0  0
+ QAN  CONST_25  H2   C13  C14  C15   180.00   0.0  0
+ QAN  CONST_26  H1   C10  C11  C17   180.00   0.0  0
+ QAN  CONST_27  H19  C14  C13  C12   180.00   0.0  0
+ QAN  CONST_28  H21  N23  C21  C19   180.00   0.0  0
+ QAN  CONST_29  C30  N29  C27  C25   180.00   0.0  0
+ QAN  CONST_30  C30  N29  C27  O28     0.00   0.0  0
+ QAN  CONST_31  H23  N29  C27  C25     0.00   0.0  0
+ QAN  Var_01    C04  C03  N02  C26   -59.32  30.0  1
+ QAN  Var_02    C05  C04  C03  N02    57.00  30.0  1
+ QAN  Var_03    C25  C26  N02  C03    59.87  30.0  1
+ QAN  Var_04    C33  C34  C35  C30   -55.78  30.0  1
+ QAN  Var_05    C33  C32  C31  C30    55.27  30.0  1
+ QAN  Var_06    C34  C33  C32  C31   -55.07  30.0  1
+ QAN  Var_07    C35  C34  C33  C32    55.31  30.0  1
+ QAN  Var_08    H4   C20  C19  C21   178.40  30.0  3
+ QAN  Var_09    H9   C01  N02  C26   176.95  30.0  3
+ QAN  Var_10    C13  C12  C11  C10   -42.62  30.0  2
+ QAN  Var_11    O16  C12  C11  C10   134.40  30.0  2
+ QAN  Var_12    C17  C11  C12  C13   135.20  30.0  3
+ QAN  Var_13    C21  N23  C24  C17     0.45  30.0  1
+ QAN  Var_14    O16  C12  C11  C17   -47.78  30.0  2
+ QAN  Var_15    C21  C19  C18  C17     0.77  30.0  1
+ QAN  Var_16    C08  C24  N23  C21   178.37  30.0  1
+ QAN  Var_17    C19  C18  C17  C24    -0.87  30.0  1
+ QAN  Var_18    C04  C05  C25  C26    56.25  30.0  1
+ QAN  Var_19    C05  C25  C26  N02   -58.36  30.0  1
+ QAN  Var_20    C25  C05  C04  C03   -55.55  30.0  1
+ QAN  Var_21    C19  C18  C17  C11  -177.57  30.0  1
+ QAN  Var_22    N23  C21  C19  C18    -0.07  30.0  1
+ QAN  Var_23    C34  C35  C30  C31    55.46  30.0  1
+ QAN  Var_24    C35  C30  C31  C32   -55.17  30.0  1
+ QAN  Var_25    C20  C19  C18  C17   179.32  30.0  1
+ QAN  Var_26    N23  C21  C19  C20  -178.71  30.0  1
+ QAN  Var_27    N07  C05  C25  C26  -178.99  30.0  1
+ QAN  Var_28    C27  C25  C26  N02   174.42  30.0  1
+ QAN  Var_29    N07  C05  C04  C03  -179.16  30.0  1
+ QAN  Var_30    C27  C25  C05  C04  -178.46  30.0  1
+ QAN  Var_31    C08  N07  C05  C04  -119.23  30.0  3
+ QAN  Var_32    C25  C05  N07  C08   118.04  30.0  1
+ QAN  Var_33    O22  C21  C19  C18   178.87  30.0  1
+ QAN  Var_34    C34  C35  C30  N29   178.42  30.0  1
+ QAN  Var_35    C32  C31  C30  N29  -179.06  30.0  1
+ QAN  Var_36    H20  C18  C19  C21  -178.50  30.0  1
+ QAN  Var_37    H17  C05  C25  C26   -60.91  30.0  1
+ QAN  Var_38    H22  C25  C26  N02    59.23  30.0  1
+ QAN  Var_39    H33  C35  C30  C31   -65.47  30.0  1
+ QAN  Var_40    H34  C35  C30  C31   177.91  30.0  1
+ QAN  Var_41    H24  C30  C31  C32    63.97  30.0  1
+ QAN  Var_42    O22  C21  C19  C20     0.23  30.0  1
+ QAN  Var_43    O28  C27  C25  C26   -96.35  30.0  3
+ QAN  Var_44    N29  C27  C25  C26    82.36  30.0  3
+ QAN  Var_45    O28  C27  C25  C05   139.13  30.0  3
+ QAN  Var_46    N29  C27  C25  C05   -42.17  30.0  3
+ QAN  Var_47    C27  C25  C05  N07   -53.70  30.0  1
+ QAN  Var_48    C35  C30  N29  C27   101.68  30.0  3
+ QAN  Var_49    C31  C30  N29  C27  -134.81  30.0  3
+ QAN  Var_50    H23  N29  C30  C31    42.76  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

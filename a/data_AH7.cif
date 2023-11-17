@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AH7  AH7  2-[(4,4-difluoro-1-phenylcyclohexyl)amino]-N-hydroxypyrimidine-5-carboxamide  ligand  43  25  .  2021-08-06  2021-08-06  
+ AH7  AH7  2-[(4,4-difluoro-1-phenylcyclohexyl)amino]-N-hydroxypyrimidine-5-carboxamide  ligand  43  25  .  2021-08-06  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_AH7
@@ -231,41 +232,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AH7  CONST_01  C14  C15  C16  C11    0.00   0.0  0
- AH7  CONST_02  C14  C13  C12  C11    0.00   0.0  0
- AH7  CONST_03  C15  C14  C13  C12    0.00   0.0  0
- AH7  CONST_04  C15  C16  C11  C12    0.00   0.0  0
- AH7  CONST_05  C16  C15  C14  C13    0.00   0.0  0
- AH7  CONST_06  C16  C11  C12  C13    0.00   0.0  0
- AH7  CONST_07  N07  C06  C05  C25    0.00   0.0  0
- AH7  CONST_08  N07  C08  N24  C25    0.00   0.0  0
- AH7  CONST_09  C08  N24  C25  C05    0.00   0.0  0
- AH7  CONST_10  C08  N07  C06  C05    0.00   0.0  0
- AH7  CONST_11  N24  C25  C05  C06    0.00   0.0  0
- AH7  CONST_12  N24  C08  N07  C06    0.00   0.0  0
- AH7  CONST_13  C15  C16  C11  C10  180.00   0.0  0
- AH7  CONST_14  C13  C12  C11  C10  180.00   0.0  0
- AH7  CONST_15  N09  C08  N24  C25  180.00   0.0  0
- AH7  CONST_16  N24  C25  C05  C02  180.00   0.0  0
- AH7  CONST_17  N07  C06  C05  C02  180.00   0.0  0
- AH7  CONST_18  N09  C08  N07  C06  180.00   0.0  0
- AH7  CONST_19  N24  C08  N09  C10    0.00   0.0  0
- AH7  CONST_20  N07  C08  N09  C10  180.00   0.0  0
- AH7  CONST_21  H5   C16  C11  C10    0.00   0.0  0
- AH7  CONST_22  H1   C12  C11  C10    0.00   0.0  0
- AH7  CONST_23  H4   C15  C16  C11  180.00   0.0  0
- AH7  CONST_24  H2   C13  C12  C11  180.00   0.0  0
- AH7  CONST_25  H3   C14  C13  C12  180.00   0.0  0
- AH7  CONST_26  H15  C06  C05  C25  180.00   0.0  0
- AH7  CONST_27  H14  C25  C05  C06  180.00   0.0  0
- AH7  CONST_28  H17  N09  C08  N07    0.00   0.0  0
- AH7  CONST_29  O04  N03  C02  C05  180.00   0.0  0
- AH7  CONST_31  O04  N03  C02  O01    0.00   0.0  0
- AH7  Var_01    C19  C22  C23  C10  -53.07  30.0  1
- AH7  Var_02    C19  C18  C17  C10   57.28  30.0  1
- AH7  Var_03    C22  C19  C18  C17  -53.82  30.0  1
- AH7  Var_04    C23  C22  C19  C18   51.58  30.0  1
- AH7  Var_05    N03  C02  C05  C25  163.28  30.0  2
+ AH7  CONST_01  C14  C15  C16  C11     0.00   0.0  0
+ AH7  CONST_02  C14  C13  C12  C11     0.00   0.0  0
+ AH7  CONST_03  C15  C14  C13  C12     0.00   0.0  0
+ AH7  CONST_04  C15  C16  C11  C12     0.00   0.0  0
+ AH7  CONST_05  C16  C15  C14  C13     0.00   0.0  0
+ AH7  CONST_06  C16  C11  C12  C13     0.00   0.0  0
+ AH7  CONST_07  N07  C06  C05  C25     0.00   0.0  0
+ AH7  CONST_08  N07  C08  N24  C25     0.00   0.0  0
+ AH7  CONST_09  C08  N24  C25  C05     0.00   0.0  0
+ AH7  CONST_10  C08  N07  C06  C05     0.00   0.0  0
+ AH7  CONST_11  N24  C25  C05  C06     0.00   0.0  0
+ AH7  CONST_12  N24  C08  N07  C06     0.00   0.0  0
+ AH7  CONST_13  C15  C16  C11  C10   180.00   0.0  0
+ AH7  CONST_14  C13  C12  C11  C10   180.00   0.0  0
+ AH7  CONST_15  N09  C08  N24  C25   180.00   0.0  0
+ AH7  CONST_16  N24  C25  C05  C02   180.00   0.0  0
+ AH7  CONST_17  N07  C06  C05  C02   180.00   0.0  0
+ AH7  CONST_18  N09  C08  N07  C06   180.00   0.0  0
+ AH7  CONST_19  N24  C08  N09  C10     0.00   0.0  0
+ AH7  CONST_20  N07  C08  N09  C10   180.00   0.0  0
+ AH7  CONST_21  H5   C16  C11  C10     0.00   0.0  0
+ AH7  CONST_22  H1   C12  C11  C10     0.00   0.0  0
+ AH7  CONST_23  H4   C15  C16  C11   180.00   0.0  0
+ AH7  CONST_24  H2   C13  C12  C11   180.00   0.0  0
+ AH7  CONST_25  H3   C14  C13  C12   180.00   0.0  0
+ AH7  CONST_26  H15  C06  C05  C25   180.00   0.0  0
+ AH7  CONST_27  H14  C25  C05  C06   180.00   0.0  0
+ AH7  CONST_28  H17  N09  C08  N07     0.00   0.0  0
+ AH7  CONST_29  O04  N03  C02  C05   180.00   0.0  0
+ AH7  CONST_30  O04  N03  C02  O01     0.00   0.0  0
+ AH7  Var_01    C19  C22  C23  C10   -53.07  30.0  1
+ AH7  Var_02    C19  C18  C17  C10    57.28  30.0  1
+ AH7  Var_03    C22  C19  C18  C17   -53.82  30.0  1
+ AH7  Var_04    C23  C22  C19  C18    51.58  30.0  1
+ AH7  Var_05    N03  C02  C05  C25   163.28  30.0  2
+ AH7  Var_06    C22  C23  C10  C11   177.99  30.0  1
+ AH7  Var_07    C18  C17  C10  C11  -176.45  30.0  1
+ AH7  Var_08    C23  C10  C11  C12  -100.87  30.0  2
+ AH7  Var_09    C17  C10  C11  C12    18.55  30.0  2
+ AH7  Var_10    C23  C10  C11  C16    75.63  30.0  2
+ AH7  Var_11    C17  C10  C11  C16  -164.94  30.0  2
+ AH7  Var_12    C22  C23  C10  C17    55.15  30.0  1
+ AH7  Var_13    C23  C10  C17  C18   -57.05  30.0  1
+ AH7  Var_14    C08  N09  C10  C11   -58.06  30.0  3
+ AH7  Var_15    N09  C10  C11  C12   143.08  30.0  2
+ AH7  Var_16    N09  C10  C11  C16   -40.42  30.0  2
+ AH7  Var_17    C08  N09  C10  C17    68.09  30.0  3
+ AH7  Var_18    N09  C10  C17  C18    59.16  30.0  1
+ AH7  Var_19    N09  C10  C23  C22   -63.59  30.0  1
+ AH7  Var_20    C08  N09  C10  C23  -174.89  30.0  3
+ AH7  Var_21    H12  C23  C10  C11   -59.33  30.0  1
+ AH7  Var_22    H13  C23  C10  C11    56.00  30.0  1
+ AH7  Var_23    H6   C17  C10  C11   -56.05  30.0  1
+ AH7  Var_24    H7   C17  C10  C11    60.83  30.0  1
+ AH7  Var_25    C02  N03  O04  H18  -101.61  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

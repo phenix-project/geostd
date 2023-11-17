@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UIB  UIB  4-[(1R,3aS,4R,6aS)-5-(1,3-benzodioxol-5-ylmethyl)-4-ethyl-2,3,3-trimethyl-6-oxooctahydropyrrolo[3,4-c]pyrrol-1-yl]benzenecarboximidamide  ligand  65  33  .  2021-08-24  2021-08-24  
+ UIB  UIB  4-[(1R,3aS,4R,6aS)-5-(1,3-benzodioxol-5-ylmethyl)-4-ethyl-2,3,3-trimethyl-6-oxooctahydropyrrolo[3,4-c]pyrrol-1-yl]benzenecarboximidamide  ligand  65  33  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UIB
@@ -325,47 +326,93 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- UIB  CONST_01  C7    C6   C5   C4     0.00   0.0  0
- UIB  CONST_02  C7    C8   C9   C4     0.00   0.0  0
- UIB  CONST_03  C8    C9   C4   C5     0.00   0.0  0
- UIB  CONST_04  C8    C7   C6   C5     0.00   0.0  0
- UIB  CONST_05  C9    C4   C5   C6     0.00   0.0  0
- UIB  CONST_06  C9    C8   C7   C6     0.00   0.0  0
- UIB  CONST_07  C30   C31  C32  C24    0.00   0.0  0
- UIB  CONST_08  C30   C26  C25  C24    0.00   0.0  0
- UIB  CONST_09  C26   C25  C24  C32    0.00   0.0  0
- UIB  CONST_10  C26   C30  C31  C32    0.00   0.0  0
- UIB  CONST_11  C25   C24  C32  C31    0.00   0.0  0
- UIB  CONST_12  C25   C26  C30  C31    0.00   0.0  0
- UIB  CONST_13  C10   C7   C6   C5   180.00   0.0  0
- UIB  CONST_14  C9    C8   C7   C10  180.00   0.0  0
- UIB  CONST_15  C17   N19  C20  C22    0.00   0.0  0
- UIB  CONST_16  C6    C5   C4   C3   180.00   0.0  0
- UIB  CONST_17  C8    C9   C4   C3   180.00   0.0  0
- UIB  CONST_18  C31   C32  C24  C23  180.00   0.0  0
- UIB  CONST_19  C26   C25  C24  C23  180.00   0.0  0
- UIB  CONST_20  C23   N19  C20  C22  180.00   0.0  0
- UIB  CONST_21  O21   C20  N19  C17  180.00   0.0  0
- UIB  CONST_22  H6    C6   C5   C4   180.00   0.0  0
- UIB  CONST_23  H8    C8   C9   C4   180.00   0.0  0
- UIB  CONST_24  H9    C9   C4   C5   180.00   0.0  0
- UIB  CONST_25  H5    C5   C6   C7   180.00   0.0  0
- UIB  CONST_26  H31   C31  C32  C24  180.00   0.0  0
- UIB  CONST_27  H25   C25  C24  C32  180.00   0.0  0
- UIB  CONST_28  H32   C32  C31  C30  180.00   0.0  0
- UIB  CONST_29  O21   C20  N19  C23    0.00   0.0  0
- UIB  CONST_30  HN11  N1   C3   C4   180.00   0.0  0
- UIB  CONST_32  HN2   N2   C3   C4   180.00   0.0  0
- UIB  Var_01    C16   C15  N11  C10   27.81  30.0  1
- UIB  Var_02    O27   C28  O29  C30  -14.27  30.0  1
- UIB  Var_03    O29   C28  O27  C26   14.30  30.0  1
- UIB  Var_04    C24   C23  N19  C17  -76.13  30.0  3
- UIB  Var_05    C32   C24  C23  N19  104.96  30.0  2
- UIB  Var_06    C5    C4   C3   N1   156.20  30.0  2
- UIB  Var_07    H121  C12  N11  C10  -64.60  30.0  3
- UIB  Var_08    H131  C13  C15  C16  178.44  30.0  3
- UIB  Var_09    H141  C14  C15  C16  177.69  30.0  3
- UIB  Var_10    H411  C41  C18  C17  168.89  30.0  3
+ UIB  CONST_01  C7    C6   C5   C4      0.00   0.0  0
+ UIB  CONST_02  C7    C8   C9   C4      0.00   0.0  0
+ UIB  CONST_03  C8    C9   C4   C5      0.00   0.0  0
+ UIB  CONST_04  C8    C7   C6   C5      0.00   0.0  0
+ UIB  CONST_05  C9    C4   C5   C6      0.00   0.0  0
+ UIB  CONST_06  C9    C8   C7   C6      0.00   0.0  0
+ UIB  CONST_07  C30   C31  C32  C24     0.00   0.0  0
+ UIB  CONST_08  C30   C26  C25  C24     0.00   0.0  0
+ UIB  CONST_09  C26   C25  C24  C32     0.00   0.0  0
+ UIB  CONST_10  C26   C30  C31  C32     0.00   0.0  0
+ UIB  CONST_11  C25   C24  C32  C31     0.00   0.0  0
+ UIB  CONST_12  C25   C26  C30  C31     0.00   0.0  0
+ UIB  CONST_13  C10   C7   C6   C5    180.00   0.0  0
+ UIB  CONST_14  C9    C8   C7   C10   180.00   0.0  0
+ UIB  CONST_15  C17   N19  C20  C22     0.00   0.0  0
+ UIB  CONST_16  C6    C5   C4   C3    180.00   0.0  0
+ UIB  CONST_17  C8    C9   C4   C3    180.00   0.0  0
+ UIB  CONST_18  C31   C32  C24  C23   180.00   0.0  0
+ UIB  CONST_19  C26   C25  C24  C23   180.00   0.0  0
+ UIB  CONST_20  C23   N19  C20  C22   180.00   0.0  0
+ UIB  CONST_21  O21   C20  N19  C17   180.00   0.0  0
+ UIB  CONST_22  H6    C6   C5   C4    180.00   0.0  0
+ UIB  CONST_23  H8    C8   C9   C4    180.00   0.0  0
+ UIB  CONST_24  H9    C9   C4   C5    180.00   0.0  0
+ UIB  CONST_25  H5    C5   C6   C7    180.00   0.0  0
+ UIB  CONST_26  H31   C31  C32  C24   180.00   0.0  0
+ UIB  CONST_27  H25   C25  C24  C32   180.00   0.0  0
+ UIB  CONST_28  H32   C32  C31  C30   180.00   0.0  0
+ UIB  CONST_29  O21   C20  N19  C23     0.00   0.0  0
+ UIB  CONST_30  HN11  N1   C3   C4    180.00   0.0  0
+ UIB  CONST_31  HN2   N2   C3   C4    180.00   0.0  0
+ UIB  Var_01    C16   C15  N11  C10    27.81  30.0  1
+ UIB  Var_02    O27   C28  O29  C30   -14.27  30.0  1
+ UIB  Var_03    O29   C28  O27  C26    14.30  30.0  1
+ UIB  Var_04    C24   C23  N19  C17   -76.13  30.0  3
+ UIB  Var_05    C32   C24  C23  N19   104.96  30.0  2
+ UIB  Var_06    C5    C4   C3   N1    156.20  30.0  2
+ UIB  Var_07    H121  C12  N11  C10   -64.60  30.0  3
+ UIB  Var_08    H131  C13  C15  C16   178.44  30.0  3
+ UIB  Var_09    H141  C14  C15  C16   177.69  30.0  3
+ UIB  Var_10    H411  C41  C18  C17   168.89  30.0  3
+ UIB  Var_11    C22   C10  C7   C6     89.53  30.0  2
+ UIB  Var_12    N11   C10  C7   C6   -152.25  30.0  2
+ UIB  Var_13    C16   C22  C10  C7    157.61  30.0  1
+ UIB  Var_14    C20   C22  C10  C7     44.26  30.0  1
+ UIB  Var_15    C15   N11  C10  C7   -164.69  30.0  1
+ UIB  Var_16    C15   C16  C22  C10   -17.38  30.0  1
+ UIB  Var_17    C17   C16  C22  C10  -142.82  30.0  1
+ UIB  Var_18    N19   C20  C22  C10   125.38  30.0  1
+ UIB  Var_19    C8    C7   C10  C22   -91.07  30.0  2
+ UIB  Var_20    C15   N11  C10  C22   -39.08  30.0  1
+ UIB  Var_21    N11   C15  C16  C22    -5.01  30.0  1
+ UIB  Var_22    N19   C17  C16  C22    24.03  30.0  1
+ UIB  Var_23    N11   C10  C22  C16    33.80  30.0  1
+ UIB  Var_24    N19   C20  C22  C16    11.87  30.0  1
+ UIB  Var_25    C20   N19  C17  C16   -18.16  30.0  1
+ UIB  Var_26    C20   C22  C16  C15   103.41  30.0  1
+ UIB  Var_27    N19   C17  C16  C15   -92.97  30.0  1
+ UIB  Var_28    C8    C7   C10  N11    27.15  30.0  2
+ UIB  Var_29    C20   C22  C10  N11   -79.55  30.0  1
+ UIB  Var_30    C17   C16  C15  N11   111.30  30.0  1
+ UIB  Var_31    C20   C22  C16  C17   -22.03  30.0  1
+ UIB  Var_32    C28   O29  C30  C31  -172.62  30.0  1
+ UIB  Var_33    C28   O27  C26  C30    -8.98  30.0  1
+ UIB  Var_34    C28   O29  C30  C26     8.92  30.0  1
+ UIB  Var_35    C28   O27  C26  C25   172.28  30.0  1
+ UIB  Var_36    C12   N11  C10  C7     64.24  30.0  1
+ UIB  Var_37    O21   C20  C22  C10   -55.85  30.0  1
+ UIB  Var_38    C12   N11  C10  C22  -170.15  30.0  1
+ UIB  Var_39    C13   C15  C16  C22   115.09  30.0  1
+ UIB  Var_40    C14   C15  C16  C22  -123.44  30.0  1
+ UIB  Var_41    C18   C17  C16  C22   -97.44  30.0  1
+ UIB  Var_42    O21   C20  C22  C16  -169.36  30.0  1
+ UIB  Var_43    C23   N19  C17  C16   155.54  30.0  1
+ UIB  Var_44    C18   C17  C16  C15   145.56  30.0  1
+ UIB  Var_45    C17   C16  C15  C13  -128.60  30.0  1
+ UIB  Var_46    C17   C16  C15  C14    -7.13  30.0  1
+ UIB  Var_47    C18   C17  N19  C20   101.10  30.0  1
+ UIB  Var_48    H10   C10  C7   C6    -28.76  30.0  2
+ UIB  Var_49    H22   C22  C10  C7    -79.74  30.0  1
+ UIB  Var_50    H16   C16  C22  C10    99.96  30.0  1
+ UIB  Var_51    H17   C17  C16  C22   141.59  30.0  1
+ UIB  Var_52    C41   C18  C17  C16   177.46  30.0  3
+ UIB  Var_53    C41   C18  C17  N19    62.41  30.0  3
+ UIB  Var_54    C18   C17  N19  C23   -85.20  30.0  1
+ UIB  Var_55    H181  C18  C17  C16    53.10  30.0  3
+ UIB  Var_56    H182  C18  C17  C16   -61.26  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 4CD  4CD  (5-chloro-2,4-dihydroxyphenyl)[(2R)-2-(2-methylphenyl)pyrrolidin-1-yl]methanone  ligand  41  23  .  2022-07-23  2022-07-26
+ 4CD  4CD  (5-chloro-2,4-dihydroxyphenyl)[(2R)-2-(2-methylphenyl)pyrrolidin-1-yl]methanone  ligand  41  23  .  2022-07-23  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_4CD
@@ -223,44 +224,59 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 4CD  CONST_01  C8   C7   C6   C5     0.00   0.0  0
- 4CD  CONST_02  C8   C9   C10  C5     0.00   0.0  0
- 4CD  CONST_03  C9   C10  C5   C6     0.00   0.0  0
- 4CD  CONST_04  C9   C8   C7   C6     0.00   0.0  0
- 4CD  CONST_05  C10  C5   C6   C7     0.00   0.0  0
- 4CD  CONST_06  C10  C9   C8   C7     0.00   0.0  0
- 4CD  CONST_07  C16  C17  C12  C13    0.00   0.0  0
- 4CD  CONST_08  C16  C15  C14  C13    0.00   0.0  0
- 4CD  CONST_09  C12  C13  C14  C15    0.00   0.0  0
- 4CD  CONST_10  C12  C17  C16  C15    0.00   0.0  0
- 4CD  CONST_11  C14  C13  C12  C17    0.00   0.0  0
- 4CD  CONST_12  C14  C15  C16  C17    0.00   0.0  0
- 4CD  CONST_13  C7   C6   C5   C4   180.00   0.0  0
- 4CD  CONST_14  C9   C10  C5   C4   180.00   0.0  0
- 4CD  CONST_15  C11  C10  C5   C4     0.00   0.0  0
- 4CD  CONST_16  C11  C10  C5   C6   180.00   0.0  0
- 4CD  CONST_17  C11  C10  C9   C8   180.00   0.0  0
- 4CD  CONST_18  O1   C17  C12  C13  180.00   0.0  0
- 4CD  CONST_19  O2   C15  C14  C13  180.00   0.0  0
- 4CD  CONST_20  O1   C17  C16  C15  180.00   0.0  0
- 4CD  CONST_21  O2   C15  C16  C17  180.00   0.0  0
- 4CD  CONST_22  CL1  C14  C13  C12  180.00   0.0  0
- 4CD  CONST_23  C18  C12  C13  C14  180.00   0.0  0
- 4CD  CONST_24  CL1  C14  C15  C16  180.00   0.0  0
- 4CD  CONST_25  C18  C12  C17  C16  180.00   0.0  0
- 4CD  CONST_26  C12  C18  N1   C4   180.00   0.0  0
- 4CD  CONST_28  H6   C6   C5   C4     0.00   0.0  0
- 4CD  CONST_29  H7   C7   C6   C5   180.00   0.0  0
- 4CD  CONST_30  H9   C9   C10  C5   180.00   0.0  0
- 4CD  CONST_31  H8   C8   C7   C6   180.00   0.0  0
- 4CD  CONST_32  H13  C13  C14  C15  180.00   0.0  0
- 4CD  CONST_33  H16  C16  C17  C12  180.00   0.0  0
- 4CD  CONST_34  O3   C18  N1   C4     0.00   0.0  0
- 4CD  Var_01    C1   C2   C3   N1    34.98  30.0  1
- 4CD  Var_02    C2   C3   N1   C4   -18.70  30.0  1
- 4CD  Var_03    C3   C2   C1   C4   -38.90  30.0  1
- 4CD  Var_04    C13  C12  C18  N1    57.65  30.0  2
- 4CD  Var_05    H11  C11  C10  C5    61.20  30.0  2
+ 4CD  CONST_01  C8   C7   C6   C5      0.00   0.0  0
+ 4CD  CONST_02  C8   C9   C10  C5      0.00   0.0  0
+ 4CD  CONST_03  C9   C10  C5   C6      0.00   0.0  0
+ 4CD  CONST_04  C9   C8   C7   C6      0.00   0.0  0
+ 4CD  CONST_05  C10  C5   C6   C7      0.00   0.0  0
+ 4CD  CONST_06  C10  C9   C8   C7      0.00   0.0  0
+ 4CD  CONST_07  C16  C17  C12  C13     0.00   0.0  0
+ 4CD  CONST_08  C16  C15  C14  C13     0.00   0.0  0
+ 4CD  CONST_09  C12  C13  C14  C15     0.00   0.0  0
+ 4CD  CONST_10  C12  C17  C16  C15     0.00   0.0  0
+ 4CD  CONST_11  C14  C13  C12  C17     0.00   0.0  0
+ 4CD  CONST_12  C14  C15  C16  C17     0.00   0.0  0
+ 4CD  CONST_13  C7   C6   C5   C4    180.00   0.0  0
+ 4CD  CONST_14  C9   C10  C5   C4    180.00   0.0  0
+ 4CD  CONST_15  C11  C10  C5   C4      0.00   0.0  0
+ 4CD  CONST_16  C11  C10  C5   C6    180.00   0.0  0
+ 4CD  CONST_17  C11  C10  C9   C8    180.00   0.0  0
+ 4CD  CONST_18  O1   C17  C12  C13   180.00   0.0  0
+ 4CD  CONST_19  O2   C15  C14  C13   180.00   0.0  0
+ 4CD  CONST_20  O1   C17  C16  C15   180.00   0.0  0
+ 4CD  CONST_21  O2   C15  C16  C17   180.00   0.0  0
+ 4CD  CONST_22  CL1  C14  C13  C12   180.00   0.0  0
+ 4CD  CONST_23  C18  C12  C13  C14   180.00   0.0  0
+ 4CD  CONST_24  CL1  C14  C15  C16   180.00   0.0  0
+ 4CD  CONST_25  C18  C12  C17  C16   180.00   0.0  0
+ 4CD  CONST_26  C12  C18  N1   C4    180.00   0.0  0
+ 4CD  CONST_27  H6   C6   C5   C4      0.00   0.0  0
+ 4CD  CONST_28  H7   C7   C6   C5    180.00   0.0  0
+ 4CD  CONST_29  H9   C9   C10  C5    180.00   0.0  0
+ 4CD  CONST_30  H8   C8   C7   C6    180.00   0.0  0
+ 4CD  CONST_31  H13  C13  C14  C15   180.00   0.0  0
+ 4CD  CONST_32  H16  C16  C17  C12   180.00   0.0  0
+ 4CD  CONST_33  O3   C18  N1   C4      0.00   0.0  0
+ 4CD  Var_01    C1   C2   C3   N1     34.98  30.0  1
+ 4CD  Var_02    C2   C3   N1   C4    -18.70  30.0  1
+ 4CD  Var_03    C3   C2   C1   C4    -38.90  30.0  1
+ 4CD  Var_04    C13  C12  C18  N1     57.65  30.0  2
+ 4CD  Var_05    H11  C11  C10  C5     61.20  30.0  2
+ 4CD  Var_06    C6   C5   C4   N1     43.19  30.0  2
+ 4CD  Var_07    C10  C5   C4   N1   -138.96  30.0  2
+ 4CD  Var_08    C2   C1   C4   N1     27.40  30.0  1
+ 4CD  Var_09    C3   N1   C4   C5   -127.78  30.0  1
+ 4CD  Var_10    C2   C1   C4   C5    149.51  30.0  1
+ 4CD  Var_11    C1   C4   C5   C6    -73.37  30.0  2
+ 4CD  Var_12    C1   C4   C5   C10   104.49  30.0  2
+ 4CD  Var_13    C3   N1   C4   C1     -5.41  30.0  1
+ 4CD  Var_14    C18  N1   C4   C5     65.91  30.0  1
+ 4CD  Var_15    C18  N1   C4   C1   -171.71  30.0  1
+ 4CD  Var_16    H1   C1   C4   N1    150.10  30.0  1
+ 4CD  Var_17    H1A  C1   C4   N1    -90.39  30.0  1
+ 4CD  Var_18    H4   C4   C5   C6    164.30  30.0  2
+ 4CD  Var_19    HO1  O1   C17  C12   178.19  30.0  2
+ 4CD  Var_20    HO2  O2   C15  C14   177.91  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

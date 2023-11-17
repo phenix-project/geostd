@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OJH  OJH  ~{N}-[4-bromanyl-3-[(3~{S})-3-methylpyrrolidin-1-yl]sulfonyl-phenyl]-2-[(4~{R})-4-cyclopropyl-4-methyl-2,5-bis(oxidanylidene)imidazolidin-1-yl]ethanamide  ligand  56  31  .  2022-07-22  2023-02-15
+ OJH  OJH  ~{N}-[4-bromanyl-3-[(3~{S})-3-methylpyrrolidin-1-yl]sulfonyl-phenyl]-2-[(4~{R})-4-cyclopropyl-4-methyl-2,5-bis(oxidanylidene)imidazolidin-1-yl]ethanamide  ligand  56  31  .  2022-07-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OJH
@@ -291,43 +292,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OJH  CONST_01  C31  C30  C29  C13    0.00   0.0  0
- OJH  CONST_02  C31  C11  C12  C13    0.00   0.0  0
- OJH  CONST_03  C29  C13  C12  C11    0.00   0.0  0
- OJH  CONST_04  C29  C30  C31  C11    0.00   0.0  0
- OJH  CONST_05  C30  C29  C13  C12    0.00   0.0  0
- OJH  CONST_06  C30  C31  C11  C12    0.00   0.0  0
- OJH  CONST_07  C19  N18  C27  C22    0.00   0.0  0
- OJH  CONST_08  N18  C19  N21  C22    0.00   0.0  0
- OJH  CONST_09  C27  N18  C19  N21    0.00   0.0  0
- OJH  CONST_10  S08  C11  C12  C13  180.00   0.0  0
- OJH  CONST_11  C30  C31  C11  S08  180.00   0.0  0
- OJH  CONST_12  N14  C13  C12  C11  180.00   0.0  0
- OJH  CONST_13  BR1  C31  C11  C12  180.00   0.0  0
- OJH  CONST_14  C30  C29  C13  N14  180.00   0.0  0
- OJH  CONST_15  BR1  C31  C30  C29  180.00   0.0  0
- OJH  CONST_16  C22  C27  N18  C17  180.00   0.0  0
- OJH  CONST_17  N21  C19  N18  C17  180.00   0.0  0
- OJH  CONST_18  O20  C19  N21  C22  180.00   0.0  0
- OJH  CONST_19  C27  N18  C19  O20  180.00   0.0  0
- OJH  CONST_20  H25  C30  C29  C13  180.00   0.0  0
- OJH  CONST_21  H24  C29  C13  C12  180.00   0.0  0
- OJH  CONST_22  H16  C12  C13  C29  180.00   0.0  0
- OJH  CONST_23  H18  N21  C19  N18  180.00   0.0  0
- OJH  CONST_24  C29  C13  N14  C15  180.00   0.0  0
- OJH  CONST_25  C12  C13  N14  C15    0.00   0.0  0
- OJH  CONST_26  O20  C19  N18  C17    0.00   0.0  0
- OJH  CONST_27  H17  N14  C13  C12  180.00   0.0  0
- OJH  CONST_28  C17  C15  N14  C13  180.00   0.0  0
- OJH  CONST_29  O16  C15  N14  C13    0.00   0.0  0
- OJH  Var_01    C25  C26  C24  C22  110.64  30.0  1
- OJH  Var_02    N06  C05  C04  C02  -29.56  30.0  1
- OJH  Var_03    C05  N06  C07  C02   14.70  30.0  1
- OJH  Var_04    C07  N06  C05  C04    9.26  30.0  1
- OJH  Var_05    C11  S08  N06  C05   84.01  30.0  1
- OJH  Var_06    C12  C11  S08  N06    1.76  30.0  3
- OJH  Var_07    C27  N18  C17  C15  -87.76  30.0  3
- OJH  Var_08    N18  C17  C15  N14  176.35  30.0  2
+ OJH  CONST_01  C31  C30  C29  C13     0.00   0.0  0
+ OJH  CONST_02  C31  C11  C12  C13     0.00   0.0  0
+ OJH  CONST_03  C29  C13  C12  C11     0.00   0.0  0
+ OJH  CONST_04  C29  C30  C31  C11     0.00   0.0  0
+ OJH  CONST_05  C30  C29  C13  C12     0.00   0.0  0
+ OJH  CONST_06  C30  C31  C11  C12     0.00   0.0  0
+ OJH  CONST_07  C19  N18  C27  C22     0.00   0.0  0
+ OJH  CONST_08  N18  C19  N21  C22     0.00   0.0  0
+ OJH  CONST_09  C27  N18  C19  N21     0.00   0.0  0
+ OJH  CONST_10  S08  C11  C12  C13   180.00   0.0  0
+ OJH  CONST_11  C30  C31  C11  S08   180.00   0.0  0
+ OJH  CONST_12  N14  C13  C12  C11   180.00   0.0  0
+ OJH  CONST_13  BR1  C31  C11  C12   180.00   0.0  0
+ OJH  CONST_14  C30  C29  C13  N14   180.00   0.0  0
+ OJH  CONST_15  BR1  C31  C30  C29   180.00   0.0  0
+ OJH  CONST_16  C22  C27  N18  C17   180.00   0.0  0
+ OJH  CONST_17  N21  C19  N18  C17   180.00   0.0  0
+ OJH  CONST_18  O20  C19  N21  C22   180.00   0.0  0
+ OJH  CONST_19  C27  N18  C19  O20   180.00   0.0  0
+ OJH  CONST_20  H25  C30  C29  C13   180.00   0.0  0
+ OJH  CONST_21  H24  C29  C13  C12   180.00   0.0  0
+ OJH  CONST_22  H16  C12  C13  C29   180.00   0.0  0
+ OJH  CONST_23  H18  N21  C19  N18   180.00   0.0  0
+ OJH  CONST_24  C29  C13  N14  C15   180.00   0.0  0
+ OJH  CONST_25  C12  C13  N14  C15     0.00   0.0  0
+ OJH  CONST_26  O20  C19  N18  C17     0.00   0.0  0
+ OJH  CONST_27  H17  N14  C13  C12   180.00   0.0  0
+ OJH  CONST_28  C17  C15  N14  C13   180.00   0.0  0
+ OJH  CONST_29  O16  C15  N14  C13     0.00   0.0  0
+ OJH  Var_01    C25  C26  C24  C22   110.64  30.0  1
+ OJH  Var_02    N06  C05  C04  C02   -29.56  30.0  1
+ OJH  Var_03    C05  N06  C07  C02    14.70  30.0  1
+ OJH  Var_04    C07  N06  C05  C04     9.26  30.0  1
+ OJH  Var_05    C11  S08  N06  C05    84.01  30.0  1
+ OJH  Var_06    C12  C11  S08  N06     1.76  30.0  3
+ OJH  Var_07    C27  N18  C17  C15   -87.76  30.0  3
+ OJH  Var_08    N18  C17  C15  N14   176.35  30.0  2
+ OJH  CONST_30  N21  C22  C27  N18     0.00   0.0  0
+ OJH  CONST_31  C27  C22  N21  C19     0.00   0.0  0
+ OJH  Var_09    N18  C27  C22  C24  -122.28  30.0  1
+ OJH  Var_10    C19  N21  C22  C24   118.74  30.0  1
+ OJH  Var_11    C27  C22  C24  C26    72.15  30.0  1
+ OJH  Var_12    N21  C22  C24  C26   -38.66  30.0  1
+ OJH  Var_13    N06  C07  C02  C04   -32.39  30.0  1
+ OJH  Var_14    C07  C02  C04  C05    39.13  30.0  1
+ OJH  Var_15    C25  C24  C22  N21    33.03  30.0  3
+ OJH  Var_16    C27  C22  C24  C25   143.83  30.0  1
+ OJH  Var_17    O28  C27  C22  C24    57.13  30.0  1
+ OJH  Var_18    C23  C22  C24  C26  -165.61  30.0  1
+ OJH  Var_19    C01  C02  C04  C05   162.16  30.0  1
+ OJH  Var_20    C01  C02  C07  N06  -156.66  30.0  1
+ OJH  Var_21    C23  C22  C27  N18   115.65  30.0  1
+ OJH  Var_22    C23  C22  N21  C19  -114.99  30.0  1
+ OJH  Var_23    C23  C22  C24  C25   -93.93  30.0  1
+ OJH  Var_24    H22  C25  C24  C22    -3.29  30.0  1
+ OJH  Var_25    H23  C25  C24  C22   140.97  30.0  1
+ OJH  Var_26    H3   C24  C25  C26   106.71  30.0  1
+ OJH  Var_27    H14  C07  C02  C04  -152.15  30.0  1
+ OJH  Var_28    H15  C07  C02  C04    86.43  30.0  1
+ OJH  Var_29    H9   C02  C04  C05   -75.37  30.0  1
+ OJH  Var_30    C23  C22  C27  O28   -64.94  30.0  1
+ OJH  Var_31    H19  C23  C22  C24    61.43  30.0  3
+ OJH  Var_32    H20  C23  C22  C24  -178.37  30.0  3
+ OJH  Var_33    H21  C23  C22  C24   -57.53  30.0  3
+ OJH  Var_34    H6   C01  C02  C04   179.99  30.0  3
+ OJH  Var_35    H7   C01  C02  C04   -59.92  30.0  3
+ OJH  Var_36    H8   C01  C02  C04    60.09  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

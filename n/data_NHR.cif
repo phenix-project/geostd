@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NHR  NHR  'N-({4-[(1R)-2-(2-amino-4-hydroxyquinazolin-6-yl)-1-carboxyethyl]phenyl}carbonyl)-L-glutamic acid'  ligand  54  35  .  2022-03-23  2022-03-23
+ NHR  NHR  'N-({4-[(1R)-2-(2-amino-4-hydroxyquinazolin-6-yl)-1-carboxyethyl]phenyl}carbonyl)-L-glutamic acid'  ligand  54  35  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NHR
@@ -268,57 +269,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NHR  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- NHR  CONST_02  C4    C4A  C8A  N1     0.00   0.0  0
- NHR  CONST_03  C5    C4A  C8A  N1   180.00   0.0  0
- NHR  CONST_04  C7    C8   C8A  N1   180.00   0.0  0
- NHR  CONST_05  C4A   C8A  N1   C2     0.00   0.0  0
- NHR  CONST_06  C8    C8A  N1   C2   180.00   0.0  0
- NHR  CONST_07  C4A   C4   N3   C2     0.00   0.0  0
- NHR  CONST_08  C8A   N1   C2   N3     0.00   0.0  0
- NHR  CONST_09  C8A   C4A  C4   N3     0.00   0.0  0
- NHR  CONST_10  C5    C4A  C4   N3   180.00   0.0  0
- NHR  CONST_11  C8    C8A  C4A  C4   180.00   0.0  0
- NHR  CONST_12  C6    C5   C4A  C4   180.00   0.0  0
- NHR  CONST_13  C7    C8   C8A  C4A    0.00   0.0  0
- NHR  CONST_14  C7    C6   C5   C4A    0.00   0.0  0
- NHR  CONST_15  C6    C5   C4A  C8A    0.00   0.0  0
- NHR  CONST_16  C6    C7   C8   C8A    0.00   0.0  0
- NHR  CONST_17  C5    C4A  C8A  C8     0.00   0.0  0
- NHR  CONST_18  C5    C6   C7   C8     0.00   0.0  0
- NHR  CONST_19  C13   C12  C11  C16    0.00   0.0  0
- NHR  CONST_20  C13   C14  C15  C16    0.00   0.0  0
- NHR  CONST_21  C14   C15  C16  C11    0.00   0.0  0
- NHR  CONST_22  C14   C13  C12  C11    0.00   0.0  0
- NHR  CONST_23  C15   C16  C11  C12    0.00   0.0  0
- NHR  CONST_24  C15   C14  C13  C12    0.00   0.0  0
- NHR  CONST_25  O4    C4   N3   C2   180.00   0.0  0
- NHR  CONST_26  C8A   N1   C2   NA2  180.00   0.0  0
- NHR  CONST_27  C4    N3   C2   NA2  180.00   0.0  0
- NHR  CONST_28  C8A   C4A  C4   O4   180.00   0.0  0
- NHR  CONST_29  C5    C4A  C4   O4     0.00   0.0  0
- NHR  CONST_30  C9    C6   C5   C4A  180.00   0.0  0
- NHR  CONST_31  C9    C6   C7   C8   180.00   0.0  0
- NHR  CONST_32  C12   C13  C14  C10  180.00   0.0  0
- NHR  CONST_33  C16   C15  C14  C10  180.00   0.0  0
- NHR  CONST_34  C15   C16  C11  C17  180.00   0.0  0
- NHR  CONST_35  C13   C12  C11  C17  180.00   0.0  0
- NHR  CONST_36  H8    C8   C8A  N1     0.00   0.0  0
- NHR  CONST_37  H5    C5   C4A  C4     0.00   0.0  0
- NHR  CONST_38  H7    C7   C8   C8A  180.00   0.0  0
- NHR  CONST_39  H121  C12  C11  C16  180.00   0.0  0
- NHR  CONST_40  H151  C15  C16  C11  180.00   0.0  0
- NHR  CONST_41  H131  C13  C12  C11  180.00   0.0  0
- NHR  CONST_42  H161  C16  C11  C12  180.00   0.0  0
- NHR  CONST_43  HNA1  NA2  C2   N1   180.00   0.0  0
- NHR  CONST_44  HNA2  NA2  C2   N1     0.00   0.0  0
- NHR  CONST_45  CA    N    C17  C11  180.00   0.0  0
- NHR  CONST_46  HN    N    C17  C11    0.00   0.0  0
- NHR  CONST_47  CA    N    C17  O17    0.00   0.0  0
- NHR  Var_01    C10   C9   C6   C7    93.33  30.0  1
- NHR  Var_02    O17   C17  C11  C16  144.65  30.0  2
- NHR  Var_03    CD    CG   CB   CA   -53.00  30.0  3
- NHR  Var_04    OE1   CD   CG   CB   127.12  30.0  3
+ NHR  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ NHR  CONST_02  C4    C4A  C8A  N1      0.00   0.0  0
+ NHR  CONST_03  C5    C4A  C8A  N1    180.00   0.0  0
+ NHR  CONST_04  C7    C8   C8A  N1    180.00   0.0  0
+ NHR  CONST_05  C4A   C8A  N1   C2      0.00   0.0  0
+ NHR  CONST_06  C8    C8A  N1   C2    180.00   0.0  0
+ NHR  CONST_07  C4A   C4   N3   C2      0.00   0.0  0
+ NHR  CONST_08  C8A   N1   C2   N3      0.00   0.0  0
+ NHR  CONST_09  C8A   C4A  C4   N3      0.00   0.0  0
+ NHR  CONST_10  C5    C4A  C4   N3    180.00   0.0  0
+ NHR  CONST_11  C8    C8A  C4A  C4    180.00   0.0  0
+ NHR  CONST_12  C6    C5   C4A  C4    180.00   0.0  0
+ NHR  CONST_13  C7    C8   C8A  C4A     0.00   0.0  0
+ NHR  CONST_14  C7    C6   C5   C4A     0.00   0.0  0
+ NHR  CONST_15  C6    C5   C4A  C8A     0.00   0.0  0
+ NHR  CONST_16  C6    C7   C8   C8A     0.00   0.0  0
+ NHR  CONST_17  C5    C4A  C8A  C8      0.00   0.0  0
+ NHR  CONST_18  C5    C6   C7   C8      0.00   0.0  0
+ NHR  CONST_19  C13   C12  C11  C16     0.00   0.0  0
+ NHR  CONST_20  C13   C14  C15  C16     0.00   0.0  0
+ NHR  CONST_21  C14   C15  C16  C11     0.00   0.0  0
+ NHR  CONST_22  C14   C13  C12  C11     0.00   0.0  0
+ NHR  CONST_23  C15   C16  C11  C12     0.00   0.0  0
+ NHR  CONST_24  C15   C14  C13  C12     0.00   0.0  0
+ NHR  CONST_25  O4    C4   N3   C2    180.00   0.0  0
+ NHR  CONST_26  C8A   N1   C2   NA2   180.00   0.0  0
+ NHR  CONST_27  C4    N3   C2   NA2   180.00   0.0  0
+ NHR  CONST_28  C8A   C4A  C4   O4    180.00   0.0  0
+ NHR  CONST_29  C5    C4A  C4   O4      0.00   0.0  0
+ NHR  CONST_30  C9    C6   C5   C4A   180.00   0.0  0
+ NHR  CONST_31  C9    C6   C7   C8    180.00   0.0  0
+ NHR  CONST_32  C12   C13  C14  C10   180.00   0.0  0
+ NHR  CONST_33  C16   C15  C14  C10   180.00   0.0  0
+ NHR  CONST_34  C15   C16  C11  C17   180.00   0.0  0
+ NHR  CONST_35  C13   C12  C11  C17   180.00   0.0  0
+ NHR  CONST_36  H8    C8   C8A  N1      0.00   0.0  0
+ NHR  CONST_37  H5    C5   C4A  C4      0.00   0.0  0
+ NHR  CONST_38  H7    C7   C8   C8A   180.00   0.0  0
+ NHR  CONST_39  H121  C12  C11  C16   180.00   0.0  0
+ NHR  CONST_40  H151  C15  C16  C11   180.00   0.0  0
+ NHR  CONST_41  H131  C13  C12  C11   180.00   0.0  0
+ NHR  CONST_42  H161  C16  C11  C12   180.00   0.0  0
+ NHR  CONST_43  HNA1  NA2  C2   N1    180.00   0.0  0
+ NHR  CONST_44  HNA2  NA2  C2   N1      0.00   0.0  0
+ NHR  CONST_45  CA    N    C17  C11   180.00   0.0  0
+ NHR  CONST_46  HN    N    C17  C11     0.00   0.0  0
+ NHR  CONST_47  CA    N    C17  O17     0.00   0.0  0
+ NHR  Var_01    C10   C9   C6   C7     93.33  30.0  1
+ NHR  Var_02    O17   C17  C11  C16   144.65  30.0  2
+ NHR  Var_03    CD    CG   CB   CA    -53.00  30.0  3
+ NHR  Var_04    OE1   CD   CG   CB    127.12  30.0  3
+ NHR  Var_05    C13   C14  C10  C9    104.75  30.0  2
+ NHR  Var_06    C15   C14  C10  C9    -70.23  30.0  2
+ NHR  Var_07    C13   C14  C10  CA1  -127.37  30.0  2
+ NHR  Var_08    C15   C14  C10  CA1    57.65  30.0  2
+ NHR  Var_09    C14   C10  C9   C6    -57.50  30.0  3
+ NHR  Var_10    H4O   O4   C4   N3    178.94  30.0  2
+ NHR  Var_11    H101  C10  C14  C13   -11.22  30.0  2
+ NHR  Var_12    C6    C9   C10  CA1   174.17  30.0  1
+ NHR  Var_13    C14   C10  CA1  OA1  -156.08  30.0  2
+ NHR  Var_14    OA2   CA1  C10  C14    26.57  30.0  2
+ NHR  Var_15    OA1   CA1  C10  C9    -29.30  30.0  2
+ NHR  Var_16    OA2   CA1  C10  C9    153.35  30.0  2
+ NHR  Var_17    C     CA   N    C17    63.58  30.0  3
+ NHR  Var_18    CB    CA   N    C17   -67.73  30.0  3
+ NHR  Var_19    O     C    CA   N    -150.57  30.0  2
+ NHR  Var_20    OT    C    CA   N      33.08  30.0  2
+ NHR  Var_21    CG    CB   CA   N     -44.23  30.0  3
+ NHR  Var_22    CG    CB   CA   C    -174.54  30.0  3
+ NHR  Var_23    CB    CA   C    O     -20.67  30.0  2
+ NHR  Var_24    OT    C    CA   CB    162.98  30.0  2
+ NHR  Var_25    HA    CA   N    C17   177.11  30.0  3
+ NHR  Var_26    HB1   CB   CA   N      78.61  30.0  3
+ NHR  Var_27    HB2   CB   CA   N    -165.82  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VNY  VNY  (2R,3S,4R,5S,6R)-2-(hydroxymethyl)-6-[(E)-2-(4-phenylphenyl)prop-1-enyl]oxane-3,4,5-triol  ligand  50  26  .  2021-08-24  2022-09-22
+ VNY  VNY  (2R,3S,4R,5S,6R)-2-(hydroxymethyl)-6-[(E)-2-(4-phenylphenyl)prop-1-enyl]oxane-3,4,5-triol  ligand  50  26  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VNY
@@ -256,36 +257,76 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VNY  CONST_01  C12   C11  C10  C9     0.00   0.0  0
- VNY  CONST_02  C12   C13  C14  C9     0.00   0.0  0
- VNY  CONST_03  C13   C14  C9   C10    0.00   0.0  0
- VNY  CONST_04  C13   C12  C11  C10    0.00   0.0  0
- VNY  CONST_05  C15   C12  C11  C10  180.00   0.0  0
- VNY  CONST_06  C14   C9   C10  C11    0.00   0.0  0
- VNY  CONST_07  C14   C13  C12  C11    0.00   0.0  0
- VNY  CONST_10  C19   C20  C15  C12  180.00   0.0  0
- VNY  CONST_11  C17   C16  C15  C12  180.00   0.0  0
- VNY  CONST_14  C15   C12  C13  C14  180.00   0.0  0
- VNY  CONST_15  C18   C19  C20  C15    0.00   0.0  0
- VNY  CONST_16  C18   C17  C16  C15    0.00   0.0  0
- VNY  CONST_17  C17   C16  C15  C20    0.00   0.0  0
- VNY  CONST_18  C17   C18  C19  C20    0.00   0.0  0
- VNY  CONST_19  C16   C15  C20  C19    0.00   0.0  0
- VNY  CONST_20  C16   C17  C18  C19    0.00   0.0  0
- VNY  CONST_21  C11   C10  C9   C8   180.00   0.0  0
- VNY  CONST_22  C13   C14  C9   C8   180.00   0.0  0
- VNY  CONST_23  H11   C11  C10  C9   180.00   0.0  0
- VNY  CONST_24  H13   C13  C14  C9   180.00   0.0  0
- VNY  CONST_25  H14   C14  C9   C10  180.00   0.0  0
- VNY  CONST_26  H10   C10  C11  C12  180.00   0.0  0
- VNY  CONST_27  H20   C20  C15  C12    0.00   0.0  0
- VNY  CONST_28  H16   C16  C15  C12    0.00   0.0  0
- VNY  CONST_29  H19   C19  C20  C15  180.00   0.0  0
- VNY  CONST_30  H17   C17  C16  C15  180.00   0.0  0
- VNY  CONST_31  H18   C18  C19  C20  180.00   0.0  0
- VNY  Var_01    C9    C8   C7   C1   179.36   0.0  2
- VNY  Var_02    C10   C9   C8   C7   142.68  30.0  2
- VNY  Var_03    H211  C21  C8   C9   -52.57  30.0  3
+ VNY  CONST_01  C12   C11  C10  C9      0.00   0.0  0
+ VNY  CONST_02  C12   C13  C14  C9      0.00   0.0  0
+ VNY  CONST_03  C13   C14  C9   C10     0.00   0.0  0
+ VNY  CONST_04  C13   C12  C11  C10     0.00   0.0  0
+ VNY  CONST_05  C15   C12  C11  C10   180.00   0.0  0
+ VNY  CONST_06  C14   C9   C10  C11     0.00   0.0  0
+ VNY  CONST_07  C14   C13  C12  C11     0.00   0.0  0
+ VNY  CONST_08  C19   C20  C15  C12   180.00   0.0  0
+ VNY  CONST_09  C17   C16  C15  C12   180.00   0.0  0
+ VNY  CONST_10  C15   C12  C13  C14   180.00   0.0  0
+ VNY  CONST_11  C18   C19  C20  C15     0.00   0.0  0
+ VNY  CONST_12  C18   C17  C16  C15     0.00   0.0  0
+ VNY  CONST_13  C17   C16  C15  C20     0.00   0.0  0
+ VNY  CONST_14  C17   C18  C19  C20     0.00   0.0  0
+ VNY  CONST_15  C16   C15  C20  C19     0.00   0.0  0
+ VNY  CONST_16  C16   C17  C18  C19     0.00   0.0  0
+ VNY  CONST_17  C11   C10  C9   C8    180.00   0.0  0
+ VNY  CONST_18  C13   C14  C9   C8    180.00   0.0  0
+ VNY  CONST_19  H11   C11  C10  C9    180.00   0.0  0
+ VNY  CONST_20  H13   C13  C14  C9    180.00   0.0  0
+ VNY  CONST_21  H14   C14  C9   C10   180.00   0.0  0
+ VNY  CONST_22  H10   C10  C11  C12   180.00   0.0  0
+ VNY  CONST_23  H20   C20  C15  C12     0.00   0.0  0
+ VNY  CONST_24  H16   C16  C15  C12     0.00   0.0  0
+ VNY  CONST_25  H19   C19  C20  C15   180.00   0.0  0
+ VNY  CONST_26  H17   C17  C16  C15   180.00   0.0  0
+ VNY  CONST_27  H18   C18  C19  C20   180.00   0.0  0
+ VNY  Var_01    C9    C8   C7   C1    179.36   0.0  2
+ VNY  Var_02    C10   C9   C8   C7    142.68  30.0  2
+ VNY  Var_03    H211  C21  C8   C9    -52.57  30.0  3
+ VNY  Var_04    C2    C1   O5   C5    -58.68  30.0  1
+ VNY  Var_05    C2    C3   C4   C5     53.97  30.0  1
+ VNY  Var_06    C3    C4   C5   O5    -55.14  30.0  1
+ VNY  Var_07    C3    C2   C1   O5     53.70  30.0  1
+ VNY  Var_08    C1    O5   C5   C4     59.46  30.0  1
+ VNY  Var_09    C1    C2   C3   C4    -53.34  30.0  1
+ VNY  Var_10    C20   C15  C12  C11  -142.71  30.0  2
+ VNY  Var_11    C16   C15  C12  C11    37.07  30.0  2
+ VNY  Var_12    C20   C15  C12  C13    37.38  30.0  2
+ VNY  Var_13    C16   C15  C12  C13  -142.84  30.0  2
+ VNY  Var_14    C1    O5   C5   C6   -178.62  30.0  1
+ VNY  Var_15    C3    C4   C5   C6   -174.61  30.0  1
+ VNY  Var_16    C7    C1   O5   C5     67.34  30.0  1
+ VNY  Var_17    O3    C3   C4   C5    177.64  30.0  1
+ VNY  Var_18    O4    C4   C5   O5   -176.10  30.0  1
+ VNY  Var_19    O2    C2   C1   O5    -65.50  30.0  1
+ VNY  Var_20    O2    C2   C3   C4     67.95  30.0  1
+ VNY  Var_21    C2    C3   C4   O4    173.02  30.0  1
+ VNY  Var_22    C7    C1   C2   C3    -72.52  30.0  1
+ VNY  Var_23    C1    C2   C3   O3   -173.99  30.0  1
+ VNY  Var_24    H1    C1   O5   C5   -173.66  30.0  1
+ VNY  Var_25    H3    C3   C4   C5    -63.84  30.0  1
+ VNY  Var_26    H4    C4   C5   O5     63.71  30.0  1
+ VNY  Var_27    H2    C2   C1   O5    172.47  30.0  1
+ VNY  Var_28    H5    C5   C4   C3     66.37  30.0  1
+ VNY  Var_29    O5    C5   C6   O6     63.48  30.0  3
+ VNY  Var_30    C4    C5   C6   O6   -175.33  30.0  3
+ VNY  Var_31    O4    C4   C5   C6     64.43  30.0  1
+ VNY  Var_32    C8    C7   C1   O5    109.08  30.0  3
+ VNY  Var_33    O3    C3   C4   O4    -63.31  30.0  1
+ VNY  Var_34    O2    C2   C3   O3    -52.71  30.0  1
+ VNY  Var_35    C8    C7   C1   C2   -125.79  30.0  3
+ VNY  Var_36    C7    C1   C2   O2    168.29  30.0  1
+ VNY  Var_37    HA    O4   C4   C5    177.52  30.0  3
+ VNY  Var_38    H61C  C6   C5   O5    -58.61  30.0  3
+ VNY  Var_39    H62C  C6   C5   O5   -174.86  30.0  3
+ VNY  Var_40    H7    C7   C1   O5    -69.23  30.0  3
+ VNY  Var_41    HB    O3   C3   C4    160.54  30.0  3
+ VNY  Var_42    HC    O2   C2   C3    174.34  30.0  3
+ VNY  Var_43    H6    O6   C6   C5    173.06  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- R2H  R2H  (3~{S},6~{S})-3-[(3-fluoranyl-4-oxidanyl-phenyl)methyl]-6-[(4-hydroxyphenyl)methyl]piperazine-2,5-dione  ligand  42  25  .  2022-03-23  2022-03-23
+ R2H  R2H  (3~{S},6~{S})-3-[(3-fluoranyl-4-oxidanyl-phenyl)methyl]-6-[(4-hydroxyphenyl)methyl]piperazine-2,5-dione  ligand  42  25  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_R2H
@@ -225,43 +226,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- R2H  CONST_01  CE2  CD2  CGA  CD1    0.00   0.0  0
- R2H  CONST_02  CE2  CZA  CE1  CD1    0.00   0.0  0
- R2H  CONST_03  CE1  CD1  CGA  CD2    0.00   0.0  0
- R2H  CONST_04  CE1  CZA  CE2  CD2    0.00   0.0  0
- R2H  CONST_05  CE4  CD4  CGB  CD3    0.00   0.0  0
- R2H  CONST_06  CE4  CZB  CE3  CD3    0.00   0.0  0
- R2H  CONST_07  CD4  CGB  CD3  CE3    0.00   0.0  0
- R2H  CONST_08  CD4  CE4  CZB  CE3    0.00   0.0  0
- R2H  CONST_09  CZA  CE1  CD1  CGA    0.00   0.0  0
- R2H  CONST_10  CZA  CE2  CD2  CGA    0.00   0.0  0
- R2H  CONST_11  CZB  CE3  CD3  CGB    0.00   0.0  0
- R2H  CONST_12  CZB  CE4  CD4  CGB    0.00   0.0  0
- R2H  CONST_13  CAB  NB   CA   CAA    0.00   0.0  0
- R2H  CONST_14  CAB  CB   NA   CAA    0.00   0.0  0
- R2H  CONST_15  OAX  CZA  CE1  CD1  180.00   0.0  0
- R2H  CONST_16  OAX  CZA  CE2  CD2  180.00   0.0  0
- R2H  CONST_17  OAY  CZB  CE3  CD3  180.00   0.0  0
- R2H  CONST_18  CBA  CGA  CD1  CE1  180.00   0.0  0
- R2H  CONST_19  FY   CE2  CZA  CE1  180.00   0.0  0
- R2H  CONST_20  CBA  CGA  CD2  CE2  180.00   0.0  0
- R2H  CONST_21  CBB  CGB  CD3  CE3  180.00   0.0  0
- R2H  CONST_22  CE4  CD4  CGB  CBB  180.00   0.0  0
- R2H  CONST_23  OAY  CZB  CE4  CD4  180.00   0.0  0
- R2H  CONST_24  FY   CE2  CD2  CGA  180.00   0.0  0
- R2H  CONST_25  CAA  NA   CB   OB   180.00   0.0  0
- R2H  CONST_26  OA   CA   NB   CAB  180.00   0.0  0
- R2H  CONST_27  H3   CD2  CGA  CD1  180.00   0.0  0
- R2H  CONST_28  H2   CD1  CGA  CD2  180.00   0.0  0
- R2H  CONST_29  H13  CD4  CGB  CD3  180.00   0.0  0
- R2H  CONST_30  H5   CE1  CZA  CE2  180.00   0.0  0
- R2H  CONST_31  H14  CE4  CZB  CE3  180.00   0.0  0
- R2H  CONST_32  H4   CD3  CGB  CD4  180.00   0.0  0
- R2H  CONST_33  H6   CE3  CZB  CE4  180.00   0.0  0
- R2H  CONST_34  H1   NB   CA   CAA  180.00   0.0  0
- R2H  CONST_35  H15  NA   CB   CAB  180.00   0.0  0
- R2H  Var_01    CAA  CBA  CGA  CD1   95.23  30.0  2
- R2H  Var_02    CAB  CBB  CGB  CD3  -87.25  30.0  2
+ R2H  CONST_01  CE2  CD2  CGA  CD1     0.00   0.0  0
+ R2H  CONST_02  CE2  CZA  CE1  CD1     0.00   0.0  0
+ R2H  CONST_03  CE1  CD1  CGA  CD2     0.00   0.0  0
+ R2H  CONST_04  CE1  CZA  CE2  CD2     0.00   0.0  0
+ R2H  CONST_05  CE4  CD4  CGB  CD3     0.00   0.0  0
+ R2H  CONST_06  CE4  CZB  CE3  CD3     0.00   0.0  0
+ R2H  CONST_07  CD4  CGB  CD3  CE3     0.00   0.0  0
+ R2H  CONST_08  CD4  CE4  CZB  CE3     0.00   0.0  0
+ R2H  CONST_09  CZA  CE1  CD1  CGA     0.00   0.0  0
+ R2H  CONST_10  CZA  CE2  CD2  CGA     0.00   0.0  0
+ R2H  CONST_11  CZB  CE3  CD3  CGB     0.00   0.0  0
+ R2H  CONST_12  CZB  CE4  CD4  CGB     0.00   0.0  0
+ R2H  CONST_13  CAB  NB   CA   CAA     0.00   0.0  0
+ R2H  CONST_14  CAB  CB   NA   CAA     0.00   0.0  0
+ R2H  CONST_15  OAX  CZA  CE1  CD1   180.00   0.0  0
+ R2H  CONST_16  OAX  CZA  CE2  CD2   180.00   0.0  0
+ R2H  CONST_17  OAY  CZB  CE3  CD3   180.00   0.0  0
+ R2H  CONST_18  CBA  CGA  CD1  CE1   180.00   0.0  0
+ R2H  CONST_19  FY   CE2  CZA  CE1   180.00   0.0  0
+ R2H  CONST_20  CBA  CGA  CD2  CE2   180.00   0.0  0
+ R2H  CONST_21  CBB  CGB  CD3  CE3   180.00   0.0  0
+ R2H  CONST_22  CE4  CD4  CGB  CBB   180.00   0.0  0
+ R2H  CONST_23  OAY  CZB  CE4  CD4   180.00   0.0  0
+ R2H  CONST_24  FY   CE2  CD2  CGA   180.00   0.0  0
+ R2H  CONST_25  CAA  NA   CB   OB    180.00   0.0  0
+ R2H  CONST_26  OA   CA   NB   CAB   180.00   0.0  0
+ R2H  CONST_27  H3   CD2  CGA  CD1   180.00   0.0  0
+ R2H  CONST_28  H2   CD1  CGA  CD2   180.00   0.0  0
+ R2H  CONST_29  H13  CD4  CGB  CD3   180.00   0.0  0
+ R2H  CONST_30  H5   CE1  CZA  CE2   180.00   0.0  0
+ R2H  CONST_31  H14  CE4  CZB  CE3   180.00   0.0  0
+ R2H  CONST_32  H4   CD3  CGB  CD4   180.00   0.0  0
+ R2H  CONST_33  H6   CE3  CZB  CE4   180.00   0.0  0
+ R2H  CONST_34  H1   NB   CA   CAA   180.00   0.0  0
+ R2H  CONST_35  H15  NA   CB   CAB   180.00   0.0  0
+ R2H  Var_01    CAA  CBA  CGA  CD1    95.23  30.0  2
+ R2H  Var_02    CAB  CBB  CGB  CD3   -87.25  30.0  2
+ R2H  Var_03    CB   CAB  NB   CA     17.71  30.0  1
+ R2H  Var_04    CB   NA   CAA  CA     15.91  30.0  1
+ R2H  Var_05    NA   CB   CAB  NB     -9.82  30.0  1
+ R2H  Var_06    NA   CAA  CA   NB     -8.22  30.0  1
+ R2H  Var_07    CBB  CAB  NB   CA   -108.18  30.0  1
+ R2H  Var_08    CGA  CBA  CAA  CA    175.43  30.0  3
+ R2H  Var_09    CGB  CBB  CAB  CB    -63.01  30.0  3
+ R2H  Var_10    CBA  CAA  NA   CB   -109.30  30.0  1
+ R2H  Var_11    OB   CB   CAB  NB    169.48  30.0  1
+ R2H  Var_12    CGB  CBB  CAB  NB     64.28  30.0  3
+ R2H  Var_13    CBA  CAA  CA   NB    117.99  30.0  1
+ R2H  Var_14    NA   CB   CAB  CBB   116.63  30.0  1
+ R2H  Var_15    NA   CAA  CBA  CGA   -57.55  30.0  3
+ R2H  Var_16    OA   CA   CAA  NA    170.72  30.0  1
+ R2H  Var_17    H8   CAB  NB   CA    134.17  30.0  1
+ R2H  Var_18    H7   CAA  NA   CB    132.16  30.0  1
+ R2H  Var_19    CBB  CAB  CB   OB    -64.07  30.0  1
+ R2H  Var_20    OA   CA   CAA  CBA   -63.06  30.0  1
+ R2H  Var_21    H9   CBA  CAA  CA    -62.51  30.0  3
+ R2H  Var_22    H10  CBA  CAA  CA     53.95  30.0  3
+ R2H  Var_23    H11  CBB  CAB  CB     60.15  30.0  3
+ R2H  Var_24    H12  CBB  CAB  CB    174.61  30.0  3
+ R2H  Var_25    H16  OAX  CZA  CE1  -179.80  30.0  2
+ R2H  Var_26    H17  OAY  CZB  CE3  -179.57  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NZI  NZI  '[(2~{R},3~{S},5~{R})-3-oxidanyl-5-(2-oxidanylidene-3~{H}-benzimidazol-1-yl)oxolan-2-yl]methyl [oxidanyl(phosphonooxy)phosphoryl] hydrogen phosphate'  ligand  47  30  .  2022-11-17  2022-11-17
+ NZI  NZI  '[(2~{R},3~{S},5~{R})-3-oxidanyl-5-(2-oxidanylidene-3~{H}-benzimidazol-1-yl)oxolan-2-yl]methyl [oxidanyl(phosphonooxy)phosphoryl] hydrogen phosphate'  ligand  47  30  .  2022-11-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NZI
@@ -245,29 +246,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NZI  CONST_01  C7   C6   C11  C10    0.00   0.0  0
- NZI  CONST_02  C7   C8   C9   C10    0.00   0.0  0
- NZI  CONST_03  C8   C9   C10  C11    0.00   0.0  0
- NZI  CONST_04  C8   C7   C6   C11    0.00   0.0  0
- NZI  CONST_05  C9   C10  C11  C6     0.00   0.0  0
- NZI  CONST_06  C9   C8   C7   C6     0.00   0.0  0
- NZI  CONST_07  C6   N1   C5   N      0.00   0.0  0
- NZI  CONST_08  N1   C6   C7   N      0.00   0.0  0
- NZI  CONST_09  N1   C5   N    C2   180.00   0.0  0
- NZI  CONST_10  C6   C7   N    C2   180.00   0.0  0
- NZI  CONST_11  C6   C7   N    C5     0.00   0.0  0
- NZI  CONST_12  C7   C6   N1   C5     0.00   0.0  0
- NZI  CONST_13  N1   C5   N    C7     0.00   0.0  0
- NZI  CONST_14  O12  C5   N    C2     0.00   0.0  0
- NZI  CONST_15  O12  C5   N1   C6   180.00   0.0  0
- NZI  CONST_16  O12  C5   N    C7   180.00   0.0  0
- NZI  CONST_17  H13  C8   C7   N      0.00   0.0  0
- NZI  CONST_18  H14  C9   C10  C11  180.00   0.0  0
- NZI  CONST_19  H15  C10  C11  C6   180.00   0.0  0
- NZI  CONST_20  H16  C11  C6   C7   180.00   0.0  0
- NZI  CONST_21  H12  N1   C5   N    180.00   0.0  0
- NZI  Var_01    O3   P    O2   C4   168.84  30.0  3
- NZI  Var_02    H7   C4   O2   P     57.86  30.0  1
+ NZI  CONST_01  C7   C6   C11  C10     0.00   0.0  0
+ NZI  CONST_02  C7   C8   C9   C10     0.00   0.0  0
+ NZI  CONST_03  C8   C9   C10  C11     0.00   0.0  0
+ NZI  CONST_04  C8   C7   C6   C11     0.00   0.0  0
+ NZI  CONST_05  C9   C10  C11  C6      0.00   0.0  0
+ NZI  CONST_06  C9   C8   C7   C6      0.00   0.0  0
+ NZI  CONST_07  C6   N1   C5   N       0.00   0.0  0
+ NZI  CONST_08  N1   C6   C7   N       0.00   0.0  0
+ NZI  CONST_09  N1   C5   N    C2    180.00   0.0  0
+ NZI  CONST_10  C6   C7   N    C2    180.00   0.0  0
+ NZI  CONST_11  C6   C7   N    C5      0.00   0.0  0
+ NZI  CONST_12  C7   C6   N1   C5      0.00   0.0  0
+ NZI  CONST_13  N1   C5   N    C7      0.00   0.0  0
+ NZI  CONST_14  O12  C5   N    C2      0.00   0.0  0
+ NZI  CONST_15  O12  C5   N1   C6    180.00   0.0  0
+ NZI  CONST_16  O12  C5   N    C7    180.00   0.0  0
+ NZI  CONST_17  H13  C8   C7   N       0.00   0.0  0
+ NZI  CONST_18  H14  C9   C10  C11   180.00   0.0  0
+ NZI  CONST_19  H15  C10  C11  C6    180.00   0.0  0
+ NZI  CONST_20  H16  C11  C6   C7    180.00   0.0  0
+ NZI  CONST_21  H12  N1   C5   N     180.00   0.0  0
+ NZI  Var_01    O3   P    O2   C4    168.84  30.0  3
+ NZI  Var_02    H7   C4   O2   P      57.86  30.0  1
+ NZI  Var_03    C    C1   C2   N     158.64  30.0  1
+ NZI  Var_04    C3   O1   C2   N    -148.25  30.0  1
+ NZI  Var_05    O1   C2   C1   C      37.14  30.0  1
+ NZI  Var_06    C2   O1   C3   C      -1.92  30.0  1
+ NZI  Var_07    O1   C3   C    C1     24.99  30.0  1
+ NZI  Var_08    C5   N    C2   C1    122.73  30.0  2
+ NZI  Var_09    C7   N    C2   C1    -61.08  30.0  2
+ NZI  Var_10    C3   O1   C2   C1    -22.27  30.0  1
+ NZI  Var_11    C3   C    C1   C2    -36.67  30.0  1
+ NZI  Var_12    O1   C2   N    C5   -118.13  30.0  3
+ NZI  Var_13    O1   C2   N    C7     58.07  30.0  3
+ NZI  Var_14    C2   C1   C    O      81.27  30.0  1
+ NZI  Var_15    O1   C3   C    O     -89.86  30.0  1
+ NZI  Var_16    C4   C3   C    C1    -95.20  30.0  1
+ NZI  Var_17    C4   C3   O1   C2    118.11  30.0  1
+ NZI  Var_18    H4   C1   C2   N      40.82  30.0  1
+ NZI  Var_19    H5   C1   C2   N     -80.72  30.0  1
+ NZI  Var_20    H1   C2   C1   C     -81.51  30.0  1
+ NZI  Var_21    H2   C3   C    C1    143.83  30.0  1
+ NZI  Var_22    H    C    C1   C2   -155.57  30.0  1
+ NZI  Var_23    O2   C4   C3   C     167.96  30.0  3
+ NZI  Var_24    C4   C3   C    O     149.95  30.0  1
+ NZI  Var_25    O2   C4   C3   O1     50.17  30.0  3
+ NZI  Var_26    H7   C4   C3   C     -71.78  30.0  3
+ NZI  Var_27    H6   C4   C3   C      47.57  30.0  3
+ NZI  Var_28    H3   O    C    C1   -178.21  30.0  3
+ NZI  Var_29    P1   O8   P2   O10   -91.91  30.0  2
+ NZI  Var_30    P1   O8   P2   O11   164.24  30.0  2
+ NZI  Var_31    P1   O5   P    O2   -109.95  30.0  1
+ NZI  Var_32    P1   O5   P    O3    145.94  30.0  1
+ NZI  Var_33    P1   O5   P    O4     17.22  30.0  1
+ NZI  Var_34    P2   O8   P1   O5    116.17  30.0  2
+ NZI  Var_35    P    O5   P1   O6   -177.83  30.0  2
+ NZI  Var_36    P2   O8   P1   O6   -142.28  30.0  2
+ NZI  Var_37    P    O5   P1   O7     54.11  30.0  2
+ NZI  Var_38    P2   O8   P1   O7     -9.10  30.0  2
+ NZI  Var_39    P    O5   P1   O8    -72.58  30.0  2
+ NZI  Var_40    P1   O8   P2   O9     38.20  30.0  2
+ NZI  Var_41    H17  O11  P2   O10   155.16  30.0  3
+ NZI  Var_42    H11  O10  P2   O11   144.39  30.0  3
+ NZI  Var_43    H8   O3   P    O2    156.86  30.0  3
+ NZI  Var_44    H9   O6   P1   O5   -142.28  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

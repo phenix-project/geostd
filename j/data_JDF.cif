@@ -19,11 +19,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JDF  JDF  "steviol-19-o-glucoside"
-  ligand  74  34  .  2022-08-10  2022-08-10
+ JDF  JDF  steviol-19-o-glucoside  ligand  74  34  .  2022-08-10  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JDF
@@ -371,38 +371,145 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JDF  Var_01  CAK  CAJ  CAI  CAH   -61.19  30.0  1
- JDF  Var_02  CAO  CAM  CAL  CAK    -3.05  30.0  3
- JDF  Var_03  CAR  CAQ  CAP  CAO   -43.28  30.0  1
- JDF  Var_04  CAF  CAV  CAU  CAS    55.25  30.0  1
- JDF  Var_05  CAE  CAF  CAV  CAU   -55.35  30.0  1
- JDF  Var_06  CAA  CAM  CAL  CAK   178.98  30.0  3
- JDF  Var_07  H12  CAJ  CAI  CAH    59.90  30.0  1
- JDF  Var_08  H13  CAJ  CAI  CAH   176.54  30.0  1
- JDF  Var_09  H10  CAI  CAJ  CAK   177.72  30.0  1
- JDF  Var_10  H11  CAI  CAJ  CAK    61.98  30.0  1
- JDF  Var_11  H16  CAL  CAM  CAO  -126.70  30.0  3
- JDF  Var_12  H17  CAL  CAM  CAO   114.28  30.0  3
- JDF  Var_13  H23  CAQ  CAP  CAO  -168.95  30.0  1
- JDF  Var_14  H24  CAQ  CAP  CAO    77.67  30.0  1
- JDF  Var_15  H21  CAP  CAQ  CAR  -164.55  30.0  1
- JDF  Var_16  H22  CAP  CAQ  CAR    78.18  30.0  1
- JDF  Var_17  H31  CAV  CAU  CAS   -68.27  30.0  1
- JDF  Var_18  H32  CAV  CAU  CAS   175.64  30.0  1
- JDF  Var_19  H33  CAF  CAV  CAU   178.51  30.0  1
- JDF  Var_20  H34  CAF  CAV  CAU    62.79  30.0  1
- JDF  Var_21  H29  CAU  CAV  CAF   -65.48  30.0  1
- JDF  Var_22  H30  CAU  CAV  CAF   179.05  30.0  1
- JDF  Var_23  H31  CAV  CAF  CAE    68.33  30.0  1
- JDF  Var_24  H32  CAV  CAF  CAE  -175.66  30.0  1
- JDF  Var_25  CAE  CAC  O1   C1    174.68  30.0  1
- JDF  Var_26  H18  CAA  CAM  CAL   177.84   0.0  2
- JDF  Var_27  H19  CAA  CAM  CAL    -1.90   0.0  2
- JDF  Var_28  H18  CAA  CAM  CAO     0.22   0.0  2
- JDF  Var_29  H19  CAA  CAM  CAO  -179.51   0.0  2
- JDF  Var_30  H16  CAL  CAM  CAA    55.33  30.0  3
- JDF  Var_31  H17  CAL  CAM  CAA   -63.69  30.0  3
- JDF  Var_32  OAD  CAC  O1   C1     -9.31  30.0  1
+ JDF  Var_01   CAK  CAJ  CAI  CAH   -61.19  30.0  1
+ JDF  Var_02   CAO  CAM  CAL  CAK    -3.05  30.0  3
+ JDF  Var_03   CAR  CAQ  CAP  CAO   -43.28  30.0  1
+ JDF  Var_04   CAF  CAV  CAU  CAS    55.25  30.0  1
+ JDF  Var_05   CAE  CAF  CAV  CAU   -55.35  30.0  1
+ JDF  Var_06   CAA  CAM  CAL  CAK   178.98  30.0  3
+ JDF  Var_07   H12  CAJ  CAI  CAH    59.90  30.0  1
+ JDF  Var_08   H13  CAJ  CAI  CAH   176.54  30.0  1
+ JDF  Var_09   H10  CAI  CAJ  CAK   177.72  30.0  1
+ JDF  Var_10   H11  CAI  CAJ  CAK    61.98  30.0  1
+ JDF  Var_11   H16  CAL  CAM  CAO  -126.70  30.0  3
+ JDF  Var_12   H17  CAL  CAM  CAO   114.28  30.0  3
+ JDF  Var_13   H23  CAQ  CAP  CAO  -168.95  30.0  1
+ JDF  Var_14   H24  CAQ  CAP  CAO    77.67  30.0  1
+ JDF  Var_15   H21  CAP  CAQ  CAR  -164.55  30.0  1
+ JDF  Var_16   H22  CAP  CAQ  CAR    78.18  30.0  1
+ JDF  Var_17   H31  CAV  CAU  CAS   -68.27  30.0  1
+ JDF  Var_18   H32  CAV  CAU  CAS   175.64  30.0  1
+ JDF  Var_19   H33  CAF  CAV  CAU   178.51  30.0  1
+ JDF  Var_20   H34  CAF  CAV  CAU    62.79  30.0  1
+ JDF  Var_21   H29  CAU  CAV  CAF   -65.48  30.0  1
+ JDF  Var_22   H30  CAU  CAV  CAF   179.05  30.0  1
+ JDF  Var_23   H31  CAV  CAF  CAE    68.33  30.0  1
+ JDF  Var_24   H32  CAV  CAF  CAE  -175.66  30.0  1
+ JDF  Var_25   CAE  CAC  O1   C1    174.68  30.0  1
+ JDF  Var_26   H18  CAA  CAM  CAL   177.84   0.0  2
+ JDF  Var_27   H19  CAA  CAM  CAL    -1.90   0.0  2
+ JDF  Var_28   H18  CAA  CAM  CAO     0.22   0.0  2
+ JDF  Var_29   H19  CAA  CAM  CAO  -179.51   0.0  2
+ JDF  Var_30   H16  CAL  CAM  CAA    55.33  30.0  3
+ JDF  Var_31   H17  CAL  CAM  CAA   -63.69  30.0  3
+ JDF  Var_32   OAD  CAC  O1   C1     -9.31  30.0  1
+ JDF  Var_33   C4   C3   C2   C1    -53.02  30.0  1
+ JDF  Var_34   C4   C5   O5   C1     62.30  30.0  1
+ JDF  Var_35   C5   C4   C3   C2     53.46  30.0  1
+ JDF  Var_36   C5   O5   C1   C2    -64.52  30.0  1
+ JDF  Var_37   O5   C1   C2   C3     57.80  30.0  1
+ JDF  Var_38   O5   C5   C4   C3    -55.66  30.0  1
+ JDF  Var_39   CAV  CAF  CAE  CAH    53.74  30.0  1
+ JDF  Var_40   CAV  CAU  CAS  CAH   -53.63  30.0  1
+ JDF  Var_41   CAK  CAR  CAS  CAH    48.01  30.0  1
+ JDF  Var_42   CAQ  CAR  CAS  CAH   179.10  30.0  1
+ JDF  Var_43   CAF  CAE  CAH  CAI   171.70  30.0  1
+ JDF  Var_44   CAU  CAS  CAH  CAI  -169.71  30.0  1
+ JDF  Var_45   CAR  CAS  CAH  CAI   -54.62  30.0  1
+ JDF  Var_46   CAN  CAK  CAJ  CAI   -74.48  30.0  1
+ JDF  Var_47   CAR  CAK  CAJ  CAI    52.38  30.0  1
+ JDF  Var_48   CAL  CAK  CAJ  CAI   173.40  30.0  1
+ JDF  Var_49   CAE  CAH  CAI  CAJ  -161.81  30.0  1
+ JDF  Var_50   CAS  CAH  CAI  CAJ    62.95  30.0  1
+ JDF  Var_51   CAO  CAN  CAK  CAJ  -164.28  30.0  1
+ JDF  Var_52   CAS  CAR  CAK  CAJ   -47.52  30.0  1
+ JDF  Var_53   CAQ  CAR  CAK  CAJ   178.94  30.0  1
+ JDF  Var_54   CAM  CAL  CAK  CAJ   149.68  30.0  3
+ JDF  Var_55   CAM  CAO  CAN  CAK    44.20  30.0  1
+ JDF  Var_56   CAP  CAO  CAN  CAK   -70.60  30.0  1
+ JDF  Var_57   CAU  CAS  CAR  CAK   163.46  30.0  1
+ JDF  Var_58   CAP  CAQ  CAR  CAK    38.83  30.0  1
+ JDF  Var_59   CAS  CAR  CAK  CAN    79.70  30.0  1
+ JDF  Var_60   CAQ  CAR  CAK  CAN   -53.85  30.0  1
+ JDF  Var_61   CAM  CAL  CAK  CAN    29.79  30.0  3
+ JDF  Var_62   CAL  CAM  CAO  CAN   -25.25  30.0  3
+ JDF  Var_63   CAQ  CAP  CAO  CAN    59.91  30.0  1
+ JDF  Var_64   CAO  CAN  CAK  CAL   -45.75  30.0  1
+ JDF  Var_65   CAS  CAR  CAK  CAL  -169.85  30.0  1
+ JDF  Var_66   CAQ  CAR  CAK  CAL    56.61  30.0  1
+ JDF  Var_67   CAP  CAO  CAM  CAL    88.61  30.0  3
+ JDF  Var_68   CAR  CAK  CAL  CAM   -88.45  30.0  3
+ JDF  Var_69   CAQ  CAP  CAO  CAM   -49.87  30.0  1
+ JDF  Var_70   CAR  CAK  CAN  CAO    69.93  30.0  1
+ JDF  Var_71   CAS  CAR  CAQ  CAP   -95.68  30.0  1
+ JDF  Var_72   CAU  CAS  CAR  CAQ   -65.45  30.0  1
+ JDF  Var_73   CAE  CAH  CAS  CAR   169.58  30.0  1
+ JDF  Var_74   CAV  CAU  CAS  CAR  -169.05  30.0  1
+ JDF  Var_75   CAF  CAE  CAH  CAS   -54.59  30.0  1
+ JDF  Var_76   CAE  CAH  CAS  CAU    54.49  30.0  1
+ JDF  Var_77   O3   C3   C2   C1   -175.52  30.0  1
+ JDF  Var_78   C6   C5   O5   C1   -175.55  30.0  1
+ JDF  Var_79   O4   C4   C3   C2    175.05  30.0  1
+ JDF  Var_80   O1   C1   C2   C3    173.30  30.0  1
+ JDF  Var_81   C6   C5   C4   C3   -174.70  30.0  1
+ JDF  Var_82   C5   C4   C3   O3    174.15  30.0  1
+ JDF  Var_83   O2   C2   C3   C4   -173.84  30.0  1
+ JDF  Var_84   O1   C1   O5   C5    178.90  30.0  1
+ JDF  Var_85   CAG  CAE  CAH  CAI    54.88  30.0  1
+ JDF  Var_86   CAC  CAE  CAH  CAI   -61.86  30.0  1
+ JDF  Var_87   CAT  CAS  CAH  CAI    70.96  30.0  1
+ JDF  Var_88   OAW  CAO  CAN  CAK   166.90  30.0  1
+ JDF  Var_89   CAT  CAS  CAR  CAK   -77.78  30.0  1
+ JDF  Var_90   CAA  CAM  CAO  CAN   152.76  30.0  3
+ JDF  Var_91   OAW  CAO  CAM  CAL  -145.08  30.0  3
+ JDF  Var_92   CAP  CAO  CAM  CAA   -93.39  30.0  3
+ JDF  Var_93   CAQ  CAP  CAO  OAW  -178.07  30.0  1
+ JDF  Var_94   CAT  CAS  CAR  CAQ    53.31  30.0  1
+ JDF  Var_95   CAG  CAE  CAH  CAS  -171.41  30.0  1
+ JDF  Var_96   CAC  CAE  CAH  CAS    71.85  30.0  1
+ JDF  Var_97   CAE  CAH  CAS  CAT   -64.84  30.0  1
+ JDF  Var_98   CAV  CAU  CAS  CAT    69.03  30.0  1
+ JDF  Var_99   CAG  CAE  CAF  CAV   172.40  30.0  1
+ JDF  Var_100  CAC  CAE  CAF  CAV   -72.30  30.0  1
+ JDF  Var_101  O2   C2   C1   O5    177.06  30.0  1
+ JDF  Var_102  O4   C4   C5   O5   -174.27  30.0  1
+ JDF  Var_103  H3   C3   C2   C1     64.25  30.0  1
+ JDF  Var_104  H6   C5   O5   C1    -56.78  30.0  1
+ JDF  Var_105  H5   C4   C3   C2    -65.23  30.0  1
+ JDF  Var_106  H1   C1   C2   C3    -65.83  30.0  1
+ JDF  Var_107  H2   C2   C3   C4     64.21  30.0  1
+ JDF  Var_108  H25  CAR  CAS  CAH   -65.99  30.0  1
+ JDF  Var_109  H9   CAH  CAI  CAJ   -49.92  30.0  1
+ JDF  Var_110  H14  CAN  CAK  CAJ   -47.47  30.0  1
+ JDF  Var_111  H15  CAN  CAK  CAJ    73.63  30.0  1
+ JDF  Var_112  CAC  O1   C1   C2    160.36  30.0  3
+ JDF  Var_113  O2   C2   C3   O3     63.67  30.0  1
+ JDF  Var_114  O4   C4   C3   O3    -64.26  30.0  1
+ JDF  Var_115  O6   C6   C5   C4   -177.95  30.0  3
+ JDF  Var_116  O4   C4   C5   C6     66.70  30.0  1
+ JDF  Var_117  OAD  CAC  CAE  CAH    45.92  30.0  1
+ JDF  Var_118  O1   CAC  CAE  CAH  -138.19  30.0  1
+ JDF  Var_119  OAW  CAO  CAM  CAA    32.92  30.0  3
+ JDF  Var_120  OAD  CAC  CAE  CAF   169.16  30.0  1
+ JDF  Var_121  O1   CAC  CAE  CAF   -14.95  30.0  1
+ JDF  Var_122  O2   C2   C1   O1    -67.44  30.0  1
+ JDF  Var_123  CAC  O1   C1   O5    -80.76  30.0  3
+ JDF  Var_124  O6   C6   C5   O5     62.25  30.0  3
+ JDF  Var_125  H40  O2   C2   C1     74.68  30.0  3
+ JDF  Var_126  H4   O3   C3   C2    178.90  30.0  3
+ JDF  Var_127  H39  O4   C4   C3    147.49  30.0  3
+ JDF  Var_128  H7   C6   C5   C4    -56.45  30.0  3
+ JDF  Var_129  H8   C6   C5   C4     59.76  30.0  3
+ JDF  Var_130  H35  CAG  CAE  CAH    52.84  30.0  3
+ JDF  Var_131  H36  CAG  CAE  CAH   171.45  30.0  3
+ JDF  Var_132  H37  CAG  CAE  CAH   -67.69  30.0  3
+ JDF  Var_133  H26  CAT  CAS  CAH  -173.17  30.0  3
+ JDF  Var_134  H27  CAT  CAS  CAH   -51.80  30.0  3
+ JDF  Var_135  H28  CAT  CAS  CAH    69.45  30.0  3
+ JDF  Var_136  H20  OAW  CAO  CAN   170.68  30.0  3
+ JDF  Var_137  OAD  CAC  CAE  CAG   -74.01  30.0  1
+ JDF  Var_138  O1   CAC  CAE  CAG   101.88  30.0  1
+ JDF  Var_139  H38  O6   C6   C5    178.59  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

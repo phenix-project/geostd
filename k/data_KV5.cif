@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KV5  KV5  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-(2-naphthalen-2-yl-1~{H}-imidazol-4-yl)oxane-3,4,5-triol  ligand  46  26  .  2022-07-25  2022-07-26
+ KV5  KV5  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-(2-naphthalen-2-yl-1~{H}-imidazol-4-yl)oxane-3,4,5-triol  ligand  46  26  .  2022-07-25  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KV5
@@ -244,48 +245,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KV5  CONST_01  C1   C2   N3   C4     0.00  0.0  0
- KV5  CONST_02  C2   C1   N5   C4     0.00  0.0  0
- KV5  CONST_03  C8   C7   C6   C4   180.00  0.0  0
- KV5  CONST_04  C10  C11  C6   C4   180.00  0.0  0
- KV5  CONST_05  C2   N3   C4   C6   180.00  0.0  0
- KV5  CONST_06  C1   N5   C4   C6   180.00  0.0  0
- KV5  CONST_07  C12  C8   C7   C6   180.00  0.0  0
- KV5  CONST_08  C9   C8   C7   C6     0.00  0.0  0
- KV5  CONST_09  C9   C10  C11  C6     0.00  0.0  0
- KV5  CONST_10  C11  C6   C7   C8     0.00  0.0  0
- KV5  CONST_11  C14  C13  C12  C8     0.00  0.0  0
- KV5  CONST_12  C11  C10  C9   C8     0.00  0.0  0
- KV5  CONST_13  C14  C15  C9   C8     0.00  0.0  0
- KV5  CONST_14  N5   C1   C2   N3     0.00  0.0  0
- KV5  CONST_15  C1   N5   C4   N3     0.00  0.0  0
- KV5  CONST_16  C7   C6   C4   N3   180.00  0.0  0
- KV5  CONST_17  C11  C6   C4   N3     0.00  0.0  0
- KV5  CONST_18  N5   C4   N3   C2     0.00  0.0  0
- KV5  CONST_19  C7   C6   C4   N5     0.00  0.0  0
- KV5  CONST_20  C11  C6   C4   N5   180.00  0.0  0
- KV5  CONST_21  C15  C9   C10  C11  180.00  0.0  0
- KV5  CONST_22  C7   C6   C11  C10    0.00  0.0  0
- KV5  CONST_23  C7   C8   C9   C10    0.00  0.0  0
- KV5  CONST_24  C12  C8   C9   C10  180.00  0.0  0
- KV5  CONST_25  C14  C15  C9   C10  180.00  0.0  0
- KV5  CONST_26  C13  C12  C8   C9     0.00  0.0  0
- KV5  CONST_27  C13  C14  C15  C9     0.00  0.0  0
- KV5  CONST_28  C13  C12  C8   C7   180.00  0.0  0
- KV5  CONST_29  C15  C9   C8   C7   180.00  0.0  0
- KV5  CONST_30  C12  C8   C9   C15    0.00  0.0  0
- KV5  CONST_31  C12  C13  C14  C15    0.00  0.0  0
- KV5  CONST_32  C1'  C1   N5   C4   180.00  0.0  0
- KV5  CONST_33  C1'  C1   C2   N3   180.00  0.0  0
- KV5  CONST_34  H2   C2   N3   C4   180.00  0.0  0
- KV5  CONST_35  H17  C7   C6   C4     0.00  0.0  0
- KV5  CONST_36  H15  C11  C6   C4     0.00  0.0  0
- KV5  CONST_37  H1   N3   C4   C6     0.00  0.0  0
- KV5  CONST_38  H16  C10  C11  C6   180.00  0.0  0
- KV5  CONST_39  H20  C13  C12  C8   180.00  0.0  0
- KV5  CONST_40  H18  C15  C9   C8   180.00  0.0  0
- KV5  CONST_41  H21  C12  C8   C9   180.00  0.0  0
- KV5  CONST_42  H19  C14  C15  C9   180.00  0.0  0
+ KV5  CONST_01  C1   C2   N3   C4      0.00   0.0  0
+ KV5  CONST_02  C2   C1   N5   C4      0.00   0.0  0
+ KV5  CONST_03  C8   C7   C6   C4    180.00   0.0  0
+ KV5  CONST_04  C10  C11  C6   C4    180.00   0.0  0
+ KV5  CONST_05  C2   N3   C4   C6    180.00   0.0  0
+ KV5  CONST_06  C1   N5   C4   C6    180.00   0.0  0
+ KV5  CONST_07  C12  C8   C7   C6    180.00   0.0  0
+ KV5  CONST_08  C9   C8   C7   C6      0.00   0.0  0
+ KV5  CONST_09  C9   C10  C11  C6      0.00   0.0  0
+ KV5  CONST_10  C11  C6   C7   C8      0.00   0.0  0
+ KV5  CONST_11  C14  C13  C12  C8      0.00   0.0  0
+ KV5  CONST_12  C11  C10  C9   C8      0.00   0.0  0
+ KV5  CONST_13  C14  C15  C9   C8      0.00   0.0  0
+ KV5  CONST_14  N5   C1   C2   N3      0.00   0.0  0
+ KV5  CONST_15  C1   N5   C4   N3      0.00   0.0  0
+ KV5  CONST_16  C7   C6   C4   N3    180.00   0.0  0
+ KV5  CONST_17  C11  C6   C4   N3      0.00   0.0  0
+ KV5  CONST_18  N5   C4   N3   C2      0.00   0.0  0
+ KV5  CONST_19  C7   C6   C4   N5      0.00   0.0  0
+ KV5  CONST_20  C11  C6   C4   N5    180.00   0.0  0
+ KV5  CONST_21  C15  C9   C10  C11   180.00   0.0  0
+ KV5  CONST_22  C7   C6   C11  C10     0.00   0.0  0
+ KV5  CONST_23  C7   C8   C9   C10     0.00   0.0  0
+ KV5  CONST_24  C12  C8   C9   C10   180.00   0.0  0
+ KV5  CONST_25  C14  C15  C9   C10   180.00   0.0  0
+ KV5  CONST_26  C13  C12  C8   C9      0.00   0.0  0
+ KV5  CONST_27  C13  C14  C15  C9      0.00   0.0  0
+ KV5  CONST_28  C13  C12  C8   C7    180.00   0.0  0
+ KV5  CONST_29  C15  C9   C8   C7    180.00   0.0  0
+ KV5  CONST_30  C12  C8   C9   C15     0.00   0.0  0
+ KV5  CONST_31  C12  C13  C14  C15     0.00   0.0  0
+ KV5  CONST_32  C1'  C1   N5   C4    180.00   0.0  0
+ KV5  CONST_33  C1'  C1   C2   N3    180.00   0.0  0
+ KV5  CONST_34  H2   C2   N3   C4    180.00   0.0  0
+ KV5  CONST_35  H17  C7   C6   C4      0.00   0.0  0
+ KV5  CONST_36  H15  C11  C6   C4      0.00   0.0  0
+ KV5  CONST_37  H1   N3   C4   C6      0.00   0.0  0
+ KV5  CONST_38  H16  C10  C11  C6    180.00   0.0  0
+ KV5  CONST_39  H20  C13  C12  C8    180.00   0.0  0
+ KV5  CONST_40  H18  C15  C9   C8    180.00   0.0  0
+ KV5  CONST_41  H21  C12  C8   C9    180.00   0.0  0
+ KV5  CONST_42  H19  C14  C15  C9    180.00   0.0  0
+ KV5  Var_01    C2'  C1'  C1   C2    122.48  30.0  2
+ KV5  Var_02    O5'  C1'  C1   C2   -116.50  30.0  2
+ KV5  Var_03    C3'  C4'  C5'  O5'   -56.46  30.0  1
+ KV5  Var_04    C3'  C2'  C1'  O5'    57.44  30.0  1
+ KV5  Var_05    N5   C1   C1'  O5'    63.75  30.0  2
+ KV5  Var_06    C2'  C3'  C4'  C5'    55.07  30.0  1
+ KV5  Var_07    C2'  C1'  O5'  C5'   -62.46  30.0  1
+ KV5  Var_08    C1   C1'  O5'  C5'   174.82  30.0  1
+ KV5  Var_09    C1'  C2'  C3'  C4'   -55.49  30.0  1
+ KV5  Var_10    C1'  O5'  C5'  C4'    61.87  30.0  1
+ KV5  Var_11    C1   C1'  C2'  C3'   177.68  30.0  1
+ KV5  Var_12    N5   C1   C1'  C2'   -57.27  30.0  2
+ KV5  Var_13    O4'  C4'  C5'  O5'  -178.15  30.0  1
+ KV5  Var_14    O2'  C2'  C1'  O5'   179.26  30.0  1
+ KV5  Var_15    O3'  C3'  C4'  C5'   176.95  30.0  1
+ KV5  Var_16    O2'  C2'  C3'  C4'  -174.61  30.0  1
+ KV5  Var_17    C6'  C5'  C4'  C3'  -176.03  30.0  1
+ KV5  Var_18    O4'  C4'  C3'  C2'   175.06  30.0  1
+ KV5  Var_19    O3'  C3'  C2'  C1'  -175.90  30.0  1
+ KV5  Var_20    C6'  C5'  O5'  C1'  -176.08  30.0  1
+ KV5  Var_21    O2'  C2'  C1'  C1    -60.51  30.0  1
+ KV5  Var_22    H7   C1'  C1   C2      2.91  30.0  2
+ KV5  Var_23    H4   C4'  C5'  O5'    61.27  30.0  1
+ KV5  Var_24    H6   C2'  C1'  O5'   -60.50  30.0  1
+ KV5  Var_25    H5   C3'  C4'  C5'   -63.03  30.0  1
+ KV5  Var_26    H3   C5'  C4'  C3'    63.51  30.0  1
+ KV5  Var_27    O6'  C6'  C5'  O5'    62.87  30.0  3
+ KV5  Var_28    O6'  C6'  C5'  C4'  -176.46  30.0  3
+ KV5  Var_29    O3'  C3'  C2'  O2'    64.98  30.0  1
+ KV5  Var_30    O4'  C4'  C3'  O3'   -63.06  30.0  1
+ KV5  Var_31    C6'  C5'  C4'  O4'    62.28  30.0  1
+ KV5  Var_32    H12  C6'  C5'  O5'  -175.30  30.0  3
+ KV5  Var_33    H13  C6'  C5'  O5'   -59.23  30.0  3
+ KV5  Var_34    H11  O4'  C4'  C5'   177.24  30.0  3
+ KV5  Var_35    H10  O3'  C3'  C4'   134.92  30.0  3
+ KV5  Var_36    H9   O2'  C2'  C3'   -65.64  30.0  3
+ KV5  Var_37    H14  O6'  C6'  C5'   178.17  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

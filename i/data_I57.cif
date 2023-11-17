@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- I57  I57  '(2~{R},3~{R},4~{S})-3-(2-methylpropanoylamino)-4-(4-phenyl-1,2,3-triazol-1-yl)-2-[(1~{R},2~{R})-1,2,3-tris(oxidanyl)propyl]-3,4-dihydro-2~{H}-pyran-6-carboxylic acid'  D-saccharide  57  32  .  2023-02-15  2023-02-15
+ I57  I57  '(2~{R},3~{R},4~{S})-3-(2-methylpropanoylamino)-4-(4-phenyl-1,2,3-triazol-1-yl)-2-[(1~{R},2~{R})-1,2,3-tris(oxidanyl)propyl]-3,4-dihydro-2~{H}-pyran-6-carboxylic acid'  D-saccharide  57  32  .  2023-02-15  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_I57
@@ -283,40 +284,86 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- I57  CONST_01  C42  N42  N41  N04    0.00   0.0  0
- I57  CONST_02  N42  C42  C41  N04    0.00   0.0  0
- I57  CONST_03  C43  C42  C41  N04  180.00   0.0  0
- I57  CONST_04  N42  N41  N04  C41    0.00   0.0  0
- I57  CONST_05  N41  N42  C42  C41    0.00   0.0  0
- I57  CONST_06  C48  C43  C42  C41  180.00   0.0  0
- I57  CONST_07  C44  C43  C42  C41    0.00   0.0  0
- I57  CONST_08  N41  N04  C41  C42    0.00   0.0  0
- I57  CONST_09  C47  C48  C43  C42  180.00   0.0  0
- I57  CONST_10  C45  C44  C43  C42  180.00   0.0  0
- I57  CONST_11  C48  C43  C42  N42    0.00   0.0  0
- I57  CONST_12  C44  C43  C42  N42  180.00   0.0  0
- I57  CONST_13  C43  C42  N42  N41  180.00   0.0  0
- I57  CONST_14  C46  C47  C48  C43    0.00   0.0  0
- I57  CONST_15  C46  C45  C44  C43    0.00   0.0  0
- I57  CONST_16  C47  C48  C43  C44    0.00   0.0  0
- I57  CONST_17  C47  C46  C45  C44    0.00   0.0  0
- I57  CONST_18  C48  C43  C44  C45    0.00   0.0  0
- I57  CONST_19  C48  C47  C46  C45    0.00   0.0  0
- I57  CONST_20  N42  N41  N04  C04  180.00   0.0  0
- I57  CONST_21  C42  C41  N04  C04  180.00   0.0  0
- I57  CONST_22  H14  C41  N04  C04    0.00   0.0  0
- I57  CONST_23  H19  C48  C43  C42    0.00   0.0  0
- I57  CONST_24  H15  C44  C43  C42    0.00   0.0  0
- I57  CONST_25  H18  C47  C48  C43  180.00   0.0  0
- I57  CONST_26  H16  C45  C44  C43  180.00   0.0  0
- I57  CONST_27  H17  C46  C45  C44  180.00   0.0  0
- I57  CONST_28  C52  C51  N05  C05  180.00   0.0  0
- I57  CONST_29  O52  C51  N05  C05    0.00   0.0  0
- I57  CONST_30  H5   N05  C51  C52    0.00   0.0  0
- I57  Var_01    O06  C02  C03  C04    2.22  30.0  1
- I57  Var_02    C54  C52  C51  N05  100.62  30.0  3
- I57  Var_03    H24  C53  C52  C54   58.28  30.0  3
- I57  Var_04    H20  C54  C52  C53   58.63  30.0  3
+ I57  CONST_01  C42  N42  N41  N04     0.00   0.0  0
+ I57  CONST_02  N42  C42  C41  N04     0.00   0.0  0
+ I57  CONST_03  C43  C42  C41  N04   180.00   0.0  0
+ I57  CONST_04  N42  N41  N04  C41     0.00   0.0  0
+ I57  CONST_05  N41  N42  C42  C41     0.00   0.0  0
+ I57  CONST_06  C48  C43  C42  C41   180.00   0.0  0
+ I57  CONST_07  C44  C43  C42  C41     0.00   0.0  0
+ I57  CONST_08  N41  N04  C41  C42     0.00   0.0  0
+ I57  CONST_09  C47  C48  C43  C42   180.00   0.0  0
+ I57  CONST_10  C45  C44  C43  C42   180.00   0.0  0
+ I57  CONST_11  C48  C43  C42  N42     0.00   0.0  0
+ I57  CONST_12  C44  C43  C42  N42   180.00   0.0  0
+ I57  CONST_13  C43  C42  N42  N41   180.00   0.0  0
+ I57  CONST_14  C46  C47  C48  C43     0.00   0.0  0
+ I57  CONST_15  C46  C45  C44  C43     0.00   0.0  0
+ I57  CONST_16  C47  C48  C43  C44     0.00   0.0  0
+ I57  CONST_17  C47  C46  C45  C44     0.00   0.0  0
+ I57  CONST_18  C48  C43  C44  C45     0.00   0.0  0
+ I57  CONST_19  C48  C47  C46  C45     0.00   0.0  0
+ I57  CONST_20  N42  N41  N04  C04   180.00   0.0  0
+ I57  CONST_21  C42  C41  N04  C04   180.00   0.0  0
+ I57  CONST_22  H14  C41  N04  C04     0.00   0.0  0
+ I57  CONST_23  H19  C48  C43  C42     0.00   0.0  0
+ I57  CONST_24  H15  C44  C43  C42     0.00   0.0  0
+ I57  CONST_25  H18  C47  C48  C43   180.00   0.0  0
+ I57  CONST_26  H16  C45  C44  C43   180.00   0.0  0
+ I57  CONST_27  H17  C46  C45  C44   180.00   0.0  0
+ I57  CONST_28  C52  C51  N05  C05   180.00   0.0  0
+ I57  CONST_29  O52  C51  N05  C05     0.00   0.0  0
+ I57  CONST_30  H5   N05  C51  C52     0.00   0.0  0
+ I57  Var_01    O06  C02  C03  C04     2.22  30.0  1
+ I57  Var_02    C54  C52  C51  N05   100.62  30.0  3
+ I57  Var_03    H24  C53  C52  C54    58.28  30.0  3
+ I57  Var_04    H20  C54  C52  C53    58.63  30.0  3
+ I57  Var_05    C05  C06  O06  C02   -44.52  30.0  1
+ I57  Var_06    C05  C04  C03  C02    17.14  30.0  1
+ I57  Var_07    N04  C04  C03  C02   139.03  30.0  1
+ I57  Var_08    C06  O06  C02  C03    12.24  30.0  1
+ I57  Var_09    C06  C05  C04  C03   -46.80  30.0  1
+ I57  Var_10    N41  N04  C04  C03   143.47  30.0  2
+ I57  Var_11    C41  N04  C04  C03   -43.60  30.0  2
+ I57  Var_12    O06  C06  C05  C04    61.49  30.0  1
+ I57  Var_13    C06  C05  C04  N04  -169.90  30.0  1
+ I57  Var_14    N41  N04  C04  C05   -94.46  30.0  2
+ I57  Var_15    C41  N04  C04  C05    78.46  30.0  2
+ I57  Var_16    C06  O06  C02  C01  -167.85  30.0  1
+ I57  Var_17    C07  C06  O06  C02  -166.97  30.0  1
+ I57  Var_18    N05  C05  C04  C03  -170.41  30.0  1
+ I57  Var_19    C07  C06  C05  C04  -179.59  30.0  1
+ I57  Var_20    N05  C05  C04  N04    66.49  30.0  1
+ I57  Var_21    O06  C06  C05  N05  -175.75  30.0  1
+ I57  Var_22    H6   C06  O06  C02    74.94  30.0  1
+ I57  Var_23    H3   C04  C03  C02  -104.16  30.0  1
+ I57  Var_24    H4   C05  C04  C03    71.25  30.0  1
+ I57  Var_25    H2   C03  C04  N04   -41.67  30.0  1
+ I57  Var_26    O06  C02  C01  O1A   179.34  30.0  2
+ I57  Var_27    C03  C02  C01  O1A    -0.76  30.0  2
+ I57  Var_28    O06  C02  C01  O1B    -1.00  30.0  2
+ I57  Var_29    C03  C02  C01  O1B   178.90  30.0  2
+ I57  Var_30    C51  N05  C05  C04  -100.39  30.0  3
+ I57  Var_31    C08  C07  C06  C05   179.24  30.0  1
+ I57  Var_32    O07  C07  C06  C05   -54.67  30.0  1
+ I57  Var_33    C07  C06  C05  N05   -56.84  30.0  1
+ I57  Var_34    C51  N05  C05  C06   138.58  30.0  3
+ I57  Var_35    C08  C07  C06  O06   -60.00  30.0  1
+ I57  Var_36    O07  C07  C06  O06    66.10  30.0  1
+ I57  Var_37    H5   N05  C05  C04    67.08  30.0  3
+ I57  Var_38    H7   C07  C06  C05    60.70  30.0  1
+ I57  Var_39    O08  C08  C07  C06   -51.24  30.0  2
+ I57  Var_40    C09  C08  C07  C06  -176.04  30.0  2
+ I57  Var_41    H9   C08  C07  C06    64.79  30.0  2
+ I57  Var_42    H8   O07  C07  C06   -63.02  30.0  3
+ I57  Var_43    O09  C09  C08  C07  -176.27  30.0  1
+ I57  Var_44    O08  C08  C07  O07  -177.12  30.0  2
+ I57  Var_45    C09  C08  C07  O07    58.09  30.0  2
+ I57  Var_46    O09  C09  C08  O08    59.29  30.0  1
+ I57  Var_47    H10  O08  C08  C07   -68.50  30.0  3
+ I57  Var_48    H11  C09  C08  C07   -54.30  30.0  1
+ I57  Var_49    H12  C09  C08  C07    61.98  30.0  1
+ I57  Var_50    H13  O09  C09  C08   174.15  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

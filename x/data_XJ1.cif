@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- XJ1  XJ1  '(2E)-3-(3-{6-[(trans-4-aminocyclohexyl)amino]pyrazin-2-yl}phenyl)prop-2-enoic acid'  ligand  46  25  .  2022-07-22  2022-07-26
+ XJ1  XJ1  '(2E)-3-(3-{6-[(trans-4-aminocyclohexyl)amino]pyrazin-2-yl}phenyl)prop-2-enoic acid'  ligand  46  25  .  2022-07-22  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_XJ1
@@ -242,40 +243,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- XJ1  CONST_01  C12  C11  N10  C9      0.00   0.0  0
- XJ1  CONST_02  C15  C11  N10  C9    180.00   0.0  0
- XJ1  CONST_03  C12  N13  C14  C9      0.00   0.0  0
- XJ1  CONST_04  N13  C14  C9   N10     0.00   0.0  0
- XJ1  CONST_05  N13  C12  C11  N10     0.00   0.0  0
- XJ1  CONST_08  C11  N10  C9   C14     0.00   0.0  0
- XJ1  CONST_09  C11  C12  N13  C14     0.00   0.0  0
- XJ1  CONST_10  C15  C11  C12  N13   180.00   0.0  0
- XJ1  CONST_13  C17  C16  C15  C11   180.00   0.0  0
- XJ1  CONST_14  C19  C20  C15  C11   180.00   0.0  0
- XJ1  CONST_15  C18  C17  C16  C15     0.00   0.0  0
- XJ1  CONST_16  C18  C19  C20  C15     0.00   0.0  0
- XJ1  CONST_17  C19  C20  C15  C16     0.00   0.0  0
- XJ1  CONST_18  C19  C18  C17  C16     0.00   0.0  0
- XJ1  CONST_19  C17  C16  C15  C20     0.00   0.0  0
- XJ1  CONST_20  C17  C18  C19  C20     0.00   0.0  0
- XJ1  CONST_21  C11  N10  C9   N1    180.00   0.0  0
- XJ1  CONST_22  N13  C14  C9   N1    180.00   0.0  0
- XJ1  CONST_23  C21  C17  C16  C15   180.00   0.0  0
- XJ1  CONST_24  C21  C17  C18  C19   180.00   0.0  0
- XJ1  CONST_25  N10  C9   N1   C2    180.00   0.0  0
- XJ1  CONST_26  C14  C9   N1   C2      0.00   0.0  0
- XJ1  CONST_27  H14  C14  C9   N10   180.00   0.0  0
- XJ1  CONST_28  H12  C12  C11  N10   180.00   0.0  0
- XJ1  CONST_29  H16  C16  C15  C11     0.00   0.0  0
- XJ1  CONST_30  H20  C20  C15  C11     0.00   0.0  0
- XJ1  CONST_31  H19  C19  C20  C15   180.00   0.0  0
- XJ1  CONST_32  H18  C18  C17  C16   180.00   0.0  0
- XJ1  CONST_33  H1   N1   C9   N10     0.00   0.0  0
- XJ1  Var_01    C2   C3   C4   C5     56.14  30.0  1
- XJ1  Var_02    C2   C7   C6   C5    -57.03  30.0  1
- XJ1  Var_03    C22  C21  C17  C16   173.08  30.0  2
- XJ1  Var_04    C23  C22  C21  C17  -179.80   0.0  2
- XJ1  Var_05    O25  C23  C22  C21    -1.55  30.0  2
+ XJ1  CONST_01  C12   C11  N10  C9      0.00   0.0  0
+ XJ1  CONST_02  C15   C11  N10  C9    180.00   0.0  0
+ XJ1  CONST_03  C12   N13  C14  C9      0.00   0.0  0
+ XJ1  CONST_04  N13   C14  C9   N10     0.00   0.0  0
+ XJ1  CONST_05  N13   C12  C11  N10     0.00   0.0  0
+ XJ1  CONST_06  C11   N10  C9   C14     0.00   0.0  0
+ XJ1  CONST_07  C11   C12  N13  C14     0.00   0.0  0
+ XJ1  CONST_08  C15   C11  C12  N13   180.00   0.0  0
+ XJ1  CONST_09  C17   C16  C15  C11   180.00   0.0  0
+ XJ1  CONST_10  C19   C20  C15  C11   180.00   0.0  0
+ XJ1  CONST_11  C18   C17  C16  C15     0.00   0.0  0
+ XJ1  CONST_12  C18   C19  C20  C15     0.00   0.0  0
+ XJ1  CONST_13  C19   C20  C15  C16     0.00   0.0  0
+ XJ1  CONST_14  C19   C18  C17  C16     0.00   0.0  0
+ XJ1  CONST_15  C17   C16  C15  C20     0.00   0.0  0
+ XJ1  CONST_16  C17   C18  C19  C20     0.00   0.0  0
+ XJ1  CONST_17  C11   N10  C9   N1    180.00   0.0  0
+ XJ1  CONST_18  N13   C14  C9   N1    180.00   0.0  0
+ XJ1  CONST_19  C21   C17  C16  C15   180.00   0.0  0
+ XJ1  CONST_20  C21   C17  C18  C19   180.00   0.0  0
+ XJ1  CONST_21  N10   C9   N1   C2    180.00   0.0  0
+ XJ1  CONST_22  C14   C9   N1   C2      0.00   0.0  0
+ XJ1  CONST_23  H14   C14  C9   N10   180.00   0.0  0
+ XJ1  CONST_24  H12   C12  C11  N10   180.00   0.0  0
+ XJ1  CONST_25  H16   C16  C15  C11     0.00   0.0  0
+ XJ1  CONST_26  H20   C20  C15  C11     0.00   0.0  0
+ XJ1  CONST_27  H19   C19  C20  C15   180.00   0.0  0
+ XJ1  CONST_28  H18   C18  C17  C16   180.00   0.0  0
+ XJ1  CONST_29  H1    N1   C9   N10     0.00   0.0  0
+ XJ1  Var_01    C2    C3   C4   C5     56.14  30.0  1
+ XJ1  Var_02    C2    C7   C6   C5    -57.03  30.0  1
+ XJ1  Var_03    C22   C21  C17  C16   173.08  30.0  2
+ XJ1  Var_04    C23   C22  C21  C17  -179.80   0.0  2
+ XJ1  Var_05    O25   C23  C22  C21    -1.55  30.0  2
+ XJ1  Var_06    C6    C5   C4   C3    -55.98  30.0  1
+ XJ1  Var_07    C6    C7   C2   C3     56.04  30.0  1
+ XJ1  Var_08    C7    C2   C3   C4    -55.44  30.0  1
+ XJ1  Var_09    C7    C6   C5   C4     56.32  30.0  1
+ XJ1  Var_10    C16   C15  C11  N10  -162.11  30.0  2
+ XJ1  Var_11    C20   C15  C11  N10    17.34  30.0  2
+ XJ1  Var_12    C16   C15  C11  C12    18.36  30.0  2
+ XJ1  Var_13    C20   C15  C11  C12  -162.20  30.0  2
+ XJ1  Var_14    N8    C5   C4   C3   -177.19  30.0  1
+ XJ1  Var_15    C9    N1   C2   C3   -162.80  30.0  3
+ XJ1  Var_16    N1    C2   C3   C4    179.64  30.0  1
+ XJ1  Var_17    C7    C6   C5   N8    177.33  30.0  1
+ XJ1  Var_18    N1    C2   C7   C6    178.86  30.0  1
+ XJ1  Var_19    C9    N1   C2   C7     73.72  30.0  3
+ XJ1  Var_20    H5    C5   C4   C3     60.48  30.0  1
+ XJ1  Var_21    H71C  C7   C2   C3    -65.14  30.0  1
+ XJ1  Var_22    H72C  C7   C2   C3    178.34  30.0  1
+ XJ1  Var_23    H2    C2   C3   C4     62.80  30.0  1
+ XJ1  Var_24    H61C  C6   C5   C4    178.46  30.0  1
+ XJ1  Var_25    H62C  C6   C5   C4    -64.94  30.0  1
+ XJ1  Var_26    H41C  C4   C5   C6   -178.10  30.0  1
+ XJ1  Var_27    H42C  C4   C5   C6     65.38  30.0  1
+ XJ1  Var_28    H81N  N8   C5   C4   -178.68  30.0  3
+ XJ1  Var_29    H82N  N8   C5   C4    -63.75  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

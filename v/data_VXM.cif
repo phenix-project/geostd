@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VXM  VXM  4-{[(5-fluoro-2-hydroxyphenyl)methyl]amino}-1H-isoindole-1,3(2H)-dione  ligand  32  21  .  2022-03-29  2022-03-29
+ VXM  VXM  4-{[(5-fluoro-2-hydroxyphenyl)methyl]amino}-1H-isoindole-1,3(2H)-dione  ligand  32  21  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VXM
@@ -186,41 +187,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VXM  CONST_01  C13  C14  C15  C09    0.00   0.0  0
- VXM  CONST_02  C13  C11  C10  C09    0.00   0.0  0
- VXM  CONST_03  C14  C15  C09  C10    0.00   0.0  0
- VXM  CONST_04  C14  C13  C11  C10    0.00   0.0  0
- VXM  CONST_05  C15  C09  C10  C11    0.00   0.0  0
- VXM  CONST_06  C15  C14  C13  C11    0.00   0.0  0
- VXM  CONST_07  C20  C19  C18  C17    0.00   0.0  0
- VXM  CONST_08  C20  C05  C06  C17    0.00   0.0  0
- VXM  CONST_09  C18  C19  C20  C05    0.00   0.0  0
- VXM  CONST_10  C18  C17  C06  C05    0.00   0.0  0
- VXM  CONST_11  C19  C20  C05  C06    0.00   0.0  0
- VXM  CONST_12  C19  C18  C17  C06    0.00   0.0  0
- VXM  CONST_13  C20  C02  N03  C04    0.00   0.0  0
- VXM  CONST_14  N07  C06  C05  C04    0.00   0.0  0
- VXM  CONST_15  C14  C15  C09  C08  180.00   0.0  0
- VXM  CONST_16  C11  C10  C09  C08  180.00   0.0  0
- VXM  CONST_17  F12  C11  C10  C09  180.00   0.0  0
- VXM  CONST_18  O16  C15  C09  C10  180.00   0.0  0
- VXM  CONST_19  O16  C15  C14  C13  180.00   0.0  0
- VXM  CONST_20  N07  C06  C05  C20  180.00   0.0  0
- VXM  CONST_21  F12  C11  C13  C14  180.00   0.0  0
- VXM  CONST_22  N07  C06  C17  C18  180.00   0.0  0
- VXM  CONST_23  O01  C02  N03  C04  180.00   0.0  0
- VXM  CONST_24  H9   C19  C20  C02    0.00   0.0  0
- VXM  CONST_25  H7   C14  C15  C09  180.00   0.0  0
- VXM  CONST_26  H5   C13  C11  C10  180.00   0.0  0
- VXM  CONST_27  H4   C10  C11  C13  180.00   0.0  0
- VXM  CONST_28  H8   C18  C19  C20  180.00   0.0  0
- VXM  CONST_29  H6   C17  C06  C05  180.00   0.0  0
- VXM  CONST_30  H1   N03  C02  C20  180.00   0.0  0
- VXM  CONST_31  C05  C06  N07  C08  180.00   0.0  0
- VXM  CONST_32  C17  C06  N07  C08    0.00   0.0  0
- VXM  CONST_33  H10  N07  C06  C17  180.00   0.0  0
- VXM  Var_01    C06  N07  C08  C09  177.62  30.0  1
- VXM  Var_02    N07  C08  C09  C10  103.72  30.0  2
+ VXM  CONST_01  C13  C14  C15  C09     0.00   0.0  0
+ VXM  CONST_02  C13  C11  C10  C09     0.00   0.0  0
+ VXM  CONST_03  C14  C15  C09  C10     0.00   0.0  0
+ VXM  CONST_04  C14  C13  C11  C10     0.00   0.0  0
+ VXM  CONST_05  C15  C09  C10  C11     0.00   0.0  0
+ VXM  CONST_06  C15  C14  C13  C11     0.00   0.0  0
+ VXM  CONST_07  C20  C19  C18  C17     0.00   0.0  0
+ VXM  CONST_08  C20  C05  C06  C17     0.00   0.0  0
+ VXM  CONST_09  C18  C19  C20  C05     0.00   0.0  0
+ VXM  CONST_10  C18  C17  C06  C05     0.00   0.0  0
+ VXM  CONST_11  C19  C20  C05  C06     0.00   0.0  0
+ VXM  CONST_12  C19  C18  C17  C06     0.00   0.0  0
+ VXM  CONST_13  C20  C02  N03  C04     0.00   0.0  0
+ VXM  CONST_14  N07  C06  C05  C04     0.00   0.0  0
+ VXM  CONST_15  C14  C15  C09  C08   180.00   0.0  0
+ VXM  CONST_16  C11  C10  C09  C08   180.00   0.0  0
+ VXM  CONST_17  F12  C11  C10  C09   180.00   0.0  0
+ VXM  CONST_18  O16  C15  C09  C10   180.00   0.0  0
+ VXM  CONST_19  O16  C15  C14  C13   180.00   0.0  0
+ VXM  CONST_20  N07  C06  C05  C20   180.00   0.0  0
+ VXM  CONST_21  F12  C11  C13  C14   180.00   0.0  0
+ VXM  CONST_22  N07  C06  C17  C18   180.00   0.0  0
+ VXM  CONST_23  O01  C02  N03  C04   180.00   0.0  0
+ VXM  CONST_24  H9   C19  C20  C02     0.00   0.0  0
+ VXM  CONST_25  H7   C14  C15  C09   180.00   0.0  0
+ VXM  CONST_26  H5   C13  C11  C10   180.00   0.0  0
+ VXM  CONST_27  H4   C10  C11  C13   180.00   0.0  0
+ VXM  CONST_28  H8   C18  C19  C20   180.00   0.0  0
+ VXM  CONST_29  H6   C17  C06  C05   180.00   0.0  0
+ VXM  CONST_30  H1   N03  C02  C20   180.00   0.0  0
+ VXM  CONST_31  C05  C06  N07  C08   180.00   0.0  0
+ VXM  CONST_32  C17  C06  N07  C08     0.00   0.0  0
+ VXM  CONST_33  H10  N07  C06  C17   180.00   0.0  0
+ VXM  Var_01    C06  N07  C08  C09   177.62  30.0  1
+ VXM  Var_02    N07  C08  C09  C10   103.72  30.0  2
+ VXM  CONST_34  C05  C04  N03  C02     0.00   0.0  0
+ VXM  CONST_35  C19  C20  C02  N03   180.00   0.0  0
+ VXM  CONST_36  C05  C20  C02  N03     0.00   0.0  0
+ VXM  CONST_37  C20  C05  C04  N03     0.00   0.0  0
+ VXM  CONST_38  C06  C05  C04  N03   180.00   0.0  0
+ VXM  CONST_39  O21  C04  N03  C02   180.00   0.0  0
+ VXM  CONST_40  O21  C04  C05  C20   180.00   0.0  0
+ VXM  CONST_41  O01  C02  C20  C05   180.00   0.0  0
+ VXM  CONST_42  O21  C04  C05  C06     0.00   0.0  0
+ VXM  CONST_43  O01  C02  C20  C19     0.00   0.0  0
+ VXM  Var_03    H11  O16  C15  C09  -179.14  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

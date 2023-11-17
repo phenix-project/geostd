@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PXS  PXS  '(2S)-propane-1,2-diyl dihexadecanoate'  ligand  107  39  .  2021-08-20  2021-08-20  
+ PXS  PXS  '(2S)-propane-1,2-diyl dihexadecanoate'  ligand  107  39  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PXS
@@ -484,38 +485,48 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PXS  Var_01  C04  C03  C02  C01   179.84  30.0  3
- PXS  Var_02  C05  C04  C03  C02  -179.84  30.0  3
- PXS  Var_03  C06  C05  C04  C03  -179.96  30.0  3
- PXS  Var_04  C07  C06  C05  C04  -179.96  30.0  3
- PXS  Var_05  C08  C07  C06  C05   179.85  30.0  3
- PXS  Var_06  C09  C08  C07  C06  -179.98  30.0  3
- PXS  Var_07  C10  C09  C08  C07   179.74  30.0  3
- PXS  Var_08  C11  C10  C09  C08   179.98  30.0  3
- PXS  Var_09  C12  C11  C10  C09   179.08  30.0  3
- PXS  Var_10  C13  C12  C11  C10   179.84  30.0  3
- PXS  Var_11  C14  C13  C12  C11   177.44  30.0  3
- PXS  Var_12  C15  C14  C13  C12   179.78  30.0  3
- PXS  Var_13  C16  C15  C14  C13   175.10  30.0  3
- PXS  Var_14  O17  C16  C15  C14   178.42  30.0  3
- PXS  Var_15  C19  C18  O17  C16  -175.34  30.0  3
- PXS  Var_16  C23  C22  O21  C19   177.02  30.0  3
- PXS  Var_17  C24  C23  C22  O21   177.98  30.0  3
- PXS  Var_18  C25  C24  C23  C22   177.18  30.0  3
- PXS  Var_19  C26  C25  C24  C23  -179.98  30.0  3
- PXS  Var_20  C27  C26  C25  C24   177.88  30.0  3
- PXS  Var_21  C28  C27  C26  C25   179.66  30.0  3
- PXS  Var_22  C29  C28  C27  C26   178.62  30.0  3
- PXS  Var_23  C30  C29  C28  C27   179.39  30.0  3
- PXS  Var_24  C31  C30  C29  C28   179.42  30.0  3
- PXS  Var_25  C32  C31  C30  C29  -179.86  30.0  3
- PXS  Var_26  C33  C32  C31  C30   179.83  30.0  3
- PXS  Var_27  C34  C33  C32  C31   179.52  30.0  3
- PXS  Var_28  C35  C34  C33  C32   179.80  30.0  3
- PXS  Var_29  C36  C35  C34  C33   179.64  30.0  3
- PXS  Var_30  C37  C36  C35  C34   179.88  30.0  3
- PXS  Var_31  H01  C01  C02  C03   -59.36  30.0  3
- PXS  Var_32  H37  C37  C36  C35   -60.53  30.0  3
+ PXS  Var_01  C04   C03  C02  C01   179.84  30.0  3
+ PXS  Var_02  C05   C04  C03  C02  -179.84  30.0  3
+ PXS  Var_03  C06   C05  C04  C03  -179.96  30.0  3
+ PXS  Var_04  C07   C06  C05  C04  -179.96  30.0  3
+ PXS  Var_05  C08   C07  C06  C05   179.85  30.0  3
+ PXS  Var_06  C09   C08  C07  C06  -179.98  30.0  3
+ PXS  Var_07  C10   C09  C08  C07   179.74  30.0  3
+ PXS  Var_08  C11   C10  C09  C08   179.98  30.0  3
+ PXS  Var_09  C12   C11  C10  C09   179.08  30.0  3
+ PXS  Var_10  C13   C12  C11  C10   179.84  30.0  3
+ PXS  Var_11  C14   C13  C12  C11   177.44  30.0  3
+ PXS  Var_12  C15   C14  C13  C12   179.78  30.0  3
+ PXS  Var_13  C16   C15  C14  C13   175.10  30.0  3
+ PXS  Var_14  O17   C16  C15  C14   178.42  30.0  3
+ PXS  Var_15  C19   C18  O17  C16  -175.34  30.0  3
+ PXS  Var_16  C23   C22  O21  C19   177.02  30.0  3
+ PXS  Var_17  C24   C23  C22  O21   177.98  30.0  3
+ PXS  Var_18  C25   C24  C23  C22   177.18  30.0  3
+ PXS  Var_19  C26   C25  C24  C23  -179.98  30.0  3
+ PXS  Var_20  C27   C26  C25  C24   177.88  30.0  3
+ PXS  Var_21  C28   C27  C26  C25   179.66  30.0  3
+ PXS  Var_22  C29   C28  C27  C26   178.62  30.0  3
+ PXS  Var_23  C30   C29  C28  C27   179.39  30.0  3
+ PXS  Var_24  C31   C30  C29  C28   179.42  30.0  3
+ PXS  Var_25  C32   C31  C30  C29  -179.86  30.0  3
+ PXS  Var_26  C33   C32  C31  C30   179.83  30.0  3
+ PXS  Var_27  C34   C33  C32  C31   179.52  30.0  3
+ PXS  Var_28  C35   C34  C33  C32   179.80  30.0  3
+ PXS  Var_29  C36   C35  C34  C33   179.64  30.0  3
+ PXS  Var_30  C37   C36  C35  C34   179.88  30.0  3
+ PXS  Var_31  H01   C01  C02  C03   -59.36  30.0  3
+ PXS  Var_32  H37   C37  C36  C35   -60.53  30.0  3
+ PXS  Var_33  C18   O17  C16  C15   176.04  30.0  3
+ PXS  Var_34  C20   C19  C18  O17    54.85  30.0  3
+ PXS  Var_35  O21   C19  C18  O17   -68.12  30.0  3
+ PXS  Var_36  O39   C16  O17  C18    -3.23  30.0  1
+ PXS  Var_37  C22   O21  C19  C18  -149.75  30.0  3
+ PXS  Var_38  C22   O21  C19  C20    85.43  30.0  3
+ PXS  Var_39  H19   C19  C18  O17   175.29  30.0  3
+ PXS  Var_40  H20   C20  C19  C18    53.82  30.0  3
+ PXS  Var_41  H20A  C20  C19  C18   172.47  30.0  3
+ PXS  Var_42  H20B  C20  C19  C18   -66.29  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

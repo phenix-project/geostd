@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RFN  RFN  (2R)-N-hydroxy-2-methyl-2-(methylsulfonyl)-4-(2-oxo-4-phenylpyridin-1(2H)-yl)butanamide  ligand  45  25  .  2022-03-23  2022-03-23
+ RFN  RFN  (2R)-N-hydroxy-2-methyl-2-(methylsulfonyl)-4-(2-oxo-4-phenylpyridin-1(2H)-yl)butanamide  ligand  45  25  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RFN
@@ -235,30 +236,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RFN  CONST_01  C1   C2   C3   C4     0.00   0.0  0
- RFN  CONST_02  C1   C6   C5   C4     0.00   0.0  0
- RFN  CONST_03  C2   C3   C4   C5     0.00   0.0  0
- RFN  CONST_04  C2   C1   C6   C5     0.00   0.0  0
- RFN  CONST_05  C3   C4   C5   C6     0.00   0.0  0
- RFN  CONST_06  C3   C2   C1   C6     0.00   0.0  0
- RFN  CONST_07  C3   C4   C5   C7   180.00   0.0  0
- RFN  CONST_08  C1   C6   C5   C7   180.00   0.0  0
- RFN  CONST_09  C11  C10  N1   C9     0.00   0.0  0
- RFN  CONST_10  O1   C10  N1   C9   180.00   0.0  0
- RFN  CONST_11  C12  N1   C10  C11  180.00   0.0  0
- RFN  CONST_12  H2   C2   C3   C4   180.00   0.0  0
- RFN  CONST_13  H6   C6   C5   C4   180.00   0.0  0
- RFN  CONST_14  H3   C3   C4   C5   180.00   0.0  0
- RFN  CONST_15  H1   C1   C6   C5   180.00   0.0  0
- RFN  CONST_16  H4   C4   C5   C6   180.00   0.0  0
- RFN  CONST_17  C12  N1   C10  O1     0.00   0.0  0
- RFN  CONST_18  O5   N2   C15  C14  180.00   0.0  0
- RFN  CONST_19  O5   N2   C15  O4     0.00   0.0  0
- RFN  CONST_20  HN2  N2   C15  C14    0.00   0.0  0
- RFN  Var_01    C11  C7   C5   C4   144.26  30.0  2
- RFN  Var_02    C13  C12  N1   C10   83.35  30.0  3
- RFN  Var_03    C14  C13  C12  N1   179.87  30.0  1
- RFN  Var_04    H16  C16  S1   C14   60.29  30.0  3
+ RFN  CONST_01  C1    C2   C3   C4      0.00   0.0  0
+ RFN  CONST_02  C1    C6   C5   C4      0.00   0.0  0
+ RFN  CONST_03  C2    C3   C4   C5      0.00   0.0  0
+ RFN  CONST_04  C2    C1   C6   C5      0.00   0.0  0
+ RFN  CONST_05  C3    C4   C5   C6      0.00   0.0  0
+ RFN  CONST_06  C3    C2   C1   C6      0.00   0.0  0
+ RFN  CONST_07  C3    C4   C5   C7    180.00   0.0  0
+ RFN  CONST_08  C1    C6   C5   C7    180.00   0.0  0
+ RFN  CONST_09  C11   C10  N1   C9      0.00   0.0  0
+ RFN  CONST_10  O1    C10  N1   C9    180.00   0.0  0
+ RFN  CONST_11  C12   N1   C10  C11   180.00   0.0  0
+ RFN  CONST_12  H2    C2   C3   C4    180.00   0.0  0
+ RFN  CONST_13  H6    C6   C5   C4    180.00   0.0  0
+ RFN  CONST_14  H3    C3   C4   C5    180.00   0.0  0
+ RFN  CONST_15  H1    C1   C6   C5    180.00   0.0  0
+ RFN  CONST_16  H4    C4   C5   C6    180.00   0.0  0
+ RFN  CONST_17  C12   N1   C10  O1      0.00   0.0  0
+ RFN  CONST_18  O5    N2   C15  C14   180.00   0.0  0
+ RFN  CONST_19  O5    N2   C15  O4      0.00   0.0  0
+ RFN  CONST_20  HN2   N2   C15  C14     0.00   0.0  0
+ RFN  Var_01    C11   C7   C5   C4    144.26  30.0  2
+ RFN  Var_02    C13   C12  N1   C10    83.35  30.0  3
+ RFN  Var_03    C14   C13  C12  N1    179.87  30.0  1
+ RFN  Var_04    H16   C16  S1   C14    60.29  30.0  3
+ RFN  Var_05    C7    C11  C10  N1      1.41  30.0  1
+ RFN  Var_06    C7    C8   C9   N1     -0.29  30.0  1
+ RFN  Var_07    C10   C11  C7   C5    179.26  30.0  1
+ RFN  Var_08    C9    C8   C7   C5   -179.86  30.0  1
+ RFN  Var_09    C10   C11  C7   C8     -0.77  30.0  1
+ RFN  Var_10    C10   N1   C9   C8      1.03  30.0  1
+ RFN  Var_11    C11   C7   C8   C9      0.17  30.0  1
+ RFN  Var_12    O1    C10  C11  C7   -179.00  30.0  1
+ RFN  Var_13    C12   N1   C9   C8    178.91  30.0  1
+ RFN  Var_14    H11   C11  C10  N1   -177.75  30.0  1
+ RFN  Var_15    H8    C8   C9   N1   -178.94  30.0  1
+ RFN  Var_16    H9    C9   C8   C7    179.52  30.0  1
+ RFN  Var_17    O4    C15  C14  C13   -53.31  30.0  3
+ RFN  Var_18    N2    C15  C14  C13   124.55  30.0  3
+ RFN  Var_19    O2    S1   C14  C13   157.56  30.0  2
+ RFN  Var_20    C16   S1   C14  C13    40.47  30.0  2
+ RFN  Var_21    O3    S1   C14  C13   -75.58  30.0  2
+ RFN  Var_22    C12   C13  C14  C15   178.64  30.0  1
+ RFN  Var_23    O2    S1   C14  C15    41.76  30.0  2
+ RFN  Var_24    C16   S1   C14  C15   -75.33  30.0  2
+ RFN  Var_25    O3    S1   C14  C15   168.62  30.0  2
+ RFN  Var_26    C12   C13  C14  C17   -53.99  30.0  1
+ RFN  Var_27    O4    C15  C14  C17  -178.87  30.0  3
+ RFN  Var_28    N2    C15  C14  C17    -1.01  30.0  3
+ RFN  Var_29    O2    S1   C14  C17   -80.04  30.0  2
+ RFN  Var_30    C16   S1   C14  C17   162.87  30.0  2
+ RFN  Var_31    O3    S1   C14  C17    46.83  30.0  2
+ RFN  Var_32    S1    C14  C13  C12    64.59  30.0  3
+ RFN  Var_33    O4    C15  C14  S1     65.94  30.0  3
+ RFN  Var_34    N2    C15  C14  S1   -116.20  30.0  3
+ RFN  Var_35    H17   C17  C14  C13    58.26  30.0  3
+ RFN  Var_36    H17A  C17  C14  C13   178.68  30.0  3
+ RFN  Var_37    H17B  C17  C14  C13   -59.84  30.0  3
+ RFN  Var_38    HO5   O5   N2   C15    95.24  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

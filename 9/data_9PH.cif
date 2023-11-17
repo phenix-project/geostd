@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 9PH  9PH  (2~{R},3~{S},4~{S},5~{R},6~{S})-2-(hydroxymethyl)-6-[(2~{R},3~{R},4~{S},5~{R},6~{S})-2-(hydroxymethyl)-6-[(2~{R},3~{R},4~{S},5~{R},6~{R})-2-(hydroxymethyl)-3,5-bis(oxidanyl)-6-[4-(phenylmethoxymethyl)-1,2,3-triazol-1-yl]oxan-4-yl]oxy-3,5-bis(oxidanyl)oxan-4-yl]oxy-oxane-3,4,5-triol  ligand  88  47  .  2021-08-06  2021-08-06  
+ 9PH  9PH  (2~{R},3~{S},4~{S},5~{R},6~{S})-2-(hydroxymethyl)-6-[(2~{R},3~{R},4~{S},5~{R},6~{S})-2-(hydroxymethyl)-6-[(2~{R},3~{R},4~{S},5~{R},6~{R})-2-(hydroxymethyl)-3,5-bis(oxidanyl)-6-[4-(phenylmethoxymethyl)-1,2,3-triazol-1-yl]oxan-4-yl]oxy-3,5-bis(oxidanyl)oxan-4-yl]oxy-oxane-3,4,5-triol  ligand  88  47  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_9PH
@@ -410,32 +411,142 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 9PH  CONST_01  CBT  CBV  CBS  CBQ    0.00   0.0  0
- 9PH  CONST_02  CBT  CBR  CBP  CBQ    0.00   0.0  0
- 9PH  CONST_03  CBR  CBT  CBV  CBS    0.00   0.0  0
- 9PH  CONST_04  CBR  CBP  CBQ  CBS    0.00   0.0  0
- 9PH  CONST_05  CBP  CBR  CBT  CBV    0.00   0.0  0
- 9PH  CONST_06  CBP  CBQ  CBS  CBV    0.00   0.0  0
- 9PH  CONST_07  NBJ  NBK  NBL  CBI    0.00   0.0  0
- 9PH  CONST_08  NBK  NBJ  CBH  CBI    0.00   0.0  0
- 9PH  CONST_09  NBK  NBL  CBI  CBH    0.00   0.0  0
- 9PH  CONST_10  NBL  NBK  NBJ  CBH    0.00   0.0  0
- 9PH  CONST_11  NBJ  CBH  CBI  NBL    0.00   0.0  0
- 9PH  CONST_12  CAM  NBJ  CBH  CBI  180.00   0.0  0
- 9PH  CONST_13  CAM  NBJ  NBK  NBL  180.00   0.0  0
- 9PH  CONST_14  CBN  CBP  CBQ  CBS  180.00   0.0  0
- 9PH  CONST_15  CBN  CBP  CBR  CBT  180.00   0.0  0
- 9PH  CONST_16  NBK  NBL  CBI  CBM  180.00   0.0  0
- 9PH  CONST_17  NBJ  CBH  CBI  CBM  180.00   0.0  0
- 9PH  CONST_18  H8   CBV  CBS  CBQ  180.00   0.0  0
- 9PH  CONST_19  H10  CBR  CBP  CBQ  180.00   0.0  0
- 9PH  CONST_20  H9   CBT  CBV  CBS  180.00   0.0  0
- 9PH  CONST_21  H6   CBQ  CBS  CBV  180.00   0.0  0
- 9PH  CONST_22  H7   CBS  CBV  CBT  180.00   0.0  0
- 9PH  CONST_23  H15  CBH  CBI  NBL  180.00   0.0  0
- 9PH  Var_01    OBO  CBN  CBP  CBQ  110.95  30.0  2
- 9PH  Var_02    NBL  CBI  CBM  OBO  170.20  30.0  2
- 9PH  Var_03    CBI  CBM  OBO  CBN  176.35  30.0  3
+ 9PH  CONST_01  CBT  CBV  CBS  CBQ     0.00   0.0  0
+ 9PH  CONST_02  CBT  CBR  CBP  CBQ     0.00   0.0  0
+ 9PH  CONST_03  CBR  CBT  CBV  CBS     0.00   0.0  0
+ 9PH  CONST_04  CBR  CBP  CBQ  CBS     0.00   0.0  0
+ 9PH  CONST_05  CBP  CBR  CBT  CBV     0.00   0.0  0
+ 9PH  CONST_06  CBP  CBQ  CBS  CBV     0.00   0.0  0
+ 9PH  CONST_07  NBJ  NBK  NBL  CBI     0.00   0.0  0
+ 9PH  CONST_08  NBK  NBJ  CBH  CBI     0.00   0.0  0
+ 9PH  CONST_09  NBK  NBL  CBI  CBH     0.00   0.0  0
+ 9PH  CONST_10  NBL  NBK  NBJ  CBH     0.00   0.0  0
+ 9PH  CONST_11  NBJ  CBH  CBI  NBL     0.00   0.0  0
+ 9PH  CONST_12  CAM  NBJ  CBH  CBI   180.00   0.0  0
+ 9PH  CONST_13  CAM  NBJ  NBK  NBL   180.00   0.0  0
+ 9PH  CONST_14  CBN  CBP  CBQ  CBS   180.00   0.0  0
+ 9PH  CONST_15  CBN  CBP  CBR  CBT   180.00   0.0  0
+ 9PH  CONST_16  NBK  NBL  CBI  CBM   180.00   0.0  0
+ 9PH  CONST_17  NBJ  CBH  CBI  CBM   180.00   0.0  0
+ 9PH  CONST_18  H8   CBV  CBS  CBQ   180.00   0.0  0
+ 9PH  CONST_19  H10  CBR  CBP  CBQ   180.00   0.0  0
+ 9PH  CONST_20  H9   CBT  CBV  CBS   180.00   0.0  0
+ 9PH  CONST_21  H6   CBQ  CBS  CBV   180.00   0.0  0
+ 9PH  CONST_22  H7   CBS  CBV  CBT   180.00   0.0  0
+ 9PH  CONST_23  H15  CBH  CBI  NBL   180.00   0.0  0
+ 9PH  Var_01    OBO  CBN  CBP  CBQ   110.95  30.0  2
+ 9PH  Var_02    NBL  CBI  CBM  OBO   170.20  30.0  2
+ 9PH  Var_03    CBI  CBM  OBO  CBN   176.35  30.0  3
+ 9PH  Var_04    C1   O5   C5   C4     63.17  30.0  1
+ 9PH  Var_05    C1   C2   C3   C4    -53.33  30.0  1
+ 9PH  Var_06    C2   C3   C4   C5     53.92  30.0  1
+ 9PH  Var_07    C2   C1   O5   C5    -63.33  30.0  1
+ 9PH  Var_08    O5   C5   C4   C3    -56.94  30.0  1
+ 9PH  Var_09    O5   C1   C2   C3     56.65  30.0  1
+ 9PH  Var_10    CAL  CAM  NBJ  CBH   141.98  30.0  2
+ 9PH  Var_11    OBE  CAM  NBJ  CBH   -96.22  30.0  2
+ 9PH  Var_12    CAL  CAM  NBJ  NBK   -41.40  30.0  2
+ 9PH  Var_13    OBE  CAM  NBJ  NBK    80.40  30.0  2
+ 9PH  Var_14    CAK  CAL  CAM  NBJ   178.22  30.0  1
+ 9PH  Var_15    CAN  OBE  CAM  NBJ   173.69  30.0  1
+ 9PH  Var_16    CAO  CAK  CAL  CAM   -53.58  30.0  1
+ 9PH  Var_17    CAO  CAN  OBE  CAM    62.35  30.0  1
+ 9PH  Var_18    CAN  OBE  CAM  CAL   -64.04  30.0  1
+ 9PH  Var_19    CAN  CAO  CAK  CAL    53.04  30.0  1
+ 9PH  Var_20    CAK  CAL  CAM  OBE    58.34  30.0  1
+ 9PH  Var_21    CAK  CAO  CAN  OBE   -55.85  30.0  1
+ 9PH  Var_22    CAJ  CAF  CAG  CAH   -53.54  30.0  1
+ 9PH  Var_23    CAJ  CAI  OBD  CAH    63.22  30.0  1
+ 9PH  Var_24    CAI  CAJ  CAF  CAG    52.31  30.0  1
+ 9PH  Var_25    CAI  OBD  CAH  CAG   -64.57  30.0  1
+ 9PH  Var_26    CAF  CAG  CAH  OBD    58.36  30.0  1
+ 9PH  Var_27    CAF  CAJ  CAI  OBD   -55.71  30.0  1
+ 9PH  Var_28    O2   C2   C3   C4   -174.85  30.0  1
+ 9PH  Var_29    O3   C3   C4   C5    176.77  30.0  1
+ 9PH  Var_30    O1   C1   O5   C5    178.88  30.0  1
+ 9PH  Var_31    C3   C4   C5   C6   -176.57  30.0  1
+ 9PH  Var_32    C1   O5   C5   C6   -174.95  30.0  1
+ 9PH  Var_33    O1   C1   C2   C3    174.74  30.0  1
+ 9PH  Var_34    OBB  CAL  CAM  NBJ   -62.14  30.0  1
+ 9PH  Var_35    OBG  CAK  CAL  CAM  -173.49  30.0  1
+ 9PH  Var_36    CAR  CAN  OBE  CAM  -175.33  30.0  1
+ 9PH  Var_37    CAH  OBG  CAK  CAL  -103.27  30.0  1
+ 9PH  Var_38    OBA  CAO  CAK  CAL   174.18  30.0  1
+ 9PH  Var_39    OBE  CAM  CAL  OBB   177.99  30.0  1
+ 9PH  Var_40    CAO  CAK  CAL  OBB  -174.18  30.0  1
+ 9PH  Var_41    OBA  CAO  CAN  OBE  -175.11  30.0  1
+ 9PH  Var_42    OBG  CAK  CAO  CAN   173.03  30.0  1
+ 9PH  Var_43    CAK  CAO  CAN  CAR  -175.42  30.0  1
+ 9PH  Var_44    CAH  OBG  CAK  CAO   135.92  30.0  1
+ 9PH  Var_45    CAG  CAH  OBG  CAK   154.68  30.0  1
+ 9PH  Var_46    OBD  CAH  OBG  CAK   -86.48  30.0  1
+ 9PH  Var_47    CAF  CAG  CAH  OBG   176.29  30.0  1
+ 9PH  Var_48    CAI  OBD  CAH  OBG   177.75  30.0  1
+ 9PH  Var_49    O1   CAF  CAG  CAH  -174.02  30.0  1
+ 9PH  Var_50    CAQ  CAI  OBD  CAH  -174.66  30.0  1
+ 9PH  Var_51    C1   O1   CAF  CAG  -107.43  30.0  1
+ 9PH  Var_52    OAY  CAJ  CAF  CAG   173.81  30.0  1
+ 9PH  Var_53    CAJ  CAF  CAG  OAZ  -175.55  30.0  1
+ 9PH  Var_54    OBD  CAH  CAG  OAZ   177.85  30.0  1
+ 9PH  Var_55    OAY  CAJ  CAI  OBD  -175.11  30.0  1
+ 9PH  Var_56    O1   CAF  CAJ  CAI   172.76  30.0  1
+ 9PH  Var_57    CAF  CAJ  CAI  CAQ  -175.59  30.0  1
+ 9PH  Var_58    C1   O1   CAF  CAJ   131.40  30.0  1
+ 9PH  Var_59    O5   C1   O1   CAF   -86.70  30.0  1
+ 9PH  Var_60    C2   C1   O1   CAF   153.95  30.0  1
+ 9PH  Var_61    O3   C3   C2   C1   -173.35  30.0  1
+ 9PH  Var_62    O4   C4   C5   O5   -178.31  30.0  1
+ 9PH  Var_63    O2   C2   C1   O5    175.70  30.0  1
+ 9PH  Var_64    C2   C3   C4   O4    173.61  30.0  1
+ 9PH  Var_65    H40  C2   C3   C4     63.96  30.0  1
+ 9PH  Var_66    H5   C3   C4   C5    -64.04  30.0  1
+ 9PH  Var_67    H36  C1   O5   C5     57.08  30.0  1
+ 9PH  Var_68    H2   C5   C4   C3     63.15  30.0  1
+ 9PH  Var_69    H16  CAM  NBJ  CBH    22.88  30.0  2
+ 9PH  Var_70    H17  CAL  CAM  NBJ    61.03  30.0  1
+ 9PH  Var_71    H25  CAK  CAL  CAM    65.39  30.0  1
+ 9PH  Var_72    H19  CAN  OBE  CAM   -56.78  30.0  1
+ 9PH  Var_73    H23  CAO  CAK  CAL   -64.85  30.0  1
+ 9PH  Var_74    H35  CAF  CAG  CAH    65.23  30.0  1
+ 9PH  Var_75    H29  CAI  OBD  CAH   -55.93  30.0  1
+ 9PH  Var_76    H33  CAJ  CAF  CAG   -65.43  30.0  1
+ 9PH  Var_77    H27  CAG  CAH  OBD   -59.13  30.0  1
+ 9PH  Var_78    H26  CAH  OBD  CAI    55.96  30.0  1
+ 9PH  Var_79    H1   C4   C5   O5     61.11  30.0  1
+ 9PH  Var_80    O6   C6   C5   C4   -175.70  30.0  3
+ 9PH  Var_81    O4   C4   C5   C6     62.07  30.0  1
+ 9PH  Var_82    OBG  CAK  CAL  OBB    65.91  30.0  1
+ 9PH  Var_83    OAU  CAR  CAN  OBE    63.24  30.0  3
+ 9PH  Var_84    OBA  CAO  CAN  CAR    65.32  30.0  1
+ 9PH  Var_85    CAO  CAN  CAR  OAU  -175.63  30.0  1
+ 9PH  Var_86    OBG  CAK  CAO  OBA   -65.83  30.0  1
+ 9PH  Var_87    OAZ  CAG  CAH  OBG   -64.23  30.0  1
+ 9PH  Var_88    O1   CAF  CAG  OAZ    63.98  30.0  1
+ 9PH  Var_89    OAT  CAQ  CAI  OBD    64.23  30.0  3
+ 9PH  Var_90    OAY  CAJ  CAI  CAQ    65.01  30.0  1
+ 9PH  Var_91    CAJ  CAI  CAQ  OAT  -174.64  30.0  2
+ 9PH  Var_92    O1   CAF  CAJ  OAY   -65.74  30.0  1
+ 9PH  Var_93    O2   C2   C1   O1    -66.21  30.0  1
+ 9PH  Var_94    O6   C6   C5   O5     63.95  30.0  3
+ 9PH  Var_95    O3   C3   C4   O4    -63.54  30.0  1
+ 9PH  Var_96    O2   C2   C3   O3     65.13  30.0  1
+ 9PH  Var_97    H3   C6   C5   C4    -53.98  30.0  3
+ 9PH  Var_98    H4   C6   C5   C4     61.95  30.0  3
+ 9PH  Var_99    H39  O3   C3   C4    163.13  30.0  3
+ 9PH  Var_100   H38  O4   C4   C5    175.35  30.0  3
+ 9PH  Var_101   H41  O2   C2   C3    173.04  30.0  3
+ 9PH  Var_102   H18  OBB  CAL  CAM    94.17  30.0  3
+ 9PH  Var_103   H20  CAR  CAN  OBE  -175.34  30.0  3
+ 9PH  Var_104   H21  CAR  CAN  OBE   -59.20  30.0  3
+ 9PH  Var_105   H24  OBA  CAO  CAN   -88.91  30.0  3
+ 9PH  Var_106   H28  OAZ  CAG  CAH    62.65  30.0  3
+ 9PH  Var_107   H30  CAQ  CAI  OBD  -174.38  30.0  3
+ 9PH  Var_108   H31  CAQ  CAI  OBD   -58.27  30.0  3
+ 9PH  Var_109   H34  OAY  CAJ  CAI   -89.35  30.0  3
+ 9PH  Var_110   CBM  OBO  CBN  CBP   177.44  30.0  3
+ 9PH  Var_111   H37  O6   C6   C5    173.66  30.0  3
+ 9PH  Var_112   H22  OAU  CAR  CAN   177.16  30.0  3
+ 9PH  Var_113   H32  OAT  CAQ  CAI   176.38  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PUQ  PUQ  (2~{S},3~{R},4~{R},5~{S},6~{S})-2-(hydroxymethyl)-6-[[2-(4-hydroxyphenyl)-5,7-bis(oxidanyl)-2~{H}-chromen-3-yl]oxy]oxane-3,4,5-triol  ligand  53  31  .  2022-03-23  2022-03-23
+ PUQ  PUQ  (2~{S},3~{R},4~{R},5~{S},6~{S})-2-(hydroxymethyl)-6-[[2-(4-hydroxyphenyl)-5,7-bis(oxidanyl)-2~{H}-chromen-3-yl]oxy]oxane-3,4,5-triol  ligand  53  31  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PUQ
@@ -268,36 +269,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PUQ  CONST_01  C2   C1   C6   C5      0.00   0.0  0
- PUQ  CONST_02  C2   C3   C4   C5      0.00   0.0  0
- PUQ  CONST_03  C1   C6   C5   C4      0.00   0.0  0
- PUQ  CONST_04  C1   C2   C3   C4      0.00   0.0  0
- PUQ  CONST_05  C6   C1   C2   C3      0.00   0.0  0
- PUQ  CONST_06  C6   C5   C4   C3      0.00   0.0  0
- PUQ  CONST_07  C13  C14  C15  C10     0.00   0.0  0
- PUQ  CONST_08  C13  C12  C11  C10     0.00   0.0  0
- PUQ  CONST_09  C12  C13  C14  C15     0.00   0.0  0
- PUQ  CONST_10  C12  C11  C10  C15     0.00   0.0  0
- PUQ  CONST_11  C11  C12  C13  C14     0.00   0.0  0
- PUQ  CONST_12  C11  C10  C15  C14     0.00   0.0  0
- PUQ  CONST_13  C14  C15  C10  C9    180.00   0.0  0
- PUQ  CONST_14  C12  C11  C10  C9    180.00   0.0  0
- PUQ  CONST_15  O3   C4   C5   C7      0.00   0.0  0
- PUQ  CONST_16  O4   C2   C3   C4    180.00   0.0  0
- PUQ  CONST_17  C6   C5   C4   O3    180.00   0.0  0
- PUQ  CONST_18  C2   C3   C4   O3    180.00   0.0  0
- PUQ  CONST_19  C6   C1   C2   O4    180.00   0.0  0
- PUQ  CONST_20  O5   C13  C14  C15   180.00   0.0  0
- PUQ  CONST_21  C11  C12  C13  O5    180.00   0.0  0
- PUQ  CONST_22  H1   C1   C6   C5    180.00   0.0  0
- PUQ  CONST_23  H3   C3   C4   C5    180.00   0.0  0
- PUQ  CONST_24  H15  C15  C10  C9      0.00   0.0  0
- PUQ  CONST_25  H11  C11  C10  C9      0.00   0.0  0
- PUQ  CONST_26  H14  C14  C15  C10   180.00   0.0  0
- PUQ  CONST_27  H12  C12  C11  C10   180.00   0.0  0
- PUQ  Var_01    C6   C5   C7   C8    -12.13  30.0  1
- PUQ  Var_02    C9   C8   C7   C5      2.22  30.0  1
- PUQ  Var_03    C1   C6   O1   C9   -157.31  30.0  1
+ PUQ  CONST_01  C2    C1   C6   C5      0.00   0.0  0
+ PUQ  CONST_02  C2    C3   C4   C5      0.00   0.0  0
+ PUQ  CONST_03  C1    C6   C5   C4      0.00   0.0  0
+ PUQ  CONST_04  C1    C2   C3   C4      0.00   0.0  0
+ PUQ  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ PUQ  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ PUQ  CONST_07  C13   C14  C15  C10     0.00   0.0  0
+ PUQ  CONST_08  C13   C12  C11  C10     0.00   0.0  0
+ PUQ  CONST_09  C12   C13  C14  C15     0.00   0.0  0
+ PUQ  CONST_10  C12   C11  C10  C15     0.00   0.0  0
+ PUQ  CONST_11  C11   C12  C13  C14     0.00   0.0  0
+ PUQ  CONST_12  C11   C10  C15  C14     0.00   0.0  0
+ PUQ  CONST_13  C14   C15  C10  C9    180.00   0.0  0
+ PUQ  CONST_14  C12   C11  C10  C9    180.00   0.0  0
+ PUQ  CONST_15  O3    C4   C5   C7      0.00   0.0  0
+ PUQ  CONST_16  O4    C2   C3   C4    180.00   0.0  0
+ PUQ  CONST_17  C6    C5   C4   O3    180.00   0.0  0
+ PUQ  CONST_18  C2    C3   C4   O3    180.00   0.0  0
+ PUQ  CONST_19  C6    C1   C2   O4    180.00   0.0  0
+ PUQ  CONST_20  O5    C13  C14  C15   180.00   0.0  0
+ PUQ  CONST_21  C11   C12  C13  O5    180.00   0.0  0
+ PUQ  CONST_22  H1    C1   C6   C5    180.00   0.0  0
+ PUQ  CONST_23  H3    C3   C4   C5    180.00   0.0  0
+ PUQ  CONST_24  H15   C15  C10  C9      0.00   0.0  0
+ PUQ  CONST_25  H11   C11  C10  C9      0.00   0.0  0
+ PUQ  CONST_26  H14   C14  C15  C10   180.00   0.0  0
+ PUQ  CONST_27  H12   C12  C11  C10   180.00   0.0  0
+ PUQ  Var_01    C6    C5   C7   C8    -12.13  30.0  1
+ PUQ  Var_02    C9    C8   C7   C5      2.22  30.0  1
+ PUQ  Var_03    C1    C6   O1   C9   -157.31  30.0  1
+ PUQ  Var_04    C17   O6   C16  C20    58.54  30.0  1
+ PUQ  Var_05    C17   C18  C19  C20   -54.19  30.0  1
+ PUQ  Var_06    O6    C16  C20  C19   -55.55  30.0  1
+ PUQ  Var_07    O6    C17  C18  C19    54.02  30.0  1
+ PUQ  Var_08    C16   C20  C19  C18    54.31  30.0  1
+ PUQ  Var_09    C16   O6   C17  C18   -57.60  30.0  1
+ PUQ  Var_10    C15   C10  C9   C8    -66.51  30.0  2
+ PUQ  Var_11    C11   C10  C9   C8    111.06  30.0  2
+ PUQ  Var_12    C6    O1   C9   C8    -33.26  30.0  1
+ PUQ  Var_13    C10   C9   C8   C7    138.86  30.0  1
+ PUQ  Var_14    O1    C9   C8   C7     19.24  30.0  1
+ PUQ  Var_15    C15   C10  C9   O1     55.93  30.0  2
+ PUQ  Var_16    C11   C10  C9   O1   -126.50  30.0  2
+ PUQ  Var_17    C10   C9   O1   C6   -154.92  30.0  1
+ PUQ  Var_18    O6    C16  C20  O10  -179.63  30.0  1
+ PUQ  Var_19    C18   C19  C20  O10   175.61  30.0  1
+ PUQ  Var_20    C8    O2   C16  C20   169.63  30.0  2
+ PUQ  Var_21    O8    C18  C19  C20  -175.74  30.0  1
+ PUQ  Var_22    O2    C16  C20  C19    66.85  30.0  1
+ PUQ  Var_23    C21   C17  C18  C19   172.83  30.0  1
+ PUQ  Var_24    C16   C20  C19  O9    175.59  30.0  1
+ PUQ  Var_25    C17   C18  C19  O9   -172.73  30.0  1
+ PUQ  Var_26    O6    C17  C18  O8    173.41  30.0  1
+ PUQ  Var_27    O2    C16  O6   C17   -60.76  30.0  1
+ PUQ  Var_28    C16   O6   C17  C21  -179.18  30.0  1
+ PUQ  Var_29    C8    O2   C16  O6    -68.50  30.0  2
+ PUQ  Var_30    C9    C8   O2   C16   177.44  30.0  1
+ PUQ  Var_31    C7    C8   O2   C16    -4.53  30.0  1
+ PUQ  Var_32    C10   C9   C8   O2    -42.96  30.0  1
+ PUQ  Var_33    O1    C9   C8   O2   -162.58  30.0  1
+ PUQ  Var_34    H18   C18  C19  C20    64.48  30.0  1
+ PUQ  Var_35    H16   C16  C20  C19  -173.31  30.0  1
+ PUQ  Var_36    H17   C17  C18  C19   -67.35  30.0  1
+ PUQ  Var_37    H20   C20  C19  C18   -61.07  30.0  1
+ PUQ  Var_38    H19   C19  C18  C17    64.98  30.0  1
+ PUQ  Var_39    H2    C9   C8   C7   -101.44  30.0  1
+ PUQ  Var_40    O2    C16  C20  O10   -57.23  30.0  1
+ PUQ  Var_41    O9    C19  C20  O10   -63.12  30.0  1
+ PUQ  Var_42    O8    C18  C19  O9     65.72  30.0  1
+ PUQ  Var_43    O7    C21  C17  C18   174.71  30.0  3
+ PUQ  Var_44    C21   C17  C18  O8    -67.78  30.0  1
+ PUQ  Var_45    O6    C17  C21  O7    -64.67  30.0  3
+ PUQ  Var_46    HO9   O9   C19  C20   174.37  30.0  3
+ PUQ  Var_47    HO10  O10  C20  C19    61.92  30.0  3
+ PUQ  Var_48    HO8   O8   C18  C19  -145.44  30.0  3
+ PUQ  Var_49    H211  C21  C17  C18   -62.59  30.0  3
+ PUQ  Var_50    H212  C21  C17  C18    53.46  30.0  3
+ PUQ  Var_51    HO3   O3   C4   C5    176.84  30.0  2
+ PUQ  Var_52    HO4   O4   C2   C3     -0.64  30.0  2
+ PUQ  Var_53    HO5   O5   C13  C14   178.96  30.0  2
+ PUQ  Var_54    HO7   O7   C21  C17  -176.48  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

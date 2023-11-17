@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 8L3  8L3  3-[[4-[(3,4-dichlorophenyl)methyl]piperidin-4-yl]methoxy]pyridine  ligand  43  23  .  2021-08-06  2021-08-06  
+ 8L3  8L3  3-[[4-[(3,4-dichlorophenyl)methyl]piperidin-4-yl]methoxy]pyridine  ligand  43  23  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_8L3
@@ -233,40 +234,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 8L3  CONST_01  CAK  CAJ  CAI  CAH    0.00   0.0  0
- 8L3  CONST_02  CAK  NAL  CAM  CAH    0.00   0.0  0
- 8L3  CONST_03  NAL  CAM  CAH  CAI    0.00   0.0  0
- 8L3  CONST_04  NAL  CAK  CAJ  CAI    0.00   0.0  0
- 8L3  CONST_05  CAM  CAH  CAI  CAJ    0.00   0.0  0
- 8L3  CONST_06  CAM  NAL  CAK  CAJ    0.00   0.0  0
- 8L3  CONST_07  CAR  CAT  CAV  CAO    0.00   0.0  0
- 8L3  CONST_08  CAR  CAQ  CAP  CAO    0.00   0.0  0
- 8L3  CONST_09  CAT  CAR  CAQ  CAP    0.00   0.0  0
- 8L3  CONST_10  CAT  CAV  CAO  CAP    0.00   0.0  0
- 8L3  CONST_11  CAV  CAT  CAR  CAQ    0.00   0.0  0
- 8L3  CONST_12  CAV  CAO  CAP  CAQ    0.00   0.0  0
- 8L3  CONST_13  OAG  CAH  CAI  CAJ  180.00   0.0  0
- 8L3  CONST_14  CAT  CAV  CAO  CAN  180.00   0.0  0
- 8L3  CONST_15  CAQ  CAP  CAO  CAN  180.00   0.0  0
- 8L3  CONST_16  CLU  CAT  CAV  CAO  180.00   0.0  0
- 8L3  CONST_17  CLS  CAR  CAQ  CAP  180.00   0.0  0
- 8L3  CONST_18  CLU  CAT  CAR  CAQ  180.00   0.0  0
- 8L3  CONST_19  CLS  CAR  CAT  CAV  180.00   0.0  0
- 8L3  CONST_20  OAG  CAH  CAM  NAL  180.00   0.0  0
- 8L3  CONST_21  H10  CAJ  CAI  CAH  180.00   0.0  0
- 8L3  CONST_22  H12  CAM  CAH  CAI  180.00   0.0  0
- 8L3  CONST_23  H11  CAK  CAJ  CAI  180.00   0.0  0
- 8L3  CONST_24  H9   CAI  CAJ  CAK  180.00   0.0  0
- 8L3  CONST_25  H16  CAQ  CAP  CAO  180.00   0.0  0
- 8L3  CONST_26  H17  CAV  CAO  CAP  180.00   0.0  0
- 8L3  CONST_27  H15  CAP  CAQ  CAR  180.00   0.0  0
- 8L3  Var_01    CAD  CAC  NAB  CAA   53.39  30.0  1
- 8L3  Var_02    CAW  CAA  NAB  CAC  -53.07  30.0  1
- 8L3  Var_03    NAB  CAA  CAW  CAE   53.21  30.0  1
- 8L3  Var_04    NAB  CAC  CAD  CAE  -54.44  30.0  1
- 8L3  Var_05    CAV  CAO  CAN  CAE  -83.76  30.0  2
- 8L3  Var_06    CAI  CAH  OAG  CAF  167.73  30.0  2
- 8L3  Var_07    H7   CAF  OAG  CAH   72.71  30.0  1
+ 8L3  CONST_01  CAK  CAJ  CAI  CAH     0.00   0.0  0
+ 8L3  CONST_02  CAK  NAL  CAM  CAH     0.00   0.0  0
+ 8L3  CONST_03  NAL  CAM  CAH  CAI     0.00   0.0  0
+ 8L3  CONST_04  NAL  CAK  CAJ  CAI     0.00   0.0  0
+ 8L3  CONST_05  CAM  CAH  CAI  CAJ     0.00   0.0  0
+ 8L3  CONST_06  CAM  NAL  CAK  CAJ     0.00   0.0  0
+ 8L3  CONST_07  CAR  CAT  CAV  CAO     0.00   0.0  0
+ 8L3  CONST_08  CAR  CAQ  CAP  CAO     0.00   0.0  0
+ 8L3  CONST_09  CAT  CAR  CAQ  CAP     0.00   0.0  0
+ 8L3  CONST_10  CAT  CAV  CAO  CAP     0.00   0.0  0
+ 8L3  CONST_11  CAV  CAT  CAR  CAQ     0.00   0.0  0
+ 8L3  CONST_12  CAV  CAO  CAP  CAQ     0.00   0.0  0
+ 8L3  CONST_13  OAG  CAH  CAI  CAJ   180.00   0.0  0
+ 8L3  CONST_14  CAT  CAV  CAO  CAN   180.00   0.0  0
+ 8L3  CONST_15  CAQ  CAP  CAO  CAN   180.00   0.0  0
+ 8L3  CONST_16  CLU  CAT  CAV  CAO   180.00   0.0  0
+ 8L3  CONST_17  CLS  CAR  CAQ  CAP   180.00   0.0  0
+ 8L3  CONST_18  CLU  CAT  CAR  CAQ   180.00   0.0  0
+ 8L3  CONST_19  CLS  CAR  CAT  CAV   180.00   0.0  0
+ 8L3  CONST_20  OAG  CAH  CAM  NAL   180.00   0.0  0
+ 8L3  CONST_21  H10  CAJ  CAI  CAH   180.00   0.0  0
+ 8L3  CONST_22  H12  CAM  CAH  CAI   180.00   0.0  0
+ 8L3  CONST_23  H11  CAK  CAJ  CAI   180.00   0.0  0
+ 8L3  CONST_24  H9   CAI  CAJ  CAK   180.00   0.0  0
+ 8L3  CONST_25  H16  CAQ  CAP  CAO   180.00   0.0  0
+ 8L3  CONST_26  H17  CAV  CAO  CAP   180.00   0.0  0
+ 8L3  CONST_27  H15  CAP  CAQ  CAR   180.00   0.0  0
+ 8L3  Var_01    CAD  CAC  NAB  CAA    53.39  30.0  1
+ 8L3  Var_02    CAW  CAA  NAB  CAC   -53.07  30.0  1
+ 8L3  Var_03    NAB  CAA  CAW  CAE    53.21  30.0  1
+ 8L3  Var_04    NAB  CAC  CAD  CAE   -54.44  30.0  1
+ 8L3  Var_05    CAV  CAO  CAN  CAE   -83.76  30.0  2
+ 8L3  Var_06    CAI  CAH  OAG  CAF   167.73  30.0  2
+ 8L3  Var_07    H7   CAF  OAG  CAH    72.71  30.0  1
+ 8L3  Var_08    CAD  CAE  CAW  CAA   -50.32  30.0  1
+ 8L3  Var_09    CAW  CAE  CAD  CAC    51.23  30.0  1
+ 8L3  Var_10    CAN  CAE  CAW  CAA    69.18  30.0  1
+ 8L3  Var_11    CAF  CAE  CAW  CAA  -166.46  30.0  1
+ 8L3  Var_12    CAN  CAE  CAD  CAC   -70.91  30.0  1
+ 8L3  Var_13    CAF  CAE  CAD  CAC   169.83  30.0  1
+ 8L3  Var_14    CAO  CAN  CAE  CAD  -168.45  30.0  2
+ 8L3  Var_15    CAW  CAE  CAN  CAO    72.13  30.0  3
+ 8L3  Var_16    H18  CAW  CAE  CAD  -173.73  30.0  1
+ 8L3  Var_17    H19  CAW  CAE  CAD    70.04  30.0  1
+ 8L3  Var_18    H5   CAD  CAE  CAW   -68.79  30.0  1
+ 8L3  Var_19    H6   CAD  CAE  CAW   174.80  30.0  1
+ 8L3  Var_20    OAG  CAF  CAE  CAD  -169.01  30.0  3
+ 8L3  Var_21    CAO  CAN  CAE  CAF   -51.96  30.0  2
+ 8L3  Var_22    OAG  CAF  CAE  CAW   -51.87  30.0  3
+ 8L3  Var_23    H13  CAN  CAE  CAD   -46.54  30.0  2
+ 8L3  Var_24    H14  CAN  CAE  CAD    67.80  30.0  2
+ 8L3  Var_25    H7   CAF  CAE  CAD   -48.43  30.0  3
+ 8L3  Var_26    H8   CAF  CAE  CAD    69.24  30.0  3
+ 8L3  Var_27    OAG  CAF  CAE  CAN    73.43  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

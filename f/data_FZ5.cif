@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FZ5  FZ5  1-[6-[(2~{S},3~{R},4~{S},5~{S},6~{R})-6-(hydroxymethyl)-3,4,5-tris(oxidanyl)oxan-2-yl]oxy-2-[2-(3-methoxy-4-oxidanyl-phenyl)ethyl]-3-oxidanyl-phenyl]ethanone  ligand  61  33  .  2021-08-09  2021-08-09  
+ FZ5  FZ5  1-[6-[(2~{S},3~{R},4~{S},5~{S},6~{R})-6-(hydroxymethyl)-3,4,5-tris(oxidanyl)oxan-2-yl]oxy-2-[2-(3-methoxy-4-oxidanyl-phenyl)ethyl]-3-oxidanyl-phenyl]ethanone  ligand  61  33  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FZ5
@@ -297,44 +298,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FZ5  CONST_01  CAJ  CAK  CAW  CAY    0.00   0.0  0
- FZ5  CONST_02  CAJ  CAV  CAN  CAY    0.00   0.0  0
- FZ5  CONST_03  CAK  CAW  CAY  CAN    0.00   0.0  0
- FZ5  CONST_04  CAK  CAJ  CAV  CAN    0.00   0.0  0
- FZ5  CONST_05  CAV  CAN  CAY  CAW    0.00   0.0  0
- FZ5  CONST_06  CAV  CAJ  CAK  CAW    0.00   0.0  0
- FZ5  CONST_07  CAM  CAZ  CBB  CBA    0.00   0.0  0
- FZ5  CONST_08  CAM  CAL  CAX  CBA    0.00   0.0  0
- FZ5  CONST_09  CAL  CAM  CAZ  CBB    0.00   0.0  0
- FZ5  CONST_10  CAL  CAX  CBA  CBB    0.00   0.0  0
- FZ5  CONST_11  CAZ  CBB  CBA  CAX    0.00   0.0  0
- FZ5  CONST_12  CAZ  CAM  CAL  CAX    0.00   0.0  0
- FZ5  CONST_13  CAK  CAW  CAY  OAR  180.00   0.0  0
- FZ5  CONST_14  CAV  CAN  CAY  OAR  180.00   0.0  0
- FZ5  CONST_15  CAP  CAV  CAN  CAY  180.00   0.0  0
- FZ5  CONST_16  OAE  CAW  CAY  CAN  180.00   0.0  0
- FZ5  CONST_17  CAJ  CAK  CAW  OAE  180.00   0.0  0
- FZ5  CONST_18  CAP  CAV  CAJ  CAK  180.00   0.0  0
- FZ5  CONST_19  CAZ  CBB  CBA  CAQ  180.00   0.0  0
- FZ5  CONST_20  CAL  CAX  CBA  CAQ  180.00   0.0  0
- FZ5  CONST_21  O1   CAZ  CBB  CBA  180.00   0.0  0
- FZ5  CONST_22  OAF  CAX  CBA  CBB  180.00   0.0  0
- FZ5  CONST_23  CAM  CAZ  CBB  CAU  180.00   0.0  0
- FZ5  CONST_24  CAX  CBA  CBB  CAU  180.00   0.0  0
- FZ5  CONST_25  CAM  CAL  CAX  OAF  180.00   0.0  0
- FZ5  CONST_26  O1   CAZ  CAM  CAL  180.00   0.0  0
- FZ5  CONST_27  H11  CAK  CAW  CAY  180.00   0.0  0
- FZ5  CONST_28  H12  CAJ  CAV  CAN  180.00   0.0  0
- FZ5  CONST_29  H9   CAN  CAY  CAW  180.00   0.0  0
- FZ5  CONST_30  H21  CAL  CAX  CBA  180.00   0.0  0
- FZ5  CONST_31  H22  CAM  CAZ  CBB  180.00   0.0  0
- FZ5  Var_01    CAW  CAY  OAR  CAA  176.02  30.0  2
- FZ5  Var_02    CAQ  CAP  CAV  CAN   76.76  30.0  2
- FZ5  Var_03    CBA  CAQ  CAP  CAV  179.85  30.0  3
- FZ5  Var_04    CBB  CBA  CAQ  CAP  -95.03  30.0  2
- FZ5  Var_05    CAB  CAU  CBB  CBA  -95.75  30.0  2
- FZ5  Var_06    H6   CAA  OAR  CAY   64.66  30.0  3
- FZ5  Var_07    H17  CAB  CAU  CBB  -49.87  30.0  3
+ FZ5  CONST_01  CAJ  CAK  CAW  CAY     0.00   0.0  0
+ FZ5  CONST_02  CAJ  CAV  CAN  CAY     0.00   0.0  0
+ FZ5  CONST_03  CAK  CAW  CAY  CAN     0.00   0.0  0
+ FZ5  CONST_04  CAK  CAJ  CAV  CAN     0.00   0.0  0
+ FZ5  CONST_05  CAV  CAN  CAY  CAW     0.00   0.0  0
+ FZ5  CONST_06  CAV  CAJ  CAK  CAW     0.00   0.0  0
+ FZ5  CONST_07  CAM  CAZ  CBB  CBA     0.00   0.0  0
+ FZ5  CONST_08  CAM  CAL  CAX  CBA     0.00   0.0  0
+ FZ5  CONST_09  CAL  CAM  CAZ  CBB     0.00   0.0  0
+ FZ5  CONST_10  CAL  CAX  CBA  CBB     0.00   0.0  0
+ FZ5  CONST_11  CAZ  CBB  CBA  CAX     0.00   0.0  0
+ FZ5  CONST_12  CAZ  CAM  CAL  CAX     0.00   0.0  0
+ FZ5  CONST_13  CAK  CAW  CAY  OAR   180.00   0.0  0
+ FZ5  CONST_14  CAV  CAN  CAY  OAR   180.00   0.0  0
+ FZ5  CONST_15  CAP  CAV  CAN  CAY   180.00   0.0  0
+ FZ5  CONST_16  OAE  CAW  CAY  CAN   180.00   0.0  0
+ FZ5  CONST_17  CAJ  CAK  CAW  OAE   180.00   0.0  0
+ FZ5  CONST_18  CAP  CAV  CAJ  CAK   180.00   0.0  0
+ FZ5  CONST_19  CAZ  CBB  CBA  CAQ   180.00   0.0  0
+ FZ5  CONST_20  CAL  CAX  CBA  CAQ   180.00   0.0  0
+ FZ5  CONST_21  O1   CAZ  CBB  CBA   180.00   0.0  0
+ FZ5  CONST_22  OAF  CAX  CBA  CBB   180.00   0.0  0
+ FZ5  CONST_23  CAM  CAZ  CBB  CAU   180.00   0.0  0
+ FZ5  CONST_24  CAX  CBA  CBB  CAU   180.00   0.0  0
+ FZ5  CONST_25  CAM  CAL  CAX  OAF   180.00   0.0  0
+ FZ5  CONST_26  O1   CAZ  CAM  CAL   180.00   0.0  0
+ FZ5  CONST_27  H11  CAK  CAW  CAY   180.00   0.0  0
+ FZ5  CONST_28  H12  CAJ  CAV  CAN   180.00   0.0  0
+ FZ5  CONST_29  H9   CAN  CAY  CAW   180.00   0.0  0
+ FZ5  CONST_30  H21  CAL  CAX  CBA   180.00   0.0  0
+ FZ5  CONST_31  H22  CAM  CAZ  CBB   180.00   0.0  0
+ FZ5  Var_01    CAW  CAY  OAR  CAA   176.02  30.0  2
+ FZ5  Var_02    CAQ  CAP  CAV  CAN    76.76  30.0  2
+ FZ5  Var_03    CBA  CAQ  CAP  CAV   179.85  30.0  3
+ FZ5  Var_04    CBB  CBA  CAQ  CAP   -95.03  30.0  2
+ FZ5  Var_05    CAB  CAU  CBB  CBA   -95.75  30.0  2
+ FZ5  Var_06    H6   CAA  OAR  CAY    64.66  30.0  3
+ FZ5  Var_07    H17  CAB  CAU  CBB   -49.87  30.0  3
+ FZ5  Var_08    C1   C2   C3   C4    -53.01  30.0  1
+ FZ5  Var_09    C1   O5   C5   C4     64.88  30.0  1
+ FZ5  Var_10    C2   C3   C4   C5     52.17  30.0  1
+ FZ5  Var_11    C2   C1   O5   C5    -66.70  30.0  1
+ FZ5  Var_12    O5   C1   C2   C3     58.42  30.0  1
+ FZ5  Var_13    O5   C5   C4   C3    -55.58  30.0  1
+ FZ5  Var_14    O2   C2   C3   C4   -174.41  30.0  1
+ FZ5  Var_15    O3   C3   C4   C5    174.73  30.0  1
+ FZ5  Var_16    O1   C1   O5   C5    175.03  30.0  1
+ FZ5  Var_17    C3   C4   C5   C6   -175.19  30.0  1
+ FZ5  Var_18    C1   O5   C5   C6   -172.40  30.0  1
+ FZ5  Var_19    O1   C1   C2   C3    176.11  30.0  1
+ FZ5  Var_20    C1   O1   CAZ  CBB  -147.98  30.0  1
+ FZ5  Var_21    C1   O1   CAZ  CAM    33.31  30.0  1
+ FZ5  Var_22    C2   C1   O1   CAZ   158.25  30.0  3
+ FZ5  Var_23    O5   C1   O1   CAZ   -83.33  30.0  3
+ FZ5  Var_24    O3   C3   C2   C1   -173.12  30.0  1
+ FZ5  Var_25    O2   C2   C1   O5    177.36  30.0  1
+ FZ5  Var_26    O4   C4   C5   O5   -177.15  30.0  1
+ FZ5  Var_27    C2   C3   C4   O4    171.73  30.0  1
+ FZ5  Var_28    H27  C2   C3   C4     64.40  30.0  1
+ FZ5  Var_29    H5   C3   C4   C5    -65.98  30.0  1
+ FZ5  Var_30    H23  C1   O5   C5     54.48  30.0  1
+ FZ5  Var_31    H2   C5   C4   C3     64.11  30.0  1
+ FZ5  Var_32    H1   C4   C5   O5     62.36  30.0  1
+ FZ5  Var_33    O6   C6   C5   C4   -175.66  30.0  3
+ FZ5  Var_34    O4   C4   C5   C6     63.24  30.0  1
+ FZ5  Var_35    O2   C2   C1   O1    -64.96  30.0  1
+ FZ5  Var_36    O6   C6   C5   O5     64.08  30.0  3
+ FZ5  Var_37    O3   C3   C4   O4    -65.70  30.0  1
+ FZ5  Var_38    O2   C2   C3   O3     65.49  30.0  1
+ FZ5  Var_39    H26  O3   C3   C4    169.57  30.0  3
+ FZ5  Var_40    H3   C6   C5   C4    -54.14  30.0  3
+ FZ5  Var_41    H4   C6   C5   C4     62.26  30.0  3
+ FZ5  Var_42    H25  O4   C4   C5   -179.25  30.0  3
+ FZ5  Var_43    H28  O2   C2   C3   -148.20  30.0  3
+ FZ5  Var_44    H10  OAE  CAW  CAY    -3.48  30.0  2
+ FZ5  Var_45    H20  OAF  CAX  CBA   179.32  30.0  2
+ FZ5  Var_46    H24  O6   C6   C5   -178.80  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

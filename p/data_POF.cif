@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- POF  POF  '(4aS,4bR,10bS,12aS)-12a-methyl-1,3-dioxo-2-(pyridin-3-ylmethyl)-1,2,3,4,4a,4b,5,6,10b,11,12,12a-dodecahydronaphtho[2,1-f]isoquinolin-8-yl sulfamate'  ligand  60  33  .  2021-08-19  2021-08-19  
+ POF  POF  '(4aS,4bR,10bS,12aS)-12a-methyl-1,3-dioxo-2-(pyridin-3-ylmethyl)-1,2,3,4,4a,4b,5,6,10b,11,12,12a-dodecahydronaphtho[2,1-f]isoquinolin-8-yl sulfamate'  ligand  60  33  .  2021-08-19  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_POF
@@ -308,43 +309,86 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- POF  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- POF  CONST_02  C4   C5   C6   C1     0.00   0.0  0
- POF  CONST_03  C5   C6   C1   C2     0.00   0.0  0
- POF  CONST_04  C5   C4   C3   C2     0.00   0.0  0
- POF  CONST_05  C6   C1   C2   C3     0.00   0.0  0
- POF  CONST_06  C6   C5   C4   C3     0.00   0.0  0
- POF  CONST_07  C23  C22  C21  C20    0.00   0.0  0
- POF  CONST_08  C23  N3   C24  C20    0.00   0.0  0
- POF  CONST_09  N3   C24  C20  C21    0.00   0.0  0
- POF  CONST_10  N3   C23  C22  C21    0.00   0.0  0
- POF  CONST_11  C24  C20  C21  C22    0.00   0.0  0
- POF  CONST_12  C24  N3   C23  C22    0.00   0.0  0
- POF  CONST_13  C18  N2   C17  C16    0.00   0.0  0
- POF  CONST_14  C3   C2   C1   O3   180.00   0.0  0
- POF  CONST_15  C5   C6   C1   O3   180.00   0.0  0
- POF  CONST_16  C22  C21  C20  C19  180.00   0.0  0
- POF  CONST_17  N3   C24  C20  C19  180.00   0.0  0
- POF  CONST_18  C18  N2   C17  O4   180.00   0.0  0
- POF  CONST_19  C19  N2   C17  C16  180.00   0.0  0
- POF  CONST_20  H5   C5   C6   C1   180.00   0.0  0
- POF  CONST_21  H6   C6   C1   C2   180.00   0.0  0
- POF  CONST_22  H2   C2   C3   C4   180.00   0.0  0
- POF  CONST_23  H22  C22  C21  C20  180.00   0.0  0
- POF  CONST_24  H24  C24  C20  C21  180.00   0.0  0
- POF  CONST_25  H23  C23  C22  C21  180.00   0.0  0
- POF  CONST_26  H21  C21  C22  C23  180.00   0.0  0
- POF  CONST_27  C19  N2   C17  O4     0.00   0.0  0
- POF  Var_01    C8   C7   C3   C2   161.49  30.0  1
- POF  Var_02    C9   C8   C7   C3    49.73  30.0  1
- POF  Var_03    C12  C13  C14  C10  -55.75  30.0  1
- POF  Var_04    N2   C17  C16  C11   14.98  30.0  1
- POF  Var_05    C17  N2   C18  C12    7.49  30.0  1
- POF  Var_06    C20  C19  N2   C17   72.20  30.0  3
- POF  Var_07    C21  C20  C19  N2    62.91  30.0  2
- POF  Var_08    C6   C1   O3   S1   -92.47  30.0  2
- POF  Var_09    N1   S1   O3   C1    69.60  30.0  3
- POF  Var_10    HN1  N1   S1   O1    40.06  30.0  3
+ POF  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ POF  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ POF  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ POF  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ POF  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ POF  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ POF  CONST_07  C23   C22  C21  C20     0.00   0.0  0
+ POF  CONST_08  C23   N3   C24  C20     0.00   0.0  0
+ POF  CONST_09  N3    C24  C20  C21     0.00   0.0  0
+ POF  CONST_10  N3    C23  C22  C21     0.00   0.0  0
+ POF  CONST_11  C24   C20  C21  C22     0.00   0.0  0
+ POF  CONST_12  C24   N3   C23  C22     0.00   0.0  0
+ POF  CONST_13  C18   N2   C17  C16     0.00   0.0  0
+ POF  CONST_14  C3    C2   C1   O3    180.00   0.0  0
+ POF  CONST_15  C5    C6   C1   O3    180.00   0.0  0
+ POF  CONST_16  C22   C21  C20  C19   180.00   0.0  0
+ POF  CONST_17  N3    C24  C20  C19   180.00   0.0  0
+ POF  CONST_18  C18   N2   C17  O4    180.00   0.0  0
+ POF  CONST_19  C19   N2   C17  C16   180.00   0.0  0
+ POF  CONST_20  H5    C5   C6   C1    180.00   0.0  0
+ POF  CONST_21  H6    C6   C1   C2    180.00   0.0  0
+ POF  CONST_22  H2    C2   C3   C4    180.00   0.0  0
+ POF  CONST_23  H22   C22  C21  C20   180.00   0.0  0
+ POF  CONST_24  H24   C24  C20  C21   180.00   0.0  0
+ POF  CONST_25  H23   C23  C22  C21   180.00   0.0  0
+ POF  CONST_26  H21   C21  C22  C23   180.00   0.0  0
+ POF  CONST_27  C19   N2   C17  O4      0.00   0.0  0
+ POF  Var_01    C8    C7   C3   C2    161.49  30.0  1
+ POF  Var_02    C9    C8   C7   C3     49.73  30.0  1
+ POF  Var_03    C12   C13  C14  C10   -55.75  30.0  1
+ POF  Var_04    N2    C17  C16  C11    14.98  30.0  1
+ POF  Var_05    C17   N2   C18  C12     7.49  30.0  1
+ POF  Var_06    C20   C19  N2   C17    72.20  30.0  3
+ POF  Var_07    C21   C20  C19  N2     62.91  30.0  2
+ POF  Var_08    C6    C1   O3   S1    -92.47  30.0  2
+ POF  Var_09    N1    S1   O3   C1     69.60  30.0  3
+ POF  Var_10    HN1   N1   S1   O1     40.06  30.0  3
+ POF  Var_11    C9    C10  C4   C3    -17.27  30.0  1
+ POF  Var_12    C14   C10  C4   C3   -142.82  30.0  1
+ POF  Var_13    C8    C9   C10  C4     48.16  30.0  1
+ POF  Var_14    C11   C9   C10  C4    173.24  30.0  1
+ POF  Var_15    C13   C14  C10  C4   -174.97  30.0  1
+ POF  Var_16    C9    C10  C4   C5    166.19  30.0  1
+ POF  Var_17    C14   C10  C4   C5     40.64  30.0  1
+ POF  Var_18    C10   C9   C8   C7    -65.33  30.0  1
+ POF  Var_19    C11   C9   C8   C7    171.95  30.0  1
+ POF  Var_20    C14   C10  C9   C8    175.85  30.0  1
+ POF  Var_21    C12   C11  C9   C8   -178.62  30.0  1
+ POF  Var_22    C16   C11  C9   C8    -54.08  30.0  1
+ POF  Var_23    C13   C14  C10  C9     57.90  30.0  1
+ POF  Var_24    C13   C12  C11  C9    -54.95  30.0  1
+ POF  Var_25    C18   C12  C11  C9   -174.11  30.0  1
+ POF  Var_26    C17   C16  C11  C9   -173.77  30.0  1
+ POF  Var_27    C12   C11  C9   C10    58.74  30.0  1
+ POF  Var_28    C16   C11  C9   C10  -176.72  30.0  1
+ POF  Var_29    C14   C10  C9   C11   -59.07  30.0  1
+ POF  Var_30    C14   C13  C12  C11    53.14  30.0  1
+ POF  Var_31    N2    C18  C12  C11   -40.42  30.0  1
+ POF  Var_32    C17   C16  C11  C12   -47.87  30.0  1
+ POF  Var_33    C16   C11  C12  C13   178.61  30.0  1
+ POF  Var_34    N2    C18  C12  C13  -159.75  30.0  1
+ POF  Var_35    C18   C12  C13  C14   171.79  30.0  1
+ POF  Var_36    C18   C12  C11  C16    59.45  30.0  1
+ POF  Var_37    C15   C12  C11  C9     68.27  30.0  1
+ POF  Var_38    O5    C18  C12  C11   142.12  30.0  1
+ POF  Var_39    O5    C18  C12  C13    22.79  30.0  1
+ POF  Var_40    C15   C12  C13  C14   -71.97  30.0  1
+ POF  Var_41    C16   C11  C12  C15   -58.17  30.0  1
+ POF  Var_42    N2    C18  C12  C15    81.62  30.0  1
+ POF  Var_43    H10   C10  C4   C3     99.31  30.0  1
+ POF  Var_44    H9    C9   C10  C4    -68.53  30.0  1
+ POF  Var_45    H14   C14  C10  C4    -55.27  30.0  1
+ POF  Var_46    H14A  C14  C10  C4     61.72  30.0  1
+ POF  Var_47    H11   C11  C9   C8     64.32  30.0  1
+ POF  Var_48    H16   C16  C11  C9    -51.83  30.0  1
+ POF  Var_49    H16A  C16  C11  C9     66.37  30.0  1
+ POF  Var_50    O5    C18  C12  C15   -95.84  30.0  1
+ POF  Var_51    H15   C15  C12  C11    61.20  30.0  3
+ POF  Var_52    H15A  C15  C12  C11  -178.71  30.0  3
+ POF  Var_53    H15B  C15  C12  C11   -59.84  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

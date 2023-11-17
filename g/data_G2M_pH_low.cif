@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- G2M  G2M  2'-deoxy-5'-O-[(S)-hydroxy{[(S)-hydroxy(2-phosphonopropan-2-yl)phosphoryl]oxy}phosphoryl]guanosine  ligand  55  33  .  2021-08-10  2022-11-17
+ G2M  G2M  2'-deoxy-5'-O-[(S)-hydroxy{[(S)-hydroxy(2-phosphonopropan-2-yl)phosphoryl]oxy}phosphoryl]guanosine  ligand  55  33  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_G2M
@@ -277,29 +278,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- G2M  CONST_01  C8    N7    C5   C4     0.00   0.0  0
- G2M  CONST_02  N7    C8    N9   C4     0.00   0.0  0
- G2M  CONST_03  C8    N9    C4   C5     0.00   0.0  0
- G2M  CONST_04  N9    C8    N7   C5     0.00   0.0  0
- G2M  CONST_05  N9    C4    C5   N7     0.00   0.0  0
- G2M  CONST_06  C1'   N9    C4   N3     0.00   0.0  0
- G2M  CONST_07  C1'   N9    C4   C5   180.00   0.0  0
- G2M  CONST_08  C1'   N9    C8   N7   180.00   0.0  0
- G2M  CONST_09  C4    N3    C2   N1     0.00   0.0  0
- G2M  CONST_10  C5    C6    N1   C2     0.00   0.0  0
- G2M  CONST_11  C6    N1    C2   N3     0.00   0.0  0
- G2M  CONST_12  O6    C6    N1   C2   180.00   0.0  0
- G2M  CONST_13  C6    N1    C2   N2   180.00   0.0  0
- G2M  CONST_14  C4    N3    C2   N2   180.00   0.0  0
- G2M  CONST_15  H8    C8    N9   C4   180.00   0.0  0
- G2M  CONST_16  HN1   N1    C2   N3   180.00   0.0  0
- G2M  CONST_17  HN2   N2    C2   N1   180.00   0.0  0
- G2M  Var_01    C4'   C5'   O5'  PA  -132.04  30.0  1
- G2M  Var_02    O1B   PB    O3A  PA   146.10  30.0  1
- G2M  Var_03    O1A   PA    O3A  PB   -13.15  30.0  2
- G2M  Var_04    O1G   PG    C3B  PB   -49.69  30.0  3
- G2M  Var_05    HC3B  C3B2  C3B  PB  -170.94  30.0  3
- G2M  Var_06    HC3D  C3B3  C3B  PB  -174.83  30.0  3
+ G2M  CONST_01  C8    N7    C5   C4      0.00   0.0  0
+ G2M  CONST_02  N7    C8    N9   C4      0.00   0.0  0
+ G2M  CONST_03  C8    N9    C4   C5      0.00   0.0  0
+ G2M  CONST_04  N9    C8    N7   C5      0.00   0.0  0
+ G2M  CONST_05  N9    C4    C5   N7      0.00   0.0  0
+ G2M  CONST_06  C1'   N9    C4   N3      0.00   0.0  0
+ G2M  CONST_07  C1'   N9    C4   C5    180.00   0.0  0
+ G2M  CONST_08  C1'   N9    C8   N7    180.00   0.0  0
+ G2M  CONST_09  C4    N3    C2   N1      0.00   0.0  0
+ G2M  CONST_10  C5    C6    N1   C2      0.00   0.0  0
+ G2M  CONST_11  C6    N1    C2   N3      0.00   0.0  0
+ G2M  CONST_12  O6    C6    N1   C2    180.00   0.0  0
+ G2M  CONST_13  C6    N1    C2   N2    180.00   0.0  0
+ G2M  CONST_14  C4    N3    C2   N2    180.00   0.0  0
+ G2M  CONST_15  H8    C8    N9   C4    180.00   0.0  0
+ G2M  CONST_16  HN1   N1    C2   N3    180.00   0.0  0
+ G2M  CONST_17  HN2   N2    C2   N1    180.00   0.0  0
+ G2M  Var_01    C4'   C5'   O5'  PA   -132.04  30.0  1
+ G2M  Var_02    O1B   PB    O3A  PA    146.10  30.0  1
+ G2M  Var_03    O1A   PA    O3A  PB    -13.15  30.0  2
+ G2M  Var_04    O1G   PG    C3B  PB    -49.69  30.0  3
+ G2M  Var_05    HC3B  C3B2  C3B  PB   -170.94  30.0  3
+ G2M  Var_06    HC3D  C3B3  C3B  PB   -174.83  30.0  3
+ G2M  Var_07    C2'   C1'   N9   C4     88.58  30.0  2
+ G2M  Var_08    O4'   C1'   N9   C4   -153.16  30.0  2
+ G2M  Var_09    C2'   C1'   N9   C8    -89.73  30.0  2
+ G2M  Var_10    O4'   C1'   N9   C8     28.52  30.0  2
+ G2M  Var_11    C3'   C2'   C1'  N9     95.18  30.0  1
+ G2M  Var_12    C4'   O4'   C1'  N9   -121.49  30.0  1
+ G2M  Var_13    C4'   C3'   C2'  C1'    35.81  30.0  1
+ G2M  Var_14    C3'   C4'   O4'  C1'    22.91  30.0  1
+ G2M  Var_15    C4'   O4'   C1'  C2'     0.74  30.0  1
+ G2M  Var_16    O4'   C4'   C3'  C2'   -36.42  30.0  1
+ G2M  Var_17    O4'   C1'   C2'  C3'   -24.10  30.0  1
+ G2M  Var_18    O3'   C3'   C2'  C1'   156.62  30.0  1
+ G2M  Var_19    C5'   C4'   O4'  C1'   149.94  30.0  1
+ G2M  Var_20    C5'   C4'   C3'  C2'  -158.72  30.0  1
+ G2M  Var_21    O4'   C4'   C3'  O3'  -155.39  30.0  1
+ G2M  Var_22    H1'   C1'   N9   C4    -34.30  30.0  2
+ G2M  Var_23    H2'   C2'   C1'  N9   -148.75  30.0  1
+ G2M  Var_24    H2'A  C2'   C1'  N9    -28.23  30.0  1
+ G2M  Var_25    H3'   C3'   C2'  C1'   -79.76  30.0  1
+ G2M  Var_26    H4'   C4'   O4'  C1'   -93.22  30.0  1
+ G2M  Var_27    O5'   C5'   C4'  C3'    57.80  30.0  3
+ G2M  Var_28    C5'   C4'   C3'  O3'    82.31  30.0  1
+ G2M  Var_29    O5'   C5'   C4'  O4'   -61.93  30.0  3
+ G2M  Var_30    HO3'  O3'   C3'  C2'   163.45  30.0  3
+ G2M  Var_31    H5'   C5'   C4'  C3'   177.33  30.0  3
+ G2M  Var_32    H5'A  C5'   C4'  C3'   -65.30  30.0  3
+ G2M  Var_33    O1B   PB    C3B  PG   -172.43  30.0  1
+ G2M  Var_34    O2B   PB    C3B  PG    -42.33  30.0  1
+ G2M  Var_35    O3A   PB    C3B  PG     87.49  30.0  1
+ G2M  Var_36    C5'   O5'   PA   O1A   -66.07  30.0  3
+ G2M  Var_37    C3B2  C3B   PB   O1B    63.79  30.0  3
+ G2M  Var_38    C3B3  C3B   PB   O1B   -56.62  30.0  3
+ G2M  Var_39    C5'   O5'   PA   O2A   165.19  30.0  3
+ G2M  Var_40    C3B2  C3B   PB   O2B  -166.11  30.0  3
+ G2M  Var_41    C3B3  C3B   PB   O2B    73.48  30.0  3
+ G2M  Var_42    C5'   O5'   PA   O3A    58.84  30.0  3
+ G2M  Var_43    C3B2  C3B   PB   O3A   -36.28  30.0  3
+ G2M  Var_44    C3B3  C3B   PB   O3A  -156.69  30.0  3
+ G2M  Var_45    H21   O2A   PA   O1A    41.93  30.0  3
+ G2M  Var_46    H22   O2G   PG   O1G    88.83  30.0  3
+ G2M  Var_47    H19   O1B   PB   O2B   -32.78  30.0  3
+ G2M  Var_48    H20   O1G   PG   O2G  -119.50  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

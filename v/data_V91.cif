@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- V91  V91  N-{5-[3-(1,3-thiazol-2-yl)azetidine-1-carbonyl]thiophen-2-yl}-L-prolinamide  ligand  42  24  .  2022-08-11  2022-08-11
+ V91  V91  N-{5-[3-(1,3-thiazol-2-yl)azetidine-1-carbonyl]thiophen-2-yl}-L-prolinamide  ligand  42  24  .  2022-08-11  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_V91
@@ -233,38 +234,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- V91  CONST_01  C04  C03  C02  C01    0.00   0.0  0
- V91  CONST_02  C03  C04  S05  C01    0.00   0.0  0
- V91  CONST_03  C04  S05  C01  C02    0.00   0.0  0
- V91  CONST_04  S05  C04  C03  C02    0.00   0.0  0
- V91  CONST_05  S05  C01  C02  C03    0.00   0.0  0
- V91  CONST_06  C18  C19  N20  C16    0.00   0.0  0
- V91  CONST_07  C19  C18  S17  C16    0.00   0.0  0
- V91  CONST_08  N20  C16  S17  C18    0.00   0.0  0
- V91  CONST_09  S17  C16  N20  C19    0.00   0.0  0
- V91  CONST_10  S17  C18  C19  N20    0.00   0.0  0
- V91  CONST_11  C19  N20  C16  C14  180.00   0.0  0
- V91  CONST_12  C18  S17  C16  C14  180.00   0.0  0
- V91  CONST_13  N09  C04  S05  C01  180.00   0.0  0
- V91  CONST_14  N09  C04  C03  C02  180.00   0.0  0
- V91  CONST_15  C06  C01  C02  C03  180.00   0.0  0
- V91  CONST_16  C06  C01  S05  C04  180.00   0.0  0
- V91  CONST_17  C01  C06  N07  C13  180.00   0.0  0
- V91  CONST_19  H10  C03  C02  C01  180.00   0.0  0
- V91  CONST_20  H9   C02  C03  C04  180.00   0.0  0
- V91  CONST_21  H16  C19  N20  C16  180.00   0.0  0
- V91  CONST_22  H14  C18  S17  C16  180.00   0.0  0
- V91  CONST_23  O08  C06  N07  C13    0.00   0.0  0
- V91  CONST_25  C11  C10  N09  C04  180.00   0.0  0
- V91  CONST_26  C03  C04  N09  C10  180.00   0.0  0
- V91  CONST_27  S05  C04  N09  C10    0.00   0.0  0
- V91  CONST_28  H19  N09  C04  C03    0.00   0.0  0
- V91  CONST_29  O12  C10  N09  C04    0.00   0.0  0
- V91  Var_01    C14  C15  N07  C13   -0.77  30.0  1
- V91  Var_02    N24  C23  C22  C21   15.24  30.0  1
- V91  Var_03    C11  N24  C23  C22    7.98  30.0  1
- V91  Var_04    C23  C22  C21  C11  -30.80  30.0  1
- V91  Var_05    N07  C06  C01  C02   15.51  30.0  2
+ V91  CONST_01  C04  C03  C02  C01     0.00   0.0  0
+ V91  CONST_02  C03  C04  S05  C01     0.00   0.0  0
+ V91  CONST_03  C04  S05  C01  C02     0.00   0.0  0
+ V91  CONST_04  S05  C04  C03  C02     0.00   0.0  0
+ V91  CONST_05  S05  C01  C02  C03     0.00   0.0  0
+ V91  CONST_06  C18  C19  N20  C16     0.00   0.0  0
+ V91  CONST_07  C19  C18  S17  C16     0.00   0.0  0
+ V91  CONST_08  N20  C16  S17  C18     0.00   0.0  0
+ V91  CONST_09  S17  C16  N20  C19     0.00   0.0  0
+ V91  CONST_10  S17  C18  C19  N20     0.00   0.0  0
+ V91  CONST_11  C19  N20  C16  C14   180.00   0.0  0
+ V91  CONST_12  C18  S17  C16  C14   180.00   0.0  0
+ V91  CONST_13  N09  C04  S05  C01   180.00   0.0  0
+ V91  CONST_14  N09  C04  C03  C02   180.00   0.0  0
+ V91  CONST_15  C06  C01  C02  C03   180.00   0.0  0
+ V91  CONST_16  C06  C01  S05  C04   180.00   0.0  0
+ V91  CONST_17  C01  C06  N07  C13   180.00   0.0  0
+ V91  CONST_18  H10  C03  C02  C01   180.00   0.0  0
+ V91  CONST_19  H9   C02  C03  C04   180.00   0.0  0
+ V91  CONST_20  H16  C19  N20  C16   180.00   0.0  0
+ V91  CONST_21  H14  C18  S17  C16   180.00   0.0  0
+ V91  CONST_22  O08  C06  N07  C13     0.00   0.0  0
+ V91  CONST_23  C11  C10  N09  C04   180.00   0.0  0
+ V91  CONST_24  C03  C04  N09  C10   180.00   0.0  0
+ V91  CONST_25  S05  C04  N09  C10     0.00   0.0  0
+ V91  CONST_26  H19  N09  C04  C03     0.00   0.0  0
+ V91  CONST_27  O12  C10  N09  C04     0.00   0.0  0
+ V91  Var_01    C14  C15  N07  C13    -0.77  30.0  1
+ V91  Var_02    N24  C23  C22  C21    15.24  30.0  1
+ V91  Var_03    C11  N24  C23  C22     7.98  30.0  1
+ V91  Var_04    C23  C22  C21  C11   -30.80  30.0  1
+ V91  Var_05    N07  C06  C01  C02    15.51  30.0  2
+ V91  Var_06    N20  C16  C14  C13    45.41  30.0  2
+ V91  Var_07    S17  C16  C14  C13  -135.49  30.0  2
+ V91  Var_08    N20  C16  C14  C15   -55.01  30.0  2
+ V91  Var_09    S17  C16  C14  C15   124.09  30.0  2
+ V91  Var_10    C23  N24  C11  C21   -28.03  30.0  1
+ V91  Var_11    N24  C11  C21  C22    36.74  30.0  1
+ V91  Var_12    N07  C13  C14  C16  -118.09  30.0  1
+ V91  Var_13    N07  C15  C14  C16   118.50  30.0  1
+ V91  Var_14    C22  C21  C11  C10   -82.59  30.0  1
+ V91  Var_15    C23  N24  C11  C10    90.79  30.0  1
+ V91  Var_16    C06  N07  C13  C14  -158.45  30.0  1
+ V91  Var_17    H3   C15  C14  C13   116.99  30.0  1
+ V91  Var_18    H4   C15  C14  C13  -115.29  30.0  1
+ V91  Var_19    H1   C13  C14  C15   115.35  30.0  1
+ V91  Var_20    H2   C13  C14  C15  -116.72  30.0  1
+ V91  Var_21    H20  N24  C11  C21    90.50  30.0  1
+ V91  Var_22    H11  C11  C21  C22   156.84  30.0  1
+ V91  Var_23    H12  C14  C13  N07   112.61  30.0  1
+ V91  Var_24    N09  C10  C11  C21   -76.50  30.0  2
+ V91  Var_25    O12  C10  C11  C21   101.23  30.0  2
+ V91  Var_26    N24  C11  C10  N09   167.32  30.0  3
+ V91  Var_27    O12  C10  C11  N24   -14.95  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

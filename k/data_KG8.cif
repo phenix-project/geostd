@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KG8  KG8  (5~{R},6~{R},7~{S},8~{S})-5-(hydroxymethyl)-2-(3-phenylpropyl)-5,6,7,8-tetrahydroimidazo[1,2-a]pyridine-6,7,8-triol  ligand  45  23  .  2022-03-22  2022-07-25
+ KG8  KG8  (5~{R},6~{R},7~{S},8~{S})-5-(hydroxymethyl)-2-(3-phenylpropyl)-5,6,7,8-tetrahydroimidazo[1,2-a]pyridine-6,7,8-triol  ligand  45  23  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KG8
@@ -240,31 +241,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KG8  CONST_01  N2   C7   C17  N1     0.00   0.0  0
- KG8  CONST_02  C7   N2   C6   N1     0.00   0.0  0
- KG8  CONST_03  C7   C17  N1   C6     0.00   0.0  0
- KG8  CONST_04  C17  C7   N2   C6     0.00   0.0  0
- KG8  CONST_05  C16  C15  C14  C13    0.00   0.0  0
- KG8  CONST_06  C16  C11  C12  C13    0.00   0.0  0
- KG8  CONST_07  C12  C11  C16  C15    0.00   0.0  0
- KG8  CONST_08  C12  C13  C14  C15    0.00   0.0  0
- KG8  CONST_09  N2   C6   N1   C17    0.00   0.0  0
- KG8  CONST_10  C14  C15  C16  C11    0.00   0.0  0
- KG8  CONST_11  C14  C13  C12  C11    0.00   0.0  0
- KG8  CONST_12  C8   C7   C17  N1   180.00   0.0  0
- KG8  CONST_13  C8   C7   N2   C6   180.00   0.0  0
- KG8  CONST_14  C15  C16  C11  C10  180.00   0.0  0
- KG8  CONST_15  C13  C12  C11  C10  180.00   0.0  0
- KG8  CONST_16  H10  C17  N1   C4     0.00   0.0  0
- KG8  CONST_17  H9   C15  C14  C13  180.00   0.0  0
- KG8  CONST_18  H8   C13  C14  C15  180.00   0.0  0
- KG8  CONST_19  H22  C16  C11  C12  180.00   0.0  0
- KG8  CONST_20  H21  C14  C13  C12  180.00   0.0  0
- KG8  CONST_21  H20  C12  C13  C14  180.00   0.0  0
- KG8  Var_01    C9   C8   C7   C17  -15.80  30.0  2
- KG8  Var_02    C16  C11  C10  C9   -81.83  30.0  2
- KG8  Var_03    C10  C9   C8   C7   -70.43  30.0  1
- KG8  Var_04    C11  C10  C9   C8   174.40  30.0  3
+ KG8  CONST_01  N2   C7   C17  N1      0.00   0.0  0
+ KG8  CONST_02  C7   N2   C6   N1      0.00   0.0  0
+ KG8  CONST_03  C7   C17  N1   C6      0.00   0.0  0
+ KG8  CONST_04  C17  C7   N2   C6      0.00   0.0  0
+ KG8  CONST_05  C16  C15  C14  C13     0.00   0.0  0
+ KG8  CONST_06  C16  C11  C12  C13     0.00   0.0  0
+ KG8  CONST_07  C12  C11  C16  C15     0.00   0.0  0
+ KG8  CONST_08  C12  C13  C14  C15     0.00   0.0  0
+ KG8  CONST_09  N2   C6   N1   C17     0.00   0.0  0
+ KG8  CONST_10  C14  C15  C16  C11     0.00   0.0  0
+ KG8  CONST_11  C14  C13  C12  C11     0.00   0.0  0
+ KG8  CONST_12  C8   C7   C17  N1    180.00   0.0  0
+ KG8  CONST_13  C8   C7   N2   C6    180.00   0.0  0
+ KG8  CONST_14  C15  C16  C11  C10   180.00   0.0  0
+ KG8  CONST_15  C13  C12  C11  C10   180.00   0.0  0
+ KG8  CONST_16  H10  C17  N1   C4      0.00   0.0  0
+ KG8  CONST_17  H9   C15  C14  C13   180.00   0.0  0
+ KG8  CONST_18  H8   C13  C14  C15   180.00   0.0  0
+ KG8  CONST_19  H22  C16  C11  C12   180.00   0.0  0
+ KG8  CONST_20  H21  C14  C13  C12   180.00   0.0  0
+ KG8  CONST_21  H20  C12  C13  C14   180.00   0.0  0
+ KG8  Var_01    C9   C8   C7   C17   -15.80  30.0  2
+ KG8  Var_02    C16  C11  C10  C9    -81.83  30.0  2
+ KG8  Var_03    C10  C9   C8   C7    -70.43  30.0  1
+ KG8  Var_04    C11  C10  C9   C8    174.40  30.0  3
+ KG8  Var_05    C1   C3   C4   N1    -44.08  30.0  1
+ KG8  Var_06    C1   C2   C6   N1     23.14  30.0  1
+ KG8  Var_07    C2   C1   C3   C4     64.65  30.0  1
+ KG8  Var_08    C3   C4   N1   C6     15.19  30.0  1
+ KG8  Var_09    C3   C1   C2   C6    -50.86  30.0  1
+ KG8  Var_10    C3   C4   N1   C17  -170.37  30.0  1
+ KG8  Var_11    N2   C6   C2   C1   -158.15  30.0  1
+ KG8  Var_12    O3   C3   C4   N1   -165.54  30.0  1
+ KG8  Var_13    O2   C2   C6   N1    143.69  30.0  1
+ KG8  Var_14    O1   C1   C3   C4   -174.15  30.0  1
+ KG8  Var_15    C1   C3   C4   C5   -167.54  30.0  1
+ KG8  Var_16    C17  N1   C4   C5    -47.99  30.0  1
+ KG8  Var_17    C6   N1   C4   C5    137.58  30.0  1
+ KG8  Var_18    O1   C1   C2   C6   -169.07  30.0  1
+ KG8  Var_19    O3   C3   C1   C2   -176.78  30.0  1
+ KG8  Var_20    C3   C1   C2   O2   -172.93  30.0  1
+ KG8  Var_21    N2   C6   C2   O2    -37.60  30.0  1
+ KG8  Var_22    H15  C3   C4   N1     75.00  30.0  1
+ KG8  Var_23    H13  C2   C6   N1    -94.25  30.0  1
+ KG8  Var_24    H12  C1   C3   C4    -54.19  30.0  1
+ KG8  Var_25    H1   C4   N1   C6   -102.24  30.0  1
+ KG8  Var_26    O4   C5   C4   N1     73.42  30.0  3
+ KG8  Var_27    O3   C3   C4   C5     71.00  30.0  1
+ KG8  Var_28    O3   C3   C1   O1    -55.58  30.0  1
+ KG8  Var_29    O2   C2   C1   O1     68.86  30.0  1
+ KG8  Var_30    O4   C5   C4   C3   -164.54  30.0  3
+ KG8  Var_31    H2   C5   C4   N1    -49.43  30.0  3
+ KG8  Var_32    H3   C5   C4   N1   -165.56  30.0  3
+ KG8  Var_33    H16  O3   C3   C4   -179.12  30.0  3
+ KG8  Var_34    H14  O2   C2   C6     51.73  30.0  3
+ KG8  Var_35    H11  O1   C1   C2    -75.00  30.0  3
+ KG8  Var_36    H17  O4   C5   C4   -170.94  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

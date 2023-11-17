@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- K1N  K1N  '(3~{S},7~{R},10~{R},13~{S})-4-[(3~{S},6~{R},8~{a}~{S})-1'-[(2~{S})-2-acetamido-3-(2-chlorophenyl)propanoyl]-5-oxidanylidene-spiro[1,2,3,8~{a}-tetrahydroindolizine-6,2'-pyrrolidine]-3-yl]carbonyl-2-oxidanylidene-1,4-diazatricyclo[8.3.0.0^{3,7}]tridec-8-ene-13-carboxylic acid'  ligand  87  48  .  2022-08-10  2022-08-10
+ K1N  K1N  '(3~{S},7~{R},10~{R},13~{S})-4-[(3~{S},6~{R},8~{a}~{S})-1'-[(2~{S})-2-acetamido-3-(2-chlorophenyl)propanoyl]-5-oxidanylidene-spiro[1,2,3,8~{a}-tetrahydroindolizine-6,2'-pyrrolidine]-3-yl]carbonyl-2-oxidanylidene-1,4-diazatricyclo[8.3.0.0^{3,7}]tridec-8-ene-13-carboxylic acid'  ligand  87  48  .  2022-08-10  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_K1N
@@ -422,45 +423,144 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- K1N  CONST_01  CZ   CE1  CD1  CG     0.00   0.0  0
- K1N  CONST_02  CZ   CE2  CD2  CG     0.00   0.0  0
- K1N  CONST_03  CE2  CZ   CE1  CD1    0.00   0.0  0
- K1N  CONST_04  CE2  CD2  CG   CD1    0.00   0.0  0
- K1N  CONST_05  CE1  CD1  CG   CD2    0.00   0.0  0
- K1N  CONST_06  CE1  CZ   CE2  CD2    0.00   0.0  0
- K1N  CONST_07  CBC  NAW  CAU  CAT  180.00   0.0  0
- K1N  CONST_08  CAZ  NAW  CAU  CAT    0.00   0.0  0
- K1N  CONST_09  CE1  CD1  CG   CB   180.00   0.0  0
- K1N  CONST_10  CE2  CD2  CG   CB   180.00   0.0  0
- K1N  CONST_11  CL1  CD1  CG   CD2  180.00   0.0  0
- K1N  CONST_12  CL1  CD1  CE1  CZ   180.00   0.0  0
- K1N  CONST_13  CBG  NBF  CBD  CBC  180.00   0.0  0
- K1N  CONST_14  CBU  NBF  CBD  CBC    0.00   0.0  0
- K1N  CONST_15  OAV  CAU  NAW  CAZ  180.00   0.0  0
- K1N  CONST_16  OAV  CAU  NAW  CBC    0.00   0.0  0
- K1N  CONST_17  HE1  CE1  CD1  CG   180.00   0.0  0
- K1N  CONST_18  HE2  CE2  CD2  CG   180.00   0.0  0
- K1N  CONST_19  HZ   CZ   CE1  CD1  180.00   0.0  0
- K1N  CONST_20  HD2  CD2  CG   CD1  180.00   0.0  0
- K1N  CONST_21  CA   C    NAP  CAQ    0.00   0.0  0
- K1N  CONST_22  O    C    NAP  CAQ  180.00   0.0  0
- K1N  CONST_23  CA   C    NAP  CAT  180.00   0.0  0
- K1N  CONST_24  O    C    NAP  CAT    0.00   0.0  0
- K1N  CONST_25  OBE  CBD  NBF  CBG    0.00   0.0  0
- K1N  CONST_26  OBE  CBD  NBF  CBU  180.00   0.0  0
- K1N  CONST_27  CA   N    CAK  CAM  180.00   0.0  0
- K1N  CONST_28  OAL  CAK  N    CA     0.00   0.0  0
- K1N  CONST_29  H    N    CAK  CAM    0.00   0.0  0
- K1N  Var_01    NAP  CAQ  CAR  CAS  -35.74  30.0  1
- K1N  Var_02    CAT  CAS  CAR  CAQ   39.71  30.0  1
- K1N  Var_03    CAT  NAP  CAQ  CAR   18.98  30.0  1
- K1N  Var_04    CAZ  CAY  CAX  CAT    2.67  30.0  1
- K1N  Var_05    CBC  CBB  CBA  CAZ   35.18  30.0  1
- K1N  Var_06    CBT  CBU  NBF  CBG   18.17  30.0  1
- K1N  Var_07    CBP  CBO  CBN  CBK  -38.92  30.0  1
- K1N  Var_08    NBF  CBU  CBT  CBS  -35.54  30.0  1
- K1N  Var_09    CD1  CG   CB   CA   -81.88  30.0  2
- K1N  Var_10    HAM  CAM  CAK  N    115.13  30.0  3
+ K1N  CONST_01  CZ   CE1  CD1  CG      0.00   0.0  0
+ K1N  CONST_02  CZ   CE2  CD2  CG      0.00   0.0  0
+ K1N  CONST_03  CE2  CZ   CE1  CD1     0.00   0.0  0
+ K1N  CONST_04  CE2  CD2  CG   CD1     0.00   0.0  0
+ K1N  CONST_05  CE1  CD1  CG   CD2     0.00   0.0  0
+ K1N  CONST_06  CE1  CZ   CE2  CD2     0.00   0.0  0
+ K1N  CONST_07  CBC  NAW  CAU  CAT   180.00   0.0  0
+ K1N  CONST_08  CAZ  NAW  CAU  CAT     0.00   0.0  0
+ K1N  CONST_09  CE1  CD1  CG   CB    180.00   0.0  0
+ K1N  CONST_10  CE2  CD2  CG   CB    180.00   0.0  0
+ K1N  CONST_11  CL1  CD1  CG   CD2   180.00   0.0  0
+ K1N  CONST_12  CL1  CD1  CE1  CZ    180.00   0.0  0
+ K1N  CONST_13  CBG  NBF  CBD  CBC   180.00   0.0  0
+ K1N  CONST_14  CBU  NBF  CBD  CBC     0.00   0.0  0
+ K1N  CONST_15  OAV  CAU  NAW  CAZ   180.00   0.0  0
+ K1N  CONST_16  OAV  CAU  NAW  CBC     0.00   0.0  0
+ K1N  CONST_17  HE1  CE1  CD1  CG    180.00   0.0  0
+ K1N  CONST_18  HE2  CE2  CD2  CG    180.00   0.0  0
+ K1N  CONST_19  HZ   CZ   CE1  CD1   180.00   0.0  0
+ K1N  CONST_20  HD2  CD2  CG   CD1   180.00   0.0  0
+ K1N  CONST_21  CA   C    NAP  CAQ     0.00   0.0  0
+ K1N  CONST_22  O    C    NAP  CAQ   180.00   0.0  0
+ K1N  CONST_23  CA   C    NAP  CAT   180.00   0.0  0
+ K1N  CONST_24  O    C    NAP  CAT     0.00   0.0  0
+ K1N  CONST_25  OBE  CBD  NBF  CBG     0.00   0.0  0
+ K1N  CONST_26  OBE  CBD  NBF  CBU   180.00   0.0  0
+ K1N  CONST_27  CA   N    CAK  CAM   180.00   0.0  0
+ K1N  CONST_28  OAL  CAK  N    CA      0.00   0.0  0
+ K1N  CONST_29  H    N    CAK  CAM     0.00   0.0  0
+ K1N  Var_01    NAP  CAQ  CAR  CAS   -35.74  30.0  1
+ K1N  Var_02    CAT  CAS  CAR  CAQ    39.71  30.0  1
+ K1N  Var_03    CAT  NAP  CAQ  CAR    18.98  30.0  1
+ K1N  Var_04    CAZ  CAY  CAX  CAT     2.67  30.0  1
+ K1N  Var_05    CBC  CBB  CBA  CAZ    35.18  30.0  1
+ K1N  Var_06    CBT  CBU  NBF  CBG    18.17  30.0  1
+ K1N  Var_07    CBP  CBO  CBN  CBK   -38.92  30.0  1
+ K1N  Var_08    NBF  CBU  CBT  CBS   -35.54  30.0  1
+ K1N  Var_09    CD1  CG   CB   CA    -81.88  30.0  2
+ K1N  Var_10    HAM  CAM  CAK  N     115.13  30.0  3
+ K1N  CONST_30  CBK  NBJ  CBH  CBG   180.00   0.0  0
+ K1N  CONST_31  CBP  NBJ  CBH  CBG     0.00   0.0  0
+ K1N  CONST_32  OBI  CBH  NBJ  CBK     0.00   0.0  0
+ K1N  CONST_33  OBI  CBH  NBJ  CBP   180.00   0.0  0
+ K1N  Var_11    NAW  CAU  CAT  CAS   -94.89  30.0  3
+ K1N  Var_12    CAQ  NAP  CAT  CAS     5.60  30.0  1
+ K1N  Var_13    CAY  CAX  CAT  CAS    93.85  30.0  3
+ K1N  Var_14    CBB  CBC  NAW  CAU   167.76  30.0  1
+ K1N  Var_15    CAY  CAZ  NAW  CAU   -20.35  30.0  1
+ K1N  Var_16    CBA  CAZ  NAW  CAU  -145.37  30.0  1
+ K1N  Var_17    CAR  CAS  CAT  CAU  -144.25  30.0  1
+ K1N  Var_18    CAQ  NAP  CAT  CAU   120.94  30.0  1
+ K1N  Var_19    CAY  CAX  CAT  CAU   -28.06  30.0  3
+ K1N  Var_20    CAX  CAT  NAP  CAQ  -113.61  30.0  1
+ K1N  Var_21    NAP  CAT  CAS  CAR   -28.01  30.0  1
+ K1N  Var_22    CAX  CAT  CAS  CAR    91.76  30.0  1
+ K1N  Var_23    NAW  CAU  CAT  CAX    28.45  30.0  3
+ K1N  Var_24    NAW  CAZ  CAY  CAX    21.32  30.0  1
+ K1N  Var_25    CBA  CAZ  CAY  CAX   137.61  30.0  1
+ K1N  Var_26    CBC  NAW  CAZ  CAY   154.76  30.0  1
+ K1N  Var_27    CBB  CBA  CAZ  CAY  -160.82  30.0  1
+ K1N  Var_28    NAP  CAT  CAX  CAY  -152.18  30.0  3
+ K1N  Var_29    CBB  CBC  NAW  CAZ    -7.69  30.0  1
+ K1N  Var_30    NAW  CBC  CBB  CBA   -17.71  30.0  1
+ K1N  Var_31    CBC  NAW  CAZ  CBA    29.74  30.0  1
+ K1N  Var_32    NAW  CAZ  CBA  CBB   -39.03  30.0  1
+ K1N  Var_33    CBQ  CBR  CBS  CBG   -27.21  30.0  1
+ K1N  Var_34    CBU  CBT  CBS  CBG    39.89  30.0  1
+ K1N  Var_35    CBN  CBK  NBJ  CBH   161.77  30.0  1
+ K1N  Var_36    CBO  CBP  NBJ  CBH   174.21  30.0  1
+ K1N  Var_37    CBQ  CBP  NBJ  CBH    52.61  30.0  1
+ K1N  Var_38    CBR  CBS  CBG  CBH    83.75  30.0  1
+ K1N  Var_39    CBT  CBS  CBG  CBH  -150.61  30.0  1
+ K1N  Var_40    CBU  NBF  CBG  CBH   124.63  30.0  1
+ K1N  Var_41    CBO  CBP  NBJ  CBK    -4.52  30.0  1
+ K1N  Var_42    CBQ  CBP  NBJ  CBK  -126.13  30.0  1
+ K1N  Var_43    NBJ  CBP  CBO  CBN    26.92  30.0  1
+ K1N  Var_44    CBQ  CBP  CBO  CBN   153.63  30.0  1
+ K1N  Var_45    CBP  NBJ  CBK  CBN   -19.40  30.0  1
+ K1N  Var_46    NBJ  CBK  CBN  CBO    35.32  30.0  1
+ K1N  Var_47    CBR  CBQ  CBP  CBO  -144.69  30.0  1
+ K1N  Var_48    CBS  CBR  CBQ  CBP    -1.87  30.0  1
+ K1N  Var_49    CBT  CBS  CBR  CBQ  -144.93  30.0  1
+ K1N  Var_50    NBJ  CBP  CBQ  CBR   -27.14  30.0  1
+ K1N  Var_51    NBF  CBG  CBS  CBR  -154.62  30.0  1
+ K1N  Var_52    CBU  CBT  CBS  CBR   162.77  30.0  1
+ K1N  Var_53    NBJ  CBH  CBG  CBS   -74.66  30.0  1
+ K1N  Var_54    CBU  NBF  CBG  CBS     6.84  30.0  1
+ K1N  Var_55    NBF  CBG  CBS  CBT   -28.99  30.0  1
+ K1N  Var_56    NAW  CAU  CAT  NAP   153.72  30.0  3
+ K1N  Var_57    NBJ  CBH  CBG  NBF   170.07  30.0  1
+ K1N  Var_58    OAV  CAU  CAT  CAS    82.45  30.0  3
+ K1N  Var_59    C    NAP  CAT  CAS  -171.91  30.0  1
+ K1N  Var_60    CBD  CBC  NAW  CAU   -73.03  30.0  1
+ K1N  Var_61    C    NAP  CAT  CAU   -56.57  30.0  1
+ K1N  Var_62    CAX  CAT  NAP  C      68.88  30.0  1
+ K1N  Var_63    OAV  CAU  CAT  CAX  -154.21  30.0  3
+ K1N  Var_64    CBD  CBC  NAW  CAZ   111.52  30.0  1
+ K1N  Var_65    CBD  CBC  CBB  CBA  -137.12  30.0  1
+ K1N  Var_66    NBF  CBD  CBC  CBB   -77.64  30.0  1
+ K1N  Var_67    CBH  CBG  NBF  CBD   -62.86  30.0  1
+ K1N  Var_68    CBS  CBG  NBF  CBD   179.35  30.0  1
+ K1N  Var_69    CBL  CBK  NBJ  CBH   -77.62  30.0  1
+ K1N  Var_70    CBO  CBN  CBK  CBL   -86.44  30.0  1
+ K1N  Var_71    CBP  NBJ  CBK  CBL   101.20  30.0  1
+ K1N  Var_72    OBI  CBH  CBG  CBS   101.74  30.0  1
+ K1N  Var_73    OAV  CAU  CAT  NAP   -28.94  30.0  3
+ K1N  Var_74    NBF  CBD  CBC  NAW   167.30  30.0  1
+ K1N  Var_75    OBI  CBH  CBG  NBF   -13.52  30.0  1
+ K1N  Var_76    HAX  CAX  CAT  CAS   -82.52  30.0  3
+ K1N  Var_77    HBC  CBC  NAW  CAU    49.71  30.0  1
+ K1N  Var_78    HAZ  CAZ  NAW  CAU   100.34  30.0  1
+ K1N  Var_79    HAS  CAS  CAT  CAU    92.50  30.0  1
+ K1N  Var_80    HZP  CAS  CAT  CAU   -27.44  30.0  1
+ K1N  Var_81    HZQ  CBA  CAZ  CAY    77.93  30.0  1
+ K1N  Var_82    HBA  CBA  CAZ  CAY   -42.75  30.0  1
+ K1N  Var_83    HBR  CBR  CBS  CBG   152.85  30.0  1
+ K1N  Var_84    HBT  CBT  CBS  CBG   161.05  30.0  1
+ K1N  Var_85    HZU  CBT  CBS  CBG   -77.46  30.0  1
+ K1N  Var_86    HBK  CBK  NBJ  CBH    43.92  30.0  1
+ K1N  Var_87    HBP  CBP  NBJ  CBH   -71.09  30.0  1
+ K1N  Var_88    HBS  CBS  CBG  CBH   -37.13  30.0  1
+ K1N  Var_89    HBQ  CBQ  CBP  CBO    36.18  30.0  1
+ K1N  Var_90    HBG  CBG  CBS  CBR   -36.94  30.0  1
+ K1N  Var_91    OBE  CBD  CBC  CBB    98.79  30.0  1
+ K1N  Var_92    OBM  CBL  CBK  CBN   106.93  30.0  2
+ K1N  Var_93    O1   CBL  CBK  CBN   -72.11  30.0  2
+ K1N  Var_94    OBE  CBD  CBC  NAW   -16.28  30.0  1
+ K1N  Var_95    OBM  CBL  CBK  NBJ    -8.20  30.0  2
+ K1N  Var_96    O1   CBL  CBK  NBJ   172.76  30.0  2
+ K1N  Var_97    NAP  C    CA   N     154.91  30.0  2
+ K1N  Var_98    CG   CB   CA   N     -58.31  30.0  3
+ K1N  Var_99    CG   CB   CA   C    -178.18  30.0  3
+ K1N  Var_100   NAP  C    CA   CB    -84.04  30.0  2
+ K1N  Var_101   HA   CA   CB   CG     60.76  30.0  1
+ K1N  Var_102   C    CA   N    CAK  -141.82  30.0  1
+ K1N  Var_103   CB   CA   N    CAK    99.34  30.0  1
+ K1N  Var_104   O    C    CA   N     -28.85  30.0  2
+ K1N  Var_105   CB   CA   C    O      92.20  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

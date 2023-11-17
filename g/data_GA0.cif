@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GA0  GA0  glycyl-L-alanyl-N-naphthalen-2-yl-L-prolinamide  ligand  51  27  .  2021-08-10  2021-08-10  
+ GA0  GA0  glycyl-L-alanyl-N-naphthalen-2-yl-L-prolinamide  ligand  51  27  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GA0
@@ -262,48 +263,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GA0  CONST_01  C7    C6   C5   C4     0.00   0.0  0
- GA0  CONST_02  C11   C6   C5   C4   180.00   0.0  0
- GA0  CONST_03  C7    C12  C13  C4     0.00   0.0  0
- GA0  CONST_04  C12   C13  C4   C5     0.00   0.0  0
- GA0  CONST_05  C8    C7   C6   C5   180.00   0.0  0
- GA0  CONST_06  C12   C7   C6   C5     0.00   0.0  0
- GA0  CONST_07  C10   C11  C6   C5   180.00   0.0  0
- GA0  CONST_08  C13   C4   C5   C6     0.00   0.0  0
- GA0  CONST_09  C9    C8   C7   C6     0.00   0.0  0
- GA0  CONST_10  C13   C12  C7   C6     0.00   0.0  0
- GA0  CONST_11  C9    C10  C11  C6     0.00   0.0  0
- GA0  CONST_12  C10   C11  C6   C7     0.00   0.0  0
- GA0  CONST_13  C10   C9   C8   C7     0.00   0.0  0
- GA0  CONST_14  C11   C6   C7   C8     0.00   0.0  0
- GA0  CONST_15  C13   C12  C7   C8   180.00   0.0  0
- GA0  CONST_16  C11   C10  C9   C8     0.00   0.0  0
- GA0  CONST_17  C12   C7   C8   C9   180.00   0.0  0
- GA0  CONST_18  C12   C7   C6   C11  180.00   0.0  0
- GA0  CONST_19  C6    C5   C4   NN   180.00   0.0  0
- GA0  CONST_20  C12   C13  C4   NN   180.00   0.0  0
- GA0  CONST_21  H12   C12  C13  C4   180.00   0.0  0
- GA0  CONST_22  H13   C13  C4   C5   180.00   0.0  0
- GA0  CONST_23  H11   C11  C6   C5     0.00   0.0  0
- GA0  CONST_24  H8    C8   C7   C6   180.00   0.0  0
- GA0  CONST_25  H10   C10  C11  C6   180.00   0.0  0
- GA0  CONST_26  H5    C5   C6   C7   180.00   0.0  0
- GA0  CONST_27  H9    C9   C8   C7   180.00   0.0  0
- GA0  CONST_28  CD3   N3   C2   CA2    0.00   0.0  0
- GA0  CONST_29  CA3   N3   C2   CA2  180.00   0.0  0
- GA0  CONST_30  CD3   N3   C2   O2   180.00   0.0  0
- GA0  CONST_31  CA3   N3   C2   O2     0.00   0.0  0
- GA0  CONST_32  C4    NN   C3   CA3  180.00   0.0  0
- GA0  CONST_35  HNN   NN   C4   C5     0.00   0.0  0
- GA0  CONST_36  C4    NN   C3   O3     0.00   0.0  0
- GA0  CONST_37  CA2   N2   C1   CA1  180.00   0.0  0
- GA0  CONST_38  CA2   N2   C1   O1     0.00   0.0  0
- GA0  CONST_39  HN2   N2   C1   CA1    0.00   0.0  0
- GA0  Var_01    CB3   CG3  CD3  N3    30.65  30.0  1
- GA0  Var_02    CA3   CB3  CG3  CD3  -36.42  30.0  1
- GA0  Var_03    CG3   CD3  N3   CA3  -13.69  30.0  1
- GA0  Var_04    O1    C1   CA1  N1    -1.75  30.0  3
- GA0  Var_05    HN11  N1   CA1  C1   -58.81  30.0  3
+ GA0  CONST_01  C7    C6   C5   C4      0.00   0.0  0
+ GA0  CONST_02  C11   C6   C5   C4    180.00   0.0  0
+ GA0  CONST_03  C7    C12  C13  C4      0.00   0.0  0
+ GA0  CONST_04  C12   C13  C4   C5      0.00   0.0  0
+ GA0  CONST_05  C8    C7   C6   C5    180.00   0.0  0
+ GA0  CONST_06  C12   C7   C6   C5      0.00   0.0  0
+ GA0  CONST_07  C10   C11  C6   C5    180.00   0.0  0
+ GA0  CONST_08  C13   C4   C5   C6      0.00   0.0  0
+ GA0  CONST_09  C9    C8   C7   C6      0.00   0.0  0
+ GA0  CONST_10  C13   C12  C7   C6      0.00   0.0  0
+ GA0  CONST_11  C9    C10  C11  C6      0.00   0.0  0
+ GA0  CONST_12  C10   C11  C6   C7      0.00   0.0  0
+ GA0  CONST_13  C10   C9   C8   C7      0.00   0.0  0
+ GA0  CONST_14  C11   C6   C7   C8      0.00   0.0  0
+ GA0  CONST_15  C13   C12  C7   C8    180.00   0.0  0
+ GA0  CONST_16  C11   C10  C9   C8      0.00   0.0  0
+ GA0  CONST_17  C12   C7   C8   C9    180.00   0.0  0
+ GA0  CONST_18  C12   C7   C6   C11   180.00   0.0  0
+ GA0  CONST_19  C6    C5   C4   NN    180.00   0.0  0
+ GA0  CONST_20  C12   C13  C4   NN    180.00   0.0  0
+ GA0  CONST_21  H12   C12  C13  C4    180.00   0.0  0
+ GA0  CONST_22  H13   C13  C4   C5    180.00   0.0  0
+ GA0  CONST_23  H11   C11  C6   C5      0.00   0.0  0
+ GA0  CONST_24  H8    C8   C7   C6    180.00   0.0  0
+ GA0  CONST_25  H10   C10  C11  C6    180.00   0.0  0
+ GA0  CONST_26  H5    C5   C6   C7    180.00   0.0  0
+ GA0  CONST_27  H9    C9   C8   C7    180.00   0.0  0
+ GA0  CONST_28  CD3   N3   C2   CA2     0.00   0.0  0
+ GA0  CONST_29  CA3   N3   C2   CA2   180.00   0.0  0
+ GA0  CONST_30  CD3   N3   C2   O2    180.00   0.0  0
+ GA0  CONST_31  CA3   N3   C2   O2      0.00   0.0  0
+ GA0  CONST_32  C4    NN   C3   CA3   180.00   0.0  0
+ GA0  CONST_33  HNN   NN   C4   C5      0.00   0.0  0
+ GA0  CONST_34  C4    NN   C3   O3      0.00   0.0  0
+ GA0  CONST_35  CA2   N2   C1   CA1   180.00   0.0  0
+ GA0  CONST_36  CA2   N2   C1   O1      0.00   0.0  0
+ GA0  CONST_37  HN2   N2   C1   CA1     0.00   0.0  0
+ GA0  Var_01    CB3   CG3  CD3  N3     30.65  30.0  1
+ GA0  Var_02    CA3   CB3  CG3  CD3   -36.42  30.0  1
+ GA0  Var_03    CG3   CD3  N3   CA3   -13.69  30.0  1
+ GA0  Var_04    O1    C1   CA1  N1     -1.75  30.0  3
+ GA0  Var_05    HN11  N1   CA1  C1    -58.81  30.0  3
+ GA0  Var_06    CG3   CB3  CA3  N3     27.94  30.0  1
+ GA0  Var_07    CB3   CA3  N3   CD3    -8.96  30.0  1
+ GA0  Var_08    CB3   CA3  N3   C2    175.55  30.0  1
+ GA0  Var_09    C3    CA3  N3   CD3   109.87  30.0  1
+ GA0  Var_10    C3    CA3  CB3  CG3   -90.32  30.0  1
+ GA0  Var_11    HB31  CB3  CA3  N3    -89.78  30.0  1
+ GA0  Var_12    HB32  CB3  CA3  N3    151.09  30.0  1
+ GA0  Var_13    HA3   CA3  N3   CD3  -127.84  30.0  1
+ GA0  Var_14    C3    CA3  N3   C2    -65.61  30.0  1
+ GA0  Var_15    O3    C3   CA3  N3    -32.41  30.0  3
+ GA0  Var_16    NN    C3   CA3  N3    150.34  30.0  3
+ GA0  Var_17    O3    C3   CA3  CB3    81.66  30.0  3
+ GA0  Var_18    NN    C3   CA3  CB3   -95.59  30.0  3
+ GA0  Var_19    N3    C2   CA2  N2    148.94  30.0  3
+ GA0  Var_20    N3    C2   CA2  CB2   -90.71  30.0  3
+ GA0  Var_21    HA2   CA2  C2   N3     29.12  30.0  2
+ GA0  Var_22    CB2   CA2  N2   C1    177.57  30.0  3
+ GA0  Var_23    C2    CA2  N2   C1    -62.32  30.0  3
+ GA0  Var_24    O2    C2   CA2  N2    -33.61  30.0  3
+ GA0  Var_25    O2    C2   CA2  CB2    86.74  30.0  3
+ GA0  Var_26    HB21  CB2  CA2  N2   -178.62  30.0  3
+ GA0  Var_27    HB22  CB2  CA2  N2    -59.06  30.0  3
+ GA0  Var_28    HB23  CB2  CA2  N2     61.22  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

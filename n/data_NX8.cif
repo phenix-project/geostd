@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NX8  NX8  (2~{S},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)-~{N}-(piperidin-4-ylmethyl)oxolane-2-carboxamide  ligand  50  27  .  2021-08-15  2021-08-15  
+ NX8  NX8  (2~{S},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)-~{N}-(piperidin-4-ylmethyl)oxolane-2-carboxamide  ligand  50  27  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NX8
@@ -264,41 +265,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NX8  CONST_01  C8   N7   C5   C4     0.00   0.0  0
- NX8  CONST_02  N1   C6   C5   C4     0.00   0.0  0
- NX8  CONST_03  N7   C8   N9   C4     0.00   0.0  0
- NX8  CONST_04  N1   C2   N3   C4     0.00   0.0  0
- NX8  CONST_05  N9   C8   N7   C5     0.00   0.0  0
- NX8  CONST_06  C2   N1   C6   C5     0.00   0.0  0
- NX8  CONST_07  C8   N9   C4   C5     0.00   0.0  0
- NX8  CONST_08  C2   N3   C4   C5     0.00   0.0  0
- NX8  CONST_09  C8   N7   C5   C6   180.00   0.0  0
- NX8  CONST_10  N9   C4   C5   C6   180.00   0.0  0
- NX8  CONST_11  N3   C4   C5   C6     0.00   0.0  0
- NX8  CONST_12  N3   C2   N1   C6     0.00   0.0  0
- NX8  CONST_13  N3   C4   N9   C8   180.00   0.0  0
- NX8  CONST_14  N7   C5   C6   N1   180.00   0.0  0
- NX8  CONST_15  N7   C5   C4   N3   180.00   0.0  0
- NX8  CONST_16  N9   C4   N3   C2   180.00   0.0  0
- NX8  CONST_17  N9   C4   C5   N7     0.00   0.0  0
- NX8  CONST_18  CAZ  N9   C4   C5   180.00   0.0  0
- NX8  CONST_19  CAZ  N9   C4   N3     0.00   0.0  0
- NX8  CONST_20  N7   C8   N9   CAZ  180.00   0.0  0
- NX8  CONST_21  N6   C6   C5   C4   180.00   0.0  0
- NX8  CONST_22  N6   C6   N1   C2   180.00   0.0  0
- NX8  CONST_23  N7   C5   C6   N6     0.00   0.0  0
- NX8  CONST_24  H1   C8   N9   C4   180.00   0.0  0
- NX8  CONST_25  H2   C2   N3   C4   180.00   0.0  0
- NX8  CONST_26  H18  N6   C6   C5     0.00   0.0  0
- NX8  CONST_27  H19  N6   C6   C5   180.00   0.0  0
- NX8  CONST_28  CAY  CAR  NAP  CAK  180.00   0.0  0
- NX8  CONST_29  H22  NAP  CAR  CAY    0.00   0.0  0
- NX8  CONST_30  OAB  CAR  NAP  CAK    0.00   0.0  0
- NX8  Var_01    CAJ  CAH  NAO  CAG  -61.42  30.0  1
- NX8  Var_02    CAI  CAG  NAO  CAH   61.17  30.0  1
- NX8  Var_03    NAO  CAG  CAI  CAV  -56.98  30.0  1
- NX8  Var_04    NAO  CAH  CAJ  CAV   57.31  30.0  1
- NX8  Var_05    CAV  CAK  NAP  CAR  107.68  30.0  1
+ NX8  CONST_01  C8   N7   C5   C4      0.00   0.0  0
+ NX8  CONST_02  N1   C6   C5   C4      0.00   0.0  0
+ NX8  CONST_03  N7   C8   N9   C4      0.00   0.0  0
+ NX8  CONST_04  N1   C2   N3   C4      0.00   0.0  0
+ NX8  CONST_05  N9   C8   N7   C5      0.00   0.0  0
+ NX8  CONST_06  C2   N1   C6   C5      0.00   0.0  0
+ NX8  CONST_07  C8   N9   C4   C5      0.00   0.0  0
+ NX8  CONST_08  C2   N3   C4   C5      0.00   0.0  0
+ NX8  CONST_09  C8   N7   C5   C6    180.00   0.0  0
+ NX8  CONST_10  N9   C4   C5   C6    180.00   0.0  0
+ NX8  CONST_11  N3   C4   C5   C6      0.00   0.0  0
+ NX8  CONST_12  N3   C2   N1   C6      0.00   0.0  0
+ NX8  CONST_13  N3   C4   N9   C8    180.00   0.0  0
+ NX8  CONST_14  N7   C5   C6   N1    180.00   0.0  0
+ NX8  CONST_15  N7   C5   C4   N3    180.00   0.0  0
+ NX8  CONST_16  N9   C4   N3   C2    180.00   0.0  0
+ NX8  CONST_17  N9   C4   C5   N7      0.00   0.0  0
+ NX8  CONST_18  CAZ  N9   C4   C5    180.00   0.0  0
+ NX8  CONST_19  CAZ  N9   C4   N3      0.00   0.0  0
+ NX8  CONST_20  N7   C8   N9   CAZ   180.00   0.0  0
+ NX8  CONST_21  N6   C6   C5   C4    180.00   0.0  0
+ NX8  CONST_22  N6   C6   N1   C2    180.00   0.0  0
+ NX8  CONST_23  N7   C5   C6   N6      0.00   0.0  0
+ NX8  CONST_24  H1   C8   N9   C4    180.00   0.0  0
+ NX8  CONST_25  H2   C2   N3   C4    180.00   0.0  0
+ NX8  CONST_26  H18  N6   C6   C5      0.00   0.0  0
+ NX8  CONST_27  H19  N6   C6   C5    180.00   0.0  0
+ NX8  CONST_28  CAY  CAR  NAP  CAK   180.00   0.0  0
+ NX8  CONST_29  H22  NAP  CAR  CAY     0.00   0.0  0
+ NX8  CONST_30  OAB  CAR  NAP  CAK     0.00   0.0  0
+ NX8  Var_01    CAJ  CAH  NAO  CAG   -61.42  30.0  1
+ NX8  Var_02    CAI  CAG  NAO  CAH    61.17  30.0  1
+ NX8  Var_03    NAO  CAG  CAI  CAV   -56.98  30.0  1
+ NX8  Var_04    NAO  CAH  CAJ  CAV    57.31  30.0  1
+ NX8  Var_05    CAV  CAK  NAP  CAR   107.68  30.0  1
+ NX8  Var_06    CAX  CAZ  N9   C4     73.41  30.0  2
+ NX8  Var_07    OAQ  CAZ  N9   C4   -168.87  30.0  2
+ NX8  Var_08    CAX  CAZ  N9   C8   -109.05  30.0  2
+ NX8  Var_09    OAQ  CAZ  N9   C8      8.67  30.0  2
+ NX8  Var_10    CAJ  CAV  CAI  CAG    53.48  30.0  1
+ NX8  Var_11    CAI  CAV  CAJ  CAH   -53.56  30.0  1
+ NX8  Var_12    N9   CAZ  CAX  CAW    88.03  30.0  1
+ NX8  Var_13    OAQ  CAZ  CAX  CAW   -31.46  30.0  1
+ NX8  Var_14    CAZ  OAQ  CAY  CAW    12.01  30.0  1
+ NX8  Var_15    OAQ  CAY  CAW  CAX   -31.02  30.0  1
+ NX8  Var_16    CAY  OAQ  CAZ  CAX    12.59  30.0  1
+ NX8  Var_17    CAZ  CAX  CAW  CAY    36.76  30.0  1
+ NX8  Var_18    N9   CAZ  OAQ  CAY  -108.23  30.0  1
+ NX8  Var_19    CAK  CAV  CAI  CAG   178.14  30.0  1
+ NX8  Var_20    CAK  CAV  CAJ  CAH  -176.75  30.0  1
+ NX8  Var_21    CAX  CAW  CAY  CAR  -151.89  30.0  1
+ NX8  Var_22    CAZ  OAQ  CAY  CAR   134.51  30.0  1
+ NX8  Var_23    OAD  CAX  CAW  CAY   -76.45  30.0  1
+ NX8  Var_24    OAC  CAW  CAX  CAZ   154.99  30.0  1
+ NX8  Var_25    OAD  CAX  CAZ  N9   -155.66  30.0  1
+ NX8  Var_26    OAQ  CAY  CAW  OAC  -151.98  30.0  1
+ NX8  Var_27    OAQ  CAZ  CAX  OAD    84.86  30.0  1
+ NX8  Var_28    H17  CAZ  N9   C4    -49.34  30.0  2
+ NX8  Var_29    H13  CAV  CAI  CAG   -63.92  30.0  1
+ NX8  Var_30    H9   CAJ  CAV  CAI  -174.96  30.0  1
+ NX8  Var_31    H10  CAJ  CAV  CAI    67.24  30.0  1
+ NX8  Var_32    H7   CAI  CAV  CAJ   -67.11  30.0  1
+ NX8  Var_33    H8   CAI  CAV  CAJ   175.20  30.0  1
+ NX8  Var_34    H16  CAY  CAW  CAX    86.94  30.0  1
+ NX8  Var_35    H15  CAX  CAW  CAY   156.86  30.0  1
+ NX8  Var_36    H14  CAW  CAX  CAZ   -79.56  30.0  1
+ NX8  Var_37    NAP  CAK  CAV  CAI   177.10  30.0  3
+ NX8  Var_38    NAP  CAK  CAV  CAJ   -60.07  30.0  3
+ NX8  Var_39    OAC  CAW  CAY  CAR    87.15  30.0  1
+ NX8  Var_40    OAB  CAR  CAY  CAW   110.40  30.0  1
+ NX8  Var_41    NAP  CAR  CAY  CAW   -68.66  30.0  1
+ NX8  Var_42    OAQ  CAY  CAR  OAB    -7.76  30.0  3
+ NX8  Var_43    OAD  CAX  CAW  OAC    41.78  30.0  1
+ NX8  Var_44    NAP  CAR  CAY  OAQ   173.18  30.0  1
+ NX8  Var_45    H11  CAK  CAV  CAI   -61.53  30.0  3
+ NX8  Var_46    H12  CAK  CAV  CAI    55.98  30.0  3
+ NX8  Var_47    H24  OAD  CAX  CAW   -47.50  30.0  3
+ NX8  Var_48    H23  OAC  CAW  CAX    91.17  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

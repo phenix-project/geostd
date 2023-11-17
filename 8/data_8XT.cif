@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 8XT  8XT  ~{N}-ethyl-4-[(3~{S})-3-methylmorpholin-4-yl]-1~{H}-pyrrolo[2,3-b]pyridine-2-carboxamide  ligand  41  21  .  2022-07-24  2022-07-26
+ 8XT  8XT  ~{N}-ethyl-4-[(3~{S})-3-methylmorpholin-4-yl]-1~{H}-pyrrolo[2,3-b]pyridine-2-carboxamide  ligand  41  21  .  2022-07-24  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_8XT
@@ -226,43 +227,53 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 8XT  CONST_01  C4   C5   C6   C7   180.00   0.0  0
- 8XT  CONST_02  N4   C15  C6   C7   180.00   0.0  0
- 8XT  CONST_03  N3   C15  C6   C7     0.00   0.0  0
- 8XT  CONST_04  N3   C14  C13  C7     0.00   0.0  0
- 8XT  CONST_05  C5   C6   C7   C13  180.00   0.0  0
- 8XT  CONST_06  C15  C6   C7   C13    0.00   0.0  0
- 8XT  CONST_07  C15  N3   C14  C13    0.00   0.0  0
- 8XT  CONST_08  N4   C15  N3   C14  180.00   0.0  0
- 8XT  CONST_09  C6   C15  N3   C14    0.00   0.0  0
- 8XT  CONST_10  C6   C7   C13  C14    0.00   0.0  0
- 8XT  CONST_11  C5   C4   N4   C15    0.00   0.0  0
- 8XT  CONST_12  C4   C5   C6   C15    0.00   0.0  0
- 8XT  CONST_13  C6   C15  N4   C4     0.00   0.0  0
- 8XT  CONST_14  N3   C15  N4   C4   180.00   0.0  0
- 8XT  CONST_15  N4   C15  C6   C5     0.00   0.0  0
- 8XT  CONST_16  N3   C15  C6   C5   180.00   0.0  0
- 8XT  CONST_17  C6   C5   C4   N4     0.00   0.0  0
- 8XT  CONST_18  N2   C7   C13  C14  180.00   0.0  0
- 8XT  CONST_19  N2   C7   C6   C15  180.00   0.0  0
- 8XT  CONST_20  N2   C7   C6   C5     0.00   0.0  0
- 8XT  CONST_21  C15  N4   C4   C3   180.00   0.0  0
- 8XT  CONST_22  C6   C5   C4   C3   180.00   0.0  0
- 8XT  CONST_23  H19  C5   C6   C7     0.00   0.0  0
- 8XT  CONST_24  H17  C14  C13  C7   180.00   0.0  0
- 8XT  CONST_25  H20  N4   C4   C5   180.00   0.0  0
- 8XT  CONST_26  H16  C13  C7   C6   180.00   0.0  0
- 8XT  CONST_27  C4   C3   N1   C2   180.00   0.0  0
- 8XT  CONST_28  H18  N1   C3   C4     0.00   0.0  0
- 8XT  CONST_29  O1   C3   N1   C2     0.00   0.0  0
- 8XT  Var_01    C11  C12  N2   C7   163.58  30.0  1
- 8XT  Var_02    C6   C7   N2   C8    49.87  30.0  2
- 8XT  Var_03    C12  C11  O2   C10  -59.21  30.0  1
- 8XT  Var_04    O2   C11  C12  N2    54.66  30.0  1
- 8XT  Var_05    H10  C10  O2   C11  -61.28  30.0  1
- 8XT  Var_06    N4   C4   C3   N1    17.68  30.0  2
- 8XT  Var_07    C3   N1   C2   C1   161.94  30.0  3
- 8XT  Var_08    H1   C1   C2   N1    60.78  30.0  3
+ 8XT  CONST_01  C4   C5   C6   C7    180.00   0.0  0
+ 8XT  CONST_02  N4   C15  C6   C7    180.00   0.0  0
+ 8XT  CONST_03  N3   C15  C6   C7      0.00   0.0  0
+ 8XT  CONST_04  N3   C14  C13  C7      0.00   0.0  0
+ 8XT  CONST_05  C5   C6   C7   C13   180.00   0.0  0
+ 8XT  CONST_06  C15  C6   C7   C13     0.00   0.0  0
+ 8XT  CONST_07  C15  N3   C14  C13     0.00   0.0  0
+ 8XT  CONST_08  N4   C15  N3   C14   180.00   0.0  0
+ 8XT  CONST_09  C6   C15  N3   C14     0.00   0.0  0
+ 8XT  CONST_10  C6   C7   C13  C14     0.00   0.0  0
+ 8XT  CONST_11  C5   C4   N4   C15     0.00   0.0  0
+ 8XT  CONST_12  C4   C5   C6   C15     0.00   0.0  0
+ 8XT  CONST_13  C6   C15  N4   C4      0.00   0.0  0
+ 8XT  CONST_14  N3   C15  N4   C4    180.00   0.0  0
+ 8XT  CONST_15  N4   C15  C6   C5      0.00   0.0  0
+ 8XT  CONST_16  N3   C15  C6   C5    180.00   0.0  0
+ 8XT  CONST_17  C6   C5   C4   N4      0.00   0.0  0
+ 8XT  CONST_18  N2   C7   C13  C14   180.00   0.0  0
+ 8XT  CONST_19  N2   C7   C6   C15   180.00   0.0  0
+ 8XT  CONST_20  N2   C7   C6   C5      0.00   0.0  0
+ 8XT  CONST_21  C15  N4   C4   C3    180.00   0.0  0
+ 8XT  CONST_22  C6   C5   C4   C3    180.00   0.0  0
+ 8XT  CONST_23  H19  C5   C6   C7      0.00   0.0  0
+ 8XT  CONST_24  H17  C14  C13  C7    180.00   0.0  0
+ 8XT  CONST_25  H20  N4   C4   C5    180.00   0.0  0
+ 8XT  CONST_26  H16  C13  C7   C6    180.00   0.0  0
+ 8XT  CONST_27  C4   C3   N1   C2    180.00   0.0  0
+ 8XT  CONST_28  H18  N1   C3   C4      0.00   0.0  0
+ 8XT  CONST_29  O1   C3   N1   C2      0.00   0.0  0
+ 8XT  Var_01    C11  C12  N2   C7    163.58  30.0  1
+ 8XT  Var_02    C6   C7   N2   C8     49.87  30.0  2
+ 8XT  Var_03    C12  C11  O2   C10   -59.21  30.0  1
+ 8XT  Var_04    O2   C11  C12  N2     54.66  30.0  1
+ 8XT  Var_05    H10  C10  O2   C11   -61.28  30.0  1
+ 8XT  Var_06    N4   C4   C3   N1     17.68  30.0  2
+ 8XT  Var_07    C3   N1   C2   C1    161.94  30.0  3
+ 8XT  Var_08    H1   C1   C2   N1     60.78  30.0  3
+ 8XT  Var_09    C10  C8   N2   C7   -162.95  30.0  1
+ 8XT  Var_10    C12  N2   C8   C10    52.87  30.0  1
+ 8XT  Var_11    O2   C10  C8   N2    -56.65  30.0  1
+ 8XT  Var_12    C9   C8   N2   C7     71.89  30.0  1
+ 8XT  Var_13    O2   C10  C8   C9     68.26  30.0  1
+ 8XT  Var_14    C12  N2   C8   C9    -72.28  30.0  1
+ 8XT  Var_15    H6   C8   N2   C7    -47.70  30.0  1
+ 8XT  Var_16    H7   C9   C8   C10    60.29  30.0  3
+ 8XT  Var_17    H8   C9   C8   C10   179.25  30.0  3
+ 8XT  Var_18    H9   C9   C8   C10   -59.78  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

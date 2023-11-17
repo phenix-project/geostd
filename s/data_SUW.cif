@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SUW  SUW  'methyl 5-(acetylamino)-3,5,9-trideoxy-9-[(naphthalen-2-ylcarbonyl)amino]-D-glycero-alpha-D-galacto-non-2-ulopyranosidonic acid'  ligand  61  34  .  2021-08-23  2021-08-23  
+ SUW  SUW  'methyl 5-(acetylamino)-3,5,9-trideoxy-9-[(naphthalen-2-ylcarbonyl)amino]-D-glycero-alpha-D-galacto-non-2-ulopyranosidonic acid'  ligand  61  34  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_SUW
@@ -299,43 +300,95 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SUW  CONST_01  C28   C27  C26  C25    0.00   0.0  0
- SUW  CONST_02  C28   C2B  C2A  C25    0.00   0.0  0
- SUW  CONST_03  C21   C2B  C2A  C25  180.00   0.0  0
- SUW  CONST_04  C23   C24  C2A  C25  180.00   0.0  0
- SUW  CONST_05  C2B   C2A  C25  C26    0.00   0.0  0
- SUW  CONST_06  C24   C2A  C25  C26  180.00   0.0  0
- SUW  CONST_07  C2B   C28  C27  C26    0.00   0.0  0
- SUW  CONST_08  C2A   C25  C26  C27    0.00   0.0  0
- SUW  CONST_09  C21   C2B  C28  C27  180.00   0.0  0
- SUW  CONST_10  C2A   C2B  C28  C27    0.00   0.0  0
- SUW  CONST_11  C22   C21  C2B  C28  180.00   0.0  0
- SUW  CONST_12  C24   C2A  C2B  C28  180.00   0.0  0
- SUW  CONST_13  C23   C22  C21  C2B    0.00   0.0  0
- SUW  CONST_14  C23   C24  C2A  C2B    0.00   0.0  0
- SUW  CONST_15  C24   C2A  C2B  C21    0.00   0.0  0
- SUW  CONST_16  C24   C23  C22  C21    0.00   0.0  0
- SUW  CONST_17  C2A   C2B  C21  C22    0.00   0.0  0
- SUW  CONST_18  C2A   C24  C23  C22    0.00   0.0  0
- SUW  CONST_19  C2A   C25  C26  C12  180.00   0.0  0
- SUW  CONST_20  C28   C27  C26  C12  180.00   0.0  0
- SUW  CONST_21  H27   C27  C26  C25  180.00   0.0  0
- SUW  CONST_22  H24   C24  C2A  C25    0.00   0.0  0
- SUW  CONST_23  H28   C28  C27  C26  180.00   0.0  0
- SUW  CONST_24  H25   C25  C26  C27  180.00   0.0  0
- SUW  CONST_25  H21   C21  C2B  C28    0.00   0.0  0
- SUW  CONST_26  H22   C22  C21  C2B  180.00   0.0  0
- SUW  CONST_27  H23   C23  C22  C21  180.00   0.0  0
- SUW  CONST_28  O10   C10  NX5  CX5    0.00   0.0  0
- SUW  CONST_29  C11   C10  NX5  CX5  180.00   0.0  0
- SUW  CONST_30  C26   C12  NX6  CX9  180.00   0.0  0
- SUW  CONST_31  HE    NX6  C12  C26    0.00   0.0  0
- SUW  CONST_32  O12   C12  NX6  CX9    0.00   0.0  0
- SUW  CONST_33  HB    NX5  C10  O10  180.00   0.0  0
- SUW  Var_01    C25   C26  C12  NX6  155.98  30.0  2
- SUW  Var_02    HO21  CO2  OX2  CX2  -54.46  30.0  3
- SUW  Var_03    C12   NX6  CX9  CX8  -94.16  30.0  3
- SUW  Var_04    H111  C11  C10  NX5  119.89  30.0  3
+ SUW  CONST_01  C28   C27  C26  C25     0.00   0.0  0
+ SUW  CONST_02  C28   C2B  C2A  C25     0.00   0.0  0
+ SUW  CONST_03  C21   C2B  C2A  C25   180.00   0.0  0
+ SUW  CONST_04  C23   C24  C2A  C25   180.00   0.0  0
+ SUW  CONST_05  C2B   C2A  C25  C26     0.00   0.0  0
+ SUW  CONST_06  C24   C2A  C25  C26   180.00   0.0  0
+ SUW  CONST_07  C2B   C28  C27  C26     0.00   0.0  0
+ SUW  CONST_08  C2A   C25  C26  C27     0.00   0.0  0
+ SUW  CONST_09  C21   C2B  C28  C27   180.00   0.0  0
+ SUW  CONST_10  C2A   C2B  C28  C27     0.00   0.0  0
+ SUW  CONST_11  C22   C21  C2B  C28   180.00   0.0  0
+ SUW  CONST_12  C24   C2A  C2B  C28   180.00   0.0  0
+ SUW  CONST_13  C23   C22  C21  C2B     0.00   0.0  0
+ SUW  CONST_14  C23   C24  C2A  C2B     0.00   0.0  0
+ SUW  CONST_15  C24   C2A  C2B  C21     0.00   0.0  0
+ SUW  CONST_16  C24   C23  C22  C21     0.00   0.0  0
+ SUW  CONST_17  C2A   C2B  C21  C22     0.00   0.0  0
+ SUW  CONST_18  C2A   C24  C23  C22     0.00   0.0  0
+ SUW  CONST_19  C2A   C25  C26  C12   180.00   0.0  0
+ SUW  CONST_20  C28   C27  C26  C12   180.00   0.0  0
+ SUW  CONST_21  H27   C27  C26  C25   180.00   0.0  0
+ SUW  CONST_22  H24   C24  C2A  C25     0.00   0.0  0
+ SUW  CONST_23  H28   C28  C27  C26   180.00   0.0  0
+ SUW  CONST_24  H25   C25  C26  C27   180.00   0.0  0
+ SUW  CONST_25  H21   C21  C2B  C28     0.00   0.0  0
+ SUW  CONST_26  H22   C22  C21  C2B   180.00   0.0  0
+ SUW  CONST_27  H23   C23  C22  C21   180.00   0.0  0
+ SUW  CONST_28  O10   C10  NX5  CX5     0.00   0.0  0
+ SUW  CONST_29  C11   C10  NX5  CX5   180.00   0.0  0
+ SUW  CONST_30  C26   C12  NX6  CX9   180.00   0.0  0
+ SUW  CONST_31  HE    NX6  C12  C26     0.00   0.0  0
+ SUW  CONST_32  O12   C12  NX6  CX9     0.00   0.0  0
+ SUW  CONST_33  HB    NX5  C10  O10   180.00   0.0  0
+ SUW  Var_01    C25   C26  C12  NX6   155.98  30.0  2
+ SUW  Var_02    HO21  CO2  OX2  CX2   -54.46  30.0  3
+ SUW  Var_03    C12   NX6  CX9  CX8   -94.16  30.0  3
+ SUW  Var_04    H111  C11  C10  NX5   119.89  30.0  3
+ SUW  Var_05    CX5   CX4  CX3  CX2    50.12  30.0  1
+ SUW  Var_06    CX5   CX6  OX6  CX2   -67.07  30.0  1
+ SUW  Var_07    CX6   OX6  CX2  CX3    60.51  30.0  1
+ SUW  Var_08    CX6   CX5  CX4  CX3   -53.47  30.0  1
+ SUW  Var_09    OX6   CX2  CX3  CX4   -50.86  30.0  1
+ SUW  Var_10    OX6   CX6  CX5  CX4    60.48  30.0  1
+ SUW  Var_11    CX4   CX3  CX2  CX1    74.37  30.0  1
+ SUW  Var_12    CX6   OX6  CX2  CX1   -65.85  30.0  1
+ SUW  Var_13    OX4   CX4  CX3  CX2   175.98  30.0  1
+ SUW  Var_14    CX7   CX6  OX6  CX2   166.44  30.0  1
+ SUW  Var_15    CX4   CX3  CX2  OX2  -165.54  30.0  1
+ SUW  Var_16    CX6   OX6  CX2  OX2   174.79  30.0  1
+ SUW  Var_17    NX5   CX5  CX4  CX3  -175.18  30.0  1
+ SUW  Var_18    CX7   CX6  CX5  CX4  -177.05  30.0  1
+ SUW  Var_19    CX6   CX5  CX4  OX4  -179.14  30.0  1
+ SUW  Var_20    OX6   CX6  CX5  NX5  -177.76  30.0  1
+ SUW  Var_21    HX4   CX4  CX3  CX2   -68.09  30.0  1
+ SUW  Var_22    HX6   CX6  OX6  CX2    50.23  30.0  1
+ SUW  Var_23    HX5   CX5  CX4  CX3    65.46  30.0  1
+ SUW  Var_24    HX31  CX3  CX4  CX5   173.83  30.0  1
+ SUW  Var_25    HX32  CX3  CX4  CX5   -68.75  30.0  1
+ SUW  Var_26    CX3   CX2  CX1  O1A  -143.07  30.0  2
+ SUW  Var_27    OX6   CX2  CX1  O1A   -19.37  30.0  2
+ SUW  Var_28    CX3   CX2  CX1  O1B    39.95  30.0  2
+ SUW  Var_29    OX6   CX2  CX1  O1B   163.65  30.0  2
+ SUW  Var_30    CX3   CX2  OX2  CO2  -178.08  30.0  1
+ SUW  Var_31    OX6   CX2  OX2  CO2    65.83  30.0  1
+ SUW  Var_32    C10   NX5  CX5  CX4  -106.91  30.0  3
+ SUW  Var_33    NX5   CX5  CX4  OX4    59.15  30.0  1
+ SUW  Var_34    OX7   CX7  CX6  CX5   -50.56  30.0  3
+ SUW  Var_35    CX8   CX7  CX6  CX5  -173.50  30.0  3
+ SUW  Var_36    CX7   CX6  CX5  NX5   -55.28  30.0  1
+ SUW  Var_37    CX6   CX5  NX5  C10   133.51  30.0  1
+ SUW  Var_38    OX7   CX7  CX6  OX6    72.09  30.0  3
+ SUW  Var_39    CX8   CX7  CX6  OX6   -50.85  30.0  3
+ SUW  Var_40    HA    OX4  CX4  CX3   -62.30  30.0  3
+ SUW  Var_41    HB    NX5  CX5  CX4    67.26  30.0  3
+ SUW  Var_42    HX7   CX7  CX6  CX5    69.44  30.0  3
+ SUW  Var_43    CO2   OX2  CX2  CX1   -55.14  30.0  3
+ SUW  Var_44    OX2   CX2  CX1  O1A    98.56  30.0  2
+ SUW  Var_45    OX2   CX2  CX1  O1B   -78.43  30.0  2
+ SUW  Var_46    OX8   CX8  CX7  CX6   -54.36  30.0  3
+ SUW  Var_47    CX9   CX8  CX7  CX6  -176.26  30.0  3
+ SUW  Var_48    HC    OX7  CX7  CX6   156.61  30.0  3
+ SUW  Var_49    HX8   CX8  CX7  CX6    68.48  30.0  3
+ SUW  Var_50    NX6   CX9  CX8  CX7    59.11  30.0  3
+ SUW  Var_51    OX8   CX8  CX7  OX7  -176.87  30.0  3
+ SUW  Var_52    CX9   CX8  CX7  OX7    61.24  30.0  3
+ SUW  Var_53    NX6   CX9  CX8  OX8   -64.75  30.0  3
+ SUW  Var_54    HD    OX8  CX8  CX7    69.16  30.0  3
+ SUW  Var_55    HX91  CX9  CX8  CX7   179.50  30.0  3
+ SUW  Var_56    HX92  CX9  CX8  CX7   -64.24  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

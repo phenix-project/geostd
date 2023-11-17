@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 59J  59J  '(2R,5R)-2-[(R)-carboxy{[(2R)-2-{[(4-ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}-2-(4-hydroxyphenyl)acetyl]amino}methyl]-5-methyl-5,6-dihydro-2H-1,3-thiazine-4-carboxylic acid'  ligand  65  38  .  2022-11-17  2022-11-17
+ 59J  59J  '(2R,5R)-2-[(R)-carboxy{[(2R)-2-{[(4-ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}-2-(4-hydroxyphenyl)acetyl]amino}methyl]-5-methyl-5,6-dihydro-2H-1,3-thiazine-4-carboxylic acid'  ligand  65  38  .  2022-11-17  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_59J
@@ -313,48 +314,91 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 59J  CONST_01  C22  C20  C14  C10    0.00   0.0  0
- 59J  CONST_02  C22  C21  C15  C10    0.00   0.0  0
- 59J  CONST_03  C21  C22  C20  C14    0.00   0.0  0
- 59J  CONST_04  C21  C15  C10  C14    0.00   0.0  0
- 59J  CONST_05  C20  C22  C21  C15    0.00   0.0  0
- 59J  CONST_06  C20  C14  C10  C15    0.00   0.0  0
- 59J  CONST_07  C17  C16  N04  C12    0.00   0.0  0
- 59J  CONST_08  C16  C17  N05  C13    0.00   0.0  0
- 59J  CONST_09  O    C22  C20  C14  180.00   0.0  0
- 59J  CONST_10  O    C22  C21  C15  180.00   0.0  0
- 59J  CONST_11  CA   C10  C14  C20  180.00   0.0  0
- 59J  CONST_12  CA   C10  C15  C21  180.00   0.0  0
- 59J  CONST_13  C17  C16  N04  C11  180.00   0.0  0
- 59J  CONST_14  O06  C16  N04  C12  180.00   0.0  0
- 59J  CONST_15  O07  C17  N05  C13  180.00   0.0  0
- 59J  CONST_16  C19  N05  C17  C16  180.00   0.0  0
- 59J  CONST_17  H9   C20  C14  C10  180.00   0.0  0
- 59J  CONST_18  H10  C21  C15  C10  180.00   0.0  0
- 59J  CONST_19  H6   C15  C10  C14  180.00   0.0  0
- 59J  CONST_20  H5   C14  C10  C15  180.00   0.0  0
- 59J  CONST_21  O05  C11  N04  C12    0.00   0.0  0
- 59J  CONST_22  O05  C11  N04  C16  180.00   0.0  0
- 59J  CONST_23  O06  C16  N04  C11    0.00   0.0  0
- 59J  CONST_24  N03  C11  N04  C12  180.00   0.0  0
- 59J  CONST_25  N03  C11  N04  C16    0.00   0.0  0
- 59J  CONST_26  O07  C17  N05  C19    0.00   0.0  0
- 59J  CONST_27  CA   N03  C11  N04  180.00   0.0  0
- 59J  CONST_28  H17  N03  C11  N04    0.00   0.0  0
- 59J  CONST_29  H14  O03  C09  C07  180.00   0.0  0
- 59J  CONST_30  C02  N02  C06  O02    0.00   0.0  0
- 59J  CONST_31  CA   N03  C11  O05    0.00   0.0  0
- 59J  CONST_32  CA   C06  N02  C02  180.00   0.0  0
- 59J  CONST_33  H16  N02  C06  O02  180.00   0.0  0
- 59J  CONST_34  H27  O08  C03  O01    0.00   0.0  0
- 59J  Var_01    C17  N05  C13  C12   40.99  30.0  1
- 59J  Var_02    C16  N04  C12  C13   38.54  30.0  1
- 59J  Var_03    N05  C13  C12  N04  -58.32  30.0  1
- 59J  Var_04    N05  C17  C16  N04  -19.81  30.0  1
- 59J  Var_05    C04  C05  S01  C01   50.91  30.0  1
- 59J  Var_06    C04  C07  N01  C01   -2.62  30.0  1
- 59J  Var_07    C23  C19  N05  C13  -77.63  30.0  3
- 59J  Var_08    H11  C23  C19  N05  179.78  30.0  3
+ 59J  CONST_01  C22  C20  C14  C10     0.00   0.0  0
+ 59J  CONST_02  C22  C21  C15  C10     0.00   0.0  0
+ 59J  CONST_03  C21  C22  C20  C14     0.00   0.0  0
+ 59J  CONST_04  C21  C15  C10  C14     0.00   0.0  0
+ 59J  CONST_05  C20  C22  C21  C15     0.00   0.0  0
+ 59J  CONST_06  C20  C14  C10  C15     0.00   0.0  0
+ 59J  CONST_07  C17  C16  N04  C12     0.00   0.0  0
+ 59J  CONST_08  C16  C17  N05  C13     0.00   0.0  0
+ 59J  CONST_09  O    C22  C20  C14   180.00   0.0  0
+ 59J  CONST_10  O    C22  C21  C15   180.00   0.0  0
+ 59J  CONST_11  CA   C10  C14  C20   180.00   0.0  0
+ 59J  CONST_12  CA   C10  C15  C21   180.00   0.0  0
+ 59J  CONST_13  C17  C16  N04  C11   180.00   0.0  0
+ 59J  CONST_14  O06  C16  N04  C12   180.00   0.0  0
+ 59J  CONST_15  O07  C17  N05  C13   180.00   0.0  0
+ 59J  CONST_16  C19  N05  C17  C16   180.00   0.0  0
+ 59J  CONST_17  H9   C20  C14  C10   180.00   0.0  0
+ 59J  CONST_18  H10  C21  C15  C10   180.00   0.0  0
+ 59J  CONST_19  H6   C15  C10  C14   180.00   0.0  0
+ 59J  CONST_20  H5   C14  C10  C15   180.00   0.0  0
+ 59J  CONST_21  O05  C11  N04  C12     0.00   0.0  0
+ 59J  CONST_22  O05  C11  N04  C16   180.00   0.0  0
+ 59J  CONST_23  O06  C16  N04  C11     0.00   0.0  0
+ 59J  CONST_24  N03  C11  N04  C12   180.00   0.0  0
+ 59J  CONST_25  N03  C11  N04  C16     0.00   0.0  0
+ 59J  CONST_26  O07  C17  N05  C19     0.00   0.0  0
+ 59J  CONST_27  CA   N03  C11  N04   180.00   0.0  0
+ 59J  CONST_28  H17  N03  C11  N04     0.00   0.0  0
+ 59J  CONST_29  H14  O03  C09  C07   180.00   0.0  0
+ 59J  CONST_30  C02  N02  C06  O02     0.00   0.0  0
+ 59J  CONST_31  CA   N03  C11  O05     0.00   0.0  0
+ 59J  CONST_32  CA   C06  N02  C02   180.00   0.0  0
+ 59J  CONST_33  H16  N02  C06  O02   180.00   0.0  0
+ 59J  CONST_34  H27  O08  C03  O01     0.00   0.0  0
+ 59J  Var_01    C17  N05  C13  C12    40.99  30.0  1
+ 59J  Var_02    C16  N04  C12  C13    38.54  30.0  1
+ 59J  Var_03    N05  C13  C12  N04   -58.32  30.0  1
+ 59J  Var_04    N05  C17  C16  N04   -19.81  30.0  1
+ 59J  Var_05    C04  C05  S01  C01    50.91  30.0  1
+ 59J  Var_06    C04  C07  N01  C01    -2.62  30.0  1
+ 59J  Var_07    C23  C19  N05  C13   -77.63  30.0  3
+ 59J  Var_08    H11  C23  C19  N05   179.78  30.0  3
+ 59J  Var_09    C07  C04  C05  S01   -55.29  30.0  1
+ 59J  Var_10    C07  N01  C01  S01     3.48  30.0  1
+ 59J  Var_11    C05  S01  C01  N01   -25.76  30.0  1
+ 59J  Var_12    C05  C04  C07  N01    30.60  30.0  1
+ 59J  Var_13    C08  C04  C05  S01    69.31  30.0  1
+ 59J  Var_14    C08  C04  C07  N01   -95.45  30.0  1
+ 59J  Var_15    C05  S01  C01  C02    98.56  30.0  1
+ 59J  Var_16    C07  N01  C01  C02  -123.56  30.0  1
+ 59J  Var_17    C09  C07  C04  C05  -149.93  30.0  1
+ 59J  Var_18    H20  C04  C05  S01  -172.11  30.0  1
+ 59J  Var_19    H18  C01  N01  C07   121.02  30.0  1
+ 59J  Var_20    N03  CA   C10  C14   -40.40  30.0  2
+ 59J  Var_21    C06  CA   C10  C14    81.30  30.0  2
+ 59J  Var_22    N03  CA   C10  C15   143.76  30.0  2
+ 59J  Var_23    C06  CA   C10  C15   -94.54  30.0  2
+ 59J  Var_24    N02  C02  C01  S01   -73.36  30.0  1
+ 59J  Var_25    C03  C02  C01  S01   165.12  30.0  1
+ 59J  Var_26    C04  C07  C09  O03   179.92  30.0  1
+ 59J  Var_27    N01  C07  C09  O03    -0.54  30.0  1
+ 59J  Var_28    C04  C07  C09  O04     0.20  30.0  1
+ 59J  Var_29    N01  C07  C09  O04   179.75  30.0  1
+ 59J  Var_30    N02  C02  C01  N01    57.56  30.0  1
+ 59J  Var_31    C03  C02  C01  N01   -63.96  30.0  1
+ 59J  Var_32    C09  C07  C04  C08    84.03  30.0  1
+ 59J  Var_33    H26  CA   C10  C14  -162.73  30.0  2
+ 59J  Var_34    H15  O    C22  C20  -176.63  30.0  2
+ 59J  Var_35    H19  C02  C01  S01    46.66  30.0  1
+ 59J  Var_36    H23  C08  C04  C07   -55.81  30.0  3
+ 59J  Var_37    H24  C08  C04  C07    65.13  30.0  3
+ 59J  Var_38    H25  C08  C04  C07  -175.08  30.0  3
+ 59J  Var_39    C11  N03  CA   C10   -68.79  30.0  1
+ 59J  Var_40    O02  C06  CA   C10  -133.39  30.0  3
+ 59J  Var_41    N02  C06  CA   C10    47.82  30.0  3
+ 59J  Var_42    C01  C02  C03  O01   121.13  30.0  2
+ 59J  Var_43    C06  N02  C02  C01   118.29  30.0  1
+ 59J  Var_44    O08  C03  C02  C01   -59.59  30.0  3
+ 59J  Var_45    H16  N02  C02  C01   -67.97  30.0  1
+ 59J  Var_46    N02  C02  C03  O01    -1.34  30.0  2
+ 59J  Var_47    N03  CA   C06  N02   173.04  30.0  1
+ 59J  Var_48    O08  C03  C02  N02   177.95  30.0  3
+ 59J  Var_49    O02  C06  CA   N03    -8.17  30.0  3
+ 59J  Var_50    C06  N02  C02  C03  -119.49  30.0  1
+ 59J  Var_51    C11  N03  CA   C06   167.54  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5ID  5ID  5-iodo-7-beta-D-ribofuranosyl-7H-pyrrolo[2,3-d]pyrimidin-4-amine  ligand  33  20  .  2021-08-04  2021-08-04  
+ 5ID  5ID  5-iodo-7-beta-D-ribofuranosyl-7H-pyrrolo[2,3-d]pyrimidin-4-amine  ligand  33  20  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5ID
@@ -193,36 +194,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5ID  CONST_01  C5    C7  C8  N9     0.00  0.0  0
- 5ID  CONST_02  C7    C5  C4  N9     0.00  0.0  0
- 5ID  CONST_03  C6    C5  C4  N9   180.00  0.0  0
- 5ID  CONST_04  C2    N3  C4  N9   180.00  0.0  0
- 5ID  CONST_05  C5    C4  N9  C8     0.00  0.0  0
- 5ID  CONST_06  N3    C4  N9  C8   180.00  0.0  0
- 5ID  CONST_07  C6    C5  C7  C8   180.00  0.0  0
- 5ID  CONST_08  C4    C5  C7  C8     0.00  0.0  0
- 5ID  CONST_09  C4    N9  C8  C7     0.00  0.0  0
- 5ID  CONST_10  N1    C6  C5  C7   180.00  0.0  0
- 5ID  CONST_11  N3    C4  C5  C7   180.00  0.0  0
- 5ID  CONST_12  C2    N1  C6  C5     0.00  0.0  0
- 5ID  CONST_13  C2    N3  C4  C5     0.00  0.0  0
- 5ID  CONST_14  N3    C4  C5  C6     0.00  0.0  0
- 5ID  CONST_15  N3    C2  N1  C6     0.00  0.0  0
- 5ID  CONST_16  C4    C5  C6  N1     0.00  0.0  0
- 5ID  CONST_17  C4    N3  C2  N1     0.00  0.0  0
- 5ID  CONST_18  C7    C8  N9  C1'  180.00  0.0  0
- 5ID  CONST_19  C5    C4  N9  C1'  180.00  0.0  0
- 5ID  CONST_20  N3    C4  N9  C1'    0.00  0.0  0
- 5ID  CONST_21  IAE   C7  C8  N9   180.00  0.0  0
- 5ID  CONST_22  N6    C6  C5  C7     0.00  0.0  0
- 5ID  CONST_23  IAE   C7  C5  C6     0.00  0.0  0
- 5ID  CONST_24  N6    C6  N1  C2   180.00  0.0  0
- 5ID  CONST_25  IAE   C7  C5  C4   180.00  0.0  0
- 5ID  CONST_26  N6    C6  C5  C4   180.00  0.0  0
- 5ID  CONST_27  H8    C8  N9  C1'    0.00  0.0  0
- 5ID  CONST_28  H2    C2  N1  C6   180.00  0.0  0
- 5ID  CONST_29  H6N1  N6  C6  C5   180.00  0.0  0
- 5ID  CONST_30  H6N2  N6  C6  C5     0.00  0.0  0
+ 5ID  CONST_01  C5    C7   C8   N9      0.00   0.0  0
+ 5ID  CONST_02  C7    C5   C4   N9      0.00   0.0  0
+ 5ID  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ 5ID  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ 5ID  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ 5ID  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ 5ID  CONST_07  C6    C5   C7   C8    180.00   0.0  0
+ 5ID  CONST_08  C4    C5   C7   C8      0.00   0.0  0
+ 5ID  CONST_09  C4    N9   C8   C7      0.00   0.0  0
+ 5ID  CONST_10  N1    C6   C5   C7    180.00   0.0  0
+ 5ID  CONST_11  N3    C4   C5   C7    180.00   0.0  0
+ 5ID  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ 5ID  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ 5ID  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ 5ID  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ 5ID  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ 5ID  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ 5ID  CONST_18  C7    C8   N9   C1'   180.00   0.0  0
+ 5ID  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ 5ID  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ 5ID  CONST_21  IAE   C7   C8   N9    180.00   0.0  0
+ 5ID  CONST_22  N6    C6   C5   C7      0.00   0.0  0
+ 5ID  CONST_23  IAE   C7   C5   C6      0.00   0.0  0
+ 5ID  CONST_24  N6    C6   N1   C2    180.00   0.0  0
+ 5ID  CONST_25  IAE   C7   C5   C4    180.00   0.0  0
+ 5ID  CONST_26  N6    C6   C5   C4    180.00   0.0  0
+ 5ID  CONST_27  H8    C8   N9   C1'     0.00   0.0  0
+ 5ID  CONST_28  H2    C2   N1   C6    180.00   0.0  0
+ 5ID  CONST_29  H6N1  N6   C6   C5    180.00   0.0  0
+ 5ID  CONST_30  H6N2  N6   C6   C5      0.00   0.0  0
+ 5ID  Var_01    N9    C1'  O4'  C4'  -158.94  30.0  1
+ 5ID  Var_02    C2'   C1'  O4'  C4'   -34.70  30.0  1
+ 5ID  Var_03    C1'   C2'  C3'  C4'    11.94  30.0  1
+ 5ID  Var_04    C2'   C3'  C4'  O4'   -32.41  30.0  1
+ 5ID  Var_05    C8    N9   C1'  O4'    52.92  30.0  2
+ 5ID  Var_06    C4    N9   C1'  O4'  -123.20  30.0  2
+ 5ID  Var_07    C3'   C2'  C1'  O4'    12.53  30.0  1
+ 5ID  Var_08    C3'   C4'  O4'  C1'    42.37  30.0  1
+ 5ID  Var_09    C3'   C2'  C1'  N9    132.64  30.0  1
+ 5ID  Var_10    C2'   C1'  N9   C8    -66.34  30.0  2
+ 5ID  Var_11    C2'   C1'  N9   C4    117.54  30.0  2
+ 5ID  Var_12    C1'   O4'  C4'  C5'   164.42  30.0  1
+ 5ID  Var_13    C2'   C3'  C4'  C5'  -152.21  30.0  1
+ 5ID  Var_14    O2'   C2'  C3'  C4'  -104.89  30.0  1
+ 5ID  Var_15    O3'   C3'  C4'  O4'  -153.54  30.0  1
+ 5ID  Var_16    O2'   C2'  C1'  O4'   133.66  30.0  1
+ 5ID  Var_17    O3'   C3'  C2'  C1'   134.55  30.0  1
+ 5ID  Var_18    O2'   C2'  C1'  N9   -106.23  30.0  1
+ 5ID  Var_19    H1'   C1'  O4'  C4'    83.84  30.0  1
+ 5ID  Var_20    H2'   C2'  C3'  C4'   129.41  30.0  1
+ 5ID  Var_21    H3'   C3'  C4'  O4'    81.75  30.0  1
+ 5ID  Var_22    H4'   C4'  O4'  C1'   -74.01  30.0  1
+ 5ID  Var_23    O4'   C4'  C5'  O5'    67.70  30.0  3
+ 5ID  Var_24    C3'   C4'  C5'  O5'  -176.30  30.0  3
+ 5ID  Var_25    O3'   C3'  C4'  C5'    86.66  30.0  1
+ 5ID  Var_26    O3'   C3'  C2'  O2'    17.72  30.0  1
+ 5ID  Var_27    HB    O3'  C3'  C4'   -99.37  30.0  3
+ 5ID  Var_28    H5'1  C5'  C4'  O4'  -170.38  30.0  1
+ 5ID  Var_29    H5'2  C5'  C4'  O4'   -55.31  30.0  1
+ 5ID  Var_30    HA    O2'  C2'  C1'  -171.94  30.0  3
+ 5ID  Var_31    H5'   O5'  C5'  C4'   175.19  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

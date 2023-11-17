@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EUI  EUI  {3,4-difluoro-2-[(2-fluoro-4-iodophenyl)amino]phenyl}{3-hydroxy-3-[(2S)-piperidin-2-yl]azetidin-1-yl}methanone  ligand  51  30  .  2022-03-18  2022-03-18
+ EUI  EUI  {3,4-difluoro-2-[(2-fluoro-4-iodophenyl)amino]phenyl}{3-hydroxy-3-[(2S)-piperidin-2-yl]azetidin-1-yl}methanone  ligand  51  30  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EUI
@@ -267,47 +268,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EUI  CONST_01  C12  C13  C14  C15    0.00   0.0  0
- EUI  CONST_02  C12  C11  C10  C15    0.00   0.0  0
- EUI  CONST_03  C11  C10  C15  C14    0.00   0.0  0
- EUI  CONST_04  C11  C12  C13  C14    0.00   0.0  0
- EUI  CONST_05  C10  C15  C14  C13    0.00   0.0  0
- EUI  CONST_06  C10  C11  C12  C13    0.00   0.0  0
- EUI  CONST_07  C2   C3   C4   C5     0.00   0.0  0
- EUI  CONST_08  C2   C1   C6   C5     0.00   0.0  0
- EUI  CONST_09  C1   C6   C5   C4     0.00   0.0  0
- EUI  CONST_10  C1   C2   C3   C4     0.00   0.0  0
- EUI  CONST_11  C6   C5   C4   C3     0.00   0.0  0
- EUI  CONST_12  C6   C1   C2   C3     0.00   0.0  0
- EUI  CONST_13  C13  C14  C15  C18  180.00   0.0  0
- EUI  CONST_14  C11  C10  C15  C18  180.00   0.0  0
- EUI  CONST_15  F16  C11  C10  C15  180.00   0.0  0
- EUI  CONST_16  N9   C10  C15  C14  180.00   0.0  0
- EUI  CONST_17  F17  C12  C13  C14  180.00   0.0  0
- EUI  CONST_18  F16  C11  C12  C13  180.00   0.0  0
- EUI  CONST_19  N9   C10  C11  C12  180.00   0.0  0
- EUI  CONST_20  C10  C11  C12  F17  180.00   0.0  0
- EUI  CONST_21  C3   C4   C5   N9   180.00   0.0  0
- EUI  CONST_22  C1   C6   C5   N9   180.00   0.0  0
- EUI  CONST_23  F7   C6   C5   C4   180.00   0.0  0
- EUI  CONST_24  I8   C2   C3   C4   180.00   0.0  0
- EUI  CONST_25  F7   C6   C1   C2   180.00   0.0  0
- EUI  CONST_26  C6   C1   C2   I8   180.00   0.0  0
- EUI  CONST_27  C23  N19  C18  C15  180.00   0.0  0
- EUI  CONST_29  H13  C13  C14  C15  180.00   0.0  0
- EUI  CONST_30  H14  C14  C13  C12  180.00   0.0  0
- EUI  CONST_31  H3   C3   C4   C5   180.00   0.0  0
- EUI  CONST_32  H1   C1   C6   C5   180.00   0.0  0
- EUI  CONST_33  H4   C4   C3   C2   180.00   0.0  0
- EUI  CONST_34  C23  N19  C18  O20    0.00   0.0  0
- EUI  Var_01    C22  C21  N19  C23    3.87  30.0  1
- EUI  Var_02    C28  C29  C30  C25   54.03  30.0  1
- EUI  Var_03    C28  C27  N26  C25  -61.31  30.0  1
- EUI  Var_04    C27  C28  C29  C30  -53.68  30.0  1
- EUI  Var_05    N26  C27  C28  C29   56.44  30.0  1
- EUI  Var_06    C5   N9   C10  C15   40.41  30.0  2
- EUI  Var_07    N19  C18  C15  C14   58.52  30.0  2
- EUI  Var_08    C4   C5   N9   C10   43.87  30.0  2
+ EUI  CONST_01  C12   C13  C14  C15     0.00   0.0  0
+ EUI  CONST_02  C12   C11  C10  C15     0.00   0.0  0
+ EUI  CONST_03  C11   C10  C15  C14     0.00   0.0  0
+ EUI  CONST_04  C11   C12  C13  C14     0.00   0.0  0
+ EUI  CONST_05  C10   C15  C14  C13     0.00   0.0  0
+ EUI  CONST_06  C10   C11  C12  C13     0.00   0.0  0
+ EUI  CONST_07  C2    C3   C4   C5      0.00   0.0  0
+ EUI  CONST_08  C2    C1   C6   C5      0.00   0.0  0
+ EUI  CONST_09  C1    C6   C5   C4      0.00   0.0  0
+ EUI  CONST_10  C1    C2   C3   C4      0.00   0.0  0
+ EUI  CONST_11  C6    C5   C4   C3      0.00   0.0  0
+ EUI  CONST_12  C6    C1   C2   C3      0.00   0.0  0
+ EUI  CONST_13  C13   C14  C15  C18   180.00   0.0  0
+ EUI  CONST_14  C11   C10  C15  C18   180.00   0.0  0
+ EUI  CONST_15  F16   C11  C10  C15   180.00   0.0  0
+ EUI  CONST_16  N9    C10  C15  C14   180.00   0.0  0
+ EUI  CONST_17  F17   C12  C13  C14   180.00   0.0  0
+ EUI  CONST_18  F16   C11  C12  C13   180.00   0.0  0
+ EUI  CONST_19  N9    C10  C11  C12   180.00   0.0  0
+ EUI  CONST_20  C10   C11  C12  F17   180.00   0.0  0
+ EUI  CONST_21  C3    C4   C5   N9    180.00   0.0  0
+ EUI  CONST_22  C1    C6   C5   N9    180.00   0.0  0
+ EUI  CONST_23  F7    C6   C5   C4    180.00   0.0  0
+ EUI  CONST_24  I8    C2   C3   C4    180.00   0.0  0
+ EUI  CONST_25  F7    C6   C1   C2    180.00   0.0  0
+ EUI  CONST_26  C6    C1   C2   I8    180.00   0.0  0
+ EUI  CONST_27  C23   N19  C18  C15   180.00   0.0  0
+ EUI  CONST_28  H13   C13  C14  C15   180.00   0.0  0
+ EUI  CONST_29  H14   C14  C13  C12   180.00   0.0  0
+ EUI  CONST_30  H3    C3   C4   C5    180.00   0.0  0
+ EUI  CONST_31  H1    C1   C6   C5    180.00   0.0  0
+ EUI  CONST_32  H4    C4   C3   C2    180.00   0.0  0
+ EUI  CONST_33  C23   N19  C18  O20     0.00   0.0  0
+ EUI  Var_01    C22   C21  N19  C23     3.87  30.0  1
+ EUI  Var_02    C28   C29  C30  C25    54.03  30.0  1
+ EUI  Var_03    C28   C27  N26  C25   -61.31  30.0  1
+ EUI  Var_04    C27   C28  C29  C30   -53.68  30.0  1
+ EUI  Var_05    N26   C27  C28  C29    56.44  30.0  1
+ EUI  Var_06    C5    N9   C10  C15    40.41  30.0  2
+ EUI  Var_07    N19   C18  C15  C14    58.52  30.0  2
+ EUI  Var_08    C4    C5   N9   C10    43.87  30.0  2
+ EUI  Var_09    C25   C22  C23  N19  -111.07  30.0  1
+ EUI  Var_10    C25   C22  C21  N19   110.55  30.0  1
+ EUI  Var_11    C30   C25  C22  C23   -68.98  30.0  3
+ EUI  Var_12    N26   C25  C22  C23   168.69  30.0  3
+ EUI  Var_13    C29   C30  C25  C22  -179.60  30.0  1
+ EUI  Var_14    C27   N26  C25  C22  -174.92  30.0  1
+ EUI  Var_15    C30   C25  C22  C21  -166.77  30.0  3
+ EUI  Var_16    N26   C25  C22  C21    70.89  30.0  3
+ EUI  Var_17    C27   N26  C25  C30    61.09  30.0  1
+ EUI  Var_18    N26   C25  C30  C29   -56.74  30.0  1
+ EUI  Var_19    C22   C23  N19  C18  -164.30  30.0  1
+ EUI  Var_20    O24   C22  C23  N19   121.56  30.0  1
+ EUI  Var_21    O24   C22  C21  N19  -121.74  30.0  1
+ EUI  Var_22    C30   C25  C22  O24    62.04  30.0  3
+ EUI  Var_23    N26   C25  C22  O24   -60.29  30.0  3
+ EUI  Var_24    H25   C25  C22  C23    47.76  30.0  3
+ EUI  Var_25    H301  C30  C25  C22   -58.75  30.0  1
+ EUI  Var_26    H302  C30  C25  C22    58.84  30.0  1
+ EUI  Var_27    H26   N26  C25  C22   -53.71  30.0  1
+ EUI  Var_28    H231  C23  N19  C21   111.99  30.0  1
+ EUI  Var_29    H232  C23  N19  C21  -122.63  30.0  1
+ EUI  Var_30    H24   O24  C22  C23   -46.56  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

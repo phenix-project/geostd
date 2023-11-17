@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PZF  PZF  (3R,4S)-1-[6-(6-methoxypyridin-3-yl)pyrimidin-4-yl]-4-(2,4,5-trifluorophenyl)pyrrolidin-3-amine  ligand  47  29  .  2021-08-20  2021-08-20  
+ PZF  PZF  (3R,4S)-1-[6-(6-methoxypyridin-3-yl)pyrimidin-4-yl]-4-(2,4,5-trifluorophenyl)pyrrolidin-3-amine  ligand  47  29  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PZF
@@ -252,47 +253,73 @@ _chem_comp_tor.period
  PZF  CONST_03  C10   C1   C2   N3    180.00   0.0  0
  PZF  CONST_04  C1    C2   N3   C4      0.00   0.0  0
  PZF  CONST_05  C1    C6   C5   C4      0.00   0.0  0
- PZF  CONST_08  C24   C23  C22  C21     0.00   0.0  0
- PZF  CONST_09  C24   C25  C26  C21     0.00   0.0  0
- PZF  CONST_10  C11   C10  N9   C8      0.00   0.0  0
- PZF  CONST_11  C1    C10  N9   C8    180.00   0.0  0
- PZF  CONST_12  C11   C12  N7   C8      0.00   0.0  0
- PZF  CONST_13  C23   C22  C21  C26     0.00   0.0  0
- PZF  CONST_14  C23   C24  C25  C26     0.00   0.0  0
- PZF  CONST_15  C25   C26  C21  C22     0.00   0.0  0
- PZF  CONST_16  C25   C24  C23  C22     0.00   0.0  0
- PZF  CONST_17  C1    C10  C11  C12   180.00   0.0  0
- PZF  CONST_18  N9    C10  C11  C12     0.00   0.0  0
- PZF  CONST_19  N9    C8   N7   C12     0.00   0.0  0
- PZF  CONST_20  C10   N9   C8   N7      0.00   0.0  0
- PZF  CONST_21  C10   C11  C12  N7      0.00   0.0  0
- PZF  CONST_23  C5    C6   C1   C10   180.00   0.0  0
- PZF  CONST_25  C2    N3   C4   C5      0.00   0.0  0
- PZF  CONST_26  C2    C1   C6   C5      0.00   0.0  0
- PZF  CONST_27  C23   C22  C21  C13   180.00   0.0  0
- PZF  CONST_28  C25   C26  C21  C13   180.00   0.0  0
- PZF  CONST_29  N15   C12  N7   C8    180.00   0.0  0
- PZF  CONST_30  C10   C11  C12  N15   180.00   0.0  0
- PZF  CONST_31  O18   C4   C5   C6    180.00   0.0  0
- PZF  CONST_32  F27   C22  C21  C13     0.00   0.0  0
- PZF  CONST_33  F28   C25  C26  C21   180.00   0.0  0
- PZF  CONST_34  F27   C22  C21  C26   180.00   0.0  0
- PZF  CONST_35  F29   C24  C25  C26   180.00   0.0  0
- PZF  CONST_36  C22   C23  C24  F29   180.00   0.0  0
- PZF  CONST_37  F27   C22  C23  C24   180.00   0.0  0
- PZF  CONST_38  F28   C25  C24  C23   180.00   0.0  0
- PZF  CONST_39  C2    N3   C4   O18   180.00   0.0  0
- PZF  CONST_40  H5    C5   C4   N3    180.00   0.0  0
- PZF  CONST_41  H2    C2   N3   C4    180.00   0.0  0
- PZF  CONST_42  H6    C6   C5   C4    180.00   0.0  0
- PZF  CONST_43  H26   C26  C21  C13     0.00   0.0  0
- PZF  CONST_44  H23   C23  C22  C21   180.00   0.0  0
- PZF  CONST_45  H11   C11  C12  N15     0.00   0.0  0
- PZF  CONST_46  H8    C8   N7   C12   180.00   0.0  0
+ PZF  CONST_06  C24   C23  C22  C21     0.00   0.0  0
+ PZF  CONST_07  C24   C25  C26  C21     0.00   0.0  0
+ PZF  CONST_08  C11   C10  N9   C8      0.00   0.0  0
+ PZF  CONST_09  C1    C10  N9   C8    180.00   0.0  0
+ PZF  CONST_10  C11   C12  N7   C8      0.00   0.0  0
+ PZF  CONST_11  C23   C22  C21  C26     0.00   0.0  0
+ PZF  CONST_12  C23   C24  C25  C26     0.00   0.0  0
+ PZF  CONST_13  C25   C26  C21  C22     0.00   0.0  0
+ PZF  CONST_14  C25   C24  C23  C22     0.00   0.0  0
+ PZF  CONST_15  C1    C10  C11  C12   180.00   0.0  0
+ PZF  CONST_16  N9    C10  C11  C12     0.00   0.0  0
+ PZF  CONST_17  N9    C8   N7   C12     0.00   0.0  0
+ PZF  CONST_18  C10   N9   C8   N7      0.00   0.0  0
+ PZF  CONST_19  C10   C11  C12  N7      0.00   0.0  0
+ PZF  CONST_20  C5    C6   C1   C10   180.00   0.0  0
+ PZF  CONST_21  C2    N3   C4   C5      0.00   0.0  0
+ PZF  CONST_22  C2    C1   C6   C5      0.00   0.0  0
+ PZF  CONST_23  C23   C22  C21  C13   180.00   0.0  0
+ PZF  CONST_24  C25   C26  C21  C13   180.00   0.0  0
+ PZF  CONST_25  N15   C12  N7   C8    180.00   0.0  0
+ PZF  CONST_26  C10   C11  C12  N15   180.00   0.0  0
+ PZF  CONST_27  O18   C4   C5   C6    180.00   0.0  0
+ PZF  CONST_28  F27   C22  C21  C13     0.00   0.0  0
+ PZF  CONST_29  F28   C25  C26  C21   180.00   0.0  0
+ PZF  CONST_30  F27   C22  C21  C26   180.00   0.0  0
+ PZF  CONST_31  F29   C24  C25  C26   180.00   0.0  0
+ PZF  CONST_32  C22   C23  C24  F29   180.00   0.0  0
+ PZF  CONST_33  F27   C22  C23  C24   180.00   0.0  0
+ PZF  CONST_34  F28   C25  C24  C23   180.00   0.0  0
+ PZF  CONST_35  C2    N3   C4   O18   180.00   0.0  0
+ PZF  CONST_36  H5    C5   C4   N3    180.00   0.0  0
+ PZF  CONST_37  H2    C2   N3   C4    180.00   0.0  0
+ PZF  CONST_38  H6    C6   C5   C4    180.00   0.0  0
+ PZF  CONST_39  H26   C26  C21  C13     0.00   0.0  0
+ PZF  CONST_40  H23   C23  C22  C21   180.00   0.0  0
+ PZF  CONST_41  H11   C11  C12  N15     0.00   0.0  0
+ PZF  CONST_42  H8    C8   N7   C12   180.00   0.0  0
  PZF  Var_01    C16   N15  C14  C13   -12.27  30.0  1
  PZF  Var_02    C11   C12  N15  C16     3.77  30.0  2
  PZF  Var_03    C5    C4   O18  C19  -179.03  30.0  2
  PZF  Var_04    H191  C19  O18  C4    -60.74  30.0  3
+ PZF  Var_05    C11   C10  C1   C6    161.90  30.0  2
+ PZF  Var_06    N9    C10  C1   C6    -17.23  30.0  2
+ PZF  Var_07    N15   C16  C17  C13    33.39  30.0  1
+ PZF  Var_08    N15   C14  C13  C21   157.33  30.0  1
+ PZF  Var_09    C16   C17  C13  C21  -165.84  30.0  1
+ PZF  Var_10    C14   C13  C17  C16   -41.13  30.0  1
+ PZF  Var_11    C14   C13  C21  C26   -57.83  30.0  3
+ PZF  Var_12    C17   C13  C21  C26    60.30  30.0  3
+ PZF  Var_13    C14   C13  C21  C22   123.27  30.0  3
+ PZF  Var_14    C17   C13  C21  C22  -118.61  30.0  3
+ PZF  Var_15    N15   C14  C13  C17    32.82  30.0  1
+ PZF  Var_16    C12   N15  C16  C17   168.10  30.0  1
+ PZF  Var_17    C14   N15  C16  C17   -13.52  30.0  1
+ PZF  Var_18    C2    C1   C10  C11   -18.72  30.0  2
+ PZF  Var_19    C2    C1   C10  N9    162.15  30.0  2
+ PZF  Var_20    N20   C17  C13  C21    73.85  30.0  1
+ PZF  Var_21    C14   C13  C17  N20  -161.44  30.0  1
+ PZF  Var_22    N15   C16  C17  N20   153.86  30.0  1
+ PZF  Var_23    H161  C16  C17  C13   153.66  30.0  1
+ PZF  Var_24    H162  C16  C17  C13   -86.02  30.0  1
+ PZF  Var_25    H141  C14  C13  C21   -82.77  30.0  1
+ PZF  Var_26    H142  C14  C13  C21    38.14  30.0  1
+ PZF  Var_27    H17   C17  C13  C21   -52.14  30.0  1
+ PZF  Var_28    H13   C13  C17  C16    72.46  30.0  1
+ PZF  Var_29    H201  N20  C17  C13   178.59  30.0  3
+ PZF  Var_30    H202  N20  C17  C13   -66.75  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

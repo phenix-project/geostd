@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VGM  VGM  4-[2-amino-5-(4-hydroxy-3-methoxyphenyl)pyridin-3-yl]benzamide  ligand  42  25  .  2021-08-24  2021-08-24  
+ VGM  VGM  4-[2-amino-5-(4-hydroxy-3-methoxyphenyl)pyridin-3-yl]benzamide  ligand  42  25  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VGM
@@ -224,51 +225,60 @@ _chem_comp_tor.period
  VGM  CONST_02  C22   C05  C04  C03     0.00   0.0  0
  VGM  CONST_03  C22   C23  C24  C03     0.00   0.0  0
  VGM  CONST_04  C23   C24  C03  C04     0.00   0.0  0
- VGM  CONST_07  C23   C22  C05  C04     0.00   0.0  0
- VGM  CONST_08  C24   C03  C04  C05     0.00   0.0  0
- VGM  CONST_09  N08   C07  C06  C05   180.00   0.0  0
- VGM  CONST_10  C11   C21  C06  C05   180.00   0.0  0
- VGM  CONST_11  C24   C23  C22  C05     0.00   0.0  0
- VGM  CONST_12  C23   C22  C05  C06   180.00   0.0  0
- VGM  CONST_13  C09   N08  C07  C06     0.00   0.0  0
- VGM  CONST_14  C09   C11  C21  C06     0.00   0.0  0
- VGM  CONST_15  C12   C11  C21  C06   180.00   0.0  0
- VGM  CONST_17  C11   C21  C06  C07     0.00   0.0  0
- VGM  CONST_18  C11   C09  N08  C07     0.00   0.0  0
- VGM  CONST_19  C21   C06  C07  N08     0.00   0.0  0
- VGM  CONST_20  C12   C11  C09  N08   180.00   0.0  0
- VGM  CONST_21  C21   C11  C09  N08     0.00   0.0  0
- VGM  CONST_24  C14   C13  C12  C11   180.00   0.0  0
- VGM  CONST_25  C19   C20  C12  C11   180.00   0.0  0
- VGM  CONST_26  C15   C14  C13  C12     0.00   0.0  0
- VGM  CONST_27  C15   C19  C20  C12     0.00   0.0  0
- VGM  CONST_29  C19   C20  C12  C13     0.00   0.0  0
- VGM  CONST_30  C19   C15  C14  C13     0.00   0.0  0
- VGM  CONST_31  C20   C12  C13  C14     0.00   0.0  0
- VGM  CONST_32  C20   C19  C15  C14     0.00   0.0  0
- VGM  CONST_35  C05   C04  C03  O02   180.00   0.0  0
- VGM  CONST_36  C23   C24  C03  O02   180.00   0.0  0
- VGM  CONST_37  O25   C24  C03  C04   180.00   0.0  0
- VGM  CONST_38  N10   C09  N08  C07   180.00   0.0  0
- VGM  CONST_39  C12   C11  C09  N10     0.00   0.0  0
- VGM  CONST_40  C21   C11  C09  N10   180.00   0.0  0
- VGM  CONST_41  C16   C15  C14  C13   180.00   0.0  0
- VGM  CONST_42  C20   C19  C15  C16   180.00   0.0  0
- VGM  CONST_43  O25   C24  C23  C22   180.00   0.0  0
- VGM  CONST_44  H23   C23  C24  C03   180.00   0.0  0
- VGM  CONST_45  H22   C22  C05  C04   180.00   0.0  0
- VGM  CONST_46  H07   C07  C06  C05     0.00   0.0  0
- VGM  CONST_47  H21   C21  C06  C05     0.00   0.0  0
- VGM  CONST_48  H04   C04  C05  C06     0.00   0.0  0
- VGM  CONST_49  H13   C13  C12  C11     0.00   0.0  0
- VGM  CONST_50  H20   C20  C12  C11     0.00   0.0  0
- VGM  CONST_51  H14   C14  C13  C12   180.00   0.0  0
- VGM  CONST_52  H19   C19  C20  C12   180.00   0.0  0
- VGM  CONST_55  H171  N17  C16  C15     0.00   0.0  0
- VGM  CONST_56  H172  N17  C16  C15   180.00   0.0  0
+ VGM  CONST_05  C23   C22  C05  C04     0.00   0.0  0
+ VGM  CONST_06  C24   C03  C04  C05     0.00   0.0  0
+ VGM  CONST_07  N08   C07  C06  C05   180.00   0.0  0
+ VGM  CONST_08  C11   C21  C06  C05   180.00   0.0  0
+ VGM  CONST_09  C24   C23  C22  C05     0.00   0.0  0
+ VGM  CONST_10  C23   C22  C05  C06   180.00   0.0  0
+ VGM  CONST_11  C09   N08  C07  C06     0.00   0.0  0
+ VGM  CONST_12  C09   C11  C21  C06     0.00   0.0  0
+ VGM  CONST_13  C12   C11  C21  C06   180.00   0.0  0
+ VGM  CONST_14  C11   C21  C06  C07     0.00   0.0  0
+ VGM  CONST_15  C11   C09  N08  C07     0.00   0.0  0
+ VGM  CONST_16  C21   C06  C07  N08     0.00   0.0  0
+ VGM  CONST_17  C12   C11  C09  N08   180.00   0.0  0
+ VGM  CONST_18  C21   C11  C09  N08     0.00   0.0  0
+ VGM  CONST_19  C14   C13  C12  C11   180.00   0.0  0
+ VGM  CONST_20  C19   C20  C12  C11   180.00   0.0  0
+ VGM  CONST_21  C15   C14  C13  C12     0.00   0.0  0
+ VGM  CONST_22  C15   C19  C20  C12     0.00   0.0  0
+ VGM  CONST_23  C19   C20  C12  C13     0.00   0.0  0
+ VGM  CONST_24  C19   C15  C14  C13     0.00   0.0  0
+ VGM  CONST_25  C20   C12  C13  C14     0.00   0.0  0
+ VGM  CONST_26  C20   C19  C15  C14     0.00   0.0  0
+ VGM  CONST_27  C05   C04  C03  O02   180.00   0.0  0
+ VGM  CONST_28  C23   C24  C03  O02   180.00   0.0  0
+ VGM  CONST_29  O25   C24  C03  C04   180.00   0.0  0
+ VGM  CONST_30  N10   C09  N08  C07   180.00   0.0  0
+ VGM  CONST_31  C12   C11  C09  N10     0.00   0.0  0
+ VGM  CONST_32  C21   C11  C09  N10   180.00   0.0  0
+ VGM  CONST_33  C16   C15  C14  C13   180.00   0.0  0
+ VGM  CONST_34  C20   C19  C15  C16   180.00   0.0  0
+ VGM  CONST_35  O25   C24  C23  C22   180.00   0.0  0
+ VGM  CONST_36  H23   C23  C24  C03   180.00   0.0  0
+ VGM  CONST_37  H22   C22  C05  C04   180.00   0.0  0
+ VGM  CONST_38  H07   C07  C06  C05     0.00   0.0  0
+ VGM  CONST_39  H21   C21  C06  C05     0.00   0.0  0
+ VGM  CONST_40  H04   C04  C05  C06     0.00   0.0  0
+ VGM  CONST_41  H13   C13  C12  C11     0.00   0.0  0
+ VGM  CONST_42  H20   C20  C12  C11     0.00   0.0  0
+ VGM  CONST_43  H14   C14  C13  C12   180.00   0.0  0
+ VGM  CONST_44  H19   C19  C20  C12   180.00   0.0  0
+ VGM  CONST_45  H171  N17  C16  C15     0.00   0.0  0
+ VGM  CONST_46  H172  N17  C16  C15   180.00   0.0  0
  VGM  Var_01    C04   C03  O02  C01     1.46  30.0  2
  VGM  Var_02    N17   C16  C15  C14  -157.51  30.0  2
  VGM  Var_03    H011  C01  O02  C03   179.32  30.0  3
+ VGM  Var_04    C07   C06  C05  C04   -38.04  30.0  2
+ VGM  Var_05    C21   C06  C05  C04   142.60  30.0  2
+ VGM  Var_06    C22   C05  C06  C07   142.36  30.0  2
+ VGM  Var_07    C13   C12  C11  C09   -51.85  30.0  2
+ VGM  Var_08    C20   C12  C11  C09   130.19  30.0  2
+ VGM  Var_09    C21   C11  C12  C13   129.56  30.0  3
+ VGM  Var_10    C21   C11  C12  C20   -48.40  30.0  3
+ VGM  Var_11    C22   C05  C06  C21   -36.99  30.0  2
+ VGM  Var_12    H25   O25  C24  C03    -1.18  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

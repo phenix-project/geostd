@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UBC  UBC  '2-({3-[(2S)-2-amino-2-carboxyethyl]-2,6-dioxo-3,6-dihydropyrimidin-1(2H)-yl}methyl)benzoic acid'  ligand  37  24  .  2022-07-22  2022-07-26
+ UBC  UBC  '2-({3-[(2S)-2-amino-2-carboxyethyl]-2,6-dioxo-3,6-dihydropyrimidin-1(2H)-yl}methyl)benzoic acid'  ligand  37  24  .  2022-07-22  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UBC
@@ -203,43 +204,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- UBC  CONST_01  C25  C24  C23  C22    0.00   0.0  0
- UBC  CONST_02  C25  C26  C21  C22    0.00   0.0  0
- UBC  CONST_03  C26  C21  C22  C23    0.00   0.0  0
- UBC  CONST_04  C26  C25  C24  C23    0.00   0.0  0
- UBC  CONST_05  C21  C22  C23  C24    0.00   0.0  0
- UBC  CONST_06  C21  C26  C25  C24    0.00   0.0  0
- UBC  CONST_07  C3   N4   C5   N6     0.00   0.0  0
- UBC  CONST_08  C3   C2   C1   N6     0.00   0.0  0
- UBC  CONST_09  C2   C1   N6   C5     0.00   0.0  0
- UBC  CONST_10  C2   C3   N4   C5     0.00   0.0  0
- UBC  CONST_11  N4   C5   N6   C1     0.00   0.0  0
- UBC  CONST_12  N4   C3   C2   C1     0.00   0.0  0
- UBC  CONST_13  C24  C23  C22  C10  180.00   0.0  0
- UBC  CONST_14  C26  C21  C22  C10  180.00   0.0  0
- UBC  CONST_15  C17  C21  C22  C23  180.00   0.0  0
- UBC  CONST_16  C17  C21  C26  C25  180.00   0.0  0
- UBC  CONST_17  N4   C5   N6   C17  180.00   0.0  0
- UBC  CONST_18  C2   C1   N6   C17  180.00   0.0  0
- UBC  CONST_19  CB   N4   C5   N6   180.00   0.0  0
- UBC  CONST_20  O7   C1   N6   C5   180.00   0.0  0
- UBC  CONST_21  C1   N6   C5   O8   180.00   0.0  0
- UBC  CONST_22  C3   N4   C5   O8   180.00   0.0  0
- UBC  CONST_23  C3   C2   C1   O7   180.00   0.0  0
- UBC  CONST_24  CB   N4   C3   C2   180.00   0.0  0
- UBC  CONST_25  H24  C24  C23  C22  180.00   0.0  0
- UBC  CONST_26  H26  C26  C21  C22  180.00   0.0  0
- UBC  CONST_27  H25  C25  C24  C23  180.00   0.0  0
- UBC  CONST_28  H23  C23  C24  C25  180.00   0.0  0
- UBC  CONST_29  H2   C2   C1   N6   180.00   0.0  0
- UBC  CONST_30  H3   C3   N4   C5   180.00   0.0  0
- UBC  CONST_31  O8   C5   N6   C17    0.00   0.0  0
- UBC  CONST_32  O7   C1   N6   C17    0.00   0.0  0
- UBC  CONST_33  CB   N4   C5   O8     0.00   0.0  0
- UBC  Var_01    N6   C17  C21  C22  162.92  30.0  2
- UBC  Var_02    C5   N6   C17  C21  -78.19  30.0  2
- UBC  Var_03    C23  C22  C10  O1    28.05  30.0  2
- UBC  Var_04    CA   CB   N4   C5   -82.21  30.0  2
+ UBC  CONST_01  C25  C24  C23  C22     0.00   0.0  0
+ UBC  CONST_02  C25  C26  C21  C22     0.00   0.0  0
+ UBC  CONST_03  C26  C21  C22  C23     0.00   0.0  0
+ UBC  CONST_04  C26  C25  C24  C23     0.00   0.0  0
+ UBC  CONST_05  C21  C22  C23  C24     0.00   0.0  0
+ UBC  CONST_06  C21  C26  C25  C24     0.00   0.0  0
+ UBC  CONST_07  C3   N4   C5   N6      0.00   0.0  0
+ UBC  CONST_08  C3   C2   C1   N6      0.00   0.0  0
+ UBC  CONST_09  C2   C1   N6   C5      0.00   0.0  0
+ UBC  CONST_10  C2   C3   N4   C5      0.00   0.0  0
+ UBC  CONST_11  N4   C5   N6   C1      0.00   0.0  0
+ UBC  CONST_12  N4   C3   C2   C1      0.00   0.0  0
+ UBC  CONST_13  C24  C23  C22  C10   180.00   0.0  0
+ UBC  CONST_14  C26  C21  C22  C10   180.00   0.0  0
+ UBC  CONST_15  C17  C21  C22  C23   180.00   0.0  0
+ UBC  CONST_16  C17  C21  C26  C25   180.00   0.0  0
+ UBC  CONST_17  N4   C5   N6   C17   180.00   0.0  0
+ UBC  CONST_18  C2   C1   N6   C17   180.00   0.0  0
+ UBC  CONST_19  CB   N4   C5   N6    180.00   0.0  0
+ UBC  CONST_20  O7   C1   N6   C5    180.00   0.0  0
+ UBC  CONST_21  C1   N6   C5   O8    180.00   0.0  0
+ UBC  CONST_22  C3   N4   C5   O8    180.00   0.0  0
+ UBC  CONST_23  C3   C2   C1   O7    180.00   0.0  0
+ UBC  CONST_24  CB   N4   C3   C2    180.00   0.0  0
+ UBC  CONST_25  H24  C24  C23  C22   180.00   0.0  0
+ UBC  CONST_26  H26  C26  C21  C22   180.00   0.0  0
+ UBC  CONST_27  H25  C25  C24  C23   180.00   0.0  0
+ UBC  CONST_28  H23  C23  C24  C25   180.00   0.0  0
+ UBC  CONST_29  H2   C2   C1   N6    180.00   0.0  0
+ UBC  CONST_30  H3   C3   N4   C5    180.00   0.0  0
+ UBC  CONST_31  O8   C5   N6   C17     0.00   0.0  0
+ UBC  CONST_32  O7   C1   N6   C17     0.00   0.0  0
+ UBC  CONST_33  CB   N4   C5   O8      0.00   0.0  0
+ UBC  Var_01    N6   C17  C21  C22   162.92  30.0  2
+ UBC  Var_02    C5   N6   C17  C21   -78.19  30.0  2
+ UBC  Var_03    C23  C22  C10  O1     28.05  30.0  2
+ UBC  Var_04    CA   CB   N4   C5    -82.21  30.0  2
+ UBC  Var_05    N    CA   CB   N4    -54.68  30.0  3
+ UBC  Var_06    C    CA   CB   N4   -179.19  30.0  3
+ UBC  Var_07    HA   CA   CB   N4     65.31  30.0  3
+ UBC  Var_08    OXT  C    CA   CB    -64.68  30.0  2
+ UBC  Var_09    O    C    CA   CB    113.41  30.0  2
+ UBC  Var_10    OXT  C    CA   N     169.17  30.0  2
+ UBC  Var_11    O    C    CA   N     -12.74  30.0  2
+ UBC  Var_12    HN1  N    CA   CB    -62.14  30.0  3
+ UBC  Var_13    HN2  N    CA   CB     57.73  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

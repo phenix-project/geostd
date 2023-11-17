@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 8PR  8PR  (3S,4R)-3-[(1,3-benzodioxol-5-yloxy)methyl]-4-(4-fluorophenyl)piperidine  ligand  44  24  .  2022-07-23  2022-07-26
+ 8PR  8PR  (3S,4R)-3-[(1,3-benzodioxol-5-yloxy)methyl]-4-(4-fluorophenyl)piperidine  ligand  44  24  .  2022-07-23  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_8PR
@@ -240,38 +241,59 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 8PR  CONST_01  CAF  CAC  CAR  CAB    0.00   0.0  0
- 8PR  CONST_02  CAF  CAT  CAE  CAB    0.00   0.0  0
- 8PR  CONST_03  CAE  CAB  CAR  CAC    0.00   0.0  0
- 8PR  CONST_04  CAE  CAT  CAF  CAC    0.00   0.0  0
- 8PR  CONST_05  CAV  CAH  CAS  CAD    0.00   0.0  0
- 8PR  CONST_06  CAV  CAU  CAG  CAD    0.00   0.0  0
- 8PR  CONST_07  CAH  CAS  CAD  CAG    0.00   0.0  0
- 8PR  CONST_08  CAH  CAV  CAU  CAG    0.00   0.0  0
- 8PR  CONST_09  CAT  CAE  CAB  CAR    0.00   0.0  0
- 8PR  CONST_10  CAT  CAF  CAC  CAR    0.00   0.0  0
- 8PR  CONST_11  CAU  CAG  CAD  CAS    0.00   0.0  0
- 8PR  CONST_12  CAU  CAV  CAH  CAS    0.00   0.0  0
- 8PR  CONST_13  CAX  CAT  CAE  CAB  180.00   0.0  0
- 8PR  CONST_14  CAX  CAT  CAF  CAC  180.00   0.0  0
- 8PR  CONST_15  CAE  CAB  CAR  FAA  180.00   0.0  0
- 8PR  CONST_16  CAF  CAC  CAR  FAA  180.00   0.0  0
- 8PR  CONST_17  OAO  CAS  CAD  CAG  180.00   0.0  0
- 8PR  CONST_18  CAV  CAH  CAS  OAO  180.00   0.0  0
- 8PR  CONST_19  HAC  CAC  CAR  CAB  180.00   0.0  0
- 8PR  CONST_20  HAB  CAB  CAR  CAC  180.00   0.0  0
- 8PR  CONST_21  HAH  CAH  CAS  CAD  180.00   0.0  0
- 8PR  CONST_22  HAF  CAF  CAT  CAE  180.00   0.0  0
- 8PR  CONST_23  HAE  CAE  CAT  CAF  180.00   0.0  0
- 8PR  CONST_24  HAD  CAD  CAS  CAH  180.00   0.0  0
- 8PR  CONST_25  HAG  CAG  CAU  OAP    0.00   0.0  0
- 8PR  Var_01    CAW  CAK  NAN  CAI   53.70  30.0  1
- 8PR  Var_02    CAK  NAN  CAI  CAJ  -53.54  30.0  1
- 8PR  Var_03    CAU  CAV  OAQ  CAL    9.82  30.0  1
- 8PR  Var_04    CAV  CAU  OAP  CAL  -10.60  30.0  1
- 8PR  Var_05    CAX  CAJ  CAI  NAN   54.96  30.0  1
- 8PR  Var_06    HAL  CAL  OAP  CAU  135.47  30.0  1
- 8PR  Var_07    CAW  CAM  OAO  CAS  179.21  30.0  1
+ 8PR  CONST_01  CAF   CAC  CAR  CAB     0.00   0.0  0
+ 8PR  CONST_02  CAF   CAT  CAE  CAB     0.00   0.0  0
+ 8PR  CONST_03  CAE   CAB  CAR  CAC     0.00   0.0  0
+ 8PR  CONST_04  CAE   CAT  CAF  CAC     0.00   0.0  0
+ 8PR  CONST_05  CAV   CAH  CAS  CAD     0.00   0.0  0
+ 8PR  CONST_06  CAV   CAU  CAG  CAD     0.00   0.0  0
+ 8PR  CONST_07  CAH   CAS  CAD  CAG     0.00   0.0  0
+ 8PR  CONST_08  CAH   CAV  CAU  CAG     0.00   0.0  0
+ 8PR  CONST_09  CAT   CAE  CAB  CAR     0.00   0.0  0
+ 8PR  CONST_10  CAT   CAF  CAC  CAR     0.00   0.0  0
+ 8PR  CONST_11  CAU   CAG  CAD  CAS     0.00   0.0  0
+ 8PR  CONST_12  CAU   CAV  CAH  CAS     0.00   0.0  0
+ 8PR  CONST_13  CAX   CAT  CAE  CAB   180.00   0.0  0
+ 8PR  CONST_14  CAX   CAT  CAF  CAC   180.00   0.0  0
+ 8PR  CONST_15  CAE   CAB  CAR  FAA   180.00   0.0  0
+ 8PR  CONST_16  CAF   CAC  CAR  FAA   180.00   0.0  0
+ 8PR  CONST_17  OAO   CAS  CAD  CAG   180.00   0.0  0
+ 8PR  CONST_18  CAV   CAH  CAS  OAO   180.00   0.0  0
+ 8PR  CONST_19  HAC   CAC  CAR  CAB   180.00   0.0  0
+ 8PR  CONST_20  HAB   CAB  CAR  CAC   180.00   0.0  0
+ 8PR  CONST_21  HAH   CAH  CAS  CAD   180.00   0.0  0
+ 8PR  CONST_22  HAF   CAF  CAT  CAE   180.00   0.0  0
+ 8PR  CONST_23  HAE   CAE  CAT  CAF   180.00   0.0  0
+ 8PR  CONST_24  HAD   CAD  CAS  CAH   180.00   0.0  0
+ 8PR  CONST_25  HAG   CAG  CAU  OAP     0.00   0.0  0
+ 8PR  Var_01    CAW   CAK  NAN  CAI    53.70  30.0  1
+ 8PR  Var_02    CAK   NAN  CAI  CAJ   -53.54  30.0  1
+ 8PR  Var_03    CAU   CAV  OAQ  CAL     9.82  30.0  1
+ 8PR  Var_04    CAV   CAU  OAP  CAL   -10.60  30.0  1
+ 8PR  Var_05    CAX   CAJ  CAI  NAN    54.96  30.0  1
+ 8PR  Var_06    HAL   CAL  OAP  CAU   135.47  30.0  1
+ 8PR  Var_07    CAW   CAM  OAO  CAS   179.21  30.0  1
+ 8PR  Var_08    CAJ   CAX  CAT  CAE  -118.88  30.0  2
+ 8PR  Var_09    CAW   CAX  CAT  CAE   116.60  30.0  2
+ 8PR  Var_10    CAJ   CAX  CAT  CAF    60.78  30.0  2
+ 8PR  Var_11    CAW   CAX  CAT  CAF   -63.74  30.0  2
+ 8PR  Var_12    CAT   CAX  CAJ  CAI   179.15  30.0  1
+ 8PR  Var_13    CAW   CAX  CAJ  CAI   -54.49  30.0  1
+ 8PR  Var_14    CAK   CAW  CAX  CAJ    53.36  30.0  1
+ 8PR  Var_15    CAT   CAX  CAW  CAK   178.90  30.0  1
+ 8PR  Var_16    CAX   CAW  CAK  NAN   -54.07  30.0  1
+ 8PR  Var_17    CAV   OAQ  CAL  OAP   -16.22  30.0  1
+ 8PR  Var_18    CAM   CAW  CAX  CAJ   176.37  30.0  1
+ 8PR  Var_19    NAN   CAK  CAW  CAM  -176.47  30.0  1
+ 8PR  Var_20    CAT   CAX  CAW  CAM   -58.09  30.0  1
+ 8PR  Var_21    HAX   CAX  CAT  CAE    -1.44  30.0  2
+ 8PR  Var_22    HAW   CAW  CAX  CAJ   -64.66  30.0  1
+ 8PR  Var_23    CAM   OAO  CAS  CAD    -1.51  30.0  3
+ 8PR  Var_24    CAM   OAO  CAS  CAH   178.32  30.0  3
+ 8PR  Var_25    OAO   CAM  CAW  CAK   -60.66  30.0  3
+ 8PR  Var_26    CAX   CAW  CAM  OAO   177.40  30.0  1
+ 8PR  Var_27    HAM   CAM  CAW  CAK   178.71  30.0  3
+ 8PR  Var_28    HAMA  CAM  CAW  CAK    60.22  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

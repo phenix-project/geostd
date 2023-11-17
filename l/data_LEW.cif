@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LEW  LEW  1-beta-D-glucopyranosyl-4-naphthalen-1-yl-1H-1,2,3-triazole  ligand  45  26  .  2021-08-12  2021-08-12  
+ LEW  LEW  1-beta-D-glucopyranosyl-4-naphthalen-1-yl-1H-1,2,3-triazole  ligand  45  26  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LEW
@@ -240,44 +241,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LEW  CONST_01  C15  C16  C17  C18    0.00  0.0  0
- LEW  CONST_02  C15  C14  C13  C18    0.00  0.0  0
- LEW  CONST_03  C11  C12  C13  C18    0.00  0.0  0
- LEW  CONST_04  C11  C10  C9   C18    0.00  0.0  0
- LEW  CONST_07  C14  C13  C18  C17    0.00  0.0  0
- LEW  CONST_08  C12  C13  C18  C17  180.00  0.0  0
- LEW  CONST_09  C10  C9   C18  C17  180.00  0.0  0
- LEW  CONST_10  C8   C9   C18  C17    0.00  0.0  0
- LEW  CONST_11  C14  C15  C16  C17    0.00  0.0  0
- LEW  CONST_12  C13  C18  C17  C16    0.00  0.0  0
- LEW  CONST_13  C9   C18  C17  C16  180.00  0.0  0
- LEW  CONST_14  C13  C14  C15  C16    0.00  0.0  0
- LEW  CONST_15  C12  C13  C14  C15  180.00  0.0  0
- LEW  CONST_16  C9   C18  C13  C14  180.00  0.0  0
- LEW  CONST_17  C11  C12  C13  C14  180.00  0.0  0
- LEW  CONST_18  C10  C9   C18  C13    0.00  0.0  0
- LEW  CONST_19  C8   C9   C18  C13  180.00  0.0  0
- LEW  CONST_20  C10  C11  C12  C13    0.00  0.0  0
- LEW  CONST_21  C9   C18  C13  C12    0.00  0.0  0
- LEW  CONST_22  C9   C10  C11  C12    0.00  0.0  0
- LEW  CONST_23  C8   C9   C10  C11  180.00  0.0  0
- LEW  CONST_26  N1   C7   C8   C9   180.00  0.0  0
- LEW  CONST_27  N2   N3   C8   C9   180.00  0.0  0
- LEW  CONST_28  N2   N1   C7   C8     0.00  0.0  0
- LEW  CONST_29  N1   N2   N3   C8     0.00  0.0  0
- LEW  CONST_30  N2   N3   C8   C7     0.00  0.0  0
- LEW  CONST_31  N3   N2   N1   C7     0.00  0.0  0
- LEW  CONST_32  N1   C7   C8   N3     0.00  0.0  0
- LEW  CONST_33  C1   N1   C7   C8   180.00  0.0  0
- LEW  CONST_34  C1   N1   N2   N3   180.00  0.0  0
- LEW  CONST_35  H16  C16  C17  C18  180.00  0.0  0
- LEW  CONST_36  H14  C14  C13  C18  180.00  0.0  0
- LEW  CONST_37  H12  C12  C13  C18  180.00  0.0  0
- LEW  CONST_38  H10  C10  C9   C18  180.00  0.0  0
- LEW  CONST_39  H15  C15  C16  C17  180.00  0.0  0
- LEW  CONST_40  H17  C17  C16  C15  180.00  0.0  0
- LEW  CONST_41  H11  C11  C12  C13  180.00  0.0  0
- LEW  CONST_42  H7   C7   C8   C9     0.00  0.0  0
+ LEW  CONST_01  C15  C16  C17  C18     0.00   0.0  0
+ LEW  CONST_02  C15  C14  C13  C18     0.00   0.0  0
+ LEW  CONST_03  C11  C12  C13  C18     0.00   0.0  0
+ LEW  CONST_04  C11  C10  C9   C18     0.00   0.0  0
+ LEW  CONST_05  C14  C13  C18  C17     0.00   0.0  0
+ LEW  CONST_06  C12  C13  C18  C17   180.00   0.0  0
+ LEW  CONST_07  C10  C9   C18  C17   180.00   0.0  0
+ LEW  CONST_08  C8   C9   C18  C17     0.00   0.0  0
+ LEW  CONST_09  C14  C15  C16  C17     0.00   0.0  0
+ LEW  CONST_10  C13  C18  C17  C16     0.00   0.0  0
+ LEW  CONST_11  C9   C18  C17  C16   180.00   0.0  0
+ LEW  CONST_12  C13  C14  C15  C16     0.00   0.0  0
+ LEW  CONST_13  C12  C13  C14  C15   180.00   0.0  0
+ LEW  CONST_14  C9   C18  C13  C14   180.00   0.0  0
+ LEW  CONST_15  C11  C12  C13  C14   180.00   0.0  0
+ LEW  CONST_16  C10  C9   C18  C13     0.00   0.0  0
+ LEW  CONST_17  C8   C9   C18  C13   180.00   0.0  0
+ LEW  CONST_18  C10  C11  C12  C13     0.00   0.0  0
+ LEW  CONST_19  C9   C18  C13  C12     0.00   0.0  0
+ LEW  CONST_20  C9   C10  C11  C12     0.00   0.0  0
+ LEW  CONST_21  C8   C9   C10  C11   180.00   0.0  0
+ LEW  CONST_22  N1   C7   C8   C9    180.00   0.0  0
+ LEW  CONST_23  N2   N3   C8   C9    180.00   0.0  0
+ LEW  CONST_24  N2   N1   C7   C8      0.00   0.0  0
+ LEW  CONST_25  N1   N2   N3   C8      0.00   0.0  0
+ LEW  CONST_26  N2   N3   C8   C7      0.00   0.0  0
+ LEW  CONST_27  N3   N2   N1   C7      0.00   0.0  0
+ LEW  CONST_28  N1   C7   C8   N3      0.00   0.0  0
+ LEW  CONST_29  C1   N1   C7   C8    180.00   0.0  0
+ LEW  CONST_30  C1   N1   N2   N3    180.00   0.0  0
+ LEW  CONST_31  H16  C16  C17  C18   180.00   0.0  0
+ LEW  CONST_32  H14  C14  C13  C18   180.00   0.0  0
+ LEW  CONST_33  H12  C12  C13  C18   180.00   0.0  0
+ LEW  CONST_34  H10  C10  C9   C18   180.00   0.0  0
+ LEW  CONST_35  H15  C15  C16  C17   180.00   0.0  0
+ LEW  CONST_36  H17  C17  C16  C15   180.00   0.0  0
+ LEW  CONST_37  H11  C11  C12  C13   180.00   0.0  0
+ LEW  CONST_38  H7   C7   C8   C9      0.00   0.0  0
+ LEW  Var_01    C7   C8   C9   C18  -136.73  30.0  2
+ LEW  Var_02    N3   C8   C9   C18    45.37  30.0  2
+ LEW  Var_03    C7   C8   C9   C10    42.65  30.0  2
+ LEW  Var_04    N3   C8   C9   C10  -135.25  30.0  2
+ LEW  Var_05    C2   C1   N1   C7    123.31  30.0  1
+ LEW  Var_06    O5   C1   N1   C7   -115.00  30.0  1
+ LEW  Var_07    C2   C1   N1   N2    -55.82  30.0  1
+ LEW  Var_08    O5   C1   N1   N2     65.87  30.0  1
+ LEW  Var_09    C3   C2   C1   N1    179.13  30.0  1
+ LEW  Var_10    C5   O5   C1   N1    173.90  30.0  1
+ LEW  Var_11    C4   C3   C2   C1    -55.00  30.0  1
+ LEW  Var_12    C4   C5   O5   C1     60.70  30.0  1
+ LEW  Var_13    C3   C2   C1   O5     59.38  30.0  1
+ LEW  Var_14    C3   C4   C5   O5    -54.65  30.0  1
+ LEW  Var_15    C2   C1   O5   C5    -63.88  30.0  1
+ LEW  Var_16    C2   C3   C4   C5     53.91  30.0  1
+ LEW  Var_17    O2   C2   C1   N1    -62.02  30.0  1
+ LEW  Var_18    O3   C3   C2   C1   -174.72  30.0  1
+ LEW  Var_19    C6   C5   O5   C1   -177.38  30.0  1
+ LEW  Var_20    O2   C2   C1   O5    178.23  30.0  1
+ LEW  Var_21    O4   C4   C5   O5   -176.24  30.0  1
+ LEW  Var_22    O3   C3   C4   C5    176.24  30.0  1
+ LEW  Var_23    C3   C4   C5   C6   -173.88  30.0  1
+ LEW  Var_24    O2   C2   C3   C4   -175.26  30.0  1
+ LEW  Var_25    C2   C3   C4   O4    173.18  30.0  1
+ LEW  Var_26    H1   C1   N1   C7      4.26  30.0  1
+ LEW  Var_27    H2   C2   C1   N1     61.37  30.0  1
+ LEW  Var_28    H3   C3   C2   C1     62.80  30.0  1
+ LEW  Var_29    H5   C5   O5   C1    -58.78  30.0  1
+ LEW  Var_30    H4   C4   C5   O5     63.54  30.0  1
+ LEW  Var_31    O6   C6   C5   O5     62.38  30.0  3
+ LEW  Var_32    O4   C4   C5   C6     64.54  30.0  1
+ LEW  Var_33    C4   C5   C6   O6   -176.89  30.0  2
+ LEW  Var_34    O3   C3   C4   O4    -64.49  30.0  1
+ LEW  Var_35    O2   C2   C3   O3     65.02  30.0  1
+ LEW  Var_36    HO2  O2   C2   C1     92.78  30.0  3
+ LEW  Var_37    H6   C6   C5   O5   -175.88  30.0  3
+ LEW  Var_38    H6A  C6   C5   O5    -59.88  30.0  3
+ LEW  Var_39    HO4  O4   C4   C5    179.89  30.0  3
+ LEW  Var_40    HO3  O3   C3   C4    172.12  30.0  3
+ LEW  Var_41    HO6  O6   C6   C5    169.49  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

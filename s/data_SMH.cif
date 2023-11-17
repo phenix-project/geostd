@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SMH  SMH  N-(2-ethoxyethyl)-N-{(2S)-2-hydroxy-3-[(2R)-6-hydroxy-4-oxo-3,4-dihydro-1'H-spiro[chromene-2,3'-piperidin]-1'-yl]propyl}-2,6-dimethylbenzenesulfonamide  ligand  76  38  .  2021-08-23  2021-08-23  
+ SMH  SMH  N-(2-ethoxyethyl)-N-{(2S)-2-hydroxy-3-[(2R)-6-hydroxy-4-oxo-3,4-dihydro-1'H-spiro[chromene-2,3'-piperidin]-1'-yl]propyl}-2,6-dimethylbenzenesulfonamide  ligand  76  38  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SMH
@@ -365,48 +366,76 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SMH  CONST_01  C4   C3   C2   C1      0.00   0.0  0
- SMH  CONST_02  C4   C5   C6   C1      0.00   0.0  0
- SMH  CONST_03  C5   C6   C1   C2      0.00   0.0  0
- SMH  CONST_04  C5   C4   C3   C2      0.00   0.0  0
- SMH  CONST_05  C6   C1   C2   C3      0.00   0.0  0
- SMH  CONST_06  C6   C5   C4   C3      0.00   0.0  0
- SMH  CONST_07  C28  C29  C30  C25     0.00   0.0  0
- SMH  CONST_08  C28  C27  C26  C25     0.00   0.0  0
- SMH  CONST_09  C29  C30  C25  C26     0.00   0.0  0
- SMH  CONST_10  C29  C28  C27  C26     0.00   0.0  0
- SMH  CONST_11  C30  C25  C26  C27     0.00   0.0  0
- SMH  CONST_12  C30  C29  C28  C27     0.00   0.0  0
- SMH  CONST_13  O16  C1   C2   C3    180.00   0.0  0
- SMH  CONST_14  O16  C1   C6   C5    180.00   0.0  0
- SMH  CONST_15  C31  C30  C25  C26   180.00   0.0  0
- SMH  CONST_16  S33  C25  C26  C27   180.00   0.0  0
- SMH  CONST_17  C32  C26  C27  C28   180.00   0.0  0
- SMH  CONST_18  C31  C30  C29  C28   180.00   0.0  0
- SMH  CONST_19  S33  C25  C30  C29   180.00   0.0  0
- SMH  CONST_20  C32  C26  C25  C30   180.00   0.0  0
- SMH  CONST_21  H3   C3   C2   C1    180.00   0.0  0
- SMH  CONST_22  H6   C6   C1   C2    180.00   0.0  0
- SMH  CONST_23  H2   C2   C3   C4    180.00   0.0  0
- SMH  CONST_24  H29  C29  C30  C25   180.00   0.0  0
- SMH  CONST_25  H27  C27  C26  C25   180.00   0.0  0
- SMH  CONST_26  H28  C28  C27  C26   180.00   0.0  0
- SMH  Var_01    C9   C10  C5   C4      1.61  30.0  1
- SMH  Var_02    C8   C9   C10  C5     25.82  30.0  1
- SMH  Var_03    C13  N12  C11  C8    -65.73  30.0  1
- SMH  Var_04    C13  C14  C15  C8     50.37  30.0  1
- SMH  Var_05    C14  C13  N12  C11    62.22  30.0  1
- SMH  Var_06    C15  C14  C13  N12   -54.00  30.0  1
- SMH  Var_07    C19  C18  N12  C11   -82.03  30.0  3
- SMH  Var_08    C30  C25  S33  N22  -115.24  30.0  2
- SMH  Var_09    H31  C31  C30  C25   -63.91  30.0  2
- SMH  Var_10    H32  C32  C26  C25    63.49  30.0  2
- SMH  Var_11    C25  S33  N22  C21    68.73  30.0  1
- SMH  Var_12    C23  N22  C21  C19    73.70  30.0  2
- SMH  Var_13    C24  C23  N22  C21    70.07  30.0  1
- SMH  Var_14    O36  C24  C23  N22    64.20  30.0  3
- SMH  Var_15    C37  C38  O36  C24   177.59  30.0  3
- SMH  Var_16    H37  C37  C38  O36    61.73  30.0  3
+ SMH  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ SMH  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ SMH  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ SMH  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ SMH  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ SMH  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ SMH  CONST_07  C28   C29  C30  C25     0.00   0.0  0
+ SMH  CONST_08  C28   C27  C26  C25     0.00   0.0  0
+ SMH  CONST_09  C29   C30  C25  C26     0.00   0.0  0
+ SMH  CONST_10  C29   C28  C27  C26     0.00   0.0  0
+ SMH  CONST_11  C30   C25  C26  C27     0.00   0.0  0
+ SMH  CONST_12  C30   C29  C28  C27     0.00   0.0  0
+ SMH  CONST_13  O16   C1   C2   C3    180.00   0.0  0
+ SMH  CONST_14  O16   C1   C6   C5    180.00   0.0  0
+ SMH  CONST_15  C31   C30  C25  C26   180.00   0.0  0
+ SMH  CONST_16  S33   C25  C26  C27   180.00   0.0  0
+ SMH  CONST_17  C32   C26  C27  C28   180.00   0.0  0
+ SMH  CONST_18  C31   C30  C29  C28   180.00   0.0  0
+ SMH  CONST_19  S33   C25  C30  C29   180.00   0.0  0
+ SMH  CONST_20  C32   C26  C25  C30   180.00   0.0  0
+ SMH  CONST_21  H3    C3   C2   C1    180.00   0.0  0
+ SMH  CONST_22  H6    C6   C1   C2    180.00   0.0  0
+ SMH  CONST_23  H2    C2   C3   C4    180.00   0.0  0
+ SMH  CONST_24  H29   C29  C30  C25   180.00   0.0  0
+ SMH  CONST_25  H27   C27  C26  C25   180.00   0.0  0
+ SMH  CONST_26  H28   C28  C27  C26   180.00   0.0  0
+ SMH  Var_01    C9    C10  C5   C4      1.61  30.0  1
+ SMH  Var_02    C8    C9   C10  C5     25.82  30.0  1
+ SMH  Var_03    C13   N12  C11  C8    -65.73  30.0  1
+ SMH  Var_04    C13   C14  C15  C8     50.37  30.0  1
+ SMH  Var_05    C14   C13  N12  C11    62.22  30.0  1
+ SMH  Var_06    C15   C14  C13  N12   -54.00  30.0  1
+ SMH  Var_07    C19   C18  N12  C11   -82.03  30.0  3
+ SMH  Var_08    C30   C25  S33  N22  -115.24  30.0  2
+ SMH  Var_09    H31   C31  C30  C25   -63.91  30.0  2
+ SMH  Var_10    H32   C32  C26  C25    63.49  30.0  2
+ SMH  Var_11    C25   S33  N22  C21    68.73  30.0  1
+ SMH  Var_12    C23   N22  C21  C19    73.70  30.0  2
+ SMH  Var_13    C24   C23  N22  C21    70.07  30.0  1
+ SMH  Var_14    O36   C24  C23  N22    64.20  30.0  3
+ SMH  Var_15    C37   C38  O36  C24   177.59  30.0  3
+ SMH  Var_16    H37   C37  C38  O36    61.73  30.0  3
+ SMH  Var_17    C8    O7   C4   C3    148.61  30.0  1
+ SMH  Var_18    C9    C8   O7   C4     57.66  30.0  1
+ SMH  Var_19    C11   C8   O7   C4    -63.82  30.0  1
+ SMH  Var_20    C15   C8   O7   C4    179.11  30.0  1
+ SMH  Var_21    C8    O7   C4   C5    -31.21  30.0  1
+ SMH  Var_22    C10   C9   C8   O7    -53.92  30.0  1
+ SMH  Var_23    N12   C11  C8   O7    -57.14  30.0  3
+ SMH  Var_24    C14   C15  C8   O7     66.33  30.0  3
+ SMH  Var_25    N12   C11  C8   C9   -176.92  30.0  3
+ SMH  Var_26    C14   C15  C8   C9   -174.94  30.0  3
+ SMH  Var_27    C11   C8   C9   C10    66.49  30.0  1
+ SMH  Var_28    C15   C8   C9   C10  -171.54  30.0  1
+ SMH  Var_29    C14   C15  C8   C11   -51.43  30.0  3
+ SMH  Var_30    C15   C8   C11  N12    58.72  30.0  3
+ SMH  Var_31    H11   C11  C8   O7     64.36  30.0  3
+ SMH  Var_32    H11A  C11  C8   O7    179.47  30.0  3
+ SMH  Var_33    H15   C15  C8   O7   -173.41  30.0  3
+ SMH  Var_34    H15A  C15  C8   O7    -57.61  30.0  3
+ SMH  Var_35    HO16  O16  C1   C2      2.87  30.0  2
+ SMH  Var_36    O20   C19  C18  N12   -70.38  30.0  2
+ SMH  Var_37    C21   C19  C18  N12   163.22  30.0  2
+ SMH  Var_38    H19   C19  C18  N12    44.78  30.0  2
+ SMH  Var_39    N22   C21  C19  C18  -176.67  30.0  3
+ SMH  Var_40    N22   C21  C19  O20    56.94  30.0  3
+ SMH  Var_41    C38   O36  C24  C23  -150.14  30.0  1
+ SMH  Var_42    HO20  O20  C19  C18   -66.88  30.0  3
+ SMH  Var_43    H21   C21  C19  C18   -53.48  30.0  3
+ SMH  Var_44    H21A  C21  C19  C18    61.27  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

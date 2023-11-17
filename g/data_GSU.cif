@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GSU  GSU  5'-O-(L-alpha-glutamylsulfamoyl)adenosine  L-peptide  52  32  .  2022-03-18  2022-07-25
+ GSU  GSU  5'-O-(L-alpha-glutamylsulfamoyl)adenosine  L-peptide  52  32  .  2022-03-18  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_GSU
@@ -265,40 +266,53 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GSU  CONST_01  N9    C4   N3   C2    180.00   0.0  0
- GSU  CONST_02  C5    C4   N3   C2      0.00   0.0  0
- GSU  CONST_03  C5    C6   N1   C2      0.00   0.0  0
- GSU  CONST_04  C6    C5   C4   N9    180.00   0.0  0
- GSU  CONST_05  N7    C5   C4   N9      0.00   0.0  0
- GSU  CONST_06  C5    N7   C8   N9      0.00   0.0  0
- GSU  CONST_07  N7    C8   N9   C4      0.00   0.0  0
- GSU  CONST_08  N1    C2   N3   C4      0.00   0.0  0
- GSU  CONST_09  N1    C6   C5   C4      0.00   0.0  0
- GSU  CONST_10  C8    N7   C5   C4      0.00   0.0  0
- GSU  CONST_11  C6    N1   C2   N3      0.00   0.0  0
- GSU  CONST_12  C8    N9   C4   N3    180.00   0.0  0
- GSU  CONST_13  C6    C5   C4   N3      0.00   0.0  0
- GSU  CONST_14  N7    C5   C4   N3    180.00   0.0  0
- GSU  CONST_15  N7    C5   C6   N1    180.00   0.0  0
- GSU  CONST_16  C8    N7   C5   C6    180.00   0.0  0
- GSU  CONST_17  C8    N9   C4   C5      0.00   0.0  0
- GSU  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
- GSU  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
- GSU  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
- GSU  CONST_21  N6    C6   N1   C2    180.00   0.0  0
- GSU  CONST_22  N6    C6   C5   C4    180.00   0.0  0
- GSU  CONST_23  N7    C5   C6   N6      0.00   0.0  0
- GSU  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
- GSU  CONST_25  HC2   C2   N3   C4    180.00   0.0  0
- GSU  CONST_26  HN61  N6   C6   N1    180.00   0.0  0
- GSU  CONST_27  HN62  N6   C6   N1      0.00   0.0  0
- GSU  CONST_28  CA    C    N10  S     180.00   0.0  0
- GSU  CONST_29  O     C    N10  S       0.00   0.0  0
- GSU  CONST_30  H10   N10  C    CA      0.00   0.0  0
- GSU  Var_01    C4'   C5'  O5'  S    -171.28  30.0  3
- GSU  Var_02    CD    CG   CB   CA   -179.17  30.0  3
- GSU  Var_03    OE1   CD   CG   CB    172.97  30.0  3
- GSU  Var_04    O1S   S    N10  C    -173.30  30.0  1
+ GSU  CONST_01  N9    C4   N3   C2    180.00      0.0   0
+ GSU  CONST_02  C5    C4   N3   C2      0.00      0.0   0
+ GSU  CONST_03  C5    C6   N1   C2      0.00      0.0   0
+ GSU  CONST_04  C6    C5   C4   N9    180.00      0.0   0
+ GSU  CONST_05  N7    C5   C4   N9      0.00      0.0   0
+ GSU  CONST_06  C5    N7   C8   N9      0.00      0.0   0
+ GSU  CONST_07  N7    C8   N9   C4      0.00      0.0   0
+ GSU  CONST_08  N1    C2   N3   C4      0.00      0.0   0
+ GSU  CONST_09  N1    C6   C5   C4      0.00      0.0   0
+ GSU  CONST_10  C8    N7   C5   C4      0.00      0.0   0
+ GSU  CONST_11  C6    N1   C2   N3      0.00      0.0   0
+ GSU  CONST_12  C8    N9   C4   N3    180.00      0.0   0
+ GSU  CONST_13  C6    C5   C4   N3      0.00      0.0   0
+ GSU  CONST_14  N7    C5   C4   N3    180.00      0.0   0
+ GSU  CONST_15  N7    C5   C6   N1    180.00      0.0   0
+ GSU  CONST_16  C8    N7   C5   C6    180.00      0.0   0
+ GSU  CONST_17  C8    N9   C4   C5      0.00      0.0   0
+ GSU  CONST_18  N3    C4   N9   C1'     0.00      0.0   0
+ GSU  CONST_19  C5    C4   N9   C1'   180.00      0.0   0
+ GSU  CONST_20  N7    C8   N9   C1'   180.00      0.0   0
+ GSU  CONST_21  N6    C6   N1   C2    180.00      0.0   0
+ GSU  CONST_22  N6    C6   C5   C4    180.00      0.0   0
+ GSU  CONST_23  N7    C5   C6   N6      0.00      0.0   0
+ GSU  CONST_24  H8    C8   N9   C1'     0.00      0.0   0
+ GSU  CONST_25  HC2   C2   N3   C4    180.00      0.0   0
+ GSU  CONST_26  HN61  N6   C6   N1    180.00      0.0   0
+ GSU  CONST_27  HN62  N6   C6   N1      0.00      0.0   0
+ GSU  CONST_28  CA    C    N10  S     180.00      0.0   0
+ GSU  CONST_29  O     C    N10  S       0.00      0.0   0
+ GSU  CONST_30  H10   N10  C    CA      0.00      0.0   0
+ GSU  Var_01    C4'   C5'  O5'  S    -171.28     30.0   3
+ GSU  Var_02    CD    CG   CB   CA   -179.17     30.0   3
+ GSU  Var_03    OE1   CD   CG   CB    172.97     30.0   3
+ GSU  Var_04    O1S   S    N10  C    -173.30     30.0   1
+ GSU  Var_05    H1'   C1'  O4'  C4'   104.57     30.0   1
+ GSU  Var_06    H2'   C2'  C3'  C4'    78.81     30.0   1
+ GSU  Var_07    H3'   C3'  C4'  O4'   148.97     30.0   1
+ GSU  Var_08    H4'   C4'  O4'  C1'  -128.49     30.0   1
+ GSU  Var_09    HO3'  O3'  C3'  C4'   156.34     30.0   3
+ GSU  Var_10    H5'1  C5'  C4'  O4'   -60.86     30.0   2
+ GSU  Var_11    H5'2  C5'  C4'  O4'   178.61     30.0   2
+ GSU  Var_12    HO2'  O2'  C2'  C1'   160.86     30.0   3
+ GSU  Var_13    HB2   CB   CA   N      60.06     30.0   3
+ GSU  Var_14    HB3   CB   CA   N     175.82     30.0   3
+ GSU  Var_15    C     CA   N    H    170.000  180.000  72
+ GSU  Var_16    H2    N    CA   CB    -70.32     30.0   3
+ GSU  Var_17    HA    CA   CB   CG     56.15     30.0   2
 
 loop_
 _chem_comp_chir.comp_id

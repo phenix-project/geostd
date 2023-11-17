@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PUG  PUG  1-deoxy-1-(2,6,8-trioxo-1,2,3,6,7,8-hexahydro-9H-purin-9-yl)-D-arabinitol  ligand  35  21  .  2022-07-22  2022-07-26
+ PUG  PUG  1-deoxy-1-(2,6,8-trioxo-1,2,3,6,7,8-hexahydro-9H-purin-9-yl)-D-arabinitol  ligand  35  21  .  2022-07-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PUG
@@ -197,38 +198,59 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PUG  CONST_01  C9   C4   N3  C2    0.00   0.0  0
- PUG  CONST_02  C9   C8   N1  C2    0.00   0.0  0
- PUG  CONST_03  N7   C8   N1  C2  180.00   0.0  0
- PUG  CONST_04  C8   N1   C2  N3    0.00   0.0  0
- PUG  CONST_05  C8   C9   C4  N3    0.00   0.0  0
- PUG  CONST_06  N5   C9   C4  N3  180.00   0.0  0
- PUG  CONST_07  N1   C2   N3  C4    0.00   0.0  0
- PUG  CONST_08  N1   C8   C9  C4    0.00   0.0  0
- PUG  CONST_09  N7   C8   C9  C4  180.00   0.0  0
- PUG  CONST_10  C6   N5   C9  C4  180.00   0.0  0
- PUG  CONST_11  N5   C9   C8  N1  180.00   0.0  0
- PUG  CONST_12  C6   N7   C8  N1  180.00   0.0  0
- PUG  CONST_13  C6   N5   C9  C8    0.00   0.0  0
- PUG  CONST_14  N5   C6   N7  C8    0.00   0.0  0
- PUG  CONST_15  C6   N7   C8  C9    0.00   0.0  0
- PUG  CONST_16  N7   C6   N5  C9    0.00   0.0  0
- PUG  CONST_17  N7   C8   C9  N5    0.00   0.0  0
- PUG  CONST_18  C4   N3   C2  O1  180.00   0.0  0
- PUG  CONST_19  C8   N1   C2  O1  180.00   0.0  0
- PUG  CONST_20  O2   C4   N3  C2  180.00   0.0  0
- PUG  CONST_21  C8   C9   C4  O2  180.00   0.0  0
- PUG  CONST_22  N5   C9   C4  O2    0.00   0.0  0
- PUG  CONST_23  C10  N7   C8  N1    0.00   0.0  0
- PUG  CONST_24  O4   C6   N7  C8  180.00   0.0  0
- PUG  CONST_25  C10  N7   C8  C9  180.00   0.0  0
- PUG  CONST_26  O4   C6   N5  C9  180.00   0.0  0
- PUG  CONST_27  C10  N7   C6  N5  180.00   0.0  0
- PUG  CONST_28  H1   N1   C2  N3  180.00   0.0  0
- PUG  CONST_29  H5   N5   C9  C4    0.00   0.0  0
- PUG  CONST_30  H3   N3   C2  N1  180.00   0.0  0
- PUG  CONST_31  C10  N7   C6  O4    0.00   0.0  0
- PUG  Var_01    C11  C10  N7  C8  -88.65  30.0  2
+ PUG  CONST_01  C9    C4   N3   C2      0.00   0.0  0
+ PUG  CONST_02  C9    C8   N1   C2      0.00   0.0  0
+ PUG  CONST_03  N7    C8   N1   C2    180.00   0.0  0
+ PUG  CONST_04  C8    N1   C2   N3      0.00   0.0  0
+ PUG  CONST_05  C8    C9   C4   N3      0.00   0.0  0
+ PUG  CONST_06  N5    C9   C4   N3    180.00   0.0  0
+ PUG  CONST_07  N1    C2   N3   C4      0.00   0.0  0
+ PUG  CONST_08  N1    C8   C9   C4      0.00   0.0  0
+ PUG  CONST_09  N7    C8   C9   C4    180.00   0.0  0
+ PUG  CONST_10  C6    N5   C9   C4    180.00   0.0  0
+ PUG  CONST_11  N5    C9   C8   N1    180.00   0.0  0
+ PUG  CONST_12  C6    N7   C8   N1    180.00   0.0  0
+ PUG  CONST_13  C6    N5   C9   C8      0.00   0.0  0
+ PUG  CONST_14  N5    C6   N7   C8      0.00   0.0  0
+ PUG  CONST_15  C6    N7   C8   C9      0.00   0.0  0
+ PUG  CONST_16  N7    C6   N5   C9      0.00   0.0  0
+ PUG  CONST_17  N7    C8   C9   N5      0.00   0.0  0
+ PUG  CONST_18  C4    N3   C2   O1    180.00   0.0  0
+ PUG  CONST_19  C8    N1   C2   O1    180.00   0.0  0
+ PUG  CONST_20  O2    C4   N3   C2    180.00   0.0  0
+ PUG  CONST_21  C8    C9   C4   O2    180.00   0.0  0
+ PUG  CONST_22  N5    C9   C4   O2      0.00   0.0  0
+ PUG  CONST_23  C10   N7   C8   N1      0.00   0.0  0
+ PUG  CONST_24  O4    C6   N7   C8    180.00   0.0  0
+ PUG  CONST_25  C10   N7   C8   C9    180.00   0.0  0
+ PUG  CONST_26  O4    C6   N5   C9    180.00   0.0  0
+ PUG  CONST_27  C10   N7   C6   N5    180.00   0.0  0
+ PUG  CONST_28  H1    N1   C2   N3    180.00   0.0  0
+ PUG  CONST_29  H5    N5   C9   C4      0.00   0.0  0
+ PUG  CONST_30  H3    N3   C2   N1    180.00   0.0  0
+ PUG  CONST_31  C10   N7   C6   O4      0.00   0.0  0
+ PUG  Var_01    C11   C10  N7   C8    -88.65  30.0  2
+ PUG  Var_02    O19   C11  C10  N7     58.76  30.0  3
+ PUG  Var_03    C12   C11  C10  N7   -174.76  30.0  3
+ PUG  Var_04    H11   C11  C10  N7    -56.99  30.0  3
+ PUG  Var_05    O21   C12  C11  C10   -60.93  30.0  3
+ PUG  Var_06    C13   C12  C11  C10   173.17  30.0  3
+ PUG  Var_07    O23   C13  C12  C11   -47.82  30.0  3
+ PUG  Var_08    C14   C13  C12  C11  -173.01  30.0  3
+ PUG  Var_09    O21   C12  C11  O19    64.36  30.0  3
+ PUG  Var_10    C13   C12  C11  O19   -61.54  30.0  3
+ PUG  Var_11    O26   C14  C13  C12  -173.35  30.0  3
+ PUG  Var_12    O23   C13  C12  O21  -173.44  30.0  3
+ PUG  Var_13    C14   C13  C12  O21    61.37  30.0  3
+ PUG  Var_14    O26   C14  C13  O23    61.56  30.0  3
+ PUG  Var_15    H19   O19  C11  C10    73.15  30.0  3
+ PUG  Var_16    H12   C12  C11  C10    54.27  30.0  3
+ PUG  Var_17    H21   O21  C12  C11   -88.38  30.0  3
+ PUG  Var_18    H13   C13  C12  C11    68.00  30.0  3
+ PUG  Var_19    H23   O23  C13  C12   -70.04  30.0  3
+ PUG  Var_20    H141  C14  C13  C12    64.93  30.0  3
+ PUG  Var_21    H142  C14  C13  C12   -51.21  30.0  3
+ PUG  Var_22    H26   O26  C14  C13  -179.28  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

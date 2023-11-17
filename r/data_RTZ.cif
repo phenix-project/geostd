@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RTZ  RTZ  10-{2-[(2R)-1-methylpiperidin-2-yl]ethyl}-2-(methylsulfanyl)-10H-phenothiazine  ligand  51  25  .  2021-08-23  2021-08-23  
+ RTZ  RTZ  10-{2-[(2R)-1-methylpiperidin-2-yl]ethyl}-2-(methylsulfanyl)-10H-phenothiazine  ligand  51  25  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RTZ
@@ -268,37 +269,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RTZ  CONST_01  CAT  CAI  CAD  CAC     0.00   0.0  0
- RTZ  CONST_02  CAT  CAR  CAH  CAC     0.00   0.0  0
- RTZ  CONST_03  CAR  CAH  CAC  CAD     0.00   0.0  0
- RTZ  CONST_04  CAR  CAT  CAI  CAD     0.00   0.0  0
- RTZ  CONST_05  CAI  CAD  CAC  CAH     0.00   0.0  0
- RTZ  CONST_06  CAI  CAT  CAR  CAH     0.00   0.0  0
- RTZ  CONST_07  CAS  CAU  CAK  CAJ     0.00   0.0  0
- RTZ  CONST_08  CAS  CAO  CAQ  CAJ     0.00   0.0  0
- RTZ  CONST_09  CAO  CAQ  CAJ  CAK     0.00   0.0  0
- RTZ  CONST_10  CAO  CAS  CAU  CAK     0.00   0.0  0
- RTZ  CONST_11  CAU  CAK  CAJ  CAQ     0.00   0.0  0
- RTZ  CONST_12  CAU  CAS  CAO  CAQ     0.00   0.0  0
- RTZ  CONST_13  SAX  CAQ  CAJ  CAK   180.00   0.0  0
- RTZ  CONST_14  SAX  CAQ  CAO  CAS   180.00   0.0  0
- RTZ  CONST_15  HAI  CAI  CAD  CAC   180.00   0.0  0
- RTZ  CONST_16  HAH  CAH  CAC  CAD   180.00   0.0  0
- RTZ  CONST_17  HAD  CAD  CAC  CAH   180.00   0.0  0
- RTZ  CONST_18  HAC  CAC  CAD  CAI   180.00   0.0  0
- RTZ  CONST_19  HAO  CAO  CAQ  CAJ   180.00   0.0  0
- RTZ  CONST_20  HAJ  CAJ  CAQ  CAO   180.00   0.0  0
- RTZ  CONST_21  HAK  CAK  CAJ  CAQ   180.00   0.0  0
- RTZ  Var_01    NAV  CAM  CAF  CAE   -57.28  30.0  1
- RTZ  Var_02    CAP  CAG  CAE  CAF   -53.80  30.0  1
- RTZ  Var_03    CAP  NAV  CAM  CAF    59.25  30.0  1
- RTZ  Var_04    CAM  CAF  CAE  CAG    53.58  30.0  1
- RTZ  Var_05    CAS  NAW  CAR  CAH  -146.60  30.0  1
- RTZ  Var_06    CAR  NAW  CAS  CAO   146.53  30.0  1
- RTZ  Var_07    CAJ  CAQ  SAX  CAB     2.48  30.0  1
- RTZ  Var_08    NAW  CAN  CAL  CAP   148.77  30.0  3
- RTZ  Var_09    HAA  CAA  NAV  CAM    50.21  30.0  3
- RTZ  Var_10    HAB  CAB  SAX  CAQ   -62.89  30.0  3
+ RTZ  CONST_01  CAT   CAI  CAD  CAC     0.00   0.0  0
+ RTZ  CONST_02  CAT   CAR  CAH  CAC     0.00   0.0  0
+ RTZ  CONST_03  CAR   CAH  CAC  CAD     0.00   0.0  0
+ RTZ  CONST_04  CAR   CAT  CAI  CAD     0.00   0.0  0
+ RTZ  CONST_05  CAI   CAD  CAC  CAH     0.00   0.0  0
+ RTZ  CONST_06  CAI   CAT  CAR  CAH     0.00   0.0  0
+ RTZ  CONST_07  CAS   CAU  CAK  CAJ     0.00   0.0  0
+ RTZ  CONST_08  CAS   CAO  CAQ  CAJ     0.00   0.0  0
+ RTZ  CONST_09  CAO   CAQ  CAJ  CAK     0.00   0.0  0
+ RTZ  CONST_10  CAO   CAS  CAU  CAK     0.00   0.0  0
+ RTZ  CONST_11  CAU   CAK  CAJ  CAQ     0.00   0.0  0
+ RTZ  CONST_12  CAU   CAS  CAO  CAQ     0.00   0.0  0
+ RTZ  CONST_13  SAX   CAQ  CAJ  CAK   180.00   0.0  0
+ RTZ  CONST_14  SAX   CAQ  CAO  CAS   180.00   0.0  0
+ RTZ  CONST_15  HAI   CAI  CAD  CAC   180.00   0.0  0
+ RTZ  CONST_16  HAH   CAH  CAC  CAD   180.00   0.0  0
+ RTZ  CONST_17  HAD   CAD  CAC  CAH   180.00   0.0  0
+ RTZ  CONST_18  HAC   CAC  CAD  CAI   180.00   0.0  0
+ RTZ  CONST_19  HAO   CAO  CAQ  CAJ   180.00   0.0  0
+ RTZ  CONST_20  HAJ   CAJ  CAQ  CAO   180.00   0.0  0
+ RTZ  CONST_21  HAK   CAK  CAJ  CAQ   180.00   0.0  0
+ RTZ  Var_01    NAV   CAM  CAF  CAE   -57.28  30.0  1
+ RTZ  Var_02    CAP   CAG  CAE  CAF   -53.80  30.0  1
+ RTZ  Var_03    CAP   NAV  CAM  CAF    59.25  30.0  1
+ RTZ  Var_04    CAM   CAF  CAE  CAG    53.58  30.0  1
+ RTZ  Var_05    CAS   NAW  CAR  CAH  -146.60  30.0  1
+ RTZ  Var_06    CAR   NAW  CAS  CAO   146.53  30.0  1
+ RTZ  Var_07    CAJ   CAQ  SAX  CAB     2.48  30.0  1
+ RTZ  Var_08    NAW   CAN  CAL  CAP   148.77  30.0  3
+ RTZ  Var_09    HAA   CAA  NAV  CAM    50.21  30.0  3
+ RTZ  Var_10    HAB   CAB  SAX  CAQ   -62.89  30.0  3
+ RTZ  Var_11    NAV   CAP  CAG  CAE    55.04  30.0  1
+ RTZ  Var_12    CAM   NAV  CAP  CAG   -56.67  30.0  1
+ RTZ  Var_13    CAG   CAP  NAV  CAA   179.41  30.0  1
+ RTZ  Var_14    CAL   CAP  CAG  CAE   178.52  30.0  1
+ RTZ  Var_15    CAM   NAV  CAP  CAL  -178.68  30.0  1
+ RTZ  Var_16    HAP   CAP  CAG  CAE   -64.60  30.0  1
+ RTZ  Var_17    CAL   CAP  NAV  CAA    57.40  30.0  1
+ RTZ  Var_18    CAN   CAL  CAP  CAG    60.90  30.0  1
+ RTZ  Var_19    CAR   NAW  CAN  CAL   -80.20  30.0  3
+ RTZ  Var_20    CAS   NAW  CAN  CAL    82.05  30.0  3
+ RTZ  Var_21    NAV   CAP  CAL  CAN  -176.71  30.0  3
+ RTZ  Var_22    HAL   CAL  CAP  CAG   -61.80  30.0  1
+ RTZ  Var_23    HALA  CAL  CAP  CAG  -177.65  30.0  1
+ RTZ  Var_24    HAN   CAN  NAW  CAR   155.06  30.0  2
+ RTZ  Var_25    HANA  CAN  NAW  CAR    42.60  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

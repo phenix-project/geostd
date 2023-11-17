@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- APR  APR  '[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl [(2R,3S,4R,5R)-3,4,5-trihydroxytetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  57  36  .  2022-03-11  2022-03-11
+ APR  APR  '[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl [(2R,3S,4R,5R)-3,4,5-trihydroxytetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  57  36  .  2022-03-11  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_APR
@@ -288,37 +289,100 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- APR  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- APR  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- APR  CONST_03  N7    C5   C6   N1   180.00   0.0  0
- APR  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- APR  CONST_05  C5    C4   N3   C2     0.00   0.0  0
- APR  CONST_06  N9    C4   N3   C2   180.00   0.0  0
- APR  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- APR  CONST_08  C6    C5   C4   N3     0.00   0.0  0
- APR  CONST_09  N7    C5   C4   N3   180.00   0.0  0
- APR  CONST_10  C8    N9   C4   N3   180.00   0.0  0
- APR  CONST_11  C8    N7   C5   C4     0.00   0.0  0
- APR  CONST_12  N7    C8   N9   C4     0.00   0.0  0
- APR  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- APR  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- APR  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- APR  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- APR  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- APR  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- APR  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- APR  CONST_20  C1'   N9   C8   N7   180.00   0.0  0
- APR  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- APR  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- APR  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- APR  CONST_24  H2    C2   N3   C4   180.00   0.0  0
- APR  CONST_25  H8    C8   N9   C4   180.00   0.0  0
- APR  CONST_26  H61   N6   C6   N1   180.00   0.0  0
- APR  CONST_27  H62   N6   C6   N1     0.00   0.0  0
- APR  Var_01    C4D   C5D  O5D  PB    90.23  30.0  3
- APR  Var_02    O1A   PA   O5'  C5'  -64.85  30.0  3
- APR  Var_03    O1B   PB   O3A  PA   -28.50  30.0  3
- APR  Var_04    H5'1  C5'  O5'  PA    53.75  30.0  2
+ APR  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ APR  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ APR  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ APR  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ APR  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ APR  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ APR  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ APR  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ APR  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ APR  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ APR  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ APR  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ APR  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ APR  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ APR  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ APR  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ APR  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ APR  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ APR  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ APR  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ APR  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ APR  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ APR  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ APR  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ APR  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ APR  CONST_26  H61   N6   C6   N1    180.00   0.0  0
+ APR  CONST_27  H62   N6   C6   N1      0.00   0.0  0
+ APR  Var_01    C4D   C5D  O5D  PB     90.23  30.0  3
+ APR  Var_02    O1A   PA   O5'  C5'   -64.85  30.0  3
+ APR  Var_03    O1B   PB   O3A  PA    -28.50  30.0  3
+ APR  Var_04    H5'1  C5'  O5'  PA     53.75  30.0  2
+ APR  Var_05    C2'   C1'  N9   C4     71.48  30.0  2
+ APR  Var_06    O4'   C1'  N9   C4   -170.16  30.0  2
+ APR  Var_07    C2'   C1'  N9   C8   -112.50  30.0  2
+ APR  Var_08    O4'   C1'  N9   C8      5.86  30.0  2
+ APR  Var_09    C3'   C2'  C1'  N9     91.01  30.0  1
+ APR  Var_10    C4'   O4'  C1'  N9   -113.01  30.0  1
+ APR  Var_11    C4'   C3'  C2'  C1'    36.51  30.0  1
+ APR  Var_12    C3'   C4'  O4'  C1'    15.83  30.0  1
+ APR  Var_13    C4'   O4'  C1'  C2'     8.26  30.0  1
+ APR  Var_14    O4'   C4'  C3'  C2'   -32.94  30.0  1
+ APR  Var_15    O4'   C1'  C2'  C3'   -28.62  30.0  1
+ APR  Var_16    C3D   C2D  C1D  O4D    23.54  30.0  1
+ APR  Var_17    C2D   C3D  C4D  O4D    35.81  30.0  1
+ APR  Var_18    C3D   C4D  O4D  C1D   -22.70  30.0  1
+ APR  Var_19    C4D   C3D  C2D  C1D   -35.39  30.0  1
+ APR  Var_20    C4D   O4D  C1D  C2D    -0.65  30.0  1
+ APR  Var_21    O2'   C2'  C1'  N9   -151.96  30.0  1
+ APR  Var_22    O3'   C3'  C2'  C1'   158.88  30.0  1
+ APR  Var_23    C5'   C4'  O4'  C1'   137.84  30.0  1
+ APR  Var_24    C5'   C4'  C3'  C2'  -153.33  30.0  1
+ APR  Var_25    O4'   C1'  C2'  O2'    88.41  30.0  1
+ APR  Var_26    C4'   C3'  C2'  O2'   -76.69  30.0  1
+ APR  Var_27    O4'   C4'  C3'  O3'  -152.26  30.0  1
+ APR  Var_28    C1D   O4D  C4D  C5D   100.21  30.0  1
+ APR  Var_29    C2D   C3D  C4D  C5D   -86.43  30.0  1
+ APR  Var_30    O2D   C2D  C1D  O4D   148.33  30.0  1
+ APR  Var_31    O3D   C3D  C4D  O4D   -79.17  30.0  1
+ APR  Var_32    O3D   C3D  C2D  C1D    82.52  30.0  1
+ APR  Var_33    C4D   C3D  C2D  O2D  -155.85  30.0  1
+ APR  Var_34    O1D   C1D  C2D  C3D   144.38  30.0  1
+ APR  Var_35    O1D   C1D  O4D  C4D  -119.93  30.0  1
+ APR  Var_36    H'1   C1'  N9   C4    -50.27  30.0  2
+ APR  Var_37    H'2   C2'  C1'  N9    -29.03  30.0  1
+ APR  Var_38    H'3   C3'  C2'  C1'   -78.65  30.0  1
+ APR  Var_39    H'4   C4'  O4'  C1'  -101.33  30.0  1
+ APR  Var_40    HR'2  C2D  C1D  O4D   -90.09  30.0  1
+ APR  Var_41    HR'3  C3D  C4D  O4D   154.77  30.0  1
+ APR  Var_42    HR'4  C4D  O4D  C1D  -141.17  30.0  1
+ APR  Var_43    HR'1  C1D  C2D  C3D   -93.62  30.0  1
+ APR  Var_44    O3'   C3'  C2'  O2'    45.69  30.0  1
+ APR  Var_45    O5'   C5'  C4'  C3'   175.83  30.0  3
+ APR  Var_46    C5'   C4'  C3'  O3'    87.35  30.0  1
+ APR  Var_47    O5'   C5'  C4'  O4'    58.95  30.0  3
+ APR  Var_48    O4D   C4D  C5D  O5D    56.67  30.0  3
+ APR  Var_49    C3D   C4D  C5D  O5D   174.86  30.0  3
+ APR  Var_50    O3D   C3D  C4D  C5D   158.59  30.0  1
+ APR  Var_51    O1D   C1D  C2D  O2D   -90.82  30.0  1
+ APR  Var_52    O3D   C3D  C2D  O2D   -37.95  30.0  1
+ APR  Var_53    HO'2  O2'  C2'  C1'  -164.99  30.0  3
+ APR  Var_54    HO'3  O3'  C3'  C2'   163.02  30.0  3
+ APR  Var_55    H5'1  C5'  C4'  C3'   -62.19  30.0  3
+ APR  Var_56    H5'2  C5'  C4'  C3'    53.78  30.0  3
+ APR  Var_57    HOR1  O1D  C1D  O4D   -77.62  30.0  3
+ APR  Var_58    H5R1  C5D  C4D  O4D   -62.20  30.0  1
+ APR  Var_59    H5R2  C5D  C4D  O4D  -179.35  30.0  1
+ APR  Var_60    HOR2  O2D  C2D  C1D   171.04  30.0  3
+ APR  Var_61    HOR3  O3D  C3D  C2D  -175.24  30.0  3
+ APR  Var_62    PB    O3A  PA   O5'    64.56  30.0  3
+ APR  Var_63    PB    O3A  PA   O1A   179.40  30.0  3
+ APR  Var_64    PB    O3A  PA   O2A   -47.31  30.0  2
+ APR  Var_65    C5D   O5D  PB   O3A    90.00  30.0  3
+ APR  Var_66    C5D   O5D  PB   O1B  -154.85  30.0  3
+ APR  Var_67    C5D   O5D  PB   O2B   -21.20  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

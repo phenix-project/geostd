@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3DZ  3DZ  '(2S)-2-[3-(aminomethyl)benzyl]-3-[(R)-[(1R)-1-amino-3-phenylpropyl](hydroxy)phosphoryl]propanoic acid'  ligand  54  27  .  2021-08-04  2021-08-04  
+ 3DZ  3DZ  '(2S)-2-[3-(aminomethyl)benzyl]-3-[(R)-[(1R)-1-amino-3-phenylpropyl](hydroxy)phosphoryl]propanoic acid'  ligand  54  27  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3DZ
@@ -269,40 +270,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3DZ  CONST_01  CAI  CAJ  CAK  CAF    0.00   0.0  0
- 3DZ  CONST_02  CAI  CAH  CAG  CAF    0.00   0.0  0
- 3DZ  CONST_03  CAH  CAG  CAF  CAK    0.00   0.0  0
- 3DZ  CONST_04  CAH  CAI  CAJ  CAK    0.00   0.0  0
- 3DZ  CONST_05  CAG  CAF  CAK  CAJ    0.00   0.0  0
- 3DZ  CONST_06  CAG  CAH  CAI  CAJ    0.00   0.0  0
- 3DZ  CONST_07  CAW  CAV  CAU  CAT    0.00   0.0  0
- 3DZ  CONST_08  CAW  CAX  CAY  CAT    0.00   0.0  0
- 3DZ  CONST_09  CAX  CAW  CAV  CAU    0.00   0.0  0
- 3DZ  CONST_10  CAX  CAY  CAT  CAU    0.00   0.0  0
- 3DZ  CONST_11  CAV  CAU  CAT  CAY    0.00   0.0  0
- 3DZ  CONST_12  CAV  CAW  CAX  CAY    0.00   0.0  0
- 3DZ  CONST_13  CAJ  CAK  CAF  CAE  180.00   0.0  0
- 3DZ  CONST_14  CAH  CAG  CAF  CAE  180.00   0.0  0
- 3DZ  CONST_15  CAZ  CAH  CAG  CAF  180.00   0.0  0
- 3DZ  CONST_16  CAZ  CAH  CAI  CAJ  180.00   0.0  0
- 3DZ  CONST_17  CAV  CAU  CAT  CAS  180.00   0.0  0
- 3DZ  CONST_18  CAX  CAY  CAT  CAS  180.00   0.0  0
- 3DZ  CONST_19  H6   CAJ  CAK  CAF  180.00   0.0  0
- 3DZ  CONST_20  H13  CAG  CAF  CAK  180.00   0.0  0
- 3DZ  CONST_21  H7   CAI  CAJ  CAK  180.00   0.0  0
- 3DZ  CONST_22  H5   CAK  CAJ  CAI  180.00   0.0  0
- 3DZ  CONST_23  H29  CAV  CAU  CAT  180.00   0.0  0
- 3DZ  CONST_24  H27  CAX  CAY  CAT  180.00   0.0  0
- 3DZ  CONST_25  H28  CAW  CAV  CAU  180.00   0.0  0
- 3DZ  CONST_26  H26  CAY  CAT  CAU  180.00   0.0  0
- 3DZ  CONST_27  H25  CAU  CAT  CAY  180.00   0.0  0
- 3DZ  CONST_28  H1   OAC  CAB  OAA    0.00   0.0  0
- 3DZ  Var_01    CAK  CAF  CAE  CAD   77.42  30.0  2
- 3DZ  Var_02    NBA  CAZ  CAH  CAI   35.47  30.0  2
- 3DZ  Var_03    CAU  CAT  CAS  CAR  -81.71  30.0  2
- 3DZ  Var_04    CAT  CAS  CAR  CAP  171.37  30.0  2
- 3DZ  Var_05    H10  NBA  CAZ  CAH   70.47  30.0  3
- 3DZ  Var_06    OAN  PAM  CAL  CAD  -56.27  30.0  3
+ 3DZ  CONST_01  CAI  CAJ  CAK  CAF     0.00   0.0  0
+ 3DZ  CONST_02  CAI  CAH  CAG  CAF     0.00   0.0  0
+ 3DZ  CONST_03  CAH  CAG  CAF  CAK     0.00   0.0  0
+ 3DZ  CONST_04  CAH  CAI  CAJ  CAK     0.00   0.0  0
+ 3DZ  CONST_05  CAG  CAF  CAK  CAJ     0.00   0.0  0
+ 3DZ  CONST_06  CAG  CAH  CAI  CAJ     0.00   0.0  0
+ 3DZ  CONST_07  CAW  CAV  CAU  CAT     0.00   0.0  0
+ 3DZ  CONST_08  CAW  CAX  CAY  CAT     0.00   0.0  0
+ 3DZ  CONST_09  CAX  CAW  CAV  CAU     0.00   0.0  0
+ 3DZ  CONST_10  CAX  CAY  CAT  CAU     0.00   0.0  0
+ 3DZ  CONST_11  CAV  CAU  CAT  CAY     0.00   0.0  0
+ 3DZ  CONST_12  CAV  CAW  CAX  CAY     0.00   0.0  0
+ 3DZ  CONST_13  CAJ  CAK  CAF  CAE   180.00   0.0  0
+ 3DZ  CONST_14  CAH  CAG  CAF  CAE   180.00   0.0  0
+ 3DZ  CONST_15  CAZ  CAH  CAG  CAF   180.00   0.0  0
+ 3DZ  CONST_16  CAZ  CAH  CAI  CAJ   180.00   0.0  0
+ 3DZ  CONST_17  CAV  CAU  CAT  CAS   180.00   0.0  0
+ 3DZ  CONST_18  CAX  CAY  CAT  CAS   180.00   0.0  0
+ 3DZ  CONST_19  H6   CAJ  CAK  CAF   180.00   0.0  0
+ 3DZ  CONST_20  H13  CAG  CAF  CAK   180.00   0.0  0
+ 3DZ  CONST_21  H7   CAI  CAJ  CAK   180.00   0.0  0
+ 3DZ  CONST_22  H5   CAK  CAJ  CAI   180.00   0.0  0
+ 3DZ  CONST_23  H29  CAV  CAU  CAT   180.00   0.0  0
+ 3DZ  CONST_24  H27  CAX  CAY  CAT   180.00   0.0  0
+ 3DZ  CONST_25  H28  CAW  CAV  CAU   180.00   0.0  0
+ 3DZ  CONST_26  H26  CAY  CAT  CAU   180.00   0.0  0
+ 3DZ  CONST_27  H25  CAU  CAT  CAY   180.00   0.0  0
+ 3DZ  CONST_28  H1   OAC  CAB  OAA     0.00   0.0  0
+ 3DZ  Var_01    CAK  CAF  CAE  CAD    77.42  30.0  2
+ 3DZ  Var_02    NBA  CAZ  CAH  CAI    35.47  30.0  2
+ 3DZ  Var_03    CAU  CAT  CAS  CAR   -81.71  30.0  2
+ 3DZ  Var_04    CAT  CAS  CAR  CAP   171.37  30.0  2
+ 3DZ  Var_05    H10  NBA  CAZ  CAH    70.47  30.0  3
+ 3DZ  Var_06    OAN  PAM  CAL  CAD   -56.27  30.0  3
+ 3DZ  Var_07    CAF  CAE  CAD  CAB    55.52  30.0  2
+ 3DZ  Var_08    CAL  CAD  CAE  CAF   177.39  30.0  3
+ 3DZ  Var_09    H2   CAD  CAE  CAF   -63.34  30.0  3
+ 3DZ  Var_10    CAE  CAD  CAB  OAA    68.81  30.0  2
+ 3DZ  Var_11    CAL  CAD  CAB  OAA   -51.80  30.0  2
+ 3DZ  Var_12    PAM  CAL  CAD  CAB   -70.06  30.0  2
+ 3DZ  Var_13    CAE  CAD  CAB  OAC  -108.88  30.0  2
+ 3DZ  Var_14    CAL  CAD  CAB  OAC   130.52  30.0  2
+ 3DZ  Var_15    PAM  CAL  CAD  CAE   169.92  30.0  2
+ 3DZ  Var_16    NAQ  CAP  PAM  CAL    54.19  30.0  1
+ 3DZ  Var_17    CAR  CAP  PAM  CAL   176.34  30.0  1
+ 3DZ  Var_18    CAS  CAR  CAP  PAM    69.01  30.0  3
+ 3DZ  Var_19    NAQ  CAP  PAM  OAN   -71.43  30.0  1
+ 3DZ  Var_20    CAR  CAP  PAM  OAN    50.72  30.0  1
+ 3DZ  Var_21    NAQ  CAP  PAM  OAO   166.54  30.0  1
+ 3DZ  Var_22    CAR  CAP  PAM  OAO   -71.31  30.0  1
+ 3DZ  Var_23    CAS  CAR  CAP  NAQ  -168.08  30.0  3
+ 3DZ  Var_24    H14  CAL  CAD  CAB    53.89  30.0  2
+ 3DZ  Var_25    H15  CAL  CAD  CAB   170.59  30.0  2
+ 3DZ  Var_26    H17  CAP  PAM  CAL   -63.59  30.0  1
+ 3DZ  Var_27    H16  OAO  PAM  CAL    59.85  30.0  3
+ 3DZ  Var_28    H18  NAQ  CAP  PAM   -65.09  30.0  3
+ 3DZ  Var_29    H19  NAQ  CAP  PAM    55.26  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

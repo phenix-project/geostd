@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CI1  CI1  '(2Z)-4-[(3S)-1-(benzylsulfonyl)-3-(4-chlorobenzyl)piperidin-3-yl]-2-hydroxy-4-oxobut-2-enoic acid'  ligand  56  32  .  2021-08-08  2021-08-08  
+ CI1  CI1  '(2Z)-4-[(3S)-1-(benzylsulfonyl)-3-(4-chlorobenzyl)piperidin-3-yl]-2-hydroxy-4-oxobut-2-enoic acid'  ligand  56  32  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CI1
@@ -280,45 +281,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CI1  CONST_01  CZ   CE2  CD2  CGB     0.00   0.0  0
- CI1  CONST_02  CZ   CE1  CD1  CGB     0.00   0.0  0
- CI1  CONST_03  CE1  CD1  CGB  CD2     0.00   0.0  0
- CI1  CONST_04  CE1  CZ   CE2  CD2     0.00   0.0  0
- CI1  CONST_05  CD1  CGB  CD2  CE2     0.00   0.0  0
- CI1  CONST_06  CD1  CE1  CZ   CE2     0.00   0.0  0
- CI1  CONST_07  CZB  CEB  CDB  CGA     0.00   0.0  0
- CI1  CONST_08  CZB  CEA  CDA  CGA     0.00   0.0  0
- CI1  CONST_09  CEA  CDA  CGA  CDB     0.00   0.0  0
- CI1  CONST_10  CEA  CZB  CEB  CDB     0.00   0.0  0
- CI1  CONST_11  CDA  CGA  CDB  CEB     0.00   0.0  0
- CI1  CONST_12  CDA  CEA  CZB  CEB     0.00   0.0  0
- CI1  CONST_13  CE2  CD2  CGB  CP    180.00   0.0  0
- CI1  CONST_14  CE1  CD1  CGB  CP    180.00   0.0  0
- CI1  CONST_15  CEB  CDB  CGA  CO    180.00   0.0  0
- CI1  CONST_16  CEA  CDA  CGA  CO    180.00   0.0  0
- CI1  CONST_17  CL   CZB  CEB  CDB   180.00   0.0  0
- CI1  CONST_18  CL   CZB  CEA  CDA   180.00   0.0  0
- CI1  CONST_19  HE2  CE2  CD2  CGB   180.00   0.0  0
- CI1  CONST_20  HE1  CE1  CD1  CGB   180.00   0.0  0
- CI1  CONST_21  HD1  CD1  CGB  CD2   180.00   0.0  0
- CI1  CONST_22  HZ   CZ   CE2  CD2   180.00   0.0  0
- CI1  CONST_23  HD2  CD2  CE2  CZ    180.00   0.0  0
- CI1  CONST_24  HEB  CEB  CDB  CGA   180.00   0.0  0
- CI1  CONST_25  HEA  CEA  CDA  CGA   180.00   0.0  0
- CI1  CONST_26  HDA  CDA  CGA  CDB   180.00   0.0  0
- CI1  CONST_27  HDB  CDB  CGA  CDA   180.00   0.0  0
- CI1  CONST_28  HAN  OAN  CE   CA    180.00   0.0  0
- CI1  Var_01    CG   CK   CI   NJ     55.29  30.0  1
- CI1  Var_02    CF   CH   NJ   CI     60.22  30.0  1
- CI1  Var_03    CF   CG   CK   CI    -55.78  30.0  1
- CI1  Var_04    CH   NJ   CI   CK    -59.10  30.0  1
- CI1  Var_05    CDB  CGA  CO   CF     89.42  30.0  2
- CI1  Var_06    CI   NJ   S30  O32   -46.58  30.0  3
- CI1  Var_07    CD2  CGB  CP   S30    89.23  30.0  2
- CI1  Var_08    NJ   S30  CP   CGB  -178.35  30.0  1
- CI1  Var_09    CA   CM   CB   CF    179.53  30.0  2
- CI1  Var_10    O14  CA   CM   CB     -0.56   0.0  2
- CI1  Var_11    OAN  CE   CA   CM    178.93  30.0  2
+ CI1  CONST_01  CZ    CE2  CD2  CGB     0.00   0.0  0
+ CI1  CONST_02  CZ    CE1  CD1  CGB     0.00   0.0  0
+ CI1  CONST_03  CE1   CD1  CGB  CD2     0.00   0.0  0
+ CI1  CONST_04  CE1   CZ   CE2  CD2     0.00   0.0  0
+ CI1  CONST_05  CD1   CGB  CD2  CE2     0.00   0.0  0
+ CI1  CONST_06  CD1   CE1  CZ   CE2     0.00   0.0  0
+ CI1  CONST_07  CZB   CEB  CDB  CGA     0.00   0.0  0
+ CI1  CONST_08  CZB   CEA  CDA  CGA     0.00   0.0  0
+ CI1  CONST_09  CEA   CDA  CGA  CDB     0.00   0.0  0
+ CI1  CONST_10  CEA   CZB  CEB  CDB     0.00   0.0  0
+ CI1  CONST_11  CDA   CGA  CDB  CEB     0.00   0.0  0
+ CI1  CONST_12  CDA   CEA  CZB  CEB     0.00   0.0  0
+ CI1  CONST_13  CE2   CD2  CGB  CP    180.00   0.0  0
+ CI1  CONST_14  CE1   CD1  CGB  CP    180.00   0.0  0
+ CI1  CONST_15  CEB   CDB  CGA  CO    180.00   0.0  0
+ CI1  CONST_16  CEA   CDA  CGA  CO    180.00   0.0  0
+ CI1  CONST_17  CL    CZB  CEB  CDB   180.00   0.0  0
+ CI1  CONST_18  CL    CZB  CEA  CDA   180.00   0.0  0
+ CI1  CONST_19  HE2   CE2  CD2  CGB   180.00   0.0  0
+ CI1  CONST_20  HE1   CE1  CD1  CGB   180.00   0.0  0
+ CI1  CONST_21  HD1   CD1  CGB  CD2   180.00   0.0  0
+ CI1  CONST_22  HZ    CZ   CE2  CD2   180.00   0.0  0
+ CI1  CONST_23  HD2   CD2  CE2  CZ    180.00   0.0  0
+ CI1  CONST_24  HEB   CEB  CDB  CGA   180.00   0.0  0
+ CI1  CONST_25  HEA   CEA  CDA  CGA   180.00   0.0  0
+ CI1  CONST_26  HDA   CDA  CGA  CDB   180.00   0.0  0
+ CI1  CONST_27  HDB   CDB  CGA  CDA   180.00   0.0  0
+ CI1  CONST_28  HAN   OAN  CE   CA    180.00   0.0  0
+ CI1  Var_01    CG    CK   CI   NJ     55.29  30.0  1
+ CI1  Var_02    CF    CH   NJ   CI     60.22  30.0  1
+ CI1  Var_03    CF    CG   CK   CI    -55.78  30.0  1
+ CI1  Var_04    CH    NJ   CI   CK    -59.10  30.0  1
+ CI1  Var_05    CDB   CGA  CO   CF     89.42  30.0  2
+ CI1  Var_06    CI    NJ   S30  O32   -46.58  30.0  3
+ CI1  Var_07    CD2   CGB  CP   S30    89.23  30.0  2
+ CI1  Var_08    NJ    S30  CP   CGB  -178.35  30.0  1
+ CI1  Var_09    CA    CM   CB   CF    179.53  30.0  2
+ CI1  Var_10    O14   CA   CM   CB     -0.56   0.0  2
+ CI1  Var_11    OAN   CE   CA   CM    178.93  30.0  2
+ CI1  Var_12    CG    CF   CH   NJ    -55.40  30.0  1
+ CI1  Var_13    CH    CF   CG   CK     54.79  30.0  1
+ CI1  Var_14    CB    CF   CH   NJ     67.46  30.0  1
+ CI1  Var_15    CO    CF   CH   NJ   -173.49  30.0  1
+ CI1  Var_16    CB    CF   CG   CK    -66.68  30.0  1
+ CI1  Var_17    CO    CF   CG   CK    173.61  30.0  1
+ CI1  Var_18    CGA   CO   CF   CG    178.21  30.0  3
+ CI1  Var_19    CGA   CO   CF   CH    -63.72  30.0  3
+ CI1  Var_20    O13   CB   CF   CG    132.65  30.0  3
+ CI1  Var_21    CM    CB   CF   CG    -50.07  30.0  3
+ CI1  Var_22    O13   CB   CF   CH     12.05  30.0  3
+ CI1  Var_23    CM    CB   CF   CH   -170.67  30.0  3
+ CI1  Var_24    CGA   CO   CF   CB     56.21  30.0  3
+ CI1  Var_25    HO1C  CO   CF   CG    -59.63  30.0  3
+ CI1  Var_26    HO2C  CO   CF   CG     54.54  30.0  3
+ CI1  Var_27    CO    CF   CB   O13  -107.66  30.0  2
+ CI1  Var_28    CO    CF   CB   CM     69.61  30.0  2
+ CI1  Var_29    H14   O14  CA   CM   -179.83  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

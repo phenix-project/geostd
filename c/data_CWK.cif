@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CWK  CWK  3'-chloro-4'-(alpha-D-mannopyranosyloxy)biphenyl-4-carbonitrile  ligand  45  27  .  2021-08-07  2021-08-07  
+ CWK  CWK  3'-chloro-4'-(alpha-D-mannopyranosyloxy)biphenyl-4-carbonitrile  ligand  45  27  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CWK
@@ -236,36 +237,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CWK  CONST_01  CAD  CAC  CAB  CAA    0.00   0.0  0
- CWK  CONST_02  CAD  CAE  CAF  CAA    0.00   0.0  0
- CWK  CONST_03  CAE  CAF  CAA  CAB    0.00   0.0  0
- CWK  CONST_04  CAE  CAD  CAC  CAB    0.00   0.0  0
- CWK  CONST_05  CAG  CAD  CAC  CAB  180.00   0.0  0
- CWK  CONST_06  CAF  CAA  CAB  CAC    0.00   0.0  0
- CWK  CONST_07  CAF  CAE  CAD  CAC    0.00   0.0  0
- CWK  CONST_10  CAI  CAH  CAG  CAD  180.00   0.0  0
- CWK  CONST_11  CAK  CAL  CAG  CAD  180.00   0.0  0
- CWK  CONST_14  CAG  CAD  CAE  CAF  180.00   0.0  0
- CWK  CONST_15  CAJ  CAI  CAH  CAG    0.00   0.0  0
- CWK  CONST_16  CAJ  CAK  CAL  CAG    0.00   0.0  0
- CWK  CONST_17  CAK  CAL  CAG  CAH    0.00   0.0  0
- CWK  CONST_18  CAK  CAJ  CAI  CAH    0.00   0.0  0
- CWK  CONST_19  CAL  CAG  CAH  CAI    0.00   0.0  0
- CWK  CONST_20  CAL  CAK  CAJ  CAI    0.00   0.0  0
- CWK  CONST_21  CAB  CAA  CAF  CL   180.00   0.0  0
- CWK  CONST_22  CAD  CAE  CAF  CL   180.00   0.0  0
- CWK  CONST_23  CAC  CAB  CAA  O1   180.00   0.0  0
- CWK  CONST_24  CAE  CAF  CAA  O1   180.00   0.0  0
- CWK  CONST_25  CAN  CAJ  CAI  CAH  180.00   0.0  0
- CWK  CONST_26  CAN  CAJ  CAK  CAL  180.00   0.0  0
- CWK  CONST_27  HAC  CAC  CAB  CAA  180.00   0.0  0
- CWK  CONST_28  HAE  CAE  CAF  CAA  180.00   0.0  0
- CWK  CONST_29  HAB  CAB  CAC  CAD  180.00   0.0  0
- CWK  CONST_30  HAH  CAH  CAG  CAD    0.00   0.0  0
- CWK  CONST_31  HAL  CAL  CAG  CAD    0.00   0.0  0
- CWK  CONST_32  HAI  CAI  CAH  CAG  180.00   0.0  0
- CWK  CONST_33  HAK  CAK  CAL  CAG  180.00   0.0  0
- CWK  Var_01    CAB  CAA  O1   C1    16.56  30.0  2
+ CWK  CONST_01  CAD  CAC  CAB  CAA     0.00   0.0  0
+ CWK  CONST_02  CAD  CAE  CAF  CAA     0.00   0.0  0
+ CWK  CONST_03  CAE  CAF  CAA  CAB     0.00   0.0  0
+ CWK  CONST_04  CAE  CAD  CAC  CAB     0.00   0.0  0
+ CWK  CONST_05  CAG  CAD  CAC  CAB   180.00   0.0  0
+ CWK  CONST_06  CAF  CAA  CAB  CAC     0.00   0.0  0
+ CWK  CONST_07  CAF  CAE  CAD  CAC     0.00   0.0  0
+ CWK  CONST_08  CAI  CAH  CAG  CAD   180.00   0.0  0
+ CWK  CONST_09  CAK  CAL  CAG  CAD   180.00   0.0  0
+ CWK  CONST_10  CAG  CAD  CAE  CAF   180.00   0.0  0
+ CWK  CONST_11  CAJ  CAI  CAH  CAG     0.00   0.0  0
+ CWK  CONST_12  CAJ  CAK  CAL  CAG     0.00   0.0  0
+ CWK  CONST_13  CAK  CAL  CAG  CAH     0.00   0.0  0
+ CWK  CONST_14  CAK  CAJ  CAI  CAH     0.00   0.0  0
+ CWK  CONST_15  CAL  CAG  CAH  CAI     0.00   0.0  0
+ CWK  CONST_16  CAL  CAK  CAJ  CAI     0.00   0.0  0
+ CWK  CONST_17  CAB  CAA  CAF  CL    180.00   0.0  0
+ CWK  CONST_18  CAD  CAE  CAF  CL    180.00   0.0  0
+ CWK  CONST_19  CAC  CAB  CAA  O1    180.00   0.0  0
+ CWK  CONST_20  CAE  CAF  CAA  O1    180.00   0.0  0
+ CWK  CONST_21  CAN  CAJ  CAI  CAH   180.00   0.0  0
+ CWK  CONST_22  CAN  CAJ  CAK  CAL   180.00   0.0  0
+ CWK  CONST_23  HAC  CAC  CAB  CAA   180.00   0.0  0
+ CWK  CONST_24  HAE  CAE  CAF  CAA   180.00   0.0  0
+ CWK  CONST_25  HAB  CAB  CAC  CAD   180.00   0.0  0
+ CWK  CONST_26  HAH  CAH  CAG  CAD     0.00   0.0  0
+ CWK  CONST_27  HAL  CAL  CAG  CAD     0.00   0.0  0
+ CWK  CONST_28  HAI  CAI  CAH  CAG   180.00   0.0  0
+ CWK  CONST_29  HAK  CAK  CAL  CAG   180.00   0.0  0
+ CWK  Var_01    CAB  CAA  O1   C1     16.56  30.0  2
+ CWK  Var_02    C4   C3   C2   C1    -53.47  30.0  1
+ CWK  Var_03    C4   C5   O5   C1     56.53  30.0  1
+ CWK  Var_04    C5   O5   C1   C2    -56.73  30.0  1
+ CWK  Var_05    C5   C4   C3   C2     54.81  30.0  1
+ CWK  Var_06    O5   C1   C2   C3     53.45  30.0  1
+ CWK  Var_07    O5   C5   C4   C3    -54.01  30.0  1
+ CWK  Var_08    CAH  CAG  CAD  CAC   143.94  30.0  2
+ CWK  Var_09    CAL  CAG  CAD  CAC   -36.12  30.0  2
+ CWK  Var_10    CAH  CAG  CAD  CAE   -36.18  30.0  2
+ CWK  Var_11    CAL  CAG  CAD  CAE   143.76  30.0  2
+ CWK  Var_12    O3   C3   C2   C1   -173.62  30.0  1
+ CWK  Var_13    C6   C5   O5   C1    178.40  30.0  1
+ CWK  Var_14    C3   C2   C1   O1    -69.05  30.0  1
+ CWK  Var_15    C5   O5   C1   O1     62.24  30.0  1
+ CWK  Var_16    CAA  O1   C1   C2   -178.19  30.0  3
+ CWK  Var_17    O4   C4   C3   C2    173.68  30.0  1
+ CWK  Var_18    O5   C1   C2   O2    -65.47  30.0  1
+ CWK  Var_19    C4   C3   C2   O2     65.98  30.0  1
+ CWK  Var_20    C6   C5   C4   C3   -173.18  30.0  1
+ CWK  Var_21    C5   C4   C3   O3    177.77  30.0  1
+ CWK  Var_22    O5   C5   C4   O4   -174.99  30.0  1
+ CWK  Var_23    CAA  O1   C1   O5     58.93  30.0  3
+ CWK  Var_24    H3   C3   C2   C1     64.25  30.0  1
+ CWK  Var_25    H5   C5   O5   C1    -63.53  30.0  1
+ CWK  Var_26    H4   C4   C3   C2    -64.08  30.0  1
+ CWK  Var_27    H1   C1   C2   C3    171.79  30.0  1
+ CWK  Var_28    H2   C2   C3   C4   -172.02  30.0  1
+ CWK  Var_29    O2   C2   C1   O1    172.03  30.0  1
+ CWK  Var_30    O3   C3   C2   O2    -54.18  30.0  1
+ CWK  Var_31    O4   C4   C3   O3    -63.36  30.0  1
+ CWK  Var_32    O6   C6   C5   C4   -175.21  30.0  3
+ CWK  Var_33    C6   C5   C4   O4     65.84  30.0  1
+ CWK  Var_34    O6   C6   C5   O5     63.67  30.0  3
+ CWK  Var_35    HO2  O2   C2   C1    -75.13  30.0  3
+ CWK  Var_36    HO3  O3   C3   C2    -82.33  30.0  3
+ CWK  Var_37    HO4  O4   C4   C3     55.11  30.0  3
+ CWK  Var_38    H61  C6   C5   C4    -53.60  30.0  3
+ CWK  Var_39    H62  C6   C5   C4     62.42  30.0  3
+ CWK  Var_40    HO6  O6   C6   C5    172.75  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

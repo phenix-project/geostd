@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 59H  59H  '(2R,4S)-5,5-dimethyl-2-[(1R)-2-oxo-1-{[(2R)-2-{[(2-oxoimidazolidin-1-yl)carbonyl]amino}-2-phenylacetyl]amino}ethyl]-1,3-thiazolidine-4-carboxylic acid'  ligand  57  32  .  2022-03-10  2022-11-17
+ 59H  59H  '(2R,4S)-5,5-dimethyl-2-[(1R)-2-oxo-1-{[(2R)-2-{[(2-oxoimidazolidin-1-yl)carbonyl]amino}-2-phenylacetyl]amino}ethyl]-1,3-thiazolidine-4-carboxylic acid'  ligand  57  32  .  2022-03-10  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_59H
@@ -285,40 +286,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 59H  CONST_01  CX4  CX5  CX6  CX1    0.00   0.0  0
- 59H  CONST_02  CX4  CX3  CX2  CX1    0.00   0.0  0
- 59H  CONST_03  CX5  CX6  CX1  CX2    0.00   0.0  0
- 59H  CONST_04  CX5  CX4  CX3  CX2    0.00   0.0  0
- 59H  CONST_05  CX6  CX5  CX4  CX3    0.00   0.0  0
- 59H  CONST_06  CX6  CX1  CX2  CX3    0.00   0.0  0
- 59H  CONST_08  CX9  NX2  CXA  NX1    0.00   0.0  0
- 59H  CONST_09  NX2  CXA  NX1  CX8    0.00   0.0  0
- 59H  CONST_12  CX5  CX6  CX1  CA   180.00   0.0  0
- 59H  CONST_13  CX3  CX2  CX1  CA   180.00   0.0  0
- 59H  CONST_14  CX9  CX8  NX1  CX7  180.00   0.0  0
- 59H  CONST_15  NX2  CXA  NX1  CX7  180.00   0.0  0
- 59H  CONST_16  OX2  CXA  NX1  CX8  180.00   0.0  0
- 59H  CONST_17  OX2  CXA  NX2  CX9  180.00   0.0  0
- 59H  CONST_18  H7   CX5  CX6  CX1  180.00   0.0  0
- 59H  CONST_19  H5   CX3  CX2  CX1  180.00   0.0  0
- 59H  CONST_20  H8   CX6  CX1  CX2  180.00   0.0  0
- 59H  CONST_21  H6   CX4  CX3  CX2  180.00   0.0  0
- 59H  CONST_22  H4   CX2  CX3  CX4  180.00   0.0  0
- 59H  CONST_24  CX8  NX1  CX7  OX1  180.00   0.0  0
- 59H  CONST_26  CX8  NX1  CX7  N      0.00   0.0  0
- 59H  CONST_27  CXA  NX1  CX7  N    180.00   0.0  0
- 59H  CONST_28  OX2  CXA  NX1  CX7    0.00   0.0  0
- 59H  CONST_29  NX1  CX7  N    CA   180.00   0.0  0
- 59H  CONST_30  H2   N    CX7  NX1    0.00   0.0  0
- 59H  CONST_31  H19  OXT  C3   CA3  180.00   0.0  0
- 59H  CONST_32  OX1  CX7  N    CA     0.00   0.0  0
- 59H  CONST_33  CA1  N1   C    CA   180.00   0.0  0
- 59H  CONST_34  CA1  N1   C    O      0.00   0.0  0
- 59H  CONST_35  H1   N1   C    CA     0.00   0.0  0
- 59H  Var_01    CXE  CXC  S4   CXD  140.34  30.0  1
- 59H  Var_02    H11  CX9  CX8  NX1  142.73  30.0  1
- 59H  Var_03    H20  CXB  CXC  CA3   70.97  30.0  3
- 59H  Var_04    H24  CXE  CXC  CA3   60.03  30.0  3
+ 59H  CONST_01  CX4  CX5  CX6  CX1     0.00   0.0  0
+ 59H  CONST_02  CX4  CX3  CX2  CX1     0.00   0.0  0
+ 59H  CONST_03  CX5  CX6  CX1  CX2     0.00   0.0  0
+ 59H  CONST_04  CX5  CX4  CX3  CX2     0.00   0.0  0
+ 59H  CONST_05  CX6  CX5  CX4  CX3     0.00   0.0  0
+ 59H  CONST_06  CX6  CX1  CX2  CX3     0.00   0.0  0
+ 59H  CONST_07  CX9  NX2  CXA  NX1     0.00   0.0  0
+ 59H  CONST_08  NX2  CXA  NX1  CX8     0.00   0.0  0
+ 59H  CONST_09  CX5  CX6  CX1  CA    180.00   0.0  0
+ 59H  CONST_10  CX3  CX2  CX1  CA    180.00   0.0  0
+ 59H  CONST_11  CX9  CX8  NX1  CX7   180.00   0.0  0
+ 59H  CONST_12  NX2  CXA  NX1  CX7   180.00   0.0  0
+ 59H  CONST_13  OX2  CXA  NX1  CX8   180.00   0.0  0
+ 59H  CONST_14  OX2  CXA  NX2  CX9   180.00   0.0  0
+ 59H  CONST_15  H7   CX5  CX6  CX1   180.00   0.0  0
+ 59H  CONST_16  H5   CX3  CX2  CX1   180.00   0.0  0
+ 59H  CONST_17  H8   CX6  CX1  CX2   180.00   0.0  0
+ 59H  CONST_18  H6   CX4  CX3  CX2   180.00   0.0  0
+ 59H  CONST_19  H4   CX2  CX3  CX4   180.00   0.0  0
+ 59H  CONST_20  CX8  NX1  CX7  OX1   180.00   0.0  0
+ 59H  CONST_21  CX8  NX1  CX7  N       0.00   0.0  0
+ 59H  CONST_22  CXA  NX1  CX7  N     180.00   0.0  0
+ 59H  CONST_23  OX2  CXA  NX1  CX7     0.00   0.0  0
+ 59H  CONST_24  NX1  CX7  N    CA    180.00   0.0  0
+ 59H  CONST_25  H2   N    CX7  NX1     0.00   0.0  0
+ 59H  CONST_26  H19  OXT  C3   CA3   180.00   0.0  0
+ 59H  CONST_27  OX1  CX7  N    CA      0.00   0.0  0
+ 59H  CONST_28  CA1  N1   C    CA    180.00   0.0  0
+ 59H  CONST_29  CA1  N1   C    O       0.00   0.0  0
+ 59H  CONST_30  H1   N1   C    CA      0.00   0.0  0
+ 59H  Var_01    CXE  CXC  S4   CXD   140.34  30.0  1
+ 59H  Var_02    H11  CX9  CX8  NX1   142.73  30.0  1
+ 59H  Var_03    H20  CXB  CXC  CA3    70.97  30.0  3
+ 59H  Var_04    H24  CXE  CXC  CA3    60.03  30.0  3
+ 59H  Var_05    S4   CXC  CA3  N3    -38.36  30.0  1
+ 59H  Var_06    CXC  S4   CXD  N3      6.40  30.0  1
+ 59H  Var_07    S4   CXD  N3   CA3   -33.01  30.0  1
+ 59H  Var_08    CXD  N3   CA3  CXC    48.68  30.0  1
+ 59H  Var_09    CXD  N3   CA3  C3    -75.08  30.0  1
+ 59H  Var_10    S4   CXC  CA3  C3     86.00  30.0  1
+ 59H  Var_11    CA3  N3   CXD  CA1  -153.61  30.0  1
+ 59H  Var_12    CXC  S4   CXD  CA1   125.70  30.0  1
+ 59H  Var_13    CXB  CXC  CA3  N3     79.59  30.0  1
+ 59H  Var_14    CXE  CXC  CA3  N3   -156.14  30.0  1
+ 59H  Var_15    H23  CXD  N3   CA3    84.92  30.0  1
+ 59H  Var_16    H16  N3   CA3  CXC   176.69  30.0  1
+ 59H  Var_17    H18  CA3  N3   CXD   164.77  30.0  1
+ 59H  Var_18    N3   CXD  CA1  N1   -173.88  30.0  3
+ 59H  Var_19    S4   CXD  CA1  N1     70.19  30.0  3
+ 59H  Var_20    CXB  CXC  CA3  C3   -156.05  30.0  1
+ 59H  Var_21    CXE  CXC  CA3  C3    -31.78  30.0  1
+ 59H  Var_22    CX6  CX1  CA   N     -44.18  30.0  2
+ 59H  Var_23    CX2  CX1  CA   N     137.84  30.0  2
+ 59H  Var_24    CX6  CX1  CA   C      75.01  30.0  2
+ 59H  Var_25    CX2  CX1  CA   C    -102.98  30.0  2
+ 59H  Var_26    N3   CXD  CA1  C1     60.38  30.0  3
+ 59H  Var_27    S4   CXD  CA1  C1    -55.55  30.0  3
+ 59H  Var_28    O3   C3   CA3  N3     30.83  30.0  2
+ 59H  Var_29    OXT  C3   CA3  N3   -148.26  30.0  2
+ 59H  Var_30    CXC  CA3  C3   OXT    91.72  30.0  3
+ 59H  Var_31    O3   C3   CA3  CXC   -89.18  30.0  2
+ 59H  Var_32    H3   CA   CX1  CX2    15.30  30.0  3
+ 59H  Var_33    H14  CA1  CXD  N3    -55.89  30.0  1
+ 59H  Var_34    CX1  CA   C    N1     75.27  30.0  2
+ 59H  Var_35    CXD  CA1  N1   C     150.21  30.0  3
+ 59H  Var_36    CX1  CA   C    O    -101.48  30.0  2
+ 59H  Var_37    CX7  N    CA   CX1   -70.79  30.0  3
+ 59H  Var_38    CXD  CA1  C1   O1    134.58  30.0  3
+ 59H  Var_39    H15  C1   CA1  CXD   -47.70  30.0  2
+ 59H  Var_40    H1   N1   CA1  CXD   -46.11  30.0  1
+ 59H  Var_41    O1   C1   CA1  N1      9.18  30.0  2
+ 59H  Var_42    N    CA   C    N1   -161.60  30.0  2
+ 59H  Var_43    O    C    CA   N      21.66  30.0  3
+ 59H  Var_44    C1   CA1  N1   C     -83.89  30.0  3
+ 59H  Var_45    CX7  N    CA   C     169.49  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

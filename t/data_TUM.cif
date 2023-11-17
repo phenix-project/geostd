@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TUM  TUM  'N-[(2S,3R,4R,5R,6R)-2-{[(2R,3R,4R,5S,6R)-3-(acetylamino)-4,5-dihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl]oxy}-6-{(2R)-2-[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]-2-hydroxyethyl}-4,5-dihydroxytetrahydro-2H-pyran-3-yl]-12-methyltridec-2-enamide (non-preferred name)'  ligand  117  57  .  2021-08-23  2021-08-23  
+ TUM  TUM  'N-[(2S,3R,4R,5R,6R)-2-{[(2R,3R,4R,5S,6R)-3-(acetylamino)-4,5-dihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl]oxy}-6-{(2R)-2-[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]-2-hydroxyethyl}-4,5-dihydroxytetrahydro-2H-pyran-3-yl]-12-methyltridec-2-enamide (non-preferred name)'  ligand  117  57  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TUM
@@ -524,35 +525,144 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TUM  CONST_01  C30  N29  C27  C26    0.00   0.0  0
- TUM  CONST_02  N29  C30  N24  C19  180.00   0.0  0
- TUM  CONST_03  C27  N29  C30  N24    0.00   0.0  0
- TUM  CONST_04  N29  C30  N24  C25    0.00   0.0  0
- TUM  CONST_05  O31  C30  N24  C19    0.00   0.0  0
- TUM  CONST_06  O31  C30  N24  C25  180.00   0.0  0
- TUM  CONST_07  O31  C30  N29  C27  180.00   0.0  0
- TUM  CONST_08  C30  N29  C27  O28  180.00   0.0  0
- TUM  CONST_09  H23  N29  C27  C26  180.00   0.0  0
- TUM  CONST_10  C8   N7   C5   C4   180.00   0.0  0
- TUM  CONST_11  O6   C5   N7   C8     0.00   0.0  0
- TUM  CONST_12  O47  C46  N45  C44    0.00   0.0  0
- TUM  CONST_13  C48  C46  N45  C44  180.00   0.0  0
- TUM  CONST_14  H11  N7   C5   C4     0.00   0.0  0
- TUM  CONST_15  H35  N45  C46  O47  180.00   0.0  0
- TUM  Var_01    C2   C1   C4   C5   177.66   0.0  2
- TUM  Var_02    C3   C2   C1   C4   124.32  30.0  3
- TUM  Var_03    C1   C4   C5   O6     7.72  30.0  1
- TUM  Var_04    C6   C3   C2   C1   172.55  30.0  3
- TUM  Var_05    C7   C6   C3   C2   179.89  30.0  3
- TUM  Var_06    C10  C7   C6   C3   176.38  30.0  3
- TUM  Var_07    C12  C10  C7   C6   179.51  30.0  3
- TUM  Var_08    C16  C12  C10  C7   176.89  30.0  3
- TUM  Var_09    C18  C16  C12  C10  179.07  30.0  3
- TUM  Var_10    C21  C18  C16  C12  173.83  30.0  3
- TUM  Var_11    C23  C21  C18  C16   61.83  30.0  3
- TUM  Var_12    H36  C48  C46  N45  122.91  30.0  3
- TUM  Var_13    H55  C23  C21  C18  179.47  30.0  3
- TUM  Var_14    H58  C24  C21  C18   57.36  30.0  3
+ TUM  CONST_01  C30  N29  C27  C26     0.00   0.0  0
+ TUM  CONST_02  N29  C30  N24  C19   180.00   0.0  0
+ TUM  CONST_03  C27  N29  C30  N24     0.00   0.0  0
+ TUM  CONST_04  N29  C30  N24  C25     0.00   0.0  0
+ TUM  CONST_05  O31  C30  N24  C19     0.00   0.0  0
+ TUM  CONST_06  O31  C30  N24  C25   180.00   0.0  0
+ TUM  CONST_07  O31  C30  N29  C27   180.00   0.0  0
+ TUM  CONST_08  C30  N29  C27  O28   180.00   0.0  0
+ TUM  CONST_09  H23  N29  C27  C26   180.00   0.0  0
+ TUM  CONST_10  C8   N7   C5   C4    180.00   0.0  0
+ TUM  CONST_11  O6   C5   N7   C8      0.00   0.0  0
+ TUM  CONST_12  O47  C46  N45  C44     0.00   0.0  0
+ TUM  CONST_13  C48  C46  N45  C44   180.00   0.0  0
+ TUM  CONST_14  H11  N7   C5   C4      0.00   0.0  0
+ TUM  CONST_15  H35  N45  C46  O47   180.00   0.0  0
+ TUM  Var_01    C2   C1   C4   C5    177.66   0.0  2
+ TUM  Var_02    C3   C2   C1   C4    124.32  30.0  3
+ TUM  Var_03    C1   C4   C5   O6      7.72  30.0  1
+ TUM  Var_04    C6   C3   C2   C1    172.55  30.0  3
+ TUM  Var_05    C7   C6   C3   C2    179.89  30.0  3
+ TUM  Var_06    C10  C7   C6   C3    176.38  30.0  3
+ TUM  Var_07    C12  C10  C7   C6    179.51  30.0  3
+ TUM  Var_08    C16  C12  C10  C7    176.89  30.0  3
+ TUM  Var_09    C18  C16  C12  C10   179.07  30.0  3
+ TUM  Var_10    C21  C18  C16  C12   173.83  30.0  3
+ TUM  Var_11    C23  C21  C18  C16    61.83  30.0  3
+ TUM  Var_12    H36  C48  C46  N45   122.91  30.0  3
+ TUM  Var_13    H55  C23  C21  C18   179.47  30.0  3
+ TUM  Var_14    H58  C24  C21  C18    57.36  30.0  3
+ TUM  Var_15    C13  C11  C9   C8     51.45  30.0  1
+ TUM  Var_16    C13  O32  C33  C8    -63.83  30.0  1
+ TUM  Var_17    C19  C20  C22  C17   -38.12  30.0  1
+ TUM  Var_18    C20  C19  O18  C17   -21.33  30.0  1
+ TUM  Var_19    N24  C19  O18  C17  -144.39  30.0  1
+ TUM  Var_20    O18  C17  C22  C20    27.04  30.0  1
+ TUM  Var_21    C25  N24  C19  C20   -66.92  30.0  3
+ TUM  Var_22    C30  N24  C19  C20   113.95  30.0  3
+ TUM  Var_23    N24  C19  C20  C22   156.84  30.0  1
+ TUM  Var_24    O18  C19  C20  C22    37.29  30.0  1
+ TUM  Var_25    C19  O18  C17  C22    -3.92  30.0  1
+ TUM  Var_26    O32  C13  C11  C9    -51.77  30.0  1
+ TUM  Var_27    O32  C33  C8   C9     58.37  30.0  1
+ TUM  Var_28    C33  C8   C9   C11   -53.81  30.0  1
+ TUM  Var_29    C33  O32  C13  C11    60.06  30.0  1
+ TUM  Var_30    C25  N24  C19  O18    50.50  30.0  3
+ TUM  Var_31    C30  N24  C19  O18  -128.63  30.0  3
+ TUM  Var_32    C40  C37  O36  C35    58.27  30.0  1
+ TUM  Var_33    C40  C42  C44  C35   -52.77  30.0  1
+ TUM  Var_34    C42  C44  C35  O36    52.56  30.0  1
+ TUM  Var_35    C42  C40  C37  O36   -55.92  30.0  1
+ TUM  Var_36    C44  C35  O36  C37   -56.79  30.0  1
+ TUM  Var_37    C44  C42  C40  C37    55.05  30.0  1
+ TUM  Var_38    O12  C11  C9   C8    -69.64  30.0  1
+ TUM  Var_39    C35  O34  C33  C8    140.39  30.0  3
+ TUM  Var_40    O10  C9   C11  C13   172.02  30.0  1
+ TUM  Var_41    O34  C33  O32  C13   177.52  30.0  1
+ TUM  Var_42    C20  C22  C17  C15   -95.07  30.0  1
+ TUM  Var_43    C19  O18  C17  C15   119.44  30.0  1
+ TUM  Var_44    O21  C20  C22  C17  -156.36  30.0  1
+ TUM  Var_45    C11  C9   C8   N7   -176.19  30.0  1
+ TUM  Var_46    O32  C33  C8   N7   -179.98  30.0  1
+ TUM  Var_47    C14  C13  C11  C9   -170.63  30.0  1
+ TUM  Var_48    O34  C33  C8   C9    175.79  30.0  1
+ TUM  Var_49    C33  C8   C9   O10  -176.04  30.0  1
+ TUM  Var_50    O32  C13  C11  O12    70.58  30.0  1
+ TUM  Var_51    C33  O32  C13  C14  -174.64  30.0  1
+ TUM  Var_52    O23  C22  C17  O18   -89.59  30.0  1
+ TUM  Var_53    O21  C20  C19  O18   159.25  30.0  1
+ TUM  Var_54    O23  C22  C20  C19    76.87  30.0  1
+ TUM  Var_55    N24  C19  C20  O21   -81.20  30.0  1
+ TUM  Var_56    C35  O34  C33  O32  -100.56  30.0  3
+ TUM  Var_57    O36  C35  O34  C33    63.60  30.0  3
+ TUM  Var_58    C44  C35  O34  C33  -173.16  30.0  3
+ TUM  Var_59    C37  O36  C35  O34    63.60  30.0  1
+ TUM  Var_60    C42  C44  C35  O34   -71.49  30.0  1
+ TUM  Var_61    C38  C37  O36  C35   179.93  30.0  1
+ TUM  Var_62    O43  C42  C44  C35  -174.59  30.0  1
+ TUM  Var_63    N45  C44  C35  O36   177.16  30.0  1
+ TUM  Var_64    O41  C40  C37  O36  -174.74  30.0  1
+ TUM  Var_65    O43  C42  C40  C37   174.48  30.0  1
+ TUM  Var_66    C42  C40  C37  C38  -174.68  30.0  1
+ TUM  Var_67    N45  C44  C42  C40  -176.75  30.0  1
+ TUM  Var_68    C44  C42  C40  O41   176.43  30.0  1
+ TUM  Var_69    H14  C11  C9   C8    168.73  30.0  1
+ TUM  Var_70    H12  C9   C11  C13   -66.74  30.0  1
+ TUM  Var_71    H24  C33  O32  C13    56.65  30.0  1
+ TUM  Var_72    H8   C20  C22  C17    77.46  30.0  1
+ TUM  Var_73    H19  C19  O18  C17    98.09  30.0  1
+ TUM  Var_74    H7   C17  C22  C20   143.98  30.0  1
+ TUM  Var_75    H5   C13  C11  C9     67.72  30.0  1
+ TUM  Var_76    H4   C8   C9   C11    64.11  30.0  1
+ TUM  Var_77    H9   C22  C17  O18   146.72  30.0  1
+ TUM  Var_78    H22  C25  N24  C19    -0.14  30.0  1
+ TUM  Var_79    H10  C26  C25  N24  -179.55  30.0  1
+ TUM  Var_80    H26  C37  O36  C35   -61.79  30.0  1
+ TUM  Var_81    H32  C42  C44  C35    65.28  30.0  1
+ TUM  Var_82    H34  C44  C35  O36   -65.50  30.0  1
+ TUM  Var_83    H30  C40  C37  O36    62.45  30.0  1
+ TUM  Var_84    H25  C35  O36  C37  -176.16  30.0  1
+ TUM  Var_85    C9   C8   N7   C5   -136.68  30.0  1
+ TUM  Var_86    C33  C8   N7   C5    103.12  30.0  1
+ TUM  Var_87    C17  C15  C14  C13  -176.12  30.0  3
+ TUM  Var_88    C11  C13  C14  C15   -62.06  30.0  3
+ TUM  Var_89    O32  C13  C14  C15   176.22  30.0  3
+ TUM  Var_90    O23  C22  C17  C15   148.30  30.0  1
+ TUM  Var_91    O16  C15  C17  C22   -64.16  30.0  1
+ TUM  Var_92    C14  C15  C17  C22   170.98  30.0  1
+ TUM  Var_93    O10  C9   C8   N7     61.59  30.0  1
+ TUM  Var_94    O34  C33  C8   N7    -62.57  30.0  1
+ TUM  Var_95    O12  C11  C9   O10    50.92  30.0  1
+ TUM  Var_96    C14  C13  C11  O12   -48.28  30.0  1
+ TUM  Var_97    O18  C17  C15  C14    51.93  30.0  3
+ TUM  Var_98    O18  C17  C15  O16   176.78  30.0  3
+ TUM  Var_99    O23  C22  C20  O21   -41.37  30.0  1
+ TUM  Var_100   N45  C44  C35  O34    53.11  30.0  1
+ TUM  Var_101   C46  N45  C44  C35   129.55  30.0  2
+ TUM  Var_102   O39  C38  C37  O36    64.07  30.0  3
+ TUM  Var_103   O41  C40  C37  C38    66.50  30.0  1
+ TUM  Var_104   C40  C37  C38  O39  -175.69  30.0  2
+ TUM  Var_105   O43  C42  C40  O41   -64.14  30.0  1
+ TUM  Var_106   C46  N45  C44  C42  -106.65  30.0  2
+ TUM  Var_107   N45  C44  C42  O43    61.43  30.0  1
+ TUM  Var_108   H13  O10  C9   C8   -162.70  30.0  3
+ TUM  Var_109   H15  O12  C11  C13  -169.53  30.0  3
+ TUM  Var_110   H21  O23  C22  C17   160.09  30.0  3
+ TUM  Var_111   H20  O21  C20  C22   -86.21  30.0  3
+ TUM  Var_112   H6   C15  C17  C22    50.55  30.0  1
+ TUM  Var_113   H11  N7   C8   C9     36.15  30.0  3
+ TUM  Var_114   H16  C14  C13  C11    62.37  30.0  2
+ TUM  Var_115   H17  C14  C13  C11   176.73  30.0  2
+ TUM  Var_116   H35  N45  C44  C35   -55.41  30.0  2
+ TUM  Var_117   H27  C38  C37  O36  -174.51  30.0  3
+ TUM  Var_118   H28  C38  C37  O36   -58.38  30.0  3
+ TUM  Var_119   H31  O41  C40  C37   -91.48  30.0  3
+ TUM  Var_120   H33  O43  C42  C40    59.89  30.0  3
+ TUM  Var_121   O16  C15  C14  C13    62.53  30.0  3
+ TUM  Var_122   H18  O16  C15  C17   -88.68  30.0  3
+ TUM  Var_123   H29  O39  C38  C37   176.77  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

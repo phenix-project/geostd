@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- YHI  YHI  'benzyl (1R,2S,5S)-2-({(2S)-1-hydroxy-3-[(3S)-2-oxopyrrolidin-3-yl]propan-2-yl}carbamoyl)-6,6-dimethyl-3-azabicyclo[3.1.0]hexane-3-carboxylate'  ligand  62  31  .  2022-08-11  2023-02-15
+ YHI  YHI  'benzyl (1R,2S,5S)-2-({(2S)-1-hydroxy-3-[(3S)-2-oxopyrrolidin-3-yl]propan-2-yl}carbamoyl)-6,6-dimethyl-3-azabicyclo[3.1.0]hexane-3-carboxylate'  ligand  62  31  .  2022-08-11  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_YHI
@@ -314,36 +315,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- YHI  CONST_01  C07  C12  C11  C10    0.00   0.0  0
- YHI  CONST_02  C07  C08  C09  C10    0.00   0.0  0
- YHI  CONST_03  C11  C12  C07  C08    0.00   0.0  0
- YHI  CONST_04  C11  C10  C09  C08    0.00   0.0  0
- YHI  CONST_05  C12  C11  C10  C09    0.00   0.0  0
- YHI  CONST_06  C12  C07  C08  C09    0.00   0.0  0
- YHI  CONST_07  C25  N26  C27  C23    0.00   0.0  0
- YHI  CONST_08  C11  C12  C07  C06  180.00   0.0  0
- YHI  CONST_09  C09  C08  C07  C06  180.00   0.0  0
- YHI  CONST_10  O28  C27  N26  C25  180.00   0.0  0
- YHI  CONST_11  H19  C12  C11  C10  180.00   0.0  0
- YHI  CONST_12  H16  C08  C09  C10  180.00   0.0  0
- YHI  CONST_13  H18  C11  C12  C07  180.00   0.0  0
- YHI  CONST_14  H17  C09  C08  C07  180.00   0.0  0
- YHI  CONST_15  H1   C10  C09  C08  180.00   0.0  0
- YHI  CONST_16  H31  N26  C27  C23  180.00   0.0  0
- YHI  CONST_17  C14  C19  N20  C21  180.00   0.0  0
- YHI  CONST_18  H24  N20  C19  C14    0.00   0.0  0
- YHI  CONST_19  O31  C19  N20  C21    0.00   0.0  0
- YHI  Var_01    N03  C02  C01  C15   -6.68  30.0  1
- YHI  Var_02    C02  C01  C16  C15  -95.18  30.0  1
- YHI  Var_03    C27  N26  C25  C24  -20.53  30.0  1
- YHI  Var_04    C14  N03  C02  C01   12.22  30.0  1
- YHI  Var_05    C14  C15  C16  C01   94.71  30.0  1
- YHI  Var_06    N26  C25  C24  C23   28.82  30.0  1
- YHI  Var_07    O05  C04  N03  C02    8.41  30.0  2
- YHI  Var_08    C12  C07  C06  O05   33.09  30.0  2
- YHI  Var_09    H21  C18  C16  C15   86.34  30.0  3
- YHI  Var_10    H3   C17  C16  C15  -84.37  30.0  3
- YHI  Var_11    C07  C06  O05  C04   70.44  30.0  3
+ YHI  CONST_01  C07  C12  C11  C10     0.00   0.0  0
+ YHI  CONST_02  C07  C08  C09  C10     0.00   0.0  0
+ YHI  CONST_03  C11  C12  C07  C08     0.00   0.0  0
+ YHI  CONST_04  C11  C10  C09  C08     0.00   0.0  0
+ YHI  CONST_05  C12  C11  C10  C09     0.00   0.0  0
+ YHI  CONST_06  C12  C07  C08  C09     0.00   0.0  0
+ YHI  CONST_07  C25  N26  C27  C23     0.00   0.0  0
+ YHI  CONST_08  C11  C12  C07  C06   180.00   0.0  0
+ YHI  CONST_09  C09  C08  C07  C06   180.00   0.0  0
+ YHI  CONST_10  O28  C27  N26  C25   180.00   0.0  0
+ YHI  CONST_11  H19  C12  C11  C10   180.00   0.0  0
+ YHI  CONST_12  H16  C08  C09  C10   180.00   0.0  0
+ YHI  CONST_13  H18  C11  C12  C07   180.00   0.0  0
+ YHI  CONST_14  H17  C09  C08  C07   180.00   0.0  0
+ YHI  CONST_15  H1   C10  C09  C08   180.00   0.0  0
+ YHI  CONST_16  H31  N26  C27  C23   180.00   0.0  0
+ YHI  CONST_17  C14  C19  N20  C21   180.00   0.0  0
+ YHI  CONST_18  H24  N20  C19  C14     0.00   0.0  0
+ YHI  CONST_19  O31  C19  N20  C21     0.00   0.0  0
+ YHI  Var_01    N03  C02  C01  C15    -6.68  30.0  1
+ YHI  Var_02    C02  C01  C16  C15   -95.18  30.0  1
+ YHI  Var_03    C27  N26  C25  C24   -20.53  30.0  1
+ YHI  Var_04    C14  N03  C02  C01    12.22  30.0  1
+ YHI  Var_05    C14  C15  C16  C01    94.71  30.0  1
+ YHI  Var_06    N26  C25  C24  C23    28.82  30.0  1
+ YHI  Var_07    O05  C04  N03  C02     8.41  30.0  2
+ YHI  Var_08    C12  C07  C06  O05    33.09  30.0  2
+ YHI  Var_09    H21  C18  C16  C15    86.34  30.0  3
+ YHI  Var_10    H3   C17  C16  C15   -84.37  30.0  3
+ YHI  Var_11    C07  C06  O05  C04    70.44  30.0  3
+ YHI  Var_12    C02  N03  C14  C15   -12.43  30.0  1
+ YHI  Var_13    N26  C27  C23  C24    16.07  30.0  1
+ YHI  Var_14    N03  C14  C15  C01     7.32  30.0  1
+ YHI  Var_15    C14  C15  C01  C02    -0.37  30.0  1
+ YHI  Var_16    C16  C15  C14  N03   -57.79  30.0  1
+ YHI  Var_17    C27  C23  C24  C25   -27.54  30.0  1
+ YHI  Var_18    C04  N03  C14  C15  -179.38  30.0  1
+ YHI  Var_19    C25  C24  C23  C22  -151.15  30.0  1
+ YHI  Var_20    N26  C27  C23  C22   141.81  30.0  1
+ YHI  Var_21    O28  C27  C23  C24  -164.52  30.0  1
+ YHI  Var_22    C19  C14  C15  C01  -110.38  30.0  1
+ YHI  Var_23    C19  C14  N03  C02   104.29  30.0  1
+ YHI  Var_24    C19  C14  C15  C16  -175.49  30.0  1
+ YHI  Var_25    H20  C14  C15  C01   126.82  30.0  1
+ YHI  Var_26    H25  C23  C24  C25    84.89  30.0  1
+ YHI  Var_27    O31  C19  C14  C15    79.77  30.0  3
+ YHI  Var_28    N20  C19  C14  C15   -97.77  30.0  3
+ YHI  Var_29    C24  C23  C22  C21   -61.35  30.0  2
+ YHI  Var_30    C27  C23  C22  C21  -179.90  30.0  2
+ YHI  Var_31    O28  C27  C23  C22   -38.78  30.0  1
+ YHI  Var_32    O31  C19  C14  N03   -33.95  30.0  3
+ YHI  Var_33    N20  C19  C14  N03   148.51  30.0  3
+ YHI  Var_34    C19  C14  N03  C04   -62.66  30.0  1
+ YHI  Var_35    H7   C22  C23  C24   176.70  30.0  3
+ YHI  Var_36    H8   C22  C23  C24    59.88  30.0  3
+ YHI  Var_37    C06  O05  C04  N03  -174.75  30.0  1
+ YHI  Var_38    C23  C22  C21  N20   -57.88  30.0  3
+ YHI  Var_39    C29  C21  C22  C23  -179.67  30.0  3
+ YHI  Var_40    H6   C21  C22  C23    59.70  30.0  3
+ YHI  Var_41    C19  N20  C21  C22   121.10  30.0  1
+ YHI  Var_42    O30  C29  C21  C22   -60.72  30.0  3
+ YHI  Var_43    O13  C04  O05  C06     5.90  30.0  3
+ YHI  Var_44    C29  C21  N20  C19  -114.85  30.0  3
+ YHI  Var_45    O30  C29  C21  N20   176.39  30.0  3
+ YHI  Var_46    H29  O30  C29  C21   176.17  30.0  3
+ YHI  Var_47    H27  C29  C21  C22    61.39  30.0  3
+ YHI  Var_48    H28  C29  C21  C22   177.51  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

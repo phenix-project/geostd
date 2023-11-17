@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 41B  41B  1-[(1S)-1-(4-chloro-3-fluorophenyl)-2-hydroxyethyl]-4-[2-(tetrahydro-2H-pyran-4-ylamino)pyrimidin-4-yl]pyridin-2(1H)-one  ligand  53  31  .  2022-03-10  2022-03-10
+ 41B  41B  1-[(1S)-1-(4-chloro-3-fluorophenyl)-2-hydroxyethyl]-4-[2-(tetrahydro-2H-pyran-4-ylamino)pyrimidin-4-yl]pyridin-2(1H)-one  ligand  53  31  .  2022-03-10  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_41B
@@ -271,44 +272,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 41B  CONST_01  C1   C6   C5   C4     0.00   0.0  0
- 41B  CONST_02  C1   C2   C3   C4     0.00   0.0  0
- 41B  CONST_03  C2   C1   C6   C5     0.00   0.0  0
- 41B  CONST_04  C2   C3   C4   C5     0.00   0.0  0
- 41B  CONST_05  C3   C2   C1   C6     0.00   0.0  0
- 41B  CONST_06  C3   C4   C5   C6     0.00   0.0  0
- 41B  CONST_07  N23  C22  N21  C20    0.00   0.0  0
- 41B  CONST_08  N23  C18  C19  C20    0.00   0.0  0
- 41B  CONST_09  C19  C20  N21  C22    0.00   0.0  0
- 41B  CONST_10  C19  C18  N23  C22    0.00   0.0  0
- 41B  CONST_11  N21  C22  N23  C18    0.00   0.0  0
- 41B  CONST_12  N21  C20  C19  C18    0.00   0.0  0
- 41B  CONST_13  C14  C18  C19  C20  180.00   0.0  0
- 41B  CONST_14  C14  C18  N23  C22  180.00   0.0  0
- 41B  CONST_15  C12  N11  C16  C15    0.00   0.0  0
- 41B  CONST_16  C7   C6   C5   C4   180.00   0.0  0
- 41B  CONST_17  CL1  C3   C4   C5   180.00   0.0  0
- 41B  CONST_18  F31  C4   C5   C6   180.00   0.0  0
- 41B  CONST_19  C2   C1   C6   C7   180.00   0.0  0
- 41B  CONST_20  N24  C22  N21  C20  180.00   0.0  0
- 41B  CONST_21  CL1  C3   C2   C1   180.00   0.0  0
- 41B  CONST_22  F31  C4   C3   C2   180.00   0.0  0
- 41B  CONST_23  N24  C22  N23  C18  180.00   0.0  0
- 41B  CONST_24  C25  N24  C22  N21    0.00   0.0  0
- 41B  CONST_25  C25  N24  C22  N23  180.00   0.0  0
- 41B  CONST_26  C15  C16  N11  C7   180.00   0.0  0
- 41B  CONST_27  O17  C16  N11  C12  180.00   0.0  0
- 41B  CONST_28  H9   C2   C3   C4   180.00   0.0  0
- 41B  CONST_29  H8   C1   C6   C5   180.00   0.0  0
- 41B  CONST_30  H5   C20  N21  C22  180.00   0.0  0
- 41B  CONST_31  H1   C5   C6   C1   180.00   0.0  0
- 41B  CONST_32  H14  C19  C18  C14    0.00   0.0  0
- 41B  CONST_33  O17  C16  N11  C7     0.00   0.0  0
- 41B  CONST_34  H15  N24  C22  N21  180.00   0.0  0
- 41B  Var_01    N23  C18  C14  C13    1.29  30.0  2
- 41B  Var_02    O28  C27  C26  C25  -56.34  30.0  1
- 41B  Var_03    O28  C29  C30  C25   56.51  30.0  1
- 41B  Var_04    C30  C29  O28  C27  -59.61  30.0  1
+ 41B  CONST_01  C1   C6   C5   C4      0.00   0.0  0
+ 41B  CONST_02  C1   C2   C3   C4      0.00   0.0  0
+ 41B  CONST_03  C2   C1   C6   C5      0.00   0.0  0
+ 41B  CONST_04  C2   C3   C4   C5      0.00   0.0  0
+ 41B  CONST_05  C3   C2   C1   C6      0.00   0.0  0
+ 41B  CONST_06  C3   C4   C5   C6      0.00   0.0  0
+ 41B  CONST_07  N23  C22  N21  C20     0.00   0.0  0
+ 41B  CONST_08  N23  C18  C19  C20     0.00   0.0  0
+ 41B  CONST_09  C19  C20  N21  C22     0.00   0.0  0
+ 41B  CONST_10  C19  C18  N23  C22     0.00   0.0  0
+ 41B  CONST_11  N21  C22  N23  C18     0.00   0.0  0
+ 41B  CONST_12  N21  C20  C19  C18     0.00   0.0  0
+ 41B  CONST_13  C14  C18  C19  C20   180.00   0.0  0
+ 41B  CONST_14  C14  C18  N23  C22   180.00   0.0  0
+ 41B  CONST_15  C12  N11  C16  C15     0.00   0.0  0
+ 41B  CONST_16  C7   C6   C5   C4    180.00   0.0  0
+ 41B  CONST_17  CL1  C3   C4   C5    180.00   0.0  0
+ 41B  CONST_18  F31  C4   C5   C6    180.00   0.0  0
+ 41B  CONST_19  C2   C1   C6   C7    180.00   0.0  0
+ 41B  CONST_20  N24  C22  N21  C20   180.00   0.0  0
+ 41B  CONST_21  CL1  C3   C2   C1    180.00   0.0  0
+ 41B  CONST_22  F31  C4   C3   C2    180.00   0.0  0
+ 41B  CONST_23  N24  C22  N23  C18   180.00   0.0  0
+ 41B  CONST_24  C25  N24  C22  N21     0.00   0.0  0
+ 41B  CONST_25  C25  N24  C22  N23   180.00   0.0  0
+ 41B  CONST_26  C15  C16  N11  C7    180.00   0.0  0
+ 41B  CONST_27  O17  C16  N11  C12   180.00   0.0  0
+ 41B  CONST_28  H9   C2   C3   C4    180.00   0.0  0
+ 41B  CONST_29  H8   C1   C6   C5    180.00   0.0  0
+ 41B  CONST_30  H5   C20  N21  C22   180.00   0.0  0
+ 41B  CONST_31  H1   C5   C6   C1    180.00   0.0  0
+ 41B  CONST_32  H14  C19  C18  C14     0.00   0.0  0
+ 41B  CONST_33  O17  C16  N11  C7      0.00   0.0  0
+ 41B  CONST_34  H15  N24  C22  N21   180.00   0.0  0
+ 41B  Var_01    N23  C18  C14  C13     1.29  30.0  2
+ 41B  Var_02    O28  C27  C26  C25   -56.34  30.0  1
+ 41B  Var_03    O28  C29  C30  C25    56.51  30.0  1
+ 41B  Var_04    C30  C29  O28  C27   -59.61  30.0  1
+ 41B  Var_05    C16  C15  C14  C13    -0.21  30.0  1
+ 41B  Var_06    C16  N11  C12  C13     1.18  30.0  1
+ 41B  Var_07    C12  C13  C14  C15    -0.43  30.0  1
+ 41B  Var_08    C29  O28  C27  C26    59.55  30.0  1
+ 41B  Var_09    C29  C30  C25  C26   -53.09  30.0  1
+ 41B  Var_10    C14  C13  C12  N11    -0.03  30.0  1
+ 41B  Var_11    C14  C15  C16  N11     1.25  30.0  1
+ 41B  Var_12    C18  C14  C13  C12   179.42  30.0  1
+ 41B  Var_13    C18  C14  C15  C16   179.93  30.0  1
+ 41B  Var_14    C30  C25  C26  C27    52.89  30.0  1
+ 41B  Var_15    N11  C7   C6   C5   -143.47  30.0  2
+ 41B  Var_16    C12  N11  C7   C6   -104.43  30.0  2
+ 41B  Var_17    C16  N11  C7   C6     74.70  30.0  2
+ 41B  Var_18    C13  C12  N11  C7   -179.74  30.0  1
+ 41B  Var_19    C26  C25  N24  C22   159.12  30.0  3
+ 41B  Var_20    C30  C25  N24  C22   -78.32  30.0  3
+ 41B  Var_21    N11  C7   C6   C1     38.91  30.0  2
+ 41B  Var_22    O17  C16  C15  C14  -178.97  30.0  1
+ 41B  Var_23    N24  C25  C26  C27   177.69  30.0  1
+ 41B  Var_24    N24  C25  C30  C29  -176.07  30.0  1
+ 41B  Var_25    H4   C15  C14  C13  -179.95  30.0  1
+ 41B  Var_26    H3   C13  C14  C15   179.36  30.0  1
+ 41B  Var_27    H21  C30  C25  C26    67.80  30.0  1
+ 41B  Var_28    H22  C30  C25  C26  -173.89  30.0  1
+ 41B  Var_29    H13  C12  C13  C14   178.94  30.0  1
+ 41B  Var_30    H16  C25  C26  C27   -64.85  30.0  1
+ 41B  Var_31    C9   C7   C6   C5     87.32  30.0  2
+ 41B  Var_32    C9   C7   C6   C1    -90.30  30.0  2
+ 41B  Var_33    C12  N11  C7   C9     22.98  30.0  2
+ 41B  Var_34    C16  N11  C7   C9   -157.88  30.0  2
+ 41B  Var_35    H2   C7   C6   C5    -27.63  30.0  2
+ 41B  Var_36    O10  C9   C7   C6     51.43  30.0  1
+ 41B  Var_37    N11  C7   C9   O10   -75.87  30.0  3
+ 41B  Var_38    H10  C9   C7   C6    175.91  30.0  1
+ 41B  Var_39    H11  C9   C7   C6    -69.51  30.0  1
+ 41B  Var_40    H12  O10  C9   C7    179.13  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

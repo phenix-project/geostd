@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VMP  VMP  N-[(naphthalen-2-ylcarbonyl)carbamoyl]-beta-D-glucopyranosylamine  ligand  47  27  .  2021-08-24  2021-08-24  
+ VMP  VMP  N-[(naphthalen-2-ylcarbonyl)carbamoyl]-beta-D-glucopyranosylamine  ligand  47  27  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VMP
@@ -244,42 +245,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VMP  CONST_01  C26  C24  C11  C10  180.00   0.0  0
- VMP  CONST_02  C25  C12  C11  C10  180.00   0.0  0
- VMP  CONST_03  C13  C12  C11  C10    0.00   0.0  0
- VMP  CONST_04  C13  C14  C9   C10    0.00   0.0  0
- VMP  CONST_05  C14  C9   C10  C11    0.00   0.0  0
- VMP  CONST_06  C27  C26  C24  C11    0.00   0.0  0
- VMP  CONST_07  C27  C25  C12  C11    0.00   0.0  0
- VMP  CONST_08  C14  C13  C12  C11    0.00   0.0  0
- VMP  CONST_09  C9   C10  C11  C24  180.00   0.0  0
- VMP  CONST_10  C25  C12  C11  C24    0.00   0.0  0
- VMP  CONST_11  C13  C12  C11  C24  180.00   0.0  0
- VMP  CONST_12  C25  C27  C26  C24    0.00   0.0  0
- VMP  CONST_13  C12  C11  C24  C26    0.00   0.0  0
- VMP  CONST_14  C12  C25  C27  C26    0.00   0.0  0
- VMP  CONST_15  C13  C12  C25  C27  180.00   0.0  0
- VMP  CONST_16  C14  C13  C12  C25  180.00   0.0  0
- VMP  CONST_17  C9   C10  C11  C12    0.00   0.0  0
- VMP  CONST_18  C9   C14  C13  C12    0.00   0.0  0
- VMP  CONST_19  C8   C9   C10  C11  180.00   0.0  0
- VMP  CONST_20  C8   C9   C14  C13  180.00   0.0  0
- VMP  CONST_21  H24  C24  C11  C10    0.00   0.0  0
- VMP  CONST_22  H14  C14  C9   C10  180.00   0.0  0
- VMP  CONST_23  H26  C26  C24  C11  180.00   0.0  0
- VMP  CONST_24  H25  C25  C12  C11  180.00   0.0  0
- VMP  CONST_25  H13  C13  C12  C11  180.00   0.0  0
- VMP  CONST_26  H10  C10  C11  C24    0.00   0.0  0
- VMP  CONST_27  H27  C27  C26  C24  180.00   0.0  0
- VMP  CONST_28  C7   N2   C8   C9   180.00   0.0  0
- VMP  CONST_29  C1   N1   C7   O7     0.00   0.0  0
- VMP  CONST_30  C1   N1   C7   N2   180.00   0.0  0
- VMP  CONST_31  H2   N2   C8   C9     0.00   0.0  0
- VMP  CONST_32  O7   C7   N2   C8     0.00   0.0  0
- VMP  CONST_33  C7   N2   C8   O8     0.00   0.0  0
- VMP  CONST_34  N1   C7   N2   C8   180.00   0.0  0
- VMP  CONST_35  H1   N1   C7   O7   180.00   0.0  0
- VMP  Var_01    O8   C8   C9   C10   21.58  30.0  2
+ VMP  CONST_01  C26   C24  C11  C10   180.00   0.0  0
+ VMP  CONST_02  C25   C12  C11  C10   180.00   0.0  0
+ VMP  CONST_03  C13   C12  C11  C10     0.00   0.0  0
+ VMP  CONST_04  C13   C14  C9   C10     0.00   0.0  0
+ VMP  CONST_05  C14   C9   C10  C11     0.00   0.0  0
+ VMP  CONST_06  C27   C26  C24  C11     0.00   0.0  0
+ VMP  CONST_07  C27   C25  C12  C11     0.00   0.0  0
+ VMP  CONST_08  C14   C13  C12  C11     0.00   0.0  0
+ VMP  CONST_09  C9    C10  C11  C24   180.00   0.0  0
+ VMP  CONST_10  C25   C12  C11  C24     0.00   0.0  0
+ VMP  CONST_11  C13   C12  C11  C24   180.00   0.0  0
+ VMP  CONST_12  C25   C27  C26  C24     0.00   0.0  0
+ VMP  CONST_13  C12   C11  C24  C26     0.00   0.0  0
+ VMP  CONST_14  C12   C25  C27  C26     0.00   0.0  0
+ VMP  CONST_15  C13   C12  C25  C27   180.00   0.0  0
+ VMP  CONST_16  C14   C13  C12  C25   180.00   0.0  0
+ VMP  CONST_17  C9    C10  C11  C12     0.00   0.0  0
+ VMP  CONST_18  C9    C14  C13  C12     0.00   0.0  0
+ VMP  CONST_19  C8    C9   C10  C11   180.00   0.0  0
+ VMP  CONST_20  C8    C9   C14  C13   180.00   0.0  0
+ VMP  CONST_21  H24   C24  C11  C10     0.00   0.0  0
+ VMP  CONST_22  H14   C14  C9   C10   180.00   0.0  0
+ VMP  CONST_23  H26   C26  C24  C11   180.00   0.0  0
+ VMP  CONST_24  H25   C25  C12  C11   180.00   0.0  0
+ VMP  CONST_25  H13   C13  C12  C11   180.00   0.0  0
+ VMP  CONST_26  H10   C10  C11  C24     0.00   0.0  0
+ VMP  CONST_27  H27   C27  C26  C24   180.00   0.0  0
+ VMP  CONST_28  C7    N2   C8   C9    180.00   0.0  0
+ VMP  CONST_29  C1    N1   C7   O7      0.00   0.0  0
+ VMP  CONST_30  C1    N1   C7   N2    180.00   0.0  0
+ VMP  CONST_31  H2    N2   C8   C9      0.00   0.0  0
+ VMP  CONST_32  O7    C7   N2   C8      0.00   0.0  0
+ VMP  CONST_33  C7    N2   C8   O8      0.00   0.0  0
+ VMP  CONST_34  N1    C7   N2   C8    180.00   0.0  0
+ VMP  CONST_35  H1    N1   C7   O7    180.00   0.0  0
+ VMP  Var_01    O8    C8   C9   C10    21.58  30.0  2
+ VMP  Var_02    C4    C5   O5   C1     62.17  30.0  1
+ VMP  Var_03    C4    C3   C2   C1    -53.49  30.0  1
+ VMP  Var_04    C3    C2   C1   O5     56.85  30.0  1
+ VMP  Var_05    C3    C4   C5   O5    -55.90  30.0  1
+ VMP  Var_06    C2    C1   O5   C5    -62.91  30.0  1
+ VMP  Var_07    C2    C3   C4   C5     53.39  30.0  1
+ VMP  Var_08    C5    O5   C1   N1    176.20  30.0  1
+ VMP  Var_09    C3    C2   C1   N1    176.81  30.0  1
+ VMP  Var_10    C6    C5   O5   C1   -175.85  30.0  1
+ VMP  Var_11    O3    C3   C2   C1   -173.45  30.0  1
+ VMP  Var_12    O2    C2   C1   O5    175.54  30.0  1
+ VMP  Var_13    O4    C4   C5   O5   -177.40  30.0  1
+ VMP  Var_14    O3    C3   C4   C5    176.02  30.0  1
+ VMP  Var_15    C3    C4   C5   C6   -175.44  30.0  1
+ VMP  Var_16    O2    C2   C3   C4   -174.48  30.0  1
+ VMP  Var_17    C2    C3   C4   O4    173.01  30.0  1
+ VMP  Var_18    H5    C5   O5   C1    -57.14  30.0  1
+ VMP  Var_19    H3    C3   C2   C1     64.28  30.0  1
+ VMP  Var_20    HB    C2   C1   O5    -61.36  30.0  1
+ VMP  Var_21    H4    C4   C5   O5     62.16  30.0  1
+ VMP  Var_22    HA    C1   O5   C5     57.50  30.0  1
+ VMP  Var_23    O5    C1   N1   C7    -96.87  30.0  3
+ VMP  Var_24    C2    C1   N1   C7    142.31  30.0  3
+ VMP  Var_25    O2    C2   C1   N1    -64.49  30.0  1
+ VMP  Var_26    O6    C6   C5   O5     63.62  30.0  3
+ VMP  Var_27    O4    C4   C5   C6     63.06  30.0  1
+ VMP  Var_28    C4    C5   C6   O6   -175.67  30.0  3
+ VMP  Var_29    O3    C3   C4   O4    -64.36  30.0  1
+ VMP  Var_30    O2    C2   C3   O3     65.56  30.0  1
+ VMP  Var_31    H2A   O2   C2   C1     70.88  30.0  3
+ VMP  Var_32    H1    N1   C1   O5     72.15  30.0  2
+ VMP  Var_33    H61C  C6   C5   O5   -174.64  30.0  3
+ VMP  Var_34    H62C  C6   C5   O5    -58.56  30.0  3
+ VMP  Var_35    HC    O4   C4   C5    179.19  30.0  3
+ VMP  Var_36    HD    O3   C3   C4    167.70  30.0  3
+ VMP  Var_37    H6    O6   C6   C5    177.19  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

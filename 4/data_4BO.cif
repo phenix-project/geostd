@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 4BO  4BO  N-[4-(benzyloxy)phenyl]-L-alpha-asparagine  ligand  40  23  .  2021-08-04  2021-08-04  
+ 4BO  4BO  N-[4-(benzyloxy)phenyl]-L-alpha-asparagine  ligand  40  23  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_4BO
@@ -213,41 +214,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 4BO  CONST_01  C15  C16  C11  C12    0.00   0.0  0
- 4BO  CONST_02  C15  C14  C13  C12    0.00   0.0  0
- 4BO  CONST_03  C16  C11  C12  C13    0.00   0.0  0
- 4BO  CONST_04  C16  C15  C14  C13    0.00   0.0  0
- 4BO  CONST_05  C21  C20  C19  C24    0.00   0.0  0
- 4BO  CONST_06  C21  C22  C23  C24    0.00   0.0  0
- 4BO  CONST_07  C14  C13  C12  C11    0.00   0.0  0
- 4BO  CONST_08  C14  C15  C16  C11    0.00   0.0  0
- 4BO  CONST_09  C23  C24  C19  C20    0.00   0.0  0
- 4BO  CONST_10  C23  C22  C21  C20    0.00   0.0  0
- 4BO  CONST_11  C19  C20  C21  C22    0.00   0.0  0
- 4BO  CONST_12  C19  C24  C23  C22    0.00   0.0  0
- 4BO  CONST_13  O17  C14  C13  C12  180.00   0.0  0
- 4BO  CONST_14  N9   C11  C12  C13  180.00   0.0  0
- 4BO  CONST_15  N9   C11  C16  C15  180.00   0.0  0
- 4BO  CONST_16  C18  C19  C20  C21  180.00   0.0  0
- 4BO  CONST_17  C18  C19  C24  C23  180.00   0.0  0
- 4BO  CONST_18  C16  C15  C14  O17  180.00   0.0  0
- 4BO  CONST_19  H16  C16  C11  C12  180.00   0.0  0
- 4BO  CONST_20  H15  C15  C14  C13  180.00   0.0  0
- 4BO  CONST_21  H20  C20  C19  C24  180.00   0.0  0
- 4BO  CONST_22  H22  C22  C23  C24  180.00   0.0  0
- 4BO  CONST_23  H13  C13  C12  C11  180.00   0.0  0
- 4BO  CONST_24  H12  C12  C13  C14  180.00   0.0  0
- 4BO  CONST_25  H24  C24  C19  C20  180.00   0.0  0
- 4BO  CONST_26  H23  C23  C22  C21  180.00   0.0  0
- 4BO  CONST_27  H21  C21  C22  C23  180.00   0.0  0
- 4BO  CONST_28  C7   N9   C11  C12    0.00   0.0  0
- 4BO  CONST_29  C16  C11  N9   C7   180.00   0.0  0
- 4BO  CONST_30  HN9  N9   C11  C12  180.00   0.0  0
- 4BO  CONST_31  C5   C7   N9   C11  180.00   0.0  0
- 4BO  CONST_32  O8   C7   N9   C11    0.00   0.0  0
- 4BO  Var_01    O17  C18  C19  C24  108.09  30.0  2
- 4BO  Var_02    C19  C18  O17  C14  175.64  30.0  3
- 4BO  Var_03    C5   C4   C2   O1   -14.35  30.0  3
+ 4BO  CONST_01  C15   C16  C11  C12     0.00   0.0  0
+ 4BO  CONST_02  C15   C14  C13  C12     0.00   0.0  0
+ 4BO  CONST_03  C16   C11  C12  C13     0.00   0.0  0
+ 4BO  CONST_04  C16   C15  C14  C13     0.00   0.0  0
+ 4BO  CONST_05  C21   C20  C19  C24     0.00   0.0  0
+ 4BO  CONST_06  C21   C22  C23  C24     0.00   0.0  0
+ 4BO  CONST_07  C14   C13  C12  C11     0.00   0.0  0
+ 4BO  CONST_08  C14   C15  C16  C11     0.00   0.0  0
+ 4BO  CONST_09  C23   C24  C19  C20     0.00   0.0  0
+ 4BO  CONST_10  C23   C22  C21  C20     0.00   0.0  0
+ 4BO  CONST_11  C19   C20  C21  C22     0.00   0.0  0
+ 4BO  CONST_12  C19   C24  C23  C22     0.00   0.0  0
+ 4BO  CONST_13  O17   C14  C13  C12   180.00   0.0  0
+ 4BO  CONST_14  N9    C11  C12  C13   180.00   0.0  0
+ 4BO  CONST_15  N9    C11  C16  C15   180.00   0.0  0
+ 4BO  CONST_16  C18   C19  C20  C21   180.00   0.0  0
+ 4BO  CONST_17  C18   C19  C24  C23   180.00   0.0  0
+ 4BO  CONST_18  C16   C15  C14  O17   180.00   0.0  0
+ 4BO  CONST_19  H16   C16  C11  C12   180.00   0.0  0
+ 4BO  CONST_20  H15   C15  C14  C13   180.00   0.0  0
+ 4BO  CONST_21  H20   C20  C19  C24   180.00   0.0  0
+ 4BO  CONST_22  H22   C22  C23  C24   180.00   0.0  0
+ 4BO  CONST_23  H13   C13  C12  C11   180.00   0.0  0
+ 4BO  CONST_24  H12   C12  C13  C14   180.00   0.0  0
+ 4BO  CONST_25  H24   C24  C19  C20   180.00   0.0  0
+ 4BO  CONST_26  H23   C23  C22  C21   180.00   0.0  0
+ 4BO  CONST_27  H21   C21  C22  C23   180.00   0.0  0
+ 4BO  CONST_28  C7    N9   C11  C12     0.00   0.0  0
+ 4BO  CONST_29  C16   C11  N9   C7    180.00   0.0  0
+ 4BO  CONST_30  HN9   N9   C11  C12   180.00   0.0  0
+ 4BO  CONST_31  C5    C7   N9   C11   180.00   0.0  0
+ 4BO  CONST_32  O8    C7   N9   C11     0.00   0.0  0
+ 4BO  Var_01    O17   C18  C19  C24   108.09  30.0  2
+ 4BO  Var_02    C19   C18  O17  C14   175.64  30.0  3
+ 4BO  Var_03    C5    C4   C2   O1    -14.35  30.0  3
+ 4BO  Var_04    C18   O17  C14  C13  -177.26  30.0  2
+ 4BO  Var_05    C18   O17  C14  C15     2.82  30.0  2
+ 4BO  Var_06    O8    C7   C5   C4     90.71  30.0  3
+ 4BO  Var_07    N9    C7   C5   C4    -86.86  30.0  3
+ 4BO  Var_08    C2    C4   C5   C7    175.75  30.0  3
+ 4BO  Var_09    N6    C5   C7   N9    147.56  30.0  2
+ 4BO  Var_10    N6    C5   C7   O8    -34.88  30.0  2
+ 4BO  Var_11    C2    C4   C5   N6    -62.35  30.0  3
+ 4BO  Var_12    HN6   N6   C5   C4    -58.54  30.0  3
+ 4BO  Var_13    HN6A  N6   C5   C4     56.15  30.0  3
+ 4BO  Var_14    H5    C5   C7   N9     30.54  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

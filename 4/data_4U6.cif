@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 4U6  4U6  N-{(1R)-2-(hydroxyamino)-1-[3'-(N'-hydroxycarbamimidoyl)biphenyl-4-yl]-2-oxoethyl}-2,2-dimethylpropanamide  ligand  52  28  .  2021-08-04  2021-08-04  
+ 4U6  4U6  N-{(1R)-2-(hydroxyamino)-1-[3'-(N'-hydroxycarbamimidoyl)biphenyl-4-yl]-2-oxoethyl}-2,2-dimethylpropanamide  ligand  52  28  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_4U6
@@ -257,47 +258,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 4U6  CONST_01  CAX  CAM  CAO  CAZ    0.00   0.0  0
- 4U6  CONST_02  CAX  CAL  CAN  CAZ    0.00   0.0  0
- 4U6  CONST_03  CAY  CAX  CAM  CAO  180.00   0.0  0
- 4U6  CONST_04  CAL  CAX  CAM  CAO    0.00   0.0  0
- 4U6  CONST_05  CAL  CAN  CAZ  CAO    0.00   0.0  0
- 4U6  CONST_06  CAN  CAZ  CAO  CAM    0.00   0.0  0
- 4U6  CONST_09  CAN  CAL  CAX  CAM    0.00   0.0  0
- 4U6  CONST_10  CAY  CAX  CAL  CAN  180.00   0.0  0
- 4U6  CONST_13  CAI  CAK  CAY  CAX  180.00   0.0  0
- 4U6  CONST_14  CAW  CAP  CAY  CAX  180.00   0.0  0
- 4U6  CONST_15  CAJ  CAI  CAK  CAY    0.00   0.0  0
- 4U6  CONST_16  CAJ  CAW  CAP  CAY    0.00   0.0  0
- 4U6  CONST_17  CAI  CAK  CAY  CAP    0.00   0.0  0
- 4U6  CONST_18  CAI  CAJ  CAW  CAP    0.00   0.0  0
- 4U6  CONST_19  CAW  CAJ  CAI  CAK    0.00   0.0  0
- 4U6  CONST_20  CAW  CAP  CAY  CAK    0.00   0.0  0
- 4U6  CONST_21  CAM  CAO  CAZ  CA   180.00   0.0  0
- 4U6  CONST_22  CAL  CAN  CAZ  CA   180.00   0.0  0
- 4U6  CONST_23  CAT  CAW  CAP  CAY  180.00   0.0  0
- 4U6  CONST_24  CAT  CAW  CAJ  CAI  180.00   0.0  0
- 4U6  CONST_25  H15  CAM  CAO  CAZ  180.00   0.0  0
- 4U6  CONST_26  H17  CAL  CAN  CAZ  180.00   0.0  0
- 4U6  CONST_27  H16  CAN  CAZ  CAO  180.00   0.0  0
- 4U6  CONST_28  H14  CAO  CAZ  CAN  180.00   0.0  0
- 4U6  CONST_29  H19  CAK  CAY  CAX    0.00   0.0  0
- 4U6  CONST_30  H18  CAP  CAY  CAX    0.00   0.0  0
- 4U6  CONST_31  H20  CAI  CAK  CAY  180.00   0.0  0
- 4U6  CONST_32  H21  CAJ  CAW  CAP  180.00   0.0  0
- 4U6  CONST_33  OAG  NAQ  CAT  CAW  180.00   0.0  0
- 4U6  CONST_35  H25  NAD  CAT  CAW  180.00   0.0  0
- 4U6  CONST_36  CA   N    CAV  CBB  180.00   0.0  0
- 4U6  CONST_37  CA   N    CAV  OAF    0.00   0.0  0
- 4U6  CONST_38  OAH  NAR  C    CA   180.00   0.0  0
- 4U6  CONST_39  OAH  NAR  C    O      0.00   0.0  0
- 4U6  CONST_40  OAG  NAQ  CAT  NAD    0.00   0.0  0
- 4U6  CONST_41  H10  N    CAV  CBB    0.00   0.0  0
- 4U6  Var_01    NAD  CAT  CAW  CAP  153.20  30.0  2
- 4U6  Var_02    OAF  CAV  CBB  CAA    2.36  30.0  3
- 4U6  Var_03    H7   CAC  CBB  CAA   62.94  30.0  3
- 4U6  Var_04    H4   CAB  CBB  CAA   57.10  30.0  3
- 4U6  Var_05    H1   CAA  CBB  CAB   58.84  30.0  3
+ 4U6  CONST_01  CAX  CAM  CAO  CAZ     0.00   0.0  0
+ 4U6  CONST_02  CAX  CAL  CAN  CAZ     0.00   0.0  0
+ 4U6  CONST_03  CAY  CAX  CAM  CAO   180.00   0.0  0
+ 4U6  CONST_04  CAL  CAX  CAM  CAO     0.00   0.0  0
+ 4U6  CONST_05  CAL  CAN  CAZ  CAO     0.00   0.0  0
+ 4U6  CONST_06  CAN  CAZ  CAO  CAM     0.00   0.0  0
+ 4U6  CONST_07  CAN  CAL  CAX  CAM     0.00   0.0  0
+ 4U6  CONST_08  CAY  CAX  CAL  CAN   180.00   0.0  0
+ 4U6  CONST_09  CAI  CAK  CAY  CAX   180.00   0.0  0
+ 4U6  CONST_10  CAW  CAP  CAY  CAX   180.00   0.0  0
+ 4U6  CONST_11  CAJ  CAI  CAK  CAY     0.00   0.0  0
+ 4U6  CONST_12  CAJ  CAW  CAP  CAY     0.00   0.0  0
+ 4U6  CONST_13  CAI  CAK  CAY  CAP     0.00   0.0  0
+ 4U6  CONST_14  CAI  CAJ  CAW  CAP     0.00   0.0  0
+ 4U6  CONST_15  CAW  CAJ  CAI  CAK     0.00   0.0  0
+ 4U6  CONST_16  CAW  CAP  CAY  CAK     0.00   0.0  0
+ 4U6  CONST_17  CAM  CAO  CAZ  CA    180.00   0.0  0
+ 4U6  CONST_18  CAL  CAN  CAZ  CA    180.00   0.0  0
+ 4U6  CONST_19  CAT  CAW  CAP  CAY   180.00   0.0  0
+ 4U6  CONST_20  CAT  CAW  CAJ  CAI   180.00   0.0  0
+ 4U6  CONST_21  H15  CAM  CAO  CAZ   180.00   0.0  0
+ 4U6  CONST_22  H17  CAL  CAN  CAZ   180.00   0.0  0
+ 4U6  CONST_23  H16  CAN  CAZ  CAO   180.00   0.0  0
+ 4U6  CONST_24  H14  CAO  CAZ  CAN   180.00   0.0  0
+ 4U6  CONST_25  H19  CAK  CAY  CAX     0.00   0.0  0
+ 4U6  CONST_26  H18  CAP  CAY  CAX     0.00   0.0  0
+ 4U6  CONST_27  H20  CAI  CAK  CAY   180.00   0.0  0
+ 4U6  CONST_28  H21  CAJ  CAW  CAP   180.00   0.0  0
+ 4U6  CONST_29  OAG  NAQ  CAT  CAW   180.00   0.0  0
+ 4U6  CONST_30  H25  NAD  CAT  CAW   180.00   0.0  0
+ 4U6  CONST_31  CA   N    CAV  CBB   180.00   0.0  0
+ 4U6  CONST_32  CA   N    CAV  OAF     0.00   0.0  0
+ 4U6  CONST_33  OAH  NAR  C    CA    180.00   0.0  0
+ 4U6  CONST_34  OAH  NAR  C    O       0.00   0.0  0
+ 4U6  CONST_35  OAG  NAQ  CAT  NAD     0.00   0.0  0
+ 4U6  CONST_36  H10  N    CAV  CBB     0.00   0.0  0
+ 4U6  Var_01    NAD  CAT  CAW  CAP   153.20  30.0  2
+ 4U6  Var_02    OAF  CAV  CBB  CAA     2.36  30.0  3
+ 4U6  Var_03    H7   CAC  CBB  CAA    62.94  30.0  3
+ 4U6  Var_04    H4   CAB  CBB  CAA    57.10  30.0  3
+ 4U6  Var_05    H1   CAA  CBB  CAB    58.84  30.0  3
+ 4U6  Var_06    CAK  CAY  CAX  CAM    37.76  30.0  3
+ 4U6  Var_07    CAP  CAY  CAX  CAM  -141.85  30.0  3
+ 4U6  Var_08    CAK  CAY  CAX  CAL  -142.09  30.0  3
+ 4U6  Var_09    CAP  CAY  CAX  CAL    38.29  30.0  3
+ 4U6  Var_10    CAO  CAZ  CA   N     -49.82  30.0  3
+ 4U6  Var_11    CAN  CAZ  CA   N     131.71  30.0  3
+ 4U6  Var_12    CAO  CAZ  CA   C      70.97  30.0  3
+ 4U6  Var_13    CAN  CAZ  CA   C    -107.50  30.0  3
+ 4U6  Var_14    H11  CA   CAZ  CAO  -170.49  30.0  2
+ 4U6  Var_15    CAZ  CA   N    CAV   176.47  30.0  1
+ 4U6  Var_16    CAZ  CA   C    O     -77.87  30.0  2
+ 4U6  Var_17    CAZ  CA   C    NAR    96.56  30.0  2
+ 4U6  Var_18    H10  N    CA   CAZ    -7.04  30.0  3
+ 4U6  Var_19    C    CA   N    CAV    56.94  30.0  1
+ 4U6  Var_20    NAR  C    CA   N    -142.20  30.0  3
+ 4U6  Var_21    O    C    CA   N      43.37  30.0  3
+ 4U6  Var_22    H13  OAH  NAR  C     102.85  30.0  3
+ 4U6  Var_23    H24  OAG  NAQ  CAT   178.08  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 06W  06W  6-ethyl-5-{(3S)-3-[3-methoxy-5-(pyridin-4-yl)phenyl]but-1-yn-1-yl}pyrimidine-2,4-diamine  ligand  51  28  .  2021-08-03  2022-07-21
+ 06W  06W  6-ethyl-5-{(3S)-3-[3-methoxy-5-(pyridin-4-yl)phenyl]but-1-yn-1-yl}pyrimidine-2,4-diamine  ligand  51  28  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_06W
@@ -262,48 +263,65 @@ _chem_comp_tor.period
  06W  CONST_04  C5    C4   N3   C2      0.00   0.0  0
  06W  CONST_05  C6    N1   C2   N3      0.00   0.0  0
  06W  CONST_06  C6    C5   C4   N3      0.00   0.0  0
- 06W  CONST_09  CAW   CAV  CAU  CAA     0.00   0.0  0
- 06W  CONST_10  CAW   NAX  CAY  CAA     0.00   0.0  0
- 06W  CONST_11  CAR   CAS  CAT  CAO     0.00   0.0  0
- 06W  CONST_12  CAU   CAS  CAT  CAO   180.00   0.0  0
- 06W  CONST_13  CAR   CAQ  CAP  CAO     0.00   0.0  0
- 06W  CONST_14  CAS   CAT  CAO  CAP     0.00   0.0  0
- 06W  CONST_15  CAS   CAR  CAQ  CAP     0.00   0.0  0
- 06W  CONST_16  CAT   CAO  CAP  CAQ     0.00   0.0  0
- 06W  CONST_17  CAU   CAS  CAR  CAQ   180.00   0.0  0
- 06W  CONST_18  CAT   CAS  CAR  CAQ     0.00   0.0  0
- 06W  CONST_20  CAY   CAA  CAU  CAS   180.00   0.0  0
- 06W  CONST_21  CAW   CAV  CAU  CAS   180.00   0.0  0
- 06W  CONST_23  NAX   CAY  CAA  CAU     0.00   0.0  0
- 06W  CONST_24  NAX   CAW  CAV  CAU     0.00   0.0  0
- 06W  CONST_25  CAY   CAA  CAU  CAV     0.00   0.0  0
- 06W  CONST_26  CAY   NAX  CAW  CAV     0.00   0.0  0
- 06W  CONST_27  CAK   C5   C6   N1    180.00   0.0  0
- 06W  CONST_28  NAJ   C6   N1   C2    180.00   0.0  0
- 06W  CONST_29  CAI   C4   N3   C2    180.00   0.0  0
- 06W  CONST_30  CAK   C5   C4   N3    180.00   0.0  0
- 06W  CONST_31  NAH   C2   N3   C4    180.00   0.0  0
- 06W  CONST_32  NAJ   C6   C5   C4    180.00   0.0  0
- 06W  CONST_33  NAH   C2   N1   C6    180.00   0.0  0
- 06W  CONST_34  CAI   C4   C5   C6    180.00   0.0  0
- 06W  CONST_35  CAS   CAT  CAO  CAM   180.00   0.0  0
- 06W  CONST_36  CAQ   CAP  CAO  CAM   180.00   0.0  0
- 06W  CONST_37  OBA   CAQ  CAP  CAO   180.00   0.0  0
- 06W  CONST_38  OBA   CAQ  CAR  CAS   180.00   0.0  0
- 06W  CONST_39  HAV   CAV  CAU  CAA   180.00   0.0  0
- 06W  CONST_40  HAT   CAT  CAO  CAP   180.00   0.0  0
- 06W  CONST_41  HAR   CAR  CAQ  CAP   180.00   0.0  0
- 06W  CONST_42  HAP   CAP  CAQ  CAR   180.00   0.0  0
- 06W  CONST_43  HAA   CAA  CAU  CAS     0.00   0.0  0
- 06W  CONST_44  HAY   CAY  CAA  CAU   180.00   0.0  0
- 06W  CONST_45  HAW   CAW  CAV  CAU   180.00   0.0  0
- 06W  CONST_46  HNAH  NAH  C2   N1      0.00   0.0  0
- 06W  CONST_47  HNAA  NAH  C2   N1    180.00   0.0  0
- 06W  CONST_48  HNAJ  NAJ  C6   N1    180.00   0.0  0
- 06W  CONST_49  HNAB  NAJ  C6   N1      0.00   0.0  0
+ 06W  CONST_07  CAW   CAV  CAU  CAA     0.00   0.0  0
+ 06W  CONST_08  CAW   NAX  CAY  CAA     0.00   0.0  0
+ 06W  CONST_09  CAR   CAS  CAT  CAO     0.00   0.0  0
+ 06W  CONST_10  CAU   CAS  CAT  CAO   180.00   0.0  0
+ 06W  CONST_11  CAR   CAQ  CAP  CAO     0.00   0.0  0
+ 06W  CONST_12  CAS   CAT  CAO  CAP     0.00   0.0  0
+ 06W  CONST_13  CAS   CAR  CAQ  CAP     0.00   0.0  0
+ 06W  CONST_14  CAT   CAO  CAP  CAQ     0.00   0.0  0
+ 06W  CONST_15  CAU   CAS  CAR  CAQ   180.00   0.0  0
+ 06W  CONST_16  CAT   CAS  CAR  CAQ     0.00   0.0  0
+ 06W  CONST_17  CAY   CAA  CAU  CAS   180.00   0.0  0
+ 06W  CONST_18  CAW   CAV  CAU  CAS   180.00   0.0  0
+ 06W  CONST_19  NAX   CAY  CAA  CAU     0.00   0.0  0
+ 06W  CONST_20  NAX   CAW  CAV  CAU     0.00   0.0  0
+ 06W  CONST_21  CAY   CAA  CAU  CAV     0.00   0.0  0
+ 06W  CONST_22  CAY   NAX  CAW  CAV     0.00   0.0  0
+ 06W  CONST_23  CAK   C5   C6   N1    180.00   0.0  0
+ 06W  CONST_24  NAJ   C6   N1   C2    180.00   0.0  0
+ 06W  CONST_25  CAI   C4   N3   C2    180.00   0.0  0
+ 06W  CONST_26  CAK   C5   C4   N3    180.00   0.0  0
+ 06W  CONST_27  NAH   C2   N3   C4    180.00   0.0  0
+ 06W  CONST_28  NAJ   C6   C5   C4    180.00   0.0  0
+ 06W  CONST_29  NAH   C2   N1   C6    180.00   0.0  0
+ 06W  CONST_30  CAI   C4   C5   C6    180.00   0.0  0
+ 06W  CONST_31  CAS   CAT  CAO  CAM   180.00   0.0  0
+ 06W  CONST_32  CAQ   CAP  CAO  CAM   180.00   0.0  0
+ 06W  CONST_33  OBA   CAQ  CAP  CAO   180.00   0.0  0
+ 06W  CONST_34  OBA   CAQ  CAR  CAS   180.00   0.0  0
+ 06W  CONST_35  HAV   CAV  CAU  CAA   180.00   0.0  0
+ 06W  CONST_36  HAT   CAT  CAO  CAP   180.00   0.0  0
+ 06W  CONST_37  HAR   CAR  CAQ  CAP   180.00   0.0  0
+ 06W  CONST_38  HAP   CAP  CAQ  CAR   180.00   0.0  0
+ 06W  CONST_39  HAA   CAA  CAU  CAS     0.00   0.0  0
+ 06W  CONST_40  HAY   CAY  CAA  CAU   180.00   0.0  0
+ 06W  CONST_41  HAW   CAW  CAV  CAU   180.00   0.0  0
+ 06W  CONST_42  HNAH  NAH  C2   N1      0.00   0.0  0
+ 06W  CONST_43  HNAA  NAH  C2   N1    180.00   0.0  0
+ 06W  CONST_44  HNAJ  NAJ  C6   N1    180.00   0.0  0
+ 06W  CONST_45  HNAB  NAJ  C6   N1      0.00   0.0  0
  06W  Var_01    CAZ   CAI  C4   N3     96.84  30.0  1
  06W  Var_02    HAZ   CAZ  CAI  C4   -177.03  30.0  3
  06W  Var_03    HBB   CBB  OBA  CAQ    59.82  30.0  3
+ 06W  Var_04    CAR   CAS  CAU  CAA   -34.49  30.0  2
+ 06W  Var_05    CAT   CAS  CAU  CAA   145.83  30.0  2
+ 06W  Var_06    CAV   CAU  CAS  CAR   145.50  30.0  2
+ 06W  Var_07    CAV   CAU  CAS  CAT   -34.18  30.0  2
+ 06W  Var_08    CAT   CAO  CAM  CAL   140.79  30.0  2
+ 06W  Var_09    CAP   CAO  CAM  CAL   -41.99  30.0  2
+ 06W  Var_10    CAT   CAO  CAM  CAN   -95.69  30.0  2
+ 06W  Var_11    CAP   CAO  CAM  CAN    81.54  30.0  2
+ 06W  Var_12    CBB   OBA  CAQ  CAP  -177.93  30.0  2
+ 06W  Var_13    CBB   OBA  CAQ  CAR     2.47  30.0  2
+ 06W  Var_14    HAM   CAM  CAO  CAP  -160.79  30.0  3
+ 06W  Var_15    CAM   CAL  CAK  C5    -91.66  30.0  3
+ 06W  Var_16    CAO   CAM  CAL  CAK    77.16  30.0  3
+ 06W  Var_17    HAN   CAN  CAM  CAO   177.42  30.0  3
+ 06W  Var_18    HANA  CAN  CAM  CAO   -62.50  30.0  3
+ 06W  Var_19    HANB  CAN  CAM  CAO    57.60  30.0  3
+ 06W  Var_20    CAN   CAM  CAL  CAK   -46.31  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

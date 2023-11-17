@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RGC  RGC  '(4R,5R,9S,10S,11S)-4,10-dimethoxy-5,9-dimethyl-6-oxo-11-[(3R,5E,7E,11S,12S,13E,15R,17S,18S,19E,21S,23S,24R,25R)-3,15,17,21,23-pentamethoxy-5,12,18,24-tetramethyl-9,27-dioxo-10,26-dioxabicyclo[23.3.1]nonacosa-1(28),5,7,13,19-pentaen-11-yl]dodecanoic acid'  ligand  149  66  .  2022-03-23  2022-03-23
+ RGC  RGC  '(4R,5R,9S,10S,11S)-4,10-dimethoxy-5,9-dimethyl-6-oxo-11-[(3R,5E,7E,11S,12S,13E,15R,17S,18S,19E,21S,23S,24R,25R)-3,15,17,21,23-pentamethoxy-5,12,18,24-tetramethyl-9,27-dioxo-10,26-dioxabicyclo[23.3.1]nonacosa-1(28),5,7,13,19-pentaen-11-yl]dodecanoic acid'  ligand  149  66  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RGC
@@ -643,32 +644,159 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RGC  Var_01  C4    C3   C2   C1    178.50   0.0  0
- RGC  Var_02  C6    C5   C4   C3   -175.60   0.0  0
- RGC  Var_03  C18   C17  C16  C15  -179.64   0.0  0
- RGC  Var_04  C24   C23  C22  C21   175.93   0.0  0
- RGC  Var_05  C3    C2   C1   O25  -164.23  30.0  1
- RGC  Var_06  C5    C4   C3   C2   -178.02  30.0  1
- RGC  Var_07  C7    C6   C5   C4     78.86  30.0  1
- RGC  Var_08  C39   C9   C8   C7    100.92  30.0  1
- RGC  Var_09  C40   C39  C9   C8   -179.18  30.0  2
- RGC  Var_10  C11   C10  C9   C8    145.38  30.0  1
- RGC  Var_11  O11   C40  C39  C9     14.63  30.0  1
- RGC  Var_12  H2    C2   C3   C4      1.74   0.0  0
- RGC  Var_13  H16   C16  C17  C18    -0.13   0.0  0
- RGC  Var_14  H22   C22  C23  C24    -1.96   0.0  0
- RGC  Var_15  H381  C38  C5   C4   -120.57  30.0  3
- RGC  Var_16  H481  C48  O7   C7     74.65  30.0  3
- RGC  Var_17  H491  C49  O13  C13   -57.58  30.0  3
- RGC  Var_18  H501  C50  O15  C15    64.09  30.0  3
- RGC  Var_19  H511  C51  O19  C19    62.23  30.0  3
- RGC  Var_20  H521  C52  O21  C21   -64.80  30.0  3
- RGC  Var_21  C31   C30  C29  C28  -169.16  30.0  3
- RGC  Var_22  O31   C31  C30  C29     3.05  30.0  3
- RGC  Var_23  C36   C35  C34  C33  -161.03  30.0  3
- RGC  Var_24  O2    C36  C35  C34   167.22  30.0  3
- RGC  Var_25  H531  C53  O27  C27    43.54  30.0  3
- RGC  Var_26  H541  C54  O33  C33    61.49  30.0  3
+ RGC  Var_01   C4    C3   C2   C1    178.50   0.0  0
+ RGC  Var_02   C6    C5   C4   C3   -175.60   0.0  0
+ RGC  Var_03   C18   C17  C16  C15  -179.64   0.0  0
+ RGC  Var_04   C24   C23  C22  C21   175.93   0.0  0
+ RGC  Var_05   C3    C2   C1   O25  -164.23  30.0  1
+ RGC  Var_06   C5    C4   C3   C2   -178.02  30.0  1
+ RGC  Var_07   C7    C6   C5   C4     78.86  30.0  1
+ RGC  Var_08   C39   C9   C8   C7    100.92  30.0  1
+ RGC  Var_09   C40   C39  C9   C8   -179.18  30.0  2
+ RGC  Var_10   C11   C10  C9   C8    145.38  30.0  1
+ RGC  Var_11   O11   C40  C39  C9     14.63  30.0  1
+ RGC  Var_12   H2    C2   C3   C4      1.74   0.0  0
+ RGC  Var_13   H16   C16  C17  C18    -0.13   0.0  0
+ RGC  Var_14   H22   C22  C23  C24    -1.96   0.0  0
+ RGC  Var_15   H381  C38  C5   C4   -120.57  30.0  3
+ RGC  Var_16   H481  C48  O7   C7     74.65  30.0  3
+ RGC  Var_17   H491  C49  O13  C13   -57.58  30.0  3
+ RGC  Var_18   H501  C50  O15  C15    64.09  30.0  3
+ RGC  Var_19   H511  C51  O19  C19    62.23  30.0  3
+ RGC  Var_20   H521  C52  O21  C21   -64.80  30.0  3
+ RGC  Var_21   C31   C30  C29  C28  -169.16  30.0  3
+ RGC  Var_22   O31   C31  C30  C29     3.05  30.0  3
+ RGC  Var_23   C36   C35  C34  C33  -161.03  30.0  3
+ RGC  Var_24   O2    C36  C35  C34   167.22  30.0  3
+ RGC  Var_25   H531  C53  O27  C27    43.54  30.0  3
+ RGC  Var_26   H541  C54  O33  C33    61.49  30.0  3
+ RGC  Var_27   C24   C25  O25  C1    116.82  30.0  3
+ RGC  Var_28   C23   C24  C25  O25   -65.44  30.0  3
+ RGC  Var_29   C25   O25  C1   C2    168.67  30.0  3
+ RGC  Var_30   C8    C7   C6   C5   -172.27  30.0  3
+ RGC  Var_31   C9    C8   C7   C6    165.85  30.0  3
+ RGC  Var_32   O11   C11  C10  C9     54.23  30.0  1
+ RGC  Var_33   C12   C11  C10  C9    176.82  30.0  1
+ RGC  Var_34   C11   O11  C40  C39    11.07  30.0  1
+ RGC  Var_35   C10   C11  O11  C40   -45.73  30.0  1
+ RGC  Var_36   C12   C11  O11  C40  -171.82  30.0  1
+ RGC  Var_37   C13   C12  C11  C10   163.45  30.0  3
+ RGC  Var_38   C14   C13  C12  C11   -66.36  30.0  3
+ RGC  Var_39   C13   C12  C11  O11   -72.92  30.0  3
+ RGC  Var_40   C15   C14  C13  C12   178.76  30.0  3
+ RGC  Var_41   C16   C15  C14  C13  -178.89  30.0  3
+ RGC  Var_42   C17   C16  C15  C14   -10.81  30.0  3
+ RGC  Var_43   C19   C18  C17  C16    97.05  30.0  3
+ RGC  Var_44   C20   C19  C18  C17    59.69  30.0  3
+ RGC  Var_45   C21   C20  C19  C18   156.05  30.0  3
+ RGC  Var_46   C22   C21  C20  C19  -172.35  30.0  3
+ RGC  Var_47   C23   C22  C21  C20   123.33  30.0  3
+ RGC  Var_48   C25   C24  C23  C22   117.46  30.0  3
+ RGC  Var_49   C25   O25  C1   O1    -10.65  30.0  3
+ RGC  Var_50   C26   C25  O25  C1   -118.30  30.0  3
+ RGC  Var_51   C43   C24  C25  O25   173.55  30.0  3
+ RGC  Var_52   O7    C7   C6   C5     58.22  30.0  3
+ RGC  Var_53   C9    C8   C7   O7    -64.61  30.0  3
+ RGC  Var_54   C11   O11  C40  O40  -169.84  30.0  1
+ RGC  Var_55   C41   C12  C11  C10   -70.83  30.0  3
+ RGC  Var_56   O13   C13  C12  C11   166.61  30.0  3
+ RGC  Var_57   C41   C12  C11  O11    52.80  30.0  3
+ RGC  Var_58   C14   C13  C12  C41   167.91  30.0  3
+ RGC  Var_59   O15   C15  C14  C13   -57.17  30.0  3
+ RGC  Var_60   C15   C14  C13  O13   -54.14  30.0  3
+ RGC  Var_61   C17   C16  C15  O15  -131.56  30.0  3
+ RGC  Var_62   C42   C18  C17  C16  -136.93  30.0  3
+ RGC  Var_63   O19   C19  C18  C17   -62.59  30.0  3
+ RGC  Var_64   C20   C19  C18  C42   -66.14  30.0  3
+ RGC  Var_65   O21   C21  C20  C19    64.69  30.0  3
+ RGC  Var_66   C21   C20  C19  O19   -80.68  30.0  3
+ RGC  Var_67   C23   C22  C21  O21  -114.93  30.0  3
+ RGC  Var_68   C43   C24  C23  C22  -120.13  30.0  3
+ RGC  Var_69   C26   C25  C24  C23   174.97  30.0  3
+ RGC  Var_70   H25   C25  O25  C1     -0.08  30.0  3
+ RGC  Var_71   H24   C24  C25  O25    53.20  30.0  3
+ RGC  Var_72   H7    C7   C6   C5    -55.09  30.0  3
+ RGC  Var_73   H81   C8   C7   C6     47.03  30.0  3
+ RGC  Var_74   H82   C8   C7   C6    -70.14  30.0  3
+ RGC  Var_75   H11   C11  C10  C9    -61.93  30.0  1
+ RGC  Var_76   H12   C12  C11  C10    46.49  30.0  3
+ RGC  Var_77   H13   C13  C12  C11    52.98  30.0  3
+ RGC  Var_78   H141  C14  C13  C12    57.37  30.0  3
+ RGC  Var_79   H142  C14  C13  C12   -58.14  30.0  3
+ RGC  Var_80   H15   C15  C14  C13    60.74  30.0  3
+ RGC  Var_81   H18   C18  C17  C16   -19.48  30.0  3
+ RGC  Var_82   H19   C19  C18  C17   178.37  30.0  3
+ RGC  Var_83   H201  C20  C19  C18    37.17  30.0  3
+ RGC  Var_84   H202  C20  C19  C18   -79.29  30.0  3
+ RGC  Var_85   H21   C21  C20  C19   -53.83  30.0  3
+ RGC  Var_86   C44   C26  C25  O25   -63.14  30.0  3
+ RGC  Var_87   C27   C26  C25  O25    64.35  30.0  3
+ RGC  Var_88   C48   O7   C7   C6     69.83  30.0  3
+ RGC  Var_89   C8    C7   O7   C48   -59.06  30.0  2
+ RGC  Var_90   C49   O13  C13  C12    67.31  30.0  3
+ RGC  Var_91   O13   C13  C12  C41    40.87  30.0  3
+ RGC  Var_92   C14   C13  O13  C49   -59.68  30.0  3
+ RGC  Var_93   C50   O15  C15  C14   151.77  30.0  3
+ RGC  Var_94   C16   C15  O15  C50   -84.01  30.0  1
+ RGC  Var_95   C51   O19  C19  C18   -84.91  30.0  3
+ RGC  Var_96   O19   C19  C18  C42   171.58  30.0  3
+ RGC  Var_97   C20   C19  O19  C51   149.57  30.0  2
+ RGC  Var_98   C52   O21  C21  C20  -165.90  30.0  3
+ RGC  Var_99   C22   C21  O21  C52    70.42  30.0  2
+ RGC  Var_100  C44   C26  C25  C24    56.83  30.0  3
+ RGC  Var_101  C27   C26  C25  C24  -175.69  30.0  3
+ RGC  Var_102  C26   C25  C24  C43    53.96  30.0  3
+ RGC  Var_103  H26   C26  C25  O25  -179.67  30.0  3
+ RGC  Var_104  H411  C41  C12  C11   -74.10  30.0  3
+ RGC  Var_105  H412  C41  C12  C11    46.55  30.0  3
+ RGC  Var_106  H413  C41  C12  C11   165.45  30.0  3
+ RGC  Var_107  H421  C42  C18  C17  -178.95  30.0  3
+ RGC  Var_108  H422  C42  C18  C17   -58.54  30.0  3
+ RGC  Var_109  H423  C42  C18  C17    61.31  30.0  3
+ RGC  Var_110  H431  C43  C24  C23    53.28  30.0  3
+ RGC  Var_111  H432  C43  C24  C23   173.13  30.0  3
+ RGC  Var_112  H433  C43  C24  C23   -65.88  30.0  3
+ RGC  Var_113  O27   C27  C26  C25    52.98  30.0  3
+ RGC  Var_114  C28   C27  C26  C25  -178.84  30.0  3
+ RGC  Var_115  H441  C44  C26  C25   -44.36  30.0  3
+ RGC  Var_116  H442  C44  C26  C25    75.95  30.0  3
+ RGC  Var_117  H443  C44  C26  C25  -162.34  30.0  3
+ RGC  Var_118  H27   C27  C26  C25   -59.72  30.0  3
+ RGC  Var_119  C53   O27  C27  C26    61.89  30.0  3
+ RGC  Var_120  C45   C28  C27  C26    76.07  30.0  3
+ RGC  Var_121  C29   C28  C27  C26  -162.04  30.0  3
+ RGC  Var_122  O27   C27  C26  C44   178.86  30.0  3
+ RGC  Var_123  C28   C27  C26  C44   -52.96  30.0  3
+ RGC  Var_124  C30   C29  C28  C27   -55.68  30.0  3
+ RGC  Var_125  C45   C28  C27  O27  -156.35  30.0  3
+ RGC  Var_126  C29   C28  C27  O27   -34.46  30.0  3
+ RGC  Var_127  C28   C27  O27  C53   -69.68  30.0  2
+ RGC  Var_128  C30   C29  C28  C45    68.73  30.0  3
+ RGC  Var_129  C46   C32  C31  C30  -125.86  30.0  3
+ RGC  Var_130  C33   C32  C31  C30   108.95  30.0  3
+ RGC  Var_131  O33   C33  C32  C31    63.99  30.0  3
+ RGC  Var_132  C34   C33  C32  C31   -60.88  30.0  3
+ RGC  Var_133  C46   C32  C31  O31    52.35  30.0  3
+ RGC  Var_134  C33   C32  C31  O31   -72.84  30.0  3
+ RGC  Var_135  C54   O33  C33  C32   151.56  30.0  3
+ RGC  Var_136  C35   C34  C33  C32   -66.97  30.0  3
+ RGC  Var_137  O33   C33  C32  C46   -60.57  30.0  3
+ RGC  Var_138  C34   C33  C32  C46   174.56  30.0  3
+ RGC  Var_139  C35   C34  C33  O33   169.77  30.0  3
+ RGC  Var_140  C34   C33  O33  C54   -81.66  30.0  2
+ RGC  Var_141  H28   C28  C27  C26   -44.06  30.0  3
+ RGC  Var_142  H451  C45  C28  C27   165.85  30.0  3
+ RGC  Var_143  H452  C45  C28  C27    46.70  30.0  3
+ RGC  Var_144  H453  C45  C28  C27   -74.66  30.0  3
+ RGC  Var_145  H291  C29  C28  C27    68.06  30.0  3
+ RGC  Var_146  H292  C29  C28  C27  -176.88  30.0  3
+ RGC  Var_147  H32   C32  C31  C30    -7.73  30.0  3
+ RGC  Var_148  H461  C46  C32  C31   -61.59  30.0  3
+ RGC  Var_149  H462  C46  C32  C31    59.22  30.0  3
+ RGC  Var_150  H463  C46  C32  C31   178.17  30.0  3
+ RGC  Var_151  H33   C33  C32  C31  -179.08  30.0  3
+ RGC  Var_152  H341  C34  C33  C32   172.86  30.0  3
+ RGC  Var_153  H342  C34  C33  C32    58.07  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

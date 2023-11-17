@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5VD  5VD  'methyl (1~{R},2~{R},4~{S})-2-methyl-2,4,5,7,10-pentakis(oxidanyl)-6,11-bis(oxidanylidene)-3,4-dihydro-1~{H}-tetracene-1-carboxylate'  ligand  48  30  .  2021-08-04  2021-08-04  
+ 5VD  5VD  'methyl (1~{R},2~{R},4~{S})-2-methyl-2,4,5,7,10-pentakis(oxidanyl)-6,11-bis(oxidanylidene)-3,4-dihydro-1~{H}-tetracene-1-carboxylate'  ligand  48  30  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5VD
@@ -251,32 +252,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5VD  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- 5VD  CONST_02  C4   CE2  CD2  C1     0.00   0.0  0
- 5VD  CONST_03  CE2  C4   C3   C2     0.00   0.0  0
- 5VD  CONST_04  CE2  CD2  C1   C2     0.00   0.0  0
- 5VD  CONST_05  CD2  CE2  C4   C3     0.00   0.0  0
- 5VD  CONST_06  CD2  C1   C2   C3     0.00   0.0  0
- 5VD  CONST_07  C5   CE1  CD1  C8     0.00   0.0  0
- 5VD  CONST_08  C5   C6   C7   C8     0.00   0.0  0
- 5VD  CONST_09  CD1  CE1  C5   C6     0.00   0.0  0
- 5VD  CONST_10  CD1  C8   C7   C6     0.00   0.0  0
- 5VD  CONST_11  CE1  C5   C6   C7     0.00   0.0  0
- 5VD  CONST_12  CE1  CD1  C8   C7     0.00   0.0  0
- 5VD  CONST_13  O19  C4   C3   C2   180.00   0.0  0
- 5VD  CONST_14  O18  C1   C2   C3   180.00   0.0  0
- 5VD  CONST_15  O2   C8   C7   C6   180.00   0.0  0
- 5VD  CONST_16  O18  C1   CD2  CG     0.00   0.0  0
- 5VD  CONST_17  O2   C8   CD1  CG     0.00   0.0  0
- 5VD  CONST_18  O2   C8   CD1  CE1  180.00   0.0  0
- 5VD  CONST_19  O19  C4   CE2  CZ     0.00   0.0  0
- 5VD  CONST_20  O18  C1   CD2  CE2  180.00   0.0  0
- 5VD  CONST_21  O19  C4   CE2  CD2  180.00   0.0  0
- 5VD  CONST_22  O2   C8   C7   C9     0.00   0.0  0
- 5VD  CONST_23  H3   C3   C2   C1   180.00   0.0  0
- 5VD  CONST_24  H1   C2   C3   C4   180.00   0.0  0
- 5VD  CONST_25  H4   C5   C6   C7   180.00   0.0  0
- 5VD  Var_01    H14  C22  O21  C14   62.73  30.0  3
+ 5VD  CONST_01  C4   C3   C2   C1      0.00   0.0  0
+ 5VD  CONST_02  C4   CE2  CD2  C1      0.00   0.0  0
+ 5VD  CONST_03  CE2  C4   C3   C2      0.00   0.0  0
+ 5VD  CONST_04  CE2  CD2  C1   C2      0.00   0.0  0
+ 5VD  CONST_05  CD2  CE2  C4   C3      0.00   0.0  0
+ 5VD  CONST_06  CD2  C1   C2   C3      0.00   0.0  0
+ 5VD  CONST_07  C5   CE1  CD1  C8      0.00   0.0  0
+ 5VD  CONST_08  C5   C6   C7   C8      0.00   0.0  0
+ 5VD  CONST_09  CD1  CE1  C5   C6      0.00   0.0  0
+ 5VD  CONST_10  CD1  C8   C7   C6      0.00   0.0  0
+ 5VD  CONST_11  CE1  C5   C6   C7      0.00   0.0  0
+ 5VD  CONST_12  CE1  CD1  C8   C7      0.00   0.0  0
+ 5VD  CONST_13  O19  C4   C3   C2    180.00   0.0  0
+ 5VD  CONST_14  O18  C1   C2   C3    180.00   0.0  0
+ 5VD  CONST_15  O2   C8   C7   C6    180.00   0.0  0
+ 5VD  CONST_16  O18  C1   CD2  CG      0.00   0.0  0
+ 5VD  CONST_17  O2   C8   CD1  CG      0.00   0.0  0
+ 5VD  CONST_18  O2   C8   CD1  CE1   180.00   0.0  0
+ 5VD  CONST_19  O19  C4   CE2  CZ      0.00   0.0  0
+ 5VD  CONST_20  O18  C1   CD2  CE2   180.00   0.0  0
+ 5VD  CONST_21  O19  C4   CE2  CD2   180.00   0.0  0
+ 5VD  CONST_22  O2   C8   C7   C9      0.00   0.0  0
+ 5VD  CONST_23  H3   C3   C2   C1    180.00   0.0  0
+ 5VD  CONST_24  H1   C2   C3   C4    180.00   0.0  0
+ 5VD  CONST_25  H4   C5   C6   C7    180.00   0.0  0
+ 5VD  Var_01    H14  C22  O21  C14    62.73  30.0  3
+ 5VD  CONST_26  CD1  CG   CD2  C1    180.00   0.0  0
+ 5VD  CONST_27  CD2  CG   CD1  C8    180.00   0.0  0
+ 5VD  CONST_28  CE1  CZ   CE2  C4    180.00   0.0  0
+ 5VD  CONST_29  CE2  CZ   CE1  C5    180.00   0.0  0
+ 5VD  CONST_30  CE2  CZ   CE1  CD1     0.00   0.0  0
+ 5VD  CONST_31  CE2  CD2  CG   CD1     0.00   0.0  0
+ 5VD  CONST_32  CD2  CE2  CZ   CE1     0.00   0.0  0
+ 5VD  CONST_33  CD2  CG   CD1  CE1     0.00   0.0  0
+ 5VD  CONST_34  O16  CG   CD2  C1      0.00   0.0  0
+ 5VD  CONST_35  O16  CG   CD1  C8      0.00   0.0  0
+ 5VD  CONST_36  O17  CZ   CE2  C4      0.00   0.0  0
+ 5VD  CONST_37  O17  CZ   CE1  C5      0.00   0.0  0
+ 5VD  CONST_38  O17  CZ   CE1  CD1   180.00   0.0  0
+ 5VD  CONST_39  O16  CG   CD1  CE1   180.00   0.0  0
+ 5VD  CONST_40  O16  CG   CD2  CE2   180.00   0.0  0
+ 5VD  CONST_41  O17  CZ   CE2  CD2   180.00   0.0  0
+ 5VD  Var_02    C10  C9   C7   C8    173.71  30.0  1
+ 5VD  Var_03    C11  C12  C6   C5    159.19  30.0  1
+ 5VD  Var_04    C10  C11  C12  C6     54.79  30.0  1
+ 5VD  Var_05    C10  C9   C7   C6     -7.18  30.0  1
+ 5VD  Var_06    C11  C12  C6   C7    -23.68  30.0  1
+ 5VD  Var_07    C11  C10  C9   C7     41.60  30.0  1
+ 5VD  Var_08    C12  C11  C10  C9    -65.72  30.0  1
+ 5VD  Var_09    C6   C12  C11  O14   171.79  30.0  1
+ 5VD  Var_10    C9   C10  C11  O14  -179.02  30.0  1
+ 5VD  Var_11    O1   C9   C7   C8     54.36  30.0  1
+ 5VD  Var_12    C14  C12  C6   C5     34.56  30.0  1
+ 5VD  Var_13    C13  C11  C12  C6    -67.58  30.0  1
+ 5VD  Var_14    O1   C9   C7   C6   -126.53  30.0  1
+ 5VD  Var_15    C14  C12  C6   C7   -148.30  30.0  1
+ 5VD  Var_16    C14  C12  C11  C10  -179.38  30.0  1
+ 5VD  Var_17    C13  C11  C10  C9     58.50  30.0  1
+ 5VD  Var_18    O1   C9   C10  C11   163.98  30.0  1
+ 5VD  Var_19    H7   C9   C7   C8    -66.74  30.0  1
+ 5VD  Var_20    H8   C12  C6   C5    -84.17  30.0  1
+ 5VD  Var_21    H5   C10  C9   C7    163.78  30.0  1
+ 5VD  Var_22    H6   C10  C9   C7    -79.46  30.0  1
+ 5VD  Var_23    C14  C12  C11  O14   -62.39  30.0  1
+ 5VD  Var_24    O21  C14  C12  C6   -134.10  30.0  1
+ 5VD  Var_25    O20  C14  C12  C6     46.66  30.0  1
+ 5VD  Var_26    O21  C14  C12  C11   100.36  30.0  1
+ 5VD  Var_27    O20  C14  C12  C11   -78.88  30.0  1
+ 5VD  Var_28    C14  C12  C11  C13    58.25  30.0  1
+ 5VD  Var_29    H9   O18  C1   C2   -179.75  30.0  2
+ 5VD  Var_30    H10  O19  C4   C3   -179.84  30.0  2
+ 5VD  Var_31    H18  O2   C8   C7   -179.28  30.0  2
+ 5VD  Var_32    H17  O1   C9   C7    -71.62  30.0  3
+ 5VD  Var_33    H11  C13  C11  C10    51.23  30.0  3
+ 5VD  Var_34    H12  C13  C11  C10   170.38  30.0  3
+ 5VD  Var_35    H13  C13  C11  C10   -68.17  30.0  3
+ 5VD  Var_36    H2   O14  C11  C10   -69.87  30.0  3
+ 5VD  Var_37    C22  O21  C14  C12  -177.23  30.0  1
+ 5VD  Var_38    C22  O21  C14  O20     2.02  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

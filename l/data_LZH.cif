@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LZH  LZH  5-chloro-N-[(3R,5S)-1-(2-{[2-fluoro-4-(2-oxopyridin-1(2H)-yl)phenyl]amino}-2-oxoethyl)-5-(hydroxymethyl)pyrrolidin-3-yl]thiophene-2-carboxamide  ligand  56  34  .  2022-07-25  2022-07-26
+ LZH  LZH  5-chloro-N-[(3R,5S)-1-(2-{[2-fluoro-4-(2-oxopyridin-1(2H)-yl)phenyl]amino}-2-oxoethyl)-5-(hydroxymethyl)pyrrolidin-3-yl]thiophene-2-carboxamide  ligand  56  34  .  2022-07-25  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LZH
@@ -281,46 +282,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LZH  CONST_01  C26  C9   C11  C17    0.00   0.0  0
- LZH  CONST_02  C26  C28  C16  C17    0.00   0.0  0
- LZH  CONST_03  C28  C16  C17  C11    0.00   0.0  0
- LZH  CONST_04  C28  C26  C9   C11    0.00   0.0  0
- LZH  CONST_05  C16  C17  C11  C9     0.00   0.0  0
- LZH  CONST_06  C16  C28  C26  C9     0.00   0.0  0
- LZH  CONST_07  C10  C19  C12  C2     0.00   0.0  0
- LZH  CONST_08  C19  C10  S3   C2     0.00   0.0  0
- LZH  CONST_09  C10  S3   C2   C12    0.00   0.0  0
- LZH  CONST_10  S3   C10  C19  C12    0.00   0.0  0
- LZH  CONST_11  S3   C2   C12  C19    0.00   0.0  0
- LZH  CONST_12  N1   C9   C11  C17  180.00   0.0  0
- LZH  CONST_13  C28  C26  C9   N1   180.00   0.0  0
- LZH  CONST_14  C23  C8   N1   C9   180.00   0.0  0
- LZH  CONST_15  C23  C8   N1   C21    0.00   0.0  0
- LZH  CONST_16  C9   C11  C17  F32  180.00   0.0  0
- LZH  CONST_17  C28  C16  C17  F32  180.00   0.0  0
- LZH  CONST_18  N15  C16  C17  C11  180.00   0.0  0
- LZH  CONST_19  N15  C16  C28  C26  180.00   0.0  0
- LZH  CONST_20  C19  C12  C2   C5   180.00   0.0  0
- LZH  CONST_21  C10  S3   C2   C5   180.00   0.0  0
- LZH  CONST_22  CL1  C10  S3   C2   180.00   0.0  0
- LZH  CONST_23  CL1  C10  C19  C12  180.00   0.0  0
- LZH  CONST_24  O25  C8   N1   C9     0.00   0.0  0
- LZH  CONST_25  O25  C8   N1   C21  180.00   0.0  0
- LZH  CONST_26  H28  C28  C16  C17  180.00   0.0  0
- LZH  CONST_27  H26  C26  C9   C11  180.00   0.0  0
- LZH  CONST_28  H11  C11  C9   N1     0.00   0.0  0
- LZH  CONST_29  H19  C19  C12  C2   180.00   0.0  0
- LZH  CONST_30  H12  C12  C2   S3   180.00   0.0  0
- LZH  CONST_31  C2   C5   N7   C13  180.00   0.0  0
- LZH  CONST_35  O27  C14  N15  C16    0.00   0.0  0
- LZH  CONST_36  C22  C14  N15  C16  180.00   0.0  0
- LZH  CONST_37  O24  C5   N7   C13    0.00   0.0  0
- LZH  CONST_38  H7   N7   C5   C2     0.00   0.0  0
- LZH  Var_01    C21  N1   C9   C11  115.85  30.0  2
- LZH  Var_02    C15  N4   C20  C13   46.56  30.0  1
- LZH  Var_03    C20  N4   C22  C14   75.84  30.0  3
- LZH  Var_04    C12  C2   C5   N7    -3.78  30.0  2
- LZH  Var_05    N4   C22  C14  N15   28.59  30.0  3
+ LZH  CONST_01  C26   C9   C11  C17     0.00   0.0  0
+ LZH  CONST_02  C26   C28  C16  C17     0.00   0.0  0
+ LZH  CONST_03  C28   C16  C17  C11     0.00   0.0  0
+ LZH  CONST_04  C28   C26  C9   C11     0.00   0.0  0
+ LZH  CONST_05  C16   C17  C11  C9      0.00   0.0  0
+ LZH  CONST_06  C16   C28  C26  C9      0.00   0.0  0
+ LZH  CONST_07  C10   C19  C12  C2      0.00   0.0  0
+ LZH  CONST_08  C19   C10  S3   C2      0.00   0.0  0
+ LZH  CONST_09  C10   S3   C2   C12     0.00   0.0  0
+ LZH  CONST_10  S3    C10  C19  C12     0.00   0.0  0
+ LZH  CONST_11  S3    C2   C12  C19     0.00   0.0  0
+ LZH  CONST_12  N1    C9   C11  C17   180.00   0.0  0
+ LZH  CONST_13  C28   C26  C9   N1    180.00   0.0  0
+ LZH  CONST_14  C23   C8   N1   C9    180.00   0.0  0
+ LZH  CONST_15  C23   C8   N1   C21     0.00   0.0  0
+ LZH  CONST_16  C9    C11  C17  F32   180.00   0.0  0
+ LZH  CONST_17  C28   C16  C17  F32   180.00   0.0  0
+ LZH  CONST_18  N15   C16  C17  C11   180.00   0.0  0
+ LZH  CONST_19  N15   C16  C28  C26   180.00   0.0  0
+ LZH  CONST_20  C19   C12  C2   C5    180.00   0.0  0
+ LZH  CONST_21  C10   S3   C2   C5    180.00   0.0  0
+ LZH  CONST_22  CL1   C10  S3   C2    180.00   0.0  0
+ LZH  CONST_23  CL1   C10  C19  C12   180.00   0.0  0
+ LZH  CONST_24  O25   C8   N1   C9      0.00   0.0  0
+ LZH  CONST_25  O25   C8   N1   C21   180.00   0.0  0
+ LZH  CONST_26  H28   C28  C16  C17   180.00   0.0  0
+ LZH  CONST_27  H26   C26  C9   C11   180.00   0.0  0
+ LZH  CONST_28  H11   C11  C9   N1      0.00   0.0  0
+ LZH  CONST_29  H19   C19  C12  C2    180.00   0.0  0
+ LZH  CONST_30  H12   C12  C2   S3    180.00   0.0  0
+ LZH  CONST_31  C2    C5   N7   C13   180.00   0.0  0
+ LZH  CONST_32  O27   C14  N15  C16     0.00   0.0  0
+ LZH  CONST_33  C22   C14  N15  C16   180.00   0.0  0
+ LZH  CONST_34  O24   C5   N7   C13     0.00   0.0  0
+ LZH  CONST_35  H7    N7   C5   C2      0.00   0.0  0
+ LZH  Var_01    C21   N1   C9   C11   115.85  30.0  2
+ LZH  Var_02    C15   N4   C20  C13    46.56  30.0  1
+ LZH  Var_03    C20   N4   C22  C14    75.84  30.0  3
+ LZH  Var_04    C12   C2   C5   N7     -3.78  30.0  2
+ LZH  Var_05    N4    C22  C14  N15    28.59  30.0  3
+ LZH  Var_06    C29   C21  N1   C9    178.83  30.0  1
+ LZH  Var_07    C30   C29  C21  N1      0.08  30.0  1
+ LZH  Var_08    C30   C23  C8   N1      1.19  30.0  1
+ LZH  Var_09    C23   C30  C29  C21    -0.34  30.0  1
+ LZH  Var_10    C8    N1   C21  C29     0.90  30.0  1
+ LZH  Var_11    C8    C23  C30  C29    -0.34  30.0  1
+ LZH  Var_12    N4    C15  C24  C13    21.52  30.0  1
+ LZH  Var_13    N4    C20  C13  C24   -29.80  30.0  1
+ LZH  Var_14    C20   N4   C15  C24   -42.77  30.0  1
+ LZH  Var_15    C15   C24  C13  C20     4.95  30.0  1
+ LZH  Var_16    O25   C8   C23  C30  -177.97  30.0  1
+ LZH  Var_17    C34   C15  C24  C13  -101.92  30.0  1
+ LZH  Var_18    C22   N4   C15  C24   177.99  30.0  1
+ LZH  Var_19    N7    C13  C20  N4     88.14  30.0  1
+ LZH  Var_20    C34   C15  N4   C20    77.19  30.0  1
+ LZH  Var_21    C15   C24  C13  N7   -112.84  30.0  1
+ LZH  Var_22    H21   C21  N1   C9     -1.48  30.0  1
+ LZH  Var_23    H29   C29  C21  N1    179.50  30.0  1
+ LZH  Var_24    H23   C23  C8   N1   -179.47  30.0  1
+ LZH  Var_25    H30   C30  C29  C21   179.64  30.0  1
+ LZH  Var_26    HA    C15  C24  C13   137.59  30.0  1
+ LZH  Var_27    H201  C20  C13  C24    91.59  30.0  1
+ LZH  Var_28    H202  C20  C13  C24  -148.89  30.0  1
+ LZH  Var_29    H13   C13  C20  N4   -150.23  30.0  1
+ LZH  Var_30    H241  C24  C15  N4    -97.94  30.0  1
+ LZH  Var_31    H242  C24  C15  N4    143.47  30.0  1
+ LZH  Var_32    C5    N7   C13  C24  -177.11  30.0  3
+ LZH  Var_33    O33   C34  C15  C24   177.06  30.0  2
+ LZH  Var_34    C34   C15  N4   C22   -62.06  30.0  1
+ LZH  Var_35    O33   C34  C15  N4     62.41  30.0  2
+ LZH  Var_36    C5    N7   C13  C20    69.15  30.0  3
+ LZH  Var_37    H7    N7   C13  C24    17.72  30.0  3
+ LZH  Var_38    H341  C34  C15  C24    57.43  30.0  2
+ LZH  Var_39    H342  C34  C15  C24   -58.75  30.0  2
+ LZH  Var_40    H33   O33  C34  C15    61.26  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

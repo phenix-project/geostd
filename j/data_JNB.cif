@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JNB  JNB  ~{N}-[(2~{R},3~{R},4~{S},5~{S},6~{R})-6-(hydroxymethyl)-3,4,5-tris(oxidanyl)oxan-2-yl]-4-phenyl-benzamide  ligand  47  26  .  2021-08-12  2021-08-12  
+ JNB  JNB  ~{N}-[(2~{R},3~{R},4~{S},5~{S},6~{R})-6-(hydroxymethyl)-3,4,5-tris(oxidanyl)oxan-2-yl]-4-phenyl-benzamide  ligand  47  26  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JNB
@@ -244,37 +245,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JNB  CONST_01  C6   C5   C4   C3     0.00   0.0  0
- JNB  CONST_02  C6   C7   C8   C3     0.00   0.0  0
- JNB  CONST_03  C7   C8   C3   C4     0.00   0.0  0
- JNB  CONST_04  C7   C6   C5   C4     0.00   0.0  0
- JNB  CONST_05  C9   C6   C5   C4   180.00   0.0  0
- JNB  CONST_06  C8   C3   C4   C5     0.00   0.0  0
- JNB  CONST_07  C8   C7   C6   C5     0.00   0.0  0
- JNB  CONST_10  C11  C10  C9   C6   180.00   0.0  0
- JNB  CONST_11  C13  C14  C9   C6   180.00   0.0  0
- JNB  CONST_14  C9   C6   C7   C8   180.00   0.0  0
- JNB  CONST_15  C12  C11  C10  C9     0.00   0.0  0
- JNB  CONST_16  C12  C13  C14  C9     0.00   0.0  0
- JNB  CONST_17  C11  C10  C9   C14    0.00   0.0  0
- JNB  CONST_18  C11  C12  C13  C14    0.00   0.0  0
- JNB  CONST_19  C10  C9   C14  C13    0.00   0.0  0
- JNB  CONST_20  C10  C11  C12  C13    0.00   0.0  0
- JNB  CONST_21  C5   C4   C3   C2   180.00   0.0  0
- JNB  CONST_22  C7   C8   C3   C2   180.00   0.0  0
- JNB  CONST_23  H2   C5   C4   C3   180.00   0.0  0
- JNB  CONST_24  H3   C7   C8   C3   180.00   0.0  0
- JNB  CONST_25  H5   C8   C3   C4   180.00   0.0  0
- JNB  CONST_26  H1   C4   C5   C6   180.00   0.0  0
- JNB  CONST_27  H21  C10  C9   C6     0.00   0.0  0
- JNB  CONST_28  H17  C14  C9   C6     0.00   0.0  0
- JNB  CONST_29  H20  C11  C10  C9   180.00   0.0  0
- JNB  CONST_30  H18  C13  C14  C9   180.00   0.0  0
- JNB  CONST_31  H19  C12  C13  C14  180.00   0.0  0
- JNB  CONST_32  C1'  N1   C2   C3   180.00   0.0  0
- JNB  CONST_33  O2   C2   N1   C1'    0.00   0.0  0
- JNB  CONST_34  H4   N1   C2   C3     0.00   0.0  0
- JNB  Var_01    N1   C2   C3   C4   -19.20  30.0  2
+ JNB  CONST_01  C6   C5   C4   C3      0.00   0.0  0
+ JNB  CONST_02  C6   C7   C8   C3      0.00   0.0  0
+ JNB  CONST_03  C7   C8   C3   C4      0.00   0.0  0
+ JNB  CONST_04  C7   C6   C5   C4      0.00   0.0  0
+ JNB  CONST_05  C9   C6   C5   C4    180.00   0.0  0
+ JNB  CONST_06  C8   C3   C4   C5      0.00   0.0  0
+ JNB  CONST_07  C8   C7   C6   C5      0.00   0.0  0
+ JNB  CONST_08  C11  C10  C9   C6    180.00   0.0  0
+ JNB  CONST_09  C13  C14  C9   C6    180.00   0.0  0
+ JNB  CONST_10  C9   C6   C7   C8    180.00   0.0  0
+ JNB  CONST_11  C12  C11  C10  C9      0.00   0.0  0
+ JNB  CONST_12  C12  C13  C14  C9      0.00   0.0  0
+ JNB  CONST_13  C11  C10  C9   C14     0.00   0.0  0
+ JNB  CONST_14  C11  C12  C13  C14     0.00   0.0  0
+ JNB  CONST_15  C10  C9   C14  C13     0.00   0.0  0
+ JNB  CONST_16  C10  C11  C12  C13     0.00   0.0  0
+ JNB  CONST_17  C5   C4   C3   C2    180.00   0.0  0
+ JNB  CONST_18  C7   C8   C3   C2    180.00   0.0  0
+ JNB  CONST_19  H2   C5   C4   C3    180.00   0.0  0
+ JNB  CONST_20  H3   C7   C8   C3    180.00   0.0  0
+ JNB  CONST_21  H5   C8   C3   C4    180.00   0.0  0
+ JNB  CONST_22  H1   C4   C5   C6    180.00   0.0  0
+ JNB  CONST_23  H21  C10  C9   C6      0.00   0.0  0
+ JNB  CONST_24  H17  C14  C9   C6      0.00   0.0  0
+ JNB  CONST_25  H20  C11  C10  C9    180.00   0.0  0
+ JNB  CONST_26  H18  C13  C14  C9    180.00   0.0  0
+ JNB  CONST_27  H19  C12  C13  C14   180.00   0.0  0
+ JNB  CONST_28  C1'  N1   C2   C3    180.00   0.0  0
+ JNB  CONST_29  O2   C2   N1   C1'     0.00   0.0  0
+ JNB  CONST_30  H4   N1   C2   C3      0.00   0.0  0
+ JNB  Var_01    N1   C2   C3   C4    -19.20  30.0  2
+ JNB  Var_02    C10  C9   C6   C5    -34.78  30.0  2
+ JNB  Var_03    C14  C9   C6   C5    145.08  30.0  2
+ JNB  Var_04    C10  C9   C6   C7    145.15  30.0  2
+ JNB  Var_05    C14  C9   C6   C7    -35.00  30.0  2
+ JNB  Var_06    C4'  C3'  C2'  C1'   -52.98  30.0  1
+ JNB  Var_07    C4'  C5'  O5'  C1'    63.14  30.0  1
+ JNB  Var_08    C5'  C4'  C3'  C2'    53.32  30.0  1
+ JNB  Var_09    C5'  O5'  C1'  C2'   -63.47  30.0  1
+ JNB  Var_10    O5'  C5'  C4'  C3'   -56.42  30.0  1
+ JNB  Var_11    O5'  C1'  C2'  C3'    56.52  30.0  1
+ JNB  Var_12    C3'  C2'  C1'  N1    176.25  30.0  1
+ JNB  Var_13    C5'  O5'  C1'  N1    175.60  30.0  1
+ JNB  Var_14    O3'  C3'  C2'  C1'  -173.10  30.0  1
+ JNB  Var_15    C6'  C5'  O5'  C1'  -174.88  30.0  1
+ JNB  Var_16    O4'  C4'  C3'  C2'   172.89  30.0  1
+ JNB  Var_17    C6'  C5'  C4'  C3'  -175.95  30.0  1
+ JNB  Var_18    O2'  C2'  C3'  C4'  -174.03  30.0  1
+ JNB  Var_19    O3'  C3'  C4'  C5'   176.11  30.0  1
+ JNB  Var_20    O4'  C4'  C5'  O5'  -177.82  30.0  1
+ JNB  Var_21    O2'  C2'  C1'  O5'   175.06  30.0  1
+ JNB  Var_22    H8   C3'  C2'  C1'    64.72  30.0  1
+ JNB  Var_23    H10  C5'  O5'  C1'   -55.95  30.0  1
+ JNB  Var_24    H9   C4'  C3'  C2'   -64.56  30.0  1
+ JNB  Var_25    H6   C1'  C2'  C3'   -64.58  30.0  1
+ JNB  Var_26    H7   C2'  C3'  C4'    65.00  30.0  1
+ JNB  Var_27    C2'  C1'  N1   C2    148.52  30.0  2
+ JNB  Var_28    O5'  C1'  N1   C2    -90.81  30.0  2
+ JNB  Var_29    O2'  C2'  C1'  N1    -65.20  30.0  1
+ JNB  Var_30    O6'  C6'  C5'  C4'  -176.98  30.0  3
+ JNB  Var_31    O4'  C4'  C5'  C6'    62.65  30.0  1
+ JNB  Var_32    O5'  C5'  C6'  O6'    62.58  30.0  1
+ JNB  Var_33    O3'  C3'  C4'  O4'   -64.32  30.0  1
+ JNB  Var_34    O2'  C2'  C3'  O3'    65.85  30.0  1
+ JNB  Var_35    H16  O2'  C2'  C1'    74.86  30.0  3
+ JNB  Var_36    H15  O3'  C3'  C2'   -70.72  30.0  3
+ JNB  Var_37    H4   N1   C1'  C2'   -40.03  30.0  3
+ JNB  Var_38    H14  O4'  C4'  C3'    60.90  30.0  3
+ JNB  Var_39    H11  C6'  C5'  C4'   -55.26  30.0  3
+ JNB  Var_40    H12  C6'  C5'  C4'    60.94  30.0  3
+ JNB  Var_41    H13  O6'  C6'  C5'   174.31  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

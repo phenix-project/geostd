@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MUF  MUF  '(8alpha,10alpha,13alpha,17beta)-17-[(4-hydroxyphenyl)carbonyl]androsta-3,5-diene-3-carboxylic acid'  ligand  62  31  .  2021-08-14  2022-09-22
+ MUF  MUF  '(8alpha,10alpha,13alpha,17beta)-17-[(4-hydroxyphenyl)carbonyl]androsta-3,5-diene-3-carboxylic acid'  ligand  62  31  .  2021-08-14  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_MUF
@@ -320,30 +321,97 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MUF  CONST_01  C55  C56  C57  C52     0.00   0.0  0
- MUF  CONST_02  C55  C54  C53  C52     0.00   0.0  0
- MUF  CONST_03  C56  C57  C52  C53     0.00   0.0  0
- MUF  CONST_04  C56  C55  C54  C53     0.00   0.0  0
- MUF  CONST_05  C57  C52  C53  C54     0.00   0.0  0
- MUF  CONST_06  C57  C56  C55  C54     0.00   0.0  0
- MUF  CONST_07  C56  C57  C52  C20   180.00   0.0  0
- MUF  CONST_08  C54  C53  C52  C20   180.00   0.0  0
- MUF  CONST_09  O57  C55  C54  C53   180.00   0.0  0
- MUF  CONST_10  O57  C55  C56  C57   180.00   0.0  0
- MUF  CONST_11  H56  C56  C57  C52   180.00   0.0  0
- MUF  CONST_12  H54  C54  C53  C52   180.00   0.0  0
- MUF  CONST_13  H57  C57  C52  C53   180.00   0.0  0
- MUF  CONST_14  H53  C53  C54  C55   180.00   0.0  0
- MUF  Var_01    C4   C3   C2   C1    -44.38  30.0  1
- MUF  Var_02    C5   C4   C3   C2      0.41  30.0  1
- MUF  Var_03    C10  C1   C2   C3     48.09  30.0  1
- MUF  Var_04    C10  C5   C4   C3     41.69  30.0  1
- MUF  Var_05    C7   C6   C5   C4    173.70  30.0  1
- MUF  Var_06    C8   C7   C6   C5     13.00  30.0  1
- MUF  Var_07    C13  C12  C11  C9    -56.22  30.0  1
- MUF  Var_08    C17  C16  C15  C14     8.09  30.0  1
- MUF  Var_09    C57  C52  C20  C17   -22.03  30.0  2
- MUF  Var_10    O76  C28  C3   C2   -175.21  30.0  2
+ MUF  CONST_01  C55   C56  C57  C52     0.00   0.0  0
+ MUF  CONST_02  C55   C54  C53  C52     0.00   0.0  0
+ MUF  CONST_03  C56   C57  C52  C53     0.00   0.0  0
+ MUF  CONST_04  C56   C55  C54  C53     0.00   0.0  0
+ MUF  CONST_05  C57   C52  C53  C54     0.00   0.0  0
+ MUF  CONST_06  C57   C56  C55  C54     0.00   0.0  0
+ MUF  CONST_07  C56   C57  C52  C20   180.00   0.0  0
+ MUF  CONST_08  C54   C53  C52  C20   180.00   0.0  0
+ MUF  CONST_09  O57   C55  C54  C53   180.00   0.0  0
+ MUF  CONST_10  O57   C55  C56  C57   180.00   0.0  0
+ MUF  CONST_11  H56   C56  C57  C52   180.00   0.0  0
+ MUF  CONST_12  H54   C54  C53  C52   180.00   0.0  0
+ MUF  CONST_13  H57   C57  C52  C53   180.00   0.0  0
+ MUF  CONST_14  H53   C53  C54  C55   180.00   0.0  0
+ MUF  Var_01    C4    C3   C2   C1    -44.38  30.0  1
+ MUF  Var_02    C5    C4   C3   C2      0.41  30.0  1
+ MUF  Var_03    C10   C1   C2   C3     48.09  30.0  1
+ MUF  Var_04    C10   C5   C4   C3     41.69  30.0  1
+ MUF  Var_05    C7    C6   C5   C4    173.70  30.0  1
+ MUF  Var_06    C8    C7   C6   C5     13.00  30.0  1
+ MUF  Var_07    C13   C12  C11  C9    -56.22  30.0  1
+ MUF  Var_08    C17   C16  C15  C14     8.09  30.0  1
+ MUF  Var_09    C57   C52  C20  C17   -22.03  30.0  2
+ MUF  Var_10    O76   C28  C3   C2   -175.21  30.0  2
+ MUF  Var_11    C4    C5   C10  C1    -33.81  30.0  1
+ MUF  Var_12    C6    C5   C10  C1    145.40  30.0  1
+ MUF  Var_13    C8    C9   C10  C1   -170.28  30.0  1
+ MUF  Var_14    C11   C9   C10  C1     63.21  30.0  1
+ MUF  Var_15    C5    C10  C1   C2     -9.84  30.0  1
+ MUF  Var_16    C9    C10  C1   C2    111.98  30.0  1
+ MUF  Var_17    C9    C10  C5   C4   -156.36  30.0  1
+ MUF  Var_18    C8    C9   C10  C5    -48.20  30.0  1
+ MUF  Var_19    C11   C9   C10  C5   -174.71  30.0  1
+ MUF  Var_20    C9    C10  C5   C6     22.85  30.0  1
+ MUF  Var_21    C14   C8   C7   C6   -159.84  30.0  1
+ MUF  Var_22    C9    C8   C7   C6    -38.07  30.0  1
+ MUF  Var_23    C13   C14  C8   C7   -179.75  30.0  1
+ MUF  Var_24    C15   C14  C8   C7    -55.84  30.0  1
+ MUF  Var_25    C11   C9   C8   C7   -174.73  30.0  1
+ MUF  Var_26    C10   C9   C8   C7     57.55  30.0  1
+ MUF  Var_27    C12   C13  C14  C8    -59.07  30.0  1
+ MUF  Var_28    C17   C13  C14  C8    179.19  30.0  1
+ MUF  Var_29    C16   C15  C14  C8   -163.82  30.0  1
+ MUF  Var_30    C12   C11  C9   C8     53.65  30.0  1
+ MUF  Var_31    C13   C14  C8   C9     57.27  30.0  1
+ MUF  Var_32    C15   C14  C8   C9   -178.82  30.0  1
+ MUF  Var_33    C14   C8   C9   C10  -179.99  30.0  1
+ MUF  Var_34    C12   C11  C9   C10  -179.07  30.0  1
+ MUF  Var_35    C14   C8   C9   C11   -52.26  30.0  1
+ MUF  Var_36    C17   C13  C12  C11   166.33  30.0  1
+ MUF  Var_37    C14   C13  C12  C11    56.14  30.0  1
+ MUF  Var_38    C16   C17  C13  C12  -156.87  30.0  1
+ MUF  Var_39    C15   C14  C13  C12   169.25  30.0  1
+ MUF  Var_40    C15   C16  C17  C13    21.21  30.0  1
+ MUF  Var_41    C16   C15  C14  C13   -35.07  30.0  1
+ MUF  Var_42    C16   C17  C13  C14   -41.56  30.0  1
+ MUF  Var_43    C17   C13  C14  C15    47.51  30.0  1
+ MUF  Var_44    C19   C10  C1   C2   -125.46  30.0  1
+ MUF  Var_45    C19   C10  C5   C4     83.01  30.0  1
+ MUF  Var_46    C19   C10  C5   C6    -97.78  30.0  1
+ MUF  Var_47    C18   C13  C14  C8     63.00  30.0  1
+ MUF  Var_48    C19   C10  C9   C8     69.14  30.0  1
+ MUF  Var_49    C19   C10  C9   C11   -57.36  30.0  1
+ MUF  Var_50    C18   C13  C12  C11   -67.18  30.0  1
+ MUF  Var_51    C20   C17  C13  C12    77.71  30.0  1
+ MUF  Var_52    C52   C20  C17  C13   -81.70  30.0  2
+ MUF  Var_53    C20   C17  C13  C14  -166.98  30.0  1
+ MUF  Var_54    C18   C13  C14  C15   -68.69  30.0  1
+ MUF  Var_55    C20   C17  C16  C15   145.93  30.0  1
+ MUF  Var_56    C18   C13  C17  C16    76.46  30.0  1
+ MUF  Var_57    C52   C20  C17  C16   158.90  30.0  2
+ MUF  Var_58    H9    C9   C10  C1    -54.01  30.0  1
+ MUF  Var_59    H8    C8   C7   C6     81.38  30.0  1
+ MUF  Var_60    H14   C14  C8   C7     64.19  30.0  1
+ MUF  Var_61    H15   C15  C14  C8    -44.36  30.0  1
+ MUF  Var_62    H15A  C15  C14  C8     74.83  30.0  1
+ MUF  Var_63    H11   C11  C9   C8    175.16  30.0  1
+ MUF  Var_64    H11A  C11  C9   C8    -68.93  30.0  1
+ MUF  Var_65    H17   C17  C13  C12   -42.62  30.0  1
+ MUF  Var_66    H16   C16  C17  C13  -100.02  30.0  1
+ MUF  Var_67    H16A  C16  C17  C13   142.12  30.0  1
+ MUF  Var_68    O52   C20  C17  C13    95.41  30.0  2
+ MUF  Var_69    O52   C20  C17  C16   -23.99  30.0  2
+ MUF  Var_70    C20   C17  C13  C18   -48.96  30.0  1
+ MUF  Var_71    H19   C19  C10  C1    -56.56  30.0  3
+ MUF  Var_72    H19A  C19  C10  C1     62.30  30.0  3
+ MUF  Var_73    H19B  C19  C10  C1   -178.27  30.0  3
+ MUF  Var_74    H18   C18  C13  C12    63.85  30.0  3
+ MUF  Var_75    H18A  C18  C13  C12  -175.20  30.0  3
+ MUF  Var_76    H18B  C18  C13  C12   -55.07  30.0  3
+ MUF  Var_77    HO57  O57  C55  C54   179.83  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

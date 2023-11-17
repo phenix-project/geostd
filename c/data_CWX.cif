@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CWX  CWX  4'-(alpha-D-glucopyranosyloxy)-N-methylbiphenyl-4-sulfonamide  ligand  52  29  .  2021-08-07  2021-08-07  
+ CWX  CWX  4'-(alpha-D-glucopyranosyloxy)-N-methylbiphenyl-4-sulfonamide  ligand  52  29  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CWX
@@ -264,37 +265,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CWX  CONST_01  CAH  CAI  CAJ  CAK    0.00   0.0  0
- CWX  CONST_02  CAH  CAM  CAL  CAK    0.00   0.0  0
- CWX  CONST_03  CAM  CAL  CAK  CAJ    0.00   0.0  0
- CWX  CONST_04  CAM  CAH  CAI  CAJ    0.00   0.0  0
- CWX  CONST_05  CAE  CAH  CAI  CAJ  180.00   0.0  0
- CWX  CONST_06  CAL  CAK  CAJ  CAI    0.00   0.0  0
- CWX  CONST_07  CAL  CAM  CAH  CAI    0.00   0.0  0
- CWX  CONST_10  CAE  CAH  CAM  CAL  180.00   0.0  0
- CWX  CONST_13  CAC  CAD  CAE  CAH  180.00   0.0  0
- CWX  CONST_14  CAG  CAF  CAE  CAH  180.00   0.0  0
- CWX  CONST_15  CAB  CAC  CAD  CAE    0.00   0.0  0
- CWX  CONST_16  CAB  CAG  CAF  CAE    0.00   0.0  0
- CWX  CONST_17  CAG  CAF  CAE  CAD    0.00   0.0  0
- CWX  CONST_18  CAG  CAB  CAC  CAD    0.00   0.0  0
- CWX  CONST_19  CAF  CAE  CAD  CAC    0.00   0.0  0
- CWX  CONST_20  CAF  CAG  CAB  CAC    0.00   0.0  0
- CWX  CONST_21  CAI  CAJ  CAK  SAN  180.00   0.0  0
- CWX  CONST_22  CAM  CAL  CAK  SAN  180.00   0.0  0
- CWX  CONST_23  O1   CAB  CAC  CAD  180.00   0.0  0
- CWX  CONST_24  O1   CAB  CAG  CAF  180.00   0.0  0
- CWX  CONST_25  HAI  CAI  CAJ  CAK  180.00   0.0  0
- CWX  CONST_26  HAM  CAM  CAL  CAK  180.00   0.0  0
- CWX  CONST_27  HAL  CAL  CAK  CAJ  180.00   0.0  0
- CWX  CONST_28  HAJ  CAJ  CAK  CAL  180.00   0.0  0
- CWX  CONST_29  HAD  CAD  CAE  CAH    0.00   0.0  0
- CWX  CONST_30  H31  CAF  CAE  CAH    0.00   0.0  0
- CWX  CONST_31  HAC  CAC  CAD  CAE  180.00   0.0  0
- CWX  CONST_32  H32  CAG  CAF  CAE  180.00   0.0  0
- CWX  Var_01    CAJ  CAK  SAN  NAQ   86.53  30.0  2
- CWX  Var_02    CAK  SAN  NAQ  CAR   63.91  30.0  3
- CWX  Var_03    H21  CAR  NAQ  SAN  177.54  30.0  3
+ CWX  CONST_01  CAH  CAI  CAJ  CAK     0.00   0.0  0
+ CWX  CONST_02  CAH  CAM  CAL  CAK     0.00   0.0  0
+ CWX  CONST_03  CAM  CAL  CAK  CAJ     0.00   0.0  0
+ CWX  CONST_04  CAM  CAH  CAI  CAJ     0.00   0.0  0
+ CWX  CONST_05  CAE  CAH  CAI  CAJ   180.00   0.0  0
+ CWX  CONST_06  CAL  CAK  CAJ  CAI     0.00   0.0  0
+ CWX  CONST_07  CAL  CAM  CAH  CAI     0.00   0.0  0
+ CWX  CONST_08  CAE  CAH  CAM  CAL   180.00   0.0  0
+ CWX  CONST_09  CAC  CAD  CAE  CAH   180.00   0.0  0
+ CWX  CONST_10  CAG  CAF  CAE  CAH   180.00   0.0  0
+ CWX  CONST_11  CAB  CAC  CAD  CAE     0.00   0.0  0
+ CWX  CONST_12  CAB  CAG  CAF  CAE     0.00   0.0  0
+ CWX  CONST_13  CAG  CAF  CAE  CAD     0.00   0.0  0
+ CWX  CONST_14  CAG  CAB  CAC  CAD     0.00   0.0  0
+ CWX  CONST_15  CAF  CAE  CAD  CAC     0.00   0.0  0
+ CWX  CONST_16  CAF  CAG  CAB  CAC     0.00   0.0  0
+ CWX  CONST_17  CAI  CAJ  CAK  SAN   180.00   0.0  0
+ CWX  CONST_18  CAM  CAL  CAK  SAN   180.00   0.0  0
+ CWX  CONST_19  O1   CAB  CAC  CAD   180.00   0.0  0
+ CWX  CONST_20  O1   CAB  CAG  CAF   180.00   0.0  0
+ CWX  CONST_21  HAI  CAI  CAJ  CAK   180.00   0.0  0
+ CWX  CONST_22  HAM  CAM  CAL  CAK   180.00   0.0  0
+ CWX  CONST_23  HAL  CAL  CAK  CAJ   180.00   0.0  0
+ CWX  CONST_24  HAJ  CAJ  CAK  CAL   180.00   0.0  0
+ CWX  CONST_25  HAD  CAD  CAE  CAH     0.00   0.0  0
+ CWX  CONST_26  H31  CAF  CAE  CAH     0.00   0.0  0
+ CWX  CONST_27  HAC  CAC  CAD  CAE   180.00   0.0  0
+ CWX  CONST_28  H32  CAG  CAF  CAE   180.00   0.0  0
+ CWX  Var_01    CAJ  CAK  SAN  NAQ    86.53  30.0  2
+ CWX  Var_02    CAK  SAN  NAQ  CAR    63.91  30.0  3
+ CWX  Var_03    H21  CAR  NAQ  SAN   177.54  30.0  3
+ CWX  Var_04    CAD  CAE  CAH  CAI  -144.12  30.0  2
+ CWX  Var_05    CAF  CAE  CAH  CAI    35.99  30.0  2
+ CWX  Var_06    CAD  CAE  CAH  CAM    36.30  30.0  2
+ CWX  Var_07    CAF  CAE  CAH  CAM  -143.59  30.0  2
+ CWX  Var_08    C4   C5   O5   C1     57.50  30.0  1
+ CWX  Var_09    C4   C3   C2   C1    -53.16  30.0  1
+ CWX  Var_10    C3   C2   C1   O5     53.51  30.0  1
+ CWX  Var_11    C3   C4   C5   O5    -54.03  30.0  1
+ CWX  Var_12    C2   C1   O5   C5    -57.45  30.0  1
+ CWX  Var_13    C2   C3   C4   C5     54.16  30.0  1
+ CWX  Var_14    C1   O1   CAB  CAC   173.49  30.0  2
+ CWX  Var_15    C1   O1   CAB  CAG    -6.15  30.0  2
+ CWX  Var_16    O5   C1   O1   CAB    71.40  30.0  3
+ CWX  Var_17    C2   C1   O1   CAB  -165.61  30.0  3
+ CWX  Var_18    C5   O5   C1   O1     62.65  30.0  1
+ CWX  Var_19    C3   C2   C1   O1    -69.73  30.0  1
+ CWX  Var_20    C6   C5   O5   C1    179.52  30.0  1
+ CWX  Var_21    O3   C3   C2   C1   -173.41  30.0  1
+ CWX  Var_22    O2   C2   C1   O5    -65.25  30.0  1
+ CWX  Var_23    O4   C4   C5   O5   -174.95  30.0  1
+ CWX  Var_24    O3   C3   C4   C5    177.20  30.0  1
+ CWX  Var_25    C3   C4   C5   C6   -173.10  30.0  1
+ CWX  Var_26    O2   C2   C3   C4     66.25  30.0  1
+ CWX  Var_27    C2   C3   C4   O4    172.89  30.0  1
+ CWX  Var_28    H5   C5   O5   C1    -62.55  30.0  1
+ CWX  Var_29    H3   C3   C2   C1     64.51  30.0  1
+ CWX  Var_30    H2   C2   C1   O5    172.91  30.0  1
+ CWX  Var_31    H4   C4   C5   O5     65.03  30.0  1
+ CWX  Var_32    H1   C1   O5   C5   -177.20  30.0  1
+ CWX  Var_33    O2   C2   C1   O1    171.51  30.0  1
+ CWX  Var_34    O6   C6   C5   O5     64.10  30.0  3
+ CWX  Var_35    O4   C4   C5   C6     65.97  30.0  1
+ CWX  Var_36    C4   C5   C6   O6   -174.76  30.0  2
+ CWX  Var_37    O3   C3   C4   O4    -64.07  30.0  1
+ CWX  Var_38    O2   C2   C3   O3    -54.01  30.0  1
+ CWX  Var_39    HO2  O2   C2   C1    -74.25  30.0  3
+ CWX  Var_40    H61  C6   C5   O5   -174.32  30.0  3
+ CWX  Var_41    H62  C6   C5   O5    -58.12  30.0  3
+ CWX  Var_42    HO4  O4   C4   C5    177.94  30.0  3
+ CWX  Var_43    HO3  O3   C3   C4    156.84  30.0  3
+ CWX  Var_44    HO6  O6   C6   C5    176.98  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

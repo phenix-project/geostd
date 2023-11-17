@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DSZ  DSZ  5'-O-(L-alpha-aspartylsulfamoyl)adenosine  ligand  49  31  .  2021-08-08  2021-08-08  
+ DSZ  DSZ  5'-O-(L-alpha-aspartylsulfamoyl)adenosine  ligand  49  31  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DSZ
@@ -253,39 +254,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DSZ  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- DSZ  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- DSZ  CONST_03  N7    C5   C6   N1   180.00   0.0  0
- DSZ  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- DSZ  CONST_05  N9    C4   N3   C2   180.00   0.0  0
- DSZ  CONST_06  C5    C4   N3   C2     0.00   0.0  0
- DSZ  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- DSZ  CONST_08  C8    N9   C4   N3   180.00   0.0  0
- DSZ  CONST_09  N7    C5   C4   N3   180.00   0.0  0
- DSZ  CONST_10  C6    C5   C4   N3     0.00   0.0  0
- DSZ  CONST_11  N7    C8   N9   C4     0.00   0.0  0
- DSZ  CONST_12  C8    N7   C5   C4     0.00   0.0  0
- DSZ  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- DSZ  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- DSZ  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- DSZ  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- DSZ  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- DSZ  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- DSZ  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- DSZ  CONST_20  C1'   N9   C8   N7   180.00   0.0  0
- DSZ  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- DSZ  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- DSZ  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- DSZ  CONST_24  H2    C2   N3   C4   180.00   0.0  0
- DSZ  CONST_25  H8    C8   N9   C4   180.00   0.0  0
- DSZ  CONST_26  HN6   N6   C6   N1     0.00   0.0  0
- DSZ  CONST_27  HN6A  N6   C6   N1   180.00   0.0  0
- DSZ  CONST_28  SBE   NAT  C    O      0.00   0.0  0
- DSZ  CONST_30  HNAT  NAT  C    O    180.00   0.0  0
- DSZ  Var_01    O5'   SBE  NAT  C     70.23  30.0  3
- DSZ  Var_02    OD2   CG   CB   CA   -42.21  30.0  3
- DSZ  Var_03    NAT   SBE  O5'  C5'   74.61  30.0  2
- DSZ  Var_04    H5'   C5'  O5'  SBE   69.60  30.0  2
+ DSZ  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ DSZ  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ DSZ  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ DSZ  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ DSZ  CONST_05  N9    C4   N3   C2    180.00   0.0  0
+ DSZ  CONST_06  C5    C4   N3   C2      0.00   0.0  0
+ DSZ  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ DSZ  CONST_08  C8    N9   C4   N3    180.00   0.0  0
+ DSZ  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ DSZ  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ DSZ  CONST_11  N7    C8   N9   C4      0.00   0.0  0
+ DSZ  CONST_12  C8    N7   C5   C4      0.00   0.0  0
+ DSZ  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ DSZ  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ DSZ  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ DSZ  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ DSZ  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ DSZ  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ DSZ  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ DSZ  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ DSZ  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ DSZ  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ DSZ  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ DSZ  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ DSZ  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ DSZ  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ DSZ  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ DSZ  CONST_28  SBE   NAT  C    O       0.00   0.0  0
+ DSZ  CONST_29  HNAT  NAT  C    O     180.00   0.0  0
+ DSZ  Var_01    O5'   SBE  NAT  C      70.23  30.0  3
+ DSZ  Var_02    OD2   CG   CB   CA    -42.21  30.0  3
+ DSZ  Var_03    NAT   SBE  O5'  C5'    74.61  30.0  2
+ DSZ  Var_04    H5'   C5'  O5'  SBE    69.60  30.0  2
+ DSZ  Var_05    O4'   C1'  N9   C4   -118.61  30.0  2
+ DSZ  Var_06    C2'   C1'  N9   C4    123.21  30.0  2
+ DSZ  Var_07    O4'   C1'  N9   C8     57.69  30.0  2
+ DSZ  Var_08    C2'   C1'  N9   C8    -60.49  30.0  2
+ DSZ  Var_09    C4'   O4'  C1'  N9   -137.51  30.0  1
+ DSZ  Var_10    C3'   C2'  C1'  N9    152.58  30.0  1
+ DSZ  Var_11    C3'   C4'  O4'  C1'    -9.97  30.0  1
+ DSZ  Var_12    C4'   C3'  C2'  C1'   -36.81  30.0  1
+ DSZ  Var_13    C4'   O4'  C1'  C2'   -14.51  30.0  1
+ DSZ  Var_14    O4'   C4'  C3'  C2'    29.74  30.0  1
+ DSZ  Var_15    O4'   C1'  C2'  C3'    32.53  30.0  1
+ DSZ  Var_16    O2'   C2'  C1'  N9    -85.39  30.0  1
+ DSZ  Var_17    C5'   C4'  O4'  C1'   111.78  30.0  1
+ DSZ  Var_18    O3'   C3'  C2'  C1'    77.80  30.0  1
+ DSZ  Var_19    C5'   C4'  C3'  C2'   -91.12  30.0  1
+ DSZ  Var_20    O4'   C1'  C2'  O2'   154.55  30.0  1
+ DSZ  Var_21    C4'   C3'  C2'  O2'  -155.09  30.0  1
+ DSZ  Var_22    O4'   C4'  C3'  O3'   -87.09  30.0  1
+ DSZ  Var_23    H1'   C1'  N9   C4      1.75  30.0  2
+ DSZ  Var_24    H2'   C2'  C1'  N9     37.45  30.0  1
+ DSZ  Var_25    H4'   C4'  O4'  C1'  -128.99  30.0  1
+ DSZ  Var_26    H3'   C3'  C2'  C1'  -156.32  30.0  1
+ DSZ  Var_27    O3'   C3'  C2'  O2'   -40.47  30.0  1
+ DSZ  Var_28    O5'   C5'  C4'  C3'   178.19  30.0  2
+ DSZ  Var_29    C5'   C4'  C3'  O3'   152.05  30.0  1
+ DSZ  Var_30    O5'   C5'  C4'  O4'    59.88  30.0  2
+ DSZ  Var_31    HO2'  O2'  C2'  C1'   160.23  30.0  3
+ DSZ  Var_32    HO3'  O3'  C3'  C2'    49.20  30.0  3
+ DSZ  Var_33    H5'   C5'  C4'  C3'   -63.14  30.0  2
+ DSZ  Var_34    H5'A  C5'  C4'  C3'    57.47  30.0  2
+ DSZ  Var_35    CG    CB   CA   C     169.43  30.0  3
+ DSZ  Var_36    NAT   C    CA   N     157.97  30.0  3
+ DSZ  Var_37    O     C    CA   N     -23.72  30.0  3
+ DSZ  Var_38    CG    CB   CA   N     -65.82  30.0  3
+ DSZ  Var_39    CB    CA   C    O      98.91  30.0  1
+ DSZ  Var_40    NAT   C    CA   CB    -79.41  30.0  3
+ DSZ  Var_41    HN    N    CA   C     -66.37  30.0  3
+ DSZ  Var_42    HNA   N    CA   C      51.64  30.0  3
+ DSZ  Var_43    HB    CB   CA   C     -67.29  30.0  3
+ DSZ  Var_44    HBA   CB   CA   C      49.37  30.0  3
+ DSZ  Var_45    HA    CA   C    O    -144.54  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

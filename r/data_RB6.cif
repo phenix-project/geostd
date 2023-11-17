@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RB6  RB6  '(2R)-2-[(1R)-1-{[(2Z)-2-(5-amino-1,2,4-thiadiazol-3-yl)-2-(hydroxyimino)acetyl]amino}-2-oxoethyl]-5-({2-oxo-1-[(3R)-pyrrolidin-3-yl]-2,5-dihydro-1H-pyrrol-3-yl}methyl)-3,6-dihydro-2H-1,3-thiazine-4-carboxylic acid'  ligand  59  36  .  2022-07-22  2022-07-26
+ RB6  RB6  '(2R)-2-[(1R)-1-{[(2Z)-2-(5-amino-1,2,4-thiadiazol-3-yl)-2-(hydroxyimino)acetyl]amino}-2-oxoethyl]-5-({2-oxo-1-[(3R)-pyrrolidin-3-yl]-2,5-dihydro-1H-pyrrol-3-yl}methyl)-3,6-dihydro-2H-1,3-thiazine-4-carboxylic acid'  ligand  59  36  .  2022-07-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RB6
@@ -294,40 +295,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RB6  CONST_01  CBD  SBE  NBF  CBB    0.00   0.0  0
- RB6  CONST_02  SBE  CBD  NBC  CBB    0.00   0.0  0
- RB6  CONST_03  NBC  CBD  SBE  NBF    0.00   0.0  0
- RB6  CONST_04  CBD  NBC  CBB  NBF    0.00   0.0  0
- RB6  CONST_05  NBC  CBB  NBF  SBE    0.00   0.0  0
- RB6  CONST_06  CAP  NAJ  CAH  CAG    0.00   0.0  0
- RB6  CONST_07  CAK  NAJ  CAH  CAG  180.00   0.0  0
- RB6  CONST_08  SBE  NBF  CBB  CAY  180.00   0.0  0
- RB6  CONST_09  CBD  NBC  CBB  CAY  180.00   0.0  0
- RB6  CONST_10  NBG  CBD  NBC  CBB  180.00   0.0  0
- RB6  CONST_11  NBG  CBD  SBE  NBF  180.00   0.0  0
- RB6  CONST_12  CAP  NAJ  CAH  OAI  180.00   0.0  0
- RB6  CONST_13  CAK  NAJ  CAH  OAI    0.00   0.0  0
- RB6  CONST_14  H1   NBG  CBD  SBE    0.00   0.0  0
- RB6  CONST_15  H2   NBG  CBD  SBE  180.00   0.0  0
- RB6  CONST_16  CA   N    CAW  OAX    0.00   0.0  0
- RB6  CONST_17  CA   N    CAW  CAY  180.00   0.0  0
- RB6  CONST_18  H4   N    CAW  OAX  180.00   0.0  0
- RB6  Var_01    CAE  CAD  NAC  CB    18.57  30.0  1
- RB6  Var_02    CAE  CAR  SAS  CB   -47.17  30.0  1
- RB6  Var_03    CAD  CAE  CAR  SAS   23.23  30.0  1
- RB6  Var_04    NAC  CAD  CAE  CAR   -1.72  30.0  1
- RB6  Var_05    NAJ  CAP  CAQ  CAG   -0.75  30.0  1
- RB6  Var_06    CAQ  CAP  NAJ  CAH    1.05  30.0  1
- RB6  Var_07    CAP  CAQ  CAG  CAH    0.23  30.0  1
- RB6  Var_08    NAJ  CAH  CAG  CAQ    0.43  30.0  1
- RB6  Var_09    NAN  CAM  CAL  CAK   30.19  30.0  1
- RB6  Var_10    CAM  NAN  CAO  CAK   34.02  30.0  1
- RB6  Var_11    CAO  NAN  CAM  CAL  -39.94  30.0  1
- RB6  Var_12    CAG  CAF  CAE  CAR  -62.04  30.0  2
- RB6  Var_13    CAQ  CAG  CAF  CAE  106.85  30.0  1
- RB6  Var_14    NBF  CBB  CAY  CAW   23.14  30.0  2
- RB6  Var_15    OBJ  CBH  CAD  NAC   31.48  30.0  2
- RB6  Var_16    CBB  CAY  CAW  OAX  143.09  30.0  1
+ RB6  CONST_01  CBD  SBE  NBF  CBB     0.00   0.0  0
+ RB6  CONST_02  SBE  CBD  NBC  CBB     0.00   0.0  0
+ RB6  CONST_03  NBC  CBD  SBE  NBF     0.00   0.0  0
+ RB6  CONST_04  CBD  NBC  CBB  NBF     0.00   0.0  0
+ RB6  CONST_05  NBC  CBB  NBF  SBE     0.00   0.0  0
+ RB6  CONST_06  CAP  NAJ  CAH  CAG     0.00   0.0  0
+ RB6  CONST_07  CAK  NAJ  CAH  CAG   180.00   0.0  0
+ RB6  CONST_08  SBE  NBF  CBB  CAY   180.00   0.0  0
+ RB6  CONST_09  CBD  NBC  CBB  CAY   180.00   0.0  0
+ RB6  CONST_10  NBG  CBD  NBC  CBB   180.00   0.0  0
+ RB6  CONST_11  NBG  CBD  SBE  NBF   180.00   0.0  0
+ RB6  CONST_12  CAP  NAJ  CAH  OAI   180.00   0.0  0
+ RB6  CONST_13  CAK  NAJ  CAH  OAI     0.00   0.0  0
+ RB6  CONST_14  H1   NBG  CBD  SBE     0.00   0.0  0
+ RB6  CONST_15  H2   NBG  CBD  SBE   180.00   0.0  0
+ RB6  CONST_16  CA   N    CAW  OAX     0.00   0.0  0
+ RB6  CONST_17  CA   N    CAW  CAY   180.00   0.0  0
+ RB6  CONST_18  H4   N    CAW  OAX   180.00   0.0  0
+ RB6  Var_01    CAE  CAD  NAC  CB     18.57  30.0  1
+ RB6  Var_02    CAE  CAR  SAS  CB    -47.17  30.0  1
+ RB6  Var_03    CAD  CAE  CAR  SAS    23.23  30.0  1
+ RB6  Var_04    NAC  CAD  CAE  CAR    -1.72  30.0  1
+ RB6  Var_05    NAJ  CAP  CAQ  CAG    -0.75  30.0  1
+ RB6  Var_06    CAQ  CAP  NAJ  CAH     1.05  30.0  1
+ RB6  Var_07    CAP  CAQ  CAG  CAH     0.23  30.0  1
+ RB6  Var_08    NAJ  CAH  CAG  CAQ     0.43  30.0  1
+ RB6  Var_09    NAN  CAM  CAL  CAK    30.19  30.0  1
+ RB6  Var_10    CAM  NAN  CAO  CAK    34.02  30.0  1
+ RB6  Var_11    CAO  NAN  CAM  CAL   -39.94  30.0  1
+ RB6  Var_12    CAG  CAF  CAE  CAR   -62.04  30.0  2
+ RB6  Var_13    CAQ  CAG  CAF  CAE   106.85  30.0  1
+ RB6  Var_14    NBF  CBB  CAY  CAW    23.14  30.0  2
+ RB6  Var_15    OBJ  CBH  CAD  NAC    31.48  30.0  2
+ RB6  Var_16    CBB  CAY  CAW  OAX   143.09  30.0  1
+ RB6  Var_17    CAD  NAC  CB   SAS   -52.56  30.0  1
+ RB6  Var_18    NAC  CB   SAS  CAR    60.68  30.0  1
+ RB6  Var_19    CAL  CAK  NAJ  CAH    66.76  30.0  3
+ RB6  Var_20    CAO  CAK  NAJ  CAH   -52.50  30.0  3
+ RB6  Var_21    CAL  CAK  NAJ  CAP  -108.65  30.0  3
+ RB6  Var_22    CAO  CAK  NAJ  CAP   132.09  30.0  3
+ RB6  Var_23    CAM  CAL  CAK  NAJ  -134.47  30.0  1
+ RB6  Var_24    NAN  CAO  CAK  NAJ   109.99  30.0  1
+ RB6  Var_25    NAN  CAO  CAK  CAL   -14.97  30.0  1
+ RB6  Var_26    CAO  CAK  CAL  CAM    -8.96  30.0  1
+ RB6  Var_27    CAD  NAC  CB   CA   -171.67  30.0  1
+ RB6  Var_28    CAR  SAS  CB   CA   -179.59  30.0  1
+ RB6  Var_29    H10  NAC  CB   SAS   172.39  30.0  1
+ RB6  Var_30    H7   CB   SAS  CAR   -62.19  30.0  1
+ RB6  Var_31    H17  CAK  NAJ  CAH  -172.44  30.0  3
+ RB6  Var_32    H18  CAL  CAK  NAJ   -16.64  30.0  1
+ RB6  Var_33    H19  CAL  CAK  NAJ   102.98  30.0  1
+ RB6  Var_34    H24  CAO  CAK  NAJ  -132.69  30.0  1
+ RB6  Var_35    H25  CAO  CAK  NAJ   -14.05  30.0  1
+ RB6  Var_36    NAC  CB   CA   N    -169.45  30.0  3
+ RB6  Var_37    SAS  CB   CA   N      71.15  30.0  3
+ RB6  Var_38    NAC  CB   CA   C      65.18  30.0  3
+ RB6  Var_39    SAS  CB   CA   C     -54.21  30.0  3
+ RB6  Var_40    H5   CA   CB   SAS  -169.89  30.0  1
+ RB6  Var_41    OBA  NAZ  CAY  CBB   177.70   0.0  2
+ RB6  Var_42    CB   CA   N    CAW   163.51  30.0  3
+ RB6  Var_43    CB   CA   C    O     126.96  30.0  3
+ RB6  Var_44    H6   C    CA   CB    -53.93  30.0  2
+ RB6  Var_45    H4   N    CA   CB    -37.04  30.0  1
+ RB6  Var_46    OBA  NAZ  CAY  CAW    -2.88   0.0  2
+ RB6  Var_47    C    CA   N    CAW   -72.64  30.0  3
+ RB6  Var_48    O    C    CA   N       3.13  30.0  2
+ RB6  Var_49    H3   OBA  NAZ  CAY  -177.62  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- G89  G89  '(3R,3aR,5R,6aR)-3-hydroxyhexahydro-2H-cyclopenta[b]furan-5-yl [(2S,3R)-3-hydroxy-4-{[(4-methoxyphenyl)sulfonyl](2-methylpropyl)amino}-1-phenylbutan-2-yl]carbamate'  peptide  80  40  .  2022-03-18  2022-07-25
+ G89  G89  '(3R,3aR,5R,6aR)-3-hydroxyhexahydro-2H-cyclopenta[b]furan-5-yl [(2S,3R)-3-hydroxy-4-{[(4-methoxyphenyl)sulfonyl](2-methylpropyl)amino}-1-phenylbutan-2-yl]carbamate'  peptide  80  40  .  2022-03-18  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_G89
@@ -380,45 +381,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- G89  CONST_01  C36  C35  C34  C33     0.00   0.0  0
- G89  CONST_02  C36  C37  C38  C33     0.00   0.0  0
- G89  CONST_03  C37  C38  C33  C34     0.00   0.0  0
- G89  CONST_04  C37  C36  C35  C34     0.00   0.0  0
- G89  CONST_05  C38  C33  C34  C35     0.00   0.0  0
- G89  CONST_06  C38  C37  C36  C35     0.00   0.0  0
- G89  CONST_07  C2   C3   C4   C5      0.00   0.0  0
- G89  CONST_08  C2   C7   C6   C5      0.00   0.0  0
- G89  CONST_09  C3   C4   C5   C6      0.00   0.0  0
- G89  CONST_10  C3   C2   C7   C6      0.00   0.0  0
- G89  CONST_11  C7   C2   C3   C4      0.00   0.0  0
- G89  CONST_12  C7   C6   C5   C4      0.00   0.0  0
- G89  CONST_13  C34  C33  C38  C32   180.00   0.0  0
- G89  CONST_14  C36  C37  C38  C32   180.00   0.0  0
- G89  CONST_15  C3   C4   C5   S8    180.00   0.0  0
- G89  CONST_16  C7   C6   C5   S8    180.00   0.0  0
- G89  CONST_17  O39  C2   C7   C6    180.00   0.0  0
- G89  CONST_18  O39  C2   C3   C4    180.00   0.0  0
- G89  CONST_19  H35  C35  C34  C33   180.00   0.0  0
- G89  CONST_20  H37  C37  C38  C33   180.00   0.0  0
- G89  CONST_21  H36  C36  C35  C34   180.00   0.0  0
- G89  CONST_22  H33  C33  C34  C35   180.00   0.0  0
- G89  CONST_23  H34  C34  C35  C36   180.00   0.0  0
- G89  CONST_24  H3   C3   C4   C5    180.00   0.0  0
- G89  CONST_25  H7   C7   C6   C5    180.00   0.0  0
- G89  CONST_26  H4   C4   C5   C6    180.00   0.0  0
- G89  CONST_27  H6   C6   C5   C4    180.00   0.0  0
- G89  Var_01    C29  C28  O27  C26   -40.84  30.0  1
- G89  Var_02    C4   C5   S8   N11    99.65  30.0  2
- G89  Var_03    C33  C38  C32  C19    91.79  30.0  2
- G89  Var_04    N20  C21  O23  C24  -179.21  30.0  1
- G89  Var_05    C5   S8   N11  C12   119.56  30.0  2
- G89  Var_06    H40  C40  O39  C2    -65.47  30.0  3
- G89  Var_07    C19  N20  C21  O22     0.34  30.0  1
- G89  Var_08    C14  C13  C12  N11   177.45  30.0  3
- G89  Var_09    C17  C16  N11  C12   -87.65  30.0  3
- G89  Var_10    S8   N11  C12  C13   103.47  30.0  2
- G89  Var_11    H14  C14  C13  C12    64.95  30.0  3
- G89  Var_12    H15  C15  C13  C12    61.70  30.0  3
+ G89  CONST_01  C36   C35  C34  C33     0.00   0.0  0
+ G89  CONST_02  C36   C37  C38  C33     0.00   0.0  0
+ G89  CONST_03  C37   C38  C33  C34     0.00   0.0  0
+ G89  CONST_04  C37   C36  C35  C34     0.00   0.0  0
+ G89  CONST_05  C38   C33  C34  C35     0.00   0.0  0
+ G89  CONST_06  C38   C37  C36  C35     0.00   0.0  0
+ G89  CONST_07  C2    C3   C4   C5      0.00   0.0  0
+ G89  CONST_08  C2    C7   C6   C5      0.00   0.0  0
+ G89  CONST_09  C3    C4   C5   C6      0.00   0.0  0
+ G89  CONST_10  C3    C2   C7   C6      0.00   0.0  0
+ G89  CONST_11  C7    C2   C3   C4      0.00   0.0  0
+ G89  CONST_12  C7    C6   C5   C4      0.00   0.0  0
+ G89  CONST_13  C34   C33  C38  C32   180.00   0.0  0
+ G89  CONST_14  C36   C37  C38  C32   180.00   0.0  0
+ G89  CONST_15  C3    C4   C5   S8    180.00   0.0  0
+ G89  CONST_16  C7    C6   C5   S8    180.00   0.0  0
+ G89  CONST_17  O39   C2   C7   C6    180.00   0.0  0
+ G89  CONST_18  O39   C2   C3   C4    180.00   0.0  0
+ G89  CONST_19  H35   C35  C34  C33   180.00   0.0  0
+ G89  CONST_20  H37   C37  C38  C33   180.00   0.0  0
+ G89  CONST_21  H36   C36  C35  C34   180.00   0.0  0
+ G89  CONST_22  H33   C33  C34  C35   180.00   0.0  0
+ G89  CONST_23  H34   C34  C35  C36   180.00   0.0  0
+ G89  CONST_24  H3    C3   C4   C5    180.00   0.0  0
+ G89  CONST_25  H7    C7   C6   C5    180.00   0.0  0
+ G89  CONST_26  H4    C4   C5   C6    180.00   0.0  0
+ G89  CONST_27  H6    C6   C5   C4    180.00   0.0  0
+ G89  Var_01    C29   C28  O27  C26   -40.84  30.0  1
+ G89  Var_02    C4    C5   S8   N11    99.65  30.0  2
+ G89  Var_03    C33   C38  C32  C19    91.79  30.0  2
+ G89  Var_04    N20   C21  O23  C24  -179.21  30.0  1
+ G89  Var_05    C5    S8   N11  C12   119.56  30.0  2
+ G89  Var_06    H40   C40  O39  C2    -65.47  30.0  3
+ G89  Var_07    C19   N20  C21  O22     0.34  30.0  1
+ G89  Var_08    C14   C13  C12  N11   177.45  30.0  3
+ G89  Var_09    C17   C16  N11  C12   -87.65  30.0  3
+ G89  Var_10    S8    N11  C12  C13   103.47  30.0  2
+ G89  Var_11    H14   C14  C13  C12    64.95  30.0  3
+ G89  Var_12    H15   C15  C13  C12    61.70  30.0  3
+ G89  Var_13    H26   C26  C25  C24   118.13  30.0  1
+ G89  Var_14    H30   C30  C31  C24   -82.29  30.0  1
+ G89  Var_15    H31   C31  C24  C25    76.55  30.0  1
+ G89  Var_16    H31A  C31  C24  C25  -163.39  30.0  1
+ G89  Var_17    H24   C24  C25  C26   -89.76  30.0  1
+ G89  Var_18    H29   C29  C30  C26   116.31  30.0  1
+ G89  Var_19    H25   C25  C26  O27   119.32  30.0  1
+ G89  Var_20    H25A  C25  C26  O27    -0.21  30.0  1
+ G89  Var_21    HO41  O41  C29  C28    69.25  30.0  3
+ G89  Var_22    H19   C19  C32  C38    57.04  30.0  2
+ G89  Var_23    H17   C17  C16  N11   -48.34  30.0  3
+ G89  Var_24    HO18  O18  C17  C16    56.80  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

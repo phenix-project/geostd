@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- G81  G81  'ethyl (4R)-4-{[N-(tert-butoxycarbonyl)-L-phenylalanyl]amino}-5-[(3S)-2-oxopyrrolidin-3-yl]pentanoate'  ligand  71  34  .  2021-08-10  2021-08-10  
+ G81  G81  'ethyl (4R)-4-{[N-(tert-butoxycarbonyl)-L-phenylalanyl]amino}-5-[(3S)-2-oxopyrrolidin-3-yl]pentanoate'  ligand  71  34  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_G81
@@ -339,38 +340,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- G81  CONST_01  C9    C7   C53  C51    0.00   0.0  0
- G81  CONST_02  C9    C11  C55  C51    0.00   0.0  0
- G81  CONST_03  C11   C55  C51  C53    0.00   0.0  0
- G81  CONST_04  C11   C9   C7   C53    0.00   0.0  0
- G81  CONST_05  C55   C51  C53  C7     0.00   0.0  0
- G81  CONST_06  C55   C11  C9   C7     0.00   0.0  0
- G81  CONST_07  C71   N69  C65  C61    0.00   0.0  0
- G81  CONST_08  C7    C53  C51  C41  180.00   0.0  0
- G81  CONST_09  C11   C55  C51  C41  180.00   0.0  0
- G81  CONST_10  O66   C65  N69  C71  180.00   0.0  0
- G81  CONST_11  H7    C7   C53  C51  180.00   0.0  0
- G81  CONST_12  H11   C11  C55  C51  180.00   0.0  0
- G81  CONST_13  H55   C55  C51  C53  180.00   0.0  0
- G81  CONST_14  H9    C9   C7   C53  180.00   0.0  0
- G81  CONST_15  H53   C53  C7   C9   180.00   0.0  0
- G81  CONST_16  H69   N69  C65  C61  180.00   0.0  0
- G81  CONST_17  C57   N49  C39  C37  180.00   0.0  0
- G81  CONST_18  C57   N49  C39  O47    0.00   0.0  0
- G81  CONST_19  H49   N49  C39  C37    0.00   0.0  0
- G81  Var_01    N69   C71  C73  C61   28.31  30.0  1
- G81  Var_02    C65   N69  C71  C73  -20.01  30.0  1
- G81  Var_03    C53   C51  C41  C37   93.29  30.0  2
- G81  Var_04    C37   N33  C31  O35   10.02  30.0  2
- G81  Var_05    C2    C1   O1   C31   62.28  30.0  3
- G81  Var_06    N33   C31  O1   C1   176.19  30.0  1
- G81  Var_07    C84   C82  C63  C57  174.55  30.0  3
- G81  Var_08    O88   C84  C82  C63   -7.17  30.0  3
- G81  Var_09    C5    C3   O86  C84  179.15  30.0  3
- G81  Var_10    H21C  C2   C1   O1    51.58  30.0  3
- G81  Var_11    H41C  C4   C1   O1    59.57  30.0  3
- G81  Var_12    H61C  C6   C1   O1    67.07  30.0  3
- G81  Var_13    H51C  C5   C3   O86  -61.54  30.0  3
+ G81  CONST_01  C9    C7   C53  C51     0.00   0.0  0
+ G81  CONST_02  C9    C11  C55  C51     0.00   0.0  0
+ G81  CONST_03  C11   C55  C51  C53     0.00   0.0  0
+ G81  CONST_04  C11   C9   C7   C53     0.00   0.0  0
+ G81  CONST_05  C55   C51  C53  C7      0.00   0.0  0
+ G81  CONST_06  C55   C11  C9   C7      0.00   0.0  0
+ G81  CONST_07  C71   N69  C65  C61     0.00   0.0  0
+ G81  CONST_08  C7    C53  C51  C41   180.00   0.0  0
+ G81  CONST_09  C11   C55  C51  C41   180.00   0.0  0
+ G81  CONST_10  O66   C65  N69  C71   180.00   0.0  0
+ G81  CONST_11  H7    C7   C53  C51   180.00   0.0  0
+ G81  CONST_12  H11   C11  C55  C51   180.00   0.0  0
+ G81  CONST_13  H55   C55  C51  C53   180.00   0.0  0
+ G81  CONST_14  H9    C9   C7   C53   180.00   0.0  0
+ G81  CONST_15  H53   C53  C7   C9    180.00   0.0  0
+ G81  CONST_16  H69   N69  C65  C61   180.00   0.0  0
+ G81  CONST_17  C57   N49  C39  C37   180.00   0.0  0
+ G81  CONST_18  C57   N49  C39  O47     0.00   0.0  0
+ G81  CONST_19  H49   N49  C39  C37     0.00   0.0  0
+ G81  Var_01    N69   C71  C73  C61    28.31  30.0  1
+ G81  Var_02    C65   N69  C71  C73   -20.01  30.0  1
+ G81  Var_03    C53   C51  C41  C37    93.29  30.0  2
+ G81  Var_04    C37   N33  C31  O35    10.02  30.0  2
+ G81  Var_05    C2    C1   O1   C31    62.28  30.0  3
+ G81  Var_06    N33   C31  O1   C1    176.19  30.0  1
+ G81  Var_07    C84   C82  C63  C57   174.55  30.0  3
+ G81  Var_08    O88   C84  C82  C63    -7.17  30.0  3
+ G81  Var_09    C5    C3   O86  C84   179.15  30.0  3
+ G81  Var_10    H21C  C2   C1   O1     51.58  30.0  3
+ G81  Var_11    H41C  C4   C1   O1     59.57  30.0  3
+ G81  Var_12    H61C  C6   C1   O1     67.07  30.0  3
+ G81  Var_13    H51C  C5   C3   O86   -61.54  30.0  3
+ G81  Var_14    N69   C65  C61  C73    15.97  30.0  1
+ G81  Var_15    C65   C61  C73  C71   -27.19  30.0  1
+ G81  Var_16    C71   C73  C61  C59  -152.71  30.0  1
+ G81  Var_17    N69   C65  C61  C59   140.19  30.0  1
+ G81  Var_18    O66   C65  C61  C73  -165.22  30.0  1
+ G81  Var_19    H61   C61  C73  C71    85.17  30.0  1
+ G81  Var_20    C73   C61  C59  C57  -177.27  30.0  3
+ G81  Var_21    C65   C61  C59  C57    64.09  30.0  3
+ G81  Var_22    O66   C65  C61  C59   -41.01  30.0  1
+ G81  Var_23    H591  C59  C61  C73    59.12  30.0  2
+ G81  Var_24    H592  C59  C61  C73   -55.48  30.0  2
+ G81  Var_25    C51   C41  C37  N33   -56.42  30.0  3
+ G81  Var_26    C39   C37  C41  C51  -177.50  30.0  2
+ G81  Var_27    C61   C59  C57  N49   175.17  30.0  3
+ G81  Var_28    C63   C57  C59  C61    52.38  30.0  1
+ G81  Var_29    H37   C37  C41  C51    62.57  30.0  2
+ G81  Var_30    H57   C57  C59  C61   -68.70  30.0  1
+ G81  Var_31    C41   C37  N33  C31   100.66  30.0  3
+ G81  Var_32    C39   C37  N33  C31  -138.89  30.0  3
+ G81  Var_33    O47   C39  C37  N33   -36.68  30.0  3
+ G81  Var_34    N49   C39  C37  N33   146.30  30.0  3
+ G81  Var_35    O47   C39  C37  C41    85.80  30.0  3
+ G81  Var_36    N49   C39  C37  C41   -91.21  30.0  3
+ G81  Var_37    C59   C57  N49  C39   111.46  30.0  3
+ G81  Var_38    C63   C57  N49  C39  -124.31  30.0  3
+ G81  Var_39    C82   C63  C57  N49    54.99  30.0  3
+ G81  Var_40    C82   C63  C57  C59   176.65  30.0  3
+ G81  Var_41    C3    O86  C84  C82   178.17  30.0  3
+ G81  Var_42    C3    O86  C84  O88    -1.36  30.0  3
+ G81  Var_43    H631  C63  C57  N49   175.90  30.0  3
+ G81  Var_44    H632  C63  C57  N49   -68.11  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

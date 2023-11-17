@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QMR  QMR  (6R,10S)-7,8,9,10-tetrahydro-6H-6,10-methanoazepino[4,5-g]quinoxaline  ligand  29  16  .  2022-03-23  2022-03-23
+ QMR  QMR  (6R,10S)-7,8,9,10-tetrahydro-6H-6,10-methanoazepino[4,5-g]quinoxaline  ligand  29  16  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QMR
@@ -185,30 +186,50 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QMR  CONST_01  N10  C09  C08  C07  180.00   0.0  0
- QMR  CONST_02  C14  C09  C08  C07    0.00   0.0  0
- QMR  CONST_03  C14  C15  C16  C07    0.00   0.0  0
- QMR  CONST_04  C15  C16  C07  C08    0.00   0.0  0
- QMR  CONST_05  C11  N10  C09  C08  180.00   0.0  0
- QMR  CONST_06  N13  C14  C09  C08  180.00   0.0  0
- QMR  CONST_07  C15  C14  C09  C08    0.00   0.0  0
- QMR  CONST_08  C16  C07  C08  C09    0.00   0.0  0
- QMR  CONST_09  C12  C11  N10  C09    0.00   0.0  0
- QMR  CONST_10  C12  N13  C14  C09    0.00   0.0  0
- QMR  CONST_11  C16  C15  C14  C09    0.00   0.0  0
- QMR  CONST_12  N13  C14  C09  N10    0.00   0.0  0
- QMR  CONST_13  C15  C14  C09  N10  180.00   0.0  0
- QMR  CONST_14  N13  C12  C11  N10    0.00   0.0  0
- QMR  CONST_15  C14  C09  N10  C11    0.00   0.0  0
- QMR  CONST_16  C14  N13  C12  C11    0.00   0.0  0
- QMR  CONST_17  C15  C14  N13  C12  180.00   0.0  0
- QMR  CONST_18  C16  C15  C14  N13  180.00   0.0  0
- QMR  CONST_19  H15  C15  C16  C04    0.00   0.0  0
- QMR  CONST_20  H08  C08  C07  C06    0.00   0.0  0
- QMR  CONST_21  H11  C11  N10  C09  180.00   0.0  0
- QMR  CONST_22  H12  C12  C11  N10  180.00   0.0  0
- QMR  Var_01    C04  C03  N02  C01  -51.52  30.0  1
- QMR  Var_02    C06  C01  N02  C03   51.52  30.0  1
+ QMR  CONST_01  N10   C09  C08  C07   180.00   0.0  0
+ QMR  CONST_02  C14   C09  C08  C07     0.00   0.0  0
+ QMR  CONST_03  C14   C15  C16  C07     0.00   0.0  0
+ QMR  CONST_04  C15   C16  C07  C08     0.00   0.0  0
+ QMR  CONST_05  C11   N10  C09  C08   180.00   0.0  0
+ QMR  CONST_06  N13   C14  C09  C08   180.00   0.0  0
+ QMR  CONST_07  C15   C14  C09  C08     0.00   0.0  0
+ QMR  CONST_08  C16   C07  C08  C09     0.00   0.0  0
+ QMR  CONST_09  C12   C11  N10  C09     0.00   0.0  0
+ QMR  CONST_10  C12   N13  C14  C09     0.00   0.0  0
+ QMR  CONST_11  C16   C15  C14  C09     0.00   0.0  0
+ QMR  CONST_12  N13   C14  C09  N10     0.00   0.0  0
+ QMR  CONST_13  C15   C14  C09  N10   180.00   0.0  0
+ QMR  CONST_14  N13   C12  C11  N10     0.00   0.0  0
+ QMR  CONST_15  C14   C09  N10  C11     0.00   0.0  0
+ QMR  CONST_16  C14   N13  C12  C11     0.00   0.0  0
+ QMR  CONST_17  C15   C14  N13  C12   180.00   0.0  0
+ QMR  CONST_18  C16   C15  C14  N13   180.00   0.0  0
+ QMR  CONST_19  H15   C15  C16  C04     0.00   0.0  0
+ QMR  CONST_20  H08   C08  C07  C06     0.00   0.0  0
+ QMR  CONST_21  H11   C11  N10  C09   180.00   0.0  0
+ QMR  CONST_22  H12   C12  C11  N10   180.00   0.0  0
+ QMR  Var_01    C04   C03  N02  C01   -51.52  30.0  1
+ QMR  Var_02    C06   C01  N02  C03    51.52  30.0  1
+ QMR  Var_03    C04   C05  C06  C01    70.43  30.0  1
+ QMR  Var_04    C08   C07  C06  C01    94.11  30.0  1
+ QMR  Var_05    C16   C07  C06  C01   -85.32  30.0  1
+ QMR  Var_06    C05   C06  C01  N02   -62.21  30.0  1
+ QMR  Var_07    C07   C06  C01  N02    46.51  30.0  1
+ QMR  Var_08    C05   C04  C03  N02    62.20  30.0  1
+ QMR  Var_09    C16   C04  C03  N02   -46.50  30.0  1
+ QMR  Var_10    C06   C05  C04  C03   -70.43  30.0  1
+ QMR  Var_11    C07   C16  C04  C03    85.30  30.0  1
+ QMR  Var_12    C15   C16  C04  C03   -94.12  30.0  1
+ QMR  Var_13    C07   C06  C05  C04   -44.20  30.0  1
+ QMR  Var_14    C07   C16  C04  C05   -28.09  30.0  1
+ QMR  Var_15    C15   C16  C04  C05   152.49  30.0  1
+ QMR  Var_16    C08   C07  C06  C05  -152.50  30.0  1
+ QMR  Var_17    C16   C07  C06  C05    28.07  30.0  1
+ QMR  Var_18    C16   C04  C05  C06    44.20  30.0  1
+ QMR  Var_19    H051  C05  C06  C01   -49.95  30.0  1
+ QMR  Var_20    H052  C05  C06  C01  -171.81  30.0  1
+ QMR  Var_21    H06   C06  C01  N02   172.45  30.0  1
+ QMR  Var_22    H04   C04  C03  N02  -172.45  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

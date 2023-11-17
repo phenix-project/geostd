@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A5X  A5X  3-[(4-amino-2-methylpyrimidin-5-yl)methyl]-2-{(1S)-1-hydroxy-1-[(R)-hydroxy(oxo)-lambda~5~-phosphanyl]ethyl}-5-(2-{[(S)-hydroxy(phosphonooxy)phosphoryl]oxy}ethyl)-4-methyl-1,3-thiazol-3-ium  ligand  56  32  .  2021-08-06  2021-08-06  
+ A5X  A5X  3-[(4-amino-2-methylpyrimidin-5-yl)methyl]-2-{(1S)-1-hydroxy-1-[(R)-hydroxy(oxo)-lambda~5~-phosphanyl]ethyl}-5-(2-{[(S)-hydroxy(phosphonooxy)phosphoryl]oxy}ethyl)-4-methyl-1,3-thiazol-3-ium  ligand  56  32  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_A5X
@@ -275,42 +276,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- A5X  CONST_01  C2   N3   C4   C5     0.00   0.0  0
- A5X  CONST_02  N3   C2   S1   C5     0.00   0.0  0
- A5X  CONST_03  C2   S1   C5   C4     0.00   0.0  0
- A5X  CONST_04  S1   C2   N3   C4     0.00   0.0  0
- A5X  CONST_05  N3   C4   C5   S1     0.00   0.0  0
- A5X  CONST_06  C2'  N1'  C6'  C5'    0.00   0.0  0
- A5X  CONST_07  C2'  N3'  C4'  C5'    0.00   0.0  0
- A5X  CONST_08  N3'  C2'  N1'  C6'    0.00   0.0  0
- A5X  CONST_09  N3'  C4'  C5'  C6'    0.00   0.0  0
- A5X  CONST_10  C4'  N3'  C2'  N1'    0.00   0.0  0
- A5X  CONST_11  C4'  C5'  C6'  N1'    0.00   0.0  0
- A5X  CONST_12  N3   C4   C5   C5A  180.00   0.0  0
- A5X  CONST_13  C2   S1   C5   C5A  180.00   0.0  0
- A5X  CONST_14  C35  N3   C4   C5   180.00   0.0  0
- A5X  CONST_15  C2B  C2   S1   C5   180.00   0.0  0
- A5X  CONST_16  C2B  C2   N3   C4   180.00   0.0  0
- A5X  CONST_17  S1   C5   C4   C4A  180.00   0.0  0
- A5X  CONST_18  C2   N3   C4   C4A  180.00   0.0  0
- A5X  CONST_19  C35  N3   C2   S1   180.00   0.0  0
- A5X  CONST_20  N1'  C6'  C5'  C35  180.00   0.0  0
- A5X  CONST_21  N3'  C4'  C5'  C35  180.00   0.0  0
- A5X  CONST_22  C2A  C2'  N1'  C6'  180.00   0.0  0
- A5X  CONST_23  N4'  C4'  C5'  C6'  180.00   0.0  0
- A5X  CONST_24  N4'  C4'  N3'  C2'  180.00   0.0  0
- A5X  CONST_25  C4'  N3'  C2'  C2A  180.00   0.0  0
- A5X  CONST_26  H19  C6'  N1'  C2'  180.00   0.0  0
- A5X  CONST_27  H23  N4'  C4'  C5'  180.00   0.0  0
- A5X  CONST_28  H24  N4'  C4'  C5'    0.00   0.0  0
- A5X  Var_01    C5'  C35  N3   C4    83.75  30.0  2
- A5X  Var_02    C6'  C5'  C35  N3     4.82  30.0  2
- A5X  Var_03    C4   C5   C5A  C5B   79.92  30.0  2
- A5X  Var_04    H8   C4A  C4   C5   128.81  30.0  2
- A5X  Var_05    H20  C2A  C2'  N1'   97.53  30.0  2
- A5X  Var_06    C5   C5A  C5B  O5G  179.52  30.0  3
- A5X  Var_07    O13  P1   O11  P2   -22.98  30.0  1
- A5X  Var_08    C5A  C5B  O5G  P1   173.37  30.0  3
+ A5X  CONST_01  C2   N3   C4   C5      0.00   0.0  0
+ A5X  CONST_02  N3   C2   S1   C5      0.00   0.0  0
+ A5X  CONST_03  C2   S1   C5   C4      0.00   0.0  0
+ A5X  CONST_04  S1   C2   N3   C4      0.00   0.0  0
+ A5X  CONST_05  N3   C4   C5   S1      0.00   0.0  0
+ A5X  CONST_06  C2'  N1'  C6'  C5'     0.00   0.0  0
+ A5X  CONST_07  C2'  N3'  C4'  C5'     0.00   0.0  0
+ A5X  CONST_08  N3'  C2'  N1'  C6'     0.00   0.0  0
+ A5X  CONST_09  N3'  C4'  C5'  C6'     0.00   0.0  0
+ A5X  CONST_10  C4'  N3'  C2'  N1'     0.00   0.0  0
+ A5X  CONST_11  C4'  C5'  C6'  N1'     0.00   0.0  0
+ A5X  CONST_12  N3   C4   C5   C5A   180.00   0.0  0
+ A5X  CONST_13  C2   S1   C5   C5A   180.00   0.0  0
+ A5X  CONST_14  C35  N3   C4   C5    180.00   0.0  0
+ A5X  CONST_15  C2B  C2   S1   C5    180.00   0.0  0
+ A5X  CONST_16  C2B  C2   N3   C4    180.00   0.0  0
+ A5X  CONST_17  S1   C5   C4   C4A   180.00   0.0  0
+ A5X  CONST_18  C2   N3   C4   C4A   180.00   0.0  0
+ A5X  CONST_19  C35  N3   C2   S1    180.00   0.0  0
+ A5X  CONST_20  N1'  C6'  C5'  C35   180.00   0.0  0
+ A5X  CONST_21  N3'  C4'  C5'  C35   180.00   0.0  0
+ A5X  CONST_22  C2A  C2'  N1'  C6'   180.00   0.0  0
+ A5X  CONST_23  N4'  C4'  C5'  C6'   180.00   0.0  0
+ A5X  CONST_24  N4'  C4'  N3'  C2'   180.00   0.0  0
+ A5X  CONST_25  C4'  N3'  C2'  C2A   180.00   0.0  0
+ A5X  CONST_26  H19  C6'  N1'  C2'   180.00   0.0  0
+ A5X  CONST_27  H23  N4'  C4'  C5'   180.00   0.0  0
+ A5X  CONST_28  H24  N4'  C4'  C5'     0.00   0.0  0
+ A5X  Var_01    C5'  C35  N3   C4     83.75  30.0  2
+ A5X  Var_02    C6'  C5'  C35  N3      4.82  30.0  2
+ A5X  Var_03    C4   C5   C5A  C5B    79.92  30.0  2
+ A5X  Var_04    H8   C4A  C4   C5    128.81  30.0  2
+ A5X  Var_05    H20  C2A  C2'  N1'    97.53  30.0  2
+ A5X  Var_06    C5   C5A  C5B  O5G   179.52  30.0  3
+ A5X  Var_07    O13  P1   O11  P2    -22.98  30.0  1
+ A5X  Var_08    C5A  C5B  O5G  P1    173.37  30.0  3
+ A5X  Var_09    C22  C2B  C2   S1     97.54  30.0  2
+ A5X  Var_10    O24  C2B  C2   S1   -141.86  30.0  2
+ A5X  Var_11    P3   C2B  C2   S1    -22.76  30.0  2
+ A5X  Var_12    N3   C2   C2B  P3    161.33  30.0  2
+ A5X  Var_13    N3   C2   C2B  C22   -78.36  30.0  2
+ A5X  Var_14    N3   C2   C2B  O24    42.24  30.0  2
+ A5X  Var_15    O31  P3   C2B  C2   -177.71  30.0  3
+ A5X  Var_16    O32  P3   C2B  C2    -52.82  30.0  3
+ A5X  Var_17    H13  C22  C2B  C2     58.88  30.0  3
+ A5X  Var_18    H14  C22  C2B  C2    179.10  30.0  3
+ A5X  Var_19    H15  C22  C2B  C2    -61.10  30.0  3
+ A5X  Var_20    H16  O24  C2B  C2     67.74  30.0  3
+ A5X  Var_21    H25  P3   C2B  C2     73.07  30.0  3
+ A5X  Var_22    P1   O11  P2   O22  -162.76  30.0  2
+ A5X  Var_23    P1   O11  P2   O23    71.54  30.0  2
+ A5X  Var_24    P1   O11  P2   O21   -51.55  30.0  2
+ A5X  Var_25    C5B  O5G  P1   O11   174.33  30.0  3
+ A5X  Var_26    C5B  O5G  P1   O12   -76.75  30.0  3
+ A5X  Var_27    C5B  O5G  P1   O13    50.15  30.0  3
+ A5X  Var_28    C22  C2B  P3   O32  -172.54  30.0  3
+ A5X  Var_29    O24  C2B  P3   O32    68.78  30.0  3
+ A5X  Var_30    C22  C2B  P3   O31    62.58  30.0  3
+ A5X  Var_31    O24  C2B  P3   O31   -56.10  30.0  3
+ A5X  Var_32    H2   O21  P2   O22    37.62  30.0  3
+ A5X  Var_33    H1   O22  P2   O23   -41.83  30.0  3
+ A5X  Var_34    H3   O12  P1   O11    53.28  30.0  3
+ A5X  Var_35    H12  O31  P3   C2B  -169.55  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

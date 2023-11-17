@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SL6  SL6  '(2Z)-4-[4-(4-chlorobenzyl)-1-(cyclohexylmethyl)piperidin-4-yl]-2-hydroxy-4-oxobut-2-enoic acid'  ligand  58  29  .  2021-08-23  2021-08-23  
+ SL6  SL6  '(2Z)-4-[4-(4-chlorobenzyl)-1-(cyclohexylmethyl)piperidin-4-yl]-2-hydroxy-4-oxobut-2-enoic acid'  ligand  58  29  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SL6
@@ -295,33 +296,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SL6  CONST_01  C16  C17  C18  C19     0.00   0.0  0
- SL6  CONST_02  C16  C21  C20  C19     0.00   0.0  0
- SL6  CONST_03  C21  C20  C19  C18     0.00   0.0  0
- SL6  CONST_04  C21  C16  C17  C18     0.00   0.0  0
- SL6  CONST_05  C20  C19  C18  C17     0.00   0.0  0
- SL6  CONST_06  C20  C21  C16  C17     0.00   0.0  0
- SL6  CONST_07  C17  C18  C19  CL2   180.00   0.0  0
- SL6  CONST_08  C21  C20  C19  CL2   180.00   0.0  0
- SL6  CONST_09  C15  C16  C17  C18   180.00   0.0  0
- SL6  CONST_10  C15  C16  C21  C20   180.00   0.0  0
- SL6  CONST_11  H17  C17  C18  C19   180.00   0.0  0
- SL6  CONST_12  H21  C21  C20  C19   180.00   0.0  0
- SL6  CONST_13  H20  C20  C19  C18   180.00   0.0  0
- SL6  CONST_14  H18  C18  C19  C20   180.00   0.0  0
- SL6  Var_01    N8   C9   C10  C11   -57.22  30.0  1
- SL6  Var_02    N8   C13  C12  C11    55.82  30.0  1
- SL6  Var_03    C13  N8   C9   C10    59.92  30.0  1
- SL6  Var_04    C12  C13  N8   C9    -59.12  30.0  1
- SL6  Var_05    C5   C4   C3   C2    -55.62  30.0  1
- SL6  Var_06    C5   C6   C1   C2     55.80  30.0  1
- SL6  Var_07    C6   C5   C4   C3     55.04  30.0  1
- SL6  Var_08    C1   C6   C5   C4    -55.23  30.0  1
- SL6  Var_09    C11  C15  C16  C17    87.74  30.0  2
- SL6  Var_10    C2   C7   N8   C9    167.05  30.0  3
- SL6  Var_11    C23  C22  C14  C11  -178.95  30.0  2
- SL6  Var_12    O28  C23  C22  C14    -0.32   0.0  2
- SL6  Var_13    O26  C24  C23  C22  -179.44  30.0  2
+ SL6  CONST_01  C16   C17  C18  C19     0.00   0.0  0
+ SL6  CONST_02  C16   C21  C20  C19     0.00   0.0  0
+ SL6  CONST_03  C21   C20  C19  C18     0.00   0.0  0
+ SL6  CONST_04  C21   C16  C17  C18     0.00   0.0  0
+ SL6  CONST_05  C20   C19  C18  C17     0.00   0.0  0
+ SL6  CONST_06  C20   C21  C16  C17     0.00   0.0  0
+ SL6  CONST_07  C17   C18  C19  CL2   180.00   0.0  0
+ SL6  CONST_08  C21   C20  C19  CL2   180.00   0.0  0
+ SL6  CONST_09  C15   C16  C17  C18   180.00   0.0  0
+ SL6  CONST_10  C15   C16  C21  C20   180.00   0.0  0
+ SL6  CONST_11  H17   C17  C18  C19   180.00   0.0  0
+ SL6  CONST_12  H21   C21  C20  C19   180.00   0.0  0
+ SL6  CONST_13  H20   C20  C19  C18   180.00   0.0  0
+ SL6  CONST_14  H18   C18  C19  C20   180.00   0.0  0
+ SL6  Var_01    N8    C9   C10  C11   -57.22  30.0  1
+ SL6  Var_02    N8    C13  C12  C11    55.82  30.0  1
+ SL6  Var_03    C13   N8   C9   C10    59.92  30.0  1
+ SL6  Var_04    C12   C13  N8   C9    -59.12  30.0  1
+ SL6  Var_05    C5    C4   C3   C2    -55.62  30.0  1
+ SL6  Var_06    C5    C6   C1   C2     55.80  30.0  1
+ SL6  Var_07    C6    C5   C4   C3     55.04  30.0  1
+ SL6  Var_08    C1    C6   C5   C4    -55.23  30.0  1
+ SL6  Var_09    C11   C15  C16  C17    87.74  30.0  2
+ SL6  Var_10    C2    C7   N8   C9    167.05  30.0  3
+ SL6  Var_11    C23   C22  C14  C11  -178.95  30.0  2
+ SL6  Var_12    O28   C23  C22  C14    -0.32   0.0  2
+ SL6  Var_13    O26   C24  C23  C22  -179.44  30.0  2
+ SL6  Var_14    C13   C12  C11  C10   -50.38  30.0  1
+ SL6  Var_15    C12   C11  C10  C9     50.87  30.0  1
+ SL6  Var_16    C6    C1   C2   C3    -55.21  30.0  1
+ SL6  Var_17    C1    C2   C3   C4     55.25  30.0  1
+ SL6  Var_18    C10   C11  C15  C16   -65.90  30.0  3
+ SL6  Var_19    C12   C11  C15  C16   174.87  30.0  3
+ SL6  Var_20    C9    C10  C11  C15   -69.41  30.0  1
+ SL6  Var_21    C13   C12  C11  C15    71.45  30.0  1
+ SL6  Var_22    C14   C11  C10  C9    169.80  30.0  1
+ SL6  Var_23    C13   C12  C11  C14  -170.08  30.0  1
+ SL6  Var_24    C3    C2   C7   N8   -176.72  30.0  3
+ SL6  Var_25    C1    C2   C7   N8    -53.80  30.0  3
+ SL6  Var_26    C4    C3   C2   C7    179.26  30.0  1
+ SL6  Var_27    C6    C1   C2   C7   -177.86  30.0  1
+ SL6  Var_28    H121  C12  C11  C10    70.09  30.0  1
+ SL6  Var_29    H122  C12  C11  C10  -172.49  30.0  1
+ SL6  Var_30    H101  C10  C11  C12   173.87  30.0  1
+ SL6  Var_31    H102  C10  C11  C12   -68.97  30.0  1
+ SL6  Var_32    H11C  C1   C2   C3     65.57  30.0  1
+ SL6  Var_33    H12C  C1   C2   C3   -178.25  30.0  1
+ SL6  Var_34    H2    C2   C3   C4    -61.99  30.0  1
+ SL6  Var_35    C14   C11  C15  C16    55.99  30.0  3
+ SL6  Var_36    O27   C14  C11  C10     6.58  30.0  3
+ SL6  Var_37    C22   C14  C11  C10  -173.42  30.0  3
+ SL6  Var_38    C12   C11  C14  O27   124.62  30.0  2
+ SL6  Var_39    C12   C11  C14  C22   -55.37  30.0  2
+ SL6  Var_40    O27   C14  C11  C15  -116.28  30.0  3
+ SL6  Var_41    C22   C14  C11  C15    63.73  30.0  3
+ SL6  Var_42    H28   O28  C23  C22   179.88  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

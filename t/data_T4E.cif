@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- T4E  T4E  4-(3-amino-5-phenyl-1,2,4-triazin-6-yl)-2-chlorophenol  ligand  32  21  .  2021-08-23  2021-08-23  
+ T4E  T4E  4-(3-amino-5-phenyl-1,2,4-triazin-6-yl)-2-chlorophenol  ligand  32  21  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_T4E
@@ -183,49 +184,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- T4E  CONST_01  C5   N4   C3   N2     0.00  0.0  0
- T4E  CONST_02  C5   C6   N1   N2     0.00  0.0  0
- T4E  CONST_03  C7   C6   N1   N2   180.00  0.0  0
- T4E  CONST_04  C13  C5   C6   N1   180.00  0.0  0
- T4E  CONST_05  N4   C5   C6   N1     0.00  0.0  0
- T4E  CONST_08  N4   C3   N2   N1     0.00  0.0  0
- T4E  CONST_11  C3   N4   C5   C6     0.00  0.0  0
- T4E  CONST_12  C9   C8   C7   C6   180.00  0.0  0
- T4E  CONST_13  C11  C12  C7   C6   180.00  0.0  0
- T4E  CONST_14  C3   N2   N1   C6     0.00  0.0  0
- T4E  CONST_15  C15  C14  C13  C5   180.00  0.0  0
- T4E  CONST_16  C17  C18  C13  C5   180.00  0.0  0
- T4E  CONST_21  C7   C6   C5   N4   180.00  0.0  0
- T4E  CONST_22  C13  C5   N4   C3   180.00  0.0  0
- T4E  CONST_23  C7   C8   C9   C10    0.00  0.0  0
- T4E  CONST_24  C7   C12  C11  C10    0.00  0.0  0
- T4E  CONST_25  C8   C7   C12  C11    0.00  0.0  0
- T4E  CONST_26  C8   C9   C10  C11    0.00  0.0  0
- T4E  CONST_27  C9   C8   C7   C12    0.00  0.0  0
- T4E  CONST_28  C9   C10  C11  C12    0.00  0.0  0
- T4E  CONST_29  C13  C5   C6   C7     0.00  0.0  0
- T4E  CONST_30  C13  C14  C15  C16    0.00  0.0  0
- T4E  CONST_31  C13  C18  C17  C16    0.00  0.0  0
- T4E  CONST_32  C14  C15  C16  C17    0.00  0.0  0
- T4E  CONST_33  C14  C13  C18  C17    0.00  0.0  0
- T4E  CONST_34  C15  C16  C17  C18    0.00  0.0  0
- T4E  CONST_35  C15  C14  C13  C18    0.00  0.0  0
- T4E  CONST_36  N3   C3   N2   N1   180.00  0.0  0
- T4E  CONST_37  N3   C3   N4   C5   180.00  0.0  0
- T4E  CONST_38  CL1  C9   C10  C11  180.00  0.0  0
- T4E  CONST_39  O1   C10  C11  C12  180.00  0.0  0
- T4E  CONST_40  CL1  C9   C8   C7   180.00  0.0  0
- T4E  CONST_41  O1   C10  C9   C8   180.00  0.0  0
- T4E  CONST_42  H3   C8   C7   C6     0.00  0.0  0
- T4E  CONST_43  H2   C12  C7   C6     0.00  0.0  0
- T4E  CONST_44  H7   C14  C13  C5     0.00  0.0  0
- T4E  CONST_45  H6   C18  C13  C5     0.00  0.0  0
- T4E  CONST_46  H1   C11  C12  C7   180.00  0.0  0
- T4E  CONST_47  H8   C15  C16  C17  180.00  0.0  0
- T4E  CONST_48  H4   C16  C17  C18  180.00  0.0  0
- T4E  CONST_49  H5   C17  C18  C13  180.00  0.0  0
- T4E  CONST_50  H9   N3   C3   N2   180.00  0.0  0
- T4E  CONST_51  H10  N3   C3   N2     0.00  0.0  0
+ T4E  CONST_01  C5   N4   C3   N2     0.00   0.0  0
+ T4E  CONST_02  C5   C6   N1   N2     0.00   0.0  0
+ T4E  CONST_03  C7   C6   N1   N2   180.00   0.0  0
+ T4E  CONST_04  C13  C5   C6   N1   180.00   0.0  0
+ T4E  CONST_05  N4   C5   C6   N1     0.00   0.0  0
+ T4E  CONST_06  N4   C3   N2   N1     0.00   0.0  0
+ T4E  CONST_07  C3   N4   C5   C6     0.00   0.0  0
+ T4E  CONST_08  C9   C8   C7   C6   180.00   0.0  0
+ T4E  CONST_09  C11  C12  C7   C6   180.00   0.0  0
+ T4E  CONST_10  C3   N2   N1   C6     0.00   0.0  0
+ T4E  CONST_11  C15  C14  C13  C5   180.00   0.0  0
+ T4E  CONST_12  C17  C18  C13  C5   180.00   0.0  0
+ T4E  CONST_13  C7   C6   C5   N4   180.00   0.0  0
+ T4E  CONST_14  C13  C5   N4   C3   180.00   0.0  0
+ T4E  CONST_15  C7   C8   C9   C10    0.00   0.0  0
+ T4E  CONST_16  C7   C12  C11  C10    0.00   0.0  0
+ T4E  CONST_17  C8   C7   C12  C11    0.00   0.0  0
+ T4E  CONST_18  C8   C9   C10  C11    0.00   0.0  0
+ T4E  CONST_19  C9   C8   C7   C12    0.00   0.0  0
+ T4E  CONST_20  C9   C10  C11  C12    0.00   0.0  0
+ T4E  CONST_21  C13  C5   C6   C7     0.00   0.0  0
+ T4E  CONST_22  C13  C14  C15  C16    0.00   0.0  0
+ T4E  CONST_23  C13  C18  C17  C16    0.00   0.0  0
+ T4E  CONST_24  C14  C15  C16  C17    0.00   0.0  0
+ T4E  CONST_25  C14  C13  C18  C17    0.00   0.0  0
+ T4E  CONST_26  C15  C16  C17  C18    0.00   0.0  0
+ T4E  CONST_27  C15  C14  C13  C18    0.00   0.0  0
+ T4E  CONST_28  N3   C3   N2   N1   180.00   0.0  0
+ T4E  CONST_29  N3   C3   N4   C5   180.00   0.0  0
+ T4E  CONST_30  CL1  C9   C10  C11  180.00   0.0  0
+ T4E  CONST_31  O1   C10  C11  C12  180.00   0.0  0
+ T4E  CONST_32  CL1  C9   C8   C7   180.00   0.0  0
+ T4E  CONST_33  O1   C10  C9   C8   180.00   0.0  0
+ T4E  CONST_34  H3   C8   C7   C6     0.00   0.0  0
+ T4E  CONST_35  H2   C12  C7   C6     0.00   0.0  0
+ T4E  CONST_36  H7   C14  C13  C5     0.00   0.0  0
+ T4E  CONST_37  H6   C18  C13  C5     0.00   0.0  0
+ T4E  CONST_38  H1   C11  C12  C7   180.00   0.0  0
+ T4E  CONST_39  H8   C15  C16  C17  180.00   0.0  0
+ T4E  CONST_40  H4   C16  C17  C18  180.00   0.0  0
+ T4E  CONST_41  H5   C17  C18  C13  180.00   0.0  0
+ T4E  CONST_42  H9   N3   C3   N2   180.00   0.0  0
+ T4E  CONST_43  H10  N3   C3   N2     0.00   0.0  0
+ T4E  Var_01    C8   C7   C6   N1   -43.70  30.0  2
+ T4E  Var_02    C12  C7   C6   N1   133.87  30.0  2
+ T4E  Var_03    C14  C13  C5   C6   -43.13  30.0  2
+ T4E  Var_04    C18  C13  C5   C6   139.50  30.0  2
+ T4E  Var_05    C8   C7   C6   C5   136.77  30.0  2
+ T4E  Var_06    C12  C7   C6   C5   -45.66  30.0  2
+ T4E  Var_07    C14  C13  C5   N4   135.51  30.0  2
+ T4E  Var_08    C18  C13  C5   N4   -41.86  30.0  2
+ T4E  Var_09    H11  O1   C10  C11    0.77  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

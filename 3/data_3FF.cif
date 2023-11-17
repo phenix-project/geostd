@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3FF  3FF  2-[(2,4-difluorophenyl)amino]-7-{[(2R)-2,3-dihydroxypropyl]oxy}-10,11-dihydro-5H-dibenzo[a,d][7]annulen-5-one  ligand  52  31  .  2021-08-04  2021-08-04  
+ 3FF  3FF  2-[(2,4-difluorophenyl)amino]-7-{[(2R)-2,3-dihydroxypropyl]oxy}-10,11-dihydro-5H-dibenzo[a,d][7]annulen-5-one  ligand  52  31  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3FF
@@ -265,40 +266,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3FF  CONST_01  CAX  CBB  CAJ  CAF     0.00   0.0  0
- 3FF  CONST_02  CAX  CAL  CAV  CAF     0.00   0.0  0
- 3FF  CONST_03  CBA  CAM  CAW  CAG     0.00   0.0  0
- 3FF  CONST_04  CBD  CAN  CAY  CAH     0.00   0.0  0
- 3FF  CONST_05  CAN  CAY  CAH  CAI     0.00   0.0  0
- 3FF  CONST_06  CAL  CAV  CAF  CAJ     0.00   0.0  0
- 3FF  CONST_07  CAL  CAX  CBB  CAJ     0.00   0.0  0
- 3FF  CONST_08  CAM  CAW  CAG  CAK     0.00   0.0  0
- 3FF  CONST_09  CBB  CAJ  CAF  CAV     0.00   0.0  0
- 3FF  CONST_10  CBB  CAX  CAL  CAV     0.00   0.0  0
- 3FF  CONST_11  CBC  CAK  CAG  CAW     0.00   0.0  0
- 3FF  CONST_12  CAZ  CAI  CAH  CAY     0.00   0.0  0
- 3FF  CONST_13  CAJ  CAF  CAV  FAD   180.00   0.0  0
- 3FF  CONST_14  CAX  CAL  CAV  FAD   180.00   0.0  0
- 3FF  CONST_15  CAV  CAL  CAX  FAE   180.00   0.0  0
- 3FF  CONST_16  CAJ  CBB  CAX  FAE   180.00   0.0  0
- 3FF  CONST_17  NAS  CBB  CAJ  CAF   180.00   0.0  0
- 3FF  CONST_18  OAT  CAY  CAH  CAI   180.00   0.0  0
- 3FF  CONST_19  NAS  CAW  CAG  CAK   180.00   0.0  0
- 3FF  CONST_20  NAS  CBB  CAX  CAL   180.00   0.0  0
- 3FF  CONST_21  CBA  CAM  CAW  NAS   180.00   0.0  0
- 3FF  CONST_22  CBD  CAN  CAY  OAT   180.00   0.0  0
- 3FF  CONST_23  HAL  CAL  CAV  CAF   180.00   0.0  0
- 3FF  CONST_24  HAM  CAM  CAW  CAG   180.00   0.0  0
- 3FF  CONST_25  HAN  CAN  CAY  CAH   180.00   0.0  0
- 3FF  CONST_26  HAF  CAF  CAV  CAL   180.00   0.0  0
- 3FF  CONST_27  HAG  CAG  CAW  CAM   180.00   0.0  0
- 3FF  CONST_28  HAH  CAH  CAY  CAN   180.00   0.0  0
- 3FF  CONST_29  HAJ  CAJ  CAF  CAV   180.00   0.0  0
- 3FF  CONST_30  HAK  CAK  CAG  CAW   180.00   0.0  0
- 3FF  CONST_31  HAI  CAI  CAH  CAY   180.00   0.0  0
- 3FF  Var_01    CBB  NAS  CAW  CAG     7.63  30.0  3
- 3FF  Var_02    CAW  NAS  CBB  CAJ    56.37  30.0  2
- 3FF  Var_03    CBE  CAR  OAT  CAY  -177.21  30.0  2
+ 3FF  CONST_01  CAX   CBB  CAJ  CAF     0.00   0.0  0
+ 3FF  CONST_02  CAX   CAL  CAV  CAF     0.00   0.0  0
+ 3FF  CONST_03  CBA   CAM  CAW  CAG     0.00   0.0  0
+ 3FF  CONST_04  CBD   CAN  CAY  CAH     0.00   0.0  0
+ 3FF  CONST_05  CAN   CAY  CAH  CAI     0.00   0.0  0
+ 3FF  CONST_06  CAL   CAV  CAF  CAJ     0.00   0.0  0
+ 3FF  CONST_07  CAL   CAX  CBB  CAJ     0.00   0.0  0
+ 3FF  CONST_08  CAM   CAW  CAG  CAK     0.00   0.0  0
+ 3FF  CONST_09  CBB   CAJ  CAF  CAV     0.00   0.0  0
+ 3FF  CONST_10  CBB   CAX  CAL  CAV     0.00   0.0  0
+ 3FF  CONST_11  CBC   CAK  CAG  CAW     0.00   0.0  0
+ 3FF  CONST_12  CAZ   CAI  CAH  CAY     0.00   0.0  0
+ 3FF  CONST_13  CAJ   CAF  CAV  FAD   180.00   0.0  0
+ 3FF  CONST_14  CAX   CAL  CAV  FAD   180.00   0.0  0
+ 3FF  CONST_15  CAV   CAL  CAX  FAE   180.00   0.0  0
+ 3FF  CONST_16  CAJ   CBB  CAX  FAE   180.00   0.0  0
+ 3FF  CONST_17  NAS   CBB  CAJ  CAF   180.00   0.0  0
+ 3FF  CONST_18  OAT   CAY  CAH  CAI   180.00   0.0  0
+ 3FF  CONST_19  NAS   CAW  CAG  CAK   180.00   0.0  0
+ 3FF  CONST_20  NAS   CBB  CAX  CAL   180.00   0.0  0
+ 3FF  CONST_21  CBA   CAM  CAW  NAS   180.00   0.0  0
+ 3FF  CONST_22  CBD   CAN  CAY  OAT   180.00   0.0  0
+ 3FF  CONST_23  HAL   CAL  CAV  CAF   180.00   0.0  0
+ 3FF  CONST_24  HAM   CAM  CAW  CAG   180.00   0.0  0
+ 3FF  CONST_25  HAN   CAN  CAY  CAH   180.00   0.0  0
+ 3FF  CONST_26  HAF   CAF  CAV  CAL   180.00   0.0  0
+ 3FF  CONST_27  HAG   CAG  CAW  CAM   180.00   0.0  0
+ 3FF  CONST_28  HAH   CAH  CAY  CAN   180.00   0.0  0
+ 3FF  CONST_29  HAJ   CAJ  CAF  CAV   180.00   0.0  0
+ 3FF  CONST_30  HAK   CAK  CAG  CAW   180.00   0.0  0
+ 3FF  CONST_31  HAI   CAI  CAH  CAY   180.00   0.0  0
+ 3FF  Var_01    CBB   NAS  CAW  CAG     7.63  30.0  3
+ 3FF  Var_02    CAW   NAS  CBB  CAJ    56.37  30.0  2
+ 3FF  Var_03    CBE   CAR  OAT  CAY  -177.21  30.0  2
+ 3FF  CONST_32  CBA   CBC  CAK  CAG     0.00   0.0  0
+ 3FF  CONST_33  CBD   CAZ  CAI  CAH     0.00   0.0  0
+ 3FF  CONST_34  CAN   CBD  CAZ  CAI     0.00   0.0  0
+ 3FF  CONST_36  CAM   CBA  CBC  CAK     0.00   0.0  0
+ 3FF  CONST_38  CBC   CBA  CAM  CAW     0.00   0.0  0
+ 3FF  CONST_39  CAZ   CBD  CAN  CAY     0.00   0.0  0
+ 3FF  CONST_43  CAK   CBC  CAU  OAA     0.00   0.0  0
+ 3FF  CONST_44  CBA   CBC  CAU  OAA   180.00   0.0  0
+ 3FF  Var_04    CAQ   CAP  CAZ  CAI  -114.83  30.0  1
+ 3FF  Var_05    CAP   CAQ  CBA  CAM  -147.98  30.0  1
+ 3FF  Var_06    CBC   CBA  CAQ  CAP    30.45  30.0  1
+ 3FF  Var_07    CBD   CAZ  CAP  CAQ    63.59  30.0  1
+ 3FF  Var_08    HAP   CAP  CAZ  CAI   122.20  30.0  1
+ 3FF  Var_09    HAPA  CAP  CAZ  CAI     5.24  30.0  1
+ 3FF  Var_10    HAQ   CAQ  CBA  CAM    88.63  30.0  1
+ 3FF  Var_11    HAQA  CAQ  CBA  CAM   -25.86  30.0  1
+ 3FF  Var_12    CAR   OAT  CAY  CAH    -3.13  30.0  1
+ 3FF  Var_13    CAR   OAT  CAY  CAN   176.13  30.0  1
+ 3FF  Var_14    OAB   CAO  CBE  OAC    58.37  30.0  1
+ 3FF  Var_15    OAT   CAR  CBE  OAC   -60.10  30.0  1
+ 3FF  Var_16    OAT   CAR  CBE  CAO   174.09  30.0  1
+ 3FF  Var_17    OAB   CAO  CBE  CAR  -176.24  30.0  1
+ 3FF  Var_18    HAO   CAO  CBE  OAC   -63.83  30.0  1
+ 3FF  Var_19    HAOA  CAO  CBE  OAC  -179.76  30.0  1
+ 3FF  Var_20    HOAC  OAC  CBE  CAO    56.04  30.0  3
+ 3FF  Var_21    HBE   CBE  CAR  OAT    56.26  30.0  3
+ 3FF  Var_22    HOAB  OAB  CAO  CBE   179.63  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

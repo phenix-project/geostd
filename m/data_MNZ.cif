@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MNZ  MNZ  '(4~{a}~{R},5~{S},6~{R},8~{S},8~{a}~{R})-5-[2-(furan-3-yl)ethyl]-5,6,8~{a}-trimethyl-8-oxidanyl-3,4,4~{a},6,7,8-hexahydronaphthalene-1-carboxylic acid'  ligand  51  24  .  2021-08-14  2021-08-14  
+ MNZ  MNZ  '(4~{a}~{R},5~{S},6~{R},8~{S},8~{a}~{R})-5-[2-(furan-3-yl)ethyl]-5,6,8~{a}-trimethyl-8-oxidanyl-3,4,4~{a},6,7,8-hexahydronaphthalene-1-carboxylic acid'  ligand  51  24  .  2021-08-14  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_MNZ
@@ -270,22 +271,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MNZ  CONST_01  C19  O3   C18  C17    0.00   0.0  0
- MNZ  CONST_02  O3   C19  C16  C17    0.00   0.0  0
- MNZ  CONST_03  C18  O3   C19  C16    0.00   0.0  0
- MNZ  CONST_04  O3   C18  C17  C16    0.00   0.0  0
- MNZ  CONST_05  C18  C17  C16  C19    0.00   0.0  0
- MNZ  CONST_06  O3   C19  C16  C15  180.00   0.0  0
- MNZ  CONST_07  C18  C17  C16  C15  180.00   0.0  0
- MNZ  CONST_08  H27  C19  C16  C17  180.00   0.0  0
- MNZ  CONST_09  H28  C18  C17  C16  180.00   0.0  0
- MNZ  CONST_10  H14  C17  C16  C19  180.00   0.0  0
- MNZ  Var_01    C8   C9   C10  C4     0.24  30.0  1
- MNZ  Var_02    C9   C8   C7   C6   -40.54  30.0  1
- MNZ  Var_03    C10  C9   C8   C7     8.31  30.0  1
- MNZ  Var_04    O1   C11  C10  C4   -82.30  30.0  2
- MNZ  Var_05    C14  C15  C16  C17   67.47  30.0  2
- MNZ  Var_06    C16  C15  C14  C12  176.71  30.0  1
+ MNZ  CONST_01  C19  O3   C18  C17     0.00   0.0  0
+ MNZ  CONST_02  O3   C19  C16  C17     0.00   0.0  0
+ MNZ  CONST_03  C18  O3   C19  C16     0.00   0.0  0
+ MNZ  CONST_04  O3   C18  C17  C16     0.00   0.0  0
+ MNZ  CONST_05  C18  C17  C16  C19     0.00   0.0  0
+ MNZ  CONST_06  O3   C19  C16  C15   180.00   0.0  0
+ MNZ  CONST_07  C18  C17  C16  C15   180.00   0.0  0
+ MNZ  CONST_08  H27  C19  C16  C17   180.00   0.0  0
+ MNZ  CONST_09  H28  C18  C17  C16   180.00   0.0  0
+ MNZ  CONST_10  H14  C17  C16  C19   180.00   0.0  0
+ MNZ  Var_01    C8   C9   C10  C4      0.24  30.0  1
+ MNZ  Var_02    C9   C8   C7   C6    -40.54  30.0  1
+ MNZ  Var_03    C10  C9   C8   C7      8.31  30.0  1
+ MNZ  Var_04    O1   C11  C10  C4    -82.30  30.0  2
+ MNZ  Var_05    C14  C15  C16  C17    67.47  30.0  2
+ MNZ  Var_06    C16  C15  C14  C12   176.71  30.0  1
+ MNZ  Var_07    C1   C12  C6   C4    -53.29  30.0  1
+ MNZ  Var_08    C8   C7   C6   C4     66.15  30.0  1
+ MNZ  Var_09    C1   C2   C3   C4     58.21  30.0  1
+ MNZ  Var_10    C2   C1   C12  C6     50.55  30.0  1
+ MNZ  Var_11    C2   C3   C4   C6    -53.51  30.0  1
+ MNZ  Var_12    C9   C10  C4   C6     23.03  30.0  1
+ MNZ  Var_13    C1   C12  C6   C7    175.97  30.0  1
+ MNZ  Var_14    C3   C4   C6   C7   -172.78  30.0  1
+ MNZ  Var_15    C10  C4   C6   C7    -54.97  30.0  1
+ MNZ  Var_16    C12  C6   C7   C8   -159.25  30.0  1
+ MNZ  Var_17    C12  C6   C4   C10   172.29  30.0  1
+ MNZ  Var_18    C2   C3   C4   C10  -169.63  30.0  1
+ MNZ  Var_19    C12  C1   C2   C3    -56.10  30.0  1
+ MNZ  Var_20    C12  C6   C4   C3     54.48  30.0  1
+ MNZ  Var_21    C9   C10  C4   C3    138.71  30.0  1
+ MNZ  Var_22    C14  C12  C6   C4   -172.43  30.0  1
+ MNZ  Var_23    C13  C12  C6   C4     70.02  30.0  1
+ MNZ  Var_24    C12  C6   C4   C5    -68.26  30.0  1
+ MNZ  Var_25    C7   C6   C4   C5     64.48  30.0  1
+ MNZ  Var_26    C2   C3   C4   C5     72.23  30.0  1
+ MNZ  Var_27    C9   C10  C4   C5   -101.32  30.0  1
+ MNZ  Var_28    C    C1   C12  C6    175.86  30.0  1
+ MNZ  Var_29    O    C3   C4   C6   -175.69  30.0  1
+ MNZ  Var_30    C11  C10  C4   C6   -157.99  30.0  1
+ MNZ  Var_31    C14  C12  C6   C7     56.83  30.0  1
+ MNZ  Var_32    C13  C12  C6   C7    -60.73  30.0  1
+ MNZ  Var_33    O    C3   C4   C10    68.19  30.0  1
+ MNZ  Var_34    C3   C4   C10  C11   -42.31  30.0  1
+ MNZ  Var_35    C    C1   C2   C3    175.74  30.0  1
+ MNZ  Var_36    C1   C2   C3   O    -179.94  30.0  1
+ MNZ  Var_37    C14  C12  C1   C2    169.68  30.0  1
+ MNZ  Var_38    C13  C12  C1   C2    -74.01  30.0  1
+ MNZ  Var_39    H5   C7   C6   C4   -172.72  30.0  1
+ MNZ  Var_40    H6   C7   C6   C4    -55.54  30.0  1
+ MNZ  Var_41    H18  C2   C3   C4    179.20  30.0  1
+ MNZ  Var_42    H19  C2   C3   C4    -65.69  30.0  1
+ MNZ  Var_43    H21  C1   C12  C6    -65.65  30.0  1
+ MNZ  Var_44    H16  C3   C4   C6     64.96  30.0  1
+ MNZ  Var_45    H4   C6   C7   C8    -44.81  30.0  1
+ MNZ  Var_46    O    C3   C4   C5    -49.95  30.0  1
+ MNZ  Var_47    C11  C10  C4   C5     77.66  30.0  1
+ MNZ  Var_48    C15  C14  C12  C6     50.37  30.0  2
+ MNZ  Var_49    C1   C12  C14  C15   -67.81  30.0  3
+ MNZ  Var_50    C14  C12  C1   C     -65.00  30.0  1
+ MNZ  Var_51    C13  C12  C1   C      51.31  30.0  1
+ MNZ  Var_52    H17  O    C3   C4   -163.98  30.0  3
+ MNZ  Var_53    H25  C14  C12  C6    -73.51  30.0  2
+ MNZ  Var_54    H26  C14  C12  C6    173.37  30.0  2
+ MNZ  Var_55    H9   C13  C12  C6    -74.63  30.0  3
+ MNZ  Var_56    H10  C13  C12  C6     46.56  30.0  3
+ MNZ  Var_57    H11  C13  C12  C6    165.53  30.0  3
+ MNZ  Var_58    H1   C5   C4   C6   -162.12  30.0  3
+ MNZ  Var_59    H2   C5   C4   C6    -43.75  30.0  3
+ MNZ  Var_60    H3   C5   C4   C6     77.35  30.0  3
+ MNZ  Var_61    H22  C    C1   C2   -176.97  30.0  3
+ MNZ  Var_62    H23  C    C1   C2    -57.54  30.0  3
+ MNZ  Var_63    H24  C    C1   C2     61.45  30.0  3
+ MNZ  Var_64    C13  C12  C14  C15   172.50  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

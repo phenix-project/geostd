@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TI3  TI3  N-[(2S)-3-phenyl-2-sulfanylpropanoyl]glycyl-(5R)-5-phenyl-L-proline  ligand  52  29  .  2022-03-23  2022-03-23
+ TI3  TI3  N-[(2S)-3-phenyl-2-sulfanylpropanoyl]glycyl-(5R)-5-phenyl-L-proline  ligand  52  29  .  2022-03-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TI3
@@ -265,43 +266,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TI3  CONST_01  CZ1  CE1  CD1  CG1     0.00   0.0  0
- TI3  CONST_02  CZ1  CE2  CD2  CG1     0.00   0.0  0
- TI3  CONST_03  CE2  CD2  CG1  CD1     0.00   0.0  0
- TI3  CONST_04  CE2  CZ1  CE1  CD1     0.00   0.0  0
- TI3  CONST_05  CE1  CD1  CG1  CD2     0.00   0.0  0
- TI3  CONST_06  CE1  CZ1  CE2  CD2     0.00   0.0  0
- TI3  CONST_07  CZ3  CE5  CD5  CG4     0.00   0.0  0
- TI3  CONST_08  CZ3  CE4  CD4  CG4     0.00   0.0  0
- TI3  CONST_09  CE4  CD4  CG4  CD5     0.00   0.0  0
- TI3  CONST_10  CE4  CZ3  CE5  CD5     0.00   0.0  0
- TI3  CONST_11  CE5  CD5  CG4  CD4     0.00   0.0  0
- TI3  CONST_12  CE5  CZ3  CE4  CD4     0.00   0.0  0
- TI3  CONST_13  CE5  CD5  CG4  CD3   180.00   0.0  0
- TI3  CONST_14  CE4  CD4  CG4  CD3   180.00   0.0  0
- TI3  CONST_15  CE1  CD1  CG1  CB1   180.00   0.0  0
- TI3  CONST_16  CE2  CD2  CG1  CB1   180.00   0.0  0
- TI3  CONST_17  HE1  CE1  CD1  CG1   180.00   0.0  0
- TI3  CONST_18  HE2  CE2  CD2  CG1   180.00   0.0  0
- TI3  CONST_19  HD2  CD2  CG1  CD1   180.00   0.0  0
- TI3  CONST_20  HZ1  CZ1  CE1  CD1   180.00   0.0  0
- TI3  CONST_21  HD1  CD1  CG1  CD2   180.00   0.0  0
- TI3  CONST_22  HD5  CD5  CG4  CD3     0.00   0.0  0
- TI3  CONST_23  HD4  CD4  CG4  CD3     0.00   0.0  0
- TI3  CONST_24  HE5  CE5  CD5  CG4   180.00   0.0  0
- TI3  CONST_25  HE4  CE4  CD4  CG4   180.00   0.0  0
- TI3  CONST_26  HZ3  CZ3  CE5  CD5   180.00   0.0  0
- TI3  CONST_27  CD3  N3   C2   CA2     0.00   0.0  0
- TI3  CONST_28  CA3  N3   C2   CA2   180.00   0.0  0
- TI3  CONST_29  CD3  N3   C2   O2    180.00   0.0  0
- TI3  CONST_30  CA3  N3   C2   O2      0.00   0.0  0
- TI3  CONST_31  CA2  N2   C1   CA1   180.00   0.0  0
- TI3  CONST_32  CA2  N2   C1   O1      0.00   0.0  0
- TI3  CONST_33  HN2  N2   C1   CA1     0.00   0.0  0
- TI3  Var_01    CA3  CB3  CG3  CD3    38.92  30.0  1
- TI3  Var_02    CD1  CG1  CB1  CA1   101.28  30.0  2
- TI3  Var_03    N3   C2   CA2  N2   -172.00  30.0  3
- TI3  Var_04    C2   CA2  N2   C1    167.46  30.0  3
+ TI3  CONST_01  CZ1   CE1  CD1  CG1     0.00   0.0  0
+ TI3  CONST_02  CZ1   CE2  CD2  CG1     0.00   0.0  0
+ TI3  CONST_03  CE2   CD2  CG1  CD1     0.00   0.0  0
+ TI3  CONST_04  CE2   CZ1  CE1  CD1     0.00   0.0  0
+ TI3  CONST_05  CE1   CD1  CG1  CD2     0.00   0.0  0
+ TI3  CONST_06  CE1   CZ1  CE2  CD2     0.00   0.0  0
+ TI3  CONST_07  CZ3   CE5  CD5  CG4     0.00   0.0  0
+ TI3  CONST_08  CZ3   CE4  CD4  CG4     0.00   0.0  0
+ TI3  CONST_09  CE4   CD4  CG4  CD5     0.00   0.0  0
+ TI3  CONST_10  CE4   CZ3  CE5  CD5     0.00   0.0  0
+ TI3  CONST_11  CE5   CD5  CG4  CD4     0.00   0.0  0
+ TI3  CONST_12  CE5   CZ3  CE4  CD4     0.00   0.0  0
+ TI3  CONST_13  CE5   CD5  CG4  CD3   180.00   0.0  0
+ TI3  CONST_14  CE4   CD4  CG4  CD3   180.00   0.0  0
+ TI3  CONST_15  CE1   CD1  CG1  CB1   180.00   0.0  0
+ TI3  CONST_16  CE2   CD2  CG1  CB1   180.00   0.0  0
+ TI3  CONST_17  HE1   CE1  CD1  CG1   180.00   0.0  0
+ TI3  CONST_18  HE2   CE2  CD2  CG1   180.00   0.0  0
+ TI3  CONST_19  HD2   CD2  CG1  CD1   180.00   0.0  0
+ TI3  CONST_20  HZ1   CZ1  CE1  CD1   180.00   0.0  0
+ TI3  CONST_21  HD1   CD1  CG1  CD2   180.00   0.0  0
+ TI3  CONST_22  HD5   CD5  CG4  CD3     0.00   0.0  0
+ TI3  CONST_23  HD4   CD4  CG4  CD3     0.00   0.0  0
+ TI3  CONST_24  HE5   CE5  CD5  CG4   180.00   0.0  0
+ TI3  CONST_25  HE4   CE4  CD4  CG4   180.00   0.0  0
+ TI3  CONST_26  HZ3   CZ3  CE5  CD5   180.00   0.0  0
+ TI3  CONST_27  CD3   N3   C2   CA2     0.00   0.0  0
+ TI3  CONST_28  CA3   N3   C2   CA2   180.00   0.0  0
+ TI3  CONST_29  CD3   N3   C2   O2    180.00   0.0  0
+ TI3  CONST_30  CA3   N3   C2   O2      0.00   0.0  0
+ TI3  CONST_31  CA2   N2   C1   CA1   180.00   0.0  0
+ TI3  CONST_32  CA2   N2   C1   O1      0.00   0.0  0
+ TI3  CONST_33  HN2   N2   C1   CA1     0.00   0.0  0
+ TI3  Var_01    CA3   CB3  CG3  CD3    38.92  30.0  1
+ TI3  Var_02    CD1   CG1  CB1  CA1   101.28  30.0  2
+ TI3  Var_03    N3    C2   CA2  N2   -172.00  30.0  3
+ TI3  Var_04    C2    CA2  N2   C1    167.46  30.0  3
+ TI3  Var_05    CB3   CG3  CD3  N3    -31.74  30.0  1
+ TI3  Var_06    CD5   CG4  CD3  N3   -159.26  30.0  2
+ TI3  Var_07    CD4   CG4  CD3  N3     22.16  30.0  2
+ TI3  Var_08    CG3   CB3  CA3  N3    -30.16  30.0  1
+ TI3  Var_09    CB3   CA3  N3   CD3    10.45  30.0  1
+ TI3  Var_10    CG3   CD3  N3   CA3    13.34  30.0  1
+ TI3  Var_11    CG4   CD3  N3   CA3  -108.37  30.0  1
+ TI3  Var_12    CG4   CD3  CG3  CB3    91.35  30.0  1
+ TI3  Var_13    CD5   CG4  CD3  CG3    85.00  30.0  2
+ TI3  Var_14    CD4   CG4  CD3  CG3   -93.58  30.0  2
+ TI3  Var_15    CG3   CD3  N3   C2   -156.54  30.0  1
+ TI3  Var_16    CG4   CD3  N3   C2     81.75  30.0  1
+ TI3  Var_17    CB3   CA3  N3   C2   -179.12  30.0  1
+ TI3  Var_18    C3    CA3  N3   CD3   131.52  30.0  1
+ TI3  Var_19    C3    CA3  CB3  CG3  -153.81  30.0  1
+ TI3  Var_20    HG31  CG3  CD3  N3   -154.64  30.0  1
+ TI3  Var_21    HG32  CG3  CD3  N3     85.68  30.0  1
+ TI3  Var_22    HB31  CB3  CA3  N3     87.79  30.0  1
+ TI3  Var_23    HB32  CB3  CA3  N3   -152.11  30.0  1
+ TI3  Var_24    HA3   CA3  N3   CD3  -105.74  30.0  1
+ TI3  Var_25    HD3   CD3  N3   CA3   129.50  30.0  1
+ TI3  Var_26    C3    CA3  N3   C2    -58.04  30.0  1
+ TI3  Var_27    O3    C3   CA3  N3    -29.12  30.0  2
+ TI3  Var_28    OXT   C3   CA3  N3    154.45  30.0  2
+ TI3  Var_29    O3    C3   CA3  CB3    87.00  30.0  2
+ TI3  Var_30    OXT   C3   CA3  CB3   -89.43  30.0  2
+ TI3  Var_31    CG1   CB1  CA1  SG    -62.51  30.0  3
+ TI3  Var_32    C1    CA1  CB1  CG1   175.38  30.0  1
+ TI3  Var_33    HA1   CA1  CB1  CG1    53.01  30.0  1
+ TI3  Var_34    O1    C1   CA1  SG    -82.99  30.0  3
+ TI3  Var_35    N2    C1   CA1  SG     95.97  30.0  3
+ TI3  Var_36    O1    C1   CA1  CB1    41.87  30.0  3
+ TI3  Var_37    N2    C1   CA1  CB1  -139.16  30.0  3
+ TI3  Var_38    HS    SG   CA1  CB1   -60.34  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

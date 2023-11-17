@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SO8  SO8  (2S,3S)-N-[(2R,3R,4S,5R)-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)-4-oxidanyl-oxolan-3-yl]-2-azanyl-3-methyl-pentanamide  ligand  52  27  .  2021-08-23  2021-08-23  
+ SO8  SO8  (2S,3S)-N-[(2R,3R,4S,5R)-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)-4-oxidanyl-oxolan-3-yl]-2-azanyl-3-methyl-pentanamide  ligand  52  27  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SO8
@@ -267,37 +268,89 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SO8  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- SO8  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- SO8  CONST_03  N7    C5   C6   N1   180.00   0.0  0
- SO8  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- SO8  CONST_05  C5    C4   N3   C2     0.00   0.0  0
- SO8  CONST_06  N9    C4   N3   C2   180.00   0.0  0
- SO8  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- SO8  CONST_08  C6    C5   C4   N3     0.00   0.0  0
- SO8  CONST_09  N7    C5   C4   N3   180.00   0.0  0
- SO8  CONST_10  C8    N9   C4   N3   180.00   0.0  0
- SO8  CONST_11  C8    N7   C5   C4     0.00   0.0  0
- SO8  CONST_12  N7    C8   N9   C4     0.00   0.0  0
- SO8  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- SO8  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- SO8  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- SO8  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- SO8  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- SO8  CONST_18  CAQ   N9   C4   N3     0.00   0.0  0
- SO8  CONST_19  CAQ   N9   C4   C5   180.00   0.0  0
- SO8  CONST_20  CAQ   N9   C8   N7   180.00   0.0  0
- SO8  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- SO8  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- SO8  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- SO8  CONST_24  H2    C2   N3   C4   180.00   0.0  0
- SO8  CONST_25  H8    C8   N9   C4   180.00   0.0  0
- SO8  CONST_26  HN6   N6   C6   N1     0.00   0.0  0
- SO8  CONST_27  HN6A  N6   C6   N1   180.00   0.0  0
- SO8  CONST_28  CAJ   NAI  C    O      0.00   0.0  0
- SO8  CONST_29  CAJ   NAI  C    CA   180.00   0.0  0
- SO8  CONST_30  HNAI  NAI  C    O    180.00   0.0  0
- SO8  Var_01    HD1   CD1  CG1  CB  -179.96  30.0  3
+ SO8  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ SO8  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ SO8  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ SO8  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ SO8  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ SO8  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ SO8  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ SO8  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ SO8  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ SO8  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ SO8  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ SO8  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ SO8  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ SO8  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ SO8  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ SO8  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ SO8  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ SO8  CONST_18  CAQ   N9   C4   N3      0.00   0.0  0
+ SO8  CONST_19  CAQ   N9   C4   C5    180.00   0.0  0
+ SO8  CONST_20  CAQ   N9   C8   N7    180.00   0.0  0
+ SO8  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ SO8  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ SO8  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ SO8  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ SO8  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ SO8  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ SO8  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ SO8  CONST_28  CAJ   NAI  C    O       0.00   0.0  0
+ SO8  CONST_29  CAJ   NAI  C    CA    180.00   0.0  0
+ SO8  CONST_30  HNAI  NAI  C    O     180.00   0.0  0
+ SO8  Var_01    HD1   CD1  CG1  CB   -179.96  30.0  3
+ SO8  Var_02    CAJ   CAQ  N9   C4     78.88  30.0  2
+ SO8  Var_03    OAP   CAQ  N9   C4   -162.42  30.0  2
+ SO8  Var_04    CAJ   CAQ  N9   C8    -99.47  30.0  2
+ SO8  Var_05    OAP   CAQ  N9   C8     19.23  30.0  2
+ SO8  Var_06    CAK   CAJ  CAQ  N9    147.72  30.0  1
+ SO8  Var_07    CAM   OAP  CAQ  N9   -127.32  30.0  1
+ SO8  Var_08    OAP   CAM  CAK  CAJ    35.85  30.0  1
+ SO8  Var_09    CAM   OAP  CAQ  CAJ    -5.04  30.0  1
+ SO8  Var_10    OAP   CAQ  CAJ  CAK    27.61  30.0  1
+ SO8  Var_11    CAQ   OAP  CAM  CAK   -19.90  30.0  1
+ SO8  Var_12    CAQ   CAJ  CAK  CAM   -37.41  30.0  1
+ SO8  Var_13    NAI   CAJ  CAQ  N9    -87.13  30.0  1
+ SO8  Var_14    CAM   CAK  CAJ  NAI  -158.22  30.0  1
+ SO8  Var_15    OAP   CAQ  CAJ  NAI   152.76  30.0  1
+ SO8  Var_16    CAN   CAM  CAK  CAJ   -85.49  30.0  1
+ SO8  Var_17    CAQ   CAJ  CAK  OAL    80.50  30.0  1
+ SO8  Var_18    OAP   CAM  CAK  OAL   -79.04  30.0  1
+ SO8  Var_19    CAQ   OAP  CAM  CAN   102.20  30.0  1
+ SO8  Var_20    HAQ   CAQ  N9   C4    -42.70  30.0  2
+ SO8  Var_21    HAJ   CAJ  CAQ  N9     34.19  30.0  1
+ SO8  Var_22    HAM   CAM  CAK  CAJ   151.72  30.0  1
+ SO8  Var_23    HAK   CAK  CAM  OAP   154.12  30.0  1
+ SO8  Var_24    CAK   CAJ  NAI  C     -63.96  30.0  3
+ SO8  Var_25    CAQ   CAJ  NAI  C    -179.75  30.0  3
+ SO8  Var_26    OAL   CAK  CAJ  NAI   -40.30  30.0  1
+ SO8  Var_27    OAO   CAN  CAM  CAK   172.76  30.0  3
+ SO8  Var_28    CAN   CAM  CAK  OAL   159.62  30.0  1
+ SO8  Var_29    OAP   CAM  CAN  OAO    55.11  30.0  1
+ SO8  Var_30    HOAL  OAL  CAK  CAJ   174.55  30.0  3
+ SO8  Var_31    HNAI  NAI  CAJ  CAK   128.48  30.0  1
+ SO8  Var_32    HAN   CAN  CAM  CAK   -65.83  30.0  3
+ SO8  Var_33    HANA  CAN  CAM  CAK    50.28  30.0  3
+ SO8  Var_34    HOAO  OAO  CAN  CAM  -176.69  30.0  3
+ SO8  Var_35    CG1   CB   CA   C     176.15  30.0  3
+ SO8  Var_36    CG2   CB   CA   C      52.46  30.0  3
+ SO8  Var_37    O     C    CA   N     -50.33  30.0  2
+ SO8  Var_38    NAI   C    CA   N     129.13  30.0  2
+ SO8  Var_39    CG1   CB   CA   N     -60.19  30.0  3
+ SO8  Var_40    CG2   CB   CA   N     176.11  30.0  3
+ SO8  Var_41    CB    CA   C    O      73.09  30.0  3
+ SO8  Var_42    CD1   CG1  CB   CA    166.42  30.0  3
+ SO8  Var_43    NAI   C    CA   CB   -107.46  30.0  2
+ SO8  Var_44    CD1   CG1  CB   CG2   -69.68  30.0  3
+ SO8  Var_45    HN    N    CA   C     -62.94  30.0  3
+ SO8  Var_46    HNA   N    CA   C      53.61  30.0  3
+ SO8  Var_47    HB    CB   CA   C     -65.99  30.0  3
+ SO8  Var_48    HA    CA   C    O    -168.94  30.0  3
+ SO8  Var_49    HG1   CG1  CB   CA    -70.95  30.0  3
+ SO8  Var_50    HG1A  CG1  CB   CA     44.49  30.0  3
+ SO8  Var_51    HG2   CG2  CB   CA    177.88  30.0  3
+ SO8  Var_52    HG2A  CG2  CB   CA    -61.99  30.0  3
+ SO8  Var_53    HG2B  CG2  CB   CA     58.66  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FYA  FYA  5'-O-[(R)-{[(2S)-2-amino-3-phenylpropyl]oxy}(hydroxy)phosphoryl]adenosine  ligand  57  33  .  2021-08-09  2021-08-09  
+ FYA  FYA  5'-O-[(R)-{[(2S)-2-amino-3-phenylpropyl]oxy}(hydroxy)phosphoryl]adenosine  ligand  57  33  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FYA
@@ -286,50 +287,91 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FYA  CONST_01  CZ   CE1  CD1  CG      0.00   0.0  0
- FYA  CONST_02  CZ   CE2  CD2  CG      0.00   0.0  0
- FYA  CONST_03  CE2  CD2  CG   CD1     0.00   0.0  0
- FYA  CONST_04  CE2  CZ   CE1  CD1     0.00   0.0  0
- FYA  CONST_05  CE1  CD1  CG   CD2     0.00   0.0  0
- FYA  CONST_06  CE1  CZ   CE2  CD2     0.00   0.0  0
- FYA  CONST_07  C5   N7   C8   N9      0.00   0.0  0
- FYA  CONST_08  N7   C5   C4   N9      0.00   0.0  0
- FYA  CONST_09  C6   C5   C4   N9    180.00   0.0  0
- FYA  CONST_10  C2   N3   C4   N9    180.00   0.0  0
- FYA  CONST_11  C5   C4   N9   C8      0.00   0.0  0
- FYA  CONST_12  N3   C4   N9   C8    180.00   0.0  0
- FYA  CONST_13  C6   C5   N7   C8    180.00   0.0  0
- FYA  CONST_14  C4   C5   N7   C8      0.00   0.0  0
- FYA  CONST_15  C4   N9   C8   N7      0.00   0.0  0
- FYA  CONST_16  N1   C6   C5   N7    180.00   0.0  0
- FYA  CONST_17  N3   C4   C5   N7    180.00   0.0  0
- FYA  CONST_18  C2   N1   C6   C5      0.00   0.0  0
- FYA  CONST_19  C2   N3   C4   C5      0.00   0.0  0
- FYA  CONST_20  N3   C4   C5   C6      0.00   0.0  0
- FYA  CONST_21  N3   C2   N1   C6      0.00   0.0  0
- FYA  CONST_22  C4   C5   C6   N1      0.00   0.0  0
- FYA  CONST_23  C4   N3   C2   N1      0.00   0.0  0
- FYA  CONST_24  N7   C8   N9   C1'   180.00   0.0  0
- FYA  CONST_25  C5   C4   N9   C1'   180.00   0.0  0
- FYA  CONST_26  N3   C4   N9   C1'     0.00   0.0  0
- FYA  CONST_27  CE1  CD1  CG   CB    180.00   0.0  0
- FYA  CONST_28  CE2  CD2  CG   CB    180.00   0.0  0
- FYA  CONST_29  N6   C6   C5   N7      0.00   0.0  0
- FYA  CONST_30  C4   C5   C6   N6    180.00   0.0  0
- FYA  CONST_31  C2   N1   C6   N6    180.00   0.0  0
- FYA  CONST_32  HE1  CE1  CD1  CG    180.00   0.0  0
- FYA  CONST_33  HE2  CE2  CD2  CG    180.00   0.0  0
- FYA  CONST_34  HD2  CD2  CG   CD1   180.00   0.0  0
- FYA  CONST_35  HZ   CZ   CE1  CD1   180.00   0.0  0
- FYA  CONST_36  HD1  CD1  CG   CD2   180.00   0.0  0
- FYA  CONST_37  H8   C8   N9   C1'     0.00   0.0  0
- FYA  CONST_38  H2   C2   N1   C6    180.00   0.0  0
- FYA  CONST_39  H61  N6   C6   C5    180.00   0.0  0
- FYA  CONST_40  H62  N6   C6   C5      0.00   0.0  0
- FYA  Var_01    CD1  CG   CB   CA     88.84  30.0  2
- FYA  Var_02    C4'  C5'  O5'  P    -106.66  30.0  3
- FYA  Var_03    O1P  P    O3P  C     -57.22  30.0  1
- FYA  Var_04    H1   C    O3P  P      42.03  30.0  1
+ FYA  CONST_01  CZ    CE1  CD1  CG      0.00   0.0  0
+ FYA  CONST_02  CZ    CE2  CD2  CG      0.00   0.0  0
+ FYA  CONST_03  CE2   CD2  CG   CD1     0.00   0.0  0
+ FYA  CONST_04  CE2   CZ   CE1  CD1     0.00   0.0  0
+ FYA  CONST_05  CE1   CD1  CG   CD2     0.00   0.0  0
+ FYA  CONST_06  CE1   CZ   CE2  CD2     0.00   0.0  0
+ FYA  CONST_07  C5    N7   C8   N9      0.00   0.0  0
+ FYA  CONST_08  N7    C5   C4   N9      0.00   0.0  0
+ FYA  CONST_09  C6    C5   C4   N9    180.00   0.0  0
+ FYA  CONST_10  C2    N3   C4   N9    180.00   0.0  0
+ FYA  CONST_11  C5    C4   N9   C8      0.00   0.0  0
+ FYA  CONST_12  N3    C4   N9   C8    180.00   0.0  0
+ FYA  CONST_13  C6    C5   N7   C8    180.00   0.0  0
+ FYA  CONST_14  C4    C5   N7   C8      0.00   0.0  0
+ FYA  CONST_15  C4    N9   C8   N7      0.00   0.0  0
+ FYA  CONST_16  N1    C6   C5   N7    180.00   0.0  0
+ FYA  CONST_17  N3    C4   C5   N7    180.00   0.0  0
+ FYA  CONST_18  C2    N1   C6   C5      0.00   0.0  0
+ FYA  CONST_19  C2    N3   C4   C5      0.00   0.0  0
+ FYA  CONST_20  N3    C4   C5   C6      0.00   0.0  0
+ FYA  CONST_21  N3    C2   N1   C6      0.00   0.0  0
+ FYA  CONST_22  C4    C5   C6   N1      0.00   0.0  0
+ FYA  CONST_23  C4    N3   C2   N1      0.00   0.0  0
+ FYA  CONST_24  N7    C8   N9   C1'   180.00   0.0  0
+ FYA  CONST_25  C5    C4   N9   C1'   180.00   0.0  0
+ FYA  CONST_26  N3    C4   N9   C1'     0.00   0.0  0
+ FYA  CONST_27  CE1   CD1  CG   CB    180.00   0.0  0
+ FYA  CONST_28  CE2   CD2  CG   CB    180.00   0.0  0
+ FYA  CONST_29  N6    C6   C5   N7      0.00   0.0  0
+ FYA  CONST_30  C4    C5   C6   N6    180.00   0.0  0
+ FYA  CONST_31  C2    N1   C6   N6    180.00   0.0  0
+ FYA  CONST_32  HE1   CE1  CD1  CG    180.00   0.0  0
+ FYA  CONST_33  HE2   CE2  CD2  CG    180.00   0.0  0
+ FYA  CONST_34  HD2   CD2  CG   CD1   180.00   0.0  0
+ FYA  CONST_35  HZ    CZ   CE1  CD1   180.00   0.0  0
+ FYA  CONST_36  HD1   CD1  CG   CD2   180.00   0.0  0
+ FYA  CONST_37  H8    C8   N9   C1'     0.00   0.0  0
+ FYA  CONST_38  H2    C2   N1   C6    180.00   0.0  0
+ FYA  CONST_39  H61   N6   C6   C5    180.00   0.0  0
+ FYA  CONST_40  H62   N6   C6   C5      0.00   0.0  0
+ FYA  Var_01    CD1   CG   CB   CA     88.84  30.0  2
+ FYA  Var_02    C4'   C5'  O5'  P    -106.66  30.0  3
+ FYA  Var_03    O1P   P    O3P  C     -57.22  30.0  1
+ FYA  Var_04    H1    C    O3P  P      42.03  30.0  1
+ FYA  Var_05    C2'   C1'  O4'  C4'   -16.65  30.0  1
+ FYA  Var_06    N9    C1'  O4'  C4'  -139.44  30.0  1
+ FYA  Var_07    C1'   C2'  C3'  C4'   -37.95  30.0  1
+ FYA  Var_08    C2'   C3'  C4'  O4'    29.64  30.0  1
+ FYA  Var_09    C3'   C2'  C1'  O4'    34.53  30.0  1
+ FYA  Var_10    C8    N9   C1'  O4'    45.52  30.0  2
+ FYA  Var_11    C4    N9   C1'  O4'  -138.38  30.0  2
+ FYA  Var_12    C1'   O4'  C4'  C3'    -8.56  30.0  1
+ FYA  Var_13    N9    C1'  C2'  C3'   154.64  30.0  1
+ FYA  Var_14    C8    N9   C1'  C2'   -72.49  30.0  2
+ FYA  Var_15    C4    N9   C1'  C2'   103.61  30.0  2
+ FYA  Var_16    C1'   O4'  C4'  C5'   113.19  30.0  1
+ FYA  Var_17    C2'   C3'  C4'  C5'   -91.91  30.0  1
+ FYA  Var_18    O2'   C2'  C3'  C4'  -156.57  30.0  1
+ FYA  Var_19    O3'   C3'  C4'  O4'   -87.22  30.0  1
+ FYA  Var_20    O2'   C2'  C1'  O4'   156.71  30.0  1
+ FYA  Var_21    C1'   C2'  C3'  O3'    77.28  30.0  1
+ FYA  Var_22    N9    C1'  C2'  O2'   -83.18  30.0  1
+ FYA  Var_23    H1'   C1'  O4'  C4'   103.24  30.0  1
+ FYA  Var_24    H2'   C2'  C3'  C4'    77.11  30.0  1
+ FYA  Var_25    H3'   C3'  C4'  O4'   148.93  30.0  1
+ FYA  Var_26    H4'   C4'  C3'  C2'   146.66  30.0  1
+ FYA  Var_27    O4'   C4'  C5'  O5'    63.99  30.0  3
+ FYA  Var_28    C3'   C4'  C5'  O5'  -177.74  30.0  3
+ FYA  Var_29    O3'   C3'  C4'  C5'   151.23  30.0  1
+ FYA  Var_30    O2'   C2'  C3'  O3'   -41.35  30.0  1
+ FYA  Var_31    HO'3  O3'  C3'  C4'   159.18  30.0  3
+ FYA  Var_32    H5'1  C5'  C4'  O4'   -61.18  30.0  1
+ FYA  Var_33    H5'2  C5'  C4'  O4'  -177.82  30.0  1
+ FYA  Var_34    HO'2  O2'  C2'  C3'   -85.21  30.0  3
+ FYA  Var_35    CG    CB   CA   C     171.78  30.0  3
+ FYA  Var_36    CG    CB   CA   N     -64.30  30.0  3
+ FYA  Var_37    HA    CA   CB   CG     55.25  30.0  1
+ FYA  Var_38    O3P   C    CA   N      58.94  30.0  2
+ FYA  Var_39    O3P   C    CA   CB   -174.85  30.0  2
+ FYA  Var_40    C5'   O5'  P    O1P   -18.27  30.0  3
+ FYA  Var_41    C5'   O5'  P    O2P  -150.36  30.0  2
+ FYA  Var_42    C5'   O5'  P    O3P    96.68  30.0  3
+ FYA  Var_43    HN1   N    CA   C      68.73  30.0  3
+ FYA  Var_44    HN2   N    CA   C    -175.18  30.0  3
+ FYA  Var_45    H2A   C    CA   N     -62.89  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

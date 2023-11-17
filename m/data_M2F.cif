@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- M2F  M2F  '2,4-dinitrophenyl 2-deoxy-2-fluoro-beta-D-mannopyranoside'  D-saccharide  37  24  .  2023-02-15  2023-02-15
+ M2F  M2F  '2,4-dinitrophenyl 2-deoxy-2-fluoro-beta-D-mannopyranoside'  D-saccharide  37  24  .  2023-02-15  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_M2F
@@ -205,25 +206,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- M2F  CONST_01  C3B  C2B  C1A  C6B    0.00  0.0  0
- M2F  CONST_02  C3B  C4B  C5B  C6B    0.00  0.0  0
- M2F  CONST_03  C4B  C5B  C6B  C1A    0.00  0.0  0
- M2F  CONST_04  C4B  C3B  C2B  C1A    0.00  0.0  0
- M2F  CONST_05  C5B  C6B  C1A  C2B    0.00  0.0  0
- M2F  CONST_06  C5B  C4B  C3B  C2B    0.00  0.0  0
- M2F  CONST_07  C2B  C1A  C6B  N1B  180.00  0.0  0
- M2F  CONST_08  C4B  C5B  C6B  N1B  180.00  0.0  0
- M2F  CONST_09  N1C  C2B  C1A  C6B  180.00  0.0  0
- M2F  CONST_10  O1   C5B  C6B  C1A  180.00  0.0  0
- M2F  CONST_11  C4B  C3B  C2B  N1C  180.00  0.0  0
- M2F  CONST_12  O1   C5B  C4B  C3B  180.00  0.0  0
- M2F  CONST_13  H4B  C4B  C5B  C6B  180.00  0.0  0
- M2F  CONST_14  H3B  C3B  C2B  C1A  180.00  0.0  0
- M2F  CONST_15  H1A  C1A  C2B  C3B  180.00  0.0  0
- M2F  CONST_20  O3C  N1C  C2B  C1A    0.00  0.0  0
- M2F  CONST_21  O2C  N1C  C2B  C1A  180.00  0.0  0
- M2F  CONST_22  C3B  C2B  N1C  O3C  180.00  0.0  0
- M2F  CONST_23  C3B  C2B  N1C  O2C    0.00  0.0  0
+ M2F  CONST_01  C3B   C2B  C1A  C6B     0.00   0.0  0
+ M2F  CONST_02  C3B   C4B  C5B  C6B     0.00   0.0  0
+ M2F  CONST_03  C4B   C5B  C6B  C1A     0.00   0.0  0
+ M2F  CONST_04  C4B   C3B  C2B  C1A     0.00   0.0  0
+ M2F  CONST_05  C5B   C6B  C1A  C2B     0.00   0.0  0
+ M2F  CONST_06  C5B   C4B  C3B  C2B     0.00   0.0  0
+ M2F  CONST_07  C2B   C1A  C6B  N1B   180.00   0.0  0
+ M2F  CONST_08  C4B   C5B  C6B  N1B   180.00   0.0  0
+ M2F  CONST_09  N1C   C2B  C1A  C6B   180.00   0.0  0
+ M2F  CONST_10  O1    C5B  C6B  C1A   180.00   0.0  0
+ M2F  CONST_11  C4B   C3B  C2B  N1C   180.00   0.0  0
+ M2F  CONST_12  O1    C5B  C4B  C3B   180.00   0.0  0
+ M2F  CONST_13  H4B   C4B  C5B  C6B   180.00   0.0  0
+ M2F  CONST_14  H3B   C3B  C2B  C1A   180.00   0.0  0
+ M2F  CONST_15  H1A   C1A  C2B  C3B   180.00   0.0  0
+ M2F  CONST_16  O3C   N1C  C2B  C1A     0.00   0.0  0
+ M2F  CONST_17  O2C   N1C  C2B  C1A   180.00   0.0  0
+ M2F  CONST_18  C3B   C2B  N1C  O3C   180.00   0.0  0
+ M2F  CONST_19  C3B   C2B  N1C  O2C     0.00   0.0  0
+ M2F  Var_01    C4    C5   O5   C1     63.34  30.0  1
+ M2F  Var_02    C4    C3   C2   C1    -52.58  30.0  1
+ M2F  Var_03    C3    C2   C1   O5     57.95  30.0  1
+ M2F  Var_04    C3    C4   C5   O5    -55.22  30.0  1
+ M2F  Var_05    C5    O5   C1   C2    -65.29  30.0  1
+ M2F  Var_06    C5    C4   C3   C2     52.17  30.0  1
+ M2F  Var_07    C1    O1   C5B  C6B  -171.96  30.0  2
+ M2F  Var_08    C1    O1   C5B  C4B    10.15  30.0  2
+ M2F  Var_09    O5    C1   O1   C5B   -73.59  30.0  3
+ M2F  Var_10    C2    C1   O1   C5B   166.83  30.0  3
+ M2F  Var_11    C5    O5   C1   O1    176.78  30.0  1
+ M2F  Var_12    C3    C2   C1   O1    175.73  30.0  1
+ M2F  Var_13    C6    C5   O5   C1   -173.98  30.0  1
+ M2F  Var_14    O3    C3   C2   C1   -173.65  30.0  1
+ M2F  Var_15    F2    C2   C1   O5    -61.43  30.0  1
+ M2F  Var_16    O4    C4   C5   O5   -175.93  30.0  1
+ M2F  Var_17    O4    C4   C3   C2    170.90  30.0  1
+ M2F  Var_18    C4    C3   C2   F2     66.10  30.0  1
+ M2F  Var_19    C6    C5   C4   C3   -174.64  30.0  1
+ M2F  Var_20    C5    C4   C3   O3    175.51  30.0  1
+ M2F  Var_21    H5    C5   O5   C1    -55.65  30.0  1
+ M2F  Var_22    H3    C3   C2   C1     64.48  30.0  1
+ M2F  Var_23    H2    C2   C1   O5    179.67  30.0  1
+ M2F  Var_24    H4    C4   C5   O5     63.58  30.0  1
+ M2F  Var_25    H1    C1   C2   C3    -64.74  30.0  1
+ M2F  Var_26    F2    C2   C1   O1     56.35  30.0  1
+ M2F  Var_27    O6    C6   C5   O5     63.31  30.0  3
+ M2F  Var_28    O3    C3   C2   F2    -54.97  30.0  1
+ M2F  Var_29    O4    C4   C3   O3    -65.76  30.0  1
+ M2F  Var_30    O6    C6   C5   C4   -176.18  30.0  3
+ M2F  Var_31    C6    C5   C4   O4     64.65  30.0  1
+ M2F  Var_32    H61C  C6   C5   O5   -175.04  30.0  3
+ M2F  Var_33    H62C  C6   C5   O5    -58.87  30.0  3
+ M2F  Var_34    HA    O3   C3   C2    -82.59  30.0  3
+ M2F  Var_35    HB    O4   C4   C3     62.97  30.0  3
+ M2F  Var_36    H6    O6   C6   C5    174.32  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

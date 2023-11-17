@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BPC  BPC  (7R,8R,9R)-7,8,9,10-tetrahydrobenzo[pqr]tetraphene-7,8,9-triol  ligand  39  23  .  2021-08-06  2021-08-06  
+ BPC  BPC  (7R,8R,9R)-7,8,9,10-tetrahydrobenzo[pqr]tetraphene-7,8,9-triol  ligand  39  23  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BPC
@@ -222,57 +223,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BPC  CONST_01  C3A  C3   C2   C1     0.00   0.0  0
- BPC  CONST_02  C9   C10  C1A  C1   180.00   0.0  0
- BPC  CONST_03  C3A  C3B  C1A  C1     0.00   0.0  0
- BPC  CONST_04  C5B  C3B  C1A  C1   180.00   0.0  0
- BPC  CONST_05  C10  C1A  C1   C2   180.00   0.0  0
- BPC  CONST_06  C3B  C1A  C1   C2     0.00   0.0  0
- BPC  CONST_07  C4   C3A  C3   C2   180.00   0.0  0
- BPC  CONST_08  C3B  C3A  C3   C2     0.00   0.0  0
- BPC  CONST_09  C1A  C1   C2   C3     0.00   0.0  0
- BPC  CONST_10  C5   C4   C3A  C3   180.00   0.0  0
- BPC  CONST_11  C1A  C3B  C3A  C3     0.00   0.0  0
- BPC  CONST_12  C5B  C3B  C3A  C3   180.00   0.0  0
- BPC  CONST_13  C5A  C5   C4   C3A    0.00   0.0  0
- BPC  CONST_14  C10  C1A  C3B  C3A  180.00   0.0  0
- BPC  CONST_15  C5A  C5B  C3B  C3A    0.00   0.0  0
- BPC  CONST_16  C8A  C5B  C3B  C3A  180.00   0.0  0
- BPC  CONST_17  C1A  C3B  C3A  C4   180.00   0.0  0
- BPC  CONST_18  C5B  C3B  C3A  C4     0.00   0.0  0
- BPC  CONST_19  C6   C5A  C5   C4   180.00   0.0  0
- BPC  CONST_20  C5B  C5A  C5   C4     0.00   0.0  0
- BPC  CONST_21  C3B  C3A  C4   C5     0.00   0.0  0
- BPC  CONST_22  C7   C6   C5A  C5   180.00   0.0  0
- BPC  CONST_23  C8A  C5B  C5A  C5   180.00   0.0  0
- BPC  CONST_24  C3B  C5B  C5A  C5     0.00   0.0  0
- BPC  CONST_25  C8   C7   C6   C5A    0.00   0.0  0
- BPC  CONST_26  C8   C8A  C5B  C5A    0.00   0.0  0
- BPC  CONST_27  C9   C8A  C5B  C5A  180.00   0.0  0
- BPC  CONST_28  C1A  C3B  C5B  C5A  180.00   0.0  0
- BPC  CONST_29  C8A  C5B  C5A  C6     0.00   0.0  0
- BPC  CONST_30  C3B  C5B  C5A  C6   180.00   0.0  0
- BPC  CONST_31  C8A  C8   C7   C6     0.00   0.0  0
- BPC  CONST_32  C5B  C5A  C6   C7     0.00   0.0  0
- BPC  CONST_33  C9   C8A  C8   C7   180.00   0.0  0
- BPC  CONST_34  C5B  C8A  C8   C7     0.00   0.0  0
- BPC  CONST_35  C10  C9   C8A  C8   180.00   0.0  0
- BPC  CONST_36  C3B  C5B  C8A  C8   180.00   0.0  0
- BPC  CONST_37  C1A  C10  C9   C8A    0.00   0.0  0
- BPC  CONST_38  C1A  C3B  C5B  C8A    0.00   0.0  0
- BPC  CONST_39  C3B  C5B  C8A  C9     0.00   0.0  0
- BPC  CONST_40  C3B  C1A  C10  C9     0.00   0.0  0
- BPC  CONST_41  C5B  C8A  C9   C10    0.00   0.0  0
- BPC  CONST_42  C5B  C3B  C1A  C10    0.00   0.0  0
- BPC  CONST_43  H3   C3   C2   C1   180.00   0.0  0
- BPC  CONST_44  H10  C10  C1A  C1     0.00   0.0  0
- BPC  CONST_45  H1   C1   C2   C3   180.00   0.0  0
- BPC  CONST_46  H4   C4   C3A  C3     0.00   0.0  0
- BPC  CONST_47  H2   C2   C3   C3A  180.00   0.0  0
- BPC  CONST_48  H5   C5   C4   C3A  180.00   0.0  0
- BPC  CONST_49  H8   C8   C7   C6   180.00   0.0  0
- BPC  CONST_50  H9   C9   C8A  C8     0.00   0.0  0
- BPC  Var_01    C3'  C4'  C6   C5A  165.90  30.0  1
+ BPC  CONST_01  C3A  C3   C2   C1      0.00   0.0  0
+ BPC  CONST_02  C9   C10  C1A  C1    180.00   0.0  0
+ BPC  CONST_03  C3A  C3B  C1A  C1      0.00   0.0  0
+ BPC  CONST_04  C5B  C3B  C1A  C1    180.00   0.0  0
+ BPC  CONST_05  C10  C1A  C1   C2    180.00   0.0  0
+ BPC  CONST_06  C3B  C1A  C1   C2      0.00   0.0  0
+ BPC  CONST_07  C4   C3A  C3   C2    180.00   0.0  0
+ BPC  CONST_08  C3B  C3A  C3   C2      0.00   0.0  0
+ BPC  CONST_09  C1A  C1   C2   C3      0.00   0.0  0
+ BPC  CONST_10  C5   C4   C3A  C3    180.00   0.0  0
+ BPC  CONST_11  C1A  C3B  C3A  C3      0.00   0.0  0
+ BPC  CONST_12  C5B  C3B  C3A  C3    180.00   0.0  0
+ BPC  CONST_13  C5A  C5   C4   C3A     0.00   0.0  0
+ BPC  CONST_14  C10  C1A  C3B  C3A   180.00   0.0  0
+ BPC  CONST_15  C5A  C5B  C3B  C3A     0.00   0.0  0
+ BPC  CONST_16  C8A  C5B  C3B  C3A   180.00   0.0  0
+ BPC  CONST_17  C1A  C3B  C3A  C4    180.00   0.0  0
+ BPC  CONST_18  C5B  C3B  C3A  C4      0.00   0.0  0
+ BPC  CONST_19  C6   C5A  C5   C4    180.00   0.0  0
+ BPC  CONST_20  C5B  C5A  C5   C4      0.00   0.0  0
+ BPC  CONST_21  C3B  C3A  C4   C5      0.00   0.0  0
+ BPC  CONST_22  C7   C6   C5A  C5    180.00   0.0  0
+ BPC  CONST_23  C8A  C5B  C5A  C5    180.00   0.0  0
+ BPC  CONST_24  C3B  C5B  C5A  C5      0.00   0.0  0
+ BPC  CONST_25  C8   C7   C6   C5A     0.00   0.0  0
+ BPC  CONST_26  C8   C8A  C5B  C5A     0.00   0.0  0
+ BPC  CONST_27  C9   C8A  C5B  C5A   180.00   0.0  0
+ BPC  CONST_28  C1A  C3B  C5B  C5A   180.00   0.0  0
+ BPC  CONST_29  C8A  C5B  C5A  C6      0.00   0.0  0
+ BPC  CONST_30  C3B  C5B  C5A  C6    180.00   0.0  0
+ BPC  CONST_31  C8A  C8   C7   C6      0.00   0.0  0
+ BPC  CONST_32  C5B  C5A  C6   C7      0.00   0.0  0
+ BPC  CONST_33  C9   C8A  C8   C7    180.00   0.0  0
+ BPC  CONST_34  C5B  C8A  C8   C7      0.00   0.0  0
+ BPC  CONST_35  C10  C9   C8A  C8    180.00   0.0  0
+ BPC  CONST_36  C3B  C5B  C8A  C8    180.00   0.0  0
+ BPC  CONST_37  C1A  C10  C9   C8A     0.00   0.0  0
+ BPC  CONST_38  C1A  C3B  C5B  C8A     0.00   0.0  0
+ BPC  CONST_39  C3B  C5B  C8A  C9      0.00   0.0  0
+ BPC  CONST_40  C3B  C1A  C10  C9      0.00   0.0  0
+ BPC  CONST_41  C5B  C8A  C9   C10     0.00   0.0  0
+ BPC  CONST_42  C5B  C3B  C1A  C10     0.00   0.0  0
+ BPC  CONST_43  H3   C3   C2   C1    180.00   0.0  0
+ BPC  CONST_44  H10  C10  C1A  C1      0.00   0.0  0
+ BPC  CONST_45  H1   C1   C2   C3    180.00   0.0  0
+ BPC  CONST_46  H4   C4   C3A  C3      0.00   0.0  0
+ BPC  CONST_47  H2   C2   C3   C3A   180.00   0.0  0
+ BPC  CONST_48  H5   C5   C4   C3A   180.00   0.0  0
+ BPC  CONST_49  H8   C8   C7   C6    180.00   0.0  0
+ BPC  CONST_50  H9   C9   C8A  C8      0.00   0.0  0
+ BPC  Var_01    C3'  C4'  C6   C5A   165.90  30.0  1
+ BPC  Var_02    C2'  C1'  C7   C6    -20.32  30.0  1
+ BPC  Var_03    C2'  C3'  C4'  C6     46.99  30.0  1
+ BPC  Var_04    C3'  C2'  C1'  C7     51.61  30.0  1
+ BPC  Var_05    C2'  C1'  C7   C8    160.95  30.0  1
+ BPC  Var_06    C4'  C3'  C2'  C1'   -65.53  30.0  1
+ BPC  Var_07    O1'  C1'  C7   C6   -140.99  30.0  1
+ BPC  Var_08    O3'  C3'  C4'  C6    -72.70  30.0  1
+ BPC  Var_09    O2'  C2'  C1'  C7    173.27  30.0  1
+ BPC  Var_10    O1'  C1'  C7   C8     40.28  30.0  1
+ BPC  Var_11    O3'  C3'  C2'  C1'    56.66  30.0  1
+ BPC  Var_12    C3'  C2'  C1'  O1'   174.26  30.0  1
+ BPC  Var_13    C4'  C3'  C2'  O2'   171.61  30.0  1
+ BPC  Var_14    H1'  C1'  C7   C6     98.57  30.0  1
+ BPC  Var_15    H3'  C3'  C4'  C6    165.02  30.0  1
+ BPC  Var_16    H2'  C2'  C1'  C7    -64.66  30.0  1
+ BPC  Var_17    O2'  C2'  C1'  O1'   -64.08  30.0  1
+ BPC  Var_18    O3'  C3'  C2'  O2'   -66.19  30.0  1
+ BPC  Var_19    HA   O1'  C1'  C7   -105.96  30.0  3
+ BPC  Var_20    HB   O2'  C2'  C1'    55.70  30.0  3
+ BPC  Var_21    HC   O3'  C3'  C2'  -176.87  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

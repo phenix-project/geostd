@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KE5  KE5  (3~{S},6~{S})-3-[(4-hydroxyphenyl)methyl]-6-[(2-methyl-4-oxidanyl-phenyl)methyl]piperazine-2,5-dione  ligand  45  25  .  2022-03-22  2022-07-25
+ KE5  KE5  (3~{S},6~{S})-3-[(4-hydroxyphenyl)methyl]-6-[(2-methyl-4-oxidanyl-phenyl)methyl]piperazine-2,5-dione  ligand  45  25  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KE5
@@ -237,44 +238,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KE5  CONST_01  CE2  CD2  CGA  CD1    0.00   0.0  0
- KE5  CONST_02  CE2  CZA  CE1  CD1    0.00   0.0  0
- KE5  CONST_03  CE1  CD1  CGA  CD2    0.00   0.0  0
- KE5  CONST_04  CE1  CZA  CE2  CD2    0.00   0.0  0
- KE5  CONST_05  CE4  CZB  CE3  CD3    0.00   0.0  0
- KE5  CONST_06  CE4  CD4  CGB  CD3    0.00   0.0  0
- KE5  CONST_07  CD4  CE4  CZB  CE3    0.00   0.0  0
- KE5  CONST_08  CD4  CGB  CD3  CE3    0.00   0.0  0
- KE5  CONST_09  CZA  CE1  CD1  CGA    0.00   0.0  0
- KE5  CONST_10  CZA  CE2  CD2  CGA    0.00   0.0  0
- KE5  CONST_11  CZB  CE4  CD4  CGB    0.00   0.0  0
- KE5  CONST_12  CZB  CE3  CD3  CGB    0.00   0.0  0
- KE5  CONST_13  CAA  CA   NB   CAB    0.00   0.0  0
- KE5  CONST_14  CAA  NA   CB   CAB    0.00   0.0  0
- KE5  CONST_15  CD1  CGA  CD2  CAX  180.00   0.0  0
- KE5  CONST_16  CZA  CE2  CD2  CAX  180.00   0.0  0
- KE5  CONST_17  OHA  CZA  CE1  CD1  180.00   0.0  0
- KE5  CONST_18  OHA  CZA  CE2  CD2  180.00   0.0  0
- KE5  CONST_19  OHB  CZB  CE3  CD3  180.00   0.0  0
- KE5  CONST_20  CBA  CGA  CD1  CE1  180.00   0.0  0
- KE5  CONST_21  CBA  CGA  CD2  CE2  180.00   0.0  0
- KE5  CONST_22  CBB  CGB  CD3  CE3  180.00   0.0  0
- KE5  CONST_23  CE4  CD4  CGB  CBB  180.00   0.0  0
- KE5  CONST_24  OHB  CZB  CE4  CD4  180.00   0.0  0
- KE5  CONST_25  OA   CA   NB   CAB  180.00   0.0  0
- KE5  CONST_26  CAA  NA   CB   OB   180.00   0.0  0
- KE5  CONST_27  H6   CD1  CGA  CD2  180.00   0.0  0
- KE5  CONST_28  H16  CD4  CGB  CD3  180.00   0.0  0
- KE5  CONST_29  H9   CE2  CZA  CE1  180.00   0.0  0
- KE5  CONST_30  H8   CE1  CZA  CE2  180.00   0.0  0
- KE5  CONST_31  H17  CE4  CZB  CE3  180.00   0.0  0
- KE5  CONST_32  H7   CD3  CGB  CD4  180.00   0.0  0
- KE5  CONST_33  H10  CE3  CZB  CE4  180.00   0.0  0
- KE5  CONST_34  H18  NA   CB   CAB  180.00   0.0  0
- KE5  CONST_35  H5   NB   CA   CAA  180.00   0.0  0
- KE5  Var_01    CD4  CGB  CBB  CAB  -85.66  30.0  2
- KE5  Var_02    CAA  CBA  CGA  CD1   99.62  30.0  1
- KE5  Var_03    H2   CAX  CD2  CE2  -96.39  30.0  2
+ KE5  CONST_01  CE2  CD2  CGA  CD1     0.00   0.0  0
+ KE5  CONST_02  CE2  CZA  CE1  CD1     0.00   0.0  0
+ KE5  CONST_03  CE1  CD1  CGA  CD2     0.00   0.0  0
+ KE5  CONST_04  CE1  CZA  CE2  CD2     0.00   0.0  0
+ KE5  CONST_05  CE4  CZB  CE3  CD3     0.00   0.0  0
+ KE5  CONST_06  CE4  CD4  CGB  CD3     0.00   0.0  0
+ KE5  CONST_07  CD4  CE4  CZB  CE3     0.00   0.0  0
+ KE5  CONST_08  CD4  CGB  CD3  CE3     0.00   0.0  0
+ KE5  CONST_09  CZA  CE1  CD1  CGA     0.00   0.0  0
+ KE5  CONST_10  CZA  CE2  CD2  CGA     0.00   0.0  0
+ KE5  CONST_11  CZB  CE4  CD4  CGB     0.00   0.0  0
+ KE5  CONST_12  CZB  CE3  CD3  CGB     0.00   0.0  0
+ KE5  CONST_13  CAA  CA   NB   CAB     0.00   0.0  0
+ KE5  CONST_14  CAA  NA   CB   CAB     0.00   0.0  0
+ KE5  CONST_15  CD1  CGA  CD2  CAX   180.00   0.0  0
+ KE5  CONST_16  CZA  CE2  CD2  CAX   180.00   0.0  0
+ KE5  CONST_17  OHA  CZA  CE1  CD1   180.00   0.0  0
+ KE5  CONST_18  OHA  CZA  CE2  CD2   180.00   0.0  0
+ KE5  CONST_19  OHB  CZB  CE3  CD3   180.00   0.0  0
+ KE5  CONST_20  CBA  CGA  CD1  CE1   180.00   0.0  0
+ KE5  CONST_21  CBA  CGA  CD2  CE2   180.00   0.0  0
+ KE5  CONST_22  CBB  CGB  CD3  CE3   180.00   0.0  0
+ KE5  CONST_23  CE4  CD4  CGB  CBB   180.00   0.0  0
+ KE5  CONST_24  OHB  CZB  CE4  CD4   180.00   0.0  0
+ KE5  CONST_25  OA   CA   NB   CAB   180.00   0.0  0
+ KE5  CONST_26  CAA  NA   CB   OB    180.00   0.0  0
+ KE5  CONST_27  H6   CD1  CGA  CD2   180.00   0.0  0
+ KE5  CONST_28  H16  CD4  CGB  CD3   180.00   0.0  0
+ KE5  CONST_29  H9   CE2  CZA  CE1   180.00   0.0  0
+ KE5  CONST_30  H8   CE1  CZA  CE2   180.00   0.0  0
+ KE5  CONST_31  H17  CE4  CZB  CE3   180.00   0.0  0
+ KE5  CONST_32  H7   CD3  CGB  CD4   180.00   0.0  0
+ KE5  CONST_33  H10  CE3  CZB  CE4   180.00   0.0  0
+ KE5  CONST_34  H18  NA   CB   CAB   180.00   0.0  0
+ KE5  CONST_35  H5   NB   CA   CAA   180.00   0.0  0
+ KE5  Var_01    CD4  CGB  CBB  CAB   -85.66  30.0  2
+ KE5  Var_02    CAA  CBA  CGA  CD1    99.62  30.0  1
+ KE5  Var_03    H2   CAX  CD2  CE2   -96.39  30.0  2
+ KE5  Var_04    CB   CAB  NB   CA     17.39  30.0  1
+ KE5  Var_05    CB   NA   CAA  CA     15.02  30.0  1
+ KE5  Var_06    NA   CAA  CA   NB     -6.80  30.0  1
+ KE5  Var_07    NA   CB   CAB  NB     -8.90  30.0  1
+ KE5  Var_08    CBB  CAB  NB   CA   -108.18  30.0  1
+ KE5  Var_09    CGA  CBA  CAA  CA    176.23  30.0  1
+ KE5  Var_10    CGB  CBB  CAB  CB    -62.48  30.0  1
+ KE5  Var_11    CBA  CAA  NA   CB   -110.32  30.0  1
+ KE5  Var_12    CBA  CAA  CA   NB    119.22  30.0  1
+ KE5  Var_13    CGB  CBB  CAB  NB     64.62  30.0  1
+ KE5  Var_14    OB   CB   CAB  NB    170.45  30.0  1
+ KE5  Var_15    NA   CB   CAB  CBB   117.34  30.0  1
+ KE5  Var_16    NA   CAA  CBA  CGA   -56.74  30.0  3
+ KE5  Var_17    OA   CA   CAA  NA    171.59  30.0  1
+ KE5  Var_18    H1   CAB  NB   CA    134.16  30.0  1
+ KE5  Var_19    H11  CAA  NA   CB    130.72  30.0  1
+ KE5  Var_20    CBB  CAB  CB   OB    -63.31  30.0  1
+ KE5  Var_21    OA   CA   CAA  CBA   -62.39  30.0  1
+ KE5  Var_22    H12  CBA  CAA  CA     53.03  30.0  1
+ KE5  Var_23    H13  CBA  CAA  CA    -62.52  30.0  1
+ KE5  Var_24    H14  CBB  CAB  CB    175.04  30.0  1
+ KE5  Var_25    H15  CBB  CAB  CB     60.64  30.0  1
+ KE5  Var_26    H19  OHA  CZA  CE1  -178.91  30.0  2
+ KE5  Var_27    H20  OHB  CZB  CE3    -0.23  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

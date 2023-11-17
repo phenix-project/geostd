@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- M98  M98  2-{2-[(1S)-1-[3-(cyclopropyloxy)-4-(difluoromethoxy)phenyl]-2-(1-oxidopyridin-3-yl)ethyl]-1,3-thiazol-5-yl}-1,1,1,3,3,3-hexafluoropropan-2-ol  ligand  56  38  .  2022-09-22  2023-02-15
+ M98  M98  2-{2-[(1S)-1-[3-(cyclopropyloxy)-4-(difluoromethoxy)phenyl]-2-(1-oxidopyridin-3-yl)ethyl]-1,3-thiazol-5-yl}-1,1,1,3,3,3-hexafluoropropan-2-ol  ligand  56  38  .  2022-09-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_M98
@@ -284,53 +285,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- M98  CONST_01  C5   C4   C3   C2      0.00   0.0  0
- M98  CONST_02  C5   C6   C7   C2      0.00   0.0  0
- M98  CONST_03  C6   C7   C2   C3      0.00   0.0  0
- M98  CONST_04  C6   C5   C4   C3      0.00   0.0  0
- M98  CONST_05  C7   C2   C3   C4      0.00   0.0  0
- M98  CONST_06  C7   C6   C5   C4      0.00   0.0  0
- M98  CONST_07  C14  C11  N1   C10     0.00   0.0  0
- M98  CONST_08  C11  C14  S1   C10     0.00   0.0  0
- M98  CONST_09  S1   C10  N1   C11     0.00   0.0  0
- M98  CONST_10  C14  S1   C10  N1      0.00   0.0  0
- M98  CONST_11  S1   C14  C11  N1      0.00   0.0  0
- M98  CONST_12  C23  C21  C20  C19     0.00   0.0  0
- M98  CONST_13  C23  N2   C22  C19     0.00   0.0  0
- M98  CONST_14  N2   C22  C19  C20     0.00   0.0  0
- M98  CONST_15  N2   C23  C21  C20     0.00   0.0  0
- M98  CONST_16  C22  C19  C20  C21     0.00   0.0  0
- M98  CONST_17  C22  N2   C23  C21     0.00   0.0  0
- M98  CONST_18  C4   C3   C2   O1    180.00   0.0  0
- M98  CONST_19  C6   C7   C2   O1    180.00   0.0  0
- M98  CONST_20  C7   C2   C3   O2    180.00   0.0  0
- M98  CONST_21  C5   C4   C3   O2    180.00   0.0  0
- M98  CONST_22  C9   C5   C4   C3    180.00   0.0  0
- M98  CONST_23  C9   C5   C6   C7    180.00   0.0  0
- M98  CONST_24  C11  N1   C10  C9    180.00   0.0  0
- M98  CONST_25  C14  S1   C10  C9    180.00   0.0  0
- M98  CONST_26  C15  C14  S1   C10   180.00   0.0  0
- M98  CONST_27  C15  C14  C11  N1    180.00   0.0  0
- M98  CONST_28  C21  C20  C19  C18   180.00   0.0  0
- M98  CONST_29  N2   C22  C19  C18   180.00   0.0  0
- M98  CONST_30  O4   N2   C22  C19   180.00   0.0  0
- M98  CONST_31  O4   N2   C23  C21   180.00   0.0  0
- M98  CONST_32  H4   C4   C3   C2    180.00   0.0  0
- M98  CONST_33  H6   C6   C7   C2    180.00   0.0  0
- M98  CONST_34  H7   C7   C2   C3    180.00   0.0  0
- M98  CONST_35  H11  C11  N1   C10   180.00   0.0  0
- M98  CONST_36  H21  C21  C20  C19   180.00   0.0  0
- M98  CONST_37  H22  C22  C19  C20   180.00   0.0  0
- M98  CONST_38  H23  C23  C21  C20   180.00   0.0  0
- M98  CONST_39  H20  C20  C19  C22   180.00   0.0  0
- M98  Var_01    O2   C8   C13  C12  -105.24  30.0  1
- M98  Var_02    C2   C3   O2   C8   -172.95  30.0  2
- M98  Var_03    C3   C2   O1   C1    -97.25  30.0  2
- M98  Var_04    C20  C19  C18  C9     75.34  30.0  2
- M98  Var_05    O3   C15  C14  C11  -167.99  30.0  2
- M98  Var_06    F5   C16  C15  C14   177.88  30.0  3
- M98  Var_07    F8   C17  C15  C14   -57.80  30.0  3
- M98  Var_08    H1   C1   O1   C2    174.28  30.0  3
+ M98  CONST_01  C5    C4   C3   C2      0.00   0.0  0
+ M98  CONST_02  C5    C6   C7   C2      0.00   0.0  0
+ M98  CONST_03  C6    C7   C2   C3      0.00   0.0  0
+ M98  CONST_04  C6    C5   C4   C3      0.00   0.0  0
+ M98  CONST_05  C7    C2   C3   C4      0.00   0.0  0
+ M98  CONST_06  C7    C6   C5   C4      0.00   0.0  0
+ M98  CONST_07  C14   C11  N1   C10     0.00   0.0  0
+ M98  CONST_08  C11   C14  S1   C10     0.00   0.0  0
+ M98  CONST_09  S1    C10  N1   C11     0.00   0.0  0
+ M98  CONST_10  C14   S1   C10  N1      0.00   0.0  0
+ M98  CONST_11  S1    C14  C11  N1      0.00   0.0  0
+ M98  CONST_12  C23   C21  C20  C19     0.00   0.0  0
+ M98  CONST_13  C23   N2   C22  C19     0.00   0.0  0
+ M98  CONST_14  N2    C22  C19  C20     0.00   0.0  0
+ M98  CONST_15  N2    C23  C21  C20     0.00   0.0  0
+ M98  CONST_16  C22   C19  C20  C21     0.00   0.0  0
+ M98  CONST_17  C22   N2   C23  C21     0.00   0.0  0
+ M98  CONST_18  C4    C3   C2   O1    180.00   0.0  0
+ M98  CONST_19  C6    C7   C2   O1    180.00   0.0  0
+ M98  CONST_20  C7    C2   C3   O2    180.00   0.0  0
+ M98  CONST_21  C5    C4   C3   O2    180.00   0.0  0
+ M98  CONST_22  C9    C5   C4   C3    180.00   0.0  0
+ M98  CONST_23  C9    C5   C6   C7    180.00   0.0  0
+ M98  CONST_24  C11   N1   C10  C9    180.00   0.0  0
+ M98  CONST_25  C14   S1   C10  C9    180.00   0.0  0
+ M98  CONST_26  C15   C14  S1   C10   180.00   0.0  0
+ M98  CONST_27  C15   C14  C11  N1    180.00   0.0  0
+ M98  CONST_28  C21   C20  C19  C18   180.00   0.0  0
+ M98  CONST_29  N2    C22  C19  C18   180.00   0.0  0
+ M98  CONST_30  O4    N2   C22  C19   180.00   0.0  0
+ M98  CONST_31  O4    N2   C23  C21   180.00   0.0  0
+ M98  CONST_32  H4    C4   C3   C2    180.00   0.0  0
+ M98  CONST_33  H6    C6   C7   C2    180.00   0.0  0
+ M98  CONST_34  H7    C7   C2   C3    180.00   0.0  0
+ M98  CONST_35  H11   C11  N1   C10   180.00   0.0  0
+ M98  CONST_36  H21   C21  C20  C19   180.00   0.0  0
+ M98  CONST_37  H22   C22  C19  C20   180.00   0.0  0
+ M98  CONST_38  H23   C23  C21  C20   180.00   0.0  0
+ M98  CONST_39  H20   C20  C19  C22   180.00   0.0  0
+ M98  Var_01    O2    C8   C13  C12  -105.24  30.0  1
+ M98  Var_02    C2    C3   O2   C8   -172.95  30.0  2
+ M98  Var_03    C3    C2   O1   C1    -97.25  30.0  2
+ M98  Var_04    C20   C19  C18  C9     75.34  30.0  2
+ M98  Var_05    O3    C15  C14  C11  -167.99  30.0  2
+ M98  Var_06    F5    C16  C15  C14   177.88  30.0  3
+ M98  Var_07    F8    C17  C15  C14   -57.80  30.0  3
+ M98  Var_08    H1    C1   O1   C2    174.28  30.0  3
+ M98  Var_09    C3    O2   C8   C12  -152.60  30.0  3
+ M98  Var_10    C3    O2   C8   C13   -83.01  30.0  3
+ M98  Var_11    C10   C9   C5   C4    139.88  30.0  2
+ M98  Var_12    N1    C10  C9   C5     93.88  30.0  2
+ M98  Var_13    S1    C10  C9   C5    -84.29  30.0  2
+ M98  Var_14    C10   C9   C5   C6    -45.12  30.0  2
+ M98  Var_15    H121  C12  C8   C13   108.97  30.0  1
+ M98  Var_16    H122  C12  C8   C13  -107.28  30.0  1
+ M98  Var_17    C18   C9   C5   C4    -96.21  30.0  2
+ M98  Var_18    C19   C18  C9   C5     56.71  30.0  3
+ M98  Var_19    C18   C9   C5   C6     78.79  30.0  2
+ M98  Var_20    C19   C18  C9   C10  -178.80  30.0  3
+ M98  Var_21    C18   C9   C10  N1    -30.11  30.0  2
+ M98  Var_22    C18   C9   C10  S1    151.72  30.0  2
+ M98  Var_23    H9    C9   C5   C4     21.40  30.0  2
+ M98  Var_24    HO3   O3   C15  C14    61.15  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

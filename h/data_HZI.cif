@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HZI  HZI  "Mangiferin"  ligand  48  30  .  2023-10-03  2023-10-03
+ HZI  HZI  Mangiferin  ligand  48  30  .  2023-10-03  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HZI
@@ -249,52 +250,93 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HZI  CONST_01  C16  C15  C13  C12    0.00  0.0  0
- HZI  CONST_02  C16  C28  C29  C12    0.00  0.0  0
- HZI  CONST_03  C28  C29  C12  C13    0.00  0.0  0
- HZI  CONST_04  C28  C16  C15  C13    0.00  0.0  0
- HZI  CONST_05  C29  C12  C13  C15    0.00  0.0  0
- HZI  CONST_06  C29  C28  C16  C15    0.00  0.0  0
- HZI  CONST_07  C18  O17  C16  C15  180.00  0.0  0
- HZI  CONST_08  C25  C26  C28  C16    0.00  0.0  0
- HZI  CONST_09  C25  C18  O17  C16    0.00  0.0  0
- HZI  CONST_10  C19  C18  O17  C16  180.00  0.0  0
- HZI  CONST_11  C28  C16  O17  C18    0.00  0.0  0
- HZI  CONST_12  C28  C26  C25  C18    0.00  0.0  0
- HZI  CONST_13  C22  C24  C25  C18    0.00  0.0  0
- HZI  CONST_14  C22  C20  C19  C18    0.00  0.0  0
- HZI  CONST_15  C24  C25  C18  C19    0.00  0.0  0
- HZI  CONST_16  C24  C22  C20  C19    0.00  0.0  0
- HZI  CONST_17  C25  C18  C19  C20    0.00  0.0  0
- HZI  CONST_18  C25  C24  C22  C20    0.00  0.0  0
- HZI  CONST_19  C28  C26  C25  C24  180.00  0.0  0
- HZI  CONST_20  C29  C28  C26  C25  180.00  0.0  0
- HZI  CONST_21  C15  C13  C12  C1   180.00  0.0  0
- HZI  CONST_22  C28  C29  C12  C1   180.00  0.0  0
- HZI  CONST_23  O14  C13  C12  C1     0.00  0.0  0
- HZI  CONST_24  O30  C29  C12  C1     0.00  0.0  0
- HZI  CONST_25  O30  C29  C12  C13  180.00  0.0  0
- HZI  CONST_26  O14  C13  C15  C16  180.00  0.0  0
- HZI  CONST_27  O30  C29  C28  C16  180.00  0.0  0
- HZI  CONST_28  O27  C26  C28  C16  180.00  0.0  0
- HZI  CONST_29  O27  C26  C25  C18  180.00  0.0  0
- HZI  CONST_30  O21  C20  C19  C18  180.00  0.0  0
- HZI  CONST_31  O23  C22  C20  C19  180.00  0.0  0
- HZI  CONST_32  O27  C26  C25  C24    0.00  0.0  0
- HZI  CONST_33  O21  C20  C22  C24  180.00  0.0  0
- HZI  CONST_34  O23  C22  C24  C25  180.00  0.0  0
- HZI  CONST_35  O30  C29  C28  C26    0.00  0.0  0
- HZI  CONST_36  O14  C13  C12  C29  180.00  0.0  0
- HZI  CONST_37  O27  C26  C28  C29    0.00  0.0  0
- HZI  CONST_38  H8   C15  C13  C12  180.00  0.0  0
- HZI  CONST_39  H10  C24  C25  C18  180.00  0.0  0
- HZI  CONST_40  H10  C24  C22  C20  180.00  0.0  0
- HZI  CONST_41  H9   C19  C20  C22  180.00  0.0  0
- HZI  CONST_42  H9   C19  C18  C25  180.00  0.0  0
- HZI  CONST_43  H10  C24  C25  C26    0.00  0.0  0
- HZI  CONST_44  H8   C15  C16  C28  180.00  0.0  0
- HZI  CONST_45  H8   C15  C16  O17    0.00  0.0  0
- HZI  CONST_46  H9   C19  C18  O17    0.00  0.0  0
+ HZI  CONST_01  C16  C15  C13  C12     0.00   0.0  0
+ HZI  CONST_02  C16  C28  C29  C12     0.00   0.0  0
+ HZI  CONST_03  C28  C29  C12  C13     0.00   0.0  0
+ HZI  CONST_04  C28  C16  C15  C13     0.00   0.0  0
+ HZI  CONST_05  C29  C12  C13  C15     0.00   0.0  0
+ HZI  CONST_06  C29  C28  C16  C15     0.00   0.0  0
+ HZI  CONST_07  C18  O17  C16  C15   180.00   0.0  0
+ HZI  CONST_08  C25  C26  C28  C16     0.00   0.0  0
+ HZI  CONST_09  C25  C18  O17  C16     0.00   0.0  0
+ HZI  CONST_10  C19  C18  O17  C16   180.00   0.0  0
+ HZI  CONST_11  C28  C16  O17  C18     0.00   0.0  0
+ HZI  CONST_12  C28  C26  C25  C18     0.00   0.0  0
+ HZI  CONST_13  C22  C24  C25  C18     0.00   0.0  0
+ HZI  CONST_14  C22  C20  C19  C18     0.00   0.0  0
+ HZI  CONST_15  C24  C25  C18  C19     0.00   0.0  0
+ HZI  CONST_16  C24  C22  C20  C19     0.00   0.0  0
+ HZI  CONST_17  C25  C18  C19  C20     0.00   0.0  0
+ HZI  CONST_18  C25  C24  C22  C20     0.00   0.0  0
+ HZI  CONST_19  C28  C26  C25  C24   180.00   0.0  0
+ HZI  CONST_20  C29  C28  C26  C25   180.00   0.0  0
+ HZI  CONST_21  C15  C13  C12  C1    180.00   0.0  0
+ HZI  CONST_22  C28  C29  C12  C1    180.00   0.0  0
+ HZI  CONST_23  O14  C13  C12  C1      0.00   0.0  0
+ HZI  CONST_24  O30  C29  C12  C1      0.00   0.0  0
+ HZI  CONST_25  O30  C29  C12  C13   180.00   0.0  0
+ HZI  CONST_26  O14  C13  C15  C16   180.00   0.0  0
+ HZI  CONST_27  O30  C29  C28  C16   180.00   0.0  0
+ HZI  CONST_28  O27  C26  C28  C16   180.00   0.0  0
+ HZI  CONST_29  O27  C26  C25  C18   180.00   0.0  0
+ HZI  CONST_30  O21  C20  C19  C18   180.00   0.0  0
+ HZI  CONST_31  O23  C22  C20  C19   180.00   0.0  0
+ HZI  CONST_32  O27  C26  C25  C24     0.00   0.0  0
+ HZI  CONST_33  O21  C20  C22  C24   180.00   0.0  0
+ HZI  CONST_34  O23  C22  C24  C25   180.00   0.0  0
+ HZI  CONST_35  O30  C29  C28  C26     0.00   0.0  0
+ HZI  CONST_36  O14  C13  C12  C29   180.00   0.0  0
+ HZI  CONST_37  O27  C26  C28  C29     0.00   0.0  0
+ HZI  CONST_38  H8   C15  C13  C12   180.00   0.0  0
+ HZI  CONST_39  H10  C24  C25  C18   180.00   0.0  0
+ HZI  CONST_40  H10  C24  C22  C20   180.00   0.0  0
+ HZI  CONST_41  H9   C19  C20  C22   180.00   0.0  0
+ HZI  CONST_42  H9   C19  C18  C25   180.00   0.0  0
+ HZI  CONST_43  H10  C24  C25  C26     0.00   0.0  0
+ HZI  CONST_44  H8   C15  C16  C28   180.00   0.0  0
+ HZI  CONST_45  H8   C15  C16  O17     0.00   0.0  0
+ HZI  CONST_46  H9   C19  C18  O17     0.00   0.0  0
+ HZI  Var_01    C4   C3   C2   C1    -54.14  30.0  1
+ HZI  Var_02    C4   C5   O5   C1     61.22  30.0  1
+ HZI  Var_03    C2   C3   C4   C5     53.49  30.0  1
+ HZI  Var_04    C2   C1   O5   C5    -61.80  30.0  1
+ HZI  Var_05    C12  C1   O5   C5    173.53  30.0  1
+ HZI  Var_06    O5   C5   C4   C3    -56.08  30.0  1
+ HZI  Var_07    O5   C1   C2   C3     57.27  30.0  1
+ HZI  Var_08    C12  C1   C2   C3   -180.00  30.0  1
+ HZI  Var_09    C13  C12  C1   C2    -71.39  30.0  2
+ HZI  Var_10    C29  C12  C1   C2    108.22  30.0  2
+ HZI  Var_11    O5   C1   C12  C13    51.88  30.0  2
+ HZI  Var_12    O5   C1   C12  C29  -128.50  30.0  2
+ HZI  Var_13    O3   C3   C2   C1   -174.69  30.0  1
+ HZI  Var_14    C6   C5   O5   C1   -176.59  30.0  1
+ HZI  Var_15    O3   C3   C4   C5    175.88  30.0  1
+ HZI  Var_16    C3   C4   C5   C6   -175.78  30.0  1
+ HZI  Var_17    O2   C2   C3   C4   -174.76  30.0  1
+ HZI  Var_18    O4   C4   C3   C2    174.82  30.0  1
+ HZI  Var_19    O2   C2   C1   C12   -61.53  30.0  1
+ HZI  Var_20    O4   C4   C5   O5   -175.59  30.0  1
+ HZI  Var_21    O2   C2   C1   O5    175.74  30.0  1
+ HZI  Var_22    H3   C3   C2   C1     63.18  30.0  1
+ HZI  Var_23    H4   C5   O5   C1    -58.01  30.0  1
+ HZI  Var_24    H1   C1   O5   C5     55.09  30.0  1
+ HZI  Var_25    H2   C2   C3   C4     65.17  30.0  1
+ HZI  Var_26    H6   C4   C3   C2    -64.46  30.0  1
+ HZI  Var_27    O4   C4   C5   C6     64.71  30.0  1
+ HZI  Var_28    O6   C6   C5   C4   -175.75  30.0  3
+ HZI  Var_29    O6   C6   C5   O5     62.66  30.0  3
+ HZI  Var_30    O3   C3   C4   O4    -62.79  30.0  1
+ HZI  Var_31    O2   C2   C3   O3     64.69  30.0  1
+ HZI  Var_32    HO2  O2   C2   C1     80.65  30.0  3
+ HZI  Var_33    HO4  O4   C4   C5    -89.13  30.0  3
+ HZI  Var_34    HO3  O3   C3   C4   -177.85  30.0  3
+ HZI  Var_35    H61  C6   C5   C4    -54.29  30.0  3
+ HZI  Var_36    H62  C6   C5   C4     61.89  30.0  3
+ HZI  Var_37    H11  O14  C13  C12   178.68  30.0  2
+ HZI  Var_38    H18  O30  C29  C12   179.85  30.0  2
+ HZI  Var_39    H16  O21  C20  C19   179.90  30.0  2
+ HZI  Var_40    H17  O23  C22  C20   179.68  30.0  2
+ HZI  Var_41    HO6  O6   C6   C5    177.87  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

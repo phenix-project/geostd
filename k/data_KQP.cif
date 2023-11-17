@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KQP  KQP  1-[5-chloro-4'-(2-hydroxypropan-2-yl)[1,1'-biphenyl]-3-yl]cyclobutane-1-carboximidamide  ligand  47  24  .  2021-08-12  2023-02-15
+ KQP  KQP  1-[5-chloro-4'-(2-hydroxypropan-2-yl)[1,1'-biphenyl]-3-yl]cyclobutane-1-carboximidamide  ligand  47  24  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KQP
@@ -255,33 +256,60 @@ _chem_comp_tor.period
  KQP  CONST_06  C17   C16  C15  C13     0.00   0.0  0
  KQP  CONST_07  C11   C12  C13  C15     0.00   0.0  0
  KQP  CONST_08  C11   C17  C16  C15     0.00   0.0  0
- KQP  CONST_11  C08   C09  C10  C05     0.00   0.0  0
- KQP  CONST_12  C08   C07  C06  C05     0.00   0.0  0
- KQP  CONST_13  C09   C10  C05  C06     0.00   0.0  0
- KQP  CONST_14  C09   C08  C07  C06     0.00   0.0  0
- KQP  CONST_15  C11   C08  C07  C06   180.00   0.0  0
- KQP  CONST_17  C16   C17  C11  C08   180.00   0.0  0
- KQP  CONST_19  C16   C17  C11  C12     0.00   0.0  0
- KQP  CONST_20  C16   C15  C13  C12     0.00   0.0  0
- KQP  CONST_21  C18   C16  C15  C13   180.00   0.0  0
- KQP  CONST_22  C18   C16  C17  C11   180.00   0.0  0
- KQP  CONST_23  C09   C10  C05  C02   180.00   0.0  0
- KQP  CONST_24  C07   C06  C05  C02   180.00   0.0  0
- KQP  CONST_25  CL14  C13  C12  C11   180.00   0.0  0
- KQP  CONST_26  CL14  C13  C15  C16   180.00   0.0  0
- KQP  CONST_27  H14   C06  C05  C10   180.00   0.0  0
- KQP  CONST_28  H17   C12  C13  C15   180.00   0.0  0
- KQP  CONST_29  H3    C17  C16  C15   180.00   0.0  0
- KQP  CONST_30  H2    C15  C16  C17   180.00   0.0  0
- KQP  CONST_31  H16   C09  C10  C05   180.00   0.0  0
- KQP  CONST_32  H15   C07  C06  C05   180.00   0.0  0
- KQP  CONST_33  H1    C10  C05  C06   180.00   0.0  0
- KQP  CONST_34  H20   N23  C22  C18     0.00   0.0  0
- KQP  CONST_36  H22   N24  C22  C18   180.00   0.0  0
+ KQP  CONST_09  C08   C09  C10  C05     0.00   0.0  0
+ KQP  CONST_10  C08   C07  C06  C05     0.00   0.0  0
+ KQP  CONST_11  C09   C10  C05  C06     0.00   0.0  0
+ KQP  CONST_12  C09   C08  C07  C06     0.00   0.0  0
+ KQP  CONST_13  C11   C08  C07  C06   180.00   0.0  0
+ KQP  CONST_14  C16   C17  C11  C08   180.00   0.0  0
+ KQP  CONST_15  C16   C17  C11  C12     0.00   0.0  0
+ KQP  CONST_16  C16   C15  C13  C12     0.00   0.0  0
+ KQP  CONST_17  C18   C16  C15  C13   180.00   0.0  0
+ KQP  CONST_18  C18   C16  C17  C11   180.00   0.0  0
+ KQP  CONST_19  C09   C10  C05  C02   180.00   0.0  0
+ KQP  CONST_20  C07   C06  C05  C02   180.00   0.0  0
+ KQP  CONST_21  CL14  C13  C12  C11   180.00   0.0  0
+ KQP  CONST_22  CL14  C13  C15  C16   180.00   0.0  0
+ KQP  CONST_23  H14   C06  C05  C10   180.00   0.0  0
+ KQP  CONST_24  H17   C12  C13  C15   180.00   0.0  0
+ KQP  CONST_25  H3    C17  C16  C15   180.00   0.0  0
+ KQP  CONST_26  H2    C15  C16  C17   180.00   0.0  0
+ KQP  CONST_27  H16   C09  C10  C05   180.00   0.0  0
+ KQP  CONST_28  H15   C07  C06  C05   180.00   0.0  0
+ KQP  CONST_29  H1    C10  C05  C06   180.00   0.0  0
+ KQP  CONST_30  H20   N23  C22  C18     0.00   0.0  0
+ KQP  CONST_31  H22   N24  C22  C18   180.00   0.0  0
  KQP  Var_01    C18   C19  C20  C21   -20.04  30.0  1
  KQP  Var_02    O04   C02  C05  C10    -0.17  30.0  2
  KQP  Var_03    H11   C03  C02  C05   -62.45  30.0  3
  KQP  Var_04    H8    C01  C02  C05  -177.70  30.0  3
+ KQP  Var_05    C21   C18  C16  C15  -130.98  30.0  2
+ KQP  Var_06    C19   C18  C16  C15   -33.03  30.0  2
+ KQP  Var_07    C09   C08  C11  C17   -36.94  30.0  2
+ KQP  Var_08    C07   C08  C11  C17   142.94  30.0  2
+ KQP  Var_09    C21   C18  C16  C17    52.82  30.0  2
+ KQP  Var_10    C19   C18  C16  C17   150.77  30.0  2
+ KQP  Var_11    C16   C18  C21  C20    96.03  30.0  1
+ KQP  Var_12    C16   C18  C19  C20   -93.78  30.0  1
+ KQP  Var_13    C12   C11  C08  C07   -37.21  30.0  2
+ KQP  Var_14    C12   C11  C08  C09   142.90  30.0  2
+ KQP  Var_15    C22   C18  C16  C15    98.66  30.0  2
+ KQP  Var_16    C22   C18  C16  C17   -77.54  30.0  2
+ KQP  Var_17    C22   C18  C21  C20  -138.71  30.0  1
+ KQP  Var_18    C22   C18  C19  C20   139.09  30.0  1
+ KQP  Var_19    H18   C19  C18  C21   -92.40  30.0  1
+ KQP  Var_20    H19   C19  C18  C21   141.69  30.0  1
+ KQP  Var_21    H6    C21  C18  C16   -25.28  30.0  1
+ KQP  Var_22    H7    C21  C18  C16  -151.64  30.0  1
+ KQP  Var_23    H4    C20  C21  C18   140.46  30.0  1
+ KQP  Var_24    H5    C20  C21  C18   -92.75  30.0  1
+ KQP  Var_25    N23   C22  C18  C21   -27.87  30.0  1
+ KQP  Var_26    N24   C22  C18  C21   155.75  30.0  1
+ KQP  Var_27    N23   C22  C18  C16    99.86  30.0  1
+ KQP  Var_28    N24   C22  C18  C16   -76.52  30.0  1
+ KQP  Var_29    N23   C22  C18  C19  -129.48  30.0  1
+ KQP  Var_30    N24   C22  C18  C19    54.14  30.0  1
+ KQP  Var_31    H23   O04  C02  C05   177.43  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

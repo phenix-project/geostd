@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AJH  AJH  '4-({4-[(3R)-3-amino-4-(2,4,5-trifluorophenyl)butanoyl]-1,4-diazepan-1-yl}carbonyl)benzoic acid'  ligand  56  33  .  2021-08-06  2021-08-06  
+ AJH  AJH  '4-({4-[(3R)-3-amino-4-(2,4,5-trifluorophenyl)butanoyl]-1,4-diazepan-1-yl}carbonyl)benzoic acid'  ligand  56  33  .  2021-08-06  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_AJH
@@ -281,40 +282,76 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AJH  CONST_01  CAY  CAQ  CAB  CAP     0.00   0.0  0
- AJH  CONST_02  CAY  CAO  CAX  CAP     0.00   0.0  0
- AJH  CONST_03  CAQ  CAB  CAP  CAX     0.00   0.0  0
- AJH  CONST_04  CAQ  CAY  CAO  CAX     0.00   0.0  0
- AJH  CONST_05  CAB  CAP  CAX  CAO     0.00   0.0  0
- AJH  CONST_06  CAB  CAQ  CAY  CAO     0.00   0.0  0
- AJH  CONST_07  CAK  CAH  CAI  CAG     0.00   0.0  0
- AJH  CONST_08  CAK  CAL  CAM  CAG     0.00   0.0  0
- AJH  CONST_09  CAH  CAI  CAG  CAM     0.00   0.0  0
- AJH  CONST_10  CAH  CAK  CAL  CAM     0.00   0.0  0
- AJH  CONST_11  CAI  CAG  CAM  CAL     0.00   0.0  0
- AJH  CONST_12  CAI  CAH  CAK  CAL     0.00   0.0  0
- AJH  CONST_13  CAJ  CAO  CAX  CAP   180.00   0.0  0
- AJH  CONST_14  CAA  CAB  CAP  CAX   180.00   0.0  0
- AJH  CONST_15  CAQ  CAY  CAO  CAJ   180.00   0.0  0
- AJH  CONST_16  CAA  CAB  CAQ  CAY   180.00   0.0  0
- AJH  CONST_17  CAH  CAI  CAG  CAT   180.00   0.0  0
- AJH  CONST_18  CAL  CAM  CAG  CAT   180.00   0.0  0
- AJH  CONST_19  FBB  CAL  CAM  CAG   180.00   0.0  0
- AJH  CONST_20  FAZ  CAI  CAG  CAM   180.00   0.0  0
- AJH  CONST_21  FBA  CAK  CAL  CAM   180.00   0.0  0
- AJH  CONST_22  CAH  CAK  CAL  FBB   180.00   0.0  0
- AJH  CONST_23  FAZ  CAI  CAH  CAK   180.00   0.0  0
- AJH  CONST_24  CAI  CAH  CAK  FBA   180.00   0.0  0
- AJH  CONST_25  HAQ  CAQ  CAB  CAP   180.00   0.0  0
- AJH  CONST_26  HAY  CAY  CAO  CAX   180.00   0.0  0
- AJH  CONST_27  HAP  CAP  CAX  CAO   180.00   0.0  0
- AJH  CONST_28  HAX  CAX  CAO  CAY   180.00   0.0  0
- AJH  CONST_29  HAH  CAH  CAI  CAG   180.00   0.0  0
- AJH  CONST_30  HAM  CAM  CAL  CAK   180.00   0.0  0
- AJH  Var_01    NAD  CAA  CAB  CAP   -65.08  30.0  2
- AJH  Var_02    OBD  CAJ  CAO  CAX     1.80  30.0  2
- AJH  Var_03    CAI  CAG  CAT  CAV   -93.21  30.0  2
- AJH  Var_04    CAV  CAF  CAC  NAE  -179.61  30.0  3
+ AJH  CONST_01  CAY   CAQ  CAB  CAP     0.00   0.0  0
+ AJH  CONST_02  CAY   CAO  CAX  CAP     0.00   0.0  0
+ AJH  CONST_03  CAQ   CAB  CAP  CAX     0.00   0.0  0
+ AJH  CONST_04  CAQ   CAY  CAO  CAX     0.00   0.0  0
+ AJH  CONST_05  CAB   CAP  CAX  CAO     0.00   0.0  0
+ AJH  CONST_06  CAB   CAQ  CAY  CAO     0.00   0.0  0
+ AJH  CONST_07  CAK   CAH  CAI  CAG     0.00   0.0  0
+ AJH  CONST_08  CAK   CAL  CAM  CAG     0.00   0.0  0
+ AJH  CONST_09  CAH   CAI  CAG  CAM     0.00   0.0  0
+ AJH  CONST_10  CAH   CAK  CAL  CAM     0.00   0.0  0
+ AJH  CONST_11  CAI   CAG  CAM  CAL     0.00   0.0  0
+ AJH  CONST_12  CAI   CAH  CAK  CAL     0.00   0.0  0
+ AJH  CONST_13  CAJ   CAO  CAX  CAP   180.00   0.0  0
+ AJH  CONST_14  CAA   CAB  CAP  CAX   180.00   0.0  0
+ AJH  CONST_15  CAQ   CAY  CAO  CAJ   180.00   0.0  0
+ AJH  CONST_16  CAA   CAB  CAQ  CAY   180.00   0.0  0
+ AJH  CONST_17  CAH   CAI  CAG  CAT   180.00   0.0  0
+ AJH  CONST_18  CAL   CAM  CAG  CAT   180.00   0.0  0
+ AJH  CONST_19  FBB   CAL  CAM  CAG   180.00   0.0  0
+ AJH  CONST_20  FAZ   CAI  CAG  CAM   180.00   0.0  0
+ AJH  CONST_21  FBA   CAK  CAL  CAM   180.00   0.0  0
+ AJH  CONST_22  CAH   CAK  CAL  FBB   180.00   0.0  0
+ AJH  CONST_23  FAZ   CAI  CAH  CAK   180.00   0.0  0
+ AJH  CONST_24  CAI   CAH  CAK  FBA   180.00   0.0  0
+ AJH  CONST_25  HAQ   CAQ  CAB  CAP   180.00   0.0  0
+ AJH  CONST_26  HAY   CAY  CAO  CAX   180.00   0.0  0
+ AJH  CONST_27  HAP   CAP  CAX  CAO   180.00   0.0  0
+ AJH  CONST_28  HAX   CAX  CAO  CAY   180.00   0.0  0
+ AJH  CONST_29  HAH   CAH  CAI  CAG   180.00   0.0  0
+ AJH  CONST_30  HAM   CAM  CAL  CAK   180.00   0.0  0
+ AJH  Var_01    NAD   CAA  CAB  CAP   -65.08  30.0  2
+ AJH  Var_02    OBD   CAJ  CAO  CAX     1.80  30.0  2
+ AJH  Var_03    CAI   CAG  CAT  CAV   -93.21  30.0  2
+ AJH  Var_04    CAV   CAF  CAC  NAE  -179.61  30.0  3
+ AJH  CONST_31  CBE   NAD  CAA  CAB   180.00   0.0  0
+ AJH  CONST_32  CAR   NAD  CAA  CAB     0.00   0.0  0
+ AJH  CONST_33  CBE   NAD  CAA  OAN     0.00   0.0  0
+ AJH  CONST_34  CAR   NAD  CAA  OAN   180.00   0.0  0
+ AJH  CONST_35  OAU   CAC  NAE  CAS   180.00   0.0  0
+ AJH  CONST_36  CAF   CAC  NAE  CAS     0.00   0.0  0
+ AJH  CONST_37  OAU   CAC  NAE  CBF     0.00   0.0  0
+ AJH  CONST_38  CAF   CAC  NAE  CBF   180.00   0.0  0
+ AJH  Var_05    CBF   CBC  CBE  NAD   -42.61  30.0  1
+ AJH  Var_06    NAE   CAS  CAR  NAD    49.04  30.0  1
+ AJH  Var_07    CBC   CBE  NAD  CAR    93.76  30.0  1
+ AJH  Var_08    CBF   NAE  CAS  CAR   -74.33  30.0  1
+ AJH  Var_09    CBE   NAD  CAR  CAS   -72.12  30.0  1
+ AJH  Var_10    CBC   CBF  NAE  CAS    91.61  30.0  1
+ AJH  Var_11    NAE   CBF  CBC  CBE   -35.01  30.0  1
+ AJH  Var_12    CBC   CBE  NAD  CAA   -88.44  30.0  1
+ AJH  Var_13    CAS   CAR  NAD  CAA   110.23  30.0  1
+ AJH  Var_14    CAC   NAE  CAS  CAR    94.85  30.0  1
+ AJH  Var_15    CAC   NAE  CBF  CBC   -78.17  30.0  1
+ AJH  Var_16    HBC   CBC  CBE  NAD    78.60  30.0  1
+ AJH  Var_17    HBCA  CBC  CBE  NAD  -165.19  30.0  1
+ AJH  Var_18    HAS   CAS  CAR  NAD   172.47  30.0  1
+ AJH  Var_19    HASA  CAS  CAR  NAD   -71.73  30.0  1
+ AJH  Var_20    HBE   CBE  NAD  CAR  -142.94  30.0  1
+ AJH  Var_21    HBEA  CBE  NAD  CAR   -27.54  30.0  1
+ AJH  Var_22    HBF   CBF  NAE  CAS   -29.75  30.0  1
+ AJH  Var_23    HBFA  CBF  NAE  CAS  -144.50  30.0  1
+ AJH  Var_24    HAR   CAR  NAD  CBE    49.39  30.0  1
+ AJH  Var_25    HARA  CAR  NAD  CBE   165.31  30.0  1
+ AJH  Var_26    CAG   CAT  CAV  CAF  -173.16  30.0  1
+ AJH  Var_27    CAG   CAT  CAV  NBG    60.21  30.0  1
+ AJH  Var_28    HAV   CAV  CAT  CAG   -56.16  30.0  3
+ AJH  Var_29    CAT   CAV  CAF  CAC   171.58  30.0  3
+ AJH  Var_30    NBG   CAV  CAF  CAC   -65.22  30.0  3
+ AJH  Var_31    HNBG  NBG  CAV  CAF   -57.11  30.0  3
+ AJH  Var_32    HNBA  NBG  CAV  CAF    59.29  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

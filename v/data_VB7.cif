@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VB7  VB7  '{(1R,2S,4R)-4-[(5-{4-[(1R)-3,4-dihydro-1H-2-benzopyran-1-yl]thiophene-2-carbonyl}pyrimidin-4-yl)amino]-2-hydroxycyclopentyl}methyl sulfamate'  ligand  62  36  .  2022-03-29  2022-03-29
+ VB7  VB7  '{(1R,2S,4R)-4-[(5-{4-[(1R)-3,4-dihydro-1H-2-benzopyran-1-yl]thiophene-2-carbonyl}pyrimidin-4-yl)amino]-2-hydroxycyclopentyl}methyl sulfamate'  ligand  62  36  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VB7
@@ -310,49 +311,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VB7  CONST_01  C8   C3   N4   C5     0.00   0.0  0
- VB7  CONST_02  C8   C7   N6   C5     0.00   0.0  0
- VB7  CONST_03  N4   C5   N6   C7     0.00   0.0  0
- VB7  CONST_04  N4   C3   C8   C7     0.00   0.0  0
- VB7  CONST_05  S15  C11  C12  C13    0.00   0.0  0
- VB7  CONST_06  C11  S15  C14  C13    0.00   0.0  0
- VB7  CONST_07  C24  C25  C18  C17    0.00   0.0  0
- VB7  CONST_08  C24  C23  C22  C17    0.00   0.0  0
- VB7  CONST_09  C25  C24  C23  C22    0.00   0.0  0
- VB7  CONST_10  C25  C18  C17  C22    0.00   0.0  0
- VB7  CONST_11  C18  C25  C24  C23    0.00   0.0  0
- VB7  CONST_12  C18  C17  C22  C23    0.00   0.0  0
- VB7  CONST_13  C14  S15  C11  C12    0.00   0.0  0
- VB7  CONST_14  S15  C14  C13  C12    0.00   0.0  0
- VB7  CONST_15  C11  C12  C13  C14    0.00   0.0  0
- VB7  CONST_16  C3   N4   C5   N6     0.00   0.0  0
- VB7  CONST_17  C3   C8   C7   N6     0.00   0.0  0
- VB7  CONST_18  C11  C12  C13  C16  180.00   0.0  0
- VB7  CONST_19  S15  C14  C13  C16  180.00   0.0  0
- VB7  CONST_20  N2   C3   N4   C5   180.00   0.0  0
- VB7  CONST_21  N2   C3   C8   C7   180.00   0.0  0
- VB7  CONST_22  C9   C11  C12  C13  180.00   0.0  0
- VB7  CONST_23  C9   C11  S15  C14  180.00   0.0  0
- VB7  CONST_24  N4   C3   C8   C9   180.00   0.0  0
- VB7  CONST_25  N6   C7   C8   C9   180.00   0.0  0
- VB7  CONST_26  C1   N2   C3   C8   180.00   0.0  0
- VB7  CONST_27  C1   N2   C3   N4     0.00   0.0  0
- VB7  CONST_28  H2   C7   N6   C5   180.00   0.0  0
- VB7  CONST_29  H1   C5   N6   C7   180.00   0.0  0
- VB7  CONST_30  H11  C25  C18  C17  180.00   0.0  0
- VB7  CONST_31  H10  C23  C22  C17  180.00   0.0  0
- VB7  CONST_32  H6   C24  C23  C22  180.00   0.0  0
- VB7  CONST_33  H5   C22  C23  C24  180.00   0.0  0
- VB7  CONST_34  H15  C12  C13  C16    0.00   0.0  0
- VB7  CONST_35  H16  C14  C13  C16    0.00   0.0  0
- VB7  CONST_36  H17  N2   C3   C8     0.00   0.0  0
- VB7  Var_01    C20  C19  C18  C17   19.11  30.0  1
- VB7  Var_02    O21  C20  C19  C18  -52.00  30.0  1
- VB7  Var_03    C11  C9   C8   C7   -27.98  30.0  2
- VB7  Var_04    C12  C11  C9   C8   -28.32  30.0  2
- VB7  Var_05    O35  S33  O31  C30  177.14  30.0  3
- VB7  Var_06    H25  N34  S33  O31  -74.97  30.0  3
- VB7  Var_07    H23  C30  O31  S33  -63.05  30.0  3
+ VB7  CONST_01  C8   C3   N4   C5      0.00   0.0  0
+ VB7  CONST_02  C8   C7   N6   C5      0.00   0.0  0
+ VB7  CONST_03  N4   C5   N6   C7      0.00   0.0  0
+ VB7  CONST_04  N4   C3   C8   C7      0.00   0.0  0
+ VB7  CONST_05  S15  C11  C12  C13     0.00   0.0  0
+ VB7  CONST_06  C11  S15  C14  C13     0.00   0.0  0
+ VB7  CONST_07  C24  C25  C18  C17     0.00   0.0  0
+ VB7  CONST_08  C24  C23  C22  C17     0.00   0.0  0
+ VB7  CONST_09  C25  C24  C23  C22     0.00   0.0  0
+ VB7  CONST_10  C25  C18  C17  C22     0.00   0.0  0
+ VB7  CONST_11  C18  C25  C24  C23     0.00   0.0  0
+ VB7  CONST_12  C18  C17  C22  C23     0.00   0.0  0
+ VB7  CONST_13  C14  S15  C11  C12     0.00   0.0  0
+ VB7  CONST_14  S15  C14  C13  C12     0.00   0.0  0
+ VB7  CONST_15  C11  C12  C13  C14     0.00   0.0  0
+ VB7  CONST_16  C3   N4   C5   N6      0.00   0.0  0
+ VB7  CONST_17  C3   C8   C7   N6      0.00   0.0  0
+ VB7  CONST_18  C11  C12  C13  C16   180.00   0.0  0
+ VB7  CONST_19  S15  C14  C13  C16   180.00   0.0  0
+ VB7  CONST_20  N2   C3   N4   C5    180.00   0.0  0
+ VB7  CONST_21  N2   C3   C8   C7    180.00   0.0  0
+ VB7  CONST_22  C9   C11  C12  C13   180.00   0.0  0
+ VB7  CONST_23  C9   C11  S15  C14   180.00   0.0  0
+ VB7  CONST_24  N4   C3   C8   C9    180.00   0.0  0
+ VB7  CONST_25  N6   C7   C8   C9    180.00   0.0  0
+ VB7  CONST_26  C1   N2   C3   C8    180.00   0.0  0
+ VB7  CONST_27  C1   N2   C3   N4      0.00   0.0  0
+ VB7  CONST_28  H2   C7   N6   C5    180.00   0.0  0
+ VB7  CONST_29  H1   C5   N6   C7    180.00   0.0  0
+ VB7  CONST_30  H11  C25  C18  C17   180.00   0.0  0
+ VB7  CONST_31  H10  C23  C22  C17   180.00   0.0  0
+ VB7  CONST_32  H6   C24  C23  C22   180.00   0.0  0
+ VB7  CONST_33  H5   C22  C23  C24   180.00   0.0  0
+ VB7  CONST_34  H15  C12  C13  C16     0.00   0.0  0
+ VB7  CONST_35  H16  C14  C13  C16     0.00   0.0  0
+ VB7  CONST_36  H17  N2   C3   C8      0.00   0.0  0
+ VB7  Var_01    C20  C19  C18  C17    19.11  30.0  1
+ VB7  Var_02    O21  C20  C19  C18   -52.00  30.0  1
+ VB7  Var_03    C11  C9   C8   C7    -27.98  30.0  2
+ VB7  Var_04    C12  C11  C9   C8    -28.32  30.0  2
+ VB7  Var_05    O35  S33  O31  C30   177.14  30.0  3
+ VB7  Var_06    H25  N34  S33  O31   -74.97  30.0  3
+ VB7  Var_07    H23  C30  O31  S33   -63.05  30.0  3
+ VB7  Var_08    C18  C17  C16  C13   130.86  30.0  1
+ VB7  Var_09    C22  C17  C16  C13   -50.32  30.0  1
+ VB7  Var_10    C20  O21  C16  C13  -167.90  30.0  1
+ VB7  Var_11    C20  O21  C16  C17   -46.14  30.0  1
+ VB7  Var_12    C12  C13  C16  C17   -62.87  30.0  2
+ VB7  Var_13    C14  C13  C16  C17   115.58  30.0  2
+ VB7  Var_14    O21  C16  C17  C22  -169.87  30.0  1
+ VB7  Var_15    C29  C28  C27  C26    41.03  30.0  1
+ VB7  Var_16    C28  C29  C1   C26    18.87  30.0  1
+ VB7  Var_17    C1   C26  C27  C28   -29.29  30.0  1
+ VB7  Var_18    O21  C16  C17  C18    11.31  30.0  1
+ VB7  Var_19    C16  O21  C20  C19    68.61  30.0  1
+ VB7  Var_20    C12  C13  C16  O21    60.19  30.0  2
+ VB7  Var_21    C14  C13  C16  O21  -121.37  30.0  2
+ VB7  Var_22    C27  C28  C29  C1    -37.34  30.0  1
+ VB7  Var_23    C27  C26  C1   C29     6.59  30.0  1
+ VB7  Var_24    O32  C28  C27  C26   -76.84  30.0  1
+ VB7  Var_25    C3   N2   C1   C26   -83.16  30.0  3
+ VB7  Var_26    N2   C1   C29  C28   142.02  30.0  1
+ VB7  Var_27    C29  C1   N2   C3    158.59  30.0  1
+ VB7  Var_28    C27  C26  C1   N2   -114.46  30.0  1
+ VB7  Var_29    O32  C28  C29  C1     76.59  30.0  1
+ VB7  Var_30    C30  C27  C26  C1     91.49  30.0  1
+ VB7  Var_31    C30  C27  C28  C29   -77.57  30.0  1
+ VB7  Var_32    H14  C16  O21  C20    74.46  30.0  1
+ VB7  Var_33    H9   C28  C27  C26   161.53  30.0  1
+ VB7  Var_34    H19  C29  C1   C26   -99.23  30.0  1
+ VB7  Var_35    H20  C29  C1   C26   141.94  30.0  1
+ VB7  Var_36    H7   C26  C27  C28    89.45  30.0  1
+ VB7  Var_37    H8   C26  C27  C28  -151.88  30.0  1
+ VB7  Var_38    H18  C1   C29  C28   -99.25  30.0  1
+ VB7  Var_39    H22  C27  C26  C1   -148.38  30.0  1
+ VB7  Var_40    O31  C30  C27  C26  -178.20  30.0  3
+ VB7  Var_41    O31  C30  C27  C28   -63.69  30.0  3
+ VB7  Var_42    C30  C27  C28  O32   164.55  30.0  1
+ VB7  Var_43    H23  C30  C27  C26    62.72  30.0  3
+ VB7  Var_44    H24  C30  C27  C26   -56.99  30.0  3
+ VB7  Var_45    H21  O32  C28  C29    60.68  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

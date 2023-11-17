@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- XMS  XMS  '(3S)-3-(4-chlorophenyl)-3-(1-methylbenzotriazol-5-yl)propanoic acid'  ligand  35  22  .  2021-08-24  2021-08-24  
+ XMS  XMS  '(3S)-3-(4-chlorophenyl)-3-(1-methylbenzotriazol-5-yl)propanoic acid'  ligand  35  22  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_XMS
@@ -199,47 +200,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- XMS  CONST_01  N4    C5   C10  N2      0.00   0.0  0
- XMS  CONST_02  C6    C5   C10  N2    180.00   0.0  0
- XMS  CONST_03  C8    C9   C10  N2    180.00   0.0  0
- XMS  CONST_04  C5    N4   N3   N2      0.00   0.0  0
- XMS  CONST_05  C5    C10  N2   N3      0.00   0.0  0
- XMS  CONST_06  C9    C10  N2   N3    180.00   0.0  0
- XMS  CONST_07  C10   C5   N4   N3      0.00   0.0  0
- XMS  CONST_08  C6    C5   N4   N3    180.00   0.0  0
- XMS  CONST_09  C10   N2   N3   N4      0.00   0.0  0
- XMS  CONST_10  C9    C10  C5   N4    180.00   0.0  0
- XMS  CONST_11  C7    C6   C5   N4    180.00   0.0  0
- XMS  CONST_12  C8    C9   C10  C5      0.00   0.0  0
- XMS  CONST_13  C8    C7   C6   C5      0.00   0.0  0
- XMS  CONST_14  C9    C10  C5   C6      0.00   0.0  0
- XMS  CONST_15  C9    C8   C7   C6      0.00   0.0  0
- XMS  CONST_16  C10   C5   C6   C7      0.00   0.0  0
- XMS  CONST_17  C10   C9   C8   C7      0.00   0.0  0
- XMS  CONST_18  C19   C21  C22  C16     0.00   0.0  0
- XMS  CONST_19  C19   C18  C17  C16     0.00   0.0  0
- XMS  CONST_20  C21   C22  C16  C17     0.00   0.0  0
- XMS  CONST_21  C21   C19  C18  C17     0.00   0.0  0
- XMS  CONST_22  C22   C16  C17  C18     0.00   0.0  0
- XMS  CONST_23  C22   C21  C19  C18     0.00   0.0  0
- XMS  CONST_24  C5    C10  N2   C1    180.00   0.0  0
- XMS  CONST_25  C9    C10  N2   C1      0.00   0.0  0
- XMS  CONST_26  N4    N3   N2   C1    180.00   0.0  0
- XMS  CONST_27  C11   C7   C6   C5    180.00   0.0  0
- XMS  CONST_28  C11   C7   C8   C9    180.00   0.0  0
- XMS  CONST_29  C21   C22  C16  C11   180.00   0.0  0
- XMS  CONST_30  C18   C17  C16  C11   180.00   0.0  0
- XMS  CONST_31  CL20  C19  C18  C17   180.00   0.0  0
- XMS  CONST_32  C22   C21  C19  CL20  180.00   0.0  0
- XMS  CONST_33  H9    C9   C10  N2      0.00   0.0  0
- XMS  CONST_34  H6    C6   C5   N4      0.00   0.0  0
- XMS  CONST_35  H8    C8   C7   C6    180.00   0.0  0
- XMS  CONST_36  H21   C21  C22  C16   180.00   0.0  0
- XMS  CONST_37  H18   C18  C17  C16   180.00   0.0  0
- XMS  CONST_38  H22   C22  C16  C17   180.00   0.0  0
- XMS  CONST_39  H17   C17  C18  C19   180.00   0.0  0
- XMS  Var_01    H1    C1   N2   N3      4.93  30.0  2
- XMS  Var_02    O14   C13  C12  C11    32.45  30.0  3
+ XMS  CONST_01  N4    C5   C10  N2       0.00   0.0  0
+ XMS  CONST_02  C6    C5   C10  N2     180.00   0.0  0
+ XMS  CONST_03  C8    C9   C10  N2     180.00   0.0  0
+ XMS  CONST_04  C5    N4   N3   N2       0.00   0.0  0
+ XMS  CONST_05  C5    C10  N2   N3       0.00   0.0  0
+ XMS  CONST_06  C9    C10  N2   N3     180.00   0.0  0
+ XMS  CONST_07  C10   C5   N4   N3       0.00   0.0  0
+ XMS  CONST_08  C6    C5   N4   N3     180.00   0.0  0
+ XMS  CONST_09  C10   N2   N3   N4       0.00   0.0  0
+ XMS  CONST_10  C9    C10  C5   N4     180.00   0.0  0
+ XMS  CONST_11  C7    C6   C5   N4     180.00   0.0  0
+ XMS  CONST_12  C8    C9   C10  C5       0.00   0.0  0
+ XMS  CONST_13  C8    C7   C6   C5       0.00   0.0  0
+ XMS  CONST_14  C9    C10  C5   C6       0.00   0.0  0
+ XMS  CONST_15  C9    C8   C7   C6       0.00   0.0  0
+ XMS  CONST_16  C10   C5   C6   C7       0.00   0.0  0
+ XMS  CONST_17  C10   C9   C8   C7       0.00   0.0  0
+ XMS  CONST_18  C19   C21  C22  C16      0.00   0.0  0
+ XMS  CONST_19  C19   C18  C17  C16      0.00   0.0  0
+ XMS  CONST_20  C21   C22  C16  C17      0.00   0.0  0
+ XMS  CONST_21  C21   C19  C18  C17      0.00   0.0  0
+ XMS  CONST_22  C22   C16  C17  C18      0.00   0.0  0
+ XMS  CONST_23  C22   C21  C19  C18      0.00   0.0  0
+ XMS  CONST_24  C5    C10  N2   C1     180.00   0.0  0
+ XMS  CONST_25  C9    C10  N2   C1       0.00   0.0  0
+ XMS  CONST_26  N4    N3   N2   C1     180.00   0.0  0
+ XMS  CONST_27  C11   C7   C6   C5     180.00   0.0  0
+ XMS  CONST_28  C11   C7   C8   C9     180.00   0.0  0
+ XMS  CONST_29  C21   C22  C16  C11    180.00   0.0  0
+ XMS  CONST_30  C18   C17  C16  C11    180.00   0.0  0
+ XMS  CONST_31  CL20  C19  C18  C17    180.00   0.0  0
+ XMS  CONST_32  C22   C21  C19  CL20   180.00   0.0  0
+ XMS  CONST_33  H9    C9   C10  N2       0.00   0.0  0
+ XMS  CONST_34  H6    C6   C5   N4       0.00   0.0  0
+ XMS  CONST_35  H8    C8   C7   C6     180.00   0.0  0
+ XMS  CONST_36  H21   C21  C22  C16    180.00   0.0  0
+ XMS  CONST_37  H18   C18  C17  C16    180.00   0.0  0
+ XMS  CONST_38  H22   C22  C16  C17    180.00   0.0  0
+ XMS  CONST_39  H17   C17  C18  C19    180.00   0.0  0
+ XMS  Var_01    H1    C1   N2   N3       4.93  30.0  2
+ XMS  Var_02    O14   C13  C12  C11     32.45  30.0  3
+ XMS  Var_03    C16   C11  C7   C6    -124.79  30.0  2
+ XMS  Var_04    C22   C16  C11  C7      65.02  30.0  2
+ XMS  Var_05    C17   C16  C11  C7    -113.61  30.0  2
+ XMS  Var_06    C16   C11  C7   C8      56.61  30.0  2
+ XMS  Var_07    C12   C11  C7   C6     107.93  30.0  2
+ XMS  Var_08    C12   C11  C7   C8     -70.66  30.0  2
+ XMS  Var_09    C22   C16  C11  C12   -169.56  30.0  2
+ XMS  Var_10    C17   C16  C11  C12     11.81  30.0  2
+ XMS  Var_11    H11   C11  C7   C6      -8.63  30.0  2
+ XMS  Var_12    C13   C12  C11  C7    -171.73  30.0  3
+ XMS  Var_13    C16   C11  C12  C13     63.24  30.0  3
+ XMS  Var_14    H12   C12  C11  C7     -52.34  30.0  3
+ XMS  Var_15    H12A  C12  C11  C7      62.46  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

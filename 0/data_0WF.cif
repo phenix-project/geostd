@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 0WF  0WF  1-cyclopentyl-6-[(1R)-1-(3-phenoxyazetidin-1-yl)ethyl]-1,5-dihydro-4H-pyrazolo[3,4-d]pyrimidin-4-one  ligand  53  28  .  2022-09-22  2022-09-22
+ 0WF  0WF  1-cyclopentyl-6-[(1R)-1-(3-phenoxyazetidin-1-yl)ethyl]-1,5-dihydro-4H-pyrazolo[3,4-d]pyrimidin-4-one  ligand  53  28  .  2022-09-22  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_0WF
@@ -280,40 +281,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 0WF  CONST_01  N2   N3   C7   C5     0.00   0.0  0
- 0WF  CONST_02  N3   N2   C6   C5     0.00   0.0  0
- 0WF  CONST_03  C7   N3   N2   C6     0.00   0.0  0
- 0WF  CONST_04  N3   C7   C5   C6     0.00   0.0  0
- 0WF  CONST_05  C7   C5   C6   N2     0.00   0.0  0
- 0WF  CONST_06  C19  C20  C21  C16    0.00   0.0  0
- 0WF  CONST_07  C19  C18  C17  C16    0.00   0.0  0
- 0WF  CONST_08  C20  C19  C18  C17    0.00   0.0  0
- 0WF  CONST_09  C20  C21  C16  C17    0.00   0.0  0
- 0WF  CONST_10  C21  C20  C19  C18    0.00   0.0  0
- 0WF  CONST_11  C21  C16  C17  C18    0.00   0.0  0
- 0WF  CONST_12  C8   N3   C7   C5   180.00   0.0  0
- 0WF  CONST_13  C8   N3   N2   C6   180.00   0.0  0
- 0WF  CONST_14  C8   N3   C7   N4     0.00   0.0  0
- 0WF  CONST_15  C5   C4   N1   C3     0.00   0.0  0
- 0WF  CONST_16  C7   N4   C3   N1     0.00   0.0  0
- 0WF  CONST_17  N4   C3   N1   C4     0.00   0.0  0
- 0WF  CONST_18  C20  C21  C16  O2   180.00   0.0  0
- 0WF  CONST_19  C18  C17  C16  O2   180.00   0.0  0
- 0WF  CONST_20  C7   N4   C3   C2   180.00   0.0  0
- 0WF  CONST_21  C4   N1   C3   C2   180.00   0.0  0
- 0WF  CONST_22  O1   C4   N1   C3   180.00   0.0  0
- 0WF  CONST_23  H6   C6   C5   C4     0.00   0.0  0
- 0WF  CONST_24  H24  C20  C21  C16  180.00   0.0  0
- 0WF  CONST_25  H22  C18  C17  C16  180.00   0.0  0
- 0WF  CONST_26  H23  C19  C18  C17  180.00   0.0  0
- 0WF  CONST_27  H25  C21  C16  C17  180.00   0.0  0
- 0WF  CONST_28  H21  C17  C18  C19  180.00   0.0  0
- 0WF  CONST_29  H1   N1   C4   C5   180.00   0.0  0
- 0WF  Var_01    C10  C11  C12  C8    42.29  30.0  1
- 0WF  Var_02    C11  C10  C9   C8    18.59  30.0  1
- 0WF  Var_03    C12  C11  C10  C9   -37.87  30.0  1
- 0WF  Var_04    C14  C15  N5   C13  -18.49  30.0  1
- 0WF  Var_05    C21  C16  O2   C14    0.92  30.0  2
+ 0WF  CONST_01  N2   N3   C7   C5      0.00   0.0  0
+ 0WF  CONST_02  N3   N2   C6   C5      0.00   0.0  0
+ 0WF  CONST_03  C7   N3   N2   C6      0.00   0.0  0
+ 0WF  CONST_04  N3   C7   C5   C6      0.00   0.0  0
+ 0WF  CONST_05  C7   C5   C6   N2      0.00   0.0  0
+ 0WF  CONST_06  C19  C20  C21  C16     0.00   0.0  0
+ 0WF  CONST_07  C19  C18  C17  C16     0.00   0.0  0
+ 0WF  CONST_08  C20  C19  C18  C17     0.00   0.0  0
+ 0WF  CONST_09  C20  C21  C16  C17     0.00   0.0  0
+ 0WF  CONST_10  C21  C20  C19  C18     0.00   0.0  0
+ 0WF  CONST_11  C21  C16  C17  C18     0.00   0.0  0
+ 0WF  CONST_12  C8   N3   C7   C5    180.00   0.0  0
+ 0WF  CONST_13  C8   N3   N2   C6    180.00   0.0  0
+ 0WF  CONST_14  C8   N3   C7   N4      0.00   0.0  0
+ 0WF  CONST_15  C5   C4   N1   C3      0.00   0.0  0
+ 0WF  CONST_16  C7   N4   C3   N1      0.00   0.0  0
+ 0WF  CONST_17  N4   C3   N1   C4      0.00   0.0  0
+ 0WF  CONST_18  C20  C21  C16  O2    180.00   0.0  0
+ 0WF  CONST_19  C18  C17  C16  O2    180.00   0.0  0
+ 0WF  CONST_20  C7   N4   C3   C2    180.00   0.0  0
+ 0WF  CONST_21  C4   N1   C3   C2    180.00   0.0  0
+ 0WF  CONST_22  O1   C4   N1   C3    180.00   0.0  0
+ 0WF  CONST_23  H6   C6   C5   C4      0.00   0.0  0
+ 0WF  CONST_24  H24  C20  C21  C16   180.00   0.0  0
+ 0WF  CONST_25  H22  C18  C17  C16   180.00   0.0  0
+ 0WF  CONST_26  H23  C19  C18  C17   180.00   0.0  0
+ 0WF  CONST_27  H25  C21  C16  C17   180.00   0.0  0
+ 0WF  CONST_28  H21  C17  C18  C19   180.00   0.0  0
+ 0WF  CONST_29  H1   N1   C4   C5    180.00   0.0  0
+ 0WF  Var_01    C10  C11  C12  C8     42.29  30.0  1
+ 0WF  Var_02    C11  C10  C9   C8     18.59  30.0  1
+ 0WF  Var_03    C12  C11  C10  C9    -37.87  30.0  1
+ 0WF  Var_04    C14  C15  N5   C13   -18.49  30.0  1
+ 0WF  Var_05    C21  C16  O2   C14     0.92  30.0  2
+ 0WF  Var_06    C12  C8   N3   N2     60.81  30.0  1
+ 0WF  Var_07    C9   C8   N3   N2    -59.96  30.0  1
+ 0WF  Var_08    C11  C12  C8   N3   -155.93  30.0  1
+ 0WF  Var_09    C10  C9   C8   N3    132.20  30.0  1
+ 0WF  Var_10    C12  C8   N3   C7   -117.20  30.0  1
+ 0WF  Var_11    C9   C8   N3   C7    122.03  30.0  1
+ 0WF  Var_12    C11  C12  C8   C9    -30.73  30.0  1
+ 0WF  Var_13    C12  C8   C9   C10     7.48  30.0  1
+ 0WF  Var_14    C14  C13  N5   C2    140.44  30.0  1
+ 0WF  Var_15    C15  N5   C2   C3    173.34  30.0  2
+ 0WF  Var_16    C13  N5   C2   C3     65.41  30.0  2
+ 0WF  Var_17    N5   C2   C3   N1   -163.84  30.0  2
+ 0WF  Var_18    N5   C2   C3   N4     17.73  30.0  2
+ 0WF  Var_19    O2   C14  C15  N5    137.30  30.0  1
+ 0WF  Var_20    O2   C14  C13  N5   -132.33  30.0  1
+ 0WF  Var_21    C16  O2   C14  C13   -75.51  30.0  3
+ 0WF  Var_22    C16  O2   C14  C15  -174.54  30.0  3
+ 0WF  Var_23    H7   C8   N3   N2   -179.97  30.0  1
+ 0WF  Var_24    H15  C12  C8   N3    -39.04  30.0  1
+ 0WF  Var_25    H14  C12  C8   N3     80.89  30.0  1
+ 0WF  Var_26    H8   C9   C8   N3   -107.86  30.0  1
+ 0WF  Var_27    H9   C9   C8   N3     10.35  30.0  1
+ 0WF  Var_28    H18  C14  C15  N5    -95.46  30.0  1
+ 0WF  Var_29    H19  C15  C14  C13   -96.96  30.0  1
+ 0WF  Var_30    H20  C15  C14  C13   136.01  30.0  1
+ 0WF  Var_31    H17  C13  C14  C15  -135.11  30.0  1
+ 0WF  Var_32    H16  C13  C14  C15    97.29  30.0  1
+ 0WF  Var_33    C15  N5   C2   C1    -65.66  30.0  2
+ 0WF  Var_34    C13  N5   C2   C1   -173.59  30.0  2
+ 0WF  Var_35    N4   C3   C2   C1   -103.78  30.0  3
+ 0WF  Var_36    N1   C3   C2   C1     74.64  30.0  3
+ 0WF  Var_37    H5   C2   C3   N1    -42.67  30.0  2
+ 0WF  Var_38    H3   C1   C2   C3     59.39  30.0  3
+ 0WF  Var_39    H4   C1   C2   C3    179.36  30.0  3
+ 0WF  Var_40    H2   C1   C2   C3    -61.61  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

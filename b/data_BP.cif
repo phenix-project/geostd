@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BP  BP  (7R,8R,9R)-7,8,9,10-tetrahydrobenzo[pqr]tetraphene-7,8,9-triol  ligand  39  23  .  2021-08-06  2021-08-06  
+ BP  BP  (7R,8R,9R)-7,8,9,10-tetrahydrobenzo[pqr]tetraphene-7,8,9-triol  ligand  39  23  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BP
@@ -222,57 +223,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BP  CONST_01  C5   C5A  C6   C6A  180.00   0.0  0
- BP  CONST_02  C2C  C5A  C6   C6A    0.00   0.0  0
- BP  CONST_03  C2C  C1B  C1A  C6A    0.00   0.0  0
- BP  CONST_04  C11  C1B  C1A  C6A  180.00   0.0  0
- BP  CONST_05  C1B  C1A  C6A  C6     0.00   0.0  0
- BP  CONST_06  C4   C5   C5A  C6   180.00   0.0  0
- BP  CONST_07  C2B  C2C  C5A  C6   180.00   0.0  0
- BP  CONST_08  C1B  C2C  C5A  C6     0.00   0.0  0
- BP  CONST_09  C1A  C6A  C6   C5A    0.00   0.0  0
- BP  CONST_10  C3A  C4   C5   C5A    0.00   0.0  0
- BP  CONST_11  C3A  C2B  C2C  C5A    0.00   0.0  0
- BP  CONST_12  C2A  C2B  C2C  C5A  180.00   0.0  0
- BP  CONST_13  C11  C1B  C2C  C5A  180.00   0.0  0
- BP  CONST_14  C1A  C1B  C2C  C5A    0.00   0.0  0
- BP  CONST_15  C2B  C2C  C5A  C5     0.00   0.0  0
- BP  CONST_16  C1B  C2C  C5A  C5   180.00   0.0  0
- BP  CONST_17  C3   C3A  C4   C5   180.00   0.0  0
- BP  CONST_18  C2B  C3A  C4   C5     0.00   0.0  0
- BP  CONST_19  C2C  C5A  C5   C4     0.00   0.0  0
- BP  CONST_20  C2   C3   C3A  C4   180.00   0.0  0
- BP  CONST_21  C2A  C2B  C3A  C4   180.00   0.0  0
- BP  CONST_22  C2C  C2B  C3A  C4     0.00   0.0  0
- BP  CONST_23  C1   C2   C3   C3A    0.00   0.0  0
- BP  CONST_24  C1   C2A  C2B  C3A    0.00   0.0  0
- BP  CONST_25  C12  C2A  C2B  C3A  180.00   0.0  0
- BP  CONST_26  C1B  C2C  C2B  C3A  180.00   0.0  0
- BP  CONST_27  C2A  C2B  C3A  C3     0.00   0.0  0
- BP  CONST_28  C2C  C2B  C3A  C3   180.00   0.0  0
- BP  CONST_29  C2A  C1   C2   C3     0.00   0.0  0
- BP  CONST_30  C2B  C3A  C3   C2     0.00   0.0  0
- BP  CONST_31  C2B  C2A  C1   C2     0.00   0.0  0
- BP  CONST_32  C12  C2A  C1   C2   180.00   0.0  0
- BP  CONST_33  C2C  C2B  C2A  C1   180.00   0.0  0
- BP  CONST_34  C11  C12  C2A  C1   180.00   0.0  0
- BP  CONST_35  C1B  C2C  C2B  C2A    0.00   0.0  0
- BP  CONST_36  C1B  C11  C12  C2A    0.00   0.0  0
- BP  CONST_37  C11  C12  C2A  C2B    0.00   0.0  0
- BP  CONST_38  C11  C1B  C2C  C2B    0.00   0.0  0
- BP  CONST_39  C1A  C1B  C2C  C2B  180.00   0.0  0
- BP  CONST_40  C12  C2A  C2B  C2C    0.00   0.0  0
- BP  CONST_41  C12  C11  C1B  C2C    0.00   0.0  0
- BP  CONST_42  C1A  C1B  C11  C12  180.00   0.0  0
- BP  CONST_43  H6   C6   C6A  C7     0.00   0.0  0
- BP  CONST_44  H5   C5   C5A  C6     0.00   0.0  0
- BP  CONST_45  H4   C4   C5   C5A  180.00   0.0  0
- BP  CONST_46  H3   C3   C3A  C4     0.00   0.0  0
- BP  CONST_47  H2   C2   C3   C3A  180.00   0.0  0
- BP  CONST_48  H1   C1   C2   C3   180.00   0.0  0
- BP  CONST_49  H12  C12  C2A  C1     0.00   0.0  0
- BP  CONST_50  H11  C11  C12  C2A  180.00   0.0  0
- BP  Var_01    C6A  C1A  C10  C9   -16.16  30.0  1
+ BP  CONST_01  C5    C5A  C6   C6A   180.00   0.0  0
+ BP  CONST_02  C2C   C5A  C6   C6A     0.00   0.0  0
+ BP  CONST_03  C2C   C1B  C1A  C6A     0.00   0.0  0
+ BP  CONST_04  C11   C1B  C1A  C6A   180.00   0.0  0
+ BP  CONST_05  C1B   C1A  C6A  C6      0.00   0.0  0
+ BP  CONST_06  C4    C5   C5A  C6    180.00   0.0  0
+ BP  CONST_07  C2B   C2C  C5A  C6    180.00   0.0  0
+ BP  CONST_08  C1B   C2C  C5A  C6      0.00   0.0  0
+ BP  CONST_09  C1A   C6A  C6   C5A     0.00   0.0  0
+ BP  CONST_10  C3A   C4   C5   C5A     0.00   0.0  0
+ BP  CONST_11  C3A   C2B  C2C  C5A     0.00   0.0  0
+ BP  CONST_12  C2A   C2B  C2C  C5A   180.00   0.0  0
+ BP  CONST_13  C11   C1B  C2C  C5A   180.00   0.0  0
+ BP  CONST_14  C1A   C1B  C2C  C5A     0.00   0.0  0
+ BP  CONST_15  C2B   C2C  C5A  C5      0.00   0.0  0
+ BP  CONST_16  C1B   C2C  C5A  C5    180.00   0.0  0
+ BP  CONST_17  C3    C3A  C4   C5    180.00   0.0  0
+ BP  CONST_18  C2B   C3A  C4   C5      0.00   0.0  0
+ BP  CONST_19  C2C   C5A  C5   C4      0.00   0.0  0
+ BP  CONST_20  C2    C3   C3A  C4    180.00   0.0  0
+ BP  CONST_21  C2A   C2B  C3A  C4    180.00   0.0  0
+ BP  CONST_22  C2C   C2B  C3A  C4      0.00   0.0  0
+ BP  CONST_23  C1    C2   C3   C3A     0.00   0.0  0
+ BP  CONST_24  C1    C2A  C2B  C3A     0.00   0.0  0
+ BP  CONST_25  C12   C2A  C2B  C3A   180.00   0.0  0
+ BP  CONST_26  C1B   C2C  C2B  C3A   180.00   0.0  0
+ BP  CONST_27  C2A   C2B  C3A  C3      0.00   0.0  0
+ BP  CONST_28  C2C   C2B  C3A  C3    180.00   0.0  0
+ BP  CONST_29  C2A   C1   C2   C3      0.00   0.0  0
+ BP  CONST_30  C2B   C3A  C3   C2      0.00   0.0  0
+ BP  CONST_31  C2B   C2A  C1   C2      0.00   0.0  0
+ BP  CONST_32  C12   C2A  C1   C2    180.00   0.0  0
+ BP  CONST_33  C2C   C2B  C2A  C1    180.00   0.0  0
+ BP  CONST_34  C11   C12  C2A  C1    180.00   0.0  0
+ BP  CONST_35  C1B   C2C  C2B  C2A     0.00   0.0  0
+ BP  CONST_36  C1B   C11  C12  C2A     0.00   0.0  0
+ BP  CONST_37  C11   C12  C2A  C2B     0.00   0.0  0
+ BP  CONST_38  C11   C1B  C2C  C2B     0.00   0.0  0
+ BP  CONST_39  C1A   C1B  C2C  C2B   180.00   0.0  0
+ BP  CONST_40  C12   C2A  C2B  C2C     0.00   0.0  0
+ BP  CONST_41  C12   C11  C1B  C2C     0.00   0.0  0
+ BP  CONST_42  C1A   C1B  C11  C12   180.00   0.0  0
+ BP  CONST_43  H6    C6   C6A  C7      0.00   0.0  0
+ BP  CONST_44  H5    C5   C5A  C6      0.00   0.0  0
+ BP  CONST_45  H4    C4   C5   C5A   180.00   0.0  0
+ BP  CONST_46  H3    C3   C3A  C4      0.00   0.0  0
+ BP  CONST_47  H2    C2   C3   C3A   180.00   0.0  0
+ BP  CONST_48  H1    C1   C2   C3    180.00   0.0  0
+ BP  CONST_49  H12   C12  C2A  C1      0.00   0.0  0
+ BP  CONST_50  H11   C11  C12  C2A   180.00   0.0  0
+ BP  Var_01    C6A   C1A  C10  C9    -16.16  30.0  1
+ BP  Var_02    C7    C8   C9   C10   -65.63  30.0  1
+ BP  Var_03    C6A   C7   C8   C9     51.78  30.0  1
+ BP  Var_04    C1A   C10  C9   C8     46.93  30.0  1
+ BP  Var_05    C6    C6A  C7   C8    160.81  30.0  1
+ BP  Var_06    C1A   C6A  C7   C8    -20.45  30.0  1
+ BP  Var_07    O8    C8   C9   C10   171.53  30.0  1
+ BP  Var_08    O7    C7   C8   C9    174.44  30.0  1
+ BP  Var_09    O9    C9   C8   C7     56.53  30.0  1
+ BP  Var_10    O8    C8   C7   C6A   173.41  30.0  1
+ BP  Var_11    O7    C7   C6A  C6     40.14  30.0  1
+ BP  Var_12    O9    C9   C10  C1A   -72.76  30.0  1
+ BP  Var_13    O7    C7   C6A  C1A  -141.12  30.0  1
+ BP  Var_14    H8    C8   C9   C10    51.30  30.0  1
+ BP  Var_15    H7    C7   C8   C9    -66.82  30.0  1
+ BP  Var_16    H101  C10  C9   C8    170.93  30.0  1
+ BP  Var_17    H102  C10  C9   C8    -75.24  30.0  1
+ BP  Var_18    H9    C9   C8   C7    176.96  30.0  1
+ BP  Var_19    O8    C8   C9   O9    -66.32  30.0  1
+ BP  Var_20    O7    C7   C8   O8    -63.93  30.0  1
+ BP  Var_21    HO9   O9   C9   C10   -57.04  30.0  3
+ BP  Var_22    HO8   O8   C8   C9    177.29  30.0  3
+ BP  Var_23    HO7   O7   C7   C8    131.76  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

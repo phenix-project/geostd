@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LYQ  LYQ  (3~{a}~{R},4~{S},9~{b}~{S})-4-(2-chloranyl-4-oxidanyl-phenyl)-2,3,3~{a},4,5,9~{b}-hexahydro-1~{H}-cyclopenta[c]quinoline-8-sulfonamide  ligand  44  25  .  2022-03-22  2022-07-25
+ LYQ  LYQ  (3~{a}~{R},4~{S},9~{b}~{S})-4-(2-chloranyl-4-oxidanyl-phenyl)-2,3,3~{a},4,5,9~{b}-hexahydro-1~{H}-cyclopenta[c]quinoline-8-sulfonamide  ligand  44  25  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LYQ
@@ -241,38 +242,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LYQ  CONST_01  C1   C2   C3   C4     0.00   0.0  0
- LYQ  CONST_02  C1   C    C5   C4     0.00   0.0  0
- LYQ  CONST_03  C2   C3   C4   C5     0.00   0.0  0
- LYQ  CONST_04  C2   C1   C    C5     0.00   0.0  0
- LYQ  CONST_05  C15  C14  C13  C12    0.00   0.0  0
- LYQ  CONST_06  C15  C16  C17  C12    0.00   0.0  0
- LYQ  CONST_07  C16  C17  C12  C13    0.00   0.0  0
- LYQ  CONST_08  C16  C15  C14  C13    0.00   0.0  0
- LYQ  CONST_09  C17  C12  C13  C14    0.00   0.0  0
- LYQ  CONST_10  C17  C16  C15  C14    0.00   0.0  0
- LYQ  CONST_11  C3   C4   C5   C      0.00   0.0  0
- LYQ  CONST_12  C3   C2   C1   C      0.00   0.0  0
- LYQ  CONST_13  C3   C4   C5   C6   180.00   0.0  0
- LYQ  CONST_14  C1   C    C5   C6   180.00   0.0  0
- LYQ  CONST_15  O    C2   C3   C4   180.00   0.0  0
- LYQ  CONST_16  CL   C    C5   C4   180.00   0.0  0
- LYQ  CONST_17  CL   C    C5   C6     0.00   0.0  0
- LYQ  CONST_18  S    C16  C17  C12  180.00   0.0  0
- LYQ  CONST_19  S    C16  C15  C14  180.00   0.0  0
- LYQ  CONST_20  O    C2   C1   C    180.00   0.0  0
- LYQ  CONST_21  C2   C1   C    CL   180.00   0.0  0
- LYQ  CONST_22  H17  C3   C4   C5   180.00   0.0  0
- LYQ  CONST_23  H19  C1   C    C5   180.00   0.0  0
- LYQ  CONST_24  H1   C4   C5   C6     0.00   0.0  0
- LYQ  CONST_25  H16  C17  C12  C8     0.00   0.0  0
- LYQ  CONST_26  H13  C14  C13  C12  180.00   0.0  0
- LYQ  CONST_27  H14  C15  C14  C13  180.00   0.0  0
- LYQ  Var_01    C12  C13  N    C6    -2.95  30.0  1
- LYQ  Var_02    C9   C10  C11  C7    10.47  30.0  1
- LYQ  Var_03    C11  C10  C9   C8    17.04  30.0  1
- LYQ  Var_04    C17  C16  S    N1   111.07  30.0  1
- LYQ  Var_05    H3   N1   S    C16  166.23  30.0  3
+ LYQ  CONST_01  C1   C2   C3   C4      0.00   0.0  0
+ LYQ  CONST_02  C1   C    C5   C4      0.00   0.0  0
+ LYQ  CONST_03  C2   C3   C4   C5      0.00   0.0  0
+ LYQ  CONST_04  C2   C1   C    C5      0.00   0.0  0
+ LYQ  CONST_05  C15  C14  C13  C12     0.00   0.0  0
+ LYQ  CONST_06  C15  C16  C17  C12     0.00   0.0  0
+ LYQ  CONST_07  C16  C17  C12  C13     0.00   0.0  0
+ LYQ  CONST_08  C16  C15  C14  C13     0.00   0.0  0
+ LYQ  CONST_09  C17  C12  C13  C14     0.00   0.0  0
+ LYQ  CONST_10  C17  C16  C15  C14     0.00   0.0  0
+ LYQ  CONST_11  C3   C4   C5   C       0.00   0.0  0
+ LYQ  CONST_12  C3   C2   C1   C       0.00   0.0  0
+ LYQ  CONST_13  C3   C4   C5   C6    180.00   0.0  0
+ LYQ  CONST_14  C1   C    C5   C6    180.00   0.0  0
+ LYQ  CONST_15  O    C2   C3   C4    180.00   0.0  0
+ LYQ  CONST_16  CL   C    C5   C4    180.00   0.0  0
+ LYQ  CONST_17  CL   C    C5   C6      0.00   0.0  0
+ LYQ  CONST_18  S    C16  C17  C12   180.00   0.0  0
+ LYQ  CONST_19  S    C16  C15  C14   180.00   0.0  0
+ LYQ  CONST_20  O    C2   C1   C     180.00   0.0  0
+ LYQ  CONST_21  C2   C1   C    CL    180.00   0.0  0
+ LYQ  CONST_22  H17  C3   C4   C5    180.00   0.0  0
+ LYQ  CONST_23  H19  C1   C    C5    180.00   0.0  0
+ LYQ  CONST_24  H1   C4   C5   C6      0.00   0.0  0
+ LYQ  CONST_25  H16  C17  C12  C8      0.00   0.0  0
+ LYQ  CONST_26  H13  C14  C13  C12   180.00   0.0  0
+ LYQ  CONST_27  H14  C15  C14  C13   180.00   0.0  0
+ LYQ  Var_01    C12  C13  N    C6     -2.95  30.0  1
+ LYQ  Var_02    C9   C10  C11  C7     10.47  30.0  1
+ LYQ  Var_03    C11  C10  C9   C8     17.04  30.0  1
+ LYQ  Var_04    C17  C16  S    N1    111.07  30.0  1
+ LYQ  Var_05    H3   N1   S    C16   166.23  30.0  3
+ LYQ  Var_06    C7   C6   C5   C4    -87.61  30.0  2
+ LYQ  Var_07    N    C6   C5   C4    146.41  30.0  2
+ LYQ  Var_08    C8   C7   C6   C5   -178.68  30.0  1
+ LYQ  Var_09    C11  C7   C6   C5    -59.24  30.0  1
+ LYQ  Var_10    C13  N    C6   C5    154.20  30.0  1
+ LYQ  Var_11    C12  C8   C7   C6     50.51  30.0  1
+ LYQ  Var_12    C9   C8   C7   C6    171.75  30.0  1
+ LYQ  Var_13    C10  C11  C7   C6   -158.24  30.0  1
+ LYQ  Var_14    C    C5   C6   C7     89.98  30.0  2
+ LYQ  Var_15    C13  N    C6   C7     27.31  30.0  1
+ LYQ  Var_16    C13  C12  C8   C7    -26.51  30.0  1
+ LYQ  Var_17    C17  C12  C8   C7    155.69  30.0  1
+ LYQ  Var_18    C10  C9   C8   C7    -37.76  30.0  1
+ LYQ  Var_19    N    C6   C7   C8    -51.01  30.0  1
+ LYQ  Var_20    C10  C11  C7   C8    -34.07  30.0  1
+ LYQ  Var_21    C11  C7   C8   C9     44.34  30.0  1
+ LYQ  Var_22    C13  C12  C8   C9   -139.75  30.0  1
+ LYQ  Var_23    C17  C12  C8   C9     42.45  30.0  1
+ LYQ  Var_24    C12  C8   C9   C10    80.45  30.0  1
+ LYQ  Var_25    N    C6   C7   C11    68.43  30.0  1
+ LYQ  Var_26    C12  C8   C7   C11   -76.89  30.0  1
+ LYQ  Var_27    C    C5   C6   N     -36.01  30.0  2
+ LYQ  Var_28    H2   C6   C5   C4     27.22  30.0  2
+ LYQ  Var_29    H5   C7   C6   C5     63.21  30.0  1
+ LYQ  Var_30    H15  N    C6   C5    -38.81  30.0  1
+ LYQ  Var_31    H6   C8   C7   C6    -70.15  30.0  1
+ LYQ  Var_32    H11  C11  C7   C6    -39.72  30.0  1
+ LYQ  Var_33    H12  C11  C7   C6     79.10  30.0  1
+ LYQ  Var_34    H7   C9   C8   C7     80.11  30.0  1
+ LYQ  Var_35    H8   C9   C8   C7   -161.68  30.0  1
+ LYQ  Var_36    H18  O    C2   C3   -178.30  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

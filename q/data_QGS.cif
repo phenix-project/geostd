@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QGS  QGS  '1-[(2S)-2-{3-[(3S)-3-amino-2,3-dihydro-1-benzofuran-5-yl]-5-(propan-2-yl)phenyl}-2-hydroxyethyl]-1H-indole-7-carboxylic acid'  ligand  61  34  .  2022-03-23  2022-03-23
+ QGS  QGS  '1-[(2S)-2-{3-[(3S)-3-amino-2,3-dihydro-1-benzofuran-5-yl]-5-(propan-2-yl)phenyl}-2-hydroxyethyl]-1H-indole-7-carboxylic acid'  ligand  61  34  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QGS
@@ -333,37 +334,62 @@ _chem_comp_tor.period
  QGS  CONST_27  C9   C25  C24  C23   180.00   0.0  0
  QGS  CONST_28  C26  C25  C24  C23     0.00   0.0  0
  QGS  CONST_29  C26  C21  C22  C23     0.00   0.0  0
- QGS  CONST_32  C7   C8   C9   C25   180.00   0.0  0
- QGS  CONST_35  C5   C2   C1   N3      0.00   0.0  0
- QGS  CONST_36  C10  C11  C12  C7      0.00   0.0  0
- QGS  CONST_37  C10  C9   C8   C7      0.00   0.0  0
- QGS  CONST_38  C6   N3   C1   C2    180.00   0.0  0
- QGS  CONST_39  C14  C7   C12  C11   180.00   0.0  0
- QGS  CONST_40  C9   C10  C11  C13   180.00   0.0  0
- QGS  CONST_41  C7   C12  C11  C13   180.00   0.0  0
- QGS  CONST_42  C9   C8   C7   C14   180.00   0.0  0
- QGS  CONST_43  C6   N3   C4   C15     0.00   0.0  0
- QGS  CONST_44  C32  C15  C16  C17   180.00   0.0  0
- QGS  CONST_45  C32  C15  C4   N3      0.00   0.0  0
- QGS  CONST_46  C6   N3   C4   C5    180.00   0.0  0
- QGS  CONST_47  C32  C15  C4   C5    180.00   0.0  0
- QGS  CONST_48  H8   C18  C5   C2      0.00   0.0  0
- QGS  CONST_49  H24  C10  C11  C12   180.00   0.0  0
- QGS  CONST_50  H23  C8   C7   C12   180.00   0.0  0
- QGS  CONST_51  H7   C17  C16  C15   180.00   0.0  0
- QGS  CONST_52  H2   C2   C5   C18     0.00   0.0  0
- QGS  CONST_53  H6   C16  C17  C18   180.00   0.0  0
- QGS  CONST_54  H15  C23  C22  C21   180.00   0.0  0
- QGS  CONST_55  H17  C26  C21  C22   180.00   0.0  0
- QGS  CONST_56  H16  C24  C23  C22   180.00   0.0  0
- QGS  CONST_57  H1   C1   N3   C4    180.00   0.0  0
- QGS  CONST_58  H3   C12  C7   C8    180.00   0.0  0
+ QGS  CONST_30  C7   C8   C9   C25   180.00   0.0  0
+ QGS  CONST_31  C5   C2   C1   N3      0.00   0.0  0
+ QGS  CONST_32  C10  C11  C12  C7      0.00   0.0  0
+ QGS  CONST_33  C10  C9   C8   C7      0.00   0.0  0
+ QGS  CONST_34  C6   N3   C1   C2    180.00   0.0  0
+ QGS  CONST_35  C14  C7   C12  C11   180.00   0.0  0
+ QGS  CONST_36  C9   C10  C11  C13   180.00   0.0  0
+ QGS  CONST_37  C7   C12  C11  C13   180.00   0.0  0
+ QGS  CONST_38  C9   C8   C7   C14   180.00   0.0  0
+ QGS  CONST_39  C6   N3   C4   C15     0.00   0.0  0
+ QGS  CONST_40  C32  C15  C16  C17   180.00   0.0  0
+ QGS  CONST_41  C32  C15  C4   N3      0.00   0.0  0
+ QGS  CONST_42  C6   N3   C4   C5    180.00   0.0  0
+ QGS  CONST_43  C32  C15  C4   C5    180.00   0.0  0
+ QGS  CONST_44  H8   C18  C5   C2      0.00   0.0  0
+ QGS  CONST_45  H24  C10  C11  C12   180.00   0.0  0
+ QGS  CONST_46  H23  C8   C7   C12   180.00   0.0  0
+ QGS  CONST_47  H7   C17  C16  C15   180.00   0.0  0
+ QGS  CONST_48  H2   C2   C5   C18     0.00   0.0  0
+ QGS  CONST_49  H6   C16  C17  C18   180.00   0.0  0
+ QGS  CONST_50  H15  C23  C22  C21   180.00   0.0  0
+ QGS  CONST_51  H17  C26  C21  C22   180.00   0.0  0
+ QGS  CONST_52  H16  C24  C23  C22   180.00   0.0  0
+ QGS  CONST_53  H1   C1   N3   C4    180.00   0.0  0
+ QGS  CONST_54  H3   C12  C7   C8    180.00   0.0  0
  QGS  Var_01    C27  C28  O29  C22   -18.74  30.0  1
  QGS  Var_02    C13  C6   N3   C1    -98.07  30.0  2
  QGS  Var_03    C19  C14  C7   C12   117.59  30.0  2
  QGS  Var_04    O34  C32  C15  C16  -122.09  30.0  2
  QGS  Var_05    H9   C19  C14  C7   -177.04  30.0  3
  QGS  Var_06    H12  C20  C14  C7    176.75  30.0  3
+ QGS  Var_07    O29  C28  C27  C21    19.55  30.0  1
+ QGS  Var_08    C28  O29  C22  C21     9.80  30.0  1
+ QGS  Var_09    C28  C27  C21  C22   -14.00  30.0  1
+ QGS  Var_10    C28  O29  C22  C23  -170.38  30.0  1
+ QGS  Var_11    C10  C9   C25  C24    31.13  30.0  2
+ QGS  Var_12    C8   C9   C25  C24  -148.44  30.0  2
+ QGS  Var_13    C10  C9   C25  C26  -148.75  30.0  2
+ QGS  Var_14    C8   C9   C25  C26    31.67  30.0  2
+ QGS  Var_15    C28  C27  C21  C26   170.58  30.0  1
+ QGS  Var_16    N30  C27  C21  C22   110.30  30.0  1
+ QGS  Var_17    N30  C27  C21  C26   -65.12  30.0  1
+ QGS  Var_18    N30  C27  C28  O29   -99.68  30.0  1
+ QGS  Var_19    H19  C28  C27  C21   139.22  30.0  1
+ QGS  Var_20    H20  C28  C27  C21   -98.33  30.0  1
+ QGS  Var_21    H18  C27  C21  C22  -129.73  30.0  1
+ QGS  Var_22    N3   C6   C13  C11  -175.20  30.0  1
+ QGS  Var_23    C6   C13  C11  C12  -106.23  30.0  3
+ QGS  Var_24    O31  C13  C11  C12    13.89  30.0  3
+ QGS  Var_25    C10  C11  C13  C6     73.09  30.0  2
+ QGS  Var_26    O31  C13  C11  C10  -166.79  30.0  3
+ QGS  Var_27    H4   C13  C11  C12   136.36  30.0  3
+ QGS  Var_28    H25  N30  C27  C21  -177.95  30.0  3
+ QGS  Var_29    H26  N30  C27  C21   -61.00  30.0  3
+ QGS  Var_30    O31  C13  C6   N3     60.95  30.0  3
+ QGS  Var_31    H28  O31  C13  C11    69.89  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

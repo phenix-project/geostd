@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GRM  GRM  N-(1,3-benzodioxol-5-ylmethyl)-1-[(1R)-1-(naphthalen-1-yl)ethyl]piperidine-4-carboxamide  ligand  59  31  .  2021-08-10  2021-08-10  
+ GRM  GRM  N-(1,3-benzodioxol-5-ylmethyl)-1-[(1R)-1-(naphthalen-1-yl)ethyl]piperidine-4-carboxamide  ligand  59  31  .  2021-08-10  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_GRM
@@ -300,56 +301,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GRM  CONST_01  C25   C24  C23  C3     0.00   0.0  0
- GRM  CONST_02  C31   C24  C23  C3   180.00   0.0  0
- GRM  CONST_03  C29   C28  C23  C3   180.00   0.0  0
- GRM  CONST_04  C25   C26  C27  C3     0.00   0.0  0
- GRM  CONST_05  C17   C16  C15  C14    0.00   0.0  0
- GRM  CONST_06  C17   C18  C19  C14    0.00   0.0  0
- GRM  CONST_07  C18   C19  C14  C15    0.00   0.0  0
- GRM  CONST_08  C18   C17  C16  C15    0.00   0.0  0
- GRM  CONST_09  C19   C14  C15  C16    0.00   0.0  0
- GRM  CONST_10  C19   C18  C17  C16    0.00   0.0  0
- GRM  CONST_11  C26   C27  C3   C23    0.00   0.0  0
- GRM  CONST_12  C26   C25  C24  C23    0.00   0.0  0
- GRM  CONST_13  C30   C31  C24  C23    0.00   0.0  0
- GRM  CONST_14  C30   C29  C28  C23    0.00   0.0  0
- GRM  CONST_15  C27   C3   C23  C24    0.00   0.0  0
- GRM  CONST_16  C29   C28  C23  C24    0.00   0.0  0
- GRM  CONST_17  C27   C26  C25  C24    0.00   0.0  0
- GRM  CONST_18  C29   C30  C31  C24    0.00   0.0  0
- GRM  CONST_19  C28   C23  C24  C25  180.00   0.0  0
- GRM  CONST_20  C30   C31  C24  C25  180.00   0.0  0
- GRM  CONST_21  C31   C24  C25  C26  180.00   0.0  0
- GRM  CONST_22  C28   C23  C3   C27  180.00   0.0  0
- GRM  CONST_23  C31   C24  C23  C28    0.00   0.0  0
- GRM  CONST_24  C31   C30  C29  C28    0.00   0.0  0
- GRM  CONST_25  C24   C23  C3   C1   180.00   0.0  0
- GRM  CONST_26  C28   C23  C3   C1     0.00   0.0  0
- GRM  CONST_27  C26   C27  C3   C1   180.00   0.0  0
- GRM  CONST_28  C16   C15  C14  C13  180.00   0.0  0
- GRM  CONST_29  C18   C19  C14  C13  180.00   0.0  0
- GRM  CONST_30  H28   C28  C23  C3     0.00   0.0  0
- GRM  CONST_31  H26   C26  C27  C3   180.00   0.0  0
- GRM  CONST_32  H18   C18  C19  C14  180.00   0.0  0
- GRM  CONST_33  H19   C19  C14  C15  180.00   0.0  0
- GRM  CONST_34  H15   C15  C16  C17  180.00   0.0  0
- GRM  CONST_35  H27   C27  C3   C23  180.00   0.0  0
- GRM  CONST_36  H25   C25  C24  C23  180.00   0.0  0
- GRM  CONST_37  H31   C31  C24  C23  180.00   0.0  0
- GRM  CONST_38  H29   C29  C28  C23  180.00   0.0  0
- GRM  CONST_39  H30   C30  C31  C24  180.00   0.0  0
- GRM  CONST_40  C13   N12  C10  C7   180.00   0.0  0
- GRM  CONST_41  HN12  N12  C10  C7     0.00   0.0  0
- GRM  CONST_42  C13   N12  C10  O11    0.00   0.0  0
- GRM  Var_01    C7    C6   C5   N4    52.81  30.0  1
- GRM  Var_02    C7    C8   C9   N4   -58.75  30.0  1
- GRM  Var_03    C8    C9   N4   C5    61.23  30.0  1
- GRM  Var_04    C9    N4   C5   C6   -57.48  30.0  1
- GRM  Var_05    O22   C21  O20  C16   13.43  30.0  1
- GRM  Var_06    O20   C21  O22  C17  -13.52  30.0  1
- GRM  Var_07    C15   C14  C13  N12   64.07  30.0  2
- GRM  Var_08    C14   C13  N12  C10  -98.61  30.0  3
+ GRM  CONST_01  C25   C24  C23  C3      0.00   0.0  0
+ GRM  CONST_02  C31   C24  C23  C3    180.00   0.0  0
+ GRM  CONST_03  C29   C28  C23  C3    180.00   0.0  0
+ GRM  CONST_04  C25   C26  C27  C3      0.00   0.0  0
+ GRM  CONST_05  C17   C16  C15  C14     0.00   0.0  0
+ GRM  CONST_06  C17   C18  C19  C14     0.00   0.0  0
+ GRM  CONST_07  C18   C19  C14  C15     0.00   0.0  0
+ GRM  CONST_08  C18   C17  C16  C15     0.00   0.0  0
+ GRM  CONST_09  C19   C14  C15  C16     0.00   0.0  0
+ GRM  CONST_10  C19   C18  C17  C16     0.00   0.0  0
+ GRM  CONST_11  C26   C27  C3   C23     0.00   0.0  0
+ GRM  CONST_12  C26   C25  C24  C23     0.00   0.0  0
+ GRM  CONST_13  C30   C31  C24  C23     0.00   0.0  0
+ GRM  CONST_14  C30   C29  C28  C23     0.00   0.0  0
+ GRM  CONST_15  C27   C3   C23  C24     0.00   0.0  0
+ GRM  CONST_16  C29   C28  C23  C24     0.00   0.0  0
+ GRM  CONST_17  C27   C26  C25  C24     0.00   0.0  0
+ GRM  CONST_18  C29   C30  C31  C24     0.00   0.0  0
+ GRM  CONST_19  C28   C23  C24  C25   180.00   0.0  0
+ GRM  CONST_20  C30   C31  C24  C25   180.00   0.0  0
+ GRM  CONST_21  C31   C24  C25  C26   180.00   0.0  0
+ GRM  CONST_22  C28   C23  C3   C27   180.00   0.0  0
+ GRM  CONST_23  C31   C24  C23  C28     0.00   0.0  0
+ GRM  CONST_24  C31   C30  C29  C28     0.00   0.0  0
+ GRM  CONST_25  C24   C23  C3   C1    180.00   0.0  0
+ GRM  CONST_26  C28   C23  C3   C1      0.00   0.0  0
+ GRM  CONST_27  C26   C27  C3   C1    180.00   0.0  0
+ GRM  CONST_28  C16   C15  C14  C13   180.00   0.0  0
+ GRM  CONST_29  C18   C19  C14  C13   180.00   0.0  0
+ GRM  CONST_30  H28   C28  C23  C3      0.00   0.0  0
+ GRM  CONST_31  H26   C26  C27  C3    180.00   0.0  0
+ GRM  CONST_32  H18   C18  C19  C14   180.00   0.0  0
+ GRM  CONST_33  H19   C19  C14  C15   180.00   0.0  0
+ GRM  CONST_34  H15   C15  C16  C17   180.00   0.0  0
+ GRM  CONST_35  H27   C27  C3   C23   180.00   0.0  0
+ GRM  CONST_36  H25   C25  C24  C23   180.00   0.0  0
+ GRM  CONST_37  H31   C31  C24  C23   180.00   0.0  0
+ GRM  CONST_38  H29   C29  C28  C23   180.00   0.0  0
+ GRM  CONST_39  H30   C30  C31  C24   180.00   0.0  0
+ GRM  CONST_40  C13   N12  C10  C7    180.00   0.0  0
+ GRM  CONST_41  HN12  N12  C10  C7      0.00   0.0  0
+ GRM  CONST_42  C13   N12  C10  O11     0.00   0.0  0
+ GRM  Var_01    C7    C6   C5   N4     52.81  30.0  1
+ GRM  Var_02    C7    C8   C9   N4    -58.75  30.0  1
+ GRM  Var_03    C8    C9   N4   C5     61.23  30.0  1
+ GRM  Var_04    C9    N4   C5   C6    -57.48  30.0  1
+ GRM  Var_05    O22   C21  O20  C16    13.43  30.0  1
+ GRM  Var_06    O20   C21  O22  C17   -13.52  30.0  1
+ GRM  Var_07    C15   C14  C13  N12    64.07  30.0  2
+ GRM  Var_08    C14   C13  N12  C10   -98.61  30.0  3
+ GRM  Var_09    C8    C7   C6   C5    -48.36  30.0  1
+ GRM  Var_10    C9    C8   C7   C6     50.65  30.0  1
+ GRM  Var_11    C21   O20  C16  C15   172.63  30.0  1
+ GRM  Var_12    C21   O22  C17  C16     8.58  30.0  1
+ GRM  Var_13    C21   O20  C16  C17    -8.33  30.0  1
+ GRM  Var_14    C21   O22  C17  C18  -172.45  30.0  1
+ GRM  Var_15    C5    N4   C1   C3   -166.34  30.0  3
+ GRM  Var_16    C9    N4   C1   C3     69.13  30.0  3
+ GRM  Var_17    C23   C3   C1   N4   -149.15  30.0  2
+ GRM  Var_18    C27   C3   C1   N4     34.84  30.0  2
+ GRM  Var_19    C10   C7   C6   C5     75.23  30.0  1
+ GRM  Var_20    C10   C7   C8   C9    -74.65  30.0  1
+ GRM  Var_21    H7    C7   C6   C5   -165.60  30.0  1
+ GRM  Var_22    C23   C3   C1   C2     86.65  30.0  2
+ GRM  Var_23    C27   C3   C1   C2    -89.36  30.0  2
+ GRM  Var_24    C5    N4   C1   C2    -45.45  30.0  3
+ GRM  Var_25    C9    N4   C1   C2   -169.98  30.0  3
+ GRM  Var_26    O11   C10  C7   C6    -14.19  30.0  3
+ GRM  Var_27    N12   C10  C7   C6    166.23  30.0  3
+ GRM  Var_28    O11   C10  C7   C8    108.22  30.0  3
+ GRM  Var_29    N12   C10  C7   C8    -71.36  30.0  3
+ GRM  Var_30    H1    C1   N4   C5     73.79  30.0  2
+ GRM  Var_31    H2    C2   C1   C3    -49.86  30.0  3
+ GRM  Var_32    H2A   C2   C1   C3     69.11  30.0  3
+ GRM  Var_33    H2B   C2   C1   C3   -168.88  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

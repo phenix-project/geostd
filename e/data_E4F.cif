@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- E4F  E4F  '5-({(1R,2S)-2-[(5-aminopentanoyl)amino]-2,3-dihydro-1H-inden-1-yl}methyl)-1,3-benzodioxole-4-carboxylic acid'  ligand  55  30  .  2022-03-18  2022-03-18
+ E4F  E4F  '5-({(1R,2S)-2-[(5-aminopentanoyl)amino]-2,3-dihydro-1H-inden-1-yl}methyl)-1,3-benzodioxole-4-carboxylic acid'  ligand  55  30  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_E4F
@@ -282,42 +283,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- E4F  CONST_01  C9   C8   C3   C1     0.00   0.0  0
- E4F  CONST_02  C9   C4   C2   C1     0.00   0.0  0
- E4F  CONST_03  C8   C3   C1   C2     0.00   0.0  0
- E4F  CONST_04  C8   C9   C4   C2     0.00   0.0  0
- E4F  CONST_05  C4   C9   C8   C3     0.00   0.0  0
- E4F  CONST_06  C4   C2   C1   C3     0.00   0.0  0
- E4F  CONST_07  C12  C7   C10  C5     0.00   0.0  0
- E4F  CONST_08  C12  C11  C6   C5     0.00   0.0  0
- E4F  CONST_09  C7   C10  C5   C6     0.00   0.0  0
- E4F  CONST_10  C7   C12  C11  C6     0.00   0.0  0
- E4F  CONST_11  C11  C12  C7   C10    0.00   0.0  0
- E4F  CONST_12  C11  C6   C5   C10    0.00   0.0  0
- E4F  CONST_13  C13  C7   C10  C5   180.00   0.0  0
- E4F  CONST_14  C19  C10  C5   C6   180.00   0.0  0
- E4F  CONST_15  C13  C7   C12  C11  180.00   0.0  0
- E4F  CONST_16  C19  C10  C7   C12  180.00   0.0  0
- E4F  CONST_17  O29  C12  C7   C13    0.00   0.0  0
- E4F  CONST_18  H4   C4   C2   C1   180.00   0.0  0
- E4F  CONST_19  H3   C3   C1   C2   180.00   0.0  0
- E4F  CONST_20  H2   C2   C1   C3   180.00   0.0  0
- E4F  CONST_21  H1   C1   C2   C4   180.00   0.0  0
- E4F  CONST_22  H5   C5   C10  C7   180.00   0.0  0
- E4F  CONST_23  H6   C6   C5   C10  180.00   0.0  0
- E4F  CONST_24  C20  C14  N25  C18  180.00   0.0  0
- E4F  CONST_25  O27  C14  N25  C18    0.00   0.0  0
- E4F  CONST_26  H23  N25  C14  C20    0.00   0.0  0
- E4F  Var_01    C18  C15  C8   C3   160.66  30.0  1
- E4F  Var_02    O29  C16  O28  C11  -17.47  30.0  1
- E4F  Var_03    O28  C16  O29  C12   17.69  30.0  1
- E4F  Var_04    C17  C19  C10  C5   109.17  30.0  2
- E4F  Var_05    O26  C13  C7   C10  119.31  30.0  2
- E4F  Var_06    C22  C21  C20  C14  178.49  30.0  1
- E4F  Var_07    C23  C22  C21  C20  178.59  30.0  1
- E4F  Var_08    N24  C23  C22  C21  179.48  30.0  1
- E4F  Var_09    N25  C14  C20  C21  116.61  30.0  3
- E4F  Var_10    H24  N24  C23  C22   66.03  30.0  3
+ E4F  CONST_01  C9   C8   C3   C1      0.00   0.0  0
+ E4F  CONST_02  C9   C4   C2   C1      0.00   0.0  0
+ E4F  CONST_03  C8   C3   C1   C2      0.00   0.0  0
+ E4F  CONST_04  C8   C9   C4   C2      0.00   0.0  0
+ E4F  CONST_05  C4   C9   C8   C3      0.00   0.0  0
+ E4F  CONST_06  C4   C2   C1   C3      0.00   0.0  0
+ E4F  CONST_07  C12  C7   C10  C5      0.00   0.0  0
+ E4F  CONST_08  C12  C11  C6   C5      0.00   0.0  0
+ E4F  CONST_09  C7   C10  C5   C6      0.00   0.0  0
+ E4F  CONST_10  C7   C12  C11  C6      0.00   0.0  0
+ E4F  CONST_11  C11  C12  C7   C10     0.00   0.0  0
+ E4F  CONST_12  C11  C6   C5   C10     0.00   0.0  0
+ E4F  CONST_13  C13  C7   C10  C5    180.00   0.0  0
+ E4F  CONST_14  C19  C10  C5   C6    180.00   0.0  0
+ E4F  CONST_15  C13  C7   C12  C11   180.00   0.0  0
+ E4F  CONST_16  C19  C10  C7   C12   180.00   0.0  0
+ E4F  CONST_17  O29  C12  C7   C13     0.00   0.0  0
+ E4F  CONST_18  H4   C4   C2   C1    180.00   0.0  0
+ E4F  CONST_19  H3   C3   C1   C2    180.00   0.0  0
+ E4F  CONST_20  H2   C2   C1   C3    180.00   0.0  0
+ E4F  CONST_21  H1   C1   C2   C4    180.00   0.0  0
+ E4F  CONST_22  H5   C5   C10  C7    180.00   0.0  0
+ E4F  CONST_23  H6   C6   C5   C10   180.00   0.0  0
+ E4F  CONST_24  C20  C14  N25  C18   180.00   0.0  0
+ E4F  CONST_25  O27  C14  N25  C18     0.00   0.0  0
+ E4F  CONST_26  H23  N25  C14  C20     0.00   0.0  0
+ E4F  Var_01    C18  C15  C8   C3    160.66  30.0  1
+ E4F  Var_02    O29  C16  O28  C11   -17.47  30.0  1
+ E4F  Var_03    O28  C16  O29  C12    17.69  30.0  1
+ E4F  Var_04    C17  C19  C10  C5    109.17  30.0  2
+ E4F  Var_05    O26  C13  C7   C10   119.31  30.0  2
+ E4F  Var_06    C22  C21  C20  C14   178.49  30.0  1
+ E4F  Var_07    C23  C22  C21  C20   178.59  30.0  1
+ E4F  Var_08    N24  C23  C22  C21   179.48  30.0  1
+ E4F  Var_09    N25  C14  C20  C21   116.61  30.0  3
+ E4F  Var_10    H24  N24  C23  C22    66.03  30.0  3
+ E4F  Var_11    C18  C17  C9   C4   -159.05  30.0  1
+ E4F  Var_12    C16  O28  C11  C6   -170.56  30.0  1
+ E4F  Var_13    C16  O29  C12  C7    172.17  30.0  1
+ E4F  Var_14    C17  C18  C15  C8     31.31  30.0  1
+ E4F  Var_15    C18  C17  C9   C8     21.85  30.0  1
+ E4F  Var_16    C15  C18  C17  C9    -32.42  30.0  1
+ E4F  Var_17    C16  O29  C12  C11   -11.21  30.0  1
+ E4F  Var_18    C16  O28  C11  C12    10.74  30.0  1
+ E4F  Var_19    C19  C17  C9   C4     81.44  30.0  1
+ E4F  Var_20    N25  C18  C15  C8    158.36  30.0  1
+ E4F  Var_21    C19  C17  C9   C8    -97.67  30.0  1
+ E4F  Var_22    N25  C18  C17  C9   -157.51  30.0  1
+ E4F  Var_23    C10  C19  C17  C9    -51.18  30.0  1
+ E4F  Var_24    C18  C17  C19  C10  -163.82  30.0  3
+ E4F  Var_25    C19  C17  C18  C15    86.95  30.0  1
+ E4F  Var_26    H11  C17  C9   C4    -41.59  30.0  1
+ E4F  Var_27    H12  C18  C15  C8    -82.77  30.0  1
+ E4F  Var_28    C14  N25  C18  C15   154.00  30.0  1
+ E4F  Var_29    C14  N25  C18  C17   -85.08  30.0  1
+ E4F  Var_30    N25  C18  C17  C19   -38.14  30.0  1
+ E4F  Var_31    H23  N25  C18  C15   -30.00  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

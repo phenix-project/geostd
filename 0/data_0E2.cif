@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 0E2  0E2  N-acetyl-L-valyl-O-benzyl-L-threonyl-N-[(1S,2R)-2-hydroxy-1-{[(3S)-2-oxopyrrolidin-3-yl]methyl}propyl]-L-leucinamide  peptide  95  44  .  2022-03-08  2022-03-08
+ 0E2  0E2  N-acetyl-L-valyl-O-benzyl-L-threonyl-N-[(1S,2R)-2-hydroxy-1-{[(3S)-2-oxopyrrolidin-3-yl]methyl}propyl]-L-leucinamide  peptide  95  44  .  2022-03-08  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_0E2
@@ -432,42 +433,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 0E2  CONST_01  C41   C31  C21   C11      0.00   0.0  0
- 0E2  CONST_02  C41   C5   C6    C11      0.00   0.0  0
- 0E2  CONST_03  C5    C6   C11   C21      0.00   0.0  0
- 0E2  CONST_04  C5    C41  C31   C21      0.00   0.0  0
- 0E2  CONST_05  C6    C11  C21   C31      0.00   0.0  0
- 0E2  CONST_06  C6    C5   C41   C31      0.00   0.0  0
- 0E2  CONST_07  C31   C21  C11   C4     180.00   0.0  0
- 0E2  CONST_08  C5    C6   C11   C4     180.00   0.0  0
- 0E2  CONST_09  H31   C31  C21   C11    180.00   0.0  0
- 0E2  CONST_10  H51   C5   C6    C11    180.00   0.0  0
- 0E2  CONST_11  H41   C41  C31   C21    180.00   0.0  0
- 0E2  CONST_12  H6    C6   C11   C21    180.00   0.0  0
- 0E2  CONST_13  H21   C21  C31   C41    180.00   0.0  0
- 0E2  CONST_14  CA    N    C     O        0.00   0.0  0
- 0E2  CONST_15  CA    N    C     CH3    180.00   0.0  0
- 0E2  CONST_16  CA1   N1   C1    CA     180.00   0.0  0
- 0E2  CONST_17  CA1   N1   C1    O1       0.00   0.0  0
- 0E2  CONST_18  CA2   N2   C2    CA1    180.00   0.0  0
- 0E2  CONST_19  CA2   N2   C2    O2       0.00   0.0  0
- 0E2  CONST_20  CA3   N3   C3    CA2    180.00   0.0  0
- 0E2  CONST_21  CA3   N3   C3    O3       0.00   0.0  0
- 0E2  CONST_22  H     N    C     O      180.00   0.0  0
- 0E2  CONST_23  H4    N1   C1    CA       0.00   0.0  0
- 0E2  CONST_24  H5    N2   C2    CA1      0.00   0.0  0
- 0E2  CONST_25  HN3   N3   C3    CA2      0.00   0.0  0
- 0E2  Var_01    CD11  CAE  NAH   CD21   -21.98  30.0  1
- 0E2  Var_02    CAE   NAH  CD21  CG3      5.55  30.0  1
- 0E2  Var_03    NAH   CAE  CD11  CG3     28.49  30.0  1
- 0E2  Var_04    C21   C11  C4    OG1     36.85  30.0  2
- 0E2  Var_05    C11   C4   OG1   CB1   -163.06  30.0  3
- 0E2  Var_06    CD1   CG   CB2   CA2    174.65  30.0  3
- 0E2  Var_07    H1    CH3  C     O      -48.57  30.0  3
- 0E2  Var_08    HG11  CG1  CB    CA      64.05  30.0  3
- 0E2  Var_09    HG21  CG2  CB    CA      59.07  30.0  3
- 0E2  Var_10    HD11  CD1  CG    CB2     63.02  30.0  3
- 0E2  Var_11    HD21  CD2  CG    CB2    -56.89  30.0  3
+ 0E2  CONST_01  C41   C31   C21   C11      0.00   0.0  0
+ 0E2  CONST_02  C41   C5    C6    C11      0.00   0.0  0
+ 0E2  CONST_03  C5    C6    C11   C21      0.00   0.0  0
+ 0E2  CONST_04  C5    C41   C31   C21      0.00   0.0  0
+ 0E2  CONST_05  C6    C11   C21   C31      0.00   0.0  0
+ 0E2  CONST_06  C6    C5    C41   C31      0.00   0.0  0
+ 0E2  CONST_07  C31   C21   C11   C4     180.00   0.0  0
+ 0E2  CONST_08  C5    C6    C11   C4     180.00   0.0  0
+ 0E2  CONST_09  H31   C31   C21   C11    180.00   0.0  0
+ 0E2  CONST_10  H51   C5    C6    C11    180.00   0.0  0
+ 0E2  CONST_11  H41   C41   C31   C21    180.00   0.0  0
+ 0E2  CONST_12  H6    C6    C11   C21    180.00   0.0  0
+ 0E2  CONST_13  H21   C21   C31   C41    180.00   0.0  0
+ 0E2  CONST_14  CA    N     C     O        0.00   0.0  0
+ 0E2  CONST_15  CA    N     C     CH3    180.00   0.0  0
+ 0E2  CONST_16  CA1   N1    C1    CA     180.00   0.0  0
+ 0E2  CONST_17  CA1   N1    C1    O1       0.00   0.0  0
+ 0E2  CONST_18  CA2   N2    C2    CA1    180.00   0.0  0
+ 0E2  CONST_19  CA2   N2    C2    O2       0.00   0.0  0
+ 0E2  CONST_20  CA3   N3    C3    CA2    180.00   0.0  0
+ 0E2  CONST_21  CA3   N3    C3    O3       0.00   0.0  0
+ 0E2  CONST_22  H     N     C     O      180.00   0.0  0
+ 0E2  CONST_23  H4    N1    C1    CA       0.00   0.0  0
+ 0E2  CONST_24  H5    N2    C2    CA1      0.00   0.0  0
+ 0E2  CONST_25  HN3   N3    C3    CA2      0.00   0.0  0
+ 0E2  Var_01    CD11  CAE   NAH   CD21   -21.98  30.0  1
+ 0E2  Var_02    CAE   NAH   CD21  CG3      5.55  30.0  1
+ 0E2  Var_03    NAH   CAE   CD11  CG3     28.49  30.0  1
+ 0E2  Var_04    C21   C11   C4    OG1     36.85  30.0  2
+ 0E2  Var_05    C11   C4    OG1   CB1   -163.06  30.0  3
+ 0E2  Var_06    CD1   CG    CB2   CA2    174.65  30.0  3
+ 0E2  Var_07    H1    CH3   C     O      -48.57  30.0  3
+ 0E2  Var_08    HG11  CG1   CB    CA      64.05  30.0  3
+ 0E2  Var_09    HG21  CG2   CB    CA      59.07  30.0  3
+ 0E2  Var_10    HD11  CD1   CG    CB2     63.02  30.0  3
+ 0E2  Var_11    HD21  CD2   CG    CB2    -56.89  30.0  3
+ 0E2  Var_12    HD14  CD11  CG3   CD21    91.39  30.0  1
+ 0E2  Var_13    HD15  CD11  CG3   CD21  -148.13  30.0  1
+ 0E2  Var_14    HG1   CG3   CD11  CAE     86.85  30.0  1
+ 0E2  Var_15    HB11  CB3   CG3   CD21   -58.93  30.0  3
+ 0E2  Var_16    HB21  CB3   CG3   CD21    57.55  30.0  3
+ 0E2  Var_17    HA3   CA3   CB3   CG3     54.12  30.0  3
+ 0E2  Var_18    HA    CA    N     C       -8.31  30.0  3
+ 0E2  Var_19    HB    CB    CA    N      177.32  30.0  3
+ 0E2  Var_20    HA1   CA1   N1    C1      46.82  30.0  3
+ 0E2  Var_21    HB1   CB1   CA1   N1    -179.83  30.0  3
+ 0E2  Var_22    HG24  CG21  CB1   CA1     63.03  30.0  3
+ 0E2  Var_23    HG25  CG21  CB1   CA1   -175.96  30.0  3
+ 0E2  Var_24    HG26  CG21  CB1   CA1    -57.25  30.0  3
+ 0E2  Var_25    HA2   CA2   N2    C2       0.62  30.0  3
+ 0E2  Var_26    HB2   CB2   CA2   N2      63.41  30.0  3
+ 0E2  Var_27    HB3   CB2   CA2   N2     178.56  30.0  3
+ 0E2  Var_28    H7    C7    CA3   CB3     61.30  30.0  3
+ 0E2  Var_29    HO    O4    C7    CA3    -69.00  30.0  3
+ 0E2  Var_30    HMK1  CMK   C7    CA3     58.16  30.0  3
+ 0E2  Var_31    HMK2  CMK   C7    CA3    178.01  30.0  3
+ 0E2  Var_32    HMK3  CMK   C7    CA3    -62.61  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

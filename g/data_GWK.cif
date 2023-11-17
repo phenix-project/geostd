@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GWK  GWK  (2~{S})-3-(4-methoxyphenyl)-~{N}-[(2~{S},3~{R})-4-methyl-1-(4-methylcyclohexyl)-3,4-bis(oxidanyl)pentan-2-yl]-2-[[(2~{S})-2-(2-morpholin-4-ylethanoylamino)propanoyl]amino]propanamide  ligand  95  43  .  2021-08-10  2021-08-10  
+ GWK  GWK  (2~{S})-3-(4-methoxyphenyl)-~{N}-[(2~{S},3~{R})-4-methyl-1-(4-methylcyclohexyl)-3,4-bis(oxidanyl)pentan-2-yl]-2-[[(2~{S})-2-(2-morpholin-4-ylethanoylamino)propanoyl]amino]propanamide  ligand  95  43  .  2021-08-10  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_GWK
@@ -438,44 +439,104 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GWK  CONST_01  C44  C47  C48  C41    0.00   0.0  0
- GWK  CONST_02  C44  C43  C42  C41    0.00   0.0  0
- GWK  CONST_03  C47  C48  C41  C42    0.00   0.0  0
- GWK  CONST_04  C47  C44  C43  C42    0.00   0.0  0
- GWK  CONST_05  C48  C47  C44  C43    0.00   0.0  0
- GWK  CONST_06  C48  C41  C42  C43    0.00   0.0  0
- GWK  CONST_07  C47  C48  C41  C40  180.00   0.0  0
- GWK  CONST_08  C43  C42  C41  C40  180.00   0.0  0
- GWK  CONST_09  O45  C44  C43  C42  180.00   0.0  0
- GWK  CONST_10  C48  C47  C44  O45  180.00   0.0  0
- GWK  CONST_11  H34  C47  C48  C41  180.00   0.0  0
- GWK  CONST_12  H30  C43  C42  C41  180.00   0.0  0
- GWK  CONST_13  H35  C48  C41  C42  180.00   0.0  0
- GWK  CONST_14  H29  C42  C43  C44  180.00   0.0  0
- GWK  CONST_15  C24  C23  N22  C8   180.00   0.0  0
- GWK  CONST_16  O49  C23  N22  C8     0.00   0.0  0
- GWK  CONST_17  C27  C26  N25  C24  180.00   0.0  0
- GWK  CONST_18  O39  C26  N25  C24    0.00   0.0  0
- GWK  CONST_19  C27  N28  C29  C30  180.00   0.0  0
- GWK  CONST_20  C27  N28  C29  O37    0.00   0.0  0
- GWK  CONST_21  H36  N22  C23  C24    0.00   0.0  0
- GWK  CONST_22  H21  N28  C29  C30    0.00   0.0  0
- GWK  CONST_23  H26  N25  C26  C27    0.00   0.0  0
- GWK  Var_01    C3   C4   C5   C6   -56.45  30.0  1
- GWK  Var_02    C3   C2   C1   C6    55.67  30.0  1
- GWK  Var_03    C35  C36  N31  C32  -56.52  30.0  1
- GWK  Var_04    C36  N31  C32  C33   56.66  30.0  1
- GWK  Var_05    C36  C35  O34  C33  -57.24  30.0  1
- GWK  Var_06    N31  C32  C33  O34  -57.29  30.0  1
- GWK  Var_07    N31  C36  C35  O34   57.14  30.0  1
- GWK  Var_08    H12  C33  O34  C35  -64.35  30.0  1
- GWK  Var_09    C48  C41  C40  C24  -82.13  30.0  2
- GWK  Var_10    C29  C30  N31  C32  164.43  30.0  1
- GWK  Var_11    C47  C44  O45  C46    1.31  30.0  2
- GWK  Var_12    O37  C29  C30  N31  -21.45  30.0  3
- GWK  Var_13    H31  C46  O45  C44  179.20  30.0  3
- GWK  Var_14    H50  C12  C10  C9    66.73  30.0  3
- GWK  Var_15    H47  C11  C10  C9    68.19  30.0  3
+ GWK  CONST_01  C44  C47  C48  C41     0.00   0.0  0
+ GWK  CONST_02  C44  C43  C42  C41     0.00   0.0  0
+ GWK  CONST_03  C47  C48  C41  C42     0.00   0.0  0
+ GWK  CONST_04  C47  C44  C43  C42     0.00   0.0  0
+ GWK  CONST_05  C48  C47  C44  C43     0.00   0.0  0
+ GWK  CONST_06  C48  C41  C42  C43     0.00   0.0  0
+ GWK  CONST_07  C47  C48  C41  C40   180.00   0.0  0
+ GWK  CONST_08  C43  C42  C41  C40   180.00   0.0  0
+ GWK  CONST_09  O45  C44  C43  C42   180.00   0.0  0
+ GWK  CONST_10  C48  C47  C44  O45   180.00   0.0  0
+ GWK  CONST_11  H34  C47  C48  C41   180.00   0.0  0
+ GWK  CONST_12  H30  C43  C42  C41   180.00   0.0  0
+ GWK  CONST_13  H35  C48  C41  C42   180.00   0.0  0
+ GWK  CONST_14  H29  C42  C43  C44   180.00   0.0  0
+ GWK  CONST_15  C24  C23  N22  C8    180.00   0.0  0
+ GWK  CONST_16  O49  C23  N22  C8      0.00   0.0  0
+ GWK  CONST_17  C27  C26  N25  C24   180.00   0.0  0
+ GWK  CONST_18  O39  C26  N25  C24     0.00   0.0  0
+ GWK  CONST_19  C27  N28  C29  C30   180.00   0.0  0
+ GWK  CONST_20  C27  N28  C29  O37     0.00   0.0  0
+ GWK  CONST_21  H36  N22  C23  C24     0.00   0.0  0
+ GWK  CONST_22  H21  N28  C29  C30     0.00   0.0  0
+ GWK  CONST_23  H26  N25  C26  C27     0.00   0.0  0
+ GWK  Var_01    C3   C4   C5   C6    -56.45  30.0  1
+ GWK  Var_02    C3   C2   C1   C6     55.67  30.0  1
+ GWK  Var_03    C35  C36  N31  C32   -56.52  30.0  1
+ GWK  Var_04    C36  N31  C32  C33    56.66  30.0  1
+ GWK  Var_05    C36  C35  O34  C33   -57.24  30.0  1
+ GWK  Var_06    N31  C32  C33  O34   -57.29  30.0  1
+ GWK  Var_07    N31  C36  C35  O34    57.14  30.0  1
+ GWK  Var_08    H12  C33  O34  C35   -64.35  30.0  1
+ GWK  Var_09    C48  C41  C40  C24   -82.13  30.0  2
+ GWK  Var_10    C29  C30  N31  C32   164.43  30.0  1
+ GWK  Var_11    C47  C44  O45  C46     1.31  30.0  2
+ GWK  Var_12    O37  C29  C30  N31   -21.45  30.0  3
+ GWK  Var_13    H31  C46  O45  C44   179.20  30.0  3
+ GWK  Var_14    H50  C12  C10  C9     66.73  30.0  3
+ GWK  Var_15    H47  C11  C10  C9     68.19  30.0  3
+ GWK  Var_16    C1   C6   C5   C4     56.02  30.0  1
+ GWK  Var_17    C1   C2   C3   C4    -53.84  30.0  1
+ GWK  Var_18    C2   C3   C4   C5     54.11  30.0  1
+ GWK  Var_19    C2   C1   C6   C5    -55.50  30.0  1
+ GWK  Var_20    C7   C6   C5   C4   -179.08  30.0  1
+ GWK  Var_21    C50  C3   C4   C5    178.34  30.0  1
+ GWK  Var_22    C2   C1   C6   C7   -179.04  30.0  1
+ GWK  Var_23    C50  C3   C2   C1   -178.14  30.0  1
+ GWK  Var_24    H5   C6   C5   C4    -60.96  30.0  1
+ GWK  Var_25    H39  C2   C3   C4   -176.89  30.0  1
+ GWK  Var_26    H40  C2   C3   C4     67.18  30.0  1
+ GWK  Var_27    H41  C3   C4   C5    -63.14  30.0  1
+ GWK  Var_28    H37  C1   C6   C5     65.64  30.0  1
+ GWK  Var_29    H38  C1   C6   C5   -177.38  30.0  1
+ GWK  Var_30    H3   C5   C6   C1    -65.32  30.0  1
+ GWK  Var_31    H4   C5   C6   C1    178.25  30.0  1
+ GWK  Var_32    C8   C7   C6   C5    173.24  30.0  3
+ GWK  Var_33    C1   C6   C7   C8    -63.63  30.0  1
+ GWK  Var_34    H42  C50  C3   C4     56.41  30.0  3
+ GWK  Var_35    H43  C50  C3   C4    176.90  30.0  3
+ GWK  Var_36    H44  C50  C3   C4    -63.43  30.0  3
+ GWK  Var_37    H6   C7   C6   C5    -63.86  30.0  3
+ GWK  Var_38    H7   C7   C6   C5     51.24  30.0  3
+ GWK  Var_39    N22  C8   C7   C6    -56.52  30.0  3
+ GWK  Var_40    C9   C8   C7   C6   -177.39  30.0  3
+ GWK  Var_41    C41  C40  C24  N25   -63.01  30.0  3
+ GWK  Var_42    C23  C24  C40  C41   175.96  30.0  3
+ GWK  Var_43    H8   C8   C7   C6     60.05  30.0  3
+ GWK  Var_44    H9   C24  C40  C41    55.40  30.0  3
+ GWK  Var_45    C23  N22  C8   C7    113.73  30.0  1
+ GWK  Var_46    C10  C9   C8   C7    -64.38  30.0  3
+ GWK  Var_47    O21  C9   C8   C7    174.70  30.0  3
+ GWK  Var_48    C12  C10  C9   C8    -48.72  30.0  2
+ GWK  Var_49    O13  C10  C9   C8     69.34  30.0  2
+ GWK  Var_50    C11  C10  C9   C8   -170.99  30.0  2
+ GWK  Var_51    O39  C26  C27  N28   -93.75  30.0  3
+ GWK  Var_52    N25  C26  C27  N28    83.83  30.0  3
+ GWK  Var_53    C29  N28  C27  C38   142.79  30.0  1
+ GWK  Var_54    O39  C26  C27  C38    28.32  30.0  3
+ GWK  Var_55    N25  C26  C27  C38  -154.09  30.0  3
+ GWK  Var_56    O49  C23  C24  N25   -64.11  30.0  3
+ GWK  Var_57    N22  C23  C24  N25   116.94  30.0  3
+ GWK  Var_58    C26  N25  C24  C40   151.12  30.0  1
+ GWK  Var_59    O49  C23  C24  C40    57.85  30.0  3
+ GWK  Var_60    N22  C23  C24  C40  -121.10  30.0  3
+ GWK  Var_61    C10  C9   C8   N22   173.76  30.0  3
+ GWK  Var_62    O21  C9   C8   N22    52.84  30.0  3
+ GWK  Var_63    C23  N22  C8   C9   -120.92  30.0  1
+ GWK  Var_64    C12  C10  C9   O21    73.55  30.0  2
+ GWK  Var_65    O13  C10  C9   O21  -168.39  30.0  2
+ GWK  Var_66    C11  C10  C9   O21   -48.72  30.0  2
+ GWK  Var_67    C26  N25  C24  C23   -87.68  30.0  1
+ GWK  Var_68    C29  N28  C27  C26   -94.23  30.0  1
+ GWK  Var_69    H45  C9   C8   C7     55.35  30.0  3
+ GWK  Var_70    H46  O21  C9   C8    -56.19  30.0  3
+ GWK  Var_71    H23  C38  C27  N28  -179.78  30.0  3
+ GWK  Var_72    H24  C38  C27  N28   -60.56  30.0  3
+ GWK  Var_73    H25  C38  C27  N28    59.88  30.0  3
+ GWK  Var_74    H22  C27  C26  O39   149.49  30.0  3
+ GWK  Var_75    H53  O13  C10  C9     61.89  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

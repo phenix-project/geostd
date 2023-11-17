@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7LB  7LB  (2S,4E)-N-methyl-5-(5-phenoxypyridin-3-yl)pent-4-en-2-amine  ligand  40  20  .  2021-08-05  2021-08-05  
+ 7LB  7LB  (2S,4E)-N-methyl-5-(5-phenoxypyridin-3-yl)pent-4-en-2-amine  ligand  40  20  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7LB
@@ -214,37 +215,48 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 7LB  CONST_01  C8   C9   C10  C11    0.00   0.0  0
- 7LB  CONST_02  C8   C13  N12  C11    0.00   0.0  0
- 7LB  CONST_03  N12  C11  C10  C9     0.00   0.0  0
- 7LB  CONST_04  N12  C13  C8   C9     0.00   0.0  0
- 7LB  CONST_05  C13  C8   C9   C10    0.00   0.0  0
- 7LB  CONST_06  C13  N12  C11  C10    0.00   0.0  0
- 7LB  CONST_07  C18  C17  C16  C15    0.00   0.0  0
- 7LB  CONST_08  C18  C19  C20  C15    0.00   0.0  0
- 7LB  CONST_09  C19  C18  C17  C16    0.00   0.0  0
- 7LB  CONST_10  C19  C20  C15  C16    0.00   0.0  0
- 7LB  CONST_11  C20  C19  C18  C17    0.00   0.0  0
- 7LB  CONST_12  C20  C15  C16  C17    0.00   0.0  0
- 7LB  CONST_13  C10  C9   C8   C7   180.00   0.0  0
- 7LB  CONST_14  N12  C13  C8   C7   180.00   0.0  0
- 7LB  CONST_15  O14  C10  C9   C8   180.00   0.0  0
- 7LB  CONST_16  O14  C15  C16  C17  180.00   0.0  0
- 7LB  CONST_17  O14  C15  C20  C19  180.00   0.0  0
- 7LB  CONST_18  O14  C10  C11  N12  180.00   0.0  0
- 7LB  CONST_19  H9   C9   C10  C11  180.00   0.0  0
- 7LB  CONST_20  H9M  C13  N12  C11  180.00   0.0  0
- 7LB  CONST_21  H9L  C11  C10  C9   180.00   0.0  0
- 7LB  CONST_22  H17  C17  C16  C15  180.00   0.0  0
- 7LB  CONST_23  H19  C19  C20  C15  180.00   0.0  0
- 7LB  CONST_24  H18  C18  C17  C16  180.00   0.0  0
- 7LB  CONST_25  H20  C20  C15  C16  180.00   0.0  0
- 7LB  CONST_26  H16  C16  C17  C18  180.00   0.0  0
- 7LB  Var_01    C16  C15  O14  C10   93.10  30.0  2
- 7LB  Var_02    C9   C8   C7   C6   174.07  30.0  2
- 7LB  Var_03    C8   C7   C6   C5   179.88   0.0  2
- 7LB  Var_04    C2   C5   C6   C7   124.43  30.0  2
- 7LB  Var_05    H41  C4   N3   C2   179.71  30.0  3
+ 7LB  CONST_01  C8   C9   C10  C11     0.00   0.0  0
+ 7LB  CONST_02  C8   C13  N12  C11     0.00   0.0  0
+ 7LB  CONST_03  N12  C11  C10  C9      0.00   0.0  0
+ 7LB  CONST_04  N12  C13  C8   C9      0.00   0.0  0
+ 7LB  CONST_05  C13  C8   C9   C10     0.00   0.0  0
+ 7LB  CONST_06  C13  N12  C11  C10     0.00   0.0  0
+ 7LB  CONST_07  C18  C17  C16  C15     0.00   0.0  0
+ 7LB  CONST_08  C18  C19  C20  C15     0.00   0.0  0
+ 7LB  CONST_09  C19  C18  C17  C16     0.00   0.0  0
+ 7LB  CONST_10  C19  C20  C15  C16     0.00   0.0  0
+ 7LB  CONST_11  C20  C19  C18  C17     0.00   0.0  0
+ 7LB  CONST_12  C20  C15  C16  C17     0.00   0.0  0
+ 7LB  CONST_13  C10  C9   C8   C7    180.00   0.0  0
+ 7LB  CONST_14  N12  C13  C8   C7    180.00   0.0  0
+ 7LB  CONST_15  O14  C10  C9   C8    180.00   0.0  0
+ 7LB  CONST_16  O14  C15  C16  C17   180.00   0.0  0
+ 7LB  CONST_17  O14  C15  C20  C19   180.00   0.0  0
+ 7LB  CONST_18  O14  C10  C11  N12   180.00   0.0  0
+ 7LB  CONST_19  H9   C9   C10  C11   180.00   0.0  0
+ 7LB  CONST_20  H9M  C13  N12  C11   180.00   0.0  0
+ 7LB  CONST_21  H9L  C11  C10  C9    180.00   0.0  0
+ 7LB  CONST_22  H17  C17  C16  C15   180.00   0.0  0
+ 7LB  CONST_23  H19  C19  C20  C15   180.00   0.0  0
+ 7LB  CONST_24  H18  C18  C17  C16   180.00   0.0  0
+ 7LB  CONST_25  H20  C20  C15  C16   180.00   0.0  0
+ 7LB  CONST_26  H16  C16  C17  C18   180.00   0.0  0
+ 7LB  Var_01    C16  C15  O14  C10    93.10  30.0  2
+ 7LB  Var_02    C9   C8   C7   C6    174.07  30.0  2
+ 7LB  Var_03    C8   C7   C6   C5    179.88   0.0  2
+ 7LB  Var_04    C2   C5   C6   C7    124.43  30.0  2
+ 7LB  Var_05    H41  C4   N3   C2    179.71  30.0  3
+ 7LB  Var_06    C15  O14  C10  C11   177.33  30.0  1
+ 7LB  Var_07    C15  O14  C10  C9     -2.88  30.0  1
+ 7LB  Var_08    C1   C2   N3   C4     68.95  30.0  2
+ 7LB  Var_09    C5   C2   N3   C4   -167.17  30.0  2
+ 7LB  Var_10    N3   C2   C5   C6     60.11  30.0  3
+ 7LB  Var_11    C1   C2   C5   C6   -173.50  30.0  3
+ 7LB  Var_12    H2   C2   N3   C4    -50.86  30.0  2
+ 7LB  Var_13    H32  N3   C2   C5     69.35  30.0  3
+ 7LB  Var_14    H11  C1   C2   C5     60.25  30.0  3
+ 7LB  Var_15    H12  C1   C2   C5   -179.62  30.0  3
+ 7LB  Var_16    H13  C1   C2   C5    -59.34  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

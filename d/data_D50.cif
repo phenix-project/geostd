@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- D50  D50  N-{(2S,3R)-3-amino-4-[4-(benzyloxy)phenyl]-2-hydroxybutanoyl}-L-leucine  ligand  59  30  .  2022-03-18  2022-03-18
+ D50  D50  N-{(2S,3R)-3-amino-4-[4-(benzyloxy)phenyl]-2-hydroxybutanoyl}-L-leucine  ligand  59  30  .  2022-03-18  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_D50
@@ -288,43 +289,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- D50  CONST_01  C13  C12  C11  C10     0.00   0.0  0
- D50  CONST_02  C13  C21  C22  C10     0.00   0.0  0
- D50  CONST_03  C21  C22  C10  C11     0.00   0.0  0
- D50  CONST_04  C21  C13  C12  C11     0.00   0.0  0
- D50  CONST_05  C22  C10  C11  C12     0.00   0.0  0
- D50  CONST_06  C22  C21  C13  C12     0.00   0.0  0
- D50  CONST_07  C18  C19  C20  C15     0.00   0.0  0
- D50  CONST_08  C18  C17  C16  C15     0.00   0.0  0
- D50  CONST_09  C19  C20  C15  C16     0.00   0.0  0
- D50  CONST_10  C19  C18  C17  C16     0.00   0.0  0
- D50  CONST_11  C20  C15  C16  C17     0.00   0.0  0
- D50  CONST_12  C20  C19  C18  C17     0.00   0.0  0
- D50  CONST_13  C11  C12  C13  O3    180.00   0.0  0
- D50  CONST_14  C22  C21  C13  O3    180.00   0.0  0
- D50  CONST_15  C12  C11  C10  C9    180.00   0.0  0
- D50  CONST_16  C21  C22  C10  C9    180.00   0.0  0
- D50  CONST_17  C19  C20  C15  C14   180.00   0.0  0
- D50  CONST_18  C17  C16  C15  C14   180.00   0.0  0
- D50  CONST_19  H12  C12  C11  C10   180.00   0.0  0
- D50  CONST_20  H21  C21  C22  C10   180.00   0.0  0
- D50  CONST_21  H22  C22  C10  C11   180.00   0.0  0
- D50  CONST_22  H11  C11  C12  C13   180.00   0.0  0
- D50  CONST_23  H19  C19  C20  C15   180.00   0.0  0
- D50  CONST_24  H17  C17  C16  C15   180.00   0.0  0
- D50  CONST_25  H20  C20  C15  C16   180.00   0.0  0
- D50  CONST_26  H18  C18  C17  C16   180.00   0.0  0
- D50  CONST_27  H16  C16  C17  C18   180.00   0.0  0
- D50  CONST_28  C5   N1   C6   O1      0.00   0.0  0
- D50  CONST_29  C7   C6   N1   C5    180.00   0.0  0
- D50  CONST_30  HN1  N1   C6   O1    180.00   0.0  0
- D50  Var_01    C20  C15  C14  O3    -84.30  30.0  2
- D50  Var_02    C11  C10  C9   C8     81.86  30.0  2
- D50  Var_03    C15  C14  O3   C13  -178.95  30.0  3
- D50  Var_04    C21  C13  O3   C14    -0.20  30.0  1
- D50  Var_05    C5   C4   C2   C1    176.89  30.0  3
- D50  Var_06    H3   C3   C2   C1     65.24  30.0  3
- D50  Var_07    H1   C1   C2   C3     58.83  30.0  3
+ D50  CONST_01  C13   C12  C11  C10     0.00   0.0  0
+ D50  CONST_02  C13   C21  C22  C10     0.00   0.0  0
+ D50  CONST_03  C21   C22  C10  C11     0.00   0.0  0
+ D50  CONST_04  C21   C13  C12  C11     0.00   0.0  0
+ D50  CONST_05  C22   C10  C11  C12     0.00   0.0  0
+ D50  CONST_06  C22   C21  C13  C12     0.00   0.0  0
+ D50  CONST_07  C18   C19  C20  C15     0.00   0.0  0
+ D50  CONST_08  C18   C17  C16  C15     0.00   0.0  0
+ D50  CONST_09  C19   C20  C15  C16     0.00   0.0  0
+ D50  CONST_10  C19   C18  C17  C16     0.00   0.0  0
+ D50  CONST_11  C20   C15  C16  C17     0.00   0.0  0
+ D50  CONST_12  C20   C19  C18  C17     0.00   0.0  0
+ D50  CONST_13  C11   C12  C13  O3    180.00   0.0  0
+ D50  CONST_14  C22   C21  C13  O3    180.00   0.0  0
+ D50  CONST_15  C12   C11  C10  C9    180.00   0.0  0
+ D50  CONST_16  C21   C22  C10  C9    180.00   0.0  0
+ D50  CONST_17  C19   C20  C15  C14   180.00   0.0  0
+ D50  CONST_18  C17   C16  C15  C14   180.00   0.0  0
+ D50  CONST_19  H12   C12  C11  C10   180.00   0.0  0
+ D50  CONST_20  H21   C21  C22  C10   180.00   0.0  0
+ D50  CONST_21  H22   C22  C10  C11   180.00   0.0  0
+ D50  CONST_22  H11   C11  C12  C13   180.00   0.0  0
+ D50  CONST_23  H19   C19  C20  C15   180.00   0.0  0
+ D50  CONST_24  H17   C17  C16  C15   180.00   0.0  0
+ D50  CONST_25  H20   C20  C15  C16   180.00   0.0  0
+ D50  CONST_26  H18   C18  C17  C16   180.00   0.0  0
+ D50  CONST_27  H16   C16  C17  C18   180.00   0.0  0
+ D50  CONST_28  C5    N1   C6   O1      0.00   0.0  0
+ D50  CONST_29  C7    C6   N1   C5    180.00   0.0  0
+ D50  CONST_30  HN1   N1   C6   O1    180.00   0.0  0
+ D50  Var_01    C20   C15  C14  O3    -84.30  30.0  2
+ D50  Var_02    C11   C10  C9   C8     81.86  30.0  2
+ D50  Var_03    C15   C14  O3   C13  -178.95  30.0  3
+ D50  Var_04    C21   C13  O3   C14    -0.20  30.0  1
+ D50  Var_05    C5    C4   C2   C1    176.89  30.0  3
+ D50  Var_06    H3    C3   C2   C1     65.24  30.0  3
+ D50  Var_07    H1    C1   C2   C3     58.83  30.0  3
+ D50  Var_08    C10   C9   C8   N2     60.10  30.0  3
+ D50  Var_09    C10   C9   C8   C7   -176.16  30.0  3
+ D50  Var_10    H8    C8   C9   C10   -59.21  30.0  2
+ D50  Var_11    C2    C4   C5   N1    -57.92  30.0  1
+ D50  Var_12    O4    C23  C5   N1    166.41  30.0  2
+ D50  Var_13    O5    C23  C5   N1    -15.14  30.0  2
+ D50  Var_14    O2    C7   C6   N1    162.87  30.0  3
+ D50  Var_15    C8    C7   C6   N1    -74.14  30.0  3
+ D50  Var_16    O2    C7   C6   O1    -15.47  30.0  3
+ D50  Var_17    C8    C7   C6   O1    107.53  30.0  3
+ D50  Var_18    C23   C5   C4   C2    178.18  30.0  3
+ D50  Var_19    O2    C7   C8   N2     56.91  30.0  1
+ D50  Var_20    C6    C7   C8   N2    -64.70  30.0  1
+ D50  Var_21    C9    C8   C7   O2    -69.99  30.0  3
+ D50  Var_22    C6    N1   C5   C4    159.05  30.0  3
+ D50  Var_23    O4    C23  C5   C4    -71.22  30.0  2
+ D50  Var_24    O5    C23  C5   C4    107.24  30.0  2
+ D50  Var_25    C6    C7   C8   C9    168.41  30.0  1
+ D50  Var_26    C6    N1   C5   C23   -78.53  30.0  3
+ D50  Var_27    H7    C7   C6   N1     44.40  30.0  3
+ D50  Var_28    H5    C5   C4   C2     59.74  30.0  3
+ D50  Var_29    HN2   N2   C8   C7    166.32  30.0  3
+ D50  Var_30    HN2A  N2   C8   C7    -76.96  30.0  3
+ D50  Var_31    HO2   O2   C7   C8   -101.26  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

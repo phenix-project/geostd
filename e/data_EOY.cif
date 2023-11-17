@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EOY  EOY  1-[2-chloro-5-(2-methylpropoxy)phenyl]-4-methyl-N-[(3s,5s,7s)-tricyclo[3.3.1.1~3,7~]decan-1-yl][1,2,4]triazolo[4,3-a]quinoxaline-8-carboxamide  ligand  73  39  .  2021-08-08  2021-08-08  
+ EOY  EOY  1-[2-chloro-5-(2-methylpropoxy)phenyl]-4-methyl-N-[(3s,5s,7s)-tricyclo[3.3.1.1~3,7~]decan-1-yl][1,2,4]triazolo[4,3-a]quinoxaline-8-carboxamide  ligand  73  39  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EOY
@@ -391,46 +392,98 @@ _chem_comp_tor.period
  EOY  CONST_24  C16  C17  C22  C21   180.00   0.0  0
  EOY  CONST_25  C19  C20  C21  C22     0.00   0.0  0
  EOY  CONST_26  C19  C18  C17  C22     0.00   0.0  0
- EOY  CONST_29  N10  C3   C2   C1    180.00   0.0  0
- EOY  CONST_32  C16  N10  C3   C2    180.00   0.0  0
- EOY  CONST_33  C9   N10  C3   C2      0.00   0.0  0
- EOY  CONST_34  C9   C8   N7   C2      0.00   0.0  0
- EOY  CONST_35  N15  C16  N10  C3    180.00   0.0  0
- EOY  CONST_36  N14  C9   N10  C3    180.00   0.0  0
- EOY  CONST_37  C16  C17  C18  C19   180.00   0.0  0
- EOY  CONST_38  C9   N14  N15  C16     0.00   0.0  0
- EOY  CONST_39  N14  C9   N10  C16     0.00   0.0  0
- EOY  CONST_40  N15  C16  N10  C9      0.00   0.0  0
- EOY  CONST_41  N10  C9   N14  N15     0.00   0.0  0
- EOY  CONST_42  N10  C16  N15  N14     0.00   0.0  0
- EOY  CONST_43  N7   C8   C9   N14   180.00   0.0  0
- EOY  CONST_44  N10  C3   C2   N7      0.00   0.0  0
- EOY  CONST_45  N10  C9   C8   N7      0.00   0.0  0
- EOY  CONST_46  O24  C19  C18  C17   180.00   0.0  0
- EOY  CONST_47  CL3  C22  C21  C20   180.00   0.0  0
- EOY  CONST_48  O24  C19  C20  C21   180.00   0.0  0
- EOY  CONST_49  C11  C5   C6   C1    180.00   0.0  0
- EOY  CONST_50  CL3  C22  C17  C18   180.00   0.0  0
- EOY  CONST_51  C12  C8   N7   C2    180.00   0.0  0
- EOY  CONST_52  C11  C5   C4   C3    180.00   0.0  0
- EOY  CONST_53  CL3  C22  C17  C16     0.00   0.0  0
- EOY  CONST_54  N10  C9   C8   C12   180.00   0.0  0
- EOY  CONST_55  N14  C9   C8   C12     0.00   0.0  0
- EOY  CONST_56  H2   C6   C5   C4    180.00   0.0  0
- EOY  CONST_57  H9   C1   C6   C5    180.00   0.0  0
- EOY  CONST_58  H1   C4   C5   C6    180.00   0.0  0
- EOY  CONST_59  H4   C21  C22  C17   180.00   0.0  0
- EOY  CONST_60  H10  C18  C19  C20   180.00   0.0  0
- EOY  CONST_61  H3   C20  C21  C22   180.00   0.0  0
- EOY  CONST_62  C30  N29  C11  C5    180.00   0.0  0
- EOY  CONST_63  O13  C11  N29  C30     0.00   0.0  0
- EOY  CONST_64  H34  N29  C11  C5      0.00   0.0  0
+ EOY  CONST_27  N10  C3   C2   C1    180.00   0.0  0
+ EOY  CONST_28  C16  N10  C3   C2    180.00   0.0  0
+ EOY  CONST_29  C9   N10  C3   C2      0.00   0.0  0
+ EOY  CONST_30  C9   C8   N7   C2      0.00   0.0  0
+ EOY  CONST_31  N15  C16  N10  C3    180.00   0.0  0
+ EOY  CONST_32  N14  C9   N10  C3    180.00   0.0  0
+ EOY  CONST_33  C16  C17  C18  C19   180.00   0.0  0
+ EOY  CONST_34  C9   N14  N15  C16     0.00   0.0  0
+ EOY  CONST_35  N14  C9   N10  C16     0.00   0.0  0
+ EOY  CONST_36  N15  C16  N10  C9      0.00   0.0  0
+ EOY  CONST_37  N10  C9   N14  N15     0.00   0.0  0
+ EOY  CONST_38  N10  C16  N15  N14     0.00   0.0  0
+ EOY  CONST_39  N7   C8   C9   N14   180.00   0.0  0
+ EOY  CONST_40  N10  C3   C2   N7      0.00   0.0  0
+ EOY  CONST_41  N10  C9   C8   N7      0.00   0.0  0
+ EOY  CONST_42  O24  C19  C18  C17   180.00   0.0  0
+ EOY  CONST_43  CL3  C22  C21  C20   180.00   0.0  0
+ EOY  CONST_44  O24  C19  C20  C21   180.00   0.0  0
+ EOY  CONST_45  C11  C5   C6   C1    180.00   0.0  0
+ EOY  CONST_46  CL3  C22  C17  C18   180.00   0.0  0
+ EOY  CONST_47  C12  C8   N7   C2    180.00   0.0  0
+ EOY  CONST_48  C11  C5   C4   C3    180.00   0.0  0
+ EOY  CONST_49  CL3  C22  C17  C16     0.00   0.0  0
+ EOY  CONST_50  N10  C9   C8   C12   180.00   0.0  0
+ EOY  CONST_51  N14  C9   C8   C12     0.00   0.0  0
+ EOY  CONST_52  H2   C6   C5   C4    180.00   0.0  0
+ EOY  CONST_53  H9   C1   C6   C5    180.00   0.0  0
+ EOY  CONST_54  H1   C4   C5   C6    180.00   0.0  0
+ EOY  CONST_55  H4   C21  C22  C17   180.00   0.0  0
+ EOY  CONST_56  H10  C18  C19  C20   180.00   0.0  0
+ EOY  CONST_57  H3   C20  C21  C22   180.00   0.0  0
+ EOY  CONST_58  C30  N29  C11  C5    180.00   0.0  0
+ EOY  CONST_59  O13  C11  N29  C30     0.00   0.0  0
+ EOY  CONST_60  H34  N29  C11  C5      0.00   0.0  0
  EOY  Var_01    O13  C11  C5   C4    -30.18  30.0  2
  EOY  Var_02    H26  C12  C8   C9   -178.49  30.0  2
  EOY  Var_03    H32  C25  O24  C19    58.08  30.0  3
  EOY  Var_04    O24  C25  C26  C28   178.68  30.0  3
  EOY  Var_05    H29  C27  C26  C28    64.04  30.0  3
  EOY  Var_06    H6   C28  C26  C27   -59.89  30.0  3
+ EOY  Var_07    N15  C16  C17  C22  -105.40  30.0  2
+ EOY  Var_08    N10  C16  C17  C22    74.45  30.0  2
+ EOY  Var_09    N15  C16  C17  C18    72.52  30.0  2
+ EOY  Var_10    N10  C16  C17  C18  -107.63  30.0  2
+ EOY  Var_11    C36  C35  C34  C33    59.95  30.0  1
+ EOY  Var_12    C30  C39  C34  C33   -59.51  30.0  3
+ EOY  Var_13    C36  C38  C32  C33   -59.93  30.0  1
+ EOY  Var_14    C30  C31  C32  C33    59.50  30.0  3
+ EOY  Var_15    C32  C38  C36  C35    60.35  30.0  1
+ EOY  Var_16    C30  C37  C36  C35   -60.13  30.0  3
+ EOY  Var_17    C32  C33  C34  C35   -59.89  30.0  1
+ EOY  Var_18    C30  C39  C34  C35    60.57  30.0  3
+ EOY  Var_19    C34  C35  C36  C38   -60.37  30.0  1
+ EOY  Var_20    C30  C37  C36  C38    59.96  30.0  3
+ EOY  Var_21    C34  C33  C32  C38    59.89  30.0  1
+ EOY  Var_22    C30  C31  C32  C38   -60.60  30.0  3
+ EOY  Var_23    C36  C35  C34  C39   -60.12  30.0  1
+ EOY  Var_24    C32  C33  C34  C39    60.36  30.0  1
+ EOY  Var_25    C36  C37  C30  C39    59.71  30.0  3
+ EOY  Var_26    C32  C31  C30  C39   -58.82  30.0  3
+ EOY  Var_27    C36  C38  C32  C31    60.15  30.0  1
+ EOY  Var_28    C34  C33  C32  C31   -60.37  30.0  1
+ EOY  Var_29    C36  C37  C30  C31   -59.53  30.0  3
+ EOY  Var_30    C34  C39  C30  C31    58.83  30.0  3
+ EOY  Var_31    C34  C35  C36  C37    59.58  30.0  1
+ EOY  Var_32    C32  C38  C36  C37   -59.53  30.0  1
+ EOY  Var_33    C34  C39  C30  C37   -59.56  30.0  3
+ EOY  Var_34    C32  C31  C30  C37    59.51  30.0  3
+ EOY  Var_35    N29  C30  C39  C34  -176.42  30.0  3
+ EOY  Var_36    N29  C30  C31  C32   176.83  30.0  3
+ EOY  Var_37    N29  C30  C37  C36   179.65  30.0  3
+ EOY  Var_38    H13  C35  C34  C33  -178.82  30.0  1
+ EOY  Var_39    H14  C35  C34  C33   -61.25  30.0  1
+ EOY  Var_40    H17  C39  C34  C33    62.01  30.0  3
+ EOY  Var_41    H18  C39  C34  C33   179.99  30.0  3
+ EOY  Var_42    H15  C38  C32  C33    61.22  30.0  1
+ EOY  Var_43    H16  C38  C32  C33   178.81  30.0  1
+ EOY  Var_44    H19  C31  C32  C33  -180.00  30.0  3
+ EOY  Var_45    H20  C31  C32  C33   -61.91  30.0  3
+ EOY  Var_46    H21  C37  C36  C35    60.97  30.0  3
+ EOY  Var_47    H22  C37  C36  C35   178.66  30.0  3
+ EOY  Var_48    H11  C33  C34  C35    61.23  30.0  1
+ EOY  Var_49    H12  C33  C34  C35   178.58  30.0  1
+ EOY  Var_50    H25  C36  C35  C34   178.85  30.0  1
+ EOY  Var_51    H24  C32  C33  C34  -179.76  30.0  1
+ EOY  Var_52    H23  C34  C33  C32   179.73  30.0  1
+ EOY  Var_53    C25  O24  C19  C20     3.94  30.0  2
+ EOY  Var_54    C25  O24  C19  C18  -176.28  30.0  2
+ EOY  Var_55    C37  C30  N29  C11  -178.47  30.0  1
+ EOY  Var_56    C39  C30  N29  C11   -60.47  30.0  1
+ EOY  Var_57    C31  C30  N29  C11    63.03  30.0  1
+ EOY  Var_58    H34  N29  C30  C39   123.13  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ELP  ELP  '[(1R)-1-{[(1E)-{3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methylidene]amino}-1-phenylethyl]phosphonic acid'  ligand  48  28  .  2022-11-17  2022-11-17
+ ELP  ELP  '[(1R)-1-{[(1E)-{3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methylidene]amino}-1-phenylethyl]phosphonic acid'  ligand  48  28  .  2022-11-17  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_ELP
@@ -242,38 +243,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ELP  CONST_01  C6    N1   C2   C3     0.00   0.0  0
- ELP  CONST_02  C6    C5   C4   C3     0.00   0.0  0
- ELP  CONST_03  C5    C4   C3   C2     0.00   0.0  0
- ELP  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- ELP  CONST_05  C4    C3   C2   N1     0.00   0.0  0
- ELP  CONST_06  C4    C5   C6   N1     0.00   0.0  0
- ELP  CONST_07  CD    CG2  CB2  CA2    0.00   0.0  0
- ELP  CONST_08  CD    CG1  CB1  CA2    0.00   0.0  0
- ELP  CONST_09  CG1   CB1  CA2  CB2    0.00   0.0  0
- ELP  CONST_10  CG1   CD   CG2  CB2    0.00   0.0  0
- ELP  CONST_11  CB1   CA2  CB2  CG2    0.00   0.0  0
- ELP  CONST_12  CB1   CG1  CD   CG2    0.00   0.0  0
- ELP  CONST_13  C5A   C5   C4   C3   180.00   0.0  0
- ELP  CONST_14  C4A   C4   C3   C2   180.00   0.0  0
- ELP  CONST_15  O1    C3   C2   N1   180.00   0.0  0
- ELP  CONST_16  C5A   C5   C6   N1   180.00   0.0  0
- ELP  CONST_17  C2A   C2   N1   C6   180.00   0.0  0
- ELP  CONST_18  C4A   C4   C5   C6   180.00   0.0  0
- ELP  CONST_19  C2A   C2   C3   C4   180.00   0.0  0
- ELP  CONST_20  CG2   CB2  CA2  C    180.00   0.0  0
- ELP  CONST_21  CG1   CB1  CA2  C    180.00   0.0  0
- ELP  CONST_22  C5    C4   C3   O1   180.00   0.0  0
- ELP  CONST_23  HC6   C6   N1   C2   180.00   0.0  0
- ELP  CONST_24  HG2   CG2  CB2  CA2  180.00   0.0  0
- ELP  CONST_25  HG1   CG1  CB1  CA2  180.00   0.0  0
- ELP  CONST_26  HB1   CB1  CA2  CB2  180.00   0.0  0
- ELP  CONST_27  HCD   CD   CG2  CB2  180.00   0.0  0
- ELP  CONST_28  HB2   CB2  CG2  CD   180.00   0.0  0
- ELP  Var_01    N2    C4A  C4   C3    -2.69  30.0  2
- ELP  Var_02    O2    C5A  C5   C6    -3.11  30.0  2
- ELP  Var_03    H2A1  C2A  C2   C3   -61.52  30.0  2
- ELP  Var_04    O3    P1   O2   C5A   43.58  30.0  3
+ ELP  CONST_01  C6    N1   C2   C3      0.00   0.0  0
+ ELP  CONST_02  C6    C5   C4   C3      0.00   0.0  0
+ ELP  CONST_03  C5    C4   C3   C2      0.00   0.0  0
+ ELP  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ ELP  CONST_05  C4    C3   C2   N1      0.00   0.0  0
+ ELP  CONST_06  C4    C5   C6   N1      0.00   0.0  0
+ ELP  CONST_07  CD    CG2  CB2  CA2     0.00   0.0  0
+ ELP  CONST_08  CD    CG1  CB1  CA2     0.00   0.0  0
+ ELP  CONST_09  CG1   CB1  CA2  CB2     0.00   0.0  0
+ ELP  CONST_10  CG1   CD   CG2  CB2     0.00   0.0  0
+ ELP  CONST_11  CB1   CA2  CB2  CG2     0.00   0.0  0
+ ELP  CONST_12  CB1   CG1  CD   CG2     0.00   0.0  0
+ ELP  CONST_13  C5A   C5   C4   C3    180.00   0.0  0
+ ELP  CONST_14  C4A   C4   C3   C2    180.00   0.0  0
+ ELP  CONST_15  O1    C3   C2   N1    180.00   0.0  0
+ ELP  CONST_16  C5A   C5   C6   N1    180.00   0.0  0
+ ELP  CONST_17  C2A   C2   N1   C6    180.00   0.0  0
+ ELP  CONST_18  C4A   C4   C5   C6    180.00   0.0  0
+ ELP  CONST_19  C2A   C2   C3   C4    180.00   0.0  0
+ ELP  CONST_20  CG2   CB2  CA2  C     180.00   0.0  0
+ ELP  CONST_21  CG1   CB1  CA2  C     180.00   0.0  0
+ ELP  CONST_22  C5    C4   C3   O1    180.00   0.0  0
+ ELP  CONST_23  HC6   C6   N1   C2    180.00   0.0  0
+ ELP  CONST_24  HG2   CG2  CB2  CA2   180.00   0.0  0
+ ELP  CONST_25  HG1   CG1  CB1  CA2   180.00   0.0  0
+ ELP  CONST_26  HB1   CB1  CA2  CB2   180.00   0.0  0
+ ELP  CONST_27  HCD   CD   CG2  CB2   180.00   0.0  0
+ ELP  CONST_28  HB2   CB2  CG2  CD    180.00   0.0  0
+ ELP  Var_01    N2    C4A  C4   C3     -2.69  30.0  2
+ ELP  Var_02    O2    C5A  C5   C6     -3.11  30.0  2
+ ELP  Var_03    H2A1  C2A  C2   C3    -61.52  30.0  2
+ ELP  Var_04    O3    P1   O2   C5A    43.58  30.0  3
+ ELP  Var_05    CB2   CA2  C    N2   -171.25  30.0  2
+ ELP  Var_06    CB1   CA2  C    N2      9.74  30.0  2
+ ELP  Var_07    CB2   CA2  C    CA1   -42.41  30.0  2
+ ELP  Var_08    CB1   CA2  C    CA1   138.59  30.0  2
+ ELP  Var_09    CB2   CA2  C    P2     79.44  30.0  2
+ ELP  Var_10    CB1   CA2  C    P2    -99.57  30.0  2
+ ELP  Var_11    HO1   O1   C3   C2    179.72  30.0  2
+ ELP  Var_12    C     N2   C4A  C4    177.00   0.0  2
+ ELP  Var_13    CA2   C    N2   C4A   132.16  30.0  3
+ ELP  Var_14    O6    P2   C    CA2   172.62  30.0  3
+ ELP  Var_15    O7    P2   C    CA2   -60.90  30.0  3
+ ELP  Var_16    O8    P2   C    CA2    51.13  30.0  3
+ ELP  Var_17    P1    O2   C5A  C5    171.12  30.0  3
+ ELP  Var_18    HA11  CA1  C    CA2   -63.14  30.0  3
+ ELP  Var_19    HA12  CA1  C    CA2    56.45  30.0  3
+ ELP  Var_20    HA13  CA1  C    CA2   176.03  30.0  3
+ ELP  Var_21    CA1   C    N2   C4A     4.72  30.0  3
+ ELP  Var_22    P2    C    N2   C4A  -112.50  30.0  3
+ ELP  Var_23    O6    P2   C    N2     57.60  30.0  3
+ ELP  Var_24    O7    P2   C    N2   -175.92  30.0  3
+ ELP  Var_25    O8    P2   C    N2    -63.89  30.0  3
+ ELP  Var_26    O6    P2   C    CA1   -63.70  30.0  3
+ ELP  Var_27    O7    P2   C    CA1    62.78  30.0  3
+ ELP  Var_28    O8    P2   C    CA1   174.81  30.0  3
+ ELP  Var_29    HO7   O7   P2   C    -161.50  30.0  3
+ ELP  Var_30    HO8   O8   P2   C     -60.75  30.0  3
+ ELP  Var_31    HO4   O4   P1   O2   -174.79  30.0  3
+ ELP  Var_32    HO5   O5   P1   O2    -57.40  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

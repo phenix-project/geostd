@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MDB  MDB  N-[(2-methoxyphenyl)carbamoyl]-3-methyl-L-valyl-N~2~-(cyclopentylmethyl)-N-hydroxyglycinamide  ligand  65  31  .  2022-03-22  2022-03-22
+ MDB  MDB  N-[(2-methoxyphenyl)carbamoyl]-3-methyl-L-valyl-N~2~-(cyclopentylmethyl)-N-hydroxyglycinamide  ligand  65  31  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_MDB
@@ -315,41 +316,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MDB  CONST_01  CAM  CAL  CAK  CAJ    0.00   0.0  0
- MDB  CONST_02  CAM  CAN  CAP  CAJ    0.00   0.0  0
- MDB  CONST_03  CAN  CAP  CAJ  CAK    0.00   0.0  0
- MDB  CONST_04  CAN  CAM  CAL  CAK    0.00   0.0  0
- MDB  CONST_05  CAP  CAJ  CAK  CAL    0.00   0.0  0
- MDB  CONST_06  CAP  CAN  CAM  CAL    0.00   0.0  0
- MDB  CONST_07  CAL  CAK  CAJ  NAI  180.00   0.0  0
- MDB  CONST_08  CAN  CAP  CAJ  NAI  180.00   0.0  0
- MDB  CONST_09  OAP  CAP  CAJ  CAK  180.00   0.0  0
- MDB  CONST_10  OAP  CAP  CAN  CAM  180.00   0.0  0
- MDB  CONST_11  HAL  CAL  CAK  CAJ  180.00   0.0  0
- MDB  CONST_12  HAN  CAN  CAP  CAJ  180.00   0.0  0
- MDB  CONST_13  HAM  CAM  CAL  CAK  180.00   0.0  0
- MDB  CONST_14  HAK  CAK  CAL  CAM  180.00   0.0  0
- MDB  CONST_18  CAJ  NAI  CAG  OAH    0.00   0.0  0
- MDB  CONST_19  CAJ  NAI  CAG  N    180.00   0.0  0
- MDB  CONST_20  CAT  NAS  C    O    180.00   0.0  0
- MDB  CONST_21  CAY  NAS  C    O      0.00   0.0  0
- MDB  CONST_22  CAT  NAS  C    CA     0.00   0.0  0
- MDB  CONST_23  CAY  NAS  C    CA   180.00   0.0  0
- MDB  CONST_24  OAH  CAG  N    CA     0.00   0.0  0
- MDB  CONST_25  OAX  NAW  CAU  CAT  180.00   0.0  0
- MDB  CONST_26  OAX  NAW  CAU  OAV    0.00   0.0  0
- MDB  CONST_27  NAI  CAG  N    CA   180.00   0.0  0
- MDB  CONST_28  HN   N    CAG  OAH  180.00   0.0  0
- MDB  Var_01    CBC  CBB  CBA  CAZ  -12.39  30.0  1
- MDB  Var_02    CBB  CBC  CBD  CAZ   35.37  30.0  1
- MDB  Var_03    CBD  CBC  CBB  CBA  -14.15  30.0  1
- MDB  Var_04    CAZ  CAY  NAS  C     98.37  30.0  3
- MDB  Var_05    HAQ  CAQ  OAP  CAP   60.39  30.0  3
- MDB  Var_06    CAU  CAT  NAS  C     81.53  30.0  3
- MDB  Var_07    OAV  CAU  CAT  NAS   42.00  30.0  3
- MDB  Var_08    HAA  CAA  CB   CA    53.93  30.0  3
- MDB  Var_09    HAC  CAC  CB   CA    63.57  30.0  3
- MDB  Var_10    HAD  CAD  CB   CA    63.81  30.0  3
+ MDB  CONST_01  CAM   CAL  CAK  CAJ     0.00   0.0  0
+ MDB  CONST_02  CAM   CAN  CAP  CAJ     0.00   0.0  0
+ MDB  CONST_03  CAN   CAP  CAJ  CAK     0.00   0.0  0
+ MDB  CONST_04  CAN   CAM  CAL  CAK     0.00   0.0  0
+ MDB  CONST_05  CAP   CAJ  CAK  CAL     0.00   0.0  0
+ MDB  CONST_06  CAP   CAN  CAM  CAL     0.00   0.0  0
+ MDB  CONST_07  CAL   CAK  CAJ  NAI   180.00   0.0  0
+ MDB  CONST_08  CAN   CAP  CAJ  NAI   180.00   0.0  0
+ MDB  CONST_09  OAP   CAP  CAJ  CAK   180.00   0.0  0
+ MDB  CONST_10  OAP   CAP  CAN  CAM   180.00   0.0  0
+ MDB  CONST_11  HAL   CAL  CAK  CAJ   180.00   0.0  0
+ MDB  CONST_12  HAN   CAN  CAP  CAJ   180.00   0.0  0
+ MDB  CONST_13  HAM   CAM  CAL  CAK   180.00   0.0  0
+ MDB  CONST_14  HAK   CAK  CAL  CAM   180.00   0.0  0
+ MDB  CONST_15  CAJ   NAI  CAG  OAH     0.00   0.0  0
+ MDB  CONST_16  CAJ   NAI  CAG  N     180.00   0.0  0
+ MDB  CONST_17  CAT   NAS  C    O     180.00   0.0  0
+ MDB  CONST_18  CAY   NAS  C    O       0.00   0.0  0
+ MDB  CONST_19  CAT   NAS  C    CA      0.00   0.0  0
+ MDB  CONST_20  CAY   NAS  C    CA    180.00   0.0  0
+ MDB  CONST_21  OAH   CAG  N    CA      0.00   0.0  0
+ MDB  CONST_22  OAX   NAW  CAU  CAT   180.00   0.0  0
+ MDB  CONST_23  OAX   NAW  CAU  OAV     0.00   0.0  0
+ MDB  CONST_24  NAI   CAG  N    CA    180.00   0.0  0
+ MDB  CONST_25  HN    N    CAG  OAH   180.00   0.0  0
+ MDB  Var_01    CBC   CBB  CBA  CAZ   -12.39  30.0  1
+ MDB  Var_02    CBB   CBC  CBD  CAZ    35.37  30.0  1
+ MDB  Var_03    CBD   CBC  CBB  CBA   -14.15  30.0  1
+ MDB  Var_04    CAZ   CAY  NAS  C      98.37  30.0  3
+ MDB  Var_05    HAQ   CAQ  OAP  CAP    60.39  30.0  3
+ MDB  Var_06    CAU   CAT  NAS  C      81.53  30.0  3
+ MDB  Var_07    OAV   CAU  CAT  NAS    42.00  30.0  3
+ MDB  Var_08    HAA   CAA  CB   CA     53.93  30.0  3
+ MDB  Var_09    HAC   CAC  CB   CA     63.57  30.0  3
+ MDB  Var_10    HAD   CAD  CB   CA     63.81  30.0  3
+ MDB  Var_11    CBC   CBD  CAZ  CBA   -43.01  30.0  1
+ MDB  Var_12    CBD   CAZ  CBA  CBB    34.20  30.0  1
+ MDB  Var_13    CBB   CBA  CAZ  CAY   160.00  30.0  1
+ MDB  Var_14    CBC   CBD  CAZ  CAY  -166.34  30.0  1
+ MDB  Var_15    HBD   CBD  CAZ  CBA    74.49  30.0  1
+ MDB  Var_16    HBDA  CBD  CAZ  CBA  -165.37  30.0  1
+ MDB  Var_17    HAZ   CAZ  CBA  CBB   -79.69  30.0  1
+ MDB  Var_18    CAQ   OAP  CAP  CAJ  -177.47  30.0  2
+ MDB  Var_19    CAQ   OAP  CAP  CAN     2.06  30.0  2
+ MDB  Var_20    CBA   CAZ  CAY  NAS   175.64  30.0  3
+ MDB  Var_21    CBD   CAZ  CAY  NAS   -66.24  30.0  3
+ MDB  Var_22    HAY   CAY  CAZ  CBA    55.47  30.0  2
+ MDB  Var_23    HAYA  CAY  CAZ  CBA   -61.92  30.0  2
+ MDB  Var_24    CAG   N    CA   C    -119.42  30.0  2
+ MDB  Var_25    CAA   CB   CA   C      52.09  30.0  3
+ MDB  Var_26    CAC   CB   CA   C     169.57  30.0  3
+ MDB  Var_27    CAD   CB   CA   C     -70.82  30.0  3
+ MDB  Var_28    O     C    CA   N     -77.91  30.0  2
+ MDB  Var_29    NAS   C    CA   N     100.82  30.0  2
+ MDB  Var_30    CAA   CB   CA   N     176.25  30.0  3
+ MDB  Var_31    CAC   CB   CA   N     -66.26  30.0  3
+ MDB  Var_32    CAD   CB   CA   N      53.35  30.0  3
+ MDB  Var_33    CB    CA   C    O      49.31  30.0  3
+ MDB  Var_34    NAS   C    CA   CB   -131.96  30.0  2
+ MDB  Var_35    CAG   N    CA   CB    112.94  30.0  2
+ MDB  Var_36    HA    CA   C    O     166.90  30.0  3
+ MDB  Var_37    HOAX  OAX  NAW  CAU   101.46  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

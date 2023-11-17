@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QM2  QM2  '2-[6-(4-cyclopropylphenyl)thieno[3,2-d]pyrimidin-4-yl]sulfanylethanoic acid'  ligand  37  23  .  2022-11-17  2022-11-17
+ QM2  QM2  '2-[6-(4-cyclopropylphenyl)thieno[3,2-d]pyrimidin-4-yl]sulfanylethanoic acid'  ligand  37  23  .  2022-11-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QM2
@@ -210,50 +211,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QM2  CONST_01  C4   N    C16  N1     0.00   0.0  0
- QM2  CONST_02  C4   C3   C2   N1     0.00   0.0  0
- QM2  CONST_03  S1   C3   C2   N1   180.00   0.0  0
- QM2  CONST_04  N    C16  N1   C2     0.00   0.0  0
- QM2  CONST_05  N    C4   C3   C2     0.00   0.0  0
- QM2  CONST_06  C5   C4   C3   C2   180.00   0.0  0
- QM2  CONST_07  C6   S1   C3   C2   180.00   0.0  0
- QM2  CONST_08  C7   C6   C5   C4   180.00   0.0  0
- QM2  CONST_09  S1   C6   C5   C4     0.00   0.0  0
- QM2  CONST_10  C6   S1   C3   C4     0.00   0.0  0
- QM2  CONST_11  C16  N    C4   C5   180.00   0.0  0
- QM2  CONST_12  S1   C3   C4   C5     0.00   0.0  0
- QM2  CONST_15  C3   S1   C6   C5     0.00   0.0  0
- QM2  CONST_16  N    C4   C5   C6   180.00   0.0  0
- QM2  CONST_17  C3   C4   C5   C6     0.00   0.0  0
- QM2  CONST_18  C9   C8   C7   C6   180.00   0.0  0
- QM2  CONST_19  C14  C15  C7   C6   180.00   0.0  0
- QM2  CONST_20  C3   C4   N    C16    0.00   0.0  0
- QM2  CONST_21  C3   C2   N1   C16    0.00   0.0  0
- QM2  CONST_22  S1   C3   C4   N    180.00   0.0  0
- QM2  CONST_25  C7   C6   S1   C3   180.00   0.0  0
- QM2  CONST_26  C10  C9   C8   C7     0.00   0.0  0
- QM2  CONST_27  C10  C14  C15  C7     0.00   0.0  0
- QM2  CONST_28  C9   C8   C7   C15    0.00   0.0  0
- QM2  CONST_29  C9   C10  C14  C15    0.00   0.0  0
- QM2  CONST_30  C8   C9   C10  C14    0.00   0.0  0
- QM2  CONST_31  C8   C7   C15  C14    0.00   0.0  0
- QM2  CONST_32  C11  C10  C14  C15  180.00   0.0  0
- QM2  CONST_33  C11  C10  C9   C8   180.00   0.0  0
- QM2  CONST_34  S    C2   C3   C4   180.00   0.0  0
- QM2  CONST_35  C16  N1   C2   S    180.00   0.0  0
- QM2  CONST_36  S1   C3   C2   S      0.00   0.0  0
- QM2  CONST_37  H5   C16  N1   C2   180.00   0.0  0
- QM2  CONST_38  H9   C8   C7   C6     0.00   0.0  0
- QM2  CONST_39  H6   C15  C7   C6     0.00   0.0  0
- QM2  CONST_40  H1   C5   C4   N      0.00   0.0  0
- QM2  CONST_41  H8   C9   C8   C7   180.00   0.0  0
- QM2  CONST_42  H7   C14  C15  C7   180.00   0.0  0
- QM2  CONST_43  H2   O    C    O1     0.00   0.0  0
- QM2  Var_01    C12  C11  C10  C14  -37.61  30.0  2
- QM2  Var_02    C13  C12  C11  C10  109.90  30.0  1
- QM2  Var_03    C3   C2   S    C1   178.22  30.0  1
- QM2  Var_04    C    C1   S    C2   178.31  30.0  1
- QM2  Var_05    S    C1   C    O1   169.52  30.0  2
+ QM2  CONST_01  C4   N    C16  N1      0.00   0.0  0
+ QM2  CONST_02  C4   C3   C2   N1      0.00   0.0  0
+ QM2  CONST_03  S1   C3   C2   N1    180.00   0.0  0
+ QM2  CONST_04  N    C16  N1   C2      0.00   0.0  0
+ QM2  CONST_05  N    C4   C3   C2      0.00   0.0  0
+ QM2  CONST_06  C5   C4   C3   C2    180.00   0.0  0
+ QM2  CONST_07  C6   S1   C3   C2    180.00   0.0  0
+ QM2  CONST_08  C7   C6   C5   C4    180.00   0.0  0
+ QM2  CONST_09  S1   C6   C5   C4      0.00   0.0  0
+ QM2  CONST_10  C6   S1   C3   C4      0.00   0.0  0
+ QM2  CONST_11  C16  N    C4   C5    180.00   0.0  0
+ QM2  CONST_12  S1   C3   C4   C5      0.00   0.0  0
+ QM2  CONST_13  C3   S1   C6   C5      0.00   0.0  0
+ QM2  CONST_14  N    C4   C5   C6    180.00   0.0  0
+ QM2  CONST_15  C3   C4   C5   C6      0.00   0.0  0
+ QM2  CONST_16  C9   C8   C7   C6    180.00   0.0  0
+ QM2  CONST_17  C14  C15  C7   C6    180.00   0.0  0
+ QM2  CONST_18  C3   C4   N    C16     0.00   0.0  0
+ QM2  CONST_19  C3   C2   N1   C16     0.00   0.0  0
+ QM2  CONST_20  S1   C3   C4   N     180.00   0.0  0
+ QM2  CONST_21  C7   C6   S1   C3    180.00   0.0  0
+ QM2  CONST_22  C10  C9   C8   C7      0.00   0.0  0
+ QM2  CONST_23  C10  C14  C15  C7      0.00   0.0  0
+ QM2  CONST_24  C9   C8   C7   C15     0.00   0.0  0
+ QM2  CONST_25  C9   C10  C14  C15     0.00   0.0  0
+ QM2  CONST_26  C8   C9   C10  C14     0.00   0.0  0
+ QM2  CONST_27  C8   C7   C15  C14     0.00   0.0  0
+ QM2  CONST_28  C11  C10  C14  C15   180.00   0.0  0
+ QM2  CONST_29  C11  C10  C9   C8    180.00   0.0  0
+ QM2  CONST_30  S    C2   C3   C4    180.00   0.0  0
+ QM2  CONST_31  C16  N1   C2   S     180.00   0.0  0
+ QM2  CONST_32  S1   C3   C2   S       0.00   0.0  0
+ QM2  CONST_33  H5   C16  N1   C2    180.00   0.0  0
+ QM2  CONST_34  H9   C8   C7   C6      0.00   0.0  0
+ QM2  CONST_35  H6   C15  C7   C6      0.00   0.0  0
+ QM2  CONST_36  H1   C5   C4   N       0.00   0.0  0
+ QM2  CONST_37  H8   C9   C8   C7    180.00   0.0  0
+ QM2  CONST_38  H7   C14  C15  C7    180.00   0.0  0
+ QM2  CONST_39  H2   O    C    O1      0.00   0.0  0
+ QM2  Var_01    C12  C11  C10  C14   -37.61  30.0  2
+ QM2  Var_02    C13  C12  C11  C10   109.90  30.0  1
+ QM2  Var_03    C3   C2   S    C1    178.22  30.0  1
+ QM2  Var_04    C    C1   S    C2    178.31  30.0  1
+ QM2  Var_05    S    C1   C    O1    169.52  30.0  2
+ QM2  Var_06    C8   C7   C6   C5     15.91  30.0  2
+ QM2  Var_07    C15  C7   C6   C5   -163.97  30.0  2
+ QM2  Var_08    C8   C7   C6   S1   -163.37  30.0  2
+ QM2  Var_09    C15  C7   C6   S1     16.76  30.0  2
+ QM2  Var_10    H11  C13  C11  C10    -1.34  30.0  1
+ QM2  Var_11    H12  C13  C11  C10   141.08  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

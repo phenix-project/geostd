@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QQY  QQY  '[(2R,3aR,4R,6R,6aR)-6-(6-amino-9H-purin-9-yl)-2-oxido-2-sulfanyltetrahydrofuro[3,4-d][1,3,2]dioxaphosphol-4-yl]methanol'  ligand  34  22  .  2021-08-20  2021-08-20  
+ QQY  QQY  '[(2R,3aR,4R,6R,6aR)-6-(6-amino-9H-purin-9-yl)-2-oxido-2-sulfanyltetrahydrofuro[3,4-d][1,3,2]dioxaphosphol-4-yl]methanol'  ligand  34  22  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QQY
@@ -201,34 +202,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QQY  CONST_01  C5    N7  C8   N9     0.00   0.0  0
- QQY  CONST_02  N7    C5  C4   N9     0.00   0.0  0
- QQY  CONST_03  C6    C5  C4   N9   180.00   0.0  0
- QQY  CONST_04  C2    N3  C4   N9   180.00   0.0  0
- QQY  CONST_05  C5    C4  N9   C8     0.00   0.0  0
- QQY  CONST_06  N3    C4  N9   C8   180.00   0.0  0
- QQY  CONST_07  C6    C5  N7   C8   180.00   0.0  0
- QQY  CONST_08  C4    C5  N7   C8     0.00   0.0  0
- QQY  CONST_09  C4    N9  C8   N7     0.00   0.0  0
- QQY  CONST_10  N1    C6  C5   N7   180.00   0.0  0
- QQY  CONST_11  N3    C4  C5   N7   180.00   0.0  0
- QQY  CONST_12  C2    N1  C6   C5     0.00   0.0  0
- QQY  CONST_13  C2    N3  C4   C5     0.00   0.0  0
- QQY  CONST_14  N3    C4  C5   C6     0.00   0.0  0
- QQY  CONST_15  N3    C2  N1   C6     0.00   0.0  0
- QQY  CONST_16  C4    C5  C6   N1     0.00   0.0  0
- QQY  CONST_17  C4    N3  C2   N1     0.00   0.0  0
- QQY  CONST_18  N7    C8  N9   C1'  180.00   0.0  0
- QQY  CONST_19  C5    C4  N9   C1'  180.00   0.0  0
- QQY  CONST_20  N3    C4  N9   C1'    0.00   0.0  0
- QQY  CONST_21  N6    C6  C5   N7     0.00   0.0  0
- QQY  CONST_22  C4    C5  C6   N6   180.00   0.0  0
- QQY  CONST_23  C2    N1  C6   N6   180.00   0.0  0
- QQY  CONST_24  H8    C8  N9   C1'    0.00   0.0  0
- QQY  CONST_25  H2    C2  N1   C6   180.00   0.0  0
- QQY  CONST_26  H61N  N6  C6   C5     0.00   0.0  0
- QQY  CONST_27  H62N  N6  C6   C5   180.00   0.0  0
- QQY  Var_01    O2'   P   O3'  C3'    4.83  30.0  1
+ QQY  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ QQY  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ QQY  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ QQY  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ QQY  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ QQY  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ QQY  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ QQY  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ QQY  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ QQY  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ QQY  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ QQY  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ QQY  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ QQY  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ QQY  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ QQY  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ QQY  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ QQY  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ QQY  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ QQY  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ QQY  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ QQY  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ QQY  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ QQY  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ QQY  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ QQY  CONST_26  H61N  N6   C6   C5      0.00   0.0  0
+ QQY  CONST_27  H62N  N6   C6   C5    180.00   0.0  0
+ QQY  Var_01    O2'   P    O3'  C3'     4.83  30.0  1
+ QQY  Var_02    C2'   C1'  O4'  C4'   -21.21  30.0  1
+ QQY  Var_03    N9    C1'  O4'  C4'  -143.09  30.0  1
+ QQY  Var_04    P     O3'  C3'  C4'    95.61  30.0  1
+ QQY  Var_05    O2'   C2'  C3'  C4'   -96.08  30.0  1
+ QQY  Var_06    C1'   C2'  C3'  C4'    20.44  30.0  1
+ QQY  Var_07    O3'   C3'  C4'  O4'  -148.99  30.0  1
+ QQY  Var_08    C2'   C3'  C4'  O4'   -32.93  30.0  1
+ QQY  Var_09    C3'   C2'  C1'  O4'    -1.07  30.0  1
+ QQY  Var_10    O2'   C2'  C1'  O4'   111.81  30.0  1
+ QQY  Var_11    C8    N9   C1'  O4'    44.42  30.0  2
+ QQY  Var_12    C4    N9   C1'  O4'  -138.34  30.0  2
+ QQY  Var_13    C1'   O4'  C4'  C3'    34.54  30.0  1
+ QQY  Var_14    P     O2'  C2'  C3'   -21.66  30.0  1
+ QQY  Var_15    N9    C1'  C2'  C3'   117.36  30.0  1
+ QQY  Var_16    O2'   C2'  C3'  O3'    24.10  30.0  1
+ QQY  Var_17    C1'   C2'  C3'  O3'   140.61  30.0  1
+ QQY  Var_18    C2'   O2'  P    O3'    11.02  30.0  1
+ QQY  Var_19    P     O3'  C3'  C2'   -17.69  30.0  1
+ QQY  Var_20    C8    N9   C1'  C2'   -73.39  30.0  2
+ QQY  Var_21    C4    N9   C1'  C2'   103.85  30.0  2
+ QQY  Var_22    N9    C1'  C2'  O2'  -129.76  30.0  1
+ QQY  Var_23    P     O2'  C2'  C1'  -133.62  30.0  1
+ QQY  Var_24    C2'   O2'  P    OP3  -111.68  30.0  1
+ QQY  Var_25    C2'   O2'  P    S1P   122.32  30.0  1
+ QQY  Var_26    C1'   O4'  C4'  C5'   155.84  30.0  1
+ QQY  Var_27    O3'   C3'  C4'  C5'    91.79  30.0  1
+ QQY  Var_28    C2'   C3'  C4'  C5'  -152.15  30.0  1
+ QQY  Var_29    H1'   C1'  O4'  C4'    99.37  30.0  1
+ QQY  Var_30    H2'   C2'  C3'  C4'   143.85  30.0  1
+ QQY  Var_31    H3'   C3'  C4'  O4'    87.85  30.0  1
+ QQY  Var_32    H4'   C4'  C3'  O3'   -30.88  30.0  1
+ QQY  Var_33    O4'   C4'  C5'  O5'    65.81  30.0  3
+ QQY  Var_34    C3'   C4'  C5'  O5'  -178.67  30.0  3
+ QQY  Var_35    H5'1  C5'  C4'  O4'   -56.98  30.0  1
+ QQY  Var_36    H5'2  C5'  C4'  O4'  -172.52  30.0  1
+ QQY  Var_37    H1P   S1P  P    O3'   -98.30  30.0  3
+ QQY  Var_38    H5'   O5'  C5'  C4'   176.88  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RCF  RCF  '(2R)-2-[4-(4-cyano-2-fluorophenoxy)phenoxy]propanoic acid'  ligand  33  22  .  2021-08-23  2021-08-23  
+ RCF  RCF  '(2R)-2-[4-(4-cyano-2-fluorophenoxy)phenoxy]propanoic acid'  ligand  33  22  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RCF
@@ -186,36 +187,50 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RCF  CONST_01  C07  C05  C04  C03    0.00   0.0  0
- RCF  CONST_02  C07  C08  C09  C03    0.00   0.0  0
- RCF  CONST_03  C08  C07  C05  C04    0.00   0.0  0
- RCF  CONST_04  C08  C09  C03  C04    0.00   0.0  0
- RCF  CONST_05  C09  C03  C04  C05    0.00   0.0  0
- RCF  CONST_06  C09  C08  C07  C05    0.00   0.0  0
- RCF  CONST_07  C14  C15  C16  C11    0.00   0.0  0
- RCF  CONST_08  C14  C13  C12  C11    0.00   0.0  0
- RCF  CONST_09  C15  C16  C11  C12    0.00   0.0  0
- RCF  CONST_10  C15  C14  C13  C12    0.00   0.0  0
- RCF  CONST_11  C16  C11  C12  C13    0.00   0.0  0
- RCF  CONST_12  C16  C15  C14  C13    0.00   0.0  0
- RCF  CONST_13  C05  C04  C03  C02  180.00   0.0  0
- RCF  CONST_14  C08  C09  C03  C02  180.00   0.0  0
- RCF  CONST_15  F06  C05  C04  C03  180.00   0.0  0
- RCF  CONST_16  O10  C07  C05  C04  180.00   0.0  0
- RCF  CONST_17  C08  C07  C05  F06  180.00   0.0  0
- RCF  CONST_18  O10  C07  C08  C09  180.00   0.0  0
- RCF  CONST_19  C15  C16  C11  O10  180.00   0.0  0
- RCF  CONST_20  C13  C12  C11  O10  180.00   0.0  0
- RCF  CONST_21  O17  C14  C13  C12  180.00   0.0  0
- RCF  CONST_22  O17  C14  C15  C16  180.00   0.0  0
- RCF  CONST_23  H2   C08  C09  C03  180.00   0.0  0
- RCF  CONST_24  H3   C09  C03  C04  180.00   0.0  0
- RCF  CONST_25  H1   C04  C05  C07  180.00   0.0  0
- RCF  CONST_26  H6   C15  C16  C11  180.00   0.0  0
- RCF  CONST_27  H5   C13  C12  C11  180.00   0.0  0
- RCF  CONST_28  H7   C16  C11  C12  180.00   0.0  0
- RCF  CONST_29  H4   C12  C13  C14  180.00   0.0  0
- RCF  Var_01    C16  C11  O10  C07  -92.76  30.0  2
+ RCF  CONST_01  C07  C05  C04  C03     0.00   0.0  0
+ RCF  CONST_02  C07  C08  C09  C03     0.00   0.0  0
+ RCF  CONST_03  C08  C07  C05  C04     0.00   0.0  0
+ RCF  CONST_04  C08  C09  C03  C04     0.00   0.0  0
+ RCF  CONST_05  C09  C03  C04  C05     0.00   0.0  0
+ RCF  CONST_06  C09  C08  C07  C05     0.00   0.0  0
+ RCF  CONST_07  C14  C15  C16  C11     0.00   0.0  0
+ RCF  CONST_08  C14  C13  C12  C11     0.00   0.0  0
+ RCF  CONST_09  C15  C16  C11  C12     0.00   0.0  0
+ RCF  CONST_10  C15  C14  C13  C12     0.00   0.0  0
+ RCF  CONST_11  C16  C11  C12  C13     0.00   0.0  0
+ RCF  CONST_12  C16  C15  C14  C13     0.00   0.0  0
+ RCF  CONST_13  C05  C04  C03  C02   180.00   0.0  0
+ RCF  CONST_14  C08  C09  C03  C02   180.00   0.0  0
+ RCF  CONST_15  F06  C05  C04  C03   180.00   0.0  0
+ RCF  CONST_16  O10  C07  C05  C04   180.00   0.0  0
+ RCF  CONST_17  C08  C07  C05  F06   180.00   0.0  0
+ RCF  CONST_18  O10  C07  C08  C09   180.00   0.0  0
+ RCF  CONST_19  C15  C16  C11  O10   180.00   0.0  0
+ RCF  CONST_20  C13  C12  C11  O10   180.00   0.0  0
+ RCF  CONST_21  O17  C14  C13  C12   180.00   0.0  0
+ RCF  CONST_22  O17  C14  C15  C16   180.00   0.0  0
+ RCF  CONST_23  H2   C08  C09  C03   180.00   0.0  0
+ RCF  CONST_24  H3   C09  C03  C04   180.00   0.0  0
+ RCF  CONST_25  H1   C04  C05  C07   180.00   0.0  0
+ RCF  CONST_26  H6   C15  C16  C11   180.00   0.0  0
+ RCF  CONST_27  H5   C13  C12  C11   180.00   0.0  0
+ RCF  CONST_28  H7   C16  C11  C12   180.00   0.0  0
+ RCF  CONST_29  H4   C12  C13  C14   180.00   0.0  0
+ RCF  Var_01    C16  C11  O10  C07   -92.76  30.0  2
+ RCF  Var_02    C11  O10  C07  C05  -176.58  30.0  2
+ RCF  Var_03    C11  O10  C07  C08     3.62  30.0  2
+ RCF  Var_04    C18  O17  C14  C13  -179.94  30.0  2
+ RCF  Var_05    C18  O17  C14  C15    -0.44  30.0  2
+ RCF  Var_06    C19  C18  O17  C14   158.77  30.0  1
+ RCF  Var_07    C22  C18  O17  C14   -79.06  30.0  1
+ RCF  Var_08    H8   C18  O17  C14    42.08  30.0  1
+ RCF  Var_09    O21  C19  C18  O17     5.04  30.0  2
+ RCF  Var_10    O20  C19  C18  O17  -175.11  30.0  2
+ RCF  Var_11    C22  C18  C19  O20    62.82  30.0  2
+ RCF  Var_12    C22  C18  C19  O21  -117.02  30.0  2
+ RCF  Var_13    H10  C22  C18  O17    60.18  30.0  3
+ RCF  Var_14    H11  C22  C18  O17  -180.00  30.0  3
+ RCF  Var_15    H12  C22  C18  O17   -60.54  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

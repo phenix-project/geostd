@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 36Q  36Q  (2S)-3-phenyl-2-(9H-purin-6-ylamino)propan-1-ol  ligand  35  20  .  2021-08-04  2021-08-04  
+ 36Q  36Q  (2S)-3-phenyl-2-(9H-purin-6-ylamino)propan-1-ol  ligand  35  20  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_36Q
@@ -198,46 +199,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 36Q  CONST_01  C1   C2   C3   C4     0.00   0.0  0
- 36Q  CONST_02  C1   C6   C5   C4     0.00   0.0  0
- 36Q  CONST_03  C2   C3   C4   C5     0.00   0.0  0
- 36Q  CONST_04  C2   C1   C6   C5     0.00   0.0  0
- 36Q  CONST_05  C3   C2   C1   C6     0.00   0.0  0
- 36Q  CONST_06  C3   C4   C5   C6     0.00   0.0  0
- 36Q  CONST_07  C18  N19  C14  C13  180.00   0.0  0
- 36Q  CONST_08  N16  C15  C14  C13  180.00   0.0  0
- 36Q  CONST_09  N20  C15  C14  C13    0.00   0.0  0
- 36Q  CONST_10  N20  C21  N22  C13    0.00   0.0  0
- 36Q  CONST_11  C18  N19  C14  C15    0.00   0.0  0
- 36Q  CONST_12  N22  C13  C14  C15    0.00   0.0  0
- 36Q  CONST_13  N19  C18  N16  C15    0.00   0.0  0
- 36Q  CONST_14  N22  C21  N20  C15    0.00   0.0  0
- 36Q  CONST_15  C14  C13  N22  C21    0.00   0.0  0
- 36Q  CONST_16  C14  C15  N20  C21    0.00   0.0  0
- 36Q  CONST_17  N16  C15  N20  C21  180.00   0.0  0
- 36Q  CONST_18  N16  C18  N19  C14    0.00   0.0  0
- 36Q  CONST_19  C18  N16  C15  C14    0.00   0.0  0
- 36Q  CONST_20  N19  C14  C15  N16    0.00   0.0  0
- 36Q  CONST_21  N20  C15  N16  C18  180.00   0.0  0
- 36Q  CONST_22  N22  C13  C14  N19  180.00   0.0  0
- 36Q  CONST_23  N20  C15  C14  N19  180.00   0.0  0
- 36Q  CONST_24  C7   C4   C5   C6   180.00   0.0  0
- 36Q  CONST_25  C2   C3   C4   C7   180.00   0.0  0
- 36Q  CONST_26  N19  C14  C13  N12    0.00   0.0  0
- 36Q  CONST_27  C15  C14  C13  N12  180.00   0.0  0
- 36Q  CONST_28  C21  N22  C13  N12  180.00   0.0  0
- 36Q  CONST_29  H11  C2   C3   C4   180.00   0.0  0
- 36Q  CONST_30  H2   C6   C5   C4   180.00   0.0  0
- 36Q  CONST_31  H12  C3   C4   C5   180.00   0.0  0
- 36Q  CONST_32  H10  C1   C6   C5   180.00   0.0  0
- 36Q  CONST_33  H9   C21  N22  C13  180.00   0.0  0
- 36Q  CONST_34  H15  C18  N16  C15  180.00   0.0  0
- 36Q  CONST_35  H1   C5   C6   C1   180.00   0.0  0
- 36Q  CONST_36  H14  N16  C15  C14  180.00   0.0  0
- 36Q  CONST_37  C14  C13  N12  C8   180.00   0.0  0
- 36Q  CONST_38  N22  C13  N12  C8     0.00   0.0  0
- 36Q  CONST_39  H8   N12  C13  C14    0.00   0.0  0
- 36Q  Var_01    C8   C7   C4   C5    89.49  30.0  2
+ 36Q  CONST_01  C1   C2   C3   C4      0.00   0.0  0
+ 36Q  CONST_02  C1   C6   C5   C4      0.00   0.0  0
+ 36Q  CONST_03  C2   C3   C4   C5      0.00   0.0  0
+ 36Q  CONST_04  C2   C1   C6   C5      0.00   0.0  0
+ 36Q  CONST_05  C3   C2   C1   C6      0.00   0.0  0
+ 36Q  CONST_06  C3   C4   C5   C6      0.00   0.0  0
+ 36Q  CONST_07  C18  N19  C14  C13   180.00   0.0  0
+ 36Q  CONST_08  N16  C15  C14  C13   180.00   0.0  0
+ 36Q  CONST_09  N20  C15  C14  C13     0.00   0.0  0
+ 36Q  CONST_10  N20  C21  N22  C13     0.00   0.0  0
+ 36Q  CONST_11  C18  N19  C14  C15     0.00   0.0  0
+ 36Q  CONST_12  N22  C13  C14  C15     0.00   0.0  0
+ 36Q  CONST_13  N19  C18  N16  C15     0.00   0.0  0
+ 36Q  CONST_14  N22  C21  N20  C15     0.00   0.0  0
+ 36Q  CONST_15  C14  C13  N22  C21     0.00   0.0  0
+ 36Q  CONST_16  C14  C15  N20  C21     0.00   0.0  0
+ 36Q  CONST_17  N16  C15  N20  C21   180.00   0.0  0
+ 36Q  CONST_18  N16  C18  N19  C14     0.00   0.0  0
+ 36Q  CONST_19  C18  N16  C15  C14     0.00   0.0  0
+ 36Q  CONST_20  N19  C14  C15  N16     0.00   0.0  0
+ 36Q  CONST_21  N20  C15  N16  C18   180.00   0.0  0
+ 36Q  CONST_22  N22  C13  C14  N19   180.00   0.0  0
+ 36Q  CONST_23  N20  C15  C14  N19   180.00   0.0  0
+ 36Q  CONST_24  C7   C4   C5   C6    180.00   0.0  0
+ 36Q  CONST_25  C2   C3   C4   C7    180.00   0.0  0
+ 36Q  CONST_26  N19  C14  C13  N12     0.00   0.0  0
+ 36Q  CONST_27  C15  C14  C13  N12   180.00   0.0  0
+ 36Q  CONST_28  C21  N22  C13  N12   180.00   0.0  0
+ 36Q  CONST_29  H11  C2   C3   C4    180.00   0.0  0
+ 36Q  CONST_30  H2   C6   C5   C4    180.00   0.0  0
+ 36Q  CONST_31  H12  C3   C4   C5    180.00   0.0  0
+ 36Q  CONST_32  H10  C1   C6   C5    180.00   0.0  0
+ 36Q  CONST_33  H9   C21  N22  C13   180.00   0.0  0
+ 36Q  CONST_34  H15  C18  N16  C15   180.00   0.0  0
+ 36Q  CONST_35  H1   C5   C6   C1    180.00   0.0  0
+ 36Q  CONST_36  H14  N16  C15  C14   180.00   0.0  0
+ 36Q  CONST_37  C14  C13  N12  C8    180.00   0.0  0
+ 36Q  CONST_38  N22  C13  N12  C8      0.00   0.0  0
+ 36Q  CONST_39  H8   N12  C13  C14     0.00   0.0  0
+ 36Q  Var_01    C8   C7   C4   C5     89.49  30.0  2
+ 36Q  Var_02    N12  C8   C7   C4    -57.97  30.0  3
+ 36Q  Var_03    C10  C8   C7   C4    178.30  30.0  3
+ 36Q  Var_04    C13  N12  C8   C7     91.50  30.0  2
+ 36Q  Var_05    C13  N12  C8   C10  -143.40  30.0  2
+ 36Q  Var_06    H5   C8   C7   C4     59.92  30.0  3
+ 36Q  Var_07    O11  C10  C8   C7     63.86  30.0  3
+ 36Q  Var_08    O11  C10  C8   N12   -60.67  30.0  3
+ 36Q  Var_09    H6   C10  C8   C7   -174.45  30.0  3
+ 36Q  Var_10    H7   C10  C8   C7    -58.08  30.0  3
+ 36Q  Var_11    H13  O11  C10  C8    171.31  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

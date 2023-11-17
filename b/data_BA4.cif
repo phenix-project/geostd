@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BA4  BA4  'N-[(2Z,3R,4R,5S,6R)-4,5-dihydroxy-6-(hydroxymethyl)-2-{[(phenylcarbamoyl)oxy]imino}tetrahydro-2H-pyran-3-yl]butanamide (non-preferred name)'  ligand  50  27  .  2021-08-06  2021-08-06  
+ BA4  BA4  'N-[(2Z,3R,4R,5S,6R)-4,5-dihydroxy-6-(hydroxymethyl)-2-{[(phenylcarbamoyl)oxy]imino}tetrahydro-2H-pyran-3-yl]butanamide (non-preferred name)'  ligand  50  27  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BA4
@@ -253,30 +254,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BA4  CONST_01  CAV   CAU  CAT  CAS    0.00   0.0  0
- BA4  CONST_02  CAV   CAW  CAX  CAS    0.00   0.0  0
- BA4  CONST_03  CAW   CAX  CAS  CAT    0.00   0.0  0
- BA4  CONST_04  CAW   CAV  CAU  CAT    0.00   0.0  0
- BA4  CONST_05  CAX   CAS  CAT  CAU    0.00   0.0  0
- BA4  CONST_06  CAX   CAW  CAV  CAU    0.00   0.0  0
- BA4  CONST_07  CAU   CAT  CAS  NAO  180.00   0.0  0
- BA4  CONST_08  CAW   CAX  CAS  NAO  180.00   0.0  0
- BA4  CONST_09  HAU   CAU  CAT  CAS  180.00   0.0  0
- BA4  CONST_10  HAW   CAW  CAX  CAS  180.00   0.0  0
- BA4  CONST_11  HAX   CAX  CAS  CAT  180.00   0.0  0
- BA4  CONST_12  HAV   CAV  CAU  CAT  180.00   0.0  0
- BA4  CONST_13  HAT   CAT  CAU  CAV  180.00   0.0  0
- BA4  CONST_16  HNAO  NAO  CAS  CAT    0.00   0.0  0
- BA4  CONST_17  OAN   CAG  NAI  CAB    0.00   0.0  0
- BA4  CONST_18  CAH   CAG  NAI  CAB  180.00   0.0  0
- BA4  CONST_19  CAS   NAO  CAP  OAR    0.00   0.0  0
- BA4  CONST_20  OAQ   CAP  NAO  CAS  180.00   0.0  0
- BA4  CONST_21  HNAI  NAI  CAG  OAN  180.00   0.0  0
- BA4  Var_01    CAB   CAA  OAL  CAE  -39.87  30.0  1
- BA4  Var_02    OAL   CAA  NAY  OAQ   -3.60  30.0  2
- BA4  Var_03    C1    CAH  CAG  NAI  151.20  30.0  1
- BA4  Var_04    C2    C1   CAH  CAG  178.23  30.0  1
- BA4  Var_05    H2    C2   C1   CAH  -59.49  30.0  3
+ BA4  CONST_01  CAV   CAU  CAT  CAS     0.00   0.0  0
+ BA4  CONST_02  CAV   CAW  CAX  CAS     0.00   0.0  0
+ BA4  CONST_03  CAW   CAX  CAS  CAT     0.00   0.0  0
+ BA4  CONST_04  CAW   CAV  CAU  CAT     0.00   0.0  0
+ BA4  CONST_05  CAX   CAS  CAT  CAU     0.00   0.0  0
+ BA4  CONST_06  CAX   CAW  CAV  CAU     0.00   0.0  0
+ BA4  CONST_07  CAU   CAT  CAS  NAO   180.00   0.0  0
+ BA4  CONST_08  CAW   CAX  CAS  NAO   180.00   0.0  0
+ BA4  CONST_09  HAU   CAU  CAT  CAS   180.00   0.0  0
+ BA4  CONST_10  HAW   CAW  CAX  CAS   180.00   0.0  0
+ BA4  CONST_11  HAX   CAX  CAS  CAT   180.00   0.0  0
+ BA4  CONST_12  HAV   CAV  CAU  CAT   180.00   0.0  0
+ BA4  CONST_13  HAT   CAT  CAU  CAV   180.00   0.0  0
+ BA4  CONST_14  HNAO  NAO  CAS  CAT     0.00   0.0  0
+ BA4  CONST_15  OAN   CAG  NAI  CAB     0.00   0.0  0
+ BA4  CONST_16  CAH   CAG  NAI  CAB   180.00   0.0  0
+ BA4  CONST_17  CAS   NAO  CAP  OAR     0.00   0.0  0
+ BA4  CONST_18  OAQ   CAP  NAO  CAS   180.00   0.0  0
+ BA4  CONST_19  HNAI  NAI  CAG  OAN   180.00   0.0  0
+ BA4  Var_01    CAB   CAA  OAL  CAE   -39.87  30.0  1
+ BA4  Var_02    OAL   CAA  NAY  OAQ    -3.60  30.0  2
+ BA4  Var_03    C1    CAH  CAG  NAI   151.20  30.0  1
+ BA4  Var_04    C2    C1   CAH  CAG   178.23  30.0  1
+ BA4  Var_05    H2    C2   C1   CAH   -59.49  30.0  3
+ BA4  Var_06    CAD   CAE  OAL  CAA    44.76  30.0  1
+ BA4  Var_07    CAD   CAC  CAB  CAA   -51.23  30.0  1
+ BA4  Var_08    CAC   CAB  CAA  OAL    42.32  30.0  1
+ BA4  Var_09    CAC   CAD  CAE  OAL   -53.69  30.0  1
+ BA4  Var_10    CAB   CAC  CAD  CAE    58.73  30.0  1
+ BA4  Var_11    CAC   CAB  CAA  NAY  -143.22  30.0  1
+ BA4  Var_12    CAF   CAE  OAL  CAA   167.72  30.0  1
+ BA4  Var_13    OAJ   CAC  CAB  CAA  -172.78  30.0  1
+ BA4  Var_14    NAI   CAB  CAA  OAL   167.65  30.0  1
+ BA4  Var_15    OAK   CAD  CAE  OAL  -171.90  30.0  1
+ BA4  Var_16    OAJ   CAC  CAD  CAE   177.47  30.0  1
+ BA4  Var_17    CAC   CAD  CAE  CAF  -173.29  30.0  1
+ BA4  Var_18    NAI   CAB  CAC  CAD  -176.88  30.0  1
+ BA4  Var_19    CAB   CAC  CAD  OAK   178.64  30.0  1
+ BA4  Var_20    HAE   CAE  OAL  CAA   -74.58  30.0  1
+ BA4  Var_21    HAC   CAC  CAB  CAA    66.63  30.0  1
+ BA4  Var_22    HAB   CAB  CAA  OAL   -74.37  30.0  1
+ BA4  Var_23    HAD   CAD  CAE  OAL    65.31  30.0  1
+ BA4  Var_24    NAI   CAB  CAA  NAY   -17.89  30.0  1
+ BA4  Var_25    CAG   NAI  CAB  CAA   103.32  30.0  2
+ BA4  Var_26    OAM   CAF  CAE  OAL    62.27  30.0  3
+ BA4  Var_27    OAK   CAD  CAE  CAF    68.50  30.0  1
+ BA4  Var_28    CAD   CAE  CAF  OAM  -175.52  30.0  3
+ BA4  Var_29    OAJ   CAC  CAD  OAK   -62.62  30.0  1
+ BA4  Var_30    CAG   NAI  CAB  CAC  -132.14  30.0  2
+ BA4  Var_31    NAI   CAB  CAC  OAJ    61.57  30.0  1
+ BA4  Var_32    HNAI  NAI  CAB  CAA   -70.42  30.0  2
+ BA4  Var_33    HAF   CAF  CAE  OAL  -176.37  30.0  3
+ BA4  Var_34    H22   CAF  CAE  OAL   -60.41  30.0  3
+ BA4  Var_35    HOAK  OAK  CAD  CAE   -95.11  30.0  3
+ BA4  Var_36    HOAJ  OAJ  CAC  CAD    60.51  30.0  3
+ BA4  Var_37    CAA   NAY  OAQ  CAP  -175.33  30.0  3
+ BA4  Var_38    H23   OAM  CAF  CAE   177.38  30.0  3
+ BA4  Var_39    NAY   OAQ  CAP  OAR     0.02  30.0  3
+ BA4  Var_40    NAY   OAQ  CAP  NAO   179.90  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

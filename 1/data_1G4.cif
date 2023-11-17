@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1G4  1G4  (3S,6S)-3,6-bis(4-hydroxybenzyl)piperazin-2-one  ligand  43  23  .  2021-08-03  2021-08-03  
+ 1G4  1G4  (3S,6S)-3,6-bis(4-hydroxybenzyl)piperazin-2-one  ligand  43  23  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1G4
@@ -230,40 +231,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 1G4  CONST_01  CZB  CE3  CD3  CGB    0.00   0.0  0
- 1G4  CONST_02  CZB  CE4  CD4  CGB    0.00   0.0  0
- 1G4  CONST_03  CE3  CZB  CE4  CD4    0.00   0.0  0
- 1G4  CONST_04  CE3  CD3  CGB  CD4    0.00   0.0  0
- 1G4  CONST_05  CD3  CE3  CZB  CE4    0.00   0.0  0
- 1G4  CONST_06  CD3  CGB  CD4  CE4    0.00   0.0  0
- 1G4  CONST_07  CZA  CE1  CD1  CGA    0.00   0.0  0
- 1G4  CONST_08  CZA  CE2  CD2  CGA    0.00   0.0  0
- 1G4  CONST_09  CE1  CD1  CGA  CD2    0.00   0.0  0
- 1G4  CONST_10  CE1  CZA  CE2  CD2    0.00   0.0  0
- 1G4  CONST_11  CD1  CE1  CZA  CE2    0.00   0.0  0
- 1G4  CONST_12  CD1  CGA  CD2  CE2    0.00   0.0  0
- 1G4  CONST_13  CAA  NA   CB   CAB    0.00   0.0  0
- 1G4  CONST_14  CE3  CD3  CGB  CBB  180.00   0.0  0
- 1G4  CONST_15  CE4  CD4  CGB  CBB  180.00   0.0  0
- 1G4  CONST_16  OHB  CZB  CE4  CD4  180.00   0.0  0
- 1G4  CONST_17  CD3  CE3  CZB  OHB  180.00   0.0  0
- 1G4  CONST_18  CE1  CD1  CGA  CBA  180.00   0.0  0
- 1G4  CONST_19  CE2  CD2  CGA  CBA  180.00   0.0  0
- 1G4  CONST_20  OHA  CZA  CE2  CD2  180.00   0.0  0
- 1G4  CONST_21  CD1  CE1  CZA  OHA  180.00   0.0  0
- 1G4  CONST_22  CAA  NA   CB   OB   180.00   0.0  0
- 1G4  CONST_23  H7   CE3  CD3  CGB  180.00   0.0  0
- 1G4  CONST_24  H5   CE4  CD4  CGB  180.00   0.0  0
- 1G4  CONST_25  H8   CD3  CGB  CD4  180.00   0.0  0
- 1G4  CONST_26  H4   CD4  CE4  CZB  180.00   0.0  0
- 1G4  CONST_27  H20  CE1  CD1  CGA  180.00   0.0  0
- 1G4  CONST_28  H18  CE2  CD2  CGA  180.00   0.0  0
- 1G4  CONST_29  H21  CD1  CGA  CD2  180.00   0.0  0
- 1G4  CONST_30  H17  CD2  CE2  CZA  180.00   0.0  0
- 1G4  CONST_31  H14  NA   CB   CAB  180.00   0.0  0
- 1G4  Var_01    CAA  CA   NB   CAB   59.72  30.0  1
- 1G4  Var_02    CD3  CGB  CBB  CAB  -77.93  30.0  3
- 1G4  Var_03    CD1  CGA  CBA  CAA  -80.57  30.0  2
+ 1G4  CONST_01  CZB  CE3  CD3  CGB     0.00   0.0  0
+ 1G4  CONST_02  CZB  CE4  CD4  CGB     0.00   0.0  0
+ 1G4  CONST_03  CE3  CZB  CE4  CD4     0.00   0.0  0
+ 1G4  CONST_04  CE3  CD3  CGB  CD4     0.00   0.0  0
+ 1G4  CONST_05  CD3  CE3  CZB  CE4     0.00   0.0  0
+ 1G4  CONST_06  CD3  CGB  CD4  CE4     0.00   0.0  0
+ 1G4  CONST_07  CZA  CE1  CD1  CGA     0.00   0.0  0
+ 1G4  CONST_08  CZA  CE2  CD2  CGA     0.00   0.0  0
+ 1G4  CONST_09  CE1  CD1  CGA  CD2     0.00   0.0  0
+ 1G4  CONST_10  CE1  CZA  CE2  CD2     0.00   0.0  0
+ 1G4  CONST_11  CD1  CE1  CZA  CE2     0.00   0.0  0
+ 1G4  CONST_12  CD1  CGA  CD2  CE2     0.00   0.0  0
+ 1G4  CONST_13  CAA  NA   CB   CAB     0.00   0.0  0
+ 1G4  CONST_14  CE3  CD3  CGB  CBB   180.00   0.0  0
+ 1G4  CONST_15  CE4  CD4  CGB  CBB   180.00   0.0  0
+ 1G4  CONST_16  OHB  CZB  CE4  CD4   180.00   0.0  0
+ 1G4  CONST_17  CD3  CE3  CZB  OHB   180.00   0.0  0
+ 1G4  CONST_18  CE1  CD1  CGA  CBA   180.00   0.0  0
+ 1G4  CONST_19  CE2  CD2  CGA  CBA   180.00   0.0  0
+ 1G4  CONST_20  OHA  CZA  CE2  CD2   180.00   0.0  0
+ 1G4  CONST_21  CD1  CE1  CZA  OHA   180.00   0.0  0
+ 1G4  CONST_22  CAA  NA   CB   OB    180.00   0.0  0
+ 1G4  CONST_23  H7   CE3  CD3  CGB   180.00   0.0  0
+ 1G4  CONST_24  H5   CE4  CD4  CGB   180.00   0.0  0
+ 1G4  CONST_25  H8   CD3  CGB  CD4   180.00   0.0  0
+ 1G4  CONST_26  H4   CD4  CE4  CZB   180.00   0.0  0
+ 1G4  CONST_27  H20  CE1  CD1  CGA   180.00   0.0  0
+ 1G4  CONST_28  H18  CE2  CD2  CGA   180.00   0.0  0
+ 1G4  CONST_29  H21  CD1  CGA  CD2   180.00   0.0  0
+ 1G4  CONST_30  H17  CD2  CE2  CZA   180.00   0.0  0
+ 1G4  CONST_31  H14  NA   CB   CAB   180.00   0.0  0
+ 1G4  Var_01    CAA  CA   NB   CAB    59.72  30.0  1
+ 1G4  Var_02    CD3  CGB  CBB  CAB   -77.93  30.0  3
+ 1G4  Var_03    CD1  CGA  CBA  CAA   -80.57  30.0  2
+ 1G4  Var_04    CA   NB   CAB  CB    -38.51  30.0  1
+ 1G4  Var_05    CA   CAA  NA   CB     22.26  30.0  1
+ 1G4  Var_06    NA   CB   CAB  NB     10.44  30.0  1
+ 1G4  Var_07    NA   CAA  CA   NB    -49.54  30.0  1
+ 1G4  Var_08    NB   CAB  CB   OB   -172.09  30.0  1
+ 1G4  Var_09    CGB  CBB  CAB  CB    171.58  30.0  1
+ 1G4  Var_10    CBA  CAA  NA   CB   -101.96  30.0  1
+ 1G4  Var_11    NA   CB   CAB  CBB   136.39  30.0  1
+ 1G4  Var_12    CA   NB   CAB  CBB  -164.37  30.0  1
+ 1G4  Var_13    NB   CAB  CBB  CGB   -59.54  30.0  3
+ 1G4  Var_14    CBA  CAA  CA   NB     74.11  30.0  1
+ 1G4  Var_15    CGA  CBA  CAA  CA   -176.78  30.0  1
+ 1G4  Var_16    CGA  CBA  CAA  NA    -54.79  30.0  1
+ 1G4  Var_17    H9   NB   CAB  CB     85.17  30.0  1
+ 1G4  Var_18    H13  CAA  NA   CB    139.75  30.0  1
+ 1G4  Var_19    H1   CAB  NB   CA     78.08  30.0  1
+ 1G4  Var_20    CBB  CAB  CB   OB    -46.14  30.0  1
+ 1G4  Var_21    H2   CBB  CAB  CB    -66.45  30.0  1
+ 1G4  Var_22    H3   CBB  CAB  CB     49.36  30.0  1
+ 1G4  Var_23    H6   OHB  CZB  CE4     0.77  30.0  2
+ 1G4  Var_24    H15  CBA  CAA  CA    -54.53  30.0  1
+ 1G4  Var_25    H16  CBA  CAA  CA     61.41  30.0  1
+ 1G4  Var_26    H19  OHA  CZA  CE2  -179.76  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

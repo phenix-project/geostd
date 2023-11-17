@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SX0  SX0  '(2S)-2-amino-4-({[(2S,3S,4R,5R)-5-(4-amino-5-bromo-7H-pyrrolo[2,3-d]pyrimidin-7-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl}sulfanyl)butanoic acid (non-preferred name)'  ligand  47  27  .  2021-08-23  2021-08-23  
+ SX0  SX0  '(2S)-2-amino-4-({[(2S,3S,4R,5R)-5-(4-amino-5-bromo-7H-pyrrolo[2,3-d]pyrimidin-7-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl}sulfanyl)butanoic acid (non-preferred name)'  ligand  47  27  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_SX0
@@ -246,39 +247,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SX0  CONST_01  C4    C5   C6  N1    0.00   0.0  0
- SX0  CONST_02  C7    C5   C6  N1  180.00   0.0  0
- SX0  CONST_03  C4    N3   C2  N1    0.00   0.0  0
- SX0  CONST_04  C5    C6   N1  C2    0.00   0.0  0
- SX0  CONST_05  C5    C4   N3  C2    0.00   0.0  0
- SX0  CONST_06  N9    C4   N3  C2  180.00   0.0  0
- SX0  CONST_07  C6    N1   C2  N3    0.00   0.0  0
- SX0  CONST_08  C6    C5   C4  N3    0.00   0.0  0
- SX0  CONST_09  C7    C5   C4  N3  180.00   0.0  0
- SX0  CONST_10  C8    N9   C4  N3  180.00   0.0  0
- SX0  CONST_11  C8    C7   C5  C4    0.00   0.0  0
- SX0  CONST_12  C7    C8   N9  C4    0.00   0.0  0
- SX0  CONST_13  C8    N9   C4  C5    0.00   0.0  0
- SX0  CONST_14  N9    C8   C7  C5    0.00   0.0  0
- SX0  CONST_15  N9    C4   C5  C6  180.00   0.0  0
- SX0  CONST_16  C8    C7   C5  C6  180.00   0.0  0
- SX0  CONST_17  N9    C4   C5  C7    0.00   0.0  0
- SX0  CONST_18  C1'   N9   C4  N3    0.00   0.0  0
- SX0  CONST_19  C1'   N9   C4  C5  180.00   0.0  0
- SX0  CONST_20  C1'   N9   C8  C7  180.00   0.0  0
- SX0  CONST_21  C4    C5   C7  BR  180.00   0.0  0
- SX0  CONST_22  C6    C5   C7  BR    0.00   0.0  0
- SX0  CONST_23  N9    C8   C7  BR  180.00   0.0  0
- SX0  CONST_24  N6    C6   N1  C2  180.00   0.0  0
- SX0  CONST_25  N6    C6   C5  C4  180.00   0.0  0
- SX0  CONST_26  C7    C5   C6  N6    0.00   0.0  0
- SX0  CONST_27  H2    C2   N3  C4  180.00   0.0  0
- SX0  CONST_28  H8    C8   N9  C4  180.00   0.0  0
- SX0  CONST_29  HN6   N6   C6  N1    0.00   0.0  0
- SX0  CONST_30  HN6A  N6   C6  N1  180.00   0.0  0
- SX0  CONST_31  HO    OXT  C   CA  180.00   0.0  0
- SX0  Var_01    C4'   C5'  SD  CG  148.92  30.0  1
- SX0  Var_02    SD    CG   CB  CA  178.62  30.0  3
+ SX0  CONST_01  C4    C5   C6   N1      0.00   0.0  0
+ SX0  CONST_02  C7    C5   C6   N1    180.00   0.0  0
+ SX0  CONST_03  C4    N3   C2   N1      0.00   0.0  0
+ SX0  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ SX0  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ SX0  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ SX0  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ SX0  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ SX0  CONST_09  C7    C5   C4   N3    180.00   0.0  0
+ SX0  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ SX0  CONST_11  C8    C7   C5   C4      0.00   0.0  0
+ SX0  CONST_12  C7    C8   N9   C4      0.00   0.0  0
+ SX0  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ SX0  CONST_14  N9    C8   C7   C5      0.00   0.0  0
+ SX0  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ SX0  CONST_16  C8    C7   C5   C6    180.00   0.0  0
+ SX0  CONST_17  N9    C4   C5   C7      0.00   0.0  0
+ SX0  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ SX0  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ SX0  CONST_20  C1'   N9   C8   C7    180.00   0.0  0
+ SX0  CONST_21  C4    C5   C7   BR    180.00   0.0  0
+ SX0  CONST_22  C6    C5   C7   BR      0.00   0.0  0
+ SX0  CONST_23  N9    C8   C7   BR    180.00   0.0  0
+ SX0  CONST_24  N6    C6   N1   C2    180.00   0.0  0
+ SX0  CONST_25  N6    C6   C5   C4    180.00   0.0  0
+ SX0  CONST_26  C7    C5   C6   N6      0.00   0.0  0
+ SX0  CONST_27  H2    C2   N3   C4    180.00   0.0  0
+ SX0  CONST_28  H8    C8   N9   C4    180.00   0.0  0
+ SX0  CONST_29  HN6   N6   C6   N1      0.00   0.0  0
+ SX0  CONST_30  HN6A  N6   C6   N1    180.00   0.0  0
+ SX0  CONST_31  HO    OXT  C    CA    180.00   0.0  0
+ SX0  Var_01    C4'   C5'  SD   CG    148.92  30.0  1
+ SX0  Var_02    SD    CG   CB   CA    178.62  30.0  3
+ SX0  Var_03    C2'   C1'  N9   C4     80.19  30.0  2
+ SX0  Var_04    O4'   C1'  N9   C4   -161.81  30.0  2
+ SX0  Var_05    C2'   C1'  N9   C8    -97.78  30.0  2
+ SX0  Var_06    O4'   C1'  N9   C8     20.22  30.0  2
+ SX0  Var_07    C3'   C2'  C1'  N9     90.85  30.0  1
+ SX0  Var_08    C4'   O4'  C1'  N9   -113.44  30.0  1
+ SX0  Var_09    C4'   C3'  C2'  C1'    36.87  30.0  1
+ SX0  Var_10    C3'   C4'  O4'  C1'    16.70  30.0  1
+ SX0  Var_11    C4'   O4'  C1'  C2'     7.72  30.0  1
+ SX0  Var_12    O4'   C4'  C3'  C2'   -33.63  30.0  1
+ SX0  Var_13    O4'   C1'  C2'  C3'   -28.44  30.0  1
+ SX0  Var_14    O2'   C2'  C1'  N9   -152.66  30.0  1
+ SX0  Var_15    O3'   C3'  C2'  C1'   155.35  30.0  1
+ SX0  Var_16    C5'   C4'  O4'  C1'   139.79  30.0  1
+ SX0  Var_17    C5'   C4'  C3'  C2'  -153.86  30.0  1
+ SX0  Var_18    O4'   C1'  C2'  O2'    88.05  30.0  1
+ SX0  Var_19    C4'   C3'  C2'  O2'   -77.11  30.0  1
+ SX0  Var_20    O4'   C4'  C3'  O3'  -154.86  30.0  1
+ SX0  Var_21    H1'   C1'  N9   C4    -41.97  30.0  2
+ SX0  Var_22    H2'   C2'  C1'  N9    -29.31  30.0  1
+ SX0  Var_23    H3'   C3'  C2'  C1'   -79.01  30.0  1
+ SX0  Var_24    H4'   C4'  O4'  C1'  -100.80  30.0  1
+ SX0  Var_25    C3'   C4'  C5'  SD    171.31  30.0  1
+ SX0  Var_26    O4'   C4'  C5'  SD     54.03  30.0  1
+ SX0  Var_27    O3'   C3'  C2'  O2'    41.37  30.0  1
+ SX0  Var_28    C5'   C4'  C3'  O3'    84.91  30.0  1
+ SX0  Var_29    HO2'  O2'  C2'  C1'  -150.33  30.0  3
+ SX0  Var_30    HO3'  O3'  C3'  C2'    84.79  30.0  3
+ SX0  Var_31    H5'   C5'  C4'  C3'    48.54  30.0  3
+ SX0  Var_32    H5'A  C5'  C4'  C3'   -69.83  30.0  3
+ SX0  Var_33    CG    CB   CA   C     174.43  30.0  1
+ SX0  Var_34    O     C    CA   N     -14.16  30.0  3
+ SX0  Var_35    OXT   C    CA   N     166.39  30.0  3
+ SX0  Var_36    CG    CB   CA   N     -59.97  30.0  1
+ SX0  Var_37    CB    CA   C    OXT   -69.69  30.0  3
+ SX0  Var_38    O     C    CA   CB    109.76  30.0  3
+ SX0  Var_39    C5'   SD   CG   CB   -177.88  30.0  1
+ SX0  Var_40    HN    N    CA   C     -61.87  30.0  3
+ SX0  Var_41    HNA   N    CA   C      55.25  30.0  3
+ SX0  Var_42    HB    CB   CA   C     -63.98  30.0  1
+ SX0  Var_43    HBA   CB   CA   C      52.85  30.0  1
+ SX0  Var_44    HA    CA   C    OXT    46.93  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

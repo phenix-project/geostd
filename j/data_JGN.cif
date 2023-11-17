@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JGN  JGN  '[(2~{S},4~{S})-1-[(5,7-dimethyl-1~{H}-indol-4-yl)methyl]-4-methoxy-piperidin-2-yl]methanol'  ligand  48  22  .  2021-08-12  2021-08-12  
+ JGN  JGN  '[(2~{S},4~{S})-1-[(5,7-dimethyl-1~{H}-indol-4-yl)methyl]-4-methoxy-piperidin-2-yl]methanol'  ligand  48  22  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JGN
@@ -255,42 +256,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JGN  CONST_01  N3   C4   C5   C1     0.00   0.0  0
- JGN  CONST_02  C4   N3   C2   C1     0.00   0.0  0
- JGN  CONST_03  C9   C6   C2   C1     0.00   0.0  0
- JGN  CONST_04  C9   C8   C7   C1     0.00   0.0  0
- JGN  CONST_05  C5   C4   N3   C2     0.00   0.0  0
- JGN  CONST_06  C4   C5   C1   C2     0.00   0.0  0
- JGN  CONST_07  C8   C7   C1   C2     0.00   0.0  0
- JGN  CONST_08  C8   C9   C6   C2     0.00   0.0  0
- JGN  CONST_09  C5   C1   C2   N3     0.00   0.0  0
- JGN  CONST_10  C7   C1   C2   N3   180.00   0.0  0
- JGN  CONST_11  C9   C6   C2   N3   180.00   0.0  0
- JGN  CONST_12  C7   C1   C5   C4   180.00   0.0  0
- JGN  CONST_13  C6   C2   N3   C4   180.00   0.0  0
- JGN  CONST_14  C6   C2   C1   C5   180.00   0.0  0
- JGN  CONST_15  C8   C7   C1   C5   180.00   0.0  0
- JGN  CONST_16  C7   C1   C2   C6     0.00   0.0  0
- JGN  CONST_17  C7   C8   C9   C6     0.00   0.0  0
- JGN  CONST_18  C11  C6   C2   C1   180.00   0.0  0
- JGN  CONST_19  C12  C8   C7   C1   180.00   0.0  0
- JGN  CONST_20  C10  C7   C1   C2   180.00   0.0  0
- JGN  CONST_21  N3   C2   C6   C11    0.00   0.0  0
- JGN  CONST_22  C8   C9   C6   C11  180.00   0.0  0
- JGN  CONST_23  C6   C9   C8   C12  180.00   0.0  0
- JGN  CONST_24  C10  C7   C1   C5     0.00   0.0  0
- JGN  CONST_25  C10  C7   C8   C9   180.00   0.0  0
- JGN  CONST_26  H21  C4   C5   C1   180.00   0.0  0
- JGN  CONST_27  H20  N3   C2   C1   180.00   0.0  0
- JGN  CONST_28  H22  C5   C1   C2   180.00   0.0  0
- JGN  CONST_29  H23  C9   C6   C2   180.00   0.0  0
- JGN  Var_01    C18  N13  C14  C15  -60.80  30.0  1
- JGN  Var_02    N13  C14  C15  C16   57.67  30.0  1
- JGN  Var_03    N13  C10  C7   C1   117.85  30.0  2
- JGN  Var_04    C7   C10  N13  C14  -56.60  30.0  3
- JGN  Var_05    H1   C11  C6   C2    61.28  30.0  2
- JGN  Var_06    H4   C12  C8   C7    79.23  30.0  2
- JGN  Var_07    H17  C22  O21  C16  -68.38  30.0  3
+ JGN  CONST_01  N3   C4   C5   C1      0.00   0.0  0
+ JGN  CONST_02  C4   N3   C2   C1      0.00   0.0  0
+ JGN  CONST_03  C9   C6   C2   C1      0.00   0.0  0
+ JGN  CONST_04  C9   C8   C7   C1      0.00   0.0  0
+ JGN  CONST_05  C5   C4   N3   C2      0.00   0.0  0
+ JGN  CONST_06  C4   C5   C1   C2      0.00   0.0  0
+ JGN  CONST_07  C8   C7   C1   C2      0.00   0.0  0
+ JGN  CONST_08  C8   C9   C6   C2      0.00   0.0  0
+ JGN  CONST_09  C5   C1   C2   N3      0.00   0.0  0
+ JGN  CONST_10  C7   C1   C2   N3    180.00   0.0  0
+ JGN  CONST_11  C9   C6   C2   N3    180.00   0.0  0
+ JGN  CONST_12  C7   C1   C5   C4    180.00   0.0  0
+ JGN  CONST_13  C6   C2   N3   C4    180.00   0.0  0
+ JGN  CONST_14  C6   C2   C1   C5    180.00   0.0  0
+ JGN  CONST_15  C8   C7   C1   C5    180.00   0.0  0
+ JGN  CONST_16  C7   C1   C2   C6      0.00   0.0  0
+ JGN  CONST_17  C7   C8   C9   C6      0.00   0.0  0
+ JGN  CONST_18  C11  C6   C2   C1    180.00   0.0  0
+ JGN  CONST_19  C12  C8   C7   C1    180.00   0.0  0
+ JGN  CONST_20  C10  C7   C1   C2    180.00   0.0  0
+ JGN  CONST_21  N3   C2   C6   C11     0.00   0.0  0
+ JGN  CONST_22  C8   C9   C6   C11   180.00   0.0  0
+ JGN  CONST_23  C6   C9   C8   C12   180.00   0.0  0
+ JGN  CONST_24  C10  C7   C1   C5      0.00   0.0  0
+ JGN  CONST_25  C10  C7   C8   C9    180.00   0.0  0
+ JGN  CONST_26  H21  C4   C5   C1    180.00   0.0  0
+ JGN  CONST_27  H20  N3   C2   C1    180.00   0.0  0
+ JGN  CONST_28  H22  C5   C1   C2    180.00   0.0  0
+ JGN  CONST_29  H23  C9   C6   C2    180.00   0.0  0
+ JGN  Var_01    C18  N13  C14  C15   -60.80  30.0  1
+ JGN  Var_02    N13  C14  C15  C16    57.67  30.0  1
+ JGN  Var_03    N13  C10  C7   C1    117.85  30.0  2
+ JGN  Var_04    C7   C10  N13  C14   -56.60  30.0  3
+ JGN  Var_05    H1   C11  C6   C2     61.28  30.0  2
+ JGN  Var_06    H4   C12  C8   C7     79.23  30.0  2
+ JGN  Var_07    H17  C22  O21  C16   -68.38  30.0  3
+ JGN  Var_08    C17  C16  C15  C14   -52.53  30.0  1
+ JGN  Var_09    C17  C18  N13  C14    59.36  30.0  1
+ JGN  Var_10    C18  C17  C16  C15    52.96  30.0  1
+ JGN  Var_11    N13  C18  C17  C16   -56.88  30.0  1
+ JGN  Var_12    O21  C16  C15  C14    66.44  30.0  1
+ JGN  Var_13    C19  C18  N13  C14  -176.75  30.0  1
+ JGN  Var_14    C19  C18  C17  C16   176.75  30.0  1
+ JGN  Var_15    C10  N13  C18  C17  -174.77  30.0  1
+ JGN  Var_16    O21  C16  C17  C18   -69.31  30.0  1
+ JGN  Var_17    H11  C16  C15  C14  -171.96  30.0  1
+ JGN  Var_18    H14  C18  N13  C14   -59.75  30.0  1
+ JGN  Var_19    H12  C17  C16  C15   175.34  30.0  1
+ JGN  Var_20    H13  C17  C16  C15   -67.94  30.0  1
+ JGN  Var_21    H9   C15  C16  C17  -175.85  30.0  1
+ JGN  Var_22    H10  C15  C16  C17    67.33  30.0  1
+ JGN  Var_23    C22  O21  C16  C15    70.58  30.0  3
+ JGN  Var_24    C22  O21  C16  C17  -169.88  30.0  3
+ JGN  Var_25    O20  C19  C18  C17    65.79  30.0  3
+ JGN  Var_26    C10  N13  C18  C19   -50.88  30.0  1
+ JGN  Var_27    O20  C19  C18  N13   -58.02  30.0  3
+ JGN  Var_28    H15  C19  C18  C17  -170.20  30.0  3
+ JGN  Var_29    H16  C19  C18  C17   -55.74  30.0  3
+ JGN  Var_30    H27  O20  C19  C18  -176.72  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

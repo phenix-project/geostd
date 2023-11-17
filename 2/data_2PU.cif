@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2PU  2PU  1-[(9bS)-5-oxo-2,3,5,9b-tetrahydro-1H-pyrrolo[2,1-a]isoindol-9-yl]-3-{5-[(2S)-pyrrolidin-2-yl]-1H-pyrazol-3-yl}urea  ligand  49  27  .  2022-03-10  2022-03-10
+ 2PU  2PU  1-[(9bS)-5-oxo-2,3,5,9b-tetrahydro-1H-pyrrolo[2,1-a]isoindol-9-yl]-3-{5-[(2S)-pyrrolidin-2-yl]-1H-pyrazol-3-yl}urea  ligand  49  27  .  2022-03-10  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_2PU
@@ -264,44 +265,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2PU  CONST_01  C14  C8   C3   C1     0.00   0.0  0
- 2PU  CONST_02  C14  C9   C4   C1     0.00   0.0  0
- 2PU  CONST_03  C9   C4   C1   C3     0.00   0.0  0
- 2PU  CONST_04  C9   C14  C8   C3     0.00   0.0  0
- 2PU  CONST_05  C8   C3   C1   C4     0.00   0.0  0
- 2PU  CONST_06  C8   C14  C9   C4     0.00   0.0  0
- 2PU  CONST_07  N22  C21  C19  C18    0.00   0.0  0
- 2PU  CONST_08  C21  N22  N20  C18    0.00   0.0  0
- 2PU  CONST_09  N22  N20  C18  C19    0.00   0.0  0
- 2PU  CONST_10  N20  N22  C21  C19    0.00   0.0  0
- 2PU  CONST_11  C21  C19  C18  N20    0.00   0.0  0
- 2PU  CONST_12  C23  C21  C19  C18  180.00   0.0  0
- 2PU  CONST_13  C23  C21  N22  N20  180.00   0.0  0
- 2PU  CONST_14  C3   C7   N5   C2     0.00   0.0  0
- 2PU  CONST_16  N10  C4   C1   C2     0.00   0.0  0
- 2PU  CONST_17  N10  C4   C1   C3   180.00   0.0  0
- 2PU  CONST_18  C14  C9   C4   N10  180.00   0.0  0
- 2PU  CONST_19  C21  C19  C18  N16  180.00   0.0  0
- 2PU  CONST_20  N22  N20  C18  N16  180.00   0.0  0
- 2PU  CONST_21  O13  C7   N5   C2   180.00   0.0  0
- 2PU  CONST_23  H8   C8   C3   C1   180.00   0.0  0
- 2PU  CONST_24  H9   C9   C4   C1   180.00   0.0  0
- 2PU  CONST_25  H14  C14  C8   C3   180.00   0.0  0
- 2PU  CONST_26  H22  N22  N20  C18  180.00   0.0  0
- 2PU  CONST_27  H19  C19  C18  N20  180.00   0.0  0
- 2PU  CONST_30  C19  C18  N16  C15    0.00   0.0  0
- 2PU  CONST_31  N20  C18  N16  C15  180.00   0.0  0
- 2PU  CONST_33  H16  N16  C18  C19  180.00   0.0  0
- 2PU  CONST_34  O17  C15  N10  C4     0.00   0.0  0
- 2PU  CONST_35  C18  N16  C15  O17    0.00   0.0  0
- 2PU  CONST_36  N16  C15  N10  C4   180.00   0.0  0
- 2PU  CONST_37  C18  N16  C15  N10  180.00   0.0  0
- 2PU  Var_01    C12  C11  N5   C2    -5.12  30.0  1
- 2PU  Var_02    C11  C12  C6   C2    36.20  30.0  1
- 2PU  Var_03    C6   C12  C11  N5   -19.95  30.0  1
- 2PU  Var_04    C27  C26  C24  C23   -7.42  30.0  1
- 2PU  Var_05    C26  C27  N25  C23  -44.25  30.0  1
- 2PU  Var_06    N25  C27  C26  C24   30.64  30.0  1
+ 2PU  CONST_01  C14   C8   C3   C1      0.00   0.0  0
+ 2PU  CONST_02  C14   C9   C4   C1      0.00   0.0  0
+ 2PU  CONST_03  C9    C4   C1   C3      0.00   0.0  0
+ 2PU  CONST_04  C9    C14  C8   C3      0.00   0.0  0
+ 2PU  CONST_05  C8    C3   C1   C4      0.00   0.0  0
+ 2PU  CONST_06  C8    C14  C9   C4      0.00   0.0  0
+ 2PU  CONST_07  N22   C21  C19  C18     0.00   0.0  0
+ 2PU  CONST_08  C21   N22  N20  C18     0.00   0.0  0
+ 2PU  CONST_09  N22   N20  C18  C19     0.00   0.0  0
+ 2PU  CONST_10  N20   N22  C21  C19     0.00   0.0  0
+ 2PU  CONST_11  C21   C19  C18  N20     0.00   0.0  0
+ 2PU  CONST_12  C23   C21  C19  C18   180.00   0.0  0
+ 2PU  CONST_13  C23   C21  N22  N20   180.00   0.0  0
+ 2PU  CONST_14  C3    C7   N5   C2      0.00   0.0  0
+ 2PU  CONST_15  N10   C4   C1   C2      0.00   0.0  0
+ 2PU  CONST_16  N10   C4   C1   C3    180.00   0.0  0
+ 2PU  CONST_17  C14   C9   C4   N10   180.00   0.0  0
+ 2PU  CONST_18  C21   C19  C18  N16   180.00   0.0  0
+ 2PU  CONST_19  N22   N20  C18  N16   180.00   0.0  0
+ 2PU  CONST_20  O13   C7   N5   C2    180.00   0.0  0
+ 2PU  CONST_21  H8    C8   C3   C1    180.00   0.0  0
+ 2PU  CONST_22  H9    C9   C4   C1    180.00   0.0  0
+ 2PU  CONST_23  H14   C14  C8   C3    180.00   0.0  0
+ 2PU  CONST_24  H22   N22  N20  C18   180.00   0.0  0
+ 2PU  CONST_25  H19   C19  C18  N20   180.00   0.0  0
+ 2PU  CONST_26  C19   C18  N16  C15     0.00   0.0  0
+ 2PU  CONST_27  N20   C18  N16  C15   180.00   0.0  0
+ 2PU  CONST_28  H16   N16  C18  C19   180.00   0.0  0
+ 2PU  CONST_29  O17   C15  N10  C4      0.00   0.0  0
+ 2PU  CONST_30  C18   N16  C15  O17     0.00   0.0  0
+ 2PU  CONST_31  N16   C15  N10  C4    180.00   0.0  0
+ 2PU  CONST_32  C18   N16  C15  N10   180.00   0.0  0
+ 2PU  Var_01    C12   C11  N5   C2     -5.12  30.0  1
+ 2PU  Var_02    C11   C12  C6   C2     36.20  30.0  1
+ 2PU  Var_03    C6    C12  C11  N5    -19.95  30.0  1
+ 2PU  Var_04    C27   C26  C24  C23    -7.42  30.0  1
+ 2PU  Var_05    C26   C27  N25  C23   -44.25  30.0  1
+ 2PU  Var_06    N25   C27  C26  C24    30.64  30.0  1
+ 2PU  Var_07    C12   C6   C2   C1   -150.99  30.0  1
+ 2PU  Var_08    C6    C2   C1   C3    111.50  30.0  1
+ 2PU  Var_09    C6    C2   C1   C4    -70.00  30.0  1
+ 2PU  Var_10    C12   C6   C2   N5    -38.47  30.0  1
+ 2PU  Var_11    C7    N5   C2   C6   -119.83  30.0  1
+ 2PU  Var_12    C11   N5   C2   C6     28.00  30.0  1
+ 2PU  Var_13    C24   C23  C21  C19   -87.83  30.0  2
+ 2PU  Var_14    N25   C23  C21  C19   156.38  30.0  2
+ 2PU  Var_15    C26   C24  C23  C21  -138.47  30.0  1
+ 2PU  Var_16    C27   N25  C23  C21   160.85  30.0  1
+ 2PU  Var_17    C24   C23  C21  N22    88.92  30.0  2
+ 2PU  Var_18    N25   C23  C21  N22   -26.87  30.0  2
+ 2PU  Var_19    C27   N25  C23  C24    39.14  30.0  1
+ 2PU  Var_20    C26   C24  C23  N25   -18.36  30.0  1
+ 2PU  Var_21    H61   C6   C2   C1     87.78  30.0  1
+ 2PU  Var_22    H62   C6   C2   C1    -33.36  30.0  1
+ 2PU  Var_23    H2    C2   C1   C3   -118.98  30.0  1
+ 2PU  Var_24    H23   C23  C21  C19    32.62  30.0  2
+ 2PU  Var_25    H241  C24  C23  C21   -18.33  30.0  1
+ 2PU  Var_26    H242  C24  C23  C21   100.18  30.0  1
+ 2PU  Var_27    H25   N25  C23  C21   -77.51  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

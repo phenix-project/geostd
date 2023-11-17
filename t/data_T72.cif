@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- T72  T72  '3-[5-[3,5-bis(trifluoromethyl)phenyl]-4-phenyl-1,3-oxazol-2-yl]propanoic acid'  ligand  42  30  .  2022-03-23  2022-03-23
+ T72  T72  '3-[5-[3,5-bis(trifluoromethyl)phenyl]-4-phenyl-1,3-oxazol-2-yl]propanoic acid'  ligand  42  30  .  2022-03-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_T72
@@ -229,47 +230,55 @@ _chem_comp_tor.period
  T72  CONST_02  C4   C11  O1   C3      0.00   0.0  0
  T72  CONST_03  C11  C4   N    C3      0.00   0.0  0
  T72  CONST_04  C5   C4   N    C3    180.00   0.0  0
- T72  CONST_07  N    C4   C11  O1      0.00   0.0  0
- T72  CONST_08  C5   C4   C11  O1    180.00   0.0  0
- T72  CONST_09  C4   N    C3   O1      0.00   0.0  0
- T72  CONST_10  C17  C19  C12  C11   180.00   0.0  0
- T72  CONST_11  C14  C13  C12  C11   180.00   0.0  0
- T72  CONST_12  N    C3   O1   C11     0.00   0.0  0
- T72  CONST_15  C16  C17  C19  C12     0.00   0.0  0
- T72  CONST_16  C16  C14  C13  C12     0.00   0.0  0
- T72  CONST_17  N    C4   C11  C12   180.00   0.0  0
- T72  CONST_18  C5   C4   C11  C12     0.00   0.0  0
- T72  CONST_19  C14  C16  C17  C19     0.00   0.0  0
- T72  CONST_20  C14  C13  C12  C19     0.00   0.0  0
- T72  CONST_22  C13  C14  C16  C17     0.00   0.0  0
- T72  CONST_23  C13  C12  C19  C17     0.00   0.0  0
- T72  CONST_25  C7   C6   C5   C4    180.00   0.0  0
- T72  CONST_26  C9   C10  C5   C4    180.00   0.0  0
- T72  CONST_29  C8   C7   C6   C5      0.00   0.0  0
- T72  CONST_30  C8   C9   C10  C5      0.00   0.0  0
- T72  CONST_31  C7   C6   C5   C10     0.00   0.0  0
- T72  CONST_32  C7   C8   C9   C10     0.00   0.0  0
- T72  CONST_33  C6   C5   C10  C9      0.00   0.0  0
- T72  CONST_34  C6   C7   C8   C9      0.00   0.0  0
- T72  CONST_35  C11  O1   C3   C2    180.00   0.0  0
- T72  CONST_36  C4   N    C3   C2    180.00   0.0  0
- T72  CONST_37  C18  C17  C19  C12   180.00   0.0  0
- T72  CONST_38  C15  C14  C13  C12   180.00   0.0  0
- T72  CONST_39  C15  C14  C16  C17   180.00   0.0  0
- T72  CONST_40  C14  C16  C17  C18   180.00   0.0  0
- T72  CONST_41  H6   C19  C12  C11     0.00   0.0  0
- T72  CONST_42  H8   C13  C12  C11     0.00   0.0  0
- T72  CONST_43  H7   C16  C17  C19   180.00   0.0  0
- T72  CONST_44  H13  C6   C5   C4      0.00   0.0  0
- T72  CONST_45  H9   C10  C5   C4      0.00   0.0  0
- T72  CONST_46  H12  C7   C6   C5    180.00   0.0  0
- T72  CONST_47  H10  C9   C10  C5    180.00   0.0  0
- T72  CONST_48  H11  C8   C9   C10   180.00   0.0  0
+ T72  CONST_05  N    C4   C11  O1      0.00   0.0  0
+ T72  CONST_06  C5   C4   C11  O1    180.00   0.0  0
+ T72  CONST_07  C4   N    C3   O1      0.00   0.0  0
+ T72  CONST_08  C17  C19  C12  C11   180.00   0.0  0
+ T72  CONST_09  C14  C13  C12  C11   180.00   0.0  0
+ T72  CONST_10  N    C3   O1   C11     0.00   0.0  0
+ T72  CONST_11  C16  C17  C19  C12     0.00   0.0  0
+ T72  CONST_12  C16  C14  C13  C12     0.00   0.0  0
+ T72  CONST_13  N    C4   C11  C12   180.00   0.0  0
+ T72  CONST_14  C5   C4   C11  C12     0.00   0.0  0
+ T72  CONST_15  C14  C16  C17  C19     0.00   0.0  0
+ T72  CONST_16  C14  C13  C12  C19     0.00   0.0  0
+ T72  CONST_17  C13  C14  C16  C17     0.00   0.0  0
+ T72  CONST_18  C13  C12  C19  C17     0.00   0.0  0
+ T72  CONST_19  C7   C6   C5   C4    180.00   0.0  0
+ T72  CONST_20  C9   C10  C5   C4    180.00   0.0  0
+ T72  CONST_21  C8   C7   C6   C5      0.00   0.0  0
+ T72  CONST_22  C8   C9   C10  C5      0.00   0.0  0
+ T72  CONST_23  C7   C6   C5   C10     0.00   0.0  0
+ T72  CONST_24  C7   C8   C9   C10     0.00   0.0  0
+ T72  CONST_25  C6   C5   C10  C9      0.00   0.0  0
+ T72  CONST_26  C6   C7   C8   C9      0.00   0.0  0
+ T72  CONST_27  C11  O1   C3   C2    180.00   0.0  0
+ T72  CONST_28  C4   N    C3   C2    180.00   0.0  0
+ T72  CONST_29  C18  C17  C19  C12   180.00   0.0  0
+ T72  CONST_30  C15  C14  C13  C12   180.00   0.0  0
+ T72  CONST_31  C15  C14  C16  C17   180.00   0.0  0
+ T72  CONST_32  C14  C16  C17  C18   180.00   0.0  0
+ T72  CONST_33  H6   C19  C12  C11     0.00   0.0  0
+ T72  CONST_34  H8   C13  C12  C11     0.00   0.0  0
+ T72  CONST_35  H7   C16  C17  C19   180.00   0.0  0
+ T72  CONST_36  H13  C6   C5   C4      0.00   0.0  0
+ T72  CONST_37  H9   C10  C5   C4      0.00   0.0  0
+ T72  CONST_38  H12  C7   C6   C5    180.00   0.0  0
+ T72  CONST_39  H10  C9   C10  C5    180.00   0.0  0
+ T72  CONST_40  H11  C8   C9   C10   180.00   0.0  0
  T72  Var_01    O1   C3   C2   C1    168.07  30.0  2
  T72  Var_02    F4   C18  C17  C19    89.05  30.0  3
  T72  Var_03    F    C15  C14  C16   -57.43  30.0  2
  T72  Var_04    C3   C2   C1   C    -178.09  30.0  2
  T72  Var_05    C2   C1   C    O2     -9.90  30.0  3
+ T72  Var_06    C19  C12  C11  O1    -30.53  30.0  2
+ T72  Var_07    C13  C12  C11  O1    148.46  30.0  2
+ T72  Var_08    C6   C5   C4   C11   -36.83  30.0  2
+ T72  Var_09    C10  C5   C4   C11   145.08  30.0  2
+ T72  Var_10    C4   C11  C12  C19   150.11  30.0  2
+ T72  Var_11    C4   C11  C12  C13   -30.90  30.0  2
+ T72  Var_12    C6   C5   C4   N     141.15  30.0  2
+ T72  Var_13    C10  C5   C4   N     -36.94  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

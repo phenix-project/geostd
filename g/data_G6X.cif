@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- G6X  G6X  '2-{6-[(4aS,6R,8aS)-6-hydroxy-3-methoxy-5,6,9,10-tetrahydro-4aH-[1]benzofuro[3a,3,2-ef][2]benzazepin-11(12H)-yl]hexyl}-1,2-benzisothiazol-3(2H)-one 1,1-dioxide'  ligand  72  38  .  2021-08-10  2021-08-10  
+ G6X  G6X  '2-{6-[(4aS,6R,8aS)-6-hydroxy-3-methoxy-5,6,9,10-tetrahydro-4aH-[1]benzofuro[3a,3,2-ef][2]benzazepin-11(12H)-yl]hexyl}-1,2-benzisothiazol-3(2H)-one 1,1-dioxide'  ligand  72  38  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_G6X
@@ -358,45 +359,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- G6X  CONST_01  C15  C14  C13  C6      0.00   0.0  0
- G6X  CONST_02  C15  C8   C7   C6      0.00   0.0  0
- G6X  CONST_03  C14  C13  C6   C7      0.00   0.0  0
- G6X  CONST_04  C14  C15  C8   C7      0.00   0.0  0
- G6X  CONST_05  C13  C6   C7   C8      0.00   0.0  0
- G6X  CONST_06  C13  C14  C15  C8      0.00   0.0  0
- G6X  CONST_07  C30  C31  C32  C27     0.00   0.0  0
- G6X  CONST_08  C30  C29  C28  C27     0.00   0.0  0
- G6X  CONST_09  C31  C32  C27  C28     0.00   0.0  0
- G6X  CONST_10  C31  C30  C29  C28     0.00   0.0  0
- G6X  CONST_11  C32  C27  C28  C29     0.00   0.0  0
- G6X  CONST_12  C32  C31  C30  C29     0.00   0.0  0
- G6X  CONST_13  S33  N25  C26  C27     0.00   0.0  0
- G6X  CONST_14  O17  C6   C13  O5      0.00   0.0  0
- G6X  CONST_15  O17  C6   C7   C8    180.00   0.0  0
- G6X  CONST_16  O17  C6   C13  C14   180.00   0.0  0
- G6X  CONST_17  C27  C26  N25  C24   180.00   0.0  0
- G6X  CONST_18  O34  C26  N25  S33   180.00   0.0  0
- G6X  CONST_19  H8   C8   C7   C6    180.00   0.0  0
- G6X  CONST_20  H7   C7   C6   C13   180.00   0.0  0
- G6X  CONST_21  H28  C28  C27  C26     0.00   0.0  0
- G6X  CONST_22  H31  C31  C32  C27   180.00   0.0  0
- G6X  CONST_23  H29  C29  C28  C27   180.00   0.0  0
- G6X  CONST_24  H30  C30  C29  C28   180.00   0.0  0
- G6X  CONST_25  O34  C26  N25  C24     0.00   0.0  0
- G6X  Var_01    C42  C1   C2   C3     -0.73  30.0  1
- G6X  Var_02    N10  C9   C15  C8   -147.25  30.0  1
- G6X  Var_03    C12  C11  N10  C9     52.62  30.0  1
- G6X  Var_04    C42  C12  C11  N10    37.72  30.0  1
- G6X  Var_05    C15  C9   N10  C11   -88.60  30.0  1
- G6X  Var_06    O35  S33  N25  C26  -112.27  30.0  1
- G6X  Var_07    C20  C19  N10  C9    -70.69  30.0  3
- G6X  Var_08    C26  N25  C24  C23    85.94  30.0  3
- G6X  Var_09    C21  C20  C19  N10  -176.82  30.0  3
- G6X  Var_10    N25  C24  C23  C22  -177.78  30.0  1
- G6X  Var_11    H16  C16  O17  C6   -179.38  30.0  3
- G6X  Var_12    C22  C21  C20  C19  -177.64  30.0  2
- G6X  Var_13    C23  C22  C21  C20  -179.31  30.0  3
- G6X  Var_14    C24  C23  C22  C21  -177.00  30.0  3
+ G6X  CONST_01  C15   C14  C13  C6      0.00   0.0  0
+ G6X  CONST_02  C15   C8   C7   C6      0.00   0.0  0
+ G6X  CONST_03  C14   C13  C6   C7      0.00   0.0  0
+ G6X  CONST_04  C14   C15  C8   C7      0.00   0.0  0
+ G6X  CONST_05  C13   C6   C7   C8      0.00   0.0  0
+ G6X  CONST_06  C13   C14  C15  C8      0.00   0.0  0
+ G6X  CONST_07  C30   C31  C32  C27     0.00   0.0  0
+ G6X  CONST_08  C30   C29  C28  C27     0.00   0.0  0
+ G6X  CONST_09  C31   C32  C27  C28     0.00   0.0  0
+ G6X  CONST_10  C31   C30  C29  C28     0.00   0.0  0
+ G6X  CONST_11  C32   C27  C28  C29     0.00   0.0  0
+ G6X  CONST_12  C32   C31  C30  C29     0.00   0.0  0
+ G6X  CONST_13  S33   N25  C26  C27     0.00   0.0  0
+ G6X  CONST_14  O17   C6   C13  O5      0.00   0.0  0
+ G6X  CONST_15  O17   C6   C7   C8    180.00   0.0  0
+ G6X  CONST_16  O17   C6   C13  C14   180.00   0.0  0
+ G6X  CONST_17  C27   C26  N25  C24   180.00   0.0  0
+ G6X  CONST_18  O34   C26  N25  S33   180.00   0.0  0
+ G6X  CONST_19  H8    C8   C7   C6    180.00   0.0  0
+ G6X  CONST_20  H7    C7   C6   C13   180.00   0.0  0
+ G6X  CONST_21  H28   C28  C27  C26     0.00   0.0  0
+ G6X  CONST_22  H31   C31  C32  C27   180.00   0.0  0
+ G6X  CONST_23  H29   C29  C28  C27   180.00   0.0  0
+ G6X  CONST_24  H30   C30  C29  C28   180.00   0.0  0
+ G6X  CONST_25  O34   C26  N25  C24     0.00   0.0  0
+ G6X  Var_01    C42   C1   C2   C3     -0.73  30.0  1
+ G6X  Var_02    N10   C9   C15  C8   -147.25  30.0  1
+ G6X  Var_03    C12   C11  N10  C9     52.62  30.0  1
+ G6X  Var_04    C42   C12  C11  N10    37.72  30.0  1
+ G6X  Var_05    C15   C9   N10  C11   -88.60  30.0  1
+ G6X  Var_06    O35   S33  N25  C26  -112.27  30.0  1
+ G6X  Var_07    C20   C19  N10  C9    -70.69  30.0  3
+ G6X  Var_08    C26   N25  C24  C23    85.94  30.0  3
+ G6X  Var_09    C21   C20  C19  N10  -176.82  30.0  3
+ G6X  Var_10    N25   C24  C23  C22  -177.78  30.0  1
+ G6X  Var_11    H16   C16  O17  C6   -179.38  30.0  3
+ G6X  Var_12    C22   C21  C20  C19  -177.64  30.0  2
+ G6X  Var_13    C23   C22  C21  C20  -179.31  30.0  3
+ G6X  Var_14    C24   C23  C22  C21  -177.00  30.0  3
+ G6X  Var_15    C4    C3   C2   C1    -11.93  30.0  1
+ G6X  Var_16    C11   C12  C42  C1     47.08  30.0  1
+ G6X  Var_17    C13   C14  C42  C1     93.94  30.0  1
+ G6X  Var_18    C15   C14  C42  C1    -89.24  30.0  1
+ G6X  Var_19    C4    C41  C42  C1     38.59  30.0  1
+ G6X  Var_20    O5    C41  C42  C1    -83.93  30.0  1
+ G6X  Var_21    C12   C42  C1   C2    115.39  30.0  1
+ G6X  Var_22    C14   C42  C1   C2   -120.06  30.0  1
+ G6X  Var_23    C41   C42  C1   C2    -12.28  30.0  1
+ G6X  Var_24    C41   C4   C3   C2     38.17  30.0  1
+ G6X  Var_25    O5    C41  C4   C3     65.21  30.0  1
+ G6X  Var_26    C42   C41  C4   C3    -53.81  30.0  1
+ G6X  Var_27    C13   O5   C41  C4   -154.48  30.0  1
+ G6X  Var_28    C12   C42  C41  C4    -88.92  30.0  1
+ G6X  Var_29    C14   C42  C41  C4    153.17  30.0  1
+ G6X  Var_30    C12   C42  C41  O5    148.56  30.0  1
+ G6X  Var_31    C14   C42  C41  O5     30.65  30.0  1
+ G6X  Var_32    C41   O5   C13  C6   -160.81  30.0  1
+ G6X  Var_33    C14   C42  C12  C11   -76.37  30.0  1
+ G6X  Var_34    C41   C42  C12  C11   173.24  30.0  1
+ G6X  Var_35    C13   C14  C42  C12  -140.64  30.0  1
+ G6X  Var_36    C15   C14  C42  C12    36.18  30.0  1
+ G6X  Var_37    C42   C41  O5   C13   -29.86  30.0  1
+ G6X  Var_38    C41   C42  C14  C13   -21.38  30.0  1
+ G6X  Var_39    C41   O5   C13  C14    16.43  30.0  1
+ G6X  Var_40    C41   C42  C14  C15   155.44  30.0  1
+ G6X  Var_41    O18   C3   C2   C1    110.04  30.0  1
+ G6X  Var_42    C41   C4   C3   O18   -85.04  30.0  1
+ G6X  Var_43    O35   S33  C32  C27   111.57  30.0  1
+ G6X  Var_44    O36   S33  C32  C27  -113.56  30.0  1
+ G6X  Var_45    O35   S33  C32  C31   -67.77  30.0  1
+ G6X  Var_46    O36   S33  C32  C31    67.11  30.0  1
+ G6X  Var_47    H3    C3   C2   C1   -129.85  30.0  1
+ G6X  Var_48    H12   C12  C42  C1    -73.86  30.0  1
+ G6X  Var_49    H12A  C12  C42  C1    170.79  30.0  1
+ G6X  Var_50    H41   C41  C42  C1    161.40  30.0  1
+ G6X  Var_51    H4    C4   C3   C2    163.67  30.0  1
+ G6X  Var_52    H4A   C4   C3   C2    -80.69  30.0  1
+ G6X  Var_53    H2    C2   C3   C4    168.96  30.0  1
+ G6X  Var_54    C16   O17  C6   C7     -0.17  30.0  1
+ G6X  Var_55    C16   O17  C6   C13   178.95  30.0  1
+ G6X  Var_56    HO18  O18  C3   C2     62.98  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

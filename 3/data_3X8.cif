@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3X8  3X8  'biphenyl-4-yl alpha-D-mannopyranoside'  ligand  44  24  .  2021-08-04  2021-08-04  
+ 3X8  3X8  'biphenyl-4-yl alpha-D-mannopyranoside'  ligand  44  24  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3X8
@@ -233,33 +234,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3X8  CONST_01  CAK  CAJ  CAI  CAH    0.00  0.0  0
- 3X8  CONST_02  CAK  CAL  CAG  CAH    0.00  0.0  0
- 3X8  CONST_05  CAL  CAK  CAJ  CAI    0.00  0.0  0
- 3X8  CONST_06  CAL  CAG  CAH  CAI    0.00  0.0  0
- 3X8  CONST_07  CAD  CAG  CAH  CAI  180.00  0.0  0
- 3X8  CONST_08  CAG  CAL  CAK  CAJ    0.00  0.0  0
- 3X8  CONST_09  CAG  CAH  CAI  CAJ    0.00  0.0  0
- 3X8  CONST_10  CAD  CAG  CAL  CAK  180.00  0.0  0
- 3X8  CONST_13  CAF  CAE  CAD  CAG  180.00  0.0  0
- 3X8  CONST_14  CAB  CAC  CAD  CAG  180.00  0.0  0
- 3X8  CONST_15  CAA  CAF  CAE  CAD    0.00  0.0  0
- 3X8  CONST_16  CAA  CAB  CAC  CAD    0.00  0.0  0
- 3X8  CONST_17  CAF  CAE  CAD  CAC    0.00  0.0  0
- 3X8  CONST_18  CAF  CAA  CAB  CAC    0.00  0.0  0
- 3X8  CONST_19  CAE  CAD  CAC  CAB    0.00  0.0  0
- 3X8  CONST_20  CAE  CAF  CAA  CAB    0.00  0.0  0
- 3X8  CONST_21  O1   CAA  CAB  CAC  180.00  0.0  0
- 3X8  CONST_22  O1   CAA  CAF  CAE  180.00  0.0  0
- 3X8  CONST_23  HAJ  CAJ  CAI  CAH  180.00  0.0  0
- 3X8  CONST_24  HAL  CAL  CAG  CAH  180.00  0.0  0
- 3X8  CONST_25  HAK  CAK  CAJ  CAI  180.00  0.0  0
- 3X8  CONST_26  HAH  CAH  CAI  CAJ  180.00  0.0  0
- 3X8  CONST_27  HAI  CAI  CAJ  CAK  180.00  0.0  0
- 3X8  CONST_28  HAE  CAE  CAD  CAG    0.00  0.0  0
- 3X8  CONST_29  HAC  CAC  CAD  CAG    0.00  0.0  0
- 3X8  CONST_30  HAF  CAF  CAE  CAD  180.00  0.0  0
- 3X8  CONST_31  HAB  CAB  CAC  CAD  180.00  0.0  0
+ 3X8  CONST_01  CAK  CAJ  CAI  CAH     0.00   0.0  0
+ 3X8  CONST_02  CAK  CAL  CAG  CAH     0.00   0.0  0
+ 3X8  CONST_03  CAL  CAK  CAJ  CAI     0.00   0.0  0
+ 3X8  CONST_04  CAL  CAG  CAH  CAI     0.00   0.0  0
+ 3X8  CONST_05  CAD  CAG  CAH  CAI   180.00   0.0  0
+ 3X8  CONST_06  CAG  CAL  CAK  CAJ     0.00   0.0  0
+ 3X8  CONST_07  CAG  CAH  CAI  CAJ     0.00   0.0  0
+ 3X8  CONST_08  CAD  CAG  CAL  CAK   180.00   0.0  0
+ 3X8  CONST_09  CAF  CAE  CAD  CAG   180.00   0.0  0
+ 3X8  CONST_10  CAB  CAC  CAD  CAG   180.00   0.0  0
+ 3X8  CONST_11  CAA  CAF  CAE  CAD     0.00   0.0  0
+ 3X8  CONST_12  CAA  CAB  CAC  CAD     0.00   0.0  0
+ 3X8  CONST_13  CAF  CAE  CAD  CAC     0.00   0.0  0
+ 3X8  CONST_14  CAF  CAA  CAB  CAC     0.00   0.0  0
+ 3X8  CONST_15  CAE  CAD  CAC  CAB     0.00   0.0  0
+ 3X8  CONST_16  CAE  CAF  CAA  CAB     0.00   0.0  0
+ 3X8  CONST_17  O1   CAA  CAB  CAC   180.00   0.0  0
+ 3X8  CONST_18  O1   CAA  CAF  CAE   180.00   0.0  0
+ 3X8  CONST_19  HAJ  CAJ  CAI  CAH   180.00   0.0  0
+ 3X8  CONST_20  HAL  CAL  CAG  CAH   180.00   0.0  0
+ 3X8  CONST_21  HAK  CAK  CAJ  CAI   180.00   0.0  0
+ 3X8  CONST_22  HAH  CAH  CAI  CAJ   180.00   0.0  0
+ 3X8  CONST_23  HAI  CAI  CAJ  CAK   180.00   0.0  0
+ 3X8  CONST_24  HAE  CAE  CAD  CAG     0.00   0.0  0
+ 3X8  CONST_25  HAC  CAC  CAD  CAG     0.00   0.0  0
+ 3X8  CONST_26  HAF  CAF  CAE  CAD   180.00   0.0  0
+ 3X8  CONST_27  HAB  CAB  CAC  CAD   180.00   0.0  0
+ 3X8  Var_01    C1   O5   C5   C4     57.12  30.0  1
+ 3X8  Var_02    C1   C2   C3   C4    -54.00  30.0  1
+ 3X8  Var_03    C2   C1   O5   C5    -57.25  30.0  1
+ 3X8  Var_04    C2   C3   C4   C5     54.78  30.0  1
+ 3X8  Var_05    O5   C1   C2   C3     53.87  30.0  1
+ 3X8  Var_06    O5   C5   C4   C3    -54.02  30.0  1
+ 3X8  Var_07    CAE  CAD  CAG  CAH   143.88  30.0  2
+ 3X8  Var_08    CAC  CAD  CAG  CAH   -36.04  30.0  2
+ 3X8  Var_09    CAE  CAD  CAG  CAL   -36.04  30.0  2
+ 3X8  Var_10    CAC  CAD  CAG  CAL   144.05  30.0  2
+ 3X8  Var_11    O2   C2   C3   C4     65.70  30.0  1
+ 3X8  Var_12    O1   C1   O5   C5     62.69  30.0  1
+ 3X8  Var_13    O3   C3   C4   C5    177.98  30.0  1
+ 3X8  Var_14    C1   O5   C5   C6    179.04  30.0  1
+ 3X8  Var_15    C3   C4   C5   C6   -173.11  30.0  1
+ 3X8  Var_16    O1   C1   C2   C3    -69.59  30.0  1
+ 3X8  Var_17    C1   O1   CAA  CAB   162.50  30.0  2
+ 3X8  Var_18    C1   O1   CAA  CAF   -17.57  30.0  2
+ 3X8  Var_19    O5   C1   O1   CAA    77.80  30.0  3
+ 3X8  Var_20    C2   C1   O1   CAA  -159.26  30.0  3
+ 3X8  Var_21    O3   C3   C2   C1   -174.44  30.0  1
+ 3X8  Var_22    O2   C2   C1   O5    -65.03  30.0  1
+ 3X8  Var_23    O4   C4   C5   O5   -174.86  30.0  1
+ 3X8  Var_24    C2   C3   C4   O4    173.41  30.0  1
+ 3X8  Var_25    H21  C2   C3   C4   -172.53  30.0  1
+ 3X8  Var_26    H1   C1   O5   C5   -177.21  30.0  1
+ 3X8  Var_27    H31  C3   C4   C5    -62.73  30.0  1
+ 3X8  Var_28    H5   C5   C4   C3     66.99  30.0  1
+ 3X8  Var_29    H41  C4   C5   O5     65.06  30.0  1
+ 3X8  Var_30    O6   C6   C5   C4   -175.33  30.0  3
+ 3X8  Var_31    O4   C4   C5   C6     66.05  30.0  1
+ 3X8  Var_32    O2   C2   C1   O1    171.51  30.0  1
+ 3X8  Var_33    O6   C6   C5   O5     63.52  30.0  3
+ 3X8  Var_34    O3   C3   C4   O4    -63.39  30.0  1
+ 3X8  Var_35    O2   C2   C3   O3    -54.74  30.0  1
+ 3X8  Var_36    H62  C6   C5   C4    -53.67  30.0  3
+ 3X8  Var_37    H61  C6   C5   C4     62.43  30.0  3
+ 3X8  Var_38    H32  O3   C3   C4    157.85  30.0  3
+ 3X8  Var_39    H42  O4   C4   C5    177.28  30.0  3
+ 3X8  Var_40    H22  O2   C2   C3    168.17  30.0  3
+ 3X8  Var_41    H63  O6   C6   C5    177.96  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

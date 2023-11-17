@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ILA  ILA  5'-deoxy-5'-[(L-isoleucylsulfamoyl)amino]adenosine  ligand  57  31  .  2021-08-11  2021-08-11  
+ ILA  ILA  5'-deoxy-5'-[(L-isoleucylsulfamoyl)amino]adenosine  ligand  57  31  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_ILA
@@ -286,40 +287,89 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ILA  CONST_01  C2   N3   C4   N9    180.00   0.0  0
- ILA  CONST_02  C6   C5   C4   N9    180.00   0.0  0
- ILA  CONST_03  N7   C5   C4   N9      0.00   0.0  0
- ILA  CONST_04  C5   N7   C8   N9      0.00   0.0  0
- ILA  CONST_05  N7   C8   N9   C4      0.00   0.0  0
- ILA  CONST_06  N1   C2   N3   C4      0.00   0.0  0
- ILA  CONST_07  N1   C6   C5   C4      0.00   0.0  0
- ILA  CONST_08  C8   N7   C5   C4      0.00   0.0  0
- ILA  CONST_09  C8   N9   C4   N3    180.00   0.0  0
- ILA  CONST_10  C6   C5   C4   N3      0.00   0.0  0
- ILA  CONST_11  N7   C5   C4   N3    180.00   0.0  0
- ILA  CONST_12  C6   N1   C2   N3      0.00   0.0  0
- ILA  CONST_13  C5   C4   N3   C2      0.00   0.0  0
- ILA  CONST_14  C5   C6   N1   C2      0.00   0.0  0
- ILA  CONST_15  N7   C5   C6   N1    180.00   0.0  0
- ILA  CONST_16  C8   N7   C5   C6    180.00   0.0  0
- ILA  CONST_17  C8   N9   C4   C5      0.00   0.0  0
- ILA  CONST_18  N3   C4   N9   C1'     0.00   0.0  0
- ILA  CONST_19  C5   C4   N9   C1'   180.00   0.0  0
- ILA  CONST_20  N7   C8   N9   C1'   180.00   0.0  0
- ILA  CONST_21  N6   C6   C5   C4    180.00   0.0  0
- ILA  CONST_22  N6   C6   N1   C2    180.00   0.0  0
- ILA  CONST_23  N7   C5   C6   N6      0.00   0.0  0
- ILA  CONST_24  H8   C8   N9   C1'     0.00   0.0  0
- ILA  CONST_25  H2   C2   N3   C4    180.00   0.0  0
- ILA  CONST_26  H61  N6   C6   N1      0.00   0.0  0
- ILA  CONST_27  H62  N6   C6   N1    180.00   0.0  0
- ILA  CONST_28  SA   N3A  C    CA    180.00   0.0  0
- ILA  CONST_29  SA   N3A  C    O       0.00   0.0  0
- ILA  CONST_30  HNA  N3A  C    CA      0.00   0.0  0
- ILA  Var_01    C4'  C5'  N5'  SA    174.48  30.0  3
- ILA  Var_02    O1A  SA   N3A  C     173.49  30.0  1
- ILA  Var_03    C5'  N5'  SA   O1A   -49.59  30.0  3
- ILA  Var_04    HD1  CD   CG1  CB   -172.72  30.0  3
+ ILA  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ ILA  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ ILA  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ ILA  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ ILA  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ ILA  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ ILA  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ ILA  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ ILA  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ ILA  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ ILA  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ ILA  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ ILA  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ ILA  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ ILA  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ ILA  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ ILA  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ ILA  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
+ ILA  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ ILA  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ ILA  CONST_21  N6    C6   C5   C4    180.00   0.0  0
+ ILA  CONST_22  N6    C6   N1   C2    180.00   0.0  0
+ ILA  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ ILA  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ ILA  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ ILA  CONST_26  H61   N6   C6   N1      0.00   0.0  0
+ ILA  CONST_27  H62   N6   C6   N1    180.00   0.0  0
+ ILA  CONST_28  SA    N3A  C    CA    180.00   0.0  0
+ ILA  CONST_29  SA    N3A  C    O       0.00   0.0  0
+ ILA  CONST_30  HNA   N3A  C    CA      0.00   0.0  0
+ ILA  Var_01    C4'   C5'  N5'  SA    174.48  30.0  3
+ ILA  Var_02    O1A   SA   N3A  C     173.49  30.0  1
+ ILA  Var_03    C5'   N5'  SA   O1A   -49.59  30.0  3
+ ILA  Var_04    HD1   CD   CG1  CB   -172.72  30.0  3
+ ILA  Var_05    N9    C1'  O4'  C4'  -137.71  30.0  1
+ ILA  Var_06    C2'   C1'  O4'  C4'   -14.23  30.0  1
+ ILA  Var_07    C1'   C2'  C3'  C4'   -38.21  30.0  1
+ ILA  Var_08    C2'   C3'  C4'  O4'    31.21  30.0  1
+ ILA  Var_09    C4    N9   C1'  O4'  -110.15  30.0  2
+ ILA  Var_10    C8    N9   C1'  O4'    66.36  30.0  2
+ ILA  Var_11    C3'   C2'  C1'  O4'    33.17  30.0  1
+ ILA  Var_12    C3'   C4'  O4'  C1'   -11.06  30.0  1
+ ILA  Var_13    C3'   C2'  C1'  N9    154.11  30.0  1
+ ILA  Var_14    C2'   C1'  N9   C4    131.32  30.0  2
+ ILA  Var_15    C2'   C1'  N9   C8    -52.17  30.0  2
+ ILA  Var_16    C1'   O4'  C4'  C5'   110.25  30.0  1
+ ILA  Var_17    C2'   C3'  C4'  C5'   -88.81  30.0  1
+ ILA  Var_18    O2'   C2'  C3'  C4'  -156.32  30.0  1
+ ILA  Var_19    O3'   C3'  C4'  O4'   -85.34  30.0  1
+ ILA  Var_20    O2'   C2'  C1'  O4'   155.02  30.0  1
+ ILA  Var_21    O3'   C3'  C2'  C1'    76.66  30.0  1
+ ILA  Var_22    O2'   C2'  C1'  N9    -84.03  30.0  1
+ ILA  Var_23    H1    C1'  O4'  C4'   105.21  30.0  1
+ ILA  Var_24    H2'   C2'  C3'  C4'    77.73  30.0  1
+ ILA  Var_25    H3    C3'  C4'  O4'   150.70  30.0  1
+ ILA  Var_26    H4    C4'  O4'  C1'  -130.52  30.0  1
+ ILA  Var_27    O4'   C4'  C5'  N5'    57.11  30.0  3
+ ILA  Var_28    C3'   C4'  C5'  N5'   174.62  30.0  3
+ ILA  Var_29    O3'   C3'  C4'  C5'   154.64  30.0  1
+ ILA  Var_30    O3'   C3'  C2'  O2'   -41.45  30.0  1
+ ILA  Var_31    HO3   O3'  C3'  C4'   155.99  30.0  3
+ ILA  Var_32    H51   C5'  C4'  O4'   -66.43  30.0  1
+ ILA  Var_33    H52   C5'  C4'  O4'   175.62  30.0  1
+ ILA  Var_34    HO2   O2'  C2'  C1'   160.73  30.0  3
+ ILA  Var_35    CG2   CB   CA   N     178.34  30.0  3
+ ILA  Var_36    CG1   CB   CA   N     -57.64  30.0  3
+ ILA  Var_37    O     C    CA   N     -60.54  30.0  3
+ ILA  Var_38    N3A   C    CA   N     118.27  30.0  3
+ ILA  Var_39    CD    CG1  CB   CA    174.70  30.0  3
+ ILA  Var_40    O     C    CA   CB     66.32  30.0  3
+ ILA  Var_41    N3A   C    CA   CB   -114.87  30.0  3
+ ILA  Var_42    C     CA   CB   CG2    57.93  30.0  1
+ ILA  Var_43    CD    CG1  CB   CG2   -62.07  30.0  3
+ ILA  Var_44    C     CA   CB   CG1  -178.05  30.0  1
+ ILA  Var_45    HB    CB   CA   N      59.97  30.0  3
+ ILA  Var_46    HG21  CG2  CB   CA     59.26  30.0  3
+ ILA  Var_47    HG22  CG2  CB   CA    179.17  30.0  3
+ ILA  Var_48    HG23  CG2  CB   CA    -61.39  30.0  3
+ ILA  Var_49    HG11  CG1  CB   CA     53.79  30.0  3
+ ILA  Var_50    HG12  CG1  CB   CA    -62.05  30.0  3
+ ILA  Var_51    HN1   N    CA   CB    -47.95  30.0  3
+ ILA  Var_52    HN2   N    CA   CB     70.31  30.0  3
+ ILA  Var_53    HA1   CA   CB   CG2   -60.98  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

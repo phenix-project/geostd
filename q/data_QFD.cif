@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QFD  QFD  (3S,6S)-3-{[4-(hydroxymethoxy)phenyl]methyl}-6-[(4-hydroxyphenyl)methyl]piperazine-2,5-dione  ligand  46  26  .  2022-03-23  2022-03-23
+ QFD  QFD  (3S,6S)-3-{[4-(hydroxymethoxy)phenyl]methyl}-6-[(4-hydroxyphenyl)methyl]piperazine-2,5-dione  ligand  46  26  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QFD
@@ -240,43 +241,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QFD  CONST_01  C07  C06  C14  C13    0.00   0.0  0
- QFD  CONST_02  C07  C08  C09  C13    0.00   0.0  0
- QFD  CONST_03  C23  C25  C26  C20    0.00   0.0  0
- QFD  CONST_04  C23  C22  C21  C20    0.00   0.0  0
- QFD  CONST_05  C25  C26  C20  C21    0.00   0.0  0
- QFD  CONST_06  C25  C23  C22  C21    0.00   0.0  0
- QFD  CONST_07  C26  C20  C21  C22    0.00   0.0  0
- QFD  CONST_08  C26  C25  C23  C22    0.00   0.0  0
- QFD  CONST_09  C09  C08  C07  C06    0.00   0.0  0
- QFD  CONST_10  C09  C13  C14  C06    0.00   0.0  0
- QFD  CONST_11  C14  C06  C07  C08    0.00   0.0  0
- QFD  CONST_12  C14  C13  C09  C08    0.00   0.0  0
- QFD  CONST_13  C18  C02  N03  C04    0.00   0.0  0
- QFD  CONST_14  C18  N17  C15  C04    0.00   0.0  0
- QFD  CONST_15  C05  C06  C14  C13  180.00   0.0  0
- QFD  CONST_16  O24  C23  C22  C21  180.00   0.0  0
- QFD  CONST_17  C19  C20  C21  C22  180.00   0.0  0
- QFD  CONST_18  O24  C23  C25  C26  180.00   0.0  0
- QFD  CONST_19  C08  C07  C06  C05  180.00   0.0  0
- QFD  CONST_20  O10  C09  C08  C07  180.00   0.0  0
- QFD  CONST_21  O10  C09  C13  C14  180.00   0.0  0
- QFD  CONST_22  C25  C26  C20  C19  180.00   0.0  0
- QFD  CONST_23  O01  C02  N03  C04  180.00   0.0  0
- QFD  CONST_24  O16  C15  N17  C18  180.00   0.0  0
- QFD  CONST_25  H9   C08  C09  C13  180.00   0.0  0
- QFD  CONST_26  H16  C25  C26  C20  180.00   0.0  0
- QFD  CONST_27  H3   C22  C21  C20  180.00   0.0  0
- QFD  CONST_28  H4   C26  C20  C21  180.00   0.0  0
- QFD  CONST_29  H2   C21  C20  C26  180.00   0.0  0
- QFD  CONST_30  H1   C13  C14  C06  180.00   0.0  0
- QFD  CONST_31  H12  C14  C06  C07  180.00   0.0  0
- QFD  CONST_32  H8   C07  C08  C09  180.00   0.0  0
- QFD  CONST_33  H18  N17  C15  C04  180.00   0.0  0
- QFD  CONST_34  H17  N03  C02  C18  180.00   0.0  0
- QFD  Var_01    C18  C19  C20  C21   97.83  30.0  2
- QFD  Var_02    C07  C06  C05  C04  -84.93  30.0  2
- QFD  Var_03    O12  C11  O10  C09   67.14  30.0  3
+ QFD  CONST_01  C07  C06  C14  C13     0.00   0.0  0
+ QFD  CONST_02  C07  C08  C09  C13     0.00   0.0  0
+ QFD  CONST_03  C23  C25  C26  C20     0.00   0.0  0
+ QFD  CONST_04  C23  C22  C21  C20     0.00   0.0  0
+ QFD  CONST_05  C25  C26  C20  C21     0.00   0.0  0
+ QFD  CONST_06  C25  C23  C22  C21     0.00   0.0  0
+ QFD  CONST_07  C26  C20  C21  C22     0.00   0.0  0
+ QFD  CONST_08  C26  C25  C23  C22     0.00   0.0  0
+ QFD  CONST_09  C09  C08  C07  C06     0.00   0.0  0
+ QFD  CONST_10  C09  C13  C14  C06     0.00   0.0  0
+ QFD  CONST_11  C14  C06  C07  C08     0.00   0.0  0
+ QFD  CONST_12  C14  C13  C09  C08     0.00   0.0  0
+ QFD  CONST_13  C18  C02  N03  C04     0.00   0.0  0
+ QFD  CONST_14  C18  N17  C15  C04     0.00   0.0  0
+ QFD  CONST_15  C05  C06  C14  C13   180.00   0.0  0
+ QFD  CONST_16  O24  C23  C22  C21   180.00   0.0  0
+ QFD  CONST_17  C19  C20  C21  C22   180.00   0.0  0
+ QFD  CONST_18  O24  C23  C25  C26   180.00   0.0  0
+ QFD  CONST_19  C08  C07  C06  C05   180.00   0.0  0
+ QFD  CONST_20  O10  C09  C08  C07   180.00   0.0  0
+ QFD  CONST_21  O10  C09  C13  C14   180.00   0.0  0
+ QFD  CONST_22  C25  C26  C20  C19   180.00   0.0  0
+ QFD  CONST_23  O01  C02  N03  C04   180.00   0.0  0
+ QFD  CONST_24  O16  C15  N17  C18   180.00   0.0  0
+ QFD  CONST_25  H9   C08  C09  C13   180.00   0.0  0
+ QFD  CONST_26  H16  C25  C26  C20   180.00   0.0  0
+ QFD  CONST_27  H3   C22  C21  C20   180.00   0.0  0
+ QFD  CONST_28  H4   C26  C20  C21   180.00   0.0  0
+ QFD  CONST_29  H2   C21  C20  C26   180.00   0.0  0
+ QFD  CONST_30  H1   C13  C14  C06   180.00   0.0  0
+ QFD  CONST_31  H12  C14  C06  C07   180.00   0.0  0
+ QFD  CONST_32  H8   C07  C08  C09   180.00   0.0  0
+ QFD  CONST_33  H18  N17  C15  C04   180.00   0.0  0
+ QFD  CONST_34  H17  N03  C02  C18   180.00   0.0  0
+ QFD  Var_01    C18  C19  C20  C21    97.83  30.0  2
+ QFD  Var_02    C07  C06  C05  C04   -84.93  30.0  2
+ QFD  Var_03    O12  C11  O10  C09    67.14  30.0  3
+ QFD  Var_04    C02  N03  C04  C15    17.60  30.0  1
+ QFD  Var_05    C02  C18  N17  C15    13.12  30.0  1
+ QFD  Var_06    N17  C15  C04  N03    -9.97  30.0  1
+ QFD  Var_07    N17  C18  C02  N03    -5.99  30.0  1
+ QFD  Var_08    C06  C05  C04  C15   -62.15  30.0  3
+ QFD  Var_09    C19  C18  N17  C15  -112.69  30.0  1
+ QFD  Var_10    C02  C18  C19  C20   176.52  30.0  2
+ QFD  Var_11    N17  C18  C19  C20   -56.04  30.0  2
+ QFD  Var_12    C05  C04  N03  C02  -107.65  30.0  1
+ QFD  Var_13    N17  C15  C04  C05   116.10  30.0  1
+ QFD  Var_14    N03  C04  C05  C06    64.76  30.0  2
+ QFD  Var_15    N03  C02  C18  C19   120.59  30.0  1
+ QFD  Var_16    O16  C15  C04  N03   169.87  30.0  1
+ QFD  Var_17    O01  C02  C18  N17   172.28  30.0  1
+ QFD  Var_18    H13  C18  N17  C15   129.05  30.0  1
+ QFD  Var_19    H5   C04  N03  C02   134.54  30.0  1
+ QFD  Var_20    C11  O10  C09  C13  -163.21  30.0  2
+ QFD  Var_21    O16  C15  C04  C05   -64.06  30.0  1
+ QFD  Var_22    C11  O10  C09  C08    17.66  30.0  2
+ QFD  Var_23    O01  C02  C18  C19   -61.14  30.0  1
+ QFD  Var_24    H6   C05  C04  C15    60.70  30.0  3
+ QFD  Var_25    H7   C05  C04  C15   175.28  30.0  3
+ QFD  Var_26    H20  O24  C23  C22     0.85  30.0  2
+ QFD  Var_27    H19  O12  C11  O10   -88.79  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NVV  NVV  7-[(3S,4R)-4-(3-iodanylphenyl)carbonylpyrrolidin-3-yl]-3H-quinazolin-4-one  ligand  41  25  .  2022-07-22  2022-07-26
+ NVV  NVV  7-[(3S,4R)-4-(3-iodanylphenyl)carbonylpyrrolidin-3-yl]-3H-quinazolin-4-one  ligand  41  25  .  2022-07-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NVV
@@ -226,40 +227,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NVV  CONST_01  CAH  CAG  CAT  CAK     0.00   0.0  0
- NVV  CONST_02  CAH  CAW  CAV  CAK     0.00   0.0  0
- NVV  CONST_03  CAG  CAT  CAK  CAV     0.00   0.0  0
- NVV  CONST_04  CAG  CAH  CAW  CAV     0.00   0.0  0
- NVV  CONST_05  CAT  CAG  CAH  CAW     0.00   0.0  0
- NVV  CONST_06  CAT  CAK  CAV  CAW     0.00   0.0  0
- NVV  CONST_07  CAE  CAD  CAF  CAS     0.00   0.0  0
- NVV  CONST_08  CAE  CAR  CAJ  CAS     0.00   0.0  0
- NVV  CONST_09  CAR  CAE  CAD  CAF     0.00   0.0  0
- NVV  CONST_10  CAR  CAJ  CAS  CAF     0.00   0.0  0
- NVV  CONST_11  CAJ  CAR  CAE  CAD     0.00   0.0  0
- NVV  CONST_12  CAJ  CAS  CAF  CAD     0.00   0.0  0
- NVV  CONST_13  CAY  CAT  CAK  CAV   180.00   0.0  0
- NVV  CONST_14  CAY  CAT  CAG  CAH   180.00   0.0  0
- NVV  CONST_15  NAP  CAI  NAO  CAV     0.00   0.0  0
- NVV  CONST_16  CAU  NAP  CAI  NAO     0.00   0.0  0
- NVV  CONST_17  CAW  CAU  NAP  CAI     0.00   0.0  0
- NVV  CONST_18  CAD  CAF  CAS  CAQ   180.00   0.0  0
- NVV  CONST_19  CAR  CAJ  CAS  CAQ   180.00   0.0  0
- NVV  CONST_20  ILA  CAR  CAJ  CAS   180.00   0.0  0
- NVV  CONST_21  ILA  CAR  CAE  CAD   180.00   0.0  0
- NVV  CONST_22  OAB  CAU  NAP  CAI   180.00   0.0  0
- NVV  CONST_23  HAG  CAG  CAT  CAK   180.00   0.0  0
- NVV  CONST_24  HAH  CAH  CAW  CAV   180.00   0.0  0
- NVV  CONST_25  HAK  CAK  CAV  NAO     0.00   0.0  0
- NVV  CONST_26  HAD  CAD  CAF  CAS   180.00   0.0  0
- NVV  CONST_27  HAE  CAE  CAD  CAF   180.00   0.0  0
- NVV  CONST_28  HAJ  CAJ  CAS  CAF   180.00   0.0  0
- NVV  CONST_29  HAF  CAF  CAD  CAE   180.00   0.0  0
- NVV  CONST_30  HAI  CAI  NAO  CAV   180.00   0.0  0
- NVV  CONST_31  HAP  NAP  CAI  NAO   180.00   0.0  0
- NVV  Var_01    CAL  NAN  CAM  CAY   -45.52  30.0  1
- NVV  Var_02    CAX  CAL  NAN  CAM    46.07  30.0  1
- NVV  Var_03    CAF  CAS  CAQ  CAX  -173.96  30.0  2
+ NVV  CONST_01  CAH   CAG  CAT  CAK     0.00   0.0  0
+ NVV  CONST_02  CAH   CAW  CAV  CAK     0.00   0.0  0
+ NVV  CONST_03  CAG   CAT  CAK  CAV     0.00   0.0  0
+ NVV  CONST_04  CAG   CAH  CAW  CAV     0.00   0.0  0
+ NVV  CONST_05  CAT   CAG  CAH  CAW     0.00   0.0  0
+ NVV  CONST_06  CAT   CAK  CAV  CAW     0.00   0.0  0
+ NVV  CONST_07  CAE   CAD  CAF  CAS     0.00   0.0  0
+ NVV  CONST_08  CAE   CAR  CAJ  CAS     0.00   0.0  0
+ NVV  CONST_09  CAR   CAE  CAD  CAF     0.00   0.0  0
+ NVV  CONST_10  CAR   CAJ  CAS  CAF     0.00   0.0  0
+ NVV  CONST_11  CAJ   CAR  CAE  CAD     0.00   0.0  0
+ NVV  CONST_12  CAJ   CAS  CAF  CAD     0.00   0.0  0
+ NVV  CONST_13  CAY   CAT  CAK  CAV   180.00   0.0  0
+ NVV  CONST_14  CAY   CAT  CAG  CAH   180.00   0.0  0
+ NVV  CONST_15  NAP   CAI  NAO  CAV     0.00   0.0  0
+ NVV  CONST_16  CAU   NAP  CAI  NAO     0.00   0.0  0
+ NVV  CONST_17  CAW   CAU  NAP  CAI     0.00   0.0  0
+ NVV  CONST_18  CAD   CAF  CAS  CAQ   180.00   0.0  0
+ NVV  CONST_19  CAR   CAJ  CAS  CAQ   180.00   0.0  0
+ NVV  CONST_20  ILA   CAR  CAJ  CAS   180.00   0.0  0
+ NVV  CONST_21  ILA   CAR  CAE  CAD   180.00   0.0  0
+ NVV  CONST_22  OAB   CAU  NAP  CAI   180.00   0.0  0
+ NVV  CONST_23  HAG   CAG  CAT  CAK   180.00   0.0  0
+ NVV  CONST_24  HAH   CAH  CAW  CAV   180.00   0.0  0
+ NVV  CONST_25  HAK   CAK  CAV  NAO     0.00   0.0  0
+ NVV  CONST_26  HAD   CAD  CAF  CAS   180.00   0.0  0
+ NVV  CONST_27  HAE   CAE  CAD  CAF   180.00   0.0  0
+ NVV  CONST_28  HAJ   CAJ  CAS  CAF   180.00   0.0  0
+ NVV  CONST_29  HAF   CAF  CAD  CAE   180.00   0.0  0
+ NVV  CONST_30  HAI   CAI  NAO  CAV   180.00   0.0  0
+ NVV  CONST_31  HAP   NAP  CAI  NAO   180.00   0.0  0
+ NVV  Var_01    CAL   NAN  CAM  CAY   -45.52  30.0  1
+ NVV  Var_02    CAX   CAL  NAN  CAM    46.07  30.0  1
+ NVV  Var_03    CAF   CAS  CAQ  CAX  -173.96  30.0  2
+ NVV  Var_04    CAM   CAY  CAT  CAK   116.34  30.0  2
+ NVV  Var_05    CAX   CAY  CAT  CAK  -125.19  30.0  2
+ NVV  Var_06    CAM   CAY  CAT  CAG   -63.46  30.0  2
+ NVV  Var_07    CAX   CAY  CAT  CAG    55.01  30.0  2
+ NVV  Var_08    NAN   CAM  CAY  CAT   149.83  30.0  1
+ NVV  Var_09    CAL   CAX  CAY  CAT  -122.54  30.0  1
+ NVV  Var_10    NAN   CAL  CAX  CAY   -27.78  30.0  1
+ NVV  Var_11    CAL   CAX  CAY  CAM     1.17  30.0  1
+ NVV  Var_12    CAX   CAY  CAM  NAN    25.86  30.0  1
+ NVV  Var_13    CAQ   CAX  CAY  CAT   118.58  30.0  1
+ NVV  Var_14    CAS   CAQ  CAX  CAY  -168.22  30.0  2
+ NVV  Var_15    CAQ   CAX  CAY  CAM  -117.70  30.0  1
+ NVV  Var_16    CAQ   CAX  CAL  NAN    93.65  30.0  1
+ NVV  Var_17    CAS   CAQ  CAX  CAL    76.15  30.0  2
+ NVV  Var_18    HAY   CAY  CAT  CAK    -3.92  30.0  2
+ NVV  Var_19    HAM1  CAM  CAY  CAT   -90.17  30.0  1
+ NVV  Var_20    HAM2  CAM  CAY  CAT    29.07  30.0  1
+ NVV  Var_21    HAX   CAX  CAY  CAT    -4.18  30.0  1
+ NVV  Var_22    HAL1  CAL  CAX  CAY  -147.97  30.0  1
+ NVV  Var_23    HAL2  CAL  CAX  CAY    92.63  30.0  1
+ NVV  Var_24    OAA   CAQ  CAX  CAY    13.74  30.0  2
+ NVV  Var_25    OAA   CAQ  CAX  CAL  -101.89  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

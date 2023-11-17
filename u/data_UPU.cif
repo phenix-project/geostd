@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UPU  UPU  '[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-4-hydroxy-2-(hydroxymethyl)tetrahydrofuran-3-yl hydrogen (S)-phosphate (non-preferred name)'  ligand  59  37  .  2021-08-24  2022-09-22
+ UPU  UPU  '[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-4-hydroxy-2-(hydroxymethyl)tetrahydrofuran-3-yl hydrogen (S)-phosphate (non-preferred name)'  ligand  59  37  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UPU
@@ -296,24 +297,100 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- UPU  CONST_01  C6A   N1A   C2A   N3A     0.00   0.0  0
- UPU  CONST_02  C1'A  N1A   C2A   N3A   180.00   0.0  0
- UPU  CONST_03  N1A   C2A   N3A   C4A     0.00   0.0  0
- UPU  CONST_04  N3B   C2B   N1B   C1'B  180.00   0.0  0
- UPU  CONST_05  C4B   N3B   C2B   N1B     0.00   0.0  0
- UPU  CONST_06  C5B   C4B   N3B   C2B     0.00   0.0  0
- UPU  CONST_07  N3B   C2B   N1B   C6B     0.00   0.0  0
- UPU  CONST_08  C4A   N3A   C2A   O2A   180.00   0.0  0
- UPU  CONST_09  C6A   N1A   C2A   O2A   180.00   0.0  0
- UPU  CONST_10  C1'A  N1A   C2A   O2A     0.00   0.0  0
- UPU  CONST_11  O2B   C2B   N1B   C1'B    0.00   0.0  0
- UPU  CONST_12  O4B   C4B   N3B   C2B   180.00   0.0  0
- UPU  CONST_13  C6B   N1B   C2B   O2B   180.00   0.0  0
- UPU  CONST_14  C4B   N3B   C2B   O2B   180.00   0.0  0
- UPU  CONST_15  HN3A  N3A   C2A   N1A   180.00   0.0  0
- UPU  CONST_16  HN3B  N3B   C2B   N1B   180.00   0.0  0
- UPU  Var_01    O3'B  P     O5'A  C5'A   97.80  30.0  3
- UPU  Var_02    H'A1  C5'A  O5'A  P     130.52  30.0  2
+ UPU  CONST_01  C6A   N1A   C2A   N3A      0.00   0.0  0
+ UPU  CONST_02  C1'A  N1A   C2A   N3A    180.00   0.0  0
+ UPU  CONST_03  N1A   C2A   N3A   C4A      0.00   0.0  0
+ UPU  CONST_04  N3B   C2B   N1B   C1'B   180.00   0.0  0
+ UPU  CONST_05  C4B   N3B   C2B   N1B      0.00   0.0  0
+ UPU  CONST_06  C5B   C4B   N3B   C2B      0.00   0.0  0
+ UPU  CONST_07  N3B   C2B   N1B   C6B      0.00   0.0  0
+ UPU  CONST_08  C4A   N3A   C2A   O2A    180.00   0.0  0
+ UPU  CONST_09  C6A   N1A   C2A   O2A    180.00   0.0  0
+ UPU  CONST_10  C1'A  N1A   C2A   O2A      0.00   0.0  0
+ UPU  CONST_11  O2B   C2B   N1B   C1'B     0.00   0.0  0
+ UPU  CONST_12  O4B   C4B   N3B   C2B    180.00   0.0  0
+ UPU  CONST_13  C6B   N1B   C2B   O2B    180.00   0.0  0
+ UPU  CONST_14  C4B   N3B   C2B   O2B    180.00   0.0  0
+ UPU  CONST_15  HN3A  N3A   C2A   N1A    180.00   0.0  0
+ UPU  CONST_16  HN3B  N3B   C2B   N1B    180.00   0.0  0
+ UPU  Var_01    O3'B  P     O5'A  C5'A    97.80  30.0  3
+ UPU  Var_02    H'A1  C5'A  O5'A  P      130.52  30.0  2
+ UPU  Var_03    C5A   C4A   N3A   C2A     -3.46  30.0  1
+ UPU  Var_04    C5A   C6A   N1A   C2A     -0.02  30.0  1
+ UPU  Var_05    O4'A  C1'A  N1A   C2A   -133.39  30.0  3
+ UPU  Var_06    C2'A  C1'A  N1A   C2A    108.83  30.0  3
+ UPU  Var_07    C6A   C5A   C4A   N3A      2.17  30.0  1
+ UPU  Var_08    N1A   C6A   C5A   C4A     -0.69  30.0  1
+ UPU  Var_09    C1'A  N1A   C6A   C5A    179.46  30.0  1
+ UPU  Var_10    O4'A  C1'A  N1A   C6A     47.12  30.0  3
+ UPU  Var_11    C2'A  C1'A  N1A   C6A    -70.66  30.0  3
+ UPU  Var_12    C4'A  O4'A  C1'A  N1A   -144.08  30.0  1
+ UPU  Var_13    C3'A  C2'A  C1'A  N1A    157.43  30.0  1
+ UPU  Var_14    C3'A  C4'A  O4'A  C1'A    -4.90  30.0  1
+ UPU  Var_15    C4'A  C3'A  C2'A  C1'A   -38.65  30.0  1
+ UPU  Var_16    C3'A  C2'A  C1'A  O4'A    37.46  30.0  1
+ UPU  Var_17    C2'A  C3'A  C4'A  O4'A    28.02  30.0  1
+ UPU  Var_18    C4'A  O4'A  C1'A  C2'A   -20.84  30.0  1
+ UPU  Var_19    C1'B  O4'B  C4'B  C3'B    -5.71  30.0  1
+ UPU  Var_20    O4'B  C1'B  C2'B  C3'B    37.12  30.0  1
+ UPU  Var_21    N1B   C1'B  C2'B  C3'B   160.87  30.0  1
+ UPU  Var_22    C1'B  C2'B  C3'B  C4'B   -38.47  30.0  1
+ UPU  Var_23    C2'B  C1'B  O4'B  C4'B   -20.08  30.0  1
+ UPU  Var_24    N1B   C1'B  O4'B  C4'B  -147.69  30.0  1
+ UPU  Var_25    C2'B  C3'B  C4'B  O4'B    28.75  30.0  1
+ UPU  Var_26    C6B   N1B   C1'B  O4'B  -115.17  30.0  3
+ UPU  Var_27    C2B   N1B   C1'B  O4'B    61.59  30.0  3
+ UPU  Var_28    C6B   N1B   C1'B  C2'B   123.12  30.0  3
+ UPU  Var_29    C2B   N1B   C1'B  C2'B   -60.12  30.0  3
+ UPU  Var_30    O4A   C4A   N3A   C2A    177.19  30.0  1
+ UPU  Var_31    C6A   C5A   C4A   O4A   -178.53  30.0  1
+ UPU  Var_32    O2'A  C2'A  C1'A  N1A    -80.60  30.0  1
+ UPU  Var_33    C5'A  C4'A  O4'A  C1'A   116.21  30.0  1
+ UPU  Var_34    O3'A  C3'A  C2'A  C1'A    76.83  30.0  1
+ UPU  Var_35    O2'A  C2'A  C1'A  O4'A   159.43  30.0  1
+ UPU  Var_36    O3'A  C3'A  C4'A  O4'A   -88.88  30.0  1
+ UPU  Var_37    C5'A  C4'A  C3'A  C2'A   -93.03  30.0  1
+ UPU  Var_38    C4'A  C3'A  C2'A  O2'A  -157.02  30.0  1
+ UPU  Var_39    O4'B  C4'B  C3'B  O3'B   -85.86  30.0  1
+ UPU  Var_40    C1'B  C2'B  C3'B  O3'B    79.22  30.0  1
+ UPU  Var_41    O2'B  C2'B  C3'B  C4'B  -159.09  30.0  1
+ UPU  Var_42    C2'B  C3'B  C4'B  C5'B   -92.63  30.0  1
+ UPU  Var_43    C1'B  O4'B  C4'B  C5'B   116.58  30.0  1
+ UPU  Var_44    O2'B  C2'B  C1'B  O4'B   157.49  30.0  1
+ UPU  Var_45    N1B   C1'B  C2'B  O2'B   -78.77  30.0  1
+ UPU  Var_46    H6A   C6A   N1A   C2A    179.07  30.0  1
+ UPU  Var_47    H1'A  C1'A  N1A   C2A    -12.71  30.0  3
+ UPU  Var_48    H5A   C5A   C4A   N3A   -178.09  30.0  1
+ UPU  Var_49    H2AC  C2'A  C1'A  N1A     42.76  30.0  1
+ UPU  Var_50    H4'A  C4'A  O4'A  C1'A  -123.69  30.0  1
+ UPU  Var_51    H3AC  C3'A  C2'A  C1'A  -157.83  30.0  1
+ UPU  Var_52    H1'B  C1'B  C2'B  C3'B   -82.00  30.0  1
+ UPU  Var_53    H2BC  C2'B  C3'B  C4'B    76.78  30.0  1
+ UPU  Var_54    H3BC  C3'B  C4'B  O4'B   148.33  30.0  1
+ UPU  Var_55    H4'B  C4'B  C3'B  C2'B   145.53  30.0  1
+ UPU  Var_56    H6B   C6B   N1B   C1'B    -2.17  30.0  1
+ UPU  Var_57    H5B   C5B   C6B   N1B    179.88  30.0  1
+ UPU  Var_58    O5'A  C5'A  C4'A  O4'A    58.62  30.0  3
+ UPU  Var_59    O3'A  C3'A  C2'A  O2'A   -41.54  30.0  1
+ UPU  Var_60    O5'A  C5'A  C4'A  C3'A   176.58  30.0  3
+ UPU  Var_61    C5'A  C4'A  C3'A  O3'A   150.07  30.0  1
+ UPU  Var_62    C4'B  C3'B  O3'B  P      -96.35  30.0  3
+ UPU  Var_63    C2'B  C3'B  O3'B  P      153.01  30.0  3
+ UPU  Var_64    C5'B  C4'B  C3'B  O3'B   152.76  30.0  1
+ UPU  Var_65    O2'B  C2'B  C3'B  O3'B   -41.41  30.0  1
+ UPU  Var_66    O5'B  C5'B  C4'B  C3'B   177.86  30.0  3
+ UPU  Var_67    O4'B  C4'B  C5'B  O5'B    59.35  30.0  2
+ UPU  Var_68    H2AO  O2'A  C2'A  C1'A   163.59  30.0  3
+ UPU  Var_69    H'A1  C5'A  C4'A  O4'A   177.27  30.0  3
+ UPU  Var_70    H'A2  C5'A  C4'A  O4'A   -66.24  30.0  3
+ UPU  Var_71    H3AO  O3'A  C3'A  C2'A    48.77  30.0  3
+ UPU  Var_72    H'B1  C5'B  C4'B  C3'B   -61.35  30.0  3
+ UPU  Var_73    H'B2  C5'B  C4'B  C3'B    55.06  30.0  3
+ UPU  Var_74    H2BO  O2'B  C2'B  C3'B  -155.28  30.0  3
+ UPU  Var_75    C3'B  O3'B  P     O5'A    79.92  30.0  3
+ UPU  Var_76    C3'B  O3'B  P     O1     -31.87  30.0  2
+ UPU  Var_77    C3'B  O3'B  P     O2    -165.28  30.0  3
+ UPU  Var_78    H5'B  O5'B  C5'B  C4'B  -178.08  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

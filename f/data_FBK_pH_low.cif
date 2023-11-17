@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FBK  FBK  '3-[6-(3-hydroxyphenyl)pyridin-2-yl]benzoic acid'  ligand  35  22  .  2021-08-09  2021-08-09  
+ FBK  FBK  '3-[6-(3-hydroxyphenyl)pyridin-2-yl]benzoic acid'  ligand  35  22  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FBK
@@ -194,49 +195,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FBK  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- FBK  CONST_02  C4   C5   C17  C1     0.00   0.0  0
- FBK  CONST_03  C6   C5   C17  C1   180.00   0.0  0
- FBK  CONST_04  C5   C4   C3   C2     0.00   0.0  0
- FBK  CONST_05  C5   C17  C1   C2     0.00   0.0  0
- FBK  CONST_06  C6   C5   C4   C3   180.00   0.0  0
- FBK  CONST_07  C17  C5   C4   C3     0.00   0.0  0
- FBK  CONST_08  C17  C1   C2   C3     0.00   0.0  0
- FBK  CONST_11  C10  N    C6   C5   180.00   0.0  0
- FBK  CONST_12  C8   C7   C6   C5   180.00   0.0  0
- FBK  CONST_13  C11  C10  N    C6   180.00   0.0  0
- FBK  CONST_14  C9   C10  N    C6     0.00   0.0  0
- FBK  CONST_15  C9   C8   C7   C6     0.00   0.0  0
- FBK  CONST_18  C8   C9   C10  N      0.00   0.0  0
- FBK  CONST_20  C8   C7   C6   N      0.00   0.0  0
- FBK  CONST_21  C15  C16  C11  C10  180.00   0.0  0
- FBK  CONST_22  C13  C12  C11  C10  180.00   0.0  0
- FBK  CONST_23  C7   C6   N    C10    0.00   0.0  0
- FBK  CONST_24  C7   C8   C9   C10    0.00   0.0  0
- FBK  CONST_25  C14  C15  C16  C11    0.00   0.0  0
- FBK  CONST_26  C8   C9   C10  C11  180.00   0.0  0
- FBK  CONST_27  C14  C13  C12  C11    0.00   0.0  0
- FBK  CONST_28  C15  C16  C11  C12    0.00   0.0  0
- FBK  CONST_30  C15  C14  C13  C12    0.00   0.0  0
- FBK  CONST_31  C16  C15  C14  C13    0.00   0.0  0
- FBK  CONST_32  C16  C11  C12  C13    0.00   0.0  0
- FBK  CONST_35  C11  C16  C15  O2   180.00   0.0  0
- FBK  CONST_36  C13  C14  C15  O2   180.00   0.0  0
- FBK  CONST_37  C    C1   C2   C3   180.00   0.0  0
- FBK  CONST_38  C    C1   C17  C5   180.00   0.0  0
- FBK  CONST_39  H3   C3   C2   C1   180.00   0.0  0
- FBK  CONST_40  H4   C4   C3   C2   180.00   0.0  0
- FBK  CONST_41  H10  C17  C1   C2   180.00   0.0  0
- FBK  CONST_42  H2   C2   C3   C4   180.00   0.0  0
- FBK  CONST_43  H11  C7   C6   C5     0.00   0.0  0
- FBK  CONST_44  H12  C8   C7   C6   180.00   0.0  0
- FBK  CONST_45  H13  C9   C10  N    180.00   0.0  0
- FBK  CONST_46  H9   C16  C11  C10    0.00   0.0  0
- FBK  CONST_47  H6   C12  C11  C10    0.00   0.0  0
- FBK  CONST_48  H7   C13  C12  C11  180.00   0.0  0
- FBK  CONST_49  H8   C14  C13  C12  180.00   0.0  0
- FBK  CONST_50  H5   O    C    C1   180.00   0.0  0
- FBK  Var_01    C2   C1   C    O1   179.25  30.0  2
+ FBK  CONST_01  C4   C3   C2   C1      0.00   0.0  0
+ FBK  CONST_02  C4   C5   C17  C1      0.00   0.0  0
+ FBK  CONST_03  C6   C5   C17  C1    180.00   0.0  0
+ FBK  CONST_04  C5   C4   C3   C2      0.00   0.0  0
+ FBK  CONST_05  C5   C17  C1   C2      0.00   0.0  0
+ FBK  CONST_06  C6   C5   C4   C3    180.00   0.0  0
+ FBK  CONST_07  C17  C5   C4   C3      0.00   0.0  0
+ FBK  CONST_08  C17  C1   C2   C3      0.00   0.0  0
+ FBK  CONST_09  C10  N    C6   C5    180.00   0.0  0
+ FBK  CONST_10  C8   C7   C6   C5    180.00   0.0  0
+ FBK  CONST_11  C11  C10  N    C6    180.00   0.0  0
+ FBK  CONST_12  C9   C10  N    C6      0.00   0.0  0
+ FBK  CONST_13  C9   C8   C7   C6      0.00   0.0  0
+ FBK  CONST_14  C8   C9   C10  N       0.00   0.0  0
+ FBK  CONST_15  C8   C7   C6   N       0.00   0.0  0
+ FBK  CONST_16  C15  C16  C11  C10   180.00   0.0  0
+ FBK  CONST_17  C13  C12  C11  C10   180.00   0.0  0
+ FBK  CONST_18  C7   C6   N    C10     0.00   0.0  0
+ FBK  CONST_19  C7   C8   C9   C10     0.00   0.0  0
+ FBK  CONST_20  C14  C15  C16  C11     0.00   0.0  0
+ FBK  CONST_21  C8   C9   C10  C11   180.00   0.0  0
+ FBK  CONST_22  C14  C13  C12  C11     0.00   0.0  0
+ FBK  CONST_23  C15  C16  C11  C12     0.00   0.0  0
+ FBK  CONST_24  C15  C14  C13  C12     0.00   0.0  0
+ FBK  CONST_25  C16  C15  C14  C13     0.00   0.0  0
+ FBK  CONST_26  C16  C11  C12  C13     0.00   0.0  0
+ FBK  CONST_27  C11  C16  C15  O2    180.00   0.0  0
+ FBK  CONST_28  C13  C14  C15  O2    180.00   0.0  0
+ FBK  CONST_29  C    C1   C2   C3    180.00   0.0  0
+ FBK  CONST_30  C    C1   C17  C5    180.00   0.0  0
+ FBK  CONST_31  H3   C3   C2   C1    180.00   0.0  0
+ FBK  CONST_32  H4   C4   C3   C2    180.00   0.0  0
+ FBK  CONST_33  H10  C17  C1   C2    180.00   0.0  0
+ FBK  CONST_34  H2   C2   C3   C4    180.00   0.0  0
+ FBK  CONST_35  H11  C7   C6   C5      0.00   0.0  0
+ FBK  CONST_36  H12  C8   C7   C6    180.00   0.0  0
+ FBK  CONST_37  H13  C9   C10  N     180.00   0.0  0
+ FBK  CONST_38  H9   C16  C11  C10     0.00   0.0  0
+ FBK  CONST_39  H6   C12  C11  C10     0.00   0.0  0
+ FBK  CONST_40  H7   C13  C12  C11   180.00   0.0  0
+ FBK  CONST_41  H8   C14  C13  C12   180.00   0.0  0
+ FBK  CONST_42  H5   O    C    C1    180.00   0.0  0
+ FBK  Var_01    C2   C1   C    O1    179.25  30.0  2
+ FBK  Var_02    N    C6   C5   C4   -161.13  30.0  2
+ FBK  Var_03    C7   C6   C5   C4     19.67  30.0  2
+ FBK  Var_04    C16  C11  C10  N      17.56  30.0  2
+ FBK  Var_05    C12  C11  C10  N    -162.05  30.0  2
+ FBK  Var_06    C17  C5   C6   N      18.38  30.0  3
+ FBK  Var_07    C9   C10  C11  C12    18.72  30.0  2
+ FBK  Var_08    C9   C10  C11  C16  -161.68  30.0  2
+ FBK  Var_09    C7   C6   C5   C17  -160.82  30.0  2
+ FBK  Var_10    H1   O2   C15  C14  -179.47  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

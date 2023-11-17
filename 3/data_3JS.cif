@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3JS  3JS  (4R)-1-acetyl-4-hydroxy-L-prolyl-(4R)-4-hydroxy-N-[4-(4-methyl-1,3-thiazol-5-yl)benzyl]-L-prolinamide  ligand  61  33  .  2021-08-04  2021-08-04  
+ 3JS  3JS  (4R)-1-acetyl-4-hydroxy-L-prolyl-(4R)-4-hydroxy-N-[4-(4-methyl-1,3-thiazol-5-yl)benzyl]-L-prolinamide  ligand  61  33  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3JS
@@ -310,43 +311,89 @@ _chem_comp_tor.period
  3JS  CONST_03  CBA  CAZ  CAK  CAI   180.00   0.0  0
  3JS  CONST_04  CAJ  CAZ  CAK  CAI     0.00   0.0  0
  3JS  CONST_05  CAJ  CAH  CAX  CAI     0.00   0.0  0
- 3JS  CONST_08  CAH  CAJ  CAZ  CAK     0.00   0.0  0
- 3JS  CONST_09  CAH  CAX  CAI  CAK     0.00   0.0  0
- 3JS  CONST_10  CBA  CAZ  CAJ  CAH   180.00   0.0  0
- 3JS  CONST_13  NAR  CAY  CBA  CAZ   180.00   0.0  0
- 3JS  CONST_14  CAL  SAT  CBA  CAZ   180.00   0.0  0
- 3JS  CONST_15  CAL  NAR  CAY  CBA     0.00   0.0  0
- 3JS  CONST_16  NAR  CAL  SAT  CBA     0.00   0.0  0
- 3JS  CONST_17  CAY  NAR  CAL  SAT     0.00   0.0  0
- 3JS  CONST_18  NAR  CAY  CBA  SAT     0.00   0.0  0
- 3JS  CONST_19  CAY  CBA  SAT  CAL     0.00   0.0  0
- 3JS  CONST_20  CAK  CAI  CAX  CAM   180.00   0.0  0
- 3JS  CONST_21  CAJ  CAH  CAX  CAM   180.00   0.0  0
- 3JS  CONST_22  CAB  CAY  CBA  CAZ     0.00   0.0  0
- 3JS  CONST_23  CAB  CAY  CBA  SAT   180.00   0.0  0
- 3JS  CONST_24  CAB  CAY  NAR  CAL   180.00   0.0  0
- 3JS  CONST_25  CA   N    CAW  CBE   180.00   0.0  0
- 3JS  CONST_26  CD2  N    CAW  CBE     0.00   0.0  0
- 3JS  CONST_27  H22  CAK  CAI  CAX   180.00   0.0  0
- 3JS  CONST_28  H24  CAJ  CAH  CAX   180.00   0.0  0
- 3JS  CONST_29  H23  CAH  CAX  CAI   180.00   0.0  0
- 3JS  CONST_30  H21  CAI  CAX  CAH   180.00   0.0  0
- 3JS  CONST_31  H25  CAL  SAT  CBA   180.00   0.0  0
- 3JS  CONST_32  CBE  NBF  CAU  CAA   180.00   0.0  0
- 3JS  CONST_33  CAP  NBF  CAU  CAA     0.00   0.0  0
- 3JS  CONST_34  CBE  NBF  CAU  OAC     0.00   0.0  0
- 3JS  CONST_35  CAP  NBF  CAU  OAC   180.00   0.0  0
- 3JS  CONST_36  CA   N    CAW  OAE     0.00   0.0  0
- 3JS  CONST_37  CD2  N    CAW  OAE   180.00   0.0  0
- 3JS  CONST_38  CAM  NAS  C    CA    180.00   0.0  0
- 3JS  CONST_39  H18  NAS  C    CA      0.00   0.0  0
- 3JS  CONST_40  CAM  NAS  C    O       0.00   0.0  0
+ 3JS  CONST_06  CAH  CAJ  CAZ  CAK     0.00   0.0  0
+ 3JS  CONST_07  CAH  CAX  CAI  CAK     0.00   0.0  0
+ 3JS  CONST_08  CBA  CAZ  CAJ  CAH   180.00   0.0  0
+ 3JS  CONST_09  NAR  CAY  CBA  CAZ   180.00   0.0  0
+ 3JS  CONST_10  CAL  SAT  CBA  CAZ   180.00   0.0  0
+ 3JS  CONST_11  CAL  NAR  CAY  CBA     0.00   0.0  0
+ 3JS  CONST_12  NAR  CAL  SAT  CBA     0.00   0.0  0
+ 3JS  CONST_13  CAY  NAR  CAL  SAT     0.00   0.0  0
+ 3JS  CONST_14  NAR  CAY  CBA  SAT     0.00   0.0  0
+ 3JS  CONST_15  CAY  CBA  SAT  CAL     0.00   0.0  0
+ 3JS  CONST_16  CAK  CAI  CAX  CAM   180.00   0.0  0
+ 3JS  CONST_17  CAJ  CAH  CAX  CAM   180.00   0.0  0
+ 3JS  CONST_18  CAB  CAY  CBA  CAZ     0.00   0.0  0
+ 3JS  CONST_19  CAB  CAY  CBA  SAT   180.00   0.0  0
+ 3JS  CONST_20  CAB  CAY  NAR  CAL   180.00   0.0  0
+ 3JS  CONST_21  CA   N    CAW  CBE   180.00   0.0  0
+ 3JS  CONST_22  CD2  N    CAW  CBE     0.00   0.0  0
+ 3JS  CONST_23  H22  CAK  CAI  CAX   180.00   0.0  0
+ 3JS  CONST_24  H24  CAJ  CAH  CAX   180.00   0.0  0
+ 3JS  CONST_25  H23  CAH  CAX  CAI   180.00   0.0  0
+ 3JS  CONST_26  H21  CAI  CAX  CAH   180.00   0.0  0
+ 3JS  CONST_27  H25  CAL  SAT  CBA   180.00   0.0  0
+ 3JS  CONST_28  CBE  NBF  CAU  CAA   180.00   0.0  0
+ 3JS  CONST_29  CAP  NBF  CAU  CAA     0.00   0.0  0
+ 3JS  CONST_30  CBE  NBF  CAU  OAC     0.00   0.0  0
+ 3JS  CONST_31  CAP  NBF  CAU  OAC   180.00   0.0  0
+ 3JS  CONST_32  CA   N    CAW  OAE     0.00   0.0  0
+ 3JS  CONST_33  CD2  N    CAW  OAE   180.00   0.0  0
+ 3JS  CONST_34  CAM  NAS  C    CA    180.00   0.0  0
+ 3JS  CONST_35  H18  NAS  C    CA      0.00   0.0  0
+ 3JS  CONST_36  CAM  NAS  C    O       0.00   0.0  0
  3JS  Var_01    CBE  NBF  CAP  CBC    23.16  30.0  1
  3JS  Var_02    CA   N    CD2  CG     24.85  30.0  1
  3JS  Var_03    CAI  CAX  CAM  NAS   -44.79  30.0  2
  3JS  Var_04    H26  CAB  CAY  CBA  -101.93  30.0  2
  3JS  Var_05    CAX  CAM  NAS  C     -64.75  30.0  1
  3JS  Var_06    H1   CAA  CAU  NBF   -49.18  30.0  3
+ 3JS  Var_07    CBC  CAO  CBE  NBF   -24.15  30.0  1
+ 3JS  Var_08    CAO  CBC  CAP  NBF   -36.93  30.0  1
+ 3JS  Var_09    CBE  CAO  CBC  CAP    37.75  30.0  1
+ 3JS  Var_10    CAO  CBE  NBF  CAP     0.48  30.0  1
+ 3JS  Var_11    CG   CB   CA   N     -22.79  30.0  1
+ 3JS  Var_12    CB   CG   CD2  N     -37.62  30.0  1
+ 3JS  Var_13    CA   CB   CG   CD2    37.37  30.0  1
+ 3JS  Var_14    CB   CA   N    CD2    -1.44  30.0  1
+ 3JS  Var_15    CAY  CBA  CAZ  CAK  -137.02  30.0  3
+ 3JS  Var_16    SAT  CBA  CAZ  CAK    43.17  30.0  3
+ 3JS  Var_17    CAY  CBA  CAZ  CAJ    44.02  30.0  3
+ 3JS  Var_18    SAT  CBA  CAZ  CAJ  -135.79  30.0  3
+ 3JS  Var_19    CAO  CBE  NBF  CAU   178.77  30.0  1
+ 3JS  Var_20    N    CAW  CBE  NBF   159.69  30.0  3
+ 3JS  Var_21    OAG  CBC  CAP  NBF    78.06  30.0  1
+ 3JS  Var_22    CAW  CBE  NBF  CAP   117.66  30.0  1
+ 3JS  Var_23    CAW  CBE  CAO  CBC  -143.09  30.0  1
+ 3JS  Var_24    CBE  CAO  CBC  OAG   -80.31  30.0  1
+ 3JS  Var_25    N    CAW  CBE  CAO   -86.50  30.0  3
+ 3JS  Var_26    CB   CA   N    CAW  -175.17  30.0  1
+ 3JS  Var_27    OD1  CG   CD2  N      77.48  30.0  1
+ 3JS  Var_28    C    CA   N    CD2   116.02  30.0  1
+ 3JS  Var_29    C    CA   CB   CG   -141.08  30.0  1
+ 3JS  Var_30    CA   CB   CG   OD1   -80.78  30.0  1
+ 3JS  Var_31    H8   CAO  CBE  NBF  -146.78  30.0  1
+ 3JS  Var_32    H9   CAO  CBE  NBF    92.90  30.0  1
+ 3JS  Var_33    H6   CBC  CAP  NBF  -156.32  30.0  1
+ 3JS  Var_34    H10  CBE  NBF  CAP  -118.01  30.0  1
+ 3JS  Var_35    H4   CAP  CBC  CAO  -157.54  30.0  1
+ 3JS  Var_36    H5   CAP  CBC  CAO    82.02  30.0  1
+ 3JS  Var_37    H15  CB   CA   N    -145.48  30.0  1
+ 3JS  Var_38    H16  CB   CA   N      93.97  30.0  1
+ 3JS  Var_39    H13  CG   CD2  N    -156.88  30.0  1
+ 3JS  Var_40    H17  CA   N    CD2  -120.78  30.0  1
+ 3JS  Var_41    H11  CD2  CG   CB   -158.15  30.0  1
+ 3JS  Var_42    H12  CD2  CG   CB     81.41  30.0  1
+ 3JS  Var_43    CAW  CBE  NBF  CAU   -64.05  30.0  1
+ 3JS  Var_44    OAE  CAW  CBE  NBF   -25.24  30.0  3
+ 3JS  Var_45    OAE  CAW  CBE  CAO    88.57  30.0  3
+ 3JS  Var_46    C    CA   N    CAW   -57.72  30.0  1
+ 3JS  Var_47    NAS  C    CA   N     154.81  30.0  1
+ 3JS  Var_48    O    C    CA   N     -29.59  30.0  1
+ 3JS  Var_49    NAS  C    CA   CB    -91.43  30.0  1
+ 3JS  Var_50    O    C    CA   CB     84.18  30.0  1
+ 3JS  Var_51    H7   OAG  CBC  CAP    64.42  30.0  3
+ 3JS  Var_52    H14  OD1  CG   CD2    64.67  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

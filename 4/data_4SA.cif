@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 4SA  4SA  'tert-butyl [(1S)-1-(biphenyl-4-yl)-2-(hydroxyamino)-2-oxoethyl]carbamate'  ligand  47  25  .  2021-08-04  2021-08-04  
+ 4SA  4SA  'tert-butyl [(1S)-1-(biphenyl-4-yl)-2-(hydroxyamino)-2-oxoethyl]carbamate'  ligand  47  25  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_4SA
@@ -240,41 +241,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 4SA  CONST_01  C1   C6   C5   C4     0.00   0.0  0
- 4SA  CONST_02  C1   C2   C3   C4     0.00   0.0  0
- 4SA  CONST_03  C7   C1   C6   C5   180.00   0.0  0
- 4SA  CONST_04  C2   C1   C6   C5     0.00   0.0  0
- 4SA  CONST_05  C2   C3   C4   C5     0.00   0.0  0
- 4SA  CONST_08  C3   C2   C1   C6     0.00   0.0  0
- 4SA  CONST_09  C3   C4   C5   C6     0.00   0.0  0
- 4SA  CONST_10  C10  C9   C8   C7     0.00   0.0  0
- 4SA  CONST_11  C10  C18  C19  C7     0.00   0.0  0
- 4SA  CONST_12  C3   C2   C1   C7   180.00   0.0  0
- 4SA  CONST_13  C18  C10  C9   C8     0.00   0.0  0
- 4SA  CONST_14  C18  C19  C7   C8     0.00   0.0  0
- 4SA  CONST_16  C19  C18  C10  C9     0.00   0.0  0
- 4SA  CONST_17  C19  C7   C8   C9     0.00   0.0  0
- 4SA  CONST_18  C1   C7   C8   C9   180.00   0.0  0
- 4SA  CONST_19  C18  C19  C7   C1   180.00   0.0  0
- 4SA  CONST_21  C8   C9   C10  C11  180.00   0.0  0
- 4SA  CONST_22  C19  C18  C10  C11  180.00   0.0  0
- 4SA  CONST_23  H6   C6   C5   C4   180.00   0.0  0
- 4SA  CONST_24  H13  C2   C3   C4   180.00   0.0  0
- 4SA  CONST_25  H12  C3   C4   C5   180.00   0.0  0
- 4SA  CONST_26  H1   C4   C5   C6   180.00   0.0  0
- 4SA  CONST_27  H9   C9   C8   C7   180.00   0.0  0
- 4SA  CONST_28  H21  C18  C19  C7   180.00   0.0  0
- 4SA  CONST_29  H22  C19  C7   C8   180.00   0.0  0
- 4SA  CONST_30  H8   C8   C9   C10  180.00   0.0  0
- 4SA  CONST_31  H5   C5   C4   C3   180.00   0.0  0
- 4SA  CONST_32  O4   N2   C17  C11  180.00   0.0  0
- 4SA  CONST_33  O4   N2   C17  O3     0.00   0.0  0
- 4SA  CONST_34  H11  N2   C17  C11    0.00   0.0  0
- 4SA  Var_01    O1   C12  N1   C11  177.44  30.0  1
- 4SA  Var_02    C16  C13  O1   C12  179.20  30.0  2
- 4SA  Var_03    H17  C16  C13  C14   57.06  30.0  3
- 4SA  Var_04    H14  C15  C13  C14   63.22  30.0  3
- 4SA  Var_05    H2   C14  C13  O1    51.17  30.0  3
+ 4SA  CONST_01  C1   C6   C5   C4      0.00   0.0  0
+ 4SA  CONST_02  C1   C2   C3   C4      0.00   0.0  0
+ 4SA  CONST_03  C7   C1   C6   C5    180.00   0.0  0
+ 4SA  CONST_04  C2   C1   C6   C5      0.00   0.0  0
+ 4SA  CONST_05  C2   C3   C4   C5      0.00   0.0  0
+ 4SA  CONST_06  C3   C2   C1   C6      0.00   0.0  0
+ 4SA  CONST_07  C3   C4   C5   C6      0.00   0.0  0
+ 4SA  CONST_08  C10  C9   C8   C7      0.00   0.0  0
+ 4SA  CONST_09  C10  C18  C19  C7      0.00   0.0  0
+ 4SA  CONST_10  C3   C2   C1   C7    180.00   0.0  0
+ 4SA  CONST_11  C18  C10  C9   C8      0.00   0.0  0
+ 4SA  CONST_12  C18  C19  C7   C8      0.00   0.0  0
+ 4SA  CONST_13  C19  C18  C10  C9      0.00   0.0  0
+ 4SA  CONST_14  C19  C7   C8   C9      0.00   0.0  0
+ 4SA  CONST_15  C1   C7   C8   C9    180.00   0.0  0
+ 4SA  CONST_16  C18  C19  C7   C1    180.00   0.0  0
+ 4SA  CONST_17  C8   C9   C10  C11   180.00   0.0  0
+ 4SA  CONST_18  C19  C18  C10  C11   180.00   0.0  0
+ 4SA  CONST_19  H6   C6   C5   C4    180.00   0.0  0
+ 4SA  CONST_20  H13  C2   C3   C4    180.00   0.0  0
+ 4SA  CONST_21  H12  C3   C4   C5    180.00   0.0  0
+ 4SA  CONST_22  H1   C4   C5   C6    180.00   0.0  0
+ 4SA  CONST_23  H9   C9   C8   C7    180.00   0.0  0
+ 4SA  CONST_24  H21  C18  C19  C7    180.00   0.0  0
+ 4SA  CONST_25  H22  C19  C7   C8    180.00   0.0  0
+ 4SA  CONST_26  H8   C8   C9   C10   180.00   0.0  0
+ 4SA  CONST_27  H5   C5   C4   C3    180.00   0.0  0
+ 4SA  CONST_28  O4   N2   C17  C11   180.00   0.0  0
+ 4SA  CONST_29  O4   N2   C17  O3      0.00   0.0  0
+ 4SA  CONST_30  H11  N2   C17  C11     0.00   0.0  0
+ 4SA  Var_01    O1   C12  N1   C11   177.44  30.0  1
+ 4SA  Var_02    C16  C13  O1   C12   179.20  30.0  2
+ 4SA  Var_03    H17  C16  C13  C14    57.06  30.0  3
+ 4SA  Var_04    H14  C15  C13  C14    63.22  30.0  3
+ 4SA  Var_05    H2   C14  C13  O1     51.17  30.0  3
+ 4SA  Var_06    C8   C7   C1   C6    -38.22  30.0  3
+ 4SA  Var_07    C19  C7   C1   C6    141.91  30.0  3
+ 4SA  Var_08    C2   C1   C7   C8    141.78  30.0  2
+ 4SA  Var_09    C19  C7   C1   C2    -38.09  30.0  3
+ 4SA  Var_10    C17  C11  C10  C9    109.40  30.0  2
+ 4SA  Var_11    N1   C11  C10  C9   -129.75  30.0  2
+ 4SA  Var_12    C18  C10  C11  N1     51.66  30.0  2
+ 4SA  Var_13    C18  C10  C11  C17   -69.20  30.0  2
+ 4SA  Var_14    H7   C11  C10  C9     -9.01  30.0  2
+ 4SA  Var_15    N2   C17  C11  C10   -95.57  30.0  2
+ 4SA  Var_16    O3   C17  C11  C10    82.06  30.0  2
+ 4SA  Var_17    C12  N1   C11  C10  -178.85  30.0  1
+ 4SA  Var_18    H10  N1   C11  C10    -0.53  30.0  1
+ 4SA  Var_19    O2   C12  O1   C13    -2.75  30.0  3
+ 4SA  Var_20    N1   C12  O1   C13   177.08  30.0  3
+ 4SA  Var_21    N2   C17  C11  N1    143.31  30.0  2
+ 4SA  Var_22    O3   C17  C11  N1    -39.06  30.0  2
+ 4SA  Var_23    C12  N1   C11  C17   -59.41  30.0  1
+ 4SA  Var_24    H20  O4   N2   C17    92.98  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

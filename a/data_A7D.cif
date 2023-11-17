@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A7D  A7D  5'-S-[(3R)-3,4-dihydroxybutyl]-5'-thioadenosine  ligand  46  25  .  2022-07-24  2022-07-26
+ A7D  A7D  5'-S-[(3R)-3,4-dihydroxybutyl]-5'-thioadenosine  ligand  46  25  .  2022-07-24  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_A7D
@@ -243,36 +244,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- A7D  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- A7D  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- A7D  CONST_03  N7    C5   C6   N1   180.00   0.0  0
- A7D  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- A7D  CONST_05  C5    C4   N3   C2     0.00   0.0  0
- A7D  CONST_06  N9    C4   N3   C2   180.00   0.0  0
- A7D  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- A7D  CONST_08  C6    C5   C4   N3     0.00   0.0  0
- A7D  CONST_09  N7    C5   C4   N3   180.00   0.0  0
- A7D  CONST_10  C8    N9   C4   N3   180.00   0.0  0
- A7D  CONST_11  C8    N7   C5   C4     0.00   0.0  0
- A7D  CONST_12  N7    C8   N9   C4     0.00   0.0  0
- A7D  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- A7D  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- A7D  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- A7D  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- A7D  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- A7D  CONST_18  CAX   N9   C4   N3     0.00   0.0  0
- A7D  CONST_19  CAX   N9   C4   C5   180.00   0.0  0
- A7D  CONST_20  CAX   N9   C8   N7   180.00   0.0  0
- A7D  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- A7D  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- A7D  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- A7D  CONST_24  H2    C2   N3   C4   180.00   0.0  0
- A7D  CONST_25  H8    C8   N9   C4   180.00   0.0  0
- A7D  CONST_26  HN6   N6   C6   N1     0.00   0.0  0
- A7D  CONST_27  HN6A  N6   C6   N1   180.00   0.0  0
- A7D  Var_01    CAW   CAK  SAP  CAI  161.87  30.0  1
- A7D  Var_02    CAT   CAJ  CAI  SAP  176.91  30.0  3
- A7D  Var_03    HAI   CAI  SAP  CAK   50.03  30.0  2
+ A7D  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ A7D  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ A7D  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ A7D  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ A7D  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ A7D  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ A7D  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ A7D  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ A7D  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ A7D  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ A7D  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ A7D  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ A7D  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ A7D  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ A7D  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ A7D  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ A7D  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ A7D  CONST_18  CAX   N9   C4   N3      0.00   0.0  0
+ A7D  CONST_19  CAX   N9   C4   C5    180.00   0.0  0
+ A7D  CONST_20  CAX   N9   C8   N7    180.00   0.0  0
+ A7D  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ A7D  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ A7D  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ A7D  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ A7D  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ A7D  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ A7D  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ A7D  Var_01    CAW   CAK  SAP  CAI   161.87  30.0  1
+ A7D  Var_02    CAT   CAJ  CAI  SAP   176.91  30.0  3
+ A7D  Var_03    HAI   CAI  SAP  CAK    50.03  30.0  2
+ A7D  Var_04    OAO   CAX  N9   C4   -175.81  30.0  2
+ A7D  Var_05    CAV   CAX  N9   C4     66.96  30.0  2
+ A7D  Var_06    OAO   CAX  N9   C8     -0.65  30.0  2
+ A7D  Var_07    CAV   CAX  N9   C8   -117.88  30.0  2
+ A7D  Var_08    CAW   OAO  CAX  N9   -103.44  30.0  1
+ A7D  Var_09    CAU   CAV  CAX  N9     86.04  30.0  1
+ A7D  Var_10    CAV   CAU  CAW  OAO   -26.51  30.0  1
+ A7D  Var_11    CAU   CAV  CAX  OAO   -32.70  30.0  1
+ A7D  Var_12    CAX   OAO  CAW  CAU     6.29  30.0  1
+ A7D  Var_13    CAW   OAO  CAX  CAV    17.04  30.0  1
+ A7D  Var_14    CAX   CAV  CAU  CAW    35.04  30.0  1
+ A7D  Var_15    OAE   CAV  CAX  N9   -157.54  30.0  1
+ A7D  Var_16    CAX   CAV  CAU  OAD   153.80  30.0  1
+ A7D  Var_17    OAO   CAW  CAU  OAD  -147.89  30.0  1
+ A7D  Var_18    CAW   CAU  CAV  OAE   -78.54  30.0  1
+ A7D  Var_19    OAO   CAX  CAV  OAE    83.73  30.0  1
+ A7D  Var_20    CAK   CAW  CAU  CAV  -147.50  30.0  1
+ A7D  Var_21    CAK   CAW  OAO  CAX   129.07  30.0  1
+ A7D  Var_22    HAX   CAX  N9   C4    -56.41  30.0  2
+ A7D  Var_23    HAV   CAV  CAX  N9    -34.12  30.0  1
+ A7D  Var_24    HAU   CAU  CAW  OAO    89.15  30.0  1
+ A7D  Var_25    HAW   CAW  CAU  CAV    89.97  30.0  1
+ A7D  Var_26    OAE   CAV  CAU  OAD    40.22  30.0  1
+ A7D  Var_27    CAK   CAW  CAU  OAD    91.12  30.0  1
+ A7D  Var_28    SAP   CAK  CAW  OAO    48.56  30.0  2
+ A7D  Var_29    CAU   CAW  CAK  SAP   166.66  30.0  3
+ A7D  Var_30    HAK   CAK  CAW  OAO   -73.44  30.0  2
+ A7D  Var_31    HAKA  CAK  CAW  OAO   168.24  30.0  2
+ A7D  Var_32    HOAE  OAE  CAV  CAU   -39.93  30.0  3
+ A7D  Var_33    HOAD  OAD  CAU  CAV    84.72  30.0  3
+ A7D  Var_34    OAB   CAH  CAT  OAC   -59.23  30.0  1
+ A7D  Var_35    CAI   CAJ  CAT  OAC    55.87  30.0  1
+ A7D  Var_36    CAI   CAJ  CAT  CAH  -178.70  30.0  1
+ A7D  Var_37    OAB   CAH  CAT  CAJ   175.17  30.0  1
+ A7D  Var_38    HAH   CAH  CAT  OAC   178.67  30.0  1
+ A7D  Var_39    HAHA  CAH  CAT  OAC    63.02  30.0  1
+ A7D  Var_40    HAJ   CAJ  CAT  OAC   -66.59  30.0  1
+ A7D  Var_41    HAJA  CAJ  CAT  OAC   177.47  30.0  1
+ A7D  Var_42    HOAC  OAC  CAT  CAH   -63.38  30.0  3
+ A7D  Var_43    HAT   CAT  CAJ  CAI   -60.23  30.0  3
+ A7D  Var_44    HOAB  OAB  CAH  CAT   177.15  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

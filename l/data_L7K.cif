@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- L7K  L7K  '[(~{R})-cyclohexyl-[1-(2-phenylethyl)-1,2,3,4-tetrazol-5-yl]methyl]diazane'  ligand  46  22  .  2022-03-22  2022-07-25
+ L7K  L7K  '[(~{R})-cyclohexyl-[1-(2-phenylethyl)-1,2,3,4-tetrazol-5-yl]methyl]diazane'  ligand  46  22  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_L7K
@@ -246,36 +247,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- L7K  CONST_01  N3   N4   N5   C1     0.00   0.0  0
- L7K  CONST_02  N4   N3   N2   C1     0.00   0.0  0
- L7K  CONST_03  C7   C8   C9   C4     0.00   0.0  0
- L7K  CONST_04  C7   C6   C5   C4     0.00   0.0  0
- L7K  CONST_05  C8   C9   C4   C5     0.00   0.0  0
- L7K  CONST_06  C8   C7   C6   C5     0.00   0.0  0
- L7K  CONST_07  C9   C8   C7   C6     0.00   0.0  0
- L7K  CONST_08  C9   C4   C5   C6     0.00   0.0  0
- L7K  CONST_09  N4   N5   C1   N2     0.00   0.0  0
- L7K  CONST_10  N5   N4   N3   N2     0.00   0.0  0
- L7K  CONST_11  N5   C1   N2   N3     0.00   0.0  0
- L7K  CONST_12  N4   N5   C1   C    180.00   0.0  0
- L7K  CONST_13  N3   N2   C1   C    180.00   0.0  0
- L7K  CONST_14  N2   C1   N5   C2   180.00   0.0  0
- L7K  CONST_15  N3   N4   N5   C2   180.00   0.0  0
- L7K  CONST_16  C8   C9   C4   C3   180.00   0.0  0
- L7K  CONST_17  C6   C5   C4   C3   180.00   0.0  0
- L7K  CONST_18  H22  C8   C9   C4   180.00   0.0  0
- L7K  CONST_19  H20  C6   C5   C4   180.00   0.0  0
- L7K  CONST_20  H23  C9   C4   C5   180.00   0.0  0
- L7K  CONST_21  H21  C7   C6   C5   180.00   0.0  0
- L7K  CONST_22  H19  C5   C6   C7   180.00   0.0  0
- L7K  Var_01    C13  C12  C11  C10   35.54  30.0  1
- L7K  Var_02    C13  C14  C15  C10   34.43  30.0  1
- L7K  Var_03    C14  C13  C12  C11   26.82  30.0  1
- L7K  Var_04    C15  C14  C13  C12  -63.94  30.0  1
- L7K  Var_05    C3   C2   N5   C1   -82.37  30.0  2
- L7K  Var_06    C9   C4   C3   C2   108.97  30.0  2
- L7K  Var_07    N5   C2   C3   C4   -59.03  30.0  3
- L7K  Var_08    H1   N    N1   C    151.22  30.0  2
+ L7K  CONST_01  N3   N4   N5   C1      0.00   0.0  0
+ L7K  CONST_02  N4   N3   N2   C1      0.00   0.0  0
+ L7K  CONST_03  C7   C8   C9   C4      0.00   0.0  0
+ L7K  CONST_04  C7   C6   C5   C4      0.00   0.0  0
+ L7K  CONST_05  C8   C9   C4   C5      0.00   0.0  0
+ L7K  CONST_06  C8   C7   C6   C5      0.00   0.0  0
+ L7K  CONST_07  C9   C8   C7   C6      0.00   0.0  0
+ L7K  CONST_08  C9   C4   C5   C6      0.00   0.0  0
+ L7K  CONST_09  N4   N5   C1   N2      0.00   0.0  0
+ L7K  CONST_10  N5   N4   N3   N2      0.00   0.0  0
+ L7K  CONST_11  N5   C1   N2   N3      0.00   0.0  0
+ L7K  CONST_12  N4   N5   C1   C     180.00   0.0  0
+ L7K  CONST_13  N3   N2   C1   C     180.00   0.0  0
+ L7K  CONST_14  N2   C1   N5   C2    180.00   0.0  0
+ L7K  CONST_15  N3   N4   N5   C2    180.00   0.0  0
+ L7K  CONST_16  C8   C9   C4   C3    180.00   0.0  0
+ L7K  CONST_17  C6   C5   C4   C3    180.00   0.0  0
+ L7K  CONST_18  H22  C8   C9   C4    180.00   0.0  0
+ L7K  CONST_19  H20  C6   C5   C4    180.00   0.0  0
+ L7K  CONST_20  H23  C9   C4   C5    180.00   0.0  0
+ L7K  CONST_21  H21  C7   C6   C5    180.00   0.0  0
+ L7K  CONST_22  H19  C5   C6   C7    180.00   0.0  0
+ L7K  Var_01    C13  C12  C11  C10    35.54  30.0  1
+ L7K  Var_02    C13  C14  C15  C10    34.43  30.0  1
+ L7K  Var_03    C14  C13  C12  C11    26.82  30.0  1
+ L7K  Var_04    C15  C14  C13  C12   -63.94  30.0  1
+ L7K  Var_05    C3   C2   N5   C1    -82.37  30.0  2
+ L7K  Var_06    C9   C4   C3   C2    108.97  30.0  2
+ L7K  Var_07    N5   C2   C3   C4    -59.03  30.0  3
+ L7K  Var_08    H1   N    N1   C     151.22  30.0  2
+ L7K  Var_09    C14  C15  C10  C11    27.45  30.0  1
+ L7K  Var_10    C15  C10  C11  C12   -64.74  30.0  1
+ L7K  Var_11    C12  C11  C10  C     171.94  30.0  1
+ L7K  Var_12    C14  C15  C10  C     151.42  30.0  1
+ L7K  Var_13    C11  C10  C    C1    -58.59  30.0  3
+ L7K  Var_14    C15  C10  C    C1    178.66  30.0  3
+ L7K  Var_15    N5   C1   C    C10   136.00  30.0  2
+ L7K  Var_16    N2   C1   C    C10   -48.73  30.0  2
+ L7K  Var_17    H13  C15  C10  C11   -94.40  30.0  1
+ L7K  Var_18    H14  C15  C10  C11   149.67  30.0  1
+ L7K  Var_19    H4   C10  C11  C12    54.04  30.0  1
+ L7K  Var_20    N1   C    C10  C11   177.32  30.0  2
+ L7K  Var_21    N1   C    C10  C15    54.57  30.0  2
+ L7K  Var_22    N5   C1   C    N1   -100.23  30.0  2
+ L7K  Var_23    N2   C1   C    N1     75.03  30.0  2
+ L7K  Var_24    H3   C    C10  C11    60.57  30.0  2
+ L7K  Var_25    C10  C    N1   N    -177.64  30.0  1
+ L7K  Var_26    C1   C    N1   N      58.16  30.0  1
+ L7K  Var_27    H24  N1   C    C1    -66.21  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

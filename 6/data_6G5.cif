@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 6G5  6G5  "4-chloro-L-tryptophan"  ligand  26  16  .  2023-10-03  2023-10-03
+ 6G5  6G5  4-chloro-L-tryptophan  ligand  26  16  .  2023-10-03  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_6G5
@@ -163,47 +164,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 6G5  CONST_01  C6   C8  C7  N1      0.00   0.0  0
- 6G5  CONST_02  C8   C6  C5  N1      0.00   0.0  0
- 6G5  CONST_03  C1   C6  C5  N1    180.00   0.0  0
- 6G5  CONST_04  C3   C4  C5  N1    180.00   0.0  0
- 6G5  CONST_05  C7   N1  C5  C4    180.00   0.0  0
- 6G5  CONST_06  C8   C6  C5  C4    180.00   0.0  0
- 6G5  CONST_07  C1   C6  C5  C4      0.00   0.0  0
- 6G5  CONST_08  C1   C2  C3  C4      0.00   0.0  0
- 6G5  CONST_09  C8   C7  N1  C5      0.00   0.0  0
- 6G5  CONST_10  C7   C8  C6  C5      0.00   0.0  0
- 6G5  CONST_11  C2   C1  C6  C5      0.00   0.0  0
- 6G5  CONST_12  C2   C3  C4  C5      0.00   0.0  0
- 6G5  CONST_13  C3   C2  C1  C6      0.00   0.0  0
- 6G5  CONST_14  C7   N1  C5  C6      0.00   0.0  0
- 6G5  CONST_15  C3   C4  C5  C6      0.00   0.0  0
- 6G5  CONST_16  C1   C6  C8  C7    180.00   0.0  0
- 6G5  CONST_17  C2   C1  C6  C8    180.00   0.0  0
- 6G5  CONST_18  C9   C8  C7  N1    180.00   0.0  0
- 6G5  CONST_19  C9   C8  C6  C5    180.00   0.0  0
- 6G5  CONST_20  CL1  C1  C6  C5    180.00   0.0  0
- 6G5  CONST_21  CL1  C1  C6  C8      0.00   0.0  0
- 6G5  CONST_22  C1   C6  C8  C9      0.00   0.0  0
- 6G5  CONST_23  C3   C2  C1  CL1   180.00   0.0  0
- 6G5  CONST_24  H2   C4  C5  N1      0.00   0.0  0
- 6G5  CONST_25  H1   N1  C5  C4      0.00   0.0  0
- 6G5  CONST_26  H11  C2  C3  C4    180.00   0.0  0
- 6G5  CONST_27  H3   C7  N1  C5    180.00   0.0  0
- 6G5  CONST_28  H12  C3  C4  C5    180.00   0.0  0
- 6G5  CONST_29  H3   C7  C8  C6    180.00   0.0  0
- 6G5  CONST_30  H11  C2  C1  C6    180.00   0.0  0
- 6G5  CONST_31  H1   N1  C5  C6    180.00   0.0  0
- 6G5  CONST_32  H2   C4  C5  C6    180.00   0.0  0
- 6G5  CONST_33  H1   N1  C7  C8    180.00   0.0  0
- 6G5  CONST_34  H12  C3  C2  C1    180.00   0.0  0
- 6G5  CONST_35  H2   C4  C3  C2    180.00   0.0  0
- 6G5  Var_01    C10  C9  C8  C6    -93.28  30.0  2
- 6G5  Var_02    C10  C9  C8  C7     84.26  30.0  2
- 6G5  Var_03    H9   C9  C8  C6    145.72  30.0  2
- 6G5  Var_04    H10  C9  C8  C6     29.83  30.0  2
- 6G5  Var_05    H9   C9  C8  C7    -36.74  30.0  2
- 6G5  Var_06    H10  C9  C8  C7   -152.63  30.0  2
+ 6G5  CONST_01  C6   C8   C7   N1      0.00   0.0  0
+ 6G5  CONST_02  C8   C6   C5   N1      0.00   0.0  0
+ 6G5  CONST_03  C1   C6   C5   N1    180.00   0.0  0
+ 6G5  CONST_04  C3   C4   C5   N1    180.00   0.0  0
+ 6G5  CONST_05  C7   N1   C5   C4    180.00   0.0  0
+ 6G5  CONST_06  C8   C6   C5   C4    180.00   0.0  0
+ 6G5  CONST_07  C1   C6   C5   C4      0.00   0.0  0
+ 6G5  CONST_08  C1   C2   C3   C4      0.00   0.0  0
+ 6G5  CONST_09  C8   C7   N1   C5      0.00   0.0  0
+ 6G5  CONST_10  C7   C8   C6   C5      0.00   0.0  0
+ 6G5  CONST_11  C2   C1   C6   C5      0.00   0.0  0
+ 6G5  CONST_12  C2   C3   C4   C5      0.00   0.0  0
+ 6G5  CONST_13  C3   C2   C1   C6      0.00   0.0  0
+ 6G5  CONST_14  C7   N1   C5   C6      0.00   0.0  0
+ 6G5  CONST_15  C3   C4   C5   C6      0.00   0.0  0
+ 6G5  CONST_16  C1   C6   C8   C7    180.00   0.0  0
+ 6G5  CONST_17  C2   C1   C6   C8    180.00   0.0  0
+ 6G5  CONST_18  C9   C8   C7   N1    180.00   0.0  0
+ 6G5  CONST_19  C9   C8   C6   C5    180.00   0.0  0
+ 6G5  CONST_20  CL1  C1   C6   C5    180.00   0.0  0
+ 6G5  CONST_21  CL1  C1   C6   C8      0.00   0.0  0
+ 6G5  CONST_22  C1   C6   C8   C9      0.00   0.0  0
+ 6G5  CONST_23  C3   C2   C1   CL1   180.00   0.0  0
+ 6G5  CONST_24  H2   C4   C5   N1      0.00   0.0  0
+ 6G5  CONST_25  H1   N1   C5   C4      0.00   0.0  0
+ 6G5  CONST_26  H11  C2   C3   C4    180.00   0.0  0
+ 6G5  CONST_27  H3   C7   N1   C5    180.00   0.0  0
+ 6G5  CONST_28  H12  C3   C4   C5    180.00   0.0  0
+ 6G5  CONST_29  H3   C7   C8   C6    180.00   0.0  0
+ 6G5  CONST_30  H11  C2   C1   C6    180.00   0.0  0
+ 6G5  CONST_31  H1   N1   C5   C6    180.00   0.0  0
+ 6G5  CONST_32  H2   C4   C5   C6    180.00   0.0  0
+ 6G5  CONST_33  H1   N1   C7   C8    180.00   0.0  0
+ 6G5  CONST_34  H12  C3   C2   C1    180.00   0.0  0
+ 6G5  CONST_35  H2   C4   C3   C2    180.00   0.0  0
+ 6G5  Var_01    C10  C9   C8   C6    -93.28  30.0  2
+ 6G5  Var_02    C10  C9   C8   C7     84.26  30.0  2
+ 6G5  Var_03    H9   C9   C8   C6    145.72  30.0  2
+ 6G5  Var_04    H10  C9   C8   C6     29.83  30.0  2
+ 6G5  Var_05    H9   C9   C8   C7    -36.74  30.0  2
+ 6G5  Var_06    H10  C9   C8   C7   -152.63  30.0  2
+ 6G5  Var_07    C11  C10  C9   C8    -64.85  30.0  2
+ 6G5  Var_08    N2   C10  C9   C8     59.89  30.0  2
+ 6G5  Var_09    H4   C10  C9   C8   -178.74  30.0  2
+ 6G5  Var_10    C9   C10  C11  O2    -45.91  30.0  2
+ 6G5  Var_11    N2   C10  C11  O2   -170.23  30.0  2
+ 6G5  Var_12    O1   C11  C10  N2     12.17  30.0  2
+ 6G5  Var_13    O1   C11  C10  C9    136.49  30.0  2
+ 6G5  Var_14    H6   N2   C10  C11  -162.85  30.0  3
+ 6G5  Var_15    H7   N2   C10  C11   -45.82  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

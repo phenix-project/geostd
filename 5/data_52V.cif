@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 52V  52V  5-[(3S)-3-(5-methoxy-2',6'-dimethylbiphenyl-3-yl)but-1-yn-1-yl]-6-methylpyrimidine-2,4-diamine  ligand  55  29  .  2021-08-04  2022-09-16
+ 52V  52V  5-[(3S)-3-(5-methoxy-2',6'-dimethylbiphenyl-3-yl)but-1-yn-1-yl]-6-methylpyrimidine-2,4-diamine  ligand  55  29  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_52V
@@ -284,49 +285,64 @@ _chem_comp_tor.period
  52V  CONST_10  C19   C14  C15  C16     0.00   0.0  0
  52V  CONST_11  C25   C18  C17  C16   180.00   0.0  0
  52V  CONST_12  C19   C18  C17  C16     0.00   0.0  0
- 52V  CONST_15  C21   C20  C25  C18   180.00   0.0  0
- 52V  CONST_16  C23   C24  C25  C18   180.00   0.0  0
- 52V  CONST_18  C23   C24  C25  C20     0.00   0.0  0
- 52V  CONST_19  C23   C22  C21  C20     0.00   0.0  0
- 52V  CONST_20  C24   C25  C20  C21     0.00   0.0  0
- 52V  CONST_21  C24   C23  C22  C21     0.00   0.0  0
- 52V  CONST_22  C25   C20  C21  C22     0.00   0.0  0
- 52V  CONST_23  C25   C24  C23  C22     0.00   0.0  0
- 52V  CONST_25  N2    C1   C6   C5      0.00   0.0  0
- 52V  CONST_26  N2    C3   N4   C5      0.00   0.0  0
- 52V  CONST_27  N7    C3   N2   C1    180.00   0.0  0
- 52V  CONST_28  C8    C5   C6   C1    180.00   0.0  0
- 52V  CONST_29  N9    C1   N2   C3    180.00   0.0  0
- 52V  CONST_30  C8    C5   N4   C3    180.00   0.0  0
- 52V  CONST_31  C16   C15  C14  C12   180.00   0.0  0
- 52V  CONST_32  C18   C19  C14  C12   180.00   0.0  0
- 52V  CONST_33  O17   C16  C15  C14   180.00   0.0  0
- 52V  CONST_34  O17   C16  C17  C18   180.00   0.0  0
- 52V  CONST_35  C26   C20  C25  C18     0.00   0.0  0
- 52V  CONST_36  C27   C24  C25  C18     0.00   0.0  0
- 52V  CONST_37  C24   C25  C20  C26   180.00   0.0  0
- 52V  CONST_38  C22   C21  C20  C26   180.00   0.0  0
- 52V  CONST_39  C27   C24  C25  C20   180.00   0.0  0
- 52V  CONST_40  C27   C24  C23  C22   180.00   0.0  0
- 52V  CONST_41  N2    C1   C6   C10   180.00   0.0  0
- 52V  CONST_42  N4    C5   C6   C10   180.00   0.0  0
- 52V  CONST_43  N9    C1   C6   C5    180.00   0.0  0
- 52V  CONST_44  N7    C3   N4   C5    180.00   0.0  0
- 52V  CONST_45  H19   C19  C14  C15   180.00   0.0  0
- 52V  CONST_46  H17   C17  C16  C15   180.00   0.0  0
- 52V  CONST_47  H15   C15  C16  C17   180.00   0.0  0
- 52V  CONST_48  H22   C22  C21  C20   180.00   0.0  0
- 52V  CONST_49  H23   C23  C22  C21   180.00   0.0  0
- 52V  CONST_50  H21   C21  C22  C23   180.00   0.0  0
- 52V  CONST_51  HN9   N9   C1   C6      0.00   0.0  0
- 52V  CONST_52  HN9A  N9   C1   C6    180.00   0.0  0
- 52V  CONST_53  HN7   N7   C3   N4      0.00   0.0  0
- 52V  CONST_54  HN7A  N7   C3   N4    180.00   0.0  0
+ 52V  CONST_13  C21   C20  C25  C18   180.00   0.0  0
+ 52V  CONST_14  C23   C24  C25  C18   180.00   0.0  0
+ 52V  CONST_15  C23   C24  C25  C20     0.00   0.0  0
+ 52V  CONST_16  C23   C22  C21  C20     0.00   0.0  0
+ 52V  CONST_17  C24   C25  C20  C21     0.00   0.0  0
+ 52V  CONST_18  C24   C23  C22  C21     0.00   0.0  0
+ 52V  CONST_19  C25   C20  C21  C22     0.00   0.0  0
+ 52V  CONST_20  C25   C24  C23  C22     0.00   0.0  0
+ 52V  CONST_21  N2    C1   C6   C5      0.00   0.0  0
+ 52V  CONST_22  N2    C3   N4   C5      0.00   0.0  0
+ 52V  CONST_23  N7    C3   N2   C1    180.00   0.0  0
+ 52V  CONST_24  C8    C5   C6   C1    180.00   0.0  0
+ 52V  CONST_25  N9    C1   N2   C3    180.00   0.0  0
+ 52V  CONST_26  C8    C5   N4   C3    180.00   0.0  0
+ 52V  CONST_27  C16   C15  C14  C12   180.00   0.0  0
+ 52V  CONST_28  C18   C19  C14  C12   180.00   0.0  0
+ 52V  CONST_29  O17   C16  C15  C14   180.00   0.0  0
+ 52V  CONST_30  O17   C16  C17  C18   180.00   0.0  0
+ 52V  CONST_31  C26   C20  C25  C18     0.00   0.0  0
+ 52V  CONST_32  C27   C24  C25  C18     0.00   0.0  0
+ 52V  CONST_33  C24   C25  C20  C26   180.00   0.0  0
+ 52V  CONST_34  C22   C21  C20  C26   180.00   0.0  0
+ 52V  CONST_35  C27   C24  C25  C20   180.00   0.0  0
+ 52V  CONST_36  C27   C24  C23  C22   180.00   0.0  0
+ 52V  CONST_37  N2    C1   C6   C10   180.00   0.0  0
+ 52V  CONST_38  N4    C5   C6   C10   180.00   0.0  0
+ 52V  CONST_39  N9    C1   C6   C5    180.00   0.0  0
+ 52V  CONST_40  N7    C3   N4   C5    180.00   0.0  0
+ 52V  CONST_41  H19   C19  C14  C15   180.00   0.0  0
+ 52V  CONST_42  H17   C17  C16  C15   180.00   0.0  0
+ 52V  CONST_43  H15   C15  C16  C17   180.00   0.0  0
+ 52V  CONST_44  H22   C22  C21  C20   180.00   0.0  0
+ 52V  CONST_45  H23   C23  C22  C21   180.00   0.0  0
+ 52V  CONST_46  H21   C21  C22  C23   180.00   0.0  0
+ 52V  CONST_47  HN9   N9   C1   C6      0.00   0.0  0
+ 52V  CONST_48  HN9A  N9   C1   C6    180.00   0.0  0
+ 52V  CONST_49  HN7   N7   C3   N4      0.00   0.0  0
+ 52V  CONST_50  HN7A  N7   C3   N4    180.00   0.0  0
  52V  Var_01    C15   C16  O17  C2   -177.46  30.0  2
  52V  Var_02    H8    C8   C5   C6     64.68  30.0  2
  52V  Var_03    H26   C26  C20  C21   113.43  30.0  2
  52V  Var_04    H27   C27  C24  C23   115.13  30.0  2
  52V  Var_05    H2    C2   O17  C16   179.04  30.0  3
+ 52V  Var_06    C20   C25  C18  C17   -97.14  30.0  2
+ 52V  Var_07    C24   C25  C18  C17    82.69  30.0  2
+ 52V  Var_08    C19   C18  C25  C20    82.54  30.0  2
+ 52V  Var_09    C19   C18  C25  C24   -97.63  30.0  2
+ 52V  Var_10    C15   C14  C12  C13    95.50  30.0  3
+ 52V  Var_11    C19   C14  C12  C13   -81.35  30.0  3
+ 52V  Var_12    C11   C12  C14  C15   -28.57  30.0  2
+ 52V  Var_13    C11   C12  C14  C19   154.58  30.0  2
+ 52V  Var_14    H12   C12  C14  C15  -147.24  30.0  2
+ 52V  Var_15    C12   C11  C10  C6     96.93  30.0  1
+ 52V  Var_16    C10   C11  C12  C14    82.69  30.0  2
+ 52V  Var_17    H13   C13  C12  C14    57.12  30.0  3
+ 52V  Var_18    H13A  C13  C12  C14   176.82  30.0  3
+ 52V  Var_19    H13B  C13  C12  C14   -62.80  30.0  3
+ 52V  Var_20    C10   C11  C12  C13   -41.14  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

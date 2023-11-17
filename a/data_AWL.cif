@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AWL  AWL  1-adamantyl-[4-(5-chloranyl-2-methyl-phenyl)piperazin-1-yl]methanone  ligand  55  26  .  2022-07-24  2022-07-26
+ AWL  AWL  1-adamantyl-[4-(5-chloranyl-2-methyl-phenyl)piperazin-1-yl]methanone  ligand  55  26  .  2022-07-24  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_AWL
@@ -296,33 +297,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AWL  CONST_01  C13  C14  C9   C10    0.00   0.0  0
- AWL  CONST_02  C13  C12  C11  C10    0.00   0.0  0
- AWL  CONST_03  C12  C13  C14  C9     0.00   0.0  0
- AWL  CONST_04  C12  C11  C10  C9     0.00   0.0  0
- AWL  CONST_05  C11  C10  C9   C14    0.00   0.0  0
- AWL  CONST_06  C11  C12  C13  C14    0.00   0.0  0
- AWL  CONST_07  C13  C14  C9   N1   180.00   0.0  0
- AWL  CONST_08  C11  C10  C9   N1   180.00   0.0  0
- AWL  CONST_09  C15  C10  C9   N1     0.00   0.0  0
- AWL  CONST_10  CL   C13  C14  C9   180.00   0.0  0
- AWL  CONST_11  C15  C10  C9   C14  180.00   0.0  0
- AWL  CONST_12  C11  C12  C13  CL   180.00   0.0  0
- AWL  CONST_13  C15  C10  C11  C12  180.00   0.0  0
- AWL  CONST_14  C5   C4   N    C    180.00   0.0  0
- AWL  CONST_15  C1   N    C4   C5     0.00   0.0  0
- AWL  CONST_16  H24  C14  C9   C10  180.00   0.0  0
- AWL  CONST_17  H25  C12  C11  C10  180.00   0.0  0
- AWL  CONST_18  H26  C11  C10  C9   180.00   0.0  0
- AWL  CONST_19  O    C4   N    C      0.00   0.0  0
- AWL  CONST_20  C1   N    C4   O    180.00   0.0  0
- AWL  Var_01    C2   C1   N    C    -56.75  30.0  1
- AWL  Var_02    C2   N1   C3   C     57.73  30.0  1
- AWL  Var_03    C3   N1   C9   C10   71.34  30.0  2
- AWL  Var_04    N1   C3   C    N    -56.88  30.0  1
- AWL  Var_05    N1   C2   C1   N     57.00  30.0  1
- AWL  Var_06    C3   C    N    C1    56.81  30.0  1
- AWL  Var_07    H27  C15  C10  C9   -89.86  30.0  2
+ AWL  CONST_01  C13  C14  C9   C10     0.00   0.0  0
+ AWL  CONST_02  C13  C12  C11  C10     0.00   0.0  0
+ AWL  CONST_03  C12  C13  C14  C9      0.00   0.0  0
+ AWL  CONST_04  C12  C11  C10  C9      0.00   0.0  0
+ AWL  CONST_05  C11  C10  C9   C14     0.00   0.0  0
+ AWL  CONST_06  C11  C12  C13  C14     0.00   0.0  0
+ AWL  CONST_07  C13  C14  C9   N1    180.00   0.0  0
+ AWL  CONST_08  C11  C10  C9   N1    180.00   0.0  0
+ AWL  CONST_09  C15  C10  C9   N1      0.00   0.0  0
+ AWL  CONST_10  CL   C13  C14  C9    180.00   0.0  0
+ AWL  CONST_11  C15  C10  C9   C14   180.00   0.0  0
+ AWL  CONST_12  C11  C12  C13  CL    180.00   0.0  0
+ AWL  CONST_13  C15  C10  C11  C12   180.00   0.0  0
+ AWL  CONST_14  C5   C4   N    C     180.00   0.0  0
+ AWL  CONST_15  C1   N    C4   C5      0.00   0.0  0
+ AWL  CONST_16  H24  C14  C9   C10   180.00   0.0  0
+ AWL  CONST_17  H25  C12  C11  C10   180.00   0.0  0
+ AWL  CONST_18  H26  C11  C10  C9    180.00   0.0  0
+ AWL  CONST_19  O    C4   N    C       0.00   0.0  0
+ AWL  CONST_20  C1   N    C4   O     180.00   0.0  0
+ AWL  Var_01    C2   C1   N    C     -56.75  30.0  1
+ AWL  Var_02    C2   N1   C3   C      57.73  30.0  1
+ AWL  Var_03    C3   N1   C9   C10    71.34  30.0  2
+ AWL  Var_04    N1   C3   C    N     -56.88  30.0  1
+ AWL  Var_05    N1   C2   C1   N      57.00  30.0  1
+ AWL  Var_06    C3   C    N    C1     56.81  30.0  1
+ AWL  Var_07    H27  C15  C10  C9    -89.86  30.0  2
+ AWL  Var_08    C20  C21  C19  C6     59.08  30.0  1
+ AWL  Var_09    C16  C17  C19  C6    -58.83  30.0  3
+ AWL  Var_10    C20  C7   C5   C6    -59.97  30.0  1
+ AWL  Var_11    C16  C8   C5   C6     60.04  30.0  3
+ AWL  Var_12    C18  C20  C21  C19    59.99  30.0  1
+ AWL  Var_13    C7   C20  C21  C19   -60.23  30.0  1
+ AWL  Var_14    C18  C16  C17  C19   -60.20  30.0  3
+ AWL  Var_15    C8   C16  C17  C19    60.04  30.0  3
+ AWL  Var_16    C7   C5   C6   C19    59.36  30.0  1
+ AWL  Var_17    C8   C5   C6   C19   -59.32  30.0  1
+ AWL  Var_18    C20  C21  C19  C17   -61.50  30.0  1
+ AWL  Var_19    C5   C6   C19  C17    60.02  30.0  1
+ AWL  Var_20    C20  C18  C16  C17    58.92  30.0  3
+ AWL  Var_21    C5   C8   C16  C17   -62.01  30.0  3
+ AWL  Var_22    C16  C17  C19  C21    61.65  30.0  3
+ AWL  Var_23    C5   C6   C19  C21   -60.21  30.0  1
+ AWL  Var_24    C16  C18  C20  C21   -58.86  30.0  3
+ AWL  Var_25    C5   C7   C20  C21    61.99  30.0  1
+ AWL  Var_26    C8   C16  C18  C20   -61.49  30.0  3
+ AWL  Var_27    C8   C5   C7   C20    56.01  30.0  1
+ AWL  Var_28    C16  C18  C20  C7     61.53  30.0  3
+ AWL  Var_29    C16  C8   C5   C7    -55.93  30.0  3
+ AWL  Var_30    C5   C7   C20  C18   -58.48  30.0  1
+ AWL  Var_31    C5   C8   C16  C18    58.37  30.0  3
+ AWL  Var_32    C3   N1   C2   C1    -57.64  30.0  1
+ AWL  Var_33    C9   N1   C2   C1    165.77  30.0  1
+ AWL  Var_34    N    C4   C5   C6    177.50  30.0  3
+ AWL  Var_35    C4   C5   C6   C19  -179.91  30.0  1
+ AWL  Var_36    C4   C5   C7   C20  -178.26  30.0  1
+ AWL  Var_37    N    C4   C5   C7    -65.07  30.0  3
+ AWL  Var_38    C4   C5   C8   C16   178.27  30.0  3
+ AWL  Var_39    N    C4   C5   C8     60.12  30.0  3
+ AWL  Var_40    H8   C21  C19  C6   -179.59  30.0  1
+ AWL  Var_41    H9   C21  C19  C6    -61.73  30.0  1
+ AWL  Var_42    H6   C17  C19  C6     62.34  30.0  3
+ AWL  Var_43    H7   C17  C19  C6   -179.96  30.0  3
+ AWL  Var_44    H11  C7   C5   C6    178.66  30.0  1
+ AWL  Var_45    H12  C7   C5   C6     60.96  30.0  1
+ AWL  Var_46    H16  C8   C5   C6    -60.86  30.0  3
+ AWL  Var_47    H17  C8   C5   C6   -178.53  30.0  3
+ AWL  Var_48    H10  C20  C21  C19  -179.47  30.0  1
+ AWL  Var_49    H15  C16  C17  C19   179.30  30.0  3
+ AWL  Var_50    H3   C6   C19  C17  -178.23  30.0  1
+ AWL  Var_51    H4   C6   C19  C17   -61.66  30.0  1
+ AWL  Var_52    H13  C18  C16  C17   -62.43  30.0  3
+ AWL  Var_53    H14  C18  C16  C17  -179.89  30.0  3
+ AWL  Var_54    H5   C19  C21  C20   178.15  30.0  1
+ AWL  Var_55    O    C4   C5   C6     -1.74  30.0  3
+ AWL  Var_56    O    C4   C5   C7    115.69  30.0  3
+ AWL  Var_57    O    C4   C5   C8   -119.12  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

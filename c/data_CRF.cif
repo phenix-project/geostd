@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CRF  CRF  '2-[2-[(1R,2R)-1-azanyl-2-hydroxy-propyl]-4-(1H-indol-3-ylmethylidene)-5-oxo-imidazol-1-yl]ethanoic acid'  L-peptide  42  25  .  2022-07-24  2022-07-24
+ CRF  CRF  '2-[2-[(1R,2R)-1-azanyl-2-hydroxy-propyl]-4-(1H-indol-3-ylmethylidene)-5-oxo-imidazol-1-yl]ethanoic acid'  L-peptide  42  25  .  2022-07-24  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_CRF
@@ -225,48 +226,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CRF  CONST_01  CE2  NE1  CD1  CG2    0.00   0.0  0
- CRF  CONST_02  NE1  CE2  CD2  CG2    0.00   0.0  0
- CRF  CONST_03  CZ2  CE2  CD2  CG2  180.00   0.0  0
- CRF  CONST_04  CZ3  CE3  CD2  CG2  180.00   0.0  0
- CRF  CONST_05  CE2  CD2  CG2  CD1    0.00   0.0  0
- CRF  CONST_06  CE3  CD2  CG2  CD1  180.00   0.0  0
- CRF  CONST_07  CD2  CE2  NE1  CD1    0.00   0.0  0
- CRF  CONST_08  CZ2  CE2  NE1  CD1  180.00   0.0  0
- CRF  CONST_09  NE1  CD1  CG2  CD2    0.00   0.0  0
- CRF  CONST_10  CH2  CZ2  CE2  CD2    0.00   0.0  0
- CRF  CONST_11  CH2  CZ3  CE3  CD2    0.00   0.0  0
- CRF  CONST_12  CZ3  CE3  CD2  CE2    0.00   0.0  0
- CRF  CONST_13  CZ3  CH2  CZ2  CE2    0.00   0.0  0
- CRF  CONST_14  CE3  CD2  CE2  NE1  180.00   0.0  0
- CRF  CONST_15  CH2  CZ2  CE2  NE1  180.00   0.0  0
- CRF  CONST_16  CZ2  CE2  CD2  CE3    0.00   0.0  0
- CRF  CONST_17  CZ2  CH2  CZ3  CE3    0.00   0.0  0
- CRF  CONST_18  C2   CA2  N2   C1     0.00   0.0  0
- CRF  CONST_19  CA2  C2   N3   C1     0.00   0.0  0
- CRF  CONST_20  C2   N3   C1   N2     0.00   0.0  0
- CRF  CONST_21  N3   C2   CA2  N2     0.00   0.0  0
- CRF  CONST_22  CA2  N2   C1   N3     0.00   0.0  0
- CRF  CONST_23  NE1  CD1  CG2  CB2  180.00   0.0  0
- CRF  CONST_24  CE2  CD2  CG2  CB2  180.00   0.0  0
- CRF  CONST_25  CE3  CD2  CG2  CB2    0.00   0.0  0
- CRF  CONST_26  CA2  N2   C1   CA1  180.00   0.0  0
- CRF  CONST_27  C2   N3   C1   CA1  180.00   0.0  0
- CRF  CONST_28  O2   C2   N3   C1   180.00   0.0  0
- CRF  CONST_29  CA3  N3   C1   N2   180.00   0.0  0
- CRF  CONST_30  CA3  N3   C2   CA2  180.00   0.0  0
- CRF  CONST_31  HE1  NE1  CD1  CG2  180.00   0.0  0
- CRF  CONST_32  HE3  CE3  CD2  CG2    0.00   0.0  0
- CRF  CONST_33  HD1  CD1  CG2  CD2  180.00   0.0  0
- CRF  CONST_34  HZ2  CZ2  CE2  CD2  180.00   0.0  0
- CRF  CONST_35  HZ3  CZ3  CE3  CD2  180.00   0.0  0
- CRF  CONST_36  HH2  CH2  CZ2  CE2  180.00   0.0  0
- CRF  CONST_37  CA3  N3   C1   CA1    0.00   0.0  0
- CRF  CONST_38  CA3  N3   C2   O2     0.00   0.0  0
- CRF  Var_01    CG2  CB2  CA2  N2     0.37  30.0  2
- CRF  Var_02    CD1  CG2  CB2  CA2    0.16  30.0  2
- CRF  Var_03    C3   CA3  N3   C1   101.56  30.0  3
- CRF  Var_04    O3   C3   CA3  N3    -9.10  30.0  3
+ CRF  CONST_01  CE2   NE1  CD1  CG2     0.00   0.0  0
+ CRF  CONST_02  NE1   CE2  CD2  CG2     0.00   0.0  0
+ CRF  CONST_03  CZ2   CE2  CD2  CG2   180.00   0.0  0
+ CRF  CONST_04  CZ3   CE3  CD2  CG2   180.00   0.0  0
+ CRF  CONST_05  CE2   CD2  CG2  CD1     0.00   0.0  0
+ CRF  CONST_06  CE3   CD2  CG2  CD1   180.00   0.0  0
+ CRF  CONST_07  CD2   CE2  NE1  CD1     0.00   0.0  0
+ CRF  CONST_08  CZ2   CE2  NE1  CD1   180.00   0.0  0
+ CRF  CONST_09  NE1   CD1  CG2  CD2     0.00   0.0  0
+ CRF  CONST_10  CH2   CZ2  CE2  CD2     0.00   0.0  0
+ CRF  CONST_11  CH2   CZ3  CE3  CD2     0.00   0.0  0
+ CRF  CONST_12  CZ3   CE3  CD2  CE2     0.00   0.0  0
+ CRF  CONST_13  CZ3   CH2  CZ2  CE2     0.00   0.0  0
+ CRF  CONST_14  CE3   CD2  CE2  NE1   180.00   0.0  0
+ CRF  CONST_15  CH2   CZ2  CE2  NE1   180.00   0.0  0
+ CRF  CONST_16  CZ2   CE2  CD2  CE3     0.00   0.0  0
+ CRF  CONST_17  CZ2   CH2  CZ3  CE3     0.00   0.0  0
+ CRF  CONST_18  C2    CA2  N2   C1      0.00   0.0  0
+ CRF  CONST_19  CA2   C2   N3   C1      0.00   0.0  0
+ CRF  CONST_20  C2    N3   C1   N2      0.00   0.0  0
+ CRF  CONST_21  N3    C2   CA2  N2      0.00   0.0  0
+ CRF  CONST_22  CA2   N2   C1   N3      0.00   0.0  0
+ CRF  CONST_23  NE1   CD1  CG2  CB2   180.00   0.0  0
+ CRF  CONST_24  CE2   CD2  CG2  CB2   180.00   0.0  0
+ CRF  CONST_25  CE3   CD2  CG2  CB2     0.00   0.0  0
+ CRF  CONST_26  CA2   N2   C1   CA1   180.00   0.0  0
+ CRF  CONST_27  C2    N3   C1   CA1   180.00   0.0  0
+ CRF  CONST_28  O2    C2   N3   C1    180.00   0.0  0
+ CRF  CONST_29  CA3   N3   C1   N2    180.00   0.0  0
+ CRF  CONST_30  CA3   N3   C2   CA2   180.00   0.0  0
+ CRF  CONST_31  HE1   NE1  CD1  CG2   180.00   0.0  0
+ CRF  CONST_32  HE3   CE3  CD2  CG2     0.00   0.0  0
+ CRF  CONST_33  HD1   CD1  CG2  CD2   180.00   0.0  0
+ CRF  CONST_34  HZ2   CZ2  CE2  CD2   180.00   0.0  0
+ CRF  CONST_35  HZ3   CZ3  CE3  CD2   180.00   0.0  0
+ CRF  CONST_36  HH2   CH2  CZ2  CE2   180.00   0.0  0
+ CRF  CONST_37  CA3   N3   C1   CA1     0.00   0.0  0
+ CRF  CONST_38  CA3   N3   C2   O2      0.00   0.0  0
+ CRF  Var_01    CG2   CB2  CA2  N2      0.37  30.0  2
+ CRF  Var_02    CD1   CG2  CB2  CA2     0.16  30.0  2
+ CRF  Var_03    C3    CA3  N3   C1    101.56  30.0  3
+ CRF  Var_04    O3    C3   CA3  N3     -9.10  30.0  3
+ CRF  Var_05    HA1   CA1  C1   N2   -141.08  30.0  2
+ CRF  Var_06    HN11  N1   CA1  C1    -90.13  30.0  3
+ CRF  Var_07    HN12  N1   CA1  C1     25.68  30.0  3
+ CRF  Var_08    HB1   CB1  CA1  C1     42.39  30.0  3
+ CRF  Var_09    HG11  CG1  CB1  CA1    56.29  30.0  3
+ CRF  Var_10    HG12  CG1  CB1  CA1   176.65  30.0  3
+ CRF  Var_11    HG13  CG1  CB1  CA1   -63.72  30.0  3
+ CRF  Var_12    HOG   OG1  CB1  CA1   -61.01  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

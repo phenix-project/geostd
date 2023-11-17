@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QMK  QMK  "~{N}-[2-[1-[(2~{R},3~{R},4~{S},5~{R})-3,4-bis(oxidanyl)-5-[[tris(oxidanyl)-$l^{5}-phosphanyl]oxymethyl]oxolan-2-yl]-1,2,3-triazol-4-yl]ethyl]ethanamide"  ligand  43  24  .  2023-02-16  2023-02-16
+ QMK  QMK  ~{N}-[2-[1-[(2~{R},3~{R},4~{S},5~{R})-3,4-bis(oxidanyl)-5-[[tris(oxidanyl)-$l^{5}-phosphanyl]oxymethyl]oxolan-2-yl]-1,2,3-triazol-4-yl]ethyl]ethanamide  ligand  43  24  .  2023-02-16  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QMK
@@ -229,49 +230,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QMK  CONST_01  N3   N2  C6  C5     0.00   0.0  0
- QMK  CONST_02  N2   N3  N4  C5     0.00   0.0  0
- QMK  CONST_03  N3   N4  C5  C6     0.00   0.0  0
- QMK  CONST_04  N4   N3  N2  C6     0.00   0.0  0
- QMK  CONST_05  N4   C5  C6  N2     0.00   0.0  0
- QMK  CONST_06  C7   N2  C6  C5   180.00   0.0  0
- QMK  CONST_07  N4   N3  N2  C7   180.00   0.0  0
- QMK  CONST_08  N2   C6  C5  C4   180.00   0.0  0
- QMK  CONST_09  N3   N4  C5  C4   180.00   0.0  0
- QMK  CONST_10  H3   C6  N2  C7     0.00   0.0  0
- QMK  CONST_11  H3   C6  N2  N3   180.00   0.0  0
- QMK  CONST_12  H3   C6  C5  N4   180.00   0.0  0
- QMK  CONST_13  C1   C2  N1  C3   180.00   0.0  0
- QMK  CONST_14  O1   C2  N1  C3     0.00   0.0  0
- QMK  CONST_15  H10  N1  C2  C1     0.00   0.0  0
- QMK  CONST_16  H10  N1  C2  O1   180.00   0.0  0
- QMK  Var_01    C3   C4  C5  C6  -106.84  30.0  1
- QMK  Var_02    N4   C5  C4  C3    70.81  30.0  2
- QMK  Var_03    H1   C4  C5  C6   132.30  30.0  1
- QMK  Var_04    H2   C4  C5  C6    14.92  30.0  1
- QMK  Var_05    H1   C4  C5  N4   -50.05  30.0  1
- QMK  Var_06    H2   C4  C5  N4  -167.43  30.0  1
- QMK  Var_07    N1   C3  C4  C5  -175.73  30.0  2
- QMK  Var_08    P1   O3  C9  C8   179.81  30.0  2
- QMK  Var_09    H11  C3  C4  C5    63.75  30.0  2
- QMK  Var_10    H12  C3  C4  C5   -53.61  30.0  2
- QMK  Var_11    C2   N1  C3  C4    83.68  30.0  2
- QMK  Var_12    O5   P1  O3  C9   -46.71  30.0  1
- QMK  Var_13    O4   P1  O3  C9  -174.69  30.0  1
- QMK  Var_14    O6   P1  O3  C9    80.34  30.0  1
- QMK  Var_15    H10  N1  C3  C4   -92.57  30.0  2
- QMK  Var_16    H1   C4  C3  N1   -54.66  30.0  3
- QMK  Var_17    H2   C4  C3  N1    62.53  30.0  3
- QMK  Var_18    H13  C1  C2  N1  -117.73  30.0  3
- QMK  Var_19    H14  C1  C2  N1     3.50  30.0  3
- QMK  Var_20    H15  C1  C2  N1   125.12  30.0  3
- QMK  Var_21    H11  C3  N1  C2  -154.79  30.0  3
- QMK  Var_22    H12  C3  N1  C2   -38.74  30.0  3
- QMK  Var_23    H13  C1  C2  O1    61.42  30.0  3
- QMK  Var_24    H14  C1  C2  O1  -177.36  30.0  3
- QMK  Var_25    H15  C1  C2  O1   -55.74  30.0  3
- QMK  Var_26    H7   C9  O3  P1   -58.38  30.0  3
- QMK  Var_27    H8   C9  O3  P1    61.07  30.0  3
+ QMK  CONST_01  N3   N2   C6   C5      0.00   0.0  0
+ QMK  CONST_02  N2   N3   N4   C5      0.00   0.0  0
+ QMK  CONST_03  N3   N4   C5   C6      0.00   0.0  0
+ QMK  CONST_04  N4   N3   N2   C6      0.00   0.0  0
+ QMK  CONST_05  N4   C5   C6   N2      0.00   0.0  0
+ QMK  CONST_06  C7   N2   C6   C5    180.00   0.0  0
+ QMK  CONST_07  N4   N3   N2   C7    180.00   0.0  0
+ QMK  CONST_08  N2   C6   C5   C4    180.00   0.0  0
+ QMK  CONST_09  N3   N4   C5   C4    180.00   0.0  0
+ QMK  CONST_10  H3   C6   N2   C7      0.00   0.0  0
+ QMK  CONST_11  H3   C6   N2   N3    180.00   0.0  0
+ QMK  CONST_12  H3   C6   C5   N4    180.00   0.0  0
+ QMK  CONST_13  C1   C2   N1   C3    180.00   0.0  0
+ QMK  CONST_14  O1   C2   N1   C3      0.00   0.0  0
+ QMK  CONST_15  H10  N1   C2   C1      0.00   0.0  0
+ QMK  CONST_16  H10  N1   C2   O1    180.00   0.0  0
+ QMK  Var_01    C3   C4   C5   C6   -106.84  30.0  1
+ QMK  Var_02    N4   C5   C4   C3     70.81  30.0  2
+ QMK  Var_03    H1   C4   C5   C6    132.30  30.0  1
+ QMK  Var_04    H2   C4   C5   C6     14.92  30.0  1
+ QMK  Var_05    H1   C4   C5   N4    -50.05  30.0  1
+ QMK  Var_06    H2   C4   C5   N4   -167.43  30.0  1
+ QMK  Var_07    N1   C3   C4   C5   -175.73  30.0  2
+ QMK  Var_08    P1   O3   C9   C8    179.81  30.0  2
+ QMK  Var_09    H11  C3   C4   C5     63.75  30.0  2
+ QMK  Var_10    H12  C3   C4   C5    -53.61  30.0  2
+ QMK  Var_11    C2   N1   C3   C4     83.68  30.0  2
+ QMK  Var_12    O5   P1   O3   C9    -46.71  30.0  1
+ QMK  Var_13    O4   P1   O3   C9   -174.69  30.0  1
+ QMK  Var_14    O6   P1   O3   C9     80.34  30.0  1
+ QMK  Var_15    H10  N1   C3   C4    -92.57  30.0  2
+ QMK  Var_16    H1   C4   C3   N1    -54.66  30.0  3
+ QMK  Var_17    H2   C4   C3   N1     62.53  30.0  3
+ QMK  Var_18    H13  C1   C2   N1   -117.73  30.0  3
+ QMK  Var_19    H14  C1   C2   N1      3.50  30.0  3
+ QMK  Var_20    H15  C1   C2   N1    125.12  30.0  3
+ QMK  Var_21    H11  C3   N1   C2   -154.79  30.0  3
+ QMK  Var_22    H12  C3   N1   C2    -38.74  30.0  3
+ QMK  Var_23    H13  C1   C2   O1     61.42  30.0  3
+ QMK  Var_24    H14  C1   C2   O1   -177.36  30.0  3
+ QMK  Var_25    H15  C1   C2   O1    -55.74  30.0  3
+ QMK  Var_26    H7   C9   O3   P1    -58.38  30.0  3
+ QMK  Var_27    H8   C9   O3   P1     61.07  30.0  3
+ QMK  Var_28    O2   C7   N2   C6     45.66  30.0  2
+ QMK  Var_29    C11  C7   N2   C6    -72.27  30.0  2
+ QMK  Var_30    O2   C8   C10  C11    30.88  30.0  1
+ QMK  Var_31    C8   O2   C7   C11   -15.55  30.0  1
+ QMK  Var_32    N3   N2   C7   C11   104.74  30.0  2
+ QMK  Var_33    C10  C8   O2   C7     -9.91  30.0  1
+ QMK  Var_34    C8   C10  C11  C7    -38.29  30.0  1
+ QMK  Var_35    N2   C7   O2   C8   -138.42  30.0  1
+ QMK  Var_36    O2   C7   C11  C10    34.18  30.0  1
+ QMK  Var_37    N2   C7   C11  C10   153.70  30.0  1
+ QMK  Var_38    O2   C7   N2   N3   -137.32  30.0  2
+ QMK  Var_39    C9   C8   C10  C11   -90.13  30.0  1
+ QMK  Var_40    C9   C8   O2   C7    111.40  30.0  1
+ QMK  Var_41    O7   C10  C11  C7     76.42  30.0  1
+ QMK  Var_42    O8   C11  C10  C8   -160.11  30.0  1
+ QMK  Var_43    O8   C11  C7   N2    -86.90  30.0  1
+ QMK  Var_44    O7   C10  C8   O2    -86.36  30.0  1
+ QMK  Var_45    O8   C11  C7   O2    153.58  30.0  1
+ QMK  Var_46    H5   C7   N2   C6    166.31  30.0  2
+ QMK  Var_47    H6   C8   C10  C11   148.26  30.0  1
+ QMK  Var_48    H9   C10  C11  C7   -157.45  30.0  1
+ QMK  Var_49    H4   C11  C10  C8     76.33  30.0  1
+ QMK  Var_50    O7   C10  C8   C9    152.62  30.0  1
+ QMK  Var_51    O3   C9   C8   C10   174.93  30.0  2
+ QMK  Var_52    O3   C9   C8   O2     56.87  30.0  2
+ QMK  Var_53    O8   C11  C10  O7    -45.40  30.0  1
+ QMK  Var_54    H18  O7   C10  C11    60.09  30.0  3
+ QMK  Var_55    H19  O8   C11  C7     76.03  30.0  3
+ QMK  Var_56    H7   C9   C8   C10    53.67  30.0  2
+ QMK  Var_57    H8   C9   C8   C10   -65.02  30.0  2
+ QMK  Var_58    H16  O4   P1   O3     89.46  30.0  3
+ QMK  Var_59    H21  O6   P1   O3   -160.24  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

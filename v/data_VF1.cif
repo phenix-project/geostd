@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VF1  VF1  (2R,3S,3aR,5aR,6R,11bR,11cS)-3a-methoxy-3,14-dimethyl-2-phenyl-2,3,3a,6,7,11c-hexahydro-1H-6,11b-(epiminoethano)-3,5a-methanonaphtho[2,1-g]indol-10-ol  ligand  64  32  .  2022-08-11  2022-08-11
+ VF1  VF1  (2R,3S,3aR,5aR,6R,11bR,11cS)-3a-methoxy-3,14-dimethyl-2-phenyl-2,3,3a,6,7,11c-hexahydro-1H-6,11b-(epiminoethano)-3,5a-methanonaphtho[2,1-g]indol-10-ol  ligand  64  32  .  2022-08-11  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VF1
@@ -333,36 +334,130 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VF1  CONST_01  CAU  CAN  CAX  CAW    0.00   0.0  0
- VF1  CONST_02  CAU  CAL  CAM  CAW    0.00   0.0  0
- VF1  CONST_03  CAN  CAU  CAL  CAM    0.00   0.0  0
- VF1  CONST_04  CAN  CAX  CAW  CAM    0.00   0.0  0
- VF1  CONST_05  CAX  CAN  CAU  CAL    0.00   0.0  0
- VF1  CONST_06  CAX  CAW  CAM  CAL    0.00   0.0  0
- VF1  CONST_07  CAG  CAH  CAJ  CAV    0.00   0.0  0
- VF1  CONST_08  CAG  CAI  CAK  CAV    0.00   0.0  0
- VF1  CONST_09  CAI  CAG  CAH  CAJ    0.00   0.0  0
- VF1  CONST_10  CAI  CAK  CAV  CAJ    0.00   0.0  0
- VF1  CONST_11  CAK  CAV  CAJ  CAH    0.00   0.0  0
- VF1  CONST_12  CAK  CAI  CAG  CAH    0.00   0.0  0
- VF1  CONST_13  CAH  CAJ  CAV  CAY  180.00   0.0  0
- VF1  CONST_14  CAI  CAK  CAV  CAY  180.00   0.0  0
- VF1  CONST_15  OAD  CAU  CAL  CAM  180.00   0.0  0
- VF1  CONST_16  CAX  CAN  CAU  OAD  180.00   0.0  0
- VF1  CONST_17  H12  CAM  CAW  CAQ    0.00   0.0  0
- VF1  CONST_18  H15  CAN  CAX  CAW  180.00   0.0  0
- VF1  CONST_19  H13  CAL  CAM  CAW  180.00   0.0  0
- VF1  CONST_20  H32  CAJ  CAV  CAY    0.00   0.0  0
- VF1  CONST_21  H36  CAK  CAV  CAY    0.00   0.0  0
- VF1  CONST_22  H33  CAH  CAJ  CAV  180.00   0.0  0
- VF1  CONST_23  H35  CAI  CAK  CAV  180.00   0.0  0
- VF1  CONST_24  H34  CAG  CAH  CAJ  180.00   0.0  0
- VF1  Var_01    CAZ  NBB  CAO  CAP   59.57  30.0  3
- VF1  Var_02    CBF  CAP  CAO  NBB  -51.85  30.0  3
- VF1  Var_03    CAX  CAW  CAQ  CAZ   -3.91  30.0  1
- VF1  Var_04    CBD  CAE  CAF  CBE   -3.59  30.0  1
- VF1  Var_05    H6   CAB  NBB  CAO   59.35  30.0  3
- VF1  Var_06    H19  CAA  OAT  CBE  167.47  30.0  3
+ VF1  CONST_01  CAU  CAN  CAX  CAW     0.00   0.0  0
+ VF1  CONST_02  CAU  CAL  CAM  CAW     0.00   0.0  0
+ VF1  CONST_03  CAN  CAU  CAL  CAM     0.00   0.0  0
+ VF1  CONST_04  CAN  CAX  CAW  CAM     0.00   0.0  0
+ VF1  CONST_05  CAX  CAN  CAU  CAL     0.00   0.0  0
+ VF1  CONST_06  CAX  CAW  CAM  CAL     0.00   0.0  0
+ VF1  CONST_07  CAG  CAH  CAJ  CAV     0.00   0.0  0
+ VF1  CONST_08  CAG  CAI  CAK  CAV     0.00   0.0  0
+ VF1  CONST_09  CAI  CAG  CAH  CAJ     0.00   0.0  0
+ VF1  CONST_10  CAI  CAK  CAV  CAJ     0.00   0.0  0
+ VF1  CONST_11  CAK  CAV  CAJ  CAH     0.00   0.0  0
+ VF1  CONST_12  CAK  CAI  CAG  CAH     0.00   0.0  0
+ VF1  CONST_13  CAH  CAJ  CAV  CAY   180.00   0.0  0
+ VF1  CONST_14  CAI  CAK  CAV  CAY   180.00   0.0  0
+ VF1  CONST_15  OAD  CAU  CAL  CAM   180.00   0.0  0
+ VF1  CONST_16  CAX  CAN  CAU  OAD   180.00   0.0  0
+ VF1  CONST_17  H12  CAM  CAW  CAQ     0.00   0.0  0
+ VF1  CONST_18  H15  CAN  CAX  CAW   180.00   0.0  0
+ VF1  CONST_19  H13  CAL  CAM  CAW   180.00   0.0  0
+ VF1  CONST_20  H32  CAJ  CAV  CAY     0.00   0.0  0
+ VF1  CONST_21  H36  CAK  CAV  CAY     0.00   0.0  0
+ VF1  CONST_22  H33  CAH  CAJ  CAV   180.00   0.0  0
+ VF1  CONST_23  H35  CAI  CAK  CAV   180.00   0.0  0
+ VF1  CONST_24  H34  CAG  CAH  CAJ   180.00   0.0  0
+ VF1  Var_01    CAZ  NBB  CAO  CAP    59.57  30.0  3
+ VF1  Var_02    CBF  CAP  CAO  NBB   -51.85  30.0  3
+ VF1  Var_03    CAX  CAW  CAQ  CAZ    -3.91  30.0  1
+ VF1  Var_04    CBD  CAE  CAF  CBE    -3.59  30.0  1
+ VF1  Var_05    H6   CAB  NBB  CAO    59.35  30.0  3
+ VF1  Var_06    H19  CAA  OAT  CBE   167.47  30.0  3
+ VF1  Var_07    CBE  CBA  CBF  CAP  -142.46  30.0  1
+ VF1  Var_08    NAS  CBA  CBF  CAP   -27.47  30.0  1
+ VF1  Var_09    CAN  CAX  CBF  CAP   -89.18  30.0  1
+ VF1  Var_10    CAW  CAX  CBF  CAP    86.14  30.0  1
+ VF1  Var_11    CAE  CBD  CBF  CAP  -171.39  30.0  1
+ VF1  Var_12    CAR  CBD  CBF  CAP    74.34  30.0  1
+ VF1  Var_13    CAZ  CBD  CBF  CAP   -51.29  30.0  1
+ VF1  Var_14    CBA  CBF  CAP  CAO   166.81  30.0  3
+ VF1  Var_15    CAX  CBF  CAP  CAO   -67.86  30.0  3
+ VF1  Var_16    CBD  CBF  CAP  CAO    48.93  30.0  3
+ VF1  Var_17    CBD  CAZ  NBB  CAO   -65.39  30.0  3
+ VF1  Var_18    CAQ  CAZ  NBB  CAO    57.14  30.0  3
+ VF1  Var_19    CAE  CBD  CAZ  NBB   177.49  30.0  1
+ VF1  Var_20    CAR  CBD  CAZ  NBB   -62.48  30.0  1
+ VF1  Var_21    CBF  CBD  CAZ  NBB    59.65  30.0  1
+ VF1  Var_22    CAW  CAQ  CAZ  NBB   -88.63  30.0  1
+ VF1  Var_23    CAF  CAE  CBD  CAZ  -174.95  30.0  1
+ VF1  Var_24    CBC  CAR  CBD  CAZ  -178.31  30.0  3
+ VF1  Var_25    CBA  CBF  CBD  CAZ  -172.01  30.0  1
+ VF1  Var_26    CAX  CBF  CBD  CAZ    64.76  30.0  1
+ VF1  Var_27    CAE  CBD  CAZ  CAQ    51.51  30.0  1
+ VF1  Var_28    CAR  CBD  CAZ  CAQ   171.54  30.0  1
+ VF1  Var_29    CBF  CBD  CAZ  CAQ   -66.33  30.0  1
+ VF1  Var_30    CBA  CBF  CAX  CAW  -150.62  30.0  1
+ VF1  Var_31    CBD  CBF  CAX  CAW   -32.49  30.0  1
+ VF1  Var_32    CBD  CAZ  CAQ  CAW    35.07  30.0  1
+ VF1  Var_33    CBA  CBF  CAX  CAN    34.06  30.0  1
+ VF1  Var_34    CBD  CBF  CAX  CAN   152.19  30.0  1
+ VF1  Var_35    CBE  CBA  CBF  CAX    96.79  30.0  1
+ VF1  Var_36    NAS  CBA  CBF  CAX  -148.22  30.0  1
+ VF1  Var_37    CAE  CBD  CBF  CAX   -55.35  30.0  1
+ VF1  Var_38    CAR  CBD  CBF  CAX  -169.62  30.0  1
+ VF1  Var_39    CAF  CBE  CBA  CBF   -34.67  30.0  1
+ VF1  Var_40    CBC  CBE  CBA  CBF    80.86  30.0  1
+ VF1  Var_41    CAY  NAS  CBA  CBF  -104.25  30.0  3
+ VF1  Var_42    CAF  CAE  CBD  CBF   -56.47  30.0  1
+ VF1  Var_43    CBC  CAR  CBD  CBF    59.82  30.0  3
+ VF1  Var_44    CAE  CAF  CBE  CBA    52.00  30.0  1
+ VF1  Var_45    CAY  CBC  CBE  CBA    50.73  30.0  3
+ VF1  Var_46    CAR  CBC  CBE  CBA   -65.88  30.0  3
+ VF1  Var_47    CBC  CAY  NAS  CBA    18.82  30.0  3
+ VF1  Var_48    CAV  CAY  NAS  CBA   145.20  30.0  3
+ VF1  Var_49    CAE  CBD  CBF  CBA    67.88  30.0  1
+ VF1  Var_50    CAR  CBD  CBF  CBA   -46.39  30.0  1
+ VF1  Var_51    CBE  CBC  CAY  NAS   -43.71  30.0  3
+ VF1  Var_52    CAR  CBC  CAY  NAS    68.67  30.0  3
+ VF1  Var_53    CAJ  CAV  CAY  NAS   160.53  30.0  2
+ VF1  Var_54    CAK  CAV  CAY  NAS   -18.67  30.0  2
+ VF1  Var_55    CAF  CBE  CBA  NAS  -155.80  30.0  1
+ VF1  Var_56    CBC  CBE  CBA  NAS   -40.27  30.0  1
+ VF1  Var_57    CBD  CBF  CBA  NAS    92.89  30.0  1
+ VF1  Var_58    CAV  CAY  CBC  CBE  -169.51  30.0  3
+ VF1  Var_59    CBD  CAR  CBC  CBE     0.96  30.0  3
+ VF1  Var_60    CAY  NAS  CBA  CBE    14.10  30.0  3
+ VF1  Var_61    CBD  CBF  CBA  CBE   -22.11  30.0  1
+ VF1  Var_62    CAY  CBC  CBE  CAF   170.84  30.0  3
+ VF1  Var_63    CAR  CBC  CBE  CAF    54.23  30.0  3
+ VF1  Var_64    CAR  CBD  CAE  CAF    59.85  30.0  1
+ VF1  Var_65    CBC  CBE  CAF  CAE   -56.44  30.0  1
+ VF1  Var_66    CBC  CAR  CBD  CAE   -55.47  30.0  3
+ VF1  Var_67    CAY  CBC  CAR  CBD  -106.47  30.0  3
+ VF1  Var_68    CAV  CAY  CBC  CAR   -57.13  30.0  3
+ VF1  Var_69    CAJ  CAV  CAY  CBC   -80.42  30.0  2
+ VF1  Var_70    CAK  CAV  CAY  CBC   100.38  30.0  2
+ VF1  Var_71    CBD  CAZ  NBB  CAB   166.26  30.0  3
+ VF1  Var_72    CAQ  CAZ  NBB  CAB   -71.22  30.0  3
+ VF1  Var_73    OAT  CBE  CBA  CBF  -165.58  30.0  1
+ VF1  Var_74    CAC  CBC  CBE  CBA   171.48  30.0  3
+ VF1  Var_75    CAC  CBC  CAY  NAS  -164.66  30.0  3
+ VF1  Var_76    OAT  CBE  CBA  NAS    73.29  30.0  1
+ VF1  Var_77    CAE  CAF  CBE  OAT  -176.91  30.0  1
+ VF1  Var_78    CAY  CBC  CBE  OAT   -66.29  30.0  3
+ VF1  Var_79    CAR  CBC  CBE  OAT   177.10  30.0  3
+ VF1  Var_80    CAC  CBC  CBE  CAF   -68.41  30.0  3
+ VF1  Var_81    CAC  CBC  CAR  CBD   125.42  30.0  3
+ VF1  Var_82    CAV  CAY  CBC  CAC    69.55  30.0  3
+ VF1  Var_83    H16  CBA  CBF  CAP    94.49  30.0  1
+ VF1  Var_84    H9   CAZ  NBB  CAO   176.60  30.0  3
+ VF1  Var_85    H10  CAQ  CAZ  NBB   148.69  30.0  1
+ VF1  Var_86    H11  CAQ  CAZ  NBB    34.81  30.0  1
+ VF1  Var_87    H24  CAE  CBD  CAZ     6.29  30.0  1
+ VF1  Var_88    H26  CAR  CBD  CAZ    58.04  30.0  3
+ VF1  Var_89    H27  CAR  CBD  CAZ   -57.47  30.0  3
+ VF1  Var_90    H17  NAS  CBA  CBF   130.74  30.0  3
+ VF1  Var_91    H22  CAF  CBE  CBA  -132.90  30.0  1
+ VF1  Var_92    H31  CAY  NAS  CBA   -94.44  30.0  3
+ VF1  Var_93    CAA  OAT  CBE  CBA    62.64  30.0  2
+ VF1  Var_94    CAC  CBC  CBE  OAT    54.46  30.0  3
+ VF1  Var_95    CAF  CBE  OAT  CAA   -69.70  30.0  3
+ VF1  Var_96    CBC  CBE  OAT  CAA   169.27  30.0  3
+ VF1  Var_97    H14  OAD  CAU  CAL    -0.16  30.0  2
+ VF1  Var_98    H28  CAC  CBC  CBE   177.55  30.0  3
+ VF1  Var_99    H29  CAC  CBC  CBE   -61.99  30.0  3
+ VF1  Var_100   H30  CAC  CBC  CBE    59.25  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

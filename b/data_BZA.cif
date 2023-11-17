@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BZA  BZA  (2S,3S,4S)-1,2,3,4-tetrahydrotetraphene-2,3,4-triol  ligand  37  21  .  2021-08-06  2021-08-06  
+ BZA  BZA  (2S,3S,4S)-1,2,3,4-tetrahydrotetraphene-2,3,4-triol  ligand  37  21  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BZA
@@ -211,45 +212,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BZA  CONST_01  C11  C1A  C2A  C3A    0.00   0.0  0
- BZA  CONST_02  C5A  C4B  C4A  C3A  180.00   0.0  0
- BZA  CONST_03  C11  C4B  C4A  C3A    0.00   0.0  0
- BZA  CONST_04  C4B  C4A  C3A  C2A    0.00   0.0  0
- BZA  CONST_05  C4B  C11  C1A  C2A    0.00   0.0  0
- BZA  CONST_06  C10  C11  C1A  C2A  180.00   0.0  0
- BZA  CONST_07  C1A  C2A  C3A  C4A    0.00   0.0  0
- BZA  CONST_08  C5B  C5A  C4B  C4A  180.00   0.0  0
- BZA  CONST_09  C1A  C11  C4B  C4A    0.00   0.0  0
- BZA  CONST_10  C10  C11  C4B  C4A  180.00   0.0  0
- BZA  CONST_11  C5A  C4B  C11  C1A  180.00   0.0  0
- BZA  CONST_12  C9B  C10  C11  C1A  180.00   0.0  0
- BZA  CONST_13  C10  C11  C4B  C5A    0.00   0.0  0
- BZA  CONST_14  C7A  C6A  C5B  C5A  180.00   0.0  0
- BZA  CONST_15  C9A  C9B  C5B  C5A  180.00   0.0  0
- BZA  CONST_16  C10  C9B  C5B  C5A    0.00   0.0  0
- BZA  CONST_17  C6A  C5B  C5A  C4B  180.00   0.0  0
- BZA  CONST_18  C9B  C5B  C5A  C4B    0.00   0.0  0
- BZA  CONST_19  C9B  C10  C11  C4B    0.00   0.0  0
- BZA  CONST_20  C9A  C8A  C7A  C6A    0.00   0.0  0
- BZA  CONST_21  C9A  C9B  C5B  C6A    0.00   0.0  0
- BZA  CONST_22  C10  C9B  C5B  C6A  180.00   0.0  0
- BZA  CONST_23  C9B  C5B  C6A  C7A    0.00   0.0  0
- BZA  CONST_24  C9B  C9A  C8A  C7A    0.00   0.0  0
- BZA  CONST_25  C5B  C6A  C7A  C8A    0.00   0.0  0
- BZA  CONST_26  C5B  C9B  C9A  C8A    0.00   0.0  0
- BZA  CONST_27  C10  C9B  C9A  C8A  180.00   0.0  0
- BZA  CONST_28  C11  C4B  C5A  C5B    0.00   0.0  0
- BZA  CONST_29  C11  C10  C9B  C5B    0.00   0.0  0
- BZA  CONST_30  C9A  C9B  C10  C11  180.00   0.0  0
- BZA  CONST_31  H2A  C2A  C3A  C3B    0.00   0.0  0
- BZA  CONST_32  H1A  C1A  C2A  C3A  180.00   0.0  0
- BZA  CONST_33  H5A  C5A  C4B  C4A    0.00   0.0  0
- BZA  CONST_34  H10  C10  C11  C1A    0.00   0.0  0
- BZA  CONST_35  H6A  C6A  C5B  C5A    0.00   0.0  0
- BZA  CONST_36  H8A  C8A  C7A  C6A  180.00   0.0  0
- BZA  CONST_37  H9A  C9A  C8A  C7A  180.00   0.0  0
- BZA  CONST_38  H7A  C7A  C6A  C5B  180.00   0.0  0
- BZA  Var_01    C3A  C4A  C4C  C9C  -14.44  30.0  1
+ BZA  CONST_01  C11   C1A  C2A  C3A     0.00   0.0  0
+ BZA  CONST_02  C5A   C4B  C4A  C3A   180.00   0.0  0
+ BZA  CONST_03  C11   C4B  C4A  C3A     0.00   0.0  0
+ BZA  CONST_04  C4B   C4A  C3A  C2A     0.00   0.0  0
+ BZA  CONST_05  C4B   C11  C1A  C2A     0.00   0.0  0
+ BZA  CONST_06  C10   C11  C1A  C2A   180.00   0.0  0
+ BZA  CONST_07  C1A   C2A  C3A  C4A     0.00   0.0  0
+ BZA  CONST_08  C5B   C5A  C4B  C4A   180.00   0.0  0
+ BZA  CONST_09  C1A   C11  C4B  C4A     0.00   0.0  0
+ BZA  CONST_10  C10   C11  C4B  C4A   180.00   0.0  0
+ BZA  CONST_11  C5A   C4B  C11  C1A   180.00   0.0  0
+ BZA  CONST_12  C9B   C10  C11  C1A   180.00   0.0  0
+ BZA  CONST_13  C10   C11  C4B  C5A     0.00   0.0  0
+ BZA  CONST_14  C7A   C6A  C5B  C5A   180.00   0.0  0
+ BZA  CONST_15  C9A   C9B  C5B  C5A   180.00   0.0  0
+ BZA  CONST_16  C10   C9B  C5B  C5A     0.00   0.0  0
+ BZA  CONST_17  C6A   C5B  C5A  C4B   180.00   0.0  0
+ BZA  CONST_18  C9B   C5B  C5A  C4B     0.00   0.0  0
+ BZA  CONST_19  C9B   C10  C11  C4B     0.00   0.0  0
+ BZA  CONST_20  C9A   C8A  C7A  C6A     0.00   0.0  0
+ BZA  CONST_21  C9A   C9B  C5B  C6A     0.00   0.0  0
+ BZA  CONST_22  C10   C9B  C5B  C6A   180.00   0.0  0
+ BZA  CONST_23  C9B   C5B  C6A  C7A     0.00   0.0  0
+ BZA  CONST_24  C9B   C9A  C8A  C7A     0.00   0.0  0
+ BZA  CONST_25  C5B   C6A  C7A  C8A     0.00   0.0  0
+ BZA  CONST_26  C5B   C9B  C9A  C8A     0.00   0.0  0
+ BZA  CONST_27  C10   C9B  C9A  C8A   180.00   0.0  0
+ BZA  CONST_28  C11   C4B  C5A  C5B     0.00   0.0  0
+ BZA  CONST_29  C11   C10  C9B  C5B     0.00   0.0  0
+ BZA  CONST_30  C9A   C9B  C10  C11   180.00   0.0  0
+ BZA  CONST_31  H2A   C2A  C3A  C3B     0.00   0.0  0
+ BZA  CONST_32  H1A   C1A  C2A  C3A   180.00   0.0  0
+ BZA  CONST_33  H5A   C5A  C4B  C4A     0.00   0.0  0
+ BZA  CONST_34  H10   C10  C11  C1A     0.00   0.0  0
+ BZA  CONST_35  H6A   C6A  C5B  C5A     0.00   0.0  0
+ BZA  CONST_36  H8A   C8A  C7A  C6A   180.00   0.0  0
+ BZA  CONST_37  H9A   C9A  C8A  C7A   180.00   0.0  0
+ BZA  CONST_38  H7A   C7A  C6A  C5B   180.00   0.0  0
+ BZA  Var_01    C3A   C4A  C4C  C9C   -14.44  30.0  1
+ BZA  Var_02    C3B   C8B  C9C  C4C   -63.66  30.0  1
+ BZA  Var_03    C3A   C3B  C8B  C9C    50.51  30.0  1
+ BZA  Var_04    C4A   C4C  C9C  C8B    45.16  30.0  1
+ BZA  Var_05    C2A   C3A  C3B  C8B   160.70  30.0  1
+ BZA  Var_06    C4A   C3A  C3B  C8B   -20.97  30.0  1
+ BZA  Var_07    O2    C8B  C9C  C4C    56.84  30.0  1
+ BZA  Var_08    O1    C3B  C8B  C9C   -72.19  30.0  1
+ BZA  Var_09    C4A   C4C  C9C  O3    166.63  30.0  1
+ BZA  Var_10    C3B   C8B  C9C  O3    173.12  30.0  1
+ BZA  Var_11    C3A   C3B  C8B  O2    -68.54  30.0  1
+ BZA  Var_12    C2A   C3A  C3B  O1    -78.74  30.0  1
+ BZA  Var_13    C4A   C3A  C3B  O1     99.58  30.0  1
+ BZA  Var_14    H8B   C8B  C9C  C4C   178.25  30.0  1
+ BZA  Var_15    H3B   C3B  C8B  C9C   169.40  30.0  1
+ BZA  Var_16    H4C1  C4C  C9C  C8B   167.49  30.0  1
+ BZA  Var_17    H4C2  C4C  C9C  C8B   -77.22  30.0  1
+ BZA  Var_18    H9C   C9C  C8B  C3B    53.95  30.0  1
+ BZA  Var_19    O2    C8B  C9C  O3    -66.38  30.0  1
+ BZA  Var_20    O1    C3B  C8B  O2    168.76  30.0  1
+ BZA  Var_21    H3    O3   C9C  C4C    64.43  30.0  3
+ BZA  Var_22    HO2   O2   C8B  C9C   174.01  30.0  3
+ BZA  Var_23    H1    O1   C3B  C8B  -173.33  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

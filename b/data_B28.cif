@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- B28  B28  '[1-hydroxy-2-(1,1':4',1''-terphenyl-3-yl)ethane-1,1-diyl]bis(phosphonic acid)'  ligand  45  29  .  2022-03-15  2022-03-15
+ B28  B28  '[1-hydroxy-2-(1,1':4',1''-terphenyl-3-yl)ethane-1,1-diyl]bis(phosphonic acid)'  ligand  45  29  .  2022-03-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_B28
@@ -236,51 +237,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- B28  CONST_01  CAJ  CAH  CAI  CAM    0.00   0.0  0
- B28  CONST_02  CAJ  CAN  CAW  CAM    0.00   0.0  0
- B28  CONST_05  CAN  CAW  CAM  CAI    0.00   0.0  0
- B28  CONST_06  CAX  CAW  CAM  CAI  180.00   0.0  0
- B28  CONST_07  CAN  CAJ  CAH  CAI    0.00   0.0  0
- B28  CONST_08  CAW  CAM  CAI  CAH    0.00   0.0  0
- B28  CONST_09  CAW  CAN  CAJ  CAH    0.00   0.0  0
- B28  CONST_10  CAX  CAW  CAN  CAJ  180.00   0.0  0
- B28  CONST_13  CAR  CAP  CAX  CAW  180.00   0.0  0
- B28  CONST_14  CAS  CAQ  CAX  CAW  180.00   0.0  0
- B28  CONST_15  CAY  CAR  CAP  CAX    0.00   0.0  0
- B28  CONST_16  CAY  CAS  CAQ  CAX    0.00   0.0  0
- B28  CONST_17  CAR  CAP  CAX  CAQ    0.00   0.0  0
- B28  CONST_18  CAR  CAY  CAS  CAQ    0.00   0.0  0
- B28  CONST_19  CAZ  CAY  CAS  CAQ  180.00   0.0  0
- B28  CONST_20  CAP  CAX  CAQ  CAS    0.00   0.0  0
- B28  CONST_21  CAP  CAR  CAY  CAS    0.00   0.0  0
- B28  CONST_24  CAZ  CAY  CAR  CAP  180.00   0.0  0
- B28  CONST_27  CAV  CAT  CAZ  CAY  180.00   0.0  0
- B28  CONST_28  CAK  CAO  CAZ  CAY  180.00   0.0  0
- B28  CONST_29  CAL  CAV  CAT  CAZ    0.00   0.0  0
- B28  CONST_30  CAL  CAK  CAO  CAZ    0.00   0.0  0
- B28  CONST_31  CAK  CAO  CAZ  CAT    0.00   0.0  0
- B28  CONST_32  CAK  CAL  CAV  CAT    0.00   0.0  0
- B28  CONST_33  CAV  CAT  CAZ  CAO    0.00   0.0  0
- B28  CONST_34  CAV  CAL  CAK  CAO    0.00   0.0  0
- B28  CONST_35  CAU  CAV  CAT  CAZ  180.00   0.0  0
- B28  CONST_36  CAU  CAV  CAL  CAK  180.00   0.0  0
- B28  CONST_37  HAH  CAH  CAI  CAM  180.00   0.0  0
- B28  CONST_38  HAN  CAN  CAW  CAM  180.00   0.0  0
- B28  CONST_39  HAJ  CAJ  CAH  CAI  180.00   0.0  0
- B28  CONST_40  HAM  CAM  CAI  CAH  180.00   0.0  0
- B28  CONST_41  HAI  CAI  CAH  CAJ  180.00   0.0  0
- B28  CONST_42  HAP  CAP  CAX  CAW    0.00   0.0  0
- B28  CONST_43  HAQ  CAQ  CAX  CAW    0.00   0.0  0
- B28  CONST_44  HAR  CAR  CAP  CAX  180.00   0.0  0
- B28  CONST_45  HAS  CAS  CAQ  CAX  180.00   0.0  0
- B28  CONST_46  HAT  CAT  CAZ  CAY    0.00   0.0  0
- B28  CONST_47  HAO  CAO  CAZ  CAY    0.00   0.0  0
- B28  CONST_48  HAK  CAK  CAO  CAZ  180.00   0.0  0
- B28  CONST_49  HAL  CAL  CAV  CAT  180.00   0.0  0
- B28  Var_01    CBA  CAU  CAV  CAT   73.00  30.0  2
- B28  Var_02    OAC  CBA  CAU  CAV   40.60  30.0  3
- B28  Var_03    OAF  PBC  CBA  CAU  -51.74  30.0  3
- B28  Var_04    OAE  PBB  CBA  CAU   95.67  30.0  3
+ B28  CONST_01  CAJ   CAH  CAI  CAM     0.00   0.0  0
+ B28  CONST_02  CAJ   CAN  CAW  CAM     0.00   0.0  0
+ B28  CONST_03  CAN   CAW  CAM  CAI     0.00   0.0  0
+ B28  CONST_04  CAX   CAW  CAM  CAI   180.00   0.0  0
+ B28  CONST_05  CAN   CAJ  CAH  CAI     0.00   0.0  0
+ B28  CONST_06  CAW   CAM  CAI  CAH     0.00   0.0  0
+ B28  CONST_07  CAW   CAN  CAJ  CAH     0.00   0.0  0
+ B28  CONST_08  CAX   CAW  CAN  CAJ   180.00   0.0  0
+ B28  CONST_09  CAR   CAP  CAX  CAW   180.00   0.0  0
+ B28  CONST_10  CAS   CAQ  CAX  CAW   180.00   0.0  0
+ B28  CONST_11  CAY   CAR  CAP  CAX     0.00   0.0  0
+ B28  CONST_12  CAY   CAS  CAQ  CAX     0.00   0.0  0
+ B28  CONST_13  CAR   CAP  CAX  CAQ     0.00   0.0  0
+ B28  CONST_14  CAR   CAY  CAS  CAQ     0.00   0.0  0
+ B28  CONST_15  CAZ   CAY  CAS  CAQ   180.00   0.0  0
+ B28  CONST_16  CAP   CAX  CAQ  CAS     0.00   0.0  0
+ B28  CONST_17  CAP   CAR  CAY  CAS     0.00   0.0  0
+ B28  CONST_18  CAZ   CAY  CAR  CAP   180.00   0.0  0
+ B28  CONST_19  CAV   CAT  CAZ  CAY   180.00   0.0  0
+ B28  CONST_20  CAK   CAO  CAZ  CAY   180.00   0.0  0
+ B28  CONST_21  CAL   CAV  CAT  CAZ     0.00   0.0  0
+ B28  CONST_22  CAL   CAK  CAO  CAZ     0.00   0.0  0
+ B28  CONST_23  CAK   CAO  CAZ  CAT     0.00   0.0  0
+ B28  CONST_24  CAK   CAL  CAV  CAT     0.00   0.0  0
+ B28  CONST_25  CAV   CAT  CAZ  CAO     0.00   0.0  0
+ B28  CONST_26  CAV   CAL  CAK  CAO     0.00   0.0  0
+ B28  CONST_27  CAU   CAV  CAT  CAZ   180.00   0.0  0
+ B28  CONST_28  CAU   CAV  CAL  CAK   180.00   0.0  0
+ B28  CONST_29  HAH   CAH  CAI  CAM   180.00   0.0  0
+ B28  CONST_30  HAN   CAN  CAW  CAM   180.00   0.0  0
+ B28  CONST_31  HAJ   CAJ  CAH  CAI   180.00   0.0  0
+ B28  CONST_32  HAM   CAM  CAI  CAH   180.00   0.0  0
+ B28  CONST_33  HAI   CAI  CAH  CAJ   180.00   0.0  0
+ B28  CONST_34  HAP   CAP  CAX  CAW     0.00   0.0  0
+ B28  CONST_35  HAQ   CAQ  CAX  CAW     0.00   0.0  0
+ B28  CONST_36  HAR   CAR  CAP  CAX   180.00   0.0  0
+ B28  CONST_37  HAS   CAS  CAQ  CAX   180.00   0.0  0
+ B28  CONST_38  HAT   CAT  CAZ  CAY     0.00   0.0  0
+ B28  CONST_39  HAO   CAO  CAZ  CAY     0.00   0.0  0
+ B28  CONST_40  HAK   CAK  CAO  CAZ   180.00   0.0  0
+ B28  CONST_41  HAL   CAL  CAV  CAT   180.00   0.0  0
+ B28  Var_01    CBA   CAU  CAV  CAT    73.00  30.0  2
+ B28  Var_02    OAC   CBA  CAU  CAV    40.60  30.0  3
+ B28  Var_03    OAF   PBC  CBA  CAU   -51.74  30.0  3
+ B28  Var_04    OAE   PBB  CBA  CAU    95.67  30.0  3
+ B28  Var_05    CAP   CAX  CAW  CAM    35.41  30.0  2
+ B28  Var_06    CAQ   CAX  CAW  CAM  -145.08  30.0  2
+ B28  Var_07    CAP   CAX  CAW  CAN  -144.22  30.0  2
+ B28  Var_08    CAQ   CAX  CAW  CAN    35.29  30.0  2
+ B28  Var_09    CAT   CAZ  CAY  CAS   145.65  30.0  2
+ B28  Var_10    CAO   CAZ  CAY  CAS   -37.86  30.0  2
+ B28  Var_11    CAT   CAZ  CAY  CAR   -35.51  30.0  2
+ B28  Var_12    CAO   CAZ  CAY  CAR   140.97  30.0  2
+ B28  Var_13    HOAC  OAC  CBA  CAU   -98.71  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

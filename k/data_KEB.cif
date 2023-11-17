@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KEB  KEB  (3~{S},6~{S})-3-[(3,5-dimethyl-4-oxidanyl-phenyl)methyl]-6-[(4-hydroxyphenyl)methyl]piperazine-2,5-dione  ligand  48  26  .  2022-03-22  2022-07-25
+ KEB  KEB  (3~{S},6~{S})-3-[(3,5-dimethyl-4-oxidanyl-phenyl)methyl]-6-[(4-hydroxyphenyl)methyl]piperazine-2,5-dione  ligand  48  26  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KEB
@@ -249,46 +250,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KEB  CONST_01  C22  C04  C03  C02    0.00   0.0  0
- KEB  CONST_02  C22  C23  C25  C02    0.00   0.0  0
- KEB  CONST_03  C23  C22  C04  C03    0.00   0.0  0
- KEB  CONST_04  C23  C25  C02  C03    0.00   0.0  0
- KEB  CONST_05  C25  C02  C03  C04    0.00   0.0  0
- KEB  CONST_06  C25  C23  C22  C04    0.00   0.0  0
- KEB  CONST_07  C15  C17  C18  C12    0.00   0.0  0
- KEB  CONST_08  C15  C14  C13  C12    0.00   0.0  0
- KEB  CONST_09  C17  C18  C12  C13    0.00   0.0  0
- KEB  CONST_10  C17  C15  C14  C13    0.00   0.0  0
- KEB  CONST_11  C18  C12  C13  C14    0.00   0.0  0
- KEB  CONST_12  C18  C17  C15  C14    0.00   0.0  0
- KEB  CONST_13  C10  C08  N07  C06    0.00   0.0  0
- KEB  CONST_14  C10  N19  C20  C06    0.00   0.0  0
- KEB  CONST_15  C04  C03  C02  C01  180.00   0.0  0
- KEB  CONST_16  C23  C25  C02  C01  180.00   0.0  0
- KEB  CONST_17  C05  C04  C03  C02  180.00   0.0  0
- KEB  CONST_18  C24  C23  C25  C02  180.00   0.0  0
- KEB  CONST_19  O26  C25  C02  C03  180.00   0.0  0
- KEB  CONST_20  C24  C23  C22  C04  180.00   0.0  0
- KEB  CONST_21  C23  C22  C04  C05  180.00   0.0  0
- KEB  CONST_22  C17  C18  C12  C11  180.00   0.0  0
- KEB  CONST_23  C14  C13  C12  C11  180.00   0.0  0
- KEB  CONST_24  O16  C15  C14  C13  180.00   0.0  0
- KEB  CONST_25  O16  C15  C17  C18  180.00   0.0  0
- KEB  CONST_26  O26  C25  C23  C22  180.00   0.0  0
- KEB  CONST_27  O09  C08  N07  C06  180.00   0.0  0
- KEB  CONST_28  O21  C20  N19  C10  180.00   0.0  0
- KEB  CONST_29  H15  C22  C04  C03  180.00   0.0  0
- KEB  CONST_30  H13  C17  C18  C12  180.00   0.0  0
- KEB  CONST_31  H12  C14  C13  C12  180.00   0.0  0
- KEB  CONST_32  H14  C18  C12  C13  180.00   0.0  0
- KEB  CONST_33  H11  C13  C14  C15  180.00   0.0  0
- KEB  CONST_34  H4   C03  C04  C22  180.00   0.0  0
- KEB  CONST_35  H20  N19  C20  C06  180.00   0.0  0
- KEB  CONST_36  H19  N07  C08  C10  180.00   0.0  0
- KEB  Var_01    C06  C05  C04  C03   92.58  30.0  2
- KEB  Var_02    C18  C12  C11  C10   94.70  30.0  2
- KEB  Var_03    H1   C01  C02  C03  119.15  30.0  2
- KEB  Var_04    H16  C24  C23  C22  118.93  30.0  2
+ KEB  CONST_01  C22  C04  C03  C02     0.00   0.0  0
+ KEB  CONST_02  C22  C23  C25  C02     0.00   0.0  0
+ KEB  CONST_03  C23  C22  C04  C03     0.00   0.0  0
+ KEB  CONST_04  C23  C25  C02  C03     0.00   0.0  0
+ KEB  CONST_05  C25  C02  C03  C04     0.00   0.0  0
+ KEB  CONST_06  C25  C23  C22  C04     0.00   0.0  0
+ KEB  CONST_07  C15  C17  C18  C12     0.00   0.0  0
+ KEB  CONST_08  C15  C14  C13  C12     0.00   0.0  0
+ KEB  CONST_09  C17  C18  C12  C13     0.00   0.0  0
+ KEB  CONST_10  C17  C15  C14  C13     0.00   0.0  0
+ KEB  CONST_11  C18  C12  C13  C14     0.00   0.0  0
+ KEB  CONST_12  C18  C17  C15  C14     0.00   0.0  0
+ KEB  CONST_13  C10  C08  N07  C06     0.00   0.0  0
+ KEB  CONST_14  C10  N19  C20  C06     0.00   0.0  0
+ KEB  CONST_15  C04  C03  C02  C01   180.00   0.0  0
+ KEB  CONST_16  C23  C25  C02  C01   180.00   0.0  0
+ KEB  CONST_17  C05  C04  C03  C02   180.00   0.0  0
+ KEB  CONST_18  C24  C23  C25  C02   180.00   0.0  0
+ KEB  CONST_19  O26  C25  C02  C03   180.00   0.0  0
+ KEB  CONST_20  C24  C23  C22  C04   180.00   0.0  0
+ KEB  CONST_21  C23  C22  C04  C05   180.00   0.0  0
+ KEB  CONST_22  C17  C18  C12  C11   180.00   0.0  0
+ KEB  CONST_23  C14  C13  C12  C11   180.00   0.0  0
+ KEB  CONST_24  O16  C15  C14  C13   180.00   0.0  0
+ KEB  CONST_25  O16  C15  C17  C18   180.00   0.0  0
+ KEB  CONST_26  O26  C25  C23  C22   180.00   0.0  0
+ KEB  CONST_27  O09  C08  N07  C06   180.00   0.0  0
+ KEB  CONST_28  O21  C20  N19  C10   180.00   0.0  0
+ KEB  CONST_29  H15  C22  C04  C03   180.00   0.0  0
+ KEB  CONST_30  H13  C17  C18  C12   180.00   0.0  0
+ KEB  CONST_31  H12  C14  C13  C12   180.00   0.0  0
+ KEB  CONST_32  H14  C18  C12  C13   180.00   0.0  0
+ KEB  CONST_33  H11  C13  C14  C15   180.00   0.0  0
+ KEB  CONST_34  H4   C03  C04  C22   180.00   0.0  0
+ KEB  CONST_35  H20  N19  C20  C06   180.00   0.0  0
+ KEB  CONST_36  H19  N07  C08  C10   180.00   0.0  0
+ KEB  Var_01    C06  C05  C04  C03    92.58  30.0  2
+ KEB  Var_02    C18  C12  C11  C10    94.70  30.0  2
+ KEB  Var_03    H1   C01  C02  C03   119.15  30.0  2
+ KEB  Var_04    H16  C24  C23  C22   118.93  30.0  2
+ KEB  Var_05    C20  C06  N07  C08    17.19  30.0  1
+ KEB  Var_06    C20  N19  C10  C08    16.38  30.0  1
+ KEB  Var_07    N19  C20  C06  N07   -10.03  30.0  1
+ KEB  Var_08    N19  C10  C08  N07    -9.31  30.0  1
+ KEB  Var_09    N07  C06  C05  C04    65.12  30.0  2
+ KEB  Var_10    C20  C06  C05  C04   -62.20  30.0  2
+ KEB  Var_11    C08  N07  C06  C05  -108.71  30.0  1
+ KEB  Var_12    N19  C20  C06  C05   116.53  30.0  1
+ KEB  Var_13    C12  C11  C10  C08   176.04  30.0  3
+ KEB  Var_14    N07  C08  C10  C11   116.95  30.0  1
+ KEB  Var_15    C20  N19  C10  C11  -108.85  30.0  1
+ KEB  Var_16    N19  C10  C11  C12   -57.00  30.0  2
+ KEB  Var_17    O21  C20  C06  N07   169.25  30.0  1
+ KEB  Var_18    O09  C08  C10  N19   169.78  30.0  1
+ KEB  Var_19    H7   C06  N07  C08   133.70  30.0  1
+ KEB  Var_20    H8   C10  N19  C20   132.74  30.0  1
+ KEB  Var_21    O21  C20  C06  C05   -64.19  30.0  1
+ KEB  Var_22    O09  C08  C10  C11   -63.95  30.0  1
+ KEB  Var_23    H22  O26  C25  C02   177.81  30.0  2
+ KEB  Var_24    H9   C11  C10  C08   -61.54  30.0  3
+ KEB  Var_25    H10  C11  C10  C08    54.67  30.0  3
+ KEB  Var_26    H21  O16  C15  C14     0.74  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MFX  MFX  '1-cyclopropyl-6-fluoro-8-methoxy-7-[(4aS,7aS)-octahydro-6H-pyrrolo[3,4-b]pyridin-6-yl]-4-oxo-1,4-dihydroquinoline-3-carboxylic acid'  ligand  52  29  .  2022-09-22  2023-02-15
+ MFX  MFX  '1-cyclopropyl-6-fluoro-8-methoxy-7-[(4aS,7aS)-octahydro-6H-pyrrolo[3,4-b]pyridin-6-yl]-4-oxo-1,4-dihydroquinoline-3-carboxylic acid'  ligand  52  29  .  2022-09-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_MFX
@@ -279,32 +280,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MFX  CONST_01  C14  C12  C13  C11     0.00   0.0  0
- MFX  CONST_02  C14  C17  C15  C11     0.00   0.0  0
- MFX  CONST_03  C15  C11  C13  C12     0.00   0.0  0
- MFX  CONST_04  C15  C17  C14  C12     0.00   0.0  0
- MFX  CONST_05  C17  C15  C11  C13     0.00   0.0  0
- MFX  CONST_06  C17  C14  C12  C13     0.00   0.0  0
- MFX  CONST_07  C12  C13  C11  N01   180.00   0.0  0
- MFX  CONST_08  C17  C15  C11  N01   180.00   0.0  0
- MFX  CONST_09  N01  C11  C15  F       0.00   0.0  0
- MFX  CONST_10  C13  C11  C15  F     180.00   0.0  0
- MFX  CONST_11  C14  C17  C15  F     180.00   0.0  0
- MFX  CONST_12  N01  C11  C13  O01     0.00   0.0  0
- MFX  CONST_13  C15  C11  C13  O01   180.00   0.0  0
- MFX  CONST_14  N    C12  C13  O01     0.00   0.0  0
- MFX  CONST_15  C14  C12  C13  O01   180.00   0.0  0
- MFX  CONST_16  H17  C17  C15  C11   180.00   0.0  0
- MFX  Var_01    C05  C07  C10  N02    57.83  30.0  1
- MFX  Var_02    C09  C08  C06  N     107.47  30.0  1
- MFX  Var_03    C04  N01  C03  C01    -6.67  30.0  1
- MFX  Var_04    C10  C07  C05  C01   -48.65  30.0  1
- MFX  Var_05    C07  C10  N02  C02   -65.19  30.0  1
- MFX  Var_06    C03  N01  C04  C02   -19.29  30.0  1
- MFX  Var_07    C13  C11  N01  C03    49.72  30.0  2
- MFX  Var_08    C12  N    C06  C08    69.55  30.0  1
- MFX  Var_09    C16  C18  C20  O03  -172.31  30.0  3
- MFX  Var_10    H    C    O01  C13   165.65  30.0  3
+ MFX  CONST_01  C14   C12  C13  C11     0.00   0.0  0
+ MFX  CONST_02  C14   C17  C15  C11     0.00   0.0  0
+ MFX  CONST_03  C15   C11  C13  C12     0.00   0.0  0
+ MFX  CONST_04  C15   C17  C14  C12     0.00   0.0  0
+ MFX  CONST_05  C17   C15  C11  C13     0.00   0.0  0
+ MFX  CONST_06  C17   C14  C12  C13     0.00   0.0  0
+ MFX  CONST_07  C12   C13  C11  N01   180.00   0.0  0
+ MFX  CONST_08  C17   C15  C11  N01   180.00   0.0  0
+ MFX  CONST_09  N01   C11  C15  F       0.00   0.0  0
+ MFX  CONST_10  C13   C11  C15  F     180.00   0.0  0
+ MFX  CONST_11  C14   C17  C15  F     180.00   0.0  0
+ MFX  CONST_12  N01   C11  C13  O01     0.00   0.0  0
+ MFX  CONST_13  C15   C11  C13  O01   180.00   0.0  0
+ MFX  CONST_14  N     C12  C13  O01     0.00   0.0  0
+ MFX  CONST_15  C14   C12  C13  O01   180.00   0.0  0
+ MFX  CONST_16  H17   C17  C15  C11   180.00   0.0  0
+ MFX  Var_01    C05   C07  C10  N02    57.83  30.0  1
+ MFX  Var_02    C09   C08  C06  N     107.47  30.0  1
+ MFX  Var_03    C04   N01  C03  C01    -6.67  30.0  1
+ MFX  Var_04    C10   C07  C05  C01   -48.65  30.0  1
+ MFX  Var_05    C07   C10  N02  C02   -65.19  30.0  1
+ MFX  Var_06    C03   N01  C04  C02   -19.29  30.0  1
+ MFX  Var_07    C13   C11  N01  C03    49.72  30.0  2
+ MFX  Var_08    C12   N    C06  C08    69.55  30.0  1
+ MFX  Var_09    C16   C18  C20  O03  -172.31  30.0  3
+ MFX  Var_10    H     C    O01  C13   165.65  30.0  3
+ MFX  Var_11    C02   C01  C03  N01    29.71  30.0  1
+ MFX  Var_12    C05   C01  C03  N01   153.81  30.0  1
+ MFX  Var_13    N02   C02  C04  N01   -79.87  30.0  1
+ MFX  Var_14    C01   C02  C04  N01    36.87  30.0  1
+ MFX  Var_15    C03   C01  C02  N02    76.25  30.0  1
+ MFX  Var_16    C05   C01  C02  N02   -48.75  30.0  1
+ MFX  Var_17    C19   C18  C16  N      -4.71  30.0  1
+ MFX  Var_18    C10   N02  C02  C01    59.59  30.0  1
+ MFX  Var_19    C07   C05  C01  C02    44.81  30.0  1
+ MFX  Var_20    C04   C02  C01  C03   -41.23  30.0  1
+ MFX  Var_21    C07   C05  C01  C03   -73.30  30.0  1
+ MFX  Var_22    C10   N02  C02  C04   171.07  30.0  1
+ MFX  Var_23    C05   C01  C02  C04  -166.23  30.0  1
+ MFX  Var_24    C13   C12  N    C06    17.10  30.0  1
+ MFX  Var_25    C14   C12  N    C06  -164.65  30.0  1
+ MFX  Var_26    C18   C16  N    C06   168.86  30.0  1
+ MFX  Var_27    C18   C16  N    C12    -7.90  30.0  1
+ MFX  Var_28    C18   C19  C14  C12    -7.60  30.0  1
+ MFX  Var_29    C16   N    C12  C13  -166.40  30.0  1
+ MFX  Var_30    C16   N    C12  C14    11.86  30.0  1
+ MFX  Var_31    C16   C18  C19  C14    11.70  30.0  1
+ MFX  Var_32    C18   C19  C14  C17   170.14  30.0  1
+ MFX  Var_33    C12   C14  C19  O02   173.33  30.0  1
+ MFX  Var_34    C17   C14  C19  O02    -8.93  30.0  1
+ MFX  Var_35    C16   C18  C19  O02  -169.30  30.0  1
+ MFX  Var_36    C20   C18  C16  N     177.63  30.0  1
+ MFX  Var_37    C20   C18  C19  C14  -170.83  30.0  1
+ MFX  Var_38    H01   C01  C03  N01   -83.93  30.0  1
+ MFX  Var_39    H02   C02  C04  N01   154.53  30.0  1
+ MFX  Var_40    H04   C04  C02  N02   159.44  30.0  1
+ MFX  Var_41    H04A  C04  C02  N02    40.08  30.0  1
+ MFX  Var_42    H09   C09  C06  N      -3.28  30.0  1
+ MFX  Var_43    H09A  C09  C06  N     140.74  30.0  1
+ MFX  Var_44    HN02  N02  C02  C01  -177.72  30.0  1
+ MFX  Var_45    H03   C03  C01  C02   -91.38  30.0  1
+ MFX  Var_46    H03A  C03  C01  C02   149.42  30.0  1
+ MFX  Var_47    H05   C05  C01  C02   168.81  30.0  1
+ MFX  Var_48    H05A  C05  C01  C02   -75.67  30.0  1
+ MFX  Var_49    H16   C16  N    C06   -10.49  30.0  1
+ MFX  Var_50    H06   C06  C09  C08   107.99  30.0  1
+ MFX  Var_51    C20   C18  C19  O02     8.17  30.0  1
+ MFX  Var_52    C     O01  C13  C11    65.02  30.0  3
+ MFX  Var_53    C     O01  C13  C12  -118.14  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PYW  PYW  N-[(2Z,5R,6S,9S,10S,11R)-2-(butan-2-ylidene)-10-hydroxy-5,11-dimethyl-3,7,12-trioxo-9-(pyridin-3-ylmethyl)-1,4-dioxa-8-azacyclododecan-6-yl]-3-hydroxypyridine-2-carboxamide  ligand  71  39  .  2022-03-23  2022-03-23
+ PYW  PYW  N-[(2Z,5R,6S,9S,10S,11R)-2-(butan-2-ylidene)-10-hydroxy-5,11-dimethyl-3,7,12-trioxo-9-(pyridin-3-ylmethyl)-1,4-dioxa-8-azacyclododecan-6-yl]-3-hydroxypyridine-2-carboxamide  ligand  71  39  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PYW
@@ -335,45 +336,91 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PYW  CONST_01  NAT   CAM  CAK  CAO    0.00   0.0  0
- PYW  CONST_02  NAT   CAQ  CBF  CAO    0.00   0.0  0
- PYW  CONST_03  CAQ   CBF  CAO  CAK    0.00   0.0  0
- PYW  CONST_04  CAQ   NAT  CAM  CAK    0.00   0.0  0
- PYW  CONST_05  CBF   CAO  CAK  CAM    0.00   0.0  0
- PYW  CONST_06  CBF   CAQ  NAT  CAM    0.00   0.0  0
- PYW  CONST_07  CAL   CAN  NAU  CBH    0.00   0.0  0
- PYW  CONST_08  CAL   CAP  CBG  CBH    0.00   0.0  0
- PYW  CONST_09  CAP   CBG  CBH  NAU    0.00   0.0  0
- PYW  CONST_10  CAP   CAL  CAN  NAU    0.00   0.0  0
- PYW  CONST_11  CBG   CBH  NAU  CAN    0.00   0.0  0
- PYW  CONST_12  CBG   CAP  CAL  CAN    0.00   0.0  0
- PYW  CONST_13  CA    C    NAV  CBL  180.00   0.0  0
- PYW  CONST_14  CAS   CBF  CAO  CAK  180.00   0.0  0
- PYW  CONST_15  CAS   CBF  CAQ  NAT  180.00   0.0  0
- PYW  CONST_16  CAN   NAU  CBH  CBB  180.00   0.0  0
- PYW  CONST_17  CAP   CBG  CBH  CBB  180.00   0.0  0
- PYW  CONST_18  OAI   CBG  CBH  NAU  180.00   0.0  0
- PYW  CONST_19  OAI   CBG  CAP  CAL  180.00   0.0  0
- PYW  CONST_20  O     C    NAV  CBL    0.00   0.0  0
- PYW  CONST_21  HAM   CAM  CAK  CAO  180.00   0.0  0
- PYW  CONST_22  HAQ   CAQ  CBF  CAO  180.00   0.0  0
- PYW  CONST_23  HAO   CAO  CAK  CAM  180.00   0.0  0
- PYW  CONST_24  HAK   CAK  CAM  NAT  180.00   0.0  0
- PYW  CONST_25  HAN   CAN  NAU  CBH  180.00   0.0  0
- PYW  CONST_26  HAP   CAP  CBG  CBH  180.00   0.0  0
- PYW  CONST_27  HAL   CAL  CAN  NAU  180.00   0.0  0
- PYW  CONST_28  HAV   NAV  C    CA     0.00   0.0  0
- PYW  CONST_29  CBH   CBB  N    CA   180.00   0.0  0
- PYW  CONST_30  OAF   CBB  N    CA     0.00   0.0  0
- PYW  CONST_31  H     N    CBB  CBH    0.00   0.0  0
- PYW  Var_01    CBA   CBE  OAX  CBD  -65.22  30.0  1
- PYW  Var_02    OG1   CBA  CBE  OAX  -12.58  30.0  1
- PYW  Var_03    CBL   CAS  CBF  CAO   67.78  30.0  2
- PYW  Var_04    CAB   CAZ  CBE  OAX  173.05   0.0  2
- PYW  Var_05    NAU   CBH  CBB  N      1.54  30.0  2
- PYW  Var_06    CAA   CAR  CAZ  CBE   90.86  30.0  3
- PYW  Var_07    HAB1  CAB  CAZ  CBE   90.62  30.0  3
- PYW  Var_08    HAA1  CAA  CAR  CAZ  -65.16  30.0  3
+ PYW  CONST_01  NAT   CAM  CAK  CAO     0.00   0.0  0
+ PYW  CONST_02  NAT   CAQ  CBF  CAO     0.00   0.0  0
+ PYW  CONST_03  CAQ   CBF  CAO  CAK     0.00   0.0  0
+ PYW  CONST_04  CAQ   NAT  CAM  CAK     0.00   0.0  0
+ PYW  CONST_05  CBF   CAO  CAK  CAM     0.00   0.0  0
+ PYW  CONST_06  CBF   CAQ  NAT  CAM     0.00   0.0  0
+ PYW  CONST_07  CAL   CAN  NAU  CBH     0.00   0.0  0
+ PYW  CONST_08  CAL   CAP  CBG  CBH     0.00   0.0  0
+ PYW  CONST_09  CAP   CBG  CBH  NAU     0.00   0.0  0
+ PYW  CONST_10  CAP   CAL  CAN  NAU     0.00   0.0  0
+ PYW  CONST_11  CBG   CBH  NAU  CAN     0.00   0.0  0
+ PYW  CONST_12  CBG   CAP  CAL  CAN     0.00   0.0  0
+ PYW  CONST_13  CA    C    NAV  CBL   180.00   0.0  0
+ PYW  CONST_14  CAS   CBF  CAO  CAK   180.00   0.0  0
+ PYW  CONST_15  CAS   CBF  CAQ  NAT   180.00   0.0  0
+ PYW  CONST_16  CAN   NAU  CBH  CBB   180.00   0.0  0
+ PYW  CONST_17  CAP   CBG  CBH  CBB   180.00   0.0  0
+ PYW  CONST_18  OAI   CBG  CBH  NAU   180.00   0.0  0
+ PYW  CONST_19  OAI   CBG  CAP  CAL   180.00   0.0  0
+ PYW  CONST_20  O     C    NAV  CBL     0.00   0.0  0
+ PYW  CONST_21  HAM   CAM  CAK  CAO   180.00   0.0  0
+ PYW  CONST_22  HAQ   CAQ  CBF  CAO   180.00   0.0  0
+ PYW  CONST_23  HAO   CAO  CAK  CAM   180.00   0.0  0
+ PYW  CONST_24  HAK   CAK  CAM  NAT   180.00   0.0  0
+ PYW  CONST_25  HAN   CAN  NAU  CBH   180.00   0.0  0
+ PYW  CONST_26  HAP   CAP  CBG  CBH   180.00   0.0  0
+ PYW  CONST_27  HAL   CAL  CAN  NAU   180.00   0.0  0
+ PYW  CONST_28  HAV   NAV  C    CA      0.00   0.0  0
+ PYW  CONST_29  CBH   CBB  N    CA    180.00   0.0  0
+ PYW  CONST_30  OAF   CBB  N    CA      0.00   0.0  0
+ PYW  CONST_31  H     N    CBB  CBH     0.00   0.0  0
+ PYW  Var_01    CBA   CBE  OAX  CBD   -65.22  30.0  1
+ PYW  Var_02    OG1   CBA  CBE  OAX   -12.58  30.0  1
+ PYW  Var_03    CBL   CAS  CBF  CAO    67.78  30.0  2
+ PYW  Var_04    CAB   CAZ  CBE  OAX   173.05   0.0  2
+ PYW  Var_05    NAU   CBH  CBB  N       1.54  30.0  2
+ PYW  Var_06    CAA   CAR  CAZ  CBE    90.86  30.0  3
+ PYW  Var_07    HAB1  CAB  CAZ  CBE    90.62  30.0  3
+ PYW  Var_08    HAA1  CAA  CAR  CAZ   -65.16  30.0  3
+ PYW  Var_09    CBD   CBJ  CBK  CBL    79.29  30.0  3
+ PYW  Var_10    CBJ   CBK  CBL  NAV   -61.07  30.0  3
+ PYW  Var_11    CB    CA   C    NAV    78.84  30.0  3
+ PYW  Var_12    CBK   CBL  NAV  C     100.38  30.0  3
+ PYW  Var_13    OG1   CB   CA   C      32.99  30.0  3
+ PYW  Var_14    OAX   CBD  CBJ  CBK  -143.86  30.0  3
+ PYW  Var_15    CBE   OAX  CBD  CBJ  -175.67  30.0  3
+ PYW  Var_16    CB    OG1  CBA  CBE   165.79  30.0  3
+ PYW  Var_17    CA    CB   OG1  CBA   168.94  30.0  3
+ PYW  Var_18    NAV   CBL  CAS  CBF  -152.66  30.0  3
+ PYW  Var_19    CBK   CBL  CAS  CBF    74.25  30.0  3
+ PYW  Var_20    C     NAV  CBL  CAS   -35.30  30.0  3
+ PYW  Var_21    CBJ   CBK  CBL  CAS    72.52  30.0  3
+ PYW  Var_22    CAD   CBJ  CBK  CBL   -57.20  30.0  3
+ PYW  Var_23    OAJ   CBK  CBL  NAV   174.66  30.0  3
+ PYW  Var_24    N     CA   C    NAV   -45.75  30.0  3
+ PYW  Var_25    CG2   CB   CA   C     -87.78  30.0  3
+ PYW  Var_26    CB    CA   C    O     -99.87  30.0  3
+ PYW  Var_27    OAH   CBD  CBJ  CBK    41.19  30.0  3
+ PYW  Var_28    CBD   CBJ  CBK  OAJ  -158.60  30.0  3
+ PYW  Var_29    OAX   CBD  CBJ  CAD    -7.01  30.0  3
+ PYW  Var_30    CBE   OAX  CBD  OAH    -0.58  30.0  3
+ PYW  Var_31    CG2   CB   OG1  CBA   -67.10  30.0  3
+ PYW  Var_32    CB    OG1  CBA  OAE   -14.20  30.0  3
+ PYW  Var_33    N     CA   CB   OG1   158.62  30.0  3
+ PYW  Var_34    HBJ   CBJ  CBK  CBL  -173.05  30.0  3
+ PYW  Var_35    HBK   CBK  CBL  NAV    58.35  30.0  3
+ PYW  Var_36    HA    CA   C    NAV  -165.18  30.0  3
+ PYW  Var_37    HBL   CBL  NAV  C    -148.98  30.0  3
+ PYW  Var_38    HB    CB   CA   C     149.15  30.0  3
+ PYW  Var_39    OAJ   CBK  CBL  CAS   -51.76  30.0  3
+ PYW  Var_40    CBB   N    CA   C     -56.14  30.0  3
+ PYW  Var_41    N     CA   C    O     135.54  30.0  3
+ PYW  Var_42    CAD   CBJ  CBK  OAJ    64.91  30.0  3
+ PYW  Var_43    OAH   CBD  CBJ  CAD   178.05  30.0  3
+ PYW  Var_44    CBB   N    CA   CB    179.18  30.0  3
+ PYW  Var_45    N     CA   CB   CG2    37.85  30.0  3
+ PYW  Var_46    HAJ   OAJ  CBK  CBL  -165.74  30.0  3
+ PYW  Var_47    H     N    CA   C     128.41  30.0  3
+ PYW  Var_48    HAD1  CAD  CBJ  CBK    75.48  30.0  3
+ PYW  Var_49    HAD2  CAD  CBJ  CBK  -163.26  30.0  3
+ PYW  Var_50    HAD3  CAD  CBJ  CBK   -45.36  30.0  3
+ PYW  Var_51    HG21  CG2  CB   OG1    55.97  30.0  3
+ PYW  Var_52    HG22  CG2  CB   OG1   172.63  30.0  3
+ PYW  Var_53    HG23  CG2  CB   OG1   -65.05  30.0  3
+ PYW  Var_54    HAI   OAI  CBG  CBH    -0.45  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

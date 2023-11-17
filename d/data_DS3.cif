@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DS3  DS3  '5-{4-[3-(4-{[(2R)-2-hydroxy-3,3-dimethylbutyl]oxy}-3-methylphenyl)pentan-3-yl]-2-methylphenoxy}pentanoic acid'  ligand  78  35  .  2021-08-08  2021-08-08  
+ DS3  DS3  '5-{4-[3-(4-{[(2R)-2-hydroxy-3,3-dimethylbutyl]oxy}-3-methylphenyl)pentan-3-yl]-2-methylphenoxy}pentanoic acid'  ligand  78  35  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DS3
@@ -366,53 +367,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DS3  CONST_01  C4   C3   C2   C1      0.00   0.0  0
- DS3  CONST_02  C4   C5   C6   C1      0.00   0.0  0
- DS3  CONST_03  C5   C6   C1   C2      0.00   0.0  0
- DS3  CONST_04  C5   C4   C3   C2      0.00   0.0  0
- DS3  CONST_05  C6   C1   C2   C3      0.00   0.0  0
- DS3  CONST_06  C6   C5   C4   C3      0.00   0.0  0
- DS3  CONST_07  C28  C27  C26  C11     0.00   0.0  0
- DS3  CONST_08  C28  C29  C30  C11     0.00   0.0  0
- DS3  CONST_09  C29  C30  C11  C26     0.00   0.0  0
- DS3  CONST_10  C29  C28  C27  C26     0.00   0.0  0
- DS3  CONST_11  C30  C11  C26  C27     0.00   0.0  0
- DS3  CONST_12  C30  C29  C28  C27     0.00   0.0  0
- DS3  CONST_13  C10  C4   C3   C2    180.00   0.0  0
- DS3  CONST_14  O62  C1   C2   C3    180.00   0.0  0
- DS3  CONST_15  C34  C2   C3   C4    180.00   0.0  0
- DS3  CONST_16  O62  C1   C6   C5    180.00   0.0  0
- DS3  CONST_17  C34  C2   C1   C6    180.00   0.0  0
- DS3  CONST_18  C10  C4   C5   C6    180.00   0.0  0
- DS3  CONST_19  C27  C26  C11  C10   180.00   0.0  0
- DS3  CONST_20  C29  C30  C11  C10   180.00   0.0  0
- DS3  CONST_21  C38  C27  C26  C11   180.00   0.0  0
- DS3  CONST_22  O42  C28  C27  C26   180.00   0.0  0
- DS3  CONST_23  C38  C27  C28  C29   180.00   0.0  0
- DS3  CONST_24  O42  C28  C29  C30   180.00   0.0  0
- DS3  CONST_25  H3   C3   C2   C1    180.00   0.0  0
- DS3  CONST_26  H5   C5   C6   C1    180.00   0.0  0
- DS3  CONST_27  H6   C6   C1   C2    180.00   0.0  0
- DS3  CONST_28  H29  C29  C30  C11   180.00   0.0  0
- DS3  CONST_29  H30  C30  C11  C26   180.00   0.0  0
- DS3  CONST_30  H26  C26  C27  C28   180.00   0.0  0
- DS3  Var_01    C11  C10  C4   C3     38.47  30.0  2
- DS3  Var_02    C26  C11  C10  C4     37.94  30.0  2
- DS3  Var_03    H34  C34  C2   C1     59.69  30.0  2
- DS3  Var_04    H38  C38  C27  C26   119.55  30.0  2
- DS3  Var_05    C64  C63  O62  C1    179.39  30.0  3
- DS3  Var_06    C20  C12  C10  C4    -62.93  30.0  3
- DS3  Var_07    C14  C13  C10  C4     61.77  30.0  3
- DS3  Var_08    C44  C43  O42  C28   178.88  30.0  3
- DS3  Var_09    C65  C66  C67  O1     -2.66  30.0  2
- DS3  Var_10    C65  C64  C63  O62   179.45  30.0  3
- DS3  Var_11    C66  C65  C64  C63   179.11  30.0  3
- DS3  Var_12    C67  C66  C65  C64  -179.44  30.0  3
- DS3  Var_13    H20  C20  C12  C10   -68.66  30.0  3
- DS3  Var_14    H14  C14  C13  C10   -64.50  30.0  3
- DS3  Var_15    H50  C50  C48  C44    59.28  30.0  3
- DS3  Var_16    H54  C54  C48  C44    58.04  30.0  3
- DS3  Var_17    H58  C58  C48  C44    69.11  30.0  3
+ DS3  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ DS3  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ DS3  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ DS3  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ DS3  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ DS3  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ DS3  CONST_07  C28   C27  C26  C11     0.00   0.0  0
+ DS3  CONST_08  C28   C29  C30  C11     0.00   0.0  0
+ DS3  CONST_09  C29   C30  C11  C26     0.00   0.0  0
+ DS3  CONST_10  C29   C28  C27  C26     0.00   0.0  0
+ DS3  CONST_11  C30   C11  C26  C27     0.00   0.0  0
+ DS3  CONST_12  C30   C29  C28  C27     0.00   0.0  0
+ DS3  CONST_13  C10   C4   C3   C2    180.00   0.0  0
+ DS3  CONST_14  O62   C1   C2   C3    180.00   0.0  0
+ DS3  CONST_15  C34   C2   C3   C4    180.00   0.0  0
+ DS3  CONST_16  O62   C1   C6   C5    180.00   0.0  0
+ DS3  CONST_17  C34   C2   C1   C6    180.00   0.0  0
+ DS3  CONST_18  C10   C4   C5   C6    180.00   0.0  0
+ DS3  CONST_19  C27   C26  C11  C10   180.00   0.0  0
+ DS3  CONST_20  C29   C30  C11  C10   180.00   0.0  0
+ DS3  CONST_21  C38   C27  C26  C11   180.00   0.0  0
+ DS3  CONST_22  O42   C28  C27  C26   180.00   0.0  0
+ DS3  CONST_23  C38   C27  C28  C29   180.00   0.0  0
+ DS3  CONST_24  O42   C28  C29  C30   180.00   0.0  0
+ DS3  CONST_25  H3    C3   C2   C1    180.00   0.0  0
+ DS3  CONST_26  H5    C5   C6   C1    180.00   0.0  0
+ DS3  CONST_27  H6    C6   C1   C2    180.00   0.0  0
+ DS3  CONST_28  H29   C29  C30  C11   180.00   0.0  0
+ DS3  CONST_29  H30   C30  C11  C26   180.00   0.0  0
+ DS3  CONST_30  H26   C26  C27  C28   180.00   0.0  0
+ DS3  Var_01    C11   C10  C4   C3     38.47  30.0  2
+ DS3  Var_02    C26   C11  C10  C4     37.94  30.0  2
+ DS3  Var_03    H34   C34  C2   C1     59.69  30.0  2
+ DS3  Var_04    H38   C38  C27  C26   119.55  30.0  2
+ DS3  Var_05    C64   C63  O62  C1    179.39  30.0  3
+ DS3  Var_06    C20   C12  C10  C4    -62.93  30.0  3
+ DS3  Var_07    C14   C13  C10  C4     61.77  30.0  3
+ DS3  Var_08    C44   C43  O42  C28   178.88  30.0  3
+ DS3  Var_09    C65   C66  C67  O1     -2.66  30.0  2
+ DS3  Var_10    C65   C64  C63  O62   179.45  30.0  3
+ DS3  Var_11    C66   C65  C64  C63   179.11  30.0  3
+ DS3  Var_12    C67   C66  C65  C64  -179.44  30.0  3
+ DS3  Var_13    H20   C20  C12  C10   -68.66  30.0  3
+ DS3  Var_14    H14   C14  C13  C10   -64.50  30.0  3
+ DS3  Var_15    H50   C50  C48  C44    59.28  30.0  3
+ DS3  Var_16    H54   C54  C48  C44    58.04  30.0  3
+ DS3  Var_17    H58   C58  C48  C44    69.11  30.0  3
+ DS3  Var_18    C63   O62  C1   C2    179.48  30.0  2
+ DS3  Var_19    C63   O62  C1   C6     -0.58  30.0  2
+ DS3  Var_20    C43   O42  C28  C27  -179.70  30.0  2
+ DS3  Var_21    C43   O42  C28  C29     0.44  30.0  2
+ DS3  Var_22    O47   C44  C43  O42   -61.71  30.0  3
+ DS3  Var_23    C48   C44  C43  O42   170.51  30.0  3
+ DS3  Var_24    C50   C48  C44  C43    59.17  30.0  3
+ DS3  Var_25    C54   C48  C44  C43   179.81  30.0  3
+ DS3  Var_26    C58   C48  C44  C43   -62.27  30.0  3
+ DS3  Var_27    C50   C48  C44  O47   -67.29  30.0  3
+ DS3  Var_28    C54   C48  C44  O47    53.35  30.0  3
+ DS3  Var_29    C58   C48  C44  O47   171.27  30.0  3
+ DS3  Var_30    H44   C44  C43  O42    52.71  30.0  3
+ DS3  Var_31    HO47  O47  C44  C43   -63.69  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

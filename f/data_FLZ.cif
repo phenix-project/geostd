@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FLZ  FLZ  8-methyl-6-phenoxy-2-(tetrahydro-2H-pyran-4-ylamino)pyrido[2,3-d]pyrimidin-7(8H)-one  ligand  46  26  .  2021-08-09  2021-08-09  
+ FLZ  FLZ  8-methyl-6-phenoxy-2-(tetrahydro-2H-pyran-4-ylamino)pyrido[2,3-d]pyrimidin-7(8H)-one  ligand  46  26  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FLZ
@@ -245,40 +246,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FLZ  CONST_01  N1    C4   C5   C6     0.00   0.0  0
- FLZ  CONST_02  N1    C2   N3   C6     0.00   0.0  0
- FLZ  CONST_03  C2    N3   C6   C5     0.00   0.0  0
- FLZ  CONST_04  C2    N1   C4   C5     0.00   0.0  0
- FLZ  CONST_05  N3    C6   C5   C4     0.00   0.0  0
- FLZ  CONST_06  N3    C2   N1   C4     0.00   0.0  0
- FLZ  CONST_07  C17   C16  C15  C12    0.00   0.0  0
- FLZ  CONST_08  C17   C18  C19  C12    0.00   0.0  0
- FLZ  CONST_09  C18   C19  C12  C15    0.00   0.0  0
- FLZ  CONST_10  C18   C17  C16  C15    0.00   0.0  0
- FLZ  CONST_11  C19   C12  C15  C16    0.00   0.0  0
- FLZ  CONST_12  C19   C18  C17  C16    0.00   0.0  0
- FLZ  CONST_13  C9    C8   N7   C6     0.00   0.0  0
- FLZ  CONST_14  C16   C15  C12  O11  180.00   0.0  0
- FLZ  CONST_15  C18   C19  C12  O11  180.00   0.0  0
- FLZ  CONST_16  N20   C2   N3   C6   180.00   0.0  0
- FLZ  CONST_17  N20   C2   N1   C4   180.00   0.0  0
- FLZ  CONST_18  C21   N20  C2   N1     0.00   0.0  0
- FLZ  CONST_19  C21   N20  C2   N3   180.00   0.0  0
- FLZ  CONST_20  O13   C8   N7   C6   180.00   0.0  0
- FLZ  CONST_21  C14   N7   C8   C9   180.00   0.0  0
- FLZ  CONST_22  H4    C4   C5   C10    0.00   0.0  0
- FLZ  CONST_23  H16   C16  C15  C12  180.00   0.0  0
- FLZ  CONST_24  H18   C18  C19  C12  180.00   0.0  0
- FLZ  CONST_25  H19   C19  C12  C15  180.00   0.0  0
- FLZ  CONST_26  H17   C17  C16  C15  180.00   0.0  0
- FLZ  CONST_27  H15   C15  C16  C17  180.00   0.0  0
- FLZ  CONST_28  O13   C8   N7   C14    0.00   0.0  0
- FLZ  CONST_29  HN20  N20  C2   N1   180.00   0.0  0
- FLZ  Var_01    O24   C23  C22  C21  -56.35  30.0  1
- FLZ  Var_02    O24   C25  C26  C21   56.26  30.0  1
- FLZ  Var_03    C15   C12  O11  C9   160.73  30.0  2
- FLZ  Var_04    C8    C9   O11  C12  -69.14  30.0  3
- FLZ  Var_05    H14   C14  N7   C6   109.96  30.0  3
+ FLZ  CONST_01  N1    C4   C5   C6      0.00   0.0  0
+ FLZ  CONST_02  N1    C2   N3   C6      0.00   0.0  0
+ FLZ  CONST_03  C2    N3   C6   C5      0.00   0.0  0
+ FLZ  CONST_04  C2    N1   C4   C5      0.00   0.0  0
+ FLZ  CONST_05  N3    C6   C5   C4      0.00   0.0  0
+ FLZ  CONST_06  N3    C2   N1   C4      0.00   0.0  0
+ FLZ  CONST_07  C17   C16  C15  C12     0.00   0.0  0
+ FLZ  CONST_08  C17   C18  C19  C12     0.00   0.0  0
+ FLZ  CONST_09  C18   C19  C12  C15     0.00   0.0  0
+ FLZ  CONST_10  C18   C17  C16  C15     0.00   0.0  0
+ FLZ  CONST_11  C19   C12  C15  C16     0.00   0.0  0
+ FLZ  CONST_12  C19   C18  C17  C16     0.00   0.0  0
+ FLZ  CONST_13  C9    C8   N7   C6      0.00   0.0  0
+ FLZ  CONST_14  C16   C15  C12  O11   180.00   0.0  0
+ FLZ  CONST_15  C18   C19  C12  O11   180.00   0.0  0
+ FLZ  CONST_16  N20   C2   N3   C6    180.00   0.0  0
+ FLZ  CONST_17  N20   C2   N1   C4    180.00   0.0  0
+ FLZ  CONST_18  C21   N20  C2   N1      0.00   0.0  0
+ FLZ  CONST_19  C21   N20  C2   N3    180.00   0.0  0
+ FLZ  CONST_20  O13   C8   N7   C6    180.00   0.0  0
+ FLZ  CONST_21  C14   N7   C8   C9    180.00   0.0  0
+ FLZ  CONST_22  H4    C4   C5   C10     0.00   0.0  0
+ FLZ  CONST_23  H16   C16  C15  C12   180.00   0.0  0
+ FLZ  CONST_24  H18   C18  C19  C12   180.00   0.0  0
+ FLZ  CONST_25  H19   C19  C12  C15   180.00   0.0  0
+ FLZ  CONST_26  H17   C17  C16  C15   180.00   0.0  0
+ FLZ  CONST_27  H15   C15  C16  C17   180.00   0.0  0
+ FLZ  CONST_28  O13   C8   N7   C14     0.00   0.0  0
+ FLZ  CONST_29  HN20  N20  C2   N1    180.00   0.0  0
+ FLZ  Var_01    O24   C23  C22  C21   -56.35  30.0  1
+ FLZ  Var_02    O24   C25  C26  C21    56.26  30.0  1
+ FLZ  Var_03    C15   C12  O11  C9    160.73  30.0  2
+ FLZ  Var_04    C8    C9   O11  C12   -69.14  30.0  3
+ FLZ  Var_05    H14   C14  N7   C6    109.96  30.0  3
+ FLZ  Var_06    N7    C8   C9   C10    -1.76  30.0  1
+ FLZ  Var_07    C9    C10  C5   C6      1.33  30.0  1
+ FLZ  Var_08    C8    C9   C10  C5     -0.22  30.0  1
+ FLZ  Var_09    C8    N7   C6   C5     -1.75  30.0  1
+ FLZ  Var_10    C9    C10  C5   C4   -179.00  30.0  1
+ FLZ  Var_11    C25   C26  C21  C22   -52.78  30.0  1
+ FLZ  Var_12    C25   O24  C23  C22    59.89  30.0  1
+ FLZ  Var_13    N3    C6   N7   C8    178.10  30.0  1
+ FLZ  Var_14    C23   C22  C21  C26    52.69  30.0  1
+ FLZ  Var_15    C23   O24  C25  C26   -59.78  30.0  1
+ FLZ  Var_16    C5    C10  C9   O11   175.78  30.0  1
+ FLZ  Var_17    N7    C8   C9   O11  -177.95  30.0  1
+ FLZ  Var_18    O13   C8   C9   C10   178.35  30.0  1
+ FLZ  Var_19    C14   N7   C6   C5   -179.72  30.0  1
+ FLZ  Var_20    C22   C21  N20  C2    157.78  30.0  3
+ FLZ  Var_21    C26   C21  N20  C2    -79.77  30.0  3
+ FLZ  Var_22    C14   N7   C6   N3      0.12  30.0  1
+ FLZ  Var_23    C23   C22  C21  N20   177.03  30.0  1
+ FLZ  Var_24    C25   C26  C21  N20  -175.42  30.0  1
+ FLZ  Var_25    H10   C10  C5   C6   -179.65  30.0  1
+ FLZ  Var_26    H26   C26  C21  C22    68.21  30.0  1
+ FLZ  Var_27    H26A  C26  C21  C22  -173.57  30.0  1
+ FLZ  Var_28    H22   C22  C21  C26   173.32  30.0  1
+ FLZ  Var_29    H22A  C22  C21  C26   -68.27  30.0  1
+ FLZ  Var_30    H21   C21  C26  C25    65.14  30.0  1
+ FLZ  Var_31    O13   C8   C9   O11     2.16  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

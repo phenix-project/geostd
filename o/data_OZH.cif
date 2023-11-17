@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OZH  OZH  '(2~{S})-4-methyl-2-[2-[[oxidanyl-[(1~{S})-2-phenyl-1-(phenylmethoxycarbonylamino)ethyl]phosphoryl]amino]ethanoylamino]pentanoic acid'  ligand  65  35  .  2022-03-23  2022-03-23
+ OZH  OZH  '(2~{S})-4-methyl-2-[2-[[oxidanyl-[(1~{S})-2-phenyl-1-(phenylmethoxycarbonylamino)ethyl]phosphoryl]amino]ethanoylamino]pentanoic acid'  ligand  65  35  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OZH
@@ -311,44 +312,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OZH  CONST_01  C12  C13  C14  C9     0.00   0.0  0
- OZH  CONST_02  C12  C11  C10  C9     0.00   0.0  0
- OZH  CONST_03  C14  C9   C10  C11    0.00   0.0  0
- OZH  CONST_04  C14  C13  C12  C11    0.00   0.0  0
- OZH  CONST_05  C13  C14  C9   C10    0.00   0.0  0
- OZH  CONST_06  C13  C12  C11  C10    0.00   0.0  0
- OZH  CONST_07  C20  C19  C18  C17    0.00   0.0  0
- OZH  CONST_08  C20  C21  C22  C17    0.00   0.0  0
- OZH  CONST_09  C21  C22  C17  C18    0.00   0.0  0
- OZH  CONST_10  C21  C20  C19  C18    0.00   0.0  0
- OZH  CONST_11  C22  C17  C18  C19    0.00   0.0  0
- OZH  CONST_12  C22  C21  C20  C19    0.00   0.0  0
- OZH  CONST_13  C13  C14  C9   C8   180.00   0.0  0
- OZH  CONST_14  C11  C10  C9   C8   180.00   0.0  0
- OZH  CONST_15  C19  C18  C17  C16  180.00   0.0  0
- OZH  CONST_16  C21  C22  C17  C16  180.00   0.0  0
- OZH  CONST_17  H24  C13  C14  C9   180.00   0.0  0
- OZH  CONST_18  H17  C11  C10  C9   180.00   0.0  0
- OZH  CONST_19  H23  C14  C9   C10  180.00   0.0  0
- OZH  CONST_20  H19  C12  C11  C10  180.00   0.0  0
- OZH  CONST_21  H18  C10  C11  C12  180.00   0.0  0
- OZH  CONST_22  H25  C19  C18  C17  180.00   0.0  0
- OZH  CONST_23  H27  C21  C22  C17  180.00   0.0  0
- OZH  CONST_24  H29  C22  C17  C18  180.00   0.0  0
- OZH  CONST_25  H26  C20  C19  C18  180.00   0.0  0
- OZH  CONST_26  H20  C18  C19  C20  180.00   0.0  0
- OZH  CONST_27  C4   N    C5   C6   180.00   0.0  0
- OZH  CONST_28  O    C5   N    C4     0.00   0.0  0
- OZH  CONST_29  H9   N    C5   C6     0.00   0.0  0
- OZH  Var_01    C18  C17  C16  O4   102.94  30.0  2
- OZH  Var_02    C14  C9   C8   C7    88.27  30.0  2
- OZH  Var_03    C7   N2   C15  O4   167.81  30.0  1
- OZH  Var_04    C4   C3   C1   C2   169.71  30.0  2
- OZH  Var_05    C6   N1   P    C7   -94.91  30.0  2
- OZH  Var_06    N1   C6   C5   N     -0.22  30.0  3
- OZH  Var_07    P    N1   C6   C5   -98.65  30.0  3
- OZH  Var_08    H5   C    C1   C2   -56.36  30.0  3
- OZH  Var_09    H1   C2   C1   C     57.50  30.0  3
+ OZH  CONST_01  C12  C13  C14  C9      0.00   0.0  0
+ OZH  CONST_02  C12  C11  C10  C9      0.00   0.0  0
+ OZH  CONST_03  C14  C9   C10  C11     0.00   0.0  0
+ OZH  CONST_04  C14  C13  C12  C11     0.00   0.0  0
+ OZH  CONST_05  C13  C14  C9   C10     0.00   0.0  0
+ OZH  CONST_06  C13  C12  C11  C10     0.00   0.0  0
+ OZH  CONST_07  C20  C19  C18  C17     0.00   0.0  0
+ OZH  CONST_08  C20  C21  C22  C17     0.00   0.0  0
+ OZH  CONST_09  C21  C22  C17  C18     0.00   0.0  0
+ OZH  CONST_10  C21  C20  C19  C18     0.00   0.0  0
+ OZH  CONST_11  C22  C17  C18  C19     0.00   0.0  0
+ OZH  CONST_12  C22  C21  C20  C19     0.00   0.0  0
+ OZH  CONST_13  C13  C14  C9   C8    180.00   0.0  0
+ OZH  CONST_14  C11  C10  C9   C8    180.00   0.0  0
+ OZH  CONST_15  C19  C18  C17  C16   180.00   0.0  0
+ OZH  CONST_16  C21  C22  C17  C16   180.00   0.0  0
+ OZH  CONST_17  H24  C13  C14  C9    180.00   0.0  0
+ OZH  CONST_18  H17  C11  C10  C9    180.00   0.0  0
+ OZH  CONST_19  H23  C14  C9   C10   180.00   0.0  0
+ OZH  CONST_20  H19  C12  C11  C10   180.00   0.0  0
+ OZH  CONST_21  H18  C10  C11  C12   180.00   0.0  0
+ OZH  CONST_22  H25  C19  C18  C17   180.00   0.0  0
+ OZH  CONST_23  H27  C21  C22  C17   180.00   0.0  0
+ OZH  CONST_24  H29  C22  C17  C18   180.00   0.0  0
+ OZH  CONST_25  H26  C20  C19  C18   180.00   0.0  0
+ OZH  CONST_26  H20  C18  C19  C20   180.00   0.0  0
+ OZH  CONST_27  C4   N    C5   C6    180.00   0.0  0
+ OZH  CONST_28  O    C5   N    C4      0.00   0.0  0
+ OZH  CONST_29  H9   N    C5   C6      0.00   0.0  0
+ OZH  Var_01    C18  C17  C16  O4    102.94  30.0  2
+ OZH  Var_02    C14  C9   C8   C7     88.27  30.0  2
+ OZH  Var_03    C7   N2   C15  O4    167.81  30.0  1
+ OZH  Var_04    C4   C3   C1   C2    169.71  30.0  2
+ OZH  Var_05    C6   N1   P    C7    -94.91  30.0  2
+ OZH  Var_06    N1   C6   C5   N      -0.22  30.0  3
+ OZH  Var_07    P    N1   C6   C5    -98.65  30.0  3
+ OZH  Var_08    H5   C    C1   C2    -56.36  30.0  3
+ OZH  Var_09    H1   C2   C1   C      57.50  30.0  3
+ OZH  Var_10    P    C7   C8   C9    177.98  30.0  1
+ OZH  Var_11    N2   C7   C8   C9     54.78  30.0  1
+ OZH  Var_12    C15  O4   C16  C17   169.22  30.0  3
+ OZH  Var_13    H8   C7   C8   C9    -63.55  30.0  1
+ OZH  Var_14    C3   C4   C23  O5    -71.84  30.0  2
+ OZH  Var_15    N    C4   C23  O5    165.62  30.0  2
+ OZH  Var_16    C23  C4   C3   C1    176.02  30.0  2
+ OZH  Var_17    N    C4   C3   C1    -62.25  30.0  2
+ OZH  Var_18    O6   C23  C4   N     -16.19  30.0  2
+ OZH  Var_19    C23  C4   N    C5   -130.75  30.0  3
+ OZH  Var_20    C3   C4   N    C5    108.07  30.0  3
+ OZH  Var_21    O6   C23  C4   C3    106.35  30.0  2
+ OZH  Var_22    O1   P    C7   C8    175.32  30.0  2
+ OZH  Var_23    N1   P    C7   C8    -71.34  30.0  2
+ OZH  Var_24    O2   P    C7   C8     42.21  30.0  2
+ OZH  Var_25    C15  N2   C7   C8    -97.24  30.0  3
+ OZH  Var_26    O3   C15  O4   C16     3.63  30.0  2
+ OZH  Var_27    N2   C15  O4   C16  -177.78  30.0  2
+ OZH  Var_28    N2   C7   P    N1     52.64  30.0  3
+ OZH  Var_29    O1   P    C7   N2    -60.71  30.0  2
+ OZH  Var_30    O2   P    C7   N2    166.19  30.0  2
+ OZH  Var_31    C15  N2   C7   P     137.71  30.0  3
+ OZH  Var_32    H12  C4   C23  O5     47.40  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

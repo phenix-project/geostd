@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5NB  5NB  5'-amino-8-bromo-5'-deoxyadenosine  ligand  33  20  .  2021-08-04  2021-08-04  
+ 5NB  5NB  5'-amino-8-bromo-5'-deoxyadenosine  ligand  33  20  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5NB
@@ -193,36 +194,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5NB  CONST_01  C5   N7   C8   N9     0.00   0.0  0
- 5NB  CONST_02  C6   C5   C4   N9   180.00   0.0  0
- 5NB  CONST_03  N7   C5   C4   N9     0.00   0.0  0
- 5NB  CONST_04  C2   N3   C4   N9   180.00   0.0  0
- 5NB  CONST_05  C6   C5   N7   C8   180.00   0.0  0
- 5NB  CONST_06  C4   C5   N7   C8     0.00   0.0  0
- 5NB  CONST_07  C5   C4   N9   C8     0.00   0.0  0
- 5NB  CONST_08  N3   C4   N9   C8   180.00   0.0  0
- 5NB  CONST_09  N1   C6   C5   N7   180.00   0.0  0
- 5NB  CONST_10  N3   C4   C5   N7   180.00   0.0  0
- 5NB  CONST_11  C4   N9   C8   N7     0.00   0.0  0
- 5NB  CONST_12  C2   N1   C6   C5     0.00   0.0  0
- 5NB  CONST_13  C2   N3   C4   C5     0.00   0.0  0
- 5NB  CONST_14  N1   C6   C5   C4     0.00   0.0  0
- 5NB  CONST_15  N1   C2   N3   C4     0.00   0.0  0
- 5NB  CONST_16  C6   N1   C2   N3     0.00   0.0  0
- 5NB  CONST_17  C6   C5   C4   N3     0.00   0.0  0
- 5NB  CONST_18  N7   C8   N9   C1'  180.00   0.0  0
- 5NB  CONST_19  C5   C4   N9   C1'  180.00   0.0  0
- 5NB  CONST_20  N3   C4   N9   C1'    0.00   0.0  0
- 5NB  CONST_21  BR8  C8   N9   C1'    0.00   0.0  0
- 5NB  CONST_22  C5   N7   C8   BR8  180.00   0.0  0
- 5NB  CONST_23  C4   N9   C8   BR8  180.00   0.0  0
- 5NB  CONST_24  N6   C6   C5   N7     0.00   0.0  0
- 5NB  CONST_25  N6   C6   C5   C4   180.00   0.0  0
- 5NB  CONST_26  N6   C6   N1   C2   180.00   0.0  0
- 5NB  CONST_27  H12  C2   N3   C4   180.00   0.0  0
- 5NB  CONST_28  H13  N6   C6   C5   180.00   0.0  0
- 5NB  CONST_29  H14  N6   C6   C5     0.00   0.0  0
- 5NB  Var_01    H8   N5'  C5'  C4'   67.38  30.0  3
+ 5NB  CONST_01  C5   N7   C8   N9      0.00   0.0  0
+ 5NB  CONST_02  C6   C5   C4   N9    180.00   0.0  0
+ 5NB  CONST_03  N7   C5   C4   N9      0.00   0.0  0
+ 5NB  CONST_04  C2   N3   C4   N9    180.00   0.0  0
+ 5NB  CONST_05  C6   C5   N7   C8    180.00   0.0  0
+ 5NB  CONST_06  C4   C5   N7   C8      0.00   0.0  0
+ 5NB  CONST_07  C5   C4   N9   C8      0.00   0.0  0
+ 5NB  CONST_08  N3   C4   N9   C8    180.00   0.0  0
+ 5NB  CONST_09  N1   C6   C5   N7    180.00   0.0  0
+ 5NB  CONST_10  N3   C4   C5   N7    180.00   0.0  0
+ 5NB  CONST_11  C4   N9   C8   N7      0.00   0.0  0
+ 5NB  CONST_12  C2   N1   C6   C5      0.00   0.0  0
+ 5NB  CONST_13  C2   N3   C4   C5      0.00   0.0  0
+ 5NB  CONST_14  N1   C6   C5   C4      0.00   0.0  0
+ 5NB  CONST_15  N1   C2   N3   C4      0.00   0.0  0
+ 5NB  CONST_16  C6   N1   C2   N3      0.00   0.0  0
+ 5NB  CONST_17  C6   C5   C4   N3      0.00   0.0  0
+ 5NB  CONST_18  N7   C8   N9   C1'   180.00   0.0  0
+ 5NB  CONST_19  C5   C4   N9   C1'   180.00   0.0  0
+ 5NB  CONST_20  N3   C4   N9   C1'     0.00   0.0  0
+ 5NB  CONST_21  BR8  C8   N9   C1'     0.00   0.0  0
+ 5NB  CONST_22  C5   N7   C8   BR8   180.00   0.0  0
+ 5NB  CONST_23  C4   N9   C8   BR8   180.00   0.0  0
+ 5NB  CONST_24  N6   C6   C5   N7      0.00   0.0  0
+ 5NB  CONST_25  N6   C6   C5   C4    180.00   0.0  0
+ 5NB  CONST_26  N6   C6   N1   C2    180.00   0.0  0
+ 5NB  CONST_27  H12  C2   N3   C4    180.00   0.0  0
+ 5NB  CONST_28  H13  N6   C6   C5    180.00   0.0  0
+ 5NB  CONST_29  H14  N6   C6   C5      0.00   0.0  0
+ 5NB  Var_01    H8   N5'  C5'  C4'    67.38  30.0  3
+ 5NB  Var_02    C8   N9   C1'  C2'   -63.78  30.0  1
+ 5NB  Var_03    C4   N9   C1'  C2'   116.74  30.0  1
+ 5NB  Var_04    C4'  O4'  C1'  C2'   -27.35  30.0  1
+ 5NB  Var_05    O4'  C4'  C3'  C2'   -33.27  30.0  1
+ 5NB  Var_06    N9   C1'  C2'  C3'   126.92  30.0  1
+ 5NB  Var_07    O4'  C1'  C2'  C3'     5.04  30.0  1
+ 5NB  Var_08    C1'  O4'  C4'  C3'    38.34  30.0  1
+ 5NB  Var_09    C1'  C2'  C3'  C4'    16.82  30.0  1
+ 5NB  Var_10    N9   C1'  O4'  C4'  -153.61  30.0  1
+ 5NB  Var_11    C8   N9   C1'  O4'    57.71  30.0  1
+ 5NB  Var_12    C4   N9   C1'  O4'  -121.77  30.0  1
+ 5NB  Var_13    N9   C1'  C2'  O2'  -114.38  30.0  1
+ 5NB  Var_14    O4'  C1'  C2'  O2'   123.73  30.0  1
+ 5NB  Var_15    C4'  C3'  C2'  O2'  -100.44  30.0  1
+ 5NB  Var_16    C5'  C4'  C3'  C2'  -153.80  30.0  1
+ 5NB  Var_17    C1'  C2'  C3'  O3'   135.96  30.0  1
+ 5NB  Var_18    O4'  C4'  C3'  O3'  -153.84  30.0  1
+ 5NB  Var_19    C1'  O4'  C4'  C5'   161.13  30.0  1
+ 5NB  Var_20    H5   C4'  C3'  C2'    84.01  30.0  1
+ 5NB  Var_21    H11  C1'  C2'  C3'  -115.71  30.0  1
+ 5NB  Var_22    H2   C2'  C3'  C4'   136.00  30.0  1
+ 5NB  Var_23    H3   C3'  C4'  O4'    83.54  30.0  1
+ 5NB  Var_24    O3'  C3'  C2'  O2'    18.70  30.0  1
+ 5NB  Var_25    N5'  C5'  C4'  C3'  -177.49  30.0  3
+ 5NB  Var_26    C5'  C4'  C3'  O3'    85.63  30.0  1
+ 5NB  Var_27    O4'  C4'  C5'  N5'    65.58  30.0  1
+ 5NB  Var_28    H4   O3'  C3'  C2'    93.86  30.0  3
+ 5NB  Var_29    H1   O2'  C2'  C3'   -16.14  30.0  3
+ 5NB  Var_30    H6   C5'  C4'  C3'   -52.17  30.0  3
+ 5NB  Var_31    H7   C5'  C4'  C3'    62.48  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

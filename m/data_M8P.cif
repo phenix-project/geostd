@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- M8P  M8P  N-[(2Z,5R,7R,8S,9S,10R)-8,9,10-trihydroxy-7-(hydroxymethyl)-4-oxo-6-oxa-1-thia-3-azaspiro[4.5]dec-2-ylidene]naphthalene-2-carboxamide  ligand  47  29  .  2021-08-14  2021-08-14  
+ M8P  M8P  N-[(2Z,5R,7R,8S,9S,10R)-8,9,10-trihydroxy-7-(hydroxymethyl)-4-oxo-6-oxa-1-thia-3-azaspiro[4.5]dec-2-ylidene]naphthalene-2-carboxamide  ligand  47  29  .  2021-08-14  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_M8P
@@ -247,43 +248,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- M8P  CONST_01  C14  C13  C12  C11  180.00   0.0  0
- M8P  CONST_02  C16  C17  C12  C11  180.00   0.0  0
- M8P  CONST_03  C18  C17  C12  C11    0.00   0.0  0
- M8P  CONST_04  C18  C19  C10  C11    0.00   0.0  0
- M8P  CONST_05  C19  C10  C11  C12    0.00   0.0  0
- M8P  CONST_06  C15  C14  C13  C12    0.00   0.0  0
- M8P  CONST_07  C15  C16  C17  C12    0.00   0.0  0
- M8P  CONST_08  C19  C18  C17  C12    0.00   0.0  0
- M8P  CONST_09  C10  C11  C12  C13  180.00   0.0  0
- M8P  CONST_10  C16  C17  C12  C13    0.00   0.0  0
- M8P  CONST_11  C18  C17  C12  C13  180.00   0.0  0
- M8P  CONST_12  C16  C15  C14  C13    0.00   0.0  0
- M8P  CONST_13  C17  C12  C13  C14    0.00   0.0  0
- M8P  CONST_14  C17  C16  C15  C14    0.00   0.0  0
- M8P  CONST_15  C18  C17  C16  C15  180.00   0.0  0
- M8P  CONST_16  C19  C18  C17  C16  180.00   0.0  0
- M8P  CONST_17  C10  C11  C12  C17    0.00   0.0  0
- M8P  CONST_18  C10  C19  C18  C17    0.00   0.0  0
- M8P  CONST_19  C1   C7   N1   C8     0.00   0.0  0
- M8P  CONST_20  C7   N1   C8   S1     0.00   0.0  0
- M8P  CONST_21  C9   C10  C11  C12  180.00   0.0  0
- M8P  CONST_22  C9   C10  C19  C18  180.00   0.0  0
- M8P  CONST_23  C7   N1   C8   N2   180.00   0.0  0
- M8P  CONST_24  O7   C7   N1   C8   180.00   0.0  0
- M8P  CONST_25  H13  C13  C12  C11    0.00   0.0  0
- M8P  CONST_26  H19  C19  C10  C11  180.00   0.0  0
- M8P  CONST_27  H14  C14  C13  C12  180.00   0.0  0
- M8P  CONST_28  H16  C16  C17  C12  180.00   0.0  0
- M8P  CONST_29  H18  C18  C17  C12  180.00   0.0  0
- M8P  CONST_30  H11  C11  C12  C13    0.00   0.0  0
- M8P  CONST_31  H15  C15  C14  C13  180.00   0.0  0
- M8P  CONST_32  H1   N1   C8   S1   180.00   0.0  0
- M8P  CONST_33  C8   N2   C9   C10  180.00   0.0  0
- M8P  CONST_34  S1   C8   N2   C9     0.00   0.0  0
- M8P  CONST_35  N1   C8   N2   C9   180.00   0.0  0
- M8P  CONST_36  C8   N2   C9   O8     0.00   0.0  0
- M8P  Var_01    O8   C9   C10  C11   -2.48  30.0  2
+ M8P  CONST_01  C14   C13  C12  C11   180.00   0.0  0
+ M8P  CONST_02  C16   C17  C12  C11   180.00   0.0  0
+ M8P  CONST_03  C18   C17  C12  C11     0.00   0.0  0
+ M8P  CONST_04  C18   C19  C10  C11     0.00   0.0  0
+ M8P  CONST_05  C19   C10  C11  C12     0.00   0.0  0
+ M8P  CONST_06  C15   C14  C13  C12     0.00   0.0  0
+ M8P  CONST_07  C15   C16  C17  C12     0.00   0.0  0
+ M8P  CONST_08  C19   C18  C17  C12     0.00   0.0  0
+ M8P  CONST_09  C10   C11  C12  C13   180.00   0.0  0
+ M8P  CONST_10  C16   C17  C12  C13     0.00   0.0  0
+ M8P  CONST_11  C18   C17  C12  C13   180.00   0.0  0
+ M8P  CONST_12  C16   C15  C14  C13     0.00   0.0  0
+ M8P  CONST_13  C17   C12  C13  C14     0.00   0.0  0
+ M8P  CONST_14  C17   C16  C15  C14     0.00   0.0  0
+ M8P  CONST_15  C18   C17  C16  C15   180.00   0.0  0
+ M8P  CONST_16  C19   C18  C17  C16   180.00   0.0  0
+ M8P  CONST_17  C10   C11  C12  C17     0.00   0.0  0
+ M8P  CONST_18  C10   C19  C18  C17     0.00   0.0  0
+ M8P  CONST_19  C1    C7   N1   C8      0.00   0.0  0
+ M8P  CONST_20  C7    N1   C8   S1      0.00   0.0  0
+ M8P  CONST_21  C9    C10  C11  C12   180.00   0.0  0
+ M8P  CONST_22  C9    C10  C19  C18   180.00   0.0  0
+ M8P  CONST_23  C7    N1   C8   N2    180.00   0.0  0
+ M8P  CONST_24  O7    C7   N1   C8    180.00   0.0  0
+ M8P  CONST_25  H13   C13  C12  C11     0.00   0.0  0
+ M8P  CONST_26  H19   C19  C10  C11   180.00   0.0  0
+ M8P  CONST_27  H14   C14  C13  C12   180.00   0.0  0
+ M8P  CONST_28  H16   C16  C17  C12   180.00   0.0  0
+ M8P  CONST_29  H18   C18  C17  C12   180.00   0.0  0
+ M8P  CONST_30  H11   C11  C12  C13     0.00   0.0  0
+ M8P  CONST_31  H15   C15  C14  C13   180.00   0.0  0
+ M8P  CONST_32  H1    N1   C8   S1    180.00   0.0  0
+ M8P  CONST_33  C8    N2   C9   C10   180.00   0.0  0
+ M8P  CONST_34  S1    C8   N2   C9      0.00   0.0  0
+ M8P  CONST_35  N1    C8   N2   C9    180.00   0.0  0
+ M8P  CONST_36  C8    N2   C9   O8      0.00   0.0  0
+ M8P  Var_01    O8    C9   C10  C11    -2.48  30.0  2
+ M8P  Var_02    O5    C1   S1   C8   -122.34  30.0  1
+ M8P  Var_03    C2    C1   S1   C8    115.42  30.0  1
+ M8P  Var_04    C5    O5   C1   S1   -167.89  30.0  3
+ M8P  Var_05    C3    C2   C1   S1    165.11  30.0  3
+ M8P  Var_06    O5    C1   C7   N1    118.66  30.0  1
+ M8P  Var_07    C2    C1   C7   N1   -113.75  30.0  1
+ M8P  Var_08    C5    O5   C1   C7     77.30  30.0  3
+ M8P  Var_09    C3    C2   C1   C7    -79.31  30.0  3
+ M8P  Var_10    C4    C5   O5   C1     52.82  30.0  1
+ M8P  Var_11    C4    C3   C2   C1    -52.47  30.0  1
+ M8P  Var_12    C3    C2   C1   O5     47.47  30.0  3
+ M8P  Var_13    C3    C4   C5   O5    -55.47  30.0  1
+ M8P  Var_14    C2    C1   O5   C5    -48.77  30.0  3
+ M8P  Var_15    C2    C3   C4   C5     56.90  30.0  1
+ M8P  Var_16    O2    C2   C1   S1    -71.27  30.0  3
+ M8P  Var_17    O2    C2   C1   C7     44.31  30.0  3
+ M8P  Var_18    O5    C1   C7   O7    -60.00  30.0  1
+ M8P  Var_19    C2    C1   C7   O7     67.59  30.0  1
+ M8P  Var_20    C6    C5   O5   C1    174.36  30.0  1
+ M8P  Var_21    O3    C3   C2   C1   -173.58  30.0  1
+ M8P  Var_22    O2    C2   C1   O5    171.09  30.0  3
+ M8P  Var_23    O4    C4   C5   O5   -174.17  30.0  1
+ M8P  Var_24    O3    C3   C4   C5    174.45  30.0  1
+ M8P  Var_25    C3    C4   C5   C6   -173.56  30.0  1
+ M8P  Var_26    O2    C2   C3   C4   -171.69  30.0  1
+ M8P  Var_27    C2    C3   C4   O4    177.67  30.0  1
+ M8P  Var_28    H2    C2   C1   S1     47.90  30.0  3
+ M8P  Var_29    H5    C5   O5   C1    -67.89  30.0  1
+ M8P  Var_30    H3    C3   C2   C1     66.77  30.0  1
+ M8P  Var_31    H4    C4   C5   O5     63.20  30.0  1
+ M8P  Var_32    O6    C6   C5   O5     63.79  30.0  3
+ M8P  Var_33    O4    C4   C5   C6     67.74  30.0  1
+ M8P  Var_34    C4    C5   C6   O6   -175.50  30.0  3
+ M8P  Var_35    O3    C3   C4   O4    -64.78  30.0  1
+ M8P  Var_36    O2    C2   C3   O3     67.20  30.0  1
+ M8P  Var_37    HC    O2   C2   C1    176.76  30.0  3
+ M8P  Var_38    H61C  C6   C5   O5   -174.91  30.0  3
+ M8P  Var_39    H62C  C6   C5   O5    -58.85  30.0  3
+ M8P  Var_40    HA    O4   C4   C5    -93.83  30.0  3
+ M8P  Var_41    HB    O3   C3   C4     67.43  30.0  3
+ M8P  Var_42    H6    O6   C6   C5    177.41  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

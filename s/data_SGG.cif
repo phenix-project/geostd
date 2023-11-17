@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SGG  SGG  '[(2~{S})-3-[[(1~{S})-1-(3,4-dichlorophenyl)ethyl]amino]-2-oxidanyl-propyl]-(phenylmethyl)phosphinic acid'  ligand  46  25  .  2022-03-23  2022-03-23
+ SGG  SGG  '[(2~{S})-3-[[(1~{S})-1-(3,4-dichlorophenyl)ethyl]amino]-2-oxidanyl-propyl]-(phenylmethyl)phosphinic acid'  ligand  46  25  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SGG
@@ -240,37 +241,59 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SGG  CONST_01  C09  C07  C04  C13    0.00   0.0  0
- SGG  CONST_02  C09  C11  C12  C13    0.00   0.0  0
- SGG  CONST_03  C23  C22  C21  C20    0.00   0.0  0
- SGG  CONST_04  C23  C24  C25  C20    0.00   0.0  0
- SGG  CONST_05  C24  C23  C22  C21    0.00   0.0  0
- SGG  CONST_06  C24  C25  C20  C21    0.00   0.0  0
- SGG  CONST_07  C25  C20  C21  C22    0.00   0.0  0
- SGG  CONST_08  C25  C24  C23  C22    0.00   0.0  0
- SGG  CONST_09  C11  C12  C13  C04    0.00   0.0  0
- SGG  CONST_10  C11  C09  C07  C04    0.00   0.0  0
- SGG  CONST_11  C12  C13  C04  C07    0.00   0.0  0
- SGG  CONST_12  C12  C11  C09  C07    0.00   0.0  0
- SGG  CONST_13  C19  C20  C21  C22  180.00   0.0  0
- SGG  CONST_14  C19  C20  C25  C24  180.00   0.0  0
- SGG  CONST_15  C14  C09  C07  C04  180.00   0.0  0
- SGG  CONST_16  CL1  C13  C04  C07  180.00   0.0  0
- SGG  CONST_17  CL2  C04  C07  C09  180.00   0.0  0
- SGG  CONST_18  CL1  C13  C12  C11  180.00   0.0  0
- SGG  CONST_19  CL2  C04  C13  C12  180.00   0.0  0
- SGG  CONST_20  C14  C09  C11  C12  180.00   0.0  0
- SGG  CONST_21  H8   C07  C04  C13  180.00   0.0  0
- SGG  CONST_22  H9   C11  C12  C13  180.00   0.0  0
- SGG  CONST_23  H6   C22  C21  C20  180.00   0.0  0
- SGG  CONST_24  H7   C24  C25  C20  180.00   0.0  0
- SGG  CONST_25  H18  C23  C22  C21  180.00   0.0  0
- SGG  CONST_26  H19  C25  C20  C21  180.00   0.0  0
- SGG  CONST_27  H10  C12  C13  C04  180.00   0.0  0
- SGG  CONST_28  H5   C21  C22  C23  180.00   0.0  0
- SGG  Var_01    P03  C19  C20  C21   75.25  30.0  2
- SGG  Var_02    O06  P03  C19  C20  -57.91  30.0  1
- SGG  Var_03    C14  N05  C16  C17  -63.12  30.0  3
+ SGG  CONST_01  C09  C07  C04  C13     0.00   0.0  0
+ SGG  CONST_02  C09  C11  C12  C13     0.00   0.0  0
+ SGG  CONST_03  C23  C22  C21  C20     0.00   0.0  0
+ SGG  CONST_04  C23  C24  C25  C20     0.00   0.0  0
+ SGG  CONST_05  C24  C23  C22  C21     0.00   0.0  0
+ SGG  CONST_06  C24  C25  C20  C21     0.00   0.0  0
+ SGG  CONST_07  C25  C20  C21  C22     0.00   0.0  0
+ SGG  CONST_08  C25  C24  C23  C22     0.00   0.0  0
+ SGG  CONST_09  C11  C12  C13  C04     0.00   0.0  0
+ SGG  CONST_10  C11  C09  C07  C04     0.00   0.0  0
+ SGG  CONST_11  C12  C13  C04  C07     0.00   0.0  0
+ SGG  CONST_12  C12  C11  C09  C07     0.00   0.0  0
+ SGG  CONST_13  C19  C20  C21  C22   180.00   0.0  0
+ SGG  CONST_14  C19  C20  C25  C24   180.00   0.0  0
+ SGG  CONST_15  C14  C09  C07  C04   180.00   0.0  0
+ SGG  CONST_16  CL1  C13  C04  C07   180.00   0.0  0
+ SGG  CONST_17  CL2  C04  C07  C09   180.00   0.0  0
+ SGG  CONST_18  CL1  C13  C12  C11   180.00   0.0  0
+ SGG  CONST_19  CL2  C04  C13  C12   180.00   0.0  0
+ SGG  CONST_20  C14  C09  C11  C12   180.00   0.0  0
+ SGG  CONST_21  H8   C07  C04  C13   180.00   0.0  0
+ SGG  CONST_22  H9   C11  C12  C13   180.00   0.0  0
+ SGG  CONST_23  H6   C22  C21  C20   180.00   0.0  0
+ SGG  CONST_24  H7   C24  C25  C20   180.00   0.0  0
+ SGG  CONST_25  H18  C23  C22  C21   180.00   0.0  0
+ SGG  CONST_26  H19  C25  C20  C21   180.00   0.0  0
+ SGG  CONST_27  H10  C12  C13  C04   180.00   0.0  0
+ SGG  CONST_28  H5   C21  C22  C23   180.00   0.0  0
+ SGG  Var_01    P03  C19  C20  C21    75.25  30.0  2
+ SGG  Var_02    O06  P03  C19  C20   -57.91  30.0  1
+ SGG  Var_03    C14  N05  C16  C17   -63.12  30.0  3
+ SGG  Var_04    C07  C09  C14  C15    86.95  30.0  2
+ SGG  Var_05    C11  C09  C14  C15   -90.57  30.0  2
+ SGG  Var_06    N05  C14  C09  C07   -33.63  30.0  2
+ SGG  Var_07    N05  C14  C09  C11   148.84  30.0  2
+ SGG  Var_08    H11  C14  C09  C07  -157.27  30.0  2
+ SGG  Var_09    C16  N05  C14  C09   -69.18  30.0  2
+ SGG  Var_10    H20  N05  C14  C09   163.97  30.0  2
+ SGG  Var_11    H1   C15  C14  C09    57.83  30.0  3
+ SGG  Var_12    H2   C15  C14  C09   177.32  30.0  3
+ SGG  Var_13    H3   C15  C14  C09   -62.53  30.0  3
+ SGG  Var_14    C16  N05  C14  C15   169.93  30.0  2
+ SGG  Var_15    O06  P03  C18  C17   176.03  30.0  3
+ SGG  Var_16    O08  P03  C18  C17   -52.17  30.0  2
+ SGG  Var_17    C19  P03  C18  C17    62.03  30.0  3
+ SGG  Var_18    N05  C16  C17  C18  -176.11  30.0  3
+ SGG  Var_19    O10  C17  C16  N05   -55.85  30.0  1
+ SGG  Var_20    P03  C18  C17  O10    78.40  30.0  1
+ SGG  Var_21    C16  C17  C18  P03  -160.06  30.0  3
+ SGG  Var_22    H23  O10  C17  C18  -162.67  30.0  3
+ SGG  Var_23    H14  C18  P03  C19  -174.03  30.0  1
+ SGG  Var_24    H15  C18  P03  C19   -61.09  30.0  1
+ SGG  Var_25    H4   C17  C16  N05    64.95  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

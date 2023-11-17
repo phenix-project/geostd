@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GMR  GMR  3-ethyl-4-methyl-N-[2-(4-{[(cis-4-methylcyclohexyl)carbamoyl]sulfamoyl}phenyl)ethyl]-2-oxo-2,5-dihydro-1H-pyrrole-1-carboxamide  ligand  68  34  .  2021-08-10  2021-08-10  
+ GMR  GMR  3-ethyl-4-methyl-N-[2-(4-{[(cis-4-methylcyclohexyl)carbamoyl]sulfamoyl}phenyl)ethyl]-2-oxo-2,5-dihydro-1H-pyrrole-1-carboxamide  ligand  68  34  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GMR
@@ -332,51 +333,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GMR  CONST_01  C26  C33  C31  C22    0.00   0.0  0
- GMR  CONST_02  C26  C32  C30  C22    0.00   0.0  0
- GMR  CONST_03  C33  C26  C32  C30    0.00   0.0  0
- GMR  CONST_04  C33  C31  C22  C30    0.00   0.0  0
- GMR  CONST_05  C32  C26  C33  C31    0.00   0.0  0
- GMR  CONST_06  C32  C30  C22  C31    0.00   0.0  0
- GMR  CONST_07  C21  C23  N9   C19    0.00   0.0  0
- GMR  CONST_08  C33  C31  C22  S1   180.00   0.0  0
- GMR  CONST_09  C32  C30  C22  S1   180.00   0.0  0
- GMR  CONST_10  C31  C33  C26  C25  180.00   0.0  0
- GMR  CONST_11  C30  C32  C26  C25  180.00   0.0  0
- GMR  CONST_12  C19  N9   C23  O5   180.00   0.0  0
- GMR  CONST_13  C27  N9   C23  C21  180.00   0.0  0
- GMR  CONST_14  H31  C33  C31  C22  180.00   0.0  0
- GMR  CONST_15  H30  C32  C30  C22  180.00   0.0  0
- GMR  CONST_16  H29  C31  C33  C26  180.00   0.0  0
- GMR  CONST_17  H28  C30  C32  C26  180.00   0.0  0
- GMR  CONST_18  C19  N9   C27  O6     0.00   0.0  0
- GMR  CONST_19  C23  N9   C27  O6   180.00   0.0  0
- GMR  CONST_20  C27  N9   C23  O5     0.00   0.0  0
- GMR  CONST_21  C19  N9   C27  N10  180.00   0.0  0
- GMR  CONST_22  C23  N9   C27  N10    0.00   0.0  0
- GMR  CONST_23  C12  N7   C18  O2     0.00   0.0  0
- GMR  CONST_24  C12  N7   C18  N8   180.00   0.0  0
- GMR  CONST_25  C28  N10  C27  N9   180.00   0.0  0
- GMR  CONST_26  H3   N10  C27  N9     0.00   0.0  0
- GMR  CONST_27  O2   C18  N8   S1     0.00   0.0  0
- GMR  CONST_28  C28  N10  C27  O6     0.00   0.0  0
- GMR  CONST_29  N7   C18  N8   S1   180.00   0.0  0
- GMR  CONST_30  H2   N8   C18  O2   180.00   0.0  0
- GMR  CONST_31  H1   N7   C18  O2   180.00   0.0  0
- GMR  Var_01    C21  C20  C19  N9    -0.32  30.0  1
- GMR  Var_02    C20  C21  C23  N9     0.30  30.0  1
- GMR  Var_03    C12  C15  C13  C11   55.88  30.0  1
- GMR  Var_04    C12  C16  C14  C11  -54.15  30.0  1
- GMR  Var_05    C23  C21  C20  C19    0.03  30.0  1
- GMR  Var_06    C23  N9   C19  C20    0.51  30.0  1
- GMR  Var_07    C31  C22  S1   O3   149.10  30.0  2
- GMR  Var_08    C34  C24  C21  C20   97.23  30.0  3
- GMR  Var_09    C33  C26  C25  C28   97.78  30.0  2
- GMR  Var_10    H25  C29  C20  C19  -59.94  30.0  3
- GMR  Var_11    C26  C25  C28  N10  178.42  30.0  1
- GMR  Var_12    C22  S1   N8   C18   62.26  30.0  1
- GMR  Var_13    H32  C34  C24  C21  -60.98  30.0  3
- GMR  Var_14    C27  N10  C28  C25  176.31  30.0  3
+ GMR  CONST_01  C26  C33  C31  C22     0.00   0.0  0
+ GMR  CONST_02  C26  C32  C30  C22     0.00   0.0  0
+ GMR  CONST_03  C33  C26  C32  C30     0.00   0.0  0
+ GMR  CONST_04  C33  C31  C22  C30     0.00   0.0  0
+ GMR  CONST_05  C32  C26  C33  C31     0.00   0.0  0
+ GMR  CONST_06  C32  C30  C22  C31     0.00   0.0  0
+ GMR  CONST_07  C21  C23  N9   C19     0.00   0.0  0
+ GMR  CONST_08  C33  C31  C22  S1    180.00   0.0  0
+ GMR  CONST_09  C32  C30  C22  S1    180.00   0.0  0
+ GMR  CONST_10  C31  C33  C26  C25   180.00   0.0  0
+ GMR  CONST_11  C30  C32  C26  C25   180.00   0.0  0
+ GMR  CONST_12  C19  N9   C23  O5    180.00   0.0  0
+ GMR  CONST_13  C27  N9   C23  C21   180.00   0.0  0
+ GMR  CONST_14  H31  C33  C31  C22   180.00   0.0  0
+ GMR  CONST_15  H30  C32  C30  C22   180.00   0.0  0
+ GMR  CONST_16  H29  C31  C33  C26   180.00   0.0  0
+ GMR  CONST_17  H28  C30  C32  C26   180.00   0.0  0
+ GMR  CONST_18  C19  N9   C27  O6      0.00   0.0  0
+ GMR  CONST_19  C23  N9   C27  O6    180.00   0.0  0
+ GMR  CONST_20  C27  N9   C23  O5      0.00   0.0  0
+ GMR  CONST_21  C19  N9   C27  N10   180.00   0.0  0
+ GMR  CONST_22  C23  N9   C27  N10     0.00   0.0  0
+ GMR  CONST_23  C12  N7   C18  O2      0.00   0.0  0
+ GMR  CONST_24  C12  N7   C18  N8    180.00   0.0  0
+ GMR  CONST_25  C28  N10  C27  N9    180.00   0.0  0
+ GMR  CONST_26  H3   N10  C27  N9      0.00   0.0  0
+ GMR  CONST_27  O2   C18  N8   S1      0.00   0.0  0
+ GMR  CONST_28  C28  N10  C27  O6      0.00   0.0  0
+ GMR  CONST_29  N7   C18  N8   S1    180.00   0.0  0
+ GMR  CONST_30  H2   N8   C18  O2    180.00   0.0  0
+ GMR  CONST_31  H1   N7   C18  O2    180.00   0.0  0
+ GMR  Var_01    C21  C20  C19  N9     -0.32  30.0  1
+ GMR  Var_02    C20  C21  C23  N9      0.30  30.0  1
+ GMR  Var_03    C12  C15  C13  C11    55.88  30.0  1
+ GMR  Var_04    C12  C16  C14  C11   -54.15  30.0  1
+ GMR  Var_05    C23  C21  C20  C19     0.03  30.0  1
+ GMR  Var_06    C23  N9   C19  C20     0.51  30.0  1
+ GMR  Var_07    C31  C22  S1   O3    149.10  30.0  2
+ GMR  Var_08    C34  C24  C21  C20    97.23  30.0  3
+ GMR  Var_09    C33  C26  C25  C28    97.78  30.0  2
+ GMR  Var_10    H25  C29  C20  C19   -59.94  30.0  3
+ GMR  Var_11    C26  C25  C28  N10   178.42  30.0  1
+ GMR  Var_12    C22  S1   N8   C18    62.26  30.0  1
+ GMR  Var_13    H32  C34  C24  C21   -60.98  30.0  3
+ GMR  Var_14    C27  N10  C28  C25   176.31  30.0  3
+ GMR  Var_15    C16  C12  C15  C13   -53.70  30.0  1
+ GMR  Var_16    C16  C14  C11  C13    54.21  30.0  1
+ GMR  Var_17    C15  C12  C16  C14    52.94  30.0  1
+ GMR  Var_18    C15  C13  C11  C14   -55.24  30.0  1
+ GMR  Var_19    C13  C15  C12  N7     68.11  30.0  1
+ GMR  Var_20    C14  C16  C12  N7    -70.42  30.0  1
+ GMR  Var_21    C17  C11  C13  C15  -179.47  30.0  1
+ GMR  Var_22    C17  C11  C14  C16   178.62  30.0  1
+ GMR  Var_23    H5   C12  C15  C13  -173.24  30.0  1
+ GMR  Var_24    H4   C11  C13  C15    61.87  30.0  1
+ GMR  Var_25    C18  N7   C12  C15    78.53  30.0  1
+ GMR  Var_26    C18  N7   C12  C16  -158.87  30.0  1
+ GMR  Var_27    H14  C17  C11  C13  -178.32  30.0  3
+ GMR  Var_28    H15  C17  C11  C13   -57.97  30.0  3
+ GMR  Var_29    H16  C17  C11  C13    61.90  30.0  3
+ GMR  Var_30    H1   N7   C12  C15   -97.84  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

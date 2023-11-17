@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MOB  MOB  '2-[(E)-(4-hydroxy-3,5-dimethoxyphenyl)diazenyl]benzoic acid'  ligand  36  22  .  2021-08-14  2021-08-14  
+ MOB  MOB  '2-[(E)-(4-hydroxy-3,5-dimethoxyphenyl)diazenyl]benzoic acid'  ligand  36  22  .  2021-08-14  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_MOB
@@ -195,42 +196,48 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MOB  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- MOB  CONST_02  C4   C5   C6   C1     0.00   0.0  0
- MOB  CONST_03  C5   C6   C1   C2     0.00   0.0  0
- MOB  CONST_04  C5   C4   C3   C2     0.00   0.0  0
- MOB  CONST_05  C6   C1   C2   C3     0.00   0.0  0
- MOB  CONST_06  C6   C5   C4   C3     0.00   0.0  0
- MOB  CONST_07  C4'  C3'  C2'  C1'    0.00   0.0  0
- MOB  CONST_08  C4'  C5'  C6'  C1'    0.00   0.0  0
- MOB  CONST_09  C5'  C6'  C1'  C2'    0.00   0.0  0
- MOB  CONST_10  C5'  C4'  C3'  C2'    0.00   0.0  0
- MOB  CONST_11  C6'  C1'  C2'  C3'    0.00   0.0  0
- MOB  CONST_12  C6'  C5'  C4'  C3'    0.00   0.0  0
- MOB  CONST_13  N1   C1   C2   C3   180.00   0.0  0
- MOB  CONST_14  C    C2   C3   C4   180.00   0.0  0
- MOB  CONST_15  N1   C1   C6   C5   180.00   0.0  0
- MOB  CONST_16  C    C2   C1   C6   180.00   0.0  0
- MOB  CONST_17  O3'  C3'  C2'  C1'  180.00   0.0  0
- MOB  CONST_18  O5'  C5'  C6'  C1'  180.00   0.0  0
- MOB  CONST_19  O4'  C4'  C3'  C2'  180.00   0.0  0
- MOB  CONST_20  N1'  C1'  C2'  C3'  180.00   0.0  0
- MOB  CONST_21  O5'  C5'  C4'  C3'  180.00   0.0  0
- MOB  CONST_22  O3'  C3'  C4'  C5'  180.00   0.0  0
- MOB  CONST_23  N1'  C1'  C6'  C5'  180.00   0.0  0
- MOB  CONST_24  O4'  C4'  C5'  C6'  180.00   0.0  0
- MOB  CONST_25  H3   C3   C2   C1   180.00   0.0  0
- MOB  CONST_26  H5   C5   C6   C1   180.00   0.0  0
- MOB  CONST_27  H6   C6   C1   C2   180.00   0.0  0
- MOB  CONST_28  H4   C4   C3   C2   180.00   0.0  0
- MOB  CONST_29  H6'  C6'  C1'  C2'  180.00   0.0  0
- MOB  CONST_30  H2'  C2'  C3'  C4'  180.00   0.0  0
- MOB  CONST_33  N1   N1'  C1'  C2'  180.00   0.0  0
- MOB  CONST_34  N1   N1'  C1'  C6'    0.00   0.0  0
- MOB  CONST_35  HXT  OXT  C    C2   180.00   0.0  0
- MOB  Var_01    O    C    C2   C1   -35.16  30.0  2
- MOB  Var_02    H31  CHX  O3'  C3'  178.40  30.0  3
- MOB  Var_03    H51  CHZ  O5'  C5'  179.57  30.0  3
+ MOB  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ MOB  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ MOB  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ MOB  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ MOB  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ MOB  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ MOB  CONST_07  C4'   C3'  C2'  C1'     0.00   0.0  0
+ MOB  CONST_08  C4'   C5'  C6'  C1'     0.00   0.0  0
+ MOB  CONST_09  C5'   C6'  C1'  C2'     0.00   0.0  0
+ MOB  CONST_10  C5'   C4'  C3'  C2'     0.00   0.0  0
+ MOB  CONST_11  C6'   C1'  C2'  C3'     0.00   0.0  0
+ MOB  CONST_12  C6'   C5'  C4'  C3'     0.00   0.0  0
+ MOB  CONST_13  N1    C1   C2   C3    180.00   0.0  0
+ MOB  CONST_14  C     C2   C3   C4    180.00   0.0  0
+ MOB  CONST_15  N1    C1   C6   C5    180.00   0.0  0
+ MOB  CONST_16  C     C2   C1   C6    180.00   0.0  0
+ MOB  CONST_17  O3'   C3'  C2'  C1'   180.00   0.0  0
+ MOB  CONST_18  O5'   C5'  C6'  C1'   180.00   0.0  0
+ MOB  CONST_19  O4'   C4'  C3'  C2'   180.00   0.0  0
+ MOB  CONST_20  N1'   C1'  C2'  C3'   180.00   0.0  0
+ MOB  CONST_21  O5'   C5'  C4'  C3'   180.00   0.0  0
+ MOB  CONST_22  O3'   C3'  C4'  C5'   180.00   0.0  0
+ MOB  CONST_23  N1'   C1'  C6'  C5'   180.00   0.0  0
+ MOB  CONST_24  O4'   C4'  C5'  C6'   180.00   0.0  0
+ MOB  CONST_25  H3    C3   C2   C1    180.00   0.0  0
+ MOB  CONST_26  H5    C5   C6   C1    180.00   0.0  0
+ MOB  CONST_27  H6    C6   C1   C2    180.00   0.0  0
+ MOB  CONST_28  H4    C4   C3   C2    180.00   0.0  0
+ MOB  CONST_29  H6'   C6'  C1'  C2'   180.00   0.0  0
+ MOB  CONST_30  H2'   C2'  C3'  C4'   180.00   0.0  0
+ MOB  CONST_31  N1    N1'  C1'  C2'   180.00   0.0  0
+ MOB  CONST_32  N1    N1'  C1'  C6'     0.00   0.0  0
+ MOB  CONST_33  HXT   OXT  C    C2    180.00   0.0  0
+ MOB  Var_01    O     C    C2   C1    -35.16  30.0  2
+ MOB  Var_02    H31   CHX  O3'  C3'   178.40  30.0  3
+ MOB  Var_03    H51   CHZ  O5'  C5'   179.57  30.0  3
+ MOB  Var_04    C1'   N1'  N1   C1    177.73   0.0  2
+ MOB  Var_05    CHX   O3'  C3'  C2'     1.17  30.0  2
+ MOB  Var_06    CHX   O3'  C3'  C4'  -179.03  30.0  2
+ MOB  Var_07    CHZ   O5'  C5'  C4'  -177.61  30.0  2
+ MOB  Var_08    CHZ   O5'  C5'  C6'     2.35  30.0  2
+ MOB  Var_09    HO4'  O4'  C4'  C3'  -178.88  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

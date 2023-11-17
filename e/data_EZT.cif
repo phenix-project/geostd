@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EZT  EZT  (14beta,17alpha)-17-{(E)-2-[2-(trifluoromethyl)phenyl]ethenyl}estra-1(10),2,4-triene-3,17-diol  ligand  61  32  .  2021-08-08  2021-08-08  
+ EZT  EZT  (14beta,17alpha)-17-{(E)-2-[2-(trifluoromethyl)phenyl]ethenyl}estra-1(10),2,4-triene-3,17-diol  ligand  61  32  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EZT
@@ -313,38 +314,95 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EZT  CONST_01  C3   C2   C1   C10     0.00   0.0  0
- EZT  CONST_02  C3   C4   C5   C10     0.00   0.0  0
- EZT  CONST_03  C4   C5   C10  C1      0.00   0.0  0
- EZT  CONST_04  C4   C3   C2   C1      0.00   0.0  0
- EZT  CONST_05  C5   C10  C1   C2      0.00   0.0  0
- EZT  CONST_06  C5   C4   C3   C2      0.00   0.0  0
- EZT  CONST_07  C24  C23  C22  C21     0.00   0.0  0
- EZT  CONST_08  C24  C25  C26  C21     0.00   0.0  0
- EZT  CONST_09  C25  C26  C21  C22     0.00   0.0  0
- EZT  CONST_10  C25  C24  C23  C22     0.00   0.0  0
- EZT  CONST_11  C26  C21  C22  C23     0.00   0.0  0
- EZT  CONST_12  C26  C25  C24  C23     0.00   0.0  0
- EZT  CONST_13  O3   C3   C2   C1    180.00   0.0  0
- EZT  CONST_14  C5   C4   C3   O3    180.00   0.0  0
- EZT  CONST_15  C23  C22  C21  C20   180.00   0.0  0
- EZT  CONST_16  C25  C26  C21  C20   180.00   0.0  0
- EZT  CONST_17  C27  C26  C21  C22   180.00   0.0  0
- EZT  CONST_18  C27  C26  C25  C24   180.00   0.0  0
- EZT  CONST_19  H1   C1   C10  C9      0.00   0.0  0
- EZT  CONST_20  H2   C2   C1   C10   180.00   0.0  0
- EZT  CONST_21  H4   C4   C5   C10   180.00   0.0  0
- EZT  CONST_22  H23  C23  C22  C21   180.00   0.0  0
- EZT  CONST_23  H25  C25  C26  C21   180.00   0.0  0
- EZT  CONST_24  H24  C24  C23  C22   180.00   0.0  0
- EZT  CONST_25  H22  C22  C23  C24   180.00   0.0  0
- EZT  Var_01    C9   C11  C12  C13   -54.05  30.0  1
- EZT  Var_02    C7   C6   C5   C10   -14.43  30.0  1
- EZT  Var_03    C8   C7   C6   C5     45.94  30.0  1
- EZT  Var_04    C17  C16  C15  C14     6.64  30.0  1
- EZT  Var_05    C21  C20  C19  C17  -178.63   0.0  2
- EZT  Var_06    C22  C21  C20  C19    38.12  30.0  2
- EZT  Var_07    F02  C27  C26  C21   174.08  30.0  2
+ EZT  CONST_01  C3    C2   C1   C10     0.00   0.0  0
+ EZT  CONST_02  C3    C4   C5   C10     0.00   0.0  0
+ EZT  CONST_03  C4    C5   C10  C1      0.00   0.0  0
+ EZT  CONST_04  C4    C3   C2   C1      0.00   0.0  0
+ EZT  CONST_05  C5    C10  C1   C2      0.00   0.0  0
+ EZT  CONST_06  C5    C4   C3   C2      0.00   0.0  0
+ EZT  CONST_07  C24   C23  C22  C21     0.00   0.0  0
+ EZT  CONST_08  C24   C25  C26  C21     0.00   0.0  0
+ EZT  CONST_09  C25   C26  C21  C22     0.00   0.0  0
+ EZT  CONST_10  C25   C24  C23  C22     0.00   0.0  0
+ EZT  CONST_11  C26   C21  C22  C23     0.00   0.0  0
+ EZT  CONST_12  C26   C25  C24  C23     0.00   0.0  0
+ EZT  CONST_13  O3    C3   C2   C1    180.00   0.0  0
+ EZT  CONST_14  C5    C4   C3   O3    180.00   0.0  0
+ EZT  CONST_15  C23   C22  C21  C20   180.00   0.0  0
+ EZT  CONST_16  C25   C26  C21  C20   180.00   0.0  0
+ EZT  CONST_17  C27   C26  C21  C22   180.00   0.0  0
+ EZT  CONST_18  C27   C26  C25  C24   180.00   0.0  0
+ EZT  CONST_19  H1    C1   C10  C9      0.00   0.0  0
+ EZT  CONST_20  H2    C2   C1   C10   180.00   0.0  0
+ EZT  CONST_21  H4    C4   C5   C10   180.00   0.0  0
+ EZT  CONST_22  H23   C23  C22  C21   180.00   0.0  0
+ EZT  CONST_23  H25   C25  C26  C21   180.00   0.0  0
+ EZT  CONST_24  H24   C24  C23  C22   180.00   0.0  0
+ EZT  CONST_25  H22   C22  C23  C24   180.00   0.0  0
+ EZT  Var_01    C9    C11  C12  C13   -54.05  30.0  1
+ EZT  Var_02    C7    C6   C5   C10   -14.43  30.0  1
+ EZT  Var_03    C8    C7   C6   C5     45.94  30.0  1
+ EZT  Var_04    C17   C16  C15  C14     6.64  30.0  1
+ EZT  Var_05    C21   C20  C19  C17  -178.63   0.0  2
+ EZT  Var_06    C22   C21  C20  C19    38.12  30.0  2
+ EZT  Var_07    F02   C27  C26  C21   174.08  30.0  2
+ EZT  Var_08    C9    C8   C14  C13    59.04  30.0  1
+ EZT  Var_09    C7    C8   C14  C13  -179.31  30.0  1
+ EZT  Var_10    C16   C15  C14  C13   -32.47  30.0  1
+ EZT  Var_11    C15   C16  C17  C13    21.02  30.0  1
+ EZT  Var_12    C8    C14  C13  C12   -59.86  30.0  1
+ EZT  Var_13    C15   C14  C13  C12   169.37  30.0  1
+ EZT  Var_14    C16   C17  C13  C12  -158.61  30.0  1
+ EZT  Var_15    C10   C9   C11  C12  -179.33  30.0  1
+ EZT  Var_16    C8    C9   C11  C12    53.76  30.0  1
+ EZT  Var_17    C14   C13  C12  C11    55.68  30.0  1
+ EZT  Var_18    C17   C13  C12  C11   169.59  30.0  1
+ EZT  Var_19    C1    C10  C9   C11    33.33  30.0  1
+ EZT  Var_20    C5    C10  C9   C11  -148.44  30.0  1
+ EZT  Var_21    C7    C8   C9   C11  -179.35  30.0  1
+ EZT  Var_22    C14   C8   C9   C11   -54.99  30.0  1
+ EZT  Var_23    C6    C7   C8   C9    -66.03  30.0  1
+ EZT  Var_24    C15   C14  C8   C9   -178.74  30.0  1
+ EZT  Var_25    C7    C8   C9   C10    52.44  30.0  1
+ EZT  Var_26    C14   C8   C9   C10   176.81  30.0  1
+ EZT  Var_27    C8    C9   C10  C1    160.52  30.0  1
+ EZT  Var_28    C8    C9   C10  C5    -21.24  30.0  1
+ EZT  Var_29    C14   C8   C7   C6    172.61  30.0  1
+ EZT  Var_30    C15   C14  C8   C7    -57.09  30.0  1
+ EZT  Var_31    C17   C13  C14  C8    176.50  30.0  1
+ EZT  Var_32    C16   C15  C14  C8   -158.95  30.0  1
+ EZT  Var_33    C16   C17  C13  C14   -40.42  30.0  1
+ EZT  Var_34    C17   C13  C14  C15    45.73  30.0  1
+ EZT  Var_35    C11   C12  C13  C18   -66.71  30.0  1
+ EZT  Var_36    C8    C14  C13  C18    61.30  30.0  1
+ EZT  Var_37    C15   C14  C13  C18   -69.47  30.0  1
+ EZT  Var_38    C16   C17  C13  C18    77.11  30.0  1
+ EZT  Var_39    O17   C17  C13  C12    84.24  30.0  1
+ EZT  Var_40    C19   C17  C13  C12   -41.48  30.0  1
+ EZT  Var_41    O17   C17  C13  C14  -157.57  30.0  1
+ EZT  Var_42    C19   C17  C13  C14    76.71  30.0  1
+ EZT  Var_43    O17   C17  C16  C15   141.62  30.0  1
+ EZT  Var_44    C19   C17  C16  C15   -97.25  30.0  1
+ EZT  Var_45    H8    C8   C14  C13   -59.46  30.0  1
+ EZT  Var_46    H151  C15  C14  C13  -153.81  30.0  1
+ EZT  Var_47    H152  C15  C14  C13    86.98  30.0  1
+ EZT  Var_48    H161  C16  C17  C13   -99.56  30.0  1
+ EZT  Var_49    H162  C16  C17  C13   143.46  30.0  1
+ EZT  Var_50    H14   C14  C13  C12    56.05  30.0  1
+ EZT  Var_51    H9    C9   C11  C12   -61.35  30.0  1
+ EZT  Var_52    H71   C7   C8   C9    173.15  30.0  1
+ EZT  Var_53    H72   C7   C8   C9     55.46  30.0  1
+ EZT  Var_54    O17   C17  C13  C18   -40.04  30.0  1
+ EZT  Var_55    C19   C17  C13  C18  -165.76  30.0  1
+ EZT  Var_56    C20   C19  C17  C13   132.97  30.0  3
+ EZT  Var_57    C20   C19  C17  C16  -114.48  30.0  3
+ EZT  Var_58    H17   O17  C17  C13   -62.01  30.0  3
+ EZT  Var_59    H19   C19  C17  C13   -49.54  30.0  3
+ EZT  Var_60    H181  C18  C13  C12   -57.21  30.0  3
+ EZT  Var_61    H182  C18  C13  C12    61.85  30.0  3
+ EZT  Var_62    H183  C18  C13  C12  -177.93  30.0  3
+ EZT  Var_63    HO3   O3   C3   C2    179.34  30.0  2
+ EZT  Var_64    C20   C19  C17  O17     5.56  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

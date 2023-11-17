@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- F92  F92  4-[5-(2-azanylpyrimidin-4-yl)-4-(4-fluorophenyl)imidazol-1-yl]cyclohexan-1-ol  ligand  46  26  .  2022-07-25  2022-07-26
+ F92  F92  4-[5-(2-azanylpyrimidin-4-yl)-4-(4-fluorophenyl)imidazol-1-yl]cyclohexan-1-ol  ligand  46  26  .  2022-07-25  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_F92
@@ -245,50 +246,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- F92  CONST_01  CAJ  NAZ  CAW  C4   180.00   0.0  0
- F92  CONST_02  NAP  CAV  CAW  C4   180.00   0.0  0
- F92  CONST_03  CAT  CAV  CAW  C4     0.00   0.0  0
- F92  CONST_04  N1   C2   N3   C4     0.00   0.0  0
- F92  CONST_05  N1   C6   C5   C4     0.00   0.0  0
- F92  CONST_08  C2   N3   C4   C5     0.00   0.0  0
- F92  CONST_09  C2   N1   C6   C5     0.00   0.0  0
- F92  CONST_10  CAW  C4   C5   C6   180.00   0.0  0
- F92  CONST_11  N3   C4   C5   C6     0.00   0.0  0
- F92  CONST_12  N3   C2   N1   C6     0.00   0.0  0
- F92  CONST_15  CAV  NAP  CAJ  NAZ    0.00   0.0  0
- F92  CONST_16  NAP  CAV  CAW  NAZ    0.00   0.0  0
- F92  CONST_17  CAT  CAV  CAW  NAZ  180.00   0.0  0
- F92  CONST_18  CAW  CAV  NAP  CAJ    0.00   0.0  0
- F92  CONST_19  CAT  CAV  NAP  CAJ  180.00   0.0  0
- F92  CONST_20  CAV  CAW  NAZ  CAJ    0.00   0.0  0
- F92  CONST_21  CAW  NAZ  CAJ  NAP    0.00   0.0  0
- F92  CONST_24  CAG  CAI  CAT  CAV  180.00   0.0  0
- F92  CONST_25  CAF  CAH  CAT  CAV  180.00   0.0  0
- F92  CONST_26  CAR  CAG  CAI  CAT    0.00   0.0  0
- F92  CONST_27  CAR  CAF  CAH  CAT    0.00   0.0  0
- F92  CONST_29  CAG  CAI  CAT  CAH    0.00   0.0  0
- F92  CONST_30  CAG  CAR  CAF  CAH    0.00   0.0  0
- F92  CONST_31  CAI  CAT  CAH  CAF    0.00   0.0  0
- F92  CONST_32  CAI  CAG  CAR  CAF    0.00   0.0  0
- F92  CONST_34  C2   N3   C4   CAW  180.00   0.0  0
- F92  CONST_35  CAY  NAZ  CAW  C4     0.00   0.0  0
- F92  CONST_36  NAP  CAJ  NAZ  CAY  180.00   0.0  0
- F92  CONST_37  CAV  CAW  NAZ  CAY  180.00   0.0  0
- F92  CONST_38  NAA  C2   N3   C4   180.00   0.0  0
- F92  CONST_39  NAA  C2   N1   C6   180.00   0.0  0
- F92  CONST_40  FAC  CAR  CAF  CAH  180.00   0.0  0
- F92  CONST_41  CAI  CAG  CAR  FAC  180.00   0.0  0
- F92  CONST_42  H2   C6   C5   C4   180.00   0.0  0
- F92  CONST_43  H1   C5   C6   N1   180.00   0.0  0
- F92  CONST_44  H14  CAJ  NAZ  CAY    0.00   0.0  0
- F92  CONST_45  H18  CAI  CAT  CAV    0.00   0.0  0
- F92  CONST_46  H15  CAH  CAT  CAV    0.00   0.0  0
- F92  CONST_47  H17  CAG  CAI  CAT  180.00   0.0  0
- F92  CONST_48  H16  CAF  CAH  CAT  180.00   0.0  0
- F92  CONST_49  H19  NAA  C2   N1   180.00   0.0  0
- F92  CONST_50  H20  NAA  C2   N1     0.00   0.0  0
- F92  Var_01    CAY  CAM  CAK  CAX  -56.20  30.0  1
- F92  Var_02    CAY  CAN  CAL  CAX   56.65  30.0  1
+ F92  CONST_01  CAJ  NAZ  CAW  C4    180.00   0.0  0
+ F92  CONST_02  NAP  CAV  CAW  C4    180.00   0.0  0
+ F92  CONST_03  CAT  CAV  CAW  C4      0.00   0.0  0
+ F92  CONST_04  N1   C2   N3   C4      0.00   0.0  0
+ F92  CONST_05  N1   C6   C5   C4      0.00   0.0  0
+ F92  CONST_06  C2   N3   C4   C5      0.00   0.0  0
+ F92  CONST_07  C2   N1   C6   C5      0.00   0.0  0
+ F92  CONST_08  CAW  C4   C5   C6    180.00   0.0  0
+ F92  CONST_09  N3   C4   C5   C6      0.00   0.0  0
+ F92  CONST_10  N3   C2   N1   C6      0.00   0.0  0
+ F92  CONST_11  CAV  NAP  CAJ  NAZ     0.00   0.0  0
+ F92  CONST_12  NAP  CAV  CAW  NAZ     0.00   0.0  0
+ F92  CONST_13  CAT  CAV  CAW  NAZ   180.00   0.0  0
+ F92  CONST_14  CAW  CAV  NAP  CAJ     0.00   0.0  0
+ F92  CONST_15  CAT  CAV  NAP  CAJ   180.00   0.0  0
+ F92  CONST_16  CAV  CAW  NAZ  CAJ     0.00   0.0  0
+ F92  CONST_17  CAW  NAZ  CAJ  NAP     0.00   0.0  0
+ F92  CONST_18  CAG  CAI  CAT  CAV   180.00   0.0  0
+ F92  CONST_19  CAF  CAH  CAT  CAV   180.00   0.0  0
+ F92  CONST_20  CAR  CAG  CAI  CAT     0.00   0.0  0
+ F92  CONST_21  CAR  CAF  CAH  CAT     0.00   0.0  0
+ F92  CONST_22  CAG  CAI  CAT  CAH     0.00   0.0  0
+ F92  CONST_23  CAG  CAR  CAF  CAH     0.00   0.0  0
+ F92  CONST_24  CAI  CAT  CAH  CAF     0.00   0.0  0
+ F92  CONST_25  CAI  CAG  CAR  CAF     0.00   0.0  0
+ F92  CONST_26  C2   N3   C4   CAW   180.00   0.0  0
+ F92  CONST_27  CAY  NAZ  CAW  C4      0.00   0.0  0
+ F92  CONST_28  NAP  CAJ  NAZ  CAY   180.00   0.0  0
+ F92  CONST_29  CAV  CAW  NAZ  CAY   180.00   0.0  0
+ F92  CONST_30  NAA  C2   N3   C4    180.00   0.0  0
+ F92  CONST_31  NAA  C2   N1   C6    180.00   0.0  0
+ F92  CONST_32  FAC  CAR  CAF  CAH   180.00   0.0  0
+ F92  CONST_33  CAI  CAG  CAR  FAC   180.00   0.0  0
+ F92  CONST_34  H2   C6   C5   C4    180.00   0.0  0
+ F92  CONST_35  H1   C5   C6   N1    180.00   0.0  0
+ F92  CONST_36  H14  CAJ  NAZ  CAY     0.00   0.0  0
+ F92  CONST_37  H18  CAI  CAT  CAV     0.00   0.0  0
+ F92  CONST_38  H15  CAH  CAT  CAV     0.00   0.0  0
+ F92  CONST_39  H17  CAG  CAI  CAT   180.00   0.0  0
+ F92  CONST_40  H16  CAF  CAH  CAT   180.00   0.0  0
+ F92  CONST_41  H19  NAA  C2   N1    180.00   0.0  0
+ F92  CONST_42  H20  NAA  C2   N1      0.00   0.0  0
+ F92  Var_01    CAY  CAM  CAK  CAX   -56.20  30.0  1
+ F92  Var_02    CAY  CAN  CAL  CAX    56.65  30.0  1
+ F92  Var_03    NAZ  CAW  C4   C5    -53.41  30.0  3
+ F92  Var_04    CAV  CAW  C4   C5    127.39  30.0  3
+ F92  Var_05    NAZ  CAW  C4   N3    128.11  30.0  3
+ F92  Var_06    CAV  CAW  C4   N3    -51.09  30.0  3
+ F92  Var_07    CAL  CAX  CAK  CAM    56.27  30.0  1
+ F92  Var_08    CAL  CAN  CAY  CAM   -56.40  30.0  1
+ F92  Var_09    CAJ  NAZ  CAY  CAM   -73.03  30.0  2
+ F92  Var_10    CAW  NAZ  CAY  CAM   110.56  30.0  2
+ F92  Var_11    CAN  CAL  CAX  CAK   -56.81  30.0  1
+ F92  Var_12    CAN  CAY  CAM  CAK    56.42  30.0  1
+ F92  Var_13    NAZ  CAY  CAM  CAK  -178.60  30.0  1
+ F92  Var_14    NAZ  CAY  CAN  CAL   178.88  30.0  1
+ F92  Var_15    CAJ  NAZ  CAY  CAN    51.78  30.0  2
+ F92  Var_16    CAW  NAZ  CAY  CAN  -124.63  30.0  2
+ F92  Var_17    CAI  CAT  CAV  NAP   146.90  30.0  2
+ F92  Var_18    CAH  CAT  CAV  NAP   -31.15  30.0  2
+ F92  Var_19    CAW  CAV  CAT  CAH   150.96  30.0  3
+ F92  Var_20    CAW  CAV  CAT  CAI   -30.99  30.0  3
+ F92  Var_21    OAB  CAX  CAK  CAM   179.21  30.0  1
+ F92  Var_22    CAN  CAL  CAX  OAB  -177.34  30.0  1
+ F92  Var_23    H7   CAX  CAK  CAM   -61.54  30.0  1
+ F92  Var_24    H11  CAN  CAY  CAM  -177.88  30.0  1
+ F92  Var_25    H12  CAN  CAY  CAM    64.33  30.0  1
+ F92  Var_26    H9   CAL  CAX  CAK    64.72  30.0  1
+ F92  Var_27    H10  CAL  CAX  CAK  -178.20  30.0  1
+ F92  Var_28    H13  CAY  CAM  CAK   -61.87  30.0  1
+ F92  Var_29    H5   CAK  CAX  CAL   -64.91  30.0  1
+ F92  Var_30    H6   CAK  CAX  CAL   177.73  30.0  1
+ F92  Var_31    H8   OAB  CAX  CAK   177.50  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

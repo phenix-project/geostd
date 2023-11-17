@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 6EZ  6EZ  (3-exo)-N-(4-amino-4'-fluoro[1,1'-biphenyl]-3-yl)-8-oxabicyclo[3.2.1]octane-3-carboxamide  ligand  46  25  .  2021-08-05  2021-08-05  
+ 6EZ  6EZ  (3-exo)-N-(4-amino-4'-fluoro[1,1'-biphenyl]-3-yl)-8-oxabicyclo[3.2.1]octane-3-carboxamide  ligand  46  25  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_6EZ
@@ -248,39 +249,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 6EZ  CONST_01  C5   C6   C7   C2     0.00   0.0  0
- 6EZ  CONST_02  C5   C4   C3   C2     0.00   0.0  0
- 6EZ  CONST_03  C8   C5   C4   C3   180.00   0.0  0
- 6EZ  CONST_04  C6   C5   C4   C3     0.00   0.0  0
- 6EZ  CONST_05  C6   C7   C2   C3     0.00   0.0  0
- 6EZ  CONST_08  C7   C6   C5   C4     0.00   0.0  0
- 6EZ  CONST_09  C7   C2   C3   C4     0.00   0.0  0
- 6EZ  CONST_10  C24  C25  C8   C5   180.00   0.0  0
- 6EZ  CONST_11  C10  C9   C8   C5   180.00   0.0  0
- 6EZ  CONST_14  C8   C5   C6   C7   180.00   0.0  0
- 6EZ  CONST_15  C24  C22  C10  C9     0.00   0.0  0
- 6EZ  CONST_16  C24  C25  C8   C9     0.00   0.0  0
- 6EZ  CONST_17  C25  C24  C22  C10    0.00   0.0  0
- 6EZ  CONST_18  C25  C8   C9   C10    0.00   0.0  0
- 6EZ  CONST_19  C8   C25  C24  C22    0.00   0.0  0
- 6EZ  CONST_20  C8   C9   C10  C22    0.00   0.0  0
- 6EZ  CONST_21  F1   C2   C3   C4   180.00   0.0  0
- 6EZ  CONST_22  F1   C2   C7   C6   180.00   0.0  0
- 6EZ  CONST_23  N23  C22  C10  C9   180.00   0.0  0
- 6EZ  CONST_24  N11  C10  C22  C24  180.00   0.0  0
- 6EZ  CONST_25  N11  C10  C9   C8   180.00   0.0  0
- 6EZ  CONST_26  C25  C24  C22  N23  180.00   0.0  0
- 6EZ  CONST_27  H3   C6   C7   C2   180.00   0.0  0
- 6EZ  CONST_28  H2   C4   C3   C2   180.00   0.0  0
- 6EZ  CONST_29  H4   C7   C2   C3   180.00   0.0  0
- 6EZ  CONST_30  H21  C25  C8   C5     0.00   0.0  0
- 6EZ  CONST_31  H5   C9   C8   C5     0.00   0.0  0
- 6EZ  CONST_32  H1   C3   C4   C5   180.00   0.0  0
- 6EZ  CONST_33  H16  C24  C22  C10  180.00   0.0  0
- 6EZ  CONST_34  C14  C12  N11  C10  180.00   0.0  0
- 6EZ  CONST_38  H19  N23  C22  C10  180.00   0.0  0
- 6EZ  CONST_40  O13  C12  N11  C10    0.00   0.0  0
- 6EZ  Var_01    C19  C18  C17  C16   -0.71  30.0  3
+ 6EZ  CONST_01  C5   C6   C7   C2      0.00   0.0  0
+ 6EZ  CONST_02  C5   C4   C3   C2      0.00   0.0  0
+ 6EZ  CONST_03  C8   C5   C4   C3    180.00   0.0  0
+ 6EZ  CONST_04  C6   C5   C4   C3      0.00   0.0  0
+ 6EZ  CONST_05  C6   C7   C2   C3      0.00   0.0  0
+ 6EZ  CONST_06  C7   C6   C5   C4      0.00   0.0  0
+ 6EZ  CONST_07  C7   C2   C3   C4      0.00   0.0  0
+ 6EZ  CONST_08  C24  C25  C8   C5    180.00   0.0  0
+ 6EZ  CONST_09  C10  C9   C8   C5    180.00   0.0  0
+ 6EZ  CONST_10  C8   C5   C6   C7    180.00   0.0  0
+ 6EZ  CONST_11  C24  C22  C10  C9      0.00   0.0  0
+ 6EZ  CONST_12  C24  C25  C8   C9      0.00   0.0  0
+ 6EZ  CONST_13  C25  C24  C22  C10     0.00   0.0  0
+ 6EZ  CONST_14  C25  C8   C9   C10     0.00   0.0  0
+ 6EZ  CONST_15  C8   C25  C24  C22     0.00   0.0  0
+ 6EZ  CONST_16  C8   C9   C10  C22     0.00   0.0  0
+ 6EZ  CONST_17  F1   C2   C3   C4    180.00   0.0  0
+ 6EZ  CONST_18  F1   C2   C7   C6    180.00   0.0  0
+ 6EZ  CONST_19  N23  C22  C10  C9    180.00   0.0  0
+ 6EZ  CONST_20  N11  C10  C22  C24   180.00   0.0  0
+ 6EZ  CONST_21  N11  C10  C9   C8    180.00   0.0  0
+ 6EZ  CONST_22  C25  C24  C22  N23   180.00   0.0  0
+ 6EZ  CONST_23  H3   C6   C7   C2    180.00   0.0  0
+ 6EZ  CONST_24  H2   C4   C3   C2    180.00   0.0  0
+ 6EZ  CONST_25  H4   C7   C2   C3    180.00   0.0  0
+ 6EZ  CONST_26  H21  C25  C8   C5      0.00   0.0  0
+ 6EZ  CONST_27  H5   C9   C8   C5      0.00   0.0  0
+ 6EZ  CONST_28  H1   C3   C4   C5    180.00   0.0  0
+ 6EZ  CONST_29  H16  C24  C22  C10   180.00   0.0  0
+ 6EZ  CONST_30  C14  C12  N11  C10   180.00   0.0  0
+ 6EZ  CONST_31  H19  N23  C22  C10   180.00   0.0  0
+ 6EZ  CONST_32  O13  C12  N11  C10     0.00   0.0  0
+ 6EZ  Var_01    C19  C18  C17  C16    -0.71  30.0  3
+ 6EZ  Var_02    C25  C8   C5   C4    143.02  30.0  3
+ 6EZ  Var_03    C9   C8   C5   C4    -36.63  30.0  3
+ 6EZ  Var_04    C25  C8   C5   C6    -37.06  30.0  3
+ 6EZ  Var_05    C9   C8   C5   C6    143.29  30.0  3
+ 6EZ  Var_06    C19  O21  C16  C15    73.72  30.0  1
+ 6EZ  Var_07    C18  C17  C16  C15   -89.93  30.0  3
+ 6EZ  Var_08    C19  C20  C14  C15   -44.87  30.0  1
+ 6EZ  Var_09    C20  C19  O21  C16   -73.84  30.0  1
+ 6EZ  Var_10    C18  C19  O21  C16    46.32  30.0  1
+ 6EZ  Var_11    C20  C14  C15  C16    44.89  30.0  1
+ 6EZ  Var_12    C19  O21  C16  C17   -46.76  30.0  1
+ 6EZ  Var_13    C14  C15  C16  C17    54.28  30.0  1
+ 6EZ  Var_14    O21  C19  C18  C17   -26.84  30.0  3
+ 6EZ  Var_15    C20  C19  C18  C17    91.04  30.0  3
+ 6EZ  Var_16    C14  C20  C19  C18   -54.33  30.0  1
+ 6EZ  Var_17    O21  C16  C17  C18    27.99  30.0  3
+ 6EZ  Var_18    O21  C19  C20  C14    60.45  30.0  1
+ 6EZ  Var_19    O21  C16  C15  C14   -60.41  30.0  1
+ 6EZ  Var_20    C19  C20  C14  C12  -170.51  30.0  1
+ 6EZ  Var_21    C16  C15  C14  C12   170.47  30.0  1
+ 6EZ  Var_22    H9   C17  C16  C15    31.88  30.0  3
+ 6EZ  Var_23    H10  C17  C16  C15   151.35  30.0  3
+ 6EZ  Var_24    H14  C20  C14  C15  -165.97  30.0  1
+ 6EZ  Var_25    H15  C20  C14  C15    75.49  30.0  1
+ 6EZ  Var_26    H13  C19  O21  C16   166.43  30.0  1
+ 6EZ  Var_27    H18  C14  C15  C16   -72.93  30.0  1
+ 6EZ  Var_28    H6   C15  C16  C17   175.51  30.0  1
+ 6EZ  Var_29    H7   C15  C16  C17   -67.76  30.0  1
+ 6EZ  Var_30    H8   C16  C17  C18   144.56  30.0  3
+ 6EZ  Var_31    C20  C14  C12  O13   123.34  30.0  3
+ 6EZ  Var_32    C15  C14  C12  O13    -1.41  30.0  3
+ 6EZ  Var_33    N11  C12  C14  C15   178.08  30.0  3
+ 6EZ  Var_34    N11  C12  C14  C20   -57.16  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

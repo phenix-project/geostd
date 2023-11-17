@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ECV  ECV  2-[(3~{S})-7-fluoranyl-4-[(3-oxidanylidene-4~{H}-1,4-benzoxazin-6-yl)carbonyl]-2,3-dihydro-1,4-benzoxazin-3-yl]-~{N}-methyl-ethanamide  ligand  47  29  .  2022-07-24  2022-07-26
+ ECV  ECV  2-[(3~{S})-7-fluoranyl-4-[(3-oxidanylidene-4~{H}-1,4-benzoxazin-6-yl)carbonyl]-2,3-dihydro-1,4-benzoxazin-3-yl]-~{N}-methyl-ethanamide  ligand  47  29  .  2022-07-24  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_ECV
@@ -248,46 +249,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ECV  CONST_01  C13  C11  C10  C9     0.00   0.0  0
- ECV  CONST_02  C13  C14  C15  C9     0.00   0.0  0
- ECV  CONST_03  C14  C15  C9   C10    0.00   0.0  0
- ECV  CONST_04  C14  C13  C11  C10    0.00   0.0  0
- ECV  CONST_05  C15  C9   C10  C11    0.00   0.0  0
- ECV  CONST_06  C15  C14  C13  C11    0.00   0.0  0
- ECV  CONST_07  C22  C28  C29  C19    0.00   0.0  0
- ECV  CONST_08  C22  C21  C20  C19    0.00   0.0  0
- ECV  CONST_09  C28  C29  C19  C20    0.00   0.0  0
- ECV  CONST_10  C28  C22  C21  C20    0.00   0.0  0
- ECV  CONST_11  C29  C19  C20  C21    0.00   0.0  0
- ECV  CONST_12  C29  C28  C22  C21    0.00   0.0  0
- ECV  CONST_13  C28  N27  C25  C24    0.00   0.0  0
- ECV  CONST_14  F12  C11  C10  C9   180.00   0.0  0
- ECV  CONST_15  F12  C11  C13  C14  180.00   0.0  0
- ECV  CONST_16  C17  C19  C20  C21  180.00   0.0  0
- ECV  CONST_17  C28  C29  C19  C17  180.00   0.0  0
- ECV  CONST_18  C19  C17  N16  C15  180.00   0.0  0
- ECV  CONST_20  C28  N27  C25  O26  180.00   0.0  0
- ECV  CONST_21  H8   C14  C15  C9   180.00   0.0  0
- ECV  CONST_22  H7   C13  C11  C10  180.00   0.0  0
- ECV  CONST_23  H6   C10  C11  C13  180.00   0.0  0
- ECV  CONST_24  H10  C21  C20  C19  180.00   0.0  0
- ECV  CONST_25  H18  C29  C19  C20  180.00   0.0  0
- ECV  CONST_26  H9   C20  C21  C22  180.00   0.0  0
- ECV  CONST_27  H17  N27  C25  C24  180.00   0.0  0
- ECV  CONST_28  O18  C17  N16  C15    0.00   0.0  0
- ECV  CONST_30  O4   C3   N2   C1     0.00   0.0  0
- ECV  CONST_31  C5   C3   N2   C1   180.00   0.0  0
- ECV  CONST_32  H13  N2   C3   O4   180.00   0.0  0
- ECV  Var_01    C10  C9   O8   C7   176.25  30.0  1
- ECV  Var_02    C6   C7   O8   C9    35.93  30.0  1
- ECV  Var_03    C6   N16  C15  C9   -27.49  30.0  1
- ECV  Var_04    C25  N27  C28  C22   16.87  30.0  1
- ECV  Var_05    C25  C24  O23  C22   48.20  30.0  1
- ECV  Var_06    C28  C22  O23  C24  -32.75  30.0  1
- ECV  Var_07    N27  C25  C24  O23  -31.63  30.0  1
- ECV  Var_08    N16  C17  C19  C20  -61.73  30.0  3
- ECV  Var_09    C6   C5   C3   O4    85.63  30.0  3
- ECV  Var_10    H1   C1   N2   C3   -66.77  30.0  3
+ ECV  CONST_01  C13  C11  C10  C9      0.00   0.0  0
+ ECV  CONST_02  C13  C14  C15  C9      0.00   0.0  0
+ ECV  CONST_03  C14  C15  C9   C10     0.00   0.0  0
+ ECV  CONST_04  C14  C13  C11  C10     0.00   0.0  0
+ ECV  CONST_05  C15  C9   C10  C11     0.00   0.0  0
+ ECV  CONST_06  C15  C14  C13  C11     0.00   0.0  0
+ ECV  CONST_07  C22  C28  C29  C19     0.00   0.0  0
+ ECV  CONST_08  C22  C21  C20  C19     0.00   0.0  0
+ ECV  CONST_09  C28  C29  C19  C20     0.00   0.0  0
+ ECV  CONST_10  C28  C22  C21  C20     0.00   0.0  0
+ ECV  CONST_11  C29  C19  C20  C21     0.00   0.0  0
+ ECV  CONST_12  C29  C28  C22  C21     0.00   0.0  0
+ ECV  CONST_13  C28  N27  C25  C24     0.00   0.0  0
+ ECV  CONST_14  F12  C11  C10  C9    180.00   0.0  0
+ ECV  CONST_15  F12  C11  C13  C14   180.00   0.0  0
+ ECV  CONST_16  C17  C19  C20  C21   180.00   0.0  0
+ ECV  CONST_17  C28  C29  C19  C17   180.00   0.0  0
+ ECV  CONST_18  C19  C17  N16  C15   180.00   0.0  0
+ ECV  CONST_19  C28  N27  C25  O26   180.00   0.0  0
+ ECV  CONST_20  H8   C14  C15  C9    180.00   0.0  0
+ ECV  CONST_21  H7   C13  C11  C10   180.00   0.0  0
+ ECV  CONST_22  H6   C10  C11  C13   180.00   0.0  0
+ ECV  CONST_23  H10  C21  C20  C19   180.00   0.0  0
+ ECV  CONST_24  H18  C29  C19  C20   180.00   0.0  0
+ ECV  CONST_25  H9   C20  C21  C22   180.00   0.0  0
+ ECV  CONST_26  H17  N27  C25  C24   180.00   0.0  0
+ ECV  CONST_27  O18  C17  N16  C15     0.00   0.0  0
+ ECV  CONST_28  O4   C3   N2   C1      0.00   0.0  0
+ ECV  CONST_29  C5   C3   N2   C1    180.00   0.0  0
+ ECV  CONST_30  H13  N2   C3   O4    180.00   0.0  0
+ ECV  Var_01    C10  C9   O8   C7    176.25  30.0  1
+ ECV  Var_02    C6   C7   O8   C9     35.93  30.0  1
+ ECV  Var_03    C6   N16  C15  C9    -27.49  30.0  1
+ ECV  Var_04    C25  N27  C28  C22    16.87  30.0  1
+ ECV  Var_05    C25  C24  O23  C22    48.20  30.0  1
+ ECV  Var_06    C28  C22  O23  C24   -32.75  30.0  1
+ ECV  Var_07    N27  C25  C24  O23   -31.63  30.0  1
+ ECV  Var_08    N16  C17  C19  C20   -61.73  30.0  3
+ ECV  Var_09    C6   C5   C3   O4     85.63  30.0  3
+ ECV  Var_10    H1   C1   N2   C3    -66.77  30.0  3
+ ECV  Var_11    C15  N16  C6   C7     54.79  30.0  1
+ ECV  Var_12    N16  C6   C7   O8    -59.72  30.0  1
+ ECV  Var_13    C17  N16  C6   C7   -100.01  30.0  1
+ ECV  Var_14    C5   C6   N16  C15   -68.54  30.0  1
+ ECV  Var_15    O8   C7   C6   C5     63.96  30.0  1
+ ECV  Var_16    H16  C6   N16  C15   170.16  30.0  1
+ ECV  Var_17    C7   C6   C5   C3    176.72  30.0  3
+ ECV  Var_18    N16  C6   C5   C3    -62.86  30.0  3
+ ECV  Var_19    C17  N16  C6   C5    136.67  30.0  1
+ ECV  Var_20    H14  C5   C6   C7     54.59  30.0  1
+ ECV  Var_21    H15  C5   C6   C7    -62.37  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

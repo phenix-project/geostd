@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7RG  7RG  6-[(3S,4S)-4-methyl-1-(pyrimidin-2-ylmethyl)pyrrolidin-3-yl]-1-(tetrahydro-2H-pyran-4-yl)-1,5-dihydro-4H-pyrazolo[3,4-d]pyrimidin-4-one  ligand  54  29  .  2021-08-05  2021-08-05  
+ 7RG  7RG  6-[(3S,4S)-4-methyl-1-(pyrimidin-2-ylmethyl)pyrrolidin-3-yl]-1-(tetrahydro-2H-pyran-4-yl)-1,5-dihydro-4H-pyrazolo[3,4-d]pyrimidin-4-one  ligand  54  29  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7RG
@@ -284,40 +285,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 7RG  CONST_01  C3   C4   C10  N1      0.00   0.0  0
- 7RG  CONST_02  C4   C3   N2   N1      0.00   0.0  0
- 7RG  CONST_03  C4   C10  N1   N2      0.00   0.0  0
- 7RG  CONST_04  C10  C4   C3   N2      0.00   0.0  0
- 7RG  CONST_05  C10  N1   N2   C3      0.00   0.0  0
- 7RG  CONST_06  C20  C19  N18  C17     0.00   0.0  0
- 7RG  CONST_07  C20  C21  N22  C17     0.00   0.0  0
- 7RG  CONST_08  C21  N22  C17  N18     0.00   0.0  0
- 7RG  CONST_09  C21  C20  C19  N18     0.00   0.0  0
- 7RG  CONST_10  N22  C17  N18  C19     0.00   0.0  0
- 7RG  CONST_11  N22  C21  C20  C19     0.00   0.0  0
- 7RG  CONST_12  C23  N1   N2   C3    180.00   0.0  0
- 7RG  CONST_13  C23  N1   C10  C4    180.00   0.0  0
- 7RG  CONST_14  C23  N1   C10  N9      0.00   0.0  0
- 7RG  CONST_15  C8   N7   C5   C4      0.00   0.0  0
- 7RG  CONST_16  C11  C8   N7   C5    180.00   0.0  0
- 7RG  CONST_17  N9   C8   N7   C5      0.00   0.0  0
- 7RG  CONST_18  C10  N9   C8   N7      0.00   0.0  0
- 7RG  CONST_19  C11  C8   N9   C10   180.00   0.0  0
- 7RG  CONST_20  C19  N18  C17  C16   180.00   0.0  0
- 7RG  CONST_21  C21  N22  C17  C16   180.00   0.0  0
- 7RG  CONST_22  C8   N7   C5   O6    180.00   0.0  0
- 7RG  CONST_23  H3   C3   N2   N1    180.00   0.0  0
- 7RG  CONST_24  H19  C19  N18  C17   180.00   0.0  0
- 7RG  CONST_25  H21  C21  N22  C17   180.00   0.0  0
- 7RG  CONST_26  H20  C20  C19  N18   180.00   0.0  0
- 7RG  CONST_27  HN7  N7   C5   C4    180.00   0.0  0
- 7RG  Var_01    C14  N13  C12  C11   -27.96  30.0  1
- 7RG  Var_02    C15  C14  N13  C12    43.90  30.0  1
- 7RG  Var_03    O26  C25  C24  C23    56.79  30.0  1
- 7RG  Var_04    O26  C27  C28  C23   -56.38  30.0  1
- 7RG  Var_05    C28  C27  O26  C25    60.13  30.0  1
- 7RG  Var_06    C17  C16  N13  C12  -170.85  30.0  2
- 7RG  Var_07    N18  C17  C16  N13    35.32  30.0  2
+ 7RG  CONST_01  C3    C4   C10  N1      0.00   0.0  0
+ 7RG  CONST_02  C4    C3   N2   N1      0.00   0.0  0
+ 7RG  CONST_03  C4    C10  N1   N2      0.00   0.0  0
+ 7RG  CONST_04  C10   C4   C3   N2      0.00   0.0  0
+ 7RG  CONST_05  C10   N1   N2   C3      0.00   0.0  0
+ 7RG  CONST_06  C20   C19  N18  C17     0.00   0.0  0
+ 7RG  CONST_07  C20   C21  N22  C17     0.00   0.0  0
+ 7RG  CONST_08  C21   N22  C17  N18     0.00   0.0  0
+ 7RG  CONST_09  C21   C20  C19  N18     0.00   0.0  0
+ 7RG  CONST_10  N22   C17  N18  C19     0.00   0.0  0
+ 7RG  CONST_11  N22   C21  C20  C19     0.00   0.0  0
+ 7RG  CONST_12  C23   N1   N2   C3    180.00   0.0  0
+ 7RG  CONST_13  C23   N1   C10  C4    180.00   0.0  0
+ 7RG  CONST_14  C23   N1   C10  N9      0.00   0.0  0
+ 7RG  CONST_15  C8    N7   C5   C4      0.00   0.0  0
+ 7RG  CONST_16  C11   C8   N7   C5    180.00   0.0  0
+ 7RG  CONST_17  N9    C8   N7   C5      0.00   0.0  0
+ 7RG  CONST_18  C10   N9   C8   N7      0.00   0.0  0
+ 7RG  CONST_19  C11   C8   N9   C10   180.00   0.0  0
+ 7RG  CONST_20  C19   N18  C17  C16   180.00   0.0  0
+ 7RG  CONST_21  C21   N22  C17  C16   180.00   0.0  0
+ 7RG  CONST_22  C8    N7   C5   O6    180.00   0.0  0
+ 7RG  CONST_23  H3    C3   N2   N1    180.00   0.0  0
+ 7RG  CONST_24  H19   C19  N18  C17   180.00   0.0  0
+ 7RG  CONST_25  H21   C21  N22  C17   180.00   0.0  0
+ 7RG  CONST_26  H20   C20  C19  N18   180.00   0.0  0
+ 7RG  CONST_27  HN7   N7   C5   C4    180.00   0.0  0
+ 7RG  Var_01    C14   N13  C12  C11   -27.96  30.0  1
+ 7RG  Var_02    C15   C14  N13  C12    43.90  30.0  1
+ 7RG  Var_03    O26   C25  C24  C23    56.79  30.0  1
+ 7RG  Var_04    O26   C27  C28  C23   -56.38  30.0  1
+ 7RG  Var_05    C28   C27  O26  C25    60.13  30.0  1
+ 7RG  Var_06    C17   C16  N13  C12  -170.85  30.0  2
+ 7RG  Var_07    N18   C17  C16  N13    35.32  30.0  2
+ 7RG  Var_08    C25   C24  C23  N1   -177.84  30.0  1
+ 7RG  Var_09    C27   C28  C23  N1    177.83  30.0  1
+ 7RG  Var_10    C24   C23  N1   N2     58.20  30.0  2
+ 7RG  Var_11    C28   C23  N1   N2    -65.35  30.0  2
+ 7RG  Var_12    C12   C11  C8   N7    -78.93  30.0  3
+ 7RG  Var_13    C15   C11  C8   N7    161.36  30.0  3
+ 7RG  Var_14    N13   C12  C11  C8   -124.12  30.0  1
+ 7RG  Var_15    C14   C15  C11  C8    147.55  30.0  1
+ 7RG  Var_16    C12   C11  C8   N9     99.30  30.0  3
+ 7RG  Var_17    C15   C11  C8   N9    -20.41  30.0  3
+ 7RG  Var_18    C24   C23  N1   C10  -123.90  30.0  2
+ 7RG  Var_19    C28   C23  N1   C10   112.55  30.0  2
+ 7RG  Var_20    N13   C14  C15  C11   -40.98  30.0  1
+ 7RG  Var_21    C14   C15  C11  C12    23.88  30.0  1
+ 7RG  Var_22    C15   C11  C12  N13     1.30  30.0  1
+ 7RG  Var_23    C27   C28  C23  C24    53.20  30.0  1
+ 7RG  Var_24    C27   O26  C25  C24   -60.36  30.0  1
+ 7RG  Var_25    C28   C23  C24  C25   -53.35  30.0  1
+ 7RG  Var_26    C29   C15  C11  C8    -88.28  30.0  1
+ 7RG  Var_27    C29   C15  C11  C12   148.05  30.0  1
+ 7RG  Var_28    C29   C15  C14  N13  -164.25  30.0  1
+ 7RG  Var_29    H24   C24  C23  N1    -57.29  30.0  1
+ 7RG  Var_30    H24A  C24  C23  N1     61.63  30.0  1
+ 7RG  Var_31    H28   C28  C23  N1    -61.74  30.0  1
+ 7RG  Var_32    H28A  C28  C23  N1     57.02  30.0  1
+ 7RG  Var_33    H23   C23  N1   N2    176.40  30.0  2
+ 7RG  Var_34    H11   C11  C8   N7     40.18  30.0  3
+ 7RG  Var_35    H12   C12  C11  C8     -3.56  30.0  1
+ 7RG  Var_36    H12A  C12  C11  C8    115.33  30.0  1
+ 7RG  Var_37    H15   C15  C11  C8     33.65  30.0  1
+ 7RG  Var_38    H14   C14  C15  C11  -160.67  30.0  1
+ 7RG  Var_39    H14A  C14  C15  C11    79.13  30.0  1
+ 7RG  Var_40    H29   C29  C15  C11   -57.84  30.0  3
+ 7RG  Var_41    H29A  C29  C15  C11    62.29  30.0  3
+ 7RG  Var_42    H29B  C29  C15  C11  -178.08  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

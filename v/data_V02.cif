@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- V02  V02  3-[(R)-[(2-aminoethyl)sulfanyl](3-ethylphenyl)phenylmethyl]phenol  ligand  51  26  .  2021-08-24  2021-08-24  
+ V02  V02  3-[(R)-[(2-aminoethyl)sulfanyl](3-ethylphenyl)phenylmethyl]phenol  ligand  51  26  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_V02
@@ -258,52 +259,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- V02  CONST_01  CAP   CAY  CAQ  CAV    0.00   0.0  0
- V02  CONST_02  CAP   CAJ  CAK  CAV    0.00   0.0  0
- V02  CONST_03  CAY   CAQ  CAV  CAK    0.00   0.0  0
- V02  CONST_04  CAY   CAP  CAJ  CAK    0.00   0.0  0
- V02  CONST_05  CAJ   CAK  CAV  CAQ    0.00   0.0  0
- V02  CONST_06  CAJ   CAP  CAY  CAQ    0.00   0.0  0
- V02  CONST_07  CAI   CAO  CAX  CAN    0.00   0.0  0
- V02  CONST_08  CAI   CAE  CAH  CAN    0.00   0.0  0
- V02  CONST_09  CAO   CAX  CAN  CAH    0.00   0.0  0
- V02  CONST_10  CAO   CAI  CAE  CAH    0.00   0.0  0
- V02  CONST_11  CAX   CAN  CAH  CAE    0.00   0.0  0
- V02  CONST_12  CAX   CAO  CAI  CAE    0.00   0.0  0
- V02  CONST_13  CAL   CAF  CAD  CAG    0.00   0.0  0
- V02  CONST_14  CAL   CAW  CAM  CAG    0.00   0.0  0
- V02  CONST_15  CAF   CAL  CAW  CAM    0.00   0.0  0
- V02  CONST_16  CAF   CAD  CAG  CAM    0.00   0.0  0
- V02  CONST_17  CAD   CAF  CAL  CAW    0.00   0.0  0
- V02  CONST_18  CAD   CAG  CAM  CAW    0.00   0.0  0
- V02  CONST_19  CAY   CAQ  CAV  CAU  180.00   0.0  0
- V02  CONST_20  CAJ   CAK  CAV  CAU  180.00   0.0  0
- V02  CONST_21  CAZ   CAY  CAQ  CAV  180.00   0.0  0
- V02  CONST_22  CAZ   CAY  CAP  CAJ  180.00   0.0  0
- V02  CONST_23  CAH   CAN  CAX  CAZ  180.00   0.0  0
- V02  CONST_24  CAI   CAO  CAX  CAZ  180.00   0.0  0
- V02  CONST_25  CAF   CAL  CAW  CAZ  180.00   0.0  0
- V02  CONST_26  CAG   CAM  CAW  CAZ  180.00   0.0  0
- V02  CONST_27  OAC   CAF  CAD  CAG  180.00   0.0  0
- V02  CONST_28  OAC   CAF  CAL  CAW  180.00   0.0  0
- V02  CONST_29  HAJ   CAJ  CAK  CAV  180.00   0.0  0
- V02  CONST_30  HAQ   CAQ  CAV  CAK  180.00   0.0  0
- V02  CONST_31  HAP   CAP  CAJ  CAK  180.00   0.0  0
- V02  CONST_32  HAK   CAK  CAV  CAQ  180.00   0.0  0
- V02  CONST_33  HAO   CAO  CAX  CAN  180.00   0.0  0
- V02  CONST_34  HAE   CAE  CAH  CAN  180.00   0.0  0
- V02  CONST_35  HAI   CAI  CAE  CAH  180.00   0.0  0
- V02  CONST_36  HAN   CAN  CAH  CAE  180.00   0.0  0
- V02  CONST_37  HAH   CAH  CAE  CAI  180.00   0.0  0
- V02  CONST_38  HAL   CAL  CAW  CAM  180.00   0.0  0
- V02  CONST_39  HAD   CAD  CAG  CAM  180.00   0.0  0
- V02  CONST_40  HAG   CAG  CAM  CAW  180.00   0.0  0
- V02  CONST_41  HAM   CAM  CAW  CAL  180.00   0.0  0
- V02  Var_01    CAQ   CAV  CAU  CAA   90.24  30.0  2
- V02  Var_02    HAA1  CAA  CAU  CAV  -61.05  30.0  3
- V02  Var_03    CAR   CAS  SAT  CAZ  159.64  30.0  3
- V02  Var_04    NAB   CAR  CAS  SAT  175.73  30.0  3
- V02  Var_05    HAB1  NAB  CAR  CAS  171.33  30.0  3
+ V02  CONST_01  CAP   CAY  CAQ  CAV     0.00   0.0  0
+ V02  CONST_02  CAP   CAJ  CAK  CAV     0.00   0.0  0
+ V02  CONST_03  CAY   CAQ  CAV  CAK     0.00   0.0  0
+ V02  CONST_04  CAY   CAP  CAJ  CAK     0.00   0.0  0
+ V02  CONST_05  CAJ   CAK  CAV  CAQ     0.00   0.0  0
+ V02  CONST_06  CAJ   CAP  CAY  CAQ     0.00   0.0  0
+ V02  CONST_07  CAI   CAO  CAX  CAN     0.00   0.0  0
+ V02  CONST_08  CAI   CAE  CAH  CAN     0.00   0.0  0
+ V02  CONST_09  CAO   CAX  CAN  CAH     0.00   0.0  0
+ V02  CONST_10  CAO   CAI  CAE  CAH     0.00   0.0  0
+ V02  CONST_11  CAX   CAN  CAH  CAE     0.00   0.0  0
+ V02  CONST_12  CAX   CAO  CAI  CAE     0.00   0.0  0
+ V02  CONST_13  CAL   CAF  CAD  CAG     0.00   0.0  0
+ V02  CONST_14  CAL   CAW  CAM  CAG     0.00   0.0  0
+ V02  CONST_15  CAF   CAL  CAW  CAM     0.00   0.0  0
+ V02  CONST_16  CAF   CAD  CAG  CAM     0.00   0.0  0
+ V02  CONST_17  CAD   CAF  CAL  CAW     0.00   0.0  0
+ V02  CONST_18  CAD   CAG  CAM  CAW     0.00   0.0  0
+ V02  CONST_19  CAY   CAQ  CAV  CAU   180.00   0.0  0
+ V02  CONST_20  CAJ   CAK  CAV  CAU   180.00   0.0  0
+ V02  CONST_21  CAZ   CAY  CAQ  CAV   180.00   0.0  0
+ V02  CONST_22  CAZ   CAY  CAP  CAJ   180.00   0.0  0
+ V02  CONST_23  CAH   CAN  CAX  CAZ   180.00   0.0  0
+ V02  CONST_24  CAI   CAO  CAX  CAZ   180.00   0.0  0
+ V02  CONST_25  CAF   CAL  CAW  CAZ   180.00   0.0  0
+ V02  CONST_26  CAG   CAM  CAW  CAZ   180.00   0.0  0
+ V02  CONST_27  OAC   CAF  CAD  CAG   180.00   0.0  0
+ V02  CONST_28  OAC   CAF  CAL  CAW   180.00   0.0  0
+ V02  CONST_29  HAJ   CAJ  CAK  CAV   180.00   0.0  0
+ V02  CONST_30  HAQ   CAQ  CAV  CAK   180.00   0.0  0
+ V02  CONST_31  HAP   CAP  CAJ  CAK   180.00   0.0  0
+ V02  CONST_32  HAK   CAK  CAV  CAQ   180.00   0.0  0
+ V02  CONST_33  HAO   CAO  CAX  CAN   180.00   0.0  0
+ V02  CONST_34  HAE   CAE  CAH  CAN   180.00   0.0  0
+ V02  CONST_35  HAI   CAI  CAE  CAH   180.00   0.0  0
+ V02  CONST_36  HAN   CAN  CAH  CAE   180.00   0.0  0
+ V02  CONST_37  HAH   CAH  CAE  CAI   180.00   0.0  0
+ V02  CONST_38  HAL   CAL  CAW  CAM   180.00   0.0  0
+ V02  CONST_39  HAD   CAD  CAG  CAM   180.00   0.0  0
+ V02  CONST_40  HAG   CAG  CAM  CAW   180.00   0.0  0
+ V02  CONST_41  HAM   CAM  CAW  CAL   180.00   0.0  0
+ V02  Var_01    CAQ   CAV  CAU  CAA    90.24  30.0  2
+ V02  Var_02    HAA1  CAA  CAU  CAV   -61.05  30.0  3
+ V02  Var_03    CAR   CAS  SAT  CAZ   159.64  30.0  3
+ V02  Var_04    NAB   CAR  CAS  SAT   175.73  30.0  3
+ V02  Var_05    HAB1  NAB  CAR  CAS   171.33  30.0  3
+ V02  Var_06    CAX   CAZ  CAY  CAQ    71.34  30.0  2
+ V02  Var_07    CAW   CAZ  CAY  CAQ   -53.73  30.0  2
+ V02  Var_08    CAN   CAX  CAZ  CAY  -177.87  30.0  2
+ V02  Var_09    CAO   CAX  CAZ  CAY     5.15  30.0  2
+ V02  Var_10    CAL   CAW  CAZ  CAY   108.88  30.0  2
+ V02  Var_11    CAM   CAW  CAZ  CAY   -67.26  30.0  2
+ V02  Var_12    CAX   CAZ  CAY  CAP  -108.41  30.0  2
+ V02  Var_13    CAW   CAZ  CAY  CAP   126.52  30.0  2
+ V02  Var_14    CAW   CAZ  CAX  CAN   -56.49  30.0  2
+ V02  Var_15    CAW   CAZ  CAX  CAO   126.53  30.0  2
+ V02  Var_16    CAL   CAW  CAZ  CAX   -15.49  30.0  2
+ V02  Var_17    CAM   CAW  CAZ  CAX   168.38  30.0  2
+ V02  Var_18    SAT   CAZ  CAY  CAQ  -167.59  30.0  2
+ V02  Var_19    SAT   CAZ  CAY  CAP    12.66  30.0  2
+ V02  Var_20    SAT   CAZ  CAX  CAN    57.86  30.0  2
+ V02  Var_21    SAT   CAZ  CAX  CAO  -119.13  30.0  2
+ V02  Var_22    CAL   CAW  CAZ  SAT  -131.56  30.0  2
+ V02  Var_23    CAM   CAW  CAZ  SAT    52.31  30.0  2
+ V02  Var_24    HAC   OAC  CAF  CAL     0.80  30.0  2
+ V02  Var_25    CAS   SAT  CAZ  CAY   -79.70  30.0  3
+ V02  Var_26    CAS   SAT  CAZ  CAX    44.31  30.0  3
+ V02  Var_27    CAW   CAZ  SAT  CAS   164.78  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

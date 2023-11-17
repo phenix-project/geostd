@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- V4M  V4M  2-(4-chlorophenyl)-N-({2-[(3S)-2,6-dioxopiperidin-3-yl]-1-oxo-2,3-dihydro-1H-isoindol-5-yl}methyl)-2,2-difluoroacetamide  ligand  50  32  .  2022-03-29  2022-03-29
+ V4M  V4M  2-(4-chlorophenyl)-N-({2-[(3S)-2,6-dioxopiperidin-3-yl]-1-oxo-2,3-dihydro-1H-isoindol-5-yl}methyl)-2,2-difluoroacetamide  ligand  50  32  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_V4M
@@ -261,49 +262,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- V4M  CONST_01  C6   C3   C2   C1     0.00   0.0  0
- V4M  CONST_02  C6   C5   C4   C1     0.00   0.0  0
- V4M  CONST_03  C5   C4   C1   C2     0.00   0.0  0
- V4M  CONST_04  C5   C6   C3   C2     0.00   0.0  0
- V4M  CONST_05  C4   C1   C2   C3     0.00   0.0  0
- V4M  CONST_06  C4   C5   C6   C3     0.00   0.0  0
- V4M  CONST_07  C20  C21  C22  C17    0.00   0.0  0
- V4M  CONST_08  C20  C19  C18  C17    0.00   0.0  0
- V4M  CONST_09  C21  C20  C19  C18    0.00   0.0  0
- V4M  CONST_10  C21  C22  C17  C18    0.00   0.0  0
- V4M  CONST_11  C22  C21  C20  C19    0.00   0.0  0
- V4M  CONST_12  C22  C17  C18  C19    0.00   0.0  0
- V4M  CONST_13  C7   N1   C8   C5     0.00   0.0  0
- V4M  CONST_14  C9   N1   C8   C5   180.00   0.0  0
- V4M  CONST_15  C13  N2   C12  C11    0.00   0.0  0
- V4M  CONST_16  C14  C2   C1   C4   180.00   0.0  0
- V4M  CONST_17  C14  C2   C3   C6   180.00   0.0  0
- V4M  CONST_18  C21  C22  C17  C16  180.00   0.0  0
- V4M  CONST_19  C19  C18  C17  C16  180.00   0.0  0
- V4M  CONST_20  CL1  C20  C19  C18  180.00   0.0  0
- V4M  CONST_21  CL1  C20  C21  C22  180.00   0.0  0
- V4M  CONST_22  C7   N1   C8   O1   180.00   0.0  0
- V4M  CONST_23  C9   N1   C8   O1     0.00   0.0  0
- V4M  CONST_24  O3   C12  N2   C13  180.00   0.0  0
- V4M  CONST_25  H2   C3   C2   C1   180.00   0.0  0
- V4M  CONST_26  H3   C4   C1   C2   180.00   0.0  0
- V4M  CONST_27  H1   C1   C2   C3   180.00   0.0  0
- V4M  CONST_28  H17  C21  C22  C17  180.00   0.0  0
- V4M  CONST_29  H16  C19  C18  C17  180.00   0.0  0
- V4M  CONST_30  H18  C22  C17  C18  180.00   0.0  0
- V4M  CONST_31  H15  C18  C19  C20  180.00   0.0  0
- V4M  CONST_32  H4   N2   C12  C11  180.00   0.0  0
- V4M  CONST_33  C16  C15  N3   C14  180.00   0.0  0
- V4M  CONST_34  O4   C15  N3   C14    0.00   0.0  0
- V4M  CONST_35  H5   N3   C15  C16    0.00   0.0  0
- V4M  Var_01    C10  C11  C12  N2    24.63  30.0  1
- V4M  Var_02    C12  N2   C13  C9     3.84  30.0  1
- V4M  Var_03    C12  C11  C10  C9   -53.80  30.0  1
- V4M  Var_04    H6   C7   C6   C3   -57.91  30.0  1
- V4M  Var_05    N3   C14  C2   C1   168.65  30.0  1
- V4M  Var_06    C22  C17  C16  C15   86.03  30.0  2
- V4M  Var_07    C15  N3   C14  C2   -78.68  30.0  2
- V4M  Var_08    C17  C16  C15  N3   105.43  30.0  1
+ V4M  CONST_01  C6   C3   C2   C1      0.00   0.0  0
+ V4M  CONST_02  C6   C5   C4   C1      0.00   0.0  0
+ V4M  CONST_03  C5   C4   C1   C2      0.00   0.0  0
+ V4M  CONST_04  C5   C6   C3   C2      0.00   0.0  0
+ V4M  CONST_05  C4   C1   C2   C3      0.00   0.0  0
+ V4M  CONST_06  C4   C5   C6   C3      0.00   0.0  0
+ V4M  CONST_07  C20  C21  C22  C17     0.00   0.0  0
+ V4M  CONST_08  C20  C19  C18  C17     0.00   0.0  0
+ V4M  CONST_09  C21  C20  C19  C18     0.00   0.0  0
+ V4M  CONST_10  C21  C22  C17  C18     0.00   0.0  0
+ V4M  CONST_11  C22  C21  C20  C19     0.00   0.0  0
+ V4M  CONST_12  C22  C17  C18  C19     0.00   0.0  0
+ V4M  CONST_13  C7   N1   C8   C5      0.00   0.0  0
+ V4M  CONST_14  C9   N1   C8   C5    180.00   0.0  0
+ V4M  CONST_15  C13  N2   C12  C11     0.00   0.0  0
+ V4M  CONST_16  C14  C2   C1   C4    180.00   0.0  0
+ V4M  CONST_17  C14  C2   C3   C6    180.00   0.0  0
+ V4M  CONST_18  C21  C22  C17  C16   180.00   0.0  0
+ V4M  CONST_19  C19  C18  C17  C16   180.00   0.0  0
+ V4M  CONST_20  CL1  C20  C19  C18   180.00   0.0  0
+ V4M  CONST_21  CL1  C20  C21  C22   180.00   0.0  0
+ V4M  CONST_22  C7   N1   C8   O1    180.00   0.0  0
+ V4M  CONST_23  C9   N1   C8   O1      0.00   0.0  0
+ V4M  CONST_24  O3   C12  N2   C13   180.00   0.0  0
+ V4M  CONST_25  H2   C3   C2   C1    180.00   0.0  0
+ V4M  CONST_26  H3   C4   C1   C2    180.00   0.0  0
+ V4M  CONST_27  H1   C1   C2   C3    180.00   0.0  0
+ V4M  CONST_28  H17  C21  C22  C17   180.00   0.0  0
+ V4M  CONST_29  H16  C19  C18  C17   180.00   0.0  0
+ V4M  CONST_30  H18  C22  C17  C18   180.00   0.0  0
+ V4M  CONST_31  H15  C18  C19  C20   180.00   0.0  0
+ V4M  CONST_32  H4   N2   C12  C11   180.00   0.0  0
+ V4M  CONST_33  C16  C15  N3   C14   180.00   0.0  0
+ V4M  CONST_34  O4   C15  N3   C14     0.00   0.0  0
+ V4M  CONST_35  H5   N3   C15  C16     0.00   0.0  0
+ V4M  Var_01    C10  C11  C12  N2     24.63  30.0  1
+ V4M  Var_02    C12  N2   C13  C9      3.84  30.0  1
+ V4M  Var_03    C12  C11  C10  C9    -53.80  30.0  1
+ V4M  Var_04    H6   C7   C6   C3    -57.91  30.0  1
+ V4M  Var_05    N3   C14  C2   C1    168.65  30.0  1
+ V4M  Var_06    C22  C17  C16  C15    86.03  30.0  2
+ V4M  Var_07    C15  N3   C14  C2    -78.68  30.0  2
+ V4M  Var_08    C17  C16  C15  N3    105.43  30.0  1
+ V4M  Var_09    N2   C13  C9   N1   -161.14  30.0  1
+ V4M  Var_10    C11  C10  C9   N1   -176.77  30.0  1
+ V4M  Var_11    C10  C9   C13  N2    -33.97  30.0  1
+ V4M  Var_12    C13  C9   N1   C7     77.64  30.0  3
+ V4M  Var_13    C10  C9   N1   C7    -47.60  30.0  3
+ V4M  Var_14    C13  C9   N1   C8    -91.57  30.0  3
+ V4M  Var_15    C10  C9   N1   C8    143.19  30.0  3
+ V4M  Var_16    C13  C9   C10  C11    57.99  30.0  1
+ V4M  Var_17    O2   C13  C9   N1     20.11  30.0  1
+ V4M  Var_18    O2   C13  C9   C10   147.28  30.0  1
+ V4M  Var_19    H9   C10  C9   N1    -56.23  30.0  1
+ V4M  Var_20    H10  C10  C9   N1     62.30  30.0  1
+ V4M  Var_21    H8   C9   C13  N2     82.82  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

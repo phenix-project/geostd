@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SSA  SSA  5'-O-(L-serylsulfamoyl)adenosine  ligand  48  29  .  2021-08-23  2021-08-23  
+ SSA  SSA  5'-O-(L-serylsulfamoyl)adenosine  ligand  48  29  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_SSA
@@ -249,38 +250,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SSA  CONST_01  C5    N7   C8   N9     0.00   0.0  0
- SSA  CONST_02  N7    C5   C4   N9     0.00   0.0  0
- SSA  CONST_03  C6    C5   C4   N9   180.00   0.0  0
- SSA  CONST_04  C2    N3   C4   N9   180.00   0.0  0
- SSA  CONST_05  C5    C4   N9   C8     0.00   0.0  0
- SSA  CONST_06  N3    C4   N9   C8   180.00   0.0  0
- SSA  CONST_07  C6    C5   N7   C8   180.00   0.0  0
- SSA  CONST_08  C4    C5   N7   C8     0.00   0.0  0
- SSA  CONST_09  C4    N9   C8   N7     0.00   0.0  0
- SSA  CONST_10  N1    C6   C5   N7   180.00   0.0  0
- SSA  CONST_11  N3    C4   C5   N7   180.00   0.0  0
- SSA  CONST_12  C2    N1   C6   C5     0.00   0.0  0
- SSA  CONST_13  C2    N3   C4   C5     0.00   0.0  0
- SSA  CONST_14  N3    C4   C5   C6     0.00   0.0  0
- SSA  CONST_15  N3    C2   N1   C6     0.00   0.0  0
- SSA  CONST_16  C4    C5   C6   N1     0.00   0.0  0
- SSA  CONST_17  C4    N3   C2   N1     0.00   0.0  0
- SSA  CONST_18  N7    C8   N9   C1'  180.00   0.0  0
- SSA  CONST_19  C5    C4   N9   C1'  180.00   0.0  0
- SSA  CONST_20  N3    C4   N9   C1'    0.00   0.0  0
- SSA  CONST_21  N6    C6   C5   N7     0.00   0.0  0
- SSA  CONST_22  C4    C5   C6   N6   180.00   0.0  0
- SSA  CONST_23  C2    N1   C6   N6   180.00   0.0  0
- SSA  CONST_24  H8    C8   N9   C1'    0.00   0.0  0
- SSA  CONST_25  H2    C2   N1   C6   180.00   0.0  0
- SSA  CONST_26  HN61  N6   C6   C5   180.00   0.0  0
- SSA  CONST_27  HN62  N6   C6   C5     0.00   0.0  0
- SSA  CONST_28  S1    N8   C9   CA   180.00   0.0  0
- SSA  CONST_29  S1    N8   C9   O9     0.00   0.0  0
- SSA  CONST_30  HN8   N8   C9   CA     0.00   0.0  0
- SSA  Var_01    C4'   C5'  O5'  S1   176.57  30.0  3
- SSA  Var_02    O1S   S1   N8   C9   176.02  30.0  3
+ SSA  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ SSA  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ SSA  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ SSA  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ SSA  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ SSA  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ SSA  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ SSA  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ SSA  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ SSA  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ SSA  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ SSA  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ SSA  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ SSA  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ SSA  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ SSA  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ SSA  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ SSA  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ SSA  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ SSA  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ SSA  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ SSA  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ SSA  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ SSA  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ SSA  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ SSA  CONST_26  HN61  N6   C6   C5    180.00   0.0  0
+ SSA  CONST_27  HN62  N6   C6   C5      0.00   0.0  0
+ SSA  CONST_28  S1    N8   C9   CA    180.00   0.0  0
+ SSA  CONST_29  S1    N8   C9   O9      0.00   0.0  0
+ SSA  CONST_30  HN8   N8   C9   CA      0.00   0.0  0
+ SSA  Var_01    C4'   C5'  O5'  S1    176.57  30.0  3
+ SSA  Var_02    O1S   S1   N8   C9    176.02  30.0  3
+ SSA  Var_03    C2'   C1'  O4'  C4'   -19.35  30.0  1
+ SSA  Var_04    N9    C1'  O4'  C4'  -143.15  30.0  1
+ SSA  Var_05    C1'   C2'  C3'  C4'   -37.59  30.0  1
+ SSA  Var_06    C2'   C3'  C4'  O4'    27.76  30.0  1
+ SSA  Var_07    C3'   C2'  C1'  O4'    35.84  30.0  1
+ SSA  Var_08    C8    N9   C1'  O4'    64.16  30.0  2
+ SSA  Var_09    C4    N9   C1'  O4'  -110.43  30.0  2
+ SSA  Var_10    C1'   O4'  C4'  C3'    -5.64  30.0  1
+ SSA  Var_11    N9    C1'  C2'  C3'   156.30  30.0  1
+ SSA  Var_12    C8    N9   C1'  C2'   -54.05  30.0  2
+ SSA  Var_13    C4    N9   C1'  C2'   131.36  30.0  2
+ SSA  Var_14    C1'   O4'  C4'  C5'   115.88  30.0  1
+ SSA  Var_15    C2'   C3'  C4'  C5'   -92.92  30.0  1
+ SSA  Var_16    O2'   C2'  C3'  C4'  -155.72  30.0  1
+ SSA  Var_17    O3'   C3'  C4'  O4'   -88.94  30.0  1
+ SSA  Var_18    O2'   C2'  C1'  O4'   157.61  30.0  1
+ SSA  Var_19    C1'   C2'  C3'  O3'    76.95  30.0  1
+ SSA  Var_20    N9    C1'  C2'  O2'   -81.92  30.0  1
+ SSA  Var_21    H1'   C1'  O4'  C4'    99.87  30.0  1
+ SSA  Var_22    H2'   C2'  C3'  C4'    78.22  30.0  1
+ SSA  Var_23    H3'   C3'  C4'  O4'   147.32  30.0  1
+ SSA  Var_24    H4'   C4'  C3'  C2'   146.02  30.0  1
+ SSA  Var_25    O4'   C4'  C5'  O5'    57.71  30.0  3
+ SSA  Var_26    C3'   C4'  C5'  O5'   176.00  30.0  3
+ SSA  Var_27    O3'   C3'  C4'  C5'   150.38  30.0  1
+ SSA  Var_28    O2'   C2'  C3'  O3'   -41.18  30.0  1
+ SSA  Var_29    HO3'  O3'  C3'  C4'   160.30  30.0  3
+ SSA  Var_30    H5'1  C5'  C4'  O4'   -62.06  30.0  2
+ SSA  Var_31    H5'2  C5'  C4'  O4'   177.02  30.0  2
+ SSA  Var_32    HO2'  O2'  C2'  C3'   -86.57  30.0  3
+ SSA  Var_33    OG    CB   CA   N10   -64.13  30.0  3
+ SSA  Var_34    O9    C9   CA   N10   -52.28  30.0  3
+ SSA  Var_35    N8    C9   CA   N10   127.79  30.0  3
+ SSA  Var_36    O9    C9   CA   CB     73.40  30.0  3
+ SSA  Var_37    N8    C9   CA   CB   -106.53  30.0  3
+ SSA  Var_38    C9    CA   CB   OG    174.77  30.0  3
+ SSA  Var_39    C5'   O5'  S1   N8     62.68  30.0  3
+ SSA  Var_40    C5'   O5'  S1   O1S   -49.33  30.0  2
+ SSA  Var_41    C5'   O5'  S1   O2S   178.38  30.0  2
+ SSA  Var_42    HB1   CB   CA   N10    57.21  30.0  3
+ SSA  Var_43    HB2   CB   CA   N10   174.28  30.0  3
+ SSA  Var_44    HOG   OG   CB   CA    175.02  30.0  3
+ SSA  Var_45    HN11  N10  CA   CB     62.77  30.0  3
+ SSA  Var_46    HN12  N10  CA   CB    -54.10  30.0  3
+ SSA  Var_47    HA    CA   CB   OG     56.49  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OGN  OGN  'N-[(2Z,3R,4R,5R,6R)-4,5-dihydroxy-6-(hydroxymethyl)-2-{[(phenylcarbamoyl)oxy]imino}tetrahydro-2H-pyran-3-yl]acetamide (non-preferred name)'  ligand  44  25  .  2021-08-17  2021-08-17  
+ OGN  OGN  'N-[(2Z,3R,4R,5R,6R)-4,5-dihydroxy-6-(hydroxymethyl)-2-{[(phenylcarbamoyl)oxy]imino}tetrahydro-2H-pyran-3-yl]acetamide (non-preferred name)'  ligand  44  25  .  2021-08-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OGN
@@ -229,29 +230,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OGN  CONST_01  CAV   CAU  CAT  CAS    0.00   0.0  0
- OGN  CONST_02  CAV   CAW  CAX  CAS    0.00   0.0  0
- OGN  CONST_03  CAW   CAX  CAS  CAT    0.00   0.0  0
- OGN  CONST_04  CAW   CAV  CAU  CAT    0.00   0.0  0
- OGN  CONST_05  CAX   CAS  CAT  CAU    0.00   0.0  0
- OGN  CONST_06  CAX   CAW  CAV  CAU    0.00   0.0  0
- OGN  CONST_07  CAU   CAT  CAS  NAO  180.00   0.0  0
- OGN  CONST_08  CAW   CAX  CAS  NAO  180.00   0.0  0
- OGN  CONST_09  HAU   CAU  CAT  CAS  180.00   0.0  0
- OGN  CONST_10  HAW   CAW  CAX  CAS  180.00   0.0  0
- OGN  CONST_11  HAX   CAX  CAS  CAT  180.00   0.0  0
- OGN  CONST_12  HAV   CAV  CAU  CAT  180.00   0.0  0
- OGN  CONST_13  HAT   CAT  CAU  CAV  180.00   0.0  0
- OGN  CONST_14  CAT   CAS  NAO  CAP    0.00   0.0  0
- OGN  CONST_15  CAX   CAS  NAO  CAP  180.00   0.0  0
- OGN  CONST_16  HNAO  NAO  CAS  CAT  180.00   0.0  0
- OGN  CONST_17  CAH   CAG  NAI  CAB  180.00   0.0  0
- OGN  CONST_18  OAN   CAG  NAI  CAB    0.00   0.0  0
- OGN  CONST_19  CAS   NAO  CAP  OAQ  180.00   0.0  0
- OGN  CONST_20  CAS   NAO  CAP  OAR    0.00   0.0  0
- OGN  CONST_21  HNAI  NAI  CAG  CAH    0.00   0.0  0
- OGN  Var_01    NAY   CAA  OAL  CAE  151.87  30.0  1
- OGN  Var_02    HAH   CAH  CAG  NAI  104.95  30.0  3
+ OGN  CONST_01  CAV   CAU  CAT  CAS     0.00   0.0  0
+ OGN  CONST_02  CAV   CAW  CAX  CAS     0.00   0.0  0
+ OGN  CONST_03  CAW   CAX  CAS  CAT     0.00   0.0  0
+ OGN  CONST_04  CAW   CAV  CAU  CAT     0.00   0.0  0
+ OGN  CONST_05  CAX   CAS  CAT  CAU     0.00   0.0  0
+ OGN  CONST_06  CAX   CAW  CAV  CAU     0.00   0.0  0
+ OGN  CONST_07  CAU   CAT  CAS  NAO   180.00   0.0  0
+ OGN  CONST_08  CAW   CAX  CAS  NAO   180.00   0.0  0
+ OGN  CONST_09  HAU   CAU  CAT  CAS   180.00   0.0  0
+ OGN  CONST_10  HAW   CAW  CAX  CAS   180.00   0.0  0
+ OGN  CONST_11  HAX   CAX  CAS  CAT   180.00   0.0  0
+ OGN  CONST_12  HAV   CAV  CAU  CAT   180.00   0.0  0
+ OGN  CONST_13  HAT   CAT  CAU  CAV   180.00   0.0  0
+ OGN  CONST_14  CAT   CAS  NAO  CAP     0.00   0.0  0
+ OGN  CONST_15  CAX   CAS  NAO  CAP   180.00   0.0  0
+ OGN  CONST_16  HNAO  NAO  CAS  CAT   180.00   0.0  0
+ OGN  CONST_17  CAH   CAG  NAI  CAB   180.00   0.0  0
+ OGN  CONST_18  OAN   CAG  NAI  CAB     0.00   0.0  0
+ OGN  CONST_19  CAS   NAO  CAP  OAQ   180.00   0.0  0
+ OGN  CONST_20  CAS   NAO  CAP  OAR     0.00   0.0  0
+ OGN  CONST_21  HNAI  NAI  CAG  CAH     0.00   0.0  0
+ OGN  Var_01    NAY   CAA  OAL  CAE   151.87  30.0  1
+ OGN  Var_02    HAH   CAH  CAG  NAI   104.95  30.0  3
+ OGN  Var_03    CAD   CAC  CAB  CAA   -48.82  30.0  1
+ OGN  Var_04    CAD   CAE  OAL  CAA    44.74  30.0  1
+ OGN  Var_05    CAE   CAD  CAC  CAB    61.17  30.0  1
+ OGN  Var_06    OAL   CAA  CAB  CAC    35.33  30.0  1
+ OGN  Var_07    OAL   CAE  CAD  CAC   -57.81  30.0  1
+ OGN  Var_08    OAJ   CAC  CAB  CAA  -171.73  30.0  1
+ OGN  Var_09    CAF   CAE  OAL  CAA   169.17  30.0  1
+ OGN  Var_10    OAK   CAD  CAC  CAB   -61.23  30.0  1
+ OGN  Var_11    NAY   CAA  CAB  CAC  -149.95  30.0  1
+ OGN  Var_12    CAF   CAE  CAD  CAC  -178.72  30.0  1
+ OGN  Var_13    NAI   CAB  CAC  CAD  -174.26  30.0  1
+ OGN  Var_14    OAJ   CAC  CAD  CAE  -179.54  30.0  1
+ OGN  Var_15    OAL   CAA  CAB  NAI   160.72  30.0  1
+ OGN  Var_16    OAL   CAE  CAD  OAK    61.95  30.0  1
+ OGN  Var_17    HAC   CAC  CAB  CAA    67.73  30.0  1
+ OGN  Var_18    HAE   CAE  OAL  CAA   -73.86  30.0  1
+ OGN  Var_19    HAD   CAD  CAC  CAB   177.07  30.0  1
+ OGN  Var_20    HAB   CAB  CAC  CAD    67.68  30.0  1
+ OGN  Var_21    OAQ   NAY  CAA  CAB  -176.49   0.0  2
+ OGN  Var_22    OAQ   NAY  CAA  OAL    -1.91   0.0  2
+ OGN  Var_23    CAG   NAI  CAB  CAA   101.52  30.0  3
+ OGN  Var_24    CAG   NAI  CAB  CAC  -133.42  30.0  3
+ OGN  Var_25    OAM   CAF  CAE  CAD  -172.41  30.0  3
+ OGN  Var_26    OAK   CAD  CAE  CAF   -58.97  30.0  1
+ OGN  Var_27    NAY   CAA  CAB  NAI   -24.56  30.0  1
+ OGN  Var_28    OAJ   CAC  CAB  NAI    62.83  30.0  1
+ OGN  Var_29    OAK   CAD  CAC  OAJ    58.06  30.0  1
+ OGN  Var_30    OAM   CAF  CAE  OAL    64.37  30.0  3
+ OGN  Var_31    HNAI  NAI  CAB  CAA   -70.00  30.0  3
+ OGN  Var_32    HOAJ  OAJ  CAC  CAB  -167.35  30.0  3
+ OGN  Var_33    HOAK  OAK  CAD  CAC  -156.92  30.0  3
+ OGN  Var_34    HAF   CAF  CAE  CAD   -51.26  30.0  3
+ OGN  Var_35    HAFA  CAF  CAE  CAD    64.91  30.0  3
+ OGN  Var_36    CAP   OAQ  NAY  CAA  -171.92  30.0  1
+ OGN  Var_37    HOAM  OAM  CAF  CAE  -178.25  30.0  3
+ OGN  Var_38    NAY   OAQ  CAP  NAO  -174.94  30.0  3
+ OGN  Var_39    NAY   OAQ  CAP  OAR     5.45  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

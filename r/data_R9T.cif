@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- R9T  R9T  (1~{R})-1-[(3,4-dimethoxyphenyl)methyl]-6,7-dimethoxy-1,2,3,4-tetrahydroisoquinoline  ligand  50  25  .  2022-03-23  2022-03-23
+ R9T  R9T  (1~{R})-1-[(3,4-dimethoxyphenyl)methyl]-6,7-dimethoxy-1,2,3,4-tetrahydroisoquinoline  ligand  50  25  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_R9T
@@ -258,41 +259,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- R9T  CONST_01  C5   C4   C3   C8     0.00   0.0  0
- R9T  CONST_02  C5   C6   C7   C8     0.00   0.0  0
- R9T  CONST_03  C6   C7   C8   C3     0.00   0.0  0
- R9T  CONST_04  C6   C5   C4   C3     0.00   0.0  0
- R9T  CONST_05  C4   C3   C8   C7     0.00   0.0  0
- R9T  CONST_06  C4   C5   C6   C7     0.00   0.0  0
- R9T  CONST_07  C15  C14  C13  C12    0.00   0.0  0
- R9T  CONST_08  C15  C16  C17  C12    0.00   0.0  0
- R9T  CONST_09  C16  C15  C14  C13    0.00   0.0  0
- R9T  CONST_10  C16  C17  C12  C13    0.00   0.0  0
- R9T  CONST_11  C14  C15  C16  C17    0.00   0.0  0
- R9T  CONST_12  C14  C13  C12  C17    0.00   0.0  0
- R9T  CONST_13  C8   C7   C6   O19  180.00   0.0  0
- R9T  CONST_14  C4   C5   C6   O19  180.00   0.0  0
- R9T  CONST_15  C3   C4   C5   O18  180.00   0.0  0
- R9T  CONST_16  C7   C6   C5   O18  180.00   0.0  0
- R9T  CONST_17  C16  C15  C14  O22  180.00   0.0  0
- R9T  CONST_18  C12  C13  C14  O22  180.00   0.0  0
- R9T  CONST_19  C13  C14  C15  O23  180.00   0.0  0
- R9T  CONST_20  C17  C16  C15  O23  180.00   0.0  0
- R9T  CONST_21  C14  C13  C12  C11  180.00   0.0  0
- R9T  CONST_22  C16  C17  C12  C11  180.00   0.0  0
- R9T  CONST_23  H10  C7   C8   C9     0.00   0.0  0
- R9T  CONST_24  H11  C4   C3   C8   180.00   0.0  0
- R9T  CONST_25  H14  C16  C17  C12  180.00   0.0  0
- R9T  CONST_26  H13  C17  C12  C13  180.00   0.0  0
- R9T  CONST_27  H12  C13  C12  C17  180.00   0.0  0
- R9T  Var_01    C3   C2   C1   N10   51.43  30.0  1
- R9T  Var_02    C2   C1   N10  C9   -61.73  30.0  1
- R9T  Var_03    C1   C2   C3   C8   -20.47  30.0  1
- R9T  Var_04    C13  C12  C11  C9   -98.55  30.0  2
- R9T  Var_05    H15  C21  O19  C6   -59.24  30.0  3
- R9T  Var_06    H18  C20  O18  C5    61.80  30.0  3
- R9T  Var_07    H21  C24  O22  C14  179.61  30.0  3
- R9T  Var_08    H24  C25  O23  C15  179.97  30.0  3
+ R9T  CONST_01  C5   C4   C3   C8      0.00   0.0  0
+ R9T  CONST_02  C5   C6   C7   C8      0.00   0.0  0
+ R9T  CONST_03  C6   C7   C8   C3      0.00   0.0  0
+ R9T  CONST_04  C6   C5   C4   C3      0.00   0.0  0
+ R9T  CONST_05  C4   C3   C8   C7      0.00   0.0  0
+ R9T  CONST_06  C4   C5   C6   C7      0.00   0.0  0
+ R9T  CONST_07  C15  C14  C13  C12     0.00   0.0  0
+ R9T  CONST_08  C15  C16  C17  C12     0.00   0.0  0
+ R9T  CONST_09  C16  C15  C14  C13     0.00   0.0  0
+ R9T  CONST_10  C16  C17  C12  C13     0.00   0.0  0
+ R9T  CONST_11  C14  C15  C16  C17     0.00   0.0  0
+ R9T  CONST_12  C14  C13  C12  C17     0.00   0.0  0
+ R9T  CONST_13  C8   C7   C6   O19   180.00   0.0  0
+ R9T  CONST_14  C4   C5   C6   O19   180.00   0.0  0
+ R9T  CONST_15  C3   C4   C5   O18   180.00   0.0  0
+ R9T  CONST_16  C7   C6   C5   O18   180.00   0.0  0
+ R9T  CONST_17  C16  C15  C14  O22   180.00   0.0  0
+ R9T  CONST_18  C12  C13  C14  O22   180.00   0.0  0
+ R9T  CONST_19  C13  C14  C15  O23   180.00   0.0  0
+ R9T  CONST_20  C17  C16  C15  O23   180.00   0.0  0
+ R9T  CONST_21  C14  C13  C12  C11   180.00   0.0  0
+ R9T  CONST_22  C16  C17  C12  C11   180.00   0.0  0
+ R9T  CONST_23  H10  C7   C8   C9      0.00   0.0  0
+ R9T  CONST_24  H11  C4   C3   C8    180.00   0.0  0
+ R9T  CONST_25  H14  C16  C17  C12   180.00   0.0  0
+ R9T  CONST_26  H13  C17  C12  C13   180.00   0.0  0
+ R9T  CONST_27  H12  C13  C12  C17   180.00   0.0  0
+ R9T  Var_01    C3   C2   C1   N10    51.43  30.0  1
+ R9T  Var_02    C2   C1   N10  C9    -61.73  30.0  1
+ R9T  Var_03    C1   C2   C3   C8    -20.47  30.0  1
+ R9T  Var_04    C13  C12  C11  C9    -98.55  30.0  2
+ R9T  Var_05    H15  C21  O19  C6    -59.24  30.0  3
+ R9T  Var_06    H18  C20  O18  C5     61.80  30.0  3
+ R9T  Var_07    H21  C24  O22  C14   179.61  30.0  3
+ R9T  Var_08    H24  C25  O23  C15   179.97  30.0  3
+ R9T  Var_09    C3   C8   C9   N10    -5.69  30.0  1
+ R9T  Var_10    C7   C8   C9   N10   177.18  30.0  1
+ R9T  Var_11    C1   N10  C9   C8     37.10  30.0  1
+ R9T  Var_12    C12  C11  C9   N10    60.43  30.0  3
+ R9T  Var_13    C12  C11  C9   C8   -172.86  30.0  3
+ R9T  Var_14    C11  C9   C8   C3   -129.21  30.0  1
+ R9T  Var_15    C11  C9   N10  C1    162.36  30.0  1
+ R9T  Var_16    C7   C8   C9   C11    53.65  30.0  1
+ R9T  Var_17    H1   N10  C9   C8    -84.21  30.0  1
+ R9T  Var_18    H3   C9   C8   C3    113.45  30.0  1
+ R9T  Var_19    C21  O19  C6   C7     -1.84  30.0  2
+ R9T  Var_20    C20  O18  C5   C4     -0.53  30.0  2
+ R9T  Var_21    C20  O18  C5   C6    178.59  30.0  2
+ R9T  Var_22    C21  O19  C6   C5    178.39  30.0  2
+ R9T  Var_23    C24  O22  C14  C13    -0.20  30.0  2
+ R9T  Var_24    C25  O23  C15  C14  -179.27  30.0  2
+ R9T  Var_25    C25  O23  C15  C16     0.47  30.0  2
+ R9T  Var_26    C24  O22  C14  C15   179.85  30.0  2
+ R9T  Var_27    H8   C11  C9   N10  -177.84  30.0  3
+ R9T  Var_28    H9   C11  C9   N10   -62.30  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

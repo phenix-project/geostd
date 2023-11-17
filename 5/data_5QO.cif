@@ -19,10 +19,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5QO  5QO  'None                     '  ligand  48  27  .  2021-08-04  2021-08-04  
+ 5QO  5QO  'None                     '  ligand  48  27  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5QO
@@ -260,50 +261,69 @@ _chem_comp_tor.period
  5QO  CONST_02  N4   C10  C13  C12     0.00   0.0  0
  5QO  CONST_03  C10  N4   C11  C12     0.00   0.0  0
  5QO  CONST_04  N4   C11  C12  C13     0.00   0.0  0
- 5QO  CONST_07  C11  N4   C10  C13     0.00   0.0  0
- 5QO  CONST_08  C11  C12  C13  C10     0.00   0.0  0
- 5QO  CONST_09  C7   C6   C5   C10   180.00   0.0  0
- 5QO  CONST_10  C4   C3   C5   C10   180.00   0.0  0
- 5QO  CONST_11  N2   C3   C5   C10     0.00   0.0  0
- 5QO  CONST_12  C6   C5   C10  N4    180.00   0.0  0
- 5QO  CONST_14  C5   C10  N4   C11   180.00   0.0  0
- 5QO  CONST_15  C5   C3   N2   C2    180.00   0.0  0
- 5QO  CONST_16  C4   C3   N2   C2      0.00   0.0  0
- 5QO  CONST_17  C4   N1   C1   C2      0.00   0.0  0
- 5QO  CONST_18  C6   C5   C3   N2    180.00   0.0  0
- 5QO  CONST_19  C8   C4   C3   N2    180.00   0.0  0
- 5QO  CONST_20  N1   C4   C3   N2      0.00   0.0  0
- 5QO  CONST_21  N1   C1   C2   N2      0.00   0.0  0
- 5QO  CONST_22  C7   C6   C5   C3      0.00   0.0  0
- 5QO  CONST_23  C7   C8   C4   C3      0.00   0.0  0
- 5QO  CONST_24  C1   N1   C4   C3      0.00   0.0  0
- 5QO  CONST_25  C1   C2   N2   C3      0.00   0.0  0
- 5QO  CONST_26  C8   C7   C6   C5      0.00   0.0  0
- 5QO  CONST_27  C8   C4   C3   C5      0.00   0.0  0
- 5QO  CONST_28  N1   C4   C3   C5    180.00   0.0  0
- 5QO  CONST_29  C4   C8   C7   C6      0.00   0.0  0
- 5QO  CONST_30  C4   C3   C5   C6      0.00   0.0  0
- 5QO  CONST_31  N1   C4   C8   C7    180.00   0.0  0
- 5QO  CONST_32  C1   N1   C4   C8    180.00   0.0  0
- 5QO  CONST_33  N2   C2   N3   C18     0.00   0.0  0
- 5QO  CONST_34  C1   C2   N3   C18   180.00   0.0  0
- 5QO  CONST_36  C18  C20  C21  C17     0.00   0.0  0
- 5QO  CONST_37  C9   C1   C2   N3      0.00   0.0  0
- 5QO  CONST_38  C9   C1   C2   N2    180.00   0.0  0
- 5QO  CONST_39  C9   C1   N1   C4    180.00   0.0  0
- 5QO  CONST_41  H4   C13  C12  C16     0.00   0.0  0
- 5QO  CONST_42  H5   N4   C11  C12   180.00   0.0  0
- 5QO  CONST_43  H16  C6   C5   C10     0.00   0.0  0
- 5QO  CONST_44  H18  C8   C4   C3    180.00   0.0  0
- 5QO  CONST_45  H17  C7   C6   C5    180.00   0.0  0
- 5QO  CONST_46  H15  N3   C2   N2    180.00   0.0  0
- 5QO  CONST_47  H3   N5   C16  C12   180.00   0.0  0
- 5QO  CONST_48  H10  C20  C21  C17   180.00   0.0  0
- 5QO  CONST_49  H9   C21  C20  C18   180.00   0.0  0
+ 5QO  CONST_05  C11  N4   C10  C13     0.00   0.0  0
+ 5QO  CONST_06  C11  C12  C13  C10     0.00   0.0  0
+ 5QO  CONST_07  C7   C6   C5   C10   180.00   0.0  0
+ 5QO  CONST_08  C4   C3   C5   C10   180.00   0.0  0
+ 5QO  CONST_09  N2   C3   C5   C10     0.00   0.0  0
+ 5QO  CONST_10  C6   C5   C10  N4    180.00   0.0  0
+ 5QO  CONST_11  C5   C10  N4   C11   180.00   0.0  0
+ 5QO  CONST_12  C5   C3   N2   C2    180.00   0.0  0
+ 5QO  CONST_13  C4   C3   N2   C2      0.00   0.0  0
+ 5QO  CONST_14  C4   N1   C1   C2      0.00   0.0  0
+ 5QO  CONST_15  C6   C5   C3   N2    180.00   0.0  0
+ 5QO  CONST_16  C8   C4   C3   N2    180.00   0.0  0
+ 5QO  CONST_17  N1   C4   C3   N2      0.00   0.0  0
+ 5QO  CONST_18  N1   C1   C2   N2      0.00   0.0  0
+ 5QO  CONST_19  C7   C6   C5   C3      0.00   0.0  0
+ 5QO  CONST_20  C7   C8   C4   C3      0.00   0.0  0
+ 5QO  CONST_21  C1   N1   C4   C3      0.00   0.0  0
+ 5QO  CONST_22  C1   C2   N2   C3      0.00   0.0  0
+ 5QO  CONST_23  C8   C7   C6   C5      0.00   0.0  0
+ 5QO  CONST_24  C8   C4   C3   C5      0.00   0.0  0
+ 5QO  CONST_25  N1   C4   C3   C5    180.00   0.0  0
+ 5QO  CONST_26  C4   C8   C7   C6      0.00   0.0  0
+ 5QO  CONST_27  C4   C3   C5   C6      0.00   0.0  0
+ 5QO  CONST_28  N1   C4   C8   C7    180.00   0.0  0
+ 5QO  CONST_29  C1   N1   C4   C8    180.00   0.0  0
+ 5QO  CONST_30  N2   C2   N3   C18     0.00   0.0  0
+ 5QO  CONST_31  C1   C2   N3   C18   180.00   0.0  0
+ 5QO  CONST_32  C18  C20  C21  C17     0.00   0.0  0
+ 5QO  CONST_33  C9   C1   C2   N3      0.00   0.0  0
+ 5QO  CONST_34  C9   C1   C2   N2    180.00   0.0  0
+ 5QO  CONST_35  C9   C1   N1   C4    180.00   0.0  0
+ 5QO  CONST_36  H4   C13  C12  C16     0.00   0.0  0
+ 5QO  CONST_37  H5   N4   C11  C12   180.00   0.0  0
+ 5QO  CONST_38  H16  C6   C5   C10     0.00   0.0  0
+ 5QO  CONST_39  H18  C8   C4   C3    180.00   0.0  0
+ 5QO  CONST_40  H17  C7   C6   C5    180.00   0.0  0
+ 5QO  CONST_41  H15  N3   C2   N2    180.00   0.0  0
+ 5QO  CONST_42  H3   N5   C16  C12   180.00   0.0  0
+ 5QO  CONST_43  H10  C20  C21  C17   180.00   0.0  0
+ 5QO  CONST_44  H9   C21  C20  C18   180.00   0.0  0
  5QO  Var_01    C13  C12  C16  N5   -171.75  30.0  2
  5QO  Var_02    C14  C15  N5   C16   -48.54  30.0  1
  5QO  Var_03    C20  C21  C17  C14   128.68  30.0  1
  5QO  Var_04    H19  C9   C1   C2    -61.54  30.0  2
+ 5QO  Var_05    C12  C11  C14  C15   -26.48  30.0  1
+ 5QO  Var_06    N4   C11  C14  C15   151.84  30.0  1
+ 5QO  Var_07    C21  C17  C14  C15   167.66  30.0  3
+ 5QO  Var_08    C11  C14  C15  N5     47.13  30.0  1
+ 5QO  Var_09    C17  C14  C15  N5    170.52  30.0  1
+ 5QO  Var_10    C17  C14  C11  C12  -149.29  30.0  1
+ 5QO  Var_11    C17  C14  C11  N4     29.03  30.0  1
+ 5QO  Var_12    C21  C17  C14  C11   -73.27  30.0  3
+ 5QO  Var_13    N3   C18  C20  C21  -146.16  30.0  3
+ 5QO  Var_14    C2   N3   C18  C20    75.81  30.0  3
+ 5QO  Var_15    C19  C18  C20  C21    93.28  30.0  3
+ 5QO  Var_16    C2   N3   C18  C19  -162.47  30.0  3
+ 5QO  Var_17    H7   C17  C14  C15   -66.59  30.0  3
+ 5QO  Var_18    H8   C17  C14  C15    48.88  30.0  3
+ 5QO  Var_19    H6   C14  C15  N5    -69.95  30.0  1
+ 5QO  Var_20    H11  C18  C20  C21   -26.18  30.0  3
+ 5QO  Var_21    H12  C19  C18  C20    58.29  30.0  3
+ 5QO  Var_22    H13  C19  C18  C20   179.13  30.0  3
+ 5QO  Var_23    H14  C19  C18  C20   -61.23  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

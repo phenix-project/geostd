@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- Y00  Y00  4-[2-[[(2R)-4-(4-hydroxyphenyl)butan-2-yl]amino]ethyl]benzene-1,2-diol  ligand  45  22  .  2021-08-25  2021-08-25  
+ Y00  Y00  4-[2-[[(2R)-4-(4-hydroxyphenyl)butan-2-yl]amino]ethyl]benzene-1,2-diol  ligand  45  22  .  2021-08-25  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_Y00
@@ -234,40 +235,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- Y00  CONST_01  C13  C14  C15  C16     0.00   0.0  0
- Y00  CONST_02  C13  C18  C17  C16     0.00   0.0  0
- Y00  CONST_03  C18  C17  C16  C15     0.00   0.0  0
- Y00  CONST_04  C18  C13  C14  C15     0.00   0.0  0
- Y00  CONST_05  C17  C16  C15  C14     0.00   0.0  0
- Y00  CONST_06  C17  C18  C13  C14     0.00   0.0  0
- Y00  CONST_07  C5   C6   C7   C2      0.00   0.0  0
- Y00  CONST_08  C5   C4   C3   C2      0.00   0.0  0
- Y00  CONST_09  C4   C3   C2   C7      0.00   0.0  0
- Y00  CONST_10  C4   C5   C6   C7      0.00   0.0  0
- Y00  CONST_11  C3   C2   C7   C6      0.00   0.0  0
- Y00  CONST_12  C3   C4   C5   C6      0.00   0.0  0
- Y00  CONST_13  C14  C15  C16  O3    180.00   0.0  0
- Y00  CONST_14  C18  C17  C16  O3    180.00   0.0  0
- Y00  CONST_15  C12  C13  C14  C15   180.00   0.0  0
- Y00  CONST_16  C12  C13  C18  C17   180.00   0.0  0
- Y00  CONST_17  C6   C7   C2   C1    180.00   0.0  0
- Y00  CONST_18  C4   C3   C2   C1    180.00   0.0  0
- Y00  CONST_19  O1   C6   C7   C2    180.00   0.0  0
- Y00  CONST_20  O2   C5   C6   C7    180.00   0.0  0
- Y00  CONST_21  C4   C5   C6   O1    180.00   0.0  0
- Y00  CONST_22  C3   C4   C5   O2    180.00   0.0  0
- Y00  CONST_23  H14  C14  C15  C16   180.00   0.0  0
- Y00  CONST_24  H18  C18  C17  C16   180.00   0.0  0
- Y00  CONST_25  H17  C17  C16  C15   180.00   0.0  0
- Y00  CONST_26  H15  C15  C16  C17   180.00   0.0  0
- Y00  CONST_27  H4   C4   C3   C2    180.00   0.0  0
- Y00  CONST_28  HA   C3   C2   C7    180.00   0.0  0
- Y00  CONST_29  H7   C7   C6   C5    180.00   0.0  0
- Y00  Var_01    C11  C12  C13  C14    81.38  30.0  2
- Y00  Var_02    C7   C2   C1   C8     81.52  30.0  2
- Y00  Var_03    C9   C11  C12  C13  -177.03  30.0  3
- Y00  Var_04    C2   C1   C8   N1    179.22  30.0  3
- Y00  Var_05    C1   C8   N1   C9   -174.84  30.0  3
+ Y00  CONST_01  C13   C14  C15  C16     0.00   0.0  0
+ Y00  CONST_02  C13   C18  C17  C16     0.00   0.0  0
+ Y00  CONST_03  C18   C17  C16  C15     0.00   0.0  0
+ Y00  CONST_04  C18   C13  C14  C15     0.00   0.0  0
+ Y00  CONST_05  C17   C16  C15  C14     0.00   0.0  0
+ Y00  CONST_06  C17   C18  C13  C14     0.00   0.0  0
+ Y00  CONST_07  C5    C6   C7   C2      0.00   0.0  0
+ Y00  CONST_08  C5    C4   C3   C2      0.00   0.0  0
+ Y00  CONST_09  C4    C3   C2   C7      0.00   0.0  0
+ Y00  CONST_10  C4    C5   C6   C7      0.00   0.0  0
+ Y00  CONST_11  C3    C2   C7   C6      0.00   0.0  0
+ Y00  CONST_12  C3    C4   C5   C6      0.00   0.0  0
+ Y00  CONST_13  C14   C15  C16  O3    180.00   0.0  0
+ Y00  CONST_14  C18   C17  C16  O3    180.00   0.0  0
+ Y00  CONST_15  C12   C13  C14  C15   180.00   0.0  0
+ Y00  CONST_16  C12   C13  C18  C17   180.00   0.0  0
+ Y00  CONST_17  C6    C7   C2   C1    180.00   0.0  0
+ Y00  CONST_18  C4    C3   C2   C1    180.00   0.0  0
+ Y00  CONST_19  O1    C6   C7   C2    180.00   0.0  0
+ Y00  CONST_20  O2    C5   C6   C7    180.00   0.0  0
+ Y00  CONST_21  C4    C5   C6   O1    180.00   0.0  0
+ Y00  CONST_22  C3    C4   C5   O2    180.00   0.0  0
+ Y00  CONST_23  H14   C14  C15  C16   180.00   0.0  0
+ Y00  CONST_24  H18   C18  C17  C16   180.00   0.0  0
+ Y00  CONST_25  H17   C17  C16  C15   180.00   0.0  0
+ Y00  CONST_26  H15   C15  C16  C17   180.00   0.0  0
+ Y00  CONST_27  H4    C4   C3   C2    180.00   0.0  0
+ Y00  CONST_28  HA    C3   C2   C7    180.00   0.0  0
+ Y00  CONST_29  H7    C7   C6   C5    180.00   0.0  0
+ Y00  Var_01    C11   C12  C13  C14    81.38  30.0  2
+ Y00  Var_02    C7    C2   C1   C8     81.52  30.0  2
+ Y00  Var_03    C9    C11  C12  C13  -177.03  30.0  3
+ Y00  Var_04    C2    C1   C8   N1    179.22  30.0  3
+ Y00  Var_05    C1    C8   N1   C9   -174.84  30.0  3
+ Y00  Var_06    H3    O3   C16  C15   179.95  30.0  2
+ Y00  Var_07    HB    O1   C6   C7    179.37  30.0  2
+ Y00  Var_08    H2    O2   C5   C6   -178.97  30.0  2
+ Y00  Var_09    C10   C9   C11  C12   173.83  30.0  3
+ Y00  Var_10    N1    C9   C11  C12   -59.65  30.0  3
+ Y00  Var_11    C8    N1   C9   C11   165.60  30.0  3
+ Y00  Var_12    C8    N1   C9   C10   -69.81  30.0  3
+ Y00  Var_13    H9    C9   C11  C12    55.84  30.0  3
+ Y00  Var_14    H101  C10  C9   C11  -178.93  30.0  3
+ Y00  Var_15    H102  C10  C9   C11   -58.88  30.0  3
+ Y00  Var_16    H103  C10  C9   C11    60.82  30.0  3
+ Y00  Var_17    H1    N1   C9   C11   -70.64  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

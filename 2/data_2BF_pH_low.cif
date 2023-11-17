@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2BF  2BF  '[(R)-(benzylamino)(phenyl)methyl]phosphonic acid'  ligand  35  19  .  2021-08-04  2021-08-04  
+ 2BF  2BF  '[(R)-(benzylamino)(phenyl)methyl]phosphonic acid'  ligand  35  19  .  2021-08-04  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_2BF
@@ -195,34 +196,50 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2BF  CONST_01  C4   C3   C2   C1      0.00   0.0  0
- 2BF  CONST_02  C4   C5   C6   C1      0.00   0.0  0
- 2BF  CONST_03  C5   C6   C1   C2      0.00   0.0  0
- 2BF  CONST_04  C5   C4   C3   C2      0.00   0.0  0
- 2BF  CONST_05  C6   C1   C2   C3      0.00   0.0  0
- 2BF  CONST_06  C6   C5   C4   C3      0.00   0.0  0
- 2BF  CONST_07  C11  C10  C9   C8      0.00   0.0  0
- 2BF  CONST_08  C11  C12  C13  C8      0.00   0.0  0
- 2BF  CONST_09  C12  C13  C8   C9      0.00   0.0  0
- 2BF  CONST_10  C12  C11  C10  C9      0.00   0.0  0
- 2BF  CONST_11  C13  C8   C9   C10     0.00   0.0  0
- 2BF  CONST_12  C13  C12  C11  C10     0.00   0.0  0
- 2BF  CONST_13  C7   C5   C6   C1    180.00   0.0  0
- 2BF  CONST_14  C7   C5   C4   C3    180.00   0.0  0
- 2BF  CONST_15  C19  C8   C9   C10   180.00   0.0  0
- 2BF  CONST_16  C19  C8   C13  C12   180.00   0.0  0
- 2BF  CONST_17  H3   C3   C2   C1    180.00   0.0  0
- 2BF  CONST_18  H6   C6   C1   C2    180.00   0.0  0
- 2BF  CONST_19  H4   C4   C3   C2    180.00   0.0  0
- 2BF  CONST_20  H1   C1   C2   C3    180.00   0.0  0
- 2BF  CONST_21  H2   C2   C3   C4    180.00   0.0  0
- 2BF  CONST_22  H10  C10  C9   C8    180.00   0.0  0
- 2BF  CONST_23  H12  C12  C13  C8    180.00   0.0  0
- 2BF  CONST_24  H13  C13  C8   C9    180.00   0.0  0
- 2BF  CONST_25  H11  C11  C10  C9    180.00   0.0  0
- 2BF  CONST_26  H9   C9   C10  C11   180.00   0.0  0
- 2BF  Var_01    N    C19  C8   C9     45.97  30.0  2
- 2BF  Var_02    C8   C19  N    C7   -166.22  30.0  3
+ 2BF  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ 2BF  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ 2BF  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ 2BF  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ 2BF  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ 2BF  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ 2BF  CONST_07  C11   C10  C9   C8      0.00   0.0  0
+ 2BF  CONST_08  C11   C12  C13  C8      0.00   0.0  0
+ 2BF  CONST_09  C12   C13  C8   C9      0.00   0.0  0
+ 2BF  CONST_10  C12   C11  C10  C9      0.00   0.0  0
+ 2BF  CONST_11  C13   C8   C9   C10     0.00   0.0  0
+ 2BF  CONST_12  C13   C12  C11  C10     0.00   0.0  0
+ 2BF  CONST_13  C7    C5   C6   C1    180.00   0.0  0
+ 2BF  CONST_14  C7    C5   C4   C3    180.00   0.0  0
+ 2BF  CONST_15  C19   C8   C9   C10   180.00   0.0  0
+ 2BF  CONST_16  C19   C8   C13  C12   180.00   0.0  0
+ 2BF  CONST_17  H3    C3   C2   C1    180.00   0.0  0
+ 2BF  CONST_18  H6    C6   C1   C2    180.00   0.0  0
+ 2BF  CONST_19  H4    C4   C3   C2    180.00   0.0  0
+ 2BF  CONST_20  H1    C1   C2   C3    180.00   0.0  0
+ 2BF  CONST_21  H2    C2   C3   C4    180.00   0.0  0
+ 2BF  CONST_22  H10   C10  C9   C8    180.00   0.0  0
+ 2BF  CONST_23  H12   C12  C13  C8    180.00   0.0  0
+ 2BF  CONST_24  H13   C13  C8   C9    180.00   0.0  0
+ 2BF  CONST_25  H11   C11  C10  C9    180.00   0.0  0
+ 2BF  CONST_26  H9    C9   C10  C11   180.00   0.0  0
+ 2BF  Var_01    N     C19  C8   C9     45.97  30.0  2
+ 2BF  Var_02    C8    C19  N    C7   -166.22  30.0  3
+ 2BF  Var_03    P     C7   C5   C4     98.13  30.0  2
+ 2BF  Var_04    N     C7   C5   C4   -137.10  30.0  2
+ 2BF  Var_05    P     C7   C5   C6    -80.23  30.0  2
+ 2BF  Var_06    N     C7   C5   C6     44.53  30.0  2
+ 2BF  Var_07    H7    C7   C5   C4    -17.73  30.0  2
+ 2BF  Var_08    O1P   P    C7   C5     75.73  30.0  3
+ 2BF  Var_09    O2P   P    C7   C5    -51.85  30.0  3
+ 2BF  Var_10    O3P   P    C7   C5   -157.70  30.0  3
+ 2BF  Var_11    C19   N    C7   C5    158.47  30.0  3
+ 2BF  Var_12    HN    N    C7   C5    -73.91  30.0  3
+ 2BF  Var_13    C19   N    C7   P     -79.78  30.0  3
+ 2BF  Var_14    N     C7   P    O1P   -48.64  30.0  2
+ 2BF  Var_15    N     C7   P    O2P  -176.22  30.0  2
+ 2BF  Var_16    N     C7   P    O3P    77.93  30.0  2
+ 2BF  Var_17    HOP2  O2P  P    C7     83.37  30.0  3
+ 2BF  Var_18    HOP3  O3P  P    C7   -157.52  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

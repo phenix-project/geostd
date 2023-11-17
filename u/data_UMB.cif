@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UMB  UMB  ~{N}2-methyl-~{N}4-(3-oxidanylcyclobutyl)-6-(phenylmethyl)pyridine-2,4-dicarboxamide  ligand  46  25  .  2022-03-29  2022-03-29
+ UMB  UMB  ~{N}2-methyl-~{N}4-(3-oxidanylcyclobutyl)-6-(phenylmethyl)pyridine-2,4-dicarboxamide  ligand  46  25  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UMB
@@ -242,44 +243,59 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- UMB  CONST_01  C4   C3   C2   N1     0.00   0.0  0
- UMB  CONST_02  C4   C5   C6   N1     0.00   0.0  0
- UMB  CONST_03  C2   C3   C4   C5     0.00   0.0  0
- UMB  CONST_04  C2   N1   C6   C5     0.00   0.0  0
- UMB  CONST_05  C3   C2   N1   C6     0.00   0.0  0
- UMB  CONST_06  C3   C4   C5   C6     0.00   0.0  0
- UMB  CONST_07  C11  C10  C9   C8     0.00   0.0  0
- UMB  CONST_08  C11  C12  C13  C8     0.00   0.0  0
- UMB  CONST_09  C13  C8   C9   C10    0.00   0.0  0
- UMB  CONST_10  C13  C12  C11  C10    0.00   0.0  0
- UMB  CONST_11  C9   C8   C13  C12    0.00   0.0  0
- UMB  CONST_12  C9   C10  C11  C12    0.00   0.0  0
- UMB  CONST_13  C1   C2   C3   C4   180.00   0.0  0
- UMB  CONST_14  C7   C6   C5   C4   180.00   0.0  0
- UMB  CONST_15  C1   C2   N1   C6   180.00   0.0  0
- UMB  CONST_16  C14  C4   C5   C6   180.00   0.0  0
- UMB  CONST_17  C2   N1   C6   C7   180.00   0.0  0
- UMB  CONST_18  C10  C9   C8   C7   180.00   0.0  0
- UMB  CONST_19  C12  C13  C8   C7   180.00   0.0  0
- UMB  CONST_20  C2   C3   C4   C14  180.00   0.0  0
- UMB  CONST_21  H14  C3   C2   N1   180.00   0.0  0
- UMB  CONST_22  H1   C5   C6   N1   180.00   0.0  0
- UMB  CONST_23  H4   C10  C9   C8   180.00   0.0  0
- UMB  CONST_24  H19  C12  C13  C8   180.00   0.0  0
- UMB  CONST_25  H21  C9   C8   C13  180.00   0.0  0
- UMB  CONST_26  H20  C11  C12  C13  180.00   0.0  0
- UMB  CONST_27  H5   C13  C12  C11  180.00   0.0  0
- UMB  CONST_28  C15  N2   C14  C4   180.00   0.0  0
- UMB  CONST_29  O1   C14  N2   C15    0.00   0.0  0
- UMB  CONST_30  C    N    C1   C2   180.00   0.0  0
- UMB  CONST_31  H8   N2   C14  C4     0.00   0.0  0
- UMB  CONST_32  H15  N    C1   C2     0.00   0.0  0
- UMB  CONST_33  C    N    C1   O      0.00   0.0  0
- UMB  Var_01    C8   C7   C6   N1    77.53  30.0  2
- UMB  Var_02    C9   C8   C7   C6   -91.44  30.0  2
- UMB  Var_03    O    C1   C2   N1   177.47  30.0  2
- UMB  Var_04    N2   C14  C4   C5   151.20  30.0  2
- UMB  Var_05    H16  C    N    C1   177.88  30.0  3
+ UMB  CONST_01  C4   C3   C2   N1      0.00   0.0  0
+ UMB  CONST_02  C4   C5   C6   N1      0.00   0.0  0
+ UMB  CONST_03  C2   C3   C4   C5      0.00   0.0  0
+ UMB  CONST_04  C2   N1   C6   C5      0.00   0.0  0
+ UMB  CONST_05  C3   C2   N1   C6      0.00   0.0  0
+ UMB  CONST_06  C3   C4   C5   C6      0.00   0.0  0
+ UMB  CONST_07  C11  C10  C9   C8      0.00   0.0  0
+ UMB  CONST_08  C11  C12  C13  C8      0.00   0.0  0
+ UMB  CONST_09  C13  C8   C9   C10     0.00   0.0  0
+ UMB  CONST_10  C13  C12  C11  C10     0.00   0.0  0
+ UMB  CONST_11  C9   C8   C13  C12     0.00   0.0  0
+ UMB  CONST_12  C9   C10  C11  C12     0.00   0.0  0
+ UMB  CONST_13  C1   C2   C3   C4    180.00   0.0  0
+ UMB  CONST_14  C7   C6   C5   C4    180.00   0.0  0
+ UMB  CONST_15  C1   C2   N1   C6    180.00   0.0  0
+ UMB  CONST_16  C14  C4   C5   C6    180.00   0.0  0
+ UMB  CONST_17  C2   N1   C6   C7    180.00   0.0  0
+ UMB  CONST_18  C10  C9   C8   C7    180.00   0.0  0
+ UMB  CONST_19  C12  C13  C8   C7    180.00   0.0  0
+ UMB  CONST_20  C2   C3   C4   C14   180.00   0.0  0
+ UMB  CONST_21  H14  C3   C2   N1    180.00   0.0  0
+ UMB  CONST_22  H1   C5   C6   N1    180.00   0.0  0
+ UMB  CONST_23  H4   C10  C9   C8    180.00   0.0  0
+ UMB  CONST_24  H19  C12  C13  C8    180.00   0.0  0
+ UMB  CONST_25  H21  C9   C8   C13   180.00   0.0  0
+ UMB  CONST_26  H20  C11  C12  C13   180.00   0.0  0
+ UMB  CONST_27  H5   C13  C12  C11   180.00   0.0  0
+ UMB  CONST_28  C15  N2   C14  C4    180.00   0.0  0
+ UMB  CONST_29  O1   C14  N2   C15     0.00   0.0  0
+ UMB  CONST_30  C    N    C1   C2    180.00   0.0  0
+ UMB  CONST_31  H8   N2   C14  C4      0.00   0.0  0
+ UMB  CONST_32  H15  N    C1   C2      0.00   0.0  0
+ UMB  CONST_33  C    N    C1   O       0.00   0.0  0
+ UMB  Var_01    C8   C7   C6   N1     77.53  30.0  2
+ UMB  Var_02    C9   C8   C7   C6    -91.44  30.0  2
+ UMB  Var_03    O    C1   C2   N1    177.47  30.0  2
+ UMB  Var_04    N2   C14  C4   C5    151.20  30.0  2
+ UMB  Var_05    H16  C    N    C1    177.88  30.0  3
+ UMB  Var_06    C16  C17  C18  C15    20.08  30.0  1
+ UMB  Var_07    O2   C17  C18  C15   -94.31  30.0  1
+ UMB  Var_08    O2   C17  C16  C15    90.44  30.0  1
+ UMB  Var_09    N2   C15  C18  C17  -142.52  30.0  1
+ UMB  Var_10    N2   C15  C16  C17   139.95  30.0  1
+ UMB  Var_11    H7   C17  C18  C15   138.30  30.0  1
+ UMB  Var_12    H6   C15  C18  C17    91.89  30.0  1
+ UMB  Var_13    H12  C16  C15  C18   141.09  30.0  1
+ UMB  Var_14    H13  C16  C15  C18   -91.88  30.0  1
+ UMB  Var_15    H9   C18  C15  C16    91.41  30.0  1
+ UMB  Var_16    H10  C18  C15  C16  -141.14  30.0  1
+ UMB  Var_17    C18  C15  N2   C14  -159.79  30.0  3
+ UMB  Var_18    C16  C15  N2   C14    96.03  30.0  3
+ UMB  Var_19    H8   N2   C15  C18    31.08  30.0  1
+ UMB  Var_20    H11  O2   C17  C18   163.57  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

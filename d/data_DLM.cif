@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DLM  DLM  3,5,7-trihydroxy-2-(3,4,5-trihydroxyphenyl)chromenium  ligand  33  22  .  2022-03-18  2022-03-18
+ DLM  DLM  3,5,7-trihydroxy-2-(3,4,5-trihydroxyphenyl)chromenium  ligand  33  22  .  2022-03-18  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DLM
@@ -185,53 +186,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DLM  CONST_03  C9   C10  C11  O12    0.00  0.0  0
- DLM  CONST_04  C6   C5   C4   O12  180.00  0.0  0
- DLM  CONST_05  C9   C3   C4   O12    0.00  0.0  0
- DLM  CONST_06  C2   C3   C4   O12  180.00  0.0  0
- DLM  CONST_07  C18  C19  C14  C11  180.00  0.0  0
- DLM  CONST_08  C16  C15  C14  C11  180.00  0.0  0
- DLM  CONST_09  C5   C4   O12  C11  180.00  0.0  0
- DLM  CONST_10  C3   C4   O12  C11    0.00  0.0  0
- DLM  CONST_11  C3   C9   C10  C11    0.00  0.0  0
- DLM  CONST_12  C17  C18  C19  C14    0.00  0.0  0
- DLM  CONST_13  C17  C16  C15  C14    0.00  0.0  0
- DLM  CONST_14  C4   O12  C11  C14  180.00  0.0  0
- DLM  CONST_15  C9   C10  C11  C14  180.00  0.0  0
- DLM  CONST_16  C18  C17  C16  C15    0.00  0.0  0
- DLM  CONST_17  C18  C19  C14  C15    0.00  0.0  0
- DLM  CONST_19  C4   C5   C6   C1     0.00  0.0  0
- DLM  CONST_20  C4   C3   C2   C1     0.00  0.0  0
- DLM  CONST_21  C9   C3   C2   C1   180.00  0.0  0
- DLM  CONST_22  C5   C4   C3   C2     0.00  0.0  0
- DLM  CONST_23  C10  C9   C3   C2   180.00  0.0  0
- DLM  CONST_24  C5   C6   C1   C2     0.00  0.0  0
- DLM  CONST_25  C6   C5   C4   C3     0.00  0.0  0
- DLM  CONST_26  C6   C1   C2   C3     0.00  0.0  0
- DLM  CONST_27  C16  C17  C18  C19    0.00  0.0  0
- DLM  CONST_28  C16  C15  C14  C19    0.00  0.0  0
- DLM  CONST_30  C4   O12  C11  C10    0.00  0.0  0
- DLM  CONST_31  C4   C3   C9   C10    0.00  0.0  0
- DLM  CONST_32  C5   C4   C3   C9   180.00  0.0  0
- DLM  CONST_33  O27  C10  C11  O12  180.00  0.0  0
- DLM  CONST_34  O22  C18  C19  C14  180.00  0.0  0
- DLM  CONST_35  O21  C16  C15  C14  180.00  0.0  0
- DLM  CONST_36  O27  C10  C11  C14    0.00  0.0  0
- DLM  CONST_37  O24  C17  C16  C15  180.00  0.0  0
- DLM  CONST_38  O29  C6   C1   C2   180.00  0.0  0
- DLM  CONST_39  C18  C17  C16  O21  180.00  0.0  0
- DLM  CONST_40  C16  C17  C18  O22  180.00  0.0  0
- DLM  CONST_41  O27  C10  C9   C3   180.00  0.0  0
- DLM  CONST_42  O24  C17  C18  C19  180.00  0.0  0
- DLM  CONST_43  O30  C2   C3   C9     0.00  0.0  0
- DLM  CONST_44  O29  C6   C5   C4   180.00  0.0  0
- DLM  CONST_45  O30  C2   C3   C4   180.00  0.0  0
- DLM  CONST_46  O30  C2   C1   C6   180.00  0.0  0
- DLM  CONST_47  H9   C5   C4   O12    0.00  0.0  0
- DLM  CONST_48  H5   C19  C14  C11    0.00  0.0  0
- DLM  CONST_49  H1   C15  C14  C11    0.00  0.0  0
- DLM  CONST_50  H8   C9   C10  C11  180.00  0.0  0
- DLM  CONST_51  H2   C1   C2   C3   180.00  0.0  0
+ DLM  CONST_01  C9   C10  C11  O12     0.00   0.0  0
+ DLM  CONST_02  C6   C5   C4   O12   180.00   0.0  0
+ DLM  CONST_03  C9   C3   C4   O12     0.00   0.0  0
+ DLM  CONST_04  C2   C3   C4   O12   180.00   0.0  0
+ DLM  CONST_05  C18  C19  C14  C11   180.00   0.0  0
+ DLM  CONST_06  C16  C15  C14  C11   180.00   0.0  0
+ DLM  CONST_07  C5   C4   O12  C11   180.00   0.0  0
+ DLM  CONST_08  C3   C4   O12  C11     0.00   0.0  0
+ DLM  CONST_09  C3   C9   C10  C11     0.00   0.0  0
+ DLM  CONST_10  C17  C18  C19  C14     0.00   0.0  0
+ DLM  CONST_11  C17  C16  C15  C14     0.00   0.0  0
+ DLM  CONST_12  C4   O12  C11  C14   180.00   0.0  0
+ DLM  CONST_13  C9   C10  C11  C14   180.00   0.0  0
+ DLM  CONST_14  C18  C17  C16  C15     0.00   0.0  0
+ DLM  CONST_15  C18  C19  C14  C15     0.00   0.0  0
+ DLM  CONST_16  C4   C5   C6   C1      0.00   0.0  0
+ DLM  CONST_17  C4   C3   C2   C1      0.00   0.0  0
+ DLM  CONST_18  C9   C3   C2   C1    180.00   0.0  0
+ DLM  CONST_19  C5   C4   C3   C2      0.00   0.0  0
+ DLM  CONST_20  C10  C9   C3   C2    180.00   0.0  0
+ DLM  CONST_21  C5   C6   C1   C2      0.00   0.0  0
+ DLM  CONST_22  C6   C5   C4   C3      0.00   0.0  0
+ DLM  CONST_23  C6   C1   C2   C3      0.00   0.0  0
+ DLM  CONST_24  C16  C17  C18  C19     0.00   0.0  0
+ DLM  CONST_25  C16  C15  C14  C19     0.00   0.0  0
+ DLM  CONST_26  C4   O12  C11  C10     0.00   0.0  0
+ DLM  CONST_27  C4   C3   C9   C10     0.00   0.0  0
+ DLM  CONST_28  C5   C4   C3   C9    180.00   0.0  0
+ DLM  CONST_29  O27  C10  C11  O12   180.00   0.0  0
+ DLM  CONST_30  O22  C18  C19  C14   180.00   0.0  0
+ DLM  CONST_31  O21  C16  C15  C14   180.00   0.0  0
+ DLM  CONST_32  O27  C10  C11  C14     0.00   0.0  0
+ DLM  CONST_33  O24  C17  C16  C15   180.00   0.0  0
+ DLM  CONST_34  O29  C6   C1   C2    180.00   0.0  0
+ DLM  CONST_35  C18  C17  C16  O21   180.00   0.0  0
+ DLM  CONST_36  C16  C17  C18  O22   180.00   0.0  0
+ DLM  CONST_37  O27  C10  C9   C3    180.00   0.0  0
+ DLM  CONST_38  O24  C17  C18  C19   180.00   0.0  0
+ DLM  CONST_39  O30  C2   C3   C9      0.00   0.0  0
+ DLM  CONST_40  O29  C6   C5   C4    180.00   0.0  0
+ DLM  CONST_41  O30  C2   C3   C4    180.00   0.0  0
+ DLM  CONST_42  O30  C2   C1   C6    180.00   0.0  0
+ DLM  CONST_43  H9   C5   C4   O12     0.00   0.0  0
+ DLM  CONST_44  H5   C19  C14  C11     0.00   0.0  0
+ DLM  CONST_45  H1   C15  C14  C11     0.00   0.0  0
+ DLM  CONST_46  H8   C9   C10  C11   180.00   0.0  0
+ DLM  CONST_47  H2   C1   C2   C3    180.00   0.0  0
+ DLM  Var_01    C19  C14  C11  O12   148.62  30.0  2
+ DLM  Var_02    C15  C14  C11  O12   -28.84  30.0  2
+ DLM  Var_03    C10  C11  C14  C15   149.24  30.0  2
+ DLM  Var_04    C10  C11  C14  C19   -33.30  30.0  2
+ DLM  Var_05    H7   O27  C10  C11  -179.66  30.0  2
+ DLM  Var_06    H3   O21  C16  C15   174.58  30.0  2
+ DLM  Var_07    H10  O29  C6   C1     -0.02  30.0  2
+ DLM  Var_08    H11  O30  C2   C1   -172.63  30.0  2
+ DLM  Var_09    H6   O24  C17  C18    90.94  30.0  2
+ DLM  Var_10    H4   O22  C18  C19  -175.27  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

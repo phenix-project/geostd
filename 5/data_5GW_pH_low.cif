@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5GW  5GW  '5-phenyluridine 5'-(trihydrogen diphosphate)'  ligand  49  31  .  2022-11-17  2022-11-17
+ 5GW  5GW  '5-phenyluridine 5'-(trihydrogen diphosphate)'  ligand  49  31  .  2022-11-17  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5GW
@@ -251,32 +252,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5GW  CONST_01  CAL  CAJ  CAK  CAM    0.00   0.0  0
- 5GW  CONST_02  CAL  CAN  CAU  CAM    0.00   0.0  0
- 5GW  CONST_03  CAN  CAU  CAM  CAK    0.00   0.0  0
- 5GW  CONST_04  CAN  CAL  CAJ  CAK    0.00   0.0  0
- 5GW  CONST_05  CAU  CAM  CAK  CAJ    0.00   0.0  0
- 5GW  CONST_06  CAU  CAN  CAL  CAJ    0.00   0.0  0
- 5GW  CONST_07  CAV  CAU  CAM  CAK  180.00   0.0  0
- 5GW  CONST_08  CAV  CAU  CAN  CAL  180.00   0.0  0
- 5GW  CONST_09  CAX  NAQ  CAW  CAV    0.00   0.0  0
- 5GW  CONST_10  NAQ  CAX  NBC  CAO    0.00   0.0  0
- 5GW  CONST_11  NBC  CAX  NAQ  CAW    0.00   0.0  0
- 5GW  CONST_12  C1'  NBC  CAX  NAQ  180.00   0.0  0
- 5GW  CONST_13  OAB  CAX  NBC  CAO  180.00   0.0  0
- 5GW  CONST_14  OAB  CAX  NAQ  CAW  180.00   0.0  0
- 5GW  CONST_15  CAX  NAQ  CAW  OAA  180.00   0.0  0
- 5GW  CONST_16  C1'  NBC  CAX  OAB    0.00   0.0  0
- 5GW  CONST_17  H3   CAJ  CAK  CAM  180.00   0.0  0
- 5GW  CONST_18  H5   CAN  CAU  CAM  180.00   0.0  0
- 5GW  CONST_19  H4   CAL  CAJ  CAK  180.00   0.0  0
- 5GW  CONST_20  H1   CAM  CAK  CAJ  180.00   0.0  0
- 5GW  CONST_21  H2   CAK  CAJ  CAL  180.00   0.0  0
- 5GW  CONST_22  H7   NAQ  CAW  CAV  180.00   0.0  0
- 5GW  Var_01    CAW  CAV  CAU  CAM  -47.72  30.0  2
- 5GW  Var_02    OAD  PBE  O5'  C5'  177.72  30.0  1
- 5GW  Var_03    OAH  PBD  OAT  PBE   40.47  30.0  3
- 5GW  Var_04    H14  C5'  O5'  PBE  116.77  30.0  3
+ 5GW  CONST_01  CAL  CAJ  CAK  CAM     0.00   0.0  0
+ 5GW  CONST_02  CAL  CAN  CAU  CAM     0.00   0.0  0
+ 5GW  CONST_03  CAN  CAU  CAM  CAK     0.00   0.0  0
+ 5GW  CONST_04  CAN  CAL  CAJ  CAK     0.00   0.0  0
+ 5GW  CONST_05  CAU  CAM  CAK  CAJ     0.00   0.0  0
+ 5GW  CONST_06  CAU  CAN  CAL  CAJ     0.00   0.0  0
+ 5GW  CONST_07  CAV  CAU  CAM  CAK   180.00   0.0  0
+ 5GW  CONST_08  CAV  CAU  CAN  CAL   180.00   0.0  0
+ 5GW  CONST_09  CAX  NAQ  CAW  CAV     0.00   0.0  0
+ 5GW  CONST_10  NAQ  CAX  NBC  CAO     0.00   0.0  0
+ 5GW  CONST_11  NBC  CAX  NAQ  CAW     0.00   0.0  0
+ 5GW  CONST_12  C1'  NBC  CAX  NAQ   180.00   0.0  0
+ 5GW  CONST_13  OAB  CAX  NBC  CAO   180.00   0.0  0
+ 5GW  CONST_14  OAB  CAX  NAQ  CAW   180.00   0.0  0
+ 5GW  CONST_15  CAX  NAQ  CAW  OAA   180.00   0.0  0
+ 5GW  CONST_16  C1'  NBC  CAX  OAB     0.00   0.0  0
+ 5GW  CONST_17  H3   CAJ  CAK  CAM   180.00   0.0  0
+ 5GW  CONST_18  H5   CAN  CAU  CAM   180.00   0.0  0
+ 5GW  CONST_19  H4   CAL  CAJ  CAK   180.00   0.0  0
+ 5GW  CONST_20  H1   CAM  CAK  CAJ   180.00   0.0  0
+ 5GW  CONST_21  H2   CAK  CAJ  CAL   180.00   0.0  0
+ 5GW  CONST_22  H7   NAQ  CAW  CAV   180.00   0.0  0
+ 5GW  Var_01    CAW  CAV  CAU  CAM   -47.72  30.0  2
+ 5GW  Var_02    OAD  PBE  O5'  C5'   177.72  30.0  1
+ 5GW  Var_03    OAH  PBD  OAT  PBE    40.47  30.0  3
+ 5GW  Var_04    H14  C5'  O5'  PBE   116.77  30.0  3
+ 5GW  Var_05    NAQ  CAW  CAV  CAU  -178.53  30.0  1
+ 5GW  Var_06    NBC  CAO  CAV  CAU   177.90  30.0  1
+ 5GW  Var_07    C2'  C1'  NBC  CAO  -101.55  30.0  3
+ 5GW  Var_08    O4'  C1'  NBC  CAO    17.31  30.0  3
+ 5GW  Var_09    C2'  C1'  NBC  CAX    79.45  30.0  3
+ 5GW  Var_10    O4'  C1'  NBC  CAX  -161.69  30.0  3
+ 5GW  Var_11    C3'  C2'  C1'  NBC    94.59  30.0  1
+ 5GW  Var_12    C4'  O4'  C1'  NBC  -120.05  30.0  1
+ 5GW  Var_13    C4'  C3'  C2'  C1'    37.36  30.0  1
+ 5GW  Var_14    C3'  C4'  O4'  C1'    22.66  30.0  1
+ 5GW  Var_15    C3'  C2'  C1'  O4'   -25.56  30.0  1
+ 5GW  Var_16    C2'  C3'  C4'  O4'   -37.68  30.0  1
+ 5GW  Var_17    C4'  O4'  C1'  C2'     1.95  30.0  1
+ 5GW  Var_18    OAA  CAW  CAV  CAU     0.83  30.0  1
+ 5GW  Var_19    O2'  C2'  C1'  NBC  -150.62  30.0  1
+ 5GW  Var_20    O3'  C3'  C2'  C1'   159.83  30.0  1
+ 5GW  Var_21    C5'  C4'  O4'  C1'   148.93  30.0  1
+ 5GW  Var_22    O2'  C2'  C1'  O4'    89.23  30.0  1
+ 5GW  Var_23    O3'  C3'  C4'  O4'  -158.79  30.0  1
+ 5GW  Var_24    C5'  C4'  C3'  C2'  -159.76  30.0  1
+ 5GW  Var_25    C4'  C3'  C2'  O2'   -79.21  30.0  1
+ 5GW  Var_26    H6   CAO  CAV  CAU    -2.44  30.0  1
+ 5GW  Var_27    H8   C1'  NBC  CAO   136.26  30.0  3
+ 5GW  Var_28    H9   C2'  C1'  NBC   -24.78  30.0  1
+ 5GW  Var_29    H11  C3'  C2'  C1'   -77.43  30.0  1
+ 5GW  Var_30    H13  C4'  O4'  C1'   -94.32  30.0  1
+ 5GW  Var_31    O5'  C5'  C4'  O4'   -64.57  30.0  3
+ 5GW  Var_32    O3'  C3'  C2'  O2'    43.26  30.0  1
+ 5GW  Var_33    O5'  C5'  C4'  C3'    54.16  30.0  3
+ 5GW  Var_34    C5'  C4'  C3'  O3'    79.13  30.0  1
+ 5GW  Var_35    H10  O2'  C2'  C1'    74.03  30.0  3
+ 5GW  Var_36    H14  C5'  C4'  O4'    54.76  30.0  3
+ 5GW  Var_37    H15  C5'  C4'  O4'   172.01  30.0  3
+ 5GW  Var_38    H12  O3'  C3'  C2'   160.82  30.0  3
+ 5GW  Var_39    PBD  OAT  PBE  O5'   146.66  30.0  3
+ 5GW  Var_40    PBD  OAT  PBE  OAI    37.72  30.0  3
+ 5GW  Var_41    PBD  OAT  PBE  OAD   -90.41  30.0  3
+ 5GW  Var_42    H16  OAI  PBE  O5'   118.27  30.0  3
+ 5GW  Var_43    H17  OAG  PBD  OAT    92.99  30.0  3
+ 5GW  Var_44    H18  OAC  PBD  OAT  -131.15  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

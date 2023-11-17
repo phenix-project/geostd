@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ULE  ULE  ~{N}4-cyclopropyl-~{N}2-methyl-6-[(1~{S})-1-phenylethyl]pyridine-2,4-dicarboxamide  ligand  45  24  .  2022-08-11  2023-02-15
+ ULE  ULE  ~{N}4-cyclopropyl-~{N}2-methyl-6-[(1~{S})-1-phenylethyl]pyridine-2,4-dicarboxamide  ligand  45  24  .  2022-08-11  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_ULE
@@ -239,44 +240,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ULE  CONST_01  C4   C3   C2   N1     0.00   0.0  0
- ULE  CONST_02  C4   C5   C6   N1     0.00   0.0  0
- ULE  CONST_03  C2   C3   C4   C5     0.00   0.0  0
- ULE  CONST_04  C2   N1   C6   C5     0.00   0.0  0
- ULE  CONST_05  C3   C2   N1   C6     0.00   0.0  0
- ULE  CONST_06  C3   C4   C5   C6     0.00   0.0  0
- ULE  CONST_07  C13  C14  C9   C10    0.00   0.0  0
- ULE  CONST_08  C13  C12  C11  C10    0.00   0.0  0
- ULE  CONST_09  C12  C13  C14  C9     0.00   0.0  0
- ULE  CONST_10  C12  C11  C10  C9     0.00   0.0  0
- ULE  CONST_11  C11  C10  C9   C14    0.00   0.0  0
- ULE  CONST_12  C11  C12  C13  C14    0.00   0.0  0
- ULE  CONST_13  C1   C2   C3   C4   180.00   0.0  0
- ULE  CONST_14  C7   C6   C5   C4   180.00   0.0  0
- ULE  CONST_15  C1   C2   N1   C6   180.00   0.0  0
- ULE  CONST_16  C15  C4   C5   C6   180.00   0.0  0
- ULE  CONST_17  C2   N1   C6   C7   180.00   0.0  0
- ULE  CONST_18  C13  C14  C9   C7   180.00   0.0  0
- ULE  CONST_19  C11  C10  C9   C7   180.00   0.0  0
- ULE  CONST_20  C2   C3   C4   C15  180.00   0.0  0
- ULE  CONST_21  H14  C3   C2   N1   180.00   0.0  0
- ULE  CONST_22  H1   C5   C6   N1   180.00   0.0  0
- ULE  CONST_23  H19  C14  C9   C10  180.00   0.0  0
- ULE  CONST_24  H20  C12  C11  C10  180.00   0.0  0
- ULE  CONST_25  H21  C11  C12  C13  180.00   0.0  0
- ULE  CONST_26  H7   C13  C14  C9   180.00   0.0  0
- ULE  CONST_27  H6   C10  C9   C14  180.00   0.0  0
- ULE  CONST_28  C16  N2   C15  C4   180.00   0.0  0
- ULE  CONST_29  C16  N2   C15  O1     0.00   0.0  0
- ULE  CONST_30  C    N    C1   C2   180.00   0.0  0
- ULE  CONST_31  H10  N2   C15  C4     0.00   0.0  0
- ULE  CONST_32  H15  N    C1   C2     0.00   0.0  0
- ULE  CONST_33  C    N    C1   O      0.00   0.0  0
- ULE  Var_01    N2   C16  C18  C17  107.08  30.0  1
- ULE  Var_02    O    C1   C2   N1   178.91  30.0  2
- ULE  Var_03    N2   C15  C4   C5   151.71  30.0  2
- ULE  Var_04    C17  C16  N2   C15  144.76  30.0  3
- ULE  Var_05    H16  C    N    C1   178.32  30.0  3
+ ULE  CONST_01  C4   C3   C2   N1      0.00   0.0  0
+ ULE  CONST_02  C4   C5   C6   N1      0.00   0.0  0
+ ULE  CONST_03  C2   C3   C4   C5      0.00   0.0  0
+ ULE  CONST_04  C2   N1   C6   C5      0.00   0.0  0
+ ULE  CONST_05  C3   C2   N1   C6      0.00   0.0  0
+ ULE  CONST_06  C3   C4   C5   C6      0.00   0.0  0
+ ULE  CONST_07  C13  C14  C9   C10     0.00   0.0  0
+ ULE  CONST_08  C13  C12  C11  C10     0.00   0.0  0
+ ULE  CONST_09  C12  C13  C14  C9      0.00   0.0  0
+ ULE  CONST_10  C12  C11  C10  C9      0.00   0.0  0
+ ULE  CONST_11  C11  C10  C9   C14     0.00   0.0  0
+ ULE  CONST_12  C11  C12  C13  C14     0.00   0.0  0
+ ULE  CONST_13  C1   C2   C3   C4    180.00   0.0  0
+ ULE  CONST_14  C7   C6   C5   C4    180.00   0.0  0
+ ULE  CONST_15  C1   C2   N1   C6    180.00   0.0  0
+ ULE  CONST_16  C15  C4   C5   C6    180.00   0.0  0
+ ULE  CONST_17  C2   N1   C6   C7    180.00   0.0  0
+ ULE  CONST_18  C13  C14  C9   C7    180.00   0.0  0
+ ULE  CONST_19  C11  C10  C9   C7    180.00   0.0  0
+ ULE  CONST_20  C2   C3   C4   C15   180.00   0.0  0
+ ULE  CONST_21  H14  C3   C2   N1    180.00   0.0  0
+ ULE  CONST_22  H1   C5   C6   N1    180.00   0.0  0
+ ULE  CONST_23  H19  C14  C9   C10   180.00   0.0  0
+ ULE  CONST_24  H20  C12  C11  C10   180.00   0.0  0
+ ULE  CONST_25  H21  C11  C12  C13   180.00   0.0  0
+ ULE  CONST_26  H7   C13  C14  C9    180.00   0.0  0
+ ULE  CONST_27  H6   C10  C9   C14   180.00   0.0  0
+ ULE  CONST_28  C16  N2   C15  C4    180.00   0.0  0
+ ULE  CONST_29  C16  N2   C15  O1      0.00   0.0  0
+ ULE  CONST_30  C    N    C1   C2    180.00   0.0  0
+ ULE  CONST_31  H10  N2   C15  C4      0.00   0.0  0
+ ULE  CONST_32  H15  N    C1   C2      0.00   0.0  0
+ ULE  CONST_33  C    N    C1   O       0.00   0.0  0
+ ULE  Var_01    N2   C16  C18  C17   107.08  30.0  1
+ ULE  Var_02    O    C1   C2   N1    178.91  30.0  2
+ ULE  Var_03    N2   C15  C4   C5    151.71  30.0  2
+ ULE  Var_04    C17  C16  N2   C15   144.76  30.0  3
+ ULE  Var_05    H16  C    N    C1    178.32  30.0  3
+ ULE  Var_06    C9   C7   C6   N1     96.42  30.0  2
+ ULE  Var_07    C9   C7   C6   C5    -82.39  30.0  2
+ ULE  Var_08    C14  C9   C7   C6    121.56  30.0  2
+ ULE  Var_09    C10  C9   C7   C6    -59.24  30.0  2
+ ULE  Var_10    H8   C17  C18  C16   -76.57  30.0  1
+ ULE  Var_11    H9   C17  C18  C16   -78.45  30.0  1
+ ULE  Var_12    C8   C7   C6   N1    -28.67  30.0  2
+ ULE  Var_13    C8   C7   C6   C5    152.52  30.0  2
+ ULE  Var_14    C14  C9   C7   C8   -112.44  30.0  2
+ ULE  Var_15    C10  C9   C7   C8     66.76  30.0  2
+ ULE  Var_16    H2   C7   C6   N1    179.35  30.0  2
+ ULE  Var_17    H3   C8   C7   C6   -118.36  30.0  3
+ ULE  Var_18    H4   C8   C7   C6     50.50  30.0  3
+ ULE  Var_19    H5   C8   C7   C6    170.51  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- M03  M03  1-[4-(4-chlorophenyl)-1-(7H-pyrrolo[2,3-d]pyrimidin-4-yl)piperidin-4-yl]methanamine  ligand  44  24  .  2021-08-14  2021-08-14  
+ M03  M03  1-[4-(4-chlorophenyl)-1-(7H-pyrrolo[2,3-d]pyrimidin-4-yl)piperidin-4-yl]methanamine  ligand  44  24  .  2021-08-14  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_M03
@@ -239,50 +240,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- M03  CONST_01  C12  C11  C10  C9     0.00   0.0  0
- M03  CONST_02  C12  C14  C15  C9     0.00   0.0  0
- M03  CONST_03  C14  C15  C9   C10    0.00   0.0  0
- M03  CONST_04  C14  C12  C11  C10    0.00   0.0  0
- M03  CONST_05  C15  C9   C10  C11    0.00   0.0  0
- M03  CONST_06  C15  C14  C12  C11    0.00   0.0  0
- M03  CONST_07  N19  C18  N17  C16    0.00   0.0  0
- M03  CONST_08  N19  C20  C24  C16    0.00   0.0  0
- M03  CONST_09  N21  C20  C24  C16  180.00   0.0  0
- M03  CONST_10  C22  C23  C24  C16  180.00   0.0  0
- M03  CONST_11  C20  C24  C16  N17    0.00   0.0  0
- M03  CONST_12  C23  C24  C16  N17  180.00   0.0  0
- M03  CONST_13  C20  N19  C18  N17    0.00   0.0  0
- M03  CONST_14  C24  C16  N17  C18    0.00   0.0  0
- M03  CONST_15  N21  C20  N19  C18  180.00   0.0  0
- M03  CONST_16  C24  C20  N19  C18    0.00   0.0  0
- M03  CONST_17  C22  N21  C20  N19  180.00   0.0  0
- M03  CONST_18  C23  C24  C20  N19  180.00   0.0  0
- M03  CONST_19  C23  C22  N21  C20    0.00   0.0  0
- M03  CONST_20  C22  C23  C24  C20    0.00   0.0  0
- M03  CONST_21  C23  C24  C20  N21    0.00   0.0  0
- M03  CONST_22  C24  C23  C22  N21    0.00   0.0  0
- M03  CONST_23  C24  C20  N21  C22    0.00   0.0  0
- M03  CONST_24  C18  N17  C16  N1   180.00   0.0  0
- M03  CONST_25  C20  C24  C16  N1   180.00   0.0  0
- M03  CONST_26  C23  C24  C16  N1     0.00   0.0  0
- M03  CONST_27  C11  C10  C9   C4   180.00   0.0  0
- M03  CONST_28  C14  C15  C9   C4   180.00   0.0  0
- M03  CONST_29  CL1  C12  C11  C10  180.00   0.0  0
- M03  CONST_30  C15  C14  C12  CL1  180.00   0.0  0
- M03  CONST_31  H10  C10  C9   C4     0.00   0.0  0
- M03  CONST_32  H15  C15  C9   C4     0.00   0.0  0
- M03  CONST_33  H11  C11  C10  C9   180.00   0.0  0
- M03  CONST_34  H14  C14  C15  C9   180.00   0.0  0
- M03  CONST_35  H18  C18  N17  C16  180.00   0.0  0
- M03  CONST_36  H23  C23  C24  C16    0.00   0.0  0
- M03  CONST_37  H21  N21  C20  N19    0.00   0.0  0
- M03  CONST_38  H22  C22  N21  C20  180.00   0.0  0
- M03  Var_01    C4   C3   C2   N1   -52.72  30.0  1
- M03  Var_02    C4   C7   C8   N1    56.84  30.0  1
- M03  Var_03    C7   C8   N1   C2   -53.04  30.0  1
- M03  Var_04    N17  C16  N1   C2   172.41  30.0  2
- M03  Var_05    C8   N1   C2   C3    50.35  30.0  1
- M03  Var_06    HC1  N6   C5   C4   -65.13  30.0  3
+ M03  CONST_01  C12  C11  C10  C9      0.00   0.0  0
+ M03  CONST_02  C12  C14  C15  C9      0.00   0.0  0
+ M03  CONST_03  C14  C15  C9   C10     0.00   0.0  0
+ M03  CONST_04  C14  C12  C11  C10     0.00   0.0  0
+ M03  CONST_05  C15  C9   C10  C11     0.00   0.0  0
+ M03  CONST_06  C15  C14  C12  C11     0.00   0.0  0
+ M03  CONST_07  N19  C18  N17  C16     0.00   0.0  0
+ M03  CONST_08  N19  C20  C24  C16     0.00   0.0  0
+ M03  CONST_09  N21  C20  C24  C16   180.00   0.0  0
+ M03  CONST_10  C22  C23  C24  C16   180.00   0.0  0
+ M03  CONST_11  C20  C24  C16  N17     0.00   0.0  0
+ M03  CONST_12  C23  C24  C16  N17   180.00   0.0  0
+ M03  CONST_13  C20  N19  C18  N17     0.00   0.0  0
+ M03  CONST_14  C24  C16  N17  C18     0.00   0.0  0
+ M03  CONST_15  N21  C20  N19  C18   180.00   0.0  0
+ M03  CONST_16  C24  C20  N19  C18     0.00   0.0  0
+ M03  CONST_17  C22  N21  C20  N19   180.00   0.0  0
+ M03  CONST_18  C23  C24  C20  N19   180.00   0.0  0
+ M03  CONST_19  C23  C22  N21  C20     0.00   0.0  0
+ M03  CONST_20  C22  C23  C24  C20     0.00   0.0  0
+ M03  CONST_21  C23  C24  C20  N21     0.00   0.0  0
+ M03  CONST_22  C24  C23  C22  N21     0.00   0.0  0
+ M03  CONST_23  C24  C20  N21  C22     0.00   0.0  0
+ M03  CONST_24  C18  N17  C16  N1    180.00   0.0  0
+ M03  CONST_25  C20  C24  C16  N1    180.00   0.0  0
+ M03  CONST_26  C23  C24  C16  N1      0.00   0.0  0
+ M03  CONST_27  C11  C10  C9   C4    180.00   0.0  0
+ M03  CONST_28  C14  C15  C9   C4    180.00   0.0  0
+ M03  CONST_29  CL1  C12  C11  C10   180.00   0.0  0
+ M03  CONST_30  C15  C14  C12  CL1   180.00   0.0  0
+ M03  CONST_31  H10  C10  C9   C4      0.00   0.0  0
+ M03  CONST_32  H15  C15  C9   C4      0.00   0.0  0
+ M03  CONST_33  H11  C11  C10  C9    180.00   0.0  0
+ M03  CONST_34  H14  C14  C15  C9    180.00   0.0  0
+ M03  CONST_35  H18  C18  N17  C16   180.00   0.0  0
+ M03  CONST_36  H23  C23  C24  C16     0.00   0.0  0
+ M03  CONST_37  H21  N21  C20  N19     0.00   0.0  0
+ M03  CONST_38  H22  C22  N21  C20   180.00   0.0  0
+ M03  Var_01    C4   C3   C2   N1    -52.72  30.0  1
+ M03  Var_02    C4   C7   C8   N1     56.84  30.0  1
+ M03  Var_03    C7   C8   N1   C2    -53.04  30.0  1
+ M03  Var_04    N17  C16  N1   C2    172.41  30.0  2
+ M03  Var_05    C8   N1   C2   C3     50.35  30.0  1
+ M03  Var_06    HC1  N6   C5   C4    -65.13  30.0  3
+ M03  Var_07    C7   C4   C3   C2     54.52  30.0  1
+ M03  Var_08    C9   C4   C3   C2    -68.14  30.0  1
+ M03  Var_09    C8   C7   C4   C3    -56.02  30.0  1
+ M03  Var_10    C10  C9   C4   C3    164.52  30.0  2
+ M03  Var_11    C15  C9   C4   C3    -20.20  30.0  2
+ M03  Var_12    C10  C9   C4   C7     45.25  30.0  2
+ M03  Var_13    C15  C9   C4   C7   -139.46  30.0  2
+ M03  Var_14    C9   C4   C7   C8     67.62  30.0  1
+ M03  Var_15    C5   C4   C3   C2    171.17  30.0  1
+ M03  Var_16    C8   C7   C4   C5   -173.50  30.0  1
+ M03  Var_17    C10  C9   C4   C5    -73.87  30.0  2
+ M03  Var_18    C15  C9   C4   C5    101.41  30.0  2
+ M03  Var_19    N6   C5   C4   C3     63.41  30.0  3
+ M03  Var_20    C7   C4   C5   N6    178.36  30.0  2
+ M03  Var_21    C9   C4   C5   N6    -60.43  30.0  2
+ M03  Var_22    HB1  C5   C4   C3   -173.33  30.0  3
+ M03  Var_23    HC2  C5   C4   C3    -59.00  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

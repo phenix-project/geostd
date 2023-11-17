@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HF7  HF7  '2'-deoxy-2-methyladenosine 5'-(tetrahydrogen triphosphate)'  ligand  49  31  .  2022-11-17  2022-11-17
+ HF7  HF7  '2'-deoxy-2-methyladenosine 5'-(tetrahydrogen triphosphate)'  ligand  49  31  .  2022-11-17  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HF7
@@ -252,39 +253,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HF7  CONST_01  N9   C4   N3   C2   180.00   0.0  0
- HF7  CONST_02  C5   C4   N3   C2     0.00   0.0  0
- HF7  CONST_03  C5   C6   N1   C2     0.00   0.0  0
- HF7  CONST_04  C5   N7   C8   N9     0.00   0.0  0
- HF7  CONST_05  N7   C5   C4   N9     0.00   0.0  0
- HF7  CONST_06  C6   C5   C4   N9   180.00   0.0  0
- HF7  CONST_07  N7   C8   N9   C4     0.00   0.0  0
- HF7  CONST_08  C8   N7   C5   C4     0.00   0.0  0
- HF7  CONST_09  N1   C6   C5   C4     0.00   0.0  0
- HF7  CONST_10  N1   C2   N3   C4     0.00   0.0  0
- HF7  CONST_11  C8   N9   C4   C5     0.00   0.0  0
- HF7  CONST_12  N3   C4   C5   N7   180.00   0.0  0
- HF7  CONST_13  N1   C6   C5   N7   180.00   0.0  0
- HF7  CONST_14  N3   C4   N9   C8   180.00   0.0  0
- HF7  CONST_15  C6   C5   N7   C8   180.00   0.0  0
- HF7  CONST_16  C6   C5   C4   N3     0.00   0.0  0
- HF7  CONST_17  C6   N1   C2   N3     0.00   0.0  0
- HF7  CONST_18  N7   C8   N9   C1'  180.00   0.0  0
- HF7  CONST_19  C5   C4   N9   C1'  180.00   0.0  0
- HF7  CONST_20  N3   C4   N9   C1'    0.00   0.0  0
- HF7  CONST_21  N6   C6   N1   C2   180.00   0.0  0
- HF7  CONST_22  N6   C6   C5   C4   180.00   0.0  0
- HF7  CONST_23  CL2  C2   N3   C4   180.00   0.0  0
- HF7  CONST_24  N6   C6   C5   N7     0.00   0.0  0
- HF7  CONST_25  C6   N1   C2   CL2  180.00   0.0  0
- HF7  CONST_26  H13  C8   N9   C1'    0.00   0.0  0
- HF7  CONST_27  H17  N6   C6   C5   180.00   0.0  0
- HF7  CONST_28  H18  N6   C6   C5     0.00   0.0  0
- HF7  Var_01    H14  CL2  C2   N3    -1.85  30.0  2
- HF7  Var_02    C4'  C5'  O5'  PA   128.87  30.0  3
- HF7  Var_03    O1B  PB   O3A  PA   175.55  30.0  2
- HF7  Var_04    O1G  PG   O3B  PB    59.78  30.0  1
- HF7  Var_05    O5'  PA   O3A  PB   116.22  30.0  3
+ HF7  CONST_01  N9   C4   N3   C2    180.00   0.0  0
+ HF7  CONST_02  C5   C4   N3   C2      0.00   0.0  0
+ HF7  CONST_03  C5   C6   N1   C2      0.00   0.0  0
+ HF7  CONST_04  C5   N7   C8   N9      0.00   0.0  0
+ HF7  CONST_05  N7   C5   C4   N9      0.00   0.0  0
+ HF7  CONST_06  C6   C5   C4   N9    180.00   0.0  0
+ HF7  CONST_07  N7   C8   N9   C4      0.00   0.0  0
+ HF7  CONST_08  C8   N7   C5   C4      0.00   0.0  0
+ HF7  CONST_09  N1   C6   C5   C4      0.00   0.0  0
+ HF7  CONST_10  N1   C2   N3   C4      0.00   0.0  0
+ HF7  CONST_11  C8   N9   C4   C5      0.00   0.0  0
+ HF7  CONST_12  N3   C4   C5   N7    180.00   0.0  0
+ HF7  CONST_13  N1   C6   C5   N7    180.00   0.0  0
+ HF7  CONST_14  N3   C4   N9   C8    180.00   0.0  0
+ HF7  CONST_15  C6   C5   N7   C8    180.00   0.0  0
+ HF7  CONST_16  C6   C5   C4   N3      0.00   0.0  0
+ HF7  CONST_17  C6   N1   C2   N3      0.00   0.0  0
+ HF7  CONST_18  N7   C8   N9   C1'   180.00   0.0  0
+ HF7  CONST_19  C5   C4   N9   C1'   180.00   0.0  0
+ HF7  CONST_20  N3   C4   N9   C1'     0.00   0.0  0
+ HF7  CONST_21  N6   C6   N1   C2    180.00   0.0  0
+ HF7  CONST_22  N6   C6   C5   C4    180.00   0.0  0
+ HF7  CONST_23  CL2  C2   N3   C4    180.00   0.0  0
+ HF7  CONST_24  N6   C6   C5   N7      0.00   0.0  0
+ HF7  CONST_25  C6   N1   C2   CL2   180.00   0.0  0
+ HF7  CONST_26  H13  C8   N9   C1'     0.00   0.0  0
+ HF7  CONST_27  H17  N6   C6   C5    180.00   0.0  0
+ HF7  CONST_28  H18  N6   C6   C5      0.00   0.0  0
+ HF7  Var_01    H14  CL2  C2   N3     -1.85  30.0  2
+ HF7  Var_02    C4'  C5'  O5'  PA    128.87  30.0  3
+ HF7  Var_03    O1B  PB   O3A  PA    175.55  30.0  2
+ HF7  Var_04    O1G  PG   O3B  PB     59.78  30.0  1
+ HF7  Var_05    O5'  PA   O3A  PB    116.22  30.0  3
+ HF7  Var_06    C1'  C2'  C3'  C4'   -33.77  30.0  1
+ HF7  Var_07    C2'  C1'  O4'  C4'   -18.19  30.0  1
+ HF7  Var_08    N9   C1'  O4'  C4'  -142.96  30.0  1
+ HF7  Var_09    O4'  C1'  C2'  C3'    32.75  30.0  1
+ HF7  Var_10    N9   C1'  C2'  C3'   153.89  30.0  1
+ HF7  Var_11    C1'  O4'  C4'  C3'    -4.07  30.0  1
+ HF7  Var_12    O4'  C4'  C3'  C2'    24.39  30.0  1
+ HF7  Var_13    C8   N9   C1'  C2'   -39.83  30.0  2
+ HF7  Var_14    C4   N9   C1'  C2'   147.27  30.0  2
+ HF7  Var_15    C8   N9   C1'  O4'    79.53  30.0  2
+ HF7  Var_16    C4   N9   C1'  O4'   -93.38  30.0  2
+ HF7  Var_17    C1'  C2'  C3'  O3'    83.67  30.0  1
+ HF7  Var_18    O4'  C4'  C3'  O3'   -90.36  30.0  1
+ HF7  Var_19    C5'  C4'  C3'  C2'   -98.12  30.0  1
+ HF7  Var_20    C5'  C4'  O4'  C1'   121.64  30.0  1
+ HF7  Var_21    H10  C2'  C3'  C4'    85.45  30.0  1
+ HF7  Var_22    H11  C2'  C3'  C4'  -154.22  30.0  1
+ HF7  Var_23    H12  C1'  O4'  C4'   101.48  30.0  1
+ HF7  Var_24    H7   C4'  C3'  C2'   142.84  30.0  1
+ HF7  Var_25    H8   C3'  C2'  C1'  -153.54  30.0  1
+ HF7  Var_26    C3'  C4'  C5'  O5'    57.44  30.0  3
+ HF7  Var_27    O4'  C4'  C5'  O5'   -62.93  30.0  3
+ HF7  Var_28    C5'  C4'  C3'  O3'   147.12  30.0  1
+ HF7  Var_29    H9   O3'  C3'  C4'   -64.41  30.0  3
+ HF7  Var_30    H5   C5'  C4'  C3'   -61.21  30.0  2
+ HF7  Var_31    H6   C5'  C4'  C3'  -179.65  30.0  2
+ HF7  Var_32    C5'  O5'  PA   O2A  -177.95  30.0  3
+ HF7  Var_33    C5'  O5'  PA   O1A   -48.04  30.0  3
+ HF7  Var_34    PG   O3B  PB   O3A    77.23  30.0  3
+ HF7  Var_35    C5'  O5'  PA   O3A    58.34  30.0  3
+ HF7  Var_36    PG   O3B  PB   O1B   -45.74  30.0  3
+ HF7  Var_37    PG   O3B  PB   O2B  -177.11  30.0  3
+ HF7  Var_38    H1   O1A  PA   O2A   -49.93  30.0  3
+ HF7  Var_39    H2   O2B  PB   O3A  -164.07  30.0  3
+ HF7  Var_40    H3   O3G  PG   O3B  -101.35  30.0  3
+ HF7  Var_41    H4   O2G  PG   O3B   163.46  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

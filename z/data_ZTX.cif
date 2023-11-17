@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZTX  ZTX  2-{[4-(4-hydroxypiperidin-1-yl)phenyl]amino}-5,11-dimethyl-5,11-dihydro-6H-pyrimido[4,5-b][1,4]benzodiazepin-6-one  ligand  58  32  .  2021-08-25  2021-08-25  
+ ZTX  ZTX  2-{[4-(4-hydroxypiperidin-1-yl)phenyl]amino}-5,11-dimethyl-5,11-dihydro-6H-pyrimido[4,5-b][1,4]benzodiazepin-6-one  ligand  58  32  .  2021-08-25  2023-10-25
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-25
 ;
 
 data_comp_ZTX
@@ -293,40 +294,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ZTX  CONST_01  C4   N3   C2   N1      0.00   0.0  0
- ZTX  CONST_02  C5   C6   N1   C2      0.00   0.0  0
- ZTX  CONST_03  C6   N1   C2   N3      0.00   0.0  0
- ZTX  CONST_04  CAH  CAI  CAK  CAC     0.00   0.0  0
- ZTX  CONST_05  CAI  CAH  CAL  CAD     0.00   0.0  0
- ZTX  CONST_06  CAL  CAH  CAI  CAK     0.00   0.0  0
- ZTX  CONST_07  CAR  CAQ  CAP  CAO     0.00   0.0  0
- ZTX  CONST_08  CAR  CAZ  CBA  CAO     0.00   0.0  0
- ZTX  CONST_09  CAZ  CBA  CAO  CAP     0.00   0.0  0
- ZTX  CONST_10  CAZ  CAR  CAQ  CAP     0.00   0.0  0
- ZTX  CONST_11  CBA  CAO  CAP  CAQ     0.00   0.0  0
- ZTX  CONST_12  CBA  CAZ  CAR  CAQ     0.00   0.0  0
- ZTX  CONST_13  NAS  CAR  CAQ  CAP   180.00   0.0  0
- ZTX  CONST_14  CBA  CAZ  CAR  NAS   180.00   0.0  0
- ZTX  CONST_15  NAN  C2   N3   C4    180.00   0.0  0
- ZTX  CONST_16  NAN  C2   N1   C6    180.00   0.0  0
- ZTX  CONST_17  CAQ  CAP  CAO  NAN   180.00   0.0  0
- ZTX  CONST_18  CAZ  CBA  CAO  NAN   180.00   0.0  0
- ZTX  CONST_19  H6   C6   N1   C2    180.00   0.0  0
- ZTX  CONST_20  HAI  CAI  CAK  CAC   180.00   0.0  0
- ZTX  CONST_21  HAH  CAH  CAL  CAD   180.00   0.0  0
- ZTX  CONST_22  HAK  CAK  CAI  CAH   180.00   0.0  0
- ZTX  CONST_23  HAL  CAL  CAH  CAI   180.00   0.0  0
- ZTX  CONST_24  HAQ  CAQ  CAP  CAO   180.00   0.0  0
- ZTX  CONST_25  HAZ  CAZ  CBA  CAO   180.00   0.0  0
- ZTX  CONST_26  HBA  CBA  CAO  CAP   180.00   0.0  0
- ZTX  CONST_27  HAP  CAP  CAQ  CAR   180.00   0.0  0
- ZTX  Var_01    CAT  NAS  CAR  CAQ   -59.07  30.0  2
- ZTX  Var_02    CAU  CAT  NAS  CAR   164.10  30.0  1
- ZTX  Var_03    CAX  CAY  NAS  CAR  -164.81  30.0  1
- ZTX  Var_04    CAV  CAU  CAT  NAS    56.27  30.0  1
- ZTX  Var_05    CAV  CAX  CAY  NAS   -57.18  30.0  1
- ZTX  Var_06    CAO  NAN  C2   N1      4.53  30.0  1
- ZTX  Var_07    CAP  CAO  NAN  C2    147.49  30.0  3
+ ZTX  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ ZTX  CONST_02  C5    C6   N1   C2      0.00   0.0  0
+ ZTX  CONST_03  C6    N1   C2   N3      0.00   0.0  0
+ ZTX  CONST_04  CAH   CAI  CAK  CAC     0.00   0.0  0
+ ZTX  CONST_05  CAI   CAH  CAL  CAD     0.00   0.0  0
+ ZTX  CONST_06  CAL   CAH  CAI  CAK     0.00   0.0  0
+ ZTX  CONST_07  CAR   CAQ  CAP  CAO     0.00   0.0  0
+ ZTX  CONST_08  CAR   CAZ  CBA  CAO     0.00   0.0  0
+ ZTX  CONST_09  CAZ   CBA  CAO  CAP     0.00   0.0  0
+ ZTX  CONST_10  CAZ   CAR  CAQ  CAP     0.00   0.0  0
+ ZTX  CONST_11  CBA   CAO  CAP  CAQ     0.00   0.0  0
+ ZTX  CONST_12  CBA   CAZ  CAR  CAQ     0.00   0.0  0
+ ZTX  CONST_13  NAS   CAR  CAQ  CAP   180.00   0.0  0
+ ZTX  CONST_14  CBA   CAZ  CAR  NAS   180.00   0.0  0
+ ZTX  CONST_15  NAN   C2   N3   C4    180.00   0.0  0
+ ZTX  CONST_16  NAN   C2   N1   C6    180.00   0.0  0
+ ZTX  CONST_17  CAQ   CAP  CAO  NAN   180.00   0.0  0
+ ZTX  CONST_18  CAZ   CBA  CAO  NAN   180.00   0.0  0
+ ZTX  CONST_19  H6    C6   N1   C2    180.00   0.0  0
+ ZTX  CONST_20  HAI   CAI  CAK  CAC   180.00   0.0  0
+ ZTX  CONST_21  HAH   CAH  CAL  CAD   180.00   0.0  0
+ ZTX  CONST_22  HAK   CAK  CAI  CAH   180.00   0.0  0
+ ZTX  CONST_23  HAL   CAL  CAH  CAI   180.00   0.0  0
+ ZTX  CONST_24  HAQ   CAQ  CAP  CAO   180.00   0.0  0
+ ZTX  CONST_25  HAZ   CAZ  CBA  CAO   180.00   0.0  0
+ ZTX  CONST_26  HBA   CBA  CAO  CAP   180.00   0.0  0
+ ZTX  CONST_27  HAP   CAP  CAQ  CAR   180.00   0.0  0
+ ZTX  Var_01    CAT   NAS  CAR  CAQ   -59.07  30.0  2
+ ZTX  Var_02    CAU   CAT  NAS  CAR   164.10  30.0  1
+ ZTX  Var_03    CAX   CAY  NAS  CAR  -164.81  30.0  1
+ ZTX  Var_04    CAV   CAU  CAT  NAS    56.27  30.0  1
+ ZTX  Var_05    CAV   CAX  CAY  NAS   -57.18  30.0  1
+ ZTX  Var_06    CAO   NAN  C2   N1      4.53  30.0  1
+ ZTX  Var_07    CAP   CAO  NAN  C2    147.49  30.0  3
+ ZTX  CONST_28  C4    C5   C6   N1      0.00   0.0  0
+ ZTX  CONST_29  C5    C4   N3   C2      0.00   0.0  0
+ ZTX  CONST_31  C6    C5   C4   N3      0.00   0.0  0
+ ZTX  CONST_35  CAC   CAB  NBG  C5      0.00   0.0  0
+ ZTX  CONST_36  CAH   CAL  CAD  CAC     0.00   0.0  0
+ ZTX  CONST_37  CAI   CAK  CAC  CAD     0.00   0.0  0
+ ZTX  CONST_38  CAL   CAD  CAC  CAK     0.00   0.0  0
+ ZTX  CONST_41  OAA   CAB  NBG  C5    180.00   0.0  0
+ ZTX  CONST_42  CBH   NBG  CAB  CAC   180.00   0.0  0
+ ZTX  CONST_45  OAA   CAB  NBG  CBH     0.00   0.0  0
+ ZTX  Var_08    CAB   NBG  C5   C4    -55.40  30.0  1
+ ZTX  Var_09    CAB   NBG  C5   C6    133.44  30.0  1
+ ZTX  Var_10    NBG   CAB  CAC  CAD    40.57  30.0  1
+ ZTX  Var_11    NBG   CAB  CAC  CAK  -147.17  30.0  1
+ ZTX  Var_12    CAX   CAV  CAU  CAT   -54.81  30.0  1
+ ZTX  Var_13    CAY   CAX  CAV  CAU    55.58  30.0  1
+ ZTX  Var_14    CBH   NBG  C5   C4    130.33  30.0  1
+ ZTX  Var_15    CBH   NBG  C5   C6    -40.83  30.0  1
+ ZTX  Var_16    OAA   CAB  CAC  CAD  -139.24  30.0  1
+ ZTX  Var_17    OAA   CAB  CAC  CAK    33.03  30.0  1
+ ZTX  Var_18    OAW   CAV  CAU  CAT  -177.74  30.0  1
+ ZTX  Var_19    CAY   CAX  CAV  OAW   176.05  30.0  1
+ ZTX  Var_20    HAV   CAV  CAU  CAT    62.60  30.0  1
+ ZTX  Var_21    HAF   CAF  NAE  C4    -70.62  30.0  3
+ ZTX  Var_22    HAFA  CAF  NAE  C4     50.04  30.0  3
+ ZTX  Var_23    HAFB  CAF  NAE  C4    167.69  30.0  3
+ ZTX  Var_24    HBH   CBH  NBG  C5     97.19  30.0  3
+ ZTX  Var_25    HBHA  CBH  NBG  C5   -141.86  30.0  3
+ ZTX  Var_26    HBHB  CBH  NBG  C5    -23.08  30.0  3
+ ZTX  Var_27    HOAW  OAW  CAV  CAU   179.84  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

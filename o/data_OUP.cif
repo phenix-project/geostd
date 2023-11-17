@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OUP  OUP  7-[3-(aminomethyl)-4-(cyclobutylmethoxy)phenyl]-4-methylquinolin-2-amine  ligand  51  26  .  2022-03-23  2022-03-23
+ OUP  OUP  7-[3-(aminomethyl)-4-(cyclobutylmethoxy)phenyl]-4-methylquinolin-2-amine  ligand  51  26  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OUP
@@ -281,40 +282,57 @@ _chem_comp_tor.period
  OUP  CONST_14  C09  C08  C07  C06     0.00   0.0  0
  OUP  CONST_15  C09  C10  C05  C06     0.00   0.0  0
  OUP  CONST_16  N01  C10  C05  C06   180.00   0.0  0
- OUP  CONST_19  C10  C09  C08  C07     0.00   0.0  0
- OUP  CONST_20  C10  C05  C06  C07     0.00   0.0  0
- OUP  CONST_21  C13  C12  C11  C08   180.00   0.0  0
- OUP  CONST_22  C15  C16  C11  C08   180.00   0.0  0
- OUP  CONST_23  N01  C10  C09  C08   180.00   0.0  0
- OUP  CONST_26  C11  C08  C09  C10   180.00   0.0  0
- OUP  CONST_27  C14  C13  C12  C11     0.00   0.0  0
- OUP  CONST_28  C14  C15  C16  C11     0.00   0.0  0
- OUP  CONST_29  C15  C14  C13  C12     0.00   0.0  0
- OUP  CONST_30  C15  C16  C11  C12     0.00   0.0  0
- OUP  CONST_31  C16  C15  C14  C13     0.00   0.0  0
- OUP  CONST_32  C16  C11  C12  C13     0.00   0.0  0
- OUP  CONST_33  C4A  C04  C03  C02   180.00   0.0  0
- OUP  CONST_34  N02  C02  C03  C04   180.00   0.0  0
- OUP  CONST_35  C4A  C04  C05  C06     0.00   0.0  0
- OUP  CONST_36  N02  C02  N01  C10   180.00   0.0  0
- OUP  CONST_37  C4A  C04  C05  C10   180.00   0.0  0
- OUP  CONST_38  C17  C15  C16  C11   180.00   0.0  0
- OUP  CONST_39  O19  C14  C13  C12   180.00   0.0  0
- OUP  CONST_40  C17  C15  C14  C13   180.00   0.0  0
- OUP  CONST_41  O19  C14  C15  C16   180.00   0.0  0
- OUP  CONST_42  H2   C06  C05  C04     0.00   0.0  0
- OUP  CONST_43  H4   C09  C10  C05   180.00   0.0  0
- OUP  CONST_44  H3   C07  C06  C05   180.00   0.0  0
- OUP  CONST_45  H1   C03  C04  C05   180.00   0.0  0
- OUP  CONST_46  H5   C12  C11  C08     0.00   0.0  0
- OUP  CONST_47  H7   C16  C11  C08     0.00   0.0  0
- OUP  CONST_48  H6   C13  C12  C11   180.00   0.0  0
- OUP  CONST_49  H22  N02  C02  C03   180.00   0.0  0
+ OUP  CONST_17  C10  C09  C08  C07     0.00   0.0  0
+ OUP  CONST_18  C10  C05  C06  C07     0.00   0.0  0
+ OUP  CONST_19  C13  C12  C11  C08   180.00   0.0  0
+ OUP  CONST_20  C15  C16  C11  C08   180.00   0.0  0
+ OUP  CONST_21  N01  C10  C09  C08   180.00   0.0  0
+ OUP  CONST_22  C11  C08  C09  C10   180.00   0.0  0
+ OUP  CONST_23  C14  C13  C12  C11     0.00   0.0  0
+ OUP  CONST_24  C14  C15  C16  C11     0.00   0.0  0
+ OUP  CONST_25  C15  C14  C13  C12     0.00   0.0  0
+ OUP  CONST_26  C15  C16  C11  C12     0.00   0.0  0
+ OUP  CONST_27  C16  C15  C14  C13     0.00   0.0  0
+ OUP  CONST_28  C16  C11  C12  C13     0.00   0.0  0
+ OUP  CONST_29  C4A  C04  C03  C02   180.00   0.0  0
+ OUP  CONST_30  N02  C02  C03  C04   180.00   0.0  0
+ OUP  CONST_31  C4A  C04  C05  C06     0.00   0.0  0
+ OUP  CONST_32  N02  C02  N01  C10   180.00   0.0  0
+ OUP  CONST_33  C4A  C04  C05  C10   180.00   0.0  0
+ OUP  CONST_34  C17  C15  C16  C11   180.00   0.0  0
+ OUP  CONST_35  O19  C14  C13  C12   180.00   0.0  0
+ OUP  CONST_36  C17  C15  C14  C13   180.00   0.0  0
+ OUP  CONST_37  O19  C14  C15  C16   180.00   0.0  0
+ OUP  CONST_38  H2   C06  C05  C04     0.00   0.0  0
+ OUP  CONST_39  H4   C09  C10  C05   180.00   0.0  0
+ OUP  CONST_40  H3   C07  C06  C05   180.00   0.0  0
+ OUP  CONST_41  H1   C03  C04  C05   180.00   0.0  0
+ OUP  CONST_42  H5   C12  C11  C08     0.00   0.0  0
+ OUP  CONST_43  H7   C16  C11  C08     0.00   0.0  0
+ OUP  CONST_44  H6   C13  C12  C11   180.00   0.0  0
+ OUP  CONST_45  H22  N02  C02  C03   180.00   0.0  0
  OUP  Var_01    C22  C23  C24  C21    -2.34  30.0  1
  OUP  Var_02    C21  C20  O19  C14  -175.65  30.0  1
  OUP  Var_03    N18  C17  C15  C14   -78.84  30.0  2
  OUP  Var_04    H19  C4A  C04  C03  -120.07  30.0  2
  OUP  Var_05    H24  N18  C17  C15   175.72  30.0  3
+ OUP  Var_06    C12  C11  C08  C07  -147.70  30.0  2
+ OUP  Var_07    C16  C11  C08  C07    32.25  30.0  2
+ OUP  Var_08    C12  C11  C08  C09    32.23  30.0  2
+ OUP  Var_09    C16  C11  C08  C09  -147.82  30.0  2
+ OUP  Var_10    C23  C24  C21  C20  -115.16  30.0  1
+ OUP  Var_11    C23  C22  C21  C20   113.78  30.0  1
+ OUP  Var_12    H17  C24  C21  C22   120.35  30.0  1
+ OUP  Var_13    H18  C24  C21  C22  -114.68  30.0  1
+ OUP  Var_14    H12  C21  C24  C23   118.70  30.0  1
+ OUP  Var_15    H13  C22  C21  C24   114.75  30.0  1
+ OUP  Var_16    H14  C22  C21  C24  -119.84  30.0  1
+ OUP  Var_17    C20  O19  C14  C13   -75.91  30.0  2
+ OUP  Var_18    C20  O19  C14  C15   105.99  30.0  2
+ OUP  Var_19    O19  C20  C21  C22    71.99  30.0  3
+ OUP  Var_20    O19  C20  C21  C24   173.58  30.0  3
+ OUP  Var_21    H10  C20  C21  C22  -167.20  30.0  3
+ OUP  Var_22    H11  C20  C21  C22   -47.82  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

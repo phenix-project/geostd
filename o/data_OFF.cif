@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OFF  OFF  '2-deoxy-3,4-bis-O-[(2E)-3-(4-hydroxyphenyl)prop-2-enoyl]-L-threo-pentaric acid'  ligand  51  33  .  2022-03-23  2022-03-23
+ OFF  OFF  '2-deoxy-3,4-bis-O-[(2E)-3-(4-hydroxyphenyl)prop-2-enoyl]-L-threo-pentaric acid'  ligand  51  33  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OFF
@@ -250,42 +251,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OFF  CONST_01  C22  C23  C18  C19     0.00   0.0  0
- OFF  CONST_02  C22  C21  C20  C19     0.00   0.0  0
- OFF  CONST_03  C23  C18  C19  C20     0.00   0.0  0
- OFF  CONST_04  C23  C22  C21  C20     0.00   0.0  0
- OFF  CONST_05  C18  C19  C20  C21     0.00   0.0  0
- OFF  CONST_06  C18  C23  C22  C21     0.00   0.0  0
- OFF  CONST_07  C1   C2   C3   C4      0.00   0.0  0
- OFF  CONST_08  C1   C6   C5   C4      0.00   0.0  0
- OFF  CONST_09  C2   C3   C4   C5      0.00   0.0  0
- OFF  CONST_10  C2   C1   C6   C5      0.00   0.0  0
- OFF  CONST_11  C3   C4   C5   C6      0.00   0.0  0
- OFF  CONST_12  C3   C2   C1   C6      0.00   0.0  0
- OFF  CONST_13  O10  C21  C20  C19   180.00   0.0  0
- OFF  CONST_14  C17  C18  C19  C20   180.00   0.0  0
- OFF  CONST_15  C23  C22  C21  O10   180.00   0.0  0
- OFF  CONST_16  C17  C18  C23  C22   180.00   0.0  0
- OFF  CONST_17  C2   C3   C4   C7    180.00   0.0  0
- OFF  CONST_18  C6   C5   C4   C7    180.00   0.0  0
- OFF  CONST_19  O1   C1   C6   C5    180.00   0.0  0
- OFF  CONST_20  C3   C2   C1   O1    180.00   0.0  0
- OFF  CONST_21  H23  C23  C18  C19   180.00   0.0  0
- OFF  CONST_22  H22  C22  C21  C20   180.00   0.0  0
- OFF  CONST_23  H19  C19  C20  C21   180.00   0.0  0
- OFF  CONST_24  H20  C20  C21  C22   180.00   0.0  0
- OFF  CONST_25  H2   C2   C3   C4    180.00   0.0  0
- OFF  CONST_26  H6   C6   C5   C4    180.00   0.0  0
- OFF  CONST_27  H3   C3   C4   C5    180.00   0.0  0
- OFF  CONST_28  H5   C5   C6   C1    180.00   0.0  0
- OFF  Var_01    C16  C17  C18  C19    -0.15  30.0  2
- OFF  Var_02    C3   C4   C7   C8   -179.27  30.0  2
- OFF  Var_03    C15  C16  C17  C18   179.24   0.0  2
- OFF  Var_04    C4   C7   C8   C9   -179.62   0.0  2
- OFF  Var_05    O9   C15  C16  C17    -1.43  30.0  2
- OFF  Var_06    O7   C14  C13  C12   -35.77  30.0  3
- OFF  Var_07    C8   C9   O3   C10  -174.02  30.0  3
- OFF  Var_08    C7   C8   C9   O3   -177.50  30.0  2
+ OFF  CONST_01  C22   C23  C18  C19     0.00   0.0  0
+ OFF  CONST_02  C22   C21  C20  C19     0.00   0.0  0
+ OFF  CONST_03  C23   C18  C19  C20     0.00   0.0  0
+ OFF  CONST_04  C23   C22  C21  C20     0.00   0.0  0
+ OFF  CONST_05  C18   C19  C20  C21     0.00   0.0  0
+ OFF  CONST_06  C18   C23  C22  C21     0.00   0.0  0
+ OFF  CONST_07  C1    C2   C3   C4      0.00   0.0  0
+ OFF  CONST_08  C1    C6   C5   C4      0.00   0.0  0
+ OFF  CONST_09  C2    C3   C4   C5      0.00   0.0  0
+ OFF  CONST_10  C2    C1   C6   C5      0.00   0.0  0
+ OFF  CONST_11  C3    C4   C5   C6      0.00   0.0  0
+ OFF  CONST_12  C3    C2   C1   C6      0.00   0.0  0
+ OFF  CONST_13  O10   C21  C20  C19   180.00   0.0  0
+ OFF  CONST_14  C17   C18  C19  C20   180.00   0.0  0
+ OFF  CONST_15  C23   C22  C21  O10   180.00   0.0  0
+ OFF  CONST_16  C17   C18  C23  C22   180.00   0.0  0
+ OFF  CONST_17  C2    C3   C4   C7    180.00   0.0  0
+ OFF  CONST_18  C6    C5   C4   C7    180.00   0.0  0
+ OFF  CONST_19  O1    C1   C6   C5    180.00   0.0  0
+ OFF  CONST_20  C3    C2   C1   O1    180.00   0.0  0
+ OFF  CONST_21  H23   C23  C18  C19   180.00   0.0  0
+ OFF  CONST_22  H22   C22  C21  C20   180.00   0.0  0
+ OFF  CONST_23  H19   C19  C20  C21   180.00   0.0  0
+ OFF  CONST_24  H20   C20  C21  C22   180.00   0.0  0
+ OFF  CONST_25  H2    C2   C3   C4    180.00   0.0  0
+ OFF  CONST_26  H6    C6   C5   C4    180.00   0.0  0
+ OFF  CONST_27  H3    C3   C4   C5    180.00   0.0  0
+ OFF  CONST_28  H5    C5   C6   C1    180.00   0.0  0
+ OFF  Var_01    C16   C17  C18  C19    -0.15  30.0  2
+ OFF  Var_02    C3    C4   C7   C8   -179.27  30.0  2
+ OFF  Var_03    C15   C16  C17  C18   179.24   0.0  2
+ OFF  Var_04    C4    C7   C8   C9   -179.62   0.0  2
+ OFF  Var_05    O9    C15  C16  C17    -1.43  30.0  2
+ OFF  Var_06    O7    C14  C13  C12   -35.77  30.0  3
+ OFF  Var_07    C8    C9   O3   C10  -174.02  30.0  3
+ OFF  Var_08    C7    C8   C9   O3   -177.50  30.0  2
+ OFF  Var_09    HO10  O10  C21  C20     0.12  30.0  2
+ OFF  Var_10    HO1   O1   C1   C6      0.53  30.0  2
+ OFF  Var_11    C12   O8   C15  C16   175.48  30.0  3
+ OFF  Var_12    C13   C12  O8   C15   161.67  30.0  3
+ OFF  Var_13    C10   C12  O8   C15   -74.45  30.0  3
+ OFF  Var_14    C12   O8   C15  O9     -5.25  30.0  3
+ OFF  Var_15    C14   C13  C12  O8    -63.57  30.0  3
+ OFF  Var_16    C11   C10  C12  O8    -50.35  30.0  3
+ OFF  Var_17    O3    C10  C12  O8   -172.58  30.0  3
+ OFF  Var_18    O5    C11  C10  C12   -94.10  30.0  2
+ OFF  Var_19    O4    C11  C10  C12    84.56  30.0  2
+ OFF  Var_20    C9    O3   C10  C12  -173.48  30.0  3
+ OFF  Var_21    C11   C10  C12  C13    67.47  30.0  3
+ OFF  Var_22    O3    C10  C12  C13   -54.76  30.0  3
+ OFF  Var_23    C10   C12  C13  C14   176.72  30.0  1
+ OFF  Var_24    C9    O3   C10  C11    64.12  30.0  3
+ OFF  Var_25    O3    C10  C11  O4   -157.44  30.0  2
+ OFF  Var_26    O3    C10  C11  O5     23.90  30.0  2
+ OFF  Var_27    H12   C12  O8   C15    44.43  30.0  3
+ OFF  Var_28    H131  C13  C12  O8     60.95  30.0  3
+ OFF  Var_29    H132  C13  C12  O8    177.20  30.0  3
+ OFF  Var_30    H10   C10  C12  O8     70.72  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

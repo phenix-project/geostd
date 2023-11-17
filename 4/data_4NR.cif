@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 4NR  4NR  5-(4-fluorophenyl)-1H-pyrrolo[2,3-d]pyrimidine-2,4-diamine  ligand  28  18  .  2021-08-04  2021-08-04  
+ 4NR  4NR  5-(4-fluorophenyl)-1H-pyrrolo[2,3-d]pyrimidine-2,4-diamine  ligand  28  18  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_4NR
@@ -170,50 +171,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 4NR  CONST_01  CAE   CAL  CAD  CAF    0.00  0.0  0
- 4NR  CONST_02  CAE   CAG  CAO  CAF    0.00  0.0  0
- 4NR  CONST_05  CAG   CAO  CAF  CAD    0.00  0.0  0
- 4NR  CONST_06  CAP   CAO  CAF  CAD  180.00  0.0  0
- 4NR  CONST_07  CAG   CAE  CAL  CAD    0.00  0.0  0
- 4NR  CONST_08  CAO   CAF  CAD  CAL    0.00  0.0  0
- 4NR  CONST_09  CAO   CAG  CAE  CAL    0.00  0.0  0
- 4NR  CONST_10  CAP   CAO  CAG  CAE  180.00  0.0  0
- 4NR  CONST_13  C6    C5   CAP  CAO    0.00  0.0  0
- 4NR  CONST_14  C4    C5   CAP  CAO  180.00  0.0  0
- 4NR  CONST_15  NAK   CAH  CAP  CAO  180.00  0.0  0
- 4NR  CONST_16  N1    C6   C5   CAP  180.00  0.0  0
- 4NR  CONST_17  N3    C4   C5   CAP  180.00  0.0  0
- 4NR  CONST_18  NAK   C4   C5   CAP    0.00  0.0  0
- 4NR  CONST_19  C4    NAK  CAH  CAP    0.00  0.0  0
- 4NR  CONST_20  NAK   CAH  CAP  C5     0.00  0.0  0
- 4NR  CONST_21  C2    N1   C6   C5     0.00  0.0  0
- 4NR  CONST_22  C2    N3   C4   C5     0.00  0.0  0
- 4NR  CONST_23  CAH   NAK  C4   C5     0.00  0.0  0
- 4NR  CONST_24  CAH   CAP  C5   C6   180.00  0.0  0
- 4NR  CONST_25  N3    C4   C5   C6     0.00  0.0  0
- 4NR  CONST_26  NAK   C4   C5   C6   180.00  0.0  0
- 4NR  CONST_27  N3    C2   N1   C6     0.00  0.0  0
- 4NR  CONST_28  C4    C5   C6   N1     0.00  0.0  0
- 4NR  CONST_29  C4    N3   C2   N1     0.00  0.0  0
- 4NR  CONST_30  NAK   C4   N3   C2   180.00  0.0  0
- 4NR  CONST_31  CAH   NAK  C4   N3   180.00  0.0  0
- 4NR  CONST_32  CAH   CAP  C5   C4     0.00  0.0  0
- 4NR  CONST_33  FAC   CAL  CAD  CAF  180.00  0.0  0
- 4NR  CONST_34  CAG   CAE  CAL  FAC  180.00  0.0  0
- 4NR  CONST_35  NAB   C6   C5   CAP    0.00  0.0  0
- 4NR  CONST_36  NAA   C2   N1   C6   180.00  0.0  0
- 4NR  CONST_37  C4    C5   C6   NAB  180.00  0.0  0
- 4NR  CONST_38  C2    N1   C6   NAB  180.00  0.0  0
- 4NR  CONST_39  C4    N3   C2   NAA  180.00  0.0  0
- 4NR  CONST_40  HAG   CAG  CAO  CAF  180.00  0.0  0
- 4NR  CONST_41  HAE   CAE  CAL  CAD  180.00  0.0  0
- 4NR  CONST_42  HAF   CAF  CAD  CAL  180.00  0.0  0
- 4NR  CONST_43  HAD   CAD  CAL  CAE  180.00  0.0  0
- 4NR  CONST_44  HAH   CAH  CAP  CAO    0.00  0.0  0
- 4NR  CONST_45  H3    N3   C4   C5   180.00  0.0  0
- 4NR  CONST_46  HAB1  NAB  C6   C5     0.00  0.0  0
- 4NR  CONST_47  HAB2  NAB  C6   C5   180.00  0.0  0
- 4NR  CONST_48  HAA1  NAA  C2   N1     0.00  0.0  0
+ 4NR  CONST_01  CAE   CAL  CAD  CAF     0.00   0.0  0
+ 4NR  CONST_02  CAE   CAG  CAO  CAF     0.00   0.0  0
+ 4NR  CONST_03  CAG   CAO  CAF  CAD     0.00   0.0  0
+ 4NR  CONST_04  CAP   CAO  CAF  CAD   180.00   0.0  0
+ 4NR  CONST_05  CAG   CAE  CAL  CAD     0.00   0.0  0
+ 4NR  CONST_06  CAO   CAF  CAD  CAL     0.00   0.0  0
+ 4NR  CONST_07  CAO   CAG  CAE  CAL     0.00   0.0  0
+ 4NR  CONST_08  CAP   CAO  CAG  CAE   180.00   0.0  0
+ 4NR  CONST_09  C6    C5   CAP  CAO     0.00   0.0  0
+ 4NR  CONST_10  C4    C5   CAP  CAO   180.00   0.0  0
+ 4NR  CONST_11  NAK   CAH  CAP  CAO   180.00   0.0  0
+ 4NR  CONST_12  N1    C6   C5   CAP   180.00   0.0  0
+ 4NR  CONST_13  N3    C4   C5   CAP   180.00   0.0  0
+ 4NR  CONST_14  NAK   C4   C5   CAP     0.00   0.0  0
+ 4NR  CONST_15  C4    NAK  CAH  CAP     0.00   0.0  0
+ 4NR  CONST_16  NAK   CAH  CAP  C5      0.00   0.0  0
+ 4NR  CONST_17  C2    N1   C6   C5      0.00   0.0  0
+ 4NR  CONST_18  C2    N3   C4   C5      0.00   0.0  0
+ 4NR  CONST_19  CAH   NAK  C4   C5      0.00   0.0  0
+ 4NR  CONST_20  CAH   CAP  C5   C6    180.00   0.0  0
+ 4NR  CONST_21  N3    C4   C5   C6      0.00   0.0  0
+ 4NR  CONST_22  NAK   C4   C5   C6    180.00   0.0  0
+ 4NR  CONST_23  N3    C2   N1   C6      0.00   0.0  0
+ 4NR  CONST_24  C4    C5   C6   N1      0.00   0.0  0
+ 4NR  CONST_25  C4    N3   C2   N1      0.00   0.0  0
+ 4NR  CONST_26  NAK   C4   N3   C2    180.00   0.0  0
+ 4NR  CONST_27  CAH   NAK  C4   N3    180.00   0.0  0
+ 4NR  CONST_28  CAH   CAP  C5   C4      0.00   0.0  0
+ 4NR  CONST_29  FAC   CAL  CAD  CAF   180.00   0.0  0
+ 4NR  CONST_30  CAG   CAE  CAL  FAC   180.00   0.0  0
+ 4NR  CONST_31  NAB   C6   C5   CAP     0.00   0.0  0
+ 4NR  CONST_32  NAA   C2   N1   C6    180.00   0.0  0
+ 4NR  CONST_33  C4    C5   C6   NAB   180.00   0.0  0
+ 4NR  CONST_34  C2    N1   C6   NAB   180.00   0.0  0
+ 4NR  CONST_35  C4    N3   C2   NAA   180.00   0.0  0
+ 4NR  CONST_36  HAG   CAG  CAO  CAF   180.00   0.0  0
+ 4NR  CONST_37  HAE   CAE  CAL  CAD   180.00   0.0  0
+ 4NR  CONST_38  HAF   CAF  CAD  CAL   180.00   0.0  0
+ 4NR  CONST_39  HAD   CAD  CAL  CAE   180.00   0.0  0
+ 4NR  CONST_40  HAH   CAH  CAP  CAO     0.00   0.0  0
+ 4NR  CONST_41  H3    N3   C4   C5    180.00   0.0  0
+ 4NR  CONST_42  HAB1  NAB  C6   C5      0.00   0.0  0
+ 4NR  CONST_43  HAB2  NAB  C6   C5    180.00   0.0  0
+ 4NR  CONST_44  HAA1  NAA  C2   N1      0.00   0.0  0
+ 4NR  Var_01    C5    CAP  CAO  CAF  -136.81  30.0  2
+ 4NR  Var_02    CAH   CAP  CAO  CAF    46.03  30.0  2
+ 4NR  Var_03    C5    CAP  CAO  CAG    45.09  30.0  2
+ 4NR  Var_04    CAH   CAP  CAO  CAG  -132.07  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

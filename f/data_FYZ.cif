@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FYZ  FYZ  '3-(biphenyl-4-yl)prop-2-yn-1-yl alpha-D-mannopyranoside'  ligand  49  27  .  2021-08-09  2022-09-22
+ FYZ  FYZ  '3-(biphenyl-4-yl)prop-2-yn-1-yl alpha-D-mannopyranoside'  ligand  49  27  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FYZ
@@ -251,34 +252,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FYZ  CONST_01  C13  C12  C11  C10    0.00   0.0  0
- FYZ  CONST_02  C13  C14  C15  C10    0.00   0.0  0
- FYZ  CONST_03  C14  C15  C10  C11    0.00   0.0  0
- FYZ  CONST_04  C14  C13  C12  C11    0.00   0.0  0
- FYZ  CONST_05  C16  C13  C12  C11  180.00   0.0  0
- FYZ  CONST_06  C15  C10  C11  C12    0.00   0.0  0
- FYZ  CONST_07  C15  C14  C13  C12    0.00   0.0  0
- FYZ  CONST_10  C20  C21  C16  C13  180.00   0.0  0
- FYZ  CONST_11  C18  C17  C16  C13  180.00   0.0  0
- FYZ  CONST_14  C16  C13  C14  C15  180.00   0.0  0
- FYZ  CONST_15  C19  C20  C21  C16    0.00   0.0  0
- FYZ  CONST_16  C19  C18  C17  C16    0.00   0.0  0
- FYZ  CONST_17  C18  C17  C16  C21    0.00   0.0  0
- FYZ  CONST_18  C18  C19  C20  C21    0.00   0.0  0
- FYZ  CONST_19  C17  C16  C21  C20    0.00   0.0  0
- FYZ  CONST_20  C17  C18  C19  C20    0.00   0.0  0
- FYZ  CONST_21  C12  C11  C10  C9   180.00   0.0  0
- FYZ  CONST_22  C14  C15  C10  C9   180.00   0.0  0
- FYZ  CONST_23  H12  C12  C11  C10  180.00   0.0  0
- FYZ  CONST_24  H14  C14  C15  C10  180.00   0.0  0
- FYZ  CONST_25  H15  C15  C10  C11  180.00   0.0  0
- FYZ  CONST_26  H11  C11  C12  C13  180.00   0.0  0
- FYZ  CONST_27  H21  C21  C16  C13    0.00   0.0  0
- FYZ  CONST_28  H17  C17  C16  C13    0.00   0.0  0
- FYZ  CONST_29  H20  C20  C21  C16  180.00   0.0  0
- FYZ  CONST_30  H18  C18  C17  C16  180.00   0.0  0
- FYZ  CONST_31  H19  C19  C20  C21  180.00   0.0  0
- FYZ  Var_01    C8   C7   O1   C1   154.46  30.0  3
+ FYZ  CONST_01  C13   C12  C11  C10     0.00   0.0  0
+ FYZ  CONST_02  C13   C14  C15  C10     0.00   0.0  0
+ FYZ  CONST_03  C14   C15  C10  C11     0.00   0.0  0
+ FYZ  CONST_04  C14   C13  C12  C11     0.00   0.0  0
+ FYZ  CONST_05  C16   C13  C12  C11   180.00   0.0  0
+ FYZ  CONST_06  C15   C10  C11  C12     0.00   0.0  0
+ FYZ  CONST_07  C15   C14  C13  C12     0.00   0.0  0
+ FYZ  CONST_08  C20   C21  C16  C13   180.00   0.0  0
+ FYZ  CONST_09  C18   C17  C16  C13   180.00   0.0  0
+ FYZ  CONST_10  C16   C13  C14  C15   180.00   0.0  0
+ FYZ  CONST_11  C19   C20  C21  C16     0.00   0.0  0
+ FYZ  CONST_12  C19   C18  C17  C16     0.00   0.0  0
+ FYZ  CONST_13  C18   C17  C16  C21     0.00   0.0  0
+ FYZ  CONST_14  C18   C19  C20  C21     0.00   0.0  0
+ FYZ  CONST_15  C17   C16  C21  C20     0.00   0.0  0
+ FYZ  CONST_16  C17   C18  C19  C20     0.00   0.0  0
+ FYZ  CONST_17  C12   C11  C10  C9    180.00   0.0  0
+ FYZ  CONST_18  C14   C15  C10  C9    180.00   0.0  0
+ FYZ  CONST_19  H12   C12  C11  C10   180.00   0.0  0
+ FYZ  CONST_20  H14   C14  C15  C10   180.00   0.0  0
+ FYZ  CONST_21  H15   C15  C10  C11   180.00   0.0  0
+ FYZ  CONST_22  H11   C11  C12  C13   180.00   0.0  0
+ FYZ  CONST_23  H21   C21  C16  C13     0.00   0.0  0
+ FYZ  CONST_24  H17   C17  C16  C13     0.00   0.0  0
+ FYZ  CONST_25  H20   C20  C21  C16   180.00   0.0  0
+ FYZ  CONST_26  H18   C18  C17  C16   180.00   0.0  0
+ FYZ  CONST_27  H19   C19  C20  C21   180.00   0.0  0
+ FYZ  Var_01    C8    C7   O1   C1    154.46  30.0  3
+ FYZ  Var_02    C5    C4   C3   C2     54.81  30.0  1
+ FYZ  Var_03    C5    O5   C1   C2    -57.29  30.0  1
+ FYZ  Var_04    O5    C1   C2   C3     54.68  30.0  1
+ FYZ  Var_05    O5    C5   C4   C3    -53.11  30.0  1
+ FYZ  Var_06    C1    C2   C3   C4    -54.86  30.0  1
+ FYZ  Var_07    C1    O5   C5   C4     56.18  30.0  1
+ FYZ  Var_08    C21   C16  C13  C12  -140.00  30.0  2
+ FYZ  Var_09    C17   C16  C13  C12    40.27  30.0  2
+ FYZ  Var_10    C21   C16  C13  C14    40.20  30.0  2
+ FYZ  Var_11    C17   C16  C13  C14  -139.54  30.0  2
+ FYZ  Var_12    C4    C3   C2   O2     65.04  30.0  1
+ FYZ  Var_13    O5    C1   C2   O2    -64.15  30.0  1
+ FYZ  Var_14    O4    C4   C3   C2    173.92  30.0  1
+ FYZ  Var_15    O1    C1   C2   C3    -69.58  30.0  1
+ FYZ  Var_16    C6    C5   C4   C3   -172.13  30.0  1
+ FYZ  Var_17    C1    C2   C3   O3   -175.43  30.0  1
+ FYZ  Var_18    C5    C4   C3   O3    178.08  30.0  1
+ FYZ  Var_19    O5    C5   C4   O4   -174.14  30.0  1
+ FYZ  Var_20    O1    C1   O5   C5     63.45  30.0  1
+ FYZ  Var_21    C1    O5   C5   C6    177.74  30.0  1
+ FYZ  Var_22    H4    C4   C3   C2    -64.09  30.0  1
+ FYZ  Var_23    H1    C1   C2   C3    170.34  30.0  1
+ FYZ  Var_24    H5    C5   C4   C3     68.52  30.0  1
+ FYZ  Var_25    HA    C2   C3   C4   -173.29  30.0  1
+ FYZ  Var_26    H3    C3   C4   C5    -62.95  30.0  1
+ FYZ  Var_27    O3    C3   C2   O2    -55.53  30.0  1
+ FYZ  Var_28    O1    C1   C2   O2    171.59  30.0  1
+ FYZ  Var_29    C7    O1   C1   C2   -172.39  30.0  3
+ FYZ  Var_30    O4    C4   C3   O3    -62.81  30.0  1
+ FYZ  Var_31    O6    C6   C5   C4   -175.00  30.0  3
+ FYZ  Var_32    C6    C5   C4   O4     66.84  30.0  1
+ FYZ  Var_33    O6    C6   C5   O5     63.80  30.0  3
+ FYZ  Var_34    C7    O1   C1   O5     64.33  30.0  3
+ FYZ  Var_35    HB    O3   C3   C2    -92.66  30.0  3
+ FYZ  Var_36    H2    O2   C2   C3    164.43  30.0  3
+ FYZ  Var_37    HC    O4   C4   C3     52.51  30.0  3
+ FYZ  Var_38    H61C  C6   C5   C4    -53.21  30.0  3
+ FYZ  Var_39    H62C  C6   C5   C4     62.84  30.0  3
+ FYZ  Var_40    C10   C9   C8   C7    132.57  30.0  1
+ FYZ  Var_41    H6    O6   C6   C5    177.73  30.0  3
+ FYZ  Var_42    C9    C8   C7   O1   -119.51  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

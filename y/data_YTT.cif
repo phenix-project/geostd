@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- YTT  YTT  (3S,6S)-3,6-bis(4-hydroxybenzyl)piperazine-2,5-dione  ligand  42  24  .  2022-03-29  2022-03-29
+ YTT  YTT  (3S,6S)-3,6-bis(4-hydroxybenzyl)piperazine-2,5-dione  ligand  42  24  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_YTT
@@ -225,42 +226,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- YTT  CONST_01  CZB  CE3  CD3  CGB    0.00   0.0  0
- YTT  CONST_02  CZB  CE4  CD4  CGB    0.00   0.0  0
- YTT  CONST_03  CE4  CD4  CGB  CD3    0.00   0.0  0
- YTT  CONST_04  CE4  CZB  CE3  CD3    0.00   0.0  0
- YTT  CONST_05  CD4  CGB  CD3  CE3    0.00   0.0  0
- YTT  CONST_06  CD4  CE4  CZB  CE3    0.00   0.0  0
- YTT  CONST_07  CZA  CE2  CD2  CGA    0.00   0.0  0
- YTT  CONST_08  CZA  CE1  CD1  CGA    0.00   0.0  0
- YTT  CONST_09  CE1  CD1  CGA  CD2    0.00   0.0  0
- YTT  CONST_10  CE1  CZA  CE2  CD2    0.00   0.0  0
- YTT  CONST_11  CD1  CGA  CD2  CE2    0.00   0.0  0
- YTT  CONST_12  CD1  CE1  CZA  CE2    0.00   0.0  0
- YTT  CONST_13  CAA  NA   CB   CAB    0.00   0.0  0
- YTT  CONST_14  CAA  CA   NB   CAB    0.00   0.0  0
- YTT  CONST_15  CE3  CD3  CGB  CBB  180.00   0.0  0
- YTT  CONST_16  CE4  CD4  CGB  CBB  180.00   0.0  0
- YTT  CONST_17  OHB  CZB  CE3  CD3  180.00   0.0  0
- YTT  CONST_18  CD4  CE4  CZB  OHB  180.00   0.0  0
- YTT  CONST_19  CE2  CD2  CGA  CBA  180.00   0.0  0
- YTT  CONST_20  CE1  CD1  CGA  CBA  180.00   0.0  0
- YTT  CONST_21  OHA  CZA  CE2  CD2  180.00   0.0  0
- YTT  CONST_22  CD1  CE1  CZA  OHA  180.00   0.0  0
- YTT  CONST_23  CAA  NA   CB   OB   180.00   0.0  0
- YTT  CONST_24  OA   CA   NB   CAB  180.00   0.0  0
- YTT  CONST_25  HE3  CE3  CD3  CGB  180.00   0.0  0
- YTT  CONST_26  HE4  CE4  CD4  CGB  180.00   0.0  0
- YTT  CONST_27  HD4  CD4  CGB  CD3  180.00   0.0  0
- YTT  CONST_28  HD3  CD3  CE3  CZB  180.00   0.0  0
- YTT  CONST_29  HE2  CE2  CD2  CGA  180.00   0.0  0
- YTT  CONST_30  HE1  CE1  CD1  CGA  180.00   0.0  0
- YTT  CONST_31  HD1  CD1  CGA  CD2  180.00   0.0  0
- YTT  CONST_32  HD2  CD2  CE2  CZA  180.00   0.0  0
- YTT  CONST_33  HNA  NA   CB   CAB  180.00   0.0  0
- YTT  CONST_34  HNB  NB   CA   CAA  180.00   0.0  0
- YTT  Var_01    CD3  CGB  CBB  CAB   95.00  30.0  2
- YTT  Var_02    CD2  CGA  CBA  CAA   95.86  30.0  2
+ YTT  CONST_01  CZB   CE3  CD3  CGB     0.00   0.0  0
+ YTT  CONST_02  CZB   CE4  CD4  CGB     0.00   0.0  0
+ YTT  CONST_03  CE4   CD4  CGB  CD3     0.00   0.0  0
+ YTT  CONST_04  CE4   CZB  CE3  CD3     0.00   0.0  0
+ YTT  CONST_05  CD4   CGB  CD3  CE3     0.00   0.0  0
+ YTT  CONST_06  CD4   CE4  CZB  CE3     0.00   0.0  0
+ YTT  CONST_07  CZA   CE2  CD2  CGA     0.00   0.0  0
+ YTT  CONST_08  CZA   CE1  CD1  CGA     0.00   0.0  0
+ YTT  CONST_09  CE1   CD1  CGA  CD2     0.00   0.0  0
+ YTT  CONST_10  CE1   CZA  CE2  CD2     0.00   0.0  0
+ YTT  CONST_11  CD1   CGA  CD2  CE2     0.00   0.0  0
+ YTT  CONST_12  CD1   CE1  CZA  CE2     0.00   0.0  0
+ YTT  CONST_13  CAA   NA   CB   CAB     0.00   0.0  0
+ YTT  CONST_14  CAA   CA   NB   CAB     0.00   0.0  0
+ YTT  CONST_15  CE3   CD3  CGB  CBB   180.00   0.0  0
+ YTT  CONST_16  CE4   CD4  CGB  CBB   180.00   0.0  0
+ YTT  CONST_17  OHB   CZB  CE3  CD3   180.00   0.0  0
+ YTT  CONST_18  CD4   CE4  CZB  OHB   180.00   0.0  0
+ YTT  CONST_19  CE2   CD2  CGA  CBA   180.00   0.0  0
+ YTT  CONST_20  CE1   CD1  CGA  CBA   180.00   0.0  0
+ YTT  CONST_21  OHA   CZA  CE2  CD2   180.00   0.0  0
+ YTT  CONST_22  CD1   CE1  CZA  OHA   180.00   0.0  0
+ YTT  CONST_23  CAA   NA   CB   OB    180.00   0.0  0
+ YTT  CONST_24  OA    CA   NB   CAB   180.00   0.0  0
+ YTT  CONST_25  HE3   CE3  CD3  CGB   180.00   0.0  0
+ YTT  CONST_26  HE4   CE4  CD4  CGB   180.00   0.0  0
+ YTT  CONST_27  HD4   CD4  CGB  CD3   180.00   0.0  0
+ YTT  CONST_28  HD3   CD3  CE3  CZB   180.00   0.0  0
+ YTT  CONST_29  HE2   CE2  CD2  CGA   180.00   0.0  0
+ YTT  CONST_30  HE1   CE1  CD1  CGA   180.00   0.0  0
+ YTT  CONST_31  HD1   CD1  CGA  CD2   180.00   0.0  0
+ YTT  CONST_32  HD2   CD2  CE2  CZA   180.00   0.0  0
+ YTT  CONST_33  HNA   NA   CB   CAB   180.00   0.0  0
+ YTT  CONST_34  HNB   NB   CA   CAA   180.00   0.0  0
+ YTT  Var_01    CD3   CGB  CBB  CAB    95.00  30.0  2
+ YTT  Var_02    CD2   CGA  CBA  CAA    95.86  30.0  2
+ YTT  Var_03    CA    NB   CAB  CB     27.20  30.0  1
+ YTT  Var_04    CA    CAA  NA   CB     26.93  30.0  1
+ YTT  Var_05    NA    CB   CAB  NB    -20.78  30.0  1
+ YTT  Var_06    NA    CAA  CA   NB    -20.55  30.0  1
+ YTT  Var_07    NB    CAB  CB   OB    160.32  30.0  1
+ YTT  Var_08    CGB   CBB  CAB  CB   -179.51  30.0  3
+ YTT  Var_09    CBA   CAA  NA   CB    -97.64  30.0  1
+ YTT  Var_10    NA    CB   CAB  CBB   105.46  30.0  1
+ YTT  Var_11    CA    NB   CAB  CBB   -97.23  30.0  1
+ YTT  Var_12    NB    CAB  CBB  CGB   -53.42  30.0  2
+ YTT  Var_13    CBA   CAA  CA   NB    105.65  30.0  1
+ YTT  Var_14    OA    CA   CAA  NA    160.36  30.0  1
+ YTT  Var_15    CGA   CBA  CAA  NA    -56.97  30.0  3
+ YTT  Var_16    CGA   CBA  CAA  CA    176.88  30.0  3
+ YTT  Var_17    HAA   CAA  NA   CB    143.58  30.0  1
+ YTT  Var_18    HAB   CAB  CB   NA   -138.07  30.0  1
+ YTT  Var_19    CBB   CAB  CB   OB    -73.44  30.0  1
+ YTT  Var_20    CBA   CAA  CA   OA    -73.45  30.0  1
+ YTT  Var_21    HBB   CBB  CAB  CB    -57.15  30.0  3
+ YTT  Var_22    HBBA  CBB  CAB  CB     58.83  30.0  3
+ YTT  Var_23    HOHB  OHB  CZB  CE3   177.85  30.0  2
+ YTT  Var_24    HBA   CBA  CAA  NA     65.34  30.0  3
+ YTT  Var_25    HBAA  CBA  CAA  NA   -178.48  30.0  3
+ YTT  Var_26    HOHA  OHA  CZA  CE2     0.35  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

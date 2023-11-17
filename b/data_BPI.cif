@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BPI  BPI  (2R,3R,4R)-1,2,3,4-tetrahydrobenzo[c]phenanthrene-2,3,4-triol  ligand  37  21  .  2022-03-15  2022-03-15
+ BPI  BPI  (2R,3R,4R)-1,2,3,4-tetrahydrobenzo[c]phenanthrene-2,3,4-triol  ligand  37  21  .  2022-03-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BPI
@@ -211,44 +212,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BPI  CONST_01  C7   C15  C6   C5   180.00   0.0  0
- BPI  CONST_02  C16  C15  C6   C5     0.00   0.0  0
- BPI  CONST_03  C16  C13  C14  C5     0.00   0.0  0
- BPI  CONST_04  C13  C14  C5   C6     0.00   0.0  0
- BPI  CONST_05  C8   C7   C15  C6   180.00   0.0  0
- BPI  CONST_06  C13  C16  C15  C6     0.00   0.0  0
- BPI  CONST_07  C17  C16  C15  C6   180.00   0.0  0
- BPI  CONST_08  C9   C18  C8   C7   180.00   0.0  0
- BPI  CONST_09  C17  C18  C8   C7     0.00   0.0  0
- BPI  CONST_10  C13  C16  C15  C7   180.00   0.0  0
- BPI  CONST_11  C17  C16  C15  C7     0.00   0.0  0
- BPI  CONST_12  C16  C15  C7   C8     0.00   0.0  0
- BPI  CONST_13  C10  C9   C18  C8   180.00   0.0  0
- BPI  CONST_14  C12  C17  C18  C8   180.00   0.0  0
- BPI  CONST_15  C16  C17  C18  C8     0.00   0.0  0
- BPI  CONST_16  C12  C11  C10  C9     0.00   0.0  0
- BPI  CONST_17  C12  C17  C18  C9     0.00   0.0  0
- BPI  CONST_18  C16  C17  C18  C9   180.00   0.0  0
- BPI  CONST_19  C17  C18  C9   C10    0.00   0.0  0
- BPI  CONST_20  C17  C12  C11  C10    0.00   0.0  0
- BPI  CONST_21  C18  C9   C10  C11    0.00   0.0  0
- BPI  CONST_22  C16  C17  C12  C11  180.00   0.0  0
- BPI  CONST_23  C18  C17  C12  C11    0.00   0.0  0
- BPI  CONST_26  C18  C17  C16  C13  180.00   0.0  0
- BPI  CONST_27  C15  C6   C5   C14    0.00   0.0  0
- BPI  CONST_28  C15  C16  C13  C14    0.00   0.0  0
- BPI  CONST_29  C17  C16  C13  C14  180.00   0.0  0
- BPI  CONST_30  C18  C8   C7   C15    0.00   0.0  0
- BPI  CONST_31  C18  C17  C16  C15    0.00   0.0  0
- BPI  CONST_32  H5   C5   C14  C4     0.00   0.0  0
- BPI  CONST_33  H7   C7   C15  C6     0.00   0.0  0
- BPI  CONST_34  H6   C6   C15  C7     0.00   0.0  0
- BPI  CONST_35  H9   C9   C18  C8     0.00   0.0  0
- BPI  CONST_36  H11  C11  C10  C9   180.00   0.0  0
- BPI  CONST_37  H8   C8   C18  C9     0.00   0.0  0
- BPI  CONST_38  H12  C12  C11  C10  180.00   0.0  0
- BPI  CONST_39  H10  C10  C11  C12  180.00   0.0  0
- BPI  Var_01    C14  C13  C1   C2    17.62  30.0  1
+ BPI  CONST_01  C7    C15  C6   C5    180.00   0.0  0
+ BPI  CONST_02  C16   C15  C6   C5      0.00   0.0  0
+ BPI  CONST_03  C16   C13  C14  C5      0.00   0.0  0
+ BPI  CONST_04  C13   C14  C5   C6      0.00   0.0  0
+ BPI  CONST_05  C8    C7   C15  C6    180.00   0.0  0
+ BPI  CONST_06  C13   C16  C15  C6      0.00   0.0  0
+ BPI  CONST_07  C17   C16  C15  C6    180.00   0.0  0
+ BPI  CONST_08  C9    C18  C8   C7    180.00   0.0  0
+ BPI  CONST_09  C17   C18  C8   C7      0.00   0.0  0
+ BPI  CONST_10  C13   C16  C15  C7    180.00   0.0  0
+ BPI  CONST_11  C17   C16  C15  C7      0.00   0.0  0
+ BPI  CONST_12  C16   C15  C7   C8      0.00   0.0  0
+ BPI  CONST_13  C10   C9   C18  C8    180.00   0.0  0
+ BPI  CONST_14  C12   C17  C18  C8    180.00   0.0  0
+ BPI  CONST_15  C16   C17  C18  C8      0.00   0.0  0
+ BPI  CONST_16  C12   C11  C10  C9      0.00   0.0  0
+ BPI  CONST_17  C12   C17  C18  C9      0.00   0.0  0
+ BPI  CONST_18  C16   C17  C18  C9    180.00   0.0  0
+ BPI  CONST_19  C17   C18  C9   C10     0.00   0.0  0
+ BPI  CONST_20  C17   C12  C11  C10     0.00   0.0  0
+ BPI  CONST_21  C18   C9   C10  C11     0.00   0.0  0
+ BPI  CONST_22  C16   C17  C12  C11   180.00   0.0  0
+ BPI  CONST_23  C18   C17  C12  C11     0.00   0.0  0
+ BPI  CONST_24  C18   C17  C16  C13   180.00   0.0  0
+ BPI  CONST_25  C15   C6   C5   C14     0.00   0.0  0
+ BPI  CONST_26  C15   C16  C13  C14     0.00   0.0  0
+ BPI  CONST_27  C17   C16  C13  C14   180.00   0.0  0
+ BPI  CONST_28  C18   C8   C7   C15     0.00   0.0  0
+ BPI  CONST_29  C18   C17  C16  C15     0.00   0.0  0
+ BPI  CONST_30  H5    C5   C14  C4      0.00   0.0  0
+ BPI  CONST_31  H7    C7   C15  C6      0.00   0.0  0
+ BPI  CONST_32  H6    C6   C15  C7      0.00   0.0  0
+ BPI  CONST_33  H9    C9   C18  C8      0.00   0.0  0
+ BPI  CONST_34  H11   C11  C10  C9    180.00   0.0  0
+ BPI  CONST_35  H8    C8   C18  C9      0.00   0.0  0
+ BPI  CONST_36  H12   C12  C11  C10   180.00   0.0  0
+ BPI  CONST_37  H10   C10  C11  C12   180.00   0.0  0
+ BPI  Var_01    C14   C13  C1   C2     17.62  30.0  1
+ BPI  Var_02    C4    C3   C2   C1     64.96  30.0  1
+ BPI  Var_03    C14   C4   C3   C2    -47.77  30.0  1
+ BPI  Var_04    C13   C1   C2   C3    -50.29  30.0  1
+ BPI  Var_05    C5    C14  C4   C3   -167.25  30.0  1
+ BPI  Var_06    C13   C14  C4   C3     16.98  30.0  1
+ BPI  Var_07    O3    C3   C2   C1    -55.58  30.0  1
+ BPI  Var_08    O4    C4   C3   C2     74.53  30.0  1
+ BPI  Var_09    C13   C1   C2   O2   -171.02  30.0  1
+ BPI  Var_10    C4    C3   C2   O2   -173.00  30.0  1
+ BPI  Var_11    C14   C4   C3   O3     71.23  30.0  1
+ BPI  Var_12    C5    C14  C4   O4     72.81  30.0  1
+ BPI  Var_13    C13   C14  C4   O4   -102.96  30.0  1
+ BPI  Var_14    H3    C3   C2   C1   -177.26  30.0  1
+ BPI  Var_15    H4    C4   C3   C2   -167.26  30.0  1
+ BPI  Var_16    H11A  C1   C2   C3     72.50  30.0  1
+ BPI  Var_17    H12A  C1   C2   C3   -172.73  30.0  1
+ BPI  Var_18    H2    C2   C3   C4    -53.53  30.0  1
+ BPI  Var_19    O3    C3   C2   O2     66.46  30.0  1
+ BPI  Var_20    O4    C4   C3   O3   -166.47  30.0  1
+ BPI  Var_21    HO2   O2   C2   C1    -66.77  30.0  3
+ BPI  Var_22    HO3   O3   C3   C2   -176.75  30.0  3
+ BPI  Var_23    HO4   O4   C4   C3    179.30  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

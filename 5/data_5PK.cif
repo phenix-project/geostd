@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5PK  5PK  (1~{R})-1-cyclohexyl-2-[(5~{S})-5~{H}-imidazo[1,5-b]isoindol-5-yl]ethanol  ligand  43  21  .  2022-03-10  2022-03-10
+ 5PK  5PK  (1~{R})-1-cyclohexyl-2-[(5~{S})-5~{H}-imidazo[1,5-b]isoindol-5-yl]ethanol  ligand  43  21  .  2022-03-10  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5PK
@@ -240,35 +241,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5PK  CONST_01  CAT  CAU  CAL  CAK    0.00   0.0  0
- 5PK  CONST_02  CAO  CAM  CAL  CAK  180.00   0.0  0
- 5PK  CONST_03  NAN  CAM  CAL  CAK    0.00   0.0  0
- 5PK  CONST_04  CAT  CAS  CAR  CAK    0.00   0.0  0
- 5PK  CONST_05  CAU  CAT  CAS  CAR    0.00   0.0  0
- 5PK  CONST_06  CAU  CAL  CAK  CAR    0.00   0.0  0
- 5PK  CONST_07  CAM  CAL  CAK  CAR  180.00   0.0  0
- 5PK  CONST_08  CAL  CAU  CAT  CAS    0.00   0.0  0
- 5PK  CONST_09  CAL  CAK  CAR  CAS    0.00   0.0  0
- 5PK  CONST_10  CAM  CAL  CAU  CAT  180.00   0.0  0
- 5PK  CONST_11  CAO  CAM  CAL  CAU    0.00   0.0  0
- 5PK  CONST_12  NAN  CAM  CAL  CAU  180.00   0.0  0
- 5PK  CONST_13  NAP  CAO  CAM  CAL  180.00   0.0  0
- 5PK  CONST_14  CAQ  NAN  CAM  CAL  180.00   0.0  0
- 5PK  CONST_15  CAQ  NAP  CAO  CAM    0.00   0.0  0
- 5PK  CONST_16  NAP  CAQ  NAN  CAM    0.00   0.0  0
- 5PK  CONST_17  NAP  CAO  CAM  NAN    0.00   0.0  0
- 5PK  CONST_18  CAO  NAP  CAQ  NAN    0.00   0.0  0
- 5PK  CONST_19  CAO  CAM  NAN  CAQ    0.00   0.0  0
- 5PK  CONST_20  H17  CAR  CAK  CAJ    0.00   0.0  0
- 5PK  CONST_21  H21  CAQ  NAN  CAJ    0.00   0.0  0
- 5PK  CONST_22  H20  CAU  CAL  CAK  180.00   0.0  0
- 5PK  CONST_23  H18  CAS  CAR  CAK  180.00   0.0  0
- 5PK  CONST_24  H19  CAT  CAS  CAR  180.00   0.0  0
- 5PK  CONST_25  H22  CAO  CAM  CAL    0.00   0.0  0
- 5PK  Var_01    CAD  CAE  CAF  CAA   55.24  30.0  1
- 5PK  Var_02    CAC  CAD  CAE  CAF  -55.35  30.0  1
- 5PK  Var_03    CAB  CAC  CAD  CAE   55.87  30.0  1
- 5PK  Var_04    CAB  CAA  CAF  CAE  -55.24  30.0  1
+ 5PK  CONST_01  CAT  CAU  CAL  CAK     0.00   0.0  0
+ 5PK  CONST_02  CAO  CAM  CAL  CAK   180.00   0.0  0
+ 5PK  CONST_03  NAN  CAM  CAL  CAK     0.00   0.0  0
+ 5PK  CONST_04  CAT  CAS  CAR  CAK     0.00   0.0  0
+ 5PK  CONST_05  CAU  CAT  CAS  CAR     0.00   0.0  0
+ 5PK  CONST_06  CAU  CAL  CAK  CAR     0.00   0.0  0
+ 5PK  CONST_07  CAM  CAL  CAK  CAR   180.00   0.0  0
+ 5PK  CONST_08  CAL  CAU  CAT  CAS     0.00   0.0  0
+ 5PK  CONST_09  CAL  CAK  CAR  CAS     0.00   0.0  0
+ 5PK  CONST_10  CAM  CAL  CAU  CAT   180.00   0.0  0
+ 5PK  CONST_11  CAO  CAM  CAL  CAU     0.00   0.0  0
+ 5PK  CONST_12  NAN  CAM  CAL  CAU   180.00   0.0  0
+ 5PK  CONST_13  NAP  CAO  CAM  CAL   180.00   0.0  0
+ 5PK  CONST_14  CAQ  NAN  CAM  CAL   180.00   0.0  0
+ 5PK  CONST_15  CAQ  NAP  CAO  CAM     0.00   0.0  0
+ 5PK  CONST_16  NAP  CAQ  NAN  CAM     0.00   0.0  0
+ 5PK  CONST_17  NAP  CAO  CAM  NAN     0.00   0.0  0
+ 5PK  CONST_18  CAO  NAP  CAQ  NAN     0.00   0.0  0
+ 5PK  CONST_19  CAO  CAM  NAN  CAQ     0.00   0.0  0
+ 5PK  CONST_20  H17  CAR  CAK  CAJ     0.00   0.0  0
+ 5PK  CONST_21  H21  CAQ  NAN  CAJ     0.00   0.0  0
+ 5PK  CONST_22  H20  CAU  CAL  CAK   180.00   0.0  0
+ 5PK  CONST_23  H18  CAS  CAR  CAK   180.00   0.0  0
+ 5PK  CONST_24  H19  CAT  CAS  CAR   180.00   0.0  0
+ 5PK  CONST_25  H22  CAO  CAM  CAL     0.00   0.0  0
+ 5PK  Var_01    CAD  CAE  CAF  CAA    55.24  30.0  1
+ 5PK  Var_02    CAC  CAD  CAE  CAF   -55.35  30.0  1
+ 5PK  Var_03    CAB  CAC  CAD  CAE    55.87  30.0  1
+ 5PK  Var_04    CAB  CAA  CAF  CAE   -55.24  30.0  1
+ 5PK  CONST_26  CAM  NAN  CAJ  CAK     0.00   0.0  0
+ 5PK  CONST_27  CAQ  NAN  CAJ  CAK   180.00   0.0  0
+ 5PK  CONST_28  NAN  CAJ  CAK  CAR   180.00   0.0  0
+ 5PK  CONST_29  NAN  CAJ  CAK  CAL     0.00   0.0  0
+ 5PK  Var_05    CAD  CAC  CAB  CAA   -54.47  30.0  1
+ 5PK  Var_06    CAC  CAB  CAA  CAF    53.93  30.0  1
+ 5PK  Var_07    CAG  CAB  CAA  CAF   177.95  30.0  1
+ 5PK  Var_08    CAG  CAB  CAC  CAD  -179.13  30.0  1
+ 5PK  Var_09    CAL  CAK  CAJ  CAH   113.86  30.0  1
+ 5PK  Var_10    CAR  CAK  CAJ  CAH   -67.44  30.0  1
+ 5PK  Var_11    CAM  NAN  CAJ  CAH  -117.56  30.0  1
+ 5PK  Var_12    CAQ  NAN  CAJ  CAH    58.38  30.0  1
+ 5PK  Var_13    H9   CAC  CAB  CAA  -177.20  30.0  1
+ 5PK  Var_14    H10  CAC  CAB  CAA    66.37  30.0  1
+ 5PK  Var_15    H11  CAB  CAA  CAF   -63.81  30.0  1
+ 5PK  Var_16    H16  CAJ  CAK  CAR    59.29  30.0  1
+ 5PK  Var_17    CAH  CAG  CAB  CAA    57.44  30.0  1
+ 5PK  Var_18    OAI  CAG  CAB  CAA  -176.94  30.0  1
+ 5PK  Var_19    CAH  CAG  CAB  CAC  -179.01  30.0  1
+ 5PK  Var_20    OAI  CAG  CAB  CAC   -53.39  30.0  1
+ 5PK  Var_21    CAJ  CAH  CAG  CAB   171.70  30.0  2
+ 5PK  Var_22    CAK  CAJ  CAH  CAG    66.03  30.0  2
+ 5PK  Var_23    NAN  CAJ  CAH  CAG   178.05  30.0  2
+ 5PK  Var_24    H12  CAG  CAB  CAA   -62.02  30.0  1
+ 5PK  Var_25    H14  CAH  CAJ  CAK   -56.72  30.0  3
+ 5PK  Var_26    H15  CAH  CAJ  CAK  -171.78  30.0  3
+ 5PK  Var_27    CAJ  CAH  CAG  OAI    45.57  30.0  2
+ 5PK  Var_28    H13  OAI  CAG  CAB   -60.35  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

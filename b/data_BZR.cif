@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BZR  BZR  (2R,3R,4R)-1,2,3,4-tetrahydrotetraphene-2,3,4-triol  ligand  37  21  .  2021-08-06  2021-08-06  
+ BZR  BZR  (2R,3R,4R)-1,2,3,4-tetrahydrotetraphene-2,3,4-triol  ligand  37  21  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BZR
@@ -211,45 +212,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BZR  CONST_01  C11  C1A  C2A  C3A    0.00   0.0  0
- BZR  CONST_02  C5A  C4B  C4A  C3A  180.00   0.0  0
- BZR  CONST_03  C11  C4B  C4A  C3A    0.00   0.0  0
- BZR  CONST_04  C4B  C4A  C3A  C2A    0.00   0.0  0
- BZR  CONST_05  C4B  C11  C1A  C2A    0.00   0.0  0
- BZR  CONST_06  C10  C11  C1A  C2A  180.00   0.0  0
- BZR  CONST_07  C1A  C2A  C3A  C4A    0.00   0.0  0
- BZR  CONST_08  C5B  C5A  C4B  C4A  180.00   0.0  0
- BZR  CONST_09  C1A  C11  C4B  C4A    0.00   0.0  0
- BZR  CONST_10  C10  C11  C4B  C4A  180.00   0.0  0
- BZR  CONST_11  C5A  C4B  C11  C1A  180.00   0.0  0
- BZR  CONST_12  C9B  C10  C11  C1A  180.00   0.0  0
- BZR  CONST_13  C10  C11  C4B  C5A    0.00   0.0  0
- BZR  CONST_14  C7A  C6A  C5B  C5A  180.00   0.0  0
- BZR  CONST_15  C9A  C9B  C5B  C5A  180.00   0.0  0
- BZR  CONST_16  C10  C9B  C5B  C5A    0.00   0.0  0
- BZR  CONST_17  C6A  C5B  C5A  C4B  180.00   0.0  0
- BZR  CONST_18  C9B  C5B  C5A  C4B    0.00   0.0  0
- BZR  CONST_19  C9B  C10  C11  C4B    0.00   0.0  0
- BZR  CONST_20  C9A  C8A  C7A  C6A    0.00   0.0  0
- BZR  CONST_21  C9A  C9B  C5B  C6A    0.00   0.0  0
- BZR  CONST_22  C10  C9B  C5B  C6A  180.00   0.0  0
- BZR  CONST_23  C9B  C5B  C6A  C7A    0.00   0.0  0
- BZR  CONST_24  C9B  C9A  C8A  C7A    0.00   0.0  0
- BZR  CONST_25  C5B  C6A  C7A  C8A    0.00   0.0  0
- BZR  CONST_26  C5B  C9B  C9A  C8A    0.00   0.0  0
- BZR  CONST_27  C10  C9B  C9A  C8A  180.00   0.0  0
- BZR  CONST_28  C11  C4B  C5A  C5B    0.00   0.0  0
- BZR  CONST_29  C11  C10  C9B  C5B    0.00   0.0  0
- BZR  CONST_30  C9A  C9B  C10  C11  180.00   0.0  0
- BZR  CONST_31  H2A  C2A  C3A  C3B    0.00   0.0  0
- BZR  CONST_32  H1A  C1A  C2A  C3A  180.00   0.0  0
- BZR  CONST_33  H5A  C5A  C4B  C4A    0.00   0.0  0
- BZR  CONST_34  H10  C10  C11  C1A    0.00   0.0  0
- BZR  CONST_35  H6A  C6A  C5B  C5A    0.00   0.0  0
- BZR  CONST_36  H8A  C8A  C7A  C6A  180.00   0.0  0
- BZR  CONST_37  H9A  C9A  C8A  C7A  180.00   0.0  0
- BZR  CONST_38  H7A  C7A  C6A  C5B  180.00   0.0  0
- BZR  Var_01    C3A  C4A  C4C  C9C  -15.87  30.0  1
+ BZR  CONST_01  C11   C1A  C2A  C3A     0.00   0.0  0
+ BZR  CONST_02  C5A   C4B  C4A  C3A   180.00   0.0  0
+ BZR  CONST_03  C11   C4B  C4A  C3A     0.00   0.0  0
+ BZR  CONST_04  C4B   C4A  C3A  C2A     0.00   0.0  0
+ BZR  CONST_05  C4B   C11  C1A  C2A     0.00   0.0  0
+ BZR  CONST_06  C10   C11  C1A  C2A   180.00   0.0  0
+ BZR  CONST_07  C1A   C2A  C3A  C4A     0.00   0.0  0
+ BZR  CONST_08  C5B   C5A  C4B  C4A   180.00   0.0  0
+ BZR  CONST_09  C1A   C11  C4B  C4A     0.00   0.0  0
+ BZR  CONST_10  C10   C11  C4B  C4A   180.00   0.0  0
+ BZR  CONST_11  C5A   C4B  C11  C1A   180.00   0.0  0
+ BZR  CONST_12  C9B   C10  C11  C1A   180.00   0.0  0
+ BZR  CONST_13  C10   C11  C4B  C5A     0.00   0.0  0
+ BZR  CONST_14  C7A   C6A  C5B  C5A   180.00   0.0  0
+ BZR  CONST_15  C9A   C9B  C5B  C5A   180.00   0.0  0
+ BZR  CONST_16  C10   C9B  C5B  C5A     0.00   0.0  0
+ BZR  CONST_17  C6A   C5B  C5A  C4B   180.00   0.0  0
+ BZR  CONST_18  C9B   C5B  C5A  C4B     0.00   0.0  0
+ BZR  CONST_19  C9B   C10  C11  C4B     0.00   0.0  0
+ BZR  CONST_20  C9A   C8A  C7A  C6A     0.00   0.0  0
+ BZR  CONST_21  C9A   C9B  C5B  C6A     0.00   0.0  0
+ BZR  CONST_22  C10   C9B  C5B  C6A   180.00   0.0  0
+ BZR  CONST_23  C9B   C5B  C6A  C7A     0.00   0.0  0
+ BZR  CONST_24  C9B   C9A  C8A  C7A     0.00   0.0  0
+ BZR  CONST_25  C5B   C6A  C7A  C8A     0.00   0.0  0
+ BZR  CONST_26  C5B   C9B  C9A  C8A     0.00   0.0  0
+ BZR  CONST_27  C10   C9B  C9A  C8A   180.00   0.0  0
+ BZR  CONST_28  C11   C4B  C5A  C5B     0.00   0.0  0
+ BZR  CONST_29  C11   C10  C9B  C5B     0.00   0.0  0
+ BZR  CONST_30  C9A   C9B  C10  C11   180.00   0.0  0
+ BZR  CONST_31  H2A   C2A  C3A  C3B     0.00   0.0  0
+ BZR  CONST_32  H1A   C1A  C2A  C3A   180.00   0.0  0
+ BZR  CONST_33  H5A   C5A  C4B  C4A     0.00   0.0  0
+ BZR  CONST_34  H10   C10  C11  C1A     0.00   0.0  0
+ BZR  CONST_35  H6A   C6A  C5B  C5A     0.00   0.0  0
+ BZR  CONST_36  H8A   C8A  C7A  C6A   180.00   0.0  0
+ BZR  CONST_37  H9A   C9A  C8A  C7A   180.00   0.0  0
+ BZR  CONST_38  H7A   C7A  C6A  C5B   180.00   0.0  0
+ BZR  Var_01    C3A   C4A  C4C  C9C   -15.87  30.0  1
+ BZR  Var_02    C3B   C8B  C9C  C4C   -65.00  30.0  1
+ BZR  Var_03    C3A   C3B  C8B  C9C    49.92  30.0  1
+ BZR  Var_04    C4A   C4C  C9C  C8B    47.11  30.0  1
+ BZR  Var_05    C2A   C3A  C3B  C8B   163.33  30.0  1
+ BZR  Var_06    C4A   C3A  C3B  C8B   -18.04  30.0  1
+ BZR  Var_07    O2    C8B  C9C  C4C   171.78  30.0  1
+ BZR  Var_08    O1    C3B  C8B  C9C   171.99  30.0  1
+ BZR  Var_09    C4A   C4C  C9C  O3    -72.40  30.0  1
+ BZR  Var_10    C3B   C8B  C9C  O3     57.05  30.0  1
+ BZR  Var_11    C3A   C3B  C8B  O2    171.92  30.0  1
+ BZR  Var_12    C2A   C3A  C3B  O1     43.14  30.0  1
+ BZR  Var_13    C4A   C3A  C3B  O1   -138.22  30.0  1
+ BZR  Var_14    H8B   C8B  C9C  C4C    51.65  30.0  1
+ BZR  Var_15    H3B   C3B  C8B  C9C   -69.15  30.0  1
+ BZR  Var_16    H4C1  C4C  C9C  C8B   170.70  30.0  1
+ BZR  Var_17    H4C2  C4C  C9C  C8B   -75.27  30.0  1
+ BZR  Var_18    H9C   C9C  C8B  C3B   177.45  30.0  1
+ BZR  Var_19    O2    C8B  C9C  O3    -66.17  30.0  1
+ BZR  Var_20    O1    C3B  C8B  O2    -66.00  30.0  1
+ BZR  Var_21    H3    O3   C9C  C4C   -60.61  30.0  3
+ BZR  Var_22    HO2   O2   C8B  C9C   178.55  30.0  3
+ BZR  Var_23    H1    O1   C3B  C8B   131.68  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

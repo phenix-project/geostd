@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ML4  ML4  4-(5-{[(2'-methylbiphenyl-2-yl)methyl]amino}pyrazin-2-yl)-L-phenylalanine  ligand  58  33  .  2022-09-15  2022-09-16
+ ML4  ML4  4-(5-{[(2'-methylbiphenyl-2-yl)methyl]amino}pyrazin-2-yl)-L-phenylalanine  ligand  58  33  .  2022-09-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_ML4
@@ -291,62 +292,79 @@ _chem_comp_tor.period
  ML4  CONST_04  C13   C10  C11  C12   180.00   0.0  0
  ML4  CONST_05  C9    C10  C11  C12     0.00   0.0  0
  ML4  CONST_06  C8    C7   C12  C11     0.00   0.0  0
- ML4  CONST_09  C8    C9   C10  C11     0.00   0.0  0
- ML4  CONST_10  C17   N18  C13  C10   180.00   0.0  0
- ML4  CONST_11  N15   C14  C13  C10   180.00   0.0  0
- ML4  CONST_14  C13   C10  C9   C8    180.00   0.0  0
- ML4  CONST_15  C16   C17  N18  C13     0.00   0.0  0
- ML4  CONST_16  C16   N15  C14  C13     0.00   0.0  0
- ML4  CONST_17  N15   C14  C13  N18     0.00   0.0  0
- ML4  CONST_18  N15   C16  C17  N18     0.00   0.0  0
- ML4  CONST_19  C14   C13  N18  C17     0.00   0.0  0
- ML4  CONST_20  C14   N15  C16  C17     0.00   0.0  0
- ML4  CONST_21  C24   C23  C22  C21     0.00   0.0  0
- ML4  CONST_22  C24   C25  C26  C21     0.00   0.0  0
- ML4  CONST_25  C23   C22  C21  C26     0.00   0.0  0
- ML4  CONST_26  C23   C24  C25  C26     0.00   0.0  0
- ML4  CONST_27  C31   C32  C27  C26   180.00   0.0  0
- ML4  CONST_28  C29   C28  C27  C26   180.00   0.0  0
- ML4  CONST_29  C22   C21  C26  C25     0.00   0.0  0
- ML4  CONST_32  C22   C23  C24  C25     0.00   0.0  0
- ML4  CONST_33  C27   C26  C25  C24   180.00   0.0  0
- ML4  CONST_34  C27   C26  C21  C22   180.00   0.0  0
- ML4  CONST_35  C30   C31  C32  C27     0.00   0.0  0
- ML4  CONST_36  C30   C29  C28  C27     0.00   0.0  0
- ML4  CONST_37  C29   C28  C27  C32     0.00   0.0  0
- ML4  CONST_38  C29   C30  C31  C32     0.00   0.0  0
- ML4  CONST_39  C28   C27  C32  C31     0.00   0.0  0
- ML4  CONST_40  C28   C29  C30  C31     0.00   0.0  0
- ML4  CONST_41  C11   C12  C7   C6    180.00   0.0  0
- ML4  CONST_42  C9    C8   C7   C6    180.00   0.0  0
- ML4  CONST_43  N19   C16  C17  N18   180.00   0.0  0
- ML4  CONST_44  N19   C16  N15  C14   180.00   0.0  0
- ML4  CONST_45  C23   C22  C21  C20   180.00   0.0  0
- ML4  CONST_46  C25   C26  C21  C20   180.00   0.0  0
- ML4  CONST_47  C27   C26  C21  C20     0.00   0.0  0
- ML4  CONST_48  C33   C28  C27  C26     0.00   0.0  0
- ML4  CONST_49  C33   C28  C27  C32   180.00   0.0  0
- ML4  CONST_50  C33   C28  C29  C30   180.00   0.0  0
- ML4  CONST_51  H11   C11  C12  C7    180.00   0.0  0
- ML4  CONST_52  H9    C9   C8   C7    180.00   0.0  0
- ML4  CONST_53  H8    C8   C7   C12   180.00   0.0  0
- ML4  CONST_54  H12   C12  C11  C10   180.00   0.0  0
- ML4  CONST_55  H14   C14  C13  C10     0.00   0.0  0
- ML4  CONST_56  H17   C17  N18  C13   180.00   0.0  0
- ML4  CONST_57  H23   C23  C22  C21   180.00   0.0  0
- ML4  CONST_58  H25   C25  C26  C21   180.00   0.0  0
- ML4  CONST_59  H22   C22  C21  C26   180.00   0.0  0
- ML4  CONST_60  H24   C24  C25  C26   180.00   0.0  0
- ML4  CONST_61  H32   C32  C27  C26     0.00   0.0  0
- ML4  CONST_62  H31   C31  C32  C27   180.00   0.0  0
- ML4  CONST_63  H29   C29  C28  C27   180.00   0.0  0
- ML4  CONST_64  H30   C30  C31  C32   180.00   0.0  0
- ML4  CONST_66  C20   N19  C16  N15   180.00   0.0  0
- ML4  CONST_67  HN19  N19  C16  C17   180.00   0.0  0
+ ML4  CONST_07  C8    C9   C10  C11     0.00   0.0  0
+ ML4  CONST_08  C17   N18  C13  C10   180.00   0.0  0
+ ML4  CONST_09  N15   C14  C13  C10   180.00   0.0  0
+ ML4  CONST_10  C13   C10  C9   C8    180.00   0.0  0
+ ML4  CONST_11  C16   C17  N18  C13     0.00   0.0  0
+ ML4  CONST_12  C16   N15  C14  C13     0.00   0.0  0
+ ML4  CONST_13  N15   C14  C13  N18     0.00   0.0  0
+ ML4  CONST_14  N15   C16  C17  N18     0.00   0.0  0
+ ML4  CONST_15  C14   C13  N18  C17     0.00   0.0  0
+ ML4  CONST_16  C14   N15  C16  C17     0.00   0.0  0
+ ML4  CONST_17  C24   C23  C22  C21     0.00   0.0  0
+ ML4  CONST_18  C24   C25  C26  C21     0.00   0.0  0
+ ML4  CONST_19  C23   C22  C21  C26     0.00   0.0  0
+ ML4  CONST_20  C23   C24  C25  C26     0.00   0.0  0
+ ML4  CONST_21  C31   C32  C27  C26   180.00   0.0  0
+ ML4  CONST_22  C29   C28  C27  C26   180.00   0.0  0
+ ML4  CONST_23  C22   C21  C26  C25     0.00   0.0  0
+ ML4  CONST_24  C22   C23  C24  C25     0.00   0.0  0
+ ML4  CONST_25  C27   C26  C25  C24   180.00   0.0  0
+ ML4  CONST_26  C27   C26  C21  C22   180.00   0.0  0
+ ML4  CONST_27  C30   C31  C32  C27     0.00   0.0  0
+ ML4  CONST_28  C30   C29  C28  C27     0.00   0.0  0
+ ML4  CONST_29  C29   C28  C27  C32     0.00   0.0  0
+ ML4  CONST_30  C29   C30  C31  C32     0.00   0.0  0
+ ML4  CONST_31  C28   C27  C32  C31     0.00   0.0  0
+ ML4  CONST_32  C28   C29  C30  C31     0.00   0.0  0
+ ML4  CONST_33  C11   C12  C7   C6    180.00   0.0  0
+ ML4  CONST_34  C9    C8   C7   C6    180.00   0.0  0
+ ML4  CONST_35  N19   C16  C17  N18   180.00   0.0  0
+ ML4  CONST_36  N19   C16  N15  C14   180.00   0.0  0
+ ML4  CONST_37  C23   C22  C21  C20   180.00   0.0  0
+ ML4  CONST_38  C25   C26  C21  C20   180.00   0.0  0
+ ML4  CONST_39  C27   C26  C21  C20     0.00   0.0  0
+ ML4  CONST_40  C33   C28  C27  C26     0.00   0.0  0
+ ML4  CONST_41  C33   C28  C27  C32   180.00   0.0  0
+ ML4  CONST_42  C33   C28  C29  C30   180.00   0.0  0
+ ML4  CONST_43  H11   C11  C12  C7    180.00   0.0  0
+ ML4  CONST_44  H9    C9   C8   C7    180.00   0.0  0
+ ML4  CONST_45  H8    C8   C7   C12   180.00   0.0  0
+ ML4  CONST_46  H12   C12  C11  C10   180.00   0.0  0
+ ML4  CONST_47  H14   C14  C13  C10     0.00   0.0  0
+ ML4  CONST_48  H17   C17  N18  C13   180.00   0.0  0
+ ML4  CONST_49  H23   C23  C22  C21   180.00   0.0  0
+ ML4  CONST_50  H25   C25  C26  C21   180.00   0.0  0
+ ML4  CONST_51  H22   C22  C21  C26   180.00   0.0  0
+ ML4  CONST_52  H24   C24  C25  C26   180.00   0.0  0
+ ML4  CONST_53  H32   C32  C27  C26     0.00   0.0  0
+ ML4  CONST_54  H31   C31  C32  C27   180.00   0.0  0
+ ML4  CONST_55  H29   C29  C28  C27   180.00   0.0  0
+ ML4  CONST_56  H30   C30  C31  C32   180.00   0.0  0
+ ML4  CONST_57  C20   N19  C16  N15   180.00   0.0  0
+ ML4  CONST_58  HN19  N19  C16  C17   180.00   0.0  0
  ML4  Var_01    C12   C7   C6   C4    -83.42  30.0  2
  ML4  Var_02    C21   C20  N19  C16  -113.85  30.0  3
  ML4  Var_03    C22   C21  C20  N19  -109.63  30.0  2
  ML4  Var_04    H33   C33  C28  C27    53.77  30.0  2
+ ML4  Var_05    N18   C13  C10  C11   -21.96  30.0  2
+ ML4  Var_06    C14   C13  C10  C11   156.24  30.0  2
+ ML4  Var_07    N18   C13  C10  C9    157.43  30.0  2
+ ML4  Var_08    C14   C13  C10  C9    -24.37  30.0  2
+ ML4  Var_09    C32   C27  C26  C21   -98.73  30.0  2
+ ML4  Var_10    C28   C27  C26  C21    82.92  30.0  2
+ ML4  Var_11    C32   C27  C26  C25    81.49  30.0  2
+ ML4  Var_12    C28   C27  C26  C25   -96.87  30.0  2
+ ML4  Var_13    C7    C6   C4   C2    177.65  30.0  2
+ ML4  Var_14    C7    C6   C4   N5    -57.71  30.0  2
+ ML4  Var_15    H4    C4   C6   C7     62.15  30.0  3
+ ML4  Var_16    C6    C4   C2   O3    -70.26  30.0  2
+ ML4  Var_17    N5    C4   C2   O3    163.03  30.0  2
+ ML4  Var_18    C6    C4   C2   O1    107.68  30.0  2
+ ML4  Var_19    N5    C4   C2   O1    -19.03  30.0  2
+ ML4  Var_20    HN5   N5   C4   C2     49.51  30.0  3
+ ML4  Var_21    HN5A  N5   C4   C2    167.20  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

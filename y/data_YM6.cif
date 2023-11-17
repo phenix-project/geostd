@@ -19,10 +19,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- YM6  YM6  'None                     '  ligand  37  21  .  2021-08-25  2022-09-22
+ YM6  YM6  'None                     '  ligand  37  21  .  2021-08-25  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_YM6
@@ -211,51 +212,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- YM6  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- YM6  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- YM6  CONST_03  CAQ   C5   C6   N1   180.00   0.0  0
- YM6  CONST_05  CAI   NAU  C6   N1     0.00   0.0  0
- YM6  CONST_06  C5    C6   N1   C2     0.00   0.0  0
- YM6  CONST_07  NAU   C6   N1   C2   180.00   0.0  0
- YM6  CONST_08  NAM   C4   N3   C2   180.00   0.0  0
- YM6  CONST_09  C5    C4   N3   C2     0.00   0.0  0
- YM6  CONST_10  C6    N1   C2   N3     0.00   0.0  0
- YM6  CONST_11  CAP   NAM  C4   N3   180.00   0.0  0
- YM6  CONST_12  C6    C5   C4   N3     0.00   0.0  0
- YM6  CONST_13  CAQ   C5   C4   N3   180.00   0.0  0
- YM6  CONST_14  CAE   CAP  NAM  C4   180.00   0.0  0
- YM6  CONST_15  CAQ   CAP  NAM  C4     0.00   0.0  0
- YM6  CONST_16  NAU   C6   C5   C4   180.00   0.0  0
- YM6  CONST_17  CAD   CAQ  C5   C4   180.00   0.0  0
- YM6  CONST_18  CAP   CAQ  C5   C4     0.00   0.0  0
- YM6  CONST_19  CAP   NAM  C4   C5     0.00   0.0  0
- YM6  CONST_21  CAI   NAU  C6   C5   180.00   0.0  0
- YM6  CONST_22  CAB   CAD  CAQ  C5   180.00   0.0  0
- YM6  CONST_23  CAE   CAP  CAQ  C5   180.00   0.0  0
- YM6  CONST_24  NAM   CAP  CAQ  C5     0.00   0.0  0
- YM6  CONST_25  NAM   C4   C5   C6   180.00   0.0  0
- YM6  CONST_26  CAD   CAQ  C5   C6     0.00   0.0  0
- YM6  CONST_27  CAP   CAQ  C5   C6   180.00   0.0  0
- YM6  CONST_29  CAP   CAE  NAJ  CAB    0.00   0.0  0
- YM6  CONST_30  CAP   CAQ  CAD  CAB    0.00   0.0  0
- YM6  CONST_31  CAE   NAJ  CAB  CAD    0.00   0.0  0
- YM6  CONST_32  CAE   CAP  CAQ  CAD    0.00   0.0  0
- YM6  CONST_33  NAM   CAP  CAQ  CAD  180.00   0.0  0
- YM6  CONST_35  CAQ   CAD  CAB  NAJ    0.00   0.0  0
- YM6  CONST_36  NAM   CAP  CAE  NAJ  180.00   0.0  0
- YM6  CONST_37  CAQ   CAP  CAE  NAJ    0.00   0.0  0
- YM6  CONST_38  CAQ   C5   C4   NAM    0.00   0.0  0
- YM6  CONST_39  NAU   C6   C5   CAQ    0.00   0.0  0
- YM6  CONST_41  H2    C2   N3   C4   180.00   0.0  0
- YM6  CONST_45  HAB   CAB  NAJ  CAE  180.00   0.0  0
- YM6  CONST_46  HNAM  NAM  C4   N3     0.00   0.0  0
- YM6  CONST_47  HAD   CAD  CAQ  C5     0.00   0.0  0
- YM6  CONST_48  HAE   CAE  NAJ  CAB  180.00   0.0  0
- YM6  Var_01    CAI   CAT  OAN  CAG  -54.65  30.0  1
- YM6  Var_02    NAU   CAH  CAG  OAN  -55.61  30.0  1
- YM6  Var_03    NAU   CAI  CAT  OAN   54.76  30.0  1
- YM6  Var_04    HAG   CAG  OAN  CAT  -67.98  30.0  1
- YM6  Var_05    HNAA  NAA  CAF  CAT  175.01  30.0  3
+ YM6  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ YM6  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ YM6  CONST_03  CAQ   C5   C6   N1    180.00   0.0  0
+ YM6  CONST_04  CAI   NAU  C6   N1      0.00   0.0  0
+ YM6  CONST_05  C5    C6   N1   C2      0.00   0.0  0
+ YM6  CONST_06  NAU   C6   N1   C2    180.00   0.0  0
+ YM6  CONST_07  NAM   C4   N3   C2    180.00   0.0  0
+ YM6  CONST_08  C5    C4   N3   C2      0.00   0.0  0
+ YM6  CONST_09  C6    N1   C2   N3      0.00   0.0  0
+ YM6  CONST_10  CAP   NAM  C4   N3    180.00   0.0  0
+ YM6  CONST_11  C6    C5   C4   N3      0.00   0.0  0
+ YM6  CONST_12  CAQ   C5   C4   N3    180.00   0.0  0
+ YM6  CONST_13  CAE   CAP  NAM  C4    180.00   0.0  0
+ YM6  CONST_14  CAQ   CAP  NAM  C4      0.00   0.0  0
+ YM6  CONST_15  NAU   C6   C5   C4    180.00   0.0  0
+ YM6  CONST_16  CAD   CAQ  C5   C4    180.00   0.0  0
+ YM6  CONST_17  CAP   CAQ  C5   C4      0.00   0.0  0
+ YM6  CONST_18  CAP   NAM  C4   C5      0.00   0.0  0
+ YM6  CONST_19  CAI   NAU  C6   C5    180.00   0.0  0
+ YM6  CONST_20  CAB   CAD  CAQ  C5    180.00   0.0  0
+ YM6  CONST_21  CAE   CAP  CAQ  C5    180.00   0.0  0
+ YM6  CONST_22  NAM   CAP  CAQ  C5      0.00   0.0  0
+ YM6  CONST_23  NAM   C4   C5   C6    180.00   0.0  0
+ YM6  CONST_24  CAD   CAQ  C5   C6      0.00   0.0  0
+ YM6  CONST_25  CAP   CAQ  C5   C6    180.00   0.0  0
+ YM6  CONST_26  CAP   CAE  NAJ  CAB     0.00   0.0  0
+ YM6  CONST_27  CAP   CAQ  CAD  CAB     0.00   0.0  0
+ YM6  CONST_28  CAE   NAJ  CAB  CAD     0.00   0.0  0
+ YM6  CONST_29  CAE   CAP  CAQ  CAD     0.00   0.0  0
+ YM6  CONST_30  NAM   CAP  CAQ  CAD   180.00   0.0  0
+ YM6  CONST_31  CAQ   CAD  CAB  NAJ     0.00   0.0  0
+ YM6  CONST_32  NAM   CAP  CAE  NAJ   180.00   0.0  0
+ YM6  CONST_33  CAQ   CAP  CAE  NAJ     0.00   0.0  0
+ YM6  CONST_34  CAQ   C5   C4   NAM     0.00   0.0  0
+ YM6  CONST_35  NAU   C6   C5   CAQ     0.00   0.0  0
+ YM6  CONST_36  H2    C2   N3   C4    180.00   0.0  0
+ YM6  CONST_37  HAB   CAB  NAJ  CAE   180.00   0.0  0
+ YM6  CONST_38  HNAM  NAM  C4   N3      0.00   0.0  0
+ YM6  CONST_39  HAD   CAD  CAQ  C5      0.00   0.0  0
+ YM6  CONST_40  HAE   CAE  NAJ  CAB   180.00   0.0  0
+ YM6  Var_01    CAI   CAT  OAN  CAG   -54.65  30.0  1
+ YM6  Var_02    NAU   CAH  CAG  OAN   -55.61  30.0  1
+ YM6  Var_03    NAU   CAI  CAT  OAN    54.76  30.0  1
+ YM6  Var_04    HAG   CAG  OAN  CAT   -67.98  30.0  1
+ YM6  Var_05    HNAA  NAA  CAF  CAT   175.01  30.0  3
+ YM6  Var_06    CAG   CAH  NAU  C6   -153.85  30.0  1
+ YM6  Var_07    CAI   NAU  CAH  CAG    58.00  30.0  1
+ YM6  Var_08    HAH   CAH  NAU  C6     86.33  30.0  1
+ YM6  Var_09    HAHA  CAH  NAU  C6    -31.19  30.0  1
+ YM6  Var_10    HAI   CAI  NAU  C6     33.66  30.0  1
+ YM6  Var_11    HAIA  CAI  NAU  C6    -84.76  30.0  1
+ YM6  Var_12    CAI   CAT  CAF  NAA  -179.13  30.0  1
+ YM6  Var_13    OAN   CAT  CAF  NAA    54.82  30.0  1
+ YM6  Var_14    HAF   CAF  CAT  CAI    53.48  30.0  2
+ YM6  Var_15    HAFA  CAF  CAT  CAI   -61.19  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

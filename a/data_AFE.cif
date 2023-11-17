@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AFE  AFE  '5,7-dihydroxy-2-(4-hydroxyphenyl)-4-oxo-4H-chromen-3-yl 6-deoxy-alpha-L-mannopyranoside'  ligand  51  31  .  2021-08-06  2021-08-06  
+ AFE  AFE  '5,7-dihydroxy-2-(4-hydroxyphenyl)-4-oxo-4H-chromen-3-yl 6-deoxy-alpha-L-mannopyranoside'  ligand  51  31  .  2021-08-06  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_AFE
@@ -260,39 +261,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AFE  CONST_01  C14  C13  C12  C11     0.00   0.0  0
- AFE  CONST_02  C14  C15  C16  C11     0.00   0.0  0
- AFE  CONST_03  C15  C14  C13  C12     0.00   0.0  0
- AFE  CONST_04  C15  C16  C11  C12     0.00   0.0  0
- AFE  CONST_05  C16  C11  C12  C13     0.00   0.0  0
- AFE  CONST_06  C16  C15  C14  C13     0.00   0.0  0
- AFE  CONST_07  C6   C5   C10  C9      0.00   0.0  0
- AFE  CONST_08  C6   C7   C8   C9      0.00   0.0  0
- AFE  CONST_09  C5   C10  C9   C8      0.00   0.0  0
- AFE  CONST_10  C5   C6   C7   C8      0.00   0.0  0
- AFE  CONST_11  C10  C5   C6   C7      0.00   0.0  0
- AFE  CONST_12  C10  C9   C8   C7      0.00   0.0  0
- AFE  CONST_13  C13  C12  C11  C2    180.00   0.0  0
- AFE  CONST_14  C15  C16  C11  C2    180.00   0.0  0
- AFE  CONST_15  O3   C5   C10  C4      0.00   0.0  0
- AFE  CONST_16  O5   C14  C13  C12   180.00   0.0  0
- AFE  CONST_17  C16  C15  C14  O5    180.00   0.0  0
- AFE  CONST_18  O3   C5   C10  C9    180.00   0.0  0
- AFE  CONST_19  O4   C7   C8   C9    180.00   0.0  0
- AFE  CONST_20  O3   C5   C6   C7    180.00   0.0  0
- AFE  CONST_21  C5   C6   C7   O4    180.00   0.0  0
- AFE  CONST_22  H12  C12  C11  C2      0.00   0.0  0
- AFE  CONST_23  H16  C16  C11  C2      0.00   0.0  0
- AFE  CONST_24  H13  C13  C12  C11   180.00   0.0  0
- AFE  CONST_25  H15  C15  C16  C11   180.00   0.0  0
- AFE  CONST_26  H8   C8   C9   O1      0.00   0.0  0
- AFE  CONST_27  H6   C6   C7   C8    180.00   0.0  0
- AFE  Var_01    C5   C10  C4   C3   -177.28  30.0  1
- AFE  Var_02    C12  C11  C2   C3     47.57  30.0  2
- AFE  Var_03    C11  C2   C3   C4   -176.62  30.0  1
- AFE  Var_04    C10  C4   C3   C2     -4.54  30.0  1
- AFE  Var_05    C10  C9   O1   C2     -3.45  30.0  1
- AFE  Var_06    C4   C3   O8   C21   -73.41  30.0  3
+ AFE  CONST_01  C14   C13  C12  C11     0.00   0.0  0
+ AFE  CONST_02  C14   C15  C16  C11     0.00   0.0  0
+ AFE  CONST_03  C15   C14  C13  C12     0.00   0.0  0
+ AFE  CONST_04  C15   C16  C11  C12     0.00   0.0  0
+ AFE  CONST_05  C16   C11  C12  C13     0.00   0.0  0
+ AFE  CONST_06  C16   C15  C14  C13     0.00   0.0  0
+ AFE  CONST_07  C6    C5   C10  C9      0.00   0.0  0
+ AFE  CONST_08  C6    C7   C8   C9      0.00   0.0  0
+ AFE  CONST_09  C5    C10  C9   C8      0.00   0.0  0
+ AFE  CONST_10  C5    C6   C7   C8      0.00   0.0  0
+ AFE  CONST_11  C10   C5   C6   C7      0.00   0.0  0
+ AFE  CONST_12  C10   C9   C8   C7      0.00   0.0  0
+ AFE  CONST_13  C13   C12  C11  C2    180.00   0.0  0
+ AFE  CONST_14  C15   C16  C11  C2    180.00   0.0  0
+ AFE  CONST_15  O3    C5   C10  C4      0.00   0.0  0
+ AFE  CONST_16  O5    C14  C13  C12   180.00   0.0  0
+ AFE  CONST_17  C16   C15  C14  O5    180.00   0.0  0
+ AFE  CONST_18  O3    C5   C10  C9    180.00   0.0  0
+ AFE  CONST_19  O4    C7   C8   C9    180.00   0.0  0
+ AFE  CONST_20  O3    C5   C6   C7    180.00   0.0  0
+ AFE  CONST_21  C5    C6   C7   O4    180.00   0.0  0
+ AFE  CONST_22  H12   C12  C11  C2      0.00   0.0  0
+ AFE  CONST_23  H16   C16  C11  C2      0.00   0.0  0
+ AFE  CONST_24  H13   C13  C12  C11   180.00   0.0  0
+ AFE  CONST_25  H15   C15  C16  C11   180.00   0.0  0
+ AFE  CONST_26  H8    C8   C9   O1      0.00   0.0  0
+ AFE  CONST_27  H6    C6   C7   C8    180.00   0.0  0
+ AFE  Var_01    C5    C10  C4   C3   -177.28  30.0  1
+ AFE  Var_02    C12   C11  C2   C3     47.57  30.0  2
+ AFE  Var_03    C11   C2   C3   C4   -176.62  30.0  1
+ AFE  Var_04    C10   C4   C3   C2     -4.54  30.0  1
+ AFE  Var_05    C10   C9   O1   C2     -3.45  30.0  1
+ AFE  Var_06    C4    C3   O8   C21   -73.41  30.0  3
+ AFE  Var_07    O7    C21  C22  C23   -50.57  30.0  1
+ AFE  Var_08    O7    C25  C24  C23    54.90  30.0  1
+ AFE  Var_09    C25   C24  C23  C22   -56.74  30.0  1
+ AFE  Var_10    C25   O7   C21  C22    51.18  30.0  1
+ AFE  Var_11    C21   C22  C23  C24    54.35  30.0  1
+ AFE  Var_12    C21   O7   C25  C24   -53.46  30.0  1
+ AFE  Var_13    C9    O1   C2   C3      1.27  30.0  1
+ AFE  Var_14    C9    O1   C2   C11  -179.17  30.0  1
+ AFE  Var_15    C21   C22  C23  O9    175.29  30.0  1
+ AFE  Var_16    C25   C24  C23  O9   -179.45  30.0  1
+ AFE  Var_17    O8    C21  C22  C23    73.41  30.0  1
+ AFE  Var_18    C51   C25  C24  C23   174.59  30.0  1
+ AFE  Var_19    O61   C24  C23  C22  -176.71  30.0  1
+ AFE  Var_20    C3    O8   C21  C22   160.41  30.0  3
+ AFE  Var_21    C24   C23  C22  O22   -65.63  30.0  1
+ AFE  Var_22    O7    C21  C22  O22    68.48  30.0  1
+ AFE  Var_23    O7    C25  C24  O61   173.54  30.0  1
+ AFE  Var_24    O8    C21  O7   C25   -69.95  30.0  1
+ AFE  Var_25    C21   O7   C25  C51  -176.70  30.0  1
+ AFE  Var_26    C3    O8   C21  O7    -74.92  30.0  3
+ AFE  Var_27    H21   C21  C22  C23  -167.84  30.0  1
+ AFE  Var_28    H25   C25  C24  C23   -65.68  30.0  1
+ AFE  Var_29    H24   C24  C23  C22    62.32  30.0  1
+ AFE  Var_30    H22   C22  C23  C24   173.23  30.0  1
+ AFE  Var_31    H23   C23  C24  C25    60.21  30.0  1
+ AFE  Var_32    O22   C22  C23  O9     55.30  30.0  1
+ AFE  Var_33    O61   C24  C23  O9     60.59  30.0  1
+ AFE  Var_34    O8    C21  C22  O22  -167.54  30.0  1
+ AFE  Var_35    C51   C25  C24  O61   -66.77  30.0  1
+ AFE  Var_36    HO22  O22  C22  C23  -169.42  30.0  3
+ AFE  Var_37    HO61  O61  C24  C23  -162.46  30.0  3
+ AFE  Var_38    HO9   O9   C23  C22    66.65  30.0  3
+ AFE  Var_39    H512  C51  C25  C24    62.40  30.0  3
+ AFE  Var_40    H513  C51  C25  C24  -179.30  30.0  3
+ AFE  Var_41    H511  C51  C25  C24   -58.53  30.0  3
+ AFE  Var_42    HO5   O5   C14  C13     0.12  30.0  2
+ AFE  Var_43    HO4   O4   C7   C8      0.34  30.0  2
+ AFE  Var_44    HO3   O3   C5   C6    179.80  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

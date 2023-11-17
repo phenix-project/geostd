@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GBA  GBA  '8-bromoadenosine         '  ligand  32  20  .  2021-08-10  2021-08-10  
+ GBA  GBA  '8-bromoadenosine         '  ligand  32  20  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GBA
@@ -189,35 +190,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GBA  CONST_01  N1   C6  C5  C4     0.00  0.0  0
- GBA  CONST_02  C8   N7  C5  C4     0.00  0.0  0
- GBA  CONST_03  N1   C2  N3  C4     0.00  0.0  0
- GBA  CONST_04  N7   C8  N9  C4     0.00  0.0  0
- GBA  CONST_05  C2   N1  C6  C5     0.00  0.0  0
- GBA  CONST_06  N9   C8  N7  C5     0.00  0.0  0
- GBA  CONST_07  C2   N3  C4  C5     0.00  0.0  0
- GBA  CONST_08  C8   N9  C4  C5     0.00  0.0  0
- GBA  CONST_09  N3   C2  N1  C6     0.00  0.0  0
- GBA  CONST_10  C8   N7  C5  C6   180.00  0.0  0
- GBA  CONST_11  N3   C4  C5  C6     0.00  0.0  0
- GBA  CONST_12  N9   C4  C5  C6   180.00  0.0  0
- GBA  CONST_13  N3   C4  N9  C8   180.00  0.0  0
- GBA  CONST_14  N7   C5  C6  N1   180.00  0.0  0
- GBA  CONST_15  N7   C5  C4  N3   180.00  0.0  0
- GBA  CONST_16  N7   C5  C4  N9     0.00  0.0  0
- GBA  CONST_17  C2   N3  C4  N9   180.00  0.0  0
- GBA  CONST_18  C1'  N9  C4  C5   180.00  0.0  0
- GBA  CONST_19  C1'  N9  C4  N3     0.00  0.0  0
- GBA  CONST_20  N7   C8  N9  C1'  180.00  0.0  0
- GBA  CONST_21  N6   C6  C5  C4   180.00  0.0  0
- GBA  CONST_22  BR8  C8  N9  C4   180.00  0.0  0
- GBA  CONST_23  BR8  C8  N7  C5   180.00  0.0  0
- GBA  CONST_24  BR8  C8  N9  C1'    0.00  0.0  0
- GBA  CONST_25  N6   C6  C5  N7     0.00  0.0  0
- GBA  CONST_26  N6   C6  N1  C2   180.00  0.0  0
- GBA  CONST_27  H10  C2  N3  C4   180.00  0.0  0
- GBA  CONST_28  H11  N6  C6  C5     0.00  0.0  0
- GBA  CONST_29  H12  N6  C6  C5   180.00  0.0  0
+ GBA  CONST_01  N1   C6   C5   C4      0.00   0.0  0
+ GBA  CONST_02  C8   N7   C5   C4      0.00   0.0  0
+ GBA  CONST_03  N1   C2   N3   C4      0.00   0.0  0
+ GBA  CONST_04  N7   C8   N9   C4      0.00   0.0  0
+ GBA  CONST_05  C2   N1   C6   C5      0.00   0.0  0
+ GBA  CONST_06  N9   C8   N7   C5      0.00   0.0  0
+ GBA  CONST_07  C2   N3   C4   C5      0.00   0.0  0
+ GBA  CONST_08  C8   N9   C4   C5      0.00   0.0  0
+ GBA  CONST_09  N3   C2   N1   C6      0.00   0.0  0
+ GBA  CONST_10  C8   N7   C5   C6    180.00   0.0  0
+ GBA  CONST_11  N3   C4   C5   C6      0.00   0.0  0
+ GBA  CONST_12  N9   C4   C5   C6    180.00   0.0  0
+ GBA  CONST_13  N3   C4   N9   C8    180.00   0.0  0
+ GBA  CONST_14  N7   C5   C6   N1    180.00   0.0  0
+ GBA  CONST_15  N7   C5   C4   N3    180.00   0.0  0
+ GBA  CONST_16  N7   C5   C4   N9      0.00   0.0  0
+ GBA  CONST_17  C2   N3   C4   N9    180.00   0.0  0
+ GBA  CONST_18  C1'  N9   C4   C5    180.00   0.0  0
+ GBA  CONST_19  C1'  N9   C4   N3      0.00   0.0  0
+ GBA  CONST_20  N7   C8   N9   C1'   180.00   0.0  0
+ GBA  CONST_21  N6   C6   C5   C4    180.00   0.0  0
+ GBA  CONST_22  BR8  C8   N9   C4    180.00   0.0  0
+ GBA  CONST_23  BR8  C8   N7   C5    180.00   0.0  0
+ GBA  CONST_24  BR8  C8   N9   C1'     0.00   0.0  0
+ GBA  CONST_25  N6   C6   C5   N7      0.00   0.0  0
+ GBA  CONST_26  N6   C6   N1   C2    180.00   0.0  0
+ GBA  CONST_27  H10  C2   N3   C4    180.00   0.0  0
+ GBA  CONST_28  H11  N6   C6   C5      0.00   0.0  0
+ GBA  CONST_29  H12  N6   C6   C5    180.00   0.0  0
+ GBA  Var_01    O4'  C1'  N9   C4   -132.64  30.0  2
+ GBA  Var_02    C2'  C1'  N9   C4    107.41  30.0  2
+ GBA  Var_03    O4'  C1'  N9   C8     49.89  30.0  2
+ GBA  Var_04    C2'  C1'  N9   C8    -70.06  30.0  2
+ GBA  Var_05    C4'  O4'  C1'  C2'   -24.50  30.0  1
+ GBA  Var_06    O4'  C4'  C3'  C2'    26.62  30.0  1
+ GBA  Var_07    C1'  O4'  C4'  C3'    -1.74  30.0  1
+ GBA  Var_08    N9   C1'  C2'  C3'   162.95  30.0  1
+ GBA  Var_09    O4'  C1'  C2'  C3'    40.19  30.0  1
+ GBA  Var_10    N9   C1'  O4'  C4'  -150.18  30.0  1
+ GBA  Var_11    C1'  C2'  C3'  C4'   -39.07  30.0  1
+ GBA  Var_12    N9   C1'  C2'  O2'   -73.63  30.0  1
+ GBA  Var_13    O4'  C1'  C2'  O2'   163.61  30.0  1
+ GBA  Var_14    C4'  C3'  C2'  O2'  -157.37  30.0  1
+ GBA  Var_15    C5'  C4'  C3'  C2'   -94.94  30.0  1
+ GBA  Var_16    O4'  C4'  C3'  O3'   -88.18  30.0  1
+ GBA  Var_17    C1'  C2'  C3'  O3'    79.55  30.0  1
+ GBA  Var_18    C1'  O4'  C4'  C5'   119.88  30.0  1
+ GBA  Var_19    H9   C1'  N9   C4    -12.10  30.0  2
+ GBA  Var_20    H5   C4'  C3'  C2'   143.72  30.0  1
+ GBA  Var_21    H2   C2'  C3'  C4'    75.48  30.0  1
+ GBA  Var_22    H3   C3'  C4'  O4'   145.54  30.0  1
+ GBA  Var_23    O3'  C3'  C2'  O2'   -38.75  30.0  1
+ GBA  Var_24    O5'  C5'  C4'  C3'   173.91  30.0  1
+ GBA  Var_25    C5'  C4'  C3'  O3'   150.26  30.0  1
+ GBA  Var_26    O4'  C4'  C5'  O5'    55.35  30.0  3
+ GBA  Var_27    H4   O3'  C3'  C2'  -177.28  30.0  3
+ GBA  Var_28    H6   C5'  C4'  C3'   -64.76  30.0  1
+ GBA  Var_29    H7   C5'  C4'  C3'    50.58  30.0  1
+ GBA  Var_30    H1   O2'  C2'  C3'   -75.74  30.0  3
+ GBA  Var_31    H8   O5'  C5'  C4'  -174.09  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

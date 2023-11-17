@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DU4  DU4  2',5'-dideoxy-5'-[(diphenylmethyl)(methyl)amino]uridine  ligand  55  30  .  2021-08-08  2021-08-08  
+ DU4  DU4  2',5'-dideoxy-5'-[(diphenylmethyl)(methyl)amino]uridine  ligand  55  30  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DU4
@@ -279,46 +280,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DU4  CONST_01  C21  C20  C19  C18     0.00   0.0  0
- DU4  CONST_02  C21  C22  C23  C18     0.00   0.0  0
- DU4  CONST_03  C22  C23  C18  C19     0.00   0.0  0
- DU4  CONST_04  C22  C21  C20  C19     0.00   0.0  0
- DU4  CONST_05  C23  C18  C19  C20     0.00   0.0  0
- DU4  CONST_06  C23  C22  C21  C20     0.00   0.0  0
- DU4  CONST_07  C27  C26  C25  C24     0.00   0.0  0
- DU4  CONST_08  C27  C28  C29  C24     0.00   0.0  0
- DU4  CONST_09  C28  C29  C24  C25     0.00   0.0  0
- DU4  CONST_10  C28  C27  C26  C25     0.00   0.0  0
- DU4  CONST_11  C29  C24  C25  C26     0.00   0.0  0
- DU4  CONST_12  C29  C28  C27  C26     0.00   0.0  0
- DU4  CONST_13  C4   N3   C2   N1      0.00   0.0  0
- DU4  CONST_14  C5   C4   N3   C2      0.00   0.0  0
- DU4  CONST_15  C6   N1   C2   N3      0.00   0.0  0
- DU4  CONST_16  C1'  N1   C2   N3    180.00   0.0  0
- DU4  CONST_17  C20  C19  C18  C17   180.00   0.0  0
- DU4  CONST_18  C22  C23  C18  C17   180.00   0.0  0
- DU4  CONST_19  C26  C25  C24  C17   180.00   0.0  0
- DU4  CONST_20  C28  C29  C24  C17   180.00   0.0  0
- DU4  CONST_21  O4   C4   N3   C2    180.00   0.0  0
- DU4  CONST_22  C6   N1   C2   O2    180.00   0.0  0
- DU4  CONST_23  C1'  N1   C2   O2      0.00   0.0  0
- DU4  CONST_24  C4   N3   C2   O2    180.00   0.0  0
- DU4  CONST_25  H20  C20  C19  C18   180.00   0.0  0
- DU4  CONST_26  H22  C22  C23  C18   180.00   0.0  0
- DU4  CONST_27  H23  C23  C18  C19   180.00   0.0  0
- DU4  CONST_28  H21  C21  C20  C19   180.00   0.0  0
- DU4  CONST_29  H19  C19  C20  C21   180.00   0.0  0
- DU4  CONST_30  H26  C26  C25  C24   180.00   0.0  0
- DU4  CONST_31  H28  C28  C29  C24   180.00   0.0  0
- DU4  CONST_32  H29  C29  C24  C25   180.00   0.0  0
- DU4  CONST_33  H27  C27  C26  C25   180.00   0.0  0
- DU4  CONST_34  H25  C25  C26  C27   180.00   0.0  0
- DU4  CONST_35  HN3  N3   C2   N1    180.00   0.0  0
- DU4  Var_01    C25  C24  C17  C18   -99.40  30.0  2
- DU4  Var_02    C24  C17  C18  C19    95.83  30.0  2
- DU4  Var_03    C4'  C5'  N5'  C17  -157.81  30.0  2
- DU4  Var_04    C41  N5'  C17  C18  -177.00  30.0  3
- DU4  Var_05    H41  C41  N5'  C17    63.21  30.0  3
+ DU4  CONST_01  C21   C20  C19  C18     0.00   0.0  0
+ DU4  CONST_02  C21   C22  C23  C18     0.00   0.0  0
+ DU4  CONST_03  C22   C23  C18  C19     0.00   0.0  0
+ DU4  CONST_04  C22   C21  C20  C19     0.00   0.0  0
+ DU4  CONST_05  C23   C18  C19  C20     0.00   0.0  0
+ DU4  CONST_06  C23   C22  C21  C20     0.00   0.0  0
+ DU4  CONST_07  C27   C26  C25  C24     0.00   0.0  0
+ DU4  CONST_08  C27   C28  C29  C24     0.00   0.0  0
+ DU4  CONST_09  C28   C29  C24  C25     0.00   0.0  0
+ DU4  CONST_10  C28   C27  C26  C25     0.00   0.0  0
+ DU4  CONST_11  C29   C24  C25  C26     0.00   0.0  0
+ DU4  CONST_12  C29   C28  C27  C26     0.00   0.0  0
+ DU4  CONST_13  C4    N3   C2   N1      0.00   0.0  0
+ DU4  CONST_14  C5    C4   N3   C2      0.00   0.0  0
+ DU4  CONST_15  C6    N1   C2   N3      0.00   0.0  0
+ DU4  CONST_16  C1'   N1   C2   N3    180.00   0.0  0
+ DU4  CONST_17  C20   C19  C18  C17   180.00   0.0  0
+ DU4  CONST_18  C22   C23  C18  C17   180.00   0.0  0
+ DU4  CONST_19  C26   C25  C24  C17   180.00   0.0  0
+ DU4  CONST_20  C28   C29  C24  C17   180.00   0.0  0
+ DU4  CONST_21  O4    C4   N3   C2    180.00   0.0  0
+ DU4  CONST_22  C6    N1   C2   O2    180.00   0.0  0
+ DU4  CONST_23  C1'   N1   C2   O2      0.00   0.0  0
+ DU4  CONST_24  C4    N3   C2   O2    180.00   0.0  0
+ DU4  CONST_25  H20   C20  C19  C18   180.00   0.0  0
+ DU4  CONST_26  H22   C22  C23  C18   180.00   0.0  0
+ DU4  CONST_27  H23   C23  C18  C19   180.00   0.0  0
+ DU4  CONST_28  H21   C21  C20  C19   180.00   0.0  0
+ DU4  CONST_29  H19   C19  C20  C21   180.00   0.0  0
+ DU4  CONST_30  H26   C26  C25  C24   180.00   0.0  0
+ DU4  CONST_31  H28   C28  C29  C24   180.00   0.0  0
+ DU4  CONST_32  H29   C29  C24  C25   180.00   0.0  0
+ DU4  CONST_33  H27   C27  C26  C25   180.00   0.0  0
+ DU4  CONST_34  H25   C25  C26  C27   180.00   0.0  0
+ DU4  CONST_35  HN3   N3   C2   N1    180.00   0.0  0
+ DU4  Var_01    C25   C24  C17  C18   -99.40  30.0  2
+ DU4  Var_02    C24   C17  C18  C19    95.83  30.0  2
+ DU4  Var_03    C4'   C5'  N5'  C17  -157.81  30.0  2
+ DU4  Var_04    C41   N5'  C17  C18  -177.00  30.0  3
+ DU4  Var_05    H41   C41  N5'  C17    63.21  30.0  3
+ DU4  Var_06    C3'   C2'  C1'  N1     94.30  30.0  1
+ DU4  Var_07    C4'   O4'  C1'  N1   -118.00  30.0  1
+ DU4  Var_08    C2'   C1'  N1   C2     80.41  30.0  3
+ DU4  Var_09    O4'   C1'  N1   C2   -161.48  30.0  3
+ DU4  Var_10    C2'   C1'  N1   C6    -98.44  30.0  3
+ DU4  Var_11    O4'   C1'  N1   C6     19.67  30.0  3
+ DU4  Var_12    C4'   C3'  C2'  C1'    35.31  30.0  1
+ DU4  Var_13    C3'   C4'  O4'  C1'    19.81  30.0  1
+ DU4  Var_14    C4'   O4'  C1'  C2'     3.47  30.0  1
+ DU4  Var_15    O4'   C4'  C3'  C2'   -34.20  30.0  1
+ DU4  Var_16    O4'   C1'  C2'  C3'   -25.08  30.0  1
+ DU4  Var_17    O3'   C3'  C2'  C1'   153.59  30.0  1
+ DU4  Var_18    C5'   C4'  O4'  C1'   143.11  30.0  1
+ DU4  Var_19    C5'   C4'  C3'  C2'  -155.27  30.0  1
+ DU4  Var_20    O4'   C4'  C3'  O3'  -156.60  30.0  1
+ DU4  Var_21    H5    C5   C6   N1    179.67  30.0  1
+ DU4  Var_22    H2'   C2'  C1'  N1   -149.90  30.0  1
+ DU4  Var_23    H2'A  C2'  C1'  N1    -29.21  30.0  1
+ DU4  Var_24    H6    C6   N1   C2    179.58  30.0  1
+ DU4  Var_25    H1'   C1'  N1   C2    -43.05  30.0  3
+ DU4  Var_26    H3'   C3'  C2'  C1'   -80.28  30.0  1
+ DU4  Var_27    H4'   C4'  O4'  C1'   -95.32  30.0  1
+ DU4  Var_28    N5'   C5'  C4'  C3'  -173.83  30.0  3
+ DU4  Var_29    C5'   C4'  C3'  O3'    82.33  30.0  1
+ DU4  Var_30    N5'   C5'  C4'  O4'    68.36  30.0  3
+ DU4  Var_31    HO3'  O3'  C3'  C2'    76.23  30.0  3
+ DU4  Var_32    H5'   C5'  C4'  C3'   -50.01  30.0  3
+ DU4  Var_33    H5'A  C5'  C4'  C3'    64.29  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

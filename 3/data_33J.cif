@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 33J  33J  '3-[(2R)-2-cyclohexyl-5-oxopyrrolidin-1-yl]-5-phenylthiophene-2-carboxylic acid'  ligand  48  26  .  2021-08-04  2021-08-04  
+ 33J  33J  '3-[(2R)-2-cyclohexyl-5-oxopyrrolidin-1-yl]-5-phenylthiophene-2-carboxylic acid'  ligand  48  26  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_33J
@@ -258,42 +259,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 33J  CONST_01  C3   C4   C5   C2     0.00   0.0  0
- 33J  CONST_02  C4   C3   S1   C2     0.00   0.0  0
- 33J  CONST_03  C16  C3   S1   C2   180.00   0.0  0
- 33J  CONST_04  C5   C2   S1   C3     0.00   0.0  0
- 33J  CONST_05  C20  C21  C16  C3   180.00   0.0  0
- 33J  CONST_06  C18  C17  C16  C3   180.00   0.0  0
- 33J  CONST_07  C5   C4   C3   C16  180.00   0.0  0
- 33J  CONST_08  C19  C20  C21  C16    0.00   0.0  0
- 33J  CONST_09  C19  C18  C17  C16    0.00   0.0  0
- 33J  CONST_12  C20  C21  C16  C17    0.00   0.0  0
- 33J  CONST_13  C20  C19  C18  C17    0.00   0.0  0
- 33J  CONST_14  C21  C16  C17  C18    0.00   0.0  0
- 33J  CONST_15  C21  C20  C19  C18    0.00   0.0  0
- 33J  CONST_18  C4   C5   C2   S1     0.00   0.0  0
- 33J  CONST_19  C5   C4   C3   S1     0.00   0.0  0
- 33J  CONST_20  N1   C5   C4   C3   180.00   0.0  0
- 33J  CONST_21  N1   C5   C2   S1   180.00   0.0  0
- 33J  CONST_23  C9   N1   C6   C7     0.00   0.0  0
- 33J  CONST_24  N1   C5   C2   C1     0.00   0.0  0
- 33J  CONST_25  C4   C5   C2   C1   180.00   0.0  0
- 33J  CONST_26  C3   S1   C2   C1   180.00   0.0  0
- 33J  CONST_27  C9   N1   C6   O3   180.00   0.0  0
- 33J  CONST_29  H17  C4   C5   C2   180.00   0.0  0
- 33J  CONST_30  H16  C21  C16  C3     0.00   0.0  0
- 33J  CONST_31  H12  C17  C16  C3     0.00   0.0  0
- 33J  CONST_32  H15  C20  C21  C16  180.00   0.0  0
- 33J  CONST_33  H13  C18  C17  C16  180.00   0.0  0
- 33J  CONST_34  H14  C19  C18  C17  180.00   0.0  0
- 33J  Var_01    C9   N1   C5   C2    83.81  30.0  3
- 33J  Var_02    C14  C13  C12  C11   55.14  30.0  1
- 33J  Var_03    C15  C14  C13  C12  -54.22  30.0  1
- 33J  Var_04    C10  C11  C12  C13  -57.54  30.0  1
- 33J  Var_05    C10  C15  C14  C13   55.43  30.0  1
- 33J  Var_06    C8   C7   C6   N1    12.58  30.0  1
- 33J  Var_07    C9   C8   C7   C6   -24.23  30.0  1
- 33J  Var_08    C5   C2   C1   O1   179.17  30.0  2
+ 33J  CONST_01  C3   C4   C5   C2      0.00   0.0  0
+ 33J  CONST_02  C4   C3   S1   C2      0.00   0.0  0
+ 33J  CONST_03  C16  C3   S1   C2    180.00   0.0  0
+ 33J  CONST_04  C5   C2   S1   C3      0.00   0.0  0
+ 33J  CONST_05  C20  C21  C16  C3    180.00   0.0  0
+ 33J  CONST_06  C18  C17  C16  C3    180.00   0.0  0
+ 33J  CONST_07  C5   C4   C3   C16   180.00   0.0  0
+ 33J  CONST_08  C19  C20  C21  C16     0.00   0.0  0
+ 33J  CONST_09  C19  C18  C17  C16     0.00   0.0  0
+ 33J  CONST_10  C20  C21  C16  C17     0.00   0.0  0
+ 33J  CONST_11  C20  C19  C18  C17     0.00   0.0  0
+ 33J  CONST_12  C21  C16  C17  C18     0.00   0.0  0
+ 33J  CONST_13  C21  C20  C19  C18     0.00   0.0  0
+ 33J  CONST_14  C4   C5   C2   S1      0.00   0.0  0
+ 33J  CONST_15  C5   C4   C3   S1      0.00   0.0  0
+ 33J  CONST_16  N1   C5   C4   C3    180.00   0.0  0
+ 33J  CONST_17  N1   C5   C2   S1    180.00   0.0  0
+ 33J  CONST_18  C9   N1   C6   C7      0.00   0.0  0
+ 33J  CONST_19  N1   C5   C2   C1      0.00   0.0  0
+ 33J  CONST_20  C4   C5   C2   C1    180.00   0.0  0
+ 33J  CONST_21  C3   S1   C2   C1    180.00   0.0  0
+ 33J  CONST_22  C9   N1   C6   O3    180.00   0.0  0
+ 33J  CONST_23  H17  C4   C5   C2    180.00   0.0  0
+ 33J  CONST_24  H16  C21  C16  C3      0.00   0.0  0
+ 33J  CONST_25  H12  C17  C16  C3      0.00   0.0  0
+ 33J  CONST_26  H15  C20  C21  C16   180.00   0.0  0
+ 33J  CONST_27  H13  C18  C17  C16   180.00   0.0  0
+ 33J  CONST_28  H14  C19  C18  C17   180.00   0.0  0
+ 33J  Var_01    C9   N1   C5   C2     83.81  30.0  3
+ 33J  Var_02    C14  C13  C12  C11    55.14  30.0  1
+ 33J  Var_03    C15  C14  C13  C12   -54.22  30.0  1
+ 33J  Var_04    C10  C11  C12  C13   -57.54  30.0  1
+ 33J  Var_05    C10  C15  C14  C13    55.43  30.0  1
+ 33J  Var_06    C8   C7   C6   N1     12.58  30.0  1
+ 33J  Var_07    C9   C8   C7   C6    -24.23  30.0  1
+ 33J  Var_08    C5   C2   C1   O1    179.17  30.0  2
+ 33J  Var_09    C8   C9   C10  C11   -56.27  30.0  2
+ 33J  Var_10    N1   C9   C10  C11    61.17  30.0  2
+ 33J  Var_11    C14  C15  C10  C11   -57.15  30.0  1
+ 33J  Var_12    C9   C10  C11  C12  -175.77  30.0  1
+ 33J  Var_13    C15  C10  C11  C12    58.36  30.0  1
+ 33J  Var_14    C9   C10  C15  C14   174.93  30.0  1
+ 33J  Var_15    C8   C9   C10  C15    69.01  30.0  2
+ 33J  Var_16    N1   C9   C10  C15  -173.55  30.0  2
+ 33J  Var_17    C4   C3   C16  C17   157.80  30.0  3
+ 33J  Var_18    S1   C3   C16  C17   -21.58  30.0  3
+ 33J  Var_19    C4   C3   C16  C21   -21.52  30.0  3
+ 33J  Var_20    S1   C3   C16  C21   159.10  30.0  3
+ 33J  Var_21    C8   C9   N1   C5   -174.36  30.0  1
+ 33J  Var_22    C10  C9   N1   C5     60.43  30.0  1
+ 33J  Var_23    C7   C8   C9   N1     26.50  30.0  1
+ 33J  Var_24    C8   C9   N1   C6    -20.32  30.0  1
+ 33J  Var_25    C10  C9   N1   C6   -145.53  30.0  1
+ 33J  Var_26    C10  C9   C8   C7    149.52  30.0  1
+ 33J  Var_27    H22  C9   C10  C11  -179.80  30.0  2
+ 33J  Var_28    H10  C15  C10  C11  -179.12  30.0  1
+ 33J  Var_29    H11  C15  C10  C11    63.93  30.0  1
+ 33J  Var_30    H23  C10  C11  C12   -57.44  30.0  1
+ 33J  Var_31    H20  C8   C9   N1    -91.49  30.0  1
+ 33J  Var_32    H21  C8   C9   N1    149.08  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

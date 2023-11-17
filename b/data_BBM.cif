@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BBM  BBM  5-bromo-N-{[(2S)-2,3-dihydroxypropyl]oxy}-3,4-difluoro-2-[(2-fluoro-4-iodophenyl)amino]benzamide  ligand  40  27  .  2021-08-06  2021-08-06  
+ BBM  BBM  5-bromo-N-{[(2S)-2,3-dihydroxypropyl]oxy}-3,4-difluoro-2-[(2-fluoro-4-iodophenyl)amino]benzamide  ligand  40  27  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BBM
@@ -212,45 +213,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BBM  CONST_01  C11  C10  C9   C8     0.00   0.0  0
- BBM  CONST_02  C11  C12  C13  C8     0.00   0.0  0
- BBM  CONST_03  C12  C13  C8   C9     0.00   0.0  0
- BBM  CONST_04  C12  C11  C10  C9     0.00   0.0  0
- BBM  CONST_05  C13  C8   C9   C10    0.00   0.0  0
- BBM  CONST_06  C13  C12  C11  C10    0.00   0.0  0
- BBM  CONST_07  C6   C1   C26  C3     0.00   0.0  0
- BBM  CONST_08  C6   C5   C4   C3     0.00   0.0  0
- BBM  CONST_09  C5   C4   C3   C26    0.00   0.0  0
- BBM  CONST_10  C5   C6   C1   C26    0.00   0.0  0
- BBM  CONST_11  C1   C26  C3   C4     0.00   0.0  0
- BBM  CONST_12  C1   C6   C5   C4     0.00   0.0  0
- BBM  CONST_13  C10  C9   C8   C7   180.00   0.0  0
- BBM  CONST_14  C12  C13  C8   C7   180.00   0.0  0
- BBM  CONST_15  BR   C10  C9   C8   180.00   0.0  0
- BBM  CONST_16  F2   C12  C13  C8   180.00   0.0  0
- BBM  CONST_17  N    C13  C8   C9   180.00   0.0  0
- BBM  CONST_18  F1   C11  C10  C9   180.00   0.0  0
- BBM  CONST_19  F2   C12  C11  C10  180.00   0.0  0
- BBM  CONST_20  C12  C11  C10  BR   180.00   0.0  0
- BBM  CONST_21  N    C13  C12  C11  180.00   0.0  0
- BBM  CONST_22  C13  C12  C11  F1   180.00   0.0  0
- BBM  CONST_23  C1   C26  C3   N    180.00   0.0  0
- BBM  CONST_24  C5   C4   C3   N    180.00   0.0  0
- BBM  CONST_25  I    C6   C1   C26  180.00   0.0  0
- BBM  CONST_26  C4   C3   C26  F3   180.00   0.0  0
- BBM  CONST_27  C6   C1   C26  F3   180.00   0.0  0
- BBM  CONST_28  I    C6   C5   C4   180.00   0.0  0
- BBM  CONST_29  H9   C9   C10  C11  180.00   0.0  0
- BBM  CONST_30  H1   C1   C26  C3   180.00   0.0  0
- BBM  CONST_31  H5   C5   C4   C3   180.00   0.0  0
- BBM  CONST_32  H4   C4   C3   C26  180.00   0.0  0
- BBM  CONST_33  C8   C7   N2   O4   180.00   0.0  0
- BBM  CONST_34  HN2  N2   C7   C8     0.00   0.0  0
- BBM  CONST_35  O4   N2   C7   O1     0.00   0.0  0
- BBM  Var_01    C3   N    C13  C8   128.05  30.0  2
- BBM  Var_02    C26  C3   N    C13  166.81  30.0  2
- BBM  Var_03    C9   C8   C7   O1   125.47  30.0  2
- BBM  Var_04    C16  C15  O4   N2   177.07  30.0  3
+ BBM  CONST_01  C11   C10  C9   C8      0.00   0.0  0
+ BBM  CONST_02  C11   C12  C13  C8      0.00   0.0  0
+ BBM  CONST_03  C12   C13  C8   C9      0.00   0.0  0
+ BBM  CONST_04  C12   C11  C10  C9      0.00   0.0  0
+ BBM  CONST_05  C13   C8   C9   C10     0.00   0.0  0
+ BBM  CONST_06  C13   C12  C11  C10     0.00   0.0  0
+ BBM  CONST_07  C6    C1   C26  C3      0.00   0.0  0
+ BBM  CONST_08  C6    C5   C4   C3      0.00   0.0  0
+ BBM  CONST_09  C5    C4   C3   C26     0.00   0.0  0
+ BBM  CONST_10  C5    C6   C1   C26     0.00   0.0  0
+ BBM  CONST_11  C1    C26  C3   C4      0.00   0.0  0
+ BBM  CONST_12  C1    C6   C5   C4      0.00   0.0  0
+ BBM  CONST_13  C10   C9   C8   C7    180.00   0.0  0
+ BBM  CONST_14  C12   C13  C8   C7    180.00   0.0  0
+ BBM  CONST_15  BR    C10  C9   C8    180.00   0.0  0
+ BBM  CONST_16  F2    C12  C13  C8    180.00   0.0  0
+ BBM  CONST_17  N     C13  C8   C9    180.00   0.0  0
+ BBM  CONST_18  F1    C11  C10  C9    180.00   0.0  0
+ BBM  CONST_19  F2    C12  C11  C10   180.00   0.0  0
+ BBM  CONST_20  C12   C11  C10  BR    180.00   0.0  0
+ BBM  CONST_21  N     C13  C12  C11   180.00   0.0  0
+ BBM  CONST_22  C13   C12  C11  F1    180.00   0.0  0
+ BBM  CONST_23  C1    C26  C3   N     180.00   0.0  0
+ BBM  CONST_24  C5    C4   C3   N     180.00   0.0  0
+ BBM  CONST_25  I     C6   C1   C26   180.00   0.0  0
+ BBM  CONST_26  C4    C3   C26  F3    180.00   0.0  0
+ BBM  CONST_27  C6    C1   C26  F3    180.00   0.0  0
+ BBM  CONST_28  I     C6   C5   C4    180.00   0.0  0
+ BBM  CONST_29  H9    C9   C10  C11   180.00   0.0  0
+ BBM  CONST_30  H1    C1   C26  C3    180.00   0.0  0
+ BBM  CONST_31  H5    C5   C4   C3    180.00   0.0  0
+ BBM  CONST_32  H4    C4   C3   C26   180.00   0.0  0
+ BBM  CONST_33  C8    C7   N2   O4    180.00   0.0  0
+ BBM  CONST_34  HN2   N2   C7   C8      0.00   0.0  0
+ BBM  CONST_35  O4    N2   C7   O1      0.00   0.0  0
+ BBM  Var_01    C3    N    C13  C8    128.05  30.0  2
+ BBM  Var_02    C26   C3   N    C13   166.81  30.0  2
+ BBM  Var_03    C9    C8   C7   O1    125.47  30.0  2
+ BBM  Var_04    C16   C15  O4   N2    177.07  30.0  3
+ BBM  Var_05    C15   O4   N2   C7     93.21  30.0  3
+ BBM  Var_06    C17   C16  C15  O4   -175.84  30.0  3
+ BBM  Var_07    O2    C16  C15  O4     58.34  30.0  3
+ BBM  Var_08    O3    C17  C16  C15   175.23  30.0  3
+ BBM  Var_09    O2    C16  C17  O3    -59.21  30.0  1
+ BBM  Var_10    H16   C16  C15  O4    -58.06  30.0  3
+ BBM  Var_11    H171  C17  C16  C15    53.30  30.0  3
+ BBM  Var_12    H172  C17  C16  C15   -62.72  30.0  3
+ BBM  Var_13    HO2   O2   C16  C15    65.54  30.0  3
+ BBM  Var_14    HO3   O3   C17  C16   176.35  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

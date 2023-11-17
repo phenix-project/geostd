@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NEF  NEF  '(2~{R},4~{R})-5-[(~{E})-2-(2,4-dinitrophenyl)ethenyl]-2-[(1~{R})-2-oxidanylidene-1-(2-thiophen-2-ylethanoylamino)ethyl]-1,3-thiazinane-4-carboxylic acid'  ligand  55  35  .  2021-08-15  2022-11-17
+ NEF  NEF  '(2~{R},4~{R})-5-[(~{E})-2-(2,4-dinitrophenyl)ethenyl]-2-[(1~{R})-2-oxidanylidene-1-(2-thiophen-2-ylethanoylamino)ethyl]-1,3-thiazinane-4-carboxylic acid'  ligand  55  35  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NEF
@@ -273,44 +274,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NEF  CONST_01  C10  C11  S12  C8     0.00   0.0  0
- NEF  CONST_02  C11  C10  C9   C8     0.00   0.0  0
- NEF  CONST_03  C9   C8   S12  C11    0.00   0.0  0
- NEF  CONST_04  C19  C18  C17  C14    0.00   0.0  0
- NEF  CONST_05  C19  C20  C21  C14    0.00   0.0  0
- NEF  CONST_06  C20  C19  C18  C17    0.00   0.0  0
- NEF  CONST_07  C20  C21  C14  C17    0.00   0.0  0
- NEF  CONST_08  S12  C11  C10  C9     0.00   0.0  0
- NEF  CONST_09  S12  C8   C9   C10    0.00   0.0  0
- NEF  CONST_10  C21  C20  C19  C18    0.00   0.0  0
- NEF  CONST_11  C21  C14  C17  C18    0.00   0.0  0
- NEF  CONST_12  C11  S12  C8   C7   180.00   0.0  0
- NEF  CONST_13  C10  C9   C8   C7   180.00   0.0  0
- NEF  CONST_14  N23  C19  C18  C17  180.00   0.0  0
- NEF  CONST_15  N22  C21  C14  C17  180.00   0.0  0
- NEF  CONST_16  C18  C17  C14  C12  180.00   0.0  0
- NEF  CONST_17  C20  C21  C14  C12  180.00   0.0  0
- NEF  CONST_18  N22  C21  C20  C19  180.00   0.0  0
- NEF  CONST_19  N23  C19  C20  C21  180.00   0.0  0
- NEF  CONST_20  H9   C11  S12  C8   180.00   0.0  0
- NEF  CONST_21  H16  C10  C9   C8   180.00   0.0  0
- NEF  CONST_22  H15  C9   C10  C11  180.00   0.0  0
- NEF  CONST_23  H22  C18  C17  C14  180.00   0.0  0
- NEF  CONST_24  H23  C20  C21  C14  180.00   0.0  0
- NEF  CONST_25  H12  C17  C18  C19  180.00   0.0  0
- NEF  CONST_28  O26  N23  C19  C18    0.00   0.0  0
- NEF  CONST_29  O27  N23  C19  C18  180.00   0.0  0
- NEF  CONST_30  O26  N23  C19  C20  180.00   0.0  0
- NEF  CONST_31  O27  N23  C19  C20    0.00   0.0  0
- NEF  CONST_34  H19  O18  C16  C15  180.00   0.0  0
- NEF  CONST_35  C7   C5   N4   C3   180.00   0.0  0
- NEF  CONST_36  O6   C5   N4   C3     0.00   0.0  0
- NEF  CONST_37  H14  N4   C5   C7     0.00   0.0  0
- NEF  Var_01    H1   C2   S19  C13  -77.50  30.0  1
- NEF  Var_02    C14  C12  C6   C4   179.22   0.0  2
- NEF  Var_03    C17  C14  C12  C6   -38.62  30.0  2
- NEF  Var_04    S12  C8   C7   C5   -94.13  30.0  1
- NEF  Var_05    N4   C5   C7   C8    59.95  30.0  3
+ NEF  CONST_01  C10  C11  S12  C8      0.00   0.0  0
+ NEF  CONST_02  C11  C10  C9   C8      0.00   0.0  0
+ NEF  CONST_03  C9   C8   S12  C11     0.00   0.0  0
+ NEF  CONST_04  C19  C18  C17  C14     0.00   0.0  0
+ NEF  CONST_05  C19  C20  C21  C14     0.00   0.0  0
+ NEF  CONST_06  C20  C19  C18  C17     0.00   0.0  0
+ NEF  CONST_07  C20  C21  C14  C17     0.00   0.0  0
+ NEF  CONST_08  S12  C11  C10  C9      0.00   0.0  0
+ NEF  CONST_09  S12  C8   C9   C10     0.00   0.0  0
+ NEF  CONST_10  C21  C20  C19  C18     0.00   0.0  0
+ NEF  CONST_11  C21  C14  C17  C18     0.00   0.0  0
+ NEF  CONST_12  C11  S12  C8   C7    180.00   0.0  0
+ NEF  CONST_13  C10  C9   C8   C7    180.00   0.0  0
+ NEF  CONST_14  N23  C19  C18  C17   180.00   0.0  0
+ NEF  CONST_15  N22  C21  C14  C17   180.00   0.0  0
+ NEF  CONST_16  C18  C17  C14  C12   180.00   0.0  0
+ NEF  CONST_17  C20  C21  C14  C12   180.00   0.0  0
+ NEF  CONST_18  N22  C21  C20  C19   180.00   0.0  0
+ NEF  CONST_19  N23  C19  C20  C21   180.00   0.0  0
+ NEF  CONST_20  H9   C11  S12  C8    180.00   0.0  0
+ NEF  CONST_21  H16  C10  C9   C8    180.00   0.0  0
+ NEF  CONST_22  H15  C9   C10  C11   180.00   0.0  0
+ NEF  CONST_23  H22  C18  C17  C14   180.00   0.0  0
+ NEF  CONST_24  H23  C20  C21  C14   180.00   0.0  0
+ NEF  CONST_25  H12  C17  C18  C19   180.00   0.0  0
+ NEF  CONST_26  O26  N23  C19  C18     0.00   0.0  0
+ NEF  CONST_27  O27  N23  C19  C18   180.00   0.0  0
+ NEF  CONST_28  O26  N23  C19  C20   180.00   0.0  0
+ NEF  CONST_29  O27  N23  C19  C20     0.00   0.0  0
+ NEF  CONST_30  H19  O18  C16  C15   180.00   0.0  0
+ NEF  CONST_31  C7   C5   N4   C3    180.00   0.0  0
+ NEF  CONST_32  O6   C5   N4   C3      0.00   0.0  0
+ NEF  CONST_33  H14  N4   C5   C7      0.00   0.0  0
+ NEF  Var_01    H1   C2   S19  C13   -77.50  30.0  1
+ NEF  Var_02    C14  C12  C6   C4    179.22   0.0  2
+ NEF  Var_03    C17  C14  C12  C6    -38.62  30.0  2
+ NEF  Var_04    S12  C8   C7   C5    -94.13  30.0  1
+ NEF  Var_05    N4   C5   C7   C8     59.95  30.0  3
+ NEF  Var_06    N14  C15  C4   C2     64.98  30.0  1
+ NEF  Var_07    N14  C13  S19  C2    -41.84  30.0  1
+ NEF  Var_08    C13  N14  C15  C4    -62.32  30.0  1
+ NEF  Var_09    S19  C2   C4   C15   -59.94  30.0  1
+ NEF  Var_10    S19  C13  N14  C15    52.26  30.0  1
+ NEF  Var_11    C16  C15  C4   C2   -171.74  30.0  1
+ NEF  Var_12    C3   C13  S19  C2     88.91  30.0  1
+ NEF  Var_13    C15  N14  C13  C3    -79.34  30.0  1
+ NEF  Var_14    N14  C15  C4   C6   -173.87  30.0  1
+ NEF  Var_15    S19  C2   C4   C6    178.39  30.0  1
+ NEF  Var_16    C16  C15  N14  C13   173.61  30.0  1
+ NEF  Var_17    H11  C15  C4   C2    -56.19  30.0  1
+ NEF  Var_18    H10  C13  S19  C2   -157.06  30.0  1
+ NEF  Var_19    H17  N14  C15  C4     62.71  30.0  1
+ NEF  Var_20    H4   C4   C2   S19    58.77  30.0  1
+ NEF  Var_21    C12  C6   C4   C2   -128.54  30.0  2
+ NEF  Var_22    O17  C16  C15  C4    110.33  30.0  2
+ NEF  Var_23    O18  C16  C15  C4    -68.82  30.0  2
+ NEF  Var_24    C16  C15  C4   C6    -50.59  30.0  1
+ NEF  Var_25    C12  C6   C4   C15   110.57  30.0  2
+ NEF  Var_26    N4   C3   C13  S19   -53.20  30.0  2
+ NEF  Var_27    C1   C3   C13  S19  -177.10  30.0  2
+ NEF  Var_28    N14  C13  C3   C1    -44.92  30.0  3
+ NEF  Var_29    N14  C13  C3   N4     78.98  30.0  3
+ NEF  Var_30    O17  C16  C15  N14  -124.01  30.0  2
+ NEF  Var_31    O18  C16  C15  N14    56.84  30.0  2
+ NEF  Var_32    H5   C6   C4   C2     53.60  30.0  2
+ NEF  Var_33    H3   C3   C13  S19    68.58  30.0  2
+ NEF  Var_34    C5   N4   C3   C13   105.09  30.0  3
+ NEF  Var_35    O2   C1   C3   C13   126.97  30.0  2
+ NEF  Var_36    H14  N4   C3   C13   -97.19  30.0  3
+ NEF  Var_37    H13  C1   C3   C13   -53.60  30.0  2
+ NEF  Var_38    C5   N4   C3   C1   -133.29  30.0  3
+ NEF  Var_39    N4   C3   C1   O2     -0.72  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

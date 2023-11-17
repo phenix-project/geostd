@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- XBM  XBM  N-[(3,5-dichlorophenyl)sulfonyl]-L-phenylalanyl-N-hydroxy-L-valinamide  ligand  54  31  .  2022-03-29  2022-03-29
+ XBM  XBM  N-[(3,5-dichlorophenyl)sulfonyl]-L-phenylalanyl-N-hydroxy-L-valinamide  ligand  54  31  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_XBM
@@ -268,44 +269,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- XBM  CONST_01  C12   C13  C14  C09     0.00   0.0  0
- XBM  CONST_02  C12   C11  C10  C09     0.00   0.0  0
- XBM  CONST_03  C13   C12  C11  C10     0.00   0.0  0
- XBM  CONST_04  C13   C14  C09  C10     0.00   0.0  0
- XBM  CONST_05  C14   C13  C12  C11     0.00   0.0  0
- XBM  CONST_06  C14   C09  C10  C11     0.00   0.0  0
- XBM  CONST_07  C18   C19  C20  C15     0.00   0.0  0
- XBM  CONST_08  C18   C17  C16  C15     0.00   0.0  0
- XBM  CONST_09  C19   C18  C17  C16     0.00   0.0  0
- XBM  CONST_10  C19   C20  C15  C16     0.00   0.0  0
- XBM  CONST_11  C20   C19  C18  C17     0.00   0.0  0
- XBM  CONST_12  C20   C15  C16  C17     0.00   0.0  0
- XBM  CONST_13  C13   C14  C09  C08   180.00   0.0  0
- XBM  CONST_14  C11   C10  C09  C08   180.00   0.0  0
- XBM  CONST_15  C19   C20  C15  S01   180.00   0.0  0
- XBM  CONST_16  C17   C16  C15  S01   180.00   0.0  0
- XBM  CONST_17  CL02  C19  C20  C15   180.00   0.0  0
- XBM  CONST_18  CL01  C17  C16  C15   180.00   0.0  0
- XBM  CONST_19  CL02  C19  C18  C17   180.00   0.0  0
- XBM  CONST_20  C19   C18  C17  CL01  180.00   0.0  0
- XBM  CONST_21  H18   C13  C14  C09   180.00   0.0  0
- XBM  CONST_22  H16   C11  C10  C09   180.00   0.0  0
- XBM  CONST_23  H17   C12  C11  C10   180.00   0.0  0
- XBM  CONST_24  H19   C14  C09  C10   180.00   0.0  0
- XBM  CONST_25  H15   C10  C11  C12   180.00   0.0  0
- XBM  CONST_26  H22   C18  C17  C16   180.00   0.0  0
- XBM  CONST_27  H23   C20  C15  C16   180.00   0.0  0
- XBM  CONST_28  H21   C16  C17  C18   180.00   0.0  0
- XBM  CONST_29  C03   N01  C02  C01   180.00   0.0  0
- XBM  CONST_30  C03   N01  C02  O01     0.00   0.0  0
- XBM  CONST_31  O03   N02  C04  C03   180.00   0.0  0
- XBM  CONST_32  O03   N02  C04  O02     0.00   0.0  0
- XBM  CONST_33  H2    N01  C02  C01     0.00   0.0  0
- XBM  Var_01    C14   C09  C08  C01    91.13  30.0  2
- XBM  Var_02    C20   C15  S01  N03    89.19  30.0  3
- XBM  Var_03    C15   S01  N03  C01   -90.67  30.0  2
- XBM  Var_04    H10   C07  C05  C03   178.84  30.0  3
- XBM  Var_05    H7    C06  C05  C03   -54.34  30.0  3
+ XBM  CONST_01  C12   C13  C14  C09      0.00   0.0  0
+ XBM  CONST_02  C12   C11  C10  C09      0.00   0.0  0
+ XBM  CONST_03  C13   C12  C11  C10      0.00   0.0  0
+ XBM  CONST_04  C13   C14  C09  C10      0.00   0.0  0
+ XBM  CONST_05  C14   C13  C12  C11      0.00   0.0  0
+ XBM  CONST_06  C14   C09  C10  C11      0.00   0.0  0
+ XBM  CONST_07  C18   C19  C20  C15      0.00   0.0  0
+ XBM  CONST_08  C18   C17  C16  C15      0.00   0.0  0
+ XBM  CONST_09  C19   C18  C17  C16      0.00   0.0  0
+ XBM  CONST_10  C19   C20  C15  C16      0.00   0.0  0
+ XBM  CONST_11  C20   C19  C18  C17      0.00   0.0  0
+ XBM  CONST_12  C20   C15  C16  C17      0.00   0.0  0
+ XBM  CONST_13  C13   C14  C09  C08    180.00   0.0  0
+ XBM  CONST_14  C11   C10  C09  C08    180.00   0.0  0
+ XBM  CONST_15  C19   C20  C15  S01    180.00   0.0  0
+ XBM  CONST_16  C17   C16  C15  S01    180.00   0.0  0
+ XBM  CONST_17  CL02  C19  C20  C15    180.00   0.0  0
+ XBM  CONST_18  CL01  C17  C16  C15    180.00   0.0  0
+ XBM  CONST_19  CL02  C19  C18  C17    180.00   0.0  0
+ XBM  CONST_20  C19   C18  C17  CL01   180.00   0.0  0
+ XBM  CONST_21  H18   C13  C14  C09    180.00   0.0  0
+ XBM  CONST_22  H16   C11  C10  C09    180.00   0.0  0
+ XBM  CONST_23  H17   C12  C11  C10    180.00   0.0  0
+ XBM  CONST_24  H19   C14  C09  C10    180.00   0.0  0
+ XBM  CONST_25  H15   C10  C11  C12    180.00   0.0  0
+ XBM  CONST_26  H22   C18  C17  C16    180.00   0.0  0
+ XBM  CONST_27  H23   C20  C15  C16    180.00   0.0  0
+ XBM  CONST_28  H21   C16  C17  C18    180.00   0.0  0
+ XBM  CONST_29  C03   N01  C02  C01    180.00   0.0  0
+ XBM  CONST_30  C03   N01  C02  O01      0.00   0.0  0
+ XBM  CONST_31  O03   N02  C04  C03    180.00   0.0  0
+ XBM  CONST_32  O03   N02  C04  O02      0.00   0.0  0
+ XBM  CONST_33  H2    N01  C02  C01      0.00   0.0  0
+ XBM  Var_01    C14   C09  C08  C01     91.13  30.0  2
+ XBM  Var_02    C20   C15  S01  N03     89.19  30.0  3
+ XBM  Var_03    C15   S01  N03  C01    -90.67  30.0  2
+ XBM  Var_04    H10   C07  C05  C03    178.84  30.0  3
+ XBM  Var_05    H7    C06  C05  C03    -54.34  30.0  3
+ XBM  Var_06    C09   C08  C01  C02    175.37  30.0  1
+ XBM  Var_07    N03   C01  C08  C09    -65.55  30.0  3
+ XBM  Var_08    H1    C01  C08  C09     53.71  30.0  3
+ XBM  Var_09    S01   N03  C01  C02   -104.67  30.0  3
+ XBM  Var_10    C05   C03  N01  C02    105.47  30.0  3
+ XBM  Var_11    C04   C03  N01  C02   -130.74  30.0  3
+ XBM  Var_12    C08   C01  C02  N01   -136.86  30.0  2
+ XBM  Var_13    N03   C01  C02  N01    101.60  30.0  2
+ XBM  Var_14    C07   C05  C03  N01     64.40  30.0  3
+ XBM  Var_15    C06   C05  C03  N01    -60.26  30.0  3
+ XBM  Var_16    O02   C04  C03  N01    -20.03  30.0  3
+ XBM  Var_17    N02   C04  C03  N01    162.83  30.0  3
+ XBM  Var_18    C08   C01  C02  O01     45.60  30.0  2
+ XBM  Var_19    N03   C01  C02  O01    -75.94  30.0  2
+ XBM  Var_20    C07   C05  C03  C04    -57.84  30.0  3
+ XBM  Var_21    C06   C05  C03  C04    177.49  30.0  3
+ XBM  Var_22    C05   C03  C04  O02    104.39  30.0  2
+ XBM  Var_23    C05   C03  C04  N02    -72.75  30.0  2
+ XBM  Var_24    S01   N03  C01  C08    133.61  30.0  3
+ XBM  Var_25    H3    C03  N01  C02    -12.88  30.0  3
+ XBM  Var_26    H6    C05  C03  N01   -177.04  30.0  3
+ XBM  Var_27    H5    O03  N02  C04    -98.72  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

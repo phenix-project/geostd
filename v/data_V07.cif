@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- V07  V07  7-(azepan-1-yl)-3-(4-fluorophenyl)-5-methylpyrazolo[1,5-a]pyrimidine  ligand  45  24  .  2022-03-29  2022-03-29
+ V07  V07  7-(azepan-1-yl)-3-(4-fluorophenyl)-5-methylpyrazolo[1,5-a]pyrimidine  ligand  45  24  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_V07
@@ -251,41 +252,70 @@ _chem_comp_tor.period
  V07  CONST_05  C4   N3   N16  C17     0.00   0.0  0
  V07  CONST_06  N3   C4   C18  C17     0.00   0.0  0
  V07  CONST_07  N5   C4   C18  C17   180.00   0.0  0
- V07  CONST_10  N3   N16  C17  C18     0.00   0.0  0
- V07  CONST_11  N16  N3   C4   C18     0.00   0.0  0
- V07  CONST_12  C6   N5   C4   C18   180.00   0.0  0
- V07  CONST_13  C21  C20  C19  C18   180.00   0.0  0
- V07  CONST_14  C23  C24  C19  C18   180.00   0.0  0
- V07  CONST_15  C22  C21  C20  C19     0.00   0.0  0
- V07  CONST_16  N16  C17  C18  C19   180.00   0.0  0
- V07  CONST_17  N3   C4   C18  C19   180.00   0.0  0
- V07  CONST_18  N5   C4   C18  C19     0.00   0.0  0
- V07  CONST_19  C22  C23  C24  C19     0.00   0.0  0
- V07  CONST_20  C23  C22  C21  C20     0.00   0.0  0
- V07  CONST_22  C23  C24  C19  C20     0.00   0.0  0
- V07  CONST_23  C24  C19  C20  C21     0.00   0.0  0
- V07  CONST_24  C24  C23  C22  C21     0.00   0.0  0
- V07  CONST_26  C7   C2   N3   C4      0.00   0.0  0
- V07  CONST_27  N16  C17  C18  C4      0.00   0.0  0
- V07  CONST_28  C7   C6   N5   C4      0.00   0.0  0
- V07  CONST_29  N3   C2   C7   C6      0.00   0.0  0
- V07  CONST_30  N3   C4   N5   C6      0.00   0.0  0
- V07  CONST_31  N16  N3   C2   C7    180.00   0.0  0
- V07  CONST_32  N5   C4   N3   N16   180.00   0.0  0
- V07  CONST_33  N9   C2   N3   C4    180.00   0.0  0
- V07  CONST_34  N9   C2   C7   C6    180.00   0.0  0
- V07  CONST_35  N9   C2   N3   N16     0.00   0.0  0
- V07  CONST_36  C8   C6   C7   C2    180.00   0.0  0
- V07  CONST_37  F25  C22  C21  C20   180.00   0.0  0
- V07  CONST_38  F25  C22  C23  C24   180.00   0.0  0
- V07  CONST_39  C8   C6   N5   C4    180.00   0.0  0
- V07  CONST_40  H14  C20  C19  C18     0.00   0.0  0
- V07  CONST_41  H17  C24  C19  C18     0.00   0.0  0
- V07  CONST_42  H15  C21  C20  C19   180.00   0.0  0
- V07  CONST_43  H13  C17  C18  C19     0.00   0.0  0
- V07  CONST_44  H16  C23  C24  C19   180.00   0.0  0
- V07  CONST_45  H18  C7   C2   N3    180.00   0.0  0
+ V07  CONST_08  N3   N16  C17  C18     0.00   0.0  0
+ V07  CONST_09  N16  N3   C4   C18     0.00   0.0  0
+ V07  CONST_10  C6   N5   C4   C18   180.00   0.0  0
+ V07  CONST_11  C21  C20  C19  C18   180.00   0.0  0
+ V07  CONST_12  C23  C24  C19  C18   180.00   0.0  0
+ V07  CONST_13  C22  C21  C20  C19     0.00   0.0  0
+ V07  CONST_14  N16  C17  C18  C19   180.00   0.0  0
+ V07  CONST_15  N3   C4   C18  C19   180.00   0.0  0
+ V07  CONST_16  N5   C4   C18  C19     0.00   0.0  0
+ V07  CONST_17  C22  C23  C24  C19     0.00   0.0  0
+ V07  CONST_18  C23  C22  C21  C20     0.00   0.0  0
+ V07  CONST_19  C23  C24  C19  C20     0.00   0.0  0
+ V07  CONST_20  C24  C19  C20  C21     0.00   0.0  0
+ V07  CONST_21  C24  C23  C22  C21     0.00   0.0  0
+ V07  CONST_22  C7   C2   N3   C4      0.00   0.0  0
+ V07  CONST_23  N16  C17  C18  C4      0.00   0.0  0
+ V07  CONST_24  C7   C6   N5   C4      0.00   0.0  0
+ V07  CONST_25  N3   C2   C7   C6      0.00   0.0  0
+ V07  CONST_26  N3   C4   N5   C6      0.00   0.0  0
+ V07  CONST_27  N16  N3   C2   C7    180.00   0.0  0
+ V07  CONST_28  N5   C4   N3   N16   180.00   0.0  0
+ V07  CONST_29  N9   C2   N3   C4    180.00   0.0  0
+ V07  CONST_30  N9   C2   C7   C6    180.00   0.0  0
+ V07  CONST_31  N9   C2   N3   N16     0.00   0.0  0
+ V07  CONST_32  C8   C6   C7   C2    180.00   0.0  0
+ V07  CONST_33  F25  C22  C21  C20   180.00   0.0  0
+ V07  CONST_34  F25  C22  C23  C24   180.00   0.0  0
+ V07  CONST_35  C8   C6   N5   C4    180.00   0.0  0
+ V07  CONST_36  H14  C20  C19  C18     0.00   0.0  0
+ V07  CONST_37  H17  C24  C19  C18     0.00   0.0  0
+ V07  CONST_38  H15  C21  C20  C19   180.00   0.0  0
+ V07  CONST_39  H13  C17  C18  C19     0.00   0.0  0
+ V07  CONST_40  H16  C23  C24  C19   180.00   0.0  0
+ V07  CONST_41  H18  C7   C2   N3    180.00   0.0  0
  V07  Var_01    H19  C8   C6   C7   -178.48  30.0  2
+ V07  Var_02    C14  C15  N9   C2   -144.63  30.0  1
+ V07  Var_03    C11  C10  N9   C2     87.44  30.0  1
+ V07  Var_04    C13  C12  C11  C10   -52.39  30.0  1
+ V07  Var_05    C14  C15  N9   C10    27.68  30.0  1
+ V07  Var_06    N3   C2   N9   C10   161.36  30.0  2
+ V07  Var_07    C7   C2   N9   C10   -16.72  30.0  2
+ V07  Var_08    C14  C13  C12  C11    65.95  30.0  1
+ V07  Var_09    C15  N9   C10  C11   -85.35  30.0  1
+ V07  Var_10    C15  C14  C13  C12   -89.25  30.0  1
+ V07  Var_11    N9   C10  C11  C12    75.26  30.0  1
+ V07  Var_12    N9   C15  C14  C13    50.72  30.0  1
+ V07  Var_13    N3   C2   N9   C15   -26.30  30.0  2
+ V07  Var_14    C7   C2   N9   C15   155.63  30.0  2
+ V07  Var_15    C20  C19  C18  C17   159.21  30.0  2
+ V07  Var_16    C24  C19  C18  C17   -19.63  30.0  2
+ V07  Var_17    C4   C18  C19  C20   -21.28  30.0  2
+ V07  Var_18    C4   C18  C19  C24   159.88  30.0  2
+ V07  Var_19    H11  C15  N9   C2     92.24  30.0  1
+ V07  Var_20    H12  C15  N9   C2    -24.75  30.0  1
+ V07  Var_21    H1   C10  N9   C2    -35.81  30.0  1
+ V07  Var_22    H2   C10  N9   C2   -149.29  30.0  1
+ V07  Var_23    H5   C12  C11  C10  -175.16  30.0  1
+ V07  Var_24    H6   C12  C11  C10    69.51  30.0  1
+ V07  Var_25    H7   C13  C12  C11  -173.47  30.0  1
+ V07  Var_26    H8   C13  C12  C11   -57.89  30.0  1
+ V07  Var_27    H9   C14  C13  C12    37.33  30.0  1
+ V07  Var_28    H10  C14  C13  C12   152.54  30.0  1
+ V07  Var_29    H3   C11  C12  C13    71.17  30.0  1
+ V07  Var_30    H4   C11  C12  C13  -173.30  30.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id

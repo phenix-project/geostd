@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CPH  CPH  (1S)-5-deoxy-1-O-methyl-1-C-[(2R,3S)-3,5,7,10-tetrahydroxy-6-methyl-4-oxo-1,2,3,4-tetrahydroanthracen-2-yl]-D-xylulose  ligand  54  30  .  2022-03-15  2022-03-15
+ CPH  CPH  (1S)-5-deoxy-1-O-methyl-1-C-[(2R,3S)-3,5,7,10-tetrahydroxy-6-methyl-4-oxo-1,2,3,4-tetrahydroanthracen-2-yl]-D-xylulose  ligand  54  30  .  2022-03-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CPH
@@ -272,41 +273,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CPH  CONST_01  C8   C7   C6   C5      0.00   0.0  0
- CPH  CONST_02  C4A  C10  C5A  C5    180.00   0.0  0
- CPH  CONST_03  C8   C8A  C5A  C5      0.00   0.0  0
- CPH  CONST_04  C9   C8A  C5A  C5    180.00   0.0  0
- CPH  CONST_05  C10  C5A  C5   C6    180.00   0.0  0
- CPH  CONST_06  C8A  C5A  C5   C6      0.00   0.0  0
- CPH  CONST_07  C8A  C8   C7   C6      0.00   0.0  0
- CPH  CONST_08  C5A  C5   C6   C7      0.00   0.0  0
- CPH  CONST_09  C9   C8A  C8   C7    180.00   0.0  0
- CPH  CONST_10  C5A  C8A  C8   C7      0.00   0.0  0
- CPH  CONST_11  C9A  C9   C8A  C8    180.00   0.0  0
- CPH  CONST_12  C10  C5A  C8A  C8    180.00   0.0  0
- CPH  CONST_13  C10  C5A  C8A  C9      0.00   0.0  0
- CPH  CONST_14  C10  C4A  C9A  C9      0.00   0.0  0
- CPH  CONST_15  C8A  C5A  C10  C4A     0.00   0.0  0
- CPH  CONST_16  C8A  C9   C9A  C4A     0.00   0.0  0
- CPH  CONST_17  C9A  C4A  C10  C5A     0.00   0.0  0
- CPH  CONST_18  C9A  C9   C8A  C5A     0.00   0.0  0
- CPH  CONST_19  O9   C9   C9A  C1      0.00   0.0  0
- CPH  CONST_20  CC7  C7   C6   C5    180.00   0.0  0
- CPH  CONST_21  O8   C8   C7   C6    180.00   0.0  0
- CPH  CONST_22  O6   C6   C7   C8    180.00   0.0  0
- CPH  CONST_23  O9   C9   C8A  C8      0.00   0.0  0
- CPH  CONST_24  C9   C8A  C8   O8      0.00   0.0  0
- CPH  CONST_25  C5A  C8A  C8   O8    180.00   0.0  0
- CPH  CONST_26  C5A  C8A  C9   O9    180.00   0.0  0
- CPH  CONST_27  C4A  C9A  C9   O9    180.00   0.0  0
- CPH  CONST_28  O6   C6   C5   C5A   180.00   0.0  0
- CPH  CONST_29  CC7  C7   C8   C8A   180.00   0.0  0
- CPH  CONST_30  H10  C10  C4A  C4      0.00   0.0  0
- CPH  CONST_31  H5   C5   C6   C7    180.00   0.0  0
- CPH  Var_01    C9   C9A  C1   C2    175.89  30.0  1
- CPH  Var_02    C10  C4A  C4   C3    152.41  30.0  1
- CPH  Var_03    HC7  CC7  C7   C6     59.90  30.0  2
- CPH  Var_04    HME  CME  O1'  C1'  -174.45  30.0  3
+ CPH  CONST_01  C8    C7   C6   C5      0.00   0.0  0
+ CPH  CONST_02  C4A   C10  C5A  C5    180.00   0.0  0
+ CPH  CONST_03  C8    C8A  C5A  C5      0.00   0.0  0
+ CPH  CONST_04  C9    C8A  C5A  C5    180.00   0.0  0
+ CPH  CONST_05  C10   C5A  C5   C6    180.00   0.0  0
+ CPH  CONST_06  C8A   C5A  C5   C6      0.00   0.0  0
+ CPH  CONST_07  C8A   C8   C7   C6      0.00   0.0  0
+ CPH  CONST_08  C5A   C5   C6   C7      0.00   0.0  0
+ CPH  CONST_09  C9    C8A  C8   C7    180.00   0.0  0
+ CPH  CONST_10  C5A   C8A  C8   C7      0.00   0.0  0
+ CPH  CONST_11  C9A   C9   C8A  C8    180.00   0.0  0
+ CPH  CONST_12  C10   C5A  C8A  C8    180.00   0.0  0
+ CPH  CONST_13  C10   C5A  C8A  C9      0.00   0.0  0
+ CPH  CONST_14  C10   C4A  C9A  C9      0.00   0.0  0
+ CPH  CONST_15  C8A   C5A  C10  C4A     0.00   0.0  0
+ CPH  CONST_16  C8A   C9   C9A  C4A     0.00   0.0  0
+ CPH  CONST_17  C9A   C4A  C10  C5A     0.00   0.0  0
+ CPH  CONST_18  C9A   C9   C8A  C5A     0.00   0.0  0
+ CPH  CONST_19  O9    C9   C9A  C1      0.00   0.0  0
+ CPH  CONST_20  CC7   C7   C6   C5    180.00   0.0  0
+ CPH  CONST_21  O8    C8   C7   C6    180.00   0.0  0
+ CPH  CONST_22  O6    C6   C7   C8    180.00   0.0  0
+ CPH  CONST_23  O9    C9   C8A  C8      0.00   0.0  0
+ CPH  CONST_24  C9    C8A  C8   O8      0.00   0.0  0
+ CPH  CONST_25  C5A   C8A  C8   O8    180.00   0.0  0
+ CPH  CONST_26  C5A   C8A  C9   O9    180.00   0.0  0
+ CPH  CONST_27  C4A   C9A  C9   O9    180.00   0.0  0
+ CPH  CONST_28  O6    C6   C5   C5A   180.00   0.0  0
+ CPH  CONST_29  CC7   C7   C8   C8A   180.00   0.0  0
+ CPH  CONST_30  H10   C10  C4A  C4      0.00   0.0  0
+ CPH  CONST_31  H5    C5   C6   C7    180.00   0.0  0
+ CPH  Var_01    C9    C9A  C1   C2    175.89  30.0  1
+ CPH  Var_02    C10   C4A  C4   C3    152.41  30.0  1
+ CPH  Var_03    HC7   CC7  C7   C6     59.90  30.0  2
+ CPH  Var_04    HME   CME  O1'  C1'  -174.45  30.0  3
+ CPH  Var_05    C4    C3   C2   C1    -52.41  30.0  1
+ CPH  Var_06    C4A   C4   C3   C2     52.55  30.0  1
+ CPH  Var_07    C9A   C1   C2   C3     31.68  30.0  1
+ CPH  Var_08    C1'   C3   C2   C1     75.16  30.0  1
+ CPH  Var_09    C3    C2   C1   O1   -153.35  30.0  1
+ CPH  Var_10    O2    C2   C3   C4     65.39  30.0  1
+ CPH  Var_11    C4A   C4   C3   C1'   -71.18  30.0  1
+ CPH  Var_12    O2    C2   C1   C9A   -86.54  30.0  1
+ CPH  Var_13    H3    C3   C2   C1   -169.93  30.0  1
+ CPH  Var_14    H4    C4   C3   C2    177.99  30.0  1
+ CPH  Var_15    H4A   C4   C3   C2    -67.25  30.0  1
+ CPH  Var_16    H2    C2   C3   C4   -173.00  30.0  1
+ CPH  Var_17    O2    C2   C1   O1     88.43  30.0  1
+ CPH  Var_18    C2'   C1'  C3   C2   -174.25  30.0  3
+ CPH  Var_19    O1'   C1'  C3   C2    -51.20  30.0  3
+ CPH  Var_20    C2'   C1'  C3   C4    -49.95  30.0  3
+ CPH  Var_21    O1'   C1'  C3   C4     73.10  30.0  3
+ CPH  Var_22    O2    C2   C3   C1'  -167.04  30.0  1
+ CPH  Var_23    HO2   O2   C2   C1    -69.56  30.0  3
+ CPH  Var_24    H1'   C1'  C3   C2     68.07  30.0  3
+ CPH  Var_25    HO6   O6   C6   C5    179.30  30.0  2
+ CPH  Var_26    HO8   O8   C8   C7   -178.75  30.0  2
+ CPH  Var_27    HO9   O9   C9   C8A  -177.22  30.0  2
+ CPH  Var_28    O2'   C2'  C1'  C3    103.87  30.0  1
+ CPH  Var_29    C3'   C2'  C1'  C3    -75.11  30.0  1
+ CPH  Var_30    CME   O1'  C1'  C3    157.81  30.0  3
+ CPH  Var_31    O3'   C3'  C2'  C1'   168.31  30.0  3
+ CPH  Var_32    C4'   C3'  C2'  C1'   -69.25  30.0  3
+ CPH  Var_33    O2'   C2'  C1'  O1'   -18.07  30.0  1
+ CPH  Var_34    C3'   C2'  C1'  O1'   162.95  30.0  1
+ CPH  Var_35    CME   O1'  C1'  C2'   -79.99  30.0  3
+ CPH  Var_36    O4'   C4'  C3'  C2'   -49.86  30.0  3
+ CPH  Var_37    C5'   C4'  C3'  C2'  -175.82  30.0  3
+ CPH  Var_38    O3'   C3'  C2'  O2'   -10.69  30.0  3
+ CPH  Var_39    C4'   C3'  C2'  O2'   111.75  30.0  3
+ CPH  Var_40    O4'   C4'  C3'  O3'    71.88  30.0  3
+ CPH  Var_41    C5'   C4'  C3'  O3'   -54.07  30.0  3
+ CPH  Var_42    H3'   C3'  C2'  C1'    47.97  30.0  3
+ CPH  Var_43    HO3'  O3'  C3'  C2'    11.46  30.0  3
+ CPH  Var_44    H4'   C4'  C3'  C2'    65.36  30.0  3
+ CPH  Var_45    HO4'  O4'  C4'  C3'   -67.88  30.0  3
+ CPH  Var_46    H5'   C5'  C4'  C3'    62.40  30.0  3
+ CPH  Var_47    H5'A  C5'  C4'  C3'  -177.43  30.0  3
+ CPH  Var_48    H5'B  C5'  C4'  C3'   -58.22  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KLC  KLC  "(3~{S},4~{R},8~{S},10~{S},12~{S},14~{S})-14-[(~{Z},4~{R})-4-(hydroxymethyl)hex-2-en-2-yl]-4,12-dimethoxy-9,9-dimethyl-3,8,10-tris(oxidanyl)-1-oxacyclotetradecan-2-one"  ligand  76  32  .  2023-10-03  2023-10-03
+ KLC  KLC  (3~{S},4~{R},8~{S},10~{S},12~{S},14~{S})-14-[(~{Z},4~{R})-4-(hydroxymethyl)hex-2-en-2-yl]-4,12-dimethoxy-9,9-dimethyl-3,8,10-tris(oxidanyl)-1-oxacyclotetradecan-2-one  ligand  76  32  .  2023-10-03  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KLC
@@ -359,55 +360,122 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KLC  Var_01  C9   C2   C3   C4    -53.53  30.0  1
- KLC  Var_02  C2   C3   C4   C5    -48.02  30.0  1
- KLC  Var_03  C15  O7   C6   C1   -170.36  30.0  1
- KLC  Var_04  O8   C6   O7   C15     6.79  30.0  1
- KLC  Var_05  H15  C2   C3   C4     69.42  30.0  1
- KLC  Var_06  H16  C2   C3   C4   -176.83  30.0  1
- KLC  Var_07  H11  C3   C4   C5     74.09  30.0  1
- KLC  Var_08  H12  C3   C4   C5   -171.97  30.0  1
- KLC  Var_09  H11  C3   C2   C9   -176.61  30.0  1
- KLC  Var_10  H12  C3   C2   C9     69.49  30.0  1
- KLC  Var_11  H1   C4   C3   C2     73.57  30.0  1
- KLC  Var_12  H2   C4   C3   C2   -171.25  30.0  1
- KLC  Var_13  H26  C24  C10  C11   -64.37  30.0  3
- KLC  Var_14  H27  C24  C10  C11    55.59  30.0  3
- KLC  Var_15  H28  C24  C10  C11   176.22  30.0  3
- KLC  Var_16  H23  C23  C10  C11    53.26  30.0  3
- KLC  Var_17  H24  C23  C10  C11   171.71  30.0  3
- KLC  Var_18  H25  C23  C10  C11   -67.72  30.0  3
- KLC  Var_19  H26  C24  C10  C9    174.04  30.0  3
- KLC  Var_20  H27  C24  C10  C9    -66.00  30.0  3
- KLC  Var_21  H28  C24  C10  C9     54.62  30.0  3
- KLC  Var_22  H23  C23  C10  C9    174.92  30.0  3
- KLC  Var_23  H24  C23  C10  C9    -66.63  30.0  3
- KLC  Var_24  H25  C23  C10  C9     53.94  30.0  3
- KLC  Var_25  C28  C26  C25  C15    -4.40   0.0  2
- KLC  Var_26  H29  C26  C25  C15   176.43   0.0  2
- KLC  Var_27  H20  C22  O19  C5   -172.01  30.0  3
- KLC  Var_28  H21  C22  O19  C5    -53.30  30.0  3
- KLC  Var_29  H22  C22  O19  C5     68.71  30.0  3
- KLC  Var_30  H17  C21  O20  C13  -176.27  30.0  3
- KLC  Var_31  H18  C21  O20  C13   -57.25  30.0  3
- KLC  Var_32  H19  C21  O20  C13    64.53  30.0  3
- KLC  Var_33  H30  C27  C25  C15  -169.80  30.0  3
- KLC  Var_34  H31  C27  C25  C15   -49.51  30.0  3
- KLC  Var_35  H32  C27  C25  C15    70.28  30.0  3
- KLC  Var_36  H26  C24  C10  C23    55.53  30.0  3
- KLC  Var_37  H27  C24  C10  C23   175.49  30.0  3
- KLC  Var_38  H28  C24  C10  C23   -63.88  30.0  3
- KLC  Var_39  H23  C23  C10  C24   -65.23  30.0  3
- KLC  Var_40  H24  C23  C10  C24    53.22  30.0  3
- KLC  Var_41  H25  C23  C10  C24   173.79  30.0  3
- KLC  Var_42  C28  C26  C25  C27   179.70   0.0  2
- KLC  Var_43  H29  C26  C25  C27     0.53   0.0  2
- KLC  Var_44  H30  C27  C25  C26     6.30  30.0  3
- KLC  Var_45  H31  C27  C25  C26   126.59  30.0  3
- KLC  Var_46  H32  C27  C25  C26  -113.62  30.0  3
- KLC  Var_47  H38  C32  C31  C28  -178.48  30.0  3
- KLC  Var_48  H39  C32  C31  C28   -58.79  30.0  3
- KLC  Var_49  H40  C32  C31  C28    61.13  30.0  3
+ KLC  Var_01   C9   C2   C3   C4    -53.53  30.0  1
+ KLC  Var_02   C2   C3   C4   C5    -48.02  30.0  1
+ KLC  Var_03   C15  O7   C6   C1   -170.36  30.0  1
+ KLC  Var_04   O8   C6   O7   C15     6.79  30.0  1
+ KLC  Var_05   H15  C2   C3   C4     69.42  30.0  1
+ KLC  Var_06   H16  C2   C3   C4   -176.83  30.0  1
+ KLC  Var_07   H11  C3   C4   C5     74.09  30.0  1
+ KLC  Var_08   H12  C3   C4   C5   -171.97  30.0  1
+ KLC  Var_09   H11  C3   C2   C9   -176.61  30.0  1
+ KLC  Var_10   H12  C3   C2   C9     69.49  30.0  1
+ KLC  Var_11   H1   C4   C3   C2     73.57  30.0  1
+ KLC  Var_12   H2   C4   C3   C2   -171.25  30.0  1
+ KLC  Var_13   H26  C24  C10  C11   -64.37  30.0  3
+ KLC  Var_14   H27  C24  C10  C11    55.59  30.0  3
+ KLC  Var_15   H28  C24  C10  C11   176.22  30.0  3
+ KLC  Var_16   H23  C23  C10  C11    53.26  30.0  3
+ KLC  Var_17   H24  C23  C10  C11   171.71  30.0  3
+ KLC  Var_18   H25  C23  C10  C11   -67.72  30.0  3
+ KLC  Var_19   H26  C24  C10  C9    174.04  30.0  3
+ KLC  Var_20   H27  C24  C10  C9    -66.00  30.0  3
+ KLC  Var_21   H28  C24  C10  C9     54.62  30.0  3
+ KLC  Var_22   H23  C23  C10  C9    174.92  30.0  3
+ KLC  Var_23   H24  C23  C10  C9    -66.63  30.0  3
+ KLC  Var_24   H25  C23  C10  C9     53.94  30.0  3
+ KLC  Var_25   C28  C26  C25  C15    -4.40   0.0  2
+ KLC  Var_26   H29  C26  C25  C15   176.43   0.0  2
+ KLC  Var_27   H20  C22  O19  C5   -172.01  30.0  3
+ KLC  Var_28   H21  C22  O19  C5    -53.30  30.0  3
+ KLC  Var_29   H22  C22  O19  C5     68.71  30.0  3
+ KLC  Var_30   H17  C21  O20  C13  -176.27  30.0  3
+ KLC  Var_31   H18  C21  O20  C13   -57.25  30.0  3
+ KLC  Var_32   H19  C21  O20  C13    64.53  30.0  3
+ KLC  Var_33   H30  C27  C25  C15  -169.80  30.0  3
+ KLC  Var_34   H31  C27  C25  C15   -49.51  30.0  3
+ KLC  Var_35   H32  C27  C25  C15    70.28  30.0  3
+ KLC  Var_36   H26  C24  C10  C23    55.53  30.0  3
+ KLC  Var_37   H27  C24  C10  C23   175.49  30.0  3
+ KLC  Var_38   H28  C24  C10  C23   -63.88  30.0  3
+ KLC  Var_39   H23  C23  C10  C24   -65.23  30.0  3
+ KLC  Var_40   H24  C23  C10  C24    53.22  30.0  3
+ KLC  Var_41   H25  C23  C10  C24   173.79  30.0  3
+ KLC  Var_42   C28  C26  C25  C27   179.70   0.0  2
+ KLC  Var_43   H29  C26  C25  C27     0.53   0.0  2
+ KLC  Var_44   H30  C27  C25  C26     6.30  30.0  3
+ KLC  Var_45   H31  C27  C25  C26   126.59  30.0  3
+ KLC  Var_46   H32  C27  C25  C26  -113.62  30.0  3
+ KLC  Var_47   H38  C32  C31  C28  -178.48  30.0  3
+ KLC  Var_48   H39  C32  C31  C28   -58.79  30.0  3
+ KLC  Var_49   H40  C32  C31  C28    61.13  30.0  3
+ KLC  Var_50   C6   C1   C5   C4    172.07  30.0  3
+ KLC  Var_51   C6   O7   C15  C14   168.22  30.0  3
+ KLC  Var_52   C11  C12  C13  C14  -178.10  30.0  3
+ KLC  Var_53   O7   C6   C1   C5    -46.04  30.0  3
+ KLC  Var_54   C2   C9   C10  C11   -52.04  30.0  3
+ KLC  Var_55   C12  C11  C10  C9    -54.02  30.0  3
+ KLC  Var_56   C3   C2   C9   C10  -176.83  30.0  3
+ KLC  Var_57   C13  C12  C11  C10   179.63  30.0  3
+ KLC  Var_58   C15  C14  C13  C12    88.21  30.0  3
+ KLC  Var_59   O7   C15  C14  C13   -48.29  30.0  3
+ KLC  Var_60   C1   C5   C4   C3    -54.17  30.0  3
+ KLC  Var_61   O18  C1   C5   C4    -61.49  30.0  3
+ KLC  Var_62   O8   C6   C1   C5    136.80  30.0  3
+ KLC  Var_63   O19  C5   C1   C6    -64.08  30.0  3
+ KLC  Var_64   C25  C15  O7   C6    -71.15  30.0  3
+ KLC  Var_65   O17  C9   C10  C11  -173.65  30.0  3
+ KLC  Var_66   O20  C13  C12  C11   -52.71  30.0  3
+ KLC  Var_67   O16  C11  C10  C9   -177.16  30.0  3
+ KLC  Var_68   C24  C10  C11  C12  -175.29  30.0  3
+ KLC  Var_69   C23  C10  C11  C12    66.05  30.0  3
+ KLC  Var_70   O16  C11  C12  C13   -58.42  30.0  3
+ KLC  Var_71   C25  C15  C14  C13  -170.04  30.0  3
+ KLC  Var_72   O19  C5   C4   C3   -173.74  30.0  3
+ KLC  Var_73   O17  C9   C2   C3    -52.73  30.0  3
+ KLC  Var_74   O20  C13  C14  C15   -35.56  30.0  3
+ KLC  Var_75   C24  C10  C9   C2     67.93  30.0  3
+ KLC  Var_76   C23  C10  C9   C2   -173.42  30.0  3
+ KLC  Var_77   O7   C6   C1   O18  -173.43  30.0  3
+ KLC  Var_78   H13  C1   C5   C4     56.63  30.0  3
+ KLC  Var_79   H8   C12  C13  C14    59.98  30.0  3
+ KLC  Var_80   H9   C12  C13  C14   -54.39  30.0  3
+ KLC  Var_81   H5   C5   C1   C6     52.18  30.0  3
+ KLC  Var_82   H14  C15  O7   C6     49.83  30.0  3
+ KLC  Var_83   H7   C9   C10  C11    67.68  30.0  3
+ KLC  Var_84   H10  C13  C12  C11    65.35  30.0  3
+ KLC  Var_85   H6   C11  C10  C9     65.90  30.0  3
+ KLC  Var_86   H3   C14  C13  C12   -36.75  30.0  3
+ KLC  Var_87   H4   C14  C13  C12  -151.34  30.0  3
+ KLC  Var_88   C22  O19  C5   C4    -74.13  30.0  3
+ KLC  Var_89   C26  C25  C15  C14   -93.04  30.0  3
+ KLC  Var_90   C27  C25  C15  C14    83.03  30.0  3
+ KLC  Var_91   C21  O20  C13  C14   -74.08  30.0  1
+ KLC  Var_92   C21  O20  C13  C12   160.38  30.0  1
+ KLC  Var_93   C22  O19  C5   C1    161.19  30.0  3
+ KLC  Var_94   O17  C9   C10  C23    64.97  30.0  3
+ KLC  Var_95   O16  C11  C10  C23   -57.09  30.0  3
+ KLC  Var_96   O17  C9   C10  C24   -53.68  30.0  3
+ KLC  Var_97   O16  C11  C10  C24    61.57  30.0  3
+ KLC  Var_98   O7   C15  C25  C26   147.63  30.0  1
+ KLC  Var_99   O7   C15  C25  C27   -36.30  30.0  1
+ KLC  Var_100  O8   C6   C1   O18     9.42  30.0  3
+ KLC  Var_101  O19  C5   C1   O18    62.36  30.0  3
+ KLC  Var_102  H43  O18  C1   C5    -55.35  30.0  3
+ KLC  Var_103  H42  O17  C9   C10   -69.78  30.0  3
+ KLC  Var_104  H41  O16  C11  C10  -149.69  30.0  3
+ KLC  Var_105  C29  C28  C26  C25  -105.61  30.0  3
+ KLC  Var_106  C31  C28  C26  C25   131.46  30.0  3
+ KLC  Var_107  O30  C29  C28  C26   179.23  30.0  2
+ KLC  Var_108  C32  C31  C28  C26   -64.45  30.0  3
+ KLC  Var_109  C32  C31  C28  C29   175.25  30.0  3
+ KLC  Var_110  O30  C29  C28  C31   -59.04  30.0  2
+ KLC  Var_111  H33  C28  C26  C25    12.27  30.0  3
+ KLC  Var_112  H34  C29  C28  C26    57.43  30.0  2
+ KLC  Var_113  H35  C29  C28  C26   -58.41  30.0  2
+ KLC  Var_114  H36  C31  C28  C26    57.95  30.0  3
+ KLC  Var_115  H37  C31  C28  C26   173.71  30.0  3
+ KLC  Var_116  H44  O30  C29  C28   176.71  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

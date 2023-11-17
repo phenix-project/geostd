@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RBP  RBP  (3R,4R)-4-(4-bromophenyl)-3-(naphthalen-2-ylmethoxy)piperidine  ligand  47  25  .  2022-03-23  2022-03-23
+ RBP  RBP  (3R,4R)-4-(4-bromophenyl)-3-(naphthalen-2-ylmethoxy)piperidine  ligand  47  25  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RBP
@@ -250,52 +251,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RBP  CONST_01  C7   C9   C10  C4     0.00   0.0  0
- RBP  CONST_02  C7   C6   C5   C4     0.00   0.0  0
- RBP  CONST_03  C6   C5   C4   C10    0.00   0.0  0
- RBP  CONST_04  C6   C7   C9   C10    0.00   0.0  0
- RBP  CONST_05  C5   C4   C10  C9     0.00   0.0  0
- RBP  CONST_06  C5   C6   C7   C9     0.00   0.0  0
- RBP  CONST_07  C19  C18  C17  C16    0.00   0.0  0
- RBP  CONST_08  C19  C23  C25  C16    0.00   0.0  0
- RBP  CONST_09  C24  C23  C25  C16  180.00   0.0  0
- RBP  CONST_10  C23  C25  C16  C17    0.00   0.0  0
- RBP  CONST_11  C20  C19  C18  C17  180.00   0.0  0
- RBP  CONST_12  C23  C19  C18  C17    0.00   0.0  0
- RBP  CONST_13  C25  C16  C17  C18    0.00   0.0  0
- RBP  CONST_14  C21  C20  C19  C18  180.00   0.0  0
- RBP  CONST_15  C24  C23  C19  C18  180.00   0.0  0
- RBP  CONST_16  C25  C23  C19  C18    0.00   0.0  0
- RBP  CONST_17  C22  C21  C20  C19    0.00   0.0  0
- RBP  CONST_18  C22  C24  C23  C19    0.00   0.0  0
- RBP  CONST_19  C24  C23  C19  C20    0.00   0.0  0
- RBP  CONST_20  C25  C23  C19  C20  180.00   0.0  0
- RBP  CONST_21  C24  C22  C21  C20    0.00   0.0  0
- RBP  CONST_22  C23  C19  C20  C21    0.00   0.0  0
- RBP  CONST_23  C23  C24  C22  C21    0.00   0.0  0
- RBP  CONST_24  C25  C23  C24  C22  180.00   0.0  0
- RBP  CONST_25  C9   C10  C4   C3   180.00   0.0  0
- RBP  CONST_26  C6   C5   C4   C3   180.00   0.0  0
- RBP  CONST_27  BR   C7   C9   C10  180.00   0.0  0
- RBP  CONST_28  C5   C6   C7   BR   180.00   0.0  0
- RBP  CONST_29  C18  C17  C16  C15  180.00   0.0  0
- RBP  CONST_30  C23  C25  C16  C15  180.00   0.0  0
- RBP  CONST_31  H10  C10  C4   C3     0.00   0.0  0
- RBP  CONST_32  H5   C5   C4   C3     0.00   0.0  0
- RBP  CONST_33  H9   C9   C10  C4   180.00   0.0  0
- RBP  CONST_34  H6   C6   C5   C4   180.00   0.0  0
- RBP  CONST_35  H18  C18  C17  C16  180.00   0.0  0
- RBP  CONST_36  H25  C25  C16  C17  180.00   0.0  0
- RBP  CONST_37  H20  C20  C19  C18    0.00   0.0  0
- RBP  CONST_38  H17  C17  C18  C19  180.00   0.0  0
- RBP  CONST_39  H21  C21  C20  C19  180.00   0.0  0
- RBP  CONST_40  H24  C24  C23  C19  180.00   0.0  0
- RBP  CONST_41  H22  C22  C21  C20  180.00   0.0  0
- RBP  Var_01    C3   C11  C12  N13  -57.22  30.0  1
- RBP  Var_02    C2   C14  N13  C12  -62.48  30.0  1
- RBP  Var_03    C14  N13  C12  C11   61.98  30.0  1
- RBP  Var_04    C16  C15  O1   C2   156.35  30.0  3
- RBP  Var_05    C17  C16  C15  O1    77.45  30.0  2
+ RBP  CONST_01  C7   C9   C10  C4      0.00   0.0  0
+ RBP  CONST_02  C7   C6   C5   C4      0.00   0.0  0
+ RBP  CONST_03  C6   C5   C4   C10     0.00   0.0  0
+ RBP  CONST_04  C6   C7   C9   C10     0.00   0.0  0
+ RBP  CONST_05  C5   C4   C10  C9      0.00   0.0  0
+ RBP  CONST_06  C5   C6   C7   C9      0.00   0.0  0
+ RBP  CONST_07  C19  C18  C17  C16     0.00   0.0  0
+ RBP  CONST_08  C19  C23  C25  C16     0.00   0.0  0
+ RBP  CONST_09  C24  C23  C25  C16   180.00   0.0  0
+ RBP  CONST_10  C23  C25  C16  C17     0.00   0.0  0
+ RBP  CONST_11  C20  C19  C18  C17   180.00   0.0  0
+ RBP  CONST_12  C23  C19  C18  C17     0.00   0.0  0
+ RBP  CONST_13  C25  C16  C17  C18     0.00   0.0  0
+ RBP  CONST_14  C21  C20  C19  C18   180.00   0.0  0
+ RBP  CONST_15  C24  C23  C19  C18   180.00   0.0  0
+ RBP  CONST_16  C25  C23  C19  C18     0.00   0.0  0
+ RBP  CONST_17  C22  C21  C20  C19     0.00   0.0  0
+ RBP  CONST_18  C22  C24  C23  C19     0.00   0.0  0
+ RBP  CONST_19  C24  C23  C19  C20     0.00   0.0  0
+ RBP  CONST_20  C25  C23  C19  C20   180.00   0.0  0
+ RBP  CONST_21  C24  C22  C21  C20     0.00   0.0  0
+ RBP  CONST_22  C23  C19  C20  C21     0.00   0.0  0
+ RBP  CONST_23  C23  C24  C22  C21     0.00   0.0  0
+ RBP  CONST_24  C25  C23  C24  C22   180.00   0.0  0
+ RBP  CONST_25  C9   C10  C4   C3    180.00   0.0  0
+ RBP  CONST_26  C6   C5   C4   C3    180.00   0.0  0
+ RBP  CONST_27  BR   C7   C9   C10   180.00   0.0  0
+ RBP  CONST_28  C5   C6   C7   BR    180.00   0.0  0
+ RBP  CONST_29  C18  C17  C16  C15   180.00   0.0  0
+ RBP  CONST_30  C23  C25  C16  C15   180.00   0.0  0
+ RBP  CONST_31  H10  C10  C4   C3      0.00   0.0  0
+ RBP  CONST_32  H5   C5   C4   C3      0.00   0.0  0
+ RBP  CONST_33  H9   C9   C10  C4    180.00   0.0  0
+ RBP  CONST_34  H6   C6   C5   C4    180.00   0.0  0
+ RBP  CONST_35  H18  C18  C17  C16   180.00   0.0  0
+ RBP  CONST_36  H25  C25  C16  C17   180.00   0.0  0
+ RBP  CONST_37  H20  C20  C19  C18     0.00   0.0  0
+ RBP  CONST_38  H17  C17  C18  C19   180.00   0.0  0
+ RBP  CONST_39  H21  C21  C20  C19   180.00   0.0  0
+ RBP  CONST_40  H24  C24  C23  C19   180.00   0.0  0
+ RBP  CONST_41  H22  C22  C21  C20   180.00   0.0  0
+ RBP  Var_01    C3   C11  C12  N13   -57.22  30.0  1
+ RBP  Var_02    C2   C14  N13  C12   -62.48  30.0  1
+ RBP  Var_03    C14  N13  C12  C11    61.98  30.0  1
+ RBP  Var_04    C16  C15  O1   C2    156.35  30.0  3
+ RBP  Var_05    C17  C16  C15  O1     77.45  30.0  2
+ RBP  Var_06    C3   C2   C14  N13    58.44  30.0  1
+ RBP  Var_07    C4   C3   C11  C12   179.43  30.0  1
+ RBP  Var_08    C2   C3   C11  C12    54.32  30.0  1
+ RBP  Var_09    C10  C4   C3   C11   127.35  30.0  2
+ RBP  Var_10    C5   C4   C3   C11   -54.22  30.0  2
+ RBP  Var_11    C14  C2   C3   C11   -54.97  30.0  1
+ RBP  Var_12    C14  C2   C3   C4    178.54  30.0  1
+ RBP  Var_13    C2   C3   C4   C10  -108.59  30.0  2
+ RBP  Var_14    C2   C3   C4   C5     69.84  30.0  2
+ RBP  Var_15    O1   C2   C14  N13   179.05  30.0  1
+ RBP  Var_16    O1   C2   C3   C11  -176.01  30.0  1
+ RBP  Var_17    O1   C2   C3   C4     57.50  30.0  1
+ RBP  Var_18    H2   C2   C14  N13   -59.97  30.0  1
+ RBP  Var_19    H3   C3   C11  C12   -61.38  30.0  1
+ RBP  Var_20    C15  O1   C2   C3   -116.73  30.0  3
+ RBP  Var_21    C14  C2   O1   C15   122.16  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PSD  PSD  5'-O-[(R)-hydroxy(L-prolylamino)phosphoryl]adenosine  ligand  52  30  .  2022-11-17  2022-11-17
+ PSD  PSD  5'-O-[(R)-hydroxy(L-prolylamino)phosphoryl]adenosine  ligand  52  30  .  2022-11-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PSD
@@ -270,41 +271,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PSD  CONST_01  C2    N3   C4   N9   180.00   0.0  0
- PSD  CONST_02  C6    C5   C4   N9   180.00   0.0  0
- PSD  CONST_03  N7    C5   C4   N9     0.00   0.0  0
- PSD  CONST_04  C5    N7   C8   N9     0.00   0.0  0
- PSD  CONST_05  N7    C8   N9   C4     0.00   0.0  0
- PSD  CONST_06  N1    C2   N3   C4     0.00   0.0  0
- PSD  CONST_07  N1    C6   C5   C4     0.00   0.0  0
- PSD  CONST_08  C8    N7   C5   C4     0.00   0.0  0
- PSD  CONST_09  C8    N9   C4   N3   180.00   0.0  0
- PSD  CONST_10  C6    C5   C4   N3     0.00   0.0  0
- PSD  CONST_11  N7    C5   C4   N3   180.00   0.0  0
- PSD  CONST_12  C6    N1   C2   N3     0.00   0.0  0
- PSD  CONST_13  C5    C4   N3   C2     0.00   0.0  0
- PSD  CONST_14  C5    C6   N1   C2     0.00   0.0  0
- PSD  CONST_15  N7    C5   C6   N1   180.00   0.0  0
- PSD  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- PSD  CONST_17  C8    N9   C4   C5     0.00   0.0  0
- PSD  CONST_18  N3    C4   N9   C1'    0.00   0.0  0
- PSD  CONST_19  C5    C4   N9   C1'  180.00   0.0  0
- PSD  CONST_20  N7    C8   N9   C1'  180.00   0.0  0
- PSD  CONST_21  N6    C6   C5   C4   180.00   0.0  0
- PSD  CONST_22  N6    C6   N1   C2   180.00   0.0  0
- PSD  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- PSD  CONST_24  HC8   C8   N9   C1'    0.00   0.0  0
- PSD  CONST_25  HC2   C2   N3   C4   180.00   0.0  0
- PSD  CONST_26  HN61  N6   C6   N1     0.00   0.0  0
- PSD  CONST_27  HN62  N6   C6   N1   180.00   0.0  0
- PSD  CONST_28  P     N10  C    CA   180.00   0.0  0
- PSD  CONST_29  HN01  N10  C    CA     0.00   0.0  0
- PSD  CONST_30  P     N10  C    O      0.00   0.0  0
- PSD  Var_01    N     CD   CG   CB    13.11  30.0  1
- PSD  Var_02    CA    N    CD   CG    13.64  30.0  1
- PSD  Var_03    CA    CB   CG   CD   -32.96  30.0  1
- PSD  Var_04    C4'   C5'  O5'  P    171.96  30.0  3
- PSD  Var_05    O1P   P    N10  C     54.26  30.0  3
+ PSD  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ PSD  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ PSD  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ PSD  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ PSD  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ PSD  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ PSD  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ PSD  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ PSD  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ PSD  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ PSD  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ PSD  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ PSD  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ PSD  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ PSD  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ PSD  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ PSD  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ PSD  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
+ PSD  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ PSD  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ PSD  CONST_21  N6    C6   C5   C4    180.00   0.0  0
+ PSD  CONST_22  N6    C6   N1   C2    180.00   0.0  0
+ PSD  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ PSD  CONST_24  HC8   C8   N9   C1'     0.00   0.0  0
+ PSD  CONST_25  HC2   C2   N3   C4    180.00   0.0  0
+ PSD  CONST_26  HN61  N6   C6   N1      0.00   0.0  0
+ PSD  CONST_27  HN62  N6   C6   N1    180.00   0.0  0
+ PSD  CONST_28  P     N10  C    CA    180.00   0.0  0
+ PSD  CONST_29  HN01  N10  C    CA      0.00   0.0  0
+ PSD  CONST_30  P     N10  C    O       0.00   0.0  0
+ PSD  Var_01    N     CD   CG   CB     13.11  30.0  1
+ PSD  Var_02    CA    N    CD   CG     13.64  30.0  1
+ PSD  Var_03    CA    CB   CG   CD    -32.96  30.0  1
+ PSD  Var_04    C4'   C5'  O5'  P     171.96  30.0  3
+ PSD  Var_05    O1P   P    N10  C      54.26  30.0  3
+ PSD  Var_06    CD    N    CA   CB    -34.56  30.0  1
+ PSD  Var_07    N     CA   CB   CG     41.35  30.0  1
+ PSD  Var_08    N9    C1'  O4'  C4'  -150.13  30.0  1
+ PSD  Var_09    C2'   C1'  O4'  C4'   -27.07  30.0  1
+ PSD  Var_10    C1'   C2'  C3'  C4'   -35.03  30.0  1
+ PSD  Var_11    C2'   C3'  C4'  O4'    20.75  30.0  1
+ PSD  Var_12    C4    N9   C1'  O4'  -127.55  30.0  2
+ PSD  Var_13    C8    N9   C1'  O4'    50.95  30.0  2
+ PSD  Var_14    C3'   C2'  C1'  O4'    38.80  30.0  1
+ PSD  Var_15    C3'   C4'  O4'  C1'     3.84  30.0  1
+ PSD  Var_16    C3'   C2'  C1'  N9    157.93  30.0  1
+ PSD  Var_17    C2'   C1'  N9   C4    115.50  30.0  1
+ PSD  Var_18    C2'   C1'  N9   C8    -66.01  30.0  1
+ PSD  Var_19    C     CA   CB   CG    -79.50  30.0  1
+ PSD  Var_20    CD    N    CA   C      83.96  30.0  1
+ PSD  Var_21    C1'   O4'  C4'  C5'   129.82  30.0  1
+ PSD  Var_22    C2'   C3'  C4'  C5'  -102.26  30.0  1
+ PSD  Var_23    O2'   C2'  C3'  C4'  -156.19  30.0  1
+ PSD  Var_24    O3'   C3'  C4'  O4'   -96.54  30.0  1
+ PSD  Var_25    O2'   C2'  C1'  O4'   158.55  30.0  1
+ PSD  Var_26    O3'   C3'  C2'  C1'    79.62  30.0  1
+ PSD  Var_27    O2'   C2'  C1'  N9    -82.31  30.0  1
+ PSD  Var_28    HN    N    CA   CB   -159.89  30.0  1
+ PSD  Var_29    HCA   CA   CB   CG    160.82  30.0  1
+ PSD  Var_30    HCB1  CB   CA   N     164.15  30.0  1
+ PSD  Var_31    HCB2  CB   CA   N     -76.10  30.0  1
+ PSD  Var_32    HC'1  C1'  O4'  C4'    92.34  30.0  1
+ PSD  Var_33    HC'2  C2'  C3'  C4'    79.65  30.0  1
+ PSD  Var_34    HC'3  C3'  C4'  O4'   140.56  30.0  1
+ PSD  Var_35    HC'4  C4'  O4'  C1'  -114.16  30.0  1
+ PSD  Var_36    O     C    CA   CB    110.40  30.0  2
+ PSD  Var_37    N10   C    CA   CB    -68.44  30.0  2
+ PSD  Var_38    N     CA   C    O      -3.61  30.0  3
+ PSD  Var_39    N10   C    CA   N     177.54  30.0  2
+ PSD  Var_40    O4'   C4'  C5'  O5'   -69.82  30.0  3
+ PSD  Var_41    C3'   C4'  C5'  O5'    51.23  30.0  3
+ PSD  Var_42    O3'   C3'  C4'  C5'   140.44  30.0  1
+ PSD  Var_43    O3'   C3'  C2'  O2'   -41.54  30.0  1
+ PSD  Var_44    HO'3  O3'  C3'  C4'   173.21  30.0  3
+ PSD  Var_45    H5'1  C5'  C4'  O4'    52.26  30.0  2
+ PSD  Var_46    H5'2  C5'  C4'  O4'   169.51  30.0  2
+ PSD  Var_47    HO'2  O2'  C2'  C1'    90.45  30.0  3
+ PSD  Var_48    C5'   O5'  P    N10   -60.38  30.0  3
+ PSD  Var_49    C5'   O5'  P    O1P   171.77  30.0  3
+ PSD  Var_50    C5'   O5'  P    O2P    42.26  30.0  3
+ PSD  Var_51    HOP2  O2P  P    N10  -169.33  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

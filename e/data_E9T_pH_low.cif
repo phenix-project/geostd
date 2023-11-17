@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- E9T  E9T  '6-[3-(1-adamantyl)-4-oxidanyl-phenyl]naphthalene-2-carboxylic acid'  ligand  56  30  .  2021-08-09  2021-08-09  
+ E9T  E9T  '6-[3-(1-adamantyl)-4-oxidanyl-phenyl]naphthalene-2-carboxylic acid'  ligand  56  30  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_E9T
@@ -295,56 +296,92 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- E9T  CONST_01  C9   C10  C5   C4   180.00   0.0  0
- E9T  CONST_02  C7   C6   C5   C4   180.00   0.0  0
- E9T  CONST_03  C3   C6   C5   C4     0.00   0.0  0
- E9T  CONST_04  C3   C2   C1   C4     0.00   0.0  0
- E9T  CONST_05  C29  C2   C1   C4   180.00   0.0  0
- E9T  CONST_06  C8   C9   C10  C5     0.00   0.0  0
- E9T  CONST_07  C8   C7   C6   C5     0.00   0.0  0
- E9T  CONST_08  C2   C3   C6   C5     0.00   0.0  0
- E9T  CONST_09  C2   C1   C4   C5     0.00   0.0  0
- E9T  CONST_10  C9   C8   C7   C6     0.00   0.0  0
- E9T  CONST_11  C9   C10  C5   C6     0.00   0.0  0
- E9T  CONST_12  C1   C4   C5   C6     0.00   0.0  0
- E9T  CONST_13  C1   C2   C3   C6     0.00   0.0  0
- E9T  CONST_14  C29  C2   C3   C6   180.00   0.0  0
- E9T  CONST_15  C10  C9   C8   C7     0.00   0.0  0
- E9T  CONST_16  C10  C5   C6   C7     0.00   0.0  0
- E9T  CONST_17  C2   C3   C6   C7   180.00   0.0  0
- E9T  CONST_18  C3   C6   C7   C8   180.00   0.0  0
- E9T  CONST_19  C3   C6   C5   C10  180.00   0.0  0
- E9T  CONST_20  C1   C4   C5   C10  180.00   0.0  0
- E9T  CONST_23  C27  C28  C29  C2   180.00   0.0  0
- E9T  CONST_24  C25  C30  C29  C2   180.00   0.0  0
- E9T  CONST_27  C28  C29  C30  C25    0.00   0.0  0
- E9T  CONST_28  C28  C27  C26  C25    0.00   0.0  0
- E9T  CONST_29  C29  C28  C27  C26    0.00   0.0  0
- E9T  CONST_30  C29  C30  C25  C26    0.00   0.0  0
- E9T  CONST_31  C30  C29  C28  C27    0.00   0.0  0
- E9T  CONST_32  C30  C25  C26  C27    0.00   0.0  0
- E9T  CONST_33  C29  C30  C25  C18  180.00   0.0  0
- E9T  CONST_34  C27  C26  C25  C18  180.00   0.0  0
- E9T  CONST_35  C11  C9   C10  C5   180.00   0.0  0
- E9T  CONST_36  C11  C9   C8   C7   180.00   0.0  0
- E9T  CONST_37  C28  C27  C26  O14  180.00   0.0  0
- E9T  CONST_38  C30  C25  C26  O14  180.00   0.0  0
- E9T  CONST_39  C18  C25  C26  O14    0.00   0.0  0
- E9T  CONST_40  H4   C10  C5   C4     0.00   0.0  0
- E9T  CONST_41  H2   C7   C6   C5   180.00   0.0  0
- E9T  CONST_42  H8   C3   C6   C5   180.00   0.0  0
- E9T  CONST_43  H7   C1   C4   C5   180.00   0.0  0
- E9T  CONST_44  H3   C8   C7   C6   180.00   0.0  0
- E9T  CONST_45  H1   C4   C5   C6   180.00   0.0  0
- E9T  CONST_46  H25  C28  C29  C2     0.00   0.0  0
- E9T  CONST_47  H26  C30  C29  C2     0.00   0.0  0
- E9T  CONST_48  H24  C27  C26  C25  180.00   0.0  0
- E9T  CONST_49  H9   O13  C11  C9   180.00   0.0  0
- E9T  Var_01    C25  C18  C17  C16  178.89  30.0  3
- E9T  Var_02    C30  C25  C18  C17  120.23  30.0  3
- E9T  Var_03    C20  C19  C18  C17   58.42  30.0  3
- E9T  Var_04    C22  C23  C18  C17  -56.94  30.0  3
- E9T  Var_05    O12  C11  C9   C8   178.97  30.0  2
+ E9T  CONST_01  C9   C10  C5   C4    180.00   0.0  0
+ E9T  CONST_02  C7   C6   C5   C4    180.00   0.0  0
+ E9T  CONST_03  C3   C6   C5   C4      0.00   0.0  0
+ E9T  CONST_04  C3   C2   C1   C4      0.00   0.0  0
+ E9T  CONST_05  C29  C2   C1   C4    180.00   0.0  0
+ E9T  CONST_06  C8   C9   C10  C5      0.00   0.0  0
+ E9T  CONST_07  C8   C7   C6   C5      0.00   0.0  0
+ E9T  CONST_08  C2   C3   C6   C5      0.00   0.0  0
+ E9T  CONST_09  C2   C1   C4   C5      0.00   0.0  0
+ E9T  CONST_10  C9   C8   C7   C6      0.00   0.0  0
+ E9T  CONST_11  C9   C10  C5   C6      0.00   0.0  0
+ E9T  CONST_12  C1   C4   C5   C6      0.00   0.0  0
+ E9T  CONST_13  C1   C2   C3   C6      0.00   0.0  0
+ E9T  CONST_14  C29  C2   C3   C6    180.00   0.0  0
+ E9T  CONST_15  C10  C9   C8   C7      0.00   0.0  0
+ E9T  CONST_16  C10  C5   C6   C7      0.00   0.0  0
+ E9T  CONST_17  C2   C3   C6   C7    180.00   0.0  0
+ E9T  CONST_18  C3   C6   C7   C8    180.00   0.0  0
+ E9T  CONST_19  C3   C6   C5   C10   180.00   0.0  0
+ E9T  CONST_20  C1   C4   C5   C10   180.00   0.0  0
+ E9T  CONST_21  C27  C28  C29  C2    180.00   0.0  0
+ E9T  CONST_22  C25  C30  C29  C2    180.00   0.0  0
+ E9T  CONST_23  C28  C29  C30  C25     0.00   0.0  0
+ E9T  CONST_24  C28  C27  C26  C25     0.00   0.0  0
+ E9T  CONST_25  C29  C28  C27  C26     0.00   0.0  0
+ E9T  CONST_26  C29  C30  C25  C26     0.00   0.0  0
+ E9T  CONST_27  C30  C29  C28  C27     0.00   0.0  0
+ E9T  CONST_28  C30  C25  C26  C27     0.00   0.0  0
+ E9T  CONST_29  C29  C30  C25  C18   180.00   0.0  0
+ E9T  CONST_30  C27  C26  C25  C18   180.00   0.0  0
+ E9T  CONST_31  C11  C9   C10  C5    180.00   0.0  0
+ E9T  CONST_32  C11  C9   C8   C7    180.00   0.0  0
+ E9T  CONST_33  C28  C27  C26  O14   180.00   0.0  0
+ E9T  CONST_34  C30  C25  C26  O14   180.00   0.0  0
+ E9T  CONST_35  C18  C25  C26  O14     0.00   0.0  0
+ E9T  CONST_36  H4   C10  C5   C4      0.00   0.0  0
+ E9T  CONST_37  H2   C7   C6   C5    180.00   0.0  0
+ E9T  CONST_38  H8   C3   C6   C5    180.00   0.0  0
+ E9T  CONST_39  H7   C1   C4   C5    180.00   0.0  0
+ E9T  CONST_40  H3   C8   C7   C6    180.00   0.0  0
+ E9T  CONST_41  H1   C4   C5   C6    180.00   0.0  0
+ E9T  CONST_42  H25  C28  C29  C2      0.00   0.0  0
+ E9T  CONST_43  H26  C30  C29  C2      0.00   0.0  0
+ E9T  CONST_44  H24  C27  C26  C25   180.00   0.0  0
+ E9T  CONST_45  H9   O13  C11  C9    180.00   0.0  0
+ E9T  Var_01    C25  C18  C17  C16   178.89  30.0  3
+ E9T  Var_02    C30  C25  C18  C17   120.23  30.0  3
+ E9T  Var_03    C20  C19  C18  C17    58.42  30.0  3
+ E9T  Var_04    C22  C23  C18  C17   -56.94  30.0  3
+ E9T  Var_05    O12  C11  C9   C8    178.97  30.0  2
+ E9T  Var_06    C18  C17  C16  C15    61.30  30.0  1
+ E9T  Var_07    C22  C21  C16  C15   -59.97  30.0  3
+ E9T  Var_08    C18  C19  C20  C15   -59.95  30.0  1
+ E9T  Var_09    C22  C24  C20  C15    60.92  30.0  3
+ E9T  Var_10    C28  C29  C2   C1    143.59  30.0  2
+ E9T  Var_11    C30  C29  C2   C1    -37.36  30.0  2
+ E9T  Var_12    C28  C29  C2   C3    -36.93  30.0  2
+ E9T  Var_13    C30  C29  C2   C3    142.12  30.0  2
+ E9T  Var_14    C19  C20  C15  C16    59.23  30.0  1
+ E9T  Var_15    C24  C20  C15  C16   -61.08  30.0  1
+ E9T  Var_16    C23  C22  C21  C16   -60.44  30.0  3
+ E9T  Var_17    C24  C22  C21  C16    59.90  30.0  3
+ E9T  Var_18    C20  C15  C16  C17   -60.10  30.0  1
+ E9T  Var_19    C22  C21  C16  C17    60.36  30.0  3
+ E9T  Var_20    C22  C24  C20  C19   -59.57  30.0  3
+ E9T  Var_21    C21  C16  C15  C20    60.29  30.0  1
+ E9T  Var_22    C23  C22  C24  C20    60.12  30.0  3
+ E9T  Var_23    C21  C22  C24  C20   -60.07  30.0  3
+ E9T  Var_24    C18  C17  C16  C21   -58.85  30.0  1
+ E9T  Var_25    C18  C23  C22  C21    59.20  30.0  3
+ E9T  Var_26    C18  C19  C20  C24    60.48  30.0  1
+ E9T  Var_27    C18  C23  C22  C24   -60.97  30.0  3
+ E9T  Var_28    H12  C17  C16  C15  -176.25  30.0  1
+ E9T  Var_29    H13  C17  C16  C15   -59.43  30.0  1
+ E9T  Var_30    H17  C21  C16  C15    61.10  30.0  3
+ E9T  Var_31    H18  C21  C16  C15   178.56  30.0  3
+ E9T  Var_32    H14  C19  C20  C15   178.37  30.0  1
+ E9T  Var_33    H15  C19  C20  C15    62.16  30.0  1
+ E9T  Var_34    H22  C24  C20  C15  -178.17  30.0  3
+ E9T  Var_35    H23  C24  C20  C15   -60.58  30.0  3
+ E9T  Var_36    H16  C20  C15  C16   178.30  30.0  1
+ E9T  Var_37    H19  C22  C21  C16  -179.63  30.0  3
+ E9T  Var_38    H5   C15  C16  C17    60.94  30.0  1
+ E9T  Var_39    H6   C15  C16  C17   178.70  30.0  1
+ E9T  Var_40    H11  C16  C15  C20  -179.51  30.0  1
+ E9T  Var_41    H10  O14  C26  C25  -178.36  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

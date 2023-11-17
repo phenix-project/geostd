@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 6XX  6XX  8-[[(3~{R},4~{R},5~{S})-3-[[4,4-bis(fluoranyl)cyclohexyl]methoxy]-5-methoxy-piperidin-4-yl]amino]-3-methyl-5-(5-methylpyridin-3-yl)-1~{H}-1,7-naphthyridin-2-one  ligand  73  38  .  2022-07-23  2022-07-26
+ 6XX  6XX  8-[[(3~{R},4~{R},5~{S})-3-[[4,4-bis(fluoranyl)cyclohexyl]methoxy]-5-methoxy-piperidin-4-yl]amino]-3-methyl-5-(5-methylpyridin-3-yl)-1~{H}-1,7-naphthyridin-2-one  ligand  73  38  .  2022-07-23  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_6XX
@@ -357,47 +358,94 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 6XX  CONST_01  C47  C45  N44  C43    0.00   0.0  0
- 6XX  CONST_02  C47  C61  C73  C43    0.00   0.0  0
- 6XX  CONST_03  C61  C73  C43  N44    0.00   0.0  0
- 6XX  CONST_04  C61  C47  C45  N44    0.00   0.0  0
- 6XX  CONST_05  C48  C47  C45  N44  180.00   0.0  0
- 6XX  CONST_06  C73  C43  N44  C45    0.00   0.0  0
- 6XX  CONST_07  C73  C61  C47  C45    0.00   0.0  0
- 6XX  CONST_10  C54  C59  C48  C47  180.00   0.0  0
- 6XX  CONST_11  N51  C49  C48  C47  180.00   0.0  0
- 6XX  CONST_12  C73  C61  C47  C48  180.00   0.0  0
- 6XX  CONST_13  C52  C54  C59  C48    0.00   0.0  0
- 6XX  CONST_14  C52  N51  C49  C48    0.00   0.0  0
- 6XX  CONST_16  C54  C59  C48  C49    0.00   0.0  0
- 6XX  CONST_17  C54  C52  N51  C49    0.00   0.0  0
- 6XX  CONST_18  C59  C48  C49  N51    0.00   0.0  0
- 6XX  CONST_19  C59  C54  C52  N51    0.00   0.0  0
- 6XX  CONST_21  C62  C61  C47  C48    0.00   0.0  0
- 6XX  CONST_22  C73  N71  C69  C64    0.00   0.0  0
- 6XX  CONST_23  C45  N44  C43  N41  180.00   0.0  0
- 6XX  CONST_24  N71  C73  C43  N41    0.00   0.0  0
- 6XX  CONST_25  C61  C73  C43  N41  180.00   0.0  0
- 6XX  CONST_26  C55  C54  C59  C48  180.00   0.0  0
- 6XX  CONST_27  C55  C54  C52  N51  180.00   0.0  0
- 6XX  CONST_28  N44  C43  N41  C39    0.00   0.0  0
- 6XX  CONST_29  C73  C43  N41  C39  180.00   0.0  0
- 6XX  CONST_30  C73  N71  C69  O70  180.00   0.0  0
- 6XX  CONST_31  H25  C45  N44  C43  180.00   0.0  0
- 6XX  CONST_32  H31  C59  C48  C47    0.00   0.0  0
- 6XX  CONST_33  H26  C49  C48  C47    0.00   0.0  0
- 6XX  CONST_34  H27  C52  N51  C49  180.00   0.0  0
- 6XX  CONST_35  H36  N71  C69  C64  180.00   0.0  0
- 6XX  Var_01    C06  C08  N11  C13  -54.50  30.0  1
- 6XX  Var_02    C30  C33  C36  C22   54.56  30.0  1
- 6XX  Var_03    C30  C27  C24  C22  -53.93  30.0  1
- 6XX  Var_04    C33  C30  C27  C24   53.57  30.0  1
- 6XX  Var_05    C16  C13  N11  C08   54.64  30.0  1
- 6XX  Var_06    C36  C33  C30  C27  -54.02  30.0  1
- 6XX  Var_07    H28  C55  C54  C52  112.92  30.0  2
- 6XX  Var_08    H33  C65  C64  C62  123.91  30.0  3
- 6XX  Var_09    H6   C01  O05  C06  173.62  30.0  3
- 6XX  Var_10    H15  C19  O18  C16   51.08  30.0  3
+ 6XX  CONST_01  C47  C45  N44  C43     0.00   0.0  0
+ 6XX  CONST_02  C47  C61  C73  C43     0.00   0.0  0
+ 6XX  CONST_03  C61  C73  C43  N44     0.00   0.0  0
+ 6XX  CONST_04  C61  C47  C45  N44     0.00   0.0  0
+ 6XX  CONST_05  C48  C47  C45  N44   180.00   0.0  0
+ 6XX  CONST_06  C73  C43  N44  C45     0.00   0.0  0
+ 6XX  CONST_07  C73  C61  C47  C45     0.00   0.0  0
+ 6XX  CONST_08  C54  C59  C48  C47   180.00   0.0  0
+ 6XX  CONST_09  N51  C49  C48  C47   180.00   0.0  0
+ 6XX  CONST_10  C73  C61  C47  C48   180.00   0.0  0
+ 6XX  CONST_11  C52  C54  C59  C48     0.00   0.0  0
+ 6XX  CONST_12  C52  N51  C49  C48     0.00   0.0  0
+ 6XX  CONST_13  C54  C59  C48  C49     0.00   0.0  0
+ 6XX  CONST_14  C54  C52  N51  C49     0.00   0.0  0
+ 6XX  CONST_15  C59  C48  C49  N51     0.00   0.0  0
+ 6XX  CONST_16  C59  C54  C52  N51     0.00   0.0  0
+ 6XX  CONST_17  C62  C61  C47  C48     0.00   0.0  0
+ 6XX  CONST_18  C73  N71  C69  C64     0.00   0.0  0
+ 6XX  CONST_19  C45  N44  C43  N41   180.00   0.0  0
+ 6XX  CONST_20  N71  C73  C43  N41     0.00   0.0  0
+ 6XX  CONST_21  C61  C73  C43  N41   180.00   0.0  0
+ 6XX  CONST_22  C55  C54  C59  C48   180.00   0.0  0
+ 6XX  CONST_23  C55  C54  C52  N51   180.00   0.0  0
+ 6XX  CONST_24  N44  C43  N41  C39     0.00   0.0  0
+ 6XX  CONST_25  C73  C43  N41  C39   180.00   0.0  0
+ 6XX  CONST_26  C73  N71  C69  O70   180.00   0.0  0
+ 6XX  CONST_27  H25  C45  N44  C43   180.00   0.0  0
+ 6XX  CONST_28  H31  C59  C48  C47     0.00   0.0  0
+ 6XX  CONST_29  H26  C49  C48  C47     0.00   0.0  0
+ 6XX  CONST_30  H27  C52  N51  C49   180.00   0.0  0
+ 6XX  CONST_31  H36  N71  C69  C64   180.00   0.0  0
+ 6XX  Var_01    C06  C08  N11  C13   -54.50  30.0  1
+ 6XX  Var_02    C30  C33  C36  C22    54.56  30.0  1
+ 6XX  Var_03    C30  C27  C24  C22   -53.93  30.0  1
+ 6XX  Var_04    C33  C30  C27  C24    53.57  30.0  1
+ 6XX  Var_05    C16  C13  N11  C08    54.64  30.0  1
+ 6XX  Var_06    C36  C33  C30  C27   -54.02  30.0  1
+ 6XX  Var_07    H28  C55  C54  C52   112.92  30.0  2
+ 6XX  Var_08    H33  C65  C64  C62   123.91  30.0  3
+ 6XX  Var_09    H6   C01  O05  C06   173.62  30.0  3
+ 6XX  Var_10    H15  C19  O18  C16    51.08  30.0  3
+ 6XX  Var_11    C06  C39  C16  C13    54.50  30.0  1
+ 6XX  Var_12    C33  C36  C22  C24   -55.20  30.0  1
+ 6XX  Var_13    C16  C39  C06  C08   -54.86  30.0  1
+ 6XX  Var_14    C39  C06  C08  N11    55.25  30.0  1
+ 6XX  Var_15    C39  C16  C13  N11   -55.13  30.0  1
+ 6XX  Var_16    C36  C22  C24  C27    55.04  30.0  1
+ 6XX  Var_17    C69  N71  C73  C43  -179.77  30.0  1
+ 6XX  Var_18    C59  C48  C47  C45   -53.90  30.0  2
+ 6XX  Var_19    C49  C48  C47  C45   123.24  30.0  2
+ 6XX  Var_20    C64  C62  C61  C47  -178.61  30.0  1
+ 6XX  Var_21    C61  C47  C48  C49   -56.80  30.0  3
+ 6XX  Var_22    C61  C47  C48  C59   126.06  30.0  3
+ 6XX  Var_23    C69  N71  C73  C61     0.87  30.0  1
+ 6XX  Var_24    C69  C64  C62  C61     1.14  30.0  1
+ 6XX  Var_25    N71  C69  C64  C62    -0.44  30.0  1
+ 6XX  Var_26    C73  C61  C62  C64    -0.84  30.0  1
+ 6XX  Var_27    N41  C39  C16  C13   177.40  30.0  1
+ 6XX  Var_28    N11  C08  C06  O05   175.83  30.0  1
+ 6XX  Var_29    C16  C39  C06  O05  -178.14  30.0  1
+ 6XX  Var_30    O18  C16  C39  C06   176.46  30.0  1
+ 6XX  Var_31    C43  N41  C39  C06   -95.59  30.0  3
+ 6XX  Var_32    N41  C39  C06  C08  -177.32  30.0  1
+ 6XX  Var_33    O18  C16  C13  N11  -175.23  30.0  1
+ 6XX  Var_34    C43  N41  C39  C16   142.40  30.0  3
+ 6XX  Var_35    C33  C36  C22  C19  -177.16  30.0  1
+ 6XX  Var_36    C27  C24  C22  C19   178.60  30.0  1
+ 6XX  Var_37    C65  C64  C62  C61   179.75  30.0  1
+ 6XX  Var_38    O70  C69  C64  C62   178.66  30.0  1
+ 6XX  Var_39    N71  C69  C64  C65  -179.13  30.0  1
+ 6XX  Var_40    H23  C39  C16  C13   -64.59  30.0  1
+ 6XX  Var_41    H21  C36  C22  C24    66.53  30.0  1
+ 6XX  Var_42    H22  C36  C22  C24  -176.55  30.0  1
+ 6XX  Var_43    H14  C16  C39  C06   -63.89  30.0  1
+ 6XX  Var_44    H9   C06  C08  N11   -62.55  30.0  1
+ 6XX  Var_45    H3   C22  C24  C27   -63.57  30.0  1
+ 6XX  Var_46    H32  C62  C61  C47     0.46  30.0  1
+ 6XX  Var_47    C19  O18  C16  C13   -85.15  30.0  2
+ 6XX  Var_48    O18  C19  C22  C24   176.84  30.0  2
+ 6XX  Var_49    N41  C39  C06  O05    59.40  30.0  1
+ 6XX  Var_50    C01  O05  C06  C08    80.13  30.0  1
+ 6XX  Var_51    N41  C39  C16  O18   -60.64  30.0  1
+ 6XX  Var_52    C36  C22  C19  O18   -60.49  30.0  3
+ 6XX  Var_53    C39  C16  O18  C19   153.84  30.0  3
+ 6XX  Var_54    C01  O05  C06  C39  -157.98  30.0  1
+ 6XX  Var_55    O70  C69  C64  C65    -0.04  30.0  1
+ 6XX  Var_56    H15  C19  C22  C24   -61.04  30.0  2
+ 6XX  Var_57    H16  C19  C22  C24    55.52  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

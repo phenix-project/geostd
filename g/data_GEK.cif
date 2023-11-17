@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GEK  GEK  '(2S)-4-[{[(2S,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl}(carboxylatomethyl)sulfonio]-2-ammoniobutanoate '  ligand  52  30  .  2021-08-10  2021-08-10  
+ GEK  GEK  '(2S)-4-[{[(2S,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl}(carboxylatomethyl)sulfonio]-2-ammoniobutanoate '  ligand  52  30  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GEK
@@ -267,35 +268,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GEK  CONST_01  C4    N3  C2  N1    0.00   0.0  0
- GEK  CONST_02  C4    C5  C6  N1    0.00   0.0  0
- GEK  CONST_03  N7    C5  C6  N1  180.00   0.0  0
- GEK  CONST_04  C5    C6  N1  C2    0.00   0.0  0
- GEK  CONST_05  C5    C4  N3  C2    0.00   0.0  0
- GEK  CONST_06  N9    C4  N3  C2  180.00   0.0  0
- GEK  CONST_07  C6    N1  C2  N3    0.00   0.0  0
- GEK  CONST_08  C6    C5  C4  N3    0.00   0.0  0
- GEK  CONST_09  N7    C5  C4  N3  180.00   0.0  0
- GEK  CONST_10  C8    N9  C4  N3  180.00   0.0  0
- GEK  CONST_11  C8    N7  C5  C4    0.00   0.0  0
- GEK  CONST_12  N7    C8  N9  C4    0.00   0.0  0
- GEK  CONST_13  C8    N9  C4  C5    0.00   0.0  0
- GEK  CONST_14  N9    C8  N7  C5    0.00   0.0  0
- GEK  CONST_15  N9    C4  C5  C6  180.00   0.0  0
- GEK  CONST_16  C8    N7  C5  C6  180.00   0.0  0
- GEK  CONST_17  N9    C4  C5  N7    0.00   0.0  0
- GEK  CONST_18  C1'   N9  C4  N3    0.00   0.0  0
- GEK  CONST_19  C1'   N9  C4  C5  180.00   0.0  0
- GEK  CONST_20  C1'   N9  C8  N7  180.00   0.0  0
- GEK  CONST_21  N6    C6  N1  C2  180.00   0.0  0
- GEK  CONST_22  N6    C6  C5  C4  180.00   0.0  0
- GEK  CONST_23  N7    C5  C6  N6    0.00   0.0  0
- GEK  CONST_24  H2    C2  N3  C4  180.00   0.0  0
- GEK  CONST_25  H8    C8  N9  C4  180.00   0.0  0
- GEK  CONST_26  HN6   N6  C6  N1    0.00   0.0  0
- GEK  CONST_27  HN6A  N6  C6  N1  180.00   0.0  0
- GEK  Var_01    SD    CG  CB  CA  156.23  30.0  3
- GEK  Var_02    OZ1   CZ  CE  SD   18.54  30.0  3
+ GEK  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ GEK  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ GEK  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ GEK  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ GEK  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ GEK  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ GEK  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ GEK  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ GEK  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ GEK  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ GEK  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ GEK  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ GEK  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ GEK  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ GEK  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ GEK  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ GEK  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ GEK  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ GEK  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ GEK  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ GEK  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ GEK  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ GEK  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ GEK  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ GEK  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ GEK  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ GEK  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ GEK  Var_01    SD    CG   CB   CA    156.23  30.0  3
+ GEK  Var_02    OZ1   CZ   CE   SD     18.54  30.0  3
+ GEK  Var_03    C2'   C1'  N9   C4    121.44  30.0  2
+ GEK  Var_04    O4'   C1'  N9   C4   -120.42  30.0  2
+ GEK  Var_05    C2'   C1'  N9   C8    -61.31  30.0  2
+ GEK  Var_06    O4'   C1'  N9   C8     56.82  30.0  2
+ GEK  Var_07    C3'   C2'  C1'  N9    154.21  30.0  1
+ GEK  Var_08    C4'   O4'  C1'  N9   -138.79  30.0  1
+ GEK  Var_09    C4'   C3'  C2'  C1'   -38.28  30.0  1
+ GEK  Var_10    C3'   C4'  O4'  C1'   -10.23  30.0  1
+ GEK  Var_11    C4'   O4'  C1'  C2'   -15.23  30.0  1
+ GEK  Var_12    O4'   C4'  C3'  C2'    30.80  30.0  1
+ GEK  Var_13    O4'   C1'  C2'  C3'    33.90  30.0  1
+ GEK  Var_14    O2'   C2'  C1'  N9    -84.08  30.0  1
+ GEK  Var_15    O3'   C3'  C2'  C1'    76.08  30.0  1
+ GEK  Var_16    C5'   C4'  O4'  C1'   110.20  30.0  1
+ GEK  Var_17    C5'   C4'  C3'  C2'   -89.18  30.0  1
+ GEK  Var_18    O4'   C1'  C2'  O2'   155.61  30.0  1
+ GEK  Var_19    C4'   C3'  C2'  O2'  -156.34  30.0  1
+ GEK  Var_20    O4'   C4'  C3'  O3'   -85.70  30.0  1
+ GEK  Var_21    H1'   C1'  N9   C4     -0.41  30.0  2
+ GEK  Var_22    H2'   C2'  C1'  N9     39.05  30.0  1
+ GEK  Var_23    H3'   C3'  C2'  C1'  -157.60  30.0  1
+ GEK  Var_24    H4'   C4'  O4'  C1'  -129.56  30.0  1
+ GEK  Var_25    C3'   C4'  C5'  SD    161.62  30.0  1
+ GEK  Var_26    O4'   C4'  C5'  SD     44.10  30.0  1
+ GEK  Var_27    O3'   C3'  C2'  O2'   -41.98  30.0  1
+ GEK  Var_28    C5'   C4'  C3'  O3'   154.32  30.0  1
+ GEK  Var_29    HO2'  O2'  C2'  C1'   159.73  30.0  3
+ GEK  Var_30    HO3'  O3'  C3'  C2'    48.91  30.0  3
+ GEK  Var_31    H5'   C5'  C4'  C3'    44.43  30.0  3
+ GEK  Var_32    H5'A  C5'  C4'  C3'   -77.64  30.0  3
+ GEK  Var_33    C4'   C5'  SD   CE     69.04  30.0  3
+ GEK  Var_34    C4'   C5'  SD   CG   -179.63  30.0  3
+ GEK  Var_35    CG    CB   CA   C     173.44  30.0  3
+ GEK  Var_36    OXT   C    CA   N    -178.93  30.0  1
+ GEK  Var_37    O     C    CA   N       1.16  30.0  1
+ GEK  Var_38    CG    CB   CA   N     -66.67  30.0  3
+ GEK  Var_39    CB    CA   C    OXT   -57.32  30.0  2
+ GEK  Var_40    O     C    CA   CB    122.78  30.0  1
+ GEK  Var_41    CE    SD   CG   CB    -48.18  30.0  2
+ GEK  Var_42    C5'   SD   CG   CB   -155.98  30.0  2
+ GEK  Var_43    CZ    CE   SD   CG    -48.20  30.0  3
+ GEK  Var_44    C5'   SD   CE   CZ     57.57  30.0  3
+ GEK  Var_45    HN    N    CA   C    -115.57  30.0  3
+ GEK  Var_46    HNA   N    CA   C       1.42  30.0  3
+ GEK  Var_47    H22   N    CA   C     120.99  30.0  3
+ GEK  Var_48    HB    CB   CA   C     -62.94  30.0  3
+ GEK  Var_49    HBA   CB   CA   C      52.57  30.0  3
+ GEK  Var_50    HA    CA   C    OXT    64.46  30.0  2
+ GEK  Var_51    HE    CE   SD   CG     75.75  30.0  3
+ GEK  Var_52    HEA   CE   SD   CG   -173.46  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

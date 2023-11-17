@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 94I  94I  3-azanyl-5-(azepan-1-yl)-~{N}-carbamimidoyl-6-pyrimidin-5-yl-pyrazine-2-carboxamide  ligand  47  26  .  2022-07-24  2022-07-26
+ 94I  94I  3-azanyl-5-(azepan-1-yl)-~{N}-carbamimidoyl-6-pyrimidin-5-yl-pyrazine-2-carboxamide  ligand  47  26  .  2022-07-24  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_94I
@@ -244,38 +245,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 94I  CONST_01  C7   N4   C8   C5     0.00   0.0  0
- 94I  CONST_02  C7   C6   N3   C5     0.00   0.0  0
- 94I  CONST_03  N2   C3   C4   C5   180.00   0.0  0
- 94I  CONST_04  N1   C1   C4   C5   180.00   0.0  0
- 94I  CONST_07  N1   C1   C4   C3     0.00   0.0  0
- 94I  CONST_08  N1   C2   N2   C3     0.00   0.0  0
- 94I  CONST_09  C4   C3   N2   C2     0.00   0.0  0
- 94I  CONST_10  C4   C1   N1   C2     0.00   0.0  0
- 94I  CONST_11  N3   C6   C7   N4     0.00   0.0  0
- 94I  CONST_12  N3   C5   C8   N4     0.00   0.0  0
- 94I  CONST_14  C8   N4   C7   C6     0.00   0.0  0
- 94I  CONST_15  C8   C5   N3   C6     0.00   0.0  0
- 94I  CONST_16  C4   C5   N3   C6   180.00   0.0  0
- 94I  CONST_19  C1   C4   C3   N2     0.00   0.0  0
- 94I  CONST_20  C1   N1   C2   N2     0.00   0.0  0
- 94I  CONST_21  N5   C8   N4   C7   180.00   0.0  0
- 94I  CONST_22  N5   C8   C5   N3   180.00   0.0  0
- 94I  CONST_24  C15  C6   N3   C5   180.00   0.0  0
- 94I  CONST_25  C15  C6   C7   N4   180.00   0.0  0
- 94I  CONST_26  N9   C7   C6   N3   180.00   0.0  0
- 94I  CONST_27  C8   N4   C7   N9   180.00   0.0  0
- 94I  CONST_28  H1   C3   C4   C5     0.00   0.0  0
- 94I  CONST_29  H17  C1   C4   C5     0.00   0.0  0
- 94I  CONST_30  H2   C2   N2   C3   180.00   0.0  0
- 94I  CONST_31  H15  N9   C7   N4     0.00   0.0  0
- 94I  CONST_32  H16  N9   C7   N4   180.00   0.0  0
- 94I  CONST_33  C6   C15  N6   C16  180.00   0.0  0
- 94I  CONST_34  H11  N6   C15  C6     0.00   0.0  0
- 94I  CONST_35  O1   C15  N6   C16    0.00   0.0  0
- 94I  CONST_38  H14  N7   C16  N6   180.00   0.0  0
- 94I  CONST_40  H13  N8   C16  N6   180.00   0.0  0
- 94I  Var_01    O1   C15  C6   C7    -3.23  30.0  2
+ 94I  CONST_01  C7   N4   C8   C5      0.00   0.0  0
+ 94I  CONST_02  C7   C6   N3   C5      0.00   0.0  0
+ 94I  CONST_03  N2   C3   C4   C5    180.00   0.0  0
+ 94I  CONST_04  N1   C1   C4   C5    180.00   0.0  0
+ 94I  CONST_05  N1   C1   C4   C3      0.00   0.0  0
+ 94I  CONST_06  N1   C2   N2   C3      0.00   0.0  0
+ 94I  CONST_07  C4   C3   N2   C2      0.00   0.0  0
+ 94I  CONST_08  C4   C1   N1   C2      0.00   0.0  0
+ 94I  CONST_09  N3   C6   C7   N4      0.00   0.0  0
+ 94I  CONST_10  N3   C5   C8   N4      0.00   0.0  0
+ 94I  CONST_11  C8   N4   C7   C6      0.00   0.0  0
+ 94I  CONST_12  C8   C5   N3   C6      0.00   0.0  0
+ 94I  CONST_13  C4   C5   N3   C6    180.00   0.0  0
+ 94I  CONST_14  C1   C4   C3   N2      0.00   0.0  0
+ 94I  CONST_15  C1   N1   C2   N2      0.00   0.0  0
+ 94I  CONST_16  N5   C8   N4   C7    180.00   0.0  0
+ 94I  CONST_17  N5   C8   C5   N3    180.00   0.0  0
+ 94I  CONST_18  C15  C6   N3   C5    180.00   0.0  0
+ 94I  CONST_19  C15  C6   C7   N4    180.00   0.0  0
+ 94I  CONST_20  N9   C7   C6   N3    180.00   0.0  0
+ 94I  CONST_21  C8   N4   C7   N9    180.00   0.0  0
+ 94I  CONST_22  H1   C3   C4   C5      0.00   0.0  0
+ 94I  CONST_23  H17  C1   C4   C5      0.00   0.0  0
+ 94I  CONST_24  H2   C2   N2   C3    180.00   0.0  0
+ 94I  CONST_25  H15  N9   C7   N4      0.00   0.0  0
+ 94I  CONST_26  H16  N9   C7   N4    180.00   0.0  0
+ 94I  CONST_27  C6   C15  N6   C16   180.00   0.0  0
+ 94I  CONST_28  H11  N6   C15  C6      0.00   0.0  0
+ 94I  CONST_29  O1   C15  N6   C16     0.00   0.0  0
+ 94I  CONST_30  H14  N7   C16  N6    180.00   0.0  0
+ 94I  CONST_31  H13  N8   C16  N6    180.00   0.0  0
+ 94I  Var_01    O1   C15  C6   C7     -3.23  30.0  2
+ 94I  Var_02    C9   N5   C8   C5    171.27  30.0  2
+ 94I  Var_03    C14  N5   C8   C5    -27.04  30.0  2
+ 94I  Var_04    C8   C5   C4   C3    136.08  30.0  3
+ 94I  Var_05    N3   C5   C4   C3    -49.87  30.0  3
+ 94I  Var_06    C10  C9   N5   C14    97.31  30.0  1
+ 94I  Var_07    N4   C8   N5   C14   152.47  30.0  1
+ 94I  Var_08    C11  C12  C13  C14   -65.13  30.0  1
+ 94I  Var_09    C9   N5   C14  C13   -70.83  30.0  1
+ 94I  Var_10    C8   N5   C14  C13   126.45  30.0  1
+ 94I  Var_11    C10  C11  C12  C13    85.77  30.0  1
+ 94I  Var_12    C9   C10  C11  C12   -36.46  30.0  1
+ 94I  Var_13    N5   C14  C13  C12    45.05  30.0  1
+ 94I  Var_14    N4   C8   N5   C9     -9.22  30.0  1
+ 94I  Var_15    C8   N5   C9   C10   -99.16  30.0  1
+ 94I  Var_16    C1   C4   C5   N3    122.66  30.0  2
+ 94I  Var_17    C1   C4   C5   C8    -51.39  30.0  2
+ 94I  Var_18    C11  C10  C9   N5    -45.59  30.0  1
+ 94I  Var_19    H7   C9   N5   C14   -23.13  30.0  1
+ 94I  Var_20    H8   C9   N5   C14  -138.91  30.0  1
+ 94I  Var_21    H6   C12  C13  C14    59.99  30.0  1
+ 94I  Var_22    H21  C12  C13  C14   174.75  30.0  1
+ 94I  Var_23    H18  C11  C12  C13  -152.04  30.0  1
+ 94I  Var_24    H19  C11  C12  C13   -37.18  30.0  1
+ 94I  Var_25    H9   C10  C11  C12  -159.71  30.0  1
+ 94I  Var_26    H10  C10  C11  C12    83.61  30.0  1
+ 94I  Var_27    H3   C14  C13  C12   170.12  30.0  1
+ 94I  Var_28    H4   C14  C13  C12   -74.82  30.0  1
+ 94I  Var_29    H5   C13  C14  N5    167.77  30.0  1
+ 94I  Var_30    H20  C13  C14  N5    -78.10  30.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id

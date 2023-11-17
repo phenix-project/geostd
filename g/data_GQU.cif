@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GQU  GQU  (3~{S},3~{a}~{S},6~{a}~{R})-2-[3-[3,5-bis(fluoranyl)phenyl]propanoyl]-~{N}-[(2~{S})-1-oxidanylidene-3-[(3~{S})-2-oxidanylidenepyrrolidin-3-yl]propan-2-yl]-3,3~{a},4,5,6,6~{a}-hexahydro-1~{H}-cyclopenta[c]pyrrole-3-carboxamide  ligand  62  33  .  2022-03-18  2023-02-15
+ GQU  GQU  (3~{S},3~{a}~{S},6~{a}~{R})-2-[3-[3,5-bis(fluoranyl)phenyl]propanoyl]-~{N}-[(2~{S})-1-oxidanylidene-3-[(3~{S})-2-oxidanylidenepyrrolidin-3-yl]propan-2-yl]-3,3~{a},4,5,6,6~{a}-hexahydro-1~{H}-cyclopenta[c]pyrrole-3-carboxamide  ligand  62  33  .  2022-03-18  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_GQU
@@ -315,39 +316,89 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GQU  CONST_01  C30  C31  C33  C26    0.00   0.0  0
- GQU  CONST_02  C30  C28  C27  C26    0.00   0.0  0
- GQU  CONST_03  C33  C31  C30  C28    0.00   0.0  0
- GQU  CONST_04  C33  C26  C27  C28    0.00   0.0  0
- GQU  CONST_05  C31  C33  C26  C27    0.00   0.0  0
- GQU  CONST_06  C31  C30  C28  C27    0.00   0.0  0
- GQU  CONST_07  C18  C22  N21  C20    0.00   0.0  0
- GQU  CONST_08  F32  C31  C33  C26  180.00   0.0  0
- GQU  CONST_09  F29  C28  C27  C26  180.00   0.0  0
- GQU  CONST_10  F32  C31  C30  C28  180.00   0.0  0
- GQU  CONST_11  C25  C26  C27  C28  180.00   0.0  0
- GQU  CONST_12  C31  C33  C26  C25  180.00   0.0  0
- GQU  CONST_13  C31  C30  C28  F29  180.00   0.0  0
- GQU  CONST_14  O23  C22  N21  C20  180.00   0.0  0
- GQU  CONST_15  H31  C33  C26  C27  180.00   0.0  0
- GQU  CONST_16  H30  C30  C28  C27  180.00   0.0  0
- GQU  CONST_17  H29  C27  C28  C30  180.00   0.0  0
- GQU  CONST_18  H26  N21  C22  C18  180.00   0.0  0
- GQU  CONST_19  C24  C02  N03  C10  180.00   0.0  0
- GQU  CONST_20  O01  C02  N03  C10    0.00   0.0  0
- GQU  CONST_21  C04  N03  C02  C24    0.00   0.0  0
- GQU  CONST_22  C04  N03  C02  O01  180.00   0.0  0
- GQU  CONST_23  C14  N13  C11  C10  180.00   0.0  0
- GQU  CONST_24  H20  N13  C11  C10    0.00   0.0  0
- GQU  CONST_25  C14  N13  C11  O12    0.00   0.0  0
- GQU  Var_01    C05  C04  N03  C10   29.35  30.0  1
- GQU  Var_02    C19  C20  N21  C22  -20.03  30.0  1
- GQU  Var_03    C08  C07  C06  C05  -26.66  30.0  1
- GQU  Var_04    C09  C08  C07  C06   39.29  30.0  1
- GQU  Var_05    N21  C20  C19  C18   28.75  30.0  1
- GQU  Var_06    C33  C26  C25  C24  -86.66  30.0  3
- GQU  Var_07    C02  C24  C25  C26  179.49  30.0  3
- GQU  Var_08    C25  C24  C02  N03  -95.76  30.0  1
+ GQU  CONST_01  C30  C31  C33  C26     0.00   0.0  0
+ GQU  CONST_02  C30  C28  C27  C26     0.00   0.0  0
+ GQU  CONST_03  C33  C31  C30  C28     0.00   0.0  0
+ GQU  CONST_04  C33  C26  C27  C28     0.00   0.0  0
+ GQU  CONST_05  C31  C33  C26  C27     0.00   0.0  0
+ GQU  CONST_06  C31  C30  C28  C27     0.00   0.0  0
+ GQU  CONST_07  C18  C22  N21  C20     0.00   0.0  0
+ GQU  CONST_08  F32  C31  C33  C26   180.00   0.0  0
+ GQU  CONST_09  F29  C28  C27  C26   180.00   0.0  0
+ GQU  CONST_10  F32  C31  C30  C28   180.00   0.0  0
+ GQU  CONST_11  C25  C26  C27  C28   180.00   0.0  0
+ GQU  CONST_12  C31  C33  C26  C25   180.00   0.0  0
+ GQU  CONST_13  C31  C30  C28  F29   180.00   0.0  0
+ GQU  CONST_14  O23  C22  N21  C20   180.00   0.0  0
+ GQU  CONST_15  H31  C33  C26  C27   180.00   0.0  0
+ GQU  CONST_16  H30  C30  C28  C27   180.00   0.0  0
+ GQU  CONST_17  H29  C27  C28  C30   180.00   0.0  0
+ GQU  CONST_18  H26  N21  C22  C18   180.00   0.0  0
+ GQU  CONST_19  C24  C02  N03  C10   180.00   0.0  0
+ GQU  CONST_20  O01  C02  N03  C10     0.00   0.0  0
+ GQU  CONST_21  C04  N03  C02  C24     0.00   0.0  0
+ GQU  CONST_22  C04  N03  C02  O01   180.00   0.0  0
+ GQU  CONST_23  C14  N13  C11  C10   180.00   0.0  0
+ GQU  CONST_24  H20  N13  C11  C10     0.00   0.0  0
+ GQU  CONST_25  C14  N13  C11  O12     0.00   0.0  0
+ GQU  Var_01    C05  C04  N03  C10    29.35  30.0  1
+ GQU  Var_02    C19  C20  N21  C22   -20.03  30.0  1
+ GQU  Var_03    C08  C07  C06  C05   -26.66  30.0  1
+ GQU  Var_04    C09  C08  C07  C06    39.29  30.0  1
+ GQU  Var_05    N21  C20  C19  C18    28.75  30.0  1
+ GQU  Var_06    C33  C26  C25  C24   -86.66  30.0  3
+ GQU  Var_07    C02  C24  C25  C26   179.49  30.0  3
+ GQU  Var_08    C25  C24  C02  N03   -95.76  30.0  1
+ GQU  Var_09    C06  C05  C09  C10   -98.40  30.0  1
+ GQU  Var_10    C04  C05  C09  C10    23.48  30.0  1
+ GQU  Var_11    C07  C08  C09  C10    76.19  30.0  1
+ GQU  Var_12    C22  C18  C19  C20   -27.86  30.0  1
+ GQU  Var_13    C06  C05  C04  N03    83.53  30.0  1
+ GQU  Var_14    C09  C05  C04  N03   -31.70  30.0  1
+ GQU  Var_15    C05  C09  C10  N03    -6.37  30.0  1
+ GQU  Var_16    C08  C09  C10  N03  -120.00  30.0  1
+ GQU  Var_17    C07  C06  C05  C04  -111.00  30.0  1
+ GQU  Var_18    C08  C09  C05  C04   142.30  30.0  1
+ GQU  Var_19    C09  C10  N03  C04   -14.44  30.0  1
+ GQU  Var_20    C07  C08  C09  C05   -37.11  30.0  1
+ GQU  Var_21    C08  C09  C05  C06    20.42  30.0  1
+ GQU  Var_22    C09  C05  C06  C07     3.90  30.0  1
+ GQU  Var_23    N21  C22  C18  C19    16.70  30.0  1
+ GQU  Var_24    C20  C19  C18  C17  -151.61  30.0  1
+ GQU  Var_25    N21  C22  C18  C17   142.66  30.0  1
+ GQU  Var_26    C09  C10  N03  C02   178.89  30.0  1
+ GQU  Var_27    C11  C10  N03  C04   104.70  30.0  1
+ GQU  Var_28    C11  C10  C09  C05  -125.00  30.0  1
+ GQU  Var_29    C11  C10  C09  C08   121.36  30.0  1
+ GQU  Var_30    O23  C22  C18  C19  -164.30  30.0  1
+ GQU  Var_31    H12  C05  C09  C10   142.01  30.0  1
+ GQU  Var_32    H17  C08  C09  C10  -166.39  30.0  1
+ GQU  Var_33    H18  C08  C09  C10   -47.05  30.0  1
+ GQU  Var_34    H23  C18  C19  C20    84.45  30.0  1
+ GQU  Var_35    H24  C19  C18  C22  -149.36  30.0  1
+ GQU  Var_36    H25  C19  C18  C22    89.55  30.0  1
+ GQU  Var_37    H19  C09  C10  N03   113.85  30.0  1
+ GQU  Var_38    H13  C06  C05  C04    12.04  30.0  1
+ GQU  Var_39    H14  C06  C05  C04   130.21  30.0  1
+ GQU  Var_40    H1   C10  N03  C04  -134.22  30.0  1
+ GQU  Var_41    O23  C22  C18  C17   -38.34  30.0  1
+ GQU  Var_42    C14  C17  C18  C22   177.67  30.0  3
+ GQU  Var_43    C11  C10  N03  C02   -61.97  30.0  1
+ GQU  Var_44    O12  C11  C10  N03   -34.33  30.0  3
+ GQU  Var_45    N13  C11  C10  N03   148.68  30.0  3
+ GQU  Var_46    O12  C11  C10  C09    81.68  30.0  3
+ GQU  Var_47    N13  C11  C10  C09   -95.32  30.0  3
+ GQU  Var_48    C19  C18  C17  C14   -63.63  30.0  1
+ GQU  Var_49    H4   C17  C18  C22    55.67  30.0  3
+ GQU  Var_50    H5   C17  C18  C22   -61.35  30.0  3
+ GQU  Var_51    C18  C17  C14  C15  -178.72  30.0  3
+ GQU  Var_52    C18  C17  C14  N13   -54.69  30.0  3
+ GQU  Var_53    H21  C14  C17  C18    63.96  30.0  2
+ GQU  Var_54    C11  N13  C14  C15  -118.74  30.0  1
+ GQU  Var_55    C11  N13  C14  C17   114.66  30.0  1
+ GQU  Var_56    O16  C15  C14  C17   -15.01  30.0  3
+ GQU  Var_57    O16  C15  C14  N13  -140.99  30.0  3
+ GQU  Var_58    H2   C15  C14  C17   165.53  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MKQ  MKQ  3,5-diphenylbenzenesulfonamide  ligand  37  22  .  2022-03-22  2022-07-25
+ MKQ  MKQ  3,5-diphenylbenzenesulfonamide  ligand  37  22  .  2022-03-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_MKQ
@@ -204,49 +205,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MKQ  CONST_01  C19  C18  C17  C22    0.00   0.0  0
- MKQ  CONST_04  C19  C20  C21  C22    0.00   0.0  0
- MKQ  CONST_05  C17  C18  C19  C20    0.00   0.0  0
- MKQ  CONST_06  C17  C22  C21  C20    0.00   0.0  0
- MKQ  CONST_07  C18  C19  C20  C21    0.00   0.0  0
- MKQ  CONST_08  C18  C17  C22  C21    0.00   0.0  0
- MKQ  CONST_09  C7   C17  C22  C21  180.00   0.0  0
- MKQ  CONST_10  C5   C6   C7   C17  180.00   0.0  0
- MKQ  CONST_11  C9   C8   C7   C17  180.00   0.0  0
- MKQ  CONST_14  C13  C12  C11  C16    0.00   0.0  0
- MKQ  CONST_15  C13  C14  C15  C16    0.00   0.0  0
- MKQ  CONST_16  C9   C11  C12  C13  180.00   0.0  0
- MKQ  CONST_19  C11  C12  C13  C14    0.00   0.0  0
- MKQ  CONST_20  C11  C16  C15  C14    0.00   0.0  0
- MKQ  CONST_21  C9   C11  C16  C15  180.00   0.0  0
- MKQ  CONST_22  C12  C11  C16  C15    0.00   0.0  0
- MKQ  CONST_23  C12  C13  C14  C15    0.00   0.0  0
- MKQ  CONST_26  C7   C8   C9   C11  180.00   0.0  0
- MKQ  CONST_27  C5   C10  C9   C11  180.00   0.0  0
- MKQ  CONST_28  C6   C7   C8   C9     0.00   0.0  0
- MKQ  CONST_29  C6   C5   C10  C9     0.00   0.0  0
- MKQ  CONST_30  C5   C6   C7   C8     0.00   0.0  0
- MKQ  CONST_31  C5   C10  C9   C8     0.00   0.0  0
- MKQ  CONST_32  C19  C18  C17  C7   180.00   0.0  0
- MKQ  CONST_33  C10  C5   C6   C7     0.00   0.0  0
- MKQ  CONST_34  C10  C9   C8   C7     0.00   0.0  0
- MKQ  CONST_35  S2   C5   C10  C9   180.00   0.0  0
- MKQ  CONST_36  S2   C5   C6   C7   180.00   0.0  0
- MKQ  CONST_37  H6   C18  C17  C22  180.00   0.0  0
- MKQ  CONST_38  H2   C20  C21  C22  180.00   0.0  0
- MKQ  CONST_39  H1   C22  C21  C20  180.00   0.0  0
- MKQ  CONST_40  H15  C19  C20  C21  180.00   0.0  0
- MKQ  CONST_41  H11  C6   C7   C17    0.00   0.0  0
- MKQ  CONST_42  H10  C8   C7   C17    0.00   0.0  0
- MKQ  CONST_43  H3   C21  C22  C17  180.00   0.0  0
- MKQ  CONST_44  H9   C12  C11  C16  180.00   0.0  0
- MKQ  CONST_45  H7   C14  C15  C16  180.00   0.0  0
- MKQ  CONST_46  H8   C15  C14  C13  180.00   0.0  0
- MKQ  CONST_47  H4   C16  C15  C14  180.00   0.0  0
- MKQ  CONST_48  H5   C13  C14  C15  180.00   0.0  0
- MKQ  CONST_49  H12  C10  C9   C11    0.00   0.0  0
- MKQ  Var_01    C6   C5   S2   O3   -12.11  30.0  2
- MKQ  Var_02    H13  N1   S2   C5   -62.33  30.0  3
+ MKQ  CONST_01  C19  C18  C17  C22     0.00   0.0  0
+ MKQ  CONST_02  C19  C20  C21  C22     0.00   0.0  0
+ MKQ  CONST_03  C17  C18  C19  C20     0.00   0.0  0
+ MKQ  CONST_04  C17  C22  C21  C20     0.00   0.0  0
+ MKQ  CONST_05  C18  C19  C20  C21     0.00   0.0  0
+ MKQ  CONST_06  C18  C17  C22  C21     0.00   0.0  0
+ MKQ  CONST_07  C7   C17  C22  C21   180.00   0.0  0
+ MKQ  CONST_08  C5   C6   C7   C17   180.00   0.0  0
+ MKQ  CONST_09  C9   C8   C7   C17   180.00   0.0  0
+ MKQ  CONST_10  C13  C12  C11  C16     0.00   0.0  0
+ MKQ  CONST_11  C13  C14  C15  C16     0.00   0.0  0
+ MKQ  CONST_12  C9   C11  C12  C13   180.00   0.0  0
+ MKQ  CONST_13  C11  C12  C13  C14     0.00   0.0  0
+ MKQ  CONST_14  C11  C16  C15  C14     0.00   0.0  0
+ MKQ  CONST_15  C9   C11  C16  C15   180.00   0.0  0
+ MKQ  CONST_16  C12  C11  C16  C15     0.00   0.0  0
+ MKQ  CONST_17  C12  C13  C14  C15     0.00   0.0  0
+ MKQ  CONST_18  C7   C8   C9   C11   180.00   0.0  0
+ MKQ  CONST_19  C5   C10  C9   C11   180.00   0.0  0
+ MKQ  CONST_20  C6   C7   C8   C9      0.00   0.0  0
+ MKQ  CONST_21  C6   C5   C10  C9      0.00   0.0  0
+ MKQ  CONST_22  C5   C6   C7   C8      0.00   0.0  0
+ MKQ  CONST_23  C5   C10  C9   C8      0.00   0.0  0
+ MKQ  CONST_24  C19  C18  C17  C7    180.00   0.0  0
+ MKQ  CONST_25  C10  C5   C6   C7      0.00   0.0  0
+ MKQ  CONST_26  C10  C9   C8   C7      0.00   0.0  0
+ MKQ  CONST_27  S2   C5   C10  C9    180.00   0.0  0
+ MKQ  CONST_28  S2   C5   C6   C7    180.00   0.0  0
+ MKQ  CONST_29  H6   C18  C17  C22   180.00   0.0  0
+ MKQ  CONST_30  H2   C20  C21  C22   180.00   0.0  0
+ MKQ  CONST_31  H1   C22  C21  C20   180.00   0.0  0
+ MKQ  CONST_32  H15  C19  C20  C21   180.00   0.0  0
+ MKQ  CONST_33  H11  C6   C7   C17     0.00   0.0  0
+ MKQ  CONST_34  H10  C8   C7   C17     0.00   0.0  0
+ MKQ  CONST_35  H3   C21  C22  C17   180.00   0.0  0
+ MKQ  CONST_36  H9   C12  C11  C16   180.00   0.0  0
+ MKQ  CONST_37  H7   C14  C15  C16   180.00   0.0  0
+ MKQ  CONST_38  H8   C15  C14  C13   180.00   0.0  0
+ MKQ  CONST_39  H4   C16  C15  C14   180.00   0.0  0
+ MKQ  CONST_40  H5   C13  C14  C15   180.00   0.0  0
+ MKQ  CONST_41  H12  C10  C9   C11     0.00   0.0  0
+ MKQ  Var_01    C6   C5   S2   O3    -12.11  30.0  2
+ MKQ  Var_02    H13  N1   S2   C5    -62.33  30.0  3
+ MKQ  Var_03    C6   C7   C17  C22  -141.19  30.0  2
+ MKQ  Var_04    C8   C7   C17  C22    39.00  30.0  2
+ MKQ  Var_05    C8   C9   C11  C16  -141.91  30.0  2
+ MKQ  Var_06    C10  C9   C11  C16    38.44  30.0  2
+ MKQ  Var_07    C6   C7   C17  C18    39.22  30.0  2
+ MKQ  Var_08    C8   C7   C17  C18  -140.60  30.0  2
+ MKQ  Var_09    C8   C9   C11  C12    37.74  30.0  2
+ MKQ  Var_10    C10  C9   C11  C12  -141.90  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

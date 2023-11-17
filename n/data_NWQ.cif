@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NWQ  NWQ  (2~{S},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-~{N}-methyl-3,4-bis(oxidanyl)oxolane-2-carboxamide  ligand  35  21  .  2021-08-15  2021-08-15  
+ NWQ  NWQ  (2~{S},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-~{N}-methyl-3,4-bis(oxidanyl)oxolane-2-carboxamide  ligand  35  21  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NWQ
@@ -200,37 +201,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NWQ  CONST_01  C05  N04  C03  C26    0.00   0.0  0
- NWQ  CONST_02  N29  C02  C03  C26    0.00   0.0  0
- NWQ  CONST_03  N04  C05  N06  C26    0.00   0.0  0
- NWQ  CONST_04  N29  C28  N27  C26    0.00   0.0  0
- NWQ  CONST_05  C03  C02  N29  C28    0.00   0.0  0
- NWQ  CONST_06  C03  C26  N27  C28    0.00   0.0  0
- NWQ  CONST_07  N06  C26  N27  C28  180.00   0.0  0
- NWQ  CONST_08  C05  N04  C03  C02  180.00   0.0  0
- NWQ  CONST_09  N06  C26  C03  C02  180.00   0.0  0
- NWQ  CONST_10  N27  C26  C03  C02    0.00   0.0  0
- NWQ  CONST_11  N27  C28  N29  C02    0.00   0.0  0
- NWQ  CONST_12  N06  C05  N04  C03    0.00   0.0  0
- NWQ  CONST_13  C05  N06  C26  C03    0.00   0.0  0
- NWQ  CONST_14  N27  C26  N06  C05  180.00   0.0  0
- NWQ  CONST_15  N29  C02  C03  N04  180.00   0.0  0
- NWQ  CONST_16  N06  C26  C03  N04    0.00   0.0  0
- NWQ  CONST_17  N27  C26  C03  N04  180.00   0.0  0
- NWQ  CONST_18  C07  N06  C26  C03  180.00   0.0  0
- NWQ  CONST_19  N04  C05  N06  C07  180.00   0.0  0
- NWQ  CONST_20  N27  C26  N06  C07    0.00   0.0  0
- NWQ  CONST_21  N01  C02  C03  C26  180.00   0.0  0
- NWQ  CONST_22  N01  C02  N29  C28  180.00   0.0  0
- NWQ  CONST_23  N04  C03  C02  N01    0.00   0.0  0
- NWQ  CONST_24  H3   C05  N06  C26  180.00   0.0  0
- NWQ  CONST_25  H2   C28  N27  C26  180.00   0.0  0
- NWQ  CONST_26  H10  N01  C02  C03  180.00   0.0  0
- NWQ  CONST_27  H11  N01  C02  C03    0.00   0.0  0
- NWQ  CONST_28  C16  N15  C14  C13  180.00   0.0  0
- NWQ  CONST_29  H12  N15  C14  C13    0.00   0.0  0
- NWQ  CONST_30  O25  C14  N15  C16    0.00   0.0  0
- NWQ  Var_01    H7   C16  N15  C14  -58.47  30.0  3
+ NWQ  CONST_01  C05  N04  C03  C26     0.00   0.0  0
+ NWQ  CONST_02  N29  C02  C03  C26     0.00   0.0  0
+ NWQ  CONST_03  N04  C05  N06  C26     0.00   0.0  0
+ NWQ  CONST_04  N29  C28  N27  C26     0.00   0.0  0
+ NWQ  CONST_05  C03  C02  N29  C28     0.00   0.0  0
+ NWQ  CONST_06  C03  C26  N27  C28     0.00   0.0  0
+ NWQ  CONST_07  N06  C26  N27  C28   180.00   0.0  0
+ NWQ  CONST_08  C05  N04  C03  C02   180.00   0.0  0
+ NWQ  CONST_09  N06  C26  C03  C02   180.00   0.0  0
+ NWQ  CONST_10  N27  C26  C03  C02     0.00   0.0  0
+ NWQ  CONST_11  N27  C28  N29  C02     0.00   0.0  0
+ NWQ  CONST_12  N06  C05  N04  C03     0.00   0.0  0
+ NWQ  CONST_13  C05  N06  C26  C03     0.00   0.0  0
+ NWQ  CONST_14  N27  C26  N06  C05   180.00   0.0  0
+ NWQ  CONST_15  N29  C02  C03  N04   180.00   0.0  0
+ NWQ  CONST_16  N06  C26  C03  N04     0.00   0.0  0
+ NWQ  CONST_17  N27  C26  C03  N04   180.00   0.0  0
+ NWQ  CONST_18  C07  N06  C26  C03   180.00   0.0  0
+ NWQ  CONST_19  N04  C05  N06  C07   180.00   0.0  0
+ NWQ  CONST_20  N27  C26  N06  C07     0.00   0.0  0
+ NWQ  CONST_21  N01  C02  C03  C26   180.00   0.0  0
+ NWQ  CONST_22  N01  C02  N29  C28   180.00   0.0  0
+ NWQ  CONST_23  N04  C03  C02  N01     0.00   0.0  0
+ NWQ  CONST_24  H3   C05  N06  C26   180.00   0.0  0
+ NWQ  CONST_25  H2   C28  N27  C26   180.00   0.0  0
+ NWQ  CONST_26  H10  N01  C02  C03   180.00   0.0  0
+ NWQ  CONST_27  H11  N01  C02  C03     0.00   0.0  0
+ NWQ  CONST_28  C16  N15  C14  C13   180.00   0.0  0
+ NWQ  CONST_29  H12  N15  C14  C13     0.00   0.0  0
+ NWQ  CONST_30  O25  C14  N15  C16     0.00   0.0  0
+ NWQ  Var_01    H7   C16  N15  C14   -58.47  30.0  3
+ NWQ  Var_02    N06  C07  O12  C13  -111.37  30.0  1
+ NWQ  Var_03    C08  C07  O12  C13     9.78  30.0  1
+ NWQ  Var_04    C07  C08  C09  C13    36.71  30.0  1
+ NWQ  Var_05    C08  C07  N06  C26    77.70  30.0  2
+ NWQ  Var_06    O12  C07  N06  C26  -164.22  30.0  2
+ NWQ  Var_07    C08  C07  N06  C05  -103.44  30.0  2
+ NWQ  Var_08    O12  C07  N06  C05    14.64  30.0  2
+ NWQ  Var_09    C09  C13  O12  C07    14.76  30.0  1
+ NWQ  Var_10    O12  C13  C09  C08   -32.58  30.0  1
+ NWQ  Var_11    N06  C07  C08  C09    89.85  30.0  1
+ NWQ  Var_12    O12  C07  C08  C09   -29.80  30.0  1
+ NWQ  Var_13    O11  C08  C09  C13   -77.12  30.0  1
+ NWQ  Var_14    O10  C09  C08  C07   154.93  30.0  1
+ NWQ  Var_15    C14  C13  O12  C07   135.79  30.0  1
+ NWQ  Var_16    C14  C13  C09  C08  -152.62  30.0  1
+ NWQ  Var_17    O11  C08  C07  N06  -153.70  30.0  1
+ NWQ  Var_18    O12  C13  C09  O10  -153.66  30.0  1
+ NWQ  Var_19    O12  C07  C08  O11    86.65  30.0  1
+ NWQ  Var_20    H4   C07  O12  C13   131.00  30.0  1
+ NWQ  Var_21    H5   C08  C09  C13   156.35  30.0  1
+ NWQ  Var_22    H6   C09  C08  C07   -79.14  30.0  1
+ NWQ  Var_23    H1   C13  O12  C07  -103.18  30.0  1
+ NWQ  Var_24    O25  C14  C13  C09    97.00  30.0  1
+ NWQ  Var_25    N15  C14  C13  C09   -80.74  30.0  1
+ NWQ  Var_26    O10  C09  C13  C14    86.31  30.0  1
+ NWQ  Var_27    O12  C13  C14  N15   162.12  30.0  3
+ NWQ  Var_28    O11  C08  C09  O10    41.10  30.0  1
+ NWQ  Var_29    O25  C14  C13  O12   -20.13  30.0  1
+ NWQ  Var_30    H13  O10  C09  C13  -157.70  30.0  3
+ NWQ  Var_31    H14  O11  C08  C07  -151.67  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

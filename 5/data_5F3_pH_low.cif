@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5F3  5F3  '3,5-di(pyridin-4-yl)benzoic acid'  ligand  33  21  .  2021-08-05  2021-08-05  
+ 5F3  5F3  '3,5-di(pyridin-4-yl)benzoic acid'  ligand  33  21  .  2021-08-05  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5F3
@@ -187,47 +188,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5F3  CONST_01  N1   C14  C13  C12    0.00   0.0  0
- 5F3  CONST_02  N1   C15  C16  C12    0.00   0.0  0
- 5F3  CONST_03  C5   C6   C7   C12  180.00   0.0  0
- 5F3  CONST_04  C9   C8   C7   C12  180.00   0.0  0
- 5F3  CONST_05  C14  C13  C12  C7   180.00   0.0  0
- 5F3  CONST_06  C15  C16  C12  C7   180.00   0.0  0
- 5F3  CONST_07  C4   C5   C6   C7   180.00   0.0  0
- 5F3  CONST_08  C10  C5   C6   C7     0.00   0.0  0
- 5F3  CONST_09  C10  C9   C8   C7     0.00   0.0  0
- 5F3  CONST_12  C5   C6   C7   C8     0.00   0.0  0
- 5F3  CONST_13  C5   C10  C9   C8     0.00   0.0  0
- 5F3  CONST_14  C6   C7   C8   C9     0.00   0.0  0
- 5F3  CONST_15  C6   C5   C10  C9     0.00   0.0  0
- 5F3  CONST_16  C4   C5   C10  C9   180.00   0.0  0
- 5F3  CONST_19  C    C1   N    C2     0.00   0.0  0
- 5F3  CONST_20  C    C4   C3   C2     0.00   0.0  0
- 5F3  CONST_21  C5   C4   C3   C2   180.00   0.0  0
- 5F3  CONST_26  C1   C    C4   C5   180.00   0.0  0
- 5F3  CONST_27  N    C1   C    C4     0.00   0.0  0
- 5F3  CONST_28  N    C2   C3   C4     0.00   0.0  0
- 5F3  CONST_29  C1   C    C4   C3     0.00   0.0  0
- 5F3  CONST_30  C1   N    C2   C3     0.00   0.0  0
- 5F3  CONST_31  C14  N1   C15  C16    0.00   0.0  0
- 5F3  CONST_32  C14  C13  C12  C16    0.00   0.0  0
- 5F3  CONST_33  C13  C14  N1   C15    0.00   0.0  0
- 5F3  CONST_34  C13  C12  C16  C15    0.00   0.0  0
- 5F3  CONST_35  C7   C8   C9   C11  180.00   0.0  0
- 5F3  CONST_36  C5   C10  C9   C11  180.00   0.0  0
- 5F3  CONST_37  H9   C14  C13  C12  180.00   0.0  0
- 5F3  CONST_38  H10  C15  C16  C12  180.00   0.0  0
- 5F3  CONST_39  H4   C6   C7   C12    0.00   0.0  0
- 5F3  CONST_40  H5   C8   C7   C12    0.00   0.0  0
- 5F3  CONST_41  H8   C13  C12  C7     0.00   0.0  0
- 5F3  CONST_42  H11  C16  C12  C7     0.00   0.0  0
- 5F3  CONST_43  H6   C10  C9   C8   180.00   0.0  0
- 5F3  CONST_44  H1   C1   N    C2   180.00   0.0  0
- 5F3  CONST_45  H    C    C4   C5     0.00   0.0  0
- 5F3  CONST_46  H3   C3   C4   C5     0.00   0.0  0
- 5F3  CONST_47  H2   C2   C3   C4   180.00   0.0  0
- 5F3  CONST_48  H7   O1   C11  C9   180.00   0.0  0
- 5F3  Var_01    O    C11  C9   C8     1.60  30.0  2
+ 5F3  CONST_01  N1   C14  C13  C12     0.00   0.0  0
+ 5F3  CONST_02  N1   C15  C16  C12     0.00   0.0  0
+ 5F3  CONST_03  C5   C6   C7   C12   180.00   0.0  0
+ 5F3  CONST_04  C9   C8   C7   C12   180.00   0.0  0
+ 5F3  CONST_05  C14  C13  C12  C7    180.00   0.0  0
+ 5F3  CONST_06  C15  C16  C12  C7    180.00   0.0  0
+ 5F3  CONST_07  C4   C5   C6   C7    180.00   0.0  0
+ 5F3  CONST_08  C10  C5   C6   C7      0.00   0.0  0
+ 5F3  CONST_09  C10  C9   C8   C7      0.00   0.0  0
+ 5F3  CONST_10  C5   C6   C7   C8      0.00   0.0  0
+ 5F3  CONST_11  C5   C10  C9   C8      0.00   0.0  0
+ 5F3  CONST_12  C6   C7   C8   C9      0.00   0.0  0
+ 5F3  CONST_13  C6   C5   C10  C9      0.00   0.0  0
+ 5F3  CONST_14  C4   C5   C10  C9    180.00   0.0  0
+ 5F3  CONST_15  C    C1   N    C2      0.00   0.0  0
+ 5F3  CONST_16  C    C4   C3   C2      0.00   0.0  0
+ 5F3  CONST_17  C5   C4   C3   C2    180.00   0.0  0
+ 5F3  CONST_18  C1   C    C4   C5    180.00   0.0  0
+ 5F3  CONST_19  N    C1   C    C4      0.00   0.0  0
+ 5F3  CONST_20  N    C2   C3   C4      0.00   0.0  0
+ 5F3  CONST_21  C1   C    C4   C3      0.00   0.0  0
+ 5F3  CONST_22  C1   N    C2   C3      0.00   0.0  0
+ 5F3  CONST_23  C14  N1   C15  C16     0.00   0.0  0
+ 5F3  CONST_24  C14  C13  C12  C16     0.00   0.0  0
+ 5F3  CONST_25  C13  C14  N1   C15     0.00   0.0  0
+ 5F3  CONST_26  C13  C12  C16  C15     0.00   0.0  0
+ 5F3  CONST_27  C7   C8   C9   C11   180.00   0.0  0
+ 5F3  CONST_28  C5   C10  C9   C11   180.00   0.0  0
+ 5F3  CONST_29  H9   C14  C13  C12   180.00   0.0  0
+ 5F3  CONST_30  H10  C15  C16  C12   180.00   0.0  0
+ 5F3  CONST_31  H4   C6   C7   C12     0.00   0.0  0
+ 5F3  CONST_32  H5   C8   C7   C12     0.00   0.0  0
+ 5F3  CONST_33  H8   C13  C12  C7      0.00   0.0  0
+ 5F3  CONST_34  H11  C16  C12  C7      0.00   0.0  0
+ 5F3  CONST_35  H6   C10  C9   C8    180.00   0.0  0
+ 5F3  CONST_36  H1   C1   N    C2    180.00   0.0  0
+ 5F3  CONST_37  H    C    C4   C5      0.00   0.0  0
+ 5F3  CONST_38  H3   C3   C4   C5      0.00   0.0  0
+ 5F3  CONST_39  H2   C2   C3   C4    180.00   0.0  0
+ 5F3  CONST_40  H7   O1   C11  C9    180.00   0.0  0
+ 5F3  Var_01    O    C11  C9   C8      1.60  30.0  2
+ 5F3  Var_02    C13  C12  C7   C8   -143.32  30.0  3
+ 5F3  Var_03    C16  C12  C7   C8     36.84  30.0  3
+ 5F3  Var_04    C    C4   C5   C10   142.70  30.0  2
+ 5F3  Var_05    C3   C4   C5   C10   -37.38  30.0  2
+ 5F3  Var_06    C13  C12  C7   C6     36.99  30.0  3
+ 5F3  Var_07    C16  C12  C7   C6   -142.85  30.0  3
+ 5F3  Var_08    C    C4   C5   C6    -37.60  30.0  2
+ 5F3  Var_09    C3   C4   C5   C6    142.32  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

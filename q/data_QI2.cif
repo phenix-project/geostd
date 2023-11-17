@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QI2  QI2  (2S,4R)-2-(2-{[3-(4-fluoro-3-methylphenyl)propyl](methyl)amino}ethyl)-4-(4-fluorophenyl)-N-hydroxy-4-methoxybutanamide  ligand  63  31  .  2021-08-20  2021-08-20  
+ QI2  QI2  (2S,4R)-2-(2-{[3-(4-fluoro-3-methylphenyl)propyl](methyl)amino}ethyl)-4-(4-fluorophenyl)-N-hydroxy-4-methoxybutanamide  ligand  63  31  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QI2
@@ -305,47 +306,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QI2  CONST_01  CAO  CAJ  CAI  CAH     0.00   0.0  0
- QI2  CONST_02  CAO  CAN  CAM  CAH     0.00   0.0  0
- QI2  CONST_03  CAN  CAM  CAH  CAI     0.00   0.0  0
- QI2  CONST_04  CAN  CAO  CAJ  CAI     0.00   0.0  0
- QI2  CONST_05  CAM  CAH  CAI  CAJ     0.00   0.0  0
- QI2  CONST_06  CAM  CAN  CAO  CAJ     0.00   0.0  0
- QI2  CONST_07  CBD  CBC  CBB  CAX     0.00   0.0  0
- QI2  CONST_08  CBD  CAZ  CAY  CAX     0.00   0.0  0
- QI2  CONST_09  CBC  CBB  CAX  CAY     0.00   0.0  0
- QI2  CONST_10  CBC  CBD  CAZ  CAY     0.00   0.0  0
- QI2  CONST_11  CBB  CAX  CAY  CAZ     0.00   0.0  0
- QI2  CONST_12  CBB  CBC  CBD  CAZ     0.00   0.0  0
- QI2  CONST_13  CAJ  CAI  CAH  CAG   180.00   0.0  0
- QI2  CONST_14  CAN  CAM  CAH  CAG   180.00   0.0  0
- QI2  CONST_15  FAP  CAO  CAJ  CAI   180.00   0.0  0
- QI2  CONST_16  FAP  CAO  CAN  CAM   180.00   0.0  0
- QI2  CONST_17  CBC  CBB  CAX  CAW   180.00   0.0  0
- QI2  CONST_18  CAZ  CAY  CAX  CAW   180.00   0.0  0
- QI2  CONST_19  CBA  CAZ  CAY  CAX   180.00   0.0  0
- QI2  CONST_20  FBE  CBD  CAZ  CAY   180.00   0.0  0
- QI2  CONST_21  CBC  CBD  CAZ  CBA   180.00   0.0  0
- QI2  CONST_22  FBE  CBD  CBC  CBB   180.00   0.0  0
- QI2  CONST_23  HAJ  CAJ  CAI  CAH   180.00   0.0  0
- QI2  CONST_24  HAN  CAN  CAM  CAH   180.00   0.0  0
- QI2  CONST_25  HAM  CAM  CAH  CAI   180.00   0.0  0
- QI2  CONST_26  HAI  CAI  CAH  CAM   180.00   0.0  0
- QI2  CONST_27  HBC  CBC  CBB  CAX   180.00   0.0  0
- QI2  CONST_28  HBB  CBB  CAX  CAY   180.00   0.0  0
- QI2  CONST_29  HAY  CAY  CAX  CBB   180.00   0.0  0
- QI2  CONST_30  OAD  CAC  NAB  OAA     0.00   0.0  0
- QI2  CONST_31  CAE  CAC  NAB  OAA   180.00   0.0  0
- QI2  CONST_32  H28  NAB  CAC  OAD   180.00   0.0  0
- QI2  Var_01    CBB  CAX  CAW  CAV    91.84  30.0  2
- QI2  Var_02    HBA  CBA  CAZ  CAY   121.64  30.0  2
- QI2  Var_03    CAX  CAW  CAV  CAU  -178.64  30.0  3
- QI2  Var_04    NAT  CAQ  CAK  CAE  -179.49  30.0  1
- QI2  Var_05    CAS  NAT  CAQ  CAK    68.68  30.0  2
- QI2  Var_06    CAV  CAU  NAT  CAQ   171.35  30.0  3
- QI2  Var_07    CAW  CAV  CAU  NAT  -173.84  30.0  1
- QI2  Var_08    HAR  CAR  OAL  CAG   -65.15  30.0  3
- QI2  Var_09    HAS  CAS  NAT  CAQ    63.22  30.0  3
+ QI2  CONST_01  CAO   CAJ  CAI  CAH     0.00   0.0  0
+ QI2  CONST_02  CAO   CAN  CAM  CAH     0.00   0.0  0
+ QI2  CONST_03  CAN   CAM  CAH  CAI     0.00   0.0  0
+ QI2  CONST_04  CAN   CAO  CAJ  CAI     0.00   0.0  0
+ QI2  CONST_05  CAM   CAH  CAI  CAJ     0.00   0.0  0
+ QI2  CONST_06  CAM   CAN  CAO  CAJ     0.00   0.0  0
+ QI2  CONST_07  CBD   CBC  CBB  CAX     0.00   0.0  0
+ QI2  CONST_08  CBD   CAZ  CAY  CAX     0.00   0.0  0
+ QI2  CONST_09  CBC   CBB  CAX  CAY     0.00   0.0  0
+ QI2  CONST_10  CBC   CBD  CAZ  CAY     0.00   0.0  0
+ QI2  CONST_11  CBB   CAX  CAY  CAZ     0.00   0.0  0
+ QI2  CONST_12  CBB   CBC  CBD  CAZ     0.00   0.0  0
+ QI2  CONST_13  CAJ   CAI  CAH  CAG   180.00   0.0  0
+ QI2  CONST_14  CAN   CAM  CAH  CAG   180.00   0.0  0
+ QI2  CONST_15  FAP   CAO  CAJ  CAI   180.00   0.0  0
+ QI2  CONST_16  FAP   CAO  CAN  CAM   180.00   0.0  0
+ QI2  CONST_17  CBC   CBB  CAX  CAW   180.00   0.0  0
+ QI2  CONST_18  CAZ   CAY  CAX  CAW   180.00   0.0  0
+ QI2  CONST_19  CBA   CAZ  CAY  CAX   180.00   0.0  0
+ QI2  CONST_20  FBE   CBD  CAZ  CAY   180.00   0.0  0
+ QI2  CONST_21  CBC   CBD  CAZ  CBA   180.00   0.0  0
+ QI2  CONST_22  FBE   CBD  CBC  CBB   180.00   0.0  0
+ QI2  CONST_23  HAJ   CAJ  CAI  CAH   180.00   0.0  0
+ QI2  CONST_24  HAN   CAN  CAM  CAH   180.00   0.0  0
+ QI2  CONST_25  HAM   CAM  CAH  CAI   180.00   0.0  0
+ QI2  CONST_26  HAI   CAI  CAH  CAM   180.00   0.0  0
+ QI2  CONST_27  HBC   CBC  CBB  CAX   180.00   0.0  0
+ QI2  CONST_28  HBB   CBB  CAX  CAY   180.00   0.0  0
+ QI2  CONST_29  HAY   CAY  CAX  CBB   180.00   0.0  0
+ QI2  CONST_30  OAD   CAC  NAB  OAA     0.00   0.0  0
+ QI2  CONST_31  CAE   CAC  NAB  OAA   180.00   0.0  0
+ QI2  CONST_32  H28   NAB  CAC  OAD   180.00   0.0  0
+ QI2  Var_01    CBB   CAX  CAW  CAV    91.84  30.0  2
+ QI2  Var_02    HBA   CBA  CAZ  CAY   121.64  30.0  2
+ QI2  Var_03    CAX   CAW  CAV  CAU  -178.64  30.0  3
+ QI2  Var_04    NAT   CAQ  CAK  CAE  -179.49  30.0  1
+ QI2  Var_05    CAS   NAT  CAQ  CAK    68.68  30.0  2
+ QI2  Var_06    CAV   CAU  NAT  CAQ   171.35  30.0  3
+ QI2  Var_07    CAW   CAV  CAU  NAT  -173.84  30.0  1
+ QI2  Var_08    HAR   CAR  OAL  CAG   -65.15  30.0  3
+ QI2  Var_09    HAS   CAS  NAT  CAQ    63.22  30.0  3
+ QI2  Var_10    CAI   CAH  CAG  CAF    99.62  30.0  2
+ QI2  Var_11    CAM   CAH  CAG  CAF   -78.35  30.0  2
+ QI2  Var_12    OAL   CAG  CAH  CAI  -139.69  30.0  2
+ QI2  Var_13    CAM   CAH  CAG  OAL    42.34  30.0  2
+ QI2  Var_14    HAG   CAG  CAH  CAI   -18.94  30.0  2
+ QI2  Var_15    CAH   CAG  CAF  CAE   178.64  30.0  3
+ QI2  Var_16    CAR   OAL  CAG  CAH    72.32  30.0  3
+ QI2  Var_17    HAF   CAF  CAG  CAH    56.65  30.0  1
+ QI2  Var_18    HAFA  CAF  CAG  CAH   -58.90  30.0  1
+ QI2  Var_19    CAF   CAE  CAC  NAB  -112.23  30.0  2
+ QI2  Var_20    CAK   CAE  CAC  NAB   125.41  30.0  2
+ QI2  Var_21    CAG   CAF  CAE  CAC    56.50  30.0  3
+ QI2  Var_22    CAQ   CAK  CAE  CAC   -62.93  30.0  2
+ QI2  Var_23    CAF   CAE  CAC  OAD    66.05  30.0  2
+ QI2  Var_24    CAK   CAE  CAC  OAD   -56.31  30.0  2
+ QI2  Var_25    OAL   CAG  CAF  CAE    55.45  30.0  3
+ QI2  Var_26    CAQ   CAK  CAE  CAF   175.32  30.0  2
+ QI2  Var_27    CAR   OAL  CAG  CAF  -165.70  30.0  3
+ QI2  Var_28    CAK   CAE  CAF  CAG   178.69  30.0  1
+ QI2  Var_29    HAE   CAE  CAC  NAB     6.68  30.0  2
+ QI2  Var_30    H27   OAA  NAB  CAC   -98.90  30.0  3
+ QI2  Var_31    HAK   CAK  CAE  CAC    59.57  30.0  2
+ QI2  Var_32    H29   CAK  CAE  CAC   175.49  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

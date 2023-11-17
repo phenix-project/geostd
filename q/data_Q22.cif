@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- Q22  Q22  (4aS)-5-[(2,4-diaminopteridin-6-yl)methyl]-4a,5-dihydro-2H-dibenzo[b,f]azepin-8-ol  ligand  48  29  .  2021-08-20  2021-08-20  
+ Q22  Q22  (4aS)-5-[(2,4-diaminopteridin-6-yl)methyl]-4a,5-dihydro-2H-dibenzo[b,f]azepin-8-ol  ligand  48  29  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_Q22
@@ -251,48 +252,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- Q22  CONST_01  N1'   C8   N8'  C7'  180.00   0.0  0
- Q22  CONST_02  C4    C8   N8'  C7'    0.00   0.0  0
- Q22  CONST_03  C4    N5'  C6'  C7'    0.00   0.0  0
- Q22  CONST_04  N5'   C6'  C7'  N8'    0.00   0.0  0
- Q22  CONST_05  C2'   N1'  C8   N8'  180.00   0.0  0
- Q22  CONST_06  C4'   C4   C8   N8'  180.00   0.0  0
- Q22  CONST_07  N5'   C4   C8   N8'    0.00   0.0  0
- Q22  CONST_08  C6'   C7'  N8'  C8     0.00   0.0  0
- Q22  CONST_09  N3'   C2'  N1'  C8     0.00   0.0  0
- Q22  CONST_10  N3'   C4'  C4   C8     0.00   0.0  0
- Q22  CONST_11  C6'   N5'  C4   C8     0.00   0.0  0
- Q22  CONST_12  C4'   C4   C8   N1'    0.00   0.0  0
- Q22  CONST_13  N5'   C4   C8   N1'  180.00   0.0  0
- Q22  CONST_14  C4'   N3'  C2'  N1'    0.00   0.0  0
- Q22  CONST_15  C4    C8   N1'  C2'    0.00   0.0  0
- Q22  CONST_16  C4    C4'  N3'  C2'    0.00   0.0  0
- Q22  CONST_17  N5'   C4   C4'  N3'  180.00   0.0  0
- Q22  CONST_18  C6'   N5'  C4   C4'  180.00   0.0  0
- Q22  CONST_19  C11   C'9  C'8  C'7    0.00   0.0  0
- Q22  CONST_20  C9    C11  C'9  C'8    0.00   0.0  0
- Q22  CONST_21  C'9   C11  C9   C7     0.00   0.0  0
- Q22  CONST_22  C9'   C6'  C7'  N8'  180.00   0.0  0
- Q22  CONST_23  N2'   C2'  N1'  C8   180.00   0.0  0
- Q22  CONST_24  N4'   C4'  C4   C8   180.00   0.0  0
- Q22  CONST_25  N4'   C4'  N3'  C2'  180.00   0.0  0
- Q22  CONST_26  C4'   N3'  C2'  N2'  180.00   0.0  0
- Q22  CONST_27  N5'   C4   C4'  N4'    0.00   0.0  0
- Q22  CONST_28  C9'   C6'  N5'  C4   180.00   0.0  0
- Q22  CONST_29  O1    C'9  C'8  C'7  180.00   0.0  0
- Q22  CONST_30  O1    C'9  C11  C9   180.00   0.0  0
- Q22  CONST_31  H7'   C7'  N8'  C8   180.00   0.0  0
- Q22  CONST_32  H11   C11  C'9  C'8  180.00   0.0  0
- Q22  CONST_33  H'8   C'8  C'9  C11  180.00   0.0  0
- Q22  CONST_34  H9    C9   C11  C'9  180.00   0.0  0
- Q22  CONST_35  HN2'  N2'  C2'  N1'    0.00   0.0  0
- Q22  CONST_36  HN2A  N2'  C2'  N1'  180.00   0.0  0
- Q22  CONST_37  HN4'  N4'  C4'  N3'    0.00   0.0  0
- Q22  CONST_38  HN4A  N4'  C4'  N3'  180.00   0.0  0
- Q22  Var_01    C'3   C'2  C'1  C'0   -1.09  30.0  1
- Q22  Var_02    C'4   C'3  C'2  C'1  -11.64  30.0  1
- Q22  Var_03    C'5   C'4  C'3  C'2   10.08  30.0  1
- Q22  Var_04    N'0   C9'  C6'  C7'  142.10  30.0  2
+ Q22  CONST_01  N1'   C8   N8'  C7'   180.00   0.0  0
+ Q22  CONST_02  C4    C8   N8'  C7'     0.00   0.0  0
+ Q22  CONST_03  C4    N5'  C6'  C7'     0.00   0.0  0
+ Q22  CONST_04  N5'   C6'  C7'  N8'     0.00   0.0  0
+ Q22  CONST_05  C2'   N1'  C8   N8'   180.00   0.0  0
+ Q22  CONST_06  C4'   C4   C8   N8'   180.00   0.0  0
+ Q22  CONST_07  N5'   C4   C8   N8'     0.00   0.0  0
+ Q22  CONST_08  C6'   C7'  N8'  C8      0.00   0.0  0
+ Q22  CONST_09  N3'   C2'  N1'  C8      0.00   0.0  0
+ Q22  CONST_10  N3'   C4'  C4   C8      0.00   0.0  0
+ Q22  CONST_11  C6'   N5'  C4   C8      0.00   0.0  0
+ Q22  CONST_12  C4'   C4   C8   N1'     0.00   0.0  0
+ Q22  CONST_13  N5'   C4   C8   N1'   180.00   0.0  0
+ Q22  CONST_14  C4'   N3'  C2'  N1'     0.00   0.0  0
+ Q22  CONST_15  C4    C8   N1'  C2'     0.00   0.0  0
+ Q22  CONST_16  C4    C4'  N3'  C2'     0.00   0.0  0
+ Q22  CONST_17  N5'   C4   C4'  N3'   180.00   0.0  0
+ Q22  CONST_18  C6'   N5'  C4   C4'   180.00   0.0  0
+ Q22  CONST_19  C11   C'9  C'8  C'7     0.00   0.0  0
+ Q22  CONST_20  C9    C11  C'9  C'8     0.00   0.0  0
+ Q22  CONST_21  C'9   C11  C9   C7      0.00   0.0  0
+ Q22  CONST_22  C9'   C6'  C7'  N8'   180.00   0.0  0
+ Q22  CONST_23  N2'   C2'  N1'  C8    180.00   0.0  0
+ Q22  CONST_24  N4'   C4'  C4   C8    180.00   0.0  0
+ Q22  CONST_25  N4'   C4'  N3'  C2'   180.00   0.0  0
+ Q22  CONST_26  C4'   N3'  C2'  N2'   180.00   0.0  0
+ Q22  CONST_27  N5'   C4   C4'  N4'     0.00   0.0  0
+ Q22  CONST_28  C9'   C6'  N5'  C4    180.00   0.0  0
+ Q22  CONST_29  O1    C'9  C'8  C'7   180.00   0.0  0
+ Q22  CONST_30  O1    C'9  C11  C9    180.00   0.0  0
+ Q22  CONST_31  H7'   C7'  N8'  C8    180.00   0.0  0
+ Q22  CONST_32  H11   C11  C'9  C'8   180.00   0.0  0
+ Q22  CONST_33  H'8   C'8  C'9  C11   180.00   0.0  0
+ Q22  CONST_34  H9    C9   C11  C'9   180.00   0.0  0
+ Q22  CONST_35  HN2'  N2'  C2'  N1'     0.00   0.0  0
+ Q22  CONST_36  HN2A  N2'  C2'  N1'   180.00   0.0  0
+ Q22  CONST_37  HN4'  N4'  C4'  N3'     0.00   0.0  0
+ Q22  CONST_38  HN4A  N4'  C4'  N3'   180.00   0.0  0
+ Q22  Var_01    C'3   C'2  C'1  C'0    -1.09  30.0  1
+ Q22  Var_02    C'4   C'3  C'2  C'1   -11.64  30.0  1
+ Q22  Var_03    C'5   C'4  C'3  C'2    10.08  30.0  1
+ Q22  Var_04    N'0   C9'  C6'  C7'   142.10  30.0  2
+ Q22  CONST_39  C11   C9   C7   C'7     0.00   0.0  0
+ Q22  CONST_40  C9    C7   C'7  C'8     0.00   0.0  0
+ Q22  CONST_41  C'9   C'8  C'7  C7      0.00   0.0  0
+ Q22  Var_05    C'3   C'4  C'5  C'0     4.17   0.0  0
+ Q22  Var_06    C'6   C'5  C'4  C'3  -175.37   0.0  0
+ Q22  Var_07    C'2   C'1  C'0  N'0   143.03  30.0  1
+ Q22  Var_08    C'4   C'5  C'0  N'0  -143.07  30.0  1
+ Q22  Var_09    C'6   C'5  C'0  N'0    36.48  30.0  1
+ Q22  Var_10    C'7   C7   N'0  C'0   -70.99  30.0  1
+ Q22  Var_11    C9    C7   N'0  C'0   114.39  30.0  1
+ Q22  Var_12    C6    C'6  C'5  C'0   -61.10  30.0  1
+ Q22  Var_13    C7    N'0  C'0  C'1   -85.44  30.0  1
+ Q22  Var_14    C'4   C'5  C'0  C'1   -16.21  30.0  1
+ Q22  Var_15    C'6   C'5  C'0  C'1   163.34  30.0  1
+ Q22  Var_16    C'5   C'0  C'1  C'2    14.85  30.0  1
+ Q22  Var_17    C6    C'6  C'5  C'4   118.46  30.0  1
+ Q22  Var_18    C7    N'0  C'0  C'5    41.71  30.0  1
+ Q22  Var_19    C'7   C6   C'6  C'5     0.39  30.0  1
+ Q22  Var_20    C'8   C'7  C6   C'6  -140.45  30.0  1
+ Q22  Var_21    C7    C'7  C6   C'6    38.51  30.0  1
+ Q22  Var_22    C'0   N'0  C9'  C6'   -68.21  30.0  3
+ Q22  Var_23    C7    N'0  C9'  C6'   141.84  30.0  3
+ Q22  Var_24    C'1   C'0  N'0  C9'   125.44  30.0  1
+ Q22  Var_25    C'5   C'0  N'0  C9'  -107.41  30.0  1
+ Q22  Var_26    C'7   C7   N'0  C9'    78.21  30.0  1
+ Q22  Var_27    C9    C7   N'0  C9'   -96.41  30.0  1
+ Q22  Var_28    H'4   C'4  C'5  C'0  -178.08   0.0  0
+ Q22  Var_29    H'1   C'1  C'0  N'0   -38.51  30.0  1
+ Q22  Var_30    H19   C'6  C'5  C'0   124.13  30.0  1
+ Q22  Var_31    H'0   C'0  C'1  C'2  -101.92  30.0  1
+ Q22  Var_32    H6    C6   C'6  C'5  -174.08  30.0  1
+ Q22  Var_33    HO1   O1   C'9  C'8    -0.33  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

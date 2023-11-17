@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HC6  HC6  (2S,2'S)-2,2'-biphenyl-4,4'-diylbis(2-hydroxy-4,4-dimethylmorpholin-4-ium)  ligand  64  30  .  2021-08-11  2022-09-22
+ HC6  HC6  (2S,2'S)-2,2'-biphenyl-4,4'-diylbis(2-hydroxy-4,4-dimethylmorpholin-4-ium)  ligand  64  30  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HC6
@@ -320,45 +321,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HC6  CONST_01  CAJ  CAK  CAL  CAG    0.00   0.0  0
- HC6  CONST_02  CAJ  CAI  CAH  CAG    0.00   0.0  0
- HC6  CONST_03  CAI  CAH  CAG  CAL    0.00   0.0  0
- HC6  CONST_04  CAI  CAJ  CAK  CAL    0.00   0.0  0
- HC6  CONST_05  CAM  CAJ  CAK  CAL  180.00   0.0  0
- HC6  CONST_06  CAH  CAG  CAL  CAK    0.00   0.0  0
- HC6  CONST_07  CAH  CAI  CAJ  CAK    0.00   0.0  0
- HC6  CONST_10  CAM  CAJ  CAI  CAH  180.00   0.0  0
- HC6  CONST_13  CAQ  CAR  CAM  CAJ  180.00   0.0  0
- HC6  CONST_14  CAO  CAN  CAM  CAJ  180.00   0.0  0
- HC6  CONST_15  CAP  CAQ  CAR  CAM    0.00   0.0  0
- HC6  CONST_16  CAP  CAO  CAN  CAM    0.00   0.0  0
- HC6  CONST_17  CAO  CAN  CAM  CAR    0.00   0.0  0
- HC6  CONST_18  CAO  CAP  CAQ  CAR    0.00   0.0  0
- HC6  CONST_19  CAN  CAM  CAR  CAQ    0.00   0.0  0
- HC6  CONST_20  CAN  CAO  CAP  CAQ    0.00   0.0  0
- HC6  CONST_21  CAK  CAL  CAG  CAD  180.00   0.0  0
- HC6  CONST_22  CAI  CAH  CAG  CAD  180.00   0.0  0
- HC6  CONST_23  CAS  CAP  CAQ  CAR  180.00   0.0  0
- HC6  CONST_24  CAS  CAP  CAO  CAN  180.00   0.0  0
- HC6  CONST_25  HAL  CAL  CAG  CAD    0.00   0.0  0
- HC6  CONST_26  HAH  CAH  CAG  CAD    0.00   0.0  0
- HC6  CONST_27  HAK  CAK  CAL  CAG  180.00   0.0  0
- HC6  CONST_28  HAI  CAI  CAH  CAG  180.00   0.0  0
- HC6  CONST_29  HAR  CAR  CAM  CAJ    0.00   0.0  0
- HC6  CONST_30  HAN  CAN  CAM  CAJ    0.00   0.0  0
- HC6  CONST_31  HAQ  CAQ  CAR  CAM  180.00   0.0  0
- HC6  CONST_32  HAO  CAO  CAN  CAM  180.00   0.0  0
- HC6  Var_01    CAF  CAB  NAA  CAC   52.11  30.0  1
- HC6  Var_02    OAE  CAF  CAB  NAA  -57.57  30.0  1
- HC6  Var_03    CAD  CAC  NAA  CAB  -49.12  30.0  1
- HC6  Var_04    CAV  NAW  CAX  CAS  -48.25  30.0  1
- HC6  Var_05    CAV  CAU  OAT  CAS   59.78  30.0  1
- HC6  Var_06    CAU  CAV  NAW  CAX   51.09  30.0  1
- HC6  Var_07    NAW  CAV  CAU  OAT  -57.34  30.0  1
- HC6  Var_08    HBA  CBA  NAA  CAC   54.13  30.0  3
- HC6  Var_09    HBB  CBB  NAA  CAC   57.02  30.0  3
- HC6  Var_10    HAZ  CAZ  NAW  CAX   56.77  30.0  3
- HC6  Var_11    HAY  CAY  NAW  CAX   60.04  30.0  3
+ HC6  CONST_01  CAJ   CAK  CAL  CAG     0.00   0.0  0
+ HC6  CONST_02  CAJ   CAI  CAH  CAG     0.00   0.0  0
+ HC6  CONST_03  CAI   CAH  CAG  CAL     0.00   0.0  0
+ HC6  CONST_04  CAI   CAJ  CAK  CAL     0.00   0.0  0
+ HC6  CONST_05  CAM   CAJ  CAK  CAL   180.00   0.0  0
+ HC6  CONST_06  CAH   CAG  CAL  CAK     0.00   0.0  0
+ HC6  CONST_07  CAH   CAI  CAJ  CAK     0.00   0.0  0
+ HC6  CONST_08  CAM   CAJ  CAI  CAH   180.00   0.0  0
+ HC6  CONST_09  CAQ   CAR  CAM  CAJ   180.00   0.0  0
+ HC6  CONST_10  CAO   CAN  CAM  CAJ   180.00   0.0  0
+ HC6  CONST_11  CAP   CAQ  CAR  CAM     0.00   0.0  0
+ HC6  CONST_12  CAP   CAO  CAN  CAM     0.00   0.0  0
+ HC6  CONST_13  CAO   CAN  CAM  CAR     0.00   0.0  0
+ HC6  CONST_14  CAO   CAP  CAQ  CAR     0.00   0.0  0
+ HC6  CONST_15  CAN   CAM  CAR  CAQ     0.00   0.0  0
+ HC6  CONST_16  CAN   CAO  CAP  CAQ     0.00   0.0  0
+ HC6  CONST_17  CAK   CAL  CAG  CAD   180.00   0.0  0
+ HC6  CONST_18  CAI   CAH  CAG  CAD   180.00   0.0  0
+ HC6  CONST_19  CAS   CAP  CAQ  CAR   180.00   0.0  0
+ HC6  CONST_20  CAS   CAP  CAO  CAN   180.00   0.0  0
+ HC6  CONST_21  HAL   CAL  CAG  CAD     0.00   0.0  0
+ HC6  CONST_22  HAH   CAH  CAG  CAD     0.00   0.0  0
+ HC6  CONST_23  HAK   CAK  CAL  CAG   180.00   0.0  0
+ HC6  CONST_24  HAI   CAI  CAH  CAG   180.00   0.0  0
+ HC6  CONST_25  HAR   CAR  CAM  CAJ     0.00   0.0  0
+ HC6  CONST_26  HAN   CAN  CAM  CAJ     0.00   0.0  0
+ HC6  CONST_27  HAQ   CAQ  CAR  CAM   180.00   0.0  0
+ HC6  CONST_28  HAO   CAO  CAN  CAM   180.00   0.0  0
+ HC6  Var_01    CAF   CAB  NAA  CAC    52.11  30.0  1
+ HC6  Var_02    OAE   CAF  CAB  NAA   -57.57  30.0  1
+ HC6  Var_03    CAD   CAC  NAA  CAB   -49.12  30.0  1
+ HC6  Var_04    CAV   NAW  CAX  CAS   -48.25  30.0  1
+ HC6  Var_05    CAV   CAU  OAT  CAS    59.78  30.0  1
+ HC6  Var_06    CAU   CAV  NAW  CAX    51.09  30.0  1
+ HC6  Var_07    NAW   CAV  CAU  OAT   -57.34  30.0  1
+ HC6  Var_08    HBA   CBA  NAA  CAC    54.13  30.0  3
+ HC6  Var_09    HBB   CBB  NAA  CAC    57.02  30.0  3
+ HC6  Var_10    HAZ   CAZ  NAW  CAX    56.77  30.0  3
+ HC6  Var_11    HAY   CAY  NAW  CAX    60.04  30.0  3
+ HC6  Var_12    CAF   OAE  CAD  CAC   -53.98  30.0  1
+ HC6  Var_13    CAL   CAG  CAD  CAC    86.33  30.0  2
+ HC6  Var_14    CAH   CAG  CAD  CAC   -90.85  30.0  2
+ HC6  Var_15    OAE   CAD  CAC  NAA    49.88  30.0  1
+ HC6  Var_16    CAG   CAD  CAC  NAA   166.58  30.0  1
+ HC6  Var_17    CAD   OAE  CAF  CAB    59.04  30.0  1
+ HC6  Var_18    CAG   CAD  OAE  CAF  -170.45  30.0  1
+ HC6  Var_19    CAL   CAG  CAD  OAE  -154.82  30.0  2
+ HC6  Var_20    CAH   CAG  CAD  OAE    28.01  30.0  2
+ HC6  Var_21    CAR   CAM  CAJ  CAK  -144.63  30.0  2
+ HC6  Var_22    CAN   CAM  CAJ  CAK    35.05  30.0  2
+ HC6  Var_23    CAR   CAM  CAJ  CAI    34.90  30.0  2
+ HC6  Var_24    CAN   CAM  CAJ  CAI  -145.42  30.0  2
+ HC6  Var_25    CAX   CAS  CAP  CAQ    85.19  30.0  2
+ HC6  Var_26    OAT   CAS  CAP  CAQ  -155.92  30.0  2
+ HC6  Var_27    CAX   CAS  CAP  CAO   -92.07  30.0  2
+ HC6  Var_28    OAT   CAS  CAP  CAO    26.82  30.0  2
+ HC6  Var_29    NAW   CAX  CAS  CAP   166.97  30.0  1
+ HC6  Var_30    CAU   OAT  CAS  CAP  -171.43  30.0  1
+ HC6  Var_31    CAU   OAT  CAS  CAX   -54.85  30.0  1
+ HC6  Var_32    NAW   CAX  CAS  OAT    49.99  30.0  1
+ HC6  Var_33    OBC   CAD  CAC  NAA   -72.71  30.0  1
+ HC6  Var_34    OBC   CAD  OAE  CAF    66.17  30.0  1
+ HC6  Var_35    CAL   CAG  CAD  OBC   -31.57  30.0  2
+ HC6  Var_36    CAH   CAG  CAD  OBC   151.26  30.0  2
+ HC6  Var_37    OBD   CAS  CAP  CAQ   -32.59  30.0  2
+ HC6  Var_38    OBD   CAS  CAP  CAO   150.15  30.0  2
+ HC6  Var_39    NAW   CAX  CAS  OBD   -72.49  30.0  1
+ HC6  Var_40    CAU   OAT  CAS  OBD    65.16  30.0  1
+ HC6  Var_41    HAX   CAX  CAS  CAP   -70.55  30.0  1
+ HC6  Var_42    HAXA  CAX  CAS  CAP    48.27  30.0  1
+ HC6  Var_43    H33   OBC  CAD  CAC  -174.24  30.0  3
+ HC6  Var_44    H34   OBD  CAS  CAP   -56.56  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

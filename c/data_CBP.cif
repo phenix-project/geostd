@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CBP  CBP  2-(4-{[4-(4-chlorophenoxy)phenyl]sulfonyl}tetrahydro-2H-pyran-4-yl)-N-hydroxyacetamide  ligand  48  28  .  2021-08-07  2021-08-07  
+ CBP  CBP  2-(4-{[4-(4-chlorophenoxy)phenyl]sulfonyl}tetrahydro-2H-pyran-4-yl)-N-hydroxyacetamide  ligand  48  28  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CBP
@@ -250,42 +251,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CBP  CONST_01  C18   C17  C16  C15    0.00   0.0  0
- CBP  CONST_02  C18   C19  C20  C15    0.00   0.0  0
- CBP  CONST_03  C19   C20  C15  C16    0.00   0.0  0
- CBP  CONST_04  C19   C18  C17  C16    0.00   0.0  0
- CBP  CONST_05  C20   C15  C16  C17    0.00   0.0  0
- CBP  CONST_06  C20   C19  C18  C17    0.00   0.0  0
- CBP  CONST_07  C25   C24  C23  C22    0.00   0.0  0
- CBP  CONST_08  C25   C26  C27  C22    0.00   0.0  0
- CBP  CONST_09  C26   C27  C22  C23    0.00   0.0  0
- CBP  CONST_10  C26   C25  C24  C23    0.00   0.0  0
- CBP  CONST_11  C27   C22  C23  C24    0.00   0.0  0
- CBP  CONST_12  C27   C26  C25  C24    0.00   0.0  0
- CBP  CONST_13  C17   C16  C15  S12  180.00   0.0  0
- CBP  CONST_14  C19   C20  C15  S12  180.00   0.0  0
- CBP  CONST_15  O21   C18  C17  C16  180.00   0.0  0
- CBP  CONST_16  O21   C18  C19  C20  180.00   0.0  0
- CBP  CONST_17  C24   C23  C22  O21  180.00   0.0  0
- CBP  CONST_18  C26   C27  C22  O21  180.00   0.0  0
- CBP  CONST_19  CL28  C25  C24  C23  180.00   0.0  0
- CBP  CONST_20  CL28  C25  C26  C27  180.00   0.0  0
- CBP  CONST_21  H171  C17  C16  C15  180.00   0.0  0
- CBP  CONST_22  H191  C19  C20  C15  180.00   0.0  0
- CBP  CONST_23  H201  C20  C15  C16  180.00   0.0  0
- CBP  CONST_24  H161  C16  C17  C18  180.00   0.0  0
- CBP  CONST_25  H241  C24  C23  C22  180.00   0.0  0
- CBP  CONST_26  H261  C26  C27  C22  180.00   0.0  0
- CBP  CONST_27  H271  C27  C22  C23  180.00   0.0  0
- CBP  CONST_28  H231  C23  C24  C25  180.00   0.0  0
- CBP  CONST_29  O4    C3   N2   O1     0.00   0.0  0
- CBP  CONST_30  C5    C3   N2   O1   180.00   0.0  0
- CBP  Var_01    O9    C8   C7   C6    57.71  30.0  1
- CBP  Var_02    O9    C10  C11  C6   -55.47  30.0  1
- CBP  Var_03    C11   C10  O9   C8    58.86  30.0  1
- CBP  Var_04    C16   C15  S12  C6    99.81  30.0  2
- CBP  Var_05    C23   C22  O21  C18   97.94  30.0  2
- CBP  Var_06    C6    C5   C3   N2   128.14  30.0  3
+ CBP  CONST_01  C18   C17  C16  C15     0.00   0.0  0
+ CBP  CONST_02  C18   C19  C20  C15     0.00   0.0  0
+ CBP  CONST_03  C19   C20  C15  C16     0.00   0.0  0
+ CBP  CONST_04  C19   C18  C17  C16     0.00   0.0  0
+ CBP  CONST_05  C20   C15  C16  C17     0.00   0.0  0
+ CBP  CONST_06  C20   C19  C18  C17     0.00   0.0  0
+ CBP  CONST_07  C25   C24  C23  C22     0.00   0.0  0
+ CBP  CONST_08  C25   C26  C27  C22     0.00   0.0  0
+ CBP  CONST_09  C26   C27  C22  C23     0.00   0.0  0
+ CBP  CONST_10  C26   C25  C24  C23     0.00   0.0  0
+ CBP  CONST_11  C27   C22  C23  C24     0.00   0.0  0
+ CBP  CONST_12  C27   C26  C25  C24     0.00   0.0  0
+ CBP  CONST_13  C17   C16  C15  S12   180.00   0.0  0
+ CBP  CONST_14  C19   C20  C15  S12   180.00   0.0  0
+ CBP  CONST_15  O21   C18  C17  C16   180.00   0.0  0
+ CBP  CONST_16  O21   C18  C19  C20   180.00   0.0  0
+ CBP  CONST_17  C24   C23  C22  O21   180.00   0.0  0
+ CBP  CONST_18  C26   C27  C22  O21   180.00   0.0  0
+ CBP  CONST_19  CL28  C25  C24  C23   180.00   0.0  0
+ CBP  CONST_20  CL28  C25  C26  C27   180.00   0.0  0
+ CBP  CONST_21  H171  C17  C16  C15   180.00   0.0  0
+ CBP  CONST_22  H191  C19  C20  C15   180.00   0.0  0
+ CBP  CONST_23  H201  C20  C15  C16   180.00   0.0  0
+ CBP  CONST_24  H161  C16  C17  C18   180.00   0.0  0
+ CBP  CONST_25  H241  C24  C23  C22   180.00   0.0  0
+ CBP  CONST_26  H261  C26  C27  C22   180.00   0.0  0
+ CBP  CONST_27  H271  C27  C22  C23   180.00   0.0  0
+ CBP  CONST_28  H231  C23  C24  C25   180.00   0.0  0
+ CBP  CONST_29  O4    C3   N2   O1      0.00   0.0  0
+ CBP  CONST_30  C5    C3   N2   O1    180.00   0.0  0
+ CBP  Var_01    O9    C8   C7   C6     57.71  30.0  1
+ CBP  Var_02    O9    C10  C11  C6    -55.47  30.0  1
+ CBP  Var_03    C11   C10  O9   C8     58.86  30.0  1
+ CBP  Var_04    C16   C15  S12  C6     99.81  30.0  2
+ CBP  Var_05    C23   C22  O21  C18    97.94  30.0  2
+ CBP  Var_06    C6    C5   C3   N2    128.14  30.0  3
+ CBP  Var_07    C10   C11  C6   C7     51.81  30.0  1
+ CBP  Var_08    C10   O9   C8   C7    -60.15  30.0  1
+ CBP  Var_09    C11   C6   C7   C8    -52.83  30.0  1
+ CBP  Var_10    C8    C7   C6   C5     70.26  30.0  1
+ CBP  Var_11    C10   C11  C6   C5    -74.79  30.0  1
+ CBP  Var_12    C15   S12  C6   C7    178.08  30.0  3
+ CBP  Var_13    S12   C6   C7   C8   -169.63  30.0  1
+ CBP  Var_14    S12   C6   C11  C10   166.33  30.0  1
+ CBP  Var_15    C15   S12  C6   C11    62.11  30.0  3
+ CBP  Var_16    C22   O21  C18  C17   173.97  30.0  2
+ CBP  Var_17    C22   O21  C18  C19    -5.95  30.0  2
+ CBP  Var_18    H111  C11  C6   C7    172.82  30.0  1
+ CBP  Var_19    H112  C11  C6   C7    -68.09  30.0  1
+ CBP  Var_20    C7    C6   C5   C3     52.83  30.0  3
+ CBP  Var_21    C11   C6   C5   C3    175.04  30.0  3
+ CBP  Var_22    C15   S12  C6   C5    -57.40  30.0  3
+ CBP  Var_23    O13   S12  C6   C7    -66.28  30.0  3
+ CBP  Var_24    O14   S12  C6   C7     62.53  30.0  3
+ CBP  Var_25    O13   S12  C6   C11   177.75  30.0  3
+ CBP  Var_26    O14   S12  C6   C11   -53.44  30.0  3
+ CBP  Var_27    HC51  C5   C6   C7    -66.64  30.0  2
+ CBP  Var_28    HC52  C5   C6   C7   -179.50  30.0  2
+ CBP  Var_29    S12   C6   C5   C3    -65.70  30.0  3
+ CBP  Var_30    O13   S12  C6   C5     58.24  30.0  3
+ CBP  Var_31    O14   S12  C6   C5   -172.95  30.0  3
+ CBP  Var_32    HO1I  O1   N2   C3    102.34  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

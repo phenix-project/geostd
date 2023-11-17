@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GBJ  GBJ  4-[(3R)-8,8-dimethyl-3,4-dihydro-2H,8H-pyrano[2,3-f]chromen-3-yl]benzene-1,3-diol  ligand  44  24  .  2022-03-18  2022-03-18
+ GBJ  GBJ  4-[(3R)-8,8-dimethyl-3,4-dihydro-2H,8H-pyrano[2,3-f]chromen-3-yl]benzene-1,3-diol  ligand  44  24  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GBJ
@@ -238,38 +239,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GBJ  CONST_01  C8   C7   C6   C5     0.00   0.0  0
- GBJ  CONST_02  C8   C9   C10  C5     0.00   0.0  0
- GBJ  CONST_03  C9   C8   C7   C6     0.00   0.0  0
- GBJ  CONST_04  C9   C10  C5   C6     0.00   0.0  0
- GBJ  CONST_05  C10  C5   C6   C7     0.00   0.0  0
- GBJ  CONST_06  C10  C9   C8   C7     0.00   0.0  0
- GBJ  CONST_07  C17  C16  C15  C14    0.00   0.0  0
- GBJ  CONST_08  C17  C18  C19  C14    0.00   0.0  0
- GBJ  CONST_09  C18  C19  C14  C15    0.00   0.0  0
- GBJ  CONST_10  C18  C17  C16  C15    0.00   0.0  0
- GBJ  CONST_11  C19  C14  C15  C16    0.00   0.0  0
- GBJ  CONST_12  C19  C18  C17  C16    0.00   0.0  0
- GBJ  CONST_13  C16  C15  C14  C12  180.00   0.0  0
- GBJ  CONST_14  C18  C19  C14  C12  180.00   0.0  0
- GBJ  CONST_15  O2   C19  C14  C12    0.00   0.0  0
- GBJ  CONST_16  O2   C19  C14  C15  180.00   0.0  0
- GBJ  CONST_17  O3   C17  C16  C15  180.00   0.0  0
- GBJ  CONST_18  O2   C19  C18  C17  180.00   0.0  0
- GBJ  CONST_19  O3   C17  C18  C19  180.00   0.0  0
- GBJ  CONST_20  H8   C7   C6   C5   180.00   0.0  0
- GBJ  CONST_21  H9   C8   C7   C6   180.00   0.0  0
- GBJ  CONST_22  H15  C15  C14  C12    0.00   0.0  0
- GBJ  CONST_23  H16  C16  C15  C14  180.00   0.0  0
- GBJ  CONST_24  H17  C18  C19  C14  180.00   0.0  0
- GBJ  Var_01    C5   C4   C3   C2     2.87  30.0  1
- GBJ  Var_02    C7   C6   O4   C2   153.42  30.0  1
- GBJ  Var_03    C6   C5   C4   C3    13.67  30.0  1
- GBJ  Var_04    O4   C2   C3   C4   -29.63  30.0  1
- GBJ  Var_05    C12  C13  C9   C8   157.61  30.0  1
- GBJ  Var_06    C12  C11  O1   C10   41.55  30.0  1
- GBJ  Var_07    H20  C20  C2   C3   178.46  30.0  3
- GBJ  Var_08    H1   C1   C2   C3    57.29  30.0  3
+ GBJ  CONST_01  C8   C7   C6   C5      0.00   0.0  0
+ GBJ  CONST_02  C8   C9   C10  C5      0.00   0.0  0
+ GBJ  CONST_03  C9   C8   C7   C6      0.00   0.0  0
+ GBJ  CONST_04  C9   C10  C5   C6      0.00   0.0  0
+ GBJ  CONST_05  C10  C5   C6   C7      0.00   0.0  0
+ GBJ  CONST_06  C10  C9   C8   C7      0.00   0.0  0
+ GBJ  CONST_07  C17  C16  C15  C14     0.00   0.0  0
+ GBJ  CONST_08  C17  C18  C19  C14     0.00   0.0  0
+ GBJ  CONST_09  C18  C19  C14  C15     0.00   0.0  0
+ GBJ  CONST_10  C18  C17  C16  C15     0.00   0.0  0
+ GBJ  CONST_11  C19  C14  C15  C16     0.00   0.0  0
+ GBJ  CONST_12  C19  C18  C17  C16     0.00   0.0  0
+ GBJ  CONST_13  C16  C15  C14  C12   180.00   0.0  0
+ GBJ  CONST_14  C18  C19  C14  C12   180.00   0.0  0
+ GBJ  CONST_15  O2   C19  C14  C12     0.00   0.0  0
+ GBJ  CONST_16  O2   C19  C14  C15   180.00   0.0  0
+ GBJ  CONST_17  O3   C17  C16  C15   180.00   0.0  0
+ GBJ  CONST_18  O2   C19  C18  C17   180.00   0.0  0
+ GBJ  CONST_19  O3   C17  C18  C19   180.00   0.0  0
+ GBJ  CONST_20  H8   C7   C6   C5    180.00   0.0  0
+ GBJ  CONST_21  H9   C8   C7   C6    180.00   0.0  0
+ GBJ  CONST_22  H15  C15  C14  C12     0.00   0.0  0
+ GBJ  CONST_23  H16  C16  C15  C14   180.00   0.0  0
+ GBJ  CONST_24  H17  C18  C19  C14   180.00   0.0  0
+ GBJ  Var_01    C5   C4   C3   C2      2.87  30.0  1
+ GBJ  Var_02    C7   C6   O4   C2    153.42  30.0  1
+ GBJ  Var_03    C6   C5   C4   C3     13.67  30.0  1
+ GBJ  Var_04    O4   C2   C3   C4    -29.63  30.0  1
+ GBJ  Var_05    C12  C13  C9   C8    157.61  30.0  1
+ GBJ  Var_06    C12  C11  O1   C10    41.55  30.0  1
+ GBJ  Var_07    H20  C20  C2   C3    178.46  30.0  3
+ GBJ  Var_08    H1   C1   C2   C3     57.29  30.0  3
+ GBJ  Var_09    C6   O4   C2   C3     42.91  30.0  1
+ GBJ  Var_10    C11  O1   C10  C5    170.34  30.0  1
+ GBJ  Var_11    C11  O1   C10  C9    -10.91  30.0  1
+ GBJ  Var_12    C11  C12  C13  C9     49.30  30.0  1
+ GBJ  Var_13    C14  C12  C13  C9    172.07  30.0  1
+ GBJ  Var_14    C13  C12  C11  O1    -60.87  30.0  1
+ GBJ  Var_15    C14  C12  C11  O1    173.06  30.0  1
+ GBJ  Var_16    C15  C14  C12  C11    96.47  30.0  2
+ GBJ  Var_17    C19  C14  C12  C11   -81.40  30.0  2
+ GBJ  Var_18    C15  C14  C12  C13   -25.20  30.0  2
+ GBJ  Var_19    C19  C14  C12  C13   156.92  30.0  2
+ GBJ  Var_20    C6   O4   C2   C1    162.64  30.0  1
+ GBJ  Var_21    C20  C2   O4   C6    -78.05  30.0  1
+ GBJ  Var_22    H12  C12  C13  C9    -66.73  30.0  1
+ GBJ  Var_23    H18  O2   C19  C14  -179.32  30.0  2
+ GBJ  Var_24    H19  O3   C17  C16  -177.96  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KGG  KGG  (2R,4R)-4-methoxy-2-(4-methoxyphenyl)-2-[3-(pyridin-3-yl)phenyl]-3,4-dihydro-2H-pyrrol-5-amine  ligand  51  28  .  2021-08-12  2023-02-15
+ KGG  KGG  (2R,4R)-4-methoxy-2-(4-methoxyphenyl)-2-[3-(pyridin-3-yl)phenyl]-3,4-dihydro-2H-pyrrol-5-amine  ligand  51  28  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KGG
@@ -275,38 +276,71 @@ _chem_comp_tor.period
  KGG  CONST_12  C22   C17  C18  C19     0.00   0.0  0
  KGG  CONST_13  C22   C21  C20  C19     0.00   0.0  0
  KGG  CONST_14  C23   C21  C20  C19   180.00   0.0  0
- KGG  CONST_17  C25   C24  C23  C21   180.00   0.0  0
- KGG  CONST_18  N27   C28  C23  C21   180.00   0.0  0
- KGG  CONST_21  C26   C25  C24  C23     0.00   0.0  0
- KGG  CONST_22  C26   N27  C28  C23     0.00   0.0  0
- KGG  CONST_23  N27   C28  C23  C24     0.00   0.0  0
- KGG  CONST_24  N27   C26  C25  C24     0.00   0.0  0
- KGG  CONST_25  C28   C23  C24  C25     0.00   0.0  0
- KGG  CONST_26  C28   N27  C26  C25     0.00   0.0  0
- KGG  CONST_27  C9    C6   C5   C4    180.00   0.0  0
- KGG  CONST_28  C9    C6   C7   C8    180.00   0.0  0
- KGG  CONST_29  C19   C18  C17  C9    180.00   0.0  0
- KGG  CONST_30  C21   C22  C17  C9    180.00   0.0  0
- KGG  CONST_31  C11   C12  N13  C9      0.00   0.0  0
- KGG  CONST_32  C5    C4   C3   O2    180.00   0.0  0
- KGG  CONST_33  C7    C8   C3   O2    180.00   0.0  0
- KGG  CONST_34  N14   C12  N13  C9    180.00   0.0  0
- KGG  CONST_35  H5    C5   C4   C3    180.00   0.0  0
- KGG  CONST_36  H7    C7   C8   C3    180.00   0.0  0
- KGG  CONST_37  H8    C8   C3   C4    180.00   0.0  0
- KGG  CONST_38  H4    C4   C5   C6    180.00   0.0  0
- KGG  CONST_39  H18   C18  C17  C9      0.00   0.0  0
- KGG  CONST_40  H22   C22  C17  C9      0.00   0.0  0
- KGG  CONST_41  H19   C19  C18  C17   180.00   0.0  0
- KGG  CONST_42  H20   C20  C19  C18   180.00   0.0  0
- KGG  CONST_43  H24   C24  C23  C21     0.00   0.0  0
- KGG  CONST_44  H28   C28  C23  C21     0.00   0.0  0
- KGG  CONST_45  H25   C25  C24  C23   180.00   0.0  0
- KGG  CONST_46  H26   C26  C25  C24   180.00   0.0  0
- KGG  CONST_48  H142  N14  C12  C11   180.00   0.0  0
+ KGG  CONST_15  C25   C24  C23  C21   180.00   0.0  0
+ KGG  CONST_16  N27   C28  C23  C21   180.00   0.0  0
+ KGG  CONST_17  C26   C25  C24  C23     0.00   0.0  0
+ KGG  CONST_18  C26   N27  C28  C23     0.00   0.0  0
+ KGG  CONST_19  N27   C28  C23  C24     0.00   0.0  0
+ KGG  CONST_20  N27   C26  C25  C24     0.00   0.0  0
+ KGG  CONST_21  C28   C23  C24  C25     0.00   0.0  0
+ KGG  CONST_22  C28   N27  C26  C25     0.00   0.0  0
+ KGG  CONST_23  C9    C6   C5   C4    180.00   0.0  0
+ KGG  CONST_24  C9    C6   C7   C8    180.00   0.0  0
+ KGG  CONST_25  C19   C18  C17  C9    180.00   0.0  0
+ KGG  CONST_26  C21   C22  C17  C9    180.00   0.0  0
+ KGG  CONST_27  C11   C12  N13  C9      0.00   0.0  0
+ KGG  CONST_28  C5    C4   C3   O2    180.00   0.0  0
+ KGG  CONST_29  C7    C8   C3   O2    180.00   0.0  0
+ KGG  CONST_30  N14   C12  N13  C9    180.00   0.0  0
+ KGG  CONST_31  H5    C5   C4   C3    180.00   0.0  0
+ KGG  CONST_32  H7    C7   C8   C3    180.00   0.0  0
+ KGG  CONST_33  H8    C8   C3   C4    180.00   0.0  0
+ KGG  CONST_34  H4    C4   C5   C6    180.00   0.0  0
+ KGG  CONST_35  H18   C18  C17  C9      0.00   0.0  0
+ KGG  CONST_36  H22   C22  C17  C9      0.00   0.0  0
+ KGG  CONST_37  H19   C19  C18  C17   180.00   0.0  0
+ KGG  CONST_38  H20   C20  C19  C18   180.00   0.0  0
+ KGG  CONST_39  H24   C24  C23  C21     0.00   0.0  0
+ KGG  CONST_40  H28   C28  C23  C21     0.00   0.0  0
+ KGG  CONST_41  H25   C25  C24  C23   180.00   0.0  0
+ KGG  CONST_42  H26   C26  C25  C24   180.00   0.0  0
+ KGG  CONST_43  H142  N14  C12  C11   180.00   0.0  0
  KGG  Var_01    C4    C3   O2   C1    177.93  30.0  2
  KGG  Var_02    H11C  C1   O2   C3   -178.59  30.0  3
  KGG  Var_03    H161  C16  O15  C11    52.77  30.0  3
+ KGG  Var_04    C10   C9   C6   C5   -136.40  30.0  2
+ KGG  Var_05    N13   C9   C6   C5    -20.35  30.0  2
+ KGG  Var_06    C17   C9   C6   C5     99.50  30.0  2
+ KGG  Var_07    C11   C10  C9   C6     91.06  30.0  1
+ KGG  Var_08    C12   N13  C9   C6   -103.87  30.0  1
+ KGG  Var_09    C18   C17  C9   C6     84.14  30.0  2
+ KGG  Var_10    C22   C17  C9   C6    -93.69  30.0  2
+ KGG  Var_11    C10   C9   C6   C7     46.56  30.0  2
+ KGG  Var_12    N13   C9   C6   C7    162.60  30.0  2
+ KGG  Var_13    C17   C9   C6   C7    -77.55  30.0  2
+ KGG  Var_14    C12   C11  C10  C9     27.27  30.0  1
+ KGG  Var_15    C12   N13  C9   C10    17.38  30.0  1
+ KGG  Var_16    C18   C17  C9   C10   -40.31  30.0  2
+ KGG  Var_17    C22   C17  C9   C10   141.86  30.0  2
+ KGG  Var_18    N13   C12  C11  C10   -19.25  30.0  1
+ KGG  Var_19    N13   C9   C10  C11   -28.51  30.0  1
+ KGG  Var_20    C17   C9   C10  C11  -147.47  30.0  1
+ KGG  Var_21    C17   C9   N13  C12   137.82  30.0  1
+ KGG  Var_22    C18   C17  C9   N13  -155.84  30.0  2
+ KGG  Var_23    C22   C17  C9   N13    26.33  30.0  2
+ KGG  Var_24    C24   C23  C21  C20   -37.48  30.0  2
+ KGG  Var_25    C28   C23  C21  C20   141.98  30.0  2
+ KGG  Var_26    C24   C23  C21  C22   143.02  30.0  2
+ KGG  Var_27    C28   C23  C21  C22   -37.52  30.0  2
+ KGG  Var_28    O15   C11  C10  C9    -89.64  30.0  1
+ KGG  Var_29    N14   C12  C11  C10   164.78  30.0  1
+ KGG  Var_30    O15   C11  C12  N13    96.69  30.0  1
+ KGG  Var_31    H101  C10  C9   C6   -153.64  30.0  1
+ KGG  Var_32    H102  C10  C9   C6    -32.36  30.0  1
+ KGG  Var_33    H11   C11  C10  C9    146.46  30.0  1
+ KGG  Var_34    C16   O15  C11  C10  -170.07  30.0  3
+ KGG  Var_35    C16   O15  C11  C12    80.78  30.0  3
+ KGG  Var_36    O15   C11  C12  N14   -79.28  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

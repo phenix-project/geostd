@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- O2W  O2W  'methyl ({[(3aR,4R,7R,7aR)-2-(4-aminophenyl)-1,3-dioxooctahydro-4H-4,7-ethanoisoindol-4-yl]carbamoyl}oxy)acetate'  ligand  52  29  .  2021-08-17  2021-08-17  
+ O2W  O2W  'methyl ({[(3aR,4R,7R,7aR)-2-(4-aminophenyl)-1,3-dioxooctahydro-4H-4,7-ethanoisoindol-4-yl]carbamoyl}oxy)acetate'  ligand  52  29  .  2021-08-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_O2W
@@ -273,33 +274,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- O2W  CONST_01  CAL  CAX  CAK  CAI     0.00   0.0  0
- O2W  CONST_02  CAL  CAJ  CAW  CAI     0.00   0.0  0
- O2W  CONST_03  CAK  CAX  CAL  CAJ     0.00   0.0  0
- O2W  CONST_04  CAK  CAI  CAW  CAJ     0.00   0.0  0
- O2W  CONST_05  CAX  CAK  CAI  CAW     0.00   0.0  0
- O2W  CONST_06  CAX  CAL  CAJ  CAW     0.00   0.0  0
- O2W  CONST_07  NBB  CAX  CAK  CAI   180.00   0.0  0
- O2W  CONST_08  NBB  CAX  CAL  CAJ   180.00   0.0  0
- O2W  CONST_09  CAZ  CAU  NBB  CAV     0.00   0.0  0
- O2W  CONST_10  CAZ  CAU  NBB  CAX   180.00   0.0  0
- O2W  CONST_11  CAK  CAI  CAW  NAB   180.00   0.0  0
- O2W  CONST_12  CAL  CAJ  CAW  NAB   180.00   0.0  0
- O2W  CONST_13  CAV  NBB  CAU  OAE   180.00   0.0  0
- O2W  CONST_14  CAX  NBB  CAU  OAE     0.00   0.0  0
- O2W  CONST_15  HAJ  CAJ  CAW  CAI   180.00   0.0  0
- O2W  CONST_16  HAI  CAI  CAW  CAJ   180.00   0.0  0
- O2W  CONST_17  HAL  CAL  CAX  CAK   180.00   0.0  0
- O2W  CONST_18  HAK  CAK  CAX  CAL   180.00   0.0  0
- O2W  Var_01    CAU  NBB  CAX  CAK    91.62  30.0  2
- O2W  Var_02    CBA  CAV  NBB  CAU    -1.29  30.0  1
- O2W  Var_03    CBC  CAH  CAG  CAY     1.53  30.0  1
- O2W  Var_04    CBC  CAO  CAM  CAY     4.74  30.0  3
- O2W  Var_05    CBC  NAP  CAT  OAD     1.71  30.0  2
- O2W  Var_06    OAC  CAS  OAQ  CAA    -0.04  30.0  2
- O2W  Var_07    OAR  CAN  CAS  OAC     0.23  30.0  1
- O2W  Var_08    NAP  CAT  OAR  CAN  -178.37  30.0  1
- O2W  Var_09    HAA  CAA  OAQ  CAS  -179.53  30.0  3
+ O2W  CONST_01  CAL   CAX  CAK  CAI     0.00   0.0  0
+ O2W  CONST_02  CAL   CAJ  CAW  CAI     0.00   0.0  0
+ O2W  CONST_03  CAK   CAX  CAL  CAJ     0.00   0.0  0
+ O2W  CONST_04  CAK   CAI  CAW  CAJ     0.00   0.0  0
+ O2W  CONST_05  CAX   CAK  CAI  CAW     0.00   0.0  0
+ O2W  CONST_06  CAX   CAL  CAJ  CAW     0.00   0.0  0
+ O2W  CONST_07  NBB   CAX  CAK  CAI   180.00   0.0  0
+ O2W  CONST_08  NBB   CAX  CAL  CAJ   180.00   0.0  0
+ O2W  CONST_09  CAZ   CAU  NBB  CAV     0.00   0.0  0
+ O2W  CONST_10  CAZ   CAU  NBB  CAX   180.00   0.0  0
+ O2W  CONST_11  CAK   CAI  CAW  NAB   180.00   0.0  0
+ O2W  CONST_12  CAL   CAJ  CAW  NAB   180.00   0.0  0
+ O2W  CONST_13  CAV   NBB  CAU  OAE   180.00   0.0  0
+ O2W  CONST_14  CAX   NBB  CAU  OAE     0.00   0.0  0
+ O2W  CONST_15  HAJ   CAJ  CAW  CAI   180.00   0.0  0
+ O2W  CONST_16  HAI   CAI  CAW  CAJ   180.00   0.0  0
+ O2W  CONST_17  HAL   CAL  CAX  CAK   180.00   0.0  0
+ O2W  CONST_18  HAK   CAK  CAX  CAL   180.00   0.0  0
+ O2W  Var_01    CAU   NBB  CAX  CAK    91.62  30.0  2
+ O2W  Var_02    CBA   CAV  NBB  CAU    -1.29  30.0  1
+ O2W  Var_03    CBC   CAH  CAG  CAY     1.53  30.0  1
+ O2W  Var_04    CBC   CAO  CAM  CAY     4.74  30.0  3
+ O2W  Var_05    CBC   NAP  CAT  OAD     1.71  30.0  2
+ O2W  Var_06    OAC   CAS  OAQ  CAA    -0.04  30.0  2
+ O2W  Var_07    OAR   CAN  CAS  OAC     0.23  30.0  1
+ O2W  Var_08    NAP   CAT  OAR  CAN  -178.37  30.0  1
+ O2W  Var_09    HAA   CAA  OAQ  CAS  -179.53  30.0  3
+ O2W  Var_10    CAO   CAM  CAY  CAG   -61.98  30.0  3
+ O2W  Var_11    CAU   CAZ  CAY  CAG   -60.22  30.0  1
+ O2W  Var_12    CBA   CAZ  CAY  CAG    56.61  30.0  1
+ O2W  Var_13    CAO   CBC  CAH  CAG   -58.39  30.0  1
+ O2W  Var_14    CBA   CBC  CAH  CAG    57.38  30.0  1
+ O2W  Var_15    CAM   CAY  CAG  CAH    58.41  30.0  1
+ O2W  Var_16    CAZ   CAY  CAG  CAH   -59.22  30.0  1
+ O2W  Var_17    CAM   CAO  CBC  CAH    54.89  30.0  3
+ O2W  Var_18    CAV   CBA  CBC  CAH    57.28  30.0  1
+ O2W  Var_19    CAZ   CBA  CBC  CAH   -60.13  30.0  1
+ O2W  Var_20    CBA   CBC  CAO  CAM   -62.74  30.0  3
+ O2W  Var_21    CAU   CAZ  CAY  CAM  -178.77  30.0  1
+ O2W  Var_22    CBA   CAZ  CAY  CAM   -61.94  30.0  1
+ O2W  Var_23    CAZ   CAY  CAM  CAO    57.25  30.0  3
+ O2W  Var_24    CAV   CBA  CBC  CAO   175.52  30.0  1
+ O2W  Var_25    CAZ   CBA  CBC  CAO    58.12  30.0  1
+ O2W  Var_26    CAV   CBA  CAZ  CAU     1.14  30.0  1
+ O2W  Var_27    CBC   CBA  CAZ  CAU   124.16  30.0  1
+ O2W  Var_28    CAY   CAZ  CBA  CAV  -120.06  30.0  1
+ O2W  Var_29    NBB   CAU  CAZ  CAY   118.12  30.0  1
+ O2W  Var_30    CBC   CBA  CAZ  CAY     2.96  30.0  1
+ O2W  Var_31    NBB   CAV  CBA  CAZ    -0.00  30.0  1
+ O2W  Var_32    NBB   CAU  CAZ  CBA    -1.92  30.0  1
+ O2W  Var_33    CBC   CBA  CAV  NBB  -120.61  30.0  1
+ O2W  Var_34    NAP   CBC  CAH  CAG   176.46  30.0  1
+ O2W  Var_35    NAP   CBC  CAO  CAM  -179.44  30.0  3
+ O2W  Var_36    CAV   CBA  CBC  NAP   -64.95  30.0  1
+ O2W  Var_37    CAZ   CBA  CBC  NAP   177.64  30.0  1
+ O2W  Var_38    OAE   CAU  CAZ  CAY   -61.05  30.0  1
+ O2W  Var_39    OAF   CAV  CBA  CAZ  -179.44  30.0  1
+ O2W  Var_40    OAE   CAU  CAZ  CBA   178.91  30.0  1
+ O2W  Var_41    OAF   CAV  CBA  CBC    59.95  30.0  1
+ O2W  Var_42    HAM   CAM  CAY  CAG   175.97  30.0  3
+ O2W  Var_43    HAMA  CAM  CAY  CAG    59.58  30.0  3
+ O2W  Var_44    HAZ   CAZ  CAY  CAG   179.64  30.0  1
+ O2W  Var_45    HAY   CAY  CAG  CAH   179.66  30.0  1
+ O2W  Var_46    HAO   CAO  CBC  CAH   -67.12  30.0  3
+ O2W  Var_47    HAOA  CAO  CBC  CAH   176.64  30.0  3
+ O2W  Var_48    HBA   CBA  CBC  CAH   177.40  30.0  1
+ O2W  Var_49    HAG   CAG  CAY  CAM   -62.79  30.0  1
+ O2W  Var_50    HAGA  CAG  CAY  CAM  -178.22  30.0  1
+ O2W  Var_51    HAH   CAH  CBC  CAO   178.90  30.0  1
+ O2W  Var_52    HAHA  CAH  CBC  CAO    63.21  30.0  1
+ O2W  Var_53    CAT   NAP  CBC  CAH    63.30  30.0  2
+ O2W  Var_54    CAT   NAP  CBC  CAO   -60.89  30.0  2
+ O2W  Var_55    CBA   CBC  NAP  CAT  -176.72  30.0  3
+ O2W  Var_56    HNAP  NAP  CBC  CAH  -109.50  30.0  2
+ O2W  Var_57    CAT   OAR  CAN  CAS   176.13  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

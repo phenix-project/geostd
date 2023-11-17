@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TOK  TOK  (3alpha,8alpha)-17-(1H-benzimidazol-1-yl)androsta-5,16-dien-3-ol  ligand  61  29  .  2021-08-23  2021-08-23  
+ TOK  TOK  (3alpha,8alpha)-17-(1H-benzimidazol-1-yl)androsta-5,16-dien-3-ol  ligand  61  29  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TOK
@@ -320,39 +321,106 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TOK  CONST_01  C50  N51  C52  N48     0.00   0.0  0
- TOK  CONST_02  C54  C53  C49  N48   180.00   0.0  0
- TOK  CONST_03  C56  C50  C49  N48   180.00   0.0  0
- TOK  CONST_04  N51  C50  C49  N48     0.00   0.0  0
- TOK  CONST_05  N51  C52  N48  C49     0.00   0.0  0
- TOK  CONST_06  C55  C54  C53  C49     0.00   0.0  0
- TOK  CONST_07  C55  C56  C50  C49     0.00   0.0  0
- TOK  CONST_08  C52  N51  C50  C49     0.00   0.0  0
- TOK  CONST_09  C52  N48  C49  C50     0.00   0.0  0
- TOK  CONST_10  C54  C53  C49  C50     0.00   0.0  0
- TOK  CONST_11  C54  C55  C56  C50     0.00   0.0  0
- TOK  CONST_12  C53  C49  C50  N51   180.00   0.0  0
- TOK  CONST_13  C55  C56  C50  N51   180.00   0.0  0
- TOK  CONST_14  C53  C49  N48  C52   180.00   0.0  0
- TOK  CONST_15  C56  C50  N51  C52   180.00   0.0  0
- TOK  CONST_16  C56  C50  C49  C53     0.00   0.0  0
- TOK  CONST_17  C56  C55  C54  C53     0.00   0.0  0
- TOK  CONST_18  N51  C52  N48  C17   180.00   0.0  0
- TOK  CONST_19  C53  C49  N48  C17     0.00   0.0  0
- TOK  CONST_20  C50  C49  N48  C17   180.00   0.0  0
- TOK  CONST_21  H52  C52  N48  C17     0.00   0.0  0
- TOK  CONST_22  H53  C53  C49  N48     0.00   0.0  0
- TOK  CONST_23  H54  C54  C53  C49   180.00   0.0  0
- TOK  CONST_24  H56  C56  C50  C49   180.00   0.0  0
- TOK  CONST_25  H55  C55  C56  C50   180.00   0.0  0
- TOK  Var_01    C10  C1   C2   C3    -57.68  30.0  1
- TOK  Var_02    C10  C5   C4   C3     51.31  30.0  1
- TOK  Var_03    C7   C6   C5   C4   -177.29  30.0  1
- TOK  Var_04    C8   C7   C6   C5     12.24  30.0  1
- TOK  Var_05    C13  C12  C11  C9    -51.59  30.0  1
- TOK  Var_06    C15  C16  C17  C13     4.00  30.0  1
- TOK  Var_07    C52  N48  C17  C13   -62.10  30.0  2
- TOK  Var_08    C17  C16  C15  C14    18.92  30.0  1
+ TOK  CONST_01  C50   N51  C52  N48     0.00   0.0  0
+ TOK  CONST_02  C54   C53  C49  N48   180.00   0.0  0
+ TOK  CONST_03  C56   C50  C49  N48   180.00   0.0  0
+ TOK  CONST_04  N51   C50  C49  N48     0.00   0.0  0
+ TOK  CONST_05  N51   C52  N48  C49     0.00   0.0  0
+ TOK  CONST_06  C55   C54  C53  C49     0.00   0.0  0
+ TOK  CONST_07  C55   C56  C50  C49     0.00   0.0  0
+ TOK  CONST_08  C52   N51  C50  C49     0.00   0.0  0
+ TOK  CONST_09  C52   N48  C49  C50     0.00   0.0  0
+ TOK  CONST_10  C54   C53  C49  C50     0.00   0.0  0
+ TOK  CONST_11  C54   C55  C56  C50     0.00   0.0  0
+ TOK  CONST_12  C53   C49  C50  N51   180.00   0.0  0
+ TOK  CONST_13  C55   C56  C50  N51   180.00   0.0  0
+ TOK  CONST_14  C53   C49  N48  C52   180.00   0.0  0
+ TOK  CONST_15  C56   C50  N51  C52   180.00   0.0  0
+ TOK  CONST_16  C56   C50  C49  C53     0.00   0.0  0
+ TOK  CONST_17  C56   C55  C54  C53     0.00   0.0  0
+ TOK  CONST_18  N51   C52  N48  C17   180.00   0.0  0
+ TOK  CONST_19  C53   C49  N48  C17     0.00   0.0  0
+ TOK  CONST_20  C50   C49  N48  C17   180.00   0.0  0
+ TOK  CONST_21  H52   C52  N48  C17     0.00   0.0  0
+ TOK  CONST_22  H53   C53  C49  N48     0.00   0.0  0
+ TOK  CONST_23  H54   C54  C53  C49   180.00   0.0  0
+ TOK  CONST_24  H56   C56  C50  C49   180.00   0.0  0
+ TOK  CONST_25  H55   C55  C56  C50   180.00   0.0  0
+ TOK  Var_01    C10   C1   C2   C3    -57.68  30.0  1
+ TOK  Var_02    C10   C5   C4   C3     51.31  30.0  1
+ TOK  Var_03    C7    C6   C5   C4   -177.29  30.0  1
+ TOK  Var_04    C8    C7   C6   C5     12.24  30.0  1
+ TOK  Var_05    C13   C12  C11  C9    -51.59  30.0  1
+ TOK  Var_06    C15   C16  C17  C13     4.00  30.0  1
+ TOK  Var_07    C52   N48  C17  C13   -62.10  30.0  2
+ TOK  Var_08    C17   C16  C15  C14    18.92  30.0  1
+ TOK  Var_09    C4    C3   C2   C1     57.90  30.0  1
+ TOK  Var_10    C4    C5   C10  C1    -46.58  30.0  1
+ TOK  Var_11    C6    C5   C10  C1    134.23  30.0  1
+ TOK  Var_12    C8    C9   C10  C1   -165.60  30.0  1
+ TOK  Var_13    C11   C9   C10  C1     65.07  30.0  1
+ TOK  Var_14    C5    C10  C1   C2     49.68  30.0  1
+ TOK  Var_15    C9    C10  C1   C2    169.13  30.0  1
+ TOK  Var_16    C5    C4   C3   C2    -54.94  30.0  1
+ TOK  Var_17    C9    C10  C5   C4   -165.12  30.0  1
+ TOK  Var_18    C8    C9   C10  C5    -47.09  30.0  1
+ TOK  Var_19    C11   C9   C10  C5   -176.42  30.0  1
+ TOK  Var_20    C9    C10  C5   C6     15.69  30.0  1
+ TOK  Var_21    C14   C8   C7   C6   -162.06  30.0  1
+ TOK  Var_22    C9    C8   C7   C6    -42.66  30.0  1
+ TOK  Var_23    C13   C14  C8   C7    179.31  30.0  1
+ TOK  Var_24    C15   C14  C8   C7    -55.17  30.0  1
+ TOK  Var_25    C11   C9   C8   C7   -169.28  30.0  1
+ TOK  Var_26    C10   C9   C8   C7     61.87  30.0  1
+ TOK  Var_27    C12   C13  C14  C8    -65.33  30.0  1
+ TOK  Var_28    C17   C13  C14  C8    169.65  30.0  1
+ TOK  Var_29    C16   C15  C14  C8   -163.29  30.0  1
+ TOK  Var_30    C12   C11  C9   C8     46.88  30.0  1
+ TOK  Var_31    C13   C14  C8   C9     59.15  30.0  1
+ TOK  Var_32    C15   C14  C8   C9   -175.33  30.0  1
+ TOK  Var_33    C14   C8   C9   C10  -177.10  30.0  1
+ TOK  Var_34    C12   C11  C9   C10   175.28  30.0  1
+ TOK  Var_35    C14   C8   C9   C11   -48.24  30.0  1
+ TOK  Var_36    C17   C13  C12  C11   169.78  30.0  1
+ TOK  Var_37    C14   C13  C12  C11    58.17  30.0  1
+ TOK  Var_38    C16   C17  C13  C12  -140.93  30.0  1
+ TOK  Var_39    N48   C17  C13  C12    49.73  30.0  1
+ TOK  Var_40    C15   C14  C13  C12   160.38  30.0  1
+ TOK  Var_41    C16   C15  C14  C13   -33.80  30.0  1
+ TOK  Var_42    C16   C17  C13  C14   -24.91  30.0  1
+ TOK  Var_43    N48   C17  C13  C14   165.76  30.0  1
+ TOK  Var_44    C17   C13  C14  C15    35.36  30.0  1
+ TOK  Var_45    O3    C3   C2   C1   -179.67  30.0  1
+ TOK  Var_46    C19   C10  C1   C2    -68.56  30.0  1
+ TOK  Var_47    C5    C4   C3   O3   -175.39  30.0  1
+ TOK  Var_48    C19   C10  C5   C4     72.62  30.0  1
+ TOK  Var_49    C19   C10  C5   C6   -106.58  30.0  1
+ TOK  Var_50    C18   C13  C14  C8     57.55  30.0  1
+ TOK  Var_51    C19   C10  C9   C8     73.18  30.0  1
+ TOK  Var_52    C19   C10  C9   C11   -56.15  30.0  1
+ TOK  Var_53    C18   C13  C12  C11   -66.79  30.0  1
+ TOK  Var_54    C18   C13  C14  C15   -76.74  30.0  1
+ TOK  Var_55    C18   C13  C17  C16    93.40  30.0  1
+ TOK  Var_56    N48   C17  C13  C18   -75.93  30.0  1
+ TOK  Var_57    H3    C3   C2   C1    -59.93  30.0  1
+ TOK  Var_58    H9    C9   C10  C1    -51.18  30.0  1
+ TOK  Var_59    H4    C4   C3   C2     66.45  30.0  1
+ TOK  Var_60    H4A   C4   C3   C2   -177.62  30.0  1
+ TOK  Var_61    H2    C2   C3   C4    -64.12  30.0  1
+ TOK  Var_62    H2A   C2   C3   C4    178.85  30.0  1
+ TOK  Var_63    H8    C8   C7   C6     77.21  30.0  1
+ TOK  Var_64    H14   C14  C8   C7     64.14  30.0  1
+ TOK  Var_65    H15   C15  C14  C8    -45.53  30.0  1
+ TOK  Var_66    H15A  C15  C14  C8     75.66  30.0  1
+ TOK  Var_67    H11   C11  C9   C8    168.43  30.0  1
+ TOK  Var_68    H11A  C11  C9   C8    -76.19  30.0  1
+ TOK  Var_69    H19   C19  C10  C1   -170.53  30.0  3
+ TOK  Var_70    H19A  C19  C10  C1    -49.78  30.0  3
+ TOK  Var_71    H19B  C19  C10  C1     69.90  30.0  3
+ TOK  Var_72    HO3   O3   C3   C2    175.87  30.0  3
+ TOK  Var_73    H18   C18  C13  C12    53.44  30.0  3
+ TOK  Var_74    H18A  C18  C13  C12   174.80  30.0  3
+ TOK  Var_75    H18B  C18  C13  C12   -66.18  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

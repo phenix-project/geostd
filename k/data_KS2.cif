@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KS2  KS2  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-[5-(4-methylphenyl)-4~{H}-1,2,4-triazol-3-yl]oxane-3,4,5-triol  ligand  42  23  .  2021-08-12  2021-08-12  
+ KS2  KS2  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-[5-(4-methylphenyl)-4~{H}-1,2,4-triazol-3-yl]oxane-3,4,5-triol  ligand  42  23  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KS2
@@ -227,35 +228,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KS2  CONST_01  C4   N3   N2   C1     0.00   0.0  0
- KS2  CONST_02  N3   C4   N5   C1     0.00   0.0  0
- KS2  CONST_03  C6   C4   N5   C1   180.00   0.0  0
- KS2  CONST_04  N3   N2   C1   N5     0.00   0.0  0
- KS2  CONST_05  N2   N3   C4   N5     0.00   0.0  0
- KS2  CONST_06  C7   C6   C4   N5   180.00   0.0  0
- KS2  CONST_07  C11  C6   C4   N5     0.00   0.0  0
- KS2  CONST_08  N2   C1   N5   C4     0.00   0.0  0
- KS2  CONST_09  C8   C7   C6   C4   180.00   0.0  0
- KS2  CONST_10  C10  C11  C6   C4   180.00   0.0  0
- KS2  CONST_11  C7   C6   C4   N3     0.00   0.0  0
- KS2  CONST_12  C11  C6   C4   N3   180.00   0.0  0
- KS2  CONST_13  C6   C4   N3   N2   180.00   0.0  0
- KS2  CONST_14  C9   C8   C7   C6     0.00   0.0  0
- KS2  CONST_15  C9   C10  C11  C6     0.00   0.0  0
- KS2  CONST_16  C8   C7   C6   C11    0.00   0.0  0
- KS2  CONST_17  C8   C9   C10  C11    0.00   0.0  0
- KS2  CONST_18  C7   C6   C11  C10    0.00   0.0  0
- KS2  CONST_19  C7   C8   C9   C10    0.00   0.0  0
- KS2  CONST_20  N3   N2   C1   C1'  180.00   0.0  0
- KS2  CONST_21  C4   N5   C1   C1'  180.00   0.0  0
- KS2  CONST_22  C12  C9   C10  C11  180.00   0.0  0
- KS2  CONST_23  C7   C8   C9   C12  180.00   0.0  0
- KS2  CONST_24  H12  N5   C1   C1'    0.00   0.0  0
- KS2  CONST_25  H19  C7   C6   C4     0.00   0.0  0
- KS2  CONST_26  H13  C11  C6   C4     0.00   0.0  0
- KS2  CONST_27  H18  C8   C7   C6   180.00   0.0  0
- KS2  CONST_28  H14  C10  C11  C6   180.00   0.0  0
- KS2  Var_01    H15  C12  C9   C10   93.26  30.0  2
+ KS2  CONST_01  C4   N3   N2   C1      0.00   0.0  0
+ KS2  CONST_02  N3   C4   N5   C1      0.00   0.0  0
+ KS2  CONST_03  C6   C4   N5   C1    180.00   0.0  0
+ KS2  CONST_04  N3   N2   C1   N5      0.00   0.0  0
+ KS2  CONST_05  N2   N3   C4   N5      0.00   0.0  0
+ KS2  CONST_06  C7   C6   C4   N5    180.00   0.0  0
+ KS2  CONST_07  C11  C6   C4   N5      0.00   0.0  0
+ KS2  CONST_08  N2   C1   N5   C4      0.00   0.0  0
+ KS2  CONST_09  C8   C7   C6   C4    180.00   0.0  0
+ KS2  CONST_10  C10  C11  C6   C4    180.00   0.0  0
+ KS2  CONST_11  C7   C6   C4   N3      0.00   0.0  0
+ KS2  CONST_12  C11  C6   C4   N3    180.00   0.0  0
+ KS2  CONST_13  C6   C4   N3   N2    180.00   0.0  0
+ KS2  CONST_14  C9   C8   C7   C6      0.00   0.0  0
+ KS2  CONST_15  C9   C10  C11  C6      0.00   0.0  0
+ KS2  CONST_16  C8   C7   C6   C11     0.00   0.0  0
+ KS2  CONST_17  C8   C9   C10  C11     0.00   0.0  0
+ KS2  CONST_18  C7   C6   C11  C10     0.00   0.0  0
+ KS2  CONST_19  C7   C8   C9   C10     0.00   0.0  0
+ KS2  CONST_20  N3   N2   C1   C1'   180.00   0.0  0
+ KS2  CONST_21  C4   N5   C1   C1'   180.00   0.0  0
+ KS2  CONST_22  C12  C9   C10  C11   180.00   0.0  0
+ KS2  CONST_23  C7   C8   C9   C12   180.00   0.0  0
+ KS2  CONST_24  H12  N5   C1   C1'     0.00   0.0  0
+ KS2  CONST_25  H19  C7   C6   C4      0.00   0.0  0
+ KS2  CONST_26  H13  C11  C6   C4      0.00   0.0  0
+ KS2  CONST_27  H18  C8   C7   C6    180.00   0.0  0
+ KS2  CONST_28  H14  C10  C11  C6    180.00   0.0  0
+ KS2  Var_01    H15  C12  C9   C10    93.26  30.0  2
+ KS2  Var_02    O5'  C5'  C4'  C3'   -55.74  30.0  1
+ KS2  Var_03    O5'  C1'  C2'  C3'    58.19  30.0  1
+ KS2  Var_04    C1   C1'  C2'  C3'   178.08  30.0  1
+ KS2  Var_05    C1'  C2'  C3'  C4'   -54.67  30.0  1
+ KS2  Var_06    C1'  O5'  C5'  C4'    61.63  30.0  1
+ KS2  Var_07    C5'  C4'  C3'  C2'    54.00  30.0  1
+ KS2  Var_08    C5'  O5'  C1'  C2'   -63.24  30.0  1
+ KS2  Var_09    N2   C1   C1'  C2'   -65.18  30.0  2
+ KS2  Var_10    N5   C1   C1'  C2'   113.83  30.0  2
+ KS2  Var_11    N2   C1   C1'  O5'    55.93  30.0  2
+ KS2  Var_12    N5   C1   C1'  O5'  -125.07  30.0  2
+ KS2  Var_13    C1   C1'  O5'  C5'   175.11  30.0  1
+ KS2  Var_14    C5'  C4'  C3'  O3'   176.32  30.0  1
+ KS2  Var_15    C1'  C2'  C3'  O3'  -174.52  30.0  1
+ KS2  Var_16    C6'  C5'  C4'  C3'  -175.28  30.0  1
+ KS2  Var_17    O2'  C2'  C3'  C4'  -173.17  30.0  1
+ KS2  Var_18    C2'  C3'  C4'  O4'   173.65  30.0  1
+ KS2  Var_19    O5'  C5'  C4'  O4'  -177.36  30.0  1
+ KS2  Var_20    O5'  C1'  C2'  O2'   179.80  30.0  1
+ KS2  Var_21    C1   C1'  C2'  O2'   -60.31  30.0  1
+ KS2  Var_22    C6'  C5'  O5'  C1'  -176.15  30.0  1
+ KS2  Var_23    H8   C5'  C4'  C3'    64.24  30.0  1
+ KS2  Var_24    H7   C1'  C2'  C3'   -63.13  30.0  1
+ KS2  Var_25    H5   C2'  C3'  C4'    62.86  30.0  1
+ KS2  Var_26    H3   C4'  C3'  C2'   -63.91  30.0  1
+ KS2  Var_27    H2   C3'  C2'  C1'    63.30  30.0  1
+ KS2  Var_28    O4'  C4'  C3'  O3'   -64.03  30.0  1
+ KS2  Var_29    O2'  C2'  C3'  O3'    66.99  30.0  1
+ KS2  Var_30    O6'  C6'  C5'  C4'  -176.51  30.0  3
+ KS2  Var_31    C6'  C5'  C4'  O4'    63.09  30.0  1
+ KS2  Var_32    O6'  C6'  C5'  O5'    62.57  30.0  3
+ KS2  Var_33    H4   O4'  C4'  C3'    55.47  30.0  3
+ KS2  Var_34    H6   O2'  C2'  C3'   -81.91  30.0  3
+ KS2  Var_35    H1   O3'  C3'  C4'   152.65  30.0  3
+ KS2  Var_36    H9   C6'  C5'  C4'   -54.84  30.0  3
+ KS2  Var_37    H10  C6'  C5'  C4'    61.38  30.0  3
+ KS2  Var_38    H11  O6'  C6'  C5'   173.81  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

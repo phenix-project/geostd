@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FRG  FRG  'methyl N-{[(3R)-1-carbamimidoylpiperidin-3-yl]acetyl}-4-(phenylethynyl)-L-phenylalaninate'  ligand  63  33  .  2022-03-18  2022-03-18
+ FRG  FRG  'methyl N-{[(3R)-1-carbamimidoylpiperidin-3-yl]acetyl}-4-(phenylethynyl)-L-phenylalaninate'  ligand  63  33  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FRG
@@ -305,47 +306,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FRG  CONST_01  C9    C14  C13  C12    0.00   0.0  0
- FRG  CONST_02  C9    C10  C11  C12    0.00   0.0  0
- FRG  CONST_03  C10   C11  C12  C13    0.00   0.0  0
- FRG  CONST_04  C10   C9   C14  C13    0.00   0.0  0
- FRG  CONST_05  C11   C12  C13  C14    0.00   0.0  0
- FRG  CONST_06  C11   C10  C9   C14    0.00   0.0  0
- FRG  CONST_07  C1    C6   C5   C4     0.00   0.0  0
- FRG  CONST_08  C1    C2   C3   C4     0.00   0.0  0
- FRG  CONST_09  C2    C3   C4   C5     0.00   0.0  0
- FRG  CONST_10  C2    C1   C6   C5     0.00   0.0  0
- FRG  CONST_11  C3    C4   C5   C6     0.00   0.0  0
- FRG  CONST_12  C3    C2   C1   C6     0.00   0.0  0
- FRG  CONST_13  C14   C13  C12  C15  180.00   0.0  0
- FRG  CONST_14  C10   C11  C12  C15  180.00   0.0  0
- FRG  CONST_15  C8    C9   C14  C13  180.00   0.0  0
- FRG  CONST_16  C8    C9   C10  C11  180.00   0.0  0
- FRG  CONST_17  C6    C5   C4   C7   180.00   0.0  0
- FRG  CONST_18  C2    C3   C4   C7   180.00   0.0  0
- FRG  CONST_19  H14   C14  C13  C12  180.00   0.0  0
- FRG  CONST_20  H10   C10  C11  C12  180.00   0.0  0
- FRG  CONST_21  H11   C11  C12  C13  180.00   0.0  0
- FRG  CONST_22  H13   C13  C12  C11  180.00   0.0  0
- FRG  CONST_23  H6    C6   C5   C4   180.00   0.0  0
- FRG  CONST_24  H2    C2   C3   C4   180.00   0.0  0
- FRG  CONST_25  H3    C3   C4   C5   180.00   0.0  0
- FRG  CONST_26  H1    C1   C6   C5   180.00   0.0  0
- FRG  CONST_27  H5    C5   C4   C3   180.00   0.0  0
- FRG  CONST_28  C30   N29  C31  N33    0.00   0.0  0
- FRG  CONST_30  C30   N29  C31  N32  180.00   0.0  0
- FRG  CONST_32  H33   N33  C31  N29  180.00   0.0  0
- FRG  CONST_34  H322  N32  C31  N29  180.00   0.0  0
- FRG  CONST_35  C16   N21  C22  C23  180.00   0.0  0
- FRG  CONST_36  C16   N21  C22  O25    0.00   0.0  0
- FRG  CONST_37  H21   N21  C22  C23    0.00   0.0  0
- FRG  Var_01    C26   C27  C28  N29   55.69  30.0  1
- FRG  Var_02    C27   C28  N29  C30  -58.89  30.0  1
- FRG  Var_03    C24   C30  N29  C28   58.25  30.0  1
- FRG  Var_04    C24   C26  C27  C28  -52.64  30.0  1
- FRG  Var_05    C13   C12  C15  C16  109.63  30.0  2
- FRG  Var_06    O25   C22  C23  C24  -68.47  30.0  3
- FRG  Var_07    H201  C20  O18  C17  -59.51  30.0  3
+ FRG  CONST_01  C9    C14  C13  C12     0.00   0.0  0
+ FRG  CONST_02  C9    C10  C11  C12     0.00   0.0  0
+ FRG  CONST_03  C10   C11  C12  C13     0.00   0.0  0
+ FRG  CONST_04  C10   C9   C14  C13     0.00   0.0  0
+ FRG  CONST_05  C11   C12  C13  C14     0.00   0.0  0
+ FRG  CONST_06  C11   C10  C9   C14     0.00   0.0  0
+ FRG  CONST_07  C1    C6   C5   C4      0.00   0.0  0
+ FRG  CONST_08  C1    C2   C3   C4      0.00   0.0  0
+ FRG  CONST_09  C2    C3   C4   C5      0.00   0.0  0
+ FRG  CONST_10  C2    C1   C6   C5      0.00   0.0  0
+ FRG  CONST_11  C3    C4   C5   C6      0.00   0.0  0
+ FRG  CONST_12  C3    C2   C1   C6      0.00   0.0  0
+ FRG  CONST_13  C14   C13  C12  C15   180.00   0.0  0
+ FRG  CONST_14  C10   C11  C12  C15   180.00   0.0  0
+ FRG  CONST_15  C8    C9   C14  C13   180.00   0.0  0
+ FRG  CONST_16  C8    C9   C10  C11   180.00   0.0  0
+ FRG  CONST_17  C6    C5   C4   C7    180.00   0.0  0
+ FRG  CONST_18  C2    C3   C4   C7    180.00   0.0  0
+ FRG  CONST_19  H14   C14  C13  C12   180.00   0.0  0
+ FRG  CONST_20  H10   C10  C11  C12   180.00   0.0  0
+ FRG  CONST_21  H11   C11  C12  C13   180.00   0.0  0
+ FRG  CONST_22  H13   C13  C12  C11   180.00   0.0  0
+ FRG  CONST_23  H6    C6   C5   C4    180.00   0.0  0
+ FRG  CONST_24  H2    C2   C3   C4    180.00   0.0  0
+ FRG  CONST_25  H3    C3   C4   C5    180.00   0.0  0
+ FRG  CONST_26  H1    C1   C6   C5    180.00   0.0  0
+ FRG  CONST_27  H5    C5   C4   C3    180.00   0.0  0
+ FRG  CONST_28  C30   N29  C31  N33     0.00   0.0  0
+ FRG  CONST_29  C30   N29  C31  N32   180.00   0.0  0
+ FRG  CONST_30  H33   N33  C31  N29   180.00   0.0  0
+ FRG  CONST_31  H322  N32  C31  N29   180.00   0.0  0
+ FRG  CONST_32  C16   N21  C22  C23   180.00   0.0  0
+ FRG  CONST_33  C16   N21  C22  O25     0.00   0.0  0
+ FRG  CONST_34  H21   N21  C22  C23     0.00   0.0  0
+ FRG  Var_01    C26   C27  C28  N29    55.69  30.0  1
+ FRG  Var_02    C27   C28  N29  C30   -58.89  30.0  1
+ FRG  Var_03    C24   C30  N29  C28    58.25  30.0  1
+ FRG  Var_04    C24   C26  C27  C28   -52.64  30.0  1
+ FRG  Var_05    C13   C12  C15  C16   109.63  30.0  2
+ FRG  Var_06    O25   C22  C23  C24   -68.47  30.0  3
+ FRG  Var_07    H201  C20  O18  C17   -59.51  30.0  3
+ FRG  Var_08    C26   C24  C30  N29   -53.20  30.0  1
+ FRG  Var_09    C27   C26  C24  C30    50.75  30.0  1
+ FRG  Var_10    C23   C24  C30  N29  -175.06  30.0  1
+ FRG  Var_11    C23   C24  C26  C27   173.24  30.0  1
+ FRG  Var_12    H24   C24  C30  N29    65.60  30.0  1
+ FRG  Var_13    H261  C26  C24  C30   174.09  30.0  1
+ FRG  Var_14    H262  C26  C24  C30   -69.57  30.0  1
+ FRG  Var_15    C22   C23  C24  C30   -61.17  30.0  3
+ FRG  Var_16    C22   C23  C24  C26   176.97  30.0  3
+ FRG  Var_17    C4    C7   C8   C9      2.98  30.0  1
+ FRG  Var_18    H231  C23  C24  C30   178.91  30.0  3
+ FRG  Var_19    H232  C23  C24  C30    62.19  30.0  3
+ FRG  Var_20    C12   C15  C16  N21   -53.49  30.0  3
+ FRG  Var_21    C12   C15  C16  C17  -177.39  30.0  3
+ FRG  Var_22    H16   C16  C15  C12    64.93  30.0  3
+ FRG  Var_23    C17   C16  N21  C22   -93.06  30.0  3
+ FRG  Var_24    C15   C16  N21  C22   142.65  30.0  3
+ FRG  Var_25    O19   C17  C16  N21    -2.00  30.0  3
+ FRG  Var_26    O18   C17  C16  N21   177.75  30.0  3
+ FRG  Var_27    C20   O18  C17  C16   179.62  30.0  3
+ FRG  Var_28    C15   C16  C17  O19   121.76  30.0  2
+ FRG  Var_29    C20   O18  C17  O19    -0.62  30.0  3
+ FRG  Var_30    C15   C16  C17  O18   -58.49  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

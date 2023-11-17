@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GUB  GUB  9-alpha-L-lyxofuranosyl-N-(2-phenylethyl)-9H-purin-6-amine  ligand  48  27  .  2021-08-10  2021-08-10  
+ GUB  GUB  9-alpha-L-lyxofuranosyl-N-(2-phenylethyl)-9H-purin-6-amine  ligand  48  27  .  2021-08-10  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_GUB
@@ -252,50 +253,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GUB  CONST_01  C12  N11  C10  C5   180.00   0.0  0
- GUB  CONST_02  N13  C9   C10  C5   180.00   0.0  0
- GUB  CONST_03  N8   C9   C10  C5     0.00   0.0  0
- GUB  CONST_04  N8   C7   N6   C5     0.00   0.0  0
- GUB  CONST_05  C10  N11  C12  N13    0.00   0.0  0
- GUB  CONST_06  N11  C10  C9   N13    0.00   0.0  0
- GUB  CONST_07  C7   N8   C9   N13  180.00   0.0  0
- GUB  CONST_08  C10  C9   N13  C12    0.00   0.0  0
- GUB  CONST_09  N8   C9   N13  C12  180.00   0.0  0
- GUB  CONST_10  C9   C10  N11  C12    0.00   0.0  0
- GUB  CONST_11  C9   N13  C12  N11    0.00   0.0  0
- GUB  CONST_12  N6   C5   C10  N11  180.00   0.0  0
- GUB  CONST_13  N8   C9   C10  N11  180.00   0.0  0
- GUB  CONST_14  C7   N6   C5   C10    0.00   0.0  0
- GUB  CONST_15  C7   N8   C9   C10    0.00   0.0  0
- GUB  CONST_16  N6   C5   C10  C9     0.00   0.0  0
- GUB  CONST_17  N6   C7   N8   C9     0.00   0.0  0
- GUB  CONST_18  C25  C24  C23  C1     0.00   0.0  0
- GUB  CONST_19  C25  C26  C27  C1     0.00   0.0  0
- GUB  CONST_20  C26  C27  C1   C23    0.00   0.0  0
- GUB  CONST_21  C26  C25  C24  C23    0.00   0.0  0
- GUB  CONST_22  C27  C1   C23  C24    0.00   0.0  0
- GUB  CONST_23  C27  C26  C25  C24    0.00   0.0  0
- GUB  CONST_24  N11  C12  N13  C14  180.00   0.0  0
- GUB  CONST_25  C10  C9   N13  C14  180.00   0.0  0
- GUB  CONST_26  N8   C9   N13  C14    0.00   0.0  0
- GUB  CONST_27  C24  C23  C1   C2   180.00   0.0  0
- GUB  CONST_28  C26  C27  C1   C2   180.00   0.0  0
- GUB  CONST_29  N4   C5   C10  N11    0.00   0.0  0
- GUB  CONST_30  N4   C5   C10  C9   180.00   0.0  0
- GUB  CONST_31  N4   C5   N6   C7   180.00   0.0  0
- GUB  CONST_32  H7   C7   N6   C5   180.00   0.0  0
- GUB  CONST_33  H12  C12  N13  C14    0.00   0.0  0
- GUB  CONST_34  H24  C24  C23  C1   180.00   0.0  0
- GUB  CONST_35  H26  C26  C27  C1   180.00   0.0  0
- GUB  CONST_36  H27  C27  C1   C23  180.00   0.0  0
- GUB  CONST_37  H25  C25  C24  C23  180.00   0.0  0
- GUB  CONST_38  H23  C23  C24  C25  180.00   0.0  0
- GUB  CONST_39  C10  C5   N4   C3   180.00   0.0  0
- GUB  CONST_40  N6   C5   N4   C3     0.00   0.0  0
- GUB  CONST_41  HN4  N4   C5   C10    0.00   0.0  0
- GUB  Var_01    C23  C1   C2   C3    89.23  30.0  2
- GUB  Var_02    C5   N4   C3   C2   143.03  30.0  3
- GUB  Var_03    C1   C2   C3   N4   176.88  30.0  1
+ GUB  CONST_01  C12   N11  C10  C5    180.00   0.0  0
+ GUB  CONST_02  N13   C9   C10  C5    180.00   0.0  0
+ GUB  CONST_03  N8    C9   C10  C5      0.00   0.0  0
+ GUB  CONST_04  N8    C7   N6   C5      0.00   0.0  0
+ GUB  CONST_05  C10   N11  C12  N13     0.00   0.0  0
+ GUB  CONST_06  N11   C10  C9   N13     0.00   0.0  0
+ GUB  CONST_07  C7    N8   C9   N13   180.00   0.0  0
+ GUB  CONST_08  C10   C9   N13  C12     0.00   0.0  0
+ GUB  CONST_09  N8    C9   N13  C12   180.00   0.0  0
+ GUB  CONST_10  C9    C10  N11  C12     0.00   0.0  0
+ GUB  CONST_11  C9    N13  C12  N11     0.00   0.0  0
+ GUB  CONST_12  N6    C5   C10  N11   180.00   0.0  0
+ GUB  CONST_13  N8    C9   C10  N11   180.00   0.0  0
+ GUB  CONST_14  C7    N6   C5   C10     0.00   0.0  0
+ GUB  CONST_15  C7    N8   C9   C10     0.00   0.0  0
+ GUB  CONST_16  N6    C5   C10  C9      0.00   0.0  0
+ GUB  CONST_17  N6    C7   N8   C9      0.00   0.0  0
+ GUB  CONST_18  C25   C24  C23  C1      0.00   0.0  0
+ GUB  CONST_19  C25   C26  C27  C1      0.00   0.0  0
+ GUB  CONST_20  C26   C27  C1   C23     0.00   0.0  0
+ GUB  CONST_21  C26   C25  C24  C23     0.00   0.0  0
+ GUB  CONST_22  C27   C1   C23  C24     0.00   0.0  0
+ GUB  CONST_23  C27   C26  C25  C24     0.00   0.0  0
+ GUB  CONST_24  N11   C12  N13  C14   180.00   0.0  0
+ GUB  CONST_25  C10   C9   N13  C14   180.00   0.0  0
+ GUB  CONST_26  N8    C9   N13  C14     0.00   0.0  0
+ GUB  CONST_27  C24   C23  C1   C2    180.00   0.0  0
+ GUB  CONST_28  C26   C27  C1   C2    180.00   0.0  0
+ GUB  CONST_29  N4    C5   C10  N11     0.00   0.0  0
+ GUB  CONST_30  N4    C5   C10  C9    180.00   0.0  0
+ GUB  CONST_31  N4    C5   N6   C7    180.00   0.0  0
+ GUB  CONST_32  H7    C7   N6   C5    180.00   0.0  0
+ GUB  CONST_33  H12   C12  N13  C14     0.00   0.0  0
+ GUB  CONST_34  H24   C24  C23  C1    180.00   0.0  0
+ GUB  CONST_35  H26   C26  C27  C1    180.00   0.0  0
+ GUB  CONST_36  H27   C27  C1   C23   180.00   0.0  0
+ GUB  CONST_37  H25   C25  C24  C23   180.00   0.0  0
+ GUB  CONST_38  H23   C23  C24  C25   180.00   0.0  0
+ GUB  CONST_39  C10   C5   N4   C3    180.00   0.0  0
+ GUB  CONST_40  N6    C5   N4   C3      0.00   0.0  0
+ GUB  CONST_41  HN4   N4   C5   C10     0.00   0.0  0
+ GUB  Var_01    C23   C1   C2   C3     89.23  30.0  2
+ GUB  Var_02    C5    N4   C3   C2    143.03  30.0  3
+ GUB  Var_03    C1    C2   C3   N4    176.88  30.0  1
+ GUB  Var_04    C14   C21  C19  C16   -40.51  30.0  1
+ GUB  Var_05    C21   C14  O15  C16   -13.66  30.0  1
+ GUB  Var_06    N13   C14  O15  C16  -136.40  30.0  1
+ GUB  Var_07    C14   O15  C16  C19   -13.21  30.0  1
+ GUB  Var_08    O15   C14  C21  C19    34.75  30.0  1
+ GUB  Var_09    N13   C14  C21  C19   155.18  30.0  1
+ GUB  Var_10    C21   C19  C16  O15    33.95  30.0  1
+ GUB  Var_11    C12   N13  C14  O15    56.11  30.0  2
+ GUB  Var_12    C9    N13  C14  O15  -125.33  30.0  2
+ GUB  Var_13    C12   N13  C14  C21   -61.97  30.0  2
+ GUB  Var_14    C9    N13  C14  C21   116.59  30.0  2
+ GUB  Var_15    C21   C19  C16  C17   155.54  30.0  1
+ GUB  Var_16    C14   O15  C16  C17  -137.68  30.0  1
+ GUB  Var_17    O22   C21  C19  C16  -159.73  30.0  1
+ GUB  Var_18    O15   C16  C19  O20   -80.75  30.0  1
+ GUB  Var_19    C14   C21  C19  O20    78.58  30.0  1
+ GUB  Var_20    O22   C21  C14  O15   159.26  30.0  1
+ GUB  Var_21    N13   C14  C21  O22   -80.31  30.0  1
+ GUB  Var_22    H21   C21  C19  C16    73.46  30.0  1
+ GUB  Var_23    H14   C14  O15  C16   106.31  30.0  1
+ GUB  Var_24    H19   C19  C16  O15   152.32  30.0  1
+ GUB  Var_25    H16   C16  O15  C14   103.17  30.0  1
+ GUB  Var_26    C19   C16  C17  O18   174.82  30.0  3
+ GUB  Var_27    O15   C16  C17  O18   -66.05  30.0  3
+ GUB  Var_28    O20   C19  C16  C17    40.84  30.0  1
+ GUB  Var_29    O22   C21  C19  O20   -40.64  30.0  1
+ GUB  Var_30    HO20  O20  C19  C16   -80.49  30.0  3
+ GUB  Var_31    H17   C17  C16  C19    53.68  30.0  2
+ GUB  Var_32    H17A  C17  C16  C19   -62.92  30.0  2
+ GUB  Var_33    HO22  O22  C21  C19   -75.10  30.0  3
+ GUB  Var_34    HO18  O18  C17  C16   174.54  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

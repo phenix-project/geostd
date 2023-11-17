@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 48E  48E  5'-deoxy-5'-{[(2R)-3-hydroxy-2-(4-phenyl-1H-1,2,3-triazol-1-yl)propanoyl]amino}uridine  ligand  55  33  .  2021-08-04  2021-08-04  
+ 48E  48E  5'-deoxy-5'-{[(2R)-3-hydroxy-2-(4-phenyl-1H-1,2,3-triazol-1-yl)propanoyl]amino}uridine  ligand  55  33  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_48E
@@ -277,44 +278,97 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 48E  CONST_01  CBA  NAZ  NAX  N      0.00   0.0  0
- 48E  CONST_02  NAZ  CBA  CAY  N      0.00   0.0  0
- 48E  CONST_03  CBB  CBA  CAY  N    180.00   0.0  0
- 48E  CONST_04  NAZ  NAX  N    CAY    0.00   0.0  0
- 48E  CONST_05  NAX  NAZ  CBA  CAY    0.00   0.0  0
- 48E  CONST_06  CBF  CBB  CBA  CAY  180.00   0.0  0
- 48E  CONST_07  CBG  CBB  CBA  CAY    0.00   0.0  0
- 48E  CONST_08  CBA  CAY  N    NAX    0.00   0.0  0
- 48E  CONST_09  CBB  CBA  NAZ  NAX  180.00   0.0  0
- 48E  CONST_10  CBF  CBB  CBA  NAZ    0.00   0.0  0
- 48E  CONST_11  CBG  CBB  CBA  NAZ  180.00   0.0  0
- 48E  CONST_12  CBD  CBF  CBB  CBA  180.00   0.0  0
- 48E  CONST_13  CBE  CBG  CBB  CBA  180.00   0.0  0
- 48E  CONST_14  CBC  CBD  CBF  CBB    0.00   0.0  0
- 48E  CONST_15  CBC  CBE  CBG  CBB    0.00   0.0  0
- 48E  CONST_16  CBE  CBG  CBB  CBF    0.00   0.0  0
- 48E  CONST_17  CBE  CBC  CBD  CBF    0.00   0.0  0
- 48E  CONST_18  CBG  CBB  CBF  CBD    0.00   0.0  0
- 48E  CONST_19  CBG  CBE  CBC  CBD    0.00   0.0  0
- 48E  CONST_20  CAI  NAD  CAB  NAA  180.00   0.0  0
- 48E  CONST_21  CAF  NAD  CAB  NAA    0.00   0.0  0
- 48E  CONST_22  NAD  CAB  NAA  CAC    0.00   0.0  0
- 48E  CONST_23  NAZ  NAX  N    CA   180.00   0.0  0
- 48E  CONST_24  CBA  CAY  N    CA   180.00   0.0  0
- 48E  CONST_25  CAI  NAD  CAB  OAG    0.00   0.0  0
- 48E  CONST_26  CAF  NAD  CAB  OAG  180.00   0.0  0
- 48E  CONST_27  CAC  NAA  CAB  OAG  180.00   0.0  0
- 48E  CONST_28  H17  CAY  N    NAX  180.00   0.0  0
- 48E  CONST_29  H18  CBF  CBB  CBA    0.00   0.0  0
- 48E  CONST_30  H22  CBG  CBB  CBA    0.00   0.0  0
- 48E  CONST_31  H19  CBD  CBF  CBB  180.00   0.0  0
- 48E  CONST_32  H21  CBE  CBG  CBB  180.00   0.0  0
- 48E  CONST_33  H20  CBC  CBD  CBF  180.00   0.0  0
- 48E  CONST_34  H1   NAA  CAB  NAD  180.00   0.0  0
- 48E  CONST_35  CA   C    NAQ  CAP  180.00   0.0  0
- 48E  CONST_36  O    C    NAQ  CAP    0.00   0.0  0
- 48E  CONST_37  H12  NAQ  C    O    180.00   0.0  0
- 48E  Var_01    C    NAQ  CAP  CAM  147.86  30.0  3
+ 48E  CONST_01  CBA  NAZ  NAX  N       0.00   0.0  0
+ 48E  CONST_02  NAZ  CBA  CAY  N       0.00   0.0  0
+ 48E  CONST_03  CBB  CBA  CAY  N     180.00   0.0  0
+ 48E  CONST_04  NAZ  NAX  N    CAY     0.00   0.0  0
+ 48E  CONST_05  NAX  NAZ  CBA  CAY     0.00   0.0  0
+ 48E  CONST_06  CBF  CBB  CBA  CAY   180.00   0.0  0
+ 48E  CONST_07  CBG  CBB  CBA  CAY     0.00   0.0  0
+ 48E  CONST_08  CBA  CAY  N    NAX     0.00   0.0  0
+ 48E  CONST_09  CBB  CBA  NAZ  NAX   180.00   0.0  0
+ 48E  CONST_10  CBF  CBB  CBA  NAZ     0.00   0.0  0
+ 48E  CONST_11  CBG  CBB  CBA  NAZ   180.00   0.0  0
+ 48E  CONST_12  CBD  CBF  CBB  CBA   180.00   0.0  0
+ 48E  CONST_13  CBE  CBG  CBB  CBA   180.00   0.0  0
+ 48E  CONST_14  CBC  CBD  CBF  CBB     0.00   0.0  0
+ 48E  CONST_15  CBC  CBE  CBG  CBB     0.00   0.0  0
+ 48E  CONST_16  CBE  CBG  CBB  CBF     0.00   0.0  0
+ 48E  CONST_17  CBE  CBC  CBD  CBF     0.00   0.0  0
+ 48E  CONST_18  CBG  CBB  CBF  CBD     0.00   0.0  0
+ 48E  CONST_19  CBG  CBE  CBC  CBD     0.00   0.0  0
+ 48E  CONST_20  CAI  NAD  CAB  NAA   180.00   0.0  0
+ 48E  CONST_21  CAF  NAD  CAB  NAA     0.00   0.0  0
+ 48E  CONST_22  NAD  CAB  NAA  CAC     0.00   0.0  0
+ 48E  CONST_23  NAZ  NAX  N    CA    180.00   0.0  0
+ 48E  CONST_24  CBA  CAY  N    CA    180.00   0.0  0
+ 48E  CONST_25  CAI  NAD  CAB  OAG     0.00   0.0  0
+ 48E  CONST_26  CAF  NAD  CAB  OAG   180.00   0.0  0
+ 48E  CONST_27  CAC  NAA  CAB  OAG   180.00   0.0  0
+ 48E  CONST_28  H17  CAY  N    NAX   180.00   0.0  0
+ 48E  CONST_29  H18  CBF  CBB  CBA     0.00   0.0  0
+ 48E  CONST_30  H22  CBG  CBB  CBA     0.00   0.0  0
+ 48E  CONST_31  H19  CBD  CBF  CBB   180.00   0.0  0
+ 48E  CONST_32  H21  CBE  CBG  CBB   180.00   0.0  0
+ 48E  CONST_33  H20  CBC  CBD  CBF   180.00   0.0  0
+ 48E  CONST_34  H1   NAA  CAB  NAD   180.00   0.0  0
+ 48E  CONST_35  CA   C    NAQ  CAP   180.00   0.0  0
+ 48E  CONST_36  O    C    NAQ  CAP     0.00   0.0  0
+ 48E  CONST_37  H12  NAQ  C    O     180.00   0.0  0
+ 48E  Var_01    C    NAQ  CAP  CAM   147.86  30.0  3
+ 48E  Var_02    CAK  CAI  NAD  CAB    80.14  30.0  1
+ 48E  Var_03    OAL  CAI  NAD  CAB  -161.47  30.0  1
+ 48E  Var_04    CAE  CAF  NAD  CAB    -0.49  30.0  1
+ 48E  Var_05    CAE  CAC  NAA  CAB    -0.94  30.0  1
+ 48E  Var_06    CAF  CAE  CAC  NAA     0.15  30.0  1
+ 48E  Var_07    NAD  CAF  CAE  CAC     0.51  30.0  1
+ 48E  Var_08    CAI  NAD  CAF  CAE   179.25  30.0  1
+ 48E  Var_09    CAK  CAI  NAD  CAF   -99.61  30.0  1
+ 48E  Var_10    OAL  CAI  NAD  CAF    18.78  30.0  1
+ 48E  Var_11    CAJ  CAK  CAI  NAD    93.87  30.0  1
+ 48E  Var_12    CAM  OAL  CAI  NAD  -116.35  30.0  1
+ 48E  Var_13    CAM  CAJ  CAK  CAI    35.66  30.0  1
+ 48E  Var_14    CAJ  CAM  OAL  CAI    18.53  30.0  1
+ 48E  Var_15    CAK  CAJ  CAM  OAL   -33.82  30.0  1
+ 48E  Var_16    CAJ  CAK  CAI  OAL   -26.05  30.0  1
+ 48E  Var_17    CAM  OAL  CAI  CAK     5.04  30.0  1
+ 48E  Var_18    OAH  CAC  NAA  CAB   179.15  30.0  1
+ 48E  Var_19    CAF  CAE  CAC  OAH  -179.95  30.0  1
+ 48E  Var_20    OAN  CAK  CAI  NAD  -149.58  30.0  1
+ 48E  Var_21    OAO  CAJ  CAK  CAI   154.20  30.0  1
+ 48E  Var_22    CAP  CAM  OAL  CAI   141.01  30.0  1
+ 48E  Var_23    OAO  CAJ  CAM  OAL  -155.02  30.0  1
+ 48E  Var_24    OAN  CAK  CAI  OAL    90.51  30.0  1
+ 48E  Var_25    CAP  CAM  CAJ  CAK  -153.85  30.0  1
+ 48E  Var_26    CAM  CAJ  CAK  OAN   -78.34  30.0  1
+ 48E  Var_27    H4   CAI  NAD  CAB   -42.26  30.0  1
+ 48E  Var_28    H3   CAF  NAD  CAB   178.65  30.0  1
+ 48E  Var_29    H2   CAE  CAC  NAA  -179.31  30.0  1
+ 48E  Var_30    H5   CAK  CAI  NAD   -25.98  30.0  1
+ 48E  Var_31    H7   CAJ  CAK  CAI   -80.38  30.0  1
+ 48E  Var_32    H9   CAM  OAL  CAI   -99.01  30.0  1
+ 48E  Var_33    NAQ  CAP  CAM  OAL    60.47  30.0  3
+ 48E  Var_34    OAO  CAJ  CAK  OAN    40.20  30.0  1
+ 48E  Var_35    NAQ  CAP  CAM  CAJ   177.38  30.0  3
+ 48E  Var_36    CAP  CAM  CAJ  OAO    84.95  30.0  1
+ 48E  Var_37    NAX  N    CA   C     106.54  30.0  2
+ 48E  Var_38    CAY  N    CA   C     -71.69  30.0  2
+ 48E  Var_39    NAX  N    CA   CB   -132.06  30.0  2
+ 48E  Var_40    CAY  N    CA   CB     49.72  30.0  2
+ 48E  Var_41    H6   OAN  CAK  CAI  -151.67  30.0  3
+ 48E  Var_42    H10  CAP  CAM  OAL  -179.78  30.0  3
+ 48E  Var_43    H11  CAP  CAM  OAL   -62.84  30.0  3
+ 48E  Var_44    H8   OAO  CAJ  CAK    87.24  30.0  3
+ 48E  Var_45    H13  CA   N    CAY   168.34  30.0  3
+ 48E  Var_46    N    CA   C    NAQ  -128.32  30.0  3
+ 48E  Var_47    N    CA   C    O      53.50  30.0  3
+ 48E  Var_48    N    CA   CB   OG     59.28  30.0  1
+ 48E  Var_49    H14  CB   CA   N    -179.22  30.0  3
+ 48E  Var_50    H15  CB   CA   N     -63.25  30.0  3
+ 48E  Var_51    CB   CA   C    NAQ   108.99  30.0  3
+ 48E  Var_52    OG   CB   CA   C    -179.34  30.0  3
+ 48E  Var_53    CB   CA   C    O     -69.19  30.0  3
+ 48E  Var_54    H16  OG   CB   CA   -174.13  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

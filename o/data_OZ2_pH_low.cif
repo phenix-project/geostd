@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OZ2  OZ2  '(2R)-3-{[(R)-{[(2S)-2,3-dihydroxypropyl]oxy}(hydroxy)phosphoryl]oxy}-2-[(6Z)-tridec-6-enoyloxy]propyl (9Z)-octadec-9-enoate'  ligand  117  48  .  2022-11-17  2022-11-17
+ OZ2  OZ2  '(2R)-3-{[(R)-{[(2S)-2,3-dihydroxypropyl]oxy}(hydroxy)phosphoryl]oxy}-2-[(6Z)-tridec-6-enoyloxy]propyl (9Z)-octadec-9-enoate'  ligand  117  48  .  2022-11-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OZ2
@@ -515,39 +516,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OZ2  Var_01  C11  C10  C9   C8     -0.52   0.0  2
- OZ2  Var_02  C8B  C7B  C6B  C5B    -1.13   0.0  2
- OZ2  Var_03  CG2  CG1  OP3  P      82.86  30.0  1
- OZ2  Var_04  C2G  C3G  O3G  P     112.97  30.0  3
- OZ2  Var_05  C2G  C1G  O1G  C1   -108.80  30.0  3
- OZ2  Var_06  C4   C3   C2   C1    174.55  30.0  1
- OZ2  Var_07  C3   C2   C1   O1     -0.10  30.0  3
- OZ2  Var_08  C5   C4   C3   C2   -177.40  30.0  3
- OZ2  Var_09  C6   C5   C4   C3    178.56  30.0  1
- OZ2  Var_10  C7   C6   C5   C4    179.82  30.0  3
- OZ2  Var_11  C8   C7   C6   C5    178.58  30.0  1
- OZ2  Var_12  C9   C8   C7   C6    175.22  30.0  3
- OZ2  Var_13  C10  C9   C8   C7    109.23  30.0  2
- OZ2  Var_14  C12  C11  C10  C9   -124.60  30.0  3
- OZ2  Var_15  C13  C12  C11  C10    60.79  30.0  3
- OZ2  Var_16  C14  C13  C12  C11   174.68  30.0  1
- OZ2  Var_17  C15  C14  C13  C12   178.55  30.0  3
- OZ2  Var_18  C16  C15  C14  C13  -178.71  30.0  1
- OZ2  Var_19  C17  C16  C15  C14   -61.82  30.0  3
- OZ2  Var_20  C18  C17  C16  C15  -172.38  30.0  3
- OZ2  Var_21  C4B  C3B  C2B  C1B  -174.47  30.0  1
- OZ2  Var_22  C3B  C2B  C1B  O1B   -64.22  30.0  3
- OZ2  Var_23  C5B  C4B  C3B  C2B   177.78  30.0  3
- OZ2  Var_24  C6B  C5B  C4B  C3B  -177.90  30.0  1
- OZ2  Var_25  OP1  P    O3G  C3G   -56.83  30.0  2
- OZ2  Var_26  C7B  C6B  C5B  C4B  -111.06  30.0  3
- OZ2  Var_27  C9B  C8B  C7B  C6B   114.14  30.0  2
- OZ2  Var_28  CB0  C9B  C8B  C7B   -66.47  30.0  3
- OZ2  Var_29  CB1  CB0  C9B  C8B  -178.54  30.0  3
- OZ2  Var_30  CB2  CB1  CB0  C9B   178.74  30.0  3
- OZ2  Var_31  CB3  CB2  CB1  CB0  -179.66  30.0  3
- OZ2  Var_32  H18  C18  C17  C16   178.75  30.0  3
- OZ2  Var_33  HB3  CB3  CB2  CB1   179.71  30.0  3
+ OZ2  Var_01  C11   C10  C9   C8     -0.52   0.0  2
+ OZ2  Var_02  C8B   C7B  C6B  C5B    -1.13   0.0  2
+ OZ2  Var_03  CG2   CG1  OP3  P      82.86  30.0  1
+ OZ2  Var_04  C2G   C3G  O3G  P     112.97  30.0  3
+ OZ2  Var_05  C2G   C1G  O1G  C1   -108.80  30.0  3
+ OZ2  Var_06  C4    C3   C2   C1    174.55  30.0  1
+ OZ2  Var_07  C3    C2   C1   O1     -0.10  30.0  3
+ OZ2  Var_08  C5    C4   C3   C2   -177.40  30.0  3
+ OZ2  Var_09  C6    C5   C4   C3    178.56  30.0  1
+ OZ2  Var_10  C7    C6   C5   C4    179.82  30.0  3
+ OZ2  Var_11  C8    C7   C6   C5    178.58  30.0  1
+ OZ2  Var_12  C9    C8   C7   C6    175.22  30.0  3
+ OZ2  Var_13  C10   C9   C8   C7    109.23  30.0  2
+ OZ2  Var_14  C12   C11  C10  C9   -124.60  30.0  3
+ OZ2  Var_15  C13   C12  C11  C10    60.79  30.0  3
+ OZ2  Var_16  C14   C13  C12  C11   174.68  30.0  1
+ OZ2  Var_17  C15   C14  C13  C12   178.55  30.0  3
+ OZ2  Var_18  C16   C15  C14  C13  -178.71  30.0  1
+ OZ2  Var_19  C17   C16  C15  C14   -61.82  30.0  3
+ OZ2  Var_20  C18   C17  C16  C15  -172.38  30.0  3
+ OZ2  Var_21  C4B   C3B  C2B  C1B  -174.47  30.0  1
+ OZ2  Var_22  C3B   C2B  C1B  O1B   -64.22  30.0  3
+ OZ2  Var_23  C5B   C4B  C3B  C2B   177.78  30.0  3
+ OZ2  Var_24  C6B   C5B  C4B  C3B  -177.90  30.0  1
+ OZ2  Var_25  OP1   P    O3G  C3G   -56.83  30.0  2
+ OZ2  Var_26  C7B   C6B  C5B  C4B  -111.06  30.0  3
+ OZ2  Var_27  C9B   C8B  C7B  C6B   114.14  30.0  2
+ OZ2  Var_28  CB0   C9B  C8B  C7B   -66.47  30.0  3
+ OZ2  Var_29  CB1   CB0  C9B  C8B  -178.54  30.0  3
+ OZ2  Var_30  CB2   CB1  CB0  C9B   178.74  30.0  3
+ OZ2  Var_31  CB3   CB2  CB1  CB0  -179.66  30.0  3
+ OZ2  Var_32  H18   C18  C17  C16   178.75  30.0  3
+ OZ2  Var_33  HB3   CB3  CB2  CB1   179.71  30.0  3
+ OZ2  Var_34  C1G   O1G  C1   O1     -8.86  30.0  1
+ OZ2  Var_35  C1G   O1G  C1   C2    170.47  30.0  1
+ OZ2  Var_36  C1G   C2G  O2G  C1B    71.60  30.0  1
+ OZ2  Var_37  C3G   C2G  O2G  C1B   -60.75  30.0  1
+ OZ2  Var_38  C2G   O2G  C1B  O1B     2.87  30.0  2
+ OZ2  Var_39  O3G   C3G  C2G  C1G   -39.36  30.0  3
+ OZ2  Var_40  C3G   C2G  C1G  O1G  -174.62  30.0  3
+ OZ2  Var_41  O2G   C2G  C1G  O1G    51.93  30.0  3
+ OZ2  Var_42  C2G   O2G  C1B  C2B  -176.30  30.0  2
+ OZ2  Var_43  O3G   C3G  C2G  O2G    92.31  30.0  3
+ OZ2  Var_44  CG1   OP3  P    O3G  -145.31  30.0  3
+ OZ2  Var_45  OG3   CG3  CG2  CG1   -58.13  30.0  2
+ OZ2  Var_46  OP1   P    OP3  CG1   -17.96  30.0  2
+ OZ2  Var_47  OP2   P    OP3  CG1   110.11  30.0  2
+ OZ2  Var_48  OP3   CG1  CG2  OG2    55.99  30.0  3
+ OZ2  Var_49  OG3   CG3  CG2  OG2    62.82  30.0  2
+ OZ2  Var_50  OP3   CG1  CG2  CG3  -179.94  30.0  3
+ OZ2  Var_51  H2G   C2G  O2G  C1B  -173.56  30.0  1
+ OZ2  Var_52  HOP2  OP2  P    O3G    93.60  30.0  3
+ OZ2  Var_53  HG3   CG3  CG2  CG1    64.50  30.0  2
+ OZ2  Var_54  HG3A  CG3  CG2  CG1   179.50  30.0  2
+ OZ2  Var_55  HOG2  OG2  CG2  CG1  -168.87  30.0  3
+ OZ2  Var_56  HOG3  OG3  CG3  CG2   179.53  30.0  3
+ OZ2  Var_57  HG2   CG2  CG3  OG3  -175.57  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

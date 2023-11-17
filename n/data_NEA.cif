@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NEA  NEA  5'-S-(2-aminoethyl)-5'-thioadenosine  ligand  40  22  .  2021-08-15  2021-08-15  
+ NEA  NEA  5'-S-(2-aminoethyl)-5'-thioadenosine  ligand  40  22  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NEA
@@ -220,36 +221,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NEA  CONST_01  C5   N7   C8  N9      0.00   0.0  0
- NEA  CONST_02  N7   C5   C4  N9      0.00   0.0  0
- NEA  CONST_03  C6   C5   C4  N9    180.00   0.0  0
- NEA  CONST_04  C2   N3   C4  N9    180.00   0.0  0
- NEA  CONST_05  C5   C4   N9  C8      0.00   0.0  0
- NEA  CONST_06  N3   C4   N9  C8    180.00   0.0  0
- NEA  CONST_07  C6   C5   N7  C8    180.00   0.0  0
- NEA  CONST_08  C4   C5   N7  C8      0.00   0.0  0
- NEA  CONST_09  C4   N9   C8  N7      0.00   0.0  0
- NEA  CONST_10  N1   C6   C5  N7    180.00   0.0  0
- NEA  CONST_11  N3   C4   C5  N7    180.00   0.0  0
- NEA  CONST_12  C2   N1   C6  C5      0.00   0.0  0
- NEA  CONST_13  C2   N3   C4  C5      0.00   0.0  0
- NEA  CONST_14  N3   C4   C5  C6      0.00   0.0  0
- NEA  CONST_15  N3   C2   N1  C6      0.00   0.0  0
- NEA  CONST_16  C4   C5   C6  N1      0.00   0.0  0
- NEA  CONST_17  C4   N3   C2  N1      0.00   0.0  0
- NEA  CONST_18  N7   C8   N9  C1'   180.00   0.0  0
- NEA  CONST_19  C5   C4   N9  C1'   180.00   0.0  0
- NEA  CONST_20  N3   C4   N9  C1'     0.00   0.0  0
- NEA  CONST_21  N6   C6   C5  N7      0.00   0.0  0
- NEA  CONST_22  C4   C5   C6  N6    180.00   0.0  0
- NEA  CONST_23  C2   N1   C6  N6    180.00   0.0  0
- NEA  CONST_24  H8   C8   N9  C1'     0.00   0.0  0
- NEA  CONST_25  H2   C2   N1  C6    180.00   0.0  0
- NEA  CONST_26  H61  N6   C6  C5    180.00   0.0  0
- NEA  CONST_27  H62  N6   C6  C5      0.00   0.0  0
- NEA  Var_01    C4'  C5'  SD  CG    162.50  30.0  3
- NEA  Var_02    SD   CG   CB  N    -179.75  30.0  3
- NEA  Var_03    HN1  N    CB  CG    173.65  30.0  3
+ NEA  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ NEA  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ NEA  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ NEA  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ NEA  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ NEA  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ NEA  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ NEA  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ NEA  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ NEA  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ NEA  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ NEA  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ NEA  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ NEA  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ NEA  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ NEA  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ NEA  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ NEA  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ NEA  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ NEA  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ NEA  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ NEA  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ NEA  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ NEA  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ NEA  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ NEA  CONST_26  H61   N6   C6   C5    180.00   0.0  0
+ NEA  CONST_27  H62   N6   C6   C5      0.00   0.0  0
+ NEA  Var_01    C4'   C5'  SD   CG    162.50  30.0  3
+ NEA  Var_02    SD    CG   CB   N    -179.75  30.0  3
+ NEA  Var_03    HN1   N    CB   CG    173.65  30.0  3
+ NEA  Var_04    C2'   C1'  O4'  C4'    -8.58  30.0  1
+ NEA  Var_05    N9    C1'  O4'  C4'  -131.40  30.0  1
+ NEA  Var_06    C1'   C2'  C3'  C4'   -37.62  30.0  1
+ NEA  Var_07    C2'   C3'  C4'  O4'    33.83  30.0  1
+ NEA  Var_08    C3'   C2'  C1'  O4'    29.51  30.0  1
+ NEA  Var_09    C8    N9   C1'  O4'    37.85  30.0  2
+ NEA  Var_10    C4    N9   C1'  O4'  -145.08  30.0  2
+ NEA  Var_11    C1'   O4'  C4'  C3'   -16.35  30.0  1
+ NEA  Var_12    N9    C1'  C2'  C3'   149.54  30.0  1
+ NEA  Var_13    C8    N9   C1'  C2'   -80.52  30.0  2
+ NEA  Var_14    C4    N9   C1'  C2'    96.55  30.0  2
+ NEA  Var_15    C1'   O4'  C4'  C5'   105.51  30.0  1
+ NEA  Var_16    C2'   C3'  C4'  C5'   -87.29  30.0  1
+ NEA  Var_17    O2'   C2'  C3'  C4'  -156.16  30.0  1
+ NEA  Var_18    O3'   C3'  C4'  O4'   -82.81  30.0  1
+ NEA  Var_19    O2'   C2'  C1'  O4'   151.51  30.0  1
+ NEA  Var_20    C1'   C2'  C3'  O3'    77.28  30.0  1
+ NEA  Var_21    N9    C1'  C2'  O2'   -88.46  30.0  1
+ NEA  Var_22    H1'   C1'  O4'  C4'   111.49  30.0  1
+ NEA  Var_23    H2'   C2'  C3'  C4'    77.75  30.0  1
+ NEA  Var_24    H3'   C3'  C4'  O4'   153.10  30.0  1
+ NEA  Var_25    H4'   C4'  C3'  C2'   150.22  30.0  1
+ NEA  Var_26    O4'   C4'  C5'  SD     48.97  30.0  3
+ NEA  Var_27    C3'   C4'  C5'  SD    166.60  30.0  3
+ NEA  Var_28    O3'   C3'  C4'  C5'   156.08  30.0  1
+ NEA  Var_29    O2'   C2'  C3'  O3'   -41.26  30.0  1
+ NEA  Var_30    H3T   O3'  C3'  C4'   158.23  30.0  3
+ NEA  Var_31    H5'1  C5'  C4'  O4'   -73.42  30.0  2
+ NEA  Var_32    H5'2  C5'  C4'  O4'   168.04  30.0  2
+ NEA  Var_33    HO'2  O2'  C2'  C3'   -85.71  30.0  3
+ NEA  Var_34    C5'   SD   CG   CB   -179.51  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- COR  COR  2,4-diamino-1,2,4,5-tetradeoxy-1,5-diphenyl-L-arabinitol  ligand  42  20  .  2021-08-07  2021-08-07  
+ COR  COR  2,4-diamino-1,2,4,5-tetradeoxy-1,5-diphenyl-L-arabinitol  ligand  42  20  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_COR
@@ -223,34 +224,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- COR  CONST_01  C4A  C3A  C2A  C1A    0.00   0.0  0
- COR  CONST_02  C4A  C5A  C6A  C1A    0.00   0.0  0
- COR  CONST_03  C5A  C6A  C1A  C2A    0.00   0.0  0
- COR  CONST_04  C5A  C4A  C3A  C2A    0.00   0.0  0
- COR  CONST_05  C6A  C1A  C2A  C3A    0.00   0.0  0
- COR  CONST_06  C6A  C5A  C4A  C3A    0.00   0.0  0
- COR  CONST_07  C4B  C3B  C2B  C1B    0.00   0.0  0
- COR  CONST_08  C4B  C5B  C6B  C1B    0.00   0.0  0
- COR  CONST_09  C5B  C6B  C1B  C2B    0.00   0.0  0
- COR  CONST_10  C5B  C4B  C3B  C2B    0.00   0.0  0
- COR  CONST_11  C6B  C1B  C2B  C3B    0.00   0.0  0
- COR  CONST_12  C6B  C5B  C4B  C3B    0.00   0.0  0
- COR  CONST_13  C3A  C2A  C1A  C1   180.00   0.0  0
- COR  CONST_14  C5A  C6A  C1A  C1   180.00   0.0  0
- COR  CONST_15  C3B  C2B  C1B  C5   180.00   0.0  0
- COR  CONST_16  C5B  C6B  C1B  C5   180.00   0.0  0
- COR  CONST_17  H3A  C3A  C2A  C1A  180.00   0.0  0
- COR  CONST_18  H5A  C5A  C6A  C1A  180.00   0.0  0
- COR  CONST_19  H6A  C6A  C1A  C2A  180.00   0.0  0
- COR  CONST_20  H4A  C4A  C3A  C2A  180.00   0.0  0
- COR  CONST_21  H2A  C2A  C3A  C4A  180.00   0.0  0
- COR  CONST_22  H3B  C3B  C2B  C1B  180.00   0.0  0
- COR  CONST_23  H5B  C5B  C6B  C1B  180.00   0.0  0
- COR  CONST_24  H6B  C6B  C1B  C2B  180.00   0.0  0
- COR  CONST_25  H4B  C4B  C3B  C2B  180.00   0.0  0
- COR  CONST_26  H2B  C2B  C3B  C4B  180.00   0.0  0
- COR  Var_01    C2A  C1A  C1   C2    95.99  30.0  2
- COR  Var_02    C2B  C1B  C5   C4    94.94  30.0  2
+ COR  CONST_01  C4A   C3A  C2A  C1A     0.00   0.0  0
+ COR  CONST_02  C4A   C5A  C6A  C1A     0.00   0.0  0
+ COR  CONST_03  C5A   C6A  C1A  C2A     0.00   0.0  0
+ COR  CONST_04  C5A   C4A  C3A  C2A     0.00   0.0  0
+ COR  CONST_05  C6A   C1A  C2A  C3A     0.00   0.0  0
+ COR  CONST_06  C6A   C5A  C4A  C3A     0.00   0.0  0
+ COR  CONST_07  C4B   C3B  C2B  C1B     0.00   0.0  0
+ COR  CONST_08  C4B   C5B  C6B  C1B     0.00   0.0  0
+ COR  CONST_09  C5B   C6B  C1B  C2B     0.00   0.0  0
+ COR  CONST_10  C5B   C4B  C3B  C2B     0.00   0.0  0
+ COR  CONST_11  C6B   C1B  C2B  C3B     0.00   0.0  0
+ COR  CONST_12  C6B   C5B  C4B  C3B     0.00   0.0  0
+ COR  CONST_13  C3A   C2A  C1A  C1    180.00   0.0  0
+ COR  CONST_14  C5A   C6A  C1A  C1    180.00   0.0  0
+ COR  CONST_15  C3B   C2B  C1B  C5    180.00   0.0  0
+ COR  CONST_16  C5B   C6B  C1B  C5    180.00   0.0  0
+ COR  CONST_17  H3A   C3A  C2A  C1A   180.00   0.0  0
+ COR  CONST_18  H5A   C5A  C6A  C1A   180.00   0.0  0
+ COR  CONST_19  H6A   C6A  C1A  C2A   180.00   0.0  0
+ COR  CONST_20  H4A   C4A  C3A  C2A   180.00   0.0  0
+ COR  CONST_21  H2A   C2A  C3A  C4A   180.00   0.0  0
+ COR  CONST_22  H3B   C3B  C2B  C1B   180.00   0.0  0
+ COR  CONST_23  H5B   C5B  C6B  C1B   180.00   0.0  0
+ COR  CONST_24  H6B   C6B  C1B  C2B   180.00   0.0  0
+ COR  CONST_25  H4B   C4B  C3B  C2B   180.00   0.0  0
+ COR  CONST_26  H2B   C2B  C3B  C4B   180.00   0.0  0
+ COR  Var_01    C2A   C1A  C1   C2     95.99  30.0  2
+ COR  Var_02    C2B   C1B  C5   C4     94.94  30.0  2
+ COR  Var_03    C1A   C1   C2   N2    -61.11  30.0  1
+ COR  Var_04    C1A   C1   C2   C3    176.04  30.0  1
+ COR  Var_05    C1B   C5   C4   C3    177.63  30.0  3
+ COR  Var_06    C1B   C5   C4   N4    -59.38  30.0  3
+ COR  Var_07    H2    C2   C1   C1A    58.93  30.0  3
+ COR  Var_08    H4    C4   C5   C1B    59.47  30.0  1
+ COR  Var_09    O3    C3   C2   C1     75.05  30.0  3
+ COR  Var_10    C4    C3   C2   C1   -159.78  30.0  3
+ COR  Var_11    N4    C4   C3   C2     64.34  30.0  3
+ COR  Var_12    C5    C4   C3   C2   -169.73  30.0  3
+ COR  Var_13    O3    C3   C2   N2    -50.58  30.0  3
+ COR  Var_14    C4    C3   C2   N2     74.59  30.0  3
+ COR  Var_15    N4    C4   C3   O3   -171.62  30.0  3
+ COR  Var_16    C5    C4   C3   O3    -45.69  30.0  3
+ COR  Var_17    HN21  N2   C2   C1    -27.02  30.0  3
+ COR  Var_18    HN22  N2   C2   C1     90.45  30.0  3
+ COR  Var_19    H3    C3   C2   C1    -40.84  30.0  3
+ COR  Var_20    HO3   O3   C3   C2     56.95  30.0  3
+ COR  Var_21    HN41  N4   C4   C3     72.22  30.0  3
+ COR  Var_22    HN42  N4   C4   C3   -171.70  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

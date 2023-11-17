@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TVN  TVN  N-{(2R)-4-(methylamino)-4-oxo-2-[4-(phosphonooxy)benzyl]butanoyl}-L-valyl-L-aspartamide  ligand  66  36  .  2021-08-23  2021-08-23  
+ TVN  TVN  N-{(2R)-4-(methylamino)-4-oxo-2-[4-(phosphonooxy)benzyl]butanoyl}-L-valyl-L-aspartamide  ligand  66  36  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TVN
@@ -312,40 +313,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TVN  CONST_01  CBA   CBB  CBC  CBD    0.00   0.0  0
- TVN  CONST_02  CBA   CBK  CBJ  CBD    0.00   0.0  0
- TVN  CONST_03  CBK   CBJ  CBD  CBC    0.00   0.0  0
- TVN  CONST_04  CBK   CBA  CBB  CBC    0.00   0.0  0
- TVN  CONST_05  CBJ   CBD  CBC  CBB    0.00   0.0  0
- TVN  CONST_06  CBJ   CBK  CBA  CBB    0.00   0.0  0
- TVN  CONST_07  CBB   CBC  CBD  OBE  180.00   0.0  0
- TVN  CONST_08  CBK   CBJ  CBD  OBE  180.00   0.0  0
- TVN  CONST_09  CAZ   CBA  CBB  CBC  180.00   0.0  0
- TVN  CONST_10  CAZ   CBA  CBK  CBJ  180.00   0.0  0
- TVN  CONST_11  HBB   CBB  CBC  CBD  180.00   0.0  0
- TVN  CONST_12  HBK   CBK  CBJ  CBD  180.00   0.0  0
- TVN  CONST_13  HBJ   CBJ  CBD  CBC  180.00   0.0  0
- TVN  CONST_14  HBC   CBC  CBD  CBJ  180.00   0.0  0
- TVN  CONST_15  CAA   NAB  CAC  CAF  180.00   0.0  0
- TVN  CONST_16  CAA   NAB  CAC  OAD    0.00   0.0  0
- TVN  CONST_17  CAK   NAJ  CAH  CAG  180.00   0.0  0
- TVN  CONST_18  CAK   NAJ  CAH  OAI    0.00   0.0  0
- TVN  CONST_19  CAO   NAN  CAL  CAK  180.00   0.0  0
- TVN  CONST_20  CAO   NAN  CAL  OAM    0.00   0.0  0
- TVN  CONST_21  H31   NAB  CAC  CAF    0.00   0.0  0
- TVN  CONST_22  HNAJ  NAJ  CAH  CAG    0.00   0.0  0
- TVN  CONST_23  HNAN  NAN  CAL  CAK    0.00   0.0  0
- TVN  CONST_24  HNAU  NAU  CAT  CAO    0.00   0.0  0
- TVN  CONST_25  HNAA  NAU  CAT  CAO  180.00   0.0  0
- TVN  CONST_26  HNAR  NAR  CAQ  CAP    0.00   0.0  0
- TVN  CONST_27  HNAB  NAR  CAQ  CAP  180.00   0.0  0
- TVN  Var_01    CBC   CBD  OBE  PBF   28.20  30.0  2
- TVN  Var_02    CAG   CAZ  CBA  CBB  115.09  30.0  2
- TVN  Var_03    CAG   CAF  CAC  OAD  -54.95  30.0  3
- TVN  Var_04    NAR   CAQ  CAP  CAO  129.03  30.0  1
- TVN  Var_05    HAA   CAA  NAB  CAC   65.15  30.0  3
- TVN  Var_06    HAY   CAY  CAW  CAK  -61.55  30.0  3
- TVN  Var_07    HAX   CAX  CAW  CAK   65.57  30.0  3
+ TVN  CONST_01  CBA   CBB  CBC  CBD     0.00   0.0  0
+ TVN  CONST_02  CBA   CBK  CBJ  CBD     0.00   0.0  0
+ TVN  CONST_03  CBK   CBJ  CBD  CBC     0.00   0.0  0
+ TVN  CONST_04  CBK   CBA  CBB  CBC     0.00   0.0  0
+ TVN  CONST_05  CBJ   CBD  CBC  CBB     0.00   0.0  0
+ TVN  CONST_06  CBJ   CBK  CBA  CBB     0.00   0.0  0
+ TVN  CONST_07  CBB   CBC  CBD  OBE   180.00   0.0  0
+ TVN  CONST_08  CBK   CBJ  CBD  OBE   180.00   0.0  0
+ TVN  CONST_09  CAZ   CBA  CBB  CBC   180.00   0.0  0
+ TVN  CONST_10  CAZ   CBA  CBK  CBJ   180.00   0.0  0
+ TVN  CONST_11  HBB   CBB  CBC  CBD   180.00   0.0  0
+ TVN  CONST_12  HBK   CBK  CBJ  CBD   180.00   0.0  0
+ TVN  CONST_13  HBJ   CBJ  CBD  CBC   180.00   0.0  0
+ TVN  CONST_14  HBC   CBC  CBD  CBJ   180.00   0.0  0
+ TVN  CONST_15  CAA   NAB  CAC  CAF   180.00   0.0  0
+ TVN  CONST_16  CAA   NAB  CAC  OAD     0.00   0.0  0
+ TVN  CONST_17  CAK   NAJ  CAH  CAG   180.00   0.0  0
+ TVN  CONST_18  CAK   NAJ  CAH  OAI     0.00   0.0  0
+ TVN  CONST_19  CAO   NAN  CAL  CAK   180.00   0.0  0
+ TVN  CONST_20  CAO   NAN  CAL  OAM     0.00   0.0  0
+ TVN  CONST_21  H31   NAB  CAC  CAF     0.00   0.0  0
+ TVN  CONST_22  HNAJ  NAJ  CAH  CAG     0.00   0.0  0
+ TVN  CONST_23  HNAN  NAN  CAL  CAK     0.00   0.0  0
+ TVN  CONST_24  HNAU  NAU  CAT  CAO     0.00   0.0  0
+ TVN  CONST_25  HNAA  NAU  CAT  CAO   180.00   0.0  0
+ TVN  CONST_26  HNAR  NAR  CAQ  CAP     0.00   0.0  0
+ TVN  CONST_27  HNAB  NAR  CAQ  CAP   180.00   0.0  0
+ TVN  Var_01    CBC   CBD  OBE  PBF    28.20  30.0  2
+ TVN  Var_02    CAG   CAZ  CBA  CBB   115.09  30.0  2
+ TVN  Var_03    CAG   CAF  CAC  OAD   -54.95  30.0  3
+ TVN  Var_04    NAR   CAQ  CAP  CAO   129.03  30.0  1
+ TVN  Var_05    HAA   CAA  NAB  CAC    65.15  30.0  3
+ TVN  Var_06    HAY   CAY  CAW  CAK   -61.55  30.0  3
+ TVN  Var_07    HAX   CAX  CAW  CAK    65.57  30.0  3
+ TVN  Var_08    CBD   OBE  PBF  OBH    50.71  30.0  3
+ TVN  Var_09    CBD   OBE  PBF  OBI   -70.43  30.0  2
+ TVN  Var_10    CBD   OBE  PBF  OBG   170.50  30.0  2
+ TVN  Var_11    CAF   CAG  CAZ  CBA   -58.47  30.0  2
+ TVN  Var_12    CAH   CAG  CAZ  CBA   173.33  30.0  2
+ TVN  Var_13    HAG   CAG  CAZ  CBA    57.76  30.0  2
+ TVN  Var_14    CAC   CAF  CAG  CAZ   -58.42  30.0  2
+ TVN  Var_15    OAI   CAH  CAG  CAZ     4.70  30.0  3
+ TVN  Var_16    NAJ   CAH  CAG  CAZ  -171.87  30.0  3
+ TVN  Var_17    OAI   CAH  CAG  CAF  -122.99  30.0  3
+ TVN  Var_18    NAJ   CAH  CAG  CAF    60.43  30.0  3
+ TVN  Var_19    CAH   CAG  CAF  CAC    68.82  30.0  3
+ TVN  Var_20    CAW   CAK  NAJ  CAH   106.19  30.0  3
+ TVN  Var_21    CAL   CAK  NAJ  CAH  -130.12  30.0  3
+ TVN  Var_22    CAY   CAW  CAK  NAJ    61.58  30.0  3
+ TVN  Var_23    CAX   CAW  CAK  NAJ   -63.02  30.0  3
+ TVN  Var_24    NAN   CAL  CAK  NAJ   165.04  30.0  3
+ TVN  Var_25    OAM   CAL  CAK  NAJ   -15.46  30.0  3
+ TVN  Var_26    NAN   CAL  CAK  CAW   -69.87  30.0  3
+ TVN  Var_27    OAM   CAL  CAK  CAW   109.64  30.0  3
+ TVN  Var_28    CAL   CAK  CAW  CAX   174.57  30.0  3
+ TVN  Var_29    CAL   CAK  CAW  CAY   -60.82  30.0  3
+ TVN  Var_30    CAP   CAO  NAN  CAL   175.78  30.0  3
+ TVN  Var_31    CAT   CAO  NAN  CAL   -63.75  30.0  3
+ TVN  Var_32    CAQ   CAP  CAO  NAN   -63.90  30.0  3
+ TVN  Var_33    OAV   CAT  CAO  NAN   -34.81  30.0  1
+ TVN  Var_34    NAU   CAT  CAO  NAN   148.13  30.0  1
+ TVN  Var_35    CAQ   CAP  CAO  CAT   174.58  30.0  3
+ TVN  Var_36    CAP   CAO  CAT  OAV    85.97  30.0  3
+ TVN  Var_37    CAP   CAO  CAT  NAU   -91.10  30.0  3
+ TVN  Var_38    HAF   CAF  CAG  CAZ  -178.90  30.0  2
+ TVN  Var_39    HAFA  CAF  CAG  CAZ    65.24  30.0  2
+ TVN  Var_40    HAK   CAK  NAJ  CAH   -13.09  30.0  3
+ TVN  Var_41    HAW   CAW  CAK  NAJ   179.95  30.0  3
+ TVN  Var_42    HAO   CAO  NAN  CAL    56.99  30.0  3
+ TVN  Var_43    HAP   CAP  CAO  NAN    60.77  30.0  3
+ TVN  Var_44    HAPA  CAP  CAO  NAN   177.73  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

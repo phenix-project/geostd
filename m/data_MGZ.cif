@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MGZ  MGZ  '(2R)-(4-chlorophenyl)[3-(trifluoromethyl)phenoxy]ethanoic acid'  ligand  31  22  .  2022-03-22  2022-03-22
+ MGZ  MGZ  '(2R)-(4-chlorophenyl)[3-(trifluoromethyl)phenoxy]ethanoic acid'  ligand  31  22  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_MGZ
@@ -180,36 +181,47 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MGZ  CONST_01  C7   C4   C3   C2     0.00   0.0  0
- MGZ  CONST_02  C7   C6   C5   C2     0.00   0.0  0
- MGZ  CONST_03  C6   C7   C4   C3     0.00   0.0  0
- MGZ  CONST_04  C6   C5   C2   C3     0.00   0.0  0
- MGZ  CONST_05  C5   C6   C7   C4     0.00   0.0  0
- MGZ  CONST_06  C5   C2   C3   C4     0.00   0.0  0
- MGZ  CONST_07  C18  C17  C16  C13    0.00   0.0  0
- MGZ  CONST_08  C18  C15  C14  C13    0.00   0.0  0
- MGZ  CONST_09  C15  C18  C17  C16    0.00   0.0  0
- MGZ  CONST_10  C15  C14  C13  C16    0.00   0.0  0
- MGZ  CONST_11  C17  C18  C15  C14    0.00   0.0  0
- MGZ  CONST_12  C17  C16  C13  C14    0.00   0.0  0
- MGZ  CONST_13  C8   C7   C4   C3   180.00   0.0  0
- MGZ  CONST_14  C4   C3   C2   CL1  180.00   0.0  0
- MGZ  CONST_15  C6   C5   C2   CL1  180.00   0.0  0
- MGZ  CONST_16  C8   C7   C6   C5   180.00   0.0  0
- MGZ  CONST_17  C17  C16  C13  O12  180.00   0.0  0
- MGZ  CONST_18  C15  C14  C13  O12  180.00   0.0  0
- MGZ  CONST_19  C19  C15  C14  C13  180.00   0.0  0
- MGZ  CONST_20  C19  C15  C18  C17  180.00   0.0  0
- MGZ  CONST_21  H2   C4   C3   C2   180.00   0.0  0
- MGZ  CONST_22  H4   C6   C5   C2   180.00   0.0  0
- MGZ  CONST_23  H3   C5   C2   C3   180.00   0.0  0
- MGZ  CONST_24  H1   C3   C2   C5   180.00   0.0  0
- MGZ  CONST_25  H9   C17  C16  C13  180.00   0.0  0
- MGZ  CONST_26  H10  C18  C17  C16  180.00   0.0  0
- MGZ  CONST_27  H8   C14  C13  C16  180.00   0.0  0
- MGZ  CONST_28  H7   C16  C13  C14  180.00   0.0  0
- MGZ  Var_01    C16  C13  O12  C8    10.60  30.0  2
- MGZ  Var_02    F20  C19  C15  C14  -29.08  30.0  3
+ MGZ  CONST_01  C7   C4   C3   C2      0.00   0.0  0
+ MGZ  CONST_02  C7   C6   C5   C2      0.00   0.0  0
+ MGZ  CONST_03  C6   C7   C4   C3      0.00   0.0  0
+ MGZ  CONST_04  C6   C5   C2   C3      0.00   0.0  0
+ MGZ  CONST_05  C5   C6   C7   C4      0.00   0.0  0
+ MGZ  CONST_06  C5   C2   C3   C4      0.00   0.0  0
+ MGZ  CONST_07  C18  C17  C16  C13     0.00   0.0  0
+ MGZ  CONST_08  C18  C15  C14  C13     0.00   0.0  0
+ MGZ  CONST_09  C15  C18  C17  C16     0.00   0.0  0
+ MGZ  CONST_10  C15  C14  C13  C16     0.00   0.0  0
+ MGZ  CONST_11  C17  C18  C15  C14     0.00   0.0  0
+ MGZ  CONST_12  C17  C16  C13  C14     0.00   0.0  0
+ MGZ  CONST_13  C8   C7   C4   C3    180.00   0.0  0
+ MGZ  CONST_14  C4   C3   C2   CL1   180.00   0.0  0
+ MGZ  CONST_15  C6   C5   C2   CL1   180.00   0.0  0
+ MGZ  CONST_16  C8   C7   C6   C5    180.00   0.0  0
+ MGZ  CONST_17  C17  C16  C13  O12   180.00   0.0  0
+ MGZ  CONST_18  C15  C14  C13  O12   180.00   0.0  0
+ MGZ  CONST_19  C19  C15  C14  C13   180.00   0.0  0
+ MGZ  CONST_20  C19  C15  C18  C17   180.00   0.0  0
+ MGZ  CONST_21  H2   C4   C3   C2    180.00   0.0  0
+ MGZ  CONST_22  H4   C6   C5   C2    180.00   0.0  0
+ MGZ  CONST_23  H3   C5   C2   C3    180.00   0.0  0
+ MGZ  CONST_24  H1   C3   C2   C5    180.00   0.0  0
+ MGZ  CONST_25  H9   C17  C16  C13   180.00   0.0  0
+ MGZ  CONST_26  H10  C18  C17  C16   180.00   0.0  0
+ MGZ  CONST_27  H8   C14  C13  C16   180.00   0.0  0
+ MGZ  CONST_28  H7   C16  C13  C14   180.00   0.0  0
+ MGZ  Var_01    C16  C13  O12  C8     10.60  30.0  2
+ MGZ  Var_02    F20  C19  C15  C14   -29.08  30.0  3
+ MGZ  Var_03    O12  C8   C7   C4    144.99  30.0  3
+ MGZ  Var_04    C9   C8   C7   C4    -93.12  30.0  3
+ MGZ  Var_05    O12  C8   C7   C6    -38.74  30.0  3
+ MGZ  Var_06    C9   C8   C7   C6     83.15  30.0  3
+ MGZ  Var_07    C13  O12  C8   C7   -177.93  30.0  1
+ MGZ  Var_08    H5   C8   C7   C4     25.53  30.0  3
+ MGZ  Var_09    O10  C9   C8   C7    -98.34  30.0  2
+ MGZ  Var_10    O11  C9   C8   C7     79.49  30.0  2
+ MGZ  Var_11    C13  O12  C8   C9     63.47  30.0  1
+ MGZ  Var_12    O10  C9   C8   O12    20.14  30.0  2
+ MGZ  Var_13    O11  C9   C8   O12  -162.02  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

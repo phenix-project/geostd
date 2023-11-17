@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UDX  UDX  '[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3R,4S,5R)-3,4,5-trihydroxytetrahydro-2H-pyran-2-yl dihydrogen diphosphate (non-preferred name)'  ligand  54  34  .  2022-03-23  2022-03-23
+ UDX  UDX  '[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3R,4S,5R)-3,4,5-trihydroxytetrahydro-2H-pyran-2-yl dihydrogen diphosphate (non-preferred name)'  ligand  54  34  .  2022-03-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UDX
@@ -275,19 +276,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- UDX  CONST_01  N3   C2   N1   C1D  180.00   0.0  0
- UDX  CONST_02  C4   N3   C2   N1     0.00   0.0  0
- UDX  CONST_03  N3   C2   N1   C6     0.00   0.0  0
- UDX  CONST_04  C5   C4   N3   C2     0.00   0.0  0
- UDX  CONST_05  O2   C2   N1   C1D    0.00   0.0  0
- UDX  CONST_06  O2   C2   N1   C6   180.00   0.0  0
- UDX  CONST_07  O4   C4   N3   C2   180.00   0.0  0
- UDX  CONST_08  C4   N3   C2   O2   180.00   0.0  0
- UDX  CONST_09  HN3  N3   C2   N1   180.00   0.0  0
- UDX  Var_01    C4'  C5'  O5'  C1'   58.93  30.0  1
- UDX  Var_02    O1B  PB   O3B  C1'   34.76  30.0  1
- UDX  Var_03    C4D  C5D  O5D  PA   150.18  30.0  3
- UDX  Var_04    O1A  PA   O3A  PB   101.61  30.0  3
+ UDX  CONST_01  N3    C2   N1   C1D   180.00   0.0  0
+ UDX  CONST_02  C4    N3   C2   N1      0.00   0.0  0
+ UDX  CONST_03  N3    C2   N1   C6      0.00   0.0  0
+ UDX  CONST_04  C5    C4   N3   C2      0.00   0.0  0
+ UDX  CONST_05  O2    C2   N1   C1D     0.00   0.0  0
+ UDX  CONST_06  O2    C2   N1   C6    180.00   0.0  0
+ UDX  CONST_07  O4    C4   N3   C2    180.00   0.0  0
+ UDX  CONST_08  C4    N3   C2   O2    180.00   0.0  0
+ UDX  CONST_09  HN3   N3   C2   N1    180.00   0.0  0
+ UDX  Var_01    C4'   C5'  O5'  C1'    58.93  30.0  1
+ UDX  Var_02    O1B   PB   O3B  C1'    34.76  30.0  1
+ UDX  Var_03    C4D   C5D  O5D  PA    150.18  30.0  3
+ UDX  Var_04    O1A   PA   O3A  PB    101.61  30.0  3
+ UDX  Var_05    C4'   C3'  C2'  C1'   -53.85  30.0  1
+ UDX  Var_06    C5'   O5'  C1'  C2'   -58.84  30.0  1
+ UDX  Var_07    C5'   C4'  C3'  C2'    53.90  30.0  1
+ UDX  Var_08    O5'   C1'  C2'  C3'    56.01  30.0  1
+ UDX  Var_09    O5'   C5'  C4'  C3'   -55.63  30.0  1
+ UDX  Var_10    C2D   C1D  O4D  C4D   -17.23  30.0  1
+ UDX  Var_11    N1    C1D  O4D  C4D  -144.72  30.0  1
+ UDX  Var_12    C1D   C2D  C3D  C4D   -36.57  30.0  1
+ UDX  Var_13    C2D   C3D  C4D  O4D    28.24  30.0  1
+ UDX  Var_14    C3D   C2D  C1D  O4D    33.97  30.0  1
+ UDX  Var_15    C6    N1   C1D  O4D  -115.67  30.0  3
+ UDX  Var_16    C2    N1   C1D  O4D    61.63  30.0  3
+ UDX  Var_17    C1D   O4D  C4D  C3D    -7.30  30.0  1
+ UDX  Var_18    N1    C1D  C2D  C3D   157.83  30.0  1
+ UDX  Var_19    C6    N1   C1D  C2D   122.43  30.0  3
+ UDX  Var_20    C2    N1   C1D  C2D   -60.27  30.0  3
+ UDX  Var_21    O3'   C3'  C2'  C1'  -175.21  30.0  1
+ UDX  Var_22    O4'   C4'  C3'  C2'   175.50  30.0  1
+ UDX  Var_23    O5'   C1'  C2'  O2'   177.51  30.0  1
+ UDX  Var_24    C4'   C3'  C2'  O2'  -177.17  30.0  1
+ UDX  Var_25    O3B   C1'  C2'  C3'   -67.56  30.0  1
+ UDX  Var_26    C5'   C4'  C3'  O3'   173.30  30.0  1
+ UDX  Var_27    O5'   C5'  C4'  O4'  -175.19  30.0  1
+ UDX  Var_28    O3B   C1'  O5'  C5'    62.30  30.0  1
+ UDX  Var_29    C1D   O4D  C4D  C5D   115.41  30.0  1
+ UDX  Var_30    C2D   C3D  C4D  C5D   -93.71  30.0  1
+ UDX  Var_31    O2D   C2D  C3D  C4D  -153.52  30.0  1
+ UDX  Var_32    O3D   C3D  C4D  O4D   -88.89  30.0  1
+ UDX  Var_33    O2D   C2D  C1D  O4D   154.61  30.0  1
+ UDX  Var_34    C1D   C2D  C3D  O3D    79.10  30.0  1
+ UDX  Var_35    N1    C1D  C2D  O2D   -81.53  30.0  1
+ UDX  Var_36    H3'1  C3'  C2'  C1'    64.27  30.0  1
+ UDX  Var_37    H4'1  C4'  C3'  C2'   -64.80  30.0  1
+ UDX  Var_38    H1'   C1'  C2'  C3'   171.51  30.0  1
+ UDX  Var_39    H2'1  C2'  C3'  C4'    62.15  30.0  1
+ UDX  Var_40    H1'1  C1D  O4D  C4D    99.94  30.0  1
+ UDX  Var_41    H2A1  C2D  C3D  C4D    80.38  30.0  1
+ UDX  Var_42    H3A1  C3D  C4D  O4D   147.53  30.0  1
+ UDX  Var_43    H4A1  C4D  C3D  C2D   144.98  30.0  1
+ UDX  Var_44    H61   C6   N1   C1D    -1.94  30.0  1
+ UDX  Var_45    H51   C5   C6   N1    179.77  30.0  1
+ UDX  Var_46    PB    O3B  C1'  C2'  -175.28  30.0  3
+ UDX  Var_47    O3B   C1'  C2'  O2'    53.95  30.0  1
+ UDX  Var_48    O3'   C3'  C2'  O2'    61.47  30.0  1
+ UDX  Var_49    O4'   C4'  C3'  O3'   -65.09  30.0  1
+ UDX  Var_50    PB    O3B  C1'  O5'    62.09  30.0  3
+ UDX  Var_51    O4D   C4D  C5D  O5D    54.88  30.0  3
+ UDX  Var_52    C3D   C4D  C5D  O5D   173.83  30.0  3
+ UDX  Var_53    O3D   C3D  C4D  C5D   149.16  30.0  1
+ UDX  Var_54    O2D   C2D  C3D  O3D   -37.86  30.0  1
+ UDX  Var_55    HO'2  O2'  C2'  C1'    65.58  30.0  3
+ UDX  Var_56    HO'3  O3'  C3'  C2'   177.60  30.0  3
+ UDX  Var_57    HO'4  O4'  C4'  C3'   158.02  30.0  3
+ UDX  Var_58    HOA3  O3D  C3D  C4D   157.13  30.0  3
+ UDX  Var_59    H5A1  C5D  C4D  O4D   -66.97  30.0  1
+ UDX  Var_60    H5A2  C5D  C4D  O4D   176.11  30.0  1
+ UDX  Var_61    HOC2  O2D  C2D  C3D   -90.26  30.0  3
+ UDX  Var_62    PA    O3A  PB   O1B   -48.61  30.0  3
+ UDX  Var_63    PA    O3A  PB   O2B    87.68  30.0  2
+ UDX  Var_64    PA    O3A  PB   O3B  -160.98  30.0  3
+ UDX  Var_65    C5D   O5D  PA   O3A   175.02  30.0  3
+ UDX  Var_66    C5D   O5D  PA   O1A   -72.88  30.0  3
+ UDX  Var_67    C5D   O5D  PA   O2A    61.06  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

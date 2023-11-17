@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1EA  1EA  '6-fluoro-2-[2-methyl-4-phenoxy-5-(propan-2-yl)phenyl]quinoline-4-carboxylic acid'  ligand  53  31  .  2021-08-03  2021-08-03  
+ 1EA  1EA  '6-fluoro-2-[2-methyl-4-phenoxy-5-(propan-2-yl)phenyl]quinoline-4-carboxylic acid'  ligand  53  31  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1EA
@@ -287,52 +288,58 @@ _chem_comp_tor.period
  1EA  CONST_18  C2    C3   C4   C9      0.00   0.0  0
  1EA  CONST_19  C2    C1   N1   C9      0.00   0.0  0
  1EA  CONST_20  C10   C1   N1   C9    180.00   0.0  0
- 1EA  CONST_23  C14   C15  C10  C1    180.00   0.0  0
- 1EA  CONST_24  C12   C11  C10  C1    180.00   0.0  0
- 1EA  CONST_27  C13   C14  C15  C10     0.00   0.0  0
- 1EA  CONST_28  C13   C12  C11  C10     0.00   0.0  0
- 1EA  CONST_29  C12   C13  C14  C15     0.00   0.0  0
- 1EA  CONST_30  C12   C11  C10  C15     0.00   0.0  0
- 1EA  CONST_31  C11   C10  C15  C14     0.00   0.0  0
- 1EA  CONST_32  C11   C12  C13  C14     0.00   0.0  0
- 1EA  CONST_33  C19   C18  C17  C16     0.00   0.0  0
- 1EA  CONST_34  C19   C20  C21  C16     0.00   0.0  0
- 1EA  CONST_35  C18   C17  C16  C21     0.00   0.0  0
- 1EA  CONST_36  C18   C19  C20  C21     0.00   0.0  0
- 1EA  CONST_37  C17   C16  C21  C20     0.00   0.0  0
- 1EA  CONST_38  C17   C18  C19  C20     0.00   0.0  0
- 1EA  CONST_39  C1    C2   C3   C22   180.00   0.0  0
- 1EA  CONST_40  C5    C4   C3   C22     0.00   0.0  0
- 1EA  CONST_41  C9    C4   C3   C22   180.00   0.0  0
- 1EA  CONST_42  F1    C6   C5   C4    180.00   0.0  0
- 1EA  CONST_43  C8    C7   C6   F1    180.00   0.0  0
- 1EA  CONST_44  C23   C11  C10  C1      0.00   0.0  0
- 1EA  CONST_45  C24   C14  C15  C10   180.00   0.0  0
- 1EA  CONST_46  O3    C13  C14  C15   180.00   0.0  0
- 1EA  CONST_47  C23   C11  C10  C15   180.00   0.0  0
- 1EA  CONST_48  C12   C13  C14  C24   180.00   0.0  0
- 1EA  CONST_49  C23   C11  C12  C13   180.00   0.0  0
- 1EA  CONST_50  O3    C13  C12  C11   180.00   0.0  0
- 1EA  CONST_51  C18   C17  C16  O3    180.00   0.0  0
- 1EA  CONST_52  C20   C21  C16  O3    180.00   0.0  0
- 1EA  CONST_53  H5    C5   C4   C3      0.00   0.0  0
- 1EA  CONST_54  H2    C2   C3   C4    180.00   0.0  0
- 1EA  CONST_55  H8    C8   C9   C4    180.00   0.0  0
- 1EA  CONST_56  H7    C7   C6   C5    180.00   0.0  0
- 1EA  CONST_57  H15   C15  C10  C1      0.00   0.0  0
- 1EA  CONST_58  H12   C12  C11  C10   180.00   0.0  0
- 1EA  CONST_59  H18   C18  C17  C16   180.00   0.0  0
- 1EA  CONST_60  H20   C20  C21  C16   180.00   0.0  0
- 1EA  CONST_61  H17   C17  C16  C21   180.00   0.0  0
- 1EA  CONST_62  H19   C19  C20  C21   180.00   0.0  0
- 1EA  CONST_63  H21   C21  C20  C19   180.00   0.0  0
- 1EA  CONST_64  H1    O2   C22  C3    180.00   0.0  0
+ 1EA  CONST_21  C14   C15  C10  C1    180.00   0.0  0
+ 1EA  CONST_22  C12   C11  C10  C1    180.00   0.0  0
+ 1EA  CONST_23  C13   C14  C15  C10     0.00   0.0  0
+ 1EA  CONST_24  C13   C12  C11  C10     0.00   0.0  0
+ 1EA  CONST_25  C12   C13  C14  C15     0.00   0.0  0
+ 1EA  CONST_26  C12   C11  C10  C15     0.00   0.0  0
+ 1EA  CONST_27  C11   C10  C15  C14     0.00   0.0  0
+ 1EA  CONST_28  C11   C12  C13  C14     0.00   0.0  0
+ 1EA  CONST_29  C19   C18  C17  C16     0.00   0.0  0
+ 1EA  CONST_30  C19   C20  C21  C16     0.00   0.0  0
+ 1EA  CONST_31  C18   C17  C16  C21     0.00   0.0  0
+ 1EA  CONST_32  C18   C19  C20  C21     0.00   0.0  0
+ 1EA  CONST_33  C17   C16  C21  C20     0.00   0.0  0
+ 1EA  CONST_34  C17   C18  C19  C20     0.00   0.0  0
+ 1EA  CONST_35  C1    C2   C3   C22   180.00   0.0  0
+ 1EA  CONST_36  C5    C4   C3   C22     0.00   0.0  0
+ 1EA  CONST_37  C9    C4   C3   C22   180.00   0.0  0
+ 1EA  CONST_38  F1    C6   C5   C4    180.00   0.0  0
+ 1EA  CONST_39  C8    C7   C6   F1    180.00   0.0  0
+ 1EA  CONST_40  C23   C11  C10  C1      0.00   0.0  0
+ 1EA  CONST_41  C24   C14  C15  C10   180.00   0.0  0
+ 1EA  CONST_42  O3    C13  C14  C15   180.00   0.0  0
+ 1EA  CONST_43  C23   C11  C10  C15   180.00   0.0  0
+ 1EA  CONST_44  C12   C13  C14  C24   180.00   0.0  0
+ 1EA  CONST_45  C23   C11  C12  C13   180.00   0.0  0
+ 1EA  CONST_46  O3    C13  C12  C11   180.00   0.0  0
+ 1EA  CONST_47  C18   C17  C16  O3    180.00   0.0  0
+ 1EA  CONST_48  C20   C21  C16  O3    180.00   0.0  0
+ 1EA  CONST_49  H5    C5   C4   C3      0.00   0.0  0
+ 1EA  CONST_50  H2    C2   C3   C4    180.00   0.0  0
+ 1EA  CONST_51  H8    C8   C9   C4    180.00   0.0  0
+ 1EA  CONST_52  H7    C7   C6   C5    180.00   0.0  0
+ 1EA  CONST_53  H15   C15  C10  C1      0.00   0.0  0
+ 1EA  CONST_54  H12   C12  C11  C10   180.00   0.0  0
+ 1EA  CONST_55  H18   C18  C17  C16   180.00   0.0  0
+ 1EA  CONST_56  H20   C20  C21  C16   180.00   0.0  0
+ 1EA  CONST_57  H17   C17  C16  C21   180.00   0.0  0
+ 1EA  CONST_58  H19   C19  C20  C21   180.00   0.0  0
+ 1EA  CONST_59  H21   C21  C20  C19   180.00   0.0  0
+ 1EA  CONST_60  H1    O2   C22  C3    180.00   0.0  0
  1EA  Var_01    C17   C16  O3   C13  -129.37  30.0  2
  1EA  Var_02    C2    C3   C22  O1    147.01  30.0  2
  1EA  Var_03    C25   C24  C14  C15    65.91  30.0  2
  1EA  Var_04    H232  C23  C11  C10    72.78  30.0  2
  1EA  Var_05    H252  C25  C24  C14   -62.99  30.0  3
  1EA  Var_06    H262  C26  C24  C14    64.04  30.0  3
+ 1EA  Var_07    C15   C10  C1   N1    137.28  30.0  2
+ 1EA  Var_08    C11   C10  C1   N1    -42.93  30.0  2
+ 1EA  Var_09    C15   C10  C1   C2    -42.45  30.0  2
+ 1EA  Var_10    C11   C10  C1   C2    137.35  30.0  2
+ 1EA  Var_11    C16   O3   C13  C14  -149.34  30.0  1
+ 1EA  Var_12    C16   O3   C13  C12    33.75  30.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id

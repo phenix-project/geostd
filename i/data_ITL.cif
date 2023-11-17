@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ITL  ITL  '(3alpha,5alpha,8alpha)-3-[(N,N-bis{2-[bis(carboxymethyl)amino]ethyl}-L-gamma-glutamyl)amino]cholan-24-oic acid'  ligand  118  58  .  2022-03-29  2022-03-29
+ ITL  ITL  '(3alpha,5alpha,8alpha)-3-[(N,N-bis{2-[bis(carboxymethyl)amino]ethyl}-L-gamma-glutamyl)amino]cholan-24-oic acid'  ligand  118  58  .  2022-03-29  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_ITL
@@ -541,31 +542,135 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ITL  CONST_01  O    C41  N4   C3      0.00   0.0  0
- ITL  CONST_02  C40  C41  N4   C3    180.00   0.0  0
- ITL  CONST_03  HN4  N4   C41  O     180.00   0.0  0
- ITL  Var_01    C5   C6   C7   C8     54.22  30.0  1
- ITL  Var_02    C14  C15  C16  C17     9.81  30.0  1
- ITL  Var_03    C9   C11  C12  C13   -54.80  30.0  1
- ITL  Var_04    C3   C2   C1   C10    57.42  30.0  1
- ITL  Var_05    N1   C33  C34  O6     26.56  30.0  3
- ITL  Var_06    N2   C28  C27  N1    -72.25  30.0  1
- ITL  Var_07    O3   C25  C26  N1     15.50  30.0  3
- ITL  Var_08    O11  C38  C37  N3   -136.13  30.0  2
- ITL  Var_09    N2   C29  C30  N3    -74.89  30.0  2
- ITL  Var_10    O4   C32  C31  N3     21.45  30.0  3
- ITL  Var_11    C22  C23  C24  O1    -23.08  30.0  3
- ITL  Var_12    C20  C22  C23  C24   173.80  30.0  3
- ITL  Var_13    C39  C40  C41  N4   -101.73  30.0  3
- ITL  Var_14    C35  C39  C40  C41  -177.33  30.0  3
- ITL  Var_15    C30  C29  N2   C35   136.84  30.0  2
- ITL  Var_16    C27  C28  N2   C35   -81.18  30.0  3
- ITL  Var_17    C37  N3   C30  C29   -79.66  30.0  3
- ITL  Var_18    C38  C37  N3   C30    81.11  30.0  1
- ITL  Var_19    C32  C31  N3   C30  -166.00  30.0  3
- ITL  Var_20    C26  N1   C27  C28   111.95  30.0  3
- ITL  Var_21    C25  C26  N1   C27  -169.18  30.0  3
- ITL  Var_22    C34  C33  N1   C27    67.27  30.0  3
+ ITL  CONST_01  O     C41  N4   C3      0.00   0.0  0
+ ITL  CONST_02  C40   C41  N4   C3    180.00   0.0  0
+ ITL  CONST_03  HN4   N4   C41  O     180.00   0.0  0
+ ITL  Var_01    C5    C6   C7   C8     54.22  30.0  1
+ ITL  Var_02    C14   C15  C16  C17     9.81  30.0  1
+ ITL  Var_03    C9    C11  C12  C13   -54.80  30.0  1
+ ITL  Var_04    C3    C2   C1   C10    57.42  30.0  1
+ ITL  Var_05    N1    C33  C34  O6     26.56  30.0  3
+ ITL  Var_06    N2    C28  C27  N1    -72.25  30.0  1
+ ITL  Var_07    O3    C25  C26  N1     15.50  30.0  3
+ ITL  Var_08    O11   C38  C37  N3   -136.13  30.0  2
+ ITL  Var_09    N2    C29  C30  N3    -74.89  30.0  2
+ ITL  Var_10    O4    C32  C31  N3     21.45  30.0  3
+ ITL  Var_11    C22   C23  C24  O1    -23.08  30.0  3
+ ITL  Var_12    C20   C22  C23  C24   173.80  30.0  3
+ ITL  Var_13    C39   C40  C41  N4   -101.73  30.0  3
+ ITL  Var_14    C35   C39  C40  C41  -177.33  30.0  3
+ ITL  Var_15    C30   C29  N2   C35   136.84  30.0  2
+ ITL  Var_16    C27   C28  N2   C35   -81.18  30.0  3
+ ITL  Var_17    C37   N3   C30  C29   -79.66  30.0  3
+ ITL  Var_18    C38   C37  N3   C30    81.11  30.0  1
+ ITL  Var_19    C32   C31  N3   C30  -166.00  30.0  3
+ ITL  Var_20    C26   N1   C27  C28   111.95  30.0  3
+ ITL  Var_21    C25   C26  N1   C27  -169.18  30.0  3
+ ITL  Var_22    C34   C33  N1   C27    67.27  30.0  3
+ ITL  Var_23    C12   C11  C9   C8     51.58  30.0  1
+ ITL  Var_24    C5    C10  C9   C8    -55.67  30.0  1
+ ITL  Var_25    C1    C10  C9   C8   -175.36  30.0  1
+ ITL  Var_26    C16   C15  C14  C8   -163.62  30.0  1
+ ITL  Var_27    C17   C13  C14  C8    177.64  30.0  1
+ ITL  Var_28    C12   C13  C14  C8    -60.26  30.0  1
+ ITL  Var_29    C11   C9   C10  C5    176.60  30.0  1
+ ITL  Var_30    C2    C1   C10  C5    -54.79  30.0  1
+ ITL  Var_31    C2    C3   C4   C5     52.68  30.0  1
+ ITL  Var_32    C9    C10  C5   C6     54.41  30.0  1
+ ITL  Var_33    C1    C10  C5   C6    176.76  30.0  1
+ ITL  Var_34    C3    C4   C5   C6   -179.52  30.0  1
+ ITL  Var_35    C9    C8   C7   C6    -54.38  30.0  1
+ ITL  Var_36    C14   C8   C7   C6   -176.11  30.0  1
+ ITL  Var_37    C9    C10  C1   C2     65.76  30.0  1
+ ITL  Var_38    C9    C10  C5   C4    -70.80  30.0  1
+ ITL  Var_39    C1    C10  C5   C4     51.56  30.0  1
+ ITL  Var_40    C7    C6   C5   C4     71.85  30.0  1
+ ITL  Var_41    C1    C2   C3   C4    -53.33  30.0  1
+ ITL  Var_42    C15   C14  C13  C17    46.74  30.0  1
+ ITL  Var_43    C11   C12  C13  C17   167.04  30.0  1
+ ITL  Var_44    C14   C13  C17  C16   -39.30  30.0  1
+ ITL  Var_45    C12   C13  C17  C16  -154.02  30.0  1
+ ITL  Var_46    C13   C14  C15  C16   -35.17  30.0  1
+ ITL  Var_47    C13   C17  C16  C15    18.73  30.0  1
+ ITL  Var_48    C9    C8   C14  C15  -177.94  30.0  1
+ ITL  Var_49    C7    C8   C14  C15   -55.25  30.0  1
+ ITL  Var_50    C12   C13  C14  C15   168.84  30.0  1
+ ITL  Var_51    C11   C9   C8   C14   -51.70  30.0  1
+ ITL  Var_52    C10   C9   C8   C14   179.25  30.0  1
+ ITL  Var_53    C11   C12  C13  C14    55.99  30.0  1
+ ITL  Var_54    C9    C8   C14  C13    58.62  30.0  1
+ ITL  Var_55    C7    C8   C14  C13  -178.69  30.0  1
+ ITL  Var_56    C10   C9   C11  C12   179.66  30.0  1
+ ITL  Var_57    C7    C8   C9   C11  -174.87  30.0  1
+ ITL  Var_58    C1    C10  C9   C11    56.91  30.0  1
+ ITL  Var_59    C10   C9   C8   C7     56.08  30.0  1
+ ITL  Var_60    C10   C5   C6   C7    -54.60  30.0  1
+ ITL  Var_61    C3    C4   C5   C10   -53.55  30.0  1
+ ITL  Var_62    C19   C10  C9   C8     65.34  30.0  1
+ ITL  Var_63    C18   C13  C14  C8     60.86  30.0  1
+ ITL  Var_64    N4    C3   C4   C5    -71.45  30.0  1
+ ITL  Var_65    C19   C10  C5   C6    -67.69  30.0  1
+ ITL  Var_66    C19   C10  C1   C2   -172.24  30.0  1
+ ITL  Var_67    C19   C10  C5   C4    167.11  30.0  1
+ ITL  Var_68    C14   C13  C17  C20  -164.49  30.0  1
+ ITL  Var_69    C12   C13  C17  C20    80.79  30.0  1
+ ITL  Var_70    C15   C16  C17  C20   148.36  30.0  1
+ ITL  Var_71    C18   C13  C17  C16    79.31  30.0  1
+ ITL  Var_72    C18   C13  C14  C15   -70.04  30.0  1
+ ITL  Var_73    C11   C12  C13  C18   -66.47  30.0  1
+ ITL  Var_74    C19   C10  C9   C11   -62.39  30.0  1
+ ITL  Var_75    N4    C3   C2   C1     69.05  30.0  1
+ ITL  Var_76    H11   C11  C9   C8    -71.54  30.0  1
+ ITL  Var_77    H11A  C11  C9   C8    172.47  30.0  1
+ ITL  Var_78    H15   C15  C14  C8     74.83  30.0  1
+ ITL  Var_79    H15A  C15  C14  C8    -44.33  30.0  1
+ ITL  Var_80    H9    C9   C10  C5     59.86  30.0  1
+ ITL  Var_81    H1    C1   C10  C5   -179.13  30.0  1
+ ITL  Var_82    H1A   C1   C10  C5     66.28  30.0  1
+ ITL  Var_83    H3    C3   C4   C5    171.33  30.0  1
+ ITL  Var_84    H4    C4   C5   C6    -58.58  30.0  1
+ ITL  Var_85    H4A   C4   C5   C6     57.31  30.0  1
+ ITL  Var_86    H8    C8   C7   C6     64.89  30.0  1
+ ITL  Var_87    H2    C2   C3   C4   -176.09  30.0  1
+ ITL  Var_88    H2A   C2   C3   C4     68.44  30.0  1
+ ITL  Var_89    H14   C14  C13  C17   -65.49  30.0  1
+ ITL  Var_90    H12   C12  C13  C17   -70.87  30.0  1
+ ITL  Var_91    H12A  C12  C13  C17    46.16  30.0  1
+ ITL  Var_92    H17   C17  C16  C15   -93.92  30.0  1
+ ITL  Var_93    H5    C5   C10  C9    171.00  30.0  1
+ ITL  Var_94    C41   N4   C3   C2     78.98  30.0  3
+ ITL  Var_95    C41   N4   C3   C4   -158.56  30.0  3
+ ITL  Var_96    C13   C17  C20  C22   179.04  30.0  3
+ ITL  Var_97    C16   C17  C20  C22    58.22  30.0  3
+ ITL  Var_98    C18   C13  C17  C20   -45.87  30.0  1
+ ITL  Var_99    C13   C17  C20  C21   -57.17  30.0  3
+ ITL  Var_100   C16   C17  C20  C21  -177.99  30.0  3
+ ITL  Var_101   H19   C19  C10  C5   -170.95  30.0  3
+ ITL  Var_102   H19A  C19  C10  C5    -52.30  30.0  3
+ ITL  Var_103   H19B  C19  C10  C5     68.04  30.0  3
+ ITL  Var_104   HN4   N4   C3   C2   -111.13  30.0  3
+ ITL  Var_105   H18   C18  C13  C17    72.79  30.0  3
+ ITL  Var_106   H18A  C18  C13  C17  -167.81  30.0  3
+ ITL  Var_107   H18B  C18  C13  C17   -46.62  30.0  3
+ ITL  Var_108   H20   C20  C17  C16   -58.44  30.0  1
+ ITL  Var_109   C23   C22  C20  C17  -168.96  30.0  1
+ ITL  Var_110   H22   C22  C20  C17    67.66  30.0  1
+ ITL  Var_111   H22A  C22  C20  C17   -47.39  30.0  1
+ ITL  Var_112   H21   C21  C20  C17   -54.72  30.0  3
+ ITL  Var_113   H21A  C21  C20  C17    65.77  30.0  3
+ ITL  Var_114   H21B  C21  C20  C17  -174.29  30.0  3
+ ITL  Var_115   C23   C22  C20  C21    65.88  30.0  1
+ ITL  Var_116   C36   C35  C39  C40   174.57  30.0  3
+ ITL  Var_117   N2    C35  C39  C40   -56.36  30.0  3
+ ITL  Var_118   O9    C36  C35  C39    17.45  30.0  2
+ ITL  Var_119   O8    C36  C35  C39  -161.36  30.0  2
+ ITL  Var_120   C29   N2   C35  C39    88.26  30.0  3
+ ITL  Var_121   C28   N2   C35  C39   -47.37  30.0  3
+ ITL  Var_122   C29   N2   C35  C36  -142.91  30.0  3
+ ITL  Var_123   C28   N2   C35  C36    81.46  30.0  3
+ ITL  Var_124   N2    C35  C36  O9   -113.99  30.0  2
+ ITL  Var_125   N2    C35  C36  O8     67.21  30.0  2
+ ITL  Var_126   H35   C35  C39  C40    60.63  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

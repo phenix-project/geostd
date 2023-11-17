@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SXZ  SXZ  '(2S)-4-({[(2S,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl}sulfanyl)-2-[(3-methylbutanoyl)amino]butanoic acid (non-preferred name)'  ligand  59  32  .  2021-08-23  2021-08-23  
+ SXZ  SXZ  '(2S)-4-({[(2S,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl}sulfanyl)-2-[(3-methylbutanoyl)amino]butanoic acid (non-preferred name)'  ligand  59  32  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_SXZ
@@ -294,42 +295,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SXZ  CONST_01  C5   N7   C8  N9      0.00   0.0  0
- SXZ  CONST_02  N7   C5   C4  N9      0.00   0.0  0
- SXZ  CONST_03  C6   C5   C4  N9    180.00   0.0  0
- SXZ  CONST_04  C2   N3   C4  N9    180.00   0.0  0
- SXZ  CONST_05  C4   C5   N7  C8      0.00   0.0  0
- SXZ  CONST_06  C6   C5   N7  C8    180.00   0.0  0
- SXZ  CONST_07  C5   C4   N9  C8      0.00   0.0  0
- SXZ  CONST_08  N3   C4   N9  C8    180.00   0.0  0
- SXZ  CONST_09  C4   N9   C8  N7      0.00   0.0  0
- SXZ  CONST_10  N3   C4   C5  N7    180.00   0.0  0
- SXZ  CONST_11  N1   C6   C5  N7    180.00   0.0  0
- SXZ  CONST_12  C2   N3   C4  C5      0.00   0.0  0
- SXZ  CONST_13  C2   N1   C6  C5      0.00   0.0  0
- SXZ  CONST_14  N3   C4   C5  C6      0.00   0.0  0
- SXZ  CONST_15  N3   C2   N1  C6      0.00   0.0  0
- SXZ  CONST_16  C4   C5   C6  N1      0.00   0.0  0
- SXZ  CONST_17  C4   N3   C2  N1      0.00   0.0  0
- SXZ  CONST_18  N7   C8   N9  C1'   180.00   0.0  0
- SXZ  CONST_19  C5   C4   N9  C1'   180.00   0.0  0
- SXZ  CONST_20  N3   C4   N9  C1'     0.00   0.0  0
- SXZ  CONST_21  N6   C6   C5  N7      0.00   0.0  0
- SXZ  CONST_22  C4   C5   C6  N6    180.00   0.0  0
- SXZ  CONST_23  C2   N1   C6  N6    180.00   0.0  0
- SXZ  CONST_24  H16  C8   N9  C1'     0.00   0.0  0
- SXZ  CONST_25  H19  C2   N1  C6    180.00   0.0  0
- SXZ  CONST_26  H17  N6   C6  C5      0.00   0.0  0
- SXZ  CONST_27  H18  N6   C6  C5    180.00   0.0  0
- SXZ  CONST_28  C3   C1   N   CA    180.00   0.0  0
- SXZ  CONST_29  O2   C1   N   CA      0.00   0.0  0
- SXZ  CONST_30  H3   N    C1  O2    180.00   0.0  0
- SXZ  Var_01    C4'  C5'  SD  CG     76.68  30.0  3
- SXZ  Var_02    SD   CG   CB  CA   -175.96  30.0  1
- SXZ  Var_03    C7   C3   C1  N    -119.61  30.0  1
- SXZ  Var_04    C9   C7   C3  C1     61.28  30.0  3
- SXZ  Var_05    H23  C9   C7  C3    177.98  30.0  3
- SXZ  Var_06    H26  C10  C7  C3     57.37  30.0  3
+ SXZ  CONST_01  C5   N7   C8   N9      0.00   0.0  0
+ SXZ  CONST_02  N7   C5   C4   N9      0.00   0.0  0
+ SXZ  CONST_03  C6   C5   C4   N9    180.00   0.0  0
+ SXZ  CONST_04  C2   N3   C4   N9    180.00   0.0  0
+ SXZ  CONST_05  C4   C5   N7   C8      0.00   0.0  0
+ SXZ  CONST_06  C6   C5   N7   C8    180.00   0.0  0
+ SXZ  CONST_07  C5   C4   N9   C8      0.00   0.0  0
+ SXZ  CONST_08  N3   C4   N9   C8    180.00   0.0  0
+ SXZ  CONST_09  C4   N9   C8   N7      0.00   0.0  0
+ SXZ  CONST_10  N3   C4   C5   N7    180.00   0.0  0
+ SXZ  CONST_11  N1   C6   C5   N7    180.00   0.0  0
+ SXZ  CONST_12  C2   N3   C4   C5      0.00   0.0  0
+ SXZ  CONST_13  C2   N1   C6   C5      0.00   0.0  0
+ SXZ  CONST_14  N3   C4   C5   C6      0.00   0.0  0
+ SXZ  CONST_15  N3   C2   N1   C6      0.00   0.0  0
+ SXZ  CONST_16  C4   C5   C6   N1      0.00   0.0  0
+ SXZ  CONST_17  C4   N3   C2   N1      0.00   0.0  0
+ SXZ  CONST_18  N7   C8   N9   C1'   180.00   0.0  0
+ SXZ  CONST_19  C5   C4   N9   C1'   180.00   0.0  0
+ SXZ  CONST_20  N3   C4   N9   C1'     0.00   0.0  0
+ SXZ  CONST_21  N6   C6   C5   N7      0.00   0.0  0
+ SXZ  CONST_22  C4   C5   C6   N6    180.00   0.0  0
+ SXZ  CONST_23  C2   N1   C6   N6    180.00   0.0  0
+ SXZ  CONST_24  H16  C8   N9   C1'     0.00   0.0  0
+ SXZ  CONST_25  H19  C2   N1   C6    180.00   0.0  0
+ SXZ  CONST_26  H17  N6   C6   C5      0.00   0.0  0
+ SXZ  CONST_27  H18  N6   C6   C5    180.00   0.0  0
+ SXZ  CONST_28  C3   C1   N    CA    180.00   0.0  0
+ SXZ  CONST_29  O2   C1   N    CA      0.00   0.0  0
+ SXZ  CONST_30  H3   N    C1   O2    180.00   0.0  0
+ SXZ  Var_01    C4'  C5'  SD   CG     76.68  30.0  3
+ SXZ  Var_02    SD   CG   CB   CA   -175.96  30.0  1
+ SXZ  Var_03    C7   C3   C1   N    -119.61  30.0  1
+ SXZ  Var_04    C9   C7   C3   C1     61.28  30.0  3
+ SXZ  Var_05    H23  C9   C7   C3    177.98  30.0  3
+ SXZ  Var_06    H26  C10  C7   C3     57.37  30.0  3
+ SXZ  Var_07    N9   C1'  O4'  C4'  -112.77  30.0  1
+ SXZ  Var_08    C2'  C1'  O4'  C4'     7.93  30.0  1
+ SXZ  Var_09    C1'  C2'  C3'  C4'    37.21  30.0  1
+ SXZ  Var_10    C2'  C3'  C4'  O4'   -33.96  30.0  1
+ SXZ  Var_11    C8   N9   C1'  O4'    11.55  30.0  2
+ SXZ  Var_12    C4   N9   C1'  O4'  -167.07  30.0  2
+ SXZ  Var_13    C3'  C2'  C1'  O4'   -28.82  30.0  1
+ SXZ  Var_14    C3'  C4'  O4'  C1'    16.76  30.0  1
+ SXZ  Var_15    C8   N9   C1'  C2'  -106.39  30.0  2
+ SXZ  Var_16    C4   N9   C1'  C2'    75.00  30.0  2
+ SXZ  Var_17    N9   C1'  C2'  C3'    90.34  30.0  1
+ SXZ  Var_18    C1'  O4'  C4'  C5'   140.19  30.0  1
+ SXZ  Var_19    C2'  C3'  C4'  C5'  -154.86  30.0  1
+ SXZ  Var_20    O2'  C2'  C3'  C4'   -76.50  30.0  1
+ SXZ  Var_21    O3'  C3'  C4'  O4'  -155.01  30.0  1
+ SXZ  Var_22    O2'  C2'  C1'  O4'    87.55  30.0  1
+ SXZ  Var_23    O3'  C3'  C2'  C1'   155.37  30.0  1
+ SXZ  Var_24    N9   C1'  C2'  O2'  -153.29  30.0  1
+ SXZ  Var_25    H11  C1'  O4'  C4'   129.58  30.0  1
+ SXZ  Var_26    H12  C2'  C3'  C4'   156.95  30.0  1
+ SXZ  Var_27    H14  C3'  C4'  O4'    81.70  30.0  1
+ SXZ  Var_28    H10  C4'  O4'  C1'   -99.34  30.0  1
+ SXZ  Var_29    O4'  C4'  C5'  SD     62.60  30.0  3
+ SXZ  Var_30    C3'  C4'  C5'  SD   -179.70  30.0  3
+ SXZ  Var_31    O3'  C3'  C4'  C5'    84.10  30.0  1
+ SXZ  Var_32    O3'  C3'  C2'  O2'    41.66  30.0  1
+ SXZ  Var_33    H15  O3'  C3'  C4'  -160.96  30.0  3
+ SXZ  Var_34    H8   C5'  C4'  O4'   -57.61  30.0  1
+ SXZ  Var_35    H9   C5'  C4'  O4'  -175.20  30.0  1
+ SXZ  Var_36    H13  O2'  C2'  C1'  -151.18  30.0  3
+ SXZ  Var_37    N    CA   C    O     -13.12  30.0  3
+ SXZ  Var_38    CB   CA   C    O     110.45  30.0  3
+ SXZ  Var_39    C1   N    CA   C    -138.91  30.0  2
+ SXZ  Var_40    CG   CB   CA   C    -178.12  30.0  3
+ SXZ  Var_41    N    CA   C    OXT   168.54  30.0  3
+ SXZ  Var_42    CB   CA   C    OXT   -67.90  30.0  3
+ SXZ  Var_43    CG   CB   CA   N     -56.26  30.0  3
+ SXZ  Var_44    C1   N    CA   CB     99.79  30.0  2
+ SXZ  Var_45    C5'  SD   CG   CB   -169.39  30.0  3
+ SXZ  Var_46    H2   CA   C    O    -131.60  30.0  3
+ SXZ  Var_47    H4   CB   CA   C     -56.14  30.0  3
+ SXZ  Var_48    H5   CB   CA   C      59.96  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

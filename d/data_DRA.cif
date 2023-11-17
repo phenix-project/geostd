@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DRA  DRA  '(1S,3R,4R)-3-ethyl-3,4,10,12-tetrahydroxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl 2,3,6-trideoxy-4-O-{2,6-dideoxy-4-O-[(2R,6R)-6-methyl-5-oxotetrahydro-2H-pyran-2-yl]-alpha-L-arabino-hexopyranosyl}-3-(dimethylamino)-alpha-L-lyxo-hexopyranoside'  ligand  106  55  .  2021-08-08  2021-08-08  
+ DRA  DRA  '(1S,3R,4R)-3-ethyl-3,4,10,12-tetrahydroxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracen-1-yl 2,3,6-trideoxy-4-O-{2,6-dideoxy-4-O-[(2R,6R)-6-methyl-5-oxotetrahydro-2H-pyran-2-yl]-alpha-L-arabino-hexopyranosyl}-3-(dimethylamino)-alpha-L-lyxo-hexopyranoside'  ligand  106  55  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DRA
@@ -492,34 +493,166 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DRA  CONST_01  C1    C2   C3   C4     0.00   0.0  0
- DRA  CONST_02  C1    C15  C16  C4     0.00   0.0  0
- DRA  CONST_03  C15   C16  C4   C3     0.00   0.0  0
- DRA  CONST_04  C15   C1   C2   C3     0.00   0.0  0
- DRA  CONST_05  C16   C4   C3   C2     0.00   0.0  0
- DRA  CONST_06  C16   C15  C1   C2     0.00   0.0  0
- DRA  CONST_07  C19   C11  C18  C17    0.00   0.0  0
- DRA  CONST_08  C19   C20  C6   C17    0.00   0.0  0
- DRA  CONST_09  C20   C6   C17  C18    0.00   0.0  0
- DRA  CONST_10  C20   C19  C11  C18    0.00   0.0  0
- DRA  CONST_11  C11   C18  C17  C6     0.00   0.0  0
- DRA  CONST_12  C11   C19  C20  C6     0.00   0.0  0
- DRA  CONST_13  C2    C3   C4   O4   180.00   0.0  0
- DRA  CONST_14  C15   C16  C4   O4   180.00   0.0  0
- DRA  CONST_15  C5    C16  C4   O4     0.00   0.0  0
- DRA  CONST_16  O6    C6   C17  C5     0.00   0.0  0
- DRA  CONST_17  O6    C6   C17  C18  180.00   0.0  0
- DRA  CONST_18  C19   C20  C6   O6   180.00   0.0  0
- DRA  CONST_19  C7    C20  C6   O6     0.00   0.0  0
- DRA  CONST_20  H2    C2   C3   C4   180.00   0.0  0
- DRA  CONST_21  H1    C1   C2   C3   180.00   0.0  0
- DRA  CONST_22  H3    C3   C4   C16  180.00   0.0  0
- DRA  CONST_23  H11   C11  C18  C17  180.00   0.0  0
- DRA  Var_01    C42   C40  C38  C37  -45.51  30.0  1
- DRA  Var_02    C38   C40  C42  C39   41.92  30.0  1
- DRA  Var_03    H141  C14  C13  C9   -55.79  30.0  3
- DRA  Var_04    H7'1  C7'  N3'  C3'   55.68  30.0  3
- DRA  Var_05    H8'1  C8'  N3'  C3'   64.69  30.0  3
+ DRA  CONST_01  C1    C2   C3   C4      0.00   0.0  0
+ DRA  CONST_02  C1    C15  C16  C4      0.00   0.0  0
+ DRA  CONST_03  C15   C16  C4   C3      0.00   0.0  0
+ DRA  CONST_04  C15   C1   C2   C3      0.00   0.0  0
+ DRA  CONST_05  C16   C4   C3   C2      0.00   0.0  0
+ DRA  CONST_06  C16   C15  C1   C2      0.00   0.0  0
+ DRA  CONST_07  C19   C11  C18  C17     0.00   0.0  0
+ DRA  CONST_08  C19   C20  C6   C17     0.00   0.0  0
+ DRA  CONST_09  C20   C6   C17  C18     0.00   0.0  0
+ DRA  CONST_10  C20   C19  C11  C18     0.00   0.0  0
+ DRA  CONST_11  C11   C18  C17  C6      0.00   0.0  0
+ DRA  CONST_12  C11   C19  C20  C6      0.00   0.0  0
+ DRA  CONST_13  C2    C3   C4   O4    180.00   0.0  0
+ DRA  CONST_14  C15   C16  C4   O4    180.00   0.0  0
+ DRA  CONST_15  C5    C16  C4   O4      0.00   0.0  0
+ DRA  CONST_16  O6    C6   C17  C5      0.00   0.0  0
+ DRA  CONST_17  O6    C6   C17  C18   180.00   0.0  0
+ DRA  CONST_18  C19   C20  C6   O6    180.00   0.0  0
+ DRA  CONST_19  C7    C20  C6   O6      0.00   0.0  0
+ DRA  CONST_20  H2    C2   C3   C4    180.00   0.0  0
+ DRA  CONST_21  H1    C1   C2   C3    180.00   0.0  0
+ DRA  CONST_22  H3    C3   C4   C16   180.00   0.0  0
+ DRA  CONST_23  H11   C11  C18  C17   180.00   0.0  0
+ DRA  Var_01    C42   C40  C38  C37   -45.51  30.0  1
+ DRA  Var_02    C38   C40  C42  C39    41.92  30.0  1
+ DRA  Var_03    H141  C14  C13  C9    -55.79  30.0  3
+ DRA  Var_04    H7'1  C7'  N3'  C3'    55.68  30.0  3
+ DRA  Var_05    H8'1  C8'  N3'  C3'    64.69  30.0  3
+ DRA  CONST_24  C17   C5   C16  C4    180.00   0.0  0
+ DRA  CONST_25  C18   C12  C15  C16     0.00   0.0  0
+ DRA  CONST_26  C18   C17  C5   C16     0.00   0.0  0
+ DRA  CONST_27  C6    C17  C5   C16   180.00   0.0  0
+ DRA  CONST_28  C17   C5   C16  C15     0.00   0.0  0
+ DRA  CONST_29  C17   C18  C12  C15     0.00   0.0  0
+ DRA  CONST_30  C11   C18  C12  C15   180.00   0.0  0
+ DRA  CONST_31  C18   C12  C15  C1    180.00   0.0  0
+ DRA  CONST_32  O5    C5   C16  C4      0.00   0.0  0
+ DRA  CONST_33  O12   C12  C15  C16   180.00   0.0  0
+ DRA  CONST_34  O5    C5   C16  C15   180.00   0.0  0
+ DRA  CONST_35  O12   C12  C15  C1      0.00   0.0  0
+ DRA  CONST_36  C18   C17  C5   O5    180.00   0.0  0
+ DRA  CONST_37  C6    C17  C5   O5      0.00   0.0  0
+ DRA  CONST_38  O12   C12  C18  C17   180.00   0.0  0
+ DRA  CONST_39  C11   C18  C12  O12     0.00   0.0  0
+ DRA  Var_06    C8    C7   C20  C6   -169.26  30.0  1
+ DRA  Var_07    C9    C10  C19  C20    27.26  30.0  1
+ DRA  Var_08    C9    C8   C7   C20   -40.82  30.0  1
+ DRA  Var_09    C8    C7   C20  C19    12.78  30.0  1
+ DRA  Var_10    C8    C9   C10  C19   -52.11  30.0  1
+ DRA  Var_11    C9    C10  C19  C11  -156.83  30.0  1
+ DRA  Var_12    C7    C8   C9   C10    61.41  30.0  1
+ DRA  Var_13    C4'   C3'  C2'  C1'    53.47  30.0  1
+ DRA  Var_14    C4'   C5'  O5'  C1'   -59.07  30.0  1
+ DRA  Var_15    C5'   O5'  C1'  C2'    54.96  30.0  1
+ DRA  Var_16    C5'   C4'  C3'  C2'   -56.71  30.0  1
+ DRA  Var_17    O5'   C1'  C2'  C3'   -52.20  30.0  1
+ DRA  Var_18    O5'   C5'  C4'  C3'    59.42  30.0  1
+ DRA  Var_19    C35   C33  C32  C31    55.11  30.0  1
+ DRA  Var_20    C35   C34  O11  C31   -56.70  30.0  1
+ DRA  Var_21    C34   O11  C31  C32    56.99  30.0  1
+ DRA  Var_22    C34   C35  C33  C32   -54.86  30.0  1
+ DRA  Var_23    O11   C31  C32  C33   -55.13  30.0  1
+ DRA  Var_24    O11   C34  C35  C33    54.52  30.0  1
+ DRA  Var_25    C42   C39  O14  C37    60.95  30.0  1
+ DRA  Var_26    C40   C38  C37  O14    56.74  30.0  1
+ DRA  Var_27    C40   C42  C39  O14   -47.33  30.0  1
+ DRA  Var_28    C38   C37  O14  C39   -67.48  30.0  1
+ DRA  Var_29    O7    C7   C20  C6     65.89  30.0  1
+ DRA  Var_30    O10   C10  C19  C20   -93.25  30.0  1
+ DRA  Var_31    C1'   O7   C7   C20  -140.86  30.0  3
+ DRA  Var_32    O7    C7   C20  C19  -112.07  30.0  1
+ DRA  Var_33    O9    C9   C10  C19    63.80  30.0  1
+ DRA  Var_34    C13   C9   C10  C19  -173.53  30.0  1
+ DRA  Var_35    O10   C10  C19  C11    82.67  30.0  1
+ DRA  Var_36    C8    C9   C10  O10    69.04  30.0  1
+ DRA  Var_37    O7    C7   C8   C9     79.82  30.0  1
+ DRA  Var_38    C7    C8   C9   O9    -54.74  30.0  1
+ DRA  Var_39    C7    C8   C9   C13  -175.61  30.0  1
+ DRA  Var_40    C1'   O7   C7   C8     95.17  30.0  3
+ DRA  Var_41    C2'   C1'  O7   C7    163.02  30.0  3
+ DRA  Var_42    O5'   C1'  O7   C7    -72.93  30.0  3
+ DRA  Var_43    C3'   C2'  C1'  O7     71.76  30.0  1
+ DRA  Var_44    C5'   O5'  C1'  O7    -66.69  30.0  1
+ DRA  Var_45    N3'   C3'  C2'  C1'   178.11  30.0  1
+ DRA  Var_46    C6'   C5'  O5'  C1'   176.17  30.0  1
+ DRA  Var_47    O4'   C4'  C3'  C2'    63.57  30.0  1
+ DRA  Var_48    C6'   C5'  C4'  C3'  -179.96  30.0  1
+ DRA  Var_49    C31   O4'  C4'  C3'   136.37  30.0  3
+ DRA  Var_50    C5'   C4'  C3'  N3'   178.08  30.0  1
+ DRA  Var_51    O4'   C4'  C5'  O5'   -60.51  30.0  1
+ DRA  Var_52    C31   O4'  C4'  C5'  -103.98  30.0  3
+ DRA  Var_53    C32   C31  O4'  C4'   159.79  30.0  3
+ DRA  Var_54    O11   C31  O4'  C4'   -77.77  30.0  3
+ DRA  Var_55    C33   C32  C31  O4'    68.56  30.0  1
+ DRA  Var_56    C34   O11  C31  O4'   -63.59  30.0  1
+ DRA  Var_57    O16   C33  C32  C31   174.84  30.0  1
+ DRA  Var_58    C36   C34  O11  C31  -179.22  30.0  1
+ DRA  Var_59    O13   C35  C33  C32  -173.78  30.0  1
+ DRA  Var_60    C36   C34  C35  C33   173.58  30.0  1
+ DRA  Var_61    C37   O13  C35  C33  -103.44  30.0  3
+ DRA  Var_62    C34   C35  C33  O16  -176.77  30.0  1
+ DRA  Var_63    O13   C35  C34  O11   174.71  30.0  1
+ DRA  Var_64    C37   O13  C35  C34   136.09  30.0  3
+ DRA  Var_65    O14   C37  O13  C35   -80.41  30.0  3
+ DRA  Var_66    C38   C37  O13  C35   160.66  30.0  3
+ DRA  Var_67    C39   O14  C37  O13   173.69  30.0  1
+ DRA  Var_68    C40   C38  C37  O13   174.58  30.0  1
+ DRA  Var_69    C41   C39  O14  C37  -174.25  30.0  1
+ DRA  Var_70    O15   C42  C39  O14   135.42  30.0  1
+ DRA  Var_71    C40   C42  C39  C41  -169.09  30.0  1
+ DRA  Var_72    H7    C7   C20  C6    -51.22  30.0  1
+ DRA  Var_73    H10   C10  C19  C20   146.65  30.0  1
+ DRA  Var_74    H81   C8   C7   C20  -165.58  30.0  1
+ DRA  Var_75    H82   C8   C7   C20    79.66  30.0  1
+ DRA  Var_76    H3'   C3'  C2'  C1'   -60.74  30.0  1
+ DRA  Var_77    H5'   C5'  O5'  C1'    59.10  30.0  1
+ DRA  Var_78    H4'   C4'  C3'  C2'  -174.16  30.0  1
+ DRA  Var_79    H1'   C1'  C2'  C3'  -168.43  30.0  1
+ DRA  Var_80    H2'1  C2'  C1'  O5'    69.06  30.0  1
+ DRA  Var_81    H2'2  C2'  C1'  O5'  -175.38  30.0  1
+ DRA  Var_82    H33   C33  C32  C31   -62.41  30.0  1
+ DRA  Var_83    H34   C34  O11  C31    62.87  30.0  1
+ DRA  Var_84    H35   C35  C33  C32    64.63  30.0  1
+ DRA  Var_85    H31   C31  C32  C33  -170.26  30.0  1
+ DRA  Var_86    H321  C32  C31  O11    65.04  30.0  1
+ DRA  Var_87    H322  C32  C31  O11  -178.05  30.0  1
+ DRA  Var_88    H39   C39  O14  C37   -54.76  30.0  1
+ DRA  Var_89    H381  C38  C37  O14   177.95  30.0  1
+ DRA  Var_90    H382  C38  C37  O14   -64.01  30.0  1
+ DRA  Var_91    H37   C37  O14  C39    52.82  30.0  1
+ DRA  Var_92    C14   C13  C9   C10   -55.18  30.0  3
+ DRA  Var_93    O9    C9   C10  O10  -175.05  30.0  1
+ DRA  Var_94    C13   C9   C10  O10   -52.37  30.0  1
+ DRA  Var_95    C8    C9   C13  C14  -175.59  30.0  2
+ DRA  Var_96    C7'   N3'  C3'  C2'    46.96  30.0  3
+ DRA  Var_97    C8'   N3'  C3'  C2'   171.06  30.0  3
+ DRA  Var_98    O4'   C4'  C3'  N3'   -61.64  30.0  1
+ DRA  Var_99    C4'   C3'  N3'  C7'   169.21  30.0  3
+ DRA  Var_100   C4'   C3'  N3'  C8'   -66.69  30.0  3
+ DRA  Var_101   O4'   C4'  C5'  C6'    60.12  30.0  1
+ DRA  Var_102   O13   C35  C33  O16    64.31  30.0  1
+ DRA  Var_103   O13   C35  C34  C36   -66.23  30.0  1
+ DRA  Var_104   O15   C42  C39  C41    13.66  30.0  1
+ DRA  Var_105   HO4   O4   C4   C3     -0.22  30.0  2
+ DRA  Var_106   HO6   O6   C6   C17    -0.57  30.0  2
+ DRA  Var_107   HO0   O10  C10  C19   -68.21  30.0  3
+ DRA  Var_108   HO9   O9   C9   C10    64.68  30.0  3
+ DRA  Var_109   H131  C13  C9   C10  -176.98  30.0  3
+ DRA  Var_110   H132  C13  C9   C10    68.51  30.0  3
+ DRA  Var_111   H6'1  C6'  C5'  O5'   179.00  30.0  3
+ DRA  Var_112   H6'2  C6'  C5'  O5'   -62.36  30.0  3
+ DRA  Var_113   H6'3  C6'  C5'  O5'    57.81  30.0  3
+ DRA  Var_114   HO16  O16  C33  C32    71.34  30.0  3
+ DRA  Var_115   H361  C36  C34  O11  -177.48  30.0  3
+ DRA  Var_116   H362  C36  C34  O11   -58.32  30.0  3
+ DRA  Var_117   H363  C36  C34  O11    62.05  30.0  3
+ DRA  Var_118   H411  C41  C39  O14   -61.51  30.0  3
+ DRA  Var_119   H412  C41  C39  O14    58.85  30.0  3
+ DRA  Var_120   H413  C41  C39  O14   177.84  30.0  3
+ DRA  Var_121   C14   C13  C9   O9     65.69  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

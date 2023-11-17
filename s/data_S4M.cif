@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- S4M  S4M  5'-[(S)-(3-aminopropyl)(methyl)-lambda~4~-sulfanyl]-5'-deoxyadenosine  ligand  48  24  .  2021-08-23  2021-08-23  
+ S4M  S4M  5'-[(S)-(3-aminopropyl)(methyl)-lambda~4~-sulfanyl]-5'-deoxyadenosine  ligand  48  24  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_S4M
@@ -253,36 +254,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- S4M  CONST_01  N7    C5  C4  N9     0.00   0.0  0
- S4M  CONST_02  C6    C5  C4  N9   180.00   0.0  0
- S4M  CONST_03  C2    N3  C4  N9   180.00   0.0  0
- S4M  CONST_04  C5    N7  C8  N9     0.00   0.0  0
- S4M  CONST_05  C5    C4  N9  C8     0.00   0.0  0
- S4M  CONST_06  N3    C4  N9  C8   180.00   0.0  0
- S4M  CONST_07  C4    C5  N7  C8     0.00   0.0  0
- S4M  CONST_08  C6    C5  N7  C8   180.00   0.0  0
- S4M  CONST_09  C4    N9  C8  N7     0.00   0.0  0
- S4M  CONST_10  N3    C4  C5  N7   180.00   0.0  0
- S4M  CONST_11  N1    C6  C5  N7   180.00   0.0  0
- S4M  CONST_12  C2    N3  C4  C5     0.00   0.0  0
- S4M  CONST_13  C2    N1  C6  C5     0.00   0.0  0
- S4M  CONST_14  N3    C4  C5  C6     0.00   0.0  0
- S4M  CONST_15  N3    C2  N1  C6     0.00   0.0  0
- S4M  CONST_16  N1    C6  C5  C4     0.00   0.0  0
- S4M  CONST_17  N1    C2  N3  C4     0.00   0.0  0
- S4M  CONST_18  C5    C4  N9  C1'  180.00   0.0  0
- S4M  CONST_19  N3    C4  N9  C1'    0.00   0.0  0
- S4M  CONST_20  N7    C8  N9  C1'  180.00   0.0  0
- S4M  CONST_21  N6    C6  C5  N7     0.00   0.0  0
- S4M  CONST_22  C4    C5  C6  N6   180.00   0.0  0
- S4M  CONST_23  C2    N1  C6  N6   180.00   0.0  0
- S4M  CONST_24  H8    C8  N9  C1'    0.00   0.0  0
- S4M  CONST_25  H2    C2  N1  C6   180.00   0.0  0
- S4M  CONST_26  HN61  N6  C6  C5     0.00   0.0  0
- S4M  CONST_27  HN62  N6  C6  C5   180.00   0.0  0
- S4M  Var_01    SD    CG  CB  CA   179.86  30.0  3
- S4M  Var_02    CG    CB  CA  N    179.67  30.0  3
- S4M  Var_03    HN1   N   CA  CB    57.67  30.0  3
+ S4M  CONST_01  N7    C5   C4   N9      0.00   0.0  0
+ S4M  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ S4M  CONST_03  C2    N3   C4   N9    180.00   0.0  0
+ S4M  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ S4M  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ S4M  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ S4M  CONST_07  C4    C5   N7   C8      0.00   0.0  0
+ S4M  CONST_08  C6    C5   N7   C8    180.00   0.0  0
+ S4M  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ S4M  CONST_10  N3    C4   C5   N7    180.00   0.0  0
+ S4M  CONST_11  N1    C6   C5   N7    180.00   0.0  0
+ S4M  CONST_12  C2    N3   C4   C5      0.00   0.0  0
+ S4M  CONST_13  C2    N1   C6   C5      0.00   0.0  0
+ S4M  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ S4M  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ S4M  CONST_16  N1    C6   C5   C4      0.00   0.0  0
+ S4M  CONST_17  N1    C2   N3   C4      0.00   0.0  0
+ S4M  CONST_18  C5    C4   N9   C1'   180.00   0.0  0
+ S4M  CONST_19  N3    C4   N9   C1'     0.00   0.0  0
+ S4M  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ S4M  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ S4M  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ S4M  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ S4M  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ S4M  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ S4M  CONST_26  HN61  N6   C6   C5      0.00   0.0  0
+ S4M  CONST_27  HN62  N6   C6   C5    180.00   0.0  0
+ S4M  Var_01    SD    CG   CB   CA    179.86  30.0  3
+ S4M  Var_02    CG    CB   CA   N     179.67  30.0  3
+ S4M  Var_03    HN1   N    CA   CB     57.67  30.0  3
+ S4M  Var_04    C1'   C2'  C3'  C4'    36.63  30.0  1
+ S4M  Var_05    C2'   C1'  O4'  C4'    11.74  30.0  1
+ S4M  Var_06    N9    C1'  O4'  C4'  -108.62  30.0  1
+ S4M  Var_07    C2'   C3'  C4'  O4'   -30.90  30.0  1
+ S4M  Var_08    C3'   C2'  C1'  O4'   -30.45  30.0  1
+ S4M  Var_09    C4    N9   C1'  O4'  -167.70  30.0  2
+ S4M  Var_10    C8    N9   C1'  O4'    11.57  30.0  2
+ S4M  Var_11    C3'   C4'  O4'  C1'    12.35  30.0  1
+ S4M  Var_12    C4    N9   C1'  C2'    74.55  30.0  2
+ S4M  Var_13    C8    N9   C1'  C2'  -106.18  30.0  2
+ S4M  Var_14    N9    C1'  C2'  C3'    88.57  30.0  1
+ S4M  Var_15    C2'   C3'  C4'  C5'  -152.38  30.0  1
+ S4M  Var_16    C1'   O4'  C4'  C5'   138.59  30.0  1
+ S4M  Var_17    O2'   C2'  C3'  C4'   -77.29  30.0  1
+ S4M  Var_18    O3'   C3'  C4'  O4'  -152.12  30.0  1
+ S4M  Var_19    O2'   C2'  C1'  O4'    86.08  30.0  1
+ S4M  Var_20    O3'   C3'  C2'  C1'   155.14  30.0  1
+ S4M  Var_21    N9    C1'  C2'  O2'  -154.90  30.0  1
+ S4M  Var_22    H2'   C2'  C3'  C4'   156.14  30.0  1
+ S4M  Var_23    H1'   C1'  O4'  C4'   133.74  30.0  1
+ S4M  Var_24    H3'   C3'  C4'  O4'    85.18  30.0  1
+ S4M  Var_25    H4'   C4'  O4'  C1'  -102.25  30.0  1
+ S4M  Var_26    C3'   C4'  C5'  SD   -178.07  30.0  3
+ S4M  Var_27    O4'   C4'  C5'  SD     63.59  30.0  3
+ S4M  Var_28    O3'   C3'  C4'  C5'    86.40  30.0  1
+ S4M  Var_29    O3'   C3'  C2'  O2'    41.21  30.0  1
+ S4M  Var_30    HO3'  O3'  C3'  C4'  -162.22  30.0  3
+ S4M  Var_31    H5'1  C5'  C4'  O4'   -63.50  30.0  2
+ S4M  Var_32    H5'2  C5'  C4'  O4'   177.07  30.0  2
+ S4M  Var_33    HO2'  O2'  C2'  C1'  -147.12  30.0  3
+ S4M  Var_34    C4'   C5'  SD   CG   -166.45  30.0  3
+ S4M  Var_35    C4'   C5'  SD   CE    -80.42  30.0  3
+ S4M  Var_36    HSD   SD   C5'  C4'   -56.35  30.0  2
+ S4M  Var_37    CE    SD   CG   CB    -84.79  30.0  3
+ S4M  Var_38    C5'   SD   CG   CB     86.50  30.0  3
+ S4M  Var_39    HE1   CE   SD   CG     50.29  30.0  3
+ S4M  Var_40    HE2   CE   SD   CG    170.29  30.0  3
+ S4M  Var_41    HE3   CE   SD   CG    -72.61  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

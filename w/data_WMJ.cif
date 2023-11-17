@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- WMJ  WMJ  2',5'-dideoxy-5'-{[(4-nitrophenyl)carbamoyl]amino}-3,4-dihydrothymidine  ligand  48  29  .  2021-08-24  2021-08-24  
+ WMJ  WMJ  2',5'-dideoxy-5'-{[(4-nitrophenyl)carbamoyl]amino}-3,4-dihydrothymidine  ligand  48  29  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_WMJ
@@ -249,41 +250,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- WMJ  CONST_01  CAV   CAK  CAI  CAU    0.00   0.0  0
- WMJ  CONST_02  CAV   CAJ  CAH  CAU    0.00   0.0  0
- WMJ  CONST_03  CAJ   CAH  CAU  CAI    0.00   0.0  0
- WMJ  CONST_04  CAJ   CAV  CAK  CAI    0.00   0.0  0
- WMJ  CONST_05  CAH   CAU  CAI  CAK    0.00   0.0  0
- WMJ  CONST_06  CAH   CAJ  CAV  CAK    0.00   0.0  0
- WMJ  CONST_07  CAL   NBC  CAX  NAQ    0.00   0.0  0
- WMJ  CONST_08  CBA   NBC  CAX  NAQ  180.00   0.0  0
- WMJ  CONST_09  NBC   CAX  NAQ  CAW    0.00   0.0  0
- WMJ  CONST_10  CAK   CAI  CAU  NAP  180.00   0.0  0
- WMJ  CONST_11  CAJ   CAH  CAU  NAP  180.00   0.0  0
- WMJ  CONST_12  NBB   CAV  CAK  CAI  180.00   0.0  0
- WMJ  CONST_13  NBB   CAV  CAJ  CAH  180.00   0.0  0
- WMJ  CONST_14  CAW   NAQ  CAX  OAD  180.00   0.0  0
- WMJ  CONST_15  CAL   NBC  CAX  OAD  180.00   0.0  0
- WMJ  CONST_16  CBA   NBC  CAX  OAD    0.00   0.0  0
- WMJ  CONST_17  HAK   CAK  CAI  CAU  180.00   0.0  0
- WMJ  CONST_18  HAJ   CAJ  CAH  CAU  180.00   0.0  0
- WMJ  CONST_19  HAH   CAH  CAU  CAI  180.00   0.0  0
- WMJ  CONST_20  HAI   CAI  CAU  CAH  180.00   0.0  0
- WMJ  CONST_21  HAQ   NAQ  CAX  NBC  180.00   0.0  0
- WMJ  CONST_22  CAI   CAU  NAP  CAS  180.00   0.0  0
- WMJ  CONST_23  CAH   CAU  NAP  CAS    0.00   0.0  0
- WMJ  CONST_24  OAG   NBB  CAV  CAK    0.00   0.0  0
- WMJ  CONST_25  OAF   NBB  CAV  CAK  180.00   0.0  0
- WMJ  CONST_26  OAG   NBB  CAV  CAJ  180.00   0.0  0
- WMJ  CONST_27  OAF   NBB  CAV  CAJ    0.00   0.0  0
- WMJ  CONST_28  HAP   NAP  CAU  CAI    0.00   0.0  0
- WMJ  CONST_29  CAU   NAP  CAS  OAB    0.00   0.0  0
- WMJ  CONST_30  CAU   NAP  CAS  NAO  180.00   0.0  0
- WMJ  CONST_31  OAB   CAS  NAO  CAM    0.00   0.0  0
- WMJ  CONST_32  NAP   CAS  NAO  CAM  180.00   0.0  0
- WMJ  CONST_33  HAO   NAO  CAS  OAB  180.00   0.0  0
- WMJ  Var_01    HAA1  CAA  CAT  CAW   58.03  30.0  3
- WMJ  Var_02    CAS   NAO  CAM  CAZ   87.19  30.0  3
+ WMJ  CONST_01  CAV   CAK  CAI  CAU     0.00   0.0  0
+ WMJ  CONST_02  CAV   CAJ  CAH  CAU     0.00   0.0  0
+ WMJ  CONST_03  CAJ   CAH  CAU  CAI     0.00   0.0  0
+ WMJ  CONST_04  CAJ   CAV  CAK  CAI     0.00   0.0  0
+ WMJ  CONST_05  CAH   CAU  CAI  CAK     0.00   0.0  0
+ WMJ  CONST_06  CAH   CAJ  CAV  CAK     0.00   0.0  0
+ WMJ  CONST_07  CAL   NBC  CAX  NAQ     0.00   0.0  0
+ WMJ  CONST_08  CBA   NBC  CAX  NAQ   180.00   0.0  0
+ WMJ  CONST_09  NBC   CAX  NAQ  CAW     0.00   0.0  0
+ WMJ  CONST_10  CAK   CAI  CAU  NAP   180.00   0.0  0
+ WMJ  CONST_11  CAJ   CAH  CAU  NAP   180.00   0.0  0
+ WMJ  CONST_12  NBB   CAV  CAK  CAI   180.00   0.0  0
+ WMJ  CONST_13  NBB   CAV  CAJ  CAH   180.00   0.0  0
+ WMJ  CONST_14  CAW   NAQ  CAX  OAD   180.00   0.0  0
+ WMJ  CONST_15  CAL   NBC  CAX  OAD   180.00   0.0  0
+ WMJ  CONST_16  CBA   NBC  CAX  OAD     0.00   0.0  0
+ WMJ  CONST_17  HAK   CAK  CAI  CAU   180.00   0.0  0
+ WMJ  CONST_18  HAJ   CAJ  CAH  CAU   180.00   0.0  0
+ WMJ  CONST_19  HAH   CAH  CAU  CAI   180.00   0.0  0
+ WMJ  CONST_20  HAI   CAI  CAU  CAH   180.00   0.0  0
+ WMJ  CONST_21  HAQ   NAQ  CAX  NBC   180.00   0.0  0
+ WMJ  CONST_22  CAI   CAU  NAP  CAS   180.00   0.0  0
+ WMJ  CONST_23  CAH   CAU  NAP  CAS     0.00   0.0  0
+ WMJ  CONST_24  OAG   NBB  CAV  CAK     0.00   0.0  0
+ WMJ  CONST_25  OAF   NBB  CAV  CAK   180.00   0.0  0
+ WMJ  CONST_26  OAG   NBB  CAV  CAJ   180.00   0.0  0
+ WMJ  CONST_27  OAF   NBB  CAV  CAJ     0.00   0.0  0
+ WMJ  CONST_28  HAP   NAP  CAU  CAI     0.00   0.0  0
+ WMJ  CONST_29  CAU   NAP  CAS  OAB     0.00   0.0  0
+ WMJ  CONST_30  CAU   NAP  CAS  NAO   180.00   0.0  0
+ WMJ  CONST_31  OAB   CAS  NAO  CAM     0.00   0.0  0
+ WMJ  CONST_32  NAP   CAS  NAO  CAM   180.00   0.0  0
+ WMJ  CONST_33  HAO   NAO  CAS  OAB   180.00   0.0  0
+ WMJ  Var_01    HAA1  CAA  CAT  CAW    58.03  30.0  3
+ WMJ  Var_02    CAS   NAO  CAM  CAZ    87.19  30.0  3
+ WMJ  Var_03    CAT   CAW  NAQ  CAX     0.17  30.0  1
+ WMJ  Var_04    CAT   CAL  NBC  CAX     1.89  30.0  1
+ WMJ  Var_05    OAR   CBA  NBC  CAX   118.06  30.0  3
+ WMJ  Var_06    CAN   CBA  NBC  CAX  -122.84  30.0  3
+ WMJ  Var_07    CAL   CAT  CAW  NAQ    -0.26  30.0  1
+ WMJ  Var_08    NBC   CAL  CAT  CAW    -0.74  30.0  1
+ WMJ  Var_09    CBA   NBC  CAL  CAT   178.30  30.0  1
+ WMJ  Var_10    OAR   CBA  NBC  CAL   -58.40  30.0  3
+ WMJ  Var_11    CAN   CBA  NBC  CAL    60.70  30.0  3
+ WMJ  Var_12    CAZ   OAR  CBA  NBC   130.94  30.0  1
+ WMJ  Var_13    CAY   CAN  CBA  NBC  -148.50  30.0  1
+ WMJ  Var_14    CAY   CAZ  OAR  CBA    16.87  30.0  1
+ WMJ  Var_15    CAZ   CAY  CAN  CBA    36.57  30.0  1
+ WMJ  Var_16    CAY   CAN  CBA  OAR   -27.99  30.0  1
+ WMJ  Var_17    CAN   CAY  CAZ  OAR   -33.52  30.0  1
+ WMJ  Var_18    CAZ   OAR  CBA  CAN     7.20  30.0  1
+ WMJ  Var_19    OAC   CAW  NAQ  CAX   180.00  30.0  1
+ WMJ  Var_20    CAA   CAT  CAW  NAQ   179.47  30.0  1
+ WMJ  Var_21    CAL   CAT  CAW  OAC   179.92  30.0  1
+ WMJ  Var_22    NBC   CAL  CAT  CAA   179.54  30.0  1
+ WMJ  Var_23    CAM   CAZ  OAR  CBA   139.22  30.0  1
+ WMJ  Var_24    OAE   CAY  CAN  CBA   155.38  30.0  1
+ WMJ  Var_25    OAE   CAY  CAZ  OAR  -156.47  30.0  1
+ WMJ  Var_26    CAM   CAZ  CAY  CAN  -153.27  30.0  1
+ WMJ  Var_27    HAL   CAL  NBC  CAX  -178.22  30.0  1
+ WMJ  Var_28    HBA   CBA  NBC  CAX    -0.17  30.0  3
+ WMJ  Var_29    HAN1  CAN  CBA  NBC   -31.77  30.0  1
+ WMJ  Var_30    HAN2  CAN  CBA  NBC    89.52  30.0  1
+ WMJ  Var_31    HAZ   CAZ  OAR  CBA  -100.30  30.0  1
+ WMJ  Var_32    HAY   CAY  CAN  CBA   -78.31  30.0  1
+ WMJ  Var_33    CAA   CAT  CAW  OAC    -0.35  30.0  1
+ WMJ  Var_34    NAO   CAM  CAZ  OAR    59.81  30.0  3
+ WMJ  Var_35    NAO   CAM  CAZ  CAY   177.00  30.0  3
+ WMJ  Var_36    CAM   CAZ  CAY  OAE    83.78  30.0  1
+ WMJ  Var_37    HAM1  CAM  CAZ  OAR  -177.70  30.0  3
+ WMJ  Var_38    HAM2  CAM  CAZ  OAR   -60.72  30.0  3
+ WMJ  Var_39    HAE   OAE  CAY  CAN    75.74  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

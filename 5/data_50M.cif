@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 50M  50M  (2R,4S,4aS,5R)-6'-hydroxy-2,4-dimethyl-8-nitro-1,2,4,4a-tetrahydro-2'H,6H-spiro[1,4-oxazino[4,3-a]quinoline-5,5'-pyrimidine]-2',4'(3'H)-dione  ligand  45  27  .  2021-08-04  2021-08-04  
+ 50M  50M  (2R,4S,4aS,5R)-6'-hydroxy-2,4-dimethyl-8-nitro-1,2,4,4a-tetrahydro-2'H,6H-spiro[1,4-oxazino[4,3-a]quinoline-5,5'-pyrimidine]-2',4'(3'H)-dione  ligand  45  27  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_50M
@@ -245,31 +246,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 50M  CONST_01  C16  C15  C14  C13     0.00   0.0  0
- 50M  CONST_02  C16  C17  C12  C13     0.00   0.0  0
- 50M  CONST_03  C12  C13  C14  C15     0.00   0.0  0
- 50M  CONST_04  C12  C17  C16  C15     0.00   0.0  0
- 50M  CONST_05  C14  C13  C12  C17     0.00   0.0  0
- 50M  CONST_06  C14  C15  C16  C17     0.00   0.0  0
- 50M  CONST_07  N25  C23  N22  C20     0.00   0.0  0
- 50M  CONST_08  N22  C23  N25  C26     0.00   0.0  0
- 50M  CONST_09  N28  C15  C14  C13   180.00   0.0  0
- 50M  CONST_10  N28  C15  C16  C17   180.00   0.0  0
- 50M  CONST_11  O24  C23  N22  C20   180.00   0.0  0
- 50M  CONST_12  O24  C23  N25  C26   180.00   0.0  0
- 50M  CONST_13  H13  C13  C14  C15   180.00   0.0  0
- 50M  CONST_14  H14  C14  C15  C16   180.00   0.0  0
- 50M  CONST_15  H16  C16  C17  C18     0.00   0.0  0
- 50M  CONST_16  H25  N25  C23  N22   180.00   0.0  0
- 50M  CONST_17  O30  N28  C15  C16   180.00   0.0  0
- 50M  CONST_18  O29  N28  C15  C16     0.00   0.0  0
- 50M  CONST_19  O30  N28  C15  C14     0.00   0.0  0
- 50M  CONST_20  O29  N28  C15  C14   180.00   0.0  0
- 50M  Var_01    C7   C10  N11  C2     55.60  30.0  1
- 50M  Var_02    C13  C12  N11  C2   -161.04  30.0  1
- 50M  Var_03    C19  C18  C17  C16   139.40  30.0  1
- 50M  Var_04    C23  N25  C26  C19    -7.59  30.0  1
- 50M  Var_05    O21  C20  N22  C23  -179.59  30.0  1
+ 50M  CONST_01  C16   C15  C14  C13     0.00   0.0  0
+ 50M  CONST_02  C16   C17  C12  C13     0.00   0.0  0
+ 50M  CONST_03  C12   C13  C14  C15     0.00   0.0  0
+ 50M  CONST_04  C12   C17  C16  C15     0.00   0.0  0
+ 50M  CONST_05  C14   C13  C12  C17     0.00   0.0  0
+ 50M  CONST_06  C14   C15  C16  C17     0.00   0.0  0
+ 50M  CONST_07  N25   C23  N22  C20     0.00   0.0  0
+ 50M  CONST_08  N22   C23  N25  C26     0.00   0.0  0
+ 50M  CONST_09  N28   C15  C14  C13   180.00   0.0  0
+ 50M  CONST_10  N28   C15  C16  C17   180.00   0.0  0
+ 50M  CONST_11  O24   C23  N22  C20   180.00   0.0  0
+ 50M  CONST_12  O24   C23  N25  C26   180.00   0.0  0
+ 50M  CONST_13  H13   C13  C14  C15   180.00   0.0  0
+ 50M  CONST_14  H14   C14  C15  C16   180.00   0.0  0
+ 50M  CONST_15  H16   C16  C17  C18     0.00   0.0  0
+ 50M  CONST_16  H25   N25  C23  N22   180.00   0.0  0
+ 50M  CONST_17  O30   N28  C15  C16   180.00   0.0  0
+ 50M  CONST_18  O29   N28  C15  C16     0.00   0.0  0
+ 50M  CONST_19  O30   N28  C15  C14     0.00   0.0  0
+ 50M  CONST_20  O29   N28  C15  C14   180.00   0.0  0
+ 50M  Var_01    C7    C10  N11  C2     55.60  30.0  1
+ 50M  Var_02    C13   C12  N11  C2   -161.04  30.0  1
+ 50M  Var_03    C19   C18  C17  C16   139.40  30.0  1
+ 50M  Var_04    C23   N25  C26  C19    -7.59  30.0  1
+ 50M  Var_05    O21   C20  N22  C23  -179.59  30.0  1
+ 50M  Var_06    C7    O6   C3   C2    -61.45  30.0  1
+ 50M  Var_07    C17   C18  C19  C2     58.12  30.0  1
+ 50M  Var_08    N25   C26  C19  C2    141.20  30.0  3
+ 50M  Var_09    N22   C20  C19  C2   -141.46  30.0  3
+ 50M  Var_10    C10   C7   O6   C3     59.67  30.0  1
+ 50M  Var_11    C10   N11  C2   C3    -55.82  30.0  1
+ 50M  Var_12    C12   N11  C2   C3    127.35  30.0  1
+ 50M  Var_13    C18   C19  C2   C3   -162.08  30.0  1
+ 50M  Var_14    C26   C19  C2   C3    -44.53  30.0  1
+ 50M  Var_15    C20   C19  C2   C3     81.68  30.0  1
+ 50M  Var_16    C26   C19  C18  C17   -63.42  30.0  1
+ 50M  Var_17    C20   C19  C18  C17   178.72  30.0  1
+ 50M  Var_18    N11   C2   C19  C18   -37.41  30.0  1
+ 50M  Var_19    N25   C26  C19  C18  -100.20  30.0  3
+ 50M  Var_20    N22   C20  C19  C18   100.71  30.0  3
+ 50M  Var_21    C10   N11  C2   C19   176.36  30.0  1
+ 50M  Var_22    C12   N11  C2   C19    -0.48  30.0  1
+ 50M  Var_23    O6    C3   C2   C19  -175.48  30.0  1
+ 50M  Var_24    N11   C2   C19  C20  -153.65  30.0  1
+ 50M  Var_25    N25   C26  C19  C20    14.14  30.0  3
+ 50M  Var_26    N11   C2   C19  C26    80.15  30.0  1
+ 50M  Var_27    N22   C20  C19  C26   -14.19  30.0  3
+ 50M  Var_28    N11   C10  C7   O6    -54.89  30.0  1
+ 50M  Var_29    N11   C2   C3   O6     57.28  30.0  1
+ 50M  Var_30    O27   C26  C19  C2    -42.20  30.0  3
+ 50M  Var_31    O21   C20  C19  C2     43.10  30.0  3
+ 50M  Var_32    C9    C7   O6   C3   -178.40  30.0  1
+ 50M  Var_33    C7    O6   C3   C5    175.42  30.0  1
+ 50M  Var_34    N11   C2   C3   C5    176.21  30.0  1
+ 50M  Var_35    C19   C2   C3   C5    -56.55  30.0  1
+ 50M  Var_36    O27   C26  C19  C18    76.40  30.0  3
+ 50M  Var_37    O21   C20  C19  C18   -74.73  30.0  3
+ 50M  Var_38    O27   C26  C19  C20  -169.26  30.0  3
+ 50M  Var_39    O21   C20  C19  C26   170.37  30.0  3
+ 50M  Var_40    N11   C10  C7   C9   -174.62  30.0  1
+ 50M  Var_41    H182  C18  C19  C2    -61.85  30.0  1
+ 50M  Var_42    H183  C18  C19  C2   -178.66  30.0  1
+ 50M  Var_43    H7    C7   O6   C3    -58.95  30.0  1
+ 50M  Var_44    H3    C3   O6   C7     57.05  30.0  1
+ 50M  Var_45    H2    C2   C19  C18    80.17  30.0  1
+ 50M  Var_46    H51   C5   C3   C2     68.91  30.0  3
+ 50M  Var_47    H52   C5   C3   C2   -173.36  30.0  3
+ 50M  Var_48    H53   C5   C3   C2    -53.62  30.0  3
+ 50M  Var_49    H21   O21  C20  C19   176.37  30.0  3
+ 50M  Var_50    H91   C9   C7   O6     58.84  30.0  3
+ 50M  Var_51    H92   C9   C7   O6    178.06  30.0  3
+ 50M  Var_52    H93   C9   C7   O6    -61.94  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- G5A  G5A  5'-O-(glycylsulfamoyl)adenosine  ligand  44  27  .  2021-08-10  2021-08-10  
+ G5A  G5A  5'-O-(glycylsulfamoyl)adenosine  ligand  44  27  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_G5A
@@ -234,40 +235,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- G5A  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- G5A  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- G5A  CONST_03  N7    C5   C6   N1   180.00   0.0  0
- G5A  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- G5A  CONST_05  C5    C4   N3   C2     0.00   0.0  0
- G5A  CONST_06  N9    C4   N3   C2   180.00   0.0  0
- G5A  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- G5A  CONST_08  C6    C5   C4   N3     0.00   0.0  0
- G5A  CONST_09  N7    C5   C4   N3   180.00   0.0  0
- G5A  CONST_10  C8    N9   C4   N3   180.00   0.0  0
- G5A  CONST_11  C8    N7   C5   C4     0.00   0.0  0
- G5A  CONST_12  N7    C8   N9   C4     0.00   0.0  0
- G5A  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- G5A  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- G5A  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- G5A  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- G5A  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- G5A  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- G5A  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- G5A  CONST_20  C1'   N9   C8   N7   180.00   0.0  0
- G5A  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- G5A  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- G5A  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- G5A  CONST_24  H2    C2   N3   C4   180.00   0.0  0
- G5A  CONST_25  H8    C8   N9   C4   180.00   0.0  0
- G5A  CONST_26  HN6   N6   C6   N1   180.00   0.0  0
- G5A  CONST_27  HN6A  N6   C6   N1     0.00   0.0  0
- G5A  CONST_28  S     N3S  C    O      0.00   0.0  0
- G5A  CONST_29  CA    C    N3S  S    180.00   0.0  0
- G5A  CONST_30  HN3S  N3S  C    O    180.00   0.0  0
- G5A  Var_01    C4'   C5'  O5'  S   -178.73  30.0  3
- G5A  Var_02    O5'   S    N3S  C     56.93  30.0  3
- G5A  Var_03    N3S   C    CA   N    146.95  30.0  3
- G5A  Var_04    HN    N    CA   C     64.45  30.0  3
+ G5A  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ G5A  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ G5A  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ G5A  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ G5A  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ G5A  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ G5A  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ G5A  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ G5A  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ G5A  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ G5A  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ G5A  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ G5A  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ G5A  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ G5A  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ G5A  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ G5A  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ G5A  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ G5A  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ G5A  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ G5A  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ G5A  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ G5A  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ G5A  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ G5A  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ G5A  CONST_26  HN6   N6   C6   N1    180.00   0.0  0
+ G5A  CONST_27  HN6A  N6   C6   N1      0.00   0.0  0
+ G5A  CONST_28  S     N3S  C    O       0.00   0.0  0
+ G5A  CONST_29  CA    C    N3S  S     180.00   0.0  0
+ G5A  CONST_30  HN3S  N3S  C    O     180.00   0.0  0
+ G5A  Var_01    C4'   C5'  O5'  S    -178.73  30.0  3
+ G5A  Var_02    O5'   S    N3S  C      56.93  30.0  3
+ G5A  Var_03    N3S   C    CA   N     146.95  30.0  3
+ G5A  Var_04    HN    N    CA   C      64.45  30.0  3
+ G5A  Var_05    C2'   C1'  N9   C4    130.18  30.0  2
+ G5A  Var_06    O4'   C1'  N9   C4   -111.91  30.0  2
+ G5A  Var_07    C2'   C1'  N9   C8    -53.48  30.0  2
+ G5A  Var_08    O4'   C1'  N9   C8     64.43  30.0  2
+ G5A  Var_09    C3'   C2'  C1'  N9    159.39  30.0  1
+ G5A  Var_10    C4'   O4'  C1'  N9   -149.22  30.0  1
+ G5A  Var_11    C4'   C3'  C2'  C1'   -36.84  30.0  1
+ G5A  Var_12    C3'   C4'  O4'  C1'     0.62  30.0  1
+ G5A  Var_13    C4'   O4'  C1'  C2'   -25.16  30.0  1
+ G5A  Var_14    O4'   C4'  C3'  C2'    23.64  30.0  1
+ G5A  Var_15    O4'   C1'  C2'  C3'    38.80  30.0  1
+ G5A  Var_16    O2'   C2'  C1'  N9    -79.01  30.0  1
+ G5A  Var_17    O3'   C3'  C2'  C1'    78.31  30.0  1
+ G5A  Var_18    C5'   C4'  O4'  C1'   121.46  30.0  1
+ G5A  Var_19    C5'   C4'  C3'  C2'   -96.61  30.0  1
+ G5A  Var_20    O4'   C1'  C2'  O2'   160.40  30.0  1
+ G5A  Var_21    C4'   C3'  C2'  O2'  -155.13  30.0  1
+ G5A  Var_22    O4'   C4'  C3'  O3'   -93.41  30.0  1
+ G5A  Var_23    H1'   C1'  N9   C4      8.60  30.0  2
+ G5A  Var_24    H2'   C2'  C1'  N9     44.61  30.0  1
+ G5A  Var_25    H16   C3'  C2'  C1'  -156.14  30.0  1
+ G5A  Var_26    H4'   C4'  O4'  C1'  -118.70  30.0  1
+ G5A  Var_27    O3'   C3'  C2'  O2'   -39.97  30.0  1
+ G5A  Var_28    O5'   C5'  C4'  C3'   174.05  30.0  2
+ G5A  Var_29    C5'   C4'  C3'  O3'   146.33  30.0  1
+ G5A  Var_30    O5'   C5'  C4'  O4'    55.86  30.0  2
+ G5A  Var_31    HO2'  O2'  C2'  C1'   161.15  30.0  3
+ G5A  Var_32    H17   O3'  C3'  C2'    47.49  30.0  3
+ G5A  Var_33    H5'   C5'  C4'  C3'   -66.49  30.0  2
+ G5A  Var_34    H5'A  C5'  C4'  C3'    54.11  30.0  2
+ G5A  Var_35    C5'   O5'  S    O1S   -52.13  30.0  2
+ G5A  Var_36    C5'   O5'  S    O2S   175.78  30.0  2
+ G5A  Var_37    C5'   O5'  S    N3S    59.56  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

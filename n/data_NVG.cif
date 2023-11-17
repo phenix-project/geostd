@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NVG  NVG  4-amino-1-(5-{[3-(1H-benzimidazol-2-yl)propanoyl]amino}-5-deoxy-alpha-L-lyxofuranosyl)pyrimidin-2(1H)-one  ligand  52  30  .  2021-08-15  2021-08-15  
+ NVG  NVG  4-amino-1-(5-{[3-(1H-benzimidazol-2-yl)propanoyl]amino}-5-deoxy-alpha-L-lyxofuranosyl)pyrimidin-2(1H)-one  ligand  52  30  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NVG
@@ -267,47 +268,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NVG  CONST_01  CAK   CAY  NAR  CAW  180.00   0.0  0
- NVG  CONST_02  CAX   CAY  NAR  CAW    0.00   0.0  0
- NVG  CONST_03  CAY   CAX  NAP  CAW    0.00   0.0  0
- NVG  CONST_04  CAJ   CAX  NAP  CAW  180.00   0.0  0
- NVG  CONST_05  CAX   NAP  CAW  NAR    0.00   0.0  0
- NVG  CONST_06  CAI   CAK  CAY  NAR  180.00   0.0  0
- NVG  CONST_07  CAJ   CAX  CAY  NAR  180.00   0.0  0
- NVG  CONST_08  NAP   CAX  CAY  NAR    0.00   0.0  0
- NVG  CONST_09  NAP   CAW  NAR  CAY    0.00   0.0  0
- NVG  CONST_10  CAH   CAI  CAK  CAY    0.00   0.0  0
- NVG  CONST_11  CAH   CAJ  CAX  CAY    0.00   0.0  0
- NVG  CONST_12  CAJ   CAX  CAY  CAK    0.00   0.0  0
- NVG  CONST_13  NAP   CAX  CAY  CAK  180.00   0.0  0
- NVG  CONST_14  CAJ   CAH  CAI  CAK    0.00   0.0  0
- NVG  CONST_15  CAX   CAY  CAK  CAI    0.00   0.0  0
- NVG  CONST_16  CAX   CAJ  CAH  CAI    0.00   0.0  0
- NVG  CONST_17  NAP   CAX  CAJ  CAH  180.00   0.0  0
- NVG  CONST_18  CAF   CAT  NAO  CAV    0.00   0.0  0
- NVG  CONST_19  CAG   NBD  CAV  NAO    0.00   0.0  0
- NVG  CONST_20  CBC   NBD  CAV  NAO  180.00   0.0  0
- NVG  CONST_21  NBD   CAV  NAO  CAT    0.00   0.0  0
- NVG  CONST_22  CAY   NAR  CAW  CAM  180.00   0.0  0
- NVG  CONST_23  CAX   NAP  CAW  CAM  180.00   0.0  0
- NVG  CONST_24  CAT   NAO  CAV  OAC  180.00   0.0  0
- NVG  CONST_25  CAG   NBD  CAV  OAC  180.00   0.0  0
- NVG  CONST_26  CBC   NBD  CAV  OAC    0.00   0.0  0
- NVG  CONST_27  NAA   CAT  NAO  CAV  180.00   0.0  0
- NVG  CONST_28  HAK   CAK  CAY  NAR    0.00   0.0  0
- NVG  CONST_29  HAI   CAI  CAK  CAY  180.00   0.0  0
- NVG  CONST_30  HAJ   CAJ  CAX  CAY  180.00   0.0  0
- NVG  CONST_31  HAR   NAR  CAY  CAK    0.00   0.0  0
- NVG  CONST_32  HAH   CAH  CAI  CAK  180.00   0.0  0
- NVG  CONST_33  HAA1  NAA  CAT  NAO    0.00   0.0  0
- NVG  CONST_34  HAA2  NAA  CAT  NAO  180.00   0.0  0
- NVG  CONST_35  OAB   CAU  NAQ  CAN    0.00   0.0  0
- NVG  CONST_36  CAL   CAU  NAQ  CAN  180.00   0.0  0
- NVG  CONST_37  HAQ   NAQ  CAU  OAB  180.00   0.0  0
- NVG  Var_01    NAR   CAW  CAM  CAL  169.63  30.0  2
- NVG  Var_02    CAU   NAQ  CAN  CBB  -83.05  30.0  3
- NVG  Var_03    CAW   CAM  CAL  CAU  175.30  30.0  3
- NVG  Var_04    CAM   CAL  CAU  NAQ  144.46  30.0  3
+ NVG  CONST_01  CAK   CAY  NAR  CAW   180.00   0.0  0
+ NVG  CONST_02  CAX   CAY  NAR  CAW     0.00   0.0  0
+ NVG  CONST_03  CAY   CAX  NAP  CAW     0.00   0.0  0
+ NVG  CONST_04  CAJ   CAX  NAP  CAW   180.00   0.0  0
+ NVG  CONST_05  CAX   NAP  CAW  NAR     0.00   0.0  0
+ NVG  CONST_06  CAI   CAK  CAY  NAR   180.00   0.0  0
+ NVG  CONST_07  CAJ   CAX  CAY  NAR   180.00   0.0  0
+ NVG  CONST_08  NAP   CAX  CAY  NAR     0.00   0.0  0
+ NVG  CONST_09  NAP   CAW  NAR  CAY     0.00   0.0  0
+ NVG  CONST_10  CAH   CAI  CAK  CAY     0.00   0.0  0
+ NVG  CONST_11  CAH   CAJ  CAX  CAY     0.00   0.0  0
+ NVG  CONST_12  CAJ   CAX  CAY  CAK     0.00   0.0  0
+ NVG  CONST_13  NAP   CAX  CAY  CAK   180.00   0.0  0
+ NVG  CONST_14  CAJ   CAH  CAI  CAK     0.00   0.0  0
+ NVG  CONST_15  CAX   CAY  CAK  CAI     0.00   0.0  0
+ NVG  CONST_16  CAX   CAJ  CAH  CAI     0.00   0.0  0
+ NVG  CONST_17  NAP   CAX  CAJ  CAH   180.00   0.0  0
+ NVG  CONST_18  CAF   CAT  NAO  CAV     0.00   0.0  0
+ NVG  CONST_19  CAG   NBD  CAV  NAO     0.00   0.0  0
+ NVG  CONST_20  CBC   NBD  CAV  NAO   180.00   0.0  0
+ NVG  CONST_21  NBD   CAV  NAO  CAT     0.00   0.0  0
+ NVG  CONST_22  CAY   NAR  CAW  CAM   180.00   0.0  0
+ NVG  CONST_23  CAX   NAP  CAW  CAM   180.00   0.0  0
+ NVG  CONST_24  CAT   NAO  CAV  OAC   180.00   0.0  0
+ NVG  CONST_25  CAG   NBD  CAV  OAC   180.00   0.0  0
+ NVG  CONST_26  CBC   NBD  CAV  OAC     0.00   0.0  0
+ NVG  CONST_27  NAA   CAT  NAO  CAV   180.00   0.0  0
+ NVG  CONST_28  HAK   CAK  CAY  NAR     0.00   0.0  0
+ NVG  CONST_29  HAI   CAI  CAK  CAY   180.00   0.0  0
+ NVG  CONST_30  HAJ   CAJ  CAX  CAY   180.00   0.0  0
+ NVG  CONST_31  HAR   NAR  CAY  CAK     0.00   0.0  0
+ NVG  CONST_32  HAH   CAH  CAI  CAK   180.00   0.0  0
+ NVG  CONST_33  HAA1  NAA  CAT  NAO     0.00   0.0  0
+ NVG  CONST_34  HAA2  NAA  CAT  NAO   180.00   0.0  0
+ NVG  CONST_35  OAB   CAU  NAQ  CAN     0.00   0.0  0
+ NVG  CONST_36  CAL   CAU  NAQ  CAN   180.00   0.0  0
+ NVG  CONST_37  HAQ   NAQ  CAU  OAB   180.00   0.0  0
+ NVG  Var_01    NAR   CAW  CAM  CAL   169.63  30.0  2
+ NVG  Var_02    CAU   NAQ  CAN  CBB   -83.05  30.0  3
+ NVG  Var_03    CAW   CAM  CAL  CAU   175.30  30.0  3
+ NVG  Var_04    CAM   CAL  CAU  NAQ   144.46  30.0  3
+ NVG  Var_05    OAS   CBC  NBD  CAV    59.09  30.0  3
+ NVG  Var_06    CBA   CBC  NBD  CAV   -63.12  30.0  3
+ NVG  Var_07    OAS   CBC  NBD  CAG  -120.78  30.0  3
+ NVG  Var_08    CBA   CBC  NBD  CAG   117.01  30.0  3
+ NVG  Var_09    CBB   OAS  CBC  NBD  -129.21  30.0  1
+ NVG  Var_10    CAZ   CBA  CBC  NBD   150.49  30.0  1
+ NVG  Var_11    CAZ   CBB  OAS  CBC   -22.28  30.0  1
+ NVG  Var_12    CBB   CAZ  CBA  CBC   -37.33  30.0  1
+ NVG  Var_13    CAZ   CBA  CBC  OAS    25.99  30.0  1
+ NVG  Var_14    CBA   CAZ  CBB  OAS    37.30  30.0  1
+ NVG  Var_15    CBB   OAS  CBC  CBA    -2.70  30.0  1
+ NVG  Var_16    OAE   CBA  CBC  NBD   -88.44  30.0  1
+ NVG  Var_17    CAN   CBB  OAS  CBC  -146.62  30.0  1
+ NVG  Var_18    OAD   CAZ  CBA  CBC    78.80  30.0  1
+ NVG  Var_19    OAE   CBA  CBC  OAS   147.06  30.0  1
+ NVG  Var_20    OAD   CAZ  CBB  OAS   -79.53  30.0  1
+ NVG  Var_21    CAN   CBB  CAZ  CBA   157.77  30.0  1
+ NVG  Var_22    CBB   CAZ  CBA  OAE  -154.67  30.0  1
+ NVG  Var_23    HAG   CAG  NBD  CAV  -179.46  30.0  1
+ NVG  Var_24    HBC   CBC  NBD  CAV   177.76  30.0  3
+ NVG  Var_25    HAF   CAF  CAT  NAO   179.80  30.0  1
+ NVG  Var_26    HBA   CBA  CBC  NBD    34.94  30.0  1
+ NVG  Var_27    HBB   CBB  OAS  CBC    93.91  30.0  1
+ NVG  Var_28    HAZ   CAZ  CBA  CBC  -155.46  30.0  1
+ NVG  Var_29    NAQ   CAN  CBB  OAS   -65.26  30.0  3
+ NVG  Var_30    OAD   CAZ  CBA  OAE   -38.53  30.0  1
+ NVG  Var_31    NAQ   CAN  CBB  CAZ   176.60  30.0  3
+ NVG  Var_32    CAN   CBB  CAZ  OAD    40.95  30.0  1
+ NVG  Var_33    HAE   OAE  CBA  CBC   157.75  30.0  3
+ NVG  Var_34    HAN1  CAN  CBB  OAS    55.57  30.0  3
+ NVG  Var_35    HAN2  CAN  CBB  OAS   173.48  30.0  3
+ NVG  Var_36    HAD   OAD  CAZ  CBA    44.67  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

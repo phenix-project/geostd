@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KOT  KOT  1-beta-D-glucopyranosyl-4-phenyl-1H-1,2,3-triazole  D-saccharide  39  22  .  2023-02-15  2023-02-15
+ KOT  KOT  1-beta-D-glucopyranosyl-4-phenyl-1H-1,2,3-triazole  D-saccharide  39  22  .  2023-02-15  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KOT
@@ -215,33 +216,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KOT  CONST_01  C11  C10  C9   C14    0.00  0.0  0
- KOT  CONST_02  C7   C8   C9   C14  180.00  0.0  0
- KOT  CONST_03  N3   C8   C9   C14    0.00  0.0  0
- KOT  CONST_04  C11  C12  C13  C14    0.00  0.0  0
- KOT  CONST_05  C10  C9   C14  C13    0.00  0.0  0
- KOT  CONST_06  C8   C9   C14  C13  180.00  0.0  0
- KOT  CONST_07  C10  C11  C12  C13    0.00  0.0  0
- KOT  CONST_08  C9   C14  C13  C12    0.00  0.0  0
- KOT  CONST_09  C9   C10  C11  C12    0.00  0.0  0
- KOT  CONST_10  C8   C9   C10  C11  180.00  0.0  0
- KOT  CONST_11  C7   C8   C9   C10    0.00  0.0  0
- KOT  CONST_12  N3   C8   C9   C10  180.00  0.0  0
- KOT  CONST_13  N1   C7   C8   C9   180.00  0.0  0
- KOT  CONST_14  N2   N3   C8   C9   180.00  0.0  0
- KOT  CONST_15  N2   N1   C7   C8     0.00  0.0  0
- KOT  CONST_16  N1   N2   N3   C8     0.00  0.0  0
- KOT  CONST_17  N2   N3   C8   C7     0.00  0.0  0
- KOT  CONST_18  N3   N2   N1   C7     0.00  0.0  0
- KOT  CONST_19  N1   C7   C8   N3     0.00  0.0  0
- KOT  CONST_20  C1   N1   C7   C8   180.00  0.0  0
- KOT  CONST_21  C1   N1   N2   N3   180.00  0.0  0
- KOT  CONST_22  H10  C10  C9   C14  180.00  0.0  0
- KOT  CONST_23  H12  C12  C13  C14  180.00  0.0  0
- KOT  CONST_24  H11  C11  C12  C13  180.00  0.0  0
- KOT  CONST_25  H14  C14  C13  C12  180.00  0.0  0
- KOT  CONST_26  H13  C13  C12  C11  180.00  0.0  0
- KOT  CONST_27  H7   C7   C8   C9     0.00  0.0  0
+ KOT  CONST_01  C11  C10  C9   C14     0.00   0.0  0
+ KOT  CONST_02  C7   C8   C9   C14   180.00   0.0  0
+ KOT  CONST_03  N3   C8   C9   C14     0.00   0.0  0
+ KOT  CONST_04  C11  C12  C13  C14     0.00   0.0  0
+ KOT  CONST_05  C10  C9   C14  C13     0.00   0.0  0
+ KOT  CONST_06  C8   C9   C14  C13   180.00   0.0  0
+ KOT  CONST_07  C10  C11  C12  C13     0.00   0.0  0
+ KOT  CONST_08  C9   C14  C13  C12     0.00   0.0  0
+ KOT  CONST_09  C9   C10  C11  C12     0.00   0.0  0
+ KOT  CONST_10  C8   C9   C10  C11   180.00   0.0  0
+ KOT  CONST_11  C7   C8   C9   C10     0.00   0.0  0
+ KOT  CONST_12  N3   C8   C9   C10   180.00   0.0  0
+ KOT  CONST_13  N1   C7   C8   C9    180.00   0.0  0
+ KOT  CONST_14  N2   N3   C8   C9    180.00   0.0  0
+ KOT  CONST_15  N2   N1   C7   C8      0.00   0.0  0
+ KOT  CONST_16  N1   N2   N3   C8      0.00   0.0  0
+ KOT  CONST_17  N2   N3   C8   C7      0.00   0.0  0
+ KOT  CONST_18  N3   N2   N1   C7      0.00   0.0  0
+ KOT  CONST_19  N1   C7   C8   N3      0.00   0.0  0
+ KOT  CONST_20  C1   N1   C7   C8    180.00   0.0  0
+ KOT  CONST_21  C1   N1   N2   N3    180.00   0.0  0
+ KOT  CONST_22  H10  C10  C9   C14   180.00   0.0  0
+ KOT  CONST_23  H12  C12  C13  C14   180.00   0.0  0
+ KOT  CONST_24  H11  C11  C12  C13   180.00   0.0  0
+ KOT  CONST_25  H14  C14  C13  C12   180.00   0.0  0
+ KOT  CONST_26  H13  C13  C12  C11   180.00   0.0  0
+ KOT  CONST_27  H7   C7   C8   C9      0.00   0.0  0
+ KOT  Var_01    C2   C1   N1   C7    128.93  30.0  1
+ KOT  Var_02    O5   C1   N1   C7   -109.38  30.0  1
+ KOT  Var_03    C2   C1   N1   N2    -51.92  30.0  1
+ KOT  Var_04    O5   C1   N1   N2     69.77  30.0  1
+ KOT  Var_05    C3   C2   C1   N1    176.64  30.0  1
+ KOT  Var_06    C5   O5   C1   N1    175.18  30.0  1
+ KOT  Var_07    C4   C3   C2   C1    -54.08  30.0  1
+ KOT  Var_08    C4   C5   O5   C1     61.77  30.0  1
+ KOT  Var_09    C3   C2   C1   O5     57.18  30.0  1
+ KOT  Var_10    C3   C4   C5   O5    -56.23  30.0  1
+ KOT  Var_11    C2   C1   O5   C5    -62.88  30.0  1
+ KOT  Var_12    C2   C3   C4   C5     54.54  30.0  1
+ KOT  Var_13    O2   C2   C1   N1    -62.24  30.0  1
+ KOT  Var_14    O3   C3   C2   C1   -173.99  30.0  1
+ KOT  Var_15    C6   C5   O5   C1   -175.96  30.0  1
+ KOT  Var_16    O2   C2   C1   O5    178.31  30.0  1
+ KOT  Var_17    O4   C4   C5   O5   -177.65  30.0  1
+ KOT  Var_18    O3   C3   C4   C5    176.56  30.0  1
+ KOT  Var_19    C3   C4   C5   C6   -175.58  30.0  1
+ KOT  Var_20    O2   C2   C3   C4   -172.60  30.0  1
+ KOT  Var_21    C2   C3   C4   O4    173.92  30.0  1
+ KOT  Var_22    H1   C1   N1   C7      9.80  30.0  1
+ KOT  Var_23    H2   C2   C1   N1     58.65  30.0  1
+ KOT  Var_24    H3   C3   C2   C1     64.04  30.0  1
+ KOT  Var_25    H5   C5   O5   C1    -57.51  30.0  1
+ KOT  Var_26    H4   C4   C5   O5     61.82  30.0  1
+ KOT  Var_27    O6   C6   C5   O5     63.71  30.0  3
+ KOT  Var_28    O4   C4   C5   C6     62.99  30.0  1
+ KOT  Var_29    C4   C5   C6   O6   -175.74  30.0  3
+ KOT  Var_30    O3   C3   C4   O4    -64.05  30.0  1
+ KOT  Var_31    O2   C2   C3   O3     67.49  30.0  1
+ KOT  Var_32    HO2  O2   C2   C1    149.64  30.0  3
+ KOT  Var_33    H6   C6   C5   O5   -174.62  30.0  3
+ KOT  Var_34    H6A  C6   C5   O5    -58.50  30.0  3
+ KOT  Var_35    HO4  O4   C4   C5    178.75  30.0  3
+ KOT  Var_36    HO3  O3   C3   C4    156.07  30.0  3
+ KOT  Var_37    HO6  O6   C6   C5    176.12  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

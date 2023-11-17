@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PV0  PV0  2-[(2,4-dihydroxyphenyl)sulfonyl]-2,3-dihydro-1H-isoindole-4,6-diol  ligand  35  22  .  2021-08-20  2021-08-20  
+ PV0  PV0  2-[(2,4-dihydroxyphenyl)sulfonyl]-2,3-dihydro-1H-isoindole-4,6-diol  ligand  35  22  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PV0
@@ -198,39 +199,49 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PV0  CONST_01  C16  C15  C13  C12    0.00   0.0  0
- PV0  CONST_02  C16  C17  C18  C12    0.00   0.0  0
- PV0  CONST_03  C17  C16  C15  C13    0.00   0.0  0
- PV0  CONST_04  C17  C18  C12  C13    0.00   0.0  0
- PV0  CONST_05  C06  C04  C03  C02    0.00   0.0  0
- PV0  CONST_06  C06  C07  C08  C02    0.00   0.0  0
- PV0  CONST_07  C07  C08  C02  C03    0.00   0.0  0
- PV0  CONST_08  C07  C06  C04  C03    0.00   0.0  0
- PV0  CONST_09  C08  C02  C03  C04    0.00   0.0  0
- PV0  CONST_10  C08  C07  C06  C04    0.00   0.0  0
- PV0  CONST_11  C18  C17  C16  C15    0.00   0.0  0
- PV0  CONST_12  C18  C12  C13  C15    0.00   0.0  0
- PV0  CONST_13  O20  C16  C15  C13  180.00   0.0  0
- PV0  CONST_14  O19  C18  C12  C13  180.00   0.0  0
- PV0  CONST_15  C04  C03  C02  O01  180.00   0.0  0
- PV0  CONST_16  C07  C08  C02  O01  180.00   0.0  0
- PV0  CONST_17  O05  C04  C03  C02  180.00   0.0  0
- PV0  CONST_18  S09  C08  C02  C03  180.00   0.0  0
- PV0  CONST_19  C07  C06  C04  O05  180.00   0.0  0
- PV0  CONST_20  S09  C08  C07  C06  180.00   0.0  0
- PV0  CONST_21  O19  C18  C12  C11    0.00   0.0  0
- PV0  CONST_22  O19  C18  C17  C16  180.00   0.0  0
- PV0  CONST_23  O20  C16  C17  C18  180.00   0.0  0
- PV0  CONST_24  H10  C15  C13  C12  180.00   0.0  0
- PV0  CONST_25  H11  C17  C18  C12  180.00   0.0  0
- PV0  CONST_26  H5   C07  C08  C02  180.00   0.0  0
- PV0  CONST_27  H4   C06  C04  C03  180.00   0.0  0
- PV0  CONST_28  H2   C03  C04  C06  180.00   0.0  0
- PV0  Var_01    N10  C14  C13  C12   -9.88  30.0  1
- PV0  Var_02    C14  N10  C11  C12  -16.25  30.0  1
- PV0  Var_03    C11  N10  C14  C13   16.54  30.0  1
- PV0  Var_04    N10  C11  C12  C13    9.41  30.0  1
- PV0  Var_05    N10  S09  C08  C02  -94.45  30.0  3
+ PV0  CONST_01  C16  C15  C13  C12     0.00   0.0  0
+ PV0  CONST_02  C16  C17  C18  C12     0.00   0.0  0
+ PV0  CONST_03  C17  C16  C15  C13     0.00   0.0  0
+ PV0  CONST_04  C17  C18  C12  C13     0.00   0.0  0
+ PV0  CONST_05  C06  C04  C03  C02     0.00   0.0  0
+ PV0  CONST_06  C06  C07  C08  C02     0.00   0.0  0
+ PV0  CONST_07  C07  C08  C02  C03     0.00   0.0  0
+ PV0  CONST_08  C07  C06  C04  C03     0.00   0.0  0
+ PV0  CONST_09  C08  C02  C03  C04     0.00   0.0  0
+ PV0  CONST_10  C08  C07  C06  C04     0.00   0.0  0
+ PV0  CONST_11  C18  C17  C16  C15     0.00   0.0  0
+ PV0  CONST_12  C18  C12  C13  C15     0.00   0.0  0
+ PV0  CONST_13  O20  C16  C15  C13   180.00   0.0  0
+ PV0  CONST_14  O19  C18  C12  C13   180.00   0.0  0
+ PV0  CONST_15  C04  C03  C02  O01   180.00   0.0  0
+ PV0  CONST_16  C07  C08  C02  O01   180.00   0.0  0
+ PV0  CONST_17  O05  C04  C03  C02   180.00   0.0  0
+ PV0  CONST_18  S09  C08  C02  C03   180.00   0.0  0
+ PV0  CONST_19  C07  C06  C04  O05   180.00   0.0  0
+ PV0  CONST_20  S09  C08  C07  C06   180.00   0.0  0
+ PV0  CONST_21  O19  C18  C12  C11     0.00   0.0  0
+ PV0  CONST_22  O19  C18  C17  C16   180.00   0.0  0
+ PV0  CONST_23  O20  C16  C17  C18   180.00   0.0  0
+ PV0  CONST_24  H10  C15  C13  C12   180.00   0.0  0
+ PV0  CONST_25  H11  C17  C18  C12   180.00   0.0  0
+ PV0  CONST_26  H5   C07  C08  C02   180.00   0.0  0
+ PV0  CONST_27  H4   C06  C04  C03   180.00   0.0  0
+ PV0  CONST_28  H2   C03  C04  C06   180.00   0.0  0
+ PV0  Var_01    N10  C14  C13  C12    -9.88  30.0  1
+ PV0  Var_02    C14  N10  C11  C12   -16.25  30.0  1
+ PV0  Var_03    C11  N10  C14  C13    16.54  30.0  1
+ PV0  Var_04    N10  C11  C12  C13     9.41  30.0  1
+ PV0  Var_05    N10  S09  C08  C02   -94.45  30.0  3
+ PV0  Var_06    C14  N10  S09  C08   -75.75  30.0  1
+ PV0  Var_07    C11  N10  S09  C08    68.96  30.0  1
+ PV0  Var_08    O22  S09  N10  C11  -173.76  30.0  3
+ PV0  Var_09    O21  S09  N10  C11   -45.24  30.0  3
+ PV0  Var_10    O22  S09  N10  C14    41.53  30.0  3
+ PV0  Var_11    O21  S09  N10  C14   170.04  30.0  3
+ PV0  Var_12    H12  O19  C18  C12  -179.44  30.0  2
+ PV0  Var_13    H1   O01  C02  C03   170.73  30.0  2
+ PV0  Var_14    H3   O05  C04  C03     0.35  30.0  2
+ PV0  Var_15    H13  O20  C16  C15   179.83  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

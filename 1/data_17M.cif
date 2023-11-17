@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 17M  17M  (13alpha,17beta)-17-methylestra-1(10),2,4,6,8-pentaene-3,17-diol  ligand  43  21  .  2021-08-03  2021-08-03  
+ 17M  17M  (13alpha,17beta)-17-methylestra-1(10),2,4,6,8-pentaene-3,17-diol  ligand  43  21  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_17M
@@ -240,34 +241,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 17M  CONST_01  CAN  CAK  CAG  CAF   180.00   0.0  0
- 17M  CONST_02  CAL  CAH  CAG  CAF   180.00   0.0  0
- 17M  CONST_03  CAM  CAH  CAG  CAF     0.00   0.0  0
- 17M  CONST_04  CAM  CAI  CAE  CAF     0.00   0.0  0
- 17M  CONST_05  CAI  CAE  CAF  CAG     0.00   0.0  0
- 17M  CONST_06  CAO  CAN  CAK  CAG     0.00   0.0  0
- 17M  CONST_07  CAO  CAL  CAH  CAG     0.00   0.0  0
- 17M  CONST_08  CAI  CAM  CAH  CAG     0.00   0.0  0
- 17M  CONST_09  CAE  CAF  CAG  CAK   180.00   0.0  0
- 17M  CONST_10  CAL  CAH  CAG  CAK     0.00   0.0  0
- 17M  CONST_11  CAM  CAH  CAG  CAK   180.00   0.0  0
- 17M  CONST_12  CAL  CAO  CAN  CAK     0.00   0.0  0
- 17M  CONST_13  CAH  CAG  CAK  CAN     0.00   0.0  0
- 17M  CONST_14  CAH  CAL  CAO  CAN     0.00   0.0  0
- 17M  CONST_15  CAM  CAH  CAL  CAO   180.00   0.0  0
- 17M  CONST_16  CAI  CAM  CAH  CAL   180.00   0.0  0
- 17M  CONST_17  CAE  CAF  CAG  CAH     0.00   0.0  0
- 17M  CONST_18  CAE  CAI  CAM  CAH     0.00   0.0  0
- 17M  CONST_19  OAT  CAO  CAN  CAK   180.00   0.0  0
- 17M  CONST_20  CAH  CAL  CAO  OAT   180.00   0.0  0
- 17M  CONST_21  HAK  CAK  CAG  CAF     0.00   0.0  0
- 17M  CONST_22  HAI  CAI  CAE  CAF   180.00   0.0  0
- 17M  CONST_23  HAN  CAN  CAK  CAG   180.00   0.0  0
- 17M  CONST_24  HAL  CAL  CAH  CAG   180.00   0.0  0
- 17M  CONST_25  HAM  CAM  CAH  CAG   180.00   0.0  0
- 17M  Var_01    CAF  CAJ  CAP  CAB   -35.73  30.0  1
- 17M  Var_02    CAG  CAF  CAJ  CAP  -176.33  30.0  1
- 17M  Var_03    CAA  CAC  CAQ  CAD     3.35  30.0  1
+ 17M  CONST_01  CAN   CAK  CAG  CAF   180.00   0.0  0
+ 17M  CONST_02  CAL   CAH  CAG  CAF   180.00   0.0  0
+ 17M  CONST_03  CAM   CAH  CAG  CAF     0.00   0.0  0
+ 17M  CONST_04  CAM   CAI  CAE  CAF     0.00   0.0  0
+ 17M  CONST_05  CAI   CAE  CAF  CAG     0.00   0.0  0
+ 17M  CONST_06  CAO   CAN  CAK  CAG     0.00   0.0  0
+ 17M  CONST_07  CAO   CAL  CAH  CAG     0.00   0.0  0
+ 17M  CONST_08  CAI   CAM  CAH  CAG     0.00   0.0  0
+ 17M  CONST_09  CAE   CAF  CAG  CAK   180.00   0.0  0
+ 17M  CONST_10  CAL   CAH  CAG  CAK     0.00   0.0  0
+ 17M  CONST_11  CAM   CAH  CAG  CAK   180.00   0.0  0
+ 17M  CONST_12  CAL   CAO  CAN  CAK     0.00   0.0  0
+ 17M  CONST_13  CAH   CAG  CAK  CAN     0.00   0.0  0
+ 17M  CONST_14  CAH   CAL  CAO  CAN     0.00   0.0  0
+ 17M  CONST_15  CAM   CAH  CAL  CAO   180.00   0.0  0
+ 17M  CONST_16  CAI   CAM  CAH  CAL   180.00   0.0  0
+ 17M  CONST_17  CAE   CAF  CAG  CAH     0.00   0.0  0
+ 17M  CONST_18  CAE   CAI  CAM  CAH     0.00   0.0  0
+ 17M  CONST_19  OAT   CAO  CAN  CAK   180.00   0.0  0
+ 17M  CONST_20  CAH   CAL  CAO  OAT   180.00   0.0  0
+ 17M  CONST_21  HAK   CAK  CAG  CAF     0.00   0.0  0
+ 17M  CONST_22  HAI   CAI  CAE  CAF   180.00   0.0  0
+ 17M  CONST_23  HAN   CAN  CAK  CAG   180.00   0.0  0
+ 17M  CONST_24  HAL   CAL  CAH  CAG   180.00   0.0  0
+ 17M  CONST_25  HAM   CAM  CAH  CAG   180.00   0.0  0
+ 17M  Var_01    CAF   CAJ  CAP  CAB   -35.73  30.0  1
+ 17M  Var_02    CAG   CAF  CAJ  CAP  -176.33  30.0  1
+ 17M  Var_03    CAA   CAC  CAQ  CAD     3.35  30.0  1
+ 17M  Var_04    CAF   CAE  CAD  CAB    31.25  30.0  1
+ 17M  Var_05    CAI   CAE  CAD  CAB  -150.74  30.0  1
+ 17M  Var_06    CAC   CAQ  CAD  CAB   -30.49  30.0  1
+ 17M  Var_07    CAQ   CAC  CAA  CAB    24.55  30.0  1
+ 17M  Var_08    CAE   CAD  CAB  CAP   -59.38  30.0  1
+ 17M  Var_09    CAQ   CAD  CAB  CAP   169.48  30.0  1
+ 17M  Var_10    CAC   CAA  CAB  CAP  -158.84  30.0  1
+ 17M  Var_11    CAD   CAB  CAP  CAJ    61.14  30.0  1
+ 17M  Var_12    CAA   CAB  CAP  CAJ   173.71  30.0  1
+ 17M  Var_13    CAQ   CAD  CAE  CAF   153.89  30.0  1
+ 17M  Var_14    CAQ   CAD  CAE  CAI   -28.09  30.0  1
+ 17M  Var_15    CAA   CAB  CAD  CAE   177.17  30.0  1
+ 17M  Var_16    CAC   CAQ  CAD  CAE  -157.10  30.0  1
+ 17M  Var_17    CAC   CAA  CAB  CAD   -42.66  30.0  1
+ 17M  Var_18    CAA   CAB  CAD  CAQ    46.04  30.0  1
+ 17M  Var_19    CAJ   CAP  CAB  CAR   -60.37  30.0  1
+ 17M  Var_20    CAE   CAD  CAB  CAR    60.96  30.0  1
+ 17M  Var_21    CAQ   CAD  CAB  CAR   -70.18  30.0  1
+ 17M  Var_22    CAC   CAA  CAB  CAR    75.11  30.0  1
+ 17M  Var_23    CAS   CAA  CAB  CAP    78.33  30.0  1
+ 17M  Var_24    OAU   CAA  CAB  CAP   -43.04  30.0  1
+ 17M  Var_25    CAS   CAA  CAB  CAD  -165.49  30.0  1
+ 17M  Var_26    OAU   CAA  CAB  CAD    73.14  30.0  1
+ 17M  Var_27    CAS   CAA  CAC  CAQ   149.22  30.0  1
+ 17M  Var_28    OAU   CAA  CAC  CAQ   -88.66  30.0  1
+ 17M  Var_29    HAQ1  CAQ  CAD  CAB  -152.04  30.0  1
+ 17M  Var_30    HAQ2  CAQ  CAD  CAB    88.64  30.0  1
+ 17M  Var_31    HAC1  CAC  CAA  CAB   146.91  30.0  1
+ 17M  Var_32    HAC2  CAC  CAA  CAB   -96.13  30.0  1
+ 17M  Var_33    HAD   CAD  CAB  CAP    56.76  30.0  1
+ 17M  Var_34    CAS   CAA  CAB  CAR   -47.72  30.0  1
+ 17M  Var_35    OAU   CAA  CAB  CAR  -169.09  30.0  1
+ 17M  Var_36    HAS1  CAS  CAA  CAB   -59.96  30.0  3
+ 17M  Var_37    HAS2  CAS  CAA  CAB    61.50  30.0  3
+ 17M  Var_38    HAS3  CAS  CAA  CAB  -179.36  30.0  3
+ 17M  Var_39    HAU   OAU  CAA  CAB  -171.86  30.0  3
+ 17M  Var_40    HAR1  CAR  CAB  CAP    63.38  30.0  3
+ 17M  Var_41    HAR2  CAR  CAB  CAP  -176.35  30.0  3
+ 17M  Var_42    HAR3  CAR  CAB  CAP   -55.82  30.0  3
+ 17M  Var_43    HAT   OAT  CAO  CAN    -0.30  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 89G  89G  5-methoxy-2-methyl-6-(2-phenoxyphenyl)pyridazin-3(2H)-one  ligand  39  23  .  2022-07-23  2022-07-26
+ 89G  89G  5-methoxy-2-methyl-6-(2-phenoxyphenyl)pyridazin-3(2H)-one  ligand  39  23  .  2022-07-23  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_89G
@@ -211,41 +212,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 89G  CONST_01  C7   C3   C1   C4     0.00   0.0  0
- 89G  CONST_02  C7   C11  C8   C4     0.00   0.0  0
- 89G  CONST_03  C10  C12  C9   C5     0.00   0.0  0
- 89G  CONST_04  C10  C6   C2   C5     0.00   0.0  0
- 89G  CONST_05  C9   C5   C2   C6     0.00   0.0  0
- 89G  CONST_06  C9   C12  C10  C6     0.00   0.0  0
- 89G  CONST_07  C3   C1   C4   C8     0.00   0.0  0
- 89G  CONST_08  C3   C7   C11  C8     0.00   0.0  0
- 89G  CONST_09  C11  C7   C3   C1     0.00   0.0  0
- 89G  CONST_10  C11  C8   C4   C1     0.00   0.0  0
- 89G  CONST_11  C12  C9   C5   C2     0.00   0.0  0
- 89G  CONST_12  C12  C10  C6   C2     0.00   0.0  0
- 89G  CONST_13  C14  C10  C6   C2   180.00   0.0  0
- 89G  CONST_14  C14  C10  C12  C9   180.00   0.0  0
- 89G  CONST_15  N19  N20  C16  C13    0.00   0.0  0
- 89G  CONST_16  O22  C11  C8   C4   180.00   0.0  0
- 89G  CONST_17  O22  C12  C9   C5   180.00   0.0  0
- 89G  CONST_18  O22  C12  C10  C6   180.00   0.0  0
- 89G  CONST_19  O22  C11  C7   C3   180.00   0.0  0
- 89G  CONST_20  O22  C12  C10  C14    0.00   0.0  0
- 89G  CONST_21  C17  N20  C16  C13  180.00   0.0  0
- 89G  CONST_22  O21  C16  N20  N19  180.00   0.0  0
- 89G  CONST_23  H12  C3   C1   C4   180.00   0.0  0
- 89G  CONST_24  H3   C6   C2   C5   180.00   0.0  0
- 89G  CONST_25  H2   C5   C2   C6   180.00   0.0  0
- 89G  CONST_26  H10  C1   C3   C7   180.00   0.0  0
- 89G  CONST_27  H5   C8   C11  C7   180.00   0.0  0
- 89G  CONST_28  H4   C7   C11  C8   180.00   0.0  0
- 89G  CONST_29  H13  C9   C12  C10  180.00   0.0  0
- 89G  CONST_30  H11  C2   C6   C10  180.00   0.0  0
- 89G  CONST_31  H1   C4   C1   C3   180.00   0.0  0
- 89G  CONST_32  O21  C16  N20  C17    0.00   0.0  0
- 89G  Var_01    C15  C14  C10  C6   121.31  30.0  2
- 89G  Var_02    H7   C17  N20  C16   57.77  30.0  3
- 89G  Var_03    H14  C18  O23  C15   62.84  30.0  3
+ 89G  CONST_01  C7   C3   C1   C4      0.00   0.0  0
+ 89G  CONST_02  C7   C11  C8   C4      0.00   0.0  0
+ 89G  CONST_03  C10  C12  C9   C5      0.00   0.0  0
+ 89G  CONST_04  C10  C6   C2   C5      0.00   0.0  0
+ 89G  CONST_05  C9   C5   C2   C6      0.00   0.0  0
+ 89G  CONST_06  C9   C12  C10  C6      0.00   0.0  0
+ 89G  CONST_07  C3   C1   C4   C8      0.00   0.0  0
+ 89G  CONST_08  C3   C7   C11  C8      0.00   0.0  0
+ 89G  CONST_09  C11  C7   C3   C1      0.00   0.0  0
+ 89G  CONST_10  C11  C8   C4   C1      0.00   0.0  0
+ 89G  CONST_11  C12  C9   C5   C2      0.00   0.0  0
+ 89G  CONST_12  C12  C10  C6   C2      0.00   0.0  0
+ 89G  CONST_13  C14  C10  C6   C2    180.00   0.0  0
+ 89G  CONST_14  C14  C10  C12  C9    180.00   0.0  0
+ 89G  CONST_15  N19  N20  C16  C13     0.00   0.0  0
+ 89G  CONST_16  O22  C11  C8   C4    180.00   0.0  0
+ 89G  CONST_17  O22  C12  C9   C5    180.00   0.0  0
+ 89G  CONST_18  O22  C12  C10  C6    180.00   0.0  0
+ 89G  CONST_19  O22  C11  C7   C3    180.00   0.0  0
+ 89G  CONST_20  O22  C12  C10  C14     0.00   0.0  0
+ 89G  CONST_21  C17  N20  C16  C13   180.00   0.0  0
+ 89G  CONST_22  O21  C16  N20  N19   180.00   0.0  0
+ 89G  CONST_23  H12  C3   C1   C4    180.00   0.0  0
+ 89G  CONST_24  H3   C6   C2   C5    180.00   0.0  0
+ 89G  CONST_25  H2   C5   C2   C6    180.00   0.0  0
+ 89G  CONST_26  H10  C1   C3   C7    180.00   0.0  0
+ 89G  CONST_27  H5   C8   C11  C7    180.00   0.0  0
+ 89G  CONST_28  H4   C7   C11  C8    180.00   0.0  0
+ 89G  CONST_29  H13  C9   C12  C10   180.00   0.0  0
+ 89G  CONST_30  H11  C2   C6   C10   180.00   0.0  0
+ 89G  CONST_31  H1   C4   C1   C3    180.00   0.0  0
+ 89G  CONST_32  O21  C16  N20  C17     0.00   0.0  0
+ 89G  Var_01    C15  C14  C10  C6    121.31  30.0  2
+ 89G  Var_02    H7   C17  N20  C16    57.77  30.0  3
+ 89G  Var_03    H14  C18  O23  C15    62.84  30.0  3
+ 89G  Var_04    C13  C15  C14  C10  -179.42  30.0  1
+ 89G  Var_05    N20  N19  C14  C10   178.68  30.0  1
+ 89G  Var_06    N19  C14  C15  C13    -1.87  30.0  1
+ 89G  Var_07    N20  N19  C14  C15     1.02  30.0  1
+ 89G  Var_08    N20  C16  C13  C15     0.04  30.0  1
+ 89G  Var_09    C16  C13  C15  C14     1.28  30.0  1
+ 89G  Var_10    C16  N20  N19  C14     0.45  30.0  1
+ 89G  Var_11    C12  O22  C11  C7    151.40  30.0  2
+ 89G  Var_12    C12  O22  C11  C8    -31.16  30.0  2
+ 89G  Var_13    C11  O22  C12  C10   137.18  30.0  2
+ 89G  Var_14    O23  C15  C14  C10    -0.60  30.0  1
+ 89G  Var_15    O21  C16  C13  C15   179.51  30.0  1
+ 89G  Var_16    C11  O22  C12  C9    -47.60  30.0  2
+ 89G  Var_17    C17  N20  N19  C14  -179.97  30.0  1
+ 89G  Var_18    O23  C15  C13  C16  -177.40  30.0  1
+ 89G  Var_19    O23  C15  C14  N19   176.95  30.0  1
+ 89G  Var_20    H6   C13  C15  C14   179.81  30.0  1
+ 89G  Var_21    C18  O23  C15  C13    -3.57  30.0  2
+ 89G  Var_22    C18  O23  C15  C14   177.72  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

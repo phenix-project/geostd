@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 0OF  0OF  (3S)-1-ethyl-3-[3-hydroxy-5-(pyridin-3-yl)phenyl]-5-phenyl-7-(trifluoromethyl)-1H-1,5-benzodiazepine-2,4(3H,5H)-dione  ligand  60  38  .  2022-07-22  2022-07-26
+ 0OF  0OF  (3S)-1-ethyl-3-[3-hydroxy-5-(pyridin-3-yl)phenyl]-5-phenyl-7-(trifluoromethyl)-1H-1,5-benzodiazepine-2,4(3H,5H)-dione  ligand  60  38  .  2022-07-22  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_0OF
@@ -313,39 +314,84 @@ _chem_comp_tor.period
  0OF  CONST_15  C33  C30  C29  C28   180.00   0.0  0
  0OF  CONST_16  C31  C30  C29  C28     0.00   0.0  0
  0OF  CONST_17  C31  C26  C27  C28     0.00   0.0  0
- 0OF  CONST_20  N35  C34  C33  C30   180.00   0.0  0
- 0OF  CONST_21  C37  C38  C33  C30   180.00   0.0  0
- 0OF  CONST_24  C36  N35  C34  C33     0.00   0.0  0
- 0OF  CONST_25  C36  C37  C38  C33     0.00   0.0  0
- 0OF  CONST_26  C37  C36  N35  C34     0.00   0.0  0
- 0OF  CONST_27  C37  C38  C33  C34     0.00   0.0  0
- 0OF  CONST_28  C38  C33  C34  N35     0.00   0.0  0
- 0OF  CONST_29  C38  C37  C36  N35     0.00   0.0  0
- 0OF  CONST_30  C28  C27  C26  C1    180.00   0.0  0
- 0OF  CONST_31  C30  C31  C26  C1    180.00   0.0  0
- 0OF  CONST_32  C18  C19  C14  N6    180.00   0.0  0
- 0OF  CONST_33  C16  C15  C14  N6    180.00   0.0  0
- 0OF  CONST_34  C20  C11  C10  C5    180.00   0.0  0
- 0OF  CONST_35  C20  C11  C12  C13   180.00   0.0  0
- 0OF  CONST_36  O32  C28  C27  C26   180.00   0.0  0
- 0OF  CONST_37  O32  C28  C29  C30   180.00   0.0  0
- 0OF  CONST_38  H15  C27  C26  C1      0.00   0.0  0
- 0OF  CONST_39  H17  C31  C26  C1      0.00   0.0  0
- 0OF  CONST_40  H3   C12  C13  C4    180.00   0.0  0
- 0OF  CONST_41  H9   C19  C14  N6      0.00   0.0  0
- 0OF  CONST_42  H5   C15  C14  N6      0.00   0.0  0
- 0OF  CONST_43  H4   C13  C12  C11   180.00   0.0  0
- 0OF  CONST_44  H2   C10  C11  C12   180.00   0.0  0
- 0OF  CONST_45  H8   C18  C19  C14   180.00   0.0  0
- 0OF  CONST_46  H6   C16  C15  C14   180.00   0.0  0
- 0OF  CONST_47  H7   C17  C16  C15   180.00   0.0  0
- 0OF  CONST_48  H16  C29  C28  C27   180.00   0.0  0
- 0OF  CONST_49  H19  C34  C33  C30     0.00   0.0  0
- 0OF  CONST_50  H22  C38  C33  C30     0.00   0.0  0
- 0OF  CONST_51  H21  C37  C38  C33   180.00   0.0  0
- 0OF  CONST_52  H20  C36  N35  C34   180.00   0.0  0
+ 0OF  CONST_18  N35  C34  C33  C30   180.00   0.0  0
+ 0OF  CONST_19  C37  C38  C33  C30   180.00   0.0  0
+ 0OF  CONST_20  C36  N35  C34  C33     0.00   0.0  0
+ 0OF  CONST_21  C36  C37  C38  C33     0.00   0.0  0
+ 0OF  CONST_22  C37  C36  N35  C34     0.00   0.0  0
+ 0OF  CONST_23  C37  C38  C33  C34     0.00   0.0  0
+ 0OF  CONST_24  C38  C33  C34  N35     0.00   0.0  0
+ 0OF  CONST_25  C38  C37  C36  N35     0.00   0.0  0
+ 0OF  CONST_26  C28  C27  C26  C1    180.00   0.0  0
+ 0OF  CONST_27  C30  C31  C26  C1    180.00   0.0  0
+ 0OF  CONST_28  C18  C19  C14  N6    180.00   0.0  0
+ 0OF  CONST_29  C16  C15  C14  N6    180.00   0.0  0
+ 0OF  CONST_30  C20  C11  C10  C5    180.00   0.0  0
+ 0OF  CONST_31  C20  C11  C12  C13   180.00   0.0  0
+ 0OF  CONST_32  O32  C28  C27  C26   180.00   0.0  0
+ 0OF  CONST_33  O32  C28  C29  C30   180.00   0.0  0
+ 0OF  CONST_34  H15  C27  C26  C1      0.00   0.0  0
+ 0OF  CONST_35  H17  C31  C26  C1      0.00   0.0  0
+ 0OF  CONST_36  H3   C12  C13  C4    180.00   0.0  0
+ 0OF  CONST_37  H9   C19  C14  N6      0.00   0.0  0
+ 0OF  CONST_38  H5   C15  C14  N6      0.00   0.0  0
+ 0OF  CONST_39  H4   C13  C12  C11   180.00   0.0  0
+ 0OF  CONST_40  H2   C10  C11  C12   180.00   0.0  0
+ 0OF  CONST_41  H8   C18  C19  C14   180.00   0.0  0
+ 0OF  CONST_42  H6   C16  C15  C14   180.00   0.0  0
+ 0OF  CONST_43  H7   C17  C16  C15   180.00   0.0  0
+ 0OF  CONST_44  H16  C29  C28  C27   180.00   0.0  0
+ 0OF  CONST_45  H19  C34  C33  C30     0.00   0.0  0
+ 0OF  CONST_46  H22  C38  C33  C30     0.00   0.0  0
+ 0OF  CONST_47  H21  C37  C38  C33   180.00   0.0  0
+ 0OF  CONST_48  H20  C36  N35  C34   180.00   0.0  0
  0OF  Var_01    F23  C20  C11  C10   -13.54  30.0  2
  0OF  Var_02    H12  C25  C24  N3   -179.77  30.0  3
+ 0OF  CONST_49  C11  C10  C5   C4      0.00   0.0  0
+ 0OF  CONST_50  C12  C13  C4   C5      0.00   0.0  0
+ 0OF  CONST_51  C13  C4   C5   C10     0.00   0.0  0
+ 0OF  CONST_52  C4   N3   C2   C1      0.00   0.0  0
+ 0OF  CONST_53  C5   N6   C7   C1      0.00   0.0  0
+ 0OF  CONST_54  C14  N6   C7   C1    180.00   0.0  0
+ 0OF  CONST_55  C24  N3   C2   C1    180.00   0.0  0
+ 0OF  CONST_56  O8   C2   N3   C4    180.00   0.0  0
+ 0OF  CONST_57  O9   C7   N6   C5    180.00   0.0  0
+ 0OF  CONST_58  C14  N6   C7   O9      0.00   0.0  0
+ 0OF  CONST_59  C24  N3   C2   O8      0.00   0.0  0
+ 0OF  Var_03    C27  C26  C1   C2     39.35  30.0  2
+ 0OF  Var_04    C31  C26  C1   C2   -141.86  30.0  2
+ 0OF  Var_05    N6   C7   C1   C2     67.97  30.0  1
+ 0OF  Var_06    C13  C4   N3   C2   -131.17  30.0  1
+ 0OF  Var_07    C5   C4   N3   C2     48.53  30.0  1
+ 0OF  Var_08    C26  C1   C2   N3     55.99  30.0  1
+ 0OF  Var_09    C7   C1   C2   N3    -73.86  30.0  1
+ 0OF  Var_10    C7   N6   C5   C4    -49.42  30.0  1
+ 0OF  Var_11    C14  N6   C5   C4    136.48  30.0  1
+ 0OF  Var_12    C19  C14  N6   C5    110.55  30.0  2
+ 0OF  Var_13    C15  C14  N6   C5    -67.97  30.0  2
+ 0OF  Var_14    C26  C1   C7   N6    -60.55  30.0  1
+ 0OF  Var_15    C27  C26  C1   C7    162.70  30.0  2
+ 0OF  Var_16    C31  C26  C1   C7    -18.50  30.0  2
+ 0OF  Var_17    C10  C5   N6   C7    128.65  30.0  1
+ 0OF  Var_18    C19  C14  N6   C7    -63.83  30.0  2
+ 0OF  Var_19    C15  C14  N6   C7    117.65  30.0  2
+ 0OF  Var_20    C14  N6   C5   C10   -45.45  30.0  1
+ 0OF  Var_21    C34  C33  C30  C29   140.63  30.0  2
+ 0OF  Var_22    C38  C33  C30  C29   -40.40  30.0  2
+ 0OF  Var_23    C34  C33  C30  C31   -41.55  30.0  2
+ 0OF  Var_24    C38  C33  C30  C31   137.42  30.0  2
+ 0OF  Var_25    O9   C7   C1   C2   -107.14  30.0  1
+ 0OF  Var_26    C24  N3   C4   C5   -127.05  30.0  1
+ 0OF  Var_27    O8   C2   C1   C7    103.40  30.0  1
+ 0OF  Var_28    C26  C1   C2   O8   -126.75  30.0  1
+ 0OF  Var_29    C26  C1   C7   O9    124.33  30.0  1
+ 0OF  Var_30    C24  N3   C4   C13    53.25  30.0  1
+ 0OF  Var_31    H1   C1   C2   N3    175.24  30.0  1
+ 0OF  Var_32    C25  C24  N3   C2    -90.85  30.0  3
+ 0OF  Var_33    C25  C24  N3   C4     84.93  30.0  3
+ 0OF  Var_34    H10  C24  N3   C2     31.80  30.0  3
+ 0OF  Var_35    H11  C24  N3   C2    147.33  30.0  3
+ 0OF  Var_36    H18  O32  C28  C27    -1.05  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- R8B  R8B  '2-[[(2~{R},3~{S},4~{S},5~{R},6~{R})-2-(hydroxymethyl)-6-methoxy-3,5-bis(oxidanyl)oxan-4-yl]oxymethyl]quinoline-7-carboxylic acid'  ligand  47  27  .  2022-03-23  2022-03-23
+ R8B  R8B  '2-[[(2~{R},3~{S},4~{S},5~{R},6~{R})-2-(hydroxymethyl)-6-methoxy-3,5-bis(oxidanyl)oxan-4-yl]oxymethyl]quinoline-7-carboxylic acid'  ligand  47  27  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_R8B
@@ -246,36 +247,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- R8B  CONST_01  C11  C13  C14  C15    0.00   0.0  0
- R8B  CONST_02  C11  C12  C16  C15    0.00   0.0  0
- R8B  CONST_03  N    C12  C16  C15  180.00   0.0  0
- R8B  CONST_04  C10  C11  C13  C14  180.00   0.0  0
- R8B  CONST_05  C12  C11  C13  C14    0.00   0.0  0
- R8B  CONST_06  C12  C16  C15  C14    0.00   0.0  0
- R8B  CONST_07  C16  C15  C14  C13    0.00   0.0  0
- R8B  CONST_08  C9   C10  C11  C13  180.00   0.0  0
- R8B  CONST_09  C16  C12  C11  C13    0.00   0.0  0
- R8B  CONST_10  N    C12  C11  C13  180.00   0.0  0
- R8B  CONST_11  C8   C9   C10  C11    0.00   0.0  0
- R8B  CONST_12  C8   N    C12  C11    0.00   0.0  0
- R8B  CONST_13  C16  C12  C11  C10  180.00   0.0  0
- R8B  CONST_14  N    C12  C11  C10    0.00   0.0  0
- R8B  CONST_15  N    C8   C9   C10    0.00   0.0  0
- R8B  CONST_16  C12  C11  C10  C9     0.00   0.0  0
- R8B  CONST_17  C12  N    C8   C9     0.00   0.0  0
- R8B  CONST_18  C8   N    C12  C16  180.00   0.0  0
- R8B  CONST_19  C13  C14  C15  C17  180.00   0.0  0
- R8B  CONST_20  C12  C16  C15  C17  180.00   0.0  0
- R8B  CONST_21  C7   C8   C9   C10  180.00   0.0  0
- R8B  CONST_22  C7   C8   N    C12  180.00   0.0  0
- R8B  CONST_23  H3   C13  C14  C15  180.00   0.0  0
- R8B  CONST_24  H6   C16  C15  C14  180.00   0.0  0
- R8B  CONST_25  H4   C10  C11  C13    0.00   0.0  0
- R8B  CONST_26  H2   C14  C13  C11  180.00   0.0  0
- R8B  CONST_27  H5   C9   C10  C11  180.00   0.0  0
- R8B  Var_01    C14  C15  C17  O7    -1.00  30.0  2
- R8B  Var_02    O3   C7   C8   C9   179.40  30.0  2
- R8B  Var_03    H15  C6   O1   C4   173.60  30.0  3
+ R8B  CONST_01  C11  C13  C14  C15     0.00   0.0  0
+ R8B  CONST_02  C11  C12  C16  C15     0.00   0.0  0
+ R8B  CONST_03  N    C12  C16  C15   180.00   0.0  0
+ R8B  CONST_04  C10  C11  C13  C14   180.00   0.0  0
+ R8B  CONST_05  C12  C11  C13  C14     0.00   0.0  0
+ R8B  CONST_06  C12  C16  C15  C14     0.00   0.0  0
+ R8B  CONST_07  C16  C15  C14  C13     0.00   0.0  0
+ R8B  CONST_08  C9   C10  C11  C13   180.00   0.0  0
+ R8B  CONST_09  C16  C12  C11  C13     0.00   0.0  0
+ R8B  CONST_10  N    C12  C11  C13   180.00   0.0  0
+ R8B  CONST_11  C8   C9   C10  C11     0.00   0.0  0
+ R8B  CONST_12  C8   N    C12  C11     0.00   0.0  0
+ R8B  CONST_13  C16  C12  C11  C10   180.00   0.0  0
+ R8B  CONST_14  N    C12  C11  C10     0.00   0.0  0
+ R8B  CONST_15  N    C8   C9   C10     0.00   0.0  0
+ R8B  CONST_16  C12  C11  C10  C9      0.00   0.0  0
+ R8B  CONST_17  C12  N    C8   C9      0.00   0.0  0
+ R8B  CONST_18  C8   N    C12  C16   180.00   0.0  0
+ R8B  CONST_19  C13  C14  C15  C17   180.00   0.0  0
+ R8B  CONST_20  C12  C16  C15  C17   180.00   0.0  0
+ R8B  CONST_21  C7   C8   C9   C10   180.00   0.0  0
+ R8B  CONST_22  C7   C8   N    C12   180.00   0.0  0
+ R8B  CONST_23  H3   C13  C14  C15   180.00   0.0  0
+ R8B  CONST_24  H6   C16  C15  C14   180.00   0.0  0
+ R8B  CONST_25  H4   C10  C11  C13     0.00   0.0  0
+ R8B  CONST_26  H2   C14  C13  C11   180.00   0.0  0
+ R8B  CONST_27  H5   C9   C10  C11   180.00   0.0  0
+ R8B  Var_01    C14  C15  C17  O7     -1.00  30.0  2
+ R8B  Var_02    O3   C7   C8   C9    179.40  30.0  2
+ R8B  Var_03    H15  C6   O1   C4    173.60  30.0  3
+ R8B  Var_04    O    C    C1   C2    -55.38  30.0  1
+ R8B  Var_05    O    C4   C3   C2     57.53  30.0  1
+ R8B  Var_06    C4   O    C    C1     61.36  30.0  1
+ R8B  Var_07    C4   C3   C2   C1    -53.92  30.0  1
+ R8B  Var_08    C    C1   C2   C3     53.34  30.0  1
+ R8B  Var_09    C    O    C4   C3    -62.32  30.0  1
+ R8B  Var_10    C    C1   C2   O3    173.55  30.0  1
+ R8B  Var_11    C4   C3   C2   O3   -175.78  30.0  1
+ R8B  Var_12    C5   C    C1   C2   -177.30  30.0  1
+ R8B  Var_13    O1   C4   C3   C2   -179.17  30.0  1
+ R8B  Var_14    O2   C3   C2   C1   -173.90  30.0  1
+ R8B  Var_15    O    C    C1   O4     66.62  30.0  1
+ R8B  Var_16    C3   C2   C1   O4    -67.41  30.0  1
+ R8B  Var_17    O    C4   C3   O2    175.97  30.0  1
+ R8B  Var_18    C5   C    O    C4   -174.56  30.0  1
+ R8B  Var_19    C    O    C4   O1    171.90  30.0  1
+ R8B  Var_20    H18  C    C1   C2     64.29  30.0  1
+ R8B  Var_21    H14  C4   C3   C2    -63.22  30.0  1
+ R8B  Var_22    H12  C3   C2   C1     65.02  30.0  1
+ R8B  Var_23    H10  C1   C2   C3    169.75  30.0  1
+ R8B  Var_24    H9   C2   C3   C4     64.43  30.0  1
+ R8B  Var_25    C2   O3   C7   C8    179.60  30.0  3
+ R8B  Var_26    C1   C2   O3   C7     81.32  30.0  3
+ R8B  Var_27    C3   C2   O3   C7   -157.02  30.0  3
+ R8B  Var_28    O4   C1   C2   O3     52.79  30.0  1
+ R8B  Var_29    O2   C3   C2   O3     64.25  30.0  1
+ R8B  Var_30    O5   C5   C    C1   -170.44  30.0  1
+ R8B  Var_31    C5   C    C1   O4    -55.30  30.0  1
+ R8B  Var_32    C6   O1   C4   C3    -67.43  30.0  3
+ R8B  Var_33    O1   C4   C3   O2    -60.72  30.0  1
+ R8B  Var_34    O    C4   O1   C6     56.73  30.0  2
+ R8B  Var_35    O5   C5   C    O      66.25  30.0  1
+ R8B  Var_36    H11  O4   C1   C2    -49.52  30.0  3
+ R8B  Var_37    H13  O2   C3   C2   -174.89  30.0  3
+ R8B  Var_38    H19  C5   C    C1    -49.17  30.0  1
+ R8B  Var_39    H20  C5   C    C1     67.13  30.0  1
+ R8B  Var_40    H21  O5   C5   C    -173.13  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

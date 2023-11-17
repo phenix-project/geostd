@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OBH  OBH  'cyclohexa-2,5-dien-1-yl (1S,2R,4S)-5,6-bis(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate'  ligand  53  31  .  2021-08-17  2021-08-17  
+ OBH  OBH  'cyclohexa-2,5-dien-1-yl (1S,2R,4S)-5,6-bis(4-hydroxyphenyl)-7-oxabicyclo[2.2.1]hept-5-ene-2-sulfonate'  ligand  53  31  .  2021-08-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OBH
@@ -275,41 +276,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OBH  CONST_01  CAK  CAW  CAJ  CAN    0.00   0.0  0
- OBH  CONST_02  CAK  CAO  CAZ  CAN    0.00   0.0  0
- OBH  CONST_03  CAO  CAZ  CAN  CAJ    0.00   0.0  0
- OBH  CONST_04  CAO  CAK  CAW  CAJ    0.00   0.0  0
- OBH  CONST_05  CAZ  CAN  CAJ  CAW    0.00   0.0  0
- OBH  CONST_06  CAZ  CAO  CAK  CAW    0.00   0.0  0
- OBH  CONST_07  CAX  CAL  CAP  CBA    0.00   0.0  0
- OBH  CONST_08  CAX  CAM  CAQ  CBA    0.00   0.0  0
- OBH  CONST_09  CAM  CAQ  CBA  CAP    0.00   0.0  0
- OBH  CONST_10  CAM  CAX  CAL  CAP    0.00   0.0  0
- OBH  CONST_11  CAQ  CBA  CAP  CAL    0.00   0.0  0
- OBH  CONST_12  CAQ  CAM  CAX  CAL    0.00   0.0  0
- OBH  CONST_13  CAU  CAZ  CAN  CAJ  180.00   0.0  0
- OBH  CONST_14  CAU  CAZ  CAO  CAK  180.00   0.0  0
- OBH  CONST_15  CAL  CAP  CBA  CAV  180.00   0.0  0
- OBH  CONST_16  CAM  CAQ  CBA  CAV  180.00   0.0  0
- OBH  CONST_17  OAC  CAW  CAJ  CAN  180.00   0.0  0
- OBH  CONST_18  CAO  CAK  CAW  OAC  180.00   0.0  0
- OBH  CONST_19  OAD  CAX  CAL  CAP  180.00   0.0  0
- OBH  CONST_20  CAQ  CAM  CAX  OAD  180.00   0.0  0
- OBH  CONST_21  H5   CAO  CAZ  CAN  180.00   0.0  0
- OBH  CONST_22  H4   CAK  CAW  CAJ  180.00   0.0  0
- OBH  CONST_23  H1   CAN  CAJ  CAW  180.00   0.0  0
- OBH  CONST_24  H2   CAJ  CAW  CAK  180.00   0.0  0
- OBH  CONST_25  H6   CAP  CBA  CAV    0.00   0.0  0
- OBH  CONST_26  H10  CAQ  CBA  CAV    0.00   0.0  0
- OBH  CONST_27  H7   CAL  CAP  CBA  180.00   0.0  0
- OBH  CONST_28  H9   CAM  CAQ  CBA  180.00   0.0  0
- OBH  Var_01    CAV  CAU  CAZ  CAN   32.60  30.0  2
- OBH  Var_02    CBA  CAV  CAU  CAZ    9.01  30.0  1
- OBH  Var_03    CAP  CBA  CAV  CAU   36.12  30.0  2
- OBH  Var_04    CAE  CAF  CAH  CAY    0.43  30.0  1
- OBH  Var_05    CAE  CAG  CAI  CAY   -0.53  30.0  1
- OBH  Var_06    CAG  CAE  CAF  CAH    0.53  30.0  1
- OBH  Var_07    CAI  CAG  CAE  CAF   -0.48  30.0  1
+ OBH  CONST_01  CAK  CAW  CAJ  CAN     0.00   0.0  0
+ OBH  CONST_02  CAK  CAO  CAZ  CAN     0.00   0.0  0
+ OBH  CONST_03  CAO  CAZ  CAN  CAJ     0.00   0.0  0
+ OBH  CONST_04  CAO  CAK  CAW  CAJ     0.00   0.0  0
+ OBH  CONST_05  CAZ  CAN  CAJ  CAW     0.00   0.0  0
+ OBH  CONST_06  CAZ  CAO  CAK  CAW     0.00   0.0  0
+ OBH  CONST_07  CAX  CAL  CAP  CBA     0.00   0.0  0
+ OBH  CONST_08  CAX  CAM  CAQ  CBA     0.00   0.0  0
+ OBH  CONST_09  CAM  CAQ  CBA  CAP     0.00   0.0  0
+ OBH  CONST_10  CAM  CAX  CAL  CAP     0.00   0.0  0
+ OBH  CONST_11  CAQ  CBA  CAP  CAL     0.00   0.0  0
+ OBH  CONST_12  CAQ  CAM  CAX  CAL     0.00   0.0  0
+ OBH  CONST_13  CAU  CAZ  CAN  CAJ   180.00   0.0  0
+ OBH  CONST_14  CAU  CAZ  CAO  CAK   180.00   0.0  0
+ OBH  CONST_15  CAL  CAP  CBA  CAV   180.00   0.0  0
+ OBH  CONST_16  CAM  CAQ  CBA  CAV   180.00   0.0  0
+ OBH  CONST_17  OAC  CAW  CAJ  CAN   180.00   0.0  0
+ OBH  CONST_18  CAO  CAK  CAW  OAC   180.00   0.0  0
+ OBH  CONST_19  OAD  CAX  CAL  CAP   180.00   0.0  0
+ OBH  CONST_20  CAQ  CAM  CAX  OAD   180.00   0.0  0
+ OBH  CONST_21  H5   CAO  CAZ  CAN   180.00   0.0  0
+ OBH  CONST_22  H4   CAK  CAW  CAJ   180.00   0.0  0
+ OBH  CONST_23  H1   CAN  CAJ  CAW   180.00   0.0  0
+ OBH  CONST_24  H2   CAJ  CAW  CAK   180.00   0.0  0
+ OBH  CONST_25  H6   CAP  CBA  CAV     0.00   0.0  0
+ OBH  CONST_26  H10  CAQ  CBA  CAV     0.00   0.0  0
+ OBH  CONST_27  H7   CAL  CAP  CBA   180.00   0.0  0
+ OBH  CONST_28  H9   CAM  CAQ  CBA   180.00   0.0  0
+ OBH  Var_01    CAV  CAU  CAZ  CAN    32.60  30.0  2
+ OBH  Var_02    CBA  CAV  CAU  CAZ     9.01  30.0  1
+ OBH  Var_03    CAP  CBA  CAV  CAU    36.12  30.0  2
+ OBH  Var_04    CAE  CAF  CAH  CAY     0.43  30.0  1
+ OBH  Var_05    CAE  CAG  CAI  CAY    -0.53  30.0  1
+ OBH  Var_06    CAG  CAE  CAF  CAH     0.53  30.0  1
+ OBH  Var_07    CAI  CAG  CAE  CAF    -0.48  30.0  1
+ OBH  Var_08    OAS  CBB  CAU  CAZ   149.10  30.0  1
+ OBH  Var_09    CAR  CBB  CAU  CAZ  -104.50  30.0  1
+ OBH  Var_10    OAS  CBC  CAV  CAU    29.99  30.0  1
+ OBH  Var_11    CBD  CBC  CAV  CAU   -75.96  30.0  1
+ OBH  Var_12    CBC  OAS  CBB  CAU    50.72  30.0  3
+ OBH  Var_13    CBD  CAR  CBB  CAU   -69.24  30.0  1
+ OBH  Var_14    OAS  CBB  CAU  CAV   -33.67  30.0  1
+ OBH  Var_15    CAR  CBB  CAU  CAV    72.74  30.0  1
+ OBH  Var_16    CBB  OAS  CBC  CAV   -49.60  30.0  3
+ OBH  Var_17    CAR  CBD  CBC  CAV    73.70  30.0  1
+ OBH  Var_18    OAS  CBC  CAV  CBA  -158.59  30.0  1
+ OBH  Var_19    CBD  CBC  CAV  CBA    95.46  30.0  1
+ OBH  Var_20    CAR  CBB  OAS  CBC   -60.19  30.0  3
+ OBH  Var_21    CBB  CAR  CBD  CBC    -2.55  30.0  1
+ OBH  Var_22    CAR  CBD  CBC  OAS   -33.36  30.0  1
+ OBH  Var_23    CBD  CAR  CBB  OAS    37.56  30.0  1
+ OBH  Var_24    CBD  CBC  OAS  CBB    57.97  30.0  3
+ OBH  Var_25    CAG  CAI  CAY  CAH     1.41  30.0  1
+ OBH  Var_26    CAI  CAY  CAH  CAF    -1.36  30.0  1
+ OBH  Var_27    SBE  CBD  CBC  CAV  -166.18  30.0  1
+ OBH  Var_28    SBE  CBD  CBC  OAS    86.76  30.0  1
+ OBH  Var_29    SBE  CBD  CAR  CBB  -120.50  30.0  1
+ OBH  Var_30    CAF  CAH  CAY  OAT   117.44  30.0  1
+ OBH  Var_31    CAG  CAI  CAY  OAT  -116.01  30.0  1
+ OBH  Var_32    H12  CBB  CAU  CAZ    26.96  30.0  1
+ OBH  Var_33    H11  CBC  CAV  CAU   154.28  30.0  1
+ OBH  Var_34    H13  CAR  CBB  CAU    50.39  30.0  1
+ OBH  Var_35    H14  CAR  CBB  CAU   171.55  30.0  1
+ OBH  Var_36    H15  CBD  CBC  CAV   -48.68  30.0  1
+ OBH  Var_37    H23  CAI  CAY  CAH  -177.99  30.0  1
+ OBH  Var_38    H24  CAY  CAH  CAF  -125.96  30.0  1
+ OBH  Var_39    OAA  SBE  CBD  CBC   -61.88  30.0  2
+ OBH  Var_40    OAB  SBE  CBD  CBC    70.20  30.0  2
+ OBH  Var_41    OAT  SBE  CBD  CBC  -173.24  30.0  3
+ OBH  Var_42    OAA  SBE  CBD  CAR    50.53  30.0  2
+ OBH  Var_43    OAB  SBE  CBD  CAR  -177.40  30.0  2
+ OBH  Var_44    OAT  SBE  CBD  CAR   -60.83  30.0  3
+ OBH  Var_45    CAY  OAT  SBE  CBD   -76.40  30.0  3
+ OBH  Var_46    CAH  CAY  OAT  SBE   138.64  30.0  3
+ OBH  Var_47    CAI  CAY  OAT  SBE   -98.77  30.0  3
+ OBH  Var_48    H3   OAC  CAW  CAJ    -0.27  30.0  2
+ OBH  Var_49    H8   OAD  CAX  CAL    -1.10  30.0  2
+ OBH  Var_50    CAY  OAT  SBE  OAA   167.82  30.0  2
+ OBH  Var_51    CAY  OAT  SBE  OAB    38.69  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2DD  2DD  5-(5-chloro-2,4-dihydroxyphenyl)-N-(4-sulfamoylbenzyl)-1H-pyrazole-4-carboxamide  ligand  43  28  .  2022-03-10  2022-03-10
+ 2DD  2DD  5-(5-chloro-2,4-dihydroxyphenyl)-N-(4-sulfamoylbenzyl)-1H-pyrazole-4-carboxamide  ligand  43  28  .  2022-03-10  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_2DD
@@ -233,49 +234,55 @@ _chem_comp_tor.period
  2DD  CONST_06  C6    C1   C2   C3      0.00   0.0  0
  2DD  CONST_07  C6    C5   C4   C3      0.00   0.0  0
  2DD  CONST_08  C7    C5   C4   C3    180.00   0.0  0
- 2DD  CONST_13  N1    N2   C7   C5    180.00   0.0  0
- 2DD  CONST_14  C9    C8   C7   C5    180.00   0.0  0
- 2DD  CONST_15  C9    N1   N2   C7      0.00   0.0  0
- 2DD  CONST_16  N1    C9   C8   C7      0.00   0.0  0
- 2DD  CONST_17  C9    C8   C7   N2      0.00   0.0  0
- 2DD  CONST_18  C8    C9   N1   N2      0.00   0.0  0
- 2DD  CONST_19  C8    C7   N2   N1      0.00   0.0  0
- 2DD  CONST_20  C14   C13  C12  C11     0.00   0.0  0
- 2DD  CONST_21  C14   C15  C16  C11     0.00   0.0  0
- 2DD  CONST_22  C15   C16  C11  C12     0.00   0.0  0
- 2DD  CONST_23  C15   C14  C13  C12     0.00   0.0  0
- 2DD  CONST_24  C16   C11  C12  C13     0.00   0.0  0
- 2DD  CONST_25  C16   C15  C14  C13     0.00   0.0  0
- 2DD  CONST_26  C3    C2   C1   CL1   180.00   0.0  0
- 2DD  CONST_27  C5    C6   C1   CL1   180.00   0.0  0
- 2DD  CONST_28  O4    C4   C3   C2    180.00   0.0  0
- 2DD  CONST_29  O2    C2   C3   C4    180.00   0.0  0
- 2DD  CONST_30  C6    C5   C4   O4    180.00   0.0  0
- 2DD  CONST_31  C7    C5   C4   O4      0.00   0.0  0
- 2DD  CONST_32  C6    C1   C2   O2    180.00   0.0  0
- 2DD  CONST_33  C10   C8   C7   C5      0.00   0.0  0
- 2DD  CONST_34  C10   C8   C7   N2    180.00   0.0  0
- 2DD  CONST_35  C10   C8   C9   N1    180.00   0.0  0
- 2DD  CONST_36  C13   C12  C11  C17   180.00   0.0  0
- 2DD  CONST_37  C15   C16  C11  C17   180.00   0.0  0
- 2DD  CONST_38  S1    C14  C13  C12   180.00   0.0  0
- 2DD  CONST_39  S1    C14  C15  C16   180.00   0.0  0
- 2DD  CONST_40  H3    C3   C2   C1    180.00   0.0  0
- 2DD  CONST_41  H6    C6   C1   C2    180.00   0.0  0
- 2DD  CONST_42  HA    N2   C7   C5      0.00   0.0  0
- 2DD  CONST_43  H9    C9   C8   C7    180.00   0.0  0
- 2DD  CONST_44  H13   C13  C12  C11   180.00   0.0  0
- 2DD  CONST_45  H15   C15  C16  C11   180.00   0.0  0
- 2DD  CONST_46  H16   C16  C11  C12   180.00   0.0  0
- 2DD  CONST_47  H12   C12  C11  C16   180.00   0.0  0
- 2DD  CONST_48  C17   N3   C10  C8    180.00   0.0  0
- 2DD  CONST_49  HB    N3   C10  C8      0.00   0.0  0
- 2DD  CONST_50  C17   N3   C10  O5      0.00   0.0  0
+ 2DD  CONST_09  N1    N2   C7   C5    180.00   0.0  0
+ 2DD  CONST_10  C9    C8   C7   C5    180.00   0.0  0
+ 2DD  CONST_11  C9    N1   N2   C7      0.00   0.0  0
+ 2DD  CONST_12  N1    C9   C8   C7      0.00   0.0  0
+ 2DD  CONST_13  C9    C8   C7   N2      0.00   0.0  0
+ 2DD  CONST_14  C8    C9   N1   N2      0.00   0.0  0
+ 2DD  CONST_15  C8    C7   N2   N1      0.00   0.0  0
+ 2DD  CONST_16  C14   C13  C12  C11     0.00   0.0  0
+ 2DD  CONST_17  C14   C15  C16  C11     0.00   0.0  0
+ 2DD  CONST_18  C15   C16  C11  C12     0.00   0.0  0
+ 2DD  CONST_19  C15   C14  C13  C12     0.00   0.0  0
+ 2DD  CONST_20  C16   C11  C12  C13     0.00   0.0  0
+ 2DD  CONST_21  C16   C15  C14  C13     0.00   0.0  0
+ 2DD  CONST_22  C3    C2   C1   CL1   180.00   0.0  0
+ 2DD  CONST_23  C5    C6   C1   CL1   180.00   0.0  0
+ 2DD  CONST_24  O4    C4   C3   C2    180.00   0.0  0
+ 2DD  CONST_25  O2    C2   C3   C4    180.00   0.0  0
+ 2DD  CONST_26  C6    C5   C4   O4    180.00   0.0  0
+ 2DD  CONST_27  C7    C5   C4   O4      0.00   0.0  0
+ 2DD  CONST_28  C6    C1   C2   O2    180.00   0.0  0
+ 2DD  CONST_29  C10   C8   C7   C5      0.00   0.0  0
+ 2DD  CONST_30  C10   C8   C7   N2    180.00   0.0  0
+ 2DD  CONST_31  C10   C8   C9   N1    180.00   0.0  0
+ 2DD  CONST_32  C13   C12  C11  C17   180.00   0.0  0
+ 2DD  CONST_33  C15   C16  C11  C17   180.00   0.0  0
+ 2DD  CONST_34  S1    C14  C13  C12   180.00   0.0  0
+ 2DD  CONST_35  S1    C14  C15  C16   180.00   0.0  0
+ 2DD  CONST_36  H3    C3   C2   C1    180.00   0.0  0
+ 2DD  CONST_37  H6    C6   C1   C2    180.00   0.0  0
+ 2DD  CONST_38  HA    N2   C7   C5      0.00   0.0  0
+ 2DD  CONST_39  H9    C9   C8   C7    180.00   0.0  0
+ 2DD  CONST_40  H13   C13  C12  C11   180.00   0.0  0
+ 2DD  CONST_41  H15   C15  C16  C11   180.00   0.0  0
+ 2DD  CONST_42  H16   C16  C11  C12   180.00   0.0  0
+ 2DD  CONST_43  H12   C12  C11  C16   180.00   0.0  0
+ 2DD  CONST_44  C17   N3   C10  C8    180.00   0.0  0
+ 2DD  CONST_45  HB    N3   C10  C8      0.00   0.0  0
+ 2DD  CONST_46  C17   N3   C10  O5      0.00   0.0  0
  2DD  Var_01    O5    C10  C8   C7    -28.98  30.0  2
  2DD  Var_02    C12   C11  C17  N3     55.77  30.0  2
  2DD  Var_03    O6    S1   C14  C13  -169.19  30.0  2
  2DD  Var_04    C11   C17  N3   C10  -117.60  30.0  3
  2DD  Var_05    H4N1  N4   S1   C14    74.48  30.0  3
+ 2DD  Var_06    N2    C7   C5   C4   -128.63  30.0  2
+ 2DD  Var_07    C8    C7   C5   C4     56.38  30.0  2
+ 2DD  Var_08    N2    C7   C5   C6     45.39  30.0  2
+ 2DD  Var_09    C8    C7   C5   C6   -129.60  30.0  2
+ 2DD  Var_10    H2    O2   C2   C1      0.09  30.0  2
+ 2DD  Var_11    H4    O4   C4   C3    137.30  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

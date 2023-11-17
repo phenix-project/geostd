@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- Q80  Q80  2-({[(2R,4S)-2-[2-(4-chlorophenyl)ethyl]-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methyl}sulfanyl)-5-(trifluoromethyl)pyridine  ligand  53  32  .  2021-08-20  2021-08-20  
+ Q80  Q80  2-({[(2R,4S)-2-[2-(4-chlorophenyl)ethyl]-2-(1H-imidazol-1-ylmethyl)-1,3-dioxolan-4-yl]methyl}sulfanyl)-5-(trifluoromethyl)pyridine  ligand  53  32  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_Q80
@@ -272,50 +273,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- Q80  CONST_01  CAE  CAD  CAC  CAB      0.00   0.0  0
- Q80  CONST_02  CAE  CAF  CAA  CAB      0.00   0.0  0
- Q80  CONST_03  CAF  CAA  CAB  CAC      0.00   0.0  0
- Q80  CONST_04  CAF  CAE  CAD  CAC      0.00   0.0  0
- Q80  CONST_05  CAA  CAB  CAC  CAD      0.00   0.0  0
- Q80  CONST_06  CAA  CAF  CAE  CAD      0.00   0.0  0
- Q80  CONST_07  CAM  NAN  CAO  NAK      0.00   0.0  0
- Q80  CONST_08  NAN  CAM  CAL  NAK      0.00   0.0  0
- Q80  CONST_09  CAM  CAL  NAK  CAO      0.00   0.0  0
- Q80  CONST_10  CAL  CAM  NAN  CAO      0.00   0.0  0
- Q80  CONST_11  CAL  NAK  CAO  NAN      0.00   0.0  0
- Q80  CONST_12  CAY  CAX  NAW  CAV      0.00   0.0  0
- Q80  CONST_13  CAY  CAZ  CBA  CAV      0.00   0.0  0
- Q80  CONST_14  CAX  NAW  CAV  CBA      0.00   0.0  0
- Q80  CONST_15  CAX  CAY  CAZ  CBA      0.00   0.0  0
- Q80  CONST_16  CAZ  CBA  CAV  NAW      0.00   0.0  0
- Q80  CONST_17  CAZ  CAY  CAX  NAW      0.00   0.0  0
- Q80  CONST_18  CAD  CAC  CAB  CLBF   180.00   0.0  0
- Q80  CONST_19  CAF  CAA  CAB  CLBF   180.00   0.0  0
- Q80  CONST_20  CAG  CAE  CAD  CAC    180.00   0.0  0
- Q80  CONST_21  CAG  CAE  CAF  CAA    180.00   0.0  0
- Q80  CONST_22  NAN  CAO  NAK  CAJ    180.00   0.0  0
- Q80  CONST_23  CAM  CAL  NAK  CAJ    180.00   0.0  0
- Q80  CONST_24  CAX  NAW  CAV  SAU    180.00   0.0  0
- Q80  CONST_25  CAZ  CBA  CAV  SAU    180.00   0.0  0
- Q80  CONST_26  CBB  CAY  CAZ  CBA    180.00   0.0  0
- Q80  CONST_27  CBB  CAY  CAX  NAW    180.00   0.0  0
- Q80  CONST_28  HAD  CAD  CAC  CAB    180.00   0.0  0
- Q80  CONST_29  HAF  CAF  CAA  CAB    180.00   0.0  0
- Q80  CONST_30  HAA  CAA  CAB  CAC    180.00   0.0  0
- Q80  CONST_31  HAC  CAC  CAB  CAA    180.00   0.0  0
- Q80  CONST_32  HAM  CAM  CAL  NAK    180.00   0.0  0
- Q80  CONST_33  HAL  CAL  NAK  CAO    180.00   0.0  0
- Q80  CONST_34  HAO  CAO  NAN  CAM    180.00   0.0  0
- Q80  CONST_35  HAX  CAX  NAW  CAV    180.00   0.0  0
- Q80  CONST_36  HAZ  CAZ  CBA  CAV    180.00   0.0  0
- Q80  CONST_37  HBA  CBA  CAV  NAW    180.00   0.0  0
- Q80  Var_01    CAQ  CAR  OAS  CAI     22.00  30.0  1
- Q80  Var_02    CAO  NAK  CAJ  CAI     91.15  30.0  2
- Q80  Var_03    CAH  CAG  CAE  CAD     91.35  30.0  2
- Q80  Var_04    CAI  CAH  CAG  CAE   -176.78  30.0  3
- Q80  Var_05    NAW  CAV  SAU  CAT      1.90  30.0  2
- Q80  Var_06    FBE  CBB  CAY  CAX   -117.27  30.0  3
- Q80  Var_07    HAT  CAT  SAU  CAV     48.80  30.0  2
+ Q80  CONST_01  CAE   CAD  CAC  CAB      0.00   0.0  0
+ Q80  CONST_02  CAE   CAF  CAA  CAB      0.00   0.0  0
+ Q80  CONST_03  CAF   CAA  CAB  CAC      0.00   0.0  0
+ Q80  CONST_04  CAF   CAE  CAD  CAC      0.00   0.0  0
+ Q80  CONST_05  CAA   CAB  CAC  CAD      0.00   0.0  0
+ Q80  CONST_06  CAA   CAF  CAE  CAD      0.00   0.0  0
+ Q80  CONST_07  CAM   NAN  CAO  NAK      0.00   0.0  0
+ Q80  CONST_08  NAN   CAM  CAL  NAK      0.00   0.0  0
+ Q80  CONST_09  CAM   CAL  NAK  CAO      0.00   0.0  0
+ Q80  CONST_10  CAL   CAM  NAN  CAO      0.00   0.0  0
+ Q80  CONST_11  CAL   NAK  CAO  NAN      0.00   0.0  0
+ Q80  CONST_12  CAY   CAX  NAW  CAV      0.00   0.0  0
+ Q80  CONST_13  CAY   CAZ  CBA  CAV      0.00   0.0  0
+ Q80  CONST_14  CAX   NAW  CAV  CBA      0.00   0.0  0
+ Q80  CONST_15  CAX   CAY  CAZ  CBA      0.00   0.0  0
+ Q80  CONST_16  CAZ   CBA  CAV  NAW      0.00   0.0  0
+ Q80  CONST_17  CAZ   CAY  CAX  NAW      0.00   0.0  0
+ Q80  CONST_18  CAD   CAC  CAB  CLBF   180.00   0.0  0
+ Q80  CONST_19  CAF   CAA  CAB  CLBF   180.00   0.0  0
+ Q80  CONST_20  CAG   CAE  CAD  CAC    180.00   0.0  0
+ Q80  CONST_21  CAG   CAE  CAF  CAA    180.00   0.0  0
+ Q80  CONST_22  NAN   CAO  NAK  CAJ    180.00   0.0  0
+ Q80  CONST_23  CAM   CAL  NAK  CAJ    180.00   0.0  0
+ Q80  CONST_24  CAX   NAW  CAV  SAU    180.00   0.0  0
+ Q80  CONST_25  CAZ   CBA  CAV  SAU    180.00   0.0  0
+ Q80  CONST_26  CBB   CAY  CAZ  CBA    180.00   0.0  0
+ Q80  CONST_27  CBB   CAY  CAX  NAW    180.00   0.0  0
+ Q80  CONST_28  HAD   CAD  CAC  CAB    180.00   0.0  0
+ Q80  CONST_29  HAF   CAF  CAA  CAB    180.00   0.0  0
+ Q80  CONST_30  HAA   CAA  CAB  CAC    180.00   0.0  0
+ Q80  CONST_31  HAC   CAC  CAB  CAA    180.00   0.0  0
+ Q80  CONST_32  HAM   CAM  CAL  NAK    180.00   0.0  0
+ Q80  CONST_33  HAL   CAL  NAK  CAO    180.00   0.0  0
+ Q80  CONST_34  HAO   CAO  NAN  CAM    180.00   0.0  0
+ Q80  CONST_35  HAX   CAX  NAW  CAV    180.00   0.0  0
+ Q80  CONST_36  HAZ   CAZ  CBA  CAV    180.00   0.0  0
+ Q80  CONST_37  HBA   CBA  CAV  NAW    180.00   0.0  0
+ Q80  Var_01    CAQ   CAR  OAS  CAI     22.00  30.0  1
+ Q80  Var_02    CAO   NAK  CAJ  CAI     91.15  30.0  2
+ Q80  Var_03    CAH   CAG  CAE  CAD     91.35  30.0  2
+ Q80  Var_04    CAI   CAH  CAG  CAE   -176.78  30.0  3
+ Q80  Var_05    NAW   CAV  SAU  CAT      1.90  30.0  2
+ Q80  Var_06    FBE   CBB  CAY  CAX   -117.27  30.0  3
+ Q80  Var_07    HAT   CAT  SAU  CAV     48.80  30.0  2
+ Q80  Var_08    CAR   CAQ  OAP  CAI     24.37  30.0  1
+ Q80  Var_09    CAR   OAS  CAI  OAP     -7.60  30.0  1
+ Q80  Var_10    OAS   CAR  CAQ  OAP    -27.71  30.0  1
+ Q80  Var_11    CAQ   OAP  CAI  OAS    -11.66  30.0  1
+ Q80  Var_12    CAQ   OAP  CAI  CAH   -133.18  30.0  1
+ Q80  Var_13    CAR   OAS  CAI  CAH    112.43  30.0  1
+ Q80  Var_14    CAT   CAQ  OAP  CAI    145.14  30.0  1
+ Q80  Var_15    NAK   CAJ  CAI  OAP    -52.31  30.0  3
+ Q80  Var_16    CAQ   OAP  CAI  CAJ    105.89  30.0  1
+ Q80  Var_17    CAR   OAS  CAI  CAJ   -126.41  30.0  1
+ Q80  Var_18    OAS   CAI  CAJ  NAK     64.18  30.0  2
+ Q80  Var_19    CAT   CAQ  CAR  OAS   -146.11  30.0  1
+ Q80  Var_20    HAQ   CAQ  OAP  CAI    -93.69  30.0  1
+ Q80  Var_21    OAP   CAI  CAH  CAG     62.65  30.0  3
+ Q80  Var_22    OAS   CAI  CAH  CAG    -55.62  30.0  3
+ Q80  Var_23    NAK   CAJ  CAI  CAH   -173.23  30.0  3
+ Q80  Var_24    SAU   CAT  CAQ  OAP     61.20  30.0  2
+ Q80  Var_25    SAU   CAT  CAQ  CAR    175.29  30.0  2
+ Q80  Var_26    HAH   CAH  CAI  OAP    -59.74  30.0  2
+ Q80  Var_27    HAHA  CAH  CAI  OAP   -174.79  30.0  2
+ Q80  Var_28    HAJ   CAJ  CAI  OAP     68.16  30.0  3
+ Q80  Var_29    HAJA  CAJ  CAI  OAP   -174.10  30.0  3
+ Q80  Var_30    HAT   CAT  CAQ  OAP   -179.67  30.0  2
+ Q80  Var_31    HATA  CAT  CAQ  OAP    -59.72  30.0  2
+ Q80  Var_32    CAJ   CAI  CAH  CAG   -176.03  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

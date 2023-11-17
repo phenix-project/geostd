@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZUI  ZUI  1-[1-[[5-(3-chloranylphenoxy)pyridin-3-yl]methyl]piperidin-4-yl]-5-methyl-pyrimidine-2,4-dione  ligand  53  30  .  2021-08-25  2021-08-25  
+ ZUI  ZUI  1-[1-[[5-(3-chloranylphenoxy)pyridin-3-yl]methyl]piperidin-4-yl]-5-methyl-pyrimidine-2,4-dione  ligand  53  30  .  2021-08-25  2023-10-25
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-25
 ;
 
 data_comp_ZUI
@@ -272,50 +273,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ZUI  CONST_01  C9   N2   C8   C7     0.00   0.0  0
- ZUI  CONST_02  C9   C10  C17  C7     0.00   0.0  0
- ZUI  CONST_03  N2   C8   C7   C17    0.00   0.0  0
- ZUI  CONST_04  N2   C9   C10  C17    0.00   0.0  0
- ZUI  CONST_05  C8   N2   C9   C10    0.00   0.0  0
- ZUI  CONST_06  C8   C7   C17  C10    0.00   0.0  0
- ZUI  CONST_07  C14  C15  C16  C11    0.00   0.0  0
- ZUI  CONST_08  C14  C13  C12  C11    0.00   0.0  0
- ZUI  CONST_09  C13  C14  C15  C16    0.00   0.0  0
- ZUI  CONST_10  C13  C12  C11  C16    0.00   0.0  0
- ZUI  CONST_11  C12  C11  C16  C15    0.00   0.0  0
- ZUI  CONST_12  C12  C13  C14  C15    0.00   0.0  0
- ZUI  CONST_13  N    C20  N3   C21    0.00   0.0  0
- ZUI  CONST_14  C20  N3   C21  C1     0.00   0.0  0
- ZUI  CONST_15  C2   N    C20  N3     0.00   0.0  0
- ZUI  CONST_16  C3   N    C20  N3   180.00   0.0  0
- ZUI  CONST_17  N2   C8   C7   C6   180.00   0.0  0
- ZUI  CONST_18  C10  C17  C7   C6   180.00   0.0  0
- ZUI  CONST_19  O    C10  C17  C7   180.00   0.0  0
- ZUI  CONST_20  O    C10  C9   N2   180.00   0.0  0
- ZUI  CONST_21  C15  C16  C11  O    180.00   0.0  0
- ZUI  CONST_22  C13  C12  C11  O    180.00   0.0  0
- ZUI  CONST_23  CL   C15  C16  C11  180.00   0.0  0
- ZUI  CONST_24  C13  C14  C15  CL   180.00   0.0  0
- ZUI  CONST_25  C20  N3   C21  O2   180.00   0.0  0
- ZUI  CONST_26  O1   C20  N3   C21  180.00   0.0  0
- ZUI  CONST_27  C2   N    C20  O1   180.00   0.0  0
- ZUI  CONST_28  C3   N    C20  O1     0.00   0.0  0
- ZUI  CONST_29  H12  C8   C7   C17  180.00   0.0  0
- ZUI  CONST_30  H13  C9   C10  C17  180.00   0.0  0
- ZUI  CONST_31  H18  C17  C10  C9   180.00   0.0  0
- ZUI  CONST_32  H15  C13  C12  C11  180.00   0.0  0
- ZUI  CONST_33  H16  C14  C15  C16  180.00   0.0  0
- ZUI  CONST_34  H14  C12  C11  C16  180.00   0.0  0
- ZUI  CONST_35  H17  C16  C15  C14  180.00   0.0  0
- ZUI  CONST_36  H    N3   C21  C1   180.00   0.0  0
- ZUI  Var_01    N1   C18  C19  C3   -57.04  30.0  1
- ZUI  Var_02    N1   C5   C4   C3    57.31  30.0  1
- ZUI  Var_03    C5   N1   C18  C19   60.50  30.0  1
- ZUI  Var_04    C4   C5   N1   C18  -60.70  30.0  1
- ZUI  Var_05    C7   C6   N1   C18  162.28  30.0  3
- ZUI  Var_06    C8   C7   C6   N1   -36.26  30.0  2
- ZUI  Var_07    C16  C11  O    C10   94.76  30.0  2
- ZUI  Var_08    H3   C    C1   C21  -60.85  30.0  3
+ ZUI  CONST_01  C9   N2   C8   C7      0.00   0.0  0
+ ZUI  CONST_02  C9   C10  C17  C7      0.00   0.0  0
+ ZUI  CONST_03  N2   C8   C7   C17     0.00   0.0  0
+ ZUI  CONST_04  N2   C9   C10  C17     0.00   0.0  0
+ ZUI  CONST_05  C8   N2   C9   C10     0.00   0.0  0
+ ZUI  CONST_06  C8   C7   C17  C10     0.00   0.0  0
+ ZUI  CONST_07  C14  C15  C16  C11     0.00   0.0  0
+ ZUI  CONST_08  C14  C13  C12  C11     0.00   0.0  0
+ ZUI  CONST_09  C13  C14  C15  C16     0.00   0.0  0
+ ZUI  CONST_10  C13  C12  C11  C16     0.00   0.0  0
+ ZUI  CONST_11  C12  C11  C16  C15     0.00   0.0  0
+ ZUI  CONST_12  C12  C13  C14  C15     0.00   0.0  0
+ ZUI  CONST_13  N    C20  N3   C21     0.00   0.0  0
+ ZUI  CONST_14  C20  N3   C21  C1      0.00   0.0  0
+ ZUI  CONST_15  C2   N    C20  N3      0.00   0.0  0
+ ZUI  CONST_16  C3   N    C20  N3    180.00   0.0  0
+ ZUI  CONST_17  N2   C8   C7   C6    180.00   0.0  0
+ ZUI  CONST_18  C10  C17  C7   C6    180.00   0.0  0
+ ZUI  CONST_19  O    C10  C17  C7    180.00   0.0  0
+ ZUI  CONST_20  O    C10  C9   N2    180.00   0.0  0
+ ZUI  CONST_21  C15  C16  C11  O     180.00   0.0  0
+ ZUI  CONST_22  C13  C12  C11  O     180.00   0.0  0
+ ZUI  CONST_23  CL   C15  C16  C11   180.00   0.0  0
+ ZUI  CONST_24  C13  C14  C15  CL    180.00   0.0  0
+ ZUI  CONST_25  C20  N3   C21  O2    180.00   0.0  0
+ ZUI  CONST_26  O1   C20  N3   C21   180.00   0.0  0
+ ZUI  CONST_27  C2   N    C20  O1    180.00   0.0  0
+ ZUI  CONST_28  C3   N    C20  O1      0.00   0.0  0
+ ZUI  CONST_29  H12  C8   C7   C17   180.00   0.0  0
+ ZUI  CONST_30  H13  C9   C10  C17   180.00   0.0  0
+ ZUI  CONST_31  H18  C17  C10  C9    180.00   0.0  0
+ ZUI  CONST_32  H15  C13  C12  C11   180.00   0.0  0
+ ZUI  CONST_33  H16  C14  C15  C16   180.00   0.0  0
+ ZUI  CONST_34  H14  C12  C11  C16   180.00   0.0  0
+ ZUI  CONST_35  H17  C16  C15  C14   180.00   0.0  0
+ ZUI  CONST_36  H    N3   C21  C1    180.00   0.0  0
+ ZUI  Var_01    N1   C18  C19  C3    -57.04  30.0  1
+ ZUI  Var_02    N1   C5   C4   C3     57.31  30.0  1
+ ZUI  Var_03    C5   N1   C18  C19    60.50  30.0  1
+ ZUI  Var_04    C4   C5   N1   C18   -60.70  30.0  1
+ ZUI  Var_05    C7   C6   N1   C18   162.28  30.0  3
+ ZUI  Var_06    C8   C7   C6   N1    -36.26  30.0  2
+ ZUI  Var_07    C16  C11  O    C10    94.76  30.0  2
+ ZUI  Var_08    H3   C    C1   C21   -60.85  30.0  3
+ ZUI  Var_09    C19  C3   N    C20   -65.61  30.0  3
+ ZUI  Var_10    C4   C3   N    C20    62.64  30.0  3
+ ZUI  Var_11    C18  C19  C3   N    -175.29  30.0  1
+ ZUI  Var_12    C5   C4   C3   N     175.38  30.0  1
+ ZUI  Var_13    C19  C3   N    C2    113.65  30.0  3
+ ZUI  Var_14    C4   C3   N    C2   -118.10  30.0  3
+ ZUI  Var_15    C5   C4   C3   C19   -55.09  30.0  1
+ ZUI  Var_16    C4   C3   C19  C18    55.01  30.0  1
+ ZUI  Var_17    N3   C21  C1   C    -179.65  30.0  1
+ ZUI  Var_18    N    C2   C1   C     179.96  30.0  1
+ ZUI  Var_19    C11  O    C10  C17    -3.17  30.0  2
+ ZUI  Var_20    C11  O    C10  C9    176.86  30.0  2
+ ZUI  Var_21    H4   C2   C1   C21  -179.87  30.0  1
+ ZUI  Var_22    H5   C3   N    C20   178.37  30.0  3
+ ZUI  Var_23    H22  C19  C3   N     -55.35  30.0  1
+ ZUI  Var_24    H21  C19  C3   N      64.12  30.0  1
+ ZUI  Var_25    H6   C4   C3   N     -64.30  30.0  1
+ ZUI  Var_26    H7   C4   C3   N      55.27  30.0  1
+ ZUI  Var_27    C    C1   C21  O2      0.28  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AQ5  AQ5  (6~{S})-8-(3-pyrimidin-4-yl-1~{H}-pyrrolo[2,3-b]pyridin-4-yl)-1,8-diazaspiro[5.5]undecane  ligand  50  26  .  2022-07-24  2022-07-26
+ AQ5  AQ5  (6~{S})-8-(3-pyrimidin-4-yl-1~{H}-pyrrolo[2,3-b]pyridin-4-yl)-1,8-diazaspiro[5.5]undecane  ligand  50  26  .  2022-07-24  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_AQ5
@@ -268,53 +269,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AQ5  CONST_01  N1   C2   N3   C4     0.00   0.0  0
- AQ5  CONST_02  NAD  CAC  CAB  C4   180.00   0.0  0
- AQ5  CONST_03  CAE  CAF  CAB  C4   180.00   0.0  0
- AQ5  CONST_04  CAG  CAF  CAB  C4     0.00   0.0  0
- AQ5  CONST_05  N1   C6   C5   C4     0.00   0.0  0
- AQ5  CONST_06  C2   N3   C4   C5     0.00   0.0  0
- AQ5  CONST_09  C2   N1   C6   C5     0.00   0.0  0
- AQ5  CONST_10  N3   C2   N1   C6     0.00   0.0  0
- AQ5  CONST_11  N3   C4   C5   C6     0.00   0.0  0
- AQ5  CONST_12  CAB  C4   C5   C6   180.00   0.0  0
- AQ5  CONST_15  CAC  CAB  CAF  CAG  180.00   0.0  0
- AQ5  CONST_16  NAD  CAE  CAF  CAG  180.00   0.0  0
- AQ5  CONST_17  NAJ  CAE  CAF  CAG    0.00   0.0  0
- AQ5  CONST_18  NAJ  CAI  CAH  CAG    0.00   0.0  0
- AQ5  CONST_19  NAD  CAC  CAB  CAF    0.00   0.0  0
- AQ5  CONST_20  CAC  NAD  CAE  CAF    0.00   0.0  0
- AQ5  CONST_21  CAI  NAJ  CAE  CAF    0.00   0.0  0
- AQ5  CONST_22  CAI  CAH  CAG  CAF    0.00   0.0  0
- AQ5  CONST_23  CAB  CAF  CAG  CAH  180.00   0.0  0
- AQ5  CONST_24  CAE  CAF  CAG  CAH    0.00   0.0  0
- AQ5  CONST_25  CAE  NAJ  CAI  CAH    0.00   0.0  0
- AQ5  CONST_26  NAD  CAE  NAJ  CAI  180.00   0.0  0
- AQ5  CONST_27  CAC  NAD  CAE  NAJ  180.00   0.0  0
- AQ5  CONST_28  CAB  CAF  CAE  NAJ  180.00   0.0  0
- AQ5  CONST_29  CAB  CAC  NAD  CAE    0.00   0.0  0
- AQ5  CONST_30  CAC  CAB  CAF  CAE    0.00   0.0  0
- AQ5  CONST_31  CAB  CAF  CAE  NAD    0.00   0.0  0
- AQ5  CONST_32  C2   N3   C4   CAB  180.00   0.0  0
- AQ5  CONST_33  CAB  CAF  CAG  NAK    0.00   0.0  0
- AQ5  CONST_34  CAE  CAF  CAG  NAK  180.00   0.0  0
- AQ5  CONST_35  CAI  CAH  CAG  NAK  180.00   0.0  0
- AQ5  CONST_36  H25  C2   N3   C4   180.00   0.0  0
- AQ5  CONST_37  H24  CAC  CAB  C4     0.00   0.0  0
- AQ5  CONST_38  H2   C6   C5   C4   180.00   0.0  0
- AQ5  CONST_39  H1   C5   C6   N1   180.00   0.0  0
- AQ5  CONST_40  H21  CAH  CAG  NAK    0.00   0.0  0
- AQ5  CONST_41  H22  CAI  CAH  CAG  180.00   0.0  0
- AQ5  CONST_42  H23  NAD  CAE  CAF  180.00   0.0  0
- AQ5  Var_01    CAY  CAX  CAW  CAV  -54.32  30.0  1
- AQ5  Var_02    NAZ  CAY  CAX  CAW   57.02  30.0  1
- AQ5  Var_03    CAO  CAV  CAW  CAX   51.84  30.0  1
- AQ5  Var_04    CAO  NAZ  CAY  CAX  -59.95  30.0  1
- AQ5  Var_05    CAL  CAM  CAN  CAO  -52.51  30.0  1
- AQ5  Var_06    CAL  NAK  CAP  CAO   59.28  30.0  1
- AQ5  Var_07    CAM  CAL  NAK  CAP  -56.50  30.0  1
- AQ5  Var_08    CAF  CAG  NAK  CAP  166.66  30.0  1
- AQ5  Var_09    NAK  CAL  CAM  CAN   52.69  30.0  1
+ AQ5  CONST_01  N1   C2   N3   C4      0.00   0.0  0
+ AQ5  CONST_02  NAD  CAC  CAB  C4    180.00   0.0  0
+ AQ5  CONST_03  CAE  CAF  CAB  C4    180.00   0.0  0
+ AQ5  CONST_04  CAG  CAF  CAB  C4      0.00   0.0  0
+ AQ5  CONST_05  N1   C6   C5   C4      0.00   0.0  0
+ AQ5  CONST_06  C2   N3   C4   C5      0.00   0.0  0
+ AQ5  CONST_07  C2   N1   C6   C5      0.00   0.0  0
+ AQ5  CONST_08  N3   C2   N1   C6      0.00   0.0  0
+ AQ5  CONST_09  N3   C4   C5   C6      0.00   0.0  0
+ AQ5  CONST_10  CAB  C4   C5   C6    180.00   0.0  0
+ AQ5  CONST_11  CAC  CAB  CAF  CAG   180.00   0.0  0
+ AQ5  CONST_12  NAD  CAE  CAF  CAG   180.00   0.0  0
+ AQ5  CONST_13  NAJ  CAE  CAF  CAG     0.00   0.0  0
+ AQ5  CONST_14  NAJ  CAI  CAH  CAG     0.00   0.0  0
+ AQ5  CONST_15  NAD  CAC  CAB  CAF     0.00   0.0  0
+ AQ5  CONST_16  CAC  NAD  CAE  CAF     0.00   0.0  0
+ AQ5  CONST_17  CAI  NAJ  CAE  CAF     0.00   0.0  0
+ AQ5  CONST_18  CAI  CAH  CAG  CAF     0.00   0.0  0
+ AQ5  CONST_19  CAB  CAF  CAG  CAH   180.00   0.0  0
+ AQ5  CONST_20  CAE  CAF  CAG  CAH     0.00   0.0  0
+ AQ5  CONST_21  CAE  NAJ  CAI  CAH     0.00   0.0  0
+ AQ5  CONST_22  NAD  CAE  NAJ  CAI   180.00   0.0  0
+ AQ5  CONST_23  CAC  NAD  CAE  NAJ   180.00   0.0  0
+ AQ5  CONST_24  CAB  CAF  CAE  NAJ   180.00   0.0  0
+ AQ5  CONST_25  CAB  CAC  NAD  CAE     0.00   0.0  0
+ AQ5  CONST_26  CAC  CAB  CAF  CAE     0.00   0.0  0
+ AQ5  CONST_27  CAB  CAF  CAE  NAD     0.00   0.0  0
+ AQ5  CONST_28  C2   N3   C4   CAB   180.00   0.0  0
+ AQ5  CONST_29  CAB  CAF  CAG  NAK     0.00   0.0  0
+ AQ5  CONST_30  CAE  CAF  CAG  NAK   180.00   0.0  0
+ AQ5  CONST_31  CAI  CAH  CAG  NAK   180.00   0.0  0
+ AQ5  CONST_32  H25  C2   N3   C4    180.00   0.0  0
+ AQ5  CONST_33  H24  CAC  CAB  C4      0.00   0.0  0
+ AQ5  CONST_34  H2   C6   C5   C4    180.00   0.0  0
+ AQ5  CONST_35  H1   C5   C6   N1    180.00   0.0  0
+ AQ5  CONST_36  H21  CAH  CAG  NAK     0.00   0.0  0
+ AQ5  CONST_37  H22  CAI  CAH  CAG   180.00   0.0  0
+ AQ5  CONST_38  H23  NAD  CAE  CAF   180.00   0.0  0
+ AQ5  Var_01    CAY  CAX  CAW  CAV   -54.32  30.0  1
+ AQ5  Var_02    NAZ  CAY  CAX  CAW    57.02  30.0  1
+ AQ5  Var_03    CAO  CAV  CAW  CAX    51.84  30.0  1
+ AQ5  Var_04    CAO  NAZ  CAY  CAX   -59.95  30.0  1
+ AQ5  Var_05    CAL  CAM  CAN  CAO   -52.51  30.0  1
+ AQ5  Var_06    CAL  NAK  CAP  CAO    59.28  30.0  1
+ AQ5  Var_07    CAM  CAL  NAK  CAP   -56.50  30.0  1
+ AQ5  Var_08    CAF  CAG  NAK  CAP   166.66  30.0  1
+ AQ5  Var_09    NAK  CAL  CAM  CAN    52.69  30.0  1
+ AQ5  Var_10    CAC  CAB  C4   C5    -42.66  30.0  2
+ AQ5  Var_11    CAF  CAB  C4   C5    147.34  30.0  2
+ AQ5  Var_12    CAC  CAB  C4   N3    134.39  30.0  2
+ AQ5  Var_13    CAF  CAB  C4   N3    -35.61  30.0  2
+ AQ5  Var_14    CAM  CAN  CAO  CAV   -68.36  30.0  1
+ AQ5  Var_15    NAK  CAP  CAO  CAV    64.90  30.0  1
+ AQ5  Var_16    CAY  NAZ  CAO  CAV    55.02  30.0  3
+ AQ5  Var_17    CAN  CAO  CAV  CAW  -167.23  30.0  3
+ AQ5  Var_18    CAP  CAO  CAV  CAW    72.86  30.0  3
+ AQ5  Var_19    NAZ  CAO  CAV  CAW   -49.78  30.0  3
+ AQ5  Var_20    CAN  CAO  NAZ  CAY   174.61  30.0  3
+ AQ5  Var_21    CAP  CAO  NAZ  CAY   -67.31  30.0  3
+ AQ5  Var_22    CAM  CAN  CAO  NAZ   173.26  30.0  1
+ AQ5  Var_23    NAK  CAP  CAO  NAZ  -173.99  30.0  1
+ AQ5  Var_24    CAM  CAN  CAO  CAP    53.13  30.0  1
+ AQ5  Var_25    NAK  CAP  CAO  CAN   -56.47  30.0  1
+ AQ5  Var_26    H15  CAN  CAO  CAV    54.89  30.0  1
+ AQ5  Var_27    H16  CAN  CAO  CAV   170.90  30.0  1
+ AQ5  Var_28    H13  CAP  CAO  CAV  -171.93  30.0  1
+ AQ5  Var_29    H14  CAP  CAO  CAV   -55.77  30.0  1
+ AQ5  Var_30    H11  NAZ  CAO  CAV  -179.94  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

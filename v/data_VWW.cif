@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VWW  VWW  L-gamma-glutamyl-S-benzyl-N-[(R)-carboxy(phenyl)methyl]-L-cysteinamide  peptide  58  33  .  2016-04-26  2022-09-22
+ VWW  VWW  L-gamma-glutamyl-S-benzyl-N-[(R)-carboxy(phenyl)methyl]-L-cysteinamide  peptide  58  33  .  2016-04-26  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_VWW
@@ -282,43 +283,51 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VWW  CONST_01  CH    CT1   CZ1   CE      0.00   0.0  0
- VWW  CONST_02  CH    CT2   CZ2   CE      0.00   0.0  0
- VWW  CONST_03  CT2   CZ2   CE    CZ1     0.00   0.0  0
- VWW  CONST_04  CT2   CH    CT1   CZ1     0.00   0.0  0
- VWW  CONST_05  CT1   CZ1   CE    CZ2     0.00   0.0  0
- VWW  CONST_06  CT1   CH    CT2   CZ2     0.00   0.0  0
- VWW  CONST_07  CE1   CD11  CG1   CB2     0.00   0.0  0
- VWW  CONST_08  CE1   CD2   CG2   CB2     0.00   0.0  0
- VWW  CONST_09  CD2   CG2   CB2   CG1     0.00   0.0  0
- VWW  CONST_10  CD2   CE1   CD11  CG1     0.00   0.0  0
- VWW  CONST_11  CG2   CB2   CG1   CD11    0.00   0.0  0
- VWW  CONST_12  CG2   CD2   CE1   CD11    0.00   0.0  0
- VWW  CONST_13  CT1   CZ1   CE    CD1   180.00   0.0  0
- VWW  CONST_14  CT2   CZ2   CE    CD1   180.00   0.0  0
- VWW  CONST_15  CD11  CG1   CB2   CA2   180.00   0.0  0
- VWW  CONST_16  CD2   CG2   CB2   CA2   180.00   0.0  0
- VWW  CONST_17  HT1   CT1   CZ1   CE    180.00   0.0  0
- VWW  CONST_18  HT2   CT2   CZ2   CE    180.00   0.0  0
- VWW  CONST_19  HZ2   CZ2   CE    CZ1   180.00   0.0  0
- VWW  CONST_20  HH    CH    CT1   CZ1   180.00   0.0  0
- VWW  CONST_21  HZ1   CZ1   CE    CZ2   180.00   0.0  0
- VWW  CONST_22  HD1   CD11  CG1   CB2   180.00   0.0  0
- VWW  CONST_23  HD21  CD2   CG2   CB2   180.00   0.0  0
- VWW  CONST_24  HG21  CG2   CB2   CG1   180.00   0.0  0
- VWW  CONST_25  HE    CE1   CD11  CG1   180.00   0.0  0
- VWW  CONST_26  HG1   CG1   CD11  CE1   180.00   0.0  0
- VWW  CONST_27  CA1   N1    CD    CG    180.00   0.0  0
- VWW  CONST_28  CA1   N1    CD    OE1     0.00   0.0  0
- VWW  CONST_29  CA2   N2    C1    CA1   180.00   0.0  0
- VWW  CONST_30  CA2   N2    C1    O1      0.00   0.0  0
- VWW  CONST_31  H1    N1    CD    CG      0.00   0.0  0
- VWW  CONST_32  H3    N2    C1    CA1     0.00   0.0  0
- VWW  Var_01    CZ1   CE    CD1   SG    113.99  30.0  2
- VWW  Var_02    CE    CD1   SG    CB1   -54.13  30.0  3
- VWW  Var_03    CD    CG    CB    CA    174.78  30.0  3
- VWW  Var_04    OE1   CD    CG    CB      3.47  30.0  3
- VWW  Var_05    HB21  CB1   SG    CD1   171.17  30.0  3
+ VWW  CONST_01  CH    CT1   CZ1   CE       0.00   0.0  0
+ VWW  CONST_02  CH    CT2   CZ2   CE       0.00   0.0  0
+ VWW  CONST_03  CT2   CZ2   CE    CZ1      0.00   0.0  0
+ VWW  CONST_04  CT2   CH    CT1   CZ1      0.00   0.0  0
+ VWW  CONST_05  CT1   CZ1   CE    CZ2      0.00   0.0  0
+ VWW  CONST_06  CT1   CH    CT2   CZ2      0.00   0.0  0
+ VWW  CONST_07  CE1   CD11  CG1   CB2      0.00   0.0  0
+ VWW  CONST_08  CE1   CD2   CG2   CB2      0.00   0.0  0
+ VWW  CONST_09  CD2   CG2   CB2   CG1      0.00   0.0  0
+ VWW  CONST_10  CD2   CE1   CD11  CG1      0.00   0.0  0
+ VWW  CONST_11  CG2   CB2   CG1   CD11     0.00   0.0  0
+ VWW  CONST_12  CG2   CD2   CE1   CD11     0.00   0.0  0
+ VWW  CONST_13  CT1   CZ1   CE    CD1    180.00   0.0  0
+ VWW  CONST_14  CT2   CZ2   CE    CD1    180.00   0.0  0
+ VWW  CONST_15  CD11  CG1   CB2   CA2    180.00   0.0  0
+ VWW  CONST_16  CD2   CG2   CB2   CA2    180.00   0.0  0
+ VWW  CONST_17  HT1   CT1   CZ1   CE     180.00   0.0  0
+ VWW  CONST_18  HT2   CT2   CZ2   CE     180.00   0.0  0
+ VWW  CONST_19  HZ2   CZ2   CE    CZ1    180.00   0.0  0
+ VWW  CONST_20  HH    CH    CT1   CZ1    180.00   0.0  0
+ VWW  CONST_21  HZ1   CZ1   CE    CZ2    180.00   0.0  0
+ VWW  CONST_22  HD1   CD11  CG1   CB2    180.00   0.0  0
+ VWW  CONST_23  HD21  CD2   CG2   CB2    180.00   0.0  0
+ VWW  CONST_24  HG21  CG2   CB2   CG1    180.00   0.0  0
+ VWW  CONST_25  HE    CE1   CD11  CG1    180.00   0.0  0
+ VWW  CONST_26  HG1   CG1   CD11  CE1    180.00   0.0  0
+ VWW  CONST_27  CA1   N1    CD    CG     180.00   0.0  0
+ VWW  CONST_28  CA1   N1    CD    OE1      0.00   0.0  0
+ VWW  CONST_29  CA2   N2    C1    CA1    180.00   0.0  0
+ VWW  CONST_30  CA2   N2    C1    O1       0.00   0.0  0
+ VWW  CONST_31  H1    N1    CD    CG       0.00   0.0  0
+ VWW  CONST_32  H3    N2    C1    CA1      0.00   0.0  0
+ VWW  Var_01    CZ1   CE    CD1   SG     113.99  30.0  2
+ VWW  Var_02    CE    CD1   SG    CB1    -54.13  30.0  3
+ VWW  Var_03    CD    CG    CB    CA     174.78  30.0  3
+ VWW  Var_04    OE1   CD    CG    CB       3.47  30.0  3
+ VWW  Var_05    HB21  CB1   SG    CD1    171.17  30.0  3
+ VWW  Var_06    HA2   CA2   CB2   CG1    165.92  30.0  2
+ VWW  Var_07    H3    N2    CA2   CB2     29.08  30.0  2
+ VWW  Var_08    HB2   CB    CA    N      -51.03  30.0  3
+ VWW  Var_09    HB3   CB    CA    N       63.89  30.0  3
+ VWW  Var_10    H     N     CA    C     -169.44  30.0  3
+ VWW  Var_11    H2    N     CA    C      -54.33  30.0  3
+ VWW  Var_12    HA1   CA1   N1    CD      -9.96  30.0  3
+ VWW  Var_13    HB31  CB1   CA1   N1     171.72  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

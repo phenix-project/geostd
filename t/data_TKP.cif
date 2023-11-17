@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TKP  TKP  '2-(3-chlorophenyl)-2-methylpropyl [(2S)-3-cyclohexyl-1-({(2S)-1-hydroxy-3-[(3S)-2-oxopyrrolidin-3-yl]propan-2-yl}amino)-1-oxopropan-2-yl]carbamate'  ligand  76  36  .  2022-03-23  2023-02-15
+ TKP  TKP  '2-(3-chlorophenyl)-2-methylpropyl [(2S)-3-cyclohexyl-1-({(2S)-1-hydroxy-3-[(3S)-2-oxopyrrolidin-3-yl]propan-2-yl}amino)-1-oxopropan-2-yl]carbamate'  ligand  76  36  .  2022-03-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TKP
@@ -365,38 +366,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TKP  CONST_01  C34  C35  C36  C30    0.00   0.0  0
- TKP  CONST_02  C34  C32  C31  C30    0.00   0.0  0
- TKP  CONST_03  C35  C34  C32  C31    0.00   0.0  0
- TKP  CONST_04  C35  C36  C30  C31    0.00   0.0  0
- TKP  CONST_05  C36  C35  C34  C32    0.00   0.0  0
- TKP  CONST_06  C36  C30  C31  C32    0.00   0.0  0
- TKP  CONST_07  C19  C20  N21  C22    0.00   0.0  0
- TKP  CONST_08  C35  C36  C30  C02  180.00   0.0  0
- TKP  CONST_09  C32  C31  C30  C02  180.00   0.0  0
- TKP  CONST_10  CL3  C32  C31  C30  180.00   0.0  0
- TKP  CONST_11  CL3  C32  C34  C35  180.00   0.0  0
- TKP  CONST_12  C22  N21  C20  O24  180.00   0.0  0
- TKP  CONST_13  H35  C35  C36  C30  180.00   0.0  0
- TKP  CONST_14  H34  C34  C32  C31  180.00   0.0  0
- TKP  CONST_15  H36  C36  C30  C31  180.00   0.0  0
- TKP  CONST_16  H33  C31  C32  C34  180.00   0.0  0
- TKP  CONST_17  H39  N21  C20  C19  180.00   0.0  0
- TKP  CONST_18  C17  N16  C15  C07  180.00   0.0  0
- TKP  CONST_19  C17  N16  C15  O27    0.00   0.0  0
- TKP  CONST_20  H38  N16  C15  C07    0.00   0.0  0
- TKP  Var_01    C12  C11  C10  C09   55.79  30.0  1
- TKP  Var_02    C12  C13  C14  C09  -56.02  30.0  1
- TKP  Var_03    C13  C12  C11  C10  -55.26  30.0  1
- TKP  Var_04    C14  C13  C12  C11   55.54  30.0  1
- TKP  Var_05    C23  C22  N21  C20  -20.13  30.0  1
- TKP  Var_06    C19  C23  C22  N21   29.31  30.0  1
- TKP  Var_07    C36  C30  C02  C29   -0.90  30.0  3
- TKP  Var_08    O04  C03  C02  C30   56.56  30.0  3
- TKP  Var_09    H23  C01  C02  C30  178.61  30.0  3
- TKP  Var_10    H20  C29  C02  C30  179.88  30.0  3
- TKP  Var_11    O28  C05  O04  C03   -2.15  30.0  3
- TKP  Var_12    C07  N06  C05  O04  171.41  30.0  2
+ TKP  CONST_01  C34  C35  C36  C30     0.00   0.0  0
+ TKP  CONST_02  C34  C32  C31  C30     0.00   0.0  0
+ TKP  CONST_03  C35  C34  C32  C31     0.00   0.0  0
+ TKP  CONST_04  C35  C36  C30  C31     0.00   0.0  0
+ TKP  CONST_05  C36  C35  C34  C32     0.00   0.0  0
+ TKP  CONST_06  C36  C30  C31  C32     0.00   0.0  0
+ TKP  CONST_07  C19  C20  N21  C22     0.00   0.0  0
+ TKP  CONST_08  C35  C36  C30  C02   180.00   0.0  0
+ TKP  CONST_09  C32  C31  C30  C02   180.00   0.0  0
+ TKP  CONST_10  CL3  C32  C31  C30   180.00   0.0  0
+ TKP  CONST_11  CL3  C32  C34  C35   180.00   0.0  0
+ TKP  CONST_12  C22  N21  C20  O24   180.00   0.0  0
+ TKP  CONST_13  H35  C35  C36  C30   180.00   0.0  0
+ TKP  CONST_14  H34  C34  C32  C31   180.00   0.0  0
+ TKP  CONST_15  H36  C36  C30  C31   180.00   0.0  0
+ TKP  CONST_16  H33  C31  C32  C34   180.00   0.0  0
+ TKP  CONST_17  H39  N21  C20  C19   180.00   0.0  0
+ TKP  CONST_18  C17  N16  C15  C07   180.00   0.0  0
+ TKP  CONST_19  C17  N16  C15  O27     0.00   0.0  0
+ TKP  CONST_20  H38  N16  C15  C07     0.00   0.0  0
+ TKP  Var_01    C12  C11  C10  C09    55.79  30.0  1
+ TKP  Var_02    C12  C13  C14  C09   -56.02  30.0  1
+ TKP  Var_03    C13  C12  C11  C10   -55.26  30.0  1
+ TKP  Var_04    C14  C13  C12  C11    55.54  30.0  1
+ TKP  Var_05    C23  C22  N21  C20   -20.13  30.0  1
+ TKP  Var_06    C19  C23  C22  N21    29.31  30.0  1
+ TKP  Var_07    C36  C30  C02  C29    -0.90  30.0  3
+ TKP  Var_08    O04  C03  C02  C30    56.56  30.0  3
+ TKP  Var_09    H23  C01  C02  C30   178.61  30.0  3
+ TKP  Var_10    H20  C29  C02  C30   179.88  30.0  3
+ TKP  Var_11    O28  C05  O04  C03    -2.15  30.0  3
+ TKP  Var_12    C07  N06  C05  O04   171.41  30.0  2
+ TKP  Var_13    C13  C14  C09  C10    54.93  30.0  1
+ TKP  Var_14    C14  C09  C10  C11   -54.98  30.0  1
+ TKP  Var_15    C22  C23  C19  C20   -28.66  30.0  1
+ TKP  Var_16    C23  C19  C20  N21    17.46  30.0  1
+ TKP  Var_17    C11  C10  C09  C08  -177.84  30.0  1
+ TKP  Var_18    C13  C14  C09  C08   178.49  30.0  1
+ TKP  Var_19    C18  C19  C20  N21   143.84  30.0  1
+ TKP  Var_20    C18  C19  C23  C22  -153.12  30.0  1
+ TKP  Var_21    O24  C20  C19  C23  -163.45  30.0  1
+ TKP  Var_22    H9   C14  C09  C10   -66.21  30.0  1
+ TKP  Var_23    H10  C14  C09  C10   177.50  30.0  1
+ TKP  Var_24    H31  C09  C10  C11    62.51  30.0  1
+ TKP  Var_25    H16  C23  C19  C20    88.68  30.0  1
+ TKP  Var_26    H17  C23  C19  C20  -150.48  30.0  1
+ TKP  Var_27    H32  C19  C20  N21   -96.33  30.0  1
+ TKP  Var_28    C10  C09  C08  C07   -70.38  30.0  1
+ TKP  Var_29    C14  C09  C08  C07   167.03  30.0  1
+ TKP  Var_30    C17  C18  C19  C20   178.48  30.0  3
+ TKP  Var_31    C17  C18  C19  C23   -62.41  30.0  3
+ TKP  Var_32    O24  C20  C19  C18   -37.07  30.0  1
+ TKP  Var_33    H29  C08  C09  C10    51.30  30.0  3
+ TKP  Var_34    H30  C08  C09  C10   167.25  30.0  3
+ TKP  Var_35    H12  C18  C19  C20   -60.37  30.0  3
+ TKP  Var_36    H13  C18  C19  C20    56.08  30.0  3
+ TKP  Var_37    C09  C08  C07  N06   -69.45  30.0  3
+ TKP  Var_38    C09  C08  C07  C15   169.08  30.0  3
+ TKP  Var_39    N16  C17  C18  C19   -55.07  30.0  3
+ TKP  Var_40    C25  C17  C18  C19  -178.00  30.0  3
+ TKP  Var_41    H28  C07  C08  C09    49.43  30.0  3
+ TKP  Var_42    H11  C17  C18  C19    62.71  30.0  3
+ TKP  Var_43    C05  O04  C03  C02   178.17  30.0  3
+ TKP  Var_44    C08  C07  N06  C05   173.75  30.0  3
+ TKP  Var_45    C15  C07  N06  C05   -65.21  30.0  3
+ TKP  Var_46    N16  C15  C07  N06   140.62  30.0  3
+ TKP  Var_47    O27  C15  C07  N06   -40.67  30.0  3
+ TKP  Var_48    C18  C17  N16  C15   118.04  30.0  3
+ TKP  Var_49    C25  C17  N16  C15  -119.05  30.0  3
+ TKP  Var_50    C08  C07  C15  O27    80.42  30.0  1
+ TKP  Var_51    N16  C15  C07  C08   -98.29  30.0  3
+ TKP  Var_52    O26  C25  C17  C18  -177.59  30.0  3
+ TKP  Var_53    O26  C25  C17  N16    59.39  30.0  3
+ TKP  Var_54    H18  C25  C17  C18   -55.60  30.0  3
+ TKP  Var_55    H19  C25  C17  C18    60.24  30.0  3
+ TKP  Var_56    H40  O26  C25  C17  -177.46  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5XP  5XP  '(2~{S})-3-[5-[2-[[3-(aminomethyl)phenyl]methyl]-1,2,3,4-tetrazol-5-yl]-3-oxidanyl-1,2-oxazol-4-yl]-2-azanyl-propanoic acid'  ligand  42  26  .  2022-07-23  2022-07-26
+ 5XP  5XP  '(2~{S})-3-[5-[2-[[3-(aminomethyl)phenyl]methyl]-1,2,3,4-tetrazol-5-yl]-3-oxidanyl-1,2-oxazol-4-yl]-2-azanyl-propanoic acid'  ligand  42  26  .  2022-07-23  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5XP
@@ -223,50 +224,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5XP  CONST_01  N4   O3   C2   C1     0.00   0.0  0
- 5XP  CONST_02  N7   C6   C2   C1     0.00   0.0  0
- 5XP  CONST_03  N10  C6   C2   C1   180.00   0.0  0
- 5XP  CONST_04  O3   N4   C5   C1     0.00   0.0  0
- 5XP  CONST_05  C5   N4   O3   C2     0.00   0.0  0
- 5XP  CONST_06  N8   N7   C6   C2   180.00   0.0  0
- 5XP  CONST_07  N9   N10  C6   C2   180.00   0.0  0
- 5XP  CONST_08  N4   C5   C1   C2     0.00   0.0  0
- 5XP  CONST_09  N7   C6   C2   O3   180.00   0.0  0
- 5XP  CONST_10  N10  C6   C2   O3     0.00   0.0  0
- 5XP  CONST_11  C5   C1   C2   O3     0.00   0.0  0
- 5XP  CONST_12  C6   C2   O3   N4   180.00   0.0  0
- 5XP  CONST_13  C6   C2   C1   C5   180.00   0.0  0
- 5XP  CONST_14  N9   N8   N7   C6     0.00   0.0  0
- 5XP  CONST_15  N8   N9   N10  C6     0.00   0.0  0
- 5XP  CONST_16  N10  N9   N8   N7     0.00   0.0  0
- 5XP  CONST_17  N9   N10  C6   N7     0.00   0.0  0
- 5XP  CONST_18  N10  C6   N7   N8     0.00   0.0  0
- 5XP  CONST_19  C15  C14  C13  C12    0.00   0.0  0
- 5XP  CONST_20  C15  C16  C17  C12    0.00   0.0  0
- 5XP  CONST_21  C16  C17  C12  C13    0.00   0.0  0
- 5XP  CONST_22  C16  C15  C14  C13    0.00   0.0  0
- 5XP  CONST_23  C17  C12  C13  C14    0.00   0.0  0
- 5XP  CONST_24  C17  C16  C15  C14    0.00   0.0  0
- 5XP  CONST_25  O23  C5   C1   C2   180.00   0.0  0
- 5XP  CONST_26  O23  C5   N4   O3   180.00   0.0  0
- 5XP  CONST_27  C24  C1   C2   O3   180.00   0.0  0
- 5XP  CONST_28  C24  C1   C5   N4   180.00   0.0  0
- 5XP  CONST_29  C24  C1   C2   C6     0.00   0.0  0
- 5XP  CONST_30  C11  N9   N10  C6   180.00   0.0  0
- 5XP  CONST_31  C11  N9   N8   N7   180.00   0.0  0
- 5XP  CONST_32  C13  C14  C15  C11  180.00   0.0  0
- 5XP  CONST_33  C17  C16  C15  C11  180.00   0.0  0
- 5XP  CONST_34  C39  C13  C14  C15  180.00   0.0  0
- 5XP  CONST_35  C39  C13  C12  C17  180.00   0.0  0
- 5XP  CONST_36  H14  C14  C13  C12  180.00   0.0  0
- 5XP  CONST_37  H16  C16  C17  C12  180.00   0.0  0
- 5XP  CONST_38  H17  C17  C12  C13  180.00   0.0  0
- 5XP  CONST_39  H12  C12  C13  C14  180.00   0.0  0
- 5XP  Var_01    C15  C11  N9   N8    83.15  30.0  2
- 5XP  Var_02    C14  C15  C11  N9    82.62  30.0  3
- 5XP  Var_03    C25  C24  C1   C2    91.58  30.0  2
- 5XP  Var_04    N1   C39  C13  C12   38.07  30.0  1
- 5XP  Var_05    H2   N1   C39  C13   71.13  30.0  3
+ 5XP  CONST_01  N4    O3   C2   C1      0.00   0.0  0
+ 5XP  CONST_02  N7    C6   C2   C1      0.00   0.0  0
+ 5XP  CONST_03  N10   C6   C2   C1    180.00   0.0  0
+ 5XP  CONST_04  O3    N4   C5   C1      0.00   0.0  0
+ 5XP  CONST_05  C5    N4   O3   C2      0.00   0.0  0
+ 5XP  CONST_06  N8    N7   C6   C2    180.00   0.0  0
+ 5XP  CONST_07  N9    N10  C6   C2    180.00   0.0  0
+ 5XP  CONST_08  N4    C5   C1   C2      0.00   0.0  0
+ 5XP  CONST_09  N7    C6   C2   O3    180.00   0.0  0
+ 5XP  CONST_10  N10   C6   C2   O3      0.00   0.0  0
+ 5XP  CONST_11  C5    C1   C2   O3      0.00   0.0  0
+ 5XP  CONST_12  C6    C2   O3   N4    180.00   0.0  0
+ 5XP  CONST_13  C6    C2   C1   C5    180.00   0.0  0
+ 5XP  CONST_14  N9    N8   N7   C6      0.00   0.0  0
+ 5XP  CONST_15  N8    N9   N10  C6      0.00   0.0  0
+ 5XP  CONST_16  N10   N9   N8   N7      0.00   0.0  0
+ 5XP  CONST_17  N9    N10  C6   N7      0.00   0.0  0
+ 5XP  CONST_18  N10   C6   N7   N8      0.00   0.0  0
+ 5XP  CONST_19  C15   C14  C13  C12     0.00   0.0  0
+ 5XP  CONST_20  C15   C16  C17  C12     0.00   0.0  0
+ 5XP  CONST_21  C16   C17  C12  C13     0.00   0.0  0
+ 5XP  CONST_22  C16   C15  C14  C13     0.00   0.0  0
+ 5XP  CONST_23  C17   C12  C13  C14     0.00   0.0  0
+ 5XP  CONST_24  C17   C16  C15  C14     0.00   0.0  0
+ 5XP  CONST_25  O23   C5   C1   C2    180.00   0.0  0
+ 5XP  CONST_26  O23   C5   N4   O3    180.00   0.0  0
+ 5XP  CONST_27  C24   C1   C2   O3    180.00   0.0  0
+ 5XP  CONST_28  C24   C1   C5   N4    180.00   0.0  0
+ 5XP  CONST_29  C24   C1   C2   C6      0.00   0.0  0
+ 5XP  CONST_30  C11   N9   N10  C6    180.00   0.0  0
+ 5XP  CONST_31  C11   N9   N8   N7    180.00   0.0  0
+ 5XP  CONST_32  C13   C14  C15  C11   180.00   0.0  0
+ 5XP  CONST_33  C17   C16  C15  C11   180.00   0.0  0
+ 5XP  CONST_34  C39   C13  C14  C15   180.00   0.0  0
+ 5XP  CONST_35  C39   C13  C12  C17   180.00   0.0  0
+ 5XP  CONST_36  H14   C14  C13  C12   180.00   0.0  0
+ 5XP  CONST_37  H16   C16  C17  C12   180.00   0.0  0
+ 5XP  CONST_38  H17   C17  C12  C13   180.00   0.0  0
+ 5XP  CONST_39  H12   C12  C13  C14   180.00   0.0  0
+ 5XP  Var_01    C15   C11  N9   N8     83.15  30.0  2
+ 5XP  Var_02    C14   C15  C11  N9     82.62  30.0  3
+ 5XP  Var_03    C25   C24  C1   C2     91.58  30.0  2
+ 5XP  Var_04    N1    C39  C13  C12    38.07  30.0  1
+ 5XP  Var_05    H2    N1   C39  C13    71.13  30.0  3
+ 5XP  Var_06    H3    O23  C5   C1     -4.72  30.0  2
+ 5XP  Var_07    N29   C25  C24  C1    -58.42  30.0  3
+ 5XP  Var_08    C26   C25  C24  C1    172.76  30.0  3
+ 5XP  Var_09    H25   C25  C24  C1     57.68  30.0  3
+ 5XP  Var_10    O28   C26  C25  C24   128.36  30.0  2
+ 5XP  Var_11    O27   C26  C25  C24   -52.68  30.0  2
+ 5XP  Var_12    N29   C25  C26  O27  -177.80  30.0  3
+ 5XP  Var_13    N29   C25  C26  O28     3.24  30.0  3
+ 5XP  Var_14    H291  N29  C25  C24  -176.83  30.0  3
+ 5XP  Var_15    H292  N29  C25  C24   -63.46  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

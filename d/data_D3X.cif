@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- D3X  D3X  N-hydroxy-2-{[(4-methoxyphenyl)sulfonyl](2-{[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl]oxy}ethyl)amino}acetamide  ligand  57  31  .  2022-07-24  2022-07-26
+ D3X  D3X  N-hydroxy-2-{[(4-methoxyphenyl)sulfonyl](2-{[(2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl]oxy}ethyl)amino}acetamide  ligand  57  31  .  2022-07-24  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_D3X
@@ -281,31 +282,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- D3X  CONST_01  C13  C12  C14  C11     0.00   0.0  0
- D3X  CONST_02  C13  C15  C16  C11     0.00   0.0  0
- D3X  CONST_03  C16  C15  C13  C12     0.00   0.0  0
- D3X  CONST_04  C16  C11  C14  C12     0.00   0.0  0
- D3X  CONST_05  C15  C16  C11  C14     0.00   0.0  0
- D3X  CONST_06  C15  C13  C12  C14     0.00   0.0  0
- D3X  CONST_07  C15  C13  C12  S1    180.00   0.0  0
- D3X  CONST_08  C11  C14  C12  S1    180.00   0.0  0
- D3X  CONST_09  C14  C11  C16  O7    180.00   0.0  0
- D3X  CONST_10  C13  C15  C16  O7    180.00   0.0  0
- D3X  CONST_11  H15  C15  C16  C11   180.00   0.0  0
- D3X  CONST_12  H11  C11  C14  C12   180.00   0.0  0
- D3X  CONST_13  H14  C14  C12  C13   180.00   0.0  0
- D3X  CONST_14  H13  C13  C12  C14   180.00   0.0  0
- D3X  CONST_15  O11  N1   C3   O1      0.00   0.0  0
- D3X  CONST_16  O11  N1   C3   C10   180.00   0.0  0
- D3X  CONST_17  HN1  N1   C3   O1    180.00   0.0  0
- D3X  Var_01    C13  C12  S1   N2     96.55  30.0  2
- D3X  Var_02    C9   C8   O10  C1   -158.71  30.0  1
- D3X  Var_03    C12  S1   N2   C9    104.01  30.0  1
- D3X  Var_04    H17  C17  O7   C16   -60.98  30.0  3
- D3X  Var_05    N2   C10  C3   N1   -141.20  30.0  3
- D3X  Var_06    C8   C9   N2   S1     83.54  30.0  3
- D3X  Var_07    C3   C10  N2   S1     81.48  30.0  3
- D3X  Var_08    O10  C8   C9   N2     48.71  30.0  1
+ D3X  CONST_01  C13   C12  C14  C11     0.00   0.0  0
+ D3X  CONST_02  C13   C15  C16  C11     0.00   0.0  0
+ D3X  CONST_03  C16   C15  C13  C12     0.00   0.0  0
+ D3X  CONST_04  C16   C11  C14  C12     0.00   0.0  0
+ D3X  CONST_05  C15   C16  C11  C14     0.00   0.0  0
+ D3X  CONST_06  C15   C13  C12  C14     0.00   0.0  0
+ D3X  CONST_07  C15   C13  C12  S1    180.00   0.0  0
+ D3X  CONST_08  C11   C14  C12  S1    180.00   0.0  0
+ D3X  CONST_09  C14   C11  C16  O7    180.00   0.0  0
+ D3X  CONST_10  C13   C15  C16  O7    180.00   0.0  0
+ D3X  CONST_11  H15   C15  C16  C11   180.00   0.0  0
+ D3X  CONST_12  H11   C11  C14  C12   180.00   0.0  0
+ D3X  CONST_13  H14   C14  C12  C13   180.00   0.0  0
+ D3X  CONST_14  H13   C13  C12  C14   180.00   0.0  0
+ D3X  CONST_15  O11   N1   C3   O1      0.00   0.0  0
+ D3X  CONST_16  O11   N1   C3   C10   180.00   0.0  0
+ D3X  CONST_17  HN1   N1   C3   O1    180.00   0.0  0
+ D3X  Var_01    C13   C12  S1   N2     96.55  30.0  2
+ D3X  Var_02    C9    C8   O10  C1   -158.71  30.0  1
+ D3X  Var_03    C12   S1   N2   C9    104.01  30.0  1
+ D3X  Var_04    H17   C17  O7   C16   -60.98  30.0  3
+ D3X  Var_05    N2    C10  C3   N1   -141.20  30.0  3
+ D3X  Var_06    C8    C9   N2   S1     83.54  30.0  3
+ D3X  Var_07    C3    C10  N2   S1     81.48  30.0  3
+ D3X  Var_08    O10   C8   C9   N2     48.71  30.0  1
+ D3X  Var_09    C6    C7   C2   C1    -52.99  30.0  1
+ D3X  Var_10    C6    C5   O8   C1     62.50  30.0  1
+ D3X  Var_11    C5    O8   C1   C2    -62.83  30.0  1
+ D3X  Var_12    C5    C6   C7   C2     53.59  30.0  1
+ D3X  Var_13    O8    C1   C2   C7     56.40  30.0  1
+ D3X  Var_14    O8    C5   C6   C7    -56.54  30.0  1
+ D3X  Var_15    O5    C7   C2   C1   -172.90  30.0  1
+ D3X  Var_16    C4    C5   O8   C1   -175.45  30.0  1
+ D3X  Var_17    O6    C6   C7   C2    173.31  30.0  1
+ D3X  Var_18    C7    C6   C5   C4   -176.16  30.0  1
+ D3X  Var_19    O8    C1   C2   O4    175.05  30.0  1
+ D3X  Var_20    C6    C7   C2   O4   -173.86  30.0  1
+ D3X  Var_21    O5    C7   C6   C5    176.45  30.0  1
+ D3X  Var_22    O10   C1   O8   C5    178.94  30.0  1
+ D3X  Var_23    O8    C5   C6   O6   -178.03  30.0  1
+ D3X  Var_24    O10   C1   C2   C7    174.87  30.0  1
+ D3X  Var_25    H7    C7   C2   C1     64.75  30.0  1
+ D3X  Var_26    H5    C5   O8   C1    -56.54  30.0  1
+ D3X  Var_27    H6    C6   C7   C2    -64.39  30.0  1
+ D3X  Var_28    H1    C1   O8   C5     57.71  30.0  1
+ D3X  Var_29    H2    C2   C7   C6     64.87  30.0  1
+ D3X  Var_30    C8    O10  C1   C2    148.51  30.0  3
+ D3X  Var_31    O6    C6   C5   C4     62.36  30.0  1
+ D3X  Var_32    O10   C1   C2   O4    -66.47  30.0  1
+ D3X  Var_33    O5    C7   C2   O4     66.23  30.0  1
+ D3X  Var_34    O6    C6   C7   O5    -63.84  30.0  1
+ D3X  Var_35    O9    C4   C5   C6   -176.34  30.0  2
+ D3X  Var_36    C8    O10  C1   O8    -91.63  30.0  3
+ D3X  Var_37    O9    C4   C5   O8     63.16  30.0  2
+ D3X  Var_38    C17   O7   C16  C11   178.91  30.0  2
+ D3X  Var_39    C17   O7   C16  C15    -1.28  30.0  2
+ D3X  Var_40    HO4   O4   C2   C1     58.53  30.0  3
+ D3X  Var_41    HO5   O5   C7   C2    -71.04  30.0  3
+ D3X  Var_42    HO6   O6   C6   C5    175.27  30.0  3
+ D3X  Var_43    H4    C4   C5   C6    -54.65  30.0  2
+ D3X  Var_44    H4A   C4   C5   C6     61.50  30.0  2
+ D3X  Var_45    HO9   O9   C4   C5    177.95  30.0  3
+ D3X  Var_46    HO11  O11  N1   C3    -87.80  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 32R  32R  '(2R)-2-[4-(aminomethyl)benzyl]-3-[(R)-[(1R)-1-amino-3-phenylpropyl](hydroxy)phosphoryl]propanoic acid'  ligand  54  27  .  2021-08-04  2021-08-04  
+ 32R  32R  '(2R)-2-[4-(aminomethyl)benzyl]-3-[(R)-[(1R)-1-amino-3-phenylpropyl](hydroxy)phosphoryl]propanoic acid'  ligand  54  27  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_32R
@@ -269,40 +270,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 32R  CONST_01  C20   C19  C17  C8     0.00   0.0  0
- 32R  CONST_02  C20   C21  C22  C8     0.00   0.0  0
- 32R  CONST_03  C21   C22  C8   C17    0.00   0.0  0
- 32R  CONST_04  C21   C20  C19  C17    0.00   0.0  0
- 32R  CONST_05  C38   C37  C36  C18    0.00   0.0  0
- 32R  CONST_06  C38   C39  C40  C18    0.00   0.0  0
- 32R  CONST_07  C22   C8   C17  C19    0.00   0.0  0
- 32R  CONST_08  C22   C21  C20  C19    0.00   0.0  0
- 32R  CONST_09  C39   C40  C18  C36    0.00   0.0  0
- 32R  CONST_10  C39   C38  C37  C36    0.00   0.0  0
- 32R  CONST_11  C40   C18  C36  C37    0.00   0.0  0
- 32R  CONST_12  C40   C39  C38  C37    0.00   0.0  0
- 32R  CONST_13  C19   C17  C8   C6   180.00   0.0  0
- 32R  CONST_14  C21   C22  C8   C6   180.00   0.0  0
- 32R  CONST_15  C37   C36  C18  C16  180.00   0.0  0
- 32R  CONST_16  C39   C40  C18  C16  180.00   0.0  0
- 32R  CONST_17  C36   C37  C38  C23  180.00   0.0  0
- 32R  CONST_18  C40   C39  C38  C23  180.00   0.0  0
- 32R  CONST_19  H191  C19  C17  C8   180.00   0.0  0
- 32R  CONST_20  H211  C21  C22  C8   180.00   0.0  0
- 32R  CONST_21  H221  C22  C8   C17  180.00   0.0  0
- 32R  CONST_22  H201  C20  C19  C17  180.00   0.0  0
- 32R  CONST_23  H371  C37  C36  C18  180.00   0.0  0
- 32R  CONST_24  H391  C39  C40  C18  180.00   0.0  0
- 32R  CONST_25  H171  C17  C19  C20  180.00   0.0  0
- 32R  CONST_26  H401  C40  C18  C36  180.00   0.0  0
- 32R  CONST_27  H361  C36  C37  C38  180.00   0.0  0
- 32R  CONST_28  H3    O24  C15  C13  180.00   0.0  0
- 32R  Var_01    C17   C8   C6   C1    93.58  30.0  2
- 32R  Var_02    C36   C18  C16  C13  101.97  30.0  2
- 32R  Var_03    C37   C38  C23  N24  140.05  30.0  2
- 32R  Var_04    C8    C6   C1   C3   169.83  30.0  3
- 32R  Var_05    H241  N24  C23  C38  174.24  30.0  3
- 32R  Var_06    C13   C11  P11  C3   179.09  30.0  3
+ 32R  CONST_01  C20   C19  C17  C8      0.00   0.0  0
+ 32R  CONST_02  C20   C21  C22  C8      0.00   0.0  0
+ 32R  CONST_03  C21   C22  C8   C17     0.00   0.0  0
+ 32R  CONST_04  C21   C20  C19  C17     0.00   0.0  0
+ 32R  CONST_05  C38   C37  C36  C18     0.00   0.0  0
+ 32R  CONST_06  C38   C39  C40  C18     0.00   0.0  0
+ 32R  CONST_07  C22   C8   C17  C19     0.00   0.0  0
+ 32R  CONST_08  C22   C21  C20  C19     0.00   0.0  0
+ 32R  CONST_09  C39   C40  C18  C36     0.00   0.0  0
+ 32R  CONST_10  C39   C38  C37  C36     0.00   0.0  0
+ 32R  CONST_11  C40   C18  C36  C37     0.00   0.0  0
+ 32R  CONST_12  C40   C39  C38  C37     0.00   0.0  0
+ 32R  CONST_13  C19   C17  C8   C6    180.00   0.0  0
+ 32R  CONST_14  C21   C22  C8   C6    180.00   0.0  0
+ 32R  CONST_15  C37   C36  C18  C16   180.00   0.0  0
+ 32R  CONST_16  C39   C40  C18  C16   180.00   0.0  0
+ 32R  CONST_17  C36   C37  C38  C23   180.00   0.0  0
+ 32R  CONST_18  C40   C39  C38  C23   180.00   0.0  0
+ 32R  CONST_19  H191  C19  C17  C8    180.00   0.0  0
+ 32R  CONST_20  H211  C21  C22  C8    180.00   0.0  0
+ 32R  CONST_21  H221  C22  C8   C17   180.00   0.0  0
+ 32R  CONST_22  H201  C20  C19  C17   180.00   0.0  0
+ 32R  CONST_23  H371  C37  C36  C18   180.00   0.0  0
+ 32R  CONST_24  H391  C39  C40  C18   180.00   0.0  0
+ 32R  CONST_25  H171  C17  C19  C20   180.00   0.0  0
+ 32R  CONST_26  H401  C40  C18  C36   180.00   0.0  0
+ 32R  CONST_27  H361  C36  C37  C38   180.00   0.0  0
+ 32R  CONST_28  H3    O24  C15  C13   180.00   0.0  0
+ 32R  Var_01    C17   C8   C6   C1     93.58  30.0  2
+ 32R  Var_02    C36   C18  C16  C13   101.97  30.0  2
+ 32R  Var_03    C37   C38  C23  N24   140.05  30.0  2
+ 32R  Var_04    C8    C6   C1   C3    169.83  30.0  3
+ 32R  Var_05    H241  N24  C23  C38   174.24  30.0  3
+ 32R  Var_06    C13   C11  P11  C3    179.09  30.0  3
+ 32R  Var_07    C18   C16  C13  C11  -178.09  30.0  3
+ 32R  Var_08    C18   C16  C13  C15   -56.85  30.0  3
+ 32R  Var_09    H131  C13  C16  C18    61.80  30.0  2
+ 32R  Var_10    C6    C1   C3   P11    61.83  30.0  2
+ 32R  Var_11    C15   C13  C11  P11    68.21  30.0  3
+ 32R  Var_12    C16   C13  C11  P11  -171.79  30.0  3
+ 32R  Var_13    C11   P11  C3   C1    171.97  30.0  1
+ 32R  Var_14    O12   P11  C3   C1     46.07  30.0  1
+ 32R  Var_15    O13   P11  C3   C1    -75.80  30.0  1
+ 32R  Var_16    N10   C3   C1   C6   -174.73  30.0  3
+ 32R  Var_17    C11   P11  C3   N10    49.76  30.0  1
+ 32R  Var_18    O12   P11  C3   N10   -76.13  30.0  1
+ 32R  Var_19    O13   P11  C3   N10   161.99  30.0  1
+ 32R  Var_20    O23   C15  C13  C11    52.72  30.0  3
+ 32R  Var_21    O24   C15  C13  C11  -130.26  30.0  3
+ 32R  Var_22    O23   C15  C13  C16   -67.94  30.0  3
+ 32R  Var_23    O24   C15  C13  C16   109.08  30.0  3
+ 32R  Var_24    H101  N10  C3   P11   -67.18  30.0  3
+ 32R  Var_25    H102  N10  C3   P11    53.22  30.0  3
+ 32R  Var_26    H1    O13  P11  C3    -54.14  30.0  3
+ 32R  Var_27    H31   C3   C1   C6    -57.40  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

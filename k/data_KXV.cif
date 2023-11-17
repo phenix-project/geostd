@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KXV  KXV  '{(4Z)-2-[(1R)-1-amino-2-sulfanylethyl]-4-[(4-hydroxy-3-methoxyphenyl)methylidene]-5-oxo-4,5-dihydro-1H-imidazol-1-yl}acetic acid'  L-peptide  40  24  .  2022-03-22  2022-07-25
+ KXV  KXV  '{(4Z)-2-[(1R)-1-amino-2-sulfanylethyl]-4-[(4-hydroxy-3-methoxyphenyl)methylidene]-5-oxo-4,5-dihydro-1H-imidazol-1-yl}acetic acid'  L-peptide  40  24  .  2022-03-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_KXV
@@ -213,38 +214,45 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KXV  CONST_01  CZ   CE1  CD1  CG2    0.00   0.0  0
- KXV  CONST_02  CZ   CE2  CD2  CG2    0.00   0.0  0
- KXV  CONST_03  CE2  CZ   CE1  CD1    0.00   0.0  0
- KXV  CONST_04  CE2  CD2  CG2  CD1    0.00   0.0  0
- KXV  CONST_05  CE1  CZ   CE2  CD2    0.00   0.0  0
- KXV  CONST_06  CE1  CD1  CG2  CD2    0.00   0.0  0
- KXV  CONST_07  C2   CA2  N2   C1     0.00   0.0  0
- KXV  CONST_08  CA2  C2   N3   C1     0.00   0.0  0
- KXV  CONST_09  N3   C2   CA2  N2     0.00   0.0  0
- KXV  CONST_10  C2   N3   C1   N2     0.00   0.0  0
- KXV  CONST_11  CA2  N2   C1   N3     0.00   0.0  0
- KXV  CONST_12  CE1  CD1  CG2  CB2  180.00   0.0  0
- KXV  CONST_13  CE2  CD2  CG2  CB2  180.00   0.0  0
- KXV  CONST_14  O4   CE1  CD1  CG2  180.00   0.0  0
- KXV  CONST_15  OH   CZ   CE1  CD1  180.00   0.0  0
- KXV  CONST_16  OH   CZ   CE2  CD2  180.00   0.0  0
- KXV  CONST_17  O4   CE1  CZ   CE2  180.00   0.0  0
- KXV  CONST_18  CA2  N2   C1   CA1  180.00   0.0  0
- KXV  CONST_19  C2   N3   C1   CA1  180.00   0.0  0
- KXV  CONST_20  O2   C2   N3   C1   180.00   0.0  0
- KXV  CONST_21  CA3  N3   C1   N2   180.00   0.0  0
- KXV  CONST_22  CA3  N3   C2   CA2  180.00   0.0  0
- KXV  CONST_23  HE2  CE2  CD2  CG2  180.00   0.0  0
- KXV  CONST_24  HD2  CD2  CG2  CD1  180.00   0.0  0
- KXV  CONST_25  HD1  CD1  CG2  CD2  180.00   0.0  0
- KXV  CONST_26  CA3  N3   C1   CA1    0.00   0.0  0
- KXV  CONST_27  CA3  N3   C2   O2     0.00   0.0  0
- KXV  Var_01    CG2  CB2  CA2  N2     0.53  30.0  2
- KXV  Var_02    CD1  CG2  CB2  CA2  179.24  30.0  3
- KXV  Var_03    C    CA3  N3   C1    93.14  30.0  3
- KXV  Var_04    O    C    CA3  N3    -8.00  30.0  3
- KXV  Var_05    H2   CF   O4   CE1  -61.48  30.0  3
+ KXV  CONST_01  CZ    CE1  CD1  CG2     0.00   0.0  0
+ KXV  CONST_02  CZ    CE2  CD2  CG2     0.00   0.0  0
+ KXV  CONST_03  CE2   CZ   CE1  CD1     0.00   0.0  0
+ KXV  CONST_04  CE2   CD2  CG2  CD1     0.00   0.0  0
+ KXV  CONST_05  CE1   CZ   CE2  CD2     0.00   0.0  0
+ KXV  CONST_06  CE1   CD1  CG2  CD2     0.00   0.0  0
+ KXV  CONST_07  C2    CA2  N2   C1      0.00   0.0  0
+ KXV  CONST_08  CA2   C2   N3   C1      0.00   0.0  0
+ KXV  CONST_09  N3    C2   CA2  N2      0.00   0.0  0
+ KXV  CONST_10  C2    N3   C1   N2      0.00   0.0  0
+ KXV  CONST_11  CA2   N2   C1   N3      0.00   0.0  0
+ KXV  CONST_12  CE1   CD1  CG2  CB2   180.00   0.0  0
+ KXV  CONST_13  CE2   CD2  CG2  CB2   180.00   0.0  0
+ KXV  CONST_14  O4    CE1  CD1  CG2   180.00   0.0  0
+ KXV  CONST_15  OH    CZ   CE1  CD1   180.00   0.0  0
+ KXV  CONST_16  OH    CZ   CE2  CD2   180.00   0.0  0
+ KXV  CONST_17  O4    CE1  CZ   CE2   180.00   0.0  0
+ KXV  CONST_18  CA2   N2   C1   CA1   180.00   0.0  0
+ KXV  CONST_19  C2    N3   C1   CA1   180.00   0.0  0
+ KXV  CONST_20  O2    C2   N3   C1    180.00   0.0  0
+ KXV  CONST_21  CA3   N3   C1   N2    180.00   0.0  0
+ KXV  CONST_22  CA3   N3   C2   CA2   180.00   0.0  0
+ KXV  CONST_23  HE2   CE2  CD2  CG2   180.00   0.0  0
+ KXV  CONST_24  HD2   CD2  CG2  CD1   180.00   0.0  0
+ KXV  CONST_25  HD1   CD1  CG2  CD2   180.00   0.0  0
+ KXV  CONST_26  CA3   N3   C1   CA1     0.00   0.0  0
+ KXV  CONST_27  CA3   N3   C2   O2      0.00   0.0  0
+ KXV  Var_01    CG2   CB2  CA2  N2      0.53  30.0  2
+ KXV  Var_02    CD1   CG2  CB2  CA2   179.24  30.0  3
+ KXV  Var_03    C     CA3  N3   C1     93.14  30.0  3
+ KXV  Var_04    O     C    CA3  N3     -8.00  30.0  3
+ KXV  Var_05    H2    CF   O4   CE1   -61.48  30.0  3
+ KXV  Var_06    HA1   CA1  C1   N2   -151.06  30.0  2
+ KXV  Var_07    H1    OH   CZ   CE1    -0.96  30.0  2
+ KXV  Var_08    HB11  CB1  CA1  C1     58.67  30.0  2
+ KXV  Var_09    HB12  CB1  CA1  C1    -60.23  30.0  2
+ KXV  Var_10    HN1   N    CA1  C1    -64.52  30.0  3
+ KXV  Var_11    HN2   N    CA1  C1     51.83  30.0  3
+ KXV  Var_12    HG1   SG1  CB1  CA1  -149.74  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

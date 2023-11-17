@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JPE  JPE  '[(2~{R},3~{S},4~{R},5~{R})-5-(6-azanyl-2-pyridin-3-yl-purin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl ~{N}-[(2~{S})-2-azanyl-3-oxidanyl-propanoyl]sulfamate'  ligand  57  35  .  2021-08-12  2021-08-12  
+ JPE  JPE  '[(2~{R},3~{S},4~{R},5~{R})-5-(6-azanyl-2-pyridin-3-yl-purin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl ~{N}-[(2~{S})-2-azanyl-3-oxidanyl-propanoyl]sulfamate'  ligand  57  35  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JPE
@@ -284,55 +285,100 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JPE  CONST_01  C12  N6   C8   N2   180.00   0.0  0
- JPE  CONST_02  C11  C9   C8   N2   180.00   0.0  0
- JPE  CONST_03  N3   C9   C8   N2     0.00   0.0  0
- JPE  CONST_04  C9   N3   C10  N2     0.00   0.0  0
- JPE  CONST_05  N6   C8   N2   C10  180.00   0.0  0
- JPE  CONST_06  C9   C8   N2   C10    0.00   0.0  0
- JPE  CONST_07  C11  C9   N3   C10  180.00   0.0  0
- JPE  CONST_08  C8   C9   N3   C10    0.00   0.0  0
- JPE  CONST_09  N5   C11  C9   N3   180.00   0.0  0
- JPE  CONST_10  N6   C8   C9   N3   180.00   0.0  0
- JPE  CONST_11  C8   N2   C10  N3     0.00   0.0  0
- JPE  CONST_12  C12  N5   C11  C9     0.00   0.0  0
- JPE  CONST_13  C12  N6   C8   C9     0.00   0.0  0
- JPE  CONST_14  C13  C12  N5   C11  180.00   0.0  0
- JPE  CONST_15  N6   C12  N5   C11    0.00   0.0  0
- JPE  CONST_16  N6   C8   C9   C11    0.00   0.0  0
- JPE  CONST_17  C17  C13  C12  N5   180.00   0.0  0
- JPE  CONST_18  C14  C13  C12  N5     0.00   0.0  0
- JPE  CONST_19  C8   N6   C12  N5     0.00   0.0  0
- JPE  CONST_20  C8   C9   C11  N5     0.00   0.0  0
- JPE  CONST_21  N7   C17  C13  C12  180.00   0.0  0
- JPE  CONST_22  C15  C14  C13  C12  180.00   0.0  0
- JPE  CONST_23  C17  C13  C12  N6     0.00   0.0  0
- JPE  CONST_24  C14  C13  C12  N6   180.00   0.0  0
- JPE  CONST_25  C13  C12  N6   C8   180.00   0.0  0
- JPE  CONST_26  C16  N7   C17  C13    0.00   0.0  0
- JPE  CONST_27  C16  C15  C14  C13    0.00   0.0  0
- JPE  CONST_28  C15  C16  N7   C17    0.00   0.0  0
- JPE  CONST_29  C15  C14  C13  C17    0.00   0.0  0
- JPE  CONST_30  C14  C15  C16  N7     0.00   0.0  0
- JPE  CONST_31  C14  C13  C17  N7     0.00   0.0  0
- JPE  CONST_32  N6   C8   N2   C7     0.00   0.0  0
- JPE  CONST_33  C9   C8   N2   C7   180.00   0.0  0
- JPE  CONST_34  N3   C10  N2   C7   180.00   0.0  0
- JPE  CONST_35  N4   C11  C9   N3     0.00   0.0  0
- JPE  CONST_36  C12  N5   C11  N4   180.00   0.0  0
- JPE  CONST_37  C8   C9   C11  N4   180.00   0.0  0
- JPE  CONST_38  H17  C10  N2   C7     0.00   0.0  0
- JPE  CONST_39  H20  C17  C13  C12    0.00   0.0  0
- JPE  CONST_40  H23  C14  C13  C12    0.00   0.0  0
- JPE  CONST_41  H22  C15  C14  C13  180.00   0.0  0
- JPE  CONST_42  H21  C16  N7   C17  180.00   0.0  0
- JPE  CONST_43  H18  N4   C11  C9     0.00   0.0  0
- JPE  CONST_44  H19  N4   C11  C9   180.00   0.0  0
- JPE  CONST_45  S    N1   C2   C    180.00   0.0  0
- JPE  CONST_46  O1   C2   N1   S      0.00   0.0  0
- JPE  CONST_47  H6   N1   C2   C      0.00   0.0  0
- JPE  Var_01    C4   C3   O4   S    179.35  30.0  2
- JPE  Var_02    C2   N1   S    O3   177.60  30.0  3
+ JPE  CONST_01  C12  N6   C8   N2    180.00   0.0  0
+ JPE  CONST_02  C11  C9   C8   N2    180.00   0.0  0
+ JPE  CONST_03  N3   C9   C8   N2      0.00   0.0  0
+ JPE  CONST_04  C9   N3   C10  N2      0.00   0.0  0
+ JPE  CONST_05  N6   C8   N2   C10   180.00   0.0  0
+ JPE  CONST_06  C9   C8   N2   C10     0.00   0.0  0
+ JPE  CONST_07  C11  C9   N3   C10   180.00   0.0  0
+ JPE  CONST_08  C8   C9   N3   C10     0.00   0.0  0
+ JPE  CONST_09  N5   C11  C9   N3    180.00   0.0  0
+ JPE  CONST_10  N6   C8   C9   N3    180.00   0.0  0
+ JPE  CONST_11  C8   N2   C10  N3      0.00   0.0  0
+ JPE  CONST_12  C12  N5   C11  C9      0.00   0.0  0
+ JPE  CONST_13  C12  N6   C8   C9      0.00   0.0  0
+ JPE  CONST_14  C13  C12  N5   C11   180.00   0.0  0
+ JPE  CONST_15  N6   C12  N5   C11     0.00   0.0  0
+ JPE  CONST_16  N6   C8   C9   C11     0.00   0.0  0
+ JPE  CONST_17  C17  C13  C12  N5    180.00   0.0  0
+ JPE  CONST_18  C14  C13  C12  N5      0.00   0.0  0
+ JPE  CONST_19  C8   N6   C12  N5      0.00   0.0  0
+ JPE  CONST_20  C8   C9   C11  N5      0.00   0.0  0
+ JPE  CONST_21  N7   C17  C13  C12   180.00   0.0  0
+ JPE  CONST_22  C15  C14  C13  C12   180.00   0.0  0
+ JPE  CONST_23  C17  C13  C12  N6      0.00   0.0  0
+ JPE  CONST_24  C14  C13  C12  N6    180.00   0.0  0
+ JPE  CONST_25  C13  C12  N6   C8    180.00   0.0  0
+ JPE  CONST_26  C16  N7   C17  C13     0.00   0.0  0
+ JPE  CONST_27  C16  C15  C14  C13     0.00   0.0  0
+ JPE  CONST_28  C15  C16  N7   C17     0.00   0.0  0
+ JPE  CONST_29  C15  C14  C13  C17     0.00   0.0  0
+ JPE  CONST_30  C14  C15  C16  N7      0.00   0.0  0
+ JPE  CONST_31  C14  C13  C17  N7      0.00   0.0  0
+ JPE  CONST_32  N6   C8   N2   C7      0.00   0.0  0
+ JPE  CONST_33  C9   C8   N2   C7    180.00   0.0  0
+ JPE  CONST_34  N3   C10  N2   C7    180.00   0.0  0
+ JPE  CONST_35  N4   C11  C9   N3      0.00   0.0  0
+ JPE  CONST_36  C12  N5   C11  N4    180.00   0.0  0
+ JPE  CONST_37  C8   C9   C11  N4    180.00   0.0  0
+ JPE  CONST_38  H17  C10  N2   C7      0.00   0.0  0
+ JPE  CONST_39  H20  C17  C13  C12     0.00   0.0  0
+ JPE  CONST_40  H23  C14  C13  C12     0.00   0.0  0
+ JPE  CONST_41  H22  C15  C14  C13   180.00   0.0  0
+ JPE  CONST_42  H21  C16  N7   C17   180.00   0.0  0
+ JPE  CONST_43  H18  N4   C11  C9      0.00   0.0  0
+ JPE  CONST_44  H19  N4   C11  C9    180.00   0.0  0
+ JPE  CONST_45  S    N1   C2   C     180.00   0.0  0
+ JPE  CONST_46  O1   C2   N1   S       0.00   0.0  0
+ JPE  CONST_47  H6   N1   C2   C       0.00   0.0  0
+ JPE  Var_01    C4   C3   O4   S     179.35  30.0  2
+ JPE  Var_02    C2   N1   S    O3    177.60  30.0  3
+ JPE  Var_03    C7   C6   C5   C4    -38.00  30.0  1
+ JPE  Var_04    C6   C7   O5   C4    -22.32  30.0  1
+ JPE  Var_05    N2   C7   O5   C4   -146.45  30.0  1
+ JPE  Var_06    C5   C6   C7   O5     37.90  30.0  1
+ JPE  Var_07    C8   N2   C7   O5   -112.21  30.0  1
+ JPE  Var_08    C10  N2   C7   O5     63.86  30.0  1
+ JPE  Var_09    C6   C5   C4   O5     26.49  30.0  1
+ JPE  Var_10    C5   C4   O5   C7     -2.99  30.0  1
+ JPE  Var_11    C8   N2   C7   C6    129.59  30.0  1
+ JPE  Var_12    C10  N2   C7   C6    -54.34  30.0  1
+ JPE  Var_13    N2   C7   C6   C5    158.64  30.0  1
+ JPE  Var_14    C6   C5   C4   C3    -93.70  30.0  1
+ JPE  Var_15    C7   O5   C4   C3    117.63  30.0  1
+ JPE  Var_16    O6   C6   C5   C4   -156.24  30.0  1
+ JPE  Var_17    O6   C6   C7   O5    159.81  30.0  1
+ JPE  Var_18    O7   C5   C4   O5    -90.41  30.0  1
+ JPE  Var_19    O7   C5   C6   C7     76.92  30.0  1
+ JPE  Var_20    N2   C7   C6   O6    -79.46  30.0  1
+ JPE  Var_21    H13  C6   C5   C4     77.54  30.0  1
+ JPE  Var_22    H12  C7   O5   C4     96.72  30.0  1
+ JPE  Var_23    H15  C5   C4   O5    145.81  30.0  1
+ JPE  Var_24    H11  C4   O5   C7   -122.55  30.0  1
+ JPE  Var_25    C5   C4   C3   O4    174.56  30.0  1
+ JPE  Var_26    O5   C4   C3   O4     56.63  30.0  1
+ JPE  Var_27    O7   C5   C4   C3    149.40  30.0  1
+ JPE  Var_28    O7   C5   C6   O6    -41.32  30.0  1
+ JPE  Var_29    H16  O7   C5   C4    160.69  30.0  3
+ JPE  Var_30    H9   C3   C4   O5    -63.34  30.0  3
+ JPE  Var_31    H10  C3   C4   O5    176.20  30.0  3
+ JPE  Var_32    H14  O6   C6   C7    161.70  30.0  3
+ JPE  Var_33    N1   C2   C    N     131.93  30.0  1
+ JPE  Var_34    O1   C2   C    N     -48.43  30.0  1
+ JPE  Var_35    O    C1   C    N     -62.79  30.0  3
+ JPE  Var_36    C2   C    C1   O     175.97  30.0  3
+ JPE  Var_37    C3   O4   S    O3    -49.88  30.0  2
+ JPE  Var_38    C3   O4   S    O2    177.72  30.0  2
+ JPE  Var_39    C3   O4   S    N1     61.92  30.0  3
+ JPE  Var_40    C1   C    C2   N1   -102.27  30.0  3
+ JPE  Var_41    C1   C    C2   O1     77.37  30.0  3
+ JPE  Var_42    H7   C1   C    N      58.56  30.0  3
+ JPE  Var_43    H8   C1   C    N     175.60  30.0  3
+ JPE  Var_44    H5   O    C1   C     174.69  30.0  3
+ JPE  Var_45    H4   C    C1   O      57.81  30.0  3
+ JPE  Var_46    H1   N    C    C2     67.41  30.0  3
+ JPE  Var_47    H2   N    C    C2   -175.47  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

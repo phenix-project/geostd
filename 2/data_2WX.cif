@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2WX  2WX  N-[(R)-1-benzothiophen-2-yl(2-chlorophenyl)methyl]-3,4-dihydro-2H-1,5-benzodioxepine-7-sulfonamide  ligand  52  32  .  2021-08-04  2021-08-04  
+ 2WX  2WX  N-[(R)-1-benzothiophen-2-yl(2-chlorophenyl)methyl]-3,4-dihydro-2H-1,5-benzodioxepine-7-sulfonamide  ligand  52  32  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_2WX
@@ -269,54 +270,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2WX  CONST_01  C19  S2   C3   C18    0.00   0.0  0
- 2WX  CONST_02  C24  C19  C20  C18  180.00   0.0  0
- 2WX  CONST_03  S2   C19  C20  C18    0.00   0.0  0
- 2WX  CONST_04  C22  C21  C20  C18  180.00   0.0  0
- 2WX  CONST_05  C23  C24  C19  C20    0.00   0.0  0
- 2WX  CONST_06  C3   S2   C19  C20    0.00   0.0  0
- 2WX  CONST_07  C23  C22  C21  C20    0.00   0.0  0
- 2WX  CONST_08  S2   C3   C18  C20    0.00   0.0  0
- 2WX  CONST_09  C24  C23  C22  C21    0.00   0.0  0
- 2WX  CONST_10  C24  C19  C20  C21    0.00   0.0  0
- 2WX  CONST_11  S2   C19  C20  C21  180.00   0.0  0
- 2WX  CONST_12  C3   C18  C20  C21  180.00   0.0  0
- 2WX  CONST_13  C19  C24  C23  C22    0.00   0.0  0
- 2WX  CONST_14  C19  C20  C21  C22    0.00   0.0  0
- 2WX  CONST_15  S2   C19  C24  C23  180.00   0.0  0
- 2WX  CONST_16  C3   S2   C19  C24  180.00   0.0  0
- 2WX  CONST_17  C3   C18  C20  C19    0.00   0.0  0
- 2WX  CONST_18  C6   C7   C8   C2     0.00   0.0  0
- 2WX  CONST_19  C6   C5   C4   C2     0.00   0.0  0
- 2WX  CONST_20  C7   C6   C5   C4     0.00   0.0  0
- 2WX  CONST_21  C7   C8   C2   C4     0.00   0.0  0
- 2WX  CONST_22  C8   C7   C6   C5     0.00   0.0  0
- 2WX  CONST_23  C8   C2   C4   C5     0.00   0.0  0
- 2WX  CONST_24  C14  C11  C12  C9     0.00   0.0  0
- 2WX  CONST_25  C11  C12  C9   C10    0.00   0.0  0
- 2WX  CONST_26  C12  C9   C10  C13    0.00   0.0  0
- 2WX  CONST_27  C1   C3   C18  C20  180.00   0.0  0
- 2WX  CONST_28  C1   C3   S2   C19  180.00   0.0  0
- 2WX  CONST_29  C7   C8   C2   C1   180.00   0.0  0
- 2WX  CONST_30  C5   C4   C2   C1   180.00   0.0  0
- 2WX  CONST_31  CL1  C8   C2   C4   180.00   0.0  0
- 2WX  CONST_32  CL1  C8   C7   C6   180.00   0.0  0
- 2WX  CONST_33  C13  C10  C9   S1   180.00   0.0  0
- 2WX  CONST_34  C11  C12  C9   S1   180.00   0.0  0
- 2WX  CONST_35  H2   C21  C20  C18    0.00   0.0  0
- 2WX  CONST_36  H5   C24  C19  C20  180.00   0.0  0
- 2WX  CONST_37  H3   C22  C21  C20  180.00   0.0  0
- 2WX  CONST_38  H4   C23  C22  C21  180.00   0.0  0
- 2WX  CONST_39  H1   C18  C20  C21    0.00   0.0  0
- 2WX  CONST_40  H10  C7   C8   C2   180.00   0.0  0
- 2WX  CONST_41  H8   C5   C4   C2   180.00   0.0  0
- 2WX  CONST_42  H9   C6   C5   C4   180.00   0.0  0
- 2WX  CONST_43  H7   C4   C5   C6   180.00   0.0  0
- 2WX  CONST_44  H19  C11  C12  C9   180.00   0.0  0
- 2WX  CONST_45  H20  C12  C9   C10  180.00   0.0  0
- 2WX  CONST_46  H12  C10  C9   C12  180.00   0.0  0
- 2WX  Var_01    C10  C9   S1   N1   -94.00  30.0  2
- 2WX  Var_02    C9   S1   N1   C1    70.27  30.0  3
+ 2WX  CONST_01  C19  S2   C3   C18     0.00   0.0  0
+ 2WX  CONST_02  C24  C19  C20  C18   180.00   0.0  0
+ 2WX  CONST_03  S2   C19  C20  C18     0.00   0.0  0
+ 2WX  CONST_04  C22  C21  C20  C18   180.00   0.0  0
+ 2WX  CONST_05  C23  C24  C19  C20     0.00   0.0  0
+ 2WX  CONST_06  C3   S2   C19  C20     0.00   0.0  0
+ 2WX  CONST_07  C23  C22  C21  C20     0.00   0.0  0
+ 2WX  CONST_08  S2   C3   C18  C20     0.00   0.0  0
+ 2WX  CONST_09  C24  C23  C22  C21     0.00   0.0  0
+ 2WX  CONST_10  C24  C19  C20  C21     0.00   0.0  0
+ 2WX  CONST_11  S2   C19  C20  C21   180.00   0.0  0
+ 2WX  CONST_12  C3   C18  C20  C21   180.00   0.0  0
+ 2WX  CONST_13  C19  C24  C23  C22     0.00   0.0  0
+ 2WX  CONST_14  C19  C20  C21  C22     0.00   0.0  0
+ 2WX  CONST_15  S2   C19  C24  C23   180.00   0.0  0
+ 2WX  CONST_16  C3   S2   C19  C24   180.00   0.0  0
+ 2WX  CONST_17  C3   C18  C20  C19     0.00   0.0  0
+ 2WX  CONST_18  C6   C7   C8   C2      0.00   0.0  0
+ 2WX  CONST_19  C6   C5   C4   C2      0.00   0.0  0
+ 2WX  CONST_20  C7   C6   C5   C4      0.00   0.0  0
+ 2WX  CONST_21  C7   C8   C2   C4      0.00   0.0  0
+ 2WX  CONST_22  C8   C7   C6   C5      0.00   0.0  0
+ 2WX  CONST_23  C8   C2   C4   C5      0.00   0.0  0
+ 2WX  CONST_24  C14  C11  C12  C9      0.00   0.0  0
+ 2WX  CONST_25  C11  C12  C9   C10     0.00   0.0  0
+ 2WX  CONST_26  C12  C9   C10  C13     0.00   0.0  0
+ 2WX  CONST_27  C1   C3   C18  C20   180.00   0.0  0
+ 2WX  CONST_28  C1   C3   S2   C19   180.00   0.0  0
+ 2WX  CONST_29  C7   C8   C2   C1    180.00   0.0  0
+ 2WX  CONST_30  C5   C4   C2   C1    180.00   0.0  0
+ 2WX  CONST_31  CL1  C8   C2   C4    180.00   0.0  0
+ 2WX  CONST_32  CL1  C8   C7   C6    180.00   0.0  0
+ 2WX  CONST_33  C13  C10  C9   S1    180.00   0.0  0
+ 2WX  CONST_34  C11  C12  C9   S1    180.00   0.0  0
+ 2WX  CONST_35  H2   C21  C20  C18     0.00   0.0  0
+ 2WX  CONST_36  H5   C24  C19  C20   180.00   0.0  0
+ 2WX  CONST_37  H3   C22  C21  C20   180.00   0.0  0
+ 2WX  CONST_38  H4   C23  C22  C21   180.00   0.0  0
+ 2WX  CONST_39  H1   C18  C20  C21     0.00   0.0  0
+ 2WX  CONST_40  H10  C7   C8   C2    180.00   0.0  0
+ 2WX  CONST_41  H8   C5   C4   C2    180.00   0.0  0
+ 2WX  CONST_42  H9   C6   C5   C4    180.00   0.0  0
+ 2WX  CONST_43  H7   C4   C5   C6    180.00   0.0  0
+ 2WX  CONST_44  H19  C11  C12  C9    180.00   0.0  0
+ 2WX  CONST_45  H20  C12  C9   C10   180.00   0.0  0
+ 2WX  CONST_46  H12  C10  C9   C12   180.00   0.0  0
+ 2WX  Var_01    C10  C9   S1   N1    -94.00  30.0  2
+ 2WX  Var_02    C9   S1   N1   C1     70.27  30.0  3
+ 2WX  CONST_47  C14  C13  C10  C9      0.00   0.0  0
+ 2WX  CONST_48  C11  C14  C13  C10     0.00   0.0  0
+ 2WX  CONST_49  C12  C11  C14  C13     0.00   0.0  0
+ 2WX  Var_03    C16  O4   C13  C10   121.06  30.0  1
+ 2WX  Var_04    C17  C16  O4   C13    77.60  30.0  1
+ 2WX  Var_05    C15  O3   C14  C13    60.04  30.0  1
+ 2WX  Var_06    C15  C17  C16  O4    -64.28  30.0  1
+ 2WX  Var_07    O3   C15  C17  C16    65.45  30.0  1
+ 2WX  Var_08    C14  C13  O4   C16   -62.62  30.0  1
+ 2WX  Var_09    C14  O3   C15  C17   -78.67  30.0  1
+ 2WX  Var_10    C11  C14  O3   C15  -123.05  30.0  1
+ 2WX  Var_11    C2   C1   C3   C18   138.31  30.0  2
+ 2WX  Var_12    C2   C1   C3   S2    -44.55  30.0  2
+ 2WX  Var_13    C8   C2   C1   C3    -83.29  30.0  2
+ 2WX  Var_14    C4   C2   C1   C3     94.22  30.0  2
+ 2WX  Var_15    H13  C16  O4   C13  -162.12  30.0  1
+ 2WX  Var_16    H14  C16  O4   C13   -46.42  30.0  1
+ 2WX  Var_17    H15  C17  C16  O4     59.88  30.0  1
+ 2WX  Var_18    H16  C17  C16  O4    176.27  30.0  1
+ 2WX  Var_19    H17  C15  C17  C16  -177.04  30.0  1
+ 2WX  Var_20    H18  C15  C17  C16   -57.99  30.0  1
+ 2WX  Var_21    N1   C1   C3   C18   -94.66  30.0  2
+ 2WX  Var_22    N1   C1   C3   S2     82.48  30.0  2
+ 2WX  Var_23    N1   C1   C2   C4    -29.12  30.0  2
+ 2WX  Var_24    N1   C1   C2   C8    153.37  30.0  2
+ 2WX  Var_25    H6   C1   C3   C18    19.53  30.0  2
+ 2WX  Var_26    S1   N1   C1   C3    155.02  30.0  3
+ 2WX  Var_27    S1   N1   C1   C2    -80.36  30.0  3
+ 2WX  Var_28    H11  N1   C1   C3    -55.63  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- X92  X92  '(2S,3aS,6aS)-1-[(2S)-2-{[(1R)-1-carboxy-3-phenylpropyl]amino}propanoyl]octahydrocyclopenta[b]pyrrole-2-carboxylic acid (non-preferred name)'  ligand  56  28  .  2021-08-25  2021-08-25  
+ X92  X92  '(2S,3aS,6aS)-1-[(2S)-2-{[(1R)-1-carboxy-3-phenylpropyl]amino}propanoyl]octahydrocyclopenta[b]pyrrole-2-carboxylic acid (non-preferred name)'  ligand  56  28  .  2021-08-25  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_X92
@@ -286,29 +287,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- X92  CONST_01  CAH  CAG  CAI  CAK    0.00   0.0  0
- X92  CONST_02  CAH  CAJ  CAV  CAK    0.00   0.0  0
- X92  CONST_03  CAJ  CAH  CAG  CAI    0.00   0.0  0
- X92  CONST_04  CAJ  CAV  CAK  CAI    0.00   0.0  0
- X92  CONST_05  CAV  CAJ  CAH  CAG    0.00   0.0  0
- X92  CONST_06  CAV  CAK  CAI  CAG    0.00   0.0  0
- X92  CONST_07  CAM  CAV  CAK  CAI  180.00   0.0  0
- X92  CONST_08  CAM  CAV  CAJ  CAH  180.00   0.0  0
- X92  CONST_09  HAG  CAG  CAI  CAK  180.00   0.0  0
- X92  CONST_10  HAJ  CAJ  CAV  CAK  180.00   0.0  0
- X92  CONST_11  HAH  CAH  CAG  CAI  180.00   0.0  0
- X92  CONST_12  HAK  CAK  CAI  CAG  180.00   0.0  0
- X92  CONST_13  HAI  CAI  CAG  CAH  180.00   0.0  0
- X92  CONST_14  CBA  NBB  C    CA   180.00   0.0  0
- X92  CONST_15  CAZ  NBB  C    CA     0.00   0.0  0
- X92  CONST_16  CBA  NBB  C    O      0.00   0.0  0
- X92  CONST_17  CAZ  NBB  C    O    180.00   0.0  0
- X92  CONST_18  HAF  OAF  CAT  CAZ  180.00   0.0  0
- X92  CONST_19  HAE  OAE  CAS  CAX  180.00   0.0  0
- X92  Var_01    CAN  CAL  CAO  CBA  -39.13  30.0  1
- X92  Var_02    CAY  CAN  CAL  CAO   22.63  30.0  1
- X92  Var_03    CAP  CAM  CAV  CAK   94.43  30.0  2
- X92  Var_04    CAX  CAP  CAM  CAV  179.40  30.0  3
+ X92  CONST_01  CAH   CAG  CAI  CAK     0.00   0.0  0
+ X92  CONST_02  CAH   CAJ  CAV  CAK     0.00   0.0  0
+ X92  CONST_03  CAJ   CAH  CAG  CAI     0.00   0.0  0
+ X92  CONST_04  CAJ   CAV  CAK  CAI     0.00   0.0  0
+ X92  CONST_05  CAV   CAJ  CAH  CAG     0.00   0.0  0
+ X92  CONST_06  CAV   CAK  CAI  CAG     0.00   0.0  0
+ X92  CONST_07  CAM   CAV  CAK  CAI   180.00   0.0  0
+ X92  CONST_08  CAM   CAV  CAJ  CAH   180.00   0.0  0
+ X92  CONST_09  HAG   CAG  CAI  CAK   180.00   0.0  0
+ X92  CONST_10  HAJ   CAJ  CAV  CAK   180.00   0.0  0
+ X92  CONST_11  HAH   CAH  CAG  CAI   180.00   0.0  0
+ X92  CONST_12  HAK   CAK  CAI  CAG   180.00   0.0  0
+ X92  CONST_13  HAI   CAI  CAG  CAH   180.00   0.0  0
+ X92  CONST_14  CBA   NBB  C    CA    180.00   0.0  0
+ X92  CONST_15  CAZ   NBB  C    CA      0.00   0.0  0
+ X92  CONST_16  CBA   NBB  C    O       0.00   0.0  0
+ X92  CONST_17  CAZ   NBB  C    O     180.00   0.0  0
+ X92  CONST_18  HAF   OAF  CAT  CAZ   180.00   0.0  0
+ X92  CONST_19  HAE   OAE  CAS  CAX   180.00   0.0  0
+ X92  Var_01    CAN   CAL  CAO  CBA   -39.13  30.0  1
+ X92  Var_02    CAY   CAN  CAL  CAO    22.63  30.0  1
+ X92  Var_03    CAP   CAM  CAV  CAK    94.43  30.0  2
+ X92  Var_04    CAX   CAP  CAM  CAV   179.40  30.0  3
+ X92  Var_05    CAL   CAO  CBA  NBB   155.75  30.0  1
+ X92  Var_06    CAN   CAY  CBA  NBB  -150.79  30.0  1
+ X92  Var_07    CAQ   CAY  CBA  NBB   -29.75  30.0  1
+ X92  Var_08    CAY   CAQ  CAZ  NBB   -17.37  30.0  1
+ X92  Var_09    CAQ   CAZ  NBB  CBA    -1.83  30.0  1
+ X92  Var_10    CAL   CAN  CAY  CBA     2.77  30.0  1
+ X92  Var_11    CAZ   CAQ  CAY  CBA    28.96  30.0  1
+ X92  Var_12    CAZ   NBB  CBA  CAO   -94.64  30.0  1
+ X92  Var_13    CAN   CAY  CBA  CAO   -27.11  30.0  1
+ X92  Var_14    CAQ   CAY  CBA  CAO    93.92  30.0  1
+ X92  Var_15    CAY   CBA  CAO  CAL    40.86  30.0  1
+ X92  Var_16    CAQ   CAY  CAN  CAL  -110.53  30.0  1
+ X92  Var_17    CAZ   CAQ  CAY  CAN   143.71  30.0  1
+ X92  Var_18    CAZ   NBB  CBA  CAY    20.20  30.0  1
+ X92  Var_19    CAO   CBA  NBB  C      87.79  30.0  1
+ X92  Var_20    CAY   CBA  NBB  C    -157.37  30.0  1
+ X92  Var_21    CAQ   CAZ  NBB  C     175.61  30.0  1
+ X92  Var_22    CAT   CAZ  NBB  CBA   116.05  30.0  1
+ X92  Var_23    CAT   CAZ  CAQ  CAY  -137.15  30.0  1
+ X92  Var_24    HAO1  CAO  CBA  NBB   -82.28  30.0  1
+ X92  Var_25    HAO2  CAO  CBA  NBB    37.86  30.0  1
+ X92  Var_26    HAY   CAY  CBA  NBB    87.60  30.0  1
+ X92  Var_27    HAQ1  CAQ  CAZ  NBB  -140.03  30.0  1
+ X92  Var_28    HAQ2  CAQ  CAZ  NBB   101.28  30.0  1
+ X92  Var_29    HAZ   CAZ  NBB  CBA  -120.81  30.0  1
+ X92  Var_30    HAN1  CAN  CAY  CBA  -118.79  30.0  1
+ X92  Var_31    HAN2  CAN  CAY  CBA   122.50  30.0  1
+ X92  Var_32    HBA   CBA  CAO  CAL   -79.03  30.0  1
+ X92  Var_33    CAT   CAZ  NBB  C     -66.51  30.0  1
+ X92  Var_34    OAF   CAT  CAZ  NBB   164.09  30.0  3
+ X92  Var_35    OAC   CAT  CAZ  NBB   -18.55  30.0  3
+ X92  Var_36    OAF   CAT  CAZ  CAQ   -80.74  30.0  3
+ X92  Var_37    OAC   CAT  CAZ  CAQ    96.62  30.0  3
+ X92  Var_38    NBB   C    CA   N     145.38  30.0  3
+ X92  Var_39    NBB   C    CA   CB    -89.96  30.0  3
+ X92  Var_40    NBB   C    CA   HA     27.81  30.0  3
+ X92  Var_41    CAS   CAX  CAP  CAM  -169.08  30.0  3
+ X92  Var_42    N     CAX  CAP  CAM    70.63  30.0  3
+ X92  Var_43    OAE   CAS  CAX  CAP    79.60  30.0  3
+ X92  Var_44    OAB   CAS  CAX  CAP   -98.96  30.0  3
+ X92  Var_45    CA    N    CAX  CAP  -167.05  30.0  3
+ X92  Var_46    CB    CA   N    CAX    65.73  30.0  3
+ X92  Var_47    C     CA   N    CAX  -174.62  30.0  3
+ X92  Var_48    CA    N    CAX  CAS    73.80  30.0  3
+ X92  Var_49    N     CAX  CAS  OAE  -159.98  30.0  2
+ X92  Var_50    N     CAX  CAS  OAB    21.46  30.0  2
+ X92  Var_51    O     C    CA   N     -39.98  30.0  3
+ X92  Var_52    O     C    CA   CB     84.68  30.0  3
+ X92  Var_53    HAX   CAX  CAP  CAM   -53.77  30.0  3
+ X92  Var_54    H     N    CAX  CAP   -41.97  30.0  3
+ X92  Var_55    HB1C  CB   CA   N      62.17  30.0  3
+ X92  Var_56    HB2C  CB   CA   N    -177.35  30.0  3
+ X92  Var_57    HB3C  CB   CA   N     -57.95  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

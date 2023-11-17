@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DGD  DGD  '(2S)-3-[(6-O-alpha-D-galactopyranosyl-beta-D-galactopyranosyl)oxy]propane-1,2-diyl dioctadecanoate'  saccharide  162  66  .  2013-04-15  2023-02-15
+ DGD  DGD  '(2S)-3-[(6-O-alpha-D-galactopyranosyl-beta-D-galactopyranosyl)oxy]propane-1,2-diyl dioctadecanoate'  saccharide  162  66  .  2013-04-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DGD
@@ -703,42 +704,125 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DGD  Var_01  HD61  C6D  O5D  C1E    35.75  30.0  3
- DGD  Var_02  C4A   C3A  C2A  C1A    72.17  30.0  3
- DGD  Var_03  C2G   C1G  O1G  C1A  -153.74  30.0  3
- DGD  Var_04  C5A   C4A  C3A  C2A   173.73  30.0  3
- DGD  Var_05  O1A   C1A  C2A  C3A    24.22  30.0  1
- DGD  Var_06  C6A   C5A  C4A  C3A  -178.66  30.0  3
- DGD  Var_07  C7A   C6A  C5A  C4A    62.35  30.0  3
- DGD  Var_08  C8A   C7A  C6A  C5A   173.22  30.0  3
- DGD  Var_09  C9A   C8A  C7A  C6A   -65.08  30.0  3
- DGD  Var_10  CAA   C9A  C8A  C7A   -68.25  30.0  3
- DGD  Var_11  CBA   CAA  C9A  C8A   168.29  30.0  3
- DGD  Var_12  CCA   CBA  CAA  C9A   -73.93  30.0  3
- DGD  Var_13  CDA   CCA  CBA  CAA   -71.28  30.0  3
- DGD  Var_14  CEA   CDA  CCA  CBA   174.37  30.0  3
- DGD  Var_15  CFA   CEA  CDA  CCA   -69.27  30.0  3
- DGD  Var_16  CGA   CFA  CEA  CDA  -167.13  30.0  3
- DGD  Var_17  CHA   CGA  CFA  CEA   -59.05  30.0  3
- DGD  Var_18  CIA   CHA  CGA  CFA   -58.88  30.0  3
- DGD  Var_19  C4B   C3B  C2B  C1B    74.23  30.0  3
- DGD  Var_20  C5B   C4B  C3B  C2B   172.98  30.0  3
- DGD  Var_21  O1B   C1B  C2B  C3B    16.42  30.0  2
- DGD  Var_22  C6B   C5B  C4B  C3B  -172.67  30.0  3
- DGD  Var_23  C7B   C6B  C5B  C4B   -65.55  30.0  3
- DGD  Var_24  C8B   C7B  C6B  C5B   -61.48  30.0  3
- DGD  Var_25  C9B   C8B  C7B  C6B  -163.91  30.0  3
- DGD  Var_26  CAB   C9B  C8B  C7B   -85.10  30.0  3
- DGD  Var_27  CBB   CAB  C9B  C8B    61.35  30.0  3
- DGD  Var_28  CCB   CBB  CAB  C9B    55.65  30.0  3
- DGD  Var_29  CDB   CCB  CBB  CAB    65.33  30.0  3
- DGD  Var_30  CEB   CDB  CCB  CBB  -177.03  30.0  3
- DGD  Var_31  CFB   CEB  CDB  CCB  -175.89  30.0  3
- DGD  Var_32  CGB   CFB  CEB  CDB    70.98  30.0  3
- DGD  Var_33  CHB   CGB  CFB  CEB   176.54  30.0  3
- DGD  Var_34  CIB   CHB  CGB  CFB   -68.71  30.0  3
- DGD  Var_35  HAG1  CIA  CHA  CGA  -176.45  30.0  3
- DGD  Var_36  HBG1  CIB  CHB  CGB  -178.70  30.0  3
+ DGD  Var_01   HD61  C6D  O5D  C1E    35.75  30.0  3
+ DGD  Var_02   C4A   C3A  C2A  C1A    72.17  30.0  3
+ DGD  Var_03   C2G   C1G  O1G  C1A  -153.74  30.0  3
+ DGD  Var_04   C5A   C4A  C3A  C2A   173.73  30.0  3
+ DGD  Var_05   O1A   C1A  C2A  C3A    24.22  30.0  1
+ DGD  Var_06   C6A   C5A  C4A  C3A  -178.66  30.0  3
+ DGD  Var_07   C7A   C6A  C5A  C4A    62.35  30.0  3
+ DGD  Var_08   C8A   C7A  C6A  C5A   173.22  30.0  3
+ DGD  Var_09   C9A   C8A  C7A  C6A   -65.08  30.0  3
+ DGD  Var_10   CAA   C9A  C8A  C7A   -68.25  30.0  3
+ DGD  Var_11   CBA   CAA  C9A  C8A   168.29  30.0  3
+ DGD  Var_12   CCA   CBA  CAA  C9A   -73.93  30.0  3
+ DGD  Var_13   CDA   CCA  CBA  CAA   -71.28  30.0  3
+ DGD  Var_14   CEA   CDA  CCA  CBA   174.37  30.0  3
+ DGD  Var_15   CFA   CEA  CDA  CCA   -69.27  30.0  3
+ DGD  Var_16   CGA   CFA  CEA  CDA  -167.13  30.0  3
+ DGD  Var_17   CHA   CGA  CFA  CEA   -59.05  30.0  3
+ DGD  Var_18   CIA   CHA  CGA  CFA   -58.88  30.0  3
+ DGD  Var_19   C4B   C3B  C2B  C1B    74.23  30.0  3
+ DGD  Var_20   C5B   C4B  C3B  C2B   172.98  30.0  3
+ DGD  Var_21   O1B   C1B  C2B  C3B    16.42  30.0  2
+ DGD  Var_22   C6B   C5B  C4B  C3B  -172.67  30.0  3
+ DGD  Var_23   C7B   C6B  C5B  C4B   -65.55  30.0  3
+ DGD  Var_24   C8B   C7B  C6B  C5B   -61.48  30.0  3
+ DGD  Var_25   C9B   C8B  C7B  C6B  -163.91  30.0  3
+ DGD  Var_26   CAB   C9B  C8B  C7B   -85.10  30.0  3
+ DGD  Var_27   CBB   CAB  C9B  C8B    61.35  30.0  3
+ DGD  Var_28   CCB   CBB  CAB  C9B    55.65  30.0  3
+ DGD  Var_29   CDB   CCB  CBB  CAB    65.33  30.0  3
+ DGD  Var_30   CEB   CDB  CCB  CBB  -177.03  30.0  3
+ DGD  Var_31   CFB   CEB  CDB  CCB  -175.89  30.0  3
+ DGD  Var_32   CGB   CFB  CEB  CDB    70.98  30.0  3
+ DGD  Var_33   CHB   CGB  CFB  CEB   176.54  30.0  3
+ DGD  Var_34   CIB   CHB  CGB  CFB   -68.71  30.0  3
+ DGD  Var_35   HAG1  CIA  CHA  CGA  -176.45  30.0  3
+ DGD  Var_36   HBG1  CIB  CHB  CGB  -178.70  30.0  3
+ DGD  Var_37   C4D   C3D  C2D  C1D   -55.22  30.0  1
+ DGD  Var_38   C4D   C5D  O6D  C1D    61.70  30.0  1
+ DGD  Var_39   C5D   O6D  C1D  C2D   -62.63  30.0  1
+ DGD  Var_40   C5D   C4D  C3D  C2D    53.97  30.0  1
+ DGD  Var_41   O6D   C1D  C2D  C3D    57.27  30.0  1
+ DGD  Var_42   O6D   C5D  C4D  C3D   -54.97  30.0  1
+ DGD  Var_43   C4E   C3E  C2E  C1E   -54.87  30.0  1
+ DGD  Var_44   C4E   C5E  O6E  C1E    59.41  30.0  1
+ DGD  Var_45   C5E   O6E  C1E  C2E   -57.25  30.0  1
+ DGD  Var_46   C5E   C4E  C3E  C2E    55.61  30.0  1
+ DGD  Var_47   O6E   C1E  C2E  C3E    54.24  30.0  1
+ DGD  Var_48   O6E   C5E  C4E  C3E   -56.64  30.0  1
+ DGD  Var_49   C3D   C2D  C1D  O3G   175.12  30.0  1
+ DGD  Var_50   C5D   O6D  C1D  O3G   178.87  30.0  1
+ DGD  Var_51   O3D   C3D  C2D  C1D  -179.84  30.0  1
+ DGD  Var_52   C6D   C5D  O6D  C1D  -175.60  30.0  1
+ DGD  Var_53   O4D   C4D  C3D  C2D   -68.82  30.0  1
+ DGD  Var_54   O6D   C1D  C2D  O2D   178.20  30.0  1
+ DGD  Var_55   C4D   C3D  C2D  O2D  -173.90  30.0  1
+ DGD  Var_56   C6D   C5D  C4D  C3D  -172.74  30.0  1
+ DGD  Var_57   C5D   C4D  C3D  O3D   175.25  30.0  1
+ DGD  Var_58   O6D   C5D  C4D  O4D    66.56  30.0  1
+ DGD  Var_59   C3E   C2E  C1E  O5D   -69.14  30.0  1
+ DGD  Var_60   C5E   O6E  C1E  O5D    64.27  30.0  1
+ DGD  Var_61   O3E   C3E  C2E  C1E  -178.13  30.0  1
+ DGD  Var_62   C6E   C5E  O6E  C1E  -177.12  30.0  1
+ DGD  Var_63   O4E   C4E  C3E  C2E   -67.06  30.0  1
+ DGD  Var_64   O6E   C1E  C2E  O2E   177.56  30.0  1
+ DGD  Var_65   C4E   C3E  C2E  O2E  -175.47  30.0  1
+ DGD  Var_66   C6E   C5E  C4E  C3E  -177.39  30.0  1
+ DGD  Var_67   C5E   C4E  C3E  O3E   175.33  30.0  1
+ DGD  Var_68   O6E   C5E  C4E  O4E    63.65  30.0  1
+ DGD  Var_69   HD3   C3D  C2D  C1D    61.29  30.0  1
+ DGD  Var_70   HD5   C5D  O6D  C1D   -57.65  30.0  1
+ DGD  Var_71   HD4   C4D  C3D  C2D   170.00  30.0  1
+ DGD  Var_72   HD1   C1D  C2D  C3D   -62.64  30.0  1
+ DGD  Var_73   HD2   C2D  C3D  C4D    62.40  30.0  1
+ DGD  Var_74   HE3   C3E  C2E  C1E    62.08  30.0  1
+ DGD  Var_75   HE5   C5E  O6E  C1E   -59.48  30.0  1
+ DGD  Var_76   HE4   C4E  C3E  C2E   172.04  30.0  1
+ DGD  Var_77   HE1   C1E  C2E  C3E   170.31  30.0  1
+ DGD  Var_78   HE2   C2E  C3E  C4E    62.33  30.0  1
+ DGD  Var_79   C2D   C1D  O3G  C3G   164.18  30.0  3
+ DGD  Var_80   O6D   C1D  O3G  C3G   -76.46  30.0  3
+ DGD  Var_81   O2D   C2D  C1D  O3G   -63.95  30.0  1
+ DGD  Var_82   O3D   C3D  C2D  O2D    61.48  30.0  1
+ DGD  Var_83   O4D   C4D  C3D  O3D    52.45  30.0  1
+ DGD  Var_84   O5D   C6D  C5D  C4D   -48.88  30.0  3
+ DGD  Var_85   C6D   C5D  C4D  O4D   -51.22  30.0  1
+ DGD  Var_86   O6D   C5D  C6D  O5D  -169.88  30.0  1
+ DGD  Var_87   O2E   C2E  C1E  O5D    54.18  30.0  1
+ DGD  Var_88   C2E   C1E  O5D  C6D  -134.66  30.0  3
+ DGD  Var_89   O6E   C1E  O5D  C6D   102.59  30.0  3
+ DGD  Var_90   O3E   C3E  C2E  O2E    61.27  30.0  1
+ DGD  Var_91   O4E   C4E  C3E  O3E    52.66  30.0  1
+ DGD  Var_92   O5E   C6E  C5E  C4E  -171.15  30.0  3
+ DGD  Var_93   C6E   C5E  C4E  O4E   -57.10  30.0  1
+ DGD  Var_94   O5E   C6E  C5E  O6E    66.25  30.0  3
+ DGD  Var_95   HO2D  O2D  C2D  C1D  -169.81  30.0  3
+ DGD  Var_96   HO3D  O3D  C3D  C2D  -160.83  30.0  3
+ DGD  Var_97   HO4D  O4D  C4D  C3D  -150.51  30.0  3
+ DGD  Var_98   HD61  C6D  C5D  C4D    71.72  30.0  3
+ DGD  Var_99   HD62  C6D  C5D  C4D  -170.77  30.0  3
+ DGD  Var_100  HO2E  O2E  C2E  C1E  -177.97  30.0  3
+ DGD  Var_101  HO3E  O3E  C3E  C2E  -161.44  30.0  3
+ DGD  Var_102  HO4E  O4E  C4E  C3E  -154.84  30.0  3
+ DGD  Var_103  HE61  C6E  C5E  C4E   -49.84  30.0  3
+ DGD  Var_104  HE62  C6E  C5E  C4E    66.40  30.0  3
+ DGD  Var_105  C1D   O3G  C3G  C2G   -81.32  30.0  3
+ DGD  Var_106  HG31  C3G  O3G  C1D   158.50  30.0  2
+ DGD  Var_107  HG32  C3G  O3G  C1D    41.53  30.0  2
+ DGD  Var_108  HO5E  O5E  C6E  C5E  -175.67  30.0  3
+ DGD  Var_109  C1G   O1G  C1A  C2A  -174.53  30.0  3
+ DGD  Var_110  C1G   O1G  C1A  O1A     3.16  30.0  3
+ DGD  Var_111  C1G   C2G  O2G  C1B  -115.00  30.0  3
+ DGD  Var_112  C3G   C2G  O2G  C1B   125.62  30.0  3
+ DGD  Var_113  C2G   O2G  C1B  C2B  -170.20  30.0  3
+ DGD  Var_114  C2G   O2G  C1B  O1B     7.80  30.0  3
+ DGD  Var_115  O2G   C2G  C1G  O1G    70.80  30.0  3
+ DGD  Var_116  C3G   C2G  C1G  O1G  -171.62  30.0  3
+ DGD  Var_117  O3G   C3G  C2G  C1G  -173.78  30.0  3
+ DGD  Var_118  O3G   C3G  C2G  O2G   -55.39  30.0  3
+ DGD  Var_119  HG2   C2G  O2G  C1B     5.27  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

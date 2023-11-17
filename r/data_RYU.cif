@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RYU  RYU  (2Z,3S)-3-hydroxy-5'-[(4-hydroxypiperidin-1-yl)sulfonyl]-3-methyl-1,3-dihydro-2,3'-biindol-2'(1'H)-one  ligand  54  31  .  2021-08-23  2021-08-23  
+ RYU  RYU  (2Z,3S)-3-hydroxy-5'-[(4-hydroxypiperidin-1-yl)sulfonyl]-3-methyl-1,3-dihydro-2,3'-biindol-2'(1'H)-one  ligand  54  31  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RYU
@@ -281,39 +282,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RYU  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- RYU  CONST_02  C4   C5   C6   C1     0.00   0.0  0
- RYU  CONST_03  C5   C6   C1   C2     0.00   0.0  0
- RYU  CONST_04  C5   C4   C3   C2     0.00   0.0  0
- RYU  CONST_05  C6   C1   C2   C3     0.00   0.0  0
- RYU  CONST_06  C6   C5   C4   C3     0.00   0.0  0
- RYU  CONST_07  C16  C15  C14  C13    0.00   0.0  0
- RYU  CONST_08  C16  C17  C18  C13    0.00   0.0  0
- RYU  CONST_09  C17  C18  C13  C14    0.00   0.0  0
- RYU  CONST_10  C17  C16  C15  C14    0.00   0.0  0
- RYU  CONST_11  C18  C13  C14  C15    0.00   0.0  0
- RYU  CONST_12  C18  C17  C16  C15    0.00   0.0  0
- RYU  CONST_13  C13  N12  C11  C10    0.00   0.0  0
- RYU  CONST_14  S19  C16  C15  C14  180.00   0.0  0
- RYU  CONST_15  S19  C16  C17  C18  180.00   0.0  0
- RYU  CONST_16  C13  N12  C11  O11  180.00   0.0  0
- RYU  CONST_17  H3   C3   C2   C1   180.00   0.0  0
- RYU  CONST_18  H4   C4   C3   C2   180.00   0.0  0
- RYU  CONST_19  H1   C1   C2   C3   180.00   0.0  0
- RYU  CONST_20  H2   C2   C3   C4   180.00   0.0  0
- RYU  CONST_21  H15  C15  C14  C10    0.00   0.0  0
- RYU  CONST_22  H18  C18  C13  N12    0.00   0.0  0
- RYU  CONST_23  H17  C17  C18  C13  180.00   0.0  0
- RYU  CONST_24  H12  N12  C11  C10  180.00   0.0  0
- RYU  Var_01    C8   N9   C5   C4   177.72  30.0  1
- RYU  Var_02    C7   C8   N9   C5     4.95  30.0  1
- RYU  Var_03    C11  C10  C8   C7   174.92  30.0  2
- RYU  Var_04    C23  C22  C21  N20   57.06  30.0  1
- RYU  Var_05    C23  C24  C25  N20  -57.05  30.0  1
- RYU  Var_06    C24  C25  N20  C21   59.00  30.0  1
- RYU  Var_07    C25  N20  C21  C22  -59.20  30.0  1
- RYU  Var_08    N20  S19  C16  C15  -87.69  30.0  2
- RYU  Var_09    C21  N20  S19  C16   65.07  30.0  3
+ RYU  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ RYU  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ RYU  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ RYU  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ RYU  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ RYU  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ RYU  CONST_07  C16   C15  C14  C13     0.00   0.0  0
+ RYU  CONST_08  C16   C17  C18  C13     0.00   0.0  0
+ RYU  CONST_09  C17   C18  C13  C14     0.00   0.0  0
+ RYU  CONST_10  C17   C16  C15  C14     0.00   0.0  0
+ RYU  CONST_11  C18   C13  C14  C15     0.00   0.0  0
+ RYU  CONST_12  C18   C17  C16  C15     0.00   0.0  0
+ RYU  CONST_13  C13   N12  C11  C10     0.00   0.0  0
+ RYU  CONST_14  S19   C16  C15  C14   180.00   0.0  0
+ RYU  CONST_15  S19   C16  C17  C18   180.00   0.0  0
+ RYU  CONST_16  C13   N12  C11  O11   180.00   0.0  0
+ RYU  CONST_17  H3    C3   C2   C1    180.00   0.0  0
+ RYU  CONST_18  H4    C4   C3   C2    180.00   0.0  0
+ RYU  CONST_19  H1    C1   C2   C3    180.00   0.0  0
+ RYU  CONST_20  H2    C2   C3   C4    180.00   0.0  0
+ RYU  CONST_21  H15   C15  C14  C10     0.00   0.0  0
+ RYU  CONST_22  H18   C18  C13  N12     0.00   0.0  0
+ RYU  CONST_23  H17   C17  C18  C13   180.00   0.0  0
+ RYU  CONST_24  H12   N12  C11  C10   180.00   0.0  0
+ RYU  Var_01    C8    N9   C5   C4    177.72  30.0  1
+ RYU  Var_02    C7    C8   N9   C5      4.95  30.0  1
+ RYU  Var_03    C11   C10  C8   C7    174.92  30.0  2
+ RYU  Var_04    C23   C22  C21  N20    57.06  30.0  1
+ RYU  Var_05    C23   C24  C25  N20   -57.05  30.0  1
+ RYU  Var_06    C24   C25  N20  C21    59.00  30.0  1
+ RYU  Var_07    C25   N20  C21  C22   -59.20  30.0  1
+ RYU  Var_08    N20   S19  C16  C15   -87.69  30.0  2
+ RYU  Var_09    C21   N20  S19  C16    65.07  30.0  3
+ RYU  CONST_25  C13   C14  C10  C11     0.00   0.0  0
+ RYU  CONST_26  C15   C14  C10  C11   180.00   0.0  0
+ RYU  CONST_27  C14   C13  N12  C11     0.00   0.0  0
+ RYU  CONST_28  C18   C13  N12  C11   180.00   0.0  0
+ RYU  CONST_29  C14   C10  C11  N12     0.00   0.0  0
+ RYU  CONST_30  N12   C11  C10  C8    180.00   0.0  0
+ RYU  CONST_31  C13   C14  C10  C8    180.00   0.0  0
+ RYU  CONST_32  C15   C14  C10  C8      0.00   0.0  0
+ RYU  CONST_33  O11   C11  C10  C8      0.00   0.0  0
+ RYU  CONST_34  C14   C10  C11  O11   180.00   0.0  0
+ RYU  Var_10    C8    C7   C6   C1   -177.30  30.0  1
+ RYU  Var_11    C8    C7   C6   C5      4.71  30.0  1
+ RYU  Var_12    N9    C8   C7   C6     -5.74  30.0  1
+ RYU  Var_13    C10   C8   C7   C6    175.66  30.0  1
+ RYU  Var_14    C24   C23  C22  C21   -55.96  30.0  1
+ RYU  Var_15    C25   C24  C23  C22    56.22  30.0  1
+ RYU  Var_16    C71   C7   C6   C1     66.51  30.0  1
+ RYU  Var_17    O71   C7   C6   C1    -61.31  30.0  1
+ RYU  Var_18    C71   C7   C6   C5   -111.48  30.0  1
+ RYU  Var_19    O71   C7   C6   C5    120.70  30.0  1
+ RYU  Var_20    N9    C8   C7   C71   110.44  30.0  1
+ RYU  Var_21    C10   C8   C7   C71   -68.16  30.0  1
+ RYU  Var_22    N9    C8   C7   O71  -125.59  30.0  1
+ RYU  Var_23    C10   C8   C7   O71    55.81  30.0  1
+ RYU  Var_24    O23   C23  C22  C21  -178.76  30.0  1
+ RYU  Var_25    C25   C24  C23  O23   176.51  30.0  1
+ RYU  Var_26    H23   C23  C22  C21    61.39  30.0  1
+ RYU  Var_27    H711  C71  C7   C6    -66.86  30.0  3
+ RYU  Var_28    H712  C71  C7   C6     51.74  30.0  3
+ RYU  Var_29    H713  C71  C7   C6    172.52  30.0  3
+ RYU  Var_30    H71   O71  C7   C6     75.76  30.0  3
+ RYU  Var_31    HA    O23  C23  C22  -177.01  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

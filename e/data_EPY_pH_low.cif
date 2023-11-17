@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EPY  EPY  L-gamma-glutamyl-S-{(1S)-2-hydroxy-1-[(4-nitrophenoxy)methyl]ethyl}-L-cysteinylglycine  ligand  60  34  .  2022-11-17  2022-11-17
+ EPY  EPY  L-gamma-glutamyl-S-{(1S)-2-hydroxy-1-[(4-nitrophenoxy)methyl]ethyl}-L-cysteinylglycine  ligand  60  34  .  2022-11-17  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EPY
@@ -286,39 +287,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EPY  CONST_01  C7C   C8C  C9C  C4C    0.00   0.0  0
- EPY  CONST_02  C7C   C6C  C5C  C4C    0.00   0.0  0
- EPY  CONST_03  C6C   C5C  C4C  C9C    0.00   0.0  0
- EPY  CONST_04  C6C   C7C  C8C  C9C    0.00   0.0  0
- EPY  CONST_05  C5C   C4C  C9C  C8C    0.00   0.0  0
- EPY  CONST_06  C5C   C6C  C7C  C8C    0.00   0.0  0
- EPY  CONST_07  C8C   C9C  C4C  O3C  180.00   0.0  0
- EPY  CONST_08  C6C   C5C  C4C  O3C  180.00   0.0  0
- EPY  CONST_09  N8C   C7C  C8C  C9C  180.00   0.0  0
- EPY  CONST_10  N8C   C7C  C6C  C5C  180.00   0.0  0
- EPY  CONST_11  H8C1  C8C  C9C  C4C  180.00   0.0  0
- EPY  CONST_12  H6C1  C6C  C5C  C4C  180.00   0.0  0
- EPY  CONST_13  H5C1  C5C  C4C  C9C  180.00   0.0  0
- EPY  CONST_14  H9C1  C9C  C8C  C7C  180.00   0.0  0
- EPY  CONST_15  O8C   N8C  C7C  C8C    0.00   0.0  0
- EPY  CONST_16  O9C   N8C  C7C  C8C  180.00   0.0  0
- EPY  CONST_17  O8C   N8C  C7C  C6C  180.00   0.0  0
- EPY  CONST_18  O9C   N8C  C7C  C6C    0.00   0.0  0
- EPY  CONST_19  C5A   N4A  C3A  C2A    0.00   0.0  0
- EPY  CONST_20  C3B   C2B  N1B  C2A  180.00   0.0  0
- EPY  CONST_21  O2B   C2B  N1B  C2A    0.00   0.0  0
- EPY  CONST_22  O3A   C3A  N4A  C5A  180.00   0.0  0
- EPY  CONST_23  HNA4  N4A  C3A  C2A  180.00   0.0  0
- EPY  CONST_24  HNB1  N1B  C2B  C3B    0.00   0.0  0
- EPY  CONST_25  HOA6  O6A  C6A  C5A  180.00   0.0  0
- EPY  CONST_26  HOB6  O6B  C6B  O7B  180.00   0.0  0
- EPY  Var_01    C9C   C4C  O3C  C2C  176.67  30.0  2
- EPY  Var_02    H2C1  C2C  O3C  C4C   55.38  30.0  2
- EPY  Var_03    C6A   C5A  N4A  C3A   79.06  30.0  3
- EPY  Var_04    O6A   C6A  C5A  N4A   -5.08  30.0  3
- EPY  Var_05    C2B   C3B  C4B  C5B  177.45  30.0  3
- EPY  Var_06    O2B   C2B  C3B  C4B   32.73  30.0  3
- EPY  Var_07    H1A1  C1A  S    C1C   51.87  30.0  3
+ EPY  CONST_01  C7C   C8C  C9C  C4C     0.00   0.0  0
+ EPY  CONST_02  C7C   C6C  C5C  C4C     0.00   0.0  0
+ EPY  CONST_03  C6C   C5C  C4C  C9C     0.00   0.0  0
+ EPY  CONST_04  C6C   C7C  C8C  C9C     0.00   0.0  0
+ EPY  CONST_05  C5C   C4C  C9C  C8C     0.00   0.0  0
+ EPY  CONST_06  C5C   C6C  C7C  C8C     0.00   0.0  0
+ EPY  CONST_07  C8C   C9C  C4C  O3C   180.00   0.0  0
+ EPY  CONST_08  C6C   C5C  C4C  O3C   180.00   0.0  0
+ EPY  CONST_09  N8C   C7C  C8C  C9C   180.00   0.0  0
+ EPY  CONST_10  N8C   C7C  C6C  C5C   180.00   0.0  0
+ EPY  CONST_11  H8C1  C8C  C9C  C4C   180.00   0.0  0
+ EPY  CONST_12  H6C1  C6C  C5C  C4C   180.00   0.0  0
+ EPY  CONST_13  H5C1  C5C  C4C  C9C   180.00   0.0  0
+ EPY  CONST_14  H9C1  C9C  C8C  C7C   180.00   0.0  0
+ EPY  CONST_15  O8C   N8C  C7C  C8C     0.00   0.0  0
+ EPY  CONST_16  O9C   N8C  C7C  C8C   180.00   0.0  0
+ EPY  CONST_17  O8C   N8C  C7C  C6C   180.00   0.0  0
+ EPY  CONST_18  O9C   N8C  C7C  C6C     0.00   0.0  0
+ EPY  CONST_19  C5A   N4A  C3A  C2A     0.00   0.0  0
+ EPY  CONST_20  C3B   C2B  N1B  C2A   180.00   0.0  0
+ EPY  CONST_21  O2B   C2B  N1B  C2A     0.00   0.0  0
+ EPY  CONST_22  O3A   C3A  N4A  C5A   180.00   0.0  0
+ EPY  CONST_23  HNA4  N4A  C3A  C2A   180.00   0.0  0
+ EPY  CONST_24  HNB1  N1B  C2B  C3B     0.00   0.0  0
+ EPY  CONST_25  HOA6  O6A  C6A  C5A   180.00   0.0  0
+ EPY  CONST_26  HOB6  O6B  C6B  O7B   180.00   0.0  0
+ EPY  Var_01    C9C   C4C  O3C  C2C   176.67  30.0  2
+ EPY  Var_02    H2C1  C2C  O3C  C4C    55.38  30.0  2
+ EPY  Var_03    C6A   C5A  N4A  C3A    79.06  30.0  3
+ EPY  Var_04    O6A   C6A  C5A  N4A    -5.08  30.0  3
+ EPY  Var_05    C2B   C3B  C4B  C5B   177.45  30.0  3
+ EPY  Var_06    O2B   C2B  C3B  C4B    32.73  30.0  3
+ EPY  Var_07    H1A1  C1A  S    C1C    51.87  30.0  3
+ EPY  Var_08    C3A   C2A  C1A  S     177.25  30.0  2
+ EPY  Var_09    N1B   C2A  C1A  S     -61.57  30.0  2
+ EPY  Var_10    O2C   C3C  C1C  S     175.33  30.0  3
+ EPY  Var_11    O3C   C2C  C1C  S     153.78  30.0  3
+ EPY  Var_12    C2B   N1B  C2A  C3A  -127.79  30.0  3
+ EPY  Var_13    C1A   C2A  C3A  N4A  -120.21  30.0  3
+ EPY  Var_14    N1B   C2A  C3A  N4A   117.27  30.0  3
+ EPY  Var_15    C3C   C1C  S    C1A   152.84  30.0  3
+ EPY  Var_16    C2C   C1C  S    C1A   -82.98  30.0  3
+ EPY  Var_17    O3A   C3A  C2A  C1A    59.83  30.0  3
+ EPY  Var_18    C2B   N1B  C2A  C1A   111.07  30.0  3
+ EPY  Var_19    N1B   C2A  C3A  O3A   -62.69  30.0  3
+ EPY  Var_20    C3B   C4B  C5B  C6B    72.41  30.0  3
+ EPY  Var_21    N5B   C5B  C6B  O7B  -169.75  30.0  3
+ EPY  Var_22    C4B   C5B  C6B  O7B   -43.31  30.0  3
+ EPY  Var_23    O6B   C6B  C5B  N5B    11.56  30.0  2
+ EPY  Var_24    C3B   C4B  C5B  N5B  -164.61  30.0  3
+ EPY  Var_25    O6B   C6B  C5B  C4B   138.00  30.0  2
+ EPY  Var_26    O3C   C2C  C1C  C3C   -86.59  30.0  3
+ EPY  Var_27    C2C   C1C  C3C  O2C    53.70  30.0  2
+ EPY  Var_28    H3A1  C2A  C1A  S      55.38  30.0  2
+ EPY  Var_29    H3C1  C3C  C1C  S     -62.62  30.0  3
+ EPY  Var_30    H3C2  C3C  C1C  S      53.61  30.0  3
+ EPY  Var_31    H1A2  C1A  C2A  C3A   -64.36  30.0  3
+ EPY  Var_32    H1C1  C1C  S    C1A    36.13  30.0  3
+ EPY  Var_33    HN51  N5B  C5B  C6B  -139.96  30.0  3
+ EPY  Var_34    HN52  N5B  C5B  C6B   100.02  30.0  3
+ EPY  Var_35    H4B1  C4B  C5B  C6B  -167.40  30.0  3
+ EPY  Var_36    H4B2  C4B  C5B  C6B   -52.39  30.0  3
+ EPY  Var_37    H5B1  C5B  C6B  O7B    75.73  30.0  3
+ EPY  Var_38    HOC2  O2C  C3C  C1C  -175.29  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

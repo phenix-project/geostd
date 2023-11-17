@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 60V  60V  5-[(2E,4aR,7aR)-6-(5-fluoro-4-methoxy-6-methylpyrimidin-2-yl)-2-imino-3-methyl-4-oxooctahydro-7aH-pyrrolo[3,4-d]pyrimidin-7a-yl]thiophene-2-carbonitrile  ligand  47  29  .  2021-08-05  2021-08-05  
+ 60V  60V  5-[(2E,4aR,7aR)-6-(5-fluoro-4-methoxy-6-methylpyrimidin-2-yl)-2-imino-3-methyl-4-oxooctahydro-7aH-pyrrolo[3,4-d]pyrimidin-7a-yl]thiophene-2-carbonitrile  ligand  47  29  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_60V
@@ -249,48 +250,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 60V  CONST_01  S    C    C1   C2     0.00   0.0  0
- 60V  CONST_02  C    S    C3   C2     0.00   0.0  0
- 60V  CONST_03  C    C1   C2   C3     0.00   0.0  0
- 60V  CONST_04  C1   C    S    C3     0.00   0.0  0
- 60V  CONST_05  C15  C16  N6   C12    0.00   0.0  0
- 60V  CONST_06  C15  C13  N5   C12    0.00   0.0  0
- 60V  CONST_07  N6   C16  C15  C13    0.00   0.0  0
- 60V  CONST_08  N6   C12  N5   C13    0.00   0.0  0
- 60V  CONST_09  N5   C12  N6   C16    0.00   0.0  0
- 60V  CONST_10  N5   C13  C15  C16    0.00   0.0  0
- 60V  CONST_11  S    C3   C2   C1     0.00   0.0  0
- 60V  CONST_12  C5   C    C1   C2   180.00   0.0  0
- 60V  CONST_13  C5   C    S    C3   180.00   0.0  0
- 60V  CONST_14  N4   C12  N5   C13  180.00   0.0  0
- 60V  CONST_15  N4   C12  N6   C16  180.00   0.0  0
- 60V  CONST_16  C8   N3   C6   N1     0.00   0.0  0
- 60V  CONST_17  C9   C8   N3   C6     0.00   0.0  0
- 60V  CONST_19  O1   C16  N6   C12  180.00   0.0  0
- 60V  CONST_20  C14  C13  N5   C12  180.00   0.0  0
- 60V  CONST_21  O1   C16  C15  C13  180.00   0.0  0
- 60V  CONST_22  C14  C13  C15  C16  180.00   0.0  0
- 60V  CONST_23  N6   C16  C15  F    180.00   0.0  0
- 60V  CONST_24  N5   C13  C15  F    180.00   0.0  0
- 60V  CONST_25  C4   C3   S    C    180.00   0.0  0
- 60V  CONST_26  C4   C3   C2   C1   180.00   0.0  0
- 60V  CONST_27  C7   N3   C6   N1   180.00   0.0  0
- 60V  CONST_28  O    C8   N3   C6   180.00   0.0  0
- 60V  CONST_29  N2   C6   N3   C8   180.00   0.0  0
- 60V  CONST_30  C7   N3   C8   C9   180.00   0.0  0
- 60V  CONST_32  H18  C1   C2   C3   180.00   0.0  0
- 60V  CONST_33  H1   C2   C1   C    180.00   0.0  0
- 60V  CONST_34  H19  N1   C6   N3   180.00   0.0  0
- 60V  CONST_35  C7   N3   C8   O      0.00   0.0  0
- 60V  CONST_36  N2   C6   N3   C7     0.00   0.0  0
- 60V  CONST_37  H16  N2   C6   N1   180.00   0.0  0
- 60V  Var_01    C11  N4   C10  C9     8.71  30.0  1
- 60V  Var_02    C5   C11  N4   C10   16.11  30.0  1
- 60V  Var_03    N6   C12  N4   C10  177.54  30.0  2
- 60V  Var_04    N6   C16  O1   C17    0.14  30.0  2
- 60V  Var_05    H13  C7   N3   C6    52.26  30.0  3
- 60V  Var_06    H10  C14  C13  C15  -79.31  30.0  2
- 60V  Var_07    H7   C17  O1   C16  -62.68  30.0  3
+ 60V  CONST_01  S    C    C1   C2      0.00   0.0  0
+ 60V  CONST_02  C    S    C3   C2      0.00   0.0  0
+ 60V  CONST_03  C    C1   C2   C3      0.00   0.0  0
+ 60V  CONST_04  C1   C    S    C3      0.00   0.0  0
+ 60V  CONST_05  C15  C16  N6   C12     0.00   0.0  0
+ 60V  CONST_06  C15  C13  N5   C12     0.00   0.0  0
+ 60V  CONST_07  N6   C16  C15  C13     0.00   0.0  0
+ 60V  CONST_08  N6   C12  N5   C13     0.00   0.0  0
+ 60V  CONST_09  N5   C12  N6   C16     0.00   0.0  0
+ 60V  CONST_10  N5   C13  C15  C16     0.00   0.0  0
+ 60V  CONST_11  S    C3   C2   C1      0.00   0.0  0
+ 60V  CONST_12  C5   C    C1   C2    180.00   0.0  0
+ 60V  CONST_13  C5   C    S    C3    180.00   0.0  0
+ 60V  CONST_14  N4   C12  N5   C13   180.00   0.0  0
+ 60V  CONST_15  N4   C12  N6   C16   180.00   0.0  0
+ 60V  CONST_16  C8   N3   C6   N1      0.00   0.0  0
+ 60V  CONST_17  C9   C8   N3   C6      0.00   0.0  0
+ 60V  CONST_18  O1   C16  N6   C12   180.00   0.0  0
+ 60V  CONST_19  C14  C13  N5   C12   180.00   0.0  0
+ 60V  CONST_20  O1   C16  C15  C13   180.00   0.0  0
+ 60V  CONST_21  C14  C13  C15  C16   180.00   0.0  0
+ 60V  CONST_22  N6   C16  C15  F     180.00   0.0  0
+ 60V  CONST_23  N5   C13  C15  F     180.00   0.0  0
+ 60V  CONST_24  C4   C3   S    C     180.00   0.0  0
+ 60V  CONST_25  C4   C3   C2   C1    180.00   0.0  0
+ 60V  CONST_26  C7   N3   C6   N1    180.00   0.0  0
+ 60V  CONST_27  O    C8   N3   C6    180.00   0.0  0
+ 60V  CONST_28  N2   C6   N3   C8    180.00   0.0  0
+ 60V  CONST_29  C7   N3   C8   C9    180.00   0.0  0
+ 60V  CONST_30  H18  C1   C2   C3    180.00   0.0  0
+ 60V  CONST_31  H1   C2   C1   C     180.00   0.0  0
+ 60V  CONST_32  H19  N1   C6   N3    180.00   0.0  0
+ 60V  CONST_33  C7   N3   C8   O       0.00   0.0  0
+ 60V  CONST_34  N2   C6   N3   C7      0.00   0.0  0
+ 60V  CONST_35  H16  N2   C6   N1    180.00   0.0  0
+ 60V  Var_01    C11  N4   C10  C9      8.71  30.0  1
+ 60V  Var_02    C5   C11  N4   C10    16.11  30.0  1
+ 60V  Var_03    N6   C12  N4   C10   177.54  30.0  2
+ 60V  Var_04    N6   C16  O1   C17     0.14  30.0  2
+ 60V  Var_05    H13  C7   N3   C6     52.26  30.0  3
+ 60V  Var_06    H10  C14  C13  C15   -79.31  30.0  2
+ 60V  Var_07    H7   C17  O1   C16   -62.68  30.0  3
+ 60V  Var_08    N4   C11  C5   N1     77.62  30.0  1
+ 60V  Var_09    C1   C    C5   N1      0.59  30.0  3
+ 60V  Var_10    S    C    C5   N1   -178.53  30.0  3
+ 60V  Var_11    C10  C9   C5   N1    -74.04  30.0  1
+ 60V  Var_12    C11  C5   N1   C6   -158.46  30.0  1
+ 60V  Var_13    C    C5   N1   C6     75.34  30.0  1
+ 60V  Var_14    C11  C5   C9   C8    162.66  30.0  1
+ 60V  Var_15    C    C5   C9   C8    -74.70  30.0  1
+ 60V  Var_16    N4   C10  C9   C8   -153.24  30.0  1
+ 60V  Var_17    N4   C11  C5   C9    -33.92  30.0  1
+ 60V  Var_18    C1   C    C5   C9    120.86  30.0  3
+ 60V  Var_19    S    C    C5   C9    -58.25  30.0  3
+ 60V  Var_20    C11  C5   C9   C10    39.75  30.0  1
+ 60V  Var_21    C    C5   C9   C10   162.39  30.0  1
+ 60V  Var_22    N3   C8   C9   C10    92.13  30.0  1
+ 60V  Var_23    C1   C    C5   C11  -123.09  30.0  3
+ 60V  Var_24    S    C    C5   C11    57.80  30.0  3
+ 60V  Var_25    C    C5   C11  N4   -157.08  30.0  1
+ 60V  Var_26    C5   C9   C10  N4    -30.03  30.0  1
+ 60V  Var_27    O    C8   C9   C10   -87.49  30.0  1
+ 60V  Var_28    H5   C11  C5   N1    -43.19  30.0  1
+ 60V  Var_29    H6   C11  C5   N1   -162.85  30.0  1
+ 60V  Var_30    H2   C9   C5   N1    169.42  30.0  1
+ 60V  Var_31    H3   C10  C9   C8    -33.57  30.0  1
+ 60V  Var_32    H4   C10  C9   C8     86.93  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

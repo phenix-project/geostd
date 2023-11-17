@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 9FJ  9FJ  '3-({[(1R)-6-methoxy-1,2,3,4-tetrahydronaphthalen-1-yl]methyl}amino)pyridine-4-carboxylic acid'  ligand  42  23  .  2021-08-06  2023-02-02
+ 9FJ  9FJ  '3-({[(1R)-6-methoxy-1,2,3,4-tetrahydronaphthalen-1-yl]methyl}amino)pyridine-4-carboxylic acid'  ligand  42  23  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_9FJ
@@ -228,40 +229,53 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 9FJ  CONST_01  N3   C2   C1   C6     0.00   0.0  0
- 9FJ  CONST_02  N3   C4   C5   C6     0.00   0.0  0
- 9FJ  CONST_03  C2   C1   C6   C5     0.00   0.0  0
- 9FJ  CONST_04  C2   N3   C4   C5     0.00   0.0  0
- 9FJ  CONST_05  C1   C2   N3   C4     0.00   0.0  0
- 9FJ  CONST_06  C1   C6   C5   C4     0.00   0.0  0
- 9FJ  CONST_07  C20  C19  C18  C17    0.00   0.0  0
- 9FJ  CONST_08  C20  C21  C16  C17    0.00   0.0  0
- 9FJ  CONST_09  C21  C20  C19  C18    0.00   0.0  0
- 9FJ  CONST_10  C21  C16  C17  C18    0.00   0.0  0
- 9FJ  CONST_11  C16  C17  C18  C19    0.00   0.0  0
- 9FJ  CONST_12  C16  C21  C20  C19    0.00   0.0  0
- 9FJ  CONST_13  C2   C1   C6   C7   180.00   0.0  0
- 9FJ  CONST_14  C4   C5   C6   C7   180.00   0.0  0
- 9FJ  CONST_15  N10  C1   C6   C5   180.00   0.0  0
- 9FJ  CONST_16  N10  C1   C2   N3   180.00   0.0  0
- 9FJ  CONST_17  O22  C20  C19  C18  180.00   0.0  0
- 9FJ  CONST_18  C16  C21  C20  O22  180.00   0.0  0
- 9FJ  CONST_19  H4   C2   C1   C6   180.00   0.0  0
- 9FJ  CONST_20  H3   C4   C5   C6   180.00   0.0  0
- 9FJ  CONST_21  H2   C5   C4   N3   180.00   0.0  0
- 9FJ  CONST_22  H9   C18  C17  C12    0.00   0.0  0
- 9FJ  CONST_23  H10  C19  C18  C17  180.00   0.0  0
- 9FJ  CONST_24  H14  C21  C16  C17  180.00   0.0  0
- 9FJ  CONST_25  C11  N10  C1   C6   180.00   0.0  0
- 9FJ  CONST_26  C11  N10  C1   C2     0.00   0.0  0
- 9FJ  CONST_27  H5   N10  C1   C6     0.00   0.0  0
- 9FJ  Var_01    C15  C14  C13  C12   62.63  30.0  1
- 9FJ  Var_02    C14  C15  C16  C17   23.24  30.0  1
- 9FJ  Var_03    C13  C14  C15  C16  -54.09  30.0  1
- 9FJ  Var_04    C1   C6   C7   O9    -0.84  30.0  3
- 9FJ  Var_05    C12  C11  N10  C1   175.44  30.0  2
- 9FJ  Var_06    C21  C20  O22  C23  179.42  30.0  2
- 9FJ  Var_07    H11  C23  O22  C20  -61.55  30.0  3
+ 9FJ  CONST_01  N3   C2   C1   C6      0.00   0.0  0
+ 9FJ  CONST_02  N3   C4   C5   C6      0.00   0.0  0
+ 9FJ  CONST_03  C2   C1   C6   C5      0.00   0.0  0
+ 9FJ  CONST_04  C2   N3   C4   C5      0.00   0.0  0
+ 9FJ  CONST_05  C1   C2   N3   C4      0.00   0.0  0
+ 9FJ  CONST_06  C1   C6   C5   C4      0.00   0.0  0
+ 9FJ  CONST_07  C20  C19  C18  C17     0.00   0.0  0
+ 9FJ  CONST_08  C20  C21  C16  C17     0.00   0.0  0
+ 9FJ  CONST_09  C21  C20  C19  C18     0.00   0.0  0
+ 9FJ  CONST_10  C21  C16  C17  C18     0.00   0.0  0
+ 9FJ  CONST_11  C16  C17  C18  C19     0.00   0.0  0
+ 9FJ  CONST_12  C16  C21  C20  C19     0.00   0.0  0
+ 9FJ  CONST_13  C2   C1   C6   C7    180.00   0.0  0
+ 9FJ  CONST_14  C4   C5   C6   C7    180.00   0.0  0
+ 9FJ  CONST_15  N10  C1   C6   C5    180.00   0.0  0
+ 9FJ  CONST_16  N10  C1   C2   N3    180.00   0.0  0
+ 9FJ  CONST_17  O22  C20  C19  C18   180.00   0.0  0
+ 9FJ  CONST_18  C16  C21  C20  O22   180.00   0.0  0
+ 9FJ  CONST_19  H4   C2   C1   C6    180.00   0.0  0
+ 9FJ  CONST_20  H3   C4   C5   C6    180.00   0.0  0
+ 9FJ  CONST_21  H2   C5   C4   N3    180.00   0.0  0
+ 9FJ  CONST_22  H9   C18  C17  C12     0.00   0.0  0
+ 9FJ  CONST_23  H10  C19  C18  C17   180.00   0.0  0
+ 9FJ  CONST_24  H14  C21  C16  C17   180.00   0.0  0
+ 9FJ  CONST_25  C11  N10  C1   C6    180.00   0.0  0
+ 9FJ  CONST_26  C11  N10  C1   C2      0.00   0.0  0
+ 9FJ  CONST_27  H5   N10  C1   C6      0.00   0.0  0
+ 9FJ  Var_01    C15  C14  C13  C12    62.63  30.0  1
+ 9FJ  Var_02    C14  C15  C16  C17    23.24  30.0  1
+ 9FJ  Var_03    C13  C14  C15  C16   -54.09  30.0  1
+ 9FJ  Var_04    C1   C6   C7   O9     -0.84  30.0  3
+ 9FJ  Var_05    C12  C11  N10  C1    175.44  30.0  2
+ 9FJ  Var_06    C21  C20  O22  C23   179.42  30.0  2
+ 9FJ  Var_07    H11  C23  O22  C20   -61.55  30.0  3
+ 9FJ  Var_08    C14  C13  C12  C17   -37.22  30.0  1
+ 9FJ  Var_09    C13  C12  C17  C18  -176.73  30.0  1
+ 9FJ  Var_10    C13  C12  C17  C16     5.35  30.0  1
+ 9FJ  Var_11    C18  C17  C12  C11   -52.77  30.0  1
+ 9FJ  Var_12    C16  C17  C12  C11   129.31  30.0  1
+ 9FJ  Var_13    C14  C13  C12  C11  -161.47  30.0  1
+ 9FJ  Var_14    H19  C13  C12  C17    83.47  30.0  1
+ 9FJ  Var_15    H20  C13  C12  C17  -160.39  30.0  1
+ 9FJ  Var_16    H8   C12  C17  C18    64.22  30.0  1
+ 9FJ  Var_17    C17  C12  C11  N10   175.07  30.0  3
+ 9FJ  Var_18    C13  C12  C11  N10   -59.35  30.0  3
+ 9FJ  Var_19    H6   C11  C12  C17    52.44  30.0  3
+ 9FJ  Var_20    H7   C11  C12  C17   -63.44  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

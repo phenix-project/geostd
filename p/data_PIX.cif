@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PIX  PIX  '4-(3-{[5-(trifluoromethyl)pyridin-2-yl]oxy}benzyl)piperidine-1-carboxylic acid'  ligand  45  27  .  2021-08-19  2021-08-19  
+ PIX  PIX  '4-(3-{[5-(trifluoromethyl)pyridin-2-yl]oxy}benzyl)piperidine-1-carboxylic acid'  ligand  45  27  .  2021-08-19  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PIX
@@ -240,41 +241,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PIX  CONST_01  C15  C14  C13  C12     0.00   0.0  0
- PIX  CONST_02  C15  C16  C17  C12     0.00   0.0  0
- PIX  CONST_03  C16  C17  C12  C13     0.00   0.0  0
- PIX  CONST_04  C16  C15  C14  C13     0.00   0.0  0
- PIX  CONST_05  C17  C12  C13  C14     0.00   0.0  0
- PIX  CONST_06  C17  C16  C15  C14     0.00   0.0  0
- PIX  CONST_07  C24  C21  C20  C19     0.00   0.0  0
- PIX  CONST_08  C24  C23  N24  C19     0.00   0.0  0
- PIX  CONST_09  C23  N24  C19  C20     0.00   0.0  0
- PIX  CONST_10  C23  C24  C21  C20     0.00   0.0  0
- PIX  CONST_11  N24  C19  C20  C21     0.00   0.0  0
- PIX  CONST_12  N24  C23  C24  C21     0.00   0.0  0
- PIX  CONST_13  C14  C13  C12  C7    180.00   0.0  0
- PIX  CONST_14  C16  C17  C12  C7    180.00   0.0  0
- PIX  CONST_15  O18  C16  C17  C12   180.00   0.0  0
- PIX  CONST_16  O18  C16  C15  C14   180.00   0.0  0
- PIX  CONST_17  C21  C20  C19  O18   180.00   0.0  0
- PIX  CONST_18  C23  N24  C19  O18   180.00   0.0  0
- PIX  CONST_19  C25  C24  C21  C20   180.00   0.0  0
- PIX  CONST_20  C25  C24  C23  N24   180.00   0.0  0
- PIX  CONST_21  H14  C14  C13  C12   180.00   0.0  0
- PIX  CONST_22  H17  C17  C12  C13   180.00   0.0  0
- PIX  CONST_23  H15  C15  C14  C13   180.00   0.0  0
- PIX  CONST_24  H13  C13  C14  C15   180.00   0.0  0
- PIX  CONST_25  H21  C21  C20  C19   180.00   0.0  0
- PIX  CONST_26  H23  C23  N24  C19   180.00   0.0  0
- PIX  CONST_27  H20  C20  C19  N24   180.00   0.0  0
- PIX  Var_01    C6   C1   C2   N3     55.94  30.0  1
- PIX  Var_02    C6   C5   C4   N3    -55.09  30.0  1
- PIX  Var_03    C5   C4   N3   C2     57.76  30.0  1
- PIX  Var_04    C4   N3   C2   C1    -58.11  30.0  1
- PIX  Var_05    C13  C12  C7   C6     75.28  30.0  2
- PIX  Var_06    C20  C19  O18  C16  -172.34  30.0  2
- PIX  Var_07    C2   N3   C8   O9     18.92  30.0  2
- PIX  Var_08    F28  C25  C24  C21    89.22  30.0  2
+ PIX  CONST_01  C15   C14  C13  C12     0.00   0.0  0
+ PIX  CONST_02  C15   C16  C17  C12     0.00   0.0  0
+ PIX  CONST_03  C16   C17  C12  C13     0.00   0.0  0
+ PIX  CONST_04  C16   C15  C14  C13     0.00   0.0  0
+ PIX  CONST_05  C17   C12  C13  C14     0.00   0.0  0
+ PIX  CONST_06  C17   C16  C15  C14     0.00   0.0  0
+ PIX  CONST_07  C24   C21  C20  C19     0.00   0.0  0
+ PIX  CONST_08  C24   C23  N24  C19     0.00   0.0  0
+ PIX  CONST_09  C23   N24  C19  C20     0.00   0.0  0
+ PIX  CONST_10  C23   C24  C21  C20     0.00   0.0  0
+ PIX  CONST_11  N24   C19  C20  C21     0.00   0.0  0
+ PIX  CONST_12  N24   C23  C24  C21     0.00   0.0  0
+ PIX  CONST_13  C14   C13  C12  C7    180.00   0.0  0
+ PIX  CONST_14  C16   C17  C12  C7    180.00   0.0  0
+ PIX  CONST_15  O18   C16  C17  C12   180.00   0.0  0
+ PIX  CONST_16  O18   C16  C15  C14   180.00   0.0  0
+ PIX  CONST_17  C21   C20  C19  O18   180.00   0.0  0
+ PIX  CONST_18  C23   N24  C19  O18   180.00   0.0  0
+ PIX  CONST_19  C25   C24  C21  C20   180.00   0.0  0
+ PIX  CONST_20  C25   C24  C23  N24   180.00   0.0  0
+ PIX  CONST_21  H14   C14  C13  C12   180.00   0.0  0
+ PIX  CONST_22  H17   C17  C12  C13   180.00   0.0  0
+ PIX  CONST_23  H15   C15  C14  C13   180.00   0.0  0
+ PIX  CONST_24  H13   C13  C14  C15   180.00   0.0  0
+ PIX  CONST_25  H21   C21  C20  C19   180.00   0.0  0
+ PIX  CONST_26  H23   C23  N24  C19   180.00   0.0  0
+ PIX  CONST_27  H20   C20  C19  N24   180.00   0.0  0
+ PIX  Var_01    C6    C1   C2   N3     55.94  30.0  1
+ PIX  Var_02    C6    C5   C4   N3    -55.09  30.0  1
+ PIX  Var_03    C5    C4   N3   C2     57.76  30.0  1
+ PIX  Var_04    C4    N3   C2   C1    -58.11  30.0  1
+ PIX  Var_05    C13   C12  C7   C6     75.28  30.0  2
+ PIX  Var_06    C20   C19  O18  C16  -172.34  30.0  2
+ PIX  Var_07    C2    N3   C8   O9     18.92  30.0  2
+ PIX  Var_08    F28   C25  C24  C21    89.22  30.0  2
+ PIX  Var_09    C5    C6   C1   C2    -52.95  30.0  1
+ PIX  Var_10    C4    C5   C6   C1     52.45  30.0  1
+ PIX  Var_11    C7    C6   C1   C2   -178.49  30.0  1
+ PIX  Var_12    C12   C7   C6   C1   -173.14  30.0  3
+ PIX  Var_13    C7    C6   C5   C4    176.99  30.0  1
+ PIX  Var_14    C12   C7   C6   C5     62.98  30.0  3
+ PIX  Var_15    C19   O18  C16  C15    77.20  30.0  2
+ PIX  Var_16    C19   O18  C16  C17  -106.17  30.0  2
+ PIX  Var_17    H6    C6   C1   C2     63.80  30.0  1
+ PIX  Var_18    H71C  C7   C6   C1    -51.82  30.0  3
+ PIX  Var_19    H72C  C7   C6   C1     63.82  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,11 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 8VQ  8VQ  "~{N}-[(2~{R},3~{R},4~{R},5~{S},6~{R})-2-acetamido-6-(hydroxymethyl)-5-[(2~{S},3~{R},4~{S},5~{S},6~{R})-6-(hydroxymethyl)-4-[(3-methoxyphenyl)methoxy]-3,5-bis(oxidanyl)oxan-2-yl]oxy-4-oxidanyl-oxan-3-yl]ethanamide"
-  ligand  74  38  .  2021-08-06  2021-08-06  
+ 8VQ  8VQ  ~{N}-[(2~{R},3~{R},4~{R},5~{S},6~{R})-2-acetamido-6-(hydroxymethyl)-5-[(2~{S},3~{R},4~{S},5~{S},6~{R})-6-(hydroxymethyl)-4-[(3-methoxyphenyl)methoxy]-3,5-bis(oxidanyl)oxan-2-yl]oxy-4-oxidanyl-oxan-3-yl]ethanamide  ligand  74  38  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_8VQ
@@ -352,31 +352,108 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 8VQ  CONST_01  C28  C27  C26  C25    0.00   0.0  0
- 8VQ  CONST_02  C28  C29  C30  C25    0.00   0.0  0
- 8VQ  CONST_03  C29  C28  C27  C26    0.00   0.0  0
- 8VQ  CONST_04  C29  C30  C25  C26    0.00   0.0  0
- 8VQ  CONST_05  C30  C25  C26  C27    0.00   0.0  0
- 8VQ  CONST_06  C30  C29  C28  C27    0.00   0.0  0
- 8VQ  CONST_07  C27  C26  C25  C24  180.00   0.0  0
- 8VQ  CONST_08  C29  C30  C25  C24  180.00   0.0  0
- 8VQ  CONST_09  O31  C29  C30  C25  180.00   0.0  0
- 8VQ  CONST_10  O31  C29  C28  C27  180.00   0.0  0
- 8VQ  CONST_11  H31  C27  C26  C25  180.00   0.0  0
- 8VQ  CONST_12  H32  C28  C27  C26  180.00   0.0  0
- 8VQ  CONST_13  H33  C30  C25  C26  180.00   0.0  0
- 8VQ  CONST_14  H30  C26  C27  C28  180.00   0.0  0
- 8VQ  CONST_15  C1,  N1   C33  O35    0.00   0.0  0
- 8VQ  CONST_16  C1,  N1   C33  C34  180.00   0.0  0
- 8VQ  CONST_17  O37  C36  N2   C2,    0.00   0.0  0
- 8VQ  CONST_18  C38  C36  N2   C2,  180.00   0.0  0
- 8VQ  CONST_19  H9   N1   C33  O35  180.00   0.0  0
- 8VQ  CONST_20  H12  N2   C36  C38    0.00   0.0  0
- 8VQ  Var_01    C25  C24  O3   C3   154.44  30.0  1
- 8VQ  Var_02    C26  C25  C24  O3   -59.20  30.0  2
- 8VQ  Var_03    H34  C32  O31  C29  -61.21  30.0  3
- 8VQ  Var_04    H6   C34  C33  O35  -43.56  30.0  3
- 8VQ  Var_05    H13  C38  C36  N2   106.25  30.0  3
+ 8VQ  CONST_01  C28  C27  C26  C25     0.00   0.0  0
+ 8VQ  CONST_02  C28  C29  C30  C25     0.00   0.0  0
+ 8VQ  CONST_03  C29  C28  C27  C26     0.00   0.0  0
+ 8VQ  CONST_04  C29  C30  C25  C26     0.00   0.0  0
+ 8VQ  CONST_05  C30  C25  C26  C27     0.00   0.0  0
+ 8VQ  CONST_06  C30  C29  C28  C27     0.00   0.0  0
+ 8VQ  CONST_07  C27  C26  C25  C24   180.00   0.0  0
+ 8VQ  CONST_08  C29  C30  C25  C24   180.00   0.0  0
+ 8VQ  CONST_09  O31  C29  C30  C25   180.00   0.0  0
+ 8VQ  CONST_10  O31  C29  C28  C27   180.00   0.0  0
+ 8VQ  CONST_11  H31  C27  C26  C25   180.00   0.0  0
+ 8VQ  CONST_12  H32  C28  C27  C26   180.00   0.0  0
+ 8VQ  CONST_13  H33  C30  C25  C26   180.00   0.0  0
+ 8VQ  CONST_14  H30  C26  C27  C28   180.00   0.0  0
+ 8VQ  CONST_15  C1,  N1   C33  O35     0.00   0.0  0
+ 8VQ  CONST_16  C1,  N1   C33  C34   180.00   0.0  0
+ 8VQ  CONST_17  O37  C36  N2   C2,     0.00   0.0  0
+ 8VQ  CONST_18  C38  C36  N2   C2,   180.00   0.0  0
+ 8VQ  CONST_19  H9   N1   C33  O35   180.00   0.0  0
+ 8VQ  CONST_20  H12  N2   C36  C38     0.00   0.0  0
+ 8VQ  Var_01    C25  C24  O3   C3    154.44  30.0  1
+ 8VQ  Var_02    C26  C25  C24  O3    -59.20  30.0  2
+ 8VQ  Var_03    H34  C32  O31  C29   -61.21  30.0  3
+ 8VQ  Var_04    H6   C34  C33  O35   -43.56  30.0  3
+ 8VQ  Var_05    H13  C38  C36  N2    106.25  30.0  3
+ 8VQ  Var_06    C1   C2   C3   C4    -52.20  30.0  1
+ 8VQ  Var_07    C1   O5   C5   C4     62.79  30.0  1
+ 8VQ  Var_08    O5   C1   C2   C3     57.11  30.0  1
+ 8VQ  Var_09    O5   C5   C4   C3    -55.71  30.0  1
+ 8VQ  Var_10    C5   C4   C3   C2     51.80  30.0  1
+ 8VQ  Var_11    C5   O5   C1   C2    -63.32  30.0  1
+ 8VQ  Var_12    C4,  C5,  O5,  C1,    64.03  30.0  1
+ 8VQ  Var_13    C4,  C3,  C2,  C1,   -51.85  30.0  1
+ 8VQ  Var_14    C5,  O5,  C1,  C2,   -64.73  30.0  1
+ 8VQ  Var_15    C5,  C4,  C3,  C2,    50.67  30.0  1
+ 8VQ  Var_16    C3,  C4,  C5,  O5,   -55.28  30.0  1
+ 8VQ  Var_17    C3,  C2,  C1,  O5,    57.08  30.0  1
+ 8VQ  Var_18    O2   C2   C3   C4   -173.67  30.0  1
+ 8VQ  Var_19    O1   C1   C2   C3    175.92  30.0  1
+ 8VQ  Var_20    C6   C5   C4   C3   -177.40  30.0  1
+ 8VQ  Var_21    O4   C4   C3   C2    -68.64  30.0  1
+ 8VQ  Var_22    C4,  O1   C1   C2    160.55  30.0  3
+ 8VQ  Var_23    O3   C3   C2   C1   -172.33  30.0  1
+ 8VQ  Var_24    C5,  C4,  O1   C1   -110.81  30.0  1
+ 8VQ  Var_25    C3,  C4,  O1   C1    129.66  30.0  1
+ 8VQ  Var_26    C6   C5   O5   C1   -173.22  30.0  1
+ 8VQ  Var_27    C5,  O5,  C1,  N1    174.17  30.0  1
+ 8VQ  Var_28    C3,  C2,  C1,  N1    177.20  30.0  1
+ 8VQ  Var_29    C6,  C5,  O5,  C1,  -173.06  30.0  1
+ 8VQ  Var_30    O3,  C3,  C2,  C1,  -172.99  30.0  1
+ 8VQ  Var_31    O1   C4,  C3,  C2,   169.91  30.0  1
+ 8VQ  Var_32    O5,  C1,  C2,  N2    179.08  30.0  1
+ 8VQ  Var_33    C4,  C3,  C2,  N2   -175.02  30.0  1
+ 8VQ  Var_34    O1   C4,  C5,  O5,  -173.59  30.0  1
+ 8VQ  Var_35    O3,  C3,  C4,  C5,   173.42  30.0  1
+ 8VQ  Var_36    C3,  C4,  C5,  C6,  -175.08  30.0  1
+ 8VQ  Var_37    O5   C1   O1   C4,   -79.52  30.0  1
+ 8VQ  Var_38    C5   O5   C1   O1    178.70  30.0  1
+ 8VQ  Var_39    O5   C1   C2   O2    176.74  30.0  1
+ 8VQ  Var_40    O5   C5   C4   O4     66.56  30.0  1
+ 8VQ  Var_41    O3   C3   C4   C5    172.83  30.0  1
+ 8VQ  Var_42    H3   C2   C3   C4     65.24  30.0  1
+ 8VQ  Var_43    H4   C1   C2   C3    -63.41  30.0  1
+ 8VQ  Var_44    H25  C5   C4   C3     64.16  30.0  1
+ 8VQ  Var_45    H1   C4   C3   C2    168.79  30.0  1
+ 8VQ  Var_46    H2   C3   C2   C1     65.64  30.0  1
+ 8VQ  Var_47    H16  C5,  O5,  C1,   -54.75  30.0  1
+ 8VQ  Var_48    H21  C3,  C2,  C1,    65.00  30.0  1
+ 8VQ  Var_49    H20  C4,  C3,  C2,   -69.31  30.0  1
+ 8VQ  Var_50    H11  C2,  C1,  O5,   -61.81  30.0  1
+ 8VQ  Var_51    H10  C1,  O5,  C5,    55.24  30.0  1
+ 8VQ  Var_52    C24  O3   C3   C4    132.56  30.0  3
+ 8VQ  Var_53    O6   C6   C5   C4   -167.91  30.0  3
+ 8VQ  Var_54    C24  O3   C3   C2   -105.95  30.0  3
+ 8VQ  Var_55    N2   C2,  C1,  N1    -60.79  30.0  1
+ 8VQ  Var_56    C36  N2   C2,  C1,    97.00  30.0  3
+ 8VQ  Var_57    C33  N1   C1,  C2,   145.95  30.0  1
+ 8VQ  Var_58    O3,  C3,  C2,  N2     63.84  30.0  1
+ 8VQ  Var_59    C3,  C2,  N2   C36  -140.83  30.0  2
+ 8VQ  Var_60    O6,  C6,  C5,  O5,    62.46  30.0  1
+ 8VQ  Var_61    C33  N1   C1,  O5,   -94.01  30.0  1
+ 8VQ  Var_62    O1   C4,  C5,  C6,    66.61  30.0  1
+ 8VQ  Var_63    C4,  C5,  C6,  O6,  -176.34  30.0  3
+ 8VQ  Var_64    O1   C4,  C3,  O3,   -67.35  30.0  1
+ 8VQ  Var_65    O2   C2   C1   O1    -64.45  30.0  1
+ 8VQ  Var_66    O3   C3   C2   O2     66.19  30.0  1
+ 8VQ  Var_67    O3   C3   C4   O4     52.39  30.0  1
+ 8VQ  Var_68    C6   C5   C4   O4    -55.13  30.0  1
+ 8VQ  Var_69    O6   C6   C5   O5     69.12  30.0  3
+ 8VQ  Var_70    C32  O31  C29  C28     0.35  30.0  2
+ 8VQ  Var_71    C32  O31  C29  C30  -179.26  30.0  2
+ 8VQ  Var_72    H26  C6   C5   C4     69.61  30.0  3
+ 8VQ  Var_73    H27  C6   C5   C4    -46.73  30.0  3
+ 8VQ  Var_74    H23  O2   C2   C3   -164.29  30.0  3
+ 8VQ  Var_75    H24  O4   C4   C3    -57.97  30.0  3
+ 8VQ  Var_76    H12  N2   C2,  C1,   -72.56  30.0  3
+ 8VQ  Var_77    H9   N1   C1,  C2,   -35.71  30.0  1
+ 8VQ  Var_78    H22  O3,  C3,  C2,   -61.74  30.0  3
+ 8VQ  Var_79    H17  C6,  C5,  O5,  -176.24  30.0  1
+ 8VQ  Var_80    H18  C6,  C5,  O5,   -59.52  30.0  1
+ 8VQ  Var_81    H19  O6,  C6,  C5,   178.15  30.0  3
+ 8VQ  Var_82    H5   O6   C6   C5   -176.51  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

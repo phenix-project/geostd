@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VHJ  VHJ  N-[(benzyloxy)carbonyl]-L-valyl-N-{(2S)-1-hydroxy-3-[(3S)-2-oxopyrrolidin-3-yl]propan-2-yl}-L-phenylalaninamide  ligand  77  39  .  2022-03-29  2023-02-15
+ VHJ  VHJ  N-[(benzyloxy)carbonyl]-L-valyl-N-{(2S)-1-hydroxy-3-[(3S)-2-oxopyrrolidin-3-yl]propan-2-yl}-L-phenylalaninamide  ligand  77  39  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VHJ
@@ -361,48 +362,96 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VHJ  CONST_01  C4   C5   C6   C1     0.00   0.0  0
- VHJ  CONST_02  C4   C3   C2   C1     0.00   0.0  0
- VHJ  CONST_03  C18  C16  C13  C10    0.00   0.0  0
- VHJ  CONST_04  C18  C23  C8   C10    0.00   0.0  0
- VHJ  CONST_05  C23  C18  C16  C13    0.00   0.0  0
- VHJ  CONST_06  C23  C8   C10  C13    0.00   0.0  0
- VHJ  CONST_07  C8   C23  C18  C16    0.00   0.0  0
- VHJ  CONST_08  C8   C10  C13  C16    0.00   0.0  0
- VHJ  CONST_09  C5   C4   C3   C2     0.00   0.0  0
- VHJ  CONST_10  C5   C6   C1   C2     0.00   0.0  0
- VHJ  CONST_11  C6   C5   C4   C3     0.00   0.0  0
- VHJ  CONST_12  C6   C1   C2   C3     0.00   0.0  0
- VHJ  CONST_13  C22  N23  C24  C20    0.00   0.0  0
- VHJ  CONST_14  C34  C8   C10  C13  180.00   0.0  0
- VHJ  CONST_15  C34  C8   C23  C18  180.00   0.0  0
- VHJ  CONST_16  C7   C4   C3   C2   180.00   0.0  0
- VHJ  CONST_17  C7   C4   C5   C6   180.00   0.0  0
- VHJ  CONST_18  O26  C24  N23  C22  180.00   0.0  0
- VHJ  CONST_19  H29  C5   C6   C1   180.00   0.0  0
- VHJ  CONST_20  H19  C3   C2   C1   180.00   0.0  0
- VHJ  CONST_21  H6   C16  C13  C10  180.00   0.0  0
- VHJ  CONST_22  H16  C23  C8   C10  180.00   0.0  0
- VHJ  CONST_23  H8   C18  C16  C13  180.00   0.0  0
- VHJ  CONST_24  H2   C10  C13  C16  180.00   0.0  0
- VHJ  CONST_25  H4   C13  C16  C18  180.00   0.0  0
- VHJ  CONST_26  H30  C6   C1   C2   180.00   0.0  0
- VHJ  CONST_27  H1   C1   C2   C3   180.00   0.0  0
- VHJ  CONST_28  H11  C2   C3   C4   180.00   0.0  0
- VHJ  CONST_29  H38  N23  C24  C20  180.00   0.0  0
- VHJ  CONST_30  C14  N13  C12  C11  180.00   0.0  0
- VHJ  CONST_31  O33  C12  N13  C14    0.00   0.0  0
- VHJ  CONST_32  C17  N16  C15  C14  180.00   0.0  0
- VHJ  CONST_33  O38  C15  N16  C17    0.00   0.0  0
- VHJ  CONST_34  H34  N13  C12  C11    0.00   0.0  0
- VHJ  CONST_35  H35  N16  C15  C14    0.00   0.0  0
- VHJ  Var_01    N23  C22  C21  C20   29.68  30.0  1
- VHJ  Var_02    C24  N23  C22  C21  -20.29  30.0  1
- VHJ  Var_03    C14  C34  C8   C10  161.17  30.0  2
- VHJ  Var_04    O8   C7   C4   C3   -64.90  30.0  2
- VHJ  Var_05    O8   C9   N10  C11  170.91  30.0  1
- VHJ  Var_06    H21  C31  C30  C11  177.68  30.0  3
- VHJ  Var_07    H24  C32  C30  C11  175.45  30.0  3
+ VHJ  CONST_01  C4   C5   C6   C1      0.00   0.0  0
+ VHJ  CONST_02  C4   C3   C2   C1      0.00   0.0  0
+ VHJ  CONST_03  C18  C16  C13  C10     0.00   0.0  0
+ VHJ  CONST_04  C18  C23  C8   C10     0.00   0.0  0
+ VHJ  CONST_05  C23  C18  C16  C13     0.00   0.0  0
+ VHJ  CONST_06  C23  C8   C10  C13     0.00   0.0  0
+ VHJ  CONST_07  C8   C23  C18  C16     0.00   0.0  0
+ VHJ  CONST_08  C8   C10  C13  C16     0.00   0.0  0
+ VHJ  CONST_09  C5   C4   C3   C2      0.00   0.0  0
+ VHJ  CONST_10  C5   C6   C1   C2      0.00   0.0  0
+ VHJ  CONST_11  C6   C5   C4   C3      0.00   0.0  0
+ VHJ  CONST_12  C6   C1   C2   C3      0.00   0.0  0
+ VHJ  CONST_13  C22  N23  C24  C20     0.00   0.0  0
+ VHJ  CONST_14  C34  C8   C10  C13   180.00   0.0  0
+ VHJ  CONST_15  C34  C8   C23  C18   180.00   0.0  0
+ VHJ  CONST_16  C7   C4   C3   C2    180.00   0.0  0
+ VHJ  CONST_17  C7   C4   C5   C6    180.00   0.0  0
+ VHJ  CONST_18  O26  C24  N23  C22   180.00   0.0  0
+ VHJ  CONST_19  H29  C5   C6   C1    180.00   0.0  0
+ VHJ  CONST_20  H19  C3   C2   C1    180.00   0.0  0
+ VHJ  CONST_21  H6   C16  C13  C10   180.00   0.0  0
+ VHJ  CONST_22  H16  C23  C8   C10   180.00   0.0  0
+ VHJ  CONST_23  H8   C18  C16  C13   180.00   0.0  0
+ VHJ  CONST_24  H2   C10  C13  C16   180.00   0.0  0
+ VHJ  CONST_25  H4   C13  C16  C18   180.00   0.0  0
+ VHJ  CONST_26  H30  C6   C1   C2    180.00   0.0  0
+ VHJ  CONST_27  H1   C1   C2   C3    180.00   0.0  0
+ VHJ  CONST_28  H11  C2   C3   C4    180.00   0.0  0
+ VHJ  CONST_29  H38  N23  C24  C20   180.00   0.0  0
+ VHJ  CONST_30  C14  N13  C12  C11   180.00   0.0  0
+ VHJ  CONST_31  O33  C12  N13  C14     0.00   0.0  0
+ VHJ  CONST_32  C17  N16  C15  C14   180.00   0.0  0
+ VHJ  CONST_33  O38  C15  N16  C17     0.00   0.0  0
+ VHJ  CONST_34  H34  N13  C12  C11     0.00   0.0  0
+ VHJ  CONST_35  H35  N16  C15  C14     0.00   0.0  0
+ VHJ  Var_01    N23  C22  C21  C20    29.68  30.0  1
+ VHJ  Var_02    C24  N23  C22  C21   -20.29  30.0  1
+ VHJ  Var_03    C14  C34  C8   C10   161.17  30.0  2
+ VHJ  Var_04    O8   C7   C4   C3    -64.90  30.0  2
+ VHJ  Var_05    O8   C9   N10  C11   170.91  30.0  1
+ VHJ  Var_06    H21  C31  C30  C11   177.68  30.0  3
+ VHJ  Var_07    H24  C32  C30  C11   175.45  30.0  3
+ VHJ  Var_08    N23  C24  C20  C21    17.77  30.0  1
+ VHJ  Var_09    C24  C20  C21  C22   -29.06  30.0  1
+ VHJ  Var_10    N23  C24  C20  C19   143.61  30.0  1
+ VHJ  Var_11    C22  C21  C20  C19  -153.38  30.0  1
+ VHJ  Var_12    O26  C24  C20  C21  -163.32  30.0  1
+ VHJ  Var_13    H12  C20  C21  C22    82.83  30.0  1
+ VHJ  Var_14    H13  C21  C20  C24    88.03  30.0  1
+ VHJ  Var_15    H14  C21  C20  C24  -151.40  30.0  1
+ VHJ  Var_16    C24  C20  C19  C17   177.42  30.0  1
+ VHJ  Var_17    C21  C20  C19  C17   -63.89  30.0  1
+ VHJ  Var_18    O26  C24  C20  C19   -37.48  30.0  1
+ VHJ  Var_19    H9   C19  C20  C21   174.33  30.0  3
+ VHJ  Var_20    H10  C19  C20  C21    57.47  30.0  3
+ VHJ  Var_21    C8   C34  C14  C15  -179.17  30.0  2
+ VHJ  Var_22    N16  C17  C19  C20   -59.30  30.0  2
+ VHJ  Var_23    C25  C17  C19  C20   179.29  30.0  2
+ VHJ  Var_24    C9   O8   C7   C4    -76.40  30.0  3
+ VHJ  Var_25    N13  C14  C34  C8    -58.32  30.0  3
+ VHJ  Var_26    H7   C17  C19  C20    58.46  30.0  2
+ VHJ  Var_27    H5   C14  C34  C8     61.12  30.0  3
+ VHJ  Var_28    C34  C14  N13  C12   162.36  30.0  3
+ VHJ  Var_29    C15  C14  N13  C12   -77.01  30.0  3
+ VHJ  Var_30    C9   N10  C11  C12   -58.16  30.0  1
+ VHJ  Var_31    C31  C30  C11  C12   178.19  30.0  3
+ VHJ  Var_32    C32  C30  C11  C12    55.42  30.0  3
+ VHJ  Var_33    C25  C17  N16  C15  -119.88  30.0  3
+ VHJ  Var_34    C19  C17  N16  C15   116.16  30.0  3
+ VHJ  Var_35    O1   C25  C17  C19   -59.84  30.0  1
+ VHJ  Var_36    C9   N10  C11  C30  -179.77  30.0  1
+ VHJ  Var_37    N13  C12  C11  C30  -102.13  30.0  3
+ VHJ  Var_38    O33  C12  C11  C30    76.81  30.0  3
+ VHJ  Var_39    N10  C11  C30  C31   -60.98  30.0  2
+ VHJ  Var_40    N10  C11  C30  C32   176.25  30.0  2
+ VHJ  Var_41    N16  C15  C14  C34  -112.19  30.0  3
+ VHJ  Var_42    O38  C15  C14  C34    66.82  30.0  3
+ VHJ  Var_43    O29  C9   O8   C7     -3.21  30.0  3
+ VHJ  Var_44    N10  C9   O8   C7    176.50  30.0  3
+ VHJ  Var_45    N13  C12  C11  N10   136.87  30.0  3
+ VHJ  Var_46    O33  C12  C11  N10   -44.19  30.0  3
+ VHJ  Var_47    N16  C15  C14  N13   126.36  30.0  3
+ VHJ  Var_48    O38  C15  C14  N13   -54.63  30.0  3
+ VHJ  Var_49    O1   C25  C17  N16   177.52  30.0  1
+ VHJ  Var_50    H33  N10  C11  C12   101.73  30.0  1
+ VHJ  Var_51    H20  C30  C11  C12   -63.09  30.0  3
+ VHJ  Var_52    H36  O1   C25  C17   177.36  30.0  3
+ VHJ  Var_53    H17  C25  C17  C19    62.20  30.0  1
+ VHJ  Var_54    H18  C25  C17  C19   178.36  30.0  1
+ VHJ  Var_55    H3   C11  C30  C31    58.01  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

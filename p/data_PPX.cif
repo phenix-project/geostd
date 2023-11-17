@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PPX  PPX  D-phenylalanyl-N-[2-(pyridin-4-ylamino)ethyl]-L-prolinamide  peptide  55  28  .  2022-09-22  2022-09-22
+ PPX  PPX  D-phenylalanyl-N-[2-(pyridin-4-ylamino)ethyl]-L-prolinamide  peptide  55  28  .  2022-09-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_PPX
@@ -277,48 +278,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PPX  CONST_01  C9   C7   C5   C4      0.00   0.0  0
- PPX  CONST_02  C9   C8   C6   C4      0.00   0.0  0
- PPX  CONST_03  C8   C6   C4   C5      0.00   0.0  0
- PPX  CONST_04  C8   C9   C7   C5      0.00   0.0  0
- PPX  CONST_05  C7   C5   C4   C6      0.00   0.0  0
- PPX  CONST_06  C7   C9   C8   C6      0.00   0.0  0
- PPX  CONST_07  N24  C23  C22  C21     0.00   0.0  0
- PPX  CONST_08  N24  C25  C26  C21     0.00   0.0  0
- PPX  CONST_09  C25  C26  C21  C22     0.00   0.0  0
- PPX  CONST_10  C25  N24  C23  C22     0.00   0.0  0
- PPX  CONST_11  C26  C21  C22  C23     0.00   0.0  0
- PPX  CONST_12  C26  C25  N24  C23     0.00   0.0  0
- PPX  CONST_13  C7   C5   C4   C3    180.00   0.0  0
- PPX  CONST_14  C8   C6   C4   C3    180.00   0.0  0
- PPX  CONST_15  C23  C22  C21  N27   180.00   0.0  0
- PPX  CONST_16  C25  C26  C21  N27   180.00   0.0  0
- PPX  CONST_17  H7   C7   C5   C4    180.00   0.0  0
- PPX  CONST_18  H8   C8   C6   C4    180.00   0.0  0
- PPX  CONST_19  H6   C6   C4   C5    180.00   0.0  0
- PPX  CONST_20  H9   C9   C7   C5    180.00   0.0  0
- PPX  CONST_21  H5   C5   C4   C6    180.00   0.0  0
- PPX  CONST_22  H23  C23  C22  C21   180.00   0.0  0
- PPX  CONST_23  H25  C25  C26  C21   180.00   0.0  0
- PPX  CONST_24  H26  C26  C21  C22   180.00   0.0  0
- PPX  CONST_25  H22  C22  C23  N24   180.00   0.0  0
- PPX  CONST_26  C13  N12  C10  C2      0.00   0.0  0
- PPX  CONST_27  C14  N12  C10  C2    180.00   0.0  0
- PPX  CONST_28  C13  N12  C10  O11   180.00   0.0  0
- PPX  CONST_29  C14  N12  C10  O11     0.00   0.0  0
- PPX  CONST_30  C22  C21  N27  C30   180.00   0.0  0
- PPX  CONST_31  C26  C21  N27  C30     0.00   0.0  0
- PPX  CONST_32  H27  N27  C21  C22     0.00   0.0  0
- PPX  CONST_33  C20  N19  C17  C14   180.00   0.0  0
- PPX  CONST_34  H19  N19  C17  C14     0.00   0.0  0
- PPX  CONST_35  C20  N19  C17  O18     0.00   0.0  0
- PPX  Var_01    C15  C16  C13  N12   -34.98  30.0  1
- PPX  Var_02    C16  C13  N12  C14    19.91  30.0  1
- PPX  Var_03    C13  C16  C15  C14    37.66  30.0  1
- PPX  Var_04    C5   C4   C3   C2     83.35  30.0  2
- PPX  Var_05    C21  N27  C30  C20   176.19  30.0  3
- PPX  Var_06    C30  C20  N19  C17    83.29  30.0  3
- PPX  Var_07    N27  C30  C20  N19  -179.23  30.0  3
+ PPX  CONST_01  C9    C7   C5   C4      0.00   0.0  0
+ PPX  CONST_02  C9    C8   C6   C4      0.00   0.0  0
+ PPX  CONST_03  C8    C6   C4   C5      0.00   0.0  0
+ PPX  CONST_04  C8    C9   C7   C5      0.00   0.0  0
+ PPX  CONST_05  C7    C5   C4   C6      0.00   0.0  0
+ PPX  CONST_06  C7    C9   C8   C6      0.00   0.0  0
+ PPX  CONST_07  N24   C23  C22  C21     0.00   0.0  0
+ PPX  CONST_08  N24   C25  C26  C21     0.00   0.0  0
+ PPX  CONST_09  C25   C26  C21  C22     0.00   0.0  0
+ PPX  CONST_10  C25   N24  C23  C22     0.00   0.0  0
+ PPX  CONST_11  C26   C21  C22  C23     0.00   0.0  0
+ PPX  CONST_12  C26   C25  N24  C23     0.00   0.0  0
+ PPX  CONST_13  C7    C5   C4   C3    180.00   0.0  0
+ PPX  CONST_14  C8    C6   C4   C3    180.00   0.0  0
+ PPX  CONST_15  C23   C22  C21  N27   180.00   0.0  0
+ PPX  CONST_16  C25   C26  C21  N27   180.00   0.0  0
+ PPX  CONST_17  H7    C7   C5   C4    180.00   0.0  0
+ PPX  CONST_18  H8    C8   C6   C4    180.00   0.0  0
+ PPX  CONST_19  H6    C6   C4   C5    180.00   0.0  0
+ PPX  CONST_20  H9    C9   C7   C5    180.00   0.0  0
+ PPX  CONST_21  H5    C5   C4   C6    180.00   0.0  0
+ PPX  CONST_22  H23   C23  C22  C21   180.00   0.0  0
+ PPX  CONST_23  H25   C25  C26  C21   180.00   0.0  0
+ PPX  CONST_24  H26   C26  C21  C22   180.00   0.0  0
+ PPX  CONST_25  H22   C22  C23  N24   180.00   0.0  0
+ PPX  CONST_26  C13   N12  C10  C2      0.00   0.0  0
+ PPX  CONST_27  C14   N12  C10  C2    180.00   0.0  0
+ PPX  CONST_28  C13   N12  C10  O11   180.00   0.0  0
+ PPX  CONST_29  C14   N12  C10  O11     0.00   0.0  0
+ PPX  CONST_30  C22   C21  N27  C30   180.00   0.0  0
+ PPX  CONST_31  C26   C21  N27  C30     0.00   0.0  0
+ PPX  CONST_32  H27   N27  C21  C22     0.00   0.0  0
+ PPX  CONST_33  C20   N19  C17  C14   180.00   0.0  0
+ PPX  CONST_34  H19   N19  C17  C14     0.00   0.0  0
+ PPX  CONST_35  C20   N19  C17  O18     0.00   0.0  0
+ PPX  Var_01    C15   C16  C13  N12   -34.98  30.0  1
+ PPX  Var_02    C16   C13  N12  C14    19.91  30.0  1
+ PPX  Var_03    C13   C16  C15  C14    37.66  30.0  1
+ PPX  Var_04    C5    C4   C3   C2     83.35  30.0  2
+ PPX  Var_05    C21   N27  C30  C20   176.19  30.0  3
+ PPX  Var_06    C30   C20  N19  C17    83.29  30.0  3
+ PPX  Var_07    N27   C30  C20  N19  -179.23  30.0  3
+ PPX  Var_08    H151  C15  C14  N12    91.90  30.0  1
+ PPX  Var_09    H152  C15  C14  N12  -148.01  30.0  1
+ PPX  Var_10    H14   C14  C15  C16    92.33  30.0  1
+ PPX  Var_11    H2    C2   C3   C4    -55.54  30.0  2
+ PPX  Var_12    HN11  N1   C2   C10   -53.52  30.0  3
+ PPX  Var_13    HN12  N1   C2   C10    62.88  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

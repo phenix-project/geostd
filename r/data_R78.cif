@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- R78  R78  4-{[(7R)-8-cyclopentyl-7-ethyl-5-methyl-6-oxo-5,6,7,8-tetrahydropteridin-2-yl]amino}-3-methoxy-N-(1-methylpiperidin-4-yl)benzamide  ligand  77  38  .  2022-08-10  2022-08-10
+ R78  R78  4-{[(7R)-8-cyclopentyl-7-ethyl-5-methyl-6-oxo-5,6,7,8-tetrahydropteridin-2-yl]amino}-3-methoxy-N-(1-methylpiperidin-4-yl)benzamide  ligand  77  38  .  2022-08-10  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_R78
@@ -373,53 +374,91 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- R78  CONST_01  C2   C3   C4   N1      0.00   0.0  0
- R78  CONST_02  C2   N2   C1   N1      0.00   0.0  0
- R78  CONST_03  N2   C1   N1   C4      0.00   0.0  0
- R78  CONST_04  N2   C2   C3   C4      0.00   0.0  0
- R78  CONST_05  C18  C19  C20  C7      0.00   0.0  0
- R78  CONST_06  C18  C17  C16  C7      0.00   0.0  0
- R78  CONST_07  C20  C19  C18  C17     0.00   0.0  0
- R78  CONST_08  C20  C7   C16  C17     0.00   0.0  0
- R78  CONST_09  C19  C20  C7   C16     0.00   0.0  0
- R78  CONST_10  C19  C18  C17  C16     0.00   0.0  0
- R78  CONST_11  C3   C4   N1   C1      0.00   0.0  0
- R78  CONST_12  C3   C2   N2   C1      0.00   0.0  0
- R78  CONST_13  C3   N4   C6   C5      0.00   0.0  0
- R78  CONST_14  N5   C1   N1   C4    180.00   0.0  0
- R78  CONST_15  N5   C7   C16  C17   180.00   0.0  0
- R78  CONST_16  O3   C16  C7   C20   180.00   0.0  0
- R78  CONST_17  C21  C18  C19  C20   180.00   0.0  0
- R78  CONST_18  C16  C17  C18  C21   180.00   0.0  0
- R78  CONST_19  O3   C16  C17  C18   180.00   0.0  0
- R78  CONST_20  N5   C7   C20  C19   180.00   0.0  0
- R78  CONST_21  C2   N2   C1   N5    180.00   0.0  0
- R78  CONST_22  C11  N4   C6   C5    180.00   0.0  0
- R78  CONST_23  C3   N4   C6   O1    180.00   0.0  0
- R78  CONST_24  H19  C19  C20  C7    180.00   0.0  0
- R78  CONST_25  H17  C17  C16  C7    180.00   0.0  0
- R78  CONST_26  H20  C20  C19  C18   180.00   0.0  0
- R78  CONST_27  H4   C4   N1   C1    180.00   0.0  0
- R78  CONST_28  C18  C21  N6   C22   180.00   0.0  0
- R78  CONST_29  C11  N4   C6   O1      0.00   0.0  0
- R78  CONST_30  O2   C21  N6   C22     0.00   0.0  0
- R78  CONST_31  HN6  N6   C21  C18     0.00   0.0  0
- R78  Var_01    C6   N4   C3   C4    173.20  30.0  1
- R78  Var_02    N2   C2   N3   C5   -165.81  30.0  1
- R78  Var_03    C13  C14  C15  C8      4.66  30.0  1
- R78  Var_04    C14  C13  C12  C8    -40.86  30.0  1
- R78  Var_05    C12  C13  C14  C15    22.52  30.0  1
- R78  Var_06    N7   C28  C29  C22    56.65  30.0  1
- R78  Var_07    N7   C24  C23  C22   -56.57  30.0  1
- R78  Var_08    C29  C28  N7   C24   -59.45  30.0  1
- R78  Var_09    C23  C24  N7   C28    59.32  30.0  1
- R78  Var_10    C7   N5   C1   N1      3.50  30.0  2
- R78  Var_11    C1   N5   C7   C20    -1.48  30.0  2
- R78  Var_12    O2   C21  C18  C17   -20.71  30.0  2
- R78  Var_13    H11  C11  N4   C6      5.29  30.0  3
- R78  Var_14    H30  C30  N7   C24    58.46  30.0  3
- R78  Var_15    H10  C10  C9   C5    -58.50  30.0  3
- R78  Var_16    H31  C31  O3   C16   -60.66  30.0  3
+ R78  CONST_01  C2    C3   C4   N1      0.00   0.0  0
+ R78  CONST_02  C2    N2   C1   N1      0.00   0.0  0
+ R78  CONST_03  N2    C1   N1   C4      0.00   0.0  0
+ R78  CONST_04  N2    C2   C3   C4      0.00   0.0  0
+ R78  CONST_05  C18   C19  C20  C7      0.00   0.0  0
+ R78  CONST_06  C18   C17  C16  C7      0.00   0.0  0
+ R78  CONST_07  C20   C19  C18  C17     0.00   0.0  0
+ R78  CONST_08  C20   C7   C16  C17     0.00   0.0  0
+ R78  CONST_09  C19   C20  C7   C16     0.00   0.0  0
+ R78  CONST_10  C19   C18  C17  C16     0.00   0.0  0
+ R78  CONST_11  C3    C4   N1   C1      0.00   0.0  0
+ R78  CONST_12  C3    C2   N2   C1      0.00   0.0  0
+ R78  CONST_13  C3    N4   C6   C5      0.00   0.0  0
+ R78  CONST_14  N5    C1   N1   C4    180.00   0.0  0
+ R78  CONST_15  N5    C7   C16  C17   180.00   0.0  0
+ R78  CONST_16  O3    C16  C7   C20   180.00   0.0  0
+ R78  CONST_17  C21   C18  C19  C20   180.00   0.0  0
+ R78  CONST_18  C16   C17  C18  C21   180.00   0.0  0
+ R78  CONST_19  O3    C16  C17  C18   180.00   0.0  0
+ R78  CONST_20  N5    C7   C20  C19   180.00   0.0  0
+ R78  CONST_21  C2    N2   C1   N5    180.00   0.0  0
+ R78  CONST_22  C11   N4   C6   C5    180.00   0.0  0
+ R78  CONST_23  C3    N4   C6   O1    180.00   0.0  0
+ R78  CONST_24  H19   C19  C20  C7    180.00   0.0  0
+ R78  CONST_25  H17   C17  C16  C7    180.00   0.0  0
+ R78  CONST_26  H20   C20  C19  C18   180.00   0.0  0
+ R78  CONST_27  H4    C4   N1   C1    180.00   0.0  0
+ R78  CONST_28  C18   C21  N6   C22   180.00   0.0  0
+ R78  CONST_29  C11   N4   C6   O1      0.00   0.0  0
+ R78  CONST_30  O2    C21  N6   C22     0.00   0.0  0
+ R78  CONST_31  HN6   N6   C21  C18     0.00   0.0  0
+ R78  Var_01    C6    N4   C3   C4    173.20  30.0  1
+ R78  Var_02    N2    C2   N3   C5   -165.81  30.0  1
+ R78  Var_03    C13   C14  C15  C8      4.66  30.0  1
+ R78  Var_04    C14   C13  C12  C8    -40.86  30.0  1
+ R78  Var_05    C12   C13  C14  C15    22.52  30.0  1
+ R78  Var_06    N7    C28  C29  C22    56.65  30.0  1
+ R78  Var_07    N7    C24  C23  C22   -56.57  30.0  1
+ R78  Var_08    C29   C28  N7   C24   -59.45  30.0  1
+ R78  Var_09    C23   C24  N7   C28    59.32  30.0  1
+ R78  Var_10    C7    N5   C1   N1      3.50  30.0  2
+ R78  Var_11    C1    N5   C7   C20    -1.48  30.0  2
+ R78  Var_12    O2    C21  C18  C17   -20.71  30.0  2
+ R78  Var_13    H11   C11  N4   C6      5.29  30.0  3
+ R78  Var_14    H30   C30  N7   C24    58.46  30.0  3
+ R78  Var_15    H10   C10  C9   C5    -58.50  30.0  3
+ R78  Var_16    H31   C31  O3   C16   -60.66  30.0  3
+ R78  Var_17    N4    C6   C5   N3     22.71  30.0  1
+ R78  Var_18    C14   C15  C8   N3   -158.73  30.0  1
+ R78  Var_19    C13   C12  C8   N3    172.65  30.0  1
+ R78  Var_20    C15   C8   N3   C5     93.81  30.0  3
+ R78  Var_21    C12   C8   N3   C5    -28.58  30.0  3
+ R78  Var_22    C8    N3   C5   C6    160.34  30.0  1
+ R78  Var_23    C2    N3   C5   C6    -28.85  30.0  1
+ R78  Var_24    C15   C8   C12  C13    43.97  30.0  1
+ R78  Var_25    C2    N3   C8   C15   -77.10  30.0  3
+ R78  Var_26    C29   C22  C23  C24    53.52  30.0  1
+ R78  Var_27    C23   C22  C29  C28   -53.43  30.0  1
+ R78  Var_28    C12   C8   N3   C2    160.51  30.0  3
+ R78  Var_29    C12   C8   C15  C14   -30.15  30.0  1
+ R78  Var_30    O1    C6   C5   N3   -159.71  30.0  1
+ R78  Var_31    C9    C5   N3   C8    -74.02  30.0  1
+ R78  Var_32    N6    C22  C23  C24   176.52  30.0  1
+ R78  Var_33    N6    C22  C29  C28  -177.43  30.0  1
+ R78  Var_34    C9    C5   N3   C2     96.79  30.0  1
+ R78  Var_35    N4    C6   C5   C9   -105.60  30.0  1
+ R78  Var_36    H15   C15  C8   N3    -39.76  30.0  1
+ R78  Var_37    H15A  C15  C8   N3     78.79  30.0  1
+ R78  Var_38    H12   C12  C8   N3    -65.46  30.0  1
+ R78  Var_39    H12A  C12  C8   N3     56.53  30.0  1
+ R78  Var_40    H8    C8   N3   C5   -146.76  30.0  3
+ R78  Var_41    H5    C5   N3   C8     45.29  30.0  1
+ R78  Var_42    H22   C22  C23  C24   -64.83  30.0  1
+ R78  Var_43    H23   C23  C22  C29   174.83  30.0  1
+ R78  Var_44    H23A  C23  C22  C29   -67.30  30.0  1
+ R78  Var_45    C10   C9   C5   N3    -59.14  30.0  3
+ R78  Var_46    C10   C9   C5   C6     69.19  30.0  3
+ R78  Var_47    C31   O3   C16  C7   -179.02  30.0  2
+ R78  Var_48    C31   O3   C16  C17     0.80  30.0  2
+ R78  Var_49    C21   N6   C22  C29  -147.89  30.0  3
+ R78  Var_50    C21   N6   C22  C23    89.43  30.0  3
+ R78  Var_51    O1    C6   C5   C9     71.97  30.0  1
+ R78  Var_52    H9    C9   C5   N3     64.33  30.0  3
+ R78  Var_53    H9A   C9   C5   N3    178.12  30.0  3
+ R78  Var_54    HN6   N6   C22  C29    45.13  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

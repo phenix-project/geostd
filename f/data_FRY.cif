@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FRY  FRY  (2S)-N-[(3S)-1-(2-amino-2-oxoethyl)-2-oxo-1,2,3,4-tetrahydroquinolin-3-yl]-2-chloro-2H-thieno[2,3-b]pyrrole-5-carboxamide  ligand  42  27  .  2021-08-09  2021-08-09  
+ FRY  FRY  (2S)-N-[(3S)-1-(2-amino-2-oxoethyl)-2-oxo-1,2,3,4-tetrahydroquinolin-3-yl]-2-chloro-2H-thieno[2,3-b]pyrrole-5-carboxamide  ligand  42  27  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FRY
@@ -229,32 +230,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FRY  CONST_01  C26   C27  C15  C16    0.00   0.0  0
- FRY  CONST_02  C26   C25  C24  C16    0.00   0.0  0
- FRY  CONST_03  C25   C24  C16  C15    0.00   0.0  0
- FRY  CONST_04  C25   C26  C27  C15    0.00   0.0  0
- FRY  CONST_05  C27   C15  C16  C24    0.00   0.0  0
- FRY  CONST_06  C27   C26  C25  C24    0.00   0.0  0
- FRY  CONST_07  C16   N17  C18  C12    0.00   0.0  0
- FRY  CONST_08  C20   N17  C18  C12  180.00   0.0  0
- FRY  CONST_09  O19   C18  N17  C16  180.00   0.0  0
- FRY  CONST_10  H27   C27  C15  C16  180.00   0.0  0
- FRY  CONST_11  H25   C25  C24  C16  180.00   0.0  0
- FRY  CONST_12  H24   C24  C16  C15  180.00   0.0  0
- FRY  CONST_13  H26   C26  C27  C15  180.00   0.0  0
- FRY  CONST_14  C12   N11  C10  C7   180.00   0.0  0
- FRY  CONST_15  C20   N17  C18  O19    0.00   0.0  0
- FRY  CONST_16  O13   C10  N11  C12    0.00   0.0  0
- FRY  CONST_17  HN11  N11  C10  C7     0.00   0.0  0
- FRY  CONST_18  H231  N23  C21  C20  180.00   0.0  0
- FRY  CONST_19  H232  N23  C21  C20    0.00   0.0  0
- FRY  Var_01    C6    C4   C5   C1   178.74  30.0  1
- FRY  Var_02    C4    C3   S2   C1     0.91  30.0  1
- FRY  Var_03    C16   C15  C14  C12  -38.40  30.0  1
- FRY  Var_04    C18   N17  C16  C15   25.10  30.0  1
- FRY  Var_05    N11   C10  C7   C6   179.73  30.0  2
- FRY  Var_06    C21   C20  N17  C16  -84.88  30.0  2
- FRY  Var_07    N17   C20  C21  O22  -17.02  30.0  2
+ FRY  CONST_01  C26   C27  C15  C16     0.00   0.0  0
+ FRY  CONST_02  C26   C25  C24  C16     0.00   0.0  0
+ FRY  CONST_03  C25   C24  C16  C15     0.00   0.0  0
+ FRY  CONST_04  C25   C26  C27  C15     0.00   0.0  0
+ FRY  CONST_05  C27   C15  C16  C24     0.00   0.0  0
+ FRY  CONST_06  C27   C26  C25  C24     0.00   0.0  0
+ FRY  CONST_07  C16   N17  C18  C12     0.00   0.0  0
+ FRY  CONST_08  C20   N17  C18  C12   180.00   0.0  0
+ FRY  CONST_09  O19   C18  N17  C16   180.00   0.0  0
+ FRY  CONST_10  H27   C27  C15  C16   180.00   0.0  0
+ FRY  CONST_11  H25   C25  C24  C16   180.00   0.0  0
+ FRY  CONST_12  H24   C24  C16  C15   180.00   0.0  0
+ FRY  CONST_13  H26   C26  C27  C15   180.00   0.0  0
+ FRY  CONST_14  C12   N11  C10  C7    180.00   0.0  0
+ FRY  CONST_15  C20   N17  C18  O19     0.00   0.0  0
+ FRY  CONST_16  O13   C10  N11  C12     0.00   0.0  0
+ FRY  CONST_17  HN11  N11  C10  C7      0.00   0.0  0
+ FRY  CONST_18  H231  N23  C21  C20   180.00   0.0  0
+ FRY  CONST_19  H232  N23  C21  C20     0.00   0.0  0
+ FRY  Var_01    C6    C4   C5   C1    178.74  30.0  1
+ FRY  Var_02    C4    C3   S2   C1      0.91  30.0  1
+ FRY  Var_03    C16   C15  C14  C12   -38.40  30.0  1
+ FRY  Var_04    C18   N17  C16  C15    25.10  30.0  1
+ FRY  Var_05    N11   C10  C7   C6    179.73  30.0  2
+ FRY  Var_06    C21   C20  N17  C16   -84.88  30.0  2
+ FRY  Var_07    N17   C20  C21  O22   -17.02  30.0  2
+ FRY  Var_08    C4    C3   N8   C7      0.46   0.0  0
+ FRY  Var_09    S2    C3   N8   C7    179.89   0.0  0
+ FRY  Var_10    C5    C4   C6   C7   -179.60  30.0  1
+ FRY  Var_11    C3    C4   C6   C7      0.15  30.0  1
+ FRY  Var_12    C3    N8   C7   C6     -0.36  30.0  1
+ FRY  Var_13    S2    C3   C4   C6   -179.96  30.0  1
+ FRY  Var_14    N8    C3   C4   C6     -0.40  30.0  1
+ FRY  Var_15    C3    S2   C1   C5     -1.37  30.0  1
+ FRY  Var_16    S2    C3   C4   C5     -0.13  30.0  1
+ FRY  Var_17    N8    C3   C4   C5    179.43  30.0  1
+ FRY  Var_18    N8    C7   C6   C4      0.12  30.0  1
+ FRY  Var_19    S2    C1   C5   C4      1.61  30.0  1
+ FRY  Var_20    N17   C18  C12  C14   -39.29  30.0  1
+ FRY  Var_21    C18   C12  C14  C15    57.77  30.0  1
+ FRY  Var_22    C10   C7   C6   C4   -179.61  30.0  1
+ FRY  Var_23    CL    C1   C5   C4    122.96  30.0  1
+ FRY  Var_24    CL    C1   S2   C3   -122.29  30.0  1
+ FRY  Var_25    C10   C7   N8   C3    179.38  30.0  1
+ FRY  Var_26    O19   C18  C12  C14   139.92  30.0  1
+ FRY  Var_27    N11   C12  C14  C15  -179.57  30.0  1
+ FRY  Var_28    N11   C12  C18  N17  -164.45  30.0  1
+ FRY  Var_29    H6    C6   C4   C5      0.45  30.0  1
+ FRY  Var_30    H1    C1   C5   C4   -118.49  30.0  1
+ FRY  Var_31    H12   C12  C14  C15   -58.74  30.0  1
+ FRY  Var_32    C18   C12  N11  C10  -152.97  30.0  2
+ FRY  Var_33    C14   C12  N11  C10    84.12  30.0  2
+ FRY  Var_34    N11   C12  C18  O19    14.76  30.0  1
+ FRY  Var_35    HN11  N11  C12  C14   -96.58  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

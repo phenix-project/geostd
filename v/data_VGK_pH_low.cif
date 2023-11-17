@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VGK  VGK  '4-[2-amino-5-(3,4,5-trimethoxyphenyl)pyridin-3-yl]benzoic acid'  ligand  48  28  .  2021-08-24  2021-08-24  
+ VGK  VGK  '4-[2-amino-5-(3,4,5-trimethoxyphenyl)pyridin-3-yl]benzoic acid'  ligand  48  28  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VGK
@@ -247,56 +248,66 @@ _chem_comp_tor.period
  VGK  CONST_02  C22   C05  C04  C03     0.00   0.0  0
  VGK  CONST_03  C22   C23  C26  C03     0.00   0.0  0
  VGK  CONST_04  C23   C26  C03  C04     0.00   0.0  0
- VGK  CONST_07  C23   C22  C05  C04     0.00   0.0  0
- VGK  CONST_08  C26   C03  C04  C05     0.00   0.0  0
- VGK  CONST_09  N08   C07  C06  C05   180.00   0.0  0
- VGK  CONST_10  C11   C21  C06  C05   180.00   0.0  0
- VGK  CONST_11  C26   C23  C22  C05     0.00   0.0  0
- VGK  CONST_12  C23   C22  C05  C06   180.00   0.0  0
- VGK  CONST_13  C09   N08  C07  C06     0.00   0.0  0
- VGK  CONST_14  C09   C11  C21  C06     0.00   0.0  0
- VGK  CONST_15  C12   C11  C21  C06   180.00   0.0  0
- VGK  CONST_17  C11   C21  C06  C07     0.00   0.0  0
- VGK  CONST_18  C11   C09  N08  C07     0.00   0.0  0
- VGK  CONST_19  C21   C06  C07  N08     0.00   0.0  0
- VGK  CONST_20  C12   C11  C09  N08   180.00   0.0  0
- VGK  CONST_21  C21   C11  C09  N08     0.00   0.0  0
- VGK  CONST_24  C14   C13  C12  C11   180.00   0.0  0
- VGK  CONST_25  C19   C20  C12  C11   180.00   0.0  0
- VGK  CONST_26  C15   C14  C13  C12     0.00   0.0  0
- VGK  CONST_27  C15   C19  C20  C12     0.00   0.0  0
- VGK  CONST_29  C19   C20  C12  C13     0.00   0.0  0
- VGK  CONST_30  C19   C15  C14  C13     0.00   0.0  0
- VGK  CONST_31  C20   C12  C13  C14     0.00   0.0  0
- VGK  CONST_32  C20   C19  C15  C14     0.00   0.0  0
- VGK  CONST_35  C05   C04  C03  O02   180.00   0.0  0
- VGK  CONST_36  C23   C26  C03  O02   180.00   0.0  0
- VGK  CONST_37  O24   C23  C26  C03   180.00   0.0  0
- VGK  CONST_38  O27   C26  C03  C04   180.00   0.0  0
- VGK  CONST_39  O24   C23  C22  C05   180.00   0.0  0
- VGK  CONST_40  N10   C09  N08  C07   180.00   0.0  0
- VGK  CONST_41  C12   C11  C09  N10     0.00   0.0  0
- VGK  CONST_42  C21   C11  C09  N10   180.00   0.0  0
- VGK  CONST_43  C16   C15  C14  C13   180.00   0.0  0
- VGK  CONST_44  C20   C19  C15  C16   180.00   0.0  0
- VGK  CONST_45  O27   C26  C23  C22   180.00   0.0  0
- VGK  CONST_46  H22   C22  C05  C04   180.00   0.0  0
- VGK  CONST_47  H07   C07  C06  C05     0.00   0.0  0
- VGK  CONST_48  H21   C21  C06  C05     0.00   0.0  0
- VGK  CONST_49  H04   C04  C05  C06     0.00   0.0  0
- VGK  CONST_50  H13   C13  C12  C11     0.00   0.0  0
- VGK  CONST_51  H20   C20  C12  C11     0.00   0.0  0
- VGK  CONST_52  H14   C14  C13  C12   180.00   0.0  0
- VGK  CONST_53  H19   C19  C20  C12   180.00   0.0  0
- VGK  CONST_54  H101  N10  C09  N08     0.00   0.0  0
- VGK  CONST_55  H102  N10  C09  N08   180.00   0.0  0
- VGK  CONST_56  H18   O18  C16  C15   180.00   0.0  0
+ VGK  CONST_05  C23   C22  C05  C04     0.00   0.0  0
+ VGK  CONST_06  C26   C03  C04  C05     0.00   0.0  0
+ VGK  CONST_07  N08   C07  C06  C05   180.00   0.0  0
+ VGK  CONST_08  C11   C21  C06  C05   180.00   0.0  0
+ VGK  CONST_09  C26   C23  C22  C05     0.00   0.0  0
+ VGK  CONST_10  C23   C22  C05  C06   180.00   0.0  0
+ VGK  CONST_11  C09   N08  C07  C06     0.00   0.0  0
+ VGK  CONST_12  C09   C11  C21  C06     0.00   0.0  0
+ VGK  CONST_13  C12   C11  C21  C06   180.00   0.0  0
+ VGK  CONST_14  C11   C21  C06  C07     0.00   0.0  0
+ VGK  CONST_15  C11   C09  N08  C07     0.00   0.0  0
+ VGK  CONST_16  C21   C06  C07  N08     0.00   0.0  0
+ VGK  CONST_17  C12   C11  C09  N08   180.00   0.0  0
+ VGK  CONST_18  C21   C11  C09  N08     0.00   0.0  0
+ VGK  CONST_19  C14   C13  C12  C11   180.00   0.0  0
+ VGK  CONST_20  C19   C20  C12  C11   180.00   0.0  0
+ VGK  CONST_21  C15   C14  C13  C12     0.00   0.0  0
+ VGK  CONST_22  C15   C19  C20  C12     0.00   0.0  0
+ VGK  CONST_23  C19   C20  C12  C13     0.00   0.0  0
+ VGK  CONST_24  C19   C15  C14  C13     0.00   0.0  0
+ VGK  CONST_25  C20   C12  C13  C14     0.00   0.0  0
+ VGK  CONST_26  C20   C19  C15  C14     0.00   0.0  0
+ VGK  CONST_27  C05   C04  C03  O02   180.00   0.0  0
+ VGK  CONST_28  C23   C26  C03  O02   180.00   0.0  0
+ VGK  CONST_29  O24   C23  C26  C03   180.00   0.0  0
+ VGK  CONST_30  O27   C26  C03  C04   180.00   0.0  0
+ VGK  CONST_31  O24   C23  C22  C05   180.00   0.0  0
+ VGK  CONST_32  N10   C09  N08  C07   180.00   0.0  0
+ VGK  CONST_33  C12   C11  C09  N10     0.00   0.0  0
+ VGK  CONST_34  C21   C11  C09  N10   180.00   0.0  0
+ VGK  CONST_35  C16   C15  C14  C13   180.00   0.0  0
+ VGK  CONST_36  C20   C19  C15  C16   180.00   0.0  0
+ VGK  CONST_37  O27   C26  C23  C22   180.00   0.0  0
+ VGK  CONST_38  H22   C22  C05  C04   180.00   0.0  0
+ VGK  CONST_39  H07   C07  C06  C05     0.00   0.0  0
+ VGK  CONST_40  H21   C21  C06  C05     0.00   0.0  0
+ VGK  CONST_41  H04   C04  C05  C06     0.00   0.0  0
+ VGK  CONST_42  H13   C13  C12  C11     0.00   0.0  0
+ VGK  CONST_43  H20   C20  C12  C11     0.00   0.0  0
+ VGK  CONST_44  H14   C14  C13  C12   180.00   0.0  0
+ VGK  CONST_45  H19   C19  C20  C12   180.00   0.0  0
+ VGK  CONST_46  H101  N10  C09  N08     0.00   0.0  0
+ VGK  CONST_47  H102  N10  C09  N08   180.00   0.0  0
+ VGK  CONST_48  H18   O18  C16  C15   180.00   0.0  0
  VGK  Var_01    C04   C03  O02  C01    -4.21  30.0  2
  VGK  Var_02    O17   C16  C15  C14    -0.93  30.0  2
  VGK  Var_03    C26   C23  O24  C25   176.74  30.0  2
  VGK  Var_04    H011  C01  O02  C03  -176.95  30.0  3
  VGK  Var_05    H251  C25  O24  C23    65.14  30.0  3
  VGK  Var_06    H281  C28  O27  C26   178.93  30.0  3
+ VGK  Var_07    C07   C06  C05  C04    33.07  30.0  2
+ VGK  Var_08    C21   C06  C05  C04  -147.17  30.0  2
+ VGK  Var_09    C22   C05  C06  C07  -146.57  30.0  3
+ VGK  Var_10    C13   C12  C11  C09   -57.14  30.0  2
+ VGK  Var_11    C20   C12  C11  C09   124.49  30.0  2
+ VGK  Var_12    C21   C11  C12  C13   123.44  30.0  2
+ VGK  Var_13    C21   C11  C12  C20   -54.93  30.0  2
+ VGK  Var_14    C22   C05  C06  C21    33.18  30.0  3
+ VGK  Var_15    C28   O27  C26  C03    89.88  30.0  2
+ VGK  Var_16    C28   O27  C26  C23   -90.99  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

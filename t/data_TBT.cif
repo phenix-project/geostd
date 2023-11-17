@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TBT  TBT  (8S,9S,10S)-8,9,10,11-tetrahydrotetraphene-8,9,10-triol  ligand  37  21  .  2021-08-23  2021-08-23  
+ TBT  TBT  (8S,9S,10S)-8,9,10,11-tetrahydrotetraphene-8,9,10-triol  ligand  37  21  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TBT
@@ -211,46 +212,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TBT  CONST_01  C4B  C5A  C4A  C3A    0.00   0.0  0
- TBT  CONST_02  C1A  C11  C10  C3A  180.00   0.0  0
- TBT  CONST_03  C4B  C11  C10  C3A    0.00   0.0  0
- TBT  CONST_04  C4B  C11  C1A  C2A    0.00   0.0  0
- TBT  CONST_05  C10  C11  C1A  C2A  180.00   0.0  0
- TBT  CONST_06  C7A  C6A  C5B  C2A  180.00   0.0  0
- TBT  CONST_07  C4B  C9B  C5B  C2A    0.00   0.0  0
- TBT  CONST_08  C9A  C9B  C5B  C2A  180.00   0.0  0
- TBT  CONST_09  C11  C10  C3A  C4A    0.00   0.0  0
- TBT  CONST_10  C9B  C4B  C5A  C4A  180.00   0.0  0
- TBT  CONST_11  C11  C4B  C5A  C4A    0.00   0.0  0
- TBT  CONST_12  C6A  C5B  C2A  C1A  180.00   0.0  0
- TBT  CONST_13  C9B  C5B  C2A  C1A    0.00   0.0  0
- TBT  CONST_14  C5A  C4B  C11  C1A  180.00   0.0  0
- TBT  CONST_15  C9B  C4B  C11  C1A    0.00   0.0  0
- TBT  CONST_16  C10  C3A  C4A  C5A    0.00   0.0  0
- TBT  CONST_17  C5B  C9B  C4B  C5A  180.00   0.0  0
- TBT  CONST_18  C9A  C9B  C4B  C5A    0.00   0.0  0
- TBT  CONST_19  C10  C11  C4B  C5A    0.00   0.0  0
- TBT  CONST_20  C6A  C5B  C9B  C4B  180.00   0.0  0
- TBT  CONST_21  C8A  C9A  C9B  C4B  180.00   0.0  0
- TBT  CONST_22  C9A  C8A  C7A  C6A    0.00   0.0  0
- TBT  CONST_23  C9A  C9B  C5B  C6A    0.00   0.0  0
- TBT  CONST_24  C9B  C5B  C6A  C7A    0.00   0.0  0
- TBT  CONST_25  C9B  C9A  C8A  C7A    0.00   0.0  0
- TBT  CONST_26  C5B  C6A  C7A  C8A    0.00   0.0  0
- TBT  CONST_27  C5B  C9B  C9A  C8A    0.00   0.0  0
- TBT  CONST_28  C11  C1A  C2A  C5B    0.00   0.0  0
- TBT  CONST_29  C11  C4B  C9B  C5B    0.00   0.0  0
- TBT  CONST_30  C10  C11  C4B  C9B  180.00   0.0  0
- TBT  CONST_31  C9A  C9B  C4B  C11  180.00   0.0  0
- TBT  CONST_32  H5A  C5A  C4A  C4C    0.00   0.0  0
- TBT  CONST_33  H10  C10  C3A  C3B    0.00   0.0  0
- TBT  CONST_34  H6A  C6A  C5B  C2A    0.00   0.0  0
- TBT  CONST_35  H9A  C9A  C9B  C4B    0.00   0.0  0
- TBT  CONST_36  H1A  C1A  C11  C4B  180.00   0.0  0
- TBT  CONST_37  H8A  C8A  C7A  C6A  180.00   0.0  0
- TBT  CONST_38  H2A  C2A  C5B  C6A    0.00   0.0  0
- TBT  CONST_39  H7A  C7A  C6A  C5B  180.00   0.0  0
- TBT  Var_01    C3A  C4A  C4C  C9C  -18.91  30.0  1
+ TBT  CONST_01  C4B   C5A  C4A  C3A     0.00   0.0  0
+ TBT  CONST_02  C1A   C11  C10  C3A   180.00   0.0  0
+ TBT  CONST_03  C4B   C11  C10  C3A     0.00   0.0  0
+ TBT  CONST_04  C4B   C11  C1A  C2A     0.00   0.0  0
+ TBT  CONST_05  C10   C11  C1A  C2A   180.00   0.0  0
+ TBT  CONST_06  C7A   C6A  C5B  C2A   180.00   0.0  0
+ TBT  CONST_07  C4B   C9B  C5B  C2A     0.00   0.0  0
+ TBT  CONST_08  C9A   C9B  C5B  C2A   180.00   0.0  0
+ TBT  CONST_09  C11   C10  C3A  C4A     0.00   0.0  0
+ TBT  CONST_10  C9B   C4B  C5A  C4A   180.00   0.0  0
+ TBT  CONST_11  C11   C4B  C5A  C4A     0.00   0.0  0
+ TBT  CONST_12  C6A   C5B  C2A  C1A   180.00   0.0  0
+ TBT  CONST_13  C9B   C5B  C2A  C1A     0.00   0.0  0
+ TBT  CONST_14  C5A   C4B  C11  C1A   180.00   0.0  0
+ TBT  CONST_15  C9B   C4B  C11  C1A     0.00   0.0  0
+ TBT  CONST_16  C10   C3A  C4A  C5A     0.00   0.0  0
+ TBT  CONST_17  C5B   C9B  C4B  C5A   180.00   0.0  0
+ TBT  CONST_18  C9A   C9B  C4B  C5A     0.00   0.0  0
+ TBT  CONST_19  C10   C11  C4B  C5A     0.00   0.0  0
+ TBT  CONST_20  C6A   C5B  C9B  C4B   180.00   0.0  0
+ TBT  CONST_21  C8A   C9A  C9B  C4B   180.00   0.0  0
+ TBT  CONST_22  C9A   C8A  C7A  C6A     0.00   0.0  0
+ TBT  CONST_23  C9A   C9B  C5B  C6A     0.00   0.0  0
+ TBT  CONST_24  C9B   C5B  C6A  C7A     0.00   0.0  0
+ TBT  CONST_25  C9B   C9A  C8A  C7A     0.00   0.0  0
+ TBT  CONST_26  C5B   C6A  C7A  C8A     0.00   0.0  0
+ TBT  CONST_27  C5B   C9B  C9A  C8A     0.00   0.0  0
+ TBT  CONST_28  C11   C1A  C2A  C5B     0.00   0.0  0
+ TBT  CONST_29  C11   C4B  C9B  C5B     0.00   0.0  0
+ TBT  CONST_30  C10   C11  C4B  C9B   180.00   0.0  0
+ TBT  CONST_31  C9A   C9B  C4B  C11   180.00   0.0  0
+ TBT  CONST_32  H5A   C5A  C4A  C4C     0.00   0.0  0
+ TBT  CONST_33  H10   C10  C3A  C3B     0.00   0.0  0
+ TBT  CONST_34  H6A   C6A  C5B  C2A     0.00   0.0  0
+ TBT  CONST_35  H9A   C9A  C9B  C4B     0.00   0.0  0
+ TBT  CONST_36  H1A   C1A  C11  C4B   180.00   0.0  0
+ TBT  CONST_37  H8A   C8A  C7A  C6A   180.00   0.0  0
+ TBT  CONST_38  H2A   C2A  C5B  C6A     0.00   0.0  0
+ TBT  CONST_39  H7A   C7A  C6A  C5B   180.00   0.0  0
+ TBT  Var_01    C3A   C4A  C4C  C9C   -18.91  30.0  1
+ TBT  Var_02    C3B   C8B  C9C  C4C   -64.34  30.0  1
+ TBT  Var_03    C3A   C3B  C8B  C9C    51.77  30.0  1
+ TBT  Var_04    C4A   C4C  C9C  C8B    46.86  30.0  1
+ TBT  Var_05    C4A   C3A  C3B  C8B   -24.42  30.0  1
+ TBT  Var_06    C10   C3A  C3B  C8B   159.25  30.0  1
+ TBT  Var_07    O2    C8B  C9C  C4C    56.21  30.0  1
+ TBT  Var_08    O1    C3B  C8B  C9C   -70.21  30.0  1
+ TBT  Var_09    C4A   C4C  C9C  O3    167.85  30.0  1
+ TBT  Var_10    C3B   C8B  C9C  O3    172.74  30.0  1
+ TBT  Var_11    C3A   C3B  C8B  O2    -67.50  30.0  1
+ TBT  Var_12    C4A   C3A  C3B  O1     95.22  30.0  1
+ TBT  Var_13    C10   C3A  C3B  O1    -81.11  30.0  1
+ TBT  Var_14    H8B   C8B  C9C  C4C   177.44  30.0  1
+ TBT  Var_15    H3B   C3B  C8B  C9C   171.25  30.0  1
+ TBT  Var_16    H4C1  C4C  C9C  C8B   -74.30  30.0  1
+ TBT  Var_17    H4C2  C4C  C9C  C8B   169.80  30.0  1
+ TBT  Var_18    H9C   C9C  C8B  C3B    53.55  30.0  1
+ TBT  Var_19    O2    C8B  C9C  O3    -66.71  30.0  1
+ TBT  Var_20    O1    C3B  C8B  O2    170.53  30.0  1
+ TBT  Var_21    H3    O3   C9C  C4C    63.83  30.0  3
+ TBT  Var_22    HO2   O2   C8B  C9C   176.21  30.0  3
+ TBT  Var_23    H1    O1   C3B  C8B  -179.57  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

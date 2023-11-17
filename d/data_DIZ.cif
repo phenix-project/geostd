@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DIZ  DIZ  '(2S)-(4-chlorophenyl)[(3S)-3-(4-chlorophenyl)-7-iodo-2,5-dioxo-1,2,3,5-tetrahydro-4H-1,4-benzodiazepin-4-yl]ethanoic acid'  ligand  46  32  .  2022-03-18  2022-03-18
+ DIZ  DIZ  '(2S)-(4-chlorophenyl)[(3S)-3-(4-chlorophenyl)-7-iodo-2,5-dioxo-1,2,3,5-tetrahydro-4H-1,4-benzodiazepin-4-yl]ethanoic acid'  ligand  46  32  .  2022-03-18  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DIZ
@@ -241,42 +242,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DIZ  CONST_01  C4   C3   C2   C1     0.00  0.0  0
- DIZ  CONST_02  C4   C5   C6   C1     0.00  0.0  0
- DIZ  CONST_03  C5   C6   C1   C2     0.00  0.0  0
- DIZ  CONST_04  C5   C4   C3   C2     0.00  0.0  0
- DIZ  CONST_05  C6   C1   C2   C3     0.00  0.0  0
- DIZ  CONST_06  C6   C5   C4   C3     0.00  0.0  0
- DIZ  CONST_07  C13  C12  C11  C10    0.00  0.0  0
- DIZ  CONST_08  C14  C13  C12  C11    0.00  0.0  0
- DIZ  CONST_09  C15  C14  C13  C12    0.00  0.0  0
- DIZ  CONST_10  C21  C20  C19  C18    0.00  0.0  0
- DIZ  CONST_11  C21  C22  C23  C18    0.00  0.0  0
- DIZ  CONST_12  C22  C23  C18  C19    0.00  0.0  0
- DIZ  CONST_13  C22  C21  C20  C19    0.00  0.0  0
- DIZ  CONST_14  C23  C18  C19  C20    0.00  0.0  0
- DIZ  CONST_15  C23  C22  C21  C20    0.00  0.0  0
- DIZ  CONST_16  C20  C19  C18  C17  180.00  0.0  0
- DIZ  CONST_17  C22  C23  C18  C17  180.00  0.0  0
- DIZ  CONST_18  C3   C2   C1   CL1  180.00  0.0  0
- DIZ  CONST_19  C5   C6   C1   CL1  180.00  0.0  0
- DIZ  CONST_20  C7   C4   C3   C2   180.00  0.0  0
- DIZ  CONST_21  C7   C4   C5   C6   180.00  0.0  0
- DIZ  CONST_22  I1   C12  C11  C10  180.00  0.0  0
- DIZ  CONST_23  C14  C13  C12  I1   180.00  0.0  0
- DIZ  CONST_24  CL2  C21  C20  C19  180.00  0.0  0
- DIZ  CONST_25  C23  C22  C21  CL2  180.00  0.0  0
- DIZ  CONST_26  H3   C3   C2   C1   180.00  0.0  0
- DIZ  CONST_27  H5   C5   C6   C1   180.00  0.0  0
- DIZ  CONST_28  H6   C6   C1   C2   180.00  0.0  0
- DIZ  CONST_29  H2   C2   C3   C4   180.00  0.0  0
- DIZ  CONST_30  H13  C13  C12  C11  180.00  0.0  0
- DIZ  CONST_31  H14  C14  C13  C12  180.00  0.0  0
- DIZ  CONST_32  H11  C11  C12  C13  180.00  0.0  0
- DIZ  CONST_33  H19  C19  C18  C17    0.00  0.0  0
- DIZ  CONST_34  H23  C23  C18  C17    0.00  0.0  0
- DIZ  CONST_35  H20  C20  C19  C18  180.00  0.0  0
- DIZ  CONST_36  H22  C22  C23  C18  180.00  0.0  0
+ DIZ  CONST_01  C4   C3   C2   C1      0.00   0.0  0
+ DIZ  CONST_02  C4   C5   C6   C1      0.00   0.0  0
+ DIZ  CONST_03  C5   C6   C1   C2      0.00   0.0  0
+ DIZ  CONST_04  C5   C4   C3   C2      0.00   0.0  0
+ DIZ  CONST_05  C6   C1   C2   C3      0.00   0.0  0
+ DIZ  CONST_06  C6   C5   C4   C3      0.00   0.0  0
+ DIZ  CONST_07  C13  C12  C11  C10     0.00   0.0  0
+ DIZ  CONST_08  C14  C13  C12  C11     0.00   0.0  0
+ DIZ  CONST_09  C15  C14  C13  C12     0.00   0.0  0
+ DIZ  CONST_10  C21  C20  C19  C18     0.00   0.0  0
+ DIZ  CONST_11  C21  C22  C23  C18     0.00   0.0  0
+ DIZ  CONST_12  C22  C23  C18  C19     0.00   0.0  0
+ DIZ  CONST_13  C22  C21  C20  C19     0.00   0.0  0
+ DIZ  CONST_14  C23  C18  C19  C20     0.00   0.0  0
+ DIZ  CONST_15  C23  C22  C21  C20     0.00   0.0  0
+ DIZ  CONST_16  C20  C19  C18  C17   180.00   0.0  0
+ DIZ  CONST_17  C22  C23  C18  C17   180.00   0.0  0
+ DIZ  CONST_18  C3   C2   C1   CL1   180.00   0.0  0
+ DIZ  CONST_19  C5   C6   C1   CL1   180.00   0.0  0
+ DIZ  CONST_20  C7   C4   C3   C2    180.00   0.0  0
+ DIZ  CONST_21  C7   C4   C5   C6    180.00   0.0  0
+ DIZ  CONST_22  I1   C12  C11  C10   180.00   0.0  0
+ DIZ  CONST_23  C14  C13  C12  I1    180.00   0.0  0
+ DIZ  CONST_24  CL2  C21  C20  C19   180.00   0.0  0
+ DIZ  CONST_25  C23  C22  C21  CL2   180.00   0.0  0
+ DIZ  CONST_26  H3   C3   C2   C1    180.00   0.0  0
+ DIZ  CONST_27  H5   C5   C6   C1    180.00   0.0  0
+ DIZ  CONST_28  H6   C6   C1   C2    180.00   0.0  0
+ DIZ  CONST_29  H2   C2   C3   C4    180.00   0.0  0
+ DIZ  CONST_30  H13  C13  C12  C11   180.00   0.0  0
+ DIZ  CONST_31  H14  C14  C13  C12   180.00   0.0  0
+ DIZ  CONST_32  H11  C11  C12  C13   180.00   0.0  0
+ DIZ  CONST_33  H19  C19  C18  C17     0.00   0.0  0
+ DIZ  CONST_34  H23  C23  C18  C17     0.00   0.0  0
+ DIZ  CONST_35  H20  C20  C19  C18   180.00   0.0  0
+ DIZ  CONST_36  H22  C22  C23  C18   180.00   0.0  0
+ DIZ  CONST_37  C13  C14  C15  C10     0.00   0.0  0
+ DIZ  CONST_38  C14  C15  C10  C11     0.00   0.0  0
+ DIZ  CONST_39  C15  C10  C11  C12     0.00   0.0  0
+ DIZ  CONST_40  C17  N1   C9   C10     0.00   0.0  0
+ DIZ  CONST_41  C17  C16  N2   C15     0.00   0.0  0
+ DIZ  CONST_42  C10  C9   N1   C7    180.00   0.0  0
+ DIZ  CONST_43  C17  N1   C9   O3    180.00   0.0  0
+ DIZ  CONST_45  HN2  N2   C16  C17   180.00   0.0  0
+ DIZ  CONST_46  O3   C9   N1   C7      0.00   0.0  0
+ DIZ  Var_01    C11  C10  C9   N1    143.71  30.0  1
+ DIZ  Var_02    C15  C10  C9   N1    -42.30  30.0  1
+ DIZ  Var_03    N2   C16  C17  N1    -57.92  30.0  1
+ DIZ  Var_04    C19  C18  C17  N1    157.10  30.0  2
+ DIZ  Var_05    C23  C18  C17  N1    -26.78  30.0  2
+ DIZ  Var_06    C16  C17  N1   C9     70.78  30.0  1
+ DIZ  Var_07    C18  C17  N1   C9    -58.35  30.0  1
+ DIZ  Var_08    C16  N2   C15  C10    44.87  30.0  1
+ DIZ  Var_09    C16  N2   C15  C14  -136.83  30.0  1
+ DIZ  Var_10    C18  C17  C16  N2     72.32  30.0  1
+ DIZ  Var_11    C19  C18  C17  C16    27.95  30.0  2
+ DIZ  Var_12    C23  C18  C17  C16  -155.93  30.0  2
+ DIZ  Var_13    N1   C7   C4   C3    -83.82  30.0  2
+ DIZ  Var_14    C9   N1   C7   C4    112.03  30.0  3
+ DIZ  Var_15    C17  N1   C7   C4    -68.33  30.0  3
+ DIZ  Var_16    N1   C7   C4   C5     91.71  30.0  2
+ DIZ  Var_17    C16  C17  N1   C7   -108.85  30.0  1
+ DIZ  Var_18    C18  C17  N1   C7    122.03  30.0  1
+ DIZ  Var_19    O4   C16  C17  N1    125.40  30.0  1
+ DIZ  Var_20    C11  C10  C9   O3    -35.44  30.0  1
+ DIZ  Var_21    C15  C10  C9   O3    138.55  30.0  1
+ DIZ  Var_22    C18  C17  C16  O4   -104.36  30.0  1
+ DIZ  Var_23    H17  C17  N1   C9   -175.62  30.0  1
+ DIZ  Var_24    C8   C7   C4   C3    147.57  30.0  2
+ DIZ  Var_25    C8   C7   C4   C5    -36.89  30.0  2
+ DIZ  Var_26    C9   N1   C7   C8   -117.12  30.0  3
+ DIZ  Var_27    C17  N1   C7   C8     62.52  30.0  3
+ DIZ  Var_28    H7   C7   C4   C3     30.78  30.0  2
+ DIZ  Var_29    O1   C8   C7   C4    146.53  30.0  2
+ DIZ  Var_30    O2   C8   C7   C4    -37.00  30.0  2
+ DIZ  Var_31    N1   C7   C8   O1     18.83  30.0  2
+ DIZ  Var_32    N1   C7   C8   O2   -164.70  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

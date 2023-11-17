@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 9DW  9DW  '(2~{S})-2-azanyl-3-[4-(2-ethyl-4-methoxy-phenyl)phenyl]propanoic acid'  ligand  42  22  .  2022-07-24  2022-07-26
+ 9DW  9DW  '(2~{S})-2-azanyl-3-[4-(2-ethyl-4-methoxy-phenyl)phenyl]propanoic acid'  ligand  42  22  .  2022-07-24  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_9DW
@@ -223,40 +224,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 9DW  CONST_01  C08  C07  C06  C05    0.00   0.0  0
- 9DW  CONST_02  C08  C03  C04  C05    0.00   0.0  0
- 9DW  CONST_05  C04  C03  C08  C07    0.00   0.0  0
- 9DW  CONST_06  C04  C05  C06  C07    0.00   0.0  0
- 9DW  CONST_07  C11  C10  C09  C08  180.00   0.0  0
- 9DW  CONST_08  C13  C14  C09  C08  180.00   0.0  0
- 9DW  CONST_09  C12  C11  C10  C09    0.00   0.0  0
- 9DW  CONST_10  C06  C07  C08  C09  180.00   0.0  0
- 9DW  CONST_11  C04  C03  C08  C09  180.00   0.0  0
- 9DW  CONST_12  C12  C13  C14  C09    0.00   0.0  0
- 9DW  CONST_13  C14  C09  C10  C11    0.00   0.0  0
- 9DW  CONST_14  C14  C13  C12  C11    0.00   0.0  0
- 9DW  CONST_15  C10  C11  C12  C13    0.00   0.0  0
- 9DW  CONST_16  C10  C09  C14  C13    0.00   0.0  0
- 9DW  CONST_19  C06  C07  C08  C03    0.00   0.0  0
- 9DW  CONST_20  C06  C05  C04  C03    0.00   0.0  0
- 9DW  CONST_21  C09  C08  C03  C02    0.00   0.0  0
- 9DW  CONST_22  C07  C08  C03  C02  180.00   0.0  0
- 9DW  CONST_23  C05  C04  C03  C02  180.00   0.0  0
- 9DW  CONST_24  OA6  C05  C06  C07  180.00   0.0  0
- 9DW  CONST_25  C15  C12  C13  C14  180.00   0.0  0
- 9DW  CONST_26  C10  C11  C12  C15  180.00   0.0  0
- 9DW  CONST_27  OA6  C05  C04  C03  180.00   0.0  0
- 9DW  CONST_28  H6   C07  C06  C05  180.00   0.0  0
- 9DW  CONST_29  H14  C10  C09  C08    0.00   0.0  0
- 9DW  CONST_30  H9   C14  C09  C08    0.00   0.0  0
- 9DW  CONST_31  H13  C06  C07  C08  180.00   0.0  0
- 9DW  CONST_32  H12  C04  C03  C08  180.00   0.0  0
- 9DW  CONST_33  H7   C11  C10  C09  180.00   0.0  0
- 9DW  CONST_34  H8   C13  C14  C09  180.00   0.0  0
- 9DW  Var_01    C08  C03  C02  C01   78.68  30.0  2
- 9DW  Var_02    C16  C15  C12  C11   99.05  30.0  2
- 9DW  Var_03    H17  CA7  OA6  C05  -60.88  30.0  3
- 9DW  Var_04    H1   C01  C02  C03  178.77  30.0  3
+ 9DW  CONST_01  C08  C07  C06  C05     0.00   0.0  0
+ 9DW  CONST_02  C08  C03  C04  C05     0.00   0.0  0
+ 9DW  CONST_03  C04  C03  C08  C07     0.00   0.0  0
+ 9DW  CONST_04  C04  C05  C06  C07     0.00   0.0  0
+ 9DW  CONST_05  C11  C10  C09  C08   180.00   0.0  0
+ 9DW  CONST_06  C13  C14  C09  C08   180.00   0.0  0
+ 9DW  CONST_07  C12  C11  C10  C09     0.00   0.0  0
+ 9DW  CONST_08  C06  C07  C08  C09   180.00   0.0  0
+ 9DW  CONST_09  C04  C03  C08  C09   180.00   0.0  0
+ 9DW  CONST_10  C12  C13  C14  C09     0.00   0.0  0
+ 9DW  CONST_11  C14  C09  C10  C11     0.00   0.0  0
+ 9DW  CONST_12  C14  C13  C12  C11     0.00   0.0  0
+ 9DW  CONST_13  C10  C11  C12  C13     0.00   0.0  0
+ 9DW  CONST_14  C10  C09  C14  C13     0.00   0.0  0
+ 9DW  CONST_15  C06  C07  C08  C03     0.00   0.0  0
+ 9DW  CONST_16  C06  C05  C04  C03     0.00   0.0  0
+ 9DW  CONST_17  C09  C08  C03  C02     0.00   0.0  0
+ 9DW  CONST_18  C07  C08  C03  C02   180.00   0.0  0
+ 9DW  CONST_19  C05  C04  C03  C02   180.00   0.0  0
+ 9DW  CONST_20  OA6  C05  C06  C07   180.00   0.0  0
+ 9DW  CONST_21  C15  C12  C13  C14   180.00   0.0  0
+ 9DW  CONST_22  C10  C11  C12  C15   180.00   0.0  0
+ 9DW  CONST_23  OA6  C05  C04  C03   180.00   0.0  0
+ 9DW  CONST_24  H6   C07  C06  C05   180.00   0.0  0
+ 9DW  CONST_25  H14  C10  C09  C08     0.00   0.0  0
+ 9DW  CONST_26  H9   C14  C09  C08     0.00   0.0  0
+ 9DW  CONST_27  H13  C06  C07  C08   180.00   0.0  0
+ 9DW  CONST_28  H12  C04  C03  C08   180.00   0.0  0
+ 9DW  CONST_29  H7   C11  C10  C09   180.00   0.0  0
+ 9DW  CONST_30  H8   C13  C14  C09   180.00   0.0  0
+ 9DW  Var_01    C08  C03  C02  C01    78.68  30.0  2
+ 9DW  Var_02    C16  C15  C12  C11    99.05  30.0  2
+ 9DW  Var_03    H17  CA7  OA6  C05   -60.88  30.0  3
+ 9DW  Var_04    H1   C01  C02  C03   178.77  30.0  3
+ 9DW  Var_05    C10  C09  C08  C07    65.97  30.0  2
+ 9DW  Var_06    C14  C09  C08  C07  -112.58  30.0  2
+ 9DW  Var_07    C03  C08  C09  C14    67.69  30.0  2
+ 9DW  Var_08    C10  C09  C08  C03  -113.76  30.0  2
+ 9DW  Var_09    CA7  OA6  C05  C04  -179.43  30.0  2
+ 9DW  Var_10    CA7  OA6  C05  C06     0.67  30.0  2
+ 9DW  Var_11    C88  C16  C15  C12   178.45  30.0  1
+ 9DW  Var_12    N17  C16  C15  C12   -57.52  30.0  1
+ 9DW  Var_13    H15  C16  C15  C12    62.68  30.0  1
+ 9DW  Var_14    O89  C88  C16  C15   101.02  30.0  2
+ 9DW  Var_15    OXT  C88  C16  C15   -76.55  30.0  2
+ 9DW  Var_16    O89  C88  C16  N17   -25.09  30.0  2
+ 9DW  Var_17    OXT  C88  C16  N17   157.33  30.0  2
+ 9DW  Var_18    H20  N17  C16  C15   -74.91  30.0  3
+ 9DW  Var_19    H21  N17  C16  C15    42.44  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

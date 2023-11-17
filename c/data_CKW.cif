@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CKW  CKW  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-[5-(4-phenylphenyl)-4~{H}-1,2,4-triazol-3-yl]oxane-3,4,5-triol  ligand  49  28  .  2021-08-07  2021-08-07  
+ CKW  CKW  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-[5-(4-phenylphenyl)-4~{H}-1,2,4-triazol-3-yl]oxane-3,4,5-triol  ligand  49  28  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CKW
@@ -254,47 +255,88 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CKW  CONST_01  C4   N3   N2   C1     0.00  0.0  0
- CKW  CONST_02  N3   C4   N5   C1     0.00  0.0  0
- CKW  CONST_03  C6   C4   N5   C1   180.00  0.0  0
- CKW  CONST_04  N3   N2   C1   N5     0.00  0.0  0
- CKW  CONST_05  N2   N3   C4   N5     0.00  0.0  0
- CKW  CONST_06  C7   C6   C4   N5   180.00  0.0  0
- CKW  CONST_07  C11  C6   C4   N5     0.00  0.0  0
- CKW  CONST_08  N2   C1   N5   C4     0.00  0.0  0
- CKW  CONST_09  C8   C7   C6   C4   180.00  0.0  0
- CKW  CONST_10  C10  C11  C6   C4   180.00  0.0  0
- CKW  CONST_11  C7   C6   C4   N3     0.00  0.0  0
- CKW  CONST_12  C11  C6   C4   N3   180.00  0.0  0
- CKW  CONST_13  C6   C4   N3   N2   180.00  0.0  0
- CKW  CONST_14  C9   C8   C7   C6     0.00  0.0  0
- CKW  CONST_15  C9   C10  C11  C6     0.00  0.0  0
- CKW  CONST_16  C10  C11  C6   C7     0.00  0.0  0
- CKW  CONST_17  C10  C9   C8   C7     0.00  0.0  0
- CKW  CONST_18  C12  C9   C8   C7   180.00  0.0  0
- CKW  CONST_19  C11  C6   C7   C8     0.00  0.0  0
- CKW  CONST_20  C11  C10  C9   C8     0.00  0.0  0
- CKW  CONST_23  C14  C13  C12  C9   180.00  0.0  0
- CKW  CONST_24  C16  C17  C12  C9   180.00  0.0  0
- CKW  CONST_27  C12  C9   C10  C11  180.00  0.0  0
- CKW  CONST_28  C15  C14  C13  C12    0.00  0.0  0
- CKW  CONST_29  C15  C16  C17  C12    0.00  0.0  0
- CKW  CONST_30  C16  C17  C12  C13    0.00  0.0  0
- CKW  CONST_31  C16  C15  C14  C13    0.00  0.0  0
- CKW  CONST_32  C17  C12  C13  C14    0.00  0.0  0
- CKW  CONST_33  C17  C16  C15  C14    0.00  0.0  0
- CKW  CONST_34  N3   N2   C1   C1'  180.00  0.0  0
- CKW  CONST_35  C4   N5   C1   C1'  180.00  0.0  0
- CKW  CONST_36  H12  N5   C1   C1'    0.00  0.0  0
- CKW  CONST_37  H13  C7   C6   C4     0.00  0.0  0
- CKW  CONST_38  H16  C11  C6   C4     0.00  0.0  0
- CKW  CONST_39  H14  C8   C7   C6   180.00  0.0  0
- CKW  CONST_40  H15  C10  C11  C6   180.00  0.0  0
- CKW  CONST_41  H17  C13  C12  C9     0.00  0.0  0
- CKW  CONST_42  H21  C17  C12  C9     0.00  0.0  0
- CKW  CONST_43  H18  C14  C13  C12  180.00  0.0  0
- CKW  CONST_44  H20  C16  C17  C12  180.00  0.0  0
- CKW  CONST_45  H19  C15  C14  C13  180.00  0.0  0
+ CKW  CONST_01  C4   N3   N2   C1      0.00   0.0  0
+ CKW  CONST_02  N3   C4   N5   C1      0.00   0.0  0
+ CKW  CONST_03  C6   C4   N5   C1    180.00   0.0  0
+ CKW  CONST_04  N3   N2   C1   N5      0.00   0.0  0
+ CKW  CONST_05  N2   N3   C4   N5      0.00   0.0  0
+ CKW  CONST_06  C7   C6   C4   N5    180.00   0.0  0
+ CKW  CONST_07  C11  C6   C4   N5      0.00   0.0  0
+ CKW  CONST_08  N2   C1   N5   C4      0.00   0.0  0
+ CKW  CONST_09  C8   C7   C6   C4    180.00   0.0  0
+ CKW  CONST_10  C10  C11  C6   C4    180.00   0.0  0
+ CKW  CONST_11  C7   C6   C4   N3      0.00   0.0  0
+ CKW  CONST_12  C11  C6   C4   N3    180.00   0.0  0
+ CKW  CONST_13  C6   C4   N3   N2    180.00   0.0  0
+ CKW  CONST_14  C9   C8   C7   C6      0.00   0.0  0
+ CKW  CONST_15  C9   C10  C11  C6      0.00   0.0  0
+ CKW  CONST_16  C10  C11  C6   C7      0.00   0.0  0
+ CKW  CONST_17  C10  C9   C8   C7      0.00   0.0  0
+ CKW  CONST_18  C12  C9   C8   C7    180.00   0.0  0
+ CKW  CONST_19  C11  C6   C7   C8      0.00   0.0  0
+ CKW  CONST_20  C11  C10  C9   C8      0.00   0.0  0
+ CKW  CONST_21  C14  C13  C12  C9    180.00   0.0  0
+ CKW  CONST_22  C16  C17  C12  C9    180.00   0.0  0
+ CKW  CONST_23  C12  C9   C10  C11   180.00   0.0  0
+ CKW  CONST_24  C15  C14  C13  C12     0.00   0.0  0
+ CKW  CONST_25  C15  C16  C17  C12     0.00   0.0  0
+ CKW  CONST_26  C16  C17  C12  C13     0.00   0.0  0
+ CKW  CONST_27  C16  C15  C14  C13     0.00   0.0  0
+ CKW  CONST_28  C17  C12  C13  C14     0.00   0.0  0
+ CKW  CONST_29  C17  C16  C15  C14     0.00   0.0  0
+ CKW  CONST_30  N3   N2   C1   C1'   180.00   0.0  0
+ CKW  CONST_31  C4   N5   C1   C1'   180.00   0.0  0
+ CKW  CONST_32  H12  N5   C1   C1'     0.00   0.0  0
+ CKW  CONST_33  H13  C7   C6   C4      0.00   0.0  0
+ CKW  CONST_34  H16  C11  C6   C4      0.00   0.0  0
+ CKW  CONST_35  H14  C8   C7   C6    180.00   0.0  0
+ CKW  CONST_36  H15  C10  C11  C6    180.00   0.0  0
+ CKW  CONST_37  H17  C13  C12  C9      0.00   0.0  0
+ CKW  CONST_38  H21  C17  C12  C9      0.00   0.0  0
+ CKW  CONST_39  H18  C14  C13  C12   180.00   0.0  0
+ CKW  CONST_40  H20  C16  C17  C12   180.00   0.0  0
+ CKW  CONST_41  H19  C15  C14  C13   180.00   0.0  0
+ CKW  Var_01    C3'  C4'  C5'  O5'   -55.43  30.0  1
+ CKW  Var_02    C3'  C2'  C1'  O5'    58.18  30.0  1
+ CKW  Var_03    N2   C1   C1'  O5'    58.85  30.0  2
+ CKW  Var_04    N5   C1   C1'  O5'  -121.25  30.0  2
+ CKW  Var_05    C2'  C3'  C4'  C5'    53.57  30.0  1
+ CKW  Var_06    C2'  C1'  O5'  C5'   -63.51  30.0  1
+ CKW  Var_07    C1   C1'  O5'  C5'   174.96  30.0  1
+ CKW  Var_08    C1'  C2'  C3'  C4'   -54.44  30.0  1
+ CKW  Var_09    C1'  O5'  C5'  C4'    61.74  30.0  1
+ CKW  Var_10    C1   C1'  C2'  C3'   177.77  30.0  1
+ CKW  Var_11    N2   C1   C1'  C2'   -62.01  30.0  2
+ CKW  Var_12    N5   C1   C1'  C2'   117.89  30.0  2
+ CKW  Var_13    C13  C12  C9   C8   -144.71  30.0  2
+ CKW  Var_14    C17  C12  C9   C8     35.33  30.0  2
+ CKW  Var_15    C13  C12  C9   C10    35.22  30.0  2
+ CKW  Var_16    C17  C12  C9   C10  -144.74  30.0  2
+ CKW  Var_17    O4'  C4'  C5'  O5'  -177.09  30.0  1
+ CKW  Var_18    O2'  C2'  C1'  O5'   179.48  30.0  1
+ CKW  Var_19    O3'  C3'  C4'  C5'   176.07  30.0  1
+ CKW  Var_20    O2'  C2'  C3'  C4'  -173.21  30.0  1
+ CKW  Var_21    C6'  C5'  C4'  C3'  -174.85  30.0  1
+ CKW  Var_22    O4'  C4'  C3'  C2'   173.18  30.0  1
+ CKW  Var_23    O3'  C3'  C2'  C1'  -174.33  30.0  1
+ CKW  Var_24    C6'  C5'  O5'  C1'  -176.11  30.0  1
+ CKW  Var_25    O2'  C2'  C1'  C1    -60.93  30.0  1
+ CKW  Var_26    H2   C4'  C5'  O5'    62.53  30.0  1
+ CKW  Var_27    H4   C2'  C1'  O5'   -60.10  30.0  1
+ CKW  Var_28    H3   C3'  C4'  C5'   -64.41  30.0  1
+ CKW  Var_29    H5   C1'  O5'  C5'    56.46  30.0  1
+ CKW  Var_30    H1   C5'  C4'  C3'    64.61  30.0  1
+ CKW  Var_31    O6'  C6'  C5'  O5'    63.27  30.0  3
+ CKW  Var_32    O6'  C6'  C5'  C4'  -175.89  30.0  3
+ CKW  Var_33    O3'  C3'  C2'  O2'    66.90  30.0  1
+ CKW  Var_34    O4'  C4'  C3'  O3'   -64.33  30.0  1
+ CKW  Var_35    C6'  C5'  C4'  O4'    63.49  30.0  1
+ CKW  Var_36    H9   C6'  C5'  O5'  -175.04  30.0  3
+ CKW  Var_37    H10  C6'  C5'  O5'   -58.80  30.0  3
+ CKW  Var_38    H8   O4'  C4'  C5'   177.75  30.0  3
+ CKW  Var_39    H7   O3'  C3'  C4'   158.32  30.0  3
+ CKW  Var_40    H6   O2'  C2'  C3'   -91.69  30.0  3
+ CKW  Var_41    H11  O6'  C6'  C5'   177.50  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

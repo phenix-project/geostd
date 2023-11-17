@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MTI  MTI  (2S,3R,4S,5S)-3,4-dihydroxy-2-[(methylsulfanyl)methyl]-5-(4-oxo-4,5-dihydro-3H-pyrrolo[3,2-d]pyrimidin-7-yl)pyrrolidinium  ligand  37  20  .  2022-07-25  2022-07-26
+ MTI  MTI  (2S,3R,4S,5S)-3,4-dihydroxy-2-[(methylsulfanyl)methyl]-5-(4-oxo-4,5-dihydro-3H-pyrrolo[3,2-d]pyrimidin-7-yl)pyrrolidinium  ligand  37  20  .  2022-07-25  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_MTI
@@ -211,35 +212,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MTI  CONST_01  C5   N7   C8   C9      0.00   0.0  0
- MTI  CONST_02  N7   C5   C4   C9      0.00   0.0  0
- MTI  CONST_03  C6   C5   C4   C9    180.00   0.0  0
- MTI  CONST_04  C2   N3   C4   C9    180.00   0.0  0
- MTI  CONST_05  C5   C4   C9   C8      0.00   0.0  0
- MTI  CONST_06  N3   C4   C9   C8    180.00   0.0  0
- MTI  CONST_07  C6   C5   N7   C8    180.00   0.0  0
- MTI  CONST_08  C4   C5   N7   C8      0.00   0.0  0
- MTI  CONST_09  C4   C9   C8   N7      0.00   0.0  0
- MTI  CONST_10  N1   C6   C5   N7    180.00   0.0  0
- MTI  CONST_11  N3   C4   C5   N7    180.00   0.0  0
- MTI  CONST_12  C2   N1   C6   C5      0.00   0.0  0
- MTI  CONST_13  C2   N3   C4   C5      0.00   0.0  0
- MTI  CONST_14  N3   C4   C5   C6      0.00   0.0  0
- MTI  CONST_15  N3   C2   N1   C6      0.00   0.0  0
- MTI  CONST_16  C4   C5   C6   N1      0.00   0.0  0
- MTI  CONST_17  C4   N3   C2   N1      0.00   0.0  0
- MTI  CONST_18  N7   C8   C9   C1'   180.00   0.0  0
- MTI  CONST_19  C5   C4   C9   C1'   180.00   0.0  0
- MTI  CONST_20  N3   C4   C9   C1'     0.00   0.0  0
- MTI  CONST_21  O6   C6   C5   N7      0.00   0.0  0
- MTI  CONST_22  C4   C5   C6   O6    180.00   0.0  0
- MTI  CONST_23  C2   N1   C6   O6    180.00   0.0  0
- MTI  CONST_24  H8   C8   C9   C1'     0.00   0.0  0
- MTI  CONST_25  HN7  N7   C8   C9    180.00   0.0  0
- MTI  CONST_26  HN1  N1   C6   C5    180.00   0.0  0
- MTI  CONST_27  H3   C2   N1   C6    180.00   0.0  0
- MTI  Var_01    C4'  C5'  S5'  CS   -168.99  30.0  3
- MTI  Var_02    HS1  CS   S5'  C5'    57.22  30.0  3
+ MTI  CONST_01  C5    N7   C8   C9      0.00   0.0  0
+ MTI  CONST_02  N7    C5   C4   C9      0.00   0.0  0
+ MTI  CONST_03  C6    C5   C4   C9    180.00   0.0  0
+ MTI  CONST_04  C2    N3   C4   C9    180.00   0.0  0
+ MTI  CONST_05  C5    C4   C9   C8      0.00   0.0  0
+ MTI  CONST_06  N3    C4   C9   C8    180.00   0.0  0
+ MTI  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ MTI  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ MTI  CONST_09  C4    C9   C8   N7      0.00   0.0  0
+ MTI  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ MTI  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ MTI  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ MTI  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ MTI  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ MTI  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ MTI  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ MTI  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ MTI  CONST_18  N7    C8   C9   C1'   180.00   0.0  0
+ MTI  CONST_19  C5    C4   C9   C1'   180.00   0.0  0
+ MTI  CONST_20  N3    C4   C9   C1'     0.00   0.0  0
+ MTI  CONST_21  O6    C6   C5   N7      0.00   0.0  0
+ MTI  CONST_22  C4    C5   C6   O6    180.00   0.0  0
+ MTI  CONST_23  C2    N1   C6   O6    180.00   0.0  0
+ MTI  CONST_24  H8    C8   C9   C1'     0.00   0.0  0
+ MTI  CONST_25  HN7   N7   C8   C9    180.00   0.0  0
+ MTI  CONST_26  HN1   N1   C6   C5    180.00   0.0  0
+ MTI  CONST_27  H3    C2   N1   C6    180.00   0.0  0
+ MTI  Var_01    C4'   C5'  S5'  CS   -168.99  30.0  3
+ MTI  Var_02    HS1   CS   S5'  C5'    57.22  30.0  3
+ MTI  Var_03    C2'   C1'  N4'  C4'    34.99  30.0  1
+ MTI  Var_04    C9    C1'  N4'  C4'   -85.32  30.0  1
+ MTI  Var_05    C1'   C2'  C3'  C4'    38.25  30.0  1
+ MTI  Var_06    C2'   C3'  C4'  N4'   -17.09  30.0  1
+ MTI  Var_07    C3'   C2'  C1'  N4'   -43.92  30.0  1
+ MTI  Var_08    C8    C9   C1'  N4'   150.17  30.0  2
+ MTI  Var_09    C4    C9   C1'  N4'   -33.60  30.0  2
+ MTI  Var_10    C8    C9   C1'  C2'    37.67  30.0  2
+ MTI  Var_11    C4    C9   C1'  C2'  -146.10  30.0  2
+ MTI  Var_12    C1'   N4'  C4'  C3'   -11.01  30.0  1
+ MTI  Var_13    C9    C1'  C2'  C3'    74.29  30.0  1
+ MTI  Var_14    C1'   N4'  C4'  C5'   111.91  30.0  1
+ MTI  Var_15    C2'   C3'  C4'  C5'  -137.28  30.0  1
+ MTI  Var_16    O2'   C2'  C3'  C4'   -75.64  30.0  1
+ MTI  Var_17    O3'   C3'  C4'  N4'  -138.61  30.0  1
+ MTI  Var_18    O2'   C2'  C1'  N4'    72.28  30.0  1
+ MTI  Var_19    C9    C1'  C2'  O2'  -169.51  30.0  1
+ MTI  Var_20    C1'   C2'  C3'  O3'   156.64  30.0  1
+ MTI  Var_21    H1'   C1'  N4'  C4'   153.71  30.0  1
+ MTI  Var_22    H1    C2'  C3'  C4'   158.29  30.0  1
+ MTI  Var_23    H3'   C3'  C4'  N4'    99.25  30.0  1
+ MTI  Var_24    H4'   C4'  C3'  C2'    97.47  30.0  1
+ MTI  Var_25    H4'1  N4'  C1'  C2'   -85.07  30.0  1
+ MTI  Var_26    H4'2  N4'  C1'  C2'   160.11  30.0  1
+ MTI  Var_27    N4'   C4'  C5'  S5'    62.81  30.0  3
+ MTI  Var_28    C3'   C4'  C5'  S5'   179.63  30.0  3
+ MTI  Var_29    O3'   C3'  C4'  C5'   101.19  30.0  1
+ MTI  Var_30    O3'   C3'  C2'  O2'    42.75  30.0  1
+ MTI  Var_31    H2    O3'  C3'  C4'  -153.32  30.0  3
+ MTI  Var_32    H5'1  C5'  C4'  N4'   -58.08  30.0  2
+ MTI  Var_33    H5'2  C5'  C4'  N4'  -175.53  30.0  2
+ MTI  Var_34    H2'   O2'  C2'  C3'   -49.37  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

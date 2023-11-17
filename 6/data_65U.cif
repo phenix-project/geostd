@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 65U  65U  5-benzyl-N-[(3S)-5-methyl-4-oxo-2,3,4,5-tetrahydro-1,5-benzoxazepin-3-yl]-1,2-oxazole-3-carboxamide  ligand  47  28  .  2021-08-05  2021-08-05  
+ 65U  65U  5-benzyl-N-[(3S)-5-methyl-4-oxo-2,3,4,5-tetrahydro-1,5-benzoxazepin-3-yl]-1,2-oxazole-3-carboxamide  ligand  47  28  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_65U
@@ -246,42 +247,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 65U  CONST_01  C38  C36  C34  C33    0.00   0.0  0
- 65U  CONST_02  C38  C40  C42  C33    0.00   0.0  0
- 65U  CONST_03  C34  C33  C42  C40    0.00   0.0  0
- 65U  CONST_04  C34  C36  C38  C40    0.00   0.0  0
- 65U  CONST_05  C36  C34  C33  C42    0.00   0.0  0
- 65U  CONST_06  C36  C38  C40  C42    0.00   0.0  0
- 65U  CONST_07  C07  C09  C11  C13    0.00   0.0  0
- 65U  CONST_08  C09  C11  C13  C15    0.00   0.0  0
- 65U  CONST_09  C06  C07  C09  C11    0.00   0.0  0
- 65U  CONST_10  C26  N45  O44  C29    0.00   0.0  0
- 65U  CONST_11  N45  C26  C27  C29    0.00   0.0  0
- 65U  CONST_12  N45  O44  C29  C27    0.00   0.0  0
- 65U  CONST_13  O44  N45  C26  C27    0.00   0.0  0
- 65U  CONST_14  O44  C29  C27  C26    0.00   0.0  0
- 65U  CONST_15  C30  C33  C42  C40  180.00   0.0  0
- 65U  CONST_16  C30  C33  C34  C36  180.00   0.0  0
- 65U  CONST_17  N45  O44  C29  C30  180.00   0.0  0
- 65U  CONST_18  C26  C27  C29  C30  180.00   0.0  0
- 65U  CONST_19  C24  C26  C27  C29  180.00   0.0  0
- 65U  CONST_20  O44  N45  C26  C24  180.00   0.0  0
- 65U  CONST_21  H37  C36  C34  C33  180.00   0.0  0
- 65U  CONST_22  H41  C40  C42  C33  180.00   0.0  0
- 65U  CONST_23  H35  C34  C36  C38  180.00   0.0  0
- 65U  CONST_24  H43  C42  C40  C38  180.00   0.0  0
- 65U  CONST_25  H39  C38  C40  C42  180.00   0.0  0
- 65U  CONST_26  H10  C09  C11  C13  180.00   0.0  0
- 65U  CONST_27  H12  C11  C13  C15  180.00   0.0  0
- 65U  CONST_28  H08  C07  C09  C11  180.00   0.0  0
- 65U  CONST_29  H14  C13  C11  C09  180.00   0.0  0
- 65U  CONST_30  H28  C27  C29  O44  180.00   0.0  0
- 65U  CONST_31  C26  C24  N22  C20  180.00   0.0  0
- 65U  CONST_32  O25  C24  N22  C20    0.00   0.0  0
- 65U  CONST_33  H23  N22  C24  C26    0.00   0.0  0
- 65U  Var_01    O44  C29  C30  C33  -60.17  30.0  2
- 65U  Var_02    C29  C30  C33  C42   99.33  30.0  2
- 65U  Var_03    N22  C24  C26  C27  177.40  30.0  2
+ 65U  CONST_01  C38  C36  C34  C33     0.00   0.0  0
+ 65U  CONST_02  C38  C40  C42  C33     0.00   0.0  0
+ 65U  CONST_03  C34  C33  C42  C40     0.00   0.0  0
+ 65U  CONST_04  C34  C36  C38  C40     0.00   0.0  0
+ 65U  CONST_05  C36  C34  C33  C42     0.00   0.0  0
+ 65U  CONST_06  C36  C38  C40  C42     0.00   0.0  0
+ 65U  CONST_07  C07  C09  C11  C13     0.00   0.0  0
+ 65U  CONST_08  C09  C11  C13  C15     0.00   0.0  0
+ 65U  CONST_09  C06  C07  C09  C11     0.00   0.0  0
+ 65U  CONST_10  C26  N45  O44  C29     0.00   0.0  0
+ 65U  CONST_11  N45  C26  C27  C29     0.00   0.0  0
+ 65U  CONST_12  N45  O44  C29  C27     0.00   0.0  0
+ 65U  CONST_13  O44  N45  C26  C27     0.00   0.0  0
+ 65U  CONST_14  O44  C29  C27  C26     0.00   0.0  0
+ 65U  CONST_15  C30  C33  C42  C40   180.00   0.0  0
+ 65U  CONST_16  C30  C33  C34  C36   180.00   0.0  0
+ 65U  CONST_17  N45  O44  C29  C30   180.00   0.0  0
+ 65U  CONST_18  C26  C27  C29  C30   180.00   0.0  0
+ 65U  CONST_19  C24  C26  C27  C29   180.00   0.0  0
+ 65U  CONST_20  O44  N45  C26  C24   180.00   0.0  0
+ 65U  CONST_21  H37  C36  C34  C33   180.00   0.0  0
+ 65U  CONST_22  H41  C40  C42  C33   180.00   0.0  0
+ 65U  CONST_23  H35  C34  C36  C38   180.00   0.0  0
+ 65U  CONST_24  H43  C42  C40  C38   180.00   0.0  0
+ 65U  CONST_25  H39  C38  C40  C42   180.00   0.0  0
+ 65U  CONST_26  H10  C09  C11  C13   180.00   0.0  0
+ 65U  CONST_27  H12  C11  C13  C15   180.00   0.0  0
+ 65U  CONST_28  H08  C07  C09  C11   180.00   0.0  0
+ 65U  CONST_29  H14  C13  C11  C09   180.00   0.0  0
+ 65U  CONST_30  H28  C27  C29  O44   180.00   0.0  0
+ 65U  CONST_31  C26  C24  N22  C20   180.00   0.0  0
+ 65U  CONST_32  O25  C24  N22  C20     0.00   0.0  0
+ 65U  CONST_33  H23  N22  C24  C26     0.00   0.0  0
+ 65U  Var_01    O44  C29  C30  C33   -60.17  30.0  2
+ 65U  Var_02    C29  C30  C33  C42    99.33  30.0  2
+ 65U  Var_03    N22  C24  C26  C27   177.40  30.0  2
+ 65U  CONST_34  C07  C06  C15  C13     0.00   0.0  0
+ 65U  CONST_35  C09  C07  C06  C15     0.00   0.0  0
+ 65U  CONST_36  C06  C15  C13  C11     0.00   0.0  0
+ 65U  CONST_37  C06  N05  C46  C20     0.00   0.0  0
+ 65U  CONST_38  C01  N05  C46  C20   180.00   0.0  0
+ 65U  CONST_39  O47  C46  N05  C06   180.00   0.0  0
+ 65U  CONST_40  C01  N05  C46  O47     0.00   0.0  0
+ 65U  Var_04    C17  O16  C15  C13   104.44  30.0  1
+ 65U  Var_05    C46  N05  C06  C15    46.32  30.0  1
+ 65U  Var_06    C20  C17  O16  C15    48.43  30.0  1
+ 65U  Var_07    N05  C46  C20  C17   -73.69  30.0  1
+ 65U  Var_08    C06  C15  O16  C17   -77.14  30.0  1
+ 65U  Var_09    C46  N05  C06  C07  -135.51  30.0  1
+ 65U  Var_10    C46  C20  C17  O16    40.99  30.0  1
+ 65U  Var_11    C01  N05  C06  C15  -131.29  30.0  1
+ 65U  Var_12    O47  C46  C20  C17   108.25  30.0  1
+ 65U  Var_13    N22  C20  C46  N05   165.11  30.0  1
+ 65U  Var_14    C01  N05  C06  C07    46.88  30.0  1
+ 65U  Var_15    N22  C20  C17  O16   163.75  30.0  1
+ 65U  Var_16    H19  C17  O16  C15   -73.89  30.0  1
+ 65U  Var_17    H18  C17  O16  C15   168.44  30.0  1
+ 65U  Var_18    H21  C20  C46  N05    46.18  30.0  1
+ 65U  Var_19    C24  N22  C20  C17   162.18  30.0  2
+ 65U  Var_20    O47  C46  C20  N22   -12.96  30.0  1
+ 65U  Var_21    C46  C20  N22  C24   -75.16  30.0  3
+ 65U  Var_22    H23  N22  C20  C17   -29.88  30.0  2
+ 65U  Var_23    H04  C01  N05  C06   121.79  30.0  3
+ 65U  Var_24    H03  C01  N05  C06  -117.12  30.0  3
+ 65U  Var_25    H02  C01  N05  C06     2.87  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

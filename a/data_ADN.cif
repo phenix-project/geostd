@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ADN  ADN  'adenosine                '  ligand  32  19  .  2020-10-20  2022-03-11
+ ADN  ADN  'adenosine                '  ligand  32  19  .  2020-10-20  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_ADN
@@ -189,33 +190,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ADN  CONST_01  C5    N7  C8  N9     0.00  0.0  0
- ADN  CONST_02  N7    C5  C4  N9     0.00  0.0  0
- ADN  CONST_03  C6    C5  C4  N9   180.00  0.0  0
- ADN  CONST_04  C2    N3  C4  N9   180.00  0.0  0
- ADN  CONST_05  C5    C4  N9  C8     0.00  0.0  0
- ADN  CONST_06  N3    C4  N9  C8   180.00  0.0  0
- ADN  CONST_07  C6    C5  N7  C8   180.00  0.0  0
- ADN  CONST_08  C4    C5  N7  C8     0.00  0.0  0
- ADN  CONST_09  C4    N9  C8  N7     0.00  0.0  0
- ADN  CONST_10  N1    C6  C5  N7   180.00  0.0  0
- ADN  CONST_11  N3    C4  C5  N7   180.00  0.0  0
- ADN  CONST_12  C2    N1  C6  C5     0.00  0.0  0
- ADN  CONST_13  C2    N3  C4  C5     0.00  0.0  0
- ADN  CONST_14  N3    C4  C5  C6     0.00  0.0  0
- ADN  CONST_15  N3    C2  N1  C6     0.00  0.0  0
- ADN  CONST_16  C4    C5  C6  N1     0.00  0.0  0
- ADN  CONST_17  C4    N3  C2  N1     0.00  0.0  0
- ADN  CONST_18  N7    C8  N9  C1'  180.00  0.0  0
- ADN  CONST_19  C5    C4  N9  C1'  180.00  0.0  0
- ADN  CONST_20  N3    C4  N9  C1'    0.00  0.0  0
- ADN  CONST_21  N6    C6  C5  N7     0.00  0.0  0
- ADN  CONST_22  C4    C5  C6  N6   180.00  0.0  0
- ADN  CONST_23  C2    N1  C6  N6   180.00  0.0  0
- ADN  CONST_24  H8    C8  N9  C1'    0.00  0.0  0
- ADN  CONST_25  H2    C2  N1  C6   180.00  0.0  0
- ADN  CONST_26  HN61  N6  C6  C5   180.00  0.0  0
- ADN  CONST_27  HN62  N6  C6  C5     0.00  0.0  0
+ ADN  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ ADN  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ ADN  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ ADN  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ ADN  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ ADN  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ ADN  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ ADN  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ ADN  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ ADN  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ ADN  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ ADN  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ ADN  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ ADN  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ ADN  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ ADN  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ ADN  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ ADN  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ ADN  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ ADN  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ ADN  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ ADN  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ ADN  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ ADN  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ ADN  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ ADN  CONST_26  HN61  N6   C6   C5    180.00   0.0  0
+ ADN  CONST_27  HN62  N6   C6   C5      0.00   0.0  0
+ ADN  Var_01    C2'   C1'  O4'  C4'     0.43  30.0  1
+ ADN  Var_02    N9    C1'  O4'  C4'  -123.50  30.0  1
+ ADN  Var_03    C1'   C2'  C3'  C4'    32.96  30.0  1
+ ADN  Var_04    C2'   C3'  C4'  O4'   -33.71  30.0  1
+ ADN  Var_05    C3'   C2'  C1'  O4'   -21.63  30.0  1
+ ADN  Var_06    C8    N9   C1'  O4'    65.59  30.0  2
+ ADN  Var_07    C4    N9   C1'  O4'  -110.36  30.0  2
+ ADN  Var_08    C1'   O4'  C4'  C3'    21.33  30.0  1
+ ADN  Var_09    N9    C1'  C2'  C3'    99.54  30.0  1
+ ADN  Var_10    C8    N9   C1'  C2'   -54.24  30.0  2
+ ADN  Var_11    C4    N9   C1'  C2'   129.81  30.0  2
+ ADN  Var_12    C1'   O4'  C4'  C5'   143.19  30.0  1
+ ADN  Var_13    C2'   C3'  C4'  C5'  -153.82  30.0  1
+ ADN  Var_14    O2'   C2'  C3'  C4'   -81.06  30.0  1
+ ADN  Var_15    O3'   C3'  C4'  O4'  -154.96  30.0  1
+ ADN  Var_16    O2'   C2'  C1'  O4'    94.85  30.0  1
+ ADN  Var_17    C1'   C2'  C3'  O3'   152.04  30.0  1
+ ADN  Var_18    N9    C1'  C2'  O2'  -143.99  30.0  1
+ ADN  Var_19    H1'   C1'  O4'  C4'   120.61  30.0  1
+ ADN  Var_20    H2'   C2'  C3'  C4'   153.13  30.0  1
+ ADN  Var_21    H3'   C3'  C4'  O4'    82.30  30.0  1
+ ADN  Var_22    H4'   C4'  C3'  C2'    84.16  30.0  1
+ ADN  Var_23    O4'   C4'  C5'  O5'    66.44  30.0  3
+ ADN  Var_24    C3'   C4'  C5'  O5'  -176.62  30.0  3
+ ADN  Var_25    O3'   C3'  C4'  C5'    84.92  30.0  1
+ ADN  Var_26    O2'   C2'  C3'  O3'    38.02  30.0  1
+ ADN  Var_27    HO3'  O3'  C3'  C4'  -158.80  30.0  3
+ ADN  Var_28    H5'1  C5'  C4'  O4'  -171.91  30.0  1
+ ADN  Var_29    H5'2  C5'  C4'  O4'   -56.19  30.0  1
+ ADN  Var_30    HO2'  O2'  C2'  C3'   -39.59  30.0  3
+ ADN  Var_31    HO5'  O5'  C5'  C4'   176.95  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

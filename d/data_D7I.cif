@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- D7I  D7I  '[2,4-diphosphonooxy-5-[2-(2,4,5-triphosphonooxyphenoxy)ethoxy]phenyl] dihydrogen phosphate'  ligand  54  46  .  2022-03-18  2022-03-18
+ D7I  D7I  '[2,4-diphosphonooxy-5-[2-(2,4,5-triphosphonooxyphenoxy)ethoxy]phenyl] dihydrogen phosphate'  ligand  54  46  .  2022-03-18  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_D7I
@@ -266,47 +267,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- D7I  CONST_01  C4    C3   C2   C1     0.00   0.0  0
- D7I  CONST_02  C4    C5   C6   C1     0.00   0.0  0
- D7I  CONST_03  C4'   C3'  C2'  C1'    0.00   0.0  0
- D7I  CONST_04  C4'   C5'  C6'  C1'    0.00   0.0  0
- D7I  CONST_05  C5    C4   C3   C2     0.00   0.0  0
- D7I  CONST_06  C5    C6   C1   C2     0.00   0.0  0
- D7I  CONST_07  C5'   C6'  C1'  C2'    0.00   0.0  0
- D7I  CONST_08  C5'   C4'  C3'  C2'    0.00   0.0  0
- D7I  CONST_09  C6    C5   C4   C3     0.00   0.0  0
- D7I  CONST_10  C6    C1   C2   C3     0.00   0.0  0
- D7I  CONST_11  C6'   C1'  C2'  C3'    0.00   0.0  0
- D7I  CONST_12  C6'   C5'  C4'  C3'    0.00   0.0  0
- D7I  CONST_13  O5    C5   C6   C1   180.00   0.0  0
- D7I  CONST_14  O5'   C5'  C6'  C1'  180.00   0.0  0
- D7I  CONST_15  O4    C4   C3   C2   180.00   0.0  0
- D7I  CONST_16  O4'   C4'  C3'  C2'  180.00   0.0  0
- D7I  CONST_17  O5    C5   C4   C3   180.00   0.0  0
- D7I  CONST_18  O1    C1   C2   C3   180.00   0.0  0
- D7I  CONST_19  O1'   C1'  C2'  C3'  180.00   0.0  0
- D7I  CONST_20  O5'   C5'  C4'  C3'  180.00   0.0  0
- D7I  CONST_21  O2    C2   C3   C4   180.00   0.0  0
- D7I  CONST_22  O2'   C2'  C3'  C4'  180.00   0.0  0
- D7I  CONST_23  O1    C1   C6   C5   180.00   0.0  0
- D7I  CONST_24  O1'   C1'  C6'  C5'  180.00   0.0  0
- D7I  CONST_25  O4    C4   C5   C6   180.00   0.0  0
- D7I  CONST_26  O2    C2   C1   C6   180.00   0.0  0
- D7I  CONST_27  O2'   C2'  C1'  C6'  180.00   0.0  0
- D7I  CONST_28  O4'   C4'  C5'  C6'  180.00   0.0  0
- D7I  CONST_29  H3    C3   C2   C1   180.00   0.0  0
- D7I  CONST_30  H3'   C3'  C2'  C1'  180.00   0.0  0
- D7I  CONST_31  H6    C6   C1   C2   180.00   0.0  0
- D7I  CONST_32  H6'   C6'  C1'  C2'  180.00   0.0  0
- D7I  Var_01    C7'   C7   O1   C1   -44.02  30.0  1
- D7I  Var_02    C7    C7'  O1'  C1'  -63.48  30.0  1
- D7I  Var_03    O23   P2   O2   C2    82.35  30.0  2
- D7I  Var_04    O22'  P2'  O2'  C2'  168.64  30.0  3
- D7I  Var_05    O43   P4   O4   C4   -75.97  30.0  3
- D7I  Var_06    O43'  P4'  O4'  C4'  -73.28  30.0  3
- D7I  Var_07    O51   P5   O5   C5   161.94  30.0  3
- D7I  Var_08    O52'  P5'  O5'  C5'  -49.21  30.0  3
- D7I  Var_09    O1'   C7'  C7   O1   -54.88  30.0  3
+ D7I  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ D7I  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ D7I  CONST_03  C4'   C3'  C2'  C1'     0.00   0.0  0
+ D7I  CONST_04  C4'   C5'  C6'  C1'     0.00   0.0  0
+ D7I  CONST_05  C5    C4   C3   C2      0.00   0.0  0
+ D7I  CONST_06  C5    C6   C1   C2      0.00   0.0  0
+ D7I  CONST_07  C5'   C6'  C1'  C2'     0.00   0.0  0
+ D7I  CONST_08  C5'   C4'  C3'  C2'     0.00   0.0  0
+ D7I  CONST_09  C6    C5   C4   C3      0.00   0.0  0
+ D7I  CONST_10  C6    C1   C2   C3      0.00   0.0  0
+ D7I  CONST_11  C6'   C1'  C2'  C3'     0.00   0.0  0
+ D7I  CONST_12  C6'   C5'  C4'  C3'     0.00   0.0  0
+ D7I  CONST_13  O5    C5   C6   C1    180.00   0.0  0
+ D7I  CONST_14  O5'   C5'  C6'  C1'   180.00   0.0  0
+ D7I  CONST_15  O4    C4   C3   C2    180.00   0.0  0
+ D7I  CONST_16  O4'   C4'  C3'  C2'   180.00   0.0  0
+ D7I  CONST_17  O5    C5   C4   C3    180.00   0.0  0
+ D7I  CONST_18  O1    C1   C2   C3    180.00   0.0  0
+ D7I  CONST_19  O1'   C1'  C2'  C3'   180.00   0.0  0
+ D7I  CONST_20  O5'   C5'  C4'  C3'   180.00   0.0  0
+ D7I  CONST_21  O2    C2   C3   C4    180.00   0.0  0
+ D7I  CONST_22  O2'   C2'  C3'  C4'   180.00   0.0  0
+ D7I  CONST_23  O1    C1   C6   C5    180.00   0.0  0
+ D7I  CONST_24  O1'   C1'  C6'  C5'   180.00   0.0  0
+ D7I  CONST_25  O4    C4   C5   C6    180.00   0.0  0
+ D7I  CONST_26  O2    C2   C1   C6    180.00   0.0  0
+ D7I  CONST_27  O2'   C2'  C1'  C6'   180.00   0.0  0
+ D7I  CONST_28  O4'   C4'  C5'  C6'   180.00   0.0  0
+ D7I  CONST_29  H3    C3   C2   C1    180.00   0.0  0
+ D7I  CONST_30  H3'   C3'  C2'  C1'   180.00   0.0  0
+ D7I  CONST_31  H6    C6   C1   C2    180.00   0.0  0
+ D7I  CONST_32  H6'   C6'  C1'  C2'   180.00   0.0  0
+ D7I  Var_01    C7'   C7   O1   C1    -44.02  30.0  1
+ D7I  Var_02    C7    C7'  O1'  C1'   -63.48  30.0  1
+ D7I  Var_03    O23   P2   O2   C2     82.35  30.0  2
+ D7I  Var_04    O22'  P2'  O2'  C2'   168.64  30.0  3
+ D7I  Var_05    O43   P4   O4   C4    -75.97  30.0  3
+ D7I  Var_06    O43'  P4'  O4'  C4'   -73.28  30.0  3
+ D7I  Var_07    O51   P5   O5   C5    161.94  30.0  3
+ D7I  Var_08    O52'  P5'  O5'  C5'   -49.21  30.0  3
+ D7I  Var_09    O1'   C7'  C7   O1    -54.88  30.0  3
+ D7I  Var_10    P2    O2   C2   C1    133.36  30.0  2
+ D7I  Var_11    P2'   O2'  C2'  C1'  -109.26  30.0  1
+ D7I  Var_12    C7    O1   C1   C2    -61.66  30.0  2
+ D7I  Var_13    C7'   O1'  C1'  C2'   -81.14  30.0  2
+ D7I  Var_14    P4    O4   C4   C3     59.63  30.0  3
+ D7I  Var_15    P2    O2   C2   C3    -48.76  30.0  2
+ D7I  Var_16    P2'   O2'  C2'  C3'    72.83  30.0  1
+ D7I  Var_17    P4'   O4'  C4'  C3'    67.03  30.0  2
+ D7I  Var_18    P5    O5   C5   C4   -117.72  30.0  2
+ D7I  Var_19    P5'   O5'  C5'  C4'   146.20  30.0  2
+ D7I  Var_20    P4    O4   C4   C5   -122.73  30.0  3
+ D7I  Var_21    P4'   O4'  C4'  C5'  -115.45  30.0  2
+ D7I  Var_22    P5    O5   C5   C6     63.38  30.0  2
+ D7I  Var_23    C7    O1   C1   C6    123.08  30.0  2
+ D7I  Var_24    C7'   O1'  C1'  C6'   100.83  30.0  2
+ D7I  Var_25    P5'   O5'  C5'  C6'   -35.14  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

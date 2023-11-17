@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- B66  B66  4-{[(1R,2S)-1,2-dihydroxy-2-methyl-3-(4-nitrophenoxy)propyl]amino}-2-(trifluoromethyl)benzonitrile  ligand  45  29  .  2021-08-06  2021-08-06  
+ B66  B66  4-{[(1R,2S)-1,2-dihydroxy-2-methyl-3-(4-nitrophenoxy)propyl]amino}-2-(trifluoromethyl)benzonitrile  ligand  45  29  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_B66
@@ -232,44 +233,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- B66  CONST_01  C20  C21  C18  C17    0.00   0.0  0
- B66  CONST_02  C20  C19  C16  C17    0.00   0.0  0
- B66  CONST_03  C19  C16  C17  C18    0.00   0.0  0
- B66  CONST_04  C19  C20  C21  C18    0.00   0.0  0
- B66  CONST_05  C16  C17  C18  C21    0.00   0.0  0
- B66  CONST_06  C16  C19  C20  C21    0.00   0.0  0
- B66  CONST_07  C3   C4   C5   C6     0.00   0.0  0
- B66  CONST_08  C3   C2   C1   C6     0.00   0.0  0
- B66  CONST_09  C2   C1   C6   C5     0.00   0.0  0
- B66  CONST_10  C2   C3   C4   C5     0.00   0.0  0
- B66  CONST_11  C4   C5   C6   C1     0.00   0.0  0
- B66  CONST_12  C4   C3   C2   C1     0.00   0.0  0
- B66  CONST_13  N19  C21  C18  C17  180.00   0.0  0
- B66  CONST_14  O14  C16  C17  C18  180.00   0.0  0
- B66  CONST_15  C19  C20  C21  N19  180.00   0.0  0
- B66  CONST_16  O14  C16  C19  C20  180.00   0.0  0
- B66  CONST_17  C4   C5   C6   N9   180.00   0.0  0
- B66  CONST_18  C2   C1   C6   N9   180.00   0.0  0
- B66  CONST_19  C7   C4   C5   C6   180.00   0.0  0
- B66  CONST_20  C8   C3   C4   C5   180.00   0.0  0
- B66  CONST_21  C8   C3   C2   C1   180.00   0.0  0
- B66  CONST_22  C7   C4   C3   C2   180.00   0.0  0
- B66  CONST_23  H19  C19  C16  C17  180.00   0.0  0
- B66  CONST_24  H20  C20  C21  C18  180.00   0.0  0
- B66  CONST_25  H17  C17  C18  C21  180.00   0.0  0
- B66  CONST_26  H18  C18  C21  C20  180.00   0.0  0
- B66  CONST_27  H2   C2   C1   C6   180.00   0.0  0
- B66  CONST_28  H1   C1   C6   C5   180.00   0.0  0
- B66  CONST_29  H5   C5   C6   C1   180.00   0.0  0
- B66  CONST_30  O20  N19  C21  C18    0.00   0.0  0
- B66  CONST_31  O19  N19  C21  C18  180.00   0.0  0
- B66  CONST_32  C20  C21  N19  O20  180.00   0.0  0
- B66  CONST_33  C20  C21  N19  O19    0.00   0.0  0
- B66  CONST_34  C5   C6   N9   C10  180.00   0.0  0
- B66  CONST_35  C1   C6   N9   C10    0.00   0.0  0
- B66  CONST_36  HN9  N9   C6   C5     0.00   0.0  0
- B66  Var_01    F2   C7   C4   C5    -0.46  30.0  2
- B66  Var_02    C11  C13  O14  C16  178.73  30.0  3
+ B66  CONST_01  C20   C21  C18  C17     0.00   0.0  0
+ B66  CONST_02  C20   C19  C16  C17     0.00   0.0  0
+ B66  CONST_03  C19   C16  C17  C18     0.00   0.0  0
+ B66  CONST_04  C19   C20  C21  C18     0.00   0.0  0
+ B66  CONST_05  C16   C17  C18  C21     0.00   0.0  0
+ B66  CONST_06  C16   C19  C20  C21     0.00   0.0  0
+ B66  CONST_07  C3    C4   C5   C6      0.00   0.0  0
+ B66  CONST_08  C3    C2   C1   C6      0.00   0.0  0
+ B66  CONST_09  C2    C1   C6   C5      0.00   0.0  0
+ B66  CONST_10  C2    C3   C4   C5      0.00   0.0  0
+ B66  CONST_11  C4    C5   C6   C1      0.00   0.0  0
+ B66  CONST_12  C4    C3   C2   C1      0.00   0.0  0
+ B66  CONST_13  N19   C21  C18  C17   180.00   0.0  0
+ B66  CONST_14  O14   C16  C17  C18   180.00   0.0  0
+ B66  CONST_15  C19   C20  C21  N19   180.00   0.0  0
+ B66  CONST_16  O14   C16  C19  C20   180.00   0.0  0
+ B66  CONST_17  C4    C5   C6   N9    180.00   0.0  0
+ B66  CONST_18  C2    C1   C6   N9    180.00   0.0  0
+ B66  CONST_19  C7    C4   C5   C6    180.00   0.0  0
+ B66  CONST_20  C8    C3   C4   C5    180.00   0.0  0
+ B66  CONST_21  C8    C3   C2   C1    180.00   0.0  0
+ B66  CONST_22  C7    C4   C3   C2    180.00   0.0  0
+ B66  CONST_23  H19   C19  C16  C17   180.00   0.0  0
+ B66  CONST_24  H20   C20  C21  C18   180.00   0.0  0
+ B66  CONST_25  H17   C17  C18  C21   180.00   0.0  0
+ B66  CONST_26  H18   C18  C21  C20   180.00   0.0  0
+ B66  CONST_27  H2    C2   C1   C6    180.00   0.0  0
+ B66  CONST_28  H1    C1   C6   C5    180.00   0.0  0
+ B66  CONST_29  H5    C5   C6   C1    180.00   0.0  0
+ B66  CONST_30  O20   N19  C21  C18     0.00   0.0  0
+ B66  CONST_31  O19   N19  C21  C18   180.00   0.0  0
+ B66  CONST_32  C20   C21  N19  O20   180.00   0.0  0
+ B66  CONST_33  C20   C21  N19  O19     0.00   0.0  0
+ B66  CONST_34  C5    C6   N9   C10   180.00   0.0  0
+ B66  CONST_35  C1    C6   N9   C10     0.00   0.0  0
+ B66  CONST_36  HN9   N9   C6   C5      0.00   0.0  0
+ B66  Var_01    F2    C7   C4   C5     -0.46  30.0  2
+ B66  Var_02    C11   C13  O14  C16   178.73  30.0  3
+ B66  Var_03    C13   O14  C16  C17  -178.83  30.0  2
+ B66  Var_04    C13   O14  C16  C19     1.10  30.0  2
+ B66  Var_05    C6    N9   C10  C11   163.12  30.0  3
+ B66  Var_06    C6    N9   C10  O10   -70.35  30.0  3
+ B66  Var_07    H15   C10  N9   C6     45.83  30.0  2
+ B66  Var_08    O11   C11  C13  O14   -62.72  30.0  3
+ B66  Var_09    C12   C11  C13  O14    56.33  30.0  3
+ B66  Var_10    C10   C11  C13  O14   175.88  30.0  3
+ B66  Var_11    O10   C10  C11  C13    48.26  30.0  3
+ B66  Var_12    N9    C10  C11  C13   174.38  30.0  3
+ B66  Var_13    O10   C10  C11  O11   -73.40  30.0  3
+ B66  Var_14    N9    C10  C11  O11    52.72  30.0  3
+ B66  Var_15    O10   C10  C11  C12   168.90  30.0  3
+ B66  Var_16    N9    C10  C11  C12   -64.98  30.0  3
+ B66  Var_17    HO11  O11  C11  C13   -45.32  30.0  3
+ B66  Var_18    H12   C12  C11  C13    59.11  30.0  3
+ B66  Var_19    H12A  C12  C11  C13   178.69  30.0  3
+ B66  Var_20    H12B  C12  C11  C13   -61.04  30.0  3
+ B66  Var_21    H16   O10  C10  C11    74.73  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A5D  A5D  '(2R,3R,4S,5S)-2-(6-amino-9H-purin-9-yl)-5-[(benzyldisulfanyl)methyl]tetrahydrofuran-3,4-diol (non-preferred name)'  ligand  46  27  .  2021-08-06  2021-08-06  
+ A5D  A5D  '(2R,3R,4S,5S)-2-(6-amino-9H-purin-9-yl)-5-[(benzyldisulfanyl)methyl]tetrahydrofuran-3,4-diol (non-preferred name)'  ligand  46  27  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_A5D
@@ -243,49 +244,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- A5D  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- A5D  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- A5D  CONST_03  N7    C5   C6   N1   180.00   0.0  0
- A5D  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- A5D  CONST_05  C5    C4   N3   C2     0.00   0.0  0
- A5D  CONST_06  N9    C4   N3   C2   180.00   0.0  0
- A5D  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- A5D  CONST_08  C6    C5   C4   N3     0.00   0.0  0
- A5D  CONST_09  N7    C5   C4   N3   180.00   0.0  0
- A5D  CONST_10  C8    N9   C4   N3   180.00   0.0  0
- A5D  CONST_11  C8    N7   C5   C4     0.00   0.0  0
- A5D  CONST_12  N7    C8   N9   C4     0.00   0.0  0
- A5D  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- A5D  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- A5D  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- A5D  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- A5D  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- A5D  CONST_18  CAS   CAG  CAE  CAD    0.00   0.0  0
- A5D  CONST_19  CAS   CAH  CAF  CAD    0.00   0.0  0
- A5D  CONST_20  CAH   CAF  CAD  CAE    0.00   0.0  0
- A5D  CONST_21  CAH   CAS  CAG  CAE    0.00   0.0  0
- A5D  CONST_22  CAG   CAE  CAD  CAF    0.00   0.0  0
- A5D  CONST_23  CAG   CAS  CAH  CAF    0.00   0.0  0
- A5D  CONST_24  CAZ   N9   C4   N3     0.00   0.0  0
- A5D  CONST_25  CAZ   N9   C4   C5   180.00   0.0  0
- A5D  CONST_26  CAZ   N9   C8   N7   180.00   0.0  0
- A5D  CONST_27  N6    C6   N1   C2   180.00   0.0  0
- A5D  CONST_28  N6    C6   C5   C4   180.00   0.0  0
- A5D  CONST_29  N7    C5   C6   N6     0.00   0.0  0
- A5D  CONST_30  CAK   CAS  CAG  CAE  180.00   0.0  0
- A5D  CONST_31  CAK   CAS  CAH  CAF  180.00   0.0  0
- A5D  CONST_32  H2    C2   N3   C4   180.00   0.0  0
- A5D  CONST_33  H8    C8   N9   C4   180.00   0.0  0
- A5D  CONST_34  HAG   CAG  CAE  CAD  180.00   0.0  0
- A5D  CONST_35  HAH   CAH  CAF  CAD  180.00   0.0  0
- A5D  CONST_36  HAF   CAF  CAD  CAE  180.00   0.0  0
- A5D  CONST_37  HAE   CAE  CAD  CAF  180.00   0.0  0
- A5D  CONST_38  HAD   CAD  CAE  CAG  180.00   0.0  0
- A5D  CONST_39  HN6   N6   C6   N1     0.00   0.0  0
- A5D  CONST_40  HN6A  N6   C6   N1   180.00   0.0  0
- A5D  Var_01    SAQ   CAK  CAS  CAG   78.86  30.0  3
- A5D  Var_02    CAY   CAL  SAR  SAQ   64.47  30.0  1
- A5D  Var_03    CAS   CAK  SAQ  SAR   66.46  30.0  2
+ A5D  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ A5D  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ A5D  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ A5D  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ A5D  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ A5D  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ A5D  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ A5D  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ A5D  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ A5D  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ A5D  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ A5D  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ A5D  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ A5D  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ A5D  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ A5D  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ A5D  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ A5D  CONST_18  CAS   CAG  CAE  CAD     0.00   0.0  0
+ A5D  CONST_19  CAS   CAH  CAF  CAD     0.00   0.0  0
+ A5D  CONST_20  CAH   CAF  CAD  CAE     0.00   0.0  0
+ A5D  CONST_21  CAH   CAS  CAG  CAE     0.00   0.0  0
+ A5D  CONST_22  CAG   CAE  CAD  CAF     0.00   0.0  0
+ A5D  CONST_23  CAG   CAS  CAH  CAF     0.00   0.0  0
+ A5D  CONST_24  CAZ   N9   C4   N3      0.00   0.0  0
+ A5D  CONST_25  CAZ   N9   C4   C5    180.00   0.0  0
+ A5D  CONST_26  CAZ   N9   C8   N7    180.00   0.0  0
+ A5D  CONST_27  N6    C6   N1   C2    180.00   0.0  0
+ A5D  CONST_28  N6    C6   C5   C4    180.00   0.0  0
+ A5D  CONST_29  N7    C5   C6   N6      0.00   0.0  0
+ A5D  CONST_30  CAK   CAS  CAG  CAE   180.00   0.0  0
+ A5D  CONST_31  CAK   CAS  CAH  CAF   180.00   0.0  0
+ A5D  CONST_32  H2    C2   N3   C4    180.00   0.0  0
+ A5D  CONST_33  H8    C8   N9   C4    180.00   0.0  0
+ A5D  CONST_34  HAG   CAG  CAE  CAD   180.00   0.0  0
+ A5D  CONST_35  HAH   CAH  CAF  CAD   180.00   0.0  0
+ A5D  CONST_36  HAF   CAF  CAD  CAE   180.00   0.0  0
+ A5D  CONST_37  HAE   CAE  CAD  CAF   180.00   0.0  0
+ A5D  CONST_38  HAD   CAD  CAE  CAG   180.00   0.0  0
+ A5D  CONST_39  HN6   N6   C6   N1      0.00   0.0  0
+ A5D  CONST_40  HN6A  N6   C6   N1    180.00   0.0  0
+ A5D  Var_01    SAQ   CAK  CAS  CAG    78.86  30.0  3
+ A5D  Var_02    CAY   CAL  SAR  SAQ    64.47  30.0  1
+ A5D  Var_03    CAS   CAK  SAQ  SAR    66.46  30.0  2
+ A5D  Var_04    OAP   CAZ  N9   C4   -123.16  30.0  2
+ A5D  Var_05    CAX   CAZ  N9   C4    118.74  30.0  2
+ A5D  Var_06    OAP   CAZ  N9   C8     55.82  30.0  2
+ A5D  Var_07    CAX   CAZ  N9   C8    -62.28  30.0  2
+ A5D  Var_08    CAY   OAP  CAZ  N9   -139.83  30.0  1
+ A5D  Var_09    CAW   CAX  CAZ  N9    154.64  30.0  1
+ A5D  Var_10    CAX   CAW  CAY  OAP    29.43  30.0  1
+ A5D  Var_11    CAW   CAX  CAZ  OAP    34.45  30.0  1
+ A5D  Var_12    CAZ   OAP  CAY  CAW    -8.35  30.0  1
+ A5D  Var_13    CAY   OAP  CAZ  CAX   -16.72  30.0  1
+ A5D  Var_14    CAZ   CAX  CAW  CAY   -37.79  30.0  1
+ A5D  Var_15    OAC   CAX  CAZ  N9    -83.22  30.0  1
+ A5D  Var_16    CAZ   CAX  CAW  OAB    77.07  30.0  1
+ A5D  Var_17    OAP   CAY  CAW  OAB   -87.32  30.0  1
+ A5D  Var_18    CAY   CAW  CAX  OAC  -156.14  30.0  1
+ A5D  Var_19    OAP   CAZ  CAX  OAC   156.59  30.0  1
+ A5D  Var_20    CAL   CAY  CAW  CAX   -91.72  30.0  1
+ A5D  Var_21    CAL   CAY  OAP  CAZ   114.22  30.0  1
+ A5D  Var_22    HAZ   CAZ  N9   C4     -2.56  30.0  2
+ A5D  Var_23    HAX   CAX  CAZ  N9     39.66  30.0  1
+ A5D  Var_24    HAW   CAW  CAY  OAP   148.91  30.0  1
+ A5D  Var_25    HAY   CAY  CAW  CAX   146.87  30.0  1
+ A5D  Var_26    OAC   CAX  CAW  OAB   -41.28  30.0  1
+ A5D  Var_27    CAL   CAY  CAW  OAB   151.53  30.0  1
+ A5D  Var_28    SAR   CAL  CAY  OAP    57.39  30.0  1
+ A5D  Var_29    CAW   CAY  CAL  SAR   175.91  30.0  3
+ A5D  Var_30    HAL   CAL  CAY  OAP   -60.76  30.0  1
+ A5D  Var_31    HALA  CAL  CAY  OAP  -179.79  30.0  1
+ A5D  Var_32    HOAC  OAC  CAX  CAW   -84.16  30.0  3
+ A5D  Var_33    HOAB  OAB  CAW  CAX    49.19  30.0  3
+ A5D  Var_34    CAL   SAR  SAQ  CAK    84.08  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

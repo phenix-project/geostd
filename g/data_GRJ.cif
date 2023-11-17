@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GRJ  GRJ  "[[(2~{R},3~{S},4~{R},5~{R})-5-(2-azanyl-6-oxidanyl-purin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{S},3~{S},4~{S},5~{R})-3,4-bis(oxidanyl)-5-[(1~{S})-1-oxidanylethyl]oxolan-2-yl] hydrogen phosphate"  ligand  61  38  .  2023-10-03  2023-10-04
+ GRJ  GRJ  '[[(2~{R},3~{S},4~{R},5~{R})-5-(2-azanyl-6-oxidanyl-purin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{S},3~{S},4~{S},5~{R})-3,4-bis(oxidanyl)-5-[(1~{S})-1-oxidanylethyl]oxolan-2-yl] hydrogen phosphate'  ligand  61  38  .  2023-10-03  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_GRJ
@@ -303,51 +304,115 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GRJ  CONST_01  C13  N    C11  N1     0.00   0.0  0
- GRJ  CONST_02  N    C13  C12  N1     0.00   0.0  0
- GRJ  CONST_03  N2   C13  C12  N1   180.00   0.0  0
- GRJ  CONST_04  N3   C15  C12  N1   180.00   0.0  0
- GRJ  CONST_05  C13  C12  C15  N3     0.00   0.0  0
- GRJ  CONST_06  C13  N2   C14  N3     0.00   0.0  0
- GRJ  CONST_07  C11  N1   C12  C13    0.00   0.0  0
- GRJ  CONST_08  C11  N1   C12  C15  180.00   0.0  0
- GRJ  CONST_09  N    C13  C12  C15  180.00   0.0  0
- GRJ  CONST_10  N2   C13  C12  C15    0.00   0.0  0
- GRJ  CONST_11  N2   C14  N3   C15    0.00   0.0  0
- GRJ  CONST_12  C12  N1   C11  N      0.00   0.0  0
- GRJ  CONST_13  C14  N2   C13  N    180.00   0.0  0
- GRJ  CONST_14  C12  C13  N    C11    0.00   0.0  0
- GRJ  CONST_15  N2   C13  N    C11  180.00   0.0  0
- GRJ  CONST_16  C14  N2   C13  C12    0.00   0.0  0
- GRJ  CONST_17  C14  N3   C15  C12    0.00   0.0  0
- GRJ  CONST_18  C10  N    C11  N1   180.00   0.0  0
- GRJ  CONST_19  C12  C13  N    C10  180.00   0.0  0
- GRJ  CONST_20  N2   C13  N    C10    0.00   0.0  0
- GRJ  CONST_21  O9   C15  C12  N1     0.00   0.0  0
- GRJ  CONST_22  O9   C15  C12  C13  180.00   0.0  0
- GRJ  CONST_23  N4   C14  N2   C13  180.00   0.0  0
- GRJ  CONST_24  N4   C14  N3   C15  180.00   0.0  0
- GRJ  CONST_25  O9   C15  N3   C14  180.00   0.0  0
- GRJ  CONST_26  H12  C11  N    C10    0.00   0.0  0
- GRJ  CONST_27  H12  C11  N    C13  180.00   0.0  0
- GRJ  CONST_28  H12  C11  N1   C12  180.00   0.0  0
- GRJ  CONST_29  H17  N4   C14  N3   180.00   0.0  0
- GRJ  CONST_32  H18  N4   C14  N2   180.00   0.0  0
- GRJ  Var_01    O3   P    O1   C5    29.09  30.0  3
- GRJ  Var_02    O2   P    O1   C5   161.10  30.0  3
- GRJ  Var_03    O4   P    O1   C5   -83.29  30.0  3
- GRJ  Var_04    P1   O7   C6   C7   163.42  30.0  3
- GRJ  Var_05    O4   P1   O7   C6   -78.80  30.0  2
- GRJ  Var_06    O6   P1   O7   C6    34.77  30.0  2
- GRJ  Var_07    O5   P1   O7   C6   169.12  30.0  2
- GRJ  Var_08    P1   O4   P    O1   -99.75  30.0  3
- GRJ  Var_09    P1   O4   P    O2    11.65  30.0  3
- GRJ  Var_10    P1   O4   P    O3   145.50  30.0  3
- GRJ  Var_11    P    O4   P1   O5   -75.17  30.0  2
- GRJ  Var_12    P    O4   P1   O6    62.34  30.0  2
- GRJ  Var_13    P    O4   P1   O7   176.41  30.0  2
- GRJ  Var_14    H3   C6   O7   P1   -76.84  30.0  2
- GRJ  Var_15    H4   C6   O7   P1    43.09  30.0  2
+ GRJ  CONST_01  C13  N    C11  N1      0.00   0.0  0
+ GRJ  CONST_02  N    C13  C12  N1      0.00   0.0  0
+ GRJ  CONST_03  N2   C13  C12  N1    180.00   0.0  0
+ GRJ  CONST_04  N3   C15  C12  N1    180.00   0.0  0
+ GRJ  CONST_05  C13  C12  C15  N3      0.00   0.0  0
+ GRJ  CONST_06  C13  N2   C14  N3      0.00   0.0  0
+ GRJ  CONST_07  C11  N1   C12  C13     0.00   0.0  0
+ GRJ  CONST_08  C11  N1   C12  C15   180.00   0.0  0
+ GRJ  CONST_09  N    C13  C12  C15   180.00   0.0  0
+ GRJ  CONST_10  N2   C13  C12  C15     0.00   0.0  0
+ GRJ  CONST_11  N2   C14  N3   C15     0.00   0.0  0
+ GRJ  CONST_12  C12  N1   C11  N       0.00   0.0  0
+ GRJ  CONST_13  C14  N2   C13  N     180.00   0.0  0
+ GRJ  CONST_14  C12  C13  N    C11     0.00   0.0  0
+ GRJ  CONST_15  N2   C13  N    C11   180.00   0.0  0
+ GRJ  CONST_16  C14  N2   C13  C12     0.00   0.0  0
+ GRJ  CONST_17  C14  N3   C15  C12     0.00   0.0  0
+ GRJ  CONST_18  C10  N    C11  N1    180.00   0.0  0
+ GRJ  CONST_19  C12  C13  N    C10   180.00   0.0  0
+ GRJ  CONST_20  N2   C13  N    C10     0.00   0.0  0
+ GRJ  CONST_21  O9   C15  C12  N1      0.00   0.0  0
+ GRJ  CONST_22  O9   C15  C12  C13   180.00   0.0  0
+ GRJ  CONST_23  N4   C14  N2   C13   180.00   0.0  0
+ GRJ  CONST_24  N4   C14  N3   C15   180.00   0.0  0
+ GRJ  CONST_25  O9   C15  N3   C14   180.00   0.0  0
+ GRJ  CONST_26  H12  C11  N    C10     0.00   0.0  0
+ GRJ  CONST_27  H12  C11  N    C13   180.00   0.0  0
+ GRJ  CONST_28  H12  C11  N1   C12   180.00   0.0  0
+ GRJ  CONST_29  H17  N4   C14  N3    180.00   0.0  0
+ GRJ  CONST_30  H18  N4   C14  N2    180.00   0.0  0
+ GRJ  Var_01    O3   P    O1   C5     29.09  30.0  3
+ GRJ  Var_02    O2   P    O1   C5    161.10  30.0  3
+ GRJ  Var_03    O4   P    O1   C5    -83.29  30.0  3
+ GRJ  Var_04    P1   O7   C6   C7    163.42  30.0  3
+ GRJ  Var_05    O4   P1   O7   C6    -78.80  30.0  2
+ GRJ  Var_06    O6   P1   O7   C6     34.77  30.0  2
+ GRJ  Var_07    O5   P1   O7   C6    169.12  30.0  2
+ GRJ  Var_08    P1   O4   P    O1    -99.75  30.0  3
+ GRJ  Var_09    P1   O4   P    O2     11.65  30.0  3
+ GRJ  Var_10    P1   O4   P    O3    145.50  30.0  3
+ GRJ  Var_11    P    O4   P1   O5    -75.17  30.0  2
+ GRJ  Var_12    P    O4   P1   O6     62.34  30.0  2
+ GRJ  Var_13    P    O4   P1   O7    176.41  30.0  2
+ GRJ  Var_14    H3   C6   O7   P1    -76.84  30.0  2
+ GRJ  Var_15    H4   C6   O7   P1     43.09  30.0  2
+ GRJ  Var_16    O    C2   C3   C4      4.45  30.0  1
+ GRJ  Var_17    C2   O    C5   C4    -38.44  30.0  1
+ GRJ  Var_18    C2   C3   C4   C5    -25.21  30.0  1
+ GRJ  Var_19    C3   C2   O    C5     21.06  30.0  1
+ GRJ  Var_20    N    C10  O8   C7   -136.43  30.0  1
+ GRJ  Var_21    C9   C10  O8   C7    -11.34  30.0  1
+ GRJ  Var_22    C10  C9   C8   C7    -34.10  30.0  1
+ GRJ  Var_23    C10  O8   C7   C8    -11.22  30.0  1
+ GRJ  Var_24    O8   C10  C9   C8     28.74  30.0  1
+ GRJ  Var_25    N    C10  C9   C8    150.27  30.0  1
+ GRJ  Var_26    O8   C10  N    C13   -90.95  30.0  2
+ GRJ  Var_27    C9   C10  N    C13   148.92  30.0  2
+ GRJ  Var_28    C3   C4   C5   O      38.98  30.0  1
+ GRJ  Var_29    O8   C10  N    C11    75.06  30.0  2
+ GRJ  Var_30    C9   C10  N    C11   -45.08  30.0  2
+ GRJ  Var_31    O8   C7   C8   C9     28.83  30.0  1
+ GRJ  Var_32    C1   C2   C3   C4   -119.11  30.0  1
+ GRJ  Var_33    O13  C3   C4   C5     94.09  30.0  1
+ GRJ  Var_34    C1   C2   O    C5    147.00  30.0  1
+ GRJ  Var_35    C10  O8   C7   C6    113.81  30.0  1
+ GRJ  Var_36    C9   C8   C7   C6    -93.19  30.0  1
+ GRJ  Var_37    O10  C9   C8   C7   -154.66  30.0  1
+ GRJ  Var_38    O11  C8   C9   C10    80.87  30.0  1
+ GRJ  Var_39    O10  C9   C10  N     -90.69  30.0  1
+ GRJ  Var_40    O13  C3   C2   O    -112.07  30.0  1
+ GRJ  Var_41    O12  C4   C5   O     -83.51  30.0  1
+ GRJ  Var_42    O12  C4   C3   C2     98.58  30.0  1
+ GRJ  Var_43    O1   C5   O    C2   -165.78  30.0  1
+ GRJ  Var_44    O1   C5   C4   C3    163.11  30.0  1
+ GRJ  Var_45    O8   C10  C9   O10   147.78  30.0  1
+ GRJ  Var_46    O8   C7   C8   O11   -88.60  30.0  1
+ GRJ  Var_47    H13  C2   C3   C4    121.94  30.0  1
+ GRJ  Var_48    H14  C3   C4   C5   -144.55  30.0  1
+ GRJ  Var_49    H7   C10  O8   C7    107.34  30.0  1
+ GRJ  Var_50    H15  C9   C8   C7     82.72  30.0  1
+ GRJ  Var_51    H5   C7   O8   C10  -128.89  30.0  1
+ GRJ  Var_52    H6   C8   C9   C10  -154.01  30.0  1
+ GRJ  Var_53    H1   C4   C5   O     153.86  30.0  1
+ GRJ  Var_54    H2   C5   O    C2     77.38  30.0  1
+ GRJ  Var_55    P    O1   C5   C4    -79.66  30.0  3
+ GRJ  Var_56    O11  C8   C7   C6    149.39  30.0  1
+ GRJ  Var_57    O7   C6   C7   C8     51.30  30.0  1
+ GRJ  Var_58    C3   C2   C1   C     179.44  30.0  3
+ GRJ  Var_59    O    C2   C1   C      58.16  30.0  3
+ GRJ  Var_60    O14  C1   C2   O     -66.40  30.0  2
+ GRJ  Var_61    P    O1   C5   O      41.08  30.0  3
+ GRJ  Var_62    O13  C3   C2   C1    124.37  30.0  1
+ GRJ  Var_63    O14  C1   C2   C3     54.88  30.0  2
+ GRJ  Var_64    O12  C4   C5   O1     40.61  30.0  1
+ GRJ  Var_65    O11  C8   C9   O10   -39.69  30.0  1
+ GRJ  Var_66    O13  C3   C4   O12  -142.11  30.0  1
+ GRJ  Var_67    O8   C7   C6   O7    -68.18  30.0  3
+ GRJ  Var_68    H16  O9   C15  N3     -0.28  30.0  2
+ GRJ  Var_69    H22  O13  C3   C4   -176.17  30.0  3
+ GRJ  Var_70    H21  O12  C4   C5     19.53  30.0  3
+ GRJ  Var_71    H20  O11  C8   C7    168.08  30.0  3
+ GRJ  Var_72    H3   C6   C7   C8    -70.05  30.0  1
+ GRJ  Var_73    H4   C6   C7   C8    173.81  30.0  1
+ GRJ  Var_74    H19  O10  C9   C8   -159.73  30.0  3
+ GRJ  Var_75    H11  C1   C2   O     175.21  30.0  2
+ GRJ  Var_76    H23  O14  C1   C2   -171.61  30.0  3
+ GRJ  Var_77    H8   C    C1   C2     57.23  30.0  3
+ GRJ  Var_78    H9   C    C1   C2    176.03  30.0  3
+ GRJ  Var_79    H10  C    C1   C2    -63.64  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

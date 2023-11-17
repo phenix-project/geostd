@@ -19,10 +19,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ATV  ATV  'None                     '  ligand  30  19  .  2022-09-16  2023-02-02
+ ATV  ATV  'None                     '  ligand  30  19  .  2022-09-16  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_ATV
@@ -185,37 +186,51 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ATV  CONST_01  CAF  CAN  CAE  CAC  180.00   0.0  0
- ATV  CONST_02  CAQ  CAN  CAE  CAC    0.00   0.0  0
- ATV  CONST_03  CAQ  CAO  CAG  CAC    0.00   0.0  0
- ATV  CONST_04  CAE  CAN  CAF  CAD  180.00   0.0  0
- ATV  CONST_05  CAQ  CAN  CAF  CAD    0.00   0.0  0
- ATV  CONST_06  CAQ  CAP  CAH  CAD    0.00   0.0  0
- ATV  CONST_07  CAO  CAG  CAC  CAE    0.00   0.0  0
- ATV  CONST_08  CAO  CAQ  CAN  CAE    0.00   0.0  0
- ATV  CONST_09  CAP  CAQ  CAN  CAE  180.00   0.0  0
- ATV  CONST_10  CAP  CAH  CAD  CAF    0.00   0.0  0
- ATV  CONST_11  CAO  CAQ  CAN  CAF  180.00   0.0  0
- ATV  CONST_12  CAP  CAQ  CAN  CAF    0.00   0.0  0
- ATV  CONST_13  CAN  CAE  CAC  CAG    0.00   0.0  0
- ATV  CONST_14  CAN  CAQ  CAO  CAG    0.00   0.0  0
- ATV  CONST_15  CAP  CAQ  CAO  CAG  180.00   0.0  0
- ATV  CONST_16  CAN  CAF  CAD  CAH    0.00   0.0  0
- ATV  CONST_17  CAN  CAQ  CAP  CAH    0.00   0.0  0
- ATV  CONST_18  CAO  CAQ  CAP  CAH  180.00   0.0  0
- ATV  CONST_19  CAO  CAL  NAS  CAM    0.00   0.0  0
- ATV  CONST_20  CAM  NAS  CAL  OAA  180.00   0.0  0
- ATV  CONST_21  CAO  CAL  NAS  CAJ  180.00   0.0  0
- ATV  CONST_22  HAG  CAG  CAC  CAE  180.00   0.0  0
- ATV  CONST_23  HAF  CAF  CAN  CAE    0.00   0.0  0
- ATV  CONST_24  HAH  CAH  CAD  CAF  180.00   0.0  0
- ATV  CONST_25  HAE  CAE  CAN  CAF    0.00   0.0  0
- ATV  CONST_26  HAC  CAC  CAE  CAN  180.00   0.0  0
- ATV  CONST_27  HAD  CAD  CAF  CAN  180.00   0.0  0
- ATV  CONST_28  CAJ  NAS  CAL  OAA    0.00   0.0  0
- ATV  Var_01    CAJ  CAR  OAK  CAI  111.28  30.0  1
- ATV  Var_02    NAS  CAJ  CAR  CAI  142.47  30.0  2
- ATV  Var_03    CAR  CAJ  NAS  CAL   80.26  30.0  2
+ ATV  CONST_01  CAF   CAN  CAE  CAC   180.00   0.0  0
+ ATV  CONST_02  CAQ   CAN  CAE  CAC     0.00   0.0  0
+ ATV  CONST_03  CAQ   CAO  CAG  CAC     0.00   0.0  0
+ ATV  CONST_04  CAE   CAN  CAF  CAD   180.00   0.0  0
+ ATV  CONST_05  CAQ   CAN  CAF  CAD     0.00   0.0  0
+ ATV  CONST_06  CAQ   CAP  CAH  CAD     0.00   0.0  0
+ ATV  CONST_07  CAO   CAG  CAC  CAE     0.00   0.0  0
+ ATV  CONST_08  CAO   CAQ  CAN  CAE     0.00   0.0  0
+ ATV  CONST_09  CAP   CAQ  CAN  CAE   180.00   0.0  0
+ ATV  CONST_10  CAP   CAH  CAD  CAF     0.00   0.0  0
+ ATV  CONST_11  CAO   CAQ  CAN  CAF   180.00   0.0  0
+ ATV  CONST_12  CAP   CAQ  CAN  CAF     0.00   0.0  0
+ ATV  CONST_13  CAN   CAE  CAC  CAG     0.00   0.0  0
+ ATV  CONST_14  CAN   CAQ  CAO  CAG     0.00   0.0  0
+ ATV  CONST_15  CAP   CAQ  CAO  CAG   180.00   0.0  0
+ ATV  CONST_16  CAN   CAF  CAD  CAH     0.00   0.0  0
+ ATV  CONST_17  CAN   CAQ  CAP  CAH     0.00   0.0  0
+ ATV  CONST_18  CAO   CAQ  CAP  CAH   180.00   0.0  0
+ ATV  CONST_19  CAO   CAL  NAS  CAM     0.00   0.0  0
+ ATV  CONST_20  CAM   NAS  CAL  OAA   180.00   0.0  0
+ ATV  CONST_21  CAO   CAL  NAS  CAJ   180.00   0.0  0
+ ATV  CONST_22  HAG   CAG  CAC  CAE   180.00   0.0  0
+ ATV  CONST_23  HAF   CAF  CAN  CAE     0.00   0.0  0
+ ATV  CONST_24  HAH   CAH  CAD  CAF   180.00   0.0  0
+ ATV  CONST_25  HAE   CAE  CAN  CAF     0.00   0.0  0
+ ATV  CONST_26  HAC   CAC  CAE  CAN   180.00   0.0  0
+ ATV  CONST_27  HAD   CAD  CAF  CAN   180.00   0.0  0
+ ATV  CONST_28  CAJ   NAS  CAL  OAA     0.00   0.0  0
+ ATV  Var_01    CAJ   CAR  OAK  CAI   111.28  30.0  1
+ ATV  Var_02    NAS   CAJ  CAR  CAI   142.47  30.0  2
+ ATV  Var_03    CAR   CAJ  NAS  CAL    80.26  30.0  2
+ ATV  Var_04    NAS   CAL  CAO  CAG  -179.41  30.0  1
+ ATV  Var_05    NAS   CAM  CAP  CAH   179.93  30.0  1
+ ATV  Var_06    CAP   CAM  NAS  CAL     0.67  30.0  1
+ ATV  Var_07    NAS   CAL  CAO  CAQ     0.93  30.0  1
+ ATV  Var_08    NAS   CAM  CAP  CAQ     0.00  30.0  1
+ ATV  Var_09    CAG   CAO  CAL  OAA     0.71  30.0  1
+ ATV  Var_10    CAQ   CAO  CAL  OAA  -178.96  30.0  1
+ ATV  Var_11    CAH   CAP  CAM  OAB     0.65  30.0  1
+ ATV  Var_12    CAQ   CAP  CAM  OAB  -179.27  30.0  1
+ ATV  Var_13    CAL   NAS  CAM  OAB   179.95  30.0  1
+ ATV  Var_14    CAP   CAM  NAS  CAJ   179.00  30.0  1
+ ATV  Var_15    HAI   CAI  CAR  OAK  -104.44  30.0  1
+ ATV  Var_16    HAIA  CAI  CAR  OAK   104.06  30.0  1
+ ATV  Var_17    CAJ   NAS  CAM  OAB    -1.71  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3BH  3BH  '8-aminoadenosine         '  ligand  34  20  .  2022-03-10  2022-03-10
+ 3BH  3BH  '8-aminoadenosine         '  ligand  34  20  .  2022-03-10  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3BH
@@ -196,36 +197,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3BH  CONST_01  C12   N6   C2   N1   180.00  0.0  0
- 3BH  CONST_02  C11   C5   C2   N1   180.00  0.0  0
- 3BH  CONST_03  N9    C5   C2   N1     0.00  0.0  0
- 3BH  CONST_04  C5    N9   C4   N1     0.00  0.0  0
- 3BH  CONST_05  N9    C4   N1   C2     0.00  0.0  0
- 3BH  CONST_06  N16   C12  N6   C2     0.00  0.0  0
- 3BH  CONST_07  N16   C11  C5   C2     0.00  0.0  0
- 3BH  CONST_08  C4    N9   C5   C2     0.00  0.0  0
- 3BH  CONST_09  C4    N1   C2   N6   180.00  0.0  0
- 3BH  CONST_10  C11   C5   C2   N6     0.00  0.0  0
- 3BH  CONST_11  N9    C5   C2   N6   180.00  0.0  0
- 3BH  CONST_12  C11   N16  C12  N6     0.00  0.0  0
- 3BH  CONST_13  C5    C2   N6   C12    0.00  0.0  0
- 3BH  CONST_14  C5    C11  N16  C12    0.00  0.0  0
- 3BH  CONST_15  N9    C5   C11  N16  180.00  0.0  0
- 3BH  CONST_16  C4    N9   C5   C11  180.00  0.0  0
- 3BH  CONST_17  C4    N1   C2   C5     0.00  0.0  0
- 3BH  CONST_18  N6    C2   N1   C3     0.00  0.0  0
- 3BH  CONST_19  C5    C2   N1   C3   180.00  0.0  0
- 3BH  CONST_20  N9    C4   N1   C3   180.00  0.0  0
- 3BH  CONST_21  N10   C4   N1   C3     0.00  0.0  0
- 3BH  CONST_22  N10   C4   N1   C2   180.00  0.0  0
- 3BH  CONST_23  N17   C11  C5   C2   180.00  0.0  0
- 3BH  CONST_24  N17   C11  N16  C12  180.00  0.0  0
- 3BH  CONST_25  N9    C5   C11  N17    0.00  0.0  0
- 3BH  CONST_26  N10   C4   N9   C5   180.00  0.0  0
- 3BH  CONST_27  H12   C12  N6   C2   180.00  0.0  0
- 3BH  CONST_29  HN1B  N10  C4   N1   180.00  0.0  0
- 3BH  CONST_30  HN17  N17  C11  N16    0.00  0.0  0
- 3BH  CONST_31  HN1A  N17  C11  N16  180.00  0.0  0
+ 3BH  CONST_01  C12   N6   C2   N1    180.00   0.0  0
+ 3BH  CONST_02  C11   C5   C2   N1    180.00   0.0  0
+ 3BH  CONST_03  N9    C5   C2   N1      0.00   0.0  0
+ 3BH  CONST_04  C5    N9   C4   N1      0.00   0.0  0
+ 3BH  CONST_05  N9    C4   N1   C2      0.00   0.0  0
+ 3BH  CONST_06  N16   C12  N6   C2      0.00   0.0  0
+ 3BH  CONST_07  N16   C11  C5   C2      0.00   0.0  0
+ 3BH  CONST_08  C4    N9   C5   C2      0.00   0.0  0
+ 3BH  CONST_09  C4    N1   C2   N6    180.00   0.0  0
+ 3BH  CONST_10  C11   C5   C2   N6      0.00   0.0  0
+ 3BH  CONST_11  N9    C5   C2   N6    180.00   0.0  0
+ 3BH  CONST_12  C11   N16  C12  N6      0.00   0.0  0
+ 3BH  CONST_13  C5    C2   N6   C12     0.00   0.0  0
+ 3BH  CONST_14  C5    C11  N16  C12     0.00   0.0  0
+ 3BH  CONST_15  N9    C5   C11  N16   180.00   0.0  0
+ 3BH  CONST_16  C4    N9   C5   C11   180.00   0.0  0
+ 3BH  CONST_17  C4    N1   C2   C5      0.00   0.0  0
+ 3BH  CONST_18  N6    C2   N1   C3      0.00   0.0  0
+ 3BH  CONST_19  C5    C2   N1   C3    180.00   0.0  0
+ 3BH  CONST_20  N9    C4   N1   C3    180.00   0.0  0
+ 3BH  CONST_21  N10   C4   N1   C3      0.00   0.0  0
+ 3BH  CONST_22  N10   C4   N1   C2    180.00   0.0  0
+ 3BH  CONST_23  N17   C11  C5   C2    180.00   0.0  0
+ 3BH  CONST_24  N17   C11  N16  C12   180.00   0.0  0
+ 3BH  CONST_25  N9    C5   C11  N17     0.00   0.0  0
+ 3BH  CONST_26  N10   C4   N9   C5    180.00   0.0  0
+ 3BH  CONST_27  H12   C12  N6   C2    180.00   0.0  0
+ 3BH  CONST_28  HN1B  N10  C4   N1    180.00   0.0  0
+ 3BH  CONST_29  HN17  N17  C11  N16     0.00   0.0  0
+ 3BH  CONST_30  HN1A  N17  C11  N16   180.00   0.0  0
+ 3BH  Var_01    O7    C13  C14  C8     29.42  30.0  1
+ 3BH  Var_02    C13   O7   C3   C8    -19.06  30.0  1
+ 3BH  Var_03    C2    N1   C3   C8    105.86  30.0  2
+ 3BH  Var_04    C4    N1   C3   C8    -67.00  30.0  2
+ 3BH  Var_05    O7    C3   C8   C14    36.82  30.0  1
+ 3BH  Var_06    N1    C3   C8   C14   158.14  30.0  1
+ 3BH  Var_07    C3    O7   C13  C14    -6.91  30.0  1
+ 3BH  Var_08    C3    C8   C14  C13   -39.07  30.0  1
+ 3BH  Var_09    N1    C3   O7   C13  -143.41  30.0  1
+ 3BH  Var_10    C2    N1   C3   O7   -135.32  30.0  2
+ 3BH  Var_11    C4    N1   C3   O7     51.82  30.0  2
+ 3BH  Var_12    C13   C14  C8   O15  -157.76  30.0  1
+ 3BH  Var_13    O7    C3   C8   O15   160.35  30.0  1
+ 3BH  Var_14    N1    C3   C8   O15   -78.32  30.0  1
+ 3BH  Var_15    C18   C13  C14  C8    -91.86  30.0  1
+ 3BH  Var_16    C3    C8   C14  O19    79.38  30.0  1
+ 3BH  Var_17    O7    C13  C14  O19   -85.36  30.0  1
+ 3BH  Var_18    C3    O7   C13  C18   114.44  30.0  1
+ 3BH  Var_19    H13   C13  C14  C8    146.27  30.0  1
+ 3BH  Var_20    H3    C3   C8   C14   -83.49  30.0  1
+ 3BH  Var_21    H8    C8   C14  C13    75.24  30.0  1
+ 3BH  Var_22    H14   C14  C13  O7    148.31  30.0  1
+ 3BH  Var_23    O19   C14  C8   O15   -39.31  30.0  1
+ 3BH  Var_24    O20   C18  C13  C14   164.90  30.0  3
+ 3BH  Var_25    C18   C13  C14  O19   153.35  30.0  1
+ 3BH  Var_26    O7    C13  C18  O20    46.72  30.0  1
+ 3BH  Var_27    HO19  O19  C14  C8   -173.24  30.0  3
+ 3BH  Var_28    HO15  O15  C8   C14   -78.58  30.0  3
+ 3BH  Var_29    H18   C18  C13  C14   -73.66  30.0  3
+ 3BH  Var_30    H18A  C18  C13  C14    42.50  30.0  3
+ 3BH  Var_31    HO20  O20  C18  C13   176.77  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 6CX  6CX  5'-{[(3S)-3-amino-3-carboxypropyl][(1H-imidazol-4-yl)methyl]amino}-5'-deoxyadenosine  ligand  57  32  .  2021-08-05  2022-11-17
+ 6CX  6CX  5'-{[(3S)-3-amino-3-carboxypropyl][(1H-imidazol-4-yl)methyl]amino}-5'-deoxyadenosine  ligand  57  32  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_6CX
@@ -286,49 +287,90 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 6CX  CONST_01  C5    C6   N1   C2     0.00   0.0  0
- 6CX  CONST_02  C5    C4   N3   C2     0.00   0.0  0
- 6CX  CONST_03  N9    C4   N3   C2   180.00   0.0  0
- 6CX  CONST_04  N1    C6   C5   C4     0.00   0.0  0
- 6CX  CONST_05  C8    N7   C5   C4     0.00   0.0  0
- 6CX  CONST_06  N7    C8   N9   C4     0.00   0.0  0
- 6CX  CONST_07  N1    C2   N3   C4     0.00   0.0  0
- 6CX  CONST_08  N9    C8   N7   C5     0.00   0.0  0
- 6CX  CONST_09  C8    N9   C4   C5     0.00   0.0  0
- 6CX  CONST_10  C8    N7   C5   C6   180.00   0.0  0
- 6CX  CONST_11  N9    C4   C5   C6   180.00   0.0  0
- 6CX  CONST_12  N3    C4   C5   C6     0.00   0.0  0
- 6CX  CONST_13  N3    C2   N1   C6     0.00   0.0  0
- 6CX  CONST_14  N3    C4   N9   C8   180.00   0.0  0
- 6CX  CONST_15  N7    C5   C4   N9     0.00   0.0  0
- 6CX  CONST_16  N7    C5   C4   N3   180.00   0.0  0
- 6CX  CONST_17  N7    C5   C6   N1   180.00   0.0  0
- 6CX  CONST_18  N53   C54  N55  C51    0.00   0.0  0
- 6CX  CONST_19  C54   N53  C52  C51    0.00   0.0  0
- 6CX  CONST_20  N55   C54  N53  C52    0.00   0.0  0
- 6CX  CONST_21  C54   N55  C51  C52    0.00   0.0  0
- 6CX  CONST_22  N55   C51  C52  N53    0.00   0.0  0
- 6CX  CONST_23  C1'   N9   C4   C5   180.00   0.0  0
- 6CX  CONST_24  N7    C8   N9   C1'  180.00   0.0  0
- 6CX  CONST_25  N3    C4   N9   C1'    0.00   0.0  0
- 6CX  CONST_26  N6    C6   N1   C2   180.00   0.0  0
- 6CX  CONST_27  N6    C6   C5   C4   180.00   0.0  0
- 6CX  CONST_28  C54   N55  C51  C10  180.00   0.0  0
- 6CX  CONST_29  N53   C52  C51  C10  180.00   0.0  0
- 6CX  CONST_30  N7    C5   C6   N6     0.00   0.0  0
- 6CX  CONST_31  H81   C8   N9   C4   180.00   0.0  0
- 6CX  CONST_32  H21   C2   N3   C4   180.00   0.0  0
- 6CX  CONST_33  H541  C54  N55  C51  180.00   0.0  0
- 6CX  CONST_34  H531  N53  C52  C51  180.00   0.0  0
- 6CX  CONST_35  H521  C52  N53  C54  180.00   0.0  0
- 6CX  CONST_36  H61   N6   C6   C5   180.00   0.0  0
- 6CX  CONST_37  H62   N6   C6   C5     0.00   0.0  0
- 6CX  CONST_38  H3    OXT  C    CA   180.00   0.0  0
- 6CX  Var_01    N55   C51  C10  ND   152.91  30.0  2
- 6CX  Var_02    C4'   C5'  ND   C10  169.01  30.0  2
- 6CX  Var_03    C51   C10  ND   CG   154.12  30.0  1
- 6CX  Var_04    CB    CG   ND   C10   68.33  30.0  3
- 6CX  Var_05    CA    CB   CG   ND   171.41  30.0  3
+ 6CX  CONST_01  C5    C6   N1   C2      0.00   0.0  0
+ 6CX  CONST_02  C5    C4   N3   C2      0.00   0.0  0
+ 6CX  CONST_03  N9    C4   N3   C2    180.00   0.0  0
+ 6CX  CONST_04  N1    C6   C5   C4      0.00   0.0  0
+ 6CX  CONST_05  C8    N7   C5   C4      0.00   0.0  0
+ 6CX  CONST_06  N7    C8   N9   C4      0.00   0.0  0
+ 6CX  CONST_07  N1    C2   N3   C4      0.00   0.0  0
+ 6CX  CONST_08  N9    C8   N7   C5      0.00   0.0  0
+ 6CX  CONST_09  C8    N9   C4   C5      0.00   0.0  0
+ 6CX  CONST_10  C8    N7   C5   C6    180.00   0.0  0
+ 6CX  CONST_11  N9    C4   C5   C6    180.00   0.0  0
+ 6CX  CONST_12  N3    C4   C5   C6      0.00   0.0  0
+ 6CX  CONST_13  N3    C2   N1   C6      0.00   0.0  0
+ 6CX  CONST_14  N3    C4   N9   C8    180.00   0.0  0
+ 6CX  CONST_15  N7    C5   C4   N9      0.00   0.0  0
+ 6CX  CONST_16  N7    C5   C4   N3    180.00   0.0  0
+ 6CX  CONST_17  N7    C5   C6   N1    180.00   0.0  0
+ 6CX  CONST_18  N53   C54  N55  C51     0.00   0.0  0
+ 6CX  CONST_19  C54   N53  C52  C51     0.00   0.0  0
+ 6CX  CONST_20  N55   C54  N53  C52     0.00   0.0  0
+ 6CX  CONST_21  C54   N55  C51  C52     0.00   0.0  0
+ 6CX  CONST_22  N55   C51  C52  N53     0.00   0.0  0
+ 6CX  CONST_23  C1'   N9   C4   C5    180.00   0.0  0
+ 6CX  CONST_24  N7    C8   N9   C1'   180.00   0.0  0
+ 6CX  CONST_25  N3    C4   N9   C1'     0.00   0.0  0
+ 6CX  CONST_26  N6    C6   N1   C2    180.00   0.0  0
+ 6CX  CONST_27  N6    C6   C5   C4    180.00   0.0  0
+ 6CX  CONST_28  C54   N55  C51  C10   180.00   0.0  0
+ 6CX  CONST_29  N53   C52  C51  C10   180.00   0.0  0
+ 6CX  CONST_30  N7    C5   C6   N6      0.00   0.0  0
+ 6CX  CONST_31  H81   C8   N9   C4    180.00   0.0  0
+ 6CX  CONST_32  H21   C2   N3   C4    180.00   0.0  0
+ 6CX  CONST_33  H541  C54  N55  C51   180.00   0.0  0
+ 6CX  CONST_34  H531  N53  C52  C51   180.00   0.0  0
+ 6CX  CONST_35  H521  C52  N53  C54   180.00   0.0  0
+ 6CX  CONST_36  H61   N6   C6   C5    180.00   0.0  0
+ 6CX  CONST_37  H62   N6   C6   C5      0.00   0.0  0
+ 6CX  CONST_38  H3    OXT  C    CA    180.00   0.0  0
+ 6CX  Var_01    N55   C51  C10  ND    152.91  30.0  2
+ 6CX  Var_02    C4'   C5'  ND   C10   169.01  30.0  2
+ 6CX  Var_03    C51   C10  ND   CG    154.12  30.0  1
+ 6CX  Var_04    CB    CG   ND   C10    68.33  30.0  3
+ 6CX  Var_05    CA    CB   CG   ND    171.41  30.0  3
+ 6CX  Var_06    C2'   C1'  N9   C4    113.57  30.0  2
+ 6CX  Var_07    O4'   C1'  N9   C4   -128.01  30.0  2
+ 6CX  Var_08    C2'   C1'  N9   C8    -65.26  30.0  2
+ 6CX  Var_09    O4'   C1'  N9   C8     53.16  30.0  2
+ 6CX  Var_10    C3'   C2'  C1'  N9    155.07  30.0  1
+ 6CX  Var_11    C4'   O4'  C1'  N9   -138.23  30.0  1
+ 6CX  Var_12    C2'   C1'  O4'  C4'   -15.05  30.0  1
+ 6CX  Var_13    C1'   C2'  C3'  C4'   -39.04  30.0  1
+ 6CX  Var_14    O4'   C1'  C2'  C3'    34.47  30.0  1
+ 6CX  Var_15    C1'   O4'  C4'  C3'   -10.80  30.0  1
+ 6CX  Var_16    O4'   C4'  C3'  C2'    31.64  30.0  1
+ 6CX  Var_17    O2'   C2'  C1'  N9    -80.71  30.0  1
+ 6CX  Var_18    C1'   O4'  C4'  C5'   112.18  30.0  1
+ 6CX  Var_19    C2'   C3'  C4'  C5'   -87.69  30.0  1
+ 6CX  Var_20    O2'   C2'  C3'  C4'  -157.96  30.0  1
+ 6CX  Var_21    O4'   C1'  C2'  O2'   158.69  30.0  1
+ 6CX  Var_22    O3'   C3'  C2'  C1'    78.76  30.0  1
+ 6CX  Var_23    O3'   C3'  C4'  O4'   -82.63  30.0  1
+ 6CX  Var_24    H1'1  C1'  N9   C4     -7.45  30.0  2
+ 6CX  Var_25    H2'1  C2'  C1'  N9     41.66  30.0  1
+ 6CX  Var_26    H4'1  C4'  C3'  C2'   147.39  30.0  1
+ 6CX  Var_27    H3'1  C3'  C2'  C1'  -157.51  30.0  1
+ 6CX  Var_28    O3'   C3'  C4'  C5'   158.04  30.0  1
+ 6CX  Var_29    ND    C5'  C4'  C3'   -56.46  30.0  2
+ 6CX  Var_30    O3'   C3'  C2'  O2'   -40.16  30.0  1
+ 6CX  Var_31    ND    C5'  C4'  O4'  -174.17  30.0  2
+ 6CX  Var_32    H3'2  O3'  C3'  C4'   -69.31  30.0  3
+ 6CX  Var_33    H2'2  O2'  C2'  C3'   -77.85  30.0  3
+ 6CX  Var_34    H5'2  C5'  C4'  C3'    62.62  30.0  2
+ 6CX  Var_35    H5'1  C5'  C4'  C3'   177.31  30.0  2
+ 6CX  Var_36    N     CA   CB   CG   -173.67  30.0  3
+ 6CX  Var_37    C     CA   CB   CG     61.94  30.0  3
+ 6CX  Var_38    O     C    CA   CB     83.66  30.0  3
+ 6CX  Var_39    OXT   C    CA   CB    -95.60  30.0  3
+ 6CX  Var_40    N     CA   C    O     -38.65  30.0  3
+ 6CX  Var_41    N     CA   C    OXT   142.09  30.0  3
+ 6CX  Var_42    HA    CA   CB   CG    -56.12  30.0  3
+ 6CX  Var_43    H2    N    CA   CB    176.24  30.0  3
+ 6CX  Var_44    H     N    CA   CB    -66.68  30.0  3
+ 6CX  Var_45    HB2   CB   CA   C     -62.08  30.0  1
+ 6CX  Var_46    HB3   CB   CA   C    -176.59  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

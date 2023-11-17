@@ -20,11 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- J03  J03  "(2~{R},3~{S},5~{R})-5-(2-azanyl-6-methoxy-purin-9-yl)-2-(hydroxymethyl)oxolan-3-ol"
-  ligand  35  20  .  2022-08-10  2022-08-10
+ J03  J03  (2~{R},3~{S},5~{R})-5-(2-azanyl-6-methoxy-purin-9-yl)-2-(hydroxymethyl)oxolan-3-ol  ligand  35  20  .  2022-08-10  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_J03
@@ -202,41 +202,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- J03  CONST_01  C5   N7  C8  N9      0.00   0.0  0
- J03  CONST_02  N7   C5  C4  N9      0.00   0.0  0
- J03  CONST_03  C6   C5  C4  N9    180.00   0.0  0
- J03  CONST_04  C2   N3  C4  N9    180.00   0.0  0
- J03  CONST_05  C8   N7  C5  C4      0.00   0.0  0
- J03  CONST_06  N1   C6  C5  C4      0.00   0.0  0
- J03  CONST_07  N7   C8  N9  C4      0.00   0.0  0
- J03  CONST_08  N1   C2  N3  C4      0.00   0.0  0
- J03  CONST_09  N7   C5  C4  N3    180.00   0.0  0
- J03  CONST_10  C6   C5  C4  N3      0.00   0.0  0
- J03  CONST_11  C8   N9  C4  N3    180.00   0.0  0
- J03  CONST_12  C6   N1  C2  N3      0.00   0.0  0
- J03  CONST_13  C5   C6  N1  C2      0.00   0.0  0
- J03  CONST_14  C5   C4  N3  C2      0.00   0.0  0
- J03  CONST_15  N7   C5  C6  N1    180.00   0.0  0
- J03  CONST_16  C8   N7  C5  C6    180.00   0.0  0
- J03  CONST_17  C8   N9  C4  C5      0.00   0.0  0
- J03  CONST_18  C1'  N9  C4  N3      0.00   0.0  0
- J03  CONST_19  C1'  N9  C4  C5    180.00   0.0  0
- J03  CONST_20  C1'  N9  C8  N7    180.00   0.0  0
- J03  CONST_21  O6   C6  C5  C4    180.00   0.0  0
- J03  CONST_22  N2   C2  N3  C4    180.00   0.0  0
- J03  CONST_23  O6   C6  N1  C2    180.00   0.0  0
- J03  CONST_24  C6   N1  C2  N2    180.00   0.0  0
- J03  CONST_25  N7   C5  C6  O6      0.00   0.0  0
- J03  CONST_26  H4   C8  N9  C4    180.00   0.0  0
- J03  CONST_27  H4   C8  N7  C5    180.00   0.0  0
- J03  CONST_28  H4   C8  N9  C1'     0.00   0.0  0
- J03  CONST_29  H2   N2  C2  N3    180.00   0.0  0
- J03  CONST_32  H3   N2  C2  N1    180.00   0.0  0
- J03  Var_01    C    O6  C6  N1     -0.37  30.0  1
- J03  Var_02    C    O6  C6  C5    179.65  30.0  1
- J03  Var_03    H13  C   O6  C6   -179.33  30.0  3
- J03  Var_04    H14  C   O6  C6    -60.43  30.0  3
- J03  Var_05    H15  C   O6  C6     61.72  30.0  3
+ J03  CONST_01  C5   N7   C8   N9      0.00   0.0  0
+ J03  CONST_02  N7   C5   C4   N9      0.00   0.0  0
+ J03  CONST_03  C6   C5   C4   N9    180.00   0.0  0
+ J03  CONST_04  C2   N3   C4   N9    180.00   0.0  0
+ J03  CONST_05  C8   N7   C5   C4      0.00   0.0  0
+ J03  CONST_06  N1   C6   C5   C4      0.00   0.0  0
+ J03  CONST_07  N7   C8   N9   C4      0.00   0.0  0
+ J03  CONST_08  N1   C2   N3   C4      0.00   0.0  0
+ J03  CONST_09  N7   C5   C4   N3    180.00   0.0  0
+ J03  CONST_10  C6   C5   C4   N3      0.00   0.0  0
+ J03  CONST_11  C8   N9   C4   N3    180.00   0.0  0
+ J03  CONST_12  C6   N1   C2   N3      0.00   0.0  0
+ J03  CONST_13  C5   C6   N1   C2      0.00   0.0  0
+ J03  CONST_14  C5   C4   N3   C2      0.00   0.0  0
+ J03  CONST_15  N7   C5   C6   N1    180.00   0.0  0
+ J03  CONST_16  C8   N7   C5   C6    180.00   0.0  0
+ J03  CONST_17  C8   N9   C4   C5      0.00   0.0  0
+ J03  CONST_18  C1'  N9   C4   N3      0.00   0.0  0
+ J03  CONST_19  C1'  N9   C4   C5    180.00   0.0  0
+ J03  CONST_20  C1'  N9   C8   N7    180.00   0.0  0
+ J03  CONST_21  O6   C6   C5   C4    180.00   0.0  0
+ J03  CONST_22  N2   C2   N3   C4    180.00   0.0  0
+ J03  CONST_23  O6   C6   N1   C2    180.00   0.0  0
+ J03  CONST_24  C6   N1   C2   N2    180.00   0.0  0
+ J03  CONST_25  N7   C5   C6   O6      0.00   0.0  0
+ J03  CONST_26  H4   C8   N9   C4    180.00   0.0  0
+ J03  CONST_27  H4   C8   N7   C5    180.00   0.0  0
+ J03  CONST_28  H4   C8   N9   C1'     0.00   0.0  0
+ J03  CONST_29  H2   N2   C2   N3    180.00   0.0  0
+ J03  CONST_30  H3   N2   C2   N1    180.00   0.0  0
+ J03  Var_01    C    O6   C6   N1     -0.37  30.0  1
+ J03  Var_02    C    O6   C6   C5    179.65  30.0  1
+ J03  Var_03    H13  C    O6   C6   -179.33  30.0  3
+ J03  Var_04    H14  C    O6   C6    -60.43  30.0  3
+ J03  Var_05    H15  C    O6   C6     61.72  30.0  3
+ J03  Var_06    C3'  C2'  C1'  N9    151.63  30.0  1
+ J03  Var_07    C4'  O4'  C1'  N9   -135.64  30.0  1
+ J03  Var_08    C2'  C1'  N9   C4    128.21  30.0  2
+ J03  Var_09    O4'  C1'  N9   C4   -112.99  30.0  2
+ J03  Var_10    C2'  C1'  N9   C8    -57.00  30.0  2
+ J03  Var_11    O4'  C1'  N9   C8     61.79  30.0  2
+ J03  Var_12    C4'  O4'  C1'  C2'   -11.93  30.0  1
+ J03  Var_13    O4'  C4'  C3'  C2'    30.88  30.0  1
+ J03  Var_14    C1'  C2'  C3'  C4'   -36.69  30.0  1
+ J03  Var_15    C3'  C2'  C1'  O4'    31.02  30.0  1
+ J03  Var_16    C3'  C4'  O4'  C1'   -12.15  30.0  1
+ J03  Var_17    C5'  C4'  C3'  C2'   -90.66  30.0  1
+ J03  Var_18    C1'  O4'  C4'  C5'   109.90  30.0  1
+ J03  Var_19    O3'  C3'  C4'  O4'   -83.73  30.0  1
+ J03  Var_20    O3'  C3'  C2'  C1'    81.25  30.0  1
+ J03  Var_21    H5   C2'  C1'  N9    -86.94  30.0  1
+ J03  Var_22    H6   C2'  C1'  N9     34.22  30.0  1
+ J03  Var_23    H10  C1'  N9   C4      5.88  30.0  2
+ J03  Var_24    H9   C4'  C3'  C2'   147.74  30.0  1
+ J03  Var_25    H11  C3'  C4'  O4'   150.45  30.0  1
+ J03  Var_26    C3'  C4'  C5'  O5'   176.36  30.0  1
+ J03  Var_27    O4'  C4'  C5'  O5'    58.21  30.0  1
+ J03  Var_28    O3'  C3'  C4'  C5'   154.74  30.0  1
+ J03  Var_29    H12  O3'  C3'  C2'  -174.36  30.0  3
+ J03  Var_30    H7   C5'  C4'  O4'   179.64  30.0  3
+ J03  Var_31    H8   C5'  C4'  O4'   -64.44  30.0  3
+ J03  Var_32    H1   O5'  C5'  C4'  -179.86  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

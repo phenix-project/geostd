@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LSB  LSB  '(4R,5S)-3-{(2R,3S,4S)-2-ethyl-5-[(2R,3R)-2-ethyl-3-{2-[(2R,3R)-2-ethyl-3-methyloxiran-2-yl]ethyl}oxiran-2-yl]-3-hydroxy-4-methylpentanoyl}-4-methyl-5-phenyl-1,3-oxazolidin-2-one (non-preferred name)'  ligand  79  36  .  2022-09-22  2023-02-15
+ LSB  LSB  '(4R,5S)-3-{(2R,3S,4S)-2-ethyl-5-[(2R,3R)-2-ethyl-3-{2-[(2R,3R)-2-ethyl-3-methyloxiran-2-yl]ethyl}oxiran-2-yl]-3-hydroxy-4-methylpentanoyl}-4-methyl-5-phenyl-1,3-oxazolidin-2-one (non-preferred name)'  ligand  79  36  .  2022-09-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LSB
@@ -383,41 +384,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LSB  CONST_01  C4   C3   C2   C1      0.00   0.0  0
- LSB  CONST_02  C4   C5   C6   C1      0.00   0.0  0
- LSB  CONST_03  C5   C6   C1   C2      0.00   0.0  0
- LSB  CONST_04  C5   C4   C3   C2      0.00   0.0  0
- LSB  CONST_05  C6   C1   C2   C3      0.00   0.0  0
- LSB  CONST_06  C6   C5   C4   C3      0.00   0.0  0
- LSB  CONST_07  C9   C1   C2   C3    180.00   0.0  0
- LSB  CONST_08  C9   C1   C6   C5    180.00   0.0  0
- LSB  CONST_09  H3   C3   C2   C1    180.00   0.0  0
- LSB  CONST_10  H5   C5   C6   C1    180.00   0.0  0
- LSB  CONST_11  H6   C6   C1   C2    180.00   0.0  0
- LSB  CONST_12  H4   C4   C3   C2    180.00   0.0  0
- LSB  CONST_13  H2   C2   C3   C4    180.00   0.0  0
- LSB  CONST_14  C14  C13  N12  C8    180.00   0.0  0
- LSB  CONST_15  O26  C13  N12  C8      0.00   0.0  0
- LSB  CONST_16  C14  C13  N12  C11     0.00   0.0  0
- LSB  CONST_17  O26  C13  N12  C11   180.00   0.0  0
- LSB  Var_01    O10  C11  N12  C8     12.09  30.0  1
- LSB  Var_02    N12  C11  O10  C9      9.27  30.0  1
- LSB  Var_03    O33  C19  C18  C17  -103.57  30.0  1
- LSB  Var_04    C20  C19  O33  C18   117.08  30.0  1
- LSB  Var_05    C31  C18  O33  C19  -114.79  30.0  1
- LSB  Var_06    O36  C23  C22  C21  -104.57  30.0  1
- LSB  Var_07    C24  C23  O36  C22   116.73  30.0  1
- LSB  Var_08    C34  C22  O36  C23  -113.42  30.0  1
- LSB  Var_09    C19  C18  C17  C16   -58.52  30.0  3
- LSB  Var_10    C21  C20  C19  C18   150.20  30.0  3
- LSB  Var_11    C32  C31  C18  C19  -130.24  30.0  3
- LSB  Var_12    C22  C21  C20  C19   179.02  30.0  3
- LSB  Var_13    C23  C22  C21  C20    41.04  30.0  3
- LSB  Var_14    C35  C34  C22  C23  -129.31  30.0  3
- LSB  Var_15    H24  C24  C23  C22    29.31  30.0  3
- LSB  Var_16    H32  C32  C31  C18  -178.01  30.0  3
- LSB  Var_17    H35  C35  C34  C22  -179.15  30.0  3
- LSB  Var_18    H28  C28  C27  C14   -62.66  30.0  3
+ LSB  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ LSB  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ LSB  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ LSB  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ LSB  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ LSB  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ LSB  CONST_07  C9    C1   C2   C3    180.00   0.0  0
+ LSB  CONST_08  C9    C1   C6   C5    180.00   0.0  0
+ LSB  CONST_09  H3    C3   C2   C1    180.00   0.0  0
+ LSB  CONST_10  H5    C5   C6   C1    180.00   0.0  0
+ LSB  CONST_11  H6    C6   C1   C2    180.00   0.0  0
+ LSB  CONST_12  H4    C4   C3   C2    180.00   0.0  0
+ LSB  CONST_13  H2    C2   C3   C4    180.00   0.0  0
+ LSB  CONST_14  C14   C13  N12  C8    180.00   0.0  0
+ LSB  CONST_15  O26   C13  N12  C8      0.00   0.0  0
+ LSB  CONST_16  C14   C13  N12  C11     0.00   0.0  0
+ LSB  CONST_17  O26   C13  N12  C11   180.00   0.0  0
+ LSB  Var_01    O10   C11  N12  C8     12.09  30.0  1
+ LSB  Var_02    N12   C11  O10  C9      9.27  30.0  1
+ LSB  Var_03    O33   C19  C18  C17  -103.57  30.0  1
+ LSB  Var_04    C20   C19  O33  C18   117.08  30.0  1
+ LSB  Var_05    C31   C18  O33  C19  -114.79  30.0  1
+ LSB  Var_06    O36   C23  C22  C21  -104.57  30.0  1
+ LSB  Var_07    C24   C23  O36  C22   116.73  30.0  1
+ LSB  Var_08    C34   C22  O36  C23  -113.42  30.0  1
+ LSB  Var_09    C19   C18  C17  C16   -58.52  30.0  3
+ LSB  Var_10    C21   C20  C19  C18   150.20  30.0  3
+ LSB  Var_11    C32   C31  C18  C19  -130.24  30.0  3
+ LSB  Var_12    C22   C21  C20  C19   179.02  30.0  3
+ LSB  Var_13    C23   C22  C21  C20    41.04  30.0  3
+ LSB  Var_14    C35   C34  C22  C23  -129.31  30.0  3
+ LSB  Var_15    H24   C24  C23  C22    29.31  30.0  3
+ LSB  Var_16    H32   C32  C31  C18  -178.01  30.0  3
+ LSB  Var_17    H35   C35  C34  C22  -179.15  30.0  3
+ LSB  Var_18    H28   C28  C27  C14   -62.66  30.0  3
+ LSB  Var_19    N12   C8   C9   C1    151.32  30.0  1
+ LSB  Var_20    C11   O10  C9   C1   -150.45  30.0  1
+ LSB  Var_21    C8    C9   C1   C2     87.65  30.0  2
+ LSB  Var_22    O10   C9   C1   C2   -155.01  30.0  2
+ LSB  Var_23    C8    C9   C1   C6    -90.70  30.0  2
+ LSB  Var_24    O10   C9   C1   C6     26.64  30.0  2
+ LSB  Var_25    C11   O10  C9   C8    -25.36  30.0  1
+ LSB  Var_26    C11   N12  C8   C9    -25.89  30.0  1
+ LSB  Var_27    N12   C8   C9   O10    29.52  30.0  1
+ LSB  Var_28    C7    C8   C9   C1     31.69  30.0  1
+ LSB  Var_29    O10   C9   C8   C7    -90.11  30.0  1
+ LSB  Var_30    C11   N12  C8   C7     96.00  30.0  1
+ LSB  Var_31    C13   N12  C8   C9    158.49  30.0  1
+ LSB  Var_32    H8    C8   C9   C1    -93.61  30.0  1
+ LSB  Var_33    H9    C9   C1   C2    -36.15  30.0  2
+ LSB  Var_34    C13   N12  C8   C7    -79.62  30.0  1
+ LSB  Var_35    H7    C7   C8   C9     53.52  30.0  3
+ LSB  Var_36    H7A   C7   C8   C9    174.16  30.0  3
+ LSB  Var_37    H7B   C7   C8   C9    -66.78  30.0  3
+ LSB  Var_38    C15   C14  C13  N12    72.32  30.0  3
+ LSB  Var_39    C27   C14  C13  N12  -163.02  30.0  3
+ LSB  Var_40    C18   C17  C16  C15  -176.40  30.0  3
+ LSB  Var_41    C30   C16  C17  C18   -52.38  30.0  1
+ LSB  Var_42    H14   C14  C13  N12   -43.84  30.0  3
+ LSB  Var_43    H16   C16  C17  C18    66.07  30.0  1
+ LSB  Var_44    C16   C15  C14  C13   179.54  30.0  3
+ LSB  Var_45    O29   C15  C14  C13    51.79  30.0  3
+ LSB  Var_46    C28   C27  C14  C13    68.90  30.0  3
+ LSB  Var_47    C17   C16  C15  C14   174.44  30.0  3
+ LSB  Var_48    C30   C16  C15  C14    50.06  30.0  3
+ LSB  Var_49    O26   C13  C14  C15  -103.41  30.0  3
+ LSB  Var_50    C28   C27  C14  C15  -170.54  30.0  3
+ LSB  Var_51    C27   C14  C15  C16    56.75  30.0  1
+ LSB  Var_52    O29   C15  C16  C17   -58.58  30.0  3
+ LSB  Var_53    C27   C14  C13  O26    21.26  30.0  3
+ LSB  Var_54    O29   C15  C14  C27   -70.99  30.0  3
+ LSB  Var_55    C30   C16  C15  O29   177.05  30.0  3
+ LSB  Var_56    H15   C15  C14  C13   -62.43  30.0  3
+ LSB  Var_57    H27   C27  C14  C13  -171.73  30.0  3
+ LSB  Var_58    H27A  C27  C14  C13   -55.41  30.0  3
+ LSB  Var_59    HO29  O29  C15  C14    69.38  30.0  3
+ LSB  Var_60    H30   C30  C16  C15   178.19  30.0  3
+ LSB  Var_61    H30A  C30  C16  C15   -62.99  30.0  3
+ LSB  Var_62    H30B  C30  C16  C15    57.70  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

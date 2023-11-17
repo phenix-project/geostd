@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QZE  QZE  '4-[3-cyano-2-oxo-7-(1H-pyrazol-4-yl)-1,2,5,6-tetrahydrobenzo[h]quinolin-4-yl]benzoic acid'  ligand  47  31  .  2021-08-20  2021-08-20  
+ QZE  QZE  '4-[3-cyano-2-oxo-7-(1H-pyrazol-4-yl)-1,2,5,6-tetrahydrobenzo[h]quinolin-4-yl]benzoic acid'  ligand  47  31  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QZE
@@ -251,48 +252,72 @@ _chem_comp_tor.period
  QZE  CONST_02  C4   C3   C2   C1      0.00   0.0  0
  QZE  CONST_03  C4   C5   C6   C1      0.00   0.0  0
  QZE  CONST_04  C5   C6   C1   C2      0.00   0.0  0
- QZE  CONST_07  C5   C4   C3   C2      0.00   0.0  0
- QZE  CONST_08  C3   C2   C1   C6      0.00   0.0  0
- QZE  CONST_09  C3   C4   C5   C6      0.00   0.0  0
- QZE  CONST_10  C20  C19  C18  C17     0.00   0.0  0
- QZE  CONST_11  C20  C21  C16  C17     0.00   0.0  0
- QZE  CONST_12  C18  C19  C20  C21     0.00   0.0  0
- QZE  CONST_13  C18  C17  C16  C21     0.00   0.0  0
- QZE  CONST_14  N29  C28  C27  C31     0.00   0.0  0
- QZE  CONST_16  C28  N29  N30  C31     0.00   0.0  0
- QZE  CONST_17  N30  C31  C27  C28     0.00   0.0  0
- QZE  CONST_19  N30  C31  C27  C3    180.00   0.0  0
- QZE  CONST_20  N29  C28  C27  C3    180.00   0.0  0
- QZE  CONST_21  N29  N30  C31  C27     0.00   0.0  0
- QZE  CONST_22  N30  N29  C28  C27     0.00   0.0  0
- QZE  CONST_23  C5   C4   C3   C27   180.00   0.0  0
- QZE  CONST_24  C19  C18  C17  C16     0.00   0.0  0
- QZE  CONST_25  C19  C20  C21  C16     0.00   0.0  0
- QZE  CONST_26  C9   C16  C17  C18   180.00   0.0  0
- QZE  CONST_27  C9   C16  C21  C20   180.00   0.0  0
- QZE  CONST_28  C26  C4   C3   C27     0.00   0.0  0
- QZE  CONST_29  C7   N13  C11  C10     0.00   0.0  0
- QZE  CONST_30  C22  C19  C18  C17   180.00   0.0  0
- QZE  CONST_31  C22  C19  C20  C21   180.00   0.0  0
- QZE  CONST_32  O12  C11  N13  C7    180.00   0.0  0
- QZE  CONST_33  H6   C6   C1   C2    180.00   0.0  0
- QZE  CONST_34  H2   C2   C1   C6    180.00   0.0  0
- QZE  CONST_35  H21  C21  C16  C17   180.00   0.0  0
- QZE  CONST_36  H17  C17  C16  C21   180.00   0.0  0
- QZE  CONST_37  H20  C20  C19  C18   180.00   0.0  0
- QZE  CONST_38  H18  C18  C19  C20   180.00   0.0  0
- QZE  CONST_39  H28  C28  C27  C31   180.00   0.0  0
- QZE  CONST_40  H31  C31  C27  C28   180.00   0.0  0
- QZE  CONST_41  H30  N30  N29  C28   180.00   0.0  0
- QZE  CONST_42  H1   C1   C2   C3    180.00   0.0  0
- QZE  CONST_43  H13  N13  C11  C10   180.00   0.0  0
- QZE  CONST_44  H24  O24  C22  C19   180.00   0.0  0
+ QZE  CONST_05  C5   C4   C3   C2      0.00   0.0  0
+ QZE  CONST_06  C3   C2   C1   C6      0.00   0.0  0
+ QZE  CONST_07  C3   C4   C5   C6      0.00   0.0  0
+ QZE  CONST_08  C20  C19  C18  C17     0.00   0.0  0
+ QZE  CONST_09  C20  C21  C16  C17     0.00   0.0  0
+ QZE  CONST_10  C18  C19  C20  C21     0.00   0.0  0
+ QZE  CONST_11  C18  C17  C16  C21     0.00   0.0  0
+ QZE  CONST_12  N29  C28  C27  C31     0.00   0.0  0
+ QZE  CONST_13  C28  N29  N30  C31     0.00   0.0  0
+ QZE  CONST_14  N30  C31  C27  C28     0.00   0.0  0
+ QZE  CONST_15  N30  C31  C27  C3    180.00   0.0  0
+ QZE  CONST_16  N29  C28  C27  C3    180.00   0.0  0
+ QZE  CONST_17  N29  N30  C31  C27     0.00   0.0  0
+ QZE  CONST_18  N30  N29  C28  C27     0.00   0.0  0
+ QZE  CONST_19  C5   C4   C3   C27   180.00   0.0  0
+ QZE  CONST_20  C19  C18  C17  C16     0.00   0.0  0
+ QZE  CONST_21  C19  C20  C21  C16     0.00   0.0  0
+ QZE  CONST_22  C9   C16  C17  C18   180.00   0.0  0
+ QZE  CONST_23  C9   C16  C21  C20   180.00   0.0  0
+ QZE  CONST_24  C26  C4   C3   C27     0.00   0.0  0
+ QZE  CONST_25  C7   N13  C11  C10     0.00   0.0  0
+ QZE  CONST_26  C22  C19  C18  C17   180.00   0.0  0
+ QZE  CONST_27  C22  C19  C20  C21   180.00   0.0  0
+ QZE  CONST_28  O12  C11  N13  C7    180.00   0.0  0
+ QZE  CONST_29  H6   C6   C1   C2    180.00   0.0  0
+ QZE  CONST_30  H2   C2   C1   C6    180.00   0.0  0
+ QZE  CONST_31  H21  C21  C16  C17   180.00   0.0  0
+ QZE  CONST_32  H17  C17  C16  C21   180.00   0.0  0
+ QZE  CONST_33  H20  C20  C19  C18   180.00   0.0  0
+ QZE  CONST_34  H18  C18  C19  C20   180.00   0.0  0
+ QZE  CONST_35  H28  C28  C27  C31   180.00   0.0  0
+ QZE  CONST_36  H31  C31  C27  C28   180.00   0.0  0
+ QZE  CONST_37  H30  N30  N29  C28   180.00   0.0  0
+ QZE  CONST_38  H1   C1   C2   C3    180.00   0.0  0
+ QZE  CONST_39  H13  N13  C11  C10   180.00   0.0  0
+ QZE  CONST_40  H24  O24  C22  C19   180.00   0.0  0
  QZE  Var_01    C8   C7   C5   C6   -158.30  30.0  1
  QZE  Var_02    C10  C9   C16  C17    65.75  30.0  2
  QZE  Var_03    C25  C26  C4   C3    142.74  30.0  1
  QZE  Var_04    C8   C25  C26  C4     54.52  30.0  1
  QZE  Var_05    C26  C25  C8   C9    145.40  30.0  1
  QZE  Var_06    O23  C22  C19  C18     0.16  30.0  2
+ QZE  Var_07    C31  C27  C3   C2    -54.50  30.0  2
+ QZE  Var_08    C28  C27  C3   C2    121.30  30.0  2
+ QZE  Var_09    C4   C3   C27  C31   125.01  30.0  3
+ QZE  Var_10    C4   C3   C27  C28   -59.19  30.0  3
+ QZE  Var_11    C11  C10  C9   C16  -179.87  30.0  1
+ QZE  Var_12    C7   C8   C9   C16  -178.51  30.0  1
+ QZE  Var_13    C25  C8   C9   C16     2.20  30.0  1
+ QZE  Var_14    C9   C8   C7   C5    176.74  30.0  1
+ QZE  Var_15    C25  C8   C7   C5     -3.93  30.0  1
+ QZE  Var_16    C11  N13  C7   C5   -177.33  30.0  1
+ QZE  Var_17    C7   C8   C9   C10     1.16  30.0  1
+ QZE  Var_18    C25  C8   C9   C10  -178.13  30.0  1
+ QZE  Var_19    N13  C11  C10  C9     -1.06  30.0  1
+ QZE  Var_20    N13  C7   C8   C9     -2.12  30.0  1
+ QZE  Var_21    C11  C10  C9   C8      0.46  30.0  1
+ QZE  Var_22    C11  N13  C7   C8      1.55  30.0  1
+ QZE  Var_23    N13  C7   C8   C25   177.21  30.0  1
+ QZE  Var_24    C16  C9   C10  C14     1.17  30.0  1
+ QZE  Var_25    C8   C9   C10  C14  -178.50  30.0  1
+ QZE  Var_26    N13  C11  C10  C14   177.96  30.0  1
+ QZE  Var_27    O12  C11  C10  C9    178.94  30.0  1
+ QZE  Var_28    O12  C11  C10  C14    -2.04  30.0  1
+ QZE  Var_29    N15  C14  C10  C9    160.42  30.0  1
+ QZE  Var_30    N15  C14  C10  C11   -18.60  30.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id

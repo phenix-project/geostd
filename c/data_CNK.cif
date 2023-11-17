@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CNK  CNK  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-(5-naphthalen-1-yl-4~{H}-1,2,4-triazol-3-yl)oxane-3,4,5-triol  ligand  45  26  .  2021-08-07  2021-08-07  
+ CNK  CNK  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-(5-naphthalen-1-yl-4~{H}-1,2,4-triazol-3-yl)oxane-3,4,5-triol  ligand  45  26  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CNK
@@ -240,44 +241,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CNK  CONST_01  C4   N3   N2   C1     0.00  0.0  0
- CNK  CONST_02  N3   C4   N5   C1     0.00  0.0  0
- CNK  CONST_03  C6   C4   N5   C1   180.00  0.0  0
- CNK  CONST_04  N3   N2   C1   N5     0.00  0.0  0
- CNK  CONST_05  N2   N3   C4   N5     0.00  0.0  0
- CNK  CONST_08  N2   C1   N5   C4     0.00  0.0  0
- CNK  CONST_09  C12  C7   C6   C4     0.00  0.0  0
- CNK  CONST_10  C8   C7   C6   C4   180.00  0.0  0
- CNK  CONST_11  C10  C11  C6   C4   180.00  0.0  0
- CNK  CONST_14  C6   C4   N3   N2   180.00  0.0  0
- CNK  CONST_15  C13  C12  C7   C6   180.00  0.0  0
- CNK  CONST_16  C15  C8   C7   C6   180.00  0.0  0
- CNK  CONST_17  C9   C8   C7   C6     0.00  0.0  0
- CNK  CONST_18  C9   C10  C11  C6     0.00  0.0  0
- CNK  CONST_19  C12  C7   C6   C11  180.00  0.0  0
- CNK  CONST_20  C8   C7   C6   C11    0.00  0.0  0
- CNK  CONST_21  C8   C9   C10  C11    0.00  0.0  0
- CNK  CONST_22  C7   C6   C11  C10    0.00  0.0  0
- CNK  CONST_23  C7   C8   C9   C10    0.00  0.0  0
- CNK  CONST_24  C15  C8   C9   C10  180.00  0.0  0
- CNK  CONST_25  C12  C7   C8   C9   180.00  0.0  0
- CNK  CONST_26  C14  C15  C8   C9   180.00  0.0  0
- CNK  CONST_27  C13  C12  C7   C8     0.00  0.0  0
- CNK  CONST_28  C13  C14  C15  C8     0.00  0.0  0
- CNK  CONST_29  C14  C13  C12  C7     0.00  0.0  0
- CNK  CONST_30  C14  C15  C8   C7     0.00  0.0  0
- CNK  CONST_31  C12  C13  C14  C15    0.00  0.0  0
- CNK  CONST_32  C12  C7   C8   C15    0.00  0.0  0
- CNK  CONST_33  N3   N2   C1   C1'  180.00  0.0  0
- CNK  CONST_34  C4   N5   C1   C1'  180.00  0.0  0
- CNK  CONST_35  H12  N5   C1   C1'    0.00  0.0  0
- CNK  CONST_36  H13  C11  C6   C4     0.00  0.0  0
- CNK  CONST_37  H19  C12  C7   C6     0.00  0.0  0
- CNK  CONST_38  H14  C10  C11  C6   180.00  0.0  0
- CNK  CONST_39  H15  C9   C10  C11  180.00  0.0  0
- CNK  CONST_40  H16  C15  C8   C9     0.00  0.0  0
- CNK  CONST_41  H17  C14  C15  C8   180.00  0.0  0
- CNK  CONST_42  H18  C13  C12  C7   180.00  0.0  0
+ CNK  CONST_01  C4   N3   N2   C1      0.00   0.0  0
+ CNK  CONST_02  N3   C4   N5   C1      0.00   0.0  0
+ CNK  CONST_03  C6   C4   N5   C1    180.00   0.0  0
+ CNK  CONST_04  N3   N2   C1   N5      0.00   0.0  0
+ CNK  CONST_05  N2   N3   C4   N5      0.00   0.0  0
+ CNK  CONST_06  N2   C1   N5   C4      0.00   0.0  0
+ CNK  CONST_07  C12  C7   C6   C4      0.00   0.0  0
+ CNK  CONST_08  C8   C7   C6   C4    180.00   0.0  0
+ CNK  CONST_09  C10  C11  C6   C4    180.00   0.0  0
+ CNK  CONST_10  C6   C4   N3   N2    180.00   0.0  0
+ CNK  CONST_11  C13  C12  C7   C6    180.00   0.0  0
+ CNK  CONST_12  C15  C8   C7   C6    180.00   0.0  0
+ CNK  CONST_13  C9   C8   C7   C6      0.00   0.0  0
+ CNK  CONST_14  C9   C10  C11  C6      0.00   0.0  0
+ CNK  CONST_15  C12  C7   C6   C11   180.00   0.0  0
+ CNK  CONST_16  C8   C7   C6   C11     0.00   0.0  0
+ CNK  CONST_17  C8   C9   C10  C11     0.00   0.0  0
+ CNK  CONST_18  C7   C6   C11  C10     0.00   0.0  0
+ CNK  CONST_19  C7   C8   C9   C10     0.00   0.0  0
+ CNK  CONST_20  C15  C8   C9   C10   180.00   0.0  0
+ CNK  CONST_21  C12  C7   C8   C9    180.00   0.0  0
+ CNK  CONST_22  C14  C15  C8   C9    180.00   0.0  0
+ CNK  CONST_23  C13  C12  C7   C8      0.00   0.0  0
+ CNK  CONST_24  C13  C14  C15  C8      0.00   0.0  0
+ CNK  CONST_25  C14  C13  C12  C7      0.00   0.0  0
+ CNK  CONST_26  C14  C15  C8   C7      0.00   0.0  0
+ CNK  CONST_27  C12  C13  C14  C15     0.00   0.0  0
+ CNK  CONST_28  C12  C7   C8   C15     0.00   0.0  0
+ CNK  CONST_29  N3   N2   C1   C1'   180.00   0.0  0
+ CNK  CONST_30  C4   N5   C1   C1'   180.00   0.0  0
+ CNK  CONST_31  H12  N5   C1   C1'     0.00   0.0  0
+ CNK  CONST_32  H13  C11  C6   C4      0.00   0.0  0
+ CNK  CONST_33  H19  C12  C7   C6      0.00   0.0  0
+ CNK  CONST_34  H14  C10  C11  C6    180.00   0.0  0
+ CNK  CONST_35  H15  C9   C10  C11   180.00   0.0  0
+ CNK  CONST_36  H16  C15  C8   C9      0.00   0.0  0
+ CNK  CONST_37  H17  C14  C15  C8    180.00   0.0  0
+ CNK  CONST_38  H18  C13  C12  C7    180.00   0.0  0
+ CNK  Var_01    C3'  C4'  C5'  O5'   -55.83  30.0  1
+ CNK  Var_02    C3'  C2'  C1'  O5'    57.48  30.0  1
+ CNK  Var_03    N2   C1   C1'  O5'    52.89  30.0  2
+ CNK  Var_04    N5   C1   C1'  O5'  -128.18  30.0  2
+ CNK  Var_05    C2'  C3'  C4'  C5'    53.58  30.0  1
+ CNK  Var_06    C2'  C1'  O5'  C5'   -63.09  30.0  1
+ CNK  Var_07    C1   C1'  O5'  C5'   175.86  30.0  1
+ CNK  Var_08    C1'  C2'  C3'  C4'   -53.89  30.0  1
+ CNK  Var_09    C1'  O5'  C5'  C4'    61.91  30.0  1
+ CNK  Var_10    C1   C1'  C2'  C3'   176.84  30.0  1
+ CNK  Var_11    N2   C1   C1'  C2'   -67.91  30.0  2
+ CNK  Var_12    N5   C1   C1'  C2'   111.02  30.0  2
+ CNK  Var_13    C7   C6   C4   N5    144.77  30.0  2
+ CNK  Var_14    C11  C6   C4   N5    -35.89  30.0  2
+ CNK  Var_15    C7   C6   C4   N3    -38.46  30.0  2
+ CNK  Var_16    C11  C6   C4   N3    140.88  30.0  2
+ CNK  Var_17    O4'  C4'  C5'  O5'  -177.50  30.0  1
+ CNK  Var_18    O2'  C2'  C1'  O5'   179.17  30.0  1
+ CNK  Var_19    O3'  C3'  C4'  C5'   175.87  30.0  1
+ CNK  Var_20    O2'  C2'  C3'  C4'  -172.56  30.0  1
+ CNK  Var_21    C6'  C5'  C4'  C3'  -175.34  30.0  1
+ CNK  Var_22    O4'  C4'  C3'  C2'   173.24  30.0  1
+ CNK  Var_23    O3'  C3'  C2'  C1'  -173.66  30.0  1
+ CNK  Var_24    C6'  C5'  O5'  C1'  -176.00  30.0  1
+ CNK  Var_25    O2'  C2'  C1'  C1    -61.47  30.0  1
+ CNK  Var_26    H2   C4'  C5'  O5'    62.12  30.0  1
+ CNK  Var_27    H4   C2'  C1'  O5'   -60.67  30.0  1
+ CNK  Var_28    H3   C3'  C4'  C5'   -64.61  30.0  1
+ CNK  Var_29    H5   C1'  O5'  C5'    56.95  30.0  1
+ CNK  Var_30    H1   C5'  C4'  C3'    64.16  30.0  1
+ CNK  Var_31    O6'  C6'  C5'  O5'    63.20  30.0  3
+ CNK  Var_32    O6'  C6'  C5'  C4'  -176.02  30.0  3
+ CNK  Var_33    O3'  C3'  C2'  O2'    67.68  30.0  1
+ CNK  Var_34    O4'  C4'  C3'  O3'   -64.47  30.0  1
+ CNK  Var_35    C6'  C5'  C4'  O4'    62.99  30.0  1
+ CNK  Var_36    H9   C6'  C5'  O5'  -175.15  30.0  3
+ CNK  Var_37    H10  C6'  C5'  O5'   -58.97  30.0  3
+ CNK  Var_38    H8   O4'  C4'  C5'   177.56  30.0  3
+ CNK  Var_39    H7   O3'  C3'  C4'   154.74  30.0  3
+ CNK  Var_40    H6   O2'  C2'  C3'   -86.20  30.0  3
+ CNK  Var_41    H11  O6'  C6'  C5'   178.57  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

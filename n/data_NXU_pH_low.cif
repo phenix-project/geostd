@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NXU  NXU  '(2R,4S)-2-[(1R)-2-hydroxy-1-{[(2-hydroxynaphthalen-1-yl)carbonyl]amino}ethyl]-5,5-dimethyl-1,3-thiazolidine-4-carboxylic acid'  ligand  49  27  .  2021-08-15  2022-11-17
+ NXU  NXU  '(2R,4S)-2-[(1R)-2-hydroxy-1-{[(2-hydroxynaphthalen-1-yl)carbonyl]amino}ethyl]-5,5-dimethyl-1,3-thiazolidine-4-carboxylic acid'  ligand  49  27  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NXU
@@ -253,43 +254,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NXU  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- NXU  CONST_02  C4   C10  C9   C1     0.00   0.0  0
- NXU  CONST_03  C5   C10  C9   C1   180.00   0.0  0
- NXU  CONST_04  C7   C8   C9   C1   180.00   0.0  0
- NXU  CONST_05  C10  C4   C3   C2     0.00   0.0  0
- NXU  CONST_06  C10  C9   C1   C2     0.00   0.0  0
- NXU  CONST_07  C8   C9   C1   C2   180.00   0.0  0
- NXU  CONST_08  C9   C1   C2   C3     0.00   0.0  0
- NXU  CONST_09  C9   C10  C4   C3     0.00   0.0  0
- NXU  CONST_10  C5   C10  C4   C3   180.00   0.0  0
- NXU  CONST_11  C6   C5   C10  C9     0.00   0.0  0
- NXU  CONST_12  C6   C7   C8   C9     0.00   0.0  0
- NXU  CONST_13  C4   C10  C9   C8   180.00   0.0  0
- NXU  CONST_14  C5   C10  C9   C8     0.00   0.0  0
- NXU  CONST_15  C5   C6   C7   C8     0.00   0.0  0
- NXU  CONST_16  C10  C9   C8   C7     0.00   0.0  0
- NXU  CONST_17  C10  C5   C6   C7     0.00   0.0  0
- NXU  CONST_18  C4   C10  C5   C6   180.00   0.0  0
- NXU  CONST_19  C3   C2   C1   C11  180.00   0.0  0
- NXU  CONST_20  C10  C9   C1   C11  180.00   0.0  0
- NXU  CONST_21  C8   C9   C1   C11    0.00   0.0  0
- NXU  CONST_22  C4   C3   C2   O1   180.00   0.0  0
- NXU  CONST_23  C9   C1   C2   O1   180.00   0.0  0
- NXU  CONST_24  H17  C3   C2   C1   180.00   0.0  0
- NXU  CONST_25  H19  C8   C9   C1     0.00   0.0  0
- NXU  CONST_26  H23  C4   C3   C2   180.00   0.0  0
- NXU  CONST_27  H22  C5   C10  C9   180.00   0.0  0
- NXU  CONST_28  H20  C7   C8   C9   180.00   0.0  0
- NXU  CONST_29  H21  C6   C7   C8   180.00   0.0  0
- NXU  CONST_30  C1   C11  N1   C12  180.00   0.0  0
- NXU  CONST_31  H1   N1   C11  C1     0.00   0.0  0
- NXU  CONST_32  H11  O5   C21  C16  180.00   0.0  0
- NXU  CONST_33  C12  N1   C11  O2     0.00   0.0  0
- NXU  Var_01    C16  C15  S1   C13   22.05  30.0  1
- NXU  Var_02    C2   C1   C11  O2   -32.34  30.0  2
- NXU  Var_03    H7   C20  C15  S1    65.68  30.0  3
- NXU  Var_04    H4   C19  C15  S1    60.32  30.0  3
+ NXU  CONST_01  C4   C3   C2   C1      0.00   0.0  0
+ NXU  CONST_02  C4   C10  C9   C1      0.00   0.0  0
+ NXU  CONST_03  C5   C10  C9   C1    180.00   0.0  0
+ NXU  CONST_04  C7   C8   C9   C1    180.00   0.0  0
+ NXU  CONST_05  C10  C4   C3   C2      0.00   0.0  0
+ NXU  CONST_06  C10  C9   C1   C2      0.00   0.0  0
+ NXU  CONST_07  C8   C9   C1   C2    180.00   0.0  0
+ NXU  CONST_08  C9   C1   C2   C3      0.00   0.0  0
+ NXU  CONST_09  C9   C10  C4   C3      0.00   0.0  0
+ NXU  CONST_10  C5   C10  C4   C3    180.00   0.0  0
+ NXU  CONST_11  C6   C5   C10  C9      0.00   0.0  0
+ NXU  CONST_12  C6   C7   C8   C9      0.00   0.0  0
+ NXU  CONST_13  C4   C10  C9   C8    180.00   0.0  0
+ NXU  CONST_14  C5   C10  C9   C8      0.00   0.0  0
+ NXU  CONST_15  C5   C6   C7   C8      0.00   0.0  0
+ NXU  CONST_16  C10  C9   C8   C7      0.00   0.0  0
+ NXU  CONST_17  C10  C5   C6   C7      0.00   0.0  0
+ NXU  CONST_18  C4   C10  C5   C6    180.00   0.0  0
+ NXU  CONST_19  C3   C2   C1   C11   180.00   0.0  0
+ NXU  CONST_20  C10  C9   C1   C11   180.00   0.0  0
+ NXU  CONST_21  C8   C9   C1   C11     0.00   0.0  0
+ NXU  CONST_22  C4   C3   C2   O1    180.00   0.0  0
+ NXU  CONST_23  C9   C1   C2   O1    180.00   0.0  0
+ NXU  CONST_24  H17  C3   C2   C1    180.00   0.0  0
+ NXU  CONST_25  H19  C8   C9   C1      0.00   0.0  0
+ NXU  CONST_26  H23  C4   C3   C2    180.00   0.0  0
+ NXU  CONST_27  H22  C5   C10  C9    180.00   0.0  0
+ NXU  CONST_28  H20  C7   C8   C9    180.00   0.0  0
+ NXU  CONST_29  H21  C6   C7   C8    180.00   0.0  0
+ NXU  CONST_30  C1   C11  N1   C12   180.00   0.0  0
+ NXU  CONST_31  H1   N1   C11  C1      0.00   0.0  0
+ NXU  CONST_32  H11  O5   C21  C16   180.00   0.0  0
+ NXU  CONST_33  C12  N1   C11  O2      0.00   0.0  0
+ NXU  Var_01    C16  C15  S1   C13    22.05  30.0  1
+ NXU  Var_02    C2   C1   C11  O2    -32.34  30.0  2
+ NXU  Var_03    H7   C20  C15  S1     65.68  30.0  3
+ NXU  Var_04    H4   C19  C15  S1     60.32  30.0  3
+ NXU  Var_05    C15  C16  N2   C13    41.75  30.0  1
+ NXU  Var_06    C16  N2   C13  S1    -22.98  30.0  1
+ NXU  Var_07    N2   C16  C15  S1    -39.07  30.0  1
+ NXU  Var_08    N2   C13  S1   C15    -1.24  30.0  1
+ NXU  Var_09    C16  N2   C13  C12  -145.09  30.0  1
+ NXU  Var_10    C15  S1   C13  C12   121.28  30.0  1
+ NXU  Var_11    C21  C16  N2   C13   -82.27  30.0  1
+ NXU  Var_12    C21  C16  C15  S1     83.58  30.0  1
+ NXU  Var_13    N2   C16  C15  C19    77.74  30.0  1
+ NXU  Var_14    N2   C16  C15  C20  -158.17  30.0  1
+ NXU  Var_15    H10  C16  N2   C13   159.60  30.0  1
+ NXU  Var_16    H12  N2   C13  S1     98.89  30.0  1
+ NXU  Var_17    H3   C13  S1   C15  -119.34  30.0  1
+ NXU  Var_18    N2   C13  C12  N1    -59.16  30.0  3
+ NXU  Var_19    S1   C13  C12  N1   -179.12  30.0  3
+ NXU  Var_20    C14  C12  C13  S1     59.35  30.0  2
+ NXU  Var_21    O4   C21  C16  C15   -90.39  30.0  3
+ NXU  Var_22    O5   C21  C16  C15    89.79  30.0  3
+ NXU  Var_23    C21  C16  C15  C19  -159.61  30.0  1
+ NXU  Var_24    C21  C16  C15  C20   -35.53  30.0  1
+ NXU  Var_25    N2   C16  C21  O5   -148.45  30.0  3
+ NXU  Var_26    N2   C16  C21  O4     31.37  30.0  3
+ NXU  Var_27    C14  C12  C13  N2    179.31  30.0  2
+ NXU  Var_28    H2   C12  C13  S1    -60.00  30.0  2
+ NXU  Var_29    H18  O1   C2   C1      9.25  30.0  2
+ NXU  Var_30    C13  C12  N1   C11    97.34  30.0  2
+ NXU  Var_31    O3   C14  C12  C13    62.34  30.0  2
+ NXU  Var_32    H14  C14  C12  C13  -176.47  30.0  2
+ NXU  Var_33    H15  C14  C12  C13   -60.34  30.0  2
+ NXU  Var_34    C14  C12  N1   C11  -138.14  30.0  2
+ NXU  Var_35    O3   C14  C12  N1    -60.60  30.0  2
+ NXU  Var_36    H16  O3   C14  C12   165.11  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

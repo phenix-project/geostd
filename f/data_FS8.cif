@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FS8  FS8  N-{5-[(7-{[(2R)-2,3-dihydroxypropyl]oxy}-5-oxo-10,11-dihydro-5H-dibenzo[a,d][7]annulen-2-yl)amino]-2-fluorophenyl}benzamide  ligand  66  39  .  2021-08-09  2021-08-09  
+ FS8  FS8  N-{5-[(7-{[(2R)-2,3-dihydroxypropyl]oxy}-5-oxo-10,11-dihydro-5H-dibenzo[a,d][7]annulen-2-yl)amino]-2-fluorophenyl}benzamide  ligand  66  39  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FS8
@@ -318,56 +319,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FS8  CONST_01  CBG  CAK  CAG  CAF    0.00   0.0  0
- FS8  CONST_02  CBG  CAL  CAH  CAF    0.00   0.0  0
- FS8  CONST_03  CAL  CAH  CAF  CAG    0.00   0.0  0
- FS8  CONST_04  CAL  CBG  CAK  CAG    0.00   0.0  0
- FS8  CONST_05  CAK  CAG  CAF  CAH    0.00   0.0  0
- FS8  CONST_06  CAK  CBG  CAL  CAH    0.00   0.0  0
- FS8  CONST_07  CBJ  CBE  CAM  CAI    0.00   0.0  0
- FS8  CONST_08  CBJ  CAR  CBD  CAI    0.00   0.0  0
- FS8  CONST_09  CBI  CAQ  CBC  CAJ    0.00   0.0  0
- FS8  CONST_10  CAR  CBD  CAI  CAM    0.00   0.0  0
- FS8  CONST_11  CAR  CBJ  CBE  CAM    0.00   0.0  0
- FS8  CONST_12  CBL  CAS  CBF  CAN    0.00   0.0  0
- FS8  CONST_13  CAS  CBF  CAN  CAO    0.00   0.0  0
- FS8  CONST_14  CAQ  CBC  CAJ  CAP    0.00   0.0  0
- FS8  CONST_15  CBK  CAP  CAJ  CBC    0.00   0.0  0
- FS8  CONST_16  CBE  CAM  CAI  CBD    0.00   0.0  0
- FS8  CONST_17  CBE  CBJ  CAR  CBD    0.00   0.0  0
- FS8  CONST_18  CBH  CAO  CAN  CBF    0.00   0.0  0
- FS8  CONST_19  CAI  CAM  CBE  FAE  180.00   0.0  0
- FS8  CONST_20  CAR  CBJ  CBE  FAE  180.00   0.0  0
- FS8  CONST_21  CBA  CBG  CAK  CAG  180.00   0.0  0
- FS8  CONST_22  CBA  CBG  CAL  CAH  180.00   0.0  0
- FS8  CONST_23  NAY  CBD  CAI  CAM  180.00   0.0  0
- FS8  CONST_24  NAX  CBJ  CBE  CAM  180.00   0.0  0
- FS8  CONST_25  OAZ  CBF  CAN  CAO  180.00   0.0  0
- FS8  CONST_26  NAY  CBC  CAJ  CAP  180.00   0.0  0
- FS8  CONST_27  CBD  CAR  CBJ  NAX  180.00   0.0  0
- FS8  CONST_28  CBI  CAQ  CBC  NAY  180.00   0.0  0
- FS8  CONST_29  CBJ  CAR  CBD  NAY  180.00   0.0  0
- FS8  CONST_30  CBL  CAS  CBF  OAZ  180.00   0.0  0
- FS8  CONST_31  HAK  CAK  CAG  CAF  180.00   0.0  0
- FS8  CONST_32  HAL  CAL  CAH  CAF  180.00   0.0  0
- FS8  CONST_33  HAH  CAH  CAF  CAG  180.00   0.0  0
- FS8  CONST_34  HAG  CAG  CAF  CAH  180.00   0.0  0
- FS8  CONST_35  HAR  CAR  CBD  CAI  180.00   0.0  0
- FS8  CONST_36  HAQ  CAQ  CBC  CAJ  180.00   0.0  0
- FS8  CONST_37  HAF  CAF  CAG  CAK  180.00   0.0  0
- FS8  CONST_38  HAS  CAS  CBF  CAN  180.00   0.0  0
- FS8  CONST_39  HAJ  CAJ  CBC  CAQ  180.00   0.0  0
- FS8  CONST_40  HAI  CAI  CBD  CAR  180.00   0.0  0
- FS8  CONST_41  HAN  CAN  CBF  CAS  180.00   0.0  0
- FS8  CONST_42  HAP  CAP  CAJ  CBC  180.00   0.0  0
- FS8  CONST_43  HAM  CAM  CAI  CBD  180.00   0.0  0
- FS8  CONST_44  HAO  CAO  CAN  CBF  180.00   0.0  0
- FS8  CONST_45  CBJ  NAX  CBA  CBG  180.00   0.0  0
- FS8  CONST_49  CBJ  NAX  CBA  OAA    0.00   0.0  0
- FS8  Var_01    CBC  NAY  CBD  CAI   40.31  30.0  2
- FS8  Var_02    CBD  NAY  CBC  CAJ    9.28  30.0  1
- FS8  Var_03    CAK  CBG  CBA  OAA   26.76  30.0  2
- FS8  Var_04    CBM  CAW  OAZ  CBF  178.34  30.0  1
+ FS8  CONST_01  CBG   CAK  CAG  CAF     0.00   0.0  0
+ FS8  CONST_02  CBG   CAL  CAH  CAF     0.00   0.0  0
+ FS8  CONST_03  CAL   CAH  CAF  CAG     0.00   0.0  0
+ FS8  CONST_04  CAL   CBG  CAK  CAG     0.00   0.0  0
+ FS8  CONST_05  CAK   CAG  CAF  CAH     0.00   0.0  0
+ FS8  CONST_06  CAK   CBG  CAL  CAH     0.00   0.0  0
+ FS8  CONST_07  CBJ   CBE  CAM  CAI     0.00   0.0  0
+ FS8  CONST_08  CBJ   CAR  CBD  CAI     0.00   0.0  0
+ FS8  CONST_09  CBI   CAQ  CBC  CAJ     0.00   0.0  0
+ FS8  CONST_10  CAR   CBD  CAI  CAM     0.00   0.0  0
+ FS8  CONST_11  CAR   CBJ  CBE  CAM     0.00   0.0  0
+ FS8  CONST_12  CBL   CAS  CBF  CAN     0.00   0.0  0
+ FS8  CONST_13  CAS   CBF  CAN  CAO     0.00   0.0  0
+ FS8  CONST_14  CAQ   CBC  CAJ  CAP     0.00   0.0  0
+ FS8  CONST_15  CBK   CAP  CAJ  CBC     0.00   0.0  0
+ FS8  CONST_16  CBE   CAM  CAI  CBD     0.00   0.0  0
+ FS8  CONST_17  CBE   CBJ  CAR  CBD     0.00   0.0  0
+ FS8  CONST_18  CBH   CAO  CAN  CBF     0.00   0.0  0
+ FS8  CONST_19  CAI   CAM  CBE  FAE   180.00   0.0  0
+ FS8  CONST_20  CAR   CBJ  CBE  FAE   180.00   0.0  0
+ FS8  CONST_21  CBA   CBG  CAK  CAG   180.00   0.0  0
+ FS8  CONST_22  CBA   CBG  CAL  CAH   180.00   0.0  0
+ FS8  CONST_23  NAY   CBD  CAI  CAM   180.00   0.0  0
+ FS8  CONST_24  NAX   CBJ  CBE  CAM   180.00   0.0  0
+ FS8  CONST_25  OAZ   CBF  CAN  CAO   180.00   0.0  0
+ FS8  CONST_26  NAY   CBC  CAJ  CAP   180.00   0.0  0
+ FS8  CONST_27  CBD   CAR  CBJ  NAX   180.00   0.0  0
+ FS8  CONST_28  CBI   CAQ  CBC  NAY   180.00   0.0  0
+ FS8  CONST_29  CBJ   CAR  CBD  NAY   180.00   0.0  0
+ FS8  CONST_30  CBL   CAS  CBF  OAZ   180.00   0.0  0
+ FS8  CONST_31  HAK   CAK  CAG  CAF   180.00   0.0  0
+ FS8  CONST_32  HAL   CAL  CAH  CAF   180.00   0.0  0
+ FS8  CONST_33  HAH   CAH  CAF  CAG   180.00   0.0  0
+ FS8  CONST_34  HAG   CAG  CAF  CAH   180.00   0.0  0
+ FS8  CONST_35  HAR   CAR  CBD  CAI   180.00   0.0  0
+ FS8  CONST_36  HAQ   CAQ  CBC  CAJ   180.00   0.0  0
+ FS8  CONST_37  HAF   CAF  CAG  CAK   180.00   0.0  0
+ FS8  CONST_38  HAS   CAS  CBF  CAN   180.00   0.0  0
+ FS8  CONST_39  HAJ   CAJ  CBC  CAQ   180.00   0.0  0
+ FS8  CONST_40  HAI   CAI  CBD  CAR   180.00   0.0  0
+ FS8  CONST_41  HAN   CAN  CBF  CAS   180.00   0.0  0
+ FS8  CONST_42  HAP   CAP  CAJ  CBC   180.00   0.0  0
+ FS8  CONST_43  HAM   CAM  CAI  CBD   180.00   0.0  0
+ FS8  CONST_44  HAO   CAO  CAN  CBF   180.00   0.0  0
+ FS8  CONST_45  CBJ   NAX  CBA  CBG   180.00   0.0  0
+ FS8  CONST_46  CBJ   NAX  CBA  OAA     0.00   0.0  0
+ FS8  Var_01    CBC   NAY  CBD  CAI    40.31  30.0  2
+ FS8  Var_02    CBD   NAY  CBC  CAJ     9.28  30.0  1
+ FS8  Var_03    CAK   CBG  CBA  OAA    26.76  30.0  2
+ FS8  Var_04    CBM   CAW  OAZ  CBF   178.34  30.0  1
+ FS8  CONST_47  CBI   CBK  CAP  CAJ     0.00   0.0  0
+ FS8  CONST_48  CBL   CBH  CAO  CAN     0.00   0.0  0
+ FS8  CONST_49  CAS   CBL  CBH  CAO     0.00   0.0  0
+ FS8  CONST_51  CAQ   CBI  CBK  CAP     0.00   0.0  0
+ FS8  CONST_53  CBK   CBI  CAQ  CBC     0.00   0.0  0
+ FS8  CONST_54  CBH   CBL  CAS  CBF     0.00   0.0  0
+ FS8  CONST_61  OAB   CBB  CBK  CBI   180.00   0.0  0
+ FS8  Var_05    CAV   CAU  CBH  CAO  -113.56  30.0  1
+ FS8  Var_06    CAU   CAV  CBI  CAQ  -149.60  30.0  1
+ FS8  Var_07    CBK   CBI  CAV  CAU    28.74  30.0  1
+ FS8  Var_08    CBL   CBH  CAU  CAV    64.45  30.0  1
+ FS8  Var_09    HAU   CAU  CBH  CAO   123.51  30.0  1
+ FS8  Var_10    HAUA  CAU  CBH  CAO     6.37  30.0  1
+ FS8  Var_11    HAV   CAV  CBI  CAQ    86.99  30.0  1
+ FS8  Var_12    HAVA  CAV  CBI  CAQ   -27.46  30.0  1
+ FS8  Var_13    CAW   OAZ  CBF  CAN     3.46  30.0  1
+ FS8  Var_14    CAW   OAZ  CBF  CAS  -177.14  30.0  1
+ FS8  Var_15    OAD   CBM  CAT  OAC    59.91  30.0  3
+ FS8  Var_16    CAW   CBM  CAT  OAC  -174.76  30.0  3
+ FS8  Var_17    OAZ   CAW  CBM  OAD   -56.68  30.0  1
+ FS8  Var_18    OAZ   CAW  CBM  CAT   177.77  30.0  1
+ FS8  Var_19    HBM   CBM  CAT  OAC   -56.87  30.0  3
+ FS8  Var_20    HAT   CAT  CBM  OAD   -62.09  30.0  1
+ FS8  Var_21    HATA  CAT  CBM  OAD  -178.12  30.0  1
+ FS8  Var_22    HOAD  OAD  CBM  CAT    58.57  30.0  3
+ FS8  Var_23    HOAC  OAC  CAT  CBM  -177.79  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

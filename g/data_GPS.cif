@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GPS  GPS  L-gamma-glutamyl-S-[(9S,10S)-10-hydroxy-9,10-dihydrophenanthren-9-yl]-L-cysteinylglycine  ligand  60  35  .  2022-08-10  2022-08-10
+ GPS  GPS  L-gamma-glutamyl-S-[(9S,10S)-10-hydroxy-9,10-dihydrophenanthren-9-yl]-L-cysteinylglycine  ligand  60  35  .  2022-08-10  2023-10-18
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-18
 ;
 
 data_comp_GPS
@@ -294,41 +295,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GPS  CONST_01  CE4  CD4  CG4  CB4     0.00   0.0  0
- GPS  CONST_02  CE4  CZ4  CH4  CB4     0.00   0.0  0
- GPS  CONST_06  CE5  CZ5  CH5  CB5     0.00   0.0  0
- GPS  CONST_07  CE5  CD5  CG5  CB5     0.00   0.0  0
- GPS  CONST_08  CH4  CB4  CG4  CD4     0.00   0.0  0
- GPS  CONST_09  CH4  CZ4  CE4  CD4     0.00   0.0  0
- GPS  CONST_10  CH5  CB5  CG5  CD5     0.00   0.0  0
- GPS  CONST_11  CH5  CZ5  CE5  CD5     0.00   0.0  0
- GPS  CONST_12  CH5  CH4  CZ4  CE4   180.00   0.0  0
- GPS  CONST_13  CH4  CH5  CZ5  CE5   180.00   0.0  0
- GPS  CONST_14  CZ4  CH4  CB4  CG4     0.00   0.0  0
- GPS  CONST_15  CH5  CH4  CB4  CG4   180.00   0.0  0
- GPS  CONST_16  CZ4  CE4  CD4  CG4     0.00   0.0  0
- GPS  CONST_17  CH4  CH5  CB5  CG5   180.00   0.0  0
- GPS  CONST_18  CZ5  CH5  CB5  CG5     0.00   0.0  0
- GPS  CONST_19  CZ5  CE5  CD5  CG5     0.00   0.0  0
- GPS  CONST_21  HG4  CG4  CB4  CA4     0.00   0.0  0
- GPS  CONST_22  HG5  CG5  CB5  CA5     0.00   0.0  0
- GPS  CONST_23  HD4  CD4  CG4  CB4   180.00   0.0  0
- GPS  CONST_24  HZ4  CZ4  CH4  CB4   180.00   0.0  0
- GPS  CONST_25  HZ5  CZ5  CH5  CB5   180.00   0.0  0
- GPS  CONST_26  HD5  CD5  CG5  CB5   180.00   0.0  0
- GPS  CONST_27  HE4  CE4  CD4  CG4   180.00   0.0  0
- GPS  CONST_28  HE5  CE5  CD5  CG5   180.00   0.0  0
- GPS  CONST_29  CA3  N3   C2   O2      0.00   0.0  0
- GPS  CONST_30  CA3  N3   C2   CA2   180.00   0.0  0
- GPS  CONST_31  CG1  CD1  N2   CA2   180.00   0.0  0
- GPS  CONST_32  OE1  CD1  N2   CA2     0.00   0.0  0
- GPS  CONST_33  HN3  N3   C2   O2    180.00   0.0  0
- GPS  CONST_34  HN2  N2   CD1  OE1   180.00   0.0  0
- GPS  Var_01    HB2  CB2  SG2  CA4   173.46  30.0  3
- GPS  Var_02    C3   CA3  N3   C2    -76.33  30.0  3
- GPS  Var_03    CB1  CG1  CD1  N2   -161.13  30.0  2
- GPS  Var_04    O31  C3   CA3  N3     -8.79  30.0  3
- GPS  Var_05    CD1  CG1  CB1  CA1   170.14  30.0  3
+ GPS  CONST_01  CE4   CD4  CG4  CB4     0.00   0.0  0
+ GPS  CONST_02  CE4   CZ4  CH4  CB4     0.00   0.0  0
+ GPS  CONST_03  CE5   CZ5  CH5  CB5     0.00   0.0  0
+ GPS  CONST_04  CE5   CD5  CG5  CB5     0.00   0.0  0
+ GPS  CONST_05  CH4   CB4  CG4  CD4     0.00   0.0  0
+ GPS  CONST_06  CH4   CZ4  CE4  CD4     0.00   0.0  0
+ GPS  CONST_07  CH5   CB5  CG5  CD5     0.00   0.0  0
+ GPS  CONST_08  CH5   CZ5  CE5  CD5     0.00   0.0  0
+ GPS  CONST_09  CH5   CH4  CZ4  CE4   180.00   0.0  0
+ GPS  CONST_10  CH4   CH5  CZ5  CE5   180.00   0.0  0
+ GPS  CONST_11  CZ4   CH4  CB4  CG4     0.00   0.0  0
+ GPS  CONST_12  CH5   CH4  CB4  CG4   180.00   0.0  0
+ GPS  CONST_13  CZ4   CE4  CD4  CG4     0.00   0.0  0
+ GPS  CONST_14  CH4   CH5  CB5  CG5   180.00   0.0  0
+ GPS  CONST_15  CZ5   CH5  CB5  CG5     0.00   0.0  0
+ GPS  CONST_16  CZ5   CE5  CD5  CG5     0.00   0.0  0
+ GPS  CONST_17  HG4   CG4  CB4  CA4     0.00   0.0  0
+ GPS  CONST_18  HG5   CG5  CB5  CA5     0.00   0.0  0
+ GPS  CONST_19  HD4   CD4  CG4  CB4   180.00   0.0  0
+ GPS  CONST_20  HZ4   CZ4  CH4  CB4   180.00   0.0  0
+ GPS  CONST_21  HZ5   CZ5  CH5  CB5   180.00   0.0  0
+ GPS  CONST_22  HD5   CD5  CG5  CB5   180.00   0.0  0
+ GPS  CONST_23  HE4   CE4  CD4  CG4   180.00   0.0  0
+ GPS  CONST_24  HE5   CE5  CD5  CG5   180.00   0.0  0
+ GPS  CONST_25  CA3   N3   C2   O2      0.00   0.0  0
+ GPS  CONST_26  CA3   N3   C2   CA2   180.00   0.0  0
+ GPS  CONST_27  CG1   CD1  N2   CA2   180.00   0.0  0
+ GPS  CONST_28  OE1   CD1  N2   CA2     0.00   0.0  0
+ GPS  CONST_29  HN3   N3   C2   O2    180.00   0.0  0
+ GPS  CONST_30  HN2   N2   CD1  OE1   180.00   0.0  0
+ GPS  Var_01    HB2   CB2  SG2  CA4   173.46  30.0  3
+ GPS  Var_02    C3    CA3  N3   C2    -76.33  30.0  3
+ GPS  Var_03    CB1   CG1  CD1  N2   -161.13  30.0  2
+ GPS  Var_04    O31   C3   CA3  N3     -8.79  30.0  3
+ GPS  Var_05    CD1   CG1  CB1  CA1   170.14  30.0  3
+ GPS  Var_06    CH5   CB5  CA5  CA4   -38.11  30.0  1
+ GPS  Var_07    CG5   CB5  CA5  CA4   144.25  30.0  1
+ GPS  Var_08    CG4   CB4  CA4  CA5   146.46  30.0  1
+ GPS  Var_09    CH4   CB4  CA4  CA5   -35.03  30.0  1
+ GPS  Var_10    CB4   CA4  CA5  O5    -68.62  30.0  1
+ GPS  Var_11    CH5   CB5  CA5  O5     79.68  30.0  1
+ GPS  Var_12    CG5   CB5  CA5  O5    -97.96  30.0  1
+ GPS  Var_13    SG2   CA4  CA5  CB5   -66.04  30.0  1
+ GPS  Var_14    CG4   CB4  CA4  SG2   -91.46  30.0  1
+ GPS  Var_15    CH4   CB4  CA4  SG2    87.05  30.0  1
+ GPS  Var_16    HA5   CA5  CA4  CB4   172.07  30.0  1
+ GPS  Var_17    HA4   CA4  CA5  CB5   173.43  30.0  1
+ GPS  Var_18    SG2   CA4  CA5  O5    172.99  30.0  1
+ GPS  Var_19    CB2   SG2  CA4  CA5   -67.37  30.0  3
+ GPS  Var_20    CB4   CA4  SG2  CB2   171.30  30.0  1
+ GPS  Var_21    HO5   O5   CA5  CA4  -179.45  30.0  3
+ GPS  Var_22    CG1   CB1  CA1  C1     64.98  30.0  3
+ GPS  Var_23    O11   C1   CA1  N1    -27.11  30.0  2
+ GPS  Var_24    O12   C1   CA1  N1    154.10  30.0  2
+ GPS  Var_25    CG1   CB1  CA1  N1   -172.57  30.0  3
+ GPS  Var_26    CD1   N2   CA2  C2   -125.02  30.0  3
+ GPS  Var_27    SG2   CB2  CA2  C2    175.78  30.0  3
+ GPS  Var_28    N3    C2   CA2  N2      9.44  30.0  3
+ GPS  Var_29    O2    C2   CA2  N2   -170.59  30.0  3
+ GPS  Var_30    SG2   CB2  CA2  N2    -57.19  30.0  3
+ GPS  Var_31    CB1   CA1  C1   O11    92.90  30.0  2
+ GPS  Var_32    CB1   CA1  C1   O12   -85.89  30.0  2
+ GPS  Var_33    N3    C2   CA2  CB2   135.47  30.0  3
+ GPS  Var_34    O2    C2   CA2  CB2   -44.56  30.0  3
+ GPS  Var_35    CD1   N2   CA2  CB2   109.95  30.0  3
+ GPS  Var_36    HN1   N1   CA1  C1   -167.70  30.0  3
+ GPS  Var_37    HN1A  N1   CA1  C1    -52.50  30.0  3
+ GPS  Var_38    HB1   CB1  CA1  C1   -173.73  30.0  3
+ GPS  Var_39    HB1A  CB1  CA1  C1    -58.82  30.0  3
+ GPS  Var_40    HA1   CA1  C1   O11  -150.46  30.0  2
+ GPS  Var_41    HA2   CA2  N2   CD1    -9.70  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

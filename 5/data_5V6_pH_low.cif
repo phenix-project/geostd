@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5V6  5V6  '2-(4-methoxy-3-thiophen-3-yl-phenyl)ethanoic acid'  ligand  29  17  .  2022-07-23  2022-11-17
+ 5V6  5V6  '2-(4-methoxy-3-thiophen-3-yl-phenyl)ethanoic acid'  ligand  29  17  .  2022-07-23  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5V6
@@ -172,36 +173,42 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5V6  CONST_01  C5   C4   C3   C2   180.00   0.0  0
- 5V6  CONST_02  C9   C4   C3   C2     0.00   0.0  0
- 5V6  CONST_03  C9   C11  C12  C2     0.00   0.0  0
- 5V6  CONST_06  C11  C9   C4   C3     0.00   0.0  0
- 5V6  CONST_07  C11  C12  C2   C3     0.00   0.0  0
- 5V6  CONST_08  C5   C4   C9   C11  180.00   0.0  0
- 5V6  CONST_09  C4   C3   C2   C12    0.00   0.0  0
- 5V6  CONST_10  C4   C9   C11  C12    0.00   0.0  0
- 5V6  CONST_11  S    C6   C5   C4   180.00   0.0  0
- 5V6  CONST_12  C7   C8   C5   C4   180.00   0.0  0
- 5V6  CONST_15  C7   S    C6   C5     0.00   0.0  0
- 5V6  CONST_16  S    C7   C8   C5     0.00   0.0  0
- 5V6  CONST_17  C8   C7   S    C6     0.00   0.0  0
- 5V6  CONST_18  C7   C8   C5   C6     0.00   0.0  0
- 5V6  CONST_19  C8   C5   C6   S      0.00   0.0  0
- 5V6  CONST_20  C4   C3   C2   C1   180.00   0.0  0
- 5V6  CONST_21  C11  C12  C2   C1   180.00   0.0  0
- 5V6  CONST_22  O2   C9   C4   C3   180.00   0.0  0
- 5V6  CONST_23  C5   C4   C9   O2     0.00   0.0  0
- 5V6  CONST_24  C12  C11  C9   O2   180.00   0.0  0
- 5V6  CONST_25  H4   C11  C12  C2   180.00   0.0  0
- 5V6  CONST_26  H5   C12  C2   C3   180.00   0.0  0
- 5V6  CONST_27  H3   C3   C2   C12  180.00   0.0  0
- 5V6  CONST_28  H10  C6   C5   C4     0.00   0.0  0
- 5V6  CONST_29  H12  C8   C5   C4     0.00   0.0  0
- 5V6  CONST_30  H11  C7   C8   C5   180.00   0.0  0
- 5V6  CONST_31  H6   O    C    C1   180.00   0.0  0
- 5V6  Var_01    C    C1   C2   C3   -86.30  30.0  2
- 5V6  Var_02    O1   C    C1   C2     3.84  30.0  3
- 5V6  Var_03    H7   C10  O2   C9    60.42  30.0  3
+ 5V6  CONST_01  C5   C4   C3   C2    180.00   0.0  0
+ 5V6  CONST_02  C9   C4   C3   C2      0.00   0.0  0
+ 5V6  CONST_03  C9   C11  C12  C2      0.00   0.0  0
+ 5V6  CONST_04  C11  C9   C4   C3      0.00   0.0  0
+ 5V6  CONST_05  C11  C12  C2   C3      0.00   0.0  0
+ 5V6  CONST_06  C5   C4   C9   C11   180.00   0.0  0
+ 5V6  CONST_07  C4   C3   C2   C12     0.00   0.0  0
+ 5V6  CONST_08  C4   C9   C11  C12     0.00   0.0  0
+ 5V6  CONST_09  S    C6   C5   C4    180.00   0.0  0
+ 5V6  CONST_10  C7   C8   C5   C4    180.00   0.0  0
+ 5V6  CONST_11  C7   S    C6   C5      0.00   0.0  0
+ 5V6  CONST_12  S    C7   C8   C5      0.00   0.0  0
+ 5V6  CONST_13  C8   C7   S    C6      0.00   0.0  0
+ 5V6  CONST_14  C7   C8   C5   C6      0.00   0.0  0
+ 5V6  CONST_15  C8   C5   C6   S       0.00   0.0  0
+ 5V6  CONST_16  C4   C3   C2   C1    180.00   0.0  0
+ 5V6  CONST_17  C11  C12  C2   C1    180.00   0.0  0
+ 5V6  CONST_18  O2   C9   C4   C3    180.00   0.0  0
+ 5V6  CONST_19  C5   C4   C9   O2      0.00   0.0  0
+ 5V6  CONST_20  C12  C11  C9   O2    180.00   0.0  0
+ 5V6  CONST_21  H4   C11  C12  C2    180.00   0.0  0
+ 5V6  CONST_22  H5   C12  C2   C3    180.00   0.0  0
+ 5V6  CONST_23  H3   C3   C2   C12   180.00   0.0  0
+ 5V6  CONST_24  H10  C6   C5   C4      0.00   0.0  0
+ 5V6  CONST_25  H12  C8   C5   C4      0.00   0.0  0
+ 5V6  CONST_26  H11  C7   C8   C5    180.00   0.0  0
+ 5V6  CONST_27  H6   O    C    C1    180.00   0.0  0
+ 5V6  Var_01    C    C1   C2   C3    -86.30  30.0  2
+ 5V6  Var_02    O1   C    C1   C2      3.84  30.0  3
+ 5V6  Var_03    H7   C10  O2   C9     60.42  30.0  3
+ 5V6  Var_04    C6   C5   C4   C3    141.55  30.0  2
+ 5V6  Var_05    C8   C5   C4   C3    -36.30  30.0  2
+ 5V6  Var_06    C6   C5   C4   C9    -39.62  30.0  2
+ 5V6  Var_07    C8   C5   C4   C9    142.53  30.0  2
+ 5V6  Var_08    C10  O2   C9   C11     1.32  30.0  2
+ 5V6  Var_09    C10  O2   C9   C4   -177.73  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

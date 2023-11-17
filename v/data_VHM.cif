@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VHM  VHM  N-[(benzyloxy)carbonyl]-L-valyl-3-cyclohexyl-N-{(2S)-1-hydroxy-3-[(3S)-2-oxopyrrolidin-3-yl]propan-2-yl}-L-alaninamide  ligand  83  39  .  2022-03-29  2023-02-15
+ VHM  VHM  N-[(benzyloxy)carbonyl]-L-valyl-3-cyclohexyl-N-{(2S)-1-hydroxy-3-[(3S)-2-oxopyrrolidin-3-yl]propan-2-yl}-L-alaninamide  ligand  83  39  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VHM
@@ -391,38 +392,97 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VHM  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- VHM  CONST_02  C4   C5   C6   C1     0.00   0.0  0
- VHM  CONST_03  C5   C4   C3   C2     0.00   0.0  0
- VHM  CONST_04  C5   C6   C1   C2     0.00   0.0  0
- VHM  CONST_05  C6   C1   C2   C3     0.00   0.0  0
- VHM  CONST_06  C6   C5   C4   C3     0.00   0.0  0
- VHM  CONST_07  C22  N23  C24  C20    0.00   0.0  0
- VHM  CONST_08  C7   C4   C3   C2   180.00   0.0  0
- VHM  CONST_09  C7   C4   C5   C6   180.00   0.0  0
- VHM  CONST_10  O26  C24  N23  C22  180.00   0.0  0
- VHM  CONST_11  H25  C3   C2   C1   180.00   0.0  0
- VHM  CONST_12  H35  C5   C6   C1   180.00   0.0  0
- VHM  CONST_13  H36  C6   C1   C2   180.00   0.0  0
- VHM  CONST_14  H1   C1   C2   C3   180.00   0.0  0
- VHM  CONST_15  H15  C2   C3   C4   180.00   0.0  0
- VHM  CONST_16  H43  N23  C24  C20  180.00   0.0  0
- VHM  CONST_17  C14  N13  C12  C11  180.00   0.0  0
- VHM  CONST_18  O33  C12  N13  C14    0.00   0.0  0
- VHM  CONST_19  C17  N16  C15  C14  180.00   0.0  0
- VHM  CONST_20  O38  C15  N16  C17    0.00   0.0  0
- VHM  CONST_21  H41  N13  C12  C11    0.00   0.0  0
- VHM  CONST_22  H42  N16  C15  C14    0.00   0.0  0
- VHM  Var_01    C18  C16  C13  C10  -27.81  30.0  1
- VHM  Var_02    C23  C18  C16  C13   63.55  30.0  1
- VHM  Var_03    C8   C23  C18  C16  -33.84  30.0  1
- VHM  Var_04    C8   C10  C13  C16  -34.08  30.0  1
- VHM  Var_05    N23  C22  C21  C20   29.35  30.0  1
- VHM  Var_06    C24  N23  C22  C21  -20.06  30.0  1
- VHM  Var_07    O8   C7   C4   C3   -64.53  30.0  2
- VHM  Var_08    O8   C9   N10  C11  172.90  30.0  1
- VHM  Var_09    H27  C31  C30  C11  177.28  30.0  3
- VHM  Var_10    H30  C32  C30  C11  174.81  30.0  3
+ VHM  CONST_01  C4   C3   C2   C1      0.00   0.0  0
+ VHM  CONST_02  C4   C5   C6   C1      0.00   0.0  0
+ VHM  CONST_03  C5   C4   C3   C2      0.00   0.0  0
+ VHM  CONST_04  C5   C6   C1   C2      0.00   0.0  0
+ VHM  CONST_05  C6   C1   C2   C3      0.00   0.0  0
+ VHM  CONST_06  C6   C5   C4   C3      0.00   0.0  0
+ VHM  CONST_07  C22  N23  C24  C20     0.00   0.0  0
+ VHM  CONST_08  C7   C4   C3   C2    180.00   0.0  0
+ VHM  CONST_09  C7   C4   C5   C6    180.00   0.0  0
+ VHM  CONST_10  O26  C24  N23  C22   180.00   0.0  0
+ VHM  CONST_11  H25  C3   C2   C1    180.00   0.0  0
+ VHM  CONST_12  H35  C5   C6   C1    180.00   0.0  0
+ VHM  CONST_13  H36  C6   C1   C2    180.00   0.0  0
+ VHM  CONST_14  H1   C1   C2   C3    180.00   0.0  0
+ VHM  CONST_15  H15  C2   C3   C4    180.00   0.0  0
+ VHM  CONST_16  H43  N23  C24  C20   180.00   0.0  0
+ VHM  CONST_17  C14  N13  C12  C11   180.00   0.0  0
+ VHM  CONST_18  O33  C12  N13  C14     0.00   0.0  0
+ VHM  CONST_19  C17  N16  C15  C14   180.00   0.0  0
+ VHM  CONST_20  O38  C15  N16  C17     0.00   0.0  0
+ VHM  CONST_21  H41  N13  C12  C11     0.00   0.0  0
+ VHM  CONST_22  H42  N16  C15  C14     0.00   0.0  0
+ VHM  Var_01    C18  C16  C13  C10   -27.81  30.0  1
+ VHM  Var_02    C23  C18  C16  C13    63.55  30.0  1
+ VHM  Var_03    C8   C23  C18  C16   -33.84  30.0  1
+ VHM  Var_04    C8   C10  C13  C16   -34.08  30.0  1
+ VHM  Var_05    N23  C22  C21  C20    29.35  30.0  1
+ VHM  Var_06    C24  N23  C22  C21   -20.06  30.0  1
+ VHM  Var_07    O8   C7   C4   C3    -64.53  30.0  2
+ VHM  Var_08    O8   C9   N10  C11   172.90  30.0  1
+ VHM  Var_09    H27  C31  C30  C11   177.28  30.0  3
+ VHM  Var_10    H30  C32  C30  C11   174.81  30.0  3
+ VHM  Var_11    C18  C23  C8   C10   -27.54  30.0  1
+ VHM  Var_12    C23  C8   C10  C13    63.38  30.0  1
+ VHM  Var_13    N23  C24  C20  C21    17.55  30.0  1
+ VHM  Var_14    C24  C20  C21  C22   -28.72  30.0  1
+ VHM  Var_15    C34  C8   C10  C13  -173.41  30.0  1
+ VHM  Var_16    C34  C8   C23  C18  -154.45  30.0  1
+ VHM  Var_17    N23  C24  C20  C19   143.23  30.0  1
+ VHM  Var_18    C22  C21  C20  C19  -152.87  30.0  1
+ VHM  Var_19    O26  C24  C20  C21  -163.54  30.0  1
+ VHM  Var_20    H21  C23  C8   C10  -150.24  30.0  1
+ VHM  Var_21    H22  C23  C8   C10    94.40  30.0  1
+ VHM  Var_22    H39  C8   C10  C13   -54.14  30.0  1
+ VHM  Var_23    H16  C20  C21  C22    83.21  30.0  1
+ VHM  Var_24    H17  C21  C20  C24    88.31  30.0  1
+ VHM  Var_25    H18  C21  C20  C24  -151.07  30.0  1
+ VHM  Var_26    C14  C34  C8   C10    66.82  30.0  3
+ VHM  Var_27    C23  C8   C34  C14  -169.44  30.0  2
+ VHM  Var_28    C24  C20  C19  C17   177.08  30.0  3
+ VHM  Var_29    C21  C20  C19  C17   -64.35  30.0  3
+ VHM  Var_30    O26  C24  C20  C19   -37.86  30.0  1
+ VHM  Var_31    H33  C34  C8   C10  -172.92  30.0  3
+ VHM  Var_32    H34  C34  C8   C10   -58.15  30.0  3
+ VHM  Var_33    H13  C19  C20  C21   173.87  30.0  2
+ VHM  Var_34    H14  C19  C20  C21    57.01  30.0  2
+ VHM  Var_35    C8   C34  C14  C15   159.20  30.0  2
+ VHM  Var_36    N16  C17  C19  C20   -60.28  30.0  2
+ VHM  Var_37    C25  C17  C19  C20   178.26  30.0  2
+ VHM  Var_38    C9   O8   C7   C4    -75.20  30.0  3
+ VHM  Var_39    N13  C14  C34  C8    -80.05  30.0  3
+ VHM  Var_40    H10  C17  C19  C20    57.48  30.0  2
+ VHM  Var_41    H7   C14  C34  C8     39.17  30.0  3
+ VHM  Var_42    C34  C14  N13  C12   162.93  30.0  3
+ VHM  Var_43    C15  C14  N13  C12   -76.26  30.0  3
+ VHM  Var_44    C9   N10  C11  C12   -61.87  30.0  2
+ VHM  Var_45    C31  C30  C11  C12   177.26  30.0  3
+ VHM  Var_46    C32  C30  C11  C12    54.36  30.0  3
+ VHM  Var_47    C25  C17  N16  C15  -122.40  30.0  3
+ VHM  Var_48    C19  C17  N16  C15   113.64  30.0  3
+ VHM  Var_49    O27  C25  C17  C19   -60.28  30.0  1
+ VHM  Var_50    C9   N10  C11  C30   176.08  30.0  2
+ VHM  Var_51    N13  C12  C11  C30  -102.07  30.0  2
+ VHM  Var_52    O33  C12  C11  C30    77.40  30.0  2
+ VHM  Var_53    N10  C11  C30  C31   -61.54  30.0  2
+ VHM  Var_54    N10  C11  C30  C32   175.55  30.0  2
+ VHM  Var_55    N16  C15  C14  C34  -111.08  30.0  3
+ VHM  Var_56    O38  C15  C14  C34    67.54  30.0  3
+ VHM  Var_57    O29  C9   O8   C7     -5.09  30.0  3
+ VHM  Var_58    N10  C9   O8   C7    174.54  30.0  3
+ VHM  Var_59    N13  C12  C11  N10   136.83  30.0  2
+ VHM  Var_60    O33  C12  C11  N10   -43.70  30.0  2
+ VHM  Var_61    N16  C15  C14  N13   126.82  30.0  3
+ VHM  Var_62    O38  C15  C14  N13   -54.56  30.0  3
+ VHM  Var_63    O27  C25  C17  N16   176.99  30.0  1
+ VHM  Var_64    H40  N10  C11  C12   100.72  30.0  2
+ VHM  Var_65    H26  C30  C11  C12   -64.08  30.0  3
+ VHM  Var_66    H44  O27  C25  C17   176.09  30.0  3
+ VHM  Var_67    H23  C25  C17  C19    61.77  30.0  1
+ VHM  Var_68    H24  C25  C17  C19   177.97  30.0  1
+ VHM  Var_69    H4   C11  C30  C31    57.13  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

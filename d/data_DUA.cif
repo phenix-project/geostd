@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DUA  DUA  2',5'-dideoxy-5'-(tritylamino)uridine  ligand  62  35  .  2021-08-08  2021-08-08  
+ DUA  DUA  2',5'-dideoxy-5'-(tritylamino)uridine  ligand  62  35  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DUA
@@ -306,59 +307,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DUA  CONST_01  C21  C22  C23  C18    0.00   0.0  0
- DUA  CONST_02  C21  C20  C19  C18    0.00   0.0  0
- DUA  CONST_03  C22  C23  C18  C19    0.00   0.0  0
- DUA  CONST_04  C22  C21  C20  C19    0.00   0.0  0
- DUA  CONST_05  C23  C18  C19  C20    0.00   0.0  0
- DUA  CONST_06  C23  C22  C21  C20    0.00   0.0  0
- DUA  CONST_07  C27  C26  C25  C24    0.00   0.0  0
- DUA  CONST_08  C27  C28  C29  C24    0.00   0.0  0
- DUA  CONST_09  C28  C29  C24  C25    0.00   0.0  0
- DUA  CONST_10  C28  C27  C26  C25    0.00   0.0  0
- DUA  CONST_11  C29  C24  C25  C26    0.00   0.0  0
- DUA  CONST_12  C29  C28  C27  C26    0.00   0.0  0
- DUA  CONST_13  C33  C34  C35  C30    0.00   0.0  0
- DUA  CONST_14  C33  C32  C31  C30    0.00   0.0  0
- DUA  CONST_15  C34  C35  C30  C31    0.00   0.0  0
- DUA  CONST_16  C34  C33  C32  C31    0.00   0.0  0
- DUA  CONST_17  C35  C30  C31  C32    0.00   0.0  0
- DUA  CONST_18  C35  C34  C33  C32    0.00   0.0  0
- DUA  CONST_19  C4   N3   C2   N1     0.00   0.0  0
- DUA  CONST_20  C5   C4   N3   C2     0.00   0.0  0
- DUA  CONST_21  C6   N1   C2   N3     0.00   0.0  0
- DUA  CONST_22  C1'  N1   C2   N3   180.00   0.0  0
- DUA  CONST_23  C34  C35  C30  C17  180.00   0.0  0
- DUA  CONST_24  C32  C31  C30  C17  180.00   0.0  0
- DUA  CONST_25  C22  C23  C18  C17  180.00   0.0  0
- DUA  CONST_26  C20  C19  C18  C17  180.00   0.0  0
- DUA  CONST_27  C26  C25  C24  C17  180.00   0.0  0
- DUA  CONST_28  C28  C29  C24  C17  180.00   0.0  0
- DUA  CONST_29  O4   C4   N3   C2   180.00   0.0  0
- DUA  CONST_30  C6   N1   C2   O2   180.00   0.0  0
- DUA  CONST_31  C1'  N1   C2   O2     0.00   0.0  0
- DUA  CONST_32  C4   N3   C2   O2   180.00   0.0  0
- DUA  CONST_33  H22  C22  C23  C18  180.00   0.0  0
- DUA  CONST_34  H20  C20  C19  C18  180.00   0.0  0
- DUA  CONST_35  H23  C23  C18  C19  180.00   0.0  0
- DUA  CONST_36  H21  C21  C20  C19  180.00   0.0  0
- DUA  CONST_37  H19  C19  C20  C21  180.00   0.0  0
- DUA  CONST_38  H26  C26  C25  C24  180.00   0.0  0
- DUA  CONST_39  H28  C28  C29  C24  180.00   0.0  0
- DUA  CONST_40  H29  C29  C24  C25  180.00   0.0  0
- DUA  CONST_41  H27  C27  C26  C25  180.00   0.0  0
- DUA  CONST_42  H25  C25  C26  C27  180.00   0.0  0
- DUA  CONST_43  H34  C34  C35  C30  180.00   0.0  0
- DUA  CONST_44  H32  C32  C31  C30  180.00   0.0  0
- DUA  CONST_45  H35  C35  C30  C31  180.00   0.0  0
- DUA  CONST_46  H33  C33  C32  C31  180.00   0.0  0
- DUA  CONST_47  H31  C31  C32  C33  180.00   0.0  0
- DUA  CONST_48  HN3  N3   C2   N1   180.00   0.0  0
- DUA  Var_01    C35  C30  C17  C18   47.96  30.0  2
- DUA  Var_02    C25  C24  C17  C18   38.74  30.0  2
- DUA  Var_03    C30  C17  C18  C19   88.73  30.0  2
- DUA  Var_04    C4'  C5'  N2   C17  169.80  30.0  3
- DUA  Var_05    C5'  N2   C17  C18  -62.79  30.0  3
+ DUA  CONST_01  C21   C22  C23  C18     0.00   0.0  0
+ DUA  CONST_02  C21   C20  C19  C18     0.00   0.0  0
+ DUA  CONST_03  C22   C23  C18  C19     0.00   0.0  0
+ DUA  CONST_04  C22   C21  C20  C19     0.00   0.0  0
+ DUA  CONST_05  C23   C18  C19  C20     0.00   0.0  0
+ DUA  CONST_06  C23   C22  C21  C20     0.00   0.0  0
+ DUA  CONST_07  C27   C26  C25  C24     0.00   0.0  0
+ DUA  CONST_08  C27   C28  C29  C24     0.00   0.0  0
+ DUA  CONST_09  C28   C29  C24  C25     0.00   0.0  0
+ DUA  CONST_10  C28   C27  C26  C25     0.00   0.0  0
+ DUA  CONST_11  C29   C24  C25  C26     0.00   0.0  0
+ DUA  CONST_12  C29   C28  C27  C26     0.00   0.0  0
+ DUA  CONST_13  C33   C34  C35  C30     0.00   0.0  0
+ DUA  CONST_14  C33   C32  C31  C30     0.00   0.0  0
+ DUA  CONST_15  C34   C35  C30  C31     0.00   0.0  0
+ DUA  CONST_16  C34   C33  C32  C31     0.00   0.0  0
+ DUA  CONST_17  C35   C30  C31  C32     0.00   0.0  0
+ DUA  CONST_18  C35   C34  C33  C32     0.00   0.0  0
+ DUA  CONST_19  C4    N3   C2   N1      0.00   0.0  0
+ DUA  CONST_20  C5    C4   N3   C2      0.00   0.0  0
+ DUA  CONST_21  C6    N1   C2   N3      0.00   0.0  0
+ DUA  CONST_22  C1'   N1   C2   N3    180.00   0.0  0
+ DUA  CONST_23  C34   C35  C30  C17   180.00   0.0  0
+ DUA  CONST_24  C32   C31  C30  C17   180.00   0.0  0
+ DUA  CONST_25  C22   C23  C18  C17   180.00   0.0  0
+ DUA  CONST_26  C20   C19  C18  C17   180.00   0.0  0
+ DUA  CONST_27  C26   C25  C24  C17   180.00   0.0  0
+ DUA  CONST_28  C28   C29  C24  C17   180.00   0.0  0
+ DUA  CONST_29  O4    C4   N3   C2    180.00   0.0  0
+ DUA  CONST_30  C6    N1   C2   O2    180.00   0.0  0
+ DUA  CONST_31  C1'   N1   C2   O2      0.00   0.0  0
+ DUA  CONST_32  C4    N3   C2   O2    180.00   0.0  0
+ DUA  CONST_33  H22   C22  C23  C18   180.00   0.0  0
+ DUA  CONST_34  H20   C20  C19  C18   180.00   0.0  0
+ DUA  CONST_35  H23   C23  C18  C19   180.00   0.0  0
+ DUA  CONST_36  H21   C21  C20  C19   180.00   0.0  0
+ DUA  CONST_37  H19   C19  C20  C21   180.00   0.0  0
+ DUA  CONST_38  H26   C26  C25  C24   180.00   0.0  0
+ DUA  CONST_39  H28   C28  C29  C24   180.00   0.0  0
+ DUA  CONST_40  H29   C29  C24  C25   180.00   0.0  0
+ DUA  CONST_41  H27   C27  C26  C25   180.00   0.0  0
+ DUA  CONST_42  H25   C25  C26  C27   180.00   0.0  0
+ DUA  CONST_43  H34   C34  C35  C30   180.00   0.0  0
+ DUA  CONST_44  H32   C32  C31  C30   180.00   0.0  0
+ DUA  CONST_45  H35   C35  C30  C31   180.00   0.0  0
+ DUA  CONST_46  H33   C33  C32  C31   180.00   0.0  0
+ DUA  CONST_47  H31   C31  C32  C33   180.00   0.0  0
+ DUA  CONST_48  HN3   N3   C2   N1    180.00   0.0  0
+ DUA  Var_01    C35   C30  C17  C18    47.96  30.0  2
+ DUA  Var_02    C25   C24  C17  C18    38.74  30.0  2
+ DUA  Var_03    C30   C17  C18  C19    88.73  30.0  2
+ DUA  Var_04    C4'   C5'  N2   C17   169.80  30.0  3
+ DUA  Var_05    C5'   N2   C17  C18   -62.79  30.0  3
+ DUA  Var_06    C4'   O4'  C1'  N1   -139.64  30.0  1
+ DUA  Var_07    C3'   C2'  C1'  N1    112.37  30.0  1
+ DUA  Var_08    O4'   C1'  N1   C2   -115.17  30.0  3
+ DUA  Var_09    C2'   C1'  N1   C2    126.28  30.0  3
+ DUA  Var_10    O4'   C1'  N1   C6     61.38  30.0  3
+ DUA  Var_11    C2'   C1'  N1   C6    -57.17  30.0  3
+ DUA  Var_12    C3'   C4'  O4'  C1'    32.90  30.0  1
+ DUA  Var_13    C4'   C3'  C2'  C1'    24.69  30.0  1
+ DUA  Var_14    C4'   O4'  C1'  C2'   -16.45  30.0  1
+ DUA  Var_15    O4'   C4'  C3'  C2'   -34.95  30.0  1
+ DUA  Var_16    O4'   C1'  C2'  C3'    -6.56  30.0  1
+ DUA  Var_17    C1'   C2'  C3'  O1    143.39  30.0  1
+ DUA  Var_18    O4'   C4'  C3'  O1   -157.48  30.0  1
+ DUA  Var_19    C5'   C4'  O4'  C1'   155.46  30.0  1
+ DUA  Var_20    C5'   C4'  C3'  C2'  -155.38  30.0  1
+ DUA  Var_21    H5    C5   C6   N1   -179.79  30.0  1
+ DUA  Var_22    H2'   C2'  C1'  N1   -131.08  30.0  1
+ DUA  Var_23    H2'A  C2'  C1'  N1    -11.26  30.0  1
+ DUA  Var_24    H6    C6   N1   C2    178.84  30.0  1
+ DUA  Var_25    H1'   C1'  N1   C2      3.67  30.0  3
+ DUA  Var_26    H4'   C4'  O4'  C1'   -83.14  30.0  1
+ DUA  Var_27    H3'   C3'  C2'  C1'   -90.75  30.0  1
+ DUA  Var_28    C5'   C4'  C3'  O1     82.09  30.0  1
+ DUA  Var_29    C3'   C4'  C5'  N2   -179.18  30.0  3
+ DUA  Var_30    O4'   C4'  C5'  N2     63.63  30.0  3
+ DUA  Var_31    HO1   O1   C3'  C2'    76.15  30.0  3
+ DUA  Var_32    H5'   C5'  C4'  C3'    60.23  30.0  1
+ DUA  Var_33    H5'A  C5'  C4'  C3'   -54.53  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

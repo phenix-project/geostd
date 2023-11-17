@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2VM  2VM  '(2R)-6-bromo-9-(2-{[(1S)-1-carboxy-2-phenylethyl]amino}-2-oxoethyl)-2,3,4,9-tetrahydro-1H-carbazole-2-carboxylic acid'  ligand  55  32  .  2021-08-04  2022-11-17
+ 2VM  2VM  '(2R)-6-bromo-9-(2-{[(1S)-1-carboxy-2-phenylethyl]amino}-2-oxoethyl)-2,3,4,9-tetrahydro-1H-carbazole-2-carboxylic acid'  ligand  55  32  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_2VM
@@ -279,56 +280,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2VM  CONST_01  CAF  CAE  CAI  CAH  180.00   0.0  0
- 2VM  CONST_02  CAD  CAE  CAI  CAH    0.00   0.0  0
- 2VM  CONST_03  CAE  CAD  NAG  CAH    0.00   0.0  0
- 2VM  CONST_04  CAC  CAD  NAG  CAH  180.00   0.0  0
- 2VM  CONST_05  CAA  CAF  CAE  CAI  180.00   0.0  0
- 2VM  CONST_06  NAG  CAD  CAE  CAI    0.00   0.0  0
- 2VM  CONST_07  CAC  CAD  CAE  CAI  180.00   0.0  0
- 2VM  CONST_08  CAD  NAG  CAH  CAI    0.00   0.0  0
- 2VM  CONST_09  NAG  CAH  CAI  CAE    0.00   0.0  0
- 2VM  CONST_10  CAB  CAA  CAF  CAE    0.00   0.0  0
- 2VM  CONST_11  CAB  CAC  CAD  CAE    0.00   0.0  0
- 2VM  CONST_12  NAG  CAD  CAE  CAF  180.00   0.0  0
- 2VM  CONST_13  CAC  CAD  CAE  CAF    0.00   0.0  0
- 2VM  CONST_14  CAC  CAB  CAA  CAF    0.00   0.0  0
- 2VM  CONST_15  CAD  CAE  CAF  CAA    0.00   0.0  0
- 2VM  CONST_16  CAD  CAC  CAB  CAA    0.00   0.0  0
- 2VM  CONST_17  NAG  CAD  CAC  CAB  180.00   0.0  0
- 2VM  CONST_18  CZ   CE2  CD2  CG     0.00   0.0  0
- 2VM  CONST_19  CZ   CE1  CD1  CG     0.00   0.0  0
- 2VM  CONST_20  CE2  CZ   CE1  CD1    0.00   0.0  0
- 2VM  CONST_21  CE2  CD2  CG   CD1    0.00   0.0  0
- 2VM  CONST_22  CD2  CE2  CZ   CE1    0.00   0.0  0
- 2VM  CONST_23  CD2  CG   CD1  CE1    0.00   0.0  0
- 2VM  CONST_24  CAO  NAG  CAH  CAJ    0.00   0.0  0
- 2VM  CONST_25  CAO  NAG  CAH  CAI  180.00   0.0  0
- 2VM  CONST_26  BR   CAA  CAF  CAE  180.00   0.0  0
- 2VM  CONST_27  CAO  NAG  CAD  CAE  180.00   0.0  0
- 2VM  CONST_28  CAC  CAB  CAA  BR   180.00   0.0  0
- 2VM  CONST_29  CAO  NAG  CAD  CAC    0.00   0.0  0
- 2VM  CONST_30  CE2  CD2  CG   CB   180.00   0.0  0
- 2VM  CONST_31  CE1  CD1  CG   CB   180.00   0.0  0
- 2VM  CONST_32  H9   CAF  CAE  CAI    0.00   0.0  0
- 2VM  CONST_33  H11  CAC  CAD  CAE  180.00   0.0  0
- 2VM  CONST_34  H10  CAB  CAA  CAF  180.00   0.0  0
- 2VM  CONST_35  H22  CE2  CD2  CG   180.00   0.0  0
- 2VM  CONST_36  H20  CE1  CD1  CG   180.00   0.0  0
- 2VM  CONST_37  H21  CZ   CE1  CD1  180.00   0.0  0
- 2VM  CONST_38  H23  CD2  CG   CD1  180.00   0.0  0
- 2VM  CONST_39  H19  CD1  CE1  CZ   180.00   0.0  0
- 2VM  CONST_40  H6   OBE  CBD  CAK  180.00   0.0  0
- 2VM  CONST_41  CA   N    CAP  CAO  180.00   0.0  0
- 2VM  CONST_42  CA   N    CAP  OAQ    0.00   0.0  0
- 2VM  CONST_43  H14  N    CAP  CAO    0.00   0.0  0
- 2VM  CONST_44  H16  OXT  C    CA   180.00   0.0  0
- 2VM  Var_01    CAE  CAI  CAM  CAL  163.66  30.0  1
- 2VM  Var_02    CAI  CAM  CAL  CAK   46.30  30.0  1
- 2VM  Var_03    CAI  CAH  CAJ  CAK  -14.22  30.0  1
- 2VM  Var_04    CAP  CAO  NAG  CAH   88.33  30.0  2
- 2VM  Var_05    CD2  CG   CB   CA   128.02  30.0  2
- 2VM  Var_06    N    CAP  CAO  NAG    0.12  30.0  2
+ 2VM  CONST_01  CAF  CAE  CAI  CAH   180.00   0.0  0
+ 2VM  CONST_02  CAD  CAE  CAI  CAH     0.00   0.0  0
+ 2VM  CONST_03  CAE  CAD  NAG  CAH     0.00   0.0  0
+ 2VM  CONST_04  CAC  CAD  NAG  CAH   180.00   0.0  0
+ 2VM  CONST_05  CAA  CAF  CAE  CAI   180.00   0.0  0
+ 2VM  CONST_06  NAG  CAD  CAE  CAI     0.00   0.0  0
+ 2VM  CONST_07  CAC  CAD  CAE  CAI   180.00   0.0  0
+ 2VM  CONST_08  CAD  NAG  CAH  CAI     0.00   0.0  0
+ 2VM  CONST_09  NAG  CAH  CAI  CAE     0.00   0.0  0
+ 2VM  CONST_10  CAB  CAA  CAF  CAE     0.00   0.0  0
+ 2VM  CONST_11  CAB  CAC  CAD  CAE     0.00   0.0  0
+ 2VM  CONST_12  NAG  CAD  CAE  CAF   180.00   0.0  0
+ 2VM  CONST_13  CAC  CAD  CAE  CAF     0.00   0.0  0
+ 2VM  CONST_14  CAC  CAB  CAA  CAF     0.00   0.0  0
+ 2VM  CONST_15  CAD  CAE  CAF  CAA     0.00   0.0  0
+ 2VM  CONST_16  CAD  CAC  CAB  CAA     0.00   0.0  0
+ 2VM  CONST_17  NAG  CAD  CAC  CAB   180.00   0.0  0
+ 2VM  CONST_18  CZ   CE2  CD2  CG      0.00   0.0  0
+ 2VM  CONST_19  CZ   CE1  CD1  CG      0.00   0.0  0
+ 2VM  CONST_20  CE2  CZ   CE1  CD1     0.00   0.0  0
+ 2VM  CONST_21  CE2  CD2  CG   CD1     0.00   0.0  0
+ 2VM  CONST_22  CD2  CE2  CZ   CE1     0.00   0.0  0
+ 2VM  CONST_23  CD2  CG   CD1  CE1     0.00   0.0  0
+ 2VM  CONST_24  CAO  NAG  CAH  CAJ     0.00   0.0  0
+ 2VM  CONST_25  CAO  NAG  CAH  CAI   180.00   0.0  0
+ 2VM  CONST_26  BR   CAA  CAF  CAE   180.00   0.0  0
+ 2VM  CONST_27  CAO  NAG  CAD  CAE   180.00   0.0  0
+ 2VM  CONST_28  CAC  CAB  CAA  BR    180.00   0.0  0
+ 2VM  CONST_29  CAO  NAG  CAD  CAC     0.00   0.0  0
+ 2VM  CONST_30  CE2  CD2  CG   CB    180.00   0.0  0
+ 2VM  CONST_31  CE1  CD1  CG   CB    180.00   0.0  0
+ 2VM  CONST_32  H9   CAF  CAE  CAI     0.00   0.0  0
+ 2VM  CONST_33  H11  CAC  CAD  CAE   180.00   0.0  0
+ 2VM  CONST_34  H10  CAB  CAA  CAF   180.00   0.0  0
+ 2VM  CONST_35  H22  CE2  CD2  CG    180.00   0.0  0
+ 2VM  CONST_36  H20  CE1  CD1  CG    180.00   0.0  0
+ 2VM  CONST_37  H21  CZ   CE1  CD1   180.00   0.0  0
+ 2VM  CONST_38  H23  CD2  CG   CD1   180.00   0.0  0
+ 2VM  CONST_39  H19  CD1  CE1  CZ    180.00   0.0  0
+ 2VM  CONST_40  H6   OBE  CBD  CAK   180.00   0.0  0
+ 2VM  CONST_41  CA   N    CAP  CAO   180.00   0.0  0
+ 2VM  CONST_42  CA   N    CAP  OAQ     0.00   0.0  0
+ 2VM  CONST_43  H14  N    CAP  CAO     0.00   0.0  0
+ 2VM  CONST_44  H16  OXT  C    CA    180.00   0.0  0
+ 2VM  Var_01    CAE  CAI  CAM  CAL   163.66  30.0  1
+ 2VM  Var_02    CAI  CAM  CAL  CAK    46.30  30.0  1
+ 2VM  Var_03    CAI  CAH  CAJ  CAK   -14.22  30.0  1
+ 2VM  Var_04    CAP  CAO  NAG  CAH    88.33  30.0  2
+ 2VM  Var_05    CD2  CG   CB   CA    128.02  30.0  2
+ 2VM  Var_06    N    CAP  CAO  NAG     0.12  30.0  2
+ 2VM  Var_07    CAJ  CAK  CAL  CAM   -63.64  30.0  1
+ 2VM  Var_08    CAH  CAJ  CAK  CAL    44.57  30.0  1
+ 2VM  Var_09    CBD  CAK  CAL  CAM   170.76  30.0  1
+ 2VM  Var_10    CAH  CAJ  CAK  CBD   170.41  30.0  1
+ 2VM  Var_11    H5   CAK  CAL  CAM    54.45  30.0  1
+ 2VM  Var_12    H7   CAJ  CAK  CAL   166.32  30.0  1
+ 2VM  Var_13    H8   CAJ  CAK  CAL   -76.26  30.0  1
+ 2VM  Var_14    H3   CAL  CAK  CAJ   174.52  30.0  1
+ 2VM  Var_15    H4   CAL  CAK  CAJ    57.26  30.0  1
+ 2VM  Var_16    OBF  CBD  CAK  CAL   -10.39  30.0  2
+ 2VM  Var_17    OBE  CBD  CAK  CAL   171.10  30.0  2
+ 2VM  Var_18    CAJ  CAK  CBD  OBF  -136.14  30.0  3
+ 2VM  Var_19    CAJ  CAK  CBD  OBE    45.35  30.0  3
+ 2VM  Var_20    CG   CB   CA   N     -53.65  30.0  1
+ 2VM  Var_21    CG   CB   CA   C     179.59  30.0  1
+ 2VM  Var_22    H15  CA   CB   CG     64.41  30.0  3
+ 2VM  Var_23    CB   CA   N    CAP   138.20  30.0  1
+ 2VM  Var_24    C    CA   N    CAP   -96.41  30.0  1
+ 2VM  Var_25    O    C    CA   N    -167.35  30.0  3
+ 2VM  Var_26    OXT  C    CA   N      14.34  30.0  3
+ 2VM  Var_27    CB   CA   C    OXT   139.74  30.0  1
+ 2VM  Var_28    CB   CA   C    O     -41.95  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

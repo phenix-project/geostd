@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EM8  EM8  '(3~{R})-3-[3-[2-aminocarbonyl-6-(trifluoromethyloxy)indol-1-yl]phenyl]butanoic acid'  ligand  46  29  .  2021-08-09  2021-08-09  
+ EM8  EM8  '(3~{R})-3-[3-[2-aminocarbonyl-6-(trifluoromethyloxy)indol-1-yl]phenyl]butanoic acid'  ligand  46  29  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EM8
@@ -247,47 +248,65 @@ _chem_comp_tor.period
  EM8  CONST_06  C12  C7   C8   C9      0.00   0.0  0
  EM8  CONST_07  C12  C11  C10  C9      0.00   0.0  0
  EM8  CONST_08  N13  C11  C10  C9    180.00   0.0  0
- EM8  CONST_11  C15  C14  N13  C11     0.00   0.0  0
- EM8  CONST_12  C19  C14  N13  C11   180.00   0.0  0
- EM8  CONST_13  C20  C21  N13  C11   180.00   0.0  0
- EM8  CONST_16  C17  C16  C15  C14     0.00   0.0  0
- EM8  CONST_17  C17  C18  C19  C14     0.00   0.0  0
- EM8  CONST_18  C21  C20  C19  C14     0.00   0.0  0
- EM8  CONST_19  C20  C21  N13  C14     0.00   0.0  0
- EM8  CONST_20  C18  C17  C16  C15     0.00   0.0  0
- EM8  CONST_21  C18  C19  C14  C15     0.00   0.0  0
- EM8  CONST_22  C20  C19  C14  C15   180.00   0.0  0
- EM8  CONST_23  C21  N13  C14  C15   180.00   0.0  0
- EM8  CONST_24  C19  C18  C17  C16     0.00   0.0  0
- EM8  CONST_25  C19  C14  C15  C16     0.00   0.0  0
- EM8  CONST_26  N13  C14  C15  C16   180.00   0.0  0
- EM8  CONST_27  C21  N13  C14  C19     0.00   0.0  0
- EM8  CONST_28  N13  C21  C20  C19     0.00   0.0  0
- EM8  CONST_29  C17  C18  C19  C20   180.00   0.0  0
- EM8  CONST_30  N13  C14  C19  C20     0.00   0.0  0
- EM8  CONST_31  C18  C19  C20  C21   180.00   0.0  0
- EM8  CONST_32  C18  C19  C14  N13   180.00   0.0  0
- EM8  CONST_33  C9   C8   C7   C2    180.00   0.0  0
- EM8  CONST_34  C11  C12  C7   C2    180.00   0.0  0
- EM8  CONST_35  C22  C21  N13  C11     0.00   0.0  0
- EM8  CONST_36  O25  C16  C15  C14   180.00   0.0  0
- EM8  CONST_37  C22  C21  N13  C14   180.00   0.0  0
- EM8  CONST_38  C22  C21  C20  C19   180.00   0.0  0
- EM8  CONST_39  O25  C16  C17  C18   180.00   0.0  0
- EM8  CONST_40  H8   C9   C8   C7    180.00   0.0  0
- EM8  CONST_41  H10  C12  C7   C8    180.00   0.0  0
- EM8  CONST_42  H9   C10  C9   C8    180.00   0.0  0
- EM8  CONST_43  H7   C8   C9   C10   180.00   0.0  0
- EM8  CONST_44  H15  C18  C19  C14   180.00   0.0  0
- EM8  CONST_45  H12  C20  C19  C14   180.00   0.0  0
- EM8  CONST_46  H14  C17  C16  C15   180.00   0.0  0
- EM8  CONST_47  H11  C15  C14  C19   180.00   0.0  0
- EM8  CONST_48  H16  N24  C22  C21     0.00   0.0  0
- EM8  CONST_49  H17  N24  C22  C21   180.00   0.0  0
- EM8  CONST_50  H13  O6   C4   C3    180.00   0.0  0
+ EM8  CONST_09  C15  C14  N13  C11     0.00   0.0  0
+ EM8  CONST_10  C19  C14  N13  C11   180.00   0.0  0
+ EM8  CONST_11  C20  C21  N13  C11   180.00   0.0  0
+ EM8  CONST_12  C17  C16  C15  C14     0.00   0.0  0
+ EM8  CONST_13  C17  C18  C19  C14     0.00   0.0  0
+ EM8  CONST_14  C21  C20  C19  C14     0.00   0.0  0
+ EM8  CONST_15  C20  C21  N13  C14     0.00   0.0  0
+ EM8  CONST_16  C18  C17  C16  C15     0.00   0.0  0
+ EM8  CONST_17  C18  C19  C14  C15     0.00   0.0  0
+ EM8  CONST_18  C20  C19  C14  C15   180.00   0.0  0
+ EM8  CONST_19  C21  N13  C14  C15   180.00   0.0  0
+ EM8  CONST_20  C19  C18  C17  C16     0.00   0.0  0
+ EM8  CONST_21  C19  C14  C15  C16     0.00   0.0  0
+ EM8  CONST_22  N13  C14  C15  C16   180.00   0.0  0
+ EM8  CONST_23  C21  N13  C14  C19     0.00   0.0  0
+ EM8  CONST_24  N13  C21  C20  C19     0.00   0.0  0
+ EM8  CONST_25  C17  C18  C19  C20   180.00   0.0  0
+ EM8  CONST_26  N13  C14  C19  C20     0.00   0.0  0
+ EM8  CONST_27  C18  C19  C20  C21   180.00   0.0  0
+ EM8  CONST_28  C18  C19  C14  N13   180.00   0.0  0
+ EM8  CONST_29  C9   C8   C7   C2    180.00   0.0  0
+ EM8  CONST_30  C11  C12  C7   C2    180.00   0.0  0
+ EM8  CONST_31  C22  C21  N13  C11     0.00   0.0  0
+ EM8  CONST_32  O25  C16  C15  C14   180.00   0.0  0
+ EM8  CONST_33  C22  C21  N13  C14   180.00   0.0  0
+ EM8  CONST_34  C22  C21  C20  C19   180.00   0.0  0
+ EM8  CONST_35  O25  C16  C17  C18   180.00   0.0  0
+ EM8  CONST_36  H8   C9   C8   C7    180.00   0.0  0
+ EM8  CONST_37  H10  C12  C7   C8    180.00   0.0  0
+ EM8  CONST_38  H9   C10  C9   C8    180.00   0.0  0
+ EM8  CONST_39  H7   C8   C9   C10   180.00   0.0  0
+ EM8  CONST_40  H15  C18  C19  C14   180.00   0.0  0
+ EM8  CONST_41  H12  C20  C19  C14   180.00   0.0  0
+ EM8  CONST_42  H14  C17  C16  C15   180.00   0.0  0
+ EM8  CONST_43  H11  C15  C14  C19   180.00   0.0  0
+ EM8  CONST_44  H16  N24  C22  C21     0.00   0.0  0
+ EM8  CONST_45  H17  N24  C22  C21   180.00   0.0  0
+ EM8  CONST_46  H13  O6   C4   C3    180.00   0.0  0
  EM8  Var_01    N24  C22  C21  C20    33.52  30.0  2
  EM8  Var_02    F27  C26  O25  C16  -178.48  30.0  3
  EM8  Var_03    O5   C4   C3   C2     22.77  30.0  3
+ EM8  Var_04    C14  N13  C11  C10    65.63  30.0  2
+ EM8  Var_05    C21  N13  C11  C10  -123.33  30.0  2
+ EM8  Var_06    C14  N13  C11  C12  -112.14  30.0  2
+ EM8  Var_07    C21  N13  C11  C12    58.90  30.0  2
+ EM8  Var_08    C8   C7   C2   C1     63.39  30.0  2
+ EM8  Var_09    C12  C7   C2   C1   -116.57  30.0  2
+ EM8  Var_10    C8   C7   C2   C3    -60.93  30.0  2
+ EM8  Var_11    C12  C7   C2   C3    119.10  30.0  2
+ EM8  Var_12    C26  O25  C16  C15    93.01  30.0  2
+ EM8  Var_13    C26  O25  C16  C17   -89.66  30.0  2
+ EM8  Var_14    H4   C2   C7   C8   -178.38  30.0  2
+ EM8  Var_15    C4   C3   C2   C7   -168.11  30.0  3
+ EM8  Var_16    H1   C1   C2   C7    -63.13  30.0  3
+ EM8  Var_17    H2   C1   C2   C7     56.81  30.0  3
+ EM8  Var_18    H3   C1   C2   C7    176.50  30.0  3
+ EM8  Var_19    H5   C3   C2   C7    -49.02  30.0  3
+ EM8  Var_20    H6   C3   C2   C7     67.76  30.0  3
+ EM8  Var_21    C4   C3   C2   C1     68.19  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MS4  MS4  '3-chloro-2'-cyano-5'-(1H-1,2,4-triazol-1-ylmethyl)biphenyl-4-yl sulfamate'  ligand  38  26  .  2021-08-14  2021-08-14  
+ MS4  MS4  '3-chloro-2'-cyano-5'-(1H-1,2,4-triazol-1-ylmethyl)biphenyl-4-yl sulfamate'  ligand  38  26  .  2021-08-14  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_MS4
@@ -207,50 +208,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MS4  CONST_01  N5    N4   C1   N3     0.00   0.0  0
- MS4  CONST_02  N4    N5   C2   N3     0.00   0.0  0
- MS4  CONST_03  C2    N3   C1   N4     0.00   0.0  0
- MS4  CONST_04  C1    N3   C2   N5     0.00   0.0  0
- MS4  CONST_05  C2    N5   N4   C1     0.00   0.0  0
- MS4  CONST_06  C6    C5   C4   C3     0.00   0.0  0
- MS4  CONST_07  C6    C7   C8   C3     0.00   0.0  0
- MS4  CONST_08  CAV   C7   C8   C3   180.00   0.0  0
- MS4  CONST_09  C7    C8   C3   C4     0.00   0.0  0
- MS4  CONST_10  C7    C6   C5   C4     0.00   0.0  0
- MS4  CONST_11  C8    C3   C4   C5     0.00   0.0  0
- MS4  CONST_12  C8    C7   C6   C5     0.00   0.0  0
- MS4  CONST_13  CAV   C7   C6   C5   180.00   0.0  0
- MS4  CONST_16  C13   C12  CAV  C7   180.00   0.0  0
- MS4  CONST_17  C15   C16  CAV  C7   180.00   0.0  0
- MS4  CONST_20  C15   C14  C13  C12    0.00   0.0  0
- MS4  CONST_21  C15   C16  CAV  C12    0.00   0.0  0
- MS4  CONST_22  C16   CAV  C12  C13    0.00   0.0  0
- MS4  CONST_23  C16   C15  C14  C13    0.00   0.0  0
- MS4  CONST_24  CAV   C12  C13  C14    0.00   0.0  0
- MS4  CONST_25  CAV   C16  C15  C14    0.00   0.0  0
- MS4  CONST_26  C12   C13  C14  O3   180.00   0.0  0
- MS4  CONST_27  C16   C15  C14  O3   180.00   0.0  0
- MS4  CONST_28  CAO   N5   C2   N3   180.00   0.0  0
- MS4  CONST_29  CAO   N5   N4   C1   180.00   0.0  0
- MS4  CONST_30  C9    C6   C5   C4   180.00   0.0  0
- MS4  CONST_31  CAO   C3   C4   C5   180.00   0.0  0
- MS4  CONST_32  CAO   C3   C8   C7   180.00   0.0  0
- MS4  CONST_33  C9    C6   C7   C8   180.00   0.0  0
- MS4  CONST_34  CAV   C7   C6   C9     0.00   0.0  0
- MS4  CONST_35  CAV   C12  C13  CL   180.00   0.0  0
- MS4  CONST_36  C15   C14  C13  CL   180.00   0.0  0
- MS4  CONST_37  H2    C2   N5   N4   180.00   0.0  0
- MS4  CONST_38  H1    C1   N4   N5   180.00   0.0  0
- MS4  CONST_39  H5    C5   C4   C3   180.00   0.0  0
- MS4  CONST_40  H8    C8   C3   C4   180.00   0.0  0
- MS4  CONST_41  H4    C4   C5   C6   180.00   0.0  0
- MS4  CONST_42  H12   C12  CAV  C7     0.00   0.0  0
- MS4  CONST_43  H16   C16  CAV  C7     0.00   0.0  0
- MS4  CONST_44  H15   C15  C14  C13  180.00   0.0  0
- MS4  Var_01    C3    CAO  N5   N4   -64.94  30.0  2
- MS4  Var_02    C4    C3   CAO  N5   115.15  30.0  2
- MS4  Var_03    C13   C14  O3   S2    94.02  30.0  2
- MS4  Var_04    H11N  N1   S2   O1   173.32  30.0  3
+ MS4  CONST_01  N5    N4   C1   N3      0.00   0.0  0
+ MS4  CONST_02  N4    N5   C2   N3      0.00   0.0  0
+ MS4  CONST_03  C2    N3   C1   N4      0.00   0.0  0
+ MS4  CONST_04  C1    N3   C2   N5      0.00   0.0  0
+ MS4  CONST_05  C2    N5   N4   C1      0.00   0.0  0
+ MS4  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ MS4  CONST_07  C6    C7   C8   C3      0.00   0.0  0
+ MS4  CONST_08  CAV   C7   C8   C3    180.00   0.0  0
+ MS4  CONST_09  C7    C8   C3   C4      0.00   0.0  0
+ MS4  CONST_10  C7    C6   C5   C4      0.00   0.0  0
+ MS4  CONST_11  C8    C3   C4   C5      0.00   0.0  0
+ MS4  CONST_12  C8    C7   C6   C5      0.00   0.0  0
+ MS4  CONST_13  CAV   C7   C6   C5    180.00   0.0  0
+ MS4  CONST_14  C13   C12  CAV  C7    180.00   0.0  0
+ MS4  CONST_15  C15   C16  CAV  C7    180.00   0.0  0
+ MS4  CONST_16  C15   C14  C13  C12     0.00   0.0  0
+ MS4  CONST_17  C15   C16  CAV  C12     0.00   0.0  0
+ MS4  CONST_18  C16   CAV  C12  C13     0.00   0.0  0
+ MS4  CONST_19  C16   C15  C14  C13     0.00   0.0  0
+ MS4  CONST_20  CAV   C12  C13  C14     0.00   0.0  0
+ MS4  CONST_21  CAV   C16  C15  C14     0.00   0.0  0
+ MS4  CONST_22  C12   C13  C14  O3    180.00   0.0  0
+ MS4  CONST_23  C16   C15  C14  O3    180.00   0.0  0
+ MS4  CONST_24  CAO   N5   C2   N3    180.00   0.0  0
+ MS4  CONST_25  CAO   N5   N4   C1    180.00   0.0  0
+ MS4  CONST_26  C9    C6   C5   C4    180.00   0.0  0
+ MS4  CONST_27  CAO   C3   C4   C5    180.00   0.0  0
+ MS4  CONST_28  CAO   C3   C8   C7    180.00   0.0  0
+ MS4  CONST_29  C9    C6   C7   C8    180.00   0.0  0
+ MS4  CONST_30  CAV   C7   C6   C9      0.00   0.0  0
+ MS4  CONST_31  CAV   C12  C13  CL    180.00   0.0  0
+ MS4  CONST_32  C15   C14  C13  CL    180.00   0.0  0
+ MS4  CONST_33  H2    C2   N5   N4    180.00   0.0  0
+ MS4  CONST_34  H1    C1   N4   N5    180.00   0.0  0
+ MS4  CONST_35  H5    C5   C4   C3    180.00   0.0  0
+ MS4  CONST_36  H8    C8   C3   C4    180.00   0.0  0
+ MS4  CONST_37  H4    C4   C5   C6    180.00   0.0  0
+ MS4  CONST_38  H12   C12  CAV  C7      0.00   0.0  0
+ MS4  CONST_39  H16   C16  CAV  C7      0.00   0.0  0
+ MS4  CONST_40  H15   C15  C14  C13   180.00   0.0  0
+ MS4  Var_01    C3    CAO  N5   N4    -64.94  30.0  2
+ MS4  Var_02    C4    C3   CAO  N5    115.15  30.0  2
+ MS4  Var_03    C13   C14  O3   S2     94.02  30.0  2
+ MS4  Var_04    H11N  N1   S2   O1    173.32  30.0  3
+ MS4  Var_05    C12   CAV  C7   C6    -52.84  30.0  2
+ MS4  Var_06    C16   CAV  C7   C6    128.49  30.0  2
+ MS4  Var_07    C12   CAV  C7   C8    128.22  30.0  2
+ MS4  Var_08    C16   CAV  C7   C8    -50.44  30.0  2
+ MS4  Var_09    C14   O3   S2   O1   -168.56  30.0  2
+ MS4  Var_10    C14   O3   S2   O2    -38.36  30.0  2
+ MS4  Var_11    C14   O3   S2   N1     77.15  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

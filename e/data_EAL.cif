@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EAL  EAL  N-[(1S)-1-carboxy-3-phenylpropyl]-L-alanyl-L-proline  ligand  47  25  .  2022-03-18  2022-03-18
+ EAL  EAL  N-[(1S)-1-carboxy-3-phenylpropyl]-L-alanyl-L-proline  ligand  47  25  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EAL
@@ -247,28 +248,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EAL  CONST_01  C19  C18  C17  C16     0.00   0.0  0
- EAL  CONST_02  C19  C20  C21  C16     0.00   0.0  0
- EAL  CONST_03  C20  C21  C16  C17     0.00   0.0  0
- EAL  CONST_04  C20  C19  C18  C17     0.00   0.0  0
- EAL  CONST_05  C21  C16  C17  C18     0.00   0.0  0
- EAL  CONST_06  C21  C20  C19  C18     0.00   0.0  0
- EAL  CONST_07  C18  C17  C16  C15   180.00   0.0  0
- EAL  CONST_08  C20  C21  C16  C15   180.00   0.0  0
- EAL  CONST_09  H18  C18  C17  C16   180.00   0.0  0
- EAL  CONST_10  H20  C20  C21  C16   180.00   0.0  0
- EAL  CONST_11  H21  C21  C16  C17   180.00   0.0  0
- EAL  CONST_12  H19  C19  C18  C17   180.00   0.0  0
- EAL  CONST_13  H17  C17  C18  C19   180.00   0.0  0
- EAL  CONST_14  O1   C1   N2   C5      0.00   0.0  0
- EAL  CONST_15  C2   C1   N2   C5    180.00   0.0  0
- EAL  CONST_16  O1   C1   N2   C8    180.00   0.0  0
- EAL  CONST_17  C2   C1   N2   C8      0.00   0.0  0
- EAL  Var_01    C6   C7   C8   N2    -35.25  30.0  1
- EAL  Var_02    C7   C8   N2   C5     21.43  30.0  1
- EAL  Var_03    C8   C7   C6   C5     36.95  30.0  1
- EAL  Var_04    C17  C16  C15  C14    97.42  30.0  2
- EAL  Var_05    C16  C15  C14  C4   -174.09  30.0  3
+ EAL  CONST_01  C19  C18  C17  C16      0.00   0.0  0
+ EAL  CONST_02  C19  C20  C21  C16      0.00   0.0  0
+ EAL  CONST_03  C20  C21  C16  C17      0.00   0.0  0
+ EAL  CONST_04  C20  C19  C18  C17      0.00   0.0  0
+ EAL  CONST_05  C21  C16  C17  C18      0.00   0.0  0
+ EAL  CONST_06  C21  C20  C19  C18      0.00   0.0  0
+ EAL  CONST_07  C18  C17  C16  C15    180.00   0.0  0
+ EAL  CONST_08  C20  C21  C16  C15    180.00   0.0  0
+ EAL  CONST_09  H18  C18  C17  C16    180.00   0.0  0
+ EAL  CONST_10  H20  C20  C21  C16    180.00   0.0  0
+ EAL  CONST_11  H21  C21  C16  C17    180.00   0.0  0
+ EAL  CONST_12  H19  C19  C18  C17    180.00   0.0  0
+ EAL  CONST_13  H17  C17  C18  C19    180.00   0.0  0
+ EAL  CONST_14  O1   C1   N2   C5       0.00   0.0  0
+ EAL  CONST_15  C2   C1   N2   C5     180.00   0.0  0
+ EAL  CONST_16  O1   C1   N2   C8     180.00   0.0  0
+ EAL  CONST_17  C2   C1   N2   C8       0.00   0.0  0
+ EAL  Var_01    C6   C7   C8   N2     -35.25  30.0  1
+ EAL  Var_02    C7   C8   N2   C5      21.43  30.0  1
+ EAL  Var_03    C8   C7   C6   C5      36.95  30.0  1
+ EAL  Var_04    C17  C16  C15  C14     97.42  30.0  2
+ EAL  Var_05    C16  C15  C14  C4    -174.09  30.0  3
+ EAL  Var_06    C7   C6   C5   N2     -24.00  30.0  1
+ EAL  Var_07    C8   N2   C5   C6       1.53  30.0  1
+ EAL  Var_08    C1   N2   C5   C6    -174.45  30.0  1
+ EAL  Var_09    C9   C5   C6   C7    -145.10  30.0  1
+ EAL  Var_10    C9   C5   N2   C8     120.66  30.0  1
+ EAL  Var_11    H61  C6   C5   N2    -147.02  30.0  1
+ EAL  Var_12    H62  C6   C5   N2      93.14  30.0  1
+ EAL  Var_13    H5   C5   C6   C7      93.47  30.0  1
+ EAL  Var_14    N2   C5   C9   O4     153.31  30.0  3
+ EAL  Var_15    C6   C5   C9   O4     -91.67  30.0  3
+ EAL  Var_16    N2   C5   C9   O5     -30.55  30.0  3
+ EAL  Var_17    C6   C5   C9   O5      84.47  30.0  3
+ EAL  Var_18    C1   N2   C5   C9     -55.32  30.0  1
+ EAL  Var_19    N1   C2   C1   N2     141.48  30.0  3
+ EAL  Var_20    C10  C2   C1   N2     -97.09  30.0  3
+ EAL  Var_21    HA   C2   C1   N2      20.22  30.0  3
+ EAL  Var_22    N1   C2   C1   O1     -41.31  30.0  3
+ EAL  Var_23    C10  C2   C1   O1      80.12  30.0  3
+ EAL  Var_24    C3   C4   N1   C2     -68.34  30.0  3
+ EAL  Var_25    C14  C4   N1   C2     170.82  30.0  3
+ EAL  Var_26    C4   N1   C2   C10    174.84  30.0  2
+ EAL  Var_27    O2   C3   C4   N1     -21.09  30.0  2
+ EAL  Var_28    O3   C3   C4   N1     160.96  30.0  2
+ EAL  Var_29    C15  C14  C4   N1     -63.38  30.0  3
+ EAL  Var_30    C15  C14  C4   C3     172.81  30.0  3
+ EAL  Var_31    C1   C2   N1   C4     -65.65  30.0  3
+ EAL  Var_32    C14  C4   C3   O2     100.95  30.0  2
+ EAL  Var_33    C14  C4   C3   O3     -77.00  30.0  2
+ EAL  Var_34    HB   C4   N1   C2      52.20  30.0  3
+ EAL  Var_35    H1   N1   C2   C10    -64.89  30.0  2
+ EAL  Var_36    N1   C2   C10  H101    59.75  30.0  3
+ EAL  Var_37    N1   C2   C10  H102   179.36  30.0  3
+ EAL  Var_38    N1   C2   C10  H103   -60.35  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

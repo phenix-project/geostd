@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- M6Q  M6Q  (2~{S})-1-[(2~{R})-2-azanyl-3-phenyl-propanoyl]-~{N}-[(2-azanylpyridin-4-yl)methyl]pyrrolidine-2-carboxamide  ligand  52  27  .  2022-03-22  2022-07-25
+ M6Q  M6Q  (2~{S})-1-[(2~{R})-2-azanyl-3-phenyl-propanoyl]-~{N}-[(2-azanylpyridin-4-yl)methyl]pyrrolidine-2-carboxamide  ligand  52  27  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_M6Q
@@ -265,45 +266,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- M6Q  CONST_01  C7   C6   C5   C4     0.00   0.0  0
- M6Q  CONST_02  C7   C2   C3   C4     0.00   0.0  0
- M6Q  CONST_03  C2   C3   C4   C5     0.00   0.0  0
- M6Q  CONST_04  C2   C7   C6   C5     0.00   0.0  0
- M6Q  CONST_05  C3   C4   C5   C6     0.00   0.0  0
- M6Q  CONST_06  C3   C2   C7   C6     0.00   0.0  0
- M6Q  CONST_07  N3   C15  C16  C12    0.00   0.0  0
- M6Q  CONST_08  N3   C14  C13  C12    0.00   0.0  0
- M6Q  CONST_09  C15  C16  C12  C13    0.00   0.0  0
- M6Q  CONST_10  C15  N3   C14  C13    0.00   0.0  0
- M6Q  CONST_11  C16  C12  C13  C14    0.00   0.0  0
- M6Q  CONST_12  C16  C15  N3   C14    0.00   0.0  0
- M6Q  CONST_13  C1   C2   C3   C4   180.00   0.0  0
- M6Q  CONST_14  C1   C2   C7   C6   180.00   0.0  0
- M6Q  CONST_15  C15  C16  C12  C11  180.00   0.0  0
- M6Q  CONST_16  C14  C13  C12  C11  180.00   0.0  0
- M6Q  CONST_17  N4   C15  C16  C12  180.00   0.0  0
- M6Q  CONST_18  N4   C15  N3   C14  180.00   0.0  0
- M6Q  CONST_19  H3   C6   C5   C4   180.00   0.0  0
- M6Q  CONST_20  H26  C3   C4   C5   180.00   0.0  0
- M6Q  CONST_21  H4   C7   C6   C5   180.00   0.0  0
- M6Q  CONST_22  H1   C4   C5   C6   180.00   0.0  0
- M6Q  CONST_23  H2   C5   C6   C7   180.00   0.0  0
- M6Q  CONST_24  H10  C14  C13  C12  180.00   0.0  0
- M6Q  CONST_25  H19  C16  C15  N3   180.00   0.0  0
- M6Q  CONST_26  H9   C13  C14  N3   180.00   0.0  0
- M6Q  CONST_27  O1   C8   N1   C9     0.00   0.0  0
- M6Q  CONST_28  C    C8   N1   C9   180.00   0.0  0
- M6Q  CONST_29  C19  N1   C8   C      0.00   0.0  0
- M6Q  CONST_30  O1   C8   N1   C19  180.00   0.0  0
- M6Q  CONST_33  C11  N2   C10  C9   180.00   0.0  0
- M6Q  CONST_34  H5   N2   C10  C9     0.00   0.0  0
- M6Q  CONST_35  O    C10  N2   C11    0.00   0.0  0
- M6Q  Var_01    C17  C18  C19  N1   -34.71  30.0  1
- M6Q  Var_02    C19  C18  C17  C9    37.38  30.0  1
- M6Q  Var_03    C18  C19  N1   C9    19.60  30.0  1
- M6Q  Var_04    C    C1   C2   C7   -86.01  30.0  2
- M6Q  Var_05    C16  C12  C11  N2   151.93  30.0  2
- M6Q  Var_06    C12  C11  N2   C10  106.08  30.0  3
+ M6Q  CONST_01  C7   C6   C5   C4      0.00   0.0  0
+ M6Q  CONST_02  C7   C2   C3   C4      0.00   0.0  0
+ M6Q  CONST_03  C2   C3   C4   C5      0.00   0.0  0
+ M6Q  CONST_04  C2   C7   C6   C5      0.00   0.0  0
+ M6Q  CONST_05  C3   C4   C5   C6      0.00   0.0  0
+ M6Q  CONST_06  C3   C2   C7   C6      0.00   0.0  0
+ M6Q  CONST_07  N3   C15  C16  C12     0.00   0.0  0
+ M6Q  CONST_08  N3   C14  C13  C12     0.00   0.0  0
+ M6Q  CONST_09  C15  C16  C12  C13     0.00   0.0  0
+ M6Q  CONST_10  C15  N3   C14  C13     0.00   0.0  0
+ M6Q  CONST_11  C16  C12  C13  C14     0.00   0.0  0
+ M6Q  CONST_12  C16  C15  N3   C14     0.00   0.0  0
+ M6Q  CONST_13  C1   C2   C3   C4    180.00   0.0  0
+ M6Q  CONST_14  C1   C2   C7   C6    180.00   0.0  0
+ M6Q  CONST_15  C15  C16  C12  C11   180.00   0.0  0
+ M6Q  CONST_16  C14  C13  C12  C11   180.00   0.0  0
+ M6Q  CONST_17  N4   C15  C16  C12   180.00   0.0  0
+ M6Q  CONST_18  N4   C15  N3   C14   180.00   0.0  0
+ M6Q  CONST_19  H3   C6   C5   C4    180.00   0.0  0
+ M6Q  CONST_20  H26  C3   C4   C5    180.00   0.0  0
+ M6Q  CONST_21  H4   C7   C6   C5    180.00   0.0  0
+ M6Q  CONST_22  H1   C4   C5   C6    180.00   0.0  0
+ M6Q  CONST_23  H2   C5   C6   C7    180.00   0.0  0
+ M6Q  CONST_24  H10  C14  C13  C12   180.00   0.0  0
+ M6Q  CONST_25  H19  C16  C15  N3    180.00   0.0  0
+ M6Q  CONST_26  H9   C13  C14  N3    180.00   0.0  0
+ M6Q  CONST_27  O1   C8   N1   C9      0.00   0.0  0
+ M6Q  CONST_28  C    C8   N1   C9    180.00   0.0  0
+ M6Q  CONST_29  C19  N1   C8   C       0.00   0.0  0
+ M6Q  CONST_30  O1   C8   N1   C19   180.00   0.0  0
+ M6Q  CONST_31  C11  N2   C10  C9    180.00   0.0  0
+ M6Q  CONST_32  H5   N2   C10  C9      0.00   0.0  0
+ M6Q  CONST_33  O    C10  N2   C11     0.00   0.0  0
+ M6Q  Var_01    C17  C18  C19  N1    -34.71  30.0  1
+ M6Q  Var_02    C19  C18  C17  C9     37.38  30.0  1
+ M6Q  Var_03    C18  C19  N1   C9     19.60  30.0  1
+ M6Q  Var_04    C    C1   C2   C7    -86.01  30.0  2
+ M6Q  Var_05    C16  C12  C11  N2    151.93  30.0  2
+ M6Q  Var_06    C12  C11  N2   C10   106.08  30.0  3
+ M6Q  Var_07    C18  C17  C9   N1    -25.50  30.0  1
+ M6Q  Var_08    C19  N1   C9   C17     3.71  30.0  1
+ M6Q  Var_09    C17  C9   N1   C8    178.35  30.0  1
+ M6Q  Var_10    C18  C17  C9   C10  -145.79  30.0  1
+ M6Q  Var_11    C19  N1   C9   C10   123.37  30.0  1
+ M6Q  Var_12    H20  C17  C9   N1   -148.05  30.0  1
+ M6Q  Var_13    H21  C17  C9   N1     91.88  30.0  1
+ M6Q  Var_14    H6   C9   C17  C18    91.87  30.0  1
+ M6Q  Var_15    O    C10  C9   N1    -35.87  30.0  3
+ M6Q  Var_16    N2   C10  C9   N1    148.19  30.0  3
+ M6Q  Var_17    C10  C9   N1   C8    -61.99  30.0  1
+ M6Q  Var_18    C17  C9   C10  N2    -96.31  30.0  1
+ M6Q  Var_19    C17  C9   C10  O      79.63  30.0  1
+ M6Q  Var_20    C1   C    C8   N1    105.04  30.0  3
+ M6Q  Var_21    N    C    C8   N1   -131.14  30.0  3
+ M6Q  Var_22    C2   C1   C    C8    -61.01  30.0  3
+ M6Q  Var_23    C2   C1   C    N     178.93  30.0  3
+ M6Q  Var_24    H16  C    C8   N1    -13.74  30.0  3
+ M6Q  Var_25    O1   C8   C    N      51.00  30.0  2
+ M6Q  Var_26    O1   C8   C    C1    -72.82  30.0  2
+ M6Q  Var_27    H13  N    C    C8   -176.71  30.0  3
+ M6Q  Var_28    H14  N    C    C8    -60.92  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

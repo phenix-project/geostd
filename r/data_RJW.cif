@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RJW  RJW  (1R,3aR,6aR)-5-hexyl-4-phenyl-3a-(1-phenylethenyl)-1,2,3,3a,6,6a-hexahydropentalen-1-ol  ligand  63  29  .  2021-08-23  2021-08-23  
+ RJW  RJW  (1R,3aR,6aR)-5-hexyl-4-phenyl-3a-(1-phenylethenyl)-1,2,3,3a,6,6a-hexahydropentalen-1-ol  ligand  63  29  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RJW
@@ -315,44 +316,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RJW  CONST_01  C10   C09  C08  C07    0.00   0.0  0
- RJW  CONST_02  C10   C11  C12  C07    0.00   0.0  0
- RJW  CONST_03  C11   C12  C07  C08    0.00   0.0  0
- RJW  CONST_04  C11   C10  C09  C08    0.00   0.0  0
- RJW  CONST_05  C12   C07  C08  C09    0.00   0.0  0
- RJW  CONST_06  C12   C11  C10  C09    0.00   0.0  0
- RJW  CONST_07  C27   C28  C29  C24    0.00   0.0  0
- RJW  CONST_08  C27   C26  C25  C24    0.00   0.0  0
- RJW  CONST_09  C28   C27  C26  C25    0.00   0.0  0
- RJW  CONST_10  C28   C29  C24  C25    0.00   0.0  0
- RJW  CONST_11  C29   C28  C27  C26    0.00   0.0  0
- RJW  CONST_12  C29   C24  C25  C26    0.00   0.0  0
- RJW  CONST_13  C28   C29  C24  C23  180.00   0.0  0
- RJW  CONST_14  C26   C25  C24  C23  180.00   0.0  0
- RJW  CONST_15  C09   C08  C07  C06  180.00   0.0  0
- RJW  CONST_16  C11   C12  C07  C06  180.00   0.0  0
- RJW  CONST_17  H091  C09  C08  C07  180.00   0.0  0
- RJW  CONST_18  H111  C11  C12  C07  180.00   0.0  0
- RJW  CONST_19  H121  C12  C07  C08  180.00   0.0  0
- RJW  CONST_20  H101  C10  C09  C08  180.00   0.0  0
- RJW  CONST_21  H081  C08  C09  C10  180.00   0.0  0
- RJW  CONST_22  H291  C29  C24  C23    0.00   0.0  0
- RJW  CONST_23  H251  C25  C24  C23    0.00   0.0  0
- RJW  CONST_24  H281  C28  C29  C24  180.00   0.0  0
- RJW  CONST_25  H261  C26  C25  C24  180.00   0.0  0
- RJW  CONST_26  H271  C27  C26  C25  180.00   0.0  0
- RJW  Var_01    C05   C04  C03  C02   37.46  30.0  1
- RJW  Var_02    C29   C24  C23  C05  -44.94  30.0  2
- RJW  Var_03    C15   C16  C23  C05   -1.02  30.0  1
- RJW  Var_04    C23   C16  C15  C14  -11.02  30.0  1
- RJW  Var_05    C08   C07  C06  C05  109.21  30.0  2
- RJW  Var_06    C18   C17  C16  C15  -71.03  30.0  1
- RJW  Var_07    C19   C18  C17  C16  173.90  30.0  3
- RJW  Var_08    H131  C13  C06  C05    3.37   0.0  2
- RJW  Var_09    C20   C19  C18  C17  179.29  30.0  1
- RJW  Var_10    C21   C20  C19  C18  178.56  30.0  3
- RJW  Var_11    C22   C21  C20  C19  179.85  30.0  1
- RJW  Var_12    H223  C22  C21  C20  179.79  30.0  3
+ RJW  CONST_01  C10   C09  C08  C07     0.00   0.0  0
+ RJW  CONST_02  C10   C11  C12  C07     0.00   0.0  0
+ RJW  CONST_03  C11   C12  C07  C08     0.00   0.0  0
+ RJW  CONST_04  C11   C10  C09  C08     0.00   0.0  0
+ RJW  CONST_05  C12   C07  C08  C09     0.00   0.0  0
+ RJW  CONST_06  C12   C11  C10  C09     0.00   0.0  0
+ RJW  CONST_07  C27   C28  C29  C24     0.00   0.0  0
+ RJW  CONST_08  C27   C26  C25  C24     0.00   0.0  0
+ RJW  CONST_09  C28   C27  C26  C25     0.00   0.0  0
+ RJW  CONST_10  C28   C29  C24  C25     0.00   0.0  0
+ RJW  CONST_11  C29   C28  C27  C26     0.00   0.0  0
+ RJW  CONST_12  C29   C24  C25  C26     0.00   0.0  0
+ RJW  CONST_13  C28   C29  C24  C23   180.00   0.0  0
+ RJW  CONST_14  C26   C25  C24  C23   180.00   0.0  0
+ RJW  CONST_15  C09   C08  C07  C06   180.00   0.0  0
+ RJW  CONST_16  C11   C12  C07  C06   180.00   0.0  0
+ RJW  CONST_17  H091  C09  C08  C07   180.00   0.0  0
+ RJW  CONST_18  H111  C11  C12  C07   180.00   0.0  0
+ RJW  CONST_19  H121  C12  C07  C08   180.00   0.0  0
+ RJW  CONST_20  H101  C10  C09  C08   180.00   0.0  0
+ RJW  CONST_21  H081  C08  C09  C10   180.00   0.0  0
+ RJW  CONST_22  H291  C29  C24  C23     0.00   0.0  0
+ RJW  CONST_23  H251  C25  C24  C23     0.00   0.0  0
+ RJW  CONST_24  H281  C28  C29  C24   180.00   0.0  0
+ RJW  CONST_25  H261  C26  C25  C24   180.00   0.0  0
+ RJW  CONST_26  H271  C27  C26  C25   180.00   0.0  0
+ RJW  Var_01    C05   C04  C03  C02    37.46  30.0  1
+ RJW  Var_02    C29   C24  C23  C05   -44.94  30.0  2
+ RJW  Var_03    C15   C16  C23  C05    -1.02  30.0  1
+ RJW  Var_04    C23   C16  C15  C14   -11.02  30.0  1
+ RJW  Var_05    C08   C07  C06  C05   109.21  30.0  2
+ RJW  Var_06    C18   C17  C16  C15   -71.03  30.0  1
+ RJW  Var_07    C19   C18  C17  C16   173.90  30.0  3
+ RJW  Var_08    H131  C13  C06  C05     3.37   0.0  2
+ RJW  Var_09    C20   C19  C18  C17   179.29  30.0  1
+ RJW  Var_10    C21   C20  C19  C18   178.56  30.0  3
+ RJW  Var_11    C22   C21  C20  C19   179.85  30.0  1
+ RJW  Var_12    H223  C22  C21  C20   179.79  30.0  3
+ RJW  Var_13    C23   C05  C14  C02   104.14  30.0  1
+ RJW  Var_14    C04   C05  C14  C02   -12.68  30.0  1
+ RJW  Var_15    C16   C15  C14  C02   -97.13  30.0  1
+ RJW  Var_16    C23   C05  C04  C03  -125.27  30.0  1
+ RJW  Var_17    C14   C05  C04  C03   -15.34  30.0  1
+ RJW  Var_18    C05   C14  C02  C03    36.05  30.0  1
+ RJW  Var_19    C15   C14  C02  C03   152.32  30.0  1
+ RJW  Var_20    C24   C23  C05  C04   -54.23  30.0  1
+ RJW  Var_21    C16   C23  C05  C04   124.09  30.0  1
+ RJW  Var_22    C15   C14  C05  C04  -135.08  30.0  1
+ RJW  Var_23    C14   C02  C03  C04   -45.74  30.0  1
+ RJW  Var_24    C16   C15  C14  C05    18.04  30.0  1
+ RJW  Var_25    C24   C23  C05  C14  -166.11  30.0  1
+ RJW  Var_26    C16   C23  C05  C14    12.22  30.0  1
+ RJW  Var_27    C23   C05  C14  C15   -18.26  30.0  1
+ RJW  Var_28    C04   C03  C02  O01  -165.94  30.0  1
+ RJW  Var_29    C05   C14  C02  O01   160.33  30.0  1
+ RJW  Var_30    C15   C14  C02  O01   -83.40  30.0  1
+ RJW  Var_31    C06   C05  C14  C02  -136.47  30.0  1
+ RJW  Var_32    C06   C05  C04  C03   104.25  30.0  1
+ RJW  Var_33    C07   C06  C05  C04  -173.25  30.0  2
+ RJW  Var_34    C24   C23  C05  C06    77.45  30.0  1
+ RJW  Var_35    C16   C23  C05  C06  -104.23  30.0  1
+ RJW  Var_36    C15   C14  C05  C06   101.12  30.0  1
+ RJW  Var_37    C23   C05  C06  C07    56.76  30.0  3
+ RJW  Var_38    C14   C05  C06  C07   -55.66  30.0  3
+ RJW  Var_39    H151  C15  C14  C02    24.87  30.0  1
+ RJW  Var_40    H152  C15  C14  C02   144.15  30.0  1
+ RJW  Var_41    H141  C14  C02  C03   -82.06  30.0  1
+ RJW  Var_42    H021  C02  C03  C04    69.26  30.0  1
+ RJW  Var_43    C13   C06  C05  C04     1.38  30.0  2
+ RJW  Var_44    C23   C05  C06  C13  -128.62  30.0  3
+ RJW  Var_45    C14   C05  C06  C13   118.96  30.0  3
+ RJW  Var_46    H011  O01  C02  C03   -67.38  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

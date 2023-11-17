@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SM6  SM6  'ethyl 3-{[1-(hydroxyamino)-2H-inden-5-yl]amino}thieno[2,3-c]pyridine-2-carboxylate'  ligand  43  26  .  2022-07-22  2022-07-26
+ SM6  SM6  'ethyl 3-{[1-(hydroxyamino)-2H-inden-5-yl]amino}thieno[2,3-c]pyridine-2-carboxylate'  ligand  43  26  .  2022-07-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SM6
@@ -230,39 +231,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SM6  CONST_01  C14  S15  C16  C11     0.00   0.0  0
- SM6  CONST_02  C22  C14  C13  C11   180.00   0.0  0
- SM6  CONST_03  S15  C14  C13  C11     0.00   0.0  0
- SM6  CONST_04  C20  C19  C13  C11   180.00   0.0  0
- SM6  CONST_05  S15  C16  C11  C13     0.00   0.0  0
- SM6  CONST_06  N21  C22  C14  C13     0.00   0.0  0
- SM6  CONST_07  C16  S15  C14  C13     0.00   0.0  0
- SM6  CONST_08  N21  C20  C19  C13     0.00   0.0  0
- SM6  CONST_09  C16  C11  C13  C14     0.00   0.0  0
- SM6  CONST_10  C20  C19  C13  C14     0.00   0.0  0
- SM6  CONST_11  C20  N21  C22  C14     0.00   0.0  0
- SM6  CONST_12  C19  C13  C14  S15   180.00   0.0  0
- SM6  CONST_13  N21  C22  C14  S15   180.00   0.0  0
- SM6  CONST_14  C19  C13  C11  C16   180.00   0.0  0
- SM6  CONST_15  C22  C14  S15  C16   180.00   0.0  0
- SM6  CONST_16  C22  C14  C13  C19     0.00   0.0  0
- SM6  CONST_17  C22  N21  C20  C19     0.00   0.0  0
- SM6  CONST_18  S15  C16  C11  N10   180.00   0.0  0
- SM6  CONST_19  C14  C13  C11  N10   180.00   0.0  0
- SM6  CONST_20  C19  C13  C11  N10     0.00   0.0  0
- SM6  CONST_21  C17  C16  C11  C13   180.00   0.0  0
- SM6  CONST_22  C17  C16  S15  C14   180.00   0.0  0
- SM6  CONST_27  H19  C19  C13  C11     0.00   0.0  0
- SM6  CONST_28  H22  C22  C14  C13   180.00   0.0  0
- SM6  CONST_29  H20  C20  C19  C13   180.00   0.0  0
- SM6  Var_01    C8   C9   C2   C1      0.49  30.0  1
- SM6  Var_02    C9   C8   C7   C1      0.66  30.0  1
- SM6  Var_03    C8   C7   C1   C2     -0.39  30.0  1
- SM6  Var_04    C7   C8   C9   C2     -0.69  30.0  1
- SM6  Var_05    O23  N12  C7   C1     22.96  30.0  2
- SM6  Var_06    O24  C17  C16  C11  -175.64  30.0  2
- SM6  Var_07    C25  C26  O24  C17   177.73  30.0  1
- SM6  Var_08    H25  C25  C26  O24   179.91  30.0  3
+ SM6  CONST_01  C14   S15  C16  C11     0.00   0.0  0
+ SM6  CONST_02  C22   C14  C13  C11   180.00   0.0  0
+ SM6  CONST_03  S15   C14  C13  C11     0.00   0.0  0
+ SM6  CONST_04  C20   C19  C13  C11   180.00   0.0  0
+ SM6  CONST_05  S15   C16  C11  C13     0.00   0.0  0
+ SM6  CONST_06  N21   C22  C14  C13     0.00   0.0  0
+ SM6  CONST_07  C16   S15  C14  C13     0.00   0.0  0
+ SM6  CONST_08  N21   C20  C19  C13     0.00   0.0  0
+ SM6  CONST_09  C16   C11  C13  C14     0.00   0.0  0
+ SM6  CONST_10  C20   C19  C13  C14     0.00   0.0  0
+ SM6  CONST_11  C20   N21  C22  C14     0.00   0.0  0
+ SM6  CONST_12  C19   C13  C14  S15   180.00   0.0  0
+ SM6  CONST_13  N21   C22  C14  S15   180.00   0.0  0
+ SM6  CONST_14  C19   C13  C11  C16   180.00   0.0  0
+ SM6  CONST_15  C22   C14  S15  C16   180.00   0.0  0
+ SM6  CONST_16  C22   C14  C13  C19     0.00   0.0  0
+ SM6  CONST_17  C22   N21  C20  C19     0.00   0.0  0
+ SM6  CONST_18  S15   C16  C11  N10   180.00   0.0  0
+ SM6  CONST_19  C14   C13  C11  N10   180.00   0.0  0
+ SM6  CONST_20  C19   C13  C11  N10     0.00   0.0  0
+ SM6  CONST_21  C17   C16  C11  C13   180.00   0.0  0
+ SM6  CONST_22  C17   C16  S15  C14   180.00   0.0  0
+ SM6  CONST_23  H19   C19  C13  C11     0.00   0.0  0
+ SM6  CONST_24  H22   C22  C14  C13   180.00   0.0  0
+ SM6  CONST_25  H20   C20  C19  C13   180.00   0.0  0
+ SM6  Var_01    C8    C9   C2   C1      0.49  30.0  1
+ SM6  Var_02    C9    C8   C7   C1      0.66  30.0  1
+ SM6  Var_03    C8    C7   C1   C2     -0.39  30.0  1
+ SM6  Var_04    C7    C8   C9   C2     -0.69  30.0  1
+ SM6  Var_05    O23   N12  C7   C1     22.96  30.0  2
+ SM6  Var_06    O24   C17  C16  C11  -175.64  30.0  2
+ SM6  Var_07    C25   C26  O24  C17   177.73  30.0  1
+ SM6  Var_08    H25   C25  C26  O24   179.91  30.0  3
+ SM6  CONST_26  C4    C3   C2   C1      0.00   0.0  0
+ SM6  CONST_27  C4    C5   C6   C1      0.00   0.0  0
+ SM6  CONST_28  C5    C6   C1   C2      0.00   0.0  0
+ SM6  CONST_29  C5    C4   C3   C2      0.00   0.0  0
+ SM6  CONST_30  C6    C1   C2   C3      0.00   0.0  0
+ SM6  CONST_31  C6    C5   C4   C3      0.00   0.0  0
+ SM6  CONST_32  N10   C4   C3   C2    180.00   0.0  0
+ SM6  CONST_33  N10   C4   C5   C6    180.00   0.0  0
+ SM6  CONST_34  H3    C3   C2   C1    180.00   0.0  0
+ SM6  CONST_35  H5    C5   C6   C1    180.00   0.0  0
+ SM6  CONST_36  H6    C6   C1   C2    180.00   0.0  0
+ SM6  Var_09    C11   N10  C4   C3    149.94  30.0  3
+ SM6  Var_10    C16   C11  N10  C4    149.03  30.0  3
+ SM6  Var_11    C13   C11  N10  C4    -35.04  30.0  3
+ SM6  Var_12    C11   N10  C4   C5    -33.82  30.0  3
+ SM6  Var_13    HN10  N10  C4   C3    -46.15  30.0  3
+ SM6  Var_14    C26   O24  C17  C16  -179.73  30.0  3
+ SM6  Var_15    HO23  O23  N12  C7   -118.67  30.0  3
+ SM6  Var_16    C26   O24  C17  O18     0.13  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2FA  2FA  '2-fluoroadenosine        '  ligand  32  20  .  2021-08-04  2021-08-04  
+ 2FA  2FA  '2-fluoroadenosine        '  ligand  32  20  .  2021-08-04  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_2FA
@@ -189,34 +190,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2FA  CONST_01  C2    N3  C4  N9   180.00  0.0  0
- 2FA  CONST_02  C6    C5  C4  N9   180.00  0.0  0
- 2FA  CONST_03  N7    C5  C4  N9     0.00  0.0  0
- 2FA  CONST_04  C5    N7  C8  N9     0.00  0.0  0
- 2FA  CONST_05  N7    C8  N9  C4     0.00  0.0  0
- 2FA  CONST_06  N1    C2  N3  C4     0.00  0.0  0
- 2FA  CONST_07  N1    C6  C5  C4     0.00  0.0  0
- 2FA  CONST_08  C8    N7  C5  C4     0.00  0.0  0
- 2FA  CONST_09  C8    N9  C4  N3   180.00  0.0  0
- 2FA  CONST_10  C6    C5  C4  N3     0.00  0.0  0
- 2FA  CONST_11  N7    C5  C4  N3   180.00  0.0  0
- 2FA  CONST_12  C6    N1  C2  N3     0.00  0.0  0
- 2FA  CONST_13  C5    C4  N3  C2     0.00  0.0  0
- 2FA  CONST_14  C5    C6  N1  C2     0.00  0.0  0
- 2FA  CONST_15  N7    C5  C6  N1   180.00  0.0  0
- 2FA  CONST_16  C8    N7  C5  C6   180.00  0.0  0
- 2FA  CONST_17  C8    N9  C4  C5     0.00  0.0  0
- 2FA  CONST_18  N3    C4  N9  C1'    0.00  0.0  0
- 2FA  CONST_19  C5    C4  N9  C1'  180.00  0.0  0
- 2FA  CONST_20  N7    C8  N9  C1'  180.00  0.0  0
- 2FA  CONST_21  F     C2  N3  C4   180.00  0.0  0
- 2FA  CONST_22  N6    C6  C5  C4   180.00  0.0  0
- 2FA  CONST_23  N6    C6  N1  C2   180.00  0.0  0
- 2FA  CONST_24  C6    N1  C2  F    180.00  0.0  0
- 2FA  CONST_25  N7    C5  C6  N6     0.00  0.0  0
- 2FA  CONST_26  H8    C8  N9  C1'    0.00  0.0  0
- 2FA  CONST_27  HN61  N6  C6  N1     0.00  0.0  0
- 2FA  CONST_28  HN62  N6  C6  N1   180.00  0.0  0
+ 2FA  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ 2FA  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ 2FA  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ 2FA  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ 2FA  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ 2FA  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ 2FA  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ 2FA  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ 2FA  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ 2FA  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ 2FA  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ 2FA  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ 2FA  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ 2FA  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ 2FA  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ 2FA  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ 2FA  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ 2FA  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
+ 2FA  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ 2FA  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ 2FA  CONST_21  F     C2   N3   C4    180.00   0.0  0
+ 2FA  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ 2FA  CONST_23  N6    C6   N1   C2    180.00   0.0  0
+ 2FA  CONST_24  C6    N1   C2   F     180.00   0.0  0
+ 2FA  CONST_25  N7    C5   C6   N6      0.00   0.0  0
+ 2FA  CONST_26  H8    C8   N9   C1'     0.00   0.0  0
+ 2FA  CONST_27  HN61  N6   C6   N1      0.00   0.0  0
+ 2FA  CONST_28  HN62  N6   C6   N1    180.00   0.0  0
+ 2FA  Var_01    N9    C1'  O4'  C4'  -108.55  30.0  1
+ 2FA  Var_02    C2'   C1'  O4'  C4'    11.92  30.0  1
+ 2FA  Var_03    C1'   C2'  C3'  C4'    36.49  30.0  1
+ 2FA  Var_04    C2'   C3'  C4'  O4'   -30.89  30.0  1
+ 2FA  Var_05    C4    N9   C1'  O4'  -171.99  30.0  2
+ 2FA  Var_06    C8    N9   C1'  O4'     4.25  30.0  2
+ 2FA  Var_07    C3'   C2'  C1'  O4'   -30.62  30.0  1
+ 2FA  Var_08    C3'   C4'  O4'  C1'    12.29  30.0  1
+ 2FA  Var_09    C3'   C2'  C1'  N9     88.33  30.0  1
+ 2FA  Var_10    C2'   C1'  N9   C4     70.41  30.0  1
+ 2FA  Var_11    C2'   C1'  N9   C8   -113.34  30.0  1
+ 2FA  Var_12    C1'   O4'  C4'  C5'   134.70  30.0  1
+ 2FA  Var_13    C2'   C3'  C4'  C5'  -151.92  30.0  1
+ 2FA  Var_14    O2'   C2'  C3'  C4'   -77.18  30.0  1
+ 2FA  Var_15    O3'   C3'  C4'  O4'  -152.18  30.0  1
+ 2FA  Var_16    O2'   C2'  C1'  O4'    85.85  30.0  1
+ 2FA  Var_17    O3'   C3'  C2'  C1'   155.30  30.0  1
+ 2FA  Var_18    O2'   C2'  C1'  N9   -155.20  30.0  1
+ 2FA  Var_19    H1'   C1'  O4'  C4'   133.76  30.0  1
+ 2FA  Var_20    H2'   C2'  C3'  C4'   156.42  30.0  1
+ 2FA  Var_21    H3'   C3'  C4'  O4'    84.46  30.0  1
+ 2FA  Var_22    H4'   C4'  O4'  C1'  -105.23  30.0  1
+ 2FA  Var_23    O4'   C4'  C5'  O5'    63.42  30.0  3
+ 2FA  Var_24    C3'   C4'  C5'  O5'  -178.95  30.0  3
+ 2FA  Var_25    O3'   C3'  C4'  C5'    86.78  30.0  1
+ 2FA  Var_26    O3'   C3'  C2'  O2'    41.63  30.0  1
+ 2FA  Var_27    H2    O3'  C3'  C4'  -161.93  30.0  3
+ 2FA  Var_28    H5'1  C5'  C4'  O4'  -174.98  30.0  2
+ 2FA  Var_29    H5'2  C5'  C4'  O4'   -59.54  30.0  2
+ 2FA  Var_30    H1    O2'  C2'  C1'  -148.80  30.0  3
+ 2FA  Var_31    H5'   O5'  C5'  C4'  -179.46  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

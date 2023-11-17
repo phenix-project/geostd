@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7BK  7BK  2-fluoranyl-5-[2-[(4~{R})-4-methyl-2-oxidanylidene-4-phenyl-pyrrolidin-1-yl]ethoxy]benzenecarbonitrile  ligand  44  25  .  2022-03-10  2022-03-10
+ 7BK  7BK  2-fluoranyl-5-[2-[(4~{R})-4-methyl-2-oxidanylidene-4-phenyl-pyrrolidin-1-yl]ethoxy]benzenecarbonitrile  ligand  44  25  .  2022-03-10  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7BK
@@ -235,43 +236,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 7BK  CONST_01  C11  C10  C9   C8     0.00   0.0  0
- 7BK  CONST_02  C11  C13  C16  C8     0.00   0.0  0
- 7BK  CONST_03  C16  C13  C11  C10    0.00   0.0  0
- 7BK  CONST_04  C16  C8   C9   C10    0.00   0.0  0
- 7BK  CONST_05  C9   C10  C11  C13    0.00   0.0  0
- 7BK  CONST_06  C9   C8   C16  C13    0.00   0.0  0
- 7BK  CONST_07  C24  C23  C22  C21    0.00   0.0  0
- 7BK  CONST_08  C24  C25  C20  C21    0.00   0.0  0
- 7BK  CONST_09  C25  C24  C23  C22    0.00   0.0  0
- 7BK  CONST_10  C25  C20  C21  C22    0.00   0.0  0
- 7BK  CONST_11  C20  C21  C22  C23    0.00   0.0  0
- 7BK  CONST_12  C20  C25  C24  C23    0.00   0.0  0
- 7BK  CONST_13  C22  C21  C20  C2   180.00   0.0  0
- 7BK  CONST_14  C24  C25  C20  C2   180.00   0.0  0
- 7BK  CONST_15  C19  C17  N4   C3     0.00   0.0  0
- 7BK  CONST_16  C14  C13  C16  C8   180.00   0.0  0
- 7BK  CONST_17  C14  C13  C11  C10  180.00   0.0  0
- 7BK  CONST_18  O7   C8   C9   C10  180.00   0.0  0
- 7BK  CONST_19  O7   C8   C16  C13  180.00   0.0  0
- 7BK  CONST_20  F12  C11  C13  C16  180.00   0.0  0
- 7BK  CONST_21  F12  C11  C10  C9   180.00   0.0  0
- 7BK  CONST_22  O18  C17  N4   C3   180.00   0.0  0
- 7BK  CONST_23  C19  C17  N4   C5   180.00   0.0  0
- 7BK  CONST_24  H40  C21  C20  C2     0.00   0.0  0
- 7BK  CONST_25  H44  C25  C20  C2     0.00   0.0  0
- 7BK  CONST_26  H36  C10  C9   C8   180.00   0.0  0
- 7BK  CONST_27  H35  C9   C10  C11  180.00   0.0  0
- 7BK  CONST_28  H37  C16  C13  C11  180.00   0.0  0
- 7BK  CONST_29  H42  C23  C22  C21  180.00   0.0  0
- 7BK  CONST_30  H43  C24  C23  C22  180.00   0.0  0
- 7BK  CONST_31  H41  C22  C23  C24  180.00   0.0  0
- 7BK  CONST_32  O18  C17  N4   C5     0.00   0.0  0
- 7BK  Var_01    N4   C17  C19  C2   -18.31  30.0  1
- 7BK  Var_02    C17  N4   C3   C2    18.86  30.0  1
- 7BK  Var_03    C6   C5   N4   C3    74.11  30.0  3
- 7BK  Var_04    C9   C8   O7   C6    -6.34  30.0  3
- 7BK  Var_05    O7   C6   C5   N4    58.79  30.0  2
+ 7BK  CONST_01  C11  C10  C9   C8      0.00   0.0  0
+ 7BK  CONST_02  C11  C13  C16  C8      0.00   0.0  0
+ 7BK  CONST_03  C16  C13  C11  C10     0.00   0.0  0
+ 7BK  CONST_04  C16  C8   C9   C10     0.00   0.0  0
+ 7BK  CONST_05  C9   C10  C11  C13     0.00   0.0  0
+ 7BK  CONST_06  C9   C8   C16  C13     0.00   0.0  0
+ 7BK  CONST_07  C24  C23  C22  C21     0.00   0.0  0
+ 7BK  CONST_08  C24  C25  C20  C21     0.00   0.0  0
+ 7BK  CONST_09  C25  C24  C23  C22     0.00   0.0  0
+ 7BK  CONST_10  C25  C20  C21  C22     0.00   0.0  0
+ 7BK  CONST_11  C20  C21  C22  C23     0.00   0.0  0
+ 7BK  CONST_12  C20  C25  C24  C23     0.00   0.0  0
+ 7BK  CONST_13  C22  C21  C20  C2    180.00   0.0  0
+ 7BK  CONST_14  C24  C25  C20  C2    180.00   0.0  0
+ 7BK  CONST_15  C19  C17  N4   C3      0.00   0.0  0
+ 7BK  CONST_16  C14  C13  C16  C8    180.00   0.0  0
+ 7BK  CONST_17  C14  C13  C11  C10   180.00   0.0  0
+ 7BK  CONST_18  O7   C8   C9   C10   180.00   0.0  0
+ 7BK  CONST_19  O7   C8   C16  C13   180.00   0.0  0
+ 7BK  CONST_20  F12  C11  C13  C16   180.00   0.0  0
+ 7BK  CONST_21  F12  C11  C10  C9    180.00   0.0  0
+ 7BK  CONST_22  O18  C17  N4   C3    180.00   0.0  0
+ 7BK  CONST_23  C19  C17  N4   C5    180.00   0.0  0
+ 7BK  CONST_24  H40  C21  C20  C2      0.00   0.0  0
+ 7BK  CONST_25  H44  C25  C20  C2      0.00   0.0  0
+ 7BK  CONST_26  H36  C10  C9   C8    180.00   0.0  0
+ 7BK  CONST_27  H35  C9   C10  C11   180.00   0.0  0
+ 7BK  CONST_28  H37  C16  C13  C11   180.00   0.0  0
+ 7BK  CONST_29  H42  C23  C22  C21   180.00   0.0  0
+ 7BK  CONST_30  H43  C24  C23  C22   180.00   0.0  0
+ 7BK  CONST_31  H41  C22  C23  C24   180.00   0.0  0
+ 7BK  CONST_32  O18  C17  N4   C5      0.00   0.0  0
+ 7BK  Var_01    N4   C17  C19  C2    -18.31  30.0  1
+ 7BK  Var_02    C17  N4   C3   C2     18.86  30.0  1
+ 7BK  Var_03    C6   C5   N4   C3     74.11  30.0  3
+ 7BK  Var_04    C9   C8   O7   C6     -6.34  30.0  3
+ 7BK  Var_05    O7   C6   C5   N4     58.79  30.0  2
+ 7BK  Var_06    C21  C20  C2   C3   -125.48  30.0  2
+ 7BK  Var_07    C25  C20  C2   C3     55.48  30.0  2
+ 7BK  Var_08    C17  C19  C2   C3     28.13  30.0  1
+ 7BK  Var_09    C20  C2   C3   N4   -148.57  30.0  1
+ 7BK  Var_10    C19  C2   C3   N4    -28.14  30.0  1
+ 7BK  Var_11    C21  C20  C2   C19   120.68  30.0  2
+ 7BK  Var_12    C25  C20  C2   C19   -58.36  30.0  2
+ 7BK  Var_13    C20  C2   C19  C17   148.27  30.0  1
+ 7BK  Var_14    C21  C20  C2   C1     -2.68  30.0  2
+ 7BK  Var_15    C25  C20  C2   C1    178.28  30.0  2
+ 7BK  Var_16    C17  C19  C2   C1    -85.77  30.0  1
+ 7BK  Var_17    N4   C3   C2   C1     85.90  30.0  1
+ 7BK  Var_18    H38  C19  C2   C3    149.68  30.0  1
+ 7BK  Var_19    H39  C19  C2   C3    -88.95  30.0  1
+ 7BK  Var_20    H29  C3   C2   C19    91.39  30.0  1
+ 7BK  Var_21    H30  C3   C2   C19  -148.02  30.0  1
+ 7BK  Var_22    H27  C1   C2   C3     66.19  30.0  3
+ 7BK  Var_23    H28  C1   C2   C3   -172.37  30.0  3
+ 7BK  Var_24    H26  C1   C2   C3    -53.07  30.0  3
+ 7BK  Var_25    C8   O7   C6   C5   -172.76  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

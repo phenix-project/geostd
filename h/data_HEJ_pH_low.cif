@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HEJ  HEJ  9-{5-O-[(S)-hydroxy{[(R)-hydroxy(phosphonooxy)phosphoryl]oxy}phosphoryl]-beta-D-arabinofuranosyl}-9H-purin-6-amine  ligand  47  31  .  2022-11-17  2022-11-17
+ HEJ  HEJ  9-{5-O-[(S)-hydroxy{[(R)-hydroxy(phosphonooxy)phosphoryl]oxy}phosphoryl]-beta-D-arabinofuranosyl}-9H-purin-6-amine  ligand  47  31  .  2022-11-17  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HEJ
@@ -243,37 +244,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HEJ  CONST_01  C8   N7   C5   C6   180.00   0.0  0
- HEJ  CONST_02  N9   C4   C5   C6   180.00   0.0  0
- HEJ  CONST_03  N3   C4   C5   C6     0.00   0.0  0
- HEJ  CONST_04  N3   C2   N1   C6     0.00   0.0  0
- HEJ  CONST_05  N7   C5   C6   N1   180.00   0.0  0
- HEJ  CONST_06  C4   C5   C6   N1     0.00   0.0  0
- HEJ  CONST_07  C4   N3   C2   N1     0.00   0.0  0
- HEJ  CONST_08  N9   C4   N3   C2   180.00   0.0  0
- HEJ  CONST_09  C5   C4   N3   C2     0.00   0.0  0
- HEJ  CONST_10  C5   C6   N1   C2     0.00   0.0  0
- HEJ  CONST_11  C8   N9   C4   N3   180.00   0.0  0
- HEJ  CONST_12  N7   C5   C4   N3   180.00   0.0  0
- HEJ  CONST_13  N7   C8   N9   C4     0.00   0.0  0
- HEJ  CONST_14  C8   N7   C5   C4     0.00   0.0  0
- HEJ  CONST_15  N9   C8   N7   C5     0.00   0.0  0
- HEJ  CONST_16  C8   N9   C4   C5     0.00   0.0  0
- HEJ  CONST_17  N9   C4   C5   N7     0.00   0.0  0
- HEJ  CONST_18  C1'  N9   C4   N3     0.00   0.0  0
- HEJ  CONST_19  C1'  N9   C4   C5   180.00   0.0  0
- HEJ  CONST_20  C1'  N9   C8   N7   180.00   0.0  0
- HEJ  CONST_21  N7   C5   C6   N6     0.00   0.0  0
- HEJ  CONST_22  C4   C5   C6   N6   180.00   0.0  0
- HEJ  CONST_23  C2   N1   C6   N6   180.00   0.0  0
- HEJ  CONST_24  H3   C2   N1   C6   180.00   0.0  0
- HEJ  CONST_25  H4   C8   N9   C4   180.00   0.0  0
- HEJ  CONST_26  H1   N6   C6   N1     0.00   0.0  0
- HEJ  CONST_27  H2   N6   C6   N1   180.00   0.0  0
- HEJ  Var_01    O3A  PA   O5'  C5'   80.44  30.0  3
- HEJ  Var_02    O1B  PB   O3A  PA   176.18  30.0  1
- HEJ  Var_03    O3G  PG   O3B  PB   157.26  30.0  1
- HEJ  Var_04    H7   C5'  O5'  PA   -32.08  30.0  2
+ HEJ  CONST_01  C8   N7   C5   C6    180.00   0.0  0
+ HEJ  CONST_02  N9   C4   C5   C6    180.00   0.0  0
+ HEJ  CONST_03  N3   C4   C5   C6      0.00   0.0  0
+ HEJ  CONST_04  N3   C2   N1   C6      0.00   0.0  0
+ HEJ  CONST_05  N7   C5   C6   N1    180.00   0.0  0
+ HEJ  CONST_06  C4   C5   C6   N1      0.00   0.0  0
+ HEJ  CONST_07  C4   N3   C2   N1      0.00   0.0  0
+ HEJ  CONST_08  N9   C4   N3   C2    180.00   0.0  0
+ HEJ  CONST_09  C5   C4   N3   C2      0.00   0.0  0
+ HEJ  CONST_10  C5   C6   N1   C2      0.00   0.0  0
+ HEJ  CONST_11  C8   N9   C4   N3    180.00   0.0  0
+ HEJ  CONST_12  N7   C5   C4   N3    180.00   0.0  0
+ HEJ  CONST_13  N7   C8   N9   C4      0.00   0.0  0
+ HEJ  CONST_14  C8   N7   C5   C4      0.00   0.0  0
+ HEJ  CONST_15  N9   C8   N7   C5      0.00   0.0  0
+ HEJ  CONST_16  C8   N9   C4   C5      0.00   0.0  0
+ HEJ  CONST_17  N9   C4   C5   N7      0.00   0.0  0
+ HEJ  CONST_18  C1'  N9   C4   N3      0.00   0.0  0
+ HEJ  CONST_19  C1'  N9   C4   C5    180.00   0.0  0
+ HEJ  CONST_20  C1'  N9   C8   N7    180.00   0.0  0
+ HEJ  CONST_21  N7   C5   C6   N6      0.00   0.0  0
+ HEJ  CONST_22  C4   C5   C6   N6    180.00   0.0  0
+ HEJ  CONST_23  C2   N1   C6   N6    180.00   0.0  0
+ HEJ  CONST_24  H3   C2   N1   C6    180.00   0.0  0
+ HEJ  CONST_25  H4   C8   N9   C4    180.00   0.0  0
+ HEJ  CONST_26  H1   N6   C6   N1      0.00   0.0  0
+ HEJ  CONST_27  H2   N6   C6   N1    180.00   0.0  0
+ HEJ  Var_01    O3A  PA   O5'  C5'    80.44  30.0  3
+ HEJ  Var_02    O1B  PB   O3A  PA    176.18  30.0  1
+ HEJ  Var_03    O3G  PG   O3B  PB    157.26  30.0  1
+ HEJ  Var_04    H7   C5'  O5'  PA    -32.08  30.0  2
+ HEJ  Var_05    C2'  C1'  N9   C4     96.35  30.0  1
+ HEJ  Var_06    O4'  C1'  N9   C4   -145.55  30.0  1
+ HEJ  Var_07    C2'  C1'  N9   C8    -79.20  30.0  1
+ HEJ  Var_08    O4'  C1'  N9   C8     38.89  30.0  1
+ HEJ  Var_09    C3'  C2'  C1'  N9    151.86  30.0  1
+ HEJ  Var_10    C4'  O4'  C1'  N9   -137.39  30.0  1
+ HEJ  Var_11    C4'  C3'  C2'  C1'   -36.19  30.0  1
+ HEJ  Var_12    C3'  C4'  O4'  C1'    -8.91  30.0  1
+ HEJ  Var_13    C2'  C3'  C4'  O4'    29.09  30.0  1
+ HEJ  Var_14    C3'  C2'  C1'  O4'    32.44  30.0  1
+ HEJ  Var_15    C2'  C1'  O4'  C4'   -15.09  30.0  1
+ HEJ  Var_16    O31  C2'  C1'  N9     36.10  30.0  1
+ HEJ  Var_17    O3'  C3'  C2'  C1'    80.99  30.0  1
+ HEJ  Var_18    C5'  C4'  O4'  C1'   113.15  30.0  1
+ HEJ  Var_19    O3'  C3'  C4'  O4'   -84.39  30.0  1
+ HEJ  Var_20    O31  C2'  C1'  O4'   -83.33  30.0  1
+ HEJ  Var_21    O31  C2'  C3'  C4'    82.01  30.0  1
+ HEJ  Var_22    C2'  C3'  C4'  C5'   -92.21  30.0  1
+ HEJ  Var_23    H5   C1'  N9   C4    -25.37  30.0  1
+ HEJ  Var_24    H15  C2'  C1'  N9    -90.19  30.0  1
+ HEJ  Var_25    H13  C3'  C2'  C1'  -156.41  30.0  1
+ HEJ  Var_26    H6   C4'  O4'  C1'  -127.44  30.0  1
+ HEJ  Var_27    O5'  C5'  C4'  O4'    55.69  30.0  2
+ HEJ  Var_28    O3'  C3'  C4'  C5'   154.30  30.0  1
+ HEJ  Var_29    C3'  C4'  C5'  O5'   173.95  30.0  3
+ HEJ  Var_30    O31  C2'  C3'  O3'  -160.82  30.0  1
+ HEJ  Var_31    H16  O31  C2'  C1'   -87.71  30.0  3
+ HEJ  Var_32    H7   C5'  C4'  O4'   178.62  30.0  2
+ HEJ  Var_33    H8   C5'  C4'  O4'   -61.94  30.0  2
+ HEJ  Var_34    H14  O3'  C3'  C4'   -64.57  30.0  3
+ HEJ  Var_35    PB   O3A  PA   O5'    38.72  30.0  2
+ HEJ  Var_36    PB   O3A  PA   O2A   166.26  30.0  2
+ HEJ  Var_37    PB   O3A  PA   O1A   -64.72  30.0  2
+ HEJ  Var_38    PG   O3B  PB   O3A  -112.16  30.0  2
+ HEJ  Var_39    PG   O3B  PB   O1B     9.63  30.0  2
+ HEJ  Var_40    PG   O3B  PB   O2B   141.29  30.0  2
+ HEJ  Var_41    H9   O1A  PA   O5'   171.35  30.0  3
+ HEJ  Var_42    H10  O2B  PB   O3A   170.26  30.0  3
+ HEJ  Var_43    H12  O1G  PG   O3B   -55.71  30.0  3
+ HEJ  Var_44    H11  O2G  PG   O3B   -76.43  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

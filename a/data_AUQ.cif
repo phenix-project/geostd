@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AUQ  AUQ  (2~{S})-~{N}-(4-iodophenyl)-2-(4-methoxyphenoxy)propanamide  ligand  37  21  .  2021-08-06  2021-08-06  
+ AUQ  AUQ  (2~{S})-~{N}-(4-iodophenyl)-2-(4-methoxyphenoxy)propanamide  ligand  37  21  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_AUQ
@@ -202,41 +203,53 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AUQ  CONST_01  C16  C18  C19  C13    0.00   0.0  0
- AUQ  CONST_02  C16  C15  C14  C13    0.00   0.0  0
- AUQ  CONST_03  C19  C13  C14  C15    0.00   0.0  0
- AUQ  CONST_04  C19  C18  C16  C15    0.00   0.0  0
- AUQ  CONST_05  C04  C05  C06  C20    0.00   0.0  0
- AUQ  CONST_06  C04  C03  C21  C20    0.00   0.0  0
- AUQ  CONST_07  C05  C06  C20  C21    0.00   0.0  0
- AUQ  CONST_08  C05  C04  C03  C21    0.00   0.0  0
- AUQ  CONST_09  C06  C20  C21  C03    0.00   0.0  0
- AUQ  CONST_10  C06  C05  C04  C03    0.00   0.0  0
- AUQ  CONST_11  C18  C19  C13  C14    0.00   0.0  0
- AUQ  CONST_12  C18  C16  C15  C14    0.00   0.0  0
- AUQ  CONST_13  C18  C19  C13  N12  180.00   0.0  0
- AUQ  CONST_14  C15  C14  C13  N12  180.00   0.0  0
- AUQ  CONST_15  O02  C03  C21  C20  180.00   0.0  0
- AUQ  CONST_16  O07  C06  C20  C21  180.00   0.0  0
- AUQ  CONST_17  C05  C04  C03  O02  180.00   0.0  0
- AUQ  CONST_18  O07  C06  C05  C04  180.00   0.0  0
- AUQ  CONST_19  I17  C16  C15  C14  180.00   0.0  0
- AUQ  CONST_20  I17  C16  C18  C19  180.00   0.0  0
- AUQ  CONST_21  H15  C18  C19  C13  180.00   0.0  0
- AUQ  CONST_22  H2   C15  C14  C13  180.00   0.0  0
- AUQ  CONST_23  H9   C05  C06  C20  180.00   0.0  0
- AUQ  CONST_24  H8   C04  C03  C21  180.00   0.0  0
- AUQ  CONST_25  H3   C20  C21  C03  180.00   0.0  0
- AUQ  CONST_26  H4   C21  C03  C04  180.00   0.0  0
- AUQ  CONST_27  H16  C19  C13  C14  180.00   0.0  0
- AUQ  CONST_28  H14  C14  C15  C16  180.00   0.0  0
- AUQ  CONST_29  C19  C13  N12  C10    0.00   0.0  0
- AUQ  CONST_30  C14  C13  N12  C10  180.00   0.0  0
- AUQ  CONST_31  H1   N12  C13  C14    0.00   0.0  0
- AUQ  CONST_32  C08  C10  N12  C13  180.00   0.0  0
- AUQ  CONST_33  O11  C10  N12  C13    0.00   0.0  0
- AUQ  Var_01    C04  C03  O02  C01   -1.21  30.0  2
- AUQ  Var_02    H5   C01  O02  C03   62.37  30.0  3
+ AUQ  CONST_01  C16  C18  C19  C13     0.00   0.0  0
+ AUQ  CONST_02  C16  C15  C14  C13     0.00   0.0  0
+ AUQ  CONST_03  C19  C13  C14  C15     0.00   0.0  0
+ AUQ  CONST_04  C19  C18  C16  C15     0.00   0.0  0
+ AUQ  CONST_05  C04  C05  C06  C20     0.00   0.0  0
+ AUQ  CONST_06  C04  C03  C21  C20     0.00   0.0  0
+ AUQ  CONST_07  C05  C06  C20  C21     0.00   0.0  0
+ AUQ  CONST_08  C05  C04  C03  C21     0.00   0.0  0
+ AUQ  CONST_09  C06  C20  C21  C03     0.00   0.0  0
+ AUQ  CONST_10  C06  C05  C04  C03     0.00   0.0  0
+ AUQ  CONST_11  C18  C19  C13  C14     0.00   0.0  0
+ AUQ  CONST_12  C18  C16  C15  C14     0.00   0.0  0
+ AUQ  CONST_13  C18  C19  C13  N12   180.00   0.0  0
+ AUQ  CONST_14  C15  C14  C13  N12   180.00   0.0  0
+ AUQ  CONST_15  O02  C03  C21  C20   180.00   0.0  0
+ AUQ  CONST_16  O07  C06  C20  C21   180.00   0.0  0
+ AUQ  CONST_17  C05  C04  C03  O02   180.00   0.0  0
+ AUQ  CONST_18  O07  C06  C05  C04   180.00   0.0  0
+ AUQ  CONST_19  I17  C16  C15  C14   180.00   0.0  0
+ AUQ  CONST_20  I17  C16  C18  C19   180.00   0.0  0
+ AUQ  CONST_21  H15  C18  C19  C13   180.00   0.0  0
+ AUQ  CONST_22  H2   C15  C14  C13   180.00   0.0  0
+ AUQ  CONST_23  H9   C05  C06  C20   180.00   0.0  0
+ AUQ  CONST_24  H8   C04  C03  C21   180.00   0.0  0
+ AUQ  CONST_25  H3   C20  C21  C03   180.00   0.0  0
+ AUQ  CONST_26  H4   C21  C03  C04   180.00   0.0  0
+ AUQ  CONST_27  H16  C19  C13  C14   180.00   0.0  0
+ AUQ  CONST_28  H14  C14  C15  C16   180.00   0.0  0
+ AUQ  CONST_29  C19  C13  N12  C10     0.00   0.0  0
+ AUQ  CONST_30  C14  C13  N12  C10   180.00   0.0  0
+ AUQ  CONST_31  H1   N12  C13  C14     0.00   0.0  0
+ AUQ  CONST_32  C08  C10  N12  C13   180.00   0.0  0
+ AUQ  CONST_33  O11  C10  N12  C13     0.00   0.0  0
+ AUQ  Var_01    C04  C03  O02  C01    -1.21  30.0  2
+ AUQ  Var_02    H5   C01  O02  C03    62.37  30.0  3
+ AUQ  Var_03    C08  O07  C06  C20     4.91  30.0  2
+ AUQ  Var_04    C08  O07  C06  C05  -175.94  30.0  2
+ AUQ  Var_05    C06  O07  C08  C10  -164.13  30.0  3
+ AUQ  Var_06    C09  C08  O07  C06    76.95  30.0  3
+ AUQ  Var_07    H10  C08  O07  C06   -46.59  30.0  3
+ AUQ  Var_08    C09  C08  C10  N12   -81.41  30.0  2
+ AUQ  Var_09    O07  C08  C10  N12   157.61  30.0  2
+ AUQ  Var_10    O11  C10  C08  O07   -24.82  30.0  3
+ AUQ  Var_11    O11  C10  C08  C09    96.16  30.0  3
+ AUQ  Var_12    H11  C09  C08  C10  -177.29  30.0  3
+ AUQ  Var_13    H12  C09  C08  C10   -56.72  30.0  3
+ AUQ  Var_14    H13  C09  C08  C10    63.44  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

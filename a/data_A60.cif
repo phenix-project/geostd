@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A60  A60  '(3R,3aS,6aR)-hexahydrofuro[2,3-b]furan-3-yl [(2S,3R)-4-{[(4-aminophenyl)sulfonyl](2-ethylbutyl)amino}-3-hydroxy-1-phenylbutan-2-yl]carbamate'  ligand  81  40  .  2022-07-24  2022-07-26
+ A60  A60  '(3R,3aS,6aR)-hexahydrofuro[2,3-b]furan-3-yl [(2S,3R)-4-{[(4-aminophenyl)sulfonyl](2-ethylbutyl)amino}-3-hydroxy-1-phenylbutan-2-yl]carbamate'  ligand  81  40  .  2022-07-24  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_A60
@@ -384,47 +385,86 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- A60  CONST_01  C5   C4   C3   C2      0.00   0.0  0
- A60  CONST_02  C5   C6   C7   C2      0.00   0.0  0
- A60  CONST_03  C6   C7   C2   C3      0.00   0.0  0
- A60  CONST_04  C6   C5   C4   C3      0.00   0.0  0
- A60  CONST_05  C7   C2   C3   C4      0.00   0.0  0
- A60  CONST_06  C7   C6   C5   C4      0.00   0.0  0
- A60  CONST_07  C36  C35  C34  C33     0.00   0.0  0
- A60  CONST_08  C36  C37  C38  C33     0.00   0.0  0
- A60  CONST_09  C37  C38  C33  C34     0.00   0.0  0
- A60  CONST_10  C37  C36  C35  C34     0.00   0.0  0
- A60  CONST_11  C38  C33  C34  C35     0.00   0.0  0
- A60  CONST_12  C38  C37  C36  C35     0.00   0.0  0
- A60  CONST_13  C4   C3   C2   N1    180.00   0.0  0
- A60  CONST_14  C6   C7   C2   N1    180.00   0.0  0
- A60  CONST_15  S8   C5   C4   C3    180.00   0.0  0
- A60  CONST_16  S8   C5   C6   C7    180.00   0.0  0
- A60  CONST_17  C34  C33  C38  C32   180.00   0.0  0
- A60  CONST_18  C36  C37  C38  C32   180.00   0.0  0
- A60  CONST_19  H4   C4   C3   C2    180.00   0.0  0
- A60  CONST_20  H6   C6   C7   C2    180.00   0.0  0
- A60  CONST_21  H7   C7   C2   C3    180.00   0.0  0
- A60  CONST_22  H3   C3   C4   C5    180.00   0.0  0
- A60  CONST_23  H35  C35  C34  C33   180.00   0.0  0
- A60  CONST_24  H37  C37  C38  C33   180.00   0.0  0
- A60  CONST_25  H36  C36  C35  C34   180.00   0.0  0
- A60  CONST_26  H33  C33  C34  C35   180.00   0.0  0
- A60  CONST_27  H34  C34  C35  C36   180.00   0.0  0
- A60  Var_01    C30  C29  O28  C27   -28.71  30.0  1
- A60  Var_02    C31  C30  C29  O28    34.77  30.0  1
- A60  Var_03    H25  C25  O26  C27  -152.56  30.0  1
- A60  Var_04    O9   S8   C5   C4   -151.38  30.0  2
- A60  Var_05    C33  C38  C32  C19    91.18  30.0  2
- A60  Var_06    C12  N11  S8   C5    120.71  30.0  3
- A60  Var_07    C13  C12  N11  S8     96.30  30.0  3
- A60  Var_08    C17  C16  N11  S8     93.53  30.0  3
- A60  Var_09    C14  C13  C12  N11   -67.59  30.0  3
- A60  Var_10    C20  C14  C13  C12   -71.46  30.0  3
- A60  Var_11    C18  C15  C13  C12    62.65  30.0  3
- A60  Var_12    O22  C21  N20  C19    10.46  30.0  2
- A60  Var_13    H20  C20  C14  C13    60.57  30.0  3
- A60  Var_14    H18  C18  C15  C13    59.93  30.0  3
+ A60  CONST_01  C5    C4   C3   C2      0.00   0.0  0
+ A60  CONST_02  C5    C6   C7   C2      0.00   0.0  0
+ A60  CONST_03  C6    C7   C2   C3      0.00   0.0  0
+ A60  CONST_04  C6    C5   C4   C3      0.00   0.0  0
+ A60  CONST_05  C7    C2   C3   C4      0.00   0.0  0
+ A60  CONST_06  C7    C6   C5   C4      0.00   0.0  0
+ A60  CONST_07  C36   C35  C34  C33     0.00   0.0  0
+ A60  CONST_08  C36   C37  C38  C33     0.00   0.0  0
+ A60  CONST_09  C37   C38  C33  C34     0.00   0.0  0
+ A60  CONST_10  C37   C36  C35  C34     0.00   0.0  0
+ A60  CONST_11  C38   C33  C34  C35     0.00   0.0  0
+ A60  CONST_12  C38   C37  C36  C35     0.00   0.0  0
+ A60  CONST_13  C4    C3   C2   N1    180.00   0.0  0
+ A60  CONST_14  C6    C7   C2   N1    180.00   0.0  0
+ A60  CONST_15  S8    C5   C4   C3    180.00   0.0  0
+ A60  CONST_16  S8    C5   C6   C7    180.00   0.0  0
+ A60  CONST_17  C34   C33  C38  C32   180.00   0.0  0
+ A60  CONST_18  C36   C37  C38  C32   180.00   0.0  0
+ A60  CONST_19  H4    C4   C3   C2    180.00   0.0  0
+ A60  CONST_20  H6    C6   C7   C2    180.00   0.0  0
+ A60  CONST_21  H7    C7   C2   C3    180.00   0.0  0
+ A60  CONST_22  H3    C3   C4   C5    180.00   0.0  0
+ A60  CONST_23  H35   C35  C34  C33   180.00   0.0  0
+ A60  CONST_24  H37   C37  C38  C33   180.00   0.0  0
+ A60  CONST_25  H36   C36  C35  C34   180.00   0.0  0
+ A60  CONST_26  H33   C33  C34  C35   180.00   0.0  0
+ A60  CONST_27  H34   C34  C35  C36   180.00   0.0  0
+ A60  Var_01    C30   C29  O28  C27   -28.71  30.0  1
+ A60  Var_02    C31   C30  C29  O28    34.77  30.0  1
+ A60  Var_03    H25   C25  O26  C27  -152.56  30.0  1
+ A60  Var_04    O9    S8   C5   C4   -151.38  30.0  2
+ A60  Var_05    C33   C38  C32  C19    91.18  30.0  2
+ A60  Var_06    C12   N11  S8   C5    120.71  30.0  3
+ A60  Var_07    C13   C12  N11  S8     96.30  30.0  3
+ A60  Var_08    C17   C16  N11  S8     93.53  30.0  3
+ A60  Var_09    C14   C13  C12  N11   -67.59  30.0  3
+ A60  Var_10    C20   C14  C13  C12   -71.46  30.0  3
+ A60  Var_11    C18   C15  C13  C12    62.65  30.0  3
+ A60  Var_12    O22   C21  N20  C19    10.46  30.0  2
+ A60  Var_13    H20   C20  C14  C13    60.57  30.0  3
+ A60  Var_14    H18   C18  C15  C13    59.93  30.0  3
+ A60  Var_15    O26   C27  C31  C24    13.32  30.0  1
+ A60  Var_16    O28   C27  C31  C24   132.67  30.0  1
+ A60  Var_17    C29   C30  C31  C24  -138.99  30.0  1
+ A60  Var_18    C27   C31  C24  C25   -30.78  30.0  1
+ A60  Var_19    C30   C31  C24  C25    80.78  30.0  1
+ A60  Var_20    O28   C27  O26  C25  -105.54  30.0  1
+ A60  Var_21    C31   C27  O26  C25    11.60  30.0  1
+ A60  Var_22    C31   C24  C25  O26    38.47  30.0  1
+ A60  Var_23    C29   O28  C27  O26   127.09  30.0  1
+ A60  Var_24    C30   C31  C27  O26  -107.04  30.0  1
+ A60  Var_25    C29   C30  C31  C27   -27.92  30.0  1
+ A60  Var_26    C30   C31  C27  O28    12.31  30.0  1
+ A60  Var_27    C31   C27  O28  C29    10.06  30.0  1
+ A60  Var_28    O26   C25  C24  O23   157.25  30.0  1
+ A60  Var_29    C27   C31  C24  O23  -152.77  30.0  1
+ A60  Var_30    C30   C31  C24  O23   -41.21  30.0  1
+ A60  Var_31    H27   C27  C31  C24  -105.61  30.0  1
+ A60  Var_32    H30   C30  C31  C24   100.37  30.0  1
+ A60  Var_33    H30A  C30  C31  C24   -21.26  30.0  1
+ A60  Var_34    H31   C31  C24  C25  -150.73  30.0  1
+ A60  Var_35    H24   C24  C25  O26   -78.19  30.0  1
+ A60  Var_36    C25   C24  O23  C21    78.23  30.0  3
+ A60  Var_37    C31   C24  O23  C21  -167.71  30.0  3
+ A60  Var_38    C38   C32  C19  C17  -179.57  30.0  3
+ A60  Var_39    C38   C32  C19  N20   -55.79  30.0  3
+ A60  Var_40    C24   O23  C21  N20   175.86  30.0  3
+ A60  Var_41    C24   O23  C21  O22    -4.97  30.0  3
+ A60  Var_42    H19   C19  C32  C38    61.77  30.0  2
+ A60  Var_43    O18   C17  C16  N11    72.74  30.0  3
+ A60  Var_44    C19   C17  C16  N11  -159.78  30.0  3
+ A60  Var_45    N20   C19  C17  C16   171.57  30.0  3
+ A60  Var_46    C32   C19  C17  C16   -63.65  30.0  3
+ A60  Var_47    C21   N20  C19  C17  -137.03  30.0  3
+ A60  Var_48    N20   C19  C17  O18   -60.55  30.0  3
+ A60  Var_49    C32   C19  C17  O18    64.23  30.0  3
+ A60  Var_50    C32   C19  N20  C21    96.81  30.0  3
+ A60  Var_51    H17   C17  C16  N11   -43.41  30.0  3
+ A60  Var_52    HO18  O18  C17  C16    61.53  30.0  3
+ A60  Var_53    HN20  N20  C19  C17    57.31  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

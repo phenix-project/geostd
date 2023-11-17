@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7CF  7CF  '[3,5-bis(chloranyl)phenyl]methyl (3~{R})-3-[[(4~{R})-4-[(3~{R},5~{S},7~{S},8~{R},9~{S},10~{S},13~{R},14~{S},17~{R})-10,13-dimethyl-3,7-bis(oxidanyl)-2,3,4,5,6,7,8,9,11,12,14,15,16,17-tetradecahydro-1~{H}-cyclopenta[a]phenanthren-17-yl]pentanoyl]amino]pyrrolidine-1-carboxylate'  ligand  97  45  .  2021-08-05  2021-08-05  
+ 7CF  7CF  '[3,5-bis(chloranyl)phenyl]methyl (3~{R})-3-[[(4~{R})-4-[(3~{R},5~{S},7~{S},8~{R},9~{S},10~{S},13~{R},14~{S},17~{R})-10,13-dimethyl-3,7-bis(oxidanyl)-2,3,4,5,6,7,8,9,11,12,14,15,16,17-tetradecahydro-1~{H}-cyclopenta[a]phenanthren-17-yl]pentanoyl]amino]pyrrolidine-1-carboxylate'  ligand  97  45  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7CF
@@ -465,34 +466,147 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 7CF  CONST_01  C13  C14  C15  C10    0.00   0.0  0
- 7CF  CONST_02  C13  C12  C11  C10    0.00   0.0  0
- 7CF  CONST_03  C14  C13  C12  C11    0.00   0.0  0
- 7CF  CONST_04  C14  C15  C10  C11    0.00   0.0  0
- 7CF  CONST_05  C15  C14  C13  C12    0.00   0.0  0
- 7CF  CONST_06  C15  C10  C11  C12    0.00   0.0  0
- 7CF  CONST_07  C14  C15  C10  C9   180.00   0.0  0
- 7CF  CONST_08  C12  C11  C10  C9   180.00   0.0  0
- 7CF  CONST_09  CL2  C14  C15  C10  180.00   0.0  0
- 7CF  CONST_10  CL1  C12  C11  C10  180.00   0.0  0
- 7CF  CONST_11  CL2  C14  C13  C12  180.00   0.0  0
- 7CF  CONST_12  C14  C13  C12  CL1  180.00   0.0  0
- 7CF  CONST_13  H14  C13  C12  C11  180.00   0.0  0
- 7CF  CONST_14  H15  C15  C10  C11  180.00   0.0  0
- 7CF  CONST_15  H13  C11  C12  C13  180.00   0.0  0
- 7CF  CONST_16  C6   N1   C5   C4   180.00   0.0  0
- 7CF  CONST_17  C6   N1   C5   O1     0.00   0.0  0
- 7CF  CONST_18  H9   N1   C5   C4     0.00   0.0  0
- 7CF  Var_01    N2   C37  C7   C6    30.24  30.0  1
- 7CF  Var_02    C37  N2   C35  C6   -13.69  30.0  1
- 7CF  Var_03    C19  C18  C17  C16    8.20  30.0  1
- 7CF  Var_04    C28  C27  C26  C25   58.22  30.0  1
- 7CF  Var_05    C33  C32  C31  C30  -54.00  30.0  1
- 7CF  Var_06    C7   C37  N2   C35  -10.40  30.0  1
- 7CF  Var_07    C15  C10  C9   O3   -87.07  30.0  2
- 7CF  Var_08    C10  C9   O3   C8   176.88  30.0  1
- 7CF  Var_09    C5   C4   C3   C2   168.68  30.0  3
- 7CF  Var_10    O1   C5   C4   C3   -36.91  30.0  2
+ 7CF  CONST_01  C13  C14  C15  C10     0.00   0.0  0
+ 7CF  CONST_02  C13  C12  C11  C10     0.00   0.0  0
+ 7CF  CONST_03  C14  C13  C12  C11     0.00   0.0  0
+ 7CF  CONST_04  C14  C15  C10  C11     0.00   0.0  0
+ 7CF  CONST_05  C15  C14  C13  C12     0.00   0.0  0
+ 7CF  CONST_06  C15  C10  C11  C12     0.00   0.0  0
+ 7CF  CONST_07  C14  C15  C10  C9    180.00   0.0  0
+ 7CF  CONST_08  C12  C11  C10  C9    180.00   0.0  0
+ 7CF  CONST_09  CL2  C14  C15  C10   180.00   0.0  0
+ 7CF  CONST_10  CL1  C12  C11  C10   180.00   0.0  0
+ 7CF  CONST_11  CL2  C14  C13  C12   180.00   0.0  0
+ 7CF  CONST_12  C14  C13  C12  CL1   180.00   0.0  0
+ 7CF  CONST_13  H14  C13  C12  C11   180.00   0.0  0
+ 7CF  CONST_14  H15  C15  C10  C11   180.00   0.0  0
+ 7CF  CONST_15  H13  C11  C12  C13   180.00   0.0  0
+ 7CF  CONST_16  C6   N1   C5   C4    180.00   0.0  0
+ 7CF  CONST_17  C6   N1   C5   O1      0.00   0.0  0
+ 7CF  CONST_18  H9   N1   C5   C4      0.00   0.0  0
+ 7CF  Var_01    N2   C37  C7   C6     30.24  30.0  1
+ 7CF  Var_02    C37  N2   C35  C6    -13.69  30.0  1
+ 7CF  Var_03    C19  C18  C17  C16     8.20  30.0  1
+ 7CF  Var_04    C28  C27  C26  C25    58.22  30.0  1
+ 7CF  Var_05    C33  C32  C31  C30   -54.00  30.0  1
+ 7CF  Var_06    C7   C37  N2   C35   -10.40  30.0  1
+ 7CF  Var_07    C15  C10  C9   O3    -87.07  30.0  2
+ 7CF  Var_08    C10  C9   O3   C8    176.88  30.0  1
+ 7CF  Var_09    C5   C4   C3   C2    168.68  30.0  3
+ 7CF  Var_10    O1   C5   C4   C3    -36.91  30.0  2
+ 7CF  Var_11    C7   C6   C35  N2     32.03  30.0  1
+ 7CF  Var_12    C31  C32  C33  C16   166.29  30.0  1
+ 7CF  Var_13    C20  C19  C33  C16   178.42  30.0  1
+ 7CF  Var_14    C18  C19  C33  C16    45.79  30.0  1
+ 7CF  Var_15    C32  C33  C16  C17  -154.91  30.0  1
+ 7CF  Var_16    C19  C33  C16  C17   -39.73  30.0  1
+ 7CF  Var_17    C33  C19  C18  C17   -33.55  30.0  1
+ 7CF  Var_18    C20  C19  C18  C17  -162.41  30.0  1
+ 7CF  Var_19    C32  C33  C19  C18   167.04  30.0  1
+ 7CF  Var_20    C30  C20  C19  C18  -176.38  30.0  1
+ 7CF  Var_21    C21  C20  C19  C18   -54.50  30.0  1
+ 7CF  Var_22    C33  C16  C17  C18    19.95  30.0  1
+ 7CF  Var_23    C31  C32  C33  C19    55.02  30.0  1
+ 7CF  Var_24    C31  C30  C20  C19   -53.20  30.0  1
+ 7CF  Var_25    C28  C30  C20  C19   178.32  30.0  1
+ 7CF  Var_26    C22  C21  C20  C19  -172.70  30.0  1
+ 7CF  Var_27    C32  C31  C30  C20    52.54  30.0  1
+ 7CF  Var_28    C27  C28  C30  C20  -175.76  30.0  1
+ 7CF  Var_29    C23  C28  C30  C20   -56.11  30.0  1
+ 7CF  Var_30    C32  C33  C19  C20   -60.32  30.0  1
+ 7CF  Var_31    C23  C22  C21  C20    54.10  30.0  1
+ 7CF  Var_32    C24  C23  C22  C21    71.81  30.0  1
+ 7CF  Var_33    C28  C23  C22  C21   -55.42  30.0  1
+ 7CF  Var_34    C31  C30  C20  C21  -176.75  30.0  1
+ 7CF  Var_35    C28  C30  C20  C21    54.77  30.0  1
+ 7CF  Var_36    C33  C19  C20  C21  -178.64  30.0  1
+ 7CF  Var_37    C25  C24  C23  C22   179.54  30.0  1
+ 7CF  Var_38    C27  C28  C23  C22   177.20  30.0  1
+ 7CF  Var_39    C30  C28  C23  C22    54.89  30.0  1
+ 7CF  Var_40    C30  C20  C21  C22   -52.07  30.0  1
+ 7CF  Var_41    C26  C25  C24  C23    56.18  30.0  1
+ 7CF  Var_42    C26  C27  C28  C23   -53.89  30.0  1
+ 7CF  Var_43    C31  C30  C28  C23   176.09  30.0  1
+ 7CF  Var_44    C27  C26  C25  C24   -57.12  30.0  1
+ 7CF  Var_45    C27  C28  C23  C24    51.16  30.0  1
+ 7CF  Var_46    C30  C28  C23  C24   -71.15  30.0  1
+ 7CF  Var_47    C28  C23  C24  C25   -54.57  30.0  1
+ 7CF  Var_48    C30  C28  C27  C26    66.48  30.0  1
+ 7CF  Var_49    C31  C30  C28  C27    56.45  30.0  1
+ 7CF  Var_50    C32  C31  C30  C28  -178.72  30.0  1
+ 7CF  Var_51    C33  C19  C20  C30    59.47  30.0  1
+ 7CF  Var_52    C37  C7   C6   C35   -38.90  30.0  1
+ 7CF  Var_53    C32  C33  C16  C2     80.03  30.0  1
+ 7CF  Var_54    C19  C33  C16  C2   -164.78  30.0  1
+ 7CF  Var_55    C18  C17  C16  C2    149.39  30.0  1
+ 7CF  Var_56    C37  C7   C6   N1   -162.51  30.0  1
+ 7CF  Var_57    N2   C35  C6   N1    154.88  30.0  1
+ 7CF  Var_58    C34  C33  C16  C17    78.86  30.0  1
+ 7CF  Var_59    C34  C33  C19  C18   -71.15  30.0  1
+ 7CF  Var_60    O4   C21  C20  C19    66.27  30.0  1
+ 7CF  Var_61    C29  C28  C30  C20    64.94  30.0  1
+ 7CF  Var_62    C34  C33  C19  C20    61.49  30.0  1
+ 7CF  Var_63    C23  C22  C21  O4    174.99  30.0  1
+ 7CF  Var_64    C30  C20  C21  O4   -173.10  30.0  1
+ 7CF  Var_65    C29  C28  C23  C22   -67.08  30.0  1
+ 7CF  Var_66    O5   C25  C24  C23   179.77  30.0  1
+ 7CF  Var_67    C29  C28  C23  C24   166.88  30.0  1
+ 7CF  Var_68    C27  C26  C25  O5   -177.95  30.0  1
+ 7CF  Var_69    C29  C28  C27  C26  -171.58  30.0  1
+ 7CF  Var_70    C31  C30  C28  C29   -62.86  30.0  1
+ 7CF  Var_71    C34  C33  C32  C31   -67.80  30.0  1
+ 7CF  Var_72    H10  C6   C35  N2    -83.94  30.0  1
+ 7CF  Var_73    H42  C32  C33  C16    45.47  30.0  1
+ 7CF  Var_74    H43  C32  C33  C16   -71.50  30.0  1
+ 7CF  Var_75    H21  C19  C33  C16   -66.08  30.0  1
+ 7CF  Var_76    H22  C20  C19  C18    64.28  30.0  1
+ 7CF  Var_77    H16  C16  C17  C18   -92.54  30.0  1
+ 7CF  Var_78    H39  C30  C20  C19    60.88  30.0  1
+ 7CF  Var_79    H23  C21  C20  C19   -52.62  30.0  1
+ 7CF  Var_80    H40  C31  C30  C20   173.11  30.0  1
+ 7CF  Var_81    H41  C31  C30  C20   -71.10  30.0  1
+ 7CF  Var_82    H25  C22  C21  C20   176.61  30.0  1
+ 7CF  Var_83    H26  C22  C21  C20   -68.26  30.0  1
+ 7CF  Var_84    H27  C23  C22  C21  -171.97  30.0  1
+ 7CF  Var_85    H28  C24  C23  C22   -58.41  30.0  1
+ 7CF  Var_86    H29  C24  C23  C22    58.19  30.0  1
+ 7CF  Var_87    H30  C25  C24  C23   -61.09  30.0  1
+ 7CF  Var_88    H34  C27  C28  C23  -179.09  30.0  1
+ 7CF  Var_89    H35  C27  C28  C23    66.54  30.0  1
+ 7CF  Var_90    H32  C26  C25  C24    65.17  30.0  1
+ 7CF  Var_91    H33  C26  C25  C24  -177.90  30.0  1
+ 7CF  Var_92    H47  C35  C6   C7    152.28  30.0  1
+ 7CF  Var_93    H48  C35  C6   C7    -86.97  30.0  1
+ 7CF  Var_94    C33  C16  C2   C1    -57.74  30.0  1
+ 7CF  Var_95    C17  C16  C2   C1   -178.46  30.0  1
+ 7CF  Var_96    C34  C33  C16  C2    -46.19  30.0  1
+ 7CF  Var_97    C33  C16  C2   C3    178.07  30.0  1
+ 7CF  Var_98    C17  C16  C2   C3     57.35  30.0  1
+ 7CF  Var_99    C7   C6   N1   C5   -150.45  30.0  2
+ 7CF  Var_100   C35  C6   N1   C5     92.31  30.0  2
+ 7CF  Var_101   C37  N2   C8   O2   -178.45  30.0  2
+ 7CF  Var_102   C35  N2   C8   O2      1.86  30.0  2
+ 7CF  Var_103   C37  N2   C8   O3      1.54  30.0  2
+ 7CF  Var_104   C35  N2   C8   O3   -178.15  30.0  2
+ 7CF  Var_105   H44  C34  C33  C16  -174.63  30.0  3
+ 7CF  Var_106   H45  C34  C33  C16   -53.69  30.0  3
+ 7CF  Var_107   H46  C34  C33  C16    65.98  30.0  3
+ 7CF  Var_108   H4   C2   C16  C17   -58.74  30.0  3
+ 7CF  Var_109   H24  O4   C21  C20  -179.84  30.0  3
+ 7CF  Var_110   H36  C29  C28  C23   -50.22  30.0  3
+ 7CF  Var_111   H37  C29  C28  C23    70.17  30.0  3
+ 7CF  Var_112   H38  C29  C28  C23  -168.83  30.0  3
+ 7CF  Var_113   H31  O5   C25  C24   179.71  30.0  3
+ 7CF  Var_114   H9   N1   C6   C35   -84.52  30.0  3
+ 7CF  Var_115   C16  C2   C3   C4   -174.91  30.0  1
+ 7CF  Var_116   C9   O3   C8   N2   -178.36  30.0  1
+ 7CF  Var_117   H1   C1   C2   C16   -56.89  30.0  3
+ 7CF  Var_118   H2   C1   C2   C16    63.62  30.0  3
+ 7CF  Var_119   H3   C1   C2   C16  -177.01  30.0  3
+ 7CF  Var_120   H5   C3   C2   C16   -53.90  30.0  3
+ 7CF  Var_121   H6   C3   C2   C16    62.28  30.0  3
+ 7CF  Var_122   C4   C3   C2   C1     59.34  30.0  3
+ 7CF  Var_123   C9   O3   C8   O2      1.63  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

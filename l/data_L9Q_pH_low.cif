@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- L9Q  L9Q  '(21S,24S)-27-amino-24-hydroxy-24-oxido-18-oxo-19,23,25-trioxa-24lambda~5~-phosphaheptacosan-21-yl (9Z)-octadec-9-enoate'  ligand  131  51  .  2021-08-13  2021-08-13  
+ L9Q  L9Q  '(21S,24S)-27-amino-24-hydroxy-24-oxido-18-oxo-19,23,25-trioxa-24lambda~5~-phosphaheptacosan-21-yl (9Z)-octadec-9-enoate'  ligand  131  51  .  2021-08-13  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_L9Q
@@ -574,49 +575,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- L9Q  Var_01  C41  C40  C39  C38     2.35   0.0  2
- L9Q  Var_02  O4P  C4   C5   N      60.45  30.0  2
- L9Q  Var_03  C2   C1   O3P  P    -125.23  30.0  3
- L9Q  Var_04  C5   C4   O4P  P     149.78  30.0  3
- L9Q  Var_05  O1P  P    O3P  C1    -67.99  30.0  3
- L9Q  Var_06  C32  C31  O2   C2    178.06  30.0  2
- L9Q  Var_07  C33  C32  C31  O2    171.98  30.0  2
- L9Q  Var_08  C12  C11  O3   C3    171.43  30.0  2
- L9Q  Var_09  C13  C12  C11  O3    168.29  30.0  1
- L9Q  Var_10  O3P  P    O4P  C4    170.39  30.0  1
- L9Q  Var_11  C14  C13  C12  C11   173.86  30.0  3
- L9Q  Var_12  C15  C14  C13  C12   178.38  30.0  1
- L9Q  Var_13  C16  C15  C14  C13   177.43  30.0  2
- L9Q  Var_14  C17  C16  C15  C14   179.78  30.0  1
- L9Q  Var_15  C18  C17  C16  C15   179.22  30.0  3
- L9Q  Var_16  C19  C18  C17  C16  -179.93  30.0  3
- L9Q  Var_17  C20  C19  C18  C17   179.69  30.0  2
- L9Q  Var_18  C21  C20  C19  C18  -179.92  30.0  3
- L9Q  Var_19  C22  C21  C20  C19   179.91  30.0  1
- L9Q  Var_20  C23  C22  C21  C20  -179.99  30.0  3
- L9Q  Var_21  C24  C23  C22  C21  -179.97  30.0  1
- L9Q  Var_22  C25  C24  C23  C22   179.88  30.0  3
- L9Q  Var_23  C26  C25  C24  C23  -179.87  30.0  1
- L9Q  Var_24  C27  C26  C25  C24   179.70  30.0  3
- L9Q  Var_25  C28  C27  C26  C25  -179.87  30.0  1
- L9Q  Var_26  C34  C33  C32  C31   178.85  30.0  3
- L9Q  Var_27  C35  C34  C33  C32   179.53  30.0  2
- L9Q  Var_28  C36  C35  C34  C33   179.40  30.0  3
- L9Q  Var_29  C37  C36  C35  C34  -179.79  30.0  2
- L9Q  Var_30  C38  C37  C36  C35   179.04  30.0  3
- L9Q  Var_31  C39  C38  C37  C36   178.02  30.0  2
- L9Q  Var_32  C40  C39  C38  C37   107.58  30.0  1
- L9Q  Var_33  C42  C41  C40  C39   123.02  30.0  3
- L9Q  Var_34  C43  C42  C41  C40   178.59  30.0  3
- L9Q  Var_35  C44  C43  C42  C41  -177.86  30.0  3
- L9Q  Var_36  C45  C44  C43  C42  -178.75  30.0  3
- L9Q  Var_37  C46  C45  C44  C43  -178.88  30.0  3
- L9Q  Var_38  C47  C46  C45  C44  -179.14  30.0  3
- L9Q  Var_39  C48  C47  C46  C45  -179.67  30.0  3
- L9Q  Var_40  HN   N    C5   C4     66.73  30.0  3
- L9Q  Var_41  H3   C3   O3   C11   143.21  30.0  3
- L9Q  Var_42  H28  C28  C27  C26   -60.52  30.0  3
- L9Q  Var_43  H48  C48  C47  C46   -59.41  30.0  3
+ L9Q  Var_01  C41   C40  C39  C38     2.35   0.0  2
+ L9Q  Var_02  O4P   C4   C5   N      60.45  30.0  2
+ L9Q  Var_03  C2    C1   O3P  P    -125.23  30.0  3
+ L9Q  Var_04  C5    C4   O4P  P     149.78  30.0  3
+ L9Q  Var_05  O1P   P    O3P  C1    -67.99  30.0  3
+ L9Q  Var_06  C32   C31  O2   C2    178.06  30.0  2
+ L9Q  Var_07  C33   C32  C31  O2    171.98  30.0  2
+ L9Q  Var_08  C12   C11  O3   C3    171.43  30.0  2
+ L9Q  Var_09  C13   C12  C11  O3    168.29  30.0  1
+ L9Q  Var_10  O3P   P    O4P  C4    170.39  30.0  1
+ L9Q  Var_11  C14   C13  C12  C11   173.86  30.0  3
+ L9Q  Var_12  C15   C14  C13  C12   178.38  30.0  1
+ L9Q  Var_13  C16   C15  C14  C13   177.43  30.0  2
+ L9Q  Var_14  C17   C16  C15  C14   179.78  30.0  1
+ L9Q  Var_15  C18   C17  C16  C15   179.22  30.0  3
+ L9Q  Var_16  C19   C18  C17  C16  -179.93  30.0  3
+ L9Q  Var_17  C20   C19  C18  C17   179.69  30.0  2
+ L9Q  Var_18  C21   C20  C19  C18  -179.92  30.0  3
+ L9Q  Var_19  C22   C21  C20  C19   179.91  30.0  1
+ L9Q  Var_20  C23   C22  C21  C20  -179.99  30.0  3
+ L9Q  Var_21  C24   C23  C22  C21  -179.97  30.0  1
+ L9Q  Var_22  C25   C24  C23  C22   179.88  30.0  3
+ L9Q  Var_23  C26   C25  C24  C23  -179.87  30.0  1
+ L9Q  Var_24  C27   C26  C25  C24   179.70  30.0  3
+ L9Q  Var_25  C28   C27  C26  C25  -179.87  30.0  1
+ L9Q  Var_26  C34   C33  C32  C31   178.85  30.0  3
+ L9Q  Var_27  C35   C34  C33  C32   179.53  30.0  2
+ L9Q  Var_28  C36   C35  C34  C33   179.40  30.0  3
+ L9Q  Var_29  C37   C36  C35  C34  -179.79  30.0  2
+ L9Q  Var_30  C38   C37  C36  C35   179.04  30.0  3
+ L9Q  Var_31  C39   C38  C37  C36   178.02  30.0  2
+ L9Q  Var_32  C40   C39  C38  C37   107.58  30.0  1
+ L9Q  Var_33  C42   C41  C40  C39   123.02  30.0  3
+ L9Q  Var_34  C43   C42  C41  C40   178.59  30.0  3
+ L9Q  Var_35  C44   C43  C42  C41  -177.86  30.0  3
+ L9Q  Var_36  C45   C44  C43  C42  -178.75  30.0  3
+ L9Q  Var_37  C46   C45  C44  C43  -178.88  30.0  3
+ L9Q  Var_38  C47   C46  C45  C44  -179.14  30.0  3
+ L9Q  Var_39  C48   C47  C46  C45  -179.67  30.0  3
+ L9Q  Var_40  HN    N    C5   C4     66.73  30.0  3
+ L9Q  Var_41  H3    C3   O3   C11   143.21  30.0  3
+ L9Q  Var_42  H28   C28  C27  C26   -60.52  30.0  3
+ L9Q  Var_43  H48   C48  C47  C46   -59.41  30.0  3
+ L9Q  Var_44  O3    C3   C2   C1    -61.99  30.0  1
+ L9Q  Var_45  C31   O2   C2   C1    -82.43  30.0  3
+ L9Q  Var_46  O3P   C1   C2   O2    -50.22  30.0  3
+ L9Q  Var_47  O3    C3   C2   O2     61.36  30.0  1
+ L9Q  Var_48  O3P   C1   C2   C3     71.41  30.0  3
+ L9Q  Var_49  C31   O2   C2   C3    151.07  30.0  3
+ L9Q  Var_50  H3A   C3   C2   C1    174.12  30.0  1
+ L9Q  Var_51  H2    C2   C3   O3   -179.94  30.0  3
+ L9Q  Var_52  HO2P  O2P  P    O1P   173.42  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CJN  CJN  ~{N}4,~{N}4-dimethyl-~{N}1-(5-propan-2-ylpyrrolo[3,2-d]pyrimidin-4-yl)cyclohexane-1,4-diamine  ligand  49  22  .  2021-08-07  2021-08-07  
+ CJN  CJN  ~{N}4,~{N}4-dimethyl-~{N}1-(5-propan-2-ylpyrrolo[3,2-d]pyrimidin-4-yl)cyclohexane-1,4-diamine  ligand  49  22  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CJN
@@ -260,42 +261,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CJN  CONST_01  C5   N4   C24  C7     0.00   0.0  0
- CJN  CONST_02  N10  C11  C24  C7     0.00   0.0  0
- CJN  CONST_03  N4   C5   C6   C7     0.00   0.0  0
- CJN  CONST_04  N10  C9   N8   C7     0.00   0.0  0
- CJN  CONST_05  C24  C11  N10  C9     0.00   0.0  0
- CJN  CONST_06  C24  C7   N8   C9     0.00   0.0  0
- CJN  CONST_07  C6   C7   N8   C9   180.00   0.0  0
- CJN  CONST_08  C5   N4   C24  C11  180.00   0.0  0
- CJN  CONST_09  C6   C7   C24  C11  180.00   0.0  0
- CJN  CONST_10  N8   C7   C24  C11    0.00   0.0  0
- CJN  CONST_11  N8   C9   N10  C11    0.00   0.0  0
- CJN  CONST_12  C6   C5   N4   C24    0.00   0.0  0
- CJN  CONST_13  C5   C6   C7   C24    0.00   0.0  0
- CJN  CONST_14  N10  C11  C24  N4   180.00   0.0  0
- CJN  CONST_15  C6   C7   C24  N4     0.00   0.0  0
- CJN  CONST_16  N8   C7   C24  N4   180.00   0.0  0
- CJN  CONST_17  N8   C7   C6   C5   180.00   0.0  0
- CJN  CONST_18  C11  C24  N4   C2     0.00   0.0  0
- CJN  CONST_19  C7   C24  N4   C2   180.00   0.0  0
- CJN  CONST_20  C6   C5   N4   C2   180.00   0.0  0
- CJN  CONST_21  N12  C11  C24  C7   180.00   0.0  0
- CJN  CONST_22  N12  C11  N10  C9   180.00   0.0  0
- CJN  CONST_23  N12  C11  C24  N4     0.00   0.0  0
- CJN  CONST_24  C24  C11  N12  C13  180.00   0.0  0
- CJN  CONST_25  N10  C11  N12  C13    0.00   0.0  0
- CJN  CONST_26  H22  C5   C6   C7   180.00   0.0  0
- CJN  CONST_27  H8   C9   N8   C7   180.00   0.0  0
- CJN  CONST_28  H23  C6   C7   C24  180.00   0.0  0
- CJN  CONST_29  H24  N12  C11  C24    0.00   0.0  0
- CJN  Var_01    C17  C16  C15  C13   56.63  30.0  1
- CJN  Var_02    C17  C19  C20  C13  -56.20  30.0  1
- CJN  Var_03    C24  N4   C2   C1    75.68  30.0  2
- CJN  Var_04    H1   C1   C2   N4    63.78  30.0  3
- CJN  Var_05    H5   C3   C2   N4   -68.72  30.0  3
- CJN  Var_06    H26  C23  N21  C17   68.49  30.0  3
- CJN  Var_07    H19  C22  N21  C17   52.69  30.0  3
+ CJN  CONST_01  C5   N4   C24  C7      0.00   0.0  0
+ CJN  CONST_02  N10  C11  C24  C7      0.00   0.0  0
+ CJN  CONST_03  N4   C5   C6   C7      0.00   0.0  0
+ CJN  CONST_04  N10  C9   N8   C7      0.00   0.0  0
+ CJN  CONST_05  C24  C11  N10  C9      0.00   0.0  0
+ CJN  CONST_06  C24  C7   N8   C9      0.00   0.0  0
+ CJN  CONST_07  C6   C7   N8   C9    180.00   0.0  0
+ CJN  CONST_08  C5   N4   C24  C11   180.00   0.0  0
+ CJN  CONST_09  C6   C7   C24  C11   180.00   0.0  0
+ CJN  CONST_10  N8   C7   C24  C11     0.00   0.0  0
+ CJN  CONST_11  N8   C9   N10  C11     0.00   0.0  0
+ CJN  CONST_12  C6   C5   N4   C24     0.00   0.0  0
+ CJN  CONST_13  C5   C6   C7   C24     0.00   0.0  0
+ CJN  CONST_14  N10  C11  C24  N4    180.00   0.0  0
+ CJN  CONST_15  C6   C7   C24  N4      0.00   0.0  0
+ CJN  CONST_16  N8   C7   C24  N4    180.00   0.0  0
+ CJN  CONST_17  N8   C7   C6   C5    180.00   0.0  0
+ CJN  CONST_18  C11  C24  N4   C2      0.00   0.0  0
+ CJN  CONST_19  C7   C24  N4   C2    180.00   0.0  0
+ CJN  CONST_20  C6   C5   N4   C2    180.00   0.0  0
+ CJN  CONST_21  N12  C11  C24  C7    180.00   0.0  0
+ CJN  CONST_22  N12  C11  N10  C9    180.00   0.0  0
+ CJN  CONST_23  N12  C11  C24  N4      0.00   0.0  0
+ CJN  CONST_24  C24  C11  N12  C13   180.00   0.0  0
+ CJN  CONST_25  N10  C11  N12  C13     0.00   0.0  0
+ CJN  CONST_26  H22  C5   C6   C7    180.00   0.0  0
+ CJN  CONST_27  H8   C9   N8   C7    180.00   0.0  0
+ CJN  CONST_28  H23  C6   C7   C24   180.00   0.0  0
+ CJN  CONST_29  H24  N12  C11  C24     0.00   0.0  0
+ CJN  Var_01    C17  C16  C15  C13    56.63  30.0  1
+ CJN  Var_02    C17  C19  C20  C13   -56.20  30.0  1
+ CJN  Var_03    C24  N4   C2   C1     75.68  30.0  2
+ CJN  Var_04    H1   C1   C2   N4     63.78  30.0  3
+ CJN  Var_05    H5   C3   C2   N4    -68.72  30.0  3
+ CJN  Var_06    H26  C23  N21  C17    68.49  30.0  3
+ CJN  Var_07    H19  C22  N21  C17    52.69  30.0  3
+ CJN  Var_08    C19  C17  C16  C15   -57.12  30.0  1
+ CJN  Var_09    C19  C20  C13  C15    54.68  30.0  1
+ CJN  Var_10    C20  C19  C17  C16    56.81  30.0  1
+ CJN  Var_11    C20  C13  C15  C16   -54.66  30.0  1
+ CJN  Var_12    C15  C13  N12  C11  -160.65  30.0  2
+ CJN  Var_13    C20  C13  N12  C11    76.26  30.0  2
+ CJN  Var_14    N21  C17  C16  C15   173.30  30.0  1
+ CJN  Var_15    N12  C13  C15  C16  -178.39  30.0  1
+ CJN  Var_16    N12  C13  C20  C19   176.77  30.0  1
+ CJN  Var_17    N21  C17  C19  C20  -175.76  30.0  1
+ CJN  Var_18    H18  C17  C16  C15    58.49  30.0  1
+ CJN  Var_19    H16  C20  C13  C15   177.26  30.0  1
+ CJN  Var_20    H17  C20  C13  C15   -66.36  30.0  1
+ CJN  Var_21    H14  C13  C15  C16    64.79  30.0  1
+ CJN  Var_22    H9   C15  C13  C20    66.26  30.0  1
+ CJN  Var_23    H10  C15  C13  C20  -176.83  30.0  1
+ CJN  Var_24    C23  N21  C17  C16    69.87  30.0  2
+ CJN  Var_25    C22  N21  C17  C16  -161.64  30.0  2
+ CJN  Var_26    C23  N21  C17  C19   -56.56  30.0  2
+ CJN  Var_27    C22  N21  C17  C19    71.92  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

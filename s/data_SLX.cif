@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SLX  SLX  (13aS)-3,10-dimethoxy-5,8,13,13a-tetrahydro-6H-isoquino[3,2-a]isoquinoline-2,9-diol  ligand  45  24  .  2021-08-23  2021-08-23  
+ SLX  SLX  (13aS)-3,10-dimethoxy-5,8,13,13a-tetrahydro-6H-isoquino[3,2-a]isoquinoline-2,9-diol  ligand  45  24  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SLX
@@ -243,40 +244,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SLX  CONST_01  C5   C3   C2   C1      0.00   0.0  0
- SLX  CONST_02  C5   C8   C9   C1      0.00   0.0  0
- SLX  CONST_03  C8   C9   C1   C2      0.00   0.0  0
- SLX  CONST_04  C8   C5   C3   C2      0.00   0.0  0
- SLX  CONST_05  C9   C1   C2   C3      0.00   0.0  0
- SLX  CONST_06  C9   C8   C5   C3      0.00   0.0  0
- SLX  CONST_07  C21  C24  C25  C17     0.00   0.0  0
- SLX  CONST_08  C21  C19  C18  C17     0.00   0.0  0
- SLX  CONST_09  C19  C18  C17  C25     0.00   0.0  0
- SLX  CONST_10  C19  C21  C24  C25     0.00   0.0  0
- SLX  CONST_11  C18  C17  C25  C24     0.00   0.0  0
- SLX  CONST_12  C18  C19  C21  C24     0.00   0.0  0
- SLX  CONST_13  O4   C3   C2   C1    180.00   0.0  0
- SLX  CONST_14  O6   C5   C3   C2    180.00   0.0  0
- SLX  CONST_15  O4   C3   C5   C8    180.00   0.0  0
- SLX  CONST_16  O6   C5   C8   C9    180.00   0.0  0
- SLX  CONST_17  O20  C19  C18  C17   180.00   0.0  0
- SLX  CONST_18  O22  C21  C24  C25   180.00   0.0  0
- SLX  CONST_19  O20  C19  C21  C24   180.00   0.0  0
- SLX  CONST_20  C18  C19  C21  O22   180.00   0.0  0
- SLX  CONST_21  C13  C18  C19  O20     0.00   0.0  0
- SLX  CONST_22  H8   C8   C9   C1    180.00   0.0  0
- SLX  CONST_23  H2   C2   C3   C5    180.00   0.0  0
- SLX  CONST_24  H25  C25  C17  C16     0.00   0.0  0
- SLX  CONST_25  H24  C24  C25  C17   180.00   0.0  0
- SLX  Var_01    C11  C10  C9   C1     21.55  30.0  1
- SLX  Var_02    N12  C11  C10  C9    -53.77  30.0  1
- SLX  Var_03    C14  N12  C11  C10    65.78  30.0  1
- SLX  Var_04    C18  C13  N12  C11  -179.14  30.0  1
- SLX  Var_05    C17  C18  C13  N12    15.07  30.0  1
- SLX  Var_06    C25  C17  C16  C14  -160.24  30.0  1
- SLX  Var_07    C19  C21  O22  C23  -179.17  30.0  1
- SLX  Var_08    H7   C7   O6   C5    -61.25  30.0  3
- SLX  Var_09    H23  C23  O22  C21   -61.52  30.0  3
+ SLX  CONST_01  C5    C3   C2   C1      0.00   0.0  0
+ SLX  CONST_02  C5    C8   C9   C1      0.00   0.0  0
+ SLX  CONST_03  C8    C9   C1   C2      0.00   0.0  0
+ SLX  CONST_04  C8    C5   C3   C2      0.00   0.0  0
+ SLX  CONST_05  C9    C1   C2   C3      0.00   0.0  0
+ SLX  CONST_06  C9    C8   C5   C3      0.00   0.0  0
+ SLX  CONST_07  C21   C24  C25  C17     0.00   0.0  0
+ SLX  CONST_08  C21   C19  C18  C17     0.00   0.0  0
+ SLX  CONST_09  C19   C18  C17  C25     0.00   0.0  0
+ SLX  CONST_10  C19   C21  C24  C25     0.00   0.0  0
+ SLX  CONST_11  C18   C17  C25  C24     0.00   0.0  0
+ SLX  CONST_12  C18   C19  C21  C24     0.00   0.0  0
+ SLX  CONST_13  O4    C3   C2   C1    180.00   0.0  0
+ SLX  CONST_14  O6    C5   C3   C2    180.00   0.0  0
+ SLX  CONST_15  O4    C3   C5   C8    180.00   0.0  0
+ SLX  CONST_16  O6    C5   C8   C9    180.00   0.0  0
+ SLX  CONST_17  O20   C19  C18  C17   180.00   0.0  0
+ SLX  CONST_18  O22   C21  C24  C25   180.00   0.0  0
+ SLX  CONST_19  O20   C19  C21  C24   180.00   0.0  0
+ SLX  CONST_20  C18   C19  C21  O22   180.00   0.0  0
+ SLX  CONST_21  C13   C18  C19  O20     0.00   0.0  0
+ SLX  CONST_22  H8    C8   C9   C1    180.00   0.0  0
+ SLX  CONST_23  H2    C2   C3   C5    180.00   0.0  0
+ SLX  CONST_24  H25   C25  C17  C16     0.00   0.0  0
+ SLX  CONST_25  H24   C24  C25  C17   180.00   0.0  0
+ SLX  Var_01    C11   C10  C9   C1     21.55  30.0  1
+ SLX  Var_02    N12   C11  C10  C9    -53.77  30.0  1
+ SLX  Var_03    C14   N12  C11  C10    65.78  30.0  1
+ SLX  Var_04    C18   C13  N12  C11  -179.14  30.0  1
+ SLX  Var_05    C17   C18  C13  N12    15.07  30.0  1
+ SLX  Var_06    C25   C17  C16  C14  -160.24  30.0  1
+ SLX  Var_07    C19   C21  O22  C23  -179.17  30.0  1
+ SLX  Var_08    H7    C7   O6   C5    -61.25  30.0  3
+ SLX  Var_09    H23   C23  O22  C21   -61.52  30.0  3
+ SLX  CONST_26  C17   C16  C14  C1    180.00   0.0  0
+ SLX  Var_10    C11   N12  C14  C1    -40.24  30.0  1
+ SLX  Var_11    C13   N12  C14  C1   -166.76  30.0  1
+ SLX  Var_12    N12   C14  C1   C2   -174.96  30.0  1
+ SLX  Var_13    C16   C14  C1   C2    -55.18  30.0  1
+ SLX  Var_14    N12   C14  C1   C9      6.03  30.0  1
+ SLX  Var_15    C16   C14  C1   C9    125.81  30.0  1
+ SLX  Var_16    C16   C14  N12  C11  -162.64  30.0  1
+ SLX  Var_17    C17   C16  C14  N12   -52.77  30.0  1
+ SLX  Var_18    C13   N12  C14  C16    70.83  30.0  1
+ SLX  Var_19    H16   C16  C14  C1    -54.38  30.0  1
+ SLX  Var_20    H16A  C16  C14  C1     62.07  30.0  1
+ SLX  Var_21    H14   C14  C1   C2     63.33  30.0  1
+ SLX  Var_22    C7    O6   C5   C3   -178.94  30.0  2
+ SLX  Var_23    C7    O6   C5   C8      0.24  30.0  2
+ SLX  Var_24    HO4   O4   C3   C2   -178.31  30.0  2
+ SLX  Var_25    HO20  O20  C19  C21   179.32  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

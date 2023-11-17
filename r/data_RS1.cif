@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RS1  RS1  4-({[4-(4-chlorophenoxy)phenyl]sulfonyl}methyl)-N-hydroxytetrahydro-2H-pyran-4-carboxamide  ligand  48  28  .  2022-03-23  2022-03-23
+ RS1  RS1  4-({[4-(4-chlorophenoxy)phenyl]sulfonyl}methyl)-N-hydroxytetrahydro-2H-pyran-4-carboxamide  ligand  48  28  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RS1
@@ -250,43 +251,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RS1  CONST_01  C4   C3   C2   C1      0.00   0.0  0
- RS1  CONST_02  C4   C5   C6   C1      0.00   0.0  0
- RS1  CONST_03  C5   C6   C1   C2      0.00   0.0  0
- RS1  CONST_04  C5   C4   C3   C2      0.00   0.0  0
- RS1  CONST_05  C6   C1   C2   C3      0.00   0.0  0
- RS1  CONST_06  C6   C5   C4   C3      0.00   0.0  0
- RS1  CONST_07  C15  C14  C13  C12     0.00   0.0  0
- RS1  CONST_08  C15  C16  C17  C12     0.00   0.0  0
- RS1  CONST_09  C16  C17  C12  C13     0.00   0.0  0
- RS1  CONST_10  C16  C15  C14  C13     0.00   0.0  0
- RS1  CONST_11  C17  C12  C13  C14     0.00   0.0  0
- RS1  CONST_12  C17  C16  C15  C14     0.00   0.0  0
- RS1  CONST_13  O11  C5   C6   C1    180.00   0.0  0
- RS1  CONST_14  O11  C5   C4   C3    180.00   0.0  0
- RS1  CONST_15  CL2  C2   C3   C4    180.00   0.0  0
- RS1  CONST_16  CL2  C2   C1   C6    180.00   0.0  0
- RS1  CONST_17  C14  C13  C12  O11   180.00   0.0  0
- RS1  CONST_18  C16  C17  C12  O11   180.00   0.0  0
- RS1  CONST_19  S22  C15  C14  C13   180.00   0.0  0
- RS1  CONST_20  S22  C15  C16  C17   180.00   0.0  0
- RS1  CONST_21  H3   C3   C2   C1    180.00   0.0  0
- RS1  CONST_22  H6   C6   C1   C2    180.00   0.0  0
- RS1  CONST_23  H4   C4   C3   C2    180.00   0.0  0
- RS1  CONST_24  H1   C1   C2   C3    180.00   0.0  0
- RS1  CONST_25  H14  C14  C13  C12   180.00   0.0  0
- RS1  CONST_26  H16  C16  C17  C12   180.00   0.0  0
- RS1  CONST_27  H17  C17  C12  C13   180.00   0.0  0
- RS1  CONST_28  H13  C13  C14  C15   180.00   0.0  0
- RS1  CONST_29  O43  N41  C40  C26   180.00   0.0  0
- RS1  CONST_30  HN   N41  C40  C26     0.00   0.0  0
- RS1  CONST_31  O43  N41  C40  O42     0.00   0.0  0
- RS1  Var_01    O31  C30  C29  C26    57.96  30.0  1
- RS1  Var_02    O31  C32  C33  C26   -55.49  30.0  1
- RS1  Var_03    C33  C32  O31  C30    58.59  30.0  1
- RS1  Var_04    C13  C12  O11  C5      8.11  30.0  2
- RS1  Var_05    O23  S22  C15  C14   -26.87  30.0  2
- RS1  Var_06    C26  C25  S22  C15  -173.91  30.0  3
+ RS1  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ RS1  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ RS1  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ RS1  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ RS1  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ RS1  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ RS1  CONST_07  C15   C14  C13  C12     0.00   0.0  0
+ RS1  CONST_08  C15   C16  C17  C12     0.00   0.0  0
+ RS1  CONST_09  C16   C17  C12  C13     0.00   0.0  0
+ RS1  CONST_10  C16   C15  C14  C13     0.00   0.0  0
+ RS1  CONST_11  C17   C12  C13  C14     0.00   0.0  0
+ RS1  CONST_12  C17   C16  C15  C14     0.00   0.0  0
+ RS1  CONST_13  O11   C5   C6   C1    180.00   0.0  0
+ RS1  CONST_14  O11   C5   C4   C3    180.00   0.0  0
+ RS1  CONST_15  CL2   C2   C3   C4    180.00   0.0  0
+ RS1  CONST_16  CL2   C2   C1   C6    180.00   0.0  0
+ RS1  CONST_17  C14   C13  C12  O11   180.00   0.0  0
+ RS1  CONST_18  C16   C17  C12  O11   180.00   0.0  0
+ RS1  CONST_19  S22   C15  C14  C13   180.00   0.0  0
+ RS1  CONST_20  S22   C15  C16  C17   180.00   0.0  0
+ RS1  CONST_21  H3    C3   C2   C1    180.00   0.0  0
+ RS1  CONST_22  H6    C6   C1   C2    180.00   0.0  0
+ RS1  CONST_23  H4    C4   C3   C2    180.00   0.0  0
+ RS1  CONST_24  H1    C1   C2   C3    180.00   0.0  0
+ RS1  CONST_25  H14   C14  C13  C12   180.00   0.0  0
+ RS1  CONST_26  H16   C16  C17  C12   180.00   0.0  0
+ RS1  CONST_27  H17   C17  C12  C13   180.00   0.0  0
+ RS1  CONST_28  H13   C13  C14  C15   180.00   0.0  0
+ RS1  CONST_29  O43   N41  C40  C26   180.00   0.0  0
+ RS1  CONST_30  HN    N41  C40  C26     0.00   0.0  0
+ RS1  CONST_31  O43   N41  C40  O42     0.00   0.0  0
+ RS1  Var_01    O31   C30  C29  C26    57.96  30.0  1
+ RS1  Var_02    O31   C32  C33  C26   -55.49  30.0  1
+ RS1  Var_03    C33   C32  O31  C30    58.59  30.0  1
+ RS1  Var_04    C13   C12  O11  C5      8.11  30.0  2
+ RS1  Var_05    O23   S22  C15  C14   -26.87  30.0  2
+ RS1  Var_06    C26   C25  S22  C15  -173.91  30.0  3
+ RS1  Var_07    C32   C33  C26  C29    50.93  30.0  1
+ RS1  Var_08    C32   O31  C30  C29   -59.93  30.0  1
+ RS1  Var_09    C33   C26  C29  C30   -52.02  30.0  1
+ RS1  Var_10    C12   O11  C5   C4   -100.96  30.0  2
+ RS1  Var_11    C12   O11  C5   C6     81.04  30.0  2
+ RS1  Var_12    C30   C29  C26  C25  -171.20  30.0  1
+ RS1  Var_13    C32   C33  C26  C25   167.19  30.0  1
+ RS1  Var_14    C40   C26  C29  C30    69.03  30.0  1
+ RS1  Var_15    C40   C26  C33  C32   -71.35  30.0  1
+ RS1  Var_16    H331  C33  C26  C29   174.16  30.0  1
+ RS1  Var_17    H332  C33  C26  C29   -68.78  30.0  1
+ RS1  Var_18    C29   C26  C25  S22  -167.81  30.0  3
+ RS1  Var_19    C33   C26  C25  S22    76.00  30.0  3
+ RS1  Var_20    N41   C40  C26  C29    47.00  30.0  3
+ RS1  Var_21    O42   C40  C26  C29  -134.18  30.0  3
+ RS1  Var_22    N41   C40  C26  C33   165.95  30.0  3
+ RS1  Var_23    O42   C40  C26  C33   -15.22  30.0  3
+ RS1  Var_24    H251  C25  C26  C29   -47.31  30.0  1
+ RS1  Var_25    H252  C25  C26  C29    71.68  30.0  1
+ RS1  Var_26    C40   C26  C25  S22   -46.09  30.0  3
+ RS1  Var_27    N41   C40  C26  C25   -71.39  30.0  3
+ RS1  Var_28    O42   C40  C26  C25   107.44  30.0  3
+ RS1  Var_29    HO    O43  N41  C40   -74.50  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

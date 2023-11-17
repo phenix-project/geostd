@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HQQ  HQQ  5-methyl-5-(4-phenoxyphenyl)pyrimidine-2,4,6(1H,3H,5H)-trione  ligand  37  23  .  2021-08-11  2021-08-11  
+ HQQ  HQQ  5-methyl-5-(4-phenoxyphenyl)pyrimidine-2,4,6(1H,3H,5H)-trione  ligand  37  23  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HQQ
@@ -205,42 +206,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HQQ  CONST_01  C11  C10  C9   C8     0.00   0.0  0
- HQQ  CONST_02  C11  C12  C13  C8     0.00   0.0  0
- HQQ  CONST_03  C12  C13  C8   C9     0.00   0.0  0
- HQQ  CONST_04  C12  C11  C10  C9     0.00   0.0  0
- HQQ  CONST_05  C13  C8   C9   C10    0.00   0.0  0
- HQQ  CONST_06  C13  C12  C11  C10    0.00   0.0  0
- HQQ  CONST_07  C17  C16  C15  C14    0.00   0.0  0
- HQQ  CONST_08  C17  C18  C19  C14    0.00   0.0  0
- HQQ  CONST_09  C18  C19  C14  C15    0.00   0.0  0
- HQQ  CONST_10  C18  C17  C16  C15    0.00   0.0  0
- HQQ  CONST_11  C19  C14  C15  C16    0.00   0.0  0
- HQQ  CONST_12  C19  C18  C17  C16    0.00   0.0  0
- HQQ  CONST_13  C10  C9   C8   C5   180.00   0.0  0
- HQQ  CONST_14  C12  C13  C8   C5   180.00   0.0  0
- HQQ  CONST_15  C4   N3   C2   N1     0.00   0.0  0
- HQQ  CONST_16  C5   C4   N3   C2     0.00   0.0  0
- HQQ  CONST_17  C6   N1   C2   N3     0.00   0.0  0
- HQQ  CONST_18  O11  C11  C10  C9   180.00   0.0  0
- HQQ  CONST_19  O11  C11  C12  C13  180.00   0.0  0
- HQQ  CONST_20  C16  C15  C14  O11  180.00   0.0  0
- HQQ  CONST_21  C18  C19  C14  O11  180.00   0.0  0
- HQQ  CONST_22  O4   C4   N3   C2   180.00   0.0  0
- HQQ  CONST_23  C6   N1   C2   O2   180.00   0.0  0
- HQQ  CONST_24  C4   N3   C2   O2   180.00   0.0  0
- HQQ  CONST_25  H9   C9   C8   C5     0.00   0.0  0
- HQQ  CONST_26  H13  C13  C8   C5     0.00   0.0  0
- HQQ  CONST_27  H10  C10  C9   C8   180.00   0.0  0
- HQQ  CONST_28  H12  C12  C13  C8   180.00   0.0  0
- HQQ  CONST_29  H16  C16  C15  C14  180.00   0.0  0
- HQQ  CONST_30  H18  C18  C19  C14  180.00   0.0  0
- HQQ  CONST_31  H19  C19  C14  C15  180.00   0.0  0
- HQQ  CONST_32  H17  C17  C16  C15  180.00   0.0  0
- HQQ  CONST_33  H15  C15  C16  C17  180.00   0.0  0
- HQQ  CONST_34  HN3  N3   C2   N1   180.00   0.0  0
- HQQ  CONST_35  HN1  N1   C2   N3   180.00   0.0  0
- HQQ  Var_01    C15  C14  O11  C11   54.60  30.0  2
+ HQQ  CONST_01  C11  C10  C9   C8      0.00   0.0  0
+ HQQ  CONST_02  C11  C12  C13  C8      0.00   0.0  0
+ HQQ  CONST_03  C12  C13  C8   C9      0.00   0.0  0
+ HQQ  CONST_04  C12  C11  C10  C9      0.00   0.0  0
+ HQQ  CONST_05  C13  C8   C9   C10     0.00   0.0  0
+ HQQ  CONST_06  C13  C12  C11  C10     0.00   0.0  0
+ HQQ  CONST_07  C17  C16  C15  C14     0.00   0.0  0
+ HQQ  CONST_08  C17  C18  C19  C14     0.00   0.0  0
+ HQQ  CONST_09  C18  C19  C14  C15     0.00   0.0  0
+ HQQ  CONST_10  C18  C17  C16  C15     0.00   0.0  0
+ HQQ  CONST_11  C19  C14  C15  C16     0.00   0.0  0
+ HQQ  CONST_12  C19  C18  C17  C16     0.00   0.0  0
+ HQQ  CONST_13  C10  C9   C8   C5    180.00   0.0  0
+ HQQ  CONST_14  C12  C13  C8   C5    180.00   0.0  0
+ HQQ  CONST_15  C4   N3   C2   N1      0.00   0.0  0
+ HQQ  CONST_16  C5   C4   N3   C2      0.00   0.0  0
+ HQQ  CONST_17  C6   N1   C2   N3      0.00   0.0  0
+ HQQ  CONST_18  O11  C11  C10  C9    180.00   0.0  0
+ HQQ  CONST_19  O11  C11  C12  C13   180.00   0.0  0
+ HQQ  CONST_20  C16  C15  C14  O11   180.00   0.0  0
+ HQQ  CONST_21  C18  C19  C14  O11   180.00   0.0  0
+ HQQ  CONST_22  O4   C4   N3   C2    180.00   0.0  0
+ HQQ  CONST_23  C6   N1   C2   O2    180.00   0.0  0
+ HQQ  CONST_24  C4   N3   C2   O2    180.00   0.0  0
+ HQQ  CONST_25  H9   C9   C8   C5      0.00   0.0  0
+ HQQ  CONST_26  H13  C13  C8   C5      0.00   0.0  0
+ HQQ  CONST_27  H10  C10  C9   C8    180.00   0.0  0
+ HQQ  CONST_28  H12  C12  C13  C8    180.00   0.0  0
+ HQQ  CONST_29  H16  C16  C15  C14   180.00   0.0  0
+ HQQ  CONST_30  H18  C18  C19  C14   180.00   0.0  0
+ HQQ  CONST_31  H19  C19  C14  C15   180.00   0.0  0
+ HQQ  CONST_32  H17  C17  C16  C15   180.00   0.0  0
+ HQQ  CONST_33  H15  C15  C16  C17   180.00   0.0  0
+ HQQ  CONST_34  HN3  N3   C2   N1    180.00   0.0  0
+ HQQ  CONST_35  HN1  N1   C2   N3    180.00   0.0  0
+ HQQ  Var_01    C15  C14  O11  C11    54.60  30.0  2
+ HQQ  Var_02    C8   C5   C6   N1    141.07  30.0  1
+ HQQ  Var_03    C8   C5   C4   N3   -140.94  30.0  1
+ HQQ  Var_04    C9   C8   C5   C4   -114.47  30.0  2
+ HQQ  Var_05    C13  C8   C5   C4     64.66  30.0  2
+ HQQ  Var_06    C9   C8   C5   C6    119.99  30.0  2
+ HQQ  Var_07    C13  C8   C5   C6    -60.88  30.0  2
+ HQQ  Var_08    C7   C5   C6   N1    -96.33  30.0  1
+ HQQ  Var_09    C7   C5   C4   N3     96.57  30.0  1
+ HQQ  Var_10    C8   C5   C4   O4     42.58  30.0  1
+ HQQ  Var_11    C8   C5   C6   O6    -42.66  30.0  1
+ HQQ  Var_12    C9   C8   C5   C7      2.74  30.0  2
+ HQQ  Var_13    C13  C8   C5   C7   -178.13  30.0  2
+ HQQ  Var_14    C14  O11  C11  C10  -151.96  30.0  2
+ HQQ  Var_15    C14  O11  C11  C12    30.56  30.0  2
+ HQQ  Var_16    C7   C5   C4   O4    -79.91  30.0  1
+ HQQ  Var_17    C7   C5   C6   O6     79.94  30.0  1
+ HQQ  Var_18    H71  C7   C5   C4    -60.91  30.0  3
+ HQQ  Var_19    H72  C7   C5   C4     58.83  30.0  3
+ HQQ  Var_20    H73  C7   C5   C4    179.27  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

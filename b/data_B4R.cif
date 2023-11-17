@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- B4R  B4R  '{4-[{(2R,3S)-3-[({[(3aS,4S,7aR)-hexahydro-4H-furo[2,3-b]pyran-4-yl]oxy}carbonyl)amino]-2-hydroxy-4-phenylbutyl}(2-methylpropyl)sulfamoyl]phenyl}boronic acid'  ligand  80  41  .  2021-08-06  2021-08-06  
+ B4R  B4R  '{4-[{(2R,3S)-3-[({[(3aS,4S,7aR)-hexahydro-4H-furo[2,3-b]pyran-4-yl]oxy}carbonyl)amino]-2-hydroxy-4-phenylbutyl}(2-methylpropyl)sulfamoyl]phenyl}boronic acid'  ligand  80  41  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_B4R
@@ -378,46 +379,88 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- B4R  CONST_01  C2   C39  C6   C5     0.00   0.0  0
- B4R  CONST_02  C2   C3   C4   C5     0.00   0.0  0
- B4R  CONST_03  C3   C2   C39  C6     0.00   0.0  0
- B4R  CONST_04  C3   C4   C5   C6     0.00   0.0  0
- B4R  CONST_05  C4   C5   C6   C39    0.00   0.0  0
- B4R  CONST_06  C4   C3   C2   C39    0.00   0.0  0
- B4R  CONST_07  C36  C35  C34  C33    0.00   0.0  0
- B4R  CONST_08  C36  C37  C38  C33    0.00   0.0  0
- B4R  CONST_09  C35  C36  C37  C38    0.00   0.0  0
- B4R  CONST_10  C35  C34  C33  C38    0.00   0.0  0
- B4R  CONST_11  C34  C35  C36  C37    0.00   0.0  0
- B4R  CONST_12  C34  C33  C38  C37    0.00   0.0  0
- B4R  CONST_13  C39  C6   C5   S8   180.00   0.0  0
- B4R  CONST_14  C3   C4   C5   S8   180.00   0.0  0
- B4R  CONST_15  B1   C2   C39  C6   180.00   0.0  0
- B4R  CONST_16  B1   C2   C3   C4   180.00   0.0  0
- B4R  CONST_17  C35  C34  C33  C32  180.00   0.0  0
- B4R  CONST_18  C37  C38  C33  C32  180.00   0.0  0
- B4R  CONST_19  H2   C39  C6   C5   180.00   0.0  0
- B4R  CONST_20  H4   C3   C4   C5   180.00   0.0  0
- B4R  CONST_21  H3   C4   C5   C6   180.00   0.0  0
- B4R  CONST_22  H1   C6   C5   C4   180.00   0.0  0
- B4R  CONST_23  H26  C35  C34  C33  180.00   0.0  0
- B4R  CONST_24  H24  C37  C38  C33  180.00   0.0  0
- B4R  CONST_25  H25  C36  C37  C38  180.00   0.0  0
- B4R  CONST_26  H27  C34  C33  C38  180.00   0.0  0
- B4R  CONST_27  H23  C38  C37  C36  180.00   0.0  0
- B4R  Var_01    O26  C44  C25  C24  -58.99  30.0  1
- B4R  Var_02    C30  C29  O28  C27    1.33  30.0  1
- B4R  Var_03    O28  C29  C30  C31   22.38  30.0  1
- B4R  Var_04    C6   C5   S8   O10   31.95  30.0  2
- B4R  Var_05    O4   B1   C2   C39  175.78  30.0  2
- B4R  Var_06    C34  C33  C32  C19  -85.54  30.0  2
- B4R  Var_07    C16  N11  S8   C5    80.53  30.0  3
- B4R  Var_08    C17  C16  N11  S8    92.49  30.0  3
- B4R  Var_09    C13  C12  N11  S8    73.37  30.0  3
- B4R  Var_10    C14  C13  C12  N11  176.50  30.0  3
- B4R  Var_11    O22  C21  N20  C19   16.74  30.0  2
- B4R  Var_12    H13  C14  C13  C12   57.42  30.0  3
- B4R  Var_13    H10  C15  C13  C12  179.31  30.0  3
+ B4R  CONST_01  C2   C39  C6   C5      0.00   0.0  0
+ B4R  CONST_02  C2   C3   C4   C5      0.00   0.0  0
+ B4R  CONST_03  C3   C2   C39  C6      0.00   0.0  0
+ B4R  CONST_04  C3   C4   C5   C6      0.00   0.0  0
+ B4R  CONST_05  C4   C5   C6   C39     0.00   0.0  0
+ B4R  CONST_06  C4   C3   C2   C39     0.00   0.0  0
+ B4R  CONST_07  C36  C35  C34  C33     0.00   0.0  0
+ B4R  CONST_08  C36  C37  C38  C33     0.00   0.0  0
+ B4R  CONST_09  C35  C36  C37  C38     0.00   0.0  0
+ B4R  CONST_10  C35  C34  C33  C38     0.00   0.0  0
+ B4R  CONST_11  C34  C35  C36  C37     0.00   0.0  0
+ B4R  CONST_12  C34  C33  C38  C37     0.00   0.0  0
+ B4R  CONST_13  C39  C6   C5   S8    180.00   0.0  0
+ B4R  CONST_14  C3   C4   C5   S8    180.00   0.0  0
+ B4R  CONST_15  B1   C2   C39  C6    180.00   0.0  0
+ B4R  CONST_16  B1   C2   C3   C4    180.00   0.0  0
+ B4R  CONST_17  C35  C34  C33  C32   180.00   0.0  0
+ B4R  CONST_18  C37  C38  C33  C32   180.00   0.0  0
+ B4R  CONST_19  H2   C39  C6   C5    180.00   0.0  0
+ B4R  CONST_20  H4   C3   C4   C5    180.00   0.0  0
+ B4R  CONST_21  H3   C4   C5   C6    180.00   0.0  0
+ B4R  CONST_22  H1   C6   C5   C4    180.00   0.0  0
+ B4R  CONST_23  H26  C35  C34  C33   180.00   0.0  0
+ B4R  CONST_24  H24  C37  C38  C33   180.00   0.0  0
+ B4R  CONST_25  H25  C36  C37  C38   180.00   0.0  0
+ B4R  CONST_26  H27  C34  C33  C38   180.00   0.0  0
+ B4R  CONST_27  H23  C38  C37  C36   180.00   0.0  0
+ B4R  Var_01    O26  C44  C25  C24   -58.99  30.0  1
+ B4R  Var_02    C30  C29  O28  C27     1.33  30.0  1
+ B4R  Var_03    O28  C29  C30  C31    22.38  30.0  1
+ B4R  Var_04    C6   C5   S8   O10    31.95  30.0  2
+ B4R  Var_05    O4   B1   C2   C39   175.78  30.0  2
+ B4R  Var_06    C34  C33  C32  C19   -85.54  30.0  2
+ B4R  Var_07    C16  N11  S8   C5     80.53  30.0  3
+ B4R  Var_08    C17  C16  N11  S8     92.49  30.0  3
+ B4R  Var_09    C13  C12  N11  S8     73.37  30.0  3
+ B4R  Var_10    C14  C13  C12  N11   176.50  30.0  3
+ B4R  Var_11    O22  C21  N20  C19    16.74  30.0  2
+ B4R  Var_12    H13  C14  C13  C12    57.42  30.0  3
+ B4R  Var_13    H10  C15  C13  C12   179.31  30.0  3
+ B4R  Var_14    C29  C30  C31  C24  -158.19  30.0  1
+ B4R  Var_15    O28  C27  C31  C24   164.06  30.0  1
+ B4R  Var_16    O26  C27  C31  C24    47.51  30.0  1
+ B4R  Var_17    C30  C31  C24  C25    71.38  30.0  1
+ B4R  Var_18    C27  C31  C24  C25   -45.29  30.0  1
+ B4R  Var_19    C27  O26  C44  C25    64.32  30.0  1
+ B4R  Var_20    C31  C24  C25  C44    49.95  30.0  1
+ B4R  Var_21    C31  C27  O26  C44   -57.34  30.0  1
+ B4R  Var_22    O28  C27  O26  C44  -172.68  30.0  1
+ B4R  Var_23    C30  C31  C27  O26   -78.78  30.0  1
+ B4R  Var_24    C29  O28  C27  O26    94.62  30.0  1
+ B4R  Var_25    C29  C30  C31  C27   -35.21  30.0  1
+ B4R  Var_26    C29  O28  C27  C31   -24.82  30.0  1
+ B4R  Var_27    O28  C27  C31  C30    37.76  30.0  1
+ B4R  Var_28    C30  C31  C24  O23   -51.59  30.0  1
+ B4R  Var_29    C27  C31  C24  O23  -168.26  30.0  1
+ B4R  Var_30    C44  C25  C24  O23   170.01  30.0  1
+ B4R  Var_31    H36  C30  C31  C24   -39.37  30.0  1
+ B4R  Var_32    H37  C30  C31  C24    82.03  30.0  1
+ B4R  Var_33    H34  C27  C31  C24   -76.82  30.0  1
+ B4R  Var_34    H35  C31  C24  C25  -164.22  30.0  1
+ B4R  Var_35    H29  C24  C25  C44   -69.30  30.0  1
+ B4R  Var_36    C31  C24  O23  C21  -149.25  30.0  3
+ B4R  Var_37    C25  C24  O23  C21    87.65  30.0  3
+ B4R  Var_38    C33  C32  C19  C17  -178.14  30.0  1
+ B4R  Var_39    N20  C19  C32  C33   -55.32  30.0  3
+ B4R  Var_40    C24  O23  C21  N20   177.42  30.0  3
+ B4R  Var_41    C24  O23  C21  O22    -4.02  30.0  3
+ B4R  Var_42    H6   O4   B1   C2    179.28  30.0  3
+ B4R  Var_43    H5   O3   B1   C2    179.31  30.0  3
+ B4R  Var_44    H20  C19  C32  C33    62.40  30.0  3
+ B4R  Var_45    C19  C17  C16  N11  -171.16  30.0  3
+ B4R  Var_46    O18  C17  C16  N11    61.88  30.0  3
+ B4R  Var_47    C32  C19  C17  C16   -60.28  30.0  1
+ B4R  Var_48    N20  C19  C17  C16   175.88  30.0  1
+ B4R  Var_49    C21  N20  C19  C17  -141.84  30.0  3
+ B4R  Var_50    C32  C19  C17  O18    66.67  30.0  1
+ B4R  Var_51    N20  C19  C17  O18   -57.18  30.0  1
+ B4R  Var_52    C21  N20  C19  C32    92.73  30.0  3
+ B4R  Var_53    H18  C17  C16  N11   -53.86  30.0  3
+ B4R  Var_54    H19  O18  C17  C16    59.33  30.0  3
+ B4R  Var_55    H28  N20  C19  C17    59.10  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TMU  TMU  1-(4-methoxybenzyl)-3-(5-nitro-1,3-thiazol-2-yl)urea  ligand  33  21  .  2021-08-23  2021-08-23  
+ TMU  TMU  1-(4-methoxybenzyl)-3-(5-nitro-1,3-thiazol-2-yl)urea  ligand  33  21  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TMU
@@ -186,45 +187,47 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TMU  CONST_01  C6    C5   S2   C1     0.00   0.0  0
- TMU  CONST_02  C5    C6   N3   C1     0.00   0.0  0
- TMU  CONST_03  C6    N3   C1   S2     0.00   0.0  0
- TMU  CONST_04  N3    C6   C5   S2     0.00   0.0  0
- TMU  CONST_05  C5    S2   C1   N3     0.00   0.0  0
- TMU  CONST_06  C19   C17  C15  C14    0.00   0.0  0
- TMU  CONST_07  C19   C18  C16  C14    0.00   0.0  0
- TMU  CONST_08  C18   C16  C14  C15    0.00   0.0  0
- TMU  CONST_09  C18   C19  C17  C15    0.00   0.0  0
- TMU  CONST_10  C17   C15  C14  C16    0.00   0.0  0
- TMU  CONST_11  C17   C19  C18  C16    0.00   0.0  0
- TMU  CONST_12  N8    C5   S2   C1   180.00   0.0  0
- TMU  CONST_13  N8    C5   C6   N3   180.00   0.0  0
- TMU  CONST_14  C5    S2   C1   N4   180.00   0.0  0
- TMU  CONST_15  C6    N3   C1   N4   180.00   0.0  0
- TMU  CONST_16  C17   C15  C14  C13  180.00   0.0  0
- TMU  CONST_17  C18   C16  C14  C13  180.00   0.0  0
- TMU  CONST_18  O20   C19  C17  C15  180.00   0.0  0
- TMU  CONST_19  O20   C19  C18  C16  180.00   0.0  0
- TMU  CONST_20  H6    C6   N3   C1   180.00   0.0  0
- TMU  CONST_21  H17   C17  C15  C14  180.00   0.0  0
- TMU  CONST_22  H18   C18  C16  C14  180.00   0.0  0
- TMU  CONST_23  H16   C16  C14  C15  180.00   0.0  0
- TMU  CONST_24  H15   C15  C14  C16  180.00   0.0  0
- TMU  CONST_25  C7    N4   C1   S2   180.00   0.0  0
- TMU  CONST_26  O11   N8   C5   S2   180.00   0.0  0
- TMU  CONST_27  O12   N8   C5   S2     0.00   0.0  0
- TMU  CONST_28  C7    N4   C1   N3     0.00   0.0  0
- TMU  CONST_29  O11   N8   C5   C6     0.00   0.0  0
- TMU  CONST_30  O12   N8   C5   C6   180.00   0.0  0
- TMU  CONST_31  HN4   N4   C1   S2     0.00   0.0  0
- TMU  CONST_32  O10   C7   N4   C1     0.00   0.0  0
- TMU  CONST_33  N9    C7   N4   C1   180.00   0.0  0
- TMU  CONST_34  C13   N9   C7   O10    0.00   0.0  0
- TMU  CONST_35  C13   N9   C7   N4   180.00   0.0  0
- TMU  CONST_36  HN9   N9   C7   O10  180.00   0.0  0
- TMU  Var_01    C15   C14  C13  N9    86.21  30.0  2
- TMU  Var_02    C14   C13  N9   C7   179.13  30.0  3
- TMU  Var_03    H211  C21  O20  C19  179.31  30.0  3
+ TMU  CONST_01  C6    C5   S2   C1      0.00   0.0  0
+ TMU  CONST_02  C5    C6   N3   C1      0.00   0.0  0
+ TMU  CONST_03  C6    N3   C1   S2      0.00   0.0  0
+ TMU  CONST_04  N3    C6   C5   S2      0.00   0.0  0
+ TMU  CONST_05  C5    S2   C1   N3      0.00   0.0  0
+ TMU  CONST_06  C19   C17  C15  C14     0.00   0.0  0
+ TMU  CONST_07  C19   C18  C16  C14     0.00   0.0  0
+ TMU  CONST_08  C18   C16  C14  C15     0.00   0.0  0
+ TMU  CONST_09  C18   C19  C17  C15     0.00   0.0  0
+ TMU  CONST_10  C17   C15  C14  C16     0.00   0.0  0
+ TMU  CONST_11  C17   C19  C18  C16     0.00   0.0  0
+ TMU  CONST_12  N8    C5   S2   C1    180.00   0.0  0
+ TMU  CONST_13  N8    C5   C6   N3    180.00   0.0  0
+ TMU  CONST_14  C5    S2   C1   N4    180.00   0.0  0
+ TMU  CONST_15  C6    N3   C1   N4    180.00   0.0  0
+ TMU  CONST_16  C17   C15  C14  C13   180.00   0.0  0
+ TMU  CONST_17  C18   C16  C14  C13   180.00   0.0  0
+ TMU  CONST_18  O20   C19  C17  C15   180.00   0.0  0
+ TMU  CONST_19  O20   C19  C18  C16   180.00   0.0  0
+ TMU  CONST_20  H6    C6   N3   C1    180.00   0.0  0
+ TMU  CONST_21  H17   C17  C15  C14   180.00   0.0  0
+ TMU  CONST_22  H18   C18  C16  C14   180.00   0.0  0
+ TMU  CONST_23  H16   C16  C14  C15   180.00   0.0  0
+ TMU  CONST_24  H15   C15  C14  C16   180.00   0.0  0
+ TMU  CONST_25  C7    N4   C1   S2    180.00   0.0  0
+ TMU  CONST_26  O11   N8   C5   S2    180.00   0.0  0
+ TMU  CONST_27  O12   N8   C5   S2      0.00   0.0  0
+ TMU  CONST_28  C7    N4   C1   N3      0.00   0.0  0
+ TMU  CONST_29  O11   N8   C5   C6      0.00   0.0  0
+ TMU  CONST_30  O12   N8   C5   C6    180.00   0.0  0
+ TMU  CONST_31  HN4   N4   C1   S2      0.00   0.0  0
+ TMU  CONST_32  O10   C7   N4   C1      0.00   0.0  0
+ TMU  CONST_33  N9    C7   N4   C1    180.00   0.0  0
+ TMU  CONST_34  C13   N9   C7   O10     0.00   0.0  0
+ TMU  CONST_35  C13   N9   C7   N4    180.00   0.0  0
+ TMU  CONST_36  HN9   N9   C7   O10   180.00   0.0  0
+ TMU  Var_01    C15   C14  C13  N9     86.21  30.0  2
+ TMU  Var_02    C14   C13  N9   C7    179.13  30.0  3
+ TMU  Var_03    H211  C21  O20  C19   179.31  30.0  3
+ TMU  Var_04    C21   O20  C19  C17  -179.20  30.0  2
+ TMU  Var_05    C21   O20  C19  C18     1.00  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- IVH  IVH  2-(butylsulfanyl)adenosine  ligand  45  24  .  2021-08-11  2021-08-11  
+ IVH  IVH  2-(butylsulfanyl)adenosine  ligand  45  24  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_IVH
@@ -240,38 +241,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- IVH  CONST_01  C8    N2  C5  N1    0.00   0.0  0
- IVH  CONST_02  N4    C7  C6  N1  180.00   0.0  0
- IVH  CONST_03  C8    C7  C6  N1    0.00   0.0  0
- IVH  CONST_04  C6    N1  C5  N2    0.00   0.0  0
- IVH  CONST_05  C9    N3  C8  N2  180.00   0.0  0
- IVH  CONST_06  N4    C7  C8  N2  180.00   0.0  0
- IVH  CONST_07  C6    C7  C8  N2    0.00   0.0  0
- IVH  CONST_08  C5    N2  C8  N3  180.00   0.0  0
- IVH  CONST_09  N4    C7  C8  N3    0.00   0.0  0
- IVH  CONST_10  C6    C7  C8  N3  180.00   0.0  0
- IVH  CONST_11  C7    N4  C9  N3    0.00   0.0  0
- IVH  CONST_12  C8    N3  C9  N4    0.00   0.0  0
- IVH  CONST_13  C7    C6  N1  C5    0.00   0.0  0
- IVH  CONST_14  C7    C8  N2  C5    0.00   0.0  0
- IVH  CONST_15  C9    N4  C7  C6  180.00   0.0  0
- IVH  CONST_16  C9    N3  C8  C7    0.00   0.0  0
- IVH  CONST_17  C9    N4  C7  C8    0.00   0.0  0
- IVH  CONST_18  C10   N3  C8  N2    0.00   0.0  0
- IVH  CONST_19  C10   N3  C9  N4  180.00   0.0  0
- IVH  CONST_20  C10   N3  C8  C7  180.00   0.0  0
- IVH  CONST_21  C6    N1  C5  S   180.00   0.0  0
- IVH  CONST_22  C8    N2  C5  S   180.00   0.0  0
- IVH  CONST_23  N5    C6  C7  N4    0.00   0.0  0
- IVH  CONST_24  N5    C6  N1  C5  180.00   0.0  0
- IVH  CONST_25  C8    C7  C6  N5  180.00   0.0  0
- IVH  CONST_26  H9    C9  N4  C7  180.00   0.0  0
- IVH  CONST_27  HN5   N5  C6  N1    0.00   0.0  0
- IVH  CONST_28  HN5A  N5  C6  N1  180.00   0.0  0
- IVH  Var_01    H4    C4  S   C5  -65.76  30.0  3
- IVH  Var_02    C2    C3  C4  S   178.49  30.0  1
- IVH  Var_03    C4    C3  C2  C1  178.42  30.0  3
- IVH  Var_04    H1    C1  C2  C3  -59.98  30.0  3
+ IVH  CONST_01  C8    N2   C5   N1      0.00   0.0  0
+ IVH  CONST_02  N4    C7   C6   N1    180.00   0.0  0
+ IVH  CONST_03  C8    C7   C6   N1      0.00   0.0  0
+ IVH  CONST_04  C6    N1   C5   N2      0.00   0.0  0
+ IVH  CONST_05  C9    N3   C8   N2    180.00   0.0  0
+ IVH  CONST_06  N4    C7   C8   N2    180.00   0.0  0
+ IVH  CONST_07  C6    C7   C8   N2      0.00   0.0  0
+ IVH  CONST_08  C5    N2   C8   N3    180.00   0.0  0
+ IVH  CONST_09  N4    C7   C8   N3      0.00   0.0  0
+ IVH  CONST_10  C6    C7   C8   N3    180.00   0.0  0
+ IVH  CONST_11  C7    N4   C9   N3      0.00   0.0  0
+ IVH  CONST_12  C8    N3   C9   N4      0.00   0.0  0
+ IVH  CONST_13  C7    C6   N1   C5      0.00   0.0  0
+ IVH  CONST_14  C7    C8   N2   C5      0.00   0.0  0
+ IVH  CONST_15  C9    N4   C7   C6    180.00   0.0  0
+ IVH  CONST_16  C9    N3   C8   C7      0.00   0.0  0
+ IVH  CONST_17  C9    N4   C7   C8      0.00   0.0  0
+ IVH  CONST_18  C10   N3   C8   N2      0.00   0.0  0
+ IVH  CONST_19  C10   N3   C9   N4    180.00   0.0  0
+ IVH  CONST_20  C10   N3   C8   C7    180.00   0.0  0
+ IVH  CONST_21  C6    N1   C5   S     180.00   0.0  0
+ IVH  CONST_22  C8    N2   C5   S     180.00   0.0  0
+ IVH  CONST_23  N5    C6   C7   N4      0.00   0.0  0
+ IVH  CONST_24  N5    C6   N1   C5    180.00   0.0  0
+ IVH  CONST_25  C8    C7   C6   N5    180.00   0.0  0
+ IVH  CONST_26  H9    C9   N4   C7    180.00   0.0  0
+ IVH  CONST_27  HN5   N5   C6   N1      0.00   0.0  0
+ IVH  CONST_28  HN5A  N5   C6   N1    180.00   0.0  0
+ IVH  Var_01    H4    C4   S    C5    -65.76  30.0  3
+ IVH  Var_02    C2    C3   C4   S     178.49  30.0  1
+ IVH  Var_03    C4    C3   C2   C1    178.42  30.0  3
+ IVH  Var_04    H1    C1   C2   C3    -59.98  30.0  3
+ IVH  Var_05    C8    N3   C10  O1   -115.91  30.0  1
+ IVH  Var_06    C9    N3   C10  O1     60.33  30.0  1
+ IVH  Var_07    C12   C11  C10  O1     34.34  30.0  1
+ IVH  Var_08    C11   C12  C13  O1     30.23  30.0  1
+ IVH  Var_09    C13   O1   C10  N3   -139.18  30.0  1
+ IVH  Var_10    C12   C11  C10  N3    154.79  30.0  1
+ IVH  Var_11    C11   C10  N3   C8    125.74  30.0  2
+ IVH  Var_12    C11   C10  N3   C9    -58.02  30.0  2
+ IVH  Var_13    C12   C13  O1   C10    -9.37  30.0  1
+ IVH  Var_14    C13   C12  C11  C10   -38.15  30.0  1
+ IVH  Var_15    C13   O1   C10  C11   -15.91  30.0  1
+ IVH  Var_16    O4    C11  C10  O1    158.48  30.0  1
+ IVH  Var_17    O3    C12  C13  O1    -84.49  30.0  1
+ IVH  Var_18    O4    C11  C10  N3    -81.07  30.0  1
+ IVH  Var_19    C10   C11  C12  O3     80.01  30.0  1
+ IVH  Var_20    C13   C12  C11  O4   -157.21  30.0  1
+ IVH  Var_21    C14   C13  O1   C10   113.35  30.0  1
+ IVH  Var_22    C14   C13  C12  C11   -91.18  30.0  1
+ IVH  Var_23    H11   C11  C10  O1    -78.91  30.0  1
+ IVH  Var_24    H12   C12  C13  O1    149.21  30.0  1
+ IVH  Var_25    H10   C10  N3   C8      4.65  30.0  2
+ IVH  Var_26    H13   C13  O1   C10  -127.84  30.0  1
+ IVH  Var_27    C4    S    C5   N1     -1.13  30.0  1
+ IVH  Var_28    O2    C14  C13  O1     58.54  30.0  2
+ IVH  Var_29    C4    S    C5   N2    179.11  30.0  1
+ IVH  Var_30    C12   C13  C14  O2    177.09  30.0  3
+ IVH  Var_31    O4    C11  C12  O3    -39.04  30.0  1
+ IVH  Var_32    C14   C13  C12  O3    154.10  30.0  1
+ IVH  Var_33    H14   C14  C13  O1    -64.24  30.0  2
+ IVH  Var_34    H14A  C14  C13  O1    179.85  30.0  2
+ IVH  Var_35    HO4   O4   C11  C10   170.87  30.0  3
+ IVH  Var_36    HO3   O3   C12  C11  -179.44  30.0  3
+ IVH  Var_37    HO2   O2   C14  C13  -179.78  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

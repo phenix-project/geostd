@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 8B4  8B4  (1S)-1-(4-aminoimidazo[2,1-f][1,2,4]triazin-7-yl)-1,4-anhydro-2-deoxy-2-fluoro-5-O-[(S)-hydroxy(phosphonooxy)phosphoryl]-2-methyl-D-ribitol  ligand  44  28  .  2022-11-17  2022-11-17
+ 8B4  8B4  (1S)-1-(4-aminoimidazo[2,1-f][1,2,4]triazin-7-yl)-1,4-anhydro-2-deoxy-2-fluoro-5-O-[(S)-hydroxy(phosphonooxy)phosphoryl]-2-methyl-D-ribitol  ligand  44  28  .  2022-11-17  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_8B4
@@ -234,36 +235,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 8B4  CONST_01  N3   N4   C9   C8   180.00   0.0  0
- 8B4  CONST_02  C5   N4   C9   C8     0.00   0.0  0
- 8B4  CONST_03  N4   C5   N7   C8     0.00   0.0  0
- 8B4  CONST_04  C6   C5   N7   C8   180.00   0.0  0
- 8B4  CONST_05  C9   N4   C5   C6   180.00   0.0  0
- 8B4  CONST_06  N3   N4   C5   C6     0.00   0.0  0
- 8B4  CONST_07  N3   C2   N1   C6     0.00   0.0  0
- 8B4  CONST_08  C2   N3   N4   C5     0.00   0.0  0
- 8B4  CONST_09  C9   C8   N7   C5     0.00   0.0  0
- 8B4  CONST_10  C2   N1   C6   C5     0.00   0.0  0
- 8B4  CONST_11  C2   N3   N4   C9   180.00   0.0  0
- 8B4  CONST_12  N7   C5   N4   C9     0.00   0.0  0
- 8B4  CONST_13  N4   C9   C8   N7     0.00   0.0  0
- 8B4  CONST_14  N3   N4   C5   N7   180.00   0.0  0
- 8B4  CONST_15  N1   C6   C5   N7   180.00   0.0  0
- 8B4  CONST_16  N4   N3   C2   N1     0.00   0.0  0
- 8B4  CONST_17  N4   C5   C6   N1     0.00   0.0  0
- 8B4  CONST_18  C1'  C9   N4   C5   180.00   0.0  0
- 8B4  CONST_19  N7   C8   C9   C1'  180.00   0.0  0
- 8B4  CONST_20  N3   N4   C9   C1'    0.00   0.0  0
- 8B4  CONST_21  N6   C6   C5   N7     0.00   0.0  0
- 8B4  CONST_22  N4   C5   C6   N6   180.00   0.0  0
- 8B4  CONST_23  C2   N1   C6   N6   180.00   0.0  0
- 8B4  CONST_24  H16  C2   N1   C6   180.00   0.0  0
- 8B4  CONST_25  H1   C8   N7   C5   180.00   0.0  0
- 8B4  CONST_26  H14  N6   C6   C5   180.00   0.0  0
- 8B4  CONST_27  H15  N6   C6   C5     0.00   0.0  0
- 8B4  Var_01    O2A  PA   O5'  C5'  -55.62  30.0  1
- 8B4  Var_02    O3B  PB   O3A  PA    20.62  30.0  2
- 8B4  Var_03    H9   C5'  O5'  PA   107.99  30.0  2
+ 8B4  CONST_01  N3   N4   C9   C8    180.00   0.0  0
+ 8B4  CONST_02  C5   N4   C9   C8      0.00   0.0  0
+ 8B4  CONST_03  N4   C5   N7   C8      0.00   0.0  0
+ 8B4  CONST_04  C6   C5   N7   C8    180.00   0.0  0
+ 8B4  CONST_05  C9   N4   C5   C6    180.00   0.0  0
+ 8B4  CONST_06  N3   N4   C5   C6      0.00   0.0  0
+ 8B4  CONST_07  N3   C2   N1   C6      0.00   0.0  0
+ 8B4  CONST_08  C2   N3   N4   C5      0.00   0.0  0
+ 8B4  CONST_09  C9   C8   N7   C5      0.00   0.0  0
+ 8B4  CONST_10  C2   N1   C6   C5      0.00   0.0  0
+ 8B4  CONST_11  C2   N3   N4   C9    180.00   0.0  0
+ 8B4  CONST_12  N7   C5   N4   C9      0.00   0.0  0
+ 8B4  CONST_13  N4   C9   C8   N7      0.00   0.0  0
+ 8B4  CONST_14  N3   N4   C5   N7    180.00   0.0  0
+ 8B4  CONST_15  N1   C6   C5   N7    180.00   0.0  0
+ 8B4  CONST_16  N4   N3   C2   N1      0.00   0.0  0
+ 8B4  CONST_17  N4   C5   C6   N1      0.00   0.0  0
+ 8B4  CONST_18  C1'  C9   N4   C5    180.00   0.0  0
+ 8B4  CONST_19  N7   C8   C9   C1'   180.00   0.0  0
+ 8B4  CONST_20  N3   N4   C9   C1'     0.00   0.0  0
+ 8B4  CONST_21  N6   C6   C5   N7      0.00   0.0  0
+ 8B4  CONST_22  N4   C5   C6   N6    180.00   0.0  0
+ 8B4  CONST_23  C2   N1   C6   N6    180.00   0.0  0
+ 8B4  CONST_24  H16  C2   N1   C6    180.00   0.0  0
+ 8B4  CONST_25  H1   C8   N7   C5    180.00   0.0  0
+ 8B4  CONST_26  H14  N6   C6   C5    180.00   0.0  0
+ 8B4  CONST_27  H15  N6   C6   C5      0.00   0.0  0
+ 8B4  Var_01    O2A  PA   O5'  C5'   -55.62  30.0  1
+ 8B4  Var_02    O3B  PB   O3A  PA     20.62  30.0  2
+ 8B4  Var_03    H9   C5'  O5'  PA    107.99  30.0  2
+ 8B4  Var_04    O4'  C1'  C9   C8     26.28  30.0  2
+ 8B4  Var_05    C2'  C1'  C9   C8    -91.69  30.0  2
+ 8B4  Var_06    O4'  C4'  C3'  C2'   -37.55  30.0  1
+ 8B4  Var_07    C4'  O4'  C1'  C2'     2.59  30.0  1
+ 8B4  Var_08    N4   C9   C1'  C2'    90.18  30.0  2
+ 8B4  Var_09    C1'  O4'  C4'  C3'    22.12  30.0  1
+ 8B4  Var_10    O4'  C1'  C2'  C3'   -25.99  30.0  1
+ 8B4  Var_11    C9   C1'  C2'  C3'    93.32  30.0  1
+ 8B4  Var_12    C4'  C3'  C2'  C1'    37.90  30.0  1
+ 8B4  Var_13    N4   C9   C1'  O4'  -151.85  30.0  2
+ 8B4  Var_14    C9   C1'  O4'  C4'  -120.60  30.0  1
+ 8B4  Var_15    C4'  C3'  C2'  F2'   -73.35  30.0  1
+ 8B4  Var_16    O4'  C1'  C2'  F2'    85.11  30.0  1
+ 8B4  Var_17    C9   C1'  C2'  F2'  -155.58  30.0  1
+ 8B4  Var_18    C5'  C4'  C3'  C2'  -159.23  30.0  1
+ 8B4  Var_19    C4'  C3'  C2'  C2M   166.29  30.0  1
+ 8B4  Var_20    O4'  C1'  C2'  C2M  -153.35  30.0  1
+ 8B4  Var_21    C9   C1'  C2'  C2M   -34.03  30.0  1
+ 8B4  Var_22    O4'  C4'  C3'  O3'  -162.66  30.0  1
+ 8B4  Var_23    C1'  C2'  C3'  O3'   163.13  30.0  1
+ 8B4  Var_24    C5'  C4'  O4'  C1'   147.74  30.0  1
+ 8B4  Var_25    H7   C1'  C9   C8    146.40  30.0  2
+ 8B4  Var_26    H8   C4'  C3'  C2'    80.82  30.0  1
+ 8B4  Var_27    H5   C3'  C2'  C1'   -78.18  30.0  1
+ 8B4  Var_28    O3'  C3'  C2'  F2'    51.88  30.0  1
+ 8B4  Var_29    O3'  C3'  C2'  C2M   -68.48  30.0  1
+ 8B4  Var_30    O5'  C5'  C4'  C3'    54.93  30.0  1
+ 8B4  Var_31    C5'  C4'  C3'  O3'    75.67  30.0  1
+ 8B4  Var_32    O5'  C5'  C4'  O4'   -63.31  30.0  1
+ 8B4  Var_33    H6   O3'  C3'  C2'   -62.67  30.0  3
+ 8B4  Var_34    H9   C5'  C4'  C3'   174.25  30.0  1
+ 8B4  Var_35    H10  C5'  C4'  C3'   -68.64  30.0  1
+ 8B4  Var_36    H2   C2M  C2'  C3'  -177.21  30.0  3
+ 8B4  Var_37    H3   C2M  C2'  C3'   -56.41  30.0  3
+ 8B4  Var_38    H4   C2M  C2'  C3'    62.80  30.0  3
+ 8B4  Var_39    PB   O3A  PA   O5'  -100.80  30.0  3
+ 8B4  Var_40    PB   O3A  PA   O1A   158.01  30.0  3
+ 8B4  Var_41    O2A  PA   O3A  PB     28.47  30.0  2
+ 8B4  Var_42    H11  O1A  PA   O5'   160.18  30.0  3
+ 8B4  Var_43    H12  O1B  PB   O3A   103.60  30.0  3
+ 8B4  Var_44    H13  O2B  PB   O3A   -68.09  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

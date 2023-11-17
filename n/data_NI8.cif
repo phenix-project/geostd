@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NI8  NI8  (4aS,7aS)-1,4-bis[3-(hydroxymethyl)benzyl]hexahydro-1H-pyrrolo[3,4-b]pyrazine-2,3-dione  ligand  54  29  .  2021-08-15  2021-08-15  
+ NI8  NI8  (4aS,7aS)-1,4-bis[3-(hydroxymethyl)benzyl]hexahydro-1H-pyrrolo[3,4-b]pyrazine-2,3-dione  ligand  54  29  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NI8
@@ -277,51 +278,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NI8  CONST_01  C10  C8   C7   C6     0.00   0.0  0
- NI8  CONST_02  C10  C11  C12  C6     0.00   0.0  0
- NI8  CONST_03  C11  C12  C6   C7     0.00   0.0  0
- NI8  CONST_04  C11  C10  C8   C7     0.00   0.0  0
- NI8  CONST_05  C12  C6   C7   C8     0.00   0.0  0
- NI8  CONST_06  C12  C11  C10  C8     0.00   0.0  0
- NI8  CONST_07  C23  C21  C20  C19    0.00   0.0  0
- NI8  CONST_08  C23  C24  C25  C19    0.00   0.0  0
- NI8  CONST_09  C24  C25  C19  C20    0.00   0.0  0
- NI8  CONST_10  C24  C23  C21  C20    0.00   0.0  0
- NI8  CONST_11  C25  C19  C20  C21    0.00   0.0  0
- NI8  CONST_12  C25  C24  C23  C21    0.00   0.0  0
- NI8  CONST_13  C13  C15  N17  C1     0.00   0.0  0
- NI8  CONST_14  C15  C13  N3   C2     0.00   0.0  0
- NI8  CONST_15  C8   C7   C6   C5   180.00   0.0  0
- NI8  CONST_16  C11  C12  C6   C5   180.00   0.0  0
- NI8  CONST_17  C9   C8   C7   C6   180.00   0.0  0
- NI8  CONST_18  C11  C10  C8   C9   180.00   0.0  0
- NI8  CONST_19  C21  C20  C19  C18  180.00   0.0  0
- NI8  CONST_20  C24  C25  C19  C18  180.00   0.0  0
- NI8  CONST_21  C22  C21  C20  C19  180.00   0.0  0
- NI8  CONST_22  C24  C23  C21  C22  180.00   0.0  0
- NI8  CONST_23  O16  C15  N17  C1   180.00   0.0  0
- NI8  CONST_24  O14  C13  N3   C2   180.00   0.0  0
- NI8  CONST_25  C15  C13  N3   C5   180.00   0.0  0
- NI8  CONST_26  C18  N17  C15  C13  180.00   0.0  0
- NI8  CONST_27  H11  C11  C12  C6   180.00   0.0  0
- NI8  CONST_28  H12  C12  C6   C7   180.00   0.0  0
- NI8  CONST_29  H10  C10  C8   C7   180.00   0.0  0
- NI8  CONST_30  H7   C7   C8   C10  180.00   0.0  0
- NI8  CONST_31  H24  C24  C25  C19  180.00   0.0  0
- NI8  CONST_32  H25  C25  C19  C20  180.00   0.0  0
- NI8  CONST_33  H23  C23  C21  C20  180.00   0.0  0
- NI8  CONST_34  H20  C20  C21  C23  180.00   0.0  0
- NI8  CONST_35  O14  C13  N3   C5     0.00   0.0  0
- NI8  CONST_36  C18  N17  C15  O16    0.00   0.0  0
- NI8  Var_01    C26  N27  C28  C1   -11.79  30.0  1
- NI8  Var_02    C28  N27  C26  C2   -18.27  30.0  1
- NI8  Var_03    N17  C15  C13  N3    14.88  30.0  1
- NI8  Var_04    C19  C18  N17  C1    63.10  30.0  3
- NI8  Var_05    C6   C5   N3   C2    62.05  30.0  3
- NI8  Var_06    C7   C6   C5   N3    50.14  30.0  2
- NI8  Var_07    C20  C19  C18  N17   57.13  30.0  2
- NI8  Var_08    O30  C9   C8   C7   133.06  30.0  2
- NI8  Var_09    O29  C22  C21  C20  140.99  30.0  2
+ NI8  CONST_01  C10   C8   C7   C6      0.00   0.0  0
+ NI8  CONST_02  C10   C11  C12  C6      0.00   0.0  0
+ NI8  CONST_03  C11   C12  C6   C7      0.00   0.0  0
+ NI8  CONST_04  C11   C10  C8   C7      0.00   0.0  0
+ NI8  CONST_05  C12   C6   C7   C8      0.00   0.0  0
+ NI8  CONST_06  C12   C11  C10  C8      0.00   0.0  0
+ NI8  CONST_07  C23   C21  C20  C19     0.00   0.0  0
+ NI8  CONST_08  C23   C24  C25  C19     0.00   0.0  0
+ NI8  CONST_09  C24   C25  C19  C20     0.00   0.0  0
+ NI8  CONST_10  C24   C23  C21  C20     0.00   0.0  0
+ NI8  CONST_11  C25   C19  C20  C21     0.00   0.0  0
+ NI8  CONST_12  C25   C24  C23  C21     0.00   0.0  0
+ NI8  CONST_13  C13   C15  N17  C1      0.00   0.0  0
+ NI8  CONST_14  C15   C13  N3   C2      0.00   0.0  0
+ NI8  CONST_15  C8    C7   C6   C5    180.00   0.0  0
+ NI8  CONST_16  C11   C12  C6   C5    180.00   0.0  0
+ NI8  CONST_17  C9    C8   C7   C6    180.00   0.0  0
+ NI8  CONST_18  C11   C10  C8   C9    180.00   0.0  0
+ NI8  CONST_19  C21   C20  C19  C18   180.00   0.0  0
+ NI8  CONST_20  C24   C25  C19  C18   180.00   0.0  0
+ NI8  CONST_21  C22   C21  C20  C19   180.00   0.0  0
+ NI8  CONST_22  C24   C23  C21  C22   180.00   0.0  0
+ NI8  CONST_23  O16   C15  N17  C1    180.00   0.0  0
+ NI8  CONST_24  O14   C13  N3   C2    180.00   0.0  0
+ NI8  CONST_25  C15   C13  N3   C5    180.00   0.0  0
+ NI8  CONST_26  C18   N17  C15  C13   180.00   0.0  0
+ NI8  CONST_27  H11   C11  C12  C6    180.00   0.0  0
+ NI8  CONST_28  H12   C12  C6   C7    180.00   0.0  0
+ NI8  CONST_29  H10   C10  C8   C7    180.00   0.0  0
+ NI8  CONST_30  H7    C7   C8   C10   180.00   0.0  0
+ NI8  CONST_31  H24   C24  C25  C19   180.00   0.0  0
+ NI8  CONST_32  H25   C25  C19  C20   180.00   0.0  0
+ NI8  CONST_33  H23   C23  C21  C20   180.00   0.0  0
+ NI8  CONST_34  H20   C20  C21  C23   180.00   0.0  0
+ NI8  CONST_35  O14   C13  N3   C5      0.00   0.0  0
+ NI8  CONST_36  C18   N17  C15  O16     0.00   0.0  0
+ NI8  Var_01    C26   N27  C28  C1    -11.79  30.0  1
+ NI8  Var_02    C28   N27  C26  C2    -18.27  30.0  1
+ NI8  Var_03    N17   C15  C13  N3     14.88  30.0  1
+ NI8  Var_04    C19   C18  N17  C1     63.10  30.0  3
+ NI8  Var_05    C6    C5   N3   C2     62.05  30.0  3
+ NI8  Var_06    C7    C6   C5   N3     50.14  30.0  2
+ NI8  Var_07    C20   C19  C18  N17    57.13  30.0  2
+ NI8  Var_08    O30   C9   C8   C7    133.06  30.0  2
+ NI8  Var_09    O29   C22  C21  C20   140.99  30.0  2
+ NI8  Var_10    C13   N3   C2   C1    -42.45  30.0  1
+ NI8  Var_11    N27   C26  C2   C1     41.01  30.0  1
+ NI8  Var_12    C15   N17  C1   C2    -41.88  30.0  1
+ NI8  Var_13    N27   C28  C1   C2     37.35  30.0  1
+ NI8  Var_14    N17   C1   C2   N3     60.56  30.0  1
+ NI8  Var_15    C28   C1   C2   N3   -173.81  30.0  1
+ NI8  Var_16    N27   C26  C2   N3    160.46  30.0  1
+ NI8  Var_17    C26   C2   N3   C13  -156.52  30.0  1
+ NI8  Var_18    C28   C1   N17  C15  -157.18  30.0  1
+ NI8  Var_19    C26   C2   C1   N17  -173.68  30.0  1
+ NI8  Var_20    N27   C28  C1   N17   157.54  30.0  1
+ NI8  Var_21    C28   C1   C2   C26   -48.05  30.0  1
+ NI8  Var_22    C5    N3   C2   C1    153.32  30.0  1
+ NI8  Var_23    C18   N17  C1   C2    154.63  30.0  1
+ NI8  Var_24    C26   C2   N3   C5     39.25  30.0  1
+ NI8  Var_25    C28   C1   N17  C18    39.33  30.0  1
+ NI8  Var_26    H26   C26  C2   C1    161.07  30.0  1
+ NI8  Var_27    H26A  C26  C2   C1    -77.76  30.0  1
+ NI8  Var_28    H28   C28  C1   C2    157.36  30.0  1
+ NI8  Var_29    H28A  C28  C1   C2    -82.45  30.0  1
+ NI8  Var_30    H1    C1   C2   N3    -59.74  30.0  1
+ NI8  Var_31    H2    C2   N3   C13    78.00  30.0  1
+ NI8  Var_32    HO30  O30  C9   C8    165.19  30.0  3
+ NI8  Var_33    HO29  O29  C22  C21   164.45  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

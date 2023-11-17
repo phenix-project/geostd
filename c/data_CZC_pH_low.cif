@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CZC  CZC  "[(2~{R},3~{S},4~{R},5~{R})-5-[2,6-bis(oxidanylidene)-3~{H}-purin-9-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl phosphono hydrogen phosphate"  ligand  42  28  .  2022-11-17  2022-11-17
+ CZC  CZC  '[(2~{R},3~{S},4~{R},5~{R})-5-[2,6-bis(oxidanylidene)-3~{H}-purin-9-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl phosphono hydrogen phosphate'  ligand  42  28  .  2022-11-17  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CZC
@@ -226,41 +227,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CZC  CONST_01  N3   C10  N4  C2     0.00   0.0  0
- CZC  CONST_02  C10  N3   C3  C2     0.00   0.0  0
- CZC  CONST_03  C10  N4   C2  C3     0.00   0.0  0
- CZC  CONST_04  N4   C10  N3  C3     0.00   0.0  0
- CZC  CONST_05  N4   C2   C3  N3     0.00   0.0  0
- CZC  CONST_06  C4   N4   C2  C3   180.00   0.0  0
- CZC  CONST_07  N3   C10  N4  C4   180.00   0.0  0
- CZC  CONST_08  N2   C2   N4  C4     0.00   0.0  0
- CZC  CONST_09  N1   C1   N2  C2     0.00   0.0  0
- CZC  CONST_10  N2   C1   N1  C9     0.00   0.0  0
- CZC  CONST_11  O1   C1   N2  C2   180.00   0.0  0
- CZC  CONST_12  O1   C1   N1  C9   180.00   0.0  0
- CZC  CONST_13  H7   C10  N4  C2   180.00   0.0  0
- CZC  CONST_14  H7   C10  N3  C3   180.00   0.0  0
- CZC  CONST_15  H7   C10  N4  C4     0.00   0.0  0
- CZC  CONST_16  H9   N2   C1  N1   180.00   0.0  0
- CZC  CONST_17  H8   N1   C1  N2   180.00   0.0  0
- CZC  CONST_18  H9   N2   C1  O1     0.00   0.0  0
- CZC  CONST_19  H8   N1   C1  O1     0.00   0.0  0
- CZC  Var_01    O6   C9   N1  C1   179.60  30.0  1
- CZC  Var_02    O6   C9   C3  C2   179.81  30.0  1
- CZC  Var_03    O6   C9   C3  N3     0.96  30.0  1
- CZC  Var_04    H8   N1   C9  O6     0.22  30.0  1
- CZC  Var_05    P1   O5   C8  C7   161.94  30.0  3
- CZC  Var_06    O7   P1   O5  C8   -57.78  30.0  1
- CZC  Var_07    O9   P1   O5  C8   177.07  30.0  1
- CZC  Var_08    O8   P1   O5  C8    47.40  30.0  1
- CZC  Var_09    P2   O7   P1  O5   -77.49  30.0  1
- CZC  Var_10    P2   O7   P1  O8   175.68  30.0  1
- CZC  Var_11    P2   O7   P1  O9    46.68  30.0  1
- CZC  Var_12    P1   O7   P2  O10   27.63  30.0  3
- CZC  Var_13    P1   O7   P2  O11  -78.67  30.0  3
- CZC  Var_14    P1   O7   P2  O12  155.28  30.0  3
- CZC  Var_15    H5   C8   O5  P1    43.15  30.0  1
- CZC  Var_16    H6   C8   O5  P1   -76.35  30.0  1
+ CZC  CONST_01  N3   C10  N4  C2      0.00   0.0  0
+ CZC  CONST_02  C10  N3   C3  C2      0.00   0.0  0
+ CZC  CONST_03  C10  N4   C2  C3      0.00   0.0  0
+ CZC  CONST_04  N4   C10  N3  C3      0.00   0.0  0
+ CZC  CONST_05  N4   C2   C3  N3      0.00   0.0  0
+ CZC  CONST_06  C4   N4   C2  C3    180.00   0.0  0
+ CZC  CONST_07  N3   C10  N4  C4    180.00   0.0  0
+ CZC  CONST_08  N2   C2   N4  C4      0.00   0.0  0
+ CZC  CONST_09  N1   C1   N2  C2      0.00   0.0  0
+ CZC  CONST_10  N2   C1   N1  C9      0.00   0.0  0
+ CZC  CONST_11  O1   C1   N2  C2    180.00   0.0  0
+ CZC  CONST_12  O1   C1   N1  C9    180.00   0.0  0
+ CZC  CONST_13  H7   C10  N4  C2    180.00   0.0  0
+ CZC  CONST_14  H7   C10  N3  C3    180.00   0.0  0
+ CZC  CONST_15  H7   C10  N4  C4      0.00   0.0  0
+ CZC  CONST_16  H9   N2   C1  N1    180.00   0.0  0
+ CZC  CONST_17  H8   N1   C1  N2    180.00   0.0  0
+ CZC  CONST_18  H9   N2   C1  O1      0.00   0.0  0
+ CZC  CONST_19  H8   N1   C1  O1      0.00   0.0  0
+ CZC  Var_01    O6   C9   N1  C1    179.60  30.0  1
+ CZC  Var_02    O6   C9   C3  C2    179.81  30.0  1
+ CZC  Var_03    O6   C9   C3  N3      0.96  30.0  1
+ CZC  Var_04    H8   N1   C9  O6      0.22  30.0  1
+ CZC  Var_05    P1   O5   C8  C7    161.94  30.0  3
+ CZC  Var_06    O7   P1   O5  C8    -57.78  30.0  1
+ CZC  Var_07    O9   P1   O5  C8    177.07  30.0  1
+ CZC  Var_08    O8   P1   O5  C8     47.40  30.0  1
+ CZC  Var_09    P2   O7   P1  O5    -77.49  30.0  1
+ CZC  Var_10    P2   O7   P1  O8    175.68  30.0  1
+ CZC  Var_11    P2   O7   P1  O9     46.68  30.0  1
+ CZC  Var_12    P1   O7   P2  O10    27.63  30.0  3
+ CZC  Var_13    P1   O7   P2  O11   -78.67  30.0  3
+ CZC  Var_14    P1   O7   P2  O12   155.28  30.0  3
+ CZC  Var_15    H5   C8   O5  P1     43.15  30.0  1
+ CZC  Var_16    H6   C8   O5  P1    -76.35  30.0  1
+ CZC  Var_17    C5   C4   N4  C2     94.42  30.0  1
+ CZC  Var_18    O4   C4   N4  C2   -147.80  30.0  1
+ CZC  Var_19    C7   C6   C5  C4    -37.64  30.0  1
+ CZC  Var_20    C6   C7   O4  C4    -10.82  30.0  1
+ CZC  Var_21    O4   C7   C6  C5     30.96  30.0  1
+ CZC  Var_22    C7   O4   C4  C5    -14.20  30.0  1
+ CZC  Var_23    C10  N4   C4  C5    -84.04  30.0  2
+ CZC  Var_24    O4   C4   C5  C6     33.12  30.0  1
+ CZC  Var_25    N4   C4   C5  C6    152.08  30.0  1
+ CZC  Var_26    N4   C4   O4  C7   -136.62  30.0  1
+ CZC  Var_27    O4   C4   N4  C10    33.74  30.0  1
+ CZC  Var_28    O3   C6   C5  C4     80.05  30.0  1
+ CZC  Var_29    C8   C7   O4  C4    111.25  30.0  1
+ CZC  Var_30    C8   C7   C6  C5    -90.15  30.0  1
+ CZC  Var_31    O2   C5   C6  C7   -159.67  30.0  1
+ CZC  Var_32    O2   C5   C4  N4    -86.62  30.0  1
+ CZC  Var_33    O4   C4   C5  O2    154.42  30.0  1
+ CZC  Var_34    O4   C7   C6  O3    -83.58  30.0  1
+ CZC  Var_35    H1   C4   N4  C2    -27.74  30.0  1
+ CZC  Var_36    H3   C6   C5  C4   -156.51  30.0  1
+ CZC  Var_37    H4   C7   O4  C4   -129.88  30.0  1
+ CZC  Var_38    H2   C5   C6  C7     76.10  30.0  1
+ CZC  Var_39    O5   C8   C7  C6    172.76  30.0  2
+ CZC  Var_40    O3   C6   C7  C8    155.30  30.0  1
+ CZC  Var_41    O3   C6   C5  O2    -41.98  30.0  1
+ CZC  Var_42    O5   C8   C7  O4     54.50  30.0  2
+ CZC  Var_43    H10  O2   C5  C4     89.76  30.0  3
+ CZC  Var_44    H11  O3   C6  C5   -178.41  30.0  3
+ CZC  Var_45    H5   C8   C7  C6    -66.75  30.0  2
+ CZC  Var_46    H6   C8   C7  C6     52.78  30.0  2
+ CZC  Var_47    H12  O8   P1  O5    168.48  30.0  3
+ CZC  Var_48    H14  O11  P2  O7   -165.33  30.0  3
+ CZC  Var_49    H13  O10  P2  O7     89.01  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

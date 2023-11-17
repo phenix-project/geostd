@@ -19,10 +19,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 9SZ  9SZ  'None                     '  ligand  80  52  .  2021-08-06  2021-08-06  
+ 9SZ  9SZ  'None                     '  ligand  80  52  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_9SZ
@@ -412,59 +413,134 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 9SZ  CONST_01  CAI  CAO  CAP  CAF    0.00   0.0  0
- 9SZ  CONST_02  CAI  CAH  CAG  CAF    0.00   0.0  0
- 9SZ  CONST_03  CAO  CAP  CAF  CAG    0.00   0.0  0
- 9SZ  CONST_04  CAO  CAI  CAH  CAG    0.00   0.0  0
- 9SZ  CONST_05  CBO  CBN  CBM  CBL    0.00   0.0  0
- 9SZ  CONST_06  CBO  CBP  CBQ  CBL    0.00   0.0  0
- 9SZ  CONST_07  CBP  CBQ  CBL  CBM    0.00   0.0  0
- 9SZ  CONST_08  CBP  CBO  CBN  CBM    0.00   0.0  0
- 9SZ  CONST_09  CBQ  CBL  CBM  CBN    0.00   0.0  0
- 9SZ  CONST_10  CBQ  CBP  CBO  CBN    0.00   0.0  0
- 9SZ  CONST_11  CBX  CBW  CBV  CBU    0.00   0.0  0
- 9SZ  CONST_12  CBX  CBY  CBZ  CBU    0.00   0.0  0
- 9SZ  CONST_13  CBY  CBX  CBW  CBV    0.00   0.0  0
- 9SZ  CONST_14  CBY  CBZ  CBU  CBV    0.00   0.0  0
- 9SZ  CONST_15  CBZ  CBU  CBV  CBW    0.00   0.0  0
- 9SZ  CONST_16  CBZ  CBY  CBX  CBW    0.00   0.0  0
- 9SZ  CONST_17  CAP  CAF  CAG  CAH    0.00   0.0  0
- 9SZ  CONST_18  CAP  CAO  CAI  CAH    0.00   0.0  0
- 9SZ  CONST_19  CAW  CAX  CAY  CAT    0.00   0.0  0
- 9SZ  CONST_20  CAW  CAV  CAU  CAT    0.00   0.0  0
- 9SZ  CONST_21  CAV  CAW  CAX  CAY    0.00   0.0  0
- 9SZ  CONST_22  CAV  CAU  CAT  CAY    0.00   0.0  0
- 9SZ  CONST_23  CAU  CAV  CAW  CAX    0.00   0.0  0
- 9SZ  CONST_24  CAU  CAT  CAY  CAX    0.00   0.0  0
- 9SZ  CONST_25  CBE  CBF  CBG  CBH    0.00   0.0  0
- 9SZ  CONST_26  CBE  CBD  CBC  CBH    0.00   0.0  0
- 9SZ  CONST_27  CBD  CBC  CBH  CBG    0.00   0.0  0
- 9SZ  CONST_28  CBD  CBE  CBF  CBG    0.00   0.0  0
- 9SZ  CONST_29  CBC  CBH  CBG  CBF    0.00   0.0  0
- 9SZ  CONST_30  CBC  CBD  CBE  CBF    0.00   0.0  0
- 9SZ  CONST_31  CAQ  CAP  CAF  OAE    0.00   0.0  0
- 9SZ  CONST_32  CAO  CAP  CAF  OAE  180.00   0.0  0
- 9SZ  CONST_33  CBK  CAG  CAF  OAE    0.00   0.0  0
- 9SZ  CONST_34  CAH  CAG  CAF  OAE  180.00   0.0  0
- 9SZ  CONST_35  OAJ  CAI  CAH  CAG  180.00   0.0  0
- 9SZ  CONST_36  OAJ  CAI  CAH  CBI    0.00   0.0  0
- 9SZ  CONST_37  CAP  CAO  CAI  OAJ  180.00   0.0  0
- 9SZ  CONST_38  CAS  CAO  CAI  OAJ    0.00   0.0  0
- 9SZ  CONST_39  H6   CBM  CBL  CBK    0.00   0.0  0
- 9SZ  CONST_40  H15  CBP  CBQ  CBL  180.00   0.0  0
- 9SZ  CONST_41  H10  CBV  CBU  CBT    0.00   0.0  0
- 9SZ  CONST_42  H11  CBW  CBV  CBU  180.00   0.0  0
- 9SZ  CONST_43  H13  CBY  CBZ  CBU  180.00   0.0  0
- 9SZ  CONST_44  H12  CBX  CBW  CBV  180.00   0.0  0
- 9SZ  CONST_45  H23  CAX  CAY  CAQ    0.00   0.0  0
- 9SZ  CONST_46  H32  CAU  CAT  CAS    0.00   0.0  0
- 9SZ  CONST_47  H27  CBG  CBH  CAZ    0.00   0.0  0
- 9SZ  CONST_48  H28  CBF  CBG  CBH  180.00   0.0  0
- 9SZ  CONST_49  H30  CBD  CBC  CBH  180.00   0.0  0
- 9SZ  CONST_50  H29  CBE  CBF  CBG  180.00   0.0  0
- 9SZ  Var_01    CAP  CAF  OAE  PAB  -91.48  30.0  2
- 9SZ  Var_02    CAO  CAI  OAJ  PAK  -94.49  30.0  2
- 9SZ  Var_03    OAL  PAK  OAJ  CAI   54.20  30.0  3
+ 9SZ  CONST_01  CAI  CAO  CAP  CAF     0.00   0.0  0
+ 9SZ  CONST_02  CAI  CAH  CAG  CAF     0.00   0.0  0
+ 9SZ  CONST_03  CAO  CAP  CAF  CAG     0.00   0.0  0
+ 9SZ  CONST_04  CAO  CAI  CAH  CAG     0.00   0.0  0
+ 9SZ  CONST_05  CBO  CBN  CBM  CBL     0.00   0.0  0
+ 9SZ  CONST_06  CBO  CBP  CBQ  CBL     0.00   0.0  0
+ 9SZ  CONST_07  CBP  CBQ  CBL  CBM     0.00   0.0  0
+ 9SZ  CONST_08  CBP  CBO  CBN  CBM     0.00   0.0  0
+ 9SZ  CONST_09  CBQ  CBL  CBM  CBN     0.00   0.0  0
+ 9SZ  CONST_10  CBQ  CBP  CBO  CBN     0.00   0.0  0
+ 9SZ  CONST_11  CBX  CBW  CBV  CBU     0.00   0.0  0
+ 9SZ  CONST_12  CBX  CBY  CBZ  CBU     0.00   0.0  0
+ 9SZ  CONST_13  CBY  CBX  CBW  CBV     0.00   0.0  0
+ 9SZ  CONST_14  CBY  CBZ  CBU  CBV     0.00   0.0  0
+ 9SZ  CONST_15  CBZ  CBU  CBV  CBW     0.00   0.0  0
+ 9SZ  CONST_16  CBZ  CBY  CBX  CBW     0.00   0.0  0
+ 9SZ  CONST_17  CAP  CAF  CAG  CAH     0.00   0.0  0
+ 9SZ  CONST_18  CAP  CAO  CAI  CAH     0.00   0.0  0
+ 9SZ  CONST_19  CAW  CAX  CAY  CAT     0.00   0.0  0
+ 9SZ  CONST_20  CAW  CAV  CAU  CAT     0.00   0.0  0
+ 9SZ  CONST_21  CAV  CAW  CAX  CAY     0.00   0.0  0
+ 9SZ  CONST_22  CAV  CAU  CAT  CAY     0.00   0.0  0
+ 9SZ  CONST_23  CAU  CAV  CAW  CAX     0.00   0.0  0
+ 9SZ  CONST_24  CAU  CAT  CAY  CAX     0.00   0.0  0
+ 9SZ  CONST_25  CBE  CBF  CBG  CBH     0.00   0.0  0
+ 9SZ  CONST_26  CBE  CBD  CBC  CBH     0.00   0.0  0
+ 9SZ  CONST_27  CBD  CBC  CBH  CBG     0.00   0.0  0
+ 9SZ  CONST_28  CBD  CBE  CBF  CBG     0.00   0.0  0
+ 9SZ  CONST_29  CBC  CBH  CBG  CBF     0.00   0.0  0
+ 9SZ  CONST_30  CBC  CBD  CBE  CBF     0.00   0.0  0
+ 9SZ  CONST_31  CAQ  CAP  CAF  OAE     0.00   0.0  0
+ 9SZ  CONST_32  CAO  CAP  CAF  OAE   180.00   0.0  0
+ 9SZ  CONST_33  CBK  CAG  CAF  OAE     0.00   0.0  0
+ 9SZ  CONST_34  CAH  CAG  CAF  OAE   180.00   0.0  0
+ 9SZ  CONST_35  OAJ  CAI  CAH  CAG   180.00   0.0  0
+ 9SZ  CONST_36  OAJ  CAI  CAH  CBI     0.00   0.0  0
+ 9SZ  CONST_37  CAP  CAO  CAI  OAJ   180.00   0.0  0
+ 9SZ  CONST_38  CAS  CAO  CAI  OAJ     0.00   0.0  0
+ 9SZ  CONST_39  H6   CBM  CBL  CBK     0.00   0.0  0
+ 9SZ  CONST_40  H15  CBP  CBQ  CBL   180.00   0.0  0
+ 9SZ  CONST_41  H10  CBV  CBU  CBT     0.00   0.0  0
+ 9SZ  CONST_42  H11  CBW  CBV  CBU   180.00   0.0  0
+ 9SZ  CONST_43  H13  CBY  CBZ  CBU   180.00   0.0  0
+ 9SZ  CONST_44  H12  CBX  CBW  CBV   180.00   0.0  0
+ 9SZ  CONST_45  H23  CAX  CAY  CAQ     0.00   0.0  0
+ 9SZ  CONST_46  H32  CAU  CAT  CAS     0.00   0.0  0
+ 9SZ  CONST_47  H27  CBG  CBH  CAZ     0.00   0.0  0
+ 9SZ  CONST_48  H28  CBF  CBG  CBH   180.00   0.0  0
+ 9SZ  CONST_49  H30  CBD  CBC  CBH   180.00   0.0  0
+ 9SZ  CONST_50  H29  CBE  CBF  CBG   180.00   0.0  0
+ 9SZ  Var_01    CAP  CAF  OAE  PAB   -91.48  30.0  2
+ 9SZ  Var_02    CAO  CAI  OAJ  PAK   -94.49  30.0  2
+ 9SZ  Var_03    OAL  PAK  OAJ  CAI    54.20  30.0  3
+ 9SZ  Var_04    CAR  CAQ  CAP  CAF   145.92  30.0  1
+ 9SZ  Var_05    CBJ  CBK  CAG  CAF  -147.39  30.0  1
+ 9SZ  Var_06    CBI  CBJ  CBK  CAG   -53.16  30.0  3
+ 9SZ  Var_07    CBJ  CBI  CAH  CAG   -36.34  30.0  1
+ 9SZ  Var_08    CAH  CBI  CBJ  CBK    54.18  30.0  3
+ 9SZ  Var_09    CBQ  CBI  CBJ  CBK   -53.44  30.0  3
+ 9SZ  Var_10    CAH  CAG  CBK  CBJ    33.68  30.0  1
+ 9SZ  Var_11    CBM  CBL  CBK  CBJ   145.34  30.0  1
+ 9SZ  Var_12    CBQ  CBL  CBK  CBJ   -36.38  30.0  1
+ 9SZ  Var_13    CAI  CAH  CBI  CBJ   142.98  30.0  1
+ 9SZ  Var_14    CBL  CBQ  CBI  CBJ    33.90  30.0  1
+ 9SZ  Var_15    CBP  CBQ  CBI  CBJ  -147.69  30.0  1
+ 9SZ  Var_16    CBI  CBJ  CBK  CBL    54.44  30.0  3
+ 9SZ  Var_17    CBU  CBT  CBN  CBM   110.19  30.0  1
+ 9SZ  Var_18    CBS  CBT  CBN  CBM  -147.92  30.0  1
+ 9SZ  Var_19    CBV  CBU  CBT  CBN  -111.58  30.0  2
+ 9SZ  Var_20    CBZ  CBU  CBT  CBN    67.00  30.0  2
+ 9SZ  Var_21    CBR  CBS  CBT  CBN   -53.30  30.0  1
+ 9SZ  Var_22    CBZ  CBR  CBO  CBN    66.85  30.0  1
+ 9SZ  Var_23    CBS  CBR  CBO  CBN   -35.04  30.0  1
+ 9SZ  Var_24    CBO  CBR  CBS  CBT    53.48  30.0  1
+ 9SZ  Var_25    CBZ  CBR  CBS  CBT   -53.91  30.0  1
+ 9SZ  Var_26    CBO  CBN  CBT  CBS    34.68  30.0  1
+ 9SZ  Var_27    CBV  CBU  CBT  CBS   146.34  30.0  2
+ 9SZ  Var_28    CBZ  CBU  CBT  CBS   -35.08  30.0  2
+ 9SZ  Var_29    CBP  CBO  CBR  CBS   147.48  30.0  1
+ 9SZ  Var_30    CBU  CBZ  CBR  CBS    35.14  30.0  2
+ 9SZ  Var_31    CBY  CBZ  CBR  CBS  -146.24  30.0  2
+ 9SZ  Var_32    CBO  CBN  CBT  CBU   -67.22  30.0  1
+ 9SZ  Var_33    CBR  CBS  CBT  CBU    53.92  30.0  1
+ 9SZ  Var_34    CBO  CBR  CBZ  CBU   -66.98  30.0  2
+ 9SZ  Var_35    CBO  CBR  CBZ  CBY   111.64  30.0  2
+ 9SZ  Var_36    CBP  CBO  CBR  CBZ  -110.63  30.0  1
+ 9SZ  Var_37    CAR  CAS  CAO  CAI  -142.95  30.0  1
+ 9SZ  Var_38    CAR  CAQ  CAP  CAO   -34.30  30.0  1
+ 9SZ  Var_39    CAQ  CAR  CAS  CAO   -54.14  30.0  3
+ 9SZ  Var_40    CAS  CAR  CAQ  CAP    53.51  30.0  3
+ 9SZ  Var_41    CAR  CAS  CAO  CAP    35.89  30.0  1
+ 9SZ  Var_42    CAT  CAS  CAR  CAQ    53.74  30.0  3
+ 9SZ  Var_43    CAX  CAY  CAQ  CAR  -144.87  30.0  1
+ 9SZ  Var_44    CAT  CAY  CAQ  CAR    36.05  30.0  1
+ 9SZ  Var_45    CAY  CAT  CAS  CAR   -34.37  30.0  1
+ 9SZ  Var_46    CAU  CAT  CAS  CAR   146.43  30.0  1
+ 9SZ  Var_47    CAY  CAQ  CAR  CAS   -54.38  30.0  3
+ 9SZ  Var_48    CBA  CAZ  CAW  CAX   146.49  30.0  1
+ 9SZ  Var_49    CBB  CBA  CAZ  CAW    53.51  30.0  3
+ 9SZ  Var_50    CBA  CBB  CAV  CAW    35.05  30.0  1
+ 9SZ  Var_51    CAV  CBB  CBA  CAZ   -53.63  30.0  3
+ 9SZ  Var_52    CBC  CBB  CBA  CAZ    53.95  30.0  3
+ 9SZ  Var_53    CAV  CAW  CAZ  CBA   -34.87  30.0  1
+ 9SZ  Var_54    CBG  CBH  CAZ  CBA  -145.73  30.0  1
+ 9SZ  Var_55    CBC  CBH  CAZ  CBA    35.07  30.0  1
+ 9SZ  Var_56    CAU  CAV  CBB  CBA  -146.48  30.0  1
+ 9SZ  Var_57    CBH  CBC  CBB  CBA   -35.20  30.0  1
+ 9SZ  Var_58    CBD  CBC  CBB  CBA   145.50  30.0  1
+ 9SZ  Var_59    CBB  CBA  CAZ  CBH   -53.92  30.0  3
+ 9SZ  Var_60    H19  CAQ  CAP  CAF    19.37  30.0  1
+ 9SZ  Var_61    H3   CBK  CAG  CAF   -20.83  30.0  1
+ 9SZ  Var_62    H4   CBJ  CBK  CAG    64.09  30.0  3
+ 9SZ  Var_63    H5   CBJ  CBK  CAG  -170.92  30.0  3
+ 9SZ  Var_64    H16  CBI  CAH  CAG  -164.95  30.0  1
+ 9SZ  Var_65    H7   CBT  CBN  CBM   -20.12  30.0  1
+ 9SZ  Var_66    H8   CBS  CBT  CBN    63.95  30.0  1
+ 9SZ  Var_67    H9   CBS  CBT  CBN  -170.68  30.0  1
+ 9SZ  Var_68    H14  CBR  CBO  CBN  -162.68  30.0  1
+ 9SZ  Var_69    H22  CAS  CAO  CAI   -14.77  30.0  1
+ 9SZ  Var_70    H20  CAR  CAS  CAO  -171.63  30.0  3
+ 9SZ  Var_71    H21  CAR  CAS  CAO    62.72  30.0  3
+ 9SZ  Var_72    H24  CAZ  CAW  CAX    18.75  30.0  1
+ 9SZ  Var_73    H25  CBA  CAZ  CAW   170.92  30.0  3
+ 9SZ  Var_74    H26  CBA  CAZ  CAW   -63.61  30.0  3
+ 9SZ  Var_75    H31  CBB  CAV  CAW   162.74  30.0  1
+ 9SZ  Var_76    CAF  OAE  PAB  OAC  -177.81  30.0  2
+ 9SZ  Var_77    CAF  OAE  PAB  OAD    62.51  30.0  3
+ 9SZ  Var_78    CAF  OAE  PAB  OAA   -58.25  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

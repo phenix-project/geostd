@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CFB  CFB  2-chloro-9-(2-deoxy-2-fluoro-beta-D-arabinofuranosyl)-9H-purin-6-amine  ligand  31  20  .  2022-03-15  2022-03-15
+ CFB  CFB  2-chloro-9-(2-deoxy-2-fluoro-beta-D-arabinofuranosyl)-9H-purin-6-amine  ligand  31  20  .  2022-03-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CFB
@@ -186,34 +187,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CFB  CONST_01  C5    N7  C8  N9     0.00  0.0  0
- CFB  CONST_02  N7    C5  C4  N9     0.00  0.0  0
- CFB  CONST_03  C6    C5  C4  N9   180.00  0.0  0
- CFB  CONST_04  C2    N3  C4  N9   180.00  0.0  0
- CFB  CONST_05  C5    C4  N9  C8     0.00  0.0  0
- CFB  CONST_06  N3    C4  N9  C8   180.00  0.0  0
- CFB  CONST_07  C4    C5  N7  C8     0.00  0.0  0
- CFB  CONST_08  C6    C5  N7  C8   180.00  0.0  0
- CFB  CONST_09  C4    N9  C8  N7     0.00  0.0  0
- CFB  CONST_10  N3    C4  C5  N7   180.00  0.0  0
- CFB  CONST_11  N1    C6  C5  N7   180.00  0.0  0
- CFB  CONST_12  C2    N3  C4  C5     0.00  0.0  0
- CFB  CONST_13  C2    N1  C6  C5     0.00  0.0  0
- CFB  CONST_14  N1    C6  C5  C4     0.00  0.0  0
- CFB  CONST_15  N1    C2  N3  C4     0.00  0.0  0
- CFB  CONST_16  C6    C5  C4  N3     0.00  0.0  0
- CFB  CONST_17  C6    N1  C2  N3     0.00  0.0  0
- CFB  CONST_18  N7    C8  N9  C1'  180.00  0.0  0
- CFB  CONST_19  C5    C4  N9  C1'  180.00  0.0  0
- CFB  CONST_20  N3    C4  N9  C1'    0.00  0.0  0
- CFB  CONST_21  N6    C6  C5  N7     0.00  0.0  0
- CFB  CONST_22  N6    C6  C5  C4   180.00  0.0  0
- CFB  CONST_23  CL    C2  N3  C4   180.00  0.0  0
- CFB  CONST_24  N6    C6  N1  C2   180.00  0.0  0
- CFB  CONST_25  C6    N1  C2  CL   180.00  0.0  0
- CFB  CONST_26  H8    C8  N9  C1'    0.00  0.0  0
- CFB  CONST_27  HN61  N6  C6  C5   180.00  0.0  0
- CFB  CONST_28  HN62  N6  C6  C5     0.00  0.0  0
+ CFB  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ CFB  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ CFB  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ CFB  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ CFB  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ CFB  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ CFB  CONST_07  C4    C5   N7   C8      0.00   0.0  0
+ CFB  CONST_08  C6    C5   N7   C8    180.00   0.0  0
+ CFB  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ CFB  CONST_10  N3    C4   C5   N7    180.00   0.0  0
+ CFB  CONST_11  N1    C6   C5   N7    180.00   0.0  0
+ CFB  CONST_12  C2    N3   C4   C5      0.00   0.0  0
+ CFB  CONST_13  C2    N1   C6   C5      0.00   0.0  0
+ CFB  CONST_14  N1    C6   C5   C4      0.00   0.0  0
+ CFB  CONST_15  N1    C2   N3   C4      0.00   0.0  0
+ CFB  CONST_16  C6    C5   C4   N3      0.00   0.0  0
+ CFB  CONST_17  C6    N1   C2   N3      0.00   0.0  0
+ CFB  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ CFB  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ CFB  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ CFB  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ CFB  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ CFB  CONST_23  CL    C2   N3   C4    180.00   0.0  0
+ CFB  CONST_24  N6    C6   N1   C2    180.00   0.0  0
+ CFB  CONST_25  C6    N1   C2   CL    180.00   0.0  0
+ CFB  CONST_26  H8    C8   N9   C1'     0.00   0.0  0
+ CFB  CONST_27  HN61  N6   C6   C5    180.00   0.0  0
+ CFB  CONST_28  HN62  N6   C6   C5      0.00   0.0  0
+ CFB  Var_01    C2'   C1'  O4'  C4'    -5.71  30.0  1
+ CFB  Var_02    N9    C1'  O4'  C4'  -127.53  30.0  1
+ CFB  Var_03    C1'   C2'  C3'  C4'   -33.48  30.0  1
+ CFB  Var_04    C2'   C3'  C4'  O4'    31.26  30.0  1
+ CFB  Var_05    C3'   C2'  C1'  O4'    25.09  30.0  1
+ CFB  Var_06    C8    N9   C1'  O4'    27.14  30.0  2
+ CFB  Var_07    C4    N9   C1'  O4'  -158.37  30.0  2
+ CFB  Var_08    C1'   O4'  C4'  C3'   -16.37  30.0  1
+ CFB  Var_09    N9    C1'  C2'  C3'   144.80  30.0  1
+ CFB  Var_10    C8    N9   C1'  C2'   -91.45  30.0  2
+ CFB  Var_11    C4    N9   C1'  C2'    83.04  30.0  2
+ CFB  Var_12    C1'   O4'  C4'  C5'   106.94  30.0  1
+ CFB  Var_13    C2'   C3'  C4'  C5'   -90.95  30.0  1
+ CFB  Var_14    F     C2'  C3'  C4'    83.22  30.0  1
+ CFB  Var_15    O3'   C3'  C4'  O4'   -84.07  30.0  1
+ CFB  Var_16    F     C2'  C1'  O4'   -92.12  30.0  1
+ CFB  Var_17    C1'   C2'  C3'  O3'    80.43  30.0  1
+ CFB  Var_18    N9    C1'  C2'  F      27.59  30.0  1
+ CFB  Var_19    H1'   C1'  O4'  C4'   114.31  30.0  1
+ CFB  Var_20    H2'   C2'  C3'  C4'  -154.99  30.0  1
+ CFB  Var_21    H3'   C3'  C4'  O4'   151.44  30.0  1
+ CFB  Var_22    H4'   C4'  C3'  C2'   146.74  30.0  1
+ CFB  Var_23    O4'   C4'  C5'  O5'    55.37  30.0  3
+ CFB  Var_24    C3'   C4'  C5'  O5'   173.89  30.0  3
+ CFB  Var_25    O3'   C3'  C4'  C5'   153.72  30.0  1
+ CFB  Var_26    F     C2'  C3'  O3'  -162.88  30.0  1
+ CFB  Var_27    H1    O3'  C3'  C4'   179.92  30.0  3
+ CFB  Var_28    H5'1  C5'  C4'  O4'   176.30  30.0  2
+ CFB  Var_29    H5'2  C5'  C4'  O4'   -67.24  30.0  2
+ CFB  Var_30    H5'   O5'  C5'  C4'  -179.37  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

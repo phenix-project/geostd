@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- N87  N87  '(1R,4R,5R)-3-(3-benzoylphenyl)-1,4,5-trihydroxycyclohex-2-ene-1-carboxylic acid'  ligand  44  26  .  2022-07-22  2022-11-17
+ N87  N87  '(1R,4R,5R)-3-(3-benzoylphenyl)-1,4,5-trihydroxycyclohex-2-ene-1-carboxylic acid'  ligand  44  26  .  2022-07-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_N87
@@ -231,38 +232,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- N87  CONST_01  C23  C15  C14  C13     0.00   0.0  0
- N87  CONST_02  C23  C24  C25  C13     0.00   0.0  0
- N87  CONST_03  C24  C25  C13  C14     0.00   0.0  0
- N87  CONST_04  C24  C23  C15  C14     0.00   0.0  0
- N87  CONST_05  C25  C13  C14  C15     0.00   0.0  0
- N87  CONST_06  C25  C24  C23  C15     0.00   0.0  0
- N87  CONST_07  C20  C19  C18  C17     0.00   0.0  0
- N87  CONST_08  C20  C21  C22  C17     0.00   0.0  0
- N87  CONST_09  C21  C22  C17  C18     0.00   0.0  0
- N87  CONST_10  C21  C20  C19  C18     0.00   0.0  0
- N87  CONST_11  C22  C17  C18  C19     0.00   0.0  0
- N87  CONST_12  C22  C21  C20  C19     0.00   0.0  0
- N87  CONST_13  C15  C14  C13  C7    180.00   0.0  0
- N87  CONST_14  C24  C25  C13  C7    180.00   0.0  0
- N87  CONST_15  C16  C15  C14  C13   180.00   0.0  0
- N87  CONST_16  C24  C23  C15  C16   180.00   0.0  0
- N87  CONST_17  C19  C18  C17  C16   180.00   0.0  0
- N87  CONST_18  C21  C22  C17  C16   180.00   0.0  0
- N87  CONST_19  H14  C14  C13  C7      0.00   0.0  0
- N87  CONST_20  H25  C25  C13  C7      0.00   0.0  0
- N87  CONST_21  H24  C24  C25  C13   180.00   0.0  0
- N87  CONST_22  H23  C23  C15  C14   180.00   0.0  0
- N87  CONST_23  H19  C19  C18  C17   180.00   0.0  0
- N87  CONST_24  H21  C21  C22  C17   180.00   0.0  0
- N87  CONST_25  H22  C22  C17  C18   180.00   0.0  0
- N87  CONST_26  H20  C20  C19  C18   180.00   0.0  0
- N87  CONST_27  H18  C18  C19  C20   180.00   0.0  0
- N87  CONST_28  HO3  O3   C2   C4    180.00   0.0  0
- N87  Var_01    C8   C7   C6   C4      2.10  30.0  1
- N87  Var_02    C14  C13  C7   C6    -64.55  30.0  2
- N87  Var_03    C17  C16  C15  C14  -150.91  30.0  3
- N87  Var_04    C18  C17  C16  C15    34.93  30.0  2
+ N87  CONST_01  C23   C15  C14  C13     0.00   0.0  0
+ N87  CONST_02  C23   C24  C25  C13     0.00   0.0  0
+ N87  CONST_03  C24   C25  C13  C14     0.00   0.0  0
+ N87  CONST_04  C24   C23  C15  C14     0.00   0.0  0
+ N87  CONST_05  C25   C13  C14  C15     0.00   0.0  0
+ N87  CONST_06  C25   C24  C23  C15     0.00   0.0  0
+ N87  CONST_07  C20   C19  C18  C17     0.00   0.0  0
+ N87  CONST_08  C20   C21  C22  C17     0.00   0.0  0
+ N87  CONST_09  C21   C22  C17  C18     0.00   0.0  0
+ N87  CONST_10  C21   C20  C19  C18     0.00   0.0  0
+ N87  CONST_11  C22   C17  C18  C19     0.00   0.0  0
+ N87  CONST_12  C22   C21  C20  C19     0.00   0.0  0
+ N87  CONST_13  C15   C14  C13  C7    180.00   0.0  0
+ N87  CONST_14  C24   C25  C13  C7    180.00   0.0  0
+ N87  CONST_15  C16   C15  C14  C13   180.00   0.0  0
+ N87  CONST_16  C24   C23  C15  C16   180.00   0.0  0
+ N87  CONST_17  C19   C18  C17  C16   180.00   0.0  0
+ N87  CONST_18  C21   C22  C17  C16   180.00   0.0  0
+ N87  CONST_19  H14   C14  C13  C7      0.00   0.0  0
+ N87  CONST_20  H25   C25  C13  C7      0.00   0.0  0
+ N87  CONST_21  H24   C24  C25  C13   180.00   0.0  0
+ N87  CONST_22  H23   C23  C15  C14   180.00   0.0  0
+ N87  CONST_23  H19   C19  C18  C17   180.00   0.0  0
+ N87  CONST_24  H21   C21  C22  C17   180.00   0.0  0
+ N87  CONST_25  H22   C22  C17  C18   180.00   0.0  0
+ N87  CONST_26  H20   C20  C19  C18   180.00   0.0  0
+ N87  CONST_27  H18   C18  C19  C20   180.00   0.0  0
+ N87  CONST_28  HO3   O3   C2   C4    180.00   0.0  0
+ N87  Var_01    C8    C7   C6   C4      2.10  30.0  1
+ N87  Var_02    C14   C13  C7   C6    -64.55  30.0  2
+ N87  Var_03    C17   C16  C15  C14  -150.91  30.0  3
+ N87  Var_04    C18   C17  C16  C15    34.93  30.0  2
+ N87  Var_05    C8    C10  C12  C4    -65.13  30.0  1
+ N87  Var_06    C10   C12  C4   C6     44.14  30.0  1
+ N87  Var_07    C10   C8   C7   C6    -21.70  30.0  1
+ N87  Var_08    C12   C4   C6   C7    -13.19  30.0  1
+ N87  Var_09    C12   C10  C8   C7     51.83  30.0  1
+ N87  Var_10    C13   C7   C8   C10   161.83  30.0  1
+ N87  Var_11    C10   C12  C4   C2    160.92  30.0  1
+ N87  Var_12    C7    C6   C4   C2   -132.03  30.0  1
+ N87  Var_13    O11   C10  C12  C4    173.62  30.0  1
+ N87  Var_14    C10   C12  C4   O5    -77.42  30.0  1
+ N87  Var_15    C7    C6   C4   O5    106.39  30.0  1
+ N87  Var_16    O9    C8   C7   C6   -142.23  30.0  1
+ N87  Var_17    O11   C10  C8   C7    170.93  30.0  1
+ N87  Var_18    C13   C7   C8   O9     41.30  30.0  1
+ N87  Var_19    C12   C10  C8   O9    175.18  30.0  1
+ N87  Var_20    H10   C10  C12  C4     52.85  30.0  1
+ N87  Var_21    H12   C12  C4   C6    166.10  30.0  1
+ N87  Var_22    H12A  C12  C4   C6    -76.50  30.0  1
+ N87  Var_23    H8    C8   C7   C6     96.17  30.0  1
+ N87  Var_24    C12   C4   C2   O1    -44.65  30.0  2
+ N87  Var_25    C6    C4   C2   O1     75.30  30.0  2
+ N87  Var_26    C12   C4   C2   O3    137.98  30.0  2
+ N87  Var_27    C6    C4   C2   O3   -102.08  30.0  2
+ N87  Var_28    O11   C10  C8   O9    -65.72  30.0  1
+ N87  Var_29    HO5   O5   C4   C6     43.69  30.0  3
+ N87  Var_30    HO9   O9   C8   C7    -84.35  30.0  3
+ N87  Var_31    HO11  O11  C10  C8     59.92  30.0  3
+ N87  Var_32    O5    C4   C2   O1   -163.71  30.0  2
+ N87  Var_33    O5    C4   C2   O3     18.92  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

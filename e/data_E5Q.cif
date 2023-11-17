@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- E5Q  E5Q  3-(3,5-dimethyl-1,2-oxazol-4-yl)-5-[(~{R})-oxidanyl(pyridin-3-yl)methyl]phenol  ligand  38  22  .  2021-08-08  2022-09-16
+ E5Q  E5Q  3-(3,5-dimethyl-1,2-oxazol-4-yl)-5-[(~{R})-oxidanyl(pyridin-3-yl)methyl]phenol  ligand  38  22  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_E5Q
@@ -208,48 +209,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- E5Q  CONST_01  C16  C15  N2   C14    0.00   0.0  0
- E5Q  CONST_02  C16  C17  C13  C14    0.00   0.0  0
- E5Q  CONST_03  C9   C8   C7   C6     0.00   0.0  0
- E5Q  CONST_04  O1   C1   C2   C6   180.00   0.0  0
- E5Q  CONST_05  N1   C3   C2   C6   180.00   0.0  0
- E5Q  CONST_06  C9   C10  C11  C6     0.00   0.0  0
- E5Q  CONST_07  C8   C7   C6   C11    0.00   0.0  0
- E5Q  CONST_10  C8   C9   C10  C11    0.00   0.0  0
- E5Q  CONST_11  C10  C9   C8   C7     0.00   0.0  0
- E5Q  CONST_14  C10  C11  C6   C7     0.00   0.0  0
- E5Q  CONST_15  C2   C6   C7   C8   180.00   0.0  0
- E5Q  CONST_16  C2   C6   C11  C10  180.00   0.0  0
- E5Q  CONST_17  C15  N2   C14  C13    0.00   0.0  0
- E5Q  CONST_18  C15  C16  C17  C13    0.00   0.0  0
- E5Q  CONST_19  C2   C1   O1   N1     0.00   0.0  0
- E5Q  CONST_20  C1   C2   C3   N1     0.00   0.0  0
- E5Q  CONST_21  C17  C16  C15  N2     0.00   0.0  0
- E5Q  CONST_22  C17  C13  C14  N2     0.00   0.0  0
- E5Q  CONST_23  O1   C1   C2   C3     0.00   0.0  0
- E5Q  CONST_24  C1   O1   N1   C3     0.00   0.0  0
- E5Q  CONST_25  C2   C3   N1   O1     0.00   0.0  0
- E5Q  CONST_26  N1   O1   C1   C4   180.00   0.0  0
- E5Q  CONST_27  C6   C2   C1   C4     0.00   0.0  0
- E5Q  CONST_28  C3   C2   C1   C4   180.00   0.0  0
- E5Q  CONST_29  C1   C2   C3   C5   180.00   0.0  0
- E5Q  CONST_30  C6   C2   C3   C5     0.00   0.0  0
- E5Q  CONST_31  O1   N1   C3   C5   180.00   0.0  0
- E5Q  CONST_32  C12  C8   C7   C6   180.00   0.0  0
- E5Q  CONST_33  O2   C10  C11  C6   180.00   0.0  0
- E5Q  CONST_34  O2   C10  C9   C8   180.00   0.0  0
- E5Q  CONST_35  C12  C8   C9   C10  180.00   0.0  0
- E5Q  CONST_36  N2   C14  C13  C12  180.00   0.0  0
- E5Q  CONST_37  C16  C17  C13  C12  180.00   0.0  0
- E5Q  CONST_38  H14  C15  N2   C14  180.00   0.0  0
- E5Q  CONST_39  H16  C17  C13  C14  180.00   0.0  0
- E5Q  CONST_40  H9   C7   C6   C11  180.00   0.0  0
- E5Q  CONST_41  H10  C9   C10  C11  180.00   0.0  0
- E5Q  CONST_42  H8   C11  C6   C7   180.00   0.0  0
- E5Q  CONST_43  H15  C16  C17  C13  180.00   0.0  0
- E5Q  CONST_44  H4   C14  N2   C15  180.00   0.0  0
- E5Q  Var_01    H5   C5   C3   N1   101.46  30.0  2
- E5Q  Var_02    H1   C4   C1   O1   -35.89  30.0  2
+ E5Q  CONST_01  C16  C15  N2   C14     0.00   0.0  0
+ E5Q  CONST_02  C16  C17  C13  C14     0.00   0.0  0
+ E5Q  CONST_03  C9   C8   C7   C6      0.00   0.0  0
+ E5Q  CONST_04  O1   C1   C2   C6    180.00   0.0  0
+ E5Q  CONST_05  N1   C3   C2   C6    180.00   0.0  0
+ E5Q  CONST_06  C9   C10  C11  C6      0.00   0.0  0
+ E5Q  CONST_07  C8   C7   C6   C11     0.00   0.0  0
+ E5Q  CONST_08  C8   C9   C10  C11     0.00   0.0  0
+ E5Q  CONST_09  C10  C9   C8   C7      0.00   0.0  0
+ E5Q  CONST_10  C10  C11  C6   C7      0.00   0.0  0
+ E5Q  CONST_11  C2   C6   C7   C8    180.00   0.0  0
+ E5Q  CONST_12  C2   C6   C11  C10   180.00   0.0  0
+ E5Q  CONST_13  C15  N2   C14  C13     0.00   0.0  0
+ E5Q  CONST_14  C15  C16  C17  C13     0.00   0.0  0
+ E5Q  CONST_15  C2   C1   O1   N1      0.00   0.0  0
+ E5Q  CONST_16  C1   C2   C3   N1      0.00   0.0  0
+ E5Q  CONST_17  C17  C16  C15  N2      0.00   0.0  0
+ E5Q  CONST_18  C17  C13  C14  N2      0.00   0.0  0
+ E5Q  CONST_19  O1   C1   C2   C3      0.00   0.0  0
+ E5Q  CONST_20  C1   O1   N1   C3      0.00   0.0  0
+ E5Q  CONST_21  C2   C3   N1   O1      0.00   0.0  0
+ E5Q  CONST_22  N1   O1   C1   C4    180.00   0.0  0
+ E5Q  CONST_23  C6   C2   C1   C4      0.00   0.0  0
+ E5Q  CONST_24  C3   C2   C1   C4    180.00   0.0  0
+ E5Q  CONST_25  C1   C2   C3   C5    180.00   0.0  0
+ E5Q  CONST_26  C6   C2   C3   C5      0.00   0.0  0
+ E5Q  CONST_27  O1   N1   C3   C5    180.00   0.0  0
+ E5Q  CONST_28  C12  C8   C7   C6    180.00   0.0  0
+ E5Q  CONST_29  O2   C10  C11  C6    180.00   0.0  0
+ E5Q  CONST_30  O2   C10  C9   C8    180.00   0.0  0
+ E5Q  CONST_31  C12  C8   C9   C10   180.00   0.0  0
+ E5Q  CONST_32  N2   C14  C13  C12   180.00   0.0  0
+ E5Q  CONST_33  C16  C17  C13  C12   180.00   0.0  0
+ E5Q  CONST_34  H14  C15  N2   C14   180.00   0.0  0
+ E5Q  CONST_35  H16  C17  C13  C14   180.00   0.0  0
+ E5Q  CONST_36  H9   C7   C6   C11   180.00   0.0  0
+ E5Q  CONST_37  H10  C9   C10  C11   180.00   0.0  0
+ E5Q  CONST_38  H8   C11  C6   C7    180.00   0.0  0
+ E5Q  CONST_39  H15  C16  C17  C13   180.00   0.0  0
+ E5Q  CONST_40  H4   C14  N2   C15   180.00   0.0  0
+ E5Q  Var_01    H5   C5   C3   N1    101.46  30.0  2
+ E5Q  Var_02    H1   C4   C1   O1    -35.89  30.0  2
+ E5Q  Var_03    C1   C2   C6   C11    43.85  30.0  2
+ E5Q  Var_04    C3   C2   C6   C11  -134.24  30.0  2
+ E5Q  Var_05    C1   C2   C6   C7   -136.83  30.0  2
+ E5Q  Var_06    C3   C2   C6   C7     45.07  30.0  2
+ E5Q  Var_07    C8   C12  C13  C14   -90.07  30.0  2
+ E5Q  Var_08    C13  C12  C8   C7    -89.52  30.0  2
+ E5Q  Var_09    C17  C13  C12  C8     87.77  30.0  3
+ E5Q  Var_10    C13  C12  C8   C9     87.37  30.0  2
+ E5Q  Var_11    O3   C12  C13  C14    37.66  30.0  2
+ E5Q  Var_12    O3   C12  C8   C7    143.06  30.0  2
+ E5Q  Var_13    O3   C12  C8   C9    -40.05  30.0  2
+ E5Q  Var_14    C17  C13  C12  O3   -144.50  30.0  3
+ E5Q  Var_15    H11  C12  C13  C14   153.59  30.0  2
+ E5Q  Var_16    H12  O2   C10  C11     0.66  30.0  2
+ E5Q  Var_17    H13  O3   C12  C8     58.16  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

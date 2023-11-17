@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UNZ  UNZ  (2~{S})-4-[6-(2-fluoranyl-4-methoxy-phenyl)-3-oxidanylidene-1~{H}-isoindol-2-yl]-2-methyl-2-methylsulfonyl-~{N}-oxidanyl-butanamide  ligand  54  31  .  2021-08-24  2021-08-24  
+ UNZ  UNZ  (2~{S})-4-[6-(2-fluoranyl-4-methoxy-phenyl)-3-oxidanylidene-1~{H}-isoindol-2-yl]-2-methyl-2-methylsulfonyl-~{N}-oxidanyl-butanamide  ligand  54  31  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UNZ
@@ -278,40 +279,68 @@ _chem_comp_tor.period
  UNZ  CONST_03  C12   C8   C7   C6    180.00   0.0  0
  UNZ  CONST_04  C9    C8   C7   C6      0.00   0.0  0
  UNZ  CONST_05  C9    C10  C5   C6      0.00   0.0  0
- UNZ  CONST_08  C10   C9   C8   C7      0.00   0.0  0
- UNZ  CONST_09  C10   C5   C6   C7      0.00   0.0  0
- UNZ  CONST_10  C12   C8   C9   C10   180.00   0.0  0
- UNZ  CONST_13  C17   C18  C12  C8    180.00   0.0  0
- UNZ  CONST_14  C14   C13  C12  C8    180.00   0.0  0
- UNZ  CONST_15  C15   C17  C18  C12     0.00   0.0  0
- UNZ  CONST_16  C15   C14  C13  C12     0.00   0.0  0
- UNZ  CONST_17  C17   C15  C14  C13     0.00   0.0  0
- UNZ  CONST_18  C17   C18  C12  C13     0.00   0.0  0
- UNZ  CONST_19  C14   C15  C17  C18     0.00   0.0  0
- UNZ  CONST_20  C14   C13  C12  C18     0.00   0.0  0
- UNZ  CONST_21  C11   N1   C4   C5      0.00   0.0  0
- UNZ  CONST_22  F     C13  C12  C8      0.00   0.0  0
- UNZ  CONST_23  O5    C15  C14  C13   180.00   0.0  0
- UNZ  CONST_24  C15   C14  C13  F     180.00   0.0  0
- UNZ  CONST_25  C18   C12  C13  F     180.00   0.0  0
- UNZ  CONST_26  O5    C15  C17  C18   180.00   0.0  0
- UNZ  CONST_27  C5    C4   N1   C3    180.00   0.0  0
- UNZ  CONST_28  C11   N1   C4   O4    180.00   0.0  0
- UNZ  CONST_29  H6    C6   C5   C4      0.00   0.0  0
- UNZ  CONST_30  H7    C7   C6   C5    180.00   0.0  0
- UNZ  CONST_31  H9    C9   C10  C5    180.00   0.0  0
- UNZ  CONST_32  H18   C18  C12  C8      0.00   0.0  0
- UNZ  CONST_33  H17   C17  C18  C12   180.00   0.0  0
- UNZ  CONST_34  H14   C14  C13  C12   180.00   0.0  0
- UNZ  CONST_35  O4    C4   N1   C3      0.00   0.0  0
- UNZ  CONST_36  O3    N    C1   O2      0.00   0.0  0
- UNZ  CONST_37  C     C1   N    O3    180.00   0.0  0
- UNZ  CONST_38  H1    N    C1   O2    180.00   0.0  0
+ UNZ  CONST_06  C10   C9   C8   C7      0.00   0.0  0
+ UNZ  CONST_07  C10   C5   C6   C7      0.00   0.0  0
+ UNZ  CONST_08  C12   C8   C9   C10   180.00   0.0  0
+ UNZ  CONST_09  C17   C18  C12  C8    180.00   0.0  0
+ UNZ  CONST_10  C14   C13  C12  C8    180.00   0.0  0
+ UNZ  CONST_11  C15   C17  C18  C12     0.00   0.0  0
+ UNZ  CONST_12  C15   C14  C13  C12     0.00   0.0  0
+ UNZ  CONST_13  C17   C15  C14  C13     0.00   0.0  0
+ UNZ  CONST_14  C17   C18  C12  C13     0.00   0.0  0
+ UNZ  CONST_15  C14   C15  C17  C18     0.00   0.0  0
+ UNZ  CONST_16  C14   C13  C12  C18     0.00   0.0  0
+ UNZ  CONST_17  C11   N1   C4   C5      0.00   0.0  0
+ UNZ  CONST_18  F     C13  C12  C8      0.00   0.0  0
+ UNZ  CONST_19  O5    C15  C14  C13   180.00   0.0  0
+ UNZ  CONST_20  C15   C14  C13  F     180.00   0.0  0
+ UNZ  CONST_21  C18   C12  C13  F     180.00   0.0  0
+ UNZ  CONST_22  O5    C15  C17  C18   180.00   0.0  0
+ UNZ  CONST_23  C5    C4   N1   C3    180.00   0.0  0
+ UNZ  CONST_24  C11   N1   C4   O4    180.00   0.0  0
+ UNZ  CONST_25  H6    C6   C5   C4      0.00   0.0  0
+ UNZ  CONST_26  H7    C7   C6   C5    180.00   0.0  0
+ UNZ  CONST_27  H9    C9   C10  C5    180.00   0.0  0
+ UNZ  CONST_28  H18   C18  C12  C8      0.00   0.0  0
+ UNZ  CONST_29  H17   C17  C18  C12   180.00   0.0  0
+ UNZ  CONST_30  H14   C14  C13  C12   180.00   0.0  0
+ UNZ  CONST_31  O4    C4   N1   C3      0.00   0.0  0
+ UNZ  CONST_32  O3    N    C1   O2      0.00   0.0  0
+ UNZ  CONST_33  C     C1   N    O3    180.00   0.0  0
+ UNZ  CONST_34  H1    N    C1   O2    180.00   0.0  0
  UNZ  Var_01    H112  C11  N1   C4    121.06  30.0  1
  UNZ  Var_02    C4    N1   C3   C2     94.76  30.0  3
  UNZ  Var_03    N1    C3   C2   C     179.80  30.0  2
  UNZ  Var_04    H163  C16  O5   C15   -61.32  30.0  3
  UNZ  Var_05    H201  C20  S    C    -179.02  30.0  3
+ UNZ  Var_06    C18   C12  C8   C7    131.38  30.0  2
+ UNZ  Var_07    C13   C12  C8   C7    -49.97  30.0  2
+ UNZ  Var_08    C18   C12  C8   C9    -46.90  30.0  2
+ UNZ  Var_09    C13   C12  C8   C9    131.74  30.0  2
+ UNZ  Var_10    C16   O5   C15  C17   179.68  30.0  2
+ UNZ  Var_11    C16   O5   C15  C14    -0.26  30.0  2
+ UNZ  Var_12    C2    C    C1   O2     54.64  30.0  1
+ UNZ  Var_13    S     C    C1   O2    -64.86  30.0  1
+ UNZ  Var_14    C19   C    C1   O2   -179.98  30.0  1
+ UNZ  Var_15    C3    C2   C    C1   -178.56  30.0  2
+ UNZ  Var_16    C20   S    C    C1     74.89  30.0  1
+ UNZ  Var_17    O     S    C    C1   -169.17  30.0  1
+ UNZ  Var_18    O1    S    C    C1    -41.94  30.0  1
+ UNZ  Var_19    C2    C    C1   N    -125.37  30.0  1
+ UNZ  Var_20    S     C    C1   N     115.13  30.0  1
+ UNZ  Var_21    C19   C    C1   N       0.01  30.0  1
+ UNZ  Var_22    C3    C2   C    C19    54.24  30.0  2
+ UNZ  Var_23    C20   S    C    C19  -163.37  30.0  1
+ UNZ  Var_24    O     S    C    C19   -47.43  30.0  1
+ UNZ  Var_25    O1    S    C    C19    79.80  30.0  1
+ UNZ  Var_26    C3    C2   C    S     -64.13  30.0  2
+ UNZ  Var_27    C2    C    S    C20   -41.15  30.0  3
+ UNZ  Var_28    C2    C    S    O      74.79  30.0  3
+ UNZ  Var_29    C2    C    S    O1   -157.98  30.0  3
+ UNZ  Var_30    H191  C19  C    C1     56.03  30.0  3
+ UNZ  Var_31    H193  C19  C    C1    176.55  30.0  3
+ UNZ  Var_32    H192  C19  C    C1    -65.30  30.0  3
+ UNZ  Var_33    HO3   O3   N    C1     96.32  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

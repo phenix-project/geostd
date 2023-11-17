@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FNJ  FNJ  4,4'-[(1R,2R)-1-phenylbutane-1,2-diyl]diphenol  ligand  46  24  .  2021-08-09  2021-08-09  
+ FNJ  FNJ  4,4'-[(1R,2R)-1-phenylbutane-1,2-diyl]diphenol  ligand  46  24  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FNJ
@@ -239,48 +240,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FNJ  CONST_01  CAT  CAU  CAP  CAQ    0.00   0.0  0
- FNJ  CONST_02  CAT  CAS  CAR  CAQ    0.00   0.0  0
- FNJ  CONST_03  CAU  CAP  CAQ  CAR    0.00   0.0  0
- FNJ  CONST_04  CAU  CAT  CAS  CAR    0.00   0.0  0
- FNJ  CONST_05  CAP  CAQ  CAR  CAS    0.00   0.0  0
- FNJ  CONST_06  CAP  CAU  CAT  CAS    0.00   0.0  0
- FNJ  CONST_07  CAB  CAA  CAF  CAE    0.00   0.0  0
- FNJ  CONST_08  CAB  CAC  CAD  CAE    0.00   0.0  0
- FNJ  CONST_09  CAA  CAF  CAE  CAD    0.00   0.0  0
- FNJ  CONST_10  CAA  CAB  CAC  CAD    0.00   0.0  0
- FNJ  CONST_11  CAF  CAA  CAB  CAC    0.00   0.0  0
- FNJ  CONST_12  CAF  CAE  CAD  CAC    0.00   0.0  0
- FNJ  CONST_13  CAM  CAL  CAK  CAJ    0.00   0.0  0
- FNJ  CONST_14  CAM  CAN  CAO  CAJ    0.00   0.0  0
- FNJ  CONST_15  CAN  CAM  CAL  CAK    0.00   0.0  0
- FNJ  CONST_16  CAN  CAO  CAJ  CAK    0.00   0.0  0
- FNJ  CONST_17  CAO  CAJ  CAK  CAL    0.00   0.0  0
- FNJ  CONST_18  CAO  CAN  CAM  CAL    0.00   0.0  0
- FNJ  CONST_19  OAX  CAS  CAR  CAQ  180.00   0.0  0
- FNJ  CONST_20  CAI  CAP  CAQ  CAR  180.00   0.0  0
- FNJ  CONST_21  CAU  CAT  CAS  OAX  180.00   0.0  0
- FNJ  CONST_22  CAI  CAP  CAU  CAT  180.00   0.0  0
- FNJ  CONST_23  CAA  CAF  CAE  CAH  180.00   0.0  0
- FNJ  CONST_24  CAC  CAD  CAE  CAH  180.00   0.0  0
- FNJ  CONST_25  CAL  CAK  CAJ  CAH  180.00   0.0  0
- FNJ  CONST_26  CAN  CAO  CAJ  CAH  180.00   0.0  0
- FNJ  CONST_27  OAG  CAB  CAC  CAD  180.00   0.0  0
- FNJ  CONST_28  CAF  CAA  CAB  OAG  180.00   0.0  0
- FNJ  CONST_29  H5   CAU  CAP  CAQ  180.00   0.0  0
- FNJ  CONST_30  H4   CAT  CAS  CAR  180.00   0.0  0
- FNJ  CONST_31  H1   CAQ  CAR  CAS  180.00   0.0  0
- FNJ  CONST_32  H2   CAR  CAS  CAT  180.00   0.0  0
- FNJ  CONST_33  H16  CAA  CAF  CAE  180.00   0.0  0
- FNJ  CONST_34  H14  CAC  CAD  CAE  180.00   0.0  0
- FNJ  CONST_35  H17  CAF  CAE  CAD  180.00   0.0  0
- FNJ  CONST_36  H13  CAD  CAC  CAB  180.00   0.0  0
- FNJ  CONST_37  H19  CAL  CAK  CAJ  180.00   0.0  0
- FNJ  CONST_38  H21  CAN  CAO  CAJ  180.00   0.0  0
- FNJ  CONST_39  H20  CAM  CAL  CAK  180.00   0.0  0
- FNJ  CONST_40  H22  CAO  CAJ  CAK  180.00   0.0  0
- FNJ  CONST_41  H18  CAK  CAL  CAM  180.00   0.0  0
- FNJ  Var_01    H9   CAW  CAV  CAI  177.99  30.0  3
+ FNJ  CONST_01  CAT  CAU  CAP  CAQ     0.00   0.0  0
+ FNJ  CONST_02  CAT  CAS  CAR  CAQ     0.00   0.0  0
+ FNJ  CONST_03  CAU  CAP  CAQ  CAR     0.00   0.0  0
+ FNJ  CONST_04  CAU  CAT  CAS  CAR     0.00   0.0  0
+ FNJ  CONST_05  CAP  CAQ  CAR  CAS     0.00   0.0  0
+ FNJ  CONST_06  CAP  CAU  CAT  CAS     0.00   0.0  0
+ FNJ  CONST_07  CAB  CAA  CAF  CAE     0.00   0.0  0
+ FNJ  CONST_08  CAB  CAC  CAD  CAE     0.00   0.0  0
+ FNJ  CONST_09  CAA  CAF  CAE  CAD     0.00   0.0  0
+ FNJ  CONST_10  CAA  CAB  CAC  CAD     0.00   0.0  0
+ FNJ  CONST_11  CAF  CAA  CAB  CAC     0.00   0.0  0
+ FNJ  CONST_12  CAF  CAE  CAD  CAC     0.00   0.0  0
+ FNJ  CONST_13  CAM  CAL  CAK  CAJ     0.00   0.0  0
+ FNJ  CONST_14  CAM  CAN  CAO  CAJ     0.00   0.0  0
+ FNJ  CONST_15  CAN  CAM  CAL  CAK     0.00   0.0  0
+ FNJ  CONST_16  CAN  CAO  CAJ  CAK     0.00   0.0  0
+ FNJ  CONST_17  CAO  CAJ  CAK  CAL     0.00   0.0  0
+ FNJ  CONST_18  CAO  CAN  CAM  CAL     0.00   0.0  0
+ FNJ  CONST_19  OAX  CAS  CAR  CAQ   180.00   0.0  0
+ FNJ  CONST_20  CAI  CAP  CAQ  CAR   180.00   0.0  0
+ FNJ  CONST_21  CAU  CAT  CAS  OAX   180.00   0.0  0
+ FNJ  CONST_22  CAI  CAP  CAU  CAT   180.00   0.0  0
+ FNJ  CONST_23  CAA  CAF  CAE  CAH   180.00   0.0  0
+ FNJ  CONST_24  CAC  CAD  CAE  CAH   180.00   0.0  0
+ FNJ  CONST_25  CAL  CAK  CAJ  CAH   180.00   0.0  0
+ FNJ  CONST_26  CAN  CAO  CAJ  CAH   180.00   0.0  0
+ FNJ  CONST_27  OAG  CAB  CAC  CAD   180.00   0.0  0
+ FNJ  CONST_28  CAF  CAA  CAB  OAG   180.00   0.0  0
+ FNJ  CONST_29  H5   CAU  CAP  CAQ   180.00   0.0  0
+ FNJ  CONST_30  H4   CAT  CAS  CAR   180.00   0.0  0
+ FNJ  CONST_31  H1   CAQ  CAR  CAS   180.00   0.0  0
+ FNJ  CONST_32  H2   CAR  CAS  CAT   180.00   0.0  0
+ FNJ  CONST_33  H16  CAA  CAF  CAE   180.00   0.0  0
+ FNJ  CONST_34  H14  CAC  CAD  CAE   180.00   0.0  0
+ FNJ  CONST_35  H17  CAF  CAE  CAD   180.00   0.0  0
+ FNJ  CONST_36  H13  CAD  CAC  CAB   180.00   0.0  0
+ FNJ  CONST_37  H19  CAL  CAK  CAJ   180.00   0.0  0
+ FNJ  CONST_38  H21  CAN  CAO  CAJ   180.00   0.0  0
+ FNJ  CONST_39  H20  CAM  CAL  CAK   180.00   0.0  0
+ FNJ  CONST_40  H22  CAO  CAJ  CAK   180.00   0.0  0
+ FNJ  CONST_41  H18  CAK  CAL  CAM   180.00   0.0  0
+ FNJ  Var_01    H9   CAW  CAV  CAI   177.99  30.0  3
+ FNJ  Var_02    CAK  CAJ  CAH  CAE    61.86  30.0  2
+ FNJ  Var_03    CAO  CAJ  CAH  CAE  -119.13  30.0  2
+ FNJ  Var_04    CAJ  CAH  CAE  CAD   -94.41  30.0  2
+ FNJ  Var_05    CAJ  CAH  CAE  CAF    83.07  30.0  2
+ FNJ  Var_06    CAH  CAI  CAP  CAQ   107.70  30.0  2
+ FNJ  Var_07    CAV  CAI  CAP  CAQ  -127.79  30.0  2
+ FNJ  Var_08    CAH  CAI  CAP  CAU   -71.13  30.0  2
+ FNJ  Var_09    CAV  CAI  CAP  CAU    53.38  30.0  2
+ FNJ  Var_10    CAE  CAH  CAI  CAP  -174.56  30.0  2
+ FNJ  Var_11    CAJ  CAH  CAI  CAP   -48.60  30.0  2
+ FNJ  Var_12    CAF  CAE  CAH  CAI  -150.34  30.0  2
+ FNJ  Var_13    CAD  CAE  CAH  CAI    32.17  30.0  2
+ FNJ  Var_14    CAK  CAJ  CAH  CAI   -66.46  30.0  2
+ FNJ  Var_15    CAO  CAJ  CAH  CAI   112.55  30.0  2
+ FNJ  Var_16    H6   CAI  CAP  CAQ    -9.94  30.0  2
+ FNJ  Var_17    H3   OAX  CAS  CAR     1.80  30.0  2
+ FNJ  Var_18    H12  CAH  CAE  CAD   149.86  30.0  2
+ FNJ  Var_19    H15  OAG  CAB  CAC    -0.88  30.0  2
+ FNJ  Var_20    CAW  CAV  CAI  CAP    59.62  30.0  3
+ FNJ  Var_21    CAE  CAH  CAI  CAV    60.50  30.0  2
+ FNJ  Var_22    CAJ  CAH  CAI  CAV  -173.54  30.0  2
+ FNJ  Var_23    H7   CAV  CAI  CAP  -178.62  30.0  3
+ FNJ  Var_24    H8   CAV  CAI  CAP   -63.36  30.0  3
+ FNJ  Var_25    CAH  CAI  CAV  CAW  -176.37  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

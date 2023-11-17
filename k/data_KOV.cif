@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KOV  KOV  '(6R,7R)-3-[(carbamoyloxy)methyl]-7-{[(2Z)-2-(furan-2-yl)-2-(methoxyimino)acetyl]amino}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic acid'  ligand  44  29  .  2022-03-22  2022-03-22
+ KOV  KOV  '(6R,7R)-3-[(carbamoyloxy)methyl]-7-{[(2Z)-2-(furan-2-yl)-2-(methoxyimino)acetyl]amino}-8-oxo-5-thia-1-azabicyclo[4.2.0]oct-2-ene-2-carboxylic acid'  ligand  44  29  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KOV
@@ -232,32 +233,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KOV  CONST_01  C5   C4   C3   O2     0.00   0.0  0
- KOV  CONST_02  C4   C5   C6   O2     0.00   0.0  0
- KOV  CONST_03  C5   C6   O2   C3     0.00   0.0  0
- KOV  CONST_04  C6   C5   C4   C3     0.00   0.0  0
- KOV  CONST_05  C6   O2   C3   C4     0.00   0.0  0
- KOV  CONST_06  C9   N3   C10  C8     0.00   0.0  0
- KOV  CONST_08  C6   O2   C3   C2   180.00   0.0  0
- KOV  CONST_09  C5   C4   C3   C2   180.00   0.0  0
- KOV  CONST_10  C9   N3   C10  O4   180.00   0.0  0
- KOV  CONST_12  H4   C4   C3   O2   180.00   0.0  0
- KOV  CONST_13  H5   C5   C6   O2   180.00   0.0  0
- KOV  CONST_14  H6   C6   O2   C3   180.00   0.0  0
- KOV  CONST_15  C8   N2   C7   C2   180.00   0.0  0
- KOV  CONST_16  C8   N2   C7   O3     0.00   0.0  0
- KOV  CONST_17  C3   C2   N1   O1   180.00   0.0  0
- KOV  CONST_18  C7   C2   N1   O1     0.00   0.0  0
- KOV  CONST_19  HN2  N2   C7   C2     0.00   0.0  0
- KOV  Var_01    C11  C12  C13  S     26.32  30.0  1
- KOV  Var_02    C13  C12  C11  N3     1.53  30.0  1
- KOV  Var_03    C12  C13  S    C9   -50.59  30.0  1
- KOV  Var_04    C12  C11  N3   C9     9.90  30.0  1
- KOV  Var_05    O2   C3   C2   N1   179.68  30.0  2
- KOV  Var_06    O8   C16  C11  N3    40.21  30.0  2
- KOV  Var_07    C3   C2   C7   N2    91.55  30.0  2
- KOV  Var_08    H1   C1   O1   N1  -178.60  30.0  3
- KOV  Var_09    HN4  N4   C15  O5  -178.08  30.0  2
+ KOV  CONST_01  C5    C4   C3   O2      0.00   0.0  0
+ KOV  CONST_02  C4    C5   C6   O2      0.00   0.0  0
+ KOV  CONST_03  C5    C6   O2   C3      0.00   0.0  0
+ KOV  CONST_04  C6    C5   C4   C3      0.00   0.0  0
+ KOV  CONST_05  C6    O2   C3   C4      0.00   0.0  0
+ KOV  CONST_06  C9    N3   C10  C8      0.00   0.0  0
+ KOV  CONST_07  C6    O2   C3   C2    180.00   0.0  0
+ KOV  CONST_08  C5    C4   C3   C2    180.00   0.0  0
+ KOV  CONST_09  C9    N3   C10  O4    180.00   0.0  0
+ KOV  CONST_10  H4    C4   C3   O2    180.00   0.0  0
+ KOV  CONST_11  H5    C5   C6   O2    180.00   0.0  0
+ KOV  CONST_12  H6    C6   O2   C3    180.00   0.0  0
+ KOV  CONST_13  C8    N2   C7   C2    180.00   0.0  0
+ KOV  CONST_14  C8    N2   C7   O3      0.00   0.0  0
+ KOV  CONST_15  C3    C2   N1   O1    180.00   0.0  0
+ KOV  CONST_16  C7    C2   N1   O1      0.00   0.0  0
+ KOV  CONST_17  HN2   N2   C7   C2      0.00   0.0  0
+ KOV  Var_01    C11   C12  C13  S      26.32  30.0  1
+ KOV  Var_02    C13   C12  C11  N3      1.53  30.0  1
+ KOV  Var_03    C12   C13  S    C9    -50.59  30.0  1
+ KOV  Var_04    C12   C11  N3   C9      9.90  30.0  1
+ KOV  Var_05    O2    C3   C2   N1    179.68  30.0  2
+ KOV  Var_06    O8    C16  C11  N3     40.21  30.0  2
+ KOV  Var_07    C3    C2   C7   N2     91.55  30.0  2
+ KOV  Var_08    H1    C1   O1   N1   -178.60  30.0  3
+ KOV  Var_09    HN4   N4   C15  O5   -178.08  30.0  2
+ KOV  CONST_19  O4    C10  C8   C9    180.00   0.0  0
+ KOV  Var_10    C10   N3   C9   S     109.72  30.0  1
+ KOV  Var_11    C11   N3   C9   S     -46.30  30.0  1
+ KOV  Var_12    C10   C8   C9   S    -105.01  30.0  1
+ KOV  Var_13    C13   S    C9   N3     57.48  30.0  1
+ KOV  Var_14    C13   S    C9   C8    155.02  30.0  1
+ KOV  Var_15    N2    C8   C9   S      10.72  30.0  1
+ KOV  Var_16    N3    C9   C8   N2    121.93  30.0  1
+ KOV  Var_17    N3    C10  C8   N2   -126.23  30.0  1
+ KOV  Var_18    H8    C8   C9   S     142.06  30.0  1
+ KOV  Var_19    H9    C9   N3   C10  -125.00  30.0  1
+ KOV  Var_20    O4    C10  C8   N2     50.40  30.0  1
+ KOV  Var_21    C11   C12  C14  O5    122.95  30.0  3
+ KOV  Var_22    C13   C12  C14  O5    -55.97  30.0  3
+ KOV  Var_23    C9    C8   N2   C7     96.05  30.0  3
+ KOV  Var_24    C10   C8   N2   C7   -165.73  30.0  3
+ KOV  Var_25    HN2   N2   C8   C9    -80.22  30.0  2
+ KOV  Var_26    H14   C14  C12  C11     1.93  30.0  2
+ KOV  Var_27    H14A  C14  C12  C11  -118.38  30.0  2
+ KOV  Var_28    C15   O5   C14  C12   170.19  30.0  3
+ KOV  Var_29    C2    N1   O1   C1    179.62  30.0  1
+ KOV  Var_30    C14   O5   C15  N4   -179.13  30.0  3
+ KOV  Var_31    C14   O5   C15  O6      0.70  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

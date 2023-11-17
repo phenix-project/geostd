@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TPE  TPE  3'-O-acetyl-5'-O-[(R)-hydroxy{[(S)-hydroxy(phenoxy)phosphoryl]oxy}phosphoryl]thymidine  ligand  56  34  .  2021-08-23  2022-11-17
+ TPE  TPE  3'-O-acetyl-5'-O-[(R)-hydroxy{[(S)-hydroxy(phenoxy)phosphoryl]oxy}phosphoryl]thymidine  ligand  56  34  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TPE
@@ -279,42 +280,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TPE  CONST_01  C4B   C3B  C2B  C1B    0.00   0.0  0
- TPE  CONST_02  C4B   C5B  C6B  C1B    0.00   0.0  0
- TPE  CONST_03  C5B   C6B  C1B  C2B    0.00   0.0  0
- TPE  CONST_04  C5B   C4B  C3B  C2B    0.00   0.0  0
- TPE  CONST_05  C6B   C1B  C2B  C3B    0.00   0.0  0
- TPE  CONST_06  C6B   C5B  C4B  C3B    0.00   0.0  0
- TPE  CONST_07  C4    N3   C2   N1     0.00   0.0  0
- TPE  CONST_08  C4    C5   C6   N1     0.00   0.0  0
- TPE  CONST_09  C5    C6   N1   C2     0.00   0.0  0
- TPE  CONST_10  C5    C4   N3   C2     0.00   0.0  0
- TPE  CONST_11  C6    N1   C2   N3     0.00   0.0  0
- TPE  CONST_12  C6    C5   C4   N3     0.00   0.0  0
- TPE  CONST_13  N3    C2   N1   C1'  180.00   0.0  0
- TPE  CONST_14  C5    C6   N1   C1'  180.00   0.0  0
- TPE  CONST_15  O3B   C1B  C2B  C3B  180.00   0.0  0
- TPE  CONST_16  O3B   C1B  C6B  C5B  180.00   0.0  0
- TPE  CONST_17  O2    C2   N1   C1'    0.00   0.0  0
- TPE  CONST_18  C5M   C5   C6   N1   180.00   0.0  0
- TPE  CONST_19  O4    C4   N3   C2   180.00   0.0  0
- TPE  CONST_20  C6    N1   C2   O2   180.00   0.0  0
- TPE  CONST_21  C4    N3   C2   O2   180.00   0.0  0
- TPE  CONST_22  C5M   C5   C4   N3   180.00   0.0  0
- TPE  CONST_23  C6    C5   C4   O4   180.00   0.0  0
- TPE  CONST_24  H3B   C3B  C2B  C1B  180.00   0.0  0
- TPE  CONST_25  H5B   C5B  C6B  C1B  180.00   0.0  0
- TPE  CONST_26  H6B   C6B  C1B  C2B  180.00   0.0  0
- TPE  CONST_27  H4B   C4B  C3B  C2B  180.00   0.0  0
- TPE  CONST_28  H2B   C2B  C3B  C4B  180.00   0.0  0
- TPE  CONST_29  H6    C6   N1   C1'    0.00   0.0  0
- TPE  CONST_30  H3    N3   C2   N1   180.00   0.0  0
- TPE  Var_01    H5M3  C5M  C5   C4   179.29  30.0  2
- TPE  Var_02    O3A   PB   O3B  C1B  -88.95  30.0  2
- TPE  Var_03    C4'   C5'  O5'  PA   168.14  30.0  3
- TPE  Var_04    OR    CR   O3'  C3'    2.10  30.0  3
- TPE  Var_05    O5'   PA   O3A  PB    60.79  30.0  1
- TPE  Var_06    HHR3  CHR  CR   O3'  170.02  30.0  3
+ TPE  CONST_01  C4B   C3B  C2B  C1B     0.00   0.0  0
+ TPE  CONST_02  C4B   C5B  C6B  C1B     0.00   0.0  0
+ TPE  CONST_03  C5B   C6B  C1B  C2B     0.00   0.0  0
+ TPE  CONST_04  C5B   C4B  C3B  C2B     0.00   0.0  0
+ TPE  CONST_05  C6B   C1B  C2B  C3B     0.00   0.0  0
+ TPE  CONST_06  C6B   C5B  C4B  C3B     0.00   0.0  0
+ TPE  CONST_07  C4    N3   C2   N1      0.00   0.0  0
+ TPE  CONST_08  C4    C5   C6   N1      0.00   0.0  0
+ TPE  CONST_09  C5    C6   N1   C2      0.00   0.0  0
+ TPE  CONST_10  C5    C4   N3   C2      0.00   0.0  0
+ TPE  CONST_11  C6    N1   C2   N3      0.00   0.0  0
+ TPE  CONST_12  C6    C5   C4   N3      0.00   0.0  0
+ TPE  CONST_13  N3    C2   N1   C1'   180.00   0.0  0
+ TPE  CONST_14  C5    C6   N1   C1'   180.00   0.0  0
+ TPE  CONST_15  O3B   C1B  C2B  C3B   180.00   0.0  0
+ TPE  CONST_16  O3B   C1B  C6B  C5B   180.00   0.0  0
+ TPE  CONST_17  O2    C2   N1   C1'     0.00   0.0  0
+ TPE  CONST_18  C5M   C5   C6   N1    180.00   0.0  0
+ TPE  CONST_19  O4    C4   N3   C2    180.00   0.0  0
+ TPE  CONST_20  C6    N1   C2   O2    180.00   0.0  0
+ TPE  CONST_21  C4    N3   C2   O2    180.00   0.0  0
+ TPE  CONST_22  C5M   C5   C4   N3    180.00   0.0  0
+ TPE  CONST_23  C6    C5   C4   O4    180.00   0.0  0
+ TPE  CONST_24  H3B   C3B  C2B  C1B   180.00   0.0  0
+ TPE  CONST_25  H5B   C5B  C6B  C1B   180.00   0.0  0
+ TPE  CONST_26  H6B   C6B  C1B  C2B   180.00   0.0  0
+ TPE  CONST_27  H4B   C4B  C3B  C2B   180.00   0.0  0
+ TPE  CONST_28  H2B   C2B  C3B  C4B   180.00   0.0  0
+ TPE  CONST_29  H6    C6   N1   C1'     0.00   0.0  0
+ TPE  CONST_30  H3    N3   C2   N1    180.00   0.0  0
+ TPE  Var_01    H5M3  C5M  C5   C4    179.29  30.0  2
+ TPE  Var_02    O3A   PB   O3B  C1B   -88.95  30.0  2
+ TPE  Var_03    C4'   C5'  O5'  PA    168.14  30.0  3
+ TPE  Var_04    OR    CR   O3'  C3'     2.10  30.0  3
+ TPE  Var_05    O5'   PA   O3A  PB     60.79  30.0  1
+ TPE  Var_06    HHR3  CHR  CR   O3'   170.02  30.0  3
+ TPE  Var_07    C2'   C1'  O4'  C4'   -23.24  30.0  1
+ TPE  Var_08    N1    C1'  O4'  C4'  -145.98  30.0  1
+ TPE  Var_09    C1'   C2'  C3'  C4'   -28.77  30.0  1
+ TPE  Var_10    C2'   C3'  C4'  O4'    16.15  30.0  1
+ TPE  Var_11    C3'   C2'  C1'  O4'    32.40  30.0  1
+ TPE  Var_12    C2    N1   C1'  O4'  -118.82  30.0  2
+ TPE  Var_13    C6    N1   C1'  O4'    58.50  30.0  2
+ TPE  Var_14    C1'   O4'  C4'  C3'     4.40  30.0  1
+ TPE  Var_15    N1    C1'  C2'  C3'   151.38  30.0  1
+ TPE  Var_16    C2    N1   C1'  C2'   123.82  30.0  2
+ TPE  Var_17    C6    N1   C1'  C2'   -58.85  30.0  2
+ TPE  Var_18    C1'   O4'  C4'  C5'   128.63  30.0  1
+ TPE  Var_19    C2'   C3'  C4'  C5'  -105.63  30.0  1
+ TPE  Var_20    O3'   C3'  C4'  O4'   -99.06  30.0  1
+ TPE  Var_21    C1'   C2'  C3'  O3'    88.93  30.0  1
+ TPE  Var_22    H1'   C1'  O4'  C4'    97.20  30.0  1
+ TPE  Var_23    H2'2  C2'  C3'  C4'    89.48  30.0  1
+ TPE  Var_24    H2'1  C2'  C3'  C4'  -150.86  30.0  1
+ TPE  Var_25    H3'   C3'  C4'  O4'   137.65  30.0  1
+ TPE  Var_26    H4'   C4'  C3'  C2'   134.91  30.0  1
+ TPE  Var_27    PB    O3B  C1B  C2B   122.82  30.0  2
+ TPE  Var_28    PB    O3B  C1B  C6B   -61.85  30.0  2
+ TPE  Var_29    O4'   C4'  C5'  O5'   -67.31  30.0  3
+ TPE  Var_30    C3'   C4'  C5'  O5'    52.59  30.0  3
+ TPE  Var_31    O3'   C3'  C4'  C5'   139.15  30.0  1
+ TPE  Var_32    CR    O3'  C3'  C4'   -77.98  30.0  3
+ TPE  Var_33    C2'   C3'  O3'  CR    169.59  30.0  2
+ TPE  Var_34    H5'2  C5'  C4'  O4'   172.47  30.0  2
+ TPE  Var_35    H5'1  C5'  C4'  O4'    53.67  30.0  2
+ TPE  Var_36    O1B   PB   O3A  PA    141.17  30.0  3
+ TPE  Var_37    O2B   PB   O3A  PA    -92.03  30.0  3
+ TPE  Var_38    O3B   PB   O3A  PA     19.48  30.0  3
+ TPE  Var_39    C5'   O5'  PA   O1A  -169.76  30.0  3
+ TPE  Var_40    C5'   O5'  PA   O2A   -43.98  30.0  3
+ TPE  Var_41    C5'   O5'  PA   O3A    64.06  30.0  3
+ TPE  Var_42    HPA2  O2A  PA   O1A  -162.27  30.0  3
+ TPE  Var_43    HPB2  O2B  PB   O3A  -152.28  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

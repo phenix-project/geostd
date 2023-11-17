@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 10P  10P  D-phenylalanyl-N-[(1-methylpyridinium-3-yl)methyl]-L-prolinamide  peptide  54  27  .  2022-09-22  2022-09-22
+ 10P  10P  D-phenylalanyl-N-[(1-methylpyridinium-3-yl)methyl]-L-prolinamide  peptide  54  27  .  2022-09-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_10P
@@ -274,47 +275,53 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 10P  CONST_01  C7    C6   C5   C1     0.00   0.0  0
- 10P  CONST_02  C7    C8   C9   C1     0.00   0.0  0
- 10P  CONST_03  C8    C9   C1   C5     0.00   0.0  0
- 10P  CONST_04  C8    C7   C6   C5     0.00   0.0  0
- 10P  CONST_05  C6    C5   C1   C9     0.00   0.0  0
- 10P  CONST_06  C6    C7   C8   C9     0.00   0.0  0
- 10P  CONST_07  C19   N27  C17  C13    0.00   0.0  0
- 10P  CONST_08  C19   C20  C21  C13    0.00   0.0  0
- 10P  CONST_09  C20   C21  C13  C17    0.00   0.0  0
- 10P  CONST_10  C20   C19  N27  C17    0.00   0.0  0
- 10P  CONST_11  N27   C17  C13  C21    0.00   0.0  0
- 10P  CONST_12  N27   C19  C20  C21    0.00   0.0  0
- 10P  CONST_13  C6    C5   C1   C2   180.00   0.0  0
- 10P  CONST_14  C8    C9   C1   C2   180.00   0.0  0
- 10P  CONST_15  N27   C17  C13  C12  180.00   0.0  0
- 10P  CONST_16  C20   C21  C13  C12  180.00   0.0  0
- 10P  CONST_17  C18   N27  C17  C13  180.00   0.0  0
- 10P  CONST_18  C20   C19  N27  C18  180.00   0.0  0
- 10P  CONST_19  H6    C6   C5   C1   180.00   0.0  0
- 10P  CONST_20  H8    C8   C9   C1   180.00   0.0  0
- 10P  CONST_21  H9    C9   C1   C5   180.00   0.0  0
- 10P  CONST_22  H7    C7   C6   C5   180.00   0.0  0
- 10P  CONST_23  H5    C5   C1   C9   180.00   0.0  0
- 10P  CONST_24  H20   C20  C21  C13  180.00   0.0  0
- 10P  CONST_25  H21   C21  C13  C17  180.00   0.0  0
- 10P  CONST_26  H19   C19  N27  C17  180.00   0.0  0
- 10P  CONST_27  H17   C17  N27  C19  180.00   0.0  0
- 10P  CONST_28  C10   N23  C4   C3   180.00   0.0  0
- 10P  CONST_29  C16   N23  C4   C3     0.00   0.0  0
- 10P  CONST_30  C10   N23  C4   O24    0.00   0.0  0
- 10P  CONST_31  C16   N23  C4   O24  180.00   0.0  0
- 10P  CONST_32  C12   N26  C11  C10  180.00   0.0  0
- 10P  CONST_33  HN26  N26  C11  C10    0.00   0.0  0
- 10P  CONST_34  C12   N26  C11  O25    0.00   0.0  0
- 10P  Var_01    C14   C15  C16  N23  -35.29  30.0  1
- 10P  Var_02    C16   C15  C14  C10   36.85  30.0  1
- 10P  Var_03    C15   C16  N23  C10   21.25  30.0  1
- 10P  Var_04    C5    C1   C2   C3    88.58  30.0  2
- 10P  Var_05    N26   C12  C13  C17  -38.10  30.0  2
- 10P  Var_06    H18   C18  N27  C17   84.94  30.0  2
- 10P  Var_07    C13   C12  N26  C11  -67.13  30.0  1
+ 10P  CONST_01  C7    C6   C5   C1      0.00   0.0  0
+ 10P  CONST_02  C7    C8   C9   C1      0.00   0.0  0
+ 10P  CONST_03  C8    C9   C1   C5      0.00   0.0  0
+ 10P  CONST_04  C8    C7   C6   C5      0.00   0.0  0
+ 10P  CONST_05  C6    C5   C1   C9      0.00   0.0  0
+ 10P  CONST_06  C6    C7   C8   C9      0.00   0.0  0
+ 10P  CONST_07  C19   N27  C17  C13     0.00   0.0  0
+ 10P  CONST_08  C19   C20  C21  C13     0.00   0.0  0
+ 10P  CONST_09  C20   C21  C13  C17     0.00   0.0  0
+ 10P  CONST_10  C20   C19  N27  C17     0.00   0.0  0
+ 10P  CONST_11  N27   C17  C13  C21     0.00   0.0  0
+ 10P  CONST_12  N27   C19  C20  C21     0.00   0.0  0
+ 10P  CONST_13  C6    C5   C1   C2    180.00   0.0  0
+ 10P  CONST_14  C8    C9   C1   C2    180.00   0.0  0
+ 10P  CONST_15  N27   C17  C13  C12   180.00   0.0  0
+ 10P  CONST_16  C20   C21  C13  C12   180.00   0.0  0
+ 10P  CONST_17  C18   N27  C17  C13   180.00   0.0  0
+ 10P  CONST_18  C20   C19  N27  C18   180.00   0.0  0
+ 10P  CONST_19  H6    C6   C5   C1    180.00   0.0  0
+ 10P  CONST_20  H8    C8   C9   C1    180.00   0.0  0
+ 10P  CONST_21  H9    C9   C1   C5    180.00   0.0  0
+ 10P  CONST_22  H7    C7   C6   C5    180.00   0.0  0
+ 10P  CONST_23  H5    C5   C1   C9    180.00   0.0  0
+ 10P  CONST_24  H20   C20  C21  C13   180.00   0.0  0
+ 10P  CONST_25  H21   C21  C13  C17   180.00   0.0  0
+ 10P  CONST_26  H19   C19  N27  C17   180.00   0.0  0
+ 10P  CONST_27  H17   C17  N27  C19   180.00   0.0  0
+ 10P  CONST_28  C10   N23  C4   C3    180.00   0.0  0
+ 10P  CONST_29  C16   N23  C4   C3      0.00   0.0  0
+ 10P  CONST_30  C10   N23  C4   O24     0.00   0.0  0
+ 10P  CONST_31  C16   N23  C4   O24   180.00   0.0  0
+ 10P  CONST_32  C12   N26  C11  C10   180.00   0.0  0
+ 10P  CONST_33  HN26  N26  C11  C10     0.00   0.0  0
+ 10P  CONST_34  C12   N26  C11  O25     0.00   0.0  0
+ 10P  Var_01    C14   C15  C16  N23   -35.29  30.0  1
+ 10P  Var_02    C16   C15  C14  C10    36.85  30.0  1
+ 10P  Var_03    C15   C16  N23  C10    21.25  30.0  1
+ 10P  Var_04    C5    C1   C2   C3     88.58  30.0  2
+ 10P  Var_05    N26   C12  C13  C17   -38.10  30.0  2
+ 10P  Var_06    H18   C18  N27  C17    84.94  30.0  2
+ 10P  Var_07    C13   C12  N26  C11   -67.13  30.0  1
+ 10P  Var_08    H14   C14  C10  N23    93.45  30.0  1
+ 10P  Var_09    H14A  C14  C10  N23  -146.30  30.0  1
+ 10P  Var_10    H10   C10  C14  C15    94.25  30.0  1
+ 10P  Var_11    H3    C3   C2   C1    -51.52  30.0  3
+ 10P  Var_12    HN22  N22  C3   C4    -52.03  30.0  3
+ 10P  Var_13    HN2A  N22  C3   C4     64.40  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

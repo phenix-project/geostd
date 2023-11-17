@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- D34  D34  (S,R)-(furan-2,5-diyldibenzene-4,1-diyl)bis(N-cyclobutylmethanediamine)  ligand  63  31  .  2022-09-22  2023-02-02
+ D34  D34  (S,R)-(furan-2,5-diyldibenzene-4,1-diyl)bis(N-cyclobutylmethanediamine)  ligand  63  31  .  2022-09-22  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_D34
@@ -316,55 +317,93 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- D34  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- D34  CONST_02  C4   C5   C6   C1     0.00   0.0  0
- D34  CONST_03  CA'  O1   CA   C1   180.00   0.0  0
- D34  CONST_04  CB'  CB   CA   C1   180.00   0.0  0
- D34  CONST_05  C5   C6   C1   C2     0.00   0.0  0
- D34  CONST_06  O1   CA   C1   C2     0.00   0.0  0
- D34  CONST_07  CB   CA   C1   C2   180.00   0.0  0
- D34  CONST_08  C5   C4   C3   C2     0.00   0.0  0
- D34  CONST_09  C6   C1   C2   C3     0.00   0.0  0
- D34  CONST_10  CA   C1   C2   C3   180.00   0.0  0
- D34  CONST_11  C6   C5   C4   C3     0.00   0.0  0
- D34  CONST_12  CA   C1   C6   C5   180.00   0.0  0
- D34  CONST_13  O1   CA   C1   C6   180.00   0.0  0
- D34  CONST_14  CB   CA   C1   C6     0.00   0.0  0
- D34  CONST_15  CB'  CA'  O1   CA     0.00   0.0  0
- D34  CONST_16  C1'  CA'  O1   CA   180.00   0.0  0
- D34  CONST_17  CA'  CB'  CB   CA     0.00   0.0  0
- D34  CONST_18  CB'  CB   CA   O1     0.00   0.0  0
- D34  CONST_19  CB   CB'  CA'  O1     0.00   0.0  0
- D34  CONST_20  C2'  C1'  CA'  O1     0.00   0.0  0
- D34  CONST_21  C6'  C1'  CA'  O1   180.00   0.0  0
- D34  CONST_22  CA'  O1   CA   CB     0.00   0.0  0
- D34  CONST_23  C1'  CA'  CB'  CB   180.00   0.0  0
- D34  CONST_24  C2'  C1'  CA'  CB'  180.00   0.0  0
- D34  CONST_25  C6'  C1'  CA'  CB'    0.00   0.0  0
- D34  CONST_26  C3'  C2'  C1'  CA'  180.00   0.0  0
- D34  CONST_27  C5'  C6'  C1'  CA'  180.00   0.0  0
- D34  CONST_28  C4'  C3'  C2'  C1'    0.00   0.0  0
- D34  CONST_29  C4'  C5'  C6'  C1'    0.00   0.0  0
- D34  CONST_30  C5'  C6'  C1'  C2'    0.00   0.0  0
- D34  CONST_31  C5'  C4'  C3'  C2'    0.00   0.0  0
- D34  CONST_32  C6'  C1'  C2'  C3'    0.00   0.0  0
- D34  CONST_33  C6'  C5'  C4'  C3'    0.00   0.0  0
- D34  CONST_34  C2   C3   C4   C7   180.00   0.0  0
- D34  CONST_35  C6   C5   C4   C7   180.00   0.0  0
- D34  CONST_36  C7'  C4'  C3'  C2'  180.00   0.0  0
- D34  CONST_37  C7'  C4'  C5'  C6'  180.00   0.0  0
- D34  CONST_38  H3   C3   C2   C1   180.00   0.0  0
- D34  CONST_39  H5   C5   C6   C1   180.00   0.0  0
- D34  CONST_40  HB   CB   CA   C1     0.00   0.0  0
- D34  CONST_41  H6   C6   C1   C2   180.00   0.0  0
- D34  CONST_42  H2   C2   C3   C4   180.00   0.0  0
- D34  CONST_43  HB'  CB'  CB   CA   180.00   0.0  0
- D34  CONST_44  H2'  C2'  C1'  CA'    0.00   0.0  0
- D34  CONST_45  H6'  C6'  C1'  CA'    0.00   0.0  0
- D34  CONST_46  H3'  C3'  C2'  C1'  180.00   0.0  0
- D34  CONST_47  H5'  C5'  C6'  C1'  180.00   0.0  0
- D34  Var_01    C11  C10  C9   C8   -20.13  30.0  1
- D34  Var_02    CBX  CAX  C9'  C8'  -20.40  30.0  1
+ D34  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ D34  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ D34  CONST_03  CA'   O1   CA   C1    180.00   0.0  0
+ D34  CONST_04  CB'   CB   CA   C1    180.00   0.0  0
+ D34  CONST_05  C5    C6   C1   C2      0.00   0.0  0
+ D34  CONST_06  O1    CA   C1   C2      0.00   0.0  0
+ D34  CONST_07  CB    CA   C1   C2    180.00   0.0  0
+ D34  CONST_08  C5    C4   C3   C2      0.00   0.0  0
+ D34  CONST_09  C6    C1   C2   C3      0.00   0.0  0
+ D34  CONST_10  CA    C1   C2   C3    180.00   0.0  0
+ D34  CONST_11  C6    C5   C4   C3      0.00   0.0  0
+ D34  CONST_12  CA    C1   C6   C5    180.00   0.0  0
+ D34  CONST_13  O1    CA   C1   C6    180.00   0.0  0
+ D34  CONST_14  CB    CA   C1   C6      0.00   0.0  0
+ D34  CONST_15  CB'   CA'  O1   CA      0.00   0.0  0
+ D34  CONST_16  C1'   CA'  O1   CA    180.00   0.0  0
+ D34  CONST_17  CA'   CB'  CB   CA      0.00   0.0  0
+ D34  CONST_18  CB'   CB   CA   O1      0.00   0.0  0
+ D34  CONST_19  CB    CB'  CA'  O1      0.00   0.0  0
+ D34  CONST_20  C2'   C1'  CA'  O1      0.00   0.0  0
+ D34  CONST_21  C6'   C1'  CA'  O1    180.00   0.0  0
+ D34  CONST_22  CA'   O1   CA   CB      0.00   0.0  0
+ D34  CONST_23  C1'   CA'  CB'  CB    180.00   0.0  0
+ D34  CONST_24  C2'   C1'  CA'  CB'   180.00   0.0  0
+ D34  CONST_25  C6'   C1'  CA'  CB'     0.00   0.0  0
+ D34  CONST_26  C3'   C2'  C1'  CA'   180.00   0.0  0
+ D34  CONST_27  C5'   C6'  C1'  CA'   180.00   0.0  0
+ D34  CONST_28  C4'   C3'  C2'  C1'     0.00   0.0  0
+ D34  CONST_29  C4'   C5'  C6'  C1'     0.00   0.0  0
+ D34  CONST_30  C5'   C6'  C1'  C2'     0.00   0.0  0
+ D34  CONST_31  C5'   C4'  C3'  C2'     0.00   0.0  0
+ D34  CONST_32  C6'   C1'  C2'  C3'     0.00   0.0  0
+ D34  CONST_33  C6'   C5'  C4'  C3'     0.00   0.0  0
+ D34  CONST_34  C2    C3   C4   C7    180.00   0.0  0
+ D34  CONST_35  C6    C5   C4   C7    180.00   0.0  0
+ D34  CONST_36  C7'   C4'  C3'  C2'   180.00   0.0  0
+ D34  CONST_37  C7'   C4'  C5'  C6'   180.00   0.0  0
+ D34  CONST_38  H3    C3   C2   C1    180.00   0.0  0
+ D34  CONST_39  H5    C5   C6   C1    180.00   0.0  0
+ D34  CONST_40  HB    CB   CA   C1      0.00   0.0  0
+ D34  CONST_41  H6    C6   C1   C2    180.00   0.0  0
+ D34  CONST_42  H2    C2   C3   C4    180.00   0.0  0
+ D34  CONST_43  HB'   CB'  CB   CA    180.00   0.0  0
+ D34  CONST_44  H2'   C2'  C1'  CA'     0.00   0.0  0
+ D34  CONST_45  H6'   C6'  C1'  CA'     0.00   0.0  0
+ D34  CONST_46  H3'   C3'  C2'  C1'   180.00   0.0  0
+ D34  CONST_47  H5'   C5'  C6'  C1'   180.00   0.0  0
+ D34  Var_01    C11   C10  C9   C8    -20.13  30.0  1
+ D34  Var_02    CBX   CAX  C9'  C8'   -20.40  30.0  1
+ D34  Var_03    C10   C9   C8   N2    140.01  30.0  1
+ D34  Var_04    C10   C11  C8   N2   -139.73  30.0  1
+ D34  Var_05    CAX   C9'  C8'  N2'   142.14  30.0  1
+ D34  Var_06    CAX   CBX  C8'  N2'  -139.56  30.0  1
+ D34  Var_07    H11   C11  C8   C9     -2.21  30.0  1
+ D34  Var_08    H12   C11  C8   C9   -134.58  30.0  1
+ D34  Var_09    H8    C8   C9   C10  -111.27  30.0  1
+ D34  Var_10    H91   C9   C8   C11   111.61  30.0  1
+ D34  Var_11    H92   C9   C8   C11   -94.26  30.0  1
+ D34  Var_12    H1'1  CBX  C8'  C9'   -45.76  30.0  1
+ D34  Var_13    H1'2  CBX  C8'  C9'    94.15  30.0  1
+ D34  Var_14    H8'   C8'  C9'  CAX    63.74  30.0  1
+ D34  Var_15    H9'1  C9'  C8'  CBX   111.32  30.0  1
+ D34  Var_16    H9'2  C9'  C8'  CBX   -94.30  30.0  1
+ D34  Var_17    C9    C8   N2   C7   -169.23  30.0  3
+ D34  Var_18    C11   C8   N2   C7    -66.27  30.0  3
+ D34  Var_19    C3    C4   C7   N2    -36.85  30.0  2
+ D34  Var_20    C5    C4   C7   N2    145.07  30.0  2
+ D34  Var_21    C3    C4   C7   N1   -167.57  30.0  2
+ D34  Var_22    C5    C4   C7   N1     14.34  30.0  2
+ D34  Var_23    C4    C7   N2   C8    170.52  30.0  1
+ D34  Var_24    N2'   C7'  C4'  C3'   -37.76  30.0  2
+ D34  Var_25    N1'   C7'  C4'  C3'    87.10  30.0  2
+ D34  Var_26    C8'   N2'  C7'  C4'  -170.15  30.0  3
+ D34  Var_27    N2'   C7'  C4'  C5'   144.77  30.0  2
+ D34  Var_28    N1'   C7'  C4'  C5'   -90.37  30.0  2
+ D34  Var_29    C9'   C8'  N2'  C7'   173.69  30.0  3
+ D34  Var_30    CBX   C8'  N2'  C7'   -82.92  30.0  3
+ D34  Var_31    HN2   N2   C8   C9   -145.52  30.0  2
+ D34  Var_32    H77   C7   C4   C3     -0.94  30.0  2
+ D34  Var_33    H7B   C7'  C4'  C3'   176.43  30.0  2
+ D34  Var_34    HN2'  N2'  C8'  C9'   152.84  30.0  2
+ D34  Var_35    C8    N2   C7   N1    -62.61  30.0  3
+ D34  Var_36    C8'   N2'  C7'  N1'    67.99  30.0  3
+ D34  Var_37    HN1   N1   C7   C4    122.23  30.0  3
+ D34  Var_38    HN2A  N1   C7   C4    134.28  30.0  3
+ D34  Var_39    HN'1  N1'  C7'  C4'   -95.98  30.0  3
+ D34  Var_40    HN'2  N1'  C7'  C4'   -15.89  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

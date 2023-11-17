@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BXZ  BXZ  4-bromo-6-(6-hydroxy-1,2-benzisoxazol-3-yl)benzene-1,3-diol  ligand  27  19  .  2021-08-06  2021-08-06  
+ BXZ  BXZ  4-bromo-6-(6-hydroxy-1,2-benzisoxazol-3-yl)benzene-1,3-diol  ligand  27  19  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BXZ
@@ -165,48 +166,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BXZ  CONST_01  C4   C3   C2   C1     0.00  0.0  0
- BXZ  CONST_02  C7   C3   C2   C1   180.00  0.0  0
- BXZ  CONST_03  C4   C5   C6   C1     0.00  0.0  0
- BXZ  CONST_04  C5   C6   C1   C2     0.00  0.0  0
- BXZ  CONST_05  C5   C4   C3   C2     0.00  0.0  0
- BXZ  CONST_06  O2   C4   C3   C2   180.00  0.0  0
- BXZ  CONST_07  N1   C7   C3   C2   180.00  0.0  0
- BXZ  CONST_08  C8   C7   C3   C2     0.00  0.0  0
- BXZ  CONST_09  C6   C1   C2   C3     0.00  0.0  0
- BXZ  CONST_10  C6   C5   C4   C3     0.00  0.0  0
- BXZ  CONST_11  N1   O2   C4   C3     0.00  0.0  0
- BXZ  CONST_12  O2   N1   C7   C3     0.00  0.0  0
- BXZ  CONST_15  N1   C7   C3   C4     0.00  0.0  0
- BXZ  CONST_16  C8   C7   C3   C4   180.00  0.0  0
- BXZ  CONST_17  C7   N1   O2   C4     0.00  0.0  0
- BXZ  CONST_18  C7   C3   C4   C5   180.00  0.0  0
- BXZ  CONST_19  N1   O2   C4   C5   180.00  0.0  0
- BXZ  CONST_20  O2   C4   C5   C6   180.00  0.0  0
- BXZ  CONST_21  C7   C3   C4   O2     0.00  0.0  0
- BXZ  CONST_22  C8   C7   N1   O2   180.00  0.0  0
- BXZ  CONST_25  C10  C9   C8   C7   180.00  0.0  0
- BXZ  CONST_26  C12  C13  C8   C7   180.00  0.0  0
- BXZ  CONST_27  C11  C10  C9   C8     0.00  0.0  0
- BXZ  CONST_28  C11  C12  C13  C8     0.00  0.0  0
- BXZ  CONST_29  C12  C13  C8   C9     0.00  0.0  0
- BXZ  CONST_30  C12  C11  C10  C9     0.00  0.0  0
- BXZ  CONST_31  C13  C8   C9   C10    0.00  0.0  0
- BXZ  CONST_32  C13  C12  C11  C10    0.00  0.0  0
- BXZ  CONST_33  O1   C6   C1   C2   180.00  0.0  0
- BXZ  CONST_34  O1   C6   C5   C4   180.00  0.0  0
- BXZ  CONST_35  O3   C13  C8   C7     0.00  0.0  0
- BXZ  CONST_36  BR1  C10  C9   C8   180.00  0.0  0
- BXZ  CONST_37  O3   C13  C8   C9   180.00  0.0  0
- BXZ  CONST_38  O4   C11  C10  C9   180.00  0.0  0
- BXZ  CONST_39  O3   C13  C12  C11  180.00  0.0  0
- BXZ  CONST_40  BR1  C10  C11  C12  180.00  0.0  0
- BXZ  CONST_41  O4   C11  C12  C13  180.00  0.0  0
- BXZ  CONST_42  H5   C5   C6   C1   180.00  0.0  0
- BXZ  CONST_43  H1   C1   C2   C3   180.00  0.0  0
- BXZ  CONST_44  H2   C2   C3   C4   180.00  0.0  0
- BXZ  CONST_45  H9   C9   C8   C7     0.00  0.0  0
- BXZ  CONST_46  H12  C12  C13  C8   180.00  0.0  0
+ BXZ  CONST_01  C4   C3   C2   C1      0.00   0.0  0
+ BXZ  CONST_02  C7   C3   C2   C1    180.00   0.0  0
+ BXZ  CONST_03  C4   C5   C6   C1      0.00   0.0  0
+ BXZ  CONST_04  C5   C6   C1   C2      0.00   0.0  0
+ BXZ  CONST_05  C5   C4   C3   C2      0.00   0.0  0
+ BXZ  CONST_06  O2   C4   C3   C2    180.00   0.0  0
+ BXZ  CONST_07  N1   C7   C3   C2    180.00   0.0  0
+ BXZ  CONST_08  C8   C7   C3   C2      0.00   0.0  0
+ BXZ  CONST_09  C6   C1   C2   C3      0.00   0.0  0
+ BXZ  CONST_10  C6   C5   C4   C3      0.00   0.0  0
+ BXZ  CONST_11  N1   O2   C4   C3      0.00   0.0  0
+ BXZ  CONST_12  O2   N1   C7   C3      0.00   0.0  0
+ BXZ  CONST_13  N1   C7   C3   C4      0.00   0.0  0
+ BXZ  CONST_14  C8   C7   C3   C4    180.00   0.0  0
+ BXZ  CONST_15  C7   N1   O2   C4      0.00   0.0  0
+ BXZ  CONST_16  C7   C3   C4   C5    180.00   0.0  0
+ BXZ  CONST_17  N1   O2   C4   C5    180.00   0.0  0
+ BXZ  CONST_18  O2   C4   C5   C6    180.00   0.0  0
+ BXZ  CONST_19  C7   C3   C4   O2      0.00   0.0  0
+ BXZ  CONST_20  C8   C7   N1   O2    180.00   0.0  0
+ BXZ  CONST_21  C10  C9   C8   C7    180.00   0.0  0
+ BXZ  CONST_22  C12  C13  C8   C7    180.00   0.0  0
+ BXZ  CONST_23  C11  C10  C9   C8      0.00   0.0  0
+ BXZ  CONST_24  C11  C12  C13  C8      0.00   0.0  0
+ BXZ  CONST_25  C12  C13  C8   C9      0.00   0.0  0
+ BXZ  CONST_26  C12  C11  C10  C9      0.00   0.0  0
+ BXZ  CONST_27  C13  C8   C9   C10     0.00   0.0  0
+ BXZ  CONST_28  C13  C12  C11  C10     0.00   0.0  0
+ BXZ  CONST_29  O1   C6   C1   C2    180.00   0.0  0
+ BXZ  CONST_30  O1   C6   C5   C4    180.00   0.0  0
+ BXZ  CONST_31  O3   C13  C8   C7      0.00   0.0  0
+ BXZ  CONST_32  BR1  C10  C9   C8    180.00   0.0  0
+ BXZ  CONST_33  O3   C13  C8   C9    180.00   0.0  0
+ BXZ  CONST_34  O4   C11  C10  C9    180.00   0.0  0
+ BXZ  CONST_35  O3   C13  C12  C11   180.00   0.0  0
+ BXZ  CONST_36  BR1  C10  C11  C12   180.00   0.0  0
+ BXZ  CONST_37  O4   C11  C12  C13   180.00   0.0  0
+ BXZ  CONST_38  H5   C5   C6   C1    180.00   0.0  0
+ BXZ  CONST_39  H1   C1   C2   C3    180.00   0.0  0
+ BXZ  CONST_40  H2   C2   C3   C4    180.00   0.0  0
+ BXZ  CONST_41  H9   C9   C8   C7      0.00   0.0  0
+ BXZ  CONST_42  H12  C12  C13  C8    180.00   0.0  0
+ BXZ  Var_01    C9   C8   C7   C3     40.79  30.0  2
+ BXZ  Var_02    C13  C8   C7   C3   -137.13  30.0  2
+ BXZ  Var_03    C9   C8   C7   N1   -144.65  30.0  2
+ BXZ  Var_04    C13  C8   C7   N1     37.43  30.0  2
+ BXZ  Var_05    HO1  O1   C6   C1      1.28  30.0  2
+ BXZ  Var_06    HO3  O3   C13  C8     -0.14  30.0  2
+ BXZ  Var_07    HO4  O4   C11  C10  -163.42  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AQR  AQR  "(2R,4aS,6aS,12bR,14aS,14bR)-10-hydroxy-2,4a,6a,9,12b,14a-hexamethyl-11-oxo-1,2,3,4,4a,5,6,6a,11,12b,13,14,14a,14b-tetradecahydropicene-2-carboxylic acid"  ligand  70  33  .  2023-10-03  2023-10-04
+ AQR  AQR  '(2R,4aS,6aS,12bR,14aS,14bR)-10-hydroxy-2,4a,6a,9,12b,14a-hexamethyl-11-oxo-1,2,3,4,4a,5,6,6a,11,12b,13,14,14a,14b-tetradecahydropicene-2-carboxylic acid'  ligand  70  33  .  2023-10-03  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_AQR
@@ -354,39 +355,126 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AQR  Var_01  C7   C6   C5   C10    -3.23   0.0  0
- AQR  Var_02  C6   C7   C8   C14  -176.81   0.0  0
- AQR  Var_03  C5   C10  C1   C2      1.21   0.0  0
- AQR  Var_04  C9   C10  C1   C2   -171.60   0.0  0
- AQR  Var_05  C7   C6   C5   C4    173.43   0.0  0
- AQR  Var_06  C9   C8   C7   C6      5.97   0.0  0
- AQR  Var_07  C9   C11  C12  C13    51.99  30.0  1
- AQR  Var_08  C17  C16  C15  C14   -47.37  30.0  1
- AQR  Var_09  C20  C21  C22  C17   -57.03  30.0  1
- AQR  Var_10  H33  C6   C5   C10  -179.16   0.0  0
- AQR  Var_11  H34  C7   C8   C14     1.29   0.0  0
- AQR  Var_12  H33  C6   C5   C4     -2.50   0.0  0
- AQR  Var_13  H1   C1   C10  C5    179.96   0.0  0
- AQR  Var_14  H1   C1   C10  C9      7.16   0.0  0
- AQR  Var_15  H34  C7   C8   C9   -175.94   0.0  0
- AQR  Var_16  H2   C11  C12  C13   174.50  30.0  1
- AQR  Var_17  H3   C11  C12  C13   -70.30  30.0  1
- AQR  Var_18  H7   C16  C15  C14    76.35  30.0  1
- AQR  Var_19  H38  C16  C15  C14  -170.71  30.0  1
- AQR  Var_20  H6   C15  C16  C17  -168.70  30.0  1
- AQR  Var_21  H37  C15  C16  C17    76.07  30.0  1
- AQR  Var_22  H11  C21  C22  C17   179.50  30.0  1
- AQR  Var_23  H12  C21  C22  C17    64.33  30.0  1
- AQR  Var_24  H13  C22  C21  C20  -177.42  30.0  1
- AQR  Var_25  H14  C22  C21  C20    67.55  30.0  1
- AQR  Var_26  H4   C12  C11  C9    172.81  30.0  1
- AQR  Var_27  H5   C12  C11  C9    -72.52  30.0  1
- AQR  Var_28  H15  C23  C4   C3   -125.28  30.0  3
- AQR  Var_29  H16  C23  C4   C3     -5.04  30.0  3
- AQR  Var_30  H17  C23  C4   C3    115.10  30.0  3
- AQR  Var_31  H15  C23  C4   C5     55.66  30.0  3
- AQR  Var_32  H16  C23  C4   C5    175.91  30.0  3
- AQR  Var_33  H17  C23  C4   C5    -63.96  30.0  3
+ AQR  Var_01    C7   C6   C5   C10    -3.23   0.0  0
+ AQR  Var_02    C6   C7   C8   C14  -176.81   0.0  0
+ AQR  Var_03    C5   C10  C1   C2      1.21   0.0  0
+ AQR  Var_04    C9   C10  C1   C2   -171.60   0.0  0
+ AQR  Var_05    C7   C6   C5   C4    173.43   0.0  0
+ AQR  Var_06    C9   C8   C7   C6      5.97   0.0  0
+ AQR  Var_07    C9   C11  C12  C13    51.99  30.0  1
+ AQR  Var_08    C17  C16  C15  C14   -47.37  30.0  1
+ AQR  Var_09    C20  C21  C22  C17   -57.03  30.0  1
+ AQR  Var_10    H33  C6   C5   C10  -179.16   0.0  0
+ AQR  Var_11    H34  C7   C8   C14     1.29   0.0  0
+ AQR  Var_12    H33  C6   C5   C4     -2.50   0.0  0
+ AQR  Var_13    H1   C1   C10  C5    179.96   0.0  0
+ AQR  Var_14    H1   C1   C10  C9      7.16   0.0  0
+ AQR  Var_15    H34  C7   C8   C9   -175.94   0.0  0
+ AQR  Var_16    H2   C11  C12  C13   174.50  30.0  1
+ AQR  Var_17    H3   C11  C12  C13   -70.30  30.0  1
+ AQR  Var_18    H7   C16  C15  C14    76.35  30.0  1
+ AQR  Var_19    H38  C16  C15  C14  -170.71  30.0  1
+ AQR  Var_20    H6   C15  C16  C17  -168.70  30.0  1
+ AQR  Var_21    H37  C15  C16  C17    76.07  30.0  1
+ AQR  Var_22    H11  C21  C22  C17   179.50  30.0  1
+ AQR  Var_23    H12  C21  C22  C17    64.33  30.0  1
+ AQR  Var_24    H13  C22  C21  C20  -177.42  30.0  1
+ AQR  Var_25    H14  C22  C21  C20    67.55  30.0  1
+ AQR  Var_26    H4   C12  C11  C9    172.81  30.0  1
+ AQR  Var_27    H5   C12  C11  C9    -72.52  30.0  1
+ AQR  Var_28    H15  C23  C4   C3   -125.28  30.0  3
+ AQR  Var_29    H16  C23  C4   C3     -5.04  30.0  3
+ AQR  Var_30    H17  C23  C4   C3    115.10  30.0  3
+ AQR  Var_31    H15  C23  C4   C5     55.66  30.0  3
+ AQR  Var_32    H16  C23  C4   C5    175.91  30.0  3
+ AQR  Var_33    H17  C23  C4   C5    -63.96  30.0  3
+ AQR  CONST_01  C4   C5   C10  C1      0.00   0.0  0
+ AQR  CONST_02  C4   C3   C2   C1      0.00   0.0  0
+ AQR  CONST_03  O3   C3   C2   C1    180.00   0.0  0
+ AQR  CONST_04  O2   C2   C3   C4    180.00   0.0  0
+ AQR  Var_34    C11  C9   C10  C1    -35.34  30.0  1
+ AQR  Var_35    C12  C11  C9   C10  -163.85  30.0  1
+ AQR  Var_36    C14  C13  C12  C11   -62.89  30.0  1
+ AQR  Var_37    C18  C13  C12  C11   178.31  30.0  1
+ AQR  Var_38    C5   C10  C9   C11   151.87  30.0  1
+ AQR  Var_39    C14  C8   C9   C11    35.82  30.0  1
+ AQR  Var_40    C7   C8   C9   C11  -146.94  30.0  1
+ AQR  Var_41    C8   C9   C11  C12   -35.57  30.0  1
+ AQR  Var_42    C15  C14  C13  C12   178.84  30.0  1
+ AQR  Var_43    C8   C14  C13  C12    58.01  30.0  1
+ AQR  Var_44    C17  C18  C13  C12   167.85  30.0  1
+ AQR  Var_45    C19  C18  C13  C12   -58.97  30.0  1
+ AQR  Var_46    C16  C15  C14  C13    61.74  30.0  1
+ AQR  Var_47    C7   C8   C14  C13   134.91  30.0  1
+ AQR  Var_48    C9   C8   C14  C13   -47.94  30.0  1
+ AQR  Var_49    C16  C17  C18  C13   -33.85  30.0  1
+ AQR  Var_50    C22  C17  C18  C13    90.01  30.0  1
+ AQR  Var_51    C20  C19  C18  C13   -92.95  30.0  1
+ AQR  Var_52    C17  C18  C13  C14    50.29  30.0  1
+ AQR  Var_53    C19  C18  C13  C14  -176.53  30.0  1
+ AQR  Var_54    C18  C13  C14  C15   -62.58  30.0  1
+ AQR  Var_55    C7   C8   C14  C15    16.61  30.0  1
+ AQR  Var_56    C9   C8   C14  C15  -166.24  30.0  1
+ AQR  Var_57    C18  C17  C16  C15    31.79  30.0  1
+ AQR  Var_58    C22  C17  C16  C15   -93.40  30.0  1
+ AQR  Var_59    C8   C14  C15  C16  -179.32  30.0  1
+ AQR  Var_60    C19  C18  C17  C16  -169.76  30.0  1
+ AQR  Var_61    C21  C22  C17  C16  -178.43  30.0  1
+ AQR  Var_62    C20  C19  C18  C17    42.96  30.0  1
+ AQR  Var_63    C8   C14  C13  C18   176.58  30.0  1
+ AQR  Var_64    C21  C22  C17  C18    55.33  30.0  1
+ AQR  Var_65    C21  C20  C19  C18   -43.16  30.0  1
+ AQR  Var_66    C22  C17  C18  C19   -45.89  30.0  1
+ AQR  Var_67    C22  C21  C20  C19    47.63  30.0  1
+ AQR  Var_68    C24  C9   C10  C1     80.86  30.0  1
+ AQR  Var_69    C26  C13  C12  C11    54.53  30.0  1
+ AQR  Var_70    C24  C9   C11  C12    83.95  30.0  1
+ AQR  Var_71    C25  C14  C13  C12   -62.78  30.0  1
+ AQR  Var_72    C27  C17  C18  C13  -150.98  30.0  1
+ AQR  Var_73    C24  C9   C8   C14   -84.38  30.0  1
+ AQR  Var_74    C26  C13  C14  C15    62.48  30.0  1
+ AQR  Var_75    C27  C17  C16  C15   150.33  30.0  1
+ AQR  Var_76    C25  C14  C15  C16   -60.73  30.0  1
+ AQR  Var_77    C26  C13  C18  C17   -72.09  30.0  1
+ AQR  Var_78    C25  C14  C13  C18    55.80  30.0  1
+ AQR  Var_79    C28  C20  C19  C18    84.62  30.0  1
+ AQR  Var_80    C29  C20  C19  C18  -160.15  30.0  1
+ AQR  Var_81    C26  C13  C18  C19    61.09  30.0  1
+ AQR  Var_82    C27  C17  C18  C19    73.11  30.0  1
+ AQR  Var_83    C27  C17  C22  C21   -63.69  30.0  1
+ AQR  Var_84    C28  C20  C21  C22   -80.58  30.0  1
+ AQR  Var_85    C29  C20  C21  C22   163.90  30.0  1
+ AQR  Var_86    C5   C10  C9   C24   -91.93  30.0  1
+ AQR  Var_87    C7   C8   C9   C24    92.86  30.0  1
+ AQR  Var_88    C7   C8   C14  C25  -101.18  30.0  1
+ AQR  Var_89    C9   C8   C14  C25    75.97  30.0  1
+ AQR  Var_90    C8   C14  C13  C26   -58.36  30.0  1
+ AQR  Var_91    H8   C18  C13  C12    52.92  30.0  1
+ AQR  Var_92    H9   C19  C18  C13    35.03  30.0  1
+ AQR  Var_93    H10  C19  C18  C13   147.26  30.0  1
+ AQR  Var_94    O28  C28  C20  C19  -134.57  30.0  2
+ AQR  Var_95    O29  C28  C20  C19    49.13  30.0  2
+ AQR  Var_96    O28  C28  C20  C21    -8.59  30.0  2
+ AQR  Var_97    O29  C28  C20  C21   175.11  30.0  2
+ AQR  Var_98    C26  C13  C14  C25  -179.15  30.0  1
+ AQR  Var_99    H18  C24  C9   C10  -170.89  30.0  3
+ AQR  Var_100   H19  C24  C9   C10   -52.23  30.0  3
+ AQR  Var_101   H20  C24  C9   C10    67.35  30.0  3
+ AQR  Var_102   H24  C26  C13  C12   163.53  30.0  3
+ AQR  Var_103   H25  C26  C13  C12   -75.86  30.0  3
+ AQR  Var_104   H26  C26  C13  C12    43.38  30.0  3
+ AQR  Var_105   H21  C25  C14  C13   174.40  30.0  3
+ AQR  Var_106   H22  C25  C14  C13   -66.84  30.0  3
+ AQR  Var_107   H23  C25  C14  C13    53.57  30.0  3
+ AQR  Var_108   H27  C27  C17  C16   179.19  30.0  3
+ AQR  Var_109   H28  C27  C17  C16   -60.14  30.0  3
+ AQR  Var_110   H29  C27  C17  C16    58.66  30.0  3
+ AQR  Var_111   H30  C29  C20  C19  -179.17  30.0  3
+ AQR  Var_112   H31  C29  C20  C19   -58.71  30.0  3
+ AQR  Var_113   H32  C29  C20  C19    61.43  30.0  3
+ AQR  Var_114   H36  O3   C3   C2     -0.05  30.0  2
+ AQR  Var_115   O28  C28  C20  C29   108.90  30.0  2
+ AQR  Var_116   O29  C28  C20  C29   -67.39  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GCY  GCY  N-[(2S,3R,4E)-1-(beta-D-galactopyranosyloxy)-3-hydroxyoctadec-4-en-2-yl]tetracosanamide  ligand  150  57  .  2021-08-10  2021-08-10  
+ GCY  GCY  N-[(2S,3R,4E)-1-(beta-D-galactopyranosyloxy)-3-hydroxyoctadec-4-en-2-yl]tetracosanamide  ligand  150  57  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GCY
@@ -654,47 +655,95 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GCY  CONST_01  O18  C37  N1   C17     0.00   0.0  0
- GCY  CONST_02  C38  C37  N1   C17   180.00   0.0  0
- GCY  CONST_03  HN1  N1   C37  O18   180.00   0.0  0
- GCY  Var_01    H18  C18  O2   C19   -60.94  30.0  3
- GCY  Var_02    C16  C15  C14  C13  -178.96   0.0  2
- GCY  Var_03    C4   C3   C2   C1   -179.26  30.0  3
- GCY  Var_04    C39  C38  C37  N1    131.67  30.0  3
- GCY  Var_05    C5   C4   C3   C2   -179.79  30.0  3
- GCY  Var_06    C6   C5   C4   C3   -179.51  30.0  3
- GCY  Var_07    C7   C6   C5   C4   -179.95  30.0  3
- GCY  Var_08    C8   C7   C6   C5   -179.41  30.0  3
- GCY  Var_09    C9   C8   C7   C6    179.98  30.0  3
- GCY  Var_10    C10  C9   C8   C7   -179.54  30.0  3
- GCY  Var_11    C11  C10  C9   C8    179.75  30.0  3
- GCY  Var_12    C12  C11  C10  C9   -179.83  30.0  3
- GCY  Var_13    C13  C12  C11  C10   178.61  30.0  3
- GCY  Var_14    C14  C13  C12  C11   177.67  30.0  3
- GCY  Var_15    C15  C14  C13  C12   111.03  30.0  3
- GCY  Var_16    C40  C39  C38  C37  -179.69  30.0  3
- GCY  Var_17    C41  C40  C39  C38   179.01  30.0  3
- GCY  Var_18    C42  C41  C40  C39  -178.64  30.0  3
- GCY  Var_19    C43  C42  C41  C40   179.49  30.0  3
- GCY  Var_20    C44  C43  C42  C41  -178.77  30.0  3
- GCY  Var_21    CAJ  C44  C43  C42   179.77  30.0  3
- GCY  Var_22    CAK  CAJ  C44  C43  -179.08  30.0  3
- GCY  Var_23    CAL  CAK  CAJ  C44   179.87  30.0  3
- GCY  Var_24    CAM  CAL  CAK  CAJ  -179.38  30.0  3
- GCY  Var_25    CAN  CAM  CAL  CAK   179.93  30.0  3
- GCY  Var_26    CAO  CAN  CAM  CAL  -179.59  30.0  3
- GCY  Var_27    CAP  CAO  CAN  CAM   179.91  30.0  3
- GCY  Var_28    CAQ  CAP  CAO  CAN  -179.97  30.0  3
- GCY  Var_29    CAR  CAQ  CAP  CAO   179.91  30.0  3
- GCY  Var_30    CAS  CAR  CAQ  CAP  -179.84  30.0  3
- GCY  Var_31    CAT  CAS  CAR  CAQ   179.95  30.0  3
- GCY  Var_32    CAU  CAT  CAS  CAR  -179.90  30.0  3
- GCY  Var_33    CAV  CAU  CAT  CAS   179.93  30.0  3
- GCY  Var_34    CAW  CAV  CAU  CAT  -179.96  30.0  3
- GCY  Var_35    CAX  CAW  CAV  CAU   179.92  30.0  3
- GCY  Var_36    CAY  CAX  CAW  CAV  -179.99  30.0  3
- GCY  Var_37    H1   C1   C2   C3     60.24  30.0  3
- GCY  Var_38    HAY  CAY  CAX  CAW   179.97  30.0  3
+ GCY  CONST_01  O18   C37  N1   C17     0.00   0.0  0
+ GCY  CONST_02  C38   C37  N1   C17   180.00   0.0  0
+ GCY  CONST_03  HN1   N1   C37  O18   180.00   0.0  0
+ GCY  Var_01    H18   C18  O2   C19   -60.94  30.0  3
+ GCY  Var_02    C16   C15  C14  C13  -178.96   0.0  2
+ GCY  Var_03    C4    C3   C2   C1   -179.26  30.0  3
+ GCY  Var_04    C39   C38  C37  N1    131.67  30.0  3
+ GCY  Var_05    C5    C4   C3   C2   -179.79  30.0  3
+ GCY  Var_06    C6    C5   C4   C3   -179.51  30.0  3
+ GCY  Var_07    C7    C6   C5   C4   -179.95  30.0  3
+ GCY  Var_08    C8    C7   C6   C5   -179.41  30.0  3
+ GCY  Var_09    C9    C8   C7   C6    179.98  30.0  3
+ GCY  Var_10    C10   C9   C8   C7   -179.54  30.0  3
+ GCY  Var_11    C11   C10  C9   C8    179.75  30.0  3
+ GCY  Var_12    C12   C11  C10  C9   -179.83  30.0  3
+ GCY  Var_13    C13   C12  C11  C10   178.61  30.0  3
+ GCY  Var_14    C14   C13  C12  C11   177.67  30.0  3
+ GCY  Var_15    C15   C14  C13  C12   111.03  30.0  3
+ GCY  Var_16    C40   C39  C38  C37  -179.69  30.0  3
+ GCY  Var_17    C41   C40  C39  C38   179.01  30.0  3
+ GCY  Var_18    C42   C41  C40  C39  -178.64  30.0  3
+ GCY  Var_19    C43   C42  C41  C40   179.49  30.0  3
+ GCY  Var_20    C44   C43  C42  C41  -178.77  30.0  3
+ GCY  Var_21    CAJ   C44  C43  C42   179.77  30.0  3
+ GCY  Var_22    CAK   CAJ  C44  C43  -179.08  30.0  3
+ GCY  Var_23    CAL   CAK  CAJ  C44   179.87  30.0  3
+ GCY  Var_24    CAM   CAL  CAK  CAJ  -179.38  30.0  3
+ GCY  Var_25    CAN   CAM  CAL  CAK   179.93  30.0  3
+ GCY  Var_26    CAO   CAN  CAM  CAL  -179.59  30.0  3
+ GCY  Var_27    CAP   CAO  CAN  CAM   179.91  30.0  3
+ GCY  Var_28    CAQ   CAP  CAO  CAN  -179.97  30.0  3
+ GCY  Var_29    CAR   CAQ  CAP  CAO   179.91  30.0  3
+ GCY  Var_30    CAS   CAR  CAQ  CAP  -179.84  30.0  3
+ GCY  Var_31    CAT   CAS  CAR  CAQ   179.95  30.0  3
+ GCY  Var_32    CAU   CAT  CAS  CAR  -179.90  30.0  3
+ GCY  Var_33    CAV   CAU  CAT  CAS   179.93  30.0  3
+ GCY  Var_34    CAW   CAV  CAU  CAT  -179.96  30.0  3
+ GCY  Var_35    CAX   CAW  CAV  CAU   179.92  30.0  3
+ GCY  Var_36    CAY   CAX  CAW  CAV  -179.99  30.0  3
+ GCY  Var_37    H1    C1   C2   C3     60.24  30.0  3
+ GCY  Var_38    HAY   CAY  CAX  CAW   179.97  30.0  3
+ GCY  Var_39    C35   C36  C19  O4     57.39  30.0  1
+ GCY  Var_40    C35   C22  C20  O4    -56.16  30.0  1
+ GCY  Var_41    C22   C20  O4   C19    61.63  30.0  1
+ GCY  Var_42    C22   C35  C36  C19   -54.34  30.0  1
+ GCY  Var_43    C36   C19  O4   C20   -61.95  30.0  1
+ GCY  Var_44    C36   C35  C22  C20    53.75  30.0  1
+ GCY  Var_45    C20   O4   C19  O2    179.42  30.0  1
+ GCY  Var_46    C35   C36  C19  O2    176.00  30.0  1
+ GCY  Var_47    O17   C36  C19  O4    176.10  30.0  1
+ GCY  Var_48    O5    C22  C20  O4     66.01  30.0  1
+ GCY  Var_49    C36   C35  C22  O5    -66.63  30.0  1
+ GCY  Var_50    C20   C22  C35  O16   176.80  30.0  1
+ GCY  Var_51    C19   C36  C35  O16  -174.75  30.0  1
+ GCY  Var_52    C22   C35  C36  O17  -175.29  30.0  1
+ GCY  Var_53    C21   C20  O4   C19  -174.52  30.0  1
+ GCY  Var_54    C35   C22  C20  C21  -177.67  30.0  1
+ GCY  Var_55    H36   C36  C19  O4    -61.21  30.0  1
+ GCY  Var_56    H22   C22  C20  O4   -173.23  30.0  1
+ GCY  Var_57    H20   C20  O4   C19   -56.48  30.0  1
+ GCY  Var_58    H35   C35  C36  C19    62.71  30.0  1
+ GCY  Var_59    H19   C19  O4   C20    58.38  30.0  1
+ GCY  Var_60    O17   C36  C19  O2    -65.29  30.0  1
+ GCY  Var_61    O4    C20  C21  O3     67.70  30.0  2
+ GCY  Var_62    C22   C20  C21  O3   -169.31  30.0  2
+ GCY  Var_63    C18   O2   C19  O4    -83.42  30.0  1
+ GCY  Var_64    C21   C20  C22  O5    -55.51  30.0  1
+ GCY  Var_65    O16   C35  C22  O5     56.42  30.0  1
+ GCY  Var_66    O17   C36  C35  O16    64.31  30.0  1
+ GCY  Var_67    C36   C19  O2   C18   156.63  30.0  3
+ GCY  Var_68    H21   C21  C20  O4    -54.66  30.0  3
+ GCY  Var_69    H21A  C21  C20  O4   -171.11  30.0  3
+ GCY  Var_70    HO17  O17  C36  C19    73.88  30.0  3
+ GCY  Var_71    HO5   O5   C22  C20  -173.89  30.0  3
+ GCY  Var_72    HO16  O16  C35  C22  -172.26  30.0  3
+ GCY  Var_73    HO3   O3   C21  C20  -176.19  30.0  3
+ GCY  Var_74    O1    C16  C17  N1   -177.57  30.0  2
+ GCY  Var_75    C15   C16  C17  N1     55.73  30.0  2
+ GCY  Var_76    O2    C18  C17  N1     56.53  30.0  3
+ GCY  Var_77    C14   C15  C16  O1     -1.87  30.0  2
+ GCY  Var_78    C18   C17  C16  O1    -53.57  30.0  3
+ GCY  Var_79    C16   C17  C18  O2    -67.71  30.0  1
+ GCY  Var_80    C17   C16  C15  C14   123.18  30.0  3
+ GCY  Var_81    C18   C17  C16  C15   179.73  30.0  3
+ GCY  Var_82    C37   N1   C17  C16  -119.46  30.0  2
+ GCY  Var_83    C37   N1   C17  C18   115.09  30.0  2
+ GCY  Var_84    H16   C16  C17  N1    -62.57  30.0  2
+ GCY  Var_85    H17   C17  C16  O1     65.16  30.0  3
+ GCY  Var_86    HO1   O1   C16  C15    60.34  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

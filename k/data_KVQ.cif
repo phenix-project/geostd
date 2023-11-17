@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KVQ  KVQ  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-(2-phenyl-1,3-thiazol-4-yl)oxane-3,4,5-triol  ligand  39  22  .  2021-08-12  2021-08-12  
+ KVQ  KVQ  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-(2-phenyl-1,3-thiazol-4-yl)oxane-3,4,5-triol  ligand  39  22  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KVQ
@@ -215,33 +216,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KVQ  CONST_01  S3   C4   C6   C11  180.00  0.0  0
- KVQ  CONST_02  N5   C4   C6   C11    0.00  0.0  0
- KVQ  CONST_03  C8   C7   C6   C11    0.00  0.0  0
- KVQ  CONST_04  C8   C9   C10  C11    0.00  0.0  0
- KVQ  CONST_05  C4   C6   C11  C10  180.00  0.0  0
- KVQ  CONST_06  C7   C6   C11  C10    0.00  0.0  0
- KVQ  CONST_07  C7   C8   C9   C10    0.00  0.0  0
- KVQ  CONST_08  C4   C6   C7   C8   180.00  0.0  0
- KVQ  CONST_09  S3   C4   C6   C7     0.00  0.0  0
- KVQ  CONST_10  N5   C4   C6   C7   180.00  0.0  0
- KVQ  CONST_11  C1   C2   S3   C4     0.00  0.0  0
- KVQ  CONST_12  C2   C1   N5   C4     0.00  0.0  0
- KVQ  CONST_13  C6   C7   C8   C9     0.00  0.0  0
- KVQ  CONST_14  C6   C11  C10  C9     0.00  0.0  0
- KVQ  CONST_15  C2   S3   C4   C6   180.00  0.0  0
- KVQ  CONST_16  C1   N5   C4   C6   180.00  0.0  0
- KVQ  CONST_17  S3   C2   C1   N5     0.00  0.0  0
- KVQ  CONST_18  C2   S3   C4   N5     0.00  0.0  0
- KVQ  CONST_19  C1   N5   C4   S3     0.00  0.0  0
- KVQ  CONST_20  C1'  C1   N5   C4   180.00  0.0  0
- KVQ  CONST_21  C1'  C1   C2   S3   180.00  0.0  0
- KVQ  CONST_22  H4   C7   C6   C11  180.00  0.0  0
- KVQ  CONST_23  H5   C9   C10  C11  180.00  0.0  0
- KVQ  CONST_24  H3   C8   C9   C10  180.00  0.0  0
- KVQ  CONST_25  H2   C10  C9   C8   180.00  0.0  0
- KVQ  CONST_26  H1   C11  C6   C7   180.00  0.0  0
- KVQ  CONST_27  H6   C2   S3   C4   180.00  0.0  0
+ KVQ  CONST_01  S3   C4   C6   C11   180.00   0.0  0
+ KVQ  CONST_02  N5   C4   C6   C11     0.00   0.0  0
+ KVQ  CONST_03  C8   C7   C6   C11     0.00   0.0  0
+ KVQ  CONST_04  C8   C9   C10  C11     0.00   0.0  0
+ KVQ  CONST_05  C4   C6   C11  C10   180.00   0.0  0
+ KVQ  CONST_06  C7   C6   C11  C10     0.00   0.0  0
+ KVQ  CONST_07  C7   C8   C9   C10     0.00   0.0  0
+ KVQ  CONST_08  C4   C6   C7   C8    180.00   0.0  0
+ KVQ  CONST_09  S3   C4   C6   C7      0.00   0.0  0
+ KVQ  CONST_10  N5   C4   C6   C7    180.00   0.0  0
+ KVQ  CONST_11  C1   C2   S3   C4      0.00   0.0  0
+ KVQ  CONST_12  C2   C1   N5   C4      0.00   0.0  0
+ KVQ  CONST_13  C6   C7   C8   C9      0.00   0.0  0
+ KVQ  CONST_14  C6   C11  C10  C9      0.00   0.0  0
+ KVQ  CONST_15  C2   S3   C4   C6    180.00   0.0  0
+ KVQ  CONST_16  C1   N5   C4   C6    180.00   0.0  0
+ KVQ  CONST_17  S3   C2   C1   N5      0.00   0.0  0
+ KVQ  CONST_18  C2   S3   C4   N5      0.00   0.0  0
+ KVQ  CONST_19  C1   N5   C4   S3      0.00   0.0  0
+ KVQ  CONST_20  C1'  C1   N5   C4    180.00   0.0  0
+ KVQ  CONST_21  C1'  C1   C2   S3    180.00   0.0  0
+ KVQ  CONST_22  H4   C7   C6   C11   180.00   0.0  0
+ KVQ  CONST_23  H5   C9   C10  C11   180.00   0.0  0
+ KVQ  CONST_24  H3   C8   C9   C10   180.00   0.0  0
+ KVQ  CONST_25  H2   C10  C9   C8    180.00   0.0  0
+ KVQ  CONST_26  H1   C11  C6   C7    180.00   0.0  0
+ KVQ  CONST_27  H6   C2   S3   C4    180.00   0.0  0
+ KVQ  Var_01    C2'  C1'  C1   N5    -63.80  30.0  2
+ KVQ  Var_02    O5'  C1'  C1   N5     57.10  30.0  2
+ KVQ  Var_03    C2'  C1'  C1   C2    115.71  30.0  2
+ KVQ  Var_04    O5'  C1'  C1   C2   -123.39  30.0  2
+ KVQ  Var_05    C3'  C2'  C1'  C1    177.11  30.0  1
+ KVQ  Var_06    C5'  O5'  C1'  C1    175.02  30.0  1
+ KVQ  Var_07    C4'  C3'  C2'  C1'   -54.93  30.0  1
+ KVQ  Var_08    C4'  C5'  O5'  C1'    61.93  30.0  1
+ KVQ  Var_09    C3'  C4'  C5'  O5'   -56.15  30.0  1
+ KVQ  Var_10    C3'  C2'  C1'  O5'    57.36  30.0  1
+ KVQ  Var_11    C2'  C3'  C4'  C5'    54.57  30.0  1
+ KVQ  Var_12    C2'  C1'  O5'  C5'   -62.74  30.0  1
+ KVQ  Var_13    O2'  C2'  C1'  C1    -61.22  30.0  1
+ KVQ  Var_14    O3'  C3'  C2'  C1'  -175.14  30.0  1
+ KVQ  Var_15    C6'  C5'  O5'  C1'  -176.14  30.0  1
+ KVQ  Var_16    O4'  C4'  C5'  O5'  -177.75  30.0  1
+ KVQ  Var_17    O2'  C2'  C1'  O5'   179.04  30.0  1
+ KVQ  Var_18    O3'  C3'  C4'  C5'   176.89  30.0  1
+ KVQ  Var_19    C3'  C4'  C5'  C6'  -175.60  30.0  1
+ KVQ  Var_20    O2'  C2'  C3'  C4'  -173.88  30.0  1
+ KVQ  Var_21    C2'  C3'  C4'  O4'   174.33  30.0  1
+ KVQ  Var_22    H7   C1'  C1   N5    176.66  30.0  2
+ KVQ  Var_23    H16  C2'  C1'  C1     59.02  30.0  1
+ KVQ  Var_24    H14  C3'  C2'  C1'    62.97  30.0  1
+ KVQ  Var_25    H8   C5'  O5'  C1'   -57.32  30.0  1
+ KVQ  Var_26    H12  C4'  C5'  O5'    61.86  30.0  1
+ KVQ  Var_27    O6'  C6'  C5'  O5'    62.76  30.0  3
+ KVQ  Var_28    O4'  C4'  C5'  C6'    62.81  30.0  1
+ KVQ  Var_29    C4'  C5'  C6'  O6'  -176.61  30.0  1
+ KVQ  Var_30    O3'  C3'  C4'  O4'   -63.35  30.0  1
+ KVQ  Var_31    O2'  C2'  C3'  O3'    65.92  30.0  1
+ KVQ  Var_32    H17  O2'  C2'  C1'   166.86  30.0  3
+ KVQ  Var_33    H9   C6'  C5'  O5'  -175.48  30.0  3
+ KVQ  Var_34    H10  C6'  C5'  O5'   -59.46  30.0  3
+ KVQ  Var_35    H13  O4'  C4'  C5'   175.75  30.0  3
+ KVQ  Var_36    H15  O3'  C3'  C4'   144.68  30.0  3
+ KVQ  Var_37    H11  O6'  C6'  C5'   175.95  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

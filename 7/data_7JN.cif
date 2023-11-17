@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7JN  7JN  4'-fluoro-4,5-dihydroxy-N-{[(1R,2R)-2-{(2S,4R,5R)-4-hydroxy-5-[6-(methylamino)-9H-purin-9-yl]oxolan-2-yl}cyclopropyl]methyl}[1,1'-biphenyl]-3-carboxamide  ligand  66  39  .  2022-09-16  2023-02-02
+ 7JN  7JN  4'-fluoro-4,5-dihydroxy-N-{[(1R,2R)-2-{(2S,4R,5R)-4-hydroxy-5-[6-(methylamino)-9H-purin-9-yl]oxolan-2-yl}cyclopropyl]methyl}[1,1'-biphenyl]-3-carboxamide  ligand  66  39  .  2022-09-16  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7JN
@@ -350,48 +351,83 @@ _chem_comp_tor.period
  7JN  CONST_22  C27  C30  C37  C35     0.00   0.0  0
  7JN  CONST_23  C31  C27  C30  C37     0.00   0.0  0
  7JN  CONST_24  C31  C36  C35  C37     0.00   0.0  0
- 7JN  CONST_27  C36  C31  C27  C30     0.00   0.0  0
- 7JN  CONST_28  C36  C35  C37  C30     0.00   0.0  0
- 7JN  CONST_31  N22  C16  C4   N5    180.00   0.0  0
- 7JN  CONST_32  N17  C2   C4   N5    180.00   0.0  0
- 7JN  CONST_33  C2   N1   C7   N5      0.00   0.0  0
- 7JN  CONST_34  N22  C16  C4   C2      0.00   0.0  0
- 7JN  CONST_35  N22  C25  N17  C2      0.00   0.0  0
- 7JN  CONST_36  C16  N22  C25  N17     0.00   0.0  0
- 7JN  CONST_37  C16  C4   C2   N17     0.00   0.0  0
- 7JN  CONST_38  C3   N1   C2   C4    180.00   0.0  0
- 7JN  CONST_39  N17  C2   N1   C3      0.00   0.0  0
- 7JN  CONST_40  N5   C7   N1   C3    180.00   0.0  0
- 7JN  CONST_41  O33  C21  C13  C6    180.00   0.0  0
- 7JN  CONST_42  C21  C13  C6   C15   180.00   0.0  0
- 7JN  CONST_43  C20  C14  C6   C15   180.00   0.0  0
- 7JN  CONST_44  O33  C21  C23  C20   180.00   0.0  0
- 7JN  CONST_45  C31  C36  C35  F38   180.00   0.0  0
- 7JN  CONST_46  C30  C37  C35  F38   180.00   0.0  0
- 7JN  CONST_47  O32  C13  C21  C23   180.00   0.0  0
- 7JN  CONST_48  C14  C6   C13  O32   180.00   0.0  0
- 7JN  CONST_49  N29  C16  C4   N5      0.00   0.0  0
- 7JN  CONST_50  N29  C16  C4   C2    180.00   0.0  0
- 7JN  CONST_51  N29  C16  N22  C25   180.00   0.0  0
- 7JN  CONST_52  H1   C7   N5   C4    180.00   0.0  0
- 7JN  CONST_53  H9   C23  C21  C13   180.00   0.0  0
- 7JN  CONST_54  H12  C14  C6   C13   180.00   0.0  0
- 7JN  CONST_55  H8   C31  C27  C20     0.00   0.0  0
- 7JN  CONST_56  H6   C30  C27  C20     0.00   0.0  0
- 7JN  CONST_57  H7   C36  C35  C37   180.00   0.0  0
- 7JN  CONST_58  H5   C37  C35  C36   180.00   0.0  0
- 7JN  CONST_59  H23  C25  N17  C2    180.00   0.0  0
- 7JN  CONST_60  C39  N29  C16  C4    180.00   0.0  0
- 7JN  CONST_61  C39  N29  C16  N22     0.00   0.0  0
- 7JN  CONST_62  H24  N29  C16  C4      0.00   0.0  0
- 7JN  CONST_63  C26  N24  C15  C6    180.00   0.0  0
- 7JN  CONST_64  H13  N24  C15  C6      0.00   0.0  0
- 7JN  CONST_65  O28  C15  N24  C26     0.00   0.0  0
+ 7JN  CONST_25  C36  C31  C27  C30     0.00   0.0  0
+ 7JN  CONST_26  C36  C35  C37  C30     0.00   0.0  0
+ 7JN  CONST_27  N22  C16  C4   N5    180.00   0.0  0
+ 7JN  CONST_28  N17  C2   C4   N5    180.00   0.0  0
+ 7JN  CONST_29  C2   N1   C7   N5      0.00   0.0  0
+ 7JN  CONST_30  N22  C16  C4   C2      0.00   0.0  0
+ 7JN  CONST_31  N22  C25  N17  C2      0.00   0.0  0
+ 7JN  CONST_32  C16  N22  C25  N17     0.00   0.0  0
+ 7JN  CONST_33  C16  C4   C2   N17     0.00   0.0  0
+ 7JN  CONST_34  C3   N1   C2   C4    180.00   0.0  0
+ 7JN  CONST_35  N17  C2   N1   C3      0.00   0.0  0
+ 7JN  CONST_36  N5   C7   N1   C3    180.00   0.0  0
+ 7JN  CONST_37  O33  C21  C13  C6    180.00   0.0  0
+ 7JN  CONST_38  C21  C13  C6   C15   180.00   0.0  0
+ 7JN  CONST_39  C20  C14  C6   C15   180.00   0.0  0
+ 7JN  CONST_40  O33  C21  C23  C20   180.00   0.0  0
+ 7JN  CONST_41  C31  C36  C35  F38   180.00   0.0  0
+ 7JN  CONST_42  C30  C37  C35  F38   180.00   0.0  0
+ 7JN  CONST_43  O32  C13  C21  C23   180.00   0.0  0
+ 7JN  CONST_44  C14  C6   C13  O32   180.00   0.0  0
+ 7JN  CONST_45  N29  C16  C4   N5      0.00   0.0  0
+ 7JN  CONST_46  N29  C16  C4   C2    180.00   0.0  0
+ 7JN  CONST_47  N29  C16  N22  C25   180.00   0.0  0
+ 7JN  CONST_48  H1   C7   N5   C4    180.00   0.0  0
+ 7JN  CONST_49  H9   C23  C21  C13   180.00   0.0  0
+ 7JN  CONST_50  H12  C14  C6   C13   180.00   0.0  0
+ 7JN  CONST_51  H8   C31  C27  C20     0.00   0.0  0
+ 7JN  CONST_52  H6   C30  C27  C20     0.00   0.0  0
+ 7JN  CONST_53  H7   C36  C35  C37   180.00   0.0  0
+ 7JN  CONST_54  H5   C37  C35  C36   180.00   0.0  0
+ 7JN  CONST_55  H23  C25  N17  C2    180.00   0.0  0
+ 7JN  CONST_56  C39  N29  C16  C4    180.00   0.0  0
+ 7JN  CONST_57  C39  N29  C16  N22     0.00   0.0  0
+ 7JN  CONST_58  H24  N29  C16  C4      0.00   0.0  0
+ 7JN  CONST_59  C26  N24  C15  C6    180.00   0.0  0
+ 7JN  CONST_60  H13  N24  C15  C6      0.00   0.0  0
+ 7JN  CONST_61  O28  C15  N24  C26     0.00   0.0  0
  7JN  Var_01    C11  C12  C9   C10   108.31  30.0  1
  7JN  Var_02    N24  C15  C6   C13   169.37  30.0  2
  7JN  Var_03    C9   C12  C26  N24  -152.33  30.0  3
  7JN  Var_04    C12  C26  N24  C15  -164.65  30.0  1
  7JN  Var_05    H25  C39  N29  C16   -62.87  30.0  3
+ 7JN  Var_06    C10  O8   C3   N1   -108.83  30.0  1
+ 7JN  Var_07    C19  C18  C3   N1     88.54  30.0  1
+ 7JN  Var_08    O8   C3   N1   C7     11.19  30.0  2
+ 7JN  Var_09    C18  C3   N1   C7   -106.44  30.0  2
+ 7JN  Var_10    C18  C3   O8   C10    11.44  30.0  1
+ 7JN  Var_11    C3   C18  C19  C10    37.01  30.0  1
+ 7JN  Var_12    C23  C20  C27  C30   143.40  30.0  3
+ 7JN  Var_13    C14  C20  C27  C30   -36.08  30.0  3
+ 7JN  Var_14    C23  C20  C27  C31   -36.71  30.0  3
+ 7JN  Var_15    C14  C20  C27  C31   143.81  30.0  3
+ 7JN  Var_16    O8   C10  C9   C12    78.75  30.0  3
+ 7JN  Var_17    C19  C10  C9   C12  -163.63  30.0  3
+ 7JN  Var_18    O8   C10  C9   C11   148.59  30.0  3
+ 7JN  Var_19    C19  C10  C9   C11   -93.79  30.0  3
+ 7JN  Var_20    C3   O8   C10  C9    136.76  30.0  1
+ 7JN  Var_21    C18  C19  C10  C9   -152.24  30.0  1
+ 7JN  Var_22    C2   N1   C3   O8   -167.83  30.0  2
+ 7JN  Var_23    C19  C18  C3   O8    -30.63  30.0  1
+ 7JN  Var_24    C18  C19  C10  O8    -31.60  30.0  1
+ 7JN  Var_25    C3   O8   C10  C19    12.84  30.0  1
+ 7JN  Var_26    C2   N1   C3   C18    74.54  30.0  2
+ 7JN  Var_27    O34  C18  C3   N1   -153.84  30.0  1
+ 7JN  Var_28    O34  C18  C19  C10   -75.71  30.0  1
+ 7JN  Var_29    O34  C18  C3   O8     86.99  30.0  1
+ 7JN  Var_30    H20  C18  C3   N1    -31.66  30.0  1
+ 7JN  Var_31    H22  C3   N1   C7    131.31  30.0  2
+ 7JN  Var_32    H15  C11  C9   C10   142.53  30.0  1
+ 7JN  Var_33    H16  C11  C9   C10    -1.23  30.0  1
+ 7JN  Var_34    H2   C10  C9   C12   -39.29  30.0  3
+ 7JN  Var_35    H17  C9   C11  C12   107.39  30.0  1
+ 7JN  Var_36    H18  C19  C10  C9    -34.58  30.0  1
+ 7JN  Var_37    H19  C19  C10  C9     85.86  30.0  1
+ 7JN  Var_38    H11  O32  C13  C6      4.98  30.0  2
+ 7JN  Var_39    H10  O33  C21  C13   179.44  30.0  2
+ 7JN  Var_40    H21  O34  C18  C19   -59.06  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

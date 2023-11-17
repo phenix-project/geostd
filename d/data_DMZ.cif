@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DMZ  DMZ  N,4-dimethyl-N-(1-phenyl-1H-pyrazol-5-yl)benzenesulfonamide  ligand  40  23  .  2022-03-18  2022-03-18
+ DMZ  DMZ  N,4-dimethyl-N-(1-phenyl-1H-pyrazol-5-yl)benzenesulfonamide  ligand  40  23  .  2022-03-18  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DMZ
@@ -217,47 +218,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DMZ  CONST_01  C21   C20  C19  C18    0.00   0.0  0
- DMZ  CONST_02  C21   C16  C17  C18    0.00   0.0  0
- DMZ  CONST_03  C16   C17  C18  C19    0.00   0.0  0
- DMZ  CONST_04  C16   C21  C20  C19    0.00   0.0  0
- DMZ  CONST_05  C17   C18  C19  C20    0.00   0.0  0
- DMZ  CONST_06  C17   C16  C21  C20    0.00   0.0  0
- DMZ  CONST_07  N7    C24  C23  C22    0.00   0.0  0
- DMZ  CONST_08  C24   N7   N8   C22    0.00   0.0  0
- DMZ  CONST_11  N7    N8   C22  C23    0.00   0.0  0
- DMZ  CONST_12  C25   N8   C22  C23  180.00   0.0  0
- DMZ  CONST_13  N8    N7   C24  C23    0.00   0.0  0
- DMZ  CONST_14  N8    C22  C23  C24    0.00   0.0  0
- DMZ  CONST_15  C25   N8   N7   C24  180.00   0.0  0
- DMZ  CONST_18  C29   C30  C25  N8   180.00   0.0  0
- DMZ  CONST_19  C27   C26  C25  N8   180.00   0.0  0
- DMZ  CONST_20  C28   C29  C30  C25    0.00   0.0  0
- DMZ  CONST_21  C28   C27  C26  C25    0.00   0.0  0
- DMZ  CONST_22  C27   C26  C25  C30    0.00   0.0  0
- DMZ  CONST_23  C27   C28  C29  C30    0.00   0.0  0
- DMZ  CONST_24  C26   C25  C30  C29    0.00   0.0  0
- DMZ  CONST_25  C26   C27  C28  C29    0.00   0.0  0
- DMZ  CONST_26  S2    C16  C17  C18  180.00   0.0  0
- DMZ  CONST_27  S2    C16  C21  C20  180.00   0.0  0
- DMZ  CONST_28  C41   C19  C20  C21  180.00   0.0  0
- DMZ  CONST_29  C41   C19  C18  C17  180.00   0.0  0
- DMZ  CONST_30  C24   C23  C22  N6   180.00   0.0  0
- DMZ  CONST_31  N7    N8   C22  N6   180.00   0.0  0
- DMZ  CONST_32  C25   N8   C22  N6     0.00   0.0  0
- DMZ  CONST_33  H20   C20  C19  C18  180.00   0.0  0
- DMZ  CONST_34  H17   C17  C18  C19  180.00   0.0  0
- DMZ  CONST_35  H21   C21  C20  C19  180.00   0.0  0
- DMZ  CONST_36  H18   C18  C19  C20  180.00   0.0  0
- DMZ  CONST_37  H24   C24  C23  C22  180.00   0.0  0
- DMZ  CONST_38  H23   C23  C24  N7   180.00   0.0  0
- DMZ  CONST_39  H30   C30  C25  N8     0.00   0.0  0
- DMZ  CONST_40  H26   C26  C25  N8     0.00   0.0  0
- DMZ  CONST_41  H29   C29  C30  C25  180.00   0.0  0
- DMZ  CONST_42  H27   C27  C26  C25  180.00   0.0  0
- DMZ  CONST_43  H28   C28  C29  C30  180.00   0.0  0
- DMZ  Var_01    O3    S2   C16  C21  -25.20  30.0  2
- DMZ  Var_02    H411  C41  C19  C18  -89.62  30.0  2
+ DMZ  CONST_01  C21   C20  C19  C18     0.00   0.0  0
+ DMZ  CONST_02  C21   C16  C17  C18     0.00   0.0  0
+ DMZ  CONST_03  C16   C17  C18  C19     0.00   0.0  0
+ DMZ  CONST_04  C16   C21  C20  C19     0.00   0.0  0
+ DMZ  CONST_05  C17   C18  C19  C20     0.00   0.0  0
+ DMZ  CONST_06  C17   C16  C21  C20     0.00   0.0  0
+ DMZ  CONST_07  N7    C24  C23  C22     0.00   0.0  0
+ DMZ  CONST_08  C24   N7   N8   C22     0.00   0.0  0
+ DMZ  CONST_09  N7    N8   C22  C23     0.00   0.0  0
+ DMZ  CONST_10  C25   N8   C22  C23   180.00   0.0  0
+ DMZ  CONST_11  N8    N7   C24  C23     0.00   0.0  0
+ DMZ  CONST_12  N8    C22  C23  C24     0.00   0.0  0
+ DMZ  CONST_13  C25   N8   N7   C24   180.00   0.0  0
+ DMZ  CONST_14  C29   C30  C25  N8    180.00   0.0  0
+ DMZ  CONST_15  C27   C26  C25  N8    180.00   0.0  0
+ DMZ  CONST_16  C28   C29  C30  C25     0.00   0.0  0
+ DMZ  CONST_17  C28   C27  C26  C25     0.00   0.0  0
+ DMZ  CONST_18  C27   C26  C25  C30     0.00   0.0  0
+ DMZ  CONST_19  C27   C28  C29  C30     0.00   0.0  0
+ DMZ  CONST_20  C26   C25  C30  C29     0.00   0.0  0
+ DMZ  CONST_21  C26   C27  C28  C29     0.00   0.0  0
+ DMZ  CONST_22  S2    C16  C17  C18   180.00   0.0  0
+ DMZ  CONST_23  S2    C16  C21  C20   180.00   0.0  0
+ DMZ  CONST_24  C41   C19  C20  C21   180.00   0.0  0
+ DMZ  CONST_25  C41   C19  C18  C17   180.00   0.0  0
+ DMZ  CONST_26  C24   C23  C22  N6    180.00   0.0  0
+ DMZ  CONST_27  N7    N8   C22  N6    180.00   0.0  0
+ DMZ  CONST_28  C25   N8   C22  N6      0.00   0.0  0
+ DMZ  CONST_29  H20   C20  C19  C18   180.00   0.0  0
+ DMZ  CONST_30  H17   C17  C18  C19   180.00   0.0  0
+ DMZ  CONST_31  H21   C21  C20  C19   180.00   0.0  0
+ DMZ  CONST_32  H18   C18  C19  C20   180.00   0.0  0
+ DMZ  CONST_33  H24   C24  C23  C22   180.00   0.0  0
+ DMZ  CONST_34  H23   C23  C24  N7    180.00   0.0  0
+ DMZ  CONST_35  H30   C30  C25  N8      0.00   0.0  0
+ DMZ  CONST_36  H26   C26  C25  N8      0.00   0.0  0
+ DMZ  CONST_37  H29   C29  C30  C25   180.00   0.0  0
+ DMZ  CONST_38  H27   C27  C26  C25   180.00   0.0  0
+ DMZ  CONST_39  H28   C28  C29  C30   180.00   0.0  0
+ DMZ  Var_01    O3    S2   C16  C21   -25.20  30.0  2
+ DMZ  Var_02    H411  C41  C19  C18   -89.62  30.0  2
+ DMZ  Var_03    C30   C25  N8   C22   132.16  30.0  2
+ DMZ  Var_04    C26   C25  N8   C22   -49.02  30.0  2
+ DMZ  Var_05    C30   C25  N8   N7    -45.95  30.0  2
+ DMZ  Var_06    C26   C25  N8   N7    132.88  30.0  2
+ DMZ  Var_07    C22   N6   S2   C16   -77.37  30.0  3
+ DMZ  Var_08    C31   N6   S2   C16    66.60  30.0  3
+ DMZ  Var_09    C22   N6   S2   O3     38.10  30.0  3
+ DMZ  Var_10    C22   N6   S2   O4    167.39  30.0  3
+ DMZ  Var_11    H311  C31  N6   C22   -51.32  30.0  3
+ DMZ  Var_12    H312  C31  N6   C22    68.84  30.0  3
+ DMZ  Var_13    H313  C31  N6   C22  -168.86  30.0  3
+ DMZ  Var_14    C31   N6   S2   O3   -177.94  30.0  3
+ DMZ  Var_15    C31   N6   S2   O4    -48.64  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

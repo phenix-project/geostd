@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ACQ  ACQ  5'-O-[(R)-hydroxy{[(S)-hydroxy{[(S)-hydroxy(phosphonooxy)phosphoryl]methyl}phosphoryl]oxy}phosphoryl]adenosine  ligand  54  35  .  2022-11-17  2022-11-17
+ ACQ  ACQ  5'-O-[(R)-hydroxy{[(S)-hydroxy{[(S)-hydroxy(phosphonooxy)phosphoryl]methyl}phosphoryl]oxy}phosphoryl]adenosine  ligand  54  35  .  2022-11-17  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_ACQ
@@ -270,38 +271,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ACQ  CONST_01  C5    N7   C8   N9     0.00   0.0  0
- ACQ  CONST_02  N7    C5   C4   N9     0.00   0.0  0
- ACQ  CONST_03  C6    C5   C4   N9   180.00   0.0  0
- ACQ  CONST_04  C2    N3   C4   N9   180.00   0.0  0
- ACQ  CONST_05  C5    C4   N9   C8     0.00   0.0  0
- ACQ  CONST_06  N3    C4   N9   C8   180.00   0.0  0
- ACQ  CONST_07  C6    C5   N7   C8   180.00   0.0  0
- ACQ  CONST_08  C4    C5   N7   C8     0.00   0.0  0
- ACQ  CONST_09  C4    N9   C8   N7     0.00   0.0  0
- ACQ  CONST_10  N1    C6   C5   N7   180.00   0.0  0
- ACQ  CONST_11  N3    C4   C5   N7   180.00   0.0  0
- ACQ  CONST_12  C2    N1   C6   C5     0.00   0.0  0
- ACQ  CONST_13  C2    N3   C4   C5     0.00   0.0  0
- ACQ  CONST_14  N3    C4   C5   C6     0.00   0.0  0
- ACQ  CONST_15  N3    C2   N1   C6     0.00   0.0  0
- ACQ  CONST_16  C4    C5   C6   N1     0.00   0.0  0
- ACQ  CONST_17  C4    N3   C2   N1     0.00   0.0  0
- ACQ  CONST_18  N7    C8   N9   C1'  180.00   0.0  0
- ACQ  CONST_19  C5    C4   N9   C1'  180.00   0.0  0
- ACQ  CONST_20  N3    C4   N9   C1'    0.00   0.0  0
- ACQ  CONST_21  N6    C6   C5   N7     0.00   0.0  0
- ACQ  CONST_22  C4    C5   C6   N6   180.00   0.0  0
- ACQ  CONST_23  C2    N1   C6   N6   180.00   0.0  0
- ACQ  CONST_24  H8    C8   N9   C1'    0.00   0.0  0
- ACQ  CONST_25  H2    C2   N1   C6   180.00   0.0  0
- ACQ  CONST_26  HN61  N6   C6   C5   180.00   0.0  0
- ACQ  CONST_27  HN62  N6   C6   C5     0.00   0.0  0
- ACQ  Var_01    C4'   C5'  O5'  PA   128.02  30.0  3
- ACQ  Var_02    O1D   PD   O3G  PG     4.46  30.0  3
- ACQ  Var_03    O1B   PB   C3B  PG    -9.50  30.0  1
- ACQ  Var_04    PB    C3B  PG   O1G   72.21  30.0  3
- ACQ  Var_05    O1A   PA   O3A  PB     9.53  30.0  1
+ ACQ  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ ACQ  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ ACQ  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ ACQ  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ ACQ  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ ACQ  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ ACQ  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ ACQ  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ ACQ  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ ACQ  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ ACQ  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ ACQ  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ ACQ  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ ACQ  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ ACQ  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ ACQ  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ ACQ  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ ACQ  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ ACQ  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ ACQ  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ ACQ  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ ACQ  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ ACQ  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ ACQ  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ ACQ  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ ACQ  CONST_26  HN61  N6   C6   C5    180.00   0.0  0
+ ACQ  CONST_27  HN62  N6   C6   C5      0.00   0.0  0
+ ACQ  Var_01    C4'   C5'  O5'  PA    128.02  30.0  3
+ ACQ  Var_02    O1D   PD   O3G  PG      4.46  30.0  3
+ ACQ  Var_03    O1B   PB   C3B  PG     -9.50  30.0  1
+ ACQ  Var_04    PB    C3B  PG   O1G    72.21  30.0  3
+ ACQ  Var_05    O1A   PA   O3A  PB      9.53  30.0  1
+ ACQ  Var_06    C2'   C1'  O4'  C4'    -0.33  30.0  1
+ ACQ  Var_07    N9    C1'  O4'  C4'  -124.20  30.0  1
+ ACQ  Var_08    C1'   C2'  C3'  C4'    34.46  30.0  1
+ ACQ  Var_09    C2'   C3'  C4'  O4'   -36.06  30.0  1
+ ACQ  Var_10    C3'   C2'  C1'  O4'   -22.25  30.0  1
+ ACQ  Var_11    C8    N9   C1'  O4'    61.18  30.0  2
+ ACQ  Var_12    C4    N9   C1'  O4'  -114.82  30.0  2
+ ACQ  Var_13    C1'   O4'  C4'  C3'    23.24  30.0  1
+ ACQ  Var_14    N9    C1'  C2'  C3'    98.51  30.0  1
+ ACQ  Var_15    C8    N9   C1'  C2'   -58.60  30.0  2
+ ACQ  Var_16    C4    N9   C1'  C2'   125.40  30.0  2
+ ACQ  Var_17    C1'   O4'  C4'  C5'   148.73  30.0  1
+ ACQ  Var_18    C2'   C3'  C4'  C5'  -157.65  30.0  1
+ ACQ  Var_19    O2'   C2'  C3'  C4'   -81.87  30.0  1
+ ACQ  Var_20    O3'   C3'  C4'  O4'  -159.14  30.0  1
+ ACQ  Var_21    O2'   C2'  C1'  O4'    92.09  30.0  1
+ ACQ  Var_22    C1'   C2'  C3'  O3'   153.37  30.0  1
+ ACQ  Var_23    N9    C1'  C2'  O2'  -147.14  30.0  1
+ ACQ  Var_24    H1'   C1'  O4'  C4'   119.96  30.0  1
+ ACQ  Var_25    H2'   C2'  C3'  C4'   153.70  30.0  1
+ ACQ  Var_26    H3'   C3'  C4'  O4'    78.57  30.0  1
+ ACQ  Var_27    H4'   C4'  C3'  C2'    82.36  30.0  1
+ ACQ  Var_28    O4'   C4'  C5'  O5'   -59.40  30.0  3
+ ACQ  Var_29    C3'   C4'  C5'  O5'    59.44  30.0  3
+ ACQ  Var_30    O3'   C3'  C4'  C5'    79.27  30.0  1
+ ACQ  Var_31    O2'   C2'  C3'  O3'    37.04  30.0  1
+ ACQ  Var_32    HO3'  O3'  C3'  C4'  -166.83  30.0  3
+ ACQ  Var_33    H5'1  C5'  C4'  O4'  -178.14  30.0  1
+ ACQ  Var_34    H5'2  C5'  C4'  O4'    62.96  30.0  1
+ ACQ  Var_35    HO2'  O2'  C2'  C3'  -174.18  30.0  3
+ ACQ  Var_36    PD    O3G  PG   O1G    53.42  30.0  3
+ ACQ  Var_37    PD    O3G  PG   O2G   177.26  30.0  3
+ ACQ  Var_38    PA    O3A  PB   O1B    60.88  30.0  3
+ ACQ  Var_39    PA    O3A  PB   O2B  -176.30  30.0  3
+ ACQ  Var_40    PD    O3G  PG   C3B   -70.89  30.0  3
+ ACQ  Var_41    PA    O3A  PB   C3B   -64.15  30.0  3
+ ACQ  Var_42    C5'   O5'  PA   O1A   -19.69  30.0  3
+ ACQ  Var_43    C5'   O5'  PA   O2A   105.79  30.0  3
+ ACQ  Var_44    C5'   O5'  PA   O3A  -142.94  30.0  3
+ ACQ  Var_45    HOG2  O2G  PG   O1G  -143.21  30.0  3
+ ACQ  Var_46    HOD2  O2D  PD   O3G  -113.98  30.0  3
+ ACQ  Var_47    HOD3  O3D  PD   O3G  -178.32  30.0  3
+ ACQ  Var_48    HOB2  O2B  PB   O1B  -177.24  30.0  3
+ ACQ  Var_49    HOA2  O2A  PA   O1A   172.62  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

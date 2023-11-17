@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KXN  KXN  (2R,3S)-2-(3,4-dihydroxyphenyl)-3,4-dihydro-2H-chromene-3,5,7-triol  ligand  35  21  .  2022-03-22  2022-07-25
+ KXN  KXN  (2R,3S)-2-(3,4-dihydroxyphenyl)-3,4-dihydro-2H-chromene-3,5,7-triol  ligand  35  21  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KXN
@@ -197,36 +198,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KXN  CONST_01  C91  C96  C95  C94    0.00   0.0  0
- KXN  CONST_02  C91  C92  C93  C94    0.00   0.0  0
- KXN  CONST_03  C96  C95  C94  C93    0.00   0.0  0
- KXN  CONST_04  C96  C91  C92  C93    0.00   0.0  0
- KXN  CONST_05  C95  C94  C93  C92    0.00   0.0  0
- KXN  CONST_06  C95  C96  C91  C92    0.00   0.0  0
- KXN  CONST_07  C7   C6   C5   C10    0.00   0.0  0
- KXN  CONST_08  C7   C8   C9   C10    0.00   0.0  0
- KXN  CONST_09  C6   C5   C10  C9     0.00   0.0  0
- KXN  CONST_10  C6   C7   C8   C9     0.00   0.0  0
- KXN  CONST_11  C5   C10  C9   C8     0.00   0.0  0
- KXN  CONST_12  C5   C6   C7   C8     0.00   0.0  0
- KXN  CONST_13  C2   C91  C92  C93  180.00   0.0  0
- KXN  CONST_14  C2   C91  C96  C95  180.00   0.0  0
- KXN  CONST_15  C96  C95  C94  O94  180.00   0.0  0
- KXN  CONST_16  C92  C93  C94  O94  180.00   0.0  0
- KXN  CONST_17  C95  C94  C93  O93  180.00   0.0  0
- KXN  CONST_18  C91  C92  C93  O93  180.00   0.0  0
- KXN  CONST_19  O51  C5   C10  C4     0.00   0.0  0
- KXN  CONST_20  O51  C5   C10  C9   180.00   0.0  0
- KXN  CONST_21  O71  C7   C8   C9   180.00   0.0  0
- KXN  CONST_22  O71  C7   C6   C5   180.00   0.0  0
- KXN  CONST_23  C7   C6   C5   O51  180.00   0.0  0
- KXN  CONST_24  H96  C96  C95  C94  180.00   0.0  0
- KXN  CONST_25  H92  C92  C93  C94  180.00   0.0  0
- KXN  CONST_26  H95  C95  C94  C93  180.00   0.0  0
- KXN  CONST_27  H8   C8   C9   O1     0.00   0.0  0
- KXN  CONST_28  H6   C6   C5   C10  180.00   0.0  0
- KXN  Var_01    C10  C9   O1   C2   -16.58  30.0  1
- KXN  Var_02    C5   C10  C4   C3   165.08  30.0  1
+ KXN  CONST_01  C91   C96  C95  C94     0.00   0.0  0
+ KXN  CONST_02  C91   C92  C93  C94     0.00   0.0  0
+ KXN  CONST_03  C96   C95  C94  C93     0.00   0.0  0
+ KXN  CONST_04  C96   C91  C92  C93     0.00   0.0  0
+ KXN  CONST_05  C95   C94  C93  C92     0.00   0.0  0
+ KXN  CONST_06  C95   C96  C91  C92     0.00   0.0  0
+ KXN  CONST_07  C7    C6   C5   C10     0.00   0.0  0
+ KXN  CONST_08  C7    C8   C9   C10     0.00   0.0  0
+ KXN  CONST_09  C6    C5   C10  C9      0.00   0.0  0
+ KXN  CONST_10  C6    C7   C8   C9      0.00   0.0  0
+ KXN  CONST_11  C5    C10  C9   C8      0.00   0.0  0
+ KXN  CONST_12  C5    C6   C7   C8      0.00   0.0  0
+ KXN  CONST_13  C2    C91  C92  C93   180.00   0.0  0
+ KXN  CONST_14  C2    C91  C96  C95   180.00   0.0  0
+ KXN  CONST_15  C96   C95  C94  O94   180.00   0.0  0
+ KXN  CONST_16  C92   C93  C94  O94   180.00   0.0  0
+ KXN  CONST_17  C95   C94  C93  O93   180.00   0.0  0
+ KXN  CONST_18  C91   C92  C93  O93   180.00   0.0  0
+ KXN  CONST_19  O51   C5   C10  C4      0.00   0.0  0
+ KXN  CONST_20  O51   C5   C10  C9    180.00   0.0  0
+ KXN  CONST_21  O71   C7   C8   C9    180.00   0.0  0
+ KXN  CONST_22  O71   C7   C6   C5    180.00   0.0  0
+ KXN  CONST_23  C7    C6   C5   O51   180.00   0.0  0
+ KXN  CONST_24  H96   C96  C95  C94   180.00   0.0  0
+ KXN  CONST_25  H92   C92  C93  C94   180.00   0.0  0
+ KXN  CONST_26  H95   C95  C94  C93   180.00   0.0  0
+ KXN  CONST_27  H8    C8   C9   O1      0.00   0.0  0
+ KXN  CONST_28  H6    C6   C5   C10   180.00   0.0  0
+ KXN  Var_01    C10   C9   O1   C2    -16.58  30.0  1
+ KXN  Var_02    C5    C10  C4   C3    165.08  30.0  1
+ KXN  Var_03    O1    C2   C91  C92   -46.27  30.0  2
+ KXN  Var_04    C3    C2   C91  C92    74.69  30.0  2
+ KXN  Var_05    O1    C2   C91  C96   137.50  30.0  2
+ KXN  Var_06    C3    C2   C91  C96  -101.54  30.0  2
+ KXN  Var_07    C9    O1   C2   C91   171.37  30.0  1
+ KXN  Var_08    C4    C3   C2   C91   176.55  30.0  1
+ KXN  Var_09    C10   C4   C3   C2     44.77  30.0  1
+ KXN  Var_10    C4    C3   C2   O1    -63.27  30.0  1
+ KXN  Var_11    C9    O1   C2   C3     48.94  30.0  1
+ KXN  Var_12    O3    C3   C2   C91    57.22  30.0  1
+ KXN  Var_13    O3    C3   C2   O1    177.40  30.0  1
+ KXN  Var_14    C10   C4   C3   O3    165.92  30.0  1
+ KXN  Var_15    H2    C2   C91  C92  -165.37  30.0  2
+ KXN  Var_16    H3    C3   C2   C91   -64.98  30.0  1
+ KXN  Var_17    H4    C4   C3   C2    166.97  30.0  1
+ KXN  Var_18    H4A   C4   C3   C2    -76.76  30.0  1
+ KXN  Var_19    HO93  O93  C93  C94  -179.99  30.0  2
+ KXN  Var_20    HO94  O94  C94  C93    -1.55  30.0  2
+ KXN  Var_21    HO3   O3   C3   C2    -65.85  30.0  3
+ KXN  Var_22    HO51  O51  C5   C10  -179.47  30.0  2
+ KXN  Var_23    HO71  O71  C7   C8   -178.89  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

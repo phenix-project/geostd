@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MJO  MJO  "N-(beta-L-Fucopyranosyl)-biphenyl-3-carboxamide"  ligand  46  25  .  2023-10-03  2023-10-03
+ MJO  MJO  N-(beta-L-Fucopyranosyl)-biphenyl-3-carboxamide  ligand  46  25  .  2023-10-03  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_MJO
@@ -249,46 +250,84 @@ _chem_comp_tor.period
  MJO  CONST_06  C13  C8   C9   C10     0.00   0.0  0
  MJO  CONST_07  C13  C12  C11  C10     0.00   0.0  0
  MJO  CONST_08  C14  C12  C11  C10   180.00   0.0  0
- MJO  CONST_11  C18  C20  C14  C12   180.00   0.0  0
- MJO  CONST_12  C16  C15  C14  C12   180.00   0.0  0
- MJO  CONST_13  C17  C18  C20  C14     0.00   0.0  0
- MJO  CONST_14  C17  C16  C15  C14     0.00   0.0  0
- MJO  CONST_16  C18  C20  C14  C15     0.00   0.0  0
- MJO  CONST_17  C18  C17  C16  C15     0.00   0.0  0
- MJO  CONST_18  C20  C14  C15  C16     0.00   0.0  0
- MJO  CONST_19  C20  C18  C17  C16     0.00   0.0  0
- MJO  CONST_21  C12  C13  C8   C7    180.00   0.0  0
- MJO  CONST_22  C10  C9   C8   C7    180.00   0.0  0
- MJO  CONST_23  H14  C10  C9   C8    180.00   0.0  0
- MJO  CONST_24  H21  C13  C8   C9    180.00   0.0  0
- MJO  CONST_25  H15  C11  C10  C9    180.00   0.0  0
- MJO  CONST_26  H21  C13  C12  C11   180.00   0.0  0
- MJO  CONST_27  H13  C9   C10  C11   180.00   0.0  0
- MJO  CONST_28  H20  C20  C14  C12     0.00   0.0  0
- MJO  CONST_29  H16  C15  C14  C12     0.00   0.0  0
- MJO  CONST_30  H14  C10  C11  C12   180.00   0.0  0
- MJO  CONST_31  H21  C13  C12  C14     0.00   0.0  0
- MJO  CONST_32  H15  C11  C12  C14     0.00   0.0  0
- MJO  CONST_33  H19  C18  C20  C14   180.00   0.0  0
- MJO  CONST_34  H17  C16  C15  C14   180.00   0.0  0
- MJO  CONST_35  H20  C20  C14  C15   180.00   0.0  0
- MJO  CONST_36  H18  C17  C16  C15   180.00   0.0  0
- MJO  CONST_37  H19  C18  C17  C16   180.00   0.0  0
- MJO  CONST_38  H20  C20  C18  C17   180.00   0.0  0
- MJO  CONST_39  H16  C15  C16  C17   180.00   0.0  0
- MJO  CONST_40  H17  C16  C17  C18   180.00   0.0  0
- MJO  CONST_41  H16  C15  C14  C20   180.00   0.0  0
- MJO  CONST_42  H18  C17  C18  C20   180.00   0.0  0
- MJO  CONST_43  H13  C9   C8   C13   180.00   0.0  0
- MJO  CONST_44  H15  C11  C12  C13   180.00   0.0  0
- MJO  CONST_45  C8   C7   N1   C1    180.00   0.0  0
- MJO  CONST_46  O6   C7   N1   C1      0.00   0.0  0
- MJO  CONST_47  H12  N1   C7   C8      0.00   0.0  0
- MJO  CONST_48  H12  N1   C7   O6    180.00   0.0  0
+ MJO  CONST_09  C18  C20  C14  C12   180.00   0.0  0
+ MJO  CONST_10  C16  C15  C14  C12   180.00   0.0  0
+ MJO  CONST_11  C17  C18  C20  C14     0.00   0.0  0
+ MJO  CONST_12  C17  C16  C15  C14     0.00   0.0  0
+ MJO  CONST_13  C18  C20  C14  C15     0.00   0.0  0
+ MJO  CONST_14  C18  C17  C16  C15     0.00   0.0  0
+ MJO  CONST_15  C20  C14  C15  C16     0.00   0.0  0
+ MJO  CONST_16  C20  C18  C17  C16     0.00   0.0  0
+ MJO  CONST_17  C12  C13  C8   C7    180.00   0.0  0
+ MJO  CONST_18  C10  C9   C8   C7    180.00   0.0  0
+ MJO  CONST_19  H14  C10  C9   C8    180.00   0.0  0
+ MJO  CONST_20  H21  C13  C8   C9    180.00   0.0  0
+ MJO  CONST_21  H15  C11  C10  C9    180.00   0.0  0
+ MJO  CONST_22  H21  C13  C12  C11   180.00   0.0  0
+ MJO  CONST_23  H13  C9   C10  C11   180.00   0.0  0
+ MJO  CONST_24  H20  C20  C14  C12     0.00   0.0  0
+ MJO  CONST_25  H16  C15  C14  C12     0.00   0.0  0
+ MJO  CONST_26  H14  C10  C11  C12   180.00   0.0  0
+ MJO  CONST_27  H21  C13  C12  C14     0.00   0.0  0
+ MJO  CONST_28  H15  C11  C12  C14     0.00   0.0  0
+ MJO  CONST_29  H19  C18  C20  C14   180.00   0.0  0
+ MJO  CONST_30  H17  C16  C15  C14   180.00   0.0  0
+ MJO  CONST_31  H20  C20  C14  C15   180.00   0.0  0
+ MJO  CONST_32  H18  C17  C16  C15   180.00   0.0  0
+ MJO  CONST_33  H19  C18  C17  C16   180.00   0.0  0
+ MJO  CONST_34  H20  C20  C18  C17   180.00   0.0  0
+ MJO  CONST_35  H16  C15  C16  C17   180.00   0.0  0
+ MJO  CONST_36  H17  C16  C17  C18   180.00   0.0  0
+ MJO  CONST_37  H16  C15  C14  C20   180.00   0.0  0
+ MJO  CONST_38  H18  C17  C18  C20   180.00   0.0  0
+ MJO  CONST_39  H13  C9   C8   C13   180.00   0.0  0
+ MJO  CONST_40  H15  C11  C12  C13   180.00   0.0  0
+ MJO  CONST_41  C8   C7   N1   C1    180.00   0.0  0
+ MJO  CONST_42  O6   C7   N1   C1      0.00   0.0  0
+ MJO  CONST_43  H12  N1   C7   C8      0.00   0.0  0
+ MJO  CONST_44  H12  N1   C7   O6    180.00   0.0  0
  MJO  Var_01    C13  C8   C7   N1     30.67  30.0  2
  MJO  Var_02    C9   C8   C7   N1   -150.35  30.0  2
  MJO  Var_03    C13  C8   C7   O6   -151.09  30.0  2
  MJO  Var_04    C9   C8   C7   O6     27.89  30.0  2
+ MJO  Var_05    C2   C3   C4   C5    -54.66  30.0  1
+ MJO  Var_06    C2   C1   O5   C5     62.20  30.0  1
+ MJO  Var_07    C1   C2   C3   C4     54.85  30.0  1
+ MJO  Var_08    C1   O5   C5   C4    -61.96  30.0  1
+ MJO  Var_09    O5   C5   C4   C3     56.69  30.0  1
+ MJO  Var_10    O5   C1   C2   C3    -57.22  30.0  1
+ MJO  Var_11    C20  C14  C12  C11  -141.32  30.0  2
+ MJO  Var_12    C15  C14  C12  C11    38.63  30.0  2
+ MJO  Var_13    C13  C12  C14  C15  -141.55  30.0  2
+ MJO  Var_14    C13  C12  C14  C20    38.50  30.0  2
+ MJO  Var_15    C3   C4   C5   C6    177.77  30.0  1
+ MJO  Var_16    C1   O5   C5   C6    173.76  30.0  1
+ MJO  Var_17    O3   C3   C4   C5   -178.86  30.0  1
+ MJO  Var_18    N1   C1   O5   C5   -175.82  30.0  1
+ MJO  Var_19    O2   C2   C3   C4    175.12  30.0  1
+ MJO  Var_20    N1   C1   C2   C3   -177.80  30.0  1
+ MJO  Var_21    O4   C4   C3   C2     68.07  30.0  1
+ MJO  Var_22    O3   C3   C2   C1    177.37  30.0  1
+ MJO  Var_23    O4   C4   C5   O5    -63.52  30.0  1
+ MJO  Var_24    O2   C2   C1   O5   -174.95  30.0  1
+ MJO  Var_25    H6   C3   C4   C5     61.40  30.0  1
+ MJO  Var_26    H8   C1   O5   C5    -57.50  30.0  1
+ MJO  Var_27    H7   C2   C3   C4    -63.88  30.0  1
+ MJO  Var_28    H4   C5   C4   C3    -62.65  30.0  1
+ MJO  Var_29    H5   C4   C3   C2   -171.03  30.0  1
+ MJO  Var_30    O4   C4   C5   C6     57.56  30.0  1
+ MJO  Var_31    C7   N1   C1   C2   -149.77  30.0  3
+ MJO  Var_32    C7   N1   C1   O5     88.52  30.0  3
+ MJO  Var_33    O3   C3   C2   O2    -62.37  30.0  1
+ MJO  Var_34    N1   C1   C2   O2     64.47  30.0  1
+ MJO  Var_35    O4   C4   C3   O3    -56.12  30.0  1
+ MJO  Var_36    H11  O4   C4   C5    -75.10  30.0  3
+ MJO  Var_37    H10  O3   C3   C4   -178.15  30.0  3
+ MJO  Var_38    H1   C6   C5   C4    175.78  30.0  3
+ MJO  Var_39    H2   C6   C5   C4    -63.81  30.0  3
+ MJO  Var_40    H3   C6   C5   C4     56.70  30.0  3
+ MJO  Var_41    H9   O2   C2   C3    161.11  30.0  3
+ MJO  Var_42    H12  N1   C1   C2     34.34  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

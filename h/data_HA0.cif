@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HA0  HA0  '(2R)-2-[(1-{[(1R)-1-carboxy-2-(5-phenyl-1,3-oxazol-2-yl)ethyl]carbamoyl}cyclopentyl)methyl]pentanoic acid'  ligand  60  32  .  2021-08-11  2021-08-11  
+ HA0  HA0  '(2R)-2-[(1-{[(1R)-1-carboxy-2-(5-phenyl-1,3-oxazol-2-yl)ethyl]carbamoyl}cyclopentyl)methyl]pentanoic acid'  ligand  60  32  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HA0
@@ -300,36 +301,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HA0  CONST_01  CG3  O6   CZ1  N3     0.00   0.0  0
- HA0  CONST_02  O6   CG3  CB   N3     0.00   0.0  0
- HA0  CONST_03  CD2  CG3  CB   N3   180.00   0.0  0
- HA0  CONST_04  CB   N3   CZ1  O6     0.00   0.0  0
- HA0  CONST_07  CZ1  O6   CG3  CB     0.00   0.0  0
- HA0  CONST_10  CZ3  CE3  CD2  C17    0.00   0.0  0
- HA0  CONST_11  CZ3  C21  C20  C17    0.00   0.0  0
- HA0  CONST_12  CG3  CD2  C17  C20  180.00   0.0  0
- HA0  CONST_13  CE3  CD2  C17  C20    0.00   0.0  0
- HA0  CONST_14  CE3  CZ3  C21  C20    0.00   0.0  0
- HA0  CONST_15  CD2  C17  C20  C21    0.00   0.0  0
- HA0  CONST_16  CD2  CE3  CZ3  C21    0.00   0.0  0
- HA0  CONST_17  CZ1  O6   CG3  CD2  180.00   0.0  0
- HA0  CONST_18  CZ1  N3   CB   CG3    0.00   0.0  0
- HA0  CONST_19  CZ3  CE3  CD2  CG3  180.00   0.0  0
- HA0  CONST_20  CH   CZ1  N3   CB   180.00   0.0  0
- HA0  CONST_21  CG3  O6   CZ1  CH   180.00   0.0  0
- HA0  CONST_22  HB   CB   CG3  O6   180.00   0.0  0
- HA0  CONST_23  HE3  CE3  CD2  C17  180.00   0.0  0
- HA0  CONST_24  H21  C21  C20  C17  180.00   0.0  0
- HA0  CONST_25  HZ3  CZ3  C21  C20  180.00   0.0  0
- HA0  CONST_26  H17  C17  C20  C21  180.00   0.0  0
- HA0  CONST_27  H20  C20  C17  CD2  180.00   0.0  0
- HA0  CONST_29  HN   N    C    CA1    0.00   0.0  0
- HA0  Var_01    C5   CG2  CG1  C4     4.56  30.0  1
- HA0  Var_02    CG2  CG1  C4   CA1  -29.52  30.0  1
- HA0  Var_03    CG1  CG2  C5   CA1   22.25  30.0  1
- HA0  Var_04    C11  CH   CZ1  N3    89.93  30.0  1
- HA0  Var_05    CD   CG   CB1  CA   174.30  30.0  1
- HA0  Var_06    HD   CD   CG   CB1  -60.85  30.0  3
+ HA0  CONST_01  CG3   O6   CZ1  N3      0.00   0.0  0
+ HA0  CONST_02  O6    CG3  CB   N3      0.00   0.0  0
+ HA0  CONST_03  CD2   CG3  CB   N3    180.00   0.0  0
+ HA0  CONST_04  CB    N3   CZ1  O6      0.00   0.0  0
+ HA0  CONST_05  CZ1   O6   CG3  CB      0.00   0.0  0
+ HA0  CONST_06  CZ3   CE3  CD2  C17     0.00   0.0  0
+ HA0  CONST_07  CZ3   C21  C20  C17     0.00   0.0  0
+ HA0  CONST_08  CG3   CD2  C17  C20   180.00   0.0  0
+ HA0  CONST_09  CE3   CD2  C17  C20     0.00   0.0  0
+ HA0  CONST_10  CE3   CZ3  C21  C20     0.00   0.0  0
+ HA0  CONST_11  CD2   C17  C20  C21     0.00   0.0  0
+ HA0  CONST_12  CD2   CE3  CZ3  C21     0.00   0.0  0
+ HA0  CONST_13  CZ1   O6   CG3  CD2   180.00   0.0  0
+ HA0  CONST_14  CZ1   N3   CB   CG3     0.00   0.0  0
+ HA0  CONST_15  CZ3   CE3  CD2  CG3   180.00   0.0  0
+ HA0  CONST_16  CH    CZ1  N3   CB    180.00   0.0  0
+ HA0  CONST_17  CG3   O6   CZ1  CH    180.00   0.0  0
+ HA0  CONST_18  HB    CB   CG3  O6    180.00   0.0  0
+ HA0  CONST_19  HE3   CE3  CD2  C17   180.00   0.0  0
+ HA0  CONST_20  H21   C21  C20  C17   180.00   0.0  0
+ HA0  CONST_21  HZ3   CZ3  C21  C20   180.00   0.0  0
+ HA0  CONST_22  H17   C17  C20  C21   180.00   0.0  0
+ HA0  CONST_23  H20   C20  C17  CD2   180.00   0.0  0
+ HA0  CONST_24  HN    N    C    CA1     0.00   0.0  0
+ HA0  Var_01    C5    CG2  CG1  C4      4.56  30.0  1
+ HA0  Var_02    CG2   CG1  C4   CA1   -29.52  30.0  1
+ HA0  Var_03    CG1   CG2  C5   CA1    22.25  30.0  1
+ HA0  Var_04    C11   CH   CZ1  N3     89.93  30.0  1
+ HA0  Var_05    CD    CG   CB1  CA    174.30  30.0  1
+ HA0  Var_06    HD    CD   CG   CB1   -60.85  30.0  3
+ HA0  Var_07    CG2   C5   CA1  C4    -39.69  30.0  1
+ HA0  Var_08    CG1   C4   CA1  C5     42.54  30.0  1
+ HA0  Var_09    C17   CD2  CG3  O6    160.98  30.0  2
+ HA0  Var_10    CE3   CD2  CG3  O6    -18.53  30.0  2
+ HA0  Var_11    C17   CD2  CG3  CB    -19.51  30.0  2
+ HA0  Var_12    CE3   CD2  CG3  CB    160.98  30.0  2
+ HA0  Var_13    CG1   C4   CA1  C     -74.05  30.0  1
+ HA0  Var_14    CG2   C5   CA1  C      77.13  30.0  1
+ HA0  Var_15    CH2   CA1  C4   CG1   162.73  30.0  1
+ HA0  Var_16    CH2   CA1  C5   CG2  -158.67  30.0  1
+ HA0  Var_17    H5    C5   CA1  C4     77.63  30.0  1
+ HA0  Var_18    H5A   C5   CA1  C4   -164.11  30.0  1
+ HA0  Var_19    H4    C4   CA1  C5    166.70  30.0  1
+ HA0  Var_20    H4A   C4   CA1  C5    -74.82  30.0  1
+ HA0  Var_21    C4    CA1  C    N     -52.50  30.0  2
+ HA0  Var_22    C5    CA1  C    N    -162.75  30.0  2
+ HA0  Var_23    C4    CA1  C    O     127.53  30.0  2
+ HA0  Var_24    C5    CA1  C    O      17.28  30.0  2
+ HA0  Var_25    CA    CH2  CA1  C4   -169.10  30.0  2
+ HA0  Var_26    CA    CH2  CA1  C5    -56.75  30.0  2
+ HA0  Var_27    HH2   CH2  CA1  C4     66.04  30.0  2
+ HA0  Var_28    HH2A  CH2  CA1  C4    -48.52  30.0  2
+ HA0  Var_29    CA    CH2  CA1  C      67.48  30.0  2
+ HA0  Var_30    CH2   CA1  C    N      71.41  30.0  2
+ HA0  Var_31    CZ1   CH   C11  N      61.68  30.0  3
+ HA0  Var_32    CH2   CA1  C    O    -108.55  30.0  2
+ HA0  Var_33    CZ1   CH   C11  C1   -176.54  30.0  3
+ HA0  Var_34    CB2   CA   CH2  CA1   -69.27  30.0  1
+ HA0  Var_35    CB1   CA   CH2  CA1   168.76  30.0  1
+ HA0  Var_36    HA    CA   CH2  CA1    52.10  30.0  1
+ HA0  Var_37    H11   C11  CH   CZ1   -59.48  30.0  1
+ HA0  Var_38    C1    C11  N    C     146.75  30.0  3
+ HA0  Var_39    CH    C11  N    C     -91.98  30.0  3
+ HA0  Var_40    O1    C1   C11  N       6.74  30.0  3
+ HA0  Var_41    OXT   C1   C11  N    -174.48  30.0  3
+ HA0  Var_42    CH    C11  C1   OXT    61.69  30.0  2
+ HA0  Var_43    O1    C1   C11  CH   -117.09  30.0  3
+ HA0  Var_44    OG1   CB2  CA   CB1    74.02  30.0  2
+ HA0  Var_45    OG2   CB2  CA   CB1  -102.76  30.0  2
+ HA0  Var_46    CG    CB1  CA   CB2    57.22  30.0  2
+ HA0  Var_47    CH2   CA   CB2  OG1   -47.58  30.0  2
+ HA0  Var_48    CH2   CA   CB2  OG2   135.64  30.0  2
+ HA0  Var_49    CG    CB1  CA   CH2  -177.64  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

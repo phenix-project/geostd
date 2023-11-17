@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SM4  SM4  '(2E)-3-(3-{(R)-(dihydroxyboranyl)[(thiophen-2-ylacetyl)amino]methyl}phenyl)prop-2-enoic acid'  ligand  39  24  .  2021-08-23  2021-08-23  
+ SM4  SM4  '(2E)-3-(3-{(R)-(dihydroxyboranyl)[(thiophen-2-ylacetyl)amino]methyl}phenyl)prop-2-enoic acid'  ligand  39  24  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SM4
@@ -207,38 +208,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SM4  CONST_01  CAM  CAN  CAS  CAR     0.00   0.0  0
- SM4  CONST_02  CAM  CAL  CAQ  CAR     0.00   0.0  0
- SM4  CONST_03  CAN  CAS  CAR  CAQ     0.00   0.0  0
- SM4  CONST_04  CAN  CAM  CAL  CAQ     0.00   0.0  0
- SM4  CONST_05  CAL  CAQ  CAR  CAS     0.00   0.0  0
- SM4  CONST_06  CAL  CAM  CAN  CAS     0.00   0.0  0
- SM4  CONST_07  CAB  CAC  CAF  CAE     0.00   0.0  0
- SM4  CONST_08  CAC  CAB  SAD  CAE     0.00   0.0  0
- SM4  CONST_09  CAB  SAD  CAE  CAF     0.00   0.0  0
- SM4  CONST_10  SAD  CAB  CAC  CAF     0.00   0.0  0
- SM4  CONST_11  SAD  CAE  CAF  CAC     0.00   0.0  0
- SM4  CONST_12  CAN  CAS  CAR  CAU   180.00   0.0  0
- SM4  CONST_13  CAL  CAQ  CAR  CAU   180.00   0.0  0
- SM4  CONST_14  CAK  CAL  CAQ  CAR   180.00   0.0  0
- SM4  CONST_15  CAK  CAL  CAM  CAN   180.00   0.0  0
- SM4  CONST_16  CAC  CAF  CAE  CAG   180.00   0.0  0
- SM4  CONST_17  CAB  SAD  CAE  CAG   180.00   0.0  0
- SM4  CONST_18  HAN  CAN  CAS  CAR   180.00   0.0  0
- SM4  CONST_19  HAS  CAS  CAR  CAQ   180.00   0.0  0
- SM4  CONST_20  HAM  CAM  CAL  CAQ   180.00   0.0  0
- SM4  CONST_21  HAQ  CAQ  CAR  CAS   180.00   0.0  0
- SM4  CONST_22  HAC  CAC  CAF  CAE   180.00   0.0  0
- SM4  CONST_23  HAB  CAB  SAD  CAE   180.00   0.0  0
- SM4  CONST_24  HAF  CAF  CAC  CAB   180.00   0.0  0
- SM4  CONST_25  OAI  CAH  N    CAK     0.00   0.0  0
- SM4  CONST_26  CAG  CAH  N    CAK   180.00   0.0  0
- SM4  CONST_27  HN   N    CAH  OAI   180.00   0.0  0
- SM4  Var_01    CAS  CAR  CAU  C21     2.84  30.0  2
- SM4  Var_02    CAF  CAE  CAG  CAH  -106.55  30.0  2
- SM4  Var_03    CAR  CAU  C21  C22   178.47   0.0  2
- SM4  Var_04    CAE  CAG  CAH  N      68.42  30.0  3
- SM4  Var_05    CAU  C21  C22  O24    -3.13  30.0  2
+ SM4  CONST_01  CAM   CAN  CAS  CAR     0.00   0.0  0
+ SM4  CONST_02  CAM   CAL  CAQ  CAR     0.00   0.0  0
+ SM4  CONST_03  CAN   CAS  CAR  CAQ     0.00   0.0  0
+ SM4  CONST_04  CAN   CAM  CAL  CAQ     0.00   0.0  0
+ SM4  CONST_05  CAL   CAQ  CAR  CAS     0.00   0.0  0
+ SM4  CONST_06  CAL   CAM  CAN  CAS     0.00   0.0  0
+ SM4  CONST_07  CAB   CAC  CAF  CAE     0.00   0.0  0
+ SM4  CONST_08  CAC   CAB  SAD  CAE     0.00   0.0  0
+ SM4  CONST_09  CAB   SAD  CAE  CAF     0.00   0.0  0
+ SM4  CONST_10  SAD   CAB  CAC  CAF     0.00   0.0  0
+ SM4  CONST_11  SAD   CAE  CAF  CAC     0.00   0.0  0
+ SM4  CONST_12  CAN   CAS  CAR  CAU   180.00   0.0  0
+ SM4  CONST_13  CAL   CAQ  CAR  CAU   180.00   0.0  0
+ SM4  CONST_14  CAK   CAL  CAQ  CAR   180.00   0.0  0
+ SM4  CONST_15  CAK   CAL  CAM  CAN   180.00   0.0  0
+ SM4  CONST_16  CAC   CAF  CAE  CAG   180.00   0.0  0
+ SM4  CONST_17  CAB   SAD  CAE  CAG   180.00   0.0  0
+ SM4  CONST_18  HAN   CAN  CAS  CAR   180.00   0.0  0
+ SM4  CONST_19  HAS   CAS  CAR  CAQ   180.00   0.0  0
+ SM4  CONST_20  HAM   CAM  CAL  CAQ   180.00   0.0  0
+ SM4  CONST_21  HAQ   CAQ  CAR  CAS   180.00   0.0  0
+ SM4  CONST_22  HAC   CAC  CAF  CAE   180.00   0.0  0
+ SM4  CONST_23  HAB   CAB  SAD  CAE   180.00   0.0  0
+ SM4  CONST_24  HAF   CAF  CAC  CAB   180.00   0.0  0
+ SM4  CONST_25  OAI   CAH  N    CAK     0.00   0.0  0
+ SM4  CONST_26  CAG   CAH  N    CAK   180.00   0.0  0
+ SM4  CONST_27  HN    N    CAH  OAI   180.00   0.0  0
+ SM4  Var_01    CAS   CAR  CAU  C21     2.84  30.0  2
+ SM4  Var_02    CAF   CAE  CAG  CAH  -106.55  30.0  2
+ SM4  Var_03    CAR   CAU  C21  C22   178.47   0.0  2
+ SM4  Var_04    CAE   CAG  CAH  N      68.42  30.0  3
+ SM4  Var_05    CAU   C21  C22  O24    -3.13  30.0  2
+ SM4  Var_06    B     CAK  CAL  CAQ   -90.32  30.0  2
+ SM4  Var_07    N     CAK  CAL  CAQ    35.33  30.0  2
+ SM4  Var_08    B     CAK  CAL  CAM    87.45  30.0  2
+ SM4  Var_09    N     CAK  CAL  CAM  -146.91  30.0  2
+ SM4  Var_10    HAK   CAK  CAL  CAQ   155.02  30.0  2
+ SM4  Var_11    OAT   B    CAK  CAL   -37.55  30.0  3
+ SM4  Var_12    OAO   B    CAK  CAL   143.35  30.0  3
+ SM4  Var_13    CAH   N    CAK  CAL    65.58  30.0  3
+ SM4  Var_14    HN    N    CAK  CAL  -102.54  30.0  3
+ SM4  Var_15    CAH   N    CAK  B    -169.34  30.0  3
+ SM4  Var_16    N     CAK  B    OAT  -163.85  30.0  1
+ SM4  Var_17    N     CAK  B    OAO    17.05  30.0  1
+ SM4  Var_18    HOAT  OAT  B    CAK     4.56  30.0  3
+ SM4  Var_19    HOAO  OAO  B    CAK  -179.16  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PRX  PRX  5'-O-[(R)-hydroxy(propoxy)phosphoryl]adenosine  ligand  45  26  .  2022-03-23  2022-03-23
+ PRX  PRX  5'-O-[(R)-hydroxy(propoxy)phosphoryl]adenosine  ligand  45  26  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PRX
@@ -240,38 +241,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PRX  CONST_01  C5    N7   C8   N9     0.00   0.0  0
- PRX  CONST_02  N7    C5   C4   N9     0.00   0.0  0
- PRX  CONST_03  C6    C5   C4   N9   180.00   0.0  0
- PRX  CONST_04  C2    N3   C4   N9   180.00   0.0  0
- PRX  CONST_05  C5    C4   N9   C8     0.00   0.0  0
- PRX  CONST_06  N3    C4   N9   C8   180.00   0.0  0
- PRX  CONST_07  C4    C5   N7   C8     0.00   0.0  0
- PRX  CONST_08  C6    C5   N7   C8   180.00   0.0  0
- PRX  CONST_09  C4    N9   C8   N7     0.00   0.0  0
- PRX  CONST_10  N3    C4   C5   N7   180.00   0.0  0
- PRX  CONST_11  N1    C6   C5   N7   180.00   0.0  0
- PRX  CONST_12  C2    N3   C4   C5     0.00   0.0  0
- PRX  CONST_13  C2    N1   C6   C5     0.00   0.0  0
- PRX  CONST_14  N1    C6   C5   C4     0.00   0.0  0
- PRX  CONST_15  N1    C2   N3   C4     0.00   0.0  0
- PRX  CONST_16  C6    C5   C4   N3     0.00   0.0  0
- PRX  CONST_17  C6    N1   C2   N3     0.00   0.0  0
- PRX  CONST_18  N7    C8   N9   C1'  180.00   0.0  0
- PRX  CONST_19  C5    C4   N9   C1'  180.00   0.0  0
- PRX  CONST_20  N3    C4   N9   C1'    0.00   0.0  0
- PRX  CONST_21  N6    C6   C5   N7     0.00   0.0  0
- PRX  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- PRX  CONST_23  N6    C6   N1   C2   180.00   0.0  0
- PRX  CONST_24  H8    C8   N9   C1'    0.00   0.0  0
- PRX  CONST_25  H3    C2   N3   C4   180.00   0.0  0
- PRX  CONST_26  HN61  N6   C6   C5   180.00   0.0  0
- PRX  CONST_27  HN62  N6   C6   C5     0.00   0.0  0
- PRX  Var_01    O1P   P    O5'  C5'  -40.89  30.0  3
- PRX  Var_02    C2P   C1P  O3P  P    151.25  30.0  3
- PRX  Var_03    C3P   C2P  C1P  O3P   61.15  30.0  3
- PRX  Var_04    H5'1  C5'  O5'  P     85.96  30.0  1
- PRX  Var_05    H3P1  C3P  C2P  C1P  178.63  30.0  3
+ PRX  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ PRX  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ PRX  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ PRX  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ PRX  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ PRX  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ PRX  CONST_07  C4    C5   N7   C8      0.00   0.0  0
+ PRX  CONST_08  C6    C5   N7   C8    180.00   0.0  0
+ PRX  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ PRX  CONST_10  N3    C4   C5   N7    180.00   0.0  0
+ PRX  CONST_11  N1    C6   C5   N7    180.00   0.0  0
+ PRX  CONST_12  C2    N3   C4   C5      0.00   0.0  0
+ PRX  CONST_13  C2    N1   C6   C5      0.00   0.0  0
+ PRX  CONST_14  N1    C6   C5   C4      0.00   0.0  0
+ PRX  CONST_15  N1    C2   N3   C4      0.00   0.0  0
+ PRX  CONST_16  C6    C5   C4   N3      0.00   0.0  0
+ PRX  CONST_17  C6    N1   C2   N3      0.00   0.0  0
+ PRX  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ PRX  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ PRX  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ PRX  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ PRX  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ PRX  CONST_23  N6    C6   N1   C2    180.00   0.0  0
+ PRX  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ PRX  CONST_25  H3    C2   N3   C4    180.00   0.0  0
+ PRX  CONST_26  HN61  N6   C6   C5    180.00   0.0  0
+ PRX  CONST_27  HN62  N6   C6   C5      0.00   0.0  0
+ PRX  Var_01    O1P   P    O5'  C5'   -40.89  30.0  3
+ PRX  Var_02    C2P   C1P  O3P  P     151.25  30.0  3
+ PRX  Var_03    C3P   C2P  C1P  O3P    61.15  30.0  3
+ PRX  Var_04    H5'1  C5'  O5'  P      85.96  30.0  1
+ PRX  Var_05    H3P1  C3P  C2P  C1P   178.63  30.0  3
+ PRX  Var_06    C4'   O4'  C1'  C2'     8.92  30.0  1
+ PRX  Var_07    C8    N9   C1'  C2'  -103.98  30.0  2
+ PRX  Var_08    C4    N9   C1'  C2'    76.14  30.0  2
+ PRX  Var_09    O4'   C4'  C3'  C2'   -33.61  30.0  1
+ PRX  Var_10    C4'   C3'  C2'  C1'    37.49  30.0  1
+ PRX  Var_11    C3'   C4'  O4'  C1'    15.85  30.0  1
+ PRX  Var_12    C3'   C2'  C1'  O4'   -29.67  30.0  1
+ PRX  Var_13    C8    N9   C1'  O4'    14.13  30.0  2
+ PRX  Var_14    C4    N9   C1'  O4'  -165.75  30.0  2
+ PRX  Var_15    N9    C1'  O4'  C4'  -111.91  30.0  1
+ PRX  Var_16    N9    C1'  C2'  C3'    89.86  30.0  1
+ PRX  Var_17    O4'   C1'  C2'  O2'    87.54  30.0  1
+ PRX  Var_18    N9    C1'  C2'  O2'  -152.93  30.0  1
+ PRX  Var_19    C4'   C3'  C2'  O2'   -75.86  30.0  1
+ PRX  Var_20    C5'   C4'  C3'  C2'  -154.07  30.0  1
+ PRX  Var_21    O3'   C3'  C2'  C1'   159.83  30.0  1
+ PRX  Var_22    C5'   C4'  O4'  C1'   138.56  30.0  1
+ PRX  Var_23    O3'   C3'  C4'  O4'  -152.75  30.0  1
+ PRX  Var_24    H4'   C4'  C3'  C2'    83.07  30.0  1
+ PRX  Var_25    H3'   C3'  C2'  C1'   -77.70  30.0  1
+ PRX  Var_26    H1    C2'  C1'  O4'  -149.53  30.0  1
+ PRX  Var_27    H1'   C1'  O4'  C4'   130.34  30.0  1
+ PRX  Var_28    O3'   C3'  C2'  O2'    46.48  30.0  1
+ PRX  Var_29    O5'   C5'  C4'  O4'    64.59  30.0  3
+ PRX  Var_30    O3'   C3'  C4'  C5'    86.79  30.0  1
+ PRX  Var_31    C3'   C4'  C5'  O5'  -178.29  30.0  1
+ PRX  Var_32    H2    O3'  C3'  C2'   168.30  30.0  3
+ PRX  Var_33    H2'   O2'  C2'  C1'  -164.56  30.0  3
+ PRX  Var_34    H5'1  C5'  C4'  O4'  -174.77  30.0  3
+ PRX  Var_35    H5'2  C5'  C4'  O4'   -59.00  30.0  3
+ PRX  Var_36    C1P   O3P  P    O5'    67.50  30.0  3
+ PRX  Var_37    C1P   O3P  P    O1P  -177.86  30.0  3
+ PRX  Var_38    C1P   O3P  P    O2P   -43.41  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

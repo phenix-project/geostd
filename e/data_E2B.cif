@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- E2B  E2B  3-{[(9beta,14beta,16alpha,17alpha)-3,17-dihydroxyestra-1,3,5(10)-trien-16-yl]methyl}benzamide  ligand  61  30  .  2022-07-24  2022-07-26
+ E2B  E2B  3-{[(9beta,14beta,16alpha,17alpha)-3,17-dihydroxyestra-1,3,5(10)-trien-16-yl]methyl}benzamide  ligand  61  30  .  2022-07-24  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_E2B
@@ -313,38 +314,97 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- E2B  CONST_01  C3    C5   C6   C11    0.00   0.0  0
- E2B  CONST_02  C3    C2   C1   C11    0.00   0.0  0
- E2B  CONST_03  C22   C23  C24  C25    0.00   0.0  0
- E2B  CONST_04  C22   C27  C26  C25    0.00   0.0  0
- E2B  CONST_05  C2    C1   C11  C6     0.00   0.0  0
- E2B  CONST_06  C2    C3   C5   C6     0.00   0.0  0
- E2B  CONST_07  C27   C26  C25  C24    0.00   0.0  0
- E2B  CONST_08  C27   C22  C23  C24    0.00   0.0  0
- E2B  CONST_09  C5    C6   C11  C1     0.00   0.0  0
- E2B  CONST_10  C5    C3   C2   C1     0.00   0.0  0
- E2B  CONST_11  C23   C24  C25  C26    0.00   0.0  0
- E2B  CONST_12  C23   C22  C27  C26    0.00   0.0  0
- E2B  CONST_13  C26   C25  C24  C28  180.00   0.0  0
- E2B  CONST_14  C22   C23  C24  C28  180.00   0.0  0
- E2B  CONST_15  O4    C3   C5   C6   180.00   0.0  0
- E2B  CONST_16  C21   C22  C23  C24  180.00   0.0  0
- E2B  CONST_17  O4    C3   C2   C1   180.00   0.0  0
- E2B  CONST_18  C21   C22  C27  C26  180.00   0.0  0
- E2B  CONST_19  H1    C1   C11  C10    0.00   0.0  0
- E2B  CONST_20  H5    C5   C6   C11  180.00   0.0  0
- E2B  CONST_21  H2    C2   C1   C11  180.00   0.0  0
- E2B  CONST_22  H23   C23  C24  C25  180.00   0.0  0
- E2B  CONST_23  H27   C27  C26  C25  180.00   0.0  0
- E2B  CONST_24  H26   C26  C25  C24  180.00   0.0  0
- E2B  CONST_25  H25   C25  C24  C23  180.00   0.0  0
- E2B  CONST_26  HN30  N30  C28  C24    0.00   0.0  0
- E2B  CONST_27  HN3A  N30  C28  C24  180.00   0.0  0
- E2B  Var_01    C6    C7   C8   C9    46.56  30.0  1
- E2B  Var_02    C14   C13  C12  C10  -52.96  30.0  1
- E2B  Var_03    C11   C6   C7   C8   -15.86  30.0  1
- E2B  Var_04    C23   C22  C21  C17   74.41  30.0  2
- E2B  Var_05    C25   C24  C28  N30  -19.65  30.0  2
+ E2B  CONST_01  C3    C5   C6   C11     0.00   0.0  0
+ E2B  CONST_02  C3    C2   C1   C11     0.00   0.0  0
+ E2B  CONST_03  C22   C23  C24  C25     0.00   0.0  0
+ E2B  CONST_04  C22   C27  C26  C25     0.00   0.0  0
+ E2B  CONST_05  C2    C1   C11  C6      0.00   0.0  0
+ E2B  CONST_06  C2    C3   C5   C6      0.00   0.0  0
+ E2B  CONST_07  C27   C26  C25  C24     0.00   0.0  0
+ E2B  CONST_08  C27   C22  C23  C24     0.00   0.0  0
+ E2B  CONST_09  C5    C6   C11  C1      0.00   0.0  0
+ E2B  CONST_10  C5    C3   C2   C1      0.00   0.0  0
+ E2B  CONST_11  C23   C24  C25  C26     0.00   0.0  0
+ E2B  CONST_12  C23   C22  C27  C26     0.00   0.0  0
+ E2B  CONST_13  C26   C25  C24  C28   180.00   0.0  0
+ E2B  CONST_14  C22   C23  C24  C28   180.00   0.0  0
+ E2B  CONST_15  O4    C3   C5   C6    180.00   0.0  0
+ E2B  CONST_16  C21   C22  C23  C24   180.00   0.0  0
+ E2B  CONST_17  O4    C3   C2   C1    180.00   0.0  0
+ E2B  CONST_18  C21   C22  C27  C26   180.00   0.0  0
+ E2B  CONST_19  H1    C1   C11  C10     0.00   0.0  0
+ E2B  CONST_20  H5    C5   C6   C11   180.00   0.0  0
+ E2B  CONST_21  H2    C2   C1   C11   180.00   0.0  0
+ E2B  CONST_22  H23   C23  C24  C25   180.00   0.0  0
+ E2B  CONST_23  H27   C27  C26  C25   180.00   0.0  0
+ E2B  CONST_24  H26   C26  C25  C24   180.00   0.0  0
+ E2B  CONST_25  H25   C25  C24  C23   180.00   0.0  0
+ E2B  CONST_26  HN30  N30  C28  C24     0.00   0.0  0
+ E2B  CONST_27  HN3A  N30  C28  C24   180.00   0.0  0
+ E2B  Var_01    C6    C7   C8   C9     46.56  30.0  1
+ E2B  Var_02    C14   C13  C12  C10   -52.96  30.0  1
+ E2B  Var_03    C11   C6   C7   C8    -15.86  30.0  1
+ E2B  Var_04    C23   C22  C21  C17    74.41  30.0  2
+ E2B  Var_05    C25   C24  C28  N30   -19.65  30.0  2
+ E2B  Var_06    C6    C11  C10  C9    -21.56  30.0  1
+ E2B  Var_07    C1    C11  C10  C9    160.92  30.0  1
+ E2B  Var_08    C13   C12  C10  C9     53.38  30.0  1
+ E2B  Var_09    C13   C14  C15  C9    -60.22  30.0  1
+ E2B  Var_10    C18   C14  C15  C9    179.55  30.0  1
+ E2B  Var_11    C17   C16  C15  C9   -165.45  30.0  1
+ E2B  Var_12    C14   C15  C9   C10    60.31  30.0  1
+ E2B  Var_13    C16   C15  C9   C10  -177.04  30.0  1
+ E2B  Var_14    C7    C8   C9   C10   -65.52  30.0  1
+ E2B  Var_15    C11   C10  C9   C15   175.82  30.0  1
+ E2B  Var_16    C12   C10  C9   C15   -55.56  30.0  1
+ E2B  Var_17    C7    C8   C9   C15   173.79  30.0  1
+ E2B  Var_18    C12   C13  C14  C15    54.63  30.0  1
+ E2B  Var_19    C17   C18  C14  C15   -39.40  30.0  1
+ E2B  Var_20    C18   C17  C16  C15    13.01  30.0  1
+ E2B  Var_21    C11   C10  C9   C8     51.82  30.0  1
+ E2B  Var_22    C12   C10  C9   C8   -179.56  30.0  1
+ E2B  Var_23    C14   C15  C9   C8   -178.44  30.0  1
+ E2B  Var_24    C16   C15  C9   C8    -55.79  30.0  1
+ E2B  Var_25    C17   C16  C15  C14   -38.49  30.0  1
+ E2B  Var_26    C16   C17  C18  C14    16.88  30.0  1
+ E2B  Var_27    C13   C12  C10  C11  -179.18  30.0  1
+ E2B  Var_28    C16   C15  C14  C13   168.50  30.0  1
+ E2B  Var_29    C17   C18  C14  C13  -154.97  30.0  1
+ E2B  Var_30    C18   C14  C15  C16    48.27  30.0  1
+ E2B  Var_31    C12   C10  C11  C6   -149.02  30.0  1
+ E2B  Var_32    C1    C11  C10  C12    33.46  30.0  1
+ E2B  Var_33    C18   C14  C13  C12   164.54  30.0  1
+ E2B  Var_34    C20   C14  C15  C9     61.95  30.0  1
+ E2B  Var_35    O19   C18  C14  C15  -166.03  30.0  1
+ E2B  Var_36    C21   C17  C16  C15   138.75  30.0  1
+ E2B  Var_37    C21   C17  C18  C14  -108.15  30.0  1
+ E2B  Var_38    O19   C18  C14  C13    78.40  30.0  1
+ E2B  Var_39    C20   C14  C15  C16   -69.32  30.0  1
+ E2B  Var_40    O19   C18  C17  C16   141.43  30.0  1
+ E2B  Var_41    C22   C21  C17  C16    60.86  30.0  3
+ E2B  Var_42    C20   C14  C13  C12   -69.65  30.0  1
+ E2B  Var_43    C20   C14  C18  C17    79.88  30.0  1
+ E2B  Var_44    C22   C21  C17  C18  -178.73  30.0  3
+ E2B  Var_45    H12   C12  C10  C9    173.78  30.0  1
+ E2B  Var_46    H12A  C12  C10  C9    -70.30  30.0  1
+ E2B  Var_47    H16   C16  C15  C9    -46.26  30.0  1
+ E2B  Var_48    H16A  C16  C15  C9     72.87  30.0  1
+ E2B  Var_49    H15   C15  C9   C10   -55.73  30.0  1
+ E2B  Var_50    H8    C8   C9   C10    55.80  30.0  1
+ E2B  Var_51    H8A   C8   C9   C10   173.42  30.0  1
+ E2B  Var_52    H10   C10  C9   C15    59.87  30.0  1
+ E2B  Var_53    H18   C18  C14  C15    74.27  30.0  1
+ E2B  Var_54    H17   C17  C16  C15  -102.35  30.0  1
+ E2B  Var_55    H9    C9   C15  C14   -58.04  30.0  1
+ E2B  Var_56    C20   C14  C18  O19   -46.76  30.0  1
+ E2B  Var_57    C21   C17  C18  O19    16.39  30.0  1
+ E2B  Var_58    H20   C20  C14  C15    50.29  30.0  3
+ E2B  Var_59    H20A  C20  C14  C15   170.54  30.0  3
+ E2B  Var_60    H20B  C20  C14  C15   -70.51  30.0  3
+ E2B  Var_61    HO19  O19  C18  C14  -163.43  30.0  3
+ E2B  Var_62    H21   C21  C17  C16  -178.01  30.0  3
+ E2B  Var_63    H21A  C21  C17  C16   -61.08  30.0  3
+ E2B  Var_64    HO4   O4   C3   C5     -1.41  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

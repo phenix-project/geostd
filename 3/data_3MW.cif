@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3MW  3MW  4-amino-N-{(1R)-2-(hydroxyamino)-2-oxo-1-[4-(1H-pyrazol-1-yl)phenyl]ethyl}benzamide  ligand  43  26  .  2021-08-04  2022-09-22
+ 3MW  3MW  4-amino-N-{(1R)-2-(hydroxyamino)-2-oxo-1-[4-(1H-pyrazol-1-yl)phenyl]ethyl}benzamide  ligand  43  26  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3MW
@@ -224,50 +225,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3MW  CONST_01  C06  N07  C11  C10  180.00   0.0  0
- 3MW  CONST_02  N08  N07  C11  C10    0.00   0.0  0
- 3MW  CONST_03  N07  N08  C09  C10    0.00   0.0  0
- 3MW  CONST_04  C24  C23  C22  C21    0.00   0.0  0
- 3MW  CONST_05  C24  C25  C19  C21    0.00   0.0  0
- 3MW  CONST_06  C25  C19  C21  C22    0.00   0.0  0
- 3MW  CONST_07  C25  C24  C23  C22    0.00   0.0  0
- 3MW  CONST_08  C19  C21  C22  C23    0.00   0.0  0
- 3MW  CONST_09  C19  C25  C24  C23    0.00   0.0  0
- 3MW  CONST_10  C06  C05  C04  C03    0.00   0.0  0
- 3MW  CONST_11  C06  C01  C02  C03    0.00   0.0  0
- 3MW  CONST_12  N07  C06  C05  C04  180.00   0.0  0
- 3MW  CONST_13  C01  C06  C05  C04    0.00   0.0  0
- 3MW  CONST_14  C01  C02  C03  C04    0.00   0.0  0
- 3MW  CONST_15  C02  C03  C04  C05    0.00   0.0  0
- 3MW  CONST_18  C02  C01  C06  C05    0.00   0.0  0
- 3MW  CONST_19  N07  C06  C01  C02  180.00   0.0  0
- 3MW  CONST_22  C09  N08  N07  C06  180.00   0.0  0
- 3MW  CONST_23  C09  C10  C11  N07    0.00   0.0  0
- 3MW  CONST_24  C11  C10  C09  N08    0.00   0.0  0
- 3MW  CONST_25  C11  N07  N08  C09    0.00   0.0  0
- 3MW  CONST_26  N26  C23  C22  C21  180.00   0.0  0
- 3MW  CONST_27  C18  C19  C21  C22  180.00   0.0  0
- 3MW  CONST_28  C18  C19  C25  C24  180.00   0.0  0
- 3MW  CONST_29  C25  C24  C23  N26  180.00   0.0  0
- 3MW  CONST_30  C05  C04  C03  C12  180.00   0.0  0
- 3MW  CONST_31  C01  C02  C03  C12  180.00   0.0  0
- 3MW  CONST_32  H7   C25  C19  C21  180.00   0.0  0
- 3MW  CONST_33  H4   C24  C23  C22  180.00   0.0  0
- 3MW  CONST_34  H3   C22  C23  C24  180.00   0.0  0
- 3MW  CONST_35  H2   C21  C22  C23  180.00   0.0  0
- 3MW  CONST_36  H13  C05  C04  C03  180.00   0.0  0
- 3MW  CONST_37  H15  C01  C02  C03  180.00   0.0  0
- 3MW  CONST_38  H14  C02  C03  C04  180.00   0.0  0
- 3MW  CONST_39  H12  C04  C03  C02  180.00   0.0  0
- 3MW  CONST_40  H17  C11  N07  C06    0.00   0.0  0
- 3MW  CONST_41  H1   C10  C11  N07  180.00   0.0  0
- 3MW  CONST_42  H16  C09  N08  N07  180.00   0.0  0
- 3MW  CONST_45  C12  N13  C18  C19  180.00   0.0  0
- 3MW  CONST_46  H8   N13  C18  C19    0.00   0.0  0
- 3MW  CONST_47  C12  N13  C18  O20    0.00   0.0  0
- 3MW  CONST_48  O17  N16  C14  C12  180.00   0.0  0
- 3MW  CONST_49  O17  N16  C14  O15    0.00   0.0  0
- 3MW  Var_01    N13  C18  C19  C21  161.62  30.0  2
+ 3MW  CONST_01  C06  N07  C11  C10   180.00   0.0  0
+ 3MW  CONST_02  N08  N07  C11  C10     0.00   0.0  0
+ 3MW  CONST_03  N07  N08  C09  C10     0.00   0.0  0
+ 3MW  CONST_04  C24  C23  C22  C21     0.00   0.0  0
+ 3MW  CONST_05  C24  C25  C19  C21     0.00   0.0  0
+ 3MW  CONST_06  C25  C19  C21  C22     0.00   0.0  0
+ 3MW  CONST_07  C25  C24  C23  C22     0.00   0.0  0
+ 3MW  CONST_08  C19  C21  C22  C23     0.00   0.0  0
+ 3MW  CONST_09  C19  C25  C24  C23     0.00   0.0  0
+ 3MW  CONST_10  C06  C05  C04  C03     0.00   0.0  0
+ 3MW  CONST_11  C06  C01  C02  C03     0.00   0.0  0
+ 3MW  CONST_12  N07  C06  C05  C04   180.00   0.0  0
+ 3MW  CONST_13  C01  C06  C05  C04     0.00   0.0  0
+ 3MW  CONST_14  C01  C02  C03  C04     0.00   0.0  0
+ 3MW  CONST_15  C02  C03  C04  C05     0.00   0.0  0
+ 3MW  CONST_16  C02  C01  C06  C05     0.00   0.0  0
+ 3MW  CONST_17  N07  C06  C01  C02   180.00   0.0  0
+ 3MW  CONST_18  C09  N08  N07  C06   180.00   0.0  0
+ 3MW  CONST_19  C09  C10  C11  N07     0.00   0.0  0
+ 3MW  CONST_20  C11  C10  C09  N08     0.00   0.0  0
+ 3MW  CONST_21  C11  N07  N08  C09     0.00   0.0  0
+ 3MW  CONST_22  N26  C23  C22  C21   180.00   0.0  0
+ 3MW  CONST_23  C18  C19  C21  C22   180.00   0.0  0
+ 3MW  CONST_24  C18  C19  C25  C24   180.00   0.0  0
+ 3MW  CONST_25  C25  C24  C23  N26   180.00   0.0  0
+ 3MW  CONST_26  C05  C04  C03  C12   180.00   0.0  0
+ 3MW  CONST_27  C01  C02  C03  C12   180.00   0.0  0
+ 3MW  CONST_28  H7   C25  C19  C21   180.00   0.0  0
+ 3MW  CONST_29  H4   C24  C23  C22   180.00   0.0  0
+ 3MW  CONST_30  H3   C22  C23  C24   180.00   0.0  0
+ 3MW  CONST_31  H2   C21  C22  C23   180.00   0.0  0
+ 3MW  CONST_32  H13  C05  C04  C03   180.00   0.0  0
+ 3MW  CONST_33  H15  C01  C02  C03   180.00   0.0  0
+ 3MW  CONST_34  H14  C02  C03  C04   180.00   0.0  0
+ 3MW  CONST_35  H12  C04  C03  C02   180.00   0.0  0
+ 3MW  CONST_36  H17  C11  N07  C06     0.00   0.0  0
+ 3MW  CONST_37  H1   C10  C11  N07   180.00   0.0  0
+ 3MW  CONST_38  H16  C09  N08  N07   180.00   0.0  0
+ 3MW  CONST_39  C12  N13  C18  C19   180.00   0.0  0
+ 3MW  CONST_40  H8   N13  C18  C19     0.00   0.0  0
+ 3MW  CONST_41  C12  N13  C18  O20     0.00   0.0  0
+ 3MW  CONST_42  O17  N16  C14  C12   180.00   0.0  0
+ 3MW  CONST_43  O17  N16  C14  O15     0.00   0.0  0
+ 3MW  Var_01    N13  C18  C19  C21   161.62  30.0  2
+ 3MW  Var_02    C11  N07  C06  C05  -156.44  30.0  2
+ 3MW  Var_03    N08  N07  C06  C05    23.25  30.0  2
+ 3MW  Var_04    C11  N07  C06  C01    23.75  30.0  2
+ 3MW  Var_05    N08  N07  C06  C01  -156.56  30.0  2
+ 3MW  Var_06    C04  C03  C12  N13   -51.13  30.0  2
+ 3MW  Var_07    C02  C03  C12  N13   129.83  30.0  2
+ 3MW  Var_08    C04  C03  C12  C14    69.91  30.0  2
+ 3MW  Var_09    C02  C03  C12  C14  -109.13  30.0  2
+ 3MW  Var_10    H9   C12  C03  C04  -171.45  30.0  2
+ 3MW  Var_11    C03  C12  C14  O15   -76.19  30.0  3
+ 3MW  Var_12    C03  C12  C14  N16    98.31  30.0  3
+ 3MW  Var_13    C18  N13  C12  C03   177.35  30.0  1
+ 3MW  Var_14    N16  C14  C12  N13  -140.30  30.0  2
+ 3MW  Var_15    O15  C14  C12  N13    45.20  30.0  2
+ 3MW  Var_16    C18  N13  C12  C14    57.34  30.0  1
+ 3MW  Var_17    H11  O17  N16  C14   105.55  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

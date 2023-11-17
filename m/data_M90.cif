@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- M90  M90  '(2S)-1-{[(2R)-1-{[(2S,3R)-1-cyclohexyl-3-hydroxy-4-(pyridin-4-yloxy)butan-2-yl]amino}-3-(methylsulfanyl)-1-oxopropan-2-yl]amino}-1-oxo-3-phenylpropan-2-yl 4-aminopiperidine-1-carboxylate'  peptide  95  46  .  2022-03-22  2022-07-25
+ M90  M90  '(2S)-1-{[(2R)-1-{[(2S,3R)-1-cyclohexyl-3-hydroxy-4-(pyridin-4-yloxy)butan-2-yl]amino}-3-(methylsulfanyl)-1-oxopropan-2-yl]amino}-1-oxo-3-phenylpropan-2-yl 4-aminopiperidine-1-carboxylate'  peptide  95  46  .  2022-03-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_M90
@@ -437,50 +438,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- M90  CONST_01  C30  C31  C32  N5     0.00   0.0  0
- M90  CONST_02  C30  C34  C33  N5     0.00   0.0  0
- M90  CONST_03  C15  C13  C11  C10    0.00   0.0  0
- M90  CONST_04  C15  C14  C12  C10    0.00   0.0  0
- M90  CONST_05  C14  C12  C10  C11    0.00   0.0  0
- M90  CONST_06  C14  C15  C13  C11    0.00   0.0  0
- M90  CONST_07  C13  C11  C10  C12    0.00   0.0  0
- M90  CONST_08  C13  C15  C14  C12    0.00   0.0  0
- M90  CONST_09  C33  C34  C30  C31    0.00   0.0  0
- M90  CONST_10  C33  N5   C32  C31    0.00   0.0  0
- M90  CONST_11  C34  C33  N5   C32    0.00   0.0  0
- M90  CONST_12  C34  C30  C31  C32    0.00   0.0  0
- M90  CONST_13  C32  C31  C30  O6   180.00   0.0  0
- M90  CONST_14  C33  C34  C30  O6   180.00   0.0  0
- M90  CONST_15  C13  C11  C10  C9   180.00   0.0  0
- M90  CONST_16  C14  C12  C10  C9   180.00   0.0  0
- M90  CONST_17  H31  C31  C32  N5   180.00   0.0  0
- M90  CONST_18  H34  C34  C33  N5   180.00   0.0  0
- M90  CONST_19  H13  C13  C11  C10  180.00   0.0  0
- M90  CONST_20  H14  C14  C12  C10  180.00   0.0  0
- M90  CONST_21  H12  C12  C10  C11  180.00   0.0  0
- M90  CONST_22  H15  C15  C13  C11  180.00   0.0  0
- M90  CONST_23  H11  C11  C10  C12  180.00   0.0  0
- M90  CONST_24  H32  C32  C31  C30  180.00   0.0  0
- M90  CONST_25  H33  C33  C34  C30  180.00   0.0  0
- M90  CONST_26  C16  N3   C8   O3     0.00   0.0  0
- M90  CONST_27  C20  N4   C19  O4     0.00   0.0  0
- M90  CONST_28  C16  N3   C8   C7   180.00   0.0  0
- M90  CONST_29  C20  N4   C19  C16  180.00   0.0  0
- M90  CONST_30  HN3  N3   C8   O3   180.00   0.0  0
- M90  CONST_31  HN4  N4   C19  O4   180.00   0.0  0
- M90  Var_01    N2   C5   C3   C1   -55.93  30.0  1
- M90  Var_02    N2   C4   C2   C1    55.88  30.0  1
- M90  Var_03    C5   N2   C4   C2   -58.31  30.0  1
- M90  Var_04    C4   N2   C5   C3    58.37  30.0  1
- M90  Var_05    C27  C25  C23  C22   55.49  30.0  1
- M90  Var_06    C27  C26  C24  C22  -55.45  30.0  1
- M90  Var_07    C26  C27  C25  C23  -55.26  30.0  1
- M90  Var_08    C25  C27  C26  C24   54.98  30.0  1
- M90  Var_09    C11  C10  C9   C7   -85.97  30.0  2
- M90  Var_10    C31  C30  O6   C29    1.75  30.0  3
- M90  Var_11    H29  C29  O6   C30  -62.40  30.0  2
- M90  Var_12    H18  C18  S1   C17   63.31  30.0  3
- M90  Var_13    H17  C17  S1   C18  -52.46  30.0  1
+ M90  CONST_01  C30   C31  C32  N5      0.00   0.0  0
+ M90  CONST_02  C30   C34  C33  N5      0.00   0.0  0
+ M90  CONST_03  C15   C13  C11  C10     0.00   0.0  0
+ M90  CONST_04  C15   C14  C12  C10     0.00   0.0  0
+ M90  CONST_05  C14   C12  C10  C11     0.00   0.0  0
+ M90  CONST_06  C14   C15  C13  C11     0.00   0.0  0
+ M90  CONST_07  C13   C11  C10  C12     0.00   0.0  0
+ M90  CONST_08  C13   C15  C14  C12     0.00   0.0  0
+ M90  CONST_09  C33   C34  C30  C31     0.00   0.0  0
+ M90  CONST_10  C33   N5   C32  C31     0.00   0.0  0
+ M90  CONST_11  C34   C33  N5   C32     0.00   0.0  0
+ M90  CONST_12  C34   C30  C31  C32     0.00   0.0  0
+ M90  CONST_13  C32   C31  C30  O6    180.00   0.0  0
+ M90  CONST_14  C33   C34  C30  O6    180.00   0.0  0
+ M90  CONST_15  C13   C11  C10  C9    180.00   0.0  0
+ M90  CONST_16  C14   C12  C10  C9    180.00   0.0  0
+ M90  CONST_17  H31   C31  C32  N5    180.00   0.0  0
+ M90  CONST_18  H34   C34  C33  N5    180.00   0.0  0
+ M90  CONST_19  H13   C13  C11  C10   180.00   0.0  0
+ M90  CONST_20  H14   C14  C12  C10   180.00   0.0  0
+ M90  CONST_21  H12   C12  C10  C11   180.00   0.0  0
+ M90  CONST_22  H15   C15  C13  C11   180.00   0.0  0
+ M90  CONST_23  H11   C11  C10  C12   180.00   0.0  0
+ M90  CONST_24  H32   C32  C31  C30   180.00   0.0  0
+ M90  CONST_25  H33   C33  C34  C30   180.00   0.0  0
+ M90  CONST_26  C16   N3   C8   O3      0.00   0.0  0
+ M90  CONST_27  C20   N4   C19  O4      0.00   0.0  0
+ M90  CONST_28  C16   N3   C8   C7    180.00   0.0  0
+ M90  CONST_29  C20   N4   C19  C16   180.00   0.0  0
+ M90  CONST_30  HN3   N3   C8   O3    180.00   0.0  0
+ M90  CONST_31  HN4   N4   C19  O4    180.00   0.0  0
+ M90  Var_01    N2    C5   C3   C1    -55.93  30.0  1
+ M90  Var_02    N2    C4   C2   C1     55.88  30.0  1
+ M90  Var_03    C5    N2   C4   C2    -58.31  30.0  1
+ M90  Var_04    C4    N2   C5   C3     58.37  30.0  1
+ M90  Var_05    C27   C25  C23  C22    55.49  30.0  1
+ M90  Var_06    C27   C26  C24  C22   -55.45  30.0  1
+ M90  Var_07    C26   C27  C25  C23   -55.26  30.0  1
+ M90  Var_08    C25   C27  C26  C24    54.98  30.0  1
+ M90  Var_09    C11   C10  C9   C7    -85.97  30.0  2
+ M90  Var_10    C31   C30  O6   C29     1.75  30.0  3
+ M90  Var_11    H29   C29  O6   C30   -62.40  30.0  2
+ M90  Var_12    H18   C18  S1   C17    63.31  30.0  3
+ M90  Var_13    H17   C17  S1   C18   -52.46  30.0  1
+ M90  Var_14    H3    C3   C1   C2    175.79  30.0  1
+ M90  Var_15    H3A   C3   C1   C2    -66.21  30.0  1
+ M90  Var_16    H1    C1   C2   C4     61.18  30.0  1
+ M90  Var_17    H24   C24  C22  C23   177.41  30.0  1
+ M90  Var_18    H24A  C24  C22  C23   -66.64  30.0  1
+ M90  Var_19    H23   C23  C22  C24    66.92  30.0  1
+ M90  Var_20    H23A  C23  C22  C24  -176.14  30.0  1
+ M90  Var_21    H22   C22  C23  C25    62.47  30.0  1
+ M90  Var_22    HN1   N1   C1   C2   -177.60  30.0  3
+ M90  Var_23    HN1A  N1   C1   C2    -62.53  30.0  3
+ M90  Var_24    H21   C21  C22  C23  -177.86  30.0  3
+ M90  Var_25    H21A  C21  C22  C23    66.83  30.0  3
+ M90  Var_26    H7    C7   C9   C10    60.61  30.0  2
+ M90  Var_27    H20   C20  C21  C22    63.02  30.0  3
+ M90  Var_28    H17A  C17  C16  N3     63.40  30.0  1
+ M90  Var_29    H16   C16  C19  N4     13.20  30.0  2
+ M90  Var_30    H28   C28  C20  N4   -176.61  30.0  3
+ M90  Var_31    HO5   O5   C28  C20    65.52  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

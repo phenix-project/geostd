@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QXG  QXG  5'-{[(2-amino-3-hydroxybenzene-1-carbonyl)sulfamoyl]amino}-5'-deoxyadenosine  ligand  53  33  .  2022-03-23  2022-03-23
+ QXG  QXG  5'-{[(2-amino-3-hydroxybenzene-1-carbonyl)sulfamoyl]amino}-5'-deoxyadenosine  ligand  53  33  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QXG
@@ -268,56 +269,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QXG  CONST_01  C04  N05  C06  N10  180.00   0.0  0
- QXG  CONST_02  C02  C07  C06  N10  180.00   0.0  0
- QXG  CONST_03  N08  C07  C06  N10    0.00   0.0  0
- QXG  CONST_04  C07  N08  C09  N10    0.00   0.0  0
- QXG  CONST_05  N05  C04  N03  C02    0.00   0.0  0
- QXG  CONST_06  N05  C06  C07  C02    0.00   0.0  0
- QXG  CONST_07  C09  N08  C07  C02  180.00   0.0  0
- QXG  CONST_08  C07  C02  N03  C04    0.00   0.0  0
- QXG  CONST_09  C07  C06  N05  C04    0.00   0.0  0
- QXG  CONST_10  N03  C04  N05  C06    0.00   0.0  0
- QXG  CONST_11  N03  C02  C07  C06    0.00   0.0  0
- QXG  CONST_12  C09  N08  C07  C06    0.00   0.0  0
- QXG  CONST_13  N08  C09  N10  C06    0.00   0.0  0
- QXG  CONST_14  C09  N10  C06  C07    0.00   0.0  0
- QXG  CONST_15  N05  C06  N10  C09  180.00   0.0  0
- QXG  CONST_16  C25  C26  C28  C22    0.00   0.0  0
- QXG  CONST_17  C25  C24  C23  C22    0.00   0.0  0
- QXG  CONST_18  C26  C28  C22  C23    0.00   0.0  0
- QXG  CONST_19  C26  C25  C24  C23    0.00   0.0  0
- QXG  CONST_20  C28  C26  C25  C24    0.00   0.0  0
- QXG  CONST_21  C28  C22  C23  C24    0.00   0.0  0
- QXG  CONST_22  N08  C07  C02  N03  180.00   0.0  0
- QXG  CONST_23  N08  C07  C06  N05  180.00   0.0  0
- QXG  CONST_24  C11  N10  C06  C07  180.00   0.0  0
- QXG  CONST_25  N05  C06  N10  C11    0.00   0.0  0
- QXG  CONST_26  N08  C09  N10  C11  180.00   0.0  0
- QXG  CONST_27  N01  C02  N03  C04  180.00   0.0  0
- QXG  CONST_28  N01  C02  C07  C06  180.00   0.0  0
- QXG  CONST_29  C26  C28  C22  C20  180.00   0.0  0
- QXG  CONST_30  C24  C23  C22  C20  180.00   0.0  0
- QXG  CONST_31  O27  C26  C28  C22  180.00   0.0  0
- QXG  CONST_32  N29  C28  C22  C23  180.00   0.0  0
- QXG  CONST_33  O27  C26  C25  C24  180.00   0.0  0
- QXG  CONST_34  N29  C28  C26  C25  180.00   0.0  0
- QXG  CONST_35  N08  C07  C02  N01    0.00   0.0  0
- QXG  CONST_36  H1   C04  N03  C02  180.00   0.0  0
- QXG  CONST_37  H2   C09  N10  C06  180.00   0.0  0
- QXG  CONST_38  H8   C24  C23  C22  180.00   0.0  0
- QXG  CONST_39  H9   C25  C24  C23  180.00   0.0  0
- QXG  CONST_40  H7   C23  C24  C25  180.00   0.0  0
- QXG  CONST_41  H12  N01  C02  C07  180.00   0.0  0
- QXG  CONST_42  H13  N01  C02  C07    0.00   0.0  0
- QXG  CONST_44  H17  N29  C28  C22  180.00   0.0  0
- QXG  CONST_45  S16  N19  C20  C22  180.00   0.0  0
- QXG  CONST_46  H15  N19  C20  C22    0.00   0.0  0
- QXG  CONST_47  S16  N19  C20  O21    0.00   0.0  0
- QXG  Var_01    O21  C20  C22  C23  154.37  30.0  2
- QXG  Var_02    S16  N15  C14  C13  169.51  30.0  1
- QXG  Var_03    O17  S16  N15  C14  171.20  30.0  3
- QXG  Var_04    N15  S16  N19  C20   55.17  30.0  2
+ QXG  CONST_01  C04  N05  C06  N10   180.00   0.0  0
+ QXG  CONST_02  C02  C07  C06  N10   180.00   0.0  0
+ QXG  CONST_03  N08  C07  C06  N10     0.00   0.0  0
+ QXG  CONST_04  C07  N08  C09  N10     0.00   0.0  0
+ QXG  CONST_05  N05  C04  N03  C02     0.00   0.0  0
+ QXG  CONST_06  N05  C06  C07  C02     0.00   0.0  0
+ QXG  CONST_07  C09  N08  C07  C02   180.00   0.0  0
+ QXG  CONST_08  C07  C02  N03  C04     0.00   0.0  0
+ QXG  CONST_09  C07  C06  N05  C04     0.00   0.0  0
+ QXG  CONST_10  N03  C04  N05  C06     0.00   0.0  0
+ QXG  CONST_11  N03  C02  C07  C06     0.00   0.0  0
+ QXG  CONST_12  C09  N08  C07  C06     0.00   0.0  0
+ QXG  CONST_13  N08  C09  N10  C06     0.00   0.0  0
+ QXG  CONST_14  C09  N10  C06  C07     0.00   0.0  0
+ QXG  CONST_15  N05  C06  N10  C09   180.00   0.0  0
+ QXG  CONST_16  C25  C26  C28  C22     0.00   0.0  0
+ QXG  CONST_17  C25  C24  C23  C22     0.00   0.0  0
+ QXG  CONST_18  C26  C28  C22  C23     0.00   0.0  0
+ QXG  CONST_19  C26  C25  C24  C23     0.00   0.0  0
+ QXG  CONST_20  C28  C26  C25  C24     0.00   0.0  0
+ QXG  CONST_21  C28  C22  C23  C24     0.00   0.0  0
+ QXG  CONST_22  N08  C07  C02  N03   180.00   0.0  0
+ QXG  CONST_23  N08  C07  C06  N05   180.00   0.0  0
+ QXG  CONST_24  C11  N10  C06  C07   180.00   0.0  0
+ QXG  CONST_25  N05  C06  N10  C11     0.00   0.0  0
+ QXG  CONST_26  N08  C09  N10  C11   180.00   0.0  0
+ QXG  CONST_27  N01  C02  N03  C04   180.00   0.0  0
+ QXG  CONST_28  N01  C02  C07  C06   180.00   0.0  0
+ QXG  CONST_29  C26  C28  C22  C20   180.00   0.0  0
+ QXG  CONST_30  C24  C23  C22  C20   180.00   0.0  0
+ QXG  CONST_31  O27  C26  C28  C22   180.00   0.0  0
+ QXG  CONST_32  N29  C28  C22  C23   180.00   0.0  0
+ QXG  CONST_33  O27  C26  C25  C24   180.00   0.0  0
+ QXG  CONST_34  N29  C28  C26  C25   180.00   0.0  0
+ QXG  CONST_35  N08  C07  C02  N01     0.00   0.0  0
+ QXG  CONST_36  H1   C04  N03  C02   180.00   0.0  0
+ QXG  CONST_37  H2   C09  N10  C06   180.00   0.0  0
+ QXG  CONST_38  H8   C24  C23  C22   180.00   0.0  0
+ QXG  CONST_39  H9   C25  C24  C23   180.00   0.0  0
+ QXG  CONST_40  H7   C23  C24  C25   180.00   0.0  0
+ QXG  CONST_41  H12  N01  C02  C07   180.00   0.0  0
+ QXG  CONST_42  H13  N01  C02  C07     0.00   0.0  0
+ QXG  CONST_43  H17  N29  C28  C22   180.00   0.0  0
+ QXG  CONST_44  S16  N19  C20  C22   180.00   0.0  0
+ QXG  CONST_45  H15  N19  C20  C22     0.00   0.0  0
+ QXG  CONST_46  S16  N19  C20  O21     0.00   0.0  0
+ QXG  Var_01    O21  C20  C22  C23   154.37  30.0  2
+ QXG  Var_02    S16  N15  C14  C13   169.51  30.0  1
+ QXG  Var_03    O17  S16  N15  C14   171.20  30.0  3
+ QXG  Var_04    N15  S16  N19  C20    55.17  30.0  2
+ QXG  Var_05    C13  O12  C11  N10  -112.90  30.0  1
+ QXG  Var_06    C30  C32  C11  N10    90.41  30.0  1
+ QXG  Var_07    O12  C11  N10  C06  -167.06  30.0  2
+ QXG  Var_08    C32  C11  N10  C06    75.16  30.0  2
+ QXG  Var_09    O12  C11  N10  C09    11.16  30.0  2
+ QXG  Var_10    C32  C11  N10  C09  -106.62  30.0  2
+ QXG  Var_11    C30  C13  O12  C11    16.62  30.0  1
+ QXG  Var_12    C13  C30  C32  C11    37.18  30.0  1
+ QXG  Var_13    C32  C11  O12  C13     8.02  30.0  1
+ QXG  Var_14    O12  C11  C32  C30   -28.80  30.0  1
+ QXG  Var_15    O12  C13  C30  C32   -33.76  30.0  1
+ QXG  Var_16    O33  C32  C11  N10  -153.13  30.0  1
+ QXG  Var_17    C14  C13  O12  C11   138.73  30.0  1
+ QXG  Var_18    O31  C30  C32  C11   155.73  30.0  1
+ QXG  Var_19    O33  C32  C30  C13   -76.57  30.0  1
+ QXG  Var_20    C32  C30  C13  C14  -153.33  30.0  1
+ QXG  Var_21    O33  C32  C11  O12    87.66  30.0  1
+ QXG  Var_22    O31  C30  C13  O12  -155.14  30.0  1
+ QXG  Var_23    H11  C32  C11  N10   -29.57  30.0  1
+ QXG  Var_24    H3   C11  N10  C06   -47.43  30.0  2
+ QXG  Var_25    H4   C13  O12  C11  -101.48  30.0  1
+ QXG  Var_26    H10  C30  C32  C11   -78.46  30.0  1
+ QXG  Var_27    O31  C30  C13  C14    85.29  30.0  1
+ QXG  Var_28    N15  C14  C13  C30   175.30  30.0  3
+ QXG  Var_29    O12  C13  C14  N15    58.56  30.0  2
+ QXG  Var_30    O33  C32  C30  O31    41.98  30.0  1
+ QXG  Var_31    H20  O33  C32  C11  -153.34  30.0  3
+ QXG  Var_32    H19  O31  C30  C13  -161.31  30.0  3
+ QXG  Var_33    H18  O27  C26  C25    -1.22  30.0  2
+ QXG  Var_34    H5   C14  C13  C30   -65.73  30.0  3
+ QXG  Var_35    H6   C14  C13  C30    51.65  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GBM  GBM  5-chloro-N-(2-{4-[(cyclohexylcarbamoyl)sulfamoyl]phenyl}ethyl)-2-methoxybenzamide  ligand  61  33  .  2022-03-18  2022-03-18
+ GBM  GBM  5-chloro-N-(2-{4-[(cyclohexylcarbamoyl)sulfamoyl]phenyl}ethyl)-2-methoxybenzamide  ligand  61  33  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GBM
@@ -301,55 +302,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GBM  CONST_01  C19  C23  C21  C18    0.00   0.0  0
- GBM  CONST_02  C19  C24  C22  C18    0.00   0.0  0
- GBM  CONST_03  C24  C19  C23  C21    0.00   0.0  0
- GBM  CONST_04  C24  C22  C18  C21    0.00   0.0  0
- GBM  CONST_05  C23  C21  C18  C22    0.00   0.0  0
- GBM  CONST_06  C23  C19  C24  C22    0.00   0.0  0
- GBM  CONST_07  C32  C31  C29  C27    0.00   0.0  0
- GBM  CONST_08  C32  C30  C28  C27    0.00   0.0  0
- GBM  CONST_09  C31  C29  C27  C28    0.00   0.0  0
- GBM  CONST_10  C31  C32  C30  C28    0.00   0.0  0
- GBM  CONST_11  C30  C32  C31  C29    0.00   0.0  0
- GBM  CONST_12  C30  C28  C27  C29    0.00   0.0  0
- GBM  CONST_13  C27  C29  C31  CL1  180.00   0.0  0
- GBM  CONST_14  C30  C32  C31  CL1  180.00   0.0  0
- GBM  CONST_15  C23  C21  C18  S2   180.00   0.0  0
- GBM  CONST_16  C24  C22  C18  S2   180.00   0.0  0
- GBM  CONST_17  C29  C27  C28  O7   180.00   0.0  0
- GBM  CONST_18  C32  C30  C28  O7   180.00   0.0  0
- GBM  CONST_19  C21  C23  C19  C20  180.00   0.0  0
- GBM  CONST_20  C22  C24  C19  C20  180.00   0.0  0
- GBM  CONST_21  C31  C29  C27  C26  180.00   0.0  0
- GBM  CONST_22  C30  C28  C27  C26  180.00   0.0  0
- GBM  CONST_23  H19  C23  C21  C18  180.00   0.0  0
- GBM  CONST_24  H20  C24  C22  C18  180.00   0.0  0
- GBM  CONST_25  H17  C21  C23  C19  180.00   0.0  0
- GBM  CONST_26  H18  C22  C24  C19  180.00   0.0  0
- GBM  CONST_27  H24  C30  C28  C27  180.00   0.0  0
- GBM  CONST_28  H23  C29  C27  C28  180.00   0.0  0
- GBM  CONST_29  H25  C32  C30  C28  180.00   0.0  0
- GBM  CONST_30  C11  N8   C17  O3     0.00   0.0  0
- GBM  CONST_31  C27  C26  N10  C25  180.00   0.0  0
- GBM  CONST_32  C11  N8   C17  N9   180.00   0.0  0
- GBM  CONST_33  H3   N10  C26  C27    0.00   0.0  0
- GBM  CONST_34  S2   N9   C17  O3     0.00   0.0  0
- GBM  CONST_35  C25  N10  C26  O6     0.00   0.0  0
- GBM  CONST_36  N8   C17  N9   S2   180.00   0.0  0
- GBM  CONST_37  H2   N9   C17  O3   180.00   0.0  0
- GBM  CONST_38  H1   N8   C17  O3   180.00   0.0  0
- GBM  Var_01    C16  C15  C13  C11  -56.20  30.0  1
- GBM  Var_02    C16  C14  C12  C11   55.57  30.0  1
- GBM  Var_03    C15  C16  C14  C12  -55.10  30.0  1
- GBM  Var_04    C14  C16  C15  C13   55.43  30.0  1
- GBM  Var_05    C21  C18  S2   O4   141.71  30.0  2
- GBM  Var_06    C29  C27  C26  O6   114.32  30.0  2
- GBM  Var_07    C25  C20  C19  C23  -90.30  30.0  1
- GBM  Var_08    C19  C20  C25  N10  178.50  30.0  3
- GBM  Var_09    C18  S2   N9   C17   62.72  30.0  3
- GBM  Var_10    H26  C33  O7   C28  -62.02  30.0  3
- GBM  Var_11    C26  N10  C25  C20  -89.75  30.0  3
+ GBM  CONST_01  C19  C23  C21  C18     0.00   0.0  0
+ GBM  CONST_02  C19  C24  C22  C18     0.00   0.0  0
+ GBM  CONST_03  C24  C19  C23  C21     0.00   0.0  0
+ GBM  CONST_04  C24  C22  C18  C21     0.00   0.0  0
+ GBM  CONST_05  C23  C21  C18  C22     0.00   0.0  0
+ GBM  CONST_06  C23  C19  C24  C22     0.00   0.0  0
+ GBM  CONST_07  C32  C31  C29  C27     0.00   0.0  0
+ GBM  CONST_08  C32  C30  C28  C27     0.00   0.0  0
+ GBM  CONST_09  C31  C29  C27  C28     0.00   0.0  0
+ GBM  CONST_10  C31  C32  C30  C28     0.00   0.0  0
+ GBM  CONST_11  C30  C32  C31  C29     0.00   0.0  0
+ GBM  CONST_12  C30  C28  C27  C29     0.00   0.0  0
+ GBM  CONST_13  C27  C29  C31  CL1   180.00   0.0  0
+ GBM  CONST_14  C30  C32  C31  CL1   180.00   0.0  0
+ GBM  CONST_15  C23  C21  C18  S2    180.00   0.0  0
+ GBM  CONST_16  C24  C22  C18  S2    180.00   0.0  0
+ GBM  CONST_17  C29  C27  C28  O7    180.00   0.0  0
+ GBM  CONST_18  C32  C30  C28  O7    180.00   0.0  0
+ GBM  CONST_19  C21  C23  C19  C20   180.00   0.0  0
+ GBM  CONST_20  C22  C24  C19  C20   180.00   0.0  0
+ GBM  CONST_21  C31  C29  C27  C26   180.00   0.0  0
+ GBM  CONST_22  C30  C28  C27  C26   180.00   0.0  0
+ GBM  CONST_23  H19  C23  C21  C18   180.00   0.0  0
+ GBM  CONST_24  H20  C24  C22  C18   180.00   0.0  0
+ GBM  CONST_25  H17  C21  C23  C19   180.00   0.0  0
+ GBM  CONST_26  H18  C22  C24  C19   180.00   0.0  0
+ GBM  CONST_27  H24  C30  C28  C27   180.00   0.0  0
+ GBM  CONST_28  H23  C29  C27  C28   180.00   0.0  0
+ GBM  CONST_29  H25  C32  C30  C28   180.00   0.0  0
+ GBM  CONST_30  C11  N8   C17  O3      0.00   0.0  0
+ GBM  CONST_31  C27  C26  N10  C25   180.00   0.0  0
+ GBM  CONST_32  C11  N8   C17  N9    180.00   0.0  0
+ GBM  CONST_33  H3   N10  C26  C27     0.00   0.0  0
+ GBM  CONST_34  S2   N9   C17  O3      0.00   0.0  0
+ GBM  CONST_35  C25  N10  C26  O6      0.00   0.0  0
+ GBM  CONST_36  N8   C17  N9   S2    180.00   0.0  0
+ GBM  CONST_37  H2   N9   C17  O3    180.00   0.0  0
+ GBM  CONST_38  H1   N8   C17  O3    180.00   0.0  0
+ GBM  Var_01    C16  C15  C13  C11   -56.20  30.0  1
+ GBM  Var_02    C16  C14  C12  C11    55.57  30.0  1
+ GBM  Var_03    C15  C16  C14  C12   -55.10  30.0  1
+ GBM  Var_04    C14  C16  C15  C13    55.43  30.0  1
+ GBM  Var_05    C21  C18  S2   O4    141.71  30.0  2
+ GBM  Var_06    C29  C27  C26  O6    114.32  30.0  2
+ GBM  Var_07    C25  C20  C19  C23   -90.30  30.0  1
+ GBM  Var_08    C19  C20  C25  N10   178.50  30.0  3
+ GBM  Var_09    C18  S2   N9   C17    62.72  30.0  3
+ GBM  Var_10    H26  C33  O7   C28   -62.02  30.0  3
+ GBM  Var_11    C26  N10  C25  C20   -89.75  30.0  3
+ GBM  Var_12    C15  C13  C11  C12    56.24  30.0  1
+ GBM  Var_13    C14  C12  C11  C13   -55.91  30.0  1
+ GBM  Var_14    C15  C13  C11  N8    178.49  30.0  1
+ GBM  Var_15    C14  C12  C11  N8   -180.00  30.0  1
+ GBM  Var_16    H7   C13  C11  C12   178.47  30.0  1
+ GBM  Var_17    H8   C13  C11  C12   -64.71  30.0  1
+ GBM  Var_18    H5   C12  C11  C13    64.56  30.0  1
+ GBM  Var_19    H6   C12  C11  C13  -178.52  30.0  1
+ GBM  Var_20    H4   C11  C12  C14    63.16  30.0  1
+ GBM  Var_21    C17  N8   C11  C12  -158.91  30.0  1
+ GBM  Var_22    C17  N8   C11  C13    77.89  30.0  1
+ GBM  Var_23    C33  O7   C28  C27  -176.94  30.0  2
+ GBM  Var_24    C33  O7   C28  C30     1.73  30.0  2
+ GBM  Var_25    H1   N8   C11  C12    29.92  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

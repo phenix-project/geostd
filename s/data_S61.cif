@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- S61  S61  '(3S)-3-({[1-(2-fluorophenyl)-5-oxo-2,5-dihydro-1H-pyrazol-3-yl]carbonyl}amino)-3-(2-methylphenyl)propanoic acid'  ligand  45  28  .  2021-08-23  2021-08-23  
+ S61  S61  '(3S)-3-({[1-(2-fluorophenyl)-5-oxo-2,5-dihydro-1H-pyrazol-3-yl]carbonyl}amino)-3-(2-methylphenyl)propanoic acid'  ligand  45  28  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_S61
@@ -235,46 +236,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- S61  CONST_01  C22   C23  C24  C25    0.00   0.0  0
- S61  CONST_02  C22   C21  C20  C25    0.00   0.0  0
- S61  CONST_03  C21   C20  C25  C24    0.00   0.0  0
- S61  CONST_04  C21   C22  C23  C24    0.00   0.0  0
- S61  CONST_05  C20   C25  C24  C23    0.00   0.0  0
- S61  CONST_06  C20   C21  C22  C23    0.00   0.0  0
- S61  CONST_07  C2    C3   C4   C5     0.00   0.0  0
- S61  CONST_08  C2    C1   C6   C5     0.00   0.0  0
- S61  CONST_09  C1    C6   C5   C4     0.00   0.0  0
- S61  CONST_10  C1    C2   C3   C4     0.00   0.0  0
- S61  CONST_11  C6    C5   C4   C3     0.00   0.0  0
- S61  CONST_12  C6    C1   C2   C3     0.00   0.0  0
- S61  CONST_13  C3    C4   C5   N7   180.00   0.0  0
- S61  CONST_14  C1    C6   C5   N7   180.00   0.0  0
- S61  CONST_15  C11   C12  N7   N9     0.00   0.0  0
- S61  CONST_16  C5    N7   C12  C11  180.00   0.0  0
- S61  CONST_17  C23   C24  C25  C26  180.00   0.0  0
- S61  CONST_18  C21   C20  C25  C26  180.00   0.0  0
- S61  CONST_19  C16   C20  C25  C24  180.00   0.0  0
- S61  CONST_20  C16   C20  C21  C22  180.00   0.0  0
- S61  CONST_21  F8    C6   C5   N7     0.00   0.0  0
- S61  CONST_22  F8    C6   C5   C4   180.00   0.0  0
- S61  CONST_23  F8    C6   C1   C2   180.00   0.0  0
- S61  CONST_24  O13   C12  N7   N9   180.00   0.0  0
- S61  CONST_25  C5    N7   C12  O13    0.00   0.0  0
- S61  CONST_26  H23   C23  C24  C25  180.00   0.0  0
- S61  CONST_27  H21   C21  C20  C25  180.00   0.0  0
- S61  CONST_28  H22   C22  C23  C24  180.00   0.0  0
- S61  CONST_29  H24   C24  C23  C22  180.00   0.0  0
- S61  CONST_30  H4    C4   C5   N7     0.00   0.0  0
- S61  CONST_31  H3    C3   C4   C5   180.00   0.0  0
- S61  CONST_32  H1    C1   C6   C5   180.00   0.0  0
- S61  CONST_33  H2    C2   C3   C4   180.00   0.0  0
- S61  CONST_34  C10   C14  N15  C16  180.00   0.0  0
- S61  CONST_35  H15   N15  C14  C10    0.00   0.0  0
- S61  CONST_36  O28   C14  N15  C16    0.00   0.0  0
- S61  Var_01    C4    C5   N7   N9   119.44  30.0  2
- S61  Var_02    N9    C10  C14  N15  177.52  30.0  2
- S61  Var_03    H261  C26  C25  C24  117.05  30.0  2
- S61  Var_04    O27   C18  C17  C16  -25.48  30.0  3
+ S61  CONST_01  C22   C23  C24  C25     0.00   0.0  0
+ S61  CONST_02  C22   C21  C20  C25     0.00   0.0  0
+ S61  CONST_03  C21   C20  C25  C24     0.00   0.0  0
+ S61  CONST_04  C21   C22  C23  C24     0.00   0.0  0
+ S61  CONST_05  C20   C25  C24  C23     0.00   0.0  0
+ S61  CONST_06  C20   C21  C22  C23     0.00   0.0  0
+ S61  CONST_07  C2    C3   C4   C5      0.00   0.0  0
+ S61  CONST_08  C2    C1   C6   C5      0.00   0.0  0
+ S61  CONST_09  C1    C6   C5   C4      0.00   0.0  0
+ S61  CONST_10  C1    C2   C3   C4      0.00   0.0  0
+ S61  CONST_11  C6    C5   C4   C3      0.00   0.0  0
+ S61  CONST_12  C6    C1   C2   C3      0.00   0.0  0
+ S61  CONST_13  C3    C4   C5   N7    180.00   0.0  0
+ S61  CONST_14  C1    C6   C5   N7    180.00   0.0  0
+ S61  CONST_15  C11   C12  N7   N9      0.00   0.0  0
+ S61  CONST_16  C5    N7   C12  C11   180.00   0.0  0
+ S61  CONST_17  C23   C24  C25  C26   180.00   0.0  0
+ S61  CONST_18  C21   C20  C25  C26   180.00   0.0  0
+ S61  CONST_19  C16   C20  C25  C24   180.00   0.0  0
+ S61  CONST_20  C16   C20  C21  C22   180.00   0.0  0
+ S61  CONST_21  F8    C6   C5   N7      0.00   0.0  0
+ S61  CONST_22  F8    C6   C5   C4    180.00   0.0  0
+ S61  CONST_23  F8    C6   C1   C2    180.00   0.0  0
+ S61  CONST_24  O13   C12  N7   N9    180.00   0.0  0
+ S61  CONST_25  C5    N7   C12  O13     0.00   0.0  0
+ S61  CONST_26  H23   C23  C24  C25   180.00   0.0  0
+ S61  CONST_27  H21   C21  C20  C25   180.00   0.0  0
+ S61  CONST_28  H22   C22  C23  C24   180.00   0.0  0
+ S61  CONST_29  H24   C24  C23  C22   180.00   0.0  0
+ S61  CONST_30  H4    C4   C5   N7      0.00   0.0  0
+ S61  CONST_31  H3    C3   C4   C5    180.00   0.0  0
+ S61  CONST_32  H1    C1   C6   C5    180.00   0.0  0
+ S61  CONST_33  H2    C2   C3   C4    180.00   0.0  0
+ S61  CONST_34  C10   C14  N15  C16   180.00   0.0  0
+ S61  CONST_35  H15   N15  C14  C10     0.00   0.0  0
+ S61  CONST_36  O28   C14  N15  C16     0.00   0.0  0
+ S61  Var_01    C4    C5   N7   N9    119.44  30.0  2
+ S61  Var_02    N9    C10  C14  N15   177.52  30.0  2
+ S61  Var_03    H261  C26  C25  C24   117.05  30.0  2
+ S61  Var_04    O27   C18  C17  C16   -25.48  30.0  3
+ S61  Var_05    C12   N7   N9   C10     7.55  30.0  1
+ S61  Var_06    C5    N7   N9   C10   169.89  30.0  1
+ S61  Var_07    N7    C12  C11  C10     1.60  30.0  1
+ S61  Var_08    C12   C11  C10  N9      2.97  30.0  1
+ S61  Var_09    N7    N9   C10  C11    -6.42  30.0  1
+ S61  Var_10    N7    N9   C10  C14   172.68  30.0  1
+ S61  Var_11    C12   C11  C10  C14  -175.95  30.0  1
+ S61  Var_12    O13   C12  C11  C10  -177.35  30.0  1
+ S61  Var_13    H11   C11  C10  N9   -175.45  30.0  1
+ S61  Var_14    H9    N9   C10  C11  -146.04  30.0  1
+ S61  Var_15    C17   C16  C20  C25   -94.53  30.0  2
+ S61  Var_16    N15   C16  C20  C25   143.81  30.0  2
+ S61  Var_17    C17   C16  C20  C21    82.29  30.0  2
+ S61  Var_18    N15   C16  C20  C21   -39.37  30.0  2
+ S61  Var_19    H16   C16  C20  C25    24.76  30.0  2
+ S61  Var_20    C18   C17  C16  C20   169.99  30.0  3
+ S61  Var_21    C14   N15  C16  C20   -73.55  30.0  3
+ S61  Var_22    H171  C17  C16  C20   -64.73  30.0  3
+ S61  Var_23    H172  C17  C16  C20    49.80  30.0  3
+ S61  Var_24    C14   N15  C16  C17   163.61  30.0  3
+ S61  Var_25    N15   C16  C17  C18   -66.63  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

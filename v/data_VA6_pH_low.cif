@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VA6  VA6  9-{2-deoxy-5-O-[(S)-{[(S)-[difluoro(phosphono)methyl](hydroxy)phosphoryl]oxy}(hydroxy)phosphoryl]-alpha-D-erythro-pentofuranosyl}-9H-purin-6-amine  ligand  48  32  .  2022-11-18  2022-11-18
+ VA6  VA6  9-{2-deoxy-5-O-[(S)-{[(S)-[difluoro(phosphono)methyl](hydroxy)phosphoryl]oxy}(hydroxy)phosphoryl]-alpha-D-erythro-pentofuranosyl}-9H-purin-6-amine  ligand  48  32  .  2022-11-18  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VA6
@@ -249,37 +250,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VA6  CONST_01  C4   N3   C2   N1     0.00   0.0  0
- VA6  CONST_02  C4   C5   C6   N1     0.00   0.0  0
- VA6  CONST_03  N7   C5   C6   N1   180.00   0.0  0
- VA6  CONST_04  N9   C4   N3   C2   180.00   0.0  0
- VA6  CONST_05  C5   C4   N3   C2     0.00   0.0  0
- VA6  CONST_06  C5   C6   N1   C2     0.00   0.0  0
- VA6  CONST_07  C6   N1   C2   N3     0.00   0.0  0
- VA6  CONST_08  C8   N9   C4   N3   180.00   0.0  0
- VA6  CONST_09  N7   C5   C4   N3   180.00   0.0  0
- VA6  CONST_10  C6   C5   C4   N3     0.00   0.0  0
- VA6  CONST_11  N7   C8   N9   C4     0.00   0.0  0
- VA6  CONST_12  C8   N7   C5   C4     0.00   0.0  0
- VA6  CONST_13  C8   N9   C4   C5     0.00   0.0  0
- VA6  CONST_14  N9   C8   N7   C5     0.00   0.0  0
- VA6  CONST_15  N9   C4   C5   C6   180.00   0.0  0
- VA6  CONST_16  C8   N7   C5   C6   180.00   0.0  0
- VA6  CONST_17  N9   C4   C5   N7     0.00   0.0  0
- VA6  CONST_18  C1'  N9   C4   N3     0.00   0.0  0
- VA6  CONST_19  C1'  N9   C4   C5   180.00   0.0  0
- VA6  CONST_20  C1'  N9   C8   N7   180.00   0.0  0
- VA6  CONST_21  N6   C6   N1   C2   180.00   0.0  0
- VA6  CONST_22  N6   C6   C5   C4   180.00   0.0  0
- VA6  CONST_23  N7   C5   C6   N6     0.00   0.0  0
- VA6  CONST_24  H1   C2   N3   C4   180.00   0.0  0
- VA6  CONST_25  H4   C8   N9   C4   180.00   0.0  0
- VA6  CONST_26  H2   N6   C6   N1     0.00   0.0  0
- VA6  CONST_27  H3   N6   C6   N1   180.00   0.0  0
- VA6  Var_01    C4'  C5'  O5'  PA  -134.97  30.0  1
- VA6  Var_02    O1B  PB   O3A  PA    32.69  30.0  1
- VA6  Var_03    O1A  PA   O3A  PB    27.09  30.0  3
- VA6  Var_04    O3G  PG   C3B  PB    56.28  30.0  2
+ VA6  CONST_01  C4   N3   C2   N1      0.00   0.0  0
+ VA6  CONST_02  C4   C5   C6   N1      0.00   0.0  0
+ VA6  CONST_03  N7   C5   C6   N1    180.00   0.0  0
+ VA6  CONST_04  N9   C4   N3   C2    180.00   0.0  0
+ VA6  CONST_05  C5   C4   N3   C2      0.00   0.0  0
+ VA6  CONST_06  C5   C6   N1   C2      0.00   0.0  0
+ VA6  CONST_07  C6   N1   C2   N3      0.00   0.0  0
+ VA6  CONST_08  C8   N9   C4   N3    180.00   0.0  0
+ VA6  CONST_09  N7   C5   C4   N3    180.00   0.0  0
+ VA6  CONST_10  C6   C5   C4   N3      0.00   0.0  0
+ VA6  CONST_11  N7   C8   N9   C4      0.00   0.0  0
+ VA6  CONST_12  C8   N7   C5   C4      0.00   0.0  0
+ VA6  CONST_13  C8   N9   C4   C5      0.00   0.0  0
+ VA6  CONST_14  N9   C8   N7   C5      0.00   0.0  0
+ VA6  CONST_15  N9   C4   C5   C6    180.00   0.0  0
+ VA6  CONST_16  C8   N7   C5   C6    180.00   0.0  0
+ VA6  CONST_17  N9   C4   C5   N7      0.00   0.0  0
+ VA6  CONST_18  C1'  N9   C4   N3      0.00   0.0  0
+ VA6  CONST_19  C1'  N9   C4   C5    180.00   0.0  0
+ VA6  CONST_20  C1'  N9   C8   N7    180.00   0.0  0
+ VA6  CONST_21  N6   C6   N1   C2    180.00   0.0  0
+ VA6  CONST_22  N6   C6   C5   C4    180.00   0.0  0
+ VA6  CONST_23  N7   C5   C6   N6      0.00   0.0  0
+ VA6  CONST_24  H1   C2   N3   C4    180.00   0.0  0
+ VA6  CONST_25  H4   C8   N9   C4    180.00   0.0  0
+ VA6  CONST_26  H2   N6   C6   N1      0.00   0.0  0
+ VA6  CONST_27  H3   N6   C6   N1    180.00   0.0  0
+ VA6  Var_01    C4'  C5'  O5'  PA   -134.97  30.0  1
+ VA6  Var_02    O1B  PB   O3A  PA     32.69  30.0  1
+ VA6  Var_03    O1A  PA   O3A  PB     27.09  30.0  3
+ VA6  Var_04    O3G  PG   C3B  PB     56.28  30.0  2
+ VA6  Var_05    O4'  C1'  N9   C4    -59.94  30.0  1
+ VA6  Var_06    C2'  C1'  N9   C4     60.18  30.0  1
+ VA6  Var_07    O4'  C1'  N9   C8    117.43  30.0  1
+ VA6  Var_08    C2'  C1'  N9   C8   -122.45  30.0  1
+ VA6  Var_09    C4'  O4'  C1'  N9    120.52  30.0  1
+ VA6  Var_10    C3'  C2'  C1'  N9   -143.05  30.0  1
+ VA6  Var_11    C3'  C4'  O4'  C1'    27.32  30.0  1
+ VA6  Var_12    C4'  C3'  C2'  C1'    35.71  30.0  1
+ VA6  Var_13    O4'  C4'  C3'  C2'   -39.08  30.0  1
+ VA6  Var_14    C4'  O4'  C1'  C2'    -3.68  30.0  1
+ VA6  Var_15    O4'  C1'  C2'  C3'   -21.24  30.0  1
+ VA6  Var_16    C5'  C4'  O4'  C1'   152.90  30.0  1
+ VA6  Var_17    O3'  C3'  C2'  C1'   153.80  30.0  1
+ VA6  Var_18    C5'  C4'  C3'  C2'  -160.64  30.0  1
+ VA6  Var_19    O4'  C4'  C3'  O3'  -161.78  30.0  1
+ VA6  Var_20    H5   C1'  N9   C4   -177.45  30.0  1
+ VA6  Var_21    H8   C2'  C1'  N9     94.95  30.0  1
+ VA6  Var_22    H9   C2'  C1'  N9    -26.38  30.0  1
+ VA6  Var_23    H14  C4'  O4'  C1'   -89.44  30.0  1
+ VA6  Var_24    H12  C3'  C2'  C1'   -79.63  30.0  1
+ VA6  Var_25    O5'  C5'  C4'  C3'    56.24  30.0  3
+ VA6  Var_26    C5'  C4'  C3'  O3'    76.66  30.0  1
+ VA6  Var_27    O5'  C5'  C4'  O4'   -62.17  30.0  3
+ VA6  Var_28    H13  O3'  C3'  C2'    74.40  30.0  3
+ VA6  Var_29    H15  C5'  C4'  C3'   175.19  30.0  3
+ VA6  Var_30    H16  C5'  C4'  C3'   -66.01  30.0  3
+ VA6  Var_31    O1B  PB   C3B  PG    -38.50  30.0  1
+ VA6  Var_32    O2B  PB   C3B  PG   -170.72  30.0  1
+ VA6  Var_33    O3A  PB   C3B  PG     88.13  30.0  1
+ VA6  Var_34    C5'  O5'  PA   O1A   -48.45  30.0  2
+ VA6  Var_35    F1B  C3B  PB   O2B   -52.29  30.0  3
+ VA6  Var_36    F2B  C3B  PB   O2B    62.63  30.0  3
+ VA6  Var_37    C5'  O5'  PA   O2A   179.25  30.0  2
+ VA6  Var_38    F1B  C3B  PB   O1B    79.92  30.0  3
+ VA6  Var_39    F2B  C3B  PB   O1B  -165.15  30.0  3
+ VA6  Var_40    F1B  C3B  PB   O3A  -153.45  30.0  3
+ VA6  Var_41    F2B  C3B  PB   O3A   -38.52  30.0  3
+ VA6  Var_42    C5'  O5'  PA   O3A    75.92  30.0  2
+ VA6  Var_43    H10  O2A  PA   O1A   -46.22  30.0  3
+ VA6  Var_44    H11  O2G  PG   O1G   152.98  30.0  3
+ VA6  Var_45    H6   O2B  PB   O1B   -36.82  30.0  3
+ VA6  Var_46    H7   O1G  PG   O2G   174.47  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

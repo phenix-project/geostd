@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VPU  VPU  'N-[(2Z,3R,4R,5S,6R)-4,5-dihydroxy-6-(hydroxymethyl)-2-{[(phenylcarbamoyl)oxy]imino}tetrahydro-2H-pyran-3-yl]pentanamide (non-preferred name)'  ligand  53  28  .  2022-03-29  2022-03-29
+ VPU  VPU  'N-[(2Z,3R,4R,5S,6R)-4,5-dihydroxy-6-(hydroxymethyl)-2-{[(phenylcarbamoyl)oxy]imino}tetrahydro-2H-pyran-3-yl]pentanamide (non-preferred name)'  ligand  53  28  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VPU
@@ -265,33 +266,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VPU  CONST_01  CAV   CAU  CAT  CAS    0.00   0.0  0
- VPU  CONST_02  CAV   CAW  CAX  CAS    0.00   0.0  0
- VPU  CONST_03  CAW   CAX  CAS  CAT    0.00   0.0  0
- VPU  CONST_04  CAW   CAV  CAU  CAT    0.00   0.0  0
- VPU  CONST_05  CAX   CAS  CAT  CAU    0.00   0.0  0
- VPU  CONST_06  CAX   CAW  CAV  CAU    0.00   0.0  0
- VPU  CONST_07  CAU   CAT  CAS  NAO  180.00   0.0  0
- VPU  CONST_08  CAW   CAX  CAS  NAO  180.00   0.0  0
- VPU  CONST_09  HAU   CAU  CAT  CAS  180.00   0.0  0
- VPU  CONST_10  HAW   CAW  CAX  CAS  180.00   0.0  0
- VPU  CONST_11  HAX   CAX  CAS  CAT  180.00   0.0  0
- VPU  CONST_12  HAV   CAV  CAU  CAT  180.00   0.0  0
- VPU  CONST_13  HAT   CAT  CAU  CAV  180.00   0.0  0
- VPU  CONST_14  CAT   CAS  NAO  CAP    0.00   0.0  0
- VPU  CONST_15  CAX   CAS  NAO  CAP  180.00   0.0  0
- VPU  CONST_16  HNAO  NAO  CAS  CAT  180.00   0.0  0
- VPU  CONST_17  CAB   NAI  CAG  CAH  180.00   0.0  0
- VPU  CONST_18  CAB   NAI  CAG  OAN    0.00   0.0  0
- VPU  CONST_19  CAS   NAO  CAP  OAQ  180.00   0.0  0
- VPU  CONST_20  CAS   NAO  CAP  OAR    0.00   0.0  0
- VPU  CONST_21  HNAI  NAI  CAG  CAH    0.00   0.0  0
- VPU  Var_01    NAY   CAA  OAL  CAE  148.44  30.0  1
- VPU  Var_02    CAH   C1   C2   C3   179.94  30.0  3
- VPU  Var_03    CAG   CAH  C1   C2   175.80  30.0  3
- VPU  Var_04    OAN   CAG  CAH  C1   -32.56  30.0  3
- VPU  Var_05    OAR   CAP  OAQ  NAY    1.99  30.0  3
- VPU  Var_06    H3    C3   C2   C1   -61.14  30.0  3
+ VPU  CONST_01  CAV   CAU  CAT  CAS     0.00   0.0  0
+ VPU  CONST_02  CAV   CAW  CAX  CAS     0.00   0.0  0
+ VPU  CONST_03  CAW   CAX  CAS  CAT     0.00   0.0  0
+ VPU  CONST_04  CAW   CAV  CAU  CAT     0.00   0.0  0
+ VPU  CONST_05  CAX   CAS  CAT  CAU     0.00   0.0  0
+ VPU  CONST_06  CAX   CAW  CAV  CAU     0.00   0.0  0
+ VPU  CONST_07  CAU   CAT  CAS  NAO   180.00   0.0  0
+ VPU  CONST_08  CAW   CAX  CAS  NAO   180.00   0.0  0
+ VPU  CONST_09  HAU   CAU  CAT  CAS   180.00   0.0  0
+ VPU  CONST_10  HAW   CAW  CAX  CAS   180.00   0.0  0
+ VPU  CONST_11  HAX   CAX  CAS  CAT   180.00   0.0  0
+ VPU  CONST_12  HAV   CAV  CAU  CAT   180.00   0.0  0
+ VPU  CONST_13  HAT   CAT  CAU  CAV   180.00   0.0  0
+ VPU  CONST_14  CAT   CAS  NAO  CAP     0.00   0.0  0
+ VPU  CONST_15  CAX   CAS  NAO  CAP   180.00   0.0  0
+ VPU  CONST_16  HNAO  NAO  CAS  CAT   180.00   0.0  0
+ VPU  CONST_17  CAB   NAI  CAG  CAH   180.00   0.0  0
+ VPU  CONST_18  CAB   NAI  CAG  OAN     0.00   0.0  0
+ VPU  CONST_19  CAS   NAO  CAP  OAQ   180.00   0.0  0
+ VPU  CONST_20  CAS   NAO  CAP  OAR     0.00   0.0  0
+ VPU  CONST_21  HNAI  NAI  CAG  CAH     0.00   0.0  0
+ VPU  Var_01    NAY   CAA  OAL  CAE   148.44  30.0  1
+ VPU  Var_02    CAH   C1   C2   C3    179.94  30.0  3
+ VPU  Var_03    CAG   CAH  C1   C2    175.80  30.0  3
+ VPU  Var_04    OAN   CAG  CAH  C1    -32.56  30.0  3
+ VPU  Var_05    OAR   CAP  OAQ  NAY     1.99  30.0  3
+ VPU  Var_06    H3    C3   C2   C1    -61.14  30.0  3
+ VPU  Var_07    CAE   CAD  CAC  CAB    59.29  30.0  1
+ VPU  Var_08    OAL   CAA  CAB  CAC    41.13  30.0  1
+ VPU  Var_09    OAL   CAE  CAD  CAC   -53.45  30.0  1
+ VPU  Var_10    CAA   CAB  CAC  CAD   -51.46  30.0  1
+ VPU  Var_11    CAA   OAL  CAE  CAD    43.16  30.0  1
+ VPU  Var_12    CAD   CAC  CAB  NAI  -177.65  30.0  1
+ VPU  Var_13    OAL   CAA  CAB  NAI   167.18  30.0  1
+ VPU  Var_14    OAK   CAD  CAC  CAB   179.14  30.0  1
+ VPU  Var_15    NAY   CAA  CAB  CAC  -144.71  30.0  1
+ VPU  Var_16    CAF   CAE  CAD  CAC  -173.13  30.0  1
+ VPU  Var_17    CAA   CAB  CAC  OAJ  -172.96  30.0  1
+ VPU  Var_18    CAE   CAD  CAC  OAJ   177.88  30.0  1
+ VPU  Var_19    OAL   CAE  CAD  OAK  -171.75  30.0  1
+ VPU  Var_20    CAA   OAL  CAE  CAF   166.23  30.0  1
+ VPU  Var_21    HAD   CAD  CAC  CAB   -60.21  30.0  1
+ VPU  Var_22    HAE   CAE  CAD  CAC    65.44  30.0  1
+ VPU  Var_23    HAB   CAB  CAC  CAD    64.40  30.0  1
+ VPU  Var_24    HAC   CAC  CAD  CAE   -59.13  30.0  1
+ VPU  Var_25    OAQ   NAY  CAA  CAB  -176.95   0.0  2
+ VPU  Var_26    OAQ   NAY  CAA  OAL    -3.02   0.0  2
+ VPU  Var_27    CAC   CAB  NAI  CAG  -120.77  30.0  3
+ VPU  Var_28    CAA   CAB  NAI  CAG   114.05  30.0  3
+ VPU  Var_29    OAJ   CAC  CAB  NAI    60.84  30.0  1
+ VPU  Var_30    NAY   CAA  CAB  NAI   -18.66  30.0  1
+ VPU  Var_31    OAK   CAD  CAC  OAJ   -62.26  30.0  1
+ VPU  Var_32    OAM   CAF  CAE  CAD  -174.01  30.0  3
+ VPU  Var_33    CAF   CAE  CAD  OAK    68.57  30.0  1
+ VPU  Var_34    OAL   CAE  CAF  OAM    63.59  30.0  2
+ VPU  Var_35    HOAJ  OAJ  CAC  CAB  -179.25  30.0  3
+ VPU  Var_36    HNAI  NAI  CAB  CAC    59.97  30.0  2
+ VPU  Var_37    HOAK  OAK  CAD  CAC   143.39  30.0  3
+ VPU  Var_38    HAF   CAF  CAE  CAD   -52.66  30.0  3
+ VPU  Var_39    HAFA  CAF  CAE  CAD    63.34  30.0  3
+ VPU  Var_40    CAP   OAQ  NAY  CAA  -176.69  30.0  3
+ VPU  Var_41    HOAM  OAM  CAF  CAE   178.59  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

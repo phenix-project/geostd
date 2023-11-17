@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BZN  BZN  N-({(3R,4R)-4-[(benzyloxy)methyl]pyrrolidin-3-yl}methyl)-N-(2-methylpropyl)benzenesulfonamide  ligand  61  29  .  2021-08-06  2021-08-06  
+ BZN  BZN  N-({(3R,4R)-4-[(benzyloxy)methyl]pyrrolidin-3-yl}methyl)-N-(2-methylpropyl)benzenesulfonamide  ligand  61  29  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BZN
@@ -304,44 +305,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BZN  CONST_01  C21  C22  C23  C18    0.00   0.0  0
- BZN  CONST_02  C21  C20  C19  C18    0.00   0.0  0
- BZN  CONST_03  C20  C19  C18  C23    0.00   0.0  0
- BZN  CONST_04  C20  C21  C22  C23    0.00   0.0  0
- BZN  CONST_05  C19  C18  C23  C22    0.00   0.0  0
- BZN  CONST_06  C19  C20  C21  C22    0.00   0.0  0
- BZN  CONST_07  C12  C13  C14  C9     0.00   0.0  0
- BZN  CONST_08  C12  C11  C10  C9     0.00   0.0  0
- BZN  CONST_09  C11  C10  C9   C14    0.00   0.0  0
- BZN  CONST_10  C11  C12  C13  C14    0.00   0.0  0
- BZN  CONST_11  C10  C9   C14  C13    0.00   0.0  0
- BZN  CONST_12  C10  C11  C12  C13    0.00   0.0  0
- BZN  CONST_13  C22  C23  C18  S17  180.00   0.0  0
- BZN  CONST_14  C20  C19  C18  S17  180.00   0.0  0
- BZN  CONST_15  C13  C14  C9   C8   180.00   0.0  0
- BZN  CONST_16  C11  C10  C9   C8   180.00   0.0  0
- BZN  CONST_17  H22  C22  C23  C18  180.00   0.0  0
- BZN  CONST_18  H20  C20  C19  C18  180.00   0.0  0
- BZN  CONST_19  H19  C19  C18  C23  180.00   0.0  0
- BZN  CONST_20  H21  C21  C22  C23  180.00   0.0  0
- BZN  CONST_21  H23  C23  C22  C21  180.00   0.0  0
- BZN  CONST_22  H13  C13  C14  C9   180.00   0.0  0
- BZN  CONST_23  H11  C11  C10  C9   180.00   0.0  0
- BZN  CONST_24  H10  C10  C9   C14  180.00   0.0  0
- BZN  CONST_25  H12  C12  C13  C14  180.00   0.0  0
- BZN  CONST_26  H14  C14  C13  C12  180.00   0.0  0
- BZN  Var_01    C4   C5   N1   C2   -45.28  30.0  1
- BZN  Var_02    C5   N1   C2   C3    46.79  30.0  1
- BZN  Var_03    C23  C18  S17  N16   81.01  30.0  2
- BZN  Var_04    C14  C9   C8   O7   137.59  30.0  2
- BZN  Var_05    C24  N16  C15  C3    61.14  30.0  3
- BZN  Var_06    C9   C8   O7   C6   172.00  30.0  3
- BZN  Var_07    C18  S17  N16  C15   75.71  30.0  3
- BZN  Var_08    C25  C24  N16  C15   58.59  30.0  3
- BZN  Var_09    C27  C25  C24  N16   59.39  30.0  3
- BZN  Var_10    H27  C27  C25  C24   60.96  30.0  3
- BZN  Var_11    H26  C26  C25  C24   56.62  30.0  3
- BZN  Var_12    H6   C6   O7   C8    63.49  30.0  1
+ BZN  CONST_01  C21   C22  C23  C18     0.00   0.0  0
+ BZN  CONST_02  C21   C20  C19  C18     0.00   0.0  0
+ BZN  CONST_03  C20   C19  C18  C23     0.00   0.0  0
+ BZN  CONST_04  C20   C21  C22  C23     0.00   0.0  0
+ BZN  CONST_05  C19   C18  C23  C22     0.00   0.0  0
+ BZN  CONST_06  C19   C20  C21  C22     0.00   0.0  0
+ BZN  CONST_07  C12   C13  C14  C9      0.00   0.0  0
+ BZN  CONST_08  C12   C11  C10  C9      0.00   0.0  0
+ BZN  CONST_09  C11   C10  C9   C14     0.00   0.0  0
+ BZN  CONST_10  C11   C12  C13  C14     0.00   0.0  0
+ BZN  CONST_11  C10   C9   C14  C13     0.00   0.0  0
+ BZN  CONST_12  C10   C11  C12  C13     0.00   0.0  0
+ BZN  CONST_13  C22   C23  C18  S17   180.00   0.0  0
+ BZN  CONST_14  C20   C19  C18  S17   180.00   0.0  0
+ BZN  CONST_15  C13   C14  C9   C8    180.00   0.0  0
+ BZN  CONST_16  C11   C10  C9   C8    180.00   0.0  0
+ BZN  CONST_17  H22   C22  C23  C18   180.00   0.0  0
+ BZN  CONST_18  H20   C20  C19  C18   180.00   0.0  0
+ BZN  CONST_19  H19   C19  C18  C23   180.00   0.0  0
+ BZN  CONST_20  H21   C21  C22  C23   180.00   0.0  0
+ BZN  CONST_21  H23   C23  C22  C21   180.00   0.0  0
+ BZN  CONST_22  H13   C13  C14  C9    180.00   0.0  0
+ BZN  CONST_23  H11   C11  C10  C9    180.00   0.0  0
+ BZN  CONST_24  H10   C10  C9   C14   180.00   0.0  0
+ BZN  CONST_25  H12   C12  C13  C14   180.00   0.0  0
+ BZN  CONST_26  H14   C14  C13  C12   180.00   0.0  0
+ BZN  Var_01    C4    C5   N1   C2    -45.28  30.0  1
+ BZN  Var_02    C5    N1   C2   C3     46.79  30.0  1
+ BZN  Var_03    C23   C18  S17  N16    81.01  30.0  2
+ BZN  Var_04    C14   C9   C8   O7    137.59  30.0  2
+ BZN  Var_05    C24   N16  C15  C3     61.14  30.0  3
+ BZN  Var_06    C9    C8   O7   C6    172.00  30.0  3
+ BZN  Var_07    C18   S17  N16  C15    75.71  30.0  3
+ BZN  Var_08    C25   C24  N16  C15    58.59  30.0  3
+ BZN  Var_09    C27   C25  C24  N16    59.39  30.0  3
+ BZN  Var_10    H27   C27  C25  C24    60.96  30.0  3
+ BZN  Var_11    H26   C26  C25  C24    56.62  30.0  3
+ BZN  Var_12    H6    C6   O7   C8     63.49  30.0  1
+ BZN  Var_13    C5    C4   C3   C2      2.21  30.0  1
+ BZN  Var_14    N1    C5   C4   C3     25.23  30.0  1
+ BZN  Var_15    N1    C2   C3   C4    -28.88  30.0  1
+ BZN  Var_16    C6    C4   C3   C2   -120.60  30.0  1
+ BZN  Var_17    C15   C3   C4   C5   -118.19  30.0  1
+ BZN  Var_18    N1    C5   C4   C6    146.89  30.0  1
+ BZN  Var_19    C15   C3   C2   N1     89.73  30.0  1
+ BZN  Var_20    H4    C4   C3   C2    119.06  30.0  1
+ BZN  Var_21    H2    C2   C3   C4     91.28  30.0  1
+ BZN  Var_22    H2A   C2   C3   C4   -148.99  30.0  1
+ BZN  Var_23    H3    C3   C4   C5    120.58  30.0  1
+ BZN  Var_24    N16   C15  C3   C2     70.11  30.0  3
+ BZN  Var_25    O7    C6   C4   C3    178.42  30.0  3
+ BZN  Var_26    N16   C15  C3   C4   -174.85  30.0  3
+ BZN  Var_27    O7    C6   C4   C5     61.07  30.0  3
+ BZN  Var_28    C15   C3   C4   C6    119.01  30.0  1
+ BZN  Var_29    H15   C15  C3   C2   -166.75  30.0  3
+ BZN  Var_30    H15A  C15  C3   C2    -51.51  30.0  3
+ BZN  Var_31    H6    C6   C4   C3    -59.81  30.0  3
+ BZN  Var_32    H6A   C6   C4   C3     57.37  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

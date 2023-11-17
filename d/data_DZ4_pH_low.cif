@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DZ4  DZ4  2'-deoxy-5'-O-[(R)-hydroxy{[(R)-hydroxy(phosphonooxy)phosphoryl]amino}phosphoryl]adenosine  ligand  47  30  .  2022-11-17  2022-11-17
+ DZ4  DZ4  2'-deoxy-5'-O-[(R)-hydroxy{[(R)-hydroxy(phosphonooxy)phosphoryl]amino}phosphoryl]adenosine  ligand  47  30  .  2022-11-17  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_DZ4
@@ -244,37 +245,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DZ4  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- DZ4  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- DZ4  CONST_03  N7    C5   C6   N1   180.00   0.0  0
- DZ4  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- DZ4  CONST_05  N9    C4   N3   C2   180.00   0.0  0
- DZ4  CONST_06  C5    C4   N3   C2     0.00   0.0  0
- DZ4  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- DZ4  CONST_08  C8    N9   C4   N3   180.00   0.0  0
- DZ4  CONST_09  N7    C5   C4   N3   180.00   0.0  0
- DZ4  CONST_10  C6    C5   C4   N3     0.00   0.0  0
- DZ4  CONST_11  N7    C8   N9   C4     0.00   0.0  0
- DZ4  CONST_12  C8    N7   C5   C4     0.00   0.0  0
- DZ4  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- DZ4  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- DZ4  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- DZ4  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- DZ4  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- DZ4  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- DZ4  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- DZ4  CONST_20  C1'   N9   C8   N7   180.00   0.0  0
- DZ4  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- DZ4  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- DZ4  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- DZ4  CONST_24  H2    C2   N3   C4   180.00   0.0  0
- DZ4  CONST_25  H8    C8   N9   C4   180.00   0.0  0
- DZ4  CONST_26  HN6   N6   C6   N1     0.00   0.0  0
- DZ4  CONST_27  HN6A  N6   C6   N1   180.00   0.0  0
- DZ4  Var_01    C4'   C5'  O5'  PA  -159.04  30.0  3
- DZ4  Var_02    O1B   PB   N3A  PA    -8.06  30.0  3
- DZ4  Var_03    O5'   PA   N3A  PB   -56.12  30.0  2
- DZ4  Var_04    O1G   PG   O3B  PB    29.80  30.0  2
+ DZ4  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ DZ4  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ DZ4  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ DZ4  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ DZ4  CONST_05  N9    C4   N3   C2    180.00   0.0  0
+ DZ4  CONST_06  C5    C4   N3   C2      0.00   0.0  0
+ DZ4  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ DZ4  CONST_08  C8    N9   C4   N3    180.00   0.0  0
+ DZ4  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ DZ4  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ DZ4  CONST_11  N7    C8   N9   C4      0.00   0.0  0
+ DZ4  CONST_12  C8    N7   C5   C4      0.00   0.0  0
+ DZ4  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ DZ4  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ DZ4  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ DZ4  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ DZ4  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ DZ4  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ DZ4  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ DZ4  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ DZ4  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ DZ4  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ DZ4  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ DZ4  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ DZ4  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ DZ4  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ DZ4  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ DZ4  Var_01    C4'   C5'  O5'  PA   -159.04  30.0  3
+ DZ4  Var_02    O1B   PB   N3A  PA     -8.06  30.0  3
+ DZ4  Var_03    O5'   PA   N3A  PB    -56.12  30.0  2
+ DZ4  Var_04    O1G   PG   O3B  PB     29.80  30.0  2
+ DZ4  Var_05    O4'   C1'  N9   C4   -163.07  30.0  1
+ DZ4  Var_06    C2'   C1'  N9   C4     79.17  30.0  1
+ DZ4  Var_07    O4'   C1'  N9   C8     18.77  30.0  1
+ DZ4  Var_08    C2'   C1'  N9   C8    -98.99  30.0  1
+ DZ4  Var_09    C4'   O4'  C1'  N9   -118.55  30.0  1
+ DZ4  Var_10    C3'   C2'  C1'  N9     91.99  30.0  1
+ DZ4  Var_11    C3'   C4'  O4'  C1'    22.51  30.0  1
+ DZ4  Var_12    C4'   C3'  C2'  C1'    38.07  30.0  1
+ DZ4  Var_13    C4'   O4'  C1'  C2'     2.61  30.0  1
+ DZ4  Var_14    O4'   C4'  C3'  C2'   -37.78  30.0  1
+ DZ4  Var_15    O4'   C1'  C2'  C3'   -26.62  30.0  1
+ DZ4  Var_16    C5'   C4'  O4'  C1'   149.64  30.0  1
+ DZ4  Var_17    O3'   C3'  C2'  C1'   159.68  30.0  1
+ DZ4  Var_18    C5'   C4'  C3'  C2'  -160.92  30.0  1
+ DZ4  Var_19    O4'   C4'  C3'  O3'  -158.79  30.0  1
+ DZ4  Var_20    H1'   C1'  N9   C4    -44.09  30.0  1
+ DZ4  Var_21    H2'   C2'  C1'  N9   -151.47  30.0  1
+ DZ4  Var_22    H2'A  C2'  C1'  N9    -31.14  30.0  1
+ DZ4  Var_23    H4'   C4'  O4'  C1'   -93.55  30.0  1
+ DZ4  Var_24    H3'   C3'  C2'  C1'   -76.62  30.0  1
+ DZ4  Var_25    O5'   C5'  C4'  C3'    51.49  30.0  3
+ DZ4  Var_26    C5'   C4'  C3'  O3'    78.06  30.0  1
+ DZ4  Var_27    O5'   C5'  C4'  O4'   -68.39  30.0  3
+ DZ4  Var_28    HO3'  O3'  C3'  C2'   161.43  30.0  3
+ DZ4  Var_29    H5'   C5'  C4'  C3'   172.60  30.0  3
+ DZ4  Var_30    H5'A  C5'  C4'  C3'   -69.84  30.0  3
+ DZ4  Var_31    O1B   PB   O3B  PG    -67.52  30.0  1
+ DZ4  Var_32    N3A   PB   O3B  PG     57.20  30.0  1
+ DZ4  Var_33    O2B   PB   O3B  PG    165.16  30.0  1
+ DZ4  Var_34    C5'   O5'  PA   O1A    -3.89  30.0  3
+ DZ4  Var_35    C5'   O5'  PA   O2A  -133.68  30.0  3
+ DZ4  Var_36    C5'   O5'  PA   N3A   124.62  30.0  3
+ DZ4  Var_37    HO2A  O2A  PA   O1A   -29.81  30.0  3
+ DZ4  Var_38    HO2B  O2B  PB   O1B   -55.77  30.0  3
+ DZ4  Var_39    HO2G  O2G  PG   O1G    37.60  30.0  3
+ DZ4  Var_40    HO3G  O3G  PG   O1G    38.84  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

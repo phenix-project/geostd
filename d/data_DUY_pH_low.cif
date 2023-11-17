@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DUY  DUY  '(2S)-({4-(4-bromophenyl)-1-[1-(tert-butoxycarbonyl)-L-prolyl]piperidine-4-carbonyl}amino)(cyclopentyl)acetic acid'  ligand  79  39  .  2022-07-24  2022-11-17
+ DUY  DUY  '(2S)-({4-(4-bromophenyl)-1-[1-(tert-butoxycarbonyl)-L-prolyl]piperidine-4-carbonyl}amino)(cyclopentyl)acetic acid'  ligand  79  39  .  2022-07-24  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_DUY
@@ -381,43 +382,92 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DUY  CONST_01  C25  C24  CE2  CD2    0.00   0.0  0
- DUY  CONST_02  C25  C26  C27  CD2    0.00   0.0  0
- DUY  CONST_03  C26  C27  CD2  CE2    0.00   0.0  0
- DUY  CONST_04  C26  C25  C24  CE2    0.00   0.0  0
- DUY  CONST_05  C27  CD2  CE2  C24    0.00   0.0  0
- DUY  CONST_06  C27  C26  C25  C24    0.00   0.0  0
- DUY  CONST_07  C24  CE2  CD2  CG   180.00   0.0  0
- DUY  CONST_08  C26  C27  CD2  CG   180.00   0.0  0
- DUY  CONST_09  BR1  C25  C24  CE2  180.00   0.0  0
- DUY  CONST_10  C27  C26  C25  BR1  180.00   0.0  0
- DUY  CONST_11  CE1  N2   C1   C2   180.00   0.0  0
- DUY  CONST_12  C29  N2   C1   C2     0.00   0.0  0
- DUY  CONST_13  H33  CE2  CD2  CG     0.00   0.0  0
- DUY  CONST_14  H36  C27  CD2  CG     0.00   0.0  0
- DUY  CONST_15  H34  C24  CE2  CD2  180.00   0.0  0
- DUY  CONST_16  H35  C26  C27  CD2  180.00   0.0  0
- DUY  CONST_17  CE1  N2   C1   OH     0.00   0.0  0
- DUY  CONST_18  C29  N2   C1   OH   180.00   0.0  0
- DUY  CONST_19  CG   CB   N3   C15  180.00   0.0  0
- DUY  CONST_20  H32  N3   CB   CG     0.00   0.0  0
- DUY  CONST_21  C15  N3   CB   O6     0.00   0.0  0
- DUY  CONST_22  H2   O4   C21  C15  180.00   0.0  0
- DUY  Var_01    C9   C8   N    C2    -6.08  30.0  1
- DUY  Var_02    C8   C9   C10  C2   -36.50  30.0  1
- DUY  Var_03    N    C8   C9   C10   26.39  30.0  1
- DUY  Var_04    C18  C19  C20  C16   34.16  30.0  1
- DUY  Var_05    C19  C18  C17  C16   32.10  30.0  1
- DUY  Var_06    C20  C19  C18  C17  -41.00  30.0  1
- DUY  Var_07    CG   CD1  CE1  N2    51.40  30.0  1
- DUY  Var_08    CG   C28  C29  N2   -58.50  30.0  1
- DUY  Var_09    C28  C29  N2   CE1   62.90  30.0  1
- DUY  Var_10    C29  N2   CE1  CD1  -58.74  30.0  1
- DUY  Var_11    O3   C3   N    C2   172.57  30.0  2
- DUY  Var_12    C7   C    O    C3   -57.87  30.0  3
- DUY  Var_13    H9   C7   C    C5   -55.59  30.0  3
- DUY  Var_14    H6   C6   C    C5   -62.41  30.0  3
- DUY  Var_15    H3   C5   C    C6    59.76  30.0  3
+ DUY  CONST_01  C25  C24  CE2  CD2     0.00   0.0  0
+ DUY  CONST_02  C25  C26  C27  CD2     0.00   0.0  0
+ DUY  CONST_03  C26  C27  CD2  CE2     0.00   0.0  0
+ DUY  CONST_04  C26  C25  C24  CE2     0.00   0.0  0
+ DUY  CONST_05  C27  CD2  CE2  C24     0.00   0.0  0
+ DUY  CONST_06  C27  C26  C25  C24     0.00   0.0  0
+ DUY  CONST_07  C24  CE2  CD2  CG    180.00   0.0  0
+ DUY  CONST_08  C26  C27  CD2  CG    180.00   0.0  0
+ DUY  CONST_09  BR1  C25  C24  CE2   180.00   0.0  0
+ DUY  CONST_10  C27  C26  C25  BR1   180.00   0.0  0
+ DUY  CONST_11  CE1  N2   C1   C2    180.00   0.0  0
+ DUY  CONST_12  C29  N2   C1   C2      0.00   0.0  0
+ DUY  CONST_13  H33  CE2  CD2  CG      0.00   0.0  0
+ DUY  CONST_14  H36  C27  CD2  CG      0.00   0.0  0
+ DUY  CONST_15  H34  C24  CE2  CD2   180.00   0.0  0
+ DUY  CONST_16  H35  C26  C27  CD2   180.00   0.0  0
+ DUY  CONST_17  CE1  N2   C1   OH      0.00   0.0  0
+ DUY  CONST_18  C29  N2   C1   OH    180.00   0.0  0
+ DUY  CONST_19  CG   CB   N3   C15   180.00   0.0  0
+ DUY  CONST_20  H32  N3   CB   CG      0.00   0.0  0
+ DUY  CONST_21  C15  N3   CB   O6      0.00   0.0  0
+ DUY  CONST_22  H2   O4   C21  C15   180.00   0.0  0
+ DUY  Var_01    C9   C8   N    C2     -6.08  30.0  1
+ DUY  Var_02    C8   C9   C10  C2    -36.50  30.0  1
+ DUY  Var_03    N    C8   C9   C10    26.39  30.0  1
+ DUY  Var_04    C18  C19  C20  C16    34.16  30.0  1
+ DUY  Var_05    C19  C18  C17  C16    32.10  30.0  1
+ DUY  Var_06    C20  C19  C18  C17   -41.00  30.0  1
+ DUY  Var_07    CG   CD1  CE1  N2     51.40  30.0  1
+ DUY  Var_08    CG   C28  C29  N2    -58.50  30.0  1
+ DUY  Var_09    C28  C29  N2   CE1    62.90  30.0  1
+ DUY  Var_10    C29  N2   CE1  CD1   -58.74  30.0  1
+ DUY  Var_11    O3   C3   N    C2    172.57  30.0  2
+ DUY  Var_12    C7   C    O    C3    -57.87  30.0  3
+ DUY  Var_13    H9   C7   C    C5    -55.59  30.0  3
+ DUY  Var_14    H6   C6   C    C5    -62.41  30.0  3
+ DUY  Var_15    H3   C5   C    C6     59.76  30.0  3
+ DUY  Var_16    C10  C2   N    C8    -16.58  30.0  1
+ DUY  Var_17    N    C2   C10  C9     32.24  30.0  1
+ DUY  Var_18    C19  C20  C16  C17   -14.21  30.0  1
+ DUY  Var_19    C20  C16  C17  C18   -11.03  30.0  1
+ DUY  Var_20    C28  CG   CD1  CE1   -46.59  30.0  1
+ DUY  Var_21    CD2  CG   CD1  CE1  -169.26  30.0  1
+ DUY  Var_22    C29  C28  CG   CD1    49.53  30.0  1
+ DUY  Var_23    CE2  CD2  CG   CD1   122.18  30.0  2
+ DUY  Var_24    C27  CD2  CG   CD1   -59.38  30.0  2
+ DUY  Var_25    C29  C28  CG   CD2   170.27  30.0  1
+ DUY  Var_26    C28  CG   CD2  CE2     1.75  30.0  2
+ DUY  Var_27    C28  CG   CD2  C27  -179.81  30.0  2
+ DUY  Var_28    C8   N    C2   C1    102.44  30.0  1
+ DUY  Var_29    C9   C10  C2   C1    -85.82  30.0  1
+ DUY  Var_30    C10  C2   N    C3    175.82  30.0  1
+ DUY  Var_31    N2   C1   C2   C10   -80.01  30.0  3
+ DUY  Var_32    C19  C20  C16  C15  -137.40  30.0  1
+ DUY  Var_33    C18  C17  C16  C15   113.43  30.0  1
+ DUY  Var_34    N2   C1   C2   N     166.61  30.0  3
+ DUY  Var_35    CB   CG   CD1  CE1    72.43  30.0  1
+ DUY  Var_36    C29  C28  CG   CB    -71.20  30.0  1
+ DUY  Var_37    CE2  CD2  CG   CB   -117.28  30.0  2
+ DUY  Var_38    C27  CD2  CG   CB     61.16  30.0  2
+ DUY  Var_39    H1   C2   N    C8   -135.15  30.0  1
+ DUY  Var_40    H26  C20  C16  C17   104.34  30.0  1
+ DUY  Var_41    H27  C20  C16  C17  -137.24  30.0  1
+ DUY  Var_42    H19  C16  C17  C18  -128.54  30.0  1
+ DUY  Var_43    C3   N    C2   C1    -65.16  30.0  1
+ DUY  Var_44    CD1  CG   CB   O6     -9.45  30.0  2
+ DUY  Var_45    C28  CG   CB   O6    109.72  30.0  2
+ DUY  Var_46    CD2  CG   CB   O6   -128.74  30.0  2
+ DUY  Var_47    OH   C1   C2   C10    97.77  30.0  3
+ DUY  Var_48    C21  C15  C16  C17  -179.35  30.0  2
+ DUY  Var_49    N3   C15  C16  C17   -56.41  30.0  2
+ DUY  Var_50    C21  C15  C16  C20   -59.59  30.0  2
+ DUY  Var_51    N3   C15  C16  C20    63.36  30.0  2
+ DUY  Var_52    N    C2   C1   OH    -15.60  30.0  3
+ DUY  Var_53    N3   CB   CG   CD1   170.58  30.0  3
+ DUY  Var_54    C28  CG   CB   N3    -70.25  30.0  2
+ DUY  Var_55    CD2  CG   CB   N3     51.29  30.0  2
+ DUY  Var_56    H18  C15  C16  C17    62.49  30.0  2
+ DUY  Var_57    C16  C15  C21  O4    -64.15  30.0  3
+ DUY  Var_58    O5   C21  C15  C16   115.45  30.0  1
+ DUY  Var_59    CB   N3   C15  C16   155.70  30.0  1
+ DUY  Var_60    C    O    C3   N     170.78  30.0  3
+ DUY  Var_61    N3   C15  C21  O4    172.54  30.0  3
+ DUY  Var_62    CB   N3   C15  C21   -80.40  30.0  1
+ DUY  Var_63    O3   C3   O    C     -10.85  30.0  1
+ DUY  Var_64    O5   C21  C15  N3     -7.86  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

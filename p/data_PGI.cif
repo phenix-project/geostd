@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PGI  PGI  (5R,6R,7S,8S)-6,7,8-trihydroxy-5-(hydroxymethyl)-2-(2-phenylethyl)-5,6,7,8-tetrahydro-1H-imidazo[1,2-a]pyridin-4-ium  ligand  43  22  .  2021-08-19  2021-08-19  
+ PGI  PGI  (5R,6R,7S,8S)-6,7,8-trihydroxy-5-(hydroxymethyl)-2-(2-phenylethyl)-5,6,7,8-tetrahydro-1H-imidazo[1,2-a]pyridin-4-ium  ligand  43  22  .  2021-08-19  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PGI
@@ -232,31 +233,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PGI  CONST_01  N2   C7   C8   N1      0.00   0.0  0
- PGI  CONST_02  C7   N2   C1   N1      0.00   0.0  0
- PGI  CONST_03  N2   C1   N1   C8      0.00   0.0  0
- PGI  CONST_04  C1   N2   C7   C8      0.00   0.0  0
- PGI  CONST_05  C1   N1   C8   C7      0.00   0.0  0
- PGI  CONST_06  C11  C12  C13  C14     0.00   0.0  0
- PGI  CONST_07  C11  C16  C15  C14     0.00   0.0  0
- PGI  CONST_08  C16  C15  C14  C13     0.00   0.0  0
- PGI  CONST_09  C16  C11  C12  C13     0.00   0.0  0
- PGI  CONST_10  C15  C14  C13  C12     0.00   0.0  0
- PGI  CONST_11  C15  C16  C11  C12     0.00   0.0  0
- PGI  CONST_12  C9   C7   C8   N1    180.00   0.0  0
- PGI  CONST_13  C9   C7   N2   C1    180.00   0.0  0
- PGI  CONST_14  C12  C13  C14  C10   180.00   0.0  0
- PGI  CONST_15  C16  C15  C14  C10   180.00   0.0  0
- PGI  CONST_16  H8   C8   N1   C5      0.00   0.0  0
- PGI  CONST_17  HD   N2   C1   C2      0.00   0.0  0
- PGI  CONST_18  H12  C12  C13  C14   180.00   0.0  0
- PGI  CONST_19  H16  C16  C15  C14   180.00   0.0  0
- PGI  CONST_20  H15  C15  C14  C13   180.00   0.0  0
- PGI  CONST_21  H11  C11  C12  C13   180.00   0.0  0
- PGI  CONST_22  H13  C13  C14  C15   180.00   0.0  0
- PGI  Var_01    C10  C9   C7   C8   -109.29  30.0  2
- PGI  Var_02    C14  C10  C9   C7    178.76  30.0  3
- PGI  Var_03    C13  C14  C10  C9     89.79  30.0  2
+ PGI  CONST_01  N2    C7   C8   N1      0.00   0.0  0
+ PGI  CONST_02  C7    N2   C1   N1      0.00   0.0  0
+ PGI  CONST_03  N2    C1   N1   C8      0.00   0.0  0
+ PGI  CONST_04  C1    N2   C7   C8      0.00   0.0  0
+ PGI  CONST_05  C1    N1   C8   C7      0.00   0.0  0
+ PGI  CONST_06  C11   C12  C13  C14     0.00   0.0  0
+ PGI  CONST_07  C11   C16  C15  C14     0.00   0.0  0
+ PGI  CONST_08  C16   C15  C14  C13     0.00   0.0  0
+ PGI  CONST_09  C16   C11  C12  C13     0.00   0.0  0
+ PGI  CONST_10  C15   C14  C13  C12     0.00   0.0  0
+ PGI  CONST_11  C15   C16  C11  C12     0.00   0.0  0
+ PGI  CONST_12  C9    C7   C8   N1    180.00   0.0  0
+ PGI  CONST_13  C9    C7   N2   C1    180.00   0.0  0
+ PGI  CONST_14  C12   C13  C14  C10   180.00   0.0  0
+ PGI  CONST_15  C16   C15  C14  C10   180.00   0.0  0
+ PGI  CONST_16  H8    C8   N1   C5      0.00   0.0  0
+ PGI  CONST_17  HD    N2   C1   C2      0.00   0.0  0
+ PGI  CONST_18  H12   C12  C13  C14   180.00   0.0  0
+ PGI  CONST_19  H16   C16  C15  C14   180.00   0.0  0
+ PGI  CONST_20  H15   C15  C14  C13   180.00   0.0  0
+ PGI  CONST_21  H11   C11  C12  C13   180.00   0.0  0
+ PGI  CONST_22  H13   C13  C14  C15   180.00   0.0  0
+ PGI  Var_01    C10   C9   C7   C8   -109.29  30.0  2
+ PGI  Var_02    C14   C10  C9   C7    178.76  30.0  3
+ PGI  Var_03    C13   C14  C10  C9     89.79  30.0  2
+ PGI  Var_04    C2    C3   C4   C5     64.45  30.0  1
+ PGI  Var_05    C8    N1   C5   C4   -175.07  30.0  1
+ PGI  Var_06    C1    N1   C5   C4      8.60  30.0  1
+ PGI  Var_07    C1    C2   C3   C4    -53.33  30.0  1
+ PGI  Var_08    N1    C5   C4   C3    -39.52  30.0  1
+ PGI  Var_09    N1    C1   C2   C3     24.79  30.0  1
+ PGI  Var_10    N2    C1   C2   C3   -153.94  30.0  1
+ PGI  Var_11    C3    C4   C5   C6   -162.74  30.0  1
+ PGI  Var_12    C8    N1   C5   C6    -52.57  30.0  1
+ PGI  Var_13    C1    N1   C5   C6    131.09  30.0  1
+ PGI  Var_14    O3    C3   C4   C5   -175.51  30.0  1
+ PGI  Var_15    O2    C2   C3   C4   -173.06  30.0  1
+ PGI  Var_16    N1    C5   C4   O4   -161.33  30.0  1
+ PGI  Var_17    C2    C3   C4   O4   -177.25  30.0  1
+ PGI  Var_18    C1    C2   C3   O3   -171.09  30.0  1
+ PGI  Var_19    N1    C1   C2   O2    146.44  30.0  1
+ PGI  Var_20    N2    C1   C2   O2    -32.29  30.0  1
+ PGI  Var_21    H3    C3   C4   C5    -54.33  30.0  1
+ PGI  Var_22    H2    C2   C3   C4     63.26  30.0  1
+ PGI  Var_23    H5    C5   C4   C3     77.14  30.0  1
+ PGI  Var_24    H4    C4   C3   C2    -55.07  30.0  1
+ PGI  Var_25    C4    C5   C6   O6   -165.55  30.0  3
+ PGI  Var_26    N1    C5   C6   O6     71.87  30.0  3
+ PGI  Var_27    O4    C4   C5   C6     75.45  30.0  1
+ PGI  Var_28    O3    C3   C4   O4    -57.21  30.0  1
+ PGI  Var_29    O2    C2   C3   O3     69.18  30.0  1
+ PGI  Var_30    HA    O4   C4   C5   -174.31  30.0  3
+ PGI  Var_31    H6C1  C6   C5   C4     71.43  30.0  3
+ PGI  Var_32    H6C2  C6   C5   C4    -44.52  30.0  3
+ PGI  Var_33    HB    O3   C3   C4    161.62  30.0  3
+ PGI  Var_34    HC    O2   C2   C3   -120.03  30.0  3
+ PGI  Var_35    H6    O6   C6   C5   -173.44  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

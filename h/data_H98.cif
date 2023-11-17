@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- H98  H98  ~{N}-[5-[(1~{R})-2-[[(2~{R})-1-(4-methoxyphenyl)propan-2-yl]amino]-1-oxidanyl-ethyl]-2-oxidanyl-phenyl]methanamide  ligand  49  25  .  2022-03-18  2022-03-18
+ H98  H98  ~{N}-[5-[(1~{R})-2-[[(2~{R})-1-(4-methoxyphenyl)propan-2-yl]amino]-1-oxidanyl-ethyl]-2-oxidanyl-phenyl]methanamide  ligand  49  25  .  2022-03-18  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_H98
@@ -248,43 +249,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- H98  CONST_01  C7   C6   C5   C4     0.00   0.0  0
- H98  CONST_02  C7   C8   C9   C4     0.00   0.0  0
- H98  CONST_03  C8   C9   C4   C5     0.00   0.0  0
- H98  CONST_04  C8   C7   C6   C5     0.00   0.0  0
- H98  CONST_05  C9   C4   C5   C6     0.00   0.0  0
- H98  CONST_06  C9   C8   C7   C6     0.00   0.0  0
- H98  CONST_07  C16  C15  C14  C13    0.00   0.0  0
- H98  CONST_08  C16  C17  C18  C13    0.00   0.0  0
- H98  CONST_09  C17  C16  C15  C14    0.00   0.0  0
- H98  CONST_10  C17  C18  C13  C14    0.00   0.0  0
- H98  CONST_11  C18  C17  C16  C15    0.00   0.0  0
- H98  CONST_12  C18  C13  C14  C15    0.00   0.0  0
- H98  CONST_13  C6   C5   C4   C3   180.00   0.0  0
- H98  CONST_14  C8   C9   C4   C3   180.00   0.0  0
- H98  CONST_15  O1   C7   C6   C5   180.00   0.0  0
- H98  CONST_16  O1   C7   C8   C9   180.00   0.0  0
- H98  CONST_17  C15  C14  C13  C12  180.00   0.0  0
- H98  CONST_18  C17  C18  C13  C12  180.00   0.0  0
- H98  CONST_19  N2   C15  C14  C13  180.00   0.0  0
- H98  CONST_20  O2   C16  C15  C14  180.00   0.0  0
- H98  CONST_21  N2   C15  C16  C17  180.00   0.0  0
- H98  CONST_22  O2   C16  C17  C18  180.00   0.0  0
- H98  CONST_23  H8   C6   C5   C4   180.00   0.0  0
- H98  CONST_24  H9   C8   C9   C4   180.00   0.0  0
- H98  CONST_25  H10  C9   C4   C5   180.00   0.0  0
- H98  CONST_26  H7   C5   C6   C7   180.00   0.0  0
- H98  CONST_27  H20  C17  C18  C13  180.00   0.0  0
- H98  CONST_28  H21  C18  C13  C14  180.00   0.0  0
- H98  CONST_29  H19  C14  C15  C16  180.00   0.0  0
- H98  CONST_30  C19  N2   C15  C14    0.00   0.0  0
- H98  CONST_31  C19  N2   C15  C16  180.00   0.0  0
- H98  CONST_32  H23  N2   C15  C14  180.00   0.0  0
- H98  CONST_33  O3   C19  N2   C15    0.00   0.0  0
- H98  CONST_34  H24  C19  N2   C15  180.00   0.0  0
- H98  Var_01    C5   C4   C3   C2   -75.03  30.0  2
- H98  Var_02    H11  C10  O1   C7   -60.85  30.0  3
- H98  Var_03    C12  C11  N1   C2   163.44  30.0  2
+ H98  CONST_01  C7   C6   C5   C4      0.00   0.0  0
+ H98  CONST_02  C7   C8   C9   C4      0.00   0.0  0
+ H98  CONST_03  C8   C9   C4   C5      0.00   0.0  0
+ H98  CONST_04  C8   C7   C6   C5      0.00   0.0  0
+ H98  CONST_05  C9   C4   C5   C6      0.00   0.0  0
+ H98  CONST_06  C9   C8   C7   C6      0.00   0.0  0
+ H98  CONST_07  C16  C15  C14  C13     0.00   0.0  0
+ H98  CONST_08  C16  C17  C18  C13     0.00   0.0  0
+ H98  CONST_09  C17  C16  C15  C14     0.00   0.0  0
+ H98  CONST_10  C17  C18  C13  C14     0.00   0.0  0
+ H98  CONST_11  C18  C17  C16  C15     0.00   0.0  0
+ H98  CONST_12  C18  C13  C14  C15     0.00   0.0  0
+ H98  CONST_13  C6   C5   C4   C3    180.00   0.0  0
+ H98  CONST_14  C8   C9   C4   C3    180.00   0.0  0
+ H98  CONST_15  O1   C7   C6   C5    180.00   0.0  0
+ H98  CONST_16  O1   C7   C8   C9    180.00   0.0  0
+ H98  CONST_17  C15  C14  C13  C12   180.00   0.0  0
+ H98  CONST_18  C17  C18  C13  C12   180.00   0.0  0
+ H98  CONST_19  N2   C15  C14  C13   180.00   0.0  0
+ H98  CONST_20  O2   C16  C15  C14   180.00   0.0  0
+ H98  CONST_21  N2   C15  C16  C17   180.00   0.0  0
+ H98  CONST_22  O2   C16  C17  C18   180.00   0.0  0
+ H98  CONST_23  H8   C6   C5   C4    180.00   0.0  0
+ H98  CONST_24  H9   C8   C9   C4    180.00   0.0  0
+ H98  CONST_25  H10  C9   C4   C5    180.00   0.0  0
+ H98  CONST_26  H7   C5   C6   C7    180.00   0.0  0
+ H98  CONST_27  H20  C17  C18  C13   180.00   0.0  0
+ H98  CONST_28  H21  C18  C13  C14   180.00   0.0  0
+ H98  CONST_29  H19  C14  C15  C16   180.00   0.0  0
+ H98  CONST_30  C19  N2   C15  C14     0.00   0.0  0
+ H98  CONST_31  C19  N2   C15  C16   180.00   0.0  0
+ H98  CONST_32  H23  N2   C15  C14   180.00   0.0  0
+ H98  CONST_33  O3   C19  N2   C15     0.00   0.0  0
+ H98  CONST_34  H24  C19  N2   C15   180.00   0.0  0
+ H98  Var_01    C5   C4   C3   C2    -75.03  30.0  2
+ H98  Var_02    H11  C10  O1   C7    -60.85  30.0  3
+ H98  Var_03    C12  C11  N1   C2    163.44  30.0  2
+ H98  Var_04    C10  O1   C7   C6    178.86  30.0  2
+ H98  Var_05    C10  O1   C7   C8     -1.34  30.0  2
+ H98  Var_06    C14  C13  C12  C11   -89.51  30.0  2
+ H98  Var_07    C18  C13  C12  C11    87.52  30.0  2
+ H98  Var_08    O4   C12  C13  C14   149.40  30.0  2
+ H98  Var_09    O4   C12  C13  C18   -33.57  30.0  2
+ H98  Var_10    H18  C12  C13  C14    28.23  30.0  2
+ H98  Var_11    H22  O2   C16  C15  -178.65  30.0  2
+ H98  Var_12    C4   C3   C2   C1    175.89  30.0  3
+ H98  Var_13    N1   C2   C3   C4    -62.11  30.0  2
+ H98  Var_14    C13  C12  C11  N1   -171.95  30.0  1
+ H98  Var_15    H4   C2   C3   C4     58.29  30.0  2
+ H98  Var_16    H16  C11  C12  C13    63.15  30.0  3
+ H98  Var_17    H17  C11  C12  C13   -53.40  30.0  3
+ H98  Var_18    H25  O4   C12  C13   154.13  30.0  3
+ H98  Var_19    C11  N1   C2   C1    -72.19  30.0  1
+ H98  Var_20    C11  N1   C2   C3    166.66  30.0  1
+ H98  Var_21    O4   C12  C11  N1    -49.89  30.0  1
+ H98  Var_22    H14  N1   C2   C1    165.63  30.0  1
+ H98  Var_23    H1   C1   C2   C3    -59.40  30.0  3
+ H98  Var_24    H2   C1   C2   C3     60.19  30.0  3
+ H98  Var_25    H3   C1   C2   C3   -178.84  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

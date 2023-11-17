@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JQ0  JQ0  "methyl 2-[(3~{a}~{R},6~{R},8~{a}~{S})-6-(2-methylpropyl)-8-oxidanylidene-1,2,3,3~{a},6,8~{a}-hexahydropyrrolo[2,3-c]azepin-7-yl]ethanoate"  ligand  44  20  .  2023-10-03  2023-10-04
+ JQ0  JQ0  'methyl 2-[(3~{a}~{R},6~{R},8~{a}~{S})-6-(2-methylpropyl)-8-oxidanylidene-1,2,3,3~{a},6,8~{a}-hexahydropyrrolo[2,3-c]azepin-7-yl]ethanoate'  ligand  44  20  .  2023-10-03  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JQ0
@@ -239,45 +240,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JQ0  Var_01  CBX  CBY  NBF  CBG    -8.72  30.0  1
- JQ0  Var_02  NBF  CBY  CBX  CBW   -17.15  30.0  1
- JQ0  Var_03  HZ1  CBY  NBF  CBG  -130.00  30.0  1
- JQ0  Var_04  HBY  CBY  NBF  CBG   112.02  30.0  1
- JQ0  Var_05  HZ1  CBY  CBX  CBW   103.12  30.0  1
- JQ0  Var_06  HBY  CBY  CBX  CBW  -138.16  30.0  1
- JQ0  Var_07  H4   NBF  CBY  CBX   108.59  30.0  1
- JQ0  Var_08  HBX  CBX  CBY  NBF  -139.10  30.0  1
- JQ0  Var_09  HZ0  CBX  CBY  NBF   100.29  30.0  1
- JQ0  Var_10  CBT  CBS  CBP  CBQ   167.47  30.0  3
- JQ0  Var_11  CBT  CBS  CBP  CBR   -70.05  30.0  3
- JQ0  Var_12  O    CBL  CBK  NBJ  -165.99  30.0  3
- JQ0  Var_13  OBO  CBL  CBK  NBJ    15.62  30.0  3
- JQ0  Var_14  HBP  CBP  CBS  CBT    49.82  30.0  1
- JQ0  Var_15  C    O    CBL  CBK  -177.18  30.0  1
- JQ0  Var_16  C    O    CBL  OBO     1.22  30.0  1
- JQ0  Var_17  H2   C    O    CBL   179.22  30.0  3
- JQ0  Var_18  H1   C    O    CBL   -61.93  30.0  3
- JQ0  Var_19  H3   C    O    CBL    60.36  30.0  3
- JQ0  Var_20  HBS  CBS  CBP  CBQ   -70.70  30.0  3
- JQ0  Var_21  HZZ  CBS  CBP  CBQ    45.12  30.0  3
- JQ0  Var_22  HBR  CBR  CBP  CBQ  -176.94  30.0  3
- JQ0  Var_23  HZX  CBR  CBP  CBQ   -56.93  30.0  3
- JQ0  Var_24  HZY  CBR  CBP  CBQ    62.39  30.0  3
- JQ0  Var_25  HZV  CBQ  CBP  CBR    55.99  30.0  3
- JQ0  Var_26  HZW  CBQ  CBP  CBR   176.24  30.0  3
- JQ0  Var_27  HBQ  CBQ  CBP  CBR   -63.71  30.0  3
- JQ0  Var_28  HBS  CBS  CBP  CBR    51.77  30.0  3
- JQ0  Var_29  HZZ  CBS  CBP  CBR   167.59  30.0  3
- JQ0  Var_30  HZV  CBQ  CBP  CBS   179.46  30.0  3
- JQ0  Var_31  HZW  CBQ  CBP  CBS   -60.28  30.0  3
- JQ0  Var_32  HBQ  CBQ  CBP  CBS    59.76  30.0  3
- JQ0  Var_33  HBR  CBR  CBP  CBS    61.04  30.0  3
- JQ0  Var_34  HZX  CBR  CBP  CBS  -178.95  30.0  3
- JQ0  Var_35  HZY  CBR  CBP  CBS   -59.63  30.0  3
- JQ0  Var_36  HZS  CBK  CBL  OBO  -106.35  30.0  1
- JQ0  Var_37  HBK  CBK  CBL  OBO   138.83  30.0  1
- JQ0  Var_38  HZS  CBK  CBL  O      72.03  30.0  1
- JQ0  Var_39  HBK  CBK  CBL  O     -42.78  30.0  1
+ JQ0  Var_01    CBX  CBY  NBF  CBG    -8.72  30.0  1
+ JQ0  Var_02    NBF  CBY  CBX  CBW   -17.15  30.0  1
+ JQ0  Var_03    HZ1  CBY  NBF  CBG  -130.00  30.0  1
+ JQ0  Var_04    HBY  CBY  NBF  CBG   112.02  30.0  1
+ JQ0  Var_05    HZ1  CBY  CBX  CBW   103.12  30.0  1
+ JQ0  Var_06    HBY  CBY  CBX  CBW  -138.16  30.0  1
+ JQ0  Var_07    H4   NBF  CBY  CBX   108.59  30.0  1
+ JQ0  Var_08    HBX  CBX  CBY  NBF  -139.10  30.0  1
+ JQ0  Var_09    HZ0  CBX  CBY  NBF   100.29  30.0  1
+ JQ0  Var_10    CBT  CBS  CBP  CBQ   167.47  30.0  3
+ JQ0  Var_11    CBT  CBS  CBP  CBR   -70.05  30.0  3
+ JQ0  Var_12    O    CBL  CBK  NBJ  -165.99  30.0  3
+ JQ0  Var_13    OBO  CBL  CBK  NBJ    15.62  30.0  3
+ JQ0  Var_14    HBP  CBP  CBS  CBT    49.82  30.0  1
+ JQ0  Var_15    C    O    CBL  CBK  -177.18  30.0  1
+ JQ0  Var_16    C    O    CBL  OBO     1.22  30.0  1
+ JQ0  Var_17    H2   C    O    CBL   179.22  30.0  3
+ JQ0  Var_18    H1   C    O    CBL   -61.93  30.0  3
+ JQ0  Var_19    H3   C    O    CBL    60.36  30.0  3
+ JQ0  Var_20    HBS  CBS  CBP  CBQ   -70.70  30.0  3
+ JQ0  Var_21    HZZ  CBS  CBP  CBQ    45.12  30.0  3
+ JQ0  Var_22    HBR  CBR  CBP  CBQ  -176.94  30.0  3
+ JQ0  Var_23    HZX  CBR  CBP  CBQ   -56.93  30.0  3
+ JQ0  Var_24    HZY  CBR  CBP  CBQ    62.39  30.0  3
+ JQ0  Var_25    HZV  CBQ  CBP  CBR    55.99  30.0  3
+ JQ0  Var_26    HZW  CBQ  CBP  CBR   176.24  30.0  3
+ JQ0  Var_27    HBQ  CBQ  CBP  CBR   -63.71  30.0  3
+ JQ0  Var_28    HBS  CBS  CBP  CBR    51.77  30.0  3
+ JQ0  Var_29    HZZ  CBS  CBP  CBR   167.59  30.0  3
+ JQ0  Var_30    HZV  CBQ  CBP  CBS   179.46  30.0  3
+ JQ0  Var_31    HZW  CBQ  CBP  CBS   -60.28  30.0  3
+ JQ0  Var_32    HBQ  CBQ  CBP  CBS    59.76  30.0  3
+ JQ0  Var_33    HBR  CBR  CBP  CBS    61.04  30.0  3
+ JQ0  Var_34    HZX  CBR  CBP  CBS  -178.95  30.0  3
+ JQ0  Var_35    HZY  CBR  CBP  CBS   -59.63  30.0  3
+ JQ0  Var_36    HZS  CBK  CBL  OBO  -106.35  30.0  1
+ JQ0  Var_37    HBK  CBK  CBL  OBO   138.83  30.0  1
+ JQ0  Var_38    HZS  CBK  CBL  O      72.03  30.0  1
+ JQ0  Var_39    HBK  CBK  CBL  O     -42.78  30.0  1
+ JQ0  CONST_01  CBT  NBJ  CBH  CBG     0.00   0.0  0
+ JQ0  CONST_02  CBK  NBJ  CBH  CBG   180.00   0.0  0
+ JQ0  CONST_03  OBI  CBH  NBJ  CBT   180.00   0.0  0
+ JQ0  CONST_04  OBI  CBH  NBJ  CBK     0.00   0.0  0
+ JQ0  Var_40    CBU  CBV  CBW  CBG   -14.27  30.0  1
+ JQ0  Var_41    CBY  CBX  CBW  CBG    34.25  30.0  1
+ JQ0  Var_42    CBU  CBT  NBJ  CBH    72.90  30.0  1
+ JQ0  Var_43    CBV  CBW  CBG  CBH    70.67  30.0  1
+ JQ0  Var_44    CBX  CBW  CBG  CBH  -163.77  30.0  1
+ JQ0  Var_45    CBY  NBF  CBG  CBH   151.83  30.0  1
+ JQ0  Var_46    CBW  CBV  CBU  CBT     0.33  30.0  1
+ JQ0  Var_47    CBX  CBW  CBV  CBU  -131.78  30.0  1
+ JQ0  Var_48    NBJ  CBT  CBU  CBV   -46.78  30.0  1
+ JQ0  Var_49    CBY  CBX  CBW  CBV   160.52  30.0  1
+ JQ0  Var_50    NBF  CBG  CBW  CBV  -166.77  30.0  1
+ JQ0  Var_51    NBJ  CBH  CBG  CBW   -68.51  30.0  1
+ JQ0  Var_52    CBY  NBF  CBG  CBW    31.40  30.0  1
+ JQ0  Var_53    NBF  CBG  CBW  CBX   -41.21  30.0  1
+ JQ0  Var_54    NBJ  CBH  CBG  NBF   173.58  30.0  1
+ JQ0  Var_55    CBS  CBT  NBJ  CBH  -161.14  30.0  1
+ JQ0  Var_56    CBU  CBT  NBJ  CBK  -106.47  30.0  1
+ JQ0  Var_57    CBV  CBU  CBT  CBS  -173.76  30.0  1
+ JQ0  Var_58    OBI  CBH  CBG  CBW   106.11  30.0  1
+ JQ0  Var_59    OBI  CBH  CBG  NBF   -11.79  30.0  1
+ JQ0  Var_60    HBV  CBV  CBW  CBG   167.78  30.0  1
+ JQ0  Var_61    HBT  CBT  NBJ  CBH   -45.54  30.0  1
+ JQ0  Var_62    HBW  CBW  CBG  CBH   -51.26  30.0  1
+ JQ0  Var_63    HBG  CBG  CBW  CBV   -50.29  30.0  1
+ JQ0  Var_64    HBU  CBU  CBV  CBW  -179.46  30.0  1
+ JQ0  Var_65    CBL  CBK  NBJ  CBH    77.54  30.0  3
+ JQ0  Var_66    CBS  CBT  NBJ  CBK    19.49  30.0  1
+ JQ0  Var_67    CBT  NBJ  CBK  CBL  -103.05  30.0  2
+ JQ0  Var_68    CBU  CBT  CBS  CBP   -71.00  30.0  3
+ JQ0  Var_69    NBJ  CBT  CBS  CBP   162.36  30.0  3
+ JQ0  Var_70    HZS  CBK  NBJ  CBH  -161.46  30.0  3
+ JQ0  Var_71    HBK  CBK  NBJ  CBH   -44.93  30.0  3
+ JQ0  Var_72    HBS  CBS  CBT  CBU   168.45  30.0  1
+ JQ0  Var_73    HZZ  CBS  CBT  CBU    50.92  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

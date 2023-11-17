@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DCH  DCH  'ethyl (2S)-3-[7-(diaminomethyl)naphthalen-2-yl]-2-[4-(pyrrolidin-3-yloxy)phenyl]propanoate'  ligand  63  32  .  2021-08-08  2021-08-08  
+ DCH  DCH  'ethyl (2S)-3-[7-(diaminomethyl)naphthalen-2-yl]-2-[4-(pyrrolidin-3-yloxy)phenyl]propanoate'  ligand  63  32  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DCH
@@ -310,57 +311,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DCH  CONST_01  C14   C13  C12  C11  180.00   0.0  0
- DCH  CONST_02  C18   C13  C12  C11    0.00   0.0  0
- DCH  CONST_03  C18   C19  C1A  C11    0.00   0.0  0
- DCH  CONST_04  C19   C1A  C11  C12    0.00   0.0  0
- DCH  CONST_05  C15   C14  C13  C12  180.00   0.0  0
- DCH  CONST_06  C17   C18  C13  C12  180.00   0.0  0
- DCH  CONST_07  C19   C18  C13  C12    0.00   0.0  0
- DCH  CONST_08  C1A   C11  C12  C13    0.00   0.0  0
- DCH  CONST_09  C16   C15  C14  C13    0.00   0.0  0
- DCH  CONST_10  C16   C17  C18  C13    0.00   0.0  0
- DCH  CONST_11  C1A   C19  C18  C13    0.00   0.0  0
- DCH  CONST_12  C17   C18  C13  C14    0.00   0.0  0
- DCH  CONST_13  C19   C18  C13  C14  180.00   0.0  0
- DCH  CONST_14  C17   C16  C15  C14    0.00   0.0  0
- DCH  CONST_15  C18   C13  C14  C15    0.00   0.0  0
- DCH  CONST_16  C18   C17  C16  C15    0.00   0.0  0
- DCH  CONST_17  C19   C18  C17  C16  180.00   0.0  0
- DCH  CONST_18  C1A   C19  C18  C17  180.00   0.0  0
- DCH  CONST_19  C24   C23  C22  C21    0.00   0.0  0
- DCH  CONST_20  C24   C25  C26  C21    0.00   0.0  0
- DCH  CONST_21  C25   C26  C21  C22    0.00   0.0  0
- DCH  CONST_22  C25   C24  C23  C22    0.00   0.0  0
- DCH  CONST_23  C26   C21  C22  C23    0.00   0.0  0
- DCH  CONST_24  C26   C25  C24  C23    0.00   0.0  0
- DCH  CONST_25  C13   C12  C11  CZ   180.00   0.0  0
- DCH  CONST_26  C19   C1A  C11  CZ   180.00   0.0  0
- DCH  CONST_27  CA1   C15  C14  C13  180.00   0.0  0
- DCH  CONST_28  CA1   C15  C16  C17  180.00   0.0  0
- DCH  CONST_29  C23   C22  C21  CA2  180.00   0.0  0
- DCH  CONST_30  C25   C26  C21  CA2  180.00   0.0  0
- DCH  CONST_31  OB    C24  C23  C22  180.00   0.0  0
- DCH  CONST_32  OB    C24  C25  C26  180.00   0.0  0
- DCH  CONST_33  H19   C19  C1A  C11  180.00   0.0  0
- DCH  CONST_34  H1A   C1A  C11  C12  180.00   0.0  0
- DCH  CONST_35  H14   C14  C13  C12    0.00   0.0  0
- DCH  CONST_36  H17   C17  C18  C13  180.00   0.0  0
- DCH  CONST_37  H12   C12  C13  C14    0.00   0.0  0
- DCH  CONST_38  H16   C16  C15  C14  180.00   0.0  0
- DCH  CONST_39  H23   C23  C22  C21  180.00   0.0  0
- DCH  CONST_40  H25   C25  C26  C21  180.00   0.0  0
- DCH  CONST_41  H26   C26  C21  C22  180.00   0.0  0
- DCH  CONST_42  H22   C22  C23  C24  180.00   0.0  0
- DCH  Var_01    C34   N33  C32  C31   40.55  30.0  1
- DCH  Var_02    N33   C34  C35  C31    7.48  30.0  1
- DCH  Var_03    C35   C34  N33  C32  -29.79  30.0  1
- DCH  Var_04    C12   C11  CZ   NZ1  106.04  30.0  2
- DCH  Var_05    CA2   CA1  C15  C14  -96.84  30.0  2
- DCH  Var_06    HZ11  NZ1  CZ   C11  160.41  30.0  3
- DCH  Var_07    HZ21  NZ2  CZ   C11  -60.26  30.0  3
- DCH  Var_08    CA6   CA5  OA4  CA3  178.69  30.0  3
- DCH  Var_09    HA61  CA6  CA5  OA4  178.28  30.0  3
+ DCH  CONST_01  C14   C13  C12  C11   180.00   0.0  0
+ DCH  CONST_02  C18   C13  C12  C11     0.00   0.0  0
+ DCH  CONST_03  C18   C19  C1A  C11     0.00   0.0  0
+ DCH  CONST_04  C19   C1A  C11  C12     0.00   0.0  0
+ DCH  CONST_05  C15   C14  C13  C12   180.00   0.0  0
+ DCH  CONST_06  C17   C18  C13  C12   180.00   0.0  0
+ DCH  CONST_07  C19   C18  C13  C12     0.00   0.0  0
+ DCH  CONST_08  C1A   C11  C12  C13     0.00   0.0  0
+ DCH  CONST_09  C16   C15  C14  C13     0.00   0.0  0
+ DCH  CONST_10  C16   C17  C18  C13     0.00   0.0  0
+ DCH  CONST_11  C1A   C19  C18  C13     0.00   0.0  0
+ DCH  CONST_12  C17   C18  C13  C14     0.00   0.0  0
+ DCH  CONST_13  C19   C18  C13  C14   180.00   0.0  0
+ DCH  CONST_14  C17   C16  C15  C14     0.00   0.0  0
+ DCH  CONST_15  C18   C13  C14  C15     0.00   0.0  0
+ DCH  CONST_16  C18   C17  C16  C15     0.00   0.0  0
+ DCH  CONST_17  C19   C18  C17  C16   180.00   0.0  0
+ DCH  CONST_18  C1A   C19  C18  C17   180.00   0.0  0
+ DCH  CONST_19  C24   C23  C22  C21     0.00   0.0  0
+ DCH  CONST_20  C24   C25  C26  C21     0.00   0.0  0
+ DCH  CONST_21  C25   C26  C21  C22     0.00   0.0  0
+ DCH  CONST_22  C25   C24  C23  C22     0.00   0.0  0
+ DCH  CONST_23  C26   C21  C22  C23     0.00   0.0  0
+ DCH  CONST_24  C26   C25  C24  C23     0.00   0.0  0
+ DCH  CONST_25  C13   C12  C11  CZ    180.00   0.0  0
+ DCH  CONST_26  C19   C1A  C11  CZ    180.00   0.0  0
+ DCH  CONST_27  CA1   C15  C14  C13   180.00   0.0  0
+ DCH  CONST_28  CA1   C15  C16  C17   180.00   0.0  0
+ DCH  CONST_29  C23   C22  C21  CA2   180.00   0.0  0
+ DCH  CONST_30  C25   C26  C21  CA2   180.00   0.0  0
+ DCH  CONST_31  OB    C24  C23  C22   180.00   0.0  0
+ DCH  CONST_32  OB    C24  C25  C26   180.00   0.0  0
+ DCH  CONST_33  H19   C19  C1A  C11   180.00   0.0  0
+ DCH  CONST_34  H1A   C1A  C11  C12   180.00   0.0  0
+ DCH  CONST_35  H14   C14  C13  C12     0.00   0.0  0
+ DCH  CONST_36  H17   C17  C18  C13   180.00   0.0  0
+ DCH  CONST_37  H12   C12  C13  C14     0.00   0.0  0
+ DCH  CONST_38  H16   C16  C15  C14   180.00   0.0  0
+ DCH  CONST_39  H23   C23  C22  C21   180.00   0.0  0
+ DCH  CONST_40  H25   C25  C26  C21   180.00   0.0  0
+ DCH  CONST_41  H26   C26  C21  C22   180.00   0.0  0
+ DCH  CONST_42  H22   C22  C23  C24   180.00   0.0  0
+ DCH  Var_01    C34   N33  C32  C31    40.55  30.0  1
+ DCH  Var_02    N33   C34  C35  C31     7.48  30.0  1
+ DCH  Var_03    C35   C34  N33  C32   -29.79  30.0  1
+ DCH  Var_04    C12   C11  CZ   NZ1   106.04  30.0  2
+ DCH  Var_05    CA2   CA1  C15  C14   -96.84  30.0  2
+ DCH  Var_06    HZ11  NZ1  CZ   C11   160.41  30.0  3
+ DCH  Var_07    HZ21  NZ2  CZ   C11   -60.26  30.0  3
+ DCH  Var_08    CA6   CA5  OA4  CA3   178.69  30.0  3
+ DCH  Var_09    HA61  CA6  CA5  OA4   178.28  30.0  3
+ DCH  Var_10    C34   C35  C31  C32    16.30  30.0  1
+ DCH  Var_11    C35   C31  C32  N33   -35.28  30.0  1
+ DCH  Var_12    C31   OB   C24  C23    91.35  30.0  2
+ DCH  Var_13    C32   C31  OB   C24  -155.68  30.0  3
+ DCH  Var_14    C35   C31  OB   C24    87.87  30.0  3
+ DCH  Var_15    C31   OB   C24  C25   -88.38  30.0  2
+ DCH  Var_16    N33   C32  C31  OB   -158.56  30.0  1
+ DCH  Var_17    C34   C35  C31  OB    136.82  30.0  1
+ DCH  Var_18    H351  C35  C31  C32  -103.01  30.0  1
+ DCH  Var_19    H352  C35  C31  C32   137.96  30.0  1
+ DCH  Var_20    H31   C31  C32  N33    81.58  30.0  1
+ DCH  Var_21    C21   CA2  CA1  C15    52.65  30.0  3
+ DCH  Var_22    C22   C21  CA2  CA1  -102.34  30.0  2
+ DCH  Var_23    C26   C21  CA2  CA1    69.26  30.0  2
+ DCH  Var_24    C22   C21  CA2  CA3   130.52  30.0  2
+ DCH  Var_25    C26   C21  CA2  CA3   -57.89  30.0  2
+ DCH  Var_26    HA2   CA2  C21  C22    14.30  30.0  2
+ DCH  Var_27    CA3   CA2  CA1  C15  -179.88  30.0  3
+ DCH  Var_28    C21   CA2  CA3  OA3    -9.18  30.0  1
+ DCH  Var_29    C21   CA2  CA3  OA4   172.96  30.0  1
+ DCH  Var_30    OA3   CA3  CA2  CA1  -134.94  30.0  3
+ DCH  Var_31    OA4   CA3  CA2  CA1    47.20  30.0  3
+ DCH  Var_32    CA5   OA4  CA3  CA2   176.83  30.0  3
+ DCH  Var_33    CA5   OA4  CA3  OA3    -1.07  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

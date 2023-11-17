@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AAT  AAT  5'-S-[(1E)-6-amino-1-(2-aminoethylidene)hexyl]-5'-thioadenosine  ligand  58  29  .  2021-08-06  2021-08-06  
+ AAT  AAT  5'-S-[(1E)-6-amino-1-(2-aminoethylidene)hexyl]-5'-thioadenosine  ligand  58  29  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_AAT
@@ -289,43 +290,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AAT  CONST_01  C5    N7   C8   N9     0.00   0.0  0
- AAT  CONST_02  N7    C5   C4   N9     0.00   0.0  0
- AAT  CONST_03  C6    C5   C4   N9   180.00   0.0  0
- AAT  CONST_04  C2    N3   C4   N9   180.00   0.0  0
- AAT  CONST_05  C5    C4   N9   C8     0.00   0.0  0
- AAT  CONST_06  N3    C4   N9   C8   180.00   0.0  0
- AAT  CONST_07  C6    C5   N7   C8   180.00   0.0  0
- AAT  CONST_08  C4    C5   N7   C8     0.00   0.0  0
- AAT  CONST_09  C4    N9   C8   N7     0.00   0.0  0
- AAT  CONST_10  N1    C6   C5   N7   180.00   0.0  0
- AAT  CONST_11  N3    C4   C5   N7   180.00   0.0  0
- AAT  CONST_12  C2    N1   C6   C5     0.00   0.0  0
- AAT  CONST_13  C2    N3   C4   C5     0.00   0.0  0
- AAT  CONST_14  N3    C4   C5   C6     0.00   0.0  0
- AAT  CONST_15  N3    C2   N1   C6     0.00   0.0  0
- AAT  CONST_16  C4    C5   C6   N1     0.00   0.0  0
- AAT  CONST_17  C4    N3   C2   N1     0.00   0.0  0
- AAT  CONST_18  N7    C8   N9   C1'  180.00   0.0  0
- AAT  CONST_19  C5    C4   N9   C1'  180.00   0.0  0
- AAT  CONST_20  N3    C4   N9   C1'    0.00   0.0  0
- AAT  CONST_21  N6    C6   C5   N7     0.00   0.0  0
- AAT  CONST_22  C4    C5   C6   N6   180.00   0.0  0
- AAT  CONST_23  C2    N1   C6   N6   180.00   0.0  0
- AAT  CONST_24  HC8   C8   N9   C1'    0.00   0.0  0
- AAT  CONST_25  HC2   C2   N1   C6   180.00   0.0  0
- AAT  CONST_26  HN61  N6   C6   C5   180.00   0.0  0
- AAT  CONST_27  HN62  N6   C6   C5     0.00   0.0  0
- AAT  Var_01    C4'   C5'  SD   CG   169.43  30.0  3
- AAT  Var_02    SD    CG   CB   CA   178.83   0.0  2
- AAT  Var_03    CG    CB   CA   N    131.30  30.0  3
- AAT  Var_04    C12   C11  CG   CB    81.69  30.0  3
- AAT  Var_05    C13   C12  C11  CG   175.71  30.0  3
- AAT  Var_06    C14   C13  C12  C11  175.61  30.0  3
- AAT  Var_07    C15   C14  C13  C12  179.59  30.0  3
- AAT  Var_08    N16   C15  C14  C13  179.16  30.0  3
- AAT  Var_09    HN1   N    CA   CB   174.96  30.0  3
- AAT  Var_10    H161  N16  C15  C14  179.04  30.0  3
+ AAT  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ AAT  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ AAT  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ AAT  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ AAT  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ AAT  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ AAT  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ AAT  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ AAT  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ AAT  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ AAT  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ AAT  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ AAT  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ AAT  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ AAT  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ AAT  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ AAT  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ AAT  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ AAT  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ AAT  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ AAT  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ AAT  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ AAT  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ AAT  CONST_24  HC8   C8   N9   C1'     0.00   0.0  0
+ AAT  CONST_25  HC2   C2   N1   C6    180.00   0.0  0
+ AAT  CONST_26  HN61  N6   C6   C5    180.00   0.0  0
+ AAT  CONST_27  HN62  N6   C6   C5      0.00   0.0  0
+ AAT  Var_01    C4'   C5'  SD   CG    169.43  30.0  3
+ AAT  Var_02    SD    CG   CB   CA    178.83   0.0  2
+ AAT  Var_03    CG    CB   CA   N     131.30  30.0  3
+ AAT  Var_04    C12   C11  CG   CB     81.69  30.0  3
+ AAT  Var_05    C13   C12  C11  CG    175.71  30.0  3
+ AAT  Var_06    C14   C13  C12  C11   175.61  30.0  3
+ AAT  Var_07    C15   C14  C13  C12   179.59  30.0  3
+ AAT  Var_08    N16   C15  C14  C13   179.16  30.0  3
+ AAT  Var_09    HN1   N    CA   CB    174.96  30.0  3
+ AAT  Var_10    H161  N16  C15  C14   179.04  30.0  3
+ AAT  Var_11    C2'   C1'  O4'  C4'    -8.42  30.0  1
+ AAT  Var_12    N9    C1'  O4'  C4'  -132.13  30.0  1
+ AAT  Var_13    C1'   C2'  C3'  C4'   -37.53  30.0  1
+ AAT  Var_14    C2'   C3'  C4'  O4'    33.85  30.0  1
+ AAT  Var_15    C3'   C2'  C1'  O4'    29.36  30.0  1
+ AAT  Var_16    C8    N9   C1'  O4'    56.25  30.0  2
+ AAT  Var_17    C4    N9   C1'  O4'  -120.32  30.0  2
+ AAT  Var_18    C1'   O4'  C4'  C3'   -16.48  30.0  1
+ AAT  Var_19    N9    C1'  C2'  C3'   150.34  30.0  1
+ AAT  Var_20    C8    N9   C1'  C2'   -62.77  30.0  2
+ AAT  Var_21    C4    N9   C1'  C2'   120.66  30.0  2
+ AAT  Var_22    C1'   O4'  C4'  C5'   105.11  30.0  1
+ AAT  Var_23    C2'   C3'  C4'  C5'   -87.55  30.0  1
+ AAT  Var_24    O2'   C2'  C3'  C4'  -155.71  30.0  1
+ AAT  Var_25    O3'   C3'  C4'  O4'   -82.79  30.0  1
+ AAT  Var_26    O2'   C2'  C1'  O4'   151.25  30.0  1
+ AAT  Var_27    C1'   C2'  C3'  O3'    77.42  30.0  1
+ AAT  Var_28    N9    C1'  C2'  O2'   -87.76  30.0  1
+ AAT  Var_29    H1'C  C1'  O4'  C4'   111.34  30.0  1
+ AAT  Var_30    H2'C  C2'  C3'  C4'    78.48  30.0  1
+ AAT  Var_31    H3'C  C3'  C4'  O4'   153.01  30.0  1
+ AAT  Var_32    H4'C  C4'  C3'  C2'   150.39  30.0  1
+ AAT  Var_33    O4'   C4'  C5'  SD     41.64  30.0  3
+ AAT  Var_34    C3'   C4'  C5'  SD    159.33  30.0  3
+ AAT  Var_35    O3'   C3'  C4'  C5'   155.81  30.0  1
+ AAT  Var_36    O2'   C2'  C3'  O3'   -40.77  30.0  1
+ AAT  Var_37    H3'O  O3'  C3'  C4'   155.75  30.0  3
+ AAT  Var_38    H5'1  C5'  C4'  O4'   -80.06  30.0  1
+ AAT  Var_39    H5'2  C5'  C4'  O4'   161.35  30.0  1
+ AAT  Var_40    H2'O  O2'  C2'  C3'   -85.00  30.0  3
+ AAT  Var_41    C5'   SD   CG   CB     -4.10  30.0  3
+ AAT  Var_42    C11   CG   SD   C5'   172.67  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

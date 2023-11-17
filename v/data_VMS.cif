@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VMS  VMS  5'-O-(L-valylsulfamoyl)adenosine  L-peptide  53  30  .  2022-03-29  2022-03-29
+ VMS  VMS  5'-O-(L-valylsulfamoyl)adenosine  L-peptide  53  30  .  2022-03-29  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_VMS
@@ -270,40 +271,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VMS  CONST_01  C5    N7   C8   N9     0.00   0.0  0
- VMS  CONST_02  N7    C5   C4   N9     0.00   0.0  0
- VMS  CONST_03  C6    C5   C4   N9   180.00   0.0  0
- VMS  CONST_04  C2    N3   C4   N9   180.00   0.0  0
- VMS  CONST_05  C5    C4   N9   C8     0.00   0.0  0
- VMS  CONST_06  N3    C4   N9   C8   180.00   0.0  0
- VMS  CONST_07  C4    C5   N7   C8     0.00   0.0  0
- VMS  CONST_08  C6    C5   N7   C8   180.00   0.0  0
- VMS  CONST_09  C4    N9   C8   N7     0.00   0.0  0
- VMS  CONST_10  N3    C4   C5   N7   180.00   0.0  0
- VMS  CONST_11  N1    C6   C5   N7   180.00   0.0  0
- VMS  CONST_12  C2    N3   C4   C5     0.00   0.0  0
- VMS  CONST_13  C2    N1   C6   C5     0.00   0.0  0
- VMS  CONST_14  N1    C6   C5   C4     0.00   0.0  0
- VMS  CONST_15  N1    C2   N3   C4     0.00   0.0  0
- VMS  CONST_16  C6    C5   C4   N3     0.00   0.0  0
- VMS  CONST_17  C6    N1   C2   N3     0.00   0.0  0
- VMS  CONST_18  N7    C8   N9   C1'  180.00   0.0  0
- VMS  CONST_19  C5    C4   N9   C1'  180.00   0.0  0
- VMS  CONST_20  N3    C4   N9   C1'    0.00   0.0  0
- VMS  CONST_21  N6    C6   C5   N7     0.00   0.0  0
- VMS  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- VMS  CONST_23  N6    C6   N1   C2   180.00   0.0  0
- VMS  CONST_24  H8    C8   N9   C1'    0.00   0.0  0
- VMS  CONST_25  H3    C2   N3   C4   180.00   0.0  0
- VMS  CONST_26  HN61  N6   C6   C5     0.00   0.0  0
- VMS  CONST_27  HN62  N6   C6   C5   180.00   0.0  0
- VMS  CONST_28  SBD   NAS  C    CA   180.00   0.0  0
- VMS  CONST_29  SBD   NAS  C    O      0.00   0.0  0
- VMS  CONST_30  HAS   NAS  C    CA     0.00   0.0  0
- VMS  Var_01    C4'   C5'  O5'  SBD  176.37  30.0  3
- VMS  Var_02    OAZ   SBD  NAS  C    178.59  30.0  3
- VMS  Var_03    HG11  CG1  CB   CG2   62.69  30.0  3
- VMS  Var_04    HG21  CG2  CB   CG1  174.64  30.0  3
+ VMS  CONST_01  C5    N7   C8   N9      0.00      0.0   0
+ VMS  CONST_02  N7    C5   C4   N9      0.00      0.0   0
+ VMS  CONST_03  C6    C5   C4   N9    180.00      0.0   0
+ VMS  CONST_04  C2    N3   C4   N9    180.00      0.0   0
+ VMS  CONST_05  C5    C4   N9   C8      0.00      0.0   0
+ VMS  CONST_06  N3    C4   N9   C8    180.00      0.0   0
+ VMS  CONST_07  C4    C5   N7   C8      0.00      0.0   0
+ VMS  CONST_08  C6    C5   N7   C8    180.00      0.0   0
+ VMS  CONST_09  C4    N9   C8   N7      0.00      0.0   0
+ VMS  CONST_10  N3    C4   C5   N7    180.00      0.0   0
+ VMS  CONST_11  N1    C6   C5   N7    180.00      0.0   0
+ VMS  CONST_12  C2    N3   C4   C5      0.00      0.0   0
+ VMS  CONST_13  C2    N1   C6   C5      0.00      0.0   0
+ VMS  CONST_14  N1    C6   C5   C4      0.00      0.0   0
+ VMS  CONST_15  N1    C2   N3   C4      0.00      0.0   0
+ VMS  CONST_16  C6    C5   C4   N3      0.00      0.0   0
+ VMS  CONST_17  C6    N1   C2   N3      0.00      0.0   0
+ VMS  CONST_18  N7    C8   N9   C1'   180.00      0.0   0
+ VMS  CONST_19  C5    C4   N9   C1'   180.00      0.0   0
+ VMS  CONST_20  N3    C4   N9   C1'     0.00      0.0   0
+ VMS  CONST_21  N6    C6   C5   N7      0.00      0.0   0
+ VMS  CONST_22  N6    C6   C5   C4    180.00      0.0   0
+ VMS  CONST_23  N6    C6   N1   C2    180.00      0.0   0
+ VMS  CONST_24  H8    C8   N9   C1'     0.00      0.0   0
+ VMS  CONST_25  H3    C2   N3   C4    180.00      0.0   0
+ VMS  CONST_26  HN61  N6   C6   C5      0.00      0.0   0
+ VMS  CONST_27  HN62  N6   C6   C5    180.00      0.0   0
+ VMS  CONST_28  SBD   NAS  C    CA    180.00      0.0   0
+ VMS  CONST_29  SBD   NAS  C    O       0.00      0.0   0
+ VMS  CONST_30  HAS   NAS  C    CA      0.00      0.0   0
+ VMS  Var_01    C4'   C5'  O5'  SBD   176.37     30.0   3
+ VMS  Var_02    OAZ   SBD  NAS  C     178.59     30.0   3
+ VMS  Var_03    HG11  CG1  CB   CG2    62.69     30.0   3
+ VMS  Var_04    HG21  CG2  CB   CG1   174.64     30.0   3
+ VMS  Var_05    H1'   C1'  O4'  C4'    99.81     30.0   1
+ VMS  Var_06    H1    C2'  C3'  C4'    78.06     30.0   1
+ VMS  Var_07    H3'   C3'  C4'  O4'   146.83     30.0   1
+ VMS  Var_08    H4'   C4'  C3'  C2'   145.63     30.0   1
+ VMS  Var_09    HO3'  O3'  C3'  C4'   160.66     30.0   3
+ VMS  Var_10    H5'1  C5'  C4'  O4'   -61.40     30.0   2
+ VMS  Var_11    H5'2  C5'  C4'  O4'   177.79     30.0   2
+ VMS  Var_12    H2'   O2'  C2'  C3'   -87.15     30.0   3
+ VMS  Var_13    HA    CA   CB   CG2   -60.72     30.0   3
+ VMS  Var_14    C     CA   N    H    170.000  180.000  72
+ VMS  Var_15    H2    N    CA   CB     70.69     30.0   3
+ VMS  Var_16    HB    CB   CA   N      59.92     30.0   1
 
 loop_
 _chem_comp_chir.comp_id

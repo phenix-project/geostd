@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EGG  EGG  '(2R,3R)-5,7-dihydroxy-2-(3,4,5-trihydroxyphenyl)-3,4-dihydro-2H-chromen-3-yl 3,4,5-trihydroxybenzoate'  ligand  51  33  .  2021-08-08  2021-08-08  
+ EGG  EGG  '(2R,3R)-5,7-dihydroxy-2-(3,4,5-trihydroxyphenyl)-3,4-dihydro-2H-chromen-3-yl 3,4,5-trihydroxybenzoate'  ligand  51  33  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EGG
@@ -255,55 +256,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EGG  CONST_01  C8   C7   C6   C5      0.00   0.0  0
- EGG  CONST_02  C8   C9   C10  C5      0.00   0.0  0
- EGG  CONST_03  C9   C10  C5   C6      0.00   0.0  0
- EGG  CONST_04  C9   C8   C7   C6      0.00   0.0  0
- EGG  CONST_05  C10  C5   C6   C7      0.00   0.0  0
- EGG  CONST_06  C10  C9   C8   C7      0.00   0.0  0
- EGG  CONST_07  C14  C13  C12  C11     0.00   0.0  0
- EGG  CONST_08  C14  C15  C16  C11     0.00   0.0  0
- EGG  CONST_09  C15  C16  C11  C12     0.00   0.0  0
- EGG  CONST_10  C15  C14  C13  C12     0.00   0.0  0
- EGG  CONST_11  C16  C11  C12  C13     0.00   0.0  0
- EGG  CONST_12  C16  C15  C14  C13     0.00   0.0  0
- EGG  CONST_13  C22  C21  C20  C19     0.00   0.0  0
- EGG  CONST_14  C22  C23  C24  C19     0.00   0.0  0
- EGG  CONST_15  C23  C24  C19  C20     0.00   0.0  0
- EGG  CONST_16  C23  C22  C21  C20     0.00   0.0  0
- EGG  CONST_17  C24  C19  C20  C21     0.00   0.0  0
- EGG  CONST_18  C24  C23  C22  C21     0.00   0.0  0
- EGG  CONST_19  C13  C12  C11  C2    180.00   0.0  0
- EGG  CONST_20  C15  C16  C11  C2    180.00   0.0  0
- EGG  CONST_21  O18  C6   C5   C4      0.00   0.0  0
- EGG  CONST_22  O19  C8   C7   C6    180.00   0.0  0
- EGG  CONST_23  O18  C6   C7   C8    180.00   0.0  0
- EGG  CONST_24  O18  C6   C5   C10   180.00   0.0  0
- EGG  CONST_25  O19  C8   C9   C10   180.00   0.0  0
- EGG  CONST_26  O20  C13  C12  C11   180.00   0.0  0
- EGG  CONST_27  O22  C15  C16  C11   180.00   0.0  0
- EGG  CONST_28  O21  C14  C13  C12   180.00   0.0  0
- EGG  CONST_29  O22  C15  C14  C13   180.00   0.0  0
- EGG  CONST_30  O20  C13  C14  C15   180.00   0.0  0
- EGG  CONST_31  O21  C14  C15  C16   180.00   0.0  0
- EGG  CONST_32  C21  C20  C19  C18   180.00   0.0  0
- EGG  CONST_33  C23  C24  C19  C18   180.00   0.0  0
- EGG  CONST_34  O24  C21  C20  C19   180.00   0.0  0
- EGG  CONST_35  O26  C23  C24  C19   180.00   0.0  0
- EGG  CONST_36  O25  C22  C21  C20   180.00   0.0  0
- EGG  CONST_37  O26  C23  C22  C21   180.00   0.0  0
- EGG  CONST_38  O24  C21  C22  C23   180.00   0.0  0
- EGG  CONST_39  O25  C22  C23  C24   180.00   0.0  0
- EGG  CONST_40  H9   C9   C10  O1      0.00   0.0  0
- EGG  CONST_41  H12  C12  C11  C2      0.00   0.0  0
- EGG  CONST_42  H16  C16  C11  C2      0.00   0.0  0
- EGG  CONST_43  H7   C7   C6   C5    180.00   0.0  0
- EGG  CONST_44  H24  C24  C19  C20   180.00   0.0  0
- EGG  CONST_45  H20  C20  C21  C22   180.00   0.0  0
- EGG  Var_01    C5   C10  O1   C2    -13.94  30.0  1
- EGG  Var_02    C6   C5   C4   C3    163.20  30.0  1
- EGG  Var_03    C19  C18  O17  C3   -178.36  30.0  3
- EGG  Var_04    C20  C19  C18  O17   179.04  30.0  2
+ EGG  CONST_01  C8    C7   C6   C5      0.00   0.0  0
+ EGG  CONST_02  C8    C9   C10  C5      0.00   0.0  0
+ EGG  CONST_03  C9    C10  C5   C6      0.00   0.0  0
+ EGG  CONST_04  C9    C8   C7   C6      0.00   0.0  0
+ EGG  CONST_05  C10   C5   C6   C7      0.00   0.0  0
+ EGG  CONST_06  C10   C9   C8   C7      0.00   0.0  0
+ EGG  CONST_07  C14   C13  C12  C11     0.00   0.0  0
+ EGG  CONST_08  C14   C15  C16  C11     0.00   0.0  0
+ EGG  CONST_09  C15   C16  C11  C12     0.00   0.0  0
+ EGG  CONST_10  C15   C14  C13  C12     0.00   0.0  0
+ EGG  CONST_11  C16   C11  C12  C13     0.00   0.0  0
+ EGG  CONST_12  C16   C15  C14  C13     0.00   0.0  0
+ EGG  CONST_13  C22   C21  C20  C19     0.00   0.0  0
+ EGG  CONST_14  C22   C23  C24  C19     0.00   0.0  0
+ EGG  CONST_15  C23   C24  C19  C20     0.00   0.0  0
+ EGG  CONST_16  C23   C22  C21  C20     0.00   0.0  0
+ EGG  CONST_17  C24   C19  C20  C21     0.00   0.0  0
+ EGG  CONST_18  C24   C23  C22  C21     0.00   0.0  0
+ EGG  CONST_19  C13   C12  C11  C2    180.00   0.0  0
+ EGG  CONST_20  C15   C16  C11  C2    180.00   0.0  0
+ EGG  CONST_21  O18   C6   C5   C4      0.00   0.0  0
+ EGG  CONST_22  O19   C8   C7   C6    180.00   0.0  0
+ EGG  CONST_23  O18   C6   C7   C8    180.00   0.0  0
+ EGG  CONST_24  O18   C6   C5   C10   180.00   0.0  0
+ EGG  CONST_25  O19   C8   C9   C10   180.00   0.0  0
+ EGG  CONST_26  O20   C13  C12  C11   180.00   0.0  0
+ EGG  CONST_27  O22   C15  C16  C11   180.00   0.0  0
+ EGG  CONST_28  O21   C14  C13  C12   180.00   0.0  0
+ EGG  CONST_29  O22   C15  C14  C13   180.00   0.0  0
+ EGG  CONST_30  O20   C13  C14  C15   180.00   0.0  0
+ EGG  CONST_31  O21   C14  C15  C16   180.00   0.0  0
+ EGG  CONST_32  C21   C20  C19  C18   180.00   0.0  0
+ EGG  CONST_33  C23   C24  C19  C18   180.00   0.0  0
+ EGG  CONST_34  O24   C21  C20  C19   180.00   0.0  0
+ EGG  CONST_35  O26   C23  C24  C19   180.00   0.0  0
+ EGG  CONST_36  O25   C22  C21  C20   180.00   0.0  0
+ EGG  CONST_37  O26   C23  C22  C21   180.00   0.0  0
+ EGG  CONST_38  O24   C21  C22  C23   180.00   0.0  0
+ EGG  CONST_39  O25   C22  C23  C24   180.00   0.0  0
+ EGG  CONST_40  H9    C9   C10  O1      0.00   0.0  0
+ EGG  CONST_41  H12   C12  C11  C2      0.00   0.0  0
+ EGG  CONST_42  H16   C16  C11  C2      0.00   0.0  0
+ EGG  CONST_43  H7    C7   C6   C5    180.00   0.0  0
+ EGG  CONST_44  H24   C24  C19  C20   180.00   0.0  0
+ EGG  CONST_45  H20   C20  C21  C22   180.00   0.0  0
+ EGG  Var_01    C5    C10  O1   C2    -13.94  30.0  1
+ EGG  Var_02    C6    C5   C4   C3    163.20  30.0  1
+ EGG  Var_03    C19   C18  O17  C3   -178.36  30.0  3
+ EGG  Var_04    C20   C19  C18  O17   179.04  30.0  2
+ EGG  Var_05    C4    C3   C2   O1    -61.25  30.0  1
+ EGG  Var_06    C12   C11  C2   O1    149.10  30.0  2
+ EGG  Var_07    C16   C11  C2   O1    -33.88  30.0  2
+ EGG  Var_08    C5    C4   C3   C2     45.44  30.0  1
+ EGG  Var_09    C10   O1   C2   C3     45.23  30.0  1
+ EGG  Var_10    C12   C11  C2   C3    -88.09  30.0  2
+ EGG  Var_11    C16   C11  C2   C3     88.93  30.0  2
+ EGG  Var_12    C11   C2   C3   C4    176.96  30.0  1
+ EGG  Var_13    C11   C2   O1   C10   169.25  30.0  1
+ EGG  Var_14    O17   C3   C2   O1     58.40  30.0  1
+ EGG  Var_15    O17   C3   C4   C5    -71.24  30.0  1
+ EGG  Var_16    O17   C3   C2   C11   -63.39  30.0  1
+ EGG  Var_17    H3    C3   C2   O1    177.75  30.0  1
+ EGG  Var_18    H4    C4   C3   C2    168.89  30.0  1
+ EGG  Var_19    H4A   C4   C3   C2    -75.97  30.0  1
+ EGG  Var_20    H2    C2   C3   C4     57.62  30.0  1
+ EGG  Var_21    C18   O17  C3   C2    151.55  30.0  3
+ EGG  Var_22    C18   O17  C3   C4    -89.68  30.0  3
+ EGG  Var_23    HO18  O18  C6   C5   -178.69  30.0  2
+ EGG  Var_24    HO19  O19  C8   C7      0.67  30.0  2
+ EGG  Var_25    HO20  O20  C13  C12   179.30  30.0  2
+ EGG  Var_26    HO21  O21  C14  C13   167.09  30.0  2
+ EGG  Var_27    HO22  O22  C15  C14   178.96  30.0  2
+ EGG  Var_28    HO24  O24  C21  C20  -178.16  30.0  2
+ EGG  Var_29    HO25  O25  C22  C21  -176.89  30.0  2
+ EGG  Var_30    HO26  O26  C23  C22  -179.22  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

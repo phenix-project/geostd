@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZIR  ZIR  N-(3-methylbut-2-en-1-yl)adenosine  ligand  45  24  .  2021-08-25  2021-08-25  
+ ZIR  ZIR  N-(3-methylbut-2-en-1-yl)adenosine  ligand  45  24  .  2021-08-25  2023-10-25
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-25
 ;
 
 data_comp_ZIR
@@ -239,39 +240,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ZIR  CONST_01  C4    C5   C6   N1     0.00   0.0  0
- ZIR  CONST_02  N7    C5   C6   N1   180.00   0.0  0
- ZIR  CONST_03  C4    N3   C2   N1     0.00   0.0  0
- ZIR  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- ZIR  CONST_05  C5    C4   N3   C2     0.00   0.0  0
- ZIR  CONST_06  N9    C4   N3   C2   180.00   0.0  0
- ZIR  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- ZIR  CONST_08  N7    C5   C4   N3   180.00   0.0  0
- ZIR  CONST_09  C6    C5   C4   N3     0.00   0.0  0
- ZIR  CONST_10  C8    N9   C4   N3   180.00   0.0  0
- ZIR  CONST_11  C8    N7   C5   C4     0.00   0.0  0
- ZIR  CONST_12  N7    C8   N9   C4     0.00   0.0  0
- ZIR  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- ZIR  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- ZIR  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- ZIR  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- ZIR  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- ZIR  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- ZIR  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- ZIR  CONST_20  C1'   N9   C8   N7   180.00   0.0  0
- ZIR  CONST_21  N10   C6   N1   C2   180.00   0.0  0
- ZIR  CONST_22  N10   C6   C5   C4   180.00   0.0  0
- ZIR  CONST_23  N10   C6   C5   N7     0.00   0.0  0
- ZIR  CONST_24  H2    C2   N3   C4   180.00   0.0  0
- ZIR  CONST_25  H8    C8   N9   C4   180.00   0.0  0
- ZIR  CONST_26  C11   N10  C6   N1     0.00   0.0  0
- ZIR  CONST_27  C11   N10  C6   C5   180.00   0.0  0
- ZIR  CONST_28  HN10  N10  C6   N1   180.00   0.0  0
- ZIR  Var_01    C12   C11  N10  C6   160.65  30.0  3
- ZIR  Var_02    C14   C13  C12  C11  178.85   0.0  2
- ZIR  Var_03    C13   C12  C11  N10  117.21  30.0  2
- ZIR  Var_04    H14   C14  C13  C12  121.28  30.0  3
- ZIR  Var_05    H15   C15  C13  C12   -3.82  30.0  3
+ ZIR  CONST_01  C4    C5   C6   N1      0.00   0.0  0
+ ZIR  CONST_02  N7    C5   C6   N1    180.00   0.0  0
+ ZIR  CONST_03  C4    N3   C2   N1      0.00   0.0  0
+ ZIR  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ ZIR  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ ZIR  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ ZIR  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ ZIR  CONST_08  N7    C5   C4   N3    180.00   0.0  0
+ ZIR  CONST_09  C6    C5   C4   N3      0.00   0.0  0
+ ZIR  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ ZIR  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ ZIR  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ ZIR  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ ZIR  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ ZIR  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ ZIR  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ ZIR  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ ZIR  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ ZIR  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ ZIR  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ ZIR  CONST_21  N10   C6   N1   C2    180.00   0.0  0
+ ZIR  CONST_22  N10   C6   C5   C4    180.00   0.0  0
+ ZIR  CONST_23  N10   C6   C5   N7      0.00   0.0  0
+ ZIR  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ ZIR  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ ZIR  CONST_26  C11   N10  C6   N1      0.00   0.0  0
+ ZIR  CONST_27  C11   N10  C6   C5    180.00   0.0  0
+ ZIR  CONST_28  HN10  N10  C6   N1    180.00   0.0  0
+ ZIR  Var_01    C12   C11  N10  C6    160.65  30.0  3
+ ZIR  Var_02    C14   C13  C12  C11   178.85   0.0  2
+ ZIR  Var_03    C13   C12  C11  N10   117.21  30.0  2
+ ZIR  Var_04    H14   C14  C13  C12   121.28  30.0  3
+ ZIR  Var_05    H15   C15  C13  C12    -3.82  30.0  3
+ ZIR  Var_06    C2'   C1'  N9   C4     81.50  30.0  2
+ ZIR  Var_07    O4'   C1'  N9   C4   -160.28  30.0  2
+ ZIR  Var_08    C2'   C1'  N9   C8    -96.48  30.0  2
+ ZIR  Var_09    O4'   C1'  N9   C8     21.73  30.0  2
+ ZIR  Var_10    C3'   C2'  C1'  N9     91.82  30.0  1
+ ZIR  Var_11    C4'   O4'  C1'  N9   -114.18  30.0  1
+ ZIR  Var_12    C4'   C3'  C2'  C1'    36.45  30.0  1
+ ZIR  Var_13    C3'   C4'  O4'  C1'    17.30  30.0  1
+ ZIR  Var_14    C4'   O4'  C1'  C2'     6.85  30.0  1
+ ZIR  Var_15    O4'   C4'  C3'  C2'   -33.73  30.0  1
+ ZIR  Var_16    O4'   C1'  C2'  C3'   -27.65  30.0  1
+ ZIR  Var_17    O2'   C2'  C1'  N9   -151.66  30.0  1
+ ZIR  Var_18    O3'   C3'  C2'  C1'   155.11  30.0  1
+ ZIR  Var_19    C5'   C4'  O4'  C1'   139.98  30.0  1
+ ZIR  Var_20    C5'   C4'  C3'  C2'  -154.65  30.0  1
+ ZIR  Var_21    O4'   C1'  C2'  O2'    88.87  30.0  1
+ ZIR  Var_22    C4'   C3'  C2'  O2'   -77.74  30.0  1
+ ZIR  Var_23    O4'   C4'  C3'  O3'  -154.92  30.0  1
+ ZIR  Var_24    H1'   C1'  N9   C4    -40.30  30.0  2
+ ZIR  Var_25    H2'   C2'  C1'  N9    -28.21  30.0  1
+ ZIR  Var_26    H3'   C3'  C2'  C1'   -79.73  30.0  1
+ ZIR  Var_27    H4'   C4'  O4'  C1'   -99.89  30.0  1
+ ZIR  Var_28    O3'   C3'  C2'  O2'    40.93  30.0  1
+ ZIR  Var_29    O5'   C5'  C4'  C3'  -178.03  30.0  1
+ ZIR  Var_30    C5'   C4'  C3'  O3'    84.17  30.0  1
+ ZIR  Var_31    O5'   C5'  C4'  O4'    64.52  30.0  1
+ ZIR  Var_32    HO2'  O2'  C2'  C1'  -149.77  30.0  3
+ ZIR  Var_33    HO3'  O3'  C3'  C2'    84.28  30.0  3
+ ZIR  Var_34    H5'   C5'  C4'  C3'   -56.56  30.0  1
+ ZIR  Var_35    H5'A  C5'  C4'  C3'    59.05  30.0  1
+ ZIR  Var_36    HO5'  O5'  C5'  C4'   177.76  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

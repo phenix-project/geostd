@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EJN  EJN  (2~{R},3~{S},4~{S},5~{S},6~{R})-2-(hydroxymethyl)-6-[4-[2,3,4,5,6-pentakis(fluoranyl)phenyl]phenoxy]oxane-3,4,5-triol  ligand  44  29  .  2021-08-08  2021-08-08  
+ EJN  EJN  (2~{R},3~{S},4~{S},5~{S},6~{R})-2-(hydroxymethyl)-6-[4-[2,3,4,5,6-pentakis(fluoranyl)phenyl]phenoxy]oxane-3,4,5-triol  ligand  44  29  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EJN
@@ -233,41 +234,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EJN  CONST_01  CAD  CAE  CAF  CAA    0.00   0.0  0
- EJN  CONST_02  CAD  CAC  CAB  CAA    0.00   0.0  0
- EJN  CONST_03  CAE  CAF  CAA  CAB    0.00   0.0  0
- EJN  CONST_04  CAE  CAD  CAC  CAB    0.00   0.0  0
- EJN  CONST_05  CAG  CAD  CAC  CAB  180.00   0.0  0
- EJN  CONST_06  CAF  CAE  CAD  CAC    0.00   0.0  0
- EJN  CONST_09  CAF  CAA  CAB  CAC    0.00   0.0  0
- EJN  CONST_10  CAK  CAL  CAG  CAD  180.00   0.0  0
- EJN  CONST_11  CAI  CAH  CAG  CAD  180.00   0.0  0
- EJN  CONST_14  CAG  CAD  CAE  CAF  180.00   0.0  0
- EJN  CONST_15  CAJ  CAK  CAL  CAG    0.00   0.0  0
- EJN  CONST_16  CAJ  CAI  CAH  CAG    0.00   0.0  0
- EJN  CONST_17  CAK  CAL  CAG  CAH    0.00   0.0  0
- EJN  CONST_18  CAK  CAJ  CAI  CAH    0.00   0.0  0
- EJN  CONST_19  CAL  CAG  CAH  CAI    0.00   0.0  0
- EJN  CONST_20  CAL  CAK  CAJ  CAI    0.00   0.0  0
- EJN  CONST_21  O1   CAA  CAB  CAC  180.00   0.0  0
- EJN  CONST_22  FAL  CAL  CAG  CAD    0.00   0.0  0
- EJN  CONST_23  FAH  CAH  CAG  CAD    0.00   0.0  0
- EJN  CONST_24  O1   CAA  CAF  CAE  180.00   0.0  0
- EJN  CONST_25  FAK  CAK  CAL  CAG  180.00   0.0  0
- EJN  CONST_26  FAI  CAI  CAH  CAG  180.00   0.0  0
- EJN  CONST_27  FAL  CAL  CAG  CAH  180.00   0.0  0
- EJN  CONST_28  FAJ  CAJ  CAI  CAH  180.00   0.0  0
- EJN  CONST_29  FAK  CAK  CAJ  CAI  180.00   0.0  0
- EJN  CONST_30  FAL  CAL  CAK  CAJ  180.00   0.0  0
- EJN  CONST_31  FAH  CAH  CAI  CAJ  180.00   0.0  0
- EJN  CONST_32  FAI  CAI  CAJ  CAK  180.00   0.0  0
- EJN  CONST_33  FAH  CAH  CAG  CAL  180.00   0.0  0
- EJN  CONST_34  FAJ  CAJ  CAK  CAL  180.00   0.0  0
- EJN  CONST_35  HAE  CAE  CAF  CAA  180.00   0.0  0
- EJN  CONST_36  HAC  CAC  CAB  CAA  180.00   0.0  0
- EJN  CONST_37  HAF  CAF  CAA  CAB  180.00   0.0  0
- EJN  CONST_38  HAB  CAB  CAC  CAD  180.00   0.0  0
- EJN  Var_01    CAF  CAA  O1   C1   -14.87  30.0  2
+ EJN  CONST_01  CAD  CAE  CAF  CAA     0.00   0.0  0
+ EJN  CONST_02  CAD  CAC  CAB  CAA     0.00   0.0  0
+ EJN  CONST_03  CAE  CAF  CAA  CAB     0.00   0.0  0
+ EJN  CONST_04  CAE  CAD  CAC  CAB     0.00   0.0  0
+ EJN  CONST_05  CAG  CAD  CAC  CAB   180.00   0.0  0
+ EJN  CONST_06  CAF  CAE  CAD  CAC     0.00   0.0  0
+ EJN  CONST_07  CAF  CAA  CAB  CAC     0.00   0.0  0
+ EJN  CONST_08  CAK  CAL  CAG  CAD   180.00   0.0  0
+ EJN  CONST_09  CAI  CAH  CAG  CAD   180.00   0.0  0
+ EJN  CONST_10  CAG  CAD  CAE  CAF   180.00   0.0  0
+ EJN  CONST_11  CAJ  CAK  CAL  CAG     0.00   0.0  0
+ EJN  CONST_12  CAJ  CAI  CAH  CAG     0.00   0.0  0
+ EJN  CONST_13  CAK  CAL  CAG  CAH     0.00   0.0  0
+ EJN  CONST_14  CAK  CAJ  CAI  CAH     0.00   0.0  0
+ EJN  CONST_15  CAL  CAG  CAH  CAI     0.00   0.0  0
+ EJN  CONST_16  CAL  CAK  CAJ  CAI     0.00   0.0  0
+ EJN  CONST_17  O1   CAA  CAB  CAC   180.00   0.0  0
+ EJN  CONST_18  FAL  CAL  CAG  CAD     0.00   0.0  0
+ EJN  CONST_19  FAH  CAH  CAG  CAD     0.00   0.0  0
+ EJN  CONST_20  O1   CAA  CAF  CAE   180.00   0.0  0
+ EJN  CONST_21  FAK  CAK  CAL  CAG   180.00   0.0  0
+ EJN  CONST_22  FAI  CAI  CAH  CAG   180.00   0.0  0
+ EJN  CONST_23  FAL  CAL  CAG  CAH   180.00   0.0  0
+ EJN  CONST_24  FAJ  CAJ  CAI  CAH   180.00   0.0  0
+ EJN  CONST_25  FAK  CAK  CAJ  CAI   180.00   0.0  0
+ EJN  CONST_26  FAL  CAL  CAK  CAJ   180.00   0.0  0
+ EJN  CONST_27  FAH  CAH  CAI  CAJ   180.00   0.0  0
+ EJN  CONST_28  FAI  CAI  CAJ  CAK   180.00   0.0  0
+ EJN  CONST_29  FAH  CAH  CAG  CAL   180.00   0.0  0
+ EJN  CONST_30  FAJ  CAJ  CAK  CAL   180.00   0.0  0
+ EJN  CONST_31  HAE  CAE  CAF  CAA   180.00   0.0  0
+ EJN  CONST_32  HAC  CAC  CAB  CAA   180.00   0.0  0
+ EJN  CONST_33  HAF  CAF  CAA  CAB   180.00   0.0  0
+ EJN  CONST_34  HAB  CAB  CAC  CAD   180.00   0.0  0
+ EJN  Var_01    CAF  CAA  O1   C1    -14.87  30.0  2
+ EJN  Var_02    C1   C2   C3   C4    -54.17  30.0  1
+ EJN  Var_03    C1   O5   C5   C4     56.49  30.0  1
+ EJN  Var_04    C2   C3   C4   C5     54.65  30.0  1
+ EJN  Var_05    C2   C1   O5   C5    -57.01  30.0  1
+ EJN  Var_06    C3   C2   C1   O5     54.07  30.0  1
+ EJN  Var_07    C3   C4   C5   O5    -53.52  30.0  1
+ EJN  Var_08    CAL  CAG  CAD  CAC   -63.08  30.0  2
+ EJN  Var_09    CAH  CAG  CAD  CAC   116.71  30.0  2
+ EJN  Var_10    CAL  CAG  CAD  CAE   116.58  30.0  2
+ EJN  Var_11    CAH  CAG  CAD  CAE   -63.63  30.0  2
+ EJN  Var_12    C1   C2   C3   O3   -174.59  30.0  1
+ EJN  Var_13    C5   C4   C3   O3    177.78  30.0  1
+ EJN  Var_14    O2   C2   C3   C4     65.43  30.0  1
+ EJN  Var_15    O1   C1   O5   C5     62.75  30.0  1
+ EJN  Var_16    C2   C3   C4   O4    173.26  30.0  1
+ EJN  Var_17    O5   C5   C4   O4   -174.38  30.0  1
+ EJN  Var_18    C3   C4   C5   C6   -172.64  30.0  1
+ EJN  Var_19    C1   O5   C5   C6    178.42  30.0  1
+ EJN  Var_20    CAA  O1   C1   O5     76.38  30.0  1
+ EJN  Var_21    O2   C2   C1   O5    -64.74  30.0  1
+ EJN  Var_22    CAA  O1   C1   C2   -160.72  30.0  1
+ EJN  Var_23    O1   C1   C2   C3    -69.26  30.0  1
+ EJN  Var_24    H21  C2   C3   C4   -172.74  30.0  1
+ EJN  Var_25    H31  C3   C4   C5    -62.84  30.0  1
+ EJN  Var_26    H1   C1   O5   C5   -177.11  30.0  1
+ EJN  Var_27    H41  C4   C5   O5     65.59  30.0  1
+ EJN  Var_28    H5   C5   O5   C1    -63.48  30.0  1
+ EJN  Var_29    O2   C2   C3   O3    -54.99  30.0  1
+ EJN  Var_30    O4   C4   C3   O3    -63.62  30.0  1
+ EJN  Var_31    O6   C6   C5   C4   -175.08  30.0  3
+ EJN  Var_32    C6   C5   C4   O4     66.50  30.0  1
+ EJN  Var_33    O6   C6   C5   O5     63.60  30.0  3
+ EJN  Var_34    O2   C2   C1   O1    171.94  30.0  1
+ EJN  Var_35    H32  O3   C3   C4    156.51  30.0  3
+ EJN  Var_36    H61  C6   C5   C4    -53.42  30.0  3
+ EJN  Var_37    H62  C6   C5   C4     62.66  30.0  3
+ EJN  Var_38    H42  O4   C4   C5    177.70  30.0  3
+ EJN  Var_39    H22  O2   C2   C1    -72.92  30.0  3
+ EJN  Var_40    H63  O6   C6   C5    175.86  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

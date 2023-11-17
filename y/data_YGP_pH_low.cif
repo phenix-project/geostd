@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- YGP  YGP  5'-O-[(R)-[(3,6-dimethyl-2-oxo-1,2-dihydropyridin-4-yl)oxy](hydroxy)phosphoryl]guanosine  ligand  54  33  .  2022-11-18  2022-11-18
+ YGP  YGP  5'-O-[(R)-[(3,6-dimethyl-2-oxo-1,2-dihydropyridin-4-yl)oxy](hydroxy)phosphoryl]guanosine  ligand  54  33  .  2022-11-18  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_YGP
@@ -274,31 +275,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- YGP  CONST_01  N7   C8   N9   C4     0.00   0.0  0
- YGP  CONST_02  C8   N7   C5   C4     0.00   0.0  0
- YGP  CONST_03  N9   C8   N7   C5     0.00   0.0  0
- YGP  CONST_04  C8   N9   C4   C5     0.00   0.0  0
- YGP  CONST_05  N9   C4   C5   N7     0.00   0.0  0
- YGP  CONST_06  C1'  N9   C4   C5   180.00   0.0  0
- YGP  CONST_07  C1'  N9   C4   N3     0.00   0.0  0
- YGP  CONST_08  C1'  N9   C8   N7   180.00   0.0  0
- YGP  CONST_09  C5   C6   N1   C2     0.00   0.0  0
- YGP  CONST_10  N1   C2   N3   C4     0.00   0.0  0
- YGP  CONST_11  N3   C2   N1   C6     0.00   0.0  0
- YGP  CONST_12  CAV  CAX  NAO  CAT    0.00   0.0  0
- YGP  CONST_13  O6   C6   N1   C2   180.00   0.0  0
- YGP  CONST_14  C4   N3   C2   N2   180.00   0.0  0
- YGP  CONST_15  C6   N1   C2   N2   180.00   0.0  0
- YGP  CONST_16  OAD  CAX  NAO  CAT  180.00   0.0  0
- YGP  CONST_17  H4   C8   N9   C4   180.00   0.0  0
- YGP  CONST_18  H3   N1   C6   C5   180.00   0.0  0
- YGP  CONST_19  H15  NAO  CAX  CAV  180.00   0.0  0
- YGP  CONST_20  H1   N2   C2   N1   180.00   0.0  0
- YGP  Var_01    CAV  CAW  OAR  PBG   99.10  30.0  3
- YGP  Var_02    H19  CAB  CAV  CAW   17.80  30.0  3
- YGP  Var_03    H16  CAA  CAT  CAK    1.59  30.0  3
- YGP  Var_04    OAF  PBG  O5'  C5'    7.30  30.0  1
- YGP  Var_05    H11  C5'  O5'  PBG   69.09  30.0  1
+ YGP  CONST_01  N7   C8   N9   C4      0.00   0.0  0
+ YGP  CONST_02  C8   N7   C5   C4      0.00   0.0  0
+ YGP  CONST_03  N9   C8   N7   C5      0.00   0.0  0
+ YGP  CONST_04  C8   N9   C4   C5      0.00   0.0  0
+ YGP  CONST_05  N9   C4   C5   N7      0.00   0.0  0
+ YGP  CONST_06  C1'  N9   C4   C5    180.00   0.0  0
+ YGP  CONST_07  C1'  N9   C4   N3      0.00   0.0  0
+ YGP  CONST_08  C1'  N9   C8   N7    180.00   0.0  0
+ YGP  CONST_09  C5   C6   N1   C2      0.00   0.0  0
+ YGP  CONST_10  N1   C2   N3   C4      0.00   0.0  0
+ YGP  CONST_11  N3   C2   N1   C6      0.00   0.0  0
+ YGP  CONST_12  CAV  CAX  NAO  CAT     0.00   0.0  0
+ YGP  CONST_13  O6   C6   N1   C2    180.00   0.0  0
+ YGP  CONST_14  C4   N3   C2   N2    180.00   0.0  0
+ YGP  CONST_15  C6   N1   C2   N2    180.00   0.0  0
+ YGP  CONST_16  OAD  CAX  NAO  CAT   180.00   0.0  0
+ YGP  CONST_17  H4   C8   N9   C4    180.00   0.0  0
+ YGP  CONST_18  H3   N1   C6   C5    180.00   0.0  0
+ YGP  CONST_19  H15  NAO  CAX  CAV   180.00   0.0  0
+ YGP  CONST_20  H1   N2   C2   N1    180.00   0.0  0
+ YGP  Var_01    CAV  CAW  OAR  PBG    99.10  30.0  3
+ YGP  Var_02    H19  CAB  CAV  CAW    17.80  30.0  3
+ YGP  Var_03    H16  CAA  CAT  CAK     1.59  30.0  3
+ YGP  Var_04    OAF  PBG  O5'  C5'     7.30  30.0  1
+ YGP  Var_05    H11  C5'  O5'  PBG    69.09  30.0  1
+ YGP  Var_06    O4'  C1'  N9   C4   -100.59  30.0  2
+ YGP  Var_07    C2'  C1'  N9   C4    139.00  30.0  2
+ YGP  Var_08    O4'  C1'  N9   C8     77.94  30.0  2
+ YGP  Var_09    C2'  C1'  N9   C8    -42.47  30.0  2
+ YGP  Var_10    C4'  O4'  C1'  N9   -114.91  30.0  1
+ YGP  Var_11    C3'  C2'  C1'  N9     94.78  30.0  1
+ YGP  Var_12    C3'  C4'  O4'  C1'    12.49  30.0  1
+ YGP  Var_13    C4'  C3'  C2'  C1'    34.20  30.0  1
+ YGP  Var_14    C2'  C3'  C4'  O4'   -29.60  30.0  1
+ YGP  Var_15    C3'  C2'  C1'  O4'   -28.20  30.0  1
+ YGP  Var_16    C4'  O4'  C1'  C2'    10.19  30.0  1
+ YGP  Var_17    NAO  CAX  CAV  CAW    -1.24  30.0  1
+ YGP  Var_18    NAO  CAT  CAK  CAW     1.98  30.0  1
+ YGP  Var_19    CAX  CAV  CAW  CAK    -0.26  30.0  1
+ YGP  Var_20    CAX  NAO  CAT  CAK    -3.86  30.0  1
+ YGP  Var_21    CAV  CAW  CAK  CAT    -0.08  30.0  1
+ YGP  Var_22    O2'  C2'  C1'  N9   -151.18  30.0  1
+ YGP  Var_23    C5'  C4'  O4'  C1'   137.59  30.0  1
+ YGP  Var_24    O3'  C3'  C2'  C1'   153.20  30.0  1
+ YGP  Var_25    O3'  C3'  C4'  O4'  -152.97  30.0  1
+ YGP  Var_26    O2'  C2'  C1'  O4'    85.83  30.0  1
+ YGP  Var_27    C5'  C4'  C3'  C2'  -151.50  30.0  1
+ YGP  Var_28    C4'  C3'  C2'  O2'   -81.80  30.0  1
+ YGP  Var_29    CAX  CAV  CAW  OAR   177.67  30.0  1
+ YGP  Var_30    CAT  CAK  CAW  OAR  -178.05  30.0  1
+ YGP  Var_31    OAD  CAX  CAV  CAW   178.89  30.0  1
+ YGP  Var_32    CAA  CAT  CAK  CAW  -177.19  30.0  1
+ YGP  Var_33    CAB  CAV  CAW  CAK   178.52  30.0  1
+ YGP  Var_34    CAX  NAO  CAT  CAA   175.38  30.0  1
+ YGP  Var_35    CAB  CAV  CAX  NAO   179.89  30.0  1
+ YGP  Var_36    H5   C1'  N9   C4     17.69  30.0  2
+ YGP  Var_37    H6   C2'  C1'  N9    -25.99  30.0  1
+ YGP  Var_38    H10  C4'  O4'  C1'  -105.05  30.0  1
+ YGP  Var_39    H8   C3'  C2'  C1'   -81.75  30.0  1
+ YGP  Var_40    H14  CAK  CAT  NAO  -178.43  30.0  1
+ YGP  Var_41    O5'  C5'  C4'  O4'   -61.84  30.0  2
+ YGP  Var_42    O3'  C3'  C2'  O2'    37.20  30.0  1
+ YGP  Var_43    O5'  C5'  C4'  C3'    57.76  30.0  2
+ YGP  Var_44    C5'  C4'  C3'  O3'    85.13  30.0  1
+ YGP  Var_45    CAB  CAV  CAW  OAR    -3.54  30.0  1
+ YGP  Var_46    CAB  CAV  CAX  OAD     0.02  30.0  1
+ YGP  Var_47    H7   O2'  C2'  C1'    72.39  30.0  3
+ YGP  Var_48    H11  C5'  C4'  O4'    58.69  30.0  2
+ YGP  Var_49    H12  C5'  C4'  O4'   177.35  30.0  2
+ YGP  Var_50    H9   O3'  C3'  C2'    78.38  30.0  3
+ YGP  Var_51    CAW  OAR  PBG  O5'   -46.35  30.0  1
+ YGP  Var_52    CAW  OAR  PBG  OAI    57.78  30.0  1
+ YGP  Var_53    CAW  OAR  PBG  OAF  -173.56  30.0  1
+ YGP  Var_54    H13  OAI  PBG  O5'  -177.08  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
