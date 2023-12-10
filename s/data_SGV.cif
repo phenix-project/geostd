@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SGV  SGV  4-amino-7-(beta-D-ribofuranosyl)-7H-pyrrolo[2,3-d]pyrimidine-5-carboxamide  ligand  37  22  .  2021-08-23  2021-08-23  
+ SGV  SGV  4-amino-7-(beta-D-ribofuranosyl)-7H-pyrrolo[2,3-d]pyrimidine-5-carboxamide  ligand  37  22  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SGV
@@ -207,39 +208,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SGV  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- SGV  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- SGV  CONST_03  C7    C5   C6   N1   180.00   0.0  0
- SGV  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- SGV  CONST_05  C5    C4   N3   C2     0.00   0.0  0
- SGV  CONST_06  N9    C4   N3   C2   180.00   0.0  0
- SGV  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- SGV  CONST_08  C6    C5   C4   N3     0.00   0.0  0
- SGV  CONST_09  C7    C5   C4   N3   180.00   0.0  0
- SGV  CONST_10  C8    N9   C4   N3   180.00   0.0  0
- SGV  CONST_11  C8    C7   C5   C4     0.00   0.0  0
- SGV  CONST_12  C7    C8   N9   C4     0.00   0.0  0
- SGV  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- SGV  CONST_14  N9    C8   C7   C5     0.00   0.0  0
- SGV  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- SGV  CONST_16  C8    C7   C5   C6   180.00   0.0  0
- SGV  CONST_17  N9    C4   C5   C7     0.00   0.0  0
- SGV  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- SGV  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- SGV  CONST_20  C1'   N9   C8   C7   180.00   0.0  0
- SGV  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- SGV  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- SGV  CONST_23  C10   C7   C5   C4   180.00   0.0  0
- SGV  CONST_24  C10   C7   C5   C6     0.00   0.0  0
- SGV  CONST_25  C7    C5   C6   N6     0.00   0.0  0
- SGV  CONST_26  C10   C7   C8   N9   180.00   0.0  0
- SGV  CONST_27  H2    C2   N3   C4   180.00   0.0  0
- SGV  CONST_28  H8    C8   N9   C4   180.00   0.0  0
- SGV  CONST_29  HN6   N6   C6   N1     0.00   0.0  0
- SGV  CONST_30  HN6A  N6   C6   N1   180.00   0.0  0
- SGV  CONST_31  HN11  N11  C10  C7     0.00   0.0  0
- SGV  CONST_32  HN1A  N11  C10  C7   180.00   0.0  0
- SGV  Var_01    N11   C10  C7   C5  -166.63  30.0  2
+ SGV  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ SGV  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ SGV  CONST_03  C7    C5   C6   N1    180.00   0.0  0
+ SGV  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ SGV  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ SGV  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ SGV  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ SGV  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ SGV  CONST_09  C7    C5   C4   N3    180.00   0.0  0
+ SGV  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ SGV  CONST_11  C8    C7   C5   C4      0.00   0.0  0
+ SGV  CONST_12  C7    C8   N9   C4      0.00   0.0  0
+ SGV  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ SGV  CONST_14  N9    C8   C7   C5      0.00   0.0  0
+ SGV  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ SGV  CONST_16  C8    C7   C5   C6    180.00   0.0  0
+ SGV  CONST_17  N9    C4   C5   C7      0.00   0.0  0
+ SGV  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ SGV  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ SGV  CONST_20  C1'   N9   C8   C7    180.00   0.0  0
+ SGV  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ SGV  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ SGV  CONST_23  C10   C7   C5   C4    180.00   0.0  0
+ SGV  CONST_24  C10   C7   C5   C6      0.00   0.0  0
+ SGV  CONST_25  C7    C5   C6   N6      0.00   0.0  0
+ SGV  CONST_26  C10   C7   C8   N9    180.00   0.0  0
+ SGV  CONST_27  H2    C2   N3   C4    180.00   0.0  0
+ SGV  CONST_28  H8    C8   N9   C4    180.00   0.0  0
+ SGV  CONST_29  HN6   N6   C6   N1      0.00   0.0  0
+ SGV  CONST_30  HN6A  N6   C6   N1    180.00   0.0  0
+ SGV  CONST_31  HN11  N11  C10  C7      0.00   0.0  0
+ SGV  CONST_32  HN1A  N11  C10  C7    180.00   0.0  0
+ SGV  Var_01    N11   C10  C7   C5   -166.63  30.0  2
+ SGV  Var_02    C2'   C1'  N9   C4     94.28  30.0  2
+ SGV  Var_03    O4'   C1'  N9   C4   -147.59  30.0  2
+ SGV  Var_04    C2'   C1'  N9   C8    -83.83  30.0  2
+ SGV  Var_05    O4'   C1'  N9   C8     34.30  30.0  2
+ SGV  Var_06    C3'   C2'  C1'  N9    147.92  30.0  1
+ SGV  Var_07    C4'   O4'  C1'  N9   -128.91  30.0  1
+ SGV  Var_08    C4'   C3'  C2'  C1'   -37.73  30.0  1
+ SGV  Var_09    C3'   C4'  O4'  C1'   -18.66  30.0  1
+ SGV  Var_10    C4'   O4'  C1'  C2'    -6.39  30.0  1
+ SGV  Var_11    O4'   C4'  C3'  C2'    35.22  30.0  1
+ SGV  Var_12    O4'   C1'  C2'  C3'    28.45  30.0  1
+ SGV  Var_13    O2'   C2'  C1'  N9    -88.01  30.0  1
+ SGV  Var_14    O3'   C3'  C2'  C1'    80.36  30.0  1
+ SGV  Var_15    C5'   C4'  O4'  C1'   102.99  30.0  1
+ SGV  Var_16    C5'   C4'  C3'  C2'   -86.44  30.0  1
+ SGV  Var_17    O4'   C1'  C2'  O2'   152.52  30.0  1
+ SGV  Var_18    C4'   C3'  C2'  O2'  -157.31  30.0  1
+ SGV  Var_19    O4'   C4'  C3'  O3'   -79.40  30.0  1
+ SGV  Var_20    H1'   C1'  N9   C4    -27.33  30.0  2
+ SGV  Var_21    H2'   C2'  C1'  N9     34.21  30.0  1
+ SGV  Var_22    H3'   C3'  C2'  C1'  -156.07  30.0  1
+ SGV  Var_23    H4'   C4'  O4'  C1'  -137.68  30.0  1
+ SGV  Var_24    O3'   C3'  C2'  O2'   -39.23  30.0  1
+ SGV  Var_25    O5'   C5'  C4'  C3'   168.42  30.0  3
+ SGV  Var_26    C5'   C4'  C3'  O3'   158.94  30.0  1
+ SGV  Var_27    O5'   C5'  C4'  O4'    50.79  30.0  3
+ SGV  Var_28    HO2'  O2'  C2'  C1'   169.25  30.0  3
+ SGV  Var_29    HO3'  O3'  C3'  C2'  -178.41  30.0  3
+ SGV  Var_30    H5'   C5'  C4'  C3'   -70.09  30.0  3
+ SGV  Var_31    H5'A  C5'  C4'  C3'    45.71  30.0  3
+ SGV  Var_32    HO5'  O5'  C5'  C4'   177.92  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

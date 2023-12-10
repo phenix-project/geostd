@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- Z99  Z99  '(1S,2S)-2-[(2S)-2-azanyl-1-hydroxy-1-oxo-3-(9H-xanthen-9-yl)propan-2-yl]cyclopropane-1-carboxylic acid'  ligand  43  26  .  2022-09-22  2023-02-15
+ Z99  Z99  '(1S,2S)-2-[(2S)-2-azanyl-1-hydroxy-1-oxo-3-(9H-xanthen-9-yl)propan-2-yl]cyclopropane-1-carboxylic acid'  ligand  43  26  .  2022-09-22  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_Z99
@@ -236,30 +237,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- Z99  CONST_01  CAU  CAL  CAH  CAF     0.00   0.0  0
- Z99  CONST_02  CAU  CAS  CAJ  CAF     0.00   0.0  0
- Z99  CONST_03  CAV  CAM  CAI  CAG     0.00   0.0  0
- Z99  CONST_04  CAV  CAT  CAK  CAG     0.00   0.0  0
- Z99  CONST_05  CAS  CAJ  CAF  CAH     0.00   0.0  0
- Z99  CONST_06  CAS  CAU  CAL  CAH     0.00   0.0  0
- Z99  CONST_07  CAT  CAK  CAG  CAI     0.00   0.0  0
- Z99  CONST_08  CAT  CAV  CAM  CAI     0.00   0.0  0
- Z99  CONST_09  CAL  CAH  CAF  CAJ     0.00   0.0  0
- Z99  CONST_10  CAL  CAU  CAS  CAJ     0.00   0.0  0
- Z99  CONST_11  CAM  CAI  CAG  CAK     0.00   0.0  0
- Z99  CONST_12  CAM  CAV  CAT  CAK     0.00   0.0  0
- Z99  CONST_13  HAL  CAL  CAH  CAF   180.00   0.0  0
- Z99  CONST_14  HAM  CAM  CAI  CAG   180.00   0.0  0
- Z99  CONST_15  HAJ  CAJ  CAF  CAH   180.00   0.0  0
- Z99  CONST_16  HAK  CAK  CAG  CAI   180.00   0.0  0
- Z99  CONST_17  HAH  CAH  CAF  CAJ   180.00   0.0  0
- Z99  CONST_18  HAI  CAI  CAG  CAK   180.00   0.0  0
- Z99  CONST_19  HAF  CAF  CAH  CAL   180.00   0.0  0
- Z99  CONST_20  HAG  CAG  CAI  CAM   180.00   0.0  0
- Z99  Var_01    CAV  CAT  OAP  CAS    27.15  30.0  1
- Z99  Var_02    CAU  CAS  OAP  CAT   -27.66  30.0  1
- Z99  Var_03    CAQ  CAX  CAZ  CAO  -108.43  30.0  1
- Z99  Var_04    CAO  CAX  CAQ  OAB   -31.48  30.0  3
+ Z99  CONST_01  CAU   CAL  CAH  CAF     0.00   0.0  0
+ Z99  CONST_02  CAU   CAS  CAJ  CAF     0.00   0.0  0
+ Z99  CONST_03  CAV   CAM  CAI  CAG     0.00   0.0  0
+ Z99  CONST_04  CAV   CAT  CAK  CAG     0.00   0.0  0
+ Z99  CONST_05  CAS   CAJ  CAF  CAH     0.00   0.0  0
+ Z99  CONST_06  CAS   CAU  CAL  CAH     0.00   0.0  0
+ Z99  CONST_07  CAT   CAK  CAG  CAI     0.00   0.0  0
+ Z99  CONST_08  CAT   CAV  CAM  CAI     0.00   0.0  0
+ Z99  CONST_09  CAL   CAH  CAF  CAJ     0.00   0.0  0
+ Z99  CONST_10  CAL   CAU  CAS  CAJ     0.00   0.0  0
+ Z99  CONST_11  CAM   CAI  CAG  CAK     0.00   0.0  0
+ Z99  CONST_12  CAM   CAV  CAT  CAK     0.00   0.0  0
+ Z99  CONST_13  HAL   CAL  CAH  CAF   180.00   0.0  0
+ Z99  CONST_14  HAM   CAM  CAI  CAG   180.00   0.0  0
+ Z99  CONST_15  HAJ   CAJ  CAF  CAH   180.00   0.0  0
+ Z99  CONST_16  HAK   CAK  CAG  CAI   180.00   0.0  0
+ Z99  CONST_17  HAH   CAH  CAF  CAJ   180.00   0.0  0
+ Z99  CONST_18  HAI   CAI  CAG  CAK   180.00   0.0  0
+ Z99  CONST_19  HAF   CAF  CAH  CAL   180.00   0.0  0
+ Z99  CONST_20  HAG   CAG  CAI  CAM   180.00   0.0  0
+ Z99  Var_01    CAV   CAT  OAP  CAS    27.15  30.0  1
+ Z99  Var_02    CAU   CAS  OAP  CAT   -27.66  30.0  1
+ Z99  Var_03    CAQ   CAX  CAZ  CAO  -108.43  30.0  1
+ Z99  Var_04    CAO   CAX  CAQ  OAB   -31.48  30.0  3
+ Z99  Var_05    CAN   CAW  CAU  CAL    92.77  30.0  1
+ Z99  Var_06    CAN   CAW  CAV  CAM   -85.55  30.0  1
+ Z99  Var_07    CAS   CAU  CAW  CAN   -87.26  30.0  1
+ Z99  Var_08    CAT   CAV  CAW  CAN    90.21  30.0  1
+ Z99  Var_09    HAW   CAW  CAU  CAL   -28.47  30.0  1
+ Z99  Var_10    HAO   CAO  CAZ  CAX  -106.46  30.0  1
+ Z99  Var_11    HAOA  CAO  CAZ  CAX   106.50  30.0  1
+ Z99  Var_12    CAO   CAZ  CAY  NAA   -29.35  30.0  1
+ Z99  Var_13    CAX   CAZ  CAY  NAA    42.80  30.0  1
+ Z99  Var_14    CAO   CAZ  CAY  CAN    92.55  30.0  1
+ Z99  Var_15    CAX   CAZ  CAY  CAN   164.70  30.0  1
+ Z99  Var_16    CAR   CAY  CAZ  CAO  -148.72  30.0  3
+ Z99  Var_17    CAX   CAZ  CAY  CAR   -76.57  30.0  1
+ Z99  Var_18    CAY   CAN  CAW  CAU   -73.77  30.0  1
+ Z99  Var_19    CAY   CAN  CAW  CAV   165.64  30.0  1
+ Z99  Var_20    CAZ   CAY  CAN  CAW  -173.40  30.0  1
+ Z99  Var_21    HAN   CAN  CAW  CAU    51.23  30.0  1
+ Z99  Var_22    HANA  CAN  CAW  CAU   165.76  30.0  1
+ Z99  Var_23    CAW   CAN  CAY  NAA   -53.03  30.0  3
+ Z99  Var_24    CAZ   CAY  CAR  OAC   116.94  30.0  2
+ Z99  Var_25    CAZ   CAY  CAR  OAE   -61.39  30.0  2
+ Z99  Var_26    CAW   CAN  CAY  CAR    71.73  30.0  3
+ Z99  Var_27    HNAA  NAA  CAY  CAZ    97.76  30.0  3
+ Z99  Var_28    HNAB  NAA  CAY  CAZ  -141.79  30.0  3
+ Z99  Var_29    OAC   CAR  CAY  NAA    -2.23  30.0  2
+ Z99  Var_30    OAE   CAR  CAY  NAA   179.44  30.0  2
+ Z99  Var_31    CAN   CAY  CAR  OAC  -128.14  30.0  2
+ Z99  Var_32    CAN   CAY  CAR  OAE    53.53  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

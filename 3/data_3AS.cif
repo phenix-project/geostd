@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3AS  3AS  (3aS,4R,9bR)-2,2-difluoro-4-(4-hydroxyphenyl)-6-(methoxymethyl)-1,2,3,3a,4,9b-hexahydrocyclopenta[c]chromen-8-ol  ligand  46  26  .  2021-08-04  2021-08-04  
+ 3AS  3AS  (3aS,4R,9bR)-2,2-difluoro-4-(4-hydroxyphenyl)-6-(methoxymethyl)-1,2,3,3a,4,9b-hexahydrocyclopenta[c]chromen-8-ol  ligand  46  26  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3AS
@@ -248,38 +249,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3AS  CONST_01  C4    C19  C20  C1     0.00   0.0  0
- 3AS  CONST_02  C4    C3   C2   C1     0.00   0.0  0
- 3AS  CONST_03  C19   C20  C1   C2     0.00   0.0  0
- 3AS  CONST_04  C19   C4   C3   C2     0.00   0.0  0
- 3AS  CONST_05  C20   C1   C2   C3     0.00   0.0  0
- 3AS  CONST_06  C20   C19  C4   C3     0.00   0.0  0
- 3AS  CONST_07  C11   C13  C14  C8     0.00   0.0  0
- 3AS  CONST_08  C11   C10  C9   C8     0.00   0.0  0
- 3AS  CONST_09  C13   C14  C8   C9     0.00   0.0  0
- 3AS  CONST_10  C13   C11  C10  C9     0.00   0.0  0
- 3AS  CONST_11  C14   C8   C9   C10    0.00   0.0  0
- 3AS  CONST_12  C14   C13  C11  C10    0.00   0.0  0
- 3AS  CONST_13  C13   C14  C8   C6   180.00   0.0  0
- 3AS  CONST_14  C10   C9   C8   C6   180.00   0.0  0
- 3AS  CONST_15  C26   C3   C2   C1   180.00   0.0  0
- 3AS  CONST_16  O29   C1   C2   C3   180.00   0.0  0
- 3AS  CONST_17  C26   C3   C4   O5     0.00   0.0  0
- 3AS  CONST_18  O12   C11  C10  C9   180.00   0.0  0
- 3AS  CONST_19  C14   C13  C11  O12  180.00   0.0  0
- 3AS  CONST_20  O29   C1   C20  C19  180.00   0.0  0
- 3AS  CONST_21  C26   C3   C4   C19  180.00   0.0  0
- 3AS  CONST_22  H20   C20  C1   C2   180.00   0.0  0
- 3AS  CONST_23  H2    C2   C3   C4   180.00   0.0  0
- 3AS  CONST_24  H14   C14  C8   C6     0.00   0.0  0
- 3AS  CONST_25  H9    C9   C8   C6     0.00   0.0  0
- 3AS  CONST_26  H13   C13  C14  C8   180.00   0.0  0
- 3AS  CONST_27  H10   C10  C9   C8   180.00   0.0  0
- 3AS  Var_01    C19   C4   O5   C6    29.44  30.0  1
- 3AS  Var_02    C21   C22  C25  C15  -41.63  30.0  1
- 3AS  Var_03    C25   C22  C21  C17   29.70  30.0  1
- 3AS  Var_04    O27   C26  C3   C2     0.13  30.0  2
- 3AS  Var_05    H281  C28  O27  C26  -60.48  30.0  3
+ 3AS  CONST_01  C4    C19  C20  C1      0.00   0.0  0
+ 3AS  CONST_02  C4    C3   C2   C1      0.00   0.0  0
+ 3AS  CONST_03  C19   C20  C1   C2      0.00   0.0  0
+ 3AS  CONST_04  C19   C4   C3   C2      0.00   0.0  0
+ 3AS  CONST_05  C20   C1   C2   C3      0.00   0.0  0
+ 3AS  CONST_06  C20   C19  C4   C3      0.00   0.0  0
+ 3AS  CONST_07  C11   C13  C14  C8      0.00   0.0  0
+ 3AS  CONST_08  C11   C10  C9   C8      0.00   0.0  0
+ 3AS  CONST_09  C13   C14  C8   C9      0.00   0.0  0
+ 3AS  CONST_10  C13   C11  C10  C9      0.00   0.0  0
+ 3AS  CONST_11  C14   C8   C9   C10     0.00   0.0  0
+ 3AS  CONST_12  C14   C13  C11  C10     0.00   0.0  0
+ 3AS  CONST_13  C13   C14  C8   C6    180.00   0.0  0
+ 3AS  CONST_14  C10   C9   C8   C6    180.00   0.0  0
+ 3AS  CONST_15  C26   C3   C2   C1    180.00   0.0  0
+ 3AS  CONST_16  O29   C1   C2   C3    180.00   0.0  0
+ 3AS  CONST_17  C26   C3   C4   O5      0.00   0.0  0
+ 3AS  CONST_18  O12   C11  C10  C9    180.00   0.0  0
+ 3AS  CONST_19  C14   C13  C11  O12   180.00   0.0  0
+ 3AS  CONST_20  O29   C1   C20  C19   180.00   0.0  0
+ 3AS  CONST_21  C26   C3   C4   C19   180.00   0.0  0
+ 3AS  CONST_22  H20   C20  C1   C2    180.00   0.0  0
+ 3AS  CONST_23  H2    C2   C3   C4    180.00   0.0  0
+ 3AS  CONST_24  H14   C14  C8   C6      0.00   0.0  0
+ 3AS  CONST_25  H9    C9   C8   C6      0.00   0.0  0
+ 3AS  CONST_26  H13   C13  C14  C8    180.00   0.0  0
+ 3AS  CONST_27  H10   C10  C9   C8    180.00   0.0  0
+ 3AS  Var_01    C19   C4   O5   C6     29.44  30.0  1
+ 3AS  Var_02    C21   C22  C25  C15   -41.63  30.0  1
+ 3AS  Var_03    C25   C22  C21  C17    29.70  30.0  1
+ 3AS  Var_04    O27   C26  C3   C2      0.13  30.0  2
+ 3AS  Var_05    H281  C28  O27  C26   -60.48  30.0  3
+ 3AS  Var_06    C21   C17  C19  C4    114.04  30.0  1
+ 3AS  Var_07    C15   C17  C19  C4     -4.17  30.0  1
+ 3AS  Var_08    C15   C6   O5   C4    -57.63  30.0  1
+ 3AS  Var_09    C8    C6   O5   C4    178.68  30.0  1
+ 3AS  Var_10    C17   C15  C6   O5     54.00  30.0  1
+ 3AS  Var_11    C25   C15  C6   O5    -66.18  30.0  1
+ 3AS  Var_12    C14   C8   C6   O5     30.61  30.0  2
+ 3AS  Var_13    C9    C8   C6   O5   -152.06  30.0  2
+ 3AS  Var_14    C21   C17  C15  C6   -145.29  30.0  1
+ 3AS  Var_15    C19   C17  C15  C6    -23.49  30.0  1
+ 3AS  Var_16    C22   C25  C15  C6    161.04  30.0  1
+ 3AS  Var_17    C17   C15  C6   C8    175.53  30.0  1
+ 3AS  Var_18    C25   C15  C6   C8     55.36  30.0  1
+ 3AS  Var_19    C15   C6   C8   C9     85.20  30.0  2
+ 3AS  Var_20    C15   C6   C8   C14   -92.13  30.0  2
+ 3AS  Var_21    C22   C21  C17  C15    -5.95  30.0  1
+ 3AS  Var_22    C20   C19  C17  C15   177.60  30.0  1
+ 3AS  Var_23    C22   C25  C15  C17    37.08  30.0  1
+ 3AS  Var_24    C22   C21  C17  C19  -128.45  30.0  1
+ 3AS  Var_25    C25   C15  C17  C19   102.45  30.0  1
+ 3AS  Var_26    C21   C17  C19  C20   -64.19  30.0  1
+ 3AS  Var_27    C25   C15  C17  C21   -19.35  30.0  1
+ 3AS  Var_28    H17   C17  C19  C4   -125.27  30.0  1
+ 3AS  Var_29    H6    C6   O5   C4     60.45  30.0  1
+ 3AS  Var_30    H15   C15  C6   O5    172.79  30.0  1
+ 3AS  Var_31    H251  C25  C15  C6    -77.06  30.0  1
+ 3AS  Var_32    H252  C25  C15  C6     45.59  30.0  1
+ 3AS  Var_33    H211  C21  C17  C15   111.19  30.0  1
+ 3AS  Var_34    H212  C21  C17  C15  -128.25  30.0  1
+ 3AS  Var_35    H29   O29  C1   C2     -0.28  30.0  2
+ 3AS  Var_36    H12   O12  C11  C10    -0.90  30.0  2
+ 3AS  Var_37    C28   O27  C26  C3   -178.63  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

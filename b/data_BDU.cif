@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BDU  BDU  'methyl 5-(acetylamino)-9-[(biphenyl-4-ylcarbonyl)amino]-3,5,9-trideoxy-D-glycero-alpha-D-galacto-non-2-ulopyranosidonic acid'  ligand  65  36  .  2021-08-06  2021-08-06  
+ BDU  BDU  'methyl 5-(acetylamino)-9-[(biphenyl-4-ylcarbonyl)amino]-3,5,9-trideoxy-D-glycero-alpha-D-galacto-non-2-ulopyranosidonic acid'  ligand  65  36  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BDU
@@ -313,43 +314,99 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BDU  CONST_01  C1Z   CE1  CD1  C1G    0.00   0.0  0
- BDU  CONST_02  C1Z   CE2  CD2  C1G    0.00   0.0  0
- BDU  CONST_03  CE2   CD2  C1G  CD1    0.00   0.0  0
- BDU  CONST_04  CE2   C1Z  CE1  CD1    0.00   0.0  0
- BDU  CONST_05  C2G   C1Z  CE1  CD1  180.00   0.0  0
- BDU  CONST_06  CD2   C1G  CD1  CE1    0.00   0.0  0
- BDU  CONST_07  CD2   CE2  C1Z  CE1    0.00   0.0  0
- BDU  CONST_10  C2G   C1Z  CE2  CD2  180.00   0.0  0
- BDU  CONST_13  CG1   CY1  C2G  C1Z  180.00   0.0  0
- BDU  CONST_14  CG2   CY2  C2G  C1Z  180.00   0.0  0
- BDU  CONST_15  C2Z   CG1  CY1  C2G    0.00   0.0  0
- BDU  CONST_16  C2Z   CG2  CY2  C2G    0.00   0.0  0
- BDU  CONST_17  CG2   CY2  C2G  CY1    0.00   0.0  0
- BDU  CONST_18  CG2   C2Z  CG1  CY1    0.00   0.0  0
- BDU  CONST_19  CG1   CY1  C2G  CY2    0.00   0.0  0
- BDU  CONST_20  CG1   C2Z  CG2  CY2    0.00   0.0  0
- BDU  CONST_21  CE1   CD1  C1G  C12  180.00   0.0  0
- BDU  CONST_22  CE2   CD2  C1G  C12  180.00   0.0  0
- BDU  CONST_23  HE1   CE1  CD1  C1G  180.00   0.0  0
- BDU  CONST_24  HE2   CE2  CD2  C1G  180.00   0.0  0
- BDU  CONST_25  HD2   CD2  C1G  CD1  180.00   0.0  0
- BDU  CONST_26  HD1   CD1  C1G  CD2  180.00   0.0  0
- BDU  CONST_27  HY1   CY1  C2G  C1Z    0.00   0.0  0
- BDU  CONST_28  HY2   CY2  C2G  C1Z    0.00   0.0  0
- BDU  CONST_29  HG1   CG1  CY1  C2G  180.00   0.0  0
- BDU  CONST_30  HG2   CG2  CY2  C2G  180.00   0.0  0
- BDU  CONST_31  H2Z   C2Z  CG1  CY1  180.00   0.0  0
- BDU  CONST_32  O10   C10  NX5  CX5    0.00   0.0  0
- BDU  CONST_33  C11   C10  NX5  CX5  180.00   0.0  0
- BDU  CONST_34  C1G   C12  NX6  CX9  180.00   0.0  0
- BDU  CONST_35  HE    NX6  C12  C1G    0.00   0.0  0
- BDU  CONST_36  O12   C12  NX6  CX9    0.00   0.0  0
- BDU  CONST_37  HB    NX5  C10  O10  180.00   0.0  0
- BDU  Var_01    CD1   C1G  C12  NX6  157.52  30.0  2
- BDU  Var_02    HO21  CO2  OX2  CX2  -51.62  30.0  3
- BDU  Var_03    C12   NX6  CX9  CX8  -93.71  30.0  3
- BDU  Var_04    H111  C11  C10  NX5  121.60  30.0  3
+ BDU  CONST_01  C1Z   CE1  CD1  C1G     0.00   0.0  0
+ BDU  CONST_02  C1Z   CE2  CD2  C1G     0.00   0.0  0
+ BDU  CONST_03  CE2   CD2  C1G  CD1     0.00   0.0  0
+ BDU  CONST_04  CE2   C1Z  CE1  CD1     0.00   0.0  0
+ BDU  CONST_05  C2G   C1Z  CE1  CD1   180.00   0.0  0
+ BDU  CONST_06  CD2   C1G  CD1  CE1     0.00   0.0  0
+ BDU  CONST_07  CD2   CE2  C1Z  CE1     0.00   0.0  0
+ BDU  CONST_08  C2G   C1Z  CE2  CD2   180.00   0.0  0
+ BDU  CONST_09  CG1   CY1  C2G  C1Z   180.00   0.0  0
+ BDU  CONST_10  CG2   CY2  C2G  C1Z   180.00   0.0  0
+ BDU  CONST_11  C2Z   CG1  CY1  C2G     0.00   0.0  0
+ BDU  CONST_12  C2Z   CG2  CY2  C2G     0.00   0.0  0
+ BDU  CONST_13  CG2   CY2  C2G  CY1     0.00   0.0  0
+ BDU  CONST_14  CG2   C2Z  CG1  CY1     0.00   0.0  0
+ BDU  CONST_15  CG1   CY1  C2G  CY2     0.00   0.0  0
+ BDU  CONST_16  CG1   C2Z  CG2  CY2     0.00   0.0  0
+ BDU  CONST_17  CE1   CD1  C1G  C12   180.00   0.0  0
+ BDU  CONST_18  CE2   CD2  C1G  C12   180.00   0.0  0
+ BDU  CONST_19  HE1   CE1  CD1  C1G   180.00   0.0  0
+ BDU  CONST_20  HE2   CE2  CD2  C1G   180.00   0.0  0
+ BDU  CONST_21  HD2   CD2  C1G  CD1   180.00   0.0  0
+ BDU  CONST_22  HD1   CD1  C1G  CD2   180.00   0.0  0
+ BDU  CONST_23  HY1   CY1  C2G  C1Z     0.00   0.0  0
+ BDU  CONST_24  HY2   CY2  C2G  C1Z     0.00   0.0  0
+ BDU  CONST_25  HG1   CG1  CY1  C2G   180.00   0.0  0
+ BDU  CONST_26  HG2   CG2  CY2  C2G   180.00   0.0  0
+ BDU  CONST_27  H2Z   C2Z  CG1  CY1   180.00   0.0  0
+ BDU  CONST_28  O10   C10  NX5  CX5     0.00   0.0  0
+ BDU  CONST_29  C11   C10  NX5  CX5   180.00   0.0  0
+ BDU  CONST_30  C1G   C12  NX6  CX9   180.00   0.0  0
+ BDU  CONST_31  HE    NX6  C12  C1G     0.00   0.0  0
+ BDU  CONST_32  O12   C12  NX6  CX9     0.00   0.0  0
+ BDU  CONST_33  HB    NX5  C10  O10   180.00   0.0  0
+ BDU  Var_01    CD1   C1G  C12  NX6   157.52  30.0  2
+ BDU  Var_02    HO21  CO2  OX2  CX2   -51.62  30.0  3
+ BDU  Var_03    C12   NX6  CX9  CX8   -93.71  30.0  3
+ BDU  Var_04    H111  C11  C10  NX5   121.60  30.0  3
+ BDU  Var_05    CX5   CX4  CX3  CX2    50.60  30.0  1
+ BDU  Var_06    CX5   CX6  OX6  CX2   -66.68  30.0  1
+ BDU  Var_07    CX6   OX6  CX2  CX3    60.35  30.0  1
+ BDU  Var_08    CX6   CX5  CX4  CX3   -53.74  30.0  1
+ BDU  Var_09    OX6   CX2  CX3  CX4   -51.16  30.0  1
+ BDU  Var_10    OX6   CX6  CX5  CX4    60.36  30.0  1
+ BDU  Var_11    CY1   C2G  C1Z  CE1   -35.34  30.0  2
+ BDU  Var_12    CY2   C2G  C1Z  CE1   144.94  30.0  2
+ BDU  Var_13    CY1   C2G  C1Z  CE2   144.65  30.0  2
+ BDU  Var_14    CY2   C2G  C1Z  CE2   -35.07  30.0  2
+ BDU  Var_15    CX4   CX3  CX2  CX1    73.81  30.0  1
+ BDU  Var_16    CX6   OX6  CX2  CX1   -65.79  30.0  1
+ BDU  Var_17    OX4   CX4  CX3  CX2   176.53  30.0  1
+ BDU  Var_18    CX7   CX6  OX6  CX2   166.86  30.0  1
+ BDU  Var_19    CX4   CX3  CX2  OX2  -165.72  30.0  1
+ BDU  Var_20    CX6   OX6  CX2  OX2   174.62  30.0  1
+ BDU  Var_21    NX5   CX5  CX4  CX3  -175.30  30.0  1
+ BDU  Var_22    CX7   CX6  CX5  CX4  -177.14  30.0  1
+ BDU  Var_23    CX6   CX5  CX4  OX4  -179.51  30.0  1
+ BDU  Var_24    OX6   CX6  CX5  NX5  -177.97  30.0  1
+ BDU  Var_25    HX4   CX4  CX3  CX2   -67.37  30.0  1
+ BDU  Var_26    HX6   CX6  OX6  CX2    50.59  30.0  1
+ BDU  Var_27    HX5   CX5  CX4  CX3    65.25  30.0  1
+ BDU  Var_28    HX31  CX3  CX4  CX5   174.13  30.0  1
+ BDU  Var_29    HX32  CX3  CX4  CX5   -68.35  30.0  1
+ BDU  Var_30    CX3   CX2  CX1  O1A  -143.16  30.0  2
+ BDU  Var_31    OX6   CX2  CX1  O1A   -19.64  30.0  2
+ BDU  Var_32    CX3   CX2  CX1  O1B    39.69  30.0  2
+ BDU  Var_33    OX6   CX2  CX1  O1B   163.22  30.0  2
+ BDU  Var_34    CX3   CX2  OX2  CO2  -174.62  30.0  1
+ BDU  Var_35    OX6   CX2  OX2  CO2    69.31  30.0  1
+ BDU  Var_36    C10   NX5  CX5  CX4  -104.67  30.0  3
+ BDU  Var_37    NX5   CX5  CX4  OX4    58.93  30.0  1
+ BDU  Var_38    OX7   CX7  CX6  CX5   -50.70  30.0  3
+ BDU  Var_39    CX8   CX7  CX6  CX5  -173.57  30.0  3
+ BDU  Var_40    CX7   CX6  CX5  NX5   -55.48  30.0  1
+ BDU  Var_41    CX6   CX5  NX5  C10   135.83  30.0  1
+ BDU  Var_42    OX7   CX7  CX6  OX6    72.02  30.0  3
+ BDU  Var_43    CX8   CX7  CX6  OX6   -50.85  30.0  3
+ BDU  Var_44    HA    OX4  CX4  CX3   -63.85  30.0  3
+ BDU  Var_45    HB    NX5  CX5  CX4    68.66  30.0  3
+ BDU  Var_46    HX7   CX7  CX6  CX5    69.41  30.0  3
+ BDU  Var_47    CO2   OX2  CX2  CX1   -51.57  30.0  3
+ BDU  Var_48    OX2   CX2  CX1  O1A    98.25  30.0  2
+ BDU  Var_49    OX2   CX2  CX1  O1B   -78.90  30.0  2
+ BDU  Var_50    OX8   CX8  CX7  CX6   -53.88  30.0  3
+ BDU  Var_51    CX9   CX8  CX7  CX6  -175.69  30.0  3
+ BDU  Var_52    HC    OX7  CX7  CX6   157.27  30.0  3
+ BDU  Var_53    HX8   CX8  CX7  CX6    68.89  30.0  3
+ BDU  Var_54    NX6   CX9  CX8  CX7    57.83  30.0  3
+ BDU  Var_55    OX8   CX8  CX7  OX7  -176.33  30.0  3
+ BDU  Var_56    CX9   CX8  CX7  OX7    61.86  30.0  3
+ BDU  Var_57    NX6   CX9  CX8  OX8   -65.99  30.0  3
+ BDU  Var_58    HD    OX8  CX8  CX7    68.73  30.0  3
+ BDU  Var_59    HX91  CX9  CX8  CX7   178.05  30.0  3
+ BDU  Var_60    HX92  CX9  CX8  CX7   -65.82  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

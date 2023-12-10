@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 30Z  30Z  4,4'-[(2S,3S)-2,3-dimethylbutane-1,4-diyl]dibenzene-1,2-diol  ligand  44  22  .  2022-07-22  2022-07-26
+ 30Z  30Z  4,4'-[(2S,3S)-2,3-dimethylbutane-1,4-diyl]dibenzene-1,2-diol  ligand  44  22  .  2022-07-22  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_30Z
@@ -230,38 +231,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 30Z  CONST_01  C22  C17  C18  C19    0.00   0.0  0
- 30Z  CONST_02  C22  C21  C20  C19    0.00   0.0  0
- 30Z  CONST_03  C21  C20  C19  C18    0.00   0.0  0
- 30Z  CONST_04  C21  C22  C17  C18    0.00   0.0  0
- 30Z  CONST_05  C17  C18  C19  C20    0.00   0.0  0
- 30Z  CONST_06  C17  C22  C21  C20    0.00   0.0  0
- 30Z  CONST_07  C6   C1   C2   C3     0.00   0.0  0
- 30Z  CONST_08  C6   C5   C4   C3     0.00   0.0  0
- 30Z  CONST_09  C5   C4   C3   C2     0.00   0.0  0
- 30Z  CONST_10  C5   C6   C1   C2     0.00   0.0  0
- 30Z  CONST_11  C1   C2   C3   C4     0.00   0.0  0
- 30Z  CONST_12  C1   C6   C5   C4     0.00   0.0  0
- 30Z  CONST_13  C17  C18  C19  O25  180.00   0.0  0
- 30Z  CONST_14  C21  C20  C19  O25  180.00   0.0  0
- 30Z  CONST_15  C15  C17  C18  C19  180.00   0.0  0
- 30Z  CONST_16  O23  C20  C19  C18  180.00   0.0  0
- 30Z  CONST_17  C22  C21  C20  O23  180.00   0.0  0
- 30Z  CONST_18  C15  C17  C22  C21  180.00   0.0  0
- 30Z  CONST_19  C1   C2   C3   C11  180.00   0.0  0
- 30Z  CONST_20  C5   C4   C3   C11  180.00   0.0  0
- 30Z  CONST_21  O9   C5   C4   C3   180.00   0.0  0
- 30Z  CONST_22  O7   C6   C1   C2   180.00   0.0  0
- 30Z  CONST_23  O7   C6   C5   C4   180.00   0.0  0
- 30Z  CONST_24  C1   C6   C5   O9   180.00   0.0  0
- 30Z  CONST_25  H21  C21  C20  C19  180.00   0.0  0
- 30Z  CONST_26  H22  C22  C17  C18  180.00   0.0  0
- 30Z  CONST_27  H18  C18  C19  C20  180.00   0.0  0
- 30Z  CONST_28  H1   C1   C2   C3   180.00   0.0  0
- 30Z  CONST_29  H4   C4   C3   C2   180.00   0.0  0
- 30Z  CONST_30  H2   C2   C3   C4   180.00   0.0  0
- 30Z  Var_01    C14  C15  C17  C18  103.48  30.0  2
- 30Z  Var_02    C2   C3   C11  C12  106.37  30.0  2
+ 30Z  CONST_01  C22   C17  C18  C19     0.00   0.0  0
+ 30Z  CONST_02  C22   C21  C20  C19     0.00   0.0  0
+ 30Z  CONST_03  C21   C20  C19  C18     0.00   0.0  0
+ 30Z  CONST_04  C21   C22  C17  C18     0.00   0.0  0
+ 30Z  CONST_05  C17   C18  C19  C20     0.00   0.0  0
+ 30Z  CONST_06  C17   C22  C21  C20     0.00   0.0  0
+ 30Z  CONST_07  C6    C1   C2   C3      0.00   0.0  0
+ 30Z  CONST_08  C6    C5   C4   C3      0.00   0.0  0
+ 30Z  CONST_09  C5    C4   C3   C2      0.00   0.0  0
+ 30Z  CONST_10  C5    C6   C1   C2      0.00   0.0  0
+ 30Z  CONST_11  C1    C2   C3   C4      0.00   0.0  0
+ 30Z  CONST_12  C1    C6   C5   C4      0.00   0.0  0
+ 30Z  CONST_13  C17   C18  C19  O25   180.00   0.0  0
+ 30Z  CONST_14  C21   C20  C19  O25   180.00   0.0  0
+ 30Z  CONST_15  C15   C17  C18  C19   180.00   0.0  0
+ 30Z  CONST_16  O23   C20  C19  C18   180.00   0.0  0
+ 30Z  CONST_17  C22   C21  C20  O23   180.00   0.0  0
+ 30Z  CONST_18  C15   C17  C22  C21   180.00   0.0  0
+ 30Z  CONST_19  C1    C2   C3   C11   180.00   0.0  0
+ 30Z  CONST_20  C5    C4   C3   C11   180.00   0.0  0
+ 30Z  CONST_21  O9    C5   C4   C3    180.00   0.0  0
+ 30Z  CONST_22  O7    C6   C1   C2    180.00   0.0  0
+ 30Z  CONST_23  O7    C6   C5   C4    180.00   0.0  0
+ 30Z  CONST_24  C1    C6   C5   O9    180.00   0.0  0
+ 30Z  CONST_25  H21   C21  C20  C19   180.00   0.0  0
+ 30Z  CONST_26  H22   C22  C17  C18   180.00   0.0  0
+ 30Z  CONST_27  H18   C18  C19  C20   180.00   0.0  0
+ 30Z  CONST_28  H1    C1   C2   C3    180.00   0.0  0
+ 30Z  CONST_29  H4    C4   C3   C2    180.00   0.0  0
+ 30Z  CONST_30  H2    C2   C3   C4    180.00   0.0  0
+ 30Z  Var_01    C14   C15  C17  C18   103.48  30.0  2
+ 30Z  Var_02    C2    C3   C11  C12   106.37  30.0  2
+ 30Z  Var_03    H23   O23  C20  C19   179.61  30.0  2
+ 30Z  Var_04    H25   O25  C19  C18  -178.50  30.0  2
+ 30Z  Var_05    H9    O9   C5   C4   -179.65  30.0  2
+ 30Z  Var_06    H7    O7   C6   C5    176.68  30.0  2
+ 30Z  Var_07    C16   C14  C15  C17   -67.22  30.0  3
+ 30Z  Var_08    C12   C14  C15  C17   167.53  30.0  3
+ 30Z  Var_09    C3    C11  C12  C14   167.51  30.0  3
+ 30Z  Var_10    C3    C11  C12  C13   -67.13  30.0  3
+ 30Z  Var_11    H14   C14  C15  C17    50.05  30.0  3
+ 30Z  Var_12    H12   C12  C11  C3     50.12  30.0  1
+ 30Z  Var_13    C13   C12  C14  C15   163.44  30.0  3
+ 30Z  Var_14    C11   C12  C14  C15   -73.28  30.0  3
+ 30Z  Var_15    C13   C12  C14  C16    40.35  30.0  3
+ 30Z  Var_16    C11   C12  C14  C16   163.62  30.0  3
+ 30Z  Var_17    H161  C16  C14  C15   -66.96  30.0  3
+ 30Z  Var_18    H162  C16  C14  C15    52.38  30.0  3
+ 30Z  Var_19    H163  C16  C14  C15   172.18  30.0  3
+ 30Z  Var_20    H131  C13  C12  C14   176.80  30.0  3
+ 30Z  Var_21    H132  C13  C12  C14   -63.40  30.0  3
+ 30Z  Var_22    H133  C13  C12  C14    57.50  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

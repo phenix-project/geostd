@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- P5A  P5A  5'-O-(L-prolylsulfamoyl)adenosine  ligand  51  30  .  2021-08-19  2021-08-19  
+ P5A  P5A  5'-O-(L-prolylsulfamoyl)adenosine  ligand  51  30  .  2021-08-19  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_P5A
@@ -267,41 +268,86 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- P5A  CONST_01  C2   N3   C4   N9    180.00   0.0  0
- P5A  CONST_02  C6   C5   C4   N9    180.00   0.0  0
- P5A  CONST_03  N7   C5   C4   N9      0.00   0.0  0
- P5A  CONST_04  C5   N7   C8   N9      0.00   0.0  0
- P5A  CONST_05  N7   C8   N9   C4      0.00   0.0  0
- P5A  CONST_06  N1   C2   N3   C4      0.00   0.0  0
- P5A  CONST_07  N1   C6   C5   C4      0.00   0.0  0
- P5A  CONST_08  C8   N7   C5   C4      0.00   0.0  0
- P5A  CONST_09  C8   N9   C4   N3    180.00   0.0  0
- P5A  CONST_10  C6   C5   C4   N3      0.00   0.0  0
- P5A  CONST_11  N7   C5   C4   N3    180.00   0.0  0
- P5A  CONST_12  C6   N1   C2   N3      0.00   0.0  0
- P5A  CONST_13  C5   C4   N3   C2      0.00   0.0  0
- P5A  CONST_14  C5   C6   N1   C2      0.00   0.0  0
- P5A  CONST_15  N7   C5   C6   N1    180.00   0.0  0
- P5A  CONST_16  C8   N7   C5   C6    180.00   0.0  0
- P5A  CONST_17  C8   N9   C4   C5      0.00   0.0  0
- P5A  CONST_18  N3   C4   N9   C1'     0.00   0.0  0
- P5A  CONST_19  C5   C4   N9   C1'   180.00   0.0  0
- P5A  CONST_20  N7   C8   N9   C1'   180.00   0.0  0
- P5A  CONST_21  N6   C6   C5   C4    180.00   0.0  0
- P5A  CONST_22  N6   C6   N1   C2    180.00   0.0  0
- P5A  CONST_23  N7   C5   C6   N6      0.00   0.0  0
- P5A  CONST_24  H8   C8   N9   C1'     0.00   0.0  0
- P5A  CONST_25  H2   C2   N3   C4    180.00   0.0  0
- P5A  CONST_26  H61  N6   C6   N1      0.00   0.0  0
- P5A  CONST_27  H62  N6   C6   N1    180.00   0.0  0
- P5A  CONST_28  S    N3S  C    CA    180.00   0.0  0
- P5A  CONST_29  H3S  N3S  C    CA      0.00   0.0  0
- P5A  CONST_30  S    N3S  C    O       0.00   0.0  0
- P5A  Var_01    N    CD   CG   CB     30.73  30.0  1
- P5A  Var_02    CA   N    CD   CG    -45.45  30.0  1
- P5A  Var_03    CA   CB   CG   CD     -6.50  30.0  1
- P5A  Var_04    C4'  C5'  O5'  S    -126.57  30.0  3
- P5A  Var_05    O1S  S    N3S  C     -48.20  30.0  3
+ P5A  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ P5A  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ P5A  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ P5A  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ P5A  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ P5A  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ P5A  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ P5A  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ P5A  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ P5A  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ P5A  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ P5A  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ P5A  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ P5A  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ P5A  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ P5A  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ P5A  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ P5A  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
+ P5A  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ P5A  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ P5A  CONST_21  N6    C6   C5   C4    180.00   0.0  0
+ P5A  CONST_22  N6    C6   N1   C2    180.00   0.0  0
+ P5A  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ P5A  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ P5A  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ P5A  CONST_26  H61   N6   C6   N1      0.00   0.0  0
+ P5A  CONST_27  H62   N6   C6   N1    180.00   0.0  0
+ P5A  CONST_28  S     N3S  C    CA    180.00   0.0  0
+ P5A  CONST_29  H3S   N3S  C    CA      0.00   0.0  0
+ P5A  CONST_30  S     N3S  C    O       0.00   0.0  0
+ P5A  Var_01    N     CD   CG   CB     30.73  30.0  1
+ P5A  Var_02    CA    N    CD   CG    -45.45  30.0  1
+ P5A  Var_03    CA    CB   CG   CD     -6.50  30.0  1
+ P5A  Var_04    C4'   C5'  O5'  S    -126.57  30.0  3
+ P5A  Var_05    O1S   S    N3S  C     -48.20  30.0  3
+ P5A  Var_06    CD    N    CA   CB     41.13  30.0  1
+ P5A  Var_07    N     CA   CB   CG    -20.23  30.0  1
+ P5A  Var_08    N9    C1'  O4'  C4'  -126.70  30.0  1
+ P5A  Var_09    C2'   C1'  O4'  C4'    -2.87  30.0  1
+ P5A  Var_10    C1'   C2'  C3'  C4'    33.24  30.0  1
+ P5A  Var_11    C2'   C3'  C4'  O4'   -35.94  30.0  1
+ P5A  Var_12    C4    N9   C1'  O4'  -120.34  30.0  2
+ P5A  Var_13    C8    N9   C1'  O4'    58.16  30.0  2
+ P5A  Var_14    C3'   C2'  C1'  O4'   -19.97  30.0  1
+ P5A  Var_15    C3'   C4'  O4'  C1'    24.88  30.0  1
+ P5A  Var_16    C3'   C2'  C1'  N9    100.49  30.0  1
+ P5A  Var_17    C2'   C1'  N9   C4    120.23  30.0  3
+ P5A  Var_18    C2'   C1'  N9   C8    -61.26  30.0  3
+ P5A  Var_19    C     CA   CB   CG   -141.13  30.0  1
+ P5A  Var_20    CD    N    CA   C     161.92  30.0  1
+ P5A  Var_21    C1'   O4'  C4'  C5'   145.69  30.0  1
+ P5A  Var_22    C2'   C3'  C4'  C5'  -155.10  30.0  1
+ P5A  Var_23    O2'   C2'  C3'  C4'   -80.97  30.0  1
+ P5A  Var_24    O3'   C3'  C4'  O4'  -157.02  30.0  1
+ P5A  Var_25    O2'   C2'  C1'  O4'    96.57  30.0  1
+ P5A  Var_26    O3'   C3'  C2'  C1'   151.89  30.0  1
+ P5A  Var_27    O2'   C2'  C1'  N9   -142.96  30.0  1
+ P5A  Var_28    HT1   N    CA   CB    163.41  30.0  1
+ P5A  Var_29    HA    CA   CB   CG    100.03  30.0  1
+ P5A  Var_30    HB1   CB   CA   N      99.52  30.0  1
+ P5A  Var_31    HB2   CB   CA   N    -141.36  30.0  1
+ P5A  Var_32    H1'   C1'  O4'  C4'   117.20  30.0  1
+ P5A  Var_33    H2'   C2'  C3'  C4'   153.23  30.0  1
+ P5A  Var_34    H3'   C3'  C4'  O4'    79.85  30.0  1
+ P5A  Var_35    H4'   C4'  O4'  C1'   -92.94  30.0  1
+ P5A  Var_36    O     C    CA   CB    108.69  30.0  1
+ P5A  Var_37    N3S   C    CA   CB    -69.78  30.0  1
+ P5A  Var_38    N     CA   C    O      -7.38  30.0  3
+ P5A  Var_39    N3S   C    CA   N     174.16  30.0  1
+ P5A  Var_40    O4'   C4'  C5'  O5'    69.76  30.0  3
+ P5A  Var_41    C3'   C4'  C5'  O5'  -174.21  30.0  3
+ P5A  Var_42    O3'   C3'  C4'  C5'    83.82  30.0  1
+ P5A  Var_43    O3'   C3'  C2'  O2'    37.69  30.0  1
+ P5A  Var_44    H3T   O3'  C3'  C4'  -159.60  30.0  3
+ P5A  Var_45    H1'1  C5'  C4'  O4'  -172.80  30.0  2
+ P5A  Var_46    H1'2  C5'  C4'  O4'   -53.27  30.0  2
+ P5A  Var_47    HO'2  O2'  C2'  C1'  -150.63  30.0  3
+ P5A  Var_48    C5'   O5'  S    N3S    65.81  30.0  3
+ P5A  Var_49    C5'   O5'  S    O1S  -177.96  30.0  2
+ P5A  Var_50    C5'   O5'  S    O2S   -46.03  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

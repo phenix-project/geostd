@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NPK  NPK  '5-[(3aS,4R,6aR)-1-{[(1R)-1-(6-nitro-1,3-benzodioxol-5-yl)ethoxy]carbonyl}-2-oxohexahydro-1H-thieno[3,4-d]imidazol-4-yl]pentanoic acid'  ligand  55  33  .  2021-08-15  2021-08-15  
+ NPK  NPK  '5-[(3aS,4R,6aR)-1-{[(1R)-1-(6-nitro-1,3-benzodioxol-5-yl)ethoxy]carbonyl}-2-oxohexahydro-1H-thieno[3,4-d]imidazol-4-yl]pentanoic acid'  ligand  55  33  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NPK
@@ -284,33 +285,76 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NPK  CONST_01  C38  C37  C36  C35     0.00   0.0  0
- NPK  CONST_02  C38  C39  C40  C35     0.00   0.0  0
- NPK  CONST_03  C39  C40  C35  C36     0.00   0.0  0
- NPK  CONST_04  C39  C38  C37  C36     0.00   0.0  0
- NPK  CONST_05  C40  C35  C36  C37     0.00   0.0  0
- NPK  CONST_06  C40  C39  C38  C37     0.00   0.0  0
- NPK  CONST_07  C4   N2   C3   N1      0.00   0.0  0
- NPK  CONST_08  C5   N1   C3   N2      0.00   0.0  0
- NPK  CONST_09  C37  C36  C35  C33   180.00   0.0  0
- NPK  CONST_10  C39  C40  C35  C33   180.00   0.0  0
- NPK  CONST_11  N40  C40  C35  C36   180.00   0.0  0
- NPK  CONST_12  N40  C40  C39  C38   180.00   0.0  0
- NPK  CONST_13  C30  N1   C3   N2    180.00   0.0  0
- NPK  CONST_14  C5   N1   C3   O3    180.00   0.0  0
- NPK  CONST_15  C4   N2   C3   O3    180.00   0.0  0
- NPK  CONST_16  H39  C39  C40  C35   180.00   0.0  0
- NPK  CONST_17  H36  C36  C37  C38   180.00   0.0  0
- NPK  CONST_18  HN2  N2   C3   N1    180.00   0.0  0
- NPK  CONST_23  C30  N1   C3   O3      0.00   0.0  0
- NPK  Var_01    C5   C6   S1   C2    -42.47  30.0  1
- NPK  Var_02    O46  C45  O44  C37     4.60  30.0  1
- NPK  Var_03    O44  C45  O46  C38    -4.65  30.0  1
- NPK  Var_04    O31  C30  N1   C3   -177.86  30.0  2
- NPK  Var_05    C9   C8   C7   C2    177.65  30.0  3
- NPK  Var_06    C10  C9   C8   C7    178.99  30.0  3
- NPK  Var_07    C11  C10  C9   C8    179.45  30.0  3
- NPK  Var_08    O11  C11  C10  C9     -2.52  30.0  3
+ NPK  CONST_01  C38   C37  C36  C35     0.00   0.0  0
+ NPK  CONST_02  C38   C39  C40  C35     0.00   0.0  0
+ NPK  CONST_03  C39   C40  C35  C36     0.00   0.0  0
+ NPK  CONST_04  C39   C38  C37  C36     0.00   0.0  0
+ NPK  CONST_05  C40   C35  C36  C37     0.00   0.0  0
+ NPK  CONST_06  C40   C39  C38  C37     0.00   0.0  0
+ NPK  CONST_07  C4    N2   C3   N1      0.00   0.0  0
+ NPK  CONST_08  C5    N1   C3   N2      0.00   0.0  0
+ NPK  CONST_09  C37   C36  C35  C33   180.00   0.0  0
+ NPK  CONST_10  C39   C40  C35  C33   180.00   0.0  0
+ NPK  CONST_11  N40   C40  C35  C36   180.00   0.0  0
+ NPK  CONST_12  N40   C40  C39  C38   180.00   0.0  0
+ NPK  CONST_13  C30   N1   C3   N2    180.00   0.0  0
+ NPK  CONST_14  C5    N1   C3   O3    180.00   0.0  0
+ NPK  CONST_15  C4    N2   C3   O3    180.00   0.0  0
+ NPK  CONST_16  H39   C39  C40  C35   180.00   0.0  0
+ NPK  CONST_17  H36   C36  C37  C38   180.00   0.0  0
+ NPK  CONST_18  HN2   N2   C3   N1    180.00   0.0  0
+ NPK  CONST_19  C30   N1   C3   O3      0.00   0.0  0
+ NPK  Var_01    C5    C6   S1   C2    -42.47  30.0  1
+ NPK  Var_02    O46   C45  O44  C37     4.60  30.0  1
+ NPK  Var_03    O44   C45  O46  C38    -4.65  30.0  1
+ NPK  Var_04    O31   C30  N1   C3   -177.86  30.0  2
+ NPK  Var_05    C9    C8   C7   C2    177.65  30.0  3
+ NPK  Var_06    C10   C9   C8   C7    178.99  30.0  3
+ NPK  Var_07    C11   C10  C9   C8    179.45  30.0  3
+ NPK  Var_08    O11   C11  C10  C9     -2.52  30.0  3
+ NPK  CONST_20  N2    C4   C5   N1      0.00   0.0  0
+ NPK  CONST_21  C4    C5   N1   C3      0.00   0.0  0
+ NPK  CONST_22  C5    C4   N2   C3      0.00   0.0  0
+ NPK  CONST_23  C30   N1   C5   C4    180.00   0.0  0
+ NPK  Var_09    C2    C4   C5   N1   -121.76  30.0  1
+ NPK  Var_10    S1    C6   C5   N1    145.34  30.0  1
+ NPK  Var_11    N2    C4   C2   S1   -144.80  30.0  1
+ NPK  Var_12    C5    C4   C2   S1    -30.14  30.0  1
+ NPK  Var_13    C4    C5   C6   S1     30.45  30.0  1
+ NPK  Var_14    C3    N2   C4   C2    117.64  30.0  1
+ NPK  Var_15    C6    C5   C4   C2      0.05  30.0  1
+ NPK  Var_16    C6    C5   C4   N2    121.61  30.0  1
+ NPK  Var_17    C6    C5   N1   C3   -116.67  30.0  1
+ NPK  Var_18    C6    S1   C2   C4     42.00  30.0  1
+ NPK  Var_19    C45   O44  C37  C36   177.83  30.0  1
+ NPK  Var_20    C45   O46  C38  C37     3.01  30.0  1
+ NPK  Var_21    C45   O44  C37  C38    -2.84  30.0  1
+ NPK  Var_22    C45   O46  C38  C39  -177.61  30.0  1
+ NPK  Var_23    C7    C2   C4   N2     92.80  30.0  1
+ NPK  Var_24    C7    C2   C4   C5   -152.53  30.0  1
+ NPK  Var_25    C7    C2   S1   C6    164.92  30.0  1
+ NPK  Var_26    C30   N1   C5   C6     68.90  30.0  1
+ NPK  Var_27    H4    C4   C5   N1    118.23  30.0  1
+ NPK  Var_28    H6    C6   C5   N1     26.91  30.0  1
+ NPK  Var_29    H6A   C6   C5   N1    -95.27  30.0  1
+ NPK  Var_30    H5    C5   C6   S1    -90.43  30.0  1
+ NPK  Var_31    H2    C2   C4   N2    -29.92  30.0  1
+ NPK  Var_32    C8    C7   C2   S1     62.03  30.0  3
+ NPK  Var_33    C8    C7   C2   C4    179.50  30.0  3
+ NPK  Var_34    C36   C35  C33  O32    35.30  30.0  2
+ NPK  Var_35    C40   C35  C33  O32  -144.87  30.0  2
+ NPK  Var_36    C36   C35  C33  C34   -83.47  30.0  2
+ NPK  Var_37    C40   C35  C33  C34    96.36  30.0  2
+ NPK  Var_38    H7    C7   C2   S1   -176.65  30.0  3
+ NPK  Var_39    H7A   C7   C2   S1    -61.46  30.0  3
+ NPK  Var_40    H33   C33  C35  C36   152.79  30.0  2
+ NPK  Var_41    C33   O32  C30  N1    177.61  30.0  3
+ NPK  Var_42    C35   C33  O32  C30   155.06  30.0  3
+ NPK  Var_43    H34   C34  C33  C35    60.66  30.0  3
+ NPK  Var_44    H34A  C34  C33  C35  -178.48  30.0  3
+ NPK  Var_45    H34B  C34  C33  C35   -58.95  30.0  3
+ NPK  Var_46    C34   C33  O32  C30   -84.97  30.0  3
+ NPK  Var_47    C33   O32  C30  O31    -2.96  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

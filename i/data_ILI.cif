@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ILI  ILI  N-[(1S)-1-{[(3S,4S,7R)-3-hydroxy-7-methyl-1-(pyridin-2-ylsulfonyl)-2,3,4,7-tetrahydro-1H-azepin-4-yl]carbamoyl}-3-methylbutyl]-1-benzofuran-2-carboxamide  ligand  70  38  .  2021-08-11  2021-08-11  
+ ILI  ILI  N-[(1S)-1-{[(3S,4S,7R)-3-hydroxy-7-methyl-1-(pyridin-2-ylsulfonyl)-2,3,4,7-tetrahydro-1H-azepin-4-yl]carbamoyl}-3-methylbutyl]-1-benzofuran-2-carboxamide  ligand  70  38  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_ILI
@@ -337,53 +338,101 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ILI  CONST_01  C6    C5   C4   N3     0.00   0.0  0
- ILI  CONST_02  C6    C1   C2   N3     0.00   0.0  0
- ILI  CONST_03  C1    C2   N3   C4     0.00   0.0  0
- ILI  CONST_04  C1    C6   C5   C4     0.00   0.0  0
- ILI  CONST_05  C2    N3   C4   C5     0.00   0.0  0
- ILI  CONST_06  C2    C1   C6   C5     0.00   0.0  0
- ILI  CONST_07  C33   C32  C31  C30    0.00   0.0  0
- ILI  CONST_08  C35   C32  C31  C30  180.00   0.0  0
- ILI  CONST_09  C32   C33  O34  C30    0.00   0.0  0
- ILI  CONST_10  C38   C33  O34  C30  180.00   0.0  0
- ILI  CONST_11  C33   O34  C30  C31    0.00   0.0  0
- ILI  CONST_12  O34   C33  C32  C31    0.00   0.0  0
- ILI  CONST_13  C38   C33  C32  C31  180.00   0.0  0
- ILI  CONST_14  C36   C35  C32  C31  180.00   0.0  0
- ILI  CONST_15  O34   C30  C31  C32    0.00   0.0  0
- ILI  CONST_16  C37   C38  C33  C32    0.00   0.0  0
- ILI  CONST_17  C37   C36  C35  C32    0.00   0.0  0
- ILI  CONST_18  C36   C35  C32  C33    0.00   0.0  0
- ILI  CONST_19  C36   C37  C38  C33    0.00   0.0  0
- ILI  CONST_20  C35   C32  C33  O34  180.00   0.0  0
- ILI  CONST_21  C37   C38  C33  O34  180.00   0.0  0
- ILI  CONST_22  C38   C33  C32  C35    0.00   0.0  0
- ILI  CONST_23  C38   C37  C36  C35    0.00   0.0  0
- ILI  CONST_24  S7    C4   C5   C6   180.00   0.0  0
- ILI  CONST_25  C32   C31  C30  C28  180.00   0.0  0
- ILI  CONST_26  C33   O34  C30  C28  180.00   0.0  0
- ILI  CONST_27  S7    C4   N3   C2   180.00   0.0  0
- ILI  CONST_28  H5    C5   C4   N3   180.00   0.0  0
- ILI  CONST_29  H1    C1   C2   N3   180.00   0.0  0
- ILI  CONST_30  H2    C2   N3   C4   180.00   0.0  0
- ILI  CONST_31  H6    C6   C5   C4   180.00   0.0  0
- ILI  CONST_32  H35   C35  C32  C31    0.00   0.0  0
- ILI  CONST_33  H38   C38  C33  C32  180.00   0.0  0
- ILI  CONST_34  H36   C36  C35  C32  180.00   0.0  0
- ILI  CONST_35  H31   C31  C32  C33  180.00   0.0  0
- ILI  CONST_36  H37   C37  C38  C33  180.00   0.0  0
- ILI  CONST_37  C22   C20  N19  C13  180.00   0.0  0
- ILI  CONST_38  O21   C20  N19  C13    0.00   0.0  0
- ILI  CONST_39  C30   C28  N27  C22  180.00   0.0  0
- ILI  CONST_40  HN27  N27  C28  C30    0.00   0.0  0
- ILI  CONST_41  O29   C28  N27  C22    0.00   0.0  0
- ILI  CONST_42  HN19  N19  C20  C22    0.00   0.0  0
- ILI  Var_01    N10   S7   C4   N3   -78.33  30.0  2
- ILI  Var_02    C31   C30  C28  N27  178.76  30.0  2
- ILI  Var_03    C26   C24  C23  C22   61.86  30.0  3
- ILI  Var_04    H251  C25  C24  C26   62.56  30.0  3
- ILI  Var_05    H261  C26  C24  C23  -59.32  30.0  3
+ ILI  CONST_01  C6    C5   C4   N3      0.00   0.0  0
+ ILI  CONST_02  C6    C1   C2   N3      0.00   0.0  0
+ ILI  CONST_03  C1    C2   N3   C4      0.00   0.0  0
+ ILI  CONST_04  C1    C6   C5   C4      0.00   0.0  0
+ ILI  CONST_05  C2    N3   C4   C5      0.00   0.0  0
+ ILI  CONST_06  C2    C1   C6   C5      0.00   0.0  0
+ ILI  CONST_07  C33   C32  C31  C30     0.00   0.0  0
+ ILI  CONST_08  C35   C32  C31  C30   180.00   0.0  0
+ ILI  CONST_09  C32   C33  O34  C30     0.00   0.0  0
+ ILI  CONST_10  C38   C33  O34  C30   180.00   0.0  0
+ ILI  CONST_11  C33   O34  C30  C31     0.00   0.0  0
+ ILI  CONST_12  O34   C33  C32  C31     0.00   0.0  0
+ ILI  CONST_13  C38   C33  C32  C31   180.00   0.0  0
+ ILI  CONST_14  C36   C35  C32  C31   180.00   0.0  0
+ ILI  CONST_15  O34   C30  C31  C32     0.00   0.0  0
+ ILI  CONST_16  C37   C38  C33  C32     0.00   0.0  0
+ ILI  CONST_17  C37   C36  C35  C32     0.00   0.0  0
+ ILI  CONST_18  C36   C35  C32  C33     0.00   0.0  0
+ ILI  CONST_19  C36   C37  C38  C33     0.00   0.0  0
+ ILI  CONST_20  C35   C32  C33  O34   180.00   0.0  0
+ ILI  CONST_21  C37   C38  C33  O34   180.00   0.0  0
+ ILI  CONST_22  C38   C33  C32  C35     0.00   0.0  0
+ ILI  CONST_23  C38   C37  C36  C35     0.00   0.0  0
+ ILI  CONST_24  S7    C4   C5   C6    180.00   0.0  0
+ ILI  CONST_25  C32   C31  C30  C28   180.00   0.0  0
+ ILI  CONST_26  C33   O34  C30  C28   180.00   0.0  0
+ ILI  CONST_27  S7    C4   N3   C2    180.00   0.0  0
+ ILI  CONST_28  H5    C5   C4   N3    180.00   0.0  0
+ ILI  CONST_29  H1    C1   C2   N3    180.00   0.0  0
+ ILI  CONST_30  H2    C2   N3   C4    180.00   0.0  0
+ ILI  CONST_31  H6    C6   C5   C4    180.00   0.0  0
+ ILI  CONST_32  H35   C35  C32  C31     0.00   0.0  0
+ ILI  CONST_33  H38   C38  C33  C32   180.00   0.0  0
+ ILI  CONST_34  H36   C36  C35  C32   180.00   0.0  0
+ ILI  CONST_35  H31   C31  C32  C33   180.00   0.0  0
+ ILI  CONST_36  H37   C37  C38  C33   180.00   0.0  0
+ ILI  CONST_37  C22   C20  N19  C13   180.00   0.0  0
+ ILI  CONST_38  O21   C20  N19  C13     0.00   0.0  0
+ ILI  CONST_39  C30   C28  N27  C22   180.00   0.0  0
+ ILI  CONST_40  HN27  N27  C28  C30     0.00   0.0  0
+ ILI  CONST_41  O29   C28  N27  C22     0.00   0.0  0
+ ILI  CONST_42  HN19  N19  C20  C22     0.00   0.0  0
+ ILI  Var_01    N10   S7   C4   N3    -78.33  30.0  2
+ ILI  Var_02    C31   C30  C28  N27   178.76  30.0  2
+ ILI  Var_03    C26   C24  C23  C22    61.86  30.0  3
+ ILI  Var_04    H251  C25  C24  C26    62.56  30.0  3
+ ILI  Var_05    H261  C26  C24  C23   -59.32  30.0  3
+ ILI  Var_06    N10   C11  C12  C13   -72.75  30.0  1
+ ILI  Var_07    C16   C15  C14  C13     2.37  30.0  1
+ ILI  Var_08    C12   C13  C14  C15   -40.88  30.0  1
+ ILI  Var_09    C11   N10  C16  C15   -62.75  30.0  1
+ ILI  Var_10    C14   C15  C16  N10    35.68  30.0  1
+ ILI  Var_11    C14   C13  C12  C11    62.04  30.0  1
+ ILI  Var_12    C16   N10  C11  C12    76.57  30.0  1
+ ILI  Var_13    C11   N10  S7   C4   -120.79  30.0  3
+ ILI  Var_14    C16   N10  S7   C4     78.13  30.0  3
+ ILI  Var_15    N19   C13  C14  C15    84.56  30.0  1
+ ILI  Var_16    S7    N10  C16  C15    98.16  30.0  1
+ ILI  Var_17    C12   C11  N10  S7    -83.88  30.0  1
+ ILI  Var_18    O17   C12  C11  N10    48.42  30.0  1
+ ILI  Var_19    C18   C16  N10  C11    64.97  30.0  1
+ ILI  Var_20    N19   C13  C12  C11   -62.05  30.0  1
+ ILI  Var_21    O17   C12  C13  C14   -62.48  30.0  1
+ ILI  Var_22    C18   C16  C15  C14   -92.09  30.0  1
+ ILI  Var_23    H111  C11  C12  C13   164.14  30.0  1
+ ILI  Var_24    H112  C11  C12  C13    49.11  30.0  1
+ ILI  Var_25    H15   C15  C14  C13  -174.25  30.0  1
+ ILI  Var_26    H13   C13  C14  C15  -160.19  30.0  1
+ ILI  Var_27    H12   C12  C11  N10   170.15  30.0  1
+ ILI  Var_28    H16   C16  N10  C11   179.53  30.0  1
+ ILI  Var_29    H14   C14  C13  C12   144.11  30.0  1
+ ILI  Var_30    C12   C13  N19  C20   -84.30  30.0  1
+ ILI  Var_31    C14   C13  N19  C20   146.67  30.0  1
+ ILI  Var_32    C18   C16  N10  S7   -134.12  30.0  1
+ ILI  Var_33    C11   N10  S7   O8    125.04  30.0  3
+ ILI  Var_34    C16   N10  S7   O8    -36.03  30.0  3
+ ILI  Var_35    C11   N10  S7   O9     -8.26  30.0  3
+ ILI  Var_36    C16   N10  S7   O9   -169.34  30.0  3
+ ILI  Var_37    N19   C13  C12  O17   173.44  30.0  1
+ ILI  Var_38    HO17  O17  C12  C13  -170.59  30.0  3
+ ILI  Var_39    H181  C18  C16  C15    64.22  30.0  3
+ ILI  Var_40    H182  C18  C16  C15  -174.22  30.0  3
+ ILI  Var_41    H183  C18  C16  C15   -55.04  30.0  3
+ ILI  Var_42    HN19  N19  C13  C12   102.37  30.0  3
+ ILI  Var_43    C24   C23  C22  C20    59.50  30.0  3
+ ILI  Var_44    C28   N27  C22  C20  -124.34  30.0  3
+ ILI  Var_45    C23   C22  C20  N19  -110.33  30.0  3
+ ILI  Var_46    N27   C22  C20  N19   128.09  30.0  3
+ ILI  Var_47    C23   C22  C20  O21    68.03  30.0  3
+ ILI  Var_48    N27   C22  C20  O21   -53.56  30.0  3
+ ILI  Var_49    C28   N27  C22  C23   114.81  30.0  3
+ ILI  Var_50    C24   C23  C22  N27   179.66  30.0  3
+ ILI  Var_51    H231  C23  C22  C20   -63.38  30.0  3
+ ILI  Var_52    H232  C23  C22  C20  -178.54  30.0  3
+ ILI  Var_53    H22   C22  C20  N19    10.76  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

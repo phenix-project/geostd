@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FMJ  FMJ  4-(5-methyl-3-phenylisoxazol-4-yl)pyrimidin-2-amine  ligand  31  19  .  2022-07-25  2022-07-26
+ FMJ  FMJ  4-(5-methyl-3-phenylisoxazol-4-yl)pyrimidin-2-amine  ligand  31  19  .  2022-07-25  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FMJ
@@ -181,47 +182,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FMJ  CONST_03  O9    C6   C2   C1     0.00   0.0  0
- FMJ  CONST_04  C14   C8   C3   C1   180.00   0.0  0
- FMJ  CONST_05  C13   C7   C3   C1   180.00   0.0  0
- FMJ  CONST_06  C6    O9   N4   C1     0.00   0.0  0
- FMJ  CONST_09  O9    N4   C1   C2     0.00   0.0  0
- FMJ  CONST_10  C15   N10  C5   C2   180.00   0.0  0
- FMJ  CONST_11  C16   C11  C5   C2   180.00   0.0  0
- FMJ  CONST_12  N4    O9   C6   C2     0.00   0.0  0
- FMJ  CONST_13  C5    C2   C1   C3     0.00   0.0  0
- FMJ  CONST_14  C6    C2   C1   C3   180.00   0.0  0
- FMJ  CONST_15  O9    N4   C1   C3   180.00   0.0  0
- FMJ  CONST_16  C17   C14  C8   C3     0.00   0.0  0
- FMJ  CONST_17  C17   C13  C7   C3     0.00   0.0  0
- FMJ  CONST_18  N4    C1   C2   C5   180.00   0.0  0
- FMJ  CONST_19  O9    C6   C2   C5   180.00   0.0  0
- FMJ  CONST_20  N18   C15  N10  C5     0.00   0.0  0
- FMJ  CONST_21  N18   C16  C11  C5     0.00   0.0  0
- FMJ  CONST_22  N4    C1   C2   C6     0.00   0.0  0
- FMJ  CONST_25  C7    C3   C8   C14    0.00   0.0  0
- FMJ  CONST_26  C7    C13  C17  C14    0.00   0.0  0
- FMJ  CONST_27  N10   C15  N18  C16    0.00   0.0  0
- FMJ  CONST_28  N10   C5   C11  C16    0.00   0.0  0
- FMJ  CONST_29  C11   C5   N10  C15    0.00   0.0  0
- FMJ  CONST_30  C11   C16  N18  C15    0.00   0.0  0
- FMJ  CONST_33  C13   C7   C3   C8     0.00   0.0  0
- FMJ  CONST_34  C13   C17  C14  C8     0.00   0.0  0
- FMJ  CONST_35  C12   C6   C2   C1   180.00   0.0  0
- FMJ  CONST_36  C12   C6   C2   C5     0.00   0.0  0
- FMJ  CONST_37  N19   C15  N10  C5   180.00   0.0  0
- FMJ  CONST_38  N19   C15  N18  C16  180.00   0.0  0
- FMJ  CONST_39  N4    O9   C6   C12  180.00   0.0  0
- FMJ  CONST_40  H8    C8   C3   C1     0.00   0.0  0
- FMJ  CONST_41  H7    C7   C3   C1     0.00   0.0  0
- FMJ  CONST_42  H11   C11  C5   C2     0.00   0.0  0
- FMJ  CONST_43  H14   C14  C8   C3   180.00   0.0  0
- FMJ  CONST_44  H13   C13  C7   C3   180.00   0.0  0
- FMJ  CONST_45  H16   C16  C11  C5   180.00   0.0  0
- FMJ  CONST_46  H17   C17  C14  C8   180.00   0.0  0
- FMJ  CONST_47  HN19  N19  C15  N10    0.00   0.0  0
- FMJ  CONST_48  HN1A  N19  C15  N10  180.00   0.0  0
+ FMJ  CONST_01  O9    C6   C2   C1     0.00   0.0  0
+ FMJ  CONST_02  C14   C8   C3   C1   180.00   0.0  0
+ FMJ  CONST_03  C13   C7   C3   C1   180.00   0.0  0
+ FMJ  CONST_04  C6    O9   N4   C1     0.00   0.0  0
+ FMJ  CONST_05  O9    N4   C1   C2     0.00   0.0  0
+ FMJ  CONST_06  C15   N10  C5   C2   180.00   0.0  0
+ FMJ  CONST_07  C16   C11  C5   C2   180.00   0.0  0
+ FMJ  CONST_08  N4    O9   C6   C2     0.00   0.0  0
+ FMJ  CONST_09  C5    C2   C1   C3     0.00   0.0  0
+ FMJ  CONST_10  C6    C2   C1   C3   180.00   0.0  0
+ FMJ  CONST_11  O9    N4   C1   C3   180.00   0.0  0
+ FMJ  CONST_12  C17   C14  C8   C3     0.00   0.0  0
+ FMJ  CONST_13  C17   C13  C7   C3     0.00   0.0  0
+ FMJ  CONST_14  N4    C1   C2   C5   180.00   0.0  0
+ FMJ  CONST_15  O9    C6   C2   C5   180.00   0.0  0
+ FMJ  CONST_16  N18   C15  N10  C5     0.00   0.0  0
+ FMJ  CONST_17  N18   C16  C11  C5     0.00   0.0  0
+ FMJ  CONST_18  N4    C1   C2   C6     0.00   0.0  0
+ FMJ  CONST_19  C7    C3   C8   C14    0.00   0.0  0
+ FMJ  CONST_20  C7    C13  C17  C14    0.00   0.0  0
+ FMJ  CONST_21  N10   C15  N18  C16    0.00   0.0  0
+ FMJ  CONST_22  N10   C5   C11  C16    0.00   0.0  0
+ FMJ  CONST_23  C11   C5   N10  C15    0.00   0.0  0
+ FMJ  CONST_24  C11   C16  N18  C15    0.00   0.0  0
+ FMJ  CONST_25  C13   C7   C3   C8     0.00   0.0  0
+ FMJ  CONST_26  C13   C17  C14  C8     0.00   0.0  0
+ FMJ  CONST_27  C12   C6   C2   C1   180.00   0.0  0
+ FMJ  CONST_28  C12   C6   C2   C5     0.00   0.0  0
+ FMJ  CONST_29  N19   C15  N10  C5   180.00   0.0  0
+ FMJ  CONST_30  N19   C15  N18  C16  180.00   0.0  0
+ FMJ  CONST_31  N4    O9   C6   C12  180.00   0.0  0
+ FMJ  CONST_32  H8    C8   C3   C1     0.00   0.0  0
+ FMJ  CONST_33  H7    C7   C3   C1     0.00   0.0  0
+ FMJ  CONST_34  H11   C11  C5   C2     0.00   0.0  0
+ FMJ  CONST_35  H14   C14  C8   C3   180.00   0.0  0
+ FMJ  CONST_36  H13   C13  C7   C3   180.00   0.0  0
+ FMJ  CONST_37  H16   C16  C11  C5   180.00   0.0  0
+ FMJ  CONST_38  H17   C17  C14  C8   180.00   0.0  0
+ FMJ  CONST_39  HN19  N19  C15  N10    0.00   0.0  0
+ FMJ  CONST_40  HN1A  N19  C15  N10  180.00   0.0  0
  FMJ  Var_01    H12   C12  C6   C2    87.27  30.0  2
+ FMJ  Var_02    N10   C5   C2   C1   -35.73  30.0  2
+ FMJ  Var_03    C11   C5   C2   C1   144.64  30.0  2
+ FMJ  Var_04    C8    C3   C1   C2   140.42  30.0  2
+ FMJ  Var_05    C7    C3   C1   C2   -41.64  30.0  2
+ FMJ  Var_06    N10   C5   C2   C6   139.61  30.0  2
+ FMJ  Var_07    C11   C5   C2   C6   -40.02  30.0  2
+ FMJ  Var_08    C8    C3   C1   N4   -41.23  30.0  2
+ FMJ  Var_09    C7    C3   C1   N4   136.71  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

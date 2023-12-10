@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DC8  DC8  (3aS,4R,9bR)-2,2-difluoro-4-(4-hydroxyphenyl)-1,2,3,3a,4,9b-hexahydrocyclopenta[c]chromen-8-ol  ligand  39  23  .  2021-08-08  2021-08-08  
+ DC8  DC8  (3aS,4R,9bR)-2,2-difluoro-4-(4-hydroxyphenyl)-1,2,3,3a,4,9b-hexahydrocyclopenta[c]chromen-8-ol  ligand  39  23  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DC8
@@ -221,34 +222,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DC8  CONST_01  C1   C2   C3   C4      0.00   0.0  0
- DC8  CONST_02  C1   C18  C17  C4      0.00   0.0  0
- DC8  CONST_03  C2   C3   C4   C17     0.00   0.0  0
- DC8  CONST_04  C2   C1   C18  C17     0.00   0.0  0
- DC8  CONST_05  C24  C25  C19  C20     0.00   0.0  0
- DC8  CONST_06  C24  C22  C21  C20     0.00   0.0  0
- DC8  CONST_07  C25  C19  C20  C21     0.00   0.0  0
- DC8  CONST_08  C25  C24  C22  C21     0.00   0.0  0
- DC8  CONST_09  C19  C20  C21  C22     0.00   0.0  0
- DC8  CONST_10  C19  C25  C24  C22     0.00   0.0  0
- DC8  CONST_11  C18  C17  C4   C3      0.00   0.0  0
- DC8  CONST_12  C18  C1   C2   C3      0.00   0.0  0
- DC8  CONST_13  C21  C20  C19  C6    180.00   0.0  0
- DC8  CONST_14  C24  C25  C19  C6    180.00   0.0  0
- DC8  CONST_15  O26  C1   C18  C17   180.00   0.0  0
- DC8  CONST_16  O23  C22  C21  C20   180.00   0.0  0
- DC8  CONST_17  O26  C1   C2   C3    180.00   0.0  0
- DC8  CONST_18  C25  C24  C22  O23   180.00   0.0  0
- DC8  CONST_19  H2   C2   C3   C4    180.00   0.0  0
- DC8  CONST_20  H18  C18  C17  C4    180.00   0.0  0
- DC8  CONST_21  H20  C20  C19  C6      0.00   0.0  0
- DC8  CONST_22  H25  C25  C19  C6      0.00   0.0  0
- DC8  CONST_23  H3   C3   C4   C17   180.00   0.0  0
- DC8  CONST_24  H24  C24  C22  C21   180.00   0.0  0
- DC8  CONST_25  H21  C21  C22  C24   180.00   0.0  0
- DC8  Var_01    C3   C4   O5   C6   -157.67  30.0  1
- DC8  Var_02    C14  C11  C10  C8     13.07  30.0  1
- DC8  Var_03    C15  C14  C11  C10   -33.36  30.0  1
+ DC8  CONST_01  C1    C2   C3   C4      0.00   0.0  0
+ DC8  CONST_02  C1    C18  C17  C4      0.00   0.0  0
+ DC8  CONST_03  C2    C3   C4   C17     0.00   0.0  0
+ DC8  CONST_04  C2    C1   C18  C17     0.00   0.0  0
+ DC8  CONST_05  C24   C25  C19  C20     0.00   0.0  0
+ DC8  CONST_06  C24   C22  C21  C20     0.00   0.0  0
+ DC8  CONST_07  C25   C19  C20  C21     0.00   0.0  0
+ DC8  CONST_08  C25   C24  C22  C21     0.00   0.0  0
+ DC8  CONST_09  C19   C20  C21  C22     0.00   0.0  0
+ DC8  CONST_10  C19   C25  C24  C22     0.00   0.0  0
+ DC8  CONST_11  C18   C17  C4   C3      0.00   0.0  0
+ DC8  CONST_12  C18   C1   C2   C3      0.00   0.0  0
+ DC8  CONST_13  C21   C20  C19  C6    180.00   0.0  0
+ DC8  CONST_14  C24   C25  C19  C6    180.00   0.0  0
+ DC8  CONST_15  O26   C1   C18  C17   180.00   0.0  0
+ DC8  CONST_16  O23   C22  C21  C20   180.00   0.0  0
+ DC8  CONST_17  O26   C1   C2   C3    180.00   0.0  0
+ DC8  CONST_18  C25   C24  C22  O23   180.00   0.0  0
+ DC8  CONST_19  H2    C2   C3   C4    180.00   0.0  0
+ DC8  CONST_20  H18   C18  C17  C4    180.00   0.0  0
+ DC8  CONST_21  H20   C20  C19  C6      0.00   0.0  0
+ DC8  CONST_22  H25   C25  C19  C6      0.00   0.0  0
+ DC8  CONST_23  H3    C3   C4   C17   180.00   0.0  0
+ DC8  CONST_24  H24   C24  C22  C21   180.00   0.0  0
+ DC8  CONST_25  H21   C21  C22  C24   180.00   0.0  0
+ DC8  Var_01    C3    C4   O5   C6   -157.67  30.0  1
+ DC8  Var_02    C14   C11  C10  C8     13.07  30.0  1
+ DC8  Var_03    C15   C14  C11  C10   -33.36  30.0  1
+ DC8  Var_04    C19   C6   O5   C4   -176.01  30.0  1
+ DC8  Var_05    C8    C6   O5   C4    -52.14  30.0  1
+ DC8  Var_06    C8    C15  C17  C4      7.69  30.0  1
+ DC8  Var_07    C14   C15  C17  C4    122.69  30.0  1
+ DC8  Var_08    C17   C15  C8   C6    -35.95  30.0  1
+ DC8  Var_09    C14   C15  C8   C6   -157.42  30.0  1
+ DC8  Var_10    C11   C10  C8   C6    135.08  30.0  1
+ DC8  Var_11    C20   C19  C6   C8     79.49  30.0  2
+ DC8  Var_12    C25   C19  C6   C8    -98.33  30.0  2
+ DC8  Var_13    C18   C17  C15  C8   -172.79  30.0  1
+ DC8  Var_14    C11   C14  C15  C8     40.12  30.0  1
+ DC8  Var_15    O5    C6   C8   C10   -61.00  30.0  1
+ DC8  Var_16    C19   C6   C8   C10    60.55  30.0  1
+ DC8  Var_17    C17   C15  C8   C10    89.14  30.0  1
+ DC8  Var_18    C14   C15  C8   C10   -32.32  30.0  1
+ DC8  Var_19    O5    C6   C8   C15    58.99  30.0  1
+ DC8  Var_20    C19   C6   C8   C15  -179.46  30.0  1
+ DC8  Var_21    C11   C10  C8   C15    12.20  30.0  1
+ DC8  Var_22    C11   C14  C15  C17   -80.01  30.0  1
+ DC8  Var_23    O5    C6   C19  C20  -157.80  30.0  2
+ DC8  Var_24    C25   C19  C6   O5     24.38  30.0  2
+ DC8  Var_25    C18   C17  C15  C14   -57.79  30.0  1
+ DC8  Var_26    H6    C6   O5   C4     65.76  30.0  1
+ DC8  Var_27    H15   C15  C17  C4   -114.45  30.0  1
+ DC8  Var_28    H101  C10  C8   C6   -105.42  30.0  1
+ DC8  Var_29    H102  C10  C8   C6     14.84  30.0  1
+ DC8  Var_30    H141  C14  C15  C8    163.75  30.0  1
+ DC8  Var_31    H142  C14  C15  C8    -75.09  30.0  1
+ DC8  Var_32    H8    C8   C15  C17  -153.75  30.0  1
+ DC8  Var_33    HO23  O23  C22  C21   179.90  30.0  2
+ DC8  Var_34    HO26  O26  C1   C2   -179.99  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

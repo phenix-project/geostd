@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OVE  OVE  2'-O-(sulfidophosphinato)adenosine  ligand  36  23  .  2022-03-23  2022-03-23
+ OVE  OVE  2'-O-(sulfidophosphinato)adenosine  ligand  36  23  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OVE
@@ -204,33 +205,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OVE  CONST_01  C5    N7  C8  N9     0.00  0.0  0
- OVE  CONST_02  N7    C5  C4  N9     0.00  0.0  0
- OVE  CONST_03  C6    C5  C4  N9   180.00  0.0  0
- OVE  CONST_04  C2    N3  C4  N9   180.00  0.0  0
- OVE  CONST_05  C5    C4  N9  C8     0.00  0.0  0
- OVE  CONST_06  N3    C4  N9  C8   180.00  0.0  0
- OVE  CONST_07  C6    C5  N7  C8   180.00  0.0  0
- OVE  CONST_08  C4    C5  N7  C8     0.00  0.0  0
- OVE  CONST_09  C4    N9  C8  N7     0.00  0.0  0
- OVE  CONST_10  N1    C6  C5  N7   180.00  0.0  0
- OVE  CONST_11  N3    C4  C5  N7   180.00  0.0  0
- OVE  CONST_12  C2    N1  C6  C5     0.00  0.0  0
- OVE  CONST_13  C2    N3  C4  C5     0.00  0.0  0
- OVE  CONST_14  N3    C4  C5  C6     0.00  0.0  0
- OVE  CONST_15  N3    C2  N1  C6     0.00  0.0  0
- OVE  CONST_16  N1    C6  C5  C4     0.00  0.0  0
- OVE  CONST_17  N1    C2  N3  C4     0.00  0.0  0
- OVE  CONST_18  N7    C8  N9  C1'  180.00  0.0  0
- OVE  CONST_19  C5    C4  N9  C1'  180.00  0.0  0
- OVE  CONST_20  N3    C4  N9  C1'    0.00  0.0  0
- OVE  CONST_21  N6    C6  C5  N7     0.00  0.0  0
- OVE  CONST_22  C4    C5  C6  N6   180.00  0.0  0
- OVE  CONST_23  C2    N1  C6  N6   180.00  0.0  0
- OVE  CONST_24  H8    C8  N9  C1'    0.00  0.0  0
- OVE  CONST_25  H2    C2  N1  C6   180.00  0.0  0
- OVE  CONST_26  H61N  N6  C6  C5     0.00  0.0  0
- OVE  CONST_27  H62N  N6  C6  C5   180.00  0.0  0
+ OVE  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ OVE  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ OVE  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ OVE  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ OVE  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ OVE  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ OVE  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ OVE  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ OVE  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ OVE  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ OVE  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ OVE  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ OVE  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ OVE  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ OVE  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ OVE  CONST_16  N1    C6   C5   C4      0.00   0.0  0
+ OVE  CONST_17  N1    C2   N3   C4      0.00   0.0  0
+ OVE  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ OVE  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ OVE  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ OVE  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ OVE  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ OVE  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ OVE  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ OVE  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ OVE  CONST_26  H61N  N6   C6   C5      0.00   0.0  0
+ OVE  CONST_27  H62N  N6   C6   C5    180.00   0.0  0
+ OVE  Var_01    O4'   C4'  C3'  C2'    33.06  30.0  1
+ OVE  Var_02    C4'   O4'  C1'  C2'   -12.38  30.0  1
+ OVE  Var_03    C8    N9   C1'  C2'   -75.19  30.0  2
+ OVE  Var_04    C4    N9   C1'  C2'    95.09  30.0  2
+ OVE  Var_05    O4'   C1'  C2'  C3'    32.98  30.0  1
+ OVE  Var_06    N9    C1'  C2'  C3'   152.67  30.0  1
+ OVE  Var_07    C1'   O4'  C4'  C3'   -13.36  30.0  1
+ OVE  Var_08    C4'   C3'  C2'  C1'   -39.03  30.0  1
+ OVE  Var_09    C8    N9   C1'  O4'    42.40  30.0  2
+ OVE  Var_10    C4    N9   C1'  O4'  -147.32  30.0  2
+ OVE  Var_11    N9    C1'  O4'  C4'  -134.57  30.0  1
+ OVE  Var_12    C4'   C3'  C2'  O2'  -160.22  30.0  1
+ OVE  Var_13    O4'   C1'  C2'  O2'   155.43  30.0  1
+ OVE  Var_14    N9    C1'  C2'  O2'   -84.88  30.0  1
+ OVE  Var_15    C5'   C4'  C3'  C2'   -88.24  30.0  1
+ OVE  Var_16    C1'   C2'  C3'  O3'    78.94  30.0  1
+ OVE  Var_17    O4'   C4'  C3'  O3'   -81.51  30.0  1
+ OVE  Var_18    C5'   C4'  O4'  C1'   108.76  30.0  1
+ OVE  Var_19    H4'   C4'  C3'  C2'   149.63  30.0  1
+ OVE  Var_20    H1'   C1'  C2'  C3'   -88.07  30.0  1
+ OVE  Var_21    H3'   C3'  C2'  C1'  -157.53  30.0  1
+ OVE  Var_22    H2'   C2'  C1'  O4'   -80.47  30.0  1
+ OVE  Var_23    C3'   C2'  O2'  P    -136.61  30.0  3
+ OVE  Var_24    C1'   C2'  O2'  P     108.39  30.0  3
+ OVE  Var_25    O3'   C3'  C2'  O2'   -42.25  30.0  1
+ OVE  Var_26    O5'   C5'  C4'  C3'   174.10  30.0  3
+ OVE  Var_27    C5'   C4'  C3'  O3'   157.19  30.0  1
+ OVE  Var_28    O5'   C5'  C4'  O4'    55.99  30.0  3
+ OVE  Var_29    HA    O3'  C3'  C2'  -179.30  30.0  3
+ OVE  Var_30    H5'1  C5'  C4'  C3'   -64.42  30.0  3
+ OVE  Var_31    H5'2  C5'  C4'  C3'    51.59  30.0  3
+ OVE  Var_32    C2'   O2'  P    O1P  -175.48  30.0  3
+ OVE  Var_33    C2'   O2'  P    S2P    75.51  30.0  3
+ OVE  Var_34    C2'   O2'  P    O3P   -38.56  30.0  2
+ OVE  Var_35    H5'   O5'  C5'  C4'   178.88  30.0  3
+ OVE  Var_36    H2P   S2P  P    O1P   160.65  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

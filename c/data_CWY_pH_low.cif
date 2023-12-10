@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CWY  CWY  '(1S,2S,4S,5R,6S)-2-amino-4-[(3-methoxybenzene-1-carbonyl)amino]bicyclo[3.1.0]hexane-2,6-dicarboxylic acid'  ligand  42  24  .  2022-09-22  2022-11-17
+ CWY  CWY  '(1S,2S,4S,5R,6S)-2-amino-4-[(3-methoxybenzene-1-carbonyl)amino]bicyclo[3.1.0]hexane-2,6-dicarboxylic acid'  ligand  42  24  .  2022-09-22  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CWY
@@ -229,29 +230,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CWY  CONST_01  C12  C11  C10  C9     0.00   0.0  0
- CWY  CONST_02  C12  C13  C14  C9     0.00   0.0  0
- CWY  CONST_03  C11  C10  C9   C14    0.00   0.0  0
- CWY  CONST_04  C11  C12  C13  C14    0.00   0.0  0
- CWY  CONST_05  C10  C11  C12  C13    0.00   0.0  0
- CWY  CONST_06  C10  C9   C14  C13    0.00   0.0  0
- CWY  CONST_07  C11  C10  C9   C8   180.00   0.0  0
- CWY  CONST_08  C13  C14  C9   C8   180.00   0.0  0
- CWY  CONST_09  O5   C13  C14  C9   180.00   0.0  0
- CWY  CONST_10  C11  C12  C13  O5   180.00   0.0  0
- CWY  CONST_11  H13  C11  C10  C9   180.00   0.0  0
- CWY  CONST_12  H14  C10  C9   C14  180.00   0.0  0
- CWY  CONST_13  H12  C12  C13  C14  180.00   0.0  0
- CWY  CONST_14  H8   C14  C13  C12  180.00   0.0  0
- CWY  CONST_15  C9   C8   N1   C7   180.00   0.0  0
- CWY  CONST_16  O4   C8   N1   C7     0.00   0.0  0
- CWY  CONST_17  H5   N1   C8   C9     0.00   0.0  0
- CWY  CONST_18  H1   O1   C2   C1   180.00   0.0  0
- CWY  CONST_19  H3   O2   C5   C4   180.00   0.0  0
- CWY  Var_01    C1   C3   C6   C7     1.36  30.0  1
- CWY  Var_02    C10  C9   C8   N1    27.55  30.0  3
- CWY  Var_03    C12  C13  O5   C15   -1.25  30.0  3
- CWY  Var_04    H9   C15  O5   C13  -60.69  30.0  3
+ CWY  CONST_01  C12  C11  C10  C9      0.00   0.0  0
+ CWY  CONST_02  C12  C13  C14  C9      0.00   0.0  0
+ CWY  CONST_03  C11  C10  C9   C14     0.00   0.0  0
+ CWY  CONST_04  C11  C12  C13  C14     0.00   0.0  0
+ CWY  CONST_05  C10  C11  C12  C13     0.00   0.0  0
+ CWY  CONST_06  C10  C9   C14  C13     0.00   0.0  0
+ CWY  CONST_07  C11  C10  C9   C8    180.00   0.0  0
+ CWY  CONST_08  C13  C14  C9   C8    180.00   0.0  0
+ CWY  CONST_09  O5   C13  C14  C9    180.00   0.0  0
+ CWY  CONST_10  C11  C12  C13  O5    180.00   0.0  0
+ CWY  CONST_11  H13  C11  C10  C9    180.00   0.0  0
+ CWY  CONST_12  H14  C10  C9   C14   180.00   0.0  0
+ CWY  CONST_13  H12  C12  C13  C14   180.00   0.0  0
+ CWY  CONST_14  H8   C14  C13  C12   180.00   0.0  0
+ CWY  CONST_15  C9   C8   N1   C7    180.00   0.0  0
+ CWY  CONST_16  O4   C8   N1   C7      0.00   0.0  0
+ CWY  CONST_17  H5   N1   C8   C9      0.00   0.0  0
+ CWY  CONST_18  H1   O1   C2   C1    180.00   0.0  0
+ CWY  CONST_19  H3   O2   C5   C4    180.00   0.0  0
+ CWY  Var_01    C1   C3   C6   C7      1.36  30.0  1
+ CWY  Var_02    C10  C9   C8   N1     27.55  30.0  3
+ CWY  Var_03    C12  C13  O5   C15    -1.25  30.0  3
+ CWY  Var_04    H9   C15  O5   C13   -60.69  30.0  3
+ CWY  Var_05    C3   C1   C    C7    -32.92  30.0  1
+ CWY  Var_06    C    C1   C3   C6     19.51  30.0  1
+ CWY  Var_07    C1   C3   C4   C6    -96.76  30.0  1
+ CWY  Var_08    C1   C    C7   C6     33.88  30.0  1
+ CWY  Var_09    C    C1   C3   C4     84.94  30.0  1
+ CWY  Var_10    C    C7   C6   C4    -87.15  30.0  1
+ CWY  Var_11    C    C7   C6   C3    -21.82  30.0  1
+ CWY  Var_12    C2   C1   C    C7   -151.77  30.0  1
+ CWY  Var_13    N    C1   C    C7     85.84  30.0  1
+ CWY  Var_14    C5   C4   C6   C7   -156.98  30.0  1
+ CWY  Var_15    C2   C1   C3   C6    139.07  30.0  1
+ CWY  Var_16    N    C1   C3   C6    -97.75  30.0  1
+ CWY  Var_17    C5   C4   C3   C6   -107.07  30.0  1
+ CWY  Var_18    N1   C7   C    C1    156.97  30.0  1
+ CWY  Var_19    C5   C4   C3   C1    156.17  30.0  1
+ CWY  Var_20    C3   C6   C7   N1   -142.90  30.0  1
+ CWY  Var_21    C4   C6   C7   N1    151.78  30.0  1
+ CWY  Var_22    C2   C1   C3   C4   -155.51  30.0  1
+ CWY  Var_23    N    C1   C3   C4    -32.32  30.0  1
+ CWY  Var_24    H6   C4   C6   C7    -10.96  30.0  1
+ CWY  Var_25    H15  C    C7   C6    157.57  30.0  1
+ CWY  Var_26    H16  C    C7   C6    -82.86  30.0  1
+ CWY  Var_27    H2   C7   C    C1    -83.72  30.0  1
+ CWY  Var_28    C    C1   C2   O1    -51.97  30.0  3
+ CWY  Var_29    C3   C1   C2   O1   -166.37  30.0  3
+ CWY  Var_30    C3   C4   C5   O2   -147.37  30.0  1
+ CWY  Var_31    C6   C4   C5   O2    145.63  30.0  1
+ CWY  Var_32    O3   C5   C4   C6    -34.12  30.0  3
+ CWY  Var_33    C8   N1   C7   C6    -82.26  30.0  3
+ CWY  Var_34    O    C2   C1   C3     16.15  30.0  3
+ CWY  Var_35    O3   C5   C4   C3     32.88  30.0  3
+ CWY  Var_36    C    C7   N1   C8    160.92  30.0  3
+ CWY  Var_37    O    C2   C1   C     130.56  30.0  3
+ CWY  Var_38    H5   N1   C7   C6     86.65  30.0  3
+ CWY  Var_39    H17  N    C1   C3    179.48  30.0  3
+ CWY  Var_40    H18  N    C1   C3    -60.93  30.0  3
+ CWY  Var_41    N    C1   C2   O1     69.82  30.0  3
+ CWY  Var_42    O    C2   C1   N    -107.66  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

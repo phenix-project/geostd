@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DSH  DSH  5'-S-(3-aminopropyl)-5'-thioadenosine  ligand  43  23  .  2021-08-08  2021-08-08  
+ DSH  DSH  5'-S-(3-aminopropyl)-5'-thioadenosine  ligand  43  23  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DSH
@@ -232,37 +233,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DSH  CONST_01  C4    N3   C2  N1     0.00   0.0  0
- DSH  CONST_02  C4    C5   C6  N1     0.00   0.0  0
- DSH  CONST_03  N7    C5   C6  N1   180.00   0.0  0
- DSH  CONST_04  C5    C6   N1  C2     0.00   0.0  0
- DSH  CONST_05  C5    C4   N3  C2     0.00   0.0  0
- DSH  CONST_06  N9    C4   N3  C2   180.00   0.0  0
- DSH  CONST_07  C6    N1   C2  N3     0.00   0.0  0
- DSH  CONST_08  C6    C5   C4  N3     0.00   0.0  0
- DSH  CONST_09  N7    C5   C4  N3   180.00   0.0  0
- DSH  CONST_10  C8    N9   C4  N3   180.00   0.0  0
- DSH  CONST_11  C8    N7   C5  C4     0.00   0.0  0
- DSH  CONST_12  N7    C8   N9  C4     0.00   0.0  0
- DSH  CONST_13  C8    N9   C4  C5     0.00   0.0  0
- DSH  CONST_14  N9    C8   N7  C5     0.00   0.0  0
- DSH  CONST_15  N9    C4   C5  C6   180.00   0.0  0
- DSH  CONST_16  C8    N7   C5  C6   180.00   0.0  0
- DSH  CONST_17  N9    C4   C5  N7     0.00   0.0  0
- DSH  CONST_18  C1'   N9   C4  N3     0.00   0.0  0
- DSH  CONST_19  C1'   N9   C4  C5   180.00   0.0  0
- DSH  CONST_20  C1'   N9   C8  N7   180.00   0.0  0
- DSH  CONST_21  N6    C6   N1  C2   180.00   0.0  0
- DSH  CONST_22  N6    C6   C5  C4   180.00   0.0  0
- DSH  CONST_23  N7    C5   C6  N6     0.00   0.0  0
- DSH  CONST_24  H2    C2   N3  C4   180.00   0.0  0
- DSH  CONST_25  H8    C8   N9  C4   180.00   0.0  0
- DSH  CONST_26  HN6   N6   C6  N1     0.00   0.0  0
- DSH  CONST_27  HN6A  N6   C6  N1   180.00   0.0  0
- DSH  Var_01    C4'   C5'  SD  CG   173.11  30.0  3
- DSH  Var_02    CG    CB   CA  N    179.64  30.0  3
- DSH  Var_03    SD    CG   CB  CA  -179.13  30.0  3
- DSH  Var_04    HN    N    CA  CB   176.81  30.0  3
+ DSH  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ DSH  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ DSH  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ DSH  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ DSH  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ DSH  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ DSH  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ DSH  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ DSH  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ DSH  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ DSH  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ DSH  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ DSH  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ DSH  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ DSH  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ DSH  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ DSH  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ DSH  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ DSH  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ DSH  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ DSH  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ DSH  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ DSH  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ DSH  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ DSH  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ DSH  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ DSH  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ DSH  Var_01    C4'   C5'  SD   CG    173.11  30.0  3
+ DSH  Var_02    CG    CB   CA   N     179.64  30.0  3
+ DSH  Var_03    SD    CG   CB   CA   -179.13  30.0  3
+ DSH  Var_04    HN    N    CA   CB    176.81  30.0  3
+ DSH  Var_05    C2'   C1'  N9   C4    100.30  30.0  2
+ DSH  Var_06    O4'   C1'  N9   C4   -141.20  30.0  2
+ DSH  Var_07    C2'   C1'  N9   C8    -77.66  30.0  2
+ DSH  Var_08    O4'   C1'  N9   C8     40.83  30.0  2
+ DSH  Var_09    C3'   C2'  C1'  N9    150.70  30.0  1
+ DSH  Var_10    C4'   O4'  C1'  N9   -132.45  30.0  1
+ DSH  Var_11    C4'   C3'  C2'  C1'   -38.37  30.0  1
+ DSH  Var_12    C3'   C4'  O4'  C1'   -16.13  30.0  1
+ DSH  Var_13    C4'   O4'  C1'  C2'    -9.33  30.0  1
+ DSH  Var_14    O4'   C4'  C3'  C2'    34.21  30.0  1
+ DSH  Var_15    O4'   C1'  C2'  C3'    30.46  30.0  1
+ DSH  Var_16    O2'   C2'  C1'  N9    -87.44  30.0  1
+ DSH  Var_17    O3'   C3'  C2'  C1'    76.77  30.0  1
+ DSH  Var_18    C5'   C4'  O4'  C1'   105.19  30.0  1
+ DSH  Var_19    C5'   C4'  C3'  C2'   -86.89  30.0  1
+ DSH  Var_20    O4'   C1'  C2'  O2'   152.31  30.0  1
+ DSH  Var_21    C4'   C3'  C2'  O2'  -156.70  30.0  1
+ DSH  Var_22    O4'   C4'  C3'  O3'   -82.35  30.0  1
+ DSH  Var_23    H1'   C1'  N9   C4    -20.96  30.0  2
+ DSH  Var_24    H2'   C2'  C1'  N9     35.50  30.0  1
+ DSH  Var_25    H3'   C3'  C2'  C1'  -157.30  30.0  1
+ DSH  Var_26    H4'   C4'  O4'  C1'  -135.16  30.0  1
+ DSH  Var_27    C3'   C4'  C5'  SD    164.25  30.0  1
+ DSH  Var_28    O4'   C4'  C5'  SD     46.84  30.0  1
+ DSH  Var_29    O3'   C3'  C2'  O2'   -41.57  30.0  1
+ DSH  Var_30    C5'   C4'  C3'  O3'   156.55  30.0  1
+ DSH  Var_31    HO2'  O2'  C2'  C1'   160.08  30.0  3
+ DSH  Var_32    HO3'  O3'  C3'  C2'    46.32  30.0  3
+ DSH  Var_33    H5'   C5'  C4'  C3'    42.40  30.0  3
+ DSH  Var_34    H5'A  C5'  C4'  C3'   -75.94  30.0  3
+ DSH  Var_35    C5'   SD   CG   CB    172.59  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

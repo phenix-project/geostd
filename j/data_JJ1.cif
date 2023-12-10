@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JJ1  JJ1  N-(10-hydroxydecanoyl)-L-seryl-N-(2-cyclohexylethyl)-L-lysinamide  ligand  88  36  .  2021-08-12  2021-08-12  
+ JJ1  JJ1  N-(10-hydroxydecanoyl)-L-seryl-N-(2-cyclohexylethyl)-L-lysinamide  ligand  88  36  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JJ1
@@ -408,33 +409,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JJ1  CONST_01  C1   N1   C6   O4      0.00   0.0  0
- JJ1  CONST_02  C7   C6   N1   C1    180.00   0.0  0
- JJ1  CONST_03  C19  N3   C    C1    180.00   0.0  0
- JJ1  CONST_04  O    C    N3   C19     0.00   0.0  0
- JJ1  CONST_05  O3   C9   N2   C7      0.00   0.0  0
- JJ1  CONST_06  C10  C9   N2   C7    180.00   0.0  0
- JJ1  CONST_07  H1   N1   C6   O4    180.00   0.0  0
- JJ1  CONST_08  H3   N3   C    C1      0.00   0.0  0
- JJ1  CONST_09  H2   N2   C9   O3    180.00   0.0  0
- JJ1  Var_01    C24  C25  C26  C21    55.87  30.0  1
- JJ1  Var_02    C24  C23  C22  C21   -55.60  30.0  1
- JJ1  Var_03    C22  C23  C24  C25    55.24  30.0  1
- JJ1  Var_04    C21  C20  C19  N3    173.73  30.0  3
- JJ1  Var_05    C4   C3   C2   C1   -177.07  30.0  3
- JJ1  Var_06    C5   C4   C3   C2   -178.54  30.0  3
- JJ1  Var_07    N    C5   C4   C3   -179.77  30.0  3
- JJ1  Var_08    C20  C19  N3   C     177.98  30.0  3
- JJ1  Var_09    C11  C10  C9   N2   -165.42  30.0  3
- JJ1  Var_10    C12  C11  C10  C9    179.97  30.0  3
- JJ1  Var_11    C13  C12  C11  C10   178.97  30.0  3
- JJ1  Var_12    C14  C13  C12  C11   179.83  30.0  3
- JJ1  Var_13    C15  C14  C13  C12   179.41  30.0  3
- JJ1  Var_14    C16  C15  C14  C13  -179.90  30.0  3
- JJ1  Var_15    C17  C16  C15  C14   179.78  30.0  3
- JJ1  Var_16    C18  C17  C16  C15  -179.75  30.0  3
- JJ1  Var_17    O2   C18  C17  C16  -179.61  30.0  3
- JJ1  Var_18    HN1  N    C5   C4    176.86  30.0  3
+ JJ1  CONST_01  C1    N1   C6   O4      0.00   0.0  0
+ JJ1  CONST_02  C7    C6   N1   C1    180.00   0.0  0
+ JJ1  CONST_03  C19   N3   C    C1    180.00   0.0  0
+ JJ1  CONST_04  O     C    N3   C19     0.00   0.0  0
+ JJ1  CONST_05  O3    C9   N2   C7      0.00   0.0  0
+ JJ1  CONST_06  C10   C9   N2   C7    180.00   0.0  0
+ JJ1  CONST_07  H1    N1   C6   O4    180.00   0.0  0
+ JJ1  CONST_08  H3    N3   C    C1      0.00   0.0  0
+ JJ1  CONST_09  H2    N2   C9   O3    180.00   0.0  0
+ JJ1  Var_01    C24   C25  C26  C21    55.87  30.0  1
+ JJ1  Var_02    C24   C23  C22  C21   -55.60  30.0  1
+ JJ1  Var_03    C22   C23  C24  C25    55.24  30.0  1
+ JJ1  Var_04    C21   C20  C19  N3    173.73  30.0  3
+ JJ1  Var_05    C4    C3   C2   C1   -177.07  30.0  3
+ JJ1  Var_06    C5    C4   C3   C2   -178.54  30.0  3
+ JJ1  Var_07    N     C5   C4   C3   -179.77  30.0  3
+ JJ1  Var_08    C20   C19  N3   C     177.98  30.0  3
+ JJ1  Var_09    C11   C10  C9   N2   -165.42  30.0  3
+ JJ1  Var_10    C12   C11  C10  C9    179.97  30.0  3
+ JJ1  Var_11    C13   C12  C11  C10   178.97  30.0  3
+ JJ1  Var_12    C14   C13  C12  C11   179.83  30.0  3
+ JJ1  Var_13    C15   C14  C13  C12   179.41  30.0  3
+ JJ1  Var_14    C16   C15  C14  C13  -179.90  30.0  3
+ JJ1  Var_15    C17   C16  C15  C14   179.78  30.0  3
+ JJ1  Var_16    C18   C17  C16  C15  -179.75  30.0  3
+ JJ1  Var_17    O2    C18  C17  C16  -179.61  30.0  3
+ JJ1  Var_18    HN1   N    C5   C4    176.86  30.0  3
+ JJ1  Var_19    C23   C22  C21  C26    54.66  30.0  1
+ JJ1  Var_20    C23   C24  C25  C26   -55.22  30.0  1
+ JJ1  Var_21    C22   C21  C26  C25   -54.97  30.0  1
+ JJ1  Var_22    C25   C26  C21  C20   179.89  30.0  1
+ JJ1  Var_23    C23   C22  C21  C20   178.40  30.0  1
+ JJ1  Var_24    H221  C22  C21  C26   176.96  30.0  1
+ JJ1  Var_25    H222  C22  C21  C26   -66.44  30.0  1
+ JJ1  Var_26    H241  C24  C25  C26    65.18  30.0  1
+ JJ1  Var_27    H242  C24  C25  C26  -177.83  30.0  1
+ JJ1  Var_28    H21   C21  C26  C25    62.36  30.0  1
+ JJ1  Var_29    C26   C21  C20  C19  -173.44  30.0  3
+ JJ1  Var_30    C22   C21  C20  C19    63.01  30.0  3
+ JJ1  Var_31    H201  C20  C21  C26    63.67  30.0  1
+ JJ1  Var_32    H202  C20  C21  C26   -52.36  30.0  1
+ JJ1  Var_33    C8    C7   C6   O4    107.55  30.0  3
+ JJ1  Var_34    N2    C7   C6   O4    -16.28  30.0  3
+ JJ1  Var_35    C2    C1   N1   C6    108.78  30.0  3
+ JJ1  Var_36    C     C1   N1   C6   -130.16  30.0  3
+ JJ1  Var_37    O1    C8   C7   C6    -55.53  30.0  3
+ JJ1  Var_38    C9    N2   C7   C6   -153.92  30.0  3
+ JJ1  Var_39    C8    C7   C6   N1    -71.71  30.0  3
+ JJ1  Var_40    N2    C7   C6   N1    164.47  30.0  3
+ JJ1  Var_41    C3    C2   C1   N1    -58.83  30.0  3
+ JJ1  Var_42    N3    C    C1   N1    152.08  30.0  3
+ JJ1  Var_43    O     C    C1   N1    -30.42  30.0  3
+ JJ1  Var_44    N3    C    C1   C2    -85.02  30.0  3
+ JJ1  Var_45    O     C    C1   C2     92.47  30.0  3
+ JJ1  Var_46    C     C1   C2   C3   -179.66  30.0  3
+ JJ1  Var_47    C9    N2   C7   C8     84.04  30.0  3
+ JJ1  Var_48    N2    C7   C8   O1     65.79  30.0  2
+ JJ1  Var_49    H7    C7   C6   O4   -134.89  30.0  3
+ JJ1  Var_50    HA    C1   N1   C6    -11.09  30.0  3
+ JJ1  Var_51    H81C  C8   C7   C6     66.60  30.0  3
+ JJ1  Var_52    H82C  C8   C7   C6   -177.52  30.0  3
+ JJ1  Var_53    H21C  C2   C1   N1     63.96  30.0  3
+ JJ1  Var_54    H22C  C2   C1   N1    179.45  30.0  3
+ JJ1  Var_55    HB    O1   C8   C7   -179.85  30.0  3
+ JJ1  Var_56    HC    O2   C18  C17  -178.40  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

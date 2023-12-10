@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- D1L  D1L  '(2R)-2-[4-(2,4-dichlorophenoxy)phenoxy]propanoic acid'  ligand  32  21  .  2021-08-08  2021-08-08  
+ D1L  D1L  '(2R)-2-[4-(2,4-dichlorophenoxy)phenoxy]propanoic acid'  ligand  32  21  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_D1L
@@ -183,37 +184,49 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- D1L  CONST_01  C8    C5   C4   C3      0.00   0.0  0
- D1L  CONST_02  C8    C7   C6   C3      0.00   0.0  0
- D1L  CONST_03  C7    C6   C3   C4      0.00   0.0  0
- D1L  CONST_04  C7    C8   C5   C4      0.00   0.0  0
- D1L  CONST_05  C6    C3   C4   C5      0.00   0.0  0
- D1L  CONST_06  C6    C7   C8   C5      0.00   0.0  0
- D1L  CONST_07  C12   C11  C10  C9      0.00   0.0  0
- D1L  CONST_08  C12   C13  C14  C9      0.00   0.0  0
- D1L  CONST_09  C13   C14  C9   C10     0.00   0.0  0
- D1L  CONST_10  C13   C12  C11  C10     0.00   0.0  0
- D1L  CONST_11  C14   C9   C10  C11     0.00   0.0  0
- D1L  CONST_12  C14   C13  C12  C11     0.00   0.0  0
- D1L  CONST_13  C5    C4   C3   O2    180.00   0.0  0
- D1L  CONST_14  C7    C6   C3   O2    180.00   0.0  0
- D1L  CONST_15  O8    C8   C5   C4    180.00   0.0  0
- D1L  CONST_16  O8    C8   C7   C6    180.00   0.0  0
- D1L  CONST_17  C11   C10  C9   O8    180.00   0.0  0
- D1L  CONST_18  C13   C14  C9   O8    180.00   0.0  0
- D1L  CONST_19  CL14  C14  C9   C10   180.00   0.0  0
- D1L  CONST_20  CL12  C12  C11  C10   180.00   0.0  0
- D1L  CONST_21  CL14  C14  C13  C12   180.00   0.0  0
- D1L  CONST_22  C14   C13  C12  CL12  180.00   0.0  0
- D1L  CONST_23  H5    C5   C4   C3    180.00   0.0  0
- D1L  CONST_24  H7    C7   C6   C3    180.00   0.0  0
- D1L  CONST_25  H6    C6   C3   C4    180.00   0.0  0
- D1L  CONST_26  H4    C4   C3   C6    180.00   0.0  0
- D1L  CONST_27  H11   C11  C10  C9    180.00   0.0  0
- D1L  CONST_28  H13   C13  C14  C9    180.00   0.0  0
- D1L  CONST_29  H10   C10  C11  C12   180.00   0.0  0
- D1L  Var_01    C10   C9   O8   C8     -6.63  30.0  2
- D1L  Var_02    C4    C3   O2   C2    179.48  30.0  2
+ D1L  CONST_01  C8    C5   C4   C3       0.00   0.0  0
+ D1L  CONST_02  C8    C7   C6   C3       0.00   0.0  0
+ D1L  CONST_03  C7    C6   C3   C4       0.00   0.0  0
+ D1L  CONST_04  C7    C8   C5   C4       0.00   0.0  0
+ D1L  CONST_05  C6    C3   C4   C5       0.00   0.0  0
+ D1L  CONST_06  C6    C7   C8   C5       0.00   0.0  0
+ D1L  CONST_07  C12   C11  C10  C9       0.00   0.0  0
+ D1L  CONST_08  C12   C13  C14  C9       0.00   0.0  0
+ D1L  CONST_09  C13   C14  C9   C10      0.00   0.0  0
+ D1L  CONST_10  C13   C12  C11  C10      0.00   0.0  0
+ D1L  CONST_11  C14   C9   C10  C11      0.00   0.0  0
+ D1L  CONST_12  C14   C13  C12  C11      0.00   0.0  0
+ D1L  CONST_13  C5    C4   C3   O2     180.00   0.0  0
+ D1L  CONST_14  C7    C6   C3   O2     180.00   0.0  0
+ D1L  CONST_15  O8    C8   C5   C4     180.00   0.0  0
+ D1L  CONST_16  O8    C8   C7   C6     180.00   0.0  0
+ D1L  CONST_17  C11   C10  C9   O8     180.00   0.0  0
+ D1L  CONST_18  C13   C14  C9   O8     180.00   0.0  0
+ D1L  CONST_19  CL14  C14  C9   C10    180.00   0.0  0
+ D1L  CONST_20  CL12  C12  C11  C10    180.00   0.0  0
+ D1L  CONST_21  CL14  C14  C13  C12    180.00   0.0  0
+ D1L  CONST_22  C14   C13  C12  CL12   180.00   0.0  0
+ D1L  CONST_23  H5    C5   C4   C3     180.00   0.0  0
+ D1L  CONST_24  H7    C7   C6   C3     180.00   0.0  0
+ D1L  CONST_25  H6    C6   C3   C4     180.00   0.0  0
+ D1L  CONST_26  H4    C4   C3   C6     180.00   0.0  0
+ D1L  CONST_27  H11   C11  C10  C9     180.00   0.0  0
+ D1L  CONST_28  H13   C13  C14  C9     180.00   0.0  0
+ D1L  CONST_29  H10   C10  C11  C12    180.00   0.0  0
+ D1L  Var_01    C10   C9   O8   C8      -6.63  30.0  2
+ D1L  Var_02    C4    C3   O2   C2     179.48  30.0  2
+ D1L  Var_03    C9    O8   C8   C5     -85.46  30.0  2
+ D1L  Var_04    C9    O8   C8   C7      96.60  30.0  2
+ D1L  Var_05    C3    O2   C2   C1     156.92  30.0  3
+ D1L  Var_06    C3    O2   C2   C2A    -80.10  30.0  3
+ D1L  Var_07    H2    C2   O2   C3      40.84  30.0  2
+ D1L  Var_08    C2A   C2   C1   O1A     53.56  30.0  2
+ D1L  Var_09    O2    C2   C1   O1A    176.12  30.0  2
+ D1L  Var_10    C2A   C2   C1   O1B   -127.16  30.0  2
+ D1L  Var_11    O2    C2   C1   O1B     -4.60  30.0  2
+ D1L  Var_12    H2A1  C2A  C2   C1      57.99  30.0  3
+ D1L  Var_13    H2A2  C2A  C2   C1     178.60  30.0  3
+ D1L  Var_14    H2A3  C2A  C2   C1     -61.45  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

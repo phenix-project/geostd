@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- T2K  T2K  '3-[5-[3,5-bis(chloranyl)phenyl]-4-phenyl-1,3-oxazol-2-yl]propanoic acid'  ligand  37  24  .  2022-03-23  2022-11-17
+ T2K  T2K  '3-[5-[3,5-bis(chloranyl)phenyl]-4-phenyl-1,3-oxazol-2-yl]propanoic acid'  ligand  37  24  .  2022-03-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_T2K
@@ -204,50 +205,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- T2K  CONST_03  C3   O1   C11  C4     0.00   0.0  0
- T2K  CONST_04  O1   C3   N    C4     0.00   0.0  0
- T2K  CONST_05  C9   C10  C5   C4   180.00   0.0  0
- T2K  CONST_06  C7   C6   C5   C4   180.00   0.0  0
- T2K  CONST_07  C12  C11  C4   C5     0.00   0.0  0
- T2K  CONST_08  O1   C11  C4   C5   180.00   0.0  0
- T2K  CONST_09  C3   N    C4   C5   180.00   0.0  0
- T2K  CONST_10  C8   C9   C10  C5     0.00   0.0  0
- T2K  CONST_11  C8   C7   C6   C5     0.00   0.0  0
- T2K  CONST_14  C9   C10  C5   C6     0.00   0.0  0
- T2K  CONST_15  C9   C8   C7   C6     0.00   0.0  0
- T2K  CONST_16  C12  C11  O1   C3   180.00   0.0  0
- T2K  CONST_17  C11  C4   N    C3     0.00   0.0  0
- T2K  CONST_20  N    C4   C11  O1     0.00   0.0  0
- T2K  CONST_21  C16  C17  C12  C11  180.00   0.0  0
- T2K  CONST_22  C14  C13  C12  C11  180.00   0.0  0
- T2K  CONST_23  N    C3   O1   C11    0.00   0.0  0
- T2K  CONST_25  C15  C16  C17  C12    0.00   0.0  0
- T2K  CONST_26  C15  C14  C13  C12    0.00   0.0  0
- T2K  CONST_27  N    C4   C11  C12  180.00   0.0  0
- T2K  CONST_28  C14  C15  C16  C17    0.00   0.0  0
- T2K  CONST_29  C14  C13  C12  C17    0.00   0.0  0
- T2K  CONST_30  C13  C14  C15  C16    0.00   0.0  0
- T2K  CONST_31  C13  C12  C17  C16    0.00   0.0  0
- T2K  CONST_33  C7   C6   C5   C10    0.00   0.0  0
- T2K  CONST_34  C7   C8   C9   C10    0.00   0.0  0
- T2K  CONST_35  C11  O1   C3   C2   180.00   0.0  0
- T2K  CONST_36  C4   N    C3   C2   180.00   0.0  0
- T2K  CONST_37  CL1  C16  C17  C12  180.00   0.0  0
- T2K  CONST_38  CL   C14  C13  C12  180.00   0.0  0
- T2K  CONST_39  CL   C14  C15  C16  180.00   0.0  0
- T2K  CONST_40  C14  C15  C16  CL1  180.00   0.0  0
- T2K  CONST_41  H10  C10  C5   C4     0.00   0.0  0
- T2K  CONST_42  H4   C6   C5   C4     0.00   0.0  0
- T2K  CONST_43  H11  C9   C10  C5   180.00   0.0  0
- T2K  CONST_44  H13  C7   C6   C5   180.00   0.0  0
- T2K  CONST_45  H12  C8   C7   C6   180.00   0.0  0
- T2K  CONST_46  H7   C17  C12  C11    0.00   0.0  0
- T2K  CONST_47  H9   C13  C12  C11    0.00   0.0  0
- T2K  CONST_48  H8   C15  C16  C17  180.00   0.0  0
- T2K  CONST_49  H3   O2   C    O      0.00   0.0  0
+ T2K  CONST_01  C3   O1   C11  C4     0.00   0.0  0
+ T2K  CONST_02  O1   C3   N    C4     0.00   0.0  0
+ T2K  CONST_03  C9   C10  C5   C4   180.00   0.0  0
+ T2K  CONST_04  C7   C6   C5   C4   180.00   0.0  0
+ T2K  CONST_05  C12  C11  C4   C5     0.00   0.0  0
+ T2K  CONST_06  O1   C11  C4   C5   180.00   0.0  0
+ T2K  CONST_07  C3   N    C4   C5   180.00   0.0  0
+ T2K  CONST_08  C8   C9   C10  C5     0.00   0.0  0
+ T2K  CONST_09  C8   C7   C6   C5     0.00   0.0  0
+ T2K  CONST_10  C9   C10  C5   C6     0.00   0.0  0
+ T2K  CONST_11  C9   C8   C7   C6     0.00   0.0  0
+ T2K  CONST_12  C12  C11  O1   C3   180.00   0.0  0
+ T2K  CONST_13  C11  C4   N    C3     0.00   0.0  0
+ T2K  CONST_14  N    C4   C11  O1     0.00   0.0  0
+ T2K  CONST_15  C16  C17  C12  C11  180.00   0.0  0
+ T2K  CONST_16  C14  C13  C12  C11  180.00   0.0  0
+ T2K  CONST_17  N    C3   O1   C11    0.00   0.0  0
+ T2K  CONST_18  C15  C16  C17  C12    0.00   0.0  0
+ T2K  CONST_19  C15  C14  C13  C12    0.00   0.0  0
+ T2K  CONST_20  N    C4   C11  C12  180.00   0.0  0
+ T2K  CONST_21  C14  C15  C16  C17    0.00   0.0  0
+ T2K  CONST_22  C14  C13  C12  C17    0.00   0.0  0
+ T2K  CONST_23  C13  C14  C15  C16    0.00   0.0  0
+ T2K  CONST_24  C13  C12  C17  C16    0.00   0.0  0
+ T2K  CONST_25  C7   C6   C5   C10    0.00   0.0  0
+ T2K  CONST_26  C7   C8   C9   C10    0.00   0.0  0
+ T2K  CONST_27  C11  O1   C3   C2   180.00   0.0  0
+ T2K  CONST_28  C4   N    C3   C2   180.00   0.0  0
+ T2K  CONST_29  CL1  C16  C17  C12  180.00   0.0  0
+ T2K  CONST_30  CL   C14  C13  C12  180.00   0.0  0
+ T2K  CONST_31  CL   C14  C15  C16  180.00   0.0  0
+ T2K  CONST_32  C14  C15  C16  CL1  180.00   0.0  0
+ T2K  CONST_33  H10  C10  C5   C4     0.00   0.0  0
+ T2K  CONST_34  H4   C6   C5   C4     0.00   0.0  0
+ T2K  CONST_35  H11  C9   C10  C5   180.00   0.0  0
+ T2K  CONST_36  H13  C7   C6   C5   180.00   0.0  0
+ T2K  CONST_37  H12  C8   C7   C6   180.00   0.0  0
+ T2K  CONST_38  H7   C17  C12  C11    0.00   0.0  0
+ T2K  CONST_39  H9   C13  C12  C11    0.00   0.0  0
+ T2K  CONST_40  H8   C15  C16  C17  180.00   0.0  0
+ T2K  CONST_41  H3   O2   C    O      0.00   0.0  0
  T2K  Var_01    O1   C3   C2   C1   174.00  30.0  2
  T2K  Var_02    C3   C2   C1   C    179.96  30.0  1
  T2K  Var_03    O    C    C1   C2    -0.87  30.0  1
+ T2K  Var_04    C17  C12  C11  C4   149.93  30.0  2
+ T2K  Var_05    C13  C12  C11  C4   -31.03  30.0  2
+ T2K  Var_06    C11  C4   C5   C6   143.08  30.0  3
+ T2K  Var_07    N    C4   C5   C6   -38.52  30.0  3
+ T2K  Var_08    C17  C12  C11  O1   -31.67  30.0  2
+ T2K  Var_09    C13  C12  C11  O1   147.37  30.0  2
+ T2K  Var_10    C10  C5   C4   C11  -38.53  30.0  2
+ T2K  Var_11    C10  C5   C4   N    139.87  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

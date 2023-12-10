@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KEU  KEU  'N-({4-[(1R)-4-[(2R,4S,5S)-2,4-diamino-6-oxohexahydropyrimidin-5-yl]-1-(2,2,2-trifluoro-1,1-dihydroxyethyl)butyl]phenyl}carbonyl)-L-glutamic acid'  ligand  68  38  .  2021-08-12  2022-11-17
+ KEU  KEU  'N-({4-[(1R)-4-[(2R,4S,5S)-2,4-diamino-6-oxohexahydropyrimidin-5-yl]-1-(2,2,2-trifluoro-1,1-dihydroxyethyl)butyl]phenyl}carbonyl)-L-glutamic acid'  ligand  68  38  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KEU
@@ -323,34 +324,86 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KEU  CONST_01  C11  C12  C13  C14     0.00   0.0  0
- KEU  CONST_02  C11  C16  C15  C14     0.00   0.0  0
- KEU  CONST_03  C16  C15  C14  C13     0.00   0.0  0
- KEU  CONST_04  C16  C11  C12  C13     0.00   0.0  0
- KEU  CONST_05  C15  C14  C13  C12     0.00   0.0  0
- KEU  CONST_06  C15  C16  C11  C12     0.00   0.0  0
- KEU  CONST_07  C8   N3   C9   C4      0.00   0.0  0
- KEU  CONST_08  C12  C13  C14  C     180.00   0.0  0
- KEU  CONST_09  C16  C15  C14  C     180.00   0.0  0
- KEU  CONST_10  C10  C11  C12  C13   180.00   0.0  0
- KEU  CONST_11  C10  C11  C16  C15   180.00   0.0  0
- KEU  CONST_12  C8   N3   C9   O1    180.00   0.0  0
- KEU  CONST_13  H12  C12  C13  C14   180.00   0.0  0
- KEU  CONST_14  H16  C16  C15  C14   180.00   0.0  0
- KEU  CONST_15  H15  C15  C14  C13   180.00   0.0  0
- KEU  CONST_16  H13  C13  C12  C11   180.00   0.0  0
- KEU  CONST_17  HN3  N3   C9   C4    180.00   0.0  0
- KEU  CONST_18  C14  C    N    C17   180.00   0.0  0
- KEU  CONST_19  HN   N    C    C14     0.00   0.0  0
- KEU  CONST_20  O    C    N    C17     0.00   0.0  0
- KEU  CONST_21  HO4  O4   C21  O5    180.00   0.0  0
- KEU  CONST_22  HO2  O2   C18  C17   180.00   0.0  0
- KEU  Var_01    C13  C14  C    N     152.15  30.0  2
- KEU  Var_02    C4   C3   C2   C1   -175.08  30.0  3
- KEU  Var_03    C19  C20  C21  O4   -179.90  30.0  3
- KEU  Var_04    C17  C19  C20  C21  -179.33  30.0  3
- KEU  Var_05    C3   C2   C1   C10  -175.68  30.0  3
- KEU  Var_06    F2   C6   C5   C10    62.05  30.0  3
+ KEU  CONST_01  C11   C12  C13  C14     0.00   0.0  0
+ KEU  CONST_02  C11   C16  C15  C14     0.00   0.0  0
+ KEU  CONST_03  C16   C15  C14  C13     0.00   0.0  0
+ KEU  CONST_04  C16   C11  C12  C13     0.00   0.0  0
+ KEU  CONST_05  C15   C14  C13  C12     0.00   0.0  0
+ KEU  CONST_06  C15   C16  C11  C12     0.00   0.0  0
+ KEU  CONST_07  C8    N3   C9   C4      0.00   0.0  0
+ KEU  CONST_08  C12   C13  C14  C     180.00   0.0  0
+ KEU  CONST_09  C16   C15  C14  C     180.00   0.0  0
+ KEU  CONST_10  C10   C11  C12  C13   180.00   0.0  0
+ KEU  CONST_11  C10   C11  C16  C15   180.00   0.0  0
+ KEU  CONST_12  C8    N3   C9   O1    180.00   0.0  0
+ KEU  CONST_13  H12   C12  C13  C14   180.00   0.0  0
+ KEU  CONST_14  H16   C16  C15  C14   180.00   0.0  0
+ KEU  CONST_15  H15   C15  C14  C13   180.00   0.0  0
+ KEU  CONST_16  H13   C13  C12  C11   180.00   0.0  0
+ KEU  CONST_17  HN3   N3   C9   C4    180.00   0.0  0
+ KEU  CONST_18  C14   C    N    C17   180.00   0.0  0
+ KEU  CONST_19  HN    N    C    C14     0.00   0.0  0
+ KEU  CONST_20  O     C    N    C17     0.00   0.0  0
+ KEU  CONST_21  HO4   O4   C21  O5    180.00   0.0  0
+ KEU  CONST_22  HO2   O2   C18  C17   180.00   0.0  0
+ KEU  Var_01    C13   C14  C    N     152.15  30.0  2
+ KEU  Var_02    C4    C3   C2   C1   -175.08  30.0  3
+ KEU  Var_03    C19   C20  C21  O4   -179.90  30.0  3
+ KEU  Var_04    C17   C19  C20  C21  -179.33  30.0  3
+ KEU  Var_05    C3    C2   C1   C10  -175.68  30.0  3
+ KEU  Var_06    F2    C6   C5   C10    62.05  30.0  3
+ KEU  Var_07    C8    N1   C7   C4     68.89  30.0  1
+ KEU  Var_08    N1    C7   C4   C9    -54.74  30.0  1
+ KEU  Var_09    N1    C8   N3   C9     23.46  30.0  1
+ KEU  Var_10    C7    C4   C9   N3     29.42  30.0  1
+ KEU  Var_11    C7    N1   C8   N3    -50.34  30.0  1
+ KEU  Var_12    N3    C9   C4   C3    -95.74  30.0  1
+ KEU  Var_13    N1    C7   C4   C3     69.04  30.0  1
+ KEU  Var_14    N8    C7   C4   C9   -179.00  30.0  1
+ KEU  Var_15    N2    C8   N3   C9    147.45  30.0  1
+ KEU  Var_16    C7    C4   C9   O1   -152.84  30.0  1
+ KEU  Var_17    N8    C7   N1   C8   -167.60  30.0  1
+ KEU  Var_18    C7    N1   C8   N2   -170.94  30.0  1
+ KEU  Var_19    HN1   N1   C7   C4   -171.18  30.0  1
+ KEU  Var_20    H7    C7   C4   C9     64.83  30.0  1
+ KEU  Var_21    H8    C8   N3   C9    -97.58  30.0  1
+ KEU  Var_22    H4    C4   C9   N3    146.55  30.0  1
+ KEU  Var_23    C1    C10  C11  C12   138.79  30.0  2
+ KEU  Var_24    C5    C10  C11  C12   -87.60  30.0  2
+ KEU  Var_25    C1    C10  C11  C16   -39.26  30.0  2
+ KEU  Var_26    C5    C10  C11  C16    94.36  30.0  2
+ KEU  Var_27    C9    C4   C3   C2    -62.47  30.0  3
+ KEU  Var_28    C7    C4   C3   C2    174.09  30.0  3
+ KEU  Var_29    O1    C9   C4   C3     81.99  30.0  1
+ KEU  Var_30    N8    C7   C4   C3    -55.23  30.0  1
+ KEU  Var_31    H10   C10  C11  C12    23.17  30.0  2
+ KEU  Var_32    HN61  N8   C7   C4   -168.55  30.0  3
+ KEU  Var_33    HN62  N8   C7   C4     74.26  30.0  3
+ KEU  Var_34    H31   C3   C4   C9    177.54  30.0  2
+ KEU  Var_35    H32   C3   C4   C9     62.07  30.0  2
+ KEU  Var_36    HN21  N2   C8   N3    -78.58  30.0  3
+ KEU  Var_37    HN22  N2   C8   N3    163.13  30.0  3
+ KEU  Var_38    C2    C1   C10  C11   -65.51  30.0  3
+ KEU  Var_39    OA2   C5   C10  C11   171.80  30.0  3
+ KEU  Var_40    OA1   C5   C10  C11    51.04  30.0  3
+ KEU  Var_41    C6    C5   C10  C11   -68.50  30.0  3
+ KEU  Var_42    H11   C1   C10  C11    57.23  30.0  3
+ KEU  Var_43    H12A  C1   C10  C11   174.61  30.0  3
+ KEU  Var_44    N     C17  C19  C20   -62.53  30.0  3
+ KEU  Var_45    C18   C17  C19  C20   171.01  30.0  3
+ KEU  Var_46    C     N    C17  C19   146.46  30.0  3
+ KEU  Var_47    O3    C18  C17  C19   -47.88  30.0  3
+ KEU  Var_48    O2    C18  C17  C19   133.59  30.0  3
+ KEU  Var_49    O3    C18  C17  N    -172.85  30.0  3
+ KEU  Var_50    O2    C18  C17  N       8.62  30.0  3
+ KEU  Var_51    C18   C17  N    C     -88.64  30.0  2
+ KEU  Var_52    OA2   C5   C10  C1    -55.57  30.0  3
+ KEU  Var_53    OA1   C5   C10  C1   -176.33  30.0  3
+ KEU  Var_54    C6    C5   C10  C1     64.13  30.0  3
+ KEU  Var_55    C5    C10  C1   C2    161.90  30.0  2
+ KEU  Var_56    H17   C17  C19  C20    55.95  30.0  3
+ KEU  Var_57    HA2   OA2  C5   C10  -178.31  30.0  3
+ KEU  Var_58    HA1   OA1  C5   C10   174.12  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

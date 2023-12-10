@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FEE  FEE  N-{(1S,2S,3R)-1-[(alpha-D-galactopyranosyloxy)methyl]-2,3-dihydroxyoctyl}tetracosanamide  ligand  126  49  .  2021-08-09  2021-08-09  
+ FEE  FEE  N-{(1S,2S,3R)-1-[(alpha-D-galactopyranosyloxy)methyl]-2,3-dihydroxyoctyl}tetracosanamide  ligand  126  49  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FEE
@@ -559,37 +560,93 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FEE  CONST_01  C2   N2   CAA  CAB   180.00   0.0  0
- FEE  CONST_02  C2   N2   CAA  OAA     0.00   0.0  0
- FEE  CONST_03  HN2  N2   CAA  CAB     0.00   0.0  0
- FEE  Var_01    H1   C1   O1A  C1A    73.84  30.0  1
- FEE  Var_02    CAC  CAB  CAA  N2   -143.04  30.0  2
- FEE  Var_03    C7   C6   C5   C4    177.38  30.0  3
- FEE  Var_04    C8   C7   C6   C5   -178.67  30.0  3
- FEE  Var_05    C9   C8   C7   C6    179.92  30.0  3
- FEE  Var_06    CAU  CAV  CAW  CAX   179.98  30.0  3
- FEE  Var_07    CAT  CAU  CAV  CAW  -179.95  30.0  3
- FEE  Var_08    CAS  CAT  CAU  CAV   179.92  30.0  3
- FEE  Var_09    CAR  CAS  CAT  CAU  -179.93  30.0  3
- FEE  Var_10    CAQ  CAR  CAS  CAT   179.91  30.0  3
- FEE  Var_11    CAP  CAQ  CAR  CAS  -179.93  30.0  3
- FEE  Var_12    CAO  CAP  CAQ  CAR   179.92  30.0  3
- FEE  Var_13    CAN  CAO  CAP  CAQ  -179.94  30.0  3
- FEE  Var_14    CAM  CAN  CAO  CAP   179.96  30.0  3
- FEE  Var_15    CAL  CAM  CAN  CAO  -179.95  30.0  3
- FEE  Var_16    CAK  CAL  CAM  CAN  -179.98  30.0  3
- FEE  Var_17    CAJ  CAK  CAL  CAM  -180.00  30.0  3
- FEE  Var_18    CAI  CAJ  CAK  CAL  -179.84  30.0  3
- FEE  Var_19    CAH  CAI  CAJ  CAK   179.89  30.0  3
- FEE  Var_20    CAG  CAH  CAI  CAJ  -179.54  30.0  3
- FEE  Var_21    CAF  CAG  CAH  CAI   179.66  30.0  3
- FEE  Var_22    CAE  CAF  CAG  CAH  -178.92  30.0  3
- FEE  Var_23    CAD  CAE  CAF  CAG   179.51  30.0  3
- FEE  Var_24    CAC  CAD  CAE  CAF  -177.53  30.0  3
- FEE  Var_25    CAB  CAC  CAD  CAE  -179.73  30.0  3
- FEE  Var_26    CAA  CAB  CAC  CAD  -171.99  30.0  3
- FEE  Var_27    H9   C9   C8   C7    -59.54  30.0  3
- FEE  Var_28    HAX  CAX  CAW  CAV    59.81  30.0  3
+ FEE  CONST_01  C2    N2   CAA  CAB   180.00   0.0  0
+ FEE  CONST_02  C2    N2   CAA  OAA     0.00   0.0  0
+ FEE  CONST_03  HN2   N2   CAA  CAB     0.00   0.0  0
+ FEE  Var_01    H1    C1   O1A  C1A    73.84  30.0  1
+ FEE  Var_02    CAC   CAB  CAA  N2   -143.04  30.0  2
+ FEE  Var_03    C7    C6   C5   C4    177.38  30.0  3
+ FEE  Var_04    C8    C7   C6   C5   -178.67  30.0  3
+ FEE  Var_05    C9    C8   C7   C6    179.92  30.0  3
+ FEE  Var_06    CAU   CAV  CAW  CAX   179.98  30.0  3
+ FEE  Var_07    CAT   CAU  CAV  CAW  -179.95  30.0  3
+ FEE  Var_08    CAS   CAT  CAU  CAV   179.92  30.0  3
+ FEE  Var_09    CAR   CAS  CAT  CAU  -179.93  30.0  3
+ FEE  Var_10    CAQ   CAR  CAS  CAT   179.91  30.0  3
+ FEE  Var_11    CAP   CAQ  CAR  CAS  -179.93  30.0  3
+ FEE  Var_12    CAO   CAP  CAQ  CAR   179.92  30.0  3
+ FEE  Var_13    CAN   CAO  CAP  CAQ  -179.94  30.0  3
+ FEE  Var_14    CAM   CAN  CAO  CAP   179.96  30.0  3
+ FEE  Var_15    CAL   CAM  CAN  CAO  -179.95  30.0  3
+ FEE  Var_16    CAK   CAL  CAM  CAN  -179.98  30.0  3
+ FEE  Var_17    CAJ   CAK  CAL  CAM  -180.00  30.0  3
+ FEE  Var_18    CAI   CAJ  CAK  CAL  -179.84  30.0  3
+ FEE  Var_19    CAH   CAI  CAJ  CAK   179.89  30.0  3
+ FEE  Var_20    CAG   CAH  CAI  CAJ  -179.54  30.0  3
+ FEE  Var_21    CAF   CAG  CAH  CAI   179.66  30.0  3
+ FEE  Var_22    CAE   CAF  CAG  CAH  -178.92  30.0  3
+ FEE  Var_23    CAD   CAE  CAF  CAG   179.51  30.0  3
+ FEE  Var_24    CAC   CAD  CAE  CAF  -177.53  30.0  3
+ FEE  Var_25    CAB   CAC  CAD  CAE  -179.73  30.0  3
+ FEE  Var_26    CAA   CAB  CAC  CAD  -171.99  30.0  3
+ FEE  Var_27    H9    C9   C8   C7    -59.54  30.0  3
+ FEE  Var_28    HAX   CAX  CAW  CAV    59.81  30.0  3
+ FEE  Var_29    C4A   C5M  O6A  C1A    59.23  30.0  1
+ FEE  Var_30    C4A   C3A  C2A  C1A   -55.71  30.0  1
+ FEE  Var_31    C3A   C2A  C1A  O6A    57.55  30.0  1
+ FEE  Var_32    C3A   C4A  C5M  O6A   -54.55  30.0  1
+ FEE  Var_33    C2A   C1A  O6A  C5M   -60.12  30.0  1
+ FEE  Var_34    C2A   C3A  C4A  C5M    54.09  30.0  1
+ FEE  Var_35    C5M   O6A  C1A  O1A    60.02  30.0  1
+ FEE  Var_36    C3A   C2A  C1A  O1A   -65.29  30.0  1
+ FEE  Var_37    C6A   C5M  O6A  C1A  -176.81  30.0  1
+ FEE  Var_38    O3A   C3A  C2A  C1A  -175.05  30.0  1
+ FEE  Var_39    O2A   C2A  C1A  O6A   177.87  30.0  1
+ FEE  Var_40    O4A   C4A  C5M  O6A    67.72  30.0  1
+ FEE  Var_41    O3A   C3A  C4A  C5M   176.18  30.0  1
+ FEE  Var_42    C3A   C4A  C5M  C6A  -175.94  30.0  1
+ FEE  Var_43    O2A   C2A  C3A  C4A  -178.63  30.0  1
+ FEE  Var_44    C2A   C3A  C4A  O4A   -66.64  30.0  1
+ FEE  Var_45    H5M   C5M  O6A  C1A   -59.47  30.0  1
+ FEE  Var_46    H3A   C3A  C2A  C1A    62.19  30.0  1
+ FEE  Var_47    H2A   C2A  C1A  O6A   -59.96  30.0  1
+ FEE  Var_48    H4A   C4A  C5M  O6A  -171.92  30.0  1
+ FEE  Var_49    H1AA  C1A  O6A  C5M  -178.76  30.0  1
+ FEE  Var_50    O6A   C1A  O1A  C1     73.62  30.0  3
+ FEE  Var_51    C2A   C1A  O1A  C1   -164.99  30.0  3
+ FEE  Var_52    O2A   C2A  C1A  O1A    55.03  30.0  1
+ FEE  Var_53    O5A   C6A  C5M  O6A    65.34  30.0  3
+ FEE  Var_54    O4A   C4A  C5M  C6A   -53.67  30.0  1
+ FEE  Var_55    C4A   C5M  C6A  O5A  -171.32  30.0  2
+ FEE  Var_56    O3A   C3A  C4A  O4A    55.45  30.0  1
+ FEE  Var_57    O2A   C2A  C3A  O3A    62.03  30.0  1
+ FEE  Var_58    HO2A  O2A  C2A  C1A    76.93  30.0  3
+ FEE  Var_59    H6AA  C6A  C5M  O6A  -173.56  30.0  3
+ FEE  Var_60    H6AB  C6A  C5M  O6A   -56.90  30.0  3
+ FEE  Var_61    HO4A  O4A  C4A  C5M  -171.05  30.0  3
+ FEE  Var_62    HO3A  O3A  C3A  C4A  -168.58  30.0  3
+ FEE  Var_63    HO5A  O5A  C6A  C5M   176.82  30.0  3
+ FEE  Var_64    C4    C3   C2   N2   -168.45  30.0  1
+ FEE  Var_65    O3    C3   C2   N2    -44.76  30.0  1
+ FEE  Var_66    O1A   C1   C2   N2     69.45  30.0  2
+ FEE  Var_67    C6    C5   C4   C3   -175.85  30.0  3
+ FEE  Var_68    CAA   N2   C2   C3   -147.90  30.0  1
+ FEE  Var_69    O1A   C1   C2   C3    -54.13  30.0  2
+ FEE  Var_70    C1    C2   C3   C4    -43.56  30.0  3
+ FEE  Var_71    C2    C3   C4   C5   -177.02  30.0  1
+ FEE  Var_72    O3    C3   C4   C5     59.90  30.0  1
+ FEE  Var_73    O4    C4   C5   C6     59.71  30.0  2
+ FEE  Var_74    CAA   N2   C2   C1     84.30  30.0  1
+ FEE  Var_75    O3    C3   C2   C1     80.13  30.0  1
+ FEE  Var_76    O4    C4   C3   C2    -51.80  30.0  3
+ FEE  Var_77    O4    C4   C3   O3   -174.88  30.0  3
+ FEE  Var_78    H3    C3   C2   N2     73.46  30.0  1
+ FEE  Var_79    H5    C5   C4   C3    -54.69  30.0  3
+ FEE  Var_80    H5A   C5   C4   C3     61.14  30.0  3
+ FEE  Var_81    HO4   O4   C4   C3    -68.77  30.0  3
+ FEE  Var_82    H2    C2   C3   C4     75.33  30.0  3
+ FEE  Var_83    HO3   O3   C3   C4    -94.98  30.0  3
+ FEE  Var_84    H4    C4   C5   C6    -56.74  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

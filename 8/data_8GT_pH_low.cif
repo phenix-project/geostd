@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 8GT  8GT  '8-oxoguanosine 5'-(tetrahydrogen triphosphate)'  ligand  49  33  .  2022-11-17  2022-11-17
+ 8GT  8GT  '8-oxoguanosine 5'-(tetrahydrogen triphosphate)'  ligand  49  33  .  2022-11-17  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_8GT
@@ -251,33 +252,76 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 8GT  CONST_01  N7    C8   N9   C1'  180.00   0.0  0
- 8GT  CONST_02  C5    C4   N9   C1'  180.00   0.0  0
- 8GT  CONST_03  N3    C4   N9   C1'    0.00   0.0  0
- 8GT  CONST_04  C5    N7   C8   N9     0.00   0.0  0
- 8GT  CONST_05  N7    C5   C4   N9     0.00   0.0  0
- 8GT  CONST_06  C2    N3   C4   N9   180.00   0.0  0
- 8GT  CONST_07  C5    C4   N9   C8     0.00   0.0  0
- 8GT  CONST_08  N3    C4   N9   C8   180.00   0.0  0
- 8GT  CONST_09  C4    C5   N7   C8     0.00   0.0  0
- 8GT  CONST_10  C4    N9   C8   N7     0.00   0.0  0
- 8GT  CONST_11  C2    N1   C6   C5     0.00   0.0  0
- 8GT  CONST_12  C2    N3   C4   C5     0.00   0.0  0
- 8GT  CONST_13  N3    C2   N1   C6     0.00   0.0  0
- 8GT  CONST_14  C4    N3   C2   N1     0.00   0.0  0
- 8GT  CONST_15  O8    C8   N9   C1'    0.00   0.0  0
- 8GT  CONST_16  O8    C8   N7   C5   180.00   0.0  0
- 8GT  CONST_17  N2    C2   N1   C6   180.00   0.0  0
- 8GT  CONST_18  C2    N1   C6   O6   180.00   0.0  0
- 8GT  CONST_19  C4    N3   C2   N2   180.00   0.0  0
- 8GT  CONST_20  O8    C8   N9   C4   180.00   0.0  0
- 8GT  CONST_21  HN7   N7   C8   N9   180.00   0.0  0
- 8GT  CONST_22  HN1   N1   C6   C5   180.00   0.0  0
- 8GT  CONST_23  HN21  N2   C2   N1     0.00   0.0  0
- 8GT  CONST_24  HN22  N2   C2   N1   180.00   0.0  0
- 8GT  Var_01    C4'   C5'  O5'  PA   137.54  30.0  3
- 8GT  Var_02    O1B   PB   O3B  PG    60.20  30.0  3
- 8GT  Var_03    O1A   PA   O3A  PB   171.44  30.0  3
+ 8GT  CONST_01  N7    C8   N9   C1'   180.00   0.0  0
+ 8GT  CONST_02  C5    C4   N9   C1'   180.00   0.0  0
+ 8GT  CONST_03  N3    C4   N9   C1'     0.00   0.0  0
+ 8GT  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ 8GT  CONST_05  N7    C5   C4   N9      0.00   0.0  0
+ 8GT  CONST_06  C2    N3   C4   N9    180.00   0.0  0
+ 8GT  CONST_07  C5    C4   N9   C8      0.00   0.0  0
+ 8GT  CONST_08  N3    C4   N9   C8    180.00   0.0  0
+ 8GT  CONST_09  C4    C5   N7   C8      0.00   0.0  0
+ 8GT  CONST_10  C4    N9   C8   N7      0.00   0.0  0
+ 8GT  CONST_11  C2    N1   C6   C5      0.00   0.0  0
+ 8GT  CONST_12  C2    N3   C4   C5      0.00   0.0  0
+ 8GT  CONST_13  N3    C2   N1   C6      0.00   0.0  0
+ 8GT  CONST_14  C4    N3   C2   N1      0.00   0.0  0
+ 8GT  CONST_15  O8    C8   N9   C1'     0.00   0.0  0
+ 8GT  CONST_16  O8    C8   N7   C5    180.00   0.0  0
+ 8GT  CONST_17  N2    C2   N1   C6    180.00   0.0  0
+ 8GT  CONST_18  C2    N1   C6   O6    180.00   0.0  0
+ 8GT  CONST_19  C4    N3   C2   N2    180.00   0.0  0
+ 8GT  CONST_20  O8    C8   N9   C4    180.00   0.0  0
+ 8GT  CONST_21  HN7   N7   C8   N9    180.00   0.0  0
+ 8GT  CONST_22  HN1   N1   C6   C5    180.00   0.0  0
+ 8GT  CONST_23  HN21  N2   C2   N1      0.00   0.0  0
+ 8GT  CONST_24  HN22  N2   C2   N1    180.00   0.0  0
+ 8GT  Var_01    C4'   C5'  O5'  PA    137.54  30.0  3
+ 8GT  Var_02    O1B   PB   O3B  PG     60.20  30.0  3
+ 8GT  Var_03    O1A   PA   O3A  PB    171.44  30.0  3
+ 8GT  Var_04    C2'   C1'  O4'  C4'   -14.38  30.0  1
+ 8GT  Var_05    N9    C1'  O4'  C4'  -139.00  30.0  1
+ 8GT  Var_06    C1'   C2'  C3'  C4'   -33.62  30.0  1
+ 8GT  Var_07    C2'   C3'  C4'  O4'    26.52  30.0  1
+ 8GT  Var_08    C3'   C2'  C1'  O4'    30.20  30.0  1
+ 8GT  Var_09    C8    N9   C1'  O4'    61.27  30.0  3
+ 8GT  Var_10    C4    N9   C1'  O4'  -115.52  30.0  3
+ 8GT  Var_11    C1'   O4'  C4'  C3'    -7.90  30.0  1
+ 8GT  Var_12    N9    C1'  C2'  C3'   151.95  30.0  1
+ 8GT  Var_13    C8    N9   C1'  C2'   -58.39  30.0  3
+ 8GT  Var_14    C4    N9   C1'  C2'   124.82  30.0  3
+ 8GT  Var_15    C1'   O4'  C4'  C5'   115.14  30.0  1
+ 8GT  Var_16    C2'   C3'  C4'  C5'   -93.74  30.0  1
+ 8GT  Var_17    O2'   C2'  C3'  C4'  -151.63  30.0  1
+ 8GT  Var_18    O3'   C3'  C4'  O4'   -90.00  30.0  1
+ 8GT  Var_19    O2'   C2'  C1'  O4'   151.14  30.0  1
+ 8GT  Var_20    C1'   C2'  C3'  O3'    82.11  30.0  1
+ 8GT  Var_21    N9    C1'  C2'  O2'   -87.11  30.0  1
+ 8GT  Var_22    H1'   C1'  O4'  C4'   104.38  30.0  1
+ 8GT  Var_23    H1    C2'  C3'  C4'    83.03  30.0  1
+ 8GT  Var_24    H3'   C3'  C4'  O4'   146.35  30.0  1
+ 8GT  Var_25    H4'   C4'  C3'  C2'   144.36  30.0  1
+ 8GT  Var_26    O4'   C4'  C5'  O5'   161.79  30.0  3
+ 8GT  Var_27    C3'   C4'  C5'  O5'   -79.66  30.0  3
+ 8GT  Var_28    O3'   C3'  C4'  C5'   149.74  30.0  1
+ 8GT  Var_29    O2'   C2'  C3'  O3'   -35.90  30.0  1
+ 8GT  Var_30    H2    O3'  C3'  C4'   153.31  30.0  3
+ 8GT  Var_31    H5'1  C5'  C4'  O4'   -75.50  30.0  1
+ 8GT  Var_32    H5'2  C5'  C4'  O4'    44.76  30.0  1
+ 8GT  Var_33    H2'   O2'  C2'  C3'   -91.58  30.0  3
+ 8GT  Var_34    PB    O3B  PG   O1G    98.75  30.0  3
+ 8GT  Var_35    PB    O3B  PG   O2G  -137.32  30.0  3
+ 8GT  Var_36    PB    O3B  PG   O3G   -22.23  30.0  3
+ 8GT  Var_37    PA    O3A  PB   O3B    32.49  30.0  3
+ 8GT  Var_38    PA    O3A  PB   O1B   156.16  30.0  3
+ 8GT  Var_39    PA    O3A  PB   O2B   -73.32  30.0  3
+ 8GT  Var_40    C5'   O5'  PA   O3A   -91.38  30.0  3
+ 8GT  Var_41    C5'   O5'  PA   O1A    30.67  30.0  3
+ 8GT  Var_42    C5'   O5'  PA   O2A   164.03  30.0  3
+ 8GT  Var_43    HOG2  O2G  PG   O1G   161.83  30.0  3
+ 8GT  Var_44    H3G   O3G  PG   O1G   171.86  30.0  3
+ 8GT  Var_45    HOB2  O2B  PB   O3B   162.07  30.0  3
+ 8GT  Var_46    HOA2  O2A  PA   O3A   178.61  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

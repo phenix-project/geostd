@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EQE  EQE  '(2~{S},3~{R})-4-[[(2~{S})-3-methyl-1-[[(2~{S})-3-methyl-1-oxidanylidene-1-phenylmethoxy-butan-2-yl]amino]-1-oxidanylidene-butan-2-yl]amino]-3-oxidanyl-4-oxidanylidene-2-propan-2-yl-butanoic acid'  ligand  68  33  .  2021-08-08  2021-08-08  
+ EQE  EQE  '(2~{S},3~{R})-4-[[(2~{S})-3-methyl-1-[[(2~{S})-3-methyl-1-oxidanylidene-1-phenylmethoxy-butan-2-yl]amino]-1-oxidanylidene-butan-2-yl]amino]-3-oxidanyl-4-oxidanylidene-2-propan-2-yl-butanoic acid'  ligand  68  33  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EQE
@@ -323,34 +324,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EQE  CONST_01  C64  C63  C62  C61    0.00   0.0  0
- EQE  CONST_02  C64  C65  C66  C61    0.00   0.0  0
- EQE  CONST_03  C65  C66  C61  C62    0.00   0.0  0
- EQE  CONST_04  C65  C64  C63  C62    0.00   0.0  0
- EQE  CONST_05  C66  C61  C62  C63    0.00   0.0  0
- EQE  CONST_06  C66  C65  C64  C63    0.00   0.0  0
- EQE  CONST_07  C63  C62  C61  C28  180.00   0.0  0
- EQE  CONST_08  C65  C66  C61  C28  180.00   0.0  0
- EQE  CONST_09  H33  C63  C62  C61  180.00   0.0  0
- EQE  CONST_10  H35  C65  C66  C61  180.00   0.0  0
- EQE  CONST_11  H36  C66  C61  C62  180.00   0.0  0
- EQE  CONST_12  H34  C64  C63  C62  180.00   0.0  0
- EQE  CONST_13  H32  C62  C63  C64  180.00   0.0  0
- EQE  CONST_14  C14  C18  N20  C21  180.00   0.0  0
- EQE  CONST_15  O19  C18  N20  C21    0.00   0.0  0
- EQE  CONST_16  C14  N13  C11  C9   180.00   0.0  0
- EQE  CONST_17  C14  N13  C11  O12    0.00   0.0  0
- EQE  CONST_18  H23  N13  C11  C9     0.00   0.0  0
- EQE  CONST_19  H28  N20  C18  C14    0.00   0.0  0
- EQE  Var_01    C62  C61  C28  O27   87.16  30.0  2
- EQE  Var_02    C61  C28  O27  C25  175.18  30.0  3
- EQE  Var_03    O26  C25  O27  C28    2.24  30.0  1
- EQE  Var_04    H6   C7   C5   C4    61.67  30.0  3
- EQE  Var_05    H3   C6   C5   C4    55.35  30.0  3
- EQE  Var_06    H25  C16  C15  C17  -60.44  30.0  3
- EQE  Var_07    H29  C23  C22  C21   64.67  30.0  3
- EQE  Var_08    H15  C24  C22  C21   60.20  30.0  3
- EQE  Var_09    H10  C17  C15  C14  -63.12  30.0  3
+ EQE  CONST_01  C64  C63  C62  C61     0.00   0.0  0
+ EQE  CONST_02  C64  C65  C66  C61     0.00   0.0  0
+ EQE  CONST_03  C65  C66  C61  C62     0.00   0.0  0
+ EQE  CONST_04  C65  C64  C63  C62     0.00   0.0  0
+ EQE  CONST_05  C66  C61  C62  C63     0.00   0.0  0
+ EQE  CONST_06  C66  C65  C64  C63     0.00   0.0  0
+ EQE  CONST_07  C63  C62  C61  C28   180.00   0.0  0
+ EQE  CONST_08  C65  C66  C61  C28   180.00   0.0  0
+ EQE  CONST_09  H33  C63  C62  C61   180.00   0.0  0
+ EQE  CONST_10  H35  C65  C66  C61   180.00   0.0  0
+ EQE  CONST_11  H36  C66  C61  C62   180.00   0.0  0
+ EQE  CONST_12  H34  C64  C63  C62   180.00   0.0  0
+ EQE  CONST_13  H32  C62  C63  C64   180.00   0.0  0
+ EQE  CONST_14  C14  C18  N20  C21   180.00   0.0  0
+ EQE  CONST_15  O19  C18  N20  C21     0.00   0.0  0
+ EQE  CONST_16  C14  N13  C11  C9    180.00   0.0  0
+ EQE  CONST_17  C14  N13  C11  O12     0.00   0.0  0
+ EQE  CONST_18  H23  N13  C11  C9      0.00   0.0  0
+ EQE  CONST_19  H28  N20  C18  C14     0.00   0.0  0
+ EQE  Var_01    C62  C61  C28  O27    87.16  30.0  2
+ EQE  Var_02    C61  C28  O27  C25   175.18  30.0  3
+ EQE  Var_03    O26  C25  O27  C28     2.24  30.0  1
+ EQE  Var_04    H6   C7   C5   C4     61.67  30.0  3
+ EQE  Var_05    H3   C6   C5   C4     55.35  30.0  3
+ EQE  Var_06    H25  C16  C15  C17   -60.44  30.0  3
+ EQE  Var_07    H29  C23  C22  C21    64.67  30.0  3
+ EQE  Var_08    H15  C24  C22  C21    60.20  30.0  3
+ EQE  Var_09    H10  C17  C15  C14   -63.12  30.0  3
+ EQE  Var_10    O12  C11  C9   C4    -99.49  30.0  3
+ EQE  Var_11    N13  C11  C9   C4     79.10  30.0  3
+ EQE  Var_12    C11  C9   C4   C5   -172.63  30.0  1
+ EQE  Var_13    O10  C9   C4   C5     63.81  30.0  1
+ EQE  Var_14    O3   C1   C4   C5    -71.09  30.0  2
+ EQE  Var_15    OXT  C1   C4   C5    108.29  30.0  2
+ EQE  Var_16    C9   C4   C5   C6     57.53  30.0  3
+ EQE  Var_17    C1   C4   C5   C6    179.58  30.0  3
+ EQE  Var_18    C9   C4   C5   C7   -179.82  30.0  3
+ EQE  Var_19    C1   C4   C5   C7    -57.76  30.0  3
+ EQE  Var_20    C11  N13  C14  C15   104.72  30.0  2
+ EQE  Var_21    N20  C18  C14  C15   -77.61  30.0  3
+ EQE  Var_22    O19  C18  C14  C15   100.72  30.0  3
+ EQE  Var_23    N13  C14  C15  C17    58.81  30.0  3
+ EQE  Var_24    C18  C14  C15  C17   -63.61  30.0  3
+ EQE  Var_25    C18  N20  C21  C22   124.50  30.0  3
+ EQE  Var_26    O26  C25  C21  C22    26.49  30.0  3
+ EQE  Var_27    O27  C25  C21  C22  -156.82  30.0  3
+ EQE  Var_28    N20  C21  C22  C24  -175.14  30.0  2
+ EQE  Var_29    C25  C21  C22  C24    64.16  30.0  2
+ EQE  Var_30    C11  C9   C4   C1     64.62  30.0  1
+ EQE  Var_31    O10  C9   C4   C1    -58.93  30.0  1
+ EQE  Var_32    C9   C4   C1   O3     52.79  30.0  2
+ EQE  Var_33    OXT  C1   C4   C9   -127.83  30.0  2
+ EQE  Var_34    O12  C11  C9   O10    24.62  30.0  3
+ EQE  Var_35    N13  C11  C9   O10  -156.80  30.0  3
+ EQE  Var_36    C18  C14  N13  C11  -132.22  30.0  3
+ EQE  Var_37    C16  C15  C14  N13   -65.80  30.0  1
+ EQE  Var_38    N20  C18  C14  N13   157.72  30.0  3
+ EQE  Var_39    O19  C18  C14  N13   -23.95  30.0  3
+ EQE  Var_40    C16  C15  C14  C18   171.78  30.0  1
+ EQE  Var_41    C25  C21  N20  C18  -110.72  30.0  3
+ EQE  Var_42    C23  C22  C21  N20   -53.37  30.0  3
+ EQE  Var_43    O26  C25  C21  N20   -98.00  30.0  3
+ EQE  Var_44    O27  C25  C21  N20    78.69  30.0  3
+ EQE  Var_45    C23  C22  C21  C25  -174.07  30.0  3
+ EQE  Var_46    H22  O10  C9   C4     35.27  30.0  3
+ EQE  Var_47    H21  C9   C4   C5    -56.03  30.0  1
+ EQE  Var_48    H1   C4   C5   C6    -61.62  30.0  3
+ EQE  Var_49    H24  C14  C15  C17   177.70  30.0  3
+ EQE  Var_50    H13  C21  C22  C24   -56.82  30.0  2
+ EQE  Var_51    H2   C5   C4   C1     60.53  30.0  2
+ EQE  Var_52    H9   C15  C14  N13   177.28  30.0  1
+ EQE  Var_53    H14  C22  C21  N20    65.59  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

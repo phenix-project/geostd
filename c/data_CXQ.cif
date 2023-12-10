@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CXQ  CXQ  (1~{S},5~{R})-3-(diphenylmethyl)oxy-8-methyl-8-azabicyclo[3.2.1]octane  ligand  48  23  .  2021-08-07  2021-08-07  
+ CXQ  CXQ  (1~{S},5~{R})-3-(diphenylmethyl)oxy-8-methyl-8-azabicyclo[3.2.1]octane  ligand  48  23  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CXQ
@@ -258,37 +259,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CXQ  CONST_01  C26  C21  C9   C5     0.00   0.0  0
- CXQ  CONST_02  C26  C23  C19  C5     0.00   0.0  0
- CXQ  CONST_03  C21  C26  C23  C19    0.00   0.0  0
- CXQ  CONST_04  C21  C9   C5   C19    0.00   0.0  0
- CXQ  CONST_05  C9   C21  C26  C23    0.00   0.0  0
- CXQ  CONST_06  C9   C5   C19  C23    0.00   0.0  0
- CXQ  CONST_07  C24  C25  C22  C10    0.00   0.0  0
- CXQ  CONST_08  C24  C18  C4   C10    0.00   0.0  0
- CXQ  CONST_09  C18  C4   C10  C22    0.00   0.0  0
- CXQ  CONST_10  C18  C24  C25  C22    0.00   0.0  0
- CXQ  CONST_11  C4   C10  C22  C25    0.00   0.0  0
- CXQ  CONST_12  C4   C18  C24  C25    0.00   0.0  0
- CXQ  CONST_13  C21  C9   C5   C1   180.00   0.0  0
- CXQ  CONST_14  C23  C19  C5   C1   180.00   0.0  0
- CXQ  CONST_15  C22  C10  C4   C1   180.00   0.0  0
- CXQ  CONST_16  C24  C18  C4   C1   180.00   0.0  0
- CXQ  CONST_17  H20  C21  C9   C5   180.00   0.0  0
- CXQ  CONST_18  H18  C23  C19  C5   180.00   0.0  0
- CXQ  CONST_19  H19  C26  C23  C19  180.00   0.0  0
- CXQ  CONST_20  H21  C9   C5   C19  180.00   0.0  0
- CXQ  CONST_21  H17  C19  C23  C26  180.00   0.0  0
- CXQ  CONST_22  H24  C25  C22  C10  180.00   0.0  0
- CXQ  CONST_23  H26  C18  C4   C10  180.00   0.0  0
- CXQ  CONST_24  H25  C24  C25  C22  180.00   0.0  0
- CXQ  CONST_25  H22  C10  C22  C25  180.00   0.0  0
- CXQ  CONST_26  H23  C22  C25  C24  180.00   0.0  0
- CXQ  Var_01    C2   C13  C12  C3    -0.69  30.0  3
- CXQ  Var_02    C10  C4   C1   C5   -82.06  30.0  2
- CXQ  Var_03    C4   C1   C5   C19   99.50  30.0  2
- CXQ  Var_04    C5   C1   O1   C6    72.32  30.0  2
- CXQ  Var_05    H1   C17  N1   C3    61.23  30.0  3
+ CXQ  CONST_01  C26  C21  C9   C5      0.00   0.0  0
+ CXQ  CONST_02  C26  C23  C19  C5      0.00   0.0  0
+ CXQ  CONST_03  C21  C26  C23  C19     0.00   0.0  0
+ CXQ  CONST_04  C21  C9   C5   C19     0.00   0.0  0
+ CXQ  CONST_05  C9   C21  C26  C23     0.00   0.0  0
+ CXQ  CONST_06  C9   C5   C19  C23     0.00   0.0  0
+ CXQ  CONST_07  C24  C25  C22  C10     0.00   0.0  0
+ CXQ  CONST_08  C24  C18  C4   C10     0.00   0.0  0
+ CXQ  CONST_09  C18  C4   C10  C22     0.00   0.0  0
+ CXQ  CONST_10  C18  C24  C25  C22     0.00   0.0  0
+ CXQ  CONST_11  C4   C10  C22  C25     0.00   0.0  0
+ CXQ  CONST_12  C4   C18  C24  C25     0.00   0.0  0
+ CXQ  CONST_13  C21  C9   C5   C1    180.00   0.0  0
+ CXQ  CONST_14  C23  C19  C5   C1    180.00   0.0  0
+ CXQ  CONST_15  C22  C10  C4   C1    180.00   0.0  0
+ CXQ  CONST_16  C24  C18  C4   C1    180.00   0.0  0
+ CXQ  CONST_17  H20  C21  C9   C5    180.00   0.0  0
+ CXQ  CONST_18  H18  C23  C19  C5    180.00   0.0  0
+ CXQ  CONST_19  H19  C26  C23  C19   180.00   0.0  0
+ CXQ  CONST_20  H21  C9   C5   C19   180.00   0.0  0
+ CXQ  CONST_21  H17  C19  C23  C26   180.00   0.0  0
+ CXQ  CONST_22  H24  C25  C22  C10   180.00   0.0  0
+ CXQ  CONST_23  H26  C18  C4   C10   180.00   0.0  0
+ CXQ  CONST_24  H25  C24  C25  C22   180.00   0.0  0
+ CXQ  CONST_25  H22  C10  C22  C25   180.00   0.0  0
+ CXQ  CONST_26  H23  C22  C25  C24   180.00   0.0  0
+ CXQ  Var_01    C2   C13  C12  C3     -0.69  30.0  3
+ CXQ  Var_02    C10  C4   C1   C5    -82.06  30.0  2
+ CXQ  Var_03    C4   C1   C5   C19    99.50  30.0  2
+ CXQ  Var_04    C5   C1   O1   C6     72.32  30.0  2
+ CXQ  Var_05    H1   C17  N1   C3     61.23  30.0  3
+ CXQ  Var_06    C6   C8   C3   N1    -58.53  30.0  1
+ CXQ  Var_07    C13  C12  C3   N1     27.91  30.0  3
+ CXQ  Var_08    C6   C7   C2   N1     58.64  30.0  1
+ CXQ  Var_09    C12  C13  C2   N1    -26.74  30.0  3
+ CXQ  Var_10    C7   C6   C8   C3     38.03  30.0  1
+ CXQ  Var_11    C7   C2   N1   C3    -76.23  30.0  1
+ CXQ  Var_12    C13  C2   N1   C3     44.53  30.0  1
+ CXQ  Var_13    C6   C8   C3   C12    56.96  30.0  1
+ CXQ  Var_14    C2   N1   C3   C12   -45.00  30.0  1
+ CXQ  Var_15    C7   C2   C13  C12    90.20  30.0  3
+ CXQ  Var_16    C6   C7   C2   C13   -56.92  30.0  1
+ CXQ  Var_17    C8   C3   C12  C13   -88.93  30.0  3
+ CXQ  Var_18    C8   C6   C7   C2    -38.00  30.0  1
+ CXQ  Var_19    C8   C3   N1   C2     75.97  30.0  1
+ CXQ  Var_20    C8   C3   N1   C17  -162.38  30.0  1
+ CXQ  Var_21    C12  C3   N1   C17    76.64  30.0  1
+ CXQ  Var_22    C7   C2   N1   C17   162.16  30.0  1
+ CXQ  Var_23    C13  C2   N1   C17   -77.08  30.0  1
+ CXQ  Var_24    O1   C6   C8   C3    -84.68  30.0  1
+ CXQ  Var_25    O1   C6   C7   C2     82.36  30.0  1
+ CXQ  Var_26    H11  C8   C3   N1     61.30  30.0  1
+ CXQ  Var_27    H12  C8   C3   N1    178.05  30.0  1
+ CXQ  Var_28    H6   C12  C3   N1    150.13  30.0  3
+ CXQ  Var_29    H7   C12  C3   N1    -90.63  30.0  3
+ CXQ  Var_30    H14  C7   C2   N1   -176.95  30.0  1
+ CXQ  Var_31    H15  C7   C2   N1    -61.14  30.0  1
+ CXQ  Var_32    H8   C13  C2   N1   -148.65  30.0  3
+ CXQ  Var_33    H9   C13  C2   N1     92.18  30.0  3
+ CXQ  Var_34    H13  C6   C8   C3    157.45  30.0  1
+ CXQ  Var_35    H10  C2   N1   C3    165.42  30.0  1
+ CXQ  Var_36    H5   C3   C12  C13   147.46  30.0  3
+ CXQ  Var_37    C1   O1   C6   C8   -158.12  30.0  1
+ CXQ  Var_38    C1   O1   C6   C7     79.52  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

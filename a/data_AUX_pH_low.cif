@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AUX  AUX  '(E,2S,3R,4R)-4-methyl-2-(methylamino)-3-oxidanyl-10-quinolin-1-ium-1-yl-dec-6-enoic acid'  ligand  55  26  .  2021-08-06  2023-02-16
+ AUX  AUX  '(E,2S,3R,4R)-4-methyl-2-(methylamino)-3-oxidanyl-10-quinolin-1-ium-1-yl-dec-6-enoic acid'  ligand  55  26  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_AUX
@@ -274,42 +275,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AUX  CONST_01  CAG  CAJ  CAC  CAB   180.00   0.0  0
- AUX  CONST_02  CAK  CAJ  CAC  CAB     0.00   0.0  0
- AUX  CONST_03  CAK  NAL  CAD  CAB     0.00   0.0  0
- AUX  CONST_04  NAL  CAD  CAB  CAC     0.00   0.0  0
- AUX  CONST_05  CAE  CAG  CAJ  CAC   180.00   0.0  0
- AUX  CONST_06  CAH  CAK  CAJ  CAC   180.00   0.0  0
- AUX  CONST_07  NAL  CAK  CAJ  CAC     0.00   0.0  0
- AUX  CONST_08  CAJ  CAC  CAB  CAD     0.00   0.0  0
- AUX  CONST_09  CAH  CAK  NAL  CAD   180.00   0.0  0
- AUX  CONST_10  CAJ  CAK  NAL  CAD     0.00   0.0  0
- AUX  CONST_11  CAK  CAH  CAF  CAE     0.00   0.0  0
- AUX  CONST_12  CAK  CAJ  CAG  CAE     0.00   0.0  0
- AUX  CONST_13  CAJ  CAG  CAE  CAF     0.00   0.0  0
- AUX  CONST_14  CAJ  CAK  CAH  CAF     0.00   0.0  0
- AUX  CONST_15  NAL  CAK  CAH  CAF   180.00   0.0  0
- AUX  CONST_16  CAH  CAF  CAE  CAG     0.00   0.0  0
- AUX  CONST_17  CAH  CAK  CAJ  CAG     0.00   0.0  0
- AUX  CONST_18  NAL  CAK  CAJ  CAG   180.00   0.0  0
- AUX  CONST_19  CAI  NAL  CAD  CAB   180.00   0.0  0
- AUX  CONST_20  CAI  NAL  CAK  CAH     0.00   0.0  0
- AUX  CONST_21  CAJ  CAK  NAL  CAI   180.00   0.0  0
- AUX  CONST_22  HAD  CAD  CAB  CAC   180.00   0.0  0
- AUX  CONST_23  HAG  CAG  CAJ  CAC     0.00   0.0  0
- AUX  CONST_24  HAC  CAC  CAB  CAD   180.00   0.0  0
- AUX  CONST_25  HAH  CAH  CAF  CAE   180.00   0.0  0
- AUX  CONST_26  HAF  CAF  CAE  CAG   180.00   0.0  0
- AUX  CONST_27  HAE  CAE  CAF  CAH   180.00   0.0  0
- AUX  CONST_28  HAB  CAB  CAC  CAJ   180.00   0.0  0
- AUX  CONST_29  HXT  OXT  C    O       0.00   0.0  0
- AUX  Var_01    CAD  NAL  CAI  CAA   -96.50  30.0  2
- AUX  Var_02    NAL  CAI  CAA  CH   -177.42  30.0  3
- AUX  Var_03    CD2  CE   CZ   CH   -177.51   0.0  2
- AUX  Var_04    CAA  CH   CZ   CE    118.36  30.0  2
- AUX  Var_05    CG2  CD2  CE   CZ    115.62  30.0  3
- AUX  Var_06    CAI  CAA  CH   CZ   -176.97  30.0  3
- AUX  Var_07    HNA  CN   N    CA   -179.77  30.0  3
+ AUX  CONST_01  CAG   CAJ  CAC  CAB   180.00   0.0  0
+ AUX  CONST_02  CAK   CAJ  CAC  CAB     0.00   0.0  0
+ AUX  CONST_03  CAK   NAL  CAD  CAB     0.00   0.0  0
+ AUX  CONST_04  NAL   CAD  CAB  CAC     0.00   0.0  0
+ AUX  CONST_05  CAE   CAG  CAJ  CAC   180.00   0.0  0
+ AUX  CONST_06  CAH   CAK  CAJ  CAC   180.00   0.0  0
+ AUX  CONST_07  NAL   CAK  CAJ  CAC     0.00   0.0  0
+ AUX  CONST_08  CAJ   CAC  CAB  CAD     0.00   0.0  0
+ AUX  CONST_09  CAH   CAK  NAL  CAD   180.00   0.0  0
+ AUX  CONST_10  CAJ   CAK  NAL  CAD     0.00   0.0  0
+ AUX  CONST_11  CAK   CAH  CAF  CAE     0.00   0.0  0
+ AUX  CONST_12  CAK   CAJ  CAG  CAE     0.00   0.0  0
+ AUX  CONST_13  CAJ   CAG  CAE  CAF     0.00   0.0  0
+ AUX  CONST_14  CAJ   CAK  CAH  CAF     0.00   0.0  0
+ AUX  CONST_15  NAL   CAK  CAH  CAF   180.00   0.0  0
+ AUX  CONST_16  CAH   CAF  CAE  CAG     0.00   0.0  0
+ AUX  CONST_17  CAH   CAK  CAJ  CAG     0.00   0.0  0
+ AUX  CONST_18  NAL   CAK  CAJ  CAG   180.00   0.0  0
+ AUX  CONST_19  CAI   NAL  CAD  CAB   180.00   0.0  0
+ AUX  CONST_20  CAI   NAL  CAK  CAH     0.00   0.0  0
+ AUX  CONST_21  CAJ   CAK  NAL  CAI   180.00   0.0  0
+ AUX  CONST_22  HAD   CAD  CAB  CAC   180.00   0.0  0
+ AUX  CONST_23  HAG   CAG  CAJ  CAC     0.00   0.0  0
+ AUX  CONST_24  HAC   CAC  CAB  CAD   180.00   0.0  0
+ AUX  CONST_25  HAH   CAH  CAF  CAE   180.00   0.0  0
+ AUX  CONST_26  HAF   CAF  CAE  CAG   180.00   0.0  0
+ AUX  CONST_27  HAE   CAE  CAF  CAH   180.00   0.0  0
+ AUX  CONST_28  HAB   CAB  CAC  CAJ   180.00   0.0  0
+ AUX  CONST_29  HXT   OXT  C    O       0.00   0.0  0
+ AUX  Var_01    CAD   NAL  CAI  CAA   -96.50  30.0  2
+ AUX  Var_02    NAL   CAI  CAA  CH   -177.42  30.0  3
+ AUX  Var_03    CD2   CE   CZ   CH   -177.51   0.0  2
+ AUX  Var_04    CAA   CH   CZ   CE    118.36  30.0  2
+ AUX  Var_05    CG2   CD2  CE   CZ    115.62  30.0  3
+ AUX  Var_06    CAI   CAA  CH   CZ   -176.97  30.0  3
+ AUX  Var_07    HNA   CN   N    CA   -179.77  30.0  3
+ AUX  Var_08    CN    N    CA   C     -75.15  30.0  2
+ AUX  Var_09    OG1   CB   CA   C     -50.56  30.0  3
+ AUX  Var_10    CG2   CB   CA   C    -176.97  30.0  3
+ AUX  Var_11    O     C    CA   N     -12.98  30.0  2
+ AUX  Var_12    OXT   C    CA   N     167.70  30.0  2
+ AUX  Var_13    OG1   CB   CA   N      75.03  30.0  3
+ AUX  Var_14    CG2   CB   CA   N     -51.39  30.0  3
+ AUX  Var_15    CB    CA   C    O     112.03  30.0  3
+ AUX  Var_16    CD1   CG2  CB   CA    -51.10  30.0  3
+ AUX  Var_17    CD2   CG2  CB   CA   -174.93  30.0  3
+ AUX  Var_18    OXT   C    CA   CB    -67.29  30.0  2
+ AUX  Var_19    CN    N    CA   CB    161.97  30.0  2
+ AUX  Var_20    CE    CD2  CG2  CB   -167.60  30.0  1
+ AUX  Var_21    CD1   CG2  CD2  CE     68.51  30.0  3
+ AUX  Var_22    CD1   CG2  CB   OG1  -176.35  30.0  3
+ AUX  Var_23    CD2   CG2  CB   OG1    59.83  30.0  3
+ AUX  Var_24    HN    N    CA   C      48.83  30.0  2
+ AUX  Var_25    HB    CB   CA   C      64.03  30.0  3
+ AUX  Var_26    HA    CA   C    O    -132.22  30.0  3
+ AUX  Var_27    HOG1  OG1  CB   CA    -79.29  30.0  3
+ AUX  Var_28    HG2   CG2  CB   CA     67.27  30.0  3
+ AUX  Var_29    HD1   CD1  CG2  CB    -54.94  30.0  3
+ AUX  Var_30    HD1A  CD1  CG2  CB     66.00  30.0  3
+ AUX  Var_31    HD1B  CD1  CG2  CB   -174.70  30.0  3
+ AUX  Var_32    HD2   CD2  CG2  CB     70.46  30.0  1
+ AUX  Var_33    HD2A  CD2  CG2  CB    -45.95  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

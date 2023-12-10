@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 985  985  '(2E)-3-{3-[6-(4-methyl-1,4-diazepan-1-yl)pyrazin-2-yl]phenyl}prop-2-enoic acid'  ligand  46  25  .  2021-08-06  2021-08-06  
+ 985  985  '(2E)-3-{3-[6-(4-methyl-1,4-diazepan-1-yl)pyrazin-2-yl]phenyl}prop-2-enoic acid'  ligand  46  25  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_985
@@ -242,39 +243,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 985  CONST_01  C16  C12  C13  C1    180.00   0.0  0
- 985  CONST_02  C15  C17  C13  C1    180.00   0.0  0
- 985  CONST_03  C4   C3   N2   C1      0.00   0.0  0
- 985  CONST_04  C4   N5   C6   C1      0.00   0.0  0
- 985  CONST_05  C12  C13  C1   N2      0.00   0.0  0
- 985  CONST_06  C17  C13  C1   N2    180.00   0.0  0
- 985  CONST_07  N5   C6   C1   N2      0.00   0.0  0
- 985  CONST_08  N5   C4   C3   N2      0.00   0.0  0
- 985  CONST_09  C13  C1   N2   C3    180.00   0.0  0
- 985  CONST_10  C6   C1   N2   C3      0.00   0.0  0
- 985  CONST_11  C6   N5   C4   C3      0.00   0.0  0
- 985  CONST_12  C13  C1   C6   N5    180.00   0.0  0
- 985  CONST_13  C12  C13  C1   C6    180.00   0.0  0
- 985  CONST_14  C17  C13  C1   C6      0.00   0.0  0
- 985  CONST_15  C13  C12  C16  C10     0.00   0.0  0
- 985  CONST_16  C13  C17  C15  C10     0.00   0.0  0
- 985  CONST_17  C17  C15  C10  C16     0.00   0.0  0
- 985  CONST_18  C17  C13  C12  C16     0.00   0.0  0
- 985  CONST_19  C15  C10  C16  C12     0.00   0.0  0
- 985  CONST_20  C15  C17  C13  C12     0.00   0.0  0
- 985  CONST_21  N1   C3   N2   C1    180.00   0.0  0
- 985  CONST_22  N1   C3   C4   N5    180.00   0.0  0
- 985  CONST_23  C18  C15  C10  C16   180.00   0.0  0
- 985  CONST_24  C18  C15  C17  C13   180.00   0.0  0
- 985  CONST_25  H12  C12  C13  C1      0.00   0.0  0
- 985  CONST_26  H17  C17  C13  C1      0.00   0.0  0
- 985  CONST_27  H6   C6   C1   N2    180.00   0.0  0
- 985  CONST_28  H4   C4   C3   N2    180.00   0.0  0
- 985  CONST_29  H10  C10  C16  C12   180.00   0.0  0
- 985  CONST_30  H16  C16  C12  C13   180.00   0.0  0
- 985  Var_01    C19  C18  C15  C10    -3.25  30.0  3
- 985  Var_02    C9   C19  C18  C15  -179.54   0.0  2
- 985  Var_03    O2   C9   C19  C18     0.15  30.0  2
+ 985  CONST_01  C16   C12  C13  C1    180.00   0.0  0
+ 985  CONST_02  C15   C17  C13  C1    180.00   0.0  0
+ 985  CONST_03  C4    C3   N2   C1      0.00   0.0  0
+ 985  CONST_04  C4    N5   C6   C1      0.00   0.0  0
+ 985  CONST_05  C12   C13  C1   N2      0.00   0.0  0
+ 985  CONST_06  C17   C13  C1   N2    180.00   0.0  0
+ 985  CONST_07  N5    C6   C1   N2      0.00   0.0  0
+ 985  CONST_08  N5    C4   C3   N2      0.00   0.0  0
+ 985  CONST_09  C13   C1   N2   C3    180.00   0.0  0
+ 985  CONST_10  C6    C1   N2   C3      0.00   0.0  0
+ 985  CONST_11  C6    N5   C4   C3      0.00   0.0  0
+ 985  CONST_12  C13   C1   C6   N5    180.00   0.0  0
+ 985  CONST_13  C12   C13  C1   C6    180.00   0.0  0
+ 985  CONST_14  C17   C13  C1   C6      0.00   0.0  0
+ 985  CONST_15  C13   C12  C16  C10     0.00   0.0  0
+ 985  CONST_16  C13   C17  C15  C10     0.00   0.0  0
+ 985  CONST_17  C17   C15  C10  C16     0.00   0.0  0
+ 985  CONST_18  C17   C13  C12  C16     0.00   0.0  0
+ 985  CONST_19  C15   C10  C16  C12     0.00   0.0  0
+ 985  CONST_20  C15   C17  C13  C12     0.00   0.0  0
+ 985  CONST_21  N1    C3   N2   C1    180.00   0.0  0
+ 985  CONST_22  N1    C3   C4   N5    180.00   0.0  0
+ 985  CONST_23  C18   C15  C10  C16   180.00   0.0  0
+ 985  CONST_24  C18   C15  C17  C13   180.00   0.0  0
+ 985  CONST_25  H12   C12  C13  C1      0.00   0.0  0
+ 985  CONST_26  H17   C17  C13  C1      0.00   0.0  0
+ 985  CONST_27  H6    C6   C1   N2    180.00   0.0  0
+ 985  CONST_28  H4    C4   C3   N2    180.00   0.0  0
+ 985  CONST_29  H10   C10  C16  C12   180.00   0.0  0
+ 985  CONST_30  H16   C16  C12  C13   180.00   0.0  0
+ 985  Var_01    C19   C18  C15  C10    -3.25  30.0  3
+ 985  Var_02    C9    C19  C18  C15  -179.54   0.0  2
+ 985  Var_03    O2    C9   C19  C18     0.15  30.0  2
+ 985  Var_04    C2    N1   C3   N2    -16.83  30.0  2
+ 985  Var_05    C7    N1   C3   N2   -173.97  30.0  2
+ 985  Var_06    C11   C2   N1   C3    -68.48  30.0  1
+ 985  Var_07    C14   C7   N1   C3     83.82  30.0  1
+ 985  Var_08    C2    N1   C3   C4    164.62  30.0  2
+ 985  Var_09    C7    N1   C3   C4      7.48  30.0  2
+ 985  Var_10    N3    C11  C2   N1    -34.31  30.0  1
+ 985  Var_11    C5    C14  C7   N1     50.28  30.0  1
+ 985  Var_12    C14   C7   N1   C2    -74.25  30.0  1
+ 985  Var_13    C5    N3   C11  C2    -46.71  30.0  1
+ 985  Var_14    C7    N1   C2   C11    90.12  30.0  1
+ 985  Var_15    C14   C5   N3   C11    92.63  30.0  1
+ 985  Var_16    C7    C14  C5   N3    -68.86  30.0  1
+ 985  Var_17    C8    N3   C11  C2   -176.90  30.0  1
+ 985  Var_18    C8    N3   C5   C14  -138.54  30.0  1
+ 985  Var_19    H2    C2   N1   C3     54.44  30.0  1
+ 985  Var_20    H2A   C2   N1   C3    169.81  30.0  1
+ 985  Var_21    H7    C7   N1   C3   -155.16  30.0  1
+ 985  Var_22    H7A   C7   N1   C3    -40.85  30.0  1
+ 985  Var_23    H11   C11  C2   N1     86.09  30.0  1
+ 985  Var_24    H11A  C11  C2   N1   -158.84  30.0  1
+ 985  Var_25    H14   C14  C7   N1    -71.55  30.0  1
+ 985  Var_26    H14A  C14  C7   N1    172.14  30.0  1
+ 985  Var_27    H5    C5   N3   C11  -149.09  30.0  1
+ 985  Var_28    H5A   C5   N3   C11   -32.87  30.0  1
+ 985  Var_29    H8    C8   N3   C11    64.99  30.0  3
+ 985  Var_30    H8A   C8   N3   C11  -173.68  30.0  3
+ 985  Var_31    H8B   C8   N3   C11   -55.38  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

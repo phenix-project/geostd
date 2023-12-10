@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RPR  RPR  'methyl (2R,3R)-3-({[3'-(aminomethyl)biphenyl-4-yl]carbonyl}amino)-2-(3-carbamimidoylbenzyl)butanoate'  ligand  64  34  .  2022-03-23  2022-03-23
+ RPR  RPR  'methyl (2R,3R)-3-({[3'-(aminomethyl)biphenyl-4-yl]carbonyl}amino)-2-(3-carbamimidoylbenzyl)butanoate'  ligand  64  34  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RPR
@@ -306,58 +307,81 @@ _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  RPR  CONST_01  C4    C3   C2   C1      0.00   0.0  0
- RPR  CONST_04  C4    C5   C6   C1      0.00   0.0  0
- RPR  CONST_05  C5    C6   C1   C2      0.00   0.0  0
- RPR  CONST_06  C5    C4   C3   C2      0.00   0.0  0
- RPR  CONST_07  C9    C10  C11  C2    180.00   0.0  0
- RPR  CONST_08  C7    C12  C11  C2    180.00   0.0  0
- RPR  CONST_09  C6    C1   C2   C3      0.00   0.0  0
- RPR  CONST_12  C6    C5   C4   C3      0.00   0.0  0
- RPR  CONST_13  C11   C2   C3   C4    180.00   0.0  0
- RPR  CONST_14  C11   C2   C1   C6    180.00   0.0  0
- RPR  CONST_15  C10   C9   C8   C7      0.00   0.0  0
- RPR  CONST_16  C10   C11  C12  C7      0.00   0.0  0
- RPR  CONST_17  C11   C12  C7   C8      0.00   0.0  0
- RPR  CONST_18  C11   C10  C9   C8      0.00   0.0  0
- RPR  CONST_19  C12   C7   C8   C9      0.00   0.0  0
- RPR  CONST_20  C12   C11  C10  C9      0.00   0.0  0
- RPR  CONST_21  C26   C25  C24  C23     0.00   0.0  0
- RPR  CONST_22  C26   C27  C28  C23     0.00   0.0  0
- RPR  CONST_23  C27   C28  C23  C24     0.00   0.0  0
- RPR  CONST_24  C27   C26  C25  C24     0.00   0.0  0
- RPR  CONST_25  C28   C23  C24  C25     0.00   0.0  0
- RPR  CONST_26  C28   C27  C26  C25     0.00   0.0  0
- RPR  CONST_27  C21   C6   C1   C2    180.00   0.0  0
- RPR  CONST_28  C21   C6   C5   C4    180.00   0.0  0
- RPR  CONST_29  C13   C8   C9   C10   180.00   0.0  0
- RPR  CONST_30  C13   C8   C7   C12   180.00   0.0  0
- RPR  CONST_31  C24   C23  C28  C20   180.00   0.0  0
- RPR  CONST_32  C26   C27  C28  C20   180.00   0.0  0
- RPR  CONST_33  C29   C24  C25  C26   180.00   0.0  0
- RPR  CONST_34  C29   C24  C23  C28   180.00   0.0  0
- RPR  CONST_35  H31   C3   C2   C1    180.00   0.0  0
- RPR  CONST_36  H51   C5   C6   C1    180.00   0.0  0
- RPR  CONST_37  H41   C4   C3   C2    180.00   0.0  0
- RPR  CONST_38  H101  C10  C11  C2      0.00   0.0  0
- RPR  CONST_39  H121  C12  C11  C2      0.00   0.0  0
- RPR  CONST_40  H11   C1   C2   C3    180.00   0.0  0
- RPR  CONST_41  H91   C9   C8   C7    180.00   0.0  0
- RPR  CONST_42  H71   C7   C8   C9    180.00   0.0  0
- RPR  CONST_43  H251  C25  C24  C23   180.00   0.0  0
- RPR  CONST_44  H271  C27  C28  C23   180.00   0.0  0
- RPR  CONST_45  H261  C26  C25  C24   180.00   0.0  0
- RPR  CONST_46  H231  C23  C24  C25   180.00   0.0  0
- RPR  CONST_47  C15   N14  C13  C8    180.00   0.0  0
- RPR  CONST_48  H141  N14  C13  C8      0.00   0.0  0
- RPR  CONST_49  H301  N30  C29  C24   180.00   0.0  0
- RPR  CONST_51  H311  N31  C29  C24   180.00   0.0  0
- RPR  CONST_52  O33   C13  N14  C15     0.00   0.0  0
+ RPR  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ RPR  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ RPR  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ RPR  CONST_05  C9    C10  C11  C2    180.00   0.0  0
+ RPR  CONST_06  C7    C12  C11  C2    180.00   0.0  0
+ RPR  CONST_07  C6    C1   C2   C3      0.00   0.0  0
+ RPR  CONST_08  C6    C5   C4   C3      0.00   0.0  0
+ RPR  CONST_09  C11   C2   C3   C4    180.00   0.0  0
+ RPR  CONST_10  C11   C2   C1   C6    180.00   0.0  0
+ RPR  CONST_11  C10   C9   C8   C7      0.00   0.0  0
+ RPR  CONST_12  C10   C11  C12  C7      0.00   0.0  0
+ RPR  CONST_13  C11   C12  C7   C8      0.00   0.0  0
+ RPR  CONST_14  C11   C10  C9   C8      0.00   0.0  0
+ RPR  CONST_15  C12   C7   C8   C9      0.00   0.0  0
+ RPR  CONST_16  C12   C11  C10  C9      0.00   0.0  0
+ RPR  CONST_17  C26   C25  C24  C23     0.00   0.0  0
+ RPR  CONST_18  C26   C27  C28  C23     0.00   0.0  0
+ RPR  CONST_19  C27   C28  C23  C24     0.00   0.0  0
+ RPR  CONST_20  C27   C26  C25  C24     0.00   0.0  0
+ RPR  CONST_21  C28   C23  C24  C25     0.00   0.0  0
+ RPR  CONST_22  C28   C27  C26  C25     0.00   0.0  0
+ RPR  CONST_23  C21   C6   C1   C2    180.00   0.0  0
+ RPR  CONST_24  C21   C6   C5   C4    180.00   0.0  0
+ RPR  CONST_25  C13   C8   C9   C10   180.00   0.0  0
+ RPR  CONST_26  C13   C8   C7   C12   180.00   0.0  0
+ RPR  CONST_27  C24   C23  C28  C20   180.00   0.0  0
+ RPR  CONST_28  C26   C27  C28  C20   180.00   0.0  0
+ RPR  CONST_29  C29   C24  C25  C26   180.00   0.0  0
+ RPR  CONST_30  C29   C24  C23  C28   180.00   0.0  0
+ RPR  CONST_31  H31   C3   C2   C1    180.00   0.0  0
+ RPR  CONST_32  H51   C5   C6   C1    180.00   0.0  0
+ RPR  CONST_33  H41   C4   C3   C2    180.00   0.0  0
+ RPR  CONST_34  H101  C10  C11  C2      0.00   0.0  0
+ RPR  CONST_35  H121  C12  C11  C2      0.00   0.0  0
+ RPR  CONST_36  H11   C1   C2   C3    180.00   0.0  0
+ RPR  CONST_37  H91   C9   C8   C7    180.00   0.0  0
+ RPR  CONST_38  H71   C7   C8   C9    180.00   0.0  0
+ RPR  CONST_39  H251  C25  C24  C23   180.00   0.0  0
+ RPR  CONST_40  H271  C27  C28  C23   180.00   0.0  0
+ RPR  CONST_41  H261  C26  C25  C24   180.00   0.0  0
+ RPR  CONST_42  H231  C23  C24  C25   180.00   0.0  0
+ RPR  CONST_43  C15   N14  C13  C8    180.00   0.0  0
+ RPR  CONST_44  H141  N14  C13  C8      0.00   0.0  0
+ RPR  CONST_45  H301  N30  C29  C24   180.00   0.0  0
+ RPR  CONST_46  H311  N31  C29  C24   180.00   0.0  0
+ RPR  CONST_47  O33   C13  N14  C15     0.00   0.0  0
  RPR  Var_01    N22   C21  C6   C1    -29.12  30.0  2
  RPR  Var_02    N14   C13  C8   C7   -151.64  30.0  2
  RPR  Var_03    C23   C28  C20  C17   -87.48  30.0  2
  RPR  Var_04    N30   C29  C24  C23  -154.78  30.0  2
  RPR  Var_05    H221  N22  C21  C6    172.02  30.0  3
  RPR  Var_06    H341  C34  O19  C18   179.82  30.0  3
+ RPR  Var_07    C10   C11  C2   C1     35.10  30.0  2
+ RPR  Var_08    C12   C11  C2   C1   -144.76  30.0  2
+ RPR  Var_09    C10   C11  C2   C3   -144.61  30.0  2
+ RPR  Var_10    C12   C11  C2   C3     35.53  30.0  2
+ RPR  Var_11    C28   C20  C17  C15  -179.43  30.0  3
+ RPR  Var_12    C28   C20  C17  C18    59.82  30.0  3
+ RPR  Var_13    H171  C17  C20  C28   -58.50  30.0  1
+ RPR  Var_14    C18   C17  C15  N14   -52.20  30.0  3
+ RPR  Var_15    C20   C17  C15  N14  -172.71  30.0  3
+ RPR  Var_16    O19   C18  C17  C15   128.19  30.0  3
+ RPR  Var_17    O32   C18  C17  C15   -53.55  30.0  3
+ RPR  Var_18    C13   N14  C15  C16  -111.17  30.0  2
+ RPR  Var_19    C18   C17  C15  C16  -174.75  30.0  3
+ RPR  Var_20    C20   C17  C15  C16    64.74  30.0  3
+ RPR  Var_21    C13   N14  C15  C17   124.83  30.0  2
+ RPR  Var_22    C34   O19  C18  C17   172.16  30.0  3
+ RPR  Var_23    C20   C17  C18  O19  -108.39  30.0  2
+ RPR  Var_24    O32   C18  C17  C20    69.87  30.0  3
+ RPR  Var_25    C34   O19  C18  O32    -6.09  30.0  3
+ RPR  Var_26    H161  C16  C15  N14   -62.03  30.0  3
+ RPR  Var_27    H162  C16  C15  N14    57.89  30.0  3
+ RPR  Var_28    H163  C16  C15  N14   177.15  30.0  3
+ RPR  Var_29    H151  C15  C17  C18    63.81  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

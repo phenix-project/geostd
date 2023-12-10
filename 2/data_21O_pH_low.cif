@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 21O  21O  '{(1R)-3-oxo-1-phenyl-3-[4-(trifluoromethyl)phenyl]propyl}propanedioic acid'  ligand  42  27  .  2021-08-04  2022-11-17
+ 21O  21O  '{(1R)-3-oxo-1-phenyl-3-[4-(trifluoromethyl)phenyl]propyl}propanedioic acid'  ligand  42  27  .  2021-08-04  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_21O
@@ -221,40 +222,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 21O  CONST_01  CAG  CAH  CAJ  CAV     0.00   0.0  0
- 21O  CONST_02  CAG  CAI  CAK  CAV     0.00   0.0  0
- 21O  CONST_03  CAI  CAK  CAV  CAJ     0.00   0.0  0
- 21O  CONST_04  CAI  CAG  CAH  CAJ     0.00   0.0  0
- 21O  CONST_05  CAK  CAV  CAJ  CAH     0.00   0.0  0
- 21O  CONST_06  CAK  CAI  CAG  CAH     0.00   0.0  0
- 21O  CONST_07  CAT  CAM  CAO  CAU     0.00   0.0  0
- 21O  CONST_08  CAT  CAL  CAN  CAU     0.00   0.0  0
- 21O  CONST_09  CAL  CAN  CAU  CAO     0.00   0.0  0
- 21O  CONST_10  CAL  CAT  CAM  CAO     0.00   0.0  0
- 21O  CONST_11  CAN  CAU  CAO  CAM     0.00   0.0  0
- 21O  CONST_12  CAN  CAL  CAT  CAM     0.00   0.0  0
- 21O  CONST_13  CAH  CAJ  CAV  CAX   180.00   0.0  0
- 21O  CONST_14  CAI  CAK  CAV  CAX   180.00   0.0  0
- 21O  CONST_15  CAM  CAO  CAU  CAS   180.00   0.0  0
- 21O  CONST_16  CAL  CAN  CAU  CAS   180.00   0.0  0
- 21O  CONST_17  C36  CAT  CAM  CAO   180.00   0.0  0
- 21O  CONST_18  CAN  CAL  CAT  C36   180.00   0.0  0
- 21O  CONST_19  HAH  CAH  CAJ  CAV   180.00   0.0  0
- 21O  CONST_20  HAI  CAI  CAK  CAV   180.00   0.0  0
- 21O  CONST_21  HAK  CAK  CAV  CAJ   180.00   0.0  0
- 21O  CONST_22  HAG  CAG  CAH  CAJ   180.00   0.0  0
- 21O  CONST_23  HAJ  CAJ  CAH  CAG   180.00   0.0  0
- 21O  CONST_24  HAM  CAM  CAO  CAU   180.00   0.0  0
- 21O  CONST_25  HAL  CAL  CAN  CAU   180.00   0.0  0
- 21O  CONST_26  HAN  CAN  CAU  CAO   180.00   0.0  0
- 21O  CONST_27  HAO  CAO  CAM  CAT   180.00   0.0  0
- 21O  CONST_28  H42  O42  C41  O43     0.00   0.0  0
- 21O  CONST_29  HAE  OAE  CAR  CAW   180.00   0.0  0
- 21O  Var_01    CAO  CAU  CAS  CAP  -172.62  30.0  2
- 21O  Var_02    F39  C36  CAT  CAM   106.11  30.0  2
- 21O  Var_03    CAU  CAS  CAP  CAX   166.23  30.0  3
- 21O  Var_04    CAR  CAW  C41  O43    -4.90  30.0  3
- 21O  Var_05    OAE  CAR  CAW  C41  -137.71  30.0  3
+ 21O  CONST_01  CAG   CAH  CAJ  CAV     0.00   0.0  0
+ 21O  CONST_02  CAG   CAI  CAK  CAV     0.00   0.0  0
+ 21O  CONST_03  CAI   CAK  CAV  CAJ     0.00   0.0  0
+ 21O  CONST_04  CAI   CAG  CAH  CAJ     0.00   0.0  0
+ 21O  CONST_05  CAK   CAV  CAJ  CAH     0.00   0.0  0
+ 21O  CONST_06  CAK   CAI  CAG  CAH     0.00   0.0  0
+ 21O  CONST_07  CAT   CAM  CAO  CAU     0.00   0.0  0
+ 21O  CONST_08  CAT   CAL  CAN  CAU     0.00   0.0  0
+ 21O  CONST_09  CAL   CAN  CAU  CAO     0.00   0.0  0
+ 21O  CONST_10  CAL   CAT  CAM  CAO     0.00   0.0  0
+ 21O  CONST_11  CAN   CAU  CAO  CAM     0.00   0.0  0
+ 21O  CONST_12  CAN   CAL  CAT  CAM     0.00   0.0  0
+ 21O  CONST_13  CAH   CAJ  CAV  CAX   180.00   0.0  0
+ 21O  CONST_14  CAI   CAK  CAV  CAX   180.00   0.0  0
+ 21O  CONST_15  CAM   CAO  CAU  CAS   180.00   0.0  0
+ 21O  CONST_16  CAL   CAN  CAU  CAS   180.00   0.0  0
+ 21O  CONST_17  C36   CAT  CAM  CAO   180.00   0.0  0
+ 21O  CONST_18  CAN   CAL  CAT  C36   180.00   0.0  0
+ 21O  CONST_19  HAH   CAH  CAJ  CAV   180.00   0.0  0
+ 21O  CONST_20  HAI   CAI  CAK  CAV   180.00   0.0  0
+ 21O  CONST_21  HAK   CAK  CAV  CAJ   180.00   0.0  0
+ 21O  CONST_22  HAG   CAG  CAH  CAJ   180.00   0.0  0
+ 21O  CONST_23  HAJ   CAJ  CAH  CAG   180.00   0.0  0
+ 21O  CONST_24  HAM   CAM  CAO  CAU   180.00   0.0  0
+ 21O  CONST_25  HAL   CAL  CAN  CAU   180.00   0.0  0
+ 21O  CONST_26  HAN   CAN  CAU  CAO   180.00   0.0  0
+ 21O  CONST_27  HAO   CAO  CAM  CAT   180.00   0.0  0
+ 21O  CONST_28  H42   O42  C41  O43     0.00   0.0  0
+ 21O  CONST_29  HAE   OAE  CAR  CAW   180.00   0.0  0
+ 21O  Var_01    CAO   CAU  CAS  CAP  -172.62  30.0  2
+ 21O  Var_02    F39   C36  CAT  CAM   106.11  30.0  2
+ 21O  Var_03    CAU   CAS  CAP  CAX   166.23  30.0  3
+ 21O  Var_04    CAR   CAW  C41  O43    -4.90  30.0  3
+ 21O  Var_05    OAE   CAR  CAW  C41  -137.71  30.0  3
+ 21O  Var_06    CAJ   CAV  CAX  CAW   101.31  30.0  2
+ 21O  Var_07    CAK   CAV  CAX  CAW   -79.56  30.0  2
+ 21O  Var_08    CAP   CAX  CAV  CAJ  -131.33  30.0  2
+ 21O  Var_09    CAP   CAX  CAV  CAK    47.80  30.0  2
+ 21O  Var_10    HAX   CAX  CAV  CAJ   -14.29  30.0  2
+ 21O  Var_11    CAV   CAX  CAW  C41   -47.15  30.0  3
+ 21O  Var_12    CAV   CAX  CAW  CAR    79.69  30.0  3
+ 21O  Var_13    CAS   CAP  CAX  CAV   170.17  30.0  3
+ 21O  Var_14    HAW   CAW  CAX  CAV  -162.49  30.0  2
+ 21O  Var_15    HAP1  CAP  CAX  CAV   -63.34  30.0  3
+ 21O  Var_16    HAP2  CAP  CAX  CAV    51.56  30.0  3
+ 21O  Var_17    CAP   CAX  CAW  C41  -173.88  30.0  3
+ 21O  Var_18    CAS   CAP  CAX  CAW   -61.99  30.0  3
+ 21O  Var_19    CAP   CAX  CAW  CAR   -47.04  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

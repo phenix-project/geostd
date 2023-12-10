@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UYG  UYG  (3S,6S)-3-[(1H-indol-3-yl)methyl]-6-(propan-2-yl)piperazine-2,5-dione  ligand  40  21  .  2022-03-29  2022-03-29
+ UYG  UYG  (3S,6S)-3-[(1H-indol-3-yl)methyl]-6-(propan-2-yl)piperazine-2,5-dione  ligand  40  21  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UYG
@@ -222,41 +223,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- UYG  CONST_01  C4   N    C5   C10  180.00   0.0  0
- UYG  CONST_02  C3   C6   C5   C10  180.00   0.0  0
- UYG  CONST_03  C7   C6   C5   C10    0.00   0.0  0
- UYG  CONST_04  C7   C8   C9   C10    0.00   0.0  0
- UYG  CONST_05  C6   C3   C4   N      0.00   0.0  0
- UYG  CONST_06  C3   C6   C5   N      0.00   0.0  0
- UYG  CONST_07  C7   C6   C5   N    180.00   0.0  0
- UYG  CONST_08  C9   C10  C5   N    180.00   0.0  0
- UYG  CONST_09  C5   N    C4   C3     0.00   0.0  0
- UYG  CONST_10  C8   C7   C6   C3   180.00   0.0  0
- UYG  CONST_11  C5   C6   C3   C4     0.00   0.0  0
- UYG  CONST_12  C7   C6   C3   C4   180.00   0.0  0
- UYG  CONST_13  C6   C5   N    C4     0.00   0.0  0
- UYG  CONST_14  C8   C7   C6   C5     0.00   0.0  0
- UYG  CONST_15  C8   C9   C10  C5     0.00   0.0  0
- UYG  CONST_16  C9   C10  C5   C6     0.00   0.0  0
- UYG  CONST_17  C9   C8   C7   C6     0.00   0.0  0
- UYG  CONST_18  C1   C    N2   C11    0.00   0.0  0
- UYG  CONST_19  C1   N1   C15  C11    0.00   0.0  0
- UYG  CONST_20  C2   C3   C4   N    180.00   0.0  0
- UYG  CONST_21  C5   C6   C3   C2   180.00   0.0  0
- UYG  CONST_22  C7   C6   C3   C2     0.00   0.0  0
- UYG  CONST_23  O    C    N2   C11  180.00   0.0  0
- UYG  CONST_24  O1   C15  N1   C1   180.00   0.0  0
- UYG  CONST_25  H7   N    C5   C10    0.00   0.0  0
- UYG  CONST_26  H16  C8   C9   C10  180.00   0.0  0
- UYG  CONST_27  H1   C10  C5   N      0.00   0.0  0
- UYG  CONST_28  H15  C7   C6   C3     0.00   0.0  0
- UYG  CONST_29  H14  C4   N    C5   180.00   0.0  0
- UYG  CONST_30  H17  C9   C10  C5   180.00   0.0  0
- UYG  CONST_31  H18  N1   C15  C11  180.00   0.0  0
- UYG  CONST_32  H19  N2   C    C1   180.00   0.0  0
- UYG  Var_01    C4   C3   C2   C1   101.49  30.0  2
- UYG  Var_02    H9   C14  C12  C11   59.04  30.0  3
- UYG  Var_03    H4   C13  C12  C11  -52.95  30.0  3
+ UYG  CONST_01  C4   N    C5   C10   180.00   0.0  0
+ UYG  CONST_02  C3   C6   C5   C10   180.00   0.0  0
+ UYG  CONST_03  C7   C6   C5   C10     0.00   0.0  0
+ UYG  CONST_04  C7   C8   C9   C10     0.00   0.0  0
+ UYG  CONST_05  C6   C3   C4   N       0.00   0.0  0
+ UYG  CONST_06  C3   C6   C5   N       0.00   0.0  0
+ UYG  CONST_07  C7   C6   C5   N     180.00   0.0  0
+ UYG  CONST_08  C9   C10  C5   N     180.00   0.0  0
+ UYG  CONST_09  C5   N    C4   C3      0.00   0.0  0
+ UYG  CONST_10  C8   C7   C6   C3    180.00   0.0  0
+ UYG  CONST_11  C5   C6   C3   C4      0.00   0.0  0
+ UYG  CONST_12  C7   C6   C3   C4    180.00   0.0  0
+ UYG  CONST_13  C6   C5   N    C4      0.00   0.0  0
+ UYG  CONST_14  C8   C7   C6   C5      0.00   0.0  0
+ UYG  CONST_15  C8   C9   C10  C5      0.00   0.0  0
+ UYG  CONST_16  C9   C10  C5   C6      0.00   0.0  0
+ UYG  CONST_17  C9   C8   C7   C6      0.00   0.0  0
+ UYG  CONST_18  C1   C    N2   C11     0.00   0.0  0
+ UYG  CONST_19  C1   N1   C15  C11     0.00   0.0  0
+ UYG  CONST_20  C2   C3   C4   N     180.00   0.0  0
+ UYG  CONST_21  C5   C6   C3   C2    180.00   0.0  0
+ UYG  CONST_22  C7   C6   C3   C2      0.00   0.0  0
+ UYG  CONST_23  O    C    N2   C11   180.00   0.0  0
+ UYG  CONST_24  O1   C15  N1   C1    180.00   0.0  0
+ UYG  CONST_25  H7   N    C5   C10     0.00   0.0  0
+ UYG  CONST_26  H16  C8   C9   C10   180.00   0.0  0
+ UYG  CONST_27  H1   C10  C5   N       0.00   0.0  0
+ UYG  CONST_28  H15  C7   C6   C3      0.00   0.0  0
+ UYG  CONST_29  H14  C4   N    C5    180.00   0.0  0
+ UYG  CONST_30  H17  C9   C10  C5    180.00   0.0  0
+ UYG  CONST_31  H18  N1   C15  C11   180.00   0.0  0
+ UYG  CONST_32  H19  N2   C    C1    180.00   0.0  0
+ UYG  Var_01    C4   C3   C2   C1    101.49  30.0  2
+ UYG  Var_02    H9   C14  C12  C11    59.04  30.0  3
+ UYG  Var_03    H4   C13  C12  C11   -52.95  30.0  3
+ UYG  Var_04    C15  N1   C1   C      14.68  30.0  1
+ UYG  Var_05    C15  C11  N2   C      15.86  30.0  1
+ UYG  Var_06    N2   C    C1   N1    -10.21  30.0  1
+ UYG  Var_07    N2   C11  C15  N1    -11.25  30.0  1
+ UYG  Var_08    C    N2   C11  C12  -110.17  30.0  1
+ UYG  Var_09    N1   C15  C11  C12   116.05  30.0  1
+ UYG  Var_10    C3   C2   C1   C     176.40  30.0  1
+ UYG  Var_11    N1   C1   C    O     169.47  30.0  1
+ UYG  Var_12    C2   C1   N1   C15  -110.68  30.0  1
+ UYG  Var_13    N2   C    C1   C2    116.13  30.0  1
+ UYG  Var_14    N1   C1   C2   C3    -56.49  30.0  3
+ UYG  Var_15    O1   C15  C11  N2    168.80  30.0  1
+ UYG  Var_16    H2   C11  N2   C     131.82  30.0  1
+ UYG  Var_17    H8   C1   N1   C15   131.00  30.0  1
+ UYG  Var_18    O1   C15  C11  C12   -63.90  30.0  1
+ UYG  Var_19    N2   C11  C12  C13   -60.89  30.0  3
+ UYG  Var_20    C15  C11  C12  C13   171.66  30.0  3
+ UYG  Var_21    C2   C1   C    O     -64.19  30.0  1
+ UYG  Var_22    C14  C12  C11  C15   -63.12  30.0  1
+ UYG  Var_23    C14  C12  C11  N2     64.33  30.0  1
+ UYG  Var_24    H12  C2   C1   C      54.83  30.0  1
+ UYG  Var_25    H13  C2   C1   C     -61.27  30.0  1
+ UYG  Var_26    H3   C12  C11  C15    55.26  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

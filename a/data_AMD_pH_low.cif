@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AMD  AMD  5'-O-[(S)-{[(2S)-2-amino-3-carboxypropanoyl]oxy}(hydroxy)phosphoryl]-2'-deoxyadenosine  ligand  49  30  .  2021-08-06  2021-08-06  
+ AMD  AMD  5'-O-[(S)-{[(2S)-2-amino-3-carboxypropanoyl]oxy}(hydroxy)phosphoryl]-2'-deoxyadenosine  ligand  49  30  .  2021-08-06  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_AMD
@@ -252,37 +253,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AMD  CONST_01  C2   N3   C4   N9   180.00   0.0  0
- AMD  CONST_02  C6   C5   C4   N9   180.00   0.0  0
- AMD  CONST_03  N7   C5   C4   N9     0.00   0.0  0
- AMD  CONST_04  C5   N7   C8   N9     0.00   0.0  0
- AMD  CONST_05  N7   C8   N9   C4     0.00   0.0  0
- AMD  CONST_06  N1   C2   N3   C4     0.00   0.0  0
- AMD  CONST_07  N1   C6   C5   C4     0.00   0.0  0
- AMD  CONST_08  C8   N7   C5   C4     0.00   0.0  0
- AMD  CONST_09  C8   N9   C4   N3   180.00   0.0  0
- AMD  CONST_10  C6   C5   C4   N3     0.00   0.0  0
- AMD  CONST_11  N7   C5   C4   N3   180.00   0.0  0
- AMD  CONST_12  C6   N1   C2   N3     0.00   0.0  0
- AMD  CONST_13  C5   C4   N3   C2     0.00   0.0  0
- AMD  CONST_14  C5   C6   N1   C2     0.00   0.0  0
- AMD  CONST_15  N7   C5   C6   N1   180.00   0.0  0
- AMD  CONST_16  C8   N7   C5   C6   180.00   0.0  0
- AMD  CONST_17  C8   N9   C4   C5     0.00   0.0  0
- AMD  CONST_18  N3   C4   N9   C1'    0.00   0.0  0
- AMD  CONST_19  C5   C4   N9   C1'  180.00   0.0  0
- AMD  CONST_20  N7   C8   N9   C1'  180.00   0.0  0
- AMD  CONST_21  N6   C6   C5   C4   180.00   0.0  0
- AMD  CONST_22  N6   C6   N1   C2   180.00   0.0  0
- AMD  CONST_23  N7   C5   C6   N6     0.00   0.0  0
- AMD  CONST_24  H8   C8   N9   C1'    0.00   0.0  0
- AMD  CONST_25  H2   C2   N3   C4   180.00   0.0  0
- AMD  CONST_26  H61  N6   C6   N1   180.00   0.0  0
- AMD  CONST_27  H62  N6   C6   N1     0.00   0.0  0
- AMD  CONST_28  HD2  OD2  CG   CB   180.00   0.0  0
- AMD  Var_01    C4'  C5'  O5'  P    168.49  30.0  3
- AMD  Var_02    CA   C    O3P  P    173.08  30.0  3
- AMD  Var_03    OD1  CG   CB   CA   -13.08  30.0  3
+ AMD  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ AMD  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ AMD  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ AMD  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ AMD  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ AMD  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ AMD  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ AMD  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ AMD  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ AMD  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ AMD  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ AMD  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ AMD  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ AMD  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ AMD  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ AMD  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ AMD  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ AMD  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
+ AMD  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ AMD  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ AMD  CONST_21  N6    C6   C5   C4    180.00   0.0  0
+ AMD  CONST_22  N6    C6   N1   C2    180.00   0.0  0
+ AMD  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ AMD  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ AMD  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ AMD  CONST_26  H61   N6   C6   N1    180.00   0.0  0
+ AMD  CONST_27  H62   N6   C6   N1      0.00   0.0  0
+ AMD  CONST_28  HD2   OD2  CG   CB    180.00   0.0  0
+ AMD  Var_01    C4'   C5'  O5'  P     168.49  30.0  3
+ AMD  Var_02    CA    C    O3P  P     173.08  30.0  3
+ AMD  Var_03    OD1   CG   CB   CA    -13.08  30.0  3
+ AMD  Var_04    N9    C1'  O4'  C4'  -120.44  30.0  1
+ AMD  Var_05    C2'   C1'  O4'  C4'     2.20  30.0  1
+ AMD  Var_06    C1'   C2'  C3'  C4'    34.36  30.0  1
+ AMD  Var_07    C2'   C3'  C4'  O4'   -34.05  30.0  1
+ AMD  Var_08    C4    N9   C1'  O4'  -144.02  30.0  2
+ AMD  Var_09    C8    N9   C1'  O4'    37.81  30.0  2
+ AMD  Var_10    C3'   C2'  C1'  O4'   -23.83  30.0  1
+ AMD  Var_11    C3'   C4'  O4'  C1'    20.55  30.0  1
+ AMD  Var_12    C3'   C2'  C1'  N9     95.53  30.0  1
+ AMD  Var_13    C2'   C1'  N9   C4     97.64  30.0  1
+ AMD  Var_14    C2'   C1'  N9   C8    -80.53  30.0  1
+ AMD  Var_15    C1'   O4'  C4'  C5'   142.52  30.0  1
+ AMD  Var_16    C2'   C3'  C4'  C5'  -154.20  30.0  1
+ AMD  Var_17    O3'   C3'  C4'  O4'  -156.56  30.0  1
+ AMD  Var_18    O3'   C3'  C2'  C1'   152.51  30.0  1
+ AMD  Var_19    H1'   C1'  O4'  C4'   123.98  30.0  1
+ AMD  Var_20    H2'1  C2'  C3'  C4'   -81.63  30.0  1
+ AMD  Var_21    H2'2  C2'  C3'  C4'   156.93  30.0  1
+ AMD  Var_22    H3'   C3'  C4'  O4'    81.59  30.0  1
+ AMD  Var_23    H4'   C4'  O4'  C1'   -96.67  30.0  1
+ AMD  Var_24    O4'   C4'  C5'  O5'    61.51  30.0  3
+ AMD  Var_25    C3'   C4'  C5'  O5'   178.94  30.0  3
+ AMD  Var_26    O3'   C3'  C4'  C5'    83.29  30.0  1
+ AMD  Var_27    HO'3  O3'  C3'  C4'  -171.55  30.0  3
+ AMD  Var_28    H5'1  C5'  C4'  O4'   -58.79  30.0  2
+ AMD  Var_29    H5'2  C5'  C4'  O4'  -177.76  30.0  2
+ AMD  Var_30    C     O3P  P    O1P   -58.99  30.0  3
+ AMD  Var_31    C5'   O5'  P    O1P    36.88  30.0  3
+ AMD  Var_32    C     O3P  P    O2P    66.69  30.0  3
+ AMD  Var_33    C5'   O5'  P    O2P   -90.68  30.0  3
+ AMD  Var_34    C5'   O5'  P    O3P   159.92  30.0  3
+ AMD  Var_35    N     CA   C    O3P   168.18  30.0  1
+ AMD  Var_36    CB    CA   C    O3P   -65.01  30.0  1
+ AMD  Var_37    C     O3P  P    O5'   176.96  30.0  3
+ AMD  Var_38    CG    CB   CA   N     -64.98  30.0  3
+ AMD  Var_39    O     C    CA   N     -12.49  30.0  3
+ AMD  Var_40    O     C    CA   CB    114.32  30.0  3
+ AMD  Var_41    C     CA   CB   CG    172.10  30.0  1
+ AMD  Var_42    HOP2  O2P  P    O1P  -173.47  30.0  3
+ AMD  Var_43    HA    CA   C    O3P    51.61  30.0  1
+ AMD  Var_44    HB1   CB   CA   N      57.24  30.0  3
+ AMD  Var_45    HB2   CB   CA   N     175.07  30.0  3
+ AMD  Var_46    H     N    CA   CB    -48.95  30.0  3
+ AMD  Var_47    HN2   N    CA   CB     68.71  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

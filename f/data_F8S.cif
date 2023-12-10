@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- F8S  F8S  '2-amino-7-(1,1-dioxo-1lambda~6~-thian-4-yl)-5-oxo-5H-[1]benzopyrano[2,3-b]pyridine-3-carboxylic acid'  ligand  42  27  .  2021-08-09  2021-08-09  
+ F8S  F8S  '2-amino-7-(1,1-dioxo-1lambda~6~-thian-4-yl)-5-oxo-5H-[1]benzopyrano[2,3-b]pyridine-3-carboxylic acid'  ligand  42  27  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_F8S
@@ -232,39 +233,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- F8S  CONST_01  C22  C23  C24  C02    0.00   0.0  0
- F8S  CONST_02  C22  C04  N03  C02    0.00   0.0  0
- F8S  CONST_03  C24  C02  N03  C04    0.00   0.0  0
- F8S  CONST_04  C24  C23  C22  C04    0.00   0.0  0
- F8S  CONST_05  C09  C18  C19  C06    0.00   0.0  0
- F8S  CONST_06  C09  C08  C07  C06    0.00   0.0  0
- F8S  CONST_07  C18  C19  C06  C07    0.00   0.0  0
- F8S  CONST_08  C18  C09  C08  C07    0.00   0.0  0
- F8S  CONST_09  C19  C06  C07  C08    0.00   0.0  0
- F8S  CONST_10  C19  C18  C09  C08    0.00   0.0  0
- F8S  CONST_11  N03  C02  C24  C23    0.00   0.0  0
- F8S  CONST_12  N03  C04  C22  C23    0.00   0.0  0
- F8S  CONST_13  C10  C09  C08  C07  180.00   0.0  0
- F8S  CONST_14  C19  C18  C09  C10  180.00   0.0  0
- F8S  CONST_15  N01  C02  N03  C04  180.00   0.0  0
- F8S  CONST_16  C25  C24  C23  C22  180.00   0.0  0
- F8S  CONST_17  N01  C02  C24  C23  180.00   0.0  0
- F8S  CONST_18  N03  C02  C24  C25  180.00   0.0  0
- F8S  CONST_19  H11  C23  C24  C02  180.00   0.0  0
- F8S  CONST_20  H10  C18  C19  C06  180.00   0.0  0
- F8S  CONST_21  H2   C08  C07  C06  180.00   0.0  0
- F8S  CONST_22  H1   C07  C08  C09  180.00   0.0  0
- F8S  CONST_23  H12  N01  C02  C24    0.00   0.0  0
- F8S  CONST_24  H13  N01  C02  C24  180.00   0.0  0
- F8S  Var_01    C19  C20  C22  C04   -0.06  30.0  1
- F8S  Var_02    C19  C06  O05  C04   -0.01  30.0  1
- F8S  Var_03    N03  C04  O05  C06  179.92  30.0  1
- F8S  Var_04    C22  C20  C19  C06   -0.06  30.0  1
- F8S  Var_05    S13  C16  C17  C10   59.97  30.0  1
- F8S  Var_06    S13  C12  C11  C10  -60.15  30.0  1
- F8S  Var_07    C16  S13  C12  C11   54.42  30.0  1
- F8S  Var_08    C17  C16  S13  C12  -54.34  30.0  1
- F8S  Var_09    O27  C25  C24  C02    0.64  30.0  2
+ F8S  CONST_01  C22  C23  C24  C02     0.00   0.0  0
+ F8S  CONST_02  C22  C04  N03  C02     0.00   0.0  0
+ F8S  CONST_03  C24  C02  N03  C04     0.00   0.0  0
+ F8S  CONST_04  C24  C23  C22  C04     0.00   0.0  0
+ F8S  CONST_05  C09  C18  C19  C06     0.00   0.0  0
+ F8S  CONST_06  C09  C08  C07  C06     0.00   0.0  0
+ F8S  CONST_07  C18  C19  C06  C07     0.00   0.0  0
+ F8S  CONST_08  C18  C09  C08  C07     0.00   0.0  0
+ F8S  CONST_09  C19  C06  C07  C08     0.00   0.0  0
+ F8S  CONST_10  C19  C18  C09  C08     0.00   0.0  0
+ F8S  CONST_11  N03  C02  C24  C23     0.00   0.0  0
+ F8S  CONST_12  N03  C04  C22  C23     0.00   0.0  0
+ F8S  CONST_13  C10  C09  C08  C07   180.00   0.0  0
+ F8S  CONST_14  C19  C18  C09  C10   180.00   0.0  0
+ F8S  CONST_15  N01  C02  N03  C04   180.00   0.0  0
+ F8S  CONST_16  C25  C24  C23  C22   180.00   0.0  0
+ F8S  CONST_17  N01  C02  C24  C23   180.00   0.0  0
+ F8S  CONST_18  N03  C02  C24  C25   180.00   0.0  0
+ F8S  CONST_19  H11  C23  C24  C02   180.00   0.0  0
+ F8S  CONST_20  H10  C18  C19  C06   180.00   0.0  0
+ F8S  CONST_21  H2   C08  C07  C06   180.00   0.0  0
+ F8S  CONST_22  H1   C07  C08  C09   180.00   0.0  0
+ F8S  CONST_23  H12  N01  C02  C24     0.00   0.0  0
+ F8S  CONST_24  H13  N01  C02  C24   180.00   0.0  0
+ F8S  Var_01    C19  C20  C22  C04    -0.06  30.0  1
+ F8S  Var_02    C19  C06  O05  C04    -0.01  30.0  1
+ F8S  Var_03    N03  C04  O05  C06   179.92  30.0  1
+ F8S  Var_04    C22  C20  C19  C06    -0.06  30.0  1
+ F8S  Var_05    S13  C16  C17  C10    59.97  30.0  1
+ F8S  Var_06    S13  C12  C11  C10   -60.15  30.0  1
+ F8S  Var_07    C16  S13  C12  C11    54.42  30.0  1
+ F8S  Var_08    C17  C16  S13  C12   -54.34  30.0  1
+ F8S  Var_09    O27  C25  C24  C02     0.64  30.0  2
+ F8S  Var_10    C17  C10  C09  C08    61.85  30.0  2
+ F8S  Var_11    C11  C10  C09  C08   -63.65  30.0  2
+ F8S  Var_12    C16  C17  C10  C09   175.31  30.0  1
+ F8S  Var_13    C12  C11  C10  C09  -175.21  30.0  1
+ F8S  Var_14    C18  C09  C10  C11   116.24  30.0  2
+ F8S  Var_15    C16  C17  C10  C11   -60.09  30.0  1
+ F8S  Var_16    C17  C10  C11  C12    60.18  30.0  1
+ F8S  Var_17    C18  C09  C10  C17  -118.26  30.0  2
+ F8S  Var_18    H3   C10  C09  C08   179.17  30.0  2
+ F8S  Var_19    H8   C17  C10  C09   -61.48  30.0  1
+ F8S  Var_20    H9   C17  C10  C09    55.77  30.0  1
+ F8S  Var_21    H4   C11  C10  C09   -55.79  30.0  1
+ F8S  Var_22    H15  C11  C10  C09    61.38  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

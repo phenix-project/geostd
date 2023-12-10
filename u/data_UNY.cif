@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UNY  UNY  (2~{R})-4-[6-(2-fluoranyl-4-methoxy-phenyl)-3-oxidanylidene-1~{H}-isoindol-2-yl]-2-methyl-2-methylsulfonyl-~{N}-oxidanyl-butanamide  ligand  54  31  .  2021-08-24  2021-08-24  
+ UNY  UNY  (2~{R})-4-[6-(2-fluoranyl-4-methoxy-phenyl)-3-oxidanylidene-1~{H}-isoindol-2-yl]-2-methyl-2-methylsulfonyl-~{N}-oxidanyl-butanamide  ligand  54  31  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UNY
@@ -278,40 +279,68 @@ _chem_comp_tor.period
  UNY  CONST_03  C12  C8   C7   C6    180.00   0.0  0
  UNY  CONST_04  C9   C8   C7   C6      0.00   0.0  0
  UNY  CONST_05  C9   C10  C5   C6      0.00   0.0  0
- UNY  CONST_08  C10  C9   C8   C7      0.00   0.0  0
- UNY  CONST_09  C10  C5   C6   C7      0.00   0.0  0
- UNY  CONST_10  C12  C8   C9   C10   180.00   0.0  0
- UNY  CONST_13  C17  C18  C12  C8    180.00   0.0  0
- UNY  CONST_14  C14  C13  C12  C8    180.00   0.0  0
- UNY  CONST_15  C15  C17  C18  C12     0.00   0.0  0
- UNY  CONST_16  C15  C14  C13  C12     0.00   0.0  0
- UNY  CONST_17  C17  C15  C14  C13     0.00   0.0  0
- UNY  CONST_18  C17  C18  C12  C13     0.00   0.0  0
- UNY  CONST_19  C14  C15  C17  C18     0.00   0.0  0
- UNY  CONST_20  C14  C13  C12  C18     0.00   0.0  0
- UNY  CONST_21  C11  N1   C4   C5      0.00   0.0  0
- UNY  CONST_22  F    C13  C12  C8      0.00   0.0  0
- UNY  CONST_23  O5   C15  C14  C13   180.00   0.0  0
- UNY  CONST_24  C15  C14  C13  F     180.00   0.0  0
- UNY  CONST_25  C18  C12  C13  F     180.00   0.0  0
- UNY  CONST_26  O5   C15  C17  C18   180.00   0.0  0
- UNY  CONST_27  C5   C4   N1   C3    180.00   0.0  0
- UNY  CONST_28  C11  N1   C4   O4    180.00   0.0  0
- UNY  CONST_29  H13  C6   C5   C4      0.00   0.0  0
- UNY  CONST_30  H14  C7   C6   C5    180.00   0.0  0
- UNY  CONST_31  H17  C9   C10  C5    180.00   0.0  0
- UNY  CONST_32  H18  C18  C12  C8      0.00   0.0  0
- UNY  CONST_33  H19  C17  C18  C12   180.00   0.0  0
- UNY  CONST_34  H20  C14  C13  C12   180.00   0.0  0
- UNY  CONST_35  O4   C4   N1   C3      0.00   0.0  0
- UNY  CONST_36  O3   N    C1   O2      0.00   0.0  0
- UNY  CONST_37  C    C1   N    O3    180.00   0.0  0
- UNY  CONST_38  H1   N    C1   O2    180.00   0.0  0
+ UNY  CONST_06  C10  C9   C8   C7      0.00   0.0  0
+ UNY  CONST_07  C10  C5   C6   C7      0.00   0.0  0
+ UNY  CONST_08  C12  C8   C9   C10   180.00   0.0  0
+ UNY  CONST_09  C17  C18  C12  C8    180.00   0.0  0
+ UNY  CONST_10  C14  C13  C12  C8    180.00   0.0  0
+ UNY  CONST_11  C15  C17  C18  C12     0.00   0.0  0
+ UNY  CONST_12  C15  C14  C13  C12     0.00   0.0  0
+ UNY  CONST_13  C17  C15  C14  C13     0.00   0.0  0
+ UNY  CONST_14  C17  C18  C12  C13     0.00   0.0  0
+ UNY  CONST_15  C14  C15  C17  C18     0.00   0.0  0
+ UNY  CONST_16  C14  C13  C12  C18     0.00   0.0  0
+ UNY  CONST_17  C11  N1   C4   C5      0.00   0.0  0
+ UNY  CONST_18  F    C13  C12  C8      0.00   0.0  0
+ UNY  CONST_19  O5   C15  C14  C13   180.00   0.0  0
+ UNY  CONST_20  C15  C14  C13  F     180.00   0.0  0
+ UNY  CONST_21  C18  C12  C13  F     180.00   0.0  0
+ UNY  CONST_22  O5   C15  C17  C18   180.00   0.0  0
+ UNY  CONST_23  C5   C4   N1   C3    180.00   0.0  0
+ UNY  CONST_24  C11  N1   C4   O4    180.00   0.0  0
+ UNY  CONST_25  H13  C6   C5   C4      0.00   0.0  0
+ UNY  CONST_26  H14  C7   C6   C5    180.00   0.0  0
+ UNY  CONST_27  H17  C9   C10  C5    180.00   0.0  0
+ UNY  CONST_28  H18  C18  C12  C8      0.00   0.0  0
+ UNY  CONST_29  H19  C17  C18  C12   180.00   0.0  0
+ UNY  CONST_30  H20  C14  C13  C12   180.00   0.0  0
+ UNY  CONST_31  O4   C4   N1   C3      0.00   0.0  0
+ UNY  CONST_32  O3   N    C1   O2      0.00   0.0  0
+ UNY  CONST_33  C    C1   N    O3    180.00   0.0  0
+ UNY  CONST_34  H1   N    C1   O2    180.00   0.0  0
  UNY  Var_01    H15  C11  N1   C4    121.77  30.0  1
  UNY  Var_02    C4   N1   C3   C2     87.09  30.0  2
  UNY  Var_03    N1   C3   C2   C    -174.90  30.0  2
  UNY  Var_04    H21  C16  O5   C15   -62.15  30.0  3
  UNY  Var_05    H6   C20  S    C      59.12  30.0  3
+ UNY  Var_06    C18  C12  C8   C7    132.79  30.0  2
+ UNY  Var_07    C13  C12  C8   C7    -48.50  30.0  2
+ UNY  Var_08    C18  C12  C8   C9    -45.75  30.0  2
+ UNY  Var_09    C13  C12  C8   C9    132.96  30.0  2
+ UNY  Var_10    C16  O5   C15  C17  -179.10  30.0  2
+ UNY  Var_11    C16  O5   C15  C14     0.92  30.0  2
+ UNY  Var_12    C2   C    C1   O2    -52.48  30.0  1
+ UNY  Var_13    C19  C    C1   O2   -177.95  30.0  1
+ UNY  Var_14    S    C    C1   O2     66.81  30.0  1
+ UNY  Var_15    C3   C2   C    C1    179.19  30.0  1
+ UNY  Var_16    O    S    C    C1     40.33  30.0  2
+ UNY  Var_17    C20  S    C    C1    -76.34  30.0  2
+ UNY  Var_18    O1   S    C    C1    167.41  30.0  2
+ UNY  Var_19    C2   C    C1   N     127.65  30.0  1
+ UNY  Var_20    C19  C    C1   N       2.18  30.0  1
+ UNY  Var_21    S    C    C1   N    -113.06  30.0  1
+ UNY  Var_22    C3   C2   C    C19   -53.37  30.0  1
+ UNY  Var_23    O    S    C    C19   -81.55  30.0  2
+ UNY  Var_24    C20  S    C    C19   161.77  30.0  2
+ UNY  Var_25    O1   S    C    C19    45.53  30.0  2
+ UNY  Var_26    C3   C2   C    S      65.27  30.0  1
+ UNY  Var_27    C2   C    S    C20    39.44  30.0  3
+ UNY  Var_28    C2   C    S    O     156.12  30.0  3
+ UNY  Var_29    C2   C    S    O1    -76.80  30.0  3
+ UNY  Var_30    H3   C19  C    C1     64.47  30.0  3
+ UNY  Var_31    H4   C19  C    C1   -177.50  30.0  3
+ UNY  Var_32    H5   C19  C    C1    -57.03  30.0  3
+ UNY  Var_33    H2   O3   N    C1    -94.72  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

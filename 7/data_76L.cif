@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 76L  76L  '[(2~{S},5~{R})-1-[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]-5-azaniumyl-6-oxidanyl-6-oxidanylidene-hexan-2-yl]-[(2~{R})-2-oxidanylpropyl]azanium'  ligand  61  31  .  2021-08-05  2021-08-05  
+ 76L  76L  '[(2~{S},5~{R})-1-[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]-5-azaniumyl-6-oxidanyl-6-oxidanylidene-hexan-2-yl]-[(2~{R})-2-oxidanylpropyl]azanium'  ligand  61  31  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_76L
@@ -304,35 +305,93 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 76L  CONST_01  N30  C31  N22  C23  180.00   0.0  0
- 76L  CONST_02  C25  C31  N22  C23    0.00   0.0  0
- 76L  CONST_03  C31  C25  N24  C23    0.00   0.0  0
- 76L  CONST_04  C26  C25  N24  C23  180.00   0.0  0
- 76L  CONST_05  C29  N30  C31  C25    0.00   0.0  0
- 76L  CONST_06  N22  C23  N24  C25    0.00   0.0  0
- 76L  CONST_07  C29  N28  C26  C25    0.00   0.0  0
- 76L  CONST_08  N22  C31  C25  C26  180.00   0.0  0
- 76L  CONST_09  N30  C31  C25  C26    0.00   0.0  0
- 76L  CONST_10  N30  C29  N28  C26    0.00   0.0  0
- 76L  CONST_11  N24  C23  N22  C31    0.00   0.0  0
- 76L  CONST_12  N28  C29  N30  C31    0.00   0.0  0
- 76L  CONST_13  N28  C26  C25  C31    0.00   0.0  0
- 76L  CONST_14  C29  N30  C31  N22  180.00   0.0  0
- 76L  CONST_15  N24  C25  C31  N22    0.00   0.0  0
- 76L  CONST_16  N30  C31  C25  N24  180.00   0.0  0
- 76L  CONST_17  N28  C26  C25  N24  180.00   0.0  0
- 76L  CONST_18  C17  N22  C31  C25  180.00   0.0  0
- 76L  CONST_19  N24  C23  N22  C17  180.00   0.0  0
- 76L  CONST_20  N30  C31  N22  C17    0.00   0.0  0
- 76L  CONST_21  N27  C26  C25  C31  180.00   0.0  0
- 76L  CONST_22  N27  C26  C25  N24    0.00   0.0  0
- 76L  CONST_23  C29  N28  C26  N27  180.00   0.0  0
- 76L  CONST_24  H58  C23  N24  C25  180.00   0.0  0
- 76L  CONST_25  H61  C29  N28  C26  180.00   0.0  0
- 76L  CONST_26  H60  N27  C26  C25    0.00   0.0  0
- 76L  CONST_27  H59  N27  C26  C25  180.00   0.0  0
- 76L  Var_01    C6   N5   C4   C2   167.80  30.0  1
- 76L  Var_02    C9   C8   C7   C6   166.86  30.0  1
+ 76L  CONST_01  N30  C31  N22  C23   180.00   0.0  0
+ 76L  CONST_02  C25  C31  N22  C23     0.00   0.0  0
+ 76L  CONST_03  C31  C25  N24  C23     0.00   0.0  0
+ 76L  CONST_04  C26  C25  N24  C23   180.00   0.0  0
+ 76L  CONST_05  C29  N30  C31  C25     0.00   0.0  0
+ 76L  CONST_06  N22  C23  N24  C25     0.00   0.0  0
+ 76L  CONST_07  C29  N28  C26  C25     0.00   0.0  0
+ 76L  CONST_08  N22  C31  C25  C26   180.00   0.0  0
+ 76L  CONST_09  N30  C31  C25  C26     0.00   0.0  0
+ 76L  CONST_10  N30  C29  N28  C26     0.00   0.0  0
+ 76L  CONST_11  N24  C23  N22  C31     0.00   0.0  0
+ 76L  CONST_12  N28  C29  N30  C31     0.00   0.0  0
+ 76L  CONST_13  N28  C26  C25  C31     0.00   0.0  0
+ 76L  CONST_14  C29  N30  C31  N22   180.00   0.0  0
+ 76L  CONST_15  N24  C25  C31  N22     0.00   0.0  0
+ 76L  CONST_16  N30  C31  C25  N24   180.00   0.0  0
+ 76L  CONST_17  N28  C26  C25  N24   180.00   0.0  0
+ 76L  CONST_18  C17  N22  C31  C25   180.00   0.0  0
+ 76L  CONST_19  N24  C23  N22  C17   180.00   0.0  0
+ 76L  CONST_20  N30  C31  N22  C17     0.00   0.0  0
+ 76L  CONST_21  N27  C26  C25  C31   180.00   0.0  0
+ 76L  CONST_22  N27  C26  C25  N24     0.00   0.0  0
+ 76L  CONST_23  C29  N28  C26  N27   180.00   0.0  0
+ 76L  CONST_24  H58  C23  N24  C25   180.00   0.0  0
+ 76L  CONST_25  H61  C29  N28  C26   180.00   0.0  0
+ 76L  CONST_26  H60  N27  C26  C25     0.00   0.0  0
+ 76L  CONST_27  H59  N27  C26  C25   180.00   0.0  0
+ 76L  Var_01    C6   N5   C4   C2    167.80  30.0  1
+ 76L  Var_02    C9   C8   C7   C6    166.86  30.0  1
+ 76L  Var_03    C18  C17  O16  C15   -15.68  30.0  1
+ 76L  Var_04    N22  C17  O16  C15  -139.60  30.0  1
+ 76L  Var_05    C17  C18  C20  C15   -38.66  30.0  1
+ 76L  Var_06    O16  C17  N22  C23    57.89  30.0  2
+ 76L  Var_07    C18  C17  N22  C23   -60.73  30.0  2
+ 76L  Var_08    O16  C17  N22  C31  -119.42  30.0  2
+ 76L  Var_09    C18  C17  N22  C31   121.96  30.0  2
+ 76L  Var_10    C18  C20  C15  O16    30.89  30.0  1
+ 76L  Var_11    C20  C18  C17  O16    34.36  30.0  1
+ 76L  Var_12    C20  C15  O16  C17    -9.96  30.0  1
+ 76L  Var_13    N22  C17  C18  C20   155.21  30.0  1
+ 76L  Var_14    C17  O16  C15  C14   111.38  30.0  1
+ 76L  Var_15    C18  C20  C15  C14   -89.07  30.0  1
+ 76L  Var_16    O19  C18  C20  C15  -156.53  30.0  1
+ 76L  Var_17    O21  C20  C15  O16   -85.54  30.0  1
+ 76L  Var_18    O19  C18  C17  O16   155.99  30.0  1
+ 76L  Var_19    O21  C20  C18  C17    76.27  30.0  1
+ 76L  Var_20    N22  C17  C18  O19   -83.16  30.0  1
+ 76L  Var_21    H41  C17  O16  C15   103.59  30.0  1
+ 76L  Var_22    H42  C18  C20  C15    77.31  30.0  1
+ 76L  Var_23    H43  C20  C15  O16   150.48  30.0  1
+ 76L  Var_24    H40  C15  O16  C17  -127.26  30.0  1
+ 76L  Var_25    O16  C15  C14  C6     54.31  30.0  2
+ 76L  Var_26    C20  C15  C14  C6    171.78  30.0  2
+ 76L  Var_27    O21  C20  C15  C14   154.49  30.0  1
+ 76L  Var_28    O21  C20  C18  O19   -41.61  30.0  1
+ 76L  Var_29    H57  O21  C20  C15   156.09  30.0  3
+ 76L  Var_30    H54  C14  C15  O16   -67.02  30.0  3
+ 76L  Var_31    H55  C14  C15  O16   177.93  30.0  3
+ 76L  Var_32    H56  O19  C18  C17   160.94  30.0  3
+ 76L  Var_33    C15  C14  C6   C7   -165.91  30.0  3
+ 76L  Var_34    N5   C6   C14  C15    72.08  30.0  3
+ 76L  Var_35    H35  C6   C14  C15   -43.35  30.0  3
+ 76L  Var_36    N5   C4   C2   C1   -176.10  30.0  3
+ 76L  Var_37    C11  C9   C8   C7   -175.76  30.0  3
+ 76L  Var_38    N10  C9   C8   C7     62.68  30.0  3
+ 76L  Var_39    C4   N5   C6   C7     68.62  30.0  3
+ 76L  Var_40    O12  C11  C9   C8   -141.51  30.0  3
+ 76L  Var_41    O13  C11  C9   C8     40.09  30.0  3
+ 76L  Var_42    N5   C6   C7   C8   -172.87  30.0  2
+ 76L  Var_43    C14  C6   C7   C8     65.74  30.0  2
+ 76L  Var_44    C4   N5   C6   C14  -167.43  30.0  3
+ 76L  Var_45    N5   C4   C2   O3    -50.54  30.0  3
+ 76L  Var_46    O12  C11  C9   N10   -17.27  30.0  3
+ 76L  Var_47    O13  C11  C9   N10   164.33  30.0  3
+ 76L  Var_48    H47  O3   C2   C1     47.14  30.0  3
+ 76L  Var_49    H49  C4   C2   C1    -57.98  30.0  3
+ 76L  Var_50    H48  C4   C2   C1     63.72  30.0  3
+ 76L  Var_51    H36  C9   C8   C7    -54.77  30.0  3
+ 76L  Var_52    H37  N10  C9   C8     32.93  30.0  3
+ 76L  Var_53    H39  N10  C9   C8    149.04  30.0  3
+ 76L  Var_54    H38  N10  C9   C8    -90.56  30.0  3
+ 76L  Var_55    H50  C7   C6   C14  -174.66  30.0  3
+ 76L  Var_56    H51  C7   C6   C14   -57.65  30.0  3
+ 76L  Var_57    H45  C1   C2   O3    -62.42  30.0  3
+ 76L  Var_58    H46  C1   C2   O3     58.00  30.0  3
+ 76L  Var_59    H44  C1   C2   O3    177.55  30.0  3
+ 76L  Var_60    H32  C2   C4   N5     64.49  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

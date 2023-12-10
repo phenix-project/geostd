@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZPE  ZPE  '(2R)-3-{[(S)-(2-aminoethoxy)(hydroxy)phosphoryl]oxy}-2-[(5Z)-tetradec-5-enoyloxy]propyl (11Z)-octadec-11-enoate'  ligand  117  47  .  2021-08-25  2022-11-18
+ ZPE  ZPE  '(2R)-3-{[(S)-(2-aminoethoxy)(hydroxy)phosphoryl]oxy}-2-[(5Z)-tetradec-5-enoyloxy]propyl (11Z)-octadec-11-enoate'  ligand  117  47  .  2021-08-25  2023-10-25
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-25
 ;
 
 data_comp_ZPE
@@ -516,44 +517,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ZPE  Var_01  C6'  C5'  C4'  C3'    -1.67   0.0  2
- ZPE  Var_02  CCA  CBA  CAA  C9B     1.13   0.0  2
- ZPE  Var_03  O4P  C4   C5   N     -62.89  30.0  1
- ZPE  Var_04  C5   C4   O4P  P    -167.29  30.0  3
- ZPE  Var_05  C2   C1   O3P  P    -148.93  30.0  3
- ZPE  Var_06  C3'  C2'  C1'  C'    -63.96  30.0  3
- ZPE  Var_07  C2'  C1'  C'   O'    100.14  30.0  1
- ZPE  Var_08  O1P  P    O3P  C1    -45.01  30.0  2
- ZPE  Var_09  C1'  C'   O2   C2    173.30  30.0  3
- ZPE  Var_10  C1B  CB   O3   C3    179.76  30.0  1
- ZPE  Var_11  C2B  C1B  CB   O3    -50.88  30.0  3
- ZPE  Var_12  C3B  C2B  C1B  CB    -57.04  30.0  3
- ZPE  Var_13  C4'  C3'  C2'  C1'  -179.90  30.0  3
- ZPE  Var_14  C4B  C3B  C2B  C1B  -167.12  30.0  2
- ZPE  Var_15  C5'  C4'  C3'  C2'  -117.58  30.0  3
- ZPE  Var_16  C5B  C4B  C3B  C2B  -166.34  30.0  3
- ZPE  Var_17  C6B  C5B  C4B  C3B   -56.30  30.0  2
- ZPE  Var_18  C7'  C6'  C5'  C4'   -83.54  30.0  3
- ZPE  Var_19  C7B  C6B  C5B  C4B   -59.81  30.0  1
- ZPE  Var_20  C8'  C7'  C6'  C5'   176.53  30.0  3
- ZPE  Var_21  C8B  C7B  C6B  C5B  -176.90  30.0  3
- ZPE  Var_22  C9'  C8'  C7'  C6'  -171.49  30.0  3
- ZPE  Var_23  C9B  C8B  C7B  C6B   178.67  30.0  1
- ZPE  Var_24  CA'  C9'  C8'  C7'    92.62  30.0  3
- ZPE  Var_25  CAA  C9B  C8B  C7B   177.39  30.0  3
- ZPE  Var_26  CB'  CA'  C9'  C8'   -59.71  30.0  2
- ZPE  Var_27  CBA  CAA  C9B  C8B    99.02  30.0  2
- ZPE  Var_28  CC'  CB'  CA'  C9'  -175.13  30.0  2
- ZPE  Var_29  CD'  CC'  CB'  CA'   179.09  30.0  1
- ZPE  Var_30  CDA  CCA  CBA  CAA   111.14  30.0  3
- ZPE  Var_31  CEA  CDA  CCA  CBA   172.04  30.0  3
- ZPE  Var_32  CFA  CEA  CDA  CCA    63.90  30.0  2
- ZPE  Var_33  CGA  CFA  CEA  CDA   178.76  30.0  3
- ZPE  Var_34  CHA  CGA  CFA  CEA  -179.88  30.0  2
- ZPE  Var_35  HN   N    C5   C4    174.60  30.0  3
- ZPE  Var_36  H3   C3   O3   CB     65.94  30.0  1
- ZPE  Var_37  HD'  CD'  CC'  CB'  -179.95  30.0  3
- ZPE  Var_38  HHA  CHA  CGA  CFA  -179.57  30.0  3
+ ZPE  Var_01  C6'   C5'  C4'  C3'    -1.67   0.0  2
+ ZPE  Var_02  CCA   CBA  CAA  C9B     1.13   0.0  2
+ ZPE  Var_03  O4P   C4   C5   N     -62.89  30.0  1
+ ZPE  Var_04  C5    C4   O4P  P    -167.29  30.0  3
+ ZPE  Var_05  C2    C1   O3P  P    -148.93  30.0  3
+ ZPE  Var_06  C3'   C2'  C1'  C'    -63.96  30.0  3
+ ZPE  Var_07  C2'   C1'  C'   O'    100.14  30.0  1
+ ZPE  Var_08  O1P   P    O3P  C1    -45.01  30.0  2
+ ZPE  Var_09  C1'   C'   O2   C2    173.30  30.0  3
+ ZPE  Var_10  C1B   CB   O3   C3    179.76  30.0  1
+ ZPE  Var_11  C2B   C1B  CB   O3    -50.88  30.0  3
+ ZPE  Var_12  C3B   C2B  C1B  CB    -57.04  30.0  3
+ ZPE  Var_13  C4'   C3'  C2'  C1'  -179.90  30.0  3
+ ZPE  Var_14  C4B   C3B  C2B  C1B  -167.12  30.0  2
+ ZPE  Var_15  C5'   C4'  C3'  C2'  -117.58  30.0  3
+ ZPE  Var_16  C5B   C4B  C3B  C2B  -166.34  30.0  3
+ ZPE  Var_17  C6B   C5B  C4B  C3B   -56.30  30.0  2
+ ZPE  Var_18  C7'   C6'  C5'  C4'   -83.54  30.0  3
+ ZPE  Var_19  C7B   C6B  C5B  C4B   -59.81  30.0  1
+ ZPE  Var_20  C8'   C7'  C6'  C5'   176.53  30.0  3
+ ZPE  Var_21  C8B   C7B  C6B  C5B  -176.90  30.0  3
+ ZPE  Var_22  C9'   C8'  C7'  C6'  -171.49  30.0  3
+ ZPE  Var_23  C9B   C8B  C7B  C6B   178.67  30.0  1
+ ZPE  Var_24  CA'   C9'  C8'  C7'    92.62  30.0  3
+ ZPE  Var_25  CAA   C9B  C8B  C7B   177.39  30.0  3
+ ZPE  Var_26  CB'   CA'  C9'  C8'   -59.71  30.0  2
+ ZPE  Var_27  CBA   CAA  C9B  C8B    99.02  30.0  2
+ ZPE  Var_28  CC'   CB'  CA'  C9'  -175.13  30.0  2
+ ZPE  Var_29  CD'   CC'  CB'  CA'   179.09  30.0  1
+ ZPE  Var_30  CDA   CCA  CBA  CAA   111.14  30.0  3
+ ZPE  Var_31  CEA   CDA  CCA  CBA   172.04  30.0  3
+ ZPE  Var_32  CFA   CEA  CDA  CCA    63.90  30.0  2
+ ZPE  Var_33  CGA   CFA  CEA  CDA   178.76  30.0  3
+ ZPE  Var_34  CHA   CGA  CFA  CEA  -179.88  30.0  2
+ ZPE  Var_35  HN    N    C5   C4    174.60  30.0  3
+ ZPE  Var_36  H3    C3   O3   CB     65.94  30.0  1
+ ZPE  Var_37  HD'   CD'  CC'  CB'  -179.95  30.0  3
+ ZPE  Var_38  HHA   CHA  CGA  CFA  -179.57  30.0  3
+ ZPE  Var_39  C1    C2   O2   C'     79.26  30.0  3
+ ZPE  Var_40  C3    C2   O2   C'   -158.41  30.0  3
+ ZPE  Var_41  O3    C3   C2   C1   -171.54  30.0  2
+ ZPE  Var_42  O3P   C1   C2   O2     60.59  30.0  3
+ ZPE  Var_43  O3    C3   C2   O2     66.06  30.0  2
+ ZPE  Var_44  O3P   C1   C2   C3    -58.72  30.0  3
+ ZPE  Var_45  O1P   P    O4P  C4   -174.81  30.0  1
+ ZPE  Var_46  O3P   P    O4P  C4     75.04  30.0  1
+ ZPE  Var_47  O2P   P    O4P  C4    -47.81  30.0  1
+ ZPE  Var_48  H2    C2   O2   C'    -39.52  30.0  3
+ ZPE  Var_49  H3A   C3   C2   C1     67.33  30.0  2
+ ZPE  Var_50  HO1P  O1P  P    O2P    47.70  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

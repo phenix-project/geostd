@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FLY  FLY  6-(2,4-difluorophenoxy)-8-methyl-2-[(1-methylethyl)amino]pyrido[2,3-d]pyrimidin-7(8H)-one  ligand  41  25  .  2021-08-09  2021-08-09  
+ FLY  FLY  6-(2,4-difluorophenoxy)-8-methyl-2-[(1-methylethyl)amino]pyrido[2,3-d]pyrimidin-7(8H)-one  ligand  41  25  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FLY
@@ -221,42 +222,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FLY  CONST_01  N10   C9   N1   C2     0.00   0.0  0
- FLY  CONST_02  N10   C3   C4   C2     0.00   0.0  0
- FLY  CONST_03  N1    C2   C4   C3     0.00   0.0  0
- FLY  CONST_04  N1    C9   N10  C3     0.00   0.0  0
- FLY  CONST_05  C9    N1   C2   C4     0.00   0.0  0
- FLY  CONST_06  C9    N10  C3   C4     0.00   0.0  0
- FLY  CONST_07  C20   C19  C18  C17    0.00   0.0  0
- FLY  CONST_08  C20   C21  C22  C17    0.00   0.0  0
- FLY  CONST_09  C21   C22  C17  C18    0.00   0.0  0
- FLY  CONST_10  C21   C20  C19  C18    0.00   0.0  0
- FLY  CONST_11  C22   C17  C18  C19    0.00   0.0  0
- FLY  CONST_12  C22   C21  C20  C19    0.00   0.0  0
- FLY  CONST_13  C6    C7   N8   C3     0.00   0.0  0
- FLY  CONST_14  N12   C9   N1   C2   180.00   0.0  0
- FLY  CONST_15  N12   C9   N10  C3   180.00   0.0  0
- FLY  CONST_16  F23   C22  C17  C18  180.00   0.0  0
- FLY  CONST_17  F24   C20  C19  C18  180.00   0.0  0
- FLY  CONST_18  O16   C17  C18  C19  180.00   0.0  0
- FLY  CONST_19  F23   C22  C21  C20  180.00   0.0  0
- FLY  CONST_20  O16   C17  C22  C21  180.00   0.0  0
- FLY  CONST_21  F24   C20  C21  C22  180.00   0.0  0
- FLY  CONST_22  O15   C7   N8   C3   180.00   0.0  0
- FLY  CONST_23  C25   N8   C7   C6   180.00   0.0  0
- FLY  CONST_24  H2    C2   C4   C3   180.00   0.0  0
- FLY  CONST_25  H19   C19  C18  C17  180.00   0.0  0
- FLY  CONST_26  H21   C21  C22  C17  180.00   0.0  0
- FLY  CONST_27  H18   C18  C19  C20  180.00   0.0  0
- FLY  CONST_28  C11   N12  C9   N1     0.00   0.0  0
- FLY  CONST_29  N10   C9   N12  C11  180.00   0.0  0
- FLY  CONST_30  C25   N8   C7   O15    0.00   0.0  0
- FLY  CONST_31  HN12  N12  C9   N1   180.00   0.0  0
- FLY  Var_01    C18   C17  O16  C6   -30.40  30.0  2
- FLY  Var_02    H25   C25  N8   C3   119.00  30.0  3
- FLY  Var_03    C13   C11  N12  C9    77.87  30.0  2
- FLY  Var_04    H14   C14  C11  C13   61.50  30.0  3
- FLY  Var_05    H13   C13  C11  C14   59.33  30.0  3
+ FLY  CONST_01  N10   C9   N1   C2      0.00   0.0  0
+ FLY  CONST_02  N10   C3   C4   C2      0.00   0.0  0
+ FLY  CONST_03  N1    C2   C4   C3      0.00   0.0  0
+ FLY  CONST_04  N1    C9   N10  C3      0.00   0.0  0
+ FLY  CONST_05  C9    N1   C2   C4      0.00   0.0  0
+ FLY  CONST_06  C9    N10  C3   C4      0.00   0.0  0
+ FLY  CONST_07  C20   C19  C18  C17     0.00   0.0  0
+ FLY  CONST_08  C20   C21  C22  C17     0.00   0.0  0
+ FLY  CONST_09  C21   C22  C17  C18     0.00   0.0  0
+ FLY  CONST_10  C21   C20  C19  C18     0.00   0.0  0
+ FLY  CONST_11  C22   C17  C18  C19     0.00   0.0  0
+ FLY  CONST_12  C22   C21  C20  C19     0.00   0.0  0
+ FLY  CONST_13  C6    C7   N8   C3      0.00   0.0  0
+ FLY  CONST_14  N12   C9   N1   C2    180.00   0.0  0
+ FLY  CONST_15  N12   C9   N10  C3    180.00   0.0  0
+ FLY  CONST_16  F23   C22  C17  C18   180.00   0.0  0
+ FLY  CONST_17  F24   C20  C19  C18   180.00   0.0  0
+ FLY  CONST_18  O16   C17  C18  C19   180.00   0.0  0
+ FLY  CONST_19  F23   C22  C21  C20   180.00   0.0  0
+ FLY  CONST_20  O16   C17  C22  C21   180.00   0.0  0
+ FLY  CONST_21  F24   C20  C21  C22   180.00   0.0  0
+ FLY  CONST_22  O15   C7   N8   C3    180.00   0.0  0
+ FLY  CONST_23  C25   N8   C7   C6    180.00   0.0  0
+ FLY  CONST_24  H2    C2   C4   C3    180.00   0.0  0
+ FLY  CONST_25  H19   C19  C18  C17   180.00   0.0  0
+ FLY  CONST_26  H21   C21  C22  C17   180.00   0.0  0
+ FLY  CONST_27  H18   C18  C19  C20   180.00   0.0  0
+ FLY  CONST_28  C11   N12  C9   N1      0.00   0.0  0
+ FLY  CONST_29  N10   C9   N12  C11   180.00   0.0  0
+ FLY  CONST_30  C25   N8   C7   O15     0.00   0.0  0
+ FLY  CONST_31  HN12  N12  C9   N1    180.00   0.0  0
+ FLY  Var_01    C18   C17  O16  C6    -30.40  30.0  2
+ FLY  Var_02    H25   C25  N8   C3    119.00  30.0  3
+ FLY  Var_03    C13   C11  N12  C9     77.87  30.0  2
+ FLY  Var_04    H14   C14  C11  C13    61.50  30.0  3
+ FLY  Var_05    H13   C13  C11  C14    59.33  30.0  3
+ FLY  Var_06    C6    C5   C4   C2   -179.19  30.0  1
+ FLY  Var_07    C6    C5   C4   C3      1.02  30.0  1
+ FLY  Var_08    C7    N8   C3   C4     -1.24  30.0  1
+ FLY  Var_09    C7    C6   C5   C4     -0.55  30.0  1
+ FLY  Var_10    N8    C7   C6   C5     -0.74  30.0  1
+ FLY  Var_11    N10   C3   N8   C7    178.58  30.0  1
+ FLY  Var_12    C25   N8   C3   C4    179.81  30.0  1
+ FLY  Var_13    O16   C6   C5   C4    175.42  30.0  1
+ FLY  Var_14    O15   C7   C6   C5    179.24  30.0  1
+ FLY  Var_15    C17   O16  C6   C5    119.15  30.0  3
+ FLY  Var_16    C17   O16  C6   C7    -64.66  30.0  3
+ FLY  Var_17    N8    C7   C6   O16  -176.90  30.0  1
+ FLY  Var_18    N10   C3   N8   C25    -0.37  30.0  1
+ FLY  Var_19    H5    C5   C4   C2     -0.23  30.0  1
+ FLY  Var_20    O15   C7   C6   O16     3.08  30.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id

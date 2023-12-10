@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- V11  V11  '[(1S,5R)-8-[(2R)-2-hydroxy-2-phenyl-ethyl]-8-azabicyclo[3.2.1]octan-3-yl] benzoate'  ligand  51  26  .  2021-08-24  2021-08-24  
+ V11  V11  '[(1S,5R)-8-[(2R)-2-hydroxy-2-phenyl-ethyl]-8-azabicyclo[3.2.1]octan-3-yl] benzoate'  ligand  51  26  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_V11
@@ -268,35 +269,76 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- V11  CONST_01  C5   C4   C3   C2     0.00   0.0  0
- V11  CONST_02  C5   C6   C7   C2     0.00   0.0  0
- V11  CONST_03  C4   C3   C2   C7     0.00   0.0  0
- V11  CONST_04  C4   C5   C6   C7     0.00   0.0  0
- V11  CONST_05  C3   C4   C5   C6     0.00   0.0  0
- V11  CONST_06  C3   C2   C7   C6     0.00   0.0  0
- V11  CONST_07  C20  C19  C18  C17    0.00   0.0  0
- V11  CONST_08  C20  C21  C22  C17    0.00   0.0  0
- V11  CONST_09  C19  C18  C17  C22    0.00   0.0  0
- V11  CONST_10  C19  C20  C21  C22    0.00   0.0  0
- V11  CONST_11  C18  C19  C20  C21    0.00   0.0  0
- V11  CONST_12  C18  C17  C22  C21    0.00   0.0  0
- V11  CONST_13  C4   C3   C2   C1   180.00   0.0  0
- V11  CONST_14  C6   C7   C2   C1   180.00   0.0  0
- V11  CONST_15  C19  C18  C17  C16  180.00   0.0  0
- V11  CONST_16  C21  C22  C17  C16  180.00   0.0  0
- V11  CONST_17  H4   C4   C3   C2   180.00   0.0  0
- V11  CONST_18  H6   C6   C7   C2   180.00   0.0  0
- V11  CONST_19  H3   C3   C2   C7   180.00   0.0  0
- V11  CONST_20  H5   C5   C6   C7   180.00   0.0  0
- V11  CONST_21  H7   C7   C6   C5   180.00   0.0  0
- V11  CONST_22  H19  C19  C18  C17  180.00   0.0  0
- V11  CONST_23  H21  C21  C22  C17  180.00   0.0  0
- V11  CONST_24  H18  C18  C17  C22  180.00   0.0  0
- V11  CONST_25  H20  C20  C21  C22  180.00   0.0  0
- V11  CONST_26  H22  C22  C21  C20  180.00   0.0  0
- V11  Var_01    C10  C14  C13  C11    0.37  30.0  3
- V11  Var_02    C3   C2   C1   O2    -0.14  30.0  2
- V11  Var_03    C16  C15  N    C11  156.98  30.0  3
+ V11  CONST_01  C5    C4   C3   C2      0.00   0.0  0
+ V11  CONST_02  C5    C6   C7   C2      0.00   0.0  0
+ V11  CONST_03  C4    C3   C2   C7      0.00   0.0  0
+ V11  CONST_04  C4    C5   C6   C7      0.00   0.0  0
+ V11  CONST_05  C3    C4   C5   C6      0.00   0.0  0
+ V11  CONST_06  C3    C2   C7   C6      0.00   0.0  0
+ V11  CONST_07  C20   C19  C18  C17     0.00   0.0  0
+ V11  CONST_08  C20   C21  C22  C17     0.00   0.0  0
+ V11  CONST_09  C19   C18  C17  C22     0.00   0.0  0
+ V11  CONST_10  C19   C20  C21  C22     0.00   0.0  0
+ V11  CONST_11  C18   C19  C20  C21     0.00   0.0  0
+ V11  CONST_12  C18   C17  C22  C21     0.00   0.0  0
+ V11  CONST_13  C4    C3   C2   C1    180.00   0.0  0
+ V11  CONST_14  C6    C7   C2   C1    180.00   0.0  0
+ V11  CONST_15  C19   C18  C17  C16   180.00   0.0  0
+ V11  CONST_16  C21   C22  C17  C16   180.00   0.0  0
+ V11  CONST_17  H4    C4   C3   C2    180.00   0.0  0
+ V11  CONST_18  H6    C6   C7   C2    180.00   0.0  0
+ V11  CONST_19  H3    C3   C2   C7    180.00   0.0  0
+ V11  CONST_20  H5    C5   C6   C7    180.00   0.0  0
+ V11  CONST_21  H7    C7   C6   C5    180.00   0.0  0
+ V11  CONST_22  H19   C19  C18  C17   180.00   0.0  0
+ V11  CONST_23  H21   C21  C22  C17   180.00   0.0  0
+ V11  CONST_24  H18   C18  C17  C22   180.00   0.0  0
+ V11  CONST_25  H20   C20  C21  C22   180.00   0.0  0
+ V11  CONST_26  H22   C22  C21  C20   180.00   0.0  0
+ V11  Var_01    C10   C14  C13  C11     0.37  30.0  3
+ V11  Var_02    C3    C2   C1   O2     -0.14  30.0  2
+ V11  Var_03    C16   C15  N    C11   156.98  30.0  3
+ V11  Var_04    N     C10  C9   C8     57.27  30.0  1
+ V11  Var_05    C14   C10  C9   C8    -57.65  30.0  1
+ V11  Var_06    N     C11  C12  C8    -57.65  30.0  1
+ V11  Var_07    C13   C11  C12  C8     57.57  30.0  1
+ V11  Var_08    C10   C9   C8   C12   -36.49  30.0  1
+ V11  Var_09    C10   N    C11  C12    75.89  30.0  1
+ V11  Var_10    C14   C13  C11  C12   -89.64  30.0  3
+ V11  Var_11    C9    C10  N    C11   -75.64  30.0  1
+ V11  Var_12    C14   C10  N    C11    45.47  30.0  1
+ V11  Var_13    C9    C8   C12  C11    36.60  30.0  1
+ V11  Var_14    C10   N    C11  C13   -45.32  30.0  1
+ V11  Var_15    N     C10  C14  C13   -27.84  30.0  3
+ V11  Var_16    C9    C10  C14  C13    88.97  30.0  3
+ V11  Var_17    N     C11  C13  C14    27.30  30.0  3
+ V11  Var_18    C10   C9   C8   O1     85.34  30.0  1
+ V11  Var_19    C11   C12  C8   O1    -82.86  30.0  1
+ V11  Var_20    C15   N    C11  C12  -160.62  30.0  1
+ V11  Var_21    C15   N    C11  C13    78.18  30.0  1
+ V11  Var_22    C15   N    C10  C14   -78.64  30.0  1
+ V11  Var_23    C15   N    C10  C9    160.26  30.0  1
+ V11  Var_24    H10   C10  C9   C8    176.75  30.0  1
+ V11  Var_25    H11   C11  C12  C8   -176.62  30.0  1
+ V11  Var_26    H91C  C9   C8   C12    83.10  30.0  1
+ V11  Var_27    H92C  C9   C8   C12  -161.23  30.0  1
+ V11  Var_28    H131  C13  C11  C12    33.33  30.0  3
+ V11  Var_29    H132  C13  C11  C12   152.25  30.0  3
+ V11  Var_30    H8    C8   C12  C11   157.99  30.0  1
+ V11  Var_31    H121  C12  C11  C13   -67.56  30.0  1
+ V11  Var_32    H122  C12  C11  C13   176.35  30.0  1
+ V11  Var_33    C9    C8   O1   C1    157.70  30.0  3
+ V11  Var_34    C12   C8   O1   C1    -79.95  30.0  3
+ V11  Var_35    C8    O1   C1   C2    179.58  30.0  3
+ V11  Var_36    C17   C16  C15  N    -167.33  30.0  3
+ V11  Var_37    C18   C17  C16  C15   -86.43  30.0  2
+ V11  Var_38    C22   C17  C16  C15    90.85  30.0  2
+ V11  Var_39    C18   C17  C16  O3    152.76  30.0  2
+ V11  Var_40    C22   C17  C16  O3    -29.96  30.0  2
+ V11  Var_41    H16   C16  C17  C22  -151.26  30.0  2
+ V11  Var_42    C8    O1   C1   O2     -0.68  30.0  3
+ V11  Var_43    O3    C16  C15  N     -45.22  30.0  3
+ V11  Var_44    HA    O3   C16  C17   150.17  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

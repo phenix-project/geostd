@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CSQ  CSQ  'O-[(2R,3S,4R,5R)-5-(4-amino-2-oxopyrimidin-1(2H)-yl)-4-hydroxy-2-(hydroxymethyl)tetrahydrofuran-3-yl] O-{[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl} hydrogen (R)-phosphorothioate'  ligand  61  37  .  2021-08-07  2021-08-07  
+ CSQ  CSQ  'O-[(2R,3S,4R,5R)-5-(4-amino-2-oxopyrimidin-1(2H)-yl)-4-hydroxy-2-(hydroxymethyl)tetrahydrofuran-3-yl] O-{[(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl} hydrogen (R)-phosphorothioate'  ligand  61  37  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CSQ
@@ -302,27 +303,97 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CSQ  CONST_01  N12   C11  N10  C9   180.00   0.0  0
- CSQ  CONST_02  C13   N12  C11  N10    0.00   0.0  0
- CSQ  CONST_03  C14   C13  N12  C11    0.00   0.0  0
- CSQ  CONST_04  C15   N10  C11  N12    0.00   0.0  0
- CSQ  CONST_05  N32   C31  N30  C29  180.00   0.0  0
- CSQ  CONST_06  C33   N32  C31  N30    0.00   0.0  0
- CSQ  CONST_07  C34   C33  N32  C31    0.00   0.0  0
- CSQ  CONST_08  C35   N30  C31  N32    0.00   0.0  0
- CSQ  CONST_09  O16   C11  N10  C9     0.00   0.0  0
- CSQ  CONST_10  N17   C13  N12  C11  180.00   0.0  0
- CSQ  CONST_11  O16   C11  N12  C13  180.00   0.0  0
- CSQ  CONST_12  O16   C11  N10  C15  180.00   0.0  0
- CSQ  CONST_13  O36   C31  N30  C29    0.00   0.0  0
- CSQ  CONST_14  O37   C33  N32  C31  180.00   0.0  0
- CSQ  CONST_15  O36   C31  N32  C33  180.00   0.0  0
- CSQ  CONST_16  O36   C31  N30  C35  180.00   0.0  0
- CSQ  CONST_17  HN32  N32  C31  N30  180.00   0.0  0
- CSQ  CONST_18  HN17  N17  C13  N12    0.00   0.0  0
- CSQ  CONST_19  HN1A  N17  C13  N12  180.00   0.0  0
- CSQ  Var_01    O19   P18  O6   C5    66.04  30.0  1
- CSQ  Var_02    C23   C22  O21  P18   92.20  30.0  1
+ CSQ  CONST_01  N12   C11  N10  C9    180.00   0.0  0
+ CSQ  CONST_02  C13   N12  C11  N10     0.00   0.0  0
+ CSQ  CONST_03  C14   C13  N12  C11     0.00   0.0  0
+ CSQ  CONST_04  C15   N10  C11  N12     0.00   0.0  0
+ CSQ  CONST_05  N32   C31  N30  C29   180.00   0.0  0
+ CSQ  CONST_06  C33   N32  C31  N30     0.00   0.0  0
+ CSQ  CONST_07  C34   C33  N32  C31     0.00   0.0  0
+ CSQ  CONST_08  C35   N30  C31  N32     0.00   0.0  0
+ CSQ  CONST_09  O16   C11  N10  C9      0.00   0.0  0
+ CSQ  CONST_10  N17   C13  N12  C11   180.00   0.0  0
+ CSQ  CONST_11  O16   C11  N12  C13   180.00   0.0  0
+ CSQ  CONST_12  O16   C11  N10  C15   180.00   0.0  0
+ CSQ  CONST_13  O36   C31  N30  C29     0.00   0.0  0
+ CSQ  CONST_14  O37   C33  N32  C31   180.00   0.0  0
+ CSQ  CONST_15  O36   C31  N32  C33   180.00   0.0  0
+ CSQ  CONST_16  O36   C31  N30  C35   180.00   0.0  0
+ CSQ  CONST_17  HN32  N32  C31  N30   180.00   0.0  0
+ CSQ  CONST_18  HN17  N17  C13  N12     0.00   0.0  0
+ CSQ  CONST_19  HN1A  N17  C13  N12   180.00   0.0  0
+ CSQ  Var_01    O19   P18  O6   C5     66.04  30.0  1
+ CSQ  Var_02    C23   C22  O21  P18    92.20  30.0  1
+ CSQ  Var_03    C9    C7   C5   C3    -36.45  30.0  1
+ CSQ  Var_04    C7    C9   O4   C3    -17.27  30.0  1
+ CSQ  Var_05    N10   C9   O4   C3   -144.89  30.0  1
+ CSQ  Var_06    C7    C5   C3   O4     28.10  30.0  1
+ CSQ  Var_07    C5    C7   C9   O4     33.74  30.0  1
+ CSQ  Var_08    C15   N10  C9   O4   -114.80  30.0  2
+ CSQ  Var_09    C11   N10  C9   O4     63.47  30.0  2
+ CSQ  Var_10    C9    O4   C3   C5     -7.05  30.0  1
+ CSQ  Var_11    N10   C9   C7   C5    158.10  30.0  1
+ CSQ  Var_12    C15   N10  C9   C7    123.10  30.0  2
+ CSQ  Var_13    C11   N10  C9   C7    -58.63  30.0  2
+ CSQ  Var_14    C29   C27  C25  C23    36.18  30.0  1
+ CSQ  Var_15    C27   C29  O24  C23     7.80  30.0  1
+ CSQ  Var_16    N30   C29  O24  C23  -113.52  30.0  1
+ CSQ  Var_17    C27   C25  C23  O24   -32.86  30.0  1
+ CSQ  Var_18    C25   C27  C29  O24   -28.04  30.0  1
+ CSQ  Var_19    C35   N30  C29  O24    12.45  30.0  3
+ CSQ  Var_20    C31   N30  C29  O24  -165.49  30.0  3
+ CSQ  Var_21    C29   O24  C23  C25    16.17  30.0  1
+ CSQ  Var_22    N30   C29  C27  C25    91.90  30.0  1
+ CSQ  Var_23    C35   N30  C29  C27  -105.78  30.0  3
+ CSQ  Var_24    C31   N30  C29  C27    76.28  30.0  3
+ CSQ  Var_25    C7    C5   C3   C2    -93.74  30.0  1
+ CSQ  Var_26    C9    O4   C3   C2    115.27  30.0  1
+ CSQ  Var_27    O8    C7   C5   C3   -154.68  30.0  1
+ CSQ  Var_28    O6    C5   C3   O4    -85.76  30.0  1
+ CSQ  Var_29    O8    C7   C9   O4    155.64  30.0  1
+ CSQ  Var_30    C9    C7   C5   O6     78.59  30.0  1
+ CSQ  Var_31    N10   C9   C7   O8    -80.00  30.0  1
+ CSQ  Var_32    C27   C25  C23  C22  -152.89  30.0  1
+ CSQ  Var_33    C29   O24  C23  C22   137.46  30.0  1
+ CSQ  Var_34    O28   C27  C25  C23   -77.54  30.0  1
+ CSQ  Var_35    O26   C25  C23  O24  -154.26  30.0  1
+ CSQ  Var_36    O28   C27  C29  O24    88.41  30.0  1
+ CSQ  Var_37    C29   C27  C25  O26   154.75  30.0  1
+ CSQ  Var_38    N30   C29  C27  O28  -151.65  30.0  1
+ CSQ  Var_39    H7    C7   C5   C3     79.22  30.0  1
+ CSQ  Var_40    H9    C9   O4   C3     99.29  30.0  1
+ CSQ  Var_41    H5    C5   C3   O4    149.90  30.0  1
+ CSQ  Var_42    H3    C3   C5   C7    145.07  30.0  1
+ CSQ  Var_43    H15   C15  N10  C9     -0.92  30.0  1
+ CSQ  Var_44    H14   C14  C15  N10   179.87  30.0  1
+ CSQ  Var_45    H27   C27  C25  C23   156.40  30.0  1
+ CSQ  Var_46    H29   C29  O24  C23   129.02  30.0  1
+ CSQ  Var_47    H25   C25  C23  O24    82.46  30.0  1
+ CSQ  Var_48    H23   C23  C25  C27    84.47  30.0  1
+ CSQ  Var_49    H35   C35  N30  C29    -0.79  30.0  1
+ CSQ  Var_50    H34   C34  C35  N30  -179.98  30.0  1
+ CSQ  Var_51    C5    C3   C2   O1    178.67  30.0  3
+ CSQ  Var_52    O4    C3   C2   O1     60.17  30.0  3
+ CSQ  Var_53    O6    C5   C3   C2    152.40  30.0  1
+ CSQ  Var_54    P18   O6   C5   C3   -125.03  30.0  3
+ CSQ  Var_55    O8    C7   C5   O6    -39.64  30.0  1
+ CSQ  Var_56    P18   O6   C5   C7    124.54  30.0  3
+ CSQ  Var_57    C25   C23  C22  O21   174.58  30.0  3
+ CSQ  Var_58    O24   C23  C22  O21    57.85  30.0  3
+ CSQ  Var_59    O26   C25  C23  C22    85.71  30.0  1
+ CSQ  Var_60    O28   C27  C25  O26    41.03  30.0  1
+ CSQ  Var_61    H2    C2   C3   O4    -62.41  30.0  1
+ CSQ  Var_62    H2A   C2   C3   O4   -179.14  30.0  1
+ CSQ  Var_63    HO8   O8   C7   C5   -103.49  30.0  3
+ CSQ  Var_64    HO26  O26  C25  C23  -162.08  30.0  3
+ CSQ  Var_65    H22   C22  C23  O24   -60.29  30.0  1
+ CSQ  Var_66    H22A  C22  C23  O24  -178.31  30.0  1
+ CSQ  Var_67    HO28  O28  C27  C25   -39.94  30.0  3
+ CSQ  Var_68    HO1   O1   C2   C3   -174.62  30.0  3
+ CSQ  Var_69    C22   O21  P18  O6    179.97  30.0  3
+ CSQ  Var_70    C22   O21  P18  O19   -54.24  30.0  3
+ CSQ  Var_71    C22   O21  P18  S20    68.17  30.0  3
+ CSQ  Var_72    HS20  S20  P18  O6    -49.49  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

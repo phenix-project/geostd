@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OTC  OTC  (4S,4aR,5S,5aR,6S,12aS)-4-(dimethylamino)-3,5,6,10,12,12a-hexahydroxy-6-methyl-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide  ligand  57  33  .  2021-08-17  2021-08-17  
+ OTC  OTC  (4S,4aR,5S,5aR,6S,12aS)-4-(dimethylamino)-3,5,6,10,12,12a-hexahydroxy-6-methyl-1,11-dioxo-1,4,4a,5,5a,6,11,12a-octahydrotetracene-2-carboxamide  ligand  57  33  .  2021-08-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OTC
@@ -287,27 +288,94 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OTC  CONST_01  C9    C8   C7   C6A    0.00   0.0  0
- OTC  CONST_02  C9    C10  C6B  C6A    0.00   0.0  0
- OTC  CONST_03  C10   C6B  C6A  C7     0.00   0.0  0
- OTC  CONST_04  C10   C9   C8   C7     0.00   0.0  0
- OTC  CONST_05  C6B   C6A  C7   C8     0.00   0.0  0
- OTC  CONST_06  C6B   C10  C9   C8     0.00   0.0  0
- OTC  CONST_07  O10   C10  C6B  C6A  180.00   0.0  0
- OTC  CONST_08  O10   C10  C9   C8   180.00   0.0  0
- OTC  CONST_09  C11   C6B  C10  O10    0.00   0.0  0
- OTC  CONST_10  H7    C7   C6A  C6     0.00   0.0  0
- OTC  CONST_11  H8    C8   C7   C6A  180.00   0.0  0
- OTC  CONST_12  H9    C9   C8   C7   180.00   0.0  0
- OTC  CONST_14  H212  N21  C21  C2   180.00   0.0  0
- OTC  Var_01    C4    C3   C2   C1    -6.22  30.0  1
- OTC  Var_02    C4B   C1   C2   C3     8.80  30.0  1
- OTC  Var_03    C6B   C11  C5B  C5A  -12.40  30.0  1
- OTC  Var_04    C4B   C12  C5B  C5A    4.73  30.0  1
- OTC  Var_05    C5B   C11  C6B  C6A  -11.60  30.0  1
- OTC  Var_06    O21   C21  C2   C1    53.14  30.0  2
- OTC  Var_07    H411  C41  N4   C4    67.71  30.0  3
- OTC  Var_08    H421  C42  N4   C4    60.59  30.0  3
+ OTC  CONST_01  C9    C8   C7   C6A     0.00   0.0  0
+ OTC  CONST_02  C9    C10  C6B  C6A     0.00   0.0  0
+ OTC  CONST_03  C10   C6B  C6A  C7      0.00   0.0  0
+ OTC  CONST_04  C10   C9   C8   C7      0.00   0.0  0
+ OTC  CONST_05  C6B   C6A  C7   C8      0.00   0.0  0
+ OTC  CONST_06  C6B   C10  C9   C8      0.00   0.0  0
+ OTC  CONST_07  O10   C10  C6B  C6A   180.00   0.0  0
+ OTC  CONST_08  O10   C10  C9   C8    180.00   0.0  0
+ OTC  CONST_09  C11   C6B  C10  O10     0.00   0.0  0
+ OTC  CONST_10  H7    C7   C6A  C6      0.00   0.0  0
+ OTC  CONST_11  H8    C8   C7   C6A   180.00   0.0  0
+ OTC  CONST_12  H9    C9   C8   C7    180.00   0.0  0
+ OTC  CONST_13  H212  N21  C21  C2    180.00   0.0  0
+ OTC  Var_01    C4    C3   C2   C1     -6.22  30.0  1
+ OTC  Var_02    C4B   C1   C2   C3      8.80  30.0  1
+ OTC  Var_03    C6B   C11  C5B  C5A   -12.40  30.0  1
+ OTC  Var_04    C4B   C12  C5B  C5A     4.73  30.0  1
+ OTC  Var_05    C5B   C11  C6B  C6A   -11.60  30.0  1
+ OTC  Var_06    O21   C21  C2   C1     53.14  30.0  2
+ OTC  Var_07    H411  C41  N4   C4     67.71  30.0  3
+ OTC  Var_08    H421  C42  N4   C4     60.59  30.0  3
+ OTC  Var_09    C4    C4A  C4B  C1     59.00  30.0  1
+ OTC  Var_10    C5    C4A  C4B  C1    -65.45  30.0  1
+ OTC  Var_11    C5B   C12  C4B  C1     91.51  30.0  1
+ OTC  Var_12    C4A   C4B  C1   C2    -35.72  30.0  1
+ OTC  Var_13    C12   C4B  C1   C2   -157.86  30.0  1
+ OTC  Var_14    C4A   C4   C3   C2     29.80  30.0  1
+ OTC  Var_15    C5    C4A  C4   C3     67.83  30.0  1
+ OTC  Var_16    C4B   C4A  C4   C3    -55.15  30.0  1
+ OTC  Var_17    C5A   C5   C4A  C4   -179.69  30.0  1
+ OTC  Var_18    C12   C4B  C4A  C4   -179.00  30.0  1
+ OTC  Var_19    C6    C5A  C5   C4A   155.74  30.0  1
+ OTC  Var_20    C5B   C5A  C5   C4A    30.45  30.0  1
+ OTC  Var_21    C5B   C12  C4B  C4A   -31.10  30.0  1
+ OTC  Var_22    C12   C4B  C4A  C5     56.54  30.0  1
+ OTC  Var_23    C6A   C6   C5A  C5    168.78  30.0  1
+ OTC  Var_24    C11   C5B  C5A  C5    177.78  30.0  1
+ OTC  Var_25    C12   C5B  C5A  C5     -4.23  30.0  1
+ OTC  Var_26    C4B   C4A  C5   C5A   -57.37  30.0  1
+ OTC  Var_27    C7    C6A  C6   C5A  -141.04  30.0  1
+ OTC  Var_28    C6B   C6A  C6   C5A    41.95  30.0  1
+ OTC  Var_29    C11   C5B  C5A  C6     49.95  30.0  1
+ OTC  Var_30    C12   C5B  C5A  C6   -132.06  30.0  1
+ OTC  Var_31    C5B   C5A  C6   C6A   -62.50  30.0  1
+ OTC  Var_32    O12   C12  C4B  C1    -87.45  30.0  1
+ OTC  Var_33    C4A   C4B  C1   O1    146.46  30.0  1
+ OTC  Var_34    C12   C4B  C1   O1     24.32  30.0  1
+ OTC  Var_35    O13   C4B  C1   C2     86.61  30.0  1
+ OTC  Var_36    N4    C4   C3   C2    -90.66  30.0  1
+ OTC  Var_37    C4A   C4   C3   O3   -151.38  30.0  1
+ OTC  Var_38    O5    C5   C4A  C4     55.64  30.0  1
+ OTC  Var_39    O13   C4B  C4A  C4    -58.52  30.0  1
+ OTC  Var_40    C5    C4A  C4   N4   -169.89  30.0  1
+ OTC  Var_41    C4B   C4A  C4   N4     67.13  30.0  1
+ OTC  Var_42    O12   C12  C4B  C4A   149.95  30.0  1
+ OTC  Var_43    O13   C4B  C4A  C5    177.02  30.0  1
+ OTC  Var_44    O6    C6   C5A  C5    -75.16  30.0  1
+ OTC  Var_45    C61   C6   C5A  C5     45.06  30.0  1
+ OTC  Var_46    C4B   C4A  C5   O5    177.96  30.0  1
+ OTC  Var_47    C6    C5A  C5   O5    -80.50  30.0  1
+ OTC  Var_48    C5B   C5A  C5   O5    154.21  30.0  1
+ OTC  Var_49    C5B   C5A  C6   O6     53.55  30.0  1
+ OTC  Var_50    C7    C6A  C6   O6    105.39  30.0  1
+ OTC  Var_51    C6B   C6A  C6   O6    -71.62  30.0  1
+ OTC  Var_52    C5B   C5A  C6   C61   173.77  30.0  1
+ OTC  Var_53    C7    C6A  C6   C61   -16.31  30.0  1
+ OTC  Var_54    C6B   C6A  C6   C61   166.68  30.0  1
+ OTC  Var_55    O13   C4B  C12  C5B  -154.71  30.0  1
+ OTC  Var_56    H4A   C4A  C4B  C1    177.13  30.0  1
+ OTC  Var_57    H4    C4   C3   C2    148.95  30.0  1
+ OTC  Var_58    H5    C5   C4A  C4    -59.23  30.0  1
+ OTC  Var_59    H5A   C5A  C5   C4A   -87.48  30.0  1
+ OTC  Var_60    O13   C4B  C1   O1    -91.21  30.0  1
+ OTC  Var_61    C41   N4   C4   C3   -157.47  30.0  3
+ OTC  Var_62    C42   N4   C4   C3    -31.37  30.0  3
+ OTC  Var_63    N4    C4   C3   O3     88.16  30.0  1
+ OTC  Var_64    C4A   C4   N4   C41    81.33  30.0  2
+ OTC  Var_65    C4A   C4   N4   C42  -152.56  30.0  2
+ OTC  Var_66    O13   C4B  C12  O12    26.33  30.0  1
+ OTC  Var_67    H13   O13  C4B  C1    -99.20  30.0  3
+ OTC  Var_68    H3    O3   C3   C2     -1.69  30.0  3
+ OTC  Var_69    HA    O5   C5   C4A    69.66  30.0  3
+ OTC  Var_70    H6    O6   C6   C5A   174.17  30.0  3
+ OTC  Var_71    H611  C61  C6   C5A    60.42  30.0  3
+ OTC  Var_72    H612  C61  C6   C5A  -179.18  30.0  3
+ OTC  Var_73    H613  C61  C6   C5A   -61.07  30.0  3
+ OTC  Var_74    H10   O10  C10  C9   -176.50  30.0  2
+ OTC  Var_75    H12   O12  C12  C5B   170.87  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

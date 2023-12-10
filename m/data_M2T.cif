@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- M2T  M2T  5'-deoxy-5'-(dimethyl-lambda~4~-sulfanyl)adenosine  ligand  40  21  .  2021-08-14  2021-08-14  
+ M2T  M2T  5'-deoxy-5'-(dimethyl-lambda~4~-sulfanyl)adenosine  ligand  40  21  .  2021-08-14  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_M2T
@@ -222,36 +223,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- M2T  CONST_01  C5    N7   C8  N9      0.00   0.0  0
- M2T  CONST_02  C6    C5   C4  N9    180.00   0.0  0
- M2T  CONST_03  N7    C5   C4  N9      0.00   0.0  0
- M2T  CONST_04  C2    N3   C4  N9    180.00   0.0  0
- M2T  CONST_05  N7    C8   N9  C4      0.00   0.0  0
- M2T  CONST_06  N1    C6   C5  C4      0.00   0.0  0
- M2T  CONST_07  C8    N7   C5  C4      0.00   0.0  0
- M2T  CONST_08  N1    C2   N3  C4      0.00   0.0  0
- M2T  CONST_09  C8    N9   C4  N3    180.00   0.0  0
- M2T  CONST_10  C6    C5   C4  N3      0.00   0.0  0
- M2T  CONST_11  N7    C5   C4  N3    180.00   0.0  0
- M2T  CONST_12  C6    N1   C2  N3      0.00   0.0  0
- M2T  CONST_13  C5    C4   N3  C2      0.00   0.0  0
- M2T  CONST_14  C5    C6   N1  C2      0.00   0.0  0
- M2T  CONST_15  N7    C5   C6  N1    180.00   0.0  0
- M2T  CONST_16  C8    N7   C5  C6    180.00   0.0  0
- M2T  CONST_17  C8    N9   C4  C5      0.00   0.0  0
- M2T  CONST_18  N7    C8   N9  C1'   180.00   0.0  0
- M2T  CONST_19  C5    C4   N9  C1'   180.00   0.0  0
- M2T  CONST_20  N3    C4   N9  C1'     0.00   0.0  0
- M2T  CONST_21  N6    C6   C5  C4    180.00   0.0  0
- M2T  CONST_22  N6    C6   N1  C2    180.00   0.0  0
- M2T  CONST_23  N7    C5   C6  N6      0.00   0.0  0
- M2T  CONST_24  H8    C8   N9  C1'     0.00   0.0  0
- M2T  CONST_25  H2    C2   N3  C4    180.00   0.0  0
- M2T  CONST_26  HN6   N6   C6  N1      0.00   0.0  0
- M2T  CONST_27  HN6A  N6   C6  N1    180.00   0.0  0
- M2T  Var_01    C4'   C5'  SD  CG     83.02  30.0  3
- M2T  Var_02    HE    CE   SD  CG   -158.16  30.0  3
- M2T  Var_03    HG    CG   SD  CE     71.16  30.0  3
+ M2T  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ M2T  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ M2T  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ M2T  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ M2T  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ M2T  CONST_06  N1    C6   C5   C4      0.00   0.0  0
+ M2T  CONST_07  C8    N7   C5   C4      0.00   0.0  0
+ M2T  CONST_08  N1    C2   N3   C4      0.00   0.0  0
+ M2T  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ M2T  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ M2T  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ M2T  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ M2T  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ M2T  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ M2T  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ M2T  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ M2T  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ M2T  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ M2T  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ M2T  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ M2T  CONST_21  N6    C6   C5   C4    180.00   0.0  0
+ M2T  CONST_22  N6    C6   N1   C2    180.00   0.0  0
+ M2T  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ M2T  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ M2T  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ M2T  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ M2T  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ M2T  Var_01    C4'   C5'  SD   CG     83.02  30.0  3
+ M2T  Var_02    HE    CE   SD   CG   -158.16  30.0  3
+ M2T  Var_03    HG    CG   SD   CE     71.16  30.0  3
+ M2T  Var_04    N9    C1'  O4'  C4'  -110.21  30.0  1
+ M2T  Var_05    C2'   C1'  O4'  C4'    10.20  30.0  1
+ M2T  Var_06    C1'   C2'  C3'  C4'    36.94  30.0  1
+ M2T  Var_07    C2'   C3'  C4'  O4'   -32.16  30.0  1
+ M2T  Var_08    C8    N9   C1'  O4'    10.59  30.0  2
+ M2T  Var_09    C4    N9   C1'  O4'  -167.85  30.0  2
+ M2T  Var_10    C3'   C2'  C1'  O4'   -29.84  30.0  1
+ M2T  Var_11    C3'   C4'  O4'  C1'    14.11  30.0  1
+ M2T  Var_12    C3'   C2'  C1'  N9     89.05  30.0  1
+ M2T  Var_13    C2'   C1'  N9   C4     74.35  30.0  2
+ M2T  Var_14    C2'   C1'  N9   C8   -107.21  30.0  2
+ M2T  Var_15    C1'   O4'  C4'  C5'   140.29  30.0  1
+ M2T  Var_16    C2'   C3'  C4'  C5'  -153.96  30.0  1
+ M2T  Var_17    O2'   C2'  C3'  C4'   -77.00  30.0  1
+ M2T  Var_18    O3'   C3'  C4'  O4'  -153.40  30.0  1
+ M2T  Var_19    O2'   C2'  C1'  O4'    86.57  30.0  1
+ M2T  Var_20    O3'   C3'  C2'  C1'   155.65  30.0  1
+ M2T  Var_21    O2'   C2'  C1'  N9   -154.54  30.0  1
+ M2T  Var_22    H1'   C1'  O4'  C4'   132.20  30.0  1
+ M2T  Var_23    H2'   C2'  C3'  C4'   156.70  30.0  1
+ M2T  Var_24    H3'   C3'  C4'  O4'    83.82  30.0  1
+ M2T  Var_25    H4'   C4'  O4'  C1'  -100.71  30.0  1
+ M2T  Var_26    O4'   C4'  C5'  SD     57.34  30.0  1
+ M2T  Var_27    C3'   C4'  C5'  SD    175.85  30.0  1
+ M2T  Var_28    O3'   C3'  C4'  C5'    84.80  30.0  1
+ M2T  Var_29    O3'   C3'  C2'  O2'    41.71  30.0  1
+ M2T  Var_30    HO3'  O3'  C3'  C4'  -163.72  30.0  3
+ M2T  Var_31    H5'   C5'  C4'  O4'   -62.51  30.0  3
+ M2T  Var_32    H5'A  C5'  C4'  O4'   177.24  30.0  3
+ M2T  Var_33    HO2'  O2'  C2'  C1'  -146.95  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

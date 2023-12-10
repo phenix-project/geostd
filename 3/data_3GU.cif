@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3GU  3GU  'N-cyclopentyladenosine   '  ligand  45  24  .  2021-08-04  2021-08-04  
+ 3GU  3GU  'N-cyclopentyladenosine   '  ligand  45  24  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3GU
@@ -246,37 +247,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3GU  CONST_01  C4   N3   C2   N1     0.00   0.0  0
- 3GU  CONST_02  C4   C5   C6   N1     0.00   0.0  0
- 3GU  CONST_03  N7   C5   C6   N1   180.00   0.0  0
- 3GU  CONST_04  C5   C6   N1   C2     0.00   0.0  0
- 3GU  CONST_05  C5   C4   N3   C2     0.00   0.0  0
- 3GU  CONST_06  N9   C4   N3   C2   180.00   0.0  0
- 3GU  CONST_07  C6   N1   C2   N3     0.00   0.0  0
- 3GU  CONST_08  C6   C5   C4   N3     0.00   0.0  0
- 3GU  CONST_09  N7   C5   C4   N3   180.00   0.0  0
- 3GU  CONST_10  C8   N9   C4   N3   180.00   0.0  0
- 3GU  CONST_11  C8   N7   C5   C4     0.00   0.0  0
- 3GU  CONST_12  N7   C8   N9   C4     0.00   0.0  0
- 3GU  CONST_13  C8   N9   C4   C5     0.00   0.0  0
- 3GU  CONST_14  N9   C8   N7   C5     0.00   0.0  0
- 3GU  CONST_15  N9   C4   C5   C6   180.00   0.0  0
- 3GU  CONST_16  C8   N7   C5   C6   180.00   0.0  0
- 3GU  CONST_17  N9   C4   C5   N7     0.00   0.0  0
- 3GU  CONST_18  C1'  N9   C4   N3     0.00   0.0  0
- 3GU  CONST_19  C1'  N9   C4   C5   180.00   0.0  0
- 3GU  CONST_20  C1'  N9   C8   N7   180.00   0.0  0
- 3GU  CONST_21  N6   C6   N1   C2   180.00   0.0  0
- 3GU  CONST_22  N6   C6   C5   C4   180.00   0.0  0
- 3GU  CONST_23  N7   C5   C6   N6     0.00   0.0  0
- 3GU  CONST_24  N1   C6   N6   C1     0.00   0.0  0
- 3GU  CONST_25  C5   C6   N6   C1   180.00   0.0  0
- 3GU  CONST_26  H2   C2   N3   C4   180.00   0.0  0
- 3GU  CONST_27  H8   C8   N9   C4   180.00   0.0  0
- 3GU  CONST_28  HN6  N6   C6   N1   180.00   0.0  0
- 3GU  Var_01    C23  C22  C21  C1    -7.69  30.0  1
- 3GU  Var_02    C22  C23  C24  C1    37.82  30.0  1
- 3GU  Var_03    C24  C23  C22  C21  -18.72  30.0  1
+ 3GU  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ 3GU  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ 3GU  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ 3GU  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ 3GU  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ 3GU  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ 3GU  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ 3GU  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ 3GU  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ 3GU  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ 3GU  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ 3GU  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ 3GU  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ 3GU  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ 3GU  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ 3GU  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ 3GU  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ 3GU  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ 3GU  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ 3GU  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ 3GU  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ 3GU  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ 3GU  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ 3GU  CONST_24  N1    C6   N6   C1      0.00   0.0  0
+ 3GU  CONST_25  C5    C6   N6   C1    180.00   0.0  0
+ 3GU  CONST_26  H2    C2   N3   C4    180.00   0.0  0
+ 3GU  CONST_27  H8    C8   N9   C4    180.00   0.0  0
+ 3GU  CONST_28  HN6   N6   C6   N1    180.00   0.0  0
+ 3GU  Var_01    C23   C22  C21  C1     -7.69  30.0  1
+ 3GU  Var_02    C22   C23  C24  C1     37.82  30.0  1
+ 3GU  Var_03    C24   C23  C22  C21   -18.72  30.0  1
+ 3GU  Var_04    C2'   C1'  N9   C4    112.86  30.0  2
+ 3GU  Var_05    O4'   C1'  N9   C4   -128.75  30.0  2
+ 3GU  Var_06    C2'   C1'  N9   C8    -68.30  30.0  2
+ 3GU  Var_07    O4'   C1'  N9   C8     50.09  30.0  2
+ 3GU  Var_08    C3'   C2'  C1'  N9    153.01  30.0  1
+ 3GU  Var_09    C4'   O4'  C1'  N9   -135.07  30.0  1
+ 3GU  Var_10    C4'   C3'  C2'  C1'   -39.25  30.0  1
+ 3GU  Var_11    C3'   C4'  O4'  C1'   -14.09  30.0  1
+ 3GU  Var_12    C4'   O4'  C1'  C2'   -11.93  30.0  1
+ 3GU  Var_13    O4'   C4'  C3'  C2'    33.67  30.0  1
+ 3GU  Var_14    C23   C24  C1   C21   -42.79  30.0  1
+ 3GU  Var_15    C24   C1   C21  C22    31.17  30.0  1
+ 3GU  Var_16    O4'   C1'  C2'  C3'    32.73  30.0  1
+ 3GU  Var_17    C21   C1   N6   C6    158.34  30.0  1
+ 3GU  Var_18    C24   C1   N6   C6    -83.32  30.0  1
+ 3GU  Var_19    C22   C21  C1   N6    156.32  30.0  1
+ 3GU  Var_20    C23   C24  C1   N6   -165.73  30.0  1
+ 3GU  Var_21    O2'   C2'  C1'  N9    -82.86  30.0  1
+ 3GU  Var_22    O3'   C3'  C2'  C1'    78.59  30.0  1
+ 3GU  Var_23    C5'   C4'  O4'  C1'   107.95  30.0  1
+ 3GU  Var_24    C5'   C4'  C3'  C2'   -87.56  30.0  1
+ 3GU  Var_25    O4'   C1'  C2'  O2'   156.86  30.0  1
+ 3GU  Var_26    C4'   C3'  C2'  O2'  -158.29  30.0  1
+ 3GU  Var_27    O4'   C4'  C3'  O3'   -80.63  30.0  1
+ 3GU  Var_28    H1'   C1'  N9   C4     -8.30  30.0  2
+ 3GU  Var_29    H2'   C2'  C1'  N9     39.64  30.0  1
+ 3GU  Var_30    H3'   C3'  C2'  C1'  -157.90  30.0  1
+ 3GU  Var_31    H4'   C4'  O4'  C1'  -132.95  30.0  1
+ 3GU  Var_32    H24   C24  C1   C21    74.85  30.0  1
+ 3GU  Var_33    H24A  C24  C1   C21  -165.12  30.0  1
+ 3GU  Var_34    H1    C1   C21  C22   -84.24  30.0  1
+ 3GU  Var_35    O3'   C3'  C2'  O2'   -40.45  30.0  1
+ 3GU  Var_36    O5'   C5'  C4'  C3'   175.52  30.0  3
+ 3GU  Var_37    C5'   C4'  C3'  O3'   158.15  30.0  1
+ 3GU  Var_38    O5'   C5'  C4'  O4'    57.62  30.0  3
+ 3GU  Var_39    HO2'  O2'  C2'  C1'   168.33  30.0  3
+ 3GU  Var_40    HO3'  O3'  C3'  C2'  -175.82  30.0  3
+ 3GU  Var_41    H5'   C5'  C4'  C3'   -62.85  30.0  3
+ 3GU  Var_42    H5'A  C5'  C4'  C3'    53.00  30.0  3
+ 3GU  Var_43    HO5'  O5'  C5'  C4'  -177.94  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

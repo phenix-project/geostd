@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HA2  HA2  '6-[{(2S)-2-amino-3-[4-(benzyloxy)phenyl]propyl}(hydroxy)amino]-6-oxohexanoic acid'  ligand  56  29  .  2021-08-11  2021-08-11  
+ HA2  HA2  '6-[{(2S)-2-amino-3-[4-(benzyloxy)phenyl]propyl}(hydroxy)amino]-6-oxohexanoic acid'  ligand  56  29  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HA2
@@ -276,46 +277,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HA2  CONST_01  C6   C1   C2   C3      0.00   0.0  0
- HA2  CONST_02  C6   C5   C4   C3      0.00   0.0  0
- HA2  CONST_03  C5   C4   C3   C2      0.00   0.0  0
- HA2  CONST_04  C5   C6   C1   C2      0.00   0.0  0
- HA2  CONST_05  C4   C3   C2   C1      0.00   0.0  0
- HA2  CONST_06  C4   C5   C6   C1      0.00   0.0  0
- HA2  CONST_07  C11  C12  C13  C8      0.00   0.0  0
- HA2  CONST_08  C11  C10  C9   C8      0.00   0.0  0
- HA2  CONST_09  C10  C9   C8   C13     0.00   0.0  0
- HA2  CONST_10  C10  C11  C12  C13     0.00   0.0  0
- HA2  CONST_11  C9   C8   C13  C12     0.00   0.0  0
- HA2  CONST_12  C9   C10  C11  C12     0.00   0.0  0
- HA2  CONST_13  C7   C4   C3   C2    180.00   0.0  0
- HA2  CONST_14  C7   C4   C5   C6    180.00   0.0  0
- HA2  CONST_15  C12  C13  C8   O1    180.00   0.0  0
- HA2  CONST_16  C10  C9   C8   O1    180.00   0.0  0
- HA2  CONST_17  C14  C11  C12  C13   180.00   0.0  0
- HA2  CONST_18  C14  C11  C10  C9    180.00   0.0  0
- HA2  CONST_19  H1   C1   C2   C3    180.00   0.0  0
- HA2  CONST_20  H5   C5   C4   C3    180.00   0.0  0
- HA2  CONST_21  H6   C6   C1   C2    180.00   0.0  0
- HA2  CONST_22  H3   C3   C2   C1    180.00   0.0  0
- HA2  CONST_23  H2   C2   C1   C6    180.00   0.0  0
- HA2  CONST_24  H12  C12  C13  C8    180.00   0.0  0
- HA2  CONST_25  H10  C10  C9   C8    180.00   0.0  0
- HA2  CONST_26  H9   C9   C8   C13   180.00   0.0  0
- HA2  CONST_27  H13  C13  C8   C9    180.00   0.0  0
- HA2  CONST_28  O3   C17  N3   C16     0.00   0.0  0
- HA2  CONST_29  C18  C17  N3   C16   180.00   0.0  0
- HA2  CONST_30  O3   C17  N3   O2    180.00   0.0  0
- HA2  CONST_31  C18  C17  N3   O2      0.00   0.0  0
- HA2  Var_01    O1   C7   C4   C3    -37.89  30.0  2
- HA2  Var_02    C13  C8   O1   C7    171.94  30.0  2
- HA2  Var_03    C15  C14  C11  C12   -84.81  30.0  2
- HA2  Var_04    O2   N3   C16  C15    64.35  30.0  3
- HA2  Var_05    C19  C18  C17  N3   -178.88  30.0  3
- HA2  Var_06    C20  C19  C18  C17    74.48  30.0  3
- HA2  Var_07    C21  C20  C19  C18   177.45  30.0  3
- HA2  Var_08    C22  C21  C20  C19   179.66  30.0  3
- HA2  Var_09    O5   C22  C21  C20   167.21  30.0  3
+ HA2  CONST_01  C6    C1   C2   C3      0.00   0.0  0
+ HA2  CONST_02  C6    C5   C4   C3      0.00   0.0  0
+ HA2  CONST_03  C5    C4   C3   C2      0.00   0.0  0
+ HA2  CONST_04  C5    C6   C1   C2      0.00   0.0  0
+ HA2  CONST_05  C4    C3   C2   C1      0.00   0.0  0
+ HA2  CONST_06  C4    C5   C6   C1      0.00   0.0  0
+ HA2  CONST_07  C11   C12  C13  C8      0.00   0.0  0
+ HA2  CONST_08  C11   C10  C9   C8      0.00   0.0  0
+ HA2  CONST_09  C10   C9   C8   C13     0.00   0.0  0
+ HA2  CONST_10  C10   C11  C12  C13     0.00   0.0  0
+ HA2  CONST_11  C9    C8   C13  C12     0.00   0.0  0
+ HA2  CONST_12  C9    C10  C11  C12     0.00   0.0  0
+ HA2  CONST_13  C7    C4   C3   C2    180.00   0.0  0
+ HA2  CONST_14  C7    C4   C5   C6    180.00   0.0  0
+ HA2  CONST_15  C12   C13  C8   O1    180.00   0.0  0
+ HA2  CONST_16  C10   C9   C8   O1    180.00   0.0  0
+ HA2  CONST_17  C14   C11  C12  C13   180.00   0.0  0
+ HA2  CONST_18  C14   C11  C10  C9    180.00   0.0  0
+ HA2  CONST_19  H1    C1   C2   C3    180.00   0.0  0
+ HA2  CONST_20  H5    C5   C4   C3    180.00   0.0  0
+ HA2  CONST_21  H6    C6   C1   C2    180.00   0.0  0
+ HA2  CONST_22  H3    C3   C2   C1    180.00   0.0  0
+ HA2  CONST_23  H2    C2   C1   C6    180.00   0.0  0
+ HA2  CONST_24  H12   C12  C13  C8    180.00   0.0  0
+ HA2  CONST_25  H10   C10  C9   C8    180.00   0.0  0
+ HA2  CONST_26  H9    C9   C8   C13   180.00   0.0  0
+ HA2  CONST_27  H13   C13  C8   C9    180.00   0.0  0
+ HA2  CONST_28  O3    C17  N3   C16     0.00   0.0  0
+ HA2  CONST_29  C18   C17  N3   C16   180.00   0.0  0
+ HA2  CONST_30  O3    C17  N3   O2    180.00   0.0  0
+ HA2  CONST_31  C18   C17  N3   O2      0.00   0.0  0
+ HA2  Var_01    O1    C7   C4   C3    -37.89  30.0  2
+ HA2  Var_02    C13   C8   O1   C7    171.94  30.0  2
+ HA2  Var_03    C15   C14  C11  C12   -84.81  30.0  2
+ HA2  Var_04    O2    N3   C16  C15    64.35  30.0  3
+ HA2  Var_05    C19   C18  C17  N3   -178.88  30.0  3
+ HA2  Var_06    C20   C19  C18  C17    74.48  30.0  3
+ HA2  Var_07    C21   C20  C19  C18   177.45  30.0  3
+ HA2  Var_08    C22   C21  C20  C19   179.66  30.0  3
+ HA2  Var_09    O5    C22  C21  C20   167.21  30.0  3
+ HA2  Var_10    C8    O1   C7   C4    -68.92  30.0  3
+ HA2  Var_11    N2    C15  C14  C11   -62.13  30.0  3
+ HA2  Var_12    C16   C15  C14  C11   168.08  30.0  3
+ HA2  Var_13    H15   C15  C14  C11    53.95  30.0  3
+ HA2  Var_14    N3    C16  C15  C14    50.05  30.0  3
+ HA2  Var_15    N3    C16  C15  N2    -76.59  30.0  3
+ HA2  Var_16    H2N1  N2   C15  C14   179.04  30.0  3
+ HA2  Var_17    H2N2  N2   C15  C14   -64.81  30.0  3
+ HA2  Var_18    H161  C16  C15  C14   173.18  30.0  3
+ HA2  Var_19    H162  C16  C15  C14   -70.22  30.0  3
+ HA2  Var_20    HA    O2   N3   C16    86.55  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

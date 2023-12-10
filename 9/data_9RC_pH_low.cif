@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 9RC  9RC  5'-O-[(S)-hydroxy(4-nitrophenoxy)phosphoryl]thymidine  ligand  48  30  .  2022-11-17  2022-11-17
+ 9RC  9RC  5'-O-[(S)-hydroxy(4-nitrophenoxy)phosphoryl]thymidine  ligand  48  30  .  2022-11-17  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_9RC
@@ -249,35 +250,76 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 9RC  CONST_01  CBA  CAZ  CAX  CAV    0.00   0.0  0
- 9RC  CONST_02  CBA  CAY  CAW  CAV    0.00   0.0  0
- 9RC  CONST_03  CAZ  CBA  CAY  CAW    0.00   0.0  0
- 9RC  CONST_04  CAZ  CAX  CAV  CAW    0.00   0.0  0
- 9RC  CONST_05  CAX  CAZ  CBA  CAY    0.00   0.0  0
- 9RC  CONST_06  CAX  CAV  CAW  CAY    0.00   0.0  0
- 9RC  CONST_07  CAF  NAB  CAE  NAI    0.00   0.0  0
- 9RC  CONST_08  CAA  NAB  CAE  NAI  180.00   0.0  0
- 9RC  CONST_09  NAB  CAE  NAI  CAL    0.00   0.0  0
- 9RC  CONST_10  CAZ  CAX  CAV  OAM  180.00   0.0  0
- 9RC  CONST_11  CAY  CAW  CAV  OAM  180.00   0.0  0
- 9RC  CONST_12  NBB  CBA  CAY  CAW  180.00   0.0  0
- 9RC  CONST_13  CAX  CAZ  CBA  NBB  180.00   0.0  0
- 9RC  CONST_14  CAF  NAB  CAE  OAJ  180.00   0.0  0
- 9RC  CONST_15  CAA  NAB  CAE  OAJ    0.00   0.0  0
- 9RC  CONST_16  CAL  NAI  CAE  OAJ  180.00   0.0  0
- 9RC  CONST_17  H17  CAZ  CAX  CAV  180.00   0.0  0
- 9RC  CONST_18  H16  CAY  CAW  CAV  180.00   0.0  0
- 9RC  CONST_19  H18  CAX  CAV  CAW  180.00   0.0  0
- 9RC  CONST_20  H15  CAW  CAY  CBA  180.00   0.0  0
- 9RC  CONST_21  H1   NAI  CAE  NAB  180.00   0.0  0
- 9RC  CONST_22  OBD  NBB  CBA  CAY  180.00   0.0  0
- 9RC  CONST_23  OBC  NBB  CBA  CAY    0.00   0.0  0
- 9RC  CONST_24  CAZ  CBA  NBB  OBD    0.00   0.0  0
- 9RC  CONST_25  CAZ  CBA  NBB  OBC  180.00   0.0  0
- 9RC  Var_01    CAX  CAV  OAM  PAP   77.06  30.0  2
- 9RC  Var_02    H2   CAU  CAT  CAL  -59.63  30.0  3
- 9RC  Var_03    OAO  PAP  OAQ  CAR  178.84  30.0  2
- 9RC  Var_04    H12  CAR  OAQ  PAP    0.77  30.0  3
+ 9RC  CONST_01  CBA  CAZ  CAX  CAV     0.00   0.0  0
+ 9RC  CONST_02  CBA  CAY  CAW  CAV     0.00   0.0  0
+ 9RC  CONST_03  CAZ  CBA  CAY  CAW     0.00   0.0  0
+ 9RC  CONST_04  CAZ  CAX  CAV  CAW     0.00   0.0  0
+ 9RC  CONST_05  CAX  CAZ  CBA  CAY     0.00   0.0  0
+ 9RC  CONST_06  CAX  CAV  CAW  CAY     0.00   0.0  0
+ 9RC  CONST_07  CAF  NAB  CAE  NAI     0.00   0.0  0
+ 9RC  CONST_08  CAA  NAB  CAE  NAI   180.00   0.0  0
+ 9RC  CONST_09  NAB  CAE  NAI  CAL     0.00   0.0  0
+ 9RC  CONST_10  CAZ  CAX  CAV  OAM   180.00   0.0  0
+ 9RC  CONST_11  CAY  CAW  CAV  OAM   180.00   0.0  0
+ 9RC  CONST_12  NBB  CBA  CAY  CAW   180.00   0.0  0
+ 9RC  CONST_13  CAX  CAZ  CBA  NBB   180.00   0.0  0
+ 9RC  CONST_14  CAF  NAB  CAE  OAJ   180.00   0.0  0
+ 9RC  CONST_15  CAA  NAB  CAE  OAJ     0.00   0.0  0
+ 9RC  CONST_16  CAL  NAI  CAE  OAJ   180.00   0.0  0
+ 9RC  CONST_17  H17  CAZ  CAX  CAV   180.00   0.0  0
+ 9RC  CONST_18  H16  CAY  CAW  CAV   180.00   0.0  0
+ 9RC  CONST_19  H18  CAX  CAV  CAW   180.00   0.0  0
+ 9RC  CONST_20  H15  CAW  CAY  CBA   180.00   0.0  0
+ 9RC  CONST_21  H1   NAI  CAE  NAB   180.00   0.0  0
+ 9RC  CONST_22  OBD  NBB  CBA  CAY   180.00   0.0  0
+ 9RC  CONST_23  OBC  NBB  CBA  CAY     0.00   0.0  0
+ 9RC  CONST_24  CAZ  CBA  NBB  OBD     0.00   0.0  0
+ 9RC  CONST_25  CAZ  CBA  NBB  OBC   180.00   0.0  0
+ 9RC  Var_01    CAX  CAV  OAM  PAP    77.06  30.0  2
+ 9RC  Var_02    H2   CAU  CAT  CAL   -59.63  30.0  3
+ 9RC  Var_03    OAO  PAP  OAQ  CAR   178.84  30.0  2
+ 9RC  Var_04    H12  CAR  OAQ  PAP     0.77  30.0  3
+ 9RC  Var_05    CAT  CAF  NAB  CAE    -1.02  30.0  1
+ 9RC  Var_06    OAC  CAA  NAB  CAE  -114.06  30.0  2
+ 9RC  Var_07    CAD  CAA  NAB  CAE   128.02  30.0  2
+ 9RC  Var_08    CAT  CAL  NAI  CAE     0.77  30.0  1
+ 9RC  Var_09    CAF  CAT  CAL  NAI     0.11  30.0  1
+ 9RC  Var_10    NAB  CAF  CAT  CAL     0.04  30.0  1
+ 9RC  Var_11    CAA  NAB  CAF  CAT  -175.80  30.0  1
+ 9RC  Var_12    OAC  CAA  NAB  CAF    60.79  30.0  2
+ 9RC  Var_13    CAD  CAA  NAB  CAF   -57.13  30.0  2
+ 9RC  Var_14    CAG  OAC  CAA  NAB  -145.00  30.0  1
+ 9RC  Var_15    CAH  CAD  CAA  NAB   154.81  30.0  1
+ 9RC  Var_16    CAH  CAG  OAC  CAA    -1.87  30.0  1
+ 9RC  Var_17    CAG  CAH  CAD  CAA   -34.91  30.0  1
+ 9RC  Var_18    CAD  CAH  CAG  OAC    23.78  30.0  1
+ 9RC  Var_19    CAH  CAD  CAA  OAC    35.23  30.0  1
+ 9RC  Var_20    CAG  OAC  CAA  CAD   -21.19  30.0  1
+ 9RC  Var_21    OAS  CAL  NAI  CAE  -179.23  30.0  1
+ 9RC  Var_22    CAU  CAT  CAL  NAI  -179.46  30.0  1
+ 9RC  Var_23    CAF  CAT  CAL  OAS  -179.88  30.0  1
+ 9RC  Var_24    NAB  CAF  CAT  CAU   179.60  30.0  1
+ 9RC  Var_25    CAR  CAG  OAC  CAA   119.91  30.0  1
+ 9RC  Var_26    OAK  CAH  CAD  CAA    79.86  30.0  1
+ 9RC  Var_27    OAK  CAH  CAG  OAC   -94.56  30.0  1
+ 9RC  Var_28    CAR  CAG  CAH  CAD   -97.05  30.0  1
+ 9RC  Var_29    H5   CAF  NAB  CAE   179.01  30.0  1
+ 9RC  Var_30    H6   CAA  NAB  CAE     5.13  30.0  2
+ 9RC  Var_31    H7   CAD  CAA  NAB    37.13  30.0  1
+ 9RC  Var_32    H8   CAD  CAA  NAB   -83.71  30.0  1
+ 9RC  Var_33    H11  CAG  OAC  CAA  -120.55  30.0  1
+ 9RC  Var_34    H9   CAH  CAD  CAA  -154.19  30.0  1
+ 9RC  Var_35    CAU  CAT  CAL  OAS     0.54  30.0  1
+ 9RC  Var_36    OAQ  CAR  CAG  OAC    63.02  30.0  2
+ 9RC  Var_37    OAQ  CAR  CAG  CAH  -178.29  30.0  2
+ 9RC  Var_38    CAR  CAG  CAH  OAK   144.60  30.0  1
+ 9RC  Var_39    H12  CAR  CAG  OAC   -60.65  30.0  2
+ 9RC  Var_40    H13  CAR  CAG  OAC  -179.74  30.0  2
+ 9RC  Var_41    H10  OAK  CAH  CAD    64.11  30.0  3
+ 9RC  Var_42    CAV  OAM  PAP  OAQ   175.76  30.0  3
+ 9RC  Var_43    CAV  OAM  PAP  OAO   -62.37  30.0  3
+ 9RC  Var_44    CAV  OAM  PAP  OAN    64.12  30.0  3
+ 9RC  Var_45    H14  OAN  PAP  OAQ    89.98  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

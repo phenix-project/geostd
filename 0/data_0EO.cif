@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 0EO  0EO  '(6S,7S,12S,13S,17S)-6-benzyl-12-(cyclohexylmethyl)-7,13-dihydroxy-2,2-dimethyl-17-(2-methylpropyl)-4,10,15-trioxo-3-oxa-5,11,16-triazaoctadecan-18-oic acid (non-preferred name)'  peptide  99  45  .  2022-08-09  2022-09-22
+ 0EO  0EO  '(6S,7S,12S,13S,17S)-6-benzyl-12-(cyclohexylmethyl)-7,13-dihydroxy-2,2-dimethyl-17-(2-methylpropyl)-4,10,15-trioxo-3-oxa-5,11,16-triazaoctadecan-18-oic acid (non-preferred name)'  peptide  99  45  .  2022-08-09  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_0EO
@@ -450,42 +451,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 0EO  CONST_01  CZ    CE1   CD1   CG      0.00   0.0  0
- 0EO  CONST_02  CZ    CE2   CD2   CG      0.00   0.0  0
- 0EO  CONST_03  CE2   CD2   CG    CD1     0.00   0.0  0
- 0EO  CONST_04  CE2   CZ    CE1   CD1     0.00   0.0  0
- 0EO  CONST_05  CE1   CD1   CG    CD2     0.00   0.0  0
- 0EO  CONST_06  CE1   CZ    CE2   CD2     0.00   0.0  0
- 0EO  CONST_07  CE1   CD1   CG    CB    180.00   0.0  0
- 0EO  CONST_08  CE2   CD2   CG    CB    180.00   0.0  0
- 0EO  CONST_09  HE1   CE1   CD1   CG    180.00   0.0  0
- 0EO  CONST_10  HE2   CE2   CD2   CG    180.00   0.0  0
- 0EO  CONST_11  HD2   CD2   CG    CD1   180.00   0.0  0
- 0EO  CONST_12  HZ    CZ    CE1   CD1   180.00   0.0  0
- 0EO  CONST_13  HD1   CD1   CG    CD2   180.00   0.0  0
- 0EO  CONST_14  CA2   N1    C4    O11     0.00   0.0  0
- 0EO  CONST_15  CA2   N1    C4    CA1   180.00   0.0  0
- 0EO  CONST_16  CA3   N2    C5    CM1   180.00   0.0  0
- 0EO  CONST_17  CA3   N2    C5    O       0.00   0.0  0
- 0EO  CONST_18  H1    N1    C4    O11   180.00   0.0  0
- 0EO  CONST_19  H2    N2    C5    CM1     0.00   0.0  0
- 0EO  Var_01    CZ1   CE11  CD11  CG1    56.01  30.0  1
- 0EO  Var_02    CZ1   CE21  CD21  CG1   -55.44  30.0  1
- 0EO  Var_03    CE21  CZ1   CE11  CD11  -54.92  30.0  1
- 0EO  Var_04    CE11  CZ1   CE21  CD21   54.80  30.0  1
- 0EO  Var_05    CD1   CG    CB    CA     93.88  30.0  2
- 0EO  Var_06    CA    N     C     O1     12.86  30.0  2
- 0EO  Var_07    C1    CT    O2    C      64.07  30.0  3
- 0EO  Var_08    N     C     O2    CT    174.92  30.0  1
- 0EO  Var_09    CH    CM    CA1   C4    179.91  30.0  3
- 0EO  Var_10    CM    CA1   C4    O11   -40.97  30.0  3
- 0EO  Var_11    O     C5    CM1   CH1   -51.12  30.0  3
- 0EO  Var_12    CD12  CG2   CB2   CA3   179.62  30.0  3
- 0EO  Var_13    H11   C1    CT    O2     51.64  30.0  3
- 0EO  Var_14    H21   C2    CT    O2     60.18  30.0  3
- 0EO  Var_15    H31   C3    CT    O2     68.34  30.0  3
- 0EO  Var_16    HD11  CD12  CG2   CB2    62.69  30.0  3
- 0EO  Var_17    HD21  CD22  CG2   CB2    62.82  30.0  3
+ 0EO  CONST_01  CZ    CE1   CD1   CG       0.00   0.0  0
+ 0EO  CONST_02  CZ    CE2   CD2   CG       0.00   0.0  0
+ 0EO  CONST_03  CE2   CD2   CG    CD1      0.00   0.0  0
+ 0EO  CONST_04  CE2   CZ    CE1   CD1      0.00   0.0  0
+ 0EO  CONST_05  CE1   CD1   CG    CD2      0.00   0.0  0
+ 0EO  CONST_06  CE1   CZ    CE2   CD2      0.00   0.0  0
+ 0EO  CONST_07  CE1   CD1   CG    CB     180.00   0.0  0
+ 0EO  CONST_08  CE2   CD2   CG    CB     180.00   0.0  0
+ 0EO  CONST_09  HE1   CE1   CD1   CG     180.00   0.0  0
+ 0EO  CONST_10  HE2   CE2   CD2   CG     180.00   0.0  0
+ 0EO  CONST_11  HD2   CD2   CG    CD1    180.00   0.0  0
+ 0EO  CONST_12  HZ    CZ    CE1   CD1    180.00   0.0  0
+ 0EO  CONST_13  HD1   CD1   CG    CD2    180.00   0.0  0
+ 0EO  CONST_14  CA2   N1    C4    O11      0.00   0.0  0
+ 0EO  CONST_15  CA2   N1    C4    CA1    180.00   0.0  0
+ 0EO  CONST_16  CA3   N2    C5    CM1    180.00   0.0  0
+ 0EO  CONST_17  CA3   N2    C5    O        0.00   0.0  0
+ 0EO  CONST_18  H1    N1    C4    O11    180.00   0.0  0
+ 0EO  CONST_19  H2    N2    C5    CM1      0.00   0.0  0
+ 0EO  Var_01    CZ1   CE11  CD11  CG1     56.01  30.0  1
+ 0EO  Var_02    CZ1   CE21  CD21  CG1    -55.44  30.0  1
+ 0EO  Var_03    CE21  CZ1   CE11  CD11   -54.92  30.0  1
+ 0EO  Var_04    CE11  CZ1   CE21  CD21    54.80  30.0  1
+ 0EO  Var_05    CD1   CG    CB    CA      93.88  30.0  2
+ 0EO  Var_06    CA    N     C     O1      12.86  30.0  2
+ 0EO  Var_07    C1    CT    O2    C       64.07  30.0  3
+ 0EO  Var_08    N     C     O2    CT     174.92  30.0  1
+ 0EO  Var_09    CH    CM    CA1   C4     179.91  30.0  3
+ 0EO  Var_10    CM    CA1   C4    O11    -40.97  30.0  3
+ 0EO  Var_11    O     C5    CM1   CH1    -51.12  30.0  3
+ 0EO  Var_12    CD12  CG2   CB2   CA3    179.62  30.0  3
+ 0EO  Var_13    H11   C1    CT    O2      51.64  30.0  3
+ 0EO  Var_14    H21   C2    CT    O2      60.18  30.0  3
+ 0EO  Var_15    H31   C3    CT    O2      68.34  30.0  3
+ 0EO  Var_16    HD11  CD12  CG2   CB2     62.69  30.0  3
+ 0EO  Var_17    HD21  CD22  CG2   CB2     62.82  30.0  3
+ 0EO  Var_18    HD23  CD21  CG1   CD11   177.05  30.0  1
+ 0EO  Var_19    HD22  CD21  CG1   CD11   -66.40  30.0  1
+ 0EO  Var_20    HD12  CD11  CG1   CD21    65.58  30.0  1
+ 0EO  Var_21    HD13  CD11  CG1   CD21  -178.21  30.0  1
+ 0EO  Var_22    HG    CG1   CD11  CE11    61.74  30.0  1
+ 0EO  Var_23    HB21  CB1   CG1   CD11    58.70  30.0  2
+ 0EO  Var_24    HB31  CB1   CG1   CD11   -56.56  30.0  2
+ 0EO  Var_25    HA    CA    CB    CG      59.29  30.0  3
+ 0EO  Var_26    HA3   CA2   CB1   CG1    -63.09  30.0  2
+ 0EO  Var_27    HCH   CH    CM    CA1     58.65  30.0  3
+ 0EO  Var_28    HO1   OH    CH    CM     -47.46  30.0  3
+ 0EO  Var_29    HH    CH1   CA2   N1    -179.41  30.0  3
+ 0EO  Var_30    HO    OH1   CH1   CA2     72.23  30.0  3
+ 0EO  Var_31    HM11  CM1   CH1   CA2    -60.90  30.0  3
+ 0EO  Var_32    HM2   CM1   CH1   CA2     56.35  30.0  3
+ 0EO  Var_33    HA4   CA3   N2    C5      48.34  30.0  3
+ 0EO  Var_34    HB22  CB2   CA3   N2      65.90  30.0  3
+ 0EO  Var_35    HB32  CB2   CA3   N2    -179.27  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

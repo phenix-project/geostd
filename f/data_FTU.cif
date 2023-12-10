@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FTU  FTU  (2~{R},3~{R},4~{S},5~{R})-2-(4-azanyl-5-fluoranyl-pyrrolo[2,3-d]pyrimidin-7-yl)-5-(hydroxymethyl)oxolane-3,4-diol  ligand  33  20  .  2021-08-09  2021-08-09  
+ FTU  FTU  (2~{R},3~{R},4~{S},5~{R})-2-(4-azanyl-5-fluoranyl-pyrrolo[2,3-d]pyrimidin-7-yl)-5-(hydroxymethyl)oxolane-3,4-diol  ligand  33  20  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FTU
@@ -193,36 +194,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FTU  CONST_01  C10  N    C5   C6     0.00  0.0  0
- FTU  CONST_02  N2   C8   C7   C6   180.00  0.0  0
- FTU  CONST_03  N    C10  C7   C6     0.00  0.0  0
- FTU  CONST_04  N3   C10  C7   C6   180.00  0.0  0
- FTU  CONST_05  C8   C7   C6   C5   180.00  0.0  0
- FTU  CONST_06  C10  C7   C6   C5     0.00  0.0  0
- FTU  CONST_07  C7   C10  N    C5     0.00  0.0  0
- FTU  CONST_08  N3   C10  N    C5   180.00  0.0  0
- FTU  CONST_09  N    C5   C6   C7     0.00  0.0  0
- FTU  CONST_10  C9   N2   C8   C7     0.00  0.0  0
- FTU  CONST_11  C9   N3   C10  C7     0.00  0.0  0
- FTU  CONST_12  N2   C8   C7   C10    0.00  0.0  0
- FTU  CONST_13  N2   C9   N3   C10    0.00  0.0  0
- FTU  CONST_14  C8   C7   C10  N3     0.00  0.0  0
- FTU  CONST_15  C8   N2   C9   N3     0.00  0.0  0
- FTU  CONST_16  N    C10  N3   C9   180.00  0.0  0
- FTU  CONST_17  N    C10  C7   C8   180.00  0.0  0
- FTU  CONST_18  C4   N    C5   C6   180.00  0.0  0
- FTU  CONST_19  C4   N    C10  C7   180.00  0.0  0
- FTU  CONST_20  C4   N    C10  N3     0.00  0.0  0
- FTU  CONST_21  N    C5   C6   F    180.00  0.0  0
- FTU  CONST_22  C8   C7   C6   F      0.00  0.0  0
- FTU  CONST_23  C10  C7   C6   F    180.00  0.0  0
- FTU  CONST_24  N1   C8   C7   C6     0.00  0.0  0
- FTU  CONST_25  N1   C8   C7   C10  180.00  0.0  0
- FTU  CONST_26  N1   C8   N2   C9   180.00  0.0  0
- FTU  CONST_27  H1   C5   C6   C7   180.00  0.0  0
- FTU  CONST_28  H2   C9   N3   C10  180.00  0.0  0
- FTU  CONST_29  H3   N1   C8   C7     0.00  0.0  0
- FTU  CONST_30  H4   N1   C8   C7   180.00  0.0  0
+ FTU  CONST_01  C10  N    C5   C6      0.00   0.0  0
+ FTU  CONST_02  N2   C8   C7   C6    180.00   0.0  0
+ FTU  CONST_03  N    C10  C7   C6      0.00   0.0  0
+ FTU  CONST_04  N3   C10  C7   C6    180.00   0.0  0
+ FTU  CONST_05  C8   C7   C6   C5    180.00   0.0  0
+ FTU  CONST_06  C10  C7   C6   C5      0.00   0.0  0
+ FTU  CONST_07  C7   C10  N    C5      0.00   0.0  0
+ FTU  CONST_08  N3   C10  N    C5    180.00   0.0  0
+ FTU  CONST_09  N    C5   C6   C7      0.00   0.0  0
+ FTU  CONST_10  C9   N2   C8   C7      0.00   0.0  0
+ FTU  CONST_11  C9   N3   C10  C7      0.00   0.0  0
+ FTU  CONST_12  N2   C8   C7   C10     0.00   0.0  0
+ FTU  CONST_13  N2   C9   N3   C10     0.00   0.0  0
+ FTU  CONST_14  C8   C7   C10  N3      0.00   0.0  0
+ FTU  CONST_15  C8   N2   C9   N3      0.00   0.0  0
+ FTU  CONST_16  N    C10  N3   C9    180.00   0.0  0
+ FTU  CONST_17  N    C10  C7   C8    180.00   0.0  0
+ FTU  CONST_18  C4   N    C5   C6    180.00   0.0  0
+ FTU  CONST_19  C4   N    C10  C7    180.00   0.0  0
+ FTU  CONST_20  C4   N    C10  N3      0.00   0.0  0
+ FTU  CONST_21  N    C5   C6   F     180.00   0.0  0
+ FTU  CONST_22  C8   C7   C6   F       0.00   0.0  0
+ FTU  CONST_23  C10  C7   C6   F     180.00   0.0  0
+ FTU  CONST_24  N1   C8   C7   C6      0.00   0.0  0
+ FTU  CONST_25  N1   C8   C7   C10   180.00   0.0  0
+ FTU  CONST_26  N1   C8   N2   C9    180.00   0.0  0
+ FTU  CONST_27  H1   C5   C6   C7    180.00   0.0  0
+ FTU  CONST_28  H2   C9   N3   C10   180.00   0.0  0
+ FTU  CONST_29  H3   N1   C8   C7      0.00   0.0  0
+ FTU  CONST_30  H4   N1   C8   C7    180.00   0.0  0
+ FTU  Var_01    O    C4   N    C5     56.69  30.0  2
+ FTU  Var_02    C3   C4   N    C5    -61.50  30.0  2
+ FTU  Var_03    O    C4   N    C10  -123.25  30.0  2
+ FTU  Var_04    C3   C4   N    C10   118.56  30.0  2
+ FTU  Var_05    C1   O    C4   N    -139.19  30.0  1
+ FTU  Var_06    C2   C3   C4   N     155.18  30.0  1
+ FTU  Var_07    C2   C1   O    C4     -9.81  30.0  1
+ FTU  Var_08    C1   C2   C3   C4    -38.83  30.0  1
+ FTU  Var_09    O    C1   C2   C3     30.92  30.0  1
+ FTU  Var_10    C1   O    C4   C3    -15.88  30.0  1
+ FTU  Var_11    O    C4   C3   C2     34.76  30.0  1
+ FTU  Var_12    O1   C3   C4   N     -80.80  30.0  1
+ FTU  Var_13    C    C1   O    C4    112.93  30.0  1
+ FTU  Var_14    O2   C2   C3   C4     79.06  30.0  1
+ FTU  Var_15    C    C1   C2   C3    -90.79  30.0  1
+ FTU  Var_16    C1   C2   C3   O1   -157.79  30.0  1
+ FTU  Var_17    O    C4   C3   O1    158.78  30.0  1
+ FTU  Var_18    O    C1   C2   O2    -83.52  30.0  1
+ FTU  Var_19    H5   C4   N    C5    177.31  30.0  2
+ FTU  Var_20    H6   C3   C4   N      41.69  30.0  1
+ FTU  Var_21    H10  C1   O    C4   -128.28  30.0  1
+ FTU  Var_22    H8   C2   C3   C4   -157.62  30.0  1
+ FTU  Var_23    O2   C2   C3   O1    -39.91  30.0  1
+ FTU  Var_24    O3   C    C1   C2    177.64  30.0  1
+ FTU  Var_25    C    C1   C2   O2    154.77  30.0  1
+ FTU  Var_26    O3   C    C1   O      59.00  30.0  1
+ FTU  Var_27    H7   O1   C3   C4    169.96  30.0  3
+ FTU  Var_28    H9   O2   C2   C3   -173.58  30.0  3
+ FTU  Var_29    H11  C    C1   C2    -60.99  30.0  1
+ FTU  Var_30    H12  C    C1   C2     54.78  30.0  1
+ FTU  Var_31    H13  O3   C    C1    178.71  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A3G  A3G  3'-deoxy-3'-(glycylamino)adenosine  ligand  40  23  .  2021-08-06  2021-08-06  
+ A3G  A3G  3'-deoxy-3'-(glycylamino)adenosine  ligand  40  23  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_A3G
@@ -219,38 +220,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- A3G  CONST_01  C4    N3  C2  N1    0.00   0.0  0
- A3G  CONST_02  C4    C5  C6  N1    0.00   0.0  0
- A3G  CONST_03  N7    C5  C6  N1  180.00   0.0  0
- A3G  CONST_04  C5    C6  N1  C2    0.00   0.0  0
- A3G  CONST_05  C5    C4  N3  C2    0.00   0.0  0
- A3G  CONST_06  N9    C4  N3  C2  180.00   0.0  0
- A3G  CONST_07  C6    N1  C2  N3    0.00   0.0  0
- A3G  CONST_08  C6    C5  C4  N3    0.00   0.0  0
- A3G  CONST_09  N7    C5  C4  N3  180.00   0.0  0
- A3G  CONST_10  C8    N9  C4  N3  180.00   0.0  0
- A3G  CONST_11  C8    N7  C5  C4    0.00   0.0  0
- A3G  CONST_12  N7    C8  N9  C4    0.00   0.0  0
- A3G  CONST_13  C8    N9  C4  C5    0.00   0.0  0
- A3G  CONST_14  N9    C8  N7  C5    0.00   0.0  0
- A3G  CONST_15  N9    C4  C5  C6  180.00   0.0  0
- A3G  CONST_16  C8    N7  C5  C6  180.00   0.0  0
- A3G  CONST_17  N9    C4  C5  N7    0.00   0.0  0
- A3G  CONST_18  C1'   N9  C4  N3    0.00   0.0  0
- A3G  CONST_19  C1'   N9  C4  C5  180.00   0.0  0
- A3G  CONST_20  C1'   N9  C8  N7  180.00   0.0  0
- A3G  CONST_21  N6    C6  N1  C2  180.00   0.0  0
- A3G  CONST_22  N6    C6  C5  C4  180.00   0.0  0
- A3G  CONST_23  N7    C5  C6  N6    0.00   0.0  0
- A3G  CONST_24  H2    C2  N3  C4  180.00   0.0  0
- A3G  CONST_25  H8    C8  N9  C4  180.00   0.0  0
- A3G  CONST_26  HN6   N6  C6  N1    0.00   0.0  0
- A3G  CONST_27  HN6A  N6  C6  N1  180.00   0.0  0
- A3G  CONST_28  C3'   N8  C   O     0.00   0.0  0
- A3G  CONST_29  C3'   N8  C   CA  180.00   0.0  0
- A3G  CONST_30  HN8   N8  C   O   180.00   0.0  0
- A3G  Var_01    O     C   CA  N   -18.37  30.0  2
- A3G  Var_02    HN    N   CA  C    64.47  30.0  3
+ A3G  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ A3G  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ A3G  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ A3G  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ A3G  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ A3G  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ A3G  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ A3G  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ A3G  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ A3G  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ A3G  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ A3G  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ A3G  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ A3G  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ A3G  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ A3G  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ A3G  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ A3G  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ A3G  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ A3G  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ A3G  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ A3G  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ A3G  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ A3G  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ A3G  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ A3G  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ A3G  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ A3G  CONST_28  C3'   N8   C    O       0.00   0.0  0
+ A3G  CONST_29  C3'   N8   C    CA    180.00   0.0  0
+ A3G  CONST_30  HN8   N8   C    O     180.00   0.0  0
+ A3G  Var_01    O     C    CA   N     -18.37  30.0  2
+ A3G  Var_02    HN    N    CA   C      64.47  30.0  3
+ A3G  Var_03    C2'   C1'  N9   C4     59.62  30.0  2
+ A3G  Var_04    O4'   C1'  N9   C4    178.85  30.0  2
+ A3G  Var_05    C2'   C1'  N9   C8   -123.10  30.0  2
+ A3G  Var_06    O4'   C1'  N9   C8     -3.86  30.0  2
+ A3G  Var_07    C3'   C2'  C1'  N9    138.76  30.0  1
+ A3G  Var_08    C4'   O4'  C1'  N9   -115.28  30.0  1
+ A3G  Var_09    C4'   C3'  C2'  C1'   -32.84  30.0  1
+ A3G  Var_10    C3'   C4'  O4'  C1'   -27.78  30.0  1
+ A3G  Var_11    C4'   O4'  C1'  C2'     5.91  30.0  1
+ A3G  Var_12    O4'   C4'  C3'  C2'    37.50  30.0  1
+ A3G  Var_13    O4'   C1'  C2'  C3'    18.14  30.0  1
+ A3G  Var_14    C1'   C2'  C3'  N8     86.06  30.0  1
+ A3G  Var_15    O4'   C4'  C3'  N8    -79.86  30.0  1
+ A3G  Var_16    O2'   C2'  C1'  N9    -99.30  30.0  1
+ A3G  Var_17    C5'   C4'  O4'  C1'    94.33  30.0  1
+ A3G  Var_18    C5'   C4'  C3'  C2'   -84.15  30.0  1
+ A3G  Var_19    O4'   C1'  C2'  O2'   140.09  30.0  1
+ A3G  Var_20    C4'   C3'  C2'  O2'  -155.34  30.0  1
+ A3G  Var_21    H1'   C1'  N9   C4    -61.34  30.0  2
+ A3G  Var_22    H2'   C2'  C1'  N9     25.06  30.0  1
+ A3G  Var_23    H3'   C3'  C2'  C1'  -151.13  30.0  1
+ A3G  Var_24    H4'   C4'  O4'  C1'  -146.63  30.0  1
+ A3G  Var_25    C2'   C3'  N8   C     173.27  30.0  3
+ A3G  Var_26    C4'   C3'  N8   C     -75.05  30.0  3
+ A3G  Var_27    O2'   C2'  C3'  N8    -36.44  30.0  1
+ A3G  Var_28    C5'   C4'  C3'  N8    158.49  30.0  1
+ A3G  Var_29    O5'   C5'  C4'  C3'   174.24  30.0  3
+ A3G  Var_30    O5'   C5'  C4'  O4'    56.91  30.0  3
+ A3G  Var_31    HO2'  O2'  C2'  C1'    60.71  30.0  3
+ A3G  Var_32    HN8   N8   C3'  C2'     4.43  30.0  1
+ A3G  Var_33    H5'   C5'  C4'  C3'   -64.55  30.0  3
+ A3G  Var_34    H5'A  C5'  C4'  C3'    51.56  30.0  3
+ A3G  Var_35    HO5'  O5'  C5'  C4'  -170.58  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

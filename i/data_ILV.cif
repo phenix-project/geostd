@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ILV  ILV  (2S,5S)-5-(hydroxymethyl)-1-methyl-2-(propan-2-yl)-1,2,4,5,6,8-hexahydro-3H-[1,4]diazonino[7,6,5-cd]indol-3-one  ligand  45  22  .  2022-09-15  2022-09-16
+ ILV  ILV  (2S,5S)-5-(hydroxymethyl)-1-methyl-2-(propan-2-yl)-1,2,4,5,6,8-hexahydro-3H-[1,4]diazonino[7,6,5-cd]indol-3-one  ligand  45  22  .  2022-09-15  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_ILV
@@ -242,36 +243,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ILV  CONST_01  CAD  NAG  CAH  CAI    0.00   0.0  0
- ILV  CONST_02  NAG  CAD  CAE  CAI    0.00   0.0  0
- ILV  CONST_03  CAC  CAD  CAE  CAI  180.00   0.0  0
- ILV  CONST_04  CAA  CAF  CAE  CAI  180.00   0.0  0
- ILV  CONST_05  CAH  NAG  CAD  CAE    0.00   0.0  0
- ILV  CONST_06  CAB  CAC  CAD  CAE    0.00   0.0  0
- ILV  CONST_07  NAG  CAH  CAI  CAE    0.00   0.0  0
- ILV  CONST_08  CAB  CAA  CAF  CAE    0.00   0.0  0
- ILV  CONST_09  CAC  CAD  NAG  CAH  180.00   0.0  0
- ILV  CONST_10  CAD  CAE  CAI  CAH    0.00   0.0  0
- ILV  CONST_11  CAF  CAE  CAI  CAH  180.00   0.0  0
- ILV  CONST_12  CAB  CAC  CAD  NAG  180.00   0.0  0
- ILV  CONST_13  CAF  CAE  CAD  NAG  180.00   0.0  0
- ILV  CONST_14  CAA  CAB  CAC  CAD    0.00   0.0  0
- ILV  CONST_15  CAA  CAF  CAE  CAD    0.00   0.0  0
- ILV  CONST_16  CAF  CAE  CAD  CAC    0.00   0.0  0
- ILV  CONST_17  CAF  CAA  CAB  CAC    0.00   0.0  0
- ILV  CONST_18  CAQ  NAO  C    CA     0.00   0.0  0
- ILV  CONST_19  CAQ  NAO  C    O    180.00   0.0  0
- ILV  CONST_20  H16  CAH  CAI  CAJ    0.00   0.0  0
- ILV  CONST_21  H17  NAG  CAH  CAI  180.00   0.0  0
- ILV  CONST_22  H18  CAC  CAD  CAE  180.00   0.0  0
- ILV  CONST_23  H20  CAA  CAF  CAE  180.00   0.0  0
- ILV  CONST_24  H19  CAB  CAC  CAD  180.00   0.0  0
- ILV  CONST_25  H9   NAO  C    CA   180.00   0.0  0
- ILV  Var_01    CAE  CAF  N    CA   -64.65  30.0  1
- ILV  Var_02    CAH  CAI  CAJ  CAQ  -91.61  30.0  1
- ILV  Var_03    H21  CAL  N    CA    83.70  30.0  3
- ILV  Var_04    H1   CG2  CB   CA    65.17  30.0  3
- ILV  Var_05    H5   CG1  CB   CA   -61.11  30.0  3
+ ILV  CONST_01  CAD  NAG  CAH  CAI     0.00   0.0  0
+ ILV  CONST_02  NAG  CAD  CAE  CAI     0.00   0.0  0
+ ILV  CONST_03  CAC  CAD  CAE  CAI   180.00   0.0  0
+ ILV  CONST_04  CAA  CAF  CAE  CAI   180.00   0.0  0
+ ILV  CONST_05  CAH  NAG  CAD  CAE     0.00   0.0  0
+ ILV  CONST_06  CAB  CAC  CAD  CAE     0.00   0.0  0
+ ILV  CONST_07  NAG  CAH  CAI  CAE     0.00   0.0  0
+ ILV  CONST_08  CAB  CAA  CAF  CAE     0.00   0.0  0
+ ILV  CONST_09  CAC  CAD  NAG  CAH   180.00   0.0  0
+ ILV  CONST_10  CAD  CAE  CAI  CAH     0.00   0.0  0
+ ILV  CONST_11  CAF  CAE  CAI  CAH   180.00   0.0  0
+ ILV  CONST_12  CAB  CAC  CAD  NAG   180.00   0.0  0
+ ILV  CONST_13  CAF  CAE  CAD  NAG   180.00   0.0  0
+ ILV  CONST_14  CAA  CAB  CAC  CAD     0.00   0.0  0
+ ILV  CONST_15  CAA  CAF  CAE  CAD     0.00   0.0  0
+ ILV  CONST_16  CAF  CAE  CAD  CAC     0.00   0.0  0
+ ILV  CONST_17  CAF  CAA  CAB  CAC     0.00   0.0  0
+ ILV  CONST_18  CAQ  NAO  C    CA      0.00   0.0  0
+ ILV  CONST_19  CAQ  NAO  C    O     180.00   0.0  0
+ ILV  CONST_20  H16  CAH  CAI  CAJ     0.00   0.0  0
+ ILV  CONST_21  H17  NAG  CAH  CAI   180.00   0.0  0
+ ILV  CONST_22  H18  CAC  CAD  CAE   180.00   0.0  0
+ ILV  CONST_23  H20  CAA  CAF  CAE   180.00   0.0  0
+ ILV  CONST_24  H19  CAB  CAC  CAD   180.00   0.0  0
+ ILV  CONST_25  H9   NAO  C    CA    180.00   0.0  0
+ ILV  Var_01    CAE  CAF  N    CA    -64.65  30.0  1
+ ILV  Var_02    CAH  CAI  CAJ  CAQ   -91.61  30.0  1
+ ILV  Var_03    H21  CAL  N    CA     83.70  30.0  3
+ ILV  Var_04    H1   CG2  CB   CA     65.17  30.0  3
+ ILV  Var_05    H5   CG1  CB   CA    -61.11  30.0  3
+ ILV  Var_06    CAF  N    CA   C      -7.68  30.0  1
+ ILV  Var_07    CAJ  CAQ  NAO  C     -47.38  30.0  1
+ ILV  Var_08    CAI  CAJ  CAQ  NAO   -41.66  30.0  1
+ ILV  Var_09    N    CA   C    NAO   106.65  30.0  1
+ ILV  Var_10    CAF  N    CA   CB   -128.02  30.0  1
+ ILV  Var_11    NAO  C    CA   CB   -129.90  30.0  1
+ ILV  Var_12    CAL  N    CA   C    -145.67  30.0  1
+ ILV  Var_13    CAS  CAQ  NAO  C      81.59  30.0  1
+ ILV  Var_14    N    CA   C    O     -75.17  30.0  1
+ ILV  Var_15    CAI  CAJ  CAQ  CAS  -171.93  30.0  1
+ ILV  Var_16    H10  CAQ  NAO  C    -162.64  30.0  1
+ ILV  Var_17    H14  CAJ  CAQ  NAO    83.73  30.0  1
+ ILV  Var_18    H15  CAJ  CAQ  NAO  -162.20  30.0  1
+ ILV  Var_19    H8   CA   C    NAO   -14.20  30.0  1
+ ILV  Var_20    N    CA   CB   CG2  -173.25  30.0  3
+ ILV  Var_21    C    CA   CB   CG2    64.67  30.0  3
+ ILV  Var_22    CAL  N    CA   CB     93.99  30.0  1
+ ILV  Var_23    O    C    CA   CB     48.29  30.0  1
+ ILV  Var_24    N    CA   CB   CG1   -50.12  30.0  3
+ ILV  Var_25    C    CA   CB   CG1  -172.20  30.0  3
+ ILV  Var_26    OAV  CAS  CAQ  NAO    55.70  30.0  3
+ ILV  Var_27    CAJ  CAQ  CAS  OAV  -173.80  30.0  1
+ ILV  Var_28    H4   CB   CA   C     -53.57  30.0  2
+ ILV  Var_29    H11  CAS  CAQ  NAO   177.23  30.0  3
+ ILV  Var_30    H12  CAS  CAQ  NAO   -67.13  30.0  3
+ ILV  Var_31    H13  OAV  CAS  CAQ  -174.52  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

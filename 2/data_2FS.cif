@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2FS  2FS  '(1S,2R)-2-{[(1S)-1-[(1-oxo-1,3-dihydro-2H-isoindol-2-yl)methyl]-3,4-dihydroisoquinolin-2(1H)-yl]carbonyl}cyclohexanecarboxylic acid'  ligand  59  32  .  2021-08-04  2021-08-04  
+ 2FS  2FS  '(1S,2R)-2-{[(1S)-1-[(1-oxo-1,3-dihydro-2H-isoindol-2-yl)methyl]-3,4-dihydroisoquinolin-2(1H)-yl]carbonyl}cyclohexanecarboxylic acid'  ligand  59  32  .  2021-08-04  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_2FS
@@ -304,42 +305,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2FS  CONST_01  C21  C20  C19  C18    0.00   0.0  0
- 2FS  CONST_02  C21  C22  C17  C18    0.00   0.0  0
- 2FS  CONST_03  C22  C21  C20  C19    0.00   0.0  0
- 2FS  CONST_04  C22  C17  C18  C19    0.00   0.0  0
- 2FS  CONST_05  C17  C18  C19  C20    0.00   0.0  0
- 2FS  CONST_06  C17  C22  C21  C20    0.00   0.0  0
- 2FS  CONST_07  C31  C32  C33  C28    0.00   0.0  0
- 2FS  CONST_08  C31  C30  C29  C28    0.00   0.0  0
- 2FS  CONST_09  C32  C31  C30  C29    0.00   0.0  0
- 2FS  CONST_10  C32  C33  C28  C29    0.00   0.0  0
- 2FS  CONST_11  C33  C32  C31  C30    0.00   0.0  0
- 2FS  CONST_12  C33  C28  C29  C30    0.00   0.0  0
- 2FS  CONST_13  C33  C34  N26  C27    0.00   0.0  0
- 2FS  CONST_14  C23  N14  C12  C10  180.00   0.0  0
- 2FS  CONST_15  C15  N14  C12  C10    0.00   0.0  0
- 2FS  CONST_16  O35  C34  N26  C27  180.00   0.0  0
- 2FS  CONST_17  C33  C34  N26  C25  180.00   0.0  0
- 2FS  CONST_18  H15  C22  C17  C16    0.00   0.0  0
- 2FS  CONST_19  H13  C20  C19  C18  180.00   0.0  0
- 2FS  CONST_20  H14  C21  C20  C19  180.00   0.0  0
- 2FS  CONST_21  H12  C19  C20  C21  180.00   0.0  0
- 2FS  CONST_22  H18  C29  C28  C27    0.00   0.0  0
- 2FS  CONST_23  H21  C32  C33  C28  180.00   0.0  0
- 2FS  CONST_24  H19  C30  C29  C28  180.00   0.0  0
- 2FS  CONST_25  H20  C31  C30  C29  180.00   0.0  0
- 2FS  CONST_26  C23  N14  C12  O13    0.00   0.0  0
- 2FS  CONST_27  C15  N14  C12  O13  180.00   0.0  0
- 2FS  CONST_28  O35  C34  N26  C25    0.00   0.0  0
- 2FS  Var_01    C8   C7   C6   C4   -52.56  30.0  1
- 2FS  Var_02    C9   C8   C7   C6    56.69  30.0  1
- 2FS  Var_03    C10  C9   C8   C7   -56.83  30.0  1
- 2FS  Var_04    C23  N14  C15  C16  -32.00  30.0  1
- 2FS  Var_05    C15  C16  C17  C18  -36.36  30.0  1
- 2FS  Var_06    C17  C16  C15  N14   54.63  30.0  1
- 2FS  Var_07    C23  C25  N26  C27   89.99  30.0  3
- 2FS  Var_08    H16  C27  C28  C29  -63.05  30.0  1
+ 2FS  CONST_01  C21  C20  C19  C18     0.00   0.0  0
+ 2FS  CONST_02  C21  C22  C17  C18     0.00   0.0  0
+ 2FS  CONST_03  C22  C21  C20  C19     0.00   0.0  0
+ 2FS  CONST_04  C22  C17  C18  C19     0.00   0.0  0
+ 2FS  CONST_05  C17  C18  C19  C20     0.00   0.0  0
+ 2FS  CONST_06  C17  C22  C21  C20     0.00   0.0  0
+ 2FS  CONST_07  C31  C32  C33  C28     0.00   0.0  0
+ 2FS  CONST_08  C31  C30  C29  C28     0.00   0.0  0
+ 2FS  CONST_09  C32  C31  C30  C29     0.00   0.0  0
+ 2FS  CONST_10  C32  C33  C28  C29     0.00   0.0  0
+ 2FS  CONST_11  C33  C32  C31  C30     0.00   0.0  0
+ 2FS  CONST_12  C33  C28  C29  C30     0.00   0.0  0
+ 2FS  CONST_13  C33  C34  N26  C27     0.00   0.0  0
+ 2FS  CONST_14  C23  N14  C12  C10   180.00   0.0  0
+ 2FS  CONST_15  C15  N14  C12  C10     0.00   0.0  0
+ 2FS  CONST_16  O35  C34  N26  C27   180.00   0.0  0
+ 2FS  CONST_17  C33  C34  N26  C25   180.00   0.0  0
+ 2FS  CONST_18  H15  C22  C17  C16     0.00   0.0  0
+ 2FS  CONST_19  H13  C20  C19  C18   180.00   0.0  0
+ 2FS  CONST_20  H14  C21  C20  C19   180.00   0.0  0
+ 2FS  CONST_21  H12  C19  C20  C21   180.00   0.0  0
+ 2FS  CONST_22  H18  C29  C28  C27     0.00   0.0  0
+ 2FS  CONST_23  H21  C32  C33  C28   180.00   0.0  0
+ 2FS  CONST_24  H19  C30  C29  C28   180.00   0.0  0
+ 2FS  CONST_25  H20  C31  C30  C29   180.00   0.0  0
+ 2FS  CONST_26  C23  N14  C12  O13     0.00   0.0  0
+ 2FS  CONST_27  C15  N14  C12  O13   180.00   0.0  0
+ 2FS  CONST_28  O35  C34  N26  C25     0.00   0.0  0
+ 2FS  Var_01    C8   C7   C6   C4    -52.56  30.0  1
+ 2FS  Var_02    C9   C8   C7   C6     56.69  30.0  1
+ 2FS  Var_03    C10  C9   C8   C7    -56.83  30.0  1
+ 2FS  Var_04    C23  N14  C15  C16   -32.00  30.0  1
+ 2FS  Var_05    C15  C16  C17  C18   -36.36  30.0  1
+ 2FS  Var_06    C17  C16  C15  N14    54.63  30.0  1
+ 2FS  Var_07    C23  C25  N26  C27    89.99  30.0  3
+ 2FS  Var_08    H16  C27  C28  C29   -63.05  30.0  1
+ 2FS  Var_09    C8   C9   C10  C4     51.93  30.0  1
+ 2FS  Var_10    C9   C10  C4   C6    -47.63  30.0  1
+ 2FS  Var_11    C10  C4   C6   C7     48.51  30.0  1
+ 2FS  Var_12    C15  N14  C23  C18    -9.32  30.0  1
+ 2FS  Var_13    N14  C23  C18  C19  -153.51  30.0  1
+ 2FS  Var_14    C17  C18  C23  N14    29.99  30.0  1
+ 2FS  Var_15    C9   C10  C4   C2   -178.08  30.0  1
+ 2FS  Var_16    C7   C6   C4   C2    178.03  30.0  1
+ 2FS  Var_17    N14  C12  C10  C4    154.99  30.0  3
+ 2FS  Var_18    C12  C10  C4   C6     76.24  30.0  1
+ 2FS  Var_19    C12  C10  C9   C8    -72.96  30.0  1
+ 2FS  Var_20    N14  C12  C10  C9    -80.59  30.0  3
+ 2FS  Var_21    N26  C25  C23  C18    63.13  30.0  1
+ 2FS  Var_22    C12  N14  C23  C18   156.68  30.0  1
+ 2FS  Var_23    C25  C23  C18  C19    80.30  30.0  1
+ 2FS  Var_24    N26  C25  C23  N14   -63.74  30.0  1
+ 2FS  Var_25    C25  C23  N14  C15   115.90  30.0  1
+ 2FS  Var_26    C25  C23  C18  C17   -96.20  30.0  1
+ 2FS  Var_27    H8   C9   C10  C4    -68.43  30.0  1
+ 2FS  Var_28    H9   C9   C10  C4    176.30  30.0  1
+ 2FS  Var_29    H23  C10  C4   C6   -164.95  30.0  1
+ 2FS  Var_30    H1   C4   C6   C7    -66.47  30.0  1
+ 2FS  Var_31    H26  C23  C18  C19   -34.05  30.0  1
+ 2FS  Var_32    C12  C10  C4   C2    -54.21  30.0  1
+ 2FS  Var_33    O13  C12  C10  C4    -28.81  30.0  3
+ 2FS  Var_34    O3   C2   C4   C6   -148.95  30.0  2
+ 2FS  Var_35    O1   C2   C4   C6     33.14  30.0  2
+ 2FS  Var_36    O13  C12  C10  C9     95.61  30.0  3
+ 2FS  Var_37    C10  C4   C2   O1    164.14  30.0  3
+ 2FS  Var_38    C10  C4   C2   O3    -17.95  30.0  3
+ 2FS  Var_39    C12  N14  C23  C25   -78.11  30.0  1
+ 2FS  Var_40    H27  C25  C23  C18  -174.80  30.0  1
+ 2FS  Var_41    H28  C25  C23  C18   -58.42  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

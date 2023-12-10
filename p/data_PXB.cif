@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PXB  PXB  N-{[4-(5-methyl-3-phenylisoxazol-4-yl)phenyl]sulfonyl}propanamide  ligand  44  26  .  2022-07-22  2022-07-26
+ PXB  PXB  N-{[4-(5-methyl-3-phenylisoxazol-4-yl)phenyl]sulfonyl}propanamide  ligand  44  26  .  2022-07-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PXB
@@ -239,47 +240,55 @@ _chem_comp_tor.period
  PXB  CONST_05  C31  C22  C21  C20  180.00   0.0  0
  PXB  CONST_06  C24  C18  C20  C21    0.00   0.0  0
  PXB  CONST_07  C24  C23  C22  C21    0.00   0.0  0
- PXB  CONST_10  O37  C33  C31  C22  180.00   0.0  0
- PXB  CONST_11  N39  C35  C31  C22  180.00   0.0  0
- PXB  CONST_12  C42  C35  C31  C22    0.00   0.0  0
- PXB  CONST_15  C31  C22  C23  C24  180.00   0.0  0
- PXB  CONST_16  N39  O37  C33  C31    0.00   0.0  0
- PXB  CONST_17  O37  N39  C35  C31    0.00   0.0  0
- PXB  CONST_20  N39  C35  C31  C33    0.00   0.0  0
- PXB  CONST_21  C42  C35  C31  C33  180.00   0.0  0
- PXB  CONST_22  C35  N39  O37  C33    0.00   0.0  0
- PXB  CONST_23  O37  C33  C31  C35    0.00   0.0  0
- PXB  CONST_24  C45  C44  C42  C35  180.00   0.0  0
- PXB  CONST_25  C47  C48  C42  C35  180.00   0.0  0
- PXB  CONST_26  C42  C35  N39  O37  180.00   0.0  0
- PXB  CONST_29  C46  C45  C44  C42    0.00   0.0  0
- PXB  CONST_30  C46  C47  C48  C42    0.00   0.0  0
- PXB  CONST_31  C47  C48  C42  C44    0.00   0.0  0
- PXB  CONST_32  C47  C46  C45  C44    0.00   0.0  0
- PXB  CONST_33  C48  C42  C44  C45    0.00   0.0  0
- PXB  CONST_34  C48  C47  C46  C45    0.00   0.0  0
- PXB  CONST_35  C21  C20  C18  S12  180.00   0.0  0
- PXB  CONST_36  C23  C24  C18  S12  180.00   0.0  0
- PXB  CONST_37  C55  C33  C31  C22    0.00   0.0  0
- PXB  CONST_38  C55  C33  C31  C35  180.00   0.0  0
- PXB  CONST_39  C55  C33  O37  N39  180.00   0.0  0
- PXB  CONST_40  H21  C21  C20  C18  180.00   0.0  0
- PXB  CONST_41  H23  C23  C24  C18  180.00   0.0  0
- PXB  CONST_42  H24  C24  C18  C20  180.00   0.0  0
- PXB  CONST_43  H20  C20  C21  C22  180.00   0.0  0
- PXB  CONST_44  H44  C44  C42  C35    0.00   0.0  0
- PXB  CONST_45  H48  C48  C42  C35    0.00   0.0  0
- PXB  CONST_46  H45  C45  C44  C42  180.00   0.0  0
- PXB  CONST_47  H47  C47  C48  C42  180.00   0.0  0
- PXB  CONST_48  H46  C46  C45  C44  180.00   0.0  0
- PXB  CONST_49  S12  N8   C4   C2   180.00   0.0  0
- PXB  CONST_50  S12  N8   C4   O6     0.00   0.0  0
- PXB  CONST_51  HN8  N8   C4   C2     0.00   0.0  0
+ PXB  CONST_08  O37  C33  C31  C22  180.00   0.0  0
+ PXB  CONST_09  N39  C35  C31  C22  180.00   0.0  0
+ PXB  CONST_10  C42  C35  C31  C22    0.00   0.0  0
+ PXB  CONST_11  C31  C22  C23  C24  180.00   0.0  0
+ PXB  CONST_12  N39  O37  C33  C31    0.00   0.0  0
+ PXB  CONST_13  O37  N39  C35  C31    0.00   0.0  0
+ PXB  CONST_14  N39  C35  C31  C33    0.00   0.0  0
+ PXB  CONST_15  C42  C35  C31  C33  180.00   0.0  0
+ PXB  CONST_16  C35  N39  O37  C33    0.00   0.0  0
+ PXB  CONST_17  O37  C33  C31  C35    0.00   0.0  0
+ PXB  CONST_18  C45  C44  C42  C35  180.00   0.0  0
+ PXB  CONST_19  C47  C48  C42  C35  180.00   0.0  0
+ PXB  CONST_20  C42  C35  N39  O37  180.00   0.0  0
+ PXB  CONST_21  C46  C45  C44  C42    0.00   0.0  0
+ PXB  CONST_22  C46  C47  C48  C42    0.00   0.0  0
+ PXB  CONST_23  C47  C48  C42  C44    0.00   0.0  0
+ PXB  CONST_24  C47  C46  C45  C44    0.00   0.0  0
+ PXB  CONST_25  C48  C42  C44  C45    0.00   0.0  0
+ PXB  CONST_26  C48  C47  C46  C45    0.00   0.0  0
+ PXB  CONST_27  C21  C20  C18  S12  180.00   0.0  0
+ PXB  CONST_28  C23  C24  C18  S12  180.00   0.0  0
+ PXB  CONST_29  C55  C33  C31  C22    0.00   0.0  0
+ PXB  CONST_30  C55  C33  C31  C35  180.00   0.0  0
+ PXB  CONST_31  C55  C33  O37  N39  180.00   0.0  0
+ PXB  CONST_32  H21  C21  C20  C18  180.00   0.0  0
+ PXB  CONST_33  H23  C23  C24  C18  180.00   0.0  0
+ PXB  CONST_34  H24  C24  C18  C20  180.00   0.0  0
+ PXB  CONST_35  H20  C20  C21  C22  180.00   0.0  0
+ PXB  CONST_36  H44  C44  C42  C35    0.00   0.0  0
+ PXB  CONST_37  H48  C48  C42  C35    0.00   0.0  0
+ PXB  CONST_38  H45  C45  C44  C42  180.00   0.0  0
+ PXB  CONST_39  H47  C47  C48  C42  180.00   0.0  0
+ PXB  CONST_40  H46  C46  C45  C44  180.00   0.0  0
+ PXB  CONST_41  S12  N8   C4   C2   180.00   0.0  0
+ PXB  CONST_42  S12  N8   C4   O6     0.00   0.0  0
+ PXB  CONST_43  HN8  N8   C4   C2     0.00   0.0  0
  PXB  Var_01    C20  C18  S12  N8    76.14  30.0  2
  PXB  Var_02    H55  C55  C33  C31  101.19  30.0  2
  PXB  Var_03    C18  S12  N8   C4    62.93  30.0  3
  PXB  Var_04    O6   C4   C2   C1    -4.07  30.0  3
  PXB  Var_05    H1   C1   C2   C4   -60.61  30.0  3
+ PXB  Var_06    C33  C31  C22  C21  131.06  30.0  2
+ PXB  Var_07    C35  C31  C22  C21  -45.92  30.0  2
+ PXB  Var_08    C33  C31  C22  C23  -48.43  30.0  2
+ PXB  Var_09    C35  C31  C22  C23  134.60  30.0  2
+ PXB  Var_10    C44  C42  C35  C31  139.45  30.0  2
+ PXB  Var_11    C48  C42  C35  C31  -41.56  30.0  2
+ PXB  Var_12    C44  C42  C35  N39  -41.37  30.0  2
+ PXB  Var_13    C48  C42  C35  N39  137.61  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

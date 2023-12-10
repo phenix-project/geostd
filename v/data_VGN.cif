@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VGN  VGN  '4-(acetylamino)-1,1':4',1''-terphenyl-3-carboxylic acid'  ligand  41  25  .  2021-08-24  2021-08-24  
+ VGN  VGN  '4-(acetylamino)-1,1':4',1''-terphenyl-3-carboxylic acid'  ligand  41  25  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VGN
@@ -223,50 +224,58 @@ _chem_comp_tor.period
  VGN  CONST_03  C2    C4   C6   CB     0.00   0.0  0
  VGN  CONST_04  C4    C6   CB   CG     0.00   0.0  0
  VGN  CONST_05  C4    C2   C3   CG     0.00   0.0  0
- VGN  CONST_08  C22   C19  C17  C16  180.00   0.0  0
- VGN  CONST_09  C20   C18  C17  C16  180.00   0.0  0
- VGN  CONST_10  C23   C8   C12  C16    0.00   0.0  0
- VGN  CONST_11  C23   C9   C13  C16    0.00   0.0  0
- VGN  CONST_12  C18   C17  C19  C22    0.00   0.0  0
- VGN  CONST_13  C18   C20  C21  C22    0.00   0.0  0
- VGN  CONST_14  C17   C16  C13  C9   180.00   0.0  0
- VGN  CONST_15  C12   C16  C13  C9     0.00   0.0  0
- VGN  CONST_16  C12   C8   C23  C9     0.00   0.0  0
- VGN  CONST_18  C20   C21  C22  C19    0.00   0.0  0
- VGN  CONST_21  C20   C18  C17  C19    0.00   0.0  0
- VGN  CONST_22  C8    C12  C16  C17  180.00   0.0  0
- VGN  CONST_23  C21   C22  C19  C17    0.00   0.0  0
- VGN  CONST_24  C21   C20  C18  C17    0.00   0.0  0
- VGN  CONST_25  C13   C16  C12  C8     0.00   0.0  0
- VGN  CONST_26  C13   C9   C23  C8     0.00   0.0  0
- VGN  CONST_29  C3    C23  C8   C12  180.00   0.0  0
- VGN  CONST_31  C3    CG   CB   C6     0.00   0.0  0
- VGN  CONST_32  C3    C2   C4   C6     0.00   0.0  0
- VGN  CONST_33  C13   C9   C23  C3   180.00   0.0  0
- VGN  CONST_34  C23   C3   C2   C4   180.00   0.0  0
- VGN  CONST_35  C5    C4   C6   CB   180.00   0.0  0
- VGN  CONST_36  N10   C6   CB   CG   180.00   0.0  0
- VGN  CONST_37  C5    C4   C2   C3   180.00   0.0  0
- VGN  CONST_38  N10   C6   C4   C2   180.00   0.0  0
- VGN  CONST_39  H2    C2   C3   CG   180.00   0.0  0
- VGN  CONST_40  H19   C19  C17  C16    0.00   0.0  0
- VGN  CONST_41  H18   C18  C17  C16    0.00   0.0  0
- VGN  CONST_42  H8    C8   C12  C16  180.00   0.0  0
- VGN  CONST_43  H9    C9   C13  C16  180.00   0.0  0
- VGN  CONST_44  H20   C20  C21  C22  180.00   0.0  0
- VGN  CONST_45  H21   C21  C22  C19  180.00   0.0  0
- VGN  CONST_46  H12   C12  C16  C17    0.00   0.0  0
- VGN  CONST_47  H13   C13  C16  C17    0.00   0.0  0
- VGN  CONST_48  H22   C22  C19  C17  180.00   0.0  0
- VGN  CONST_49  HG    CG   CB   C6   180.00   0.0  0
- VGN  CONST_50  HB    CB   CG   C3   180.00   0.0  0
- VGN  CONST_51  C14   N10  C6   CB     0.00   0.0  0
- VGN  CONST_52  C14   N10  C6   C4   180.00   0.0  0
- VGN  CONST_53  H10   N10  C6   CB   180.00   0.0  0
- VGN  CONST_54  C1    C14  N10  C6   180.00   0.0  0
- VGN  CONST_55  O15   C14  N10  C6     0.00   0.0  0
+ VGN  CONST_06  C22   C19  C17  C16  180.00   0.0  0
+ VGN  CONST_07  C20   C18  C17  C16  180.00   0.0  0
+ VGN  CONST_08  C23   C8   C12  C16    0.00   0.0  0
+ VGN  CONST_09  C23   C9   C13  C16    0.00   0.0  0
+ VGN  CONST_10  C18   C17  C19  C22    0.00   0.0  0
+ VGN  CONST_11  C18   C20  C21  C22    0.00   0.0  0
+ VGN  CONST_12  C17   C16  C13  C9   180.00   0.0  0
+ VGN  CONST_13  C12   C16  C13  C9     0.00   0.0  0
+ VGN  CONST_14  C12   C8   C23  C9     0.00   0.0  0
+ VGN  CONST_15  C20   C21  C22  C19    0.00   0.0  0
+ VGN  CONST_16  C20   C18  C17  C19    0.00   0.0  0
+ VGN  CONST_17  C8    C12  C16  C17  180.00   0.0  0
+ VGN  CONST_18  C21   C22  C19  C17    0.00   0.0  0
+ VGN  CONST_19  C21   C20  C18  C17    0.00   0.0  0
+ VGN  CONST_20  C13   C16  C12  C8     0.00   0.0  0
+ VGN  CONST_21  C13   C9   C23  C8     0.00   0.0  0
+ VGN  CONST_22  C3    C23  C8   C12  180.00   0.0  0
+ VGN  CONST_23  C3    CG   CB   C6     0.00   0.0  0
+ VGN  CONST_24  C3    C2   C4   C6     0.00   0.0  0
+ VGN  CONST_25  C13   C9   C23  C3   180.00   0.0  0
+ VGN  CONST_26  C23   C3   C2   C4   180.00   0.0  0
+ VGN  CONST_27  C5    C4   C6   CB   180.00   0.0  0
+ VGN  CONST_28  N10   C6   CB   CG   180.00   0.0  0
+ VGN  CONST_29  C5    C4   C2   C3   180.00   0.0  0
+ VGN  CONST_30  N10   C6   C4   C2   180.00   0.0  0
+ VGN  CONST_31  H2    C2   C3   CG   180.00   0.0  0
+ VGN  CONST_32  H19   C19  C17  C16    0.00   0.0  0
+ VGN  CONST_33  H18   C18  C17  C16    0.00   0.0  0
+ VGN  CONST_34  H8    C8   C12  C16  180.00   0.0  0
+ VGN  CONST_35  H9    C9   C13  C16  180.00   0.0  0
+ VGN  CONST_36  H20   C20  C21  C22  180.00   0.0  0
+ VGN  CONST_37  H21   C21  C22  C19  180.00   0.0  0
+ VGN  CONST_38  H12   C12  C16  C17    0.00   0.0  0
+ VGN  CONST_39  H13   C13  C16  C17    0.00   0.0  0
+ VGN  CONST_40  H22   C22  C19  C17  180.00   0.0  0
+ VGN  CONST_41  HG    CG   CB   C6   180.00   0.0  0
+ VGN  CONST_42  HB    CB   CG   C3   180.00   0.0  0
+ VGN  CONST_43  C14   N10  C6   CB     0.00   0.0  0
+ VGN  CONST_44  C14   N10  C6   C4   180.00   0.0  0
+ VGN  CONST_45  H10   N10  C6   CB   180.00   0.0  0
+ VGN  CONST_46  C1    C14  N10  C6   180.00   0.0  0
+ VGN  CONST_47  O15   C14  N10  C6     0.00   0.0  0
  VGN  Var_01    C6    C4   C5   O1    -0.62  30.0  3
  VGN  Var_02    H11C  C1   C14  N10   96.92  30.0  3
+ VGN  Var_03    C9    C23  C3   CG   -34.50  30.0  2
+ VGN  Var_04    C8    C23  C3   CG   145.50  30.0  2
+ VGN  Var_05    C2    C3   C23  C9   145.46  30.0  2
+ VGN  Var_06    C12   C16  C17  C19  142.98  30.0  3
+ VGN  Var_07    C13   C16  C17  C19  -36.93  30.0  3
+ VGN  Var_08    C2    C3   C23  C8   -34.54  30.0  2
+ VGN  Var_09    C18   C17  C16  C12  -37.04  30.0  2
+ VGN  Var_10    C13   C16  C17  C18  143.04  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

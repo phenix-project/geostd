@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 0Q1  0Q1  (1R)-6-(3,5-dimethyl-1,2-oxazol-4-yl)-1-phenyl-2,3-dihydro-1H-inden-1-ol  ligand  42  23  .  2022-07-22  2022-07-26
+ 0Q1  0Q1  (1R)-6-(3,5-dimethyl-1,2-oxazol-4-yl)-1-phenyl-2,3-dihydro-1H-inden-1-ol  ligand  42  23  .  2022-07-22  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_0Q1
@@ -230,47 +231,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 0Q1  CONST_01  CAB  NAW  OAV  CAT    0.00   0.0  0
- 0Q1  CONST_04  NAW  CAB  CAC  CAT    0.00   0.0  0
- 0Q1  CONST_05  CAD  CAC  CAT  OAV  180.00   0.0  0
- 0Q1  CONST_06  CAB  CAC  CAT  OAV    0.00   0.0  0
- 0Q1  CONST_07  CAC  CAB  NAW  OAV    0.00   0.0  0
- 0Q1  CONST_08  CAC  CAT  OAV  NAW    0.00   0.0  0
- 0Q1  CONST_09  CAD  CAC  CAB  NAW  180.00   0.0  0
- 0Q1  CONST_12  CAQ  CAR  CAD  CAC  180.00   0.0  0
- 0Q1  CONST_13  CAF  CAE  CAD  CAC  180.00   0.0  0
- 0Q1  CONST_14  CAG  CAQ  CAR  CAD    0.00   0.0  0
- 0Q1  CONST_15  CAG  CAF  CAE  CAD    0.00   0.0  0
- 0Q1  CONST_16  CAF  CAG  CAQ  CAR    0.00   0.0  0
- 0Q1  CONST_17  CAF  CAE  CAD  CAR    0.00   0.0  0
- 0Q1  CONST_18  CAE  CAD  CAR  CAQ    0.00   0.0  0
- 0Q1  CONST_19  CAE  CAF  CAG  CAQ    0.00   0.0  0
- 0Q1  CONST_20  CAN  CAO  CAP  CAK    0.00   0.0  0
- 0Q1  CONST_21  CAN  CAM  CAL  CAK    0.00   0.0  0
- 0Q1  CONST_22  CAO  CAN  CAM  CAL    0.00   0.0  0
- 0Q1  CONST_23  CAO  CAP  CAK  CAL    0.00   0.0  0
- 0Q1  CONST_24  CAP  CAO  CAN  CAM    0.00   0.0  0
- 0Q1  CONST_25  CAP  CAK  CAL  CAM    0.00   0.0  0
- 0Q1  CONST_26  CAO  CAP  CAK  CAJ  180.00   0.0  0
- 0Q1  CONST_27  CAM  CAL  CAK  CAJ  180.00   0.0  0
- 0Q1  CONST_28  NAW  OAV  CAT  CAU  180.00   0.0  0
- 0Q1  CONST_29  CAD  CAC  CAT  CAU    0.00   0.0  0
- 0Q1  CONST_30  CAB  CAC  CAT  CAU  180.00   0.0  0
- 0Q1  CONST_31  CAA  CAB  CAC  CAT  180.00   0.0  0
- 0Q1  CONST_32  CAA  CAB  NAW  OAV  180.00   0.0  0
- 0Q1  CONST_33  CAD  CAC  CAB  CAA    0.00   0.0  0
- 0Q1  CONST_34  H7   CAR  CAD  CAC    0.00   0.0  0
- 0Q1  CONST_35  H8   CAE  CAD  CAC    0.00   0.0  0
- 0Q1  CONST_36  H9   CAF  CAE  CAD  180.00   0.0  0
- 0Q1  CONST_37  H19  CAP  CAK  CAJ    0.00   0.0  0
- 0Q1  CONST_38  H15  CAL  CAK  CAJ    0.00   0.0  0
- 0Q1  CONST_39  H18  CAO  CAP  CAK  180.00   0.0  0
- 0Q1  CONST_40  H16  CAM  CAL  CAK  180.00   0.0  0
- 0Q1  CONST_41  H17  CAN  CAM  CAL  180.00   0.0  0
- 0Q1  Var_01    CAI  CAH  CAG  CAQ   13.51  30.0  1
- 0Q1  Var_02    CAJ  CAI  CAH  CAG  -22.40  30.0  1
- 0Q1  Var_03    H1   CAU  CAT  OAV  -48.32  30.0  2
- 0Q1  Var_04    H4   CAA  CAB  NAW  109.66  30.0  2
+ 0Q1  CONST_01  CAB  NAW  OAV  CAT     0.00   0.0  0
+ 0Q1  CONST_02  NAW  CAB  CAC  CAT     0.00   0.0  0
+ 0Q1  CONST_03  CAD  CAC  CAT  OAV   180.00   0.0  0
+ 0Q1  CONST_04  CAB  CAC  CAT  OAV     0.00   0.0  0
+ 0Q1  CONST_05  CAC  CAB  NAW  OAV     0.00   0.0  0
+ 0Q1  CONST_06  CAC  CAT  OAV  NAW     0.00   0.0  0
+ 0Q1  CONST_07  CAD  CAC  CAB  NAW   180.00   0.0  0
+ 0Q1  CONST_08  CAQ  CAR  CAD  CAC   180.00   0.0  0
+ 0Q1  CONST_09  CAF  CAE  CAD  CAC   180.00   0.0  0
+ 0Q1  CONST_10  CAG  CAQ  CAR  CAD     0.00   0.0  0
+ 0Q1  CONST_11  CAG  CAF  CAE  CAD     0.00   0.0  0
+ 0Q1  CONST_12  CAF  CAG  CAQ  CAR     0.00   0.0  0
+ 0Q1  CONST_13  CAF  CAE  CAD  CAR     0.00   0.0  0
+ 0Q1  CONST_14  CAE  CAD  CAR  CAQ     0.00   0.0  0
+ 0Q1  CONST_15  CAE  CAF  CAG  CAQ     0.00   0.0  0
+ 0Q1  CONST_16  CAN  CAO  CAP  CAK     0.00   0.0  0
+ 0Q1  CONST_17  CAN  CAM  CAL  CAK     0.00   0.0  0
+ 0Q1  CONST_18  CAO  CAN  CAM  CAL     0.00   0.0  0
+ 0Q1  CONST_19  CAO  CAP  CAK  CAL     0.00   0.0  0
+ 0Q1  CONST_20  CAP  CAO  CAN  CAM     0.00   0.0  0
+ 0Q1  CONST_21  CAP  CAK  CAL  CAM     0.00   0.0  0
+ 0Q1  CONST_22  CAO  CAP  CAK  CAJ   180.00   0.0  0
+ 0Q1  CONST_23  CAM  CAL  CAK  CAJ   180.00   0.0  0
+ 0Q1  CONST_24  NAW  OAV  CAT  CAU   180.00   0.0  0
+ 0Q1  CONST_25  CAD  CAC  CAT  CAU     0.00   0.0  0
+ 0Q1  CONST_26  CAB  CAC  CAT  CAU   180.00   0.0  0
+ 0Q1  CONST_27  CAA  CAB  CAC  CAT   180.00   0.0  0
+ 0Q1  CONST_28  CAA  CAB  NAW  OAV   180.00   0.0  0
+ 0Q1  CONST_29  CAD  CAC  CAB  CAA     0.00   0.0  0
+ 0Q1  CONST_30  H7   CAR  CAD  CAC     0.00   0.0  0
+ 0Q1  CONST_31  H8   CAE  CAD  CAC     0.00   0.0  0
+ 0Q1  CONST_32  H9   CAF  CAE  CAD   180.00   0.0  0
+ 0Q1  CONST_33  H19  CAP  CAK  CAJ     0.00   0.0  0
+ 0Q1  CONST_34  H15  CAL  CAK  CAJ     0.00   0.0  0
+ 0Q1  CONST_35  H18  CAO  CAP  CAK   180.00   0.0  0
+ 0Q1  CONST_36  H16  CAM  CAL  CAK   180.00   0.0  0
+ 0Q1  CONST_37  H17  CAN  CAM  CAL   180.00   0.0  0
+ 0Q1  Var_01    CAI  CAH  CAG  CAQ    13.51  30.0  1
+ 0Q1  Var_02    CAJ  CAI  CAH  CAG   -22.40  30.0  1
+ 0Q1  Var_03    H1   CAU  CAT  OAV   -48.32  30.0  2
+ 0Q1  Var_04    H4   CAA  CAB  NAW   109.66  30.0  2
+ 0Q1  Var_05    CAR  CAD  CAC  CAT  -131.83  30.0  2
+ 0Q1  Var_06    CAE  CAD  CAC  CAT    48.63  30.0  2
+ 0Q1  Var_07    CAR  CAD  CAC  CAB    49.16  30.0  2
+ 0Q1  Var_08    CAE  CAD  CAC  CAB  -130.38  30.0  2
+ 0Q1  Var_09    CAK  CAJ  CAQ  CAR   -72.90  30.0  1
+ 0Q1  Var_10    CAI  CAJ  CAQ  CAR   166.21  30.0  1
+ 0Q1  Var_11    CAP  CAK  CAJ  CAQ   -89.42  30.0  3
+ 0Q1  Var_12    CAL  CAK  CAJ  CAQ    88.16  30.0  3
+ 0Q1  Var_13    CAH  CAI  CAJ  CAQ    22.69  30.0  1
+ 0Q1  Var_14    CAK  CAJ  CAQ  CAG   106.04  30.0  1
+ 0Q1  Var_15    CAI  CAJ  CAQ  CAG   -14.85  30.0  1
+ 0Q1  Var_16    CAK  CAJ  CAI  CAH   -94.13  30.0  1
+ 0Q1  Var_17    CAP  CAK  CAJ  CAI    23.56  30.0  3
+ 0Q1  Var_18    CAL  CAK  CAJ  CAI  -158.87  30.0  3
+ 0Q1  Var_19    OAS  CAJ  CAQ  CAR    47.30  30.0  1
+ 0Q1  Var_20    OAS  CAJ  CAQ  CAG  -133.75  30.0  1
+ 0Q1  Var_21    OAS  CAJ  CAI  CAH   138.56  30.0  1
+ 0Q1  Var_22    CAP  CAK  CAJ  OAS   151.84  30.0  3
+ 0Q1  Var_23    CAL  CAK  CAJ  OAS   -30.58  30.0  3
+ 0Q1  Var_24    H12  CAI  CAJ  CAQ   -93.90  30.0  1
+ 0Q1  Var_25    H13  CAI  CAJ  CAQ   148.08  30.0  1
+ 0Q1  Var_26    H14  OAS  CAJ  CAQ  -176.08  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

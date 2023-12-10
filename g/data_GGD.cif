@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GGD  GGD  '(1S)-2-[(3-O-beta-D-glucopyranosyl-beta-D-galactopyranosyl)oxy]-1-{[(9E)-octadec-9-enoyloxy]methyl}ethyl (10E)-nonadec-10-enoate'  ligand  161  67  .  2021-08-10  2021-08-10  
+ GGD  GGD  '(1S)-2-[(3-O-beta-D-glucopyranosyl-beta-D-galactopyranosyl)oxy]-1-{[(9E)-octadec-9-enoyloxy]methyl}ethyl (10E)-nonadec-10-enoate'  ligand  161  67  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GGD
@@ -695,45 +696,124 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GGD  Var_01  CC4   CC3  OA1  CA1  -147.53  30.0  3
- GGD  Var_02  C24   C23  C22  C21  -179.43   0.0  2
- GGD  Var_03  C40   C39  C38  C37  -176.60   0.0  2
- GGD  Var_04  OC7   CC5  OC6  CC4     8.34  30.0  3
- GGD  Var_05  C15   C14  CC5  OC6  -174.80  30.0  3
- GGD  Var_06  C16   C15  C14  CC5  -174.70  30.0  3
- GGD  Var_07  OC9   CC7  OC8  CC6     4.52  30.0  3
- GGD  Var_08  C32   C31  CC7  OC8  -167.72  30.0  3
- GGD  Var_09  C33   C32  C31  CC7  -174.70  30.0  3
- GGD  Var_10  C17   C16  C15  C14   174.63  30.0  3
- GGD  Var_11  C18   C17  C16  C15   179.81  30.0  3
- GGD  Var_12  C19   C18  C17  C16   174.27  30.0  3
- GGD  Var_13  C20   C19  C18  C17   177.73  30.0  3
- GGD  Var_14  C21   C20  C19  C18   175.26  30.0  3
- GGD  Var_15  C22   C21  C20  C19   -64.60  30.0  3
- GGD  Var_16  C23   C22  C21  C20   131.78  30.0  3
- GGD  Var_17  C25   C24  C23  C22   128.78  30.0  3
- GGD  Var_18  C26   C25  C24  C23   -52.03  30.0  3
- GGD  Var_19  C27   C26  C25  C24   -57.83  30.0  3
- GGD  Var_20  C34   C33  C32  C31  -177.77  30.0  3
- GGD  Var_21  C35   C34  C33  C32   179.71  30.0  3
- GGD  Var_22  C36   C35  C34  C33  -175.53  30.0  3
- GGD  Var_23  C37   C36  C35  C34   176.13  30.0  3
- GGD  Var_24  C38   C37  C36  C35   -63.39  30.0  3
- GGD  Var_25  C39   C38  C37  C36   113.69  30.0  3
- GGD  Var_26  C41   C40  C39  C38   120.75  30.0  3
- GGD  Var_27  C42   C41  C40  C39   -64.32  30.0  3
- GGD  Var_28  C43   C42  C41  C40  -179.12  30.0  3
- GGD  Var_29  C44   C43  C42  C41   179.99  30.0  3
- GGD  Var_30  C45   C44  C43  C42  -179.98  30.0  3
- GGD  Var_31  C46   C45  C44  C43   179.02  30.0  3
- GGD  Var_32  C47   C46  C45  C44  -179.51  30.0  3
- GGD  Var_33  C28   C27  C26  C25  -174.01  30.0  3
- GGD  Var_34  C29   C28  C27  C26  -175.71  30.0  3
- GGD  Var_35  C30   C29  C28  C27  -175.48  30.0  3
- GGD  Var_36  C48   C30  C29  C28  -174.47  30.0  3
- GGD  Var_37  HC61  CC6  OC8  CC7   -58.11  30.0  2
- GGD  Var_38  H481  C48  C30  C29    58.93  30.0  3
- GGD  Var_39  H471  C47  C46  C45    58.80  30.0  3
+ GGD  Var_01   CC4   CC3  OA1  CA1  -147.53  30.0  3
+ GGD  Var_02   C24   C23  C22  C21  -179.43   0.0  2
+ GGD  Var_03   C40   C39  C38  C37  -176.60   0.0  2
+ GGD  Var_04   OC7   CC5  OC6  CC4     8.34  30.0  3
+ GGD  Var_05   C15   C14  CC5  OC6  -174.80  30.0  3
+ GGD  Var_06   C16   C15  C14  CC5  -174.70  30.0  3
+ GGD  Var_07   OC9   CC7  OC8  CC6     4.52  30.0  3
+ GGD  Var_08   C32   C31  CC7  OC8  -167.72  30.0  3
+ GGD  Var_09   C33   C32  C31  CC7  -174.70  30.0  3
+ GGD  Var_10   C17   C16  C15  C14   174.63  30.0  3
+ GGD  Var_11   C18   C17  C16  C15   179.81  30.0  3
+ GGD  Var_12   C19   C18  C17  C16   174.27  30.0  3
+ GGD  Var_13   C20   C19  C18  C17   177.73  30.0  3
+ GGD  Var_14   C21   C20  C19  C18   175.26  30.0  3
+ GGD  Var_15   C22   C21  C20  C19   -64.60  30.0  3
+ GGD  Var_16   C23   C22  C21  C20   131.78  30.0  3
+ GGD  Var_17   C25   C24  C23  C22   128.78  30.0  3
+ GGD  Var_18   C26   C25  C24  C23   -52.03  30.0  3
+ GGD  Var_19   C27   C26  C25  C24   -57.83  30.0  3
+ GGD  Var_20   C34   C33  C32  C31  -177.77  30.0  3
+ GGD  Var_21   C35   C34  C33  C32   179.71  30.0  3
+ GGD  Var_22   C36   C35  C34  C33  -175.53  30.0  3
+ GGD  Var_23   C37   C36  C35  C34   176.13  30.0  3
+ GGD  Var_24   C38   C37  C36  C35   -63.39  30.0  3
+ GGD  Var_25   C39   C38  C37  C36   113.69  30.0  3
+ GGD  Var_26   C41   C40  C39  C38   120.75  30.0  3
+ GGD  Var_27   C42   C41  C40  C39   -64.32  30.0  3
+ GGD  Var_28   C43   C42  C41  C40  -179.12  30.0  3
+ GGD  Var_29   C44   C43  C42  C41   179.99  30.0  3
+ GGD  Var_30   C45   C44  C43  C42  -179.98  30.0  3
+ GGD  Var_31   C46   C45  C44  C43   179.02  30.0  3
+ GGD  Var_32   C47   C46  C45  C44  -179.51  30.0  3
+ GGD  Var_33   C28   C27  C26  C25  -174.01  30.0  3
+ GGD  Var_34   C29   C28  C27  C26  -175.71  30.0  3
+ GGD  Var_35   C30   C29  C28  C27  -175.48  30.0  3
+ GGD  Var_36   C48   C30  C29  C28  -174.47  30.0  3
+ GGD  Var_37   HC61  CC6  OC8  CC7   -58.11  30.0  2
+ GGD  Var_38   H481  C48  C30  C29    58.93  30.0  3
+ GGD  Var_39   H471  C47  C46  C45    58.80  30.0  3
+ GGD  Var_40   CA4   CA3  CA2  CA1   -55.77  30.0  1
+ GGD  Var_41   CA4   CA5  OA5  CA1    62.29  30.0  1
+ GGD  Var_42   CA5   OA5  CA1  CA2   -62.82  30.0  1
+ GGD  Var_43   CA5   CA4  CA3  CA2    54.52  30.0  1
+ GGD  Var_44   OA5   CA1  CA2  CA3    57.47  30.0  1
+ GGD  Var_45   OA5   CA5  CA4  CA3   -55.50  30.0  1
+ GGD  Var_46   CB4   CB3  CB2  CB1   -51.68  30.0  1
+ GGD  Var_47   CB4   CB5  OB5  CB1    62.70  30.0  1
+ GGD  Var_48   CB5   OB5  CB1  CB2   -62.81  30.0  1
+ GGD  Var_49   CB5   CB4  CB3  CB2    53.36  30.0  1
+ GGD  Var_50   OB5   CB1  CB2  CB3    55.59  30.0  1
+ GGD  Var_51   OB5   CB5  CB4  CB3   -56.93  30.0  1
+ GGD  Var_52   OB1   CA3  CA2  CA1  -178.87  30.0  1
+ GGD  Var_53   CA6   CA5  OA5  CA1  -173.00  30.0  1
+ GGD  Var_54   OA4   CA4  CA3  CA2   -65.71  30.0  1
+ GGD  Var_55   CB1   OB1  CA3  CA2  -134.62  30.0  3
+ GGD  Var_56   OA1   CA1  CA2  CA3   176.52  30.0  1
+ GGD  Var_57   CA6   CA5  CA4  CA3  -176.68  30.0  1
+ GGD  Var_58   CB2   CB1  OB1  CA3   146.75  30.0  2
+ GGD  Var_59   OB5   CB1  OB1  CA3   -92.52  30.0  2
+ GGD  Var_60   OA2   CA2  CA3  CA4  -174.67  30.0  1
+ GGD  Var_61   CB1   OB1  CA3  CA4   102.38  30.0  3
+ GGD  Var_62   OB1   CA3  CA4  CA5   174.63  30.0  1
+ GGD  Var_63   OA1   CA1  OA5  CA5   177.55  30.0  1
+ GGD  Var_64   OA5   CA1  CA2  OA2   178.15  30.0  1
+ GGD  Var_65   OA5   CA5  CA4  OA4    66.35  30.0  1
+ GGD  Var_66   OB3   CB3  CB2  CB1  -174.83  30.0  1
+ GGD  Var_67   CB6   CB5  OB5  CB1  -175.06  30.0  1
+ GGD  Var_68   OB4   CB4  CB3  CB2   175.00  30.0  1
+ GGD  Var_69   OB1   CB1  CB2  CB3   174.29  30.0  1
+ GGD  Var_70   CB6   CB5  CB4  CB3  -176.43  30.0  1
+ GGD  Var_71   OB2   CB2  CB3  CB4  -174.74  30.0  1
+ GGD  Var_72   OB3   CB3  CB4  CB5   174.55  30.0  1
+ GGD  Var_73   OB1   CB1  OB5  CB5   178.55  30.0  1
+ GGD  Var_74   OB5   CB1  CB2  OB2  -179.86  30.0  1
+ GGD  Var_75   OB5   CB5  CB4  OB4  -175.44  30.0  1
+ GGD  Var_76   HA31  CA3  CA2  CA1    62.52  30.0  1
+ GGD  Var_77   HA51  CA5  OA5  CA1   -55.66  30.0  1
+ GGD  Var_78   HA41  CA4  CA3  CA2   170.90  30.0  1
+ GGD  Var_79   HA11  CA1  CA2  CA3   -62.31  30.0  1
+ GGD  Var_80   HA21  CA2  CA3  CA4    61.81  30.0  1
+ GGD  Var_81   HB31  CB3  CB2  CB1    65.25  30.0  1
+ GGD  Var_82   HB51  CB5  OB5  CB1   -56.45  30.0  1
+ GGD  Var_83   HB41  CB4  CB3  CB2   -65.07  30.0  1
+ GGD  Var_84   HB11  CB1  CB2  CB3   -65.37  30.0  1
+ GGD  Var_85   HB21  CB2  CB3  CB4    66.61  30.0  1
+ GGD  Var_86   CC3   OA1  CA1  CA2   156.67  30.0  3
+ GGD  Var_87   OA6   CA6  CA5  CA4  -172.76  30.0  3
+ GGD  Var_88   OA4   CA4  CA5  CA6   -54.84  30.0  1
+ GGD  Var_89   OA2   CA2  CA1  OA1   -62.80  30.0  1
+ GGD  Var_90   OB1   CA3  CA2  OA2    62.23  30.0  1
+ GGD  Var_91   OB1   CA3  CA4  OA4    54.39  30.0  1
+ GGD  Var_92   CC3   OA1  CA1  OA5   -83.48  30.0  3
+ GGD  Var_93   OA6   CA6  CA5  OA5    64.16  30.0  3
+ GGD  Var_94   CB4   CB5  CB6  OB6  -175.77  30.0  2
+ GGD  Var_95   OB5   CB5  CB6  OB6    64.04  30.0  2
+ GGD  Var_96   OB4   CB4  CB5  CB6    65.05  30.0  1
+ GGD  Var_97   OB2   CB2  CB1  OB1   -61.15  30.0  1
+ GGD  Var_98   OB3   CB3  CB2  OB2    62.12  30.0  1
+ GGD  Var_99   OB4   CB4  CB3  OB3   -63.82  30.0  1
+ GGD  Var_100  HO21  OA2  CA2  CA1  -169.54  30.0  3
+ GGD  Var_101  HO41  OA4  CA4  CA3   -59.57  30.0  3
+ GGD  Var_102  HA61  CA6  CA5  CA4    62.32  30.0  3
+ GGD  Var_103  HA62  CA6  CA5  CA4   -54.76  30.0  3
+ GGD  Var_104  HO2   OB2  CB2  CB1   -85.39  30.0  3
+ GGD  Var_105  HO3   OB3  CB3  CB2  -179.96  30.0  3
+ GGD  Var_106  HO4   OB4  CB4  CB3   147.89  30.0  3
+ GGD  Var_107  HB61  CB6  CB5  CB4    61.86  30.0  3
+ GGD  Var_108  HB62  CB6  CB5  CB4   -54.27  30.0  3
+ GGD  Var_109  HO61  OA6  CA6  CA5   -65.42  30.0  3
+ GGD  Var_110  HO6   OB6  CB6  CB5   176.92  30.0  3
+ GGD  Var_111  OC6   CC4  CC3  OA1    49.72  30.0  3
+ GGD  Var_112  CC6   CC4  CC3  OA1   -68.66  30.0  3
+ GGD  Var_113  CC5   OC6  CC4  CC3    72.35  30.0  3
+ GGD  Var_114  OC8   CC6  CC4  CC3  -170.81  30.0  3
+ GGD  Var_115  OC8   CC6  CC4  OC6    68.08  30.0  3
+ GGD  Var_116  CC6   CC4  OC6  CC5  -165.77  30.0  2
+ GGD  Var_117  HC41  CC4  CC3  OA1   171.35  30.0  3
+ GGD  Var_118  HC62  CC6  CC4  CC3   -51.78  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ANH  ANH  'methyl N-[(4-methylphenyl)sulfonyl]glycyl-3-carbamimidoyl-L-phenylalaninate'  ligand  54  30  .  2022-03-11  2023-02-02
+ ANH  ANH  'methyl N-[(4-methylphenyl)sulfonyl]glycyl-3-carbamimidoyl-L-phenylalaninate'  ligand  54  30  .  2022-03-11  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_ANH
@@ -266,47 +267,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ANH  CONST_01  C24   C23  C22  C21    0.00   0.0  0
- ANH  CONST_02  C24   C25  C26  C21    0.00   0.0  0
- ANH  CONST_03  C25   C26  C21  C22    0.00   0.0  0
- ANH  CONST_04  C25   C24  C23  C22    0.00   0.0  0
- ANH  CONST_05  C26   C21  C22  C23    0.00   0.0  0
- ANH  CONST_06  C26   C25  C24  C23    0.00   0.0  0
- ANH  CONST_07  C5    C4   C3   C2     0.00   0.0  0
- ANH  CONST_08  C5    C6   C7   C2     0.00   0.0  0
- ANH  CONST_09  C6    C7   C2   C3     0.00   0.0  0
- ANH  CONST_10  C6    C5   C4   C3     0.00   0.0  0
- ANH  CONST_11  C7    C2   C3   C4     0.00   0.0  0
- ANH  CONST_12  C7    C6   C5   C4     0.00   0.0  0
- ANH  CONST_13  C23   C22  C21  C30  180.00   0.0  0
- ANH  CONST_14  C25   C26  C21  C30  180.00   0.0  0
- ANH  CONST_15  C27   C25  C26  C21  180.00   0.0  0
- ANH  CONST_16  C27   C25  C24  C23  180.00   0.0  0
- ANH  CONST_17  C4    C3   C2   C1   180.00   0.0  0
- ANH  CONST_18  C6    C7   C2   C1   180.00   0.0  0
- ANH  CONST_19  S8    C5   C4   C3   180.00   0.0  0
- ANH  CONST_20  S8    C5   C6   C7   180.00   0.0  0
- ANH  CONST_21  H23   C23  C22  C21  180.00   0.0  0
- ANH  CONST_22  H26   C26  C21  C22  180.00   0.0  0
- ANH  CONST_23  H24   C24  C23  C22  180.00   0.0  0
- ANH  CONST_24  H22   C22  C23  C24  180.00   0.0  0
- ANH  CONST_25  H4    C4   C3   C2   180.00   0.0  0
- ANH  CONST_26  H6    C6   C7   C2   180.00   0.0  0
- ANH  CONST_27  H7    C7   C2   C3   180.00   0.0  0
- ANH  CONST_28  H3    C3   C4   C5   180.00   0.0  0
- ANH  CONST_29  H281  N28  C27  C25  180.00   0.0  0
- ANH  CONST_31  H29   N29  C27  C25  180.00   0.0  0
- ANH  CONST_32  C10   C11  N12  C13  180.00   0.0  0
- ANH  CONST_33  O20   C11  N12  C13    0.00   0.0  0
- ANH  CONST_34  H12   N12  C11  C10    0.00   0.0  0
- ANH  Var_01    C22   C21  C30  C13   90.25  30.0  2
- ANH  Var_02    N28   C27  C25  C24   18.98  30.0  2
- ANH  Var_03    C4    C5   S8   N9    86.27  30.0  2
- ANH  Var_04    H11   C1   C2   C3    -8.54  30.0  2
- ANH  Var_05    C5    S8   N9   C10   57.33  30.0  3
- ANH  Var_06    N9    C10  C11  N12  152.66  30.0  3
- ANH  Var_07    S8    N9   C10  C11  -84.85  30.0  3
- ANH  Var_08    H161  C16  O15  C14  179.80  30.0  3
+ ANH  CONST_01  C24   C23  C22  C21     0.00   0.0  0
+ ANH  CONST_02  C24   C25  C26  C21     0.00   0.0  0
+ ANH  CONST_03  C25   C26  C21  C22     0.00   0.0  0
+ ANH  CONST_04  C25   C24  C23  C22     0.00   0.0  0
+ ANH  CONST_05  C26   C21  C22  C23     0.00   0.0  0
+ ANH  CONST_06  C26   C25  C24  C23     0.00   0.0  0
+ ANH  CONST_07  C5    C4   C3   C2      0.00   0.0  0
+ ANH  CONST_08  C5    C6   C7   C2      0.00   0.0  0
+ ANH  CONST_09  C6    C7   C2   C3      0.00   0.0  0
+ ANH  CONST_10  C6    C5   C4   C3      0.00   0.0  0
+ ANH  CONST_11  C7    C2   C3   C4      0.00   0.0  0
+ ANH  CONST_12  C7    C6   C5   C4      0.00   0.0  0
+ ANH  CONST_13  C23   C22  C21  C30   180.00   0.0  0
+ ANH  CONST_14  C25   C26  C21  C30   180.00   0.0  0
+ ANH  CONST_15  C27   C25  C26  C21   180.00   0.0  0
+ ANH  CONST_16  C27   C25  C24  C23   180.00   0.0  0
+ ANH  CONST_17  C4    C3   C2   C1    180.00   0.0  0
+ ANH  CONST_18  C6    C7   C2   C1    180.00   0.0  0
+ ANH  CONST_19  S8    C5   C4   C3    180.00   0.0  0
+ ANH  CONST_20  S8    C5   C6   C7    180.00   0.0  0
+ ANH  CONST_21  H23   C23  C22  C21   180.00   0.0  0
+ ANH  CONST_22  H26   C26  C21  C22   180.00   0.0  0
+ ANH  CONST_23  H24   C24  C23  C22   180.00   0.0  0
+ ANH  CONST_24  H22   C22  C23  C24   180.00   0.0  0
+ ANH  CONST_25  H4    C4   C3   C2    180.00   0.0  0
+ ANH  CONST_26  H6    C6   C7   C2    180.00   0.0  0
+ ANH  CONST_27  H7    C7   C2   C3    180.00   0.0  0
+ ANH  CONST_28  H3    C3   C4   C5    180.00   0.0  0
+ ANH  CONST_29  H281  N28  C27  C25   180.00   0.0  0
+ ANH  CONST_30  H29   N29  C27  C25   180.00   0.0  0
+ ANH  CONST_31  C10   C11  N12  C13   180.00   0.0  0
+ ANH  CONST_32  O20   C11  N12  C13     0.00   0.0  0
+ ANH  CONST_33  H12   N12  C11  C10     0.00   0.0  0
+ ANH  Var_01    C22   C21  C30  C13    90.25  30.0  2
+ ANH  Var_02    N28   C27  C25  C24    18.98  30.0  2
+ ANH  Var_03    C4    C5   S8   N9     86.27  30.0  2
+ ANH  Var_04    H11   C1   C2   C3     -8.54  30.0  2
+ ANH  Var_05    C5    S8   N9   C10    57.33  30.0  3
+ ANH  Var_06    N9    C10  C11  N12   152.66  30.0  3
+ ANH  Var_07    S8    N9   C10  C11   -84.85  30.0  3
+ ANH  Var_08    H161  C16  O15  C14   179.80  30.0  3
+ ANH  Var_09    C21   C30  C13  N12   -71.38  30.0  3
+ ANH  Var_10    C21   C30  C13  C14   164.39  30.0  3
+ ANH  Var_11    H13   C13  C30  C21    48.60  30.0  2
+ ANH  Var_12    O17   C14  C13  N12   149.63  30.0  3
+ ANH  Var_13    O15   C14  C13  N12   -33.24  30.0  3
+ ANH  Var_14    C16   O15  C14  C13  -178.52  30.0  3
+ ANH  Var_15    C11   N12  C13  C30   176.09  30.0  3
+ ANH  Var_16    O17   C14  C13  C30   -87.35  30.0  3
+ ANH  Var_17    O15   C14  C13  C30    89.78  30.0  3
+ ANH  Var_18    C11   N12  C13  C14   -61.56  30.0  3
+ ANH  Var_19    C16   O15  C14  O17    -1.45  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

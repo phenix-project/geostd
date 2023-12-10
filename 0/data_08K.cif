@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 08K  08K  8-chloro-1,4-dimethyl-6-phenyl-4H-[1,2,4]triazolo[4,3-a][1,3,4]benzotriazepine  ligand  37  23  .  2022-07-22  2022-07-26
+ 08K  08K  8-chloro-1,4-dimethyl-6-phenyl-4H-[1,2,4]triazolo[4,3-a][1,3,4]benzotriazepine  ligand  37  23  .  2022-07-22  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_08K
@@ -208,31 +209,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 08K  CONST_01  CAU  CAI  CAH  CAP    0.00   0.0  0
- 08K  CONST_02  CAI  CAH  CAP  CAJ    0.00   0.0  0
- 08K  CONST_03  CAH  CAP  CAJ  CAS    0.00   0.0  0
- 08K  CONST_04  CAC  CAD  CAF  CAQ    0.00   0.0  0
- 08K  CONST_05  CAC  CAE  CAG  CAQ    0.00   0.0  0
- 08K  CONST_06  CAD  CAC  CAE  CAG    0.00   0.0  0
- 08K  CONST_07  CAD  CAF  CAQ  CAG    0.00   0.0  0
- 08K  CONST_08  CAF  CAD  CAC  CAE    0.00   0.0  0
- 08K  CONST_09  CAF  CAQ  CAG  CAE    0.00   0.0  0
- 08K  CONST_10  CAR  NAM  NAN  CAT    0.00   0.0  0
- 08K  CONST_11  NAN  NAM  CAR  NAV    0.00   0.0  0
- 08K  CONST_12  CAD  CAF  CAQ  CAO  180.00   0.0  0
- 08K  CONST_13  CAE  CAG  CAQ  CAO  180.00   0.0  0
- 08K  CONST_14  CAS  CAJ  CAP  CLA  180.00   0.0  0
- 08K  CONST_15  CAI  CAH  CAP  CLA  180.00   0.0  0
- 08K  CONST_16  NAN  NAM  CAR  CAA  180.00   0.0  0
- 08K  CONST_17  H13  CAI  CAH  CAP  180.00   0.0  0
- 08K  CONST_18  H14  CAH  CAP  CAJ  180.00   0.0  0
- 08K  CONST_19  H6   CAF  CAQ  CAO    0.00   0.0  0
- 08K  CONST_20  H2   CAG  CAQ  CAO    0.00   0.0  0
- 08K  CONST_21  H5   CAD  CAF  CAQ  180.00   0.0  0
- 08K  CONST_22  H3   CAE  CAG  CAQ  180.00   0.0  0
- 08K  CONST_23  H4   CAC  CAE  CAG  180.00   0.0  0
- 08K  CONST_24  H1   CAJ  CAP  CAH  180.00   0.0  0
- 08K  Var_01    H10  CAA  CAR  NAV   62.56  30.0  2
+ 08K  CONST_01  CAU  CAI  CAH  CAP     0.00   0.0  0
+ 08K  CONST_02  CAI  CAH  CAP  CAJ     0.00   0.0  0
+ 08K  CONST_03  CAH  CAP  CAJ  CAS     0.00   0.0  0
+ 08K  CONST_04  CAC  CAD  CAF  CAQ     0.00   0.0  0
+ 08K  CONST_05  CAC  CAE  CAG  CAQ     0.00   0.0  0
+ 08K  CONST_06  CAD  CAC  CAE  CAG     0.00   0.0  0
+ 08K  CONST_07  CAD  CAF  CAQ  CAG     0.00   0.0  0
+ 08K  CONST_08  CAF  CAD  CAC  CAE     0.00   0.0  0
+ 08K  CONST_09  CAF  CAQ  CAG  CAE     0.00   0.0  0
+ 08K  CONST_10  CAR  NAM  NAN  CAT     0.00   0.0  0
+ 08K  CONST_11  NAN  NAM  CAR  NAV     0.00   0.0  0
+ 08K  CONST_12  CAD  CAF  CAQ  CAO   180.00   0.0  0
+ 08K  CONST_13  CAE  CAG  CAQ  CAO   180.00   0.0  0
+ 08K  CONST_14  CAS  CAJ  CAP  CLA   180.00   0.0  0
+ 08K  CONST_15  CAI  CAH  CAP  CLA   180.00   0.0  0
+ 08K  CONST_16  NAN  NAM  CAR  CAA   180.00   0.0  0
+ 08K  CONST_17  H13  CAI  CAH  CAP   180.00   0.0  0
+ 08K  CONST_18  H14  CAH  CAP  CAJ   180.00   0.0  0
+ 08K  CONST_19  H6   CAF  CAQ  CAO     0.00   0.0  0
+ 08K  CONST_20  H2   CAG  CAQ  CAO     0.00   0.0  0
+ 08K  CONST_21  H5   CAD  CAF  CAQ   180.00   0.0  0
+ 08K  CONST_22  H3   CAE  CAG  CAQ   180.00   0.0  0
+ 08K  CONST_23  H4   CAC  CAE  CAG   180.00   0.0  0
+ 08K  CONST_24  H1   CAJ  CAP  CAH   180.00   0.0  0
+ 08K  Var_01    H10  CAA  CAR  NAV    62.56  30.0  2
+ 08K  CONST_25  CAU  CAS  CAJ  CAP     0.00   0.0  0
+ 08K  CONST_26  NAV  CAU  CAS  CAJ   180.00   0.0  0
+ 08K  CONST_27  CAI  CAU  CAS  CAJ     0.00   0.0  0
+ 08K  CONST_30  CAH  CAI  CAU  CAS     0.00   0.0  0
+ 08K  CONST_32  NAM  CAR  NAV  CAT     0.00   0.0  0
+ 08K  CONST_33  NAM  NAN  CAT  NAV     0.00   0.0  0
+ 08K  CONST_34  CAH  CAI  CAU  NAV   180.00   0.0  0
+ 08K  CONST_35  NAN  CAT  NAV  CAR     0.00   0.0  0
+ 08K  CONST_37  CAU  NAV  CAR  NAM   180.00   0.0  0
+ 08K  CONST_38  CAU  NAV  CAT  NAN   180.00   0.0  0
+ 08K  CONST_39  CAA  CAR  NAV  CAT   180.00   0.0  0
+ 08K  CONST_40  CAU  NAV  CAR  CAA     0.00   0.0  0
+ 08K  Var_02    CAQ  CAO  CAS  CAJ   -41.35  30.0  1
+ 08K  Var_03    NAL  CAO  CAS  CAJ   135.28  30.0  1
+ 08K  Var_04    CAF  CAQ  CAO  CAS   -38.65  30.0  2
+ 08K  Var_05    CAG  CAQ  CAO  CAS   143.03  30.0  2
+ 08K  Var_06    NAK  NAL  CAO  CAS     3.13  30.0  1
+ 08K  Var_07    CAT  NAK  NAL  CAO    66.89  30.0  1
+ 08K  Var_08    NAK  NAL  CAO  CAQ   179.82  30.0  1
+ 08K  Var_09    CAU  CAS  CAO  CAQ   141.54  30.0  1
+ 08K  Var_10    NAL  CAO  CAQ  CAG   -33.91  30.0  2
+ 08K  Var_11    NAL  CAO  CAQ  CAF   144.42  30.0  2
+ 08K  Var_12    CAU  CAS  CAO  NAL   -41.83  30.0  1
+ 08K  Var_13    NAN  CAT  NAK  NAL   112.73  30.0  1
+ 08K  Var_14    NAV  CAT  NAK  NAL   -66.31  30.0  1
+ 08K  Var_15    C23  NAK  NAL  CAO  -163.88  30.0  1
+ 08K  Var_16    NAN  CAT  NAK  C23   -14.16  30.0  1
+ 08K  Var_17    NAV  CAT  NAK  C23   166.80  30.0  1
+ 08K  Var_18    H7   C23  NAK  NAL    59.39  30.0  3
+ 08K  Var_19    H8   C23  NAK  NAL   177.00  30.0  3
+ 08K  Var_20    H9   C23  NAK  NAL   -61.57  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

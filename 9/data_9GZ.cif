@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 9GZ  9GZ  '5-(4-fluorophenyl)-3-iodanyl-2-oxidanyl-4-pyrrol-1-yl-benzoic acid'  ligand  33  23  .  2022-07-24  2022-07-26
+ 9GZ  9GZ  '5-(4-fluorophenyl)-3-iodanyl-2-oxidanyl-4-pyrrol-1-yl-benzoic acid'  ligand  33  23  .  2022-07-24  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_9GZ
@@ -188,51 +189,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 9GZ  CONST_01  C12  C2   C3   N1     0.00   0.0  0
- 9GZ  CONST_02  C1   C2   C3   N1   180.00   0.0  0
- 9GZ  CONST_03  C5   C4   C3   N1   180.00   0.0  0
- 9GZ  CONST_04  C9   C10  C11  N1     0.00   0.0  0
- 9GZ  CONST_05  C10  C9   C8   N1     0.00   0.0  0
- 9GZ  CONST_06  C12  C2   C3   C4   180.00   0.0  0
- 9GZ  CONST_07  C1   C2   C3   C4     0.00   0.0  0
- 9GZ  CONST_10  C1   C6   C5   C4     0.00   0.0  0
- 9GZ  CONST_11  C2   C1   C6   C5     0.00   0.0  0
- 9GZ  CONST_12  C2   C3   C4   C5     0.00   0.0  0
- 9GZ  CONST_13  C12  C2   C1   C6   180.00   0.0  0
- 9GZ  CONST_14  C3   C2   C1   C6     0.00   0.0  0
- 9GZ  CONST_15  C3   C4   C5   C6     0.00   0.0  0
- 9GZ  CONST_17  C10  C11  N1   C8     0.00   0.0  0
- 9GZ  CONST_18  C11  C10  C9   C8     0.00   0.0  0
- 9GZ  CONST_19  C3   N1   C11  C10  180.00   0.0  0
- 9GZ  CONST_20  C16  C15  C14  C13    0.00   0.0  0
- 9GZ  CONST_21  C16  C17  C12  C13    0.00   0.0  0
- 9GZ  CONST_24  C12  C13  C14  C15    0.00   0.0  0
- 9GZ  CONST_25  C12  C17  C16  C15    0.00   0.0  0
- 9GZ  CONST_26  C14  C15  C16  C17    0.00   0.0  0
- 9GZ  CONST_27  C14  C13  C12  C17    0.00   0.0  0
- 9GZ  CONST_31  C9   C8   N1   C11    0.00   0.0  0
- 9GZ  CONST_32  C2   C12  C13  C14  180.00   0.0  0
- 9GZ  CONST_33  C2   C12  C17  C16  180.00   0.0  0
- 9GZ  CONST_34  C9   C8   N1   C3   180.00   0.0  0
- 9GZ  CONST_35  I1   C4   C3   N1     0.00   0.0  0
- 9GZ  CONST_36  C7   C6   C5   C4   180.00   0.0  0
- 9GZ  CONST_37  I1   C4   C5   C6   180.00   0.0  0
- 9GZ  CONST_38  C2   C1   C6   C7   180.00   0.0  0
- 9GZ  CONST_39  F1   C15  C14  C13  180.00   0.0  0
- 9GZ  CONST_40  F1   C15  C16  C17  180.00   0.0  0
- 9GZ  CONST_41  O2   C5   C6   C1   180.00   0.0  0
- 9GZ  CONST_42  I1   C4   C3   C2   180.00   0.0  0
- 9GZ  CONST_43  O2   C5   C4   C3   180.00   0.0  0
- 9GZ  CONST_44  H2   C10  C11  N1   180.00   0.0  0
- 9GZ  CONST_45  H9   C9   C8   N1   180.00   0.0  0
- 9GZ  CONST_46  H5   C1   C6   C5   180.00   0.0  0
- 9GZ  CONST_47  H6   C11  N1   C8   180.00   0.0  0
- 9GZ  CONST_48  H1   C8   C9   C10  180.00   0.0  0
- 9GZ  CONST_49  H4   C17  C12  C13  180.00   0.0  0
- 9GZ  CONST_50  H3   C13  C14  C15  180.00   0.0  0
- 9GZ  CONST_51  H7   C14  C13  C12  180.00   0.0  0
- 9GZ  CONST_52  H8   C16  C17  C12  180.00   0.0  0
- 9GZ  Var_01    O1   C7   C6   C5    -0.16  30.0  2
+ 9GZ  CONST_01  C12  C2   C3   N1      0.00   0.0  0
+ 9GZ  CONST_02  C1   C2   C3   N1    180.00   0.0  0
+ 9GZ  CONST_03  C5   C4   C3   N1    180.00   0.0  0
+ 9GZ  CONST_04  C9   C10  C11  N1      0.00   0.0  0
+ 9GZ  CONST_05  C10  C9   C8   N1      0.00   0.0  0
+ 9GZ  CONST_06  C12  C2   C3   C4    180.00   0.0  0
+ 9GZ  CONST_07  C1   C2   C3   C4      0.00   0.0  0
+ 9GZ  CONST_08  C1   C6   C5   C4      0.00   0.0  0
+ 9GZ  CONST_09  C2   C1   C6   C5      0.00   0.0  0
+ 9GZ  CONST_10  C2   C3   C4   C5      0.00   0.0  0
+ 9GZ  CONST_11  C12  C2   C1   C6    180.00   0.0  0
+ 9GZ  CONST_12  C3   C2   C1   C6      0.00   0.0  0
+ 9GZ  CONST_13  C3   C4   C5   C6      0.00   0.0  0
+ 9GZ  CONST_14  C10  C11  N1   C8      0.00   0.0  0
+ 9GZ  CONST_15  C11  C10  C9   C8      0.00   0.0  0
+ 9GZ  CONST_16  C3   N1   C11  C10   180.00   0.0  0
+ 9GZ  CONST_17  C16  C15  C14  C13     0.00   0.0  0
+ 9GZ  CONST_18  C16  C17  C12  C13     0.00   0.0  0
+ 9GZ  CONST_19  C12  C13  C14  C15     0.00   0.0  0
+ 9GZ  CONST_20  C12  C17  C16  C15     0.00   0.0  0
+ 9GZ  CONST_21  C14  C15  C16  C17     0.00   0.0  0
+ 9GZ  CONST_22  C14  C13  C12  C17     0.00   0.0  0
+ 9GZ  CONST_23  C9   C8   N1   C11     0.00   0.0  0
+ 9GZ  CONST_24  C2   C12  C13  C14   180.00   0.0  0
+ 9GZ  CONST_25  C2   C12  C17  C16   180.00   0.0  0
+ 9GZ  CONST_26  C9   C8   N1   C3    180.00   0.0  0
+ 9GZ  CONST_27  I1   C4   C3   N1      0.00   0.0  0
+ 9GZ  CONST_28  C7   C6   C5   C4    180.00   0.0  0
+ 9GZ  CONST_29  I1   C4   C5   C6    180.00   0.0  0
+ 9GZ  CONST_30  C2   C1   C6   C7    180.00   0.0  0
+ 9GZ  CONST_31  F1   C15  C14  C13   180.00   0.0  0
+ 9GZ  CONST_32  F1   C15  C16  C17   180.00   0.0  0
+ 9GZ  CONST_33  O2   C5   C6   C1    180.00   0.0  0
+ 9GZ  CONST_34  I1   C4   C3   C2    180.00   0.0  0
+ 9GZ  CONST_35  O2   C5   C4   C3    180.00   0.0  0
+ 9GZ  CONST_36  H2   C10  C11  N1    180.00   0.0  0
+ 9GZ  CONST_37  H9   C9   C8   N1    180.00   0.0  0
+ 9GZ  CONST_38  H5   C1   C6   C5    180.00   0.0  0
+ 9GZ  CONST_39  H6   C11  N1   C8    180.00   0.0  0
+ 9GZ  CONST_40  H1   C8   C9   C10   180.00   0.0  0
+ 9GZ  CONST_41  H4   C17  C12  C13   180.00   0.0  0
+ 9GZ  CONST_42  H3   C13  C14  C15   180.00   0.0  0
+ 9GZ  CONST_43  H7   C14  C13  C12   180.00   0.0  0
+ 9GZ  CONST_44  H8   C16  C17  C12   180.00   0.0  0
+ 9GZ  Var_01    O1   C7   C6   C5     -0.16  30.0  2
+ 9GZ  Var_02    C11  N1   C3   C4   -109.30  30.0  2
+ 9GZ  Var_03    C8   N1   C3   C4     73.86  30.0  2
+ 9GZ  Var_04    C2   C3   N1   C8   -107.35  30.0  2
+ 9GZ  Var_05    C1   C2   C12  C13  -125.47  30.0  2
+ 9GZ  Var_06    C3   C2   C12  C13    55.60  30.0  2
+ 9GZ  Var_07    C1   C2   C12  C17    52.77  30.0  2
+ 9GZ  Var_08    C3   C2   C12  C17  -126.16  30.0  2
+ 9GZ  Var_09    C2   C3   N1   C11    69.49  30.0  2
+ 9GZ  Var_10    H10  O2   C5   C4    179.86  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- J2J  J2J  5'-O-[(S)-[(2,3-dihydroxybenzene-1-carbonyl)oxy](hydroxy)phosphoryl]adenosine  ligand  51  33  .  2022-11-17  2022-11-17
+ J2J  J2J  5'-O-[(S)-[(2,3-dihydroxybenzene-1-carbonyl)oxy](hydroxy)phosphoryl]adenosine  ligand  51  33  .  2022-11-17  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_J2J
@@ -259,52 +260,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- J2J  CONST_01  C5    C6   N1   C2     0.00   0.0  0
- J2J  CONST_02  C5    C4   N3   C2     0.00   0.0  0
- J2J  CONST_03  N9    C4   N3   C2   180.00   0.0  0
- J2J  CONST_04  C6    N1   C2   N3     0.00   0.0  0
- J2J  CONST_05  C6    C5   C4   N3     0.00   0.0  0
- J2J  CONST_06  N7    C5   C4   N3   180.00   0.0  0
- J2J  CONST_07  C8    N9   C4   N3   180.00   0.0  0
- J2J  CONST_08  N1    C6   C5   C4     0.00   0.0  0
- J2J  CONST_09  C8    N7   C5   C4     0.00   0.0  0
- J2J  CONST_10  N1    C2   N3   C4     0.00   0.0  0
- J2J  CONST_11  N7    C8   N9   C4     0.00   0.0  0
- J2J  CONST_12  C8    N7   C5   C6   180.00   0.0  0
- J2J  CONST_13  N9    C4   C5   C6   180.00   0.0  0
- J2J  CONST_14  C5    C4   N9   C8     0.00   0.0  0
- J2J  CONST_15  C18   C15  C12  C9     0.00   0.0  0
- J2J  CONST_16  C18   C3   C61  C9     0.00   0.0  0
- J2J  CONST_17  C3    C61  C9   C12    0.00   0.0  0
- J2J  CONST_18  C3    C18  C15  C12    0.00   0.0  0
- J2J  CONST_19  C61   C9   C12  C15    0.00   0.0  0
- J2J  CONST_20  C61   C3   C18  C15    0.00   0.0  0
- J2J  CONST_21  N9    C8   N7   C5     0.00   0.0  0
- J2J  CONST_22  N7    C5   C6   N1   180.00   0.0  0
- J2J  CONST_23  N9    C4   C5   N7     0.00   0.0  0
- J2J  CONST_24  C1'   N9   C4   N3     0.00   0.0  0
- J2J  CONST_25  C1'   N9   C4   C5   180.00   0.0  0
- J2J  CONST_26  N7    C8   N9   C1'  180.00   0.0  0
- J2J  CONST_27  N6    C6   N1   C2   180.00   0.0  0
- J2J  CONST_28  N6    C6   C5   C4   180.00   0.0  0
- J2J  CONST_29  O3    C3   C61  C9   180.00   0.0  0
- J2J  CONST_30  O6    C61  C9   C12  180.00   0.0  0
- J2J  CONST_31  C21   C18  C15  C12  180.00   0.0  0
- J2J  CONST_32  O3    C3   C18  C15  180.00   0.0  0
- J2J  CONST_33  O6    C61  C3   C18  180.00   0.0  0
- J2J  CONST_34  C61   C3   C18  C21  180.00   0.0  0
- J2J  CONST_35  N7    C5   C6   N6     0.00   0.0  0
- J2J  CONST_36  H2    C2   N3   C4   180.00   0.0  0
- J2J  CONST_37  H8    C8   N9   C4   180.00   0.0  0
- J2J  CONST_38  HC15  C15  C12  C9   180.00   0.0  0
- J2J  CONST_39  HC9   C9   C12  C15  180.00   0.0  0
- J2J  CONST_40  HC12  C12  C15  C18  180.00   0.0  0
- J2J  CONST_41  HN61  N6   C6   C5   180.00   0.0  0
- J2J  CONST_42  HN62  N6   C6   C5     0.00   0.0  0
- J2J  Var_01    O17   C21  C18  C15   -4.86  30.0  2
- J2J  Var_02    O5'   P    O2P  C21   50.67  30.0  3
- J2J  Var_03    O2P   P    O5'  C5'   59.55  30.0  3
- J2J  Var_04    H5'2  C5'  O5'  P     52.03  30.0  2
+ J2J  CONST_01  C5    C6   N1   C2      0.00   0.0  0
+ J2J  CONST_02  C5    C4   N3   C2      0.00   0.0  0
+ J2J  CONST_03  N9    C4   N3   C2    180.00   0.0  0
+ J2J  CONST_04  C6    N1   C2   N3      0.00   0.0  0
+ J2J  CONST_05  C6    C5   C4   N3      0.00   0.0  0
+ J2J  CONST_06  N7    C5   C4   N3    180.00   0.0  0
+ J2J  CONST_07  C8    N9   C4   N3    180.00   0.0  0
+ J2J  CONST_08  N1    C6   C5   C4      0.00   0.0  0
+ J2J  CONST_09  C8    N7   C5   C4      0.00   0.0  0
+ J2J  CONST_10  N1    C2   N3   C4      0.00   0.0  0
+ J2J  CONST_11  N7    C8   N9   C4      0.00   0.0  0
+ J2J  CONST_12  C8    N7   C5   C6    180.00   0.0  0
+ J2J  CONST_13  N9    C4   C5   C6    180.00   0.0  0
+ J2J  CONST_14  C5    C4   N9   C8      0.00   0.0  0
+ J2J  CONST_15  C18   C15  C12  C9      0.00   0.0  0
+ J2J  CONST_16  C18   C3   C61  C9      0.00   0.0  0
+ J2J  CONST_17  C3    C61  C9   C12     0.00   0.0  0
+ J2J  CONST_18  C3    C18  C15  C12     0.00   0.0  0
+ J2J  CONST_19  C61   C9   C12  C15     0.00   0.0  0
+ J2J  CONST_20  C61   C3   C18  C15     0.00   0.0  0
+ J2J  CONST_21  N9    C8   N7   C5      0.00   0.0  0
+ J2J  CONST_22  N7    C5   C6   N1    180.00   0.0  0
+ J2J  CONST_23  N9    C4   C5   N7      0.00   0.0  0
+ J2J  CONST_24  C1'   N9   C4   N3      0.00   0.0  0
+ J2J  CONST_25  C1'   N9   C4   C5    180.00   0.0  0
+ J2J  CONST_26  N7    C8   N9   C1'   180.00   0.0  0
+ J2J  CONST_27  N6    C6   N1   C2    180.00   0.0  0
+ J2J  CONST_28  N6    C6   C5   C4    180.00   0.0  0
+ J2J  CONST_29  O3    C3   C61  C9    180.00   0.0  0
+ J2J  CONST_30  O6    C61  C9   C12   180.00   0.0  0
+ J2J  CONST_31  C21   C18  C15  C12   180.00   0.0  0
+ J2J  CONST_32  O3    C3   C18  C15   180.00   0.0  0
+ J2J  CONST_33  O6    C61  C3   C18   180.00   0.0  0
+ J2J  CONST_34  C61   C3   C18  C21   180.00   0.0  0
+ J2J  CONST_35  N7    C5   C6   N6      0.00   0.0  0
+ J2J  CONST_36  H2    C2   N3   C4    180.00   0.0  0
+ J2J  CONST_37  H8    C8   N9   C4    180.00   0.0  0
+ J2J  CONST_38  HC15  C15  C12  C9    180.00   0.0  0
+ J2J  CONST_39  HC9   C9   C12  C15   180.00   0.0  0
+ J2J  CONST_40  HC12  C12  C15  C18   180.00   0.0  0
+ J2J  CONST_41  HN61  N6   C6   C5    180.00   0.0  0
+ J2J  CONST_42  HN62  N6   C6   C5      0.00   0.0  0
+ J2J  Var_01    O17   C21  C18  C15    -4.86  30.0  2
+ J2J  Var_02    O5'   P    O2P  C21    50.67  30.0  3
+ J2J  Var_03    O2P   P    O5'  C5'    59.55  30.0  3
+ J2J  Var_04    H5'2  C5'  O5'  P      52.03  30.0  2
+ J2J  Var_05    C2'   C1'  N9   C4     62.97  30.0  2
+ J2J  Var_06    O4'   C1'  N9   C4   -179.60  30.0  2
+ J2J  Var_07    C2'   C1'  N9   C8   -124.64  30.0  2
+ J2J  Var_08    O4'   C1'  N9   C8     -7.21  30.0  2
+ J2J  Var_09    C4'   C3'  C2'  C1'    37.30  30.0  1
+ J2J  Var_10    C3'   C4'  O4'  C1'     9.59  30.0  1
+ J2J  Var_11    O4'   C4'  C3'  C2'   -30.05  30.0  1
+ J2J  Var_12    C4'   O4'  C1'  C2'    15.12  30.0  1
+ J2J  Var_13    N9    C1'  C2'  C3'    85.73  30.0  1
+ J2J  Var_14    O4'   C1'  C2'  C3'   -33.29  30.0  1
+ J2J  Var_15    N9    C1'  O4'  C4'  -105.92  30.0  1
+ J2J  Var_16    O3'   C3'  C2'  C1'   159.65  30.0  1
+ J2J  Var_17    C5'   C4'  O4'  C1'   130.68  30.0  1
+ J2J  Var_18    C5'   C4'  C3'  C2'  -150.39  30.0  1
+ J2J  Var_19    O2'   C2'  C3'  C4'   -78.27  30.0  1
+ J2J  Var_20    O2'   C2'  C1'  N9   -160.34  30.0  1
+ J2J  Var_21    O4'   C1'  C2'  O2'    80.64  30.0  1
+ J2J  Var_22    O4'   C4'  C3'  O3'  -151.09  30.0  1
+ J2J  Var_23    H1'   C1'  N9   C4    -60.62  30.0  2
+ J2J  Var_24    H3'   C3'  C2'  C1'   -77.43  30.0  1
+ J2J  Var_25    H4'   C4'  O4'  C1'  -108.48  30.0  1
+ J2J  Var_26    H2'   C2'  C3'  C4'   157.22  30.0  1
+ J2J  Var_27    O5'   C5'  C4'  C3'   177.47  30.0  3
+ J2J  Var_28    O3'   C3'  C4'  C5'    88.57  30.0  1
+ J2J  Var_29    O3'   C3'  C2'  O2'    44.08  30.0  1
+ J2J  Var_30    O5'   C5'  C4'  O4'    60.24  30.0  3
+ J2J  Var_31    HO6   O6   C61  C9    179.65  30.0  2
+ J2J  Var_32    HO3   O3   C3   C18     2.06  30.0  2
+ J2J  Var_33    HO2'  O2'  C2'  C1'    74.40  30.0  3
+ J2J  Var_34    HO3'  O3'  C3'  C2'   153.11  30.0  3
+ J2J  Var_35    H5'2  C5'  C4'  C3'   -61.90  30.0  3
+ J2J  Var_36    H5'1  C5'  C4'  C3'    56.66  30.0  3
+ J2J  Var_37    P     O2P  C21  C18  -174.80  30.0  3
+ J2J  Var_38    P     O2P  C21  O17     3.96  30.0  3
+ J2J  Var_39    H1    O3P  P    O1P    26.56  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LCR  LCR  '(2-{4-[(R)-(4-chlorophenyl)(phenyl)methyl]piperazin-1-yl}ethoxy)acetic acid'  ligand  51  27  .  2021-08-12  2021-08-12  
+ LCR  LCR  '(2-{4-[(R)-(4-chlorophenyl)(phenyl)methyl]piperazin-1-yl}ethoxy)acetic acid'  ligand  51  27  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LCR
@@ -263,42 +264,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LCR  CONST_01  CAX   CAU  CAQ  CAM     0.00   0.0  0
- LCR  CONST_02  CAX   CAT  CAP  CAM     0.00   0.0  0
- LCR  CONST_03  CAU   CAQ  CAM  CAP     0.00   0.0  0
- LCR  CONST_04  CAU   CAX  CAT  CAP     0.00   0.0  0
- LCR  CONST_05  CAQ   CAU  CAX  CAT     0.00   0.0  0
- LCR  CONST_06  CAQ   CAM  CAP  CAT     0.00   0.0  0
- LCR  CONST_07  CAY   CAW  CAS  CAN     0.00   0.0  0
- LCR  CONST_08  CAY   CAV  CAR  CAN     0.00   0.0  0
- LCR  CONST_09  CAW   CAS  CAN  CAR     0.00   0.0  0
- LCR  CONST_10  CAW   CAY  CAV  CAR     0.00   0.0  0
- LCR  CONST_11  CAS   CAW  CAY  CAV     0.00   0.0  0
- LCR  CONST_12  CAS   CAN  CAR  CAV     0.00   0.0  0
- LCR  CONST_13  CAU   CAQ  CAM  CAK   180.00   0.0  0
- LCR  CONST_14  CAT   CAP  CAM  CAK   180.00   0.0  0
- LCR  CONST_15  CAW   CAS  CAN  CAK   180.00   0.0  0
- LCR  CONST_16  CAV   CAR  CAN  CAK   180.00   0.0  0
- LCR  CONST_17  CLAA  CAX  CAT  CAP   180.00   0.0  0
- LCR  CONST_18  CAQ   CAU  CAX  CLAA  180.00   0.0  0
- LCR  CONST_19  H21   CAU  CAQ  CAM   180.00   0.0  0
- LCR  CONST_20  H20   CAT  CAP  CAM   180.00   0.0  0
- LCR  CONST_21  H22   CAQ  CAM  CAP   180.00   0.0  0
- LCR  CONST_22  H19   CAP  CAT  CAX   180.00   0.0  0
- LCR  CONST_23  H26   CAW  CAS  CAN   180.00   0.0  0
- LCR  CONST_24  H24   CAV  CAR  CAN   180.00   0.0  0
- LCR  CONST_25  H27   CAS  CAN  CAR   180.00   0.0  0
- LCR  CONST_26  H25   CAY  CAV  CAR   180.00   0.0  0
- LCR  CONST_27  H23   CAR  CAV  CAY   180.00   0.0  0
- LCR  Var_01    NAE   CAG  CAI  NAF   -58.48  30.0  1
- LCR  Var_02    NAE   CAH  CAJ  NAF    59.37  30.0  1
- LCR  Var_03    CAG   CAI  NAF  CAJ    56.75  30.0  1
- LCR  Var_04    CAG   NAE  CAH  CAJ   -59.09  30.0  1
- LCR  Var_05    CAI   NAF  CAJ  CAH   -57.24  30.0  1
- LCR  Var_06    CAI   CAG  NAE  CAH    58.73  30.0  1
- LCR  Var_07    NAF   CAL  CAO  OAB    61.28  30.0  1
- LCR  Var_08    OAB   CAZ  CBA  OAC    -0.49  30.0  2
- LCR  Var_09    CAL   CAO  OAB  CAZ   179.26  30.0  3
+ LCR  CONST_01  CAX   CAU  CAQ  CAM      0.00   0.0  0
+ LCR  CONST_02  CAX   CAT  CAP  CAM      0.00   0.0  0
+ LCR  CONST_03  CAU   CAQ  CAM  CAP      0.00   0.0  0
+ LCR  CONST_04  CAU   CAX  CAT  CAP      0.00   0.0  0
+ LCR  CONST_05  CAQ   CAU  CAX  CAT      0.00   0.0  0
+ LCR  CONST_06  CAQ   CAM  CAP  CAT      0.00   0.0  0
+ LCR  CONST_07  CAY   CAW  CAS  CAN      0.00   0.0  0
+ LCR  CONST_08  CAY   CAV  CAR  CAN      0.00   0.0  0
+ LCR  CONST_09  CAW   CAS  CAN  CAR      0.00   0.0  0
+ LCR  CONST_10  CAW   CAY  CAV  CAR      0.00   0.0  0
+ LCR  CONST_11  CAS   CAW  CAY  CAV      0.00   0.0  0
+ LCR  CONST_12  CAS   CAN  CAR  CAV      0.00   0.0  0
+ LCR  CONST_13  CAU   CAQ  CAM  CAK    180.00   0.0  0
+ LCR  CONST_14  CAT   CAP  CAM  CAK    180.00   0.0  0
+ LCR  CONST_15  CAW   CAS  CAN  CAK    180.00   0.0  0
+ LCR  CONST_16  CAV   CAR  CAN  CAK    180.00   0.0  0
+ LCR  CONST_17  CLAA  CAX  CAT  CAP    180.00   0.0  0
+ LCR  CONST_18  CAQ   CAU  CAX  CLAA   180.00   0.0  0
+ LCR  CONST_19  H21   CAU  CAQ  CAM    180.00   0.0  0
+ LCR  CONST_20  H20   CAT  CAP  CAM    180.00   0.0  0
+ LCR  CONST_21  H22   CAQ  CAM  CAP    180.00   0.0  0
+ LCR  CONST_22  H19   CAP  CAT  CAX    180.00   0.0  0
+ LCR  CONST_23  H26   CAW  CAS  CAN    180.00   0.0  0
+ LCR  CONST_24  H24   CAV  CAR  CAN    180.00   0.0  0
+ LCR  CONST_25  H27   CAS  CAN  CAR    180.00   0.0  0
+ LCR  CONST_26  H25   CAY  CAV  CAR    180.00   0.0  0
+ LCR  CONST_27  H23   CAR  CAV  CAY    180.00   0.0  0
+ LCR  Var_01    NAE   CAG  CAI  NAF    -58.48  30.0  1
+ LCR  Var_02    NAE   CAH  CAJ  NAF     59.37  30.0  1
+ LCR  Var_03    CAG   CAI  NAF  CAJ     56.75  30.0  1
+ LCR  Var_04    CAG   NAE  CAH  CAJ    -59.09  30.0  1
+ LCR  Var_05    CAI   NAF  CAJ  CAH    -57.24  30.0  1
+ LCR  Var_06    CAI   CAG  NAE  CAH     58.73  30.0  1
+ LCR  Var_07    NAF   CAL  CAO  OAB     61.28  30.0  1
+ LCR  Var_08    OAB   CAZ  CBA  OAC     -0.49  30.0  2
+ LCR  Var_09    CAL   CAO  OAB  CAZ    179.26  30.0  3
+ LCR  Var_10    CAM   CAK  NAE  CAH   -175.35  30.0  3
+ LCR  Var_11    CAN   CAK  NAE  CAH    -54.57  30.0  3
+ LCR  Var_12    CAM   CAK  NAE  CAG     61.51  30.0  3
+ LCR  Var_13    CAN   CAK  NAE  CAG   -177.71  30.0  3
+ LCR  Var_14    CAQ   CAM  CAK  NAE     38.96  30.0  3
+ LCR  Var_15    CAP   CAM  CAK  NAE   -144.00  30.0  3
+ LCR  Var_16    CAS   CAN  CAK  NAE    -45.92  30.0  2
+ LCR  Var_17    CAR   CAN  CAK  NAE    136.31  30.0  2
+ LCR  Var_18    CAS   CAN  CAK  CAM     77.07  30.0  2
+ LCR  Var_19    CAR   CAN  CAK  CAM   -100.70  30.0  2
+ LCR  Var_20    CAN   CAK  CAM  CAP     92.62  30.0  2
+ LCR  Var_21    CAN   CAK  CAM  CAQ    -84.41  30.0  2
+ LCR  Var_22    CAI   NAF  CAL  CAO     72.16  30.0  3
+ LCR  Var_23    CAJ   NAF  CAL  CAO   -163.92  30.0  3
+ LCR  Var_24    H6    CAL  NAF  CAJ     73.29  30.0  2
+ LCR  Var_25    H7    CAL  NAF  CAJ    -43.57  30.0  2
+ LCR  Var_26    H18   CAK  NAE  CAH     65.11  30.0  3
+ LCR  Var_27    CAO   OAB  CAZ  CBA    179.27  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

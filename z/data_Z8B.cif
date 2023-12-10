@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- Z8B  Z8B  5'-azido-8-bromo-5'-deoxyadenosine  ligand  33  22  .  2021-08-25  2021-08-25  
+ Z8B  Z8B  5'-azido-8-bromo-5'-deoxyadenosine  ligand  33  22  .  2021-08-25  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_Z8B
@@ -192,36 +193,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- Z8B  CONST_01  N7    C5   C6   N1   180.00   0.0  0
- Z8B  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- Z8B  CONST_03  C4    N3   C2   N1     0.00   0.0  0
- Z8B  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- Z8B  CONST_05  C5    C4   N3   C2     0.00   0.0  0
- Z8B  CONST_06  N9    C4   N3   C2   180.00   0.0  0
- Z8B  CONST_07  N7    C5   C4   N3   180.00   0.0  0
- Z8B  CONST_08  C6    C5   C4   N3     0.00   0.0  0
- Z8B  CONST_09  C8    N9   C4   N3   180.00   0.0  0
- Z8B  CONST_10  C6    N1   C2   N3     0.00   0.0  0
- Z8B  CONST_11  C8    N7   C5   C4     0.00   0.0  0
- Z8B  CONST_12  N7    C8   N9   C4     0.00   0.0  0
- Z8B  CONST_13  N9    C8   N7   C5     0.00   0.0  0
- Z8B  CONST_14  C8    N9   C4   C5     0.00   0.0  0
- Z8B  CONST_15  C8    N7   C5   C6   180.00   0.0  0
- Z8B  CONST_16  N9    C4   C5   C6   180.00   0.0  0
- Z8B  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- Z8B  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- Z8B  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- Z8B  CONST_20  C1'   N9   C8   N7   180.00   0.0  0
- Z8B  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- Z8B  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- Z8B  CONST_23  BR8   C8   N9   C4   180.00   0.0  0
- Z8B  CONST_24  BR8   C8   N7   C5   180.00   0.0  0
- Z8B  CONST_25  N7    C5   C6   N6     0.00   0.0  0
- Z8B  CONST_26  C1'   N9   C8   BR8    0.00   0.0  0
- Z8B  CONST_27  H2    C2   N3   C4   180.00   0.0  0
- Z8B  CONST_28  H1N6  N6   C6   N1   180.00   0.0  0
- Z8B  CONST_29  H2N6  N6   C6   N1     0.00   0.0  0
- Z8B  Var_01    H15'  C5'  N51  N52  162.30  30.0  3
+ Z8B  CONST_01  N7    C5   C6   N1    180.00   0.0  0
+ Z8B  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ Z8B  CONST_03  C4    N3   C2   N1      0.00   0.0  0
+ Z8B  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ Z8B  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ Z8B  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ Z8B  CONST_07  N7    C5   C4   N3    180.00   0.0  0
+ Z8B  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ Z8B  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ Z8B  CONST_10  C6    N1   C2   N3      0.00   0.0  0
+ Z8B  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ Z8B  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ Z8B  CONST_13  N9    C8   N7   C5      0.00   0.0  0
+ Z8B  CONST_14  C8    N9   C4   C5      0.00   0.0  0
+ Z8B  CONST_15  C8    N7   C5   C6    180.00   0.0  0
+ Z8B  CONST_16  N9    C4   C5   C6    180.00   0.0  0
+ Z8B  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ Z8B  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ Z8B  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ Z8B  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ Z8B  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ Z8B  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ Z8B  CONST_23  BR8   C8   N9   C4    180.00   0.0  0
+ Z8B  CONST_24  BR8   C8   N7   C5    180.00   0.0  0
+ Z8B  CONST_25  N7    C5   C6   N6      0.00   0.0  0
+ Z8B  CONST_26  C1'   N9   C8   BR8     0.00   0.0  0
+ Z8B  CONST_27  H2    C2   N3   C4    180.00   0.0  0
+ Z8B  CONST_28  H1N6  N6   C6   N1    180.00   0.0  0
+ Z8B  CONST_29  H2N6  N6   C6   N1      0.00   0.0  0
+ Z8B  Var_01    H15'  C5'  N51  N52   162.30  30.0  3
+ Z8B  Var_02    O5'   C1'  N9   C4   -121.63  30.0  2
+ Z8B  Var_03    C2'   C1'  N9   C4    118.24  30.0  2
+ Z8B  Var_04    O5'   C1'  N9   C8     57.51  30.0  2
+ Z8B  Var_05    C2'   C1'  N9   C8    -62.62  30.0  2
+ Z8B  Var_06    C4'   O5'  C1'  N9   -155.13  30.0  1
+ Z8B  Var_07    C3'   C2'  C1'  N9    163.25  30.0  1
+ Z8B  Var_08    C3'   C4'  O5'  C1'     4.43  30.0  1
+ Z8B  Var_09    C4'   C3'  C2'  C1'   -35.83  30.0  1
+ Z8B  Var_10    C4'   O5'  C1'  C2'   -28.59  30.0  1
+ Z8B  Var_11    O5'   C4'  C3'  C2'    20.96  30.0  1
+ Z8B  Var_12    O5'   C1'  C2'  C3'    40.52  30.0  1
+ Z8B  Var_13    O2'   C2'  C1'  N9    -73.58  30.0  1
+ Z8B  Var_14    C5'   C4'  O5'  C1'   127.50  30.0  1
+ Z8B  Var_15    O3'   C3'  C2'  C1'    82.64  30.0  1
+ Z8B  Var_16    C5'   C4'  C3'  C2'   -99.78  30.0  1
+ Z8B  Var_17    O5'   C1'  C2'  O2'   163.69  30.0  1
+ Z8B  Var_18    C4'   C3'  C2'  O2'  -153.89  30.0  1
+ Z8B  Var_19    O5'   C4'  C3'  O3'   -94.19  30.0  1
+ Z8B  Var_20    H1'   C1'  N9   C4     -1.58  30.0  2
+ Z8B  Var_21    H2'   C2'  C1'  N9     49.83  30.0  1
+ Z8B  Var_22    H4'   C4'  O5'  C1'  -114.46  30.0  1
+ Z8B  Var_23    H3'   C3'  C2'  C1'  -154.32  30.0  1
+ Z8B  Var_24    O3'   C3'  C2'  O2'   -35.41  30.0  1
+ Z8B  Var_25    N51   C5'  C4'  C3'   179.96  30.0  2
+ Z8B  Var_26    C5'   C4'  C3'  O3'   145.07  30.0  1
+ Z8B  Var_27    N51   C5'  C4'  O5'    60.71  30.0  2
+ Z8B  Var_28    HO2'  O2'  C2'  C1'   169.07  30.0  3
+ Z8B  Var_29    HO3'  O3'  C3'  C2'  -178.26  30.0  3
+ Z8B  Var_30    H15'  C5'  C4'  C3'   -63.85  30.0  2
+ Z8B  Var_31    H25'  C5'  C4'  C3'    54.23  30.0  2
+ Z8B  Var_32    N53   N52  N51  C5'  -172.44   0.0  2
 
 loop_
 _chem_comp_chir.comp_id

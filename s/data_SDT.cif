@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SDT  SDT  3,4-dihydroxy-9,10-secoandrosta-1(10),2,4-triene-9,17-dione  ligand  47  23  .  2021-08-23  2021-08-23  
+ SDT  SDT  3,4-dihydroxy-9,10-secoandrosta-1(10),2,4-triene-9,17-dione  ligand  47  23  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SDT
@@ -253,29 +254,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SDT  CONST_01  CAH  CAR  CAS  CAT     0.00   0.0  0
- SDT  CONST_02  CAH  CAG  CAQ  CAT     0.00   0.0  0
- SDT  CONST_03  CAG  CAQ  CAT  CAS     0.00   0.0  0
- SDT  CONST_04  CAG  CAH  CAR  CAS     0.00   0.0  0
- SDT  CONST_05  CAQ  CAT  CAS  CAR     0.00   0.0  0
- SDT  CONST_06  CAQ  CAG  CAH  CAR     0.00   0.0  0
- SDT  CONST_07  CAR  CAS  CAT  CAK   180.00   0.0  0
- SDT  CONST_08  CAG  CAQ  CAT  CAK   180.00   0.0  0
- SDT  CONST_09  OAE  CAR  CAS  CAT   180.00   0.0  0
- SDT  CONST_10  CAA  CAQ  CAT  CAS   180.00   0.0  0
- SDT  CONST_11  CAQ  CAT  CAS  OAF   180.00   0.0  0
- SDT  CONST_12  CAH  CAR  CAS  OAF   180.00   0.0  0
- SDT  CONST_13  CAG  CAH  CAR  OAE   180.00   0.0  0
- SDT  CONST_14  CAA  CAQ  CAG  CAH   180.00   0.0  0
- SDT  CONST_15  HAG  CAG  CAQ  CAT   180.00   0.0  0
- SDT  CONST_16  HAH  CAH  CAR  CAS   180.00   0.0  0
- SDT  Var_01    CAV  CAL  CAI  CAP    20.93  30.0  1
- SDT  Var_02    CAW  CAP  CAI  CAL     5.04  30.0  1
- SDT  Var_03    CAO  CAJ  CAN  CAW   -49.78  30.0  1
- SDT  Var_04    CAU  CAO  CAJ  CAN    51.20  30.0  1
- SDT  Var_05    CAT  CAK  CAM  CAU  -177.73  30.0  3
- SDT  Var_06    CAS  CAT  CAK  CAM    85.28  30.0  2
- SDT  Var_07    HAA  CAA  CAQ  CAT    53.83  30.0  2
+ SDT  CONST_01  CAH   CAR  CAS  CAT     0.00   0.0  0
+ SDT  CONST_02  CAH   CAG  CAQ  CAT     0.00   0.0  0
+ SDT  CONST_03  CAG   CAQ  CAT  CAS     0.00   0.0  0
+ SDT  CONST_04  CAG   CAH  CAR  CAS     0.00   0.0  0
+ SDT  CONST_05  CAQ   CAT  CAS  CAR     0.00   0.0  0
+ SDT  CONST_06  CAQ   CAG  CAH  CAR     0.00   0.0  0
+ SDT  CONST_07  CAR   CAS  CAT  CAK   180.00   0.0  0
+ SDT  CONST_08  CAG   CAQ  CAT  CAK   180.00   0.0  0
+ SDT  CONST_09  OAE   CAR  CAS  CAT   180.00   0.0  0
+ SDT  CONST_10  CAA   CAQ  CAT  CAS   180.00   0.0  0
+ SDT  CONST_11  CAQ   CAT  CAS  OAF   180.00   0.0  0
+ SDT  CONST_12  CAH   CAR  CAS  OAF   180.00   0.0  0
+ SDT  CONST_13  CAG   CAH  CAR  OAE   180.00   0.0  0
+ SDT  CONST_14  CAA   CAQ  CAG  CAH   180.00   0.0  0
+ SDT  CONST_15  HAG   CAG  CAQ  CAT   180.00   0.0  0
+ SDT  CONST_16  HAH   CAH  CAR  CAS   180.00   0.0  0
+ SDT  Var_01    CAV   CAL  CAI  CAP    20.93  30.0  1
+ SDT  Var_02    CAW   CAP  CAI  CAL     5.04  30.0  1
+ SDT  Var_03    CAO   CAJ  CAN  CAW   -49.78  30.0  1
+ SDT  Var_04    CAU   CAO  CAJ  CAN    51.20  30.0  1
+ SDT  Var_05    CAT   CAK  CAM  CAU  -177.73  30.0  3
+ SDT  Var_06    CAS   CAT  CAK  CAM    85.28  30.0  2
+ SDT  Var_07    HAA   CAA  CAQ  CAT    53.83  30.0  2
+ SDT  Var_08    CAL   CAV  CAW  CAP    41.90  30.0  1
+ SDT  Var_09    CAU   CAV  CAW  CAP   172.75  30.0  1
+ SDT  Var_10    CAJ   CAN  CAW  CAP   169.11  30.0  1
+ SDT  Var_11    CAV   CAW  CAP  CAI   -28.63  30.0  1
+ SDT  Var_12    CAN   CAW  CAP  CAI  -147.23  30.0  1
+ SDT  Var_13    CAW   CAV  CAL  CAI   -39.37  30.0  1
+ SDT  Var_14    CAU   CAV  CAL  CAI  -166.13  30.0  1
+ SDT  Var_15    CAN   CAW  CAV  CAL   165.44  30.0  1
+ SDT  Var_16    CAO   CAU  CAV  CAL  -177.85  30.0  1
+ SDT  Var_17    CAJ   CAN  CAW  CAV    55.45  30.0  1
+ SDT  Var_18    CAJ   CAO  CAU  CAV   -53.42  30.0  1
+ SDT  Var_19    CAO   CAU  CAV  CAW    59.42  30.0  1
+ SDT  Var_20    CAU   CAV  CAW  CAN   -63.71  30.0  1
+ SDT  Var_21    CAV   CAW  CAP  OAD   151.62  30.0  1
+ SDT  Var_22    CAN   CAW  CAP  OAD    33.01  30.0  1
+ SDT  Var_23    CAB   CAW  CAP  CAI    89.59  30.0  1
+ SDT  Var_24    CAB   CAW  CAV  CAL   -69.75  30.0  1
+ SDT  Var_25    CAM   CAU  CAV  CAL   -52.66  30.0  1
+ SDT  Var_26    OAC   CAO  CAU  CAV   124.91  30.0  1
+ SDT  Var_27    CAM   CAU  CAV  CAW  -175.40  30.0  1
+ SDT  Var_28    CAU   CAV  CAW  CAB    61.10  30.0  1
+ SDT  Var_29    CAJ   CAN  CAW  CAB   -70.89  30.0  1
+ SDT  Var_30    CAM   CAU  CAO  CAJ  -178.03  30.0  1
+ SDT  Var_31    HAV   CAV  CAW  CAP   -70.04  30.0  1
+ SDT  Var_32    HAN   CAN  CAW  CAP   -69.33  30.0  1
+ SDT  Var_33    HANA  CAN  CAW  CAP    49.08  30.0  1
+ SDT  Var_34    HAU   CAU  CAV  CAL    67.46  30.0  1
+ SDT  Var_35    CAB   CAW  CAP  OAD   -90.17  30.0  1
+ SDT  Var_36    CAK   CAM  CAU  CAV   167.85  30.0  3
+ SDT  Var_37    CAK   CAM  CAU  CAO   -71.82  30.0  3
+ SDT  Var_38    CAM   CAU  CAO  OAC     0.30  30.0  1
+ SDT  Var_39    HAB   CAB  CAW  CAP    65.77  30.0  3
+ SDT  Var_40    HABA  CAB  CAW  CAP  -175.34  30.0  3
+ SDT  Var_41    HABB  CAB  CAW  CAP   -54.28  30.0  3
+ SDT  Var_42    HAM   CAM  CAU  CAV   -67.86  30.0  3
+ SDT  Var_43    HAMA  CAM  CAU  CAV    47.57  30.0  3
+ SDT  Var_44    HOAF  OAF  CAS  CAT  -179.47  30.0  2
+ SDT  Var_45    HOAE  OAE  CAR  CAS  -179.46  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

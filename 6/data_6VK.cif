@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 6VK  6VK  (4~{S})-3-cyclopropyl-4,7,7-trimethyl-4-phenyl-2,6,8,9-tetrahydropyrazolo[3,4-b]quinolin-5-one  ligand  51  26  .  2022-07-23  2022-07-26
+ 6VK  6VK  (4~{S})-3-cyclopropyl-4,7,7-trimethyl-4-phenyl-2,6,8,9-tetrahydropyrazolo[3,4-b]quinolin-5-one  ligand  51  26  .  2022-07-23  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_6VK
@@ -274,40 +275,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 6VK  CONST_01  C19  C20  C21  C16    0.00   0.0  0
- 6VK  CONST_02  C19  C18  C17  C16    0.00   0.0  0
- 6VK  CONST_03  C20  C21  C16  C17    0.00   0.0  0
- 6VK  CONST_04  C20  C19  C18  C17    0.00   0.0  0
- 6VK  CONST_05  C21  C20  C19  C18    0.00   0.0  0
- 6VK  CONST_06  C21  C16  C17  C18    0.00   0.0  0
- 6VK  CONST_07  N2   N1   C8   C13    0.00   0.0  0
- 6VK  CONST_08  N1   N2   C9   C13    0.00   0.0  0
- 6VK  CONST_09  C8   N1   N2   C9     0.00   0.0  0
- 6VK  CONST_10  N1   C8   C13  C9     0.00   0.0  0
- 6VK  CONST_11  C8   C13  C9   N2     0.00   0.0  0
- 6VK  CONST_12  C10  C9   C13  C14    0.00   0.0  0
- 6VK  CONST_13  C20  C21  C16  C14  180.00   0.0  0
- 6VK  CONST_14  C18  C17  C16  C14  180.00   0.0  0
- 6VK  CONST_15  N1   N2   C9   C10  180.00   0.0  0
- 6VK  CONST_16  C8   C13  C9   C10  180.00   0.0  0
- 6VK  CONST_17  H18  C21  C16  C14    0.00   0.0  0
- 6VK  CONST_18  H14  C17  C16  C14    0.00   0.0  0
- 6VK  CONST_19  H17  C20  C21  C16  180.00   0.0  0
- 6VK  CONST_20  H15  C18  C17  C16  180.00   0.0  0
- 6VK  CONST_21  H16  C19  C18  C17  180.00   0.0  0
- 6VK  CONST_22  H24  N2   C9   C13  180.00   0.0  0
- 6VK  Var_01    C7   C1   C3   C4    54.97  30.0  1
- 6VK  Var_02    C7   C6   C5   C4    -0.16  30.0  1
- 6VK  Var_03    C1   C7   C6   C5    25.05  30.0  1
- 6VK  Var_04    C8   N    C6   C5     4.18  30.0  1
- 6VK  Var_05    C1   C3   C4   C5   -33.71  30.0  1
- 6VK  Var_06    C3   C1   C7   C6   -50.23  30.0  1
- 6VK  Var_07    N1   C8   N    C6   174.55  30.0  1
- 6VK  Var_08    C3   C4   C5   C6     4.43  30.0  1
- 6VK  Var_09    C12  C10  C9   C13   78.20  30.0  2
- 6VK  Var_10    C11  C12  C10  C9   109.70  30.0  1
- 6VK  Var_11    H6   C    C1   C7    61.36  30.0  3
- 6VK  Var_12    H3   C2   C1   C7    59.54  30.0  3
+ 6VK  CONST_01  C19  C20  C21  C16     0.00   0.0  0
+ 6VK  CONST_02  C19  C18  C17  C16     0.00   0.0  0
+ 6VK  CONST_03  C20  C21  C16  C17     0.00   0.0  0
+ 6VK  CONST_04  C20  C19  C18  C17     0.00   0.0  0
+ 6VK  CONST_05  C21  C20  C19  C18     0.00   0.0  0
+ 6VK  CONST_06  C21  C16  C17  C18     0.00   0.0  0
+ 6VK  CONST_07  N2   N1   C8   C13     0.00   0.0  0
+ 6VK  CONST_08  N1   N2   C9   C13     0.00   0.0  0
+ 6VK  CONST_09  C8   N1   N2   C9      0.00   0.0  0
+ 6VK  CONST_10  N1   C8   C13  C9      0.00   0.0  0
+ 6VK  CONST_11  C8   C13  C9   N2      0.00   0.0  0
+ 6VK  CONST_12  C10  C9   C13  C14     0.00   0.0  0
+ 6VK  CONST_13  C20  C21  C16  C14   180.00   0.0  0
+ 6VK  CONST_14  C18  C17  C16  C14   180.00   0.0  0
+ 6VK  CONST_15  N1   N2   C9   C10   180.00   0.0  0
+ 6VK  CONST_16  C8   C13  C9   C10   180.00   0.0  0
+ 6VK  CONST_17  H18  C21  C16  C14     0.00   0.0  0
+ 6VK  CONST_18  H14  C17  C16  C14     0.00   0.0  0
+ 6VK  CONST_19  H17  C20  C21  C16   180.00   0.0  0
+ 6VK  CONST_20  H15  C18  C17  C16   180.00   0.0  0
+ 6VK  CONST_21  H16  C19  C18  C17   180.00   0.0  0
+ 6VK  CONST_22  H24  N2   C9   C13   180.00   0.0  0
+ 6VK  Var_01    C7   C1   C3   C4     54.97  30.0  1
+ 6VK  Var_02    C7   C6   C5   C4     -0.16  30.0  1
+ 6VK  Var_03    C1   C7   C6   C5     25.05  30.0  1
+ 6VK  Var_04    C8   N    C6   C5      4.18  30.0  1
+ 6VK  Var_05    C1   C3   C4   C5    -33.71  30.0  1
+ 6VK  Var_06    C3   C1   C7   C6    -50.23  30.0  1
+ 6VK  Var_07    N1   C8   N    C6    174.55  30.0  1
+ 6VK  Var_08    C3   C4   C5   C6      4.43  30.0  1
+ 6VK  Var_09    C12  C10  C9   C13    78.20  30.0  2
+ 6VK  Var_10    C11  C12  C10  C9    109.70  30.0  1
+ 6VK  Var_11    H6   C    C1   C7     61.36  30.0  3
+ 6VK  Var_12    H3   C2   C1   C7     59.54  30.0  3
+ 6VK  Var_13    C13  C14  C5   C4    173.02  30.0  1
+ 6VK  Var_14    C16  C14  C5   C4     55.65  30.0  1
+ 6VK  Var_15    C8   C13  C14  C5      8.34  30.0  1
+ 6VK  Var_16    C9   C13  C14  C5   -174.01  30.0  1
+ 6VK  Var_17    C21  C16  C14  C5   -129.88  30.0  2
+ 6VK  Var_18    C17  C16  C14  C5     53.10  30.0  2
+ 6VK  Var_19    C13  C14  C5   C6     -8.79  30.0  1
+ 6VK  Var_20    C16  C14  C5   C6   -126.16  30.0  1
+ 6VK  Var_21    C8   C13  C14  C16   127.02  30.0  1
+ 6VK  Var_22    C9   C13  C14  C16   -55.32  30.0  1
+ 6VK  Var_23    C13  C14  C16  C17   -64.29  30.0  2
+ 6VK  Var_24    C13  C14  C16  C21   112.73  30.0  2
+ 6VK  Var_25    C15  C14  C5   C4    -69.34  30.0  1
+ 6VK  Var_26    C15  C14  C5   C6    108.86  30.0  1
+ 6VK  Var_27    C8   C13  C14  C15  -110.39  30.0  1
+ 6VK  Var_28    C9   C13  C14  C15    67.27  30.0  1
+ 6VK  Var_29    C21  C16  C14  C15    -6.79  30.0  2
+ 6VK  Var_30    C17  C16  C14  C15   176.19  30.0  2
+ 6VK  Var_31    H20  C11  C10  C9     -1.67  30.0  1
+ 6VK  Var_32    H21  C11  C10  C9    141.79  30.0  1
+ 6VK  Var_33    H11  C15  C14  C5     63.39  30.0  3
+ 6VK  Var_34    H12  C15  C14  C5   -175.32  30.0  3
+ 6VK  Var_35    H13  C15  C14  C5    -56.80  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

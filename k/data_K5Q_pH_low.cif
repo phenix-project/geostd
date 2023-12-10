@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- K5Q  K5Q  '(2S)-2-(2-carboxyethyl)-6-{(E)-[(2E)-2-(hydroxyimino)-2,3-dihydro-1H-inden-1-ylidene]methyl}-2,3-dihydro-1,4-benzodioxine-5-carboxylic acid'  ligand  49  30  .  2022-07-25  2022-11-17
+ K5Q  K5Q  '(2S)-2-(2-carboxyethyl)-6-{(E)-[(2E)-2-(hydroxyimino)-2,3-dihydro-1H-inden-1-ylidene]methyl}-2,3-dihydro-1,4-benzodioxine-5-carboxylic acid'  ligand  49  30  .  2022-07-25  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_K5Q
@@ -253,41 +254,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- K5Q  CONST_01  C10  C5   C2   C1      0.00   0.0  0
- K5Q  CONST_02  C10  C7   C3   C1      0.00   0.0  0
- K5Q  CONST_03  C7   C3   C1   C2      0.00   0.0  0
- K5Q  CONST_04  C7   C10  C5   C2      0.00   0.0  0
- K5Q  CONST_05  C5   C2   C1   C3      0.00   0.0  0
- K5Q  CONST_06  C5   C10  C7   C3      0.00   0.0  0
- K5Q  CONST_07  C12  C11  C6   C4      0.00   0.0  0
- K5Q  CONST_08  C12  C9   C8   C4      0.00   0.0  0
- K5Q  CONST_09  C9   C8   C4   C6      0.00   0.0  0
- K5Q  CONST_10  C9   C12  C11  C6      0.00   0.0  0
- K5Q  CONST_11  C11  C6   C4   C8      0.00   0.0  0
- K5Q  CONST_12  C11  C12  C9   C8      0.00   0.0  0
- K5Q  CONST_13  C16  C9   C8   C4    180.00   0.0  0
- K5Q  CONST_14  C15  C8   C4   C6    180.00   0.0  0
- K5Q  CONST_15  C16  C9   C12  C11   180.00   0.0  0
- K5Q  CONST_16  C15  C8   C9   C12   180.00   0.0  0
- K5Q  CONST_17  O28  C12  C9   C16     0.00   0.0  0
- K5Q  CONST_18  H5   C5   C2   C1    180.00   0.0  0
- K5Q  CONST_19  H3   C3   C1   C2    180.00   0.0  0
- K5Q  CONST_20  H2   C2   C1   C3    180.00   0.0  0
- K5Q  CONST_21  H1   C1   C2   C5    180.00   0.0  0
- K5Q  CONST_22  H6   C6   C4   C8    180.00   0.0  0
- K5Q  CONST_23  H4   C4   C8   C9    180.00   0.0  0
- K5Q  CONST_24  H24  O24  C16  C9    180.00   0.0  0
- K5Q  CONST_25  H27  O27  C17  C21   180.00   0.0  0
- K5Q  Var_01    C14  C13  C7   C3   -174.26  30.0  1
- K5Q  Var_02    C14  C18  C10  C5    176.23  30.0  1
- K5Q  Var_03    C18  C14  C13  C7     -4.00  30.0  1
- K5Q  Var_04    C13  C14  C18  C10     3.88  30.0  1
- K5Q  Var_05    C20  C19  O28  C12   -44.32  30.0  1
- K5Q  Var_06    C13  C15  C8   C4     57.48  30.0  2
- K5Q  Var_07    C8   C15  C13  C7      6.98  30.0  2
- K5Q  Var_08    O24  C16  C9   C8    -85.71  30.0  2
- K5Q  Var_09    C20  C22  C21  C17  -175.28  30.0  3
- K5Q  Var_10    O25  C17  C21  C22    -3.19  30.0  2
+ K5Q  CONST_01  C10   C5   C2   C1      0.00   0.0  0
+ K5Q  CONST_02  C10   C7   C3   C1      0.00   0.0  0
+ K5Q  CONST_03  C7    C3   C1   C2      0.00   0.0  0
+ K5Q  CONST_04  C7    C10  C5   C2      0.00   0.0  0
+ K5Q  CONST_05  C5    C2   C1   C3      0.00   0.0  0
+ K5Q  CONST_06  C5    C10  C7   C3      0.00   0.0  0
+ K5Q  CONST_07  C12   C11  C6   C4      0.00   0.0  0
+ K5Q  CONST_08  C12   C9   C8   C4      0.00   0.0  0
+ K5Q  CONST_09  C9    C8   C4   C6      0.00   0.0  0
+ K5Q  CONST_10  C9    C12  C11  C6      0.00   0.0  0
+ K5Q  CONST_11  C11   C6   C4   C8      0.00   0.0  0
+ K5Q  CONST_12  C11   C12  C9   C8      0.00   0.0  0
+ K5Q  CONST_13  C16   C9   C8   C4    180.00   0.0  0
+ K5Q  CONST_14  C15   C8   C4   C6    180.00   0.0  0
+ K5Q  CONST_15  C16   C9   C12  C11   180.00   0.0  0
+ K5Q  CONST_16  C15   C8   C9   C12   180.00   0.0  0
+ K5Q  CONST_17  O28   C12  C9   C16     0.00   0.0  0
+ K5Q  CONST_18  H5    C5   C2   C1    180.00   0.0  0
+ K5Q  CONST_19  H3    C3   C1   C2    180.00   0.0  0
+ K5Q  CONST_20  H2    C2   C1   C3    180.00   0.0  0
+ K5Q  CONST_21  H1    C1   C2   C5    180.00   0.0  0
+ K5Q  CONST_22  H6    C6   C4   C8    180.00   0.0  0
+ K5Q  CONST_23  H4    C4   C8   C9    180.00   0.0  0
+ K5Q  CONST_24  H24   O24  C16  C9    180.00   0.0  0
+ K5Q  CONST_25  H27   O27  C17  C21   180.00   0.0  0
+ K5Q  Var_01    C14   C13  C7   C3   -174.26  30.0  1
+ K5Q  Var_02    C14   C18  C10  C5    176.23  30.0  1
+ K5Q  Var_03    C18   C14  C13  C7     -4.00  30.0  1
+ K5Q  Var_04    C13   C14  C18  C10     3.88  30.0  1
+ K5Q  Var_05    C20   C19  O28  C12   -44.32  30.0  1
+ K5Q  Var_06    C13   C15  C8   C4     57.48  30.0  2
+ K5Q  Var_07    C8    C15  C13  C7      6.98  30.0  2
+ K5Q  Var_08    O24   C16  C9   C8    -85.71  30.0  2
+ K5Q  Var_09    C20   C22  C21  C17  -175.28  30.0  3
+ K5Q  Var_10    O25   C17  C21  C22    -3.19  30.0  2
+ K5Q  Var_11    C20   O29  C11  C6   -163.63  30.0  1
+ K5Q  Var_12    C19   O28  C12  C9   -165.04  30.0  1
+ K5Q  Var_13    C19   O28  C12  C11    15.00  30.0  1
+ K5Q  Var_14    C19   C20  O29  C11   -45.23  30.0  1
+ K5Q  Var_15    C20   O29  C11  C12    16.56  30.0  1
+ K5Q  Var_16    O29   C20  C19  O28    59.84  30.0  1
+ K5Q  Var_17    C22   C20  O29  C11  -167.44  30.0  1
+ K5Q  Var_18    O28   C19  C20  C22   179.86  30.0  1
+ K5Q  Var_19    H20   C20  O29  C11    73.22  30.0  1
+ K5Q  Var_20    O30   N23  C14  C13   179.55   0.0  2
+ K5Q  Var_21    O30   N23  C14  C18     0.06   0.0  2
+ K5Q  Var_22    C21   C22  C20  C19   178.74  30.0  3
+ K5Q  Var_23    C21   C22  C20  O29   -60.81  30.0  3
+ K5Q  Var_24    H221  C22  C20  C19   -57.86  30.0  3
+ K5Q  Var_25    H222  C22  C20  C19    57.92  30.0  3
+ K5Q  Var_26    H30   O30  N23  C14   178.94  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

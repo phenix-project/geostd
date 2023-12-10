@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZPC  ZPC  '(5R)-6-(5-chloropyridin-2-yl)-7-oxo-6,7-dihydro-5H-pyrrolo[3,4-b]pyrazin-5-yl 4-methylpiperazine-1-carboxylate'  ligand  44  27  .  2022-09-15  2022-09-16
+ ZPC  ZPC  '(5R)-6-(5-chloropyridin-2-yl)-7-oxo-6,7-dihydro-5H-pyrrolo[3,4-b]pyrazin-5-yl 4-methylpiperazine-1-carboxylate'  ligand  44  27  .  2022-09-15  2023-10-25
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-25
 ;
 
 data_comp_ZPC
@@ -238,40 +239,49 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ZPC  CONST_01  C18  C17  N16  C15    0.00   0.0  0
- ZPC  CONST_02  C18  N19  C20  C15    0.00   0.0  0
- ZPC  CONST_03  N19  C20  C15  N16    0.00   0.0  0
- ZPC  CONST_04  N19  C18  C17  N16    0.00   0.0  0
- ZPC  CONST_05  C20  C15  N16  C17    0.00   0.0  0
- ZPC  CONST_06  C20  N19  C18  C17    0.00   0.0  0
- ZPC  CONST_07  C24  C23  N22  C21    0.00   0.0  0
- ZPC  CONST_08  C24  C26  C27  C21    0.00   0.0  0
- ZPC  CONST_09  C26  C27  C21  N22    0.00   0.0  0
- ZPC  CONST_10  C26  C24  C23  N22    0.00   0.0  0
- ZPC  CONST_11  C27  C21  N22  C23    0.00   0.0  0
- ZPC  CONST_12  C27  C26  C24  C23    0.00   0.0  0
- ZPC  CONST_13  C23  N22  C21  N12  180.00   0.0  0
- ZPC  CONST_14  C26  C27  C21  N12  180.00   0.0  0
- ZPC  CONST_15  C15  C13  N12  C11    0.00   0.0  0
- ZPC  CONST_16  C21  N12  C13  C15  180.00   0.0  0
- ZPC  CONST_17  CL   C24  C23  N22  180.00   0.0  0
- ZPC  CONST_18  C27  C26  C24  CL   180.00   0.0  0
- ZPC  CONST_19  O14  C13  N12  C11  180.00   0.0  0
- ZPC  CONST_20  C21  N12  C13  O14    0.00   0.0  0
- ZPC  CONST_21  H27  C27  C21  N12    0.00   0.0  0
- ZPC  CONST_22  H17  C17  N16  C15  180.00   0.0  0
- ZPC  CONST_23  H18  C18  C17  N16  180.00   0.0  0
- ZPC  CONST_24  H23  C23  N22  C21  180.00   0.0  0
- ZPC  CONST_25  H26  C26  C27  C21  180.00   0.0  0
- ZPC  Var_01    N05  C04  C03  N02  -56.84  30.0  1
- ZPC  Var_02    N05  C06  C07  N02   55.68  30.0  1
- ZPC  Var_03    C06  C07  N02  C03  -56.67  30.0  1
- ZPC  Var_04    C06  N05  C04  C03   57.77  30.0  1
- ZPC  Var_05    C07  N02  C03  C04   57.12  30.0  1
- ZPC  Var_06    C07  C06  N05  C04  -57.08  30.0  1
- ZPC  Var_07    N22  C21  N12  C11  132.58  30.0  2
- ZPC  Var_08    O09  C08  N05  C04   -8.58  30.0  2
- ZPC  Var_09    H01  C01  N02  C03   56.80  30.0  3
+ ZPC  CONST_01  C18  C17  N16  C15     0.00   0.0  0
+ ZPC  CONST_02  C18  N19  C20  C15     0.00   0.0  0
+ ZPC  CONST_03  N19  C20  C15  N16     0.00   0.0  0
+ ZPC  CONST_04  N19  C18  C17  N16     0.00   0.0  0
+ ZPC  CONST_05  C20  C15  N16  C17     0.00   0.0  0
+ ZPC  CONST_06  C20  N19  C18  C17     0.00   0.0  0
+ ZPC  CONST_07  C24  C23  N22  C21     0.00   0.0  0
+ ZPC  CONST_08  C24  C26  C27  C21     0.00   0.0  0
+ ZPC  CONST_09  C26  C27  C21  N22     0.00   0.0  0
+ ZPC  CONST_10  C26  C24  C23  N22     0.00   0.0  0
+ ZPC  CONST_11  C27  C21  N22  C23     0.00   0.0  0
+ ZPC  CONST_12  C27  C26  C24  C23     0.00   0.0  0
+ ZPC  CONST_13  C23  N22  C21  N12   180.00   0.0  0
+ ZPC  CONST_14  C26  C27  C21  N12   180.00   0.0  0
+ ZPC  CONST_15  C15  C13  N12  C11     0.00   0.0  0
+ ZPC  CONST_16  C21  N12  C13  C15   180.00   0.0  0
+ ZPC  CONST_17  CL   C24  C23  N22   180.00   0.0  0
+ ZPC  CONST_18  C27  C26  C24  CL    180.00   0.0  0
+ ZPC  CONST_19  O14  C13  N12  C11   180.00   0.0  0
+ ZPC  CONST_20  C21  N12  C13  O14     0.00   0.0  0
+ ZPC  CONST_21  H27  C27  C21  N12     0.00   0.0  0
+ ZPC  CONST_22  H17  C17  N16  C15   180.00   0.0  0
+ ZPC  CONST_23  H18  C18  C17  N16   180.00   0.0  0
+ ZPC  CONST_24  H23  C23  N22  C21   180.00   0.0  0
+ ZPC  CONST_25  H26  C26  C27  C21   180.00   0.0  0
+ ZPC  Var_01    N05  C04  C03  N02   -56.84  30.0  1
+ ZPC  Var_02    N05  C06  C07  N02    55.68  30.0  1
+ ZPC  Var_03    C06  C07  N02  C03   -56.67  30.0  1
+ ZPC  Var_04    C06  N05  C04  C03    57.77  30.0  1
+ ZPC  Var_05    C07  N02  C03  C04    57.12  30.0  1
+ ZPC  Var_06    C07  C06  N05  C04   -57.08  30.0  1
+ ZPC  Var_07    N22  C21  N12  C11   132.58  30.0  2
+ ZPC  Var_08    O09  C08  N05  C04    -8.58  30.0  2
+ ZPC  Var_09    H01  C01  N02  C03    56.80  30.0  3
+ ZPC  Var_10    C13  N12  C11  O10   118.82  30.0  1
+ ZPC  Var_11    C21  N12  C11  O10   -54.98  30.0  1
+ ZPC  Var_12    C15  C20  C11  O10  -118.07  30.0  1
+ ZPC  Var_13    N19  C20  C11  O10    62.25  30.0  1
+ ZPC  Var_14    H11  C11  N12  C13  -117.63  30.0  1
+ ZPC  Var_15    C11  O10  C08  N05  -164.84  30.0  3
+ ZPC  Var_16    N12  C11  O10  C08   113.08  30.0  3
+ ZPC  Var_17    C20  C11  O10  C08  -135.43  30.0  3
+ ZPC  Var_18    C11  O10  C08  O09    16.99  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

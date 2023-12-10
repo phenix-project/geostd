@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JSQ  JSQ  '[[(2~{R},3~{S},4~{R},5~{R})-5-(6-azanyl-2-fluoranyl-purin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] phosphono hydrogen phosphate'  ligand  47  32  .  2022-11-17  2022-11-17
+ JSQ  JSQ  '[[(2~{R},3~{S},4~{R},5~{R})-5-(6-azanyl-2-fluoranyl-purin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] phosphono hydrogen phosphate'  ligand  47  32  .  2022-11-17  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JSQ
@@ -243,36 +244,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JSQ  CONST_01  C8    N9   C4   N3   180.00   0.0  0
- JSQ  CONST_02  N7    C5   C4   N3   180.00   0.0  0
- JSQ  CONST_03  C6    C5   C4   N3     0.00   0.0  0
- JSQ  CONST_04  C6    N1   C2   N3     0.00   0.0  0
- JSQ  CONST_05  N9    C4   N3   C2   180.00   0.0  0
- JSQ  CONST_06  C5    C4   N3   C2     0.00   0.0  0
- JSQ  CONST_07  C5    C6   N1   C2     0.00   0.0  0
- JSQ  CONST_08  N9    C8   N7   C5     0.00   0.0  0
- JSQ  CONST_09  C8    N9   C4   C5     0.00   0.0  0
- JSQ  CONST_10  N7    C8   N9   C4     0.00   0.0  0
- JSQ  CONST_11  N1    C2   N3   C4     0.00   0.0  0
- JSQ  CONST_12  C8    N7   C5   C4     0.00   0.0  0
- JSQ  CONST_13  N1    C6   C5   C4     0.00   0.0  0
- JSQ  CONST_14  C8    N7   C5   C6   180.00   0.0  0
- JSQ  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- JSQ  CONST_16  N7    C5   C6   N1   180.00   0.0  0
- JSQ  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- JSQ  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- JSQ  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- JSQ  CONST_20  N7    C8   N9   C1'  180.00   0.0  0
- JSQ  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- JSQ  CONST_22  F2    C2   N3   C4   180.00   0.0  0
- JSQ  CONST_23  N6    C6   C5   C4   180.00   0.0  0
- JSQ  CONST_24  F2    C2   N1   C6   180.00   0.0  0
- JSQ  CONST_25  N7    C5   C6   N6     0.00   0.0  0
- JSQ  CONST_26  H8    C8   N7   C5   180.00   0.0  0
- JSQ  CONST_27  HN62  N6   C6   C5   180.00   0.0  0
- JSQ  CONST_28  HN61  N6   C6   C5     0.00   0.0  0
- JSQ  Var_01    O2A   PA   O5'  C5'  -47.76  30.0  1
- JSQ  Var_02    H5'2  C5'  O5'  PA   108.42  30.0  2
+ JSQ  CONST_01  C8    N9   C4   N3    180.00   0.0  0
+ JSQ  CONST_02  N7    C5   C4   N3    180.00   0.0  0
+ JSQ  CONST_03  C6    C5   C4   N3      0.00   0.0  0
+ JSQ  CONST_04  C6    N1   C2   N3      0.00   0.0  0
+ JSQ  CONST_05  N9    C4   N3   C2    180.00   0.0  0
+ JSQ  CONST_06  C5    C4   N3   C2      0.00   0.0  0
+ JSQ  CONST_07  C5    C6   N1   C2      0.00   0.0  0
+ JSQ  CONST_08  N9    C8   N7   C5      0.00   0.0  0
+ JSQ  CONST_09  C8    N9   C4   C5      0.00   0.0  0
+ JSQ  CONST_10  N7    C8   N9   C4      0.00   0.0  0
+ JSQ  CONST_11  N1    C2   N3   C4      0.00   0.0  0
+ JSQ  CONST_12  C8    N7   C5   C4      0.00   0.0  0
+ JSQ  CONST_13  N1    C6   C5   C4      0.00   0.0  0
+ JSQ  CONST_14  C8    N7   C5   C6    180.00   0.0  0
+ JSQ  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ JSQ  CONST_16  N7    C5   C6   N1    180.00   0.0  0
+ JSQ  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ JSQ  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ JSQ  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ JSQ  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ JSQ  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ JSQ  CONST_22  F2    C2   N3   C4    180.00   0.0  0
+ JSQ  CONST_23  N6    C6   C5   C4    180.00   0.0  0
+ JSQ  CONST_24  F2    C2   N1   C6    180.00   0.0  0
+ JSQ  CONST_25  N7    C5   C6   N6      0.00   0.0  0
+ JSQ  CONST_26  H8    C8   N7   C5    180.00   0.0  0
+ JSQ  CONST_27  HN62  N6   C6   C5    180.00   0.0  0
+ JSQ  CONST_28  HN61  N6   C6   C5      0.00   0.0  0
+ JSQ  Var_01    O2A   PA   O5'  C5'   -47.76  30.0  1
+ JSQ  Var_02    H5'2  C5'  O5'  PA    108.42  30.0  2
+ JSQ  Var_03    O4'   C1'  N9   C4   -165.95  30.0  1
+ JSQ  Var_04    C2'   C1'  N9   C4     75.80  30.0  1
+ JSQ  Var_05    C3'   C4'  O4'  C1'    20.37  30.0  1
+ JSQ  Var_06    C4'   C3'  C2'  C1'    38.42  30.0  1
+ JSQ  Var_07    O4'   C4'  C3'  C2'   -37.09  30.0  1
+ JSQ  Var_08    C4'   O4'  C1'  C2'     5.15  30.0  1
+ JSQ  Var_09    C8    N9   C1'  C2'  -104.92  30.0  2
+ JSQ  Var_10    O4'   C1'  C2'  C3'   -28.04  30.0  1
+ JSQ  Var_11    N9    C1'  C2'  C3'    91.34  30.0  1
+ JSQ  Var_12    N9    C1'  O4'  C4'  -116.15  30.0  1
+ JSQ  Var_13    O4'   C1'  N9   C8     13.33  30.0  1
+ JSQ  Var_14    C5'   C4'  O4'  C1'   146.52  30.0  1
+ JSQ  Var_15    O3'   C3'  C2'  C1'   157.65  30.0  1
+ JSQ  Var_16    C5'   C4'  C3'  C2'  -159.71  30.0  1
+ JSQ  Var_17    O2'   C2'  C3'  C4'   -77.89  30.0  1
+ JSQ  Var_18    O2'   C2'  C1'  N9   -154.32  30.0  1
+ JSQ  Var_19    O4'   C1'  C2'  O2'    86.29  30.0  1
+ JSQ  Var_20    O4'   C4'  C3'  O3'  -160.63  30.0  1
+ JSQ  Var_21    H1'   C1'  N9   C4    -46.53  30.0  1
+ JSQ  Var_22    H4'   C4'  O4'  C1'   -96.89  30.0  1
+ JSQ  Var_23    H3'   C3'  C2'  C1'   -76.23  30.0  1
+ JSQ  Var_24    H2'   C2'  C3'  C4'   157.25  30.0  1
+ JSQ  Var_25    O5'   C5'  C4'  C3'    55.55  30.0  1
+ JSQ  Var_26    O3'   C3'  C4'  C5'    76.74  30.0  1
+ JSQ  Var_27    O3'   C3'  C2'  O2'    41.34  30.0  1
+ JSQ  Var_28    O5'   C5'  C4'  O4'   -63.71  30.0  1
+ JSQ  Var_29    HO2'  O2'  C2'  C1'    73.97  30.0  3
+ JSQ  Var_30    HO3'  O3'  C3'  C2'    91.29  30.0  3
+ JSQ  Var_31    H5'2  C5'  C4'  C3'   175.04  30.0  1
+ JSQ  Var_32    H5'1  C5'  C4'  C3'   -67.54  30.0  1
+ JSQ  Var_33    PB    O3A  PA   O1A   112.09  30.0  2
+ JSQ  Var_34    PG    O3B  PB   O1B   -32.33  30.0  2
+ JSQ  Var_35    PA    O3A  PB   O1B    34.70  30.0  3
+ JSQ  Var_36    PB    O3B  PG   O1G    68.81  30.0  3
+ JSQ  Var_37    PB    O3A  PA   O2A   -19.24  30.0  2
+ JSQ  Var_38    PG    O3B  PB   O2B  -163.33  30.0  2
+ JSQ  Var_39    PA    O3A  PB   O2B   164.22  30.0  3
+ JSQ  Var_40    PB    O3B  PG   O2G  -163.14  30.0  3
+ JSQ  Var_41    PG    O3B  PB   O3A    95.61  30.0  2
+ JSQ  Var_42    PA    O3A  PB   O3B   -91.52  30.0  3
+ JSQ  Var_43    PB    O3B  PG   O3G   -58.16  30.0  3
+ JSQ  Var_44    PB    O3A  PA   O5'  -146.48  30.0  2
+ JSQ  Var_45    H2    O2B  PB   O1B   -36.53  30.0  3
+ JSQ  Var_46    H4    O3G  PG   O1G    25.54  30.0  3
+ JSQ  Var_47    H3    O2G  PG   O1G    29.38  30.0  3
+ JSQ  Var_48    H1    O1A  PA   O2A    43.32  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

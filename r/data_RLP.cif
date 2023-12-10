@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RLP  RLP  1-[6-(2-carboxyethyl)-7-hydroxy-2,4-dioxo-3,4-dihydropteridin-8(2H)-yl]-1-deoxy-D-ribitol  ligand  44  27  .  2022-07-22  2022-07-26
+ RLP  RLP  1-[6-(2-carboxyethyl)-7-hydroxy-2,4-dioxo-3,4-dihydropteridin-8(2H)-yl]-1-deoxy-D-ribitol  ligand  44  27  .  2022-07-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RLP
@@ -230,41 +231,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RLP  CONST_01  C10  N9   C8   C7      0.00   0.0  0
- RLP  CONST_02  C10  C5   N6   C7      0.00   0.0  0
- RLP  CONST_03  C4   C5   N6   C7    180.00   0.0  0
- RLP  CONST_04  C5   N6   C7   C8      0.00   0.0  0
- RLP  CONST_05  C5   C10  N9   C8      0.00   0.0  0
- RLP  CONST_06  N1   C10  N9   C8    180.00   0.0  0
- RLP  CONST_07  N6   C7   C8   N9      0.00   0.0  0
- RLP  CONST_08  N6   C5   C10  N9      0.00   0.0  0
- RLP  CONST_09  C4   C5   C10  N9    180.00   0.0  0
- RLP  CONST_10  C2   N1   C10  N9    180.00   0.0  0
- RLP  CONST_11  N3   C4   C5   C10     0.00   0.0  0
- RLP  CONST_12  N3   C2   N1   C10     0.00   0.0  0
- RLP  CONST_13  C2   N1   C10  C5      0.00   0.0  0
- RLP  CONST_14  C2   N3   C4   C5      0.00   0.0  0
- RLP  CONST_15  N1   C10  C5   N6    180.00   0.0  0
- RLP  CONST_16  N3   C4   C5   N6    180.00   0.0  0
- RLP  CONST_17  N1   C10  C5   C4      0.00   0.0  0
- RLP  CONST_18  N1   C2   N3   C4      0.00   0.0  0
- RLP  CONST_19  N9   C8   C7   C16   180.00   0.0  0
- RLP  CONST_20  C5   N6   C7   C16   180.00   0.0  0
- RLP  CONST_21  C11  N9   C8   C7    180.00   0.0  0
- RLP  CONST_22  N6   C7   C8   O8    180.00   0.0  0
- RLP  CONST_23  C10  N9   C8   O8    180.00   0.0  0
- RLP  CONST_24  O4   C4   C5   C10   180.00   0.0  0
- RLP  CONST_25  O2   C2   N1   C10   180.00   0.0  0
- RLP  CONST_26  C11  N9   C10  C5    180.00   0.0  0
- RLP  CONST_27  O4   C4   C5   N6      0.00   0.0  0
- RLP  CONST_28  O2   C2   N3   C4    180.00   0.0  0
- RLP  CONST_29  C2   N3   C4   O4    180.00   0.0  0
- RLP  CONST_30  C11  N9   C10  N1      0.00   0.0  0
- RLP  CONST_31  HN3  N3   C4   C5    180.00   0.0  0
- RLP  Var_01    C8   C7   C16  C17    81.99  30.0  2
- RLP  Var_02    C12  C11  N9   C8     94.21  30.0  2
- RLP  Var_03    C7   C16  C17  C18   177.09  30.0  3
- RLP  Var_04    C16  C17  C18  O19  -177.78  30.0  3
+ RLP  CONST_01  C10   N9   C8   C7      0.00   0.0  0
+ RLP  CONST_02  C10   C5   N6   C7      0.00   0.0  0
+ RLP  CONST_03  C4    C5   N6   C7    180.00   0.0  0
+ RLP  CONST_04  C5    N6   C7   C8      0.00   0.0  0
+ RLP  CONST_05  C5    C10  N9   C8      0.00   0.0  0
+ RLP  CONST_06  N1    C10  N9   C8    180.00   0.0  0
+ RLP  CONST_07  N6    C7   C8   N9      0.00   0.0  0
+ RLP  CONST_08  N6    C5   C10  N9      0.00   0.0  0
+ RLP  CONST_09  C4    C5   C10  N9    180.00   0.0  0
+ RLP  CONST_10  C2    N1   C10  N9    180.00   0.0  0
+ RLP  CONST_11  N3    C4   C5   C10     0.00   0.0  0
+ RLP  CONST_12  N3    C2   N1   C10     0.00   0.0  0
+ RLP  CONST_13  C2    N1   C10  C5      0.00   0.0  0
+ RLP  CONST_14  C2    N3   C4   C5      0.00   0.0  0
+ RLP  CONST_15  N1    C10  C5   N6    180.00   0.0  0
+ RLP  CONST_16  N3    C4   C5   N6    180.00   0.0  0
+ RLP  CONST_17  N1    C10  C5   C4      0.00   0.0  0
+ RLP  CONST_18  N1    C2   N3   C4      0.00   0.0  0
+ RLP  CONST_19  N9    C8   C7   C16   180.00   0.0  0
+ RLP  CONST_20  C5    N6   C7   C16   180.00   0.0  0
+ RLP  CONST_21  C11   N9   C8   C7    180.00   0.0  0
+ RLP  CONST_22  N6    C7   C8   O8    180.00   0.0  0
+ RLP  CONST_23  C10   N9   C8   O8    180.00   0.0  0
+ RLP  CONST_24  O4    C4   C5   C10   180.00   0.0  0
+ RLP  CONST_25  O2    C2   N1   C10   180.00   0.0  0
+ RLP  CONST_26  C11   N9   C10  C5    180.00   0.0  0
+ RLP  CONST_27  O4    C4   C5   N6      0.00   0.0  0
+ RLP  CONST_28  O2    C2   N3   C4    180.00   0.0  0
+ RLP  CONST_29  C2    N3   C4   O4    180.00   0.0  0
+ RLP  CONST_30  C11   N9   C10  N1      0.00   0.0  0
+ RLP  CONST_31  HN3   N3   C4   C5    180.00   0.0  0
+ RLP  Var_01    C8    C7   C16  C17    81.99  30.0  2
+ RLP  Var_02    C12   C11  N9   C8     94.21  30.0  2
+ RLP  Var_03    C7    C16  C17  C18   177.09  30.0  3
+ RLP  Var_04    C16   C17  C18  O19  -177.78  30.0  3
+ RLP  Var_05    HO8   O8   C8   C7      5.05  30.0  2
+ RLP  Var_06    O12   C12  C11  N9    -48.32  30.0  3
+ RLP  Var_07    C13   C12  C11  N9   -172.46  30.0  3
+ RLP  Var_08    H121  C12  C11  N9     67.52  30.0  3
+ RLP  Var_09    O13   C13  C12  C11   -32.79  30.0  3
+ RLP  Var_10    C14   C13  C12  C11  -157.99  30.0  3
+ RLP  Var_11    O14   C14  C13  C12   -35.87  30.0  3
+ RLP  Var_12    C15   C14  C13  C12  -162.35  30.0  3
+ RLP  Var_13    O13   C13  C12  O12  -156.80  30.0  3
+ RLP  Var_14    C14   C13  C12  O12    78.00  30.0  3
+ RLP  Var_15    O15   C15  C14  C13  -171.35  30.0  3
+ RLP  Var_16    O14   C14  C13  O13  -162.52  30.0  3
+ RLP  Var_17    C15   C14  C13  O13    71.00  30.0  3
+ RLP  Var_18    O15   C15  C14  O14    61.06  30.0  3
+ RLP  Var_19    H12O  O12  C12  C11   -69.07  30.0  3
+ RLP  Var_20    H131  C13  C12  C11    81.81  30.0  3
+ RLP  Var_21    H13O  O13  C13  C12   -72.22  30.0  3
+ RLP  Var_22    H141  C14  C13  C12    79.77  30.0  3
+ RLP  Var_23    H14O  O14  C14  C13   -58.48  30.0  3
+ RLP  Var_24    H151  C15  C14  C13    66.84  30.0  3
+ RLP  Var_25    H152  C15  C14  C13   -49.09  30.0  3
+ RLP  Var_26    H15O  O15  C15  C14   179.73  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

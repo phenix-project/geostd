@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 00K  00K  (1S,7S)-7-amino-N-[(2S,3S)-7-amino-1-(cyclohexylamino)-2-hydroxy-1-oxoheptan-3-yl]-7-benzyl-8-oxohexahydro-1H-pyrazolo[1,2-a]pyridazine-1-carboxamide  peptide  82  38  .  2019-03-22  2022-09-22
+ 00K  00K  (1S,7S)-7-amino-N-[(2S,3S)-7-amino-1-(cyclohexylamino)-2-hydroxy-1-oxoheptan-3-yl]-7-benzyl-8-oxohexahydro-1H-pyrazolo[1,2-a]pyridazine-1-carboxamide  peptide  82  38  .  2019-03-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_00K
@@ -392,43 +393,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 00K  CONST_01  C13  C14  C15  C10     0.00   0.0  0
- 00K  CONST_02  C13  C12  C11  C10     0.00   0.0  0
- 00K  CONST_03  C14  C15  C10  C11     0.00   0.0  0
- 00K  CONST_04  C14  C13  C12  C11     0.00   0.0  0
- 00K  CONST_05  C15  C10  C11  C12     0.00   0.0  0
- 00K  CONST_06  C15  C14  C13  C12     0.00   0.0  0
- 00K  CONST_07  C6   C7   N2   C1    180.00   0.0  0
- 00K  CONST_08  C6   C7   N2   N1      0.00   0.0  0
- 00K  CONST_09  C14  C15  C10  C9    180.00   0.0  0
- 00K  CONST_10  C12  C11  C10  C9    180.00   0.0  0
- 00K  CONST_11  O1   C7   N2   C1      0.00   0.0  0
- 00K  CONST_12  O1   C7   N2   N1    180.00   0.0  0
- 00K  CONST_13  H14  C14  C15  C10   180.00   0.0  0
- 00K  CONST_14  H12  C12  C11  C10   180.00   0.0  0
- 00K  CONST_15  H15  C15  C10  C11   180.00   0.0  0
- 00K  CONST_16  H13  C13  C12  C11   180.00   0.0  0
- 00K  CONST_17  H11  C11  C12  C13   180.00   0.0  0
- 00K  CONST_18  CA   N    C8   C1    180.00   0.0  0
- 00K  CONST_19  C1X  NX   CX   C     180.00   0.0  0
- 00K  CONST_20  C1X  NX   CX   OX      0.00   0.0  0
- 00K  CONST_21  HN   N    C8   C1      0.00   0.0  0
- 00K  CONST_22  CA   N    C8   O2      0.00   0.0  0
- 00K  CONST_23  HNX  NX   CX   C       0.00   0.0  0
- 00K  Var_01    C4   N1   N2   C1    153.30  30.0  1
- 00K  Var_02    N1   C3   C2   C1     37.35  30.0  1
- 00K  Var_03    C6   C5   C4   N1    -59.13  30.0  1
- 00K  Var_04    N2   N1   C3   C2    -41.75  30.0  1
- 00K  Var_05    C5   C4   N1   N2     56.34  30.0  1
- 00K  Var_06    C4X  C3X  C2X  C1X    56.20  30.0  1
- 00K  Var_07    C4X  C5X  C6X  C1X   -53.59  30.0  1
- 00K  Var_08    C3X  C4X  C5X  C6X    53.96  30.0  1
- 00K  Var_09    C2X  C3X  C4X  C5X   -55.50  30.0  1
- 00K  Var_10    C15  C10  C9   C6    -99.16  30.0  2
- 00K  Var_11    CD   CG   CB   CA    179.72  30.0  3
- 00K  Var_12    CE   CD   CG   CB   -179.66  30.0  3
- 00K  Var_13    NZ   CE   CD   CG    179.73  30.0  3
- 00K  Var_14    HNZ  NZ   CE   CD    178.76  30.0  3
+ 00K  CONST_01  C13   C14  C15  C10     0.00   0.0  0
+ 00K  CONST_02  C13   C12  C11  C10     0.00   0.0  0
+ 00K  CONST_03  C14   C15  C10  C11     0.00   0.0  0
+ 00K  CONST_04  C14   C13  C12  C11     0.00   0.0  0
+ 00K  CONST_05  C15   C10  C11  C12     0.00   0.0  0
+ 00K  CONST_06  C15   C14  C13  C12     0.00   0.0  0
+ 00K  CONST_07  C6    C7   N2   C1    180.00   0.0  0
+ 00K  CONST_08  C6    C7   N2   N1      0.00   0.0  0
+ 00K  CONST_09  C14   C15  C10  C9    180.00   0.0  0
+ 00K  CONST_10  C12   C11  C10  C9    180.00   0.0  0
+ 00K  CONST_11  O1    C7   N2   C1      0.00   0.0  0
+ 00K  CONST_12  O1    C7   N2   N1    180.00   0.0  0
+ 00K  CONST_13  H14   C14  C15  C10   180.00   0.0  0
+ 00K  CONST_14  H12   C12  C11  C10   180.00   0.0  0
+ 00K  CONST_15  H15   C15  C10  C11   180.00   0.0  0
+ 00K  CONST_16  H13   C13  C12  C11   180.00   0.0  0
+ 00K  CONST_17  H11   C11  C12  C13   180.00   0.0  0
+ 00K  CONST_18  CA    N    C8   C1    180.00   0.0  0
+ 00K  CONST_19  C1X   NX   CX   C     180.00   0.0  0
+ 00K  CONST_20  C1X   NX   CX   OX      0.00   0.0  0
+ 00K  CONST_21  HN    N    C8   C1      0.00   0.0  0
+ 00K  CONST_22  CA    N    C8   O2      0.00   0.0  0
+ 00K  CONST_23  HNX   NX   CX   C       0.00   0.0  0
+ 00K  Var_01    C4    N1   N2   C1    153.30  30.0  1
+ 00K  Var_02    N1    C3   C2   C1     37.35  30.0  1
+ 00K  Var_03    C6    C5   C4   N1    -59.13  30.0  1
+ 00K  Var_04    N2    N1   C3   C2    -41.75  30.0  1
+ 00K  Var_05    C5    C4   N1   N2     56.34  30.0  1
+ 00K  Var_06    C4X   C3X  C2X  C1X    56.20  30.0  1
+ 00K  Var_07    C4X   C5X  C6X  C1X   -53.59  30.0  1
+ 00K  Var_08    C3X   C4X  C5X  C6X    53.96  30.0  1
+ 00K  Var_09    C2X   C3X  C4X  C5X   -55.50  30.0  1
+ 00K  Var_10    C15   C10  C9   C6    -99.16  30.0  2
+ 00K  Var_11    CD    CG   CB   CA    179.72  30.0  3
+ 00K  Var_12    CE    CD   CG   CB   -179.66  30.0  3
+ 00K  Var_13    NZ    CE   CD   CG    179.73  30.0  3
+ 00K  Var_14    HNZ   NZ   CE   CD    178.76  30.0  3
+ 00K  Var_15    H1    C1   N2   N1   -124.67  30.0  1
+ 00K  Var_16    H2X   C2X  C1X  C6X    66.02  30.0  1
+ 00K  Var_17    H2XA  C2X  C1X  C6X  -177.99  30.0  1
+ 00K  Var_18    H1X   C1X  C6X  C5X   173.00  30.0  1
+ 00K  Var_19    HN3   N3   C6   C5   -176.58  30.0  3
+ 00K  Var_20    HN3A  N3   C6   C5    -60.07  30.0  3
+ 00K  Var_21    H9    C9   C6   C5   -177.45  30.0  3
+ 00K  Var_22    H9A   C9   C6   C5    -63.12  30.0  3
+ 00K  Var_23    HNX   NX   C1X  C6X    31.63  30.0  3
+ 00K  Var_24    HA    CA   N    C8      8.41  30.0  3
+ 00K  Var_25    HB    CB   CA   C     -62.95  30.0  3
+ 00K  Var_26    H41   CB   CA   C      52.82  30.0  3
+ 00K  Var_27    H40   C    CA   N     -63.07  30.0  3
+ 00K  Var_28    HO    O    C    CA    167.09  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

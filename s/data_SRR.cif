@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SRR  SRR  4,4'-[2-(4-ethoxyphenyl)but-1-ene-1,1-diyl]diphenol  ligand  51  27  .  2021-08-23  2022-09-22
+ SRR  SRR  4,4'-[2-(4-ethoxyphenyl)but-1-ene-1,1-diyl]diphenol  ligand  51  27  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_SRR
@@ -256,55 +257,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SRR  CONST_01  CAL  CAZ  CAK  CAE    0.00   0.0  0
- SRR  CONST_02  CAL  CAF  CAV  CAE    0.00   0.0  0
- SRR  CONST_03  CAK  CAZ  CAL  CAF    0.00   0.0  0
- SRR  CONST_04  CAK  CAE  CAV  CAF    0.00   0.0  0
- SRR  CONST_05  CAN  CBA  CAM  CAG    0.00   0.0  0
- SRR  CONST_06  CAN  CAH  CAW  CAG    0.00   0.0  0
- SRR  CONST_07  CAM  CBA  CAN  CAH    0.00   0.0  0
- SRR  CONST_08  CAM  CAG  CAW  CAH    0.00   0.0  0
- SRR  CONST_09  CAP  CAY  CAO  CAI    0.00   0.0  0
- SRR  CONST_10  CAP  CAJ  CAX  CAI    0.00   0.0  0
- SRR  CONST_11  CAO  CAY  CAP  CAJ    0.00   0.0  0
- SRR  CONST_12  CAO  CAI  CAX  CAJ    0.00   0.0  0
- SRR  CONST_13  CAZ  CAK  CAE  CAV    0.00   0.0  0
- SRR  CONST_14  CAZ  CAL  CAF  CAV    0.00   0.0  0
- SRR  CONST_15  CBA  CAM  CAG  CAW    0.00   0.0  0
- SRR  CONST_16  CBA  CAN  CAH  CAW    0.00   0.0  0
- SRR  CONST_17  CAY  CAO  CAI  CAX    0.00   0.0  0
- SRR  CONST_18  CAY  CAP  CAJ  CAX    0.00   0.0  0
- SRR  CONST_19  CAK  CAE  CAV  OAC  180.00   0.0  0
- SRR  CONST_20  CAL  CAF  CAV  OAC  180.00   0.0  0
- SRR  CONST_21  CAM  CAG  CAW  OAD  180.00   0.0  0
- SRR  CONST_22  CAN  CAH  CAW  OAD  180.00   0.0  0
- SRR  CONST_23  CAU  CAZ  CAK  CAE  180.00   0.0  0
- SRR  CONST_24  CAU  CAZ  CAL  CAF  180.00   0.0  0
- SRR  CONST_25  CAU  CBA  CAM  CAG  180.00   0.0  0
- SRR  CONST_26  CAU  CBA  CAN  CAH  180.00   0.0  0
- SRR  CONST_27  CAT  CAY  CAO  CAI  180.00   0.0  0
- SRR  CONST_28  CAT  CAY  CAP  CAJ  180.00   0.0  0
- SRR  CONST_29  OAS  CAX  CAI  CAO  180.00   0.0  0
- SRR  CONST_30  OAS  CAX  CAJ  CAP  180.00   0.0  0
- SRR  CONST_31  HAF  CAF  CAV  CAE  180.00   0.0  0
- SRR  CONST_32  HAE  CAE  CAV  CAF  180.00   0.0  0
- SRR  CONST_33  HAH  CAH  CAW  CAG  180.00   0.0  0
- SRR  CONST_34  HAG  CAG  CAW  CAH  180.00   0.0  0
- SRR  CONST_35  HAJ  CAJ  CAX  CAI  180.00   0.0  0
- SRR  CONST_36  HAI  CAI  CAX  CAJ  180.00   0.0  0
- SRR  CONST_37  HAL  CAL  CAZ  CAK  180.00   0.0  0
- SRR  CONST_38  HAK  CAK  CAZ  CAL  180.00   0.0  0
- SRR  CONST_39  HAN  CAN  CBA  CAM  180.00   0.0  0
- SRR  CONST_40  HAM  CAM  CBA  CAN  180.00   0.0  0
- SRR  CONST_41  HAP  CAP  CAY  CAO  180.00   0.0  0
- SRR  CONST_42  HAO  CAO  CAY  CAP  180.00   0.0  0
- SRR  Var_01    CBA  CAU  CAZ  CAK  -46.04  30.0  2
- SRR  Var_02    CAZ  CAU  CBA  CAM  -59.10  30.0  2
- SRR  Var_03    CAR  CAT  CAY  CAO  -44.43  30.0  3
- SRR  Var_04    CAY  CAT  CAR  CAB  105.12  30.0  3
- SRR  Var_05    HAQ  CAQ  OAS  CAX   56.62  30.0  2
- SRR  Var_06    HAA  CAA  CAQ  OAS  179.95  30.0  3
- SRR  Var_07    HAB  CAB  CAR  CAT  -57.95  30.0  3
+ SRR  CONST_01  CAL   CAZ  CAK  CAE     0.00   0.0  0
+ SRR  CONST_02  CAL   CAF  CAV  CAE     0.00   0.0  0
+ SRR  CONST_03  CAK   CAZ  CAL  CAF     0.00   0.0  0
+ SRR  CONST_04  CAK   CAE  CAV  CAF     0.00   0.0  0
+ SRR  CONST_05  CAN   CBA  CAM  CAG     0.00   0.0  0
+ SRR  CONST_06  CAN   CAH  CAW  CAG     0.00   0.0  0
+ SRR  CONST_07  CAM   CBA  CAN  CAH     0.00   0.0  0
+ SRR  CONST_08  CAM   CAG  CAW  CAH     0.00   0.0  0
+ SRR  CONST_09  CAP   CAY  CAO  CAI     0.00   0.0  0
+ SRR  CONST_10  CAP   CAJ  CAX  CAI     0.00   0.0  0
+ SRR  CONST_11  CAO   CAY  CAP  CAJ     0.00   0.0  0
+ SRR  CONST_12  CAO   CAI  CAX  CAJ     0.00   0.0  0
+ SRR  CONST_13  CAZ   CAK  CAE  CAV     0.00   0.0  0
+ SRR  CONST_14  CAZ   CAL  CAF  CAV     0.00   0.0  0
+ SRR  CONST_15  CBA   CAM  CAG  CAW     0.00   0.0  0
+ SRR  CONST_16  CBA   CAN  CAH  CAW     0.00   0.0  0
+ SRR  CONST_17  CAY   CAO  CAI  CAX     0.00   0.0  0
+ SRR  CONST_18  CAY   CAP  CAJ  CAX     0.00   0.0  0
+ SRR  CONST_19  CAK   CAE  CAV  OAC   180.00   0.0  0
+ SRR  CONST_20  CAL   CAF  CAV  OAC   180.00   0.0  0
+ SRR  CONST_21  CAM   CAG  CAW  OAD   180.00   0.0  0
+ SRR  CONST_22  CAN   CAH  CAW  OAD   180.00   0.0  0
+ SRR  CONST_23  CAU   CAZ  CAK  CAE   180.00   0.0  0
+ SRR  CONST_24  CAU   CAZ  CAL  CAF   180.00   0.0  0
+ SRR  CONST_25  CAU   CBA  CAM  CAG   180.00   0.0  0
+ SRR  CONST_26  CAU   CBA  CAN  CAH   180.00   0.0  0
+ SRR  CONST_27  CAT   CAY  CAO  CAI   180.00   0.0  0
+ SRR  CONST_28  CAT   CAY  CAP  CAJ   180.00   0.0  0
+ SRR  CONST_29  OAS   CAX  CAI  CAO   180.00   0.0  0
+ SRR  CONST_30  OAS   CAX  CAJ  CAP   180.00   0.0  0
+ SRR  CONST_31  HAF   CAF  CAV  CAE   180.00   0.0  0
+ SRR  CONST_32  HAE   CAE  CAV  CAF   180.00   0.0  0
+ SRR  CONST_33  HAH   CAH  CAW  CAG   180.00   0.0  0
+ SRR  CONST_34  HAG   CAG  CAW  CAH   180.00   0.0  0
+ SRR  CONST_35  HAJ   CAJ  CAX  CAI   180.00   0.0  0
+ SRR  CONST_36  HAI   CAI  CAX  CAJ   180.00   0.0  0
+ SRR  CONST_37  HAL   CAL  CAZ  CAK   180.00   0.0  0
+ SRR  CONST_38  HAK   CAK  CAZ  CAL   180.00   0.0  0
+ SRR  CONST_39  HAN   CAN  CBA  CAM   180.00   0.0  0
+ SRR  CONST_40  HAM   CAM  CBA  CAN   180.00   0.0  0
+ SRR  CONST_41  HAP   CAP  CAY  CAO   180.00   0.0  0
+ SRR  CONST_42  HAO   CAO  CAY  CAP   180.00   0.0  0
+ SRR  Var_01    CBA   CAU  CAZ  CAK   -46.04  30.0  2
+ SRR  Var_02    CAZ   CAU  CBA  CAM   -59.10  30.0  2
+ SRR  Var_03    CAR   CAT  CAY  CAO   -44.43  30.0  3
+ SRR  Var_04    CAY   CAT  CAR  CAB   105.12  30.0  3
+ SRR  Var_05    HAQ   CAQ  OAS  CAX    56.62  30.0  2
+ SRR  Var_06    HAA   CAA  CAQ  OAS   179.95  30.0  3
+ SRR  Var_07    HAB   CAB  CAR  CAT   -57.95  30.0  3
+ SRR  Var_08    CAZ   CAU  CAT  CAY    -9.28   0.0  2
+ SRR  Var_09    CBA   CAU  CAT  CAY   172.59   0.0  2
+ SRR  Var_10    CAQ   OAS  CAX  CAI  -177.95  30.0  2
+ SRR  Var_11    CAQ   OAS  CAX  CAJ     2.54  30.0  2
+ SRR  Var_12    HOAC  OAC  CAV  CAE   179.79  30.0  2
+ SRR  Var_13    HOAD  OAD  CAW  CAG   179.40  30.0  2
+ SRR  Var_14    CAZ   CAU  CAT  CAR   168.55   0.0  2
+ SRR  Var_15    CBA   CAU  CAT  CAR    -9.59   0.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

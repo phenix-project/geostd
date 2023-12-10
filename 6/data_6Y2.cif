@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 6Y2  6Y2  ~{N}-[(2~{S},3~{R},4~{R},5~{R},6~{R})-2-[(2~{R},3~{S},4~{R},5~{R},6~{S})-5-acetamido-2-(hydroxymethyl)-6-(4-nitrophenoxy)-4-oxidanyl-oxan-3-yl]oxy-6-(hydroxymethyl)-4,5-bis(oxidanyl)oxan-3-yl]ethanamide  ligand  69  38  .  2021-08-05  2021-08-05  
+ 6Y2  6Y2  ~{N}-[(2~{S},3~{R},4~{R},5~{R},6~{R})-2-[(2~{R},3~{S},4~{R},5~{R},6~{S})-5-acetamido-2-(hydroxymethyl)-6-(4-nitrophenoxy)-4-oxidanyl-oxan-3-yl]oxy-6-(hydroxymethyl)-4,5-bis(oxidanyl)oxan-3-yl]ethanamide  ligand  69  38  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_6Y2
@@ -331,32 +332,109 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 6Y2  CONST_01  CAE  CAF  CAG  CAB    0.00   0.0  0
- 6Y2  CONST_02  CAE  CAD  CAC  CAB    0.00   0.0  0
- 6Y2  CONST_03  CAF  CAE  CAD  CAC    0.00   0.0  0
- 6Y2  CONST_04  CAF  CAG  CAB  CAC    0.00   0.0  0
- 6Y2  CONST_05  CAG  CAF  CAE  CAD    0.00   0.0  0
- 6Y2  CONST_06  CAG  CAB  CAC  CAD    0.00   0.0  0
- 6Y2  CONST_07  NAH  CAE  CAD  CAC  180.00   0.0  0
- 6Y2  CONST_08  OAA  CAB  CAC  CAD  180.00   0.0  0
- 6Y2  CONST_09  OAA  CAB  CAG  CAF  180.00   0.0  0
- 6Y2  CONST_10  NAH  CAE  CAF  CAG  180.00   0.0  0
- 6Y2  CONST_11  H3   CAF  CAG  CAB  180.00   0.0  0
- 6Y2  CONST_12  H2   CAD  CAC  CAB  180.00   0.0  0
- 6Y2  CONST_13  H4   CAG  CAB  CAC  180.00   0.0  0
- 6Y2  CONST_14  H1   CAC  CAD  CAE  180.00   0.0  0
- 6Y2  CONST_15  OAJ  NAH  CAE  CAD  180.00   0.0  0
- 6Y2  CONST_16  OAI  NAH  CAE  CAD    0.00   0.0  0
- 6Y2  CONST_17  OAJ  NAH  CAE  CAF    0.00   0.0  0
- 6Y2  CONST_18  OAI  NAH  CAE  CAF  180.00   0.0  0
- 6Y2  CONST_19  CBL  CBI  NAP  CAO  180.00   0.0  0
- 6Y2  CONST_20  OBJ  CBI  NAP  CAO    0.00   0.0  0
- 6Y2  CONST_21  C2   N2   CBG  CBK  180.00   0.0  0
- 6Y2  CONST_22  C2   N2   CBG  OBH    0.00   0.0  0
- 6Y2  CONST_23  H12  N2   CBG  CBK    0.00   0.0  0
- 6Y2  CONST_24  H28  NAP  CBI  OBJ  180.00   0.0  0
- 6Y2  Var_01    H9   CBK  CBG  OBH  157.82  30.0  3
- 6Y2  Var_02    H29  CBL  CBI  NAP  109.42  30.0  3
+ 6Y2  CONST_01  CAE  CAF  CAG  CAB     0.00   0.0  0
+ 6Y2  CONST_02  CAE  CAD  CAC  CAB     0.00   0.0  0
+ 6Y2  CONST_03  CAF  CAE  CAD  CAC     0.00   0.0  0
+ 6Y2  CONST_04  CAF  CAG  CAB  CAC     0.00   0.0  0
+ 6Y2  CONST_05  CAG  CAF  CAE  CAD     0.00   0.0  0
+ 6Y2  CONST_06  CAG  CAB  CAC  CAD     0.00   0.0  0
+ 6Y2  CONST_07  NAH  CAE  CAD  CAC   180.00   0.0  0
+ 6Y2  CONST_08  OAA  CAB  CAC  CAD   180.00   0.0  0
+ 6Y2  CONST_09  OAA  CAB  CAG  CAF   180.00   0.0  0
+ 6Y2  CONST_10  NAH  CAE  CAF  CAG   180.00   0.0  0
+ 6Y2  CONST_11  H3   CAF  CAG  CAB   180.00   0.0  0
+ 6Y2  CONST_12  H2   CAD  CAC  CAB   180.00   0.0  0
+ 6Y2  CONST_13  H4   CAG  CAB  CAC   180.00   0.0  0
+ 6Y2  CONST_14  H1   CAC  CAD  CAE   180.00   0.0  0
+ 6Y2  CONST_15  OAJ  NAH  CAE  CAD   180.00   0.0  0
+ 6Y2  CONST_16  OAI  NAH  CAE  CAD     0.00   0.0  0
+ 6Y2  CONST_17  OAJ  NAH  CAE  CAF     0.00   0.0  0
+ 6Y2  CONST_18  OAI  NAH  CAE  CAF   180.00   0.0  0
+ 6Y2  CONST_19  CBL  CBI  NAP  CAO   180.00   0.0  0
+ 6Y2  CONST_20  OBJ  CBI  NAP  CAO     0.00   0.0  0
+ 6Y2  CONST_21  C2   N2   CBG  CBK   180.00   0.0  0
+ 6Y2  CONST_22  C2   N2   CBG  OBH     0.00   0.0  0
+ 6Y2  CONST_23  H12  N2   CBG  CBK     0.00   0.0  0
+ 6Y2  CONST_24  H28  NAP  CBI  OBJ   180.00   0.0  0
+ 6Y2  Var_01    H9   CBK  CBG  OBH   157.82  30.0  3
+ 6Y2  Var_02    H29  CBL  CBI  NAP   109.42  30.0  3
+ 6Y2  Var_03    CAW  CBA  OBB  CAL    64.63  30.0  1
+ 6Y2  Var_04    CAW  CAS  CAO  CAL   -52.33  30.0  1
+ 6Y2  Var_05    CBA  OBB  CAL  CAO   -65.11  30.0  1
+ 6Y2  Var_06    CBA  CAW  CAS  CAO    51.90  30.0  1
+ 6Y2  Var_07    C5   C4   C3   C2     54.71  30.0  1
+ 6Y2  Var_08    C5   O5   C1   C2    -61.38  30.0  1
+ 6Y2  Var_09    O5   C1   C2   C3     54.68  30.0  1
+ 6Y2  Var_10    O5   C5   C4   C3    -58.78  30.0  1
+ 6Y2  Var_11    C1   C2   C3   C4    -52.49  30.0  1
+ 6Y2  Var_12    C1   O5   C5   C4     63.57  30.0  1
+ 6Y2  Var_13    CAS  CAW  CBA  OBB   -56.21  30.0  1
+ 6Y2  Var_14    CAS  CAO  CAL  OBB    57.28  30.0  1
+ 6Y2  Var_15    OBB  CAL  OAA  CAB   -78.51  30.0  2
+ 6Y2  Var_16    CAO  CAL  OAA  CAB   162.91  30.0  2
+ 6Y2  Var_17    CAL  OAA  CAB  CAC  -164.16  30.0  2
+ 6Y2  Var_18    CAL  OAA  CAB  CAG    16.30  30.0  2
+ 6Y2  Var_19    CBE  CBA  OBB  CAL  -171.67  30.0  1
+ 6Y2  Var_20    OAT  CAS  CAO  CAL  -173.61  30.0  1
+ 6Y2  Var_21    O1   CAW  CAS  CAO   170.47  30.0  1
+ 6Y2  Var_22    C2   C1   O1   CAW   159.81  30.0  3
+ 6Y2  Var_23    O5   C1   O1   CAW   -79.44  30.0  3
+ 6Y2  Var_24    NAP  CAO  CAS  CAW  -175.39  30.0  1
+ 6Y2  Var_25    C1   O1   CAW  CBA  -113.17  30.0  1
+ 6Y2  Var_26    OAT  CAS  CAW  CBA   174.45  30.0  1
+ 6Y2  Var_27    OAA  CAL  OBB  CBA   177.37  30.0  1
+ 6Y2  Var_28    C4   C3   C2   N2   -173.99  30.0  1
+ 6Y2  Var_29    O5   C1   C2   N2    176.31  30.0  1
+ 6Y2  Var_30    O4   C4   C3   C2    -67.48  30.0  1
+ 6Y2  Var_31    O1   C1   C2   C3    173.77  30.0  1
+ 6Y2  Var_32    C6   C5   C4   C3   -179.90  30.0  1
+ 6Y2  Var_33    C1   C2   C3   O3   -176.81  30.0  1
+ 6Y2  Var_34    C5   C4   C3   O3    176.04  30.0  1
+ 6Y2  Var_35    O5   C5   C4   O4     61.08  30.0  1
+ 6Y2  Var_36    O1   C1   O5   C5   -180.00  30.0  1
+ 6Y2  Var_37    C1   O5   C5   C6   -173.03  30.0  1
+ 6Y2  Var_38    CAS  CAW  O1   C1    128.20  30.0  3
+ 6Y2  Var_39    OBB  CBA  CAW  O1   -174.28  30.0  1
+ 6Y2  Var_40    NAP  CAO  CAL  OBB   179.64  30.0  1
+ 6Y2  Var_41    CAS  CAW  CBA  CBE  -175.76  30.0  1
+ 6Y2  Var_42    OAA  CAL  CAO  CAS   174.93  30.0  1
+ 6Y2  Var_43    H8   CBA  OBB  CAL   -53.84  30.0  1
+ 6Y2  Var_44    H26  CAS  CAO  CAL    64.40  30.0  1
+ 6Y2  Var_45    H7   CAW  CAS  CAO   -67.99  30.0  1
+ 6Y2  Var_46    H6   CAO  CAS  CAW    65.86  30.0  1
+ 6Y2  Var_47    H5   CAL  OBB  CBA    56.71  30.0  1
+ 6Y2  Var_48    H16  C4   C3   C2    171.63  30.0  1
+ 6Y2  Var_49    H22  C1   C2   C3    -65.67  30.0  1
+ 6Y2  Var_50    H18  C5   C4   C3     61.33  30.0  1
+ 6Y2  Var_51    H13  C2   C3   C4     66.34  30.0  1
+ 6Y2  Var_52    H14  C3   C4   C5    -62.13  30.0  1
+ 6Y2  Var_53    CBI  NAP  CAO  CAL   104.05  30.0  3
+ 6Y2  Var_54    OBF  CBE  CBA  CAW  -172.28  30.0  1
+ 6Y2  Var_55    C3   C2   N2   CBG  -140.69  30.0  3
+ 6Y2  Var_56    C1   C2   N2   CBG    98.41  30.0  3
+ 6Y2  Var_57    O3   C3   C2   N2     61.69  30.0  1
+ 6Y2  Var_58    O1   C1   C2   N2    -64.61  30.0  1
+ 6Y2  Var_59    O4   C4   C3   O3     53.84  30.0  1
+ 6Y2  Var_60    O6   C6   C5   C4   -171.27  30.0  3
+ 6Y2  Var_61    C6   C5   C4   O4    -60.05  30.0  1
+ 6Y2  Var_62    O5   C5   C6   O6     66.82  30.0  2
+ 6Y2  Var_63    CBE  CBA  CAW  O1     66.17  30.0  1
+ 6Y2  Var_64    OAT  CAS  CAW  O1    -66.98  30.0  1
+ 6Y2  Var_65    OBF  CBE  CBA  OBB    66.73  30.0  1
+ 6Y2  Var_66    CBI  NAP  CAO  CAS  -134.18  30.0  3
+ 6Y2  Var_67    NAP  CAO  CAS  OAT    63.34  30.0  1
+ 6Y2  Var_68    OAA  CAL  CAO  NAP   -62.71  30.0  1
+ 6Y2  Var_69    H28  NAP  CAO  CAL   -66.46  30.0  3
+ 6Y2  Var_70    H27  OAT  CAS  CAO   -63.07  30.0  3
+ 6Y2  Var_71    H23  CBE  CBA  CAW   -51.25  30.0  1
+ 6Y2  Var_72    H24  CBE  CBA  CAW    65.48  30.0  1
+ 6Y2  Var_73    H15  O3   C3   C2   -170.63  30.0  3
+ 6Y2  Var_74    H12  N2   C2   C3     43.24  30.0  2
+ 6Y2  Var_75    H17  O4   C4   C3   -156.25  30.0  3
+ 6Y2  Var_76    H19  C6   C5   C4    -49.93  30.0  3
+ 6Y2  Var_77    H20  C6   C5   C4     66.28  30.0  3
+ 6Y2  Var_78    H25  OBF  CBE  CBA   178.96  30.0  3
+ 6Y2  Var_79    H21  O6   C6   C5   -177.93  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

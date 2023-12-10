@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- M8S  M8S  2-(2,4-dioxo-1,3-diazaspiro[4.6]undecan-3-yl)-N-(4-sulfamoylphenyl)acetamide  ligand  49  27  .  2021-08-14  2021-08-14  
+ M8S  M8S  2-(2,4-dioxo-1,3-diazaspiro[4.6]undecan-3-yl)-N-(4-sulfamoylphenyl)acetamide  ligand  49  27  .  2021-08-14  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_M8S
@@ -258,42 +259,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- M8S  CONST_01  C23  C24  C15  C16    0.00   0.0  0
- M8S  CONST_02  C23  C18  C17  C16    0.00   0.0  0
- M8S  CONST_03  C17  C16  C15  C24    0.00   0.0  0
- M8S  CONST_04  C17  C18  C23  C24    0.00   0.0  0
- M8S  CONST_05  C18  C17  C16  C15    0.00   0.0  0
- M8S  CONST_06  C18  C23  C24  C15    0.00   0.0  0
- M8S  CONST_07  C26  N10  C3   C2     0.00   0.0  0
- M8S  CONST_08  N10  C26  N11  C2     0.00   0.0  0
- M8S  CONST_09  C3   C2   N11  C26    0.00   0.0  0
- M8S  CONST_10  N11  C26  N10  C3     0.00   0.0  0
- M8S  CONST_11  N11  C2   C3   N10    0.00   0.0  0
- M8S  CONST_12  S19  C18  C17  C16  180.00   0.0  0
- M8S  CONST_13  S19  C18  C23  C24  180.00   0.0  0
- M8S  CONST_14  N14  C15  C16  C17  180.00   0.0  0
- M8S  CONST_15  N14  C15  C24  C23  180.00   0.0  0
- M8S  CONST_16  O27  C26  N11  C2   180.00   0.0  0
- M8S  CONST_17  O1   C2   N11  C26  180.00   0.0  0
- M8S  CONST_18  O27  C26  N10  C3   180.00   0.0  0
- M8S  CONST_19  C12  N11  C2   C3   180.00   0.0  0
- M8S  CONST_20  N10  C26  N11  C12  180.00   0.0  0
- M8S  CONST_21  H2   C24  C15  C16  180.00   0.0  0
- M8S  CONST_22  H1   C16  C15  C24  180.00   0.0  0
- M8S  CONST_23  H4   C23  C18  C17  180.00   0.0  0
- M8S  CONST_24  H3   C17  C18  C23  180.00   0.0  0
- M8S  CONST_25  H19  N10  C3   C2   180.00   0.0  0
- M8S  CONST_26  C13  N14  C15  C16    0.00   0.0  0
- M8S  CONST_27  C13  N14  C15  C24  180.00   0.0  0
- M8S  CONST_28  O27  C26  N11  C12    0.00   0.0  0
- M8S  CONST_29  O1   C2   N11  C12    0.00   0.0  0
- M8S  CONST_30  H22  N14  C15  C16  180.00   0.0  0
- M8S  CONST_31  C12  C13  N14  C15  180.00   0.0  0
- M8S  CONST_32  O25  C13  N14  C15    0.00   0.0  0
- M8S  Var_01    N21  S19  C18  C17   79.07  30.0  2
- M8S  Var_02    C13  C12  N11  C2    85.09  30.0  3
- M8S  Var_03    O25  C13  C12  N11   -3.99  30.0  3
- M8S  Var_04    H20  N21  S19  C18   74.98  30.0  3
+ M8S  CONST_01  C23  C24  C15  C16     0.00   0.0  0
+ M8S  CONST_02  C23  C18  C17  C16     0.00   0.0  0
+ M8S  CONST_03  C17  C16  C15  C24     0.00   0.0  0
+ M8S  CONST_04  C17  C18  C23  C24     0.00   0.0  0
+ M8S  CONST_05  C18  C17  C16  C15     0.00   0.0  0
+ M8S  CONST_06  C18  C23  C24  C15     0.00   0.0  0
+ M8S  CONST_07  C26  N10  C3   C2      0.00   0.0  0
+ M8S  CONST_08  N10  C26  N11  C2      0.00   0.0  0
+ M8S  CONST_09  C3   C2   N11  C26     0.00   0.0  0
+ M8S  CONST_10  N11  C26  N10  C3      0.00   0.0  0
+ M8S  CONST_11  N11  C2   C3   N10     0.00   0.0  0
+ M8S  CONST_12  S19  C18  C17  C16   180.00   0.0  0
+ M8S  CONST_13  S19  C18  C23  C24   180.00   0.0  0
+ M8S  CONST_14  N14  C15  C16  C17   180.00   0.0  0
+ M8S  CONST_15  N14  C15  C24  C23   180.00   0.0  0
+ M8S  CONST_16  O27  C26  N11  C2    180.00   0.0  0
+ M8S  CONST_17  O1   C2   N11  C26   180.00   0.0  0
+ M8S  CONST_18  O27  C26  N10  C3    180.00   0.0  0
+ M8S  CONST_19  C12  N11  C2   C3    180.00   0.0  0
+ M8S  CONST_20  N10  C26  N11  C12   180.00   0.0  0
+ M8S  CONST_21  H2   C24  C15  C16   180.00   0.0  0
+ M8S  CONST_22  H1   C16  C15  C24   180.00   0.0  0
+ M8S  CONST_23  H4   C23  C18  C17   180.00   0.0  0
+ M8S  CONST_24  H3   C17  C18  C23   180.00   0.0  0
+ M8S  CONST_25  H19  N10  C3   C2    180.00   0.0  0
+ M8S  CONST_26  C13  N14  C15  C16     0.00   0.0  0
+ M8S  CONST_27  C13  N14  C15  C24   180.00   0.0  0
+ M8S  CONST_28  O27  C26  N11  C12     0.00   0.0  0
+ M8S  CONST_29  O1   C2   N11  C12     0.00   0.0  0
+ M8S  CONST_30  H22  N14  C15  C16   180.00   0.0  0
+ M8S  CONST_31  C12  C13  N14  C15   180.00   0.0  0
+ M8S  CONST_32  O25  C13  N14  C15     0.00   0.0  0
+ M8S  Var_01    N21  S19  C18  C17    79.07  30.0  2
+ M8S  Var_02    C13  C12  N11  C2     85.09  30.0  3
+ M8S  Var_03    O25  C13  C12  N11    -3.99  30.0  3
+ M8S  Var_04    H20  N21  S19  C18    74.98  30.0  3
+ M8S  Var_05    C8   C9   C3   C2   -153.94  30.0  1
+ M8S  Var_06    C5   C4   C3   C2   -156.22  30.0  1
+ M8S  Var_07    C9   C8   C7   C6     85.74  30.0  1
+ M8S  Var_08    C3   C4   C5   C6    -71.63  30.0  1
+ M8S  Var_09    C4   C5   C6   C7     54.23  30.0  1
+ M8S  Var_10    C3   C9   C8   C7    -41.39  30.0  1
+ M8S  Var_11    C8   C7   C6   C5    -69.31  30.0  1
+ M8S  Var_12    C9   C3   C4   C5     81.83  30.0  1
+ M8S  Var_13    N10  C3   C4   C5    -47.87  30.0  1
+ M8S  Var_14    N10  C3   C9   C8     95.46  30.0  1
+ M8S  Var_15    C4   C3   C9   C8    -33.45  30.0  1
+ M8S  Var_16    H15  C9   C3   C2     81.84  30.0  1
+ M8S  Var_17    H16  C9   C3   C2    -32.28  30.0  1
+ M8S  Var_18    H13  C4   C3   C2     78.81  30.0  1
+ M8S  Var_19    H14  C4   C3   C2    -36.30  30.0  1
+ M8S  Var_20    H11  C8   C7   C6   -152.89  30.0  1
+ M8S  Var_21    H12  C8   C7   C6    -38.53  30.0  1
+ M8S  Var_22    H9   C5   C6   C7    174.99  30.0  1
+ M8S  Var_23    H10  C5   C6   C7    -70.91  30.0  1
+ M8S  Var_24    H7   C7   C6   C5     56.32  30.0  1
+ M8S  Var_25    H8   C7   C6   C5    170.99  30.0  1
+ M8S  Var_26    H5   C6   C7   C8     53.24  30.0  1
+ M8S  Var_27    H6   C6   C7   C8    168.23  30.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id

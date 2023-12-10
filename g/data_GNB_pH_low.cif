@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GNB  GNB  L-gamma-glutamyl-S-{(S)-hydroxy[(4-nitrobenzyl)oxy]methyl}-L-cysteinylglycine  ligand  57  33  .  2021-08-10  2022-11-17
+ GNB  GNB  L-gamma-glutamyl-S-{(S)-hydroxy[(4-nitrobenzyl)oxy]methyl}-L-cysteinylglycine  ligand  57  33  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GNB
@@ -274,39 +275,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GNB  CONST_01  CZ    CM1  CL1  CG2    0.00   0.0  0
- GNB  CONST_02  CZ    CM2  CL2  CG2    0.00   0.0  0
- GNB  CONST_03  CM2   CL2  CG2  CL1    0.00   0.0  0
- GNB  CONST_04  CM2   CZ   CM1  CL1    0.00   0.0  0
- GNB  CONST_05  CM1   CL1  CG2  CL2    0.00   0.0  0
- GNB  CONST_06  CM1   CZ   CM2  CL2    0.00   0.0  0
- GNB  CONST_07  N7    CZ   CM1  CL1  180.00   0.0  0
- GNB  CONST_08  N7    CZ   CM2  CL2  180.00   0.0  0
- GNB  CONST_09  CH    CG2  CL1  CM1  180.00   0.0  0
- GNB  CONST_10  CH    CG2  CL2  CM2  180.00   0.0  0
- GNB  CONST_11  HM1   CM1  CL1  CG2  180.00   0.0  0
- GNB  CONST_12  HM2   CM2  CL2  CG2  180.00   0.0  0
- GNB  CONST_13  HL2   CL2  CG2  CL1  180.00   0.0  0
- GNB  CONST_14  HL1   CL1  CG2  CL2  180.00   0.0  0
- GNB  CONST_15  O8    N7   CZ   CM1  180.00   0.0  0
- GNB  CONST_16  O9    N7   CZ   CM1    0.00   0.0  0
- GNB  CONST_17  O8    N7   CZ   CM2    0.00   0.0  0
- GNB  CONST_18  O9    N7   CZ   CM2  180.00   0.0  0
- GNB  CONST_19  CA2   N2   CD   CG   180.00   0.0  0
- GNB  CONST_20  CA2   N2   CD   OE     0.00   0.0  0
- GNB  CONST_21  CA3   N3   C2   CA2  180.00   0.0  0
- GNB  CONST_22  CA3   N3   C2   O2     0.00   0.0  0
- GNB  CONST_23  HN21  N2   CD   CG     0.00   0.0  0
- GNB  CONST_24  HN3   N3   C2   CA2    0.00   0.0  0
- GNB  CONST_25  HOT1  OT1  C    OT2  180.00   0.0  0
- GNB  CONST_26  HO31  O32  C3   CA3  180.00   0.0  0
- GNB  Var_01    OH1   CH   CG2  CL1  -22.16  30.0  2
- GNB  Var_02    CG2   CH   OH1  CD2  -58.38  30.0  3
- GNB  Var_03    CD    CG   CB   CA    52.78  30.0  3
- GNB  Var_04    OE    CD   CG   CB    69.44  30.0  3
- GNB  Var_05    C3    CA3  N3   C2    68.40  30.0  3
- GNB  Var_06    O31   C3   CA3  N3    13.98  30.0  3
- GNB  Var_07    HB21  CB2  SG2  CD2  -60.86  30.0  1
+ GNB  CONST_01  CZ    CM1  CL1  CG2     0.00   0.0  0
+ GNB  CONST_02  CZ    CM2  CL2  CG2     0.00   0.0  0
+ GNB  CONST_03  CM2   CL2  CG2  CL1     0.00   0.0  0
+ GNB  CONST_04  CM2   CZ   CM1  CL1     0.00   0.0  0
+ GNB  CONST_05  CM1   CL1  CG2  CL2     0.00   0.0  0
+ GNB  CONST_06  CM1   CZ   CM2  CL2     0.00   0.0  0
+ GNB  CONST_07  N7    CZ   CM1  CL1   180.00   0.0  0
+ GNB  CONST_08  N7    CZ   CM2  CL2   180.00   0.0  0
+ GNB  CONST_09  CH    CG2  CL1  CM1   180.00   0.0  0
+ GNB  CONST_10  CH    CG2  CL2  CM2   180.00   0.0  0
+ GNB  CONST_11  HM1   CM1  CL1  CG2   180.00   0.0  0
+ GNB  CONST_12  HM2   CM2  CL2  CG2   180.00   0.0  0
+ GNB  CONST_13  HL2   CL2  CG2  CL1   180.00   0.0  0
+ GNB  CONST_14  HL1   CL1  CG2  CL2   180.00   0.0  0
+ GNB  CONST_15  O8    N7   CZ   CM1   180.00   0.0  0
+ GNB  CONST_16  O9    N7   CZ   CM1     0.00   0.0  0
+ GNB  CONST_17  O8    N7   CZ   CM2     0.00   0.0  0
+ GNB  CONST_18  O9    N7   CZ   CM2   180.00   0.0  0
+ GNB  CONST_19  CA2   N2   CD   CG    180.00   0.0  0
+ GNB  CONST_20  CA2   N2   CD   OE      0.00   0.0  0
+ GNB  CONST_21  CA3   N3   C2   CA2   180.00   0.0  0
+ GNB  CONST_22  CA3   N3   C2   O2      0.00   0.0  0
+ GNB  CONST_23  HN21  N2   CD   CG      0.00   0.0  0
+ GNB  CONST_24  HN3   N3   C2   CA2     0.00   0.0  0
+ GNB  CONST_25  HOT1  OT1  C    OT2   180.00   0.0  0
+ GNB  CONST_26  HO31  O32  C3   CA3   180.00   0.0  0
+ GNB  Var_01    OH1   CH   CG2  CL1   -22.16  30.0  2
+ GNB  Var_02    CG2   CH   OH1  CD2   -58.38  30.0  3
+ GNB  Var_03    CD    CG   CB   CA     52.78  30.0  3
+ GNB  Var_04    OE    CD   CG   CB     69.44  30.0  3
+ GNB  Var_05    C3    CA3  N3   C2     68.40  30.0  3
+ GNB  Var_06    O31   C3   CA3  N3     13.98  30.0  3
+ GNB  Var_07    HB21  CB2  SG2  CD2   -60.86  30.0  1
+ GNB  Var_08    CG    CB   CA   C      63.21  30.0  3
+ GNB  Var_09    N     CA   C    OT1     4.53  30.0  3
+ GNB  Var_10    CB    CA   C    OT1   130.04  30.0  3
+ GNB  Var_11    N     CA   C    OT2  -177.04  30.0  3
+ GNB  Var_12    CB    CA   C    OT2   -51.54  30.0  3
+ GNB  Var_13    CG    CB   CA   N    -174.09  30.0  3
+ GNB  Var_14    OZ1   CD2  SG2  CB2     0.69  30.0  3
+ GNB  Var_15    OH1   CD2  SG2  CB2  -178.01  30.0  3
+ GNB  Var_16    CD    N2   CA2  CB2   144.34  30.0  1
+ GNB  Var_17    O2    C2   CA2  CB2    14.42  30.0  3
+ GNB  Var_18    N3    C2   CA2  CB2  -165.50  30.0  3
+ GNB  Var_19    N2    CA2  CB2  SG2   -58.45  30.0  3
+ GNB  Var_20    C2    CA2  CB2  SG2   178.68  30.0  3
+ GNB  Var_21    CH    OH1  CD2  SG2  -121.58  30.0  3
+ GNB  Var_22    C2    CA2  N2   CD    -93.16  30.0  3
+ GNB  Var_23    O2    C2   CA2  N2   -108.39  30.0  3
+ GNB  Var_24    N3    C2   CA2  N2     71.69  30.0  3
+ GNB  Var_25    CH    OH1  CD2  OZ1    59.78  30.0  3
+ GNB  Var_26    H11N  N    CA   C      90.17  30.0  3
+ GNB  Var_27    H12N  N    CA   C    -149.82  30.0  3
+ GNB  Var_28    HB1   CB   CA   C    -175.23  30.0  3
+ GNB  Var_29    HB2   CB   CA   C     -58.33  30.0  3
+ GNB  Var_30    HA1   CA   C    OT1  -111.16  30.0  3
+ GNB  Var_31    HD2   CD2  SG2  CB2    92.75  30.0  3
+ GNB  Var_32    HA2   CA2  CB2  SG2    60.26  30.0  3
+ GNB  Var_33    HOZ1  OZ1  CD2  SG2   -87.25  30.0  3
+ GNB  Var_34    HB22  CB2  CA2  N2   -178.21  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

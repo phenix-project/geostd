@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BC  BC  (11S,12S,13S)-11,12,13,14-tetrahydrobenzo[g]chrysene-11,12,13-triol  ligand  43  25  .  2022-07-24  2022-07-26
+ BC  BC  (11S,12S,13S)-11,12,13,14-tetrahydrobenzo[g]chrysene-11,12,13-triol  ligand  43  25  .  2022-07-24  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BC
@@ -236,56 +237,76 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BC  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- BC  CONST_02  C4   C4A  CEC  C1     0.00   0.0  0
- BC  CONST_03  C4B  C4A  CEC  C1   180.00   0.0  0
- BC  CONST_06  C4A  CEC  C1   C2     0.00   0.0  0
- BC  CONST_07  CEB  CEC  C1   C2   180.00   0.0  0
- BC  CONST_08  C4A  C4   C3   C2     0.00   0.0  0
- BC  CONST_09  CEC  C1   C2   C3     0.00   0.0  0
- BC  CONST_10  C4B  C4A  C4   C3   180.00   0.0  0
- BC  CONST_11  CEC  C4A  C4   C3     0.00   0.0  0
- BC  CONST_12  C5   C4B  C4A  C4     0.00   0.0  0
- BC  CONST_13  C8A  C4B  C4A  C4   180.00   0.0  0
- BC  CONST_14  CEB  CEC  C4A  C4   180.00   0.0  0
- BC  CONST_15  C6   C5   C4B  C4A  180.00   0.0  0
- BC  CONST_16  C8   C8A  C4B  C4A  180.00   0.0  0
- BC  CONST_17  C8B  C8A  C4B  C4A    0.00   0.0  0
- BC  CONST_20  CEB  CEC  C4A  C4B    0.00   0.0  0
- BC  CONST_21  C7   C6   C5   C4B    0.00   0.0  0
- BC  CONST_22  C7   C8   C8A  C4B    0.00   0.0  0
- BC  CONST_23  C9   C8B  C8A  C4B  180.00   0.0  0
- BC  CONST_24  CEB  C8B  C8A  C4B    0.00   0.0  0
- BC  CONST_25  CEC  C4A  C4B  C5   180.00   0.0  0
- BC  CONST_26  C8   C8A  C4B  C5     0.00   0.0  0
- BC  CONST_27  C8B  C8A  C4B  C5   180.00   0.0  0
- BC  CONST_28  C8   C7   C6   C5     0.00   0.0  0
- BC  CONST_29  C8A  C4B  C5   C6     0.00   0.0  0
- BC  CONST_30  C8A  C8   C7   C6     0.00   0.0  0
- BC  CONST_31  C8B  C8A  C8   C7   180.00   0.0  0
- BC  CONST_32  C9   C8B  C8A  C8     0.00   0.0  0
- BC  CONST_33  CEB  C8B  C8A  C8   180.00   0.0  0
- BC  CONST_34  CEC  C4A  C4B  C8A    0.00   0.0  0
- BC  CONST_35  C10  C9   C8B  C8A  180.00   0.0  0
- BC  CONST_38  CAA  C10  C9   C8B    0.00   0.0  0
- BC  CONST_39  CAA  CEA  CEB  C8B    0.00   0.0  0
- BC  CONST_40  CEA  CEB  C8B  C9     0.00   0.0  0
- BC  CONST_41  CEC  CEB  C8B  C9   180.00   0.0  0
- BC  CONST_42  CEA  CAA  C10  C9     0.00   0.0  0
- BC  CONST_43  CEB  C8B  C9   C10    0.00   0.0  0
- BC  CONST_44  CEB  CEA  CAA  C10    0.00   0.0  0
- BC  CONST_45  CEC  CEB  CEA  CAA  180.00   0.0  0
- BC  CONST_46  H3   C3   C2   C1   180.00   0.0  0
- BC  CONST_47  H4   C4   C3   C2   180.00   0.0  0
- BC  CONST_48  H1   C1   C2   C3   180.00   0.0  0
- BC  CONST_49  H2   C2   C3   C4   180.00   0.0  0
- BC  CONST_50  H5   C5   C4B  C4A    0.00   0.0  0
- BC  CONST_51  H6   C6   C5   C4B  180.00   0.0  0
- BC  CONST_52  H8   C8   C8A  C4B  180.00   0.0  0
- BC  CONST_53  H7   C7   C6   C5   180.00   0.0  0
- BC  CONST_54  H9   C9   C8B  C8A    0.00   0.0  0
- BC  CONST_55  H10  C10  C9   C8B  180.00   0.0  0
- BC  Var_01    C13  C14  CEA  CAA   22.59  30.0  1
+ BC  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ BC  CONST_02  C4    C4A  CEC  C1      0.00   0.0  0
+ BC  CONST_03  C4B   C4A  CEC  C1    180.00   0.0  0
+ BC  CONST_04  C4A   CEC  C1   C2      0.00   0.0  0
+ BC  CONST_05  CEB   CEC  C1   C2    180.00   0.0  0
+ BC  CONST_06  C4A   C4   C3   C2      0.00   0.0  0
+ BC  CONST_07  CEC   C1   C2   C3      0.00   0.0  0
+ BC  CONST_08  C4B   C4A  C4   C3    180.00   0.0  0
+ BC  CONST_09  CEC   C4A  C4   C3      0.00   0.0  0
+ BC  CONST_10  C5    C4B  C4A  C4      0.00   0.0  0
+ BC  CONST_11  C8A   C4B  C4A  C4    180.00   0.0  0
+ BC  CONST_12  CEB   CEC  C4A  C4    180.00   0.0  0
+ BC  CONST_13  C6    C5   C4B  C4A   180.00   0.0  0
+ BC  CONST_14  C8    C8A  C4B  C4A   180.00   0.0  0
+ BC  CONST_15  C8B   C8A  C4B  C4A     0.00   0.0  0
+ BC  CONST_16  CEB   CEC  C4A  C4B     0.00   0.0  0
+ BC  CONST_17  C7    C6   C5   C4B     0.00   0.0  0
+ BC  CONST_18  C7    C8   C8A  C4B     0.00   0.0  0
+ BC  CONST_19  C9    C8B  C8A  C4B   180.00   0.0  0
+ BC  CONST_20  CEB   C8B  C8A  C4B     0.00   0.0  0
+ BC  CONST_21  CEC   C4A  C4B  C5    180.00   0.0  0
+ BC  CONST_22  C8    C8A  C4B  C5      0.00   0.0  0
+ BC  CONST_23  C8B   C8A  C4B  C5    180.00   0.0  0
+ BC  CONST_24  C8    C7   C6   C5      0.00   0.0  0
+ BC  CONST_25  C8A   C4B  C5   C6      0.00   0.0  0
+ BC  CONST_26  C8A   C8   C7   C6      0.00   0.0  0
+ BC  CONST_27  C8B   C8A  C8   C7    180.00   0.0  0
+ BC  CONST_28  C9    C8B  C8A  C8      0.00   0.0  0
+ BC  CONST_29  CEB   C8B  C8A  C8    180.00   0.0  0
+ BC  CONST_30  CEC   C4A  C4B  C8A     0.00   0.0  0
+ BC  CONST_31  C10   C9   C8B  C8A   180.00   0.0  0
+ BC  CONST_32  CAA   C10  C9   C8B     0.00   0.0  0
+ BC  CONST_33  CAA   CEA  CEB  C8B     0.00   0.0  0
+ BC  CONST_34  CEA   CEB  C8B  C9      0.00   0.0  0
+ BC  CONST_35  CEC   CEB  C8B  C9    180.00   0.0  0
+ BC  CONST_36  CEA   CAA  C10  C9      0.00   0.0  0
+ BC  CONST_37  CEB   C8B  C9   C10     0.00   0.0  0
+ BC  CONST_38  CEB   CEA  CAA  C10     0.00   0.0  0
+ BC  CONST_39  CEC   CEB  CEA  CAA   180.00   0.0  0
+ BC  CONST_40  H3    C3   C2   C1    180.00   0.0  0
+ BC  CONST_41  H4    C4   C3   C2    180.00   0.0  0
+ BC  CONST_42  H1    C1   C2   C3    180.00   0.0  0
+ BC  CONST_43  H2    C2   C3   C4    180.00   0.0  0
+ BC  CONST_44  H5    C5   C4B  C4A     0.00   0.0  0
+ BC  CONST_45  H6    C6   C5   C4B   180.00   0.0  0
+ BC  CONST_46  H8    C8   C8A  C4B   180.00   0.0  0
+ BC  CONST_47  H7    C7   C6   C5    180.00   0.0  0
+ BC  CONST_48  H9    C9   C8B  C8A     0.00   0.0  0
+ BC  CONST_49  H10   C10  C9   C8B   180.00   0.0  0
+ BC  Var_01    C13   C14  CEA  CAA    22.59  30.0  1
+ BC  Var_02    C12   C11  CAA  C10  -175.57  30.0  1
+ BC  Var_03    C13   C12  C11  CAA   -41.24  30.0  1
+ BC  Var_04    C14   C13  C12  C11    64.96  30.0  1
+ BC  Var_05    CEA   CAA  C11  C12     8.09  30.0  1
+ BC  Var_06    CEA   C14  C13  C12   -55.47  30.0  1
+ BC  Var_07    O11   C11  CAA  C10   -51.30  30.0  1
+ BC  Var_08    O12   C12  C11  CAA  -163.83  30.0  1
+ BC  Var_09    O13   C13  C12  C11   -55.79  30.0  1
+ BC  Var_10    CEA   CAA  C11  O11   132.36  30.0  1
+ BC  Var_11    C13   C12  C11  O11  -163.51  30.0  1
+ BC  Var_12    C14   C13  C12  O12  -175.92  30.0  1
+ BC  Var_13    CEA   C14  C13  O13    67.09  30.0  1
+ BC  Var_14    H11   C11  CAA  C10    66.54  30.0  1
+ BC  Var_15    H12   C12  C11  CAA    76.34  30.0  1
+ BC  Var_16    H13   C13  C12  C11  -178.59  30.0  1
+ BC  Var_17    O12   C12  C11  O11    73.90  30.0  1
+ BC  Var_18    O13   C13  C12  O12    63.33  30.0  1
+ BC  Var_19    HO11  O11  C11  CAA   164.25  30.0  3
+ BC  Var_20    HO12  O12  C12  C11  -165.50  30.0  3
+ BC  Var_21    HO13  O13  C13  C12   -56.85  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

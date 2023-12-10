@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BVO  BVO  3-[3,5-bis(fluoranyl)-4-[3-(hydroxymethyl)phenyl]phenyl]benzo[f]benzotriazole-4,9-dione  ligand  44  31  .  2021-08-06  2021-08-06  
+ BVO  BVO  3-[3,5-bis(fluoranyl)-4-[3-(hydroxymethyl)phenyl]phenyl]benzo[f]benzotriazole-4,9-dione  ligand  44  31  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BVO
@@ -235,57 +236,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BVO  CONST_01  C19   C15  C14  C13  180.00   0.0  0
- BVO  CONST_02  C16   C15  C14  C13    0.00   0.0  0
- BVO  CONST_03  C16   C17  C12  C13    0.00   0.0  0
- BVO  CONST_06  C23   C24  C19  C15  180.00   0.0  0
- BVO  CONST_07  C21   C20  C19  C15  180.00   0.0  0
- BVO  CONST_08  C12   C13  C14  C15    0.00   0.0  0
- BVO  CONST_09  C12   C17  C16  C15    0.00   0.0  0
- BVO  CONST_10  C19   C15  C16  C17  180.00   0.0  0
- BVO  CONST_11  C14   C15  C16  C17    0.00   0.0  0
- BVO  CONST_12  C14   C13  C12  C17    0.00   0.0  0
- BVO  CONST_15  C23   C24  C19  C20    0.00   0.0  0
- BVO  CONST_18  C23   C22  C21  C20    0.00   0.0  0
- BVO  CONST_19  C24   C23  C22  C21    0.00   0.0  0
- BVO  CONST_20  C24   C19  C20  C21    0.00   0.0  0
- BVO  CONST_21  C19   C24  C23  C22    0.00   0.0  0
- BVO  CONST_22  C19   C20  C21  C22    0.00   0.0  0
- BVO  CONST_25  C31   C30  C29  C28    0.00   0.0  0
- BVO  CONST_26  C31   C1   C2   C28    0.00   0.0  0
- BVO  CONST_27  C29   C30  C31  C1     0.00   0.0  0
- BVO  CONST_28  C29   C28  C2   C1     0.00   0.0  0
- BVO  CONST_29  C30   C31  C1   C2     0.00   0.0  0
- BVO  CONST_30  C30   C29  C28  C2     0.00   0.0  0
- BVO  CONST_31  C12   N9   C6   C5   180.00   0.0  0
- BVO  CONST_32  N10   N9   C6   C5     0.00   0.0  0
- BVO  CONST_33  N9    N10  N11  C5     0.00   0.0  0
- BVO  CONST_34  N11   N10  N9   C6     0.00   0.0  0
- BVO  CONST_35  N10   N11  C5   C6     0.00   0.0  0
- BVO  CONST_36  C14   C13  C12  N9   180.00   0.0  0
- BVO  CONST_37  C16   C17  C12  N9   180.00   0.0  0
- BVO  CONST_38  N11   C5   C6   N9     0.00   0.0  0
- BVO  CONST_39  C12   N9   N10  N11  180.00   0.0  0
- BVO  CONST_40  C12   N9   C6   C7     0.00   0.0  0
- BVO  CONST_41  F27   C14  C13  C12  180.00   0.0  0
- BVO  CONST_42  F18   C16  C17  C12  180.00   0.0  0
- BVO  CONST_43  F18   C16  C15  C14  180.00   0.0  0
- BVO  CONST_44  F27   C14  C15  C16  180.00   0.0  0
- BVO  CONST_45  C19   C15  C16  F18    0.00   0.0  0
- BVO  CONST_46  F27   C14  C15  C19    0.00   0.0  0
- BVO  CONST_47  C25   C21  C20  C19  180.00   0.0  0
- BVO  CONST_48  C25   C21  C22  C23  180.00   0.0  0
- BVO  CONST_49  H171  C17  C12  C13  180.00   0.0  0
- BVO  CONST_50  H241  C24  C19  C15    0.00   0.0  0
- BVO  CONST_51  H201  C20  C19  C15    0.00   0.0  0
- BVO  CONST_52  H131  C13  C14  C15  180.00   0.0  0
- BVO  CONST_53  H221  C22  C21  C20  180.00   0.0  0
- BVO  CONST_54  H231  C23  C22  C21  180.00   0.0  0
- BVO  CONST_55  H301  C30  C29  C28  180.00   0.0  0
- BVO  CONST_56  H281  C28  C2   C1   180.00   0.0  0
- BVO  CONST_57  H311  C31  C1   C2   180.00   0.0  0
- BVO  CONST_58  H291  C29  C28  C2   180.00   0.0  0
- BVO  Var_01    O26   C25  C21  C20   38.98  30.0  2
+ BVO  CONST_01  C19   C15  C14  C13   180.00   0.0  0
+ BVO  CONST_02  C16   C15  C14  C13     0.00   0.0  0
+ BVO  CONST_03  C16   C17  C12  C13     0.00   0.0  0
+ BVO  CONST_04  C23   C24  C19  C15   180.00   0.0  0
+ BVO  CONST_05  C21   C20  C19  C15   180.00   0.0  0
+ BVO  CONST_06  C12   C13  C14  C15     0.00   0.0  0
+ BVO  CONST_07  C12   C17  C16  C15     0.00   0.0  0
+ BVO  CONST_08  C19   C15  C16  C17   180.00   0.0  0
+ BVO  CONST_09  C14   C15  C16  C17     0.00   0.0  0
+ BVO  CONST_10  C14   C13  C12  C17     0.00   0.0  0
+ BVO  CONST_11  C23   C24  C19  C20     0.00   0.0  0
+ BVO  CONST_12  C23   C22  C21  C20     0.00   0.0  0
+ BVO  CONST_13  C24   C23  C22  C21     0.00   0.0  0
+ BVO  CONST_14  C24   C19  C20  C21     0.00   0.0  0
+ BVO  CONST_15  C19   C24  C23  C22     0.00   0.0  0
+ BVO  CONST_16  C19   C20  C21  C22     0.00   0.0  0
+ BVO  CONST_17  C31   C30  C29  C28     0.00   0.0  0
+ BVO  CONST_18  C31   C1   C2   C28     0.00   0.0  0
+ BVO  CONST_19  C29   C30  C31  C1      0.00   0.0  0
+ BVO  CONST_20  C29   C28  C2   C1      0.00   0.0  0
+ BVO  CONST_21  C30   C31  C1   C2      0.00   0.0  0
+ BVO  CONST_22  C30   C29  C28  C2      0.00   0.0  0
+ BVO  CONST_23  C12   N9   C6   C5    180.00   0.0  0
+ BVO  CONST_24  N10   N9   C6   C5      0.00   0.0  0
+ BVO  CONST_25  N9    N10  N11  C5      0.00   0.0  0
+ BVO  CONST_26  N11   N10  N9   C6      0.00   0.0  0
+ BVO  CONST_27  N10   N11  C5   C6      0.00   0.0  0
+ BVO  CONST_28  C14   C13  C12  N9    180.00   0.0  0
+ BVO  CONST_29  C16   C17  C12  N9    180.00   0.0  0
+ BVO  CONST_30  N11   C5   C6   N9      0.00   0.0  0
+ BVO  CONST_31  C12   N9   N10  N11   180.00   0.0  0
+ BVO  CONST_32  C12   N9   C6   C7      0.00   0.0  0
+ BVO  CONST_33  F27   C14  C13  C12   180.00   0.0  0
+ BVO  CONST_34  F18   C16  C17  C12   180.00   0.0  0
+ BVO  CONST_35  F18   C16  C15  C14   180.00   0.0  0
+ BVO  CONST_36  F27   C14  C15  C16   180.00   0.0  0
+ BVO  CONST_37  C19   C15  C16  F18     0.00   0.0  0
+ BVO  CONST_38  F27   C14  C15  C19     0.00   0.0  0
+ BVO  CONST_39  C25   C21  C20  C19   180.00   0.0  0
+ BVO  CONST_40  C25   C21  C22  C23   180.00   0.0  0
+ BVO  CONST_41  H171  C17  C12  C13   180.00   0.0  0
+ BVO  CONST_42  H241  C24  C19  C15     0.00   0.0  0
+ BVO  CONST_43  H201  C20  C19  C15     0.00   0.0  0
+ BVO  CONST_44  H131  C13  C14  C15   180.00   0.0  0
+ BVO  CONST_45  H221  C22  C21  C20   180.00   0.0  0
+ BVO  CONST_46  H231  C23  C22  C21   180.00   0.0  0
+ BVO  CONST_47  H301  C30  C29  C28   180.00   0.0  0
+ BVO  CONST_48  H281  C28  C2   C1    180.00   0.0  0
+ BVO  CONST_49  H311  C31  C1   C2    180.00   0.0  0
+ BVO  CONST_50  H291  C29  C28  C2    180.00   0.0  0
+ BVO  Var_01    O26   C25  C21  C20    38.98  30.0  2
+ BVO  CONST_51  C5    C3   C2   C28   180.00   0.0  0
+ BVO  CONST_52  N9    C6   C7   C1    180.00   0.0  0
+ BVO  CONST_53  C5    C6   C7   C1      0.00   0.0  0
+ BVO  CONST_54  C5    C3   C2   C1      0.00   0.0  0
+ BVO  CONST_55  C6    C7   C1   C2      0.00   0.0  0
+ BVO  CONST_56  C6    C5   C3   C2      0.00   0.0  0
+ BVO  CONST_57  N11   C5   C3   C2    180.00   0.0  0
+ BVO  CONST_58  C31   C1   C7   C6    180.00   0.0  0
+ BVO  CONST_59  O4    C3   C2   C28     0.00   0.0  0
+ BVO  CONST_60  O4    C3   C2   C1    180.00   0.0  0
+ BVO  CONST_61  O8    C7   C1   C2    180.00   0.0  0
+ BVO  CONST_62  C6    C5   C3   O4    180.00   0.0  0
+ BVO  CONST_63  N11   C5   C3   O4      0.00   0.0  0
+ BVO  CONST_64  O8    C7   C6   C5    180.00   0.0  0
+ BVO  CONST_65  C31   C1   C7   O8      0.00   0.0  0
+ BVO  CONST_66  N9    C6   C7   O8      0.00   0.0  0
+ BVO  Var_02    C6    N9   C12  C13   125.57  30.0  2
+ BVO  Var_03    N10   N9   C12  C13   -54.31  30.0  2
+ BVO  Var_04    C6    N9   C12  C17   -55.98  30.0  2
+ BVO  Var_05    N10   N9   C12  C17   124.14  30.0  2
+ BVO  Var_06    C14   C15  C19  C20    62.70  30.0  2
+ BVO  Var_07    C16   C15  C19  C20  -117.65  30.0  2
+ BVO  Var_08    C14   C15  C19  C24  -116.96  30.0  2
+ BVO  Var_09    C16   C15  C19  C24    62.69  30.0  2
+ BVO  Var_10    H261  O26  C25  C21  -165.88  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CXU  CXU  '(2R,4S)-2-[(1R)-1-({[3-(2-chlorophenyl)-5-methyl-1,2-oxazol-4-yl]carbonyl}amino)-2-oxoethyl]-5,5-dimethyl-1,3-thiazolidine-4-carboxylic acid'  ligand  48  29  .  2022-03-15  2022-03-15
+ CXU  CXU  '(2R,4S)-2-[(1R)-1-({[3-(2-chlorophenyl)-5-methyl-1,2-oxazol-4-yl]carbonyl}amino)-2-oxoethyl]-5,5-dimethyl-1,3-thiazolidine-4-carboxylic acid'  ligand  48  29  .  2022-03-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CXU
@@ -250,41 +251,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CXU  CONST_01  O24  N25  C26  C22    0.00   0.0  0
- CXU  CONST_04  N25  O24  C23  C22    0.00   0.0  0
- CXU  CONST_05  N25  C26  C22  C23    0.00   0.0  0
- CXU  CONST_06  C28  C26  C22  C23  180.00   0.0  0
- CXU  CONST_07  C26  N25  O24  C23    0.00   0.0  0
- CXU  CONST_08  C26  C22  C23  O24    0.00   0.0  0
- CXU  CONST_09  C28  C26  N25  O24  180.00   0.0  0
- CXU  CONST_12  C32  C33  C28  C26  180.00   0.0  0
- CXU  CONST_13  C30  C29  C28  C26  180.00   0.0  0
- CXU  CONST_14  C31  C32  C33  C28    0.00   0.0  0
- CXU  CONST_15  C31  C30  C29  C28    0.00   0.0  0
- CXU  CONST_16  C32  C33  C28  C29    0.00   0.0  0
- CXU  CONST_17  C32  C31  C30  C29    0.00   0.0  0
- CXU  CONST_18  C33  C28  C29  C30    0.00   0.0  0
- CXU  CONST_19  C33  C32  C31  C30    0.00   0.0  0
- CXU  CONST_20  C26  C28  C29  CL     0.00   0.0  0
- CXU  CONST_21  C33  C28  C29  CL   180.00   0.0  0
- CXU  CONST_22  C31  C30  C29  CL   180.00   0.0  0
- CXU  CONST_23  N25  C26  C22  C21  180.00   0.0  0
- CXU  CONST_24  C28  C26  C22  C21    0.00   0.0  0
- CXU  CONST_25  O24  C23  C22  C21  180.00   0.0  0
- CXU  CONST_26  C27  C23  O24  N25  180.00   0.0  0
- CXU  CONST_27  C27  C23  C22  C26  180.00   0.0  0
- CXU  CONST_28  H33  C33  C28  C26    0.00   0.0  0
- CXU  CONST_29  H32  C32  C33  C28  180.00   0.0  0
- CXU  CONST_30  H30  C30  C29  C28  180.00   0.0  0
- CXU  CONST_31  H31  C31  C30  C29  180.00   0.0  0
- CXU  CONST_32  C22  C21  N2   C2   180.00   0.0  0
- CXU  CONST_33  HN2  N2   C21  C22    0.00   0.0  0
- CXU  CONST_34  O21  C21  N2   C2     0.00   0.0  0
- CXU  Var_01    C6   C5   S4   C3    12.82  30.0  1
- CXU  Var_02    C26  C22  C21  N2    20.66  30.0  2
- CXU  Var_03    H52  C52  C5   S4    65.09  30.0  3
- CXU  Var_04    H51  C51  C5   S4    61.02  30.0  3
- CXU  Var_05    H27  C27  C23  C22  166.35  30.0  2
+ CXU  CONST_01  O24  N25  C26  C22     0.00   0.0  0
+ CXU  CONST_02  N25  O24  C23  C22     0.00   0.0  0
+ CXU  CONST_03  N25  C26  C22  C23     0.00   0.0  0
+ CXU  CONST_04  C28  C26  C22  C23   180.00   0.0  0
+ CXU  CONST_05  C26  N25  O24  C23     0.00   0.0  0
+ CXU  CONST_06  C26  C22  C23  O24     0.00   0.0  0
+ CXU  CONST_07  C28  C26  N25  O24   180.00   0.0  0
+ CXU  CONST_08  C32  C33  C28  C26   180.00   0.0  0
+ CXU  CONST_09  C30  C29  C28  C26   180.00   0.0  0
+ CXU  CONST_10  C31  C32  C33  C28     0.00   0.0  0
+ CXU  CONST_11  C31  C30  C29  C28     0.00   0.0  0
+ CXU  CONST_12  C32  C33  C28  C29     0.00   0.0  0
+ CXU  CONST_13  C32  C31  C30  C29     0.00   0.0  0
+ CXU  CONST_14  C33  C28  C29  C30     0.00   0.0  0
+ CXU  CONST_15  C33  C32  C31  C30     0.00   0.0  0
+ CXU  CONST_16  C26  C28  C29  CL      0.00   0.0  0
+ CXU  CONST_17  C33  C28  C29  CL    180.00   0.0  0
+ CXU  CONST_18  C31  C30  C29  CL    180.00   0.0  0
+ CXU  CONST_19  N25  C26  C22  C21   180.00   0.0  0
+ CXU  CONST_20  C28  C26  C22  C21     0.00   0.0  0
+ CXU  CONST_21  O24  C23  C22  C21   180.00   0.0  0
+ CXU  CONST_22  C27  C23  O24  N25   180.00   0.0  0
+ CXU  CONST_23  C27  C23  C22  C26   180.00   0.0  0
+ CXU  CONST_24  H33  C33  C28  C26     0.00   0.0  0
+ CXU  CONST_25  H32  C32  C33  C28   180.00   0.0  0
+ CXU  CONST_26  H30  C30  C29  C28   180.00   0.0  0
+ CXU  CONST_27  H31  C31  C30  C29   180.00   0.0  0
+ CXU  CONST_28  C22  C21  N2   C2    180.00   0.0  0
+ CXU  CONST_29  HN2  N2   C21  C22     0.00   0.0  0
+ CXU  CONST_30  O21  C21  N2   C2      0.00   0.0  0
+ CXU  Var_01    C6   C5   S4   C3     12.82  30.0  1
+ CXU  Var_02    C26  C22  C21  N2     20.66  30.0  2
+ CXU  Var_03    H52  C52  C5   S4     65.09  30.0  3
+ CXU  Var_04    H51  C51  C5   S4     61.02  30.0  3
+ CXU  Var_05    H27  C27  C23  C22   166.35  30.0  2
+ CXU  Var_06    C5   C6   N7   C3     48.33  30.0  1
+ CXU  Var_07    C6   N7   C3   S4    -36.62  30.0  1
+ CXU  Var_08    N7   C6   C5   S4    -35.68  30.0  1
+ CXU  Var_09    N7   C3   S4   C5     12.36  30.0  1
+ CXU  Var_10    C33  C28  C26  C22    61.38  30.0  3
+ CXU  Var_11    C29  C28  C26  C22  -115.69  30.0  3
+ CXU  Var_12    C33  C28  C26  N25  -116.76  30.0  3
+ CXU  Var_13    C29  C28  C26  N25    66.16  30.0  3
+ CXU  Var_14    C6   N7   C3   C2   -159.23  30.0  1
+ CXU  Var_15    C5   S4   C3   C2    137.09  30.0  1
+ CXU  Var_16    C8   C6   N7   C3    -78.90  30.0  1
+ CXU  Var_17    C8   C6   C5   S4     90.67  30.0  1
+ CXU  Var_18    C52  C5   C6   N7   -154.94  30.0  1
+ CXU  Var_19    C51  C5   C6   N7     81.07  30.0  1
+ CXU  Var_20    H6   C6   N7   C3    163.79  30.0  1
+ CXU  Var_21    HN7  N7   C3   S4     83.70  30.0  1
+ CXU  Var_22    H3   C3   S4   C5   -104.45  30.0  1
+ CXU  Var_23    N7   C3   C2   C1     73.08  30.0  2
+ CXU  Var_24    S4   C3   C2   C1    -47.66  30.0  2
+ CXU  Var_25    N7   C3   C2   N2   -162.36  30.0  2
+ CXU  Var_26    S4   C3   C2   N2     76.90  30.0  2
+ CXU  Var_27    O82  C8   C6   C5   -104.62  30.0  2
+ CXU  Var_28    O81  C8   C6   C5     76.00  30.0  2
+ CXU  Var_29    O82  C8   C6   N7     19.23  30.0  2
+ CXU  Var_30    O81  C8   C6   N7   -160.15  30.0  2
+ CXU  Var_31    C52  C5   C6   C8    -28.59  30.0  1
+ CXU  Var_32    C51  C5   C6   C8   -152.58  30.0  1
+ CXU  Var_33    H2   C2   C3   S4   -164.92  30.0  3
+ CXU  Var_34    C3   C2   C1   O1    135.23  30.0  3
+ CXU  Var_35    C21  N2   C2   C3    136.74  30.0  3
+ CXU  Var_36    H1   C1   C2   C3    -47.39  30.0  2
+ CXU  Var_37    C21  N2   C2   C1    -98.68  30.0  3
+ CXU  Var_38    N2   C2   C1   O1     11.78  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

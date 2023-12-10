@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 75G  75G  (2S,4aR,6R,7R,7aS)-6-(6-amino-2-chloro-9H-purin-9-yl)-7-hydroxy-2-sulfanyltetrahydro-2H,4H-2lambda~5~-furo[3,2-d][1,3,2]dioxaphosphinin-2-one  ligand  34  23  .  2021-08-05  2022-09-16
+ 75G  75G  (2S,4aR,6R,7R,7aS)-6-(6-amino-2-chloro-9H-purin-9-yl)-7-hydroxy-2-sulfanyltetrahydro-2H,4H-2lambda~5~-furo[3,2-d][1,3,2]dioxaphosphinin-2-one  ligand  34  23  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_75G
@@ -201,36 +202,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 75G  CONST_01  C3   C4   N4  C1     0.00   0.0  0
- 75G  CONST_02  C3   C2   N5  C1     0.00   0.0  0
- 75G  CONST_03  N1   C2   N5  C1   180.00   0.0  0
- 75G  CONST_04  N4   C4   C3  C2     0.00   0.0  0
- 75G  CONST_05  C10  N2   C3  C2     0.00   0.0  0
- 75G  CONST_06  N4   C1   N5  C2     0.00   0.0  0
- 75G  CONST_07  N2   C10  N1  C2     0.00   0.0  0
- 75G  CONST_08  N1   C10  N2  C3     0.00   0.0  0
- 75G  CONST_09  C10  N1   C2  C3     0.00   0.0  0
- 75G  CONST_10  N5   C1   N4  C4     0.00   0.0  0
- 75G  CONST_11  C10  N2   C3  C4   180.00   0.0  0
- 75G  CONST_12  N5   C2   C3  C4     0.00   0.0  0
- 75G  CONST_13  N1   C2   C3  C4   180.00   0.0  0
- 75G  CONST_14  N2   C3   C2  N1     0.00   0.0  0
- 75G  CONST_15  N5   C2   N1  C10  180.00   0.0  0
- 75G  CONST_16  N4   C4   C3  N2   180.00   0.0  0
- 75G  CONST_17  N5   C2   C3  N2   180.00   0.0  0
- 75G  CONST_18  C7   N1   C2  C3   180.00   0.0  0
- 75G  CONST_19  N5   C2   N1  C7     0.00   0.0  0
- 75G  CONST_20  N2   C10  N1  C7   180.00   0.0  0
- 75G  CONST_21  N3   C4   N4  C1   180.00   0.0  0
- 75G  CONST_22  N3   C4   C3  C2   180.00   0.0  0
- 75G  CONST_23  CL1  C1   N5  C2   180.00   0.0  0
- 75G  CONST_24  CL1  C1   N4  C4   180.00   0.0  0
- 75G  CONST_25  N3   C4   C3  N2     0.00   0.0  0
- 75G  CONST_26  H9   C10  N1  C2   180.00   0.0  0
- 75G  CONST_27  H10  N3   C4  C3     0.00   0.0  0
- 75G  CONST_28  H11  N3   C4  C3   180.00   0.0  0
- 75G  Var_01    C6   C5   O2  P1    51.53  30.0  1
- 75G  Var_02    O5   P1   O2  C5   -38.62  30.0  1
+ 75G  CONST_01  C3   C4   N4  C1      0.00   0.0  0
+ 75G  CONST_02  C3   C2   N5  C1      0.00   0.0  0
+ 75G  CONST_03  N1   C2   N5  C1    180.00   0.0  0
+ 75G  CONST_04  N4   C4   C3  C2      0.00   0.0  0
+ 75G  CONST_05  C10  N2   C3  C2      0.00   0.0  0
+ 75G  CONST_06  N4   C1   N5  C2      0.00   0.0  0
+ 75G  CONST_07  N2   C10  N1  C2      0.00   0.0  0
+ 75G  CONST_08  N1   C10  N2  C3      0.00   0.0  0
+ 75G  CONST_09  C10  N1   C2  C3      0.00   0.0  0
+ 75G  CONST_10  N5   C1   N4  C4      0.00   0.0  0
+ 75G  CONST_11  C10  N2   C3  C4    180.00   0.0  0
+ 75G  CONST_12  N5   C2   C3  C4      0.00   0.0  0
+ 75G  CONST_13  N1   C2   C3  C4    180.00   0.0  0
+ 75G  CONST_14  N2   C3   C2  N1      0.00   0.0  0
+ 75G  CONST_15  N5   C2   N1  C10   180.00   0.0  0
+ 75G  CONST_16  N4   C4   C3  N2    180.00   0.0  0
+ 75G  CONST_17  N5   C2   C3  N2    180.00   0.0  0
+ 75G  CONST_18  C7   N1   C2  C3    180.00   0.0  0
+ 75G  CONST_19  N5   C2   N1  C7      0.00   0.0  0
+ 75G  CONST_20  N2   C10  N1  C7    180.00   0.0  0
+ 75G  CONST_21  N3   C4   N4  C1    180.00   0.0  0
+ 75G  CONST_22  N3   C4   C3  C2    180.00   0.0  0
+ 75G  CONST_23  CL1  C1   N5  C2    180.00   0.0  0
+ 75G  CONST_24  CL1  C1   N4  C4    180.00   0.0  0
+ 75G  CONST_25  N3   C4   C3  N2      0.00   0.0  0
+ 75G  CONST_26  H9   C10  N1  C2    180.00   0.0  0
+ 75G  CONST_27  H10  N3   C4  C3      0.00   0.0  0
+ 75G  CONST_28  H11  N3   C4  C3    180.00   0.0  0
+ 75G  Var_01    C6   C5   O2  P1     51.53  30.0  1
+ 75G  Var_02    O5   P1   O2  C5    -38.62  30.0  1
+ 75G  Var_03    O3   C7   N1  C2   -163.29  30.0  2
+ 75G  Var_04    C8   C7   N1  C2     78.15  30.0  2
+ 75G  Var_05    C8   C9   O5  P1   -170.76  30.0  1
+ 75G  Var_06    C6   C9   O5  P1    -54.72  30.0  1
+ 75G  Var_07    O3   C6   C5  O2   -176.55  30.0  1
+ 75G  Var_08    C9   C6   C5  O2    -61.45  30.0  1
+ 75G  Var_09    C9   O5   P1  O2     37.30  30.0  1
+ 75G  Var_10    C7   O3   C6  C5    148.69  30.0  1
+ 75G  Var_11    C8   C9   C6  C5   -167.27  30.0  1
+ 75G  Var_12    O5   C9   C6  C5     67.82  30.0  1
+ 75G  Var_13    N1   C7   O3  C6   -124.30  30.0  1
+ 75G  Var_14    C8   C7   O3  C6     -2.91  30.0  1
+ 75G  Var_15    C7   C8   C9  C6     40.62  30.0  1
+ 75G  Var_16    C10  N1   C7  O3     18.44  30.0  2
+ 75G  Var_17    C9   C8   C7  O3    -24.55  30.0  1
+ 75G  Var_18    C8   C9   C6  O3    -44.84  30.0  1
+ 75G  Var_19    O5   C9   C6  O3   -169.75  30.0  1
+ 75G  Var_20    C9   C6   O3  C7     29.45  30.0  1
+ 75G  Var_21    O5   C9   C8  C7    162.33  30.0  1
+ 75G  Var_22    C10  N1   C7  C8   -100.12  30.0  2
+ 75G  Var_23    N1   C7   C8  C9     94.20  30.0  1
+ 75G  Var_24    C9   O5   P1  O1    160.99  30.0  1
+ 75G  Var_25    O4   C8   C9  C6    -75.97  30.0  1
+ 75G  Var_26    O4   C8   C7  O3     89.72  30.0  1
+ 75G  Var_27    N1   C7   C8  O4   -151.53  30.0  1
+ 75G  Var_28    O5   C9   C8  O4     45.73  30.0  1
+ 75G  Var_29    S1   P1   O5  C9    -73.67  30.0  1
+ 75G  Var_30    H5   C7   N1  C2    -43.57  30.0  2
+ 75G  Var_31    H8   C9   O5  P1     66.76  30.0  1
+ 75G  Var_32    H4   C6   C5  O2     59.33  30.0  1
+ 75G  Var_33    H6   C8   C9  C6    157.91  30.0  1
+ 75G  Var_34    H12  S1   P1  O2     60.99  30.0  3
+ 75G  Var_35    H7   O4   C8  C7     78.49  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- XEG  XEG  '(2R,3S)-2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-3,4-dihydro-2H-chromen-3-yl 3,4,5-trihydroxybenzoate'  ligand  50  32  .  2021-08-24  2021-08-24  
+ XEG  XEG  '(2R,3S)-2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-3,4-dihydro-2H-chromen-3-yl 3,4,5-trihydroxybenzoate'  ligand  50  32  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_XEG
@@ -252,52 +253,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- XEG  CONST_01  CAO  CBA  CAJ  CAI    0.00   0.0  0
- XEG  CONST_02  CAO  CAV  CAU  CAI    0.00   0.0  0
- XEG  CONST_03  CAV  CAU  CAI  CAJ    0.00   0.0  0
- XEG  CONST_04  CAV  CAO  CBA  CAJ    0.00   0.0  0
- XEG  CONST_05  CBC  CBD  CAY  CAK    0.00   0.0  0
- XEG  CONST_06  CBC  CAN  CAT  CAK    0.00   0.0  0
- XEG  CONST_07  CAX  CBB  CAW  CAL    0.00   0.0  0
- XEG  CONST_08  CAX  CAM  CAZ  CAL    0.00   0.0  0
- XEG  CONST_09  CAW  CAL  CAZ  CAM    0.00   0.0  0
- XEG  CONST_10  CAW  CBB  CAX  CAM    0.00   0.0  0
- XEG  CONST_11  CAY  CBD  CBC  CAN    0.00   0.0  0
- XEG  CONST_12  CAY  CAK  CAT  CAN    0.00   0.0  0
- XEG  CONST_13  CBD  CAY  CAK  CAT    0.00   0.0  0
- XEG  CONST_14  CBD  CBC  CAN  CAT    0.00   0.0  0
- XEG  CONST_15  CBA  CAJ  CAI  CAU    0.00   0.0  0
- XEG  CONST_16  CBA  CAO  CAV  CAU    0.00   0.0  0
- XEG  CONST_17  CBB  CAW  CAL  CAZ    0.00   0.0  0
- XEG  CONST_18  CBB  CAX  CAM  CAZ    0.00   0.0  0
- XEG  CONST_19  CBF  CBA  CAJ  CAI  180.00   0.0  0
- XEG  CONST_20  CBF  CBA  CAO  CAV  180.00   0.0  0
- XEG  CONST_21  CAY  CAK  CAT  OAB  180.00   0.0  0
- XEG  CONST_22  CBC  CAN  CAT  OAB  180.00   0.0  0
- XEG  CONST_23  CAJ  CAI  CAU  OAC  180.00   0.0  0
- XEG  CONST_24  CAO  CAV  CAU  OAC  180.00   0.0  0
- XEG  CONST_25  CBA  CAO  CAV  OAD  180.00   0.0  0
- XEG  CONST_26  CAI  CAU  CAV  OAD  180.00   0.0  0
- XEG  CONST_27  CAZ  CAL  CAW  OAE  180.00   0.0  0
- XEG  CONST_28  CAX  CBB  CAW  OAE  180.00   0.0  0
- XEG  CONST_29  CAZ  CAM  CAX  OAF  180.00   0.0  0
- XEG  CONST_30  CAW  CBB  CAX  OAF  180.00   0.0  0
- XEG  CONST_31  CAT  CAK  CAY  OAG  180.00   0.0  0
- XEG  CONST_32  CAP  CBD  CAY  OAG    0.00   0.0  0
- XEG  CONST_33  CBC  CBD  CAY  OAG  180.00   0.0  0
- XEG  CONST_34  CAL  CAW  CBB  OAH  180.00   0.0  0
- XEG  CONST_35  CAM  CAX  CBB  OAH  180.00   0.0  0
- XEG  CONST_36  CAW  CAL  CAZ  CAS  180.00   0.0  0
- XEG  CONST_37  CAX  CAM  CAZ  CAS  180.00   0.0  0
- XEG  CONST_38  HAO  CAO  CBA  CAJ  180.00   0.0  0
- XEG  CONST_39  HAN  CAN  CAT  CAK  180.00   0.0  0
- XEG  CONST_40  HAM  CAM  CAZ  CAL  180.00   0.0  0
- XEG  CONST_41  HAL  CAL  CAZ  CAM  180.00   0.0  0
- XEG  CONST_42  HAK  CAK  CAT  CAN  180.00   0.0  0
- XEG  CONST_43  HAJ  CAJ  CBA  CAO  180.00   0.0  0
- XEG  CONST_44  HAI  CAI  CAU  CAV  180.00   0.0  0
- XEG  Var_01    CBE  CAP  CBD  CAY  163.74  30.0  1
- XEG  Var_02    CAL  CAZ  CAS  OAA   -5.02  30.0  2
+ XEG  CONST_01  CAO   CBA  CAJ  CAI     0.00   0.0  0
+ XEG  CONST_02  CAO   CAV  CAU  CAI     0.00   0.0  0
+ XEG  CONST_03  CAV   CAU  CAI  CAJ     0.00   0.0  0
+ XEG  CONST_04  CAV   CAO  CBA  CAJ     0.00   0.0  0
+ XEG  CONST_05  CBC   CBD  CAY  CAK     0.00   0.0  0
+ XEG  CONST_06  CBC   CAN  CAT  CAK     0.00   0.0  0
+ XEG  CONST_07  CAX   CBB  CAW  CAL     0.00   0.0  0
+ XEG  CONST_08  CAX   CAM  CAZ  CAL     0.00   0.0  0
+ XEG  CONST_09  CAW   CAL  CAZ  CAM     0.00   0.0  0
+ XEG  CONST_10  CAW   CBB  CAX  CAM     0.00   0.0  0
+ XEG  CONST_11  CAY   CBD  CBC  CAN     0.00   0.0  0
+ XEG  CONST_12  CAY   CAK  CAT  CAN     0.00   0.0  0
+ XEG  CONST_13  CBD   CAY  CAK  CAT     0.00   0.0  0
+ XEG  CONST_14  CBD   CBC  CAN  CAT     0.00   0.0  0
+ XEG  CONST_15  CBA   CAJ  CAI  CAU     0.00   0.0  0
+ XEG  CONST_16  CBA   CAO  CAV  CAU     0.00   0.0  0
+ XEG  CONST_17  CBB   CAW  CAL  CAZ     0.00   0.0  0
+ XEG  CONST_18  CBB   CAX  CAM  CAZ     0.00   0.0  0
+ XEG  CONST_19  CBF   CBA  CAJ  CAI   180.00   0.0  0
+ XEG  CONST_20  CBF   CBA  CAO  CAV   180.00   0.0  0
+ XEG  CONST_21  CAY   CAK  CAT  OAB   180.00   0.0  0
+ XEG  CONST_22  CBC   CAN  CAT  OAB   180.00   0.0  0
+ XEG  CONST_23  CAJ   CAI  CAU  OAC   180.00   0.0  0
+ XEG  CONST_24  CAO   CAV  CAU  OAC   180.00   0.0  0
+ XEG  CONST_25  CBA   CAO  CAV  OAD   180.00   0.0  0
+ XEG  CONST_26  CAI   CAU  CAV  OAD   180.00   0.0  0
+ XEG  CONST_27  CAZ   CAL  CAW  OAE   180.00   0.0  0
+ XEG  CONST_28  CAX   CBB  CAW  OAE   180.00   0.0  0
+ XEG  CONST_29  CAZ   CAM  CAX  OAF   180.00   0.0  0
+ XEG  CONST_30  CAW   CBB  CAX  OAF   180.00   0.0  0
+ XEG  CONST_31  CAT   CAK  CAY  OAG   180.00   0.0  0
+ XEG  CONST_32  CAP   CBD  CAY  OAG     0.00   0.0  0
+ XEG  CONST_33  CBC   CBD  CAY  OAG   180.00   0.0  0
+ XEG  CONST_34  CAL   CAW  CBB  OAH   180.00   0.0  0
+ XEG  CONST_35  CAM   CAX  CBB  OAH   180.00   0.0  0
+ XEG  CONST_36  CAW   CAL  CAZ  CAS   180.00   0.0  0
+ XEG  CONST_37  CAX   CAM  CAZ  CAS   180.00   0.0  0
+ XEG  CONST_38  HAO   CAO  CBA  CAJ   180.00   0.0  0
+ XEG  CONST_39  HAN   CAN  CAT  CAK   180.00   0.0  0
+ XEG  CONST_40  HAM   CAM  CAZ  CAL   180.00   0.0  0
+ XEG  CONST_41  HAL   CAL  CAZ  CAM   180.00   0.0  0
+ XEG  CONST_42  HAK   CAK  CAT  CAN   180.00   0.0  0
+ XEG  CONST_43  HAJ   CAJ  CBA  CAO   180.00   0.0  0
+ XEG  CONST_44  HAI   CAI  CAU  CAV   180.00   0.0  0
+ XEG  Var_01    CBE   CAP  CBD  CAY   163.74  30.0  1
+ XEG  Var_02    CAL   CAZ  CAS  OAA    -5.02  30.0  2
+ XEG  Var_03    OAR   CBF  CBA  CAJ   -39.73  30.0  3
+ XEG  Var_04    CBE   CBF  CBA  CAJ    80.74  30.0  3
+ XEG  Var_05    CBF   OAR  CBC  CAN   164.19  30.0  1
+ XEG  Var_06    OAR   CBF  CBA  CAO   146.16  30.0  3
+ XEG  Var_07    CBE   CBF  CBA  CAO   -93.38  30.0  3
+ XEG  Var_08    OAR   CBF  CBE  CAP   -64.01  30.0  1
+ XEG  Var_09    CBA   CBF  CBE  CAP   175.31  30.0  1
+ XEG  Var_10    CBC   OAR  CBF  CBA   170.24  30.0  1
+ XEG  Var_11    CBE   CBF  OAR  CBC    48.27  30.0  1
+ XEG  Var_12    CBF   CBE  CAP  CBD    45.96  30.0  1
+ XEG  Var_13    CBF   OAR  CBC  CBD   -16.43  30.0  1
+ XEG  Var_14    CBD   CAP  CBE  OAQ   163.66  30.0  1
+ XEG  Var_15    OAR   CBF  CBE  OAQ   177.23  30.0  1
+ XEG  Var_16    CBA   CBF  CBE  OAQ    56.54  30.0  1
+ XEG  Var_17    HBF   CBF  CBA  CAJ  -159.48  30.0  3
+ XEG  Var_18    HBE   CBE  CBF  OAR    57.27  30.0  1
+ XEG  Var_19    CAS   OAQ  CBE  CAP   137.27  30.0  1
+ XEG  Var_20    CBF   CBE  OAQ  CAS  -103.56  30.0  3
+ XEG  Var_21    CBE   OAQ  CAS  CAZ   165.41  30.0  3
+ XEG  Var_22    HOAC  OAC  CAU  CAI  -179.29  30.0  2
+ XEG  Var_23    HOAG  OAG  CAY  CAK     0.74  30.0  2
+ XEG  Var_24    HOAB  OAB  CAT  CAK   179.42  30.0  2
+ XEG  Var_25    HOAE  OAE  CAW  CAL  -178.61  30.0  2
+ XEG  Var_26    HOAF  OAF  CAX  CAM     2.01  30.0  2
+ XEG  Var_27    HOAD  OAD  CAV  CAO     5.01  30.0  2
+ XEG  Var_28    HOAH  OAH  CBB  CAW  -177.69  30.0  2
+ XEG  Var_29    CBE   OAQ  CAS  OAA   -15.22  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

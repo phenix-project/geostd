@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5EY  5EY  '(3R)-3-(2-carboxyethyl)-6-{(E)-[(2R)-2-hydroxy-2,3-dihydro-1H-inden-1-ylidene]methyl}-2,3-dihydro-1,4-benzodioxine-5-carboxylic acid'  ligand  47  29  .  2021-08-04  2022-09-22
+ 5EY  5EY  '(3R)-3-(2-carboxyethyl)-6-{(E)-[(2R)-2-hydroxy-2,3-dihydro-1H-inden-1-ylidene]methyl}-2,3-dihydro-1,4-benzodioxine-5-carboxylic acid'  ligand  47  29  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5EY
@@ -249,37 +250,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5EY  CONST_01  C6   C1   C2   C3      0.00   0.0  0
- 5EY  CONST_02  C6   C5   C4   C3      0.00   0.0  0
- 5EY  CONST_03  C5   C4   C3   C2      0.00   0.0  0
- 5EY  CONST_04  C5   C6   C1   C2      0.00   0.0  0
- 5EY  CONST_05  C1   C2   C3   C4      0.00   0.0  0
- 5EY  CONST_06  C1   C6   C5   C4      0.00   0.0  0
- 5EY  CONST_07  C15  C14  C13  C12     0.00   0.0  0
- 5EY  CONST_08  C15  C16  C11  C12     0.00   0.0  0
- 5EY  CONST_09  C16  C11  C12  C13     0.00   0.0  0
- 5EY  CONST_10  C16  C15  C14  C13     0.00   0.0  0
- 5EY  CONST_11  C14  C13  C12  C11     0.00   0.0  0
- 5EY  CONST_12  C14  C15  C16  C11     0.00   0.0  0
- 5EY  CONST_13  C17  C16  C11  C12   180.00   0.0  0
- 5EY  CONST_14  C10  C11  C12  C13   180.00   0.0  0
- 5EY  CONST_15  C17  C16  C15  C14   180.00   0.0  0
- 5EY  CONST_16  C10  C11  C16  C15   180.00   0.0  0
- 5EY  CONST_17  O20  C15  C16  C17     0.00   0.0  0
- 5EY  CONST_18  H1   C1   C2   C3    180.00   0.0  0
- 5EY  CONST_19  H4   C4   C3   C2    180.00   0.0  0
- 5EY  CONST_20  HA   C2   C3   C4    180.00   0.0  0
- 5EY  CONST_21  H3   C3   C2   C1    180.00   0.0  0
- 5EY  CONST_22  H13  C13  C12  C11   180.00   0.0  0
- 5EY  CONST_23  H12  C12  C11  C16   180.00   0.0  0
- 5EY  Var_01    C8   C9   C5   C4   -160.18  30.0  1
- 5EY  Var_02    C8   C7   C6   C1    160.78  30.0  1
- 5EY  Var_03    C21  C22  O23  C14    42.85  30.0  1
- 5EY  Var_04    C9   C10  C11  C12    45.58  30.0  2
- 5EY  Var_05    C11  C10  C9   C5      4.68  30.0  2
- 5EY  Var_06    O19  C17  C16  C11   -90.00  30.0  2
- 5EY  Var_07    C21  C24  C25  C26   177.38  30.0  3
- 5EY  Var_08    O28  C26  C25  C24  -177.85  30.0  2
+ 5EY  CONST_01  C6    C1   C2   C3      0.00   0.0  0
+ 5EY  CONST_02  C6    C5   C4   C3      0.00   0.0  0
+ 5EY  CONST_03  C5    C4   C3   C2      0.00   0.0  0
+ 5EY  CONST_04  C5    C6   C1   C2      0.00   0.0  0
+ 5EY  CONST_05  C1    C2   C3   C4      0.00   0.0  0
+ 5EY  CONST_06  C1    C6   C5   C4      0.00   0.0  0
+ 5EY  CONST_07  C15   C14  C13  C12     0.00   0.0  0
+ 5EY  CONST_08  C15   C16  C11  C12     0.00   0.0  0
+ 5EY  CONST_09  C16   C11  C12  C13     0.00   0.0  0
+ 5EY  CONST_10  C16   C15  C14  C13     0.00   0.0  0
+ 5EY  CONST_11  C14   C13  C12  C11     0.00   0.0  0
+ 5EY  CONST_12  C14   C15  C16  C11     0.00   0.0  0
+ 5EY  CONST_13  C17   C16  C11  C12   180.00   0.0  0
+ 5EY  CONST_14  C10   C11  C12  C13   180.00   0.0  0
+ 5EY  CONST_15  C17   C16  C15  C14   180.00   0.0  0
+ 5EY  CONST_16  C10   C11  C16  C15   180.00   0.0  0
+ 5EY  CONST_17  O20   C15  C16  C17     0.00   0.0  0
+ 5EY  CONST_18  H1    C1   C2   C3    180.00   0.0  0
+ 5EY  CONST_19  H4    C4   C3   C2    180.00   0.0  0
+ 5EY  CONST_20  HA    C2   C3   C4    180.00   0.0  0
+ 5EY  CONST_21  H3    C3   C2   C1    180.00   0.0  0
+ 5EY  CONST_22  H13   C13  C12  C11   180.00   0.0  0
+ 5EY  CONST_23  H12   C12  C11  C16   180.00   0.0  0
+ 5EY  Var_01    C8    C9   C5   C4   -160.18  30.0  1
+ 5EY  Var_02    C8    C7   C6   C1    160.78  30.0  1
+ 5EY  Var_03    C21   C22  O23  C14    42.85  30.0  1
+ 5EY  Var_04    C9    C10  C11  C12    45.58  30.0  2
+ 5EY  Var_05    C11   C10  C9   C5      4.68  30.0  2
+ 5EY  Var_06    O19   C17  C16  C11   -90.00  30.0  2
+ 5EY  Var_07    C21   C24  C25  C26   177.38  30.0  3
+ 5EY  Var_08    O28   C26  C25  C24  -177.85  30.0  2
+ 5EY  Var_09    C22   O23  C14  C13   165.81  30.0  1
+ 5EY  Var_10    C7    C8   C9   C5    -27.26  30.0  1
+ 5EY  Var_11    C21   O20  C15  C16   161.90  30.0  1
+ 5EY  Var_12    C9    C8   C7   C6     27.79  30.0  1
+ 5EY  Var_13    C21   O20  C15  C14   -18.16  30.0  1
+ 5EY  Var_14    C22   O23  C14  C15   -13.78  30.0  1
+ 5EY  Var_15    C22   C21  O20  C15    46.08  30.0  1
+ 5EY  Var_16    O20   C21  C22  O23   -59.31  30.0  1
+ 5EY  Var_17    O29   C8   C9   C5     90.93  30.0  1
+ 5EY  Var_18    O29   C8   C7   C6    -86.91  30.0  1
+ 5EY  Var_19    C24   C21  O20  C15   168.13  30.0  1
+ 5EY  Var_20    C7    C8   C9   C10   152.93  30.0  1
+ 5EY  Var_21    O23   C22  C21  C24  -179.23  30.0  1
+ 5EY  Var_22    H8    C8   C9   C5   -147.45  30.0  1
+ 5EY  Var_23    H21   C21  O20  C15   -72.46  30.0  1
+ 5EY  Var_24    O29   C8   C9   C10   -88.88  30.0  1
+ 5EY  Var_25    C25   C24  C21  C22  -178.56  30.0  3
+ 5EY  Var_26    C25   C24  C21  O20    61.29  30.0  3
+ 5EY  Var_27    H29   O29  C8   C9   -175.51  30.0  3
+ 5EY  Var_28    H241  C24  C21  C22   -57.26  30.0  3
+ 5EY  Var_29    H242  C24  C21  C22    57.56  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

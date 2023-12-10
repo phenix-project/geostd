@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 09A  09A  'benzyl (3S,5'R)-2-oxo-1,2-dihydrospiro[indole-3,3'-pyrrolidine]-5'-carboxylate'  ligand  42  24  .  2022-03-08  2022-03-08
+ 09A  09A  'benzyl (3S,5'R)-2-oxo-1,2-dihydrospiro[indole-3,3'-pyrrolidine]-5'-carboxylate'  ligand  42  24  .  2022-03-08  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_09A
@@ -231,35 +232,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 09A  CONST_01  C19  C24  C23  C22    0.00   0.0  0
- 09A  CONST_02  C19  C20  C21  C22    0.00   0.0  0
- 09A  CONST_03  C17  C1   C3   C5     0.00   0.0  0
- 09A  CONST_04  C17  C6   C8   C5     0.00   0.0  0
- 09A  CONST_05  C24  C23  C22  C21    0.00   0.0  0
- 09A  CONST_06  C24  C19  C20  C21    0.00   0.0  0
- 09A  CONST_07  C20  C19  C24  C23    0.00   0.0  0
- 09A  CONST_08  C20  C21  C22  C23    0.00   0.0  0
- 09A  CONST_09  C1   C3   C5   C8     0.00   0.0  0
- 09A  CONST_10  C1   C17  C6   C8     0.00   0.0  0
- 09A  CONST_11  C6   C8   C5   C3     0.00   0.0  0
- 09A  CONST_12  C6   C17  C1   C3     0.00   0.0  0
- 09A  CONST_13  C2   C14  N16  C17    0.00   0.0  0
- 09A  CONST_14  C18  C19  C20  C21  180.00   0.0  0
- 09A  CONST_15  C18  C19  C24  C23  180.00   0.0  0
- 09A  CONST_16  O15  C14  N16  C17  180.00   0.0  0
- 09A  CONST_17  H8   C24  C23  C22  180.00   0.0  0
- 09A  CONST_18  H7   C20  C21  C22  180.00   0.0  0
- 09A  CONST_19  H9   C6   C8   C5   180.00   0.0  0
- 09A  CONST_20  H4   C23  C22  C21  180.00   0.0  0
- 09A  CONST_21  H3   C21  C22  C23  180.00   0.0  0
- 09A  CONST_22  H6   C3   C5   C8   180.00   0.0  0
- 09A  CONST_23  H5   C8   C5   C3   180.00   0.0  0
- 09A  CONST_24  H1   C22  C21  C20  180.00   0.0  0
- 09A  CONST_25  H2   C5   C8   C6   180.00   0.0  0
- 09A  CONST_26  H17  N16  C14  C2   180.00   0.0  0
- 09A  Var_01    C2   C13  N10  C7    39.60  30.0  1
- 09A  Var_02    O11  C18  C19  C20  -97.02  30.0  2
- 09A  Var_03    O12  C9   O11  C18    0.43  30.0  1
+ 09A  CONST_01  C19  C24  C23  C22     0.00   0.0  0
+ 09A  CONST_02  C19  C20  C21  C22     0.00   0.0  0
+ 09A  CONST_03  C17  C1   C3   C5      0.00   0.0  0
+ 09A  CONST_04  C17  C6   C8   C5      0.00   0.0  0
+ 09A  CONST_05  C24  C23  C22  C21     0.00   0.0  0
+ 09A  CONST_06  C24  C19  C20  C21     0.00   0.0  0
+ 09A  CONST_07  C20  C19  C24  C23     0.00   0.0  0
+ 09A  CONST_08  C20  C21  C22  C23     0.00   0.0  0
+ 09A  CONST_09  C1   C3   C5   C8      0.00   0.0  0
+ 09A  CONST_10  C1   C17  C6   C8      0.00   0.0  0
+ 09A  CONST_11  C6   C8   C5   C3      0.00   0.0  0
+ 09A  CONST_12  C6   C17  C1   C3      0.00   0.0  0
+ 09A  CONST_13  C2   C14  N16  C17     0.00   0.0  0
+ 09A  CONST_14  C18  C19  C20  C21   180.00   0.0  0
+ 09A  CONST_15  C18  C19  C24  C23   180.00   0.0  0
+ 09A  CONST_16  O15  C14  N16  C17   180.00   0.0  0
+ 09A  CONST_17  H8   C24  C23  C22   180.00   0.0  0
+ 09A  CONST_18  H7   C20  C21  C22   180.00   0.0  0
+ 09A  CONST_19  H9   C6   C8   C5    180.00   0.0  0
+ 09A  CONST_20  H4   C23  C22  C21   180.00   0.0  0
+ 09A  CONST_21  H3   C21  C22  C23   180.00   0.0  0
+ 09A  CONST_22  H6   C3   C5   C8    180.00   0.0  0
+ 09A  CONST_23  H5   C8   C5   C3    180.00   0.0  0
+ 09A  CONST_24  H1   C22  C21  C20   180.00   0.0  0
+ 09A  CONST_25  H2   C5   C8   C6    180.00   0.0  0
+ 09A  CONST_26  H17  N16  C14  C2    180.00   0.0  0
+ 09A  Var_01    C2   C13  N10  C7     39.60  30.0  1
+ 09A  Var_02    O11  C18  C19  C20   -97.02  30.0  2
+ 09A  Var_03    O12  C9   O11  C18     0.43  30.0  1
+ 09A  Var_04    C13  C2   C1   C3     63.40  30.0  2
+ 09A  Var_05    C4   C2   C1   C3    -56.28  30.0  2
+ 09A  Var_06    N10  C13  C2   C1   -161.06  30.0  1
+ 09A  Var_07    C7   C4   C2   C1    140.46  30.0  1
+ 09A  Var_08    C13  C2   C1   C17  -115.45  30.0  2
+ 09A  Var_09    C4   C2   C1   C17   124.87  30.0  2
+ 09A  Var_10    N10  C13  C2   C14    84.91  30.0  1
+ 09A  Var_11    C7   C4   C2   C14  -102.06  30.0  1
+ 09A  Var_12    C13  N10  C7   C4    -29.74  30.0  1
+ 09A  Var_13    N10  C13  C2   C4    -33.46  30.0  1
+ 09A  Var_14    N16  C14  C2   C4   -128.82  30.0  3
+ 09A  Var_15    C7   C4   C2   C13    14.45  30.0  1
+ 09A  Var_16    N16  C14  C2   C13   118.86  30.0  3
+ 09A  Var_17    N10  C7   C4   C2      8.41  30.0  1
+ 09A  Var_18    C13  N10  C7   C9   -154.10  30.0  1
+ 09A  Var_19    C2   C4   C7   C9    132.57  30.0  1
+ 09A  Var_20    O15  C14  C2   C4     52.00  30.0  3
+ 09A  Var_21    O15  C14  C2   C13   -60.32  30.0  3
+ 09A  Var_22    H12  C13  C2   C1    -43.05  30.0  1
+ 09A  Var_23    H13  C13  C2   C1     76.17  30.0  1
+ 09A  Var_24    H10  C4   C2   C1     21.63  30.0  1
+ 09A  Var_25    H11  C4   C2   C1    -97.36  30.0  1
+ 09A  Var_26    H18  N10  C7   C4     87.23  30.0  1
+ 09A  Var_27    H14  C7   N10  C13    86.87  30.0  1
+ 09A  Var_28    O12  C9   C7   C4   -113.41  30.0  3
+ 09A  Var_29    O11  C9   C7   C4     65.84  30.0  3
+ 09A  Var_30    O12  C9   C7   N10     8.40  30.0  3
+ 09A  Var_31    O11  C9   C7   N10  -172.34  30.0  3
+ 09A  Var_32    C9   O11  C18  C19  -179.24  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

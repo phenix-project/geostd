@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CJT  CJT  4-[4-[[4-(dimethylamino)cyclohexyl]amino]-7~{H}-pyrrolo[2,3-d]pyrimidin-5-yl]cyclohexane-1-carboxamide  ligand  60  28  .  2021-08-07  2021-08-07  
+ CJT  CJT  4-[4-[[4-(dimethylamino)cyclohexyl]amino]-7~{H}-pyrrolo[2,3-d]pyrimidin-5-yl]cyclohexane-1-carboxamide  ligand  60  28  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CJT
@@ -307,43 +308,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CJT  CONST_01  N3   C8   N2   C7     0.00   0.0  0
- CJT  CONST_02  N3   C9   C10  C7     0.00   0.0  0
- CJT  CONST_03  N4   C9   C10  C7   180.00   0.0  0
- CJT  CONST_04  C12  C11  C10  C7   180.00   0.0  0
- CJT  CONST_05  N4   C9   N3   C8   180.00   0.0  0
- CJT  CONST_06  C10  C9   N3   C8     0.00   0.0  0
- CJT  CONST_07  C10  C7   N2   C8     0.00   0.0  0
- CJT  CONST_08  N2   C8   N3   C9     0.00   0.0  0
- CJT  CONST_09  C11  C12  N4   C9     0.00   0.0  0
- CJT  CONST_10  N2   C7   C10  C9     0.00   0.0  0
- CJT  CONST_11  C12  C11  C10  C9     0.00   0.0  0
- CJT  CONST_12  C12  N4   C9   C10    0.00   0.0  0
- CJT  CONST_13  N4   C12  C11  C10    0.00   0.0  0
- CJT  CONST_14  N3   C9   C10  C11  180.00   0.0  0
- CJT  CONST_15  N4   C9   C10  C11    0.00   0.0  0
- CJT  CONST_16  N2   C7   C10  C11  180.00   0.0  0
- CJT  CONST_17  N3   C9   N4   C12  180.00   0.0  0
- CJT  CONST_18  C13  C11  C10  C7     0.00   0.0  0
- CJT  CONST_19  C13  C11  C10  C9   180.00   0.0  0
- CJT  CONST_20  N4   C12  C11  C13  180.00   0.0  0
- CJT  CONST_21  N1   C7   N2   C8   180.00   0.0  0
- CJT  CONST_22  N1   C7   C10  C9   180.00   0.0  0
- CJT  CONST_23  N1   C7   C10  C11    0.00   0.0  0
- CJT  CONST_24  C4   N1   C7   C10  180.00   0.0  0
- CJT  CONST_25  C4   N1   C7   N2     0.00   0.0  0
- CJT  CONST_26  H6   C8   N2   C7   180.00   0.0  0
- CJT  CONST_27  H7   C12  N4   C9   180.00   0.0  0
- CJT  CONST_28  H23  N4   C9   C10  180.00   0.0  0
- CJT  CONST_29  H24  N1   C7   C10    0.00   0.0  0
- CJT  CONST_30  H17  N5   C19  C16    0.00   0.0  0
- CJT  CONST_31  H18  N5   C19  C16  180.00   0.0  0
- CJT  Var_01    C4   C5   C6   C1   -56.65  30.0  1
- CJT  Var_02    C4   C3   C2   C1    57.11  30.0  1
- CJT  Var_03    C16  C15  C14  C13   57.46  30.0  1
- CJT  Var_04    C16  C17  C18  C13  -56.61  30.0  1
- CJT  Var_05    H14  C20  N    C1    57.87  30.0  3
- CJT  Var_06    H31  C    N    C1    65.43  30.0  3
+ CJT  CONST_01  N3   C8   N2   C7      0.00   0.0  0
+ CJT  CONST_02  N3   C9   C10  C7      0.00   0.0  0
+ CJT  CONST_03  N4   C9   C10  C7    180.00   0.0  0
+ CJT  CONST_04  C12  C11  C10  C7    180.00   0.0  0
+ CJT  CONST_05  N4   C9   N3   C8    180.00   0.0  0
+ CJT  CONST_06  C10  C9   N3   C8      0.00   0.0  0
+ CJT  CONST_07  C10  C7   N2   C8      0.00   0.0  0
+ CJT  CONST_08  N2   C8   N3   C9      0.00   0.0  0
+ CJT  CONST_09  C11  C12  N4   C9      0.00   0.0  0
+ CJT  CONST_10  N2   C7   C10  C9      0.00   0.0  0
+ CJT  CONST_11  C12  C11  C10  C9      0.00   0.0  0
+ CJT  CONST_12  C12  N4   C9   C10     0.00   0.0  0
+ CJT  CONST_13  N4   C12  C11  C10     0.00   0.0  0
+ CJT  CONST_14  N3   C9   C10  C11   180.00   0.0  0
+ CJT  CONST_15  N4   C9   C10  C11     0.00   0.0  0
+ CJT  CONST_16  N2   C7   C10  C11   180.00   0.0  0
+ CJT  CONST_17  N3   C9   N4   C12   180.00   0.0  0
+ CJT  CONST_18  C13  C11  C10  C7      0.00   0.0  0
+ CJT  CONST_19  C13  C11  C10  C9    180.00   0.0  0
+ CJT  CONST_20  N4   C12  C11  C13   180.00   0.0  0
+ CJT  CONST_21  N1   C7   N2   C8    180.00   0.0  0
+ CJT  CONST_22  N1   C7   C10  C9    180.00   0.0  0
+ CJT  CONST_23  N1   C7   C10  C11     0.00   0.0  0
+ CJT  CONST_24  C4   N1   C7   C10   180.00   0.0  0
+ CJT  CONST_25  C4   N1   C7   N2      0.00   0.0  0
+ CJT  CONST_26  H6   C8   N2   C7    180.00   0.0  0
+ CJT  CONST_27  H7   C12  N4   C9    180.00   0.0  0
+ CJT  CONST_28  H23  N4   C9   C10   180.00   0.0  0
+ CJT  CONST_29  H24  N1   C7   C10     0.00   0.0  0
+ CJT  CONST_30  H17  N5   C19  C16     0.00   0.0  0
+ CJT  CONST_31  H18  N5   C19  C16   180.00   0.0  0
+ CJT  Var_01    C4   C5   C6   C1    -56.65  30.0  1
+ CJT  Var_02    C4   C3   C2   C1     57.11  30.0  1
+ CJT  Var_03    C16  C15  C14  C13    57.46  30.0  1
+ CJT  Var_04    C16  C17  C18  C13   -56.61  30.0  1
+ CJT  Var_05    H14  C20  N    C1     57.87  30.0  3
+ CJT  Var_06    H31  C    N    C1     65.43  30.0  3
+ CJT  Var_07    C5   C4   C3   C2    -56.00  30.0  1
+ CJT  Var_08    C5   C6   C1   C2     54.84  30.0  1
+ CJT  Var_09    C6   C5   C4   C3     55.56  30.0  1
+ CJT  Var_10    C6   C1   C2   C3    -54.89  30.0  1
+ CJT  Var_11    C14  C13  C11  C10   -71.34  30.0  2
+ CJT  Var_12    C18  C13  C11  C10   165.54  30.0  2
+ CJT  Var_13    C15  C14  C13  C11   178.26  30.0  1
+ CJT  Var_14    C17  C18  C13  C11  -179.77  30.0  1
+ CJT  Var_15    C14  C13  C11  C12   105.01  30.0  2
+ CJT  Var_16    C18  C13  C11  C12   -18.11  30.0  2
+ CJT  Var_17    C17  C18  C13  C14    56.02  30.0  1
+ CJT  Var_18    C17  C16  C15  C14   -55.98  30.0  1
+ CJT  Var_19    C18  C13  C14  C15   -56.58  30.0  1
+ CJT  Var_20    C18  C17  C16  C15    55.75  30.0  1
+ CJT  Var_21    N1   C4   C3   C2   -178.14  30.0  1
+ CJT  Var_22    C7   N1   C4   C3    -81.32  30.0  3
+ CJT  Var_23    N    C1   C2   C3   -177.94  30.0  1
+ CJT  Var_24    C5   C4   N1   C7    156.51  30.0  3
+ CJT  Var_25    C19  C16  C15  C14  -178.40  30.0  1
+ CJT  Var_26    C18  C17  C16  C19   179.79  30.0  1
+ CJT  Var_27    C6   C5   C4   N1    179.22  30.0  1
+ CJT  Var_28    N    C1   C6   C5    178.10  30.0  1
+ CJT  Var_29    H25  C4   C3   C2     62.86  30.0  1
+ CJT  Var_30    H28  C6   C1   C2    176.10  30.0  1
+ CJT  Var_31    H29  C6   C1   C2    -66.71  30.0  1
+ CJT  Var_32    H1   C1   C2   C3     61.62  30.0  1
+ CJT  Var_33    H8   C13  C11  C10    47.79  30.0  2
+ CJT  Var_34    H9   C14  C13  C11   -60.12  30.0  1
+ CJT  Var_35    H10  C14  C13  C11    55.54  30.0  1
+ CJT  Var_36    H21  C18  C13  C11   -57.63  30.0  1
+ CJT  Var_37    H22  C18  C13  C11    59.52  30.0  1
+ CJT  Var_38    H13  C16  C15  C14    61.69  30.0  1
+ CJT  Var_39    C20  N    C1   C2   -179.96  30.0  3
+ CJT  Var_40    C    N    C1   C2    -56.25  30.0  3
+ CJT  Var_41    N5   C19  C16  C15  -151.71  30.0  3
+ CJT  Var_42    O    C19  C16  C15    29.67  30.0  3
+ CJT  Var_43    C17  C16  C19  O     -93.19  30.0  1
+ CJT  Var_44    C17  C16  C19  N5     85.43  30.0  1
+ CJT  Var_45    C20  N    C1   C6     58.43  30.0  3
+ CJT  Var_46    C    N    C1   C6   -177.87  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

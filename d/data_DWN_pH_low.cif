@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DWN  DWN  '(2R,4S,6R)-4-amino-6-methyl-5-oxotetrahydro-2H-pyran-2-yl [(2R,3S,5R)-3-hydroxy-5-(5-methyl-2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)tetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  59  34  .  2021-08-08  2022-11-17
+ DWN  DWN  '(2R,4S,6R)-4-amino-6-methyl-5-oxotetrahydro-2H-pyran-2-yl [(2R,3S,5R)-3-hydroxy-5-(5-methyl-2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)tetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  59  34  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_DWN
@@ -295,19 +296,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DWN  CONST_01  N31  C21  N11  C1X  180.00   0.0  0
- DWN  CONST_02  C41  N31  C21  N11    0.00   0.0  0
- DWN  CONST_03  C51  C41  N31  C21    0.00   0.0  0
- DWN  CONST_04  C61  N11  C21  N31    0.00   0.0  0
- DWN  CONST_05  O21  C21  N11  C1X    0.00   0.0  0
- DWN  CONST_06  O41  C41  N31  C21  180.00   0.0  0
- DWN  CONST_07  C41  N31  C21  O21  180.00   0.0  0
- DWN  CONST_08  C61  N11  C21  O21  180.00   0.0  0
- DWN  CONST_09  H22  N31  C21  N11  180.00   0.0  0
- DWN  Var_01    H24  C5A  C51  C61   -0.80  30.0  3
- DWN  Var_02    O4P  P2   O1   C1   161.31  30.0  1
- DWN  Var_03    C4X  C5X  O5X  P    162.83  30.0  2
- DWN  Var_04    O2P  P    OPP  P2    72.25  30.0  1
+ DWN  CONST_01  N31  C21  N11  C1X   180.00   0.0  0
+ DWN  CONST_02  C41  N31  C21  N11     0.00   0.0  0
+ DWN  CONST_03  C51  C41  N31  C21     0.00   0.0  0
+ DWN  CONST_04  C61  N11  C21  N31     0.00   0.0  0
+ DWN  CONST_05  O21  C21  N11  C1X     0.00   0.0  0
+ DWN  CONST_06  O41  C41  N31  C21   180.00   0.0  0
+ DWN  CONST_07  C41  N31  C21  O21   180.00   0.0  0
+ DWN  CONST_08  C61  N11  C21  O21   180.00   0.0  0
+ DWN  CONST_09  H22  N31  C21  N11   180.00   0.0  0
+ DWN  Var_01    H24  C5A  C51  C61    -0.80  30.0  3
+ DWN  Var_02    O4P  P2   O1   C1    161.31  30.0  1
+ DWN  Var_03    C4X  C5X  O5X  P     162.83  30.0  2
+ DWN  Var_04    O2P  P    OPP  P2     72.25  30.0  1
+ DWN  Var_05    C1   O5   C5   C4     61.57  30.0  1
+ DWN  Var_06    C1   C2   C3   C4     62.53  30.0  1
+ DWN  Var_07    C2   C1   O5   C5    -36.86  30.0  1
+ DWN  Var_08    C2   C3   C4   C5    -38.43  30.0  1
+ DWN  Var_09    C3   C4   C5   O5    -19.05  30.0  1
+ DWN  Var_10    C3   C2   C1   O5    -26.88  30.0  1
+ DWN  Var_11    N11  C1X  O4X  C4X  -142.83  30.0  1
+ DWN  Var_12    C2X  C1X  O4X  C4X   -18.98  30.0  1
+ DWN  Var_13    C1X  C2X  C3X  C4X   -36.65  30.0  1
+ DWN  Var_14    C21  N11  C1X  O4X  -123.37  30.0  2
+ DWN  Var_15    C61  N11  C1X  O4X    54.82  30.0  2
+ DWN  Var_16    C3X  C2X  C1X  O4X    35.07  30.0  1
+ DWN  Var_17    C2X  C3X  C4X  O4X    26.85  30.0  1
+ DWN  Var_18    C1X  O4X  C4X  C3X    -5.23  30.0  1
+ DWN  Var_19    N11  C1X  C2X  C3X   154.86  30.0  1
+ DWN  Var_20    C21  N11  C1X  C2X   118.58  30.0  2
+ DWN  Var_21    C61  N11  C1X  C2X   -63.22  30.0  2
+ DWN  Var_22    O5   C5   C4   O4    163.16  30.0  1
+ DWN  Var_23    C2   C3   C4   O4    139.32  30.0  1
+ DWN  Var_24    O1   C1   O5   C5     83.47  30.0  1
+ DWN  Var_25    N3   C3   C4   C5   -159.13  30.0  1
+ DWN  Var_26    C1   O5   C5   C6   -174.65  30.0  1
+ DWN  Var_27    C3   C4   C5   C6   -139.74  30.0  1
+ DWN  Var_28    O1   C1   C2   C3   -149.57  30.0  1
+ DWN  Var_29    C1   C2   C3   N3   -176.58  30.0  1
+ DWN  Var_30    C1X  O4X  C4X  C5X   117.17  30.0  1
+ DWN  Var_31    C2X  C3X  C4X  C5X   -92.23  30.0  1
+ DWN  Var_32    O3X  C3X  C4X  O4X   -91.00  30.0  1
+ DWN  Var_33    C1X  C2X  C3X  O3X    77.71  30.0  1
+ DWN  Var_34    C5A  C51  C61  N11   179.75  30.0  1
+ DWN  Var_35    C5A  C51  C41  N31  -179.36  30.0  1
+ DWN  Var_36    H9   C2   C3   C4    -59.03  30.0  1
+ DWN  Var_37    H10  C2   C3   C4   -176.60  30.0  1
+ DWN  Var_38    H11  C1   O5   C5   -158.91  30.0  1
+ DWN  Var_39    H5   C3   C4   C5     76.92  30.0  1
+ DWN  Var_40    H1   C5   C4   C3    100.72  30.0  1
+ DWN  Var_41    H21  C1X  O4X  C4X   100.62  30.0  1
+ DWN  Var_42    H19  C2X  C3X  C4X  -157.23  30.0  1
+ DWN  Var_43    H20  C2X  C3X  C4X    82.18  30.0  1
+ DWN  Var_44    H17  C3X  C4X  O4X   146.41  30.0  1
+ DWN  Var_45    H16  C4X  C3X  C2X   145.29  30.0  1
+ DWN  Var_46    H23  C61  N11  C1X     0.84  30.0  1
+ DWN  Var_47    C6   C5   C4   O4     42.47  30.0  1
+ DWN  Var_48    N3   C3   C4   O4     18.62  30.0  1
+ DWN  Var_49    P2   O1   C1   O5     54.07  30.0  1
+ DWN  Var_50    P2   O1   C1   C2    177.93  30.0  1
+ DWN  Var_51    O4X  C4X  C5X  O5X   172.27  30.0  3
+ DWN  Var_52    C3X  C4X  C5X  O5X   -69.77  30.0  3
+ DWN  Var_53    O3X  C3X  C4X  C5X   149.92  30.0  1
+ DWN  Var_54    O41  C41  C51  C5A     0.66  30.0  1
+ DWN  Var_55    H2   C6   C5   C4    -57.61  30.0  3
+ DWN  Var_56    H3   C6   C5   C4     62.76  30.0  3
+ DWN  Var_57    H4   C6   C5   C4   -176.62  30.0  3
+ DWN  Var_58    H6   N3   C3   C4   -173.92  30.0  3
+ DWN  Var_59    H7   N3   C3   C4    -57.94  30.0  3
+ DWN  Var_60    H18  O3X  C3X  C4X   174.73  30.0  3
+ DWN  Var_61    H14  C5X  C4X  O4X   -66.94  30.0  2
+ DWN  Var_62    H15  C5X  C4X  O4X    53.22  30.0  2
+ DWN  Var_63    P    OPP  P2   O1   -147.79  30.0  1
+ DWN  Var_64    P    OPP  P2   O3P   101.26  30.0  1
+ DWN  Var_65    P    OPP  P2   O4P   -26.01  30.0  1
+ DWN  Var_66    C5X  O5X  P    OPP   174.97  30.0  3
+ DWN  Var_67    C5X  O5X  P    O1P   -80.89  30.0  3
+ DWN  Var_68    C5X  O5X  P    O2P    49.22  30.0  3
+ DWN  Var_69    H12  O3P  P2   O1     89.02  30.0  3
+ DWN  Var_70    H13  O1P  P    OPP  -107.02  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

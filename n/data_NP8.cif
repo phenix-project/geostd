@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NP8  NP8  5-(5-methoxypyridin-3-yl)-3-methyl-8-(piperidin-4-ylamino)-1H-1,7-naphthyridin-2-one  ligand  50  27  .  2021-08-15  2021-08-15  
+ NP8  NP8  5-(5-methoxypyridin-3-yl)-3-methyl-8-(piperidin-4-ylamino)-1H-1,7-naphthyridin-2-one  ligand  50  27  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NP8
@@ -261,44 +262,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NP8  CONST_01  C10   N09  C07  C06    0.00   0.0  0
- NP8  CONST_02  C10   C12  C13  C06    0.00   0.0  0
- NP8  CONST_03  C15   C12  C13  C06  180.00   0.0  0
- NP8  CONST_04  C12   C13  C06  C07    0.00   0.0  0
- NP8  CONST_05  C12   C10  N09  C07    0.00   0.0  0
- NP8  CONST_06  C13   C06  C07  N09    0.00   0.0  0
- NP8  CONST_07  C13   C12  C10  N09    0.00   0.0  0
- NP8  CONST_08  C15   C12  C10  N09  180.00   0.0  0
- NP8  CONST_11  N18   C16  C15  C12  180.00   0.0  0
- NP8  CONST_12  C38   C50  C15  C12  180.00   0.0  0
- NP8  CONST_15  C19   N18  C16  C15    0.00   0.0  0
- NP8  CONST_16  C19   C38  C50  C15    0.00   0.0  0
- NP8  CONST_17  C38   C50  C15  C16    0.00   0.0  0
- NP8  CONST_18  C38   C19  N18  C16    0.00   0.0  0
- NP8  CONST_19  C50   C15  C16  N18    0.00   0.0  0
- NP8  CONST_20  C50   C38  C19  N18    0.00   0.0  0
- NP8  CONST_21  C48   C50  C15  C12    0.00   0.0  0
- NP8  CONST_22  C43   C41  N39  C38    0.00   0.0  0
- NP8  CONST_23  N09   C07  C06  O05  180.00   0.0  0
- NP8  CONST_24  C12   C13  C06  O05  180.00   0.0  0
- NP8  CONST_25  N20   C19  N18  C16  180.00   0.0  0
- NP8  CONST_26  N39   C38  C19  N20    0.00   0.0  0
- NP8  CONST_27  C50   C38  C19  N20  180.00   0.0  0
- NP8  CONST_28  C22   N20  C19  N18    0.00   0.0  0
- NP8  CONST_29  C38   C19  N20  C22  180.00   0.0  0
- NP8  CONST_30  O42   C41  N39  C38  180.00   0.0  0
- NP8  CONST_31  H13   C13  C06  C07  180.00   0.0  0
- NP8  CONST_32  H10   C10  N09  C07  180.00   0.0  0
- NP8  CONST_33  H07   C07  N09  C10  180.00   0.0  0
- NP8  CONST_34  H16   C16  C15  C12    0.00   0.0  0
- NP8  CONST_35  H39   N39  C41  C43  180.00   0.0  0
- NP8  Var_01    N30   C27  C24  C22  -57.30  30.0  1
- NP8  Var_02    N30   C32  C35  C22   57.27  30.0  1
- NP8  Var_03    C32   N30  C27  C24   62.01  30.0  1
- NP8  Var_04    C35   C32  N30  C27  -61.98  30.0  1
- NP8  Var_05    C07   C06  O05  C01    0.66  30.0  2
- NP8  Var_06    H441  C44  C43  C41  -61.24  30.0  3
- NP8  Var_07    H011  C01  O05  C06  179.39  30.0  3
+ NP8  CONST_01  C10   N09  C07  C06     0.00   0.0  0
+ NP8  CONST_02  C10   C12  C13  C06     0.00   0.0  0
+ NP8  CONST_03  C15   C12  C13  C06   180.00   0.0  0
+ NP8  CONST_04  C12   C13  C06  C07     0.00   0.0  0
+ NP8  CONST_05  C12   C10  N09  C07     0.00   0.0  0
+ NP8  CONST_06  C13   C06  C07  N09     0.00   0.0  0
+ NP8  CONST_07  C13   C12  C10  N09     0.00   0.0  0
+ NP8  CONST_08  C15   C12  C10  N09   180.00   0.0  0
+ NP8  CONST_09  N18   C16  C15  C12   180.00   0.0  0
+ NP8  CONST_10  C38   C50  C15  C12   180.00   0.0  0
+ NP8  CONST_11  C19   N18  C16  C15     0.00   0.0  0
+ NP8  CONST_12  C19   C38  C50  C15     0.00   0.0  0
+ NP8  CONST_13  C38   C50  C15  C16     0.00   0.0  0
+ NP8  CONST_14  C38   C19  N18  C16     0.00   0.0  0
+ NP8  CONST_15  C50   C15  C16  N18     0.00   0.0  0
+ NP8  CONST_16  C50   C38  C19  N18     0.00   0.0  0
+ NP8  CONST_17  C48   C50  C15  C12     0.00   0.0  0
+ NP8  CONST_18  C43   C41  N39  C38     0.00   0.0  0
+ NP8  CONST_19  N09   C07  C06  O05   180.00   0.0  0
+ NP8  CONST_20  C12   C13  C06  O05   180.00   0.0  0
+ NP8  CONST_21  N20   C19  N18  C16   180.00   0.0  0
+ NP8  CONST_22  N39   C38  C19  N20     0.00   0.0  0
+ NP8  CONST_23  C50   C38  C19  N20   180.00   0.0  0
+ NP8  CONST_24  C22   N20  C19  N18     0.00   0.0  0
+ NP8  CONST_25  C38   C19  N20  C22   180.00   0.0  0
+ NP8  CONST_26  O42   C41  N39  C38   180.00   0.0  0
+ NP8  CONST_27  H13   C13  C06  C07   180.00   0.0  0
+ NP8  CONST_28  H10   C10  N09  C07   180.00   0.0  0
+ NP8  CONST_29  H07   C07  N09  C10   180.00   0.0  0
+ NP8  CONST_30  H16   C16  C15  C12     0.00   0.0  0
+ NP8  CONST_31  H39   N39  C41  C43   180.00   0.0  0
+ NP8  Var_01    N30   C27  C24  C22   -57.30  30.0  1
+ NP8  Var_02    N30   C32  C35  C22    57.27  30.0  1
+ NP8  Var_03    C32   N30  C27  C24    62.01  30.0  1
+ NP8  Var_04    C35   C32  N30  C27   -61.98  30.0  1
+ NP8  Var_05    C07   C06  O05  C01     0.66  30.0  2
+ NP8  Var_06    H441  C44  C43  C41   -61.24  30.0  3
+ NP8  Var_07    H011  C01  O05  C06   179.39  30.0  3
+ NP8  Var_08    C16   C15  C12  C10   124.19  30.0  2
+ NP8  Var_09    C50   C15  C12  C10   -55.62  30.0  2
+ NP8  Var_10    C16   C15  C12  C13   -53.48  30.0  2
+ NP8  Var_11    C50   C15  C12  C13   126.70  30.0  2
+ NP8  Var_12    C43   C48  C50  C15  -178.26  30.0  1
+ NP8  Var_13    C41   N39  C38  C19   179.94  30.0  1
+ NP8  Var_14    C32   C35  C22  C24   -53.34  30.0  1
+ NP8  Var_15    C35   C22  C24  C27    53.29  30.0  1
+ NP8  Var_16    C43   C48  C50  C38    -1.13  30.0  1
+ NP8  Var_17    C48   C43  C41  N39    -0.18  30.0  1
+ NP8  Var_18    C50   C38  N39  C41     1.10  30.0  1
+ NP8  Var_19    C50   C48  C43  C41     1.22  30.0  1
+ NP8  Var_20    C24   C22  N20  C19   160.54  30.0  3
+ NP8  Var_21    C35   C22  N20  C19   -76.87  30.0  3
+ NP8  Var_22    C27   C24  C22  N20   177.73  30.0  1
+ NP8  Var_23    C32   C35  C22  N20  -175.44  30.0  1
+ NP8  Var_24    C44   C43  C41  N39  -178.89  30.0  1
+ NP8  Var_25    C48   C43  C41  O42   178.79  30.0  1
+ NP8  Var_26    C50   C48  C43  C44   179.85  30.0  1
+ NP8  Var_27    H48   C48  C50  C15     0.86  30.0  1
+ NP8  Var_28    H351  C35  C22  C24    66.88  30.0  1
+ NP8  Var_29    H352  C35  C22  C24  -175.24  30.0  1
+ NP8  Var_30    H22   C22  C24  C27   -65.52  30.0  1
+ NP8  Var_31    C44   C43  C41  O42     0.08  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

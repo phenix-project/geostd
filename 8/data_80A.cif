@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 80A  80A  (R)-pyridin-4-yl[4-(2-pyrrolidin-1-ylethoxy)phenyl]methanol  ligand  44  22  .  2021-08-06  2021-08-06  
+ 80A  80A  (R)-pyridin-4-yl[4-(2-pyrrolidin-1-ylethoxy)phenyl]methanol  ligand  44  22  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_80A
@@ -236,39 +237,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 80A  CONST_01  C4   C5   C6   C1      0.00   0.0  0
- 80A  CONST_02  C4   C3   C2   C1      0.00   0.0  0
- 80A  CONST_03  C5   C6   C1   C2      0.00   0.0  0
- 80A  CONST_04  C5   C4   C3   C2      0.00   0.0  0
- 80A  CONST_05  C6   C1   C2   C3      0.00   0.0  0
- 80A  CONST_06  C6   C5   C4   C3      0.00   0.0  0
- 80A  CONST_07  N12  C13  C14  C9      0.00   0.0  0
- 80A  CONST_08  N12  C11  C10  C9      0.00   0.0  0
- 80A  CONST_09  C11  C10  C9   C14     0.00   0.0  0
- 80A  CONST_10  C11  N12  C13  C14     0.00   0.0  0
- 80A  CONST_11  C10  C9   C14  C13     0.00   0.0  0
- 80A  CONST_12  C10  C11  N12  C13     0.00   0.0  0
- 80A  CONST_13  O15  C3   C2   C1    180.00   0.0  0
- 80A  CONST_14  C7   C6   C1   C2    180.00   0.0  0
- 80A  CONST_15  C7   C6   C5   C4    180.00   0.0  0
- 80A  CONST_16  O15  C3   C4   C5    180.00   0.0  0
- 80A  CONST_17  C13  C14  C9   C7    180.00   0.0  0
- 80A  CONST_18  C11  C10  C9   C7    180.00   0.0  0
- 80A  CONST_19  H5   C5   C6   C1    180.00   0.0  0
- 80A  CONST_20  H4   C4   C3   C2    180.00   0.0  0
- 80A  CONST_21  H1   C1   C2   C3    180.00   0.0  0
- 80A  CONST_22  H2   C2   C3   C4    180.00   0.0  0
- 80A  CONST_23  H13  C13  C14  C9    180.00   0.0  0
- 80A  CONST_24  H11  C11  C10  C9    180.00   0.0  0
- 80A  CONST_25  H10  C10  C9   C14   180.00   0.0  0
- 80A  CONST_26  H14  C14  C13  N12   180.00   0.0  0
- 80A  Var_01    C20  C21  C22  N23    15.19  30.0  1
- 80A  Var_02    C21  C20  C19  N23   -33.60  30.0  1
- 80A  Var_03    C21  C22  N23  C19   -37.34  30.0  1
- 80A  Var_04    C22  C21  C20  C19    11.07  30.0  1
- 80A  Var_05    C22  N23  C19  C20    44.75  30.0  1
- 80A  Var_06    C17  C16  O15  C3   -177.90  30.0  1
- 80A  Var_07    N23  C17  C16  O15    77.30  30.0  3
+ 80A  CONST_01  C4    C5   C6   C1      0.00   0.0  0
+ 80A  CONST_02  C4    C3   C2   C1      0.00   0.0  0
+ 80A  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ 80A  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ 80A  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ 80A  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ 80A  CONST_07  N12   C13  C14  C9      0.00   0.0  0
+ 80A  CONST_08  N12   C11  C10  C9      0.00   0.0  0
+ 80A  CONST_09  C11   C10  C9   C14     0.00   0.0  0
+ 80A  CONST_10  C11   N12  C13  C14     0.00   0.0  0
+ 80A  CONST_11  C10   C9   C14  C13     0.00   0.0  0
+ 80A  CONST_12  C10   C11  N12  C13     0.00   0.0  0
+ 80A  CONST_13  O15   C3   C2   C1    180.00   0.0  0
+ 80A  CONST_14  C7    C6   C1   C2    180.00   0.0  0
+ 80A  CONST_15  C7    C6   C5   C4    180.00   0.0  0
+ 80A  CONST_16  O15   C3   C4   C5    180.00   0.0  0
+ 80A  CONST_17  C13   C14  C9   C7    180.00   0.0  0
+ 80A  CONST_18  C11   C10  C9   C7    180.00   0.0  0
+ 80A  CONST_19  H5    C5   C6   C1    180.00   0.0  0
+ 80A  CONST_20  H4    C4   C3   C2    180.00   0.0  0
+ 80A  CONST_21  H1    C1   C2   C3    180.00   0.0  0
+ 80A  CONST_22  H2    C2   C3   C4    180.00   0.0  0
+ 80A  CONST_23  H13   C13  C14  C9    180.00   0.0  0
+ 80A  CONST_24  H11   C11  C10  C9    180.00   0.0  0
+ 80A  CONST_25  H10   C10  C9   C14   180.00   0.0  0
+ 80A  CONST_26  H14   C14  C13  N12   180.00   0.0  0
+ 80A  Var_01    C20   C21  C22  N23    15.19  30.0  1
+ 80A  Var_02    C21   C20  C19  N23   -33.60  30.0  1
+ 80A  Var_03    C21   C22  N23  C19   -37.34  30.0  1
+ 80A  Var_04    C22   C21  C20  C19    11.07  30.0  1
+ 80A  Var_05    C22   N23  C19  C20    44.75  30.0  1
+ 80A  Var_06    C17   C16  O15  C3   -177.90  30.0  1
+ 80A  Var_07    N23   C17  C16  O15    77.30  30.0  3
+ 80A  Var_08    C9    C7   C6   C1   -134.11  30.0  3
+ 80A  Var_09    C9    C7   C6   C5     48.77  30.0  3
+ 80A  Var_10    C14   C9   C7   C6   -121.66  30.0  3
+ 80A  Var_11    C10   C9   C7   C6     59.01  30.0  3
+ 80A  Var_12    O8    C7   C6   C1     98.45  30.0  3
+ 80A  Var_13    C16   O15  C3   C2    178.02  30.0  2
+ 80A  Var_14    C16   O15  C3   C4     -1.91  30.0  2
+ 80A  Var_15    O8    C7   C6   C5    -78.66  30.0  3
+ 80A  Var_16    C14   C9   C7   O8      5.27  30.0  3
+ 80A  Var_17    C10   C9   C7   O8   -174.06  30.0  3
+ 80A  Var_18    C22   N23  C17  C16   -70.48  30.0  1
+ 80A  Var_19    C19   N23  C17  C16   168.78  30.0  1
+ 80A  Var_20    H7    C7   C6   C1    -17.29  30.0  3
+ 80A  Var_21    H17   C17  N23  C19    50.91  30.0  3
+ 80A  Var_22    H17A  C17  N23  C19   -65.69  30.0  3
+ 80A  Var_23    HO8   O8   C7   C6     48.64  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

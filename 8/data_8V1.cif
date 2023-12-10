@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 8V1  8V1  N-(4-{[1-methyl-3-(1-methyl-1H-pyrazol-4-yl)-1H-indol-5-yl]oxy}phenyl)-L-prolinamide  ligand  56  31  .  2021-08-06  2021-08-06  
+ 8V1  8V1  N-(4-{[1-methyl-3-(1-methyl-1H-pyrazol-4-yl)-1H-indol-5-yl]oxy}phenyl)-L-prolinamide  ligand  56  31  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_8V1
@@ -311,42 +312,59 @@ _chem_comp_tor.period
  8V1  CONST_24  C1    C2   C3   C8    180.00   0.0  0
  8V1  CONST_25  C20   C2   C3   C8      0.00   0.0  0
  8V1  CONST_26  C1    N    C4   C3      0.00   0.0  0
- 8V1  CONST_29  N4    C22  C20  C2    180.00   0.0  0
- 8V1  CONST_30  N3    C21  C20  C2    180.00   0.0  0
- 8V1  CONST_33  N3    N4   C22  C20     0.00   0.0  0
- 8V1  CONST_34  N4    N3   C21  C20     0.00   0.0  0
- 8V1  CONST_35  N3    C21  C20  C22     0.00   0.0  0
- 8V1  CONST_36  C21   N3   N4   C22     0.00   0.0  0
- 8V1  CONST_37  C21   C20  C22  N4      0.00   0.0  0
- 8V1  CONST_38  C10   C11  C12  N1    180.00   0.0  0
- 8V1  CONST_39  C14   C13  C12  N1    180.00   0.0  0
- 8V1  CONST_40  O     C9   C10  C11   180.00   0.0  0
- 8V1  CONST_41  O     C9   C14  C13   180.00   0.0  0
- 8V1  CONST_42  C5    C6   C7   O     180.00   0.0  0
- 8V1  CONST_43  C3    C8   C7   O     180.00   0.0  0
- 8V1  CONST_44  C     N    C4   C5      0.00   0.0  0
- 8V1  CONST_45  C3    C4   N    C     180.00   0.0  0
- 8V1  CONST_46  C2    C1   N    C     180.00   0.0  0
- 8V1  CONST_47  C23   N4   C22  C20   180.00   0.0  0
- 8V1  CONST_48  C21   N3   N4   C23   180.00   0.0  0
- 8V1  CONST_49  H10   C10  C11  C12   180.00   0.0  0
- 8V1  CONST_50  H14   C14  C13  C12   180.00   0.0  0
- 8V1  CONST_51  H13   C13  C12  C11   180.00   0.0  0
- 8V1  CONST_52  H11   C11  C12  C13   180.00   0.0  0
- 8V1  CONST_53  H5    C5   C6   C7    180.00   0.0  0
- 8V1  CONST_54  H8    C8   C7   C6    180.00   0.0  0
- 8V1  CONST_55  H6    C6   C5   C4    180.00   0.0  0
- 8V1  CONST_56  HA    C1   N    C4    180.00   0.0  0
- 8V1  CONST_57  H22   C22  C20  C2      0.00   0.0  0
- 8V1  CONST_58  H21   C21  C20  C2      0.00   0.0  0
- 8V1  CONST_59  C12   N1   C15  C16   180.00   0.0  0
- 8V1  CONST_63  C12   N1   C15  O1      0.00   0.0  0
+ 8V1  CONST_27  N4    C22  C20  C2    180.00   0.0  0
+ 8V1  CONST_28  N3    C21  C20  C2    180.00   0.0  0
+ 8V1  CONST_29  N3    N4   C22  C20     0.00   0.0  0
+ 8V1  CONST_30  N4    N3   C21  C20     0.00   0.0  0
+ 8V1  CONST_31  N3    C21  C20  C22     0.00   0.0  0
+ 8V1  CONST_32  C21   N3   N4   C22     0.00   0.0  0
+ 8V1  CONST_33  C21   C20  C22  N4      0.00   0.0  0
+ 8V1  CONST_34  C10   C11  C12  N1    180.00   0.0  0
+ 8V1  CONST_35  C14   C13  C12  N1    180.00   0.0  0
+ 8V1  CONST_36  O     C9   C10  C11   180.00   0.0  0
+ 8V1  CONST_37  O     C9   C14  C13   180.00   0.0  0
+ 8V1  CONST_38  C5    C6   C7   O     180.00   0.0  0
+ 8V1  CONST_39  C3    C8   C7   O     180.00   0.0  0
+ 8V1  CONST_40  C     N    C4   C5      0.00   0.0  0
+ 8V1  CONST_41  C3    C4   N    C     180.00   0.0  0
+ 8V1  CONST_42  C2    C1   N    C     180.00   0.0  0
+ 8V1  CONST_43  C23   N4   C22  C20   180.00   0.0  0
+ 8V1  CONST_44  C21   N3   N4   C23   180.00   0.0  0
+ 8V1  CONST_45  H10   C10  C11  C12   180.00   0.0  0
+ 8V1  CONST_46  H14   C14  C13  C12   180.00   0.0  0
+ 8V1  CONST_47  H13   C13  C12  C11   180.00   0.0  0
+ 8V1  CONST_48  H11   C11  C12  C13   180.00   0.0  0
+ 8V1  CONST_49  H5    C5   C6   C7    180.00   0.0  0
+ 8V1  CONST_50  H8    C8   C7   C6    180.00   0.0  0
+ 8V1  CONST_51  H6    C6   C5   C4    180.00   0.0  0
+ 8V1  CONST_52  HA    C1   N    C4    180.00   0.0  0
+ 8V1  CONST_53  H22   C22  C20  C2      0.00   0.0  0
+ 8V1  CONST_54  H21   C21  C20  C2      0.00   0.0  0
+ 8V1  CONST_55  C12   N1   C15  C16   180.00   0.0  0
+ 8V1  CONST_56  C12   N1   C15  O1      0.00   0.0  0
  8V1  Var_01    C18   C19  N2   C16    34.01  30.0  1
  8V1  Var_02    C19   C18  C17  C16    28.36  30.0  1
  8V1  Var_03    C17   C18  C19  N2    -38.89  30.0  1
  8V1  Var_04    C6    C7   O    C9   -105.88  30.0  2
  8V1  Var_05    HC1   C    N    C4     68.99  30.0  2
  8V1  Var_06    H231  C23  N4   C22   108.57  30.0  2
+ 8V1  Var_07    C18   C17  C16  N2     -9.11  30.0  1
+ 8V1  Var_08    C17   C16  N2   C19   -15.21  30.0  1
+ 8V1  Var_09    C22   C20  C2   C3    146.00  30.0  2
+ 8V1  Var_10    C21   C20  C2   C3    -34.53  30.0  2
+ 8V1  Var_11    C22   C20  C2   C1    -33.71  30.0  2
+ 8V1  Var_12    C21   C20  C2   C1    145.77  30.0  2
+ 8V1  Var_13    C19   N2   C16  C15   104.18  30.0  1
+ 8V1  Var_14    C18   C17  C16  C15  -129.98  30.0  1
+ 8V1  Var_15    C7    O    C9   C10  -164.99  30.0  2
+ 8V1  Var_16    C7    O    C9   C14    16.34  30.0  2
+ 8V1  Var_17    H171  C17  C16  N2    109.09  30.0  1
+ 8V1  Var_18    H172  C17  C16  N2   -131.45  30.0  1
+ 8V1  Var_19    H16   C16  N2   C19  -135.21  30.0  1
+ 8V1  Var_20    N2    C16  C15  O1    -21.11  30.0  3
+ 8V1  Var_21    C17   C16  C15  O1     97.37  30.0  3
+ 8V1  Var_22    N1    C15  C16  N2    161.59  30.0  2
+ 8V1  Var_23    N1    C15  C16  C17   -79.93  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

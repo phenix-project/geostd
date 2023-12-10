@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DB3  DB3  (11Z,14E)-N-[(2S,3S,4R)-1-(alpha-D-galactopyranosyloxy)-3,4-dihydroxyoctadecan-2-yl]icosa-11,14-dienamide  ligand  137  54  .  2021-08-08  2021-08-08  
+ DB3  DB3  (11Z,14E)-N-[(2S,3S,4R)-1-(alpha-D-galactopyranosyloxy)-3,4-dihydroxyoctadecan-2-yl]icosa-11,14-dienamide  ligand  137  54  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DB3
@@ -599,42 +600,98 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DB3  CONST_01  OAA  CAA  N2   C2      0.00   0.0  0
- DB3  CONST_02  CAB  CAA  N2   C2    180.00   0.0  0
- DB3  CONST_03  HN2  N2   CAA  OAA   180.00   0.0  0
- DB3  Var_01    H1   C1   O1A  C1A    81.28  30.0  1
- DB3  Var_02    CAM  CAL  CAK  CAJ     2.52   0.0  2
- DB3  Var_03    CAP  CAO  CAN  CAM  -178.64   0.0  2
- DB3  Var_04    CAC  CAB  CAA  N2    163.12  30.0  3
- DB3  Var_05    C7   C6   C5   C4    175.06  30.0  3
- DB3  Var_06    C8   C7   C6   C5    174.61  30.0  3
- DB3  Var_07    C9   C8   C7   C6    178.32  30.0  3
- DB3  Var_08    C10  C9   C8   C7    176.37  30.0  3
- DB3  Var_09    C11  C10  C9   C8    179.21  30.0  3
- DB3  Var_10    C12  C11  C10  C9    178.19  30.0  3
- DB3  Var_11    C13  C12  C11  C10   179.71  30.0  3
- DB3  Var_12    C14  C13  C12  C11   179.20  30.0  3
- DB3  Var_13    C15  C14  C13  C12   179.84  30.0  3
- DB3  Var_14    C16  C15  C14  C13   179.61  30.0  3
- DB3  Var_15    C17  C16  C15  C14   179.75  30.0  3
- DB3  Var_16    C18  C17  C16  C15   179.85  30.0  3
- DB3  Var_17    CAD  CAC  CAB  CAA   177.13  30.0  3
- DB3  Var_18    CAE  CAD  CAC  CAB  -178.85  30.0  3
- DB3  Var_19    CAF  CAE  CAD  CAC   176.37  30.0  3
- DB3  Var_20    CAG  CAF  CAE  CAD  -178.35  30.0  3
- DB3  Var_21    CAH  CAG  CAF  CAE   176.32  30.0  3
- DB3  Var_22    CAI  CAH  CAG  CAF  -177.73  30.0  3
- DB3  Var_23    CAJ  CAI  CAH  CAG   178.48  30.0  3
- DB3  Var_24    CAK  CAJ  CAI  CAH   178.84  30.0  3
- DB3  Var_25    CAL  CAK  CAJ  CAI   114.18  30.0  3
- DB3  Var_26    CAN  CAM  CAL  CAK   118.61  30.0  3
- DB3  Var_27    CAO  CAN  CAM  CAL   118.69  30.0  3
- DB3  Var_28    CAQ  CAP  CAO  CAN   123.22  30.0  3
- DB3  Var_29    CAR  CAQ  CAP  CAO   178.70  30.0  3
- DB3  Var_30    CAS  CAR  CAQ  CAP  -178.04  30.0  3
- DB3  Var_31    CAT  CAS  CAR  CAQ  -179.49  30.0  3
- DB3  Var_32    H18  C18  C17  C16    59.46  30.0  3
- DB3  Var_33    HAT  CAT  CAS  CAR  -179.39  30.0  3
+ DB3  CONST_01  OAA   CAA  N2   C2      0.00   0.0  0
+ DB3  CONST_02  CAB   CAA  N2   C2    180.00   0.0  0
+ DB3  CONST_03  HN2   N2   CAA  OAA   180.00   0.0  0
+ DB3  Var_01    H1    C1   O1A  C1A    81.28  30.0  1
+ DB3  Var_02    CAM   CAL  CAK  CAJ     2.52   0.0  2
+ DB3  Var_03    CAP   CAO  CAN  CAM  -178.64   0.0  2
+ DB3  Var_04    CAC   CAB  CAA  N2    163.12  30.0  3
+ DB3  Var_05    C7    C6   C5   C4    175.06  30.0  3
+ DB3  Var_06    C8    C7   C6   C5    174.61  30.0  3
+ DB3  Var_07    C9    C8   C7   C6    178.32  30.0  3
+ DB3  Var_08    C10   C9   C8   C7    176.37  30.0  3
+ DB3  Var_09    C11   C10  C9   C8    179.21  30.0  3
+ DB3  Var_10    C12   C11  C10  C9    178.19  30.0  3
+ DB3  Var_11    C13   C12  C11  C10   179.71  30.0  3
+ DB3  Var_12    C14   C13  C12  C11   179.20  30.0  3
+ DB3  Var_13    C15   C14  C13  C12   179.84  30.0  3
+ DB3  Var_14    C16   C15  C14  C13   179.61  30.0  3
+ DB3  Var_15    C17   C16  C15  C14   179.75  30.0  3
+ DB3  Var_16    C18   C17  C16  C15   179.85  30.0  3
+ DB3  Var_17    CAD   CAC  CAB  CAA   177.13  30.0  3
+ DB3  Var_18    CAE   CAD  CAC  CAB  -178.85  30.0  3
+ DB3  Var_19    CAF   CAE  CAD  CAC   176.37  30.0  3
+ DB3  Var_20    CAG   CAF  CAE  CAD  -178.35  30.0  3
+ DB3  Var_21    CAH   CAG  CAF  CAE   176.32  30.0  3
+ DB3  Var_22    CAI   CAH  CAG  CAF  -177.73  30.0  3
+ DB3  Var_23    CAJ   CAI  CAH  CAG   178.48  30.0  3
+ DB3  Var_24    CAK   CAJ  CAI  CAH   178.84  30.0  3
+ DB3  Var_25    CAL   CAK  CAJ  CAI   114.18  30.0  3
+ DB3  Var_26    CAN   CAM  CAL  CAK   118.61  30.0  3
+ DB3  Var_27    CAO   CAN  CAM  CAL   118.69  30.0  3
+ DB3  Var_28    CAQ   CAP  CAO  CAN   123.22  30.0  3
+ DB3  Var_29    CAR   CAQ  CAP  CAO   178.70  30.0  3
+ DB3  Var_30    CAS   CAR  CAQ  CAP  -178.04  30.0  3
+ DB3  Var_31    CAT   CAS  CAR  CAQ  -179.49  30.0  3
+ DB3  Var_32    H18   C18  C17  C16    59.46  30.0  3
+ DB3  Var_33    HAT   CAT  CAS  CAR  -179.39  30.0  3
+ DB3  Var_34    C4A   C3A  C2A  C1A   -54.34  30.0  1
+ DB3  Var_35    C4A   C5M  O6A  C1A    60.81  30.0  1
+ DB3  Var_36    C5M   O6A  C1A  C2A   -59.58  30.0  1
+ DB3  Var_37    C5M   C4A  C3A  C2A    53.94  30.0  1
+ DB3  Var_38    O6A   C1A  C2A  C3A    55.65  30.0  1
+ DB3  Var_39    O6A   C5M  C4A  C3A   -55.97  30.0  1
+ DB3  Var_40    O3A   C3A  C2A  C1A  -173.97  30.0  1
+ DB3  Var_41    C6A   C5M  O6A  C1A  -174.29  30.0  1
+ DB3  Var_42    C3A   C2A  C1A  O1A   -67.71  30.0  1
+ DB3  Var_43    C5M   O6A  C1A  O1A    61.56  30.0  1
+ DB3  Var_44    O4A   C4A  C3A  C2A   -66.74  30.0  1
+ DB3  Var_45    O6A   C1A  C2A  O2A   176.45  30.0  1
+ DB3  Var_46    C4A   C3A  C2A  O2A  -177.82  30.0  1
+ DB3  Var_47    C6A   C5M  C4A  C3A  -178.02  30.0  1
+ DB3  Var_48    C5M   C4A  C3A  O3A   176.05  30.0  1
+ DB3  Var_49    O6A   C5M  C4A  O4A    66.34  30.0  1
+ DB3  Var_50    H3A   C3A  C2A  C1A    63.48  30.0  1
+ DB3  Var_51    H5M   C5M  O6A  C1A   -57.32  30.0  1
+ DB3  Var_52    H4A   C4A  C3A  C2A   170.64  30.0  1
+ DB3  Var_53    H1AA  C1A  C2A  C3A   170.76  30.0  1
+ DB3  Var_54    H2A   C2A  C3A  C4A    62.07  30.0  1
+ DB3  Var_55    C2A   C1A  O1A  C1   -168.27  30.0  2
+ DB3  Var_56    O6A   C1A  O1A  C1     69.91  30.0  2
+ DB3  Var_57    O2A   C2A  C1A  O1A    53.09  30.0  1
+ DB3  Var_58    O3A   C3A  C2A  O2A    62.55  30.0  1
+ DB3  Var_59    O4A   C4A  C3A  O3A    55.37  30.0  1
+ DB3  Var_60    O5A   C6A  C5M  C4A  -169.48  30.0  3
+ DB3  Var_61    C6A   C5M  C4A  O4A   -55.71  30.0  1
+ DB3  Var_62    O6A   C5M  C6A  O5A    66.76  30.0  2
+ DB3  Var_63    HO2A  O2A  C2A  C1A    79.56  30.0  3
+ DB3  Var_64    HO3A  O3A  C3A  C2A   -49.95  30.0  3
+ DB3  Var_65    HO4A  O4A  C4A  C3A   -51.03  30.0  3
+ DB3  Var_66    H6AA  C6A  C5M  C4A    68.10  30.0  3
+ DB3  Var_67    H6AB  C6A  C5M  C4A   -48.57  30.0  3
+ DB3  Var_68    HO5A  O5A  C6A  C5M   177.77  30.0  3
+ DB3  Var_69    CAA   N2   C2   C1    102.65  30.0  3
+ DB3  Var_70    O3    C3   C2   C1    -38.16  30.0  3
+ DB3  Var_71    C4    C3   C2   C1   -161.95  30.0  3
+ DB3  Var_72    O4    C4   C3   C2    -49.32  30.0  3
+ DB3  Var_73    C5    C4   C3   C2   -176.04  30.0  3
+ DB3  Var_74    O1A   C1   C2   N2     63.67  30.0  3
+ DB3  Var_75    O3    C3   C2   N2   -161.51  30.0  3
+ DB3  Var_76    C4    C3   C2   N2     74.70  30.0  3
+ DB3  Var_77    O1A   C1   C2   C3    -60.22  30.0  3
+ DB3  Var_78    CAA   N2   C2   C3   -131.71  30.0  3
+ DB3  Var_79    C6    C5   C4   C3    179.89  30.0  3
+ DB3  Var_80    O4    C4   C3   O3   -173.98  30.0  3
+ DB3  Var_81    C5    C4   C3   O3     59.31  30.0  3
+ DB3  Var_82    C6    C5   C4   O4     52.53  30.0  3
+ DB3  Var_83    H3    C3   C2   C1     77.30  30.0  3
+ DB3  Var_84    HO3   O3   C3   C2    -69.68  30.0  3
+ DB3  Var_85    H4    C4   C3   C2     65.47  30.0  3
+ DB3  Var_86    HO4   O4   C4   C3    -66.12  30.0  3
+ DB3  Var_87    H5    C5   C4   C3    -58.02  30.0  3
+ DB3  Var_88    H5A   C5   C4   C3     57.54  30.0  3
+ DB3  Var_89    H2    C2   C3   O3     80.49  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

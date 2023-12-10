@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KE2  KE2  (3~{S},6~{S})-3-[(4-hydroxyphenyl)methyl]-6-[(3-methyl-4-oxidanyl-phenyl)methyl]piperazine-2,5-dione  ligand  45  25  .  2022-03-22  2022-07-25
+ KE2  KE2  (3~{S},6~{S})-3-[(4-hydroxyphenyl)methyl]-6-[(3-methyl-4-oxidanyl-phenyl)methyl]piperazine-2,5-dione  ligand  45  25  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KE2
@@ -237,44 +238,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KE2  CONST_01  C22  C04  C03  C02    0.00   0.0  0
- KE2  CONST_02  C22  C23  C24  C02    0.00   0.0  0
- KE2  CONST_03  C23  C22  C04  C03    0.00   0.0  0
- KE2  CONST_04  C23  C24  C02  C03    0.00   0.0  0
- KE2  CONST_05  C24  C23  C22  C04    0.00   0.0  0
- KE2  CONST_06  C24  C02  C03  C04    0.00   0.0  0
- KE2  CONST_07  C15  C17  C18  C12    0.00   0.0  0
- KE2  CONST_08  C15  C14  C13  C12    0.00   0.0  0
- KE2  CONST_09  C17  C18  C12  C13    0.00   0.0  0
- KE2  CONST_10  C17  C15  C14  C13    0.00   0.0  0
- KE2  CONST_11  C18  C12  C13  C14    0.00   0.0  0
- KE2  CONST_12  C18  C17  C15  C14    0.00   0.0  0
- KE2  CONST_13  C10  N19  C20  C06    0.00   0.0  0
- KE2  CONST_14  C10  C08  N07  C06    0.00   0.0  0
- KE2  CONST_15  C04  C03  C02  C01  180.00   0.0  0
- KE2  CONST_16  C23  C24  C02  C01  180.00   0.0  0
- KE2  CONST_17  C05  C04  C03  C02  180.00   0.0  0
- KE2  CONST_18  O25  C24  C02  C03  180.00   0.0  0
- KE2  CONST_19  C23  C22  C04  C05  180.00   0.0  0
- KE2  CONST_20  C17  C18  C12  C11  180.00   0.0  0
- KE2  CONST_21  C14  C13  C12  C11  180.00   0.0  0
- KE2  CONST_22  O16  C15  C14  C13  180.00   0.0  0
- KE2  CONST_23  O16  C15  C17  C18  180.00   0.0  0
- KE2  CONST_24  O25  C24  C23  C22  180.00   0.0  0
- KE2  CONST_25  O09  C08  N07  C06  180.00   0.0  0
- KE2  CONST_26  O21  C20  N19  C10  180.00   0.0  0
- KE2  CONST_27  H16  C23  C24  C02  180.00   0.0  0
- KE2  CONST_28  H15  C22  C04  C03  180.00   0.0  0
- KE2  CONST_29  H13  C17  C18  C12  180.00   0.0  0
- KE2  CONST_30  H12  C14  C13  C12  180.00   0.0  0
- KE2  CONST_31  H14  C18  C12  C13  180.00   0.0  0
- KE2  CONST_32  H11  C13  C14  C15  180.00   0.0  0
- KE2  CONST_33  H4   C03  C04  C22  180.00   0.0  0
- KE2  CONST_34  H18  N19  C20  C06  180.00   0.0  0
- KE2  CONST_35  H17  N07  C08  C10  180.00   0.0  0
- KE2  Var_01    C06  C05  C04  C03   97.22  30.0  2
- KE2  Var_02    C18  C12  C11  C10   92.08  30.0  2
- KE2  Var_03    H1   C01  C02  C03  119.45  30.0  2
+ KE2  CONST_01  C22  C04  C03  C02     0.00   0.0  0
+ KE2  CONST_02  C22  C23  C24  C02     0.00   0.0  0
+ KE2  CONST_03  C23  C22  C04  C03     0.00   0.0  0
+ KE2  CONST_04  C23  C24  C02  C03     0.00   0.0  0
+ KE2  CONST_05  C24  C23  C22  C04     0.00   0.0  0
+ KE2  CONST_06  C24  C02  C03  C04     0.00   0.0  0
+ KE2  CONST_07  C15  C17  C18  C12     0.00   0.0  0
+ KE2  CONST_08  C15  C14  C13  C12     0.00   0.0  0
+ KE2  CONST_09  C17  C18  C12  C13     0.00   0.0  0
+ KE2  CONST_10  C17  C15  C14  C13     0.00   0.0  0
+ KE2  CONST_11  C18  C12  C13  C14     0.00   0.0  0
+ KE2  CONST_12  C18  C17  C15  C14     0.00   0.0  0
+ KE2  CONST_13  C10  N19  C20  C06     0.00   0.0  0
+ KE2  CONST_14  C10  C08  N07  C06     0.00   0.0  0
+ KE2  CONST_15  C04  C03  C02  C01   180.00   0.0  0
+ KE2  CONST_16  C23  C24  C02  C01   180.00   0.0  0
+ KE2  CONST_17  C05  C04  C03  C02   180.00   0.0  0
+ KE2  CONST_18  O25  C24  C02  C03   180.00   0.0  0
+ KE2  CONST_19  C23  C22  C04  C05   180.00   0.0  0
+ KE2  CONST_20  C17  C18  C12  C11   180.00   0.0  0
+ KE2  CONST_21  C14  C13  C12  C11   180.00   0.0  0
+ KE2  CONST_22  O16  C15  C14  C13   180.00   0.0  0
+ KE2  CONST_23  O16  C15  C17  C18   180.00   0.0  0
+ KE2  CONST_24  O25  C24  C23  C22   180.00   0.0  0
+ KE2  CONST_25  O09  C08  N07  C06   180.00   0.0  0
+ KE2  CONST_26  O21  C20  N19  C10   180.00   0.0  0
+ KE2  CONST_27  H16  C23  C24  C02   180.00   0.0  0
+ KE2  CONST_28  H15  C22  C04  C03   180.00   0.0  0
+ KE2  CONST_29  H13  C17  C18  C12   180.00   0.0  0
+ KE2  CONST_30  H12  C14  C13  C12   180.00   0.0  0
+ KE2  CONST_31  H14  C18  C12  C13   180.00   0.0  0
+ KE2  CONST_32  H11  C13  C14  C15   180.00   0.0  0
+ KE2  CONST_33  H4   C03  C04  C22   180.00   0.0  0
+ KE2  CONST_34  H18  N19  C20  C06   180.00   0.0  0
+ KE2  CONST_35  H17  N07  C08  C10   180.00   0.0  0
+ KE2  Var_01    C06  C05  C04  C03    97.22  30.0  2
+ KE2  Var_02    C18  C12  C11  C10    92.08  30.0  2
+ KE2  Var_03    H1   C01  C02  C03   119.45  30.0  2
+ KE2  Var_04    C20  N19  C10  C08    18.04  30.0  1
+ KE2  Var_05    C20  C06  N07  C08    14.86  30.0  1
+ KE2  Var_06    N19  C10  C08  N07   -10.18  30.0  1
+ KE2  Var_07    N19  C20  C06  N07    -7.34  30.0  1
+ KE2  Var_08    C20  C06  C05  C04   175.43  30.0  3
+ KE2  Var_09    N07  C06  C05  C04   -57.44  30.0  3
+ KE2  Var_10    N19  C20  C06  C05   118.87  30.0  1
+ KE2  Var_11    C08  N07  C06  C05  -110.57  30.0  1
+ KE2  Var_12    C12  C11  C10  C08   -62.35  30.0  3
+ KE2  Var_13    C20  N19  C10  C11  -107.75  30.0  1
+ KE2  Var_14    N07  C08  C10  C11   116.15  30.0  1
+ KE2  Var_15    N19  C10  C11  C12    64.85  30.0  2
+ KE2  Var_16    O21  C20  C06  N07   171.35  30.0  1
+ KE2  Var_17    O09  C08  C10  N19   169.35  30.0  1
+ KE2  Var_18    H7   C06  N07  C08   131.06  30.0  1
+ KE2  Var_19    H8   C10  N19  C20   134.66  30.0  1
+ KE2  Var_20    O21  C20  C06  C05   -62.43  30.0  1
+ KE2  Var_21    O09  C08  C10  C11   -64.33  30.0  1
+ KE2  Var_22    H20  O25  C24  C02     1.40  30.0  2
+ KE2  Var_23    H9   C11  C10  C08    60.74  30.0  3
+ KE2  Var_24    H10  C11  C10  C08   175.23  30.0  3
+ KE2  Var_25    H19  O16  C15  C14    -0.02  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

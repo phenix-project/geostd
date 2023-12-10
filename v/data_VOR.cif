@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VOR  VOR  (2R,3S)-2-(2,4-difluorophenyl)-3-(5-fluoropyrimidin-4-yl)-1-(1H-1,2,4-triazol-1-yl)butan-2-ol  ligand  39  25  .  2022-03-29  2022-03-29
+ VOR  VOR  (2R,3S)-2-(2,4-difluorophenyl)-3-(5-fluoropyrimidin-4-yl)-1-(1H-1,2,4-triazol-1-yl)butan-2-ol  ligand  39  25  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VOR
@@ -213,43 +214,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VOR  CONST_01  N8   C25  N7   N5     0.00   0.0  0
- VOR  CONST_02  C25  N8   C21  N5     0.00   0.0  0
- VOR  CONST_03  C23  C18  C15  N6     0.00   0.0  0
- VOR  CONST_04  C23  N9   C24  N6     0.00   0.0  0
- VOR  CONST_05  N8   C21  N5   N7     0.00   0.0  0
- VOR  CONST_06  C21  N8   C25  N7     0.00   0.0  0
- VOR  CONST_07  C15  C18  C23  N9     0.00   0.0  0
- VOR  CONST_08  C15  N6   C24  N9     0.00   0.0  0
- VOR  CONST_09  C22  C19  C16  C13    0.00   0.0  0
- VOR  CONST_10  C22  C20  C17  C13    0.00   0.0  0
- VOR  CONST_11  C20  C17  C13  C16    0.00   0.0  0
- VOR  CONST_12  C20  C22  C19  C16    0.00   0.0  0
- VOR  CONST_13  C19  C16  C13  C17    0.00   0.0  0
- VOR  CONST_14  C19  C22  C20  C17    0.00   0.0  0
- VOR  CONST_15  C24  N6   C15  C18    0.00   0.0  0
- VOR  CONST_16  C24  N9   C23  C18    0.00   0.0  0
- VOR  CONST_17  C25  N7   N5   C21    0.00   0.0  0
- VOR  CONST_18  C17  C13  C16  F1   180.00   0.0  0
- VOR  CONST_19  C22  C19  C16  F1   180.00   0.0  0
- VOR  CONST_20  N6   C15  C18  F2   180.00   0.0  0
- VOR  CONST_21  N9   C23  C18  F2   180.00   0.0  0
- VOR  CONST_22  C16  C19  C22  F3   180.00   0.0  0
- VOR  CONST_23  C17  C20  C22  F3   180.00   0.0  0
- VOR  CONST_24  C12  N5   C21  N8   180.00   0.0  0
- VOR  CONST_25  C19  C16  C13  C10  180.00   0.0  0
- VOR  CONST_26  C20  C17  C13  C10  180.00   0.0  0
- VOR  CONST_27  C24  N6   C15  C11  180.00   0.0  0
- VOR  CONST_28  C23  C18  C15  C11  180.00   0.0  0
- VOR  CONST_29  C25  N7   N5   C12  180.00   0.0  0
- VOR  CONST_30  H25  C25  N7   N5   180.00   0.0  0
- VOR  CONST_31  H21  C21  N5   N7   180.00   0.0  0
- VOR  CONST_32  H19  C19  C16  C13  180.00   0.0  0
- VOR  CONST_33  H20  C20  C17  C13  180.00   0.0  0
- VOR  CONST_34  H24  C24  N6   C15  180.00   0.0  0
- VOR  CONST_35  H23  C23  C18  C15  180.00   0.0  0
- VOR  CONST_36  H17  C17  C13  C16  180.00   0.0  0
- VOR  Var_01    C10  C12  N5   N7   -78.32  30.0  2
+ VOR  CONST_01  N8    C25  N7   N5      0.00   0.0  0
+ VOR  CONST_02  C25   N8   C21  N5      0.00   0.0  0
+ VOR  CONST_03  C23   C18  C15  N6      0.00   0.0  0
+ VOR  CONST_04  C23   N9   C24  N6      0.00   0.0  0
+ VOR  CONST_05  N8    C21  N5   N7      0.00   0.0  0
+ VOR  CONST_06  C21   N8   C25  N7      0.00   0.0  0
+ VOR  CONST_07  C15   C18  C23  N9      0.00   0.0  0
+ VOR  CONST_08  C15   N6   C24  N9      0.00   0.0  0
+ VOR  CONST_09  C22   C19  C16  C13     0.00   0.0  0
+ VOR  CONST_10  C22   C20  C17  C13     0.00   0.0  0
+ VOR  CONST_11  C20   C17  C13  C16     0.00   0.0  0
+ VOR  CONST_12  C20   C22  C19  C16     0.00   0.0  0
+ VOR  CONST_13  C19   C16  C13  C17     0.00   0.0  0
+ VOR  CONST_14  C19   C22  C20  C17     0.00   0.0  0
+ VOR  CONST_15  C24   N6   C15  C18     0.00   0.0  0
+ VOR  CONST_16  C24   N9   C23  C18     0.00   0.0  0
+ VOR  CONST_17  C25   N7   N5   C21     0.00   0.0  0
+ VOR  CONST_18  C17   C13  C16  F1    180.00   0.0  0
+ VOR  CONST_19  C22   C19  C16  F1    180.00   0.0  0
+ VOR  CONST_20  N6    C15  C18  F2    180.00   0.0  0
+ VOR  CONST_21  N9    C23  C18  F2    180.00   0.0  0
+ VOR  CONST_22  C16   C19  C22  F3    180.00   0.0  0
+ VOR  CONST_23  C17   C20  C22  F3    180.00   0.0  0
+ VOR  CONST_24  C12   N5   C21  N8    180.00   0.0  0
+ VOR  CONST_25  C19   C16  C13  C10   180.00   0.0  0
+ VOR  CONST_26  C20   C17  C13  C10   180.00   0.0  0
+ VOR  CONST_27  C24   N6   C15  C11   180.00   0.0  0
+ VOR  CONST_28  C23   C18  C15  C11   180.00   0.0  0
+ VOR  CONST_29  C25   N7   N5   C12   180.00   0.0  0
+ VOR  CONST_30  H25   C25  N7   N5    180.00   0.0  0
+ VOR  CONST_31  H21   C21  N5   N7    180.00   0.0  0
+ VOR  CONST_32  H19   C19  C16  C13   180.00   0.0  0
+ VOR  CONST_33  H20   C20  C17  C13   180.00   0.0  0
+ VOR  CONST_34  H24   C24  N6   C15   180.00   0.0  0
+ VOR  CONST_35  H23   C23  C18  C15   180.00   0.0  0
+ VOR  CONST_36  H17   C17  C13  C16   180.00   0.0  0
+ VOR  Var_01    C10   C12  N5   N7    -78.32  30.0  2
+ VOR  Var_02    C16   C13  C10  O4   -177.67  30.0  2
+ VOR  Var_03    C17   C13  C10  O4      2.14  30.0  2
+ VOR  Var_04    C13   C10  C12  N5    -51.74  30.0  2
+ VOR  Var_05    C10   C11  C15  N6    -46.70  30.0  2
+ VOR  Var_06    C14   C11  C15  N6     77.37  30.0  2
+ VOR  Var_07    C18   C15  C11  C10   135.72  30.0  2
+ VOR  Var_08    C16   C13  C10  C11    61.93  30.0  2
+ VOR  Var_09    C17   C13  C10  C11  -118.26  30.0  2
+ VOR  Var_10    C16   C13  C10  C12   -58.66  30.0  2
+ VOR  Var_11    C17   C13  C10  C12   121.15  30.0  2
+ VOR  Var_12    C15   C11  C10  C13  -176.93  30.0  3
+ VOR  Var_13    C18   C15  C11  C14  -100.22  30.0  2
+ VOR  Var_14    H11   C11  C15  N6   -165.66  30.0  2
+ VOR  Var_15    C15   C11  C10  O4     65.18  30.0  3
+ VOR  Var_16    N5    C12  C10  O4     65.55  30.0  3
+ VOR  Var_17    C11   C10  C12  N5   -172.72  30.0  2
+ VOR  Var_18    C15   C11  C10  C12   -55.77  30.0  3
+ VOR  Var_19    C14   C11  C10  C13    61.08  30.0  3
+ VOR  Var_20    HO4   O4   C10  C13  -165.81  30.0  3
+ VOR  Var_21    H14   C14  C11  C15   -60.43  30.0  3
+ VOR  Var_22    H14A  C14  C11  C15    59.66  30.0  3
+ VOR  Var_23    H14B  C14  C11  C15   178.68  30.0  3
+ VOR  Var_24    C14   C11  C10  O4    -56.81  30.0  3
+ VOR  Var_25    C14   C11  C10  C12  -177.76  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

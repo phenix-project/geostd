@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZXG  ZXG  '2,6-dibromo-4-[2-(3,5-dibromo-4-hydroxyphenyl)propan-2-yl]phenyl hydrogen sulfate'  ligand  37  25  .  2022-11-18  2022-11-18
+ ZXG  ZXG  '2,6-dibromo-4-[2-(3,5-dibromo-4-hydroxyphenyl)propan-2-yl]phenyl hydrogen sulfate'  ligand  37  25  .  2022-11-18  2023-10-25
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-25
 ;
 
 data_comp_ZXG
@@ -203,42 +204,49 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ZXG  CONST_01  CAQ  CAT  CAP  CAK      0.00   0.0  0
- ZXG  CONST_02  CAQ  CAL  CAU  CAK      0.00   0.0  0
- ZXG  CONST_03  CAP  CAT  CAQ  CAL      0.00   0.0  0
- ZXG  CONST_04  CAP  CAK  CAU  CAL      0.00   0.0  0
- ZXG  CONST_05  CAS  CAN  CAV  CAM      0.00   0.0  0
- ZXG  CONST_06  CAS  CAW  CAR  CAM      0.00   0.0  0
- ZXG  CONST_07  CAR  CAM  CAV  CAN      0.00   0.0  0
- ZXG  CONST_08  CAR  CAW  CAS  CAN      0.00   0.0  0
- ZXG  CONST_09  CAU  CAK  CAP  CAT      0.00   0.0  0
- ZXG  CONST_10  CAU  CAL  CAQ  CAT      0.00   0.0  0
- ZXG  CONST_11  CAW  CAR  CAM  CAV      0.00   0.0  0
- ZXG  CONST_12  CAW  CAS  CAN  CAV      0.00   0.0  0
- ZXG  CONST_13  CAK  CAP  CAT  OAE    180.00   0.0  0
- ZXG  CONST_14  CAL  CAQ  CAT  OAE    180.00   0.0  0
- ZXG  CONST_15  CAU  CAK  CAP  BRAG   180.00   0.0  0
- ZXG  CONST_16  CAQ  CAT  CAP  BRAG   180.00   0.0  0
- ZXG  CONST_17  CAU  CAL  CAQ  BRAH   180.00   0.0  0
- ZXG  CONST_18  CAP  CAT  CAQ  BRAH   180.00   0.0  0
- ZXG  CONST_19  CAV  CAM  CAR  BRAI   180.00   0.0  0
- ZXG  CONST_20  CAS  CAW  CAR  BRAI   180.00   0.0  0
- ZXG  CONST_21  CAV  CAN  CAS  BRAJ   180.00   0.0  0
- ZXG  CONST_22  CAR  CAW  CAS  BRAJ   180.00   0.0  0
- ZXG  CONST_23  OAO  CAW  CAR  CAM    180.00   0.0  0
- ZXG  CONST_24  OAO  CAW  CAS  CAN    180.00   0.0  0
- ZXG  CONST_25  CAX  CAU  CAK  CAP    180.00   0.0  0
- ZXG  CONST_26  CAX  CAU  CAL  CAQ    180.00   0.0  0
- ZXG  CONST_27  CAX  CAV  CAM  CAR    180.00   0.0  0
- ZXG  CONST_28  CAX  CAV  CAN  CAS    180.00   0.0  0
- ZXG  CONST_29  HAL  CAL  CAU  CAK    180.00   0.0  0
- ZXG  CONST_30  HAK  CAK  CAU  CAL    180.00   0.0  0
- ZXG  CONST_31  HAN  CAN  CAV  CAM    180.00   0.0  0
- ZXG  CONST_32  HAM  CAM  CAV  CAN    180.00   0.0  0
- ZXG  Var_01    CAV  CAX  CAU  CAK     56.11  30.0  2
- ZXG  Var_02    CAU  CAX  CAV  CAM   -125.13  30.0  2
- ZXG  Var_03    HAA  CAA  CAX  CAU     60.79  30.0  3
- ZXG  Var_04    HAB  CAB  CAX  CAU    -58.76  30.0  3
+ ZXG  CONST_01  CAQ   CAT  CAP  CAK      0.00   0.0  0
+ ZXG  CONST_02  CAQ   CAL  CAU  CAK      0.00   0.0  0
+ ZXG  CONST_03  CAP   CAT  CAQ  CAL      0.00   0.0  0
+ ZXG  CONST_04  CAP   CAK  CAU  CAL      0.00   0.0  0
+ ZXG  CONST_05  CAS   CAN  CAV  CAM      0.00   0.0  0
+ ZXG  CONST_06  CAS   CAW  CAR  CAM      0.00   0.0  0
+ ZXG  CONST_07  CAR   CAM  CAV  CAN      0.00   0.0  0
+ ZXG  CONST_08  CAR   CAW  CAS  CAN      0.00   0.0  0
+ ZXG  CONST_09  CAU   CAK  CAP  CAT      0.00   0.0  0
+ ZXG  CONST_10  CAU   CAL  CAQ  CAT      0.00   0.0  0
+ ZXG  CONST_11  CAW   CAR  CAM  CAV      0.00   0.0  0
+ ZXG  CONST_12  CAW   CAS  CAN  CAV      0.00   0.0  0
+ ZXG  CONST_13  CAK   CAP  CAT  OAE    180.00   0.0  0
+ ZXG  CONST_14  CAL   CAQ  CAT  OAE    180.00   0.0  0
+ ZXG  CONST_15  CAU   CAK  CAP  BRAG   180.00   0.0  0
+ ZXG  CONST_16  CAQ   CAT  CAP  BRAG   180.00   0.0  0
+ ZXG  CONST_17  CAU   CAL  CAQ  BRAH   180.00   0.0  0
+ ZXG  CONST_18  CAP   CAT  CAQ  BRAH   180.00   0.0  0
+ ZXG  CONST_19  CAV   CAM  CAR  BRAI   180.00   0.0  0
+ ZXG  CONST_20  CAS   CAW  CAR  BRAI   180.00   0.0  0
+ ZXG  CONST_21  CAV   CAN  CAS  BRAJ   180.00   0.0  0
+ ZXG  CONST_22  CAR   CAW  CAS  BRAJ   180.00   0.0  0
+ ZXG  CONST_23  OAO   CAW  CAR  CAM    180.00   0.0  0
+ ZXG  CONST_24  OAO   CAW  CAS  CAN    180.00   0.0  0
+ ZXG  CONST_25  CAX   CAU  CAK  CAP    180.00   0.0  0
+ ZXG  CONST_26  CAX   CAU  CAL  CAQ    180.00   0.0  0
+ ZXG  CONST_27  CAX   CAV  CAM  CAR    180.00   0.0  0
+ ZXG  CONST_28  CAX   CAV  CAN  CAS    180.00   0.0  0
+ ZXG  CONST_29  HAL   CAL  CAU  CAK    180.00   0.0  0
+ ZXG  CONST_30  HAK   CAK  CAU  CAL    180.00   0.0  0
+ ZXG  CONST_31  HAN   CAN  CAV  CAM    180.00   0.0  0
+ ZXG  CONST_32  HAM   CAM  CAV  CAN    180.00   0.0  0
+ ZXG  Var_01    CAV   CAX  CAU  CAK     56.11  30.0  2
+ ZXG  Var_02    CAU   CAX  CAV  CAM   -125.13  30.0  2
+ ZXG  Var_03    HAA   CAA  CAX  CAU     60.79  30.0  3
+ ZXG  Var_04    HAB   CAB  CAX  CAU    -58.76  30.0  3
+ ZXG  Var_05    SAY   OAO  CAW  CAR     85.06  30.0  2
+ ZXG  Var_06    SAY   OAO  CAW  CAS    -98.51  30.0  2
+ ZXG  Var_07    HOAE  OAE  CAT  CAP    178.98  30.0  2
+ ZXG  Var_08    CAW   OAO  SAY  OAC   -138.68  30.0  1
+ ZXG  Var_09    CAW   OAO  SAY  OAD     -5.38  30.0  1
+ ZXG  Var_10    CAW   OAO  SAY  OAF    105.89  30.0  1
+ ZXG  Var_11    HOAF  OAF  SAY  OAC    -34.81  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

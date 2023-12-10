@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- C5G  C5G  '[(2R,3S,4R,5R)-5-(4-amino-2-oxopyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl dihydrogen diphosphate (non-preferred name)'  ligand  59  36  .  2022-03-15  2022-03-15
+ C5G  C5G  '[(2R,3S,4R,5R)-5-(4-amino-2-oxopyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl dihydrogen diphosphate (non-preferred name)'  ligand  59  36  .  2022-03-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_C5G
@@ -293,26 +294,97 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- C5G  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- C5G  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- C5G  CONST_03  C5    C6   N1   C2     0.00   0.0  0
- C5G  CONST_04  C5    C4   N3   C2     0.00   0.0  0
- C5G  CONST_05  C6    N1   C2   N3     0.00   0.0  0
- C5G  CONST_06  C6    C5   C4   N3     0.00   0.0  0
- C5G  CONST_07  C1D   N1   C2   N3   180.00   0.0  0
- C5G  CONST_08  C1D   N1   C6   C5   180.00   0.0  0
- C5G  CONST_09  N4    C4   N3   C2   180.00   0.0  0
- C5G  CONST_10  O2    C2   N3   C4   180.00   0.0  0
- C5G  CONST_11  O2    C2   N1   C6   180.00   0.0  0
- C5G  CONST_12  N4    C4   C5   C6   180.00   0.0  0
- C5G  CONST_13  C1D   N1   C2   O2     0.00   0.0  0
- C5G  CONST_14  H5    C5   C6   N1   180.00   0.0  0
- C5G  CONST_15  H6    C6   N1   C2   180.00   0.0  0
- C5G  CONST_16  H41   N4   C4   N3   180.00   0.0  0
- C5G  CONST_17  H42   N4   C4   N3     0.00   0.0  0
- C5G  Var_01    O1A   PA   O5D  C5D   23.32  30.0  3
- C5G  Var_02    O1B   PB   O3A  PA    82.42  30.0  3
- C5G  Var_03    H5'1  C5D  O5D  PA   -64.12  30.0  1
+ C5G  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ C5G  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ C5G  CONST_03  C5    C6   N1   C2      0.00   0.0  0
+ C5G  CONST_04  C5    C4   N3   C2      0.00   0.0  0
+ C5G  CONST_05  C6    N1   C2   N3      0.00   0.0  0
+ C5G  CONST_06  C6    C5   C4   N3      0.00   0.0  0
+ C5G  CONST_07  C1D   N1   C2   N3    180.00   0.0  0
+ C5G  CONST_08  C1D   N1   C6   C5    180.00   0.0  0
+ C5G  CONST_09  N4    C4   N3   C2    180.00   0.0  0
+ C5G  CONST_10  O2    C2   N3   C4    180.00   0.0  0
+ C5G  CONST_11  O2    C2   N1   C6    180.00   0.0  0
+ C5G  CONST_12  N4    C4   C5   C6    180.00   0.0  0
+ C5G  CONST_13  C1D   N1   C2   O2      0.00   0.0  0
+ C5G  CONST_14  H5    C5   C6   N1    180.00   0.0  0
+ C5G  CONST_15  H6    C6   N1   C2    180.00   0.0  0
+ C5G  CONST_16  H41   N4   C4   N3    180.00   0.0  0
+ C5G  CONST_17  H42   N4   C4   N3      0.00   0.0  0
+ C5G  Var_01    O1A   PA   O5D  C5D    23.32  30.0  3
+ C5G  Var_02    O1B   PB   O3A  PA     82.42  30.0  3
+ C5G  Var_03    H5'1  C5D  O5D  PA    -64.12  30.0  1
+ C5G  Var_04    C3D   C2D  C1D  N1    158.26  30.0  1
+ C5G  Var_05    C4D   O4D  C1D  N1   -151.21  30.0  1
+ C5G  Var_06    C2D   C1D  N1   C2    121.77  30.0  2
+ C5G  Var_07    O4D   C1D  N1   C2   -120.60  30.0  2
+ C5G  Var_08    C2D   C1D  N1   C6    -60.54  30.0  2
+ C5G  Var_09    O4D   C1D  N1   C6     57.09  30.0  2
+ C5G  Var_10    C4D   C3D  C2D  C1D   -34.16  30.0  1
+ C5G  Var_11    C3D   C4D  O4D  C1D     4.72  30.0  1
+ C5G  Var_12    C4D   O4D  C1D  C2D   -27.47  30.0  1
+ C5G  Var_13    O4D   C4D  C3D  C2D    19.58  30.0  1
+ C5G  Var_14    O4D   C1D  C2D  C3D    38.38  30.0  1
+ C5G  Var_15    C4'   C3'  C2'  C1'   -50.73  30.0  1
+ C5G  Var_16    C4'   C5'  O5'  C1'    65.62  30.0  1
+ C5G  Var_17    C5'   O5'  C1'  C2'   -62.24  30.0  1
+ C5G  Var_18    C5'   C4'  C3'  C2'    52.41  30.0  1
+ C5G  Var_19    O5'   C1'  C2'  C3'    53.77  30.0  1
+ C5G  Var_20    O5'   C5'  C4'  C3'   -58.07  30.0  1
+ C5G  Var_21    O2D   C2D  C1D  N1    -80.10  30.0  1
+ C5G  Var_22    O3D   C3D  C2D  C1D    81.21  30.0  1
+ C5G  Var_23    C5D   C4D  O4D  C1D   130.55  30.0  1
+ C5G  Var_24    C5D   C4D  C3D  C2D  -102.99  30.0  1
+ C5G  Var_25    O4D   C1D  C2D  O2D   160.02  30.0  1
+ C5G  Var_26    C4D   C3D  C2D  O2D  -152.10  30.0  1
+ C5G  Var_27    O3D   C3D  C4D  O4D   -97.65  30.0  1
+ C5G  Var_28    C3'   C2'  C1'  O1'   -70.18  30.0  1
+ C5G  Var_29    C5'   O5'  C1'  O1'    60.15  30.0  1
+ C5G  Var_30    O3'   C3'  C2'  C1'  -176.57  30.0  1
+ C5G  Var_31    C6'   C5'  O5'  C1'  -168.51  30.0  1
+ C5G  Var_32    O4'   C4'  C3'  C2'   176.73  30.0  1
+ C5G  Var_33    O5'   C1'  C2'  O2'   176.40  30.0  1
+ C5G  Var_34    C4'   C3'  C2'  O2'  -175.53  30.0  1
+ C5G  Var_35    C6'   C5'  C4'  C3'  -178.54  30.0  1
+ C5G  Var_36    C5'   C4'  C3'  O3'   178.15  30.0  1
+ C5G  Var_37    O5'   C5'  C4'  O4'   177.84  30.0  1
+ C5G  Var_38    H2D   C2D  C1D  N1     43.50  30.0  1
+ C5G  Var_39    H1D   C1D  N1   C2      0.18  30.0  2
+ C5G  Var_40    H3D   C3D  C2D  C1D  -153.98  30.0  1
+ C5G  Var_41    H4D   C4D  O4D  C1D  -112.58  30.0  1
+ C5G  Var_42    H3'   C3'  C2'  C1'    67.46  30.0  1
+ C5G  Var_43    H5'   C5'  O5'  C1'   -52.26  30.0  1
+ C5G  Var_44    H4'   C4'  C3'  C2'   -66.31  30.0  1
+ C5G  Var_45    H1'   C1'  C2'  C3'   168.90  30.0  1
+ C5G  Var_46    H2'   C2'  C3'  C4'    64.28  30.0  1
+ C5G  Var_47    O3D   C3D  C2D  O2D   -36.73  30.0  1
+ C5G  Var_48    O5D   C5D  C4D  C3D    52.95  30.0  3
+ C5G  Var_49    O5D   C5D  C4D  O4D   -67.73  30.0  3
+ C5G  Var_50    C5D   C4D  C3D  O3D   139.78  30.0  1
+ C5G  Var_51    C2'   C1'  O1'  PB    177.82  30.0  3
+ C5G  Var_52    O5'   C1'  O1'  PB     55.74  30.0  3
+ C5G  Var_53    O2'   C2'  C1'  O1'    52.44  30.0  1
+ C5G  Var_54    O3'   C3'  C2'  O2'    58.64  30.0  1
+ C5G  Var_55    O4'   C4'  C3'  O3'   -57.53  30.0  1
+ C5G  Var_56    O6'   C6'  C5'  C4'  -172.80  30.0  3
+ C5G  Var_57    C6'   C5'  C4'  O4'    57.37  30.0  1
+ C5G  Var_58    O5'   C5'  C6'  O6'    65.28  30.0  1
+ C5G  Var_59    HO'2  O2D  C2D  C1D   157.98  30.0  3
+ C5G  Var_60    H3T   O3D  C3D  C2D    47.57  30.0  3
+ C5G  Var_61    H5'1  C5D  C4D  C3D   -68.38  30.0  3
+ C5G  Var_62    H5'2  C5D  C4D  C3D   175.56  30.0  3
+ C5G  Var_63    HOD   O2'  C2'  C1'    68.66  30.0  3
+ C5G  Var_64    HO'3  O3'  C3'  C2'    61.09  30.0  3
+ C5G  Var_65    HO'4  O4'  C4'  C3'   -60.07  30.0  3
+ C5G  Var_66    H6'1  C6'  C5'  C4'    64.82  30.0  3
+ C5G  Var_67    H6'2  C6'  C5'  C4'   -50.90  30.0  3
+ C5G  Var_68    C1'   O1'  PB   O3A    51.18  30.0  3
+ C5G  Var_69    C1'   O1'  PB   O1B   165.63  30.0  3
+ C5G  Var_70    C1'   O1'  PB   O2B   -63.99  30.0  2
+ C5G  Var_71    HO'6  O6'  C6'  C5'     3.46  30.0  3
+ C5G  Var_72    PB    O3A  PA   O5D   100.53  30.0  3
+ C5G  Var_73    PB    O3A  PA   O1A   -15.41  30.0  3
+ C5G  Var_74    PB    O3A  PA   O2A  -149.74  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

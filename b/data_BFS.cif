@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BFS  BFS  N-[(1R)-1-(4-bromophenyl)ethyl]-5-fluoro-2-hydroxybenzamide  ligand  33  20  .  2021-08-06  2021-08-06  
+ BFS  BFS  N-[(1R)-1-(4-bromophenyl)ethyl]-5-fluoro-2-hydroxybenzamide  ligand  33  20  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BFS
@@ -187,39 +188,50 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BFS  CONST_01  C4   C3   C2   C1      0.00   0.0  0
- BFS  CONST_02  C4   C5   C6   C1      0.00   0.0  0
- BFS  CONST_03  C5   C6   C1   C2      0.00   0.0  0
- BFS  CONST_04  C5   C4   C3   C2      0.00   0.0  0
- BFS  CONST_05  C6   C1   C2   C3      0.00   0.0  0
- BFS  CONST_06  C6   C5   C4   C3      0.00   0.0  0
- BFS  CONST_07  C4'  C3'  C2'  C1'     0.00   0.0  0
- BFS  CONST_08  C4'  C5'  C6'  C1'     0.00   0.0  0
- BFS  CONST_09  C5'  C6'  C1'  C2'     0.00   0.0  0
- BFS  CONST_10  C5'  C4'  C3'  C2'     0.00   0.0  0
- BFS  CONST_11  C6'  C1'  C2'  C3'     0.00   0.0  0
- BFS  CONST_12  C6'  C5'  C4'  C3'     0.00   0.0  0
- BFS  CONST_13  F5   C5   C6   C1    180.00   0.0  0
- BFS  CONST_14  C    C1   C2   C3    180.00   0.0  0
- BFS  CONST_15  F5   C5   C4   C3    180.00   0.0  0
- BFS  CONST_16  O2   C2   C3   C4    180.00   0.0  0
- BFS  CONST_17  C    C1   C6   C5    180.00   0.0  0
- BFS  CONST_18  O2   C2   C1   C6    180.00   0.0  0
- BFS  CONST_19  C3'  C2'  C1'  CE1   180.00   0.0  0
- BFS  CONST_20  C5'  C6'  C1'  CE1   180.00   0.0  0
- BFS  CONST_21  BR4  C4'  C3'  C2'   180.00   0.0  0
- BFS  CONST_22  BR4  C4'  C5'  C6'   180.00   0.0  0
- BFS  CONST_23  H3   C3   C2   C1    180.00   0.0  0
- BFS  CONST_24  H6   C6   C1   C2    180.00   0.0  0
- BFS  CONST_25  H4   C4   C3   C2    180.00   0.0  0
- BFS  CONST_26  H3'  C3'  C2'  C1'   180.00   0.0  0
- BFS  CONST_27  H5'  C5'  C6'  C1'   180.00   0.0  0
- BFS  CONST_28  H6'  C6'  C1'  C2'   180.00   0.0  0
- BFS  CONST_29  H2'  C2'  C3'  C4'   180.00   0.0  0
- BFS  CONST_30  CE1  N    C    C1    180.00   0.0  0
- BFS  CONST_31  HN   N    C    C1      0.00   0.0  0
- BFS  CONST_32  O    C    N    CE1     0.00   0.0  0
- BFS  Var_01    N    C    C1   C2   -170.70  30.0  2
+ BFS  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ BFS  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ BFS  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ BFS  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ BFS  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ BFS  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ BFS  CONST_07  C4'   C3'  C2'  C1'     0.00   0.0  0
+ BFS  CONST_08  C4'   C5'  C6'  C1'     0.00   0.0  0
+ BFS  CONST_09  C5'   C6'  C1'  C2'     0.00   0.0  0
+ BFS  CONST_10  C5'   C4'  C3'  C2'     0.00   0.0  0
+ BFS  CONST_11  C6'   C1'  C2'  C3'     0.00   0.0  0
+ BFS  CONST_12  C6'   C5'  C4'  C3'     0.00   0.0  0
+ BFS  CONST_13  F5    C5   C6   C1    180.00   0.0  0
+ BFS  CONST_14  C     C1   C2   C3    180.00   0.0  0
+ BFS  CONST_15  F5    C5   C4   C3    180.00   0.0  0
+ BFS  CONST_16  O2    C2   C3   C4    180.00   0.0  0
+ BFS  CONST_17  C     C1   C6   C5    180.00   0.0  0
+ BFS  CONST_18  O2    C2   C1   C6    180.00   0.0  0
+ BFS  CONST_19  C3'   C2'  C1'  CE1   180.00   0.0  0
+ BFS  CONST_20  C5'   C6'  C1'  CE1   180.00   0.0  0
+ BFS  CONST_21  BR4   C4'  C3'  C2'   180.00   0.0  0
+ BFS  CONST_22  BR4   C4'  C5'  C6'   180.00   0.0  0
+ BFS  CONST_23  H3    C3   C2   C1    180.00   0.0  0
+ BFS  CONST_24  H6    C6   C1   C2    180.00   0.0  0
+ BFS  CONST_25  H4    C4   C3   C2    180.00   0.0  0
+ BFS  CONST_26  H3'   C3'  C2'  C1'   180.00   0.0  0
+ BFS  CONST_27  H5'   C5'  C6'  C1'   180.00   0.0  0
+ BFS  CONST_28  H6'   C6'  C1'  C2'   180.00   0.0  0
+ BFS  CONST_29  H2'   C2'  C3'  C4'   180.00   0.0  0
+ BFS  CONST_30  CE1   N    C    C1    180.00   0.0  0
+ BFS  CONST_31  HN    N    C    C1      0.00   0.0  0
+ BFS  CONST_32  O     C    N    CE1     0.00   0.0  0
+ BFS  Var_01    N     C    C1   C2   -170.70  30.0  2
+ BFS  Var_02    C2'   C1'  CE1  CE2   127.11  30.0  2
+ BFS  Var_03    C6'   C1'  CE1  CE2   -53.64  30.0  2
+ BFS  Var_04    N     CE1  C1'  C2'  -108.58  30.0  2
+ BFS  Var_05    N     CE1  C1'  C6'    70.67  30.0  2
+ BFS  Var_06    HO2   O2   C2   C1     -3.84  30.0  2
+ BFS  Var_07    HE1   CE1  C1'  C2'     7.32  30.0  2
+ BFS  Var_08    C1'   CE1  N    C     151.64  30.0  2
+ BFS  Var_09    HE21  CE2  CE1  C1'    61.90  30.0  3
+ BFS  Var_10    HE22  CE2  CE1  C1'  -177.68  30.0  3
+ BFS  Var_11    HE23  CE2  CE1  C1'   -58.41  30.0  3
+ BFS  Var_12    CE2   CE1  N    C     -83.42  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

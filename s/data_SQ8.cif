@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SQ8  SQ8  1-[(5-azanyl-1,3-dioxan-2-yl)methyl]-3-[2-chloranyl-4-(3-fluoranylpyridin-2-yl)phenyl]-7-(methylamino)-1,6-naphthyridin-2-one  ligand  58  35  .  2022-07-22  2022-07-22
+ SQ8  SQ8  1-[(5-azanyl-1,3-dioxan-2-yl)methyl]-3-[2-chloranyl-4-(3-fluoranylpyridin-2-yl)phenyl]-7-(methylamino)-1,6-naphthyridin-2-one  ligand  58  35  .  2022-07-22  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_SQ8
@@ -300,49 +301,80 @@ _chem_comp_tor.period
  SQ8  CONST_07  C6   C5   C11  C12   180.00   0.0  0
  SQ8  CONST_08  C4   C5   C11  C12     0.00   0.0  0
  SQ8  CONST_09  C4   C3   C2   C12     0.00   0.0  0
- SQ8  CONST_12  C3   C4   C5   C11     0.00   0.0  0
- SQ8  CONST_13  C3   C2   C12  C11     0.00   0.0  0
- SQ8  CONST_14  C7   C8   C9   C10     0.00   0.0  0
- SQ8  CONST_15  C7   N    C6   C10     0.00   0.0  0
- SQ8  CONST_17  N    C7   C8   C9      0.00   0.0  0
- SQ8  CONST_18  N    C6   C10  C9      0.00   0.0  0
- SQ8  CONST_19  C5   C6   C10  C9    180.00   0.0  0
- SQ8  CONST_20  C6   N    C7   C8      0.00   0.0  0
- SQ8  CONST_21  C6   C10  C9   C8      0.00   0.0  0
- SQ8  CONST_22  C5   C6   N    C7    180.00   0.0  0
- SQ8  CONST_23  C3   C4   C5   C6    180.00   0.0  0
- SQ8  CONST_24  C2   C3   C4   C5      0.00   0.0  0
- SQ8  CONST_25  C2   C12  C11  C5      0.00   0.0  0
- SQ8  CONST_27  C1   C2   C12  C11   180.00   0.0  0
- SQ8  CONST_28  C1   C2   C3   C4    180.00   0.0  0
- SQ8  CONST_29  C1   C    N1   C19     0.00   0.0  0
- SQ8  CONST_30  N4   C22  N3   C21   180.00   0.0  0
- SQ8  CONST_31  N4   C22  C24  C19   180.00   0.0  0
- SQ8  CONST_32  CL   C3   C2   C12   180.00   0.0  0
- SQ8  CONST_33  F    C10  C9   C8    180.00   0.0  0
- SQ8  CONST_34  F    C10  C6   C5      0.00   0.0  0
- SQ8  CONST_35  CL   C3   C4   C5    180.00   0.0  0
- SQ8  CONST_36  CL   C3   C2   C1      0.00   0.0  0
- SQ8  CONST_37  F    C10  C6   N     180.00   0.0  0
- SQ8  CONST_38  O    C    N1   C19   180.00   0.0  0
- SQ8  CONST_39  C1   C    N1   C14   180.00   0.0  0
- SQ8  CONST_40  H5   C24  C19  C20   180.00   0.0  0
- SQ8  CONST_41  H1   C21  N3   C22   180.00   0.0  0
- SQ8  CONST_42  H19  C4   C5   C11   180.00   0.0  0
- SQ8  CONST_43  H17  C8   C9   C10   180.00   0.0  0
- SQ8  CONST_44  H18  C7   C8   C9    180.00   0.0  0
- SQ8  CONST_45  H16  C9   C8   C7    180.00   0.0  0
- SQ8  CONST_46  H9   C11  C5   C6      0.00   0.0  0
- SQ8  CONST_47  H8   C12  C11  C5    180.00   0.0  0
- SQ8  CONST_48  C24  C22  N4   C23     0.00   0.0  0
- SQ8  CONST_49  N3   C22  N4   C23   180.00   0.0  0
- SQ8  CONST_50  O    C    N1   C14     0.00   0.0  0
- SQ8  CONST_51  H6   N4   C22  C24   180.00   0.0  0
+ SQ8  CONST_10  C3   C4   C5   C11     0.00   0.0  0
+ SQ8  CONST_11  C3   C2   C12  C11     0.00   0.0  0
+ SQ8  CONST_12  C7   C8   C9   C10     0.00   0.0  0
+ SQ8  CONST_13  C7   N    C6   C10     0.00   0.0  0
+ SQ8  CONST_14  N    C7   C8   C9      0.00   0.0  0
+ SQ8  CONST_15  N    C6   C10  C9      0.00   0.0  0
+ SQ8  CONST_16  C5   C6   C10  C9    180.00   0.0  0
+ SQ8  CONST_17  C6   N    C7   C8      0.00   0.0  0
+ SQ8  CONST_18  C6   C10  C9   C8      0.00   0.0  0
+ SQ8  CONST_19  C5   C6   N    C7    180.00   0.0  0
+ SQ8  CONST_20  C3   C4   C5   C6    180.00   0.0  0
+ SQ8  CONST_21  C2   C3   C4   C5      0.00   0.0  0
+ SQ8  CONST_22  C2   C12  C11  C5      0.00   0.0  0
+ SQ8  CONST_23  C1   C2   C12  C11   180.00   0.0  0
+ SQ8  CONST_24  C1   C2   C3   C4    180.00   0.0  0
+ SQ8  CONST_25  C1   C    N1   C19     0.00   0.0  0
+ SQ8  CONST_26  N4   C22  N3   C21   180.00   0.0  0
+ SQ8  CONST_27  N4   C22  C24  C19   180.00   0.0  0
+ SQ8  CONST_28  CL   C3   C2   C12   180.00   0.0  0
+ SQ8  CONST_29  F    C10  C9   C8    180.00   0.0  0
+ SQ8  CONST_30  F    C10  C6   C5      0.00   0.0  0
+ SQ8  CONST_31  CL   C3   C4   C5    180.00   0.0  0
+ SQ8  CONST_32  CL   C3   C2   C1      0.00   0.0  0
+ SQ8  CONST_33  F    C10  C6   N     180.00   0.0  0
+ SQ8  CONST_34  O    C    N1   C19   180.00   0.0  0
+ SQ8  CONST_35  C1   C    N1   C14   180.00   0.0  0
+ SQ8  CONST_36  H5   C24  C19  C20   180.00   0.0  0
+ SQ8  CONST_37  H1   C21  N3   C22   180.00   0.0  0
+ SQ8  CONST_38  H19  C4   C5   C11   180.00   0.0  0
+ SQ8  CONST_39  H17  C8   C9   C10   180.00   0.0  0
+ SQ8  CONST_40  H18  C7   C8   C9    180.00   0.0  0
+ SQ8  CONST_41  H16  C9   C8   C7    180.00   0.0  0
+ SQ8  CONST_42  H9   C11  C5   C6      0.00   0.0  0
+ SQ8  CONST_43  H8   C12  C11  C5    180.00   0.0  0
+ SQ8  CONST_44  C24  C22  N4   C23     0.00   0.0  0
+ SQ8  CONST_45  N3   C22  N4   C23   180.00   0.0  0
+ SQ8  CONST_46  O    C    N1   C14     0.00   0.0  0
+ SQ8  CONST_47  H6   N4   C22  C24   180.00   0.0  0
  SQ8  Var_01    C    C1   C2   C12    63.22  30.0  2
  SQ8  Var_02    C15  C14  N1   C19    96.18  30.0  3
  SQ8  Var_03    H14  C16  O1   C15    64.49  30.0  1
  SQ8  Var_04    H23  C18  O2   C15   -64.09  30.0  1
  SQ8  Var_05    H2   C23  N4   C22  -179.87  30.0  3
+ SQ8  Var_06    C2   C1   C13  C20   178.74  30.0  1
+ SQ8  Var_07    C    C1   C13  C20    -1.08  30.0  1
+ SQ8  Var_08    C    N1   C19  C20    -3.36  30.0  1
+ SQ8  Var_09    C1   C13  C20  C21  -179.36  30.0  1
+ SQ8  Var_10    C    N1   C19  C24   177.53  30.0  1
+ SQ8  Var_11    C1   C13  C20  C19     0.12  30.0  1
+ SQ8  Var_12    C16  O1   C15  O2     61.87  30.0  1
+ SQ8  Var_13    C16  C17  C18  O2    -51.08  30.0  1
+ SQ8  Var_14    N    C6   C5   C11   -37.37  30.0  2
+ SQ8  Var_15    C10  C6   C5   C11   140.92  30.0  2
+ SQ8  Var_16    N1   C    C1   C13    -0.11  30.0  1
+ SQ8  Var_17    C4   C5   C6   C10   -41.13  30.0  2
+ SQ8  Var_18    C18  C17  C16  O1     50.83  30.0  1
+ SQ8  Var_19    C18  O2   C15  O1    -61.81  30.0  1
+ SQ8  Var_20    N1   C    C1   C2   -179.93  30.0  1
+ SQ8  Var_21    N    C6   C5   C4    140.58  30.0  2
+ SQ8  Var_22    C14  N1   C19  C20   175.02  30.0  1
+ SQ8  Var_23    C14  N1   C19  C24    -4.09  30.0  1
+ SQ8  Var_24    N1   C14  C15  O2    -57.98  30.0  3
+ SQ8  Var_25    N2   C17  C18  O2   -173.29  30.0  1
+ SQ8  Var_26    O    C    C1   C13  -179.26  30.0  1
+ SQ8  Var_27    C14  C15  O1   C16  -178.95  30.0  1
+ SQ8  Var_28    N2   C17  C16  O1    175.93  30.0  1
+ SQ8  Var_29    N1   C14  C15  O1   -178.72  30.0  3
+ SQ8  Var_30    O    C    C1   C2      0.91  30.0  1
+ SQ8  Var_31    C14  C15  O2   C18  -179.48  30.0  1
+ SQ8  Var_32    H10  C13  C20  C21    -0.43  30.0  1
+ SQ8  Var_33    H7   C17  C18  O2     65.99  30.0  1
+ SQ8  Var_34    H13  C15  O1   C16   -59.22  30.0  1
+ SQ8  Var_35    H20  N2   C17  C16   172.51  30.0  3
+ SQ8  Var_36    H21  N2   C17  C16   -70.84  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

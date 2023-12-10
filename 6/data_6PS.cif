@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 6PS  6PS  2,4-dimethyl-5-{3-[(1R)-1-phenylethyl]-1H-pyrazol-5-yl}-1,3-thiazole  ligand  37  20  .  2021-08-05  2021-08-05  
+ 6PS  6PS  2,4-dimethyl-5-{3-[(1R)-1-phenylethyl]-1H-pyrazol-5-yl}-1,3-thiazole  ligand  37  20  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_6PS
@@ -207,44 +208,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 6PS  CONST_01  C04  C05  N06  C02    0.00   0.0  0
- 6PS  CONST_02  C08  C04  S03  C02  180.00   0.0  0
- 6PS  CONST_03  C05  C04  S03  C02    0.00   0.0  0
- 6PS  CONST_04  N10  N09  C08  C04  180.00   0.0  0
- 6PS  CONST_05  C11  C12  C08  C04  180.00   0.0  0
- 6PS  CONST_06  N06  C02  S03  C04    0.00   0.0  0
- 6PS  CONST_09  S03  C02  N06  C05    0.00   0.0  0
- 6PS  CONST_10  C12  C11  N10  N09    0.00   0.0  0
- 6PS  CONST_11  C11  C12  C08  N09    0.00   0.0  0
- 6PS  CONST_13  C08  N09  N10  C11    0.00   0.0  0
- 6PS  CONST_14  C18  C17  C16  C15    0.00   0.0  0
- 6PS  CONST_15  C18  C19  C20  C15    0.00   0.0  0
- 6PS  CONST_16  C19  C20  C15  C16    0.00   0.0  0
- 6PS  CONST_17  C19  C18  C17  C16    0.00   0.0  0
- 6PS  CONST_18  C20  C15  C16  C17    0.00   0.0  0
- 6PS  CONST_19  C20  C19  C18  C17    0.00   0.0  0
- 6PS  CONST_21  N06  C05  C04  S03    0.00   0.0  0
- 6PS  CONST_22  C08  C04  C05  N06  180.00   0.0  0
- 6PS  CONST_23  N10  C11  C12  C08    0.00   0.0  0
- 6PS  CONST_24  C12  C08  N09  N10    0.00   0.0  0
- 6PS  CONST_25  C05  N06  C02  C01  180.00   0.0  0
- 6PS  CONST_26  C04  S03  C02  C01  180.00   0.0  0
- 6PS  CONST_27  C07  C05  N06  C02  180.00   0.0  0
- 6PS  CONST_28  C08  C04  C05  C07    0.00   0.0  0
- 6PS  CONST_29  S03  C04  C05  C07  180.00   0.0  0
- 6PS  CONST_30  C13  C11  N10  N09  180.00   0.0  0
- 6PS  CONST_31  C17  C16  C15  C13  180.00   0.0  0
- 6PS  CONST_32  C19  C20  C15  C13  180.00   0.0  0
- 6PS  CONST_33  C08  C12  C11  C13  180.00   0.0  0
- 6PS  CONST_34  H7   N09  C08  C04    0.00   0.0  0
- 6PS  CONST_35  H14  C12  C08  C04    0.00   0.0  0
- 6PS  CONST_36  H10  C17  C16  C15  180.00   0.0  0
- 6PS  CONST_37  H12  C19  C20  C15  180.00   0.0  0
- 6PS  CONST_38  H13  C20  C15  C16  180.00   0.0  0
- 6PS  CONST_39  H11  C18  C17  C16  180.00   0.0  0
- 6PS  CONST_40  H9   C16  C17  C18  180.00   0.0  0
- 6PS  Var_01    H4   C07  C05  C04   89.76  30.0  2
- 6PS  Var_02    H1   C01  C02  S03   53.89  30.0  2
+ 6PS  CONST_01  C04  C05  N06  C02     0.00   0.0  0
+ 6PS  CONST_02  C08  C04  S03  C02   180.00   0.0  0
+ 6PS  CONST_03  C05  C04  S03  C02     0.00   0.0  0
+ 6PS  CONST_04  N10  N09  C08  C04   180.00   0.0  0
+ 6PS  CONST_05  C11  C12  C08  C04   180.00   0.0  0
+ 6PS  CONST_06  N06  C02  S03  C04     0.00   0.0  0
+ 6PS  CONST_07  S03  C02  N06  C05     0.00   0.0  0
+ 6PS  CONST_08  C12  C11  N10  N09     0.00   0.0  0
+ 6PS  CONST_09  C11  C12  C08  N09     0.00   0.0  0
+ 6PS  CONST_10  C08  N09  N10  C11     0.00   0.0  0
+ 6PS  CONST_11  C18  C17  C16  C15     0.00   0.0  0
+ 6PS  CONST_12  C18  C19  C20  C15     0.00   0.0  0
+ 6PS  CONST_13  C19  C20  C15  C16     0.00   0.0  0
+ 6PS  CONST_14  C19  C18  C17  C16     0.00   0.0  0
+ 6PS  CONST_15  C20  C15  C16  C17     0.00   0.0  0
+ 6PS  CONST_16  C20  C19  C18  C17     0.00   0.0  0
+ 6PS  CONST_17  N06  C05  C04  S03     0.00   0.0  0
+ 6PS  CONST_18  C08  C04  C05  N06   180.00   0.0  0
+ 6PS  CONST_19  N10  C11  C12  C08     0.00   0.0  0
+ 6PS  CONST_20  C12  C08  N09  N10     0.00   0.0  0
+ 6PS  CONST_21  C05  N06  C02  C01   180.00   0.0  0
+ 6PS  CONST_22  C04  S03  C02  C01   180.00   0.0  0
+ 6PS  CONST_23  C07  C05  N06  C02   180.00   0.0  0
+ 6PS  CONST_24  C08  C04  C05  C07     0.00   0.0  0
+ 6PS  CONST_25  S03  C04  C05  C07   180.00   0.0  0
+ 6PS  CONST_26  C13  C11  N10  N09   180.00   0.0  0
+ 6PS  CONST_27  C17  C16  C15  C13   180.00   0.0  0
+ 6PS  CONST_28  C19  C20  C15  C13   180.00   0.0  0
+ 6PS  CONST_29  C08  C12  C11  C13   180.00   0.0  0
+ 6PS  CONST_30  H7   N09  C08  C04     0.00   0.0  0
+ 6PS  CONST_31  H14  C12  C08  C04     0.00   0.0  0
+ 6PS  CONST_32  H10  C17  C16  C15   180.00   0.0  0
+ 6PS  CONST_33  H12  C19  C20  C15   180.00   0.0  0
+ 6PS  CONST_34  H13  C20  C15  C16   180.00   0.0  0
+ 6PS  CONST_35  H11  C18  C17  C16   180.00   0.0  0
+ 6PS  CONST_36  H9   C16  C17  C18   180.00   0.0  0
+ 6PS  Var_01    H4   C07  C05  C04    89.76  30.0  2
+ 6PS  Var_02    H1   C01  C02  S03    53.89  30.0  2
+ 6PS  Var_03    N09  C08  C04  C05   -32.79  30.0  3
+ 6PS  Var_04    C12  C08  C04  C05   147.86  30.0  3
+ 6PS  Var_05    S03  C04  C08  N09   147.42  30.0  2
+ 6PS  Var_06    C12  C08  C04  S03   -31.94  30.0  3
+ 6PS  Var_07    C16  C15  C13  C11    51.77  30.0  2
+ 6PS  Var_08    C20  C15  C13  C11  -130.02  30.0  2
+ 6PS  Var_09    N10  C11  C13  C15    76.80  30.0  2
+ 6PS  Var_10    C12  C11  C13  C15  -101.63  30.0  2
+ 6PS  Var_11    C14  C13  C15  C16   -73.49  30.0  2
+ 6PS  Var_12    C14  C13  C15  C20   104.72  30.0  2
+ 6PS  Var_13    C14  C13  C11  N10  -158.59  30.0  1
+ 6PS  Var_14    C14  C13  C11  C12    22.98  30.0  1
+ 6PS  Var_15    H8   C13  C15  C16   168.86  30.0  2
+ 6PS  Var_16    H15  C14  C13  C11    56.30  30.0  3
+ 6PS  Var_17    H16  C14  C13  C11   176.20  30.0  3
+ 6PS  Var_18    H17  C14  C13  C11   -64.25  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

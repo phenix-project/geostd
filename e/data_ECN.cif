@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ECN  ECN  1-[(2S)-2-[(4-chlorobenzyl)oxy]-2-(2,4-dichlorophenyl)ethyl]-1H-imidazole  ligand  39  24  .  2021-08-08  2021-08-08  
+ ECN  ECN  1-[(2S)-2-[(4-chlorobenzyl)oxy]-2-(2,4-dichlorophenyl)ethyl]-1H-imidazole  ligand  39  24  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_ECN
@@ -213,47 +214,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ECN  CONST_01  C11  C13  C2   C1     0.00   0.0  0
- ECN  CONST_02  C11  C9   C10  C1     0.00   0.0  0
- ECN  CONST_03  C9   C10  C1   C2     0.00   0.0  0
- ECN  CONST_04  C9   C11  C13  C2     0.00   0.0  0
- ECN  CONST_05  C3   N1   C7   C6     0.00   0.0  0
- ECN  CONST_06  N1   C3   N19  C6     0.00   0.0  0
- ECN  CONST_07  C3   N19  C6   C7     0.00   0.0  0
- ECN  CONST_08  N19  C3   N1   C7     0.00   0.0  0
- ECN  CONST_09  C13  C2   C1   C10    0.00   0.0  0
- ECN  CONST_10  C13  C11  C9   C10    0.00   0.0  0
- ECN  CONST_11  C17  C16  C15  C14    0.00   0.0  0
- ECN  CONST_12  C17  C21  C5   C14    0.00   0.0  0
- ECN  CONST_13  C21  C5   C14  C15    0.00   0.0  0
- ECN  CONST_14  C21  C17  C16  C15    0.00   0.0  0
- ECN  CONST_15  C5   C14  C15  C16    0.00   0.0  0
- ECN  CONST_16  C5   C21  C17  C16    0.00   0.0  0
- ECN  CONST_17  N1   C7   C6   N19    0.00   0.0  0
- ECN  CONST_18  CL2  C11  C13  C2   180.00   0.0  0
- ECN  CONST_19  C16  C15  C14  CL4  180.00   0.0  0
- ECN  CONST_20  C21  C5   C14  CL4  180.00   0.0  0
- ECN  CONST_21  C19  N1   C7   C6   180.00   0.0  0
- ECN  CONST_22  C8   C1   C10  C9   180.00   0.0  0
- ECN  CONST_23  CL2  C11  C9   C10  180.00   0.0  0
- ECN  CONST_24  CL8  C16  C15  C14  180.00   0.0  0
- ECN  CONST_25  C20  C5   C14  C15  180.00   0.0  0
- ECN  CONST_26  C20  C5   C21  C17  180.00   0.0  0
- ECN  CONST_27  C21  C17  C16  CL8  180.00   0.0  0
- ECN  CONST_28  C19  N1   C3   N19  180.00   0.0  0
- ECN  CONST_29  C13  C2   C1   C8   180.00   0.0  0
- ECN  CONST_30  H13  C13  C2   C1   180.00   0.0  0
- ECN  CONST_31  H9   C9   C10  C1   180.00   0.0  0
- ECN  CONST_32  H10  C10  C1   C2   180.00   0.0  0
- ECN  CONST_33  H3   C3   N19  C6   180.00   0.0  0
- ECN  CONST_34  H2   C2   C1   C10  180.00   0.0  0
- ECN  CONST_35  H21  C21  C5   C14  180.00   0.0  0
- ECN  CONST_36  H17  C17  C16  C15  180.00   0.0  0
- ECN  CONST_37  H15  C15  C16  C17  180.00   0.0  0
- ECN  CONST_38  H7   C7   C6   N19  180.00   0.0  0
- ECN  CONST_39  H6   C6   C7   N1   180.00   0.0  0
- ECN  Var_01    O20  C8   C1   C2   124.53  30.0  2
- ECN  Var_02    C20  C19  N1   C7    79.68  30.0  2
+ ECN  CONST_01  C11  C13  C2   C1      0.00   0.0  0
+ ECN  CONST_02  C11  C9   C10  C1      0.00   0.0  0
+ ECN  CONST_03  C9   C10  C1   C2      0.00   0.0  0
+ ECN  CONST_04  C9   C11  C13  C2      0.00   0.0  0
+ ECN  CONST_05  C3   N1   C7   C6      0.00   0.0  0
+ ECN  CONST_06  N1   C3   N19  C6      0.00   0.0  0
+ ECN  CONST_07  C3   N19  C6   C7      0.00   0.0  0
+ ECN  CONST_08  N19  C3   N1   C7      0.00   0.0  0
+ ECN  CONST_09  C13  C2   C1   C10     0.00   0.0  0
+ ECN  CONST_10  C13  C11  C9   C10     0.00   0.0  0
+ ECN  CONST_11  C17  C16  C15  C14     0.00   0.0  0
+ ECN  CONST_12  C17  C21  C5   C14     0.00   0.0  0
+ ECN  CONST_13  C21  C5   C14  C15     0.00   0.0  0
+ ECN  CONST_14  C21  C17  C16  C15     0.00   0.0  0
+ ECN  CONST_15  C5   C14  C15  C16     0.00   0.0  0
+ ECN  CONST_16  C5   C21  C17  C16     0.00   0.0  0
+ ECN  CONST_17  N1   C7   C6   N19     0.00   0.0  0
+ ECN  CONST_18  CL2  C11  C13  C2    180.00   0.0  0
+ ECN  CONST_19  C16  C15  C14  CL4   180.00   0.0  0
+ ECN  CONST_20  C21  C5   C14  CL4   180.00   0.0  0
+ ECN  CONST_21  C19  N1   C7   C6    180.00   0.0  0
+ ECN  CONST_22  C8   C1   C10  C9    180.00   0.0  0
+ ECN  CONST_23  CL2  C11  C9   C10   180.00   0.0  0
+ ECN  CONST_24  CL8  C16  C15  C14   180.00   0.0  0
+ ECN  CONST_25  C20  C5   C14  C15   180.00   0.0  0
+ ECN  CONST_26  C20  C5   C21  C17   180.00   0.0  0
+ ECN  CONST_27  C21  C17  C16  CL8   180.00   0.0  0
+ ECN  CONST_28  C19  N1   C3   N19   180.00   0.0  0
+ ECN  CONST_29  C13  C2   C1   C8    180.00   0.0  0
+ ECN  CONST_30  H13  C13  C2   C1    180.00   0.0  0
+ ECN  CONST_31  H9   C9   C10  C1    180.00   0.0  0
+ ECN  CONST_32  H10  C10  C1   C2    180.00   0.0  0
+ ECN  CONST_33  H3   C3   N19  C6    180.00   0.0  0
+ ECN  CONST_34  H2   C2   C1   C10   180.00   0.0  0
+ ECN  CONST_35  H21  C21  C5   C14   180.00   0.0  0
+ ECN  CONST_36  H17  C17  C16  C15   180.00   0.0  0
+ ECN  CONST_37  H15  C15  C16  C17   180.00   0.0  0
+ ECN  CONST_38  H7   C7   C6   N19   180.00   0.0  0
+ ECN  CONST_39  H6   C6   C7   N1    180.00   0.0  0
+ ECN  Var_01    O20  C8   C1   C2    124.53  30.0  2
+ ECN  Var_02    C20  C19  N1   C7     79.68  30.0  2
+ ECN  Var_03    C19  C20  C5   C14    85.31  30.0  2
+ ECN  Var_04    O20  C20  C5   C14  -155.73  30.0  2
+ ECN  Var_05    C21  C5   C20  C19   -92.99  30.0  2
+ ECN  Var_06    C21  C5   C20  O20    25.97  30.0  2
+ ECN  Var_07    N1   C19  C20  C5   -176.83  30.0  2
+ ECN  Var_08    H20  C20  C5   C14   -33.49  30.0  2
+ ECN  Var_09    C20  O20  C8   C1    165.67  30.0  1
+ ECN  Var_10    N1   C19  C20  O20    60.81  30.0  2
+ ECN  Var_11    C8   O20  C20  C5     80.78  30.0  3
+ ECN  Var_12    C8   O20  C20  C19  -158.50  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

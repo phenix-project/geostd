@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KDH  KDH  '(2R,3R)-5,7-dihydroxy-2-(3,4,5-trihydroxyphenyl)-3,4-dihydro-2H-chromen-3-yl 3,4,5-trihydroxybenzoate'  ligand  51  33  .  2021-08-12  2021-08-12  
+ KDH  KDH  '(2R,3R)-5,7-dihydroxy-2-(3,4,5-trihydroxyphenyl)-3,4-dihydro-2H-chromen-3-yl 3,4,5-trihydroxybenzoate'  ligand  51  33  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KDH
@@ -255,55 +256,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KDH  CONST_01  C12  C9   C6   C3      0.00   0.0  0
- KDH  CONST_02  C12  C14  C4   C3      0.00   0.0  0
- KDH  CONST_03  C14  C4   C3   C6      0.00   0.0  0
- KDH  CONST_04  C14  C12  C9   C6      0.00   0.0  0
- KDH  CONST_05  C4   C3   C6   C9      0.00   0.0  0
- KDH  CONST_06  C4   C14  C12  C9      0.00   0.0  0
- KDH  CONST_07  C26  C24  C21  C20     0.00   0.0  0
- KDH  CONST_08  C26  C29  C31  C20     0.00   0.0  0
- KDH  CONST_09  C29  C31  C20  C21     0.00   0.0  0
- KDH  CONST_10  C29  C26  C24  C21     0.00   0.0  0
- KDH  CONST_11  C31  C20  C21  C24     0.00   0.0  0
- KDH  CONST_12  C31  C29  C26  C24     0.00   0.0  0
- KDH  CONST_13  C46  C49  C39  C38     0.00   0.0  0
- KDH  CONST_14  C46  C43  C41  C38     0.00   0.0  0
- KDH  CONST_15  C43  C41  C38  C39     0.00   0.0  0
- KDH  CONST_16  C43  C46  C49  C39     0.00   0.0  0
- KDH  CONST_17  C49  C39  C38  C41     0.00   0.0  0
- KDH  CONST_18  C49  C46  C43  C41     0.00   0.0  0
- KDH  CONST_19  C15  C14  C4   C3    180.00   0.0  0
- KDH  CONST_20  C15  C14  C12  C9    180.00   0.0  0
- KDH  CONST_21  C9   C6   C3   O1    180.00   0.0  0
- KDH  CONST_22  C14  C4   C3   O1    180.00   0.0  0
- KDH  CONST_23  O10  C9   C6   C3    180.00   0.0  0
- KDH  CONST_24  C4   C3   C6   O7    180.00   0.0  0
- KDH  CONST_25  C12  C9   C6   O7    180.00   0.0  0
- KDH  CONST_26  C14  C12  C9   O10   180.00   0.0  0
- KDH  CONST_27  O02  C24  C21  C20   180.00   0.0  0
- KDH  CONST_28  O03  C29  C31  C20   180.00   0.0  0
- KDH  CONST_29  O03  C29  C26  C24   180.00   0.0  0
- KDH  CONST_30  O02  C24  C26  C29   180.00   0.0  0
- KDH  CONST_31  C49  C39  C38  C36   180.00   0.0  0
- KDH  CONST_32  C43  C41  C38  C36   180.00   0.0  0
- KDH  CONST_33  O50  C49  C39  C38   180.00   0.0  0
- KDH  CONST_34  O44  C43  C41  C38   180.00   0.0  0
- KDH  CONST_35  O47  C46  C49  C39   180.00   0.0  0
- KDH  CONST_36  O47  C46  C43  C41   180.00   0.0  0
- KDH  CONST_37  O03  C29  C31  C01     0.00   0.0  0
- KDH  CONST_38  O50  C49  C46  C43   180.00   0.0  0
- KDH  CONST_39  C49  C46  C43  O44   180.00   0.0  0
- KDH  CONST_40  H4   C4   C3   C6    180.00   0.0  0
- KDH  CONST_41  H12  C12  C9   C6    180.00   0.0  0
- KDH  CONST_42  H26  C26  C24  C21   180.00   0.0  0
- KDH  CONST_43  H21  C21  C24  C26   180.00   0.0  0
- KDH  CONST_44  H41  C41  C38  C39   180.00   0.0  0
- KDH  CONST_45  H39  C39  C38  C41   180.00   0.0  0
- KDH  Var_01    C21  C20  O01  C15   167.29  30.0  1
- KDH  Var_02    C33  C01  C31  C20   -16.27  30.0  1
- KDH  Var_03    C38  C36  O35  C33  -166.64  30.0  1
- KDH  Var_04    O35  C36  C38  C39  -176.97  30.0  3
+ KDH  CONST_01  C12   C9   C6   C3      0.00   0.0  0
+ KDH  CONST_02  C12   C14  C4   C3      0.00   0.0  0
+ KDH  CONST_03  C14   C4   C3   C6      0.00   0.0  0
+ KDH  CONST_04  C14   C12  C9   C6      0.00   0.0  0
+ KDH  CONST_05  C4    C3   C6   C9      0.00   0.0  0
+ KDH  CONST_06  C4    C14  C12  C9      0.00   0.0  0
+ KDH  CONST_07  C26   C24  C21  C20     0.00   0.0  0
+ KDH  CONST_08  C26   C29  C31  C20     0.00   0.0  0
+ KDH  CONST_09  C29   C31  C20  C21     0.00   0.0  0
+ KDH  CONST_10  C29   C26  C24  C21     0.00   0.0  0
+ KDH  CONST_11  C31   C20  C21  C24     0.00   0.0  0
+ KDH  CONST_12  C31   C29  C26  C24     0.00   0.0  0
+ KDH  CONST_13  C46   C49  C39  C38     0.00   0.0  0
+ KDH  CONST_14  C46   C43  C41  C38     0.00   0.0  0
+ KDH  CONST_15  C43   C41  C38  C39     0.00   0.0  0
+ KDH  CONST_16  C43   C46  C49  C39     0.00   0.0  0
+ KDH  CONST_17  C49   C39  C38  C41     0.00   0.0  0
+ KDH  CONST_18  C49   C46  C43  C41     0.00   0.0  0
+ KDH  CONST_19  C15   C14  C4   C3    180.00   0.0  0
+ KDH  CONST_20  C15   C14  C12  C9    180.00   0.0  0
+ KDH  CONST_21  C9    C6   C3   O1    180.00   0.0  0
+ KDH  CONST_22  C14   C4   C3   O1    180.00   0.0  0
+ KDH  CONST_23  O10   C9   C6   C3    180.00   0.0  0
+ KDH  CONST_24  C4    C3   C6   O7    180.00   0.0  0
+ KDH  CONST_25  C12   C9   C6   O7    180.00   0.0  0
+ KDH  CONST_26  C14   C12  C9   O10   180.00   0.0  0
+ KDH  CONST_27  O02   C24  C21  C20   180.00   0.0  0
+ KDH  CONST_28  O03   C29  C31  C20   180.00   0.0  0
+ KDH  CONST_29  O03   C29  C26  C24   180.00   0.0  0
+ KDH  CONST_30  O02   C24  C26  C29   180.00   0.0  0
+ KDH  CONST_31  C49   C39  C38  C36   180.00   0.0  0
+ KDH  CONST_32  C43   C41  C38  C36   180.00   0.0  0
+ KDH  CONST_33  O50   C49  C39  C38   180.00   0.0  0
+ KDH  CONST_34  O44   C43  C41  C38   180.00   0.0  0
+ KDH  CONST_35  O47   C46  C49  C39   180.00   0.0  0
+ KDH  CONST_36  O47   C46  C43  C41   180.00   0.0  0
+ KDH  CONST_37  O03   C29  C31  C01     0.00   0.0  0
+ KDH  CONST_38  O50   C49  C46  C43   180.00   0.0  0
+ KDH  CONST_39  C49   C46  C43  O44   180.00   0.0  0
+ KDH  CONST_40  H4    C4   C3   C6    180.00   0.0  0
+ KDH  CONST_41  H12   C12  C9   C6    180.00   0.0  0
+ KDH  CONST_42  H26   C26  C24  C21   180.00   0.0  0
+ KDH  CONST_43  H21   C21  C24  C26   180.00   0.0  0
+ KDH  CONST_44  H41   C41  C38  C39   180.00   0.0  0
+ KDH  CONST_45  H39   C39  C38  C41   180.00   0.0  0
+ KDH  Var_01    C21   C20  O01  C15   167.29  30.0  1
+ KDH  Var_02    C33   C01  C31  C20   -16.27  30.0  1
+ KDH  Var_03    C38   C36  O35  C33  -166.64  30.0  1
+ KDH  Var_04    O35   C36  C38  C39  -176.97  30.0  3
+ KDH  Var_05    C33   C15  C14  C12   -88.46  30.0  2
+ KDH  Var_06    O01   C15  C14  C12   149.37  30.0  2
+ KDH  Var_07    C01   C33  C15  C14  -179.53  30.0  1
+ KDH  Var_08    C20   O01  C15  C14   165.39  30.0  1
+ KDH  Var_09    C31   C01  C33  C15    44.37  30.0  1
+ KDH  Var_10    C33   C15  O01  C20    42.99  30.0  1
+ KDH  Var_11    C4    C14  C15  C33    85.33  30.0  3
+ KDH  Var_12    O01   C15  C33  C01   -58.72  30.0  1
+ KDH  Var_13    C4    C14  C15  O01   -36.84  30.0  3
+ KDH  Var_14    O35   C33  C15  C14   -61.08  30.0  1
+ KDH  Var_15    O35   C33  C01  C31   -73.30  30.0  1
+ KDH  Var_16    O35   C33  C15  O01    59.73  30.0  1
+ KDH  Var_17    H15   C15  C14  C12    29.69  30.0  2
+ KDH  Var_18    H33   C33  C15  C14    59.14  30.0  1
+ KDH  Var_19    H01   C01  C33  C15   -77.28  30.0  1
+ KDH  Var_20    H01A  C01  C33  C15   167.76  30.0  1
+ KDH  Var_21    C36   O35  C33  C15   100.75  30.0  3
+ KDH  Var_22    C36   O35  C33  C01  -139.89  30.0  3
+ KDH  Var_23    HO7   O7   C6   C3     -4.21  30.0  2
+ KDH  Var_24    HO1   O1   C3   C6    174.19  30.0  2
+ KDH  Var_25    HO10  O10  C9   C6    179.67  30.0  2
+ KDH  Var_26    HO02  O02  C24  C21     0.07  30.0  2
+ KDH  Var_27    HO03  O03  C29  C26     1.73  30.0  2
+ KDH  Var_28    HO50  O50  C49  C39   176.91  30.0  2
+ KDH  Var_29    HO44  O44  C43  C41  -176.37  30.0  2
+ KDH  Var_30    HO47  O47  C46  C43    92.06  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

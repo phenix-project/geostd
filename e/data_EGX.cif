@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EGX  EGX  1-(1-piperidin-4-ylpyrazol-4-yl)anthracene-9,10-dione  ligand  46  27  .  2022-03-18  2022-07-24
+ EGX  EGX  1-(1-piperidin-4-ylpyrazol-4-yl)anthracene-9,10-dione  ligand  46  27  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EGX
@@ -249,43 +250,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EGX  CONST_01  C15  C17  N2   N1     0.00   0.0  0
- EGX  CONST_02  C17  C15  C16  N1     0.00   0.0  0
- EGX  CONST_03  C14  C15  C16  N1   180.00   0.0  0
- EGX  CONST_04  C1   C2   C3   C4     0.00   0.0  0
- EGX  CONST_05  C1   C6   C5   C4     0.00   0.0  0
- EGX  CONST_06  C2   C1   C6   C5     0.00   0.0  0
- EGX  CONST_07  C2   C3   C4   C5     0.00   0.0  0
- EGX  CONST_08  C3   C2   C1   C6     0.00   0.0  0
- EGX  CONST_09  C3   C4   C5   C6     0.00   0.0  0
- EGX  CONST_10  C15  C14  C9   C8   180.00   0.0  0
- EGX  CONST_11  C13  C14  C9   C8     0.00   0.0  0
- EGX  CONST_12  C13  C12  C11  C8     0.00   0.0  0
- EGX  CONST_15  N2   N1   C16  C15    0.00   0.0  0
- EGX  CONST_16  C12  C13  C14  C15  180.00   0.0  0
- EGX  CONST_17  C16  N1   N2   C17    0.00   0.0  0
- EGX  CONST_20  C12  C13  C14  C9     0.00   0.0  0
- EGX  CONST_21  C12  C11  C8   C9     0.00   0.0  0
- EGX  CONST_22  C14  C9   C8   C11    0.00   0.0  0
- EGX  CONST_23  C14  C13  C12  C11    0.00   0.0  0
- EGX  CONST_24  N2   C17  C15  C14  180.00   0.0  0
- EGX  CONST_25  N2   C17  C15  C16    0.00   0.0  0
- EGX  CONST_26  C15  C14  C9   C10    0.00   0.0  0
- EGX  CONST_27  C18  N1   C16  C15  180.00   0.0  0
- EGX  CONST_28  C18  N1   N2   C17  180.00   0.0  0
- EGX  CONST_29  H5   C17  N2   N1   180.00   0.0  0
- EGX  CONST_30  H13  C2   C3   C4   180.00   0.0  0
- EGX  CONST_31  H12  C1   C6   C5   180.00   0.0  0
- EGX  CONST_32  H14  C3   C4   C5   180.00   0.0  0
- EGX  CONST_33  H3   C4   C5   C6   180.00   0.0  0
- EGX  CONST_34  H15  C11  C8   C7     0.00   0.0  0
- EGX  CONST_35  H16  C12  C11  C8   180.00   0.0  0
- EGX  CONST_36  H4   C13  C14  C15    0.00   0.0  0
- EGX  CONST_37  H17  C16  C15  C17  180.00   0.0  0
- EGX  Var_01    C18  C19  C20  N3   -28.35  30.0  1
- EGX  Var_02    C18  C22  C21  N3   -23.93  30.0  1
- EGX  Var_03    C22  C21  N3   C20  -42.18  30.0  1
- EGX  Var_04    C19  C20  N3   C21   71.74  30.0  1
+ EGX  CONST_01  C15  C17  N2   N1      0.00   0.0  0
+ EGX  CONST_02  C17  C15  C16  N1      0.00   0.0  0
+ EGX  CONST_03  C14  C15  C16  N1    180.00   0.0  0
+ EGX  CONST_04  C1   C2   C3   C4      0.00   0.0  0
+ EGX  CONST_05  C1   C6   C5   C4      0.00   0.0  0
+ EGX  CONST_06  C2   C1   C6   C5      0.00   0.0  0
+ EGX  CONST_07  C2   C3   C4   C5      0.00   0.0  0
+ EGX  CONST_08  C3   C2   C1   C6      0.00   0.0  0
+ EGX  CONST_09  C3   C4   C5   C6      0.00   0.0  0
+ EGX  CONST_10  C15  C14  C9   C8    180.00   0.0  0
+ EGX  CONST_11  C13  C14  C9   C8      0.00   0.0  0
+ EGX  CONST_12  C13  C12  C11  C8      0.00   0.0  0
+ EGX  CONST_13  N2   N1   C16  C15     0.00   0.0  0
+ EGX  CONST_14  C12  C13  C14  C15   180.00   0.0  0
+ EGX  CONST_15  C16  N1   N2   C17     0.00   0.0  0
+ EGX  CONST_16  C12  C13  C14  C9      0.00   0.0  0
+ EGX  CONST_17  C12  C11  C8   C9      0.00   0.0  0
+ EGX  CONST_18  C14  C9   C8   C11     0.00   0.0  0
+ EGX  CONST_19  C14  C13  C12  C11     0.00   0.0  0
+ EGX  CONST_20  N2   C17  C15  C14   180.00   0.0  0
+ EGX  CONST_21  N2   C17  C15  C16     0.00   0.0  0
+ EGX  CONST_22  C15  C14  C9   C10     0.00   0.0  0
+ EGX  CONST_23  C18  N1   C16  C15   180.00   0.0  0
+ EGX  CONST_24  C18  N1   N2   C17   180.00   0.0  0
+ EGX  CONST_25  H5   C17  N2   N1    180.00   0.0  0
+ EGX  CONST_26  H13  C2   C3   C4    180.00   0.0  0
+ EGX  CONST_27  H12  C1   C6   C5    180.00   0.0  0
+ EGX  CONST_28  H14  C3   C4   C5    180.00   0.0  0
+ EGX  CONST_29  H3   C4   C5   C6    180.00   0.0  0
+ EGX  CONST_30  H15  C11  C8   C7      0.00   0.0  0
+ EGX  CONST_31  H16  C12  C11  C8    180.00   0.0  0
+ EGX  CONST_32  H4   C13  C14  C15     0.00   0.0  0
+ EGX  CONST_33  H17  C16  C15  C17   180.00   0.0  0
+ EGX  Var_01    C18  C19  C20  N3    -28.35  30.0  1
+ EGX  Var_02    C18  C22  C21  N3    -23.93  30.0  1
+ EGX  Var_03    C22  C21  N3   C20   -42.18  30.0  1
+ EGX  Var_04    C19  C20  N3   C21    71.74  30.0  1
+ EGX  CONST_34  C8   C7   C5   C4    180.00   0.0  0
+ EGX  CONST_35  C9   C10  C6   C5      0.00   0.0  0
+ EGX  CONST_36  C9   C8   C7   C5      0.00   0.0  0
+ EGX  CONST_37  C11  C8   C7   C5    180.00   0.0  0
+ EGX  CONST_38  C14  C9   C10  C6    180.00   0.0  0
+ EGX  CONST_40  C8   C7   C5   C6      0.00   0.0  0
+ EGX  CONST_41  C9   C10  C6   C1    180.00   0.0  0
+ EGX  CONST_42  O2   C7   C5   C4      0.00   0.0  0
+ EGX  CONST_44  O2   C7   C5   C6    180.00   0.0  0
+ EGX  CONST_46  O1   C10  C6   C1      0.00   0.0  0
+ EGX  CONST_47  O2   C7   C8   C9    180.00   0.0  0
+ EGX  CONST_48  O2   C7   C8   C11     0.00   0.0  0
+ EGX  CONST_49  O1   C10  C9   C14     0.00   0.0  0
+ EGX  Var_05    C21  C22  C18  N1   -172.36  30.0  1
+ EGX  Var_06    C20  C19  C18  N1   -159.51  30.0  1
+ EGX  Var_07    C17  C15  C14  C13   124.83  30.0  3
+ EGX  Var_08    C16  C15  C14  C13   -48.98  30.0  3
+ EGX  Var_09    C9   C14  C15  C17   -52.21  30.0  2
+ EGX  Var_10    C22  C18  C19  C20   -34.98  30.0  1
+ EGX  Var_11    C19  C18  C22  C21    63.46  30.0  1
+ EGX  Var_12    N2   N1   C18  C22   -57.97  30.0  2
+ EGX  Var_13    C16  N1   C18  C22   122.96  30.0  2
+ EGX  Var_14    C16  C15  C14  C9    133.98  30.0  3
+ EGX  Var_15    C19  C18  N1   C16  -113.55  30.0  2
+ EGX  Var_16    C19  C18  N1   N2     65.52  30.0  2
+ EGX  Var_17    H10  C22  C18  N1     66.39  30.0  1
+ EGX  Var_18    H11  C22  C18  N1    -50.64  30.0  1
+ EGX  Var_19    H19  C19  C18  N1     78.26  30.0  1
+ EGX  Var_20    H20  C19  C18  N1    -38.99  30.0  1
+ EGX  Var_21    H18  C18  C19  C20    84.56  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SQK  SQK  8-[(5-azanyl-1,3-dioxan-2-yl)methyl]-6-[2-chloranyl-4-(3-fluoranyl-6-methyl-pyridin-2-yl)phenyl]-2-(methylamino)pyrido[2,3-d]pyrimidin-7-one  ligand  60  36  .  2022-07-22  2022-07-22
+ SQK  SQK  8-[(5-azanyl-1,3-dioxan-2-yl)methyl]-6-[2-chloranyl-4-(3-fluoranyl-6-methyl-pyridin-2-yl)phenyl]-2-(methylamino)pyrido[2,3-d]pyrimidin-7-one  ligand  60  36  .  2022-07-22  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_SQK
@@ -310,48 +311,81 @@ _chem_comp_tor.period
  SQK  CONST_09  C11  C10  C9   C8    180.00   0.0  0
  SQK  CONST_10  C17  C10  C9   C8      0.00   0.0  0
  SQK  CONST_11  C17  C18  C7   C8      0.00   0.0  0
- SQK  CONST_14  C18  C17  C10  C9      0.00   0.0  0
- SQK  CONST_15  C18  C7   C8   C9      0.00   0.0  0
- SQK  CONST_16  C15  N3   C11  C10   180.00   0.0  0
- SQK  CONST_17  C13  C12  C11  C10   180.00   0.0  0
- SQK  CONST_18  C14  C15  N3   C11     0.00   0.0  0
- SQK  CONST_19  C14  C13  C12  C11     0.00   0.0  0
- SQK  CONST_20  C18  C17  C10  C11   180.00   0.0  0
- SQK  CONST_21  C15  C14  C13  C12     0.00   0.0  0
- SQK  CONST_22  C15  N3   C11  C12     0.00   0.0  0
- SQK  CONST_24  N3   C15  C14  C13     0.00   0.0  0
- SQK  CONST_25  N3   C11  C12  C13     0.00   0.0  0
- SQK  CONST_27  C9   C8   C7   C6    180.00   0.0  0
- SQK  CONST_28  C17  C18  C7   C6    180.00   0.0  0
- SQK  CONST_29  C6   C19  N4   C3      0.00   0.0  0
- SQK  CONST_30  N    C1   N1   C2    180.00   0.0  0
- SQK  CONST_31  N    C1   N2   C3    180.00   0.0  0
- SQK  CONST_32  CL   C8   C7   C6      0.00   0.0  0
- SQK  CONST_33  F    C12  C11  C10     0.00   0.0  0
- SQK  CONST_34  CL   C8   C9   C10   180.00   0.0  0
- SQK  CONST_35  C16  C15  N3   C11   180.00   0.0  0
- SQK  CONST_36  C16  C15  C14  C13   180.00   0.0  0
- SQK  CONST_37  F    C12  C13  C14   180.00   0.0  0
- SQK  CONST_38  CL   C8   C7   C18   180.00   0.0  0
- SQK  CONST_39  N3   C11  C12  F     180.00   0.0  0
- SQK  CONST_40  O    C19  N4   C3    180.00   0.0  0
- SQK  CONST_41  C20  N4   C19  C6    180.00   0.0  0
- SQK  CONST_42  H1   C2   N1   C1    180.00   0.0  0
- SQK  CONST_43  H14  C18  C7   C6      0.00   0.0  0
- SQK  CONST_44  H3   C9   C8   C7    180.00   0.0  0
- SQK  CONST_45  H13  C17  C18  C7    180.00   0.0  0
- SQK  CONST_46  H8   C13  C12  C11   180.00   0.0  0
- SQK  CONST_47  H9   C14  C13  C12   180.00   0.0  0
- SQK  CONST_48  N2   C1   N    C       0.00   0.0  0
- SQK  CONST_49  N1   C1   N    C     180.00   0.0  0
- SQK  CONST_50  C20  N4   C19  O       0.00   0.0  0
- SQK  CONST_51  H4   N    C1   N1      0.00   0.0  0
+ SQK  CONST_12  C18  C17  C10  C9      0.00   0.0  0
+ SQK  CONST_13  C18  C7   C8   C9      0.00   0.0  0
+ SQK  CONST_14  C15  N3   C11  C10   180.00   0.0  0
+ SQK  CONST_15  C13  C12  C11  C10   180.00   0.0  0
+ SQK  CONST_16  C14  C15  N3   C11     0.00   0.0  0
+ SQK  CONST_17  C14  C13  C12  C11     0.00   0.0  0
+ SQK  CONST_18  C18  C17  C10  C11   180.00   0.0  0
+ SQK  CONST_19  C15  C14  C13  C12     0.00   0.0  0
+ SQK  CONST_20  C15  N3   C11  C12     0.00   0.0  0
+ SQK  CONST_21  N3   C15  C14  C13     0.00   0.0  0
+ SQK  CONST_22  N3   C11  C12  C13     0.00   0.0  0
+ SQK  CONST_23  C9   C8   C7   C6    180.00   0.0  0
+ SQK  CONST_24  C17  C18  C7   C6    180.00   0.0  0
+ SQK  CONST_25  C6   C19  N4   C3      0.00   0.0  0
+ SQK  CONST_26  N    C1   N1   C2    180.00   0.0  0
+ SQK  CONST_27  N    C1   N2   C3    180.00   0.0  0
+ SQK  CONST_28  CL   C8   C7   C6      0.00   0.0  0
+ SQK  CONST_29  F    C12  C11  C10     0.00   0.0  0
+ SQK  CONST_30  CL   C8   C9   C10   180.00   0.0  0
+ SQK  CONST_31  C16  C15  N3   C11   180.00   0.0  0
+ SQK  CONST_32  C16  C15  C14  C13   180.00   0.0  0
+ SQK  CONST_33  F    C12  C13  C14   180.00   0.0  0
+ SQK  CONST_34  CL   C8   C7   C18   180.00   0.0  0
+ SQK  CONST_35  N3   C11  C12  F     180.00   0.0  0
+ SQK  CONST_36  O    C19  N4   C3    180.00   0.0  0
+ SQK  CONST_37  C20  N4   C19  C6    180.00   0.0  0
+ SQK  CONST_38  H1   C2   N1   C1    180.00   0.0  0
+ SQK  CONST_39  H14  C18  C7   C6      0.00   0.0  0
+ SQK  CONST_40  H3   C9   C8   C7    180.00   0.0  0
+ SQK  CONST_41  H13  C17  C18  C7    180.00   0.0  0
+ SQK  CONST_42  H8   C13  C12  C11   180.00   0.0  0
+ SQK  CONST_43  H9   C14  C13  C12   180.00   0.0  0
+ SQK  CONST_44  N2   C1   N    C       0.00   0.0  0
+ SQK  CONST_45  N1   C1   N    C     180.00   0.0  0
+ SQK  CONST_46  C20  N4   C19  O       0.00   0.0  0
+ SQK  CONST_47  H4   N    C1   N1      0.00   0.0  0
  SQK  Var_01    C8   C7   C6   C5     66.39  30.0  3
  SQK  Var_02    C23  C24  O2   C21   -56.48  30.0  1
  SQK  Var_03    C23  C22  O1   C21    57.23  30.0  1
  SQK  Var_04    C21  C20  N4   C3     97.52  30.0  3
  SQK  Var_05    H10  C16  C15  C14   176.24  30.0  2
  SQK  Var_06    H5   C    N    C1   -175.30  30.0  3
+ SQK  Var_07    C24  O2   C21  O1     61.44  30.0  1
+ SQK  Var_08    C24  C23  C22  O1    -51.40  30.0  1
+ SQK  Var_09    C6   C5   C4   C2   -179.99  30.0  1
+ SQK  Var_10    C6   C5   C4   C3      0.42  30.0  1
+ SQK  Var_11    C7   C6   C5   C4   -179.99  30.0  1
+ SQK  Var_12    C19  C6   C5   C4      0.32  30.0  1
+ SQK  Var_13    C19  N4   C3   C4     -0.23  30.0  1
+ SQK  Var_14    N4   C19  C6   C5     -0.98  30.0  1
+ SQK  Var_15    N4   C19  C6   C7    179.31  30.0  1
+ SQK  Var_16    N3   C11  C10  C9    141.20  30.0  2
+ SQK  Var_17    C12  C11  C10  C9    -40.40  30.0  2
+ SQK  Var_18    C17  C10  C11  C12   141.67  30.0  2
+ SQK  Var_19    N3   C11  C10  C17   -36.73  30.0  2
+ SQK  Var_20    N2   C3   N4   C19  -179.37  30.0  1
+ SQK  Var_21    O2   C24  C23  C22    50.86  30.0  1
+ SQK  Var_22    O2   C21  O1   C22   -61.63  30.0  1
+ SQK  Var_23    N4   C20  C21  O1    -54.88  30.0  3
+ SQK  Var_24    N5   C23  C22  O1   -173.63  30.0  1
+ SQK  Var_25    C20  N4   C3   C4   -179.83  30.0  1
+ SQK  Var_26    O    C19  C6   C5    179.34  30.0  1
+ SQK  Var_27    O    C19  C6   C7     -0.37  30.0  1
+ SQK  Var_28    C20  C21  O1   C22  -179.15  30.0  1
+ SQK  Var_29    C20  C21  O2   C24  -179.38  30.0  1
+ SQK  Var_30    C20  N4   C3   N2      1.02  30.0  1
+ SQK  Var_31    O2   C21  C20  N4   -175.73  30.0  1
+ SQK  Var_32    O2   C24  C23  N5    176.02  30.0  1
+ SQK  Var_33    H20  C23  C22  O1     65.69  30.0  1
+ SQK  Var_34    H2   C5   C4   C2     -0.25  30.0  1
+ SQK  Var_35    H17  C21  O1   C22    59.23  30.0  1
+ SQK  Var_36    H15  C20  C21  O1     65.26  30.0  3
+ SQK  Var_37    H16  C20  C21  O1   -175.77  30.0  3
+ SQK  Var_38    H23  N5   C23  C22   -66.00  30.0  3
+ SQK  Var_39    H24  N5   C23  C22    50.79  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

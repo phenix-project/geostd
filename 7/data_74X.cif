@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 74X  74X  5'-({[4-chloro-3-(trifluoromethyl)phenyl]carbamothioyl}amino)-2',5'-dideoxy-3,4-dihydrothymidine  ligand  49  31  .  2021-08-05  2021-08-05  
+ 74X  74X  5'-({[4-chloro-3-(trifluoromethyl)phenyl]carbamothioyl}amino)-2',5'-dideoxy-3,4-dihydrothymidine  ligand  49  31  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_74X
@@ -254,36 +255,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 74X  CONST_01  CAW   CAX  CAL  CAV    0.00   0.0  0
- 74X  CONST_02  CAW   CAK  CAJ  CAV    0.00   0.0  0
- 74X  CONST_03  CAK   CAJ  CAV  CAL    0.00   0.0  0
- 74X  CONST_04  CAK   CAW  CAX  CAL    0.00   0.0  0
- 74X  CONST_05  CAX   CAL  CAV  CAJ    0.00   0.0  0
- 74X  CONST_06  CAX   CAW  CAK  CAJ    0.00   0.0  0
- 74X  CONST_07  CAM   NBD  CAZ  NAR    0.00   0.0  0
- 74X  CONST_08  CBC   NBD  CAZ  NAR  180.00   0.0  0
- 74X  CONST_09  NBD   CAZ  NAR  CAY    0.00   0.0  0
- 74X  CONST_10  CAX   CAL  CAV  NAQ  180.00   0.0  0
- 74X  CONST_11  CAK   CAJ  CAV  NAQ  180.00   0.0  0
- 74X  CONST_12  CBE   CAX  CAL  CAV  180.00   0.0  0
- 74X  CONST_13  CLA   CAW  CAX  CAL  180.00   0.0  0
- 74X  CONST_14  CLA   CAW  CAK  CAJ  180.00   0.0  0
- 74X  CONST_15  CBE   CAX  CAW  CAK  180.00   0.0  0
- 74X  CONST_16  CAY   NAR  CAZ  OAC  180.00   0.0  0
- 74X  CONST_17  CAM   NBD  CAZ  OAC  180.00   0.0  0
- 74X  CONST_18  CBC   NBD  CAZ  OAC    0.00   0.0  0
- 74X  CONST_19  HAK   CAK  CAJ  CAV  180.00   0.0  0
- 74X  CONST_20  HAJ   CAJ  CAV  CAL  180.00   0.0  0
- 74X  CONST_21  HAL   CAL  CAV  CAJ  180.00   0.0  0
- 74X  CONST_22  HAR   NAR  CAZ  NBD  180.00   0.0  0
- 74X  CONST_26  CAV   NAQ  CAT  NAP  180.00   0.0  0
- 74X  CONST_27  CAV   NAQ  CAT  SAE    0.00   0.0  0
- 74X  CONST_28  SAE   CAT  NAP  CAN    0.00   0.0  0
- 74X  CONST_29  NAQ   CAT  NAP  CAN  180.00   0.0  0
- 74X  CONST_30  HAP   NAP  CAT  SAE  180.00   0.0  0
- 74X  Var_01    FAG   CBE  CAX  CAL   -0.27  30.0  2
- 74X  Var_02    HAA1  CAA  CAU  CAY  -61.67  30.0  3
- 74X  Var_03    CAT   NAP  CAN  CBB  138.61  30.0  3
+ 74X  CONST_01  CAW   CAX  CAL  CAV     0.00   0.0  0
+ 74X  CONST_02  CAW   CAK  CAJ  CAV     0.00   0.0  0
+ 74X  CONST_03  CAK   CAJ  CAV  CAL     0.00   0.0  0
+ 74X  CONST_04  CAK   CAW  CAX  CAL     0.00   0.0  0
+ 74X  CONST_05  CAX   CAL  CAV  CAJ     0.00   0.0  0
+ 74X  CONST_06  CAX   CAW  CAK  CAJ     0.00   0.0  0
+ 74X  CONST_07  CAM   NBD  CAZ  NAR     0.00   0.0  0
+ 74X  CONST_08  CBC   NBD  CAZ  NAR   180.00   0.0  0
+ 74X  CONST_09  NBD   CAZ  NAR  CAY     0.00   0.0  0
+ 74X  CONST_10  CAX   CAL  CAV  NAQ   180.00   0.0  0
+ 74X  CONST_11  CAK   CAJ  CAV  NAQ   180.00   0.0  0
+ 74X  CONST_12  CBE   CAX  CAL  CAV   180.00   0.0  0
+ 74X  CONST_13  CLA   CAW  CAX  CAL   180.00   0.0  0
+ 74X  CONST_14  CLA   CAW  CAK  CAJ   180.00   0.0  0
+ 74X  CONST_15  CBE   CAX  CAW  CAK   180.00   0.0  0
+ 74X  CONST_16  CAY   NAR  CAZ  OAC   180.00   0.0  0
+ 74X  CONST_17  CAM   NBD  CAZ  OAC   180.00   0.0  0
+ 74X  CONST_18  CBC   NBD  CAZ  OAC     0.00   0.0  0
+ 74X  CONST_19  HAK   CAK  CAJ  CAV   180.00   0.0  0
+ 74X  CONST_20  HAJ   CAJ  CAV  CAL   180.00   0.0  0
+ 74X  CONST_21  HAL   CAL  CAV  CAJ   180.00   0.0  0
+ 74X  CONST_22  HAR   NAR  CAZ  NBD   180.00   0.0  0
+ 74X  CONST_23  CAV   NAQ  CAT  NAP   180.00   0.0  0
+ 74X  CONST_24  CAV   NAQ  CAT  SAE     0.00   0.0  0
+ 74X  CONST_25  SAE   CAT  NAP  CAN     0.00   0.0  0
+ 74X  CONST_26  NAQ   CAT  NAP  CAN   180.00   0.0  0
+ 74X  CONST_27  HAP   NAP  CAT  SAE   180.00   0.0  0
+ 74X  Var_01    FAG   CBE  CAX  CAL    -0.27  30.0  2
+ 74X  Var_02    HAA1  CAA  CAU  CAY   -61.67  30.0  3
+ 74X  Var_03    CAT   NAP  CAN  CBB   138.61  30.0  3
+ 74X  Var_04    CAU   CAY  NAR  CAZ    -0.46  30.0  1
+ 74X  Var_05    CAU   CAM  NBD  CAZ     1.03  30.0  1
+ 74X  Var_06    OAS   CBC  NBD  CAZ   120.91  30.0  3
+ 74X  Var_07    CAO   CBC  NBD  CAZ  -120.34  30.0  3
+ 74X  Var_08    CAM   CAU  CAY  NAR     0.22  30.0  1
+ 74X  Var_09    NBD   CAM  CAU  CAY    -0.53  30.0  1
+ 74X  Var_10    CBC   NBD  CAM  CAU   177.74  30.0  1
+ 74X  Var_11    OAS   CBC  NBD  CAM   -55.86  30.0  3
+ 74X  Var_12    CAO   CBC  NBD  CAM    62.89  30.0  3
+ 74X  Var_13    CBB   OAS  CBC  NBD   131.91  30.0  1
+ 74X  Var_14    CBA   CAO  CBC  NBD  -148.67  30.0  1
+ 74X  Var_15    CBA   CBB  OAS  CBC    15.78  30.0  1
+ 74X  Var_16    CBB   CBA  CAO  CBC    36.56  30.0  1
+ 74X  Var_17    CBA   CAO  CBC  OAS   -28.57  30.0  1
+ 74X  Var_18    CAO   CBA  CBB  OAS   -32.80  30.0  1
+ 74X  Var_19    CBB   OAS  CBC  CAO     8.25  30.0  1
+ 74X  Var_20    OAB   CAY  NAR  CAZ   179.46  30.0  1
+ 74X  Var_21    CAA   CAU  CAY  NAR   179.76  30.0  1
+ 74X  Var_22    CAM   CAU  CAY  OAB  -179.70  30.0  1
+ 74X  Var_23    NBD   CAM  CAU  CAA   179.95  30.0  1
+ 74X  Var_24    CAN   CBB  OAS  CBC   137.90  30.0  1
+ 74X  Var_25    OAD   CBA  CAO  CBC   155.33  30.0  1
+ 74X  Var_26    OAD   CBA  CBB  OAS  -155.79  30.0  1
+ 74X  Var_27    CAN   CBB  CBA  CAO  -152.47  30.0  1
+ 74X  Var_28    HAM   CAM  NBD  CAZ  -178.90  30.0  1
+ 74X  Var_29    HBC   CBC  NBD  CAZ     2.77  30.0  3
+ 74X  Var_30    HAO1  CAO  CBC  NBD   -31.64  30.0  1
+ 74X  Var_31    HAO2  CAO  CBC  NBD    89.59  30.0  1
+ 74X  Var_32    HBB   CBB  OAS  CBC  -101.78  30.0  1
+ 74X  Var_33    HBA   CBA  CAO  CBC   -78.28  30.0  1
+ 74X  Var_34    CAA   CAU  CAY  OAB    -0.16  30.0  1
+ 74X  Var_35    NAP   CAN  CBB  OAS    59.48  30.0  3
+ 74X  Var_36    NAP   CAN  CBB  CBA   176.59  30.0  3
+ 74X  Var_37    CAN   CBB  CBA  OAD    84.55  30.0  1
+ 74X  Var_38    HAN1  CAN  CBB  OAS   179.42  30.0  3
+ 74X  Var_39    HAN2  CAN  CBB  OAS   -62.76  30.0  3
+ 74X  Var_40    HAD   OAD  CBA  CAO    75.12  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

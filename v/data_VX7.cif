@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VX7  VX7  N-(2,4-di-tert-butyl-5-hydroxyphenyl)-4-oxo-1,4-dihydroquinoline-3-carboxamide  ligand  57  29  .  2021-08-24  2021-08-24  
+ VX7  VX7  N-(2,4-di-tert-butyl-5-hydroxyphenyl)-4-oxo-1,4-dihydroquinoline-3-carboxamide  ligand  57  29  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VX7
@@ -284,43 +285,59 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VX7  CONST_01  C19  C18  C17  C22    0.00   0.0  0
- VX7  CONST_02  C19  C20  C21  C22    0.00   0.0  0
- VX7  CONST_03  C18  C17  C22  C21    0.00   0.0  0
- VX7  CONST_04  C18  C19  C20  C21    0.00   0.0  0
- VX7  CONST_05  C17  C18  C19  C20    0.00   0.0  0
- VX7  CONST_06  C17  C22  C21  C20    0.00   0.0  0
- VX7  CONST_07  C07  C08  C09  C10    0.00   0.0  0
- VX7  CONST_08  C07  C06  C05  C10    0.00   0.0  0
- VX7  CONST_09  C06  C07  C08  C09    0.00   0.0  0
- VX7  CONST_10  C06  C05  C10  C09    0.00   0.0  0
- VX7  CONST_11  C05  C06  C07  C08    0.00   0.0  0
- VX7  CONST_12  C05  C10  C09  C08    0.00   0.0  0
- VX7  CONST_13  C08  C09  C10  N11  180.00   0.0  0
- VX7  CONST_14  C06  C05  C10  N11  180.00   0.0  0
- VX7  CONST_15  O25  C08  C09  C10  180.00   0.0  0
- VX7  CONST_16  C26  C07  C08  C09  180.00   0.0  0
- VX7  CONST_17  C02  C05  C10  C09  180.00   0.0  0
- VX7  CONST_18  C06  C07  C08  O25  180.00   0.0  0
- VX7  CONST_19  C02  C05  C06  C07  180.00   0.0  0
- VX7  CONST_20  C05  C06  C07  C26  180.00   0.0  0
- VX7  CONST_21  H1   C21  C22  C23    0.00   0.0  0
- VX7  CONST_22  H4   C18  C17  C22  180.00   0.0  0
- VX7  CONST_23  H2   C20  C21  C22  180.00   0.0  0
- VX7  CONST_24  H3   C19  C20  C21  180.00   0.0  0
- VX7  CONST_25  H19  C06  C05  C10  180.00   0.0  0
- VX7  CONST_26  H8   C09  C08  C07  180.00   0.0  0
- VX7  CONST_27  C10  N11  C12  C14  180.00   0.0  0
- VX7  CONST_31  C10  N11  C12  O13    0.00   0.0  0
- VX7  Var_01    O13  C12  C14  C23  178.41  30.0  2
- VX7  Var_02    C04  C02  C05  C10  -71.37  30.0  2
- VX7  Var_03    C27  C26  C07  C08   61.29  30.0  3
- VX7  Var_04    H16  C27  C26  C07  177.08  30.0  3
- VX7  Var_05    H10  C28  C26  C07   60.42  30.0  3
- VX7  Var_06    H13  C29  C26  C07  -58.98  30.0  3
- VX7  Var_07    H23  C04  C02  C05   65.70  30.0  3
- VX7  Var_08    H20  C03  C02  C05   63.83  30.0  3
- VX7  Var_09    H26  C01  C02  C05   52.25  30.0  3
+ VX7  CONST_01  C19  C18  C17  C22     0.00   0.0  0
+ VX7  CONST_02  C19  C20  C21  C22     0.00   0.0  0
+ VX7  CONST_03  C18  C17  C22  C21     0.00   0.0  0
+ VX7  CONST_04  C18  C19  C20  C21     0.00   0.0  0
+ VX7  CONST_05  C17  C18  C19  C20     0.00   0.0  0
+ VX7  CONST_06  C17  C22  C21  C20     0.00   0.0  0
+ VX7  CONST_07  C07  C08  C09  C10     0.00   0.0  0
+ VX7  CONST_08  C07  C06  C05  C10     0.00   0.0  0
+ VX7  CONST_09  C06  C07  C08  C09     0.00   0.0  0
+ VX7  CONST_10  C06  C05  C10  C09     0.00   0.0  0
+ VX7  CONST_11  C05  C06  C07  C08     0.00   0.0  0
+ VX7  CONST_12  C05  C10  C09  C08     0.00   0.0  0
+ VX7  CONST_13  C08  C09  C10  N11   180.00   0.0  0
+ VX7  CONST_14  C06  C05  C10  N11   180.00   0.0  0
+ VX7  CONST_15  O25  C08  C09  C10   180.00   0.0  0
+ VX7  CONST_16  C26  C07  C08  C09   180.00   0.0  0
+ VX7  CONST_17  C02  C05  C10  C09   180.00   0.0  0
+ VX7  CONST_18  C06  C07  C08  O25   180.00   0.0  0
+ VX7  CONST_19  C02  C05  C06  C07   180.00   0.0  0
+ VX7  CONST_20  C05  C06  C07  C26   180.00   0.0  0
+ VX7  CONST_21  H1   C21  C22  C23     0.00   0.0  0
+ VX7  CONST_22  H4   C18  C17  C22   180.00   0.0  0
+ VX7  CONST_23  H2   C20  C21  C22   180.00   0.0  0
+ VX7  CONST_24  H3   C19  C20  C21   180.00   0.0  0
+ VX7  CONST_25  H19  C06  C05  C10   180.00   0.0  0
+ VX7  CONST_26  H8   C09  C08  C07   180.00   0.0  0
+ VX7  CONST_27  C10  N11  C12  C14   180.00   0.0  0
+ VX7  CONST_28  C10  N11  C12  O13     0.00   0.0  0
+ VX7  Var_01    O13  C12  C14  C23   178.41  30.0  2
+ VX7  Var_02    C04  C02  C05  C10   -71.37  30.0  2
+ VX7  Var_03    C27  C26  C07  C08    61.29  30.0  3
+ VX7  Var_04    H16  C27  C26  C07   177.08  30.0  3
+ VX7  Var_05    H10  C28  C26  C07    60.42  30.0  3
+ VX7  Var_06    H13  C29  C26  C07   -58.98  30.0  3
+ VX7  Var_07    H23  C04  C02  C05    65.70  30.0  3
+ VX7  Var_08    H20  C03  C02  C05    63.83  30.0  3
+ VX7  Var_09    H26  C01  C02  C05    52.25  30.0  3
+ VX7  Var_10    N16  C15  C14  C23     0.05  30.0  1
+ VX7  Var_11    C15  N16  C17  C22     0.06  30.0  1
+ VX7  Var_12    C15  C14  C23  C22    -0.02  30.0  1
+ VX7  Var_13    C14  C23  C22  C21   179.98  30.0  1
+ VX7  Var_14    C15  N16  C17  C18  -179.97  30.0  1
+ VX7  Var_15    C14  C15  N16  C17    -0.07  30.0  1
+ VX7  Var_16    C14  C23  C22  C17     0.01  30.0  1
+ VX7  Var_17    C15  C14  C23  O24   179.93  30.0  1
+ VX7  Var_18    C17  C22  C23  O24  -179.94  30.0  1
+ VX7  Var_19    C21  C22  C23  O24     0.02  30.0  1
+ VX7  Var_20    C12  C14  C23  C22  -179.95  30.0  1
+ VX7  Var_21    C12  C14  C15  N16   179.98  30.0  1
+ VX7  Var_22    H5   C15  C14  C23   179.89  30.0  1
+ VX7  Var_23    H29  N16  C17  C22  -179.55  30.0  1
+ VX7  Var_24    C12  C14  C23  O24     0.01  30.0  1
+ VX7  Var_25    H9   O25  C08  C09     0.69  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

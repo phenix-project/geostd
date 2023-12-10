@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3UK  3UK  5'-O-[(S)-[(2-aminobenzoyl)oxy](hydroxy)phosphoryl]adenosine  ligand  51  32  .  2021-08-04  2021-08-04  
+ 3UK  3UK  5'-O-[(S)-[(2-aminobenzoyl)oxy](hydroxy)phosphoryl]adenosine  ligand  51  32  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3UK
@@ -260,52 +261,88 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3UK  CONST_01  N13  C12  N11  C15    0.00   0.0  0
- 3UK  CONST_02  C12  N13  C14  C15    0.00   0.0  0
- 3UK  CONST_03  N18  C19  C14  C15    0.00   0.0  0
- 3UK  CONST_04  N18  C17  N16  C15    0.00   0.0  0
- 3UK  CONST_05  N11  C15  N16  C17  180.00   0.0  0
- 3UK  CONST_06  C14  C15  N16  C17    0.00   0.0  0
- 3UK  CONST_07  C14  C19  N18  C17    0.00   0.0  0
- 3UK  CONST_08  C29  C30  C31  C26    0.00   0.0  0
- 3UK  CONST_09  C29  C28  C27  C26    0.00   0.0  0
- 3UK  CONST_10  C31  C30  C29  C28    0.00   0.0  0
- 3UK  CONST_11  C31  C26  C27  C28    0.00   0.0  0
- 3UK  CONST_12  C14  N13  C12  N11    0.00   0.0  0
- 3UK  CONST_13  N13  C14  C15  N11    0.00   0.0  0
- 3UK  CONST_14  C19  C14  C15  N11  180.00   0.0  0
- 3UK  CONST_15  C14  C15  N11  C12    0.00   0.0  0
- 3UK  CONST_16  N16  C15  N11  C12  180.00   0.0  0
- 3UK  CONST_17  C19  C14  N13  C12  180.00   0.0  0
- 3UK  CONST_18  N16  C15  C14  N13  180.00   0.0  0
- 3UK  CONST_19  N18  C19  C14  N13  180.00   0.0  0
- 3UK  CONST_20  C19  C14  C15  N16    0.00   0.0  0
- 3UK  CONST_21  C19  N18  C17  N16    0.00   0.0  0
- 3UK  CONST_22  C30  C31  C26  C27    0.00   0.0  0
- 3UK  CONST_23  C30  C29  C28  C27    0.00   0.0  0
- 3UK  CONST_24  N13  C12  N11  C10  180.00   0.0  0
- 3UK  CONST_25  C14  C15  N11  C10  180.00   0.0  0
- 3UK  CONST_26  N16  C15  N11  C10    0.00   0.0  0
- 3UK  CONST_27  N20  C19  C14  C15  180.00   0.0  0
- 3UK  CONST_28  N20  C19  N18  C17  180.00   0.0  0
- 3UK  CONST_29  C02  C26  C27  C28  180.00   0.0  0
- 3UK  CONST_30  C30  C31  C26  C02  180.00   0.0  0
- 3UK  CONST_31  N20  C19  C14  N13    0.00   0.0  0
- 3UK  CONST_32  N32  C31  C26  C27  180.00   0.0  0
- 3UK  CONST_33  N32  C31  C30  C29  180.00   0.0  0
- 3UK  CONST_34  H8   C12  N11  C10    0.00   0.0  0
- 3UK  CONST_35  H2   C17  N16  C15  180.00   0.0  0
- 3UK  CONST_36  H17  C30  C31  C26  180.00   0.0  0
- 3UK  CONST_37  H4   C28  C27  C26  180.00   0.0  0
- 3UK  CONST_38  H16  C29  C28  C27  180.00   0.0  0
- 3UK  CONST_39  H15  C27  C28  C29  180.00   0.0  0
- 3UK  CONST_40  H18  N32  C31  C26  180.00   0.0  0
- 3UK  CONST_41  H19  N32  C31  C26    0.00   0.0  0
- 3UK  CONST_42  H9   N20  C19  C14    0.00   0.0  0
- 3UK  CONST_43  H10  N20  C19  C14  180.00   0.0  0
- 3UK  Var_01    C31  C26  C02  O01   -1.14  30.0  2
- 3UK  Var_02    C08  C07  O06  P04  171.29  30.0  2
- 3UK  Var_03    O05  P04  O03  C02  -59.49  30.0  3
+ 3UK  CONST_01  N13  C12  N11  C15     0.00   0.0  0
+ 3UK  CONST_02  C12  N13  C14  C15     0.00   0.0  0
+ 3UK  CONST_03  N18  C19  C14  C15     0.00   0.0  0
+ 3UK  CONST_04  N18  C17  N16  C15     0.00   0.0  0
+ 3UK  CONST_05  N11  C15  N16  C17   180.00   0.0  0
+ 3UK  CONST_06  C14  C15  N16  C17     0.00   0.0  0
+ 3UK  CONST_07  C14  C19  N18  C17     0.00   0.0  0
+ 3UK  CONST_08  C29  C30  C31  C26     0.00   0.0  0
+ 3UK  CONST_09  C29  C28  C27  C26     0.00   0.0  0
+ 3UK  CONST_10  C31  C30  C29  C28     0.00   0.0  0
+ 3UK  CONST_11  C31  C26  C27  C28     0.00   0.0  0
+ 3UK  CONST_12  C14  N13  C12  N11     0.00   0.0  0
+ 3UK  CONST_13  N13  C14  C15  N11     0.00   0.0  0
+ 3UK  CONST_14  C19  C14  C15  N11   180.00   0.0  0
+ 3UK  CONST_15  C14  C15  N11  C12     0.00   0.0  0
+ 3UK  CONST_16  N16  C15  N11  C12   180.00   0.0  0
+ 3UK  CONST_17  C19  C14  N13  C12   180.00   0.0  0
+ 3UK  CONST_18  N16  C15  C14  N13   180.00   0.0  0
+ 3UK  CONST_19  N18  C19  C14  N13   180.00   0.0  0
+ 3UK  CONST_20  C19  C14  C15  N16     0.00   0.0  0
+ 3UK  CONST_21  C19  N18  C17  N16     0.00   0.0  0
+ 3UK  CONST_22  C30  C31  C26  C27     0.00   0.0  0
+ 3UK  CONST_23  C30  C29  C28  C27     0.00   0.0  0
+ 3UK  CONST_24  N13  C12  N11  C10   180.00   0.0  0
+ 3UK  CONST_25  C14  C15  N11  C10   180.00   0.0  0
+ 3UK  CONST_26  N16  C15  N11  C10     0.00   0.0  0
+ 3UK  CONST_27  N20  C19  C14  C15   180.00   0.0  0
+ 3UK  CONST_28  N20  C19  N18  C17   180.00   0.0  0
+ 3UK  CONST_29  C02  C26  C27  C28   180.00   0.0  0
+ 3UK  CONST_30  C30  C31  C26  C02   180.00   0.0  0
+ 3UK  CONST_31  N20  C19  C14  N13     0.00   0.0  0
+ 3UK  CONST_32  N32  C31  C26  C27   180.00   0.0  0
+ 3UK  CONST_33  N32  C31  C30  C29   180.00   0.0  0
+ 3UK  CONST_34  H8   C12  N11  C10     0.00   0.0  0
+ 3UK  CONST_35  H2   C17  N16  C15   180.00   0.0  0
+ 3UK  CONST_36  H17  C30  C31  C26   180.00   0.0  0
+ 3UK  CONST_37  H4   C28  C27  C26   180.00   0.0  0
+ 3UK  CONST_38  H16  C29  C28  C27   180.00   0.0  0
+ 3UK  CONST_39  H15  C27  C28  C29   180.00   0.0  0
+ 3UK  CONST_40  H18  N32  C31  C26   180.00   0.0  0
+ 3UK  CONST_41  H19  N32  C31  C26     0.00   0.0  0
+ 3UK  CONST_42  H9   N20  C19  C14     0.00   0.0  0
+ 3UK  CONST_43  H10  N20  C19  C14   180.00   0.0  0
+ 3UK  Var_01    C31  C26  C02  O01    -1.14  30.0  2
+ 3UK  Var_02    C08  C07  O06  P04   171.29  30.0  2
+ 3UK  Var_03    O05  P04  O03  C02   -59.49  30.0  3
+ 3UK  Var_04    C08  C23  C21  C10   -37.86  30.0  1
+ 3UK  Var_05    C23  C08  O09  C10    -8.59  30.0  1
+ 3UK  Var_06    C21  C10  N11  C15   123.30  30.0  1
+ 3UK  Var_07    O09  C10  N11  C15  -118.43  30.0  1
+ 3UK  Var_08    O09  C08  C23  C21    29.60  30.0  1
+ 3UK  Var_09    C08  O09  C10  C21   -16.57  30.0  1
+ 3UK  Var_10    C12  N11  C10  C21   -59.66  30.0  2
+ 3UK  Var_11    N11  C10  O09  C08  -140.05  30.0  1
+ 3UK  Var_12    C23  C21  C10  O09    34.41  30.0  1
+ 3UK  Var_13    C12  N11  C10  O09    58.61  30.0  2
+ 3UK  Var_14    C23  C21  C10  N11   154.81  30.0  1
+ 3UK  Var_15    O24  C23  C21  C10    76.99  30.0  1
+ 3UK  Var_16    C07  C08  O09  C10   112.73  30.0  1
+ 3UK  Var_17    C07  C08  C23  C21   -90.91  30.0  1
+ 3UK  Var_18    O22  C21  C23  C08  -156.22  30.0  1
+ 3UK  Var_19    O24  C23  C08  O09   -87.27  30.0  1
+ 3UK  Var_20    O22  C21  C10  O09   156.53  30.0  1
+ 3UK  Var_21    O22  C21  C10  N11   -83.07  30.0  1
+ 3UK  Var_22    H12  C23  C21  C10  -157.16  30.0  1
+ 3UK  Var_23    H7   C08  O09  C10  -127.85  30.0  1
+ 3UK  Var_24    H1   C10  N11  C15     2.00  30.0  1
+ 3UK  Var_25    H3   C21  C23  C08    77.69  30.0  1
+ 3UK  Var_26    C23  C08  C07  O06   174.25  30.0  3
+ 3UK  Var_27    O09  C08  C07  O06    56.27  30.0  3
+ 3UK  Var_28    O24  C23  C08  C07   152.22  30.0  1
+ 3UK  Var_29    O24  C23  C21  O22   -41.37  30.0  1
+ 3UK  Var_30    H11  O22  C21  C10   162.32  30.0  3
+ 3UK  Var_31    H13  O24  C23  C21    50.51  30.0  3
+ 3UK  Var_32    H5   C07  C08  O09   -64.30  30.0  2
+ 3UK  Var_33    H6   C07  C08  O09   176.51  30.0  2
+ 3UK  Var_34    P04  O03  C02  C26   176.59  30.0  1
+ 3UK  Var_35    P04  O03  C02  O01    -3.66  30.0  1
+ 3UK  Var_36    C07  O06  P04  O03   172.64  30.0  3
+ 3UK  Var_37    C07  O06  P04  O05    49.28  30.0  3
+ 3UK  Var_38    O25  P04  O06  C07   -77.50  30.0  2
+ 3UK  Var_39    H14  O25  P04  O03    56.17  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BDL  BDL  N-(biphenyl-4-ylsulfonyl)-D-leucine  ligand  45  24  .  2021-08-07  2021-08-07  
+ BDL  BDL  N-(biphenyl-4-ylsulfonyl)-D-leucine  ligand  45  24  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BDL
@@ -235,39 +236,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BDL  CONST_01  C1   C3   C5   C7     0.00   0.0  0
- BDL  CONST_02  C1   C4   C6   C7     0.00   0.0  0
- BDL  CONST_03  C4   C6   C7   C5     0.00   0.0  0
- BDL  CONST_04  C4   C1   C3   C5     0.00   0.0  0
- BDL  CONST_05  C2   C1   C3   C5   180.00   0.0  0
- BDL  CONST_06  C6   C7   C5   C3     0.00   0.0  0
- BDL  CONST_07  C6   C4   C1   C3     0.00   0.0  0
- BDL  CONST_10  C2   C1   C4   C6   180.00   0.0  0
- BDL  CONST_13  C12  C9   C2   C1   180.00   0.0  0
- BDL  CONST_14  C10  C8   C2   C1   180.00   0.0  0
- BDL  CONST_15  C11  C12  C9   C2     0.00   0.0  0
- BDL  CONST_16  C11  C10  C8   C2     0.00   0.0  0
- BDL  CONST_17  C10  C8   C2   C9     0.00   0.0  0
- BDL  CONST_18  C10  C11  C12  C9     0.00   0.0  0
- BDL  CONST_19  C8   C2   C9   C12    0.00   0.0  0
- BDL  CONST_20  C8   C10  C11  C12    0.00   0.0  0
- BDL  CONST_21  C3   C5   C7   S1   180.00   0.0  0
- BDL  CONST_22  C4   C6   C7   S1   180.00   0.0  0
- BDL  CONST_23  H3   C3   C5   C7   180.00   0.0  0
- BDL  CONST_24  H4   C4   C6   C7   180.00   0.0  0
- BDL  CONST_25  H6   C6   C7   C5   180.00   0.0  0
- BDL  CONST_26  H5   C5   C7   C6   180.00   0.0  0
- BDL  CONST_27  H9   C9   C2   C1     0.00   0.0  0
- BDL  CONST_28  H8   C8   C2   C1     0.00   0.0  0
- BDL  CONST_29  H12  C12  C9   C2   180.00   0.0  0
- BDL  CONST_30  H10  C10  C8   C2   180.00   0.0  0
- BDL  CONST_31  H11  C11  C12  C9   180.00   0.0  0
- BDL  CONST_32  HO3  O3   C15  O4     0.00   0.0  0
- BDL  Var_01    C5   C7   S1   N1    64.84  30.0  2
- BDL  Var_02    C7   S1   N1   C17   78.33  30.0  3
- BDL  Var_03    C18  C14  C16  C17   63.64  30.0  3
- BDL  Var_04    H18  C18  C14  C16   60.38  30.0  3
- BDL  Var_05    H13  C13  C14  C16   57.28  30.0  3
+ BDL  CONST_01  C1    C3   C5   C7      0.00   0.0  0
+ BDL  CONST_02  C1    C4   C6   C7      0.00   0.0  0
+ BDL  CONST_03  C4    C6   C7   C5      0.00   0.0  0
+ BDL  CONST_04  C4    C1   C3   C5      0.00   0.0  0
+ BDL  CONST_05  C2    C1   C3   C5    180.00   0.0  0
+ BDL  CONST_06  C6    C7   C5   C3      0.00   0.0  0
+ BDL  CONST_07  C6    C4   C1   C3      0.00   0.0  0
+ BDL  CONST_08  C2    C1   C4   C6    180.00   0.0  0
+ BDL  CONST_09  C12   C9   C2   C1    180.00   0.0  0
+ BDL  CONST_10  C10   C8   C2   C1    180.00   0.0  0
+ BDL  CONST_11  C11   C12  C9   C2      0.00   0.0  0
+ BDL  CONST_12  C11   C10  C8   C2      0.00   0.0  0
+ BDL  CONST_13  C10   C8   C2   C9      0.00   0.0  0
+ BDL  CONST_14  C10   C11  C12  C9      0.00   0.0  0
+ BDL  CONST_15  C8    C2   C9   C12     0.00   0.0  0
+ BDL  CONST_16  C8    C10  C11  C12     0.00   0.0  0
+ BDL  CONST_17  C3    C5   C7   S1    180.00   0.0  0
+ BDL  CONST_18  C4    C6   C7   S1    180.00   0.0  0
+ BDL  CONST_19  H3    C3   C5   C7    180.00   0.0  0
+ BDL  CONST_20  H4    C4   C6   C7    180.00   0.0  0
+ BDL  CONST_21  H6    C6   C7   C5    180.00   0.0  0
+ BDL  CONST_22  H5    C5   C7   C6    180.00   0.0  0
+ BDL  CONST_23  H9    C9   C2   C1      0.00   0.0  0
+ BDL  CONST_24  H8    C8   C2   C1      0.00   0.0  0
+ BDL  CONST_25  H12   C12  C9   C2    180.00   0.0  0
+ BDL  CONST_26  H10   C10  C8   C2    180.00   0.0  0
+ BDL  CONST_27  H11   C11  C12  C9    180.00   0.0  0
+ BDL  CONST_28  HO3   O3   C15  O4      0.00   0.0  0
+ BDL  Var_01    C5    C7   S1   N1     64.84  30.0  2
+ BDL  Var_02    C7    S1   N1   C17    78.33  30.0  3
+ BDL  Var_03    C18   C14  C16  C17    63.64  30.0  3
+ BDL  Var_04    H18   C18  C14  C16    60.38  30.0  3
+ BDL  Var_05    H13   C13  C14  C16    57.28  30.0  3
+ BDL  Var_06    C9    C2   C1   C3   -142.38  30.0  2
+ BDL  Var_07    C8    C2   C1   C3     37.45  30.0  2
+ BDL  Var_08    C9    C2   C1   C4     37.34  30.0  2
+ BDL  Var_09    C8    C2   C1   C4   -142.83  30.0  2
+ BDL  Var_10    C16   C17  C15  O4   -105.58  30.0  3
+ BDL  Var_11    N1    C17  C15  O4     16.89  30.0  3
+ BDL  Var_12    C14   C16  C17  C15  -176.38  30.0  3
+ BDL  Var_13    S1    N1   C17  C15    85.05  30.0  3
+ BDL  Var_14    C16   C17  C15  O3     72.54  30.0  3
+ BDL  Var_15    N1    C17  C15  O3   -164.99  30.0  3
+ BDL  Var_16    S1    N1   C17  C16  -152.19  30.0  3
+ BDL  Var_17    N1    C17  C16  C14    60.52  30.0  2
+ BDL  Var_18    H17   C17  C15  O4    136.15  30.0  3
+ BDL  Var_19    H16   C16  C17  C15   -54.33  30.0  3
+ BDL  Var_20    H16A  C16  C17  C15    61.33  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

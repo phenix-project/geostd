@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A4D  A4D  '5'-thioadenosine         '  ligand  32  19  .  2021-08-06  2021-08-06  
+ A4D  A4D  '5'-thioadenosine         '  ligand  32  19  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_A4D
@@ -189,33 +190,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- A4D  CONST_01  C4    N3  C2  N1    0.00  0.0  0
- A4D  CONST_02  C4    C5  C6  N1    0.00  0.0  0
- A4D  CONST_03  N7    C5  C6  N1  180.00  0.0  0
- A4D  CONST_04  C5    C6  N1  C2    0.00  0.0  0
- A4D  CONST_05  C5    C4  N3  C2    0.00  0.0  0
- A4D  CONST_06  N9    C4  N3  C2  180.00  0.0  0
- A4D  CONST_07  C6    N1  C2  N3    0.00  0.0  0
- A4D  CONST_08  C6    C5  C4  N3    0.00  0.0  0
- A4D  CONST_09  N7    C5  C4  N3  180.00  0.0  0
- A4D  CONST_10  C8    N9  C4  N3  180.00  0.0  0
- A4D  CONST_11  C8    N7  C5  C4    0.00  0.0  0
- A4D  CONST_12  N7    C8  N9  C4    0.00  0.0  0
- A4D  CONST_13  C8    N9  C4  C5    0.00  0.0  0
- A4D  CONST_14  N9    C8  N7  C5    0.00  0.0  0
- A4D  CONST_15  N9    C4  C5  C6  180.00  0.0  0
- A4D  CONST_16  C8    N7  C5  C6  180.00  0.0  0
- A4D  CONST_17  N9    C4  C5  N7    0.00  0.0  0
- A4D  CONST_18  CAR   N9  C4  N3    0.00  0.0  0
- A4D  CONST_19  CAR   N9  C4  C5  180.00  0.0  0
- A4D  CONST_20  CAR   N9  C8  N7  180.00  0.0  0
- A4D  CONST_21  N6    C6  N1  C2  180.00  0.0  0
- A4D  CONST_22  N6    C6  C5  C4  180.00  0.0  0
- A4D  CONST_23  N7    C5  C6  N6    0.00  0.0  0
- A4D  CONST_24  H2    C2  N3  C4  180.00  0.0  0
- A4D  CONST_25  H8    C8  N9  C4  180.00  0.0  0
- A4D  CONST_26  HN6   N6  C6  N1    0.00  0.0  0
- A4D  CONST_27  HN6A  N6  C6  N1  180.00  0.0  0
+ A4D  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ A4D  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ A4D  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ A4D  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ A4D  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ A4D  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ A4D  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ A4D  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ A4D  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ A4D  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ A4D  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ A4D  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ A4D  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ A4D  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ A4D  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ A4D  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ A4D  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ A4D  CONST_18  CAR   N9   C4   N3      0.00   0.0  0
+ A4D  CONST_19  CAR   N9   C4   C5    180.00   0.0  0
+ A4D  CONST_20  CAR   N9   C8   N7    180.00   0.0  0
+ A4D  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ A4D  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ A4D  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ A4D  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ A4D  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ A4D  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ A4D  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ A4D  Var_01    OAK   CAR  N9   C4   -168.78  30.0  2
+ A4D  Var_02    CAP   CAR  N9   C4     73.57  30.0  2
+ A4D  Var_03    OAK   CAR  N9   C8      9.51  30.0  2
+ A4D  Var_04    CAP   CAR  N9   C8   -108.13  30.0  2
+ A4D  Var_05    CAQ   OAK  CAR  N9   -109.90  30.0  1
+ A4D  Var_06    CAO   CAP  CAR  N9     88.69  30.0  1
+ A4D  Var_07    CAP   CAO  CAQ  OAK   -32.03  30.0  1
+ A4D  Var_08    CAO   CAP  CAR  OAK   -30.34  30.0  1
+ A4D  Var_09    CAR   OAK  CAQ  CAO    13.76  30.0  1
+ A4D  Var_10    CAQ   OAK  CAR  CAP    10.79  30.0  1
+ A4D  Var_11    CAR   CAP  CAO  CAQ    36.99  30.0  1
+ A4D  Var_12    OAC   CAP  CAR  N9   -154.99  30.0  1
+ A4D  Var_13    CAR   CAP  CAO  OAB   155.52  30.0  1
+ A4D  Var_14    OAK   CAQ  CAO  OAB  -153.29  30.0  1
+ A4D  Var_15    CAQ   CAO  CAP  OAC   -76.65  30.0  1
+ A4D  Var_16    OAK   CAR  CAP  OAC    85.98  30.0  1
+ A4D  Var_17    CAG   CAQ  CAO  CAP  -152.41  30.0  1
+ A4D  Var_18    CAG   CAQ  OAK  CAR   136.70  30.0  1
+ A4D  Var_19    HAR   CAR  N9   C4    -49.05  30.0  2
+ A4D  Var_20    HAP   CAP  CAR  N9    -31.60  30.0  1
+ A4D  Var_21    HAO   CAO  CAQ  OAK    83.46  30.0  1
+ A4D  Var_22    HAQ   CAQ  CAO  CAP    84.90  30.0  1
+ A4D  Var_23    OAC   CAP  CAO  OAB    41.88  30.0  1
+ A4D  Var_24    CAG   CAQ  CAO  OAB    86.33  30.0  1
+ A4D  Var_25    SAD   CAG  CAQ  OAK    53.59  30.0  2
+ A4D  Var_26    SAD   CAG  CAQ  CAO   171.07  30.0  2
+ A4D  Var_27    HAG   CAG  CAQ  OAK   -68.29  30.0  2
+ A4D  Var_28    HAGA  CAG  CAQ  OAK   172.76  30.0  2
+ A4D  Var_29    HOAC  OAC  CAP  CAO   -41.94  30.0  3
+ A4D  Var_30    HOAB  OAB  CAO  CAP    85.73  30.0  3
+ A4D  Var_31    HSAD  SAD  CAG  CAQ   157.70  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- P5V  P5V  (3S)-1'-(cyclopropanecarbonyl)-5-(quinoxalin-6-yl)spiro[indole-3,2'-pyrrolidin]-2(1H)-one  ligand  49  29  .  2022-09-22  2023-02-15
+ P5V  P5V  (3S)-1'-(cyclopropanecarbonyl)-5-(quinoxalin-6-yl)spiro[indole-3,2'-pyrrolidin]-2(1H)-one  ligand  49  29  .  2022-09-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_P5V
@@ -271,50 +272,73 @@ _chem_comp_tor.period
  P5V  CONST_03  C20  C7   C6   C5    180.00   0.0  0
  P5V  CONST_04  C8   C7   C6   C5      0.00   0.0  0
  P5V  CONST_05  C8   C9   C4   C5      0.00   0.0  0
- P5V  CONST_08  C9   C8   C7   C6      0.00   0.0  0
- P5V  CONST_09  C9   C4   C5   C6      0.00   0.0  0
- P5V  CONST_10  C22  C21  C20  C7    180.00   0.0  0
- P5V  CONST_11  C28  C29  C20  C7    180.00   0.0  0
- P5V  CONST_14  C24  N23  C22  C21   180.00   0.0  0
- P5V  CONST_15  N26  C27  C22  C21   180.00   0.0  0
- P5V  CONST_16  C28  C27  C22  C21     0.00   0.0  0
- P5V  CONST_17  C28  C29  C20  C21     0.00   0.0  0
- P5V  CONST_18  C27  N26  C25  C24     0.00   0.0  0
- P5V  CONST_19  C27  C22  N23  C24     0.00   0.0  0
- P5V  CONST_20  C20  C21  C22  C27     0.00   0.0  0
- P5V  CONST_21  C20  C29  C28  C27     0.00   0.0  0
- P5V  CONST_22  C20  C7   C8   C9    180.00   0.0  0
- P5V  CONST_23  N23  C22  C21  C20   180.00   0.0  0
- P5V  CONST_24  C25  C24  N23  C22     0.00   0.0  0
- P5V  CONST_25  C25  N26  C27  C22     0.00   0.0  0
- P5V  CONST_26  C29  C28  C27  C22     0.00   0.0  0
- P5V  CONST_27  C29  C20  C21  C22     0.00   0.0  0
- P5V  CONST_28  N26  C25  C24  N23     0.00   0.0  0
- P5V  CONST_29  N26  C27  C22  N23     0.00   0.0  0
- P5V  CONST_30  C28  C27  C22  N23   180.00   0.0  0
- P5V  CONST_31  C28  C27  N26  C25   180.00   0.0  0
- P5V  CONST_32  C29  C28  C27  N26   180.00   0.0  0
- P5V  CONST_33  C10  C2   N3   C4      0.00   0.0  0
- P5V  CONST_34  C13  N14  C15  C17     0.00   0.0  0
- P5V  CONST_35  C10  N14  C15  C17   180.00   0.0  0
- P5V  CONST_36  O1   C2   N3   C4    180.00   0.0  0
- P5V  CONST_37  H3   C8   C9   C4    180.00   0.0  0
- P5V  CONST_38  H2   C6   C5   C4    180.00   0.0  0
- P5V  CONST_39  H13  C21  C20  C7      0.00   0.0  0
- P5V  CONST_40  H20  C29  C20  C7      0.00   0.0  0
- P5V  CONST_41  H1   C5   C6   C7    180.00   0.0  0
- P5V  CONST_42  H18  C25  N26  C27   180.00   0.0  0
- P5V  CONST_43  H19  C28  C29  C20   180.00   0.0  0
- P5V  CONST_44  H14  C24  N23  C22   180.00   0.0  0
- P5V  CONST_45  H15  N3   C2   C10   180.00   0.0  0
- P5V  CONST_46  O16  C15  N14  C10     0.00   0.0  0
- P5V  CONST_47  O16  C15  N14  C13   180.00   0.0  0
+ P5V  CONST_06  C9   C8   C7   C6      0.00   0.0  0
+ P5V  CONST_07  C9   C4   C5   C6      0.00   0.0  0
+ P5V  CONST_08  C22  C21  C20  C7    180.00   0.0  0
+ P5V  CONST_09  C28  C29  C20  C7    180.00   0.0  0
+ P5V  CONST_10  C24  N23  C22  C21   180.00   0.0  0
+ P5V  CONST_11  N26  C27  C22  C21   180.00   0.0  0
+ P5V  CONST_12  C28  C27  C22  C21     0.00   0.0  0
+ P5V  CONST_13  C28  C29  C20  C21     0.00   0.0  0
+ P5V  CONST_14  C27  N26  C25  C24     0.00   0.0  0
+ P5V  CONST_15  C27  C22  N23  C24     0.00   0.0  0
+ P5V  CONST_16  C20  C21  C22  C27     0.00   0.0  0
+ P5V  CONST_17  C20  C29  C28  C27     0.00   0.0  0
+ P5V  CONST_18  C20  C7   C8   C9    180.00   0.0  0
+ P5V  CONST_19  N23  C22  C21  C20   180.00   0.0  0
+ P5V  CONST_20  C25  C24  N23  C22     0.00   0.0  0
+ P5V  CONST_21  C25  N26  C27  C22     0.00   0.0  0
+ P5V  CONST_22  C29  C28  C27  C22     0.00   0.0  0
+ P5V  CONST_23  C29  C20  C21  C22     0.00   0.0  0
+ P5V  CONST_24  N26  C25  C24  N23     0.00   0.0  0
+ P5V  CONST_25  N26  C27  C22  N23     0.00   0.0  0
+ P5V  CONST_26  C28  C27  C22  N23   180.00   0.0  0
+ P5V  CONST_27  C28  C27  N26  C25   180.00   0.0  0
+ P5V  CONST_28  C29  C28  C27  N26   180.00   0.0  0
+ P5V  CONST_29  C10  C2   N3   C4      0.00   0.0  0
+ P5V  CONST_30  C13  N14  C15  C17     0.00   0.0  0
+ P5V  CONST_31  C10  N14  C15  C17   180.00   0.0  0
+ P5V  CONST_32  O1   C2   N3   C4    180.00   0.0  0
+ P5V  CONST_33  H3   C8   C9   C4    180.00   0.0  0
+ P5V  CONST_34  H2   C6   C5   C4    180.00   0.0  0
+ P5V  CONST_35  H13  C21  C20  C7      0.00   0.0  0
+ P5V  CONST_36  H20  C29  C20  C7      0.00   0.0  0
+ P5V  CONST_37  H1   C5   C6   C7    180.00   0.0  0
+ P5V  CONST_38  H18  C25  N26  C27   180.00   0.0  0
+ P5V  CONST_39  H19  C28  C29  C20   180.00   0.0  0
+ P5V  CONST_40  H14  C24  N23  C22   180.00   0.0  0
+ P5V  CONST_41  H15  N3   C2   C10   180.00   0.0  0
+ P5V  CONST_42  O16  C15  N14  C10     0.00   0.0  0
+ P5V  CONST_43  O16  C15  N14  C13   180.00   0.0  0
  P5V  Var_01    N14  C13  C12  C11   -33.29  30.0  1
  P5V  Var_02    C10  N14  C13  C12    17.55  30.0  1
  P5V  Var_03    C13  C12  C11  C10    37.23  30.0  1
  P5V  Var_04    C18  C19  C17  C15  -106.69  30.0  1
  P5V  Var_05    N14  C15  C17  C18   139.77  30.0  3
  P5V  Var_06    H9   C18  C19  C17  -106.26  30.0  1
+ P5V  Var_07    C13  N14  C10  C2   -113.21  30.0  1
+ P5V  Var_08    C12  C11  C10  C2     93.50  30.0  1
+ P5V  Var_09    N14  C10  C9   C4    128.80  30.0  2
+ P5V  Var_10    C11  C10  C9   C4   -112.02  30.0  2
+ P5V  Var_11    C21  C20  C7   C6    -36.44  30.0  2
+ P5V  Var_12    C29  C20  C7   C6    143.67  30.0  2
+ P5V  Var_13    C21  C20  C7   C8    143.10  30.0  2
+ P5V  Var_14    C29  C20  C7   C8    -36.79  30.0  2
+ P5V  Var_15    N14  C10  C9   C8    -52.89  30.0  2
+ P5V  Var_16    C11  C10  C9   C8     66.30  30.0  2
+ P5V  Var_17    C13  N14  C10  C11     5.56  30.0  1
+ P5V  Var_18    N3   C2   C10  C11   111.95  30.0  3
+ P5V  Var_19    N14  C10  C11  C12   -26.50  30.0  1
+ P5V  Var_20    C9   C10  C11  C12  -153.11  30.0  1
+ P5V  Var_21    N14  C10  C2   N3   -133.62  30.0  3
+ P5V  Var_22    C13  N14  C10  C9    129.95  30.0  1
+ P5V  Var_23    C15  N14  C10  C2     57.15  30.0  1
+ P5V  Var_24    C15  N14  C10  C11   175.91  30.0  1
+ P5V  Var_25    O1   C2   C10  C11   -65.06  30.0  3
+ P5V  Var_26    N14  C10  C2   O1     49.37  30.0  3
+ P5V  Var_27    C15  N14  C10  C9    -59.69  30.0  1
+ P5V  Var_28    H4   C11  C10  C2    -30.28  30.0  1
+ P5V  Var_29    H5   C11  C10  C2   -149.09  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

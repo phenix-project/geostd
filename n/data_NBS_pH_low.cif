@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NBS  NBS  'N-benzyladenosine 5'-(trihydrogen diphosphate)'  ligand  55  34  .  2022-11-17  2022-11-17
+ NBS  NBS  'N-benzyladenosine 5'-(trihydrogen diphosphate)'  ligand  55  34  .  2022-11-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NBS
@@ -276,51 +277,90 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NBS  CONST_01  C2   N3   C4   N9    180.00   0.0  0
- NBS  CONST_02  C6   C5   C4   N9    180.00   0.0  0
- NBS  CONST_03  N7   C5   C4   N9      0.00   0.0  0
- NBS  CONST_04  C5   N7   C8   N9      0.00   0.0  0
- NBS  CONST_05  N7   C8   N9   C4      0.00   0.0  0
- NBS  CONST_06  N1   C2   N3   C4      0.00   0.0  0
- NBS  CONST_07  N1   C6   C5   C4      0.00   0.0  0
- NBS  CONST_08  C8   N7   C5   C4      0.00   0.0  0
- NBS  CONST_09  C8   N9   C4   N3    180.00   0.0  0
- NBS  CONST_10  C6   C5   C4   N3      0.00   0.0  0
- NBS  CONST_11  N7   C5   C4   N3    180.00   0.0  0
- NBS  CONST_12  C6   N1   C2   N3      0.00   0.0  0
- NBS  CONST_13  C5   C4   N3   C2      0.00   0.0  0
- NBS  CONST_14  C5   C6   N1   C2      0.00   0.0  0
- NBS  CONST_15  N7   C5   C6   N1    180.00   0.0  0
- NBS  CONST_16  C8   N7   C5   C6    180.00   0.0  0
- NBS  CONST_17  CB5  CB4  CB3  CB2     0.00   0.0  0
- NBS  CONST_18  CB5  CB6  CB7  CB2     0.00   0.0  0
- NBS  CONST_19  CB6  CB7  CB2  CB3     0.00   0.0  0
- NBS  CONST_20  CB6  CB5  CB4  CB3     0.00   0.0  0
- NBS  CONST_21  CB7  CB2  CB3  CB4     0.00   0.0  0
- NBS  CONST_22  CB7  CB6  CB5  CB4     0.00   0.0  0
- NBS  CONST_23  C8   N9   C4   C5      0.00   0.0  0
- NBS  CONST_24  N3   C4   N9   C1'     0.00   0.0  0
- NBS  CONST_25  C5   C4   N9   C1'   180.00   0.0  0
- NBS  CONST_26  N7   C8   N9   C1'   180.00   0.0  0
- NBS  CONST_27  N6   C6   C5   C4    180.00   0.0  0
- NBS  CONST_28  N6   C6   N1   C2    180.00   0.0  0
- NBS  CONST_29  N7   C5   C6   N6      0.00   0.0  0
- NBS  CONST_30  CB4  CB3  CB2  CB1   180.00   0.0  0
- NBS  CONST_31  CB6  CB7  CB2  CB1   180.00   0.0  0
- NBS  CONST_32  H8   C8   N9   C1'     0.00   0.0  0
- NBS  CONST_33  H2   C2   N3   C4    180.00   0.0  0
- NBS  CONST_34  HB4  CB4  CB3  CB2   180.00   0.0  0
- NBS  CONST_35  HB6  CB6  CB7  CB2   180.00   0.0  0
- NBS  CONST_36  HB7  CB7  CB2  CB3   180.00   0.0  0
- NBS  CONST_37  HB5  CB5  CB4  CB3   180.00   0.0  0
- NBS  CONST_38  HB3  CB3  CB4  CB5   180.00   0.0  0
- NBS  CONST_39  CB1  N6   C6   N1    180.00   0.0  0
- NBS  CONST_40  C5   C6   N6   CB1     0.00   0.0  0
- NBS  CONST_41  H6   N6   C6   N1      0.00   0.0  0
- NBS  Var_01    CB2  CB1  N6   C6    -94.79  30.0  3
- NBS  Var_02    CB3  CB2  CB1  N6   -144.03  30.0  2
- NBS  Var_03    C4'  C5'  O5'  PA     51.11  30.0  3
- NBS  Var_04    O1P  PA   O3P  PB   -159.80  30.0  1
+ NBS  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ NBS  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ NBS  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ NBS  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ NBS  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ NBS  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ NBS  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ NBS  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ NBS  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ NBS  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ NBS  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ NBS  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ NBS  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ NBS  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ NBS  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ NBS  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ NBS  CONST_17  CB5   CB4  CB3  CB2     0.00   0.0  0
+ NBS  CONST_18  CB5   CB6  CB7  CB2     0.00   0.0  0
+ NBS  CONST_19  CB6   CB7  CB2  CB3     0.00   0.0  0
+ NBS  CONST_20  CB6   CB5  CB4  CB3     0.00   0.0  0
+ NBS  CONST_21  CB7   CB2  CB3  CB4     0.00   0.0  0
+ NBS  CONST_22  CB7   CB6  CB5  CB4     0.00   0.0  0
+ NBS  CONST_23  C8    N9   C4   C5      0.00   0.0  0
+ NBS  CONST_24  N3    C4   N9   C1'     0.00   0.0  0
+ NBS  CONST_25  C5    C4   N9   C1'   180.00   0.0  0
+ NBS  CONST_26  N7    C8   N9   C1'   180.00   0.0  0
+ NBS  CONST_27  N6    C6   C5   C4    180.00   0.0  0
+ NBS  CONST_28  N6    C6   N1   C2    180.00   0.0  0
+ NBS  CONST_29  N7    C5   C6   N6      0.00   0.0  0
+ NBS  CONST_30  CB4   CB3  CB2  CB1   180.00   0.0  0
+ NBS  CONST_31  CB6   CB7  CB2  CB1   180.00   0.0  0
+ NBS  CONST_32  H8    C8   N9   C1'     0.00   0.0  0
+ NBS  CONST_33  H2    C2   N3   C4    180.00   0.0  0
+ NBS  CONST_34  HB4   CB4  CB3  CB2   180.00   0.0  0
+ NBS  CONST_35  HB6   CB6  CB7  CB2   180.00   0.0  0
+ NBS  CONST_36  HB7   CB7  CB2  CB3   180.00   0.0  0
+ NBS  CONST_37  HB5   CB5  CB4  CB3   180.00   0.0  0
+ NBS  CONST_38  HB3   CB3  CB4  CB5   180.00   0.0  0
+ NBS  CONST_39  CB1   N6   C6   N1    180.00   0.0  0
+ NBS  CONST_40  C5    C6   N6   CB1     0.00   0.0  0
+ NBS  CONST_41  H6    N6   C6   N1      0.00   0.0  0
+ NBS  Var_01    CB2   CB1  N6   C6    -94.79  30.0  3
+ NBS  Var_02    CB3   CB2  CB1  N6   -144.03  30.0  2
+ NBS  Var_03    C4'   C5'  O5'  PA     51.11  30.0  3
+ NBS  Var_04    O1P   PA   O3P  PB   -159.80  30.0  1
+ NBS  Var_05    N9    C1'  O4'  C4'  -135.91  30.0  1
+ NBS  Var_06    C2'   C1'  O4'  C4'   -12.72  30.0  1
+ NBS  Var_07    C1'   C2'  C3'  C4'   -38.46  30.0  1
+ NBS  Var_08    C2'   C3'  C4'  O4'    31.93  30.0  1
+ NBS  Var_09    C4    N9   C1'  O4'  -130.02  30.0  2
+ NBS  Var_10    C8    N9   C1'  O4'    49.49  30.0  2
+ NBS  Var_11    C3'   C2'  C1'  O4'    32.27  30.0  1
+ NBS  Var_12    C3'   C4'  O4'  C1'   -12.53  30.0  1
+ NBS  Var_13    C3'   C2'  C1'  N9    152.05  30.0  1
+ NBS  Var_14    C2'   C1'  N9   C4    112.57  30.0  2
+ NBS  Var_15    C2'   C1'  N9   C8    -67.92  30.0  2
+ NBS  Var_16    C1'   O4'  C4'  C5'   107.77  30.0  1
+ NBS  Var_17    C2'   C3'  C4'  C5'   -88.02  30.0  1
+ NBS  Var_18    O2'   C2'  C3'  C4'  -156.51  30.0  1
+ NBS  Var_19    O3'   C3'  C4'  O4'   -84.85  30.0  1
+ NBS  Var_20    O2'   C2'  C1'  O4'   153.94  30.0  1
+ NBS  Var_21    O3'   C3'  C2'  C1'    76.56  30.0  1
+ NBS  Var_22    O2'   C2'  C1'  N9    -86.27  30.0  1
+ NBS  Var_23    H1'   C1'  O4'  C4'   106.79  30.0  1
+ NBS  Var_24    H2'   C2'  C3'  C4'    77.33  30.0  1
+ NBS  Var_25    H3'   C3'  C4'  O4'   150.96  30.0  1
+ NBS  Var_26    H4'   C4'  O4'  C1'  -131.24  30.0  1
+ NBS  Var_27    O4'   C4'  C5'  O5'    38.63  30.0  3
+ NBS  Var_28    C3'   C4'  C5'  O5'   155.39  30.0  3
+ NBS  Var_29    O3'   C3'  C4'  C5'   155.20  30.0  1
+ NBS  Var_30    O3'   C3'  C2'  O2'   -41.49  30.0  1
+ NBS  Var_31    HO'3  O3'  C3'  C4'   156.70  30.0  3
+ NBS  Var_32    H5'1  C5'  C4'  O4'   -79.17  30.0  3
+ NBS  Var_33    H5'2  C5'  C4'  O4'   162.23  30.0  3
+ NBS  Var_34    HO'2  O2'  C2'  C1'   158.87  30.0  3
+ NBS  Var_35    PA    O3P  PB   O4P   175.42  30.0  3
+ NBS  Var_36    PA    O3P  PB   O5P    72.64  30.0  3
+ NBS  Var_37    PA    O3P  PB   O6P   -56.92  30.0  3
+ NBS  Var_38    C5'   O5'  PA   O1P   -79.29  30.0  3
+ NBS  Var_39    C5'   O5'  PA   O2P   153.04  30.0  3
+ NBS  Var_40    C5'   O5'  PA   O3P    29.85  30.0  3
+ NBS  Var_41    HOP5  O5P  PB   O4P  -174.97  30.0  3
+ NBS  Var_42    HOP4  O4P  PB   O5P  -150.86  30.0  3
+ NBS  Var_43    HOP1  O1P  PA   O2P   147.88  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

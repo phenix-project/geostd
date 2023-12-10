@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TO2  TO2  (1R,2S)-1-(3,4-dimethoxyphenyl)-2-(2-methoxyphenoxy)propane-1,3-diol  ligand  46  24  .  2021-08-23  2021-08-23  
+ TO2  TO2  (1R,2S)-1-(3,4-dimethoxyphenyl)-2-(2-methoxyphenoxy)propane-1,3-diol  ligand  46  24  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TO2
@@ -236,41 +237,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TO2  CONST_01  CAV  CAS  CAH  CAF    0.00   0.0  0
- TO2  CONST_02  CAV  CAI  CAG  CAF    0.00   0.0  0
- TO2  CONST_03  CAS  CAH  CAF  CAG    0.00   0.0  0
- TO2  CONST_04  CAS  CAV  CAI  CAG    0.00   0.0  0
- TO2  CONST_05  CAI  CAG  CAF  CAH    0.00   0.0  0
- TO2  CONST_06  CAI  CAV  CAS  CAH    0.00   0.0  0
- TO2  CONST_07  CAU  CAL  CAR  CAJ    0.00   0.0  0
- TO2  CONST_08  CAU  CAT  CAK  CAJ    0.00   0.0  0
- TO2  CONST_09  CAL  CAR  CAJ  CAK    0.00   0.0  0
- TO2  CONST_10  CAL  CAU  CAT  CAK    0.00   0.0  0
- TO2  CONST_11  CAT  CAK  CAJ  CAR    0.00   0.0  0
- TO2  CONST_12  CAT  CAU  CAL  CAR    0.00   0.0  0
- TO2  CONST_13  OAN  CAS  CAH  CAF  180.00   0.0  0
- TO2  CONST_14  OAQ  CAV  CAI  CAG  180.00   0.0  0
- TO2  CONST_15  OAQ  CAV  CAS  CAH  180.00   0.0  0
- TO2  CONST_16  OAN  CAS  CAV  CAI  180.00   0.0  0
- TO2  CONST_17  OAO  CAT  CAK  CAJ  180.00   0.0  0
- TO2  CONST_18  CAW  CAR  CAJ  CAK  180.00   0.0  0
- TO2  CONST_19  OAP  CAU  CAT  CAK  180.00   0.0  0
- TO2  CONST_20  OAO  CAT  CAU  CAL  180.00   0.0  0
- TO2  CONST_21  CAR  CAL  CAU  OAP  180.00   0.0  0
- TO2  CONST_22  CAW  CAR  CAL  CAU  180.00   0.0  0
- TO2  CONST_23  HAI  CAI  CAG  CAF  180.00   0.0  0
- TO2  CONST_24  HAH  CAH  CAF  CAG  180.00   0.0  0
- TO2  CONST_25  HAG  CAG  CAF  CAH  180.00   0.0  0
- TO2  CONST_26  HAF  CAF  CAG  CAI  180.00   0.0  0
- TO2  CONST_27  HAL  CAL  CAR  CAJ  180.00   0.0  0
- TO2  CONST_28  HAJ  CAJ  CAR  CAL  180.00   0.0  0
- TO2  CONST_29  HAK  CAK  CAJ  CAR  180.00   0.0  0
- TO2  Var_01    CAH  CAS  OAN  CAA   -2.33  30.0  1
- TO2  Var_02    CAK  CAT  OAO  CAB   -1.70  30.0  2
- TO2  Var_03    CAL  CAU  OAP  CAC    0.02  30.0  2
- TO2  Var_04    HAA  CAA  OAN  CAS   62.94  30.0  3
- TO2  Var_05    HAB  CAB  OAO  CAT  -60.45  30.0  3
- TO2  Var_06    HAC  CAC  OAP  CAU  178.42  30.0  3
+ TO2  CONST_01  CAV   CAS  CAH  CAF     0.00   0.0  0
+ TO2  CONST_02  CAV   CAI  CAG  CAF     0.00   0.0  0
+ TO2  CONST_03  CAS   CAH  CAF  CAG     0.00   0.0  0
+ TO2  CONST_04  CAS   CAV  CAI  CAG     0.00   0.0  0
+ TO2  CONST_05  CAI   CAG  CAF  CAH     0.00   0.0  0
+ TO2  CONST_06  CAI   CAV  CAS  CAH     0.00   0.0  0
+ TO2  CONST_07  CAU   CAL  CAR  CAJ     0.00   0.0  0
+ TO2  CONST_08  CAU   CAT  CAK  CAJ     0.00   0.0  0
+ TO2  CONST_09  CAL   CAR  CAJ  CAK     0.00   0.0  0
+ TO2  CONST_10  CAL   CAU  CAT  CAK     0.00   0.0  0
+ TO2  CONST_11  CAT   CAK  CAJ  CAR     0.00   0.0  0
+ TO2  CONST_12  CAT   CAU  CAL  CAR     0.00   0.0  0
+ TO2  CONST_13  OAN   CAS  CAH  CAF   180.00   0.0  0
+ TO2  CONST_14  OAQ   CAV  CAI  CAG   180.00   0.0  0
+ TO2  CONST_15  OAQ   CAV  CAS  CAH   180.00   0.0  0
+ TO2  CONST_16  OAN   CAS  CAV  CAI   180.00   0.0  0
+ TO2  CONST_17  OAO   CAT  CAK  CAJ   180.00   0.0  0
+ TO2  CONST_18  CAW   CAR  CAJ  CAK   180.00   0.0  0
+ TO2  CONST_19  OAP   CAU  CAT  CAK   180.00   0.0  0
+ TO2  CONST_20  OAO   CAT  CAU  CAL   180.00   0.0  0
+ TO2  CONST_21  CAR   CAL  CAU  OAP   180.00   0.0  0
+ TO2  CONST_22  CAW   CAR  CAL  CAU   180.00   0.0  0
+ TO2  CONST_23  HAI   CAI  CAG  CAF   180.00   0.0  0
+ TO2  CONST_24  HAH   CAH  CAF  CAG   180.00   0.0  0
+ TO2  CONST_25  HAG   CAG  CAF  CAH   180.00   0.0  0
+ TO2  CONST_26  HAF   CAF  CAG  CAI   180.00   0.0  0
+ TO2  CONST_27  HAL   CAL  CAR  CAJ   180.00   0.0  0
+ TO2  CONST_28  HAJ   CAJ  CAR  CAL   180.00   0.0  0
+ TO2  CONST_29  HAK   CAK  CAJ  CAR   180.00   0.0  0
+ TO2  Var_01    CAH   CAS  OAN  CAA    -2.33  30.0  1
+ TO2  Var_02    CAK   CAT  OAO  CAB    -1.70  30.0  2
+ TO2  Var_03    CAL   CAU  OAP  CAC     0.02  30.0  2
+ TO2  Var_04    HAA   CAA  OAN  CAS    62.94  30.0  3
+ TO2  Var_05    HAB   CAB  OAO  CAT   -60.45  30.0  3
+ TO2  Var_06    HAC   CAC  OAP  CAU   178.42  30.0  3
+ TO2  Var_07    CAJ   CAR  CAW  OAE   -36.22  30.0  2
+ TO2  Var_08    CAL   CAR  CAW  OAE   145.80  30.0  2
+ TO2  Var_09    CAX   OAQ  CAV  CAI    -3.13  30.0  2
+ TO2  Var_10    CAX   CAW  CAR  CAJ    88.35  30.0  3
+ TO2  Var_11    CAX   CAW  CAR  CAL   -89.63  30.0  3
+ TO2  Var_12    CAX   OAQ  CAV  CAS   177.02  30.0  2
+ TO2  Var_13    HAW   CAW  CAR  CAJ  -153.19  30.0  3
+ TO2  Var_14    CAV   OAQ  CAX  CAM    87.71  30.0  1
+ TO2  Var_15    CAR   CAW  CAX  CAM  -176.73  30.0  3
+ TO2  Var_16    CAR   CAW  CAX  OAQ    61.40  30.0  3
+ TO2  Var_17    CAW   CAX  OAQ  CAV  -148.48  30.0  3
+ TO2  Var_18    HOAE  OAE  CAW  CAR    69.24  30.0  3
+ TO2  Var_19    HAX   CAX  CAW  CAR   -57.34  30.0  1
+ TO2  Var_20    CAM   CAX  CAW  OAE   -50.73  30.0  1
+ TO2  Var_21    OAQ   CAX  CAW  OAE  -172.60  30.0  1
+ TO2  Var_22    OAD   CAM  CAX  OAQ    61.25  30.0  2
+ TO2  Var_23    OAD   CAM  CAX  CAW   -57.63  30.0  2
+ TO2  Var_24    HAM   CAM  CAX  OAQ   -60.74  30.0  2
+ TO2  Var_25    HAMA  CAM  CAX  OAQ  -175.94  30.0  2
+ TO2  Var_26    HOAD  OAD  CAM  CAX   177.59  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

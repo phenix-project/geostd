@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HQL  HQL  4-(diphenylmethoxy)-1-[3-(1H-tetrazol-5-yl)propyl]piperidine  ligand  55  28  .  2021-08-11  2021-08-11  
+ HQL  HQL  4-(diphenylmethoxy)-1-[3-(1H-tetrazol-5-yl)propyl]piperidine  ligand  55  28  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HQL
@@ -281,50 +282,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HQL  CONST_01  C4   C3   C2   C1      0.00   0.0  0
- HQL  CONST_02  C4   C21  C22  C1      0.00   0.0  0
- HQL  CONST_03  C21  C22  C1   C2      0.00   0.0  0
- HQL  CONST_04  C21  C4   C3   C2      0.00   0.0  0
- HQL  CONST_05  C22  C1   C2   C3      0.00   0.0  0
- HQL  CONST_06  C22  C21  C4   C3      0.00   0.0  0
- HQL  CONST_07  N4   N3   N2   C12     0.00   0.0  0
- HQL  CONST_08  N3   N4   N5   C12     0.00   0.0  0
- HQL  CONST_09  N4   N5   C12  N2      0.00   0.0  0
- HQL  CONST_10  N5   N4   N3   N2      0.00   0.0  0
- HQL  CONST_11  N5   C12  N2   N3      0.00   0.0  0
- HQL  CONST_12  C18  C17  C16  C15     0.00   0.0  0
- HQL  CONST_13  C18  C19  C20  C15     0.00   0.0  0
- HQL  CONST_14  C19  C20  C15  C16     0.00   0.0  0
- HQL  CONST_15  C19  C18  C17  C16     0.00   0.0  0
- HQL  CONST_16  C20  C15  C16  C17     0.00   0.0  0
- HQL  CONST_17  C20  C19  C18  C17     0.00   0.0  0
- HQL  CONST_18  C5   C4   C3   C2    180.00   0.0  0
- HQL  CONST_19  C22  C21  C4   C5    180.00   0.0  0
- HQL  CONST_20  C17  C16  C15  C5    180.00   0.0  0
- HQL  CONST_21  C19  C20  C15  C5    180.00   0.0  0
- HQL  CONST_22  N3   N2   C12  C11   180.00   0.0  0
- HQL  CONST_23  N4   N5   C12  C11   180.00   0.0  0
- HQL  CONST_24  H3   C3   C2   C1    180.00   0.0  0
- HQL  CONST_25  H21  C21  C22  C1    180.00   0.0  0
- HQL  CONST_26  H22  C22  C1   C2    180.00   0.0  0
- HQL  CONST_27  H1   C1   C2   C3    180.00   0.0  0
- HQL  CONST_28  H2   C2   C3   C4    180.00   0.0  0
- HQL  CONST_29  HN1  N2   N3   N4    180.00   0.0  0
- HQL  CONST_30  H17  C17  C16  C15   180.00   0.0  0
- HQL  CONST_31  H19  C19  C20  C15   180.00   0.0  0
- HQL  CONST_32  H20  C20  C15  C16   180.00   0.0  0
- HQL  CONST_33  H18  C18  C17  C16   180.00   0.0  0
- HQL  CONST_34  H16  C16  C17  C18   180.00   0.0  0
- HQL  Var_01    N1   C8   C7   C6    -56.27  30.0  1
- HQL  Var_02    N1   C13  C14  C6     57.93  30.0  1
- HQL  Var_03    C13  N1   C8   C7     59.42  30.0  1
- HQL  Var_04    C14  C13  N1   C8    -60.31  30.0  1
- HQL  Var_05    C15  C5   C4   C3     87.10  30.0  2
- HQL  Var_06    C16  C15  C5   C4   -100.91  30.0  2
- HQL  Var_07    C10  C9   N1   C8     73.87  30.0  3
- HQL  Var_08    N2   C12  C11  C10    58.79  30.0  2
- HQL  Var_09    C11  C10  C9   N1     47.81  30.0  3
- HQL  Var_10    C12  C11  C10  C9     54.39  30.0  3
+ HQL  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ HQL  CONST_02  C4    C21  C22  C1      0.00   0.0  0
+ HQL  CONST_03  C21   C22  C1   C2      0.00   0.0  0
+ HQL  CONST_04  C21   C4   C3   C2      0.00   0.0  0
+ HQL  CONST_05  C22   C1   C2   C3      0.00   0.0  0
+ HQL  CONST_06  C22   C21  C4   C3      0.00   0.0  0
+ HQL  CONST_07  N4    N3   N2   C12     0.00   0.0  0
+ HQL  CONST_08  N3    N4   N5   C12     0.00   0.0  0
+ HQL  CONST_09  N4    N5   C12  N2      0.00   0.0  0
+ HQL  CONST_10  N5    N4   N3   N2      0.00   0.0  0
+ HQL  CONST_11  N5    C12  N2   N3      0.00   0.0  0
+ HQL  CONST_12  C18   C17  C16  C15     0.00   0.0  0
+ HQL  CONST_13  C18   C19  C20  C15     0.00   0.0  0
+ HQL  CONST_14  C19   C20  C15  C16     0.00   0.0  0
+ HQL  CONST_15  C19   C18  C17  C16     0.00   0.0  0
+ HQL  CONST_16  C20   C15  C16  C17     0.00   0.0  0
+ HQL  CONST_17  C20   C19  C18  C17     0.00   0.0  0
+ HQL  CONST_18  C5    C4   C3   C2    180.00   0.0  0
+ HQL  CONST_19  C22   C21  C4   C5    180.00   0.0  0
+ HQL  CONST_20  C17   C16  C15  C5    180.00   0.0  0
+ HQL  CONST_21  C19   C20  C15  C5    180.00   0.0  0
+ HQL  CONST_22  N3    N2   C12  C11   180.00   0.0  0
+ HQL  CONST_23  N4    N5   C12  C11   180.00   0.0  0
+ HQL  CONST_24  H3    C3   C2   C1    180.00   0.0  0
+ HQL  CONST_25  H21   C21  C22  C1    180.00   0.0  0
+ HQL  CONST_26  H22   C22  C1   C2    180.00   0.0  0
+ HQL  CONST_27  H1    C1   C2   C3    180.00   0.0  0
+ HQL  CONST_28  H2    C2   C3   C4    180.00   0.0  0
+ HQL  CONST_29  HN1   N2   N3   N4    180.00   0.0  0
+ HQL  CONST_30  H17   C17  C16  C15   180.00   0.0  0
+ HQL  CONST_31  H19   C19  C20  C15   180.00   0.0  0
+ HQL  CONST_32  H20   C20  C15  C16   180.00   0.0  0
+ HQL  CONST_33  H18   C18  C17  C16   180.00   0.0  0
+ HQL  CONST_34  H16   C16  C17  C18   180.00   0.0  0
+ HQL  Var_01    N1    C8   C7   C6    -56.27  30.0  1
+ HQL  Var_02    N1    C13  C14  C6     57.93  30.0  1
+ HQL  Var_03    C13   N1   C8   C7     59.42  30.0  1
+ HQL  Var_04    C14   C13  N1   C8    -60.31  30.0  1
+ HQL  Var_05    C15   C5   C4   C3     87.10  30.0  2
+ HQL  Var_06    C16   C15  C5   C4   -100.91  30.0  2
+ HQL  Var_07    C10   C9   N1   C8     73.87  30.0  3
+ HQL  Var_08    N2    C12  C11  C10    58.79  30.0  2
+ HQL  Var_09    C11   C10  C9   N1     47.81  30.0  3
+ HQL  Var_10    C12   C11  C10  C9     54.39  30.0  3
+ HQL  Var_11    C13   C14  C6   C7    -55.04  30.0  1
+ HQL  Var_12    C14   C6   C7   C8     54.23  30.0  1
+ HQL  Var_13    C8    C7   C6   O1    177.15  30.0  1
+ HQL  Var_14    C13   C14  C6   O1   -175.10  30.0  1
+ HQL  Var_15    H141  C14  C6   C7   -176.10  30.0  1
+ HQL  Var_16    H142  C14  C6   C7     64.75  30.0  1
+ HQL  Var_17    H6    C6   C7   C8    -64.00  30.0  1
+ HQL  Var_18    C6    O1   C5   C4    171.39  30.0  3
+ HQL  Var_19    C7    C6   O1   C5    161.75  30.0  3
+ HQL  Var_20    C14   C6   O1   C5    -77.11  30.0  3
+ HQL  Var_21    C15   C5   O1   C6    -66.96  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

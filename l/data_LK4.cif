@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LK4  LK4  'N-({6-[(4-cyanobenzyl)oxy]naphthalen-2-yl}sulfonyl)-D-glutamic acid'  ligand  51  33  .  2022-03-22  2022-03-22
+ LK4  LK4  'N-({6-[(4-cyanobenzyl)oxy]naphthalen-2-yl}sulfonyl)-D-glutamic acid'  ligand  51  33  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LK4
@@ -258,37 +259,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LK4  CONST_01  C24  C29  C28  C27     0.00   0.0  0
- LK4  CONST_02  C24  C25  C26  C27     0.00   0.0  0
- LK4  CONST_03  C25  C26  C27  C28     0.00   0.0  0
- LK4  CONST_04  C25  C24  C29  C28     0.00   0.0  0
- LK4  CONST_05  C26  C27  C28  C29     0.00   0.0  0
- LK4  CONST_06  C26  C25  C24  C29     0.00   0.0  0
- LK4  CONST_07  C16  C18  C19  C20     0.00   0.0  0
- LK4  CONST_08  C16  C15  C21  C20     0.00   0.0  0
- LK4  CONST_09  C15  C21  C20  C19     0.00   0.0  0
- LK4  CONST_10  C15  C16  C18  C19     0.00   0.0  0
- LK4  CONST_11  C21  C20  C19  C18     0.00   0.0  0
- LK4  CONST_12  C21  C15  C16  C18     0.00   0.0  0
- LK4  CONST_13  C29  C28  C27  C30   180.00   0.0  0
- LK4  CONST_14  C25  C26  C27  C30   180.00   0.0  0
- LK4  CONST_15  C23  C24  C29  C28   180.00   0.0  0
- LK4  CONST_16  C23  C24  C25  C26   180.00   0.0  0
- LK4  CONST_17  C18  C19  C20  O22   180.00   0.0  0
- LK4  CONST_18  C15  C21  C20  O22   180.00   0.0  0
- LK4  CONST_19  H29  C29  C28  C27   180.00   0.0  0
- LK4  CONST_20  H25  C25  C26  C27   180.00   0.0  0
- LK4  CONST_21  H26  C26  C27  C28   180.00   0.0  0
- LK4  CONST_22  H28  C28  C27  C26   180.00   0.0  0
- LK4  CONST_23  H18  C18  C19  C20   180.00   0.0  0
- LK4  CONST_24  H21  C21  C20  C19   180.00   0.0  0
- LK4  CONST_25  H19  C19  C20  C21   180.00   0.0  0
- LK4  Var_01    O22  C23  C24  C29  -122.61  30.0  2
- LK4  Var_02    C19  C20  O22  C23     1.15  30.0  2
- LK4  Var_03    O33  S11  C12  C17   -54.32  30.0  3
- LK4  Var_04    CA   N    S11  C12    76.17  30.0  3
- LK4  Var_05    CD   CG   CB   CA   -175.15  30.0  3
- LK4  Var_06    OE1  CD   CG   CB   -177.15  30.0  3
+ LK4  CONST_01  C24   C29  C28  C27     0.00   0.0  0
+ LK4  CONST_02  C24   C25  C26  C27     0.00   0.0  0
+ LK4  CONST_03  C25   C26  C27  C28     0.00   0.0  0
+ LK4  CONST_04  C25   C24  C29  C28     0.00   0.0  0
+ LK4  CONST_05  C26   C27  C28  C29     0.00   0.0  0
+ LK4  CONST_06  C26   C25  C24  C29     0.00   0.0  0
+ LK4  CONST_07  C16   C18  C19  C20     0.00   0.0  0
+ LK4  CONST_08  C16   C15  C21  C20     0.00   0.0  0
+ LK4  CONST_09  C15   C21  C20  C19     0.00   0.0  0
+ LK4  CONST_10  C15   C16  C18  C19     0.00   0.0  0
+ LK4  CONST_11  C21   C20  C19  C18     0.00   0.0  0
+ LK4  CONST_12  C21   C15  C16  C18     0.00   0.0  0
+ LK4  CONST_13  C29   C28  C27  C30   180.00   0.0  0
+ LK4  CONST_14  C25   C26  C27  C30   180.00   0.0  0
+ LK4  CONST_15  C23   C24  C29  C28   180.00   0.0  0
+ LK4  CONST_16  C23   C24  C25  C26   180.00   0.0  0
+ LK4  CONST_17  C18   C19  C20  O22   180.00   0.0  0
+ LK4  CONST_18  C15   C21  C20  O22   180.00   0.0  0
+ LK4  CONST_19  H29   C29  C28  C27   180.00   0.0  0
+ LK4  CONST_20  H25   C25  C26  C27   180.00   0.0  0
+ LK4  CONST_21  H26   C26  C27  C28   180.00   0.0  0
+ LK4  CONST_22  H28   C28  C27  C26   180.00   0.0  0
+ LK4  CONST_23  H18   C18  C19  C20   180.00   0.0  0
+ LK4  CONST_24  H21   C21  C20  C19   180.00   0.0  0
+ LK4  CONST_25  H19   C19  C20  C21   180.00   0.0  0
+ LK4  Var_01    O22   C23  C24  C29  -122.61  30.0  2
+ LK4  Var_02    C19   C20  O22  C23     1.15  30.0  2
+ LK4  Var_03    O33   S11  C12  C17   -54.32  30.0  3
+ LK4  Var_04    CA    N    S11  C12    76.17  30.0  3
+ LK4  Var_05    CD    CG   CB   CA   -175.15  30.0  3
+ LK4  Var_06    OE1   CD   CG   CB   -177.15  30.0  3
+ LK4  CONST_26  C12   C17  C16  C18   180.00   0.0  0
+ LK4  CONST_27  C13   C14  C15  C21   180.00   0.0  0
+ LK4  CONST_28  C12   C17  C16  C15     0.00   0.0  0
+ LK4  CONST_29  C12   C13  C14  C15     0.00   0.0  0
+ LK4  CONST_30  C13   C14  C15  C16     0.00   0.0  0
+ LK4  CONST_31  C13   C12  C17  C16     0.00   0.0  0
+ LK4  CONST_32  C14   C13  C12  C17     0.00   0.0  0
+ LK4  CONST_33  S11   C12  C17  C16   180.00   0.0  0
+ LK4  CONST_34  S11   C12  C13  C14   180.00   0.0  0
+ LK4  CONST_35  H17   C17  C16  C18     0.00   0.0  0
+ LK4  CONST_36  H14   C14  C15  C21     0.00   0.0  0
+ LK4  CONST_37  H13   C13  C14  C15   180.00   0.0  0
+ LK4  Var_07    C20   O22  C23  C24   176.02  30.0  3
+ LK4  Var_08    C     CA   N    S11    77.58  30.0  3
+ LK4  Var_09    CB    CA   N    S11  -160.43  30.0  3
+ LK4  Var_10    O     C    CA   N    -145.05  30.0  2
+ LK4  Var_11    OXT   C    CA   N      37.25  30.0  2
+ LK4  Var_12    CG    CB   CA   N     178.38  30.0  3
+ LK4  Var_13    CG    CB   CA   C     -59.54  30.0  3
+ LK4  Var_14    CB    CA   C    O      95.91  30.0  2
+ LK4  Var_15    CB    CA   C    OXT   -81.79  30.0  2
+ LK4  Var_16    HA    CA   N    S11   -43.96  30.0  3
+ LK4  Var_17    HBC1  CB   CA   N     -58.52  30.0  3
+ LK4  Var_18    HBC2  CB   CA   N      56.11  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

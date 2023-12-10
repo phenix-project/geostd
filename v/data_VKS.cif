@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VKS  VKS  (3S,4S)-8-{6-amino-5-[(2-amino-3-chloropyridin-4-yl)sulfanyl]pyrazin-2-yl}-3-methyl-2-oxa-8-azaspiro[4.5]decan-4-amine  ligand  52  28  .  2022-03-29  2022-03-29
+ VKS  VKS  (3S,4S)-8-{6-amino-5-[(2-amino-3-chloropyridin-4-yl)sulfanyl]pyrazin-2-yl}-3-methyl-2-oxa-8-azaspiro[4.5]decan-4-amine  ligand  52  28  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VKS
@@ -270,44 +271,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VKS  CONST_01  C3   C4   C5   C1     0.00   0.0  0
- VKS  CONST_02  C3   C2   N1   C1     0.00   0.0  0
- VKS  CONST_03  C5   C1   N1   C2     0.00   0.0  0
- VKS  CONST_04  C5   C4   C3   C2     0.00   0.0  0
- VKS  CONST_05  C4   C5   C1   N1     0.00   0.0  0
- VKS  CONST_06  C4   C3   C2   N1     0.00   0.0  0
- VKS  CONST_07  C8   C7   N2   C6     0.00   0.0  0
- VKS  CONST_08  C8   N3   C9   C6     0.00   0.0  0
- VKS  CONST_09  N3   C8   C7   N2     0.00   0.0  0
- VKS  CONST_10  N3   C9   C6   N2     0.00   0.0  0
- VKS  CONST_11  C9   N3   C8   C7     0.00   0.0  0
- VKS  CONST_12  C9   C6   N2   C7     0.00   0.0  0
- VKS  CONST_13  N5   C8   C7   N2   180.00   0.0  0
- VKS  CONST_14  N5   C8   N3   C9   180.00   0.0  0
- VKS  CONST_15  S1   C4   C5   C1   180.00   0.0  0
- VKS  CONST_16  N7   C2   N1   C1   180.00   0.0  0
- VKS  CONST_17  S1   C4   C3   C2   180.00   0.0  0
- VKS  CONST_18  CL1  C3   C2   N1   180.00   0.0  0
- VKS  CONST_19  N7   C2   C3   C4   180.00   0.0  0
- VKS  CONST_20  CL1  C3   C4   C5   180.00   0.0  0
- VKS  CONST_21  C7   N2   C6   S1   180.00   0.0  0
- VKS  CONST_22  N3   C9   C6   S1   180.00   0.0  0
- VKS  CONST_23  N4   C9   C6   N2   180.00   0.0  0
- VKS  CONST_24  N4   C9   N3   C8   180.00   0.0  0
- VKS  CONST_25  H1   C1   N1   C2   180.00   0.0  0
- VKS  CONST_26  H15  C5   C4   C3   180.00   0.0  0
- VKS  CONST_27  H16  C7   N2   C6   180.00   0.0  0
- VKS  CONST_28  H24  N7   C2   C3   180.00   0.0  0
- VKS  CONST_30  H17  N4   C9   C6   180.00   0.0  0
- VKS  Var_01    C14  C13  C15  O1   149.58  30.0  3
- VKS  Var_02    C14  C10  N5   C11  -60.49  30.0  1
- VKS  Var_03    C7   C8   N5   C11  168.44  30.0  2
- VKS  Var_04    C15  C13  C12  C11  -74.09  30.0  1
- VKS  Var_05    C10  N5   C11  C12   59.48  30.0  1
- VKS  Var_06    C10  C14  C13  C12  -51.09  30.0  1
- VKS  Var_07    N5   C10  C14  C13   56.64  30.0  1
- VKS  Var_08    N5   C11  C12  C13  -55.13  30.0  1
- VKS  Var_09    N2   C6   S1   C4    99.74  30.0  1
+ VKS  CONST_01  C3   C4   C5   C1      0.00   0.0  0
+ VKS  CONST_02  C3   C2   N1   C1      0.00   0.0  0
+ VKS  CONST_03  C5   C1   N1   C2      0.00   0.0  0
+ VKS  CONST_04  C5   C4   C3   C2      0.00   0.0  0
+ VKS  CONST_05  C4   C5   C1   N1      0.00   0.0  0
+ VKS  CONST_06  C4   C3   C2   N1      0.00   0.0  0
+ VKS  CONST_07  C8   C7   N2   C6      0.00   0.0  0
+ VKS  CONST_08  C8   N3   C9   C6      0.00   0.0  0
+ VKS  CONST_09  N3   C8   C7   N2      0.00   0.0  0
+ VKS  CONST_10  N3   C9   C6   N2      0.00   0.0  0
+ VKS  CONST_11  C9   N3   C8   C7      0.00   0.0  0
+ VKS  CONST_12  C9   C6   N2   C7      0.00   0.0  0
+ VKS  CONST_13  N5   C8   C7   N2    180.00   0.0  0
+ VKS  CONST_14  N5   C8   N3   C9    180.00   0.0  0
+ VKS  CONST_15  S1   C4   C5   C1    180.00   0.0  0
+ VKS  CONST_16  N7   C2   N1   C1    180.00   0.0  0
+ VKS  CONST_17  S1   C4   C3   C2    180.00   0.0  0
+ VKS  CONST_18  CL1  C3   C2   N1    180.00   0.0  0
+ VKS  CONST_19  N7   C2   C3   C4    180.00   0.0  0
+ VKS  CONST_20  CL1  C3   C4   C5    180.00   0.0  0
+ VKS  CONST_21  C7   N2   C6   S1    180.00   0.0  0
+ VKS  CONST_22  N3   C9   C6   S1    180.00   0.0  0
+ VKS  CONST_23  N4   C9   C6   N2    180.00   0.0  0
+ VKS  CONST_24  N4   C9   N3   C8    180.00   0.0  0
+ VKS  CONST_25  H1   C1   N1   C2    180.00   0.0  0
+ VKS  CONST_26  H15  C5   C4   C3    180.00   0.0  0
+ VKS  CONST_27  H16  C7   N2   C6    180.00   0.0  0
+ VKS  CONST_28  H24  N7   C2   C3    180.00   0.0  0
+ VKS  CONST_29  H17  N4   C9   C6    180.00   0.0  0
+ VKS  Var_01    C14  C13  C15  O1    149.58  30.0  3
+ VKS  Var_02    C14  C10  N5   C11   -60.49  30.0  1
+ VKS  Var_03    C7   C8   N5   C11   168.44  30.0  2
+ VKS  Var_04    C15  C13  C12  C11   -74.09  30.0  1
+ VKS  Var_05    C10  N5   C11  C12    59.48  30.0  1
+ VKS  Var_06    C10  C14  C13  C12   -51.09  30.0  1
+ VKS  Var_07    N5   C10  C14  C13    56.64  30.0  1
+ VKS  Var_08    N5   C11  C12  C13   -55.13  30.0  1
+ VKS  Var_09    N2   C6   S1   C4     99.74  30.0  1
+ VKS  Var_10    C13  C17  C16  O1     36.65  30.0  1
+ VKS  Var_11    C16  C17  C13  C12    78.66  30.0  1
+ VKS  Var_12    C16  O1   C15  C13    -5.67  30.0  1
+ VKS  Var_13    C16  C17  C13  C14  -159.12  30.0  1
+ VKS  Var_14    C17  C16  O1   C15   -19.84  30.0  1
+ VKS  Var_15    C16  C17  C13  C15   -38.27  30.0  1
+ VKS  Var_16    C6   S1   C4   C3    175.49  30.0  2
+ VKS  Var_17    N6   C17  C16  O1    -84.40  30.0  1
+ VKS  Var_18    N6   C17  C13  C12  -157.48  30.0  1
+ VKS  Var_19    C18  C16  C17  C13   158.34  30.0  1
+ VKS  Var_20    N6   C17  C13  C14   -35.27  30.0  1
+ VKS  Var_21    C18  C16  O1   C15  -145.34  30.0  1
+ VKS  Var_22    N6   C17  C13  C15    85.59  30.0  1
+ VKS  Var_23    C6   S1   C4   C5     -4.85  30.0  2
+ VKS  Var_24    H11  C17  C16  O1    153.46  30.0  1
+ VKS  Var_25    H10  C16  C17  C13   -80.07  30.0  1
+ VKS  Var_26    N6   C17  C16  C18    37.30  30.0  1
+ VKS  Var_27    H12  C18  C16  O1   -179.49  30.0  3
+ VKS  Var_28    H13  C18  C16  O1    -60.84  30.0  3
+ VKS  Var_29    H14  C18  C16  O1     60.13  30.0  3
+ VKS  Var_30    H21  N6   C17  C13   178.23  30.0  3
+ VKS  Var_31    H22  N6   C17  C13   -65.06  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

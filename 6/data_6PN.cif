@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 6PN  6PN  '5-hexyl-2-phenoxyphenol  '  ligand  42  20  .  2021-08-05  2021-08-05  
+ 6PN  6PN  '5-hexyl-2-phenoxyphenol  '  ligand  42  20  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_6PN
@@ -224,40 +225,45 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 6PN  CONST_01  CAS  CAF  CAD  CAC     0.00   0.0  0
- 6PN  CONST_02  CAS  CAG  CAE  CAC     0.00   0.0  0
- 6PN  CONST_03  CAG  CAE  CAC  CAD     0.00   0.0  0
- 6PN  CONST_04  CAG  CAS  CAF  CAD     0.00   0.0  0
- 6PN  CONST_05  CAF  CAD  CAC  CAE     0.00   0.0  0
- 6PN  CONST_06  CAF  CAS  CAG  CAE     0.00   0.0  0
- 6PN  CONST_07  CAR  CAT  CAI  CAH     0.00   0.0  0
- 6PN  CONST_08  CAR  CAJ  CAQ  CAH     0.00   0.0  0
- 6PN  CONST_09  CAJ  CAQ  CAH  CAI     0.00   0.0  0
- 6PN  CONST_10  CAJ  CAR  CAT  CAI     0.00   0.0  0
- 6PN  CONST_11  CAT  CAI  CAH  CAQ     0.00   0.0  0
- 6PN  CONST_12  CAT  CAR  CAJ  CAQ     0.00   0.0  0
- 6PN  CONST_13  CAQ  CAJ  CAR  OAB   180.00   0.0  0
- 6PN  CONST_14  CAI  CAT  CAR  OAB   180.00   0.0  0
- 6PN  CONST_15  OAP  CAS  CAF  CAD   180.00   0.0  0
- 6PN  CONST_16  OAP  CAS  CAG  CAE   180.00   0.0  0
- 6PN  CONST_17  OAP  CAT  CAI  CAH   180.00   0.0  0
- 6PN  CONST_18  CAO  CAQ  CAH  CAI   180.00   0.0  0
- 6PN  CONST_19  OAP  CAT  CAR  CAJ   180.00   0.0  0
- 6PN  CONST_20  CAR  CAJ  CAQ  CAO   180.00   0.0  0
- 6PN  CONST_21  HAF  CAF  CAD  CAC   180.00   0.0  0
- 6PN  CONST_22  HAG  CAG  CAE  CAC   180.00   0.0  0
- 6PN  CONST_23  HAE  CAE  CAC  CAD   180.00   0.0  0
- 6PN  CONST_24  HAD  CAD  CAC  CAE   180.00   0.0  0
- 6PN  CONST_25  HAC  CAC  CAD  CAF   180.00   0.0  0
- 6PN  CONST_26  HAJ  CAJ  CAQ  CAH   180.00   0.0  0
- 6PN  CONST_27  HAH  CAH  CAQ  CAJ   180.00   0.0  0
- 6PN  CONST_28  HAI  CAI  CAH  CAQ   180.00   0.0  0
- 6PN  Var_01    CAN  CAO  CAQ  CAH    91.48  30.0  2
- 6PN  Var_02    CAQ  CAO  CAN  CAM  -179.44  30.0  3
- 6PN  Var_03    CAM  CAL  CAK  CAA  -179.96  30.0  3
- 6PN  Var_04    CAN  CAM  CAL  CAK  -179.92  30.0  3
- 6PN  Var_05    CAO  CAN  CAM  CAL  -179.87  30.0  3
- 6PN  Var_06    HAA  CAA  CAK  CAL    59.89  30.0  3
+ 6PN  CONST_01  CAS   CAF  CAD  CAC     0.00   0.0  0
+ 6PN  CONST_02  CAS   CAG  CAE  CAC     0.00   0.0  0
+ 6PN  CONST_03  CAG   CAE  CAC  CAD     0.00   0.0  0
+ 6PN  CONST_04  CAG   CAS  CAF  CAD     0.00   0.0  0
+ 6PN  CONST_05  CAF   CAD  CAC  CAE     0.00   0.0  0
+ 6PN  CONST_06  CAF   CAS  CAG  CAE     0.00   0.0  0
+ 6PN  CONST_07  CAR   CAT  CAI  CAH     0.00   0.0  0
+ 6PN  CONST_08  CAR   CAJ  CAQ  CAH     0.00   0.0  0
+ 6PN  CONST_09  CAJ   CAQ  CAH  CAI     0.00   0.0  0
+ 6PN  CONST_10  CAJ   CAR  CAT  CAI     0.00   0.0  0
+ 6PN  CONST_11  CAT   CAI  CAH  CAQ     0.00   0.0  0
+ 6PN  CONST_12  CAT   CAR  CAJ  CAQ     0.00   0.0  0
+ 6PN  CONST_13  CAQ   CAJ  CAR  OAB   180.00   0.0  0
+ 6PN  CONST_14  CAI   CAT  CAR  OAB   180.00   0.0  0
+ 6PN  CONST_15  OAP   CAS  CAF  CAD   180.00   0.0  0
+ 6PN  CONST_16  OAP   CAS  CAG  CAE   180.00   0.0  0
+ 6PN  CONST_17  OAP   CAT  CAI  CAH   180.00   0.0  0
+ 6PN  CONST_18  CAO   CAQ  CAH  CAI   180.00   0.0  0
+ 6PN  CONST_19  OAP   CAT  CAR  CAJ   180.00   0.0  0
+ 6PN  CONST_20  CAR   CAJ  CAQ  CAO   180.00   0.0  0
+ 6PN  CONST_21  HAF   CAF  CAD  CAC   180.00   0.0  0
+ 6PN  CONST_22  HAG   CAG  CAE  CAC   180.00   0.0  0
+ 6PN  CONST_23  HAE   CAE  CAC  CAD   180.00   0.0  0
+ 6PN  CONST_24  HAD   CAD  CAC  CAE   180.00   0.0  0
+ 6PN  CONST_25  HAC   CAC  CAD  CAF   180.00   0.0  0
+ 6PN  CONST_26  HAJ   CAJ  CAQ  CAH   180.00   0.0  0
+ 6PN  CONST_27  HAH   CAH  CAQ  CAJ   180.00   0.0  0
+ 6PN  CONST_28  HAI   CAI  CAH  CAQ   180.00   0.0  0
+ 6PN  Var_01    CAN   CAO  CAQ  CAH    91.48  30.0  2
+ 6PN  Var_02    CAQ   CAO  CAN  CAM  -179.44  30.0  3
+ 6PN  Var_03    CAM   CAL  CAK  CAA  -179.96  30.0  3
+ 6PN  Var_04    CAN   CAM  CAL  CAK  -179.92  30.0  3
+ 6PN  Var_05    CAO   CAN  CAM  CAL  -179.87  30.0  3
+ 6PN  Var_06    HAA   CAA  CAK  CAL    59.89  30.0  3
+ 6PN  Var_07    CAT   OAP  CAS  CAF     6.42  30.0  2
+ 6PN  Var_08    CAT   OAP  CAS  CAG  -174.27  30.0  2
+ 6PN  Var_09    CAS   OAP  CAT  CAI    83.99  30.0  2
+ 6PN  Var_10    CAS   OAP  CAT  CAR   -97.10  30.0  2
+ 6PN  Var_11    HOAB  OAB  CAR  CAJ   171.73  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ANP  ANP  5'-O-[(S)-hydroxy{[(R)-hydroxy(phosphonoamino)phosphoryl]oxy}phosphoryl]adenosine  ligand  44  31  .  2012-08-31  2022-03-11
+ ANP  ANP  5'-O-[(S)-hydroxy{[(R)-hydroxy(phosphonoamino)phosphoryl]oxy}phosphoryl]adenosine  ligand  44  31  .  2012-08-31  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_ANP
@@ -235,37 +236,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ANP  CONST_01  C5    N7   C8   N9     0.00   0.0  0
- ANP  CONST_02  N7    C5   C4   N9     0.00   0.0  0
- ANP  CONST_03  C6    C5   C4   N9   180.00   0.0  0
- ANP  CONST_04  C2    N3   C4   N9   180.00   0.0  0
- ANP  CONST_05  C5    C4   N9   C8     0.00   0.0  0
- ANP  CONST_06  N3    C4   N9   C8   180.00   0.0  0
- ANP  CONST_07  C6    C5   N7   C8   180.00   0.0  0
- ANP  CONST_08  C4    C5   N7   C8     0.00   0.0  0
- ANP  CONST_09  C4    N9   C8   N7     0.00   0.0  0
- ANP  CONST_10  N1    C6   C5   N7   180.00   0.0  0
- ANP  CONST_11  N3    C4   C5   N7   180.00   0.0  0
- ANP  CONST_12  C2    N1   C6   C5     0.00   0.0  0
- ANP  CONST_13  C2    N3   C4   C5     0.00   0.0  0
- ANP  CONST_14  N3    C4   C5   C6     0.00   0.0  0
- ANP  CONST_15  N3    C2   N1   C6     0.00   0.0  0
- ANP  CONST_16  C4    C5   C6   N1     0.00   0.0  0
- ANP  CONST_17  C4    N3   C2   N1     0.00   0.0  0
- ANP  CONST_18  N7    C8   N9   C1'  180.00   0.0  0
- ANP  CONST_19  C5    C4   N9   C1'  180.00   0.0  0
- ANP  CONST_20  N3    C4   N9   C1'    0.00   0.0  0
- ANP  CONST_21  N6    C6   C5   N7     0.00   0.0  0
- ANP  CONST_22  C4    C5   C6   N6   180.00   0.0  0
- ANP  CONST_23  C2    N1   C6   N6   180.00   0.0  0
- ANP  CONST_24  H8    C8   N9   C1'    0.00   0.0  0
- ANP  CONST_25  H2    C2   N1   C6   180.00   0.0  0
- ANP  CONST_26  HN61  N6   C6   C5   180.00   0.0  0
- ANP  CONST_27  HN62  N6   C6   C5     0.00   0.0  0
- ANP  Var_01    C4'   C5'  O5'  PA   -98.38  30.0  3
- ANP  Var_02    O1B   PB   N3B  PG   -35.15  30.0  1
- ANP  Var_03    PB    N3B  PG   O1G  -37.51  30.0  3
- ANP  Var_04    O1A   PA   O3A  PB   -83.11  30.0  1
+ ANP  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ ANP  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ ANP  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ ANP  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ ANP  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ ANP  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ ANP  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ ANP  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ ANP  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ ANP  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ ANP  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ ANP  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ ANP  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ ANP  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ ANP  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ ANP  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ ANP  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ ANP  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ ANP  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ ANP  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ ANP  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ ANP  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ ANP  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ ANP  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ ANP  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ ANP  CONST_26  HN61  N6   C6   C5    180.00   0.0  0
+ ANP  CONST_27  HN62  N6   C6   C5      0.00   0.0  0
+ ANP  Var_01    C4'   C5'  O5'  PA    -98.38  30.0  3
+ ANP  Var_02    O1B   PB   N3B  PG    -35.15  30.0  1
+ ANP  Var_03    PB    N3B  PG   O1G   -37.51  30.0  3
+ ANP  Var_04    O1A   PA   O3A  PB    -83.11  30.0  1
+ ANP  Var_05    C2'   C1'  O4'  C4'     6.81  30.0  1
+ ANP  Var_06    N9    C1'  O4'  C4'  -114.47  30.0  1
+ ANP  Var_07    C1'   C2'  C3'  C4'    40.19  30.0  1
+ ANP  Var_08    C2'   C3'  C4'  O4'   -37.95  30.0  1
+ ANP  Var_09    C3'   C2'  C1'  O4'   -30.18  30.0  1
+ ANP  Var_10    C8    N9   C1'  O4'    22.03  30.0  2
+ ANP  Var_11    C4    N9   C1'  O4'  -160.17  30.0  2
+ ANP  Var_12    C1'   O4'  C4'  C3'    19.60  30.0  1
+ ANP  Var_13    N9    C1'  C2'  C3'    89.09  30.0  1
+ ANP  Var_14    C8    N9   C1'  C2'   -96.20  30.0  2
+ ANP  Var_15    C4    N9   C1'  C2'    81.60  30.0  2
+ ANP  Var_16    C1'   O4'  C4'  C5'   145.01  30.0  1
+ ANP  Var_17    C2'   C3'  C4'  C5'  -160.17  30.0  1
+ ANP  Var_18    O2'   C2'  C3'  C4'   -76.50  30.0  1
+ ANP  Var_19    O3'   C3'  C4'  O4'  -162.99  30.0  1
+ ANP  Var_20    O2'   C2'  C1'  O4'    85.11  30.0  1
+ ANP  Var_21    C1'   C2'  C3'  O3'   164.59  30.0  1
+ ANP  Var_22    N9    C1'  C2'  O2'  -155.63  30.0  1
+ ANP  Var_23    H1'   C1'  O4'  C4'   128.55  30.0  1
+ ANP  Var_24    H2'   C2'  C3'  C4'   158.14  30.0  1
+ ANP  Var_25    H3'   C3'  C4'  O4'    72.59  30.0  1
+ ANP  Var_26    H4'   C4'  C3'  C2'    78.58  30.0  1
+ ANP  Var_27    O4'   C4'  C5'  O5'   -72.87  30.0  3
+ ANP  Var_28    C3'   C4'  C5'  O5'    45.38  30.0  3
+ ANP  Var_29    O3'   C3'  C4'  C5'    74.79  30.0  1
+ ANP  Var_30    O2'   C2'  C3'  O3'    47.90  30.0  1
+ ANP  Var_31    HO3'  O3'  C3'  C4'   -78.90  30.0  3
+ ANP  Var_32    H5'1  C5'  C4'  O4'   163.03  30.0  1
+ ANP  Var_33    H5'2  C5'  C4'  O4'    47.69  30.0  1
+ ANP  Var_34    HO2'  O2'  C2'  C3'  -178.23  30.0  3
+ ANP  Var_35    PA    O3A  PB   O1B   158.51  30.0  3
+ ANP  Var_36    PA    O3A  PB   O2B    31.55  30.0  2
+ ANP  Var_37    PA    O3A  PB   N3B   -86.29  30.0  3
+ ANP  Var_38    C5'   O5'  PA   O1A   152.37  30.0  3
+ ANP  Var_39    C5'   O5'  PA   O2A    22.45  30.0  2
+ ANP  Var_40    C5'   O5'  PA   O3A   -91.44  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

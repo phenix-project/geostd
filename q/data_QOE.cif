@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QOE  QOE  (2~{S},3~{R})-~{N}-[(5~{S},8~{S},10~{S})-5-methyl-10-oxidanyl-2,7-bis(oxidanylidene)-1,6-diazacyclododec-8-yl]-3-oxidanyl-2-(3-phenylpropanoylamino)butanamide  ligand  70  34  .  2022-03-23  2022-03-23
+ QOE  QOE  (2~{S},3~{R})-~{N}-[(5~{S},8~{S},10~{S})-5-methyl-10-oxidanyl-2,7-bis(oxidanylidene)-1,6-diazacyclododec-8-yl]-3-oxidanyl-2-(3-phenylpropanoylamino)butanamide  ligand  70  34  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QOE
@@ -334,38 +335,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QOE  CONST_01  C7   C6   C5   C4     0.00   0.0  0
- QOE  CONST_02  C7   C8   C3   C4     0.00   0.0  0
- QOE  CONST_03  C8   C3   C4   C5     0.00   0.0  0
- QOE  CONST_04  C8   C7   C6   C5     0.00   0.0  0
- QOE  CONST_05  C3   C4   C5   C6     0.00   0.0  0
- QOE  CONST_06  C3   C8   C7   C6     0.00   0.0  0
- QOE  CONST_07  C28  N30  C31  C17  180.00   0.0  0
- QOE  CONST_08  C26  C24  N23  C22  180.00   0.0  0
- QOE  CONST_09  C2   C3   C4   C5   180.00   0.0  0
- QOE  CONST_10  C2   C3   C8   C7   180.00   0.0  0
- QOE  CONST_11  O25  C24  N23  C22    0.00   0.0  0
- QOE  CONST_12  O32  C31  N30  C28    0.00   0.0  0
- QOE  CONST_13  H3   C6   C5   C4   180.00   0.0  0
- QOE  CONST_14  H5   C8   C3   C4   180.00   0.0  0
- QOE  CONST_15  H4   C7   C6   C5   180.00   0.0  0
- QOE  CONST_16  H1   C4   C5   C6   180.00   0.0  0
- QOE  CONST_17  H2   C5   C6   C7   180.00   0.0  0
- QOE  CONST_18  H19  N30  C31  C17    0.00   0.0  0
- QOE  CONST_19  H20  N23  C24  C26    0.00   0.0  0
- QOE  CONST_20  C14  C15  N16  C17  180.00   0.0  0
- QOE  CONST_21  O33  C15  N16  C17    0.00   0.0  0
- QOE  CONST_22  C1   C12  N13  C14  180.00   0.0  0
- QOE  CONST_23  O37  C12  N13  C14    0.00   0.0  0
- QOE  CONST_24  H25  N16  C15  O33  180.00   0.0  0
- QOE  CONST_25  H32  N13  C12  O37  180.00   0.0  0
- QOE  Var_01    C24  N23  C22  C21  104.59  30.0  1
- QOE  Var_02    C28  C27  C26  C24  -83.53  30.0  1
- QOE  Var_03    N23  C24  C26  C27  155.59  30.0  1
- QOE  Var_04    C19  C21  C22  N23  -58.53  30.0  1
- QOE  Var_05    C1   C2   C3   C4    92.48  30.0  2
- QOE  Var_06    C3   C2   C1   C12  178.74  30.0  3
- QOE  Var_07    C2   C1   C12  N13  158.55  30.0  1
+ QOE  CONST_01  C7   C6   C5   C4      0.00   0.0  0
+ QOE  CONST_02  C7   C8   C3   C4      0.00   0.0  0
+ QOE  CONST_03  C8   C3   C4   C5      0.00   0.0  0
+ QOE  CONST_04  C8   C7   C6   C5      0.00   0.0  0
+ QOE  CONST_05  C3   C4   C5   C6      0.00   0.0  0
+ QOE  CONST_06  C3   C8   C7   C6      0.00   0.0  0
+ QOE  CONST_07  C28  N30  C31  C17   180.00   0.0  0
+ QOE  CONST_08  C26  C24  N23  C22   180.00   0.0  0
+ QOE  CONST_09  C2   C3   C4   C5    180.00   0.0  0
+ QOE  CONST_10  C2   C3   C8   C7    180.00   0.0  0
+ QOE  CONST_11  O25  C24  N23  C22     0.00   0.0  0
+ QOE  CONST_12  O32  C31  N30  C28     0.00   0.0  0
+ QOE  CONST_13  H3   C6   C5   C4    180.00   0.0  0
+ QOE  CONST_14  H5   C8   C3   C4    180.00   0.0  0
+ QOE  CONST_15  H4   C7   C6   C5    180.00   0.0  0
+ QOE  CONST_16  H1   C4   C5   C6    180.00   0.0  0
+ QOE  CONST_17  H2   C5   C6   C7    180.00   0.0  0
+ QOE  CONST_18  H19  N30  C31  C17     0.00   0.0  0
+ QOE  CONST_19  H20  N23  C24  C26     0.00   0.0  0
+ QOE  CONST_20  C14  C15  N16  C17   180.00   0.0  0
+ QOE  CONST_21  O33  C15  N16  C17     0.00   0.0  0
+ QOE  CONST_22  C1   C12  N13  C14   180.00   0.0  0
+ QOE  CONST_23  O37  C12  N13  C14     0.00   0.0  0
+ QOE  CONST_24  H25  N16  C15  O33   180.00   0.0  0
+ QOE  CONST_25  H32  N13  C12  O37   180.00   0.0  0
+ QOE  Var_01    C24  N23  C22  C21   104.59  30.0  1
+ QOE  Var_02    C28  C27  C26  C24   -83.53  30.0  1
+ QOE  Var_03    N23  C24  C26  C27   155.59  30.0  1
+ QOE  Var_04    C19  C21  C22  N23   -58.53  30.0  1
+ QOE  Var_05    C1   C2   C3   C4     92.48  30.0  2
+ QOE  Var_06    C3   C2   C1   C12   178.74  30.0  3
+ QOE  Var_07    C2   C1   C12  N13   158.55  30.0  1
+ QOE  Var_08    C21  C19  C18  C17  -166.08  30.0  3
+ QOE  Var_09    C18  C19  C21  C22    87.40  30.0  3
+ QOE  Var_10    N30  C28  C27  C26    54.98  30.0  3
+ QOE  Var_11    C31  N30  C28  C27  -141.04  30.0  3
+ QOE  Var_12    C18  C17  C31  N30   -78.73  30.0  3
+ QOE  Var_13    C19  C18  C17  C31   131.52  30.0  3
+ QOE  Var_14    O20  C19  C18  C17    71.11  30.0  3
+ QOE  Var_15    O20  C19  C21  C22  -153.12  30.0  3
+ QOE  Var_16    C29  C28  C27  C26   179.56  30.0  3
+ QOE  Var_17    C31  N30  C28  C29    94.51  30.0  3
+ QOE  Var_18    N16  C17  C31  N30   158.00  30.0  3
+ QOE  Var_19    C18  C17  C31  O32    96.34  30.0  3
+ QOE  Var_20    N16  C17  C18  C19  -106.45  30.0  3
+ QOE  Var_21    H21  C19  C18  C17   -47.21  30.0  3
+ QOE  Var_22    H23  C18  C19  C21    71.24  30.0  3
+ QOE  Var_23    H24  C18  C19  C21   -43.28  30.0  3
+ QOE  Var_24    H13  C28  C27  C26   -61.25  30.0  3
+ QOE  Var_25    H6   C17  C31  N30    40.20  30.0  3
+ QOE  Var_26    C18  C17  N16  C15   121.57  30.0  3
+ QOE  Var_27    C31  C17  N16  C15  -118.10  30.0  3
+ QOE  Var_28    N16  C17  C31  O32   -26.94  30.0  3
+ QOE  Var_29    H22  O20  C19  C21    66.83  30.0  3
+ QOE  Var_30    H16  C29  C28  C27    57.68  30.0  3
+ QOE  Var_31    H17  C29  C28  C27   177.48  30.0  3
+ QOE  Var_32    H18  C29  C28  C27   -62.13  30.0  3
+ QOE  Var_33    H25  N16  C17  C31    59.62  30.0  1
+ QOE  Var_34    C12  N13  C14  C15   -61.18  30.0  1
+ QOE  Var_35    O35  C34  C14  C15  -176.66  30.0  2
+ QOE  Var_36    C36  C34  C14  C15    61.38  30.0  2
+ QOE  Var_37    N13  C14  C15  N16   138.39  30.0  2
+ QOE  Var_38    C34  C14  C15  N16  -101.63  30.0  2
+ QOE  Var_39    N13  C14  C15  O33   -43.92  30.0  2
+ QOE  Var_40    C34  C14  C15  O33    76.05  30.0  2
+ QOE  Var_41    C12  N13  C14  C34   178.84  30.0  1
+ QOE  Var_42    N13  C14  C34  C36  -178.02  30.0  3
+ QOE  Var_43    N13  C14  C34  O35   -56.06  30.0  3
+ QOE  Var_44    H27  C34  C14  C15   -58.60  30.0  2
+ QOE  Var_45    H26  C14  C15  N16    17.12  30.0  2
+ QOE  Var_46    H31  O35  C34  C14   171.48  30.0  3
+ QOE  Var_47    H28  C36  C34  C14   -66.26  30.0  3
+ QOE  Var_48    H29  C36  C34  C14    55.28  30.0  3
+ QOE  Var_49    H30  C36  C34  C14   174.92  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

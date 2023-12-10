@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- POW  POW  '[(2~{R})-2-(phenylcarbamoyloxy)-3-piperidin-1-yl-propyl] ~{N}-phenylcarbamate'  ligand  56  29  .  2022-03-23  2022-03-23
+ POW  POW  '[(2~{R})-2-(phenylcarbamoyloxy)-3-piperidin-1-yl-propyl] ~{N}-phenylcarbamate'  ligand  56  29  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_POW
@@ -280,50 +281,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- POW  CONST_01  C5   C6   C7   C2     0.00   0.0  0
- POW  CONST_02  C5   C4   C3   C2     0.00   0.0  0
- POW  CONST_03  C6   C7   C2   C3     0.00   0.0  0
- POW  CONST_04  C6   C5   C4   C3     0.00   0.0  0
- POW  CONST_05  C7   C2   C3   C4     0.00   0.0  0
- POW  CONST_06  C7   C6   C5   C4     0.00   0.0  0
- POW  CONST_07  C20  C19  C18  C17    0.00   0.0  0
- POW  CONST_08  C20  C21  C22  C17    0.00   0.0  0
- POW  CONST_09  C21  C22  C17  C18    0.00   0.0  0
- POW  CONST_10  C21  C20  C19  C18    0.00   0.0  0
- POW  CONST_11  C22  C17  C18  C19    0.00   0.0  0
- POW  CONST_12  C22  C21  C20  C19    0.00   0.0  0
- POW  CONST_13  N1   C2   C3   C4   180.00   0.0  0
- POW  CONST_14  N16  C17  C18  C19  180.00   0.0  0
- POW  CONST_15  N16  C17  C22  C21  180.00   0.0  0
- POW  CONST_16  N1   C2   C7   C6   180.00   0.0  0
- POW  CONST_17  H24  C6   C7   C2   180.00   0.0  0
- POW  CONST_18  H2   C4   C3   C2   180.00   0.0  0
- POW  CONST_19  H25  C7   C2   C3   180.00   0.0  0
- POW  CONST_20  H3   C5   C4   C3   180.00   0.0  0
- POW  CONST_21  H1   C3   C4   C5   180.00   0.0  0
- POW  CONST_22  H8   C19  C18  C17  180.00   0.0  0
- POW  CONST_23  H10  C21  C22  C17  180.00   0.0  0
- POW  CONST_24  H11  C22  C17  C18  180.00   0.0  0
- POW  CONST_25  H9   C20  C19  C18  180.00   0.0  0
- POW  CONST_26  H7   C18  C19  C20  180.00   0.0  0
- POW  CONST_27  C8   N1   C2   C3   180.00   0.0  0
- POW  CONST_28  C18  C17  N16  C14  180.00   0.0  0
- POW  CONST_29  C22  C17  N16  C14    0.00   0.0  0
- POW  CONST_30  C8   N1   C2   C7     0.00   0.0  0
- POW  CONST_31  H26  N1   C2   C3     0.00   0.0  0
- POW  CONST_32  H27  N16  C17  C18    0.00   0.0  0
- POW  CONST_33  O10  C8   N1   C2   180.00   0.0  0
- POW  CONST_34  O9   C8   N1   C2     0.00   0.0  0
- POW  CONST_35  O13  C14  N16  C17  180.00   0.0  0
- POW  CONST_36  O15  C14  N16  C17    0.00   0.0  0
- POW  Var_01    C28  C29  N24  C25   35.35  30.0  1
- POW  Var_02    C28  C27  C26  C25   27.28  30.0  1
- POW  Var_03    C29  N24  C25  C26  -71.44  30.0  1
- POW  Var_04    C29  C28  C27  C26  -62.08  30.0  1
- POW  Var_05    N24  C29  C28  C27   29.83  30.0  1
- POW  Var_06    N24  C25  C26  C27   35.49  30.0  1
- POW  Var_07    C25  N24  C23  C12  -98.40  30.0  3
- POW  Var_08    H4   C11  O10  C8    38.41  30.0  1
+ POW  CONST_01  C5   C6   C7   C2      0.00   0.0  0
+ POW  CONST_02  C5   C4   C3   C2      0.00   0.0  0
+ POW  CONST_03  C6   C7   C2   C3      0.00   0.0  0
+ POW  CONST_04  C6   C5   C4   C3      0.00   0.0  0
+ POW  CONST_05  C7   C2   C3   C4      0.00   0.0  0
+ POW  CONST_06  C7   C6   C5   C4      0.00   0.0  0
+ POW  CONST_07  C20  C19  C18  C17     0.00   0.0  0
+ POW  CONST_08  C20  C21  C22  C17     0.00   0.0  0
+ POW  CONST_09  C21  C22  C17  C18     0.00   0.0  0
+ POW  CONST_10  C21  C20  C19  C18     0.00   0.0  0
+ POW  CONST_11  C22  C17  C18  C19     0.00   0.0  0
+ POW  CONST_12  C22  C21  C20  C19     0.00   0.0  0
+ POW  CONST_13  N1   C2   C3   C4    180.00   0.0  0
+ POW  CONST_14  N16  C17  C18  C19   180.00   0.0  0
+ POW  CONST_15  N16  C17  C22  C21   180.00   0.0  0
+ POW  CONST_16  N1   C2   C7   C6    180.00   0.0  0
+ POW  CONST_17  H24  C6   C7   C2    180.00   0.0  0
+ POW  CONST_18  H2   C4   C3   C2    180.00   0.0  0
+ POW  CONST_19  H25  C7   C2   C3    180.00   0.0  0
+ POW  CONST_20  H3   C5   C4   C3    180.00   0.0  0
+ POW  CONST_21  H1   C3   C4   C5    180.00   0.0  0
+ POW  CONST_22  H8   C19  C18  C17   180.00   0.0  0
+ POW  CONST_23  H10  C21  C22  C17   180.00   0.0  0
+ POW  CONST_24  H11  C22  C17  C18   180.00   0.0  0
+ POW  CONST_25  H9   C20  C19  C18   180.00   0.0  0
+ POW  CONST_26  H7   C18  C19  C20   180.00   0.0  0
+ POW  CONST_27  C8   N1   C2   C3    180.00   0.0  0
+ POW  CONST_28  C18  C17  N16  C14   180.00   0.0  0
+ POW  CONST_29  C22  C17  N16  C14     0.00   0.0  0
+ POW  CONST_30  C8   N1   C2   C7      0.00   0.0  0
+ POW  CONST_31  H26  N1   C2   C3      0.00   0.0  0
+ POW  CONST_32  H27  N16  C17  C18     0.00   0.0  0
+ POW  CONST_33  O10  C8   N1   C2    180.00   0.0  0
+ POW  CONST_34  O9   C8   N1   C2      0.00   0.0  0
+ POW  CONST_35  O13  C14  N16  C17   180.00   0.0  0
+ POW  CONST_36  O15  C14  N16  C17     0.00   0.0  0
+ POW  Var_01    C28  C29  N24  C25    35.35  30.0  1
+ POW  Var_02    C28  C27  C26  C25    27.28  30.0  1
+ POW  Var_03    C29  N24  C25  C26   -71.44  30.0  1
+ POW  Var_04    C29  C28  C27  C26   -62.08  30.0  1
+ POW  Var_05    N24  C29  C28  C27    29.83  30.0  1
+ POW  Var_06    N24  C25  C26  C27    35.49  30.0  1
+ POW  Var_07    C25  N24  C23  C12   -98.40  30.0  3
+ POW  Var_08    H4   C11  O10  C8     38.41  30.0  1
+ POW  Var_09    N24  C23  C12  C11    73.98  30.0  1
+ POW  Var_10    O13  C12  C23  N24   -55.41  30.0  3
+ POW  Var_11    H6   C12  C23  N24  -167.03  30.0  3
+ POW  Var_12    C14  O13  C12  C11   -49.44  30.0  3
+ POW  Var_13    O9   C8   O10  C11     5.50  30.0  3
+ POW  Var_14    N1   C8   O10  C11  -175.07  30.0  3
+ POW  Var_15    O15  C14  O13  C12    40.73  30.0  3
+ POW  Var_16    N16  C14  O13  C12  -144.68  30.0  3
+ POW  Var_17    O10  C11  C12  C23  -179.68  30.0  1
+ POW  Var_18    C14  O13  C12  C23    78.80  30.0  3
+ POW  Var_19    O13  C12  C11  O10   -53.73  30.0  3
+ POW  Var_20    H5   C11  C12  C23    62.16  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

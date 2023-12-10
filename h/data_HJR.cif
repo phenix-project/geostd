@@ -20,11 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HJR  HJR  "N-[(1R,2R,3R,4S,5R)-4-[(2R,6S)-6-(aminomethyl)oxan-2-yl]oxy-5-azanyl-2-[(2R,4S,5R}-5-methyl-4-(methylamino)-5-oxidanyl-oxan-2-yl]oxy-3-oxidanyl-cyclohexyl]-1,1,1-tris(fluoranyl)methanesulfonamide"
-  ligand  73  36  .  2022-08-10  2022-08-10
+ HJR  HJR  N-[(1R,2R,3R,4S,5R)-4-[(2R,6S)-6-(aminomethyl)oxan-2-yl]oxy-5-azanyl-2-[(2R,4S,5R}-5-methyl-4-(methylamino)-5-oxidanyl-oxan-2-yl]oxy-3-oxidanyl-cyclohexyl]-1,1,1-tris(fluoranyl)methanesulfonamide  ligand  73  36  .  2022-08-10  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HJR
@@ -358,39 +358,120 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HJR  Var_01  C41  C31  C21  C11   -51.80  30.0  1
- HJR  Var_02  C43  C53  O53  C13    59.22  30.0  1
- HJR  Var_03  C51  C41  C31  C21    53.05  30.0  1
- HJR  Var_04  H10  C31  C21  C11    69.25  30.0  1
- HJR  Var_05  H11  C31  C21  C11  -173.59  30.0  1
- HJR  Var_06  H19  C53  O53  C13   -64.18  30.0  1
- HJR  Var_07  H20  C53  O53  C13   179.36  30.0  1
- HJR  Var_08  H14  C41  C31  C21   174.04  30.0  1
- HJR  Var_09  H15  C41  C31  C21   -67.90  30.0  1
- HJR  Var_10  H4   C21  C31  C41  -175.16  30.0  1
- HJR  Var_11  H5   C21  C31  C41    67.25  30.0  1
- HJR  Var_12  H10  C31  C41  C51   -68.28  30.0  1
- HJR  Var_13  H11  C31  C41  C51   174.46  30.0  1
- HJR  Var_14  C12  N12  S    C6    -80.18  30.0  2
- HJR  Var_15  C12  N12  S    O1    168.25  30.0  2
- HJR  Var_16  O2   S    N12  C12    32.12  30.0  3
- HJR  Var_17  H27  C93  N33  C33   165.56  30.0  3
- HJR  Var_18  H28  C93  N33  C33   -76.72  30.0  3
- HJR  Var_19  H29  C93  N33  C33    45.30  30.0  3
- HJR  Var_20  H36  N61  C61  C51   170.63  30.0  3
- HJR  Var_21  H37  N61  C61  C51   -73.66  30.0  3
- HJR  Var_22  O1   S    C6   F2    177.34  30.0  3
- HJR  Var_23  N12  S    C6   F2     62.60  30.0  3
- HJR  Var_24  O2   S    C6   F2    -53.06  30.0  3
- HJR  Var_25  O1   S    C6   F1    -62.70  30.0  3
- HJR  Var_26  N12  S    C6   F1   -177.44  30.0  3
- HJR  Var_27  O2   S    C6   F1     66.90  30.0  3
- HJR  Var_28  F3   C6   S    O1     57.29  30.0  3
- HJR  Var_29  N12  S    C6   F3    -57.44  30.0  3
- HJR  Var_30  O2   S    C6   F3   -173.10  30.0  3
- HJR  Var_31  H30  N12  S    C6     82.71  30.0  2
- HJR  Var_32  H30  N12  S    O1    -28.86  30.0  2
- HJR  Var_33  H30  N12  S    O2   -164.99  30.0  2
+ HJR  Var_01   C41  C31  C21  C11   -51.80  30.0  1
+ HJR  Var_02   C43  C53  O53  C13    59.22  30.0  1
+ HJR  Var_03   C51  C41  C31  C21    53.05  30.0  1
+ HJR  Var_04   H10  C31  C21  C11    69.25  30.0  1
+ HJR  Var_05   H11  C31  C21  C11  -173.59  30.0  1
+ HJR  Var_06   H19  C53  O53  C13   -64.18  30.0  1
+ HJR  Var_07   H20  C53  O53  C13   179.36  30.0  1
+ HJR  Var_08   H14  C41  C31  C21   174.04  30.0  1
+ HJR  Var_09   H15  C41  C31  C21   -67.90  30.0  1
+ HJR  Var_10   H4   C21  C31  C41  -175.16  30.0  1
+ HJR  Var_11   H5   C21  C31  C41    67.25  30.0  1
+ HJR  Var_12   H10  C31  C41  C51   -68.28  30.0  1
+ HJR  Var_13   H11  C31  C41  C51   174.46  30.0  1
+ HJR  Var_14   C12  N12  S    C6    -80.18  30.0  2
+ HJR  Var_15   C12  N12  S    O1    168.25  30.0  2
+ HJR  Var_16   O2   S    N12  C12    32.12  30.0  3
+ HJR  Var_17   H27  C93  N33  C33   165.56  30.0  3
+ HJR  Var_18   H28  C93  N33  C33   -76.72  30.0  3
+ HJR  Var_19   H29  C93  N33  C33    45.30  30.0  3
+ HJR  Var_20   H36  N61  C61  C51   170.63  30.0  3
+ HJR  Var_21   H37  N61  C61  C51   -73.66  30.0  3
+ HJR  Var_22   O1   S    C6   F2    177.34  30.0  3
+ HJR  Var_23   N12  S    C6   F2     62.60  30.0  3
+ HJR  Var_24   O2   S    C6   F2    -53.06  30.0  3
+ HJR  Var_25   O1   S    C6   F1    -62.70  30.0  3
+ HJR  Var_26   N12  S    C6   F1   -177.44  30.0  3
+ HJR  Var_27   O2   S    C6   F1     66.90  30.0  3
+ HJR  Var_28   F3   C6   S    O1     57.29  30.0  3
+ HJR  Var_29   N12  S    C6   F3    -57.44  30.0  3
+ HJR  Var_30   O2   S    C6   F3   -173.10  30.0  3
+ HJR  Var_31   H30  N12  S    C6     82.71  30.0  2
+ HJR  Var_32   H30  N12  S    O1    -28.86  30.0  2
+ HJR  Var_33   H30  N12  S    O2   -164.99  30.0  2
+ HJR  Var_34   C41  C51  O51  C11    58.44  30.0  1
+ HJR  Var_35   C42  C52  C62  C12    31.00  30.0  1
+ HJR  Var_36   C42  C32  C22  C12    29.11  30.0  1
+ HJR  Var_37   C43  C33  C23  C13   -49.36  30.0  1
+ HJR  Var_38   C51  O51  C11  C21   -56.46  30.0  1
+ HJR  Var_39   C52  C62  C12  C22    33.06  30.0  1
+ HJR  Var_40   C52  C42  C32  C22    34.77  30.0  1
+ HJR  Var_41   C53  C43  C33  C23    52.27  30.0  1
+ HJR  Var_42   C53  O53  C13  C23   -52.55  30.0  1
+ HJR  Var_43   O51  C11  C21  C31    52.49  30.0  1
+ HJR  Var_44   O51  C51  C41  C31   -55.30  30.0  1
+ HJR  Var_45   C62  C12  C22  C32   -66.44  30.0  1
+ HJR  Var_46   C62  C52  C42  C32   -68.15  30.0  1
+ HJR  Var_47   O53  C53  C43  C33   -57.75  30.0  1
+ HJR  Var_48   O53  C13  C23  C33    48.35  30.0  1
+ HJR  Var_49   C52  C42  O11  C11    79.76  30.0  1
+ HJR  Var_50   C32  C42  O11  C11   -47.33  30.0  1
+ HJR  Var_51   C61  C51  O51  C11  -178.05  30.0  1
+ HJR  Var_52   C13  O62  C62  C12    88.39  30.0  2
+ HJR  Var_53   O52  C52  C62  C12   152.57  30.0  1
+ HJR  Var_54   N32  C32  C22  C12   -90.72  30.0  1
+ HJR  Var_55   N33  C33  C23  C13    73.01  30.0  1
+ HJR  Var_56   C52  C62  O62  C13   -39.62  30.0  3
+ HJR  Var_57   C42  O11  C11  C21  -146.76  30.0  3
+ HJR  Var_58   O62  C62  C12  C22   -97.65  30.0  1
+ HJR  Var_59   O11  C42  C32  C22   161.78  30.0  1
+ HJR  Var_60   O43  C43  C33  C23   -66.31  30.0  1
+ HJR  Var_61   C83  C43  C33  C23   174.06  30.0  1
+ HJR  Var_62   C62  O62  C13  C23  -154.82  30.0  3
+ HJR  Var_63   O11  C11  C21  C31   -69.88  30.0  1
+ HJR  Var_64   C61  C51  C41  C31  -175.33  30.0  1
+ HJR  Var_65   N12  C12  C22  C32   168.81  30.0  1
+ HJR  Var_66   O52  C52  C42  C32   173.99  30.0  1
+ HJR  Var_67   O62  C13  C23  C33   -75.88  30.0  1
+ HJR  Var_68   O62  C62  C52  C42   160.17  30.0  1
+ HJR  Var_69   O51  C11  O11  C42    90.85  30.0  2
+ HJR  Var_70   O11  C11  O51  C51    64.43  30.0  1
+ HJR  Var_71   N12  C12  C62  C52   159.86  30.0  1
+ HJR  Var_72   N32  C32  C42  C52   154.78  30.0  1
+ HJR  Var_73   N33  C33  C43  C53   -71.64  30.0  1
+ HJR  Var_74   O62  C13  O53  C53    70.03  30.0  1
+ HJR  Var_75   O53  C13  O62  C62    81.21  30.0  2
+ HJR  Var_76   O11  C42  C52  C62   162.45  30.0  1
+ HJR  Var_77   O53  C53  C43  C83   178.33  30.0  1
+ HJR  Var_78   O53  C53  C43  O43    57.05  30.0  1
+ HJR  Var_79   H17  C51  O51  C11   -61.63  30.0  1
+ HJR  Var_80   H18  C52  C62  C12   -87.33  30.0  1
+ HJR  Var_81   H12  C32  C22  C12   147.33  30.0  1
+ HJR  Var_82   H13  C33  C23  C13  -164.97  30.0  1
+ HJR  Var_83   H23  C62  C12  C22   148.74  30.0  1
+ HJR  Var_84   H16  C42  C32  C22   -83.64  30.0  1
+ HJR  Var_85   H1   C11  C21  C31   168.41  30.0  1
+ HJR  Var_86   H2   C12  C22  C32    49.92  30.0  1
+ HJR  Var_87   H3   C13  C23  C33   163.38  30.0  1
+ HJR  Var_88   H6   C22  C32  C42   -93.39  30.0  1
+ HJR  Var_89   H7   C22  C32  C42   149.87  30.0  1
+ HJR  Var_90   H8   C23  C33  C43    69.62  30.0  1
+ HJR  Var_91   H9   C23  C33  C43  -175.13  30.0  1
+ HJR  Var_92   S    N12  C12  C22  -101.78  30.0  2
+ HJR  Var_93   C93  N33  C33  C23    60.55  30.0  3
+ HJR  Var_94   N61  C61  C51  C41  -175.59  30.0  3
+ HJR  Var_95   C93  N33  C33  C43  -177.87  30.0  3
+ HJR  Var_96   S    N12  C12  C62   132.28  30.0  2
+ HJR  Var_97   N33  C33  C43  C83    50.15  30.0  1
+ HJR  Var_98   O62  C62  C12  N12    29.16  30.0  1
+ HJR  Var_99   O11  C42  C32  N32   -78.22  30.0  1
+ HJR  Var_100  O43  C43  C33  N33   169.78  30.0  1
+ HJR  Var_101  O51  C51  C61  N61    62.25  30.0  1
+ HJR  Var_102  O52  C52  C42  O11    44.58  30.0  1
+ HJR  Var_103  O62  C62  C52  O52   -78.26  30.0  1
+ HJR  Var_104  H30  N12  C12  C22    95.64  30.0  2
+ HJR  Var_105  H31  N32  C32  C22  -174.59  30.0  3
+ HJR  Var_106  H32  N32  C32  C22   -60.56  30.0  3
+ HJR  Var_107  H34  N33  C33  C23   179.74  30.0  3
+ HJR  Var_108  H39  O43  C43  C33   177.97  30.0  3
+ HJR  Var_109  H24  C83  C43  C33   -69.47  30.0  3
+ HJR  Var_110  H25  C83  C43  C33    52.37  30.0  3
+ HJR  Var_111  H26  C83  C43  C33   171.51  30.0  3
+ HJR  Var_112  H21  C61  C51  C41   -57.18  30.0  3
+ HJR  Var_113  H22  C61  C51  C41    57.81  30.0  3
+ HJR  Var_114  H40  O52  C52  C42   -65.03  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

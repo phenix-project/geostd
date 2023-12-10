@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QGP  QGP  '(2S)-2-amino-3-[2',4'-dichloro-4-hydroxy-5-(phosphonomethyl)biphenyl-3-yl]propanoic acid (non-preferred name)'  ligand  42  26  .  2022-11-17  2022-11-17
+ QGP  QGP  '(2S)-2-amino-3-[2',4'-dichloro-4-hydroxy-5-(phosphonomethyl)biphenyl-3-yl]propanoic acid (non-preferred name)'  ligand  42  26  .  2022-11-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QGP
@@ -220,42 +221,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QGP  CONST_01  C7   C8   C9   C4     0.00   0.0  0
- QGP  CONST_02  C7   C6   C5   C4     0.00   0.0  0
- QGP  CONST_03  C8   C9   C4   C5     0.00   0.0  0
- QGP  CONST_04  C8   C7   C6   C5     0.00   0.0  0
- QGP  CONST_05  C12  C7   C6   C5   180.00   0.0  0
- QGP  CONST_06  C9   C4   C5   C6     0.00   0.0  0
- QGP  CONST_07  C9   C8   C7   C6     0.00   0.0  0
- QGP  CONST_10  C14  C13  C12  C7   180.00   0.0  0
- QGP  CONST_11  C15  C10  C12  C7   180.00   0.0  0
- QGP  CONST_14  C12  C7   C8   C9   180.00   0.0  0
- QGP  CONST_15  C14  C13  C12  C10    0.00   0.0  0
- QGP  CONST_16  C14  C11  C15  C10    0.00   0.0  0
- QGP  CONST_17  C12  C13  C14  C11    0.00   0.0  0
- QGP  CONST_18  C12  C10  C15  C11    0.00   0.0  0
- QGP  CONST_19  C15  C11  C14  C13    0.00   0.0  0
- QGP  CONST_20  C15  C10  C12  C13    0.00   0.0  0
- QGP  CONST_21  C16  C9   C4   C5   180.00   0.0  0
- QGP  CONST_22  O6   C4   C5   C6   180.00   0.0  0
- QGP  CONST_23  C16  C9   C8   C7   180.00   0.0  0
- QGP  CONST_24  C1   C5   C6   C7   180.00   0.0  0
- QGP  CONST_25  CL0  C10  C12  C7     0.00   0.0  0
- QGP  CONST_26  O6   C4   C9   C8   180.00   0.0  0
- QGP  CONST_27  C1   C5   C4   C9   180.00   0.0  0
- QGP  CONST_28  CL6  C11  C15  C10  180.00   0.0  0
- QGP  CONST_29  CL0  C10  C15  C11  180.00   0.0  0
- QGP  CONST_30  CL6  C11  C14  C13  180.00   0.0  0
- QGP  CONST_31  CL0  C10  C12  C13  180.00   0.0  0
- QGP  CONST_32  H2   C8   C9   C4   180.00   0.0  0
- QGP  CONST_33  H1   C6   C5   C4   180.00   0.0  0
- QGP  CONST_34  H4   C13  C12  C7     0.00   0.0  0
- QGP  CONST_35  H6   C14  C13  C12  180.00   0.0  0
- QGP  CONST_36  H7   C15  C10  C12  180.00   0.0  0
- QGP  CONST_37  H5   O2   C    CA   180.00   0.0  0
- QGP  Var_01    CA   C16  C9   C4   -74.26  30.0  2
- QGP  Var_02    P    C1   C5   C4   -85.06  30.0  2
- QGP  Var_03    O4   P    C1   C5   -53.25  30.0  2
+ QGP  CONST_01  C7   C8   C9   C4      0.00   0.0  0
+ QGP  CONST_02  C7   C6   C5   C4      0.00   0.0  0
+ QGP  CONST_03  C8   C9   C4   C5      0.00   0.0  0
+ QGP  CONST_04  C8   C7   C6   C5      0.00   0.0  0
+ QGP  CONST_05  C12  C7   C6   C5    180.00   0.0  0
+ QGP  CONST_06  C9   C4   C5   C6      0.00   0.0  0
+ QGP  CONST_07  C9   C8   C7   C6      0.00   0.0  0
+ QGP  CONST_08  C14  C13  C12  C7    180.00   0.0  0
+ QGP  CONST_09  C15  C10  C12  C7    180.00   0.0  0
+ QGP  CONST_10  C12  C7   C8   C9    180.00   0.0  0
+ QGP  CONST_11  C14  C13  C12  C10     0.00   0.0  0
+ QGP  CONST_12  C14  C11  C15  C10     0.00   0.0  0
+ QGP  CONST_13  C12  C13  C14  C11     0.00   0.0  0
+ QGP  CONST_14  C12  C10  C15  C11     0.00   0.0  0
+ QGP  CONST_15  C15  C11  C14  C13     0.00   0.0  0
+ QGP  CONST_16  C15  C10  C12  C13     0.00   0.0  0
+ QGP  CONST_17  C16  C9   C4   C5    180.00   0.0  0
+ QGP  CONST_18  O6   C4   C5   C6    180.00   0.0  0
+ QGP  CONST_19  C16  C9   C8   C7    180.00   0.0  0
+ QGP  CONST_20  C1   C5   C6   C7    180.00   0.0  0
+ QGP  CONST_21  CL0  C10  C12  C7      0.00   0.0  0
+ QGP  CONST_22  O6   C4   C9   C8    180.00   0.0  0
+ QGP  CONST_23  C1   C5   C4   C9    180.00   0.0  0
+ QGP  CONST_24  CL6  C11  C15  C10   180.00   0.0  0
+ QGP  CONST_25  CL0  C10  C15  C11   180.00   0.0  0
+ QGP  CONST_26  CL6  C11  C14  C13   180.00   0.0  0
+ QGP  CONST_27  CL0  C10  C12  C13   180.00   0.0  0
+ QGP  CONST_28  H2   C8   C9   C4    180.00   0.0  0
+ QGP  CONST_29  H1   C6   C5   C4    180.00   0.0  0
+ QGP  CONST_30  H4   C13  C12  C7      0.00   0.0  0
+ QGP  CONST_31  H6   C14  C13  C12   180.00   0.0  0
+ QGP  CONST_32  H7   C15  C10  C12   180.00   0.0  0
+ QGP  CONST_33  H5   O2   C    CA    180.00   0.0  0
+ QGP  Var_01    CA   C16  C9   C4    -74.26  30.0  2
+ QGP  Var_02    P    C1   C5   C4    -85.06  30.0  2
+ QGP  Var_03    O4   P    C1   C5    -53.25  30.0  2
+ QGP  Var_04    C13  C12  C7   C6    -53.92  30.0  2
+ QGP  Var_05    C10  C12  C7   C6    125.45  30.0  2
+ QGP  Var_06    C13  C12  C7   C8    124.08  30.0  2
+ QGP  Var_07    C10  C12  C7   C8    -56.54  30.0  2
+ QGP  Var_08    H3   O6   C4   C5     34.20  30.0  2
+ QGP  Var_09    C    CA   C16  C9    179.99  30.0  3
+ QGP  Var_10    N    CA   C16  C9    -51.54  30.0  3
+ QGP  Var_11    H10  CA   C16  C9     66.92  30.0  3
+ QGP  Var_12    O    C    CA   C16   -74.65  30.0  2
+ QGP  Var_13    O2   C    CA   C16   103.95  30.0  2
+ QGP  Var_14    O    C    CA   N     160.73  30.0  2
+ QGP  Var_15    O2   C    CA   N     -20.68  30.0  2
+ QGP  Var_16    H11  N    CA   C16  -177.37  30.0  3
+ QGP  Var_17    H12  N    CA   C16   -57.97  30.0  3
+ QGP  Var_18    H15  O5   P    O3    -96.07  30.0  3
+ QGP  Var_19    H14  O3   P    O4    -19.48  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UDB  UDB  N-[(3,5-difluorophenyl)carbamoyl]-3-methyl-L-valyl-N~2~-(cyclopentylmethyl)-N-hydroxyglycinamide  ligand  61  31  .  2021-08-24  2021-08-24  
+ UDB  UDB  N-[(3,5-difluorophenyl)carbamoyl]-3-methyl-L-valyl-N~2~-(cyclopentylmethyl)-N-hydroxyglycinamide  ligand  61  31  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UDB
@@ -300,44 +301,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- UDB  CONST_01  CAM   CAL  CAK  CAJ    0.00   0.0  0
- UDB  CONST_02  CAM   CAN  CAP  CAJ    0.00   0.0  0
- UDB  CONST_03  CAN   CAP  CAJ  CAK    0.00   0.0  0
- UDB  CONST_04  CAN   CAM  CAL  CAK    0.00   0.0  0
- UDB  CONST_05  CAP   CAJ  CAK  CAL    0.00   0.0  0
- UDB  CONST_06  CAP   CAN  CAM  CAL    0.00   0.0  0
- UDB  CONST_07  CAJ   CAK  CAL  F1   180.00   0.0  0
- UDB  CONST_08  CAN   CAM  CAL  F1   180.00   0.0  0
- UDB  CONST_09  CAL   CAM  CAN  F2   180.00   0.0  0
- UDB  CONST_10  CAJ   CAP  CAN  F2   180.00   0.0  0
- UDB  CONST_11  CAL   CAK  CAJ  NAI  180.00   0.0  0
- UDB  CONST_12  CAN   CAP  CAJ  NAI  180.00   0.0  0
- UDB  CONST_13  HAP   CAP  CAJ  CAK  180.00   0.0  0
- UDB  CONST_14  HAM   CAM  CAL  CAK  180.00   0.0  0
- UDB  CONST_15  HAK   CAK  CAL  CAM  180.00   0.0  0
- UDB  CONST_16  CAK   CAJ  NAI  CAG    0.00   0.0  0
- UDB  CONST_17  CAP   CAJ  NAI  CAG  180.00   0.0  0
- UDB  CONST_18  HNAI  NAI  CAJ  CAK  180.00   0.0  0
- UDB  CONST_19  CAJ   NAI  CAG  OAH    0.00   0.0  0
- UDB  CONST_20  CAJ   NAI  CAG  N    180.00   0.0  0
- UDB  CONST_21  CAT   NAS  C    O    180.00   0.0  0
- UDB  CONST_22  CAY   NAS  C    O      0.00   0.0  0
- UDB  CONST_23  CAT   NAS  C    CA     0.00   0.0  0
- UDB  CONST_24  CAY   NAS  C    CA   180.00   0.0  0
- UDB  CONST_25  OAH   CAG  N    CA     0.00   0.0  0
- UDB  CONST_26  OAX   NAW  CAU  CAT  180.00   0.0  0
- UDB  CONST_27  OAX   NAW  CAU  OAV    0.00   0.0  0
- UDB  CONST_28  NAI   CAG  N    CA   180.00   0.0  0
- UDB  CONST_30  HNAW  NAW  CAU  CAT    0.00   0.0  0
- UDB  Var_01    CBC   CBB  CBA  CAZ   -3.39  30.0  1
- UDB  Var_02    CBB   CBC  CBD  CAZ   40.23  30.0  1
- UDB  Var_03    CBD   CBC  CBB  CBA  -22.65  30.0  1
- UDB  Var_04    CAZ   CAY  NAS  C     94.21  30.0  3
- UDB  Var_05    CAU   CAT  NAS  C    122.55  30.0  3
- UDB  Var_06    OAV   CAU  CAT  NAS  -30.61  30.0  3
- UDB  Var_07    HAA   CAA  CB   CA    58.67  30.0  3
- UDB  Var_08    HAC   CAC  CB   CA    66.53  30.0  3
- UDB  Var_09    HAD   CAD  CB   CA    63.70  30.0  3
+ UDB  CONST_01  CAM   CAL  CAK  CAJ     0.00   0.0  0
+ UDB  CONST_02  CAM   CAN  CAP  CAJ     0.00   0.0  0
+ UDB  CONST_03  CAN   CAP  CAJ  CAK     0.00   0.0  0
+ UDB  CONST_04  CAN   CAM  CAL  CAK     0.00   0.0  0
+ UDB  CONST_05  CAP   CAJ  CAK  CAL     0.00   0.0  0
+ UDB  CONST_06  CAP   CAN  CAM  CAL     0.00   0.0  0
+ UDB  CONST_07  CAJ   CAK  CAL  F1    180.00   0.0  0
+ UDB  CONST_08  CAN   CAM  CAL  F1    180.00   0.0  0
+ UDB  CONST_09  CAL   CAM  CAN  F2    180.00   0.0  0
+ UDB  CONST_10  CAJ   CAP  CAN  F2    180.00   0.0  0
+ UDB  CONST_11  CAL   CAK  CAJ  NAI   180.00   0.0  0
+ UDB  CONST_12  CAN   CAP  CAJ  NAI   180.00   0.0  0
+ UDB  CONST_13  HAP   CAP  CAJ  CAK   180.00   0.0  0
+ UDB  CONST_14  HAM   CAM  CAL  CAK   180.00   0.0  0
+ UDB  CONST_15  HAK   CAK  CAL  CAM   180.00   0.0  0
+ UDB  CONST_16  CAK   CAJ  NAI  CAG     0.00   0.0  0
+ UDB  CONST_17  CAP   CAJ  NAI  CAG   180.00   0.0  0
+ UDB  CONST_18  HNAI  NAI  CAJ  CAK   180.00   0.0  0
+ UDB  CONST_19  CAJ   NAI  CAG  OAH     0.00   0.0  0
+ UDB  CONST_20  CAJ   NAI  CAG  N     180.00   0.0  0
+ UDB  CONST_21  CAT   NAS  C    O     180.00   0.0  0
+ UDB  CONST_22  CAY   NAS  C    O       0.00   0.0  0
+ UDB  CONST_23  CAT   NAS  C    CA      0.00   0.0  0
+ UDB  CONST_24  CAY   NAS  C    CA    180.00   0.0  0
+ UDB  CONST_25  OAH   CAG  N    CA      0.00   0.0  0
+ UDB  CONST_26  OAX   NAW  CAU  CAT   180.00   0.0  0
+ UDB  CONST_27  OAX   NAW  CAU  OAV     0.00   0.0  0
+ UDB  CONST_28  NAI   CAG  N    CA    180.00   0.0  0
+ UDB  CONST_29  HNAW  NAW  CAU  CAT     0.00   0.0  0
+ UDB  Var_01    CBC   CBB  CBA  CAZ    -3.39  30.0  1
+ UDB  Var_02    CBB   CBC  CBD  CAZ    40.23  30.0  1
+ UDB  Var_03    CBD   CBC  CBB  CBA   -22.65  30.0  1
+ UDB  Var_04    CAZ   CAY  NAS  C      94.21  30.0  3
+ UDB  Var_05    CAU   CAT  NAS  C     122.55  30.0  3
+ UDB  Var_06    OAV   CAU  CAT  NAS   -30.61  30.0  3
+ UDB  Var_07    HAA   CAA  CB   CA     58.67  30.0  3
+ UDB  Var_08    HAC   CAC  CB   CA     66.53  30.0  3
+ UDB  Var_09    HAD   CAD  CB   CA     63.70  30.0  3
+ UDB  Var_10    CBC   CBD  CAZ  CBA   -42.19  30.0  1
+ UDB  Var_11    CBD   CAZ  CBA  CBB    28.05  30.0  1
+ UDB  Var_12    CBB   CBA  CAZ  CAY   153.99  30.0  1
+ UDB  Var_13    CBC   CBD  CAZ  CAY  -165.20  30.0  1
+ UDB  Var_14    HBD   CBD  CAZ  CBA    75.04  30.0  1
+ UDB  Var_15    HBDA  CBD  CAZ  CBA  -164.80  30.0  1
+ UDB  Var_16    HAZ   CAZ  CBA  CBB   -86.00  30.0  1
+ UDB  Var_17    CBA   CAZ  CAY  NAS   174.17  30.0  3
+ UDB  Var_18    CBD   CAZ  CAY  NAS   -67.46  30.0  3
+ UDB  Var_19    HAY   CAY  CAZ  CBA    53.01  30.0  2
+ UDB  Var_20    HAYA  CAY  CAZ  CBA   -63.27  30.0  2
+ UDB  Var_21    CAG   N    CA   C     -71.54  30.0  2
+ UDB  Var_22    CAA   CB   CA   C      63.57  30.0  3
+ UDB  Var_23    CAC   CB   CA   C    -178.71  30.0  3
+ UDB  Var_24    CAD   CB   CA   C     -57.72  30.0  3
+ UDB  Var_25    O     C    CA   N     -44.51  30.0  3
+ UDB  Var_26    NAS   C    CA   N     133.07  30.0  3
+ UDB  Var_27    CAA   CB   CA   N    -174.86  30.0  3
+ UDB  Var_28    CAC   CB   CA   N     -57.14  30.0  3
+ UDB  Var_29    CAD   CB   CA   N      63.85  30.0  3
+ UDB  Var_30    CB    CA   C    O      78.83  30.0  3
+ UDB  Var_31    NAS   C    CA   CB   -103.59  30.0  3
+ UDB  Var_32    CAG   N    CA   CB    163.16  30.0  2
+ UDB  Var_33    HA    CA   C    O    -160.79  30.0  3
+ UDB  Var_34    HOAX  OAX  NAW  CAU   -95.22  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

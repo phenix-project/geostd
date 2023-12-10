@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- YET  YET  1-cyano-2-(2-methyl-1-benzofuran-5-yl)-3-[(3S)-2-oxo-1-(2-oxo-2-pyrrolidin-1-ylethyl)azepan-3-yl]guanidine  ligand  60  32  .  2022-07-22  2022-07-26
+ YET  YET  1-cyano-2-(2-methyl-1-benzofuran-5-yl)-3-[(3S)-2-oxo-1-(2-oxo-2-pyrrolidin-1-ylethyl)azepan-3-yl]guanidine  ligand  60  32  .  2022-07-22  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_YET
@@ -302,47 +303,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- YET  CONST_01  C5    C6   C4   C7   180.00   0.0  0
- YET  CONST_02  C8    C6   C4   C7     0.00   0.0  0
- YET  CONST_03  C8    C3   C2   C7     0.00   0.0  0
- YET  CONST_04  C6    C4   C7   C2     0.00   0.0  0
- YET  CONST_05  C6    C8   C3   C2     0.00   0.0  0
- YET  CONST_06  O32   C8   C3   C2   180.00   0.0  0
- YET  CONST_07  C3    C2   C7   C4     0.00   0.0  0
- YET  CONST_08  C9    C5   C6   C4   180.00   0.0  0
- YET  CONST_09  O32   C8   C6   C4   180.00   0.0  0
- YET  CONST_10  C3    C8   C6   C4     0.00   0.0  0
- YET  CONST_11  O32   C9   C5   C6     0.00   0.0  0
- YET  CONST_12  C9    O32  C8   C6     0.00   0.0  0
- YET  CONST_13  C9    C5   C6   C8     0.00   0.0  0
- YET  CONST_14  C5    C9   O32  C8     0.00   0.0  0
- YET  CONST_15  C5    C6   C8   C3   180.00   0.0  0
- YET  CONST_16  C9    O32  C8   C3   180.00   0.0  0
- YET  CONST_17  C5    C6   C8   O32    0.00   0.0  0
- YET  CONST_18  C6    C4   C7   N28  180.00   0.0  0
- YET  CONST_19  C3    C2   C7   N28  180.00   0.0  0
- YET  CONST_20  C22   C9   C5   C6   180.00   0.0  0
- YET  CONST_21  C22   C9   O32  C8   180.00   0.0  0
- YET  CONST_22  H3    C3   C2   C7   180.00   0.0  0
- YET  CONST_23  H4    C4   C7   C2   180.00   0.0  0
- YET  CONST_24  H2    C2   C7   C4   180.00   0.0  0
- YET  CONST_25  H5    C5   C6   C4     0.00   0.0  0
- YET  CONST_26  C19   N27  C11  O31  180.00   0.0  0
- YET  CONST_27  C20   N27  C11  O31    0.00   0.0  0
- YET  CONST_28  C23   C11  N27  C20  180.00   0.0  0
- YET  CONST_29  C23   C11  N27  C19    0.00   0.0  0
- YET  CONST_32  C7    N28  C12  N29    0.00   0.0  0
- YET  CONST_33  C7    N28  C12  N25  180.00   0.0  0
- YET  CONST_36  HN25  N25  C12  N29  180.00   0.0  0
- YET  CONST_37  HN29  N29  C12  N25  180.00   0.0  0
- YET  Var_01    C16   C15  C19  N27   31.35  30.0  1
- YET  Var_02    C15   C16  C20  N27   30.56  30.0  1
- YET  Var_03    C15   C19  N27  C20  -12.71  30.0  1
- YET  Var_04    C19   C15  C16  C20  -38.60  30.0  1
- YET  Var_05    C19   N27  C20  C16  -11.27  30.0  1
- YET  Var_06    N26   C23  C11  N27  165.42  30.0  3
- YET  Var_07    C4    C7   N28  C12  121.87  30.0  2
- YET  Var_08    H22   C22  C9   O32  -59.91  30.0  2
+ YET  CONST_01  C5    C6   C4   C7    180.00   0.0  0
+ YET  CONST_02  C8    C6   C4   C7      0.00   0.0  0
+ YET  CONST_03  C8    C3   C2   C7      0.00   0.0  0
+ YET  CONST_04  C6    C4   C7   C2      0.00   0.0  0
+ YET  CONST_05  C6    C8   C3   C2      0.00   0.0  0
+ YET  CONST_06  O32   C8   C3   C2    180.00   0.0  0
+ YET  CONST_07  C3    C2   C7   C4      0.00   0.0  0
+ YET  CONST_08  C9    C5   C6   C4    180.00   0.0  0
+ YET  CONST_09  O32   C8   C6   C4    180.00   0.0  0
+ YET  CONST_10  C3    C8   C6   C4      0.00   0.0  0
+ YET  CONST_11  O32   C9   C5   C6      0.00   0.0  0
+ YET  CONST_12  C9    O32  C8   C6      0.00   0.0  0
+ YET  CONST_13  C9    C5   C6   C8      0.00   0.0  0
+ YET  CONST_14  C5    C9   O32  C8      0.00   0.0  0
+ YET  CONST_15  C5    C6   C8   C3    180.00   0.0  0
+ YET  CONST_16  C9    O32  C8   C3    180.00   0.0  0
+ YET  CONST_17  C5    C6   C8   O32     0.00   0.0  0
+ YET  CONST_18  C6    C4   C7   N28   180.00   0.0  0
+ YET  CONST_19  C3    C2   C7   N28   180.00   0.0  0
+ YET  CONST_20  C22   C9   C5   C6    180.00   0.0  0
+ YET  CONST_21  C22   C9   O32  C8    180.00   0.0  0
+ YET  CONST_22  H3    C3   C2   C7    180.00   0.0  0
+ YET  CONST_23  H4    C4   C7   C2    180.00   0.0  0
+ YET  CONST_24  H2    C2   C7   C4    180.00   0.0  0
+ YET  CONST_25  H5    C5   C6   C4      0.00   0.0  0
+ YET  CONST_26  C19   N27  C11  O31   180.00   0.0  0
+ YET  CONST_27  C20   N27  C11  O31     0.00   0.0  0
+ YET  CONST_28  C23   C11  N27  C20   180.00   0.0  0
+ YET  CONST_29  C23   C11  N27  C19     0.00   0.0  0
+ YET  CONST_30  C7    N28  C12  N29     0.00   0.0  0
+ YET  CONST_31  C7    N28  C12  N25   180.00   0.0  0
+ YET  CONST_32  HN25  N25  C12  N29   180.00   0.0  0
+ YET  CONST_33  HN29  N29  C12  N25   180.00   0.0  0
+ YET  Var_01    C16   C15  C19  N27    31.35  30.0  1
+ YET  Var_02    C15   C16  C20  N27    30.56  30.0  1
+ YET  Var_03    C15   C19  N27  C20   -12.71  30.0  1
+ YET  Var_04    C19   C15  C16  C20   -38.60  30.0  1
+ YET  Var_05    C19   N27  C20  C16   -11.27  30.0  1
+ YET  Var_06    N26   C23  C11  N27   165.42  30.0  3
+ YET  Var_07    C4    C7   N28  C12   121.87  30.0  2
+ YET  Var_08    H22   C22  C9   O32   -59.91  30.0  2
+ YET  CONST_34  C21   C10  N26  C18     0.00   0.0  0
+ YET  CONST_35  C21   C10  N26  C23   180.00   0.0  0
+ YET  CONST_36  C18   N26  C10  O30   180.00   0.0  0
+ YET  CONST_37  O30   C10  N26  C23     0.00   0.0  0
+ YET  Var_09    C17   C21  C10  N26   -70.85  30.0  1
+ YET  Var_10    C13   C14  C18  N26   -77.75  30.0  1
+ YET  Var_11    C14   C18  N26  C10    66.93  30.0  1
+ YET  Var_12    C13   C17  C21  C10    84.88  30.0  1
+ YET  Var_13    C17   C13  C14  C18    57.21  30.0  1
+ YET  Var_14    C21   C17  C13  C14   -61.63  30.0  1
+ YET  Var_15    C14   C18  N26  C23  -104.15  30.0  1
+ YET  Var_16    N29   C21  C10  N26   168.61  30.0  1
+ YET  Var_17    C17   C21  C10  O30   108.38  30.0  1
+ YET  Var_18    N29   C21  C17  C13  -153.18  30.0  1
+ YET  Var_19    H21   C21  C10  N26    47.38  30.0  1
+ YET  Var_20    H14   C14  C18  N26    46.58  30.0  1
+ YET  Var_21    H14A  C14  C18  N26   162.17  30.0  1
+ YET  Var_22    H18   C18  N26  C10  -171.77  30.0  1
+ YET  Var_23    H18A  C18  N26  C10   -57.95  30.0  1
+ YET  Var_24    H17   C17  C21  C10   -39.80  30.0  1
+ YET  Var_25    H17A  C17  C21  C10  -155.86  30.0  1
+ YET  Var_26    H13   C13  C14  C18   179.51  30.0  1
+ YET  Var_27    H13A  C13  C14  C18   -64.97  30.0  1
+ YET  Var_28    C10   N26  C23  C11   -68.31  30.0  3
+ YET  Var_29    C18   N26  C23  C11   103.44  30.0  3
+ YET  Var_30    C12   N29  C21  C10   -45.65  30.0  2
+ YET  Var_31    N29   C21  C10  O30   -12.17  30.0  1
+ YET  Var_32    C12   N29  C21  C17  -167.05  30.0  2
+ YET  Var_33    H23   C23  N26  C10   171.79  30.0  3
+ YET  Var_34    H23A  C23  N26  C10    55.62  30.0  3
+ YET  Var_35    HN29  N29  C21  C10    99.35  30.0  2
+ YET  Var_36    N24   C1   N25  C12   136.70  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

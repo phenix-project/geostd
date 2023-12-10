@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LWT  LWT  (3~{a}~{R},4~{S},9~{b}~{S})-4-(2-chlorophenyl)-2,3,3~{a},4,5,9~{b}-hexahydro-1~{H}-cyclopenta[c]quinoline-8-sulfonamide  ligand  43  24  .  2022-03-22  2022-07-25
+ LWT  LWT  (3~{a}~{R},4~{S},9~{b}~{S})-4-(2-chlorophenyl)-2,3,3~{a},4,5,9~{b}-hexahydro-1~{H}-cyclopenta[c]quinoline-8-sulfonamide  ligand  43  24  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LWT
@@ -238,37 +239,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LWT  CONST_01  C1   C2   C3   C4     0.00   0.0  0
- LWT  CONST_02  C1   C    C5   C4     0.00   0.0  0
- LWT  CONST_03  C2   C3   C4   C5     0.00   0.0  0
- LWT  CONST_04  C2   C1   C    C5     0.00   0.0  0
- LWT  CONST_05  C15  C14  C13  C12    0.00   0.0  0
- LWT  CONST_06  C15  C16  C17  C12    0.00   0.0  0
- LWT  CONST_07  C16  C17  C12  C13    0.00   0.0  0
- LWT  CONST_08  C16  C15  C14  C13    0.00   0.0  0
- LWT  CONST_09  C17  C12  C13  C14    0.00   0.0  0
- LWT  CONST_10  C17  C16  C15  C14    0.00   0.0  0
- LWT  CONST_11  C3   C4   C5   C      0.00   0.0  0
- LWT  CONST_12  C3   C2   C1   C      0.00   0.0  0
- LWT  CONST_13  C3   C4   C5   C6   180.00   0.0  0
- LWT  CONST_14  C1   C    C5   C6   180.00   0.0  0
- LWT  CONST_15  CL   C    C5   C4   180.00   0.0  0
- LWT  CONST_16  CL   C    C5   C6     0.00   0.0  0
- LWT  CONST_17  S    C16  C17  C12  180.00   0.0  0
- LWT  CONST_18  S    C16  C15  C14  180.00   0.0  0
- LWT  CONST_19  C2   C1   C    CL   180.00   0.0  0
- LWT  CONST_20  H18  C2   C3   C4   180.00   0.0  0
- LWT  CONST_21  H17  C3   C4   C5   180.00   0.0  0
- LWT  CONST_22  H19  C1   C    C5   180.00   0.0  0
- LWT  CONST_23  H1   C4   C5   C6     0.00   0.0  0
- LWT  CONST_24  H16  C17  C12  C8     0.00   0.0  0
- LWT  CONST_25  H13  C14  C13  C12  180.00   0.0  0
- LWT  CONST_26  H14  C15  C14  C13  180.00   0.0  0
- LWT  Var_01    C12  C13  N    C6    -2.38  30.0  1
- LWT  Var_02    C9   C10  C11  C7     0.24  30.0  1
- LWT  Var_03    C11  C10  C9   C8    26.07  30.0  1
- LWT  Var_04    C17  C16  S    N1   105.24  30.0  2
- LWT  Var_05    H3   N1   S    C16  166.89  30.0  3
+ LWT  CONST_01  C1   C2   C3   C4      0.00   0.0  0
+ LWT  CONST_02  C1   C    C5   C4      0.00   0.0  0
+ LWT  CONST_03  C2   C3   C4   C5      0.00   0.0  0
+ LWT  CONST_04  C2   C1   C    C5      0.00   0.0  0
+ LWT  CONST_05  C15  C14  C13  C12     0.00   0.0  0
+ LWT  CONST_06  C15  C16  C17  C12     0.00   0.0  0
+ LWT  CONST_07  C16  C17  C12  C13     0.00   0.0  0
+ LWT  CONST_08  C16  C15  C14  C13     0.00   0.0  0
+ LWT  CONST_09  C17  C12  C13  C14     0.00   0.0  0
+ LWT  CONST_10  C17  C16  C15  C14     0.00   0.0  0
+ LWT  CONST_11  C3   C4   C5   C       0.00   0.0  0
+ LWT  CONST_12  C3   C2   C1   C       0.00   0.0  0
+ LWT  CONST_13  C3   C4   C5   C6    180.00   0.0  0
+ LWT  CONST_14  C1   C    C5   C6    180.00   0.0  0
+ LWT  CONST_15  CL   C    C5   C4    180.00   0.0  0
+ LWT  CONST_16  CL   C    C5   C6      0.00   0.0  0
+ LWT  CONST_17  S    C16  C17  C12   180.00   0.0  0
+ LWT  CONST_18  S    C16  C15  C14   180.00   0.0  0
+ LWT  CONST_19  C2   C1   C    CL    180.00   0.0  0
+ LWT  CONST_20  H18  C2   C3   C4    180.00   0.0  0
+ LWT  CONST_21  H17  C3   C4   C5    180.00   0.0  0
+ LWT  CONST_22  H19  C1   C    C5    180.00   0.0  0
+ LWT  CONST_23  H1   C4   C5   C6      0.00   0.0  0
+ LWT  CONST_24  H16  C17  C12  C8      0.00   0.0  0
+ LWT  CONST_25  H13  C14  C13  C12   180.00   0.0  0
+ LWT  CONST_26  H14  C15  C14  C13   180.00   0.0  0
+ LWT  Var_01    C12  C13  N    C6     -2.38  30.0  1
+ LWT  Var_02    C9   C10  C11  C7      0.24  30.0  1
+ LWT  Var_03    C11  C10  C9   C8     26.07  30.0  1
+ LWT  Var_04    C17  C16  S    N1    105.24  30.0  2
+ LWT  Var_05    H3   N1   S    C16   166.89  30.0  3
+ LWT  Var_06    N    C6   C5   C4    148.78  30.0  2
+ LWT  Var_07    C7   C6   C5   C4    -85.39  30.0  2
+ LWT  Var_08    C13  N    C6   C5    152.33  30.0  1
+ LWT  Var_09    C8   C7   C6   C5   -176.97  30.0  1
+ LWT  Var_10    C11  C7   C6   C5    -56.26  30.0  1
+ LWT  Var_11    C12  C8   C7   C6     49.28  30.0  1
+ LWT  Var_12    C9   C8   C7   C6    170.04  30.0  1
+ LWT  Var_13    C10  C11  C7   C6   -151.53  30.0  1
+ LWT  Var_14    C    C5   C6   C7     92.31  30.0  2
+ LWT  Var_15    C13  N    C6   C7     26.19  30.0  1
+ LWT  Var_16    C13  C12  C8   C7    -25.89  30.0  1
+ LWT  Var_17    C17  C12  C8   C7    156.18  30.0  1
+ LWT  Var_18    C10  C9   C8   C7    -42.06  30.0  1
+ LWT  Var_19    N    C6   C7   C8    -49.52  30.0  1
+ LWT  Var_20    C10  C11  C7   C8    -26.41  30.0  1
+ LWT  Var_21    C11  C7   C8   C9     42.19  30.0  1
+ LWT  Var_22    C13  C12  C8   C9   -138.74  30.0  1
+ LWT  Var_23    C17  C12  C8   C9     43.33  30.0  1
+ LWT  Var_24    C12  C8   C9   C10    76.16  30.0  1
+ LWT  Var_25    N    C6   C7   C11    71.19  30.0  1
+ LWT  Var_26    C12  C8   C7   C11   -78.57  30.0  1
+ LWT  Var_27    C    C5   C6   N     -33.51  30.0  2
+ LWT  Var_28    H2   C6   C5   C4     29.41  30.0  2
+ LWT  Var_29    H15  N    C6   C5    -40.66  30.0  1
+ LWT  Var_30    H5   C7   C6   C5     65.39  30.0  1
+ LWT  Var_31    H6   C8   C7   C6    -71.67  30.0  1
+ LWT  Var_32    H11  C11  C7   C6    -31.85  30.0  1
+ LWT  Var_33    H12  C11  C7   C6     86.53  30.0  1
+ LWT  Var_34    H7   C9   C8   C7     75.53  30.0  1
+ LWT  Var_35    H8   C9   C8   C7   -165.83  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TCI  TCI  (6aR,10aR)-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydrobenzo[c]isochromen-1-ol  ligand  53  23  .  2022-03-23  2022-03-23
+ TCI  TCI  (6aR,10aR)-6,6,9-trimethyl-3-pentyl-6a,7,8,10a-tetrahydrobenzo[c]isochromen-1-ol  ligand  53  23  .  2022-03-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TCI
@@ -277,31 +278,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TCI  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- TCI  CONST_02  C4   C5   C6   C1     0.00   0.0  0
- TCI  CONST_03  C5   C6   C1   C2     0.00   0.0  0
- TCI  CONST_04  C5   C4   C3   C2     0.00   0.0  0
- TCI  CONST_05  C6   C1   C2   C3     0.00   0.0  0
- TCI  CONST_06  C6   C5   C4   C3     0.00   0.0  0
- TCI  CONST_07  O2   C4   C3   C2   180.00   0.0  0
- TCI  CONST_08  C6   C5   C4   O2   180.00   0.0  0
- TCI  CONST_09  C7   C5   C4   O2     0.00   0.0  0
- TCI  CONST_10  C17  C2   C3   C4   180.00   0.0  0
- TCI  CONST_11  C17  C2   C1   C6   180.00   0.0  0
- TCI  CONST_12  H3   C3   C2   C1   180.00   0.0  0
- TCI  CONST_13  H1   C1   C6   O1     0.00   0.0  0
- TCI  Var_01    C12  C13  O1   C6   -50.35  30.0  1
- TCI  Var_02    C10  C9   C8   C7     1.34  30.0  1
- TCI  Var_03    C11  C10  C9   C8    -2.52  30.0  1
- TCI  Var_04    C12  C11  C10  C9    34.52  30.0  1
- TCI  Var_05    C18  C17  C2   C1    97.47  30.0  2
- TCI  Var_06    H14  C14  C13  O1    64.82  30.0  3
- TCI  Var_07    H15  C15  C13  O1    57.27  30.0  3
- TCI  Var_08    H16  C16  C9   C8     1.25  30.0  3
- TCI  Var_09    C19  C18  C17  C2   179.88  30.0  3
- TCI  Var_10    C20  C19  C18  C17  179.79  30.0  3
- TCI  Var_11    C21  C20  C19  C18  179.17  30.0  3
- TCI  Var_12    H21  C21  C20  C19  -60.63  30.0  3
+ TCI  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ TCI  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ TCI  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ TCI  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ TCI  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ TCI  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ TCI  CONST_07  O2    C4   C3   C2    180.00   0.0  0
+ TCI  CONST_08  C6    C5   C4   O2    180.00   0.0  0
+ TCI  CONST_09  C7    C5   C4   O2      0.00   0.0  0
+ TCI  CONST_10  C17   C2   C3   C4    180.00   0.0  0
+ TCI  CONST_11  C17   C2   C1   C6    180.00   0.0  0
+ TCI  CONST_12  H3    C3   C2   C1    180.00   0.0  0
+ TCI  CONST_13  H1    C1   C6   O1      0.00   0.0  0
+ TCI  Var_01    C12   C13  O1   C6    -50.35  30.0  1
+ TCI  Var_02    C10   C9   C8   C7      1.34  30.0  1
+ TCI  Var_03    C11   C10  C9   C8     -2.52  30.0  1
+ TCI  Var_04    C12   C11  C10  C9     34.52  30.0  1
+ TCI  Var_05    C18   C17  C2   C1     97.47  30.0  2
+ TCI  Var_06    H14   C14  C13  O1     64.82  30.0  3
+ TCI  Var_07    H15   C15  C13  O1     57.27  30.0  3
+ TCI  Var_08    H16   C16  C9   C8      1.25  30.0  3
+ TCI  Var_09    C19   C18  C17  C2    179.88  30.0  3
+ TCI  Var_10    C20   C19  C18  C17   179.79  30.0  3
+ TCI  Var_11    C21   C20  C19  C18   179.17  30.0  3
+ TCI  Var_12    H21   C21  C20  C19   -60.63  30.0  3
+ TCI  Var_13    C13   O1   C6   C1   -160.88  30.0  1
+ TCI  Var_14    C7    C12  C13  O1     61.50  30.0  1
+ TCI  Var_15    C11   C12  C13  O1   -174.25  30.0  1
+ TCI  Var_16    C8    C7   C5   C4    -51.89  30.0  1
+ TCI  Var_17    C12   C7   C5   C4   -173.74  30.0  1
+ TCI  Var_18    C13   O1   C6   C5     19.07  30.0  1
+ TCI  Var_19    C9    C8   C7   C5   -155.38  30.0  1
+ TCI  Var_20    C11   C12  C7   C5   -171.20  30.0  1
+ TCI  Var_21    C13   C12  C7   C5    -41.90  30.0  1
+ TCI  Var_22    C8    C7   C5   C6    131.54  30.0  1
+ TCI  Var_23    C12   C7   C5   C6      9.68  30.0  1
+ TCI  Var_24    C10   C11  C12  C7    -65.53  30.0  1
+ TCI  Var_25    C11   C12  C7   C8     62.33  30.0  1
+ TCI  Var_26    C13   C12  C7   C8   -168.37  30.0  1
+ TCI  Var_27    C12   C7   C8   C9    -31.41  30.0  1
+ TCI  Var_28    C13   C12  C11  C10   168.25  30.0  1
+ TCI  Var_29    C14   C13  C12  C7    175.17  30.0  1
+ TCI  Var_30    C15   C13  C12  C7    -59.55  30.0  1
+ TCI  Var_31    C14   C13  C12  C11   -60.58  30.0  1
+ TCI  Var_32    C15   C13  C12  C11    64.70  30.0  1
+ TCI  Var_33    H12   C12  C13  O1    -54.76  30.0  1
+ TCI  Var_34    H7    C7   C5   C4     68.90  30.0  1
+ TCI  Var_35    H8    C8   C7   C5     22.96  30.0  1
+ TCI  Var_36    H11   C11  C12  C7    173.45  30.0  1
+ TCI  Var_37    H11A  C11  C12  C7     55.50  30.0  1
+ TCI  Var_38    HO2   O2   C4   C3    166.09  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

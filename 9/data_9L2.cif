@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 9L2  9L2  (2~{R},3~{S},4~{R},5~{R},6~{R})-5-azanyl-2-(hydroxymethyl)-6-(4-phenyl-1~{H}-imidazol-2-yl)oxane-3,4-diol  ligand  41  22  .  2021-08-06  2021-08-06  
+ 9L2  9L2  (2~{R},3~{S},4~{R},5~{R},6~{R})-5-azanyl-2-(hydroxymethyl)-6-(4-phenyl-1~{H}-imidazol-2-yl)oxane-3,4-diol  ligand  41  22  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_9L2
@@ -223,34 +224,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 9L2  CONST_01  C4   C3   N2   C1     0.00  0.0  0
- 9L2  CONST_02  C3   C4   N5   C1     0.00  0.0  0
- 9L2  CONST_03  C6   C4   N5   C1   180.00  0.0  0
- 9L2  CONST_04  C4   N5   C1   N2     0.00  0.0  0
- 9L2  CONST_05  N5   C4   C3   N2     0.00  0.0  0
- 9L2  CONST_06  C6   C4   C3   N2   180.00  0.0  0
- 9L2  CONST_07  N5   C1   N2   C3     0.00  0.0  0
- 9L2  CONST_08  C7   C6   C4   C3   180.00  0.0  0
- 9L2  CONST_09  C11  C6   C4   C3     0.00  0.0  0
- 9L2  CONST_10  C8   C7   C6   C4   180.00  0.0  0
- 9L2  CONST_11  C10  C11  C6   C4   180.00  0.0  0
- 9L2  CONST_12  C7   C6   C4   N5     0.00  0.0  0
- 9L2  CONST_13  C11  C6   C4   N5   180.00  0.0  0
- 9L2  CONST_14  C9   C8   C7   C6     0.00  0.0  0
- 9L2  CONST_15  C9   C10  C11  C6     0.00  0.0  0
- 9L2  CONST_16  C10  C11  C6   C7     0.00  0.0  0
- 9L2  CONST_17  C10  C9   C8   C7     0.00  0.0  0
- 9L2  CONST_18  C11  C6   C7   C8     0.00  0.0  0
- 9L2  CONST_19  C11  C10  C9   C8     0.00  0.0  0
- 9L2  CONST_20  C3   N2   C1   C1'  180.00  0.0  0
- 9L2  CONST_21  C4   N5   C1   C1'  180.00  0.0  0
- 9L2  CONST_22  H14  N2   C1   C1'    0.00  0.0  0
- 9L2  CONST_23  H15  C3   N2   C1   180.00  0.0  0
- 9L2  CONST_24  H17  C7   C6   C4     0.00  0.0  0
- 9L2  CONST_25  H21  C11  C6   C4     0.00  0.0  0
- 9L2  CONST_26  H18  C8   C7   C6   180.00  0.0  0
- 9L2  CONST_27  H20  C10  C11  C6   180.00  0.0  0
- 9L2  CONST_28  H19  C9   C8   C7   180.00  0.0  0
+ 9L2  CONST_01  C4   C3   N2   C1      0.00   0.0  0
+ 9L2  CONST_02  C3   C4   N5   C1      0.00   0.0  0
+ 9L2  CONST_03  C6   C4   N5   C1    180.00   0.0  0
+ 9L2  CONST_04  C4   N5   C1   N2      0.00   0.0  0
+ 9L2  CONST_05  N5   C4   C3   N2      0.00   0.0  0
+ 9L2  CONST_06  C6   C4   C3   N2    180.00   0.0  0
+ 9L2  CONST_07  N5   C1   N2   C3      0.00   0.0  0
+ 9L2  CONST_08  C7   C6   C4   C3    180.00   0.0  0
+ 9L2  CONST_09  C11  C6   C4   C3      0.00   0.0  0
+ 9L2  CONST_10  C8   C7   C6   C4    180.00   0.0  0
+ 9L2  CONST_11  C10  C11  C6   C4    180.00   0.0  0
+ 9L2  CONST_12  C7   C6   C4   N5      0.00   0.0  0
+ 9L2  CONST_13  C11  C6   C4   N5    180.00   0.0  0
+ 9L2  CONST_14  C9   C8   C7   C6      0.00   0.0  0
+ 9L2  CONST_15  C9   C10  C11  C6      0.00   0.0  0
+ 9L2  CONST_16  C10  C11  C6   C7      0.00   0.0  0
+ 9L2  CONST_17  C10  C9   C8   C7      0.00   0.0  0
+ 9L2  CONST_18  C11  C6   C7   C8      0.00   0.0  0
+ 9L2  CONST_19  C11  C10  C9   C8      0.00   0.0  0
+ 9L2  CONST_20  C3   N2   C1   C1'   180.00   0.0  0
+ 9L2  CONST_21  C4   N5   C1   C1'   180.00   0.0  0
+ 9L2  CONST_22  H14  N2   C1   C1'     0.00   0.0  0
+ 9L2  CONST_23  H15  C3   N2   C1    180.00   0.0  0
+ 9L2  CONST_24  H17  C7   C6   C4      0.00   0.0  0
+ 9L2  CONST_25  H21  C11  C6   C4      0.00   0.0  0
+ 9L2  CONST_26  H18  C8   C7   C6    180.00   0.0  0
+ 9L2  CONST_27  H20  C10  C11  C6    180.00   0.0  0
+ 9L2  CONST_28  H19  C9   C8   C7    180.00   0.0  0
+ 9L2  Var_01    C2'  C3'  C4'  C5'    53.89  30.0  1
+ 9L2  Var_02    C2'  C1'  O5'  C5'   -60.37  30.0  1
+ 9L2  Var_03    C1   C1'  O5'  C5'   178.49  30.0  1
+ 9L2  Var_04    C1'  C2'  C3'  C4'   -51.41  30.0  1
+ 9L2  Var_05    C1'  O5'  C5'  C4'    61.80  30.0  1
+ 9L2  Var_06    O5'  C5'  C4'  C3'   -57.25  30.0  1
+ 9L2  Var_07    O5'  C1'  C2'  C3'    53.31  30.0  1
+ 9L2  Var_08    C1   C1'  C2'  C3'   172.33  30.0  1
+ 9L2  Var_09    N2   C1   C1'  O5'  -119.62  30.0  2
+ 9L2  Var_10    N5   C1   C1'  O5'    59.67  30.0  2
+ 9L2  Var_11    N2   C1   C1'  C2'   118.53  30.0  2
+ 9L2  Var_12    N5   C1   C1'  C2'   -62.19  30.0  2
+ 9L2  Var_13    C3'  C4'  C5'  C6'  -176.55  30.0  1
+ 9L2  Var_14    C1'  O5'  C5'  C6'  -176.04  30.0  1
+ 9L2  Var_15    O3'  C3'  C4'  C5'   174.79  30.0  1
+ 9L2  Var_16    N2'  C2'  C3'  C4'  -173.68  30.0  1
+ 9L2  Var_17    C2'  C3'  C4'  O4'   175.36  30.0  1
+ 9L2  Var_18    O5'  C5'  C4'  O4'  -175.92  30.0  1
+ 9L2  Var_19    C1'  C2'  C3'  O3'  -174.44  30.0  1
+ 9L2  Var_20    N2'  C2'  C1'  O5'   179.24  30.0  1
+ 9L2  Var_21    C1   C1'  C2'  N2'   -61.73  30.0  1
+ 9L2  Var_22    H7   C3'  C4'  C5'   -63.78  30.0  1
+ 9L2  Var_23    H9   C1'  O5'  C5'    60.20  30.0  1
+ 9L2  Var_24    H10  C2'  C3'  C4'    65.50  30.0  1
+ 9L2  Var_25    H4   C5'  C4'  C3'    63.25  30.0  1
+ 9L2  Var_26    H5   C4'  C5'  O5'    61.21  30.0  1
+ 9L2  Var_27    C4'  C5'  C6'  O6'  -175.50  30.0  1
+ 9L2  Var_28    O5'  C5'  C6'  O6'    63.98  30.0  1
+ 9L2  Var_29    O4'  C4'  C5'  C6'    64.78  30.0  1
+ 9L2  Var_30    O3'  C3'  C4'  O4'   -63.74  30.0  1
+ 9L2  Var_31    N2'  C2'  C3'  O3'    63.28  30.0  1
+ 9L2  Var_32    H6   O4'  C4'  C5'   -90.33  30.0  3
+ 9L2  Var_33    H8   O3'  C3'  C4'    57.34  30.0  3
+ 9L2  Var_34    H2   C6'  C5'  C4'    62.32  30.0  3
+ 9L2  Var_35    H3   C6'  C5'  C4'   -54.03  30.0  3
+ 9L2  Var_36    H11  N2'  C2'  C3'   -67.75  30.0  3
+ 9L2  Var_37    H12  N2'  C2'  C3'    48.67  30.0  3
+ 9L2  Var_38    H1   O6'  C6'  C5'   177.99  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EU8  EU8  "[(2~{R},3~{R},4~{R},5~{R},6~{R})-2-[[(2~{S},3~{S},4~{S},5~{R},6~{R})-6-[[(2~{S},3~{R},4~{R},5~{R},6~{R})-6-(hydroxymethyl)-3-oxidanyl-4,5-disulfooxy-oxan-2-yl]oxymethyl]-3-oxidanyl-4,5-disulfooxy-oxan-2-yl]oxymethyl]-3,5,6-trisulfooxy-oxan-4-yl] hydrogen sulfate"  ligand  90  66  .  2022-08-10  2022-09-22
+ EU8  EU8  '[(2~{R},3~{R},4~{R},5~{R},6~{R})-2-[[(2~{S},3~{S},4~{S},5~{R},6~{R})-6-[[(2~{S},3~{R},4~{R},5~{R},6~{R})-6-(hydroxymethyl)-3-oxidanyl-4,5-disulfooxy-oxan-2-yl]oxymethyl]-3-oxidanyl-4,5-disulfooxy-oxan-2-yl]oxymethyl]-3,5,6-trisulfooxy-oxan-4-yl] hydrogen sulfate'  ligand  90  66  .  2022-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EU8
@@ -419,36 +420,146 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EU8  Var_01  C52   C62  O62  C13  -122.97  30.0  3
- EU8  Var_02  C51   C61  O61  C12    95.79  30.0  3
- EU8  Var_03  O71   S7   O4   C4    -82.90  30.0  3
- EU8  Var_04  O72   S7   O4   C4     38.49  30.0  3
- EU8  Var_05  O73   S7   O4   C4    158.38  30.0  3
- EU8  Var_06  O26   S6   O3   C3     48.26  30.0  2
- EU8  Var_07  O39   S6   O3   C3    -72.31  30.0  2
- EU8  Var_08  O46   S6   O3   C3    169.15  30.0  2
- EU8  Var_09  O24   S3   O41  C41   173.30  30.0  3
- EU8  Var_10  O13   S3   O41  C41    53.59  30.0  3
- EU8  Var_11  O36   S3   O41  C41   -67.13  30.0  3
- EU8  Var_12  O44   S2   O31  C31    51.55  30.0  2
- EU8  Var_13  O35   S2   O31  C31   171.13  30.0  2
- EU8  Var_14  O12   S2   O31  C31   -69.21  30.0  2
- EU8  Var_15  O14   S4   O6   C11   -64.33  30.0  2
- EU8  Var_16  O37   S4   O6   C11   175.74  30.0  2
- EU8  Var_17  O45   S4   O6   C11    56.34  30.0  2
- EU8  Var_18  O38   S5   O42  C42   -60.82  30.0  3
- EU8  Var_19  O25   S5   O42  C42    59.74  30.0  3
- EU8  Var_20  O15   S5   O42  C42   179.41  30.0  3
- EU8  Var_21  O43   S    O32  C32    64.67  30.0  3
- EU8  Var_22  O1    S    O32  C32   -55.70  30.0  3
- EU8  Var_23  O33   S    O32  C32  -175.77  30.0  3
- EU8  Var_24  O23   S1   O22  C22    38.49  30.0  3
- EU8  Var_25  O34   S1   O22  C22   158.17  30.0  3
- EU8  Var_26  O11   S1   O22  C22   -82.55  30.0  3
- EU8  Var_27  H621  C62  O62  C13   116.53  30.0  3
- EU8  Var_28  H622  C62  O62  C13    -0.65  30.0  3
- EU8  Var_29  H611  C61  O61  C12  -141.57  30.0  3
- EU8  Var_30  H612  C61  O61  C12   -25.66  30.0  3
+ EU8  Var_01   C52   C62  O62  C13  -122.97  30.0  3
+ EU8  Var_02   C51   C61  O61  C12    95.79  30.0  3
+ EU8  Var_03   O71   S7   O4   C4    -82.90  30.0  3
+ EU8  Var_04   O72   S7   O4   C4     38.49  30.0  3
+ EU8  Var_05   O73   S7   O4   C4    158.38  30.0  3
+ EU8  Var_06   O26   S6   O3   C3     48.26  30.0  2
+ EU8  Var_07   O39   S6   O3   C3    -72.31  30.0  2
+ EU8  Var_08   O46   S6   O3   C3    169.15  30.0  2
+ EU8  Var_09   O24   S3   O41  C41   173.30  30.0  3
+ EU8  Var_10   O13   S3   O41  C41    53.59  30.0  3
+ EU8  Var_11   O36   S3   O41  C41   -67.13  30.0  3
+ EU8  Var_12   O44   S2   O31  C31    51.55  30.0  2
+ EU8  Var_13   O35   S2   O31  C31   171.13  30.0  2
+ EU8  Var_14   O12   S2   O31  C31   -69.21  30.0  2
+ EU8  Var_15   O14   S4   O6   C11   -64.33  30.0  2
+ EU8  Var_16   O37   S4   O6   C11   175.74  30.0  2
+ EU8  Var_17   O45   S4   O6   C11    56.34  30.0  2
+ EU8  Var_18   O38   S5   O42  C42   -60.82  30.0  3
+ EU8  Var_19   O25   S5   O42  C42    59.74  30.0  3
+ EU8  Var_20   O15   S5   O42  C42   179.41  30.0  3
+ EU8  Var_21   O43   S    O32  C32    64.67  30.0  3
+ EU8  Var_22   O1    S    O32  C32   -55.70  30.0  3
+ EU8  Var_23   O33   S    O32  C32  -175.77  30.0  3
+ EU8  Var_24   O23   S1   O22  C22    38.49  30.0  3
+ EU8  Var_25   O34   S1   O22  C22   158.17  30.0  3
+ EU8  Var_26   O11   S1   O22  C22   -82.55  30.0  3
+ EU8  Var_27   H621  C62  O62  C13   116.53  30.0  3
+ EU8  Var_28   H622  C62  O62  C13    -0.65  30.0  3
+ EU8  Var_29   H611  C61  O61  C12  -141.57  30.0  3
+ EU8  Var_30   H612  C61  O61  C12   -25.66  30.0  3
+ EU8  Var_31   C2    C3   C4   C53    53.06  30.0  1
+ EU8  Var_32   C2    C13  O53  C53    44.74  30.0  1
+ EU8  Var_33   C13   O53  C53  C4    -57.20  30.0  1
+ EU8  Var_34   C13   C2   C3   C4    -64.93  30.0  1
+ EU8  Var_35   O53   C53  C4   C3      3.80  30.0  1
+ EU8  Var_36   O53   C13  C2   C3     17.42  30.0  1
+ EU8  Var_37   C21   C31  C41  C52   -52.50  30.0  1
+ EU8  Var_38   C21   C12  O52  C52    54.83  30.0  1
+ EU8  Var_39   C12   C21  C31  C41    54.57  30.0  1
+ EU8  Var_40   C12   O52  C52  C41   -51.05  30.0  1
+ EU8  Var_41   O52   C52  C41  C31    48.59  30.0  1
+ EU8  Var_42   O52   C12  C21  C31   -54.90  30.0  1
+ EU8  Var_43   C22   C32  C42  C51   -47.76  30.0  1
+ EU8  Var_44   C22   C11  O51  C51    61.66  30.0  1
+ EU8  Var_45   C32   C42  C51  O51    46.50  30.0  1
+ EU8  Var_46   C32   C22  C11  O51   -57.74  30.0  1
+ EU8  Var_47   C42   C51  O51  C11   -55.37  30.0  1
+ EU8  Var_48   C42   C32  C22  C11    52.61  30.0  1
+ EU8  Var_49   C3    C4   C53  C63  -122.01  30.0  1
+ EU8  Var_50   C13   O53  C53  C63    68.87  30.0  1
+ EU8  Var_51   O3    C3   C4   C53  -179.78  30.0  1
+ EU8  Var_52   O62   C13  O53  C53   165.51  30.0  1
+ EU8  Var_53   O2    C2   C3   C4    174.34  30.0  1
+ EU8  Var_54   O53   C53  C4   O4   -125.97  30.0  1
+ EU8  Var_55   C2    C3   C4   O4   -175.97  30.0  1
+ EU8  Var_56   O62   C13  C2   C3    -97.28  30.0  1
+ EU8  Var_57   C13   C2   C3   O3    170.00  30.0  1
+ EU8  Var_58   O53   C13  C2   O2    140.87  30.0  1
+ EU8  Var_59   C31   C41  C52  C62   -83.07  30.0  1
+ EU8  Var_60   C12   O52  C52  C62    81.79  30.0  1
+ EU8  Var_61   O31   C31  C41  C52  -172.44  30.0  1
+ EU8  Var_62   O61   C12  O52  C52   179.02  30.0  1
+ EU8  Var_63   O21   C21  C31  C41   174.52  30.0  1
+ EU8  Var_64   C21   C31  C41  O41    66.77  30.0  1
+ EU8  Var_65   O52   C52  C41  O41   -69.43  30.0  1
+ EU8  Var_66   O61   C12  C21  C31  -176.74  30.0  1
+ EU8  Var_67   C12   C21  C31  O31   175.36  30.0  1
+ EU8  Var_68   O52   C12  C21  O21  -173.71  30.0  1
+ EU8  Var_69   C32   C42  C51  C61   -81.08  30.0  1
+ EU8  Var_70   C11   O51  C51  C61    70.42  30.0  1
+ EU8  Var_71   O32   C32  C42  C51  -172.39  30.0  1
+ EU8  Var_72   O6    C11  O51  C51  -178.44  30.0  1
+ EU8  Var_73   O42   C42  C51  O51   -75.22  30.0  1
+ EU8  Var_74   O22   C22  C11  O51    62.64  30.0  1
+ EU8  Var_75   O32   C32  C22  C11   176.13  30.0  1
+ EU8  Var_76   C32   C22  C11  O6   -175.46  30.0  1
+ EU8  Var_77   O22   C22  C32  C42   -68.35  30.0  1
+ EU8  Var_78   C22   C32  C42  O42    74.51  30.0  1
+ EU8  Var_79   H31   C3   C4   C53   -65.56  30.0  1
+ EU8  Var_80   H131  C13  O53  C53   -77.11  30.0  1
+ EU8  Var_81   H21   C2   C3   C4     51.13  30.0  1
+ EU8  Var_82   H531  C53  C4   C3    119.15  30.0  1
+ EU8  Var_83   H41   C4   C3   C2    -64.04  30.0  1
+ EU8  Var_84   H311  C31  C41  C52    65.80  30.0  1
+ EU8  Var_85   H121  C12  O52  C52   -66.71  30.0  1
+ EU8  Var_86   H211  C21  C31  C41   -64.81  30.0  1
+ EU8  Var_87   H521  C52  C41  C31   162.44  30.0  1
+ EU8  Var_88   H411  C41  C31  C21  -172.98  30.0  1
+ EU8  Var_89   H321  C32  C42  C51    67.98  30.0  1
+ EU8  Var_90   H111  C11  O51  C51   -57.19  30.0  1
+ EU8  Var_91   H421  C42  C51  O51   163.72  30.0  1
+ EU8  Var_92   H221  C22  C11  O51  -174.59  30.0  1
+ EU8  Var_93   H511  C51  O51  C11  -172.03  30.0  1
+ EU8  Var_94   C4    C53  C63  O63   -62.51  30.0  3
+ EU8  Var_95   O53   C53  C63  O63   171.38  30.0  3
+ EU8  Var_96   O4    C4   C53  C63   108.21  30.0  1
+ EU8  Var_97   S7    O4   C4   C53    50.90  30.0  3
+ EU8  Var_98   S6    O3   C3   C4    -76.43  30.0  3
+ EU8  Var_99   O3    C3   C4   O4    -48.80  30.0  1
+ EU8  Var_100  S7    O4   C4   C3    -76.91  30.0  3
+ EU8  Var_101  O2    C2   C3   O3     49.27  30.0  1
+ EU8  Var_102  C62   O62  C13  C2    -89.53  30.0  3
+ EU8  Var_103  S6    O3   C3   C2     46.36  30.0  3
+ EU8  Var_104  O62   C13  C2   O2     26.18  30.0  1
+ EU8  Var_105  C62   O62  C13  O53   150.72  30.0  3
+ EU8  Var_106  C41   C52  C62  O62    63.52  30.0  2
+ EU8  Var_107  O52   C52  C62  O62   -67.30  30.0  2
+ EU8  Var_108  O41   C41  C52  C62   158.90  30.0  1
+ EU8  Var_109  S3    O41  C41  C52   -99.11  30.0  1
+ EU8  Var_110  S2    O31  C31  C41  -102.05  30.0  1
+ EU8  Var_111  O31   C31  C41  O41   -53.17  30.0  1
+ EU8  Var_112  S3    O41  C41  C31   139.67  30.0  1
+ EU8  Var_113  O21   C21  C31  O31   -64.68  30.0  1
+ EU8  Var_114  S2    O31  C31  C21   137.08  30.0  1
+ EU8  Var_115  C61   O61  C12  C21    71.10  30.0  3
+ EU8  Var_116  O61   C12  C21  O21    64.45  30.0  1
+ EU8  Var_117  C61   O61  C12  O52   -52.81  30.0  3
+ EU8  Var_118  C42   C51  C61  O61   168.92  30.0  3
+ EU8  Var_119  O51   C51  C61  O61    41.87  30.0  3
+ EU8  Var_120  O42   C42  C51  C61   157.21  30.0  1
+ EU8  Var_121  S5    O42  C42  C51  -100.35  30.0  2
+ EU8  Var_122  S4    O6   C11  O51   109.54  30.0  3
+ EU8  Var_123  S1    O22  C22  C11   117.47  30.0  3
+ EU8  Var_124  O22   C22  C11  O6    -55.07  30.0  1
+ EU8  Var_125  S     O32  C32  C42  -120.80  30.0  3
+ EU8  Var_126  O32   C32  C42  O42   -50.12  30.0  1
+ EU8  Var_127  S5    O42  C42  C32   137.31  30.0  2
+ EU8  Var_128  S1    O22  C22  C32  -123.58  30.0  3
+ EU8  Var_129  O22   C22  C32  O32    55.16  30.0  1
+ EU8  Var_130  S     O32  C32  C22   113.45  30.0  3
+ EU8  Var_131  S4    O6   C11  C22  -130.00  30.0  3
+ EU8  Var_132  H631  C63  C53  C4    176.23  30.0  1
+ EU8  Var_133  H632  C63  C53  C4     58.73  30.0  1
+ EU8  Var_134  H22   O2   C2   C3    -73.27  30.0  3
+ EU8  Var_135  H621  C62  C52  C41  -175.61  30.0  3
+ EU8  Var_136  H622  C62  C52  C41   -60.93  30.0  3
+ EU8  Var_137  H212  O21  C21  C31   177.19  30.0  3
+ EU8  Var_138  H611  C61  C51  O51   -77.47  30.0  2
+ EU8  Var_139  H612  C61  C51  O51   166.51  30.0  2
+ EU8  Var_140  H633  O63  C63  C53  -174.97  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

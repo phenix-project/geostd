@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 4OE  4OE  5-(4-fluorophenyl)-4-[4-fluoro-3-(trifluoromethyl)phenyl]-1H-pyrazole  ligand  32  23  .  2022-07-23  2022-07-26
+ 4OE  4OE  5-(4-fluorophenyl)-4-[4-fluoro-3-(trifluoromethyl)phenyl]-1H-pyrazole  ligand  32  23  .  2022-07-23  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_4OE
@@ -186,48 +187,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 4OE  CONST_01  CAT  CAS  CAM  CAU  180.00   0.0  0
- 4OE  CONST_02  CAK  CAS  CAM  CAU    0.00   0.0  0
- 4OE  CONST_03  CAK  CAH  CAQ  CAU    0.00   0.0  0
- 4OE  CONST_06  CAH  CAK  CAS  CAM    0.00   0.0  0
- 4OE  CONST_07  CAH  CAQ  CAU  CAM    0.00   0.0  0
- 4OE  CONST_08  CAS  CAM  CAU  CAQ    0.00   0.0  0
- 4OE  CONST_09  CAS  CAK  CAH  CAQ    0.00   0.0  0
- 4OE  CONST_10  CAT  CAS  CAK  CAH  180.00   0.0  0
- 4OE  CONST_13  CAR  CAV  CAT  CAS    0.00   0.0  0
- 4OE  CONST_14  NAO  CAV  CAT  CAS  180.00   0.0  0
- 4OE  CONST_15  NAN  CAL  CAT  CAS  180.00   0.0  0
- 4OE  CONST_18  NAN  NAO  CAV  CAT    0.00   0.0  0
- 4OE  CONST_19  NAO  NAN  CAL  CAT    0.00   0.0  0
- 4OE  CONST_20  CAV  NAO  NAN  CAL    0.00   0.0  0
- 4OE  CONST_21  CAR  CAV  CAT  CAL  180.00   0.0  0
- 4OE  CONST_22  NAO  CAV  CAT  CAL    0.00   0.0  0
- 4OE  CONST_23  CAR  CAV  NAO  NAN  180.00   0.0  0
- 4OE  CONST_24  CAV  CAT  CAL  NAN    0.00   0.0  0
- 4OE  CONST_27  CAG  CAJ  CAR  CAV  180.00   0.0  0
- 4OE  CONST_28  CAF  CAI  CAR  CAV  180.00   0.0  0
- 4OE  CONST_29  CAP  CAG  CAJ  CAR    0.00   0.0  0
- 4OE  CONST_30  CAP  CAF  CAI  CAR    0.00   0.0  0
- 4OE  CONST_31  CAG  CAP  CAF  CAI    0.00   0.0  0
- 4OE  CONST_32  CAG  CAJ  CAR  CAI    0.00   0.0  0
- 4OE  CONST_33  CAJ  CAG  CAP  CAF    0.00   0.0  0
- 4OE  CONST_34  CAJ  CAR  CAI  CAF    0.00   0.0  0
- 4OE  CONST_35  CAS  CAM  CAU  CAW  180.00   0.0  0
- 4OE  CONST_36  CAH  CAQ  CAU  CAW  180.00   0.0  0
- 4OE  CONST_37  FAB  CAQ  CAU  CAM  180.00   0.0  0
- 4OE  CONST_38  CAK  CAH  CAQ  FAB  180.00   0.0  0
- 4OE  CONST_39  FAA  CAP  CAF  CAI  180.00   0.0  0
- 4OE  CONST_40  CAJ  CAG  CAP  FAA  180.00   0.0  0
- 4OE  CONST_41  H2   CAH  CAQ  CAU  180.00   0.0  0
- 4OE  CONST_42  H3   CAK  CAS  CAM  180.00   0.0  0
- 4OE  CONST_43  H1   CAM  CAU  CAQ  180.00   0.0  0
- 4OE  CONST_44  H4   CAL  CAT  CAS    0.00   0.0  0
- 4OE  CONST_45  H5   NAO  CAV  CAT  180.00   0.0  0
- 4OE  CONST_46  H9   CAJ  CAR  CAV    0.00   0.0  0
- 4OE  CONST_47  H6   CAI  CAR  CAV    0.00   0.0  0
- 4OE  CONST_48  H8   CAG  CAJ  CAR  180.00   0.0  0
- 4OE  CONST_49  H7   CAF  CAI  CAR  180.00   0.0  0
- 4OE  Var_01    CAM  CAU  CAW  FAC   -0.22  30.0  2
+ 4OE  CONST_01  CAT  CAS  CAM  CAU   180.00   0.0  0
+ 4OE  CONST_02  CAK  CAS  CAM  CAU     0.00   0.0  0
+ 4OE  CONST_03  CAK  CAH  CAQ  CAU     0.00   0.0  0
+ 4OE  CONST_04  CAH  CAK  CAS  CAM     0.00   0.0  0
+ 4OE  CONST_05  CAH  CAQ  CAU  CAM     0.00   0.0  0
+ 4OE  CONST_06  CAS  CAM  CAU  CAQ     0.00   0.0  0
+ 4OE  CONST_07  CAS  CAK  CAH  CAQ     0.00   0.0  0
+ 4OE  CONST_08  CAT  CAS  CAK  CAH   180.00   0.0  0
+ 4OE  CONST_09  CAR  CAV  CAT  CAS     0.00   0.0  0
+ 4OE  CONST_10  NAO  CAV  CAT  CAS   180.00   0.0  0
+ 4OE  CONST_11  NAN  CAL  CAT  CAS   180.00   0.0  0
+ 4OE  CONST_12  NAN  NAO  CAV  CAT     0.00   0.0  0
+ 4OE  CONST_13  NAO  NAN  CAL  CAT     0.00   0.0  0
+ 4OE  CONST_14  CAV  NAO  NAN  CAL     0.00   0.0  0
+ 4OE  CONST_15  CAR  CAV  CAT  CAL   180.00   0.0  0
+ 4OE  CONST_16  NAO  CAV  CAT  CAL     0.00   0.0  0
+ 4OE  CONST_17  CAR  CAV  NAO  NAN   180.00   0.0  0
+ 4OE  CONST_18  CAV  CAT  CAL  NAN     0.00   0.0  0
+ 4OE  CONST_19  CAG  CAJ  CAR  CAV   180.00   0.0  0
+ 4OE  CONST_20  CAF  CAI  CAR  CAV   180.00   0.0  0
+ 4OE  CONST_21  CAP  CAG  CAJ  CAR     0.00   0.0  0
+ 4OE  CONST_22  CAP  CAF  CAI  CAR     0.00   0.0  0
+ 4OE  CONST_23  CAG  CAP  CAF  CAI     0.00   0.0  0
+ 4OE  CONST_24  CAG  CAJ  CAR  CAI     0.00   0.0  0
+ 4OE  CONST_25  CAJ  CAG  CAP  CAF     0.00   0.0  0
+ 4OE  CONST_26  CAJ  CAR  CAI  CAF     0.00   0.0  0
+ 4OE  CONST_27  CAS  CAM  CAU  CAW   180.00   0.0  0
+ 4OE  CONST_28  CAH  CAQ  CAU  CAW   180.00   0.0  0
+ 4OE  CONST_29  FAB  CAQ  CAU  CAM   180.00   0.0  0
+ 4OE  CONST_30  CAK  CAH  CAQ  FAB   180.00   0.0  0
+ 4OE  CONST_31  FAA  CAP  CAF  CAI   180.00   0.0  0
+ 4OE  CONST_32  CAJ  CAG  CAP  FAA   180.00   0.0  0
+ 4OE  CONST_33  H2   CAH  CAQ  CAU   180.00   0.0  0
+ 4OE  CONST_34  H3   CAK  CAS  CAM   180.00   0.0  0
+ 4OE  CONST_35  H1   CAM  CAU  CAQ   180.00   0.0  0
+ 4OE  CONST_36  H4   CAL  CAT  CAS     0.00   0.0  0
+ 4OE  CONST_37  H5   NAO  CAV  CAT   180.00   0.0  0
+ 4OE  CONST_38  H9   CAJ  CAR  CAV     0.00   0.0  0
+ 4OE  CONST_39  H6   CAI  CAR  CAV     0.00   0.0  0
+ 4OE  CONST_40  H8   CAG  CAJ  CAR   180.00   0.0  0
+ 4OE  CONST_41  H7   CAF  CAI  CAR   180.00   0.0  0
+ 4OE  Var_01    CAM  CAU  CAW  FAC    -0.22  30.0  2
+ 4OE  Var_02    CAV  CAT  CAS  CAM  -140.51  30.0  2
+ 4OE  Var_03    CAL  CAT  CAS  CAM    42.38  30.0  2
+ 4OE  Var_04    CAV  CAT  CAS  CAK    40.98  30.0  2
+ 4OE  Var_05    CAL  CAT  CAS  CAK  -136.13  30.0  2
+ 4OE  Var_06    CAJ  CAR  CAV  CAT  -138.51  30.0  3
+ 4OE  Var_07    CAI  CAR  CAV  CAT    42.27  30.0  3
+ 4OE  Var_08    CAJ  CAR  CAV  NAO    43.10  30.0  3
+ 4OE  Var_09    CAI  CAR  CAV  NAO  -136.12  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

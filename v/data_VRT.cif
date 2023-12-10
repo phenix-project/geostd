@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VRT  VRT  N-[(2R,3R,4S,5R)-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)-4-oxidanyl-oxolan-3-yl]-2-azanyl-pentanamide  ligand  49  26  .  2021-08-24  2021-08-24  
+ VRT  VRT  N-[(2R,3R,4S,5R)-2-(6-aminopurin-9-yl)-5-(hydroxymethyl)-4-oxidanyl-oxolan-3-yl]-2-azanyl-pentanamide  ligand  49  26  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VRT
@@ -255,38 +256,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VRT  CONST_01  C4    N3   C2  N1    0.00   0.0  0
- VRT  CONST_02  C4    C5   C6  N1    0.00   0.0  0
- VRT  CONST_03  N7    C5   C6  N1  180.00   0.0  0
- VRT  CONST_04  C5    C6   N1  C2    0.00   0.0  0
- VRT  CONST_05  C5    C4   N3  C2    0.00   0.0  0
- VRT  CONST_06  N9    C4   N3  C2  180.00   0.0  0
- VRT  CONST_07  C6    N1   C2  N3    0.00   0.0  0
- VRT  CONST_08  C6    C5   C4  N3    0.00   0.0  0
- VRT  CONST_09  N7    C5   C4  N3  180.00   0.0  0
- VRT  CONST_10  C8    N9   C4  N3  180.00   0.0  0
- VRT  CONST_11  C8    N7   C5  C4    0.00   0.0  0
- VRT  CONST_12  N7    C8   N9  C4    0.00   0.0  0
- VRT  CONST_13  C8    N9   C4  C5    0.00   0.0  0
- VRT  CONST_14  N9    C8   N7  C5    0.00   0.0  0
- VRT  CONST_15  N9    C4   C5  C6  180.00   0.0  0
- VRT  CONST_16  C8    N7   C5  C6  180.00   0.0  0
- VRT  CONST_17  N9    C4   C5  N7    0.00   0.0  0
- VRT  CONST_18  C1'   N9   C4  N3    0.00   0.0  0
- VRT  CONST_19  C1'   N9   C4  C5  180.00   0.0  0
- VRT  CONST_20  C1'   N9   C8  N7  180.00   0.0  0
- VRT  CONST_21  N6    C6   N1  C2  180.00   0.0  0
- VRT  CONST_22  N6    C6   C5  C4  180.00   0.0  0
- VRT  CONST_23  N7    C5   C6  N6    0.00   0.0  0
- VRT  CONST_24  H2    C2   N3  C4  180.00   0.0  0
- VRT  CONST_25  H8    C8   N9  C4  180.00   0.0  0
- VRT  CONST_26  HN6   N6   C6  N1    0.00   0.0  0
- VRT  CONST_27  HN6A  N6   C6  N1  180.00   0.0  0
- VRT  CONST_28  C2'   N10  C   O     0.00   0.0  0
- VRT  CONST_29  C2'   N10  C   CA  180.00   0.0  0
- VRT  CONST_30  HN10  N10  C   O   180.00   0.0  0
- VRT  Var_01    CD    CG   CB  CA  179.74  30.0  3
- VRT  Var_02    HD    CD   CG  CB  -60.20  30.0  3
+ VRT  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ VRT  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ VRT  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ VRT  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ VRT  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ VRT  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ VRT  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ VRT  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ VRT  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ VRT  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ VRT  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ VRT  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ VRT  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ VRT  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ VRT  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ VRT  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ VRT  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ VRT  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ VRT  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ VRT  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ VRT  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ VRT  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ VRT  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ VRT  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ VRT  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ VRT  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ VRT  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ VRT  CONST_28  C2'   N10  C    O       0.00   0.0  0
+ VRT  CONST_29  C2'   N10  C    CA    180.00   0.0  0
+ VRT  CONST_30  HN10  N10  C    O     180.00   0.0  0
+ VRT  Var_01    CD    CG   CB   CA    179.74  30.0  3
+ VRT  Var_02    HD    CD   CG   CB    -60.20  30.0  3
+ VRT  Var_03    C2'   C1'  N9   C4     79.17  30.0  2
+ VRT  Var_04    O4'   C1'  N9   C4   -162.09  30.0  2
+ VRT  Var_05    C2'   C1'  N9   C8    -99.46  30.0  2
+ VRT  Var_06    O4'   C1'  N9   C8     19.28  30.0  2
+ VRT  Var_07    C3'   C2'  C1'  N9    147.49  30.0  1
+ VRT  Var_08    C4'   O4'  C1'  N9   -127.14  30.0  1
+ VRT  Var_09    C4'   C3'  C2'  C1'   -37.14  30.0  1
+ VRT  Var_10    C3'   C4'  O4'  C1'   -19.87  30.0  1
+ VRT  Var_11    C4'   O4'  C1'  C2'    -4.89  30.0  1
+ VRT  Var_12    O4'   C4'  C3'  C2'    35.65  30.0  1
+ VRT  Var_13    O4'   C1'  C2'  C3'    27.34  30.0  1
+ VRT  Var_14    N10   C2'  C1'  N9    -87.93  30.0  1
+ VRT  Var_15    O3'   C3'  C2'  C1'    81.00  30.0  1
+ VRT  Var_16    C5'   C4'  O4'  C1'   102.05  30.0  1
+ VRT  Var_17    O4'   C1'  C2'  N10   151.92  30.0  1
+ VRT  Var_18    C4'   C3'  C2'  N10  -157.72  30.0  1
+ VRT  Var_19    C5'   C4'  C3'  C2'   -85.61  30.0  1
+ VRT  Var_20    O4'   C4'  C3'  O3'   -79.04  30.0  1
+ VRT  Var_21    H1'   C1'  N9   C4    -42.41  30.0  2
+ VRT  Var_22    H2'   C2'  C1'  N9     33.55  30.0  1
+ VRT  Var_23    H3'   C3'  C2'  C1'  -155.20  30.0  1
+ VRT  Var_24    H4'   C4'  O4'  C1'  -138.70  30.0  1
+ VRT  Var_25    C1'   C2'  N10  C    -179.91  30.0  3
+ VRT  Var_26    C3'   C2'  N10  C     -64.36  30.0  3
+ VRT  Var_27    O3'   C3'  C2'  N10   -39.58  30.0  1
+ VRT  Var_28    O5'   C5'  C4'  C3'   172.50  30.0  3
+ VRT  Var_29    C5'   C4'  C3'  O3'   159.69  30.0  1
+ VRT  Var_30    O5'   C5'  C4'  O4'    54.90  30.0  3
+ VRT  Var_31    HN10  N10  C2'  C1'    11.99  30.0  1
+ VRT  Var_32    HO3'  O3'  C3'  C2'   176.76  30.0  3
+ VRT  Var_33    H5'   C5'  C4'  C3'   -66.08  30.0  3
+ VRT  Var_34    H5'A  C5'  C4'  C3'    49.99  30.0  3
+ VRT  Var_35    HO5'  O5'  C5'  C4'  -176.71  30.0  3
+ VRT  Var_36    CG    CB   CA   C     171.83  30.0  3
+ VRT  Var_37    O     C    CA   N     -38.11  30.0  2
+ VRT  Var_38    N10   C    CA   N     143.98  30.0  2
+ VRT  Var_39    CG    CB   CA   N     -63.51  30.0  3
+ VRT  Var_40    CB    CA   C    O      84.95  30.0  3
+ VRT  Var_41    N10   C    CA   CB    -92.96  30.0  2
+ VRT  Var_42    HN    N    CA   C     -62.91  30.0  3
+ VRT  Var_43    HNA   N    CA   C      53.41  30.0  3
+ VRT  Var_44    HB    CB   CA   C     -65.63  30.0  3
+ VRT  Var_45    HBA   CB   CA   C      49.80  30.0  3
+ VRT  Var_46    HA    CA   C    O    -158.14  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

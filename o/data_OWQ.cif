@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OWQ  OWQ  3-(4-methoxyphenyl)-~{N}-[(3~{R})-1-pyridin-4-ylpyrrolidin-3-yl]-[1,2,3]triazolo[4,5-d]pyrimidin-5-amine  ligand  49  29  .  2022-03-23  2022-03-23
+ OWQ  OWQ  3-(4-methoxyphenyl)-~{N}-[(3~{R})-1-pyridin-4-ylpyrrolidin-3-yl]-[1,2,3]triazolo[4,5-d]pyrimidin-5-amine  ligand  49  29  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OWQ
@@ -271,49 +272,64 @@ _chem_comp_tor.period
  OWQ  CONST_12  N8   N13  N7   C9    180.00   0.0  0
  OWQ  CONST_13  C14  C11  C12  C9      0.00   0.0  0
  OWQ  CONST_14  C14  C15  C10  C9      0.00   0.0  0
- OWQ  CONST_17  C11  C12  C9   C10     0.00   0.0  0
- OWQ  CONST_18  C11  C14  C15  C10     0.00   0.0  0
- OWQ  CONST_19  N7   C9   C12  C11   180.00   0.0  0
- OWQ  CONST_22  C15  C10  C9   C12     0.00   0.0  0
- OWQ  CONST_23  C15  C14  C11  C12     0.00   0.0  0
- OWQ  CONST_24  N7   C9   C10  C15   180.00   0.0  0
- OWQ  CONST_25  N27  C26  C25  C24     0.00   0.0  0
- OWQ  CONST_26  N27  C28  C29  C24     0.00   0.0  0
- OWQ  CONST_27  N8   C4   C3   N2    180.00   0.0  0
- OWQ  CONST_28  C5   C4   C3   N2      0.00   0.0  0
- OWQ  CONST_29  C5   N6   C1   N2      0.00   0.0  0
- OWQ  CONST_30  N7   N13  N8   C4      0.00   0.0  0
- OWQ  CONST_31  N13  N7   C5   C4      0.00   0.0  0
- OWQ  CONST_32  N13  N8   C4   C5      0.00   0.0  0
- OWQ  CONST_33  N8   N13  N7   C5      0.00   0.0  0
- OWQ  CONST_34  N8   C4   C5   N7      0.00   0.0  0
- OWQ  CONST_35  C28  N27  C26  C25     0.00   0.0  0
- OWQ  CONST_36  C28  C29  C24  C25     0.00   0.0  0
- OWQ  CONST_37  C29  C28  N27  C26     0.00   0.0  0
- OWQ  CONST_38  C29  C24  C25  C26     0.00   0.0  0
- OWQ  CONST_39  C26  C25  C24  N22   180.00   0.0  0
- OWQ  CONST_40  C28  C29  C24  N22   180.00   0.0  0
- OWQ  CONST_41  N17  C1   N2   C3    180.00   0.0  0
- OWQ  CONST_42  O16  C14  C15  C10   180.00   0.0  0
- OWQ  CONST_43  O16  C14  C11  C12   180.00   0.0  0
- OWQ  CONST_44  N17  C1   N6   C5    180.00   0.0  0
- OWQ  CONST_45  C19  N17  C1   N6      0.00   0.0  0
- OWQ  CONST_46  N2   C1   N17  C19   180.00   0.0  0
- OWQ  CONST_47  H1   C3   N2   C1    180.00   0.0  0
- OWQ  CONST_48  H3   C11  C12  C9    180.00   0.0  0
- OWQ  CONST_49  H5   C15  C10  C9    180.00   0.0  0
- OWQ  CONST_50  H4   C12  C9   C10   180.00   0.0  0
- OWQ  CONST_51  H2   C10  C9   C12   180.00   0.0  0
- OWQ  CONST_52  H18  C26  C25  C24   180.00   0.0  0
- OWQ  CONST_53  H19  C28  C29  C24   180.00   0.0  0
- OWQ  CONST_54  H17  C25  C24  N22     0.00   0.0  0
- OWQ  CONST_55  H20  C29  C24  N22     0.00   0.0  0
- OWQ  CONST_56  H11  N17  C1   N6    180.00   0.0  0
+ OWQ  CONST_15  C11  C12  C9   C10     0.00   0.0  0
+ OWQ  CONST_16  C11  C14  C15  C10     0.00   0.0  0
+ OWQ  CONST_17  N7   C9   C12  C11   180.00   0.0  0
+ OWQ  CONST_18  C15  C10  C9   C12     0.00   0.0  0
+ OWQ  CONST_19  C15  C14  C11  C12     0.00   0.0  0
+ OWQ  CONST_20  N7   C9   C10  C15   180.00   0.0  0
+ OWQ  CONST_21  N27  C26  C25  C24     0.00   0.0  0
+ OWQ  CONST_22  N27  C28  C29  C24     0.00   0.0  0
+ OWQ  CONST_23  N8   C4   C3   N2    180.00   0.0  0
+ OWQ  CONST_24  C5   C4   C3   N2      0.00   0.0  0
+ OWQ  CONST_25  C5   N6   C1   N2      0.00   0.0  0
+ OWQ  CONST_26  N7   N13  N8   C4      0.00   0.0  0
+ OWQ  CONST_27  N13  N7   C5   C4      0.00   0.0  0
+ OWQ  CONST_28  N13  N8   C4   C5      0.00   0.0  0
+ OWQ  CONST_29  N8   N13  N7   C5      0.00   0.0  0
+ OWQ  CONST_30  N8   C4   C5   N7      0.00   0.0  0
+ OWQ  CONST_31  C28  N27  C26  C25     0.00   0.0  0
+ OWQ  CONST_32  C28  C29  C24  C25     0.00   0.0  0
+ OWQ  CONST_33  C29  C28  N27  C26     0.00   0.0  0
+ OWQ  CONST_34  C29  C24  C25  C26     0.00   0.0  0
+ OWQ  CONST_35  C26  C25  C24  N22   180.00   0.0  0
+ OWQ  CONST_36  C28  C29  C24  N22   180.00   0.0  0
+ OWQ  CONST_37  N17  C1   N2   C3    180.00   0.0  0
+ OWQ  CONST_38  O16  C14  C15  C10   180.00   0.0  0
+ OWQ  CONST_39  O16  C14  C11  C12   180.00   0.0  0
+ OWQ  CONST_40  N17  C1   N6   C5    180.00   0.0  0
+ OWQ  CONST_41  C19  N17  C1   N6      0.00   0.0  0
+ OWQ  CONST_42  N2   C1   N17  C19   180.00   0.0  0
+ OWQ  CONST_43  H1   C3   N2   C1    180.00   0.0  0
+ OWQ  CONST_44  H3   C11  C12  C9    180.00   0.0  0
+ OWQ  CONST_45  H5   C15  C10  C9    180.00   0.0  0
+ OWQ  CONST_46  H4   C12  C9   C10   180.00   0.0  0
+ OWQ  CONST_47  H2   C10  C9   C12   180.00   0.0  0
+ OWQ  CONST_48  H18  C26  C25  C24   180.00   0.0  0
+ OWQ  CONST_49  H19  C28  C29  C24   180.00   0.0  0
+ OWQ  CONST_50  H17  C25  C24  N22     0.00   0.0  0
+ OWQ  CONST_51  H20  C29  C24  N22     0.00   0.0  0
+ OWQ  CONST_52  H11  N17  C1   N6    180.00   0.0  0
  OWQ  Var_01    C24  N22  C23  C19   166.12  30.0  1
  OWQ  Var_02    N22  C21  C20  C19    30.65  30.0  1
  OWQ  Var_03    C23  N22  C21  C20   -11.94  30.0  1
  OWQ  Var_04    C25  C24  N22  C21     2.91  30.0  1
  OWQ  Var_05    H12  C18  O16  C14  -179.94  30.0  3
+ OWQ  Var_06    C5   N7   C9   C10   140.19  30.0  3
+ OWQ  Var_07    N13  N7   C9   C10   -37.50  30.0  3
+ OWQ  Var_08    C5   N7   C9   C12   -39.65  30.0  3
+ OWQ  Var_09    N13  N7   C9   C12   142.66  30.0  3
+ OWQ  Var_10    N22  C23  C19  C20    30.70  30.0  1
+ OWQ  Var_11    C23  C19  C20  C21   -38.15  30.0  1
+ OWQ  Var_12    C23  C19  N17  C1    166.88  30.0  3
+ OWQ  Var_13    C20  C19  N17  C1    -75.82  30.0  3
+ OWQ  Var_14    N17  C19  C20  C21  -159.85  30.0  1
+ OWQ  Var_15    N22  C23  C19  N17   155.41  30.0  1
+ OWQ  Var_16    H15  C23  C19  C20   150.90  30.0  1
+ OWQ  Var_17    H16  C23  C19  C20   -88.88  30.0  1
+ OWQ  Var_18    H6   C19  C20  C21    77.48  30.0  1
+ OWQ  Var_19    C18  O16  C14  C11    -1.09  30.0  2
+ OWQ  Var_20    C18  O16  C14  C15   179.06  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

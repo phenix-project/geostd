@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VNF  VNF  4-(4-chlorophenyl)-N-[(1R)-2-imidazol-1-yl-1-phenyl-ethyl]benzamide  ligand  49  29  .  2021-08-24  2021-08-24  
+ VNF  VNF  4-(4-chlorophenyl)-N-[(1R)-2-imidazol-1-yl-1-phenyl-ethyl]benzamide  ligand  49  29  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VNF
@@ -271,42 +272,55 @@ _chem_comp_tor.period
  VNF  CONST_18  CAO   CAZ  CAP  CAL     0.00   0.0  0
  VNF  CONST_19  CAY   CAZ  CAP  CAL   180.00   0.0  0
  VNF  CONST_20  CAO   CAK  CAX  CAL     0.00   0.0  0
- VNF  CONST_25  CAR   NAT  CAF  CAQ     0.00   0.0  0
- VNF  CONST_26  NAT   CAR  NBC  CAQ     0.00   0.0  0
- VNF  CONST_27  NBC   CAQ  CAF  NAT     0.00   0.0  0
- VNF  CONST_28  CAY   CAM  CAI  CAW     0.00   0.0  0
- VNF  CONST_29  CAY   CAN  CAJ  CAW     0.00   0.0  0
- VNF  CONST_30  CAZ   CAO  CAK  CAX     0.00   0.0  0
- VNF  CONST_31  CAZ   CAP  CAL  CAX     0.00   0.0  0
- VNF  CONST_32  CAM   CAI  CAW  CLAB  180.00   0.0  0
- VNF  CONST_33  CAN   CAJ  CAW  CLAB  180.00   0.0  0
- VNF  CONST_34  CBB   CBA  CAG  CAD   180.00   0.0  0
- VNF  CONST_35  CBB   CBA  CAH  CAE   180.00   0.0  0
- VNF  CONST_36  CAS   NBC  CAQ  CAF   180.00   0.0  0
- VNF  CONST_37  CAV   CAX  CAK  CAO   180.00   0.0  0
- VNF  CONST_38  CAV   CAX  CAL  CAP   180.00   0.0  0
- VNF  CONST_39  NAT   CAR  NBC  CAS   180.00   0.0  0
- VNF  CONST_40  HAH   CAH  CAE  CAC   180.00   0.0  0
- VNF  CONST_41  HAG   CAG  CAD  CAC   180.00   0.0  0
- VNF  CONST_42  HAE   CAE  CAC  CAD   180.00   0.0  0
- VNF  CONST_43  HAD   CAD  CAC  CAE   180.00   0.0  0
- VNF  CONST_44  HAR   CAR  NAT  CAF   180.00   0.0  0
- VNF  CONST_45  HAC   CAC  CAD  CAG   180.00   0.0  0
- VNF  CONST_46  HAJ   CAJ  CAW  CAI   180.00   0.0  0
- VNF  CONST_47  HAI   CAI  CAW  CAJ   180.00   0.0  0
- VNF  CONST_48  HAL   CAL  CAX  CAK   180.00   0.0  0
- VNF  CONST_49  HAK   CAK  CAX  CAL   180.00   0.0  0
- VNF  CONST_50  HAN   CAN  CAY  CAM   180.00   0.0  0
- VNF  CONST_51  HAM   CAM  CAY  CAN   180.00   0.0  0
- VNF  CONST_52  HAP   CAP  CAZ  CAO   180.00   0.0  0
- VNF  CONST_53  HAO   CAO  CAZ  CAP   180.00   0.0  0
- VNF  CONST_54  HAF   CAF  NAT  CAR   180.00   0.0  0
- VNF  CONST_55  HAQ   CAQ  NBC  CAR   180.00   0.0  0
- VNF  CONST_56  CBB   NAU  CAV  CAX   180.00   0.0  0
- VNF  CONST_57  HNAU  NAU  CAV  CAX     0.00   0.0  0
- VNF  CONST_58  CBB   NAU  CAV  OAA     0.00   0.0  0
+ VNF  CONST_21  CAR   NAT  CAF  CAQ     0.00   0.0  0
+ VNF  CONST_22  NAT   CAR  NBC  CAQ     0.00   0.0  0
+ VNF  CONST_23  NBC   CAQ  CAF  NAT     0.00   0.0  0
+ VNF  CONST_24  CAY   CAM  CAI  CAW     0.00   0.0  0
+ VNF  CONST_25  CAY   CAN  CAJ  CAW     0.00   0.0  0
+ VNF  CONST_26  CAZ   CAO  CAK  CAX     0.00   0.0  0
+ VNF  CONST_27  CAZ   CAP  CAL  CAX     0.00   0.0  0
+ VNF  CONST_28  CAM   CAI  CAW  CLAB  180.00   0.0  0
+ VNF  CONST_29  CAN   CAJ  CAW  CLAB  180.00   0.0  0
+ VNF  CONST_30  CBB   CBA  CAG  CAD   180.00   0.0  0
+ VNF  CONST_31  CBB   CBA  CAH  CAE   180.00   0.0  0
+ VNF  CONST_32  CAS   NBC  CAQ  CAF   180.00   0.0  0
+ VNF  CONST_33  CAV   CAX  CAK  CAO   180.00   0.0  0
+ VNF  CONST_34  CAV   CAX  CAL  CAP   180.00   0.0  0
+ VNF  CONST_35  NAT   CAR  NBC  CAS   180.00   0.0  0
+ VNF  CONST_36  HAH   CAH  CAE  CAC   180.00   0.0  0
+ VNF  CONST_37  HAG   CAG  CAD  CAC   180.00   0.0  0
+ VNF  CONST_38  HAE   CAE  CAC  CAD   180.00   0.0  0
+ VNF  CONST_39  HAD   CAD  CAC  CAE   180.00   0.0  0
+ VNF  CONST_40  HAR   CAR  NAT  CAF   180.00   0.0  0
+ VNF  CONST_41  HAC   CAC  CAD  CAG   180.00   0.0  0
+ VNF  CONST_42  HAJ   CAJ  CAW  CAI   180.00   0.0  0
+ VNF  CONST_43  HAI   CAI  CAW  CAJ   180.00   0.0  0
+ VNF  CONST_44  HAL   CAL  CAX  CAK   180.00   0.0  0
+ VNF  CONST_45  HAK   CAK  CAX  CAL   180.00   0.0  0
+ VNF  CONST_46  HAN   CAN  CAY  CAM   180.00   0.0  0
+ VNF  CONST_47  HAM   CAM  CAY  CAN   180.00   0.0  0
+ VNF  CONST_48  HAP   CAP  CAZ  CAO   180.00   0.0  0
+ VNF  CONST_49  HAO   CAO  CAZ  CAP   180.00   0.0  0
+ VNF  CONST_50  HAF   CAF  NAT  CAR   180.00   0.0  0
+ VNF  CONST_51  HAQ   CAQ  NBC  CAR   180.00   0.0  0
+ VNF  CONST_52  CBB   NAU  CAV  CAX   180.00   0.0  0
+ VNF  CONST_53  HNAU  NAU  CAV  CAX     0.00   0.0  0
+ VNF  CONST_54  CBB   NAU  CAV  OAA     0.00   0.0  0
  VNF  Var_01    CAK   CAX  CAV  OAA    30.50  30.0  2
  VNF  Var_02    CBB   CAS  NBC  CAQ    99.55  30.0  2
+ VNF  Var_03    CAO   CAZ  CAY  CAM   144.94  30.0  2
+ VNF  Var_04    CAP   CAZ  CAY  CAM   -35.44  30.0  2
+ VNF  Var_05    CAO   CAZ  CAY  CAN   -35.14  30.0  2
+ VNF  Var_06    CAP   CAZ  CAY  CAN   144.48  30.0  2
+ VNF  Var_07    CAS   CBB  CBA  CAG   -86.66  30.0  3
+ VNF  Var_08    NAU   CBB  CBA  CAG   150.49  30.0  3
+ VNF  Var_09    CAS   CBB  CBA  CAH    90.85  30.0  3
+ VNF  Var_10    NAU   CBB  CBA  CAH   -32.00  30.0  3
+ VNF  Var_11    NBC   CAS  CBB  CBA   179.51  30.0  3
+ VNF  Var_12    HBB   CBB  CBA  CAG    30.85  30.0  3
+ VNF  Var_13    CBA   CBB  NAU  CAV   -81.61  30.0  3
+ VNF  Var_14    NAU   CBB  CAS  NBC   -55.00  30.0  2
+ VNF  Var_15    CAV   NAU  CBB  CAS   155.47  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

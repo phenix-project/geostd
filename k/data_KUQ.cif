@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KUQ  KUQ  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-(2-phenyl-1~{H}-imidazol-4-yl)oxane-3,4,5-triol  ligand  40  22  .  2022-07-25  2022-07-26
+ KUQ  KUQ  (2~{R},3~{S},4~{R},5~{R},6~{S})-2-(hydroxymethyl)-6-(2-phenyl-1~{H}-imidazol-4-yl)oxane-3,4,5-triol  ligand  40  22  .  2022-07-25  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KUQ
@@ -219,34 +220,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KUQ  CONST_01  N3   C4   C6   C11    0.00  0.0  0
- KUQ  CONST_02  N5   C4   C6   C11  180.00  0.0  0
- KUQ  CONST_03  C8   C7   C6   C11    0.00  0.0  0
- KUQ  CONST_04  C8   C9   C10  C11    0.00  0.0  0
- KUQ  CONST_05  N5   C1   C2   N3     0.00  0.0  0
- KUQ  CONST_06  C1   N5   C4   N3     0.00  0.0  0
- KUQ  CONST_07  C7   C6   C4   N3   180.00  0.0  0
- KUQ  CONST_08  C4   C6   C11  C10  180.00  0.0  0
- KUQ  CONST_09  C7   C6   C11  C10    0.00  0.0  0
- KUQ  CONST_10  C7   C8   C9   C10    0.00  0.0  0
- KUQ  CONST_11  C4   C6   C7   C8   180.00  0.0  0
- KUQ  CONST_12  N5   C4   C6   C7     0.00  0.0  0
- KUQ  CONST_13  C1   C2   N3   C4     0.00  0.0  0
- KUQ  CONST_14  C2   C1   N5   C4     0.00  0.0  0
- KUQ  CONST_15  C6   C7   C8   C9     0.00  0.0  0
- KUQ  CONST_16  C6   C11  C10  C9     0.00  0.0  0
- KUQ  CONST_17  C6   C4   N5   C1   180.00  0.0  0
- KUQ  CONST_18  C2   N3   C4   N5     0.00  0.0  0
- KUQ  CONST_19  C6   C4   N3   C2   180.00  0.0  0
- KUQ  CONST_20  C1'  C1   C2   N3   180.00  0.0  0
- KUQ  CONST_21  C1'  C1   N5   C4   180.00  0.0  0
- KUQ  CONST_22  H5   C7   C6   C11  180.00  0.0  0
- KUQ  CONST_23  H6   C9   C10  C11  180.00  0.0  0
- KUQ  CONST_24  H4   C8   C9   C10  180.00  0.0  0
- KUQ  CONST_25  H3   C10  C9   C8   180.00  0.0  0
- KUQ  CONST_26  H1   C11  C6   C7   180.00  0.0  0
- KUQ  CONST_27  H13  C2   N3   C4   180.00  0.0  0
- KUQ  CONST_28  H2   N3   C2   C1   180.00  0.0  0
+ KUQ  CONST_01  N3   C4   C6   C11     0.00   0.0  0
+ KUQ  CONST_02  N5   C4   C6   C11   180.00   0.0  0
+ KUQ  CONST_03  C8   C7   C6   C11     0.00   0.0  0
+ KUQ  CONST_04  C8   C9   C10  C11     0.00   0.0  0
+ KUQ  CONST_05  N5   C1   C2   N3      0.00   0.0  0
+ KUQ  CONST_06  C1   N5   C4   N3      0.00   0.0  0
+ KUQ  CONST_07  C7   C6   C4   N3    180.00   0.0  0
+ KUQ  CONST_08  C4   C6   C11  C10   180.00   0.0  0
+ KUQ  CONST_09  C7   C6   C11  C10     0.00   0.0  0
+ KUQ  CONST_10  C7   C8   C9   C10     0.00   0.0  0
+ KUQ  CONST_11  C4   C6   C7   C8    180.00   0.0  0
+ KUQ  CONST_12  N5   C4   C6   C7      0.00   0.0  0
+ KUQ  CONST_13  C1   C2   N3   C4      0.00   0.0  0
+ KUQ  CONST_14  C2   C1   N5   C4      0.00   0.0  0
+ KUQ  CONST_15  C6   C7   C8   C9      0.00   0.0  0
+ KUQ  CONST_16  C6   C11  C10  C9      0.00   0.0  0
+ KUQ  CONST_17  C6   C4   N5   C1    180.00   0.0  0
+ KUQ  CONST_18  C2   N3   C4   N5      0.00   0.0  0
+ KUQ  CONST_19  C6   C4   N3   C2    180.00   0.0  0
+ KUQ  CONST_20  C1'  C1   C2   N3    180.00   0.0  0
+ KUQ  CONST_21  C1'  C1   N5   C4    180.00   0.0  0
+ KUQ  CONST_22  H5   C7   C6   C11   180.00   0.0  0
+ KUQ  CONST_23  H6   C9   C10  C11   180.00   0.0  0
+ KUQ  CONST_24  H4   C8   C9   C10   180.00   0.0  0
+ KUQ  CONST_25  H3   C10  C9   C8    180.00   0.0  0
+ KUQ  CONST_26  H1   C11  C6   C7    180.00   0.0  0
+ KUQ  CONST_27  H13  C2   N3   C4    180.00   0.0  0
+ KUQ  CONST_28  H2   N3   C2   C1    180.00   0.0  0
+ KUQ  Var_01    C3'  C4'  C5'  O5'   -56.18  30.0  1
+ KUQ  Var_02    C3'  C2'  C1'  O5'    56.05  30.0  1
+ KUQ  Var_03    C2   C1   C1'  O5'  -116.50  30.0  2
+ KUQ  Var_04    N5   C1   C1'  O5'    63.47  30.0  2
+ KUQ  Var_05    C2'  C3'  C4'  C5'    53.70  30.0  1
+ KUQ  Var_06    C2'  C1'  O5'  C5'   -62.28  30.0  1
+ KUQ  Var_07    C1   C1'  O5'  C5'   175.70  30.0  1
+ KUQ  Var_08    C1'  C2'  C3'  C4'   -53.75  30.0  1
+ KUQ  Var_09    C1'  O5'  C5'  C4'    62.41  30.0  1
+ KUQ  Var_10    C1   C1'  C2'  C3'   175.64  30.0  1
+ KUQ  Var_11    C2   C1   C1'  C2'   122.89  30.0  2
+ KUQ  Var_12    N5   C1   C1'  C2'   -57.14  30.0  2
+ KUQ  Var_13    O4'  C4'  C5'  O5'  -177.76  30.0  1
+ KUQ  Var_14    O2'  C2'  C1'  O5'   177.44  30.0  1
+ KUQ  Var_15    O3'  C3'  C4'  C5'   176.39  30.0  1
+ KUQ  Var_16    O2'  C2'  C3'  C4'  -172.81  30.0  1
+ KUQ  Var_17    C6'  C5'  C4'  C3'  -175.69  30.0  1
+ KUQ  Var_18    O4'  C4'  C3'  C2'   173.49  30.0  1
+ KUQ  Var_19    O3'  C3'  C2'  C1'  -173.95  30.0  1
+ KUQ  Var_20    C6'  C5'  O5'  C1'  -175.48  30.0  1
+ KUQ  Var_21    O2'  C2'  C1'  C1    -62.96  30.0  1
+ KUQ  Var_22    H8   C4'  C5'  O5'    61.88  30.0  1
+ KUQ  Var_23    H10  C2'  C1'  O5'   -62.59  30.0  1
+ KUQ  Var_24    H9   C3'  C4'  C5'   -64.43  30.0  1
+ KUQ  Var_25    H11  C1'  O5'  C5'    56.99  30.0  1
+ KUQ  Var_26    H7   C5'  C4'  C3'    64.29  30.0  1
+ KUQ  Var_27    O6'  C6'  C5'  O5'    63.36  30.0  3
+ KUQ  Var_28    O6'  C6'  C5'  C4'  -175.89  30.0  3
+ KUQ  Var_29    O3'  C3'  C2'  O2'    66.99  30.0  1
+ KUQ  Var_30    O4'  C4'  C3'  O3'   -63.83  30.0  1
+ KUQ  Var_31    C6'  C5'  C4'  O4'    62.73  30.0  1
+ KUQ  Var_32    H17  C6'  C5'  O5'  -174.95  30.0  3
+ KUQ  Var_33    H18  C6'  C5'  O5'   -58.63  30.0  3
+ KUQ  Var_34    H16  O4'  C4'  C5'   174.16  30.0  3
+ KUQ  Var_35    H15  O3'  C3'  C4'   151.76  30.0  3
+ KUQ  Var_36    H14  O2'  C2'  C3'   -81.92  30.0  3
+ KUQ  Var_37    H19  O6'  C6'  C5'   176.13  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- IDD  IDD  (5R,6R,7S,8S)-5-(hydroxymethyl)-2-phenyl-5,6,7,8-tetrahydroimidazo[1,2-a]pyridine-6,7,8-triol  ligand  36  20  .  2022-09-15  2022-09-16
+ IDD  IDD  (5R,6R,7S,8S)-5-(hydroxymethyl)-2-phenyl-5,6,7,8-tetrahydroimidazo[1,2-a]pyridine-6,7,8-triol  ligand  36  20  .  2022-09-15  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_IDD
@@ -204,31 +205,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- IDD  CONST_01  C4    C3   C2   C1     0.00  0.0  0
- IDD  CONST_02  C4    C5   C6   C1     0.00  0.0  0
- IDD  CONST_03  C1B   N2B  C7B  C1   180.00  0.0  0
- IDD  CONST_04  N1B   C8B  C7B  C1   180.00  0.0  0
- IDD  CONST_05  C5    C6   C1   C2     0.00  0.0  0
- IDD  CONST_06  N2B   C7B  C1   C2     0.00  0.0  0
- IDD  CONST_07  C8B   C7B  C1   C2   180.00  0.0  0
- IDD  CONST_08  C5    C4   C3   C2     0.00  0.0  0
- IDD  CONST_09  C6    C1   C2   C3     0.00  0.0  0
- IDD  CONST_10  C7B   C1   C2   C3   180.00  0.0  0
- IDD  CONST_11  C6    C5   C4   C3     0.00  0.0  0
- IDD  CONST_12  C7B   C1   C6   C5   180.00  0.0  0
- IDD  CONST_13  N2B   C7B  C1   C6   180.00  0.0  0
- IDD  CONST_14  C8B   C7B  C1   C6     0.00  0.0  0
- IDD  CONST_15  C7B   C8B  N1B  C1B    0.00  0.0  0
- IDD  CONST_16  C8B   C7B  N2B  C1B    0.00  0.0  0
- IDD  CONST_17  C7B   N2B  C1B  N1B    0.00  0.0  0
- IDD  CONST_18  N2B   C7B  C8B  N1B    0.00  0.0  0
- IDD  CONST_19  C8B   N1B  C1B  N2B    0.00  0.0  0
- IDD  CONST_20  H31   C3   C2   C1   180.00  0.0  0
- IDD  CONST_21  H51   C5   C6   C1   180.00  0.0  0
- IDD  CONST_22  H8B1  C8B  C7B  C1     0.00  0.0  0
- IDD  CONST_23  H61   C6   C1   C2   180.00  0.0  0
- IDD  CONST_24  H41   C4   C3   C2   180.00  0.0  0
- IDD  CONST_25  H21   C2   C3   C4   180.00  0.0  0
+ IDD  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ IDD  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ IDD  CONST_03  C1B   N2B  C7B  C1    180.00   0.0  0
+ IDD  CONST_04  N1B   C8B  C7B  C1    180.00   0.0  0
+ IDD  CONST_05  C5    C6   C1   C2      0.00   0.0  0
+ IDD  CONST_06  N2B   C7B  C1   C2      0.00   0.0  0
+ IDD  CONST_07  C8B   C7B  C1   C2    180.00   0.0  0
+ IDD  CONST_08  C5    C4   C3   C2      0.00   0.0  0
+ IDD  CONST_09  C6    C1   C2   C3      0.00   0.0  0
+ IDD  CONST_10  C7B   C1   C2   C3    180.00   0.0  0
+ IDD  CONST_11  C6    C5   C4   C3      0.00   0.0  0
+ IDD  CONST_12  C7B   C1   C6   C5    180.00   0.0  0
+ IDD  CONST_13  N2B   C7B  C1   C6    180.00   0.0  0
+ IDD  CONST_14  C8B   C7B  C1   C6      0.00   0.0  0
+ IDD  CONST_15  C7B   C8B  N1B  C1B     0.00   0.0  0
+ IDD  CONST_16  C8B   C7B  N2B  C1B     0.00   0.0  0
+ IDD  CONST_17  C7B   N2B  C1B  N1B     0.00   0.0  0
+ IDD  CONST_18  N2B   C7B  C8B  N1B     0.00   0.0  0
+ IDD  CONST_19  C8B   N1B  C1B  N2B     0.00   0.0  0
+ IDD  CONST_20  H31   C3   C2   C1    180.00   0.0  0
+ IDD  CONST_21  H51   C5   C6   C1    180.00   0.0  0
+ IDD  CONST_22  H8B1  C8B  C7B  C1      0.00   0.0  0
+ IDD  CONST_23  H61   C6   C1   C2    180.00   0.0  0
+ IDD  CONST_24  H41   C4   C3   C2    180.00   0.0  0
+ IDD  CONST_25  H21   C2   C3   C4    180.00   0.0  0
+ IDD  Var_01    C4B   C3B  C2B  C1B   -52.63  30.0  1
+ IDD  Var_02    C4B   C5B  N1B  C1B    11.14  30.0  1
+ IDD  Var_03    C5B   C4B  C3B  C2B    65.15  30.0  1
+ IDD  Var_04    N1B   C1B  C2B  C3B    23.49  30.0  1
+ IDD  Var_05    N2B   C1B  C2B  C3B  -156.31  30.0  1
+ IDD  Var_06    N1B   C5B  C4B  C3B   -41.81  30.0  1
+ IDD  Var_07    C8B   N1B  C5B  C4B  -172.82  30.0  1
+ IDD  Var_08    O3B   C3B  C2B  C1B  -170.63  30.0  1
+ IDD  Var_09    C6B   C5B  N1B  C1B   133.47  30.0  1
+ IDD  Var_10    O4B   C4B  C3B  C2B  -176.23  30.0  1
+ IDD  Var_11    C6B   C5B  C4B  C3B  -165.21  30.0  1
+ IDD  Var_12    O2B   C2B  C3B  C4B  -174.22  30.0  1
+ IDD  Var_13    O3B   C3B  C4B  C5B  -173.79  30.0  1
+ IDD  Var_14    C8B   N1B  C5B  C6B   -50.49  30.0  1
+ IDD  Var_15    N1B   C1B  C2B  O2B   143.46  30.0  1
+ IDD  Var_16    N2B   C1B  C2B  O2B   -36.35  30.0  1
+ IDD  Var_17    N1B   C5B  C4B  O4B  -163.38  30.0  1
+ IDD  Var_18    H3B1  C3B  C2B  C1B    66.05  30.0  1
+ IDD  Var_19    H5B1  C5B  N1B  C1B  -106.30  30.0  1
+ IDD  Var_20    H4B1  C4B  C3B  C2B   -54.40  30.0  1
+ IDD  Var_21    H2B1  C2B  C3B  C4B    65.30  30.0  1
+ IDD  Var_22    O6B   C6B  C5B  C4B  -164.13  30.0  3
+ IDD  Var_23    O4B   C4B  C5B  C6B    73.22  30.0  1
+ IDD  Var_24    O3B   C3B  C2B  O2B    67.77  30.0  1
+ IDD  Var_25    O4B   C4B  C3B  O3B   -55.17  30.0  1
+ IDD  Var_26    O6B   C6B  C5B  N1B    73.64  30.0  3
+ IDD  Var_27    HO21  O2B  C2B  C1B    58.97  30.0  3
+ IDD  Var_28    HO31  O3B  C3B  C2B   -77.21  30.0  3
+ IDD  Var_29    HO41  O4B  C4B  C3B    56.08  30.0  3
+ IDD  Var_30    H6B1  C6B  C5B  C4B    73.11  30.0  3
+ IDD  Var_31    H6B2  C6B  C5B  C4B   -42.96  30.0  3
+ IDD  Var_32    HO61  O6B  C6B  C5B  -169.86  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

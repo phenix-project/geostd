@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2GW  2GW  '[(2R,3S,4R,5R)-5-(2,4-dioxo-5-phenyl-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3R,4S,5R,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl dihydrogen diphosphate (non-preferred name)'  ligand  68  42  .  2021-08-04  2021-08-04  
+ 2GW  2GW  '[(2R,3S,4R,5R)-5-(2,4-dioxo-5-phenyl-3,4-dihydropyrimidin-1(2H)-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3R,4S,5R,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl dihydrogen diphosphate (non-preferred name)'  ligand  68  42  .  2021-08-04  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_2GW
@@ -329,32 +330,107 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2GW  CONST_01  CAO  CAM  CAN  CAP    0.00   0.0  0
- 2GW  CONST_02  CAO  CAQ  CBA  CAP    0.00   0.0  0
- 2GW  CONST_03  CAQ  CAO  CAM  CAN    0.00   0.0  0
- 2GW  CONST_04  CAQ  CBA  CAP  CAN    0.00   0.0  0
- 2GW  CONST_05  CBA  CAQ  CAO  CAM    0.00   0.0  0
- 2GW  CONST_06  CBA  CAP  CAN  CAM    0.00   0.0  0
- 2GW  CONST_07  CBB  CBA  CAP  CAN  180.00   0.0  0
- 2GW  CONST_08  CBB  CBA  CAQ  CAO  180.00   0.0  0
- 2GW  CONST_09  CBD  NAU  CBC  CBB    0.00   0.0  0
- 2GW  CONST_10  NAU  CBD  NBN  CAR    0.00   0.0  0
- 2GW  CONST_11  NBN  CBD  NAU  CBC    0.00   0.0  0
- 2GW  CONST_12  C1'  NBN  CBD  NAU  180.00   0.0  0
- 2GW  CONST_13  OAB  CBD  NBN  CAR  180.00   0.0  0
- 2GW  CONST_14  OAB  CBD  NAU  CBC  180.00   0.0  0
- 2GW  CONST_15  CBD  NAU  CBC  OAA  180.00   0.0  0
- 2GW  CONST_16  C1'  NBN  CBD  OAB    0.00   0.0  0
- 2GW  CONST_17  H3   CAM  CAN  CAP  180.00   0.0  0
- 2GW  CONST_18  H5   CAQ  CBA  CAP  180.00   0.0  0
- 2GW  CONST_19  H4   CAO  CAM  CAN  180.00   0.0  0
- 2GW  CONST_20  H1   CAP  CAN  CAM  180.00   0.0  0
- 2GW  CONST_21  H2   CAN  CAM  CAO  180.00   0.0  0
- 2GW  CONST_22  H7   NAU  CBC  CBB  180.00   0.0  0
- 2GW  Var_01    CBC  CBB  CBA  CAP  131.05  30.0  2
- 2GW  Var_02    OAC  PBO  O5'  C5'   61.45  30.0  3
- 2GW  Var_03    OAD  PBP  OAZ  PBO   55.40  30.0  3
- 2GW  Var_04    H14  C5'  O5'  PBO   52.95  30.0  3
+ 2GW  CONST_01  CAO  CAM  CAN  CAP     0.00   0.0  0
+ 2GW  CONST_02  CAO  CAQ  CBA  CAP     0.00   0.0  0
+ 2GW  CONST_03  CAQ  CAO  CAM  CAN     0.00   0.0  0
+ 2GW  CONST_04  CAQ  CBA  CAP  CAN     0.00   0.0  0
+ 2GW  CONST_05  CBA  CAQ  CAO  CAM     0.00   0.0  0
+ 2GW  CONST_06  CBA  CAP  CAN  CAM     0.00   0.0  0
+ 2GW  CONST_07  CBB  CBA  CAP  CAN   180.00   0.0  0
+ 2GW  CONST_08  CBB  CBA  CAQ  CAO   180.00   0.0  0
+ 2GW  CONST_09  CBD  NAU  CBC  CBB     0.00   0.0  0
+ 2GW  CONST_10  NAU  CBD  NBN  CAR     0.00   0.0  0
+ 2GW  CONST_11  NBN  CBD  NAU  CBC     0.00   0.0  0
+ 2GW  CONST_12  C1'  NBN  CBD  NAU   180.00   0.0  0
+ 2GW  CONST_13  OAB  CBD  NBN  CAR   180.00   0.0  0
+ 2GW  CONST_14  OAB  CBD  NAU  CBC   180.00   0.0  0
+ 2GW  CONST_15  CBD  NAU  CBC  OAA   180.00   0.0  0
+ 2GW  CONST_16  C1'  NBN  CBD  OAB     0.00   0.0  0
+ 2GW  CONST_17  H3   CAM  CAN  CAP   180.00   0.0  0
+ 2GW  CONST_18  H5   CAQ  CBA  CAP   180.00   0.0  0
+ 2GW  CONST_19  H4   CAO  CAM  CAN   180.00   0.0  0
+ 2GW  CONST_20  H1   CAP  CAN  CAM   180.00   0.0  0
+ 2GW  CONST_21  H2   CAN  CAM  CAO   180.00   0.0  0
+ 2GW  CONST_22  H7   NAU  CBC  CBB   180.00   0.0  0
+ 2GW  Var_01    CBC  CBB  CBA  CAP   131.05  30.0  2
+ 2GW  Var_02    OAC  PBO  O5'  C5'    61.45  30.0  3
+ 2GW  Var_03    OAD  PBP  OAZ  PBO    55.40  30.0  3
+ 2GW  Var_04    H14  C5'  O5'  PBO    52.95  30.0  3
+ 2GW  Var_05    NAU  CBC  CBB  CBA  -178.90  30.0  1
+ 2GW  Var_06    NBN  CAR  CBB  CBA   177.89  30.0  1
+ 2GW  Var_07    O4'  C1'  NBN  CAR  -117.02  30.0  3
+ 2GW  Var_08    C2'  C1'  NBN  CAR   121.15  30.0  3
+ 2GW  Var_09    O4'  C1'  NBN  CBD    61.04  30.0  3
+ 2GW  Var_10    C2'  C1'  NBN  CBD   -60.80  30.0  3
+ 2GW  Var_11    C4'  O4'  C1'  NBN  -144.67  30.0  1
+ 2GW  Var_12    C3'  C2'  C1'  NBN   158.39  30.0  1
+ 2GW  Var_13    C3'  C4'  O4'  C1'    -7.57  30.0  1
+ 2GW  Var_14    C4'  C3'  C2'  C1'   -37.19  30.0  1
+ 2GW  Var_15    C3'  C2'  C1'  O4'    34.46  30.0  1
+ 2GW  Var_16    C2'  C3'  C4'  O4'    28.80  30.0  1
+ 2GW  Var_17    C4'  O4'  C1'  C2'   -17.37  30.0  1
+ 2GW  Var_18    C4   C5   O5   C1     57.72  30.0  1
+ 2GW  Var_19    C4   C3   C2   C1    -56.26  30.0  1
+ 2GW  Var_20    C3   C4   C5   O5    -53.75  30.0  1
+ 2GW  Var_21    C3   C2   C1   O5     56.26  30.0  1
+ 2GW  Var_22    C2   C1   O5   C5    -58.03  30.0  1
+ 2GW  Var_23    C2   C3   C4   C5     54.76  30.0  1
+ 2GW  Var_24    OAA  CBC  CBB  CBA     0.62  30.0  1
+ 2GW  Var_25    O2'  C2'  C1'  NBN   -80.88  30.0  1
+ 2GW  Var_26    C5'  C4'  O4'  C1'   115.16  30.0  1
+ 2GW  Var_27    O3'  C3'  C2'  C1'    78.19  30.0  1
+ 2GW  Var_28    O2'  C2'  C1'  O4'   155.19  30.0  1
+ 2GW  Var_29    O3'  C3'  C4'  O4'   -88.14  30.0  1
+ 2GW  Var_30    C5'  C4'  C3'  C2'   -93.12  30.0  1
+ 2GW  Var_31    C4'  C3'  C2'  O2'  -154.10  30.0  1
+ 2GW  Var_32    C5   O5   C1   O1     64.35  30.0  1
+ 2GW  Var_33    C3   C2   C1   O1    -64.56  30.0  1
+ 2GW  Var_34    C6   C5   O5   C1   -178.40  30.0  1
+ 2GW  Var_35    O3   C3   C2   C1   -175.98  30.0  1
+ 2GW  Var_36    O4   C4   C5   O5     68.61  30.0  1
+ 2GW  Var_37    O2   C2   C1   O5   -178.87  30.0  1
+ 2GW  Var_38    O3   C3   C4   C5    176.69  30.0  1
+ 2GW  Var_39    C3   C4   C5   C6   -174.94  30.0  1
+ 2GW  Var_40    O2   C2   C3   C4    176.34  30.0  1
+ 2GW  Var_41    C2   C3   C4   O4    -66.09  30.0  1
+ 2GW  Var_42    H6   CAR  CBB  CBA    -2.52  30.0  1
+ 2GW  Var_43    H8   C1'  NBN  CAR     2.23  30.0  3
+ 2GW  Var_44    H9   C2'  C1'  NBN    42.83  30.0  1
+ 2GW  Var_45    H13  C4'  O4'  C1'  -125.71  30.0  1
+ 2GW  Var_46    H11  C3'  C2'  C1'  -156.73  30.0  1
+ 2GW  Var_47    H19  C5   O5   C1    -60.82  30.0  1
+ 2GW  Var_48    H25  C3   C2   C1     61.78  30.0  1
+ 2GW  Var_49    H23  C4   C5   O5   -171.04  30.0  1
+ 2GW  Var_50    H27  C2   C1   O5    -59.76  30.0  1
+ 2GW  Var_51    H18  C1   O5   C5   -176.45  30.0  1
+ 2GW  Var_52    O5'  C5'  C4'  O4'    57.77  30.0  1
+ 2GW  Var_53    O3'  C3'  C2'  O2'   -38.72  30.0  1
+ 2GW  Var_54    O5'  C5'  C4'  C3'   176.61  30.0  1
+ 2GW  Var_55    C5'  C4'  C3'  O3'   149.94  30.0  1
+ 2GW  Var_56    O5   C1   O1   PBP   142.67  30.0  3
+ 2GW  Var_57    C2   C1   O1   PBP   -95.71  30.0  3
+ 2GW  Var_58    O2   C2   C1   O1     60.31  30.0  1
+ 2GW  Var_59    O6   C6   C5   O5     66.99  30.0  3
+ 2GW  Var_60    O4   C4   C5   C6    -52.57  30.0  1
+ 2GW  Var_61    C4   C5   C6   O6   -169.42  30.0  3
+ 2GW  Var_62    O3   C3   C4   O4     55.84  30.0  1
+ 2GW  Var_63    O2   C2   C3   O3     56.62  30.0  1
+ 2GW  Var_64    H10  O2'  C2'  C1'   159.70  30.0  3
+ 2GW  Var_65    H14  C5'  C4'  O4'   178.04  30.0  1
+ 2GW  Var_66    H15  C5'  C4'  O4'   -64.50  30.0  1
+ 2GW  Var_67    H12  O3'  C3'  C2'    46.14  30.0  3
+ 2GW  Var_68    H28  O2   C2   C1    -11.31  30.0  3
+ 2GW  Var_69    H20  C6   C5   O5   -171.96  30.0  3
+ 2GW  Var_70    H21  C6   C5   O5    -55.53  30.0  3
+ 2GW  Var_71    H24  O4   C4   C5   -170.74  30.0  3
+ 2GW  Var_72    H26  O3   C3   C4   -168.43  30.0  3
+ 2GW  Var_73    C1   O1   PBP  OAZ   161.27  30.0  3
+ 2GW  Var_74    C1   O1   PBP  OAL    47.84  30.0  2
+ 2GW  Var_75    C1   O1   PBP  OAD   -84.19  30.0  3
+ 2GW  Var_76    H22  O6   C6   C5   -177.71  30.0  3
+ 2GW  Var_77    PBP  OAZ  PBO  O5'   136.48  30.0  2
+ 2GW  Var_78    PBP  OAZ  PBO  OAK    23.70  30.0  2
+ 2GW  Var_79    PBP  OAZ  PBO  OAC  -110.86  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

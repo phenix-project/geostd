@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HVW  HVW  (2~{S})-4-methyl-~{N}-prop-2-enyl-2-[[(1~{S})-2,2,2-tris(fluoranyl)-1-[4-(4-methylsulfonylphenyl)phenyl]ethyl]amino]pentanamide  ligand  62  33  .  2021-08-11  2022-09-16
+ HVW  HVW  (2~{S})-4-methyl-~{N}-prop-2-enyl-2-[[(1~{S})-2,2,2-tris(fluoranyl)-1-[4-(4-methylsulfonylphenyl)phenyl]ethyl]amino]pentanamide  ligand  62  33  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HVW
@@ -301,45 +302,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HVW  CONST_01  C23  C22  C18  C19    0.00   0.0  0
- HVW  CONST_02  C23  C21  C20  C19    0.00   0.0  0
- HVW  CONST_03  C24  C21  C20  C19  180.00   0.0  0
- HVW  CONST_04  C22  C18  C19  C20    0.00   0.0  0
- HVW  CONST_05  C22  C23  C21  C20    0.00   0.0  0
- HVW  CONST_08  C18  C22  C23  C21    0.00   0.0  0
- HVW  CONST_09  C18  C19  C20  C21    0.00   0.0  0
- HVW  CONST_10  C29  C28  C24  C21  180.00   0.0  0
- HVW  CONST_11  C26  C25  C24  C21  180.00   0.0  0
- HVW  CONST_12  C24  C21  C23  C22  180.00   0.0  0
- HVW  CONST_13  C27  C29  C28  C24    0.00   0.0  0
- HVW  CONST_14  C27  C26  C25  C24    0.00   0.0  0
- HVW  CONST_17  C29  C28  C24  C25    0.00   0.0  0
- HVW  CONST_18  C29  C27  C26  C25    0.00   0.0  0
- HVW  CONST_19  C28  C24  C25  C26    0.00   0.0  0
- HVW  CONST_20  C28  C29  C27  C26    0.00   0.0  0
- HVW  CONST_21  C23  C22  C18  C13  180.00   0.0  0
- HVW  CONST_22  C20  C19  C18  C13  180.00   0.0  0
- HVW  CONST_23  S30  C27  C26  C25  180.00   0.0  0
- HVW  CONST_24  S30  C27  C29  C28  180.00   0.0  0
- HVW  CONST_25  H39  C22  C18  C19  180.00   0.0  0
- HVW  CONST_26  H38  C23  C21  C20  180.00   0.0  0
- HVW  CONST_27  H40  C19  C20  C21  180.00   0.0  0
- HVW  CONST_28  H36  C28  C24  C21    0.00   0.0  0
- HVW  CONST_29  H37  C25  C24  C21    0.00   0.0  0
- HVW  CONST_30  H41  C20  C21  C24    0.00   0.0  0
- HVW  CONST_31  H35  C29  C28  C24  180.00   0.0  0
- HVW  CONST_32  H34  C26  C25  C24  180.00   0.0  0
- HVW  CONST_33  C7   C5   N4   C3   180.00   0.0  0
- HVW  CONST_34  O6   C5   N4   C3     0.00   0.0  0
- HVW  CONST_35  H54  N4   C5   C7     0.00   0.0  0
- HVW  Var_01    C29  C27  S30  C33  -92.07  30.0  2
- HVW  Var_02    H59  C33  S30  C27   59.91  30.0  3
- HVW  Var_03    N4   C3   C2   C1   120.63  30.0  3
- HVW  Var_04    C5   N4   C3   C2    88.99  30.0  3
- HVW  Var_05    C11  C9   C8   C7   -59.10  30.0  3
- HVW  Var_06    H58  C1   C2   C3   179.60   0.0  2
- HVW  Var_07    H52  C11  C9   C8   -55.18  30.0  3
- HVW  Var_08    H49  C10  C9   C8    61.86  30.0  3
+ HVW  CONST_01  C23  C22  C18  C19     0.00   0.0  0
+ HVW  CONST_02  C23  C21  C20  C19     0.00   0.0  0
+ HVW  CONST_03  C24  C21  C20  C19   180.00   0.0  0
+ HVW  CONST_04  C22  C18  C19  C20     0.00   0.0  0
+ HVW  CONST_05  C22  C23  C21  C20     0.00   0.0  0
+ HVW  CONST_06  C18  C22  C23  C21     0.00   0.0  0
+ HVW  CONST_07  C18  C19  C20  C21     0.00   0.0  0
+ HVW  CONST_08  C29  C28  C24  C21   180.00   0.0  0
+ HVW  CONST_09  C26  C25  C24  C21   180.00   0.0  0
+ HVW  CONST_10  C24  C21  C23  C22   180.00   0.0  0
+ HVW  CONST_11  C27  C29  C28  C24     0.00   0.0  0
+ HVW  CONST_12  C27  C26  C25  C24     0.00   0.0  0
+ HVW  CONST_13  C29  C28  C24  C25     0.00   0.0  0
+ HVW  CONST_14  C29  C27  C26  C25     0.00   0.0  0
+ HVW  CONST_15  C28  C24  C25  C26     0.00   0.0  0
+ HVW  CONST_16  C28  C29  C27  C26     0.00   0.0  0
+ HVW  CONST_17  C23  C22  C18  C13   180.00   0.0  0
+ HVW  CONST_18  C20  C19  C18  C13   180.00   0.0  0
+ HVW  CONST_19  S30  C27  C26  C25   180.00   0.0  0
+ HVW  CONST_20  S30  C27  C29  C28   180.00   0.0  0
+ HVW  CONST_21  H39  C22  C18  C19   180.00   0.0  0
+ HVW  CONST_22  H38  C23  C21  C20   180.00   0.0  0
+ HVW  CONST_23  H40  C19  C20  C21   180.00   0.0  0
+ HVW  CONST_24  H36  C28  C24  C21     0.00   0.0  0
+ HVW  CONST_25  H37  C25  C24  C21     0.00   0.0  0
+ HVW  CONST_26  H41  C20  C21  C24     0.00   0.0  0
+ HVW  CONST_27  H35  C29  C28  C24   180.00   0.0  0
+ HVW  CONST_28  H34  C26  C25  C24   180.00   0.0  0
+ HVW  CONST_29  C7   C5   N4   C3    180.00   0.0  0
+ HVW  CONST_30  O6   C5   N4   C3      0.00   0.0  0
+ HVW  CONST_31  H54  N4   C5   C7      0.00   0.0  0
+ HVW  Var_01    C29  C27  S30  C33   -92.07  30.0  2
+ HVW  Var_02    H59  C33  S30  C27    59.91  30.0  3
+ HVW  Var_03    N4   C3   C2   C1    120.63  30.0  3
+ HVW  Var_04    C5   N4   C3   C2     88.99  30.0  3
+ HVW  Var_05    C11  C9   C8   C7    -59.10  30.0  3
+ HVW  Var_06    H58  C1   C2   C3    179.60   0.0  2
+ HVW  Var_07    H52  C11  C9   C8    -55.18  30.0  3
+ HVW  Var_08    H49  C10  C9   C8     61.86  30.0  3
+ HVW  Var_09    C28  C24  C21  C20  -146.28  30.0  2
+ HVW  Var_10    C25  C24  C21  C20    33.71  30.0  2
+ HVW  Var_11    C28  C24  C21  C23    33.69  30.0  2
+ HVW  Var_12    C25  C24  C21  C23  -146.31  30.0  2
+ HVW  Var_13    C22  C18  C13  C14    99.56  30.0  2
+ HVW  Var_14    C19  C18  C13  C14   -80.12  30.0  2
+ HVW  Var_15    N12  C13  C18  C19    41.61  30.0  2
+ HVW  Var_16    N12  C13  C18  C22  -138.71  30.0  2
+ HVW  Var_17    H42  C13  C18  C19   165.35  30.0  2
+ HVW  Var_18    C18  C13  N12  C7    129.20  30.0  3
+ HVW  Var_19    C18  C13  C14  F16  -176.55  30.0  3
+ HVW  Var_20    C18  C13  C14  F17   -57.09  30.0  3
+ HVW  Var_21    F15  C14  C13  C18    63.18  30.0  2
+ HVW  Var_22    H43  N12  C13  C18     4.52  30.0  2
+ HVW  Var_23    C14  C13  N12  C7   -108.40  30.0  3
+ HVW  Var_24    N4   C5   C7   C8    -87.59  30.0  1
+ HVW  Var_25    O6   C5   C7   C8     90.17  30.0  1
+ HVW  Var_26    C13  N12  C7   C8    176.56  30.0  3
+ HVW  Var_27    C5   C7   C8   C9    178.30  30.0  3
+ HVW  Var_28    N12  C7   C8   C9    -58.70  30.0  3
+ HVW  Var_29    C5   C7   N12  C13   -62.69  30.0  1
+ HVW  Var_30    N12  C7   C5   N4    150.49  30.0  3
+ HVW  Var_31    N12  C7   C5   O6    -31.75  30.0  3
+ HVW  Var_32    F16  C14  C13  N12    58.81  30.0  2
+ HVW  Var_33    F17  C14  C13  N12   178.27  30.0  2
+ HVW  Var_34    F15  C14  C13  N12   -61.45  30.0  2
+ HVW  Var_35    H44  C7   C8   C9     60.47  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

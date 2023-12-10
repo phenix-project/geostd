@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LQK  LQK  (1~{S},2~{R})-2-[[(1~{S})-1-[[1,3-bis(oxidanylidene)isoindol-2-yl]methyl]-5-(2-hydroxyethyloxy)-3,4-dihydro-1~{H}-isoquinolin-2-yl]carbonyl]cyclobutane-1-carboxamide  ligand  62  35  .  2022-03-22  2022-07-25
+ LQK  LQK  (1~{S},2~{R})-2-[[(1~{S})-1-[[1,3-bis(oxidanylidene)isoindol-2-yl]methyl]-5-(2-hydroxyethyloxy)-3,4-dihydro-1~{H}-isoquinolin-2-yl]carbonyl]cyclobutane-1-carboxamide  ligand  62  35  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LQK
@@ -312,45 +313,92 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LQK  CONST_01  C18  C19  C20  C15    0.00   0.0  0
- LQK  CONST_02  C18  C17  C16  C15    0.00   0.0  0
- LQK  CONST_03  C19  C20  C15  C16    0.00   0.0  0
- LQK  CONST_04  C19  C18  C17  C16    0.00   0.0  0
- LQK  CONST_05  C20  C19  C18  C17    0.00   0.0  0
- LQK  CONST_06  C20  C15  C16  C17    0.00   0.0  0
- LQK  CONST_07  C34  C35  C36  C31    0.00   0.0  0
- LQK  CONST_08  C34  C33  C32  C31    0.00   0.0  0
- LQK  CONST_09  C35  C36  C31  C32    0.00   0.0  0
- LQK  CONST_10  C35  C34  C33  C32    0.00   0.0  0
- LQK  CONST_11  C36  C31  C32  C33    0.00   0.0  0
- LQK  CONST_12  C36  C35  C34  C33    0.00   0.0  0
- LQK  CONST_13  C29  N28  C37  C36    0.00   0.0  0
- LQK  CONST_14  O21  C20  C15  C16  180.00   0.0  0
- LQK  CONST_15  O21  C20  C19  C18  180.00   0.0  0
- LQK  CONST_16  O21  C20  C15  C14    0.00   0.0  0
- LQK  CONST_17  C13  N12  C10  C8     0.00   0.0  0
- LQK  CONST_18  C25  N12  C10  C8   180.00   0.0  0
- LQK  CONST_19  C36  C37  N28  C27  180.00   0.0  0
- LQK  CONST_20  O38  C37  N28  C29  180.00   0.0  0
- LQK  CONST_21  H9   C19  C20  C15  180.00   0.0  0
- LQK  CONST_22  H7   C17  C16  C15  180.00   0.0  0
- LQK  CONST_23  H8   C18  C17  C16  180.00   0.0  0
- LQK  CONST_24  H17  C35  C36  C31  180.00   0.0  0
- LQK  CONST_25  H15  C33  C32  C31  180.00   0.0  0
- LQK  CONST_26  H16  C34  C33  C32  180.00   0.0  0
- LQK  CONST_27  H14  C32  C33  C34  180.00   0.0  0
- LQK  CONST_28  C13  N12  C10  O11  180.00   0.0  0
- LQK  CONST_29  C25  N12  C10  O11    0.00   0.0  0
- LQK  CONST_30  O38  C37  N28  C27    0.00   0.0  0
- LQK  CONST_31  H18  N1   C2   C4   180.00   0.0  0
- LQK  CONST_32  H19  N1   C2   C4     0.00   0.0  0
- LQK  Var_01    C8   C7   C6   C4   -19.96  30.0  1
- LQK  Var_02    N12  C13  C14  C15  -46.14  30.0  1
- LQK  Var_03    C13  C14  C15  C16   16.66  30.0  1
- LQK  Var_04    C25  N12  C13  C14   60.64  30.0  1
- LQK  Var_05    C25  C27  N28  C37   75.77  30.0  1
- LQK  Var_06    H24  C22  O21  C20   57.31  30.0  1
- LQK  Var_07    O24  C23  C22  O21  178.57  30.0  1
+ LQK  CONST_01  C18  C19  C20  C15     0.00   0.0  0
+ LQK  CONST_02  C18  C17  C16  C15     0.00   0.0  0
+ LQK  CONST_03  C19  C20  C15  C16     0.00   0.0  0
+ LQK  CONST_04  C19  C18  C17  C16     0.00   0.0  0
+ LQK  CONST_05  C20  C19  C18  C17     0.00   0.0  0
+ LQK  CONST_06  C20  C15  C16  C17     0.00   0.0  0
+ LQK  CONST_07  C34  C35  C36  C31     0.00   0.0  0
+ LQK  CONST_08  C34  C33  C32  C31     0.00   0.0  0
+ LQK  CONST_09  C35  C36  C31  C32     0.00   0.0  0
+ LQK  CONST_10  C35  C34  C33  C32     0.00   0.0  0
+ LQK  CONST_11  C36  C31  C32  C33     0.00   0.0  0
+ LQK  CONST_12  C36  C35  C34  C33     0.00   0.0  0
+ LQK  CONST_13  C29  N28  C37  C36     0.00   0.0  0
+ LQK  CONST_14  O21  C20  C15  C16   180.00   0.0  0
+ LQK  CONST_15  O21  C20  C19  C18   180.00   0.0  0
+ LQK  CONST_16  O21  C20  C15  C14     0.00   0.0  0
+ LQK  CONST_17  C13  N12  C10  C8      0.00   0.0  0
+ LQK  CONST_18  C25  N12  C10  C8    180.00   0.0  0
+ LQK  CONST_19  C36  C37  N28  C27   180.00   0.0  0
+ LQK  CONST_20  O38  C37  N28  C29   180.00   0.0  0
+ LQK  CONST_21  H9   C19  C20  C15   180.00   0.0  0
+ LQK  CONST_22  H7   C17  C16  C15   180.00   0.0  0
+ LQK  CONST_23  H8   C18  C17  C16   180.00   0.0  0
+ LQK  CONST_24  H17  C35  C36  C31   180.00   0.0  0
+ LQK  CONST_25  H15  C33  C32  C31   180.00   0.0  0
+ LQK  CONST_26  H16  C34  C33  C32   180.00   0.0  0
+ LQK  CONST_27  H14  C32  C33  C34   180.00   0.0  0
+ LQK  CONST_28  C13  N12  C10  O11   180.00   0.0  0
+ LQK  CONST_29  C25  N12  C10  O11     0.00   0.0  0
+ LQK  CONST_30  O38  C37  N28  C27     0.00   0.0  0
+ LQK  CONST_31  H18  N1   C2   C4    180.00   0.0  0
+ LQK  CONST_32  H19  N1   C2   C4      0.00   0.0  0
+ LQK  Var_01    C8   C7   C6   C4    -19.96  30.0  1
+ LQK  Var_02    N12  C13  C14  C15   -46.14  30.0  1
+ LQK  Var_03    C13  C14  C15  C16    16.66  30.0  1
+ LQK  Var_04    C25  N12  C13  C14    60.64  30.0  1
+ LQK  Var_05    C25  C27  N28  C37    75.77  30.0  1
+ LQK  Var_06    H24  C22  O21  C20    57.31  30.0  1
+ LQK  Var_07    O24  C23  C22  O21   178.57  30.0  1
+ LQK  CONST_33  C37  N28  C29  C31     0.00   0.0  0
+ LQK  CONST_34  N28  C37  C36  C31     0.00   0.0  0
+ LQK  CONST_35  N28  C29  C31  C32   180.00   0.0  0
+ LQK  CONST_36  N28  C37  C36  C35   180.00   0.0  0
+ LQK  CONST_37  N28  C29  C31  C36     0.00   0.0  0
+ LQK  CONST_38  C31  C29  N28  C27   180.00   0.0  0
+ LQK  CONST_39  O38  C37  C36  C31   180.00   0.0  0
+ LQK  CONST_40  O30  C29  C31  C32     0.00   0.0  0
+ LQK  CONST_41  O38  C37  C36  C35     0.00   0.0  0
+ LQK  CONST_42  O30  C29  C31  C36   180.00   0.0  0
+ LQK  CONST_43  O30  C29  N28  C37   180.00   0.0  0
+ LQK  CONST_44  O30  C29  N28  C27     0.00   0.0  0
+ LQK  Var_08    N12  C25  C16  C15    11.09  30.0  1
+ LQK  Var_09    C13  N12  C25  C16   -41.92  30.0  1
+ LQK  Var_10    N12  C25  C16  C17  -167.71  30.0  1
+ LQK  Var_11    C7   C8   C4   C2   -140.83  30.0  1
+ LQK  Var_12    C7   C6   C4   C2    142.86  30.0  1
+ LQK  Var_13    N12  C10  C8   C4     89.07  30.0  3
+ LQK  Var_14    C10  C8   C4   C6     96.05  30.0  1
+ LQK  Var_15    C10  C8   C7   C6    -97.34  30.0  1
+ LQK  Var_16    N12  C10  C8   C7   -171.37  30.0  3
+ LQK  Var_17    C27  C25  C16  C15  -110.95  30.0  1
+ LQK  Var_18    N28  C27  C25  C16  -178.48  30.0  2
+ LQK  Var_19    C10  N12  C25  C16   143.87  30.0  1
+ LQK  Var_20    C27  C25  C16  C17    70.25  30.0  1
+ LQK  Var_21    C13  N12  C25  C27    82.26  30.0  1
+ LQK  Var_22    N28  C27  C25  N12    55.95  30.0  2
+ LQK  Var_23    H4   C7   C8   C4    140.79  30.0  1
+ LQK  Var_24    H5   C7   C8   C4    -93.15  30.0  1
+ LQK  Var_25    H6   C8   C4   C6   -134.90  30.0  1
+ LQK  Var_26    H1   C4   C8   C7     90.44  30.0  1
+ LQK  Var_27    H2   C6   C4   C8    139.35  30.0  1
+ LQK  Var_28    H3   C6   C4   C8    -93.91  30.0  1
+ LQK  Var_29    H27  C25  C16  C15   130.27  30.0  1
+ LQK  Var_30    C10  C8   C4   C2    -25.06  30.0  1
+ LQK  Var_31    O11  C10  C8   C4    -95.24  30.0  3
+ LQK  Var_32    N1   C2   C4   C6    134.34  30.0  2
+ LQK  Var_33    O3   C2   C4   C6    -45.19  30.0  2
+ LQK  Var_34    O11  C10  C8   C7      4.32  30.0  3
+ LQK  Var_35    N1   C2   C4   C8   -120.66  30.0  2
+ LQK  Var_36    O3   C2   C4   C8     59.81  30.0  2
+ LQK  Var_37    C22  O21  C20  C15  -179.03  30.0  1
+ LQK  Var_38    C22  O21  C20  C19     0.96  30.0  1
+ LQK  Var_39    C10  N12  C25  C27   -91.95  30.0  1
+ LQK  Var_40    H12  C27  C25  C16   -56.96  30.0  2
+ LQK  Var_41    H13  C27  C25  C16    61.72  30.0  2
+ LQK  Var_42    H26  O24  C23  C22   179.71  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

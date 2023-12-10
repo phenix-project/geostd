@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KLA  KLA  6-[2-(3-fluoro-5-{2-[(2R,4S)-4-fluoropyrrolidin-2-yl]ethyl}phenyl)ethyl]-4-methylpyridin-2-amine  ligand  50  25  .  2021-08-12  2021-08-12  
+ KLA  KLA  6-[2-(3-fluoro-5-{2-[(2R,4S)-4-fluoropyrrolidin-2-yl]ethyl}phenyl)ethyl]-4-methylpyridin-2-amine  ligand  50  25  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KLA
@@ -261,42 +262,59 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KLA  CONST_01  C05  C04  C03  C02    0.00   0.0  0
- KLA  CONST_02  C05  C06  N01  C02    0.00   0.0  0
- KLA  CONST_03  C06  C05  C04  C03    0.00   0.0  0
- KLA  CONST_04  C06  N01  C02  C03    0.00   0.0  0
- KLA  CONST_05  N01  C02  C03  C04    0.00   0.0  0
- KLA  CONST_06  N01  C06  C05  C04    0.00   0.0  0
- KLA  CONST_07  C14  C13  C12  C11    0.00   0.0  0
- KLA  CONST_08  C14  C15  C16  C11    0.00   0.0  0
- KLA  CONST_09  C15  C14  C13  C12    0.00   0.0  0
- KLA  CONST_10  C15  C16  C11  C12    0.00   0.0  0
- KLA  CONST_11  C16  C11  C12  C13    0.00   0.0  0
- KLA  CONST_12  C16  C15  C14  C13    0.00   0.0  0
- KLA  CONST_13  C07  C04  C03  C02  180.00   0.0  0
- KLA  CONST_14  C08  C06  N01  C02  180.00   0.0  0
- KLA  CONST_15  N02  C02  C03  C04  180.00   0.0  0
- KLA  CONST_16  C08  C06  C05  C04  180.00   0.0  0
- KLA  CONST_17  C07  C04  C05  C06  180.00   0.0  0
- KLA  CONST_18  N02  C02  N01  C06  180.00   0.0  0
- KLA  CONST_19  C13  C12  C11  C09  180.00   0.0  0
- KLA  CONST_20  C15  C16  C11  C09  180.00   0.0  0
- KLA  CONST_21  F13  C13  C12  C11  180.00   0.0  0
- KLA  CONST_22  C17  C15  C16  C11  180.00   0.0  0
- KLA  CONST_23  C17  C15  C14  C13  180.00   0.0  0
- KLA  CONST_24  F13  C13  C14  C15  180.00   0.0  0
- KLA  CONST_25  H2   C05  C04  C03  180.00   0.0  0
- KLA  CONST_26  H1   C03  C04  C05  180.00   0.0  0
- KLA  CONST_27  H11  C14  C13  C12  180.00   0.0  0
- KLA  CONST_28  H12  C16  C11  C12  180.00   0.0  0
- KLA  CONST_29  H10  C12  C13  C14  180.00   0.0  0
- KLA  Var_01    C24  C25  N21  C22  -43.71  30.0  1
- KLA  Var_02    C09  C08  C06  C05  111.56  30.0  2
- KLA  Var_03    C11  C09  C08  C06  179.79  30.0  3
- KLA  Var_04    C12  C11  C09  C08  -91.08  30.0  2
- KLA  Var_05    C18  C17  C15  C14   93.62  30.0  2
- KLA  Var_06    C22  C18  C17  C15  175.57  30.0  3
- KLA  Var_07    H3   C07  C04  C03  116.58  30.0  2
+ KLA  CONST_01  C05  C04  C03  C02     0.00   0.0  0
+ KLA  CONST_02  C05  C06  N01  C02     0.00   0.0  0
+ KLA  CONST_03  C06  C05  C04  C03     0.00   0.0  0
+ KLA  CONST_04  C06  N01  C02  C03     0.00   0.0  0
+ KLA  CONST_05  N01  C02  C03  C04     0.00   0.0  0
+ KLA  CONST_06  N01  C06  C05  C04     0.00   0.0  0
+ KLA  CONST_07  C14  C13  C12  C11     0.00   0.0  0
+ KLA  CONST_08  C14  C15  C16  C11     0.00   0.0  0
+ KLA  CONST_09  C15  C14  C13  C12     0.00   0.0  0
+ KLA  CONST_10  C15  C16  C11  C12     0.00   0.0  0
+ KLA  CONST_11  C16  C11  C12  C13     0.00   0.0  0
+ KLA  CONST_12  C16  C15  C14  C13     0.00   0.0  0
+ KLA  CONST_13  C07  C04  C03  C02   180.00   0.0  0
+ KLA  CONST_14  C08  C06  N01  C02   180.00   0.0  0
+ KLA  CONST_15  N02  C02  C03  C04   180.00   0.0  0
+ KLA  CONST_16  C08  C06  C05  C04   180.00   0.0  0
+ KLA  CONST_17  C07  C04  C05  C06   180.00   0.0  0
+ KLA  CONST_18  N02  C02  N01  C06   180.00   0.0  0
+ KLA  CONST_19  C13  C12  C11  C09   180.00   0.0  0
+ KLA  CONST_20  C15  C16  C11  C09   180.00   0.0  0
+ KLA  CONST_21  F13  C13  C12  C11   180.00   0.0  0
+ KLA  CONST_22  C17  C15  C16  C11   180.00   0.0  0
+ KLA  CONST_23  C17  C15  C14  C13   180.00   0.0  0
+ KLA  CONST_24  F13  C13  C14  C15   180.00   0.0  0
+ KLA  CONST_25  H2   C05  C04  C03   180.00   0.0  0
+ KLA  CONST_26  H1   C03  C04  C05   180.00   0.0  0
+ KLA  CONST_27  H11  C14  C13  C12   180.00   0.0  0
+ KLA  CONST_28  H12  C16  C11  C12   180.00   0.0  0
+ KLA  CONST_29  H10  C12  C13  C14   180.00   0.0  0
+ KLA  Var_01    C24  C25  N21  C22   -43.71  30.0  1
+ KLA  Var_02    C09  C08  C06  C05   111.56  30.0  2
+ KLA  Var_03    C11  C09  C08  C06   179.79  30.0  3
+ KLA  Var_04    C12  C11  C09  C08   -91.08  30.0  2
+ KLA  Var_05    C18  C17  C15  C14    93.62  30.0  2
+ KLA  Var_06    C22  C18  C17  C15   175.57  30.0  3
+ KLA  Var_07    H3   C07  C04  C03   116.58  30.0  2
+ KLA  Var_08    C25  C24  C23  C22   -18.95  30.0  1
+ KLA  Var_09    C25  N21  C22  C23    31.13  30.0  1
+ KLA  Var_10    N21  C25  C24  C23    37.65  30.0  1
+ KLA  Var_11    N21  C22  C23  C24    -6.45  30.0  1
+ KLA  Var_12    C24  C23  C22  C18  -128.07  30.0  1
+ KLA  Var_13    C25  N21  C22  C18   153.49  30.0  1
+ KLA  Var_14    F24  C24  C23  C22    97.94  30.0  1
+ KLA  Var_15    N21  C25  C24  F24   -79.53  30.0  1
+ KLA  Var_16    H20  C24  C23  C22  -142.20  30.0  1
+ KLA  Var_17    H25  N21  C22  C23   153.07  30.0  1
+ KLA  Var_18    H17  C22  C23  C24   111.93  30.0  1
+ KLA  Var_19    H18  C23  C24  C25  -141.11  30.0  1
+ KLA  Var_20    H19  C23  C24  C25   100.70  30.0  1
+ KLA  Var_21    C23  C22  C18  C17   178.52  30.0  3
+ KLA  Var_22    N21  C22  C18  C17    61.63  30.0  3
+ KLA  Var_23    H15  C18  C22  C23    56.18  30.0  1
+ KLA  Var_24    H16  C18  C22  C23   -59.84  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

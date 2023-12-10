@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- U16  U16  'methyl N-{(2S,3R)-3-amino-2-hydroxy-3-[4-(1-methylethyl)phenyl]propanoyl}-L-alanyl-D-leucinate'  ligand  65  30  .  2022-03-23  2022-03-23
+ U16  U16  'methyl N-{(2S,3R)-3-amino-2-hydroxy-3-[4-(1-methylethyl)phenyl]propanoyl}-L-alanyl-D-leucinate'  ligand  65  30  .  2022-03-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_U16
@@ -311,33 +312,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- U16  CONST_01  C5    C6   C3   C7     0.00   0.0  0
- U16  CONST_02  C5    C2   C4   C7     0.00   0.0  0
- U16  CONST_03  C2    C4   C7   C3     0.00   0.0  0
- U16  CONST_04  C2    C5   C6   C3     0.00   0.0  0
- U16  CONST_05  C4    C7   C3   C6     0.00   0.0  0
- U16  CONST_06  C4    C2   C5   C6     0.00   0.0  0
- U16  CONST_07  C6    C3   C7   C11  180.00   0.0  0
- U16  CONST_08  C2    C4   C7   C11  180.00   0.0  0
- U16  CONST_09  C9    C5   C6   C3   180.00   0.0  0
- U16  CONST_10  C4    C2   C5   C9   180.00   0.0  0
- U16  CONST_11  H6    C6   C3   C7   180.00   0.0  0
- U16  CONST_12  H2    C2   C4   C7   180.00   0.0  0
- U16  CONST_13  H4    C4   C7   C3   180.00   0.0  0
- U16  CONST_14  H3    C3   C6   C5   180.00   0.0  0
- U16  CONST_15  C33   N32  C25  O31    0.00   0.0  0
- U16  CONST_16  C33   N32  C25  C23  180.00   0.0  0
- U16  CONST_17  C43   N42  C36  C33  180.00   0.0  0
- U16  CONST_18  C43   N42  C36  O41    0.00   0.0  0
- U16  CONST_19  HN32  N32  C25  O31  180.00   0.0  0
- U16  CONST_20  HN42  N42  C36  C33    0.00   0.0  0
- U16  Var_01    C14   C9   C5   C6   -61.93  30.0  2
- U16  Var_02    H141  C14  C9   C5   -56.89  30.0  3
- U16  Var_03    H151  C15  C9   C5    55.73  30.0  3
- U16  Var_04    C52   C49  C45  C43   58.50  30.0  3
- U16  Var_05    H521  C52  C49  C45   58.15  30.0  3
- U16  Var_06    H531  C53  C49  C45   58.03  30.0  3
- U16  Var_07    H621  C62  O61  C47  -61.53  30.0  3
+ U16  CONST_01  C5    C6   C3   C7      0.00   0.0  0
+ U16  CONST_02  C5    C2   C4   C7      0.00   0.0  0
+ U16  CONST_03  C2    C4   C7   C3      0.00   0.0  0
+ U16  CONST_04  C2    C5   C6   C3      0.00   0.0  0
+ U16  CONST_05  C4    C7   C3   C6      0.00   0.0  0
+ U16  CONST_06  C4    C2   C5   C6      0.00   0.0  0
+ U16  CONST_07  C6    C3   C7   C11   180.00   0.0  0
+ U16  CONST_08  C2    C4   C7   C11   180.00   0.0  0
+ U16  CONST_09  C9    C5   C6   C3    180.00   0.0  0
+ U16  CONST_10  C4    C2   C5   C9    180.00   0.0  0
+ U16  CONST_11  H6    C6   C3   C7    180.00   0.0  0
+ U16  CONST_12  H2    C2   C4   C7    180.00   0.0  0
+ U16  CONST_13  H4    C4   C7   C3    180.00   0.0  0
+ U16  CONST_14  H3    C3   C6   C5    180.00   0.0  0
+ U16  CONST_15  C33   N32  C25  O31     0.00   0.0  0
+ U16  CONST_16  C33   N32  C25  C23   180.00   0.0  0
+ U16  CONST_17  C43   N42  C36  C33   180.00   0.0  0
+ U16  CONST_18  C43   N42  C36  O41     0.00   0.0  0
+ U16  CONST_19  HN32  N32  C25  O31   180.00   0.0  0
+ U16  CONST_20  HN42  N42  C36  C33     0.00   0.0  0
+ U16  Var_01    C14   C9   C5   C6    -61.93  30.0  2
+ U16  Var_02    H141  C14  C9   C5    -56.89  30.0  3
+ U16  Var_03    H151  C15  C9   C5     55.73  30.0  3
+ U16  Var_04    C52   C49  C45  C43    58.50  30.0  3
+ U16  Var_05    H521  C52  C49  C45    58.15  30.0  3
+ U16  Var_06    H531  C53  C49  C45    58.03  30.0  3
+ U16  Var_07    H621  C62  O61  C47   -61.53  30.0  3
+ U16  Var_08    C3    C7   C11  C23    93.73  30.0  2
+ U16  Var_09    C4    C7   C11  C23   -85.14  30.0  2
+ U16  Var_10    N24   C11  C7   C3    -30.48  30.0  2
+ U16  Var_11    N24   C11  C7   C4    150.65  30.0  2
+ U16  Var_12    H11   C11  C7   C3   -150.51  30.0  2
+ U16  Var_13    C7    C11  C23  C25   176.97  30.0  3
+ U16  Var_14    O27   C23  C11  C7    -62.20  30.0  1
+ U16  Var_15    H23   C23  C11  C7     58.36  30.0  1
+ U16  Var_16    H241  N24  C11  C7    -52.80  30.0  3
+ U16  Var_17    H242  N24  C11  C7     64.74  30.0  3
+ U16  Var_18    C11   C23  C25  O31   112.42  30.0  3
+ U16  Var_19    O27   C23  C25  O31    -9.67  30.0  3
+ U16  Var_20    N24   C11  C23  C25   -54.38  30.0  3
+ U16  Var_21    C37   C33  N32  C25    83.43  30.0  3
+ U16  Var_22    C36   C33  N32  C25  -155.00  30.0  3
+ U16  Var_23    N32   C25  C23  C11   -67.65  30.0  2
+ U16  Var_24    O27   C23  C11  N24    66.45  30.0  1
+ U16  Var_25    N32   C25  C23  O27   170.25  30.0  2
+ U16  Var_26    O41   C36  C33  N32   -17.29  30.0  3
+ U16  Var_27    N42   C36  C33  N32   165.60  30.0  3
+ U16  Var_28    O41   C36  C33  C37   105.49  30.0  3
+ U16  Var_29    N42   C36  C33  C37   -71.62  30.0  3
+ U16  Var_30    C45   C43  N42  C36  -157.24  30.0  3
+ U16  Var_31    C47   C43  N42  C36    79.93  30.0  3
+ U16  Var_32    C49   C45  C43  N42    58.84  30.0  3
+ U16  Var_33    O60   C47  C43  N42    11.86  30.0  3
+ U16  Var_34    O61   C47  C43  N42  -168.76  30.0  3
+ U16  Var_35    C62   O61  C47  C43  -178.00  30.0  3
+ U16  Var_36    O60   C47  C43  C45  -110.79  30.0  3
+ U16  Var_37    O61   C47  C43  C45    68.59  30.0  3
+ U16  Var_38    C47   C43  C45  C49  -178.65  30.0  2
+ U16  Var_39    C62   O61  C47  O60     1.39  30.0  3
+ U16  Var_40    HO27  O27  C23  C25    10.64  30.0  3
+ U16  Var_41    H33   C33  N32  C25   -37.28  30.0  3
+ U16  Var_42    H371  C37  C33  N32    60.58  30.0  3
+ U16  Var_43    H372  C37  C33  N32  -178.83  30.0  3
+ U16  Var_44    H373  C37  C33  N32   -59.41  30.0  3
+ U16  Var_45    H43   C43  N42  C36   -37.65  30.0  3
+ U16  Var_46    H451  C45  C43  N42  -179.54  30.0  3
+ U16  Var_47    H452  C45  C43  N42   -63.96  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RTW  RTW  2-azanyl-9-cyclohexyl-8-(2-methoxyphenyl)-3~{H}-purine-6-thione  ligand  46  25  .  2022-08-10  2022-08-10
+ RTW  RTW  2-azanyl-9-cyclohexyl-8-(2-methoxyphenyl)-3~{H}-purine-6-thione  ligand  46  25  .  2022-08-10  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RTW
@@ -249,43 +250,58 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  RTW  CONST_01  C06  C05  C04  C03     0.00   0.0  0
  RTW  CONST_02  C06  C07  C08  C03     0.00   0.0  0
- RTW  CONST_05  C07  C06  C05  C04     0.00   0.0  0
- RTW  CONST_06  C07  C08  C03  C04     0.00   0.0  0
- RTW  CONST_07  C09  C08  C03  C04   180.00   0.0  0
- RTW  CONST_08  C08  C03  C04  C05     0.00   0.0  0
- RTW  CONST_09  C08  C07  C06  C05     0.00   0.0  0
- RTW  CONST_10  C09  C08  C07  C06   180.00   0.0  0
- RTW  CONST_13  C11  N10  C09  C08   180.00   0.0  0
- RTW  CONST_14  C12  N19  C09  C08   180.00   0.0  0
- RTW  CONST_15  C12  C11  N10  C09     0.00   0.0  0
- RTW  CONST_16  C11  C12  N19  C09     0.00   0.0  0
- RTW  CONST_17  N19  C09  N10  C11     0.00   0.0  0
- RTW  CONST_18  N10  C09  N19  C12     0.00   0.0  0
- RTW  CONST_19  N19  C12  C11  N10     0.00   0.0  0
- RTW  CONST_20  C20  N19  C09  C08     0.00   0.0  0
- RTW  CONST_21  C20  N19  C12  C11   180.00   0.0  0
- RTW  CONST_22  N10  C09  N19  C20   180.00   0.0  0
- RTW  CONST_23  N13  C12  N19  C20     0.00   0.0  0
- RTW  CONST_24  N16  C14  N13  C12     0.00   0.0  0
- RTW  CONST_25  N13  C14  N16  C17     0.00   0.0  0
- RTW  CONST_26  O02  C03  C04  C05   180.00   0.0  0
- RTW  CONST_27  O02  C03  C08  C07   180.00   0.0  0
- RTW  CONST_28  O02  C03  C08  C09     0.00   0.0  0
- RTW  CONST_29  N15  C14  N13  C12   180.00   0.0  0
- RTW  CONST_30  N15  C14  N16  C17   180.00   0.0  0
- RTW  CONST_31  H5   C05  C04  C03   180.00   0.0  0
- RTW  CONST_32  H7   C07  C08  C03   180.00   0.0  0
- RTW  CONST_33  H6   C06  C05  C04   180.00   0.0  0
- RTW  CONST_34  H4   C04  C05  C06   180.00   0.0  0
- RTW  CONST_35  H19  N13  C14  N16   180.00   0.0  0
- RTW  CONST_36  H20  N15  C14  N13   180.00   0.0  0
- RTW  CONST_37  H21  N15  C14  N13     0.00   0.0  0
+ RTW  CONST_03  C07  C06  C05  C04     0.00   0.0  0
+ RTW  CONST_04  C07  C08  C03  C04     0.00   0.0  0
+ RTW  CONST_05  C09  C08  C03  C04   180.00   0.0  0
+ RTW  CONST_06  C08  C03  C04  C05     0.00   0.0  0
+ RTW  CONST_07  C08  C07  C06  C05     0.00   0.0  0
+ RTW  CONST_08  C09  C08  C07  C06   180.00   0.0  0
+ RTW  CONST_09  C11  N10  C09  C08   180.00   0.0  0
+ RTW  CONST_10  C12  N19  C09  C08   180.00   0.0  0
+ RTW  CONST_11  C12  C11  N10  C09     0.00   0.0  0
+ RTW  CONST_12  C11  C12  N19  C09     0.00   0.0  0
+ RTW  CONST_13  N19  C09  N10  C11     0.00   0.0  0
+ RTW  CONST_14  N10  C09  N19  C12     0.00   0.0  0
+ RTW  CONST_15  N19  C12  C11  N10     0.00   0.0  0
+ RTW  CONST_16  C20  N19  C09  C08     0.00   0.0  0
+ RTW  CONST_17  C20  N19  C12  C11   180.00   0.0  0
+ RTW  CONST_18  N10  C09  N19  C20   180.00   0.0  0
+ RTW  CONST_19  N13  C12  N19  C20     0.00   0.0  0
+ RTW  CONST_20  N16  C14  N13  C12     0.00   0.0  0
+ RTW  CONST_21  N13  C14  N16  C17     0.00   0.0  0
+ RTW  CONST_22  O02  C03  C04  C05   180.00   0.0  0
+ RTW  CONST_23  O02  C03  C08  C07   180.00   0.0  0
+ RTW  CONST_24  O02  C03  C08  C09     0.00   0.0  0
+ RTW  CONST_25  N15  C14  N13  C12   180.00   0.0  0
+ RTW  CONST_26  N15  C14  N16  C17   180.00   0.0  0
+ RTW  CONST_27  H5   C05  C04  C03   180.00   0.0  0
+ RTW  CONST_28  H7   C07  C08  C03   180.00   0.0  0
+ RTW  CONST_29  H6   C06  C05  C04   180.00   0.0  0
+ RTW  CONST_30  H4   C04  C05  C06   180.00   0.0  0
+ RTW  CONST_31  H19  N13  C14  N16   180.00   0.0  0
+ RTW  CONST_32  H20  N15  C14  N13   180.00   0.0  0
+ RTW  CONST_33  H21  N15  C14  N13     0.00   0.0  0
  RTW  Var_01    C23  C22  C21  C20   -55.91  30.0  1
  RTW  Var_02    C23  C24  C25  C20    55.46  30.0  1
  RTW  Var_03    C24  C23  C22  C21    56.20  30.0  1
  RTW  Var_04    C25  C24  C23  C22   -56.00  30.0  1
  RTW  Var_05    C04  C03  O02  C01    -3.82  30.0  1
  RTW  Var_06    H1   C01  O02  C03  -178.34  30.0  3
+ RTW  Var_07    N10  C09  C08  C03   111.27  30.0  2
+ RTW  Var_08    N19  C09  C08  C03   -70.52  30.0  2
+ RTW  Var_09    N10  C09  C08  C07   -66.90  30.0  2
+ RTW  Var_10    N19  C09  C08  C07   111.31  30.0  2
+ RTW  Var_11    C21  C20  N19  C09   121.83  30.0  2
+ RTW  Var_12    C25  C20  N19  C09  -110.82  30.0  2
+ RTW  Var_13    C21  C20  N19  C12   -63.68  30.0  2
+ RTW  Var_14    C25  C20  N19  C12    63.66  30.0  2
+ RTW  Var_15    C24  C25  C20  C21   -56.40  30.0  1
+ RTW  Var_16    N19  C20  C21  C22  -176.36  30.0  1
+ RTW  Var_17    C25  C20  C21  C22    56.65  30.0  1
+ RTW  Var_18    N19  C20  C25  C24   176.13  30.0  1
+ RTW  Var_19    H8   C20  N19  C09     4.98  30.0  2
+ RTW  Var_20    H17  C25  C20  C21    64.22  30.0  1
+ RTW  Var_21    H18  C25  C20  C21  -178.14  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

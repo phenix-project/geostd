@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- C8P  C8P  N-{(1S,2S,3R)-1-[(alpha-D-galactopyranosyloxy)methyl]-2,3-dihydroxyheptadecyl}-8-phenyloctanamide  ligand  115  48  .  2021-08-07  2021-08-07  
+ C8P  C8P  N-{(1S,2S,3R)-1-[(alpha-D-galactopyranosyloxy)methyl]-2,3-dihydroxyheptadecyl}-8-phenyloctanamide  ligand  115  48  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_C8P
@@ -514,44 +515,100 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- C8P  CONST_01  CL   CK2  CJ2  CI      0.00   0.0  0
- C8P  CONST_02  CL   CK1  CJ1  CI      0.00   0.0  0
- C8P  CONST_03  CK1  CJ1  CI   CJ2     0.00   0.0  0
- C8P  CONST_04  CK1  CL   CK2  CJ2     0.00   0.0  0
- C8P  CONST_05  CJ1  CI   CJ2  CK2     0.00   0.0  0
- C8P  CONST_06  CJ1  CK1  CL   CK2     0.00   0.0  0
- C8P  CONST_07  CK2  CJ2  CI   C32   180.00   0.0  0
- C8P  CONST_08  CK1  CJ1  CI   C32   180.00   0.0  0
- C8P  CONST_09  HK2  CK2  CJ2  CI    180.00   0.0  0
- C8P  CONST_10  HK1  CK1  CJ1  CI    180.00   0.0  0
- C8P  CONST_11  HJ1  CJ1  CI   CJ2   180.00   0.0  0
- C8P  CONST_12  HL   CL   CK2  CJ2   180.00   0.0  0
- C8P  CONST_13  HJ2  CJ2  CK2  CL    180.00   0.0  0
- C8P  CONST_14  C17  N    C25  O25     0.00   0.0  0
- C8P  CONST_15  C17  N    C25  C26   180.00   0.0  0
- C8P  CONST_16  HN   N    C25  O25   180.00   0.0  0
- C8P  Var_01    CJ2  CI   C32  C31    88.49  30.0  2
- C8P  Var_02    CI   C32  C31  C30  -179.95  30.0  3
- C8P  Var_03    H18  C18  O18  C19    80.32  30.0  3
- C8P  Var_04    C27  C26  C25  O25   -14.27  30.0  3
- C8P  Var_05    C28  C27  C26  C25  -179.86  30.0  3
- C8P  Var_06    C29  C28  C27  C26  -178.49  30.0  3
- C8P  Var_07    C30  C29  C28  C27   179.77  30.0  3
- C8P  Var_08    C31  C30  C29  C28  -179.53  30.0  3
- C8P  Var_09    C32  C31  C30  C29   179.81  30.0  3
- C8P  Var_10    C12  C13  C14  C15   173.16  30.0  3
- C8P  Var_11    C11  C12  C13  C14  -179.92  30.0  3
- C8P  Var_12    C10  C11  C12  C13   177.29  30.0  3
- C8P  Var_13    C9   C10  C11  C12  -179.06  30.0  3
- C8P  Var_14    C8   C9   C10  C11   178.28  30.0  3
- C8P  Var_15    C7   C8   C9   C10  -178.92  30.0  3
- C8P  Var_16    C6   C7   C8   C9    178.90  30.0  3
- C8P  Var_17    C5   C6   C7   C8   -179.15  30.0  3
- C8P  Var_18    C4   C5   C6   C7    179.37  30.0  3
- C8P  Var_19    C3   C4   C5   C6   -179.59  30.0  3
- C8P  Var_20    C2   C3   C4   C5    179.85  30.0  3
- C8P  Var_21    C1   C2   C3   C4   -179.99  30.0  3
- C8P  Var_22    H1   C1   C2   C3   -179.13  30.0  3
+ C8P  CONST_01  CL    CK2  CJ2  CI      0.00   0.0  0
+ C8P  CONST_02  CL    CK1  CJ1  CI      0.00   0.0  0
+ C8P  CONST_03  CK1   CJ1  CI   CJ2     0.00   0.0  0
+ C8P  CONST_04  CK1   CL   CK2  CJ2     0.00   0.0  0
+ C8P  CONST_05  CJ1   CI   CJ2  CK2     0.00   0.0  0
+ C8P  CONST_06  CJ1   CK1  CL   CK2     0.00   0.0  0
+ C8P  CONST_07  CK2   CJ2  CI   C32   180.00   0.0  0
+ C8P  CONST_08  CK1   CJ1  CI   C32   180.00   0.0  0
+ C8P  CONST_09  HK2   CK2  CJ2  CI    180.00   0.0  0
+ C8P  CONST_10  HK1   CK1  CJ1  CI    180.00   0.0  0
+ C8P  CONST_11  HJ1   CJ1  CI   CJ2   180.00   0.0  0
+ C8P  CONST_12  HL    CL   CK2  CJ2   180.00   0.0  0
+ C8P  CONST_13  HJ2   CJ2  CK2  CL    180.00   0.0  0
+ C8P  CONST_14  C17   N    C25  O25     0.00   0.0  0
+ C8P  CONST_15  C17   N    C25  C26   180.00   0.0  0
+ C8P  CONST_16  HN    N    C25  O25   180.00   0.0  0
+ C8P  Var_01    CJ2   CI   C32  C31    88.49  30.0  2
+ C8P  Var_02    CI    C32  C31  C30  -179.95  30.0  3
+ C8P  Var_03    H18   C18  O18  C19    80.32  30.0  3
+ C8P  Var_04    C27   C26  C25  O25   -14.27  30.0  3
+ C8P  Var_05    C28   C27  C26  C25  -179.86  30.0  3
+ C8P  Var_06    C29   C28  C27  C26  -178.49  30.0  3
+ C8P  Var_07    C30   C29  C28  C27   179.77  30.0  3
+ C8P  Var_08    C31   C30  C29  C28  -179.53  30.0  3
+ C8P  Var_09    C32   C31  C30  C29   179.81  30.0  3
+ C8P  Var_10    C12   C13  C14  C15   173.16  30.0  3
+ C8P  Var_11    C11   C12  C13  C14  -179.92  30.0  3
+ C8P  Var_12    C10   C11  C12  C13   177.29  30.0  3
+ C8P  Var_13    C9    C10  C11  C12  -179.06  30.0  3
+ C8P  Var_14    C8    C9   C10  C11   178.28  30.0  3
+ C8P  Var_15    C7    C8   C9   C10  -178.92  30.0  3
+ C8P  Var_16    C6    C7   C8   C9    178.90  30.0  3
+ C8P  Var_17    C5    C6   C7   C8   -179.15  30.0  3
+ C8P  Var_18    C4    C5   C6   C7    179.37  30.0  3
+ C8P  Var_19    C3    C4   C5   C6   -179.59  30.0  3
+ C8P  Var_20    C2    C3   C4   C5    179.85  30.0  3
+ C8P  Var_21    C1    C2   C3   C4   -179.99  30.0  3
+ C8P  Var_22    H1    C1   C2   C3   -179.13  30.0  3
+ C8P  Var_23    C22   C21  C20  C19   -54.62  30.0  1
+ C8P  Var_24    C22   C23  O19  C19    60.20  30.0  1
+ C8P  Var_25    C23   O19  C19  C20   -58.73  30.0  1
+ C8P  Var_26    C23   C22  C21  C20    54.44  30.0  1
+ C8P  Var_27    O19   C19  C20  C21    55.20  30.0  1
+ C8P  Var_28    O19   C23  C22  C21   -55.99  30.0  1
+ C8P  Var_29    C21   C20  C19  O18   -68.40  30.0  1
+ C8P  Var_30    C23   O19  C19  O18    62.80  30.0  1
+ C8P  Var_31    O21   C21  C20  C19  -174.28  30.0  1
+ C8P  Var_32    C24   C23  O19  C19  -175.25  30.0  1
+ C8P  Var_33    O22   C22  C21  C20   -66.24  30.0  1
+ C8P  Var_34    O19   C19  C20  O20   176.01  30.0  1
+ C8P  Var_35    C22   C21  C20  O20  -178.07  30.0  1
+ C8P  Var_36    C24   C23  C22  C21  -177.77  30.0  1
+ C8P  Var_37    C23   C22  C21  O21   176.50  30.0  1
+ C8P  Var_38    O19   C23  C22  O22    66.37  30.0  1
+ C8P  Var_39    H21   C21  C20  C19    63.15  30.0  1
+ C8P  Var_40    H23   C23  O19  C19   -58.14  30.0  1
+ C8P  Var_41    H22   C22  C21  C20   171.04  30.0  1
+ C8P  Var_42    H19   C19  C20  C21   170.26  30.0  1
+ C8P  Var_43    H20   C20  C21  C22    61.77  30.0  1
+ C8P  Var_44    C20   C19  O18  C18  -166.78  30.0  3
+ C8P  Var_45    O19   C19  O18  C18    71.06  30.0  3
+ C8P  Var_46    O20   C20  C19  O18    52.41  30.0  1
+ C8P  Var_47    O21   C21  C20  O20    62.28  30.0  1
+ C8P  Var_48    O22   C22  C21  O21    55.83  30.0  1
+ C8P  Var_49    O24   C24  C23  C22  -169.59  30.0  3
+ C8P  Var_50    C24   C23  C22  O22   -55.41  30.0  1
+ C8P  Var_51    O19   C23  C24  O24    66.85  30.0  2
+ C8P  Var_52    HO20  O20  C20  C19    80.30  30.0  3
+ C8P  Var_53    HO21  O21  C21  C20   -49.95  30.0  3
+ C8P  Var_54    HO22  O22  C22  C21   -53.32  30.0  3
+ C8P  Var_55    H24   C24  C23  C22   -48.55  30.0  3
+ C8P  Var_56    H24A  C24  C23  C22    67.91  30.0  3
+ C8P  Var_57    HO24  O24  C24  C23   174.27  30.0  3
+ C8P  Var_58    C18   C17  N    C25   101.89  30.0  3
+ C8P  Var_59    C16   C17  N    C25  -132.29  30.0  3
+ C8P  Var_60    O18   C18  C17  N      63.42  30.0  3
+ C8P  Var_61    O16   C16  C17  N    -160.98  30.0  3
+ C8P  Var_62    C15   C16  C17  N      75.43  30.0  3
+ C8P  Var_63    O15   C15  C16  C17   -50.25  30.0  3
+ C8P  Var_64    C14   C15  C16  C17  -176.98  30.0  3
+ C8P  Var_65    O16   C16  C17  C18   -37.63  30.0  3
+ C8P  Var_66    C15   C16  C17  C18  -161.21  30.0  3
+ C8P  Var_67    C16   C17  C18  O18   -60.82  30.0  1
+ C8P  Var_68    C13   C14  C15  C16  -177.07  30.0  3
+ C8P  Var_69    O15   C15  C16  O16  -174.61  30.0  3
+ C8P  Var_70    C14   C15  C16  O16    58.65  30.0  3
+ C8P  Var_71    C13   C14  C15  O15    55.58  30.0  3
+ C8P  Var_72    H17   C17  N    C25   -13.42  30.0  3
+ C8P  Var_73    H16   C16  C17  N     -45.51  30.0  3
+ C8P  Var_74    HO16  O16  C16  C17   -68.38  30.0  3
+ C8P  Var_75    H15   C15  C16  C17    64.52  30.0  3
+ C8P  Var_76    HO15  O15  C15  C16   -65.24  30.0  3
+ C8P  Var_77    H14   C14  C15  C16   -55.41  30.0  3
+ C8P  Var_78    H14A  C14  C15  C16    60.10  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

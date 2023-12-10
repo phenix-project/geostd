@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1O2  1O2  '(2S)-3-(alpha-D-galactopyranosyloxy)-2-(hexadecanoyloxy)propyl (9Z)-octadec-9-enoate'  ligand  133  53  .  2021-08-03  2021-08-03  
+ 1O2  1O2  '(2S)-3-(alpha-D-galactopyranosyloxy)-2-(hexadecanoyloxy)propyl (9Z)-octadec-9-enoate'  ligand  133  53  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1O2
@@ -585,42 +586,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 1O2  Var_01  CAM  CAL  O1   C1   -156.00  30.0  3
- 1O2  Var_02  CBS  CBR  CBQ  CBP     2.25   0.0  2
- 1O2  Var_03  CAQ  CAO  OAN  CAM  -179.28  30.0  1
- 1O2  Var_04  CAR  CAQ  CAO  OAN   178.49  30.0  2
- 1O2  Var_05  CAS  CAR  CAQ  CAO  -172.63  30.0  1
- 1O2  Var_06  CAT  CAS  CAR  CAQ  -179.93  30.0  2
- 1O2  Var_07  CAU  CAT  CAS  CAR  -177.67  30.0  1
- 1O2  Var_08  CAV  CAU  CAT  CAS   179.83  30.0  1
- 1O2  Var_09  CAW  CAV  CAU  CAT  -178.67  30.0  1
- 1O2  Var_10  CAX  CAW  CAV  CAU   179.91  30.0  1
- 1O2  Var_11  CAY  CAX  CAW  CAV  -179.12  30.0  2
- 1O2  Var_12  CAZ  CAY  CAX  CAW   179.96  30.0  1
- 1O2  Var_13  CBA  CAZ  CAY  CAX  -179.53  30.0  1
- 1O2  Var_14  CBB  CBA  CAZ  CAY   179.97  30.0  1
- 1O2  Var_15  CBC  CBB  CBA  CAZ  -179.86  30.0  1
- 1O2  Var_16  CBD  CBC  CBB  CBA   179.94  30.0  3
- 1O2  Var_17  CBE  CBD  CBC  CBB   179.92  30.0  2
- 1O2  Var_18  CBJ  CBH  OBG  CBF   171.07  30.0  3
- 1O2  Var_19  CBK  CBJ  CBH  OBG   161.19  30.0  1
- 1O2  Var_20  CBL  CBK  CBJ  CBH   176.98  30.0  1
- 1O2  Var_21  CBM  CBL  CBK  CBJ   178.04  30.0  1
- 1O2  Var_22  CBN  CBM  CBL  CBK   178.13  30.0  2
- 1O2  Var_23  CBO  CBN  CBM  CBL   179.78  30.0  1
- 1O2  Var_24  CBP  CBO  CBN  CBM   178.63  30.0  1
- 1O2  Var_25  CBQ  CBP  CBO  CBN   178.93  30.0  1
- 1O2  Var_26  CBR  CBQ  CBP  CBO   106.31  30.0  2
- 1O2  Var_27  CBT  CBS  CBR  CBQ   124.89  30.0  3
- 1O2  Var_28  CBU  CBT  CBS  CBR   178.85  30.0  1
- 1O2  Var_29  CBV  CBU  CBT  CBS  -178.37  30.0  3
- 1O2  Var_30  CBW  CBV  CBU  CBT  -179.09  30.0  3
- 1O2  Var_31  CBX  CBW  CBV  CBU  -179.38  30.0  3
- 1O2  Var_32  CBZ  CBX  CBW  CBV  -179.80  30.0  3
- 1O2  Var_33  CCA  CBZ  CBX  CBW   179.99  30.0  3
- 1O2  Var_34  HBE  CBE  CBD  CBC   -60.44  30.0  3
- 1O2  Var_35  HBF  CBF  OBG  CBH    79.09  30.0  3
- 1O2  Var_36  HCA  CCA  CBZ  CBX   179.87  30.0  3
+ 1O2  Var_01  CAM   CAL  O1   C1   -156.00  30.0  3
+ 1O2  Var_02  CBS   CBR  CBQ  CBP     2.25   0.0  2
+ 1O2  Var_03  CAQ   CAO  OAN  CAM  -179.28  30.0  1
+ 1O2  Var_04  CAR   CAQ  CAO  OAN   178.49  30.0  2
+ 1O2  Var_05  CAS   CAR  CAQ  CAO  -172.63  30.0  1
+ 1O2  Var_06  CAT   CAS  CAR  CAQ  -179.93  30.0  2
+ 1O2  Var_07  CAU   CAT  CAS  CAR  -177.67  30.0  1
+ 1O2  Var_08  CAV   CAU  CAT  CAS   179.83  30.0  1
+ 1O2  Var_09  CAW   CAV  CAU  CAT  -178.67  30.0  1
+ 1O2  Var_10  CAX   CAW  CAV  CAU   179.91  30.0  1
+ 1O2  Var_11  CAY   CAX  CAW  CAV  -179.12  30.0  2
+ 1O2  Var_12  CAZ   CAY  CAX  CAW   179.96  30.0  1
+ 1O2  Var_13  CBA   CAZ  CAY  CAX  -179.53  30.0  1
+ 1O2  Var_14  CBB   CBA  CAZ  CAY   179.97  30.0  1
+ 1O2  Var_15  CBC   CBB  CBA  CAZ  -179.86  30.0  1
+ 1O2  Var_16  CBD   CBC  CBB  CBA   179.94  30.0  3
+ 1O2  Var_17  CBE   CBD  CBC  CBB   179.92  30.0  2
+ 1O2  Var_18  CBJ   CBH  OBG  CBF   171.07  30.0  3
+ 1O2  Var_19  CBK   CBJ  CBH  OBG   161.19  30.0  1
+ 1O2  Var_20  CBL   CBK  CBJ  CBH   176.98  30.0  1
+ 1O2  Var_21  CBM   CBL  CBK  CBJ   178.04  30.0  1
+ 1O2  Var_22  CBN   CBM  CBL  CBK   178.13  30.0  2
+ 1O2  Var_23  CBO   CBN  CBM  CBL   179.78  30.0  1
+ 1O2  Var_24  CBP   CBO  CBN  CBM   178.63  30.0  1
+ 1O2  Var_25  CBQ   CBP  CBO  CBN   178.93  30.0  1
+ 1O2  Var_26  CBR   CBQ  CBP  CBO   106.31  30.0  2
+ 1O2  Var_27  CBT   CBS  CBR  CBQ   124.89  30.0  3
+ 1O2  Var_28  CBU   CBT  CBS  CBR   178.85  30.0  1
+ 1O2  Var_29  CBV   CBU  CBT  CBS  -178.37  30.0  3
+ 1O2  Var_30  CBW   CBV  CBU  CBT  -179.09  30.0  3
+ 1O2  Var_31  CBX   CBW  CBV  CBU  -179.38  30.0  3
+ 1O2  Var_32  CBZ   CBX  CBW  CBV  -179.80  30.0  3
+ 1O2  Var_33  CCA   CBZ  CBX  CBW   179.99  30.0  3
+ 1O2  Var_34  HBE   CBE  CBD  CBC   -60.44  30.0  3
+ 1O2  Var_35  HBF   CBF  OBG  CBH    79.09  30.0  3
+ 1O2  Var_36  HCA   CCA  CBZ  CBX   179.87  30.0  3
+ 1O2  Var_37  C4    C3   C2   C1    -55.32  30.0  1
+ 1O2  Var_38  C4    C5   O5   C1     59.88  30.0  1
+ 1O2  Var_39  C5    O5   C1   C2    -59.25  30.0  1
+ 1O2  Var_40  C5    C4   C3   C2     54.58  30.0  1
+ 1O2  Var_41  O5    C1   C2   C3     56.15  30.0  1
+ 1O2  Var_42  O5    C5   C4   C3    -55.53  30.0  1
+ 1O2  Var_43  O3    C3   C2   C1   -174.88  30.0  1
+ 1O2  Var_44  C6    C5   O5   C1   -175.90  30.0  1
+ 1O2  Var_45  C3    C2   C1   O1    -66.68  30.0  1
+ 1O2  Var_46  C5    O5   C1   O1     60.88  30.0  1
+ 1O2  Var_47  O4    C4   C3   C2    -66.14  30.0  1
+ 1O2  Var_48  O5    C1   C2   O2    176.67  30.0  1
+ 1O2  Var_49  C4    C3   C2   O2   -178.69  30.0  1
+ 1O2  Var_50  C6    C5   C4   C3   -176.82  30.0  1
+ 1O2  Var_51  C5    C4   C3   O3    176.49  30.0  1
+ 1O2  Var_52  O5    C5   C4   O4     66.58  30.0  1
+ 1O2  Var_53  H3    C3   C2   C1     62.66  30.0  1
+ 1O2  Var_54  H5    C5   O5   C1    -58.48  30.0  1
+ 1O2  Var_55  H4    C4   C3   C2    171.45  30.0  1
+ 1O2  Var_56  H1    C1   C2   C3    171.61  30.0  1
+ 1O2  Var_57  H2    C2   C3   C4     61.18  30.0  1
+ 1O2  Var_58  O2    C2   C1   O1     53.84  30.0  1
+ 1O2  Var_59  CAL   O1   C1   C2   -166.44  30.0  1
+ 1O2  Var_60  O3    C3   C2   O2     61.74  30.0  1
+ 1O2  Var_61  O4    C4   C3   O3     55.77  30.0  1
+ 1O2  Var_62  O6    C6   C5   C4   -172.88  30.0  3
+ 1O2  Var_63  C6    C5   C4   O4    -54.71  30.0  1
+ 1O2  Var_64  CAL   O1   C1   O5     72.24  30.0  1
+ 1O2  Var_65  O6    C6   C5   O5     63.84  30.0  3
+ 1O2  Var_66  HO2   O2   C2   C1     83.51  30.0  3
+ 1O2  Var_67  HO3   O3   C3   C2    -45.10  30.0  3
+ 1O2  Var_68  HO4   O4   C4   C3    -48.01  30.0  3
+ 1O2  Var_69  H6    C6   C5   C4    -51.85  30.0  3
+ 1O2  Var_70  H6A   C6   C5   C4     64.83  30.0  3
+ 1O2  Var_71  HO6   O6   C6   C5    174.28  30.0  3
+ 1O2  Var_72  OAN   CAM  CAL  O1     63.40  30.0  2
+ 1O2  Var_73  CBF   CAM  CAL  O1    -58.98  30.0  2
+ 1O2  Var_74  CAO   OAN  CAM  CAL    85.47  30.0  2
+ 1O2  Var_75  OBG   CBF  CAM  CAL    66.70  30.0  3
+ 1O2  Var_76  OBG   CBF  CAM  OAN   -57.54  30.0  3
+ 1O2  Var_77  CBF   CAM  OAN  CAO  -147.78  30.0  3
+ 1O2  Var_78  HAM   CAM  CAL  O1   -176.32  30.0  2
+ 1O2  Var_79  HBFA  CBF  CAM  CAL   -54.97  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KEW  KEW  (3~{S},6~{S})-3-[(3-chloranyl-4-oxidanyl-phenyl)methyl]-6-[(4-hydroxyphenyl)methyl]piperazine-2,5-dione  ligand  42  25  .  2022-03-22  2022-07-25
+ KEW  KEW  (3~{S},6~{S})-3-[(3-chloranyl-4-oxidanyl-phenyl)methyl]-6-[(4-hydroxyphenyl)methyl]piperazine-2,5-dione  ligand  42  25  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KEW
@@ -225,43 +226,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KEW  CONST_01  C05  C04  C03  C02    0.00   0.0  0
- KEW  CONST_02  C05  C23  C24  C02    0.00   0.0  0
- KEW  CONST_03  C23  C05  C04  C03    0.00   0.0  0
- KEW  CONST_04  C23  C24  C02  C03    0.00   0.0  0
- KEW  CONST_05  C24  C23  C05  C04    0.00   0.0  0
- KEW  CONST_06  C24  C02  C03  C04    0.00   0.0  0
- KEW  CONST_07  C15  C14  C13  C12    0.00   0.0  0
- KEW  CONST_08  C15  C17  C18  C12    0.00   0.0  0
- KEW  CONST_09  C17  C18  C12  C13    0.00   0.0  0
- KEW  CONST_10  C17  C15  C14  C13    0.00   0.0  0
- KEW  CONST_11  C18  C12  C13  C14    0.00   0.0  0
- KEW  CONST_12  C18  C17  C15  C14    0.00   0.0  0
- KEW  CONST_13  C10  C19  N20  C07    0.00   0.0  0
- KEW  CONST_14  C10  N09  C08  C07    0.00   0.0  0
- KEW  CONST_15  C06  C05  C04  C03  180.00   0.0  0
- KEW  CONST_16  CL1  C24  C02  C03  180.00   0.0  0
- KEW  CONST_17  O01  C02  C03  C04  180.00   0.0  0
- KEW  CONST_18  CL1  C24  C23  C05  180.00   0.0  0
- KEW  CONST_19  C24  C23  C05  C06  180.00   0.0  0
- KEW  CONST_20  C14  C13  C12  C11  180.00   0.0  0
- KEW  CONST_21  C17  C18  C12  C11  180.00   0.0  0
- KEW  CONST_22  O16  C15  C14  C13  180.00   0.0  0
- KEW  CONST_23  O16  C15  C17  C18  180.00   0.0  0
- KEW  CONST_24  O01  C02  C24  C23  180.00   0.0  0
- KEW  CONST_25  O21  C19  N20  C07  180.00   0.0  0
- KEW  CONST_26  O22  C08  N09  C10  180.00   0.0  0
- KEW  CONST_27  H2   C04  C03  C02  180.00   0.0  0
- KEW  CONST_28  H13  C23  C24  C02  180.00   0.0  0
- KEW  CONST_29  H1   C03  C04  C05  180.00   0.0  0
- KEW  CONST_30  H10  C14  C13  C12  180.00   0.0  0
- KEW  CONST_31  H11  C17  C18  C12  180.00   0.0  0
- KEW  CONST_32  H12  C18  C12  C13  180.00   0.0  0
- KEW  CONST_33  H9   C13  C14  C15  180.00   0.0  0
- KEW  CONST_34  H14  N09  C08  C07  180.00   0.0  0
- KEW  CONST_35  H15  N20  C19  C10  180.00   0.0  0
- KEW  Var_01    C07  C06  C05  C04   92.57  30.0  3
- KEW  Var_02    C13  C12  C11  C10   98.51  30.0  2
+ KEW  CONST_01  C05  C04  C03  C02     0.00   0.0  0
+ KEW  CONST_02  C05  C23  C24  C02     0.00   0.0  0
+ KEW  CONST_03  C23  C05  C04  C03     0.00   0.0  0
+ KEW  CONST_04  C23  C24  C02  C03     0.00   0.0  0
+ KEW  CONST_05  C24  C23  C05  C04     0.00   0.0  0
+ KEW  CONST_06  C24  C02  C03  C04     0.00   0.0  0
+ KEW  CONST_07  C15  C14  C13  C12     0.00   0.0  0
+ KEW  CONST_08  C15  C17  C18  C12     0.00   0.0  0
+ KEW  CONST_09  C17  C18  C12  C13     0.00   0.0  0
+ KEW  CONST_10  C17  C15  C14  C13     0.00   0.0  0
+ KEW  CONST_11  C18  C12  C13  C14     0.00   0.0  0
+ KEW  CONST_12  C18  C17  C15  C14     0.00   0.0  0
+ KEW  CONST_13  C10  C19  N20  C07     0.00   0.0  0
+ KEW  CONST_14  C10  N09  C08  C07     0.00   0.0  0
+ KEW  CONST_15  C06  C05  C04  C03   180.00   0.0  0
+ KEW  CONST_16  CL1  C24  C02  C03   180.00   0.0  0
+ KEW  CONST_17  O01  C02  C03  C04   180.00   0.0  0
+ KEW  CONST_18  CL1  C24  C23  C05   180.00   0.0  0
+ KEW  CONST_19  C24  C23  C05  C06   180.00   0.0  0
+ KEW  CONST_20  C14  C13  C12  C11   180.00   0.0  0
+ KEW  CONST_21  C17  C18  C12  C11   180.00   0.0  0
+ KEW  CONST_22  O16  C15  C14  C13   180.00   0.0  0
+ KEW  CONST_23  O16  C15  C17  C18   180.00   0.0  0
+ KEW  CONST_24  O01  C02  C24  C23   180.00   0.0  0
+ KEW  CONST_25  O21  C19  N20  C07   180.00   0.0  0
+ KEW  CONST_26  O22  C08  N09  C10   180.00   0.0  0
+ KEW  CONST_27  H2   C04  C03  C02   180.00   0.0  0
+ KEW  CONST_28  H13  C23  C24  C02   180.00   0.0  0
+ KEW  CONST_29  H1   C03  C04  C05   180.00   0.0  0
+ KEW  CONST_30  H10  C14  C13  C12   180.00   0.0  0
+ KEW  CONST_31  H11  C17  C18  C12   180.00   0.0  0
+ KEW  CONST_32  H12  C18  C12  C13   180.00   0.0  0
+ KEW  CONST_33  H9   C13  C14  C15   180.00   0.0  0
+ KEW  CONST_34  H14  N09  C08  C07   180.00   0.0  0
+ KEW  CONST_35  H15  N20  C19  C10   180.00   0.0  0
+ KEW  Var_01    C07  C06  C05  C04    92.57  30.0  3
+ KEW  Var_02    C13  C12  C11  C10    98.51  30.0  2
+ KEW  Var_03    C19  N20  C07  C08    16.82  30.0  1
+ KEW  Var_04    C19  C10  N09  C08    14.85  30.0  1
+ KEW  Var_05    N20  C07  C08  N09    -9.52  30.0  1
+ KEW  Var_06    N20  C19  C10  N09    -7.75  30.0  1
+ KEW  Var_07    N20  C07  C06  C05    65.07  30.0  2
+ KEW  Var_08    C08  C07  C06  C05   -62.13  30.0  2
+ KEW  Var_09    C19  N20  C07  C06  -108.84  30.0  1
+ KEW  Var_10    N09  C08  C07  C06   116.75  30.0  1
+ KEW  Var_11    C11  C10  N09  C08  -110.72  30.0  1
+ KEW  Var_12    N20  C19  C10  C11   118.53  30.0  1
+ KEW  Var_13    C19  C10  C11  C12   174.42  30.0  3
+ KEW  Var_14    N09  C10  C11  C12   -58.38  30.0  3
+ KEW  Var_15    O21  C19  C10  N09   171.03  30.0  1
+ KEW  Var_16    O22  C08  C07  N20   170.03  30.0  1
+ KEW  Var_17    H6   C10  N09  C08   130.93  30.0  1
+ KEW  Var_18    H5   C07  N20  C19   133.63  30.0  1
+ KEW  Var_19    O22  C08  C07  C06   -63.69  30.0  1
+ KEW  Var_20    O21  C19  C10  C11   -62.69  30.0  1
+ KEW  Var_21    H16  O01  C02  C03  -179.71  30.0  2
+ KEW  Var_22    H17  O16  C15  C14   179.28  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

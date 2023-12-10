@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BXV  BXV  '4-{[trans-4-({[4-(trifluoromethoxy)phenyl]carbamoyl}amino)cyclohexyl]oxy}benzoic acid'  ligand  51  31  .  2021-08-06  2021-08-06  
+ BXV  BXV  '4-{[trans-4-({[4-(trifluoromethoxy)phenyl]carbamoyl}amino)cyclohexyl]oxy}benzoic acid'  ligand  51  31  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BXV
@@ -261,44 +262,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BXV  CONST_01  C1   C31  C30  C24    0.00   0.0  0
- BXV  CONST_02  C1   C22  C23  C24    0.00   0.0  0
- BXV  CONST_03  C31  C30  C24  C23    0.00   0.0  0
- BXV  CONST_04  C31  C1   C22  C23    0.00   0.0  0
- BXV  CONST_05  C30  C24  C23  C22    0.00   0.0  0
- BXV  CONST_06  C30  C31  C1   C22    0.00   0.0  0
- BXV  CONST_07  C13  C17  C18  C10    0.00   0.0  0
- BXV  CONST_08  C13  C12  C11  C10    0.00   0.0  0
- BXV  CONST_09  C12  C13  C17  C18    0.00   0.0  0
- BXV  CONST_10  C12  C11  C10  C18    0.00   0.0  0
- BXV  CONST_11  C11  C10  C18  C17    0.00   0.0  0
- BXV  CONST_12  C11  C12  C13  C17    0.00   0.0  0
- BXV  CONST_13  C31  C30  C24  O25  180.00   0.0  0
- BXV  CONST_14  C22  C23  C24  O25  180.00   0.0  0
- BXV  CONST_15  N2   C1   C22  C23  180.00   0.0  0
- BXV  CONST_16  N2   C1   C31  C30  180.00   0.0  0
- BXV  CONST_17  C17  C18  C10  O9   180.00   0.0  0
- BXV  CONST_18  C12  C11  C10  O9   180.00   0.0  0
- BXV  CONST_19  C14  C13  C17  C18  180.00   0.0  0
- BXV  CONST_20  C11  C12  C13  C14  180.00   0.0  0
- BXV  CONST_21  H4   C31  C30  C24  180.00   0.0  0
- BXV  CONST_22  H2   C22  C23  C24  180.00   0.0  0
- BXV  CONST_23  H3   C30  C24  C23  180.00   0.0  0
- BXV  CONST_24  H1   C23  C24  C30  180.00   0.0  0
- BXV  CONST_25  H18  C17  C18  C10  180.00   0.0  0
- BXV  CONST_26  H20  C12  C11  C10  180.00   0.0  0
- BXV  CONST_27  H21  C11  C10  C18  180.00   0.0  0
- BXV  CONST_28  H17  C18  C17  C13  180.00   0.0  0
- BXV  CONST_32  O21  C3   N2   C1     0.00   0.0  0
- BXV  CONST_33  C5   N4   C3   O21    0.00   0.0  0
- BXV  CONST_34  N4   C3   N2   C1   180.00   0.0  0
- BXV  CONST_35  C5   N4   C3   N2   180.00   0.0  0
- BXV  CONST_36  H6   N4   C3   O21  180.00   0.0  0
- BXV  Var_01    C8   C7   C6   C5   -56.38  30.0  1
- BXV  Var_02    C8   C19  C20  C5    56.12  30.0  1
- BXV  Var_03    C18  C10  O9   C8    -0.69  30.0  2
- BXV  Var_04    C30  C24  O25  C26  -92.22  30.0  2
- BXV  Var_05    O15  C14  C13  C17   -1.58  30.0  2
+ BXV  CONST_01  C1   C31  C30  C24     0.00   0.0  0
+ BXV  CONST_02  C1   C22  C23  C24     0.00   0.0  0
+ BXV  CONST_03  C31  C30  C24  C23     0.00   0.0  0
+ BXV  CONST_04  C31  C1   C22  C23     0.00   0.0  0
+ BXV  CONST_05  C30  C24  C23  C22     0.00   0.0  0
+ BXV  CONST_06  C30  C31  C1   C22     0.00   0.0  0
+ BXV  CONST_07  C13  C17  C18  C10     0.00   0.0  0
+ BXV  CONST_08  C13  C12  C11  C10     0.00   0.0  0
+ BXV  CONST_09  C12  C13  C17  C18     0.00   0.0  0
+ BXV  CONST_10  C12  C11  C10  C18     0.00   0.0  0
+ BXV  CONST_11  C11  C10  C18  C17     0.00   0.0  0
+ BXV  CONST_12  C11  C12  C13  C17     0.00   0.0  0
+ BXV  CONST_13  C31  C30  C24  O25   180.00   0.0  0
+ BXV  CONST_14  C22  C23  C24  O25   180.00   0.0  0
+ BXV  CONST_15  N2   C1   C22  C23   180.00   0.0  0
+ BXV  CONST_16  N2   C1   C31  C30   180.00   0.0  0
+ BXV  CONST_17  C17  C18  C10  O9    180.00   0.0  0
+ BXV  CONST_18  C12  C11  C10  O9    180.00   0.0  0
+ BXV  CONST_19  C14  C13  C17  C18   180.00   0.0  0
+ BXV  CONST_20  C11  C12  C13  C14   180.00   0.0  0
+ BXV  CONST_21  H4   C31  C30  C24   180.00   0.0  0
+ BXV  CONST_22  H2   C22  C23  C24   180.00   0.0  0
+ BXV  CONST_23  H3   C30  C24  C23   180.00   0.0  0
+ BXV  CONST_24  H1   C23  C24  C30   180.00   0.0  0
+ BXV  CONST_25  H18  C17  C18  C10   180.00   0.0  0
+ BXV  CONST_26  H20  C12  C11  C10   180.00   0.0  0
+ BXV  CONST_27  H21  C11  C10  C18   180.00   0.0  0
+ BXV  CONST_28  H17  C18  C17  C13   180.00   0.0  0
+ BXV  CONST_29  O21  C3   N2   C1      0.00   0.0  0
+ BXV  CONST_30  C5   N4   C3   O21     0.00   0.0  0
+ BXV  CONST_31  N4   C3   N2   C1    180.00   0.0  0
+ BXV  CONST_32  C5   N4   C3   N2    180.00   0.0  0
+ BXV  CONST_33  H6   N4   C3   O21   180.00   0.0  0
+ BXV  Var_01    C8   C7   C6   C5    -56.38  30.0  1
+ BXV  Var_02    C8   C19  C20  C5     56.12  30.0  1
+ BXV  Var_03    C18  C10  O9   C8     -0.69  30.0  2
+ BXV  Var_04    C30  C24  O25  C26   -92.22  30.0  2
+ BXV  Var_05    O15  C14  C13  C17    -1.58  30.0  2
+ BXV  Var_06    C7   C6   C5   C20    55.15  30.0  1
+ BXV  Var_07    C7   C8   C19  C20   -57.04  30.0  1
+ BXV  Var_08    C6   C5   C20  C19   -55.02  30.0  1
+ BXV  Var_09    C6   C7   C8   C19    57.21  30.0  1
+ BXV  Var_10    C7   C6   C5   N4    179.20  30.0  1
+ BXV  Var_11    C19  C20  C5   N4   -178.97  30.0  1
+ BXV  Var_12    O9   C8   C19  C20  -178.87  30.0  1
+ BXV  Var_13    C10  O9   C8   C19  -156.16  30.0  3
+ BXV  Var_14    C10  O9   C8   C7     82.50  30.0  3
+ BXV  Var_15    O9   C8   C7   C6    176.38  30.0  1
+ BXV  Var_16    H15  C6   C5   C20   177.02  30.0  1
+ BXV  Var_17    H16  C6   C5   C20   -66.18  30.0  1
+ BXV  Var_18    H12  C8   C19  C20    62.95  30.0  1
+ BXV  Var_19    H7   C5   C20  C19    63.82  30.0  1
+ BXV  Var_20    C6   C5   N4   C3    123.12  30.0  3
+ BXV  Var_21    C20  C5   N4   C3   -113.05  30.0  3
+ BXV  Var_22    H6   N4   C5   C20    62.94  30.0  1
+ BXV  Var_23    C24  O25  C26  F29    59.98  30.0  2
+ BXV  Var_24    C24  O25  C26  F27   -61.07  30.0  2
+ BXV  Var_25    C24  O25  C26  F28   179.44  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

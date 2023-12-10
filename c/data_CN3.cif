@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CN3  CN3  '(2R,5S,11R,14R)-5,8,11-trihydroxy-2-(nonanoyloxy)-5,11-dioxido-16-oxo-14-[(propanoyloxy)methyl]-4,6,10,12,15-pentaoxa-5,11-diphosphanonadec-1-yl undecanoate'  ligand  121  55  .  2022-03-15  2022-03-15
+ CN3  CN3  '(2R,5S,11R,14R)-5,8,11-trihydroxy-2-(nonanoyloxy)-5,11-dioxido-16-oxo-14-[(propanoyloxy)methyl]-4,6,10,12,15-pentaoxa-5,11-diphosphanonadec-1-yl undecanoate'  ligand  121  55  .  2022-03-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CN3
@@ -531,39 +532,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CN3  Var_01  C2   C1   O11  P     165.50  30.0  3
- CN3  Var_02  CB   CC   O13  P    -165.97  30.0  3
- CN3  Var_03  O22  C21  O21  C2      4.50  30.0  3
- CN3  Var_04  O32  C31  O31  C3     -0.91  30.0  2
- CN3  Var_05  C33  C32  C31  O31   172.04  30.0  3
- CN3  Var_06  C23  C22  C21  O21  -172.07  30.0  3
- CN3  Var_07  C24  C23  C22  C21   179.60  30.0  3
- CN3  Var_08  CB   CA   O3'  P'   -179.03  30.0  3
- CN3  Var_09  C2'  C1'  O1'  P'   -165.50  30.0  3
- CN3  Var_10  O52  C51  O51  C2'    -3.53  30.0  3
- CN3  Var_11  O42  C41  O41  C3'    -2.96  30.0  2
- CN3  Var_12  C43  C42  C41  O41   177.05  30.0  3
- CN3  Var_13  C44  C43  C42  C41   176.60  30.0  2
- CN3  Var_14  C45  C44  C43  C42   179.50  30.0  1
- CN3  Var_15  C46  C45  C44  C43   177.56  30.0  2
- CN3  Var_16  C47  C46  C45  C44   179.61  30.0  3
- CN3  Var_17  C48  C47  C46  C45   178.57  30.0  1
- CN3  Var_18  C49  C48  C47  C46   179.69  30.0  3
- CN3  Var_19  C4A  C49  C48  C47   179.23  30.0  3
- CN3  Var_20  C4B  C4A  C49  C48   179.76  30.0  1
- CN3  Var_21  C53  C52  C51  O51  -176.44  30.0  3
- CN3  Var_22  C54  C53  C52  C51   177.72  30.0  3
- CN3  Var_23  C55  C54  C53  C52  -178.92  30.0  3
- CN3  Var_24  C56  C55  C54  C53   178.89  30.0  1
- CN3  Var_25  C57  C56  C55  C54  -179.40  30.0  1
- CN3  Var_26  C58  C57  C56  C55   179.13  30.0  3
- CN3  Var_27  C59  C58  C57  C56  -179.80  30.0  1
- CN3  Var_28  H3   C3   O31  C31    57.58  30.0  1
- CN3  Var_29  H33  C33  C32  C31   -61.00  30.0  3
- CN3  Var_30  H24  C24  C23  C22  -179.23  30.0  3
- CN3  Var_31  H3'  C3'  O41  C41    63.67  30.0  2
- CN3  Var_32  H4B  C4B  C4A  C49   -60.09  30.0  3
- CN3  Var_33  H59  C59  C58  C57   179.52  30.0  3
+ CN3  Var_01  C2    C1   O11  P     165.50  30.0  3
+ CN3  Var_02  CB    CC   O13  P    -165.97  30.0  3
+ CN3  Var_03  O22   C21  O21  C2      4.50  30.0  3
+ CN3  Var_04  O32   C31  O31  C3     -0.91  30.0  2
+ CN3  Var_05  C33   C32  C31  O31   172.04  30.0  3
+ CN3  Var_06  C23   C22  C21  O21  -172.07  30.0  3
+ CN3  Var_07  C24   C23  C22  C21   179.60  30.0  3
+ CN3  Var_08  CB    CA   O3'  P'   -179.03  30.0  3
+ CN3  Var_09  C2'   C1'  O1'  P'   -165.50  30.0  3
+ CN3  Var_10  O52   C51  O51  C2'    -3.53  30.0  3
+ CN3  Var_11  O42   C41  O41  C3'    -2.96  30.0  2
+ CN3  Var_12  C43   C42  C41  O41   177.05  30.0  3
+ CN3  Var_13  C44   C43  C42  C41   176.60  30.0  2
+ CN3  Var_14  C45   C44  C43  C42   179.50  30.0  1
+ CN3  Var_15  C46   C45  C44  C43   177.56  30.0  2
+ CN3  Var_16  C47   C46  C45  C44   179.61  30.0  3
+ CN3  Var_17  C48   C47  C46  C45   178.57  30.0  1
+ CN3  Var_18  C49   C48  C47  C46   179.69  30.0  3
+ CN3  Var_19  C4A   C49  C48  C47   179.23  30.0  3
+ CN3  Var_20  C4B   C4A  C49  C48   179.76  30.0  1
+ CN3  Var_21  C53   C52  C51  O51  -176.44  30.0  3
+ CN3  Var_22  C54   C53  C52  C51   177.72  30.0  3
+ CN3  Var_23  C55   C54  C53  C52  -178.92  30.0  3
+ CN3  Var_24  C56   C55  C54  C53   178.89  30.0  1
+ CN3  Var_25  C57   C56  C55  C54  -179.40  30.0  1
+ CN3  Var_26  C58   C57  C56  C55   179.13  30.0  3
+ CN3  Var_27  C59   C58  C57  C56  -179.80  30.0  1
+ CN3  Var_28  H3    C3   O31  C31    57.58  30.0  1
+ CN3  Var_29  H33   C33  C32  C31   -61.00  30.0  3
+ CN3  Var_30  H24   C24  C23  C22  -179.23  30.0  3
+ CN3  Var_31  H3'   C3'  O41  C41    63.67  30.0  2
+ CN3  Var_32  H4B   C4B  C4A  C49   -60.09  30.0  3
+ CN3  Var_33  H59   C59  C58  C57   179.52  30.0  3
+ CN3  Var_34  CC    O13  P    O11  -165.73  30.0  3
+ CN3  Var_35  C3    C2   C1   O11   179.22  30.0  3
+ CN3  Var_36  O21   C2   C1   O11   -62.40  30.0  3
+ CN3  Var_37  C1    O11  P    O12   -63.81  30.0  3
+ CN3  Var_38  CC    O13  P    O12    81.44  30.0  3
+ CN3  Var_39  C1    O11  P    O13  -176.95  30.0  3
+ CN3  Var_40  CA    CB   CC   O13  -173.80  30.0  3
+ CN3  Var_41  OA    CB   CC   O13    60.45  30.0  3
+ CN3  Var_42  C1    O11  P    O14    70.25  30.0  2
+ CN3  Var_43  CC    O13  P    O14   -52.97  30.0  2
+ CN3  Var_44  O31   C3   C2   C1   -177.99  30.0  2
+ CN3  Var_45  C21   O21  C2   C1    110.26  30.0  2
+ CN3  Var_46  C21   O21  C2   C3   -129.35  30.0  2
+ CN3  Var_47  O21   C2   C3   O31    63.42  30.0  3
+ CN3  Var_48  CA    O3'  P'   O1'  -174.28  30.0  3
+ CN3  Var_49  O51   C2'  C1'  O1'   -61.71  30.0  3
+ CN3  Var_50  C3'   C2'  C1'  O1'   179.94  30.0  3
+ CN3  Var_51  CA    O3'  P'   O2'    73.16  30.0  2
+ CN3  Var_52  C1'   O1'  P'   O2'   -52.23  30.0  2
+ CN3  Var_53  CA    O3'  P'   O4'   -61.60  30.0  3
+ CN3  Var_54  C1'   O1'  P'   O4'    81.69  30.0  3
+ CN3  Var_55  O3'   P'   O1'  C1'  -165.51  30.0  2
+ CN3  Var_56  C51   O51  C2'  C1'   129.21  30.0  3
+ CN3  Var_57  O41   C3'  C2'  C1'   178.14  30.0  2
+ CN3  Var_58  C51   O51  C2'  C3'  -110.56  30.0  3
+ CN3  Var_59  O51   C2'  C3'  O41    59.79  30.0  3
+ CN3  Var_60  O3'   CA   CB   OA    -58.47  30.0  3
+ CN3  Var_61  O3'   CA   CB   CC    175.83  30.0  3
+ CN3  Var_62  H2    C2   C1   O11    58.09  30.0  3
+ CN3  Var_63  HB    CB   CC   O13   -55.99  30.0  3
+ CN3  Var_64  H3A   C3   C2   C1     61.33  30.0  2
+ CN3  Var_65  H2'   C2'  C1'  O1'    58.56  30.0  3
+ CN3  Var_66  H3'A  C3'  C2'  C1'    57.74  30.0  2
+ CN3  Var_67  HOA   OA   CB   CA    -62.62  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

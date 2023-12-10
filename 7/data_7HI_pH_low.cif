@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7HI  7HI  '(3R,5R)-7-[3-(biphenyl-4-ylcarbamoyl)-2-ethyl-5,6,7,8-tetrahydrocyclohepta[b]pyrrol-1(4H)-yl]-3,5-dihydroxyheptanoic acid'  ligand  76  38  .  2021-08-05  2023-02-16
+ 7HI  7HI  '(3R,5R)-7-[3-(biphenyl-4-ylcarbamoyl)-2-ethyl-5,6,7,8-tetrahydrocyclohepta[b]pyrrol-1(4H)-yl]-3,5-dihydroxyheptanoic acid'  ligand  76  38  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7HI
@@ -361,49 +362,94 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 7HI  CONST_01  C1   C2   C12  N1      0.00   0.0  0
- 7HI  CONST_02  C2   C12  N1   C5      0.00   0.0  0
- 7HI  CONST_03  C24  C21  C16  C15     0.00   0.0  0
- 7HI  CONST_04  C24  C18  C22  C15     0.00   0.0  0
- 7HI  CONST_07  C22  C29  C20  C17   180.00   0.0  0
- 7HI  CONST_08  C23  C29  C20  C17     0.00   0.0  0
- 7HI  CONST_09  C23  C26  C32  C17     0.00   0.0  0
- 7HI  CONST_10  C26  C32  C17  C20     0.00   0.0  0
- 7HI  CONST_12  C26  C23  C29  C20     0.00   0.0  0
- 7HI  CONST_13  C22  C18  C24  C21     0.00   0.0  0
- 7HI  CONST_14  C22  C15  C16  C21     0.00   0.0  0
- 7HI  CONST_15  C26  C23  C29  C22   180.00   0.0  0
- 7HI  CONST_16  C29  C22  C18  C24   180.00   0.0  0
- 7HI  CONST_17  C29  C20  C17  C32     0.00   0.0  0
- 7HI  CONST_18  C29  C23  C26  C32     0.00   0.0  0
- 7HI  CONST_20  C16  C15  C22  C29   180.00   0.0  0
- 7HI  CONST_21  C16  C15  C22  C18     0.00   0.0  0
- 7HI  CONST_22  C16  C21  C24  C18     0.00   0.0  0
- 7HI  CONST_23  C3   C2   C12  N1    180.00   0.0  0
- 7HI  CONST_24  C6   C12  N1   C5    180.00   0.0  0
- 7HI  CONST_25  C1   C2   C12  C6    180.00   0.0  0
- 7HI  CONST_26  C2   C12  N1   C7    180.00   0.0  0
- 7HI  CONST_27  N2   C32  C17  C20   180.00   0.0  0
- 7HI  CONST_28  C23  C26  C32  N2    180.00   0.0  0
- 7HI  CONST_29  H21  C21  C16  C15   180.00   0.0  0
- 7HI  CONST_30  H18  C18  C22  C15   180.00   0.0  0
- 7HI  CONST_31  H26  C26  C32  C17   180.00   0.0  0
- 7HI  CONST_32  H23  C23  C29  C20   180.00   0.0  0
- 7HI  CONST_33  H15  C15  C16  C21   180.00   0.0  0
- 7HI  CONST_34  H16  C16  C15  C22   180.00   0.0  0
- 7HI  CONST_35  H24  C24  C18  C22   180.00   0.0  0
- 7HI  CONST_36  H20  C20  C29  C22     0.00   0.0  0
- 7HI  CONST_37  H17  C17  C32  C26   180.00   0.0  0
- 7HI  CONST_38  C2   C3   N2   C32   180.00   0.0  0
- 7HI  CONST_41  HN2  N2   C32  C17   180.00   0.0  0
- 7HI  CONST_42  C32  N2   C3   O2      0.00   0.0  0
- 7HI  CONST_43  HO7  O7   C36  C35   180.00   0.0  0
- 7HI  Var_01    C13  C6   C12  N1     92.59  30.0  3
- 7HI  Var_02    C8   C7   N1   C5     86.18  30.0  2
- 7HI  Var_03    C12  C2   C3   O2     45.74  30.0  2
- 7HI  Var_04    C9   C8   C7   N1   -173.37  30.0  3
- 7HI  Var_05    H13  C13  C6   C12   -60.85  30.0  3
- 7HI  Var_06    O6   C36  C35  C11   -48.71  30.0  3
+ 7HI  CONST_01  C1    C2   C12  N1      0.00   0.0  0
+ 7HI  CONST_02  C2    C12  N1   C5      0.00   0.0  0
+ 7HI  CONST_03  C24   C21  C16  C15     0.00   0.0  0
+ 7HI  CONST_04  C24   C18  C22  C15     0.00   0.0  0
+ 7HI  CONST_05  C22   C29  C20  C17   180.00   0.0  0
+ 7HI  CONST_06  C23   C29  C20  C17     0.00   0.0  0
+ 7HI  CONST_07  C23   C26  C32  C17     0.00   0.0  0
+ 7HI  CONST_08  C26   C32  C17  C20     0.00   0.0  0
+ 7HI  CONST_09  C26   C23  C29  C20     0.00   0.0  0
+ 7HI  CONST_10  C22   C18  C24  C21     0.00   0.0  0
+ 7HI  CONST_11  C22   C15  C16  C21     0.00   0.0  0
+ 7HI  CONST_12  C26   C23  C29  C22   180.00   0.0  0
+ 7HI  CONST_13  C29   C22  C18  C24   180.00   0.0  0
+ 7HI  CONST_14  C29   C20  C17  C32     0.00   0.0  0
+ 7HI  CONST_15  C29   C23  C26  C32     0.00   0.0  0
+ 7HI  CONST_16  C16   C15  C22  C29   180.00   0.0  0
+ 7HI  CONST_17  C16   C15  C22  C18     0.00   0.0  0
+ 7HI  CONST_18  C16   C21  C24  C18     0.00   0.0  0
+ 7HI  CONST_19  C3    C2   C12  N1    180.00   0.0  0
+ 7HI  CONST_20  C6    C12  N1   C5    180.00   0.0  0
+ 7HI  CONST_21  C1    C2   C12  C6    180.00   0.0  0
+ 7HI  CONST_22  C2    C12  N1   C7    180.00   0.0  0
+ 7HI  CONST_23  N2    C32  C17  C20   180.00   0.0  0
+ 7HI  CONST_24  C23   C26  C32  N2    180.00   0.0  0
+ 7HI  CONST_25  H21   C21  C16  C15   180.00   0.0  0
+ 7HI  CONST_26  H18   C18  C22  C15   180.00   0.0  0
+ 7HI  CONST_27  H26   C26  C32  C17   180.00   0.0  0
+ 7HI  CONST_28  H23   C23  C29  C20   180.00   0.0  0
+ 7HI  CONST_29  H15   C15  C16  C21   180.00   0.0  0
+ 7HI  CONST_30  H16   C16  C15  C22   180.00   0.0  0
+ 7HI  CONST_31  H24   C24  C18  C22   180.00   0.0  0
+ 7HI  CONST_32  H20   C20  C29  C22     0.00   0.0  0
+ 7HI  CONST_33  H17   C17  C32  C26   180.00   0.0  0
+ 7HI  CONST_34  C2    C3   N2   C32   180.00   0.0  0
+ 7HI  CONST_35  HN2   N2   C32  C17   180.00   0.0  0
+ 7HI  CONST_36  C32   N2   C3   O2      0.00   0.0  0
+ 7HI  CONST_37  HO7   O7   C36  C35   180.00   0.0  0
+ 7HI  Var_01    C13   C6   C12  N1     92.59  30.0  3
+ 7HI  Var_02    C8    C7   N1   C5     86.18  30.0  2
+ 7HI  Var_03    C12   C2   C3   O2     45.74  30.0  2
+ 7HI  Var_04    C9    C8   C7   N1   -173.37  30.0  3
+ 7HI  Var_05    H13   C13  C6   C12   -60.85  30.0  3
+ 7HI  Var_06    O6    C36  C35  C11   -48.71  30.0  3
+ 7HI  CONST_38  C2    C1   C5   N1      0.00   0.0  0
+ 7HI  CONST_39  C12   C2   C1   C5      0.00   0.0  0
+ 7HI  CONST_40  C1    C5   N1   C12     0.00   0.0  0
+ 7HI  CONST_41  C3    C2   C1   C5    180.00   0.0  0
+ 7HI  CONST_42  C1    C5   N1   C7    180.00   0.0  0
+ 7HI  CONST_43  C27   C5   N1   C7      0.00   0.0  0
+ 7HI  CONST_44  C3    C2   C1   C14     0.00   0.0  0
+ 7HI  Var_07    C4    C27  C5   N1   -148.98  30.0  1
+ 7HI  Var_08    C14   C19  C25  C4     41.14  30.0  1
+ 7HI  Var_09    C1    C5   C27  C4     31.04  30.0  1
+ 7HI  Var_10    C19   C14  C1   C5     38.31  30.0  1
+ 7HI  Var_11    C25   C4   C27  C5    -77.41  30.0  1
+ 7HI  Var_12    C20   C29  C22  C15   144.48  30.0  2
+ 7HI  Var_13    C23   C29  C22  C15   -35.41  30.0  2
+ 7HI  Var_14    C18   C22  C29  C20   -35.57  30.0  2
+ 7HI  Var_15    C18   C22  C29  C23   144.54  30.0  2
+ 7HI  Var_16    C19   C14  C1   C2   -145.17  30.0  1
+ 7HI  Var_17    C19   C25  C4   C27    45.21  30.0  1
+ 7HI  Var_18    C1    C14  C19  C25   -81.41  30.0  1
+ 7HI  Var_19    H27   C27  C5   N1     87.32  30.0  1
+ 7HI  Var_20    H27A  C27  C5   N1    -28.47  30.0  1
+ 7HI  Var_21    H19   C19  C25  C4    163.53  30.0  1
+ 7HI  Var_22    H19A  C19  C25  C4    -81.23  30.0  1
+ 7HI  Var_23    H14   C14  C1   C5    -84.77  30.0  1
+ 7HI  Var_24    H14A  C14  C1   C5    160.30  30.0  1
+ 7HI  Var_25    H4    C4   C27  C5     46.60  30.0  1
+ 7HI  Var_26    H4A   C4   C27  C5    161.06  30.0  1
+ 7HI  Var_27    H25   C25  C4   C27   167.67  30.0  1
+ 7HI  Var_28    H25A  C25  C4   C27   -77.51  30.0  1
+ 7HI  Var_29    C10   C9   C8   C7   -172.79  30.0  3
+ 7HI  Var_30    O4    C9   C8   C7     60.28  30.0  3
+ 7HI  Var_31    C11   C10  C9   C8    172.25  30.0  3
+ 7HI  Var_32    C36   C35  C11  C10   178.62  30.0  3
+ 7HI  Var_33    C35   C11  C10  C9   -166.24  30.0  3
+ 7HI  Var_34    O3    C11  C10  C9     69.37  30.0  3
+ 7HI  Var_35    C11   C10  C9   O4    -62.06  30.0  3
+ 7HI  Var_36    C36   C35  C11  O3    -55.03  30.0  3
+ 7HI  Var_37    H9    C9   C8   C7    -54.90  30.0  3
+ 7HI  Var_38    H10   C10  C9   C8    -62.66  30.0  3
+ 7HI  Var_39    H10A  C10  C9   C8     51.87  30.0  3
+ 7HI  Var_40    HO4   O4   C9   C8     70.40  30.0  3
+ 7HI  Var_41    H35   C35  C11  C10   -57.76  30.0  3
+ 7HI  Var_42    H35A  C35  C11  C10    59.84  30.0  3
+ 7HI  Var_43    HO3   O3   C11  C10    55.40  30.0  3
+ 7HI  Var_44    H11   C11  C10  C9    -47.87  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

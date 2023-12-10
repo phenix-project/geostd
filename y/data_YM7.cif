@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- YM7  YM7  5-({6-[(piperidin-4-ylmethyl)amino]pyrimidin-4-yl}amino)pyrazine-2-carbonitrile  ligand  41  23  .  2021-08-25  2021-08-25  
+ YM7  YM7  5-({6-[(piperidin-4-ylmethyl)amino]pyrimidin-4-yl}amino)pyrazine-2-carbonitrile  ligand  41  23  .  2021-08-25  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_YM7
@@ -223,40 +224,51 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- YM7  CONST_01  N3   C4   C5   C6      0.00   0.0  0
- YM7  CONST_02  N3   C2   N1   C6      0.00   0.0  0
- YM7  CONST_03  C2   N1   C6   C5      0.00   0.0  0
- YM7  CONST_04  C2   N3   C4   C5      0.00   0.0  0
- YM7  CONST_05  C4   C5   C6   N1      0.00   0.0  0
- YM7  CONST_06  C4   N3   C2   N1      0.00   0.0  0
- YM7  CONST_07  CAS  NAN  CAE  CAT     0.00   0.0  0
- YM7  CONST_08  CAS  CAD  NAO  CAT     0.00   0.0  0
- YM7  CONST_09  CAD  NAO  CAT  CAE     0.00   0.0  0
- YM7  CONST_10  CAD  CAS  NAN  CAE     0.00   0.0  0
- YM7  CONST_11  NAO  CAT  CAE  NAN     0.00   0.0  0
- YM7  CONST_12  NAO  CAD  CAS  NAN     0.00   0.0  0
- YM7  CONST_13  C4   C5   C6   NAQ   180.00   0.0  0
- YM7  CONST_14  C2   N1   C6   NAQ   180.00   0.0  0
- YM7  CONST_15  NAR  C4   C5   C6    180.00   0.0  0
- YM7  CONST_16  NAR  C4   N3   C2    180.00   0.0  0
- YM7  CONST_17  NAN  CAE  CAT  NAR   180.00   0.0  0
- YM7  CONST_18  CAD  NAO  CAT  NAR   180.00   0.0  0
- YM7  CONST_19  CAB  CAS  NAN  CAE   180.00   0.0  0
- YM7  CONST_20  NAO  CAD  CAS  CAB   180.00   0.0  0
- YM7  CONST_21  H2   C2   N1   C6    180.00   0.0  0
- YM7  CONST_22  H5   C5   C6   N1    180.00   0.0  0
- YM7  CONST_23  HAD  CAD  NAO  CAT   180.00   0.0  0
- YM7  CONST_24  HAE  CAE  NAN  CAS   180.00   0.0  0
- YM7  CONST_25  C5   C6   NAQ  CAK     0.00   0.0  0
- YM7  CONST_26  N1   C6   NAQ  CAK   180.00   0.0  0
- YM7  CONST_27  HAQ  NAQ  C6   C5    180.00   0.0  0
- YM7  Var_01    CAH  NAP  CAG  CAI   -53.23  30.0  1
- YM7  Var_02    CAJ  CAH  NAP  CAG    53.31  30.0  1
- YM7  Var_03    CAW  CAI  CAG  NAP    54.13  30.0  1
- YM7  Var_04    CAW  CAJ  CAH  NAP   -54.07  30.0  1
- YM7  Var_05    CAT  NAR  C4   C5    178.48  30.0  2
- YM7  Var_06    CAE  CAT  NAR  C4   -179.55  30.0  2
- YM7  Var_07    C6   NAQ  CAK  CAW  -173.24  30.0  3
+ YM7  CONST_01  N3    C4   C5   C6      0.00   0.0  0
+ YM7  CONST_02  N3    C2   N1   C6      0.00   0.0  0
+ YM7  CONST_03  C2    N1   C6   C5      0.00   0.0  0
+ YM7  CONST_04  C2    N3   C4   C5      0.00   0.0  0
+ YM7  CONST_05  C4    C5   C6   N1      0.00   0.0  0
+ YM7  CONST_06  C4    N3   C2   N1      0.00   0.0  0
+ YM7  CONST_07  CAS   NAN  CAE  CAT     0.00   0.0  0
+ YM7  CONST_08  CAS   CAD  NAO  CAT     0.00   0.0  0
+ YM7  CONST_09  CAD   NAO  CAT  CAE     0.00   0.0  0
+ YM7  CONST_10  CAD   CAS  NAN  CAE     0.00   0.0  0
+ YM7  CONST_11  NAO   CAT  CAE  NAN     0.00   0.0  0
+ YM7  CONST_12  NAO   CAD  CAS  NAN     0.00   0.0  0
+ YM7  CONST_13  C4    C5   C6   NAQ   180.00   0.0  0
+ YM7  CONST_14  C2    N1   C6   NAQ   180.00   0.0  0
+ YM7  CONST_15  NAR   C4   C5   C6    180.00   0.0  0
+ YM7  CONST_16  NAR   C4   N3   C2    180.00   0.0  0
+ YM7  CONST_17  NAN   CAE  CAT  NAR   180.00   0.0  0
+ YM7  CONST_18  CAD   NAO  CAT  NAR   180.00   0.0  0
+ YM7  CONST_19  CAB   CAS  NAN  CAE   180.00   0.0  0
+ YM7  CONST_20  NAO   CAD  CAS  CAB   180.00   0.0  0
+ YM7  CONST_21  H2    C2   N1   C6    180.00   0.0  0
+ YM7  CONST_22  H5    C5   C6   N1    180.00   0.0  0
+ YM7  CONST_23  HAD   CAD  NAO  CAT   180.00   0.0  0
+ YM7  CONST_24  HAE   CAE  NAN  CAS   180.00   0.0  0
+ YM7  CONST_25  C5    C6   NAQ  CAK     0.00   0.0  0
+ YM7  CONST_26  N1    C6   NAQ  CAK   180.00   0.0  0
+ YM7  CONST_27  HAQ   NAQ  C6   C5    180.00   0.0  0
+ YM7  Var_01    CAH   NAP  CAG  CAI   -53.23  30.0  1
+ YM7  Var_02    CAJ   CAH  NAP  CAG    53.31  30.0  1
+ YM7  Var_03    CAW   CAI  CAG  NAP    54.13  30.0  1
+ YM7  Var_04    CAW   CAJ  CAH  NAP   -54.07  30.0  1
+ YM7  Var_05    CAT   NAR  C4   C5    178.48  30.0  2
+ YM7  Var_06    CAE   CAT  NAR  C4   -179.55  30.0  2
+ YM7  Var_07    C6    NAQ  CAK  CAW  -173.24  30.0  3
+ YM7  Var_08    CAH   CAJ  CAW  CAI    52.62  30.0  1
+ YM7  Var_09    CAJ   CAW  CAI  CAG   -52.75  30.0  1
+ YM7  Var_10    CAK   CAW  CAI  CAG  -176.99  30.0  1
+ YM7  Var_11    CAK   CAW  CAJ  CAH   175.34  30.0  1
+ YM7  Var_12    HAJ1  CAJ  CAW  CAI   -68.21  30.0  1
+ YM7  Var_13    HAJ2  CAJ  CAW  CAI   174.50  30.0  1
+ YM7  Var_14    HAW   CAW  CAI  CAG    65.18  30.0  1
+ YM7  Var_15    NAQ   CAK  CAW  CAI  -174.26  30.0  3
+ YM7  Var_16    NAQ   CAK  CAW  CAJ    63.19  30.0  3
+ YM7  Var_17    HAK1  CAK  CAW  CAI   -51.72  30.0  3
+ YM7  Var_18    HAK2  CAK  CAW  CAI    64.93  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

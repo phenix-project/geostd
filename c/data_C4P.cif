@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- C4P  C4P  N-[(1R)-2-(benzylsulfanyl)-1-formylethyl]-Nalpha-(morpholin-4-ylcarbonyl)-L-phenylalaninamide  ligand  61  32  .  2021-08-07  2021-08-07  
+ C4P  C4P  N-[(1R)-2-(benzylsulfanyl)-1-formylethyl]-Nalpha-(morpholin-4-ylcarbonyl)-L-phenylalaninamide  ligand  61  32  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_C4P
@@ -299,47 +300,66 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- C4P  CONST_01  C65   C66  C67  C62    0.00   0.0  0
- C4P  CONST_02  C65   C64  C63  C62    0.00   0.0  0
- C4P  CONST_03  C64   C63  C62  C67    0.00   0.0  0
- C4P  CONST_04  C64   C65  C66  C67    0.00   0.0  0
- C4P  CONST_05  C63   C62  C67  C66    0.00   0.0  0
- C4P  CONST_06  C63   C64  C65  C66    0.00   0.0  0
- C4P  CONST_07  C53   C51  C49  C48    0.00   0.0  0
- C4P  CONST_08  C53   C52  C50  C48    0.00   0.0  0
- C4P  CONST_09  C52   C50  C48  C49    0.00   0.0  0
- C4P  CONST_10  C52   C53  C51  C49    0.00   0.0  0
- C4P  CONST_11  C50   C48  C49  C51    0.00   0.0  0
- C4P  CONST_12  C50   C52  C53  C51    0.00   0.0  0
- C4P  CONST_13  C66   C67  C62  C1   180.00   0.0  0
- C4P  CONST_14  C64   C63  C62  C1   180.00   0.0  0
- C4P  CONST_15  C51   C49  C48  C47  180.00   0.0  0
- C4P  CONST_16  C52   C50  C48  C47  180.00   0.0  0
- C4P  CONST_17  H66   C66  C67  C62  180.00   0.0  0
- C4P  CONST_18  H64   C64  C63  C62  180.00   0.0  0
- C4P  CONST_19  H63   C63  C62  C67  180.00   0.0  0
- C4P  CONST_20  H65   C65  C66  C67  180.00   0.0  0
- C4P  CONST_21  H67   C67  C66  C65  180.00   0.0  0
- C4P  CONST_22  H51   C51  C49  C48  180.00   0.0  0
- C4P  CONST_23  H52   C52  C50  C48  180.00   0.0  0
- C4P  CONST_24  H50   C50  C48  C49  180.00   0.0  0
- C4P  CONST_25  H53   C53  C51  C49  180.00   0.0  0
- C4P  CONST_26  H49   C49  C51  C53  180.00   0.0  0
- C4P  CONST_29  C2    N1   C40  N43  180.00   0.0  0
- C4P  CONST_31  C44   N43  C40  N1   180.00   0.0  0
- C4P  CONST_32  H43   N43  C40  N1     0.00   0.0  0
- C4P  CONST_34  C55   N54  C45  C44  180.00   0.0  0
- C4P  CONST_35  C55   N54  C45  O46    0.00   0.0  0
- C4P  CONST_36  H54   N54  C45  C44    0.00   0.0  0
- C4P  Var_01    O4    C3   C2   N1    55.31  30.0  1
- C4P  Var_02    O4    C5   C6   N1   -54.67  30.0  1
- C4P  Var_03    C5    C6   N1   C2    50.55  30.0  1
- C4P  Var_04    C6    N1   C2   C3   -51.07  30.0  1
- C4P  Var_05    C6    C5   O4   C3    59.67  30.0  1
- C4P  Var_06    C49   C48  C47  C44   92.75  30.0  2
- C4P  Var_07    C67   C62  C1   S1    86.01  30.0  2
- C4P  Var_08    C62   C1   S1   C58  179.92  30.0  3
- C4P  Var_09    H581  C58  S1   C1   -57.14  30.0  1
+ C4P  CONST_01  C65   C66  C67  C62     0.00   0.0  0
+ C4P  CONST_02  C65   C64  C63  C62     0.00   0.0  0
+ C4P  CONST_03  C64   C63  C62  C67     0.00   0.0  0
+ C4P  CONST_04  C64   C65  C66  C67     0.00   0.0  0
+ C4P  CONST_05  C63   C62  C67  C66     0.00   0.0  0
+ C4P  CONST_06  C63   C64  C65  C66     0.00   0.0  0
+ C4P  CONST_07  C53   C51  C49  C48     0.00   0.0  0
+ C4P  CONST_08  C53   C52  C50  C48     0.00   0.0  0
+ C4P  CONST_09  C52   C50  C48  C49     0.00   0.0  0
+ C4P  CONST_10  C52   C53  C51  C49     0.00   0.0  0
+ C4P  CONST_11  C50   C48  C49  C51     0.00   0.0  0
+ C4P  CONST_12  C50   C52  C53  C51     0.00   0.0  0
+ C4P  CONST_13  C66   C67  C62  C1    180.00   0.0  0
+ C4P  CONST_14  C64   C63  C62  C1    180.00   0.0  0
+ C4P  CONST_15  C51   C49  C48  C47   180.00   0.0  0
+ C4P  CONST_16  C52   C50  C48  C47   180.00   0.0  0
+ C4P  CONST_17  H66   C66  C67  C62   180.00   0.0  0
+ C4P  CONST_18  H64   C64  C63  C62   180.00   0.0  0
+ C4P  CONST_19  H63   C63  C62  C67   180.00   0.0  0
+ C4P  CONST_20  H65   C65  C66  C67   180.00   0.0  0
+ C4P  CONST_21  H67   C67  C66  C65   180.00   0.0  0
+ C4P  CONST_22  H51   C51  C49  C48   180.00   0.0  0
+ C4P  CONST_23  H52   C52  C50  C48   180.00   0.0  0
+ C4P  CONST_24  H50   C50  C48  C49   180.00   0.0  0
+ C4P  CONST_25  H53   C53  C51  C49   180.00   0.0  0
+ C4P  CONST_26  H49   C49  C51  C53   180.00   0.0  0
+ C4P  CONST_27  C2    N1   C40  N43   180.00   0.0  0
+ C4P  CONST_28  C44   N43  C40  N1    180.00   0.0  0
+ C4P  CONST_29  H43   N43  C40  N1      0.00   0.0  0
+ C4P  CONST_30  C55   N54  C45  C44   180.00   0.0  0
+ C4P  CONST_31  C55   N54  C45  O46     0.00   0.0  0
+ C4P  CONST_32  H54   N54  C45  C44     0.00   0.0  0
+ C4P  Var_01    O4    C3   C2   N1     55.31  30.0  1
+ C4P  Var_02    O4    C5   C6   N1    -54.67  30.0  1
+ C4P  Var_03    C5    C6   N1   C2     50.55  30.0  1
+ C4P  Var_04    C6    N1   C2   C3    -51.07  30.0  1
+ C4P  Var_05    C6    C5   O4   C3     59.67  30.0  1
+ C4P  Var_06    C49   C48  C47  C44    92.75  30.0  2
+ C4P  Var_07    C67   C62  C1   S1     86.01  30.0  2
+ C4P  Var_08    C62   C1   S1   C58   179.92  30.0  3
+ C4P  Var_09    H581  C58  S1   C1    -57.14  30.0  1
+ C4P  Var_10    C5    O4   C3   C2    -59.90  30.0  1
+ C4P  Var_11    C48   C47  C44  N43   -57.77  30.0  3
+ C4P  Var_12    C48   C47  C44  C45  -178.62  30.0  3
+ C4P  Var_13    H44   C44  C47  C48    61.87  30.0  3
+ C4P  Var_14    O46   C45  C44  N43   -30.99  30.0  3
+ C4P  Var_15    N54   C45  C44  N43   151.22  30.0  3
+ C4P  Var_16    C45   C44  N43  C40  -144.00  30.0  3
+ C4P  Var_17    C47   C44  N43  C40    95.99  30.0  3
+ C4P  Var_18    C56   C55  N54  C45   -72.69  30.0  3
+ C4P  Var_19    C58   C55  N54  C45   165.22  30.0  3
+ C4P  Var_20    C47   C44  C45  O46    91.04  30.0  1
+ C4P  Var_21    C47   C44  C45  N54   -86.75  30.0  1
+ C4P  Var_22    O57   C56  C55  N54    -0.75  30.0  3
+ C4P  Var_23    S1    C58  C55  N54   -61.11  30.0  3
+ C4P  Var_24    S1    C58  C55  C56   175.07  30.0  3
+ C4P  Var_25    C58   C55  C56  O57   122.57  30.0  3
+ C4P  Var_26    H55   C55  N54  C45    45.43  30.0  3
+ C4P  Var_27    H56   C56  C55  N54   178.94  30.0  3
+ C4P  Var_28    H582  C58  C55  N54    60.12  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

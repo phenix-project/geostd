@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- IXM  IXM  '(2Z,3E)-2,3'-biindole-2',3(1H,1'H)-dione 3-oxime'  ligand  32  21  .  2022-03-22  2022-03-22
+ IXM  IXM  '(2Z,3E)-2,3'-biindole-2',3(1H,1'H)-dione 3-oxime'  ligand  32  21  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_IXM
@@ -188,32 +189,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- IXM  CONST_01  C7   C5   C3   C1      0.00  0.0  0
- IXM  CONST_02  C7   C9   C11  C1      0.00  0.0  0
- IXM  CONST_03  C9   C11  C1   C3      0.00  0.0  0
- IXM  CONST_04  C9   C7   C5   C3      0.00  0.0  0
- IXM  CONST_05  C11  C1   C3   C5      0.00  0.0  0
- IXM  CONST_06  C11  C9   C7   C5      0.00  0.0  0
- IXM  CONST_07  C21  C22  C18  C17     0.00  0.0  0
- IXM  CONST_08  C21  C20  C19  C17     0.00  0.0  0
- IXM  CONST_09  C20  C19  C17  C18     0.00  0.0  0
- IXM  CONST_10  C20  C21  C22  C18     0.00  0.0  0
- IXM  CONST_11  C22  C18  C17  C19     0.00  0.0  0
- IXM  CONST_12  C22  C21  C20  C19     0.00  0.0  0
- IXM  CONST_13  C17  N16  C15  C14     0.00  0.0  0
- IXM  CONST_14  O23  C15  N16  C17   180.00  0.0  0
- IXM  CONST_15  HC5  C5   C3   C1    180.00  0.0  0
- IXM  CONST_16  HC9  C9   C11  C1    180.00  0.0  0
- IXM  CONST_17  H11  C11  C1   C2      0.00  0.0  0
- IXM  CONST_18  HC7  C7   C5   C3    180.00  0.0  0
- IXM  CONST_19  H22  C22  C18  C14     0.00  0.0  0
- IXM  CONST_20  H19  C19  C17  N16     0.00  0.0  0
- IXM  CONST_21  H20  C20  C19  C17   180.00  0.0  0
- IXM  CONST_22  H21  C21  C22  C18   180.00  0.0  0
- IXM  CONST_23  H16  N16  C15  C14   180.00  0.0  0
- IXM  CONST_24  O39  N24  C2   C1      0.00  0.0  0
- IXM  CONST_25  O39  N24  C2   C13   180.00  0.0  0
- IXM  Var_01    C15  C14  C13  C2   -179.88  0.0  2
+ IXM  CONST_01  C7   C5   C3   C1      0.00   0.0  0
+ IXM  CONST_02  C7   C9   C11  C1      0.00   0.0  0
+ IXM  CONST_03  C9   C11  C1   C3      0.00   0.0  0
+ IXM  CONST_04  C9   C7   C5   C3      0.00   0.0  0
+ IXM  CONST_05  C11  C1   C3   C5      0.00   0.0  0
+ IXM  CONST_06  C11  C9   C7   C5      0.00   0.0  0
+ IXM  CONST_07  C21  C22  C18  C17     0.00   0.0  0
+ IXM  CONST_08  C21  C20  C19  C17     0.00   0.0  0
+ IXM  CONST_09  C20  C19  C17  C18     0.00   0.0  0
+ IXM  CONST_10  C20  C21  C22  C18     0.00   0.0  0
+ IXM  CONST_11  C22  C18  C17  C19     0.00   0.0  0
+ IXM  CONST_12  C22  C21  C20  C19     0.00   0.0  0
+ IXM  CONST_13  C17  N16  C15  C14     0.00   0.0  0
+ IXM  CONST_14  O23  C15  N16  C17   180.00   0.0  0
+ IXM  CONST_15  HC5  C5   C3   C1    180.00   0.0  0
+ IXM  CONST_16  HC9  C9   C11  C1    180.00   0.0  0
+ IXM  CONST_17  H11  C11  C1   C2      0.00   0.0  0
+ IXM  CONST_18  HC7  C7   C5   C3    180.00   0.0  0
+ IXM  CONST_19  H22  C22  C18  C14     0.00   0.0  0
+ IXM  CONST_20  H19  C19  C17  N16     0.00   0.0  0
+ IXM  CONST_21  H20  C20  C19  C17   180.00   0.0  0
+ IXM  CONST_22  H21  C21  C22  C18   180.00   0.0  0
+ IXM  CONST_23  H16  N16  C15  C14   180.00   0.0  0
+ IXM  CONST_24  O39  N24  C2   C1      0.00   0.0  0
+ IXM  CONST_25  O39  N24  C2   C13   180.00   0.0  0
+ IXM  Var_01    C15  C14  C13  C2   -179.88   0.0  2
+ IXM  CONST_26  N4   C13  C2   C1      0.00   0.0  0
+ IXM  CONST_27  C13  N4   C3   C1      0.00   0.0  0
+ IXM  CONST_28  C3   N4   C13  C2      0.00   0.0  0
+ IXM  CONST_29  C13  C2   C1   C3      0.00   0.0  0
+ IXM  CONST_30  C13  N4   C3   C5    180.00   0.0  0
+ IXM  CONST_31  C13  C2   C1   C11   180.00   0.0  0
+ IXM  CONST_32  C17  C18  C14  C15     0.00   0.0  0
+ IXM  CONST_33  C22  C18  C14  C15   180.00   0.0  0
+ IXM  CONST_34  C18  C17  N16  C15     0.00   0.0  0
+ IXM  CONST_35  C19  C17  N16  C15   180.00   0.0  0
+ IXM  CONST_36  C18  C14  C15  N16     0.00   0.0  0
+ IXM  CONST_37  C14  C13  C2   C1    180.00   0.0  0
+ IXM  CONST_38  C14  C13  N4   C3    180.00   0.0  0
+ IXM  CONST_39  N16  C15  C14  C13   180.00   0.0  0
+ IXM  CONST_40  C17  C18  C14  C13   180.00   0.0  0
+ IXM  CONST_41  C22  C18  C14  C13     0.00   0.0  0
+ IXM  CONST_42  N24  C2   C1   C3    180.00   0.0  0
+ IXM  CONST_43  N24  C2   C13  N4    180.00   0.0  0
+ IXM  CONST_44  N24  C2   C1   C11     0.00   0.0  0
+ IXM  CONST_45  O23  C15  C14  C13     0.00   0.0  0
+ IXM  CONST_46  N24  C2   C13  C14     0.00   0.0  0
+ IXM  CONST_47  O23  C15  C14  C18   180.00   0.0  0
+ IXM  CONST_48  HN4  N4   C3   C1    180.00   0.0  0
+ IXM  Var_02    H39  O39  N24  C2   -179.96  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

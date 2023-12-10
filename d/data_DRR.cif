@@ -20,11 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DRR  DRR  "(9S,12S)-9-(1-methylethyl)-N-[(8S,11S)-8-[(1S)-1-methylpropyl]-7,10-dioxo-2-oxa-6,9-diazabicyclo[11.2.2]heptadeca-1(15),13,16-trien-11-yl]-7,10-dioxo-2-oxa-8,11-diazabicyclo[12.2.2]octadeca-1(16),14,17-triene-12-carboxamide"
-  ligand  100  49  .  2021-08-08  2021-08-08  
+ DRR  DRR  (9S,12S)-9-(1-methylethyl)-N-[(8S,11S)-8-[(1S)-1-methylpropyl]-7,10-dioxo-2-oxa-6,9-diazabicyclo[11.2.2]heptadeca-1(15),13,16-trien-11-yl]-7,10-dioxo-2-oxa-8,11-diazabicyclo[12.2.2]octadeca-1(16),14,17-triene-12-carboxamide  ligand  100  49  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DRR
@@ -471,23 +471,23 @@ _chem_comp_tor.period
  DRR  CONST_12  CAQ   CAS  CAU  CAT     0.00   0.0  0
  DRR  CONST_13  CBA   CBK  NBM  CBN   180.00   0.0  0
  DRR  CONST_14  CBV   NBU  CBS  CBN   180.00   0.0  0
- DRR  CONST_16  CA    N    CAD  CAA   180.00   0.0  0
- DRR  CONST_17  OBL   CBK  NBM  CBN     0.00   0.0  0
- DRR  CONST_18  CBV   NBU  CBS  OBT     0.00   0.0  0
- DRR  CONST_20  CA    N    CAD  OAE     0.00   0.0  0
- DRR  CONST_21  HBG   CBG  CBH  OBI     0.00   0.0  0
- DRR  CONST_22  HBE   CBE  CBH  OBI     0.00   0.0  0
- DRR  CONST_23  HBF   CBF  CBG  CBH   180.00   0.0  0
- DRR  CONST_24  HBD   CBD  CBE  CBH   180.00   0.0  0
- DRR  CONST_25  HAR   CAR  CAP  CAO     0.00   0.0  0
- DRR  CONST_26  HAQ   CAQ  CAP  CAO     0.00   0.0  0
- DRR  CONST_27  HAT   CAT  CAR  CAP   180.00   0.0  0
- DRR  CONST_28  HAS   CAS  CAQ  CAP   180.00   0.0  0
- DRR  CONST_29  HNBU  NBU  CBS  CBN     0.00   0.0  0
- DRR  CONST_30  HNBM  NBM  CBK  CBA     0.00   0.0  0
- DRR  CONST_32  HNAM  NAM  C    CA      0.00   0.0  0
- DRR  CONST_34  OAY   CAX  NAZ  CBA     0.00   0.0  0
- DRR  CONST_35  HNAZ  NAZ  CAX  CAN     0.00   0.0  0
+ DRR  CONST_15  CA    N    CAD  CAA   180.00   0.0  0
+ DRR  CONST_16  OBL   CBK  NBM  CBN     0.00   0.0  0
+ DRR  CONST_17  CBV   NBU  CBS  OBT     0.00   0.0  0
+ DRR  CONST_18  CA    N    CAD  OAE     0.00   0.0  0
+ DRR  CONST_19  HBG   CBG  CBH  OBI     0.00   0.0  0
+ DRR  CONST_20  HBE   CBE  CBH  OBI     0.00   0.0  0
+ DRR  CONST_21  HBF   CBF  CBG  CBH   180.00   0.0  0
+ DRR  CONST_22  HBD   CBD  CBE  CBH   180.00   0.0  0
+ DRR  CONST_23  HAR   CAR  CAP  CAO     0.00   0.0  0
+ DRR  CONST_24  HAQ   CAQ  CAP  CAO     0.00   0.0  0
+ DRR  CONST_25  HAT   CAT  CAR  CAP   180.00   0.0  0
+ DRR  CONST_26  HAS   CAS  CAQ  CAP   180.00   0.0  0
+ DRR  CONST_27  HNBU  NBU  CBS  CBN     0.00   0.0  0
+ DRR  CONST_28  HNBM  NBM  CBK  CBA     0.00   0.0  0
+ DRR  CONST_29  HNAM  NAM  C    CA      0.00   0.0  0
+ DRR  CONST_30  OAY   CAX  NAZ  CBA     0.00   0.0  0
+ DRR  CONST_31  HNAZ  NAZ  CAX  CAN     0.00   0.0  0
  DRR  Var_01    CBW   CBV  NBU  CBS    73.37  30.0  1
  DRR  Var_02    CBJ   CBW  CBV  NBU    63.84  30.0  1
  DRR  Var_03    OBI   CBJ  CBW  CBV  -146.30  30.0  1
@@ -502,6 +502,61 @@ _chem_comp_tor.period
  DRR  Var_12    HG1   CG1  CB   CA     73.54  30.0  3
  DRR  Var_13    HG2   CG2  CB   CA     49.60  30.0  3
  DRR  Var_14    HBR   CBR  CBQ  CBO   -59.12  30.0  3
+ DRR  Var_15    NBU   CBS  CBN  NBM   114.02  30.0  3
+ DRR  Var_16    CBB   CBA  CBK  NBM    97.38  30.0  3
+ DRR  Var_17    CBS   CBN  NBM  CBK    82.96  30.0  3
+ DRR  Var_18    CBC   CBB  CBA  CBK   -47.76  30.0  3
+ DRR  Var_19    CBH   OBI  CBJ  CBW    74.86  30.0  3
+ DRR  Var_20    C     NAM  CAN  CAO   166.77  30.0  3
+ DRR  Var_21    NAM   CAN  CAO  CAP    48.48  30.0  3
+ DRR  Var_22    CAW   OAV  CAU  CAT  -107.90  30.0  2
+ DRR  Var_23    CAW   OAV  CAU  CAS    68.48  30.0  2
+ DRR  Var_24    C     CA   N    CAD  -172.43  30.0  3
+ DRR  Var_25    NAM   C    CA   N     -54.57  30.0  3
+ DRR  Var_26    CBK   NBM  CBN  CBO   -43.26  30.0  3
+ DRR  Var_27    NBU   CBS  CBN  CBO  -116.66  30.0  3
+ DRR  Var_28    OBT   CBS  CBN  NBM   -68.42  30.0  3
+ DRR  Var_29    NAZ   CBA  CBK  NBM   -27.83  30.0  3
+ DRR  Var_30    CBB   CBA  CBK  OBL   -82.03  30.0  3
+ DRR  Var_31    NAZ   CBA  CBB  CBC    79.44  30.0  3
+ DRR  Var_32    CAP   CAO  CAN  CAX   -74.52  30.0  3
+ DRR  Var_33    C     NAM  CAN  CAX   -67.59  30.0  3
+ DRR  Var_34    CB    CA   N    CAD    61.54  30.0  3
+ DRR  Var_35    O     C    CA   N     126.02  30.0  3
+ DRR  Var_36    NAM   C    CA   CB     72.71  30.0  3
+ DRR  Var_37    HBA   CBA  CBK  NBM  -147.09  30.0  3
+ DRR  Var_38    HBN   CBN  NBM  CBK  -159.98  30.0  3
+ DRR  Var_39    HBB   CBB  CBA  CBK  -172.64  30.0  3
+ DRR  Var_40    HBBA  CBB  CBA  CBK    73.69  30.0  3
+ DRR  Var_41    HAN   CAN  CAO  CAP   167.41  30.0  3
+ DRR  Var_42    HA    CA   N    CAD   -58.07  30.0  3
+ DRR  Var_43    NBM   CBN  CBO  CBQ   -54.94  30.0  3
+ DRR  Var_44    CBS   CBN  CBO  CBQ   178.25  30.0  3
+ DRR  Var_45    OBT   CBS  CBN  CBO    60.90  30.0  3
+ DRR  Var_46    NBM   CBN  CBO  CBP  -177.78  30.0  3
+ DRR  Var_47    CBS   CBN  CBO  CBP    55.41  30.0  3
+ DRR  Var_48    CAX   NAZ  CBA  CBK   -71.91  30.0  3
+ DRR  Var_49    NAZ   CBA  CBK  OBL   152.76  30.0  3
+ DRR  Var_50    CAX   NAZ  CBA  CBB   162.63  30.0  3
+ DRR  Var_51    CAO   CAN  CAX  NAZ   -65.37  30.0  3
+ DRR  Var_52    NAM   CAN  CAX  NAZ   170.29  30.0  3
+ DRR  Var_53    CAO   CAN  CAX  OAY   115.68  30.0  3
+ DRR  Var_54    NAM   CAN  CAX  OAY    -8.66  30.0  3
+ DRR  Var_55    CG1   CB   CA   N      49.31  30.0  3
+ DRR  Var_56    CG2   CB   CA   N     175.91  30.0  3
+ DRR  Var_57    O     C    CA   CB   -106.71  30.0  3
+ DRR  Var_58    C     CA   CB   CG1   -74.39  30.0  2
+ DRR  Var_59    C     CA   CB   CG2    52.21  30.0  2
+ DRR  Var_60    HBO   CBO  CBN  NBM    64.34  30.0  1
+ DRR  Var_61    HNAZ  NAZ  CBA  CBK   137.77  30.0  3
+ DRR  Var_62    HB    CB   CA   N     -68.65  30.0  3
+ DRR  Var_63    CBN   CBO  CBQ  CBR   168.54  30.0  3
+ DRR  Var_64    HBQ   CBQ  CBO  CBN    46.72  30.0  2
+ DRR  Var_65    HBQA  CBQ  CBO  CBN   -69.11  30.0  2
+ DRR  Var_66    HBP   CBP  CBO  CBN    58.00  30.0  3
+ DRR  Var_67    HBPA  CBP  CBO  CBN   177.47  30.0  3
+ DRR  Var_68    HBPB  CBP  CBO  CBN   -63.42  30.0  3
+ DRR  Var_69    CBP   CBO  CBQ  CBR   -69.54  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BEI  BEI  '(2R,3R,4R,5R)-2,5-bis(benzyloxy)-3,4-dihydroxy-N,N'-bis[(1S,2S)-2-methyl-1-(methylcarbamoyl)butyl]hexanediamide (non-preferred name)'  ligand  96  46  .  2022-03-15  2022-03-15
+ BEI  BEI  '(2R,3R,4R,5R)-2,5-bis(benzyloxy)-3,4-dihydroxy-N,N'-bis[(1S,2S)-2-methyl-1-(methylcarbamoyl)butyl]hexanediamide (non-preferred name)'  ligand  96  46  .  2022-03-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BEI
@@ -430,50 +431,120 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BEI  CONST_01  C37   C36  C35  C34    0.00   0.0  0
- BEI  CONST_02  C37   C38  C39  C34    0.00   0.0  0
- BEI  CONST_03  C38   C39  C34  C35    0.00   0.0  0
- BEI  CONST_04  C38   C37  C36  C35    0.00   0.0  0
- BEI  CONST_05  C39   C34  C35  C36    0.00   0.0  0
- BEI  CONST_06  C39   C38  C37  C36    0.00   0.0  0
- BEI  CONST_07  C43   C42  C41  C40    0.00   0.0  0
- BEI  CONST_08  C43   C44  C45  C40    0.00   0.0  0
- BEI  CONST_09  C44   C45  C40  C41    0.00   0.0  0
- BEI  CONST_10  C44   C43  C42  C41    0.00   0.0  0
- BEI  CONST_11  C45   C40  C41  C42    0.00   0.0  0
- BEI  CONST_12  C45   C44  C43  C42    0.00   0.0  0
- BEI  CONST_13  C33   C34  C35  C36  180.00   0.0  0
- BEI  CONST_14  C33   C34  C39  C38  180.00   0.0  0
- BEI  CONST_15  C30   C40  C41  C42  180.00   0.0  0
- BEI  CONST_16  C30   C40  C45  C44  180.00   0.0  0
- BEI  CONST_17  H36   C36  C35  C34  180.00   0.0  0
- BEI  CONST_18  H38   C38  C39  C34  180.00   0.0  0
- BEI  CONST_19  H39   C39  C34  C35  180.00   0.0  0
- BEI  CONST_20  H37   C37  C36  C35  180.00   0.0  0
- BEI  CONST_21  H35   C35  C36  C37  180.00   0.0  0
- BEI  CONST_22  H42   C42  C41  C40  180.00   0.0  0
- BEI  CONST_23  H44   C44  C45  C40  180.00   0.0  0
- BEI  CONST_24  H45   C45  C40  C41  180.00   0.0  0
- BEI  CONST_25  H43   C43  C42  C41  180.00   0.0  0
- BEI  CONST_26  H41   C41  C42  C43  180.00   0.0  0
- BEI  CONST_27  C9    N8   C6   C5   180.00   0.0  0
- BEI  CONST_28  C19   N18  C1   C2   180.00   0.0  0
- BEI  CONST_29  C19   N18  C1   O17    0.00   0.0  0
- BEI  CONST_30  C26   N25  C23  C19  180.00   0.0  0
- BEI  CONST_31  C26   N25  C23  O24    0.00   0.0  0
- BEI  CONST_32  C9    N8   C6   O7     0.00   0.0  0
- BEI  CONST_33  C16   N15  C13  C9   180.00   0.0  0
- BEI  CONST_34  C16   N15  C13  O14    0.00   0.0  0
- BEI  CONST_35  H8    N8   C6   C5     0.00   0.0  0
- BEI  CONST_36  H18   N18  C1   C2     0.00   0.0  0
- BEI  CONST_37  H25   N25  C23  C19    0.00   0.0  0
- BEI  CONST_38  H15   N15  C13  C9     0.00   0.0  0
- BEI  Var_01    O32   C33  C34  C35  123.93  30.0  2
- BEI  Var_02    O29   C30  C40  C41  111.29  30.0  2
- BEI  Var_03    H461  C46  C22  C20  170.20  30.0  3
- BEI  Var_04    H261  C26  N25  C23  -61.49  30.0  3
- BEI  Var_05    H471  C47  C12  C10  169.21  30.0  3
- BEI  Var_06    H161  C16  N15  C13   63.23  30.0  3
+ BEI  CONST_01  C37   C36  C35  C34     0.00   0.0  0
+ BEI  CONST_02  C37   C38  C39  C34     0.00   0.0  0
+ BEI  CONST_03  C38   C39  C34  C35     0.00   0.0  0
+ BEI  CONST_04  C38   C37  C36  C35     0.00   0.0  0
+ BEI  CONST_05  C39   C34  C35  C36     0.00   0.0  0
+ BEI  CONST_06  C39   C38  C37  C36     0.00   0.0  0
+ BEI  CONST_07  C43   C42  C41  C40     0.00   0.0  0
+ BEI  CONST_08  C43   C44  C45  C40     0.00   0.0  0
+ BEI  CONST_09  C44   C45  C40  C41     0.00   0.0  0
+ BEI  CONST_10  C44   C43  C42  C41     0.00   0.0  0
+ BEI  CONST_11  C45   C40  C41  C42     0.00   0.0  0
+ BEI  CONST_12  C45   C44  C43  C42     0.00   0.0  0
+ BEI  CONST_13  C33   C34  C35  C36   180.00   0.0  0
+ BEI  CONST_14  C33   C34  C39  C38   180.00   0.0  0
+ BEI  CONST_15  C30   C40  C41  C42   180.00   0.0  0
+ BEI  CONST_16  C30   C40  C45  C44   180.00   0.0  0
+ BEI  CONST_17  H36   C36  C35  C34   180.00   0.0  0
+ BEI  CONST_18  H38   C38  C39  C34   180.00   0.0  0
+ BEI  CONST_19  H39   C39  C34  C35   180.00   0.0  0
+ BEI  CONST_20  H37   C37  C36  C35   180.00   0.0  0
+ BEI  CONST_21  H35   C35  C36  C37   180.00   0.0  0
+ BEI  CONST_22  H42   C42  C41  C40   180.00   0.0  0
+ BEI  CONST_23  H44   C44  C45  C40   180.00   0.0  0
+ BEI  CONST_24  H45   C45  C40  C41   180.00   0.0  0
+ BEI  CONST_25  H43   C43  C42  C41   180.00   0.0  0
+ BEI  CONST_26  H41   C41  C42  C43   180.00   0.0  0
+ BEI  CONST_27  C9    N8   C6   C5    180.00   0.0  0
+ BEI  CONST_28  C19   N18  C1   C2    180.00   0.0  0
+ BEI  CONST_29  C19   N18  C1   O17     0.00   0.0  0
+ BEI  CONST_30  C26   N25  C23  C19   180.00   0.0  0
+ BEI  CONST_31  C26   N25  C23  O24     0.00   0.0  0
+ BEI  CONST_32  C9    N8   C6   O7      0.00   0.0  0
+ BEI  CONST_33  C16   N15  C13  C9    180.00   0.0  0
+ BEI  CONST_34  C16   N15  C13  O14     0.00   0.0  0
+ BEI  CONST_35  H8    N8   C6   C5      0.00   0.0  0
+ BEI  CONST_36  H18   N18  C1   C2      0.00   0.0  0
+ BEI  CONST_37  H25   N25  C23  C19     0.00   0.0  0
+ BEI  CONST_38  H15   N15  C13  C9      0.00   0.0  0
+ BEI  Var_01    O32   C33  C34  C35   123.93  30.0  2
+ BEI  Var_02    O29   C30  C40  C41   111.29  30.0  2
+ BEI  Var_03    H461  C46  C22  C20   170.20  30.0  3
+ BEI  Var_04    H261  C26  N25  C23   -61.49  30.0  3
+ BEI  Var_05    H471  C47  C12  C10   169.21  30.0  3
+ BEI  Var_06    H161  C16  N15  C13    63.23  30.0  3
+ BEI  Var_07    C2    O32  C33  C34   157.42  30.0  1
+ BEI  Var_08    C5    O29  C30  C40   159.27  30.0  3
+ BEI  Var_09    C3    C4   C5   O29    41.16  30.0  3
+ BEI  Var_10    O28   C4   C5   O29   166.59  30.0  3
+ BEI  Var_11    O7    C6   C5   O29    -7.13  30.0  3
+ BEI  Var_12    N8    C6   C5   O29   173.53  30.0  3
+ BEI  Var_13    C2    C3   C4   C5    179.14  30.0  3
+ BEI  Var_14    O27   C3   C4   C5     54.16  30.0  3
+ BEI  Var_15    C30   O29  C5   C4   -147.94  30.0  1
+ BEI  Var_16    O7    C6   C5   C4   -127.68  30.0  3
+ BEI  Var_17    N8    C6   C5   C4     52.98  30.0  3
+ BEI  Var_18    C1    C2   C3   C4    171.40  30.0  3
+ BEI  Var_19    O32   C2   C3   C4     51.70  30.0  3
+ BEI  Var_20    C6    C5   C4   C3    162.27  30.0  3
+ BEI  Var_21    O17   C1   C2   C3    -78.94  30.0  3
+ BEI  Var_22    N18   C1   C2   C3     99.65  30.0  3
+ BEI  Var_23    C33   O32  C2   C3   -164.97  30.0  3
+ BEI  Var_24    O28   C4   C3   C2     54.62  30.0  1
+ BEI  Var_25    O27   C3   C2   C1    -62.40  30.0  2
+ BEI  Var_26    C33   O32  C2   C1     76.74  30.0  3
+ BEI  Var_27    C20   C19  N18  C1    101.85  30.0  3
+ BEI  Var_28    C23   C19  N18  C1   -129.85  30.0  3
+ BEI  Var_29    O32   C2   C1   O17    38.96  30.0  1
+ BEI  Var_30    O32   C2   C1   N18  -142.46  30.0  1
+ BEI  Var_31    C21   C20  C19  N18   -71.07  30.0  3
+ BEI  Var_32    C22   C20  C19  N18    52.59  30.0  3
+ BEI  Var_33    O24   C23  C19  N18    -3.94  30.0  3
+ BEI  Var_34    N25   C23  C19  N18   174.82  30.0  3
+ BEI  Var_35    C46   C22  C20  C19    61.90  30.0  3
+ BEI  Var_36    O24   C23  C19  C20   122.89  30.0  3
+ BEI  Var_37    N25   C23  C19  C20   -58.34  30.0  3
+ BEI  Var_38    C23   C19  C20  C21   163.70  30.0  2
+ BEI  Var_39    C46   C22  C20  C21  -174.19  30.0  3
+ BEI  Var_40    C23   C19  C20  C22   -72.64  30.0  2
+ BEI  Var_41    O27   C3   C2   O32   177.90  30.0  2
+ BEI  Var_42    O28   C4   C3   O27   -70.36  30.0  1
+ BEI  Var_43    C6    C5   C4   O28   -72.31  30.0  3
+ BEI  Var_44    C11   C10  C9   N8    -64.51  30.0  3
+ BEI  Var_45    C12   C10  C9   N8     59.67  30.0  3
+ BEI  Var_46    O14   C13  C9   N8     -4.71  30.0  3
+ BEI  Var_47    N15   C13  C9   N8    174.24  30.0  3
+ BEI  Var_48    C47   C12  C10  C9     69.42  30.0  3
+ BEI  Var_49    C6    N8   C9   C10   108.94  30.0  1
+ BEI  Var_50    O14   C13  C9   C10   121.89  30.0  3
+ BEI  Var_51    N15   C13  C9   C10   -59.16  30.0  3
+ BEI  Var_52    C13   C9   C10  C11   170.08  30.0  2
+ BEI  Var_53    C47   C12  C10  C11  -166.54  30.0  3
+ BEI  Var_54    C13   C9   C10  C12   -65.74  30.0  2
+ BEI  Var_55    C6    N8   C9   C13  -122.98  30.0  1
+ BEI  Var_56    C30   O29  C5   C6     89.31  30.0  1
+ BEI  Var_57    H4    C4   C5   O29   -77.57  30.0  3
+ BEI  Var_58    H3    C3   C4   C5    -62.33  30.0  3
+ BEI  Var_59    H28   O28  C4   C5    -62.32  30.0  3
+ BEI  Var_60    H2    C2   C3   C4    -68.39  30.0  3
+ BEI  Var_61    H27   O27  C3   C4     71.68  30.0  3
+ BEI  Var_62    H5    C5   C4   C3    -79.08  30.0  3
+ BEI  Var_63    H19   C19  N18  C1    -15.32  30.0  3
+ BEI  Var_64    H20   C20  C19  N18   172.46  30.0  3
+ BEI  Var_65    H211  C21  C20  C19  -175.59  30.0  3
+ BEI  Var_66    H212  C21  C20  C19   -55.50  30.0  3
+ BEI  Var_67    H213  C21  C20  C19    65.44  30.0  3
+ BEI  Var_68    H221  C22  C20  C19   -63.31  30.0  3
+ BEI  Var_69    H222  C22  C20  C19  -176.53  30.0  3
+ BEI  Var_70    H10   C10  C9   N8    179.52  30.0  3
+ BEI  Var_71    H111  C11  C10  C9     67.46  30.0  3
+ BEI  Var_72    H112  C11  C10  C9   -173.23  30.0  3
+ BEI  Var_73    H113  C11  C10  C9    -53.40  30.0  3
+ BEI  Var_74    H121  C12  C10  C9   -170.00  30.0  3
+ BEI  Var_75    H122  C12  C10  C9    -56.51  30.0  3
+ BEI  Var_76    H9    C9   C10  C11    52.44  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- P3Z  P3Z  (S)-cyclopropyl(4-methoxyphenyl)pyrimidin-5-ylmethanol  ligand  35  19  .  2022-09-22  2023-02-15
+ P3Z  P3Z  (S)-cyclopropyl(4-methoxyphenyl)pyrimidin-5-ylmethanol  ligand  35  19  .  2022-09-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_P3Z
@@ -201,34 +202,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- P3Z  CONST_01  CAF  CAD  CAO  CAC     0.00   0.0  0
- P3Z  CONST_02  CAF  CAP  CAE  CAC     0.00   0.0  0
- P3Z  CONST_03  CAE  CAP  CAF  CAD     0.00   0.0  0
- P3Z  CONST_04  CAE  CAC  CAO  CAD     0.00   0.0  0
- P3Z  CONST_05  CAQ  CAH  NAL  CAG     0.00   0.0  0
- P3Z  CONST_06  CAQ  CAI  NAM  CAG     0.00   0.0  0
- P3Z  CONST_07  NAM  CAI  CAQ  CAH     0.00   0.0  0
- P3Z  CONST_08  NAM  CAG  NAL  CAH     0.00   0.0  0
- P3Z  CONST_09  NAL  CAH  CAQ  CAI     0.00   0.0  0
- P3Z  CONST_10  NAL  CAG  NAM  CAI     0.00   0.0  0
- P3Z  CONST_11  CAP  CAE  CAC  CAO     0.00   0.0  0
- P3Z  CONST_12  CAP  CAF  CAD  CAO     0.00   0.0  0
- P3Z  CONST_13  CAS  CAP  CAE  CAC   180.00   0.0  0
- P3Z  CONST_14  CAS  CAP  CAF  CAD   180.00   0.0  0
- P3Z  CONST_15  OAN  CAO  CAC  CAE   180.00   0.0  0
- P3Z  CONST_16  OAN  CAO  CAD  CAF   180.00   0.0  0
- P3Z  CONST_17  CAS  CAQ  CAH  NAL   180.00   0.0  0
- P3Z  CONST_18  CAS  CAQ  CAI  NAM   180.00   0.0  0
- P3Z  CONST_19  HAD  CAD  CAO  CAC   180.00   0.0  0
- P3Z  CONST_20  HAC  CAC  CAO  CAD   180.00   0.0  0
- P3Z  CONST_21  HAF  CAF  CAP  CAE   180.00   0.0  0
- P3Z  CONST_22  HAE  CAE  CAP  CAF   180.00   0.0  0
- P3Z  CONST_23  HAH  CAH  NAL  CAG   180.00   0.0  0
- P3Z  CONST_24  HAI  CAI  NAM  CAG   180.00   0.0  0
- P3Z  CONST_25  HAG  CAG  NAL  CAH   180.00   0.0  0
- P3Z  Var_01    CAS  CAR  CAK  CAJ  -109.64  30.0  1
- P3Z  Var_02    CAC  CAO  OAN  CAA    -0.56  30.0  2
- P3Z  Var_03    HAA  CAA  OAN  CAO  -179.59  30.0  3
+ P3Z  CONST_01  CAF   CAD  CAO  CAC     0.00   0.0  0
+ P3Z  CONST_02  CAF   CAP  CAE  CAC     0.00   0.0  0
+ P3Z  CONST_03  CAE   CAP  CAF  CAD     0.00   0.0  0
+ P3Z  CONST_04  CAE   CAC  CAO  CAD     0.00   0.0  0
+ P3Z  CONST_05  CAQ   CAH  NAL  CAG     0.00   0.0  0
+ P3Z  CONST_06  CAQ   CAI  NAM  CAG     0.00   0.0  0
+ P3Z  CONST_07  NAM   CAI  CAQ  CAH     0.00   0.0  0
+ P3Z  CONST_08  NAM   CAG  NAL  CAH     0.00   0.0  0
+ P3Z  CONST_09  NAL   CAH  CAQ  CAI     0.00   0.0  0
+ P3Z  CONST_10  NAL   CAG  NAM  CAI     0.00   0.0  0
+ P3Z  CONST_11  CAP   CAE  CAC  CAO     0.00   0.0  0
+ P3Z  CONST_12  CAP   CAF  CAD  CAO     0.00   0.0  0
+ P3Z  CONST_13  CAS   CAP  CAE  CAC   180.00   0.0  0
+ P3Z  CONST_14  CAS   CAP  CAF  CAD   180.00   0.0  0
+ P3Z  CONST_15  OAN   CAO  CAC  CAE   180.00   0.0  0
+ P3Z  CONST_16  OAN   CAO  CAD  CAF   180.00   0.0  0
+ P3Z  CONST_17  CAS   CAQ  CAH  NAL   180.00   0.0  0
+ P3Z  CONST_18  CAS   CAQ  CAI  NAM   180.00   0.0  0
+ P3Z  CONST_19  HAD   CAD  CAO  CAC   180.00   0.0  0
+ P3Z  CONST_20  HAC   CAC  CAO  CAD   180.00   0.0  0
+ P3Z  CONST_21  HAF   CAF  CAP  CAE   180.00   0.0  0
+ P3Z  CONST_22  HAE   CAE  CAP  CAF   180.00   0.0  0
+ P3Z  CONST_23  HAH   CAH  NAL  CAG   180.00   0.0  0
+ P3Z  CONST_24  HAI   CAI  NAM  CAG   180.00   0.0  0
+ P3Z  CONST_25  HAG   CAG  NAL  CAH   180.00   0.0  0
+ P3Z  Var_01    CAS   CAR  CAK  CAJ  -109.64  30.0  1
+ P3Z  Var_02    CAC   CAO  OAN  CAA    -0.56  30.0  2
+ P3Z  Var_03    HAA   CAA  OAN  CAO  -179.59  30.0  3
+ P3Z  Var_04    CAQ   CAS  CAP  CAE   133.05  30.0  2
+ P3Z  Var_05    CAR   CAS  CAP  CAE    14.50  30.0  2
+ P3Z  Var_06    CAQ   CAS  CAP  CAF   -50.55  30.0  2
+ P3Z  Var_07    CAR   CAS  CAP  CAF  -169.10  30.0  2
+ P3Z  Var_08    CAP   CAS  CAQ  CAH   139.78  30.0  2
+ P3Z  Var_09    CAR   CAS  CAQ  CAH   -98.07  30.0  2
+ P3Z  Var_10    CAP   CAS  CAQ  CAI   -43.79  30.0  2
+ P3Z  Var_11    CAR   CAS  CAQ  CAI    78.36  30.0  2
+ P3Z  Var_12    CAP   CAS  CAR  CAJ  -158.35  30.0  3
+ P3Z  Var_13    CAQ   CAS  CAR  CAJ    80.68  30.0  3
+ P3Z  Var_14    CAP   CAS  CAR  CAK   -86.27  30.0  3
+ P3Z  Var_15    CAQ   CAS  CAR  CAK   152.76  30.0  3
+ P3Z  Var_16    HAJ   CAJ  CAR  CAK  -107.35  30.0  1
+ P3Z  Var_17    HAJA  CAJ  CAR  CAK   108.54  30.0  1
+ P3Z  Var_18    CAE   CAP  CAS  OAB  -104.98  30.0  2
+ P3Z  Var_19    CAF   CAP  CAS  OAB    71.42  30.0  2
+ P3Z  Var_20    CAH   CAQ  CAS  OAB    18.17  30.0  2
+ P3Z  Var_21    CAI   CAQ  CAS  OAB  -165.40  30.0  2
+ P3Z  Var_22    CAJ   CAR  CAS  OAB   -37.52  30.0  2
+ P3Z  Var_23    CAK   CAR  CAS  OAB    34.56  30.0  2
+ P3Z  Var_24    HOAB  OAB  CAS  CAP   -45.69  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

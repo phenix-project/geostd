@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ADQ  ADQ  '[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl dihydrogen diphosphate (non-preferred name)'  ligand  61  38  .  2021-08-06  2021-08-06  
+ ADQ  ADQ  '[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3R,4S,5S,6R)-3,4,5-trihydroxy-6-(hydroxymethyl)tetrahydro-2H-pyran-2-yl dihydrogen diphosphate (non-preferred name)'  ligand  61  38  .  2021-08-06  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_ADQ
@@ -303,35 +304,109 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ADQ  CONST_01  C5    N7   C8   N9     0.00   0.0  0
- ADQ  CONST_02  N7    C5   C4   N9     0.00   0.0  0
- ADQ  CONST_03  C6    C5   C4   N9   180.00   0.0  0
- ADQ  CONST_04  C2    N3   C4   N9   180.00   0.0  0
- ADQ  CONST_05  C5    C4   N9   C8     0.00   0.0  0
- ADQ  CONST_06  N3    C4   N9   C8   180.00   0.0  0
- ADQ  CONST_07  C6    C5   N7   C8   180.00   0.0  0
- ADQ  CONST_08  C4    C5   N7   C8     0.00   0.0  0
- ADQ  CONST_09  C4    N9   C8   N7     0.00   0.0  0
- ADQ  CONST_10  N1    C6   C5   N7   180.00   0.0  0
- ADQ  CONST_11  N3    C4   C5   N7   180.00   0.0  0
- ADQ  CONST_12  C2    N1   C6   C5     0.00   0.0  0
- ADQ  CONST_13  C2    N3   C4   C5     0.00   0.0  0
- ADQ  CONST_14  N3    C4   C5   C6     0.00   0.0  0
- ADQ  CONST_15  N3    C2   N1   C6     0.00   0.0  0
- ADQ  CONST_16  C4    C5   C6   N1     0.00   0.0  0
- ADQ  CONST_17  C4    N3   C2   N1     0.00   0.0  0
- ADQ  CONST_18  N7    C8   N9   C1D  180.00   0.0  0
- ADQ  CONST_19  C5    C4   N9   C1D  180.00   0.0  0
- ADQ  CONST_20  N3    C4   N9   C1D    0.00   0.0  0
- ADQ  CONST_21  N6    C6   C5   N7     0.00   0.0  0
- ADQ  CONST_22  C4    C5   C6   N6   180.00   0.0  0
- ADQ  CONST_23  C2    N1   C6   N6   180.00   0.0  0
- ADQ  CONST_24  H8    C8   N9   C1D    0.00   0.0  0
- ADQ  CONST_25  H2    C2   N1   C6   180.00   0.0  0
- ADQ  CONST_26  HN61  N6   C6   C5   180.00   0.0  0
- ADQ  CONST_27  HN62  N6   C6   C5     0.00   0.0  0
- ADQ  Var_01    C4D   C5D  O5D  PA    83.32  30.0  3
- ADQ  Var_02    O1A   PA   O3A  PB   160.50  30.0  2
+ ADQ  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ ADQ  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ ADQ  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ ADQ  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ ADQ  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ ADQ  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ ADQ  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ ADQ  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ ADQ  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ ADQ  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ ADQ  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ ADQ  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ ADQ  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ ADQ  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ ADQ  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ ADQ  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ ADQ  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ ADQ  CONST_18  N7    C8   N9   C1D   180.00   0.0  0
+ ADQ  CONST_19  C5    C4   N9   C1D   180.00   0.0  0
+ ADQ  CONST_20  N3    C4   N9   C1D     0.00   0.0  0
+ ADQ  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ ADQ  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ ADQ  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ ADQ  CONST_24  H8    C8   N9   C1D     0.00   0.0  0
+ ADQ  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ ADQ  CONST_26  HN61  N6   C6   C5    180.00   0.0  0
+ ADQ  CONST_27  HN62  N6   C6   C5      0.00   0.0  0
+ ADQ  Var_01    C4D   C5D  O5D  PA     83.32  30.0  3
+ ADQ  Var_02    O1A   PA   O3A  PB    160.50  30.0  2
+ ADQ  Var_03    C2D   C1D  O4D  C4D    10.31  30.0  1
+ ADQ  Var_04    N9    C1D  O4D  C4D  -110.50  30.0  1
+ ADQ  Var_05    C1D   C2D  C3D  C4D    36.19  30.0  1
+ ADQ  Var_06    C2D   C3D  C4D  O4D   -31.50  30.0  1
+ ADQ  Var_07    C3D   C2D  C1D  O4D   -29.49  30.0  1
+ ADQ  Var_08    C8    N9   C1D  O4D    10.62  30.0  2
+ ADQ  Var_09    C4    N9   C1D  O4D  -167.18  30.0  2
+ ADQ  Var_10    C1D   O4D  C4D  C3D    13.71  30.0  1
+ ADQ  Var_11    N9    C1D  C2D  C3D    89.77  30.0  1
+ ADQ  Var_12    C8    N9   C1D  C2D  -107.36  30.0  2
+ ADQ  Var_13    C4    N9   C1D  C2D    74.84  30.0  2
+ ADQ  Var_14    C4'   C3'  C2'  C1'   -54.59  30.0  1
+ ADQ  Var_15    C4'   C5'  O5'  C1'    58.57  30.0  1
+ ADQ  Var_16    C5'   O5'  C1'  C2'   -60.86  30.0  1
+ ADQ  Var_17    C5'   C4'  C3'  C2'    52.64  30.0  1
+ ADQ  Var_18    O5'   C1'  C2'  C3'    57.24  30.0  1
+ ADQ  Var_19    O5'   C5'  C4'  C3'   -52.66  30.0  1
+ ADQ  Var_20    C3'   C2'  C1'  O3B   -65.95  30.0  1
+ ADQ  Var_21    C5'   O5'  C1'  O3B    59.62  30.0  1
+ ADQ  Var_22    C1D   O4D  C4D  C5D   135.62  30.0  1
+ ADQ  Var_23    C2D   C3D  C4D  C5D  -151.79  30.0  1
+ ADQ  Var_24    O2D   C2D  C3D  C4D   -77.61  30.0  1
+ ADQ  Var_25    O3D   C3D  C4D  O4D  -152.76  30.0  1
+ ADQ  Var_26    O2D   C2D  C1D  O4D    87.03  30.0  1
+ ADQ  Var_27    C1D   C2D  C3D  O3D   154.91  30.0  1
+ ADQ  Var_28    N9    C1D  C2D  O2D  -153.71  30.0  1
+ ADQ  Var_29    O3'   C3'  C2'  C1'  -173.39  30.0  1
+ ADQ  Var_30    C6'   C5'  O5'  C1'   179.46  30.0  1
+ ADQ  Var_31    O4'   C4'  C3'  C2'   172.87  30.0  1
+ ADQ  Var_32    C6'   C5'  C4'  C3'  -171.34  30.0  1
+ ADQ  Var_33    O2'   C2'  C3'  C4'  -177.77  30.0  1
+ ADQ  Var_34    O3'   C3'  C4'  C5'   174.37  30.0  1
+ ADQ  Var_35    O5'   C1'  C2'  O2'   177.79  30.0  1
+ ADQ  Var_36    O5'   C5'  C4'  O4'  -174.91  30.0  1
+ ADQ  Var_37    H1D   C1D  O4D  C4D   131.92  30.0  1
+ ADQ  Var_38    H2D   C2D  C3D  C4D   156.02  30.0  1
+ ADQ  Var_39    H3D   C3D  C4D  O4D    84.06  30.0  1
+ ADQ  Var_40    H4D   C4D  C3D  C2D    85.37  30.0  1
+ ADQ  Var_41    H3'   C3'  C2'  C1'    64.09  30.0  1
+ ADQ  Var_42    H5'   C5'  O5'  C1'   -62.05  30.0  1
+ ADQ  Var_43    H4'   C4'  C3'  C2'   -65.39  30.0  1
+ ADQ  Var_44    H1'   C1'  C2'  C3'   172.40  30.0  1
+ ADQ  Var_45    H2'   C2'  C3'  C4'    61.78  30.0  1
+ ADQ  Var_46    C2'   C1'  O3B  PB   -170.99  30.0  3
+ ADQ  Var_47    O5'   C1'  O3B  PB     67.72  30.0  3
+ ADQ  Var_48    O2'   C2'  C1'  O3B    54.60  30.0  1
+ ADQ  Var_49    O4D   C4D  C5D  O5D    57.73  30.0  3
+ ADQ  Var_50    C3D   C4D  C5D  O5D   174.85  30.0  3
+ ADQ  Var_51    O3D   C3D  C4D  C5D    86.95  30.0  1
+ ADQ  Var_52    O2D   C2D  C3D  O3D    41.11  30.0  1
+ ADQ  Var_53    O6'   C6'  C5'  C4'  -174.80  30.0  3
+ ADQ  Var_54    O4'   C4'  C5'  C6'    66.41  30.0  1
+ ADQ  Var_55    O3'   C3'  C2'  O2'    63.43  30.0  1
+ ADQ  Var_56    O4'   C4'  C3'  O3'   -65.40  30.0  1
+ ADQ  Var_57    O6'   C6'  C5'  O5'    64.74  30.0  3
+ ADQ  Var_58    HO3'  O3D  C3D  C4D  -161.60  30.0  3
+ ADQ  Var_59    H5'1  C5D  C4D  O4D  -177.86  30.0  1
+ ADQ  Var_60    H5'2  C5D  C4D  O4D   -62.03  30.0  1
+ ADQ  Var_61    HO2'  O2D  C2D  C3D   -40.60  30.0  3
+ ADQ  Var_62    HO2A  O2'  C2'  C1'    76.37  30.0  3
+ ADQ  Var_63    HO3A  O3'  C3'  C2'   -70.38  30.0  3
+ ADQ  Var_64    HO4'  O4'  C4'  C3'    56.58  30.0  3
+ ADQ  Var_65    H6'1  C6'  C5'  C4'   -53.06  30.0  3
+ ADQ  Var_66    H6'2  C6'  C5'  C4'    62.95  30.0  3
+ ADQ  Var_67    C1'   O3B  PB   O1B    28.15  30.0  3
+ ADQ  Var_68    C1'   O3B  PB   O2B  -107.02  30.0  2
+ ADQ  Var_69    C1'   O3B  PB   O3A   140.18  30.0  3
+ ADQ  Var_70    HO6'  O6'  C6'  C5'  -178.65  30.0  3
+ ADQ  Var_71    PA    O3A  PB   O1B   -90.63  30.0  3
+ ADQ  Var_72    PA    O3A  PB   O2B    45.82  30.0  2
+ ADQ  Var_73    PA    O3A  PB   O3B   157.51  30.0  3
+ ADQ  Var_74    C5D   O5D  PA   O1A   -77.27  30.0  3
+ ADQ  Var_75    C5D   O5D  PA   O2A    56.81  30.0  2
+ ADQ  Var_76    C5D   O5D  PA   O3A   172.64  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VMY  VMY  (1S)-1-(5-{[1-(2,6-difluorobenzyl)-1H-pyrazol-3-yl]amino}-1,3,4-thiadiazol-2-yl)-1-(4-methyl-1,3-thiazol-2-yl)ethanol  ligand  45  29  .  2021-08-24  2021-08-24  
+ VMY  VMY  (1S)-1-(5-{[1-(2,6-difluorobenzyl)-1H-pyrazol-3-yl]amino}-1,3,4-thiadiazol-2-yl)-1-(4-methyl-1,3-thiazol-2-yl)ethanol  ligand  45  29  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VMY
@@ -237,56 +238,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VMY  CONST_01  C16  C15  C14  C13    0.00   0.0  0
- VMY  CONST_02  C16  C17  C12  C13    0.00   0.0  0
- VMY  CONST_03  C17  C12  C13  C14    0.00   0.0  0
- VMY  CONST_04  C17  C16  C15  C14    0.00   0.0  0
- VMY  CONST_05  C12  C13  C14  C15    0.00   0.0  0
- VMY  CONST_06  C12  C17  C16  C15    0.00   0.0  0
- VMY  CONST_07  C8   C9   C10  N4     0.00   0.0  0
- VMY  CONST_08  C9   C8   N5   N4     0.00   0.0  0
- VMY  CONST_09  C8   N5   N4   C10    0.00   0.0  0
- VMY  CONST_10  N5   C8   C9   C10    0.00   0.0  0
- VMY  CONST_11  N5   N4   C10  C9     0.00   0.0  0
- VMY  CONST_12  C6   N1   N2   C7     0.00   0.0  0
- VMY  CONST_13  N1   C6   S1   C7     0.00   0.0  0
- VMY  CONST_14  C6   S1   C7   N2     0.00   0.0  0
- VMY  CONST_15  S1   C6   N1   N2     0.00   0.0  0
- VMY  CONST_16  S1   C7   N2   N1     0.00   0.0  0
- VMY  CONST_17  C1   C2   S    C3     0.00   0.0  0
- VMY  CONST_18  C2   C1   N    C3     0.00   0.0  0
- VMY  CONST_19  C1   N    C3   S      0.00   0.0  0
- VMY  CONST_20  N    C1   C2   S      0.00   0.0  0
- VMY  CONST_21  N    C3   S    C2     0.00   0.0  0
- VMY  CONST_22  C15  C14  C13  F1   180.00   0.0  0
- VMY  CONST_23  C17  C12  C13  F1   180.00   0.0  0
- VMY  CONST_24  F    C17  C12  C13  180.00   0.0  0
- VMY  CONST_25  C11  C12  C13  C14  180.00   0.0  0
- VMY  CONST_26  F    C17  C16  C15  180.00   0.0  0
- VMY  CONST_27  C11  C12  C17  C16  180.00   0.0  0
- VMY  CONST_28  C9   C10  N4   C11  180.00   0.0  0
- VMY  CONST_29  C8   N5   N4   C11  180.00   0.0  0
- VMY  CONST_30  N3   C8   N5   N4   180.00   0.0  0
- VMY  CONST_31  N3   C8   C9   C10  180.00   0.0  0
- VMY  CONST_32  N1   N2   C7   N3   180.00   0.0  0
- VMY  CONST_33  C6   S1   C7   N3   180.00   0.0  0
- VMY  CONST_34  C4   C6   S1   C7   180.00   0.0  0
- VMY  CONST_35  C4   C6   N1   N2   180.00   0.0  0
- VMY  CONST_36  C2   S    C3   C4   180.00   0.0  0
- VMY  CONST_37  C1   N    C3   C4   180.00   0.0  0
- VMY  CONST_38  C    C1   N    C3   180.00   0.0  0
- VMY  CONST_39  C    C1   C2   S    180.00   0.0  0
- VMY  CONST_40  H15  C15  C14  C13  180.00   0.0  0
- VMY  CONST_41  H16  C16  C15  C14  180.00   0.0  0
- VMY  CONST_42  H14  C14  C15  C16  180.00   0.0  0
- VMY  CONST_43  H9   C9   C10  N4   180.00   0.0  0
- VMY  CONST_44  H10  C10  N4   N5   180.00   0.0  0
- VMY  CONST_45  H2   C2   S    C3   180.00   0.0  0
- VMY  Var_01    N4   C11  C12  C13   99.80  30.0  2
- VMY  Var_02    C10  N4   C11  C12  109.92  30.0  2
- VMY  Var_03    C7   N3   C8   C9     2.86  30.0  2
- VMY  Var_04    N2   C7   N3   C8    -1.04  30.0  2
- VMY  Var_05    HC1  C    C1   C2   123.65  30.0  2
+ VMY  CONST_01  C16   C15  C14  C13     0.00   0.0  0
+ VMY  CONST_02  C16   C17  C12  C13     0.00   0.0  0
+ VMY  CONST_03  C17   C12  C13  C14     0.00   0.0  0
+ VMY  CONST_04  C17   C16  C15  C14     0.00   0.0  0
+ VMY  CONST_05  C12   C13  C14  C15     0.00   0.0  0
+ VMY  CONST_06  C12   C17  C16  C15     0.00   0.0  0
+ VMY  CONST_07  C8    C9   C10  N4      0.00   0.0  0
+ VMY  CONST_08  C9    C8   N5   N4      0.00   0.0  0
+ VMY  CONST_09  C8    N5   N4   C10     0.00   0.0  0
+ VMY  CONST_10  N5    C8   C9   C10     0.00   0.0  0
+ VMY  CONST_11  N5    N4   C10  C9      0.00   0.0  0
+ VMY  CONST_12  C6    N1   N2   C7      0.00   0.0  0
+ VMY  CONST_13  N1    C6   S1   C7      0.00   0.0  0
+ VMY  CONST_14  C6    S1   C7   N2      0.00   0.0  0
+ VMY  CONST_15  S1    C6   N1   N2      0.00   0.0  0
+ VMY  CONST_16  S1    C7   N2   N1      0.00   0.0  0
+ VMY  CONST_17  C1    C2   S    C3      0.00   0.0  0
+ VMY  CONST_18  C2    C1   N    C3      0.00   0.0  0
+ VMY  CONST_19  C1    N    C3   S       0.00   0.0  0
+ VMY  CONST_20  N     C1   C2   S       0.00   0.0  0
+ VMY  CONST_21  N     C3   S    C2      0.00   0.0  0
+ VMY  CONST_22  C15   C14  C13  F1    180.00   0.0  0
+ VMY  CONST_23  C17   C12  C13  F1    180.00   0.0  0
+ VMY  CONST_24  F     C17  C12  C13   180.00   0.0  0
+ VMY  CONST_25  C11   C12  C13  C14   180.00   0.0  0
+ VMY  CONST_26  F     C17  C16  C15   180.00   0.0  0
+ VMY  CONST_27  C11   C12  C17  C16   180.00   0.0  0
+ VMY  CONST_28  C9    C10  N4   C11   180.00   0.0  0
+ VMY  CONST_29  C8    N5   N4   C11   180.00   0.0  0
+ VMY  CONST_30  N3    C8   N5   N4    180.00   0.0  0
+ VMY  CONST_31  N3    C8   C9   C10   180.00   0.0  0
+ VMY  CONST_32  N1    N2   C7   N3    180.00   0.0  0
+ VMY  CONST_33  C6    S1   C7   N3    180.00   0.0  0
+ VMY  CONST_34  C4    C6   S1   C7    180.00   0.0  0
+ VMY  CONST_35  C4    C6   N1   N2    180.00   0.0  0
+ VMY  CONST_36  C2    S    C3   C4    180.00   0.0  0
+ VMY  CONST_37  C1    N    C3   C4    180.00   0.0  0
+ VMY  CONST_38  C     C1   N    C3    180.00   0.0  0
+ VMY  CONST_39  C     C1   C2   S     180.00   0.0  0
+ VMY  CONST_40  H15   C15  C14  C13   180.00   0.0  0
+ VMY  CONST_41  H16   C16  C15  C14   180.00   0.0  0
+ VMY  CONST_42  H14   C14  C15  C16   180.00   0.0  0
+ VMY  CONST_43  H9    C9   C10  N4    180.00   0.0  0
+ VMY  CONST_44  H10   C10  N4   N5    180.00   0.0  0
+ VMY  CONST_45  H2    C2   S    C3    180.00   0.0  0
+ VMY  Var_01    N4    C11  C12  C13    99.80  30.0  2
+ VMY  Var_02    C10   N4   C11  C12   109.92  30.0  2
+ VMY  Var_03    C7    N3   C8   C9      2.86  30.0  2
+ VMY  Var_04    N2    C7   N3   C8     -1.04  30.0  2
+ VMY  Var_05    HC1   C    C1   C2    123.65  30.0  2
+ VMY  Var_06    C3    C4   C6   N1    -74.27  30.0  2
+ VMY  Var_07    C3    C4   C6   S1    103.88  30.0  2
+ VMY  Var_08    S     C3   C4   C6     60.06  30.0  2
+ VMY  Var_09    N     C3   C4   C6   -121.29  30.0  2
+ VMY  Var_10    C5    C4   C6   N1     46.97  30.0  2
+ VMY  Var_11    O     C4   C6   N1    168.18  30.0  2
+ VMY  Var_12    C5    C4   C6   S1   -134.87  30.0  2
+ VMY  Var_13    O     C4   C6   S1    -13.66  30.0  2
+ VMY  Var_14    S     C3   C4   C5    -61.08  30.0  2
+ VMY  Var_15    N     C3   C4   C5    117.57  30.0  2
+ VMY  Var_16    S     C3   C4   O     176.69  30.0  2
+ VMY  Var_17    N     C3   C4   O      -4.66  30.0  2
+ VMY  Var_18    H51C  C5   C4   C6     62.96  30.0  3
+ VMY  Var_19    H52C  C5   C4   C6   -177.13  30.0  3
+ VMY  Var_20    H53C  C5   C4   C6    -56.86  30.0  3
+ VMY  Var_21    H     O    C4   C6    121.78  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

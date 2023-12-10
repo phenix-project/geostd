@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QM5  QM5  '(2~{S},3~{S})-2-azanyl-3-[[4-[2-(4-methoxyphenyl)hydrazinyl]phenyl]methoxy]butanedioic acid'  ligand  46  27  .  2022-03-23  2022-03-23
+ QM5  QM5  '(2~{S},3~{S})-2-azanyl-3-[[4-[2-(4-methoxyphenyl)hydrazinyl]phenyl]methoxy]butanedioic acid'  ligand  46  27  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QM5
@@ -235,38 +236,59 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QM5  CONST_01  C1   C2   C3   C4     0.00   0.0  0
- QM5  CONST_02  C1   C6   C5   C4     0.00   0.0  0
- QM5  CONST_03  C17  C12  C13  C14    0.00   0.0  0
- QM5  CONST_04  C17  C16  C15  C14    0.00   0.0  0
- QM5  CONST_05  C2   C1   C6   C5     0.00   0.0  0
- QM5  CONST_06  C2   C3   C4   C5     0.00   0.0  0
- QM5  CONST_07  C3   C2   C1   C6     0.00   0.0  0
- QM5  CONST_08  C3   C4   C5   C6     0.00   0.0  0
- QM5  CONST_09  C15  C14  C13  C12    0.00   0.0  0
- QM5  CONST_10  C15  C16  C17  C12    0.00   0.0  0
- QM5  CONST_11  C16  C15  C14  C13    0.00   0.0  0
- QM5  CONST_12  C16  C17  C12  C13    0.00   0.0  0
- QM5  CONST_13  C7   C6   C5   C4   180.00   0.0  0
- QM5  CONST_14  N3   C12  C13  C14  180.00   0.0  0
- QM5  CONST_15  N2   C3   C4   C5   180.00   0.0  0
- QM5  CONST_16  C2   C1   C6   C7   180.00   0.0  0
- QM5  CONST_17  O6   C15  C14  C13  180.00   0.0  0
- QM5  CONST_18  C1   C2   C3   N2   180.00   0.0  0
- QM5  CONST_19  C16  C17  C12  N3   180.00   0.0  0
- QM5  CONST_20  O6   C15  C16  C17  180.00   0.0  0
- QM5  CONST_21  H20  C2   C3   C4   180.00   0.0  0
- QM5  CONST_22  H15  C16  C15  C14  180.00   0.0  0
- QM5  CONST_23  H14  C1   C6   C5   180.00   0.0  0
- QM5  CONST_24  H1   C4   C5   C6   180.00   0.0  0
- QM5  CONST_25  H2   C14  C13  C12  180.00   0.0  0
- QM5  CONST_26  H16  C17  C12  C13  180.00   0.0  0
- QM5  CONST_27  H3   C5   C4   C3   180.00   0.0  0
- QM5  CONST_28  H8   C13  C14  C15  180.00   0.0  0
- QM5  CONST_29  N3   N2   C3   C4     0.00   0.0  0
- QM5  CONST_33  C2   C3   N2   N3   180.00   0.0  0
- QM5  Var_01    O1   C7   C6   C5   -74.11  30.0  2
- QM5  Var_02    H17  C18  O6   C15  179.54  30.0  3
+ QM5  CONST_01  C1   C2   C3   C4      0.00   0.0  0
+ QM5  CONST_02  C1   C6   C5   C4      0.00   0.0  0
+ QM5  CONST_03  C17  C12  C13  C14     0.00   0.0  0
+ QM5  CONST_04  C17  C16  C15  C14     0.00   0.0  0
+ QM5  CONST_05  C2   C1   C6   C5      0.00   0.0  0
+ QM5  CONST_06  C2   C3   C4   C5      0.00   0.0  0
+ QM5  CONST_07  C3   C2   C1   C6      0.00   0.0  0
+ QM5  CONST_08  C3   C4   C5   C6      0.00   0.0  0
+ QM5  CONST_09  C15  C14  C13  C12     0.00   0.0  0
+ QM5  CONST_10  C15  C16  C17  C12     0.00   0.0  0
+ QM5  CONST_11  C16  C15  C14  C13     0.00   0.0  0
+ QM5  CONST_12  C16  C17  C12  C13     0.00   0.0  0
+ QM5  CONST_13  C7   C6   C5   C4    180.00   0.0  0
+ QM5  CONST_14  N3   C12  C13  C14   180.00   0.0  0
+ QM5  CONST_15  N2   C3   C4   C5    180.00   0.0  0
+ QM5  CONST_16  C2   C1   C6   C7    180.00   0.0  0
+ QM5  CONST_17  O6   C15  C14  C13   180.00   0.0  0
+ QM5  CONST_18  C1   C2   C3   N2    180.00   0.0  0
+ QM5  CONST_19  C16  C17  C12  N3    180.00   0.0  0
+ QM5  CONST_20  O6   C15  C16  C17   180.00   0.0  0
+ QM5  CONST_21  H20  C2   C3   C4    180.00   0.0  0
+ QM5  CONST_22  H15  C16  C15  C14   180.00   0.0  0
+ QM5  CONST_23  H14  C1   C6   C5    180.00   0.0  0
+ QM5  CONST_24  H1   C4   C5   C6    180.00   0.0  0
+ QM5  CONST_25  H2   C14  C13  C12   180.00   0.0  0
+ QM5  CONST_26  H16  C17  C12  C13   180.00   0.0  0
+ QM5  CONST_27  H3   C5   C4   C3    180.00   0.0  0
+ QM5  CONST_28  H8   C13  C14  C15   180.00   0.0  0
+ QM5  CONST_29  N3   N2   C3   C4      0.00   0.0  0
+ QM5  CONST_30  C2   C3   N2   N3    180.00   0.0  0
+ QM5  Var_01    O1   C7   C6   C5    -74.11  30.0  2
+ QM5  Var_02    H17  C18  O6   C15   179.54  30.0  3
+ QM5  Var_03    C18  O6   C15  C14  -179.91  30.0  2
+ QM5  Var_04    C18  O6   C15  C16     0.16  30.0  2
+ QM5  Var_05    C8   O1   C7   C6    166.90  30.0  1
+ QM5  Var_06    C10  C8   O1   C7    156.07  30.0  3
+ QM5  Var_07    C9   C8   O1   C7    -80.51  30.0  3
+ QM5  Var_08    O5   C11  C10  C8    -50.24  30.0  2
+ QM5  Var_09    O4   C11  C10  C8    131.86  30.0  2
+ QM5  Var_10    C11  C10  C8   C9    177.95  30.0  2
+ QM5  Var_11    N1   C10  C8   C9    -57.51  30.0  2
+ QM5  Var_12    O2   C9   C8   C10   -64.72  30.0  2
+ QM5  Var_13    O3   C9   C8   C10   114.87  30.0  2
+ QM5  Var_14    O5   C11  C10  N1   -174.37  30.0  2
+ QM5  Var_15    O4   C11  C10  N1      7.73  30.0  2
+ QM5  Var_16    O1   C8   C10  N1     67.49  30.0  3
+ QM5  Var_17    C11  C10  C8   O1    -57.05  30.0  2
+ QM5  Var_18    O2   C9   C8   O1    173.56  30.0  2
+ QM5  Var_19    O3   C9   C8   O1     -6.85  30.0  2
+ QM5  Var_20    H6   C8   O1   C7     39.78  30.0  3
+ QM5  Var_21    H9   N1   C10  C8     93.60  30.0  3
+ QM5  Var_22    H10  N1   C10  C8   -149.94  30.0  3
+ QM5  Var_23    H7   C10  C8   C9     64.06  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

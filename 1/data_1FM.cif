@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1FM  1FM  (3S,5Z,8S,9S,11E)-8,9,16-trihydroxy-14-methoxy-3-methyl-3,4,9,10-tetrahydro-1H-2-benzoxacyclotetradecine-1,7(8H)-dione  ligand  48  26  .  2021-08-03  2022-09-22
+ 1FM  1FM  (3S,5Z,8S,9S,11E)-8,9,16-trihydroxy-14-methoxy-3-methyl-3,4,9,10-tetrahydro-1H-2-benzoxacyclotetradecine-1,7(8H)-dione  ligand  48  26  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1FM
@@ -245,29 +246,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 1FM  CONST_01  C15  C14  C3   C2      0.00   0.0  0
- 1FM  CONST_02  C15  C16  C11  C2      0.00   0.0  0
- 1FM  CONST_03  C16  C11  C2   C3      0.00   0.0  0
- 1FM  CONST_04  C16  C15  C14  C3      0.00   0.0  0
- 1FM  CONST_05  C14  C3   C2   C11     0.00   0.0  0
- 1FM  CONST_06  C14  C15  C16  C11     0.00   0.0  0
- 1FM  CONST_07  O46  C11  C2   C3    180.00   0.0  0
- 1FM  CONST_08  O48  C15  C14  C3    180.00   0.0  0
- 1FM  CONST_09  O48  C15  C16  C11   180.00   0.0  0
- 1FM  CONST_10  O46  C11  C16  C15   180.00   0.0  0
- 1FM  CONST_11  O46  C11  C2   C26     0.00   0.0  0
- 1FM  CONST_12  H14  C14  C3   C2    180.00   0.0  0
- 1FM  CONST_13  H16  C16  C11  C2    180.00   0.0  0
- 1FM  Var_01    C34  C17  C23  C3   -177.80   0.0  0
- 1FM  Var_02    C40  C41  C42  C18    -4.35   0.0  0
- 1FM  Var_03    C17  C23  C3   C2   -123.10  30.0  1
- 1FM  Var_04    O15  C26  C2   C3    137.51  30.0  1
- 1FM  Var_05    C24  C34  C17  C23  -125.48  30.0  1
- 1FM  Var_06    C41  C42  C18  C31   126.48  30.0  1
- 1FM  Var_07    C42  C41  C40  C39   168.90  30.0  1
- 1FM  Var_08    H23  C23  C17  C34     3.56   0.0  0
- 1FM  Var_09    H42  C42  C41  C40  -179.94   0.0  0
- 1FM  Var_10    H59  C59  O48  C15    60.70  30.0  3
+ 1FM  CONST_01  C15   C14  C3   C2      0.00   0.0  0
+ 1FM  CONST_02  C15   C16  C11  C2      0.00   0.0  0
+ 1FM  CONST_03  C16   C11  C2   C3      0.00   0.0  0
+ 1FM  CONST_04  C16   C15  C14  C3      0.00   0.0  0
+ 1FM  CONST_05  C14   C3   C2   C11     0.00   0.0  0
+ 1FM  CONST_06  C14   C15  C16  C11     0.00   0.0  0
+ 1FM  CONST_07  O46   C11  C2   C3    180.00   0.0  0
+ 1FM  CONST_08  O48   C15  C14  C3    180.00   0.0  0
+ 1FM  CONST_09  O48   C15  C16  C11   180.00   0.0  0
+ 1FM  CONST_10  O46   C11  C16  C15   180.00   0.0  0
+ 1FM  CONST_11  O46   C11  C2   C26     0.00   0.0  0
+ 1FM  CONST_12  H14   C14  C3   C2    180.00   0.0  0
+ 1FM  CONST_13  H16   C16  C11  C2    180.00   0.0  0
+ 1FM  Var_01    C34   C17  C23  C3   -177.80   0.0  0
+ 1FM  Var_02    C40   C41  C42  C18    -4.35   0.0  0
+ 1FM  Var_03    C17   C23  C3   C2   -123.10  30.0  1
+ 1FM  Var_04    O15   C26  C2   C3    137.51  30.0  1
+ 1FM  Var_05    C24   C34  C17  C23  -125.48  30.0  1
+ 1FM  Var_06    C41   C42  C18  C31   126.48  30.0  1
+ 1FM  Var_07    C42   C41  C40  C39   168.90  30.0  1
+ 1FM  Var_08    H23   C23  C17  C34     3.56   0.0  0
+ 1FM  Var_09    H42   C42  C41  C40  -179.94   0.0  0
+ 1FM  Var_10    H59   C59  O48  C15    60.70  30.0  3
+ 1FM  Var_11    C31   O15  C26  C2   -173.95  30.0  3
+ 1FM  Var_12    C42   C18  C31  O15   -76.71  30.0  3
+ 1FM  Var_13    C39   C24  C34  C17    91.23  30.0  3
+ 1FM  Var_14    C26   O15  C31  C18    71.02  30.0  3
+ 1FM  Var_15    C41   C40  C39  C24   123.72  30.0  3
+ 1FM  Var_16    C40   C39  C24  C34   -62.99  30.0  3
+ 1FM  Var_17    O42   C24  C34  C17  -151.54  30.0  3
+ 1FM  Var_18    O40   C40  C39  C24   -58.23  30.0  3
+ 1FM  Var_19    C62   C31  O15  C26   -61.97  30.0  3
+ 1FM  Var_20    O38   C26  O15  C31     6.21  30.0  3
+ 1FM  Var_21    O44   C39  C24  C34    62.19  30.0  3
+ 1FM  Var_22    O42   C24  C39  C40   175.28  30.0  3
+ 1FM  Var_23    O44   C39  C40  C41    -1.76  30.0  3
+ 1FM  Var_24    C62   C31  C18  C42    55.19  30.0  3
+ 1FM  Var_25    H18   C18  C31  O15    51.32  30.0  3
+ 1FM  Var_26    H18A  C18  C31  O15   165.36  30.0  3
+ 1FM  Var_27    H24   C24  C34  C17   -29.20  30.0  3
+ 1FM  Var_28    H31   C31  O15  C26  -177.10  30.0  3
+ 1FM  Var_29    H39   C39  C24  C34  -177.28  30.0  3
+ 1FM  Var_30    C59   O48  C15  C14  -178.96  30.0  3
+ 1FM  Var_31    C59   O48  C15  C16     0.51  30.0  3
+ 1FM  Var_32    O44   C39  C40  O40   176.29  30.0  3
+ 1FM  Var_33    O44   C39  C24  O42   -59.55  30.0  3
+ 1FM  Var_34    HO46  O46  C11  C2     15.57  30.0  2
+ 1FM  Var_35    H62   C62  C31  O15    74.25  30.0  3
+ 1FM  Var_36    H62A  C62  C31  O15  -165.45  30.0  3
+ 1FM  Var_37    H62B  C62  C31  O15   -48.32  30.0  3
+ 1FM  Var_38    HO44  O44  C39  C24    50.93  30.0  3
+ 1FM  Var_39    HO42  O42  C24  C34    51.70  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

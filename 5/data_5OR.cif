@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5OR  5OR  2-(4-hydroxyphenyl)-3-iodanyl-imidazo[1,2-a]pyridin-6-ol  ligand  27  18  .  2022-07-23  2022-07-26
+ 5OR  5OR  2-(4-hydroxyphenyl)-3-iodanyl-imidazo[1,2-a]pyridin-6-ol  ligand  27  18  .  2022-07-23  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5OR
@@ -166,48 +167,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5OR  CONST_01  C05  C17  C18  C02    0.00  0.0  0
- 5OR  CONST_02  C05  C04  C03  C02    0.00  0.0  0
- 5OR  CONST_03  C06  C05  C04  C03  180.00  0.0  0
- 5OR  CONST_04  C17  C05  C04  C03    0.00  0.0  0
- 5OR  CONST_05  C17  C18  C02  C03    0.00  0.0  0
- 5OR  CONST_08  C18  C17  C05  C04    0.00  0.0  0
- 5OR  CONST_09  C18  C02  C03  C04    0.00  0.0  0
- 5OR  CONST_10  C08  N07  C06  C05  180.00  0.0  0
- 5OR  CONST_11  N14  C15  C06  C05  180.00  0.0  0
- 5OR  CONST_12  C09  C08  N07  C06  180.00  0.0  0
- 5OR  CONST_13  N14  C08  N07  C06    0.00  0.0  0
- 5OR  CONST_14  C13  N14  C15  C06  180.00  0.0  0
- 5OR  CONST_15  C08  N14  C15  C06    0.00  0.0  0
- 5OR  CONST_16  C18  C17  C05  C06  180.00  0.0  0
- 5OR  CONST_17  C10  C09  C08  N07  180.00  0.0  0
- 5OR  CONST_18  C13  N14  C08  N07  180.00  0.0  0
- 5OR  CONST_19  C15  N14  C08  N07    0.00  0.0  0
- 5OR  CONST_20  N14  C15  C06  N07    0.00  0.0  0
- 5OR  CONST_22  C11  C10  C09  C08    0.00  0.0  0
- 5OR  CONST_23  C11  C13  N14  C08    0.00  0.0  0
- 5OR  CONST_24  C15  C06  N07  C08    0.00  0.0  0
- 5OR  CONST_25  C13  C11  C10  C09    0.00  0.0  0
- 5OR  CONST_26  C13  N14  C08  C09    0.00  0.0  0
- 5OR  CONST_27  C15  N14  C08  C09  180.00  0.0  0
- 5OR  CONST_28  N14  C13  C11  C10    0.00  0.0  0
- 5OR  CONST_29  N14  C08  C09  C10    0.00  0.0  0
- 5OR  CONST_30  C15  N14  C13  C11  180.00  0.0  0
- 5OR  CONST_32  C17  C18  C02  O01  180.00  0.0  0
- 5OR  CONST_33  C04  C03  C02  O01  180.00  0.0  0
- 5OR  CONST_34  I16  C15  C06  C05    0.00  0.0  0
- 5OR  CONST_35  I16  C15  C06  N07  180.00  0.0  0
- 5OR  CONST_36  I16  C15  N14  C08  180.00  0.0  0
- 5OR  CONST_37  O12  C11  C10  C09  180.00  0.0  0
- 5OR  CONST_38  N14  C13  C11  O12  180.00  0.0  0
- 5OR  CONST_39  I16  C15  N14  C13    0.00  0.0  0
- 5OR  CONST_40  H8   C17  C18  C02  180.00  0.0  0
- 5OR  CONST_41  H3   C04  C03  C02  180.00  0.0  0
- 5OR  CONST_42  H9   C18  C02  C03  180.00  0.0  0
- 5OR  CONST_43  H2   C03  C04  C05  180.00  0.0  0
- 5OR  CONST_44  H4   C09  C08  N07    0.00  0.0  0
- 5OR  CONST_45  H5   C10  C09  C08  180.00  0.0  0
- 5OR  CONST_46  H7   C13  N14  C08  180.00  0.0  0
+ 5OR  CONST_01  C05  C17  C18  C02    0.00   0.0  0
+ 5OR  CONST_02  C05  C04  C03  C02    0.00   0.0  0
+ 5OR  CONST_03  C06  C05  C04  C03  180.00   0.0  0
+ 5OR  CONST_04  C17  C05  C04  C03    0.00   0.0  0
+ 5OR  CONST_05  C17  C18  C02  C03    0.00   0.0  0
+ 5OR  CONST_06  C18  C17  C05  C04    0.00   0.0  0
+ 5OR  CONST_07  C18  C02  C03  C04    0.00   0.0  0
+ 5OR  CONST_08  C08  N07  C06  C05  180.00   0.0  0
+ 5OR  CONST_09  N14  C15  C06  C05  180.00   0.0  0
+ 5OR  CONST_10  C09  C08  N07  C06  180.00   0.0  0
+ 5OR  CONST_11  N14  C08  N07  C06    0.00   0.0  0
+ 5OR  CONST_12  C13  N14  C15  C06  180.00   0.0  0
+ 5OR  CONST_13  C08  N14  C15  C06    0.00   0.0  0
+ 5OR  CONST_14  C18  C17  C05  C06  180.00   0.0  0
+ 5OR  CONST_15  C10  C09  C08  N07  180.00   0.0  0
+ 5OR  CONST_16  C13  N14  C08  N07  180.00   0.0  0
+ 5OR  CONST_17  C15  N14  C08  N07    0.00   0.0  0
+ 5OR  CONST_18  N14  C15  C06  N07    0.00   0.0  0
+ 5OR  CONST_19  C11  C10  C09  C08    0.00   0.0  0
+ 5OR  CONST_20  C11  C13  N14  C08    0.00   0.0  0
+ 5OR  CONST_21  C15  C06  N07  C08    0.00   0.0  0
+ 5OR  CONST_22  C13  C11  C10  C09    0.00   0.0  0
+ 5OR  CONST_23  C13  N14  C08  C09    0.00   0.0  0
+ 5OR  CONST_24  C15  N14  C08  C09  180.00   0.0  0
+ 5OR  CONST_25  N14  C13  C11  C10    0.00   0.0  0
+ 5OR  CONST_26  N14  C08  C09  C10    0.00   0.0  0
+ 5OR  CONST_27  C15  N14  C13  C11  180.00   0.0  0
+ 5OR  CONST_28  C17  C18  C02  O01  180.00   0.0  0
+ 5OR  CONST_29  C04  C03  C02  O01  180.00   0.0  0
+ 5OR  CONST_30  I16  C15  C06  C05    0.00   0.0  0
+ 5OR  CONST_31  I16  C15  C06  N07  180.00   0.0  0
+ 5OR  CONST_32  I16  C15  N14  C08  180.00   0.0  0
+ 5OR  CONST_33  O12  C11  C10  C09  180.00   0.0  0
+ 5OR  CONST_34  N14  C13  C11  O12  180.00   0.0  0
+ 5OR  CONST_35  I16  C15  N14  C13    0.00   0.0  0
+ 5OR  CONST_36  H8   C17  C18  C02  180.00   0.0  0
+ 5OR  CONST_37  H3   C04  C03  C02  180.00   0.0  0
+ 5OR  CONST_38  H9   C18  C02  C03  180.00   0.0  0
+ 5OR  CONST_39  H2   C03  C04  C05  180.00   0.0  0
+ 5OR  CONST_40  H4   C09  C08  N07    0.00   0.0  0
+ 5OR  CONST_41  H5   C10  C09  C08  180.00   0.0  0
+ 5OR  CONST_42  H7   C13  N14  C08  180.00   0.0  0
+ 5OR  Var_01    N07  C06  C05  C04  141.49  30.0  3
+ 5OR  Var_02    C15  C06  C05  C04  -40.19  30.0  3
+ 5OR  Var_03    C17  C05  C06  N07  -36.80  30.0  2
+ 5OR  Var_04    C17  C05  C06  C15  141.51  30.0  2
+ 5OR  Var_05    H1   O01  C02  C03    1.58  30.0  2
+ 5OR  Var_06    H6   O12  C11  C10   -1.22  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

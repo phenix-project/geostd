@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FMB  FMB  (1S)-1,4-anhydro-1-(7-oxo-6,7-dihydro-1H-pyrazolo[4,3-d]pyrimidin-3-yl)-D-ribitol  ligand  31  19  .  2021-08-09  2021-08-09  
+ FMB  FMB  (1S)-1,4-anhydro-1-(7-oxo-6,7-dihydro-1H-pyrazolo[4,3-d]pyrimidin-3-yl)-D-ribitol  ligand  31  19  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FMB
@@ -186,32 +187,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FMB  CONST_01  C4   N3  C2  N1    0.00  0.0  0
- FMB  CONST_02  C4   C5  C6  N1    0.00  0.0  0
- FMB  CONST_03  N7   C5  C6  N1  180.00  0.0  0
- FMB  CONST_04  C5   C6  N1  C2    0.00  0.0  0
- FMB  CONST_05  C5   C4  N3  C2    0.00  0.0  0
- FMB  CONST_06  C9   C4  N3  C2  180.00  0.0  0
- FMB  CONST_07  C6   N1  C2  N3    0.00  0.0  0
- FMB  CONST_08  C6   C5  C4  N3    0.00  0.0  0
- FMB  CONST_09  N7   C5  C4  N3  180.00  0.0  0
- FMB  CONST_10  N8   C9  C4  N3  180.00  0.0  0
- FMB  CONST_11  N8   N7  C5  C4    0.00  0.0  0
- FMB  CONST_12  N7   N8  C9  C4    0.00  0.0  0
- FMB  CONST_13  N8   C9  C4  C5    0.00  0.0  0
- FMB  CONST_14  C9   N8  N7  C5    0.00  0.0  0
- FMB  CONST_15  C9   C4  C5  C6  180.00  0.0  0
- FMB  CONST_16  N8   N7  C5  C6  180.00  0.0  0
- FMB  CONST_17  C9   C4  C5  N7    0.00  0.0  0
- FMB  CONST_18  C1'  C9  C4  N3    0.00  0.0  0
- FMB  CONST_19  C1'  C9  C4  C5  180.00  0.0  0
- FMB  CONST_20  C1'  C9  N8  N7  180.00  0.0  0
- FMB  CONST_21  O6   C6  N1  C2  180.00  0.0  0
- FMB  CONST_22  O6   C6  C5  C4  180.00  0.0  0
- FMB  CONST_23  N7   C5  C6  O6    0.00  0.0  0
- FMB  CONST_24  HN1  N1  C2  N3  180.00  0.0  0
- FMB  CONST_25  H2   C2  N3  C4  180.00  0.0  0
- FMB  CONST_26  HN7  N7  C5  C4  180.00  0.0  0
+ FMB  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ FMB  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ FMB  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ FMB  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ FMB  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ FMB  CONST_06  C9    C4   N3   C2    180.00   0.0  0
+ FMB  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ FMB  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ FMB  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ FMB  CONST_10  N8    C9   C4   N3    180.00   0.0  0
+ FMB  CONST_11  N8    N7   C5   C4      0.00   0.0  0
+ FMB  CONST_12  N7    N8   C9   C4      0.00   0.0  0
+ FMB  CONST_13  N8    C9   C4   C5      0.00   0.0  0
+ FMB  CONST_14  C9    N8   N7   C5      0.00   0.0  0
+ FMB  CONST_15  C9    C4   C5   C6    180.00   0.0  0
+ FMB  CONST_16  N8    N7   C5   C6    180.00   0.0  0
+ FMB  CONST_17  C9    C4   C5   N7      0.00   0.0  0
+ FMB  CONST_18  C1'   C9   C4   N3      0.00   0.0  0
+ FMB  CONST_19  C1'   C9   C4   C5    180.00   0.0  0
+ FMB  CONST_20  C1'   C9   N8   N7    180.00   0.0  0
+ FMB  CONST_21  O6    C6   N1   C2    180.00   0.0  0
+ FMB  CONST_22  O6    C6   C5   C4    180.00   0.0  0
+ FMB  CONST_23  N7    C5   C6   O6      0.00   0.0  0
+ FMB  CONST_24  HN1   N1   C2   N3    180.00   0.0  0
+ FMB  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ FMB  CONST_26  HN7   N7   C5   C4    180.00   0.0  0
+ FMB  Var_01    C2'   C1'  C9   C4     82.27  30.0  2
+ FMB  Var_02    O4'   C1'  C9   C4   -159.27  30.0  2
+ FMB  Var_03    C2'   C1'  C9   N8    -96.86  30.0  2
+ FMB  Var_04    O4'   C1'  C9   N8     21.60  30.0  2
+ FMB  Var_05    C3'   C2'  C1'  C9     87.53  30.0  1
+ FMB  Var_06    C4'   O4'  C1'  C9   -105.17  30.0  1
+ FMB  Var_07    C4'   C3'  C2'  C1'    37.42  30.0  1
+ FMB  Var_08    C3'   C4'  O4'  C1'     8.09  30.0  1
+ FMB  Var_09    C4'   O4'  C1'  C2'    16.68  30.0  1
+ FMB  Var_10    O4'   C4'  C3'  C2'   -29.17  30.0  1
+ FMB  Var_11    O4'   C1'  C2'  C3'   -34.07  30.0  1
+ FMB  Var_12    O2'   C2'  C1'  C9   -155.27  30.0  1
+ FMB  Var_13    O3'   C3'  C2'  C1'   159.39  30.0  1
+ FMB  Var_14    C5'   C4'  O4'  C1'   130.56  30.0  1
+ FMB  Var_15    C5'   C4'  C3'  C2'  -150.52  30.0  1
+ FMB  Var_16    O4'   C1'  C2'  O2'    83.13  30.0  1
+ FMB  Var_17    C4'   C3'  C2'  O2'   -77.19  30.0  1
+ FMB  Var_18    O4'   C4'  C3'  O3'  -148.67  30.0  1
+ FMB  Var_19    H1'   C1'  C9   C4    -38.90  30.0  2
+ FMB  Var_20    H2'   C2'  C1'  C9    -31.72  30.0  1
+ FMB  Var_21    H3'   C3'  C2'  C1'   -78.38  30.0  1
+ FMB  Var_22    H4'   C4'  O4'  C1'  -108.98  30.0  1
+ FMB  Var_23    O3'   C3'  C2'  O2'    44.79  30.0  1
+ FMB  Var_24    O5'   C5'  C4'  C3'  -175.99  30.0  3
+ FMB  Var_25    C5'   C4'  C3'  O3'    89.97  30.0  1
+ FMB  Var_26    O5'   C5'  C4'  O4'    65.67  30.0  3
+ FMB  Var_27    HO2   O2'  C2'  C1'  -165.94  30.0  3
+ FMB  Var_28    HO3   O3'  C3'  C2'   159.30  30.0  3
+ FMB  Var_29    H5'1  C5'  C4'  C3'    61.39  30.0  3
+ FMB  Var_30    H5'2  C5'  C4'  C3'   -54.61  30.0  3
+ FMB  Var_31    HO5   O5'  C5'  C4'   178.86  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

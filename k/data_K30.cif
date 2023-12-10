@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- K30  K30  (2S)-4-(2,5-difluorophenyl)-N-[(3R,4S)-3-fluoro-1-methylpiperidin-4-yl]-2-(hydroxymethyl)-N-methyl-2-phenyl-2,5-dihydro-1H-pyrrole-1-carboxamide  ligand  61  33  .  2021-08-12  2022-09-16
+ K30  K30  (2S)-4-(2,5-difluorophenyl)-N-[(3R,4S)-3-fluoro-1-methylpiperidin-4-yl]-2-(hydroxymethyl)-N-methyl-2-phenyl-2,5-dihydro-1H-pyrrole-1-carboxamide  ligand  61  33  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_K30
@@ -305,44 +306,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- K30  CONST_01  C15  C16  C17  C18    0.00   0.0  0
- K30  CONST_02  C15  C20  C19  C18    0.00   0.0  0
- K30  CONST_03  C20  C19  C18  C17    0.00   0.0  0
- K30  CONST_04  C20  C15  C16  C17    0.00   0.0  0
- K30  CONST_05  C16  C17  C18  C19    0.00   0.0  0
- K30  CONST_06  C16  C15  C20  C19    0.00   0.0  0
- K30  CONST_07  C4   C9   C8   C7     0.00   0.0  0
- K30  CONST_08  C4   C5   C6   C7     0.00   0.0  0
- K30  CONST_09  C9   C8   C7   C6     0.00   0.0  0
- K30  CONST_10  C9   C4   C5   C6     0.00   0.0  0
- K30  CONST_11  C5   C6   C7   C8     0.00   0.0  0
- K30  CONST_12  C5   C4   C9   C8     0.00   0.0  0
- K30  CONST_13  C1   C15  C16  C17  180.00   0.0  0
- K30  CONST_14  C1   C15  C20  C19  180.00   0.0  0
- K30  CONST_15  C3   C4   C5   C6   180.00   0.0  0
- K30  CONST_16  C3   C4   C9   C8   180.00   0.0  0
- K30  CONST_17  F    C5   C6   C7   180.00   0.0  0
- K30  CONST_18  F13  C8   C7   C6   180.00   0.0  0
- K30  CONST_19  F    C5   C4   C9   180.00   0.0  0
- K30  CONST_20  F13  C8   C9   C4   180.00   0.0  0
- K30  CONST_21  F    C5   C4   C3     0.00   0.0  0
- K30  CONST_22  H16  C16  C17  C18  180.00   0.0  0
- K30  CONST_23  H20  C20  C19  C18  180.00   0.0  0
- K30  CONST_24  H19  C19  C18  C17  180.00   0.0  0
- K30  CONST_25  H17  C17  C18  C19  180.00   0.0  0
- K30  CONST_26  H18  C18  C17  C16  180.00   0.0  0
- K30  CONST_27  H9   C9   C8   C7   180.00   0.0  0
- K30  CONST_28  H7   C7   C8   C9   180.00   0.0  0
- K30  CONST_29  H6   C6   C7   C8   180.00   0.0  0
- K30  Var_01    C2   C3   C4   C9    45.20  30.0  2
- K30  Var_02    C24  N25  C26  C27   59.33  30.0  1
- K30  Var_03    C23  C24  N25  C26  -59.13  30.0  1
- K30  Var_04    N    C    C3   C2     6.64  30.0  1
- K30  Var_05    C1   C2   C3   C      1.92  30.0  1
- K30  Var_06    N25  C26  C27  C12  -56.39  30.0  1
- K30  Var_07    C1   N    C    C3   -13.13  30.0  1
- K30  Var_08    H28  C28  N25  C26  -62.87  30.0  3
- K30  Var_09    H22  C22  N11  C12   29.11  30.0  3
+ K30  CONST_01  C15   C16  C17  C18     0.00   0.0  0
+ K30  CONST_02  C15   C20  C19  C18     0.00   0.0  0
+ K30  CONST_03  C20   C19  C18  C17     0.00   0.0  0
+ K30  CONST_04  C20   C15  C16  C17     0.00   0.0  0
+ K30  CONST_05  C16   C17  C18  C19     0.00   0.0  0
+ K30  CONST_06  C16   C15  C20  C19     0.00   0.0  0
+ K30  CONST_07  C4    C9   C8   C7      0.00   0.0  0
+ K30  CONST_08  C4    C5   C6   C7      0.00   0.0  0
+ K30  CONST_09  C9    C8   C7   C6      0.00   0.0  0
+ K30  CONST_10  C9    C4   C5   C6      0.00   0.0  0
+ K30  CONST_11  C5    C6   C7   C8      0.00   0.0  0
+ K30  CONST_12  C5    C4   C9   C8      0.00   0.0  0
+ K30  CONST_13  C1    C15  C16  C17   180.00   0.0  0
+ K30  CONST_14  C1    C15  C20  C19   180.00   0.0  0
+ K30  CONST_15  C3    C4   C5   C6    180.00   0.0  0
+ K30  CONST_16  C3    C4   C9   C8    180.00   0.0  0
+ K30  CONST_17  F     C5   C6   C7    180.00   0.0  0
+ K30  CONST_18  F13   C8   C7   C6    180.00   0.0  0
+ K30  CONST_19  F     C5   C4   C9    180.00   0.0  0
+ K30  CONST_20  F13   C8   C9   C4    180.00   0.0  0
+ K30  CONST_21  F     C5   C4   C3      0.00   0.0  0
+ K30  CONST_22  H16   C16  C17  C18   180.00   0.0  0
+ K30  CONST_23  H20   C20  C19  C18   180.00   0.0  0
+ K30  CONST_24  H19   C19  C18  C17   180.00   0.0  0
+ K30  CONST_25  H17   C17  C18  C19   180.00   0.0  0
+ K30  CONST_26  H18   C18  C17  C16   180.00   0.0  0
+ K30  CONST_27  H9    C9   C8   C7    180.00   0.0  0
+ K30  CONST_28  H7    C7   C8   C9    180.00   0.0  0
+ K30  CONST_29  H6    C6   C7   C8    180.00   0.0  0
+ K30  Var_01    C2    C3   C4   C9     45.20  30.0  2
+ K30  Var_02    C24   N25  C26  C27    59.33  30.0  1
+ K30  Var_03    C23   C24  N25  C26   -59.13  30.0  1
+ K30  Var_04    N     C    C3   C2      6.64  30.0  1
+ K30  Var_05    C1    C2   C3   C       1.92  30.0  1
+ K30  Var_06    N25   C26  C27  C12   -56.39  30.0  1
+ K30  Var_07    C1    N    C    C3    -13.13  30.0  1
+ K30  Var_08    H28   C28  N25  C26   -62.87  30.0  3
+ K30  Var_09    H22   C22  N11  C12    29.11  30.0  3
+ K30  Var_10    C2    C1   C15  C16  -124.88  30.0  3
+ K30  Var_11    N     C1   C15  C16   124.51  30.0  3
+ K30  Var_12    C2    C1   C15  C20    55.49  30.0  3
+ K30  Var_13    N     C1   C15  C20   -55.11  30.0  3
+ K30  Var_14    C24   C23  C12  C27   -53.64  30.0  1
+ K30  Var_15    C23   C12  C27  C26    53.90  30.0  1
+ K30  Var_16    C     N    C1   C2     13.95  30.0  1
+ K30  Var_17    C15   C1   N    C     131.33  30.0  1
+ K30  Var_18    C3    C2   C1   C15  -126.01  30.0  1
+ K30  Var_19    N25   C24  C23  C12    55.96  30.0  1
+ K30  Var_20    N     C1   C2   C3     -9.49  30.0  1
+ K30  Var_21    C14   C1   C15  C16    -2.59  30.0  3
+ K30  Var_22    C14   C1   C15  C20   177.79  30.0  3
+ K30  Var_23    F29   C23  C12  C27    66.60  30.0  1
+ K30  Var_24    N11   C12  C27  C26  -176.31  30.0  1
+ K30  Var_25    C10   N    C1   C2   -179.13  30.0  1
+ K30  Var_26    N11   C12  C23  C24   175.50  30.0  1
+ K30  Var_27    C14   C1   N    C    -100.30  30.0  1
+ K30  Var_28    C3    C2   C1   C14   107.97  30.0  1
+ K30  Var_29    C10   N    C1   C15   -61.75  30.0  1
+ K30  Var_30    F29   C23  C24  N25   -65.71  30.0  1
+ K30  Var_31    H23   C23  C12  C27  -174.90  30.0  1
+ K30  Var_32    H12   C12  C27  C26   -58.63  30.0  1
+ K30  Var_33    H27   C27  C12  C23   -67.43  30.0  1
+ K30  Var_34    H27A  C27  C12  C23   174.01  30.0  1
+ K30  Var_35    C27   C12  N11  C22   -61.61  30.0  2
+ K30  Var_36    C23   C12  N11  C22    67.01  30.0  2
+ K30  Var_37    C10   N11  C12  C27    95.40  30.0  3
+ K30  Var_38    O21   C14  C1   C2     53.89  30.0  3
+ K30  Var_39    C10   N    C1   C14    66.62  30.0  1
+ K30  Var_40    O21   C14  C1   C15   -70.25  30.0  3
+ K30  Var_41    C10   N11  C12  C23  -135.98  30.0  3
+ K30  Var_42    O21   C14  C1   N     163.68  30.0  3
+ K30  Var_43    F29   C23  C12  N11   -64.26  30.0  1
+ K30  Var_44    H14   C14  C1   C2    176.60  30.0  3
+ K30  Var_45    H14A  C14  C1   C2    -66.52  30.0  3
+ K30  Var_46    HO21  O21  C14  C1    166.75  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EAT  EAT  (2S,3S,4R,5S)-2-(1H-benzimidazol-2-yl)-5-methylpyrrolidine-3,4-diol  ligand  32  17  .  2021-08-08  2021-08-08  
+ EAT  EAT  (2S,3S,4R,5S)-2-(1H-benzimidazol-2-yl)-5-methylpyrrolidine-3,4-diol  ligand  32  17  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EAT
@@ -191,30 +192,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EAT  CONST_01  CAN  CAM  NAQ  CAP  180.00  0.0  0
- EAT  CONST_02  CAL  CAM  NAQ  CAP    0.00  0.0  0
- EAT  CONST_03  CAM  CAL  NAO  CAP    0.00  0.0  0
- EAT  CONST_04  CAK  CAL  NAO  CAP  180.00  0.0  0
- EAT  CONST_05  CAL  NAO  CAP  NAQ    0.00  0.0  0
- EAT  CONST_06  CAI  CAN  CAM  NAQ  180.00  0.0  0
- EAT  CONST_07  NAO  CAL  CAM  NAQ    0.00  0.0  0
- EAT  CONST_08  CAK  CAL  CAM  NAQ  180.00  0.0  0
- EAT  CONST_09  NAO  CAP  NAQ  CAM    0.00  0.0  0
- EAT  CONST_10  CAJ  CAI  CAN  CAM    0.00  0.0  0
- EAT  CONST_11  CAJ  CAK  CAL  CAM    0.00  0.0  0
- EAT  CONST_12  NAO  CAL  CAM  CAN  180.00  0.0  0
- EAT  CONST_13  CAK  CAL  CAM  CAN    0.00  0.0  0
- EAT  CONST_14  CAK  CAJ  CAI  CAN    0.00  0.0  0
- EAT  CONST_15  CAL  CAM  CAN  CAI    0.00  0.0  0
- EAT  CONST_16  CAL  CAK  CAJ  CAI    0.00  0.0  0
- EAT  CONST_17  NAO  CAL  CAK  CAJ  180.00  0.0  0
- EAT  CONST_18  CAM  NAQ  CAP  CAE  180.00  0.0  0
- EAT  CONST_19  CAL  NAO  CAP  CAE  180.00  0.0  0
- EAT  CONST_20  H12  NAQ  CAP  CAE    0.00  0.0  0
- EAT  CONST_21  H13  CAN  CAM  NAQ    0.00  0.0  0
- EAT  CONST_22  H14  CAI  CAN  CAM  180.00  0.0  0
- EAT  CONST_23  H16  CAK  CAL  CAM  180.00  0.0  0
- EAT  CONST_24  H15  CAJ  CAI  CAN  180.00  0.0  0
+ EAT  CONST_01  CAN  CAM  NAQ  CAP   180.00   0.0  0
+ EAT  CONST_02  CAL  CAM  NAQ  CAP     0.00   0.0  0
+ EAT  CONST_03  CAM  CAL  NAO  CAP     0.00   0.0  0
+ EAT  CONST_04  CAK  CAL  NAO  CAP   180.00   0.0  0
+ EAT  CONST_05  CAL  NAO  CAP  NAQ     0.00   0.0  0
+ EAT  CONST_06  CAI  CAN  CAM  NAQ   180.00   0.0  0
+ EAT  CONST_07  NAO  CAL  CAM  NAQ     0.00   0.0  0
+ EAT  CONST_08  CAK  CAL  CAM  NAQ   180.00   0.0  0
+ EAT  CONST_09  NAO  CAP  NAQ  CAM     0.00   0.0  0
+ EAT  CONST_10  CAJ  CAI  CAN  CAM     0.00   0.0  0
+ EAT  CONST_11  CAJ  CAK  CAL  CAM     0.00   0.0  0
+ EAT  CONST_12  NAO  CAL  CAM  CAN   180.00   0.0  0
+ EAT  CONST_13  CAK  CAL  CAM  CAN     0.00   0.0  0
+ EAT  CONST_14  CAK  CAJ  CAI  CAN     0.00   0.0  0
+ EAT  CONST_15  CAL  CAM  CAN  CAI     0.00   0.0  0
+ EAT  CONST_16  CAL  CAK  CAJ  CAI     0.00   0.0  0
+ EAT  CONST_17  NAO  CAL  CAK  CAJ   180.00   0.0  0
+ EAT  CONST_18  CAM  NAQ  CAP  CAE   180.00   0.0  0
+ EAT  CONST_19  CAL  NAO  CAP  CAE   180.00   0.0  0
+ EAT  CONST_20  H12  NAQ  CAP  CAE     0.00   0.0  0
+ EAT  CONST_21  H13  CAN  CAM  NAQ     0.00   0.0  0
+ EAT  CONST_22  H14  CAI  CAN  CAM   180.00   0.0  0
+ EAT  CONST_23  H16  CAK  CAL  CAM   180.00   0.0  0
+ EAT  CONST_24  H15  CAJ  CAI  CAN   180.00   0.0  0
+ EAT  Var_01    NAH  CAF  CAA  CAG    38.66  30.0  1
+ EAT  Var_02    CAF  NAH  CAE  CAG    -5.55  30.0  1
+ EAT  Var_03    NAQ  CAP  CAE  CAG   112.11  30.0  2
+ EAT  Var_04    NAO  CAP  CAE  CAG   -67.99  30.0  2
+ EAT  Var_05    NAH  CAE  CAG  CAA    29.60  30.0  1
+ EAT  Var_06    CAP  CAE  CAG  CAA   152.67  30.0  1
+ EAT  Var_07    CAE  NAH  CAF  CAA   -20.96  30.0  1
+ EAT  Var_08    CAE  CAG  CAA  CAF   -41.54  30.0  1
+ EAT  Var_09    CAP  CAE  NAH  CAF  -128.16  30.0  1
+ EAT  Var_10    NAQ  CAP  CAE  NAH  -129.39  30.0  2
+ EAT  Var_11    NAO  CAP  CAE  NAH    50.52  30.0  2
+ EAT  Var_12    CAF  CAA  CAG  OAD  -160.72  30.0  1
+ EAT  Var_13    NAH  CAE  CAG  OAD   152.05  30.0  1
+ EAT  Var_14    CAP  CAE  CAG  OAD   -84.88  30.0  1
+ EAT  Var_15    CAB  CAF  CAA  CAG   161.44  30.0  1
+ EAT  Var_16    CAE  CAG  CAA  OAC    75.61  30.0  1
+ EAT  Var_17    NAH  CAF  CAA  OAC   -78.79  30.0  1
+ EAT  Var_18    CAE  NAH  CAF  CAB  -146.02  30.0  1
+ EAT  Var_19    H5   CAF  CAA  CAG   -78.57  30.0  1
+ EAT  Var_20    H9   NAH  CAE  CAG   117.53  30.0  1
+ EAT  Var_21    H11  CAE  CAG  CAA   -88.71  30.0  1
+ EAT  Var_22    H2   CAG  CAA  CAF    73.71  30.0  1
+ EAT  Var_23    H3   CAA  CAF  NAH   157.40  30.0  1
+ EAT  Var_24    OAC  CAA  CAG  OAD   -43.56  30.0  1
+ EAT  Var_25    CAB  CAF  CAA  OAC    43.98  30.0  1
+ EAT  Var_26    H4   OAC  CAA  CAG    41.20  30.0  3
+ EAT  Var_27    H1   OAD  CAG  CAA   -78.70  30.0  3
+ EAT  Var_28    H6   CAB  CAF  CAA    59.03  30.0  3
+ EAT  Var_29    H7   CAB  CAF  CAA   178.20  30.0  3
+ EAT  Var_30    H8   CAB  CAF  CAA   -61.98  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BS2  BS2  (3-endo,8-anti)-8-benzyl-3-(10,11-dihydro-5H-dibenzo[a,d][7]annulen-5-yloxy)-8-azoniabicyclo[3.2.1]octane  ligand  63  31  .  2021-08-06  2021-08-06  
+ BS2  BS2  (3-endo,8-anti)-8-benzyl-3-(10,11-dihydro-5H-dibenzo[a,d][7]annulen-5-yloxy)-8-azoniabicyclo[3.2.1]octane  ligand  63  31  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BS2
@@ -323,44 +324,91 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BS2  CONST_01  CAD  CAF  CAL  CAY    0.00   0.0  0
- BS2  CONST_02  CAD  CAJ  CAW  CAY    0.00   0.0  0
- BS2  CONST_03  CAJ  CAW  CAY  CAL    0.00   0.0  0
- BS2  CONST_04  CAJ  CAD  CAF  CAL    0.00   0.0  0
- BS2  CONST_05  CAW  CAY  CAL  CAF    0.00   0.0  0
- BS2  CONST_06  CAW  CAJ  CAD  CAF    0.00   0.0  0
- BS2  CONST_07  CAG  CAE  CAK  CAX    0.00   0.0  0
- BS2  CONST_08  CAG  CAM  CAZ  CAX    0.00   0.0  0
- BS2  CONST_09  CAM  CAZ  CAX  CAK    0.00   0.0  0
- BS2  CONST_10  CAM  CAG  CAE  CAK    0.00   0.0  0
- BS2  CONST_11  CAZ  CAX  CAK  CAE    0.00   0.0  0
- BS2  CONST_12  CAZ  CAM  CAG  CAE    0.00   0.0  0
- BS2  CONST_13  CAA  CAB  CAH  CAV    0.00   0.0  0
- BS2  CONST_14  CAA  CAC  CAI  CAV    0.00   0.0  0
- BS2  CONST_15  CAC  CAI  CAV  CAH    0.00   0.0  0
- BS2  CONST_16  CAC  CAA  CAB  CAH    0.00   0.0  0
- BS2  CONST_17  CAI  CAV  CAH  CAB    0.00   0.0  0
- BS2  CONST_18  CAI  CAC  CAA  CAB    0.00   0.0  0
- BS2  CONST_19  CAB  CAH  CAV  CAR  180.00   0.0  0
- BS2  CONST_20  CAC  CAI  CAV  CAR  180.00   0.0  0
- BS2  CONST_21  HAF  CAF  CAL  CAY  180.00   0.0  0
- BS2  CONST_22  HAJ  CAJ  CAW  CAY  180.00   0.0  0
- BS2  CONST_23  HAD  CAD  CAF  CAL  180.00   0.0  0
- BS2  CONST_24  HAL  CAL  CAF  CAD  180.00   0.0  0
- BS2  CONST_25  HAK  CAK  CAX  CAO    0.00   0.0  0
- BS2  CONST_26  HAE  CAE  CAK  CAX  180.00   0.0  0
- BS2  CONST_27  HAM  CAM  CAZ  CAX  180.00   0.0  0
- BS2  CONST_28  HAG  CAG  CAE  CAK  180.00   0.0  0
- BS2  CONST_29  HAB  CAB  CAH  CAV  180.00   0.0  0
- BS2  CONST_30  HAC  CAC  CAI  CAV  180.00   0.0  0
- BS2  CONST_31  HAI  CAI  CAV  CAH  180.00   0.0  0
- BS2  CONST_32  HAA  CAA  CAB  CAH  180.00   0.0  0
- BS2  CONST_33  HAH  CAH  CAB  CAA  180.00   0.0  0
- BS2  Var_01    CAO  CAN  CAW  CAY  -57.20  30.0  1
- BS2  Var_02    CAX  CAO  CAN  CAW   82.06  30.0  1
- BS2  Var_03    CAK  CAX  CAO  CAN  139.84  30.0  1
- BS2  Var_04    CBC  CAQ  CAP  CBB   -0.34  30.0  3
- BS2  Var_05    CAH  CAV  CAR  NBE   75.99  30.0  2
+ BS2  CONST_01  CAD   CAF  CAL  CAY     0.00   0.0  0
+ BS2  CONST_02  CAD   CAJ  CAW  CAY     0.00   0.0  0
+ BS2  CONST_03  CAJ   CAW  CAY  CAL     0.00   0.0  0
+ BS2  CONST_04  CAJ   CAD  CAF  CAL     0.00   0.0  0
+ BS2  CONST_05  CAW   CAY  CAL  CAF     0.00   0.0  0
+ BS2  CONST_06  CAW   CAJ  CAD  CAF     0.00   0.0  0
+ BS2  CONST_07  CAG   CAE  CAK  CAX     0.00   0.0  0
+ BS2  CONST_08  CAG   CAM  CAZ  CAX     0.00   0.0  0
+ BS2  CONST_09  CAM   CAZ  CAX  CAK     0.00   0.0  0
+ BS2  CONST_10  CAM   CAG  CAE  CAK     0.00   0.0  0
+ BS2  CONST_11  CAZ   CAX  CAK  CAE     0.00   0.0  0
+ BS2  CONST_12  CAZ   CAM  CAG  CAE     0.00   0.0  0
+ BS2  CONST_13  CAA   CAB  CAH  CAV     0.00   0.0  0
+ BS2  CONST_14  CAA   CAC  CAI  CAV     0.00   0.0  0
+ BS2  CONST_15  CAC   CAI  CAV  CAH     0.00   0.0  0
+ BS2  CONST_16  CAC   CAA  CAB  CAH     0.00   0.0  0
+ BS2  CONST_17  CAI   CAV  CAH  CAB     0.00   0.0  0
+ BS2  CONST_18  CAI   CAC  CAA  CAB     0.00   0.0  0
+ BS2  CONST_19  CAB   CAH  CAV  CAR   180.00   0.0  0
+ BS2  CONST_20  CAC   CAI  CAV  CAR   180.00   0.0  0
+ BS2  CONST_21  HAF   CAF  CAL  CAY   180.00   0.0  0
+ BS2  CONST_22  HAJ   CAJ  CAW  CAY   180.00   0.0  0
+ BS2  CONST_23  HAD   CAD  CAF  CAL   180.00   0.0  0
+ BS2  CONST_24  HAL   CAL  CAF  CAD   180.00   0.0  0
+ BS2  CONST_25  HAK   CAK  CAX  CAO     0.00   0.0  0
+ BS2  CONST_26  HAE   CAE  CAK  CAX   180.00   0.0  0
+ BS2  CONST_27  HAM   CAM  CAZ  CAX   180.00   0.0  0
+ BS2  CONST_28  HAG   CAG  CAE  CAK   180.00   0.0  0
+ BS2  CONST_29  HAB   CAB  CAH  CAV   180.00   0.0  0
+ BS2  CONST_30  HAC   CAC  CAI  CAV   180.00   0.0  0
+ BS2  CONST_31  HAI   CAI  CAV  CAH   180.00   0.0  0
+ BS2  CONST_32  HAA   CAA  CAB  CAH   180.00   0.0  0
+ BS2  CONST_33  HAH   CAH  CAB  CAA   180.00   0.0  0
+ BS2  Var_01    CAO   CAN  CAW  CAY   -57.20  30.0  1
+ BS2  Var_02    CAX   CAO  CAN  CAW    82.06  30.0  1
+ BS2  Var_03    CAK   CAX  CAO  CAN   139.84  30.0  1
+ BS2  Var_04    CBC   CAQ  CAP  CBB    -0.34  30.0  3
+ BS2  Var_05    CAH   CAV  CAR  NBE    75.99  30.0  2
+ BS2  CONST_34  CAX   CAZ  CBD  CAY     0.00   0.0  0
+ BS2  CONST_35  CAM   CAZ  CBD  CAY   180.00   0.0  0
+ BS2  Var_06    CAQ   CBC  CAT  CBA    52.82  30.0  1
+ BS2  Var_07    NBE   CBC  CAT  CBA   -59.72  30.0  1
+ BS2  Var_08    CAP   CBB  CAS  CBA   -51.78  30.0  1
+ BS2  Var_09    NBE   CBB  CAS  CBA    60.73  30.0  1
+ BS2  Var_10    CBB   CAS  CBA  CAT   -42.58  30.0  1
+ BS2  Var_11    CAP   CAQ  CBC  CAT   -86.53  30.0  3
+ BS2  Var_12    CBB   NBE  CBC  CAT    73.59  30.0  1
+ BS2  Var_13    CBC   CAT  CBA  CAS    42.05  30.0  1
+ BS2  Var_14    CAQ   CAP  CBB  CAS    86.82  30.0  3
+ BS2  Var_15    CBC   NBE  CBB  CAS   -74.00  30.0  1
+ BS2  Var_16    CAQ   CBC  NBE  CBB   -47.42  30.0  1
+ BS2  Var_17    CBC   NBE  CBB  CAP    47.20  30.0  1
+ BS2  Var_18    NBE   CBC  CAQ  CAP    29.07  30.0  3
+ BS2  Var_19    NBE   CBB  CAP  CAQ   -28.48  30.0  3
+ BS2  Var_20    CBA   OAU  CBD  CAY    79.91  30.0  3
+ BS2  Var_21    OAU   CBD  CAY  CAL    78.34  30.0  1
+ BS2  Var_22    OAU   CBD  CAY  CAW   -95.97  30.0  1
+ BS2  Var_23    OAU   CBD  CAZ  CAX   124.62  30.0  1
+ BS2  Var_24    OAU   CBD  CAZ  CAM   -56.66  30.0  1
+ BS2  Var_25    CBA   OAU  CBD  CAZ   -59.33  30.0  3
+ BS2  Var_26    CAT   CBA  OAU  CBD   -94.55  30.0  3
+ BS2  Var_27    CAS   CBA  OAU  CBD   143.69  30.0  3
+ BS2  Var_28    CBC   CAT  CBA  OAU   -78.51  30.0  1
+ BS2  Var_29    CBB   CAS  CBA  OAU    80.82  30.0  1
+ BS2  Var_30    CAR   NBE  CBC  CAT  -163.28  30.0  1
+ BS2  Var_31    CAR   NBE  CBB  CAS   161.92  30.0  1
+ BS2  Var_32    CAV   CAR  NBE  CBB  -176.27  30.0  3
+ BS2  Var_33    CAR   NBE  CBB  CAP   -76.89  30.0  1
+ BS2  Var_34    CAR   NBE  CBC  CAQ    75.71  30.0  1
+ BS2  Var_35    CAV   CAR  NBE  CBC    67.33  30.0  3
+ BS2  Var_36    HBD   CBD  CAY  CAL   -30.49  30.0  1
+ BS2  Var_37    HBC   CBC  CAT  CBA  -177.98  30.0  1
+ BS2  Var_38    HBB   CBB  CAS  CBA   178.29  30.0  1
+ BS2  Var_39    HAS1  CAS  CBA  CAT    78.61  30.0  1
+ BS2  Var_40    HAS2  CAS  CBA  CAT  -164.90  30.0  1
+ BS2  Var_41    HAQ1  CAQ  CBC  CAT   153.86  30.0  3
+ BS2  Var_42    HAQ2  CAQ  CBC  CAT    35.59  30.0  3
+ BS2  Var_43    HBE   NBE  CBC  CAT   -42.37  30.0  1
+ BS2  Var_44    HAT1  CAT  CBA  CAS   164.46  30.0  1
+ BS2  Var_45    HAT2  CAT  CBA  CAS   -79.21  30.0  1
+ BS2  Var_46    HAP1  CAP  CBB  CAS  -153.54  30.0  3
+ BS2  Var_47    HAP2  CAP  CBB  CAS   -35.12  30.0  3
+ BS2  Var_48    HBA   CBA  CAS  CBB  -160.41  30.0  1
+ BS2  Var_49    HAR1  CAR  NBE  CBB   -54.94  30.0  3
+ BS2  Var_50    HAR2  CAR  NBE  CBB    60.87  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

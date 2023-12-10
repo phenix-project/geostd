@@ -19,10 +19,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- G9F  G9F  'None                     '  ligand  51  27  .  2021-08-10  2021-08-10  
+ G9F  G9F  'None                     '  ligand  51  27  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_G9F
@@ -264,37 +265,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- G9F  CONST_03  CAD  CAJ  CAX  N12   180.00   0.0  0
- G9F  CONST_04  CAX  N12  CAW  N13     0.00   0.0  0
- G9F  CONST_07  CAY  CAX  CAJ  CAD     0.00   0.0  0
- G9F  CONST_08  CAX  CAJ  CAD  CAE     0.00   0.0  0
- G9F  CONST_09  CAI  CAG  CAT  CAF     0.00   0.0  0
- G9F  CONST_10  CAI  CAU  CAH  CAF     0.00   0.0  0
- G9F  CONST_11  CAW  CAU  CAH  CAF   180.00   0.0  0
- G9F  CONST_12  CAH  CAF  CAT  CAG     0.00   0.0  0
- G9F  CONST_13  CAH  CAU  CAI  CAG     0.00   0.0  0
- G9F  CONST_14  CAW  CAU  CAI  CAG   180.00   0.0  0
- G9F  CONST_15  CAV  CAE  CAD  CAJ     0.00   0.0  0
- G9F  CONST_16  CAW  N12  CAX  CAJ   180.00   0.0  0
- G9F  CONST_17  CAU  CAH  CAF  CAT     0.00   0.0  0
- G9F  CONST_18  CAU  CAI  CAG  CAT     0.00   0.0  0
- G9F  CONST_19  CAX  N12  CAW  CAU   180.00   0.0  0
- G9F  CONST_20  CAY  CAX  N12  CAW     0.00   0.0  0
- G9F  CONST_21  OAR  CAT  CAF  CAH   180.00   0.0  0
- G9F  CONST_22  OAR  CAT  CAG  CAI   180.00   0.0  0
- G9F  CONST_23  HAJ  CAJ  CAX  N12     0.00   0.0  0
- G9F  CONST_24  HAG  CAG  CAT  CAF   180.00   0.0  0
- G9F  CONST_25  HAF  CAF  CAT  CAG   180.00   0.0  0
- G9F  CONST_26  HAI  CAI  CAU  CAH   180.00   0.0  0
- G9F  CONST_27  HAH  CAH  CAU  CAI   180.00   0.0  0
- G9F  CONST_28  HAE  CAE  CAD  CAJ   180.00   0.0  0
- G9F  CONST_29  HAD  CAD  CAE  CAV   180.00   0.0  0
- G9F  Var_01    HAM  CAM  OAR  CAT    63.27  30.0  2
- G9F  Var_02    CAM  CAK  CAN  N11   174.39  30.0  3
- G9F  Var_03    CAK  CAN  N11  CAA    67.12  30.0  3
- G9F  Var_04    OAR  CAM  CAK  CAN   177.49  30.0  3
- G9F  Var_05    HAB  CAB  N11  CAA  -175.85  30.0  3
- G9F  Var_06    HAA  CAA  N11  CAB   -64.05  30.0  3
+ G9F  CONST_01  CAD   CAJ  CAX  N12   180.00   0.0  0
+ G9F  CONST_02  CAX   N12  CAW  N13     0.00   0.0  0
+ G9F  CONST_03  CAY   CAX  CAJ  CAD     0.00   0.0  0
+ G9F  CONST_04  CAX   CAJ  CAD  CAE     0.00   0.0  0
+ G9F  CONST_05  CAI   CAG  CAT  CAF     0.00   0.0  0
+ G9F  CONST_06  CAI   CAU  CAH  CAF     0.00   0.0  0
+ G9F  CONST_07  CAW   CAU  CAH  CAF   180.00   0.0  0
+ G9F  CONST_08  CAH   CAF  CAT  CAG     0.00   0.0  0
+ G9F  CONST_09  CAH   CAU  CAI  CAG     0.00   0.0  0
+ G9F  CONST_10  CAW   CAU  CAI  CAG   180.00   0.0  0
+ G9F  CONST_11  CAV   CAE  CAD  CAJ     0.00   0.0  0
+ G9F  CONST_12  CAW   N12  CAX  CAJ   180.00   0.0  0
+ G9F  CONST_13  CAU   CAH  CAF  CAT     0.00   0.0  0
+ G9F  CONST_14  CAU   CAI  CAG  CAT     0.00   0.0  0
+ G9F  CONST_15  CAX   N12  CAW  CAU   180.00   0.0  0
+ G9F  CONST_16  CAY   CAX  N12  CAW     0.00   0.0  0
+ G9F  CONST_17  OAR   CAT  CAF  CAH   180.00   0.0  0
+ G9F  CONST_18  OAR   CAT  CAG  CAI   180.00   0.0  0
+ G9F  CONST_19  HAJ   CAJ  CAX  N12     0.00   0.0  0
+ G9F  CONST_20  HAG   CAG  CAT  CAF   180.00   0.0  0
+ G9F  CONST_21  HAF   CAF  CAT  CAG   180.00   0.0  0
+ G9F  CONST_22  HAI   CAI  CAU  CAH   180.00   0.0  0
+ G9F  CONST_23  HAH   CAH  CAU  CAI   180.00   0.0  0
+ G9F  CONST_24  HAE   CAE  CAD  CAJ   180.00   0.0  0
+ G9F  CONST_25  HAD   CAD  CAE  CAV   180.00   0.0  0
+ G9F  Var_01    HAM   CAM  OAR  CAT    63.27  30.0  2
+ G9F  Var_02    CAM   CAK  CAN  N11   174.39  30.0  3
+ G9F  Var_03    CAK   CAN  N11  CAA    67.12  30.0  3
+ G9F  Var_04    OAR   CAM  CAK  CAN   177.49  30.0  3
+ G9F  Var_05    HAB   CAB  N11  CAA  -175.85  30.0  3
+ G9F  Var_06    HAA   CAA  N11  CAB   -64.05  30.0  3
+ G9F  CONST_26  CAY   N13  CAW  N12     0.00   0.0  0
+ G9F  CONST_27  N13   CAY  CAX  N12     0.00   0.0  0
+ G9F  CONST_28  CAV   CAY  CAX  N12   180.00   0.0  0
+ G9F  CONST_29  CAE   CAV  CAY  N13   180.00   0.0  0
+ G9F  CONST_30  CAJ   CAX  CAY  N13   180.00   0.0  0
+ G9F  CONST_31  CAY   CAV  CAE  CAD     0.00   0.0  0
+ G9F  CONST_32  CAX   CAY  CAV  CAE     0.00   0.0  0
+ G9F  CONST_33  CAV   CAY  CAX  CAJ     0.00   0.0  0
+ G9F  CONST_34  CAW   N13  CAY  CAV   180.00   0.0  0
+ G9F  CONST_35  CAX   CAY  N13  CAW     0.00   0.0  0
+ G9F  CONST_36  CAU   CAW  N13  CAO     0.00   0.0  0
+ G9F  CONST_37  CAY   N13  CAW  CAU   180.00   0.0  0
+ G9F  CONST_38  CAV   CAS  N14  CAL     0.00   0.0  0
+ G9F  CONST_39  OAC   CAS  N14  CAL   180.00   0.0  0
+ G9F  CONST_40  HN14  N14  CAS  CAV   180.00   0.0  0
+ G9F  Var_07    CAH   CAU  CAW  N12    35.60  30.0  2
+ G9F  Var_08    CAI   CAU  CAW  N12  -141.76  30.0  2
+ G9F  Var_09    CAH   CAU  CAW  N13  -144.10  30.0  2
+ G9F  Var_10    CAI   CAU  CAW  N13    38.53  30.0  2
+ G9F  Var_11    N14   CAL  CAO  N13    75.17  30.0  1
+ G9F  Var_12    CAE   CAV  CAS  N14  -158.43  30.0  1
+ G9F  Var_13    CAY   CAV  CAS  N14    25.41  30.0  1
+ G9F  Var_14    CAW   N13  CAO  CAL   141.49  30.0  1
+ G9F  Var_15    CAY   N13  CAO  CAL   -26.64  30.0  1
+ G9F  Var_16    CAS   N14  CAL  CAO   -70.15  30.0  1
+ G9F  Var_17    OAC   CAS  CAV  CAE    21.86  30.0  1
+ G9F  Var_18    OAC   CAS  CAV  CAY  -154.30  30.0  1
+ G9F  Var_19    HAL   CAL  CAO  N13   -50.86  30.0  1
+ G9F  Var_20    HALA  CAL  CAO  N13  -166.89  30.0  1
+ G9F  Var_21    HAO   CAO  CAL  N14   -47.76  30.0  1
+ G9F  Var_22    HAOA  CAO  CAL  N14  -165.90  30.0  1
+ G9F  Var_23    CAM   OAR  CAT  CAF   176.98  30.0  2
+ G9F  Var_24    CAM   OAR  CAT  CAG    -3.09  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OFI  OFI  N-[6-(4-hydroxyphenyl)-1H-indazol-3-yl]butanamide  ligand  39  22  .  2021-08-17  2021-08-17  
+ OFI  OFI  N-[6-(4-hydroxyphenyl)-1H-indazol-3-yl]butanamide  ligand  39  22  .  2021-08-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OFI
@@ -213,52 +214,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OFI  CONST_01  C10  C5   C2   C1     0.00   0.0  0
- OFI  CONST_02  N7   N6   C2   C1     0.00   0.0  0
- OFI  CONST_03  C10  C9   C4   C1     0.00   0.0  0
- OFI  CONST_04  N6   N7   C3   C1     0.00   0.0  0
- OFI  CONST_05  C9   C4   C1   C2     0.00   0.0  0
- OFI  CONST_06  N7   C3   C1   C2     0.00   0.0  0
- OFI  CONST_07  C9   C10  C5   C2     0.00   0.0  0
- OFI  CONST_08  C12  C10  C5   C2   180.00   0.0  0
- OFI  CONST_09  C3   N7   N6   C2     0.00   0.0  0
- OFI  CONST_10  C5   C2   C1   C3   180.00   0.0  0
- OFI  CONST_11  N6   C2   C1   C3     0.00   0.0  0
- OFI  CONST_12  C9   C4   C1   C3   180.00   0.0  0
- OFI  CONST_13  C5   C2   C1   C4     0.00   0.0  0
- OFI  CONST_14  N6   C2   C1   C4   180.00   0.0  0
- OFI  CONST_15  N7   C3   C1   C4   180.00   0.0  0
- OFI  CONST_16  C5   C10  C9   C4     0.00   0.0  0
- OFI  CONST_17  C12  C10  C9   C4   180.00   0.0  0
- OFI  CONST_18  N7   N6   C2   C5   180.00   0.0  0
- OFI  CONST_21  C10  C5   C2   N6   180.00   0.0  0
- OFI  CONST_24  C18  C15  C12  C10  180.00   0.0  0
- OFI  CONST_25  C19  C16  C12  C10  180.00   0.0  0
- OFI  CONST_26  C21  C18  C15  C12    0.00   0.0  0
- OFI  CONST_27  C21  C19  C16  C12    0.00   0.0  0
- OFI  CONST_28  C19  C16  C12  C15    0.00   0.0  0
- OFI  CONST_29  C19  C21  C18  C15    0.00   0.0  0
- OFI  CONST_30  C18  C15  C12  C16    0.00   0.0  0
- OFI  CONST_31  C18  C21  C19  C16    0.00   0.0  0
- OFI  CONST_32  N8   C3   C1   C2   180.00   0.0  0
- OFI  CONST_33  N8   C3   C1   C4     0.00   0.0  0
- OFI  CONST_34  N8   C3   N7   N6   180.00   0.0  0
- OFI  CONST_35  O22  C21  C18  C15  180.00   0.0  0
- OFI  CONST_36  O22  C21  C19  C16  180.00   0.0  0
- OFI  CONST_37  H5   C5   C2   C1   180.00   0.0  0
- OFI  CONST_38  HN6  N6   C2   C1   180.00   0.0  0
- OFI  CONST_39  H9   C9   C4   C1   180.00   0.0  0
- OFI  CONST_40  H4   C4   C1   C2   180.00   0.0  0
- OFI  CONST_41  H15  C15  C12  C10    0.00   0.0  0
- OFI  CONST_42  H16  C16  C12  C10    0.00   0.0  0
- OFI  CONST_43  H18  C18  C15  C12  180.00   0.0  0
- OFI  CONST_44  H19  C19  C16  C12  180.00   0.0  0
- OFI  CONST_47  HN8  N8   C3   C1     0.00   0.0  0
- OFI  CONST_48  O14  C11  N8   C3     0.00   0.0  0
- OFI  CONST_49  C13  C11  N8   C3   180.00   0.0  0
- OFI  Var_01    C17  C13  C11  N8   166.35  30.0  3
- OFI  Var_02    C20  C17  C13  C11  179.45  30.0  3
- OFI  Var_03    H20  C20  C17  C13  -61.07  30.0  3
+ OFI  CONST_01  C10   C5   C2   C1      0.00   0.0  0
+ OFI  CONST_02  N7    N6   C2   C1      0.00   0.0  0
+ OFI  CONST_03  C10   C9   C4   C1      0.00   0.0  0
+ OFI  CONST_04  N6    N7   C3   C1      0.00   0.0  0
+ OFI  CONST_05  C9    C4   C1   C2      0.00   0.0  0
+ OFI  CONST_06  N7    C3   C1   C2      0.00   0.0  0
+ OFI  CONST_07  C9    C10  C5   C2      0.00   0.0  0
+ OFI  CONST_08  C12   C10  C5   C2    180.00   0.0  0
+ OFI  CONST_09  C3    N7   N6   C2      0.00   0.0  0
+ OFI  CONST_10  C5    C2   C1   C3    180.00   0.0  0
+ OFI  CONST_11  N6    C2   C1   C3      0.00   0.0  0
+ OFI  CONST_12  C9    C4   C1   C3    180.00   0.0  0
+ OFI  CONST_13  C5    C2   C1   C4      0.00   0.0  0
+ OFI  CONST_14  N6    C2   C1   C4    180.00   0.0  0
+ OFI  CONST_15  N7    C3   C1   C4    180.00   0.0  0
+ OFI  CONST_16  C5    C10  C9   C4      0.00   0.0  0
+ OFI  CONST_17  C12   C10  C9   C4    180.00   0.0  0
+ OFI  CONST_18  N7    N6   C2   C5    180.00   0.0  0
+ OFI  CONST_19  C10   C5   C2   N6    180.00   0.0  0
+ OFI  CONST_20  C18   C15  C12  C10   180.00   0.0  0
+ OFI  CONST_21  C19   C16  C12  C10   180.00   0.0  0
+ OFI  CONST_22  C21   C18  C15  C12     0.00   0.0  0
+ OFI  CONST_23  C21   C19  C16  C12     0.00   0.0  0
+ OFI  CONST_24  C19   C16  C12  C15     0.00   0.0  0
+ OFI  CONST_25  C19   C21  C18  C15     0.00   0.0  0
+ OFI  CONST_26  C18   C15  C12  C16     0.00   0.0  0
+ OFI  CONST_27  C18   C21  C19  C16     0.00   0.0  0
+ OFI  CONST_28  N8    C3   C1   C2    180.00   0.0  0
+ OFI  CONST_29  N8    C3   C1   C4      0.00   0.0  0
+ OFI  CONST_30  N8    C3   N7   N6    180.00   0.0  0
+ OFI  CONST_31  O22   C21  C18  C15   180.00   0.0  0
+ OFI  CONST_32  O22   C21  C19  C16   180.00   0.0  0
+ OFI  CONST_33  H5    C5   C2   C1    180.00   0.0  0
+ OFI  CONST_34  HN6   N6   C2   C1    180.00   0.0  0
+ OFI  CONST_35  H9    C9   C4   C1    180.00   0.0  0
+ OFI  CONST_36  H4    C4   C1   C2    180.00   0.0  0
+ OFI  CONST_37  H15   C15  C12  C10     0.00   0.0  0
+ OFI  CONST_38  H16   C16  C12  C10     0.00   0.0  0
+ OFI  CONST_39  H18   C18  C15  C12   180.00   0.0  0
+ OFI  CONST_40  H19   C19  C16  C12   180.00   0.0  0
+ OFI  CONST_41  HN8   N8   C3   C1      0.00   0.0  0
+ OFI  CONST_42  O14   C11  N8   C3      0.00   0.0  0
+ OFI  CONST_43  C13   C11  N8   C3    180.00   0.0  0
+ OFI  Var_01    C17   C13  C11  N8    166.35  30.0  3
+ OFI  Var_02    C20   C17  C13  C11   179.45  30.0  3
+ OFI  Var_03    H20   C20  C17  C13   -61.07  30.0  3
+ OFI  Var_04    C15   C12  C10  C5   -143.97  30.0  3
+ OFI  Var_05    C16   C12  C10  C5     35.57  30.0  3
+ OFI  Var_06    C15   C12  C10  C9     36.15  30.0  3
+ OFI  Var_07    C16   C12  C10  C9   -144.31  30.0  3
+ OFI  Var_08    HO22  O22  C21  C18    -0.07  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

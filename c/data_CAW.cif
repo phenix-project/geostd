@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CAW  CAW  N-[(naphthalen-1-ylcarbonyl)carbamoyl]-beta-D-glucopyranosylamine  ligand  47  27  .  2021-08-07  2021-08-07  
+ CAW  CAW  N-[(naphthalen-1-ylcarbonyl)carbamoyl]-beta-D-glucopyranosylamine  ligand  47  27  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CAW
@@ -244,43 +245,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CAW  CONST_01  C12  C13  C14  C9     0.00   0.0  0
- CAW  CONST_02  C12  C11  C10  C9     0.00   0.0  0
- CAW  CONST_03  C15  C11  C10  C9   180.00   0.0  0
- CAW  CONST_04  C11  C10  C9   C14    0.00   0.0  0
- CAW  CONST_05  C18  C12  C13  C14  180.00   0.0  0
- CAW  CONST_06  C11  C12  C13  C14    0.00   0.0  0
- CAW  CONST_07  C10  C9   C14  C13    0.00   0.0  0
- CAW  CONST_08  C17  C18  C12  C13  180.00   0.0  0
- CAW  CONST_09  C15  C11  C12  C13  180.00   0.0  0
- CAW  CONST_10  C10  C11  C12  C13    0.00   0.0  0
- CAW  CONST_11  C16  C17  C18  C12    0.00   0.0  0
- CAW  CONST_12  C16  C15  C11  C12    0.00   0.0  0
- CAW  CONST_13  C15  C11  C12  C18    0.00   0.0  0
- CAW  CONST_14  C10  C11  C12  C18  180.00   0.0  0
- CAW  CONST_15  C15  C16  C17  C18    0.00   0.0  0
- CAW  CONST_16  C11  C12  C18  C17    0.00   0.0  0
- CAW  CONST_17  C11  C15  C16  C17    0.00   0.0  0
- CAW  CONST_18  C10  C11  C15  C16  180.00   0.0  0
- CAW  CONST_19  C8   C10  C9   C14  180.00   0.0  0
- CAW  CONST_20  C8   C10  C11  C12  180.00   0.0  0
- CAW  CONST_21  C8   C10  C11  C15    0.00   0.0  0
- CAW  CONST_22  H13  C13  C14  C9   180.00   0.0  0
- CAW  CONST_23  H9   C9   C14  C13  180.00   0.0  0
- CAW  CONST_24  H18  C18  C12  C13    0.00   0.0  0
- CAW  CONST_25  H14  C14  C13  C12  180.00   0.0  0
- CAW  CONST_26  H17  C17  C18  C12  180.00   0.0  0
- CAW  CONST_27  H15  C15  C11  C12  180.00   0.0  0
- CAW  CONST_28  H16  C16  C17  C18  180.00   0.0  0
- CAW  CONST_29  C7   N2   C8   C10  180.00   0.0  0
- CAW  CONST_30  C1   N1   C7   O7     0.00   0.0  0
- CAW  CONST_31  C1   N1   C7   N2   180.00   0.0  0
- CAW  CONST_32  H2   N2   C8   C10    0.00   0.0  0
- CAW  CONST_33  O7   C7   N2   C8     0.00   0.0  0
- CAW  CONST_34  C7   N2   C8   O8     0.00   0.0  0
- CAW  CONST_35  N1   C7   N2   C8   180.00   0.0  0
- CAW  CONST_36  H1   N1   C7   O7   180.00   0.0  0
- CAW  Var_01    O8   C8   C10  C9   127.35  30.0  2
+ CAW  CONST_01  C12   C13  C14  C9      0.00   0.0  0
+ CAW  CONST_02  C12   C11  C10  C9      0.00   0.0  0
+ CAW  CONST_03  C15   C11  C10  C9    180.00   0.0  0
+ CAW  CONST_04  C11   C10  C9   C14     0.00   0.0  0
+ CAW  CONST_05  C18   C12  C13  C14   180.00   0.0  0
+ CAW  CONST_06  C11   C12  C13  C14     0.00   0.0  0
+ CAW  CONST_07  C10   C9   C14  C13     0.00   0.0  0
+ CAW  CONST_08  C17   C18  C12  C13   180.00   0.0  0
+ CAW  CONST_09  C15   C11  C12  C13   180.00   0.0  0
+ CAW  CONST_10  C10   C11  C12  C13     0.00   0.0  0
+ CAW  CONST_11  C16   C17  C18  C12     0.00   0.0  0
+ CAW  CONST_12  C16   C15  C11  C12     0.00   0.0  0
+ CAW  CONST_13  C15   C11  C12  C18     0.00   0.0  0
+ CAW  CONST_14  C10   C11  C12  C18   180.00   0.0  0
+ CAW  CONST_15  C15   C16  C17  C18     0.00   0.0  0
+ CAW  CONST_16  C11   C12  C18  C17     0.00   0.0  0
+ CAW  CONST_17  C11   C15  C16  C17     0.00   0.0  0
+ CAW  CONST_18  C10   C11  C15  C16   180.00   0.0  0
+ CAW  CONST_19  C8    C10  C9   C14   180.00   0.0  0
+ CAW  CONST_20  C8    C10  C11  C12   180.00   0.0  0
+ CAW  CONST_21  C8    C10  C11  C15     0.00   0.0  0
+ CAW  CONST_22  H13   C13  C14  C9    180.00   0.0  0
+ CAW  CONST_23  H9    C9   C14  C13   180.00   0.0  0
+ CAW  CONST_24  H18   C18  C12  C13     0.00   0.0  0
+ CAW  CONST_25  H14   C14  C13  C12   180.00   0.0  0
+ CAW  CONST_26  H17   C17  C18  C12   180.00   0.0  0
+ CAW  CONST_27  H15   C15  C11  C12   180.00   0.0  0
+ CAW  CONST_28  H16   C16  C17  C18   180.00   0.0  0
+ CAW  CONST_29  C7    N2   C8   C10   180.00   0.0  0
+ CAW  CONST_30  C1    N1   C7   O7      0.00   0.0  0
+ CAW  CONST_31  C1    N1   C7   N2    180.00   0.0  0
+ CAW  CONST_32  H2    N2   C8   C10     0.00   0.0  0
+ CAW  CONST_33  O7    C7   N2   C8      0.00   0.0  0
+ CAW  CONST_34  C7    N2   C8   O8      0.00   0.0  0
+ CAW  CONST_35  N1    C7   N2   C8    180.00   0.0  0
+ CAW  CONST_36  H1    N1   C7   O7    180.00   0.0  0
+ CAW  Var_01    O8    C8   C10  C9    127.35  30.0  2
+ CAW  Var_02    C4    C5   O5   C1     61.76  30.0  1
+ CAW  Var_03    C4    C3   C2   C1    -54.30  30.0  1
+ CAW  Var_04    C3    C2   C1   O5     57.04  30.0  1
+ CAW  Var_05    C3    C4   C5   O5    -56.12  30.0  1
+ CAW  Var_06    C2    C1   O5   C5    -62.50  30.0  1
+ CAW  Var_07    C2    C3   C4   C5     54.27  30.0  1
+ CAW  Var_08    C5    O5   C1   N1    176.62  30.0  1
+ CAW  Var_09    C3    C2   C1   N1    176.85  30.0  1
+ CAW  Var_10    C6    C5   O5   C1   -176.21  30.0  1
+ CAW  Var_11    O3    C3   C2   C1   -174.09  30.0  1
+ CAW  Var_12    O2    C2   C1   O5    175.77  30.0  1
+ CAW  Var_13    O4    C4   C5   O5   -177.66  30.0  1
+ CAW  Var_14    O3    C3   C4   C5    176.84  30.0  1
+ CAW  Var_15    C3    C4   C5   C6   -175.57  30.0  1
+ CAW  Var_16    O2    C2   C3   C4   -175.22  30.0  1
+ CAW  Var_17    C2    C3   C4   O4    173.91  30.0  1
+ CAW  Var_18    H5    C5   O5   C1    -57.53  30.0  1
+ CAW  Var_19    H3    C3   C2   C1     63.40  30.0  1
+ CAW  Var_20    HB    C2   C1   O5    -61.14  30.0  1
+ CAW  Var_21    H4    C4   C5   O5     61.80  30.0  1
+ CAW  Var_22    HA    C1   O5   C5     57.78  30.0  1
+ CAW  Var_23    O5    C1   N1   C7    -96.77  30.0  3
+ CAW  Var_24    C2    C1   N1   C7    142.45  30.0  3
+ CAW  Var_25    O2    C2   C1   N1    -64.42  30.0  1
+ CAW  Var_26    O6    C6   C5   O5     62.80  30.0  3
+ CAW  Var_27    O4    C4   C5   C6     62.89  30.0  1
+ CAW  Var_28    C4    C5   C6   O6   -176.54  30.0  3
+ CAW  Var_29    O3    C3   C4   O4    -63.52  30.0  1
+ CAW  Var_30    O2    C2   C3   O3     65.00  30.0  1
+ CAW  Var_31    H2A   O2   C2   C1     73.82  30.0  3
+ CAW  Var_32    H1    N1   C1   O5     72.23  30.0  1
+ CAW  Var_33    H61C  C6   C5   O5   -175.57  30.0  3
+ CAW  Var_34    H62C  C6   C5   O5    -59.31  30.0  3
+ CAW  Var_35    HC    O4   C4   C5    178.99  30.0  3
+ CAW  Var_36    HD    O3   C3   C4    167.76  30.0  3
+ CAW  Var_37    H6    O6   C6   C5    176.41  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

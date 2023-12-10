@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3XJ  3XJ  '4-{[3-chloro-4-(alpha-D-mannopyranosyloxy)phenyl]carbamoyl}benzoic acid'  ligand  50  31  .  2021-08-04  2021-08-04  
+ 3XJ  3XJ  '4-{[3-chloro-4-(alpha-D-mannopyranosyloxy)phenyl]carbamoyl}benzoic acid'  ligand  50  31  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3XJ
@@ -254,43 +255,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3XJ  CONST_01  C1   C2   C3   C4     0.00   0.0  0
- 3XJ  CONST_02  C1   C    C5   C4     0.00   0.0  0
- 3XJ  CONST_03  C2   C3   C4   C5     0.00   0.0  0
- 3XJ  CONST_04  C2   C1   C    C5     0.00   0.0  0
- 3XJ  CONST_05  C10  C9   C8   C7     0.00   0.0  0
- 3XJ  CONST_06  C10  C11  C12  C7     0.00   0.0  0
- 3XJ  CONST_07  C11  C10  C9   C8     0.00   0.0  0
- 3XJ  CONST_08  C11  C12  C7   C8     0.00   0.0  0
- 3XJ  CONST_09  C12  C7   C8   C9     0.00   0.0  0
- 3XJ  CONST_10  C12  C11  C10  C9     0.00   0.0  0
- 3XJ  CONST_11  C    C1   C2   C3     0.00   0.0  0
- 3XJ  CONST_12  C    C5   C4   C3     0.00   0.0  0
- 3XJ  CONST_13  O    C    C5   C4   180.00   0.0  0
- 3XJ  CONST_14  N    C3   C4   C5   180.00   0.0  0
- 3XJ  CONST_15  C9   C8   C7   C6   180.00   0.0  0
- 3XJ  CONST_16  C11  C12  C7   C6   180.00   0.0  0
- 3XJ  CONST_17  C13  C10  C9   C8   180.00   0.0  0
- 3XJ  CONST_18  C13  C10  C11  C12  180.00   0.0  0
- 3XJ  CONST_19  C1   C2   C3   N    180.00   0.0  0
- 3XJ  CONST_20  CL   C5   C4   C3   180.00   0.0  0
- 3XJ  CONST_21  O    C    C1   C2   180.00   0.0  0
- 3XJ  CONST_22  CL   C5   C    C1   180.00   0.0  0
- 3XJ  CONST_23  H5   C2   C3   C4   180.00   0.0  0
- 3XJ  CONST_24  H4   C1   C    C5   180.00   0.0  0
- 3XJ  CONST_25  H9   C9   C8   C7   180.00   0.0  0
- 3XJ  CONST_26  H10  C11  C12  C7   180.00   0.0  0
- 3XJ  CONST_27  H11  C12  C7   C8   180.00   0.0  0
- 3XJ  CONST_28  H8   C8   C9   C10  180.00   0.0  0
- 3XJ  CONST_29  H6   C4   C3   C2   180.00   0.0  0
- 3XJ  CONST_30  C3   N    C6   C7   180.00   0.0  0
- 3XJ  CONST_31  C6   N    C3   C4     0.00   0.0  0
- 3XJ  CONST_32  C2   C3   N    C6   180.00   0.0  0
- 3XJ  CONST_33  H7   N    C3   C4   180.00   0.0  0
- 3XJ  CONST_34  C3   N    C6   O1     0.00   0.0  0
- 3XJ  Var_01    C1   C    O    C14  -12.11  30.0  3
- 3XJ  Var_02    C9   C10  C13  O3   179.97  30.0  2
- 3XJ  Var_03    N    C6   C7   C8    27.89  30.0  2
+ 3XJ  CONST_01  C1   C2   C3   C4      0.00   0.0  0
+ 3XJ  CONST_02  C1   C    C5   C4      0.00   0.0  0
+ 3XJ  CONST_03  C2   C3   C4   C5      0.00   0.0  0
+ 3XJ  CONST_04  C2   C1   C    C5      0.00   0.0  0
+ 3XJ  CONST_05  C10  C9   C8   C7      0.00   0.0  0
+ 3XJ  CONST_06  C10  C11  C12  C7      0.00   0.0  0
+ 3XJ  CONST_07  C11  C10  C9   C8      0.00   0.0  0
+ 3XJ  CONST_08  C11  C12  C7   C8      0.00   0.0  0
+ 3XJ  CONST_09  C12  C7   C8   C9      0.00   0.0  0
+ 3XJ  CONST_10  C12  C11  C10  C9      0.00   0.0  0
+ 3XJ  CONST_11  C    C1   C2   C3      0.00   0.0  0
+ 3XJ  CONST_12  C    C5   C4   C3      0.00   0.0  0
+ 3XJ  CONST_13  O    C    C5   C4    180.00   0.0  0
+ 3XJ  CONST_14  N    C3   C4   C5    180.00   0.0  0
+ 3XJ  CONST_15  C9   C8   C7   C6    180.00   0.0  0
+ 3XJ  CONST_16  C11  C12  C7   C6    180.00   0.0  0
+ 3XJ  CONST_17  C13  C10  C9   C8    180.00   0.0  0
+ 3XJ  CONST_18  C13  C10  C11  C12   180.00   0.0  0
+ 3XJ  CONST_19  C1   C2   C3   N     180.00   0.0  0
+ 3XJ  CONST_20  CL   C5   C4   C3    180.00   0.0  0
+ 3XJ  CONST_21  O    C    C1   C2    180.00   0.0  0
+ 3XJ  CONST_22  CL   C5   C    C1    180.00   0.0  0
+ 3XJ  CONST_23  H5   C2   C3   C4    180.00   0.0  0
+ 3XJ  CONST_24  H4   C1   C    C5    180.00   0.0  0
+ 3XJ  CONST_25  H9   C9   C8   C7    180.00   0.0  0
+ 3XJ  CONST_26  H10  C11  C12  C7    180.00   0.0  0
+ 3XJ  CONST_27  H11  C12  C7   C8    180.00   0.0  0
+ 3XJ  CONST_28  H8   C8   C9   C10   180.00   0.0  0
+ 3XJ  CONST_29  H6   C4   C3   C2    180.00   0.0  0
+ 3XJ  CONST_30  C3   N    C6   C7    180.00   0.0  0
+ 3XJ  CONST_31  C6   N    C3   C4      0.00   0.0  0
+ 3XJ  CONST_32  C2   C3   N    C6    180.00   0.0  0
+ 3XJ  CONST_33  H7   N    C3   C4    180.00   0.0  0
+ 3XJ  CONST_34  C3   N    C6   O1      0.00   0.0  0
+ 3XJ  Var_01    C1   C    O    C14   -12.11  30.0  3
+ 3XJ  Var_02    C9   C10  C13  O3    179.97  30.0  2
+ 3XJ  Var_03    N    C6   C7   C8     27.89  30.0  2
+ 3XJ  Var_04    C17  C18  C14  O4     54.21  30.0  1
+ 3XJ  Var_05    C17  C16  C15  O4    -53.90  30.0  1
+ 3XJ  Var_06    C16  C17  C18  C14   -53.75  30.0  1
+ 3XJ  Var_07    C16  C15  O4   C14    57.37  30.0  1
+ 3XJ  Var_08    C18  C14  O4   C15   -57.87  30.0  1
+ 3XJ  Var_09    C18  C17  C16  C15    54.51  30.0  1
+ 3XJ  Var_10    C    O    C14  O4     71.04  30.0  2
+ 3XJ  Var_11    O7   C18  C14  O4    -64.58  30.0  1
+ 3XJ  Var_12    O5   C16  C15  O4   -174.95  30.0  1
+ 3XJ  Var_13    C18  C17  C16  O5    173.44  30.0  1
+ 3XJ  Var_14    C14  C18  C17  O6   -173.95  30.0  1
+ 3XJ  Var_15    C15  C16  C17  O6    177.61  30.0  1
+ 3XJ  Var_16    C16  C17  C18  O7     65.69  30.0  1
+ 3XJ  Var_17    C19  C15  O4   C14   179.22  30.0  1
+ 3XJ  Var_18    O    C14  O4   C15    61.49  30.0  1
+ 3XJ  Var_19    C18  C14  O    C    -166.34  30.0  3
+ 3XJ  Var_20    C17  C18  C14  O     -68.83  30.0  1
+ 3XJ  Var_21    C19  C15  C16  C17  -172.98  30.0  1
+ 3XJ  Var_22    H3   C18  C14  O4    173.46  30.0  1
+ 3XJ  Var_23    H1   C16  C15  O4     64.99  30.0  1
+ 3XJ  Var_24    H2   C17  C18  C14    63.87  30.0  1
+ 3XJ  Var_25    H12  C15  O4   C14   -62.78  30.0  1
+ 3XJ  Var_26    H    C14  O4   C15  -178.38  30.0  1
+ 3XJ  Var_27    O8   C19  C15  O4     62.41  30.0  3
+ 3XJ  Var_28    O6   C17  C16  O5    -63.45  30.0  1
+ 3XJ  Var_29    C19  C15  C16  O5     65.97  30.0  1
+ 3XJ  Var_30    O7   C18  C17  O6    -54.51  30.0  1
+ 3XJ  Var_31    O    C14  C18  O7    172.38  30.0  1
+ 3XJ  Var_32    O8   C19  C15  C16  -176.58  30.0  3
+ 3XJ  Var_33    H16  C19  C15  O4    -59.87  30.0  3
+ 3XJ  Var_34    H17  C19  C15  O4   -175.95  30.0  3
+ 3XJ  Var_35    H15  O7   C18  C14   -73.14  30.0  3
+ 3XJ  Var_36    H13  O5   C16  C15   174.91  30.0  3
+ 3XJ  Var_37    H14  O6   C17  C18   -82.14  30.0  3
+ 3XJ  Var_38    H18  O8   C19  C15   170.44  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OIR  OIR  N-[(2R)-3-phenyl-2-sulfanylpropanoyl]-L-phenylalanyl-L-alanine  ligand  52  28  .  2021-08-19  2021-08-19  
+ OIR  OIR  N-[(2R)-3-phenyl-2-sulfanylpropanoyl]-L-phenylalanyl-L-alanine  ligand  52  28  .  2021-08-19  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OIR
@@ -259,41 +260,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OIR  CONST_01  C26  C25  C24  C23    0.00   0.0  0
- OIR  CONST_02  C26  C27  C28  C23    0.00   0.0  0
- OIR  CONST_03  C27  C28  C23  C24    0.00   0.0  0
- OIR  CONST_04  C27  C26  C25  C24    0.00   0.0  0
- OIR  CONST_05  C28  C23  C24  C25    0.00   0.0  0
- OIR  CONST_06  C28  C27  C26  C25    0.00   0.0  0
- OIR  CONST_07  C6   C5   C4   C3     0.00   0.0  0
- OIR  CONST_08  C6   C7   C8   C3     0.00   0.0  0
- OIR  CONST_09  C7   C8   C3   C4     0.00   0.0  0
- OIR  CONST_10  C7   C6   C5   C4     0.00   0.0  0
- OIR  CONST_11  C8   C3   C4   C5     0.00   0.0  0
- OIR  CONST_12  C8   C7   C6   C5     0.00   0.0  0
- OIR  CONST_13  C25  C24  C23  C21  180.00   0.0  0
- OIR  CONST_14  C27  C28  C23  C21  180.00   0.0  0
- OIR  CONST_15  C5   C4   C3   C1   180.00   0.0  0
- OIR  CONST_16  C7   C8   C3   C1   180.00   0.0  0
- OIR  CONST_17  H25  C25  C24  C23  180.00   0.0  0
- OIR  CONST_18  H27  C27  C28  C23  180.00   0.0  0
- OIR  CONST_19  H28  C28  C23  C24  180.00   0.0  0
- OIR  CONST_20  H1   C26  C25  C24  180.00   0.0  0
- OIR  CONST_21  H24  C24  C25  C26  180.00   0.0  0
- OIR  CONST_22  H5   C5   C4   C3   180.00   0.0  0
- OIR  CONST_23  H7   C7   C8   C3   180.00   0.0  0
- OIR  CONST_24  H8   C8   C3   C4   180.00   0.0  0
- OIR  CONST_25  H6   C6   C5   C4   180.00   0.0  0
- OIR  CONST_26  H4   C4   C5   C6   180.00   0.0  0
- OIR  CONST_27  C2   N9   C18  O19    0.00   0.0  0
- OIR  CONST_28  C2   N9   C18  C20  180.00   0.0  0
- OIR  CONST_29  C14  N13  C11  C2   180.00   0.0  0
- OIR  CONST_30  C14  N13  C11  O12    0.00   0.0  0
- OIR  CONST_31  HN9  N9   C18  O19  180.00   0.0  0
- OIR  CONST_32  H13  N13  C11  C2     0.00   0.0  0
- OIR  CONST_33  H16  O16  C15  C14  180.00   0.0  0
- OIR  Var_01    C24  C23  C21  C20   79.74  30.0  2
- OIR  Var_02    C4   C3   C1   C2   104.12  30.0  2
+ OIR  CONST_01  C26   C25  C24  C23     0.00   0.0  0
+ OIR  CONST_02  C26   C27  C28  C23     0.00   0.0  0
+ OIR  CONST_03  C27   C28  C23  C24     0.00   0.0  0
+ OIR  CONST_04  C27   C26  C25  C24     0.00   0.0  0
+ OIR  CONST_05  C28   C23  C24  C25     0.00   0.0  0
+ OIR  CONST_06  C28   C27  C26  C25     0.00   0.0  0
+ OIR  CONST_07  C6    C5   C4   C3      0.00   0.0  0
+ OIR  CONST_08  C6    C7   C8   C3      0.00   0.0  0
+ OIR  CONST_09  C7    C8   C3   C4      0.00   0.0  0
+ OIR  CONST_10  C7    C6   C5   C4      0.00   0.0  0
+ OIR  CONST_11  C8    C3   C4   C5      0.00   0.0  0
+ OIR  CONST_12  C8    C7   C6   C5      0.00   0.0  0
+ OIR  CONST_13  C25   C24  C23  C21   180.00   0.0  0
+ OIR  CONST_14  C27   C28  C23  C21   180.00   0.0  0
+ OIR  CONST_15  C5    C4   C3   C1    180.00   0.0  0
+ OIR  CONST_16  C7    C8   C3   C1    180.00   0.0  0
+ OIR  CONST_17  H25   C25  C24  C23   180.00   0.0  0
+ OIR  CONST_18  H27   C27  C28  C23   180.00   0.0  0
+ OIR  CONST_19  H28   C28  C23  C24   180.00   0.0  0
+ OIR  CONST_20  H1    C26  C25  C24   180.00   0.0  0
+ OIR  CONST_21  H24   C24  C25  C26   180.00   0.0  0
+ OIR  CONST_22  H5    C5   C4   C3    180.00   0.0  0
+ OIR  CONST_23  H7    C7   C8   C3    180.00   0.0  0
+ OIR  CONST_24  H8    C8   C3   C4    180.00   0.0  0
+ OIR  CONST_25  H6    C6   C5   C4    180.00   0.0  0
+ OIR  CONST_26  H4    C4   C5   C6    180.00   0.0  0
+ OIR  CONST_27  C2    N9   C18  O19     0.00   0.0  0
+ OIR  CONST_28  C2    N9   C18  C20   180.00   0.0  0
+ OIR  CONST_29  C14   N13  C11  C2    180.00   0.0  0
+ OIR  CONST_30  C14   N13  C11  O12     0.00   0.0  0
+ OIR  CONST_31  HN9   N9   C18  O19   180.00   0.0  0
+ OIR  CONST_32  H13   N13  C11  C2      0.00   0.0  0
+ OIR  CONST_33  H16   O16  C15  C14   180.00   0.0  0
+ OIR  Var_01    C24   C23  C21  C20    79.74  30.0  2
+ OIR  Var_02    C4    C3   C1   C2    104.12  30.0  2
+ OIR  Var_03    C23   C21  C20  C18  -175.61  30.0  3
+ OIR  Var_04    S26   C20  C21  C23    62.22  30.0  2
+ OIR  Var_05    C3    C1   C2   N9    -60.62  30.0  3
+ OIR  Var_06    C3    C1   C2   C11   177.91  30.0  3
+ OIR  Var_07    H20   C20  C21  C23   -53.53  30.0  2
+ OIR  Var_08    H2    C2   C1   C3     59.03  30.0  2
+ OIR  Var_09    C21   C20  C18  O19   -49.98  30.0  3
+ OIR  Var_10    S26   C20  C18  O19    74.96  30.0  3
+ OIR  Var_11    C11   C2   N9   C18   -63.71  30.0  3
+ OIR  Var_12    C1    C2   N9   C18   176.10  30.0  3
+ OIR  Var_13    N9    C18  C20  C21   129.44  30.0  1
+ OIR  Var_14    N9    C18  C20  S26  -105.62  30.0  1
+ OIR  Var_15    O12   C11  C2   N9    -33.99  30.0  3
+ OIR  Var_16    N13   C11  C2   N9    149.16  30.0  3
+ OIR  Var_17    C15   C14  N13  C11   -61.13  30.0  3
+ OIR  Var_18    C19   C14  N13  C11   178.02  30.0  3
+ OIR  Var_19    C1    C2   C11  O12    87.01  30.0  1
+ OIR  Var_20    C1    C2   C11  N13   -89.84  30.0  1
+ OIR  Var_21    O16   C15  C14  N13   157.14  30.0  3
+ OIR  Var_22    O17   C15  C14  N13   -25.24  30.0  3
+ OIR  Var_23    C19   C14  C15  O16   -81.77  30.0  1
+ OIR  Var_24    C19   C14  C15  O17    95.85  30.0  1
+ OIR  Var_25    H26   S26  C20  C18   -64.54  30.0  3
+ OIR  Var_26    H14   C14  N13  C11    58.28  30.0  3
+ OIR  Var_27    H191  C19  C14  N13    61.09  30.0  3
+ OIR  Var_28    H192  C19  C14  N13  -178.26  30.0  3
+ OIR  Var_29    H193  C19  C14  N13   -59.12  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3WE  3WE  (2E,3aR,14aS)-9-bromo-2-imino-1,2,3,5,6,14a-hexahydro-4H,8H-imidazo[4',5':5,6]pyrrolo[1',2':4,5]pyrazino[1,2-a]indol-8-one  ligand  36  22  .  2022-07-22  2022-07-26
+ 3WE  3WE  (2E,3aR,14aS)-9-bromo-2-imino-1,2,3,5,6,14a-hexahydro-4H,8H-imidazo[4',5':5,6]pyrrolo[1',2':4,5]pyrazino[1,2-a]indol-8-one  ligand  36  22  .  2022-07-22  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3WE
@@ -214,44 +215,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3WE  CONST_01  C5   N14  C8   C7     0.00   0.0  0
- 3WE  CONST_02  N14  C5   C4   C7     0.00   0.0  0
- 3WE  CONST_03  C6   C5   C4   C7   180.00   0.0  0
- 3WE  CONST_04  C2   C3   C4   C7   180.00   0.0  0
- 3WE  CONST_05  C5   C4   C7   C8     0.00   0.0  0
- 3WE  CONST_06  C3   C4   C7   C8   180.00   0.0  0
- 3WE  CONST_07  C4   C5   N14  C8     0.00   0.0  0
- 3WE  CONST_08  C6   C5   N14  C8   180.00   0.0  0
- 3WE  CONST_09  C4   C7   C8   N14    0.00   0.0  0
- 3WE  CONST_10  C3   C4   C5   N14  180.00   0.0  0
- 3WE  CONST_11  C1   C6   C5   N14  180.00   0.0  0
- 3WE  CONST_12  C2   C3   C4   C5     0.00   0.0  0
- 3WE  CONST_13  C2   C1   C6   C5     0.00   0.0  0
- 3WE  CONST_14  C1   C6   C5   C4     0.00   0.0  0
- 3WE  CONST_15  C1   C2   C3   C4     0.00   0.0  0
- 3WE  CONST_16  C6   C5   C4   C3     0.00   0.0  0
- 3WE  CONST_17  C6   C1   C2   C3     0.00   0.0  0
- 3WE  CONST_18  C13  N12  C11  C8   180.00   0.0  0
- 3WE  CONST_19  C16  N12  C11  C8     0.00   0.0  0
- 3WE  CONST_20  N17  C18  N19  C20    0.00   0.0  0
- 3WE  CONST_21  C16  N17  C18  N19    0.00   0.0  0
- 3WE  CONST_22  C11  C8   C7   BR1    0.00   0.0  0
- 3WE  CONST_23  N14  C8   C7   BR1  180.00   0.0  0
- 3WE  CONST_24  C5   C4   C7   BR1  180.00   0.0  0
- 3WE  CONST_25  C3   C4   C7   BR1    0.00   0.0  0
- 3WE  CONST_26  N22  C18  N19  C20  180.00   0.0  0
- 3WE  CONST_27  C16  N17  C18  N22  180.00   0.0  0
- 3WE  CONST_28  O21  C11  N12  C16  180.00   0.0  0
- 3WE  CONST_29  O21  C11  N12  C13    0.00   0.0  0
- 3WE  CONST_30  H1   C3   C4   C7     0.00   0.0  0
- 3WE  CONST_31  H2   C6   C5   N14    0.00   0.0  0
- 3WE  CONST_32  H3   C1   C6   C5   180.00   0.0  0
- 3WE  CONST_33  H4   C2   C3   C4   180.00   0.0  0
- 3WE  CONST_36  H9   N22  C18  N19    0.00   0.0  0
- 3WE  Var_01    N12  C11  C8   C7   177.83  30.0  1
- 3WE  Var_02    C23  C13  N12  C16   -0.93  30.0  1
- 3WE  Var_03    C13  C23  C10  C16  -38.33  30.0  1
- 3WE  Var_04    N12  C13  C23  C10   24.60  30.0  1
+ 3WE  CONST_01  C5   N14  C8   C7      0.00   0.0  0
+ 3WE  CONST_02  N14  C5   C4   C7      0.00   0.0  0
+ 3WE  CONST_03  C6   C5   C4   C7    180.00   0.0  0
+ 3WE  CONST_04  C2   C3   C4   C7    180.00   0.0  0
+ 3WE  CONST_05  C5   C4   C7   C8      0.00   0.0  0
+ 3WE  CONST_06  C3   C4   C7   C8    180.00   0.0  0
+ 3WE  CONST_07  C4   C5   N14  C8      0.00   0.0  0
+ 3WE  CONST_08  C6   C5   N14  C8    180.00   0.0  0
+ 3WE  CONST_09  C4   C7   C8   N14     0.00   0.0  0
+ 3WE  CONST_10  C3   C4   C5   N14   180.00   0.0  0
+ 3WE  CONST_11  C1   C6   C5   N14   180.00   0.0  0
+ 3WE  CONST_12  C2   C3   C4   C5      0.00   0.0  0
+ 3WE  CONST_13  C2   C1   C6   C5      0.00   0.0  0
+ 3WE  CONST_14  C1   C6   C5   C4      0.00   0.0  0
+ 3WE  CONST_15  C1   C2   C3   C4      0.00   0.0  0
+ 3WE  CONST_16  C6   C5   C4   C3      0.00   0.0  0
+ 3WE  CONST_17  C6   C1   C2   C3      0.00   0.0  0
+ 3WE  CONST_18  C13  N12  C11  C8    180.00   0.0  0
+ 3WE  CONST_19  C16  N12  C11  C8      0.00   0.0  0
+ 3WE  CONST_20  N17  C18  N19  C20     0.00   0.0  0
+ 3WE  CONST_21  C16  N17  C18  N19     0.00   0.0  0
+ 3WE  CONST_22  C11  C8   C7   BR1     0.00   0.0  0
+ 3WE  CONST_23  N14  C8   C7   BR1   180.00   0.0  0
+ 3WE  CONST_24  C5   C4   C7   BR1   180.00   0.0  0
+ 3WE  CONST_25  C3   C4   C7   BR1     0.00   0.0  0
+ 3WE  CONST_26  N22  C18  N19  C20   180.00   0.0  0
+ 3WE  CONST_27  C16  N17  C18  N22   180.00   0.0  0
+ 3WE  CONST_28  O21  C11  N12  C16   180.00   0.0  0
+ 3WE  CONST_29  O21  C11  N12  C13     0.00   0.0  0
+ 3WE  CONST_30  H1   C3   C4   C7      0.00   0.0  0
+ 3WE  CONST_31  H2   C6   C5   N14     0.00   0.0  0
+ 3WE  CONST_32  H3   C1   C6   C5    180.00   0.0  0
+ 3WE  CONST_33  H4   C2   C3   C4    180.00   0.0  0
+ 3WE  CONST_34  H9   N22  C18  N19     0.00   0.0  0
+ 3WE  Var_01    N12  C11  C8   C7    177.83  30.0  1
+ 3WE  Var_02    C23  C13  N12  C16    -0.93  30.0  1
+ 3WE  Var_03    C13  C23  C10  C16   -38.33  30.0  1
+ 3WE  Var_04    N12  C13  C23  C10    24.60  30.0  1
+ 3WE  CONST_38  H12  N17  C16  C20   180.00   0.0  0
+ 3WE  Var_05    C16  C20  N14  C8     13.44  30.0  1
+ 3WE  Var_06    N19  C20  N14  C8    124.13  30.0  1
+ 3WE  Var_07    N12  C16  C20  N14   -34.77  30.0  1
+ 3WE  Var_08    C10  C16  C20  N14  -152.35  30.0  1
+ 3WE  Var_09    N17  C16  C20  N14    85.35  30.0  1
+ 3WE  Var_10    C18  N19  C20  N14   -87.58  30.0  1
+ 3WE  Var_11    C16  C20  N14  C5   -164.99  30.0  1
+ 3WE  Var_12    N19  C20  N14  C5    -54.30  30.0  1
+ 3WE  Var_13    C13  N12  C16  C20  -147.29  30.0  1
+ 3WE  Var_14    C11  N12  C16  C20    38.54  30.0  1
+ 3WE  Var_15    C23  C10  C16  C20   161.76  30.0  1
+ 3WE  Var_16    N12  C16  C20  N19  -153.88  30.0  1
+ 3WE  Var_17    C10  C16  C20  N19    88.55  30.0  1
+ 3WE  Var_18    N12  C16  N17  C18   152.59  30.0  1
+ 3WE  Var_19    C10  C16  N17  C18   -92.16  30.0  1
+ 3WE  Var_20    C13  N12  C16  N17    99.49  30.0  1
+ 3WE  Var_21    C11  N12  C16  N17   -74.68  30.0  1
+ 3WE  Var_22    C23  C10  C16  N17   -83.98  30.0  1
+ 3WE  Var_23    C13  N12  C16  C10   -22.90  30.0  1
+ 3WE  Var_24    C11  N12  C16  C10   162.92  30.0  1
+ 3WE  Var_25    N12  C16  C10  C23    37.02  30.0  1
+ 3WE  Var_26    H5   C20  N14  C8   -110.31  30.0  1
+ 3WE  Var_27    H14  C10  C16  C20   -75.65  30.0  1
+ 3WE  Var_28    H15  C10  C16  C20    44.59  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

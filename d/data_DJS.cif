@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DJS  DJS  2-{[(2S)-butan-2-yl]amino}-N-{(1R,2S)-1-hydroxy-3-phenyl-1-[(2R)-pyrrolidin-2-yl]propan-2-yl}-6-(methylsulfonyl)pyridine-4-carboxamide  ligand  67  33  .  2021-08-08  2021-08-08  
+ DJS  DJS  2-{[(2S)-butan-2-yl]amino}-N-{(1R,2S)-1-hydroxy-3-phenyl-1-[(2R)-pyrrolidin-2-yl]propan-2-yl}-6-(methylsulfonyl)pyridine-4-carboxamide  ligand  67  33  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DJS
@@ -326,47 +327,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DJS  CONST_01  C9   C8   N7   C6     0.00   0.0  0
- DJS  CONST_02  C9   C4   C5   C6     0.00   0.0  0
- DJS  CONST_03  C8   C9   C4   C5     0.00   0.0  0
- DJS  CONST_04  C8   N7   C6   C5     0.00   0.0  0
- DJS  CONST_05  N7   C8   C9   C4     0.00   0.0  0
- DJS  CONST_06  N7   C6   C5   C4     0.00   0.0  0
- DJS  CONST_07  C35  C36  C37  C32    0.00   0.0  0
- DJS  CONST_08  C35  C34  C33  C32    0.00   0.0  0
- DJS  CONST_09  C36  C35  C34  C33    0.00   0.0  0
- DJS  CONST_10  C36  C37  C32  C33    0.00   0.0  0
- DJS  CONST_11  C37  C36  C35  C34    0.00   0.0  0
- DJS  CONST_12  C37  C32  C33  C34    0.00   0.0  0
- DJS  CONST_13  N10  C8   N7   C6   180.00   0.0  0
- DJS  CONST_14  C2   C4   C5   C6   180.00   0.0  0
- DJS  CONST_15  N10  C8   C9   C4   180.00   0.0  0
- DJS  CONST_16  S16  C6   C5   C4   180.00   0.0  0
- DJS  CONST_17  C8   C9   C4   C2   180.00   0.0  0
- DJS  CONST_18  S16  C6   N7   C8   180.00   0.0  0
- DJS  CONST_19  C36  C37  C32  C31  180.00   0.0  0
- DJS  CONST_20  C34  C33  C32  C31  180.00   0.0  0
- DJS  CONST_21  H3   C9   C4   C5   180.00   0.0  0
- DJS  CONST_22  H2   C5   C6   N7   180.00   0.0  0
- DJS  CONST_23  H34  C36  C37  C32  180.00   0.0  0
- DJS  CONST_24  H32  C34  C33  C32  180.00   0.0  0
- DJS  CONST_25  H33  C35  C34  C33  180.00   0.0  0
- DJS  CONST_26  H35  C37  C32  C33  180.00   0.0  0
- DJS  CONST_27  H31  C33  C34  C35  180.00   0.0  0
- DJS  CONST_28  C11  N10  C8   N7   180.00   0.0  0
- DJS  CONST_29  C11  N10  C8   C9     0.00   0.0  0
- DJS  CONST_30  H4   N10  C8   N7     0.00   0.0  0
- DJS  CONST_31  C20  N1   C2   C4   180.00   0.0  0
- DJS  CONST_32  H1   N1   C2   C4     0.00   0.0  0
- DJS  CONST_33  C20  N1   C2   O3     0.00   0.0  0
- DJS  Var_01    C29  C28  C27  C25  -10.71  30.0  1
- DJS  Var_02    C28  C29  N30  C25   32.30  30.0  1
- DJS  Var_03    N30  C29  C28  C27  -12.67  30.0  1
- DJS  Var_04    C9   C4   C2   N1    44.98  30.0  2
- DJS  Var_05    O18  S16  C6   C5     1.87  30.0  2
- DJS  Var_06    C37  C32  C31  C20  -70.25  30.0  3
- DJS  Var_07    H14  C19  S16  C6    59.95  30.0  3
- DJS  Var_08    H11  C15  C14  C11  -65.12  30.0  3
+ DJS  CONST_01  C9   C8   N7   C6      0.00   0.0  0
+ DJS  CONST_02  C9   C4   C5   C6      0.00   0.0  0
+ DJS  CONST_03  C8   C9   C4   C5      0.00   0.0  0
+ DJS  CONST_04  C8   N7   C6   C5      0.00   0.0  0
+ DJS  CONST_05  N7   C8   C9   C4      0.00   0.0  0
+ DJS  CONST_06  N7   C6   C5   C4      0.00   0.0  0
+ DJS  CONST_07  C35  C36  C37  C32     0.00   0.0  0
+ DJS  CONST_08  C35  C34  C33  C32     0.00   0.0  0
+ DJS  CONST_09  C36  C35  C34  C33     0.00   0.0  0
+ DJS  CONST_10  C36  C37  C32  C33     0.00   0.0  0
+ DJS  CONST_11  C37  C36  C35  C34     0.00   0.0  0
+ DJS  CONST_12  C37  C32  C33  C34     0.00   0.0  0
+ DJS  CONST_13  N10  C8   N7   C6    180.00   0.0  0
+ DJS  CONST_14  C2   C4   C5   C6    180.00   0.0  0
+ DJS  CONST_15  N10  C8   C9   C4    180.00   0.0  0
+ DJS  CONST_16  S16  C6   C5   C4    180.00   0.0  0
+ DJS  CONST_17  C8   C9   C4   C2    180.00   0.0  0
+ DJS  CONST_18  S16  C6   N7   C8    180.00   0.0  0
+ DJS  CONST_19  C36  C37  C32  C31   180.00   0.0  0
+ DJS  CONST_20  C34  C33  C32  C31   180.00   0.0  0
+ DJS  CONST_21  H3   C9   C4   C5    180.00   0.0  0
+ DJS  CONST_22  H2   C5   C6   N7    180.00   0.0  0
+ DJS  CONST_23  H34  C36  C37  C32   180.00   0.0  0
+ DJS  CONST_24  H32  C34  C33  C32   180.00   0.0  0
+ DJS  CONST_25  H33  C35  C34  C33   180.00   0.0  0
+ DJS  CONST_26  H35  C37  C32  C33   180.00   0.0  0
+ DJS  CONST_27  H31  C33  C34  C35   180.00   0.0  0
+ DJS  CONST_28  C11  N10  C8   N7    180.00   0.0  0
+ DJS  CONST_29  C11  N10  C8   C9      0.00   0.0  0
+ DJS  CONST_30  H4   N10  C8   N7      0.00   0.0  0
+ DJS  CONST_31  C20  N1   C2   C4    180.00   0.0  0
+ DJS  CONST_32  H1   N1   C2   C4      0.00   0.0  0
+ DJS  CONST_33  C20  N1   C2   O3      0.00   0.0  0
+ DJS  Var_01    C29  C28  C27  C25   -10.71  30.0  1
+ DJS  Var_02    C28  C29  N30  C25    32.30  30.0  1
+ DJS  Var_03    N30  C29  C28  C27   -12.67  30.0  1
+ DJS  Var_04    C9   C4   C2   N1     44.98  30.0  2
+ DJS  Var_05    O18  S16  C6   C5      1.87  30.0  2
+ DJS  Var_06    C37  C32  C31  C20   -70.25  30.0  3
+ DJS  Var_07    H14  C19  S16  C6     59.95  30.0  3
+ DJS  Var_08    H11  C15  C14  C11   -65.12  30.0  3
+ DJS  Var_09    C29  N30  C25  C27   -39.43  30.0  1
+ DJS  Var_10    N30  C25  C27  C28    30.91  30.0  1
+ DJS  Var_11    C28  C27  C25  C22   154.30  30.0  1
+ DJS  Var_12    C29  N30  C25  C22  -164.33  30.0  1
+ DJS  Var_13    H27  N30  C25  C27    75.41  30.0  1
+ DJS  Var_14    H20  C25  C27  C28   -83.86  30.0  1
+ DJS  Var_15    C27  C25  C22  C20  -174.29  30.0  3
+ DJS  Var_16    N30  C25  C22  C20   -54.22  30.0  3
+ DJS  Var_17    C27  C25  C22  O24    58.77  30.0  3
+ DJS  Var_18    N30  C25  C22  O24   178.84  30.0  3
+ DJS  Var_19    H18  C22  C25  C27   -56.56  30.0  2
+ DJS  Var_20    C32  C31  C20  N1    -47.78  30.0  2
+ DJS  Var_21    C25  C22  C20  N1    176.96  30.0  3
+ DJS  Var_22    C13  C11  N10  C8     78.87  30.0  2
+ DJS  Var_23    C14  C11  N10  C8   -157.12  30.0  2
+ DJS  Var_24    C32  C31  C20  C22  -171.40  30.0  2
+ DJS  Var_25    C31  C20  C22  C25   -59.62  30.0  2
+ DJS  Var_26    H5   C11  N10  C8    -40.94  30.0  2
+ DJS  Var_27    H17  C20  C22  C25    60.42  30.0  2
+ DJS  Var_28    H19  O24  C22  C25    49.07  30.0  3
+ DJS  Var_29    O24  C22  C20  N1    -56.15  30.0  3
+ DJS  Var_30    C31  C20  N1   C2    137.17  30.0  3
+ DJS  Var_31    C22  C20  N1   C2    -97.30  30.0  3
+ DJS  Var_32    C15  C14  C11  N10    58.64  30.0  3
+ DJS  Var_33    C15  C14  C11  C13  -177.30  30.0  3
+ DJS  Var_34    C31  C20  C22  O24    67.27  30.0  2
+ DJS  Var_35    H6   C13  C11  N10   179.04  30.0  3
+ DJS  Var_36    H7   C13  C11  N10   -61.09  30.0  3
+ DJS  Var_37    H8   C13  C11  N10    59.54  30.0  3
+ DJS  Var_38    H9   C14  C11  N10  -179.76  30.0  3
+ DJS  Var_39    H10  C14  C11  N10   -65.13  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

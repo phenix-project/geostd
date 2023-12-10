@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GDV  GDV  (5R,6R,7R,8S)-8-(acetylamino)-6,7-dihydroxy-5-(hydroxymethyl)-2-(phenylcarbamoyl)-5,6,7,8-tetrahydro-1H-imidazo[1,2-a]pyridin-4-ium  ligand  47  26  .  2021-08-10  2021-08-10  
+ GDV  GDV  (5R,6R,7R,8S)-8-(acetylamino)-6,7-dihydroxy-5-(hydroxymethyl)-2-(phenylcarbamoyl)-5,6,7,8-tetrahydro-1H-imidazo[1,2-a]pyridin-4-ium  ligand  47  26  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GDV
@@ -245,38 +246,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GDV  CONST_01  C8    C7   N1   C1     0.00   0.0  0
- GDV  CONST_02  C7    C8   N2   C1     0.00   0.0  0
- GDV  CONST_03  C8    N2   C1   N1     0.00   0.0  0
- GDV  CONST_04  N2    C8   C7   N1     0.00   0.0  0
- GDV  CONST_05  N2    C1   N1   C7     0.00   0.0  0
- GDV  CONST_06  C15   C16  C17  C11    0.00   0.0  0
- GDV  CONST_07  C15   C14  C13  C11    0.00   0.0  0
- GDV  CONST_08  C14   C13  C11  C17    0.00   0.0  0
- GDV  CONST_09  C14   C15  C16  C17    0.00   0.0  0
- GDV  CONST_10  C13   C11  C17  C16    0.00   0.0  0
- GDV  CONST_11  C13   C14  C15  C16    0.00   0.0  0
- GDV  CONST_12  C9    C8   N2   C1   180.00   0.0  0
- GDV  CONST_13  C9    C8   C7   N1   180.00   0.0  0
- GDV  CONST_14  C16   C17  C11  N3   180.00   0.0  0
- GDV  CONST_15  C14   C13  C11  N3   180.00   0.0  0
- GDV  CONST_16  HE    N2   C1   C2     0.00   0.0  0
- GDV  CONST_17  H7    C7   N1   C5     0.00   0.0  0
- GDV  CONST_18  H16   C16  C17  C11  180.00   0.0  0
- GDV  CONST_19  H14   C14  C13  C11  180.00   0.0  0
- GDV  CONST_20  H13   C13  C11  C17  180.00   0.0  0
- GDV  CONST_21  H15   C15  C16  C17  180.00   0.0  0
- GDV  CONST_22  H17   C17  C16  C15  180.00   0.0  0
- GDV  CONST_23  C11   N3   C9   C8   180.00   0.0  0
- GDV  CONST_24  C17   C11  N3   C9     0.00   0.0  0
- GDV  CONST_25  C13   C11  N3   C9   180.00   0.0  0
- GDV  CONST_26  HF    N3   C11  C17  180.00   0.0  0
- GDV  CONST_27  C2    N4   C10  O1     0.00   0.0  0
- GDV  CONST_28  C2    N4   C10  C12  180.00   0.0  0
- GDV  CONST_29  C11   N3   C9   O2     0.00   0.0  0
- GDV  CONST_30  H4    N4   C10  O1   180.00   0.0  0
- GDV  Var_01    O2    C9   C8   C7     8.35  30.0  2
- GDV  Var_02    H121  C12  C10  O1   -55.06  30.0  3
+ GDV  CONST_01  C8    C7   N1   C1      0.00   0.0  0
+ GDV  CONST_02  C7    C8   N2   C1      0.00   0.0  0
+ GDV  CONST_03  C8    N2   C1   N1      0.00   0.0  0
+ GDV  CONST_04  N2    C8   C7   N1      0.00   0.0  0
+ GDV  CONST_05  N2    C1   N1   C7      0.00   0.0  0
+ GDV  CONST_06  C15   C16  C17  C11     0.00   0.0  0
+ GDV  CONST_07  C15   C14  C13  C11     0.00   0.0  0
+ GDV  CONST_08  C14   C13  C11  C17     0.00   0.0  0
+ GDV  CONST_09  C14   C15  C16  C17     0.00   0.0  0
+ GDV  CONST_10  C13   C11  C17  C16     0.00   0.0  0
+ GDV  CONST_11  C13   C14  C15  C16     0.00   0.0  0
+ GDV  CONST_12  C9    C8   N2   C1    180.00   0.0  0
+ GDV  CONST_13  C9    C8   C7   N1    180.00   0.0  0
+ GDV  CONST_14  C16   C17  C11  N3    180.00   0.0  0
+ GDV  CONST_15  C14   C13  C11  N3    180.00   0.0  0
+ GDV  CONST_16  HE    N2   C1   C2      0.00   0.0  0
+ GDV  CONST_17  H7    C7   N1   C5      0.00   0.0  0
+ GDV  CONST_18  H16   C16  C17  C11   180.00   0.0  0
+ GDV  CONST_19  H14   C14  C13  C11   180.00   0.0  0
+ GDV  CONST_20  H13   C13  C11  C17   180.00   0.0  0
+ GDV  CONST_21  H15   C15  C16  C17   180.00   0.0  0
+ GDV  CONST_22  H17   C17  C16  C15   180.00   0.0  0
+ GDV  CONST_23  C11   N3   C9   C8    180.00   0.0  0
+ GDV  CONST_24  C17   C11  N3   C9      0.00   0.0  0
+ GDV  CONST_25  C13   C11  N3   C9    180.00   0.0  0
+ GDV  CONST_26  HF    N3   C11  C17   180.00   0.0  0
+ GDV  CONST_27  C2    N4   C10  O1      0.00   0.0  0
+ GDV  CONST_28  C2    N4   C10  C12   180.00   0.0  0
+ GDV  CONST_29  C11   N3   C9   O2      0.00   0.0  0
+ GDV  CONST_30  H4    N4   C10  O1    180.00   0.0  0
+ GDV  Var_01    O2    C9   C8   C7      8.35  30.0  2
+ GDV  Var_02    H121  C12  C10  O1    -55.06  30.0  3
+ GDV  Var_03    C5    C4   C3   C2     64.07  30.0  1
+ GDV  Var_04    N1    C1   C2   C3     22.56  30.0  1
+ GDV  Var_05    N2    C1   C2   C3   -157.80  30.0  1
+ GDV  Var_06    N1    C5   C4   C3    -42.50  30.0  1
+ GDV  Var_07    C1    C2   C3   C4    -50.52  30.0  1
+ GDV  Var_08    C1    N1   C5   C4     12.28  30.0  1
+ GDV  Var_09    C7    N1   C5   C4   -170.20  30.0  1
+ GDV  Var_10    C4    C3   C2   N4   -174.18  30.0  1
+ GDV  Var_11    N1    C1   C2   N4    148.14  30.0  1
+ GDV  Var_12    N2    C1   C2   N4    -32.22  30.0  1
+ GDV  Var_13    O4    C4   C3   C2   -178.23  30.0  1
+ GDV  Var_14    C6    C5   C4   C3   -165.52  30.0  1
+ GDV  Var_15    C1    C2   C3   O3   -174.40  30.0  1
+ GDV  Var_16    C5    C4   C3   O3   -172.48  30.0  1
+ GDV  Var_17    N1    C5   C4   O4   -164.08  30.0  1
+ GDV  Var_18    C1    N1   C5   C6    136.98  30.0  1
+ GDV  Var_19    C7    N1   C5   C6    -45.50  30.0  1
+ GDV  Var_20    HB    C4   C3   C2    -56.00  30.0  1
+ GDV  Var_21    H5    C5   C4   C3     73.99  30.0  1
+ GDV  Var_22    H2    C2   C3   C4     65.74  30.0  1
+ GDV  Var_23    H3    C3   C4   C5    -55.00  30.0  1
+ GDV  Var_24    C3    C2   N4   C10  -109.94  30.0  3
+ GDV  Var_25    C1    C2   N4   C10   127.67  30.0  3
+ GDV  Var_26    O3    C3   C2   N4     61.94  30.0  1
+ GDV  Var_27    O4    C4   C3   O3    -54.78  30.0  1
+ GDV  Var_28    O5    C6   C5   C4     68.49  30.0  3
+ GDV  Var_29    C6    C5   C4   O4     72.90  30.0  1
+ GDV  Var_30    N1    C5   C6   O5    -54.43  30.0  2
+ GDV  Var_31    HA    O3   C3   C2     57.61  30.0  3
+ GDV  Var_32    H4    N4   C2   C3     56.35  30.0  2
+ GDV  Var_33    HC    O4   C4   C3     65.27  30.0  3
+ GDV  Var_34    H6C1  C6   C5   C4    -56.72  30.0  3
+ GDV  Var_35    H6C2  C6   C5   C4   -171.90  30.0  3
+ GDV  Var_36    HD    O5   C6   C5    -87.15  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

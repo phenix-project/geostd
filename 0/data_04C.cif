@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 04C  04C  1,2,4-trideoxy-4-methyl-2-{[N-(morpholin-4-ylacetyl)-L-alanyl-O-methyl-L-tyrosyl]amino}-1-phenyl-D-xylitol  peptide  86  42  .  2022-03-08  2022-03-08
+ 04C  04C  1,2,4-trideoxy-4-methyl-2-{[N-(morpholin-4-ylacetyl)-L-alanyl-O-methyl-L-tyrosyl]amino}-1-phenyl-D-xylitol  peptide  86  42  .  2022-03-08  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_04C
@@ -396,52 +397,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 04C  CONST_01  C44  C47  C48  C41    0.00   0.0  0
- 04C  CONST_02  C44  C43  C42  C41    0.00   0.0  0
- 04C  CONST_03  C43  C44  C47  C48    0.00   0.0  0
- 04C  CONST_04  C43  C42  C41  C48    0.00   0.0  0
- 04C  CONST_05  C42  C41  C48  C47    0.00   0.0  0
- 04C  CONST_06  C42  C43  C44  C47    0.00   0.0  0
- 04C  CONST_07  C3   C4   C5   C6     0.00   0.0  0
- 04C  CONST_08  C3   C2   C1   C6     0.00   0.0  0
- 04C  CONST_09  C2   C3   C4   C5     0.00   0.0  0
- 04C  CONST_10  C2   C1   C6   C5     0.00   0.0  0
- 04C  CONST_11  C1   C2   C3   C4     0.00   0.0  0
- 04C  CONST_12  C1   C6   C5   C4     0.00   0.0  0
- 04C  CONST_13  C47  C48  C41  C40  180.00   0.0  0
- 04C  CONST_14  C43  C42  C41  C40  180.00   0.0  0
- 04C  CONST_15  O45  C44  C47  C48  180.00   0.0  0
- 04C  CONST_16  C42  C43  C44  O45  180.00   0.0  0
- 04C  CONST_17  C4   C5   C6   C7   180.00   0.0  0
- 04C  CONST_18  C2   C1   C6   C7   180.00   0.0  0
- 04C  CONST_19  H22  C47  C48  C41  180.00   0.0  0
- 04C  CONST_20  H26  C43  C42  C41  180.00   0.0  0
- 04C  CONST_21  H27  C42  C41  C48  180.00   0.0  0
- 04C  CONST_22  H21  C48  C47  C44  180.00   0.0  0
- 04C  CONST_23  H42  C4   C5   C6   180.00   0.0  0
- 04C  CONST_24  H44  C2   C1   C6   180.00   0.0  0
- 04C  CONST_25  H43  C3   C4   C5   180.00   0.0  0
- 04C  CONST_26  H45  C1   C6   C5   180.00   0.0  0
- 04C  CONST_27  H41  C5   C4   C3   180.00   0.0  0
- 04C  CONST_28  C27  N28  C29  O37    0.00   0.0  0
- 04C  CONST_29  C27  N28  C29  C30  180.00   0.0  0
- 04C  CONST_30  C24  N25  C26  C27  180.00   0.0  0
- 04C  CONST_31  C24  N25  C26  O39    0.00   0.0  0
- 04C  CONST_32  C8   N22  C23  C24  180.00   0.0  0
- 04C  CONST_33  C8   N22  C23  O49    0.00   0.0  0
- 04C  CONST_34  H12  N28  C29  O37  180.00   0.0  0
- 04C  CONST_35  H17  N25  C26  C27    0.00   0.0  0
- 04C  CONST_36  H28  N22  C23  C24    0.00   0.0  0
- 04C  Var_01    O34  C35  C36  N31   57.11  30.0  1
- 04C  Var_02    O34  C33  C32  N31  -57.50  30.0  1
- 04C  Var_03    C33  C32  N31  C36   57.47  30.0  1
- 04C  Var_04    C35  C36  N31  C32  -57.26  30.0  1
- 04C  Var_05    C36  N31  C30  C29  -70.79  30.0  3
- 04C  Var_06    C48  C41  C40  C24  -84.01  30.0  3
- 04C  Var_07    C43  C44  O45  C46    0.93  30.0  2
- 04C  Var_08    C5   C6   C7   C8   -86.98  30.0  3
- 04C  Var_09    N31  C30  C29  O37  -20.74  30.0  1
- 04C  Var_10    H23  C46  O45  C44  -62.37  30.0  3
+ 04C  CONST_01  C44  C47  C48  C41     0.00   0.0  0
+ 04C  CONST_02  C44  C43  C42  C41     0.00   0.0  0
+ 04C  CONST_03  C43  C44  C47  C48     0.00   0.0  0
+ 04C  CONST_04  C43  C42  C41  C48     0.00   0.0  0
+ 04C  CONST_05  C42  C41  C48  C47     0.00   0.0  0
+ 04C  CONST_06  C42  C43  C44  C47     0.00   0.0  0
+ 04C  CONST_07  C3   C4   C5   C6      0.00   0.0  0
+ 04C  CONST_08  C3   C2   C1   C6      0.00   0.0  0
+ 04C  CONST_09  C2   C3   C4   C5      0.00   0.0  0
+ 04C  CONST_10  C2   C1   C6   C5      0.00   0.0  0
+ 04C  CONST_11  C1   C2   C3   C4      0.00   0.0  0
+ 04C  CONST_12  C1   C6   C5   C4      0.00   0.0  0
+ 04C  CONST_13  C47  C48  C41  C40   180.00   0.0  0
+ 04C  CONST_14  C43  C42  C41  C40   180.00   0.0  0
+ 04C  CONST_15  O45  C44  C47  C48   180.00   0.0  0
+ 04C  CONST_16  C42  C43  C44  O45   180.00   0.0  0
+ 04C  CONST_17  C4   C5   C6   C7    180.00   0.0  0
+ 04C  CONST_18  C2   C1   C6   C7    180.00   0.0  0
+ 04C  CONST_19  H22  C47  C48  C41   180.00   0.0  0
+ 04C  CONST_20  H26  C43  C42  C41   180.00   0.0  0
+ 04C  CONST_21  H27  C42  C41  C48   180.00   0.0  0
+ 04C  CONST_22  H21  C48  C47  C44   180.00   0.0  0
+ 04C  CONST_23  H42  C4   C5   C6    180.00   0.0  0
+ 04C  CONST_24  H44  C2   C1   C6    180.00   0.0  0
+ 04C  CONST_25  H43  C3   C4   C5    180.00   0.0  0
+ 04C  CONST_26  H45  C1   C6   C5    180.00   0.0  0
+ 04C  CONST_27  H41  C5   C4   C3    180.00   0.0  0
+ 04C  CONST_28  C27  N28  C29  O37     0.00   0.0  0
+ 04C  CONST_29  C27  N28  C29  C30   180.00   0.0  0
+ 04C  CONST_30  C24  N25  C26  C27   180.00   0.0  0
+ 04C  CONST_31  C24  N25  C26  O39     0.00   0.0  0
+ 04C  CONST_32  C8   N22  C23  C24   180.00   0.0  0
+ 04C  CONST_33  C8   N22  C23  O49     0.00   0.0  0
+ 04C  CONST_34  H12  N28  C29  O37   180.00   0.0  0
+ 04C  CONST_35  H17  N25  C26  C27     0.00   0.0  0
+ 04C  CONST_36  H28  N22  C23  C24     0.00   0.0  0
+ 04C  Var_01    O34  C35  C36  N31    57.11  30.0  1
+ 04C  Var_02    O34  C33  C32  N31   -57.50  30.0  1
+ 04C  Var_03    C33  C32  N31  C36    57.47  30.0  1
+ 04C  Var_04    C35  C36  N31  C32   -57.26  30.0  1
+ 04C  Var_05    C36  N31  C30  C29   -70.79  30.0  3
+ 04C  Var_06    C48  C41  C40  C24   -84.01  30.0  3
+ 04C  Var_07    C43  C44  O45  C46     0.93  30.0  2
+ 04C  Var_08    C5   C6   C7   C8    -86.98  30.0  3
+ 04C  Var_09    N31  C30  C29  O37   -20.74  30.0  1
+ 04C  Var_10    H23  C46  O45  C44   -62.37  30.0  3
+ 04C  Var_11    H18  C24  C40  C41    67.89  30.0  3
+ 04C  Var_12    H29  C8   C7   C6     61.51  30.0  3
+ 04C  Var_13    H13  C27  N28  C29    10.36  30.0  3
+ 04C  Var_14    H14  C38  C27  N28    56.21  30.0  3
+ 04C  Var_15    H15  C38  C27  N28   176.07  30.0  3
+ 04C  Var_16    H16  C38  C27  N28   -63.69  30.0  3
+ 04C  Var_17    H30  C9   C8   N22   -62.50  30.0  3
+ 04C  Var_18    H32  C10  C9   C8     62.60  30.0  2
+ 04C  Var_19    H31  O21  C9   C8    -55.40  30.0  3
+ 04C  Var_20    H33  C11  C10  C9    -58.69  30.0  3
+ 04C  Var_21    H34  C11  C10  C9     62.26  30.0  3
+ 04C  Var_22    H35  C11  C10  C9   -178.61  30.0  3
+ 04C  Var_23    H36  C12  C10  C9    -47.26  30.0  3
+ 04C  Var_24    H37  C12  C10  C9     69.66  30.0  3
+ 04C  Var_25    H38  O13  C12  C10  -169.91  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

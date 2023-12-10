@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PMN  PMN  '3-({3-[(1S,4aS,6S,7S,9S,9aR)-1,6-dimethyl-2-oxo-1,2,5,6,7,8,9,9a-octahydro-6,9-epoxy-4a,7-methanobenzo[7]annulen-1-yl]propanoyl}amino)-2,4-dihydroxybenzoic acid'  ligand  58  32  .  2021-08-19  2021-08-19  
+ PMN  PMN  '3-({3-[(1S,4aS,6S,7S,9S,9aR)-1,6-dimethyl-2-oxo-1,2,5,6,7,8,9,9a-octahydro-6,9-epoxy-4a,7-methanobenzo[7]annulen-1-yl]propanoyl}amino)-2,4-dihydroxybenzoic acid'  ligand  58  32  .  2021-08-19  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PMN
@@ -302,29 +303,102 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PMN  CONST_01  C25  C24  C23  C22     0.00   0.0  0
- PMN  CONST_02  C25  C26  C27  C22     0.00   0.0  0
- PMN  CONST_03  C26  C27  C22  C23     0.00   0.0  0
- PMN  CONST_04  C26  C25  C24  C23     0.00   0.0  0
- PMN  CONST_05  C27  C22  C23  C24     0.00   0.0  0
- PMN  CONST_06  C27  C26  C25  C24     0.00   0.0  0
- PMN  CONST_07  C23  C24  C25  O30   180.00   0.0  0
- PMN  CONST_08  C27  C26  C25  O30   180.00   0.0  0
- PMN  CONST_09  C27  C22  C23  O31   180.00   0.0  0
- PMN  CONST_10  C25  C24  C23  O31   180.00   0.0  0
- PMN  CONST_11  C22  C23  C24  N28   180.00   0.0  0
- PMN  CONST_12  C26  C25  C24  N28   180.00   0.0  0
- PMN  CONST_13  C24  C23  C22  C21   180.00   0.0  0
- PMN  CONST_14  C26  C27  C22  C21   180.00   0.0  0
- PMN  CONST_15  H26  C26  C27  C22   180.00   0.0  0
- PMN  CONST_16  H27  C27  C22  C23   180.00   0.0  0
- PMN  CONST_20  C24  N28  C1   O20     0.00   0.0  0
- PMN  CONST_21  C24  N28  C1   C2    180.00   0.0  0
- PMN  Var_01    C7   C6   C5   C4     11.07  30.0  1
- PMN  Var_02    C8   C7   C6   C5      3.53  30.0  1
- PMN  Var_03    C23  C22  C21  O32     0.72  30.0  2
- PMN  Var_04    C4   C3   C2   C1   -176.78  30.0  3
- PMN  Var_05    C3   C2   C1   O20    69.68  30.0  3
+ PMN  CONST_01  C25   C24  C23  C22     0.00   0.0  0
+ PMN  CONST_02  C25   C26  C27  C22     0.00   0.0  0
+ PMN  CONST_03  C26   C27  C22  C23     0.00   0.0  0
+ PMN  CONST_04  C26   C25  C24  C23     0.00   0.0  0
+ PMN  CONST_05  C27   C22  C23  C24     0.00   0.0  0
+ PMN  CONST_06  C27   C26  C25  C24     0.00   0.0  0
+ PMN  CONST_07  C23   C24  C25  O30   180.00   0.0  0
+ PMN  CONST_08  C27   C26  C25  O30   180.00   0.0  0
+ PMN  CONST_09  C27   C22  C23  O31   180.00   0.0  0
+ PMN  CONST_10  C25   C24  C23  O31   180.00   0.0  0
+ PMN  CONST_11  C22   C23  C24  N28   180.00   0.0  0
+ PMN  CONST_12  C26   C25  C24  N28   180.00   0.0  0
+ PMN  CONST_13  C24   C23  C22  C21   180.00   0.0  0
+ PMN  CONST_14  C26   C27  C22  C21   180.00   0.0  0
+ PMN  CONST_15  H26   C26  C27  C22   180.00   0.0  0
+ PMN  CONST_16  H27   C27  C22  C23   180.00   0.0  0
+ PMN  CONST_17  C24   N28  C1   O20     0.00   0.0  0
+ PMN  CONST_18  C24   N28  C1   C2    180.00   0.0  0
+ PMN  Var_01    C7    C6   C5   C4     11.07  30.0  1
+ PMN  Var_02    C8    C7   C6   C5      3.53  30.0  1
+ PMN  Var_03    C23   C22  C21  O32     0.72  30.0  2
+ PMN  Var_04    C4    C3   C2   C1   -176.78  30.0  3
+ PMN  Var_05    C3    C2   C1   O20    69.68  30.0  3
+ PMN  Var_06    C4    C9   C10  O16   166.47  30.0  1
+ PMN  Var_07    C8    C9   C10  O16   -59.30  30.0  1
+ PMN  Var_08    C12   C11  C10  O16    51.26  30.0  1
+ PMN  Var_09    C11   C12  C15  O16     3.00  30.0  1
+ PMN  Var_10    C13   C12  C15  O16  -109.21  30.0  1
+ PMN  Var_11    C8    C14  C15  O16    75.34  30.0  3
+ PMN  Var_12    C7    C8   C9   C4    -42.04  30.0  1
+ PMN  Var_13    C13   C8   C9   C4     87.35  30.0  1
+ PMN  Var_14    C14   C8   C9   C4   -166.23  30.0  1
+ PMN  Var_15    C11   C10  C9   C4    -83.19  30.0  1
+ PMN  Var_16    C8    C9   C4   C5     54.12  30.0  1
+ PMN  Var_17    C10   C9   C4   C5   -174.36  30.0  1
+ PMN  Var_18    C9    C4   C5   C6    -37.95  30.0  1
+ PMN  Var_19    C9    C8   C7   C6     11.80  30.0  1
+ PMN  Var_20    C13   C8   C7   C6   -117.06  30.0  1
+ PMN  Var_21    C14   C8   C7   C6    132.22  30.0  1
+ PMN  Var_22    C10   C9   C8   C7   -177.60  30.0  1
+ PMN  Var_23    C12   C13  C8   C7   -172.15  30.0  3
+ PMN  Var_24    C15   C14  C8   C7    174.07  30.0  3
+ PMN  Var_25    C11   C10  C9   C8     51.04  30.0  1
+ PMN  Var_26    C11   C12  C13  C8    -77.66  30.0  3
+ PMN  Var_27    C15   C12  C13  C8     30.82  30.0  3
+ PMN  Var_28    C12   C15  C14  C8    -34.74  30.0  3
+ PMN  Var_29    C12   C13  C8   C9     59.79  30.0  3
+ PMN  Var_30    C15   C14  C8   C9    -63.01  30.0  3
+ PMN  Var_31    C15   O16  C10  C9     68.02  30.0  1
+ PMN  Var_32    C12   C11  C10  C9    -63.14  30.0  1
+ PMN  Var_33    C12   C15  O16  C10    30.09  30.0  1
+ PMN  Var_34    C14   C15  O16  C10   -79.54  30.0  1
+ PMN  Var_35    C13   C8   C9   C10   -48.22  30.0  1
+ PMN  Var_36    C14   C8   C9   C10    58.21  30.0  1
+ PMN  Var_37    C13   C12  C11  C10    78.07  30.0  1
+ PMN  Var_38    C15   C12  C11  C10   -31.86  30.0  1
+ PMN  Var_39    C15   O16  C10  C11   -51.76  30.0  1
+ PMN  Var_40    C14   C15  C12  C11   114.59  30.0  1
+ PMN  Var_41    C14   C8   C13  C12   -52.26  30.0  3
+ PMN  Var_42    C15   C14  C8   C13    53.81  30.0  3
+ PMN  Var_43    C14   C15  C12  C13     2.38  30.0  1
+ PMN  Var_44    C9    C4   C5   O19   146.82  30.0  1
+ PMN  Var_45    C6    C5   C4   C3   -159.34  30.0  1
+ PMN  Var_46    C8    C9   C4   C3    175.29  30.0  1
+ PMN  Var_47    C10   C9   C4   C3    -53.19  30.0  1
+ PMN  Var_48    C18   C4   C5   C6     85.92  30.0  1
+ PMN  Var_49    C18   C4   C9   C8    -62.14  30.0  1
+ PMN  Var_50    C17   C15  C14  C8   -162.86  30.0  3
+ PMN  Var_51    C17   C15  O16  C10   155.02  30.0  1
+ PMN  Var_52    C18   C4   C9   C10    69.38  30.0  1
+ PMN  Var_53    C17   C15  C12  C11  -117.69  30.0  1
+ PMN  Var_54    C17   C15  C12  C13   130.09  30.0  1
+ PMN  Var_55    H9    C9   C10  O16    51.63  30.0  1
+ PMN  Var_56    H111  C11  C10  O16   171.88  30.0  1
+ PMN  Var_57    H112  C11  C10  O16   -66.60  30.0  1
+ PMN  Var_58    H12   C12  C15  O16   126.62  30.0  1
+ PMN  Var_59    H141  C14  C15  O16   -46.20  30.0  3
+ PMN  Var_60    H142  C14  C15  O16  -167.68  30.0  3
+ PMN  Var_61    H10   C10  C9   C4     48.15  30.0  1
+ PMN  Var_62    H131  C13  C8   C7    -54.10  30.0  3
+ PMN  Var_63    H132  C13  C8   C7     66.39  30.0  3
+ PMN  Var_64    C3    C4   C5   O19    25.43  30.0  1
+ PMN  Var_65    C18   C4   C5   O19   -89.31  30.0  1
+ PMN  Var_66    C5    C4   C3   C2     66.82  30.0  3
+ PMN  Var_67    C9    C4   C3   C2    -52.36  30.0  3
+ PMN  Var_68    H171  C17  C15  O16    58.69  30.0  3
+ PMN  Var_69    H172  C17  C15  O16   178.23  30.0  3
+ PMN  Var_70    H173  C17  C15  O16   -62.20  30.0  3
+ PMN  Var_71    H31   C3   C4   C5    -55.71  30.0  1
+ PMN  Var_72    H32   C3   C4   C5   -170.09  30.0  1
+ PMN  Var_73    H181  C18  C4   C5   -177.72  30.0  3
+ PMN  Var_74    H182  C18  C4   C5    -55.64  30.0  3
+ PMN  Var_75    H183  C18  C4   C5     63.68  30.0  3
+ PMN  Var_76    HO31  O31  C23  C22    -0.40  30.0  2
+ PMN  Var_77    HO30  O30  C25  C24     0.66  30.0  2
+ PMN  Var_78    C18   C4   C3   C2    179.86  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

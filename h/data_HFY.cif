@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HFY  HFY  8-{[(2-chlorophenyl)methyl]amino}adenosine  ligand  47  28  .  2021-08-11  2021-08-11  
+ HFY  HFY  8-{[(2-chlorophenyl)methyl]amino}adenosine  ligand  47  28  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HFY
@@ -247,53 +248,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HFY  CONST_01  N3   C9   N    C5   180.00   0.0  0
- HFY  CONST_02  C6   C9   N    C5     0.00   0.0  0
- HFY  CONST_03  C9   C6   N1   C5     0.00   0.0  0
- HFY  CONST_04  C7   C6   N1   C5   180.00   0.0  0
- HFY  CONST_05  C8   N3   C9   C6     0.00   0.0  0
- HFY  CONST_06  C8   N2   C7   C6     0.00   0.0  0
- HFY  CONST_07  N    C5   N1   C6     0.00   0.0  0
- HFY  CONST_08  N3   C9   C6   N1   180.00   0.0  0
- HFY  CONST_09  N    C9   C6   N1     0.00   0.0  0
- HFY  CONST_10  N2   C7   C6   N1   180.00   0.0  0
- HFY  CONST_11  C9   N    C5   N1     0.00   0.0  0
- HFY  CONST_12  N3   C8   N2   C7     0.00   0.0  0
- HFY  CONST_13  N3   C9   C6   C7     0.00   0.0  0
- HFY  CONST_14  N    C9   C6   C7   180.00   0.0  0
- HFY  CONST_15  N    C9   N3   C8   180.00   0.0  0
- HFY  CONST_16  C9   N3   C8   N2     0.00   0.0  0
- HFY  CONST_17  C9   C6   C7   N2     0.00   0.0  0
- HFY  CONST_18  C14  C15  C16  C11    0.00   0.0  0
- HFY  CONST_19  C14  C13  C12  C11    0.00   0.0  0
- HFY  CONST_20  C15  C16  C11  C12    0.00   0.0  0
- HFY  CONST_21  C15  C14  C13  C12    0.00   0.0  0
- HFY  CONST_22  C16  C15  C14  C13    0.00   0.0  0
- HFY  CONST_23  C16  C11  C12  C13    0.00   0.0  0
- HFY  CONST_24  C    N    C9   C6   180.00   0.0  0
- HFY  CONST_25  C    N    C5   N1   180.00   0.0  0
- HFY  CONST_26  C    N    C9   N3     0.00   0.0  0
- HFY  CONST_27  N5   C5   N1   C6   180.00   0.0  0
- HFY  CONST_28  N4   C7   C6   N1     0.00   0.0  0
- HFY  CONST_29  N4   C7   N2   C8   180.00   0.0  0
- HFY  CONST_30  N5   C5   N    C9   180.00   0.0  0
- HFY  CONST_31  N4   C7   C6   C9   180.00   0.0  0
- HFY  CONST_32  C15  C16  C11  C10  180.00   0.0  0
- HFY  CONST_33  C13  C12  C11  C10  180.00   0.0  0
- HFY  CONST_34  CL   C16  C11  C12  180.00   0.0  0
- HFY  CONST_35  CL   C16  C15  C14  180.00   0.0  0
- HFY  CONST_36  C    N    C5   N5     0.00   0.0  0
- HFY  CONST_37  H9   C8   N2   C7   180.00   0.0  0
- HFY  CONST_38  H18  C15  C16  C11  180.00   0.0  0
- HFY  CONST_39  H16  C13  C12  C11  180.00   0.0  0
- HFY  CONST_40  H17  C14  C13  C12  180.00   0.0  0
- HFY  CONST_41  H15  C12  C13  C14  180.00   0.0  0
- HFY  CONST_42  C10  N5   C5   N1     0.00   0.0  0
- HFY  CONST_43  N    C5   N5   C10  180.00   0.0  0
- HFY  CONST_44  H11  N4   C7   C6     0.00   0.0  0
- HFY  CONST_45  H10  N4   C7   C6   180.00   0.0  0
- HFY  Var_01    C11  C10  N5   C5   139.03  30.0  3
- HFY  Var_02    N5   C10  C11  C12  110.87  30.0  2
+ HFY  CONST_01  N3   C9   N    C5    180.00   0.0  0
+ HFY  CONST_02  C6   C9   N    C5      0.00   0.0  0
+ HFY  CONST_03  C9   C6   N1   C5      0.00   0.0  0
+ HFY  CONST_04  C7   C6   N1   C5    180.00   0.0  0
+ HFY  CONST_05  C8   N3   C9   C6      0.00   0.0  0
+ HFY  CONST_06  C8   N2   C7   C6      0.00   0.0  0
+ HFY  CONST_07  N    C5   N1   C6      0.00   0.0  0
+ HFY  CONST_08  N3   C9   C6   N1    180.00   0.0  0
+ HFY  CONST_09  N    C9   C6   N1      0.00   0.0  0
+ HFY  CONST_10  N2   C7   C6   N1    180.00   0.0  0
+ HFY  CONST_11  C9   N    C5   N1      0.00   0.0  0
+ HFY  CONST_12  N3   C8   N2   C7      0.00   0.0  0
+ HFY  CONST_13  N3   C9   C6   C7      0.00   0.0  0
+ HFY  CONST_14  N    C9   C6   C7    180.00   0.0  0
+ HFY  CONST_15  N    C9   N3   C8    180.00   0.0  0
+ HFY  CONST_16  C9   N3   C8   N2      0.00   0.0  0
+ HFY  CONST_17  C9   C6   C7   N2      0.00   0.0  0
+ HFY  CONST_18  C14  C15  C16  C11     0.00   0.0  0
+ HFY  CONST_19  C14  C13  C12  C11     0.00   0.0  0
+ HFY  CONST_20  C15  C16  C11  C12     0.00   0.0  0
+ HFY  CONST_21  C15  C14  C13  C12     0.00   0.0  0
+ HFY  CONST_22  C16  C15  C14  C13     0.00   0.0  0
+ HFY  CONST_23  C16  C11  C12  C13     0.00   0.0  0
+ HFY  CONST_24  C    N    C9   C6    180.00   0.0  0
+ HFY  CONST_25  C    N    C5   N1    180.00   0.0  0
+ HFY  CONST_26  C    N    C9   N3      0.00   0.0  0
+ HFY  CONST_27  N5   C5   N1   C6    180.00   0.0  0
+ HFY  CONST_28  N4   C7   C6   N1      0.00   0.0  0
+ HFY  CONST_29  N4   C7   N2   C8    180.00   0.0  0
+ HFY  CONST_30  N5   C5   N    C9    180.00   0.0  0
+ HFY  CONST_31  N4   C7   C6   C9    180.00   0.0  0
+ HFY  CONST_32  C15  C16  C11  C10   180.00   0.0  0
+ HFY  CONST_33  C13  C12  C11  C10   180.00   0.0  0
+ HFY  CONST_34  CL   C16  C11  C12   180.00   0.0  0
+ HFY  CONST_35  CL   C16  C15  C14   180.00   0.0  0
+ HFY  CONST_36  C    N    C5   N5      0.00   0.0  0
+ HFY  CONST_37  H9   C8   N2   C7    180.00   0.0  0
+ HFY  CONST_38  H18  C15  C16  C11   180.00   0.0  0
+ HFY  CONST_39  H16  C13  C12  C11   180.00   0.0  0
+ HFY  CONST_40  H17  C14  C13  C12   180.00   0.0  0
+ HFY  CONST_41  H15  C12  C13  C14   180.00   0.0  0
+ HFY  CONST_42  C10  N5   C5   N1      0.00   0.0  0
+ HFY  CONST_43  N    C5   N5   C10   180.00   0.0  0
+ HFY  CONST_44  H11  N4   C7   C6      0.00   0.0  0
+ HFY  CONST_45  H10  N4   C7   C6    180.00   0.0  0
+ HFY  Var_01    C11  C10  N5   C5    139.03  30.0  3
+ HFY  Var_02    N5   C10  C11  C12   110.87  30.0  2
+ HFY  Var_03    C1   C    N    C5    131.85  30.0  2
+ HFY  Var_04    O    C    N    C5   -107.05  30.0  2
+ HFY  Var_05    C1   C    N    C9    -51.17  30.0  2
+ HFY  Var_06    O    C    N    C9     69.93  30.0  2
+ HFY  Var_07    C2   C1   C    N     109.20  30.0  1
+ HFY  Var_08    C3   O    C    N    -133.99  30.0  1
+ HFY  Var_09    C3   C2   C1   C      27.14  30.0  1
+ HFY  Var_10    C2   C3   O    C      26.33  30.0  1
+ HFY  Var_11    O    C3   C2   C1    -32.85  30.0  1
+ HFY  Var_12    C3   O    C    C1     -8.34  30.0  1
+ HFY  Var_13    O    C    C1   C2    -12.81  30.0  1
+ HFY  Var_14    C3   C2   C1   O3    -87.40  30.0  1
+ HFY  Var_15    N    C    C1   O3   -133.95  30.0  1
+ HFY  Var_16    O    C    C1   O3    104.03  30.0  1
+ HFY  Var_17    C1   C2   C3   C4   -152.49  30.0  1
+ HFY  Var_18    C    O    C3   C4    147.80  30.0  1
+ HFY  Var_19    O2   C2   C1   C     145.82  30.0  1
+ HFY  Var_20    O    C3   C2   O2   -153.38  30.0  1
+ HFY  Var_21    H    C    N    C5     12.74  30.0  2
+ HFY  Var_22    H1   C1   C    N     -11.67  30.0  1
+ HFY  Var_23    H2   C2   C1   C     -89.21  30.0  1
+ HFY  Var_24    H3   C3   O    C     -91.35  30.0  1
+ HFY  Var_25    O2   C2   C1   O3     31.28  30.0  1
+ HFY  Var_26    O2   C2   C3   C4     86.98  30.0  1
+ HFY  Var_27    O1   C4   C3   C2   -176.27  30.0  3
+ HFY  Var_28    O1   C4   C3   O      66.91  30.0  3
+ HFY  Var_29    H8   O3   C1   C    -146.02  30.0  3
+ HFY  Var_30    H7   O2   C2   C1     92.32  30.0  3
+ HFY  Var_31    H4   C4   C3   C2    -54.60  30.0  3
+ HFY  Var_32    H5   C4   C3   C2     61.06  30.0  3
+ HFY  Var_33    H6   O1   C4   C3    178.96  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

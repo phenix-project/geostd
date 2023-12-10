@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ULK  ULK  ~{N}2-methyl-~{N}4-[(1~{S},2~{S})-2-methylcyclopropyl]-6-[(~{S})-oxidanyl(phenyl)methyl]pyridine-2,4-dicarboxamide  ligand  46  25  .  2022-08-11  2023-02-15
+ ULK  ULK  ~{N}2-methyl-~{N}4-[(1~{S},2~{S})-2-methylcyclopropyl]-6-[(~{S})-oxidanyl(phenyl)methyl]pyridine-2,4-dicarboxamide  ligand  46  25  .  2022-08-11  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_ULK
@@ -242,46 +243,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ULK  CONST_01  C16  C17  C18  C13    0.00   0.0  0
- ULK  CONST_02  C16  C15  C14  C13    0.00   0.0  0
- ULK  CONST_03  C18  C13  C14  C15    0.00   0.0  0
- ULK  CONST_04  C18  C17  C16  C15    0.00   0.0  0
- ULK  CONST_05  C14  C13  C18  C17    0.00   0.0  0
- ULK  CONST_06  C14  C15  C16  C17    0.00   0.0  0
- ULK  CONST_07  C08  C07  C06  C05    0.00   0.0  0
- ULK  CONST_08  C08  C09  N10  C05    0.00   0.0  0
- ULK  CONST_09  C09  N10  C05  C06    0.00   0.0  0
- ULK  CONST_10  C09  C08  C07  C06    0.00   0.0  0
- ULK  CONST_11  N10  C05  C06  C07    0.00   0.0  0
- ULK  CONST_12  N10  C09  C08  C07    0.00   0.0  0
- ULK  CONST_13  C11  C13  C14  C15  180.00   0.0  0
- ULK  CONST_14  C11  C13  C18  C17  180.00   0.0  0
- ULK  CONST_15  C07  C06  C05  C03  180.00   0.0  0
- ULK  CONST_16  C09  N10  C05  C03  180.00   0.0  0
- ULK  CONST_17  C19  C07  C06  C05  180.00   0.0  0
- ULK  CONST_18  C11  C09  N10  C05  180.00   0.0  0
- ULK  CONST_19  C11  C09  C08  C07  180.00   0.0  0
- ULK  CONST_20  C19  C07  C08  C09  180.00   0.0  0
- ULK  CONST_21  H2   C17  C18  C13  180.00   0.0  0
- ULK  CONST_22  H1   C15  C14  C13  180.00   0.0  0
- ULK  CONST_23  H10  C08  C07  C06  180.00   0.0  0
- ULK  CONST_24  H9   C06  C07  C08  180.00   0.0  0
- ULK  CONST_25  H15  C18  C13  C14  180.00   0.0  0
- ULK  CONST_26  H14  C16  C15  C14  180.00   0.0  0
- ULK  CONST_27  H13  C14  C15  C16  180.00   0.0  0
- ULK  CONST_28  C07  C19  N21  C22  180.00   0.0  0
- ULK  CONST_29  O20  C19  N21  C22    0.00   0.0  0
- ULK  CONST_30  C05  C03  N02  C01  180.00   0.0  0
- ULK  CONST_31  H8   N02  C03  C05    0.00   0.0  0
- ULK  CONST_32  H16  N21  C19  C07    0.00   0.0  0
- ULK  CONST_33  O04  C03  N02  C01    0.00   0.0  0
- ULK  Var_01    C25  C24  C23  C22  109.19  30.0  1
- ULK  Var_02    N21  C22  C23  C24  107.30  30.0  1
- ULK  Var_03    C19  N21  C22  C24  143.93  30.0  1
- ULK  Var_04    C06  C05  C03  N02  179.77  30.0  2
- ULK  Var_05    N21  C19  C07  C06  -34.94  30.0  2
- ULK  Var_06    H19  C25  C24  C22  155.30  30.0  3
- ULK  Var_07    H5   C01  N02  C03  178.73  30.0  3
+ ULK  CONST_01  C16  C17  C18  C13     0.00   0.0  0
+ ULK  CONST_02  C16  C15  C14  C13     0.00   0.0  0
+ ULK  CONST_03  C18  C13  C14  C15     0.00   0.0  0
+ ULK  CONST_04  C18  C17  C16  C15     0.00   0.0  0
+ ULK  CONST_05  C14  C13  C18  C17     0.00   0.0  0
+ ULK  CONST_06  C14  C15  C16  C17     0.00   0.0  0
+ ULK  CONST_07  C08  C07  C06  C05     0.00   0.0  0
+ ULK  CONST_08  C08  C09  N10  C05     0.00   0.0  0
+ ULK  CONST_09  C09  N10  C05  C06     0.00   0.0  0
+ ULK  CONST_10  C09  C08  C07  C06     0.00   0.0  0
+ ULK  CONST_11  N10  C05  C06  C07     0.00   0.0  0
+ ULK  CONST_12  N10  C09  C08  C07     0.00   0.0  0
+ ULK  CONST_13  C11  C13  C14  C15   180.00   0.0  0
+ ULK  CONST_14  C11  C13  C18  C17   180.00   0.0  0
+ ULK  CONST_15  C07  C06  C05  C03   180.00   0.0  0
+ ULK  CONST_16  C09  N10  C05  C03   180.00   0.0  0
+ ULK  CONST_17  C19  C07  C06  C05   180.00   0.0  0
+ ULK  CONST_18  C11  C09  N10  C05   180.00   0.0  0
+ ULK  CONST_19  C11  C09  C08  C07   180.00   0.0  0
+ ULK  CONST_20  C19  C07  C08  C09   180.00   0.0  0
+ ULK  CONST_21  H2   C17  C18  C13   180.00   0.0  0
+ ULK  CONST_22  H1   C15  C14  C13   180.00   0.0  0
+ ULK  CONST_23  H10  C08  C07  C06   180.00   0.0  0
+ ULK  CONST_24  H9   C06  C07  C08   180.00   0.0  0
+ ULK  CONST_25  H15  C18  C13  C14   180.00   0.0  0
+ ULK  CONST_26  H14  C16  C15  C14   180.00   0.0  0
+ ULK  CONST_27  H13  C14  C15  C16   180.00   0.0  0
+ ULK  CONST_28  C07  C19  N21  C22   180.00   0.0  0
+ ULK  CONST_29  O20  C19  N21  C22     0.00   0.0  0
+ ULK  CONST_30  C05  C03  N02  C01   180.00   0.0  0
+ ULK  CONST_31  H8   N02  C03  C05     0.00   0.0  0
+ ULK  CONST_32  H16  N21  C19  C07     0.00   0.0  0
+ ULK  CONST_33  O04  C03  N02  C01     0.00   0.0  0
+ ULK  Var_01    C25  C24  C23  C22   109.19  30.0  1
+ ULK  Var_02    N21  C22  C23  C24   107.30  30.0  1
+ ULK  Var_03    C19  N21  C22  C24   143.93  30.0  1
+ ULK  Var_04    C06  C05  C03  N02   179.77  30.0  2
+ ULK  Var_05    N21  C19  C07  C06   -34.94  30.0  2
+ ULK  Var_06    H19  C25  C24  C22   155.30  30.0  3
+ ULK  Var_07    H5   C01  N02  C03   178.73  30.0  3
+ ULK  Var_08    N10  C09  C11  C13    90.71  30.0  2
+ ULK  Var_09    C08  C09  C11  C13   -86.56  30.0  2
+ ULK  Var_10    C18  C13  C11  C09   -75.84  30.0  2
+ ULK  Var_11    C14  C13  C11  C09   102.99  30.0  2
+ ULK  Var_12    O12  C11  C09  C08   150.48  30.0  2
+ ULK  Var_13    O12  C11  C09  N10   -32.26  30.0  2
+ ULK  Var_14    C18  C13  C11  O12    44.24  30.0  2
+ ULK  Var_15    C14  C13  C11  O12  -136.93  30.0  2
+ ULK  Var_16    C25  C24  C22  N21   139.69  30.0  1
+ ULK  Var_17    H11  C11  C09  C08    29.87  30.0  2
+ ULK  Var_18    H12  O12  C11  C13    58.25  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

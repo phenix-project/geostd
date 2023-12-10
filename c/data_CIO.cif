@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CIO  CIO  'cis-4-cyano-4-[3-(cyclopentyloxy)-4-methoxyphenyl]cyclohexanecarboxylic acid'  ligand  49  25  .  2022-03-15  2022-03-15
+ CIO  CIO  'cis-4-cyano-4-[3-(cyclopentyloxy)-4-methoxyphenyl]cyclohexanecarboxylic acid'  ligand  49  25  .  2022-03-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CIO
@@ -261,28 +262,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CIO  CONST_01  C10   C9   C8   C7     0.00   0.0  0
- CIO  CONST_02  C10   C13  C20  C7     0.00   0.0  0
- CIO  CONST_03  C13   C20  C7   C8     0.00   0.0  0
- CIO  CONST_04  C13   C10  C9   C8     0.00   0.0  0
- CIO  CONST_05  C20   C7   C8   C9     0.00   0.0  0
- CIO  CONST_06  C20   C13  C10  C9     0.00   0.0  0
- CIO  CONST_07  C9    C8   C7   C1   180.00   0.0  0
- CIO  CONST_08  C13   C20  C7   C1   180.00   0.0  0
- CIO  CONST_09  O14   C13  C20  C7   180.00   0.0  0
- CIO  CONST_10  O11   C10  C9   C8   180.00   0.0  0
- CIO  CONST_11  O14   C13  C10  C9   180.00   0.0  0
- CIO  CONST_12  C20   C13  C10  O11  180.00   0.0  0
- CIO  CONST_13  H8    C8   C7   C1     0.00   0.0  0
- CIO  CONST_14  H20   C20  C7   C1     0.00   0.0  0
- CIO  CONST_15  H9    C9   C8   C7   180.00   0.0  0
- CIO  Var_01    C1    C6   C5   C4   -56.87  30.0  1
- CIO  Var_02    C1    C2   C3   C4    54.77  30.0  1
- CIO  Var_03    C18   C17  C16  C15  -22.80  30.0  1
- CIO  Var_04    C17   C18  C19  C15   26.17  30.0  1
- CIO  Var_05    C19   C18  C17  C16   -1.99  30.0  1
- CIO  Var_06    C13   C10  O11  C12  179.42  30.0  2
- CIO  Var_07    H121  C12  O11  C10  179.69  30.0  3
+ CIO  CONST_01  C10   C9   C8   C7      0.00   0.0  0
+ CIO  CONST_02  C10   C13  C20  C7      0.00   0.0  0
+ CIO  CONST_03  C13   C20  C7   C8      0.00   0.0  0
+ CIO  CONST_04  C13   C10  C9   C8      0.00   0.0  0
+ CIO  CONST_05  C20   C7   C8   C9      0.00   0.0  0
+ CIO  CONST_06  C20   C13  C10  C9      0.00   0.0  0
+ CIO  CONST_07  C9    C8   C7   C1    180.00   0.0  0
+ CIO  CONST_08  C13   C20  C7   C1    180.00   0.0  0
+ CIO  CONST_09  O14   C13  C20  C7    180.00   0.0  0
+ CIO  CONST_10  O11   C10  C9   C8    180.00   0.0  0
+ CIO  CONST_11  O14   C13  C10  C9    180.00   0.0  0
+ CIO  CONST_12  C20   C13  C10  O11   180.00   0.0  0
+ CIO  CONST_13  H8    C8   C7   C1      0.00   0.0  0
+ CIO  CONST_14  H20   C20  C7   C1      0.00   0.0  0
+ CIO  CONST_15  H9    C9   C8   C7    180.00   0.0  0
+ CIO  Var_01    C1    C6   C5   C4    -56.87  30.0  1
+ CIO  Var_02    C1    C2   C3   C4     54.77  30.0  1
+ CIO  Var_03    C18   C17  C16  C15   -22.80  30.0  1
+ CIO  Var_04    C17   C18  C19  C15    26.17  30.0  1
+ CIO  Var_05    C19   C18  C17  C16    -1.99  30.0  1
+ CIO  Var_06    C13   C10  O11  C12   179.42  30.0  2
+ CIO  Var_07    H121  C12  O11  C10   179.69  30.0  3
+ CIO  Var_08    C2    C3   C4   C5    -54.32  30.0  1
+ CIO  Var_09    C2    C1   C6   C5     54.07  30.0  1
+ CIO  Var_10    C7    C1   C6   C5    177.55  30.0  1
+ CIO  Var_11    C3    C4   C5   C6     55.24  30.0  1
+ CIO  Var_12    C3    C2   C1   C6    -53.14  30.0  1
+ CIO  Var_13    C8    C7   C1   C6     -8.37  30.0  2
+ CIO  Var_14    C20   C7   C1   C6    172.79  30.0  2
+ CIO  Var_15    C7    C1   C2   C3   -178.72  30.0  1
+ CIO  Var_16    C8    C7   C1   C2    114.27  30.0  2
+ CIO  Var_17    C20   C7   C1   C2    -64.57  30.0  2
+ CIO  Var_18    C18   C19  C15  C16   -40.34  30.0  1
+ CIO  Var_19    C19   C15  C16  C17    38.95  30.0  1
+ CIO  Var_20    C6    C5   C4   C23  -178.52  30.0  1
+ CIO  Var_21    C2    C3   C4   C23   178.14  30.0  1
+ CIO  Var_22    C21   C1   C6   C5    -63.65  30.0  1
+ CIO  Var_23    C21   C1   C2   C3     63.99  30.0  1
+ CIO  Var_24    C8    C7   C1   C21  -127.50  30.0  2
+ CIO  Var_25    C20   C7   C1   C21    53.65  30.0  2
+ CIO  Var_26    C15   O14  C13  C10   174.51  30.0  2
+ CIO  Var_27    C16   C15  O14  C13   -73.57  30.0  3
+ CIO  Var_28    C19   C15  O14  C13   175.36  30.0  3
+ CIO  Var_29    C15   O14  C13  C20    -6.47  30.0  2
+ CIO  Var_30    C17   C16  C15  O14   -74.49  30.0  1
+ CIO  Var_31    C18   C19  C15  O14    76.84  30.0  1
+ CIO  Var_32    H31   C3   C4   C5   -175.78  30.0  1
+ CIO  Var_33    H32   C3   C4   C5     67.59  30.0  1
+ CIO  Var_34    H4    C4   C5   C6    -60.88  30.0  1
+ CIO  Var_35    H51   C5   C4   C3    -67.60  30.0  1
+ CIO  Var_36    H52   C5   C4   C3    175.90  30.0  1
+ CIO  Var_37    H191  C19  C15  C16    77.45  30.0  1
+ CIO  Var_38    H192  C19  C15  C16  -164.47  30.0  1
+ CIO  Var_39    H15   C15  C16  C17   160.45  30.0  1
+ CIO  Var_40    C5    C4   C23  O25  -172.62  30.0  2
+ CIO  Var_41    C3    C4   C23  O25   -47.09  30.0  2
+ CIO  Var_42    C5    C4   C23  O24     8.29  30.0  2
+ CIO  Var_43    C3    C4   C23  O24   133.82  30.0  2
+ CIO  Var_44    N22   C21  C1   C6    151.16  30.0  3
+ CIO  Var_45    N22   C21  C1   C2     33.40  30.0  3
+ CIO  Var_46    C7    C1   C21  N22   -85.86  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

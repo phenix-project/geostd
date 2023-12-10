@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MHZ  MHZ  5'-deoxy-5'-[(3-hydrazinopropyl)(methyl)amino]adenosine  ligand  49  25  .  2021-08-14  2021-08-14  
+ MHZ  MHZ  5'-deoxy-5'-[(3-hydrazinopropyl)(methyl)amino]adenosine  ligand  49  25  .  2021-08-14  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_MHZ
@@ -255,40 +256,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MHZ  CONST_01  C2    N3   C4  N9    180.00   0.0  0
- MHZ  CONST_02  C6    C5   C4  N9    180.00   0.0  0
- MHZ  CONST_03  N7    C5   C4  N9      0.00   0.0  0
- MHZ  CONST_04  C5    N7   C8  N9      0.00   0.0  0
- MHZ  CONST_05  N7    C8   N9  C4      0.00   0.0  0
- MHZ  CONST_06  N1    C2   N3  C4      0.00   0.0  0
- MHZ  CONST_07  N1    C6   C5  C4      0.00   0.0  0
- MHZ  CONST_08  C8    N7   C5  C4      0.00   0.0  0
- MHZ  CONST_09  C8    N9   C4  N3    180.00   0.0  0
- MHZ  CONST_10  C6    C5   C4  N3      0.00   0.0  0
- MHZ  CONST_11  N7    C5   C4  N3    180.00   0.0  0
- MHZ  CONST_12  C6    N1   C2  N3      0.00   0.0  0
- MHZ  CONST_13  C5    C4   N3  C2      0.00   0.0  0
- MHZ  CONST_14  C5    C6   N1  C2      0.00   0.0  0
- MHZ  CONST_15  N7    C5   C6  N1    180.00   0.0  0
- MHZ  CONST_16  C8    N7   C5  C6    180.00   0.0  0
- MHZ  CONST_17  C8    N9   C4  C5      0.00   0.0  0
- MHZ  CONST_18  N3    C4   N9  C1'     0.00   0.0  0
- MHZ  CONST_19  C5    C4   N9  C1'   180.00   0.0  0
- MHZ  CONST_20  N7    C8   N9  C1'   180.00   0.0  0
- MHZ  CONST_21  N6    C6   C5  C4    180.00   0.0  0
- MHZ  CONST_22  N6    C6   N1  C2    180.00   0.0  0
- MHZ  CONST_23  N7    C5   C6  N6      0.00   0.0  0
- MHZ  CONST_24  H8    C8   N9  C1'     0.00   0.0  0
- MHZ  CONST_25  H2    C2   N3  C4    180.00   0.0  0
- MHZ  CONST_26  HN61  N6   C6  N1      0.00   0.0  0
- MHZ  CONST_27  HN62  N6   C6  N1    180.00   0.0  0
- MHZ  Var_01    C4'   C5'  ND  CG   -172.28  30.0  3
- MHZ  Var_02    CC    CB   NA  N    -175.35  30.0  3
- MHZ  Var_03    CG    CC   CB  NA    179.47  30.0  3
- MHZ  Var_04    ND    CG   CC  CB   -175.00  30.0  3
- MHZ  Var_05    CE    ND   CG  CC    -70.31  30.0  3
- MHZ  Var_06    HN1   N    NA  CB    173.16  30.0  2
- MHZ  Var_07    HE1   CE   ND  CG    174.03  30.0  3
+ MHZ  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ MHZ  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ MHZ  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ MHZ  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ MHZ  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ MHZ  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ MHZ  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ MHZ  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ MHZ  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ MHZ  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ MHZ  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ MHZ  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ MHZ  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ MHZ  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ MHZ  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ MHZ  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ MHZ  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ MHZ  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
+ MHZ  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ MHZ  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ MHZ  CONST_21  N6    C6   C5   C4    180.00   0.0  0
+ MHZ  CONST_22  N6    C6   N1   C2    180.00   0.0  0
+ MHZ  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ MHZ  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ MHZ  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ MHZ  CONST_26  HN61  N6   C6   N1      0.00   0.0  0
+ MHZ  CONST_27  HN62  N6   C6   N1    180.00   0.0  0
+ MHZ  Var_01    C4'   C5'  ND   CG   -172.28  30.0  3
+ MHZ  Var_02    CC    CB   NA   N    -175.35  30.0  3
+ MHZ  Var_03    CG    CC   CB   NA    179.47  30.0  3
+ MHZ  Var_04    ND    CG   CC   CB   -175.00  30.0  3
+ MHZ  Var_05    CE    ND   CG   CC    -70.31  30.0  3
+ MHZ  Var_06    HN1   N    NA   CB    173.16  30.0  2
+ MHZ  Var_07    HE1   CE   ND   CG    174.03  30.0  3
+ MHZ  Var_08    N9    C1'  O4'  C4'  -121.98  30.0  1
+ MHZ  Var_09    C2'   C1'  O4'  C4'     0.49  30.0  1
+ MHZ  Var_10    C1'   C2'  C3'  C4'   -35.27  30.0  1
+ MHZ  Var_11    C2'   C3'  C4'  O4'    36.66  30.0  1
+ MHZ  Var_12    C4    N9   C1'  O4'  -156.36  30.0  2
+ MHZ  Var_13    C8    N9   C1'  O4'    26.72  30.0  2
+ MHZ  Var_14    C3'   C2'  C1'  O4'    22.66  30.0  1
+ MHZ  Var_15    C3'   C4'  O4'  C1'   -23.96  30.0  1
+ MHZ  Var_16    C3'   C2'  C1'  N9    142.41  30.0  1
+ MHZ  Var_17    C2'   C1'  N9   C4     84.98  30.0  2
+ MHZ  Var_18    C2'   C1'  N9   C8    -91.94  30.0  2
+ MHZ  Var_19    C1'   O4'  C4'  C5'    96.89  30.0  1
+ MHZ  Var_20    C2'   C3'  C4'  C5'   -85.17  30.0  1
+ MHZ  Var_21    O2'   C2'  C3'  C4'  -154.06  30.0  1
+ MHZ  Var_22    O3'   C3'  C4'  O4'   -80.11  30.0  1
+ MHZ  Var_23    O2'   C2'  C1'  O4'   144.31  30.0  1
+ MHZ  Var_24    O3'   C3'  C2'  C1'    80.09  30.0  1
+ MHZ  Var_25    O2'   C2'  C1'  N9    -95.94  30.0  1
+ MHZ  Var_26    H1'   C1'  O4'  C4'   120.73  30.0  1
+ MHZ  Var_27    H2'   C2'  C3'  C4'    80.57  30.0  1
+ MHZ  Var_28    H3'   C3'  C4'  O4'   155.59  30.0  1
+ MHZ  Var_29    H4'   C4'  O4'  C1'  -141.86  30.0  1
+ MHZ  Var_30    O4'   C4'  C5'  ND     46.98  30.0  3
+ MHZ  Var_31    C3'   C4'  C5'  ND    164.01  30.0  3
+ MHZ  Var_32    O3'   C3'  C4'  C5'   158.06  30.0  1
+ MHZ  Var_33    O3'   C3'  C2'  O2'   -38.70  30.0  1
+ MHZ  Var_34    HO3'  O3'  C3'  C4'   154.88  30.0  3
+ MHZ  Var_35    H5'1  C5'  C4'  O4'   -73.76  30.0  3
+ MHZ  Var_36    H5'2  C5'  C4'  O4'   171.98  30.0  3
+ MHZ  Var_37    HO2'  O2'  C2'  C1'   156.91  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

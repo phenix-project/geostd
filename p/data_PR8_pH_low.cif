@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PR8  PR8  5'-O-[(R)-hydroxy{[(2S)-pyrrolidin-2-ylcarbonyl]oxy}phosphoryl]adenosine  ligand  51  30  .  2022-11-17  2022-11-17
+ PR8  PR8  5'-O-[(R)-hydroxy{[(2S)-pyrrolidin-2-ylcarbonyl]oxy}phosphoryl]adenosine  ligand  51  30  .  2022-11-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PR8
@@ -266,39 +267,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PR8  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- PR8  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- PR8  CONST_03  N7    C5   C6   N1   180.00   0.0  0
- PR8  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- PR8  CONST_05  N9    C4   N3   C2   180.00   0.0  0
- PR8  CONST_06  C5    C4   N3   C2     0.00   0.0  0
- PR8  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- PR8  CONST_08  C8    N9   C4   N3   180.00   0.0  0
- PR8  CONST_09  C6    C5   C4   N3     0.00   0.0  0
- PR8  CONST_10  N7    C5   C4   N3   180.00   0.0  0
- PR8  CONST_11  N7    C8   N9   C4     0.00   0.0  0
- PR8  CONST_12  C8    N7   C5   C4     0.00   0.0  0
- PR8  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- PR8  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- PR8  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- PR8  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- PR8  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- PR8  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- PR8  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- PR8  CONST_20  C1'   N9   C8   N7   180.00   0.0  0
- PR8  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- PR8  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- PR8  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- PR8  CONST_24  H2    C2   N3   C4   180.00   0.0  0
- PR8  CONST_25  H8    C8   N9   C4   180.00   0.0  0
- PR8  CONST_26  HN6   N6   C6   N1     0.00   0.0  0
- PR8  CONST_27  HN6A  N6   C6   N1   180.00   0.0  0
- PR8  Var_01    CB    CG   CD   N     34.56  30.0  1
- PR8  Var_02    CG    CD   N    CA   -17.64  30.0  1
- PR8  Var_03    CD    CG   CB   CA   -37.60  30.0  1
- PR8  Var_04    C4'   C5'  O5'  P   -104.56  30.0  1
- PR8  Var_05    CA    C    O10  P    172.77  30.0  3
- PR8  Var_06    O2P   P    O10  C   -178.95  30.0  2
+ PR8  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ PR8  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ PR8  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ PR8  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ PR8  CONST_05  N9    C4   N3   C2    180.00   0.0  0
+ PR8  CONST_06  C5    C4   N3   C2      0.00   0.0  0
+ PR8  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ PR8  CONST_08  C8    N9   C4   N3    180.00   0.0  0
+ PR8  CONST_09  C6    C5   C4   N3      0.00   0.0  0
+ PR8  CONST_10  N7    C5   C4   N3    180.00   0.0  0
+ PR8  CONST_11  N7    C8   N9   C4      0.00   0.0  0
+ PR8  CONST_12  C8    N7   C5   C4      0.00   0.0  0
+ PR8  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ PR8  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ PR8  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ PR8  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ PR8  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ PR8  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ PR8  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ PR8  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ PR8  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ PR8  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ PR8  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ PR8  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ PR8  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ PR8  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ PR8  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ PR8  Var_01    CB    CG   CD   N      34.56  30.0  1
+ PR8  Var_02    CG    CD   N    CA    -17.64  30.0  1
+ PR8  Var_03    CD    CG   CB   CA    -37.60  30.0  1
+ PR8  Var_04    C4'   C5'  O5'  P    -104.56  30.0  1
+ PR8  Var_05    CA    C    O10  P     172.77  30.0  3
+ PR8  Var_06    O2P   P    O10  C    -178.95  30.0  2
+ PR8  Var_07    CG    CB   CA   N      27.67  30.0  1
+ PR8  Var_08    C2'   C1'  N9   C4     83.73  30.0  1
+ PR8  Var_09    O4'   C1'  N9   C4   -157.97  30.0  1
+ PR8  Var_10    C2'   C1'  N9   C8    -95.68  30.0  1
+ PR8  Var_11    O4'   C1'  N9   C8     22.62  30.0  1
+ PR8  Var_12    C3'   C2'  C1'  N9     92.50  30.0  1
+ PR8  Var_13    C4'   O4'  C1'  N9   -119.54  30.0  1
+ PR8  Var_14    CD    N    CA   CB     -6.41  30.0  1
+ PR8  Var_15    C4'   C3'  C2'  C1'    39.20  30.0  1
+ PR8  Var_16    C3'   C4'  O4'  C1'    24.05  30.0  1
+ PR8  Var_17    C4'   O4'  C1'  C2'     1.80  30.0  1
+ PR8  Var_18    O4'   C4'  C3'  C2'   -39.66  30.0  1
+ PR8  Var_19    O4'   C1'  C2'  C3'   -26.68  30.0  1
+ PR8  Var_20    CD    N    CA   C     111.99  30.0  1
+ PR8  Var_21    CG    CB   CA   C     -91.69  30.0  1
+ PR8  Var_22    O2'   C2'  C1'  N9   -149.91  30.0  1
+ PR8  Var_23    O3'   C3'  C2'  C1'   161.87  30.0  1
+ PR8  Var_24    C5'   C4'  O4'  C1'   150.65  30.0  1
+ PR8  Var_25    C5'   C4'  C3'  C2'  -162.08  30.0  1
+ PR8  Var_26    O4'   C1'  C2'  O2'    90.90  30.0  1
+ PR8  Var_27    C4'   C3'  C2'  O2'   -74.58  30.0  1
+ PR8  Var_28    O4'   C4'  C3'  O3'  -161.02  30.0  1
+ PR8  Var_29    HB    CB   CA   N     151.13  30.0  1
+ PR8  Var_30    HBA   CB   CA   N     -89.23  30.0  1
+ PR8  Var_31    H1'   C1'  N9   C4    -37.97  30.0  1
+ PR8  Var_32    H2'   C2'  C1'  N9    -26.85  30.0  1
+ PR8  Var_33    HN    N    CA   CB    118.04  30.0  1
+ PR8  Var_34    HA    CA   N    CD   -127.65  30.0  1
+ PR8  Var_35    H3'   C3'  C2'  C1'   -75.29  30.0  1
+ PR8  Var_36    H4'   C4'  O4'  C1'   -92.61  30.0  1
+ PR8  Var_37    O10   C    CA   N     167.56  30.0  2
+ PR8  Var_38    O     C    CA   N     -14.52  30.0  2
+ PR8  Var_39    CB    CA   C    O     101.83  30.0  3
+ PR8  Var_40    O10   C    CA   CB    -76.09  30.0  2
+ PR8  Var_41    O3'   C3'  C2'  O2'    48.09  30.0  1
+ PR8  Var_42    O5'   C5'  C4'  C3'    47.54  30.0  3
+ PR8  Var_43    C5'   C4'  C3'  O3'    76.56  30.0  1
+ PR8  Var_44    O5'   C5'  C4'  O4'   -71.21  30.0  3
+ PR8  Var_45    HO2'  O2'  C2'  C1'  -169.42  30.0  3
+ PR8  Var_46    HO3'  O3'  C3'  C2'   161.05  30.0  3
+ PR8  Var_47    H5'   C5'  C4'  C3'   166.62  30.0  3
+ PR8  Var_48    H5'A  C5'  C4'  C3'   -76.12  30.0  3
+ PR8  Var_49    C5'   O5'  P    O10   -79.56  30.0  2
+ PR8  Var_50    C5'   O5'  P    O1P   168.67  30.0  2
+ PR8  Var_51    C5'   O5'  P    O2P    39.71  30.0  2
+ PR8  Var_52    HO1P  O1P  P    O10    90.34  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GXU  GXU  1-(2-methoxyethyl)-2-methyl-3-(pyrazin-2-ylmethyl)benzo[f]benzimidazol-3-ium-4,9-dione  ligand  46  27  .  2022-03-18  2022-03-18
+ GXU  GXU  1-(2-methoxyethyl)-2-methyl-3-(pyrazin-2-ylmethyl)benzo[f]benzimidazol-3-ium-4,9-dione  ligand  46  27  .  2022-03-18  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_GXU
@@ -244,46 +245,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GXU  CONST_01  C8   N4   C10  N5     0.00   0.0  0
- GXU  CONST_02  N4   C8   C9   N5     0.00   0.0  0
- GXU  CONST_03  N6   C19  C24  N7     0.00   0.0  0
- GXU  CONST_04  N6   C26  C27  N7     0.00   0.0  0
- GXU  CONST_05  C10  N5   C9   C8     0.00   0.0  0
- GXU  CONST_06  C9   C8   N4   C10    0.00   0.0  0
- GXU  CONST_07  C23  C22  C20  C15    0.00   0.0  0
- GXU  CONST_08  C23  C21  C16  C15    0.00   0.0  0
- GXU  CONST_09  C22  C20  C15  C16    0.00   0.0  0
- GXU  CONST_10  C22  C23  C21  C16    0.00   0.0  0
- GXU  CONST_11  C27  C26  N6   C19    0.00   0.0  0
- GXU  CONST_12  C27  N7   C24  C19    0.00   0.0  0
- GXU  CONST_13  C20  C22  C23  C21    0.00   0.0  0
- GXU  CONST_14  C20  C15  C16  C21    0.00   0.0  0
- GXU  CONST_15  C26  N6   C19  C24    0.00   0.0  0
- GXU  CONST_16  C26  C27  N7   C24    0.00   0.0  0
- GXU  CONST_17  N4   C10  N5   C9     0.00   0.0  0
- GXU  CONST_18  C11  N4   C10  N5   180.00   0.0  0
- GXU  CONST_19  C12  C19  C24  N7   180.00   0.0  0
- GXU  CONST_20  C17  C10  N4   C8   180.00   0.0  0
- GXU  CONST_21  C12  N5   C9   C8   180.00   0.0  0
- GXU  CONST_22  N4   C10  N5   C12  180.00   0.0  0
- GXU  CONST_23  C14  C9   N5   C12    0.00   0.0  0
- GXU  CONST_24  C26  N6   C19  C12  180.00   0.0  0
- GXU  CONST_25  C11  N4   C8   C13    0.00   0.0  0
- GXU  CONST_26  C9   N5   C10  C17  180.00   0.0  0
- GXU  CONST_27  C11  N4   C8   C9   180.00   0.0  0
- GXU  CONST_28  H18  C26  C27  N7   180.00   0.0  0
- GXU  CONST_29  H14  C20  C15  C13    0.00   0.0  0
- GXU  CONST_30  H8   C21  C16  C14    0.00   0.0  0
- GXU  CONST_31  H9   C22  C20  C15  180.00   0.0  0
- GXU  CONST_32  H10  C23  C21  C16  180.00   0.0  0
- GXU  CONST_33  H19  C27  N7   C24  180.00   0.0  0
- GXU  CONST_34  H11  C24  N7   C27  180.00   0.0  0
- GXU  Var_01    N6   C19  C12  N5   -32.73  30.0  2
- GXU  Var_02    C19  C12  N5   C10   95.78  30.0  2
- GXU  Var_03    C18  C11  N4   C8    82.84  30.0  2
- GXU  Var_04    H3   C17  C10  N5   -58.95  30.0  2
- GXU  Var_05    O3   C18  C11  N4    56.05  30.0  3
- GXU  Var_06    H15  C25  O3   C18  177.76  30.0  3
+ GXU  CONST_01  C8   N4   C10  N5      0.00   0.0  0
+ GXU  CONST_02  N4   C8   C9   N5      0.00   0.0  0
+ GXU  CONST_03  N6   C19  C24  N7      0.00   0.0  0
+ GXU  CONST_04  N6   C26  C27  N7      0.00   0.0  0
+ GXU  CONST_05  C10  N5   C9   C8      0.00   0.0  0
+ GXU  CONST_06  C9   C8   N4   C10     0.00   0.0  0
+ GXU  CONST_07  C23  C22  C20  C15     0.00   0.0  0
+ GXU  CONST_08  C23  C21  C16  C15     0.00   0.0  0
+ GXU  CONST_09  C22  C20  C15  C16     0.00   0.0  0
+ GXU  CONST_10  C22  C23  C21  C16     0.00   0.0  0
+ GXU  CONST_11  C27  C26  N6   C19     0.00   0.0  0
+ GXU  CONST_12  C27  N7   C24  C19     0.00   0.0  0
+ GXU  CONST_13  C20  C22  C23  C21     0.00   0.0  0
+ GXU  CONST_14  C20  C15  C16  C21     0.00   0.0  0
+ GXU  CONST_15  C26  N6   C19  C24     0.00   0.0  0
+ GXU  CONST_16  C26  C27  N7   C24     0.00   0.0  0
+ GXU  CONST_17  N4   C10  N5   C9      0.00   0.0  0
+ GXU  CONST_18  C11  N4   C10  N5    180.00   0.0  0
+ GXU  CONST_19  C12  C19  C24  N7    180.00   0.0  0
+ GXU  CONST_20  C17  C10  N4   C8    180.00   0.0  0
+ GXU  CONST_21  C12  N5   C9   C8    180.00   0.0  0
+ GXU  CONST_22  N4   C10  N5   C12   180.00   0.0  0
+ GXU  CONST_23  C14  C9   N5   C12     0.00   0.0  0
+ GXU  CONST_24  C26  N6   C19  C12   180.00   0.0  0
+ GXU  CONST_25  C11  N4   C8   C13     0.00   0.0  0
+ GXU  CONST_26  C9   N5   C10  C17   180.00   0.0  0
+ GXU  CONST_27  C11  N4   C8   C9    180.00   0.0  0
+ GXU  CONST_28  H18  C26  C27  N7    180.00   0.0  0
+ GXU  CONST_29  H14  C20  C15  C13     0.00   0.0  0
+ GXU  CONST_30  H8   C21  C16  C14     0.00   0.0  0
+ GXU  CONST_31  H9   C22  C20  C15   180.00   0.0  0
+ GXU  CONST_32  H10  C23  C21  C16   180.00   0.0  0
+ GXU  CONST_33  H19  C27  N7   C24   180.00   0.0  0
+ GXU  CONST_34  H11  C24  N7   C27   180.00   0.0  0
+ GXU  Var_01    N6   C19  C12  N5    -32.73  30.0  2
+ GXU  Var_02    C19  C12  N5   C10    95.78  30.0  2
+ GXU  Var_03    C18  C11  N4   C8     82.84  30.0  2
+ GXU  Var_04    H3   C17  C10  N5    -58.95  30.0  2
+ GXU  Var_05    O3   C18  C11  N4     56.05  30.0  3
+ GXU  Var_06    H15  C25  O3   C18   177.76  30.0  3
+ GXU  CONST_35  C16  C14  C9   N5    180.00   0.0  0
+ GXU  CONST_36  C20  C15  C13  C8    180.00   0.0  0
+ GXU  CONST_37  C16  C15  C13  C8      0.00   0.0  0
+ GXU  CONST_38  C16  C14  C9   C8      0.00   0.0  0
+ GXU  CONST_39  N4   C8   C13  C15   180.00   0.0  0
+ GXU  CONST_40  C9   C8   C13  C15     0.00   0.0  0
+ GXU  CONST_41  C9   C14  C16  C15     0.00   0.0  0
+ GXU  CONST_42  C9   C14  C16  C21   180.00   0.0  0
+ GXU  CONST_43  O2   C14  C9   N5      0.00   0.0  0
+ GXU  CONST_44  O2   C14  C9   C8    180.00   0.0  0
+ GXU  CONST_45  O2   C14  C16  C15   180.00   0.0  0
+ GXU  CONST_46  O1   C13  C15  C16   180.00   0.0  0
+ GXU  CONST_47  O2   C14  C16  C21     0.00   0.0  0
+ GXU  CONST_48  O1   C13  C8   C9    180.00   0.0  0
+ GXU  CONST_49  O1   C13  C15  C20     0.00   0.0  0
+ GXU  CONST_50  O1   C13  C8   N4      0.00   0.0  0
+ GXU  Var_07    C11  C18  O3   C25  -175.23  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CXV  CXV  '(2R,4S)-2-[(1S)-1-({[3-(2-chlorophenyl)-5-methyl-1,2-oxazol-4-yl]carbonyl}amino)-2-oxoethyl]-5,5-dimethyl-1,3-thiazolidine-4-carboxylic acid'  ligand  48  29  .  2021-08-07  2021-08-07  
+ CXV  CXV  '(2R,4S)-2-[(1S)-1-({[3-(2-chlorophenyl)-5-methyl-1,2-oxazol-4-yl]carbonyl}amino)-2-oxoethyl]-5,5-dimethyl-1,3-thiazolidine-4-carboxylic acid'  ligand  48  29  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CXV
@@ -250,40 +251,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CXV  CONST_01  O24  N25  C26  C22    0.00   0.0  0
- CXV  CONST_04  N25  O24  C23  C22    0.00   0.0  0
- CXV  CONST_05  N25  C26  C22  C23    0.00   0.0  0
- CXV  CONST_06  C28  C26  C22  C23  180.00   0.0  0
- CXV  CONST_07  C26  N25  O24  C23    0.00   0.0  0
- CXV  CONST_08  C26  C22  C23  O24    0.00   0.0  0
- CXV  CONST_09  C28  C26  N25  O24  180.00   0.0  0
- CXV  CONST_12  C30  C29  C28  C26  180.00   0.0  0
- CXV  CONST_13  C32  C33  C28  C26  180.00   0.0  0
- CXV  CONST_14  C31  C30  C29  C28    0.00   0.0  0
- CXV  CONST_15  C31  C32  C33  C28    0.00   0.0  0
- CXV  CONST_16  C32  C33  C28  C29    0.00   0.0  0
- CXV  CONST_17  C32  C31  C30  C29    0.00   0.0  0
- CXV  CONST_18  C33  C28  C29  C30    0.00   0.0  0
- CXV  CONST_19  C33  C32  C31  C30    0.00   0.0  0
- CXV  CONST_20  C26  C28  C29  CL     0.00   0.0  0
- CXV  CONST_21  C33  C28  C29  CL   180.00   0.0  0
- CXV  CONST_22  C31  C30  C29  CL   180.00   0.0  0
- CXV  CONST_23  N25  C26  C22  C21  180.00   0.0  0
- CXV  CONST_24  C28  C26  C22  C21    0.00   0.0  0
- CXV  CONST_25  O24  C23  C22  C21  180.00   0.0  0
- CXV  CONST_26  C27  C23  O24  N25  180.00   0.0  0
- CXV  CONST_27  C27  C23  C22  C26  180.00   0.0  0
- CXV  CONST_28  H33  C33  C28  C26    0.00   0.0  0
- CXV  CONST_29  H30  C30  C29  C28  180.00   0.0  0
- CXV  CONST_30  H32  C32  C33  C28  180.00   0.0  0
- CXV  CONST_31  H31  C31  C30  C29  180.00   0.0  0
- CXV  CONST_32  C22  C21  N2   C2   180.00   0.0  0
- CXV  CONST_34  O21  C21  N2   C2     0.00   0.0  0
- CXV  Var_01    C6   C5   S4   C3    13.41  30.0  1
- CXV  Var_02    C26  C22  C21  N2   -51.64  30.0  2
- CXV  Var_03    H52  C52  C5   S4    66.44  30.0  3
- CXV  Var_04    H51  C51  C5   S4    58.24  30.0  3
- CXV  Var_05    H27  C27  C23  C22  105.18  30.0  2
+ CXV  CONST_01  O24  N25  C26  C22     0.00   0.0  0
+ CXV  CONST_02  N25  O24  C23  C22     0.00   0.0  0
+ CXV  CONST_03  N25  C26  C22  C23     0.00   0.0  0
+ CXV  CONST_04  C28  C26  C22  C23   180.00   0.0  0
+ CXV  CONST_05  C26  N25  O24  C23     0.00   0.0  0
+ CXV  CONST_06  C26  C22  C23  O24     0.00   0.0  0
+ CXV  CONST_07  C28  C26  N25  O24   180.00   0.0  0
+ CXV  CONST_08  C30  C29  C28  C26   180.00   0.0  0
+ CXV  CONST_09  C32  C33  C28  C26   180.00   0.0  0
+ CXV  CONST_10  C31  C30  C29  C28     0.00   0.0  0
+ CXV  CONST_11  C31  C32  C33  C28     0.00   0.0  0
+ CXV  CONST_12  C32  C33  C28  C29     0.00   0.0  0
+ CXV  CONST_13  C32  C31  C30  C29     0.00   0.0  0
+ CXV  CONST_14  C33  C28  C29  C30     0.00   0.0  0
+ CXV  CONST_15  C33  C32  C31  C30     0.00   0.0  0
+ CXV  CONST_16  C26  C28  C29  CL      0.00   0.0  0
+ CXV  CONST_17  C33  C28  C29  CL    180.00   0.0  0
+ CXV  CONST_18  C31  C30  C29  CL    180.00   0.0  0
+ CXV  CONST_19  N25  C26  C22  C21   180.00   0.0  0
+ CXV  CONST_20  C28  C26  C22  C21     0.00   0.0  0
+ CXV  CONST_21  O24  C23  C22  C21   180.00   0.0  0
+ CXV  CONST_22  C27  C23  O24  N25   180.00   0.0  0
+ CXV  CONST_23  C27  C23  C22  C26   180.00   0.0  0
+ CXV  CONST_24  H33  C33  C28  C26     0.00   0.0  0
+ CXV  CONST_25  H30  C30  C29  C28   180.00   0.0  0
+ CXV  CONST_26  H32  C32  C33  C28   180.00   0.0  0
+ CXV  CONST_27  H31  C31  C30  C29   180.00   0.0  0
+ CXV  CONST_28  C22  C21  N2   C2    180.00   0.0  0
+ CXV  CONST_29  O21  C21  N2   C2      0.00   0.0  0
+ CXV  Var_01    C6   C5   S4   C3     13.41  30.0  1
+ CXV  Var_02    C26  C22  C21  N2    -51.64  30.0  2
+ CXV  Var_03    H52  C52  C5   S4     66.44  30.0  3
+ CXV  Var_04    H51  C51  C5   S4     58.24  30.0  3
+ CXV  Var_05    H27  C27  C23  C22   105.18  30.0  2
+ CXV  Var_06    C5   C6   N7   C3     44.53  30.0  1
+ CXV  Var_07    C6   N7   C3   S4    -32.52  30.0  1
+ CXV  Var_08    N7   C6   C5   S4    -33.98  30.0  1
+ CXV  Var_09    N7   C3   S4   C5      9.62  30.0  1
+ CXV  Var_10    C29  C28  C26  C22   135.94  30.0  2
+ CXV  Var_11    C33  C28  C26  C22   -44.75  30.0  2
+ CXV  Var_12    C29  C28  C26  N25   -49.33  30.0  2
+ CXV  Var_13    C33  C28  C26  N25   129.98  30.0  2
+ CXV  Var_14    C6   N7   C3   C2   -155.17  30.0  1
+ CXV  Var_15    C5   S4   C3   C2    132.74  30.0  1
+ CXV  Var_16    C8   C6   N7   C3    -81.07  30.0  1
+ CXV  Var_17    C8   C6   C5   S4     91.29  30.0  1
+ CXV  Var_18    C52  C5   C6   N7   -153.66  30.0  1
+ CXV  Var_19    C51  C5   C6   N7     82.53  30.0  1
+ CXV  Var_20    H6   C6   N7   C3    160.26  30.0  1
+ CXV  Var_21    HN7  N7   C3   S4     87.60  30.0  1
+ CXV  Var_22    H3   C3   S4   C5   -108.88  30.0  1
+ CXV  Var_23    N7   C3   C2   C1   -177.41  30.0  1
+ CXV  Var_24    S4   C3   C2   C1     62.15  30.0  1
+ CXV  Var_25    N7   C3   C2   N2     56.40  30.0  1
+ CXV  Var_26    S4   C3   C2   N2    -64.04  30.0  1
+ CXV  Var_27    O82  C8   C6   C5    -87.51  30.0  3
+ CXV  Var_28    O81  C8   C6   C5     91.89  30.0  3
+ CXV  Var_29    O82  C8   C6   N7     35.75  30.0  3
+ CXV  Var_30    O81  C8   C6   N7   -144.85  30.0  3
+ CXV  Var_31    C52  C5   C6   C8    -28.38  30.0  1
+ CXV  Var_32    C51  C5   C6   C8   -152.19  30.0  1
+ CXV  Var_33    H2   C2   C3   S4    176.73  30.0  3
+ CXV  Var_34    C3   C2   C1   O1   -126.08  30.0  3
+ CXV  Var_35    C21  N2   C2   C3   -157.74  30.0  3
+ CXV  Var_36    H1   C1   C2   C3     54.40  30.0  3
+ CXV  Var_37    C21  N2   C2   C1     77.80  30.0  3
+ CXV  Var_38    N2   C2   C1   O1     -0.47  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7AP  7AP  (1S,2S)-1-(2,4-diaminopteridin-6-yl)propane-1,2-diol  ligand  29  17  .  2022-03-10  2022-03-10
+ 7AP  7AP  (1S,2S)-1-(2,4-diaminopteridin-6-yl)propane-1,2-diol  ligand  29  17  .  2022-03-10  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7AP
@@ -172,36 +173,51 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 7AP  CONST_01  C4   N3   C2   N1     0.00  0.0  0
- 7AP  CONST_02  C4   C4A  C8A  N1     0.00  0.0  0
- 7AP  CONST_03  N5   C4A  C8A  N1   180.00  0.0  0
- 7AP  CONST_04  C7   N8   C8A  N1   180.00  0.0  0
- 7AP  CONST_05  C4A  C8A  N1   C2     0.00  0.0  0
- 7AP  CONST_06  N8   C8A  N1   C2   180.00  0.0  0
- 7AP  CONST_07  C4A  C4   N3   C2     0.00  0.0  0
- 7AP  CONST_08  C8A  N1   C2   N3     0.00  0.0  0
- 7AP  CONST_09  C8A  C4A  C4   N3     0.00  0.0  0
- 7AP  CONST_10  N5   C4A  C4   N3   180.00  0.0  0
- 7AP  CONST_11  N8   C8A  C4A  C4   180.00  0.0  0
- 7AP  CONST_12  C6   N5   C4A  C4   180.00  0.0  0
- 7AP  CONST_13  C7   N8   C8A  C4A    0.00  0.0  0
- 7AP  CONST_14  C7   C6   N5   C4A    0.00  0.0  0
- 7AP  CONST_15  C6   N5   C4A  C8A    0.00  0.0  0
- 7AP  CONST_16  C6   C7   N8   C8A    0.00  0.0  0
- 7AP  CONST_17  N8   C8A  C4A  N5     0.00  0.0  0
- 7AP  CONST_18  N8   C7   C6   N5     0.00  0.0  0
- 7AP  CONST_19  N4   C4   N3   C2   180.00  0.0  0
- 7AP  CONST_20  C8A  N1   C2   N2   180.00  0.0  0
- 7AP  CONST_21  C4   N3   C2   N2   180.00  0.0  0
- 7AP  CONST_22  C8A  C4A  C4   N4   180.00  0.0  0
- 7AP  CONST_23  N5   C4A  C4   N4     0.00  0.0  0
- 7AP  CONST_24  C1'  C6   N5   C4A  180.00  0.0  0
- 7AP  CONST_25  C1'  C6   C7   N8   180.00  0.0  0
- 7AP  CONST_26  H77  C7   N8   C8A  180.00  0.0  0
- 7AP  CONST_27  HN1  N2   C2   N1   180.00  0.0  0
- 7AP  CONST_28  HN3  N2   C2   N1     0.00  0.0  0
- 7AP  CONST_29  HN2  N4   C4   N3     0.00  0.0  0
- 7AP  CONST_30  HN4  N4   C4   N3   180.00  0.0  0
+ 7AP  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ 7AP  CONST_02  C4    C4A  C8A  N1      0.00   0.0  0
+ 7AP  CONST_03  N5    C4A  C8A  N1    180.00   0.0  0
+ 7AP  CONST_04  C7    N8   C8A  N1    180.00   0.0  0
+ 7AP  CONST_05  C4A   C8A  N1   C2      0.00   0.0  0
+ 7AP  CONST_06  N8    C8A  N1   C2    180.00   0.0  0
+ 7AP  CONST_07  C4A   C4   N3   C2      0.00   0.0  0
+ 7AP  CONST_08  C8A   N1   C2   N3      0.00   0.0  0
+ 7AP  CONST_09  C8A   C4A  C4   N3      0.00   0.0  0
+ 7AP  CONST_10  N5    C4A  C4   N3    180.00   0.0  0
+ 7AP  CONST_11  N8    C8A  C4A  C4    180.00   0.0  0
+ 7AP  CONST_12  C6    N5   C4A  C4    180.00   0.0  0
+ 7AP  CONST_13  C7    N8   C8A  C4A     0.00   0.0  0
+ 7AP  CONST_14  C7    C6   N5   C4A     0.00   0.0  0
+ 7AP  CONST_15  C6    N5   C4A  C8A     0.00   0.0  0
+ 7AP  CONST_16  C6    C7   N8   C8A     0.00   0.0  0
+ 7AP  CONST_17  N8    C8A  C4A  N5      0.00   0.0  0
+ 7AP  CONST_18  N8    C7   C6   N5      0.00   0.0  0
+ 7AP  CONST_19  N4    C4   N3   C2    180.00   0.0  0
+ 7AP  CONST_20  C8A   N1   C2   N2    180.00   0.0  0
+ 7AP  CONST_21  C4    N3   C2   N2    180.00   0.0  0
+ 7AP  CONST_22  C8A   C4A  C4   N4    180.00   0.0  0
+ 7AP  CONST_23  N5    C4A  C4   N4      0.00   0.0  0
+ 7AP  CONST_24  C1'   C6   N5   C4A   180.00   0.0  0
+ 7AP  CONST_25  C1'   C6   C7   N8    180.00   0.0  0
+ 7AP  CONST_26  H77   C7   N8   C8A   180.00   0.0  0
+ 7AP  CONST_27  HN1   N2   C2   N1    180.00   0.0  0
+ 7AP  CONST_28  HN3   N2   C2   N1      0.00   0.0  0
+ 7AP  CONST_29  HN2   N4   C4   N3      0.00   0.0  0
+ 7AP  CONST_30  HN4   N4   C4   N3    180.00   0.0  0
+ 7AP  Var_01    O1'   C1'  C6   N5     30.91  30.0  2
+ 7AP  Var_02    C2'   C1'  C6   N5    -92.56  30.0  2
+ 7AP  Var_03    O1'   C1'  C6   C7   -150.58  30.0  2
+ 7AP  Var_04    C2'   C1'  C6   C7     85.95  30.0  2
+ 7AP  Var_05    H1''  C1'  C6   N5    150.88  30.0  2
+ 7AP  Var_06    O2'   C2'  C1'  C6    -62.81  30.0  3
+ 7AP  Var_07    C3'   C2'  C1'  C6     58.67  30.0  3
+ 7AP  Var_08    HO2   O1'  C1'  C6    176.99  30.0  3
+ 7AP  Var_09    H2''  C2'  C1'  C6    177.65  30.0  3
+ 7AP  Var_10    O2'   C2'  C1'  O1'   175.35  30.0  3
+ 7AP  Var_11    C3'   C2'  C1'  O1'   -63.17  30.0  3
+ 7AP  Var_12    HO1   O2'  C2'  C1'   -64.93  30.0  3
+ 7AP  Var_13    H3'1  C3'  C2'  C1'   -70.18  30.0  3
+ 7AP  Var_14    H3'2  C3'  C2'  C1'    50.19  30.0  3
+ 7AP  Var_15    H3'3  C3'  C2'  C1'   169.64  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

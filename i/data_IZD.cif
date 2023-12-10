@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- IZD  IZD  N-acetyl-L-phenylalanyl-4-[(5S)-1,1-dioxido-3-oxoisothiazolidin-5-yl]-L-phenylalaninamide  ligand  60  34  .  2021-08-11  2021-08-11  
+ IZD  IZD  N-acetyl-L-phenylalanyl-4-[(5S)-1,1-dioxido-3-oxoisothiazolidin-5-yl]-L-phenylalaninamide  ligand  60  34  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_IZD
@@ -295,49 +296,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- IZD  CONST_01  C14   C13  C12  C11    0.00   0.0  0
- IZD  CONST_02  C14   C15  C16  C11    0.00   0.0  0
- IZD  CONST_03  C15   C16  C11  C12    0.00   0.0  0
- IZD  CONST_04  C15   C14  C13  C12    0.00   0.0  0
- IZD  CONST_05  C16   C11  C12  C13    0.00   0.0  0
- IZD  CONST_06  C16   C15  C14  C13    0.00   0.0  0
- IZD  CONST_07  C6    C31  C30  C5     0.00   0.0  0
- IZD  CONST_08  C6    C33  C34  C5     0.00   0.0  0
- IZD  CONST_09  C33   C34  C5   C30    0.00   0.0  0
- IZD  CONST_10  C33   C6   C31  C30    0.00   0.0  0
- IZD  CONST_11  C34   C5   C30  C31    0.00   0.0  0
- IZD  CONST_12  C34   C33  C6   C31    0.00   0.0  0
- IZD  CONST_13  C13   C12  C11  C1   180.00   0.0  0
- IZD  CONST_14  C15   C16  C11  C1   180.00   0.0  0
- IZD  CONST_15  S5    N4   C3   C2     0.00   0.0  0
- IZD  CONST_16  C21   C14  C13  C12  180.00   0.0  0
- IZD  CONST_17  C21   C14  C15  C16  180.00   0.0  0
- IZD  CONST_18  C31   C30  C5   C4   180.00   0.0  0
- IZD  CONST_19  C33   C34  C5   C4   180.00   0.0  0
- IZD  CONST_20  O9    C3   N4   S5   180.00   0.0  0
- IZD  CONST_21  H12   C12  C11  C1     0.00   0.0  0
- IZD  CONST_22  H16   C16  C11  C1     0.00   0.0  0
- IZD  CONST_23  H13   C13  C12  C11  180.00   0.0  0
- IZD  CONST_24  H15   C15  C16  C11  180.00   0.0  0
- IZD  CONST_25  H31   C31  C30  C5   180.00   0.0  0
- IZD  CONST_26  H33   C33  C34  C5   180.00   0.0  0
- IZD  CONST_27  H34   C34  C5   C30  180.00   0.0  0
- IZD  CONST_28  H6    C6   C31  C30  180.00   0.0  0
- IZD  CONST_29  H30   C30  C31  C6   180.00   0.0  0
- IZD  CONST_30  H4    N4   C3   C2   180.00   0.0  0
- IZD  CONST_31  C48   C47  N45  C22  180.00   0.0  0
- IZD  CONST_32  O49   C47  N45  C22    0.00   0.0  0
- IZD  CONST_33  O70   C67  N51  C48    0.00   0.0  0
- IZD  CONST_34  C71   C67  N51  C48  180.00   0.0  0
- IZD  CONST_35  H271  N27  C25  C22  180.00   0.0  0
- IZD  CONST_36  H272  N27  C25  C22    0.00   0.0  0
- IZD  CONST_37  H45   N45  C47  C48    0.00   0.0  0
- IZD  CONST_38  H51   N51  C67  O70  180.00   0.0  0
- IZD  Var_01    N4    C3   C2   C1    20.85  30.0  1
- IZD  Var_02    C3    N4   S5   C1   -21.59  30.0  1
- IZD  Var_03    C22   C21  C14  C13  -90.51  30.0  2
- IZD  Var_04    C30   C5   C4   C48  -85.24  30.0  2
- IZD  Var_05    H711  C71  C67  N51  122.30  30.0  3
+ IZD  CONST_01  C14   C13  C12  C11     0.00   0.0  0
+ IZD  CONST_02  C14   C15  C16  C11     0.00   0.0  0
+ IZD  CONST_03  C15   C16  C11  C12     0.00   0.0  0
+ IZD  CONST_04  C15   C14  C13  C12     0.00   0.0  0
+ IZD  CONST_05  C16   C11  C12  C13     0.00   0.0  0
+ IZD  CONST_06  C16   C15  C14  C13     0.00   0.0  0
+ IZD  CONST_07  C6    C31  C30  C5      0.00   0.0  0
+ IZD  CONST_08  C6    C33  C34  C5      0.00   0.0  0
+ IZD  CONST_09  C33   C34  C5   C30     0.00   0.0  0
+ IZD  CONST_10  C33   C6   C31  C30     0.00   0.0  0
+ IZD  CONST_11  C34   C5   C30  C31     0.00   0.0  0
+ IZD  CONST_12  C34   C33  C6   C31     0.00   0.0  0
+ IZD  CONST_13  C13   C12  C11  C1    180.00   0.0  0
+ IZD  CONST_14  C15   C16  C11  C1    180.00   0.0  0
+ IZD  CONST_15  S5    N4   C3   C2      0.00   0.0  0
+ IZD  CONST_16  C21   C14  C13  C12   180.00   0.0  0
+ IZD  CONST_17  C21   C14  C15  C16   180.00   0.0  0
+ IZD  CONST_18  C31   C30  C5   C4    180.00   0.0  0
+ IZD  CONST_19  C33   C34  C5   C4    180.00   0.0  0
+ IZD  CONST_20  O9    C3   N4   S5    180.00   0.0  0
+ IZD  CONST_21  H12   C12  C11  C1      0.00   0.0  0
+ IZD  CONST_22  H16   C16  C11  C1      0.00   0.0  0
+ IZD  CONST_23  H13   C13  C12  C11   180.00   0.0  0
+ IZD  CONST_24  H15   C15  C16  C11   180.00   0.0  0
+ IZD  CONST_25  H31   C31  C30  C5    180.00   0.0  0
+ IZD  CONST_26  H33   C33  C34  C5    180.00   0.0  0
+ IZD  CONST_27  H34   C34  C5   C30   180.00   0.0  0
+ IZD  CONST_28  H6    C6   C31  C30   180.00   0.0  0
+ IZD  CONST_29  H30   C30  C31  C6    180.00   0.0  0
+ IZD  CONST_30  H4    N4   C3   C2    180.00   0.0  0
+ IZD  CONST_31  C48   C47  N45  C22   180.00   0.0  0
+ IZD  CONST_32  O49   C47  N45  C22     0.00   0.0  0
+ IZD  CONST_33  O70   C67  N51  C48     0.00   0.0  0
+ IZD  CONST_34  C71   C67  N51  C48   180.00   0.0  0
+ IZD  CONST_35  H271  N27  C25  C22   180.00   0.0  0
+ IZD  CONST_36  H272  N27  C25  C22     0.00   0.0  0
+ IZD  CONST_37  H45   N45  C47  C48     0.00   0.0  0
+ IZD  CONST_38  H51   N51  C67  O70   180.00   0.0  0
+ IZD  Var_01    N4    C3   C2   C1     20.85  30.0  1
+ IZD  Var_02    C3    N4   S5   C1    -21.59  30.0  1
+ IZD  Var_03    C22   C21  C14  C13   -90.51  30.0  2
+ IZD  Var_04    C30   C5   C4   C48   -85.24  30.0  2
+ IZD  Var_05    H711  C71  C67  N51   122.30  30.0  3
+ IZD  Var_06    N4    S5   C1   C2     30.96  30.0  1
+ IZD  Var_07    C12   C11  C1   C2   -159.19  30.0  2
+ IZD  Var_08    C16   C11  C1   C2     22.96  30.0  2
+ IZD  Var_09    S5    C1   C2   C3    -33.50  30.0  1
+ IZD  Var_10    C11   C1   C2   C3   -155.17  30.0  1
+ IZD  Var_11    C11   C1   S5   N4    158.93  30.0  1
+ IZD  Var_12    C12   C11  C1   S5     82.79  30.0  2
+ IZD  Var_13    C16   C11  C1   S5    -95.06  30.0  2
+ IZD  Var_14    O6    S5   C1   C2    142.88  30.0  1
+ IZD  Var_15    O7    S5   C1   C2    -81.50  30.0  1
+ IZD  Var_16    C11   C1   S5   O6    -89.14  30.0  1
+ IZD  Var_17    C11   C1   S5   O7     46.48  30.0  1
+ IZD  Var_18    H1    C1   C2   C3     76.66  30.0  1
+ IZD  Var_19    C25   C22  C21  C14   180.00  30.0  3
+ IZD  Var_20    N45   C22  C21  C14   -59.92  30.0  3
+ IZD  Var_21    C5    C4   C48  C47   174.26  30.0  3
+ IZD  Var_22    C5    C4   C48  N51   -63.88  30.0  3
+ IZD  Var_23    H22   C22  C21  C14    59.15  30.0  3
+ IZD  Var_24    H48   C48  C4   C5     53.74  30.0  2
+ IZD  Var_25    O26   C25  C22  C21    83.91  30.0  3
+ IZD  Var_26    N27   C25  C22  C21   -93.44  30.0  3
+ IZD  Var_27    C47   N45  C22  C21   102.60  30.0  3
+ IZD  Var_28    C47   N45  C22  C25  -137.45  30.0  3
+ IZD  Var_29    N45   C22  C25  O26   -37.33  30.0  1
+ IZD  Var_30    N45   C22  C25  N27   145.32  30.0  1
+ IZD  Var_31    N51   C48  C47  N45   133.28  30.0  3
+ IZD  Var_32    C4    C48  C47  N45  -104.82  30.0  3
+ IZD  Var_33    C67   N51  C48  C47  -107.84  30.0  3
+ IZD  Var_34    N51   C48  C47  O49   -49.02  30.0  3
+ IZD  Var_35    C4    C48  C47  O49    72.87  30.0  3
+ IZD  Var_36    C67   N51  C48  C4    131.03  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

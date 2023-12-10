@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SWG  SWG  '2-[(4Z)-2-[(1R)-1-amino-2-hydroxy-ethyl]-4-(1H-indol-3-ylmethylidene)-5-oxo-imidazol-1-yl]ethanoic acid'  L-peptide  40  24  .  2022-07-22  2022-11-17
+ SWG  SWG  '2-[(4Z)-2-[(1R)-1-amino-2-hydroxy-ethyl]-4-(1H-indol-3-ylmethylidene)-5-oxo-imidazol-1-yl]ethanoic acid'  L-peptide  40  24  .  2022-07-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_SWG
@@ -216,49 +217,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SWG  CONST_01  CH2  CZ3  CE3  CD2     0.00   0.0  0
- SWG  CONST_02  CH2  CZ2  CE2  CD2     0.00   0.0  0
- SWG  CONST_03  CD1  NE1  CE2  CD2     0.00   0.0  0
- SWG  CONST_04  NE1  CD1  CG   CD2     0.00   0.0  0
- SWG  CONST_05  CZ2  CE2  CD2  CE3     0.00   0.0  0
- SWG  CONST_06  NE1  CE2  CD2  CE3   180.00   0.0  0
- SWG  CONST_07  CD1  CG   CD2  CE3   180.00   0.0  0
- SWG  CONST_08  CZ2  CH2  CZ3  CE3     0.00   0.0  0
- SWG  CONST_09  CE2  CD2  CE3  CZ3     0.00   0.0  0
- SWG  CONST_10  CG   CD2  CE3  CZ3   180.00   0.0  0
- SWG  CONST_11  CE2  CZ2  CH2  CZ3     0.00   0.0  0
- SWG  CONST_12  NE1  CE2  CZ2  CH2   180.00   0.0  0
- SWG  CONST_13  CG   CD2  CE2  CZ2   180.00   0.0  0
- SWG  CONST_14  CD1  NE1  CE2  CZ2   180.00   0.0  0
- SWG  CONST_15  CD1  CG   CD2  CE2     0.00   0.0  0
- SWG  CONST_16  CG   CD1  NE1  CE2     0.00   0.0  0
- SWG  CONST_17  CG   CD2  CE2  NE1     0.00   0.0  0
- SWG  CONST_18  N3   C1   N2   CA2     0.00   0.0  0
- SWG  CONST_19  C1   N3   C2   CA2     0.00   0.0  0
- SWG  CONST_20  N3   C2   CA2  N2      0.00   0.0  0
- SWG  CONST_21  C2   N3   C1   N2      0.00   0.0  0
- SWG  CONST_22  C1   N2   CA2  C2      0.00   0.0  0
- SWG  CONST_23  CB2  CG   CD2  CE3     0.00   0.0  0
- SWG  CONST_24  CB2  CG   CD2  CE2   180.00   0.0  0
- SWG  CONST_25  CB2  CG   CD1  NE1   180.00   0.0  0
- SWG  CONST_26  CA1  C1   N2   CA2   180.00   0.0  0
- SWG  CONST_27  CA3  N3   C2   CA2   180.00   0.0  0
- SWG  CONST_28  CA3  N3   C1   N2    180.00   0.0  0
- SWG  CONST_29  CA1  C1   N3   C2    180.00   0.0  0
- SWG  CONST_30  C1   N3   C2   O2    180.00   0.0  0
- SWG  CONST_31  HZ3  CZ3  CE3  CD2   180.00   0.0  0
- SWG  CONST_32  HZ2  CZ2  CE2  CD2   180.00   0.0  0
- SWG  CONST_33  HE1  NE1  CE2  CD2   180.00   0.0  0
- SWG  CONST_34  HD1  CD1  CG   CD2   180.00   0.0  0
- SWG  CONST_35  HH2  CH2  CZ3  CE3   180.00   0.0  0
- SWG  CONST_36  HE3  CE3  CZ3  CH2   180.00   0.0  0
- SWG  CONST_37  CA3  N3   C2   O2      0.00   0.0  0
- SWG  CONST_38  CA1  C1   N3   CA3     0.00   0.0  0
- SWG  CONST_39  HXT  OXT  C3   CA3   180.00   0.0  0
- SWG  Var_01    CA2  CB2  CG   CD2  -179.41  30.0  2
- SWG  Var_02    N2   CA2  CB2  CG      0.10  30.0  2
- SWG  Var_03    C3   CA3  N3   C2     89.59  30.0  3
- SWG  Var_04    O3   C3   CA3  N3      3.92  30.0  3
+ SWG  CONST_01  CH2   CZ3  CE3  CD2     0.00   0.0  0
+ SWG  CONST_02  CH2   CZ2  CE2  CD2     0.00   0.0  0
+ SWG  CONST_03  CD1   NE1  CE2  CD2     0.00   0.0  0
+ SWG  CONST_04  NE1   CD1  CG   CD2     0.00   0.0  0
+ SWG  CONST_05  CZ2   CE2  CD2  CE3     0.00   0.0  0
+ SWG  CONST_06  NE1   CE2  CD2  CE3   180.00   0.0  0
+ SWG  CONST_07  CD1   CG   CD2  CE3   180.00   0.0  0
+ SWG  CONST_08  CZ2   CH2  CZ3  CE3     0.00   0.0  0
+ SWG  CONST_09  CE2   CD2  CE3  CZ3     0.00   0.0  0
+ SWG  CONST_10  CG    CD2  CE3  CZ3   180.00   0.0  0
+ SWG  CONST_11  CE2   CZ2  CH2  CZ3     0.00   0.0  0
+ SWG  CONST_12  NE1   CE2  CZ2  CH2   180.00   0.0  0
+ SWG  CONST_13  CG    CD2  CE2  CZ2   180.00   0.0  0
+ SWG  CONST_14  CD1   NE1  CE2  CZ2   180.00   0.0  0
+ SWG  CONST_15  CD1   CG   CD2  CE2     0.00   0.0  0
+ SWG  CONST_16  CG    CD1  NE1  CE2     0.00   0.0  0
+ SWG  CONST_17  CG    CD2  CE2  NE1     0.00   0.0  0
+ SWG  CONST_18  N3    C1   N2   CA2     0.00   0.0  0
+ SWG  CONST_19  C1    N3   C2   CA2     0.00   0.0  0
+ SWG  CONST_20  N3    C2   CA2  N2      0.00   0.0  0
+ SWG  CONST_21  C2    N3   C1   N2      0.00   0.0  0
+ SWG  CONST_22  C1    N2   CA2  C2      0.00   0.0  0
+ SWG  CONST_23  CB2   CG   CD2  CE3     0.00   0.0  0
+ SWG  CONST_24  CB2   CG   CD2  CE2   180.00   0.0  0
+ SWG  CONST_25  CB2   CG   CD1  NE1   180.00   0.0  0
+ SWG  CONST_26  CA1   C1   N2   CA2   180.00   0.0  0
+ SWG  CONST_27  CA3   N3   C2   CA2   180.00   0.0  0
+ SWG  CONST_28  CA3   N3   C1   N2    180.00   0.0  0
+ SWG  CONST_29  CA1   C1   N3   C2    180.00   0.0  0
+ SWG  CONST_30  C1    N3   C2   O2    180.00   0.0  0
+ SWG  CONST_31  HZ3   CZ3  CE3  CD2   180.00   0.0  0
+ SWG  CONST_32  HZ2   CZ2  CE2  CD2   180.00   0.0  0
+ SWG  CONST_33  HE1   NE1  CE2  CD2   180.00   0.0  0
+ SWG  CONST_34  HD1   CD1  CG   CD2   180.00   0.0  0
+ SWG  CONST_35  HH2   CH2  CZ3  CE3   180.00   0.0  0
+ SWG  CONST_36  HE3   CE3  CZ3  CH2   180.00   0.0  0
+ SWG  CONST_37  CA3   N3   C2   O2      0.00   0.0  0
+ SWG  CONST_38  CA1   C1   N3   CA3     0.00   0.0  0
+ SWG  CONST_39  HXT   OXT  C3   CA3   180.00   0.0  0
+ SWG  Var_01    CA2   CB2  CG   CD2  -179.41  30.0  2
+ SWG  Var_02    N2    CA2  CB2  CG      0.10  30.0  2
+ SWG  Var_03    C3    CA3  N3   C2     89.59  30.0  3
+ SWG  Var_04    O3    C3   CA3  N3      3.92  30.0  3
+ SWG  Var_05    HA1   CA1  C1   N2   -144.24  30.0  2
+ SWG  Var_06    H11N  N1   CA1  C1    -62.97  30.0  3
+ SWG  Var_07    H12N  N1   CA1  C1     52.71  30.0  3
+ SWG  Var_08    HB11  CB1  CA1  C1    -67.74  30.0  3
+ SWG  Var_09    HB12  CB1  CA1  C1     47.83  30.0  3
+ SWG  Var_10    HG1   OG1  CB1  CA1   176.77  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

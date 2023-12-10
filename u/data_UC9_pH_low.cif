@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UC9  UC9  '4-{6-[(2S)-4-(2,4-diamino-6-ethylpyrimidin-5-yl)but-3-yn-2-yl]-2H-1,3-benzodioxol-4-yl}benzoic acid'  ligand  54  32  .  2021-08-24  2022-11-18
+ UC9  UC9  '4-{6-[(2S)-4-(2,4-diamino-6-ethylpyrimidin-5-yl)but-3-yn-2-yl]-2H-1,3-benzodioxol-4-yl}benzoic acid'  ligand  54  32  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UC9
@@ -270,58 +271,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- UC9  CONST_01  N1   C6   C5   C4     0.00   0.0  0
- UC9  CONST_02  N1   C2   N3   C4     0.00   0.0  0
- UC9  CONST_03  C2   N1   C6   C5     0.00   0.0  0
- UC9  CONST_04  C2   N3   C4   C5     0.00   0.0  0
- UC9  CONST_05  N3   C2   N1   C6     0.00   0.0  0
- UC9  CONST_06  N3   C4   C5   C6     0.00   0.0  0
- UC9  CONST_07  CAT  CAP  CAO  CAN  180.00   0.0  0
- UC9  CONST_08  CAQ  CAP  CAO  CAN    0.00   0.0  0
- UC9  CONST_09  CAQ  CAR  CAS  CAN    0.00   0.0  0
- UC9  CONST_12  CAR  CAQ  CAP  CAO    0.00   0.0  0
- UC9  CONST_13  CAR  CAS  CAN  CAO    0.00   0.0  0
- UC9  CONST_14  CAP  CAO  CAN  CAS    0.00   0.0  0
- UC9  CONST_15  CAP  CAQ  CAR  CAS    0.00   0.0  0
- UC9  CONST_16  CAT  CAP  CAQ  CAR  180.00   0.0  0
- UC9  CONST_19  CAY  CAX  CAT  CAP  180.00   0.0  0
- UC9  CONST_20  CBA  CBB  CAT  CAP  180.00   0.0  0
- UC9  CONST_21  CAZ  CAY  CAX  CAT    0.00   0.0  0
- UC9  CONST_22  CAZ  CBA  CBB  CAT    0.00   0.0  0
- UC9  CONST_23  CBA  CAZ  CAY  CAX    0.00   0.0  0
- UC9  CONST_24  CBA  CBB  CAT  CAX    0.00   0.0  0
- UC9  CONST_25  CBB  CBA  CAZ  CAY    0.00   0.0  0
- UC9  CONST_26  CBB  CAT  CAX  CAY    0.00   0.0  0
- UC9  CONST_27  CAT  CAP  CAQ  OAU    0.00   0.0  0
- UC9  CONST_28  NAG  C6   C5   C4   180.00   0.0  0
- UC9  CONST_29  NAH  C2   N3   C4   180.00   0.0  0
- UC9  CONST_30  NAH  C2   N1   C6   180.00   0.0  0
- UC9  CONST_31  CAI  C4   C5   C6   180.00   0.0  0
- UC9  CONST_32  CAJ  C5   C6   N1   180.00   0.0  0
- UC9  CONST_33  CAJ  C5   C4   N3   180.00   0.0  0
- UC9  CONST_34  C2   N3   C4   CAI  180.00   0.0  0
- UC9  CONST_35  NAG  C6   N1   C2   180.00   0.0  0
- UC9  CONST_36  CAP  CAO  CAN  CAM  180.00   0.0  0
- UC9  CONST_37  CAR  CAS  CAN  CAM  180.00   0.0  0
- UC9  CONST_38  CBD  CAZ  CAY  CAX  180.00   0.0  0
- UC9  CONST_39  CBB  CBA  CAZ  CBD  180.00   0.0  0
- UC9  CONST_40  H15  CAS  CAN  CAO  180.00   0.0  0
- UC9  CONST_41  H14  CAO  CAN  CAS  180.00   0.0  0
- UC9  CONST_42  H18  CAX  CAT  CAP    0.00   0.0  0
- UC9  CONST_43  H22  CBB  CAT  CAP    0.00   0.0  0
- UC9  CONST_44  H19  CAY  CAX  CAT  180.00   0.0  0
- UC9  CONST_45  H21  CBA  CBB  CAT  180.00   0.0  0
- UC9  CONST_46  H8   NAG  C6   C5     0.00   0.0  0
- UC9  CONST_47  H9   NAG  C6   C5   180.00   0.0  0
- UC9  CONST_48  H6   NAH  C2   N1     0.00   0.0  0
- UC9  CONST_49  H7   NAH  C2   N1   180.00   0.0  0
- UC9  CONST_50  H20  OBE  CBD  CAZ  180.00   0.0  0
- UC9  Var_01    OAU  CAV  OAW  CAR  -14.07  30.0  1
- UC9  Var_02    CAP  CAQ  OAU  CAV  173.67  30.0  1
- UC9  Var_03    CAQ  CAR  OAW  CAV    8.59  30.0  1
- UC9  Var_04    CAK  CAI  C4   C5    85.40  30.0  2
- UC9  Var_05    OBF  CBD  CAZ  CAY   -1.85  30.0  2
- UC9  Var_06    H1   CAK  CAI  C4    57.80  30.0  3
+ UC9  CONST_01  N1   C6   C5   C4      0.00   0.0  0
+ UC9  CONST_02  N1   C2   N3   C4      0.00   0.0  0
+ UC9  CONST_03  C2   N1   C6   C5      0.00   0.0  0
+ UC9  CONST_04  C2   N3   C4   C5      0.00   0.0  0
+ UC9  CONST_05  N3   C2   N1   C6      0.00   0.0  0
+ UC9  CONST_06  N3   C4   C5   C6      0.00   0.0  0
+ UC9  CONST_07  CAT  CAP  CAO  CAN   180.00   0.0  0
+ UC9  CONST_08  CAQ  CAP  CAO  CAN     0.00   0.0  0
+ UC9  CONST_09  CAQ  CAR  CAS  CAN     0.00   0.0  0
+ UC9  CONST_10  CAR  CAQ  CAP  CAO     0.00   0.0  0
+ UC9  CONST_11  CAR  CAS  CAN  CAO     0.00   0.0  0
+ UC9  CONST_12  CAP  CAO  CAN  CAS     0.00   0.0  0
+ UC9  CONST_13  CAP  CAQ  CAR  CAS     0.00   0.0  0
+ UC9  CONST_14  CAT  CAP  CAQ  CAR   180.00   0.0  0
+ UC9  CONST_15  CAY  CAX  CAT  CAP   180.00   0.0  0
+ UC9  CONST_16  CBA  CBB  CAT  CAP   180.00   0.0  0
+ UC9  CONST_17  CAZ  CAY  CAX  CAT     0.00   0.0  0
+ UC9  CONST_18  CAZ  CBA  CBB  CAT     0.00   0.0  0
+ UC9  CONST_19  CBA  CAZ  CAY  CAX     0.00   0.0  0
+ UC9  CONST_20  CBA  CBB  CAT  CAX     0.00   0.0  0
+ UC9  CONST_21  CBB  CBA  CAZ  CAY     0.00   0.0  0
+ UC9  CONST_22  CBB  CAT  CAX  CAY     0.00   0.0  0
+ UC9  CONST_23  CAT  CAP  CAQ  OAU     0.00   0.0  0
+ UC9  CONST_24  NAG  C6   C5   C4    180.00   0.0  0
+ UC9  CONST_25  NAH  C2   N3   C4    180.00   0.0  0
+ UC9  CONST_26  NAH  C2   N1   C6    180.00   0.0  0
+ UC9  CONST_27  CAI  C4   C5   C6    180.00   0.0  0
+ UC9  CONST_28  CAJ  C5   C6   N1    180.00   0.0  0
+ UC9  CONST_29  CAJ  C5   C4   N3    180.00   0.0  0
+ UC9  CONST_30  C2   N3   C4   CAI   180.00   0.0  0
+ UC9  CONST_31  NAG  C6   N1   C2    180.00   0.0  0
+ UC9  CONST_32  CAP  CAO  CAN  CAM   180.00   0.0  0
+ UC9  CONST_33  CAR  CAS  CAN  CAM   180.00   0.0  0
+ UC9  CONST_34  CBD  CAZ  CAY  CAX   180.00   0.0  0
+ UC9  CONST_35  CBB  CBA  CAZ  CBD   180.00   0.0  0
+ UC9  CONST_36  H15  CAS  CAN  CAO   180.00   0.0  0
+ UC9  CONST_37  H14  CAO  CAN  CAS   180.00   0.0  0
+ UC9  CONST_38  H18  CAX  CAT  CAP     0.00   0.0  0
+ UC9  CONST_39  H22  CBB  CAT  CAP     0.00   0.0  0
+ UC9  CONST_40  H19  CAY  CAX  CAT   180.00   0.0  0
+ UC9  CONST_41  H21  CBA  CBB  CAT   180.00   0.0  0
+ UC9  CONST_42  H8   NAG  C6   C5      0.00   0.0  0
+ UC9  CONST_43  H9   NAG  C6   C5    180.00   0.0  0
+ UC9  CONST_44  H6   NAH  C2   N1      0.00   0.0  0
+ UC9  CONST_45  H7   NAH  C2   N1    180.00   0.0  0
+ UC9  CONST_46  H20  OBE  CBD  CAZ   180.00   0.0  0
+ UC9  Var_01    OAU  CAV  OAW  CAR   -14.07  30.0  1
+ UC9  Var_02    CAP  CAQ  OAU  CAV   173.67  30.0  1
+ UC9  Var_03    CAQ  CAR  OAW  CAV     8.59  30.0  1
+ UC9  Var_04    CAK  CAI  C4   C5     85.40  30.0  2
+ UC9  Var_05    OBF  CBD  CAZ  CAY    -1.85  30.0  2
+ UC9  Var_06    H1   CAK  CAI  C4     57.80  30.0  3
+ UC9  Var_07    CAX  CAT  CAP  CAO   140.18  30.0  2
+ UC9  Var_08    CBB  CAT  CAP  CAO   -39.06  30.0  2
+ UC9  Var_09    CAQ  OAU  CAV  OAW    14.30  30.0  1
+ UC9  Var_10    CAX  CAT  CAP  CAQ   -41.40  30.0  2
+ UC9  Var_11    CBB  CAT  CAP  CAQ   139.36  30.0  2
+ UC9  Var_12    CAO  CAN  CAM  CAL   131.37  30.0  2
+ UC9  Var_13    CAS  CAN  CAM  CAL   -50.80  30.0  2
+ UC9  Var_14    CAO  CAN  CAM  CBC  -104.59  30.0  2
+ UC9  Var_15    CAS  CAN  CAM  CBC    73.24  30.0  2
+ UC9  Var_16    H10  CAM  CAN  CAO    13.44  30.0  2
+ UC9  Var_17    CAM  CAL  CAJ  C5    -73.59  30.0  1
+ UC9  Var_18    CAN  CAM  CAL  CAJ    84.08  30.0  3
+ UC9  Var_19    H11  CBC  CAM  CAN   -61.27  30.0  3
+ UC9  Var_20    H12  CBC  CAM  CAN    58.78  30.0  3
+ UC9  Var_21    H13  CBC  CAM  CAN   178.42  30.0  3
+ UC9  Var_22    CBC  CAM  CAL  CAJ   -40.09  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

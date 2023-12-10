@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SFB  SFB  '(2S,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-N-({[(2S,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-4-hydroxy-2-(hydroxymethyl)tetrahydrofuran-3-yl]methyl}sulfonyl)-3,4-dihydroxytetrahydrofuran-2-carboxamide (non-preferred name)'  ligand  64  40  .  2021-08-23  2021-08-23  
+ SFB  SFB  '(2S,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-N-({[(2S,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-4-hydroxy-2-(hydroxymethyl)tetrahydrofuran-3-yl]methyl}sulfonyl)-3,4-dihydroxytetrahydrofuran-2-carboxamide (non-preferred name)'  ligand  64  40  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SFB
@@ -317,47 +318,113 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SFB  CONST_01  C4A   N3A  C2A  N1A    0.00   0.0  0
- SFB  CONST_02  C4A   C5A  C6A  N1A    0.00   0.0  0
- SFB  CONST_03  N7A   C5A  C6A  N1A  180.00   0.0  0
- SFB  CONST_04  C5A   C6A  N1A  C2A    0.00   0.0  0
- SFB  CONST_05  C5A   C4A  N3A  C2A    0.00   0.0  0
- SFB  CONST_06  N9A   C4A  N3A  C2A  180.00   0.0  0
- SFB  CONST_07  C6A   N1A  C2A  N3A    0.00   0.0  0
- SFB  CONST_08  C6A   C5A  C4A  N3A    0.00   0.0  0
- SFB  CONST_09  N7A   C5A  C4A  N3A  180.00   0.0  0
- SFB  CONST_10  C8A   N9A  C4A  N3A  180.00   0.0  0
- SFB  CONST_11  C8A   N7A  C5A  C4A    0.00   0.0  0
- SFB  CONST_12  N7A   C8A  N9A  C4A    0.00   0.0  0
- SFB  CONST_13  C8A   N9A  C4A  C5A    0.00   0.0  0
- SFB  CONST_14  N9A   C8A  N7A  C5A    0.00   0.0  0
- SFB  CONST_15  N9A   C4A  C5A  C6A  180.00   0.0  0
- SFB  CONST_16  C8A   N7A  C5A  C6A  180.00   0.0  0
- SFB  CONST_17  N9A   C4A  C5A  N7A    0.00   0.0  0
- SFB  CONST_18  N3A   C4A  N9A  C1B    0.00   0.0  0
- SFB  CONST_19  C5A   C4A  N9A  C1B  180.00   0.0  0
- SFB  CONST_20  N7A   C8A  N9A  C1B  180.00   0.0  0
- SFB  CONST_21  N3D   C2D  N1D  C1C  180.00   0.0  0
- SFB  CONST_22  C4D   N3D  C2D  N1D    0.00   0.0  0
- SFB  CONST_23  C5D   C4D  N3D  C2D    0.00   0.0  0
- SFB  CONST_24  C6D   N1D  C2D  N3D    0.00   0.0  0
- SFB  CONST_25  N6A   C6A  N1A  C2A  180.00   0.0  0
- SFB  CONST_26  N6A   C6A  C5A  C4A  180.00   0.0  0
- SFB  CONST_27  N7A   C5A  C6A  N6A    0.00   0.0  0
- SFB  CONST_28  O2D   C2D  N1D  C1C    0.00   0.0  0
- SFB  CONST_29  O4D   C4D  N3D  C2D  180.00   0.0  0
- SFB  CONST_30  C6D   N1D  C2D  O2D  180.00   0.0  0
- SFB  CONST_31  C4D   N3D  C2D  O2D  180.00   0.0  0
- SFB  CONST_32  H8A   C8A  N9A  C1B    0.00   0.0  0
- SFB  CONST_33  H2A   C2A  N3A  C4A  180.00   0.0  0
- SFB  CONST_34  HN3D  N3D  C2D  N1D  180.00   0.0  0
- SFB  CONST_35  HN6A  N6A  C6A  N1A    0.00   0.0  0
- SFB  CONST_36  HN6B  N6A  C6A  N1A  180.00   0.0  0
- SFB  CONST_37  SAS   N3S  C5B  C4B  180.00   0.0  0
- SFB  CONST_38  HN3S  N3S  C5B  C4B    0.00   0.0  0
- SFB  CONST_39  SAS   N3S  C5B  O5B    0.00   0.0  0
- SFB  Var_01    C3C   C1S  SAS  O1S  -65.59  30.0  1
- SFB  Var_02    C5B   N3S  SAS  C1S   73.61  30.0  2
+ SFB  CONST_01  C4A   N3A  C2A  N1A     0.00   0.0  0
+ SFB  CONST_02  C4A   C5A  C6A  N1A     0.00   0.0  0
+ SFB  CONST_03  N7A   C5A  C6A  N1A   180.00   0.0  0
+ SFB  CONST_04  C5A   C6A  N1A  C2A     0.00   0.0  0
+ SFB  CONST_05  C5A   C4A  N3A  C2A     0.00   0.0  0
+ SFB  CONST_06  N9A   C4A  N3A  C2A   180.00   0.0  0
+ SFB  CONST_07  C6A   N1A  C2A  N3A     0.00   0.0  0
+ SFB  CONST_08  C6A   C5A  C4A  N3A     0.00   0.0  0
+ SFB  CONST_09  N7A   C5A  C4A  N3A   180.00   0.0  0
+ SFB  CONST_10  C8A   N9A  C4A  N3A   180.00   0.0  0
+ SFB  CONST_11  C8A   N7A  C5A  C4A     0.00   0.0  0
+ SFB  CONST_12  N7A   C8A  N9A  C4A     0.00   0.0  0
+ SFB  CONST_13  C8A   N9A  C4A  C5A     0.00   0.0  0
+ SFB  CONST_14  N9A   C8A  N7A  C5A     0.00   0.0  0
+ SFB  CONST_15  N9A   C4A  C5A  C6A   180.00   0.0  0
+ SFB  CONST_16  C8A   N7A  C5A  C6A   180.00   0.0  0
+ SFB  CONST_17  N9A   C4A  C5A  N7A     0.00   0.0  0
+ SFB  CONST_18  N3A   C4A  N9A  C1B     0.00   0.0  0
+ SFB  CONST_19  C5A   C4A  N9A  C1B   180.00   0.0  0
+ SFB  CONST_20  N7A   C8A  N9A  C1B   180.00   0.0  0
+ SFB  CONST_21  N3D   C2D  N1D  C1C   180.00   0.0  0
+ SFB  CONST_22  C4D   N3D  C2D  N1D     0.00   0.0  0
+ SFB  CONST_23  C5D   C4D  N3D  C2D     0.00   0.0  0
+ SFB  CONST_24  C6D   N1D  C2D  N3D     0.00   0.0  0
+ SFB  CONST_25  N6A   C6A  N1A  C2A   180.00   0.0  0
+ SFB  CONST_26  N6A   C6A  C5A  C4A   180.00   0.0  0
+ SFB  CONST_27  N7A   C5A  C6A  N6A     0.00   0.0  0
+ SFB  CONST_28  O2D   C2D  N1D  C1C     0.00   0.0  0
+ SFB  CONST_29  O4D   C4D  N3D  C2D   180.00   0.0  0
+ SFB  CONST_30  C6D   N1D  C2D  O2D   180.00   0.0  0
+ SFB  CONST_31  C4D   N3D  C2D  O2D   180.00   0.0  0
+ SFB  CONST_32  H8A   C8A  N9A  C1B     0.00   0.0  0
+ SFB  CONST_33  H2A   C2A  N3A  C4A   180.00   0.0  0
+ SFB  CONST_34  HN3D  N3D  C2D  N1D   180.00   0.0  0
+ SFB  CONST_35  HN6A  N6A  C6A  N1A     0.00   0.0  0
+ SFB  CONST_36  HN6B  N6A  C6A  N1A   180.00   0.0  0
+ SFB  CONST_37  SAS   N3S  C5B  C4B   180.00   0.0  0
+ SFB  CONST_38  HN3S  N3S  C5B  C4B     0.00   0.0  0
+ SFB  CONST_39  SAS   N3S  C5B  O5B     0.00   0.0  0
+ SFB  Var_01    C3C   C1S  SAS  O1S   -65.59  30.0  1
+ SFB  Var_02    C5B   N3S  SAS  C1S    73.61  30.0  2
+ SFB  Var_03    C4B   C3B  C2B  C1B    36.77  30.0  1
+ SFB  Var_04    C3B   C4B  O4B  C1B    12.25  30.0  1
+ SFB  Var_05    C4C   C3C  C2C  C1C    35.93  30.0  1
+ SFB  Var_06    C3C   C4C  O4C  C1C    15.47  30.0  1
+ SFB  Var_07    C3C   C2C  C1C  N1D    92.19  30.0  1
+ SFB  Var_08    C4C   O4C  C1C  N1D  -113.12  30.0  1
+ SFB  Var_09    C4B   O4B  C1B  C2B    12.45  30.0  1
+ SFB  Var_10    C4A   N9A  C1B  C2B    72.07  30.0  2
+ SFB  Var_11    C8A   N9A  C1B  C2B  -110.19  30.0  2
+ SFB  Var_12    O4B   C4B  C3B  C2B   -31.22  30.0  1
+ SFB  Var_13    C2D   N1D  C1C  C2C    76.19  30.0  3
+ SFB  Var_14    C6D   N1D  C1C  C2C  -105.39  30.0  3
+ SFB  Var_15    C4C   O4C  C1C  C2C     8.23  30.0  1
+ SFB  Var_16    O4C   C4C  C3C  C2C   -32.43  30.0  1
+ SFB  Var_17    O4C   C1C  N1D  C2D  -165.34  30.0  2
+ SFB  Var_18    O4B   C1B  C2B  C3B   -31.51  30.0  1
+ SFB  Var_19    N9A   C1B  C2B  C3B    87.96  30.0  1
+ SFB  Var_20    O4C   C1C  C2C  C3C   -28.15  30.0  1
+ SFB  Var_21    O4B   C1B  N9A  C4A  -170.18  30.0  1
+ SFB  Var_22    N9A   C1B  O4B  C4B  -108.42  30.0  1
+ SFB  Var_23    C8A   N9A  C1B  O4B     7.55  30.0  2
+ SFB  Var_24    C6D   N1D  C1C  O4C    13.08  30.0  3
+ SFB  Var_25    O3B   C3B  C2B  C1B   154.49  30.0  1
+ SFB  Var_26    C5B   C4B  O4B  C1B   134.03  30.0  1
+ SFB  Var_27    C1S   C3C  C2C  C1C   157.84  30.0  1
+ SFB  Var_28    C5C   C4C  O4C  C1C   137.98  30.0  1
+ SFB  Var_29    O2C   C2C  C1C  N1D  -152.99  30.0  1
+ SFB  Var_30    O4C   C4C  C3C  C1S  -156.71  30.0  1
+ SFB  Var_31    C5B   C4B  C3B  C2B  -151.60  30.0  1
+ SFB  Var_32    O4B   C1B  C2B  O2B    84.75  30.0  1
+ SFB  Var_33    N9A   C1B  C2B  O2B  -155.78  30.0  1
+ SFB  Var_34    C4B   C3B  C2B  O2B   -76.49  30.0  1
+ SFB  Var_35    C5C   C4C  C3C  C2C  -152.91  30.0  1
+ SFB  Var_36    O4C   C1C  C2C  O2C    86.66  30.0  1
+ SFB  Var_37    C4C   C3C  C2C  O2C   -79.94  30.0  1
+ SFB  Var_38    O4B   C4B  C3B  O3B  -152.26  30.0  1
+ SFB  Var_39    H3B   C3B  C2B  C1B   -79.42  30.0  1
+ SFB  Var_40    H4B   C4B  O4B  C1B  -106.24  30.0  1
+ SFB  Var_41    H6D   C6D  N1D  C1C    -0.62  30.0  1
+ SFB  Var_42    H3C   C3C  C2C  C1C   -78.43  30.0  1
+ SFB  Var_43    H4C   C4C  O4C  C1C  -102.54  30.0  1
+ SFB  Var_44    H2C   C2C  C1C  N1D   -27.17  30.0  1
+ SFB  Var_45    H5D   C5D  C6D  N1D   179.98  30.0  1
+ SFB  Var_46    H1C   C1C  N1D  C2D   -45.90  30.0  2
+ SFB  Var_47    H1B   C1B  C2B  C3B  -151.38  30.0  1
+ SFB  Var_48    H2B   C2B  C3B  C4B   156.62  30.0  1
+ SFB  Var_49    O2C   C2C  C3C  C1S    41.96  30.0  1
+ SFB  Var_50    C5C   C4C  C3C  C1S    82.81  30.0  1
+ SFB  Var_51    O3B   C3B  C2B  O2B    41.24  30.0  1
+ SFB  Var_52    SAS   C1S  C3C  C2C    73.83  30.0  1
+ SFB  Var_53    N3S   C5B  C4B  C3B   -65.28  30.0  3
+ SFB  Var_54    O5B   C5B  C4B  C3B   114.62  30.0  3
+ SFB  Var_55    C5B   C4B  C3B  O3B    87.36  30.0  1
+ SFB  Var_56    O5C   C5C  C4C  C3C   179.42  30.0  3
+ SFB  Var_57    N3S   C5B  C4B  O4B   176.68  30.0  3
+ SFB  Var_58    O5B   C5B  C4B  O4B    -3.42  30.0  3
+ SFB  Var_59    SAS   C1S  C3C  C4C  -169.84  30.0  1
+ SFB  Var_60    O5C   C5C  C4C  O4C    62.29  30.0  3
+ SFB  Var_61    HO2B  O2B  C2B  C1B  -157.00  30.0  3
+ SFB  Var_62    HO2C  O2C  C2C  C1C    82.89  30.0  3
+ SFB  Var_63    HO3B  O3B  C3B  C2B    92.21  30.0  3
+ SFB  Var_64    H1S   C1S  C3C  C2C  -168.84  30.0  1
+ SFB  Var_65    H1SA  C1S  C3C  C2C   -46.73  30.0  1
+ SFB  Var_66    H5C   C5C  C4C  C3C   -59.15  30.0  3
+ SFB  Var_67    H5CA  C5C  C4C  C3C    56.48  30.0  3
+ SFB  Var_68    HO5C  O5C  C5C  C4C   178.85  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

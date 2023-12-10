@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LOB  LOB  2-{(2S,6R)-6-[(2R)-2-hydroxy-2-phenylethyl]-1-methylpiperidin-2-yl}-1-phenylethanone  ligand  52  25  .  2021-08-12  2021-08-12  
+ LOB  LOB  2-{(2S,6R)-6-[(2R)-2-hydroxy-2-phenylethyl]-1-methylpiperidin-2-yl}-1-phenylethanone  ligand  52  25  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LOB
@@ -268,37 +269,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LOB  CONST_01  C6    C5   C2   C1     0.00   0.0  0
- LOB  CONST_02  C6    C7   C4   C1     0.00   0.0  0
- LOB  CONST_03  C7    C4   C1   C2     0.00   0.0  0
- LOB  CONST_04  C7    C6   C5   C2     0.00   0.0  0
- LOB  CONST_05  C4    C1   C2   C5     0.00   0.0  0
- LOB  CONST_06  C4    C7   C6   C5     0.00   0.0  0
- LOB  CONST_07  C21   C20  C18  C17    0.00   0.0  0
- LOB  CONST_08  C21   C10  C19  C17    0.00   0.0  0
- LOB  CONST_09  C10   C19  C17  C18    0.00   0.0  0
- LOB  CONST_10  C10   C21  C20  C18    0.00   0.0  0
- LOB  CONST_11  C19   C17  C18  C20    0.00   0.0  0
- LOB  CONST_12  C19   C10  C21  C20    0.00   0.0  0
- LOB  CONST_13  C5    C2   C1   C3   180.00   0.0  0
- LOB  CONST_14  C7    C4   C1   C3   180.00   0.0  0
- LOB  CONST_15  C20   C18  C17  C16  180.00   0.0  0
- LOB  CONST_16  C10   C19  C17  C16  180.00   0.0  0
- LOB  CONST_17  H5    C5   C2   C1   180.00   0.0  0
- LOB  CONST_18  H7    C7   C4   C1   180.00   0.0  0
- LOB  CONST_19  H4    C4   C1   C2   180.00   0.0  0
- LOB  CONST_20  H6    C6   C5   C2   180.00   0.0  0
- LOB  CONST_21  H2    C2   C5   C6   180.00   0.0  0
- LOB  CONST_22  H20   C20  C18  C17  180.00   0.0  0
- LOB  CONST_23  H10   C10  C19  C17  180.00   0.0  0
- LOB  CONST_24  H19   C19  C17  C18  180.00   0.0  0
- LOB  CONST_25  H21   C21  C20  C18  180.00   0.0  0
- LOB  CONST_26  H18   C18  C20  C21  180.00   0.0  0
- LOB  Var_01    C13   C15  C12  C9    56.48  30.0  1
- LOB  Var_02    C11   C13  C15  C12  -56.98  30.0  1
- LOB  Var_03    C2    C1   C3   O1     9.23  30.0  2
- LOB  Var_04    C9    C8   C3   C1   163.31  30.0  3
- LOB  Var_05    H221  C22  N1   C9   -68.29  30.0  3
+ LOB  CONST_01  C6    C5   C2   C1      0.00   0.0  0
+ LOB  CONST_02  C6    C7   C4   C1      0.00   0.0  0
+ LOB  CONST_03  C7    C4   C1   C2      0.00   0.0  0
+ LOB  CONST_04  C7    C6   C5   C2      0.00   0.0  0
+ LOB  CONST_05  C4    C1   C2   C5      0.00   0.0  0
+ LOB  CONST_06  C4    C7   C6   C5      0.00   0.0  0
+ LOB  CONST_07  C21   C20  C18  C17     0.00   0.0  0
+ LOB  CONST_08  C21   C10  C19  C17     0.00   0.0  0
+ LOB  CONST_09  C10   C19  C17  C18     0.00   0.0  0
+ LOB  CONST_10  C10   C21  C20  C18     0.00   0.0  0
+ LOB  CONST_11  C19   C17  C18  C20     0.00   0.0  0
+ LOB  CONST_12  C19   C10  C21  C20     0.00   0.0  0
+ LOB  CONST_13  C5    C2   C1   C3    180.00   0.0  0
+ LOB  CONST_14  C7    C4   C1   C3    180.00   0.0  0
+ LOB  CONST_15  C20   C18  C17  C16   180.00   0.0  0
+ LOB  CONST_16  C10   C19  C17  C16   180.00   0.0  0
+ LOB  CONST_17  H5    C5   C2   C1    180.00   0.0  0
+ LOB  CONST_18  H7    C7   C4   C1    180.00   0.0  0
+ LOB  CONST_19  H4    C4   C1   C2    180.00   0.0  0
+ LOB  CONST_20  H6    C6   C5   C2    180.00   0.0  0
+ LOB  CONST_21  H2    C2   C5   C6    180.00   0.0  0
+ LOB  CONST_22  H20   C20  C18  C17   180.00   0.0  0
+ LOB  CONST_23  H10   C10  C19  C17   180.00   0.0  0
+ LOB  CONST_24  H19   C19  C17  C18   180.00   0.0  0
+ LOB  CONST_25  H21   C21  C20  C18   180.00   0.0  0
+ LOB  CONST_26  H18   C18  C20  C21   180.00   0.0  0
+ LOB  Var_01    C13   C15  C12  C9     56.48  30.0  1
+ LOB  Var_02    C11   C13  C15  C12   -56.98  30.0  1
+ LOB  Var_03    C2    C1   C3   O1      9.23  30.0  2
+ LOB  Var_04    C9    C8   C3   C1    163.31  30.0  3
+ LOB  Var_05    H221  C22  N1   C9    -68.29  30.0  3
+ LOB  Var_06    C13   C11  N1   C9    -51.51  30.0  1
+ LOB  Var_07    C11   N1   C9   C12    50.62  30.0  1
+ LOB  Var_08    N1    C9   C12  C15   -53.77  30.0  1
+ LOB  Var_09    N1    C11  C13  C15    55.07  30.0  1
+ LOB  Var_10    C15   C12  C9   C8   -175.07  30.0  1
+ LOB  Var_11    C11   N1   C9   C8    169.91  30.0  1
+ LOB  Var_12    C14   C11  N1   C9   -174.40  30.0  1
+ LOB  Var_13    C22   N1   C9   C12   173.33  30.0  1
+ LOB  Var_14    C14   C11  C13  C15   177.59  30.0  1
+ LOB  Var_15    C22   N1   C11  C13  -174.52  30.0  1
+ LOB  Var_16    H11   C11  N1   C9     67.02  30.0  1
+ LOB  Var_17    H9    C9   C12  C15    67.20  30.0  1
+ LOB  Var_18    C12   C9   C8   C3    -71.86  30.0  3
+ LOB  Var_19    N1    C9   C8   C3    165.92  30.0  3
+ LOB  Var_20    C22   N1   C9   C8    -67.38  30.0  1
+ LOB  Var_21    C16   C14  C11  C13    49.37  30.0  3
+ LOB  Var_22    C17   C16  C14  C11  -178.54  30.0  3
+ LOB  Var_23    C16   C14  C11  N1    173.24  30.0  3
+ LOB  Var_24    C14   C11  N1   C22    62.58  30.0  1
+ LOB  Var_25    C18   C17  C16  C14   100.18  30.0  2
+ LOB  Var_26    C19   C17  C16  C14   -78.36  30.0  2
+ LOB  Var_27    C18   C17  C16  O2   -134.21  30.0  2
+ LOB  Var_28    C19   C17  C16  O2     47.24  30.0  2
+ LOB  Var_29    H8C1  C8   C9   C12    51.71  30.0  1
+ LOB  Var_30    H8C2  C8   C9   C12   167.79  30.0  1
+ LOB  Var_31    H141  C14  C11  C13   171.08  30.0  3
+ LOB  Var_32    H142  C14  C11  C13   -72.76  30.0  3
+ LOB  Var_33    H16   C16  C17  C18   -18.64  30.0  2
+ LOB  Var_34    O2    C16  C14  C11    55.75  30.0  3
+ LOB  Var_35    HA    O2   C16  C17   -79.82  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

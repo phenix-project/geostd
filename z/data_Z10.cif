@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- Z10  Z10  '[(1S)-1-[(2-fluoro-6-phenyl-phenyl)carbonylamino]ethyl]-trihydroxy-boron'  ligand  38  22  .  2021-08-25  2021-08-25  
+ Z10  Z10  '[(1S)-1-[(2-fluoro-6-phenyl-phenyl)carbonylamino]ethyl]-trihydroxy-boron'  ligand  38  22  .  2021-08-25  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_Z10
@@ -205,39 +206,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- Z10  CONST_01  C11  C12  C13  C14    0.00   0.0  0
- Z10  CONST_02  C11  C8   C7   C14    0.00   0.0  0
- Z10  CONST_03  C10  C8   C7   C14  180.00   0.0  0
- Z10  CONST_04  C8   C7   C14  C13    0.00   0.0  0
- Z10  CONST_05  C8   C11  C12  C13    0.00   0.0  0
- Z10  CONST_06  C7   C14  C13  C12    0.00   0.0  0
- Z10  CONST_07  C10  C8   C11  C12  180.00   0.0  0
- Z10  CONST_08  C7   C8   C11  C12    0.00   0.0  0
- Z10  CONST_11  C20  C21  C10  C8   180.00   0.0  0
- Z10  CONST_12  C18  C17  C10  C8   180.00   0.0  0
- Z10  CONST_13  C19  C20  C21  C10    0.00   0.0  0
- Z10  CONST_14  C19  C18  C17  C10    0.00   0.0  0
- Z10  CONST_16  C18  C17  C10  C21    0.00   0.0  0
- Z10  CONST_17  C18  C19  C20  C21    0.00   0.0  0
- Z10  CONST_18  C17  C10  C21  C20    0.00   0.0  0
- Z10  CONST_19  C17  C18  C19  C20    0.00   0.0  0
- Z10  CONST_21  C12  C13  C14  F15  180.00   0.0  0
- Z10  CONST_22  C8   C7   C14  F15  180.00   0.0  0
- Z10  CONST_23  C5   C7   C14  C13  180.00   0.0  0
- Z10  CONST_24  C5   C7   C8   C11  180.00   0.0  0
- Z10  CONST_25  C5   C7   C8   C10    0.00   0.0  0
- Z10  CONST_26  H12  C12  C13  C14  180.00   0.0  0
- Z10  CONST_27  H11  C11  C12  C13  180.00   0.0  0
- Z10  CONST_28  H13  C13  C12  C11  180.00   0.0  0
- Z10  CONST_29  H21  C21  C10  C8     0.00   0.0  0
- Z10  CONST_30  H17  C17  C10  C8     0.00   0.0  0
- Z10  CONST_31  H20  C20  C21  C10  180.00   0.0  0
- Z10  CONST_32  H18  C18  C17  C10  180.00   0.0  0
- Z10  CONST_33  H19  C19  C20  C21  180.00   0.0  0
- Z10  CONST_34  C3   N4   C5   C7   180.00   0.0  0
- Z10  CONST_35  H4   N4   C5   C7     0.00   0.0  0
- Z10  CONST_36  C3   N4   C5   O6     0.00   0.0  0
- Z10  Var_01    O6   C5   C7   C14  104.82  30.0  2
+ Z10  CONST_01  C11   C12  C13  C14     0.00   0.0  0
+ Z10  CONST_02  C11   C8   C7   C14     0.00   0.0  0
+ Z10  CONST_03  C10   C8   C7   C14   180.00   0.0  0
+ Z10  CONST_04  C8    C7   C14  C13     0.00   0.0  0
+ Z10  CONST_05  C8    C11  C12  C13     0.00   0.0  0
+ Z10  CONST_06  C7    C14  C13  C12     0.00   0.0  0
+ Z10  CONST_07  C10   C8   C11  C12   180.00   0.0  0
+ Z10  CONST_08  C7    C8   C11  C12     0.00   0.0  0
+ Z10  CONST_09  C20   C21  C10  C8    180.00   0.0  0
+ Z10  CONST_10  C18   C17  C10  C8    180.00   0.0  0
+ Z10  CONST_11  C19   C20  C21  C10     0.00   0.0  0
+ Z10  CONST_12  C19   C18  C17  C10     0.00   0.0  0
+ Z10  CONST_13  C18   C17  C10  C21     0.00   0.0  0
+ Z10  CONST_14  C18   C19  C20  C21     0.00   0.0  0
+ Z10  CONST_15  C17   C10  C21  C20     0.00   0.0  0
+ Z10  CONST_16  C17   C18  C19  C20     0.00   0.0  0
+ Z10  CONST_17  C12   C13  C14  F15   180.00   0.0  0
+ Z10  CONST_18  C8    C7   C14  F15   180.00   0.0  0
+ Z10  CONST_19  C5    C7   C14  C13   180.00   0.0  0
+ Z10  CONST_20  C5    C7   C8   C11   180.00   0.0  0
+ Z10  CONST_21  C5    C7   C8   C10     0.00   0.0  0
+ Z10  CONST_22  H12   C12  C13  C14   180.00   0.0  0
+ Z10  CONST_23  H11   C11  C12  C13   180.00   0.0  0
+ Z10  CONST_24  H13   C13  C12  C11   180.00   0.0  0
+ Z10  CONST_25  H21   C21  C10  C8      0.00   0.0  0
+ Z10  CONST_26  H17   C17  C10  C8      0.00   0.0  0
+ Z10  CONST_27  H20   C20  C21  C10   180.00   0.0  0
+ Z10  CONST_28  H18   C18  C17  C10   180.00   0.0  0
+ Z10  CONST_29  H19   C19  C20  C21   180.00   0.0  0
+ Z10  CONST_30  C3    N4   C5   C7    180.00   0.0  0
+ Z10  CONST_31  H4    N4   C5   C7      0.00   0.0  0
+ Z10  CONST_32  C3    N4   C5   O6      0.00   0.0  0
+ Z10  Var_01    O6    C5   C7   C14   104.82  30.0  2
+ Z10  Var_02    C21   C10  C8   C11   -46.74  30.0  2
+ Z10  Var_03    C17   C10  C8   C11   132.03  30.0  2
+ Z10  Var_04    C7    C8   C10  C21   133.54  30.0  3
+ Z10  Var_05    C7    C8   C10  C17   -47.69  30.0  3
+ Z10  Var_06    C16   C3   N4   C5    -92.83  30.0  3
+ Z10  Var_07    B     C3   N4   C5    141.67  30.0  3
+ Z10  Var_08    O1    B    C3   N4     61.64  30.0  3
+ Z10  Var_09    O2    B    C3   N4    177.21  30.0  3
+ Z10  Var_10    OXT   B    C3   N4    -60.29  30.0  3
+ Z10  Var_11    O1    B    C3   C16   -61.68  30.0  3
+ Z10  Var_12    O2    B    C3   C16    53.89  30.0  3
+ Z10  Var_13    OXT   B    C3   C16   176.39  30.0  3
+ Z10  Var_14    H3    C3   N4   C5     23.52  30.0  3
+ Z10  Var_15    H161  C16  C3   N4    176.53  30.0  3
+ Z10  Var_16    H162  C16  C3   N4    -64.58  30.0  3
+ Z10  Var_17    H163  C16  C3   N4     56.21  30.0  3
+ Z10  Var_18    H1    O1   B    C3    -83.63  30.0  3
+ Z10  Var_19    H2    O2   B    C3     40.65  30.0  3
+ Z10  Var_20    HXT   OXT  B    C3   -179.51  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

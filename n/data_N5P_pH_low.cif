@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- N5P  N5P  1-{2-deoxy-5-O-[(R)-hydroxy{[(R)-hydroxy(phosphonooxy)phosphoryl]oxy}phosphoryl]-beta-D-erythro-pentofuranosyl}-5-nitro-1H-indole  ligand  49  32  .  2022-11-17  2022-11-17
+ N5P  N5P  1-{2-deoxy-5-O-[(R)-hydroxy{[(R)-hydroxy(phosphonooxy)phosphoryl]oxy}phosphoryl]-beta-D-erythro-pentofuranosyl}-5-nitro-1H-indole  ligand  49  32  .  2022-11-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_N5P
@@ -252,41 +253,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- N5P  CONST_01  CE2   CZ2  CH2  CZ3    0.00   0.0  0
- N5P  CONST_02  CE2   CD2  CE3  CZ3    0.00   0.0  0
- N5P  CONST_03  CG    CD2  CE3  CZ3  180.00   0.0  0
- N5P  CONST_04  CZ2   CH2  CZ3  CE3    0.00   0.0  0
- N5P  CONST_05  CZ2   CE2  CD2  CE3    0.00   0.0  0
- N5P  CONST_06  NE1   CE2  CD2  CE3  180.00   0.0  0
- N5P  CONST_07  CD1   CG   CD2  CE3  180.00   0.0  0
- N5P  CONST_08  CH2   CZ3  CE3  CD2    0.00   0.0  0
- N5P  CONST_09  CH2   CZ2  CE2  CD2    0.00   0.0  0
- N5P  CONST_10  CD1   NE1  CE2  CD2    0.00   0.0  0
- N5P  CONST_11  NE1   CD1  CG   CD2    0.00   0.0  0
- N5P  CONST_12  NE1   CE2  CZ2  CH2  180.00   0.0  0
- N5P  CONST_13  CG    CD2  CE2  CZ2  180.00   0.0  0
- N5P  CONST_14  CD1   NE1  CE2  CZ2  180.00   0.0  0
- N5P  CONST_15  CD1   CG   CD2  CE2    0.00   0.0  0
- N5P  CONST_16  CG    CD1  NE1  CE2    0.00   0.0  0
- N5P  CONST_17  CG    CD2  CE2  NE1    0.00   0.0  0
- N5P  CONST_18  C1'   NE1  CE2  CD2  180.00   0.0  0
- N5P  CONST_19  C1'   NE1  CE2  CZ2    0.00   0.0  0
- N5P  CONST_20  C1'   NE1  CD1  CG   180.00   0.0  0
- N5P  CONST_21  CZ2   CH2  CZ3  NRO  180.00   0.0  0
- N5P  CONST_22  CD2   CE3  CZ3  NRO  180.00   0.0  0
- N5P  CONST_23  HZ2   CZ2  CH2  CZ3  180.00   0.0  0
- N5P  CONST_24  HH2   CH2  CZ3  CE3  180.00   0.0  0
- N5P  CONST_25  HG    CG   CD2  CE3    0.00   0.0  0
- N5P  CONST_26  HD1   CD1  CG   CD2  180.00   0.0  0
- N5P  CONST_27  HE3   CE3  CZ3  CH2  180.00   0.0  0
- N5P  CONST_28  CH2   CZ3  NRO  OR2    0.00   0.0  0
- N5P  CONST_29  CE3   CZ3  NRO  OR2  180.00   0.0  0
- N5P  CONST_30  CH2   CZ3  NRO  OR1  180.00   0.0  0
- N5P  CONST_31  CE3   CZ3  NRO  OR1    0.00   0.0  0
- N5P  Var_01    O3A   PA   O5'  C5'  -85.28  30.0  3
- N5P  Var_02    O1B   PB   O3A  PA    72.52  30.0  3
- N5P  Var_03    O1G   PG   O3B  PB    58.38  30.0  3
- N5P  Var_04    H5'1  C5'  O5'  PA    61.00  30.0  1
+ N5P  CONST_01  CE2   CZ2  CH2  CZ3     0.00   0.0  0
+ N5P  CONST_02  CE2   CD2  CE3  CZ3     0.00   0.0  0
+ N5P  CONST_03  CG    CD2  CE3  CZ3   180.00   0.0  0
+ N5P  CONST_04  CZ2   CH2  CZ3  CE3     0.00   0.0  0
+ N5P  CONST_05  CZ2   CE2  CD2  CE3     0.00   0.0  0
+ N5P  CONST_06  NE1   CE2  CD2  CE3   180.00   0.0  0
+ N5P  CONST_07  CD1   CG   CD2  CE3   180.00   0.0  0
+ N5P  CONST_08  CH2   CZ3  CE3  CD2     0.00   0.0  0
+ N5P  CONST_09  CH2   CZ2  CE2  CD2     0.00   0.0  0
+ N5P  CONST_10  CD1   NE1  CE2  CD2     0.00   0.0  0
+ N5P  CONST_11  NE1   CD1  CG   CD2     0.00   0.0  0
+ N5P  CONST_12  NE1   CE2  CZ2  CH2   180.00   0.0  0
+ N5P  CONST_13  CG    CD2  CE2  CZ2   180.00   0.0  0
+ N5P  CONST_14  CD1   NE1  CE2  CZ2   180.00   0.0  0
+ N5P  CONST_15  CD1   CG   CD2  CE2     0.00   0.0  0
+ N5P  CONST_16  CG    CD1  NE1  CE2     0.00   0.0  0
+ N5P  CONST_17  CG    CD2  CE2  NE1     0.00   0.0  0
+ N5P  CONST_18  C1'   NE1  CE2  CD2   180.00   0.0  0
+ N5P  CONST_19  C1'   NE1  CE2  CZ2     0.00   0.0  0
+ N5P  CONST_20  C1'   NE1  CD1  CG    180.00   0.0  0
+ N5P  CONST_21  CZ2   CH2  CZ3  NRO   180.00   0.0  0
+ N5P  CONST_22  CD2   CE3  CZ3  NRO   180.00   0.0  0
+ N5P  CONST_23  HZ2   CZ2  CH2  CZ3   180.00   0.0  0
+ N5P  CONST_24  HH2   CH2  CZ3  CE3   180.00   0.0  0
+ N5P  CONST_25  HG    CG   CD2  CE3     0.00   0.0  0
+ N5P  CONST_26  HD1   CD1  CG   CD2   180.00   0.0  0
+ N5P  CONST_27  HE3   CE3  CZ3  CH2   180.00   0.0  0
+ N5P  CONST_28  CH2   CZ3  NRO  OR2     0.00   0.0  0
+ N5P  CONST_29  CE3   CZ3  NRO  OR2   180.00   0.0  0
+ N5P  CONST_30  CH2   CZ3  NRO  OR1   180.00   0.0  0
+ N5P  CONST_31  CE3   CZ3  NRO  OR1     0.00   0.0  0
+ N5P  Var_01    O3A   PA   O5'  C5'   -85.28  30.0  3
+ N5P  Var_02    O1B   PB   O3A  PA     72.52  30.0  3
+ N5P  Var_03    O1G   PG   O3B  PB     58.38  30.0  3
+ N5P  Var_04    H5'1  C5'  O5'  PA     61.00  30.0  1
+ N5P  Var_05    C2'   C1'  NE1  CE2   134.90  30.0  2
+ N5P  Var_06    O4'   C1'  NE1  CE2  -105.98  30.0  2
+ N5P  Var_07    C3'   C2'  C1'  NE1   151.66  30.0  1
+ N5P  Var_08    C4'   O4'  C1'  NE1  -135.84  30.0  1
+ N5P  Var_09    C2'   C1'  NE1  CD1   -50.56  30.0  2
+ N5P  Var_10    O4'   C1'  NE1  CD1    68.56  30.0  2
+ N5P  Var_11    C4'   C3'  C2'  C1'   -36.39  30.0  1
+ N5P  Var_12    C3'   C4'  O4'  C1'   -12.42  30.0  1
+ N5P  Var_13    C3'   C2'  C1'  O4'    30.46  30.0  1
+ N5P  Var_14    C2'   C3'  C4'  O4'    30.80  30.0  1
+ N5P  Var_15    C2'   C1'  O4'  C4'   -11.50  30.0  1
+ N5P  Var_16    O3'   C3'  C2'  C1'    77.45  30.0  1
+ N5P  Var_17    C5'   C4'  O4'  C1'   110.40  30.0  1
+ N5P  Var_18    O3'   C3'  C4'  O4'   -87.04  30.0  1
+ N5P  Var_19    C5'   C4'  C3'  C2'   -87.45  30.0  1
+ N5P  Var_20    H1'   C1'  NE1  CE2    12.60  30.0  2
+ N5P  Var_21    H2'1  C2'  C1'  NE1   -86.53  30.0  1
+ N5P  Var_22    H2'2  C2'  C1'  NE1    34.25  30.0  1
+ N5P  Var_23    H3'   C3'  C2'  C1'  -156.22  30.0  1
+ N5P  Var_24    H4'   C4'  O4'  C1'  -131.50  30.0  1
+ N5P  Var_25    O5'   C5'  C4'  O4'   176.51  30.0  3
+ N5P  Var_26    O5'   C5'  C4'  C3'   -66.18  30.0  3
+ N5P  Var_27    C5'   C4'  C3'  O3'   154.72  30.0  1
+ N5P  Var_28    H5'1  C5'  C4'  O4'   -62.83  30.0  3
+ N5P  Var_29    H5'2  C5'  C4'  O4'    57.09  30.0  3
+ N5P  Var_30    HO3'  O3'  C3'  C4'   173.59  30.0  3
+ N5P  Var_31    PB    O3A  PA   O5'   -21.00  30.0  3
+ N5P  Var_32    PB    O3A  PA   O1A  -149.23  30.0  3
+ N5P  Var_33    PB    O3A  PA   O2A    82.37  30.0  3
+ N5P  Var_34    PG    O3B  PB   O3A    96.02  30.0  3
+ N5P  Var_35    PG    O3B  PB   O1B  -140.32  30.0  3
+ N5P  Var_36    PG    O3B  PB   O2B    -9.25  30.0  3
+ N5P  Var_37    HO2A  O2A  PA   O5'  -159.94  30.0  3
+ N5P  Var_38    HO2B  O2B  PB   O3A   169.48  30.0  3
+ N5P  Var_39    HOG3  O3G  PG   O3B   -92.00  30.0  3
+ N5P  Var_40    HOG2  O2G  PG   O3B   160.39  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

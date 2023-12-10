@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KDK  KDK  4-phenyl-5-(piperidin-4-ylmethyl)thiophene-2-carboximidamide  ligand  42  21  .  2022-03-22  2022-07-25
+ KDK  KDK  4-phenyl-5-(piperidin-4-ylmethyl)thiophene-2-carboximidamide  ligand  42  21  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KDK
@@ -228,40 +229,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KDK  CONST_03  C13   C14  C09  C10    0.00   0.0  0
- KDK  CONST_04  C13   C12  C11  C10    0.00   0.0  0
- KDK  CONST_05  C03   C09  C14  C13  180.00   0.0  0
- KDK  CONST_06  C04   C05  S01  C02    0.00   0.0  0
- KDK  CONST_07  C05   C04  C03  C02    0.00   0.0  0
- KDK  CONST_09  C05   S01  C02  C03    0.00   0.0  0
- KDK  CONST_10  S01   C05  C04  C03    0.00   0.0  0
- KDK  CONST_11  C11   C10  C09  C03  180.00   0.0  0
- KDK  CONST_12  S01   C02  C03  C04    0.00   0.0  0
- KDK  CONST_14  C09   C03  C04  C05  180.00   0.0  0
- KDK  CONST_15  S01   C02  C03  C09  180.00   0.0  0
- KDK  CONST_16  C12   C13  C14  C09    0.00   0.0  0
- KDK  CONST_17  C12   C11  C10  C09    0.00   0.0  0
- KDK  CONST_18  C14   C09  C10  C11    0.00   0.0  0
- KDK  CONST_19  C14   C13  C12  C11    0.00   0.0  0
- KDK  CONST_20  C05   S01  C02  C15  180.00   0.0  0
- KDK  CONST_21  C04   C03  C02  C15  180.00   0.0  0
- KDK  CONST_22  C09   C03  C02  C15    0.00   0.0  0
- KDK  CONST_23  C06   C05  S01  C02  180.00   0.0  0
- KDK  CONST_24  C06   C05  C04  C03  180.00   0.0  0
- KDK  CONST_25  H141  C14  C09  C10  180.00   0.0  0
- KDK  CONST_26  H121  C12  C11  C10  180.00   0.0  0
- KDK  CONST_27  H111  C11  C12  C13  180.00   0.0  0
- KDK  CONST_28  H041  C04  C03  C02  180.00   0.0  0
- KDK  CONST_29  H101  C10  C09  C03    0.00   0.0  0
- KDK  CONST_30  H131  C13  C14  C09  180.00   0.0  0
- KDK  CONST_31  H1    N07  C06  C05  180.00   0.0  0
- KDK  CONST_33  H082  N08  C06  C05    0.00   0.0  0
- KDK  Var_01    C20   N19  C18  C17   53.65  30.0  1
- KDK  Var_02    C18   N19  C20  C21  -53.61  30.0  1
- KDK  Var_03    N19   C20  C21  C16   54.04  30.0  1
- KDK  Var_04    N19   C18  C17  C16  -53.75  30.0  1
- KDK  Var_05    C16   C15  C02  C03   71.76  30.0  2
- KDK  Var_06    N07   C06  C05  C04  155.15  30.0  2
+ KDK  CONST_01  C13   C14  C09  C10     0.00   0.0  0
+ KDK  CONST_02  C13   C12  C11  C10     0.00   0.0  0
+ KDK  CONST_03  C03   C09  C14  C13   180.00   0.0  0
+ KDK  CONST_04  C04   C05  S01  C02     0.00   0.0  0
+ KDK  CONST_05  C05   C04  C03  C02     0.00   0.0  0
+ KDK  CONST_06  C05   S01  C02  C03     0.00   0.0  0
+ KDK  CONST_07  S01   C05  C04  C03     0.00   0.0  0
+ KDK  CONST_08  C11   C10  C09  C03   180.00   0.0  0
+ KDK  CONST_09  S01   C02  C03  C04     0.00   0.0  0
+ KDK  CONST_10  C09   C03  C04  C05   180.00   0.0  0
+ KDK  CONST_11  S01   C02  C03  C09   180.00   0.0  0
+ KDK  CONST_12  C12   C13  C14  C09     0.00   0.0  0
+ KDK  CONST_13  C12   C11  C10  C09     0.00   0.0  0
+ KDK  CONST_14  C14   C09  C10  C11     0.00   0.0  0
+ KDK  CONST_15  C14   C13  C12  C11     0.00   0.0  0
+ KDK  CONST_16  C05   S01  C02  C15   180.00   0.0  0
+ KDK  CONST_17  C04   C03  C02  C15   180.00   0.0  0
+ KDK  CONST_18  C09   C03  C02  C15     0.00   0.0  0
+ KDK  CONST_19  C06   C05  S01  C02   180.00   0.0  0
+ KDK  CONST_20  C06   C05  C04  C03   180.00   0.0  0
+ KDK  CONST_21  H141  C14  C09  C10   180.00   0.0  0
+ KDK  CONST_22  H121  C12  C11  C10   180.00   0.0  0
+ KDK  CONST_23  H111  C11  C12  C13   180.00   0.0  0
+ KDK  CONST_24  H041  C04  C03  C02   180.00   0.0  0
+ KDK  CONST_25  H101  C10  C09  C03     0.00   0.0  0
+ KDK  CONST_26  H131  C13  C14  C09   180.00   0.0  0
+ KDK  CONST_27  H1    N07  C06  C05   180.00   0.0  0
+ KDK  CONST_28  H082  N08  C06  C05     0.00   0.0  0
+ KDK  Var_01    C20   N19  C18  C17    53.65  30.0  1
+ KDK  Var_02    C18   N19  C20  C21   -53.61  30.0  1
+ KDK  Var_03    N19   C20  C21  C16    54.04  30.0  1
+ KDK  Var_04    N19   C18  C17  C16   -53.75  30.0  1
+ KDK  Var_05    C16   C15  C02  C03    71.76  30.0  2
+ KDK  Var_06    N07   C06  C05  C04   155.15  30.0  2
+ KDK  Var_07    C02   C03  C09  C10  -128.41  30.0  2
+ KDK  Var_08    C04   C03  C09  C10    50.79  30.0  2
+ KDK  Var_09    C20   C21  C16  C17   -52.18  30.0  1
+ KDK  Var_10    C18   C17  C16  C21    51.81  30.0  1
+ KDK  Var_11    C14   C09  C03  C02    52.69  30.0  2
+ KDK  Var_12    C14   C09  C03  C04  -128.12  30.0  2
+ KDK  Var_13    C20   C21  C16  C15  -176.62  30.0  1
+ KDK  Var_14    C18   C17  C16  C15   174.60  30.0  1
+ KDK  Var_15    C02   C15  C16  C17    63.63  30.0  1
+ KDK  Var_16    C02   C15  C16  C21  -173.53  30.0  1
+ KDK  Var_17    H211  C21  C16  C17  -174.50  30.0  1
+ KDK  Var_18    H212  C21  C16  C17    68.58  30.0  1
+ KDK  Var_19    H161  C16  C21  C20    65.83  30.0  1
+ KDK  Var_20    H172  C17  C16  C21   173.72  30.0  1
+ KDK  Var_21    H171  C17  C16  C21   -68.87  30.0  1
+ KDK  Var_22    H151  C15  C16  C17   -59.36  30.0  1
+ KDK  Var_23    H152  C15  C16  C17  -174.37  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BF3  BF3  2-(3-chloro-2-fluorobenzyl)-4,5-dihydroxy-1H-isoindole-1,3(2H)-dione  ligand  31  22  .  2021-08-06  2021-08-06  
+ BF3  BF3  2-(3-chloro-2-fluorobenzyl)-4,5-dihydroxy-1H-isoindole-1,3(2H)-dione  ligand  31  22  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BF3
@@ -182,40 +183,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BF3  CONST_01  CAP  CAO  CAH  CAG    0.00   0.0  0
- BF3  CONST_02  CAP  CAQ  CAJ  CAG    0.00   0.0  0
- BF3  CONST_03  CAQ  CAJ  CAG  CAH    0.00   0.0  0
- BF3  CONST_04  CAQ  CAP  CAO  CAH    0.00   0.0  0
- BF3  CONST_05  CAU  CAT  CAK  CAI    0.00   0.0  0
- BF3  CONST_06  CAU  CAN  CAM  CAI    0.00   0.0  0
- BF3  CONST_07  CAO  CAH  CAG  CAJ    0.00   0.0  0
- BF3  CONST_08  CAO  CAP  CAQ  CAJ    0.00   0.0  0
- BF3  CONST_09  CAN  CAM  CAI  CAK    0.00   0.0  0
- BF3  CONST_10  CAN  CAU  CAT  CAK    0.00   0.0  0
- BF3  CONST_11  CAT  CAK  CAI  CAM    0.00   0.0  0
- BF3  CONST_12  CAT  CAU  CAN  CAM    0.00   0.0  0
- BF3  CONST_13  CAT  CAR  NAV  CAS    0.00   0.0  0
- BF3  CONST_14  CAK  CAI  CAM  OAC  180.00   0.0  0
- BF3  CONST_15  CAU  CAN  CAM  OAC  180.00   0.0  0
- BF3  CONST_16  CAI  CAM  CAN  OAD  180.00   0.0  0
- BF3  CONST_17  CAS  CAU  CAN  OAD    0.00   0.0  0
- BF3  CONST_18  CAT  CAU  CAN  OAD  180.00   0.0  0
- BF3  CONST_19  CAH  CAO  CAP  FAE  180.00   0.0  0
- BF3  CONST_20  CAJ  CAQ  CAP  FAE  180.00   0.0  0
- BF3  CONST_21  CAG  CAH  CAO  CLA  180.00   0.0  0
- BF3  CONST_22  CAQ  CAP  CAO  CLA  180.00   0.0  0
- BF3  CONST_23  CAL  CAQ  CAJ  CAG  180.00   0.0  0
- BF3  CONST_24  CAO  CAP  CAQ  CAL  180.00   0.0  0
- BF3  CONST_25  CAS  NAV  CAR  OAA  180.00   0.0  0
- BF3  CONST_26  CAT  CAR  NAV  CAL  180.00   0.0  0
- BF3  CONST_27  HAJ  CAJ  CAG  CAH  180.00   0.0  0
- BF3  CONST_28  HAH  CAH  CAG  CAJ  180.00   0.0  0
- BF3  CONST_29  HAK  CAK  CAI  CAM  180.00   0.0  0
- BF3  CONST_30  HAI  CAI  CAM  CAN  180.00   0.0  0
- BF3  CONST_31  HAG  CAG  CAH  CAO  180.00   0.0  0
- BF3  CONST_32  CAL  NAV  CAR  OAA    0.00   0.0  0
- BF3  Var_01    NAV  CAL  CAQ  CAJ  119.39  30.0  1
- BF3  Var_02    CAR  NAV  CAL  CAQ  113.93  30.0  3
+ BF3  CONST_01  CAP   CAO  CAH  CAG    0.00   0.0  0
+ BF3  CONST_02  CAP   CAQ  CAJ  CAG    0.00   0.0  0
+ BF3  CONST_03  CAQ   CAJ  CAG  CAH    0.00   0.0  0
+ BF3  CONST_04  CAQ   CAP  CAO  CAH    0.00   0.0  0
+ BF3  CONST_05  CAU   CAT  CAK  CAI    0.00   0.0  0
+ BF3  CONST_06  CAU   CAN  CAM  CAI    0.00   0.0  0
+ BF3  CONST_07  CAO   CAH  CAG  CAJ    0.00   0.0  0
+ BF3  CONST_08  CAO   CAP  CAQ  CAJ    0.00   0.0  0
+ BF3  CONST_09  CAN   CAM  CAI  CAK    0.00   0.0  0
+ BF3  CONST_10  CAN   CAU  CAT  CAK    0.00   0.0  0
+ BF3  CONST_11  CAT   CAK  CAI  CAM    0.00   0.0  0
+ BF3  CONST_12  CAT   CAU  CAN  CAM    0.00   0.0  0
+ BF3  CONST_13  CAT   CAR  NAV  CAS    0.00   0.0  0
+ BF3  CONST_14  CAK   CAI  CAM  OAC  180.00   0.0  0
+ BF3  CONST_15  CAU   CAN  CAM  OAC  180.00   0.0  0
+ BF3  CONST_16  CAI   CAM  CAN  OAD  180.00   0.0  0
+ BF3  CONST_17  CAS   CAU  CAN  OAD    0.00   0.0  0
+ BF3  CONST_18  CAT   CAU  CAN  OAD  180.00   0.0  0
+ BF3  CONST_19  CAH   CAO  CAP  FAE  180.00   0.0  0
+ BF3  CONST_20  CAJ   CAQ  CAP  FAE  180.00   0.0  0
+ BF3  CONST_21  CAG   CAH  CAO  CLA  180.00   0.0  0
+ BF3  CONST_22  CAQ   CAP  CAO  CLA  180.00   0.0  0
+ BF3  CONST_23  CAL   CAQ  CAJ  CAG  180.00   0.0  0
+ BF3  CONST_24  CAO   CAP  CAQ  CAL  180.00   0.0  0
+ BF3  CONST_25  CAS   NAV  CAR  OAA  180.00   0.0  0
+ BF3  CONST_26  CAT   CAR  NAV  CAL  180.00   0.0  0
+ BF3  CONST_27  HAJ   CAJ  CAG  CAH  180.00   0.0  0
+ BF3  CONST_28  HAH   CAH  CAG  CAJ  180.00   0.0  0
+ BF3  CONST_29  HAK   CAK  CAI  CAM  180.00   0.0  0
+ BF3  CONST_30  HAI   CAI  CAM  CAN  180.00   0.0  0
+ BF3  CONST_31  HAG   CAG  CAH  CAO  180.00   0.0  0
+ BF3  CONST_32  CAL   NAV  CAR  OAA    0.00   0.0  0
+ BF3  Var_01    NAV   CAL  CAQ  CAJ  119.39  30.0  1
+ BF3  Var_02    CAR   NAV  CAL  CAQ  113.93  30.0  3
+ BF3  CONST_33  NAV   CAR  CAT  CAK  180.00   0.0  0
+ BF3  CONST_34  NAV   CAS  CAU  CAN  180.00   0.0  0
+ BF3  CONST_35  CAU   CAS  NAV  CAR    0.00   0.0  0
+ BF3  CONST_36  NAV   CAS  CAU  CAT    0.00   0.0  0
+ BF3  CONST_37  NAV   CAR  CAT  CAU    0.00   0.0  0
+ BF3  CONST_38  CAK   CAT  CAR  OAA    0.00   0.0  0
+ BF3  CONST_39  CAU   CAT  CAR  OAA  180.00   0.0  0
+ BF3  CONST_40  CAN   CAU  CAS  OAB    0.00   0.0  0
+ BF3  CONST_41  CAT   CAU  CAS  OAB  180.00   0.0  0
+ BF3  CONST_42  CAR   NAV  CAS  OAB  180.00   0.0  0
+ BF3  CONST_43  CAU   CAS  NAV  CAL  180.00   0.0  0
+ BF3  CONST_44  CAL   NAV  CAS  OAB    0.00   0.0  0
+ BF3  Var_03    HOAC  OAC  CAM  CAI   -0.98  30.0  2
+ BF3  Var_04    HOAD  OAD  CAN  CAM  179.10  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

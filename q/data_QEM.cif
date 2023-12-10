@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QEM  QEM  4-[(1R,2S)-3-(4-benzylpiperidin-1-yl)-1-hydroxy-2-methylpropyl]phenol  ligand  54  25  .  2021-08-20  2021-08-20  
+ QEM  QEM  4-[(1R,2S)-3-(4-benzylpiperidin-1-yl)-1-hydroxy-2-methylpropyl]phenol  ligand  54  25  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QEM
@@ -276,39 +277,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QEM  CONST_01  C19  C20  C21  C      0.00   0.0  0
- QEM  CONST_02  C19  C18  C16  C      0.00   0.0  0
- QEM  CONST_03  C04  C03  C02  C01    0.00   0.0  0
- QEM  CONST_04  C04  C05  C06  C01    0.00   0.0  0
- QEM  CONST_05  C05  C06  C01  C02    0.00   0.0  0
- QEM  CONST_06  C05  C04  C03  C02    0.00   0.0  0
- QEM  CONST_07  C06  C01  C02  C03    0.00   0.0  0
- QEM  CONST_08  C06  C05  C04  C03    0.00   0.0  0
- QEM  CONST_09  C20  C21  C    C16    0.00   0.0  0
- QEM  CONST_10  C20  C19  C18  C16    0.00   0.0  0
- QEM  CONST_11  C21  C    C16  C18    0.00   0.0  0
- QEM  CONST_12  C21  C20  C19  C18    0.00   0.0  0
- QEM  CONST_13  O    C20  C21  C    180.00   0.0  0
- QEM  CONST_14  C18  C19  C20  O    180.00   0.0  0
- QEM  CONST_15  C07  C02  C03  C04  180.00   0.0  0
- QEM  CONST_16  C07  C02  C01  C06  180.00   0.0  0
- QEM  CONST_17  C21  C    C16  C15  180.00   0.0  0
- QEM  CONST_18  C19  C18  C16  C15  180.00   0.0  0
- QEM  CONST_19  H18  C18  C16  C    180.00   0.0  0
- QEM  CONST_20  H03  C03  C02  C01  180.00   0.0  0
- QEM  CONST_21  H05  C05  C06  C01  180.00   0.0  0
- QEM  CONST_22  H06  C06  C01  C02  180.00   0.0  0
- QEM  CONST_23  H04  C04  C03  C02  180.00   0.0  0
- QEM  CONST_24  H01  C01  C02  C03  180.00   0.0  0
- QEM  CONST_25  H21  C21  C    C16  180.00   0.0  0
- QEM  CONST_26  H19  C19  C18  C16  180.00   0.0  0
- QEM  CONST_27  H    C    C16  C18  180.00   0.0  0
- QEM  Var_01    C08  C09  C10  N     56.47  30.0  1
- QEM  Var_02    C08  C12  C11  N    -56.81  30.0  1
- QEM  Var_03    C11  N    C10  C09  -60.02  30.0  1
- QEM  Var_04    C12  C11  N    C10   60.13  30.0  1
- QEM  Var_05    C08  C07  C02  C01  101.00  30.0  2
- QEM  Var_06    C14  C13  N    C10  -67.85  30.0  3
+ QEM  CONST_01  C19   C20  C21  C       0.00   0.0  0
+ QEM  CONST_02  C19   C18  C16  C       0.00   0.0  0
+ QEM  CONST_03  C04   C03  C02  C01     0.00   0.0  0
+ QEM  CONST_04  C04   C05  C06  C01     0.00   0.0  0
+ QEM  CONST_05  C05   C06  C01  C02     0.00   0.0  0
+ QEM  CONST_06  C05   C04  C03  C02     0.00   0.0  0
+ QEM  CONST_07  C06   C01  C02  C03     0.00   0.0  0
+ QEM  CONST_08  C06   C05  C04  C03     0.00   0.0  0
+ QEM  CONST_09  C20   C21  C    C16     0.00   0.0  0
+ QEM  CONST_10  C20   C19  C18  C16     0.00   0.0  0
+ QEM  CONST_11  C21   C    C16  C18     0.00   0.0  0
+ QEM  CONST_12  C21   C20  C19  C18     0.00   0.0  0
+ QEM  CONST_13  O     C20  C21  C     180.00   0.0  0
+ QEM  CONST_14  C18   C19  C20  O     180.00   0.0  0
+ QEM  CONST_15  C07   C02  C03  C04   180.00   0.0  0
+ QEM  CONST_16  C07   C02  C01  C06   180.00   0.0  0
+ QEM  CONST_17  C21   C    C16  C15   180.00   0.0  0
+ QEM  CONST_18  C19   C18  C16  C15   180.00   0.0  0
+ QEM  CONST_19  H18   C18  C16  C     180.00   0.0  0
+ QEM  CONST_20  H03   C03  C02  C01   180.00   0.0  0
+ QEM  CONST_21  H05   C05  C06  C01   180.00   0.0  0
+ QEM  CONST_22  H06   C06  C01  C02   180.00   0.0  0
+ QEM  CONST_23  H04   C04  C03  C02   180.00   0.0  0
+ QEM  CONST_24  H01   C01  C02  C03   180.00   0.0  0
+ QEM  CONST_25  H21   C21  C    C16   180.00   0.0  0
+ QEM  CONST_26  H19   C19  C18  C16   180.00   0.0  0
+ QEM  CONST_27  H     C    C16  C18   180.00   0.0  0
+ QEM  Var_01    C08   C09  C10  N      56.47  30.0  1
+ QEM  Var_02    C08   C12  C11  N     -56.81  30.0  1
+ QEM  Var_03    C11   N    C10  C09   -60.02  30.0  1
+ QEM  Var_04    C12   C11  N    C10    60.13  30.0  1
+ QEM  Var_05    C08   C07  C02  C01   101.00  30.0  2
+ QEM  Var_06    C14   C13  N    C10   -67.85  30.0  3
+ QEM  Var_07    C11   C12  C08  C09    51.88  30.0  1
+ QEM  Var_08    C12   C08  C09  C10   -51.60  30.0  1
+ QEM  Var_09    C09   C08  C07  C02   -62.33  30.0  3
+ QEM  Var_10    C12   C08  C07  C02   175.23  30.0  3
+ QEM  Var_11    C10   C09  C08  C07  -174.90  30.0  1
+ QEM  Var_12    C11   C12  C08  C07   176.45  30.0  1
+ QEM  Var_13    H08   C08  C09  C10    65.60  30.0  1
+ QEM  Var_14    O01   C15  C16  C    -162.78  30.0  2
+ QEM  Var_15    C14   C15  C16  C      69.61  30.0  2
+ QEM  Var_16    C18   C16  C15  O01    18.14  30.0  2
+ QEM  Var_17    C18   C16  C15  C14  -109.46  30.0  2
+ QEM  Var_18    H15   C15  C16  C     -47.30  30.0  2
+ QEM  Var_19    HO    O    C20  C19   179.79  30.0  2
+ QEM  Var_20    C17   C14  C13  N     -51.82  30.0  1
+ QEM  Var_21    C15   C14  C13  N    -177.92  30.0  1
+ QEM  Var_22    C16   C15  C14  C13  -169.97  30.0  3
+ QEM  Var_23    C17   C14  C15  C16    64.41  30.0  1
+ QEM  Var_24    H14   C14  C13  N      67.22  30.0  1
+ QEM  Var_25    HO01  O01  C15  C16   -77.51  30.0  3
+ QEM  Var_26    C13   C14  C15  O01    62.41  30.0  1
+ QEM  Var_27    C17   C14  C15  O01   -63.21  30.0  1
+ QEM  Var_28    H17   C17  C14  C13    59.28  30.0  3
+ QEM  Var_29    H17A  C17  C14  C13   179.38  30.0  3
+ QEM  Var_30    H17B  C17  C14  C13   -59.27  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

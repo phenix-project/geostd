@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- K2E  K2E  '(3R,3aS,6aR)-hexahydrofuro[2,3-b]furan-3-yl {(2S,3R)-4-[(1,3-benzodioxol-5-ylsulfonyl)(2-ethylbutyl)amino]-3-hydroxy-1-phenylbutan-2-yl}carbamate'  ligand  82  42  .  2022-07-25  2022-07-26
+ K2E  K2E  '(3R,3aS,6aR)-hexahydrofuro[2,3-b]furan-3-yl {(2S,3R)-4-[(1,3-benzodioxol-5-ylsulfonyl)(2-ethylbutyl)amino]-3-hydroxy-1-phenylbutan-2-yl}carbamate'  ligand  82  42  .  2022-07-25  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_K2E
@@ -392,47 +393,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- K2E  CONST_01  C5   C4   C3   C2      0.00   0.0  0
- K2E  CONST_02  C5   C6   C7   C2      0.00   0.0  0
- K2E  CONST_03  C6   C7   C2   C3      0.00   0.0  0
- K2E  CONST_04  C6   C5   C4   C3      0.00   0.0  0
- K2E  CONST_05  C7   C2   C3   C4      0.00   0.0  0
- K2E  CONST_06  C7   C6   C5   C4      0.00   0.0  0
- K2E  CONST_07  C36  C35  C34  C33     0.00   0.0  0
- K2E  CONST_08  C36  C37  C38  C33     0.00   0.0  0
- K2E  CONST_09  C37  C38  C33  C34     0.00   0.0  0
- K2E  CONST_10  C37  C36  C35  C34     0.00   0.0  0
- K2E  CONST_11  C38  C33  C34  C35     0.00   0.0  0
- K2E  CONST_12  C38  C37  C36  C35     0.00   0.0  0
- K2E  CONST_13  S8   C5   C4   C3    180.00   0.0  0
- K2E  CONST_14  S8   C5   C6   C7    180.00   0.0  0
- K2E  CONST_15  C34  C33  C38  C32   180.00   0.0  0
- K2E  CONST_16  C36  C37  C38  C32   180.00   0.0  0
- K2E  CONST_17  H7   C7   C2   O1      0.00   0.0  0
- K2E  CONST_18  H4   C4   C3   C2    180.00   0.0  0
- K2E  CONST_19  H6   C6   C7   C2    180.00   0.0  0
- K2E  CONST_20  H35  C35  C34  C33   180.00   0.0  0
- K2E  CONST_21  H37  C37  C38  C33   180.00   0.0  0
- K2E  CONST_22  H36  C36  C35  C34   180.00   0.0  0
- K2E  CONST_23  H33  C33  C34  C35   180.00   0.0  0
- K2E  CONST_24  H34  C34  C35  C36   180.00   0.0  0
- K2E  Var_01    C3   C2   O1   C1     -4.87  30.0  1
- K2E  Var_02    C2   C3   O2   C1      5.11  30.0  1
- K2E  Var_03    O2   C1   O1   C2      7.87  30.0  1
- K2E  Var_04    C30  C29  O28  C27    -9.05  30.0  1
- K2E  Var_05    C31  C30  C29  O28    27.57  30.0  1
- K2E  Var_06    H25  C25  O26  C27   -89.39  30.0  1
- K2E  Var_07    O9   S8   C5   C4   -136.92  30.0  2
- K2E  Var_08    C33  C38  C32  C19    91.53  30.0  2
- K2E  Var_09    C12  N11  S8   C5     92.74  30.0  3
- K2E  Var_10    C13  C12  N11  S8    108.40  30.0  3
- K2E  Var_11    C17  C16  N11  S8     80.73  30.0  3
- K2E  Var_12    C14  C13  C12  N11   -67.25  30.0  3
- K2E  Var_13    C20  C14  C13  C12   -72.88  30.0  3
- K2E  Var_14    C18  C15  C13  C12    62.45  30.0  3
- K2E  Var_15    O22  C21  N20  C19    -1.19  30.0  2
- K2E  Var_16    H20  C20  C14  C13    61.30  30.0  3
- K2E  Var_17    H18  C18  C15  C13  -179.71  30.0  3
+ K2E  CONST_01  C5    C4   C3   C2      0.00   0.0  0
+ K2E  CONST_02  C5    C6   C7   C2      0.00   0.0  0
+ K2E  CONST_03  C6    C7   C2   C3      0.00   0.0  0
+ K2E  CONST_04  C6    C5   C4   C3      0.00   0.0  0
+ K2E  CONST_05  C7    C2   C3   C4      0.00   0.0  0
+ K2E  CONST_06  C7    C6   C5   C4      0.00   0.0  0
+ K2E  CONST_07  C36   C35  C34  C33     0.00   0.0  0
+ K2E  CONST_08  C36   C37  C38  C33     0.00   0.0  0
+ K2E  CONST_09  C37   C38  C33  C34     0.00   0.0  0
+ K2E  CONST_10  C37   C36  C35  C34     0.00   0.0  0
+ K2E  CONST_11  C38   C33  C34  C35     0.00   0.0  0
+ K2E  CONST_12  C38   C37  C36  C35     0.00   0.0  0
+ K2E  CONST_13  S8    C5   C4   C3    180.00   0.0  0
+ K2E  CONST_14  S8    C5   C6   C7    180.00   0.0  0
+ K2E  CONST_15  C34   C33  C38  C32   180.00   0.0  0
+ K2E  CONST_16  C36   C37  C38  C32   180.00   0.0  0
+ K2E  CONST_17  H7    C7   C2   O1      0.00   0.0  0
+ K2E  CONST_18  H4    C4   C3   C2    180.00   0.0  0
+ K2E  CONST_19  H6    C6   C7   C2    180.00   0.0  0
+ K2E  CONST_20  H35   C35  C34  C33   180.00   0.0  0
+ K2E  CONST_21  H37   C37  C38  C33   180.00   0.0  0
+ K2E  CONST_22  H36   C36  C35  C34   180.00   0.0  0
+ K2E  CONST_23  H33   C33  C34  C35   180.00   0.0  0
+ K2E  CONST_24  H34   C34  C35  C36   180.00   0.0  0
+ K2E  Var_01    C3    C2   O1   C1     -4.87  30.0  1
+ K2E  Var_02    C2    C3   O2   C1      5.11  30.0  1
+ K2E  Var_03    O2    C1   O1   C2      7.87  30.0  1
+ K2E  Var_04    C30   C29  O28  C27    -9.05  30.0  1
+ K2E  Var_05    C31   C30  C29  O28    27.57  30.0  1
+ K2E  Var_06    H25   C25  O26  C27   -89.39  30.0  1
+ K2E  Var_07    O9    S8   C5   C4   -136.92  30.0  2
+ K2E  Var_08    C33   C38  C32  C19    91.53  30.0  2
+ K2E  Var_09    C12   N11  S8   C5     92.74  30.0  3
+ K2E  Var_10    C13   C12  N11  S8    108.40  30.0  3
+ K2E  Var_11    C17   C16  N11  S8     80.73  30.0  3
+ K2E  Var_12    C14   C13  C12  N11   -67.25  30.0  3
+ K2E  Var_13    C20   C14  C13  C12   -72.88  30.0  3
+ K2E  Var_14    C18   C15  C13  C12    62.45  30.0  3
+ K2E  Var_15    O22   C21  N20  C19    -1.19  30.0  2
+ K2E  Var_16    H20   C20  C14  C13    61.30  30.0  3
+ K2E  Var_17    H18   C18  C15  C13  -179.71  30.0  3
+ K2E  Var_18    C3    O2   C1   O1     -7.95  30.0  1
+ K2E  Var_19    O26   C27  C31  C24    34.30  30.0  1
+ K2E  Var_20    O28   C27  C31  C24   151.43  30.0  1
+ K2E  Var_21    C29   C30  C31  C24  -144.86  30.0  1
+ K2E  Var_22    C27   C31  C24  C25   -16.29  30.0  1
+ K2E  Var_23    C30   C31  C24  C25    93.13  30.0  1
+ K2E  Var_24    O28   C27  O26  C25  -156.06  30.0  1
+ K2E  Var_25    C31   C27  O26  C25   -40.20  30.0  1
+ K2E  Var_26    C31   C24  C25  O26    -6.78  30.0  1
+ K2E  Var_27    C29   O28  C27  O26    99.17  30.0  1
+ K2E  Var_28    C30   C31  C27  O26   -86.87  30.0  1
+ K2E  Var_29    C29   C30  C31  C27   -33.70  30.0  1
+ K2E  Var_30    C30   C31  C27  O28    30.26  30.0  1
+ K2E  Var_31    C31   C27  O28  C29   -13.81  30.0  1
+ K2E  Var_32    O26   C25  C24  O23   111.81  30.0  1
+ K2E  Var_33    C27   C31  C24  O23  -138.46  30.0  1
+ K2E  Var_34    C30   C31  C24  O23   -29.04  30.0  1
+ K2E  Var_35    H27   C27  C31  C24   -86.11  30.0  1
+ K2E  Var_36    H30   C30  C31  C24    94.69  30.0  1
+ K2E  Var_37    H30A  C30  C31  C24   -26.59  30.0  1
+ K2E  Var_38    H31   C31  C24  C25  -137.30  30.0  1
+ K2E  Var_39    H24   C24  C25  O26  -124.95  30.0  1
+ K2E  Var_40    C25   C24  O23  C21    67.30  30.0  3
+ K2E  Var_41    C31   C24  O23  C21  -177.50  30.0  3
+ K2E  Var_42    C38   C32  C19  C17   177.37  30.0  3
+ K2E  Var_43    C38   C32  C19  N20   -59.47  30.0  3
+ K2E  Var_44    C24   O23  C21  N20  -179.71  30.0  3
+ K2E  Var_45    C24   O23  C21  O22    -0.60  30.0  3
+ K2E  Var_46    H19   C19  C32  C38    58.04  30.0  2
+ K2E  Var_47    O18   C17  C16  N11    63.20  30.0  3
+ K2E  Var_48    C19   C17  C16  N11  -168.78  30.0  3
+ K2E  Var_49    N20   C19  C17  C16   166.97  30.0  3
+ K2E  Var_50    C32   C19  C17  C16   -68.67  30.0  3
+ K2E  Var_51    C21   N20  C19  C17  -125.66  30.0  3
+ K2E  Var_52    N20   C19  C17  O18   -64.33  30.0  3
+ K2E  Var_53    C32   C19  C17  O18    60.04  30.0  3
+ K2E  Var_54    C32   C19  N20  C21   108.39  30.0  3
+ K2E  Var_55    H17   C17  C16  N11   -52.97  30.0  3
+ K2E  Var_56    HO18  O18  C17  C16    62.32  30.0  3
+ K2E  Var_57    HN20  N20  C19  C17    54.07  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

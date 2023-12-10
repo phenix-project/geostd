@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5ST  5ST  'methyl ~{N}-[4-[2-[(1~{S})-1-[[4-(aminomethyl)cyclohexyl]carbonylamino]-2-phenyl-ethyl]pyridin-4-yl]phenyl]carbamate'  ligand  70  36  .  2021-08-04  2021-08-04  
+ 5ST  5ST  'methyl ~{N}-[4-[2-[(1~{S})-1-[[4-(aminomethyl)cyclohexyl]carbonylamino]-2-phenyl-ethyl]pyridin-4-yl]phenyl]carbamate'  ligand  70  36  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5ST
@@ -346,49 +347,90 @@ _chem_comp_tor.period
  5ST  CONST_08  C1   C2   C6   C15     0.00   0.0  0
  5ST  CONST_09  C12  N30  C17  C11     0.00   0.0  0
  5ST  CONST_10  C12  C10  C14  C11     0.00   0.0  0
- 5ST  CONST_13  C7   C3   C1   C2      0.00   0.0  0
- 5ST  CONST_14  C7   C15  C6   C2      0.00   0.0  0
- 5ST  CONST_15  C6   C15  C7   C3      0.00   0.0  0
- 5ST  CONST_16  C6   C2   C1   C3      0.00   0.0  0
- 5ST  CONST_18  C9   C5   C13  C4      0.00   0.0  0
- 5ST  CONST_19  C9   C16  C8   C4      0.00   0.0  0
- 5ST  CONST_21  C8   C4   C13  C5      0.00   0.0  0
- 5ST  CONST_22  C8   C16  C9   C5      0.00   0.0  0
- 5ST  CONST_23  C14  C13  C4   C8    180.00   0.0  0
- 5ST  CONST_24  C14  C13  C5   C9    180.00   0.0  0
- 5ST  CONST_25  N30  C12  C10  C14     0.00   0.0  0
- 5ST  CONST_26  N30  C17  C11  C14     0.00   0.0  0
- 5ST  CONST_27  C29  C17  N30  C12   180.00   0.0  0
- 5ST  CONST_28  C3   C7   C15  C27   180.00   0.0  0
- 5ST  CONST_29  C2   C6   C15  C27   180.00   0.0  0
- 5ST  CONST_30  N32  C16  C8   C4    180.00   0.0  0
- 5ST  CONST_31  N32  C16  C9   C5    180.00   0.0  0
- 5ST  CONST_32  C29  C17  C11  C14   180.00   0.0  0
- 5ST  CONST_33  H23  C10  C14  C13     0.00   0.0  0
- 5ST  CONST_34  H10  C11  C14  C13     0.00   0.0  0
- 5ST  CONST_35  H22  C9   C5   C13   180.00   0.0  0
- 5ST  CONST_36  H21  C8   C4   C13   180.00   0.0  0
- 5ST  CONST_37  H11  C12  N30  C17   180.00   0.0  0
- 5ST  CONST_38  H18  C5   C9   C16   180.00   0.0  0
- 5ST  CONST_39  H17  C4   C8   C16   180.00   0.0  0
- 5ST  CONST_40  H16  C3   C7   C15   180.00   0.0  0
- 5ST  CONST_41  H15  C2   C6   C15   180.00   0.0  0
- 5ST  CONST_42  H20  C7   C3   C1    180.00   0.0  0
- 5ST  CONST_43  H19  C6   C2   C1    180.00   0.0  0
- 5ST  CONST_44  H14  C1   C2   C6    180.00   0.0  0
- 5ST  CONST_45  C9   C16  N32  C19   180.00   0.0  0
- 5ST  CONST_46  C8   C16  N32  C19     0.00   0.0  0
- 5ST  CONST_47  H34  N32  C16  C8    180.00   0.0  0
- 5ST  CONST_48  C29  N33  C18  C24   180.00   0.0  0
- 5ST  CONST_49  O35  C19  N32  C16     0.00   0.0  0
- 5ST  CONST_50  O36  C19  N32  C16   180.00   0.0  0
- 5ST  CONST_51  H35  N33  C18  C24     0.00   0.0  0
- 5ST  CONST_52  O34  C18  N33  C29     0.00   0.0  0
+ 5ST  CONST_11  C7   C3   C1   C2      0.00   0.0  0
+ 5ST  CONST_12  C7   C15  C6   C2      0.00   0.0  0
+ 5ST  CONST_13  C6   C15  C7   C3      0.00   0.0  0
+ 5ST  CONST_14  C6   C2   C1   C3      0.00   0.0  0
+ 5ST  CONST_15  C9   C5   C13  C4      0.00   0.0  0
+ 5ST  CONST_16  C9   C16  C8   C4      0.00   0.0  0
+ 5ST  CONST_17  C8   C4   C13  C5      0.00   0.0  0
+ 5ST  CONST_18  C8   C16  C9   C5      0.00   0.0  0
+ 5ST  CONST_19  C14  C13  C4   C8    180.00   0.0  0
+ 5ST  CONST_20  C14  C13  C5   C9    180.00   0.0  0
+ 5ST  CONST_21  N30  C12  C10  C14     0.00   0.0  0
+ 5ST  CONST_22  N30  C17  C11  C14     0.00   0.0  0
+ 5ST  CONST_23  C29  C17  N30  C12   180.00   0.0  0
+ 5ST  CONST_24  C3   C7   C15  C27   180.00   0.0  0
+ 5ST  CONST_25  C2   C6   C15  C27   180.00   0.0  0
+ 5ST  CONST_26  N32  C16  C8   C4    180.00   0.0  0
+ 5ST  CONST_27  N32  C16  C9   C5    180.00   0.0  0
+ 5ST  CONST_28  C29  C17  C11  C14   180.00   0.0  0
+ 5ST  CONST_29  H23  C10  C14  C13     0.00   0.0  0
+ 5ST  CONST_30  H10  C11  C14  C13     0.00   0.0  0
+ 5ST  CONST_31  H22  C9   C5   C13   180.00   0.0  0
+ 5ST  CONST_32  H21  C8   C4   C13   180.00   0.0  0
+ 5ST  CONST_33  H11  C12  N30  C17   180.00   0.0  0
+ 5ST  CONST_34  H18  C5   C9   C16   180.00   0.0  0
+ 5ST  CONST_35  H17  C4   C8   C16   180.00   0.0  0
+ 5ST  CONST_36  H16  C3   C7   C15   180.00   0.0  0
+ 5ST  CONST_37  H15  C2   C6   C15   180.00   0.0  0
+ 5ST  CONST_38  H20  C7   C3   C1    180.00   0.0  0
+ 5ST  CONST_39  H19  C6   C2   C1    180.00   0.0  0
+ 5ST  CONST_40  H14  C1   C2   C6    180.00   0.0  0
+ 5ST  CONST_41  C9   C16  N32  C19   180.00   0.0  0
+ 5ST  CONST_42  C8   C16  N32  C19     0.00   0.0  0
+ 5ST  CONST_43  H34  N32  C16  C8    180.00   0.0  0
+ 5ST  CONST_44  C29  N33  C18  C24   180.00   0.0  0
+ 5ST  CONST_45  O35  C19  N32  C16     0.00   0.0  0
+ 5ST  CONST_46  O36  C19  N32  C16   180.00   0.0  0
+ 5ST  CONST_47  H35  N33  C18  C24     0.00   0.0  0
+ 5ST  CONST_48  O34  C18  N33  C29     0.00   0.0  0
  5ST  Var_01    C25  C23  C21  C24    56.89  30.0  1
  5ST  Var_02    C25  C22  C20  C24   -55.57  30.0  1
  5ST  Var_03    C29  C27  C15  C6     95.61  30.0  2
  5ST  Var_04    H31  N31  C28  C25   170.95  30.0  3
  5ST  Var_05    H25  C26  O36  C19  -175.73  30.0  3
+ 5ST  Var_06    C23  C21  C24  C20   -56.29  30.0  1
+ 5ST  Var_07    C23  C25  C22  C20    54.29  30.0  1
+ 5ST  Var_08    C22  C25  C23  C21   -54.83  30.0  1
+ 5ST  Var_09    C22  C20  C24  C21    55.67  30.0  1
+ 5ST  Var_10    C5   C13  C14  C11   -28.07  30.0  2
+ 5ST  Var_11    C4   C13  C14  C11   152.05  30.0  2
+ 5ST  Var_12    C10  C14  C13  C4    -28.35  30.0  3
+ 5ST  Var_13    C10  C14  C13  C5    151.53  30.0  3
+ 5ST  Var_14    C23  C21  C24  C18   178.81  30.0  1
+ 5ST  Var_15    C22  C20  C24  C18  -179.19  30.0  1
+ 5ST  Var_16    C28  C25  C22  C20   177.83  30.0  1
+ 5ST  Var_17    C28  C25  C23  C21  -179.41  30.0  1
+ 5ST  Var_18    H3   C21  C24  C20  -178.56  30.0  1
+ 5ST  Var_19    H4   C21  C24  C20    64.29  30.0  1
+ 5ST  Var_20    H24  C25  C22  C20   -63.55  30.0  1
+ 5ST  Var_21    H1   C20  C24  C21   -66.04  30.0  1
+ 5ST  Var_22    H2   C20  C24  C21   177.21  30.0  1
+ 5ST  Var_23    H7   C23  C25  C22  -176.82  30.0  1
+ 5ST  Var_24    H8   C23  C25  C22    66.98  30.0  1
+ 5ST  Var_25    H9   C24  C20  C22   -62.23  30.0  1
+ 5ST  Var_26    H5   C22  C25  C23   -66.44  30.0  1
+ 5ST  Var_27    H6   C22  C25  C23   176.48  30.0  1
+ 5ST  Var_28    C15  C27  C29  C17   177.93  30.0  2
+ 5ST  Var_29    N33  C18  C24  C20    65.81  30.0  3
+ 5ST  Var_30    O34  C18  C24  C20  -115.27  30.0  3
+ 5ST  Var_31    N33  C18  C24  C21  -170.07  30.0  3
+ 5ST  Var_32    O34  C18  C24  C21     8.85  30.0  3
+ 5ST  Var_33    N31  C28  C25  C22    62.71  30.0  2
+ 5ST  Var_34    N31  C28  C25  C23  -174.17  30.0  2
+ 5ST  Var_35    C27  C29  C17  C11   -98.10  30.0  2
+ 5ST  Var_36    N33  C29  C17  C11   138.78  30.0  2
+ 5ST  Var_37    N30  C17  C29  C27    80.07  30.0  1
+ 5ST  Var_38    N33  C29  C17  N30   -43.06  30.0  2
+ 5ST  Var_39    H28  C28  C25  C22  -178.39  30.0  2
+ 5ST  Var_40    H29  C28  C25  C22   -63.51  30.0  2
+ 5ST  Var_41    H30  C29  C17  C11    21.00  30.0  2
+ 5ST  Var_42    C17  C29  N33  C18  -132.06  30.0  3
+ 5ST  Var_43    N33  C29  C27  C15   -59.79  30.0  3
+ 5ST  Var_44    C27  C29  N33  C18   105.69  30.0  3
+ 5ST  Var_45    C26  O36  C19  N32  -179.45  30.0  3
+ 5ST  Var_46    C26  O36  C19  O35     0.56  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

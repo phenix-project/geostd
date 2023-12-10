@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1MQ  1MQ  '(2R,3E)-2-[(2S,3R,6S)-2,3-bis(4-chlorophenyl)-6-(4-fluorobenzyl)-5-oxomorpholin-4-yl]pent-3-enoic acid'  ligand  59  36  .  2022-07-22  2022-07-26
+ 1MQ  1MQ  '(2R,3E)-2-[(2S,3R,6S)-2,3-bis(4-chlorophenyl)-6-(4-fluorobenzyl)-5-oxomorpholin-4-yl]pent-3-enoic acid'  ligand  59  36  .  2022-07-22  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1MQ
@@ -292,55 +293,98 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 1MQ  CONST_01  C4   C5   C6   C3     0.00   0.0  0
- 1MQ  CONST_02  C4   C1   C2   C3     0.00   0.0  0
- 1MQ  CONST_03  C5   C4   C1   C2     0.00   0.0  0
- 1MQ  CONST_04  C5   C6   C3   C2     0.00   0.0  0
- 1MQ  CONST_05  C6   C5   C4   C1     0.00   0.0  0
- 1MQ  CONST_06  C6   C3   C2   C1     0.00   0.0  0
- 1MQ  CONST_07  C15  C16  C17  C12    0.00   0.0  0
- 1MQ  CONST_08  C15  C14  C13  C12    0.00   0.0  0
- 1MQ  CONST_09  C16  C17  C12  C13    0.00   0.0  0
- 1MQ  CONST_10  C16  C15  C14  C13    0.00   0.0  0
- 1MQ  CONST_11  C17  C16  C15  C14    0.00   0.0  0
- 1MQ  CONST_12  C17  C12  C13  C14    0.00   0.0  0
- 1MQ  CONST_13  C22  C23  C24  C19    0.00   0.0  0
- 1MQ  CONST_14  C22  C21  C20  C19    0.00   0.0  0
- 1MQ  CONST_15  C23  C24  C19  C20    0.00   0.0  0
- 1MQ  CONST_16  C23  C22  C21  C20    0.00   0.0  0
- 1MQ  CONST_17  C24  C19  C20  C21    0.00   0.0  0
- 1MQ  CONST_18  C24  C23  C22  C21    0.00   0.0  0
- 1MQ  CONST_19  C7   C6   C3   C2   180.00   0.0  0
- 1MQ  CONST_20  C7   C6   C5   C4   180.00   0.0  0
- 1MQ  CONST_21  C23  C24  C19  C18  180.00   0.0  0
- 1MQ  CONST_22  C21  C20  C19  C18  180.00   0.0  0
- 1MQ  CONST_23  C10  C9   N1   C7     0.00   0.0  0
- 1MQ  CONST_24  CL1  C1   C2   C3   180.00   0.0  0
- 1MQ  CONST_25  C5   C4   C1   CL1  180.00   0.0  0
- 1MQ  CONST_26  C16  C17  C12  C11  180.00   0.0  0
- 1MQ  CONST_27  C14  C13  C12  C11  180.00   0.0  0
- 1MQ  CONST_28  F1   C15  C14  C13  180.00   0.0  0
- 1MQ  CONST_29  F1   C15  C16  C17  180.00   0.0  0
- 1MQ  CONST_30  CL2  C22  C21  C20  180.00   0.0  0
- 1MQ  CONST_31  C24  C23  C22  CL2  180.00   0.0  0
- 1MQ  CONST_32  O1   C9   N1   C7   180.00   0.0  0
- 1MQ  CONST_33  C10  C9   N1   C8   180.00   0.0  0
- 1MQ  CONST_34  H4   C5   C6   C3   180.00   0.0  0
- 1MQ  CONST_35  H3   C4   C1   C2   180.00   0.0  0
- 1MQ  CONST_36  H1   C3   C2   C1   180.00   0.0  0
- 1MQ  CONST_37  H2   C2   C1   C4   180.00   0.0  0
- 1MQ  CONST_38  H12  C16  C17  C12  180.00   0.0  0
- 1MQ  CONST_39  H11  C14  C13  C12  180.00   0.0  0
- 1MQ  CONST_40  H13  C17  C12  C13  180.00   0.0  0
- 1MQ  CONST_41  H10  C13  C14  C15  180.00   0.0  0
- 1MQ  CONST_42  H18  C24  C19  C18    0.00   0.0  0
- 1MQ  CONST_43  H15  C20  C19  C18    0.00   0.0  0
- 1MQ  CONST_44  H17  C23  C24  C19  180.00   0.0  0
- 1MQ  CONST_45  H16  C21  C20  C19  180.00   0.0  0
- 1MQ  CONST_46  O1   C9   N1   C8     0.00   0.0  0
- 1MQ  Var_01    C17  C12  C11  C10  -89.65  30.0  3
- 1MQ  Var_02    C28  C27  C25  C8   178.14   0.0  2
- 1MQ  Var_03    H22  C28  C27  C25   -1.51  30.0  3
+ 1MQ  CONST_01  C4   C5   C6   C3      0.00   0.0  0
+ 1MQ  CONST_02  C4   C1   C2   C3      0.00   0.0  0
+ 1MQ  CONST_03  C5   C4   C1   C2      0.00   0.0  0
+ 1MQ  CONST_04  C5   C6   C3   C2      0.00   0.0  0
+ 1MQ  CONST_05  C6   C5   C4   C1      0.00   0.0  0
+ 1MQ  CONST_06  C6   C3   C2   C1      0.00   0.0  0
+ 1MQ  CONST_07  C15  C16  C17  C12     0.00   0.0  0
+ 1MQ  CONST_08  C15  C14  C13  C12     0.00   0.0  0
+ 1MQ  CONST_09  C16  C17  C12  C13     0.00   0.0  0
+ 1MQ  CONST_10  C16  C15  C14  C13     0.00   0.0  0
+ 1MQ  CONST_11  C17  C16  C15  C14     0.00   0.0  0
+ 1MQ  CONST_12  C17  C12  C13  C14     0.00   0.0  0
+ 1MQ  CONST_13  C22  C23  C24  C19     0.00   0.0  0
+ 1MQ  CONST_14  C22  C21  C20  C19     0.00   0.0  0
+ 1MQ  CONST_15  C23  C24  C19  C20     0.00   0.0  0
+ 1MQ  CONST_16  C23  C22  C21  C20     0.00   0.0  0
+ 1MQ  CONST_17  C24  C19  C20  C21     0.00   0.0  0
+ 1MQ  CONST_18  C24  C23  C22  C21     0.00   0.0  0
+ 1MQ  CONST_19  C7   C6   C3   C2    180.00   0.0  0
+ 1MQ  CONST_20  C7   C6   C5   C4    180.00   0.0  0
+ 1MQ  CONST_21  C23  C24  C19  C18   180.00   0.0  0
+ 1MQ  CONST_22  C21  C20  C19  C18   180.00   0.0  0
+ 1MQ  CONST_23  C10  C9   N1   C7      0.00   0.0  0
+ 1MQ  CONST_24  CL1  C1   C2   C3    180.00   0.0  0
+ 1MQ  CONST_25  C5   C4   C1   CL1   180.00   0.0  0
+ 1MQ  CONST_26  C16  C17  C12  C11   180.00   0.0  0
+ 1MQ  CONST_27  C14  C13  C12  C11   180.00   0.0  0
+ 1MQ  CONST_28  F1   C15  C14  C13   180.00   0.0  0
+ 1MQ  CONST_29  F1   C15  C16  C17   180.00   0.0  0
+ 1MQ  CONST_30  CL2  C22  C21  C20   180.00   0.0  0
+ 1MQ  CONST_31  C24  C23  C22  CL2   180.00   0.0  0
+ 1MQ  CONST_32  O1   C9   N1   C7    180.00   0.0  0
+ 1MQ  CONST_33  C10  C9   N1   C8    180.00   0.0  0
+ 1MQ  CONST_34  H4   C5   C6   C3    180.00   0.0  0
+ 1MQ  CONST_35  H3   C4   C1   C2    180.00   0.0  0
+ 1MQ  CONST_36  H1   C3   C2   C1    180.00   0.0  0
+ 1MQ  CONST_37  H2   C2   C1   C4    180.00   0.0  0
+ 1MQ  CONST_38  H12  C16  C17  C12   180.00   0.0  0
+ 1MQ  CONST_39  H11  C14  C13  C12   180.00   0.0  0
+ 1MQ  CONST_40  H13  C17  C12  C13   180.00   0.0  0
+ 1MQ  CONST_41  H10  C13  C14  C15   180.00   0.0  0
+ 1MQ  CONST_42  H18  C24  C19  C18     0.00   0.0  0
+ 1MQ  CONST_43  H15  C20  C19  C18     0.00   0.0  0
+ 1MQ  CONST_44  H17  C23  C24  C19   180.00   0.0  0
+ 1MQ  CONST_45  H16  C21  C20  C19   180.00   0.0  0
+ 1MQ  CONST_46  O1   C9   N1   C8      0.00   0.0  0
+ 1MQ  Var_01    C17  C12  C11  C10   -89.65  30.0  3
+ 1MQ  Var_02    C28  C27  C25  C8    178.14   0.0  2
+ 1MQ  Var_03    H22  C28  C27  C25    -1.51  30.0  3
+ 1MQ  Var_04    N1   C7   C6   C3    -38.13  30.0  2
+ 1MQ  Var_05    C18  C7   C6   C3     84.85  30.0  2
+ 1MQ  Var_06    N1   C7   C6   C5    144.87  30.0  2
+ 1MQ  Var_07    C18  C7   C6   C5    -92.15  30.0  2
+ 1MQ  Var_08    C9   N1   C7   C6    109.19  30.0  1
+ 1MQ  Var_09    O2   C18  C7   C6    -71.36  30.0  1
+ 1MQ  Var_10    C19  C18  C7   C6     50.37  30.0  1
+ 1MQ  Var_11    C10  O2   C18  C7    -69.25  30.0  1
+ 1MQ  Var_12    C24  C19  C18  C7    -96.86  30.0  2
+ 1MQ  Var_13    C20  C19  C18  C7     80.94  30.0  2
+ 1MQ  Var_14    O2   C10  C9   N1     -1.21  30.0  1
+ 1MQ  Var_15    O2   C18  C7   N1     54.13  30.0  1
+ 1MQ  Var_16    C19  C18  C7   N1    175.86  30.0  1
+ 1MQ  Var_17    C18  O2   C10  C9     41.76  30.0  1
+ 1MQ  Var_18    C18  C7   N1   C9    -15.72  30.0  1
+ 1MQ  Var_19    C19  C18  O2   C10   167.42  30.0  1
+ 1MQ  Var_20    C24  C19  C18  O2     23.74  30.0  2
+ 1MQ  Var_21    C20  C19  C18  O2   -158.46  30.0  2
+ 1MQ  Var_22    C8   N1   C7   C6    -75.34  30.0  1
+ 1MQ  Var_23    C11  C10  C9   N1    125.73  30.0  1
+ 1MQ  Var_24    C18  C7   N1   C8    159.75  30.0  1
+ 1MQ  Var_25    C12  C11  C10  C9    177.16  30.0  1
+ 1MQ  Var_26    O2   C10  C9   O1    178.11  30.0  1
+ 1MQ  Var_27    C18  O2   C10  C11   -84.62  30.0  1
+ 1MQ  Var_28    O2   C10  C11  C12   -54.75  30.0  3
+ 1MQ  Var_29    H5   C7   C6   C3   -156.95  30.0  2
+ 1MQ  Var_30    H14  C18  C7   C6    168.95  30.0  1
+ 1MQ  Var_31    H7   C10  C9   N1   -117.17  30.0  1
+ 1MQ  Var_32    C26  C8   N1   C7    132.53  30.0  3
+ 1MQ  Var_33    C25  C8   N1   C7    -95.46  30.0  3
+ 1MQ  Var_34    C26  C8   N1   C9    -51.78  30.0  3
+ 1MQ  Var_35    C25  C8   N1   C9     80.23  30.0  3
+ 1MQ  Var_36    C11  C10  C9   O1    -54.95  30.0  1
+ 1MQ  Var_37    H6   C8   N1   C7     20.45  30.0  3
+ 1MQ  Var_38    H8   C11  C10  C9    -60.33  30.0  1
+ 1MQ  Var_39    H9   C11  C10  C9     55.84  30.0  1
+ 1MQ  Var_40    O3   C26  C8   N1    -30.70  30.0  2
+ 1MQ  Var_41    O4   C26  C8   N1    153.71  30.0  2
+ 1MQ  Var_42    C27  C25  C8   N1      5.18  30.0  3
+ 1MQ  Var_43    H19  C25  C8   N1   -177.67  30.0  3
+ 1MQ  Var_44    O3   C26  C8   C25  -161.92  30.0  2
+ 1MQ  Var_45    O4   C26  C8   C25    22.49  30.0  2
+ 1MQ  Var_46    C27  C25  C8   C26   136.39  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

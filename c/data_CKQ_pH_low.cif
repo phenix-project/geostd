@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CKQ  CKQ  '4-[4-[5-[(2~{S},3~{R},4~{R},5~{S},6~{R})-6-(hydroxymethyl)-3,4,5-tris(oxidanyl)oxan-2-yl]-4~{H}-1,2,4-triazol-3-yl]phenyl]benzoic acid'  ligand  52  31  .  2021-08-07  2022-11-17
+ CKQ  CKQ  '4-[4-[5-[(2~{S},3~{R},4~{R},5~{S},6~{R})-6-(hydroxymethyl)-3,4,5-tris(oxidanyl)oxan-2-yl]-4~{H}-1,2,4-triazol-3-yl]phenyl]benzoic acid'  ligand  52  31  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CKQ
@@ -264,50 +265,91 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CKQ  CONST_01  C4   N3   N2   C1     0.00   0.0  0
- CKQ  CONST_02  N3   C4   N5   C1     0.00   0.0  0
- CKQ  CONST_03  C6   C4   N5   C1   180.00   0.0  0
- CKQ  CONST_04  N3   N2   C1   N5     0.00   0.0  0
- CKQ  CONST_05  N2   N3   C4   N5     0.00   0.0  0
- CKQ  CONST_06  C7   C6   C4   N5   180.00   0.0  0
- CKQ  CONST_07  C11  C6   C4   N5     0.00   0.0  0
- CKQ  CONST_08  N2   C1   N5   C4     0.00   0.0  0
- CKQ  CONST_09  C8   C7   C6   C4   180.00   0.0  0
- CKQ  CONST_10  C10  C11  C6   C4   180.00   0.0  0
- CKQ  CONST_11  C7   C6   C4   N3     0.00   0.0  0
- CKQ  CONST_12  C11  C6   C4   N3   180.00   0.0  0
- CKQ  CONST_13  C6   C4   N3   N2   180.00   0.0  0
- CKQ  CONST_14  C9   C8   C7   C6     0.00   0.0  0
- CKQ  CONST_15  C9   C10  C11  C6     0.00   0.0  0
- CKQ  CONST_16  C8   C7   C6   C11    0.00   0.0  0
- CKQ  CONST_17  C8   C9   C10  C11    0.00   0.0  0
- CKQ  CONST_18  C12  C9   C10  C11  180.00   0.0  0
- CKQ  CONST_19  C7   C6   C11  C10    0.00   0.0  0
- CKQ  CONST_20  C7   C8   C9   C10    0.00   0.0  0
- CKQ  CONST_23  C14  C13  C12  C9   180.00   0.0  0
- CKQ  CONST_24  C16  C17  C12  C9   180.00   0.0  0
- CKQ  CONST_27  C12  C9   C8   C7   180.00   0.0  0
- CKQ  CONST_28  C15  C14  C13  C12    0.00   0.0  0
- CKQ  CONST_29  C15  C16  C17  C12    0.00   0.0  0
- CKQ  CONST_30  C14  C13  C12  C17    0.00   0.0  0
- CKQ  CONST_31  C14  C15  C16  C17    0.00   0.0  0
- CKQ  CONST_32  C13  C12  C17  C16    0.00   0.0  0
- CKQ  CONST_33  C13  C14  C15  C16    0.00   0.0  0
- CKQ  CONST_34  N3   N2   C1   C1'  180.00   0.0  0
- CKQ  CONST_35  C4   N5   C1   C1'  180.00   0.0  0
- CKQ  CONST_36  C18  C15  C16  C17  180.00   0.0  0
- CKQ  CONST_37  C18  C15  C14  C13  180.00   0.0  0
- CKQ  CONST_38  H12  N5   C1   C1'    0.00   0.0  0
- CKQ  CONST_39  H16  C7   C6   C4     0.00   0.0  0
- CKQ  CONST_40  H13  C11  C6   C4     0.00   0.0  0
- CKQ  CONST_41  H15  C8   C7   C6   180.00   0.0  0
- CKQ  CONST_42  H14  C10  C11  C6   180.00   0.0  0
- CKQ  CONST_43  H20  C13  C12  C9     0.00   0.0  0
- CKQ  CONST_44  H17  C17  C12  C9     0.00   0.0  0
- CKQ  CONST_45  H19  C14  C13  C12  180.00   0.0  0
- CKQ  CONST_46  H18  C16  C17  C12  180.00   0.0  0
- CKQ  CONST_47  H21  O20  C18  C15  180.00   0.0  0
- CKQ  Var_01    O19  C18  C15  C16  178.14  30.0  2
+ CKQ  CONST_01  C4   N3   N2   C1      0.00   0.0  0
+ CKQ  CONST_02  N3   C4   N5   C1      0.00   0.0  0
+ CKQ  CONST_03  C6   C4   N5   C1    180.00   0.0  0
+ CKQ  CONST_04  N3   N2   C1   N5      0.00   0.0  0
+ CKQ  CONST_05  N2   N3   C4   N5      0.00   0.0  0
+ CKQ  CONST_06  C7   C6   C4   N5    180.00   0.0  0
+ CKQ  CONST_07  C11  C6   C4   N5      0.00   0.0  0
+ CKQ  CONST_08  N2   C1   N5   C4      0.00   0.0  0
+ CKQ  CONST_09  C8   C7   C6   C4    180.00   0.0  0
+ CKQ  CONST_10  C10  C11  C6   C4    180.00   0.0  0
+ CKQ  CONST_11  C7   C6   C4   N3      0.00   0.0  0
+ CKQ  CONST_12  C11  C6   C4   N3    180.00   0.0  0
+ CKQ  CONST_13  C6   C4   N3   N2    180.00   0.0  0
+ CKQ  CONST_14  C9   C8   C7   C6      0.00   0.0  0
+ CKQ  CONST_15  C9   C10  C11  C6      0.00   0.0  0
+ CKQ  CONST_16  C8   C7   C6   C11     0.00   0.0  0
+ CKQ  CONST_17  C8   C9   C10  C11     0.00   0.0  0
+ CKQ  CONST_18  C12  C9   C10  C11   180.00   0.0  0
+ CKQ  CONST_19  C7   C6   C11  C10     0.00   0.0  0
+ CKQ  CONST_20  C7   C8   C9   C10     0.00   0.0  0
+ CKQ  CONST_21  C14  C13  C12  C9    180.00   0.0  0
+ CKQ  CONST_22  C16  C17  C12  C9    180.00   0.0  0
+ CKQ  CONST_23  C12  C9   C8   C7    180.00   0.0  0
+ CKQ  CONST_24  C15  C14  C13  C12     0.00   0.0  0
+ CKQ  CONST_25  C15  C16  C17  C12     0.00   0.0  0
+ CKQ  CONST_26  C14  C13  C12  C17     0.00   0.0  0
+ CKQ  CONST_27  C14  C15  C16  C17     0.00   0.0  0
+ CKQ  CONST_28  C13  C12  C17  C16     0.00   0.0  0
+ CKQ  CONST_29  C13  C14  C15  C16     0.00   0.0  0
+ CKQ  CONST_30  N3   N2   C1   C1'   180.00   0.0  0
+ CKQ  CONST_31  C4   N5   C1   C1'   180.00   0.0  0
+ CKQ  CONST_32  C18  C15  C16  C17   180.00   0.0  0
+ CKQ  CONST_33  C18  C15  C14  C13   180.00   0.0  0
+ CKQ  CONST_34  H12  N5   C1   C1'     0.00   0.0  0
+ CKQ  CONST_35  H16  C7   C6   C4      0.00   0.0  0
+ CKQ  CONST_36  H13  C11  C6   C4      0.00   0.0  0
+ CKQ  CONST_37  H15  C8   C7   C6    180.00   0.0  0
+ CKQ  CONST_38  H14  C10  C11  C6    180.00   0.0  0
+ CKQ  CONST_39  H20  C13  C12  C9      0.00   0.0  0
+ CKQ  CONST_40  H17  C17  C12  C9      0.00   0.0  0
+ CKQ  CONST_41  H19  C14  C13  C12   180.00   0.0  0
+ CKQ  CONST_42  H18  C16  C17  C12   180.00   0.0  0
+ CKQ  CONST_43  H21  O20  C18  C15   180.00   0.0  0
+ CKQ  Var_01    O19  C18  C15  C16   178.14  30.0  2
+ CKQ  Var_02    C3'  C4'  C5'  O5'   -57.64  30.0  1
+ CKQ  Var_03    C3'  C2'  C1'  O5'    58.05  30.0  1
+ CKQ  Var_04    N2   C1   C1'  O5'   140.99  30.0  2
+ CKQ  Var_05    N5   C1   C1'  O5'   -40.59  30.0  2
+ CKQ  Var_06    C2'  C3'  C4'  C5'    54.39  30.0  1
+ CKQ  Var_07    C2'  C1'  O5'  C5'   -63.16  30.0  1
+ CKQ  Var_08    C1   C1'  O5'  C5'   175.03  30.0  1
+ CKQ  Var_09    C1'  C2'  C3'  C4'   -54.19  30.0  1
+ CKQ  Var_10    C1'  O5'  C5'  C4'    62.63  30.0  1
+ CKQ  Var_11    C1   C1'  C2'  C3'   177.47  30.0  1
+ CKQ  Var_12    N2   C1   C1'  C2'    19.59  30.0  2
+ CKQ  Var_13    N5   C1   C1'  C2'  -161.99  30.0  2
+ CKQ  Var_14    C13  C12  C9   C10   143.72  30.0  2
+ CKQ  Var_15    C17  C12  C9   C10   -36.17  30.0  2
+ CKQ  Var_16    C13  C12  C9   C8    -36.13  30.0  2
+ CKQ  Var_17    C17  C12  C9   C8    143.99  30.0  2
+ CKQ  Var_18    O4'  C4'  C5'  O5'  -176.84  30.0  1
+ CKQ  Var_19    O2'  C2'  C1'  O5'   177.61  30.0  1
+ CKQ  Var_20    O3'  C3'  C4'  C5'   176.28  30.0  1
+ CKQ  Var_21    O2'  C2'  C3'  C4'  -176.06  30.0  1
+ CKQ  Var_22    C6'  C5'  C4'  C3'  -179.56  30.0  1
+ CKQ  Var_23    O4'  C4'  C3'  C2'   174.96  30.0  1
+ CKQ  Var_24    O3'  C3'  C2'  C1'  -174.37  30.0  1
+ CKQ  Var_25    C6'  C5'  O5'  C1'  -172.35  30.0  1
+ CKQ  Var_26    O2'  C2'  C1'  C1    -62.96  30.0  1
+ CKQ  Var_27    H2   C4'  C5'  O5'    60.45  30.0  1
+ CKQ  Var_28    H4   C2'  C1'  O5'   -59.42  30.0  1
+ CKQ  Var_29    H3   C3'  C4'  C5'   -63.14  30.0  1
+ CKQ  Var_30    H5   C1'  O5'  C5'    57.06  30.0  1
+ CKQ  Var_31    H1   C5'  C4'  C3'    62.11  30.0  1
+ CKQ  Var_32    O6'  C6'  C5'  O5'   -67.63  30.0  3
+ CKQ  Var_33    O6'  C6'  C5'  C4'    55.12  30.0  3
+ CKQ  Var_34    O3'  C3'  C2'  O2'    63.76  30.0  1
+ CKQ  Var_35    O4'  C4'  C3'  O3'   -63.15  30.0  1
+ CKQ  Var_36    C6'  C5'  C4'  O4'    61.24  30.0  1
+ CKQ  Var_37    H9   C6'  C5'  O5'   169.83  30.0  3
+ CKQ  Var_38    H10  C6'  C5'  O5'    55.06  30.0  3
+ CKQ  Var_39    H8   O4'  C4'  C5'   -85.90  30.0  3
+ CKQ  Var_40    H7   O3'  C3'  C4'  -178.95  30.0  3
+ CKQ  Var_41    H6   O2'  C2'  C3'  -174.16  30.0  3
+ CKQ  Var_42    H11  O6'  C6'  C5'  -172.14  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

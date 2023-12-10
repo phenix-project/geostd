@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ERC  ERC  8-hydroxy-5-[(1R)-1-hydroxy-2-({2-[3-methoxy-4-(3-sulfanylpropoxy)phenyl]ethyl}amino)ethyl]quinolin-2(1H)-one  ligand  59  31  .  2022-07-24  2022-07-26
+ ERC  ERC  8-hydroxy-5-[(1R)-1-hydroxy-2-({2-[3-methoxy-4-(3-sulfanylpropoxy)phenyl]ethyl}amino)ethyl]quinolin-2(1H)-one  ligand  59  31  .  2022-07-24  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_ERC
@@ -289,46 +290,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ERC  CONST_01  C7   C6   C5   C4      0.00   0.0  0
- ERC  CONST_02  C7   C8   C9   C4      0.00   0.0  0
- ERC  CONST_03  C8   C9   C4   C5      0.00   0.0  0
- ERC  CONST_04  C8   C7   C6   C5      0.00   0.0  0
- ERC  CONST_05  C9   C4   C5   C6      0.00   0.0  0
- ERC  CONST_06  C9   C8   C7   C6      0.00   0.0  0
- ERC  CONST_07  C17  C16  C15  C14     0.00   0.0  0
- ERC  CONST_08  C17  C18  C19  C14     0.00   0.0  0
- ERC  CONST_09  C18  C19  C14  C15     0.00   0.0  0
- ERC  CONST_10  C18  C17  C16  C15     0.00   0.0  0
- ERC  CONST_11  C19  C14  C15  C16     0.00   0.0  0
- ERC  CONST_12  C19  C18  C17  C16     0.00   0.0  0
- ERC  CONST_13  C5   N1   C1   C2      0.00   0.0  0
- ERC  CONST_14  O2   C6   C5   N1      0.00   0.0  0
- ERC  CONST_15  C4   C5   C6   O2    180.00   0.0  0
- ERC  CONST_16  C8   C7   C6   O2    180.00   0.0  0
- ERC  CONST_17  C10  C9   C4   C3      0.00   0.0  0
- ERC  CONST_18  C16  C17  C18  O4    180.00   0.0  0
- ERC  CONST_19  C14  C19  C18  O4    180.00   0.0  0
- ERC  CONST_20  C10  C9   C4   C5    180.00   0.0  0
- ERC  CONST_21  C15  C16  C17  O5    180.00   0.0  0
- ERC  CONST_22  C19  C18  C17  O5    180.00   0.0  0
- ERC  CONST_23  C10  C9   C8   C7    180.00   0.0  0
- ERC  CONST_24  C16  C15  C14  C13   180.00   0.0  0
- ERC  CONST_25  C18  C19  C14  C13   180.00   0.0  0
- ERC  CONST_26  C5   N1   C1   O1    180.00   0.0  0
- ERC  CONST_27  H8   C8   C9   C4    180.00   0.0  0
- ERC  CONST_28  H7   C7   C6   C5    180.00   0.0  0
- ERC  CONST_29  H16  C16  C15  C14   180.00   0.0  0
- ERC  CONST_30  H19  C19  C14  C15   180.00   0.0  0
- ERC  CONST_31  H15  C15  C16  C17   180.00   0.0  0
- ERC  CONST_32  HN1  N1   C1   C2    180.00   0.0  0
- ERC  Var_01    C15  C14  C13  C12    91.70  30.0  2
- ERC  Var_02    C14  C13  C12  N2    176.03  30.0  3
- ERC  Var_03    C22  C21  O5   C17  -173.95  30.0  3
- ERC  Var_04    H20  C20  O4   C18    62.88  30.0  3
- ERC  Var_05    C21  C22  C23  S1   -177.49  30.0  1
- ERC  Var_06    C23  C22  C21  O5   -179.34  30.0  3
- ERC  Var_07    C12  N2   C11  C10   161.59  30.0  1
- ERC  Var_08    C13  C12  N2   C11  -176.51  30.0  3
+ ERC  CONST_01  C7    C6   C5   C4      0.00   0.0  0
+ ERC  CONST_02  C7    C8   C9   C4      0.00   0.0  0
+ ERC  CONST_03  C8    C9   C4   C5      0.00   0.0  0
+ ERC  CONST_04  C8    C7   C6   C5      0.00   0.0  0
+ ERC  CONST_05  C9    C4   C5   C6      0.00   0.0  0
+ ERC  CONST_06  C9    C8   C7   C6      0.00   0.0  0
+ ERC  CONST_07  C17   C16  C15  C14     0.00   0.0  0
+ ERC  CONST_08  C17   C18  C19  C14     0.00   0.0  0
+ ERC  CONST_09  C18   C19  C14  C15     0.00   0.0  0
+ ERC  CONST_10  C18   C17  C16  C15     0.00   0.0  0
+ ERC  CONST_11  C19   C14  C15  C16     0.00   0.0  0
+ ERC  CONST_12  C19   C18  C17  C16     0.00   0.0  0
+ ERC  CONST_13  C5    N1   C1   C2      0.00   0.0  0
+ ERC  CONST_14  O2    C6   C5   N1      0.00   0.0  0
+ ERC  CONST_15  C4    C5   C6   O2    180.00   0.0  0
+ ERC  CONST_16  C8    C7   C6   O2    180.00   0.0  0
+ ERC  CONST_17  C10   C9   C4   C3      0.00   0.0  0
+ ERC  CONST_18  C16   C17  C18  O4    180.00   0.0  0
+ ERC  CONST_19  C14   C19  C18  O4    180.00   0.0  0
+ ERC  CONST_20  C10   C9   C4   C5    180.00   0.0  0
+ ERC  CONST_21  C15   C16  C17  O5    180.00   0.0  0
+ ERC  CONST_22  C19   C18  C17  O5    180.00   0.0  0
+ ERC  CONST_23  C10   C9   C8   C7    180.00   0.0  0
+ ERC  CONST_24  C16   C15  C14  C13   180.00   0.0  0
+ ERC  CONST_25  C18   C19  C14  C13   180.00   0.0  0
+ ERC  CONST_26  C5    N1   C1   O1    180.00   0.0  0
+ ERC  CONST_27  H8    C8   C9   C4    180.00   0.0  0
+ ERC  CONST_28  H7    C7   C6   C5    180.00   0.0  0
+ ERC  CONST_29  H16   C16  C15  C14   180.00   0.0  0
+ ERC  CONST_30  H19   C19  C14  C15   180.00   0.0  0
+ ERC  CONST_31  H15   C15  C16  C17   180.00   0.0  0
+ ERC  CONST_32  HN1   N1   C1   C2    180.00   0.0  0
+ ERC  Var_01    C15   C14  C13  C12    91.70  30.0  2
+ ERC  Var_02    C14   C13  C12  N2    176.03  30.0  3
+ ERC  Var_03    C22   C21  O5   C17  -173.95  30.0  3
+ ERC  Var_04    H20   C20  O4   C18    62.88  30.0  3
+ ERC  Var_05    C21   C22  C23  S1   -177.49  30.0  1
+ ERC  Var_06    C23   C22  C21  O5   -179.34  30.0  3
+ ERC  Var_07    C12   N2   C11  C10   161.59  30.0  1
+ ERC  Var_08    C13   C12  N2   C11  -176.51  30.0  3
+ ERC  Var_09    C4    C5   N1   C1     -0.21  30.0  1
+ ERC  Var_10    C6    C5   N1   C1    179.70  30.0  1
+ ERC  Var_11    C4    C3   C2   C1     -0.07  30.0  1
+ ERC  Var_12    C3    C2   C1   N1      0.34  30.0  1
+ ERC  Var_13    C5    C4   C3   C2     -0.34  30.0  1
+ ERC  Var_14    C9    C4   C3   C2    179.81  30.0  1
+ ERC  Var_15    C3    C2   C1   O1   -179.81  30.0  1
+ ERC  Var_16    H3    C3   C2   C1   -179.70  30.0  1
+ ERC  Var_17    H2    C2   C1   N1   -179.42  30.0  1
+ ERC  Var_18    C4    C9   C10  O3    157.35  30.0  1
+ ERC  Var_19    C8    C9   C10  O3    -25.06  30.0  1
+ ERC  Var_20    C11   C10  C9   C4    -82.03  30.0  2
+ ERC  Var_21    C11   C10  C9   C8     95.55  30.0  2
+ ERC  Var_22    C21   O5   C17  C16    -2.99  30.0  2
+ ERC  Var_23    C20   O4   C18  C17   178.33  30.0  2
+ ERC  Var_24    C21   O5   C17  C18   176.96  30.0  2
+ ERC  Var_25    C20   O4   C18  C19    -1.86  30.0  2
+ ERC  Var_26    H10   C10  C9   C4     36.92  30.0  2
+ ERC  Var_27    HO2   O2   C6   C5   -179.52  30.0  2
+ ERC  Var_28    C9    C10  C11  N2   -169.50  30.0  1
+ ERC  Var_29    HO3   O3   C10  C9    152.34  30.0  3
+ ERC  Var_30    H11   C11  C10  C9     64.85  30.0  3
+ ERC  Var_31    H11A  C11  C10  C9    -52.02  30.0  3
+ ERC  Var_32    O3    C10  C11  N2    -48.07  30.0  1
+ ERC  Var_33    HS1   S1   C23  C22  -177.38  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

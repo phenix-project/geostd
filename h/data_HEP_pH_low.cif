@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HEP  HEP  '4-({(1R)-1-[(R)-hydroxy(phenoxy)phosphoryl]pentyl}amino)-4-oxobutanoic acid'  ligand  45  23  .  2021-08-11  2021-08-11  
+ HEP  HEP  '4-({(1R)-1-[(R)-hydroxy(phenoxy)phosphoryl]pentyl}amino)-4-oxobutanoic acid'  ligand  45  23  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HEP
@@ -233,30 +234,44 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HEP  CONST_01  C9   C8   C7   C6      0.00   0.0  0
- HEP  CONST_02  C9   C10  C11  C6      0.00   0.0  0
- HEP  CONST_03  C10  C11  C6   C7      0.00   0.0  0
- HEP  CONST_04  C10  C9   C8   C7      0.00   0.0  0
- HEP  CONST_05  C11  C6   C7   C8      0.00   0.0  0
- HEP  CONST_06  C11  C10  C9   C8      0.00   0.0  0
- HEP  CONST_07  O3P  C11  C6   C7    180.00   0.0  0
- HEP  CONST_08  O3P  C11  C10  C9    180.00   0.0  0
- HEP  CONST_09  H8   C8   C7   C6    180.00   0.0  0
- HEP  CONST_10  H10  C10  C11  C6    180.00   0.0  0
- HEP  CONST_11  H9   C9   C8   C7    180.00   0.0  0
- HEP  CONST_12  H6   C6   C7   C8    180.00   0.0  0
- HEP  CONST_13  H7   C7   C8   C9    180.00   0.0  0
- HEP  CONST_14  C14  C12  N1   C1    180.00   0.0  0
- HEP  CONST_15  O4   C12  N1   C1      0.00   0.0  0
- HEP  CONST_16  HN1  N1   C12  C14     0.00   0.0  0
- HEP  CONST_17  HO6  O6   C15  C13   180.00   0.0  0
- HEP  Var_01    O1P  P    O3P  C11    49.90  30.0  3
- HEP  Var_02    C4   C3   C2   C1    169.57  30.0  3
- HEP  Var_03    C5   C4   C3   C2    179.57  30.0  3
- HEP  Var_04    C15  C13  C14  C12  -178.05  30.0  1
- HEP  Var_05    O4   C12  C14  C13    27.11  30.0  2
- HEP  Var_06    O5   C15  C13  C14    -0.06  30.0  3
- HEP  Var_07    H51  C5   C4   C3    178.95  30.0  3
+ HEP  CONST_01  C9    C8   C7   C6      0.00   0.0  0
+ HEP  CONST_02  C9    C10  C11  C6      0.00   0.0  0
+ HEP  CONST_03  C10   C11  C6   C7      0.00   0.0  0
+ HEP  CONST_04  C10   C9   C8   C7      0.00   0.0  0
+ HEP  CONST_05  C11   C6   C7   C8      0.00   0.0  0
+ HEP  CONST_06  C11   C10  C9   C8      0.00   0.0  0
+ HEP  CONST_07  O3P   C11  C6   C7    180.00   0.0  0
+ HEP  CONST_08  O3P   C11  C10  C9    180.00   0.0  0
+ HEP  CONST_09  H8    C8   C7   C6    180.00   0.0  0
+ HEP  CONST_10  H10   C10  C11  C6    180.00   0.0  0
+ HEP  CONST_11  H9    C9   C8   C7    180.00   0.0  0
+ HEP  CONST_12  H6    C6   C7   C8    180.00   0.0  0
+ HEP  CONST_13  H7    C7   C8   C9    180.00   0.0  0
+ HEP  CONST_14  C14   C12  N1   C1    180.00   0.0  0
+ HEP  CONST_15  O4    C12  N1   C1      0.00   0.0  0
+ HEP  CONST_16  HN1   N1   C12  C14     0.00   0.0  0
+ HEP  CONST_17  HO6   O6   C15  C13   180.00   0.0  0
+ HEP  Var_01    O1P   P    O3P  C11    49.90  30.0  3
+ HEP  Var_02    C4    C3   C2   C1    169.57  30.0  3
+ HEP  Var_03    C5    C4   C3   C2    179.57  30.0  3
+ HEP  Var_04    C15   C13  C14  C12  -178.05  30.0  1
+ HEP  Var_05    O4    C12  C14  C13    27.11  30.0  2
+ HEP  Var_06    O5    C15  C13  C14    -0.06  30.0  3
+ HEP  Var_07    H51   C5   C4   C3    178.95  30.0  3
+ HEP  Var_08    P     O3P  C11  C6     94.87  30.0  2
+ HEP  Var_09    P     O3P  C11  C10   -86.57  30.0  2
+ HEP  Var_10    C12   N1   C1   C2    157.04  30.0  3
+ HEP  Var_11    O1P   P    C1   C2     38.54  30.0  3
+ HEP  Var_12    O2P   P    C1   C2    165.36  30.0  3
+ HEP  Var_13    O3P   P    C1   C2    -85.08  30.0  3
+ HEP  Var_14    N1    C1   C2   C3   -175.78  30.0  2
+ HEP  Var_15    P     C1   C2   C3     62.17  30.0  2
+ HEP  Var_16    P     C1   N1   C12   -79.37  30.0  3
+ HEP  Var_17    N1    C1   P    O1P   -82.78  30.0  3
+ HEP  Var_18    N1    C1   P    O2P    44.04  30.0  3
+ HEP  Var_19    N1    C1   P    O3P   153.61  30.0  3
+ HEP  Var_20    HOP2  O2P  P    C1     21.00  30.0  3
+ HEP  Var_21    H1    C1   C2   C3    -57.16  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

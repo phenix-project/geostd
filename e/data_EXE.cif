@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EXE  EXE  (2~{R},3~{S},4~{S})-1-[(2~{S})-2-acetamido-3,3-dimethyl-butanoyl]-3-fluoranyl-~{N}-[[4-(4-methyl-1,3-thiazol-5-yl)phenyl]methyl]-4-oxidanyl-pyrrolidine-2-carboxamide  ligand  65  34  .  2021-08-08  2021-08-08  
+ EXE  EXE  (2~{R},3~{S},4~{S})-1-[(2~{S})-2-acetamido-3,3-dimethyl-butanoyl]-3-fluoranyl-~{N}-[[4-(4-methyl-1,3-thiazol-5-yl)phenyl]methyl]-4-oxidanyl-pyrrolidine-2-carboxamide  ligand  65  34  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EXE
@@ -317,49 +318,90 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EXE  CONST_01  CBA  CAN  CAL  CAZ    0.00   0.0  0
- EXE  CONST_02  CBA  CAM  CAK  CAZ    0.00   0.0  0
- EXE  CONST_03  CBB  CBA  CAN  CAL  180.00   0.0  0
- EXE  CONST_04  CAM  CBA  CAN  CAL    0.00   0.0  0
- EXE  CONST_05  CAM  CAK  CAZ  CAL    0.00   0.0  0
- EXE  CONST_08  CAK  CAM  CBA  CAN    0.00   0.0  0
- EXE  CONST_09  CAK  CAZ  CAL  CAN    0.00   0.0  0
- EXE  CONST_10  CBB  CBA  CAM  CAK  180.00   0.0  0
- EXE  CONST_13  NAR  CAY  CBB  CBA  180.00   0.0  0
- EXE  CONST_14  CAO  SAU  CBB  CBA  180.00   0.0  0
- EXE  CONST_15  CAO  NAR  CAY  CBB    0.00   0.0  0
- EXE  CONST_16  NAR  CAO  SAU  CBB    0.00   0.0  0
- EXE  CONST_17  CAY  NAR  CAO  SAU    0.00   0.0  0
- EXE  CONST_18  NAR  CAY  CBB  SAU    0.00   0.0  0
- EXE  CONST_19  CAY  CBB  SAU  CAO    0.00   0.0  0
- EXE  CONST_20  CAN  CAL  CAZ  CAP  180.00   0.0  0
- EXE  CONST_21  CAM  CAK  CAZ  CAP  180.00   0.0  0
- EXE  CONST_22  CAB  CAY  CBB  CBA    0.00   0.0  0
- EXE  CONST_23  CAB  CAY  CBB  SAU  180.00   0.0  0
- EXE  CONST_24  CAB  CAY  NAR  CAO  180.00   0.0  0
- EXE  CONST_25  H25  CAN  CAL  CAZ  180.00   0.0  0
- EXE  CONST_26  H27  CAM  CAK  CAZ  180.00   0.0  0
- EXE  CONST_27  H26  CAK  CAZ  CAL  180.00   0.0  0
- EXE  CONST_28  H24  CAL  CAZ  CAK  180.00   0.0  0
- EXE  CONST_29  H28  CAO  SAU  CBB  180.00   0.0  0
- EXE  CONST_30  CBF  NBG  C    CA   180.00   0.0  0
- EXE  CONST_31  CAQ  NBG  C    CA     0.00   0.0  0
- EXE  CONST_32  CBF  NBG  C    O      0.00   0.0  0
- EXE  CONST_33  CAQ  NBG  C    O    180.00   0.0  0
- EXE  CONST_34  CAP  NAS  CAW  CBF  180.00   0.0  0
- EXE  CONST_35  H21  NAS  CAW  CBF    0.00   0.0  0
- EXE  CONST_36  CA   N    CAV  CAA  180.00   0.0  0
- EXE  CONST_37  CA   N    CAV  OAF    0.00   0.0  0
- EXE  CONST_38  CAP  NAS  CAW  OAG    0.00   0.0  0
- EXE  CONST_39  H4   N    CAV  CAA    0.00   0.0  0
- EXE  Var_01    CBF  NBG  CAQ  CBC   22.48  30.0  1
- EXE  Var_02    CAL  CAZ  CAP  NAS   17.72  30.0  2
- EXE  Var_03    H29  CAB  CAY  CBB  -95.96  30.0  2
- EXE  Var_04    CAZ  CAP  NAS  CAW  -97.50  30.0  1
- EXE  Var_05    H1   CAA  CAV  OAF   58.33  30.0  3
- EXE  Var_06    H6   CG1  CB   CA    57.98  30.0  3
- EXE  Var_07    H9   CAE  CB   CA    64.27  30.0  3
- EXE  Var_08    H12  CG2  CB   CA    66.58  30.0  3
+ EXE  CONST_01  CBA  CAN  CAL  CAZ     0.00   0.0  0
+ EXE  CONST_02  CBA  CAM  CAK  CAZ     0.00   0.0  0
+ EXE  CONST_03  CBB  CBA  CAN  CAL   180.00   0.0  0
+ EXE  CONST_04  CAM  CBA  CAN  CAL     0.00   0.0  0
+ EXE  CONST_05  CAM  CAK  CAZ  CAL     0.00   0.0  0
+ EXE  CONST_06  CAK  CAM  CBA  CAN     0.00   0.0  0
+ EXE  CONST_07  CAK  CAZ  CAL  CAN     0.00   0.0  0
+ EXE  CONST_08  CBB  CBA  CAM  CAK   180.00   0.0  0
+ EXE  CONST_09  NAR  CAY  CBB  CBA   180.00   0.0  0
+ EXE  CONST_10  CAO  SAU  CBB  CBA   180.00   0.0  0
+ EXE  CONST_11  CAO  NAR  CAY  CBB     0.00   0.0  0
+ EXE  CONST_12  NAR  CAO  SAU  CBB     0.00   0.0  0
+ EXE  CONST_13  CAY  NAR  CAO  SAU     0.00   0.0  0
+ EXE  CONST_14  NAR  CAY  CBB  SAU     0.00   0.0  0
+ EXE  CONST_15  CAY  CBB  SAU  CAO     0.00   0.0  0
+ EXE  CONST_16  CAN  CAL  CAZ  CAP   180.00   0.0  0
+ EXE  CONST_17  CAM  CAK  CAZ  CAP   180.00   0.0  0
+ EXE  CONST_18  CAB  CAY  CBB  CBA     0.00   0.0  0
+ EXE  CONST_19  CAB  CAY  CBB  SAU   180.00   0.0  0
+ EXE  CONST_20  CAB  CAY  NAR  CAO   180.00   0.0  0
+ EXE  CONST_21  H25  CAN  CAL  CAZ   180.00   0.0  0
+ EXE  CONST_22  H27  CAM  CAK  CAZ   180.00   0.0  0
+ EXE  CONST_23  H26  CAK  CAZ  CAL   180.00   0.0  0
+ EXE  CONST_24  H24  CAL  CAZ  CAK   180.00   0.0  0
+ EXE  CONST_25  H28  CAO  SAU  CBB   180.00   0.0  0
+ EXE  CONST_26  CBF  NBG  C    CA    180.00   0.0  0
+ EXE  CONST_27  CAQ  NBG  C    CA      0.00   0.0  0
+ EXE  CONST_28  CBF  NBG  C    O       0.00   0.0  0
+ EXE  CONST_29  CAQ  NBG  C    O     180.00   0.0  0
+ EXE  CONST_30  CAP  NAS  CAW  CBF   180.00   0.0  0
+ EXE  CONST_31  H21  NAS  CAW  CBF     0.00   0.0  0
+ EXE  CONST_32  CA   N    CAV  CAA   180.00   0.0  0
+ EXE  CONST_33  CA   N    CAV  OAF     0.00   0.0  0
+ EXE  CONST_34  CAP  NAS  CAW  OAG     0.00   0.0  0
+ EXE  CONST_35  H4   N    CAV  CAA     0.00   0.0  0
+ EXE  Var_01    CBF  NBG  CAQ  CBC    22.48  30.0  1
+ EXE  Var_02    CAL  CAZ  CAP  NAS    17.72  30.0  2
+ EXE  Var_03    H29  CAB  CAY  CBB   -95.96  30.0  2
+ EXE  Var_04    CAZ  CAP  NAS  CAW   -97.50  30.0  1
+ EXE  Var_05    H1   CAA  CAV  OAF    58.33  30.0  3
+ EXE  Var_06    H6   CG1  CB   CA     57.98  30.0  3
+ EXE  Var_07    H9   CAE  CB   CA     64.27  30.0  3
+ EXE  Var_08    H12  CG2  CB   CA     66.58  30.0  3
+ EXE  Var_09    CBC  CBD  CBF  NBG   -25.37  30.0  1
+ EXE  Var_10    CBD  CBC  CAQ  NBG   -37.13  30.0  1
+ EXE  Var_11    CBF  CBD  CBC  CAQ    38.66  30.0  1
+ EXE  Var_12    CBD  CBF  NBG  CAQ     1.72  30.0  1
+ EXE  Var_13    CAY  CBB  CBA  CAN  -137.58  30.0  3
+ EXE  Var_14    SAU  CBB  CBA  CAN    42.51  30.0  3
+ EXE  Var_15    CAY  CBB  CBA  CAM    42.50  30.0  3
+ EXE  Var_16    SAU  CBB  CBA  CAM  -137.41  30.0  3
+ EXE  Var_17    CBD  CBF  NBG  C     175.22  30.0  1
+ EXE  Var_18    FAJ  CBD  CBF  NBG    90.22  30.0  1
+ EXE  Var_19    OAI  CBC  CAQ  NBG    75.80  30.0  1
+ EXE  Var_20    FAJ  CBD  CBC  CAQ   -78.08  30.0  1
+ EXE  Var_21    CAW  CBF  NBG  CAQ   122.55  30.0  1
+ EXE  Var_22    CAW  CBF  CBD  CBC  -146.26  30.0  1
+ EXE  Var_23    CBF  CBD  CBC  OAI   -79.06  30.0  1
+ EXE  Var_24    H19  CBD  CBF  NBG  -148.84  30.0  1
+ EXE  Var_25    H17  CBC  CAQ  NBG  -156.66  30.0  1
+ EXE  Var_26    H20  CBF  NBG  CAQ  -114.95  30.0  1
+ EXE  Var_27    H15  CAQ  CBC  CBD  -157.71  30.0  1
+ EXE  Var_28    H16  CAQ  CBC  CBD    82.12  30.0  1
+ EXE  Var_29    CAW  CBF  NBG  C     -63.96  30.0  1
+ EXE  Var_30    NAS  CAW  CBF  NBG   157.28  30.0  1
+ EXE  Var_31    OAG  CAW  CBF  NBG   -23.94  30.0  1
+ EXE  Var_32    FAJ  CBD  CBC  OAI   164.20  30.0  1
+ EXE  Var_33    NAS  CAW  CBF  CBD   -86.46  30.0  1
+ EXE  Var_34    OAG  CAW  CBF  CBD    92.33  30.0  1
+ EXE  Var_35    CAW  CBF  CBD  FAJ   -30.67  30.0  1
+ EXE  Var_36    H18  OAI  CBC  CAQ    63.36  30.0  3
+ EXE  Var_37    NBG  C    CA   N     140.59  30.0  3
+ EXE  Var_38    NBG  C    CA   CB    -95.26  30.0  3
+ EXE  Var_39    H5   CA   C    NBG    24.58  30.0  3
+ EXE  Var_40    C    CA   N    CAV  -123.33  30.0  1
+ EXE  Var_41    CB   CA   N    CAV   112.23  30.0  1
+ EXE  Var_42    O    C    CA   N     -39.47  30.0  3
+ EXE  Var_43    CG1  CB   CA   N    -176.06  30.0  3
+ EXE  Var_44    CAE  CB   CA   N     -57.89  30.0  3
+ EXE  Var_45    CG2  CB   CA   N      62.40  30.0  3
+ EXE  Var_46    O    C    CA   CB     84.68  30.0  3
+ EXE  Var_47    C    CA   CB   CG1    62.54  30.0  1
+ EXE  Var_48    C    CA   CB   CAE  -179.29  30.0  1
+ EXE  Var_49    C    CA   CB   CG2   -59.00  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

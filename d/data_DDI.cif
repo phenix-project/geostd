@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DDI  DDI  '(1S,2'S,3a'R,10a'S)-2,10'-dioxo-1',3,3a',4,10',10a'-hexahydro-2H,2'H-spiro[naphthalene-1,3'-pentaleno[1,2-b]naphthalen]-2'-yl 2-amino-2-deoxy-beta-D-glucopyranoside'  ligand  70  39  .  2022-07-24  2022-07-26
+ DDI  DDI  '(1S,2'S,3a'R,10a'S)-2,10'-dioxo-1',3,3a',4,10',10a'-hexahydro-2H,2'H-spiro[naphthalene-1,3'-pentaleno[1,2-b]naphthalen]-2'-yl 2-amino-2-deoxy-beta-D-glucopyranoside'  ligand  70  39  .  2022-07-24  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DDI
@@ -351,44 +352,127 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DDI  CONST_01  C20  C21  C22  C23  180.00   0.0  0
- DDI  CONST_02  C16  C21  C22  C23    0.00   0.0  0
- DDI  CONST_03  C16  C15  C14  C23    0.00   0.0  0
- DDI  CONST_04  C15  C14  C23  C22    0.00   0.0  0
- DDI  CONST_05  C19  C20  C21  C22  180.00   0.0  0
- DDI  CONST_06  C17  C16  C21  C22  180.00   0.0  0
- DDI  CONST_07  C15  C16  C21  C22    0.00   0.0  0
- DDI  CONST_08  C14  C23  C22  C21    0.00   0.0  0
- DDI  CONST_09  C18  C19  C20  C21    0.00   0.0  0
- DDI  CONST_10  C18  C17  C16  C21    0.00   0.0  0
- DDI  CONST_11  C14  C15  C16  C21    0.00   0.0  0
- DDI  CONST_12  C17  C16  C21  C20    0.00   0.0  0
- DDI  CONST_13  C15  C16  C21  C20  180.00   0.0  0
- DDI  CONST_14  C17  C18  C19  C20    0.00   0.0  0
- DDI  CONST_15  C16  C21  C20  C19    0.00   0.0  0
- DDI  CONST_16  C16  C17  C18  C19    0.00   0.0  0
- DDI  CONST_17  C15  C16  C17  C18  180.00   0.0  0
- DDI  CONST_18  C14  C15  C16  C17  180.00   0.0  0
- DDI  CONST_19  C3   C2   C1   C10    0.00   0.0  0
- DDI  CONST_20  C3   C4   C5   C10    0.00   0.0  0
- DDI  CONST_21  C4   C5   C10  C1     0.00   0.0  0
- DDI  CONST_22  C4   C3   C2   C1     0.00   0.0  0
- DDI  CONST_23  C5   C10  C1   C2     0.00   0.0  0
- DDI  CONST_24  C5   C4   C3   C2     0.00   0.0  0
- DDI  CONST_25  H22  C22  C23  C11    0.00   0.0  0
- DDI  CONST_26  H15  C15  C14  C23  180.00   0.0  0
- DDI  CONST_27  H20  C20  C21  C22    0.00   0.0  0
- DDI  CONST_28  H19  C19  C20  C21  180.00   0.0  0
- DDI  CONST_29  H17  C17  C16  C21  180.00   0.0  0
- DDI  CONST_30  H18  C18  C19  C20  180.00   0.0  0
- DDI  CONST_31  H1   C1   C10  C9     0.00   0.0  0
- DDI  CONST_32  H2   C2   C1   C10  180.00   0.0  0
- DDI  CONST_33  H4   C4   C5   C10  180.00   0.0  0
- DDI  CONST_34  H3   C3   C2   C1   180.00   0.0  0
- DDI  Var_01    C23  C14  C13  C12    4.34  30.0  1
- DDI  Var_02    C6   C7   C8   C9   -60.83  30.0  1
- DDI  Var_03    C7   C6   C5   C10  -27.11  30.0  1
- DDI  Var_04    C8   C7   C6   C5    56.75  30.0  1
+ DDI  CONST_01  C20   C21  C22  C23   180.00   0.0  0
+ DDI  CONST_02  C16   C21  C22  C23     0.00   0.0  0
+ DDI  CONST_03  C16   C15  C14  C23     0.00   0.0  0
+ DDI  CONST_04  C15   C14  C23  C22     0.00   0.0  0
+ DDI  CONST_05  C19   C20  C21  C22   180.00   0.0  0
+ DDI  CONST_06  C17   C16  C21  C22   180.00   0.0  0
+ DDI  CONST_07  C15   C16  C21  C22     0.00   0.0  0
+ DDI  CONST_08  C14   C23  C22  C21     0.00   0.0  0
+ DDI  CONST_09  C18   C19  C20  C21     0.00   0.0  0
+ DDI  CONST_10  C18   C17  C16  C21     0.00   0.0  0
+ DDI  CONST_11  C14   C15  C16  C21     0.00   0.0  0
+ DDI  CONST_12  C17   C16  C21  C20     0.00   0.0  0
+ DDI  CONST_13  C15   C16  C21  C20   180.00   0.0  0
+ DDI  CONST_14  C17   C18  C19  C20     0.00   0.0  0
+ DDI  CONST_15  C16   C21  C20  C19     0.00   0.0  0
+ DDI  CONST_16  C16   C17  C18  C19     0.00   0.0  0
+ DDI  CONST_17  C15   C16  C17  C18   180.00   0.0  0
+ DDI  CONST_18  C14   C15  C16  C17   180.00   0.0  0
+ DDI  CONST_19  C3    C2   C1   C10     0.00   0.0  0
+ DDI  CONST_20  C3    C4   C5   C10     0.00   0.0  0
+ DDI  CONST_21  C4    C5   C10  C1      0.00   0.0  0
+ DDI  CONST_22  C4    C3   C2   C1      0.00   0.0  0
+ DDI  CONST_23  C5    C10  C1   C2      0.00   0.0  0
+ DDI  CONST_24  C5    C4   C3   C2      0.00   0.0  0
+ DDI  CONST_25  H22   C22  C23  C11     0.00   0.0  0
+ DDI  CONST_26  H15   C15  C14  C23   180.00   0.0  0
+ DDI  CONST_27  H20   C20  C21  C22     0.00   0.0  0
+ DDI  CONST_28  H19   C19  C20  C21   180.00   0.0  0
+ DDI  CONST_29  H17   C17  C16  C21   180.00   0.0  0
+ DDI  CONST_30  H18   C18  C19  C20   180.00   0.0  0
+ DDI  CONST_31  H1    C1   C10  C9      0.00   0.0  0
+ DDI  CONST_32  H2    C2   C1   C10   180.00   0.0  0
+ DDI  CONST_33  H4    C4   C5   C10   180.00   0.0  0
+ DDI  CONST_34  H3    C3   C2   C1    180.00   0.0  0
+ DDI  Var_01    C23   C14  C13  C12     4.34  30.0  1
+ DDI  Var_02    C6    C7   C8   C9    -60.83  30.0  1
+ DDI  Var_03    C7    C6   C5   C10   -27.11  30.0  1
+ DDI  Var_04    C8    C7   C6   C5     56.75  30.0  1
+ DDI  Var_05    C30   C29  C28  C27    54.07  30.0  1
+ DDI  Var_06    C30   O7   C26  C27   -64.26  30.0  1
+ DDI  Var_07    O7    C26  C27  C28    56.64  30.0  1
+ DDI  Var_08    O7    C30  C29  C28   -56.62  30.0  1
+ DDI  Var_09    C26   C27  C28  C29   -53.02  30.0  1
+ DDI  Var_10    C26   O7   C30  C29    63.17  30.0  1
+ DDI  Var_11    C11   C12  C24  C25   -26.56  30.0  1
+ DDI  Var_12    C13   C12  C24  C25    90.12  30.0  1
+ DDI  Var_13    C12   C11  C9   C25    14.41  30.0  1
+ DDI  Var_14    C23   C11  C9   C25  -101.58  30.0  1
+ DDI  Var_15    C1    C10  C9   C25    54.31  30.0  2
+ DDI  Var_16    C5    C10  C9   C25  -122.93  30.0  2
+ DDI  Var_17    C7    C8   C9   C25   155.06  30.0  3
+ DDI  Var_18    C11   C9   C25  C24   -31.77  30.0  1
+ DDI  Var_19    C10   C9   C25  C24  -157.02  30.0  1
+ DDI  Var_20    C8    C9   C25  C24    77.92  30.0  1
+ DDI  Var_21    C23   C11  C12  C24   131.41  30.0  1
+ DDI  Var_22    C9    C11  C12  C24     7.48  30.0  1
+ DDI  Var_23    C14   C13  C12  C24  -127.16  30.0  1
+ DDI  Var_24    C9    C25  C24  C12    36.38  30.0  1
+ DDI  Var_25    C22   C23  C11  C12   172.94  30.0  1
+ DDI  Var_26    C14   C23  C11  C12    -7.50  30.0  1
+ DDI  Var_27    C10   C9   C11  C12   135.56  30.0  1
+ DDI  Var_28    C8    C9   C11  C12  -101.35  30.0  1
+ DDI  Var_29    C14   C13  C12  C11    -8.71  30.0  1
+ DDI  Var_30    C1    C10  C9   C11   -63.09  30.0  2
+ DDI  Var_31    C5    C10  C9   C11   119.67  30.0  2
+ DDI  Var_32    C7    C8   C9   C11   -94.90  30.0  3
+ DDI  Var_33    C13   C12  C11  C23     9.62  30.0  1
+ DDI  Var_34    C10   C9   C11  C23    19.57  30.0  1
+ DDI  Var_35    C8    C9   C11  C23   142.65  30.0  1
+ DDI  Var_36    C9    C11  C23  C22   -70.65  30.0  1
+ DDI  Var_37    C9    C11  C23  C14   108.91  30.0  1
+ DDI  Var_38    C9    C11  C12  C13  -114.31  30.0  1
+ DDI  Var_39    C7    C8   C9   C10    31.05  30.0  3
+ DDI  Var_40    C8    C9   C10  C1    178.80  30.0  2
+ DDI  Var_41    C8    C9   C10  C5      1.56  30.0  2
+ DDI  Var_42    C29   C28  C27  N    -172.09  30.0  1
+ DDI  Var_43    O7    C26  C27  N     176.04  30.0  1
+ DDI  Var_44    O5    C29  C28  C27   175.48  30.0  1
+ DDI  Var_45    C25   O3   C26  C27   165.25  30.0  3
+ DDI  Var_46    O3    C26  C27  C28   175.16  30.0  1
+ DDI  Var_47    C31   C30  C29  C28  -176.27  30.0  1
+ DDI  Var_48    C26   C27  C28  O4   -176.02  30.0  1
+ DDI  Var_49    C30   C29  C28  O4    175.03  30.0  1
+ DDI  Var_50    O7    C30  C29  O5   -174.95  30.0  1
+ DDI  Var_51    O3    C26  O7   C30   176.75  30.0  1
+ DDI  Var_52    C26   O7   C30  C31  -174.11  30.0  1
+ DDI  Var_53    C25   O3   C26  O7    -74.26  30.0  3
+ DDI  Var_54    C24   C25  O3   C26    95.42  30.0  3
+ DDI  Var_55    C9    C25  O3   C26  -143.04  30.0  3
+ DDI  Var_56    C12   C24  C25  O3    159.09  30.0  1
+ DDI  Var_57    C11   C9   C25  O3   -158.74  30.0  1
+ DDI  Var_58    C10   C9   C25  O3     76.01  30.0  1
+ DDI  Var_59    C8    C9   C25  O3    -49.04  30.0  1
+ DDI  Var_60    O1    C8   C9   C25   -27.61  30.0  3
+ DDI  Var_61    O2    C13  C12  C24    53.14  30.0  1
+ DDI  Var_62    O2    C13  C12  C11   171.58  30.0  1
+ DDI  Var_63    O1    C8   C9   C11    82.44  30.0  3
+ DDI  Var_64    O1    C8   C9   C10  -151.62  30.0  3
+ DDI  Var_65    H29   C29  C28  C27   -64.42  30.0  1
+ DDI  Var_66    H26   C26  C27  C28   -64.17  30.0  1
+ DDI  Var_67    H30   C30  C29  C28    63.16  30.0  1
+ DDI  Var_68    H27   C27  C28  C29    63.00  30.0  1
+ DDI  Var_69    H28   C28  C29  C30   -63.35  30.0  1
+ DDI  Var_70    H12   C12  C24  C25  -149.22  30.0  1
+ DDI  Var_71    H11   C11  C9   C25   134.36  30.0  1
+ DDI  Var_72    H25   C25  C24  C12   -78.95  30.0  1
+ DDI  Var_73    H24A  C24  C12  C11  -146.70  30.0  1
+ DDI  Var_74    H24B  C24  C12  C11    92.65  30.0  1
+ DDI  Var_75    O4    C28  C27  N      64.91  30.0  1
+ DDI  Var_76    O3    C26  C27  N     -65.43  30.0  1
+ DDI  Var_77    O5    C29  C28  O4    -63.55  30.0  1
+ DDI  Var_78    O6    C31  C30  C29  -177.34  30.0  3
+ DDI  Var_79    C31   C30  C29  O5     65.40  30.0  1
+ DDI  Var_80    O7    C30  C31  O6     62.46  30.0  1
+ DDI  Var_81    HO4   O4   C28  C27  -177.65  30.0  3
+ DDI  Var_82    HN1   N    C27  C28   178.96  30.0  3
+ DDI  Var_83    HN2   N    C27  C28   -65.17  30.0  3
+ DDI  Var_84    HO5   O5   C29  C28   151.91  30.0  3
+ DDI  Var_85    H31A  C31  C30  C29   -55.91  30.0  3
+ DDI  Var_86    H31B  C31  C30  C29    60.41  30.0  3
+ DDI  Var_87    HO6   O6   C31  C30   177.30  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

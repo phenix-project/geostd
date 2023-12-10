@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 998  998  N-methyl-L-alanyl-3-methyl-L-valyl-N-[(1R)-1,2,3,4-tetrahydronaphthalen-1-yl]-L-prolinamide  ligand  70  32  .  2021-08-06  2021-08-06  
+ 998  998  N-methyl-L-alanyl-3-methyl-L-valyl-N-[(1R)-1,2,3,4-tetrahydronaphthalen-1-yl]-L-prolinamide  ligand  70  32  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_998
@@ -342,36 +343,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 998  CONST_01  C12   C8   C3   C1     0.00   0.0  0
- 998  CONST_02  C12   C9   C4   C1     0.00   0.0  0
- 998  CONST_03  C9    C4   C1   C3     0.00   0.0  0
- 998  CONST_04  C9    C12  C8   C3     0.00   0.0  0
- 998  CONST_05  C8    C3   C1   C4     0.00   0.0  0
- 998  CONST_06  C8    C12  C9   C4     0.00   0.0  0
- 998  CONST_07  H36   C8   C3   C1   180.00   0.0  0
- 998  CONST_08  H34   C9   C4   C1   180.00   0.0  0
- 998  CONST_09  H35   C4   C1   C2     0.00   0.0  0
- 998  CONST_10  H33   C12  C8   C3   180.00   0.0  0
- 998  CONST_11  C13   C10  N5   C2   180.00   0.0  0
- 998  CONST_12  C20   C17  N15  C13  180.00   0.0  0
- 998  CONST_13  O21   C17  N15  C13    0.00   0.0  0
- 998  CONST_14  C20   C17  N15  C18    0.00   0.0  0
- 998  CONST_15  O21   C17  N15  C18  180.00   0.0  0
- 998  CONST_16  O14   C10  N5   C2     0.00   0.0  0
- 998  CONST_17  H44   N5   C10  C13    0.00   0.0  0
- 998  CONST_18  C28   C24  N22  C20  180.00   0.0  0
- 998  CONST_19  O29   C24  N22  C20    0.00   0.0  0
- 998  CONST_20  H53   N22  C24  C28    0.00   0.0  0
- 998  Var_01    C11   C7   C3   C1    18.42  30.0  1
- 998  Var_02    C7    C11  C6   C2    64.21  30.0  1
- 998  Var_03    C6    C11  C7   C3   -48.07  30.0  1
- 998  Var_04    C19   C18  N15  C13   18.06  30.0  1
- 998  Var_05    C18   C19  C16  C13   38.83  30.0  1
- 998  Var_06    C16   C19  C18  N15  -34.69  30.0  1
- 998  Var_07    HT11  C25  C23  C20   67.00  30.0  3
- 998  Var_08    HT21  C26  C23  C20   57.08  30.0  3
- 998  Var_09    HT31  C27  C23  C20   64.78  30.0  3
- 998  Var_10    HM1   CNM  N30  C28  -59.49  30.0  3
+ 998  CONST_01  C12   C8   C3   C1      0.00   0.0  0
+ 998  CONST_02  C12   C9   C4   C1      0.00   0.0  0
+ 998  CONST_03  C9    C4   C1   C3      0.00   0.0  0
+ 998  CONST_04  C9    C12  C8   C3      0.00   0.0  0
+ 998  CONST_05  C8    C3   C1   C4      0.00   0.0  0
+ 998  CONST_06  C8    C12  C9   C4      0.00   0.0  0
+ 998  CONST_07  H36   C8   C3   C1    180.00   0.0  0
+ 998  CONST_08  H34   C9   C4   C1    180.00   0.0  0
+ 998  CONST_09  H35   C4   C1   C2      0.00   0.0  0
+ 998  CONST_10  H33   C12  C8   C3    180.00   0.0  0
+ 998  CONST_11  C13   C10  N5   C2    180.00   0.0  0
+ 998  CONST_12  C20   C17  N15  C13   180.00   0.0  0
+ 998  CONST_13  O21   C17  N15  C13     0.00   0.0  0
+ 998  CONST_14  C20   C17  N15  C18     0.00   0.0  0
+ 998  CONST_15  O21   C17  N15  C18   180.00   0.0  0
+ 998  CONST_16  O14   C10  N5   C2      0.00   0.0  0
+ 998  CONST_17  H44   N5   C10  C13     0.00   0.0  0
+ 998  CONST_18  C28   C24  N22  C20   180.00   0.0  0
+ 998  CONST_19  O29   C24  N22  C20     0.00   0.0  0
+ 998  CONST_20  H53   N22  C24  C28     0.00   0.0  0
+ 998  Var_01    C11   C7   C3   C1     18.42  30.0  1
+ 998  Var_02    C7    C11  C6   C2     64.21  30.0  1
+ 998  Var_03    C6    C11  C7   C3    -48.07  30.0  1
+ 998  Var_04    C19   C18  N15  C13    18.06  30.0  1
+ 998  Var_05    C18   C19  C16  C13    38.83  30.0  1
+ 998  Var_06    C16   C19  C18  N15   -34.69  30.0  1
+ 998  Var_07    HT11  C25  C23  C20    67.00  30.0  3
+ 998  Var_08    HT21  C26  C23  C20    57.08  30.0  3
+ 998  Var_09    HT31  C27  C23  C20    64.78  30.0  3
+ 998  Var_10    HM1   CNM  N30  C28   -59.49  30.0  3
+ 998  Var_11    C11   C6   C2   C1    -48.22  30.0  1
+ 998  Var_12    C6    C2   C1   C3     18.46  30.0  1
+ 998  Var_13    C6    C2   C1   C4   -163.81  30.0  1
+ 998  Var_14    C19   C16  C13  N15   -27.75  30.0  1
+ 998  Var_15    C18   N15  C13  C16     6.09  30.0  1
+ 998  Var_16    N5    C2   C1   C3    143.11  30.0  1
+ 998  Var_17    N5    C2   C1   C4    -39.16  30.0  1
+ 998  Var_18    C11   C6   C2   N5   -173.81  30.0  1
+ 998  Var_19    C18   N15  C13  C10   125.79  30.0  1
+ 998  Var_20    C19   C16  C13  C10  -147.52  30.0  1
+ 998  Var_21    C17   N15  C13  C16  -179.36  30.0  1
+ 998  Var_22    HS1   C6   C2   C1     72.59  30.0  1
+ 998  Var_23    HS2   C6   C2   C1   -170.55  30.0  1
+ 998  Var_24    H43   C2   C1   C3   -100.25  30.0  1
+ 998  Var_25    HP1   C16  C13  N15  -150.34  30.0  1
+ 998  Var_26    HP2   C16  C13  N15    89.51  30.0  1
+ 998  Var_27    HPA   C13  N15  C18  -111.75  30.0  1
+ 998  Var_28    C10   N5   C2   C1    107.21  30.0  3
+ 998  Var_29    N15   C13  C10  N5    142.22  30.0  3
+ 998  Var_30    C16   C13  C10  N5   -102.74  30.0  3
+ 998  Var_31    C10   N5   C2   C6   -126.88  30.0  3
+ 998  Var_32    C17   N15  C13  C10   -59.66  30.0  1
+ 998  Var_33    N15   C13  C10  O14   -41.44  30.0  3
+ 998  Var_34    C16   C13  C10  O14    73.60  30.0  3
+ 998  Var_35    H44   N5   C2   C1    -70.30  30.0  3
+ 998  Var_36    N22   C20  C17  N15   138.06  30.0  3
+ 998  Var_37    C23   C20  C17  N15   -97.78  30.0  3
+ 998  Var_38    HTA   C20  C17  N15    21.80  30.0  3
+ 998  Var_39    C24   N22  C20  C17  -124.76  30.0  3
+ 998  Var_40    C25   C23  C20  C17   -58.52  30.0  3
+ 998  Var_41    C26   C23  C20  C17    63.08  30.0  3
+ 998  Var_42    C27   C23  C20  C17  -178.75  30.0  3
+ 998  Var_43    N22   C20  C17  O21   -42.06  30.0  3
+ 998  Var_44    C23   C20  C17  O21    82.11  30.0  3
+ 998  Var_45    C25   C23  C20  N22    62.59  30.0  3
+ 998  Var_46    C26   C23  C20  N22  -175.81  30.0  3
+ 998  Var_47    C27   C23  C20  N22   -57.64  30.0  3
+ 998  Var_48    N30   C28  C24  N22   140.70  30.0  3
+ 998  Var_49    C31   C28  C24  N22   -93.33  30.0  3
+ 998  Var_50    C24   N22  C20  C23   111.01  30.0  3
+ 998  Var_51    CNM   N30  C28  C24  -173.73  30.0  3
+ 998  Var_52    N30   C28  C24  O29   -41.68  30.0  3
+ 998  Var_53    C31   C28  C24  O29    84.29  30.0  3
+ 998  Var_54    CNM   N30  C28  C31    64.82  30.0  3
+ 998  Var_55    HAA   C28  C24  N22    24.15  30.0  3
+ 998  Var_56    H67   N30  C28  C24    62.63  30.0  3
+ 998  Var_57    HB1   C31  C28  C24    58.84  30.0  3
+ 998  Var_58    HB2   C31  C28  C24   178.51  30.0  3
+ 998  Var_59    HB3   C31  C28  C24   -61.50  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

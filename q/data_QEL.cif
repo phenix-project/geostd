@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QEL  QEL  4-[(1R,2S)-2-(4-benzylpiperidin-1-yl)-1-hydroxypropyl]phenol  ligand  51  24  .  2022-03-23  2022-03-23
+ QEL  QEL  4-[(1R,2S)-2-(4-benzylpiperidin-1-yl)-1-hydroxypropyl]phenol  ligand  51  24  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QEL
@@ -264,38 +265,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QEL  CONST_01  C4   C5   C6   C1     0.00   0.0  0
- QEL  CONST_02  C4   C02  C01  C1     0.00   0.0  0
- QEL  CONST_03  C19  C15  C16  C2     0.00   0.0  0
- QEL  CONST_04  C19  C3   C18  C2     0.00   0.0  0
- QEL  CONST_05  C16  C2   C18  C3     0.00   0.0  0
- QEL  CONST_06  C16  C15  C19  C3     0.00   0.0  0
- QEL  CONST_07  C01  C02  C4   C5     0.00   0.0  0
- QEL  CONST_08  C01  C1   C6   C5     0.00   0.0  0
- QEL  CONST_09  C02  C01  C1   C6     0.00   0.0  0
- QEL  CONST_10  C02  C4   C5   C6     0.00   0.0  0
- QEL  CONST_11  C18  C2   C16  C15    0.00   0.0  0
- QEL  CONST_12  C18  C3   C19  C15    0.00   0.0  0
- QEL  CONST_13  C14  C15  C16  C2   180.00   0.0  0
- QEL  CONST_14  C19  C3   C18  O2   180.00   0.0  0
- QEL  CONST_15  C16  C2   C18  O2   180.00   0.0  0
- QEL  CONST_16  C14  C15  C19  C3   180.00   0.0  0
- QEL  CONST_17  C7   C4   C5   C6   180.00   0.0  0
- QEL  CONST_18  C01  C02  C4   C7   180.00   0.0  0
- QEL  CONST_19  H5   C5   C6   C1   180.00   0.0  0
- QEL  CONST_20  H02  C02  C01  C1   180.00   0.0  0
- QEL  CONST_21  H3   C3   C18  C2   180.00   0.0  0
- QEL  CONST_22  H2   C2   C18  C3   180.00   0.0  0
- QEL  CONST_23  H6   C6   C5   C4   180.00   0.0  0
- QEL  CONST_24  H01  C01  C02  C4   180.00   0.0  0
- QEL  CONST_25  H1   C1   C6   C5   180.00   0.0  0
- QEL  CONST_26  H19  C19  C15  C16  180.00   0.0  0
- QEL  CONST_27  H16  C16  C2   C18  180.00   0.0  0
- QEL  Var_01    C8   C12  C11  N1    57.13  30.0  1
- QEL  Var_02    C8   C9   C10  N1   -57.40  30.0  1
- QEL  Var_03    C11  N1   C10  C9    60.09  30.0  1
- QEL  Var_04    C12  C11  N1   C10  -60.49  30.0  1
- QEL  Var_05    C8   C7   C4   C5    72.86  30.0  2
+ QEL  CONST_01  C4    C5   C6   C1      0.00   0.0  0
+ QEL  CONST_02  C4    C02  C01  C1      0.00   0.0  0
+ QEL  CONST_03  C19   C15  C16  C2      0.00   0.0  0
+ QEL  CONST_04  C19   C3   C18  C2      0.00   0.0  0
+ QEL  CONST_05  C16   C2   C18  C3      0.00   0.0  0
+ QEL  CONST_06  C16   C15  C19  C3      0.00   0.0  0
+ QEL  CONST_07  C01   C02  C4   C5      0.00   0.0  0
+ QEL  CONST_08  C01   C1   C6   C5      0.00   0.0  0
+ QEL  CONST_09  C02   C01  C1   C6      0.00   0.0  0
+ QEL  CONST_10  C02   C4   C5   C6      0.00   0.0  0
+ QEL  CONST_11  C18   C2   C16  C15     0.00   0.0  0
+ QEL  CONST_12  C18   C3   C19  C15     0.00   0.0  0
+ QEL  CONST_13  C14   C15  C16  C2    180.00   0.0  0
+ QEL  CONST_14  C19   C3   C18  O2    180.00   0.0  0
+ QEL  CONST_15  C16   C2   C18  O2    180.00   0.0  0
+ QEL  CONST_16  C14   C15  C19  C3    180.00   0.0  0
+ QEL  CONST_17  C7    C4   C5   C6    180.00   0.0  0
+ QEL  CONST_18  C01   C02  C4   C7    180.00   0.0  0
+ QEL  CONST_19  H5    C5   C6   C1    180.00   0.0  0
+ QEL  CONST_20  H02   C02  C01  C1    180.00   0.0  0
+ QEL  CONST_21  H3    C3   C18  C2    180.00   0.0  0
+ QEL  CONST_22  H2    C2   C18  C3    180.00   0.0  0
+ QEL  CONST_23  H6    C6   C5   C4    180.00   0.0  0
+ QEL  CONST_24  H01   C01  C02  C4    180.00   0.0  0
+ QEL  CONST_25  H1    C1   C6   C5    180.00   0.0  0
+ QEL  CONST_26  H19   C19  C15  C16   180.00   0.0  0
+ QEL  CONST_27  H16   C16  C2   C18   180.00   0.0  0
+ QEL  Var_01    C8    C12  C11  N1     57.13  30.0  1
+ QEL  Var_02    C8    C9   C10  N1    -57.40  30.0  1
+ QEL  Var_03    C11   N1   C10  C9     60.09  30.0  1
+ QEL  Var_04    C12   C11  N1   C10   -60.49  30.0  1
+ QEL  Var_05    C8    C7   C4   C5     72.86  30.0  2
+ QEL  Var_06    C11   C12  C8   C9    -52.28  30.0  1
+ QEL  Var_07    C12   C8   C9   C10    52.84  30.0  1
+ QEL  Var_08    C12   C8   C7   C4   -177.35  30.0  1
+ QEL  Var_09    C9    C8   C7   C4     60.05  30.0  1
+ QEL  Var_10    C11   C12  C8   C7   -176.97  30.0  1
+ QEL  Var_11    C10   C9   C8   C7    176.68  30.0  1
+ QEL  Var_12    H8    C8   C9   C10   -63.84  30.0  1
+ QEL  Var_13    C15   C14  C13  N1   -174.71  30.0  3
+ QEL  Var_14    C16   C15  C14  O1    161.19  30.0  2
+ QEL  Var_15    C19   C15  C14  O1    -20.24  30.0  2
+ QEL  Var_16    C14   C13  N1   C10   147.01  30.0  2
+ QEL  Var_17    C24   C13  N1   C10    24.08  30.0  2
+ QEL  Var_18    C14   C13  N1   C11   -83.78  30.0  2
+ QEL  Var_19    C24   C13  N1   C11   153.29  30.0  2
+ QEL  Var_20    C16   C15  C14  C13   -76.29  30.0  2
+ QEL  Var_21    C19   C15  C14  C13   102.27  30.0  2
+ QEL  Var_22    HO2   O2   C18  C2   -179.76  30.0  2
+ QEL  Var_23    H13   C13  N1   C10   -96.55  30.0  2
+ QEL  Var_24    H27   C14  C15  C16    41.32  30.0  3
+ QEL  Var_25    O1    C14  C13  N1    -51.11  30.0  3
+ QEL  Var_26    C24   C13  C14  C15   -50.41  30.0  2
+ QEL  Var_27    H24   C24  C13  N1     60.14  30.0  3
+ QEL  Var_28    H24A  C24  C13  N1    179.76  30.0  3
+ QEL  Var_29    H24B  C24  C13  N1    -61.94  30.0  3
+ QEL  Var_30    H26   O1   C14  C15   160.73  30.0  3
+ QEL  Var_31    C24   C13  C14  O1     73.19  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SWS  SWS  7-(azetidin-1-yl)-~{N}-[4-(2-oxidanylpropan-2-yl)cyclohexyl]-1,6-naphthyridine-3-carboxamide  ligand  55  27  .  2022-07-22  2022-07-22
+ SWS  SWS  7-(azetidin-1-yl)-~{N}-[4-(2-oxidanylpropan-2-yl)cyclohexyl]-1,6-naphthyridine-3-carboxamide  ligand  55  27  .  2022-07-22  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_SWS
@@ -286,41 +287,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SWS  CONST_01  C18  C17  N16  C15  180.00   0.0  0
- SWS  CONST_02  C22  C17  N16  C15    0.00   0.0  0
- SWS  CONST_03  C22  C23  C14  C15    0.00   0.0  0
- SWS  CONST_04  C14  C15  N16  C17    0.00   0.0  0
- SWS  CONST_05  N20  C19  C18  C17    0.00   0.0  0
- SWS  CONST_06  C14  C23  C22  C17    0.00   0.0  0
- SWS  CONST_07  N20  C21  C22  C17    0.00   0.0  0
- SWS  CONST_08  N16  C17  C22  C21  180.00   0.0  0
- SWS  CONST_09  C18  C17  C22  C21    0.00   0.0  0
- SWS  CONST_10  C14  C23  C22  C21  180.00   0.0  0
- SWS  CONST_11  C18  C19  N20  C21    0.00   0.0  0
- SWS  CONST_12  C19  C18  C17  C22    0.00   0.0  0
- SWS  CONST_13  C19  N20  C21  C22    0.00   0.0  0
- SWS  CONST_14  C23  C22  C17  C18  180.00   0.0  0
- SWS  CONST_15  N16  C17  C18  C19  180.00   0.0  0
- SWS  CONST_16  N16  C15  C14  C23    0.00   0.0  0
- SWS  CONST_17  N16  C17  C22  C23    0.00   0.0  0
- SWS  CONST_18  N20  C21  C22  C23  180.00   0.0  0
- SWS  CONST_19  N24  C19  C18  C17  180.00   0.0  0
- SWS  CONST_20  N24  C19  N20  C21  180.00   0.0  0
- SWS  CONST_21  C12  C14  C23  C22  180.00   0.0  0
- SWS  CONST_22  N16  C15  C14  C12  180.00   0.0  0
- SWS  CONST_23  H22  C23  C14  C15  180.00   0.0  0
- SWS  CONST_24  H3   C15  N16  C17  180.00   0.0  0
- SWS  CONST_25  H4   C21  C22  C17  180.00   0.0  0
- SWS  CONST_26  H21  C18  C17  C22  180.00   0.0  0
- SWS  CONST_27  C14  C12  N11  C08  180.00   0.0  0
- SWS  CONST_28  O13  C12  N11  C08    0.00   0.0  0
- SWS  CONST_29  H27  N11  C12  C14    0.00   0.0  0
- SWS  Var_01    C25  N24  C27  C26   -4.69  30.0  1
- SWS  Var_02    C08  C07  C06  C05  -57.46  30.0  1
- SWS  Var_03    C08  C09  C10  C05   56.22  30.0  1
- SWS  Var_04    O13  C12  C14  C15  -28.14  30.0  2
- SWS  Var_05    H7   C01  C02  C05  -64.53  30.0  3
- SWS  Var_06    H10  C03  C02  C05   66.46  30.0  3
+ SWS  CONST_01  C18  C17  N16  C15   180.00   0.0  0
+ SWS  CONST_02  C22  C17  N16  C15     0.00   0.0  0
+ SWS  CONST_03  C22  C23  C14  C15     0.00   0.0  0
+ SWS  CONST_04  C14  C15  N16  C17     0.00   0.0  0
+ SWS  CONST_05  N20  C19  C18  C17     0.00   0.0  0
+ SWS  CONST_06  C14  C23  C22  C17     0.00   0.0  0
+ SWS  CONST_07  N20  C21  C22  C17     0.00   0.0  0
+ SWS  CONST_08  N16  C17  C22  C21   180.00   0.0  0
+ SWS  CONST_09  C18  C17  C22  C21     0.00   0.0  0
+ SWS  CONST_10  C14  C23  C22  C21   180.00   0.0  0
+ SWS  CONST_11  C18  C19  N20  C21     0.00   0.0  0
+ SWS  CONST_12  C19  C18  C17  C22     0.00   0.0  0
+ SWS  CONST_13  C19  N20  C21  C22     0.00   0.0  0
+ SWS  CONST_14  C23  C22  C17  C18   180.00   0.0  0
+ SWS  CONST_15  N16  C17  C18  C19   180.00   0.0  0
+ SWS  CONST_16  N16  C15  C14  C23     0.00   0.0  0
+ SWS  CONST_17  N16  C17  C22  C23     0.00   0.0  0
+ SWS  CONST_18  N20  C21  C22  C23   180.00   0.0  0
+ SWS  CONST_19  N24  C19  C18  C17   180.00   0.0  0
+ SWS  CONST_20  N24  C19  N20  C21   180.00   0.0  0
+ SWS  CONST_21  C12  C14  C23  C22   180.00   0.0  0
+ SWS  CONST_22  N16  C15  C14  C12   180.00   0.0  0
+ SWS  CONST_23  H22  C23  C14  C15   180.00   0.0  0
+ SWS  CONST_24  H3   C15  N16  C17   180.00   0.0  0
+ SWS  CONST_25  H4   C21  C22  C17   180.00   0.0  0
+ SWS  CONST_26  H21  C18  C17  C22   180.00   0.0  0
+ SWS  CONST_27  C14  C12  N11  C08   180.00   0.0  0
+ SWS  CONST_28  O13  C12  N11  C08     0.00   0.0  0
+ SWS  CONST_29  H27  N11  C12  C14     0.00   0.0  0
+ SWS  Var_01    C25  N24  C27  C26    -4.69  30.0  1
+ SWS  Var_02    C08  C07  C06  C05   -57.46  30.0  1
+ SWS  Var_03    C08  C09  C10  C05    56.22  30.0  1
+ SWS  Var_04    O13  C12  C14  C15   -28.14  30.0  2
+ SWS  Var_05    H7   C01  C02  C05   -64.53  30.0  3
+ SWS  Var_06    H10  C03  C02  C05    66.46  30.0  3
+ SWS  Var_07    C07  C06  C05  C10    56.91  30.0  1
+ SWS  Var_08    C07  C08  C09  C10   -54.74  30.0  1
+ SWS  Var_09    C19  N24  C25  C26   162.42  30.0  1
+ SWS  Var_10    C09  C08  C07  C06    55.48  30.0  1
+ SWS  Var_11    C09  C10  C05  C06   -56.38  30.0  1
+ SWS  Var_12    C27  N24  C19  C18   -15.65  30.0  2
+ SWS  Var_13    C25  N24  C19  C18  -165.94  30.0  2
+ SWS  Var_14    N20  C19  N24  C25    14.81  30.0  2
+ SWS  Var_15    N20  C19  N24  C27   165.10  30.0  2
+ SWS  Var_16    N11  C08  C09  C10  -178.44  30.0  1
+ SWS  Var_17    C07  C06  C05  C02  -175.11  30.0  1
+ SWS  Var_18    C09  C10  C05  C02   175.90  30.0  1
+ SWS  Var_19    N11  C08  C07  C06   177.62  30.0  1
+ SWS  Var_20    H14  C06  C05  C10   -63.85  30.0  1
+ SWS  Var_21    H15  C06  C05  C10   178.72  30.0  1
+ SWS  Var_22    H18  C08  C09  C10    64.46  30.0  1
+ SWS  Var_23    H1   C10  C05  C06    64.67  30.0  1
+ SWS  Var_24    H2   C10  C05  C06  -178.03  30.0  1
+ SWS  Var_25    H13  C05  C06  C07   -58.53  30.0  1
+ SWS  Var_26    H23  C25  N24  C19    46.03  30.0  1
+ SWS  Var_27    H24  C25  N24  C19   -79.64  30.0  1
+ SWS  Var_28    H5   C26  C27  N24   121.24  30.0  1
+ SWS  Var_29    H6   C26  C27  N24  -111.48  30.0  1
+ SWS  Var_30    O04  C02  C05  C10   179.09  30.0  3
+ SWS  Var_31    C01  C02  C05  C10    62.07  30.0  3
+ SWS  Var_32    C03  C02  C05  C10   -61.14  30.0  3
+ SWS  Var_33    C06  C05  C02  C01   -63.46  30.0  3
+ SWS  Var_34    C06  C05  C02  C03   173.33  30.0  3
+ SWS  Var_35    O04  C02  C05  C06    53.56  30.0  3
+ SWS  Var_36    C12  N11  C08  C07    82.98  30.0  1
+ SWS  Var_37    C12  N11  C08  C09  -154.23  30.0  1
+ SWS  Var_38    H27  N11  C08  C07   -84.57  30.0  1
+ SWS  Var_39    H28  O04  C02  C05    58.26  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

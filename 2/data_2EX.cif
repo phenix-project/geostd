@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2EX  2EX  (4R,4a'S,10a'S)-2-amino-8'-(2-fluoropyridin-3-yl)-1-methyl-3',4',4a',10a'-tetrahydro-1'H-spiro[imidazole-4,10'-pyrano[4,3-b]chromen]-5(1H)-one  ligand  47  28  .  2021-08-04  2021-08-04  
+ 2EX  2EX  (4R,4a'S,10a'S)-2-amino-8'-(2-fluoropyridin-3-yl)-1-methyl-3',4',4a',10a'-tetrahydro-1'H-spiro[imidazole-4,10'-pyrano[4,3-b]chromen]-5(1H)-one  ligand  47  28  .  2021-08-04  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_2EX
@@ -254,45 +255,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2EX  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- 2EX  CONST_02  C9   C8   C7   C1   180.00   0.0  0
- 2EX  CONST_03  C11  C12  C7   C1   180.00   0.0  0
- 2EX  CONST_04  C4   N5   C6   C1     0.00   0.0  0
- 2EX  CONST_05  N5   C4   C3   C2     0.00   0.0  0
- 2EX  CONST_08  N5   C6   C1   C2     0.00   0.0  0
- 2EX  CONST_09  C7   C1   C2   C3   180.00   0.0  0
- 2EX  CONST_10  C6   C1   C2   C3     0.00   0.0  0
- 2EX  CONST_11  C6   N5   C4   C3     0.00   0.0  0
- 2EX  CONST_12  C7   C1   C6   N5   180.00   0.0  0
- 2EX  CONST_15  C10  C9   C8   C7     0.00   0.0  0
- 2EX  CONST_16  C10  C11  C12  C7     0.00   0.0  0
- 2EX  CONST_17  C11  C10  C9   C8     0.00   0.0  0
- 2EX  CONST_18  C11  C12  C7   C8     0.00   0.0  0
- 2EX  CONST_19  C12  C11  C10  C9     0.00   0.0  0
- 2EX  CONST_20  C12  C7   C8   C9     0.00   0.0  0
- 2EX  CONST_21  C22  N23  C24  C16    0.00   0.0  0
- 2EX  CONST_22  N23  C22  N21  C16    0.00   0.0  0
- 2EX  CONST_23  C24  N23  C22  N21    0.00   0.0  0
- 2EX  CONST_24  F28  C6   C1   C2   180.00   0.0  0
- 2EX  CONST_25  F28  C6   N5   C4   180.00   0.0  0
- 2EX  CONST_26  F28  C6   C1   C7     0.00   0.0  0
- 2EX  CONST_27  C27  N23  C24  C16  180.00   0.0  0
- 2EX  CONST_28  N26  C22  N21  C16  180.00   0.0  0
- 2EX  CONST_29  C27  N23  C22  N21  180.00   0.0  0
- 2EX  CONST_30  O25  C24  N23  C22  180.00   0.0  0
- 2EX  CONST_31  N26  C22  N23  C24  180.00   0.0  0
- 2EX  CONST_32  H2   C3   C2   C1   180.00   0.0  0
- 2EX  CONST_33  H4   C8   C7   C1     0.00   0.0  0
- 2EX  CONST_34  H6   C12  C7   C1     0.00   0.0  0
- 2EX  CONST_35  H3   C4   C3   C2   180.00   0.0  0
- 2EX  CONST_36  H1   C2   C3   C4   180.00   0.0  0
- 2EX  CONST_37  H5   C9   C8   C7   180.00   0.0  0
- 2EX  CONST_38  C27  N23  C24  O25    0.00   0.0  0
- 2EX  CONST_39  C27  N23  C22  N26    0.00   0.0  0
- 2EX  CONST_40  H15  N26  C22  N21    0.00   0.0  0
- 2EX  Var_01    O19  C18  C17  C14  -56.53  30.0  1
- 2EX  Var_02    H13  C20  O19  C18  179.03  30.0  1
- 2EX  Var_03    H17  C27  N23  C22  -55.58  30.0  3
+ 2EX  CONST_01  C4   C3   C2   C1      0.00   0.0  0
+ 2EX  CONST_02  C9   C8   C7   C1    180.00   0.0  0
+ 2EX  CONST_03  C11  C12  C7   C1    180.00   0.0  0
+ 2EX  CONST_04  C4   N5   C6   C1      0.00   0.0  0
+ 2EX  CONST_05  N5   C4   C3   C2      0.00   0.0  0
+ 2EX  CONST_06  N5   C6   C1   C2      0.00   0.0  0
+ 2EX  CONST_07  C7   C1   C2   C3    180.00   0.0  0
+ 2EX  CONST_08  C6   C1   C2   C3      0.00   0.0  0
+ 2EX  CONST_09  C6   N5   C4   C3      0.00   0.0  0
+ 2EX  CONST_10  C7   C1   C6   N5    180.00   0.0  0
+ 2EX  CONST_11  C10  C9   C8   C7      0.00   0.0  0
+ 2EX  CONST_12  C10  C11  C12  C7      0.00   0.0  0
+ 2EX  CONST_13  C11  C10  C9   C8      0.00   0.0  0
+ 2EX  CONST_14  C11  C12  C7   C8      0.00   0.0  0
+ 2EX  CONST_15  C12  C11  C10  C9      0.00   0.0  0
+ 2EX  CONST_16  C12  C7   C8   C9      0.00   0.0  0
+ 2EX  CONST_17  C22  N23  C24  C16     0.00   0.0  0
+ 2EX  CONST_18  N23  C22  N21  C16     0.00   0.0  0
+ 2EX  CONST_19  C24  N23  C22  N21     0.00   0.0  0
+ 2EX  CONST_20  F28  C6   C1   C2    180.00   0.0  0
+ 2EX  CONST_21  F28  C6   N5   C4    180.00   0.0  0
+ 2EX  CONST_22  F28  C6   C1   C7      0.00   0.0  0
+ 2EX  CONST_23  C27  N23  C24  C16   180.00   0.0  0
+ 2EX  CONST_24  N26  C22  N21  C16   180.00   0.0  0
+ 2EX  CONST_25  C27  N23  C22  N21   180.00   0.0  0
+ 2EX  CONST_26  O25  C24  N23  C22   180.00   0.0  0
+ 2EX  CONST_27  N26  C22  N23  C24   180.00   0.0  0
+ 2EX  CONST_28  H2   C3   C2   C1    180.00   0.0  0
+ 2EX  CONST_29  H4   C8   C7   C1      0.00   0.0  0
+ 2EX  CONST_30  H6   C12  C7   C1      0.00   0.0  0
+ 2EX  CONST_31  H3   C4   C3   C2    180.00   0.0  0
+ 2EX  CONST_32  H1   C2   C3   C4    180.00   0.0  0
+ 2EX  CONST_33  H5   C9   C8   C7    180.00   0.0  0
+ 2EX  CONST_34  C27  N23  C24  O25     0.00   0.0  0
+ 2EX  CONST_35  C27  N23  C22  N26     0.00   0.0  0
+ 2EX  CONST_36  H15  N26  C22  N21     0.00   0.0  0
+ 2EX  Var_01    O19  C18  C17  C14   -56.53  30.0  1
+ 2EX  Var_02    H13  C20  O19  C18   179.03  30.0  1
+ 2EX  Var_03    H17  C27  N23  C22   -55.58  30.0  3
+ 2EX  CONST_37  N23  C24  C16  N21     0.00   0.0  0
+ 2EX  CONST_38  C24  C16  N21  C22     0.00   0.0  0
+ 2EX  Var_04    C8   C7   C1   C2    -44.82  30.0  3
+ 2EX  Var_05    C12  C7   C1   C2    132.97  30.0  3
+ 2EX  Var_06    C8   C7   C1   C6    133.96  30.0  3
+ 2EX  Var_07    C12  C7   C1   C6    -48.25  30.0  3
+ 2EX  Var_08    C14  O13  C10  C9   -169.48  30.0  1
+ 2EX  Var_09    C17  C14  O13  C10  -161.22  30.0  1
+ 2EX  Var_10    C15  C14  O13  C10   -40.10  30.0  1
+ 2EX  Var_11    C24  C16  C11  C10  -103.45  30.0  1
+ 2EX  Var_12    C15  C16  C11  C10    18.84  30.0  1
+ 2EX  Var_13    N21  C16  C11  C10   141.26  30.0  1
+ 2EX  Var_14    C14  O13  C10  C11    11.89  30.0  1
+ 2EX  Var_15    N23  C24  C16  C11  -121.37  30.0  3
+ 2EX  Var_16    C14  C15  C16  C11   -45.72  30.0  1
+ 2EX  Var_17    C20  C15  C16  C11  -169.78  30.0  1
+ 2EX  Var_18    C22  N21  C16  C11   118.97  30.0  3
+ 2EX  Var_19    C24  C16  C11  C12    76.73  30.0  1
+ 2EX  Var_20    C15  C16  C11  C12  -160.97  30.0  1
+ 2EX  Var_21    N21  C16  C11  C12   -38.55  30.0  1
+ 2EX  Var_22    C18  C17  C14  O13   176.49  30.0  1
+ 2EX  Var_23    C20  C15  C14  O13  -175.16  30.0  1
+ 2EX  Var_24    C16  C15  C14  O13    58.15  30.0  1
+ 2EX  Var_25    O19  C20  C15  C14    57.53  30.0  1
+ 2EX  Var_26    C24  C16  C15  C14    74.23  30.0  1
+ 2EX  Var_27    N21  C16  C15  C14  -169.16  30.0  1
+ 2EX  Var_28    C18  C17  C14  C15    54.22  30.0  1
+ 2EX  Var_29    N23  C24  C16  C15   118.53  30.0  3
+ 2EX  Var_30    C22  N21  C16  C15  -119.61  30.0  3
+ 2EX  Var_31    C17  C14  C15  C16   178.52  30.0  1
+ 2EX  Var_32    O19  C20  C15  C16  -177.12  30.0  1
+ 2EX  Var_33    C20  O19  C18  C17    60.32  30.0  1
+ 2EX  Var_34    C20  C15  C14  C17   -54.80  30.0  1
+ 2EX  Var_35    C24  C16  C15  C20   -49.83  30.0  1
+ 2EX  Var_36    N21  C16  C15  C20    66.78  30.0  1
+ 2EX  Var_37    O25  C24  C16  C11    58.14  30.0  3
+ 2EX  Var_38    O25  C24  C16  C15   -61.97  30.0  3
+ 2EX  Var_39    H7   C14  O13  C10    80.71  30.0  1
+ 2EX  Var_40    H8   C15  C16  C11    71.98  30.0  1
+ 2EX  Var_41    H9   C17  C14  O13   -63.14  30.0  1
+ 2EX  Var_42    H10  C17  C14  O13    55.88  30.0  1
+ 2EX  Var_43    H14  C20  C15  C14   -64.84  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

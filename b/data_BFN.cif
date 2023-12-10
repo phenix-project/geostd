@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BFN  BFN  '5-(acetylamino)-9-(benzoylamino)-3,5,9-trideoxy-3-fluoro-D-erythro-alpha-L-manno-non-2-ulopyranosonic acid'  D-saccharide  52  30  .  2023-02-15  2023-02-15
+ BFN  BFN  '5-(acetylamino)-9-(benzoylamino)-3,5,9-trideoxy-3-fluoro-D-erythro-alpha-L-manno-non-2-ulopyranosonic acid'  D-saccharide  52  30  .  2023-02-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BFN
@@ -262,28 +263,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BFN  CONST_01  C16  C17  C18  C13    0.00   0.0  0
- BFN  CONST_02  C16  C15  C14  C13    0.00   0.0  0
- BFN  CONST_03  C17  C18  C13  C14    0.00   0.0  0
- BFN  CONST_04  C17  C16  C15  C14    0.00   0.0  0
- BFN  CONST_05  C18  C13  C14  C15    0.00   0.0  0
- BFN  CONST_06  C18  C17  C16  C15    0.00   0.0  0
- BFN  CONST_07  C17  C18  C13  C12  180.00   0.0  0
- BFN  CONST_08  C15  C14  C13  C12  180.00   0.0  0
- BFN  CONST_09  H17  C17  C18  C13  180.00   0.0  0
- BFN  CONST_10  H15  C15  C14  C13  180.00   0.0  0
- BFN  CONST_11  H18  C18  C13  C14  180.00   0.0  0
- BFN  CONST_12  H16  C16  C15  C14  180.00   0.0  0
- BFN  CONST_13  H14  C14  C15  C16  180.00   0.0  0
- BFN  CONST_14  O10  C10  N5   C5     0.00   0.0  0
- BFN  CONST_15  C11  C10  N5   C5   180.00   0.0  0
- BFN  CONST_16  C13  C12  N9   C9   180.00   0.0  0
- BFN  CONST_17  HN9  N9   C12  C13    0.00   0.0  0
- BFN  CONST_18  O12  C12  N9   C9     0.00   0.0  0
- BFN  CONST_19  HN5  N5   C10  O10  180.00   0.0  0
- BFN  Var_01    C18  C13  C12  N9    26.95  30.0  2
- BFN  Var_02    C12  N9   C9   C8   142.58  30.0  1
- BFN  Var_03    H11  C11  C10  N5     7.26  30.0  3
+ BFN  CONST_01  C16  C17  C18  C13     0.00   0.0  0
+ BFN  CONST_02  C16  C15  C14  C13     0.00   0.0  0
+ BFN  CONST_03  C17  C18  C13  C14     0.00   0.0  0
+ BFN  CONST_04  C17  C16  C15  C14     0.00   0.0  0
+ BFN  CONST_05  C18  C13  C14  C15     0.00   0.0  0
+ BFN  CONST_06  C18  C17  C16  C15     0.00   0.0  0
+ BFN  CONST_07  C17  C18  C13  C12   180.00   0.0  0
+ BFN  CONST_08  C15  C14  C13  C12   180.00   0.0  0
+ BFN  CONST_09  H17  C17  C18  C13   180.00   0.0  0
+ BFN  CONST_10  H15  C15  C14  C13   180.00   0.0  0
+ BFN  CONST_11  H18  C18  C13  C14   180.00   0.0  0
+ BFN  CONST_12  H16  C16  C15  C14   180.00   0.0  0
+ BFN  CONST_13  H14  C14  C15  C16   180.00   0.0  0
+ BFN  CONST_14  O10  C10  N5   C5      0.00   0.0  0
+ BFN  CONST_15  C11  C10  N5   C5    180.00   0.0  0
+ BFN  CONST_16  C13  C12  N9   C9    180.00   0.0  0
+ BFN  CONST_17  HN9  N9   C12  C13     0.00   0.0  0
+ BFN  CONST_18  O12  C12  N9   C9      0.00   0.0  0
+ BFN  CONST_19  HN5  N5   C10  O10   180.00   0.0  0
+ BFN  Var_01    C18  C13  C12  N9     26.95  30.0  2
+ BFN  Var_02    C12  N9   C9   C8    142.58  30.0  1
+ BFN  Var_03    H11  C11  C10  N5      7.26  30.0  3
+ BFN  Var_04    C5   C4   C3   C2     53.85  30.0  1
+ BFN  Var_05    C5   C6   O6   C2    -56.48  30.0  1
+ BFN  Var_06    C6   O6   C2   C3     55.90  30.0  1
+ BFN  Var_07    C6   C5   C4   C3    -52.51  30.0  1
+ BFN  Var_08    O6   C2   C3   C4    -53.30  30.0  1
+ BFN  Var_09    O6   C6   C5   C4     52.39  30.0  1
+ BFN  Var_10    C4   C3   C2   O2     67.09  30.0  1
+ BFN  Var_11    C6   O6   C2   O2    -60.58  30.0  1
+ BFN  Var_12    C4   C3   C2   C1   -172.24  30.0  1
+ BFN  Var_13    C6   O6   C2   C1    176.11  30.0  1
+ BFN  Var_14    O6   C2   C3   F1     65.85  30.0  1
+ BFN  Var_15    C5   C4   C3   F1    -64.52  30.0  1
+ BFN  Var_16    O4   C4   C3   C2    174.70  30.0  1
+ BFN  Var_17    C7   C6   O6   C2   -178.08  30.0  1
+ BFN  Var_18    N5   C5   C4   C3   -173.67  30.0  1
+ BFN  Var_19    C7   C6   C5   C4    169.71  30.0  1
+ BFN  Var_20    C6   C5   C4   O4   -175.57  30.0  1
+ BFN  Var_21    O6   C6   C5   N5    174.08  30.0  1
+ BFN  Var_22    H4   C4   C3   C2    -63.46  30.0  1
+ BFN  Var_23    H6   C6   O6   C2     64.21  30.0  1
+ BFN  Var_24    H5   C5   C4   C3     67.77  30.0  1
+ BFN  Var_25    H3   C3   C4   C5    177.12  30.0  1
+ BFN  Var_26    F1   C3   C2   O2   -173.75  30.0  1
+ BFN  Var_27    F1   C3   C2   C1    -53.08  30.0  1
+ BFN  Var_28    O4   C4   C3   F1     56.33  30.0  1
+ BFN  Var_29    O1B  C1   C2   C3    120.77  30.0  2
+ BFN  Var_30    O1A  C1   C2   C3    -59.85  30.0  2
+ BFN  Var_31    C10  N5   C5   C4   -111.43  30.0  3
+ BFN  Var_32    N5   C5   C4   O4     63.27  30.0  1
+ BFN  Var_33    O7   C7   C6   C5    -68.40  30.0  3
+ BFN  Var_34    C8   C7   C6   C5    166.65  30.0  3
+ BFN  Var_35    C7   C6   C5   N5    -68.60  30.0  1
+ BFN  Var_36    C10  N5   C5   C6    127.43  30.0  3
+ BFN  Var_37    O1B  C1   C2   O6      0.77  30.0  2
+ BFN  Var_38    O1A  C1   C2   O6   -179.85  30.0  2
+ BFN  Var_39    O7   C7   C6   O6     52.75  30.0  3
+ BFN  Var_40    C8   C7   C6   O6    -72.20  30.0  3
+ BFN  Var_41    HO2  O2   C2   C3    166.49  30.0  3
+ BFN  Var_42    HO4  O4   C4   C3     78.55  30.0  3
+ BFN  Var_43    HN5  N5   C5   C4     62.18  30.0  3
+ BFN  Var_44    H7   C7   C6   C5     48.15  30.0  3
+ BFN  Var_45    O1B  C1   C2   O2   -122.49  30.0  2
+ BFN  Var_46    O1A  C1   C2   O2     56.89  30.0  2
+ BFN  Var_47    C9   C8   C7   C6    175.10  30.0  3
+ BFN  Var_48    O8   C8   C7   C6    -60.78  30.0  3
+ BFN  Var_49    HO7  O7   C7   C6    -50.08  30.0  3
+ BFN  Var_50    H8   C8   C7   C6     55.40  30.0  3
+ BFN  Var_51    N9   C9   C8   C7    177.83  30.0  3
+ BFN  Var_52    C9   C8   C7   O7     50.63  30.0  3
+ BFN  Var_53    O8   C8   C7   O7    174.75  30.0  3
+ BFN  Var_54    N9   C9   C8   O8     53.76  30.0  3
+ BFN  Var_55    H9   C9   C8   C7    -62.04  30.0  3
+ BFN  Var_56    H9A  C9   C8   C7     55.91  30.0  3
+ BFN  Var_57    HO8  O8   C8   C7    -59.90  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

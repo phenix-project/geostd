@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RHN  RHN  '4,5-dihydroxy-9,10-dioxo-9,10-dihydroanthracene-2-carboxylic acid'  ligand  28  21  .  2021-08-23  2021-08-23  
+ RHN  RHN  '4,5-dihydroxy-9,10-dioxo-9,10-dihydroanthracene-2-carboxylic acid'  ligand  28  21  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RHN
@@ -170,32 +171,50 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RHN  CONST_01  CAT  CAN  CAH  CAG     0.00   0.0  0
- RHN  CONST_02  CAT  CAR  CAI  CAG     0.00   0.0  0
- RHN  CONST_03  CAR  CAI  CAG  CAH     0.00   0.0  0
- RHN  CONST_04  CAR  CAT  CAN  CAH     0.00   0.0  0
- RHN  CONST_05  CAN  CAH  CAG  CAI     0.00   0.0  0
- RHN  CONST_06  CAN  CAT  CAR  CAI     0.00   0.0  0
- RHN  CONST_07  CAS  CAU  CAO  CAJ     0.00   0.0  0
- RHN  CONST_08  CAS  CAK  CAM  CAJ     0.00   0.0  0
- RHN  CONST_09  CAO  CAU  CAS  CAK     0.00   0.0  0
- RHN  CONST_10  CAO  CAJ  CAM  CAK     0.00   0.0  0
- RHN  CONST_11  CAU  CAO  CAJ  CAM     0.00   0.0  0
- RHN  CONST_12  CAU  CAS  CAK  CAM     0.00   0.0  0
- RHN  CONST_13  CAG  CAH  CAN  OAE   180.00   0.0  0
- RHN  CONST_14  CAQ  CAT  CAN  OAE     0.00   0.0  0
- RHN  CONST_15  CAR  CAT  CAN  OAE   180.00   0.0  0
- RHN  CONST_16  CAM  CAJ  CAO  OAF   180.00   0.0  0
- RHN  CONST_17  CAQ  CAU  CAO  OAF     0.00   0.0  0
- RHN  CONST_18  CAS  CAU  CAO  OAF   180.00   0.0  0
- RHN  CONST_19  CAO  CAJ  CAM  CAL   180.00   0.0  0
- RHN  CONST_20  CAS  CAK  CAM  CAL   180.00   0.0  0
- RHN  CONST_21  HAI  CAI  CAG  CAH   180.00   0.0  0
- RHN  CONST_22  HAH  CAH  CAG  CAI   180.00   0.0  0
- RHN  CONST_23  HAK  CAK  CAM  CAJ   180.00   0.0  0
- RHN  CONST_24  HAJ  CAJ  CAM  CAK   180.00   0.0  0
- RHN  CONST_25  HAG  CAG  CAH  CAN   180.00   0.0  0
- RHN  Var_01    CAJ  CAM  CAL  OAA  -179.69  30.0  2
+ RHN  CONST_01  CAT   CAN  CAH  CAG     0.00   0.0  0
+ RHN  CONST_02  CAT   CAR  CAI  CAG     0.00   0.0  0
+ RHN  CONST_03  CAR   CAI  CAG  CAH     0.00   0.0  0
+ RHN  CONST_04  CAR   CAT  CAN  CAH     0.00   0.0  0
+ RHN  CONST_05  CAN   CAH  CAG  CAI     0.00   0.0  0
+ RHN  CONST_06  CAN   CAT  CAR  CAI     0.00   0.0  0
+ RHN  CONST_07  CAS   CAU  CAO  CAJ     0.00   0.0  0
+ RHN  CONST_08  CAS   CAK  CAM  CAJ     0.00   0.0  0
+ RHN  CONST_09  CAO   CAU  CAS  CAK     0.00   0.0  0
+ RHN  CONST_10  CAO   CAJ  CAM  CAK     0.00   0.0  0
+ RHN  CONST_11  CAU   CAO  CAJ  CAM     0.00   0.0  0
+ RHN  CONST_12  CAU   CAS  CAK  CAM     0.00   0.0  0
+ RHN  CONST_13  CAG   CAH  CAN  OAE   180.00   0.0  0
+ RHN  CONST_14  CAQ   CAT  CAN  OAE     0.00   0.0  0
+ RHN  CONST_15  CAR   CAT  CAN  OAE   180.00   0.0  0
+ RHN  CONST_16  CAM   CAJ  CAO  OAF   180.00   0.0  0
+ RHN  CONST_17  CAQ   CAU  CAO  OAF     0.00   0.0  0
+ RHN  CONST_18  CAS   CAU  CAO  OAF   180.00   0.0  0
+ RHN  CONST_19  CAO   CAJ  CAM  CAL   180.00   0.0  0
+ RHN  CONST_20  CAS   CAK  CAM  CAL   180.00   0.0  0
+ RHN  CONST_21  HAI   CAI  CAG  CAH   180.00   0.0  0
+ RHN  CONST_22  HAH   CAH  CAG  CAI   180.00   0.0  0
+ RHN  CONST_23  HAK   CAK  CAM  CAJ   180.00   0.0  0
+ RHN  CONST_24  HAJ   CAJ  CAM  CAK   180.00   0.0  0
+ RHN  CONST_25  HAG   CAG  CAH  CAN   180.00   0.0  0
+ RHN  Var_01    CAJ   CAM  CAL  OAA  -179.69  30.0  2
+ RHN  CONST_26  CAS   CAP  CAR  CAI   180.00   0.0  0
+ RHN  CONST_27  CAR   CAP  CAS  CAK   180.00   0.0  0
+ RHN  CONST_28  CAU   CAQ  CAT  CAN   180.00   0.0  0
+ RHN  CONST_29  CAT   CAQ  CAU  CAO   180.00   0.0  0
+ RHN  CONST_30  CAU   CAS  CAP  CAR     0.00   0.0  0
+ RHN  CONST_31  CAU   CAQ  CAT  CAR     0.00   0.0  0
+ RHN  CONST_32  CAT   CAR  CAP  CAS     0.00   0.0  0
+ RHN  CONST_33  CAT   CAQ  CAU  CAS     0.00   0.0  0
+ RHN  CONST_34  CAI   CAR  CAP  OAB     0.00   0.0  0
+ RHN  CONST_35  CAT   CAR  CAP  OAB   180.00   0.0  0
+ RHN  CONST_36  CAK   CAS  CAP  OAB     0.00   0.0  0
+ RHN  CONST_37  CAU   CAS  CAP  OAB   180.00   0.0  0
+ RHN  CONST_38  CAN   CAT  CAQ  OAC     0.00   0.0  0
+ RHN  CONST_39  CAR   CAT  CAQ  OAC   180.00   0.0  0
+ RHN  CONST_40  CAO   CAU  CAQ  OAC     0.00   0.0  0
+ RHN  CONST_41  CAS   CAU  CAQ  OAC   180.00   0.0  0
+ RHN  Var_02    HOAE  OAE  CAN  CAH     0.38  30.0  2
+ RHN  Var_03    HOAF  OAF  CAO  CAJ  -179.72  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

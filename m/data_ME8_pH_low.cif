@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ME8  ME8  5'-O-[(S)-{[(2S)-2-amino-4-(methylsulfanyl)butanoyl]oxy}(hydroxy)phosphoryl]adenosine  ligand  54  31  .  2022-11-17  2022-11-17
+ ME8  ME8  5'-O-[(S)-{[(2S)-2-amino-4-(methylsulfanyl)butanoyl]oxy}(hydroxy)phosphoryl]adenosine  ligand  54  31  .  2022-11-17  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_ME8
@@ -272,38 +273,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ME8  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- ME8  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- ME8  CONST_03  N7    C5   C6   N1   180.00   0.0  0
- ME8  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- ME8  CONST_05  C5    C4   N3   C2     0.00   0.0  0
- ME8  CONST_06  N9    C4   N3   C2   180.00   0.0  0
- ME8  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- ME8  CONST_08  C6    C5   C4   N3     0.00   0.0  0
- ME8  CONST_09  N7    C5   C4   N3   180.00   0.0  0
- ME8  CONST_10  C8    N9   C4   N3   180.00   0.0  0
- ME8  CONST_11  C8    N7   C5   C4     0.00   0.0  0
- ME8  CONST_12  N7    C8   N9   C4     0.00   0.0  0
- ME8  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- ME8  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- ME8  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- ME8  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- ME8  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- ME8  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- ME8  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- ME8  CONST_20  C1'   N9   C8   N7   180.00   0.0  0
- ME8  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- ME8  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- ME8  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- ME8  CONST_24  H2    C2   N3   C4   180.00   0.0  0
- ME8  CONST_25  H8    C8   N9   C4   180.00   0.0  0
- ME8  CONST_26  HN6   N6   C6   N1     0.00   0.0  0
- ME8  CONST_27  HN6A  N6   C6   N1   180.00   0.0  0
- ME8  Var_01    C4'   C5'  O5'  P1  -166.84  30.0  3
- ME8  Var_02    CA    C9   O1   P1  -178.99  30.0  3
- ME8  Var_03    O5'   P1   O1   C9    56.80  30.0  3
- ME8  Var_04    SD    CG   CB   CA  -174.04  30.0  1
- ME8  Var_05    HE    CE   SD   CG  -179.86  30.0  3
+ ME8  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ ME8  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ ME8  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ ME8  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ ME8  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ ME8  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ ME8  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ ME8  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ ME8  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ ME8  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ ME8  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ ME8  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ ME8  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ ME8  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ ME8  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ ME8  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ ME8  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ ME8  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ ME8  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ ME8  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ ME8  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ ME8  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ ME8  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ ME8  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ ME8  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ ME8  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ ME8  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ ME8  Var_01    C4'   C5'  O5'  P1   -166.84  30.0  3
+ ME8  Var_02    CA    C9   O1   P1   -178.99  30.0  3
+ ME8  Var_03    O5'   P1   O1   C9     56.80  30.0  3
+ ME8  Var_04    SD    CG   CB   CA   -174.04  30.0  1
+ ME8  Var_05    HE    CE   SD   CG   -179.86  30.0  3
+ ME8  Var_06    C2'   C1'  N9   C4     69.75  30.0  2
+ ME8  Var_07    O4'   C1'  N9   C4   -172.55  30.0  2
+ ME8  Var_08    C2'   C1'  N9   C8   -113.76  30.0  2
+ ME8  Var_09    O4'   C1'  N9   C8      3.94  30.0  2
+ ME8  Var_10    C3'   C2'  C1'  N9     88.85  30.0  1
+ ME8  Var_11    C4'   O4'  C1'  N9   -109.21  30.0  1
+ ME8  Var_12    C4'   C3'  C2'  C1'    36.42  30.0  1
+ ME8  Var_13    C3'   C4'  O4'  C1'    12.95  30.0  1
+ ME8  Var_14    C4'   O4'  C1'  C2'    11.30  30.0  1
+ ME8  Var_15    O4'   C4'  C3'  C2'   -31.23  30.0  1
+ ME8  Var_16    O4'   C1'  C2'  C3'   -30.34  30.0  1
+ ME8  Var_17    O2'   C2'  C1'  N9   -154.83  30.0  1
+ ME8  Var_18    O3'   C3'  C2'  C1'   154.83  30.0  1
+ ME8  Var_19    C5'   C4'  O4'  C1'   134.64  30.0  1
+ ME8  Var_20    C5'   C4'  C3'  C2'  -152.09  30.0  1
+ ME8  Var_21    O4'   C1'  C2'  O2'    85.98  30.0  1
+ ME8  Var_22    C4'   C3'  C2'  O2'   -77.11  30.0  1
+ ME8  Var_23    O4'   C4'  C3'  O3'  -152.21  30.0  1
+ ME8  Var_24    H1'   C1'  N9   C4    -52.94  30.0  2
+ ME8  Var_25    H2'   C2'  C1'  N9    -31.40  30.0  1
+ ME8  Var_26    H3'   C3'  C2'  C1'   -79.86  30.0  1
+ ME8  Var_27    H4'   C4'  O4'  C1'  -104.77  30.0  1
+ ME8  Var_28    O3'   C3'  C2'  O2'    41.30  30.0  1
+ ME8  Var_29    O5'   C5'  C4'  C3'  -174.75  30.0  1
+ ME8  Var_30    C5'   C4'  C3'  O3'    86.93  30.0  1
+ ME8  Var_31    O5'   C5'  C4'  O4'    67.65  30.0  1
+ ME8  Var_32    HO2'  O2'  C2'  C1'  -154.02  30.0  3
+ ME8  Var_33    HO3'  O3'  C3'  C2'    91.33  30.0  3
+ ME8  Var_34    H5'   C5'  C4'  C3'   -55.26  30.0  1
+ ME8  Var_35    H5'A  C5'  C4'  C3'    63.87  30.0  1
+ ME8  Var_36    N2    CA   C9   O     147.81  30.0  1
+ ME8  Var_37    CB    CA   C9   O     -90.73  30.0  1
+ ME8  Var_38    C5'   O5'  P1   O1   -115.09  30.0  3
+ ME8  Var_39    N2    CA   C9   O1    -34.47  30.0  1
+ ME8  Var_40    CB    CA   C9   O1     87.00  30.0  1
+ ME8  Var_41    CG    CB   CA   N2    -65.24  30.0  3
+ ME8  Var_42    CG    CB   CA   C9    172.99  30.0  3
+ ME8  Var_43    CE    SD   CG   CB   -179.13  30.0  3
+ ME8  Var_44    C5'   O5'  P1   O1S   127.10  30.0  3
+ ME8  Var_45    C5'   O5'  P1   O2S    -4.11  30.0  3
+ ME8  Var_46    HA    CA   C9   O      23.72  30.0  1
+ ME8  Var_47    HO2S  O2S  P1   O1   -101.05  30.0  3
+ ME8  Var_48    HB    CB   CA   N2     57.17  30.0  3
+ ME8  Var_49    HBA   CB   CA   N2    174.44  30.0  3
+ ME8  Var_50    HN2   N2   CA   C9   -178.71  30.0  3
+ ME8  Var_51    HN2A  N2   CA   C9    -63.77  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

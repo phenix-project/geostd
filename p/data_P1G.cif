@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- P1G  P1G  2',3'-O-[(1R)-2-phosphonoethylidene]guanosine  ligand  40  26  .  2022-03-23  2022-03-23
+ P1G  P1G  2',3'-O-[(1R)-2-phosphonoethylidene]guanosine  ligand  40  26  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_P1G
@@ -226,36 +227,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- P1G  CONST_01  C5    N7   C8  N9     0.00   0.0  0
- P1G  CONST_02  N7    C5   C4  N9     0.00   0.0  0
- P1G  CONST_03  C6    C5   C4  N9   180.00   0.0  0
- P1G  CONST_04  C2    N3   C4  N9   180.00   0.0  0
- P1G  CONST_05  C5    C4   N9  C8     0.00   0.0  0
- P1G  CONST_06  N3    C4   N9  C8   180.00   0.0  0
- P1G  CONST_07  C4    C5   N7  C8     0.00   0.0  0
- P1G  CONST_08  C6    C5   N7  C8   180.00   0.0  0
- P1G  CONST_09  C4    N9   C8  N7     0.00   0.0  0
- P1G  CONST_10  N3    C4   C5  N7   180.00   0.0  0
- P1G  CONST_11  N1    C6   C5  N7   180.00   0.0  0
- P1G  CONST_12  C2    N3   C4  C5     0.00   0.0  0
- P1G  CONST_13  C2    N1   C6  C5     0.00   0.0  0
- P1G  CONST_14  N1    C6   C5  C4     0.00   0.0  0
- P1G  CONST_15  N1    C2   N3  C4     0.00   0.0  0
- P1G  CONST_16  C6    C5   C4  N3     0.00   0.0  0
- P1G  CONST_17  C6    N1   C2  N3     0.00   0.0  0
- P1G  CONST_18  N7    C8   N9  C1'  180.00   0.0  0
- P1G  CONST_19  C5    C4   N9  C1'  180.00   0.0  0
- P1G  CONST_20  N3    C4   N9  C1'    0.00   0.0  0
- P1G  CONST_21  O6    C6   C5  N7     0.00   0.0  0
- P1G  CONST_22  O6    C6   C5  C4   180.00   0.0  0
- P1G  CONST_23  N2    C2   N3  C4   180.00   0.0  0
- P1G  CONST_24  O6    C6   N1  C2   180.00   0.0  0
- P1G  CONST_25  C6    N1   C2  N2   180.00   0.0  0
- P1G  CONST_26  H8    C8   N9  C1'    0.00   0.0  0
- P1G  CONST_27  HN1   N1   C6  C5   180.00   0.0  0
- P1G  CONST_28  HN21  N2   C2  N3     0.00   0.0  0
- P1G  CONST_29  HN22  N2   C2  N3   180.00   0.0  0
- P1G  Var_01    C1    C1P  P   O3   -67.29  30.0  3
+ P1G  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ P1G  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ P1G  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ P1G  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ P1G  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ P1G  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ P1G  CONST_07  C4    C5   N7   C8      0.00   0.0  0
+ P1G  CONST_08  C6    C5   N7   C8    180.00   0.0  0
+ P1G  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ P1G  CONST_10  N3    C4   C5   N7    180.00   0.0  0
+ P1G  CONST_11  N1    C6   C5   N7    180.00   0.0  0
+ P1G  CONST_12  C2    N3   C4   C5      0.00   0.0  0
+ P1G  CONST_13  C2    N1   C6   C5      0.00   0.0  0
+ P1G  CONST_14  N1    C6   C5   C4      0.00   0.0  0
+ P1G  CONST_15  N1    C2   N3   C4      0.00   0.0  0
+ P1G  CONST_16  C6    C5   C4   N3      0.00   0.0  0
+ P1G  CONST_17  C6    N1   C2   N3      0.00   0.0  0
+ P1G  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ P1G  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ P1G  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ P1G  CONST_21  O6    C6   C5   N7      0.00   0.0  0
+ P1G  CONST_22  O6    C6   C5   C4    180.00   0.0  0
+ P1G  CONST_23  N2    C2   N3   C4    180.00   0.0  0
+ P1G  CONST_24  O6    C6   N1   C2    180.00   0.0  0
+ P1G  CONST_25  C6    N1   C2   N2    180.00   0.0  0
+ P1G  CONST_26  H8    C8   N9   C1'     0.00   0.0  0
+ P1G  CONST_27  HN1   N1   C6   C5    180.00   0.0  0
+ P1G  CONST_28  HN21  N2   C2   N3      0.00   0.0  0
+ P1G  CONST_29  HN22  N2   C2   N3    180.00   0.0  0
+ P1G  Var_01    C1    C1P  P    O3    -67.29  30.0  3
+ P1G  Var_02    C2'   C3'  O3'  C1     -2.62  30.0  1
+ P1G  Var_03    C4'   C3'  O3'  C1    111.54  30.0  1
+ P1G  Var_04    C3'   C2'  O2'  C1     -4.83  30.0  1
+ P1G  Var_05    C1'   C2'  O2'  C1   -117.99  30.0  1
+ P1G  Var_06    C2'   O2'  C1   O3'     3.36  30.0  1
+ P1G  Var_07    O2'   C2'  C3'  O3'     4.50  30.0  1
+ P1G  Var_08    C1'   C2'  C3'  O3'   123.35  30.0  1
+ P1G  Var_09    O4'   C4'  C3'  O3'  -136.18  30.0  1
+ P1G  Var_10    C3'   O3'  C1   O2'    -0.23  30.0  1
+ P1G  Var_11    C4'   C3'  C2'  O2'  -115.97  30.0  1
+ P1G  Var_12    O4'   C1'  C2'  O2'   130.80  30.0  1
+ P1G  Var_13    N9    C1'  C2'  O2'  -111.96  30.0  1
+ P1G  Var_14    O4'   C4'  C3'  C2'   -21.57  30.0  1
+ P1G  Var_15    C4'   O4'  C1'  C2'   -32.48  30.0  1
+ P1G  Var_16    C8    N9   C1'  C2'   -63.73  30.0  2
+ P1G  Var_17    C4    N9   C1'  C2'   116.99  30.0  2
+ P1G  Var_18    O4'   C1'  C2'  C3'    17.04  30.0  1
+ P1G  Var_19    N9    C1'  C2'  C3'   134.28  30.0  1
+ P1G  Var_20    C1'   O4'  C4'  C3'    34.25  30.0  1
+ P1G  Var_21    C1'   C2'  C3'  C4'     2.89  30.0  1
+ P1G  Var_22    N9    C1'  O4'  C4'  -154.11  30.0  1
+ P1G  Var_23    C8    N9   C1'  O4'    52.91  30.0  2
+ P1G  Var_24    C4    N9   C1'  O4'  -126.37  30.0  2
+ P1G  Var_25    C3'   O3'  C1   C1P  -124.36  30.0  1
+ P1G  Var_26    C2'   O2'  C1   C1P   128.04  30.0  1
+ P1G  Var_27    C5'   C4'  C3'  O3'   105.20  30.0  1
+ P1G  Var_28    C5'   C4'  C3'  C2'  -140.20  30.0  1
+ P1G  Var_29    C1'   O4'  C4'  C5'   154.74  30.0  1
+ P1G  Var_30    H3'   C3'  O3'  C1   -123.09  30.0  1
+ P1G  Var_31    H2'   C2'  O2'  C1    116.97  30.0  1
+ P1G  Var_32    H4'   C4'  C3'  O3'   -17.42  30.0  1
+ P1G  Var_33    H1'   C1'  C2'  O2'     9.93  30.0  1
+ P1G  Var_34    H1    C1   O2'  C2'  -111.98  30.0  1
+ P1G  Var_35    O3'   C1   C1P  P      57.17  30.0  3
+ P1G  Var_36    O2'   C1   C1P  P     -64.11  30.0  3
+ P1G  Var_37    O5'   C5'  C4'  C3'  -178.49  30.0  3
+ P1G  Var_38    O4'   C4'  C5'  O5'    65.47  30.0  1
+ P1G  Var_39    H1P1  C1P  C1   O3'  -178.51  30.0  1
+ P1G  Var_40    H1P2  C1P  C1   O3'   -66.98  30.0  1
+ P1G  Var_41    H5'1  C5'  C4'  C3'   -56.84  30.0  3
+ P1G  Var_42    H5'2  C5'  C4'  C3'    58.66  30.0  3
+ P1G  Var_43    H5'   O5'  C5'  C4'   179.59  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

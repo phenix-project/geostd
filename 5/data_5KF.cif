@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5KF  5KF  4,4'-{[(3S)-3-(2-hydroxyethyl)cyclohexylidene]methanediyl}diphenol  ligand  48  24  .  2021-08-04  2021-08-04  
+ 5KF  5KF  4,4'-{[(3S)-3-(2-hydroxyethyl)cyclohexylidene]methanediyl}diphenol  ligand  48  24  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5KF
@@ -250,42 +251,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5KF  CONST_01  C05  C04  C03  C02    0.00   0.0  0
- 5KF  CONST_02  C05  C23  C24  C02    0.00   0.0  0
- 5KF  CONST_03  C23  C24  C02  C03    0.00   0.0  0
- 5KF  CONST_04  C23  C05  C04  C03    0.00   0.0  0
- 5KF  CONST_05  C24  C02  C03  C04    0.00   0.0  0
- 5KF  CONST_06  C24  C23  C05  C04    0.00   0.0  0
- 5KF  CONST_07  C10  C09  C08  C07    0.00   0.0  0
- 5KF  CONST_08  C10  C12  C13  C07    0.00   0.0  0
- 5KF  CONST_09  C12  C10  C09  C08    0.00   0.0  0
- 5KF  CONST_10  C12  C13  C07  C08    0.00   0.0  0
- 5KF  CONST_11  C13  C07  C08  C09    0.00   0.0  0
- 5KF  CONST_12  C13  C12  C10  C09    0.00   0.0  0
- 5KF  CONST_13  C04  C03  C02  O01  180.00   0.0  0
- 5KF  CONST_14  C23  C24  C02  O01  180.00   0.0  0
- 5KF  CONST_15  C06  C05  C04  C03  180.00   0.0  0
- 5KF  CONST_16  C24  C23  C05  C06  180.00   0.0  0
- 5KF  CONST_17  C09  C08  C07  C06  180.00   0.0  0
- 5KF  CONST_18  C12  C13  C07  C06  180.00   0.0  0
- 5KF  CONST_19  O11  C10  C09  C08  180.00   0.0  0
- 5KF  CONST_20  C13  C12  C10  O11  180.00   0.0  0
- 5KF  CONST_21  H3   C04  C03  C02  180.00   0.0  0
- 5KF  CONST_22  H25  C23  C24  C02  180.00   0.0  0
- 5KF  CONST_23  H26  C24  C02  C03  180.00   0.0  0
- 5KF  CONST_24  H2   C03  C04  C05  180.00   0.0  0
- 5KF  CONST_25  H6   C09  C08  C07  180.00   0.0  0
- 5KF  CONST_26  H8   C12  C13  C07  180.00   0.0  0
- 5KF  CONST_27  H9   C13  C07  C08  180.00   0.0  0
- 5KF  CONST_28  H5   C08  C09  C10  180.00   0.0  0
- 5KF  Var_01    C17  C16  C15  C14   54.74  30.0  1
- 5KF  Var_02    C18  C22  C14  C15   56.28  30.0  1
- 5KF  Var_03    C18  C17  C16  C15  -54.27  30.0  1
- 5KF  Var_04    C22  C14  C15  C16  -56.14  30.0  1
- 5KF  Var_05    C07  C06  C05  C04  -54.35  30.0  2
- 5KF  Var_06    C08  C07  C06  C05  126.65  30.0  2
- 5KF  Var_07    C15  C14  C06  C05   -6.86  30.0  2
- 5KF  Var_08    O21  C20  C19  C18  173.69  30.0  1
+ 5KF  CONST_01  C05  C04  C03  C02     0.00   0.0  0
+ 5KF  CONST_02  C05  C23  C24  C02     0.00   0.0  0
+ 5KF  CONST_03  C23  C24  C02  C03     0.00   0.0  0
+ 5KF  CONST_04  C23  C05  C04  C03     0.00   0.0  0
+ 5KF  CONST_05  C24  C02  C03  C04     0.00   0.0  0
+ 5KF  CONST_06  C24  C23  C05  C04     0.00   0.0  0
+ 5KF  CONST_07  C10  C09  C08  C07     0.00   0.0  0
+ 5KF  CONST_08  C10  C12  C13  C07     0.00   0.0  0
+ 5KF  CONST_09  C12  C10  C09  C08     0.00   0.0  0
+ 5KF  CONST_10  C12  C13  C07  C08     0.00   0.0  0
+ 5KF  CONST_11  C13  C07  C08  C09     0.00   0.0  0
+ 5KF  CONST_12  C13  C12  C10  C09     0.00   0.0  0
+ 5KF  CONST_13  C04  C03  C02  O01   180.00   0.0  0
+ 5KF  CONST_14  C23  C24  C02  O01   180.00   0.0  0
+ 5KF  CONST_15  C06  C05  C04  C03   180.00   0.0  0
+ 5KF  CONST_16  C24  C23  C05  C06   180.00   0.0  0
+ 5KF  CONST_17  C09  C08  C07  C06   180.00   0.0  0
+ 5KF  CONST_18  C12  C13  C07  C06   180.00   0.0  0
+ 5KF  CONST_19  O11  C10  C09  C08   180.00   0.0  0
+ 5KF  CONST_20  C13  C12  C10  O11   180.00   0.0  0
+ 5KF  CONST_21  H3   C04  C03  C02   180.00   0.0  0
+ 5KF  CONST_22  H25  C23  C24  C02   180.00   0.0  0
+ 5KF  CONST_23  H26  C24  C02  C03   180.00   0.0  0
+ 5KF  CONST_24  H2   C03  C04  C05   180.00   0.0  0
+ 5KF  CONST_25  H6   C09  C08  C07   180.00   0.0  0
+ 5KF  CONST_26  H8   C12  C13  C07   180.00   0.0  0
+ 5KF  CONST_27  H9   C13  C07  C08   180.00   0.0  0
+ 5KF  CONST_28  H5   C08  C09  C10   180.00   0.0  0
+ 5KF  Var_01    C17  C16  C15  C14    54.74  30.0  1
+ 5KF  Var_02    C18  C22  C14  C15    56.28  30.0  1
+ 5KF  Var_03    C18  C17  C16  C15   -54.27  30.0  1
+ 5KF  Var_04    C22  C14  C15  C16   -56.14  30.0  1
+ 5KF  Var_05    C07  C06  C05  C04   -54.35  30.0  2
+ 5KF  Var_06    C08  C07  C06  C05   126.65  30.0  2
+ 5KF  Var_07    C15  C14  C06  C05    -6.86  30.0  2
+ 5KF  Var_08    O21  C20  C19  C18   173.69  30.0  1
+ 5KF  Var_09    C17  C18  C22  C14   -54.80  30.0  1
+ 5KF  Var_10    C22  C18  C17  C16    54.12  30.0  1
+ 5KF  Var_11    C19  C18  C22  C14   180.00  30.0  1
+ 5KF  Var_12    C19  C18  C17  C16   177.41  30.0  1
+ 5KF  Var_13    H17  C18  C22  C14    62.65  30.0  1
+ 5KF  Var_14    C20  C19  C18  C17    62.22  30.0  3
+ 5KF  Var_15    C22  C18  C19  C20  -173.94  30.0  1
+ 5KF  Var_16    H1   O01  C02  C03    -0.81  30.0  2
+ 5KF  Var_17    H7   O11  C10  C09  -178.59  30.0  2
+ 5KF  Var_18    H18  C19  C18  C17  -176.87  30.0  3
+ 5KF  Var_19    H19  C19  C18  C17   -60.73  30.0  3
+ 5KF  Var_20    H22  O21  C20  C19   178.90  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

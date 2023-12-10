@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GPD  GPD  '(2R,3S,5S,6R)-5-amino-3-hydroxy-6-methyltetrahydro-2H-pyran-2-yl [(2R,3S,4R,5R)-5-(2-amino-6-oxo-1,6-dihydro-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  61  37  .  2021-08-10  2021-08-10  
+ GPD  GPD  '(2R,3S,5S,6R)-5-amino-3-hydroxy-6-methyltetrahydro-2H-pyran-2-yl [(2R,3S,4R,5R)-5-(2-amino-6-oxo-1,6-dihydro-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  61  37  .  2021-08-10  2023-10-18
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-18
 ;
 
 data_comp_GPD
@@ -305,26 +306,92 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GPD  CONST_01  N7   C5   C4   N9      0.00   0.0  0
- GPD  CONST_02  C5   N7   C8   N9      0.00   0.0  0
- GPD  CONST_03  C5   C4   N9   C8      0.00   0.0  0
- GPD  CONST_04  C4   C5   N7   C8      0.00   0.0  0
- GPD  CONST_05  C4   N9   C8   N7      0.00   0.0  0
- GPD  CONST_06  N3   C4   N9   C1'     0.00   0.0  0
- GPD  CONST_07  C5   C4   N9   C1'   180.00   0.0  0
- GPD  CONST_08  N7   C8   N9   C1'   180.00   0.0  0
- GPD  CONST_09  N1   C2   N3   C4      0.00   0.0  0
- GPD  CONST_10  C2   N1   C6   C5      0.00   0.0  0
- GPD  CONST_11  N3   C2   N1   C6      0.00   0.0  0
- GPD  CONST_12  N2   C2   N3   C4    180.00   0.0  0
- GPD  CONST_13  N2   C2   N1   C6    180.00   0.0  0
- GPD  CONST_14  C2   N1   C6   O6    180.00   0.0  0
- GPD  CONST_15  H8   C8   N9   C1'     0.00   0.0  0
- GPD  CONST_16  HN1  N1   C6   C5    180.00   0.0  0
- GPD  CONST_17  HN2  N2   C2   N3      0.00   0.0  0
- GPD  Var_01    OPP  P2   O1G  C1G   141.53  30.0  2
- GPD  Var_02    C4'  C5'  O5'  P    -151.46  30.0  3
- GPD  Var_03    O5'  P    OPP  P2    -96.10  30.0  2
+ GPD  CONST_01  N7    C5   C4   N9      0.00   0.0  0
+ GPD  CONST_02  C5    N7   C8   N9      0.00   0.0  0
+ GPD  CONST_03  C5    C4   N9   C8      0.00   0.0  0
+ GPD  CONST_04  C4    C5   N7   C8      0.00   0.0  0
+ GPD  CONST_05  C4    N9   C8   N7      0.00   0.0  0
+ GPD  CONST_06  N3    C4   N9   C1'     0.00   0.0  0
+ GPD  CONST_07  C5    C4   N9   C1'   180.00   0.0  0
+ GPD  CONST_08  N7    C8   N9   C1'   180.00   0.0  0
+ GPD  CONST_09  N1    C2   N3   C4      0.00   0.0  0
+ GPD  CONST_10  C2    N1   C6   C5      0.00   0.0  0
+ GPD  CONST_11  N3    C2   N1   C6      0.00   0.0  0
+ GPD  CONST_12  N2    C2   N3   C4    180.00   0.0  0
+ GPD  CONST_13  N2    C2   N1   C6    180.00   0.0  0
+ GPD  CONST_14  C2    N1   C6   O6    180.00   0.0  0
+ GPD  CONST_15  H8    C8   N9   C1'     0.00   0.0  0
+ GPD  CONST_16  HN1   N1   C6   C5    180.00   0.0  0
+ GPD  CONST_17  HN2   N2   C2   N3      0.00   0.0  0
+ GPD  Var_01    OPP   P2   O1G  C1G   141.53  30.0  2
+ GPD  Var_02    C4'   C5'  O5'  P    -151.46  30.0  3
+ GPD  Var_03    O5'   P    OPP  P2    -96.10  30.0  2
+ GPD  Var_04    C1G   C2G  C3G  C4G   -51.79  30.0  1
+ GPD  Var_05    C1G   O5G  C5G  C4G    59.07  30.0  1
+ GPD  Var_06    C2G   C3G  C4G  C5G    53.93  30.0  1
+ GPD  Var_07    C2G   C1G  O5G  C5G   -57.04  30.0  1
+ GPD  Var_08    C3G   C4G  C5G  O5G   -55.04  30.0  1
+ GPD  Var_09    C3G   C2G  C1G  O5G    51.49  30.0  1
+ GPD  Var_10    C2'   C1'  O4'  C4'   -11.87  30.0  1
+ GPD  Var_11    N9    C1'  O4'  C4'  -135.03  30.0  1
+ GPD  Var_12    C1'   C2'  C3'  C4'   -38.15  30.0  1
+ GPD  Var_13    C2'   C3'  C4'  O4'    32.59  30.0  1
+ GPD  Var_14    C3'   C2'  C1'  O4'    31.83  30.0  1
+ GPD  Var_15    C4    N9   C1'  O4'  -144.05  30.0  1
+ GPD  Var_16    C8    N9   C1'  O4'    40.71  30.0  1
+ GPD  Var_17    C1'   O4'  C4'  C3'   -13.48  30.0  1
+ GPD  Var_18    N9    C1'  C2'  C3'   152.51  30.0  1
+ GPD  Var_19    C4    N9   C1'  C2'    97.40  30.0  1
+ GPD  Var_20    C8    N9   C1'  C2'   -77.84  30.0  1
+ GPD  Var_21    C2G   C3G  C4G  N4A   173.72  30.0  1
+ GPD  Var_22    O5G   C5G  C4G  N4A  -174.60  30.0  1
+ GPD  Var_23    O2G   C2G  C3G  C4G    68.68  30.0  1
+ GPD  Var_24    O1G   C1G  O5G  C5G    63.47  30.0  1
+ GPD  Var_25    C3G   C4G  C5G  C6G  -174.10  30.0  1
+ GPD  Var_26    C1G   O5G  C5G  C6G  -177.82  30.0  1
+ GPD  Var_27    O2G   C2G  C1G  O5G   -67.67  30.0  1
+ GPD  Var_28    O1G   C1G  C2G  C3G   -72.21  30.0  1
+ GPD  Var_29    C1'   O4'  C4'  C5'   107.87  30.0  1
+ GPD  Var_30    C2'   C3'  C4'  C5'   -88.42  30.0  1
+ GPD  Var_31    O2'   C2'  C3'  C4'  -156.65  30.0  1
+ GPD  Var_32    O3'   C3'  C4'  O4'   -84.16  30.0  1
+ GPD  Var_33    O2'   C2'  C1'  O4'   153.64  30.0  1
+ GPD  Var_34    C1'   C2'  C3'  O3'    77.24  30.0  1
+ GPD  Var_35    N9    C1'  C2'  O2'   -85.68  30.0  1
+ GPD  Var_36    H2G   C2G  C3G  C4G  -170.63  30.0  1
+ GPD  Var_37    H3G   C3G  C4G  C5G   176.17  30.0  1
+ GPD  Var_38    H3GA  C3G  C4G  C5G   -66.88  30.0  1
+ GPD  Var_39    H1G   C1G  O5G  C5G  -176.41  30.0  1
+ GPD  Var_40    H4G   C4G  C5G  O5G    62.61  30.0  1
+ GPD  Var_41    H5G   C5G  C4G  C3G    65.24  30.0  1
+ GPD  Var_42    H1'   C1'  O4'  C4'   107.58  30.0  1
+ GPD  Var_43    H2'   C2'  C3'  C4'    77.16  30.0  1
+ GPD  Var_44    H3'   C3'  C4'  O4'   151.77  30.0  1
+ GPD  Var_45    H4'   C4'  C3'  C2'   149.41  30.0  1
+ GPD  Var_46    C6G   C5G  C4G  N4A    66.34  30.0  1
+ GPD  Var_47    P2    O1G  C1G  O5G    60.60  30.0  3
+ GPD  Var_48    P2    O1G  C1G  C2G  -176.28  30.0  3
+ GPD  Var_49    O1G   C1G  C2G  O2G   168.62  30.0  1
+ GPD  Var_50    O4'   C4'  C5'  O5'    55.79  30.0  2
+ GPD  Var_51    C3'   C4'  C5'  O5'   173.55  30.0  2
+ GPD  Var_52    O3'   C3'  C4'  C5'   154.84  30.0  1
+ GPD  Var_53    O2'   C2'  C3'  O3'   -41.26  30.0  1
+ GPD  Var_54    H6G   C6G  C5G  C4G    57.58  30.0  3
+ GPD  Var_55    H6GA  C6G  C5G  C4G   178.25  30.0  3
+ GPD  Var_56    H6GB  C6G  C5G  C4G   -62.85  30.0  3
+ GPD  Var_57    HN4A  N4A  C4G  C5G   172.31  30.0  3
+ GPD  Var_58    HN4B  N4A  C4G  C5G   -72.77  30.0  3
+ GPD  Var_59    HO2G  O2G  C2G  C3G   174.09  30.0  3
+ GPD  Var_60    HO3'  O3'  C3'  C4'   156.15  30.0  3
+ GPD  Var_61    H5'   C5'  C4'  O4'   -66.68  30.0  3
+ GPD  Var_62    H5'A  C5'  C4'  O4'   176.76  30.0  3
+ GPD  Var_63    HO2'  O2'  C2'  C3'   -87.46  30.0  3
+ GPD  Var_64    P     OPP  P2   O1G   171.35  30.0  1
+ GPD  Var_65    P     OPP  P2   O3P   -77.36  30.0  1
+ GPD  Var_66    P     OPP  P2   O4P    60.11  30.0  1
+ GPD  Var_67    C5'   O5'  P    OPP   163.95  30.0  1
+ GPD  Var_68    C5'   O5'  P    O1P   -85.42  30.0  1
+ GPD  Var_69    C5'   O5'  P    O2P    48.01  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

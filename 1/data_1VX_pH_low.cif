@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1VX  1VX  '(1S,2R)-2-{[(1S)-5-methyl-1-[(1-oxo-1,3-dihydro-2H-isoindol-2-yl)methyl]-3,4-dihydroisoquinolin-2(1H)-yl]carbonyl}cyclohexanecarboxylic acid'  ligand  63  33  .  2021-08-03  2021-08-03  
+ 1VX  1VX  '(1S,2R)-2-{[(1S)-5-methyl-1-[(1-oxo-1,3-dihydro-2H-isoindol-2-yl)methyl]-3,4-dihydroisoquinolin-2(1H)-yl]carbonyl}cyclohexanecarboxylic acid'  ligand  63  33  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1VX
@@ -319,46 +320,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 1VX  CONST_01  C7   C6   C5   C4     0.00   0.0  0
- 1VX  CONST_02  C7   C2   C3   C4     0.00   0.0  0
- 1VX  CONST_03  C2   C3   C4   C5     0.00   0.0  0
- 1VX  CONST_04  C2   C7   C6   C5     0.00   0.0  0
- 1VX  CONST_05  C3   C4   C5   C6     0.00   0.0  0
- 1VX  CONST_06  C3   C2   C7   C6     0.00   0.0  0
- 1VX  CONST_07  C19  C20  C21  C16    0.00   0.0  0
- 1VX  CONST_08  C19  C18  C17  C16    0.00   0.0  0
- 1VX  CONST_09  C20  C19  C18  C17    0.00   0.0  0
- 1VX  CONST_10  C20  C21  C16  C17    0.00   0.0  0
- 1VX  CONST_11  C21  C20  C19  C18    0.00   0.0  0
- 1VX  CONST_12  C21  C16  C17  C18    0.00   0.0  0
- 1VX  CONST_13  C21  C22  N14  C15    0.00   0.0  0
- 1VX  CONST_14  C1   C2   C3   C4   180.00   0.0  0
- 1VX  CONST_15  C1   C2   C7   C6   180.00   0.0  0
- 1VX  CONST_16  C1   C2   C7   C8     0.00   0.0  0
- 1VX  CONST_17  C26  C24  N10  C11    0.00   0.0  0
- 1VX  CONST_18  C26  C24  N10  C9   180.00   0.0  0
- 1VX  CONST_19  C21  C22  N14  C13  180.00   0.0  0
- 1VX  CONST_20  O23  C22  N14  C15  180.00   0.0  0
- 1VX  CONST_21  H10  C3   C4   C5   180.00   0.0  0
- 1VX  CONST_22  H1   C4   C5   C6   180.00   0.0  0
- 1VX  CONST_23  H2   C5   C6   C11    0.00   0.0  0
- 1VX  CONST_24  H16  C17  C16  C15    0.00   0.0  0
- 1VX  CONST_25  H19  C20  C21  C16  180.00   0.0  0
- 1VX  CONST_26  H17  C18  C17  C16  180.00   0.0  0
- 1VX  CONST_27  H18  C19  C18  C17  180.00   0.0  0
- 1VX  CONST_28  O25  C24  N10  C11  180.00   0.0  0
- 1VX  CONST_29  O25  C24  N10  C9     0.00   0.0  0
- 1VX  CONST_30  O23  C22  N14  C13    0.00   0.0  0
- 1VX  CONST_31  H30  O35  C34  C32  180.00   0.0  0
- 1VX  Var_01    C9   C8   C7   C6    15.24  30.0  1
- 1VX  Var_02    C8   C9   N10  C11   67.08  30.0  1
- 1VX  Var_03    N10  C9   C8   C7   -46.90  30.0  1
- 1VX  Var_04    C30  C29  C28  C26  -58.09  30.0  1
- 1VX  Var_05    C31  C30  C29  C28   57.59  30.0  1
- 1VX  Var_06    C32  C31  C30  C29  -52.76  30.0  1
- 1VX  Var_07    C22  N14  C13  C11  -99.96  30.0  2
- 1VX  Var_08    H14  C15  C16  C17   59.69  30.0  1
- 1VX  Var_09    H11  C1   C2   C7    65.01  30.0  2
+ 1VX  CONST_01  C7   C6   C5   C4      0.00   0.0  0
+ 1VX  CONST_02  C7   C2   C3   C4      0.00   0.0  0
+ 1VX  CONST_03  C2   C3   C4   C5      0.00   0.0  0
+ 1VX  CONST_04  C2   C7   C6   C5      0.00   0.0  0
+ 1VX  CONST_05  C3   C4   C5   C6      0.00   0.0  0
+ 1VX  CONST_06  C3   C2   C7   C6      0.00   0.0  0
+ 1VX  CONST_07  C19  C20  C21  C16     0.00   0.0  0
+ 1VX  CONST_08  C19  C18  C17  C16     0.00   0.0  0
+ 1VX  CONST_09  C20  C19  C18  C17     0.00   0.0  0
+ 1VX  CONST_10  C20  C21  C16  C17     0.00   0.0  0
+ 1VX  CONST_11  C21  C20  C19  C18     0.00   0.0  0
+ 1VX  CONST_12  C21  C16  C17  C18     0.00   0.0  0
+ 1VX  CONST_13  C21  C22  N14  C15     0.00   0.0  0
+ 1VX  CONST_14  C1   C2   C3   C4    180.00   0.0  0
+ 1VX  CONST_15  C1   C2   C7   C6    180.00   0.0  0
+ 1VX  CONST_16  C1   C2   C7   C8      0.00   0.0  0
+ 1VX  CONST_17  C26  C24  N10  C11     0.00   0.0  0
+ 1VX  CONST_18  C26  C24  N10  C9    180.00   0.0  0
+ 1VX  CONST_19  C21  C22  N14  C13   180.00   0.0  0
+ 1VX  CONST_20  O23  C22  N14  C15   180.00   0.0  0
+ 1VX  CONST_21  H10  C3   C4   C5    180.00   0.0  0
+ 1VX  CONST_22  H1   C4   C5   C6    180.00   0.0  0
+ 1VX  CONST_23  H2   C5   C6   C11     0.00   0.0  0
+ 1VX  CONST_24  H16  C17  C16  C15     0.00   0.0  0
+ 1VX  CONST_25  H19  C20  C21  C16   180.00   0.0  0
+ 1VX  CONST_26  H17  C18  C17  C16   180.00   0.0  0
+ 1VX  CONST_27  H18  C19  C18  C17   180.00   0.0  0
+ 1VX  CONST_28  O25  C24  N10  C11   180.00   0.0  0
+ 1VX  CONST_29  O25  C24  N10  C9      0.00   0.0  0
+ 1VX  CONST_30  O23  C22  N14  C13     0.00   0.0  0
+ 1VX  CONST_31  H30  O35  C34  C32   180.00   0.0  0
+ 1VX  Var_01    C9   C8   C7   C6     15.24  30.0  1
+ 1VX  Var_02    C8   C9   N10  C11    67.08  30.0  1
+ 1VX  Var_03    N10  C9   C8   C7    -46.90  30.0  1
+ 1VX  Var_04    C30  C29  C28  C26   -58.09  30.0  1
+ 1VX  Var_05    C31  C30  C29  C28    57.59  30.0  1
+ 1VX  Var_06    C32  C31  C30  C29   -52.76  30.0  1
+ 1VX  Var_07    C22  N14  C13  C11   -99.96  30.0  2
+ 1VX  Var_08    H14  C15  C16  C17    59.69  30.0  1
+ 1VX  Var_09    H11  C1   C2   C7     65.01  30.0  2
+ 1VX  Var_10    N10  C11  C6   C5   -163.97  30.0  1
+ 1VX  Var_11    C9   N10  C11  C6    -49.53  30.0  1
+ 1VX  Var_12    N10  C11  C6   C7     15.40  30.0  1
+ 1VX  Var_13    C30  C31  C32  C26    49.15  30.0  1
+ 1VX  Var_14    C31  C32  C26  C28   -48.54  30.0  1
+ 1VX  Var_15    C32  C26  C28  C29    52.80  30.0  1
+ 1VX  Var_16    C13  C11  C6   C5     71.85  30.0  1
+ 1VX  Var_17    N14  C13  C11  C6   -174.59  30.0  2
+ 1VX  Var_18    C24  N10  C11  C6    121.49  30.0  1
+ 1VX  Var_19    C13  C11  C6   C7   -108.78  30.0  1
+ 1VX  Var_20    C13  C11  N10  C9     74.03  30.0  1
+ 1VX  Var_21    N14  C13  C11  N10    61.44  30.0  2
+ 1VX  Var_22    C28  C26  C24  N10   -75.55  30.0  3
+ 1VX  Var_23    C32  C26  C24  N10   161.15  30.0  3
+ 1VX  Var_24    C29  C28  C26  C24   -71.53  30.0  1
+ 1VX  Var_25    C31  C32  C26  C24    74.93  30.0  1
+ 1VX  Var_26    C34  C32  C26  C28  -179.32  30.0  1
+ 1VX  Var_27    C34  C32  C31  C30   177.62  30.0  1
+ 1VX  Var_28    H3   C11  C6   C5    -44.34  30.0  1
+ 1VX  Var_29    H27  C31  C32  C26   -72.71  30.0  1
+ 1VX  Var_30    H28  C31  C32  C26   169.90  30.0  1
+ 1VX  Var_31    H29  C32  C26  C28    68.38  30.0  1
+ 1VX  Var_32    H20  C26  C28  C29   169.00  30.0  1
+ 1VX  Var_33    C24  N10  C11  C13  -114.94  30.0  1
+ 1VX  Var_34    C34  C32  C26  C24   -55.85  30.0  1
+ 1VX  Var_35    C28  C26  C24  O25   101.72  30.0  3
+ 1VX  Var_36    C32  C26  C24  O25   -21.57  30.0  3
+ 1VX  Var_37    O36  C34  C32  C26   -18.83  30.0  3
+ 1VX  Var_38    O35  C34  C32  C26   163.87  30.0  3
+ 1VX  Var_39    O36  C34  C32  C31  -149.92  30.0  3
+ 1VX  Var_40    O35  C34  C32  C31    32.78  30.0  3
+ 1VX  Var_41    H8   C13  C11  C6    -53.70  30.0  2
+ 1VX  Var_42    H9   C13  C11  C6     62.76  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

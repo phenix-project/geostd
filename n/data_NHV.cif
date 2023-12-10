@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NHV  NHV  (5R,6R,7S,8R)-6,7,8-trihydroxy-5-(hydroxymethyl)-2-[(phenylamino)methyl]-5,6,7,8-tetrahydro-1H-imidazo[1,2-a]pyridin-4-ium  ligand  42  22  .  2021-08-15  2021-08-15  
+ NHV  NHV  (5R,6R,7S,8R)-6,7,8-trihydroxy-5-(hydroxymethyl)-2-[(phenylamino)methyl]-5,6,7,8-tetrahydro-1H-imidazo[1,2-a]pyridin-4-ium  ligand  42  22  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NHV
@@ -227,33 +228,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NHV  CONST_01  N2B  C7B  C8B  N1B    0.00   0.0  0
- NHV  CONST_02  C7B  N2B  C1B  N1B    0.00   0.0  0
- NHV  CONST_03  N2B  C1B  N1B  C8B    0.00   0.0  0
- NHV  CONST_04  C1B  N2B  C7B  C8B    0.00   0.0  0
- NHV  CONST_05  C1B  N1B  C8B  C7B    0.00   0.0  0
- NHV  CONST_06  C4   C5   C6   C1     0.00   0.0  0
- NHV  CONST_07  C4   C3   C2   C1     0.00   0.0  0
- NHV  CONST_08  C3   C2   C1   C6     0.00   0.0  0
- NHV  CONST_09  C3   C4   C5   C6     0.00   0.0  0
- NHV  CONST_10  C2   C1   C6   C5     0.00   0.0  0
- NHV  CONST_11  C2   C3   C4   C5     0.00   0.0  0
- NHV  CONST_12  C7   C7B  C8B  N1B  180.00   0.0  0
- NHV  CONST_13  C7   C7B  N2B  C1B  180.00   0.0  0
- NHV  CONST_14  C5   C6   C1   N1   180.00   0.0  0
- NHV  CONST_15  C3   C2   C1   N1   180.00   0.0  0
- NHV  CONST_16  H8B  C8B  N1B  C5B    0.00   0.0  0
- NHV  CONST_17  HC   N2B  C1B  N1B  180.00   0.0  0
- NHV  CONST_18  H5   C5   C6   C1   180.00   0.0  0
- NHV  CONST_19  H3   C3   C2   C1   180.00   0.0  0
- NHV  CONST_20  H2   C2   C1   C6   180.00   0.0  0
- NHV  CONST_21  H4   C4   C5   C6   180.00   0.0  0
- NHV  CONST_22  H6   C6   C5   C4   180.00   0.0  0
- NHV  CONST_23  C6   C1   N1   C7     0.00   0.0  0
- NHV  CONST_24  C2   C1   N1   C7   180.00   0.0  0
- NHV  CONST_25  H1   N1   C1   C6   180.00   0.0  0
- NHV  Var_01    N1   C7   C7B  C8B  133.32  30.0  2
- NHV  Var_02    C1   N1   C7   C7B  -62.53  30.0  3
+ NHV  CONST_01  N2B   C7B  C8B  N1B     0.00   0.0  0
+ NHV  CONST_02  C7B   N2B  C1B  N1B     0.00   0.0  0
+ NHV  CONST_03  N2B   C1B  N1B  C8B     0.00   0.0  0
+ NHV  CONST_04  C1B   N2B  C7B  C8B     0.00   0.0  0
+ NHV  CONST_05  C1B   N1B  C8B  C7B     0.00   0.0  0
+ NHV  CONST_06  C4    C5   C6   C1      0.00   0.0  0
+ NHV  CONST_07  C4    C3   C2   C1      0.00   0.0  0
+ NHV  CONST_08  C3    C2   C1   C6      0.00   0.0  0
+ NHV  CONST_09  C3    C4   C5   C6      0.00   0.0  0
+ NHV  CONST_10  C2    C1   C6   C5      0.00   0.0  0
+ NHV  CONST_11  C2    C3   C4   C5      0.00   0.0  0
+ NHV  CONST_12  C7    C7B  C8B  N1B   180.00   0.0  0
+ NHV  CONST_13  C7    C7B  N2B  C1B   180.00   0.0  0
+ NHV  CONST_14  C5    C6   C1   N1    180.00   0.0  0
+ NHV  CONST_15  C3    C2   C1   N1    180.00   0.0  0
+ NHV  CONST_16  H8B   C8B  N1B  C5B     0.00   0.0  0
+ NHV  CONST_17  HC    N2B  C1B  N1B   180.00   0.0  0
+ NHV  CONST_18  H5    C5   C6   C1    180.00   0.0  0
+ NHV  CONST_19  H3    C3   C2   C1    180.00   0.0  0
+ NHV  CONST_20  H2    C2   C1   C6    180.00   0.0  0
+ NHV  CONST_21  H4    C4   C5   C6    180.00   0.0  0
+ NHV  CONST_22  H6    C6   C5   C4    180.00   0.0  0
+ NHV  CONST_23  C6    C1   N1   C7      0.00   0.0  0
+ NHV  CONST_24  C2    C1   N1   C7    180.00   0.0  0
+ NHV  CONST_25  H1    N1   C1   C6    180.00   0.0  0
+ NHV  Var_01    N1    C7   C7B  C8B   133.32  30.0  2
+ NHV  Var_02    C1    N1   C7   C7B   -62.53  30.0  3
+ NHV  Var_03    C20   C3B  C4B  C5B    15.79  30.0  1
+ NHV  Var_04    C8B   N1B  C5B  C4B  -128.64  30.0  1
+ NHV  Var_05    C1B   N1B  C5B  C4B    48.20  30.0  1
+ NHV  Var_06    C1B   C20  C3B  C4B    32.99  30.0  1
+ NHV  Var_07    N1B   C5B  C4B  C3B   -56.03  30.0  1
+ NHV  Var_08    N1B   C1B  C20  C3B   -46.97  30.0  1
+ NHV  Var_09    N2B   C1B  C20  C3B   135.06  30.0  1
+ NHV  Var_10    C3B   C4B  C5B  C6B  -179.27  30.0  1
+ NHV  Var_11    C8B   N1B  C5B  C6B    -4.03  30.0  1
+ NHV  Var_12    C1B   N1B  C5B  C6B   172.81  30.0  1
+ NHV  Var_13    O3B   C3B  C4B  C5B   143.21  30.0  1
+ NHV  Var_14    O2B   C20  C3B  C4B   156.73  30.0  1
+ NHV  Var_15    N1B   C5B  C4B  O4B   176.46  30.0  1
+ NHV  Var_16    C20   C3B  C4B  O4B   143.15  30.0  1
+ NHV  Var_17    C1B   C20  C3B  O3B   -94.05  30.0  1
+ NHV  Var_18    N1B   C1B  C20  O2B  -170.31  30.0  1
+ NHV  Var_19    N2B   C1B  C20  O2B    11.72  30.0  1
+ NHV  Var_20    H3B   C3B  C4B  C5B  -101.05  30.0  1
+ NHV  Var_21    H20   C20  C3B  C4B   -80.91  30.0  1
+ NHV  Var_22    H5B   C5B  C4B  C3B    60.06  30.0  1
+ NHV  Var_23    H4B   C4B  C5B  N1B    61.66  30.0  1
+ NHV  Var_24    C4B   C5B  C6B  O6B    57.10  30.0  3
+ NHV  Var_25    N1B   C5B  C6B  O6B   -62.81  30.0  3
+ NHV  Var_26    O4B   C4B  C5B  C6B    53.22  30.0  1
+ NHV  Var_27    O3B   C3B  C4B  O4B   -89.43  30.0  1
+ NHV  Var_28    O2B   C20  C3B  O3B    29.69  30.0  1
+ NHV  Var_29    HA    O4B  C4B  C5B    67.83  30.0  3
+ NHV  Var_30    H6B1  C6B  C5B  C4B   -65.34  30.0  1
+ NHV  Var_31    H6B2  C6B  C5B  C4B   179.87  30.0  1
+ NHV  Var_32    HB    O3B  C3B  C4B   -58.21  30.0  3
+ NHV  Var_33    H2B   O2B  C20  C3B   145.85  30.0  3
+ NHV  Var_34    H6B   O6B  C6B  C5B   176.46  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HOP  HOP  '4-[({4-[(1R,2S,4S)-2-hydroxy-4-phenylcyclohexyl]phenyl}carbonyl)amino]butanoic acid'  ligand  54  28  .  2022-03-18  2022-03-18
+ HOP  HOP  '4-[({4-[(1R,2S,4S)-2-hydroxy-4-phenylcyclohexyl]phenyl}carbonyl)amino]butanoic acid'  ligand  54  28  .  2022-03-18  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HOP
@@ -275,42 +276,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HOP  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- HOP  CONST_02  C4   C5   C6   C1     0.00   0.0  0
- HOP  CONST_03  C5   C6   C1   C2     0.00   0.0  0
- HOP  CONST_04  C5   C4   C3   C2     0.00   0.0  0
- HOP  CONST_05  C3   C2   C1   C6     0.00   0.0  0
- HOP  CONST_06  C3   C4   C5   C6     0.00   0.0  0
- HOP  CONST_07  C16  C15  C14  C13    0.00   0.0  0
- HOP  CONST_08  C16  C17  C18  C13    0.00   0.0  0
- HOP  CONST_09  C17  C18  C13  C14    0.00   0.0  0
- HOP  CONST_10  C17  C16  C15  C14    0.00   0.0  0
- HOP  CONST_11  C18  C13  C14  C15    0.00   0.0  0
- HOP  CONST_12  C18  C17  C16  C15    0.00   0.0  0
- HOP  CONST_13  C7   C4   C3   C2   180.00   0.0  0
- HOP  CONST_14  C7   C4   C5   C6   180.00   0.0  0
- HOP  CONST_15  C15  C14  C13  C10  180.00   0.0  0
- HOP  CONST_16  C17  C18  C13  C10  180.00   0.0  0
- HOP  CONST_17  C20  C16  C15  C14  180.00   0.0  0
- HOP  CONST_18  C20  C16  C17  C18  180.00   0.0  0
- HOP  CONST_19  H3   C3   C2   C1   180.00   0.0  0
- HOP  CONST_20  H5   C5   C6   C1   180.00   0.0  0
- HOP  CONST_21  H6   C6   C1   C2   180.00   0.0  0
- HOP  CONST_22  H2   C2   C1   C6   180.00   0.0  0
- HOP  CONST_23  H1   C1   C6   C5   180.00   0.0  0
- HOP  CONST_24  H14  C14  C13  C10    0.00   0.0  0
- HOP  CONST_25  H18  C18  C13  C10    0.00   0.0  0
- HOP  CONST_26  H15  C15  C14  C13  180.00   0.0  0
- HOP  CONST_27  H17  C17  C18  C13  180.00   0.0  0
- HOP  CONST_28  C23  N22  C20  C16  180.00   0.0  0
- HOP  CONST_29  HN2  N22  C20  C16    0.00   0.0  0
- HOP  CONST_30  C23  N22  C20  O21    0.00   0.0  0
- HOP  Var_01    C10  C9   C8   C7   -55.90  30.0  1
- HOP  Var_02    O21  C20  C16  C15   24.47  30.0  2
- HOP  Var_03    C24  C23  N22  C20  157.25  30.0  3
- HOP  Var_04    C25  C24  C23  N22  176.84  30.0  3
- HOP  Var_05    C26  C25  C24  C23  179.65  30.0  3
- HOP  Var_06    O27  C26  C25  C24    1.46  30.0  3
+ HOP  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ HOP  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ HOP  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ HOP  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ HOP  CONST_05  C3    C2   C1   C6      0.00   0.0  0
+ HOP  CONST_06  C3    C4   C5   C6      0.00   0.0  0
+ HOP  CONST_07  C16   C15  C14  C13     0.00   0.0  0
+ HOP  CONST_08  C16   C17  C18  C13     0.00   0.0  0
+ HOP  CONST_09  C17   C18  C13  C14     0.00   0.0  0
+ HOP  CONST_10  C17   C16  C15  C14     0.00   0.0  0
+ HOP  CONST_11  C18   C13  C14  C15     0.00   0.0  0
+ HOP  CONST_12  C18   C17  C16  C15     0.00   0.0  0
+ HOP  CONST_13  C7    C4   C3   C2    180.00   0.0  0
+ HOP  CONST_14  C7    C4   C5   C6    180.00   0.0  0
+ HOP  CONST_15  C15   C14  C13  C10   180.00   0.0  0
+ HOP  CONST_16  C17   C18  C13  C10   180.00   0.0  0
+ HOP  CONST_17  C20   C16  C15  C14   180.00   0.0  0
+ HOP  CONST_18  C20   C16  C17  C18   180.00   0.0  0
+ HOP  CONST_19  H3    C3   C2   C1    180.00   0.0  0
+ HOP  CONST_20  H5    C5   C6   C1    180.00   0.0  0
+ HOP  CONST_21  H6    C6   C1   C2    180.00   0.0  0
+ HOP  CONST_22  H2    C2   C1   C6    180.00   0.0  0
+ HOP  CONST_23  H1    C1   C6   C5    180.00   0.0  0
+ HOP  CONST_24  H14   C14  C13  C10     0.00   0.0  0
+ HOP  CONST_25  H18   C18  C13  C10     0.00   0.0  0
+ HOP  CONST_26  H15   C15  C14  C13   180.00   0.0  0
+ HOP  CONST_27  H17   C17  C18  C13   180.00   0.0  0
+ HOP  CONST_28  C23   N22  C20  C16   180.00   0.0  0
+ HOP  CONST_29  HN2   N22  C20  C16     0.00   0.0  0
+ HOP  CONST_30  C23   N22  C20  O21     0.00   0.0  0
+ HOP  Var_01    C10   C9   C8   C7    -55.90  30.0  1
+ HOP  Var_02    O21   C20  C16  C15    24.47  30.0  2
+ HOP  Var_03    C24   C23  N22  C20   157.25  30.0  3
+ HOP  Var_04    C25   C24  C23  N22   176.84  30.0  3
+ HOP  Var_05    C26   C25  C24  C23   179.65  30.0  3
+ HOP  Var_06    O27   C26  C25  C24     1.46  30.0  3
+ HOP  Var_07    C12   C7   C4   C5   -121.89  30.0  2
+ HOP  Var_08    C8    C7   C4   C5    113.98  30.0  2
+ HOP  Var_09    C11   C12  C7   C4    178.02  30.0  1
+ HOP  Var_10    C9    C8   C7   C4   -179.27  30.0  1
+ HOP  Var_11    C12   C7   C4   C3     58.79  30.0  2
+ HOP  Var_12    C8    C7   C4   C3    -65.34  30.0  2
+ HOP  Var_13    C10   C11  C12  C7     58.05  30.0  1
+ HOP  Var_14    C9    C8   C7   C12    55.29  30.0  1
+ HOP  Var_15    C9    C10  C11  C12   -56.66  30.0  1
+ HOP  Var_16    C13   C10  C11  C12   178.47  30.0  1
+ HOP  Var_17    C8    C7   C12  C11   -56.76  30.0  1
+ HOP  Var_18    C8    C9   C10  C11    56.11  30.0  1
+ HOP  Var_19    C14   C13  C10  C11  -116.29  30.0  2
+ HOP  Var_20    C18   C13  C10  C11    64.65  30.0  2
+ HOP  Var_21    C14   C13  C10  C9    119.77  30.0  2
+ HOP  Var_22    C18   C13  C10  C9    -59.29  30.0  2
+ HOP  Var_23    C13   C10  C9   C8   -178.73  30.0  1
+ HOP  Var_24    O19   C11  C12  C7    178.17  30.0  1
+ HOP  Var_25    O19   C11  C10  C9   -179.16  30.0  1
+ HOP  Var_26    O19   C11  C10  C13    55.96  30.0  1
+ HOP  Var_27    H7    C7   C4   C5     -3.83  30.0  2
+ HOP  Var_28    H121  C12  C7   C4     56.44  30.0  1
+ HOP  Var_29    H122  C12  C7   C4    -61.12  30.0  1
+ HOP  Var_30    H81   C8   C7   C4    -57.57  30.0  1
+ HOP  Var_31    H82   C8   C7   C4     59.36  30.0  1
+ HOP  Var_32    H11   C11  C12  C7    -60.18  30.0  1
+ HOP  Var_33    H10   C10  C11  C12    60.20  30.0  1
+ HOP  Var_34    HO9   O19  C11  C12    58.20  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

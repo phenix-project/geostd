@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NBM  NBM  6-{[(4-nitrophenyl)methyl]sulfanyl}-9-beta-D-ribofuranosyl-9H-purine  ligand  46  29  .  2021-08-15  2021-08-15  
+ NBM  NBM  6-{[(4-nitrophenyl)methyl]sulfanyl}-9-beta-D-ribofuranosyl-9H-purine  ligand  46  29  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_NBM
@@ -243,51 +244,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NBM  CONST_01  C04   C03  C02  C01    0.00   0.0  0
- NBM  CONST_02  C04   C05  C06  C01    0.00   0.0  0
- NBM  CONST_03  C05   C06  C01  C02    0.00   0.0  0
- NBM  CONST_04  C05   C04  C03  C02    0.00   0.0  0
- NBM  CONST_05  C06   C01  C02  C03    0.00   0.0  0
- NBM  CONST_06  C06   C05  C04  C03    0.00   0.0  0
- NBM  CONST_07  C16   N15  C14  C09  180.00   0.0  0
- NBM  CONST_08  N17   C13  C14  C09  180.00   0.0  0
- NBM  CONST_09  N12   C13  C14  C09    0.00   0.0  0
- NBM  CONST_10  N12   C11  N10  C09    0.00   0.0  0
- NBM  CONST_11  C14   C09  N10  C11    0.00   0.0  0
- NBM  CONST_12  N17   C13  N12  C11  180.00   0.0  0
- NBM  CONST_13  C14   C13  N12  C11    0.00   0.0  0
- NBM  CONST_14  N15   C16  N17  C13    0.00   0.0  0
- NBM  CONST_15  C16   N15  C14  C13    0.00   0.0  0
- NBM  CONST_16  N10   C09  C14  C13    0.00   0.0  0
- NBM  CONST_17  N10   C11  N12  C13    0.00   0.0  0
- NBM  CONST_18  N17   C16  N15  C14    0.00   0.0  0
- NBM  CONST_19  C16   N17  C13  C14    0.00   0.0  0
- NBM  CONST_20  N12   C13  N17  C16  180.00   0.0  0
- NBM  CONST_21  N15   C14  C09  N10  180.00   0.0  0
- NBM  CONST_22  N15   C14  C13  N12  180.00   0.0  0
- NBM  CONST_23  N17   C13  C14  N15    0.00   0.0  0
- NBM  CONST_24  C18   N17  C13  C14  180.00   0.0  0
- NBM  CONST_25  N15   C16  N17  C18  180.00   0.0  0
- NBM  CONST_26  N12   C13  N17  C18    0.00   0.0  0
- NBM  CONST_27  N27   C03  C02  C01  180.00   0.0  0
- NBM  CONST_28  C07   C06  C01  C02  180.00   0.0  0
- NBM  CONST_29  C07   C06  C05  C04  180.00   0.0  0
- NBM  CONST_30  N27   C03  C04  C05  180.00   0.0  0
- NBM  CONST_31  S08   C09  N10  C11  180.00   0.0  0
- NBM  CONST_32  S08   C09  C14  C13  180.00   0.0  0
- NBM  CONST_33  S08   C09  C14  N15    0.00   0.0  0
- NBM  CONST_34  H051  C05  C06  C01  180.00   0.0  0
- NBM  CONST_35  H041  C04  C03  C02  180.00   0.0  0
- NBM  CONST_36  H011  C01  C02  C03  180.00   0.0  0
- NBM  CONST_37  H021  C02  C03  C04  180.00   0.0  0
- NBM  CONST_38  H111  C11  N10  C09  180.00   0.0  0
- NBM  CONST_39  H161  C16  N17  C13  180.00   0.0  0
- NBM  CONST_40  O29   N27  C03  C02  180.00   0.0  0
- NBM  CONST_41  O28   N27  C03  C02    0.00   0.0  0
- NBM  CONST_42  O29   N27  C03  C04    0.00   0.0  0
- NBM  CONST_43  O28   N27  C03  C04  180.00   0.0  0
- NBM  Var_01    S08   C07  C06  C01   87.78  30.0  2
- NBM  Var_02    C14   C09  S08  C07  177.79  30.0  2
+ NBM  CONST_01  C04   C03  C02  C01     0.00   0.0  0
+ NBM  CONST_02  C04   C05  C06  C01     0.00   0.0  0
+ NBM  CONST_03  C05   C06  C01  C02     0.00   0.0  0
+ NBM  CONST_04  C05   C04  C03  C02     0.00   0.0  0
+ NBM  CONST_05  C06   C01  C02  C03     0.00   0.0  0
+ NBM  CONST_06  C06   C05  C04  C03     0.00   0.0  0
+ NBM  CONST_07  C16   N15  C14  C09   180.00   0.0  0
+ NBM  CONST_08  N17   C13  C14  C09   180.00   0.0  0
+ NBM  CONST_09  N12   C13  C14  C09     0.00   0.0  0
+ NBM  CONST_10  N12   C11  N10  C09     0.00   0.0  0
+ NBM  CONST_11  C14   C09  N10  C11     0.00   0.0  0
+ NBM  CONST_12  N17   C13  N12  C11   180.00   0.0  0
+ NBM  CONST_13  C14   C13  N12  C11     0.00   0.0  0
+ NBM  CONST_14  N15   C16  N17  C13     0.00   0.0  0
+ NBM  CONST_15  C16   N15  C14  C13     0.00   0.0  0
+ NBM  CONST_16  N10   C09  C14  C13     0.00   0.0  0
+ NBM  CONST_17  N10   C11  N12  C13     0.00   0.0  0
+ NBM  CONST_18  N17   C16  N15  C14     0.00   0.0  0
+ NBM  CONST_19  C16   N17  C13  C14     0.00   0.0  0
+ NBM  CONST_20  N12   C13  N17  C16   180.00   0.0  0
+ NBM  CONST_21  N15   C14  C09  N10   180.00   0.0  0
+ NBM  CONST_22  N15   C14  C13  N12   180.00   0.0  0
+ NBM  CONST_23  N17   C13  C14  N15     0.00   0.0  0
+ NBM  CONST_24  C18   N17  C13  C14   180.00   0.0  0
+ NBM  CONST_25  N15   C16  N17  C18   180.00   0.0  0
+ NBM  CONST_26  N12   C13  N17  C18     0.00   0.0  0
+ NBM  CONST_27  N27   C03  C02  C01   180.00   0.0  0
+ NBM  CONST_28  C07   C06  C01  C02   180.00   0.0  0
+ NBM  CONST_29  C07   C06  C05  C04   180.00   0.0  0
+ NBM  CONST_30  N27   C03  C04  C05   180.00   0.0  0
+ NBM  CONST_31  S08   C09  N10  C11   180.00   0.0  0
+ NBM  CONST_32  S08   C09  C14  C13   180.00   0.0  0
+ NBM  CONST_33  S08   C09  C14  N15     0.00   0.0  0
+ NBM  CONST_34  H051  C05  C06  C01   180.00   0.0  0
+ NBM  CONST_35  H041  C04  C03  C02   180.00   0.0  0
+ NBM  CONST_36  H011  C01  C02  C03   180.00   0.0  0
+ NBM  CONST_37  H021  C02  C03  C04   180.00   0.0  0
+ NBM  CONST_38  H111  C11  N10  C09   180.00   0.0  0
+ NBM  CONST_39  H161  C16  N17  C13   180.00   0.0  0
+ NBM  CONST_40  O29   N27  C03  C02   180.00   0.0  0
+ NBM  CONST_41  O28   N27  C03  C02     0.00   0.0  0
+ NBM  CONST_42  O29   N27  C03  C04     0.00   0.0  0
+ NBM  CONST_43  O28   N27  C03  C04   180.00   0.0  0
+ NBM  Var_01    S08   C07  C06  C01    87.78  30.0  2
+ NBM  Var_02    C14   C09  S08  C07   177.79  30.0  2
+ NBM  Var_03    O22   C18  N17  C13  -148.96  30.0  2
+ NBM  Var_04    C19   C18  N17  C13    92.90  30.0  2
+ NBM  Var_05    O22   C18  N17  C16    33.95  30.0  2
+ NBM  Var_06    C19   C18  N17  C16   -84.20  30.0  2
+ NBM  Var_07    C20   C21  O22  C18   -17.56  30.0  1
+ NBM  Var_08    C21   C20  C19  C18   -38.08  30.0  1
+ NBM  Var_09    O22   C21  C20  C19    34.86  30.0  1
+ NBM  Var_10    C21   O22  C18  C19    -7.75  30.0  1
+ NBM  Var_11    O22   C18  C19  C20    29.51  30.0  1
+ NBM  Var_12    N17   C18  C19  C20   148.89  30.0  1
+ NBM  Var_13    N17   C18  O22  C21  -130.00  30.0  1
+ NBM  Var_14    C23   C21  O22  C18   104.32  30.0  1
+ NBM  Var_15    O25   C20  C19  C18    79.99  30.0  1
+ NBM  Var_16    C23   C21  C20  C19   -86.55  30.0  1
+ NBM  Var_17    O26   C19  C20  C21  -157.36  30.0  1
+ NBM  Var_18    O26   C19  C18  N17   -86.96  30.0  1
+ NBM  Var_19    O25   C20  C21  O22   -79.58  30.0  1
+ NBM  Var_20    O26   C19  C18  O22   153.66  30.0  1
+ NBM  Var_21    H181  C18  N17  C13   -28.56  30.0  2
+ NBM  Var_22    H211  C21  O22  C18  -136.48  30.0  1
+ NBM  Var_23    H201  C20  C19  C18  -156.45  30.0  1
+ NBM  Var_24    H191  C19  C20  C21    76.16  30.0  1
+ NBM  Var_25    C09   S08  C07  C06  -178.83  30.0  1
+ NBM  Var_26    O24   C23  C21  C20   170.30  30.0  2
+ NBM  Var_27    O25   C20  C21  C23   159.00  30.0  1
+ NBM  Var_28    O24   C23  C21  O22    52.64  30.0  2
+ NBM  Var_29    O26   C19  C20  O25   -39.29  30.0  1
+ NBM  Var_30    H261  O26  C19  C18   169.40  30.0  3
+ NBM  Var_31    H251  O25  C20  C19  -177.73  30.0  3
+ NBM  Var_32    H231  C23  C21  C20   -68.19  30.0  2
+ NBM  Var_33    H232  C23  C21  C20    47.79  30.0  2
+ NBM  Var_34    H241  O24  C23  C21   178.85  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

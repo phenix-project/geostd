@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BIR  BIR  N-[(2S)-3-[(S)-[(1R)-1-aminoethyl](hydroxy)phosphoryl]-2-(biphenyl-4-ylmethyl)propanoyl]-L-alanine  ligand  54  29  .  2021-08-06  2021-08-06  
+ BIR  BIR  N-[(2S)-3-[(S)-[(1R)-1-aminoethyl](hydroxy)phosphoryl]-2-(biphenyl-4-ylmethyl)propanoyl]-L-alanine  ligand  54  29  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BIR
@@ -270,38 +271,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BIR  CONST_01  C14  C13  C12  C11    0.00   0.0  0
- BIR  CONST_02  C14  C15  C16  C11    0.00   0.0  0
- BIR  CONST_03  C15  C16  C11  C12    0.00   0.0  0
- BIR  CONST_04  C15  C14  C13  C12    0.00   0.0  0
- BIR  CONST_05  C17  C14  C13  C12  180.00   0.0  0
- BIR  CONST_06  C16  C11  C12  C13    0.00   0.0  0
- BIR  CONST_07  C16  C15  C14  C13    0.00   0.0  0
- BIR  CONST_10  C19  C18  C17  C14  180.00   0.0  0
- BIR  CONST_11  C21  C22  C17  C14  180.00   0.0  0
- BIR  CONST_14  C17  C14  C15  C16  180.00   0.0  0
- BIR  CONST_15  C20  C19  C18  C17    0.00   0.0  0
- BIR  CONST_16  C20  C21  C22  C17    0.00   0.0  0
- BIR  CONST_17  C21  C22  C17  C18    0.00   0.0  0
- BIR  CONST_18  C21  C20  C19  C18    0.00   0.0  0
- BIR  CONST_19  C22  C17  C18  C19    0.00   0.0  0
- BIR  CONST_20  C22  C21  C20  C19    0.00   0.0  0
- BIR  CONST_21  C13  C12  C11  C9   180.00   0.0  0
- BIR  CONST_22  C15  C16  C11  C9   180.00   0.0  0
- BIR  CONST_23  H13  C13  C12  C11  180.00   0.0  0
- BIR  CONST_24  H15  C15  C16  C11  180.00   0.0  0
- BIR  CONST_25  H16  C16  C11  C12  180.00   0.0  0
- BIR  CONST_26  H12  C12  C13  C14  180.00   0.0  0
- BIR  CONST_27  H18  C18  C17  C14    0.00   0.0  0
- BIR  CONST_28  H22  C22  C17  C14    0.00   0.0  0
- BIR  CONST_29  H19  C19  C18  C17  180.00   0.0  0
- BIR  CONST_30  H21  C21  C22  C17  180.00   0.0  0
- BIR  CONST_31  H20  C20  C19  C18  180.00   0.0  0
- BIR  CONST_32  C25  N24  C10  C8   180.00   0.0  0
- BIR  CONST_33  C25  N24  C10  O23    0.00   0.0  0
- BIR  CONST_34  H24  N24  C10  C8     0.00   0.0  0
- BIR  Var_01    C12  C11  C9   C8    79.36  30.0  2
- BIR  Var_02    C8   C7   P4   C2   172.23  30.0  3
+ BIR  CONST_01  C14   C13  C12  C11     0.00   0.0  0
+ BIR  CONST_02  C14   C15  C16  C11     0.00   0.0  0
+ BIR  CONST_03  C15   C16  C11  C12     0.00   0.0  0
+ BIR  CONST_04  C15   C14  C13  C12     0.00   0.0  0
+ BIR  CONST_05  C17   C14  C13  C12   180.00   0.0  0
+ BIR  CONST_06  C16   C11  C12  C13     0.00   0.0  0
+ BIR  CONST_07  C16   C15  C14  C13     0.00   0.0  0
+ BIR  CONST_08  C19   C18  C17  C14   180.00   0.0  0
+ BIR  CONST_09  C21   C22  C17  C14   180.00   0.0  0
+ BIR  CONST_10  C17   C14  C15  C16   180.00   0.0  0
+ BIR  CONST_11  C20   C19  C18  C17     0.00   0.0  0
+ BIR  CONST_12  C20   C21  C22  C17     0.00   0.0  0
+ BIR  CONST_13  C21   C22  C17  C18     0.00   0.0  0
+ BIR  CONST_14  C21   C20  C19  C18     0.00   0.0  0
+ BIR  CONST_15  C22   C17  C18  C19     0.00   0.0  0
+ BIR  CONST_16  C22   C21  C20  C19     0.00   0.0  0
+ BIR  CONST_17  C13   C12  C11  C9    180.00   0.0  0
+ BIR  CONST_18  C15   C16  C11  C9    180.00   0.0  0
+ BIR  CONST_19  H13   C13  C12  C11   180.00   0.0  0
+ BIR  CONST_20  H15   C15  C16  C11   180.00   0.0  0
+ BIR  CONST_21  H16   C16  C11  C12   180.00   0.0  0
+ BIR  CONST_22  H12   C12  C13  C14   180.00   0.0  0
+ BIR  CONST_23  H18   C18  C17  C14     0.00   0.0  0
+ BIR  CONST_24  H22   C22  C17  C14     0.00   0.0  0
+ BIR  CONST_25  H19   C19  C18  C17   180.00   0.0  0
+ BIR  CONST_26  H21   C21  C22  C17   180.00   0.0  0
+ BIR  CONST_27  H20   C20  C19  C18   180.00   0.0  0
+ BIR  CONST_28  C25   N24  C10  C8    180.00   0.0  0
+ BIR  CONST_29  C25   N24  C10  O23     0.00   0.0  0
+ BIR  CONST_30  H24   N24  C10  C8      0.00   0.0  0
+ BIR  Var_01    C12   C11  C9   C8     79.36  30.0  2
+ BIR  Var_02    C8    C7   P4   C2    172.23  30.0  3
+ BIR  Var_03    C18   C17  C14  C13   143.22  30.0  2
+ BIR  Var_04    C22   C17  C14  C13   -36.73  30.0  2
+ BIR  Var_05    C18   C17  C14  C15   -36.54  30.0  2
+ BIR  Var_06    C22   C17  C14  C15   143.51  30.0  2
+ BIR  Var_07    C11   C9   C8   C7    178.88  30.0  3
+ BIR  Var_08    C11   C9   C8   C10    56.63  30.0  3
+ BIR  Var_09    H8    C8   C9   C11   -61.63  30.0  2
+ BIR  Var_10    O6    P4   C2   C3    -57.35  30.0  3
+ BIR  Var_11    O5    P4   C2   C3     72.12  30.0  2
+ BIR  Var_12    C7    P4   C2   C3   -171.50  30.0  3
+ BIR  Var_13    O6    P4   C2   N1    176.95  30.0  3
+ BIR  Var_14    O5    P4   C2   N1    -53.58  30.0  2
+ BIR  Var_15    C7    P4   C2   N1     62.81  30.0  3
+ BIR  Var_16    C10   C8   C7   P4   -166.21  30.0  3
+ BIR  Var_17    C9    C8   C7   P4     72.81  30.0  3
+ BIR  Var_18    O23   C10  C8   C7    -55.75  30.0  3
+ BIR  Var_19    N24   C10  C8   C7    125.20  30.0  3
+ BIR  Var_20    C26   C25  N24  C10    78.36  30.0  3
+ BIR  Var_21    C27   C25  N24  C10  -159.63  30.0  3
+ BIR  Var_22    C9    C8   C10  O23    67.51  30.0  2
+ BIR  Var_23    C9    C8   C10  N24  -111.54  30.0  2
+ BIR  Var_24    O28   C27  C25  N24   169.75  30.0  2
+ BIR  Var_25    O29   C27  C25  N24   -11.89  30.0  2
+ BIR  Var_26    O28   C27  C25  C26   -66.94  30.0  2
+ BIR  Var_27    O29   C27  C25  C26   111.43  30.0  2
+ BIR  Var_28    HN11  N1   C2   C3    -63.81  30.0  3
+ BIR  Var_29    HN12  N1   C2   C3     51.53  30.0  3
+ BIR  Var_30    H31   C3   C2   N1     62.79  30.0  3
+ BIR  Var_31    H32   C3   C2   N1   -176.80  30.0  3
+ BIR  Var_32    H33   C3   C2   N1    -56.61  30.0  3
+ BIR  Var_33    H2    C2   P4   O6     60.46  30.0  2
+ BIR  Var_34    H25   C25  N24  C10   -41.75  30.0  3
+ BIR  Var_35    H261  C26  C25  N24   -57.84  30.0  3
+ BIR  Var_36    H262  C26  C25  N24    62.40  30.0  3
+ BIR  Var_37    H263  C26  C25  N24  -177.71  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

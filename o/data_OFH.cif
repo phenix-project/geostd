@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OFH  OFH  (4R)-4-[(2-chloro-4-{[(2S)-1,1,1-trifluoropropan-2-yl]oxy}phenyl)sulfonyl]-N-{1-[(E)-iminomethyl]cyclopropyl}-1-{[1-(trifluoromethyl)cyclopropyl]carbonyl}-L-prolinamide  ligand  63  39  .  2022-09-22  2023-02-15
+ OFH  OFH  (4R)-4-[(2-chloro-4-{[(2S)-1,1,1-trifluoropropan-2-yl]oxy}phenyl)sulfonyl]-N-{1-[(E)-iminomethyl]cyclopropyl}-1-{[1-(trifluoromethyl)cyclopropyl]carbonyl}-L-prolinamide  ligand  63  39  .  2022-09-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OFH
@@ -319,37 +320,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OFH  CONST_01  C29  C21  C16  C6      0.00   0.0  0
- OFH  CONST_02  C29  C38  C20  C6      0.00   0.0  0
- OFH  CONST_03  C38  C20  C6   C16     0.00   0.0  0
- OFH  CONST_04  C38  C29  C21  C16     0.00   0.0  0
- OFH  CONST_05  C21  C16  C6   C20     0.00   0.0  0
- OFH  CONST_06  C21  C29  C38  C20     0.00   0.0  0
- OFH  CONST_07  C21  C16  C6   S2    180.00   0.0  0
- OFH  CONST_08  C38  C20  C6   S2    180.00   0.0  0
- OFH  CONST_09  O28  C29  C21  C16   180.00   0.0  0
- OFH  CONST_10  CL   C16  C6   C20   180.00   0.0  0
- OFH  CONST_11  O28  C29  C38  C20   180.00   0.0  0
- OFH  CONST_12  CL   C16  C21  C29   180.00   0.0  0
- OFH  CONST_13  C7   N3   C4   C1    180.00   0.0  0
- OFH  CONST_14  C9   N3   C4   C1      0.00   0.0  0
- OFH  CONST_15  H21  C21  C16  C6    180.00   0.0  0
- OFH  CONST_16  H38  C38  C20  C6    180.00   0.0  0
- OFH  CONST_17  H20  C20  C6   C16   180.00   0.0  0
- OFH  CONST_18  O27  C4   N3   C7      0.00   0.0  0
- OFH  CONST_19  C14  N17  C13  C7    180.00   0.0  0
- OFH  CONST_20  O27  C4   N3   C9    180.00   0.0  0
- OFH  CONST_21  O30  C13  N17  C14     0.00   0.0  0
- OFH  Var_01    C7   N3   C9   C5    -14.25  30.0  1
- OFH  Var_02    C11  C1   C4   N3     52.72  30.0  2
- OFH  Var_03    C12  C11  C1   C4    105.12  30.0  1
- OFH  Var_04    C16  C6   S2   C5     70.28  30.0  2
- OFH  Var_05    C25  C24  C14  N17   107.96  30.0  1
- OFH  Var_06    H12  C12  C11  C1   -106.13  30.0  1
- OFH  Var_07    H25  C25  C24  C14  -106.60  30.0  1
- OFH  Var_08    F31  C8   C1   C11   -92.76  30.0  3
- OFH  Var_09    C24  C14  N17  C13  -136.13  30.0  3
- OFH  Var_10    C38  C29  O28  C26    -1.16  30.0  2
+ OFH  CONST_01  C29   C21  C16  C6      0.00   0.0  0
+ OFH  CONST_02  C29   C38  C20  C6      0.00   0.0  0
+ OFH  CONST_03  C38   C20  C6   C16     0.00   0.0  0
+ OFH  CONST_04  C38   C29  C21  C16     0.00   0.0  0
+ OFH  CONST_05  C21   C16  C6   C20     0.00   0.0  0
+ OFH  CONST_06  C21   C29  C38  C20     0.00   0.0  0
+ OFH  CONST_07  C21   C16  C6   S2    180.00   0.0  0
+ OFH  CONST_08  C38   C20  C6   S2    180.00   0.0  0
+ OFH  CONST_09  O28   C29  C21  C16   180.00   0.0  0
+ OFH  CONST_10  CL    C16  C6   C20   180.00   0.0  0
+ OFH  CONST_11  O28   C29  C38  C20   180.00   0.0  0
+ OFH  CONST_12  CL    C16  C21  C29   180.00   0.0  0
+ OFH  CONST_13  C7    N3   C4   C1    180.00   0.0  0
+ OFH  CONST_14  C9    N3   C4   C1      0.00   0.0  0
+ OFH  CONST_15  H21   C21  C16  C6    180.00   0.0  0
+ OFH  CONST_16  H38   C38  C20  C6    180.00   0.0  0
+ OFH  CONST_17  H20   C20  C6   C16   180.00   0.0  0
+ OFH  CONST_18  O27   C4   N3   C7      0.00   0.0  0
+ OFH  CONST_19  C14   N17  C13  C7    180.00   0.0  0
+ OFH  CONST_20  O27   C4   N3   C9    180.00   0.0  0
+ OFH  CONST_21  O30   C13  N17  C14     0.00   0.0  0
+ OFH  Var_01    C7    N3   C9   C5    -14.25  30.0  1
+ OFH  Var_02    C11   C1   C4   N3     52.72  30.0  2
+ OFH  Var_03    C12   C11  C1   C4    105.12  30.0  1
+ OFH  Var_04    C16   C6   S2   C5     70.28  30.0  2
+ OFH  Var_05    C25   C24  C14  N17   107.96  30.0  1
+ OFH  Var_06    H12   C12  C11  C1   -106.13  30.0  1
+ OFH  Var_07    H25   C25  C24  C14  -106.60  30.0  1
+ OFH  Var_08    F31   C8   C1   C11   -92.76  30.0  3
+ OFH  Var_09    C24   C14  N17  C13  -136.13  30.0  3
+ OFH  Var_10    C38   C29  O28  C26    -1.16  30.0  2
+ OFH  Var_11    C5    C10  C7   N3     30.40  30.0  1
+ OFH  Var_12    C10   C5   C9   N3     33.16  30.0  1
+ OFH  Var_13    C9    C5   C10  C7    -39.59  30.0  1
+ OFH  Var_14    C10   C7   N3   C9    -10.32  30.0  1
+ OFH  Var_15    N3    C9   C5   S2    154.03  30.0  1
+ OFH  Var_16    C7    C10  C5   S2   -162.06  30.0  1
+ OFH  Var_17    C10   C7   N3   C4    177.61  30.0  1
+ OFH  Var_18    C13   C7   C10  C5    -87.10  30.0  1
+ OFH  Var_19    C9    C5   S2   C6     64.63  30.0  3
+ OFH  Var_20    C10   C5   S2   C6   -178.78  30.0  3
+ OFH  Var_21    C13   C7   N3   C9    106.74  30.0  1
+ OFH  Var_22    H10   C10  C7   N3    -87.20  30.0  1
+ OFH  Var_23    H10A  C10  C7   N3    152.46  30.0  1
+ OFH  Var_24    H5    C5   C9   N3    -85.61  30.0  1
+ OFH  Var_25    H7    C7   C10  C5    149.60  30.0  1
+ OFH  Var_26    N17   C13  C7   N3    152.88  30.0  3
+ OFH  Var_27    O30   C13  C7   N3    -33.30  30.0  3
+ OFH  Var_28    C13   C7   N3   C4    -65.33  30.0  1
+ OFH  Var_29    O22   S2   C5   C9   -178.51  30.0  3
+ OFH  Var_30    O23   S2   C5   C9    -48.92  30.0  3
+ OFH  Var_31    O22   S2   C5   C10   -61.93  30.0  3
+ OFH  Var_32    O23   S2   C5   C10    67.67  30.0  3
+ OFH  Var_33    N17   C13  C7   C10   -93.84  30.0  3
+ OFH  Var_34    O30   C13  C7   C10    79.98  30.0  3
+ OFH  Var_35    C24   C14  C18  N19  -141.74  30.0  2
+ OFH  Var_36    C25   C14  C18  N19   151.30  30.0  2
+ OFH  Var_37    H18   C18  C14  C24    37.78  30.0  3
+ OFH  Var_38    C29   O28  C26  C15  -154.64  30.0  3
+ OFH  Var_39    N19   C18  C14  N17     3.33  30.0  3
+ OFH  Var_40    C39   C26  O28  C29    83.65  30.0  2
+ OFH  Var_41    HN19  N19  C18  C14   179.80   0.0  2
+ OFH  Var_42    H26   C26  O28  C29   -40.32  30.0  2
+ OFH  Var_43    O28   C26  C15  F35   177.71  30.0  3
+ OFH  Var_44    C39   C26  C15  F35   -61.08  30.0  3
+ OFH  Var_45    O28   C26  C15  F36   -62.50  30.0  3
+ OFH  Var_46    C39   C26  C15  F36    58.71  30.0  3
+ OFH  Var_47    F34   C15  C26  C39   179.26  30.0  3
+ OFH  Var_48    F34   C15  C26  O28    58.05  30.0  3
+ OFH  Var_49    H39   C39  C26  C15   179.20  30.0  3
+ OFH  Var_50    H39A  C39  C26  C15   -60.74  30.0  3
+ OFH  Var_51    H39B  C39  C26  C15    60.60  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

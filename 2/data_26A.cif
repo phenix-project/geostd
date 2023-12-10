@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 26A  26A  'N,N-dimethyladenosine    '  ligand  38  21  .  2021-08-04  2021-08-04  
+ 26A  26A  'N,N-dimethyladenosine    '  ligand  38  21  .  2021-08-04  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_26A
@@ -213,37 +214,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 26A  CONST_01  N3    C4   C5  C6     0.00   0.0  0
- 26A  CONST_02  N9    C4   C5  C6   180.00   0.0  0
- 26A  CONST_03  C8    N7   C5  C6   180.00   0.0  0
- 26A  CONST_04  N3    C2   N1  C6     0.00   0.0  0
- 26A  CONST_05  C2    N1   C6  C5     0.00   0.0  0
- 26A  CONST_06  C2    N3   C4  C5     0.00   0.0  0
- 26A  CONST_07  C8    N9   C4  C5     0.00   0.0  0
- 26A  CONST_08  N9    C8   N7  C5     0.00   0.0  0
- 26A  CONST_09  N1    C6   C5  C4     0.00   0.0  0
- 26A  CONST_10  C8    N7   C5  C4     0.00   0.0  0
- 26A  CONST_11  N1    C2   N3  C4     0.00   0.0  0
- 26A  CONST_12  N7    C8   N9  C4     0.00   0.0  0
- 26A  CONST_13  N7    C5   C4  N3   180.00   0.0  0
- 26A  CONST_14  C8    N9   C4  N3   180.00   0.0  0
- 26A  CONST_15  N9    C4   N3  C2   180.00   0.0  0
- 26A  CONST_16  N7    C5   C6  N1   180.00   0.0  0
- 26A  CONST_17  N9    C4   C5  N7     0.00   0.0  0
- 26A  CONST_18  C1'   N9   C4  C5   180.00   0.0  0
- 26A  CONST_19  C1'   N9   C4  N3     0.00   0.0  0
- 26A  CONST_20  C1'   N9   C8  N7   180.00   0.0  0
- 26A  CONST_21  C4    C5   C6  N6   180.00   0.0  0
- 26A  CONST_22  N7    C5   C6  N6     0.00   0.0  0
- 26A  CONST_23  C2    N1   C6  N6   180.00   0.0  0
- 26A  CONST_24  H2    C2   N1  C6   180.00   0.0  0
- 26A  CONST_25  H8    C8   N7  C5   180.00   0.0  0
- 26A  CONST_26  C5    C6   N6  C10  180.00   0.0  0
- 26A  CONST_27  N1    C6   N6  C10    0.00   0.0  0
- 26A  CONST_28  C5    C6   N6  C9     0.00   0.0  0
- 26A  CONST_29  N1    C6   N6  C9   180.00   0.0  0
- 26A  Var_01    H101  C10  N6  C6   -46.87  30.0  3
- 26A  Var_02    H91   C9   N6  C6   -93.87  30.0  3
+ 26A  CONST_01  N3    C4   C5   C6      0.00   0.0  0
+ 26A  CONST_02  N9    C4   C5   C6    180.00   0.0  0
+ 26A  CONST_03  C8    N7   C5   C6    180.00   0.0  0
+ 26A  CONST_04  N3    C2   N1   C6      0.00   0.0  0
+ 26A  CONST_05  C2    N1   C6   C5      0.00   0.0  0
+ 26A  CONST_06  C2    N3   C4   C5      0.00   0.0  0
+ 26A  CONST_07  C8    N9   C4   C5      0.00   0.0  0
+ 26A  CONST_08  N9    C8   N7   C5      0.00   0.0  0
+ 26A  CONST_09  N1    C6   C5   C4      0.00   0.0  0
+ 26A  CONST_10  C8    N7   C5   C4      0.00   0.0  0
+ 26A  CONST_11  N1    C2   N3   C4      0.00   0.0  0
+ 26A  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ 26A  CONST_13  N7    C5   C4   N3    180.00   0.0  0
+ 26A  CONST_14  C8    N9   C4   N3    180.00   0.0  0
+ 26A  CONST_15  N9    C4   N3   C2    180.00   0.0  0
+ 26A  CONST_16  N7    C5   C6   N1    180.00   0.0  0
+ 26A  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ 26A  CONST_18  C1'   N9   C4   C5    180.00   0.0  0
+ 26A  CONST_19  C1'   N9   C4   N3      0.00   0.0  0
+ 26A  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ 26A  CONST_21  C4    C5   C6   N6    180.00   0.0  0
+ 26A  CONST_22  N7    C5   C6   N6      0.00   0.0  0
+ 26A  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ 26A  CONST_24  H2    C2   N1   C6    180.00   0.0  0
+ 26A  CONST_25  H8    C8   N7   C5    180.00   0.0  0
+ 26A  CONST_26  C5    C6   N6   C10   180.00   0.0  0
+ 26A  CONST_27  N1    C6   N6   C10     0.00   0.0  0
+ 26A  CONST_28  C5    C6   N6   C9      0.00   0.0  0
+ 26A  CONST_29  N1    C6   N6   C9    180.00   0.0  0
+ 26A  Var_01    H101  C10  N6   C6    -46.87  30.0  3
+ 26A  Var_02    H91   C9   N6   C6    -93.87  30.0  3
+ 26A  Var_03    O4'   C1'  N9   C4   -165.77  30.0  2
+ 26A  Var_04    C2'   C1'  N9   C4     76.37  30.0  2
+ 26A  Var_05    O4'   C1'  N9   C8     14.52  30.0  2
+ 26A  Var_06    C2'   C1'  N9   C8   -103.33  30.0  2
+ 26A  Var_07    C4'   O4'  C1'  N9   -110.66  30.0  1
+ 26A  Var_08    C3'   C2'  C1'  N9     89.41  30.0  1
+ 26A  Var_09    C3'   C4'  O4'  C1'    14.55  30.0  1
+ 26A  Var_10    C4'   C3'  C2'  C1'    36.98  30.0  1
+ 26A  Var_11    C3'   C2'  C1'  O4'   -29.85  30.0  1
+ 26A  Var_12    C2'   C3'  C4'  O4'   -32.50  30.0  1
+ 26A  Var_13    C2'   C1'  O4'  C4'     9.99  30.0  1
+ 26A  Var_14    O2'   C2'  C1'  N9   -154.21  30.0  1
+ 26A  Var_15    C5'   C4'  O4'  C1'   137.13  30.0  1
+ 26A  Var_16    O3'   C3'  C2'  C1'   155.46  30.0  1
+ 26A  Var_17    O2'   C2'  C1'  O4'    86.53  30.0  1
+ 26A  Var_18    O3'   C3'  C4'  O4'  -153.70  30.0  1
+ 26A  Var_19    O2'   C2'  C3'  C4'   -76.89  30.0  1
+ 26A  Var_20    C2'   C3'  C4'  C5'  -153.49  30.0  1
+ 26A  Var_21    H1'   C1'  N9   C4    -45.85  30.0  2
+ 26A  Var_22    H2'   C2'  C1'  N9    -30.81  30.0  1
+ 26A  Var_23    H4'   C4'  O4'  C1'  -102.60  30.0  1
+ 26A  Var_24    H3'   C3'  C2'  C1'   -79.14  30.0  1
+ 26A  Var_25    O5'   C5'  C4'  O4'    63.92  30.0  3
+ 26A  Var_26    O3'   C3'  C4'  C5'    85.32  30.0  1
+ 26A  Var_27    C3'   C4'  C5'  O5'  -178.50  30.0  2
+ 26A  Var_28    O3'   C3'  C2'  O2'    41.60  30.0  1
+ 26A  Var_29    HO'2  O2'  C2'  C1'  -149.57  30.0  3
+ 26A  Var_30    H5'1  C5'  C4'  O4'  -174.51  30.0  3
+ 26A  Var_31    H5'2  C5'  C4'  O4'   -59.05  30.0  3
+ 26A  Var_32    HO'3  O3'  C3'  C4'  -162.15  30.0  3
+ 26A  Var_33    H5'   O5'  C5'  C4'   176.38  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

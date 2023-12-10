@@ -20,11 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 8BF  8BF  "(1~{R},3~{R})-5-[(2~{E})-2-[(1~{R},3~{a}~{S},7~{a}~{R})-1-[(2~{R},6~{R})-6-(4-hydroxyphenyl)-6-oxidanyl-hexan-2-yl]-7~{a}-methyl-2,3,3~{a},5,6,7-hexahydro-1~{H}-inden-4-ylidene]ethylidene]-2-methylidene-cyclohexane-1,3-diol"
-  ligand  79  35  .  2021-08-06  2021-08-06  
+ 8BF  8BF  (1~{R},3~{R})-5-[(2~{E})-2-[(1~{R},3~{a}~{S},7~{a}~{R})-1-[(2~{R},6~{R})-6-(4-hydroxyphenyl)-6-oxidanyl-hexan-2-yl]-7~{a}-methyl-2,3,3~{a},5,6,7-hexahydro-1~{H}-inden-4-ylidene]ethylidene]-2-methylidene-cyclohexane-1,3-diol  ligand  79  35  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_8BF
@@ -381,32 +381,103 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 8BF  CONST_01  C23  C24  C25  C26    0.00   0.0  0
- 8BF  CONST_02  C23  C28  C27  C26    0.00   0.0  0
- 8BF  CONST_03  C28  C23  C24  C25    0.00   0.0  0
- 8BF  CONST_04  C28  C27  C26  C25    0.00   0.0  0
- 8BF  CONST_05  C27  C28  C23  C24    0.00   0.0  0
- 8BF  CONST_06  C27  C26  C25  C24    0.00   0.0  0
- 8BF  CONST_07  C24  C25  C26  O35  180.00   0.0  0
- 8BF  CONST_08  C28  C27  C26  O35  180.00   0.0  0
- 8BF  CONST_09  C22  C23  C24  C25  180.00   0.0  0
- 8BF  CONST_10  C22  C23  C28  C27  180.00   0.0  0
- 8BF  CONST_11  H3   C24  C25  C26  180.00   0.0  0
- 8BF  CONST_12  H5   C28  C27  C26  180.00   0.0  0
- 8BF  CONST_13  H4   C27  C26  C25  180.00   0.0  0
- 8BF  CONST_14  H2   C25  C26  C27  180.00   0.0  0
- 8BF  Var_01    C14  C15  C16  C17    9.52  30.0  1
- 8BF  Var_02    C10  C11  C12  C13  -53.80  30.0  1
- 8BF  Var_03    C9   C10  C11  C12   50.25  30.0  1
- 8BF  Var_04    C14  C9   C10  C11  -51.68  30.0  1
- 8BF  Var_05    C4   C5   C6   C1    55.90  30.0  1
- 8BF  Var_06    C2   C1   C6   C5   -55.72  30.0  1
- 8BF  Var_07    C7   C8   C9   C10   -1.69  30.0  2
- 8BF  Var_08    C6   C7   C8   C9   177.28  30.0  1
- 8BF  Var_09    C1   C6   C7   C8   179.63  30.0  2
- 8BF  Var_10    H41  C31  C3   C4   179.18  30.0  2
- 8BF  Var_11    C19  C20  C21  C22  179.57  30.0  3
- 8BF  Var_12    C18  C19  C20  C21  176.21  30.0  1
+ 8BF  CONST_01  C23  C24  C25  C26     0.00   0.0  0
+ 8BF  CONST_02  C23  C28  C27  C26     0.00   0.0  0
+ 8BF  CONST_03  C28  C23  C24  C25     0.00   0.0  0
+ 8BF  CONST_04  C28  C27  C26  C25     0.00   0.0  0
+ 8BF  CONST_05  C27  C28  C23  C24     0.00   0.0  0
+ 8BF  CONST_06  C27  C26  C25  C24     0.00   0.0  0
+ 8BF  CONST_07  C24  C25  C26  O35   180.00   0.0  0
+ 8BF  CONST_08  C28  C27  C26  O35   180.00   0.0  0
+ 8BF  CONST_09  C22  C23  C24  C25   180.00   0.0  0
+ 8BF  CONST_10  C22  C23  C28  C27   180.00   0.0  0
+ 8BF  CONST_11  H3   C24  C25  C26   180.00   0.0  0
+ 8BF  CONST_12  H5   C28  C27  C26   180.00   0.0  0
+ 8BF  CONST_13  H4   C27  C26  C25   180.00   0.0  0
+ 8BF  CONST_14  H2   C25  C26  C27   180.00   0.0  0
+ 8BF  Var_01    C14  C15  C16  C17     9.52  30.0  1
+ 8BF  Var_02    C10  C11  C12  C13   -53.80  30.0  1
+ 8BF  Var_03    C9   C10  C11  C12    50.25  30.0  1
+ 8BF  Var_04    C14  C9   C10  C11   -51.68  30.0  1
+ 8BF  Var_05    C4   C5   C6   C1     55.90  30.0  1
+ 8BF  Var_06    C2   C1   C6   C5    -55.72  30.0  1
+ 8BF  Var_07    C7   C8   C9   C10    -1.69  30.0  2
+ 8BF  Var_08    C6   C7   C8   C9    177.28  30.0  1
+ 8BF  Var_09    C1   C6   C7   C8    179.63  30.0  2
+ 8BF  Var_10    H41  C31  C3   C4    179.18  30.0  2
+ 8BF  Var_11    C19  C20  C21  C22   179.57  30.0  3
+ 8BF  Var_12    C18  C19  C20  C21   176.21  30.0  1
+ 8BF  Var_13    C9   C14  C13  C17   178.92  30.0  1
+ 8BF  Var_14    C15  C14  C13  C17    46.21  30.0  1
+ 8BF  Var_15    C11  C12  C13  C17   167.40  30.0  1
+ 8BF  Var_16    C10  C9   C14  C13    57.66  30.0  1
+ 8BF  Var_17    C16  C15  C14  C13   -34.62  30.0  1
+ 8BF  Var_18    C15  C16  C17  C13    18.89  30.0  1
+ 8BF  Var_19    C9   C14  C13  C12   -59.12  30.0  1
+ 8BF  Var_20    C15  C14  C13  C12   168.18  30.0  1
+ 8BF  Var_21    C16  C17  C13  C12  -154.23  30.0  1
+ 8BF  Var_22    C14  C13  C12  C11    56.25  30.0  1
+ 8BF  Var_23    C15  C14  C9   C10  -178.24  30.0  1
+ 8BF  Var_24    C9   C14  C15  C16  -162.64  30.0  1
+ 8BF  Var_25    C14  C13  C17  C16   -38.92  30.0  1
+ 8BF  Var_26    C3   C2   C1   C6     53.36  30.0  1
+ 8BF  Var_27    C3   C4   C5   C6    -54.03  30.0  1
+ 8BF  Var_28    C4   C3   C2   C1    -55.80  30.0  1
+ 8BF  Var_29    C2   C3   C4   C5     56.25  30.0  1
+ 8BF  Var_30    C15  C16  C17  C18   148.32  30.0  1
+ 8BF  Var_31    C14  C13  C17  C18  -164.08  30.0  1
+ 8BF  Var_32    C12  C13  C17  C18    80.61  30.0  1
+ 8BF  Var_33    C8   C9   C14  C13  -123.62  30.0  1
+ 8BF  Var_34    C9   C14  C13  C32    62.17  30.0  1
+ 8BF  Var_35    C15  C14  C13  C32   -70.53  30.0  1
+ 8BF  Var_36    C16  C17  C13  C32    78.04  30.0  1
+ 8BF  Var_37    C11  C12  C13  C32   -65.02  30.0  1
+ 8BF  Var_38    C8   C9   C14  C15     0.48  30.0  1
+ 8BF  Var_39    O29  C2   C1   C6    -67.83  30.0  1
+ 8BF  Var_40    O30  C4   C5   C6   -178.27  30.0  1
+ 8BF  Var_41    C31  C3   C2   C1    121.79  30.0  1
+ 8BF  Var_42    C31  C3   C4   C5   -121.28  30.0  1
+ 8BF  Var_43    O29  C2   C3   C4     62.87  30.0  1
+ 8BF  Var_44    C2   C3   C4   O30   176.97  30.0  1
+ 8BF  Var_45    H32  C14  C13  C17   -66.03  30.0  1
+ 8BF  Var_46    H22  C12  C13  C17   -70.34  30.0  1
+ 8BF  Var_47    H23  C12  C13  C17    46.85  30.0  1
+ 8BF  Var_48    H28  C16  C17  C13   140.85  30.0  1
+ 8BF  Var_49    H29  C16  C17  C13  -101.64  30.0  1
+ 8BF  Var_50    H18  C17  C13  C12   -40.19  30.0  1
+ 8BF  Var_51    H43  C2   C1   C6    172.21  30.0  1
+ 8BF  Var_52    H39  C4   C5   C6     62.74  30.0  1
+ 8BF  Var_53    C21  C22  C23  C24   101.07  30.0  2
+ 8BF  Var_54    O34  C22  C23  C24  -132.38  30.0  2
+ 8BF  Var_55    C21  C22  C23  C28   -76.90  30.0  2
+ 8BF  Var_56    O34  C22  C23  C28    49.65  30.0  2
+ 8BF  Var_57    C16  C17  C18  C19    57.88  30.0  1
+ 8BF  Var_58    C13  C17  C18  C19   178.74  30.0  1
+ 8BF  Var_59    C32  C13  C17  C18   -47.12  30.0  1
+ 8BF  Var_60    C16  C17  C18  C33  -178.36  30.0  1
+ 8BF  Var_61    C13  C17  C18  C33   -57.50  30.0  1
+ 8BF  Var_62    C31  C3   C4   O30    -0.56  30.0  1
+ 8BF  Var_63    O29  C2   C3   C31  -119.54  30.0  1
+ 8BF  Var_64    H1   O35  C26  C25  -178.74  30.0  2
+ 8BF  Var_65    H6   C22  C23  C24   -16.73  30.0  2
+ 8BF  Var_66    H19  C32  C13  C17    76.05  30.0  3
+ 8BF  Var_67    H20  C32  C13  C17  -163.91  30.0  3
+ 8BF  Var_68    H21  C32  C13  C17   -43.58  30.0  3
+ 8BF  Var_69    H14  C18  C17  C13    62.16  30.0  3
+ 8BF  Var_70    H44  O29  C2   C1   -179.32  30.0  3
+ 8BF  Var_71    H40  O30  C4   C5   -169.75  30.0  3
+ 8BF  Var_72    C20  C21  C22  C23  -173.01  30.0  1
+ 8BF  Var_73    C17  C18  C19  C20  -168.62  30.0  3
+ 8BF  Var_74    H8   C21  C22  C23   -51.21  30.0  1
+ 8BF  Var_75    H9   C21  C22  C23    63.25  30.0  1
+ 8BF  Var_76    H7   O34  C22  C23   -78.97  30.0  3
+ 8BF  Var_77    H12  C19  C18  C17    67.75  30.0  1
+ 8BF  Var_78    H13  C19  C18  C17   -47.63  30.0  1
+ 8BF  Var_79    H15  C33  C18  C17    68.31  30.0  3
+ 8BF  Var_80    H16  C33  C18  C17  -172.05  30.0  3
+ 8BF  Var_81    H17  C33  C18  C17   -52.13  30.0  3
+ 8BF  Var_82    C20  C21  C22  O34    60.33  30.0  1
+ 8BF  Var_83    C33  C18  C19  C20    66.08  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

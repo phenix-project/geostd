@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7FS  7FS  (9beta,13alpha,17beta)-17-{[4-(propan-2-yl)phenyl]amino}estra-1(10),2,4-trien-3-ol  ligand  64  29  .  2021-08-05  2021-08-05  
+ 7FS  7FS  (9beta,13alpha,17beta)-17-{[4-(propan-2-yl)phenyl]amino}estra-1(10),2,4-trien-3-ol  ligand  64  29  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7FS
@@ -327,38 +328,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 7FS  CONST_01  C04  C03  C02  C01    0.00   0.0  0
- 7FS  CONST_02  C04  C05  C06  C01    0.00   0.0  0
- 7FS  CONST_03  C05  C04  C03  C02    0.00   0.0  0
- 7FS  CONST_04  C05  C06  C01  C02    0.00   0.0  0
- 7FS  CONST_05  C06  C05  C04  C03    0.00   0.0  0
- 7FS  CONST_06  C06  C01  C02  C03    0.00   0.0  0
- 7FS  CONST_07  C4   C3   C2   C1     0.00   0.0  0
- 7FS  CONST_08  C4   C5   C6   C1     0.00   0.0  0
- 7FS  CONST_09  C5   C6   C1   C2     0.00   0.0  0
- 7FS  CONST_10  C5   C4   C3   C2     0.00   0.0  0
- 7FS  CONST_11  C6   C1   C2   C3     0.00   0.0  0
- 7FS  CONST_12  C6   C5   C4   C3     0.00   0.0  0
- 7FS  CONST_13  O01  C02  C03  C04  180.00   0.0  0
- 7FS  CONST_14  O01  C02  C01  C06  180.00   0.0  0
- 7FS  CONST_15  C3   C2   C1   N01  180.00   0.0  0
- 7FS  CONST_16  C5   C6   C1   N01  180.00   0.0  0
- 7FS  CONST_17  C7   C4   C3   C2   180.00   0.0  0
- 7FS  CONST_18  C7   C4   C5   C6   180.00   0.0  0
- 7FS  CONST_21  H2   C03  C02  C01  180.00   0.0  0
- 7FS  CONST_22  H3   C06  C01  C02  180.00   0.0  0
- 7FS  CONST_23  H1   C01  C02  C03  180.00   0.0  0
- 7FS  CONST_24  H23  C3   C2   C1   180.00   0.0  0
- 7FS  CONST_25  H27  C5   C6   C1   180.00   0.0  0
- 7FS  CONST_26  H28  C6   C1   C2   180.00   0.0  0
- 7FS  CONST_27  H22  C2   C3   C4   180.00   0.0  0
- 7FS  Var_01    C08  C07  C04  C03  163.63  30.0  1
- 7FS  Var_02    C09  C08  C07  C04   47.64  30.0  1
- 7FS  Var_03    C12  C13  C14  C10  -53.75  30.0  1
- 7FS  Var_04    C17  C16  C15  C11    4.72  30.0  1
- 7FS  Var_05    C8   C7   C4   C3   116.00  30.0  2
- 7FS  Var_06    H30  C8   C7   C4    63.10  30.0  3
- 7FS  Var_07    H33  C9   C7   C4    56.49  30.0  3
+ 7FS  CONST_01  C04  C03  C02  C01     0.00   0.0  0
+ 7FS  CONST_02  C04  C05  C06  C01     0.00   0.0  0
+ 7FS  CONST_03  C05  C04  C03  C02     0.00   0.0  0
+ 7FS  CONST_04  C05  C06  C01  C02     0.00   0.0  0
+ 7FS  CONST_05  C06  C05  C04  C03     0.00   0.0  0
+ 7FS  CONST_06  C06  C01  C02  C03     0.00   0.0  0
+ 7FS  CONST_07  C4   C3   C2   C1      0.00   0.0  0
+ 7FS  CONST_08  C4   C5   C6   C1      0.00   0.0  0
+ 7FS  CONST_09  C5   C6   C1   C2      0.00   0.0  0
+ 7FS  CONST_10  C5   C4   C3   C2      0.00   0.0  0
+ 7FS  CONST_11  C6   C1   C2   C3      0.00   0.0  0
+ 7FS  CONST_12  C6   C5   C4   C3      0.00   0.0  0
+ 7FS  CONST_13  O01  C02  C03  C04   180.00   0.0  0
+ 7FS  CONST_14  O01  C02  C01  C06   180.00   0.0  0
+ 7FS  CONST_15  C3   C2   C1   N01   180.00   0.0  0
+ 7FS  CONST_16  C5   C6   C1   N01   180.00   0.0  0
+ 7FS  CONST_17  C7   C4   C3   C2    180.00   0.0  0
+ 7FS  CONST_18  C7   C4   C5   C6    180.00   0.0  0
+ 7FS  CONST_19  H2   C03  C02  C01   180.00   0.0  0
+ 7FS  CONST_20  H3   C06  C01  C02   180.00   0.0  0
+ 7FS  CONST_21  H1   C01  C02  C03   180.00   0.0  0
+ 7FS  CONST_22  H23  C3   C2   C1    180.00   0.0  0
+ 7FS  CONST_23  H27  C5   C6   C1    180.00   0.0  0
+ 7FS  CONST_24  H28  C6   C1   C2    180.00   0.0  0
+ 7FS  CONST_25  H22  C2   C3   C4    180.00   0.0  0
+ 7FS  Var_01    C08  C07  C04  C03   163.63  30.0  1
+ 7FS  Var_02    C09  C08  C07  C04    47.64  30.0  1
+ 7FS  Var_03    C12  C13  C14  C10   -53.75  30.0  1
+ 7FS  Var_04    C17  C16  C15  C11     4.72  30.0  1
+ 7FS  Var_05    C8   C7   C4   C3    116.00  30.0  2
+ 7FS  Var_06    H30  C8   C7   C4     63.10  30.0  3
+ 7FS  Var_07    H33  C9   C7   C4     56.49  30.0  3
+ 7FS  Var_08    C09  C10  C05  C04   -20.51  30.0  1
+ 7FS  Var_09    C14  C10  C05  C04  -148.00  30.0  1
+ 7FS  Var_10    C08  C09  C10  C05    50.80  30.0  1
+ 7FS  Var_11    C11  C09  C10  C05   174.84  30.0  1
+ 7FS  Var_12    C13  C14  C10  C05  -177.65  30.0  1
+ 7FS  Var_13    C09  C10  C05  C06   162.86  30.0  1
+ 7FS  Var_14    C14  C10  C05  C06    35.37  30.0  1
+ 7FS  Var_15    C11  C09  C08  C07   173.70  30.0  1
+ 7FS  Var_16    C10  C09  C08  C07   -65.56  30.0  1
+ 7FS  Var_17    C15  C11  C09  C08   -54.85  30.0  1
+ 7FS  Var_18    C12  C11  C09  C08  -178.64  30.0  1
+ 7FS  Var_19    C14  C10  C09  C08   179.79  30.0  1
+ 7FS  Var_20    C16  C15  C11  C09  -160.60  30.0  1
+ 7FS  Var_21    C17  C12  C11  C09   179.64  30.0  1
+ 7FS  Var_22    C13  C12  C11  C09   -59.39  30.0  1
+ 7FS  Var_23    C13  C14  C10  C09    54.63  30.0  1
+ 7FS  Var_24    C15  C11  C09  C10  -176.33  30.0  1
+ 7FS  Var_25    C12  C11  C09  C10    59.87  30.0  1
+ 7FS  Var_26    C14  C10  C09  C11   -56.17  30.0  1
+ 7FS  Var_27    C16  C17  C12  C11   -43.68  30.0  1
+ 7FS  Var_28    C14  C13  C12  C11    54.38  30.0  1
+ 7FS  Var_29    C15  C16  C17  C12    24.66  30.0  1
+ 7FS  Var_30    C16  C15  C11  C12   -32.66  30.0  1
+ 7FS  Var_31    C16  C17  C12  C13  -159.74  30.0  1
+ 7FS  Var_32    C15  C11  C12  C13   168.51  30.0  1
+ 7FS  Var_33    C17  C12  C13  C14   164.72  30.0  1
+ 7FS  Var_34    C17  C12  C11  C15    47.54  30.0  1
+ 7FS  Var_35    C18  C12  C11  C09    63.07  30.0  1
+ 7FS  Var_36    N01  C17  C12  C11  -171.19  30.0  1
+ 7FS  Var_37    C1   N01  C17  C12  -169.34  30.0  3
+ 7FS  Var_38    N01  C17  C12  C13    72.74  30.0  1
+ 7FS  Var_39    C18  C12  C13  C14   -69.71  30.0  1
+ 7FS  Var_40    N01  C17  C16  C15   151.00  30.0  1
+ 7FS  Var_41    C18  C12  C11  C15   -69.03  30.0  1
+ 7FS  Var_42    C1   N01  C17  C16    69.88  30.0  3
+ 7FS  Var_43    C18  C12  C17  C16    74.79  30.0  1
+ 7FS  Var_44    H9   C10  C05  C04    94.72  30.0  1
+ 7FS  Var_45    H8   C09  C10  C05   -66.12  30.0  1
+ 7FS  Var_46    H13  C14  C10  C05   -57.10  30.0  1
+ 7FS  Var_47    H14  C14  C10  C05    59.10  30.0  1
+ 7FS  Var_48    H10  C11  C09  C08    65.77  30.0  1
+ 7FS  Var_49    H15  C15  C11  C09   -41.00  30.0  1
+ 7FS  Var_50    H16  C15  C11  C09    78.15  30.0  1
+ 7FS  Var_51    H19  C17  C12  C11    70.61  30.0  1
+ 7FS  Var_52    C18  C12  C17  N01   -52.72  30.0  1
+ 7FS  Var_53    H20  O01  C02  C01     1.64  30.0  2
+ 7FS  Var_54    H24  C18  C12  C11    58.59  30.0  3
+ 7FS  Var_55    H25  C18  C12  C11   179.24  30.0  3
+ 7FS  Var_56    H26  C18  C12  C11   -62.45  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

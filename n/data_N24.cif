@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- N24  N24  (2S)-2-(3-bromophenyl)-3-(5-chloro-2-hydroxyphenyl)-1,3-thiazolidin-4-one  ligand  32  21  .  2021-08-15  2022-09-16
+ N24  N24  (2S)-2-(3-bromophenyl)-3-(5-chloro-2-hydroxyphenyl)-1,3-thiazolidin-4-one  ligand  32  21  .  2021-08-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_N24
@@ -187,43 +188,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- N24  CONST_01  CAT  CAU  CAN  CAJ     0.00   0.0  0
- N24  CONST_02  CAT  CAS  CAF  CAJ     0.00   0.0  0
- N24  CONST_03  CAS  CAF  CAJ  CAN     0.00   0.0  0
- N24  CONST_04  CAS  CAT  CAU  CAN     0.00   0.0  0
- N24  CONST_05  CAF  CAJ  CAN  CAU     0.00   0.0  0
- N24  CONST_06  CAF  CAS  CAT  CAU     0.00   0.0  0
- N24  CONST_07  CAO  CAM  CAG  CAC     0.00   0.0  0
- N24  CONST_08  CAO  CAL  CAI  CAC     0.00   0.0  0
- N24  CONST_09  CAL  CAI  CAC  CAG     0.00   0.0  0
- N24  CONST_10  CAL  CAO  CAM  CAG     0.00   0.0  0
- N24  CONST_11  CAI  CAC  CAG  CAM     0.00   0.0  0
- N24  CONST_12  CAI  CAL  CAO  CAM     0.00   0.0  0
- N24  CONST_13  CAB  CAF  CAJ  CAN   180.00   0.0  0
- N24  CONST_14  CAB  CAF  CAS  CAT   180.00   0.0  0
- N24  CONST_15  CAM  CAG  CAC  NAA   180.00   0.0  0
- N24  CONST_16  CAL  CAI  CAC  NAA   180.00   0.0  0
- N24  CONST_17  CAH  CAE  NAA  CAB     0.00   0.0  0
- N24  CONST_18  CAC  NAA  CAE  CAH   180.00   0.0  0
- N24  CONST_19  CAF  CAJ  CAN  BRAR  180.00   0.0  0
- N24  CONST_20  CAT  CAU  CAN  BRAR  180.00   0.0  0
- N24  CONST_21  OAQ  CAI  CAC  NAA     0.00   0.0  0
- N24  CONST_22  CL   CAM  CAG  CAC   180.00   0.0  0
- N24  CONST_23  OAQ  CAI  CAC  CAG   180.00   0.0  0
- N24  CONST_24  OAQ  CAI  CAL  CAO   180.00   0.0  0
- N24  CONST_25  CL   CAM  CAO  CAL   180.00   0.0  0
- N24  CONST_26  OAK  CAE  NAA  CAB   180.00   0.0  0
- N24  CONST_27  CAC  NAA  CAE  OAK     0.00   0.0  0
- N24  CONST_28  HAU  CAU  CAN  CAJ   180.00   0.0  0
- N24  CONST_29  HAS  CAS  CAF  CAJ   180.00   0.0  0
- N24  CONST_30  HAT  CAT  CAU  CAN   180.00   0.0  0
- N24  CONST_31  HAJ  CAJ  CAN  CAU   180.00   0.0  0
- N24  CONST_32  HAG  CAG  CAC  NAA     0.00   0.0  0
- N24  CONST_33  HAL  CAL  CAI  CAC   180.00   0.0  0
- N24  CONST_34  HAO  CAO  CAM  CAG   180.00   0.0  0
- N24  Var_01    CAE  CAH  SAD  CAB    19.43  30.0  1
- N24  Var_02    CAG  CAC  NAA  CAB   105.56  30.0  2
- N24  Var_03    NAA  CAE  CAH  SAD   -12.53  30.0  1
+ N24  CONST_01  CAT   CAU  CAN  CAJ      0.00   0.0  0
+ N24  CONST_02  CAT   CAS  CAF  CAJ      0.00   0.0  0
+ N24  CONST_03  CAS   CAF  CAJ  CAN      0.00   0.0  0
+ N24  CONST_04  CAS   CAT  CAU  CAN      0.00   0.0  0
+ N24  CONST_05  CAF   CAJ  CAN  CAU      0.00   0.0  0
+ N24  CONST_06  CAF   CAS  CAT  CAU      0.00   0.0  0
+ N24  CONST_07  CAO   CAM  CAG  CAC      0.00   0.0  0
+ N24  CONST_08  CAO   CAL  CAI  CAC      0.00   0.0  0
+ N24  CONST_09  CAL   CAI  CAC  CAG      0.00   0.0  0
+ N24  CONST_10  CAL   CAO  CAM  CAG      0.00   0.0  0
+ N24  CONST_11  CAI   CAC  CAG  CAM      0.00   0.0  0
+ N24  CONST_12  CAI   CAL  CAO  CAM      0.00   0.0  0
+ N24  CONST_13  CAB   CAF  CAJ  CAN    180.00   0.0  0
+ N24  CONST_14  CAB   CAF  CAS  CAT    180.00   0.0  0
+ N24  CONST_15  CAM   CAG  CAC  NAA    180.00   0.0  0
+ N24  CONST_16  CAL   CAI  CAC  NAA    180.00   0.0  0
+ N24  CONST_17  CAH   CAE  NAA  CAB      0.00   0.0  0
+ N24  CONST_18  CAC   NAA  CAE  CAH    180.00   0.0  0
+ N24  CONST_19  CAF   CAJ  CAN  BRAR   180.00   0.0  0
+ N24  CONST_20  CAT   CAU  CAN  BRAR   180.00   0.0  0
+ N24  CONST_21  OAQ   CAI  CAC  NAA      0.00   0.0  0
+ N24  CONST_22  CL    CAM  CAG  CAC    180.00   0.0  0
+ N24  CONST_23  OAQ   CAI  CAC  CAG    180.00   0.0  0
+ N24  CONST_24  OAQ   CAI  CAL  CAO    180.00   0.0  0
+ N24  CONST_25  CL    CAM  CAO  CAL    180.00   0.0  0
+ N24  CONST_26  OAK   CAE  NAA  CAB    180.00   0.0  0
+ N24  CONST_27  CAC   NAA  CAE  OAK      0.00   0.0  0
+ N24  CONST_28  HAU   CAU  CAN  CAJ    180.00   0.0  0
+ N24  CONST_29  HAS   CAS  CAF  CAJ    180.00   0.0  0
+ N24  CONST_30  HAT   CAT  CAU  CAN    180.00   0.0  0
+ N24  CONST_31  HAJ   CAJ  CAN  CAU    180.00   0.0  0
+ N24  CONST_32  HAG   CAG  CAC  NAA      0.00   0.0  0
+ N24  CONST_33  HAL   CAL  CAI  CAC    180.00   0.0  0
+ N24  CONST_34  HAO   CAO  CAM  CAG    180.00   0.0  0
+ N24  Var_01    CAE   CAH  SAD  CAB     19.43  30.0  1
+ N24  Var_02    CAG   CAC  NAA  CAB    105.56  30.0  2
+ N24  Var_03    NAA   CAE  CAH  SAD    -12.53  30.0  1
+ N24  Var_04    SAD   CAB  CAF  CAJ   -124.42  30.0  2
+ N24  Var_05    NAA   CAB  CAF  CAJ    119.20  30.0  2
+ N24  Var_06    SAD   CAB  CAF  CAS     57.57  30.0  2
+ N24  Var_07    NAA   CAB  CAF  CAS    -58.80  30.0  2
+ N24  Var_08    CAH   SAD  CAB  CAF   -141.79  30.0  1
+ N24  Var_09    CAE   NAA  CAB  CAF    138.69  30.0  1
+ N24  Var_10    CAC   NAA  CAB  CAF    -51.73  30.0  1
+ N24  Var_11    CAE   NAA  CAB  SAD     18.37  30.0  1
+ N24  Var_12    CAC   NAA  CAB  SAD   -172.06  30.0  1
+ N24  Var_13    NAA   CAB  SAD  CAH    -20.92  30.0  1
+ N24  Var_14    HAB   CAB  CAF  CAJ     -3.50  30.0  2
+ N24  Var_15    HOAQ  OAQ  CAI  CAC    178.66  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- P1E  P1E  4-{[4-{[(1R,2R)-2-(dimethylamino)cyclopentyl]amino}-5-(trifluoromethyl)pyrimidin-2-yl]amino}-N-methylbenzenesulfonamide  ligand  56  31  .  2021-08-19  2021-08-19  
+ P1E  P1E  4-{[4-{[(1R,2R)-2-(dimethylamino)cyclopentyl]amino}-5-(trifluoromethyl)pyrimidin-2-yl]amino}-N-methylbenzenesulfonamide  ligand  56  31  .  2021-08-19  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_P1E
@@ -283,46 +284,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- P1E  CONST_01  C1   C6   C5   C4      0.00   0.0  0
- P1E  CONST_02  C1   C2   C3   C4      0.00   0.0  0
- P1E  CONST_03  C3   C4   C5   C6      0.00   0.0  0
- P1E  CONST_04  C3   C2   C1   C6      0.00   0.0  0
- P1E  CONST_05  C12  C13  N14  C9      0.00   0.0  0
- P1E  CONST_06  C12  C11  N10  C9      0.00   0.0  0
- P1E  CONST_07  N10  C11  C12  C13     0.00   0.0  0
- P1E  CONST_08  N10  C9   N14  C13     0.00   0.0  0
- P1E  CONST_09  C11  N10  C9   N14     0.00   0.0  0
- P1E  CONST_10  C11  C12  C13  N14     0.00   0.0  0
- P1E  CONST_11  C2   C3   C4   C5      0.00   0.0  0
- P1E  CONST_12  C2   C1   C6   C5      0.00   0.0  0
- P1E  CONST_13  N7   C4   C5   C6    180.00   0.0  0
- P1E  CONST_14  N8   C11  N10  C9    180.00   0.0  0
- P1E  CONST_15  N8   C11  C12  C13   180.00   0.0  0
- P1E  CONST_16  N7   C9   N14  C13   180.00   0.0  0
- P1E  CONST_17  N14  C13  C12  C15   180.00   0.0  0
- P1E  CONST_18  N10  C11  C12  C15   180.00   0.0  0
- P1E  CONST_19  N7   C9   N10  C11   180.00   0.0  0
- P1E  CONST_20  C2   C3   C4   N7    180.00   0.0  0
- P1E  CONST_21  S18  C1   C6   C5    180.00   0.0  0
- P1E  CONST_22  S18  C1   C2   C3    180.00   0.0  0
- P1E  CONST_23  C25  N8   C11  C12   180.00   0.0  0
- P1E  CONST_24  N10  C11  N8   C25     0.00   0.0  0
- P1E  CONST_25  H6   C6   C5   C4    180.00   0.0  0
- P1E  CONST_26  H2   C2   C3   C4    180.00   0.0  0
- P1E  CONST_27  H13  C13  N14  C9    180.00   0.0  0
- P1E  CONST_28  H3   C3   C4   C5    180.00   0.0  0
- P1E  CONST_29  H5   C5   C4   C3    180.00   0.0  0
- P1E  CONST_30  HN8  N8   C11  C12     0.00   0.0  0
- P1E  Var_01    C27  C31  C28  C25   -35.98  30.0  1
- P1E  Var_02    C24  C27  C31  C28    43.93  30.0  1
- P1E  Var_03    N14  C9   N7   C4      4.44  30.0  1
- P1E  Var_04    C5   C4   N7   C9     11.56  30.0  1
- P1E  Var_05    O19  S18  C1   C6   -158.11  30.0  2
- P1E  Var_06    F22  C15  C12  C13     1.92  30.0  2
- P1E  Var_07    C23  N17  S18  C1     62.08  30.0  3
- P1E  Var_08    H30  C30  N26  C24    61.46  30.0  3
- P1E  Var_09    H29  C29  N26  C24    62.15  30.0  3
- P1E  Var_10    H23  C23  N17  S18   -60.70  30.0  3
+ P1E  CONST_01  C1    C6   C5   C4      0.00   0.0  0
+ P1E  CONST_02  C1    C2   C3   C4      0.00   0.0  0
+ P1E  CONST_03  C3    C4   C5   C6      0.00   0.0  0
+ P1E  CONST_04  C3    C2   C1   C6      0.00   0.0  0
+ P1E  CONST_05  C12   C13  N14  C9      0.00   0.0  0
+ P1E  CONST_06  C12   C11  N10  C9      0.00   0.0  0
+ P1E  CONST_07  N10   C11  C12  C13     0.00   0.0  0
+ P1E  CONST_08  N10   C9   N14  C13     0.00   0.0  0
+ P1E  CONST_09  C11   N10  C9   N14     0.00   0.0  0
+ P1E  CONST_10  C11   C12  C13  N14     0.00   0.0  0
+ P1E  CONST_11  C2    C3   C4   C5      0.00   0.0  0
+ P1E  CONST_12  C2    C1   C6   C5      0.00   0.0  0
+ P1E  CONST_13  N7    C4   C5   C6    180.00   0.0  0
+ P1E  CONST_14  N8    C11  N10  C9    180.00   0.0  0
+ P1E  CONST_15  N8    C11  C12  C13   180.00   0.0  0
+ P1E  CONST_16  N7    C9   N14  C13   180.00   0.0  0
+ P1E  CONST_17  N14   C13  C12  C15   180.00   0.0  0
+ P1E  CONST_18  N10   C11  C12  C15   180.00   0.0  0
+ P1E  CONST_19  N7    C9   N10  C11   180.00   0.0  0
+ P1E  CONST_20  C2    C3   C4   N7    180.00   0.0  0
+ P1E  CONST_21  S18   C1   C6   C5    180.00   0.0  0
+ P1E  CONST_22  S18   C1   C2   C3    180.00   0.0  0
+ P1E  CONST_23  C25   N8   C11  C12   180.00   0.0  0
+ P1E  CONST_24  N10   C11  N8   C25     0.00   0.0  0
+ P1E  CONST_25  H6    C6   C5   C4    180.00   0.0  0
+ P1E  CONST_26  H2    C2   C3   C4    180.00   0.0  0
+ P1E  CONST_27  H13   C13  N14  C9    180.00   0.0  0
+ P1E  CONST_28  H3    C3   C4   C5    180.00   0.0  0
+ P1E  CONST_29  H5    C5   C4   C3    180.00   0.0  0
+ P1E  CONST_30  HN8   N8   C11  C12     0.00   0.0  0
+ P1E  Var_01    C27   C31  C28  C25   -35.98  30.0  1
+ P1E  Var_02    C24   C27  C31  C28    43.93  30.0  1
+ P1E  Var_03    N14   C9   N7   C4      4.44  30.0  1
+ P1E  Var_04    C5    C4   N7   C9     11.56  30.0  1
+ P1E  Var_05    O19   S18  C1   C6   -158.11  30.0  2
+ P1E  Var_06    F22   C15  C12  C13     1.92  30.0  2
+ P1E  Var_07    C23   N17  S18  C1     62.08  30.0  3
+ P1E  Var_08    H30   C30  N26  C24    61.46  30.0  3
+ P1E  Var_09    H29   C29  N26  C24    62.15  30.0  3
+ P1E  Var_10    H23   C23  N17  S18   -60.70  30.0  3
+ P1E  Var_11    C31   C27  C24  C25   -34.56  30.0  1
+ P1E  Var_12    C27   C24  C25  C28    12.18  30.0  1
+ P1E  Var_13    C24   C25  C28  C31    14.66  30.0  1
+ P1E  Var_14    C28   C25  N8   C11   -82.58  30.0  3
+ P1E  Var_15    C24   C25  N8   C11   158.48  30.0  3
+ P1E  Var_16    C31   C28  C25  N8   -106.68  30.0  1
+ P1E  Var_17    C27   C24  C25  N8    135.40  30.0  1
+ P1E  Var_18    N26   C24  C25  C28   136.51  30.0  1
+ P1E  Var_19    N26   C24  C27  C31  -157.79  30.0  1
+ P1E  Var_20    H27   C27  C24  C25  -157.16  30.0  1
+ P1E  Var_21    H27A  C27  C24  C25    82.68  30.0  1
+ P1E  Var_22    H24   C24  C25  C28  -101.54  30.0  1
+ P1E  Var_23    H25   C25  C28  C31   132.64  30.0  1
+ P1E  Var_24    N26   C24  C25  N8   -100.27  30.0  1
+ P1E  Var_25    C30   N26  C24  C25    63.17  30.0  3
+ P1E  Var_26    C29   N26  C24  C25  -172.91  30.0  3
+ P1E  Var_27    C30   N26  C24  C27  -178.19  30.0  3
+ P1E  Var_28    C29   N26  C24  C27   -54.27  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- YIC  YIC  '(2~{S})-2-[[(2~{S})-1-(3-cyclopentylpropanoyl)piperidin-2-yl]carbonylamino]-3-phenyl-propanoic acid'  ligand  61  29  .  2022-03-29  2022-11-18
+ YIC  YIC  '(2~{S})-2-[[(2~{S})-1-(3-cyclopentylpropanoyl)piperidin-2-yl]carbonylamino]-3-phenyl-propanoic acid'  ligand  61  29  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_YIC
@@ -307,37 +308,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- YIC  CONST_01  C27  C28  C29  C24    0.00   0.0  0
- YIC  CONST_02  C27  C26  C25  C24    0.00   0.0  0
- YIC  CONST_03  C26  C25  C24  C29    0.00   0.0  0
- YIC  CONST_04  C26  C27  C28  C29    0.00   0.0  0
- YIC  CONST_05  C25  C24  C29  C28    0.00   0.0  0
- YIC  CONST_06  C25  C26  C27  C28    0.00   0.0  0
- YIC  CONST_07  C28  C29  C24  C23  180.00   0.0  0
- YIC  CONST_08  C26  C25  C24  C23  180.00   0.0  0
- YIC  CONST_09  H29  C28  C29  C24  180.00   0.0  0
- YIC  CONST_10  H31  C26  C25  C24  180.00   0.0  0
- YIC  CONST_11  H32  C25  C24  C29  180.00   0.0  0
- YIC  CONST_12  H30  C27  C28  C29  180.00   0.0  0
- YIC  CONST_13  H28  C29  C28  C27  180.00   0.0  0
- YIC  CONST_14  C7   N13  C14  O15    0.00   0.0  0
- YIC  CONST_15  C12  N13  C14  O15  180.00   0.0  0
- YIC  CONST_16  C7   N13  C14  C16  180.00   0.0  0
- YIC  CONST_17  C12  N13  C14  C16    0.00   0.0  0
- YIC  CONST_18  C1   N5   C6   C7   180.00   0.0  0
- YIC  CONST_19  H23  N5   C6   C7     0.00   0.0  0
- YIC  CONST_20  C1   N5   C6   O8     0.00   0.0  0
- YIC  CONST_21  H25  O4   C2   C1   180.00   0.0  0
- YIC  Var_01    C20  C21  C22  C18   16.34  30.0  1
- YIC  Var_02    C21  C20  C19  C18  -32.64  30.0  1
- YIC  Var_03    C19  C20  C21  C22   10.02  30.0  1
- YIC  Var_04    C10  C11  C12  N13  -56.60  30.0  1
- YIC  Var_05    C9   C10  C11  C12   53.25  30.0  1
- YIC  Var_06    C7   C9   C10  C11  -51.69  30.0  1
- YIC  Var_07    C7   N13  C12  C11   59.35  30.0  1
- YIC  Var_08    C29  C24  C23  C1    78.57  30.0  2
- YIC  Var_09    C18  C17  C16  C14  -85.22  30.0  1
- YIC  Var_10    N13  C14  C16  C17  163.42  30.0  3
+ YIC  CONST_01  C27  C28  C29  C24     0.00   0.0  0
+ YIC  CONST_02  C27  C26  C25  C24     0.00   0.0  0
+ YIC  CONST_03  C26  C25  C24  C29     0.00   0.0  0
+ YIC  CONST_04  C26  C27  C28  C29     0.00   0.0  0
+ YIC  CONST_05  C25  C24  C29  C28     0.00   0.0  0
+ YIC  CONST_06  C25  C26  C27  C28     0.00   0.0  0
+ YIC  CONST_07  C28  C29  C24  C23   180.00   0.0  0
+ YIC  CONST_08  C26  C25  C24  C23   180.00   0.0  0
+ YIC  CONST_09  H29  C28  C29  C24   180.00   0.0  0
+ YIC  CONST_10  H31  C26  C25  C24   180.00   0.0  0
+ YIC  CONST_11  H32  C25  C24  C29   180.00   0.0  0
+ YIC  CONST_12  H30  C27  C28  C29   180.00   0.0  0
+ YIC  CONST_13  H28  C29  C28  C27   180.00   0.0  0
+ YIC  CONST_14  C7   N13  C14  O15     0.00   0.0  0
+ YIC  CONST_15  C12  N13  C14  O15   180.00   0.0  0
+ YIC  CONST_16  C7   N13  C14  C16   180.00   0.0  0
+ YIC  CONST_17  C12  N13  C14  C16     0.00   0.0  0
+ YIC  CONST_18  C1   N5   C6   C7    180.00   0.0  0
+ YIC  CONST_19  H23  N5   C6   C7      0.00   0.0  0
+ YIC  CONST_20  C1   N5   C6   O8      0.00   0.0  0
+ YIC  CONST_21  H25  O4   C2   C1    180.00   0.0  0
+ YIC  Var_01    C20  C21  C22  C18    16.34  30.0  1
+ YIC  Var_02    C21  C20  C19  C18   -32.64  30.0  1
+ YIC  Var_03    C19  C20  C21  C22    10.02  30.0  1
+ YIC  Var_04    C10  C11  C12  N13   -56.60  30.0  1
+ YIC  Var_05    C9   C10  C11  C12    53.25  30.0  1
+ YIC  Var_06    C7   C9   C10  C11   -51.69  30.0  1
+ YIC  Var_07    C7   N13  C12  C11    59.35  30.0  1
+ YIC  Var_08    C29  C24  C23  C1     78.57  30.0  2
+ YIC  Var_09    C18  C17  C16  C14   -85.22  30.0  1
+ YIC  Var_10    N13  C14  C16  C17   163.42  30.0  3
+ YIC  Var_11    C20  C19  C18  C22    42.55  30.0  1
+ YIC  Var_12    C19  C18  C22  C21   -36.35  30.0  1
+ YIC  Var_13    C10  C9   C7   N13    51.79  30.0  1
+ YIC  Var_14    C9   C7   N13  C12   -55.90  30.0  1
+ YIC  Var_15    C9   C7   N13  C14   109.68  30.0  1
+ YIC  Var_16    C21  C22  C18  C17  -163.49  30.0  1
+ YIC  Var_17    C20  C19  C18  C17   167.25  30.0  1
+ YIC  Var_18    C6   C7   N13  C12    70.93  30.0  1
+ YIC  Var_19    C6   C7   C9   C10   -74.66  30.0  1
+ YIC  Var_20    H12  C19  C18  C22   -75.25  30.0  1
+ YIC  Var_21    H13  C19  C18  C22   164.79  30.0  1
+ YIC  Var_22    H5   C18  C22  C21    77.00  30.0  1
+ YIC  Var_23    H20  C9   C7   N13   175.95  30.0  1
+ YIC  Var_24    H21  C9   C7   N13   -68.73  30.0  1
+ YIC  Var_25    H22  C7   N13  C12  -174.10  30.0  1
+ YIC  Var_26    C6   C7   N13  C14  -123.49  30.0  1
+ YIC  Var_27    C22  C18  C17  C16  -177.51  30.0  2
+ YIC  Var_28    C19  C18  C17  C16    63.68  30.0  2
+ YIC  Var_29    O8   C6   C7   N13  -154.50  30.0  3
+ YIC  Var_30    N5   C6   C7   N13    29.13  30.0  3
+ YIC  Var_31    O8   C6   C7   C9    -29.05  30.0  3
+ YIC  Var_32    N5   C6   C7   C9    154.57  30.0  3
+ YIC  Var_33    H3   C17  C18  C22   -58.13  30.0  3
+ YIC  Var_34    H4   C17  C18  C22    57.41  30.0  3
+ YIC  Var_35    C24  C23  C1   N5    176.11  30.0  3
+ YIC  Var_36    C24  C23  C1   C2     56.38  30.0  3
+ YIC  Var_37    H24  C1   C23  C24   -63.89  30.0  1
+ YIC  Var_38    C2   C1   N5   C6   -148.14  30.0  3
+ YIC  Var_39    C23  C1   N5   C6     91.29  30.0  3
+ YIC  Var_40    O3   C2   C1   N5    -39.41  30.0  3
+ YIC  Var_41    O4   C2   C1   N5    142.23  30.0  3
+ YIC  Var_42    C23  C1   C2   O4    -96.53  30.0  3
+ YIC  Var_43    C23  C1   C2   O3     81.82  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

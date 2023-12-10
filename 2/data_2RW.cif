@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2RW  2RW  '[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl [(2R,3S)-3-hydroxytetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  55  34  .  2021-08-04  2021-08-04  
+ 2RW  2RW  '[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl [(2R,3S)-3-hydroxytetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  55  34  .  2021-08-04  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_2RW
@@ -282,38 +283,90 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2RW  CONST_01  C4   N3   C2   N1     0.00   0.0  0
- 2RW  CONST_02  C4   C5   C6   N1     0.00   0.0  0
- 2RW  CONST_03  N7   C5   C6   N1   180.00   0.0  0
- 2RW  CONST_04  N9   C4   N3   C2   180.00   0.0  0
- 2RW  CONST_05  C5   C4   N3   C2     0.00   0.0  0
- 2RW  CONST_06  C5   C6   N1   C2     0.00   0.0  0
- 2RW  CONST_07  C6   N1   C2   N3     0.00   0.0  0
- 2RW  CONST_08  C8   N9   C4   N3   180.00   0.0  0
- 2RW  CONST_09  C6   C5   C4   N3     0.00   0.0  0
- 2RW  CONST_10  N7   C5   C4   N3   180.00   0.0  0
- 2RW  CONST_11  N7   C8   N9   C4     0.00   0.0  0
- 2RW  CONST_12  C8   N7   C5   C4     0.00   0.0  0
- 2RW  CONST_13  C8   N9   C4   C5     0.00   0.0  0
- 2RW  CONST_14  N9   C8   N7   C5     0.00   0.0  0
- 2RW  CONST_15  N9   C4   C5   C6   180.00   0.0  0
- 2RW  CONST_16  C8   N7   C5   C6   180.00   0.0  0
- 2RW  CONST_17  N9   C4   C5   N7     0.00   0.0  0
- 2RW  CONST_18  C1'  N9   C4   N3     0.00   0.0  0
- 2RW  CONST_19  C1'  N9   C4   C5   180.00   0.0  0
- 2RW  CONST_20  C1'  N9   C8   N7   180.00   0.0  0
- 2RW  CONST_21  N6   C6   N1   C2   180.00   0.0  0
- 2RW  CONST_22  N6   C6   C5   C4   180.00   0.0  0
- 2RW  CONST_23  N7   C5   C6   N6     0.00   0.0  0
- 2RW  CONST_24  H1   C2   N3   C4   180.00   0.0  0
- 2RW  CONST_25  H4   C8   N9   C4   180.00   0.0  0
- 2RW  CONST_26  H2   N6   C6   N1     0.00   0.0  0
- 2RW  CONST_27  H3   N6   C6   N1   180.00   0.0  0
- 2RW  Var_01    C3D  C2D  C1D  O4D   37.29  30.0  1
- 2RW  Var_02    C4D  C5D  O5D  PB   178.14  30.0  1
- 2RW  Var_03    O3A  PA   O5'  C5'  159.34  30.0  3
- 2RW  Var_04    O5D  PB   O3A  PA    90.71  30.0  2
- 2RW  Var_05    H11  C5'  O5'  PA    94.60  30.0  1
+ 2RW  CONST_01  C4   N3   C2   N1      0.00   0.0  0
+ 2RW  CONST_02  C4   C5   C6   N1      0.00   0.0  0
+ 2RW  CONST_03  N7   C5   C6   N1    180.00   0.0  0
+ 2RW  CONST_04  N9   C4   N3   C2    180.00   0.0  0
+ 2RW  CONST_05  C5   C4   N3   C2      0.00   0.0  0
+ 2RW  CONST_06  C5   C6   N1   C2      0.00   0.0  0
+ 2RW  CONST_07  C6   N1   C2   N3      0.00   0.0  0
+ 2RW  CONST_08  C8   N9   C4   N3    180.00   0.0  0
+ 2RW  CONST_09  C6   C5   C4   N3      0.00   0.0  0
+ 2RW  CONST_10  N7   C5   C4   N3    180.00   0.0  0
+ 2RW  CONST_11  N7   C8   N9   C4      0.00   0.0  0
+ 2RW  CONST_12  C8   N7   C5   C4      0.00   0.0  0
+ 2RW  CONST_13  C8   N9   C4   C5      0.00   0.0  0
+ 2RW  CONST_14  N9   C8   N7   C5      0.00   0.0  0
+ 2RW  CONST_15  N9   C4   C5   C6    180.00   0.0  0
+ 2RW  CONST_16  C8   N7   C5   C6    180.00   0.0  0
+ 2RW  CONST_17  N9   C4   C5   N7      0.00   0.0  0
+ 2RW  CONST_18  C1'  N9   C4   N3      0.00   0.0  0
+ 2RW  CONST_19  C1'  N9   C4   C5    180.00   0.0  0
+ 2RW  CONST_20  C1'  N9   C8   N7    180.00   0.0  0
+ 2RW  CONST_21  N6   C6   N1   C2    180.00   0.0  0
+ 2RW  CONST_22  N6   C6   C5   C4    180.00   0.0  0
+ 2RW  CONST_23  N7   C5   C6   N6      0.00   0.0  0
+ 2RW  CONST_24  H1   C2   N3   C4    180.00   0.0  0
+ 2RW  CONST_25  H4   C8   N9   C4    180.00   0.0  0
+ 2RW  CONST_26  H2   N6   C6   N1      0.00   0.0  0
+ 2RW  CONST_27  H3   N6   C6   N1    180.00   0.0  0
+ 2RW  Var_01    C3D  C2D  C1D  O4D    37.29  30.0  1
+ 2RW  Var_02    C4D  C5D  O5D  PB    178.14  30.0  1
+ 2RW  Var_03    O3A  PA   O5'  C5'   159.34  30.0  3
+ 2RW  Var_04    O5D  PB   O3A  PA     90.71  30.0  2
+ 2RW  Var_05    H11  C5'  O5'  PA     94.60  30.0  1
+ 2RW  Var_06    O4'  C1'  N9   C4   -129.72  30.0  2
+ 2RW  Var_07    C2'  C1'  N9   C4    111.86  30.0  2
+ 2RW  Var_08    O4'  C1'  N9   C8     47.82  30.0  2
+ 2RW  Var_09    C2'  C1'  N9   C8    -70.61  30.0  2
+ 2RW  Var_10    C4'  O4'  C1'  N9   -137.73  30.0  1
+ 2RW  Var_11    C3'  C2'  C1'  N9    153.38  30.0  1
+ 2RW  Var_12    C3'  C4'  O4'  C1'   -11.17  30.0  1
+ 2RW  Var_13    C4'  C3'  C2'  C1'   -38.10  30.0  1
+ 2RW  Var_14    O4'  C4'  C3'  C2'    31.23  30.0  1
+ 2RW  Var_15    C4'  O4'  C1'  C2'   -14.18  30.0  1
+ 2RW  Var_16    O4'  C1'  C2'  C3'    33.13  30.0  1
+ 2RW  Var_17    C2D  C3D  C4D  O4D    19.78  30.0  1
+ 2RW  Var_18    C4D  C3D  C2D  C1D   -33.90  30.0  1
+ 2RW  Var_19    C3D  C4D  O4D  C1D     3.71  30.0  1
+ 2RW  Var_20    C4D  O4D  C1D  C2D   -26.03  30.0  1
+ 2RW  Var_21    O2'  C2'  C1'  N9    -84.72  30.0  1
+ 2RW  Var_22    C5'  C4'  O4'  C1'   110.03  30.0  1
+ 2RW  Var_23    O3'  C3'  C2'  C1'    77.33  30.0  1
+ 2RW  Var_24    C5'  C4'  C3'  C2'   -89.43  30.0  1
+ 2RW  Var_25    C4'  C3'  C2'  O2'  -156.40  30.0  1
+ 2RW  Var_26    O4'  C1'  C2'  O2'   155.03  30.0  1
+ 2RW  Var_27    O4'  C4'  C3'  O3'   -85.48  30.0  1
+ 2RW  Var_28    C1D  O4D  C4D  C5D   125.87  30.0  1
+ 2RW  Var_29    C2D  C3D  C4D  C5D  -101.02  30.0  1
+ 2RW  Var_30    O3D  C3D  C4D  O4D   -99.23  30.0  1
+ 2RW  Var_31    O3D  C3D  C2D  C1D    81.83  30.0  1
+ 2RW  Var_32    H5   C1'  N9   C4     -9.35  30.0  2
+ 2RW  Var_33    H6   C2'  C1'  N9     38.31  30.0  1
+ 2RW  Var_34    H10  C4'  O4'  C1'  -130.13  30.0  1
+ 2RW  Var_35    H8   C3'  C2'  C1'  -157.12  30.0  1
+ 2RW  Var_36    H22  C3D  C4D  O4D   139.67  30.0  1
+ 2RW  Var_37    H23  C4D  O4D  C1D  -115.10  30.0  1
+ 2RW  Var_38    O3'  C3'  C2'  O2'   -40.98  30.0  1
+ 2RW  Var_39    O5'  C5'  C4'  C3'   170.44  30.0  3
+ 2RW  Var_40    C5'  C4'  C3'  O3'   153.86  30.0  1
+ 2RW  Var_41    O5'  C5'  C4'  O4'    52.76  30.0  3
+ 2RW  Var_42    O4D  C4D  C5D  O5D    61.40  30.0  1
+ 2RW  Var_43    C3D  C4D  C5D  O5D  -179.75  30.0  1
+ 2RW  Var_44    O3D  C3D  C4D  C5D   139.98  30.0  1
+ 2RW  Var_45    H7   O2'  C2'  C1'   160.70  30.0  3
+ 2RW  Var_46    H9   O3'  C3'  C2'    47.55  30.0  3
+ 2RW  Var_47    H11  C5'  C4'  C3'   -68.71  30.0  3
+ 2RW  Var_48    H12  C5'  C4'  C3'    47.86  30.0  3
+ 2RW  Var_49    H15  C5D  C4D  O4D   -60.89  30.0  3
+ 2RW  Var_50    H16  C5D  C4D  O4D  -178.02  30.0  3
+ 2RW  Var_51    H21  O3D  C3D  C2D    60.55  30.0  3
+ 2RW  Var_52    PB   O3A  PA   O5'  -164.72  30.0  1
+ 2RW  Var_53    PB   O3A  PA   O1A   -52.00  30.0  1
+ 2RW  Var_54    PB   O3A  PA   O2A    83.70  30.0  1
+ 2RW  Var_55    C5D  O5D  PB   O3A  -156.24  30.0  2
+ 2RW  Var_56    C5D  O5D  PB   O1B   -40.54  30.0  2
+ 2RW  Var_57    C5D  O5D  PB   O2B    94.07  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

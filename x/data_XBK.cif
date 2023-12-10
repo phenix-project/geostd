@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- XBK  XBK  '(1R,3S,5E,7E,11R,13E,15E,17E,19E,21R,23S,24R,25S)-21-[(3-amino-3,6-dideoxy-beta-D-mannopyranosyl)oxy]-1,3,25-trihydroxy-11-methyl-9-oxo-10,27-dioxabicyclo[21.3.1]heptacosa-5,7,13,15,17,19-hexaene-24-carboxylic acid'  ligand  92  46  .  2022-07-22  2022-07-26
+ XBK  XBK  '(1R,3S,5E,7E,11R,13E,15E,17E,19E,21R,23S,24R,25S)-21-[(3-amino-3,6-dideoxy-beta-D-mannopyranosyl)oxy]-1,3,25-trihydroxy-11-methyl-9-oxo-10,27-dioxabicyclo[21.3.1]heptacosa-5,7,13,15,17,19-hexaene-24-carboxylic acid'  ligand  92  46  .  2022-07-22  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_XBK
@@ -419,26 +420,121 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- XBK  Var_01  C15  C14  C13  C6   -179.39   0.0  0
- XBK  Var_02  C17  C16  C15  C14  -175.45   0.0  0
- XBK  Var_03  C19  C18  C17  C16  -172.87   0.0  0
- XBK  Var_04  C21  C20  C19  C18  -170.81   0.0  0
- XBK  Var_05  C27  C26  C25  C24   173.10   0.0  0
- XBK  Var_06  C29  C28  C27  C26   169.96   0.0  0
- XBK  Var_07  C26  C25  C24  O8    168.81  30.0  1
- XBK  Var_08  C16  C15  C14  C13   168.04  30.0  1
- XBK  Var_09  C18  C17  C16  C15   165.76  30.0  1
- XBK  Var_10  C20  C19  C18  C17   163.10  30.0  1
- XBK  Var_11  C22  C21  C20  C19    94.35  30.0  1
- XBK  Var_12  C25  C24  O8   C22   177.11  30.0  1
- XBK  Var_13  C28  C27  C26  C25  -179.41  30.0  1
- XBK  Var_14  C30  C29  C28  C27   110.60  30.0  1
- XBK  Var_15  H16  C16  C15  C14     1.12   0.0  0
- XBK  Var_16  H13  C13  C14  C15    -0.01   0.0  0
- XBK  Var_17  H17  C17  C18  C19     2.68   0.0  0
- XBK  Var_18  H19  C19  C20  C21     3.89   0.0  0
- XBK  Var_19  H25  C25  C26  C27    -5.09   0.0  0
- XBK  Var_20  H27  C27  C28  C29    -5.39   0.0  0
+ XBK  Var_01   C15   C14  C13  C6   -179.39   0.0  0
+ XBK  Var_02   C17   C16  C15  C14  -175.45   0.0  0
+ XBK  Var_03   C19   C18  C17  C16  -172.87   0.0  0
+ XBK  Var_04   C21   C20  C19  C18  -170.81   0.0  0
+ XBK  Var_05   C27   C26  C25  C24   173.10   0.0  0
+ XBK  Var_06   C29   C28  C27  C26   169.96   0.0  0
+ XBK  Var_07   C26   C25  C24  O8    168.81  30.0  1
+ XBK  Var_08   C16   C15  C14  C13   168.04  30.0  1
+ XBK  Var_09   C18   C17  C16  C15   165.76  30.0  1
+ XBK  Var_10   C20   C19  C18  C17   163.10  30.0  1
+ XBK  Var_11   C22   C21  C20  C19    94.35  30.0  1
+ XBK  Var_12   C25   C24  O8   C22   177.11  30.0  1
+ XBK  Var_13   C28   C27  C26  C25  -179.41  30.0  1
+ XBK  Var_14   C30   C29  C28  C27   110.60  30.0  1
+ XBK  Var_15   H16   C16  C15  C14     1.12   0.0  0
+ XBK  Var_16   H13   C13  C14  C15    -0.01   0.0  0
+ XBK  Var_17   H17   C17  C18  C19     2.68   0.0  0
+ XBK  Var_18   H19   C19  C20  C21     3.89   0.0  0
+ XBK  Var_19   H25   C25  C26  C27    -5.09   0.0  0
+ XBK  Var_20   H27   C27  C28  C29    -5.39   0.0  0
+ XBK  Var_21   C5    C4   C2   C1    176.43  30.0  1
+ XBK  Var_22   O12   C4   C2   C1     56.88  30.0  1
+ XBK  Var_23   O12   C32  C33  C1    -47.04  30.0  1
+ XBK  Var_24   C31   C32  C33  C1   -161.88  30.0  1
+ XBK  Var_25   C32   C33  C1   C2     53.32  30.0  1
+ XBK  Var_26   C6    C5   C4   C2    -78.68  30.0  3
+ XBK  Var_27   C32   O12  C4   C2    -56.95  30.0  1
+ XBK  Var_28   C33   C1   C2   C4    -56.54  30.0  1
+ XBK  Var_29   C13   C6   C5   C4    -92.01  30.0  3
+ XBK  Var_30   C31   C32  O12  C4    170.27  30.0  1
+ XBK  Var_31   C33   C32  O12  C4     50.26  30.0  1
+ XBK  Var_32   C32   O12  C4   C5    178.96  30.0  1
+ XBK  Var_33   C14   C13  C6   C5   -141.30  30.0  3
+ XBK  Var_34   O12   C4   C5   C6     43.67  30.0  3
+ XBK  Var_35   C10   C11  O7   C7     63.96  30.0  1
+ XBK  Var_36   C10   C9   C8   C7    -51.42  30.0  1
+ XBK  Var_37   C9    C8   C7   O7     58.78  30.0  1
+ XBK  Var_38   C9    C10  C11  O7    -55.36  30.0  1
+ XBK  Var_39   C11   O7   C7   C8    -66.42  30.0  1
+ XBK  Var_40   C11   C10  C9   C8     50.28  30.0  1
+ XBK  Var_41   C20   C21  C22  O8    -67.11  30.0  3
+ XBK  Var_42   C30   C31  C32  O12   153.37  30.0  3
+ XBK  Var_43   C24   O8   C22  C21    98.37  30.0  3
+ XBK  Var_44   C31   C30  C29  C28    44.95  30.0  3
+ XBK  Var_45   C32   C31  C30  C29   169.65  30.0  3
+ XBK  Var_46   C33   C32  C31  C30   -87.87  30.0  3
+ XBK  Var_47   C7    C8   C9   N    -177.15  30.0  1
+ XBK  Var_48   C11   C10  C9   N     177.79  30.0  1
+ XBK  Var_49   O11   C32  C33  C1     73.07  30.0  1
+ XBK  Var_50   C4    C2   C1   O1   -178.21  30.0  1
+ XBK  Var_51   C32   C33  C1   O1    173.23  30.0  1
+ XBK  Var_52   C33   C1   C2   C3   -177.98  30.0  1
+ XBK  Var_53   C5    C4   C2   C3    -61.96  30.0  1
+ XBK  Var_54   O12   C4   C2   C3    178.49  30.0  1
+ XBK  Var_55   O4    C6   C5   C4    145.97  30.0  3
+ XBK  Var_56   O11   C32  O12  C4    -68.50  30.0  1
+ XBK  Var_57   C14   C13  C6   O4    -17.80  30.0  3
+ XBK  Var_58   C11   O7   C7   O4    174.03  30.0  1
+ XBK  Var_59   C9    C8   C7   O4    177.67  30.0  1
+ XBK  Var_60   C7    O4   C6   C5    -78.93  30.0  2
+ XBK  Var_61   O7    C7   C8   O5    -61.24  30.0  1
+ XBK  Var_62   C10   C9   C8   O5     70.59  30.0  1
+ XBK  Var_63   O7    C7   O4   C6    -77.19  30.0  3
+ XBK  Var_64   C8    C7   O4   C6    162.61  30.0  3
+ XBK  Var_65   C8    C9   C10  O6    171.46  30.0  1
+ XBK  Var_66   O7    C11  C10  O6   -174.98  30.0  1
+ XBK  Var_67   C13   C6   O4   C7    159.11  30.0  3
+ XBK  Var_68   C12   C11  O7   C7   -172.67  30.0  1
+ XBK  Var_69   C12   C11  C10  C9   -175.71  30.0  1
+ XBK  Var_70   C28   C29  C30  O10   166.39  30.0  3
+ XBK  Var_71   C32   C31  C30  O10    48.68  30.0  3
+ XBK  Var_72   C30   C31  C32  O11    34.22  30.0  3
+ XBK  Var_73   C23   C22  C21  C20   175.02  30.0  3
+ XBK  Var_74   C24   O8   C22  C23  -140.59  30.0  3
+ XBK  Var_75   H4    C4   C2   C1    -63.79  30.0  1
+ XBK  Var_76   H33   C33  C1   C2    176.40  30.0  1
+ XBK  Var_77   H33A  C33  C1   C2    -66.59  30.0  1
+ XBK  Var_78   H5    C5   C4   C2     43.95  30.0  3
+ XBK  Var_79   H5A   C5   C4   C2    158.81  30.0  3
+ XBK  Var_80   H1    C1   C2   C4     62.84  30.0  1
+ XBK  Var_81   H6    C6   C5   C4     25.37  30.0  3
+ XBK  Var_82   H2    C2   C4   C5     58.27  30.0  1
+ XBK  Var_83   H11   C11  O7   C7    -54.34  30.0  1
+ XBK  Var_84   H9    C9   C8   C7     64.63  30.0  1
+ XBK  Var_85   H8    C8   C7   O7    176.05  30.0  1
+ XBK  Var_86   H10   C10  C11  O7     63.44  30.0  1
+ XBK  Var_87   H21   C21  C22  O8    171.38  30.0  3
+ XBK  Var_88   H21A  C21  C22  O8     56.05  30.0  3
+ XBK  Var_89   H7    C7   C8   C9    -60.84  30.0  1
+ XBK  Var_90   H31   C31  C32  O12    32.93  30.0  3
+ XBK  Var_91   H31A  C31  C32  O12   -81.57  30.0  3
+ XBK  Var_92   H22   C22  C21  C20    52.89  30.0  3
+ XBK  Var_93   H30   C30  C29  C28   -73.89  30.0  3
+ XBK  Var_94   O5    C8   C9   N     -55.14  30.0  1
+ XBK  Var_95   O6    C10  C9   N     -61.04  30.0  1
+ XBK  Var_96   O2    C3   C2   C1   -123.06  30.0  2
+ XBK  Var_97   O3    C3   C2   C1     57.83  30.0  2
+ XBK  Var_98   C3    C2   C1   O1     60.35  30.0  1
+ XBK  Var_99   C4    C2   C3   O3    -61.59  30.0  2
+ XBK  Var_100  O2    C3   C2   C4    117.52  30.0  2
+ XBK  Var_101  O5    C8   C7   O4     57.65  30.0  1
+ XBK  Var_102  C12   C11  C10  O6     64.66  30.0  1
+ XBK  Var_103  HO1   O1   C1   C2   -176.04  30.0  3
+ XBK  Var_104  HO5   O5   C8   C7    -62.58  30.0  3
+ XBK  Var_105  H12   C12  C11  O7     56.25  30.0  3
+ XBK  Var_106  H12A  C12  C11  O7    174.83  30.0  3
+ XBK  Var_107  H12B  C12  C11  O7    -64.40  30.0  3
+ XBK  Var_108  HN    N    C9   C8    -64.48  30.0  3
+ XBK  Var_109  HNA   N    C9   C8     50.97  30.0  3
+ XBK  Var_110  H23   C23  C22  O8     59.14  30.0  3
+ XBK  Var_111  H23A  C23  C22  O8    178.32  30.0  3
+ XBK  Var_112  H23B  C23  C22  O8    -62.22  30.0  3
+ XBK  Var_113  HO6   O6   C10  C9    162.30  30.0  3
+ XBK  Var_114  HO11  O11  C32  O12   -59.00  30.0  3
+ XBK  Var_115  HO10  O10  C30  C29    64.22  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AZV  AZV  N-(4-{[({(2R)-3-[(3R)-3-amino-4-(2,4,5-trifluorophenyl)butanoyl]-1,3-thiazolidin-2-yl}carbonyl)amino]methyl}phenyl)-D-valine  ligand  68  38  .  2021-08-06  2021-08-06  
+ AZV  AZV  N-(4-{[({(2R)-3-[(3R)-3-amino-4-(2,4,5-trifluorophenyl)butanoyl]-1,3-thiazolidin-2-yl}carbonyl)amino]methyl}phenyl)-D-valine  ligand  68  38  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_AZV
@@ -327,53 +328,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AZV  CONST_01  CAM   CAK  CAJ  CAI    0.00   0.0  0
- AZV  CONST_02  CAM   CAO  CAP  CAI    0.00   0.0  0
- AZV  CONST_03  CAO   CAP  CAI  CAJ    0.00   0.0  0
- AZV  CONST_04  CAO   CAM  CAK  CAJ    0.00   0.0  0
- AZV  CONST_05  CAP   CAI  CAJ  CAK    0.00   0.0  0
- AZV  CONST_06  CAP   CAO  CAM  CAK    0.00   0.0  0
- AZV  CONST_07  CAY   CAX  CAW  CAV    0.00   0.0  0
- AZV  CONST_08  CAY   CAZ  CBD  CAV    0.00   0.0  0
- AZV  CONST_09  CAZ   CBD  CAV  CAW    0.00   0.0  0
- AZV  CONST_10  CAZ   CAY  CAX  CAW    0.00   0.0  0
- AZV  CONST_11  CBD   CAV  CAW  CAX    0.00   0.0  0
- AZV  CONST_12  CBD   CAZ  CAY  CAX    0.00   0.0  0
- AZV  CONST_13  CAX   CAY  CAZ  N    180.00   0.0  0
- AZV  CONST_14  CAV   CBD  CAZ  N    180.00   0.0  0
- AZV  CONST_15  CAK   CAJ  CAI  CAH  180.00   0.0  0
- AZV  CONST_16  CAO   CAP  CAI  CAH  180.00   0.0  0
- AZV  CONST_17  FAL   CAK  CAJ  CAI  180.00   0.0  0
- AZV  CONST_18  FAQ   CAP  CAI  CAJ  180.00   0.0  0
- AZV  CONST_19  FAN   CAM  CAK  CAJ  180.00   0.0  0
- AZV  CONST_20  CAO   CAM  CAK  FAL  180.00   0.0  0
- AZV  CONST_21  FAQ   CAP  CAO  CAM  180.00   0.0  0
- AZV  CONST_22  CAP   CAO  CAM  FAN  180.00   0.0  0
- AZV  CONST_23  CBD   CAV  CAW  CAU  180.00   0.0  0
- AZV  CONST_24  CAY   CAX  CAW  CAU  180.00   0.0  0
- AZV  CONST_25  HAO   CAO  CAP  CAI  180.00   0.0  0
- AZV  CONST_26  HAJ   CAJ  CAK  CAM  180.00   0.0  0
- AZV  CONST_27  HAX   CAX  CAW  CAV  180.00   0.0  0
- AZV  CONST_28  HBD   CBD  CAV  CAW  180.00   0.0  0
- AZV  CONST_29  HAY   CAY  CAX  CAW  180.00   0.0  0
- AZV  CONST_30  HAV   CAV  CAW  CAX  180.00   0.0  0
- AZV  CONST_31  OAD   CAC  NAB  CAA    0.00   0.0  0
- AZV  CONST_32  CAE   CAC  NAB  CAA  180.00   0.0  0
- AZV  CONST_33  CBA   NAB  CAC  OAD  180.00   0.0  0
- AZV  CONST_34  CBA   NAB  CAC  CAE    0.00   0.0  0
- AZV  CONST_37  HN    N    CAZ  CAY    0.00   0.0  0
- AZV  CONST_38  CAU   NAT  CAR  CAA  180.00   0.0  0
- AZV  CONST_39  HNAT  NAT  CAR  CAA    0.00   0.0  0
- AZV  CONST_40  CAU   NAT  CAR  OAS    0.00   0.0  0
- AZV  Var_01    CBB   CBA  NAB  CAA   25.96  30.0  1
- AZV  Var_02    CBA   CBB  SBC  CAA   36.22  30.0  1
- AZV  Var_03    SBC   CBB  CBA  NAB  -40.17  30.0  1
- AZV  Var_04    CAJ   CAI  CAH  CAF   81.01  30.0  2
- AZV  Var_05    CAV   CAW  CAU  NAT  104.87  30.0  2
- AZV  Var_06    CAF   CAE  CAC  NAB  171.71  30.0  3
- AZV  Var_07    CAW   CAU  NAT  CAR  109.79  30.0  3
- AZV  Var_08    HG1   CG1  CB   CA    61.11  30.0  3
- AZV  Var_09    HG2   CG2  CB   CA    58.35  30.0  3
+ AZV  CONST_01  CAM   CAK  CAJ  CAI     0.00   0.0  0
+ AZV  CONST_02  CAM   CAO  CAP  CAI     0.00   0.0  0
+ AZV  CONST_03  CAO   CAP  CAI  CAJ     0.00   0.0  0
+ AZV  CONST_04  CAO   CAM  CAK  CAJ     0.00   0.0  0
+ AZV  CONST_05  CAP   CAI  CAJ  CAK     0.00   0.0  0
+ AZV  CONST_06  CAP   CAO  CAM  CAK     0.00   0.0  0
+ AZV  CONST_07  CAY   CAX  CAW  CAV     0.00   0.0  0
+ AZV  CONST_08  CAY   CAZ  CBD  CAV     0.00   0.0  0
+ AZV  CONST_09  CAZ   CBD  CAV  CAW     0.00   0.0  0
+ AZV  CONST_10  CAZ   CAY  CAX  CAW     0.00   0.0  0
+ AZV  CONST_11  CBD   CAV  CAW  CAX     0.00   0.0  0
+ AZV  CONST_12  CBD   CAZ  CAY  CAX     0.00   0.0  0
+ AZV  CONST_13  CAX   CAY  CAZ  N     180.00   0.0  0
+ AZV  CONST_14  CAV   CBD  CAZ  N     180.00   0.0  0
+ AZV  CONST_15  CAK   CAJ  CAI  CAH   180.00   0.0  0
+ AZV  CONST_16  CAO   CAP  CAI  CAH   180.00   0.0  0
+ AZV  CONST_17  FAL   CAK  CAJ  CAI   180.00   0.0  0
+ AZV  CONST_18  FAQ   CAP  CAI  CAJ   180.00   0.0  0
+ AZV  CONST_19  FAN   CAM  CAK  CAJ   180.00   0.0  0
+ AZV  CONST_20  CAO   CAM  CAK  FAL   180.00   0.0  0
+ AZV  CONST_21  FAQ   CAP  CAO  CAM   180.00   0.0  0
+ AZV  CONST_22  CAP   CAO  CAM  FAN   180.00   0.0  0
+ AZV  CONST_23  CBD   CAV  CAW  CAU   180.00   0.0  0
+ AZV  CONST_24  CAY   CAX  CAW  CAU   180.00   0.0  0
+ AZV  CONST_25  HAO   CAO  CAP  CAI   180.00   0.0  0
+ AZV  CONST_26  HAJ   CAJ  CAK  CAM   180.00   0.0  0
+ AZV  CONST_27  HAX   CAX  CAW  CAV   180.00   0.0  0
+ AZV  CONST_28  HBD   CBD  CAV  CAW   180.00   0.0  0
+ AZV  CONST_29  HAY   CAY  CAX  CAW   180.00   0.0  0
+ AZV  CONST_30  HAV   CAV  CAW  CAX   180.00   0.0  0
+ AZV  CONST_31  OAD   CAC  NAB  CAA     0.00   0.0  0
+ AZV  CONST_32  CAE   CAC  NAB  CAA   180.00   0.0  0
+ AZV  CONST_33  CBA   NAB  CAC  OAD   180.00   0.0  0
+ AZV  CONST_34  CBA   NAB  CAC  CAE     0.00   0.0  0
+ AZV  CONST_35  HN    N    CAZ  CAY     0.00   0.0  0
+ AZV  CONST_36  CAU   NAT  CAR  CAA   180.00   0.0  0
+ AZV  CONST_37  HNAT  NAT  CAR  CAA     0.00   0.0  0
+ AZV  CONST_38  CAU   NAT  CAR  OAS     0.00   0.0  0
+ AZV  Var_01    CBB   CBA  NAB  CAA    25.96  30.0  1
+ AZV  Var_02    CBA   CBB  SBC  CAA    36.22  30.0  1
+ AZV  Var_03    SBC   CBB  CBA  NAB   -40.17  30.0  1
+ AZV  Var_04    CAJ   CAI  CAH  CAF    81.01  30.0  2
+ AZV  Var_05    CAV   CAW  CAU  NAT   104.87  30.0  2
+ AZV  Var_06    CAF   CAE  CAC  NAB   171.71  30.0  3
+ AZV  Var_07    CAW   CAU  NAT  CAR   109.79  30.0  3
+ AZV  Var_08    HG1   CG1  CB   CA     61.11  30.0  3
+ AZV  Var_09    HG2   CG2  CB   CA     58.35  30.0  3
+ AZV  Var_10    CBB   SBC  CAA  NAB   -22.02  30.0  1
+ AZV  Var_11    SBC   CAA  NAB  CBA     1.05  30.0  1
+ AZV  Var_12    SBC   CAA  NAB  CAC  -169.44  30.0  1
+ AZV  Var_13    CBA   NAB  CAA  CAR  -119.83  30.0  1
+ AZV  Var_14    CBB   SBC  CAA  CAR   101.27  30.0  1
+ AZV  Var_15    HAA   CAA  NAB  CBA   118.24  30.0  1
+ AZV  Var_16    OAS   CAR  CAA  NAB  -154.09  30.0  3
+ AZV  Var_17    NAT   CAR  CAA  NAB    28.98  30.0  3
+ AZV  Var_18    CAR   CAA  NAB  CAC    69.67  30.0  1
+ AZV  Var_19    SBC   CAA  CAR  OAS    87.40  30.0  1
+ AZV  Var_20    SBC   CAA  CAR  NAT   -89.53  30.0  1
+ AZV  Var_21    CAZ   N    CA   C     131.12  30.0  2
+ AZV  Var_22    CAZ   N    CA   CB   -106.32  30.0  2
+ AZV  Var_23    CAI   CAH  CAF  CAE  -178.10  30.0  3
+ AZV  Var_24    CAI   CAH  CAF  NAG    55.50  30.0  3
+ AZV  Var_25    HAF   CAF  CAH  CAI   -61.10  30.0  1
+ AZV  Var_26    HA    CA   N    CAZ    13.65  30.0  3
+ AZV  Var_27    CG1   CB   CA   C      62.41  30.0  3
+ AZV  Var_28    CG2   CB   CA   C    -173.34  30.0  3
+ AZV  Var_29    O     C    CA   N      10.69  30.0  2
+ AZV  Var_30    OXT   C    CA   N    -170.45  30.0  2
+ AZV  Var_31    CG1   CB   CA   N     -60.43  30.0  3
+ AZV  Var_32    CG2   CB   CA   N      63.82  30.0  3
+ AZV  Var_33    CB    CA   C    O    -113.55  30.0  2
+ AZV  Var_34    OXT   C    CA   CB     65.32  30.0  2
+ AZV  Var_35    NAG   CAF  CAE  CAC   -66.92  30.0  3
+ AZV  Var_36    CAH   CAF  CAE  CAC   169.69  30.0  3
+ AZV  Var_37    HB    CB   CA   C     -55.65  30.0  3
+ AZV  Var_38    HNAG  NAG  CAF  CAE   -59.21  30.0  3
+ AZV  Var_39    HNAA  NAG  CAF  CAE    58.74  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

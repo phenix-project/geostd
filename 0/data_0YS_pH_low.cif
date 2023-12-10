@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 0YS  0YS  (5R)-2-[(1S,2R)-2-amino-2-carboxy-1-hydroxyethyl]-5-{(2S)-2-carboxy-2-[(3,5-dichloro-4-hydroxybenzoyl)amino]ethyl}-L-proline  ligand  53  32  .  2022-03-10  2022-11-17
+ 0YS  0YS  (5R)-2-[(1S,2R)-2-amino-2-carboxy-1-hydroxyethyl]-5-{(2S)-2-carboxy-2-[(3,5-dichloro-4-hydroxybenzoyl)amino]ethyl}-L-proline  ligand  53  32  .  2022-03-10  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_0YS
@@ -264,30 +265,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 0YS  CONST_01  C14  C15  C16  C11    0.00   0.0  0
- 0YS  CONST_02  C14  C13  C12  C11    0.00   0.0  0
- 0YS  CONST_03  C13  C14  C15  C16    0.00   0.0  0
- 0YS  CONST_04  C13  C12  C11  C16    0.00   0.0  0
- 0YS  CONST_05  C12  C13  C14  C15    0.00   0.0  0
- 0YS  CONST_06  C12  C11  C16  C15    0.00   0.0  0
- 0YS  CONST_07  C15  C16  C11  C10  180.00   0.0  0
- 0YS  CONST_08  C13  C12  C11  C10  180.00   0.0  0
- 0YS  CONST_09  CL1  C15  C16  C11  180.00   0.0  0
- 0YS  CONST_10  CL   C13  C12  C11  180.00   0.0  0
- 0YS  CONST_11  O6   C14  C15  C16  180.00   0.0  0
- 0YS  CONST_12  CL   C13  C14  C15  180.00   0.0  0
- 0YS  CONST_13  C13  C14  C15  CL1  180.00   0.0  0
- 0YS  CONST_14  C12  C13  C14  O6   180.00   0.0  0
- 0YS  CONST_15  H6   C12  C11  C16  180.00   0.0  0
- 0YS  CONST_16  H4   C16  C15  C14  180.00   0.0  0
- 0YS  CONST_17  C11  C10  N1   C9   180.00   0.0  0
- 0YS  CONST_18  H3   N1   C10  C11    0.00   0.0  0
- 0YS  CONST_19  H16  O4   C4   C3   180.00   0.0  0
- 0YS  CONST_20  O5   C10  N1   C9     0.00   0.0  0
- 0YS  CONST_21  H1   O8   C17  O7     0.00   0.0  0
- 0YS  CONST_22  H23  O    C1   C    180.00   0.0  0
- 0YS  Var_01    C3   C5   C6   C7   -34.40  30.0  1
- 0YS  Var_02    C16  C11  C10  N1   -27.86  30.0  2
+ 0YS  CONST_01  C14  C15  C16  C11     0.00   0.0  0
+ 0YS  CONST_02  C14  C13  C12  C11     0.00   0.0  0
+ 0YS  CONST_03  C13  C14  C15  C16     0.00   0.0  0
+ 0YS  CONST_04  C13  C12  C11  C16     0.00   0.0  0
+ 0YS  CONST_05  C12  C13  C14  C15     0.00   0.0  0
+ 0YS  CONST_06  C12  C11  C16  C15     0.00   0.0  0
+ 0YS  CONST_07  C15  C16  C11  C10   180.00   0.0  0
+ 0YS  CONST_08  C13  C12  C11  C10   180.00   0.0  0
+ 0YS  CONST_09  CL1  C15  C16  C11   180.00   0.0  0
+ 0YS  CONST_10  CL   C13  C12  C11   180.00   0.0  0
+ 0YS  CONST_11  O6   C14  C15  C16   180.00   0.0  0
+ 0YS  CONST_12  CL   C13  C14  C15   180.00   0.0  0
+ 0YS  CONST_13  C13  C14  C15  CL1   180.00   0.0  0
+ 0YS  CONST_14  C12  C13  C14  O6    180.00   0.0  0
+ 0YS  CONST_15  H6   C12  C11  C16   180.00   0.0  0
+ 0YS  CONST_16  H4   C16  C15  C14   180.00   0.0  0
+ 0YS  CONST_17  C11  C10  N1   C9    180.00   0.0  0
+ 0YS  CONST_18  H3   N1   C10  C11     0.00   0.0  0
+ 0YS  CONST_19  H16  O4   C4   C3    180.00   0.0  0
+ 0YS  CONST_20  O5   C10  N1   C9      0.00   0.0  0
+ 0YS  CONST_21  H1   O8   C17  O7      0.00   0.0  0
+ 0YS  CONST_22  H23  O    C1   C     180.00   0.0  0
+ 0YS  Var_01    C3   C5   C6   C7    -34.40  30.0  1
+ 0YS  Var_02    C16  C11  C10  N1    -27.86  30.0  2
+ 0YS  Var_03    C5   C3   N2   C7    -22.86  30.0  1
+ 0YS  Var_04    N2   C3   C5   C6     35.47  30.0  1
+ 0YS  Var_05    C3   N2   C7   C6      0.97  30.0  1
+ 0YS  Var_06    N2   C7   C6   C5     21.44  30.0  1
+ 0YS  Var_07    C3   N2   C7   C8   -121.50  30.0  1
+ 0YS  Var_08    C5   C6   C7   C8    144.80  30.0  1
+ 0YS  Var_09    C2   C3   N2   C7   -147.14  30.0  1
+ 0YS  Var_10    C4   C3   N2   C7     94.83  30.0  1
+ 0YS  Var_11    C2   C3   C5   C6    159.86  30.0  1
+ 0YS  Var_12    C4   C3   C5   C6    -83.97  30.0  1
+ 0YS  Var_13    H14  N2   C7   C6   -121.75  30.0  1
+ 0YS  Var_14    H9   C7   C6   C5    -94.78  30.0  1
+ 0YS  Var_15    H10  C6   C7   N2    -97.12  30.0  1
+ 0YS  Var_16    H11  C6   C7   N2    143.80  30.0  1
+ 0YS  Var_17    N2   C7   C8   C9    -56.02  30.0  2
+ 0YS  Var_18    C6   C7   C8   C9   -175.13  30.0  2
+ 0YS  Var_19    O2   C2   C3   C5    172.59  30.0  2
+ 0YS  Var_20    C    C2   C3   C5    -61.95  30.0  2
+ 0YS  Var_21    O3   C4   C3   C5    -55.48  30.0  2
+ 0YS  Var_22    O4   C4   C3   C5    124.45  30.0  2
+ 0YS  Var_23    O2   C2   C3   N2    -67.83  30.0  2
+ 0YS  Var_24    C    C2   C3   N2     57.63  30.0  2
+ 0YS  Var_25    O3   C4   C3   N2   -170.75  30.0  2
+ 0YS  Var_26    O4   C4   C3   N2      9.19  30.0  2
+ 0YS  Var_27    H5   O6   C14  C15   179.54  30.0  2
+ 0YS  Var_28    H7   C8   C7   C6    -53.54  30.0  3
+ 0YS  Var_29    H8   C8   C7   C6     62.34  30.0  3
+ 0YS  Var_30    H17  C2   C3   C5     54.70  30.0  2
+ 0YS  Var_31    C7   C8   C9   C17   -57.85  30.0  3
+ 0YS  Var_32    C7   C8   C9   N1     64.40  30.0  3
+ 0YS  Var_33    N    C    C2   C3    119.81  30.0  3
+ 0YS  Var_34    C1   C    C2   C3   -117.97  30.0  3
+ 0YS  Var_35    O2   C2   C3   C4     54.01  30.0  2
+ 0YS  Var_36    C    C2   C3   C4    179.47  30.0  2
+ 0YS  Var_37    C2   C3   C4   O4   -113.98  30.0  3
+ 0YS  Var_38    C2   C3   C4   O3     66.08  30.0  3
+ 0YS  Var_39    H2   C9   C8   C7   -175.82  30.0  2
+ 0YS  Var_40    H18  O2   C2   C3   -154.52  30.0  3
+ 0YS  Var_41    H19  C    C2   C3     -0.57  30.0  3
+ 0YS  Var_42    N1   C9   C17  O7    -16.81  30.0  1
+ 0YS  Var_43    C8   C9   C17  O7    105.21  30.0  1
+ 0YS  Var_44    C10  N1   C9   C17   -68.19  30.0  1
+ 0YS  Var_45    N1   C9   C17  O8    164.89  30.0  1
+ 0YS  Var_46    C8   C9   C17  O8    -73.08  30.0  1
+ 0YS  Var_47    C8   C9   N1   C10   169.40  30.0  3
+ 0YS  Var_48    O1   C1   C    C2    -96.19  30.0  2
+ 0YS  Var_49    O    C1   C    C2     83.92  30.0  2
+ 0YS  Var_50    N    C    C2   O2   -118.29  30.0  3
+ 0YS  Var_51    C1   C    C2   O2      3.93  30.0  3
+ 0YS  Var_52    O1   C1   C    N      29.73  30.0  2
+ 0YS  Var_53    O    C1   C    N    -150.16  30.0  2
+ 0YS  Var_54    H20  N    C    C2    -66.87  30.0  3
+ 0YS  Var_55    H21  N    C    C2     50.38  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

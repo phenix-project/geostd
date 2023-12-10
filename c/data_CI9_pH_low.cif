@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CI9  CI9  'N-({(1S)-5-[4-(13-{[2,4-bis(dihydroxyamino)phenyl]amino}-2,5,8,11-tetraoxatridec-1-yl)-1H-1,2,3-triazol-1-yl]-1-carboxypentyl}carbamoyl)-L-glutamic acid'  ligand  98  52  .  2021-08-07  2022-11-17
+ CI9  CI9  'N-({(1S)-5-[4-(13-{[2,4-bis(dihydroxyamino)phenyl]amino}-2,5,8,11-tetraoxatridec-1-yl)-1H-1,2,3-triazol-1-yl]-1-carboxypentyl}carbamoyl)-L-glutamic acid'  ligand  98  52  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CI9
@@ -431,56 +432,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CI9  CONST_01  NBE  CBR  CAO  NBX     0.00   0.0  0
- CI9  CONST_02  CBR  NBE  NBF  NBX     0.00   0.0  0
- CI9  CONST_03  NBE  NBF  NBX  CAO     0.00   0.0  0
- CI9  CONST_04  NBF  NBE  CBR  CAO     0.00   0.0  0
- CI9  CONST_05  CBR  CAO  NBX  NBF     0.00   0.0  0
- CI9  CONST_06  CBS  CAL  CAM  CBT     0.00   0.0  0
- CI9  CONST_07  CBS  CAN  CBU  CBT     0.00   0.0  0
- CI9  CONST_08  CAN  CBU  CBT  CAM     0.00   0.0  0
- CI9  CONST_09  CAN  CBS  CAL  CAM     0.00   0.0  0
- CI9  CONST_10  CBU  CBT  CAM  CAL     0.00   0.0  0
- CI9  CONST_11  CBU  CAN  CBS  CAL     0.00   0.0  0
- CI9  CONST_12  CBR  CAO  NBX  CBC   180.00   0.0  0
- CI9  CONST_13  NBE  NBF  NBX  CBC   180.00   0.0  0
- CI9  CONST_14  CBD  CBR  CAO  NBX   180.00   0.0  0
- CI9  CONST_15  CBD  CBR  NBE  NBF   180.00   0.0  0
- CI9  CONST_16  CAL  CAM  CBT  NBG   180.00   0.0  0
- CI9  CONST_17  CAN  CBU  CBT  NBG   180.00   0.0  0
- CI9  CONST_18  NBZ  CBU  CBT  CAM   180.00   0.0  0
- CI9  CONST_19  NBY  CBS  CAL  CAM   180.00   0.0  0
- CI9  CONST_20  NBZ  CBU  CAN  CBS   180.00   0.0  0
- CI9  CONST_21  CBU  CAN  CBS  NBY   180.00   0.0  0
- CI9  CONST_22  HAO  CAO  NBX  NBF   180.00   0.0  0
- CI9  CONST_23  HAL  CAL  CAM  CBT   180.00   0.0  0
- CI9  CONST_24  HAN  CAN  CBU  CBT   180.00   0.0  0
- CI9  CONST_25  HAM  CAM  CAL  CBS   180.00   0.0  0
- CI9  CONST_36  HBG  NBG  CBT  CAM     0.00   0.0  0
- CI9  CONST_41  OAD  CBQ  NBI  CBW     0.00   0.0  0
- CI9  CONST_42  CA   N    CBQ  OAD     0.00   0.0  0
- CI9  CONST_43  N    CBQ  NBI  CBW   180.00   0.0  0
- CI9  CONST_44  CA   N    CBQ  NBI   180.00   0.0  0
- CI9  CONST_45  HBI  NBI  CBQ  OAD   180.00   0.0  0
- CI9  CONST_47  HAA  OAA  CBN  OAG     0.00   0.0  0
- CI9  CONST_48  HAI  OAI  CBP  CBW   180.00   0.0  0
- CI9  CONST_49  HXT  OXT  C    CA    180.00   0.0  0
- CI9  Var_01    CAO  NBX  CBC  CAQ    70.12  30.0  2
- CI9  Var_02    OBM  CBD  CBR  CAO   -22.60  30.0  2
- CI9  Var_03    NBX  CBC  CAQ  CAP  -179.75  30.0  3
- CI9  Var_04    CBT  NBG  CAR  CAS   -99.48  30.0  3
- CI9  Var_05    CBB  CAZ  CBN  OAA  -178.75  30.0  3
- CI9  Var_06    CBW  CBB  CAZ  CBN  -177.20  30.0  3
- CI9  Var_07    CAQ  CAP  CB   CA    161.00  30.0  3
- CI9  Var_08    CBC  CAQ  CAP  CB    170.83  30.0  3
- CI9  Var_09    CAX  CAY  OBM  CBD   154.90  30.0  3
- CI9  Var_10    OBL  CAX  CAY  OBM   -70.29  30.0  3
- CI9  Var_11    CAV  CAW  OBL  CAX   178.97  30.0  3
- CI9  Var_12    OBK  CAV  CAW  OBL    62.89  30.0  3
- CI9  Var_13    CAT  CAU  OBK  CAV   -75.72  30.0  3
- CI9  Var_14    OBJ  CAT  CAU  OBK   179.57  30.0  3
- CI9  Var_15    CAR  CAS  OBJ  CAT  -171.87  30.0  3
- CI9  Var_16    NBG  CAR  CAS  OBJ    59.57  30.0  3
+ CI9  CONST_01  NBE   CBR  CAO  NBX     0.00   0.0  0
+ CI9  CONST_02  CBR   NBE  NBF  NBX     0.00   0.0  0
+ CI9  CONST_03  NBE   NBF  NBX  CAO     0.00   0.0  0
+ CI9  CONST_04  NBF   NBE  CBR  CAO     0.00   0.0  0
+ CI9  CONST_05  CBR   CAO  NBX  NBF     0.00   0.0  0
+ CI9  CONST_06  CBS   CAL  CAM  CBT     0.00   0.0  0
+ CI9  CONST_07  CBS   CAN  CBU  CBT     0.00   0.0  0
+ CI9  CONST_08  CAN   CBU  CBT  CAM     0.00   0.0  0
+ CI9  CONST_09  CAN   CBS  CAL  CAM     0.00   0.0  0
+ CI9  CONST_10  CBU   CBT  CAM  CAL     0.00   0.0  0
+ CI9  CONST_11  CBU   CAN  CBS  CAL     0.00   0.0  0
+ CI9  CONST_12  CBR   CAO  NBX  CBC   180.00   0.0  0
+ CI9  CONST_13  NBE   NBF  NBX  CBC   180.00   0.0  0
+ CI9  CONST_14  CBD   CBR  CAO  NBX   180.00   0.0  0
+ CI9  CONST_15  CBD   CBR  NBE  NBF   180.00   0.0  0
+ CI9  CONST_16  CAL   CAM  CBT  NBG   180.00   0.0  0
+ CI9  CONST_17  CAN   CBU  CBT  NBG   180.00   0.0  0
+ CI9  CONST_18  NBZ   CBU  CBT  CAM   180.00   0.0  0
+ CI9  CONST_19  NBY   CBS  CAL  CAM   180.00   0.0  0
+ CI9  CONST_20  NBZ   CBU  CAN  CBS   180.00   0.0  0
+ CI9  CONST_21  CBU   CAN  CBS  NBY   180.00   0.0  0
+ CI9  CONST_22  HAO   CAO  NBX  NBF   180.00   0.0  0
+ CI9  CONST_23  HAL   CAL  CAM  CBT   180.00   0.0  0
+ CI9  CONST_24  HAN   CAN  CBU  CBT   180.00   0.0  0
+ CI9  CONST_25  HAM   CAM  CAL  CBS   180.00   0.0  0
+ CI9  CONST_26  HBG   NBG  CBT  CAM     0.00   0.0  0
+ CI9  CONST_27  OAD   CBQ  NBI  CBW     0.00   0.0  0
+ CI9  CONST_28  CA    N    CBQ  OAD     0.00   0.0  0
+ CI9  CONST_29  N     CBQ  NBI  CBW   180.00   0.0  0
+ CI9  CONST_30  CA    N    CBQ  NBI   180.00   0.0  0
+ CI9  CONST_31  HBI   NBI  CBQ  OAD   180.00   0.0  0
+ CI9  CONST_32  HAA   OAA  CBN  OAG     0.00   0.0  0
+ CI9  CONST_33  HAI   OAI  CBP  CBW   180.00   0.0  0
+ CI9  CONST_34  HXT   OXT  C    CA    180.00   0.0  0
+ CI9  Var_01    CAO   NBX  CBC  CAQ    70.12  30.0  2
+ CI9  Var_02    OBM   CBD  CBR  CAO   -22.60  30.0  2
+ CI9  Var_03    NBX   CBC  CAQ  CAP  -179.75  30.0  3
+ CI9  Var_04    CBT   NBG  CAR  CAS   -99.48  30.0  3
+ CI9  Var_05    CBB   CAZ  CBN  OAA  -178.75  30.0  3
+ CI9  Var_06    CBW   CBB  CAZ  CBN  -177.20  30.0  3
+ CI9  Var_07    CAQ   CAP  CB   CA    161.00  30.0  3
+ CI9  Var_08    CBC   CAQ  CAP  CB    170.83  30.0  3
+ CI9  Var_09    CAX   CAY  OBM  CBD   154.90  30.0  3
+ CI9  Var_10    OBL   CAX  CAY  OBM   -70.29  30.0  3
+ CI9  Var_11    CAV   CAW  OBL  CAX   178.97  30.0  3
+ CI9  Var_12    OBK   CAV  CAW  OBL    62.89  30.0  3
+ CI9  Var_13    CAT   CAU  OBK  CAV   -75.72  30.0  3
+ CI9  Var_14    OBJ   CAT  CAU  OBK   179.57  30.0  3
+ CI9  Var_15    CAR   CAS  OBJ  CAT  -171.87  30.0  3
+ CI9  Var_16    NBG   CAR  CAS  OBJ    59.57  30.0  3
+ CI9  CONST_43  HAJ   OAJ  NBY  CBS   180.00   0.0  0
+ CI9  CONST_44  HAE   OAE  NBY  CBS   180.00   0.0  0
+ CI9  CONST_45  HAK   OAK  NBZ  CBU   180.00   0.0  0
+ CI9  CONST_46  HAF   OAF  NBZ  CBU   180.00   0.0  0
+ CI9  Var_17    CAY   OBM  CBD  CBR   -77.30  30.0  3
+ CI9  Var_18    CBP   CBW  CBB  CAZ   -56.49  30.0  3
+ CI9  Var_19    NBI   CBW  CBB  CAZ    67.13  30.0  3
+ CI9  Var_20    OAI   CBP  CBW  CBB   -77.59  30.0  3
+ CI9  Var_21    OAC   CBP  CBW  CBB   100.11  30.0  3
+ CI9  Var_22    CBQ   NBI  CBW  CBB   173.65  30.0  3
+ CI9  Var_23    CBQ   NBI  CBW  CBP   -62.95  30.0  3
+ CI9  Var_24    NBI   CBW  CBP  OAI   158.65  30.0  2
+ CI9  Var_25    NBI   CBW  CBP  OAC   -23.65  30.0  2
+ CI9  Var_26    C     CA   N    CBQ   -57.39  30.0  3
+ CI9  Var_27    CB    CA   N    CBQ  -179.64  30.0  3
+ CI9  Var_28    O     C    CA   N     143.47  30.0  3
+ CI9  Var_29    OXT   C    CA   N     -37.92  30.0  3
+ CI9  Var_30    CAP   CB   CA   N     175.68  30.0  3
+ CI9  Var_31    CAP   CB   CA   C      53.59  30.0  3
+ CI9  Var_32    CB    CA   C    OXT    82.93  30.0  2
+ CI9  Var_33    CB    CA   C    O     -95.68  30.0  2
+ CI9  Var_34    CAW   OBL  CAX  CAY   170.77  30.0  3
+ CI9  Var_35    CAU   OBK  CAV  CAW  -164.19  30.0  3
+ CI9  Var_36    CAS   OBJ  CAT  CAU   170.86  30.0  3
+ CI9  Var_37    HBW   CBW  CBB  CAZ  -174.50  30.0  3
+ CI9  Var_38    HA    CA   N    CBQ    62.09  30.0  3
+ CI9  Var_39    HB1C  CB   CA   N      54.31  30.0  3
+ CI9  Var_40    HB2C  CB   CA   N     -62.96  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

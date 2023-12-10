@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- B0W  B0W  '4-[5-[(2~{S},3~{R},4~{R},5~{S},6~{R})-6-(hydroxymethyl)-3,4,5-tris(oxidanyl)oxan-2-yl]-4~{H}-1,2,4-triazol-3-yl]benzoic acid'  ligand  42  25  .  2021-08-07  2021-08-07  
+ B0W  B0W  '4-[5-[(2~{S},3~{R},4~{R},5~{S},6~{R})-6-(hydroxymethyl)-3,4,5-tris(oxidanyl)oxan-2-yl]-4~{H}-1,2,4-triazol-3-yl]benzoic acid'  ligand  42  25  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_B0W
@@ -225,36 +226,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- B0W  CONST_01  N3   C4   C6   C11  180.00   0.0  0
- B0W  CONST_02  N5   C4   C6   C11    0.00   0.0  0
- B0W  CONST_03  C8   C7   C6   C11    0.00   0.0  0
- B0W  CONST_04  C8   C9   C10  C11    0.00   0.0  0
- B0W  CONST_05  C4   C6   C11  C10  180.00   0.0  0
- B0W  CONST_06  C7   C6   C11  C10    0.00   0.0  0
- B0W  CONST_07  C7   C8   C9   C10    0.00   0.0  0
- B0W  CONST_08  C6   C7   C8   C9     0.00   0.0  0
- B0W  CONST_09  C6   C11  C10  C9     0.00   0.0  0
- B0W  CONST_10  C4   C6   C7   C8   180.00   0.0  0
- B0W  CONST_11  N3   C4   C6   C7     0.00   0.0  0
- B0W  CONST_12  N5   C4   C6   C7   180.00   0.0  0
- B0W  CONST_13  N2   N3   C4   C6   180.00   0.0  0
- B0W  CONST_14  C1   N5   C4   C6   180.00   0.0  0
- B0W  CONST_15  C1   N2   N3   C4     0.00   0.0  0
- B0W  CONST_16  N2   C1   N5   C4     0.00   0.0  0
- B0W  CONST_17  N3   N2   C1   N5     0.00   0.0  0
- B0W  CONST_18  N2   N3   C4   N5     0.00   0.0  0
- B0W  CONST_19  C1   N5   C4   N3     0.00   0.0  0
- B0W  CONST_20  C1'  C1   N5   C4   180.00   0.0  0
- B0W  CONST_21  C1'  C1   N2   N3   180.00   0.0  0
- B0W  CONST_22  C12  C9   C10  C11  180.00   0.0  0
- B0W  CONST_23  C7   C8   C9   C12  180.00   0.0  0
- B0W  CONST_24  H5   C7   C6   C11  180.00   0.0  0
- B0W  CONST_25  H4   C8   C9   C10  180.00   0.0  0
- B0W  CONST_26  H1   C11  C10  C9   180.00   0.0  0
- B0W  CONST_27  H2   C10  C9   C8   180.00   0.0  0
- B0W  CONST_28  H6   N5   C4   C6     0.00   0.0  0
- B0W  CONST_29  H3   O14  C12  C9   180.00   0.0  0
- B0W  Var_01    O13  C12  C9   C10    0.88  30.0  2
+ B0W  CONST_01  N3   C4   C6   C11   180.00   0.0  0
+ B0W  CONST_02  N5   C4   C6   C11     0.00   0.0  0
+ B0W  CONST_03  C8   C7   C6   C11     0.00   0.0  0
+ B0W  CONST_04  C8   C9   C10  C11     0.00   0.0  0
+ B0W  CONST_05  C4   C6   C11  C10   180.00   0.0  0
+ B0W  CONST_06  C7   C6   C11  C10     0.00   0.0  0
+ B0W  CONST_07  C7   C8   C9   C10     0.00   0.0  0
+ B0W  CONST_08  C6   C7   C8   C9      0.00   0.0  0
+ B0W  CONST_09  C6   C11  C10  C9      0.00   0.0  0
+ B0W  CONST_10  C4   C6   C7   C8    180.00   0.0  0
+ B0W  CONST_11  N3   C4   C6   C7      0.00   0.0  0
+ B0W  CONST_12  N5   C4   C6   C7    180.00   0.0  0
+ B0W  CONST_13  N2   N3   C4   C6    180.00   0.0  0
+ B0W  CONST_14  C1   N5   C4   C6    180.00   0.0  0
+ B0W  CONST_15  C1   N2   N3   C4      0.00   0.0  0
+ B0W  CONST_16  N2   C1   N5   C4      0.00   0.0  0
+ B0W  CONST_17  N3   N2   C1   N5      0.00   0.0  0
+ B0W  CONST_18  N2   N3   C4   N5      0.00   0.0  0
+ B0W  CONST_19  C1   N5   C4   N3      0.00   0.0  0
+ B0W  CONST_20  C1'  C1   N5   C4    180.00   0.0  0
+ B0W  CONST_21  C1'  C1   N2   N3    180.00   0.0  0
+ B0W  CONST_22  C12  C9   C10  C11   180.00   0.0  0
+ B0W  CONST_23  C7   C8   C9   C12   180.00   0.0  0
+ B0W  CONST_24  H5   C7   C6   C11   180.00   0.0  0
+ B0W  CONST_25  H4   C8   C9   C10   180.00   0.0  0
+ B0W  CONST_26  H1   C11  C10  C9    180.00   0.0  0
+ B0W  CONST_27  H2   C10  C9   C8    180.00   0.0  0
+ B0W  CONST_28  H6   N5   C4   C6      0.00   0.0  0
+ B0W  CONST_29  H3   O14  C12  C9    180.00   0.0  0
+ B0W  Var_01    O13  C12  C9   C10     0.88  30.0  2
+ B0W  Var_02    C2'  C1'  C1   N5    113.29  30.0  1
+ B0W  Var_03    O5'  C1'  C1   N5   -125.66  30.0  1
+ B0W  Var_04    C2'  C1'  C1   N2    -65.73  30.0  1
+ B0W  Var_05    O5'  C1'  C1   N2     55.32  30.0  1
+ B0W  Var_06    C3'  C2'  C1'  C1    178.21  30.0  1
+ B0W  Var_07    C5'  O5'  C1'  C1    174.88  30.0  1
+ B0W  Var_08    C4'  C3'  C2'  C1'   -54.65  30.0  1
+ B0W  Var_09    C4'  C5'  O5'  C1'    61.70  30.0  1
+ B0W  Var_10    C3'  C4'  C5'  O5'   -55.61  30.0  1
+ B0W  Var_11    C3'  C2'  C1'  O5'    58.40  30.0  1
+ B0W  Var_12    C2'  C3'  C4'  C5'    53.85  30.0  1
+ B0W  Var_13    C2'  C1'  O5'  C5'   -63.52  30.0  1
+ B0W  Var_14    O2'  C2'  C1'  C1    -60.18  30.0  1
+ B0W  Var_15    O3'  C3'  C2'  C1'  -174.49  30.0  1
+ B0W  Var_16    C6'  C5'  O5'  C1'  -176.08  30.0  1
+ B0W  Var_17    O4'  C4'  C5'  O5'  -177.23  30.0  1
+ B0W  Var_18    O2'  C2'  C1'  O5'  -179.99  30.0  1
+ B0W  Var_19    O3'  C3'  C4'  C5'   176.18  30.0  1
+ B0W  Var_20    C3'  C4'  C5'  C6'  -175.11  30.0  1
+ B0W  Var_21    O2'  C2'  C3'  C4'  -173.09  30.0  1
+ B0W  Var_22    C2'  C3'  C4'  O4'   173.48  30.0  1
+ B0W  Var_23    H7   C1'  C1   N5     -5.65  30.0  1
+ B0W  Var_24    H16  C2'  C1'  C1     60.05  30.0  1
+ B0W  Var_25    H14  C3'  C2'  C1'    63.37  30.0  1
+ B0W  Var_26    H8   C5'  O5'  C1'   -57.50  30.0  1
+ B0W  Var_27    H12  C4'  C5'  O5'    62.35  30.0  1
+ B0W  Var_28    O6'  C6'  C5'  O5'    62.98  30.0  3
+ B0W  Var_29    O4'  C4'  C5'  C6'    63.26  30.0  1
+ B0W  Var_30    C4'  C5'  C6'  O6'  -176.12  30.0  3
+ B0W  Var_31    O3'  C3'  C4'  O4'   -64.19  30.0  1
+ B0W  Var_32    O2'  C2'  C3'  O3'    67.06  30.0  1
+ B0W  Var_33    H17  O2'  C2'  C1'   159.36  30.0  3
+ B0W  Var_34    H9   C6'  C5'  O5'  -175.34  30.0  3
+ B0W  Var_35    H10  C6'  C5'  O5'   -59.10  30.0  3
+ B0W  Var_36    H13  O4'  C4'  C5'   175.90  30.0  3
+ B0W  Var_37    H15  O3'  C3'  C4'   152.59  30.0  3
+ B0W  Var_38    H11  O6'  C6'  C5'   177.22  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

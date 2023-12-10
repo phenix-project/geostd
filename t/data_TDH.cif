@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TDH  TDH  4,4'-(1H-1,2,3-triazole-1,5-diyl)diphenol  ligand  30  19  .  2021-08-23  2021-08-23  
+ TDH  TDH  4,4'-(1H-1,2,3-triazole-1,5-diyl)diphenol  ligand  30  19  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TDH
@@ -176,45 +177,55 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TDH  CONST_01  CAR  CAP  CAG  CAC  180.00  0.0  0
- TDH  CONST_02  CAH  CAP  CAG  CAC    0.00  0.0  0
- TDH  CONST_03  CAH  CAD  CAN  CAC    0.00  0.0  0
- TDH  CONST_04  CAG  CAC  CAN  CAD    0.00  0.0  0
- TDH  CONST_05  CAG  CAP  CAH  CAD    0.00  0.0  0
- TDH  CONST_06  CAR  CAP  CAH  CAD  180.00  0.0  0
- TDH  CONST_07  NAS  CAQ  CAI  CAE  180.00  0.0  0
- TDH  CONST_08  CAJ  CAQ  CAI  CAE    0.00  0.0  0
- TDH  CONST_09  CAJ  CAF  CAO  CAE    0.00  0.0  0
- TDH  CONST_10  NAS  CAQ  CAJ  CAF  180.00  0.0  0
- TDH  CONST_11  CAI  CAQ  CAJ  CAF    0.00  0.0  0
- TDH  CONST_12  CAI  CAE  CAO  CAF    0.00  0.0  0
- TDH  CONST_21  CAQ  NAS  CAR  CAK  180.00  0.0  0
- TDH  CONST_22  NAM  NAS  CAR  CAK    0.00  0.0  0
- TDH  CONST_23  NAS  NAM  NAL  CAK    0.00  0.0  0
- TDH  CONST_24  CAP  CAG  CAC  CAN    0.00  0.0  0
- TDH  CONST_25  CAP  CAH  CAD  CAN    0.00  0.0  0
- TDH  CONST_26  CAQ  CAJ  CAF  CAO    0.00  0.0  0
- TDH  CONST_27  CAQ  CAI  CAE  CAO    0.00  0.0  0
- TDH  CONST_28  NAL  CAK  CAR  CAP  180.00  0.0  0
- TDH  CONST_29  CAQ  NAS  CAR  CAP    0.00  0.0  0
- TDH  CONST_30  NAM  NAS  CAR  CAP  180.00  0.0  0
- TDH  CONST_31  NAL  NAM  NAS  CAQ  180.00  0.0  0
- TDH  CONST_32  NAM  NAL  CAK  CAR    0.00  0.0  0
- TDH  CONST_33  NAL  NAM  NAS  CAR    0.00  0.0  0
- TDH  CONST_34  NAS  CAR  CAK  NAL    0.00  0.0  0
- TDH  CONST_35  OAA  CAN  CAC  CAG  180.00  0.0  0
- TDH  CONST_36  OAA  CAN  CAD  CAH  180.00  0.0  0
- TDH  CONST_37  OAB  CAO  CAE  CAI  180.00  0.0  0
- TDH  CONST_38  OAB  CAO  CAF  CAJ  180.00  0.0  0
- TDH  CONST_39  H2   CAD  CAN  CAC  180.00  0.0  0
- TDH  CONST_40  H1   CAC  CAN  CAD  180.00  0.0  0
- TDH  CONST_41  H4   CAF  CAO  CAE  180.00  0.0  0
- TDH  CONST_42  H3   CAE  CAO  CAF  180.00  0.0  0
- TDH  CONST_43  H6   CAH  CAP  CAG  180.00  0.0  0
- TDH  CONST_44  H5   CAG  CAP  CAH  180.00  0.0  0
- TDH  CONST_45  H8   CAJ  CAQ  CAI  180.00  0.0  0
- TDH  CONST_46  H7   CAI  CAQ  CAJ  180.00  0.0  0
- TDH  CONST_47  H9   CAK  CAR  CAP    0.00  0.0  0
+ TDH  CONST_01  CAR  CAP  CAG  CAC   180.00   0.0  0
+ TDH  CONST_02  CAH  CAP  CAG  CAC     0.00   0.0  0
+ TDH  CONST_03  CAH  CAD  CAN  CAC     0.00   0.0  0
+ TDH  CONST_04  CAG  CAC  CAN  CAD     0.00   0.0  0
+ TDH  CONST_05  CAG  CAP  CAH  CAD     0.00   0.0  0
+ TDH  CONST_06  CAR  CAP  CAH  CAD   180.00   0.0  0
+ TDH  CONST_07  NAS  CAQ  CAI  CAE   180.00   0.0  0
+ TDH  CONST_08  CAJ  CAQ  CAI  CAE     0.00   0.0  0
+ TDH  CONST_09  CAJ  CAF  CAO  CAE     0.00   0.0  0
+ TDH  CONST_10  NAS  CAQ  CAJ  CAF   180.00   0.0  0
+ TDH  CONST_11  CAI  CAQ  CAJ  CAF     0.00   0.0  0
+ TDH  CONST_12  CAI  CAE  CAO  CAF     0.00   0.0  0
+ TDH  CONST_13  CAQ  NAS  CAR  CAK   180.00   0.0  0
+ TDH  CONST_14  NAM  NAS  CAR  CAK     0.00   0.0  0
+ TDH  CONST_15  NAS  NAM  NAL  CAK     0.00   0.0  0
+ TDH  CONST_16  CAP  CAG  CAC  CAN     0.00   0.0  0
+ TDH  CONST_17  CAP  CAH  CAD  CAN     0.00   0.0  0
+ TDH  CONST_18  CAQ  CAJ  CAF  CAO     0.00   0.0  0
+ TDH  CONST_19  CAQ  CAI  CAE  CAO     0.00   0.0  0
+ TDH  CONST_20  NAL  CAK  CAR  CAP   180.00   0.0  0
+ TDH  CONST_21  CAQ  NAS  CAR  CAP     0.00   0.0  0
+ TDH  CONST_22  NAM  NAS  CAR  CAP   180.00   0.0  0
+ TDH  CONST_23  NAL  NAM  NAS  CAQ   180.00   0.0  0
+ TDH  CONST_24  NAM  NAL  CAK  CAR     0.00   0.0  0
+ TDH  CONST_25  NAL  NAM  NAS  CAR     0.00   0.0  0
+ TDH  CONST_26  NAS  CAR  CAK  NAL     0.00   0.0  0
+ TDH  CONST_27  OAA  CAN  CAC  CAG   180.00   0.0  0
+ TDH  CONST_28  OAA  CAN  CAD  CAH   180.00   0.0  0
+ TDH  CONST_29  OAB  CAO  CAE  CAI   180.00   0.0  0
+ TDH  CONST_30  OAB  CAO  CAF  CAJ   180.00   0.0  0
+ TDH  CONST_31  H2   CAD  CAN  CAC   180.00   0.0  0
+ TDH  CONST_32  H1   CAC  CAN  CAD   180.00   0.0  0
+ TDH  CONST_33  H4   CAF  CAO  CAE   180.00   0.0  0
+ TDH  CONST_34  H3   CAE  CAO  CAF   180.00   0.0  0
+ TDH  CONST_35  H6   CAH  CAP  CAG   180.00   0.0  0
+ TDH  CONST_36  H5   CAG  CAP  CAH   180.00   0.0  0
+ TDH  CONST_37  H8   CAJ  CAQ  CAI   180.00   0.0  0
+ TDH  CONST_38  H7   CAI  CAQ  CAJ   180.00   0.0  0
+ TDH  CONST_39  H9   CAK  CAR  CAP     0.00   0.0  0
+ TDH  Var_01    CAK  CAR  CAP  CAG  -136.67  30.0  2
+ TDH  Var_02    NAS  CAR  CAP  CAG    42.00  30.0  2
+ TDH  Var_03    CAK  CAR  CAP  CAH    41.57  30.0  2
+ TDH  Var_04    NAS  CAR  CAP  CAH  -139.77  30.0  2
+ TDH  Var_05    CAR  NAS  CAQ  CAI    53.71  30.0  2
+ TDH  Var_06    NAM  NAS  CAQ  CAI  -124.26  30.0  2
+ TDH  Var_07    CAR  NAS  CAQ  CAJ  -126.61  30.0  2
+ TDH  Var_08    NAM  NAS  CAQ  CAJ    55.42  30.0  2
+ TDH  Var_09    H10  OAA  CAN  CAC    -1.18  30.0  2
+ TDH  Var_10    H11  OAB  CAO  CAE    -1.22  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

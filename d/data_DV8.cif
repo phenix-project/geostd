@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DV8  DV8  ~{N}-[(2~{S})-1-[(2~{S},4~{R})-2-[[4-(4-methyl-1,3-thiazol-5-yl)phenyl]methylcarbamothioyl]-4-oxidanyl-pyrrolidin-1-yl]-1-sulfanylidene-propan-2-yl]ethanamide  ligand  56  30  .  2022-03-18  2022-03-18
+ DV8  DV8  ~{N}-[(2~{S})-1-[(2~{S},4~{R})-2-[[4-(4-methyl-1,3-thiazol-5-yl)phenyl]methylcarbamothioyl]-4-oxidanyl-pyrrolidin-1-yl]-1-sulfanylidene-propan-2-yl]ethanamide  ligand  56  30  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_DV8
@@ -281,40 +282,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DV8  CONST_01  CAY  CAJ  CAH  CAX    0.00   0.0  0
- DV8  CONST_02  CAY  CAK  CAI  CAX    0.00   0.0  0
- DV8  CONST_03  CAZ  CAY  CAK  CAI  180.00   0.0  0
- DV8  CONST_04  CAJ  CAY  CAK  CAI    0.00   0.0  0
- DV8  CONST_05  CAJ  CAH  CAX  CAI    0.00   0.0  0
- DV8  CONST_08  CAH  CAJ  CAY  CAK    0.00   0.0  0
- DV8  CONST_09  CAH  CAX  CAI  CAK    0.00   0.0  0
- DV8  CONST_10  CAZ  CAY  CAJ  CAH  180.00   0.0  0
- DV8  CONST_13  NAP  CAW  CAZ  CAY  180.00   0.0  0
- DV8  CONST_14  CAL  SAS  CAZ  CAY  180.00   0.0  0
- DV8  CONST_15  CAL  NAP  CAW  CAZ    0.00   0.0  0
- DV8  CONST_16  NAP  CAL  SAS  CAZ    0.00   0.0  0
- DV8  CONST_17  CAW  NAP  CAL  SAS    0.00   0.0  0
- DV8  CONST_18  NAP  CAW  CAZ  SAS    0.00   0.0  0
- DV8  CONST_19  CAW  CAZ  SAS  CAL    0.00   0.0  0
- DV8  CONST_20  CAJ  CAH  CAX  CAM  180.00   0.0  0
- DV8  CONST_21  CAK  CAI  CAX  CAM  180.00   0.0  0
- DV8  CONST_22  CAB  CAW  CAZ  CAY    0.00   0.0  0
- DV8  CONST_23  CAB  CAW  CAZ  SAS  180.00   0.0  0
- DV8  CONST_24  CAB  CAW  NAP  CAL  180.00   0.0  0
- DV8  CONST_25  H22  CAJ  CAH  CAX  180.00   0.0  0
- DV8  CONST_26  H20  CAK  CAI  CAX  180.00   0.0  0
- DV8  CONST_27  H21  CAH  CAX  CAI  180.00   0.0  0
- DV8  CONST_28  H19  CAI  CAX  CAH  180.00   0.0  0
- DV8  CONST_29  H23  CAL  SAS  CAZ  180.00   0.0  0
- DV8  CONST_30  CBB  NAR  CAT  CAA  180.00   0.0  0
- DV8  CONST_31  CBB  NAR  CAT  OAD    0.00   0.0  0
- DV8  CONST_32  H4   NAR  CAT  CAA    0.00   0.0  0
- DV8  Var_01    CBC  NBD  CAO  CBA   28.59  30.0  1
- DV8  Var_02    CAH  CAX  CAM  NAQ  -40.73  30.0  2
- DV8  Var_03    H24  CAB  CAW  CAZ  -97.11  30.0  2
- DV8  Var_04    CAM  NAQ  CAU  CBC  172.40  30.0  1
- DV8  Var_05    CAX  CAM  NAQ  CAU  102.91  30.0  1
- DV8  Var_06    H1   CAA  CAT  OAD   57.18  30.0  3
+ DV8  CONST_01  CAY  CAJ  CAH  CAX     0.00   0.0  0
+ DV8  CONST_02  CAY  CAK  CAI  CAX     0.00   0.0  0
+ DV8  CONST_03  CAZ  CAY  CAK  CAI   180.00   0.0  0
+ DV8  CONST_04  CAJ  CAY  CAK  CAI     0.00   0.0  0
+ DV8  CONST_05  CAJ  CAH  CAX  CAI     0.00   0.0  0
+ DV8  CONST_06  CAH  CAJ  CAY  CAK     0.00   0.0  0
+ DV8  CONST_07  CAH  CAX  CAI  CAK     0.00   0.0  0
+ DV8  CONST_08  CAZ  CAY  CAJ  CAH   180.00   0.0  0
+ DV8  CONST_09  NAP  CAW  CAZ  CAY   180.00   0.0  0
+ DV8  CONST_10  CAL  SAS  CAZ  CAY   180.00   0.0  0
+ DV8  CONST_11  CAL  NAP  CAW  CAZ     0.00   0.0  0
+ DV8  CONST_12  NAP  CAL  SAS  CAZ     0.00   0.0  0
+ DV8  CONST_13  CAW  NAP  CAL  SAS     0.00   0.0  0
+ DV8  CONST_14  NAP  CAW  CAZ  SAS     0.00   0.0  0
+ DV8  CONST_15  CAW  CAZ  SAS  CAL     0.00   0.0  0
+ DV8  CONST_16  CAJ  CAH  CAX  CAM   180.00   0.0  0
+ DV8  CONST_17  CAK  CAI  CAX  CAM   180.00   0.0  0
+ DV8  CONST_18  CAB  CAW  CAZ  CAY     0.00   0.0  0
+ DV8  CONST_19  CAB  CAW  CAZ  SAS   180.00   0.0  0
+ DV8  CONST_20  CAB  CAW  NAP  CAL   180.00   0.0  0
+ DV8  CONST_21  H22  CAJ  CAH  CAX   180.00   0.0  0
+ DV8  CONST_22  H20  CAK  CAI  CAX   180.00   0.0  0
+ DV8  CONST_23  H21  CAH  CAX  CAI   180.00   0.0  0
+ DV8  CONST_24  H19  CAI  CAX  CAH   180.00   0.0  0
+ DV8  CONST_25  H23  CAL  SAS  CAZ   180.00   0.0  0
+ DV8  CONST_26  CBB  NAR  CAT  CAA   180.00   0.0  0
+ DV8  CONST_27  CBB  NAR  CAT  OAD     0.00   0.0  0
+ DV8  CONST_28  H4   NAR  CAT  CAA     0.00   0.0  0
+ DV8  Var_01    CBC  NBD  CAO  CBA    28.59  30.0  1
+ DV8  Var_02    CAH  CAX  CAM  NAQ   -40.73  30.0  2
+ DV8  Var_03    H24  CAB  CAW  CAZ   -97.11  30.0  2
+ DV8  Var_04    CAM  NAQ  CAU  CBC   172.40  30.0  1
+ DV8  Var_05    CAX  CAM  NAQ  CAU   102.91  30.0  1
+ DV8  Var_06    H1   CAA  CAT  OAD    57.18  30.0  3
+ DV8  Var_07    CBA  CAN  CBC  NBD   -20.69  30.0  1
+ DV8  Var_08    CAN  CBA  CAO  NBD   -40.02  30.0  1
+ DV8  Var_09    CBC  CAN  CBA  CAO    37.38  30.0  1
+ DV8  Var_10    CAN  CBC  NBD  CAO    -5.05  30.0  1
+ DV8  Var_11    CAW  CAZ  CAY  CAK  -137.03  30.0  3
+ DV8  Var_12    SAS  CAZ  CAY  CAK    42.74  30.0  3
+ DV8  Var_13    CAW  CAZ  CAY  CAJ    43.40  30.0  3
+ DV8  Var_14    SAS  CAZ  CAY  CAJ  -136.84  30.0  3
+ DV8  Var_15    CAN  CBC  NBD  CAV   173.18  30.0  1
+ DV8  Var_16    OAE  CBA  CAO  NBD    75.22  30.0  1
+ DV8  Var_17    CAU  CBC  NBD  CAO   114.08  30.0  1
+ DV8  Var_18    CAU  CBC  CAN  CBA  -141.15  30.0  1
+ DV8  Var_19    CBC  CAN  CBA  OAE   -80.60  30.0  1
+ DV8  Var_20    H13  CAN  CBC  NBD  -143.34  30.0  1
+ DV8  Var_21    H14  CAN  CBC  NBD    96.05  30.0  1
+ DV8  Var_22    H11  CBA  CAO  NBD  -158.89  30.0  1
+ DV8  Var_23    H15  CBC  NBD  CAO  -123.98  30.0  1
+ DV8  Var_24    H9   CAO  CBA  CAN  -161.11  30.0  1
+ DV8  Var_25    H10  CAO  CBA  CAN    77.24  30.0  1
+ DV8  Var_26    CBC  NBD  CAV  CBB   172.92  30.0  1
+ DV8  Var_27    CAO  NBD  CAV  CBB    -9.18  30.0  1
+ DV8  Var_28    CAU  CBC  NBD  CAV   -67.69  30.0  1
+ DV8  Var_29    CBC  NBD  CAV  SAG    -2.49  30.0  1
+ DV8  Var_30    CAO  NBD  CAV  SAG   175.41  30.0  1
+ DV8  Var_31    NAQ  CAU  CBC  NBD   148.51  30.0  2
+ DV8  Var_32    SAF  CAU  CBC  NBD   -36.95  30.0  2
+ DV8  Var_33    NAQ  CAU  CBC  CAN   -95.83  30.0  2
+ DV8  Var_34    SAF  CAU  CBC  CAN    78.71  30.0  2
+ DV8  Var_35    H12  OAE  CBA  CAO    67.09  30.0  3
+ DV8  Var_36    NBD  CAV  CBB  NAR   153.34  30.0  3
+ DV8  Var_37    NBD  CAV  CBB  CAC   -83.61  30.0  3
+ DV8  Var_38    H5   CBB  CAV  NBD    35.28  30.0  3
+ DV8  Var_39    CAV  CBB  NAR  CAT  -150.15  30.0  1
+ DV8  Var_40    CAC  CBB  NAR  CAT    88.97  30.0  1
+ DV8  Var_41    SAG  CAV  CBB  NAR   -31.17  30.0  3
+ DV8  Var_42    SAG  CAV  CBB  CAC    91.89  30.0  3
+ DV8  Var_43    H6   CAC  CBB  NAR    59.40  30.0  3
+ DV8  Var_44    H7   CAC  CBB  NAR   179.33  30.0  3
+ DV8  Var_45    H8   CAC  CBB  NAR   -60.47  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

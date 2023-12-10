@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HZW  HZW  (3~{S})-~{N}-[(3-chloranyl-5-fluoranyl-phenyl)methyl]-3-oxidanyl-2-oxidanylidene-1-phenyl-pyrrolidine-3-carboxamide  ligand  41  25  .  2022-07-25  2022-07-26
+ HZW  HZW  (3~{S})-~{N}-[(3-chloranyl-5-fluoranyl-phenyl)methyl]-3-oxidanyl-2-oxidanylidene-1-phenyl-pyrrolidine-3-carboxamide  ligand  41  25  .  2022-07-25  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HZW
@@ -222,46 +223,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HZW  CONST_01  C21  C22  C23  C1     0.00   0.0  0
- HZW  CONST_02  C21  C20  C19  C1     0.00   0.0  0
- HZW  CONST_03  C16  C15  C14  C11    0.00   0.0  0
- HZW  CONST_04  C16  C17  C18  C11    0.00   0.0  0
- HZW  CONST_05  C17  C18  C11  C14    0.00   0.0  0
- HZW  CONST_06  C17  C16  C15  C14    0.00   0.0  0
- HZW  CONST_07  C18  C11  C14  C15    0.00   0.0  0
- HZW  CONST_08  C18  C17  C16  C15    0.00   0.0  0
- HZW  CONST_09  C22  C23  C1   C19    0.00   0.0  0
- HZW  CONST_10  C22  C21  C20  C19    0.00   0.0  0
- HZW  CONST_11  C23  C1   C19  C20    0.00   0.0  0
- HZW  CONST_12  C23  C22  C21  C20    0.00   0.0  0
- HZW  CONST_13  N8   C11  C14  C15  180.00   0.0  0
- HZW  CONST_14  C17  C18  C11  N8   180.00   0.0  0
- HZW  CONST_15  C6   C7   N8   C9     0.00   0.0  0
- HZW  CONST_16  C6   C7   N8   C11  180.00   0.0  0
- HZW  CONST_17  F25  C22  C23  C1   180.00   0.0  0
- HZW  CONST_18  CL1  C20  C19  C1   180.00   0.0  0
- HZW  CONST_19  C22  C23  C1   C2   180.00   0.0  0
- HZW  CONST_20  C20  C19  C1   C2   180.00   0.0  0
- HZW  CONST_21  F25  C22  C21  C20  180.00   0.0  0
- HZW  CONST_22  CL1  C20  C21  C22  180.00   0.0  0
- HZW  CONST_23  O12  C7   N8   C9   180.00   0.0  0
- HZW  CONST_24  O12  C7   N8   C11    0.00   0.0  0
- HZW  CONST_25  H6   C15  C14  C11  180.00   0.0  0
- HZW  CONST_26  H12  C17  C18  C11  180.00   0.0  0
- HZW  CONST_27  H13  C18  C11  C14  180.00   0.0  0
- HZW  CONST_28  H7   C16  C15  C14  180.00   0.0  0
- HZW  CONST_29  H5   C14  C15  C16  180.00   0.0  0
- HZW  CONST_30  H14  C23  C1   C19  180.00   0.0  0
- HZW  CONST_31  H9   C21  C20  C19  180.00   0.0  0
- HZW  CONST_32  H8   C19  C20  C21  180.00   0.0  0
- HZW  CONST_33  C6   C4   N3   C2   180.00   0.0  0
- HZW  CONST_34  H10  N3   C4   C6     0.00   0.0  0
- HZW  CONST_35  O5   C4   N3   C2     0.00   0.0  0
- HZW  Var_01    C14  C11  N8   C7   146.85  30.0  2
- HZW  Var_02    C10  C9   N8   C7    19.83  30.0  1
- HZW  Var_03    N8   C9   C10  C6   -28.86  30.0  1
- HZW  Var_04    N3   C2   C1   C19    2.70  30.0  2
- HZW  Var_05    C4   N3   C2   C1   -82.05  30.0  3
+ HZW  CONST_01  C21  C22  C23  C1      0.00   0.0  0
+ HZW  CONST_02  C21  C20  C19  C1      0.00   0.0  0
+ HZW  CONST_03  C16  C15  C14  C11     0.00   0.0  0
+ HZW  CONST_04  C16  C17  C18  C11     0.00   0.0  0
+ HZW  CONST_05  C17  C18  C11  C14     0.00   0.0  0
+ HZW  CONST_06  C17  C16  C15  C14     0.00   0.0  0
+ HZW  CONST_07  C18  C11  C14  C15     0.00   0.0  0
+ HZW  CONST_08  C18  C17  C16  C15     0.00   0.0  0
+ HZW  CONST_09  C22  C23  C1   C19     0.00   0.0  0
+ HZW  CONST_10  C22  C21  C20  C19     0.00   0.0  0
+ HZW  CONST_11  C23  C1   C19  C20     0.00   0.0  0
+ HZW  CONST_12  C23  C22  C21  C20     0.00   0.0  0
+ HZW  CONST_13  N8   C11  C14  C15   180.00   0.0  0
+ HZW  CONST_14  C17  C18  C11  N8    180.00   0.0  0
+ HZW  CONST_15  C6   C7   N8   C9      0.00   0.0  0
+ HZW  CONST_16  C6   C7   N8   C11   180.00   0.0  0
+ HZW  CONST_17  F25  C22  C23  C1    180.00   0.0  0
+ HZW  CONST_18  CL1  C20  C19  C1    180.00   0.0  0
+ HZW  CONST_19  C22  C23  C1   C2    180.00   0.0  0
+ HZW  CONST_20  C20  C19  C1   C2    180.00   0.0  0
+ HZW  CONST_21  F25  C22  C21  C20   180.00   0.0  0
+ HZW  CONST_22  CL1  C20  C21  C22   180.00   0.0  0
+ HZW  CONST_23  O12  C7   N8   C9    180.00   0.0  0
+ HZW  CONST_24  O12  C7   N8   C11     0.00   0.0  0
+ HZW  CONST_25  H6   C15  C14  C11   180.00   0.0  0
+ HZW  CONST_26  H12  C17  C18  C11   180.00   0.0  0
+ HZW  CONST_27  H13  C18  C11  C14   180.00   0.0  0
+ HZW  CONST_28  H7   C16  C15  C14   180.00   0.0  0
+ HZW  CONST_29  H5   C14  C15  C16   180.00   0.0  0
+ HZW  CONST_30  H14  C23  C1   C19   180.00   0.0  0
+ HZW  CONST_31  H9   C21  C20  C19   180.00   0.0  0
+ HZW  CONST_32  H8   C19  C20  C21   180.00   0.0  0
+ HZW  CONST_33  C6   C4   N3   C2    180.00   0.0  0
+ HZW  CONST_34  H10  N3   C4   C6      0.00   0.0  0
+ HZW  CONST_35  O5   C4   N3   C2      0.00   0.0  0
+ HZW  Var_01    C14  C11  N8   C7    146.85  30.0  2
+ HZW  Var_02    C10  C9   N8   C7     19.83  30.0  1
+ HZW  Var_03    N8   C9   C10  C6    -28.86  30.0  1
+ HZW  Var_04    N3   C2   C1   C19     2.70  30.0  2
+ HZW  Var_05    C4   N3   C2   C1    -82.05  30.0  3
+ HZW  Var_06    C9   C10  C6   C7     27.43  30.0  1
+ HZW  Var_07    N8   C7   C6   C10   -16.33  30.0  1
+ HZW  Var_08    C4   C6   C10  C9    143.64  30.0  1
+ HZW  Var_09    O13  C6   C10  C9    -87.17  30.0  1
+ HZW  Var_10    O12  C7   C6   C10   168.38  30.0  1
+ HZW  Var_11    N8   C7   C6   C4   -135.93  30.0  1
+ HZW  Var_12    O13  C6   C7   N8     99.44  30.0  1
+ HZW  Var_13    H4   C10  C6   C7    -90.49  30.0  1
+ HZW  Var_14    H15  C10  C6   C7    148.87  30.0  1
+ HZW  Var_15    C7   C6   C4   O5     55.99  30.0  3
+ HZW  Var_16    C10  C6   C4   O5    -57.27  30.0  3
+ HZW  Var_17    N3   C4   C6   C7   -120.55  30.0  1
+ HZW  Var_18    N3   C4   C6   C10   126.18  30.0  1
+ HZW  Var_19    O12  C7   C6   C4     48.77  30.0  1
+ HZW  Var_20    O12  C7   C6   O13   -75.86  30.0  1
+ HZW  Var_21    H11  O13  C6   C7     45.02  30.0  3
+ HZW  Var_22    O13  C6   C4   O5    176.34  30.0  3
+ HZW  Var_23    O13  C6   C4   N3     -0.20  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MMB  MMB  '(2R,3E)-2-{4-[(5-methyl-2-phenyl-1,3-oxazol-4-yl)methoxy]benzyl}-3-(propoxyimino)butanoic acid'  ligand  59  32  .  2022-07-25  2022-07-26
+ MMB  MMB  '(2R,3E)-2-{4-[(5-methyl-2-phenyl-1,3-oxazol-4-yl)methoxy]benzyl}-3-(propoxyimino)butanoic acid'  ligand  59  32  .  2022-07-25  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_MMB
@@ -289,55 +290,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MMB  CONST_01  C10   C9   C8   C7     0.00   0.0  0
- MMB  CONST_02  C10   C11  C12  C7     0.00   0.0  0
- MMB  CONST_03  C11   C12  C7   C8     0.00   0.0  0
- MMB  CONST_04  C11   C10  C9   C8     0.00   0.0  0
- MMB  CONST_05  C12   C7   C8   C9     0.00   0.0  0
- MMB  CONST_06  C12   C11  C10  C9     0.00   0.0  0
- MMB  CONST_07  O5    C3   N1   C14    0.00   0.0  0
- MMB  CONST_08  C18   C3   N1   C14  180.00   0.0  0
- MMB  CONST_09  C3    O5   C15  C14    0.00   0.0  0
- MMB  CONST_10  C3    N1   C14  C15    0.00   0.0  0
- MMB  CONST_11  C18   C3   O5   C15  180.00   0.0  0
- MMB  CONST_12  N1    C3   O5   C15    0.00   0.0  0
- MMB  CONST_13  N1    C14  C15  O5     0.00   0.0  0
- MMB  CONST_14  C17   C18  C3   O5     0.00   0.0  0
- MMB  CONST_15  C19   C18  C3   O5   180.00   0.0  0
- MMB  CONST_16  C16   C17  C18  C3   180.00   0.0  0
- MMB  CONST_17  C20   C19  C18  C3   180.00   0.0  0
- MMB  CONST_18  C17   C18  C3   N1   180.00   0.0  0
- MMB  CONST_19  C19   C18  C3   N1     0.00   0.0  0
- MMB  CONST_20  C19   C20  C21  C16    0.00   0.0  0
- MMB  CONST_21  C19   C18  C17  C16    0.00   0.0  0
- MMB  CONST_22  C20   C21  C16  C17    0.00   0.0  0
- MMB  CONST_23  C20   C19  C18  C17    0.00   0.0  0
- MMB  CONST_24  C21   C16  C17  C18    0.00   0.0  0
- MMB  CONST_25  C21   C20  C19  C18    0.00   0.0  0
- MMB  CONST_26  C9    C8   C7   C1   180.00   0.0  0
- MMB  CONST_27  C11   C12  C7   C1   180.00   0.0  0
- MMB  CONST_28  O4    C10  C9   C8   180.00   0.0  0
- MMB  CONST_29  O4    C10  C11  C12  180.00   0.0  0
- MMB  CONST_30  C3    N1   C14  C13  180.00   0.0  0
- MMB  CONST_31  O5    C15  C14  C13  180.00   0.0  0
- MMB  CONST_32  C5    C15  O5   C3   180.00   0.0  0
- MMB  CONST_33  C5    C15  C14  N1   180.00   0.0  0
- MMB  CONST_34  H9    C9   C8   C7   180.00   0.0  0
- MMB  CONST_35  H11   C11  C12  C7   180.00   0.0  0
- MMB  CONST_36  H12   C12  C7   C8   180.00   0.0  0
- MMB  CONST_37  H8    C8   C9   C10  180.00   0.0  0
- MMB  CONST_38  H17   C17  C18  C3     0.00   0.0  0
- MMB  CONST_39  H19   C19  C18  C3     0.00   0.0  0
- MMB  CONST_40  H20   C20  C21  C16  180.00   0.0  0
- MMB  CONST_41  H21   C21  C16  C17  180.00   0.0  0
- MMB  CONST_42  H16   C16  C17  C18  180.00   0.0  0
- MMB  Var_01    C8    C7   C1   C2   -75.50  30.0  2
- MMB  Var_02    C14   C13  O4   C10  176.12  30.0  3
- MMB  Var_03    N1    C14  C13  O4   -71.11  30.0  2
- MMB  Var_04    H51   C5   C15  C14    2.08  30.0  2
- MMB  Var_05    O1    C26  C29  C28  179.86  30.0  1
- MMB  Var_06    H321  C32  C4   C2   115.10  30.0  3
- MMB  Var_07    H281  C28  C29  C26   60.15  30.0  3
+ MMB  CONST_01  C10   C9   C8   C7      0.00   0.0  0
+ MMB  CONST_02  C10   C11  C12  C7      0.00   0.0  0
+ MMB  CONST_03  C11   C12  C7   C8      0.00   0.0  0
+ MMB  CONST_04  C11   C10  C9   C8      0.00   0.0  0
+ MMB  CONST_05  C12   C7   C8   C9      0.00   0.0  0
+ MMB  CONST_06  C12   C11  C10  C9      0.00   0.0  0
+ MMB  CONST_07  O5    C3   N1   C14     0.00   0.0  0
+ MMB  CONST_08  C18   C3   N1   C14   180.00   0.0  0
+ MMB  CONST_09  C3    O5   C15  C14     0.00   0.0  0
+ MMB  CONST_10  C3    N1   C14  C15     0.00   0.0  0
+ MMB  CONST_11  C18   C3   O5   C15   180.00   0.0  0
+ MMB  CONST_12  N1    C3   O5   C15     0.00   0.0  0
+ MMB  CONST_13  N1    C14  C15  O5      0.00   0.0  0
+ MMB  CONST_14  C17   C18  C3   O5      0.00   0.0  0
+ MMB  CONST_15  C19   C18  C3   O5    180.00   0.0  0
+ MMB  CONST_16  C16   C17  C18  C3    180.00   0.0  0
+ MMB  CONST_17  C20   C19  C18  C3    180.00   0.0  0
+ MMB  CONST_18  C17   C18  C3   N1    180.00   0.0  0
+ MMB  CONST_19  C19   C18  C3   N1      0.00   0.0  0
+ MMB  CONST_20  C19   C20  C21  C16     0.00   0.0  0
+ MMB  CONST_21  C19   C18  C17  C16     0.00   0.0  0
+ MMB  CONST_22  C20   C21  C16  C17     0.00   0.0  0
+ MMB  CONST_23  C20   C19  C18  C17     0.00   0.0  0
+ MMB  CONST_24  C21   C16  C17  C18     0.00   0.0  0
+ MMB  CONST_25  C21   C20  C19  C18     0.00   0.0  0
+ MMB  CONST_26  C9    C8   C7   C1    180.00   0.0  0
+ MMB  CONST_27  C11   C12  C7   C1    180.00   0.0  0
+ MMB  CONST_28  O4    C10  C9   C8    180.00   0.0  0
+ MMB  CONST_29  O4    C10  C11  C12   180.00   0.0  0
+ MMB  CONST_30  C3    N1   C14  C13   180.00   0.0  0
+ MMB  CONST_31  O5    C15  C14  C13   180.00   0.0  0
+ MMB  CONST_32  C5    C15  O5   C3    180.00   0.0  0
+ MMB  CONST_33  C5    C15  C14  N1    180.00   0.0  0
+ MMB  CONST_34  H9    C9   C8   C7    180.00   0.0  0
+ MMB  CONST_35  H11   C11  C12  C7    180.00   0.0  0
+ MMB  CONST_36  H12   C12  C7   C8    180.00   0.0  0
+ MMB  CONST_37  H8    C8   C9   C10   180.00   0.0  0
+ MMB  CONST_38  H17   C17  C18  C3      0.00   0.0  0
+ MMB  CONST_39  H19   C19  C18  C3      0.00   0.0  0
+ MMB  CONST_40  H20   C20  C21  C16   180.00   0.0  0
+ MMB  CONST_41  H21   C21  C16  C17   180.00   0.0  0
+ MMB  CONST_42  H16   C16  C17  C18   180.00   0.0  0
+ MMB  Var_01    C8    C7   C1   C2    -75.50  30.0  2
+ MMB  Var_02    C14   C13  O4   C10   176.12  30.0  3
+ MMB  Var_03    N1    C14  C13  O4    -71.11  30.0  2
+ MMB  Var_04    H51   C5   C15  C14     2.08  30.0  2
+ MMB  Var_05    O1    C26  C29  C28   179.86  30.0  1
+ MMB  Var_06    H321  C32  C4   C2    115.10  30.0  3
+ MMB  Var_07    H281  C28  C29  C26    60.15  30.0  3
+ MMB  Var_08    C13   O4   C10  C9   -177.27  30.0  2
+ MMB  Var_09    C13   O4   C10  C11     2.61  30.0  2
+ MMB  Var_10    C7    C1   C2   C4    -56.55  30.0  2
+ MMB  Var_11    C7    C1   C2   C6    178.01  30.0  2
+ MMB  Var_12    H2    C2   C1   C7     60.80  30.0  3
+ MMB  Var_13    O1    N4   C4   C2   -179.90   0.0  2
+ MMB  Var_14    O1    N4   C4   C32    -1.55   0.0  2
+ MMB  Var_15    C32   C4   C2   C1    -61.97  30.0  3
+ MMB  Var_16    N4    C4   C2   C1    116.47  30.0  3
+ MMB  Var_17    O3    C6   C2   C1    145.40  30.0  2
+ MMB  Var_18    O2    C6   C2   C1    -36.27  30.0  2
+ MMB  Var_19    O3    C6   C2   C4     19.25  30.0  2
+ MMB  Var_20    O2    C6   C2   C4   -162.42  30.0  2
+ MMB  Var_21    C26   O1   N4   C4    176.36  30.0  3
+ MMB  Var_22    C32   C4   C2   C6     64.59  30.0  3
+ MMB  Var_23    N4    C4   C2   C6   -116.97  30.0  3
+ MMB  Var_24    N4    O1   C26  C29   177.60  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

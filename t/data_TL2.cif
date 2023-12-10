@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TL2  TL2  1,4:3,6-dianhydro-5-O-(3-carbamimidoylphenyl)-2-O-(4-carbamimidoylphenyl)-D-glucitol  ligand  50  28  .  2021-08-23  2021-08-23  
+ TL2  TL2  1,4:3,6-dianhydro-5-O-(3-carbamimidoylphenyl)-2-O-(4-carbamimidoylphenyl)-D-glucitol  ligand  50  28  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TL2
@@ -258,43 +259,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TL2  CONST_01  C7    C4   C3   C2     0.00   0.0  0
- TL2  CONST_02  C7    C6   C5   C2     0.00   0.0  0
- TL2  CONST_03  C6    C5   C2   C3     0.00   0.0  0
- TL2  CONST_04  C6    C7   C4   C3     0.00   0.0  0
- TL2  CONST_05  C5    C2   C3   C4     0.00   0.0  0
- TL2  CONST_06  C5    C6   C7   C4     0.00   0.0  0
- TL2  CONST_07  C26   C20  C18  C16    0.00   0.0  0
- TL2  CONST_08  C26   C25  C24  C16    0.00   0.0  0
- TL2  CONST_09  C25   C24  C16  C18    0.00   0.0  0
- TL2  CONST_10  C25   C26  C20  C18    0.00   0.0  0
- TL2  CONST_11  C24   C16  C18  C20    0.00   0.0  0
- TL2  CONST_12  C24   C25  C26  C20    0.00   0.0  0
- TL2  CONST_13  C4    C3   C2   C1   180.00   0.0  0
- TL2  CONST_14  C6    C5   C2   C1   180.00   0.0  0
- TL2  CONST_15  O8    C7   C4   C3   180.00   0.0  0
- TL2  CONST_16  O8    C7   C6   C5   180.00   0.0  0
- TL2  CONST_17  C24   C16  C18  O14  180.00   0.0  0
- TL2  CONST_18  C26   C20  C18  O14  180.00   0.0  0
- TL2  CONST_19  C21   C26  C20  C18  180.00   0.0  0
- TL2  CONST_20  C24   C25  C26  C21  180.00   0.0  0
- TL2  CONST_21  H4    C4   C3   C2   180.00   0.0  0
- TL2  CONST_22  H6    C6   C5   C2   180.00   0.0  0
- TL2  CONST_23  H5    C5   C2   C3   180.00   0.0  0
- TL2  CONST_24  H3    C3   C2   C5   180.00   0.0  0
- TL2  CONST_25  H20   C20  C18  C16  180.00   0.0  0
- TL2  CONST_26  H25   C25  C24  C16  180.00   0.0  0
- TL2  CONST_27  H24   C24  C16  C18  180.00   0.0  0
- TL2  CONST_28  H16   C16  C18  C20  180.00   0.0  0
- TL2  CONST_29  HN    N    C1   C2   180.00   0.0  0
- TL2  CONST_31  H272  N27  C1   C2   180.00   0.0  0
- TL2  CONST_32  H22   N22  C21  C26  180.00   0.0  0
- TL2  CONST_34  H232  N23  C21  C26  180.00   0.0  0
- TL2  Var_01    C13   C17  O15  C11   27.23  30.0  1
- TL2  Var_02    C16   C18  O14  C13    2.64  30.0  2
- TL2  Var_03    H101  C10  O11  C12  -89.39  30.0  1
- TL2  Var_04    C3    C2   C1   N     22.60  30.0  2
- TL2  Var_05    N22   C21  C26  C20   27.15  30.0  3
+ TL2  CONST_01  C7    C4   C3   C2      0.00   0.0  0
+ TL2  CONST_02  C7    C6   C5   C2      0.00   0.0  0
+ TL2  CONST_03  C6    C5   C2   C3      0.00   0.0  0
+ TL2  CONST_04  C6    C7   C4   C3      0.00   0.0  0
+ TL2  CONST_05  C5    C2   C3   C4      0.00   0.0  0
+ TL2  CONST_06  C5    C6   C7   C4      0.00   0.0  0
+ TL2  CONST_07  C26   C20  C18  C16     0.00   0.0  0
+ TL2  CONST_08  C26   C25  C24  C16     0.00   0.0  0
+ TL2  CONST_09  C25   C24  C16  C18     0.00   0.0  0
+ TL2  CONST_10  C25   C26  C20  C18     0.00   0.0  0
+ TL2  CONST_11  C24   C16  C18  C20     0.00   0.0  0
+ TL2  CONST_12  C24   C25  C26  C20     0.00   0.0  0
+ TL2  CONST_13  C4    C3   C2   C1    180.00   0.0  0
+ TL2  CONST_14  C6    C5   C2   C1    180.00   0.0  0
+ TL2  CONST_15  O8    C7   C4   C3    180.00   0.0  0
+ TL2  CONST_16  O8    C7   C6   C5    180.00   0.0  0
+ TL2  CONST_17  C24   C16  C18  O14   180.00   0.0  0
+ TL2  CONST_18  C26   C20  C18  O14   180.00   0.0  0
+ TL2  CONST_19  C21   C26  C20  C18   180.00   0.0  0
+ TL2  CONST_20  C24   C25  C26  C21   180.00   0.0  0
+ TL2  CONST_21  H4    C4   C3   C2    180.00   0.0  0
+ TL2  CONST_22  H6    C6   C5   C2    180.00   0.0  0
+ TL2  CONST_23  H5    C5   C2   C3    180.00   0.0  0
+ TL2  CONST_24  H3    C3   C2   C5    180.00   0.0  0
+ TL2  CONST_25  H20   C20  C18  C16   180.00   0.0  0
+ TL2  CONST_26  H25   C25  C24  C16   180.00   0.0  0
+ TL2  CONST_27  H24   C24  C16  C18   180.00   0.0  0
+ TL2  CONST_28  H16   C16  C18  C20   180.00   0.0  0
+ TL2  CONST_29  HN    N    C1   C2    180.00   0.0  0
+ TL2  CONST_30  H272  N27  C1   C2    180.00   0.0  0
+ TL2  CONST_31  H22   N22  C21  C26   180.00   0.0  0
+ TL2  CONST_32  H232  N23  C21  C26   180.00   0.0  0
+ TL2  Var_01    C13   C17  O15  C11    27.23  30.0  1
+ TL2  Var_02    C16   C18  O14  C13     2.64  30.0  2
+ TL2  Var_03    H101  C10  O11  C12   -89.39  30.0  1
+ TL2  Var_04    C3    C2   C1   N      22.60  30.0  2
+ TL2  Var_05    N22   C21  C26  C20    27.15  30.0  3
+ TL2  Var_06    O11   C12  C11  C9    -12.37  30.0  1
+ TL2  Var_07    C13   C12  C11  C9   -130.74  30.0  1
+ TL2  Var_08    C17   O15  C11  C9    103.48  30.0  1
+ TL2  Var_09    C12   C11  C9   C10    28.65  30.0  1
+ TL2  Var_10    O15   C11  C9   C10   -86.62  30.0  1
+ TL2  Var_11    C11   C12  O11  C10   -10.76  30.0  1
+ TL2  Var_12    C13   C12  O11  C10   101.35  30.0  1
+ TL2  Var_13    C11   C9   C10  O11   -35.96  30.0  1
+ TL2  Var_14    O15   C11  C12  O11   105.81  30.0  1
+ TL2  Var_15    C17   C13  C12  O11   -87.40  30.0  1
+ TL2  Var_16    C17   C13  C12  C11    27.50  30.0  1
+ TL2  Var_17    C17   O15  C11  C12    -9.08  30.0  1
+ TL2  Var_18    O15   C17  C13  C12   -33.75  30.0  1
+ TL2  Var_19    O15   C11  C12  C13   -12.56  30.0  1
+ TL2  Var_20    C9    O8   C7   C4   -178.31  30.0  2
+ TL2  Var_21    C9    O8   C7   C6      2.35  30.0  2
+ TL2  Var_22    C10   C9   O8   C7     78.87  30.0  3
+ TL2  Var_23    C11   C9   O8   C7   -171.10  30.0  3
+ TL2  Var_24    O11   C10  C9   O8     76.58  30.0  1
+ TL2  Var_25    C12   C11  C9   O8    -88.12  30.0  1
+ TL2  Var_26    O15   C11  C9   O8    156.61  30.0  1
+ TL2  Var_27    O14   C13  C12  O11    30.47  30.0  1
+ TL2  Var_28    O14   C13  C12  C11   145.36  30.0  1
+ TL2  Var_29    C18   O14  C13  C12    74.91  30.0  3
+ TL2  Var_30    O15   C17  C13  O14  -155.85  30.0  1
+ TL2  Var_31    C18   O14  C13  C17  -170.58  30.0  3
+ TL2  Var_32    H12   C12  C11  C9    107.42  30.0  1
+ TL2  Var_33    H11   C11  C9   C10   151.37  30.0  1
+ TL2  Var_34    H9    C9   C10  O11  -156.29  30.0  1
+ TL2  Var_35    H13   C13  C12  O11   156.32  30.0  1
+ TL2  Var_36    H102  C10  C9   C11  -154.67  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

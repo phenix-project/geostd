@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RBF  RBF  1-deoxy-1-(7,8-dimethyl-2,4-dioxo-3,4-dihydrobenzo[g]pteridin-10(2H)-yl)-D-ribitol  ligand  47  27  .  2022-07-22  2022-07-26
+ RBF  RBF  1-deoxy-1-(7,8-dimethyl-2,4-dioxo-3,4-dihydrobenzo[g]pteridin-10(2H)-yl)-D-ribitol  ligand  47  27  .  2022-07-22  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RBF
@@ -245,32 +246,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RBF  CONST_01  C8    C7   C6   C5A    0.00   0.0  0
- RBF  CONST_02  C8    C9   C9A  C5A    0.00   0.0  0
- RBF  CONST_03  C9    C9A  C5A  C6     0.00   0.0  0
- RBF  CONST_04  C9    C8   C7   C6     0.00   0.0  0
- RBF  CONST_05  C9A   C5A  C6   C7     0.00   0.0  0
- RBF  CONST_06  C9A   C9   C8   C7     0.00   0.0  0
- RBF  CONST_07  C4    N3   C2   N1     0.00   0.0  0
- RBF  CONST_08  C9A   N10  C10  N1   180.00   0.0  0
- RBF  CONST_09  C4A   C10  N1   C2     0.00   0.0  0
- RBF  CONST_10  N10   C10  N1   C2   180.00   0.0  0
- RBF  CONST_11  C10   N1   C2   N3     0.00   0.0  0
- RBF  CONST_12  C9A   N10  C10  C4A    0.00   0.0  0
- RBF  CONST_13  C7M   C7   C6   C5A  180.00   0.0  0
- RBF  CONST_14  C8M   C8   C7   C6   180.00   0.0  0
- RBF  CONST_15  C9    C8   C7   C7M  180.00   0.0  0
- RBF  CONST_16  C9A   C9   C8   C8M  180.00   0.0  0
- RBF  CONST_17  C1'   N10  C10  N1     0.00   0.0  0
- RBF  CONST_18  C10   N1   C2   O2   180.00   0.0  0
- RBF  CONST_19  C4    N3   C2   O2   180.00   0.0  0
- RBF  CONST_20  C1'   N10  C10  C4A  180.00   0.0  0
- RBF  CONST_21  HC6   C6   C5A  N5     0.00   0.0  0
- RBF  CONST_22  HC9   C9   C9A  C5A  180.00   0.0  0
- RBF  CONST_23  HN3   N3   C2   N1   180.00   0.0  0
- RBF  Var_01    C2'   C1'  N10  C9A   95.51  30.0  3
- RBF  Var_02    HC71  C7M  C7   C6   119.57  30.0  2
- RBF  Var_03    HC81  C8M  C8   C7    55.87  30.0  2
+ RBF  CONST_01  C8    C7   C6   C5A     0.00   0.0  0
+ RBF  CONST_02  C8    C9   C9A  C5A     0.00   0.0  0
+ RBF  CONST_03  C9    C9A  C5A  C6      0.00   0.0  0
+ RBF  CONST_04  C9    C8   C7   C6      0.00   0.0  0
+ RBF  CONST_05  C9A   C5A  C6   C7      0.00   0.0  0
+ RBF  CONST_06  C9A   C9   C8   C7      0.00   0.0  0
+ RBF  CONST_07  C4    N3   C2   N1      0.00   0.0  0
+ RBF  CONST_08  C9A   N10  C10  N1    180.00   0.0  0
+ RBF  CONST_09  C4A   C10  N1   C2      0.00   0.0  0
+ RBF  CONST_10  N10   C10  N1   C2    180.00   0.0  0
+ RBF  CONST_11  C10   N1   C2   N3      0.00   0.0  0
+ RBF  CONST_12  C9A   N10  C10  C4A     0.00   0.0  0
+ RBF  CONST_13  C7M   C7   C6   C5A   180.00   0.0  0
+ RBF  CONST_14  C8M   C8   C7   C6    180.00   0.0  0
+ RBF  CONST_15  C9    C8   C7   C7M   180.00   0.0  0
+ RBF  CONST_16  C9A   C9   C8   C8M   180.00   0.0  0
+ RBF  CONST_17  C1'   N10  C10  N1      0.00   0.0  0
+ RBF  CONST_18  C10   N1   C2   O2    180.00   0.0  0
+ RBF  CONST_19  C4    N3   C2   O2    180.00   0.0  0
+ RBF  CONST_20  C1'   N10  C10  C4A   180.00   0.0  0
+ RBF  CONST_21  HC6   C6   C5A  N5      0.00   0.0  0
+ RBF  CONST_22  HC9   C9   C9A  C5A   180.00   0.0  0
+ RBF  CONST_23  HN3   N3   C2   N1    180.00   0.0  0
+ RBF  Var_01    C2'   C1'  N10  C9A    95.51  30.0  3
+ RBF  Var_02    HC71  C7M  C7   C6    119.57  30.0  2
+ RBF  Var_03    HC81  C8M  C8   C7     55.87  30.0  2
+ RBF  Var_04    C5A   N5   C4A  C4   -179.78   0.0  0
+ RBF  Var_05    C10   C4A  N5   C5A     0.27   0.0  0
+ RBF  Var_06    O4    C4   N3   C2   -179.92  30.0  1
+ RBF  Var_07    N5    C4A  C4   O4      0.18  30.0  1
+ RBF  Var_08    C10   C4A  C4   O4   -179.86  30.0  1
+ RBF  Var_09    O2'   C2'  C1'  N10   -48.82  30.0  3
+ RBF  Var_10    C3'   C2'  C1'  N10  -173.74  30.0  3
+ RBF  Var_11    HC2'  C2'  C1'  N10    66.71  30.0  3
+ RBF  Var_12    O3'   C3'  C2'  C1'   -32.45  30.0  3
+ RBF  Var_13    C4'   C3'  C2'  C1'  -157.39  30.0  3
+ RBF  Var_14    O4'   C4'  C3'  C2'   -38.51  30.0  3
+ RBF  Var_15    C5'   C4'  C3'  C2'  -165.03  30.0  3
+ RBF  Var_16    O3'   C3'  C2'  O2'  -157.07  30.0  3
+ RBF  Var_17    C4'   C3'  C2'  O2'    77.99  30.0  3
+ RBF  Var_18    O5'   C5'  C4'  C3'  -171.02  30.0  3
+ RBF  Var_19    O4'   C4'  C3'  O3'  -164.78  30.0  3
+ RBF  Var_20    C5'   C4'  C3'  O3'    68.69  30.0  3
+ RBF  Var_21    O5'   C5'  C4'  O4'    61.39  30.0  3
+ RBF  Var_22    HO2'  O2'  C2'  C1'   -74.39  30.0  3
+ RBF  Var_23    HC3'  C3'  C2'  C1'    82.26  30.0  3
+ RBF  Var_24    HO3'  O3'  C3'  C2'   -72.22  30.0  3
+ RBF  Var_25    HC4'  C4'  C3'  C2'    77.09  30.0  3
+ RBF  Var_26    HO4'  O4'  C4'  C3'   -59.23  30.0  3
+ RBF  Var_27    HC51  C5'  C4'  C3'   -48.79  30.0  3
+ RBF  Var_28    HC52  C5'  C4'  C3'    67.18  30.0  3
+ RBF  Var_29    HO5'  O5'  C5'  C4'   178.00  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

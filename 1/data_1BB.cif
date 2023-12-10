@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1BB  1BB  2-{(1S)-1-[(6-chloro-3,3-dimethyl-3,4-dihydroisoquinolin-1-yl)amino]-2-phenylethyl}-4-oxo-1,4-dihydropyrimidine-5-carbonitrile  ligand  53  31  .  2021-08-03  2021-08-03  
+ 1BB  1BB  2-{(1S)-1-[(6-chloro-3,3-dimethyl-3,4-dihydroisoquinolin-1-yl)amino]-2-phenylethyl}-4-oxo-1,4-dihydropyrimidine-5-carbonitrile  ligand  53  31  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1BB
@@ -270,45 +271,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 1BB  CONST_01  C4   C5   C6   C1     0.00   0.0  0
- 1BB  CONST_02  C4   C3   C2   C1     0.00   0.0  0
- 1BB  CONST_03  C5   C6   C1   C2     0.00   0.0  0
- 1BB  CONST_04  C5   C4   C3   C2     0.00   0.0  0
- 1BB  CONST_05  C6   C1   C2   C3     0.00   0.0  0
- 1BB  CONST_06  C6   C5   C4   C3     0.00   0.0  0
- 1BB  CONST_07  C31  C32  C33  C26    0.00   0.0  0
- 1BB  CONST_08  C31  C30  C29  C26    0.00   0.0  0
- 1BB  CONST_09  C32  C33  C26  C29    0.00   0.0  0
- 1BB  CONST_10  C32  C31  C30  C29    0.00   0.0  0
- 1BB  CONST_11  C33  C26  C29  C30    0.00   0.0  0
- 1BB  CONST_12  C33  C32  C31  C30    0.00   0.0  0
- 1BB  CONST_13  C10  N11  C12  C4     0.00   0.0  0
- 1BB  CONST_14  C19  N24  C7   N8     0.00   0.0  0
- 1BB  CONST_15  N24  C7   N8   C11    0.00   0.0  0
- 1BB  CONST_16  C5   C6   C1   CL1  180.00   0.0  0
- 1BB  CONST_17  C3   C2   C1   CL1  180.00   0.0  0
- 1BB  CONST_18  C32  C33  C26  C15  180.00   0.0  0
- 1BB  CONST_19  C30  C29  C26  C15  180.00   0.0  0
- 1BB  CONST_20  N13  C12  N11  C10  180.00   0.0  0
- 1BB  CONST_21  C11  N8   C7   C14  180.00   0.0  0
- 1BB  CONST_22  C19  N24  C7   C14  180.00   0.0  0
- 1BB  CONST_23  H2   C5   C6   C1   180.00   0.0  0
- 1BB  CONST_24  H3   C6   C1   C2   180.00   0.0  0
- 1BB  CONST_25  H1   C2   C3   C4   180.00   0.0  0
- 1BB  CONST_26  H21  C32  C33  C26  180.00   0.0  0
- 1BB  CONST_27  H19  C30  C29  C26  180.00   0.0  0
- 1BB  CONST_28  H22  C33  C26  C29  180.00   0.0  0
- 1BB  CONST_29  H20  C31  C30  C29  180.00   0.0  0
- 1BB  CONST_30  H18  C29  C30  C31  180.00   0.0  0
- 1BB  CONST_31  H16  N8   C7   N24  180.00   0.0  0
- 1BB  CONST_32  C14  N13  C12  C4   180.00   0.0  0
- 1BB  CONST_33  C14  N13  C12  N11    0.00   0.0  0
- 1BB  Var_01    C10  C9   C3   C2   145.37  30.0  1
- 1BB  Var_02    N11  C12  C4   C3    17.97  30.0  1
- 1BB  Var_03    N11  C10  C9   C3    51.47  30.0  1
- 1BB  Var_04    C33  C26  C15  C14  -77.52  30.0  2
- 1BB  Var_05    H13  C28  C10  C9    60.60  30.0  3
- 1BB  Var_06    H10  C27  C10  C9    62.10  30.0  3
+ 1BB  CONST_01  C4   C5   C6   C1      0.00   0.0  0
+ 1BB  CONST_02  C4   C3   C2   C1      0.00   0.0  0
+ 1BB  CONST_03  C5   C6   C1   C2      0.00   0.0  0
+ 1BB  CONST_04  C5   C4   C3   C2      0.00   0.0  0
+ 1BB  CONST_05  C6   C1   C2   C3      0.00   0.0  0
+ 1BB  CONST_06  C6   C5   C4   C3      0.00   0.0  0
+ 1BB  CONST_07  C31  C32  C33  C26     0.00   0.0  0
+ 1BB  CONST_08  C31  C30  C29  C26     0.00   0.0  0
+ 1BB  CONST_09  C32  C33  C26  C29     0.00   0.0  0
+ 1BB  CONST_10  C32  C31  C30  C29     0.00   0.0  0
+ 1BB  CONST_11  C33  C26  C29  C30     0.00   0.0  0
+ 1BB  CONST_12  C33  C32  C31  C30     0.00   0.0  0
+ 1BB  CONST_13  C10  N11  C12  C4      0.00   0.0  0
+ 1BB  CONST_14  C19  N24  C7   N8      0.00   0.0  0
+ 1BB  CONST_15  N24  C7   N8   C11     0.00   0.0  0
+ 1BB  CONST_16  C5   C6   C1   CL1   180.00   0.0  0
+ 1BB  CONST_17  C3   C2   C1   CL1   180.00   0.0  0
+ 1BB  CONST_18  C32  C33  C26  C15   180.00   0.0  0
+ 1BB  CONST_19  C30  C29  C26  C15   180.00   0.0  0
+ 1BB  CONST_20  N13  C12  N11  C10   180.00   0.0  0
+ 1BB  CONST_21  C11  N8   C7   C14   180.00   0.0  0
+ 1BB  CONST_22  C19  N24  C7   C14   180.00   0.0  0
+ 1BB  CONST_23  H2   C5   C6   C1    180.00   0.0  0
+ 1BB  CONST_24  H3   C6   C1   C2    180.00   0.0  0
+ 1BB  CONST_25  H1   C2   C3   C4    180.00   0.0  0
+ 1BB  CONST_26  H21  C32  C33  C26   180.00   0.0  0
+ 1BB  CONST_27  H19  C30  C29  C26   180.00   0.0  0
+ 1BB  CONST_28  H22  C33  C26  C29   180.00   0.0  0
+ 1BB  CONST_29  H20  C31  C30  C29   180.00   0.0  0
+ 1BB  CONST_30  H18  C29  C30  C31   180.00   0.0  0
+ 1BB  CONST_31  H16  N8   C7   N24   180.00   0.0  0
+ 1BB  CONST_32  C14  N13  C12  C4    180.00   0.0  0
+ 1BB  CONST_33  C14  N13  C12  N11     0.00   0.0  0
+ 1BB  Var_01    C10  C9   C3   C2    145.37  30.0  1
+ 1BB  Var_02    N11  C12  C4   C3     17.97  30.0  1
+ 1BB  Var_03    N11  C10  C9   C3     51.47  30.0  1
+ 1BB  Var_04    C33  C26  C15  C14   -77.52  30.0  2
+ 1BB  Var_05    H13  C28  C10  C9     60.60  30.0  3
+ 1BB  Var_06    H10  C27  C10  C9     62.10  30.0  3
+ 1BB  Var_07    C12  N11  C10  C9    -35.66  30.0  1
+ 1BB  Var_08    C13  C11  N8   C7     -0.57  30.0  1
+ 1BB  Var_09    C13  C19  N24  C7      1.38  30.0  1
+ 1BB  Var_10    C19  C13  C11  N8     -0.18  30.0  1
+ 1BB  Var_11    N24  C19  C13  C11    -0.19  30.0  1
+ 1BB  Var_12    C28  C10  N11  C12    86.69  30.0  1
+ 1BB  Var_13    C27  C10  N11  C12  -154.87  30.0  1
+ 1BB  Var_14    O25  C19  N24  C7   -178.78  30.0  1
+ 1BB  Var_15    C8   C13  C11  N8   -179.99  30.0  1
+ 1BB  Var_16    O25  C19  C13  C11   179.98  30.0  1
+ 1BB  Var_17    C8   C13  C19  N24   179.63  30.0  1
+ 1BB  Var_18    H17  C11  N8   C7    179.15  30.0  1
+ 1BB  Var_19    C7   C14  N13  C12   -56.33  30.0  3
+ 1BB  Var_20    N8   C7   C14  N13   135.58  30.0  2
+ 1BB  Var_21    N24  C7   C14  N13   -47.89  30.0  2
+ 1BB  Var_22    N8   C7   C14  C15  -102.07  30.0  2
+ 1BB  Var_23    N24  C7   C14  C15    74.46  30.0  2
+ 1BB  Var_24    C26  C15  C14  C7    178.17  30.0  3
+ 1BB  Var_25    N9   C8   C13  C11  -164.20  30.0  1
+ 1BB  Var_26    N9   C8   C13  C19    15.98  30.0  1
+ 1BB  Var_27    C8   C13  C19  O25    -0.21  30.0  1
+ 1BB  Var_28    H7   C14  C7   N8     16.41  30.0  3
+ 1BB  Var_29    C15  C14  N13  C12  -178.15  30.0  3
+ 1BB  Var_30    C26  C15  C14  N13   -58.67  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

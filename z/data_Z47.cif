@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- Z47  Z47  (2R,3S,4R,5S,6R)-2-(hydroxymethyl)-6-(3-naphthalen-1-ylpropyl)oxane-3,4,5-triol  ligand  48  24  .  2022-07-22  2022-07-26
+ Z47  Z47  (2R,3S,4R,5S,6R)-2-(hydroxymethyl)-6-(3-naphthalen-1-ylpropyl)oxane-3,4,5-triol  ligand  48  24  .  2022-07-22  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_Z47
@@ -252,37 +253,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- Z47  CONST_01  C13  C14  C15  C10     0.00   0.0  0
- Z47  CONST_02  C13  C12  C11  C10     0.00   0.0  0
- Z47  CONST_03  C16  C12  C11  C10   180.00   0.0  0
- Z47  CONST_04  C18  C19  C11  C10   180.00   0.0  0
- Z47  CONST_05  C12  C11  C10  C15     0.00   0.0  0
- Z47  CONST_06  C19  C11  C10  C15   180.00   0.0  0
- Z47  CONST_07  C12  C13  C14  C15     0.00   0.0  0
- Z47  CONST_08  C11  C10  C15  C14     0.00   0.0  0
- Z47  CONST_09  C11  C12  C13  C14     0.00   0.0  0
- Z47  CONST_10  C16  C12  C13  C14   180.00   0.0  0
- Z47  CONST_11  C19  C11  C12  C13   180.00   0.0  0
- Z47  CONST_12  C17  C16  C12  C13   180.00   0.0  0
- Z47  CONST_13  C18  C19  C11  C12     0.00   0.0  0
- Z47  CONST_14  C18  C17  C16  C12     0.00   0.0  0
- Z47  CONST_15  C17  C16  C12  C11     0.00   0.0  0
- Z47  CONST_16  C17  C18  C19  C11     0.00   0.0  0
- Z47  CONST_17  C19  C11  C12  C16     0.00   0.0  0
- Z47  CONST_18  C19  C18  C17  C16     0.00   0.0  0
- Z47  CONST_19  C14  C15  C10  C9    180.00   0.0  0
- Z47  CONST_20  C12  C11  C10  C9    180.00   0.0  0
- Z47  CONST_21  C19  C11  C10  C9      0.00   0.0  0
- Z47  CONST_22  H14  C14  C15  C10   180.00   0.0  0
- Z47  CONST_23  H19  C19  C11  C10     0.00   0.0  0
- Z47  CONST_24  H13  C13  C14  C15   180.00   0.0  0
- Z47  CONST_25  H15  C15  C14  C13   180.00   0.0  0
- Z47  CONST_26  H16  C16  C12  C13     0.00   0.0  0
- Z47  CONST_27  H17  C17  C16  C12   180.00   0.0  0
- Z47  CONST_28  H18  C18  C19  C11   180.00   0.0  0
- Z47  Var_01    C15  C10  C9   C8    -96.82  30.0  2
- Z47  Var_02    C9   C8   C7   C1   -178.02  30.0  3
- Z47  Var_03    C10  C9   C8   C7   -174.91  30.0  3
+ Z47  CONST_01  C13   C14  C15  C10     0.00   0.0  0
+ Z47  CONST_02  C13   C12  C11  C10     0.00   0.0  0
+ Z47  CONST_03  C16   C12  C11  C10   180.00   0.0  0
+ Z47  CONST_04  C18   C19  C11  C10   180.00   0.0  0
+ Z47  CONST_05  C12   C11  C10  C15     0.00   0.0  0
+ Z47  CONST_06  C19   C11  C10  C15   180.00   0.0  0
+ Z47  CONST_07  C12   C13  C14  C15     0.00   0.0  0
+ Z47  CONST_08  C11   C10  C15  C14     0.00   0.0  0
+ Z47  CONST_09  C11   C12  C13  C14     0.00   0.0  0
+ Z47  CONST_10  C16   C12  C13  C14   180.00   0.0  0
+ Z47  CONST_11  C19   C11  C12  C13   180.00   0.0  0
+ Z47  CONST_12  C17   C16  C12  C13   180.00   0.0  0
+ Z47  CONST_13  C18   C19  C11  C12     0.00   0.0  0
+ Z47  CONST_14  C18   C17  C16  C12     0.00   0.0  0
+ Z47  CONST_15  C17   C16  C12  C11     0.00   0.0  0
+ Z47  CONST_16  C17   C18  C19  C11     0.00   0.0  0
+ Z47  CONST_17  C19   C11  C12  C16     0.00   0.0  0
+ Z47  CONST_18  C19   C18  C17  C16     0.00   0.0  0
+ Z47  CONST_19  C14   C15  C10  C9    180.00   0.0  0
+ Z47  CONST_20  C12   C11  C10  C9    180.00   0.0  0
+ Z47  CONST_21  C19   C11  C10  C9      0.00   0.0  0
+ Z47  CONST_22  H14   C14  C15  C10   180.00   0.0  0
+ Z47  CONST_23  H19   C19  C11  C10     0.00   0.0  0
+ Z47  CONST_24  H13   C13  C14  C15   180.00   0.0  0
+ Z47  CONST_25  H15   C15  C14  C13   180.00   0.0  0
+ Z47  CONST_26  H16   C16  C12  C13     0.00   0.0  0
+ Z47  CONST_27  H17   C17  C16  C12   180.00   0.0  0
+ Z47  CONST_28  H18   C18  C19  C11   180.00   0.0  0
+ Z47  Var_01    C15   C10  C9   C8    -96.82  30.0  2
+ Z47  Var_02    C9    C8   C7   C1   -178.02  30.0  3
+ Z47  Var_03    C10   C9   C8   C7   -174.91  30.0  3
+ Z47  Var_04    C4    C3   C2   C1    -52.85  30.0  1
+ Z47  Var_05    C4    C5   O5   C1     60.19  30.0  1
+ Z47  Var_06    C5    O5   C1   C2    -59.09  30.0  1
+ Z47  Var_07    C5    C4   C3   C2     53.85  30.0  1
+ Z47  Var_08    O5    C1   C2   C3     53.61  30.0  1
+ Z47  Var_09    O5    C5   C4   C3    -55.91  30.0  1
+ Z47  Var_10    O3    C3   C2   C1   -175.58  30.0  1
+ Z47  Var_11    C6    C5   O5   C1   -177.79  30.0  1
+ Z47  Var_12    O4    C4   C3   C2    175.21  30.0  1
+ Z47  Var_13    C7    C1   C2   C3    -74.43  30.0  1
+ Z47  Var_14    C6    C5   C4   C3   -175.29  30.0  1
+ Z47  Var_15    O2    C2   C3   C4     66.61  30.0  1
+ Z47  Var_16    O3    C3   C4   C5    173.95  30.0  1
+ Z47  Var_17    C7    C1   O5   C5     68.57  30.0  1
+ Z47  Var_18    O5    C1   C2   O2    -67.96  30.0  1
+ Z47  Var_19    O5    C5   C4   O4   -174.47  30.0  1
+ Z47  Var_20    H23   C3   C2   C1     65.18  30.0  1
+ Z47  Var_21    H5    C5   O5   C1    -59.78  30.0  1
+ Z47  Var_22    H24   C4   C3   C2    -64.97  30.0  1
+ Z47  Var_23    H21   C1   C2   C3    167.64  30.0  1
+ Z47  Var_24    H22   C2   C3   C4   -171.31  30.0  1
+ Z47  Var_25    C8    C7   C1   C2   -178.29  30.0  3
+ Z47  Var_26    O6    C6   C5   C4   -173.83  30.0  3
+ Z47  Var_27    O4    C4   C5   C6     66.15  30.0  1
+ Z47  Var_28    C7    C1   C2   O2    164.00  30.0  1
+ Z47  Var_29    O3    C3   C2   O2    -56.12  30.0  1
+ Z47  Var_30    O4    C4   C3   O3    -64.69  30.0  1
+ Z47  Var_31    C8    C7   C1   O5     55.04  30.0  3
+ Z47  Var_32    O6    C6   C5   O5     65.27  30.0  3
+ Z47  Var_33    H2    O2   C2   C1    170.81  30.0  3
+ Z47  Var_34    H71C  C7   C1   C2    -57.78  30.0  3
+ Z47  Var_35    H72C  C7   C1   C2     57.73  30.0  3
+ Z47  Var_36    H3    O3   C3   C2    172.71  30.0  3
+ Z47  Var_37    H4    O4   C4   C3    147.18  30.0  3
+ Z47  Var_38    H61C  C6   C5   C4    -52.50  30.0  3
+ Z47  Var_39    H62C  C6   C5   C4     63.79  30.0  3
+ Z47  Var_40    H6    O6   C6   C5    178.88  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

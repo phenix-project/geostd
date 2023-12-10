@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HRV  HRV  N-{3-[(2R,3R)-5-amino-3-methyl-2-(trifluoromethyl)-3,6-dihydro-2H-1,4-oxazin-3-yl]-4-fluorophenyl}-3,5-dichloropyridine-2-carboxamide  ligand  44  30  .  2022-07-25  2022-07-26
+ HRV  HRV  N-{3-[(2R,3R)-5-amino-3-methyl-2-(trifluoromethyl)-3,6-dihydro-2H-1,4-oxazin-3-yl]-4-fluorophenyl}-3,5-dichloropyridine-2-carboxamide  ligand  44  30  .  2022-07-25  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HRV
@@ -233,46 +234,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HRV  CONST_01  C28   C29  C30  C14    0.00   0.0  0
- HRV  CONST_02  C28   C16  C15  C14    0.00   0.0  0
- HRV  CONST_03  C29   C28  C16  C15    0.00   0.0  0
- HRV  CONST_04  C29   C30  C14  C15    0.00   0.0  0
- HRV  CONST_05  C30   C29  C28  C16    0.00   0.0  0
- HRV  CONST_06  C30   C14  C15  C16    0.00   0.0  0
- HRV  CONST_07  C23   C25  C26  C20    0.00   0.0  0
- HRV  CONST_08  C23   C22  N21  C20    0.00   0.0  0
- HRV  CONST_09  C26   C25  C23  C22    0.00   0.0  0
- HRV  CONST_10  C26   C20  N21  C22    0.00   0.0  0
- HRV  CONST_11  N21   C20  C26  C25    0.00   0.0  0
- HRV  CONST_12  N21   C22  C23  C25    0.00   0.0  0
- HRV  CONST_13  C2    C14  C15  C16  180.00   0.0  0
- HRV  CONST_14  C29   C30  C14  C2   180.00   0.0  0
- HRV  CONST_15  C6    C4   N3   C2     0.00   0.0  0
- HRV  CONST_16  N17   C16  C15  C14  180.00   0.0  0
- HRV  CONST_17  F31   C30  C14  C15  180.00   0.0  0
- HRV  CONST_18  C25   C26  C20  C18  180.00   0.0  0
- HRV  CONST_19  C22   N21  C20  C18  180.00   0.0  0
- HRV  CONST_20  F31   C30  C14  C2     0.00   0.0  0
- HRV  CONST_21  CL27  C26  C25  C23  180.00   0.0  0
- HRV  CONST_22  CL24  C23  C25  C26  180.00   0.0  0
- HRV  CONST_23  F31   C30  C29  C28  180.00   0.0  0
- HRV  CONST_24  N17   C16  C28  C29  180.00   0.0  0
- HRV  CONST_25  CL27  C26  C20  N21  180.00   0.0  0
- HRV  CONST_26  CL24  C23  C22  N21  180.00   0.0  0
- HRV  CONST_27  N5    C4   N3   C2   180.00   0.0  0
- HRV  CONST_28  H8    C29  C30  C14  180.00   0.0  0
- HRV  CONST_29  H7    C28  C16  C15  180.00   0.0  0
- HRV  CONST_30  H4    C15  C14  C2     0.00   0.0  0
- HRV  CONST_31  H6    C25  C26  C20  180.00   0.0  0
- HRV  CONST_32  H5    C22  N21  C20  180.00   0.0  0
- HRV  CONST_33  C20   C18  N17  C16  180.00   0.0  0
- HRV  CONST_34  C18   N17  C16  C15  180.00   0.0  0
- HRV  CONST_35  C28   C16  N17  C18    0.00   0.0  0
- HRV  CONST_36  H12   N17  C16  C15    0.00   0.0  0
- HRV  CONST_39  O19   C18  N17  C16    0.00   0.0  0
- HRV  Var_01    O7    C6   C4   N3   -13.27  30.0  1
- HRV  Var_02    H9    C6   O7   C8   -75.52  30.0  1
- HRV  Var_03    O19   C18  C20  C26   -2.09  30.0  2
+ HRV  CONST_01  C28   C29  C30  C14     0.00   0.0  0
+ HRV  CONST_02  C28   C16  C15  C14     0.00   0.0  0
+ HRV  CONST_03  C29   C28  C16  C15     0.00   0.0  0
+ HRV  CONST_04  C29   C30  C14  C15     0.00   0.0  0
+ HRV  CONST_05  C30   C29  C28  C16     0.00   0.0  0
+ HRV  CONST_06  C30   C14  C15  C16     0.00   0.0  0
+ HRV  CONST_07  C23   C25  C26  C20     0.00   0.0  0
+ HRV  CONST_08  C23   C22  N21  C20     0.00   0.0  0
+ HRV  CONST_09  C26   C25  C23  C22     0.00   0.0  0
+ HRV  CONST_10  C26   C20  N21  C22     0.00   0.0  0
+ HRV  CONST_11  N21   C20  C26  C25     0.00   0.0  0
+ HRV  CONST_12  N21   C22  C23  C25     0.00   0.0  0
+ HRV  CONST_13  C2    C14  C15  C16   180.00   0.0  0
+ HRV  CONST_14  C29   C30  C14  C2    180.00   0.0  0
+ HRV  CONST_15  C6    C4   N3   C2      0.00   0.0  0
+ HRV  CONST_16  N17   C16  C15  C14   180.00   0.0  0
+ HRV  CONST_17  F31   C30  C14  C15   180.00   0.0  0
+ HRV  CONST_18  C25   C26  C20  C18   180.00   0.0  0
+ HRV  CONST_19  C22   N21  C20  C18   180.00   0.0  0
+ HRV  CONST_20  F31   C30  C14  C2      0.00   0.0  0
+ HRV  CONST_21  CL27  C26  C25  C23   180.00   0.0  0
+ HRV  CONST_22  CL24  C23  C25  C26   180.00   0.0  0
+ HRV  CONST_23  F31   C30  C29  C28   180.00   0.0  0
+ HRV  CONST_24  N17   C16  C28  C29   180.00   0.0  0
+ HRV  CONST_25  CL27  C26  C20  N21   180.00   0.0  0
+ HRV  CONST_26  CL24  C23  C22  N21   180.00   0.0  0
+ HRV  CONST_27  N5    C4   N3   C2    180.00   0.0  0
+ HRV  CONST_28  H8    C29  C30  C14   180.00   0.0  0
+ HRV  CONST_29  H7    C28  C16  C15   180.00   0.0  0
+ HRV  CONST_30  H4    C15  C14  C2      0.00   0.0  0
+ HRV  CONST_31  H6    C25  C26  C20   180.00   0.0  0
+ HRV  CONST_32  H5    C22  N21  C20   180.00   0.0  0
+ HRV  CONST_33  C20   C18  N17  C16   180.00   0.0  0
+ HRV  CONST_34  C18   N17  C16  C15   180.00   0.0  0
+ HRV  CONST_35  C28   C16  N17  C18     0.00   0.0  0
+ HRV  CONST_36  H12   N17  C16  C15     0.00   0.0  0
+ HRV  CONST_37  O19   C18  N17  C16     0.00   0.0  0
+ HRV  Var_01    O7    C6   C4   N3    -13.27  30.0  1
+ HRV  Var_02    H9    C6   O7   C8    -75.52  30.0  1
+ HRV  Var_03    O19   C18  C20  C26    -2.09  30.0  2
+ HRV  Var_04    O7    C8   C2   C14   -76.52  30.0  1
+ HRV  Var_05    C4    N3   C2   C14   111.19  30.0  1
+ HRV  Var_06    C8    C2   C14  C15  -104.50  30.0  2
+ HRV  Var_07    N3    C2   C14  C15   132.87  30.0  2
+ HRV  Var_08    C6    O7   C8   C2    -63.58  30.0  1
+ HRV  Var_09    C8    C2   C14  C30    75.05  30.0  2
+ HRV  Var_10    N3    C2   C14  C30   -47.58  30.0  2
+ HRV  Var_11    C8    C2   N3   C4    -12.38  30.0  1
+ HRV  Var_12    O7    C8   C2   N3     44.91  30.0  1
+ HRV  Var_13    C30   C14  C2   C1   -162.22  30.0  3
+ HRV  Var_14    C15   C14  C2   C1     18.23  30.0  3
+ HRV  Var_15    O7    C8   C2   C1    158.90  30.0  1
+ HRV  Var_16    C4    N3   C2   C1   -129.18  30.0  1
+ HRV  Var_17    C14   C2   C8   C10    43.37  30.0  1
+ HRV  Var_18    N3    C2   C8   C10   164.80  30.0  1
+ HRV  Var_19    C6    O7   C8   C10   169.02  30.0  1
+ HRV  Var_20    H11   C8   C2   C14   162.54  30.0  1
+ HRV  Var_21    C10   C8   C2   C1    -81.21  30.0  1
+ HRV  Var_22    F12   C10  C8   C2    170.39  30.0  1
+ HRV  Var_23    F13   C10  C8   C2    -70.47  30.0  1
+ HRV  Var_24    F11   C10  C8   C2     51.27  30.0  1
+ HRV  Var_25    O7    C8   C10  F11   174.90  30.0  3
+ HRV  Var_26    O7    C8   C10  F12   -65.98  30.0  3
+ HRV  Var_27    O7    C8   C10  F13    53.15  30.0  3
+ HRV  Var_28    H1    C1   C2   C14    58.17  30.0  3
+ HRV  Var_29    H2    C1   C2   C14   175.89  30.0  3
+ HRV  Var_30    H3    C1   C2   C14   -64.08  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

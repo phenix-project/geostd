@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 40Z  40Z  2-chloro-5-(furan-2-ylmethyl)-8,11,11-trimethyl-9-oxo-6,7,9,10,11,12-hexahydro-5H-indolo[1,2-a][1,5]benzodiazepine-3-carboxamide  ligand  58  32  .  2021-08-04  2021-08-04  
+ 40Z  40Z  2-chloro-5-(furan-2-ylmethyl)-8,11,11-trimethyl-9-oxo-6,7,9,10,11,12-hexahydro-5H-indolo[1,2-a][1,5]benzodiazepine-3-carboxamide  ligand  58  32  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_40Z
@@ -297,41 +298,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 40Z  CONST_01  C16  C15  C14  C13    0.00   0.0  0
- 40Z  CONST_02  C12  C13  C14  C15    0.00   0.0  0
- 40Z  CONST_03  C22  C23  O1   C20    0.00   0.0  0
- 40Z  CONST_04  C23  C22  C21  C20    0.00   0.0  0
- 40Z  CONST_05  O1   C23  C22  C21    0.00   0.0  0
- 40Z  CONST_06  C23  O1   C20  C21    0.00   0.0  0
- 40Z  CONST_07  O1   C20  C21  C22    0.00   0.0  0
- 40Z  CONST_08  C11  C12  C13  C14    0.00   0.0  0
- 40Z  CONST_09  C3   C4   C1   C2     0.00   0.0  0
- 40Z  CONST_10  C1   C4   C3   N      0.00   0.0  0
- 40Z  CONST_11  C    C1   C4   C5     0.00   0.0  0
- 40Z  CONST_12  CL   C13  C14  C15  180.00   0.0  0
- 40Z  CONST_13  C19  C20  C21  C22  180.00   0.0  0
- 40Z  CONST_14  C16  C15  C14  C24  180.00   0.0  0
- 40Z  CONST_15  C12  C13  C14  C24  180.00   0.0  0
- 40Z  CONST_16  C11  C12  C13  CL   180.00   0.0  0
- 40Z  CONST_17  C23  O1   C20  C19  180.00   0.0  0
- 40Z  CONST_18  C    C1   C4   C3   180.00   0.0  0
- 40Z  CONST_19  H8   C15  C14  C13  180.00   0.0  0
- 40Z  CONST_20  H18  C23  O1   C20  180.00   0.0  0
- 40Z  CONST_21  H12  C22  C21  C20  180.00   0.0  0
- 40Z  CONST_22  H13  C12  C13  C14  180.00   0.0  0
- 40Z  CONST_23  H11  C21  C20  O1   180.00   0.0  0
- 40Z  CONST_24  H14  N2   C24  C14    0.00   0.0  0
- 40Z  CONST_25  H15  N2   C24  C14  180.00   0.0  0
- 40Z  Var_01    C7   C8   C3   C4   -25.03  30.0  1
- 40Z  Var_02    C7   C6   C5   C4    32.59  30.0  1
- 40Z  Var_03    C8   C7   C6   C5   -54.26  30.0  1
- 40Z  Var_04    C3   C8   C7   C6    48.02  30.0  1
- 40Z  Var_05    C3   C4   C5   C6    -5.88  30.0  1
- 40Z  Var_06    O1   C20  C19  N1   -58.26  30.0  1
- 40Z  Var_07    O2   C24  C14  C13   51.01  30.0  2
- 40Z  Var_08    H24  C    C1   C4    58.45  30.0  2
- 40Z  Var_09    H21  C9   C7   C6   -61.00  30.0  3
- 40Z  Var_10    H5   C10  C7   C6   179.48  30.0  3
+ 40Z  CONST_01  C16  C15  C14  C13     0.00   0.0  0
+ 40Z  CONST_02  C12  C13  C14  C15     0.00   0.0  0
+ 40Z  CONST_03  C22  C23  O1   C20     0.00   0.0  0
+ 40Z  CONST_04  C23  C22  C21  C20     0.00   0.0  0
+ 40Z  CONST_05  O1   C23  C22  C21     0.00   0.0  0
+ 40Z  CONST_06  C23  O1   C20  C21     0.00   0.0  0
+ 40Z  CONST_07  O1   C20  C21  C22     0.00   0.0  0
+ 40Z  CONST_08  C11  C12  C13  C14     0.00   0.0  0
+ 40Z  CONST_09  C3   C4   C1   C2      0.00   0.0  0
+ 40Z  CONST_10  C1   C4   C3   N       0.00   0.0  0
+ 40Z  CONST_11  C    C1   C4   C5      0.00   0.0  0
+ 40Z  CONST_12  CL   C13  C14  C15   180.00   0.0  0
+ 40Z  CONST_13  C19  C20  C21  C22   180.00   0.0  0
+ 40Z  CONST_14  C16  C15  C14  C24   180.00   0.0  0
+ 40Z  CONST_15  C12  C13  C14  C24   180.00   0.0  0
+ 40Z  CONST_16  C11  C12  C13  CL    180.00   0.0  0
+ 40Z  CONST_17  C23  O1   C20  C19   180.00   0.0  0
+ 40Z  CONST_18  C    C1   C4   C3    180.00   0.0  0
+ 40Z  CONST_19  H8   C15  C14  C13   180.00   0.0  0
+ 40Z  CONST_20  H18  C23  O1   C20   180.00   0.0  0
+ 40Z  CONST_21  H12  C22  C21  C20   180.00   0.0  0
+ 40Z  CONST_22  H13  C12  C13  C14   180.00   0.0  0
+ 40Z  CONST_23  H11  C21  C20  O1    180.00   0.0  0
+ 40Z  CONST_24  H14  N2   C24  C14     0.00   0.0  0
+ 40Z  CONST_25  H15  N2   C24  C14   180.00   0.0  0
+ 40Z  Var_01    C7   C8   C3   C4    -25.03  30.0  1
+ 40Z  Var_02    C7   C6   C5   C4     32.59  30.0  1
+ 40Z  Var_03    C8   C7   C6   C5    -54.26  30.0  1
+ 40Z  Var_04    C3   C8   C7   C6     48.02  30.0  1
+ 40Z  Var_05    C3   C4   C5   C6     -5.88  30.0  1
+ 40Z  Var_06    O1   C20  C19  N1    -58.26  30.0  1
+ 40Z  Var_07    O2   C24  C14  C13    51.01  30.0  2
+ 40Z  Var_08    H24  C    C1   C4     58.45  30.0  2
+ 40Z  Var_09    H21  C9   C7   C6    -61.00  30.0  3
+ 40Z  Var_10    H5   C10  C7   C6    179.48  30.0  3
+ 40Z  CONST_26  C11  N    C3   C4    180.00   0.0  0
+ 40Z  CONST_27  C2   N    C3   C4      0.00   0.0  0
+ 40Z  CONST_28  N    C2   C1   C4      0.00   0.0  0
+ 40Z  CONST_29  C16  C11  C12  C13     0.00   0.0  0
+ 40Z  CONST_30  N    C11  C12  C13   180.00   0.0  0
+ 40Z  CONST_31  N    C11  C16  C15   180.00   0.0  0
+ 40Z  CONST_32  C12  C11  C16  C15     0.00   0.0  0
+ 40Z  CONST_35  C11  C16  C15  C14     0.00   0.0  0
+ 40Z  CONST_38  C1   C2   N    C11   180.00   0.0  0
+ 40Z  CONST_39  C1   C2   N    C3      0.00   0.0  0
+ 40Z  CONST_40  C    C1   C2   C18     0.00   0.0  0
+ 40Z  CONST_41  C    C1   C2   N     180.00   0.0  0
+ 40Z  Var_11    C2   C18  C17  N1    -39.54  30.0  1
+ 40Z  Var_12    C17  N1   C16  C15  -107.97  30.0  1
+ 40Z  Var_13    C11  C16  N1   C17    71.36  30.0  1
+ 40Z  Var_14    N    C2   C18  C17    68.54  30.0  1
+ 40Z  Var_15    C1   C2   C18  C17  -109.99  30.0  1
+ 40Z  Var_16    C18  C17  N1   C16   -43.44  30.0  1
+ 40Z  Var_17    C19  N1   C16  C15   113.07  30.0  1
+ 40Z  Var_18    C20  C19  N1   C17   170.13  30.0  1
+ 40Z  Var_19    C16  N1   C19  C20   -51.58  30.0  3
+ 40Z  Var_20    C11  C16  N1   C19   -67.60  30.0  1
+ 40Z  Var_21    C18  C17  N1   C19    95.22  30.0  1
+ 40Z  Var_22    H19  C18  C17  N1     82.90  30.0  1
+ 40Z  Var_23    H20  C18  C17  N1   -161.69  30.0  1
+ 40Z  Var_24    H9   C17  N1   C16    78.73  30.0  1
+ 40Z  Var_25    H10  C17  N1   C16  -165.74  30.0  1
+ 40Z  Var_26    H16  C19  N1   C17   -67.66  30.0  1
+ 40Z  Var_27    H17  C19  N1   C17    49.74  30.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id

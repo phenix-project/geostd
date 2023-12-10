@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7RM  7RM  5'-O-(acetylsulfamoyl)adenosine  ligand  42  26  .  2021-08-05  2021-08-05  
+ 7RM  7RM  5'-O-(acetylsulfamoyl)adenosine  ligand  42  26  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7RM
@@ -227,39 +228,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 7RM  CONST_01  C23  C18  N17  C16  180.00   0.0  0
- 7RM  CONST_02  C19  C18  N17  C16    0.00   0.0  0
- 7RM  CONST_03  C18  C19  N15  C16    0.00   0.0  0
- 7RM  CONST_04  N20  C19  N15  C16  180.00   0.0  0
- 7RM  CONST_05  N15  C16  N17  C18    0.00   0.0  0
- 7RM  CONST_06  C21  N22  C23  C18    0.00   0.0  0
- 7RM  CONST_07  C21  N20  C19  C18    0.00   0.0  0
- 7RM  CONST_08  N22  C23  C18  C19    0.00   0.0  0
- 7RM  CONST_09  N17  C16  N15  C19    0.00   0.0  0
- 7RM  CONST_10  N22  C21  N20  C19    0.00   0.0  0
- 7RM  CONST_11  N15  C19  N20  C21  180.00   0.0  0
- 7RM  CONST_12  N15  C19  C18  C23  180.00   0.0  0
- 7RM  CONST_13  N20  C19  C18  C23    0.00   0.0  0
- 7RM  CONST_14  N20  C21  N22  C23    0.00   0.0  0
- 7RM  CONST_15  N17  C18  C19  N15    0.00   0.0  0
- 7RM  CONST_16  N22  C23  C18  N17  180.00   0.0  0
- 7RM  CONST_17  N20  C19  C18  N17  180.00   0.0  0
- 7RM  CONST_18  N17  C16  N15  C13  180.00   0.0  0
- 7RM  CONST_19  C18  C19  N15  C13  180.00   0.0  0
- 7RM  CONST_20  N20  C19  N15  C13    0.00   0.0  0
- 7RM  CONST_21  N24  C23  C18  C19  180.00   0.0  0
- 7RM  CONST_22  N24  C23  N22  C21  180.00   0.0  0
- 7RM  CONST_23  N24  C23  C18  N17    0.00   0.0  0
- 7RM  CONST_24  H10  C16  N15  C13    0.00   0.0  0
- 7RM  CONST_25  H11  C21  N20  C19  180.00   0.0  0
- 7RM  CONST_26  H13  N24  C23  C18    0.00   0.0  0
- 7RM  CONST_27  H14  N24  C23  C18  180.00   0.0  0
- 7RM  CONST_28  S05  N04  C02  C01  180.00   0.0  0
- 7RM  CONST_29  S05  N04  C02  O03    0.00   0.0  0
- 7RM  CONST_30  H12  N04  C02  C01    0.00   0.0  0
- 7RM  Var_01    O07  S05  N04  C02  -46.86  30.0  3
- 7RM  Var_02    H1   C01  C02  N04   41.79  30.0  3
- 7RM  Var_03    H4   C09  O08  S05  109.54  30.0  3
+ 7RM  CONST_01  C23  C18  N17  C16   180.00   0.0  0
+ 7RM  CONST_02  C19  C18  N17  C16     0.00   0.0  0
+ 7RM  CONST_03  C18  C19  N15  C16     0.00   0.0  0
+ 7RM  CONST_04  N20  C19  N15  C16   180.00   0.0  0
+ 7RM  CONST_05  N15  C16  N17  C18     0.00   0.0  0
+ 7RM  CONST_06  C21  N22  C23  C18     0.00   0.0  0
+ 7RM  CONST_07  C21  N20  C19  C18     0.00   0.0  0
+ 7RM  CONST_08  N22  C23  C18  C19     0.00   0.0  0
+ 7RM  CONST_09  N17  C16  N15  C19     0.00   0.0  0
+ 7RM  CONST_10  N22  C21  N20  C19     0.00   0.0  0
+ 7RM  CONST_11  N15  C19  N20  C21   180.00   0.0  0
+ 7RM  CONST_12  N15  C19  C18  C23   180.00   0.0  0
+ 7RM  CONST_13  N20  C19  C18  C23     0.00   0.0  0
+ 7RM  CONST_14  N20  C21  N22  C23     0.00   0.0  0
+ 7RM  CONST_15  N17  C18  C19  N15     0.00   0.0  0
+ 7RM  CONST_16  N22  C23  C18  N17   180.00   0.0  0
+ 7RM  CONST_17  N20  C19  C18  N17   180.00   0.0  0
+ 7RM  CONST_18  N17  C16  N15  C13   180.00   0.0  0
+ 7RM  CONST_19  C18  C19  N15  C13   180.00   0.0  0
+ 7RM  CONST_20  N20  C19  N15  C13     0.00   0.0  0
+ 7RM  CONST_21  N24  C23  C18  C19   180.00   0.0  0
+ 7RM  CONST_22  N24  C23  N22  C21   180.00   0.0  0
+ 7RM  CONST_23  N24  C23  C18  N17     0.00   0.0  0
+ 7RM  CONST_24  H10  C16  N15  C13     0.00   0.0  0
+ 7RM  CONST_25  H11  C21  N20  C19   180.00   0.0  0
+ 7RM  CONST_26  H13  N24  C23  C18     0.00   0.0  0
+ 7RM  CONST_27  H14  N24  C23  C18   180.00   0.0  0
+ 7RM  CONST_28  S05  N04  C02  C01   180.00   0.0  0
+ 7RM  CONST_29  S05  N04  C02  O03     0.00   0.0  0
+ 7RM  CONST_30  H12  N04  C02  C01     0.00   0.0  0
+ 7RM  Var_01    O07  S05  N04  C02   -46.86  30.0  3
+ 7RM  Var_02    H1   C01  C02  N04    41.79  30.0  3
+ 7RM  Var_03    H4   C09  O08  S05   109.54  30.0  3
+ 7RM  Var_04    N15  C13  O14  C10  -125.62  30.0  1
+ 7RM  Var_05    C12  C13  O14  C10    -1.55  30.0  1
+ 7RM  Var_06    C13  C12  C11  C10    33.09  30.0  1
+ 7RM  Var_07    C13  O14  C10  C11    23.49  30.0  1
+ 7RM  Var_08    N15  C13  C12  C11    99.99  30.0  1
+ 7RM  Var_09    O14  C13  C12  C11   -20.66  30.0  1
+ 7RM  Var_10    C16  N15  C13  C12   -57.17  30.0  2
+ 7RM  Var_11    C19  N15  C13  C12   128.32  30.0  2
+ 7RM  Var_12    O14  C10  C11  C12   -35.03  30.0  1
+ 7RM  Var_13    O14  C13  N15  C16    62.35  30.0  2
+ 7RM  Var_14    O14  C13  N15  C19  -112.16  30.0  2
+ 7RM  Var_15    C13  O14  C10  C09   144.37  30.0  1
+ 7RM  Var_16    C12  C11  C10  C09  -154.03  30.0  1
+ 7RM  Var_17    O25  C12  C11  C10   -80.81  30.0  1
+ 7RM  Var_18    O26  C11  C12  C13   151.97  30.0  1
+ 7RM  Var_19    O25  C12  C13  N15  -143.59  30.0  1
+ 7RM  Var_20    O25  C12  C13  O14    95.75  30.0  1
+ 7RM  Var_21    O26  C11  C10  O14  -156.31  30.0  1
+ 7RM  Var_22    H9   C13  O14  C10   118.35  30.0  1
+ 7RM  Var_23    H8   C12  C11  C10   153.29  30.0  1
+ 7RM  Var_24    H6   C10  C11  C12    83.65  30.0  1
+ 7RM  Var_25    H7   C11  C12  C13   -82.78  30.0  1
+ 7RM  Var_26    O26  C11  C10  C09    84.69  30.0  1
+ 7RM  Var_27    O08  C09  C10  C11  -177.85  30.0  2
+ 7RM  Var_28    O14  C10  C09  O08    65.97  30.0  3
+ 7RM  Var_29    O26  C11  C12  O25    38.07  30.0  1
+ 7RM  Var_30    H16  O26  C11  C10  -159.81  30.0  3
+ 7RM  Var_31    H4   C09  C10  C11   -60.09  30.0  2
+ 7RM  Var_32    H5   C09  C10  C11    59.59  30.0  2
+ 7RM  Var_33    H15  O25  C12  C11   -41.46  30.0  3
+ 7RM  Var_34    O07  S05  O08  C09  -178.12  30.0  2
+ 7RM  Var_35    N04  S05  O08  C09    65.43  30.0  2
+ 7RM  Var_36    O06  S05  O08  C09   -46.42  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

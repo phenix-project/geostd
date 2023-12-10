@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- B9Q  B9Q  ~{N}-[(1~{R},2~{S})-1-[1-(4-fluorophenyl)indazol-5-yl]oxy-1-(6-methoxypyridin-3-yl)propan-2-yl]cyclopropanecarboxamide  ligand  59  34  .  2022-09-16  2023-02-02
+ B9Q  B9Q  ~{N}-[(1~{R},2~{S})-1-[1-(4-fluorophenyl)indazol-5-yl]oxy-1-(6-methoxypyridin-3-yl)propan-2-yl]cyclopropanecarboxamide  ligand  59  34  .  2022-09-16  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_B9Q
@@ -325,38 +326,61 @@ _chem_comp_tor.period
  B9Q  CONST_27  C27  C28  C29  C24     0.00   0.0  0
  B9Q  CONST_28  C17  C18  N23  C24     0.00   0.0  0
  B9Q  CONST_29  N22  N23  C18  C17   180.00   0.0  0
- B9Q  CONST_32  N22  C21  C19  C18     0.00   0.0  0
- B9Q  CONST_35  C28  C27  C26  C25     0.00   0.0  0
- B9Q  CONST_36  C28  C29  C24  C25     0.00   0.0  0
- B9Q  CONST_37  C29  C28  C27  C26     0.00   0.0  0
- B9Q  CONST_38  C29  C24  C25  C26     0.00   0.0  0
- B9Q  CONST_39  O12  C9   C8   C7    180.00   0.0  0
- B9Q  CONST_40  C4   C6   C7   C8    180.00   0.0  0
- B9Q  CONST_41  O12  C9   N10  C11   180.00   0.0  0
- B9Q  CONST_42  O14  C15  C20  C19   180.00   0.0  0
- B9Q  CONST_43  N10  C11  C6   C4    180.00   0.0  0
- B9Q  CONST_44  C17  C16  C15  O14   180.00   0.0  0
- B9Q  CONST_45  F30  C27  C26  C25   180.00   0.0  0
- B9Q  CONST_46  F30  C27  C28  C29   180.00   0.0  0
- B9Q  CONST_47  H7   C11  C6   C7    180.00   0.0  0
- B9Q  CONST_48  H5   C7   C8   C9    180.00   0.0  0
- B9Q  CONST_49  H18  C17  C16  C15   180.00   0.0  0
- B9Q  CONST_50  H12  C20  C15  C16   180.00   0.0  0
- B9Q  CONST_51  H13  C21  C19  C20     0.00   0.0  0
- B9Q  CONST_52  H11  C16  C15  C20   180.00   0.0  0
- B9Q  CONST_53  H19  C25  C24  N23     0.00   0.0  0
- B9Q  CONST_54  H22  C29  C24  N23     0.00   0.0  0
- B9Q  CONST_55  H20  C26  C25  C24   180.00   0.0  0
- B9Q  CONST_56  H21  C28  C29  C24   180.00   0.0  0
- B9Q  CONST_57  H6   C8   C7   C6    180.00   0.0  0
- B9Q  CONST_58  C34  C32  N31  C2    180.00   0.0  0
- B9Q  CONST_59  H23  N31  C32  C34     0.00   0.0  0
- B9Q  CONST_60  O33  C32  N31  C2      0.00   0.0  0
+ B9Q  CONST_30  N22  C21  C19  C18     0.00   0.0  0
+ B9Q  CONST_31  C28  C27  C26  C25     0.00   0.0  0
+ B9Q  CONST_32  C28  C29  C24  C25     0.00   0.0  0
+ B9Q  CONST_33  C29  C28  C27  C26     0.00   0.0  0
+ B9Q  CONST_34  C29  C24  C25  C26     0.00   0.0  0
+ B9Q  CONST_35  O12  C9   C8   C7    180.00   0.0  0
+ B9Q  CONST_36  C4   C6   C7   C8    180.00   0.0  0
+ B9Q  CONST_37  O12  C9   N10  C11   180.00   0.0  0
+ B9Q  CONST_38  O14  C15  C20  C19   180.00   0.0  0
+ B9Q  CONST_39  N10  C11  C6   C4    180.00   0.0  0
+ B9Q  CONST_40  C17  C16  C15  O14   180.00   0.0  0
+ B9Q  CONST_41  F30  C27  C26  C25   180.00   0.0  0
+ B9Q  CONST_42  F30  C27  C28  C29   180.00   0.0  0
+ B9Q  CONST_43  H7   C11  C6   C7    180.00   0.0  0
+ B9Q  CONST_44  H5   C7   C8   C9    180.00   0.0  0
+ B9Q  CONST_45  H18  C17  C16  C15   180.00   0.0  0
+ B9Q  CONST_46  H12  C20  C15  C16   180.00   0.0  0
+ B9Q  CONST_47  H13  C21  C19  C20     0.00   0.0  0
+ B9Q  CONST_48  H11  C16  C15  C20   180.00   0.0  0
+ B9Q  CONST_49  H19  C25  C24  N23     0.00   0.0  0
+ B9Q  CONST_50  H22  C29  C24  N23     0.00   0.0  0
+ B9Q  CONST_51  H20  C26  C25  C24   180.00   0.0  0
+ B9Q  CONST_52  H21  C28  C29  C24   180.00   0.0  0
+ B9Q  CONST_53  H6   C8   C7   C6    180.00   0.0  0
+ B9Q  CONST_54  C34  C32  N31  C2    180.00   0.0  0
+ B9Q  CONST_55  H23  N31  C32  C34     0.00   0.0  0
+ B9Q  CONST_56  O33  C32  N31  C2      0.00   0.0  0
  B9Q  Var_01    C35  C36  C34  C32  -108.65  30.0  1
  B9Q  Var_02    H15  C35  C36  C34  -106.30  30.0  1
  B9Q  Var_03    N10  C9   O12  C13    -0.74  30.0  3
  B9Q  Var_04    N31  C32  C34  C35   153.20  30.0  1
  B9Q  Var_05    H8   C13  O12  C9    -60.93  30.0  3
+ B9Q  Var_06    C25  C24  N23  C18   136.77  30.0  2
+ B9Q  Var_07    C29  C24  N23  C18   -43.91  30.0  2
+ B9Q  Var_08    C25  C24  N23  N22   -42.09  30.0  2
+ B9Q  Var_09    C29  C24  N23  N22   137.23  30.0  2
+ B9Q  Var_10    C7   C6   C4   C2   -103.15  30.0  2
+ B9Q  Var_11    C11  C6   C4   C2     73.11  30.0  2
+ B9Q  Var_12    O14  C4   C6   C7    137.21  30.0  2
+ B9Q  Var_13    O14  C4   C6   C11   -46.52  30.0  2
+ B9Q  Var_14    C6   C4   O14  C15   -74.56  30.0  3
+ B9Q  Var_15    C4   O14  C15  C16   -74.84  30.0  2
+ B9Q  Var_16    C4   O14  C15  C20   106.61  30.0  2
+ B9Q  Var_17    H17  C4   C6   C7     15.79  30.0  2
+ B9Q  Var_18    C6   C4   C2   C1    176.10  30.0  1
+ B9Q  Var_19    C15  O14  C4   C2    163.04  30.0  2
+ B9Q  Var_20    N31  C2   C4   C6     53.63  30.0  3
+ B9Q  Var_21    H4   C2   C4   C6    -62.73  30.0  3
+ B9Q  Var_22    O14  C4   C2   C1    -61.49  30.0  1
+ B9Q  Var_23    C32  N31  C2   C1    137.61  30.0  3
+ B9Q  Var_24    C4   C2   N31  C32   -98.80  30.0  2
+ B9Q  Var_25    N31  C2   C4   O14   176.04  30.0  3
+ B9Q  Var_26    H1   C1   C2   C4     61.31  30.0  3
+ B9Q  Var_27    H2   C1   C2   C4   -179.06  30.0  3
+ B9Q  Var_28    H3   C1   C2   C4    -59.08  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

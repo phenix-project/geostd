@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 55L  55L  N-[(2R)-3-carboxy-2-{[3-(3'-chlorobiphenyl-4-yl)-1,2-oxazol-5-yl]methyl}propanoyl]-L-alpha-glutamyl-L-alpha-glutamine  ligand  76  45  .  2021-08-04  2022-11-17
+ 55L  55L  N-[(2R)-3-carboxy-2-{[3-(3'-chlorobiphenyl-4-yl)-1,2-oxazol-5-yl]methyl}propanoyl]-L-alpha-glutamyl-L-alpha-glutamine  ligand  76  45  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_55L
@@ -369,46 +370,81 @@ _chem_comp_tor.period
  55L  CONST_17  C4   C3   C2   C1      0.00   0.0  0
  55L  CONST_18  C12  C3   C2   C1    180.00   0.0  0
  55L  CONST_19  C5   C4   C3   C2      0.00   0.0  0
- 55L  CONST_22  C5   C6   C1   C2      0.00   0.0  0
- 55L  CONST_23  C12  C3   C4   C5    180.00   0.0  0
- 55L  CONST_26  C14  C13  C12  C3    180.00   0.0  0
- 55L  CONST_27  C16  C17  C12  C3    180.00   0.0  0
- 55L  CONST_28  C15  C14  C13  C12     0.00   0.0  0
- 55L  CONST_29  C15  C16  C17  C12     0.00   0.0  0
- 55L  CONST_30  C14  C13  C12  C17     0.00   0.0  0
- 55L  CONST_31  C14  C15  C16  C17     0.00   0.0  0
- 55L  CONST_32  C16  C17  C12  C13     0.00   0.0  0
- 55L  CONST_33  C16  C15  C14  C13     0.00   0.0  0
- 55L  CONST_34  C7   C8   C9   C71   180.00   0.0  0
- 55L  CONST_35  N11  O10  C9   C71   180.00   0.0  0
- 55L  CONST_36  CL   C16  C17  C12   180.00   0.0  0
- 55L  CONST_37  CL   C16  C15  C14   180.00   0.0  0
- 55L  CONST_38  H23  C8   C9   O10   180.00   0.0  0
- 55L  CONST_39  H26  C5   C6   C7      0.00   0.0  0
- 55L  CONST_40  H24  C1   C6   C7      0.00   0.0  0
- 55L  CONST_41  H27  C4   C5   C6    180.00   0.0  0
- 55L  CONST_42  H25  C2   C1   C6    180.00   0.0  0
- 55L  CONST_43  H29  C13  C12  C3      0.00   0.0  0
- 55L  CONST_44  H28  C17  C12  C3      0.00   0.0  0
- 55L  CONST_45  H30  C14  C13  C12   180.00   0.0  0
- 55L  CONST_46  H31  C15  C16  C17   180.00   0.0  0
- 55L  CONST_47  C26  C27  N28  C29   180.00   0.0  0
- 55L  CONST_48  O36  C27  N28  C29     0.00   0.0  0
- 55L  CONST_49  C19  C20  N25  C26   180.00   0.0  0
- 55L  CONST_50  O30  C20  N25  C26     0.00   0.0  0
- 55L  CONST_51  H7   N39  C37  C29   180.00   0.0  0
- 55L  CONST_52  H8   N39  C37  C29     0.00   0.0  0
- 55L  CONST_53  H9   N28  C27  O36   180.00   0.0  0
- 55L  CONST_54  H16  N25  C20  O30   180.00   0.0  0
- 55L  CONST_55  H1   O44  C42  O43     0.00   0.0  0
- 55L  CONST_56  H15  O35  C33  C32   180.00   0.0  0
- 55L  CONST_57  H20  O24  C22  C21   180.00   0.0  0
+ 55L  CONST_20  C5   C6   C1   C2      0.00   0.0  0
+ 55L  CONST_21  C12  C3   C4   C5    180.00   0.0  0
+ 55L  CONST_22  C14  C13  C12  C3    180.00   0.0  0
+ 55L  CONST_23  C16  C17  C12  C3    180.00   0.0  0
+ 55L  CONST_24  C15  C14  C13  C12     0.00   0.0  0
+ 55L  CONST_25  C15  C16  C17  C12     0.00   0.0  0
+ 55L  CONST_26  C14  C13  C12  C17     0.00   0.0  0
+ 55L  CONST_27  C14  C15  C16  C17     0.00   0.0  0
+ 55L  CONST_28  C16  C17  C12  C13     0.00   0.0  0
+ 55L  CONST_29  C16  C15  C14  C13     0.00   0.0  0
+ 55L  CONST_30  C7   C8   C9   C71   180.00   0.0  0
+ 55L  CONST_31  N11  O10  C9   C71   180.00   0.0  0
+ 55L  CONST_32  CL   C16  C17  C12   180.00   0.0  0
+ 55L  CONST_33  CL   C16  C15  C14   180.00   0.0  0
+ 55L  CONST_34  H23  C8   C9   O10   180.00   0.0  0
+ 55L  CONST_35  H26  C5   C6   C7      0.00   0.0  0
+ 55L  CONST_36  H24  C1   C6   C7      0.00   0.0  0
+ 55L  CONST_37  H27  C4   C5   C6    180.00   0.0  0
+ 55L  CONST_38  H25  C2   C1   C6    180.00   0.0  0
+ 55L  CONST_39  H29  C13  C12  C3      0.00   0.0  0
+ 55L  CONST_40  H28  C17  C12  C3      0.00   0.0  0
+ 55L  CONST_41  H30  C14  C13  C12   180.00   0.0  0
+ 55L  CONST_42  H31  C15  C16  C17   180.00   0.0  0
+ 55L  CONST_43  C26  C27  N28  C29   180.00   0.0  0
+ 55L  CONST_44  O36  C27  N28  C29     0.00   0.0  0
+ 55L  CONST_45  C19  C20  N25  C26   180.00   0.0  0
+ 55L  CONST_46  O30  C20  N25  C26     0.00   0.0  0
+ 55L  CONST_47  H7   N39  C37  C29   180.00   0.0  0
+ 55L  CONST_48  H8   N39  C37  C29     0.00   0.0  0
+ 55L  CONST_49  H9   N28  C27  O36   180.00   0.0  0
+ 55L  CONST_50  H16  N25  C20  O30   180.00   0.0  0
+ 55L  CONST_51  H1   O44  C42  O43     0.00   0.0  0
+ 55L  CONST_52  H15  O35  C33  C32   180.00   0.0  0
+ 55L  CONST_53  H20  O24  C22  C21   180.00   0.0  0
  55L  Var_01    C8   C9   C71  C19    28.82  30.0  2
  55L  Var_02    C40  C41  C42  O43    -0.02  30.0  2
  55L  Var_03    C29  C40  C41  C42  -166.98  30.0  1
  55L  Var_04    C33  C32  C31  C26  -175.65  30.0  2
  55L  Var_05    O34  C33  C32  C31   124.03  30.0  1
  55L  Var_06    O23  C22  C21  C19    16.03  30.0  1
+ 55L  Var_07    C13  C12  C3   C2    140.97  30.0  2
+ 55L  Var_08    C17  C12  C3   C2    -38.35  30.0  2
+ 55L  Var_09    C13  C12  C3   C4    -37.15  30.0  2
+ 55L  Var_10    C17  C12  C3   C4    143.53  30.0  2
+ 55L  Var_11    C9   C71  C19  C20    53.83  30.0  3
+ 55L  Var_12    C9   C71  C19  C21   174.19  30.0  3
+ 55L  Var_13    H17  C19  C71  C9    -66.10  30.0  2
+ 55L  Var_14    N28  C29  C40  C41   -59.25  30.0  1
+ 55L  Var_15    C37  C29  C40  C41   173.40  30.0  1
+ 55L  Var_16    C27  N28  C29  C40   152.49  30.0  2
+ 55L  Var_17    N39  C37  C29  C40   106.77  30.0  2
+ 55L  Var_18    O38  C37  C29  C40   -72.30  30.0  2
+ 55L  Var_19    C27  N28  C29  C37   -82.41  30.0  2
+ 55L  Var_20    N28  C29  C37  N39   -18.84  30.0  3
+ 55L  Var_21    N28  C29  C37  O38   162.09  30.0  3
+ 55L  Var_22    C31  C26  C27  N28   -77.82  30.0  1
+ 55L  Var_23    N25  C26  C27  N28   157.52  30.0  1
+ 55L  Var_24    C32  C31  C26  C27   -60.33  30.0  1
+ 55L  Var_25    C20  N25  C26  C27  -126.68  30.0  2
+ 55L  Var_26    C31  C26  C27  O36   100.31  30.0  1
+ 55L  Var_27    N25  C26  C27  O36   -24.35  30.0  1
+ 55L  Var_28    C20  N25  C26  C31   110.05  30.0  2
+ 55L  Var_29    N25  C26  C31  C32    61.44  30.0  3
+ 55L  Var_30    C21  C19  C20  N25   110.78  30.0  2
+ 55L  Var_31    C71  C19  C20  N25  -127.39  30.0  2
+ 55L  Var_32    C22  C21  C19  C20  -169.41  30.0  2
+ 55L  Var_33    C21  C19  C20  O30   -69.50  30.0  2
+ 55L  Var_34    C71  C19  C20  O30    52.33  30.0  2
+ 55L  Var_35    C71  C19  C21  C22    70.28  30.0  3
+ 55L  Var_36    H6   C29  C40  C41    58.82  30.0  1
+ 55L  Var_37    H10  C26  C27  N28    40.49  30.0  1
+ 55L  Var_38    H11  C31  C26  C27   178.05  30.0  1
+ 55L  Var_39    H12  C31  C26  C27    63.16  30.0  1
+ 55L  Var_40    H18  C21  C19  C20    66.51  30.0  2
+ 55L  Var_41    H19  C21  C19  C20   -50.44  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

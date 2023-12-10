@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UWP  UWP  '[3-{4-[6-(1-methyl-1H-pyrazol-4-yl)pyrazolo[1,5-a]pyrazin-4-yl]-1H-pyrazol-1-yl}-1-(2,2,2-trifluoroethyl)azetidin-3-yl]acetonitrile'  ligand  50  32  .  2022-07-22  2022-07-22
+ UWP  UWP  '[3-{4-[6-(1-methyl-1H-pyrazol-4-yl)pyrazolo[1,5-a]pyrazin-4-yl]-1H-pyrazol-1-yl}-1-(2,2,2-trifluoroethyl)azetidin-3-yl]acetonitrile'  ligand  50  32  .  2022-07-22  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UWP
@@ -281,48 +282,68 @@ _chem_comp_tor.period
  UWP  CONST_15  C9   N4   N3   C7      0.00   0.0  0
  UWP  CONST_16  C5   N5   C10  C7      0.00   0.0  0
  UWP  CONST_17  C12  C11  C10  C7    180.00   0.0  0
- UWP  CONST_19  N4   C9   C8   C7      0.00   0.0  0
- UWP  CONST_20  C2   C3   C5   C6      0.00   0.0  0
- UWP  CONST_21  C10  N5   C5   C6      0.00   0.0  0
- UWP  CONST_22  C9   N4   N3   C6    180.00   0.0  0
- UWP  CONST_23  C10  C7   N3   C6      0.00   0.0  0
- UWP  CONST_24  C8   C7   N3   C6    180.00   0.0  0
- UWP  CONST_25  C10  C7   C8   C9    180.00   0.0  0
- UWP  CONST_26  N5   C10  C11  C13   180.00   0.0  0
- UWP  CONST_27  N6   C12  C11  C13     0.00   0.0  0
- UWP  CONST_28  C12  N6   N7   C13     0.00   0.0  0
- UWP  CONST_29  N4   N3   C7   C8      0.00   0.0  0
- UWP  CONST_30  N5   C10  C7   C8    180.00   0.0  0
- UWP  CONST_31  C11  C10  C7   C8      0.00   0.0  0
- UWP  CONST_32  C2   C3   C5   N5    180.00   0.0  0
- UWP  CONST_33  C12  C11  C10  N5      0.00   0.0  0
- UWP  CONST_34  C5   C3   C2   N1    180.00   0.0  0
- UWP  CONST_35  C3   C4   N2   N1      0.00   0.0  0
- UWP  CONST_36  C10  N5   C5   C3    180.00   0.0  0
- UWP  CONST_37  N4   N3   C6   C5    180.00   0.0  0
- UWP  CONST_38  C11  C10  N5   C5    180.00   0.0  0
- UWP  CONST_39  C10  C7   N3   N4    180.00   0.0  0
- UWP  CONST_40  N6   C12  C11  C10   180.00   0.0  0
- UWP  CONST_41  N7   C13  C11  C10   180.00   0.0  0
- UWP  CONST_42  N7   N6   C12  C11     0.00   0.0  0
- UWP  CONST_43  N6   N7   C13  C11     0.00   0.0  0
- UWP  CONST_44  N7   C13  C11  C12     0.00   0.0  0
- UWP  CONST_45  C14  N7   C13  C11   180.00   0.0  0
- UWP  CONST_46  C14  N7   N6   C12   180.00   0.0  0
- UWP  CONST_47  C1   N1   N2   C4    180.00   0.0  0
- UWP  CONST_48  C3   C2   N1   C1    180.00   0.0  0
- UWP  CONST_49  H8   C9   N4   N3    180.00   0.0  0
- UWP  CONST_50  H7   C8   C7   N3    180.00   0.0  0
- UWP  CONST_51  H4   C2   C3   C4    180.00   0.0  0
- UWP  CONST_52  H6   C6   N3   C7    180.00   0.0  0
- UWP  CONST_53  H9   C12  C11  C13   180.00   0.0  0
- UWP  CONST_54  H5   C4   N2   N1    180.00   0.0  0
- UWP  CONST_55  H10  C13  C11  C10     0.00   0.0  0
+ UWP  CONST_18  N4   C9   C8   C7      0.00   0.0  0
+ UWP  CONST_19  C2   C3   C5   C6      0.00   0.0  0
+ UWP  CONST_20  C10  N5   C5   C6      0.00   0.0  0
+ UWP  CONST_21  C9   N4   N3   C6    180.00   0.0  0
+ UWP  CONST_22  C10  C7   N3   C6      0.00   0.0  0
+ UWP  CONST_23  C8   C7   N3   C6    180.00   0.0  0
+ UWP  CONST_24  C10  C7   C8   C9    180.00   0.0  0
+ UWP  CONST_25  N5   C10  C11  C13   180.00   0.0  0
+ UWP  CONST_26  N6   C12  C11  C13     0.00   0.0  0
+ UWP  CONST_27  C12  N6   N7   C13     0.00   0.0  0
+ UWP  CONST_28  N4   N3   C7   C8      0.00   0.0  0
+ UWP  CONST_29  N5   C10  C7   C8    180.00   0.0  0
+ UWP  CONST_30  C11  C10  C7   C8      0.00   0.0  0
+ UWP  CONST_31  C2   C3   C5   N5    180.00   0.0  0
+ UWP  CONST_32  C12  C11  C10  N5      0.00   0.0  0
+ UWP  CONST_33  C5   C3   C2   N1    180.00   0.0  0
+ UWP  CONST_34  C3   C4   N2   N1      0.00   0.0  0
+ UWP  CONST_35  C10  N5   C5   C3    180.00   0.0  0
+ UWP  CONST_36  N4   N3   C6   C5    180.00   0.0  0
+ UWP  CONST_37  C11  C10  N5   C5    180.00   0.0  0
+ UWP  CONST_38  C10  C7   N3   N4    180.00   0.0  0
+ UWP  CONST_39  N6   C12  C11  C10   180.00   0.0  0
+ UWP  CONST_40  N7   C13  C11  C10   180.00   0.0  0
+ UWP  CONST_41  N7   N6   C12  C11     0.00   0.0  0
+ UWP  CONST_42  N6   N7   C13  C11     0.00   0.0  0
+ UWP  CONST_43  N7   C13  C11  C12     0.00   0.0  0
+ UWP  CONST_44  C14  N7   C13  C11   180.00   0.0  0
+ UWP  CONST_45  C14  N7   N6   C12   180.00   0.0  0
+ UWP  CONST_46  C1   N1   N2   C4    180.00   0.0  0
+ UWP  CONST_47  C3   C2   N1   C1    180.00   0.0  0
+ UWP  CONST_48  H8   C9   N4   N3    180.00   0.0  0
+ UWP  CONST_49  H7   C8   C7   N3    180.00   0.0  0
+ UWP  CONST_50  H4   C2   C3   C4    180.00   0.0  0
+ UWP  CONST_51  H6   C6   N3   C7    180.00   0.0  0
+ UWP  CONST_52  H9   C12  C11  C13   180.00   0.0  0
+ UWP  CONST_53  H5   C4   N2   N1    180.00   0.0  0
+ UWP  CONST_54  H10  C13  C11  C10     0.00   0.0  0
  UWP  Var_01    C14  C15  N8   C16   -19.44  30.0  1
  UWP  Var_02    C16  N8   C17  C18   165.77  30.0  1
  UWP  Var_03    H3   C1   N1   N2    -64.09  30.0  2
  UWP  Var_04    F3   C18  C17  N8    -60.97  30.0  2
  UWP  Var_05    H18  C19  C20  N9   -115.02  30.0  3
+ UWP  Var_06    C16  C14  N7   C13    32.44  30.0  2
+ UWP  Var_07    C15  C14  N7   C13   126.85  30.0  2
+ UWP  Var_08    N6   N7   C14  C16  -153.82  30.0  2
+ UWP  Var_09    C15  C14  N7   N6    -59.42  30.0  2
+ UWP  Var_10    N8   C16  C14  N7     93.17  30.0  1
+ UWP  Var_11    N8   C15  C14  N7    -94.63  30.0  1
+ UWP  Var_12    C19  C14  N7   C13  -101.99  30.0  2
+ UWP  Var_13    N6   N7   C14  C19    71.74  30.0  2
+ UWP  Var_14    N8   C16  C14  C19  -136.24  30.0  1
+ UWP  Var_15    N8   C15  C14  C19   137.57  30.0  1
+ UWP  Var_16    C17  N8   C16  C14   143.85  30.0  1
+ UWP  Var_17    H12  C15  C14  C16   137.59  30.0  1
+ UWP  Var_18    H11  C15  C14  C16   -96.16  30.0  1
+ UWP  Var_19    H14  C16  C14  N7   -152.05  30.0  1
+ UWP  Var_20    H13  C16  C14  N7    -25.95  30.0  1
+ UWP  Var_21    C20  C19  C14  C16   -70.74  30.0  3
+ UWP  Var_22    C20  C19  C14  N7     61.25  30.0  3
+ UWP  Var_23    C20  C19  C14  C15  -170.15  30.0  3
+ UWP  Var_24    H18  C19  C14  C16    49.99  30.0  3
+ UWP  Var_25    H17  C19  C14  C16   168.33  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

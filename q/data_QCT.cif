@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QCT  QCT  '2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4-oxo-4H-chromen-3-yl 6-deoxy-alpha-L-mannopyranoside'  ligand  52  32  .  2021-08-20  2021-08-20  
+ QCT  QCT  '2-(3,4-dihydroxyphenyl)-5,7-dihydroxy-4-oxo-4H-chromen-3-yl 6-deoxy-alpha-L-mannopyranoside'  ligand  52  32  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QCT
@@ -263,40 +264,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QCT  CONST_01  C14  C13  C12  C11     0.00   0.0  0
- QCT  CONST_02  C14  C15  C16  C11     0.00   0.0  0
- QCT  CONST_03  C15  C14  C13  C12     0.00   0.0  0
- QCT  CONST_04  C15  C16  C11  C12     0.00   0.0  0
- QCT  CONST_05  C16  C11  C12  C13     0.00   0.0  0
- QCT  CONST_06  C16  C15  C14  C13     0.00   0.0  0
- QCT  CONST_07  C6   C5   C10  C9      0.00   0.0  0
- QCT  CONST_08  C6   C7   C8   C9      0.00   0.0  0
- QCT  CONST_09  C5   C10  C9   C8      0.00   0.0  0
- QCT  CONST_10  C5   C6   C7   C8      0.00   0.0  0
- QCT  CONST_11  C10  C5   C6   C7      0.00   0.0  0
- QCT  CONST_12  C10  C9   C8   C7      0.00   0.0  0
- QCT  CONST_13  C13  C12  C11  C2    180.00   0.0  0
- QCT  CONST_14  C15  C16  C11  C2    180.00   0.0  0
- QCT  CONST_15  O3   C5   C10  C4      0.00   0.0  0
- QCT  CONST_16  O5   C13  C12  C11   180.00   0.0  0
- QCT  CONST_17  O6   C14  C13  C12   180.00   0.0  0
- QCT  CONST_18  C15  C14  C13  O5    180.00   0.0  0
- QCT  CONST_19  C16  C15  C14  O6    180.00   0.0  0
- QCT  CONST_20  O3   C5   C10  C9    180.00   0.0  0
- QCT  CONST_21  O4   C7   C8   C9    180.00   0.0  0
- QCT  CONST_22  O3   C5   C6   C7    180.00   0.0  0
- QCT  CONST_23  C5   C6   C7   O4    180.00   0.0  0
- QCT  CONST_24  H12  C12  C11  C2      0.00   0.0  0
- QCT  CONST_25  H16  C16  C11  C2      0.00   0.0  0
- QCT  CONST_26  H15  C15  C16  C11   180.00   0.0  0
- QCT  CONST_27  H8   C8   C9   O1      0.00   0.0  0
- QCT  CONST_28  H6   C6   C7   C8    180.00   0.0  0
- QCT  Var_01    C5   C10  C4   C3   -177.82  30.0  1
- QCT  Var_02    C12  C11  C2   C3     48.24  30.0  2
- QCT  Var_03    C11  C2   C3   C4   -176.16  30.0  1
- QCT  Var_04    C10  C4   C3   C2     -4.26  30.0  1
- QCT  Var_05    C10  C9   O1   C2     -3.10  30.0  1
- QCT  Var_06    C4   C3   O7   C21   -74.09  30.0  3
+ QCT  CONST_01  C14   C13  C12  C11     0.00   0.0  0
+ QCT  CONST_02  C14   C15  C16  C11     0.00   0.0  0
+ QCT  CONST_03  C15   C14  C13  C12     0.00   0.0  0
+ QCT  CONST_04  C15   C16  C11  C12     0.00   0.0  0
+ QCT  CONST_05  C16   C11  C12  C13     0.00   0.0  0
+ QCT  CONST_06  C16   C15  C14  C13     0.00   0.0  0
+ QCT  CONST_07  C6    C5   C10  C9      0.00   0.0  0
+ QCT  CONST_08  C6    C7   C8   C9      0.00   0.0  0
+ QCT  CONST_09  C5    C10  C9   C8      0.00   0.0  0
+ QCT  CONST_10  C5    C6   C7   C8      0.00   0.0  0
+ QCT  CONST_11  C10   C5   C6   C7      0.00   0.0  0
+ QCT  CONST_12  C10   C9   C8   C7      0.00   0.0  0
+ QCT  CONST_13  C13   C12  C11  C2    180.00   0.0  0
+ QCT  CONST_14  C15   C16  C11  C2    180.00   0.0  0
+ QCT  CONST_15  O3    C5   C10  C4      0.00   0.0  0
+ QCT  CONST_16  O5    C13  C12  C11   180.00   0.0  0
+ QCT  CONST_17  O6    C14  C13  C12   180.00   0.0  0
+ QCT  CONST_18  C15   C14  C13  O5    180.00   0.0  0
+ QCT  CONST_19  C16   C15  C14  O6    180.00   0.0  0
+ QCT  CONST_20  O3    C5   C10  C9    180.00   0.0  0
+ QCT  CONST_21  O4    C7   C8   C9    180.00   0.0  0
+ QCT  CONST_22  O3    C5   C6   C7    180.00   0.0  0
+ QCT  CONST_23  C5    C6   C7   O4    180.00   0.0  0
+ QCT  CONST_24  H12   C12  C11  C2      0.00   0.0  0
+ QCT  CONST_25  H16   C16  C11  C2      0.00   0.0  0
+ QCT  CONST_26  H15   C15  C16  C11   180.00   0.0  0
+ QCT  CONST_27  H8    C8   C9   O1      0.00   0.0  0
+ QCT  CONST_28  H6    C6   C7   C8    180.00   0.0  0
+ QCT  Var_01    C5    C10  C4   C3   -177.82  30.0  1
+ QCT  Var_02    C12   C11  C2   C3     48.24  30.0  2
+ QCT  Var_03    C11   C2   C3   C4   -176.16  30.0  1
+ QCT  Var_04    C10   C4   C3   C2     -4.26  30.0  1
+ QCT  Var_05    C10   C9   O1   C2     -3.10  30.0  1
+ QCT  Var_06    C4    C3   O7   C21   -74.09  30.0  3
+ QCT  Var_07    O8    C21  C22  C23   -50.65  30.0  1
+ QCT  Var_08    O8    C25  C24  C23    54.35  30.0  1
+ QCT  Var_09    C25   C24  C23  C22   -57.07  30.0  1
+ QCT  Var_10    C25   O8   C21  C22    51.73  30.0  1
+ QCT  Var_11    C21   C22  C23  C24    54.36  30.0  1
+ QCT  Var_12    C21   O8   C25  C24   -53.33  30.0  1
+ QCT  Var_13    C9    O1   C2   C3      0.70  30.0  1
+ QCT  Var_14    C9    O1   C2   C11  -179.93  30.0  1
+ QCT  Var_15    C21   C22  C23  O10   174.60  30.0  1
+ QCT  Var_16    C25   C24  C23  O10   179.98  30.0  1
+ QCT  Var_17    O7    C21  C22  C23    73.23  30.0  1
+ QCT  Var_18    C26   C25  C24  C23   173.89  30.0  1
+ QCT  Var_19    O11   C24  C23  C22  -175.37  30.0  1
+ QCT  Var_20    C3    O7   C21  C22   160.91  30.0  3
+ QCT  Var_21    C24   C23  C22  O9    -65.50  30.0  1
+ QCT  Var_22    O8    C21  C22  O9     68.25  30.0  1
+ QCT  Var_23    O8    C25  C24  O11   175.20  30.0  1
+ QCT  Var_24    O7    C21  O8   C25   -69.30  30.0  1
+ QCT  Var_25    C21   O8   C25  C26  -176.48  30.0  1
+ QCT  Var_26    C3    O7   C21  O8    -74.44  30.0  3
+ QCT  Var_27    H21   C21  C22  C23  -167.90  30.0  1
+ QCT  Var_28    H25   C25  C24  C23   -66.01  30.0  1
+ QCT  Var_29    H24   C24  C23  C22    61.87  30.0  1
+ QCT  Var_30    H22   C22  C23  C24   172.96  30.0  1
+ QCT  Var_31    H23   C23  C24  C25    60.36  30.0  1
+ QCT  Var_32    O9    C22  C23  O10    54.74  30.0  1
+ QCT  Var_33    O11   C24  C23  O10    61.68  30.0  1
+ QCT  Var_34    O7    C21  C22  O9   -167.87  30.0  1
+ QCT  Var_35    C26   C25  C24  O11   -65.26  30.0  1
+ QCT  Var_36    HO91  O9   C22  C23  -170.05  30.0  3
+ QCT  Var_37    HO11  O11  C24  C23   -57.43  30.0  3
+ QCT  Var_38    H101  O10  C23  C22    76.45  30.0  3
+ QCT  Var_39    H262  C26  C25  C24    59.65  30.0  3
+ QCT  Var_40    H263  C26  C25  C24   178.52  30.0  3
+ QCT  Var_41    H261  C26  C25  C24   -60.57  30.0  3
+ QCT  Var_42    HO51  O5   C13  C12     1.86  30.0  2
+ QCT  Var_43    HO61  O6   C14  C13     2.43  30.0  2
+ QCT  Var_44    HO4   O4   C7   C8    179.88  30.0  2
+ QCT  Var_45    HO3   O3   C5   C6    179.80  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- P42  P42  '(2S)-2-{[(1R)-1-hydroxyhexadecyl]oxy}-3-{[(1R)-1-hydroxyoctadecyl]oxy}propyl 2-(trimethylammonio)ethyl phosphate'  ligand  140  52  .  2021-08-19  2021-08-19  
+ P42  P42  '(2S)-2-{[(1R)-1-hydroxyhexadecyl]oxy}-3-{[(1R)-1-hydroxyoctadecyl]oxy}propyl 2-(trimethylammonio)ethyl phosphate'  ligand  140  52  .  2021-08-19  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_P42
@@ -614,45 +615,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- P42  Var_01  C6   N    C5   C4     51.16  30.0  3
- P42  Var_02  OBL  PBM  OBN  C4   -176.14  30.0  3
- P42  Var_03  CBH  CBS  CBV  CBX   179.65  30.0  3
- P42  Var_04  CAQ  CBH  CBS  CBV   179.30  30.0  3
- P42  Var_05  CAP  CAQ  CBH  CBS  -180.00  30.0  3
- P42  Var_06  CAO  CAP  CAQ  CBH   179.74  30.0  1
- P42  Var_07  CAN  CAO  CAP  CAQ  -179.95  30.0  3
- P42  Var_08  CAM  CAN  CAO  CAP   179.85  30.0  1
- P42  Var_09  CAL  CAM  CAN  CAO  -179.97  30.0  3
- P42  Var_10  CAK  CAL  CAM  CAN   179.72  30.0  3
- P42  Var_11  CAJ  CAK  CAL  CAM   179.94  30.0  3
- P42  Var_12  CAI  CAJ  CAK  CAL   179.92  30.0  1
- P42  Var_13  CAH  CAI  CAJ  CAK   179.81  30.0  3
- P42  Var_14  CAG  CAH  CAI  CAJ   178.82  30.0  2
- P42  Var_15  CAF  CAG  CAH  CAI  -179.60  30.0  1
- P42  Var_16  CAE  CAF  CAG  CAH  -179.19  30.0  3
- P42  Var_17  CAD  CAE  CAF  CAG  -171.91  30.0  3
- P42  Var_18  CBE  CAB  OAC  CAD   163.07  30.0  2
- P42  Var_19  N    C5   C4   OBN    72.66  30.0  2
- P42  Var_20  CAZ  CBA  CBB  CBC  -175.33  30.0  2
- P42  Var_21  CAY  CAZ  CBA  CBB   179.64  30.0  3
- P42  Var_22  CAX  CAY  CAZ  CBA  -179.28  30.0  2
- P42  Var_23  CAW  CAX  CAY  CAZ   179.48  30.0  3
- P42  Var_24  CAV  CAW  CAX  CAY  -179.42  30.0  1
- P42  Var_25  CAU  CAV  CAW  CAX   179.38  30.0  3
- P42  Var_26  CAT  CAU  CAV  CAW  -179.64  30.0  3
- P42  Var_27  CAS  CAT  CAU  CAV   179.38  30.0  3
- P42  Var_28  CAR  CAS  CAT  CAU  -179.62  30.0  3
- P42  Var_29  CBI  CAR  CAS  CAT   179.44  30.0  3
- P42  Var_30  CBT  CBI  CAR  CAS  -179.69  30.0  3
- P42  Var_31  CBW  CBT  CBI  CAR   179.54  30.0  3
- P42  Var_32  CBY  CBW  CBT  CBI  -179.86  30.0  3
- P42  Var_33  H6   C6   N    C5    169.86  30.0  3
- P42  Var_34  H7   C7   N    C5    -62.26  30.0  3
- P42  Var_35  H8   C8   N    C5   -174.00  30.0  3
- P42  Var_36  HBX  CBX  CBV  CBS   -60.96  30.0  3
- P42  Var_37  HBK  CBK  OBL  PBM    64.09  30.0  3
- P42  Var_38  H4   C4   OBN  PBM   110.91  30.0  3
- P42  Var_39  HBY  CBY  CBW  CBT  -179.48  30.0  3
+ P42  Var_01  C6    N    C5   C4     51.16  30.0  3
+ P42  Var_02  OBL   PBM  OBN  C4   -176.14  30.0  3
+ P42  Var_03  CBH   CBS  CBV  CBX   179.65  30.0  3
+ P42  Var_04  CAQ   CBH  CBS  CBV   179.30  30.0  3
+ P42  Var_05  CAP   CAQ  CBH  CBS  -180.00  30.0  3
+ P42  Var_06  CAO   CAP  CAQ  CBH   179.74  30.0  1
+ P42  Var_07  CAN   CAO  CAP  CAQ  -179.95  30.0  3
+ P42  Var_08  CAM   CAN  CAO  CAP   179.85  30.0  1
+ P42  Var_09  CAL   CAM  CAN  CAO  -179.97  30.0  3
+ P42  Var_10  CAK   CAL  CAM  CAN   179.72  30.0  3
+ P42  Var_11  CAJ   CAK  CAL  CAM   179.94  30.0  3
+ P42  Var_12  CAI   CAJ  CAK  CAL   179.92  30.0  1
+ P42  Var_13  CAH   CAI  CAJ  CAK   179.81  30.0  3
+ P42  Var_14  CAG   CAH  CAI  CAJ   178.82  30.0  2
+ P42  Var_15  CAF   CAG  CAH  CAI  -179.60  30.0  1
+ P42  Var_16  CAE   CAF  CAG  CAH  -179.19  30.0  3
+ P42  Var_17  CAD   CAE  CAF  CAG  -171.91  30.0  3
+ P42  Var_18  CBE   CAB  OAC  CAD   163.07  30.0  2
+ P42  Var_19  N     C5   C4   OBN    72.66  30.0  2
+ P42  Var_20  CAZ   CBA  CBB  CBC  -175.33  30.0  2
+ P42  Var_21  CAY   CAZ  CBA  CBB   179.64  30.0  3
+ P42  Var_22  CAX   CAY  CAZ  CBA  -179.28  30.0  2
+ P42  Var_23  CAW   CAX  CAY  CAZ   179.48  30.0  3
+ P42  Var_24  CAV   CAW  CAX  CAY  -179.42  30.0  1
+ P42  Var_25  CAU   CAV  CAW  CAX   179.38  30.0  3
+ P42  Var_26  CAT   CAU  CAV  CAW  -179.64  30.0  3
+ P42  Var_27  CAS   CAT  CAU  CAV   179.38  30.0  3
+ P42  Var_28  CAR   CAS  CAT  CAU  -179.62  30.0  3
+ P42  Var_29  CBI   CAR  CAS  CAT   179.44  30.0  3
+ P42  Var_30  CBT   CBI  CAR  CAS  -179.69  30.0  3
+ P42  Var_31  CBW   CBT  CBI  CAR   179.54  30.0  3
+ P42  Var_32  CBY   CBW  CBT  CBI  -179.86  30.0  3
+ P42  Var_33  H6    C6   N    C5    169.86  30.0  3
+ P42  Var_34  H7    C7   N    C5    -62.26  30.0  3
+ P42  Var_35  H8    C8   N    C5   -174.00  30.0  3
+ P42  Var_36  HBX   CBX  CBV  CBS   -60.96  30.0  3
+ P42  Var_37  HBK   CBK  OBL  PBM    64.09  30.0  3
+ P42  Var_38  H4    C4   OBN  PBM   110.91  30.0  3
+ P42  Var_39  HBY   CBY  CBW  CBT  -179.48  30.0  3
+ P42  Var_40  CAB   OAC  CAD  CAE  -163.23  30.0  2
+ P42  Var_41  CAF   CAE  CAD  OAA   -56.72  30.0  3
+ P42  Var_42  CAB   OAC  CAD  OAA    71.79  30.0  2
+ P42  Var_43  CBC   OBD  CBE  CAB   151.80  30.0  3
+ P42  Var_44  OBL   CBK  CBE  CAB    85.57  30.0  2
+ P42  Var_45  CBB   CBC  OBD  CBE  -165.75  30.0  2
+ P42  Var_46  OBJ   CBC  OBD  CBE    69.66  30.0  2
+ P42  Var_47  OAC   CAB  CBE  CBK   -57.78  30.0  3
+ P42  Var_48  CBC   OBD  CBE  CBK   -82.30  30.0  3
+ P42  Var_49  OBF   PBM  OBL  CBK  -160.40  30.0  2
+ P42  Var_50  OBU   PBM  OBL  CBK   -25.99  30.0  2
+ P42  Var_51  OBN   PBM  OBL  CBK    87.93  30.0  2
+ P42  Var_52  OBD   CBE  CBK  OBL   -37.55  30.0  3
+ P42  Var_53  OAC   CAB  CBE  OBD    68.06  30.0  3
+ P42  Var_54  CBA   CBB  CBC  OBD   179.06  30.0  3
+ P42  Var_55  CBA   CBB  CBC  OBJ   -56.44  30.0  3
+ P42  Var_56  CAF   CAE  CAD  OAC   178.91  30.0  3
+ P42  Var_57  HOAA  OAA  CAD  CAE   -50.96  30.0  3
+ P42  Var_58  HAD   CAD  OAC  CAB   -44.38  30.0  3
+ P42  Var_59  HBKA  CBK  CBE  CAB   -36.73  30.0  2
+ P42  Var_60  HBC   CBC  OBD  CBE   -46.57  30.0  2
+ P42  Var_61  HBE   CBE  CBK  OBL  -158.84  30.0  3
+ P42  Var_62  HBB   CBB  CBC  OBD   -57.92  30.0  3
+ P42  Var_63  HBBA  CBB  CBC  OBD    57.62  30.0  3
+ P42  Var_64  HOBJ  OBJ  CBC  OBD    62.64  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RFZ  RFZ  5,6-dichloro-1-beta-D-ribofuranosyl-1H-benzimidazole  ligand  32  20  .  2021-08-23  2021-08-23  
+ RFZ  RFZ  5,6-dichloro-1-beta-D-ribofuranosyl-1H-benzimidazole  ligand  32  20  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RFZ
@@ -190,33 +191,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RFZ  CONST_01  N2   C1  N1  C6     0.00  0.0  0
- RFZ  CONST_02  C3   C4  C5  C6     0.00  0.0  0
- RFZ  CONST_03  C1   N2  C7  C6     0.00  0.0  0
- RFZ  CONST_04  C3   C2  C7  C6     0.00  0.0  0
- RFZ  CONST_05  C1   N1  C6  C5   180.00  0.0  0
- RFZ  CONST_06  N2   C7  C6  C5   180.00  0.0  0
- RFZ  CONST_07  C2   C7  C6  C5     0.00  0.0  0
- RFZ  CONST_08  C2   C3  C4  C5     0.00  0.0  0
- RFZ  CONST_09  N1   C6  C5  C4   180.00  0.0  0
- RFZ  CONST_10  C7   C6  C5  C4     0.00  0.0  0
- RFZ  CONST_11  C7   C2  C3  C4     0.00  0.0  0
- RFZ  CONST_12  N2   C7  C2  C3   180.00  0.0  0
- RFZ  CONST_13  N1   C6  C7  C2   180.00  0.0  0
- RFZ  CONST_14  C1   N2  C7  C2   180.00  0.0  0
- RFZ  CONST_15  C1   N1  C6  C7     0.00  0.0  0
- RFZ  CONST_16  N1   C1  N2  C7     0.00  0.0  0
- RFZ  CONST_17  N1   C6  C7  N2     0.00  0.0  0
- RFZ  CONST_18  C1'  N1  C6  C5     0.00  0.0  0
- RFZ  CONST_19  C1'  N1  C6  C7   180.00  0.0  0
- RFZ  CONST_20  C1'  N1  C1  N2   180.00  0.0  0
- RFZ  CONST_21  CL2  C4  C5  C6   180.00  0.0  0
- RFZ  CONST_22  CL1  C3  C4  C5   180.00  0.0  0
- RFZ  CONST_23  C2   C3  C4  CL2  180.00  0.0  0
- RFZ  CONST_24  C7   C2  C3  CL1  180.00  0.0  0
- RFZ  CONST_25  H1   C1  N1  C6   180.00  0.0  0
- RFZ  CONST_26  H2   C2  C7  C6   180.00  0.0  0
- RFZ  CONST_27  H5   C5  C4  C3   180.00  0.0  0
+ RFZ  CONST_01  N2    C1   N1   C6      0.00   0.0  0
+ RFZ  CONST_02  C3    C4   C5   C6      0.00   0.0  0
+ RFZ  CONST_03  C1    N2   C7   C6      0.00   0.0  0
+ RFZ  CONST_04  C3    C2   C7   C6      0.00   0.0  0
+ RFZ  CONST_05  C1    N1   C6   C5    180.00   0.0  0
+ RFZ  CONST_06  N2    C7   C6   C5    180.00   0.0  0
+ RFZ  CONST_07  C2    C7   C6   C5      0.00   0.0  0
+ RFZ  CONST_08  C2    C3   C4   C5      0.00   0.0  0
+ RFZ  CONST_09  N1    C6   C5   C4    180.00   0.0  0
+ RFZ  CONST_10  C7    C6   C5   C4      0.00   0.0  0
+ RFZ  CONST_11  C7    C2   C3   C4      0.00   0.0  0
+ RFZ  CONST_12  N2    C7   C2   C3    180.00   0.0  0
+ RFZ  CONST_13  N1    C6   C7   C2    180.00   0.0  0
+ RFZ  CONST_14  C1    N2   C7   C2    180.00   0.0  0
+ RFZ  CONST_15  C1    N1   C6   C7      0.00   0.0  0
+ RFZ  CONST_16  N1    C1   N2   C7      0.00   0.0  0
+ RFZ  CONST_17  N1    C6   C7   N2      0.00   0.0  0
+ RFZ  CONST_18  C1'   N1   C6   C5      0.00   0.0  0
+ RFZ  CONST_19  C1'   N1   C6   C7    180.00   0.0  0
+ RFZ  CONST_20  C1'   N1   C1   N2    180.00   0.0  0
+ RFZ  CONST_21  CL2   C4   C5   C6    180.00   0.0  0
+ RFZ  CONST_22  CL1   C3   C4   C5    180.00   0.0  0
+ RFZ  CONST_23  C2    C3   C4   CL2   180.00   0.0  0
+ RFZ  CONST_24  C7    C2   C3   CL1   180.00   0.0  0
+ RFZ  CONST_25  H1    C1   N1   C6    180.00   0.0  0
+ RFZ  CONST_26  H2    C2   C7   C6    180.00   0.0  0
+ RFZ  CONST_27  H5    C5   C4   C3    180.00   0.0  0
+ RFZ  Var_01    C2'   C1'  N1   C6     77.10  30.0  1
+ RFZ  Var_02    O4'   C1'  N1   C6   -164.57  30.0  1
+ RFZ  Var_03    C2'   C1'  N1   C1   -104.63  30.0  1
+ RFZ  Var_04    O4'   C1'  N1   C1     13.70  30.0  1
+ RFZ  Var_05    C3'   C2'  C1'  N1     91.41  30.0  1
+ RFZ  Var_06    C4'   O4'  C1'  N1   -112.43  30.0  1
+ RFZ  Var_07    C4'   C3'  C2'  C1'    35.75  30.0  1
+ RFZ  Var_08    C3'   C4'  O4'  C1'    15.03  30.0  1
+ RFZ  Var_09    C2'   C3'  C4'  O4'   -31.96  30.0  1
+ RFZ  Var_10    C3'   C2'  C1'  O4'   -28.28  30.0  1
+ RFZ  Var_11    C2'   C1'  O4'  C4'     8.69  30.0  1
+ RFZ  Var_12    O2'   C2'  C1'  N1   -151.98  30.0  1
+ RFZ  Var_13    O3'   C3'  C2'  C1'   154.36  30.0  1
+ RFZ  Var_14    C5'   C4'  O4'  C1'   137.56  30.0  1
+ RFZ  Var_15    O3'   C3'  C4'  O4'  -152.94  30.0  1
+ RFZ  Var_16    O2'   C2'  C1'  O4'    88.33  30.0  1
+ RFZ  Var_17    O2'   C2'  C3'  C4'   -78.16  30.0  1
+ RFZ  Var_18    C2'   C3'  C4'  C5'  -152.62  30.0  1
+ RFZ  Var_19    H1'   C1'  N1   C6    -45.02  30.0  1
+ RFZ  Var_20    H2'   C2'  C1'  N1    -28.48  30.0  1
+ RFZ  Var_21    H3'   C3'  C2'  C1'   -80.44  30.0  1
+ RFZ  Var_22    H4'   C4'  O4'  C1'  -102.40  30.0  1
+ RFZ  Var_23    O5'   C5'  C4'  O4'    63.80  30.0  3
+ RFZ  Var_24    O3'   C3'  C4'  C5'    86.39  30.0  1
+ RFZ  Var_25    C3'   C4'  C5'  O5'  -178.75  30.0  1
+ RFZ  Var_26    O2'   C2'  C3'  O3'    40.45  30.0  1
+ RFZ  Var_27    HO2'  O2'  C2'  C1'  -149.73  30.0  3
+ RFZ  Var_28    H5'   C5'  C4'  O4'  -174.60  30.0  3
+ RFZ  Var_29    H5'A  C5'  C4'  O4'   -59.05  30.0  3
+ RFZ  Var_30    HO3'  O3'  C3'  C4'  -160.52  30.0  3
+ RFZ  Var_31    HO5'  O5'  C5'  C4'   178.31  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

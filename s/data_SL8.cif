@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SL8  SL8  ~{N}-[3-[(3~{R},6~{R})-5-azanyl-3,6-dimethyl-6-(trifluoromethyl)-2~{H}-1,4-oxazin-3-yl]phenyl]-5-bromanyl-pyridine-2-carboxamide  ligand  47  29  .  2022-03-23  2022-03-23
+ SL8  SL8  ~{N}-[3-[(3~{R},6~{R})-5-azanyl-3,6-dimethyl-6-(trifluoromethyl)-2~{H}-1,4-oxazin-3-yl]phenyl]-5-bromanyl-pyridine-2-carboxamide  ligand  47  29  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SL8
@@ -245,43 +246,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SL8  CONST_01  C6   C7   C9   C2     0.00   0.0  0
- SL8  CONST_02  C6   N5   C3   C2     0.00   0.0  0
- SL8  CONST_03  C7   C9   C2   C3     0.00   0.0  0
- SL8  CONST_04  C7   C6   N5   C3     0.00   0.0  0
- SL8  CONST_05  C19  C18  C16  C15    0.00   0.0  0
- SL8  CONST_06  C19  C21  C23  C15    0.00   0.0  0
- SL8  CONST_07  C21  C23  C15  C16    0.00   0.0  0
- SL8  CONST_08  C21  C19  C18  C16    0.00   0.0  0
- SL8  CONST_09  C23  C15  C16  C18    0.00   0.0  0
- SL8  CONST_10  C23  C21  C19  C18    0.00   0.0  0
- SL8  CONST_11  C9   C2   C3   N5     0.00   0.0  0
- SL8  CONST_12  C9   C7   C6   N5     0.00   0.0  0
- SL8  CONST_13  C25  C18  C16  C15  180.00   0.0  0
- SL8  CONST_14  C25  C18  C19  C21  180.00   0.0  0
- SL8  CONST_15  C28  C27  N26  C25    0.00   0.0  0
- SL8  CONST_16  C11  C6   N5   C3   180.00   0.0  0
- SL8  CONST_17  C9   C7   C6   C11  180.00   0.0  0
- SL8  CONST_18  N13  C15  C16  C18  180.00   0.0  0
- SL8  CONST_19  N13  C15  C23  C21  180.00   0.0  0
- SL8  CONST_20  C7   C9   C2   BR1  180.00   0.0  0
- SL8  CONST_21  N5   C3   C2   BR1  180.00   0.0  0
- SL8  CONST_22  N41  C27  N26  C25  180.00   0.0  0
- SL8  CONST_23  H11  C7   C9   C2   180.00   0.0  0
- SL8  CONST_24  H12  C9   C2   C3   180.00   0.0  0
- SL8  CONST_25  H7   C21  C23  C15  180.00   0.0  0
- SL8  CONST_26  H8   C23  C15  C16  180.00   0.0  0
- SL8  CONST_27  H6   C19  C18  C16  180.00   0.0  0
- SL8  CONST_28  H5   C16  C18  C19  180.00   0.0  0
- SL8  CONST_29  H1   C3   N5   C6   180.00   0.0  0
- SL8  CONST_30  C6   C11  N13  C15  180.00   0.0  0
- SL8  CONST_31  C16  C15  N13  C11  180.00   0.0  0
- SL8  CONST_32  C23  C15  N13  C11    0.00   0.0  0
- SL8  CONST_33  H13  N13  C15  C16    0.00   0.0  0
- SL8  CONST_34  H17  N41  C27  C28  180.00   0.0  0
- SL8  CONST_36  O12  C11  N13  C15    0.00   0.0  0
- SL8  Var_01    H9   C30  O29  C28   62.51  30.0  1
- SL8  Var_02    N13  C11  C6   N5     0.08  30.0  2
+ SL8  CONST_01  C6   C7   C9   C2      0.00   0.0  0
+ SL8  CONST_02  C6   N5   C3   C2      0.00   0.0  0
+ SL8  CONST_03  C7   C9   C2   C3      0.00   0.0  0
+ SL8  CONST_04  C7   C6   N5   C3      0.00   0.0  0
+ SL8  CONST_05  C19  C18  C16  C15     0.00   0.0  0
+ SL8  CONST_06  C19  C21  C23  C15     0.00   0.0  0
+ SL8  CONST_07  C21  C23  C15  C16     0.00   0.0  0
+ SL8  CONST_08  C21  C19  C18  C16     0.00   0.0  0
+ SL8  CONST_09  C23  C15  C16  C18     0.00   0.0  0
+ SL8  CONST_10  C23  C21  C19  C18     0.00   0.0  0
+ SL8  CONST_11  C9   C2   C3   N5      0.00   0.0  0
+ SL8  CONST_12  C9   C7   C6   N5      0.00   0.0  0
+ SL8  CONST_13  C25  C18  C16  C15   180.00   0.0  0
+ SL8  CONST_14  C25  C18  C19  C21   180.00   0.0  0
+ SL8  CONST_15  C28  C27  N26  C25     0.00   0.0  0
+ SL8  CONST_16  C11  C6   N5   C3    180.00   0.0  0
+ SL8  CONST_17  C9   C7   C6   C11   180.00   0.0  0
+ SL8  CONST_18  N13  C15  C16  C18   180.00   0.0  0
+ SL8  CONST_19  N13  C15  C23  C21   180.00   0.0  0
+ SL8  CONST_20  C7   C9   C2   BR1   180.00   0.0  0
+ SL8  CONST_21  N5   C3   C2   BR1   180.00   0.0  0
+ SL8  CONST_22  N41  C27  N26  C25   180.00   0.0  0
+ SL8  CONST_23  H11  C7   C9   C2    180.00   0.0  0
+ SL8  CONST_24  H12  C9   C2   C3    180.00   0.0  0
+ SL8  CONST_25  H7   C21  C23  C15   180.00   0.0  0
+ SL8  CONST_26  H8   C23  C15  C16   180.00   0.0  0
+ SL8  CONST_27  H6   C19  C18  C16   180.00   0.0  0
+ SL8  CONST_28  H5   C16  C18  C19   180.00   0.0  0
+ SL8  CONST_29  H1   C3   N5   C6    180.00   0.0  0
+ SL8  CONST_30  C6   C11  N13  C15   180.00   0.0  0
+ SL8  CONST_31  C16  C15  N13  C11   180.00   0.0  0
+ SL8  CONST_32  C23  C15  N13  C11     0.00   0.0  0
+ SL8  CONST_33  H13  N13  C15  C16     0.00   0.0  0
+ SL8  CONST_34  H17  N41  C27  C28   180.00   0.0  0
+ SL8  CONST_35  O12  C11  N13  C15     0.00   0.0  0
+ SL8  Var_01    H9   C30  O29  C28    62.51  30.0  1
+ SL8  Var_02    N13  C11  C6   N5      0.08  30.0  2
+ SL8  Var_03    N26  C25  C18  C16     1.42  30.0  3
+ SL8  Var_04    C30  C25  C18  C16   123.39  30.0  3
+ SL8  Var_05    C27  N26  C25  C18    99.84  30.0  1
+ SL8  Var_06    O29  C30  C25  C18   -68.74  30.0  1
+ SL8  Var_07    N26  C25  C18  C19   179.83  30.0  3
+ SL8  Var_08    C30  C25  C18  C19   -58.20  30.0  3
+ SL8  Var_09    C30  O29  C28  C27    29.98  30.0  1
+ SL8  Var_10    C30  C25  N26  C27   -22.65  30.0  1
+ SL8  Var_11    O29  C28  C27  N26     4.11  30.0  1
+ SL8  Var_12    O29  C30  C25  N26    53.65  30.0  1
+ SL8  Var_13    C27  N26  C25  C44  -141.14  30.0  1
+ SL8  Var_14    O29  C30  C25  C44   171.03  30.0  1
+ SL8  Var_15    C16  C18  C25  C44  -116.44  30.0  2
+ SL8  Var_16    C19  C18  C25  C44    61.97  30.0  2
+ SL8  Var_17    C37  C28  O29  C30   149.84  30.0  1
+ SL8  Var_18    C33  C28  O29  C30   -91.82  30.0  1
+ SL8  Var_19    C37  C28  C27  N26  -113.51  30.0  1
+ SL8  Var_20    C33  C28  C27  N26   123.93  30.0  1
+ SL8  Var_21    N41  C27  C28  O29  -175.61  30.0  1
+ SL8  Var_22    H10  C30  C25  C18    48.96  30.0  1
+ SL8  Var_23    F35  C33  C28  C27    72.95  30.0  2
+ SL8  Var_24    F36  C33  C28  C27  -167.37  30.0  2
+ SL8  Var_25    F34  C33  C28  C27   -47.69  30.0  2
+ SL8  Var_26    F35  C33  C28  O29  -164.97  30.0  2
+ SL8  Var_27    F36  C33  C28  O29   -45.29  30.0  2
+ SL8  Var_28    F34  C33  C28  O29    74.40  30.0  2
+ SL8  Var_29    N41  C27  C28  C33   -55.80  30.0  1
+ SL8  Var_30    N41  C27  C28  C37    66.76  30.0  1
+ SL8  Var_31    H2   C44  C25  C18   -60.84  30.0  3
+ SL8  Var_32    H3   C44  C25  C18    59.53  30.0  3
+ SL8  Var_33    H4   C44  C25  C18   178.90  30.0  3
+ SL8  Var_34    H14  C37  C28  C27    57.24  30.0  3
+ SL8  Var_35    H15  C37  C28  C27   175.68  30.0  3
+ SL8  Var_36    H16  C37  C28  C27   -62.96  30.0  3
+ SL8  Var_37    C37  C28  C33  F34  -169.98  30.0  3
+ SL8  Var_38    C37  C28  C33  F35   -49.35  30.0  3
+ SL8  Var_39    C37  C28  C33  F36    70.33  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

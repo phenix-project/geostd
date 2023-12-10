@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2NC  2NC  N-{(2S)-2-[(N-acetyl-L-threonyl-L-isoleucyl)amino]hexyl}-L-norleucyl-L-glutaminyl-N~5~-[amino(iminio)methyl]-L-ornithinamide  peptide  122  54  .  2022-03-10  2022-03-10
+ 2NC  2NC  N-{(2S)-2-[(N-acetyl-L-threonyl-L-isoleucyl)amino]hexyl}-L-norleucyl-L-glutaminyl-N~5~-[amino(iminio)methyl]-L-ornithinamide  peptide  122  54  .  2022-03-10  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_2NC
@@ -528,46 +529,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2NC  CONST_01  CA    N    C    O       0.00   0.0  0
- 2NC  CONST_02  CA    N    C    CH3   180.00   0.0  0
- 2NC  CONST_03  CA1   N1   C1   CA    180.00   0.0  0
- 2NC  CONST_04  CA1   N1   C1   O1      0.00   0.0  0
- 2NC  CONST_05  CA2   N2   C2   CA1   180.00   0.0  0
- 2NC  CONST_06  CA2   N2   C2   O2      0.00   0.0  0
- 2NC  CONST_07  CA4   N4   C4   CA3   180.00   0.0  0
- 2NC  CONST_08  CA4   N4   C4   O3      0.00   0.0  0
- 2NC  CONST_09  CA5   N5   C5   CA4   180.00   0.0  0
- 2NC  CONST_10  CA5   N5   C5   O4      0.00   0.0  0
- 2NC  CONST_11  NH1   CZ   NE   CD4     0.00   0.0  0
- 2NC  CONST_12  NH2   CZ   NE   CD4   180.00   0.0  0
- 2NC  CONST_13  H     N    C    O     180.00   0.0  0
- 2NC  CONST_14  H4    N1   C1   CA      0.00   0.0  0
- 2NC  CONST_15  H5    N2   C2   CA1     0.00   0.0  0
- 2NC  CONST_16  H7    N4   C4   CA3     0.00   0.0  0
- 2NC  CONST_17  H8    N5   C5   CA4     0.00   0.0  0
- 2NC  CONST_18  HE22  NE2  CD3  CG4     0.00   0.0  0
- 2NC  CONST_19  HE23  NE2  CD3  CG4   180.00   0.0  0
- 2NC  CONST_20  HN1   N6   C6   CA5     0.00   0.0  0
- 2NC  CONST_21  HN2   N6   C6   CA5   180.00   0.0  0
- 2NC  CONST_22  HH11  NH1  CZ   NE      0.00   0.0  0
- 2NC  CONST_23  HH12  NH1  CZ   NE    180.00   0.0  0
- 2NC  CONST_24  HH21  NH2  CZ   NE      0.00   0.0  0
- 2NC  CONST_25  HH22  NH2  CZ   NE    180.00   0.0  0
- 2NC  CONST_26  HE    NE   CZ   NH1   180.00   0.0  0
- 2NC  Var_01    CA3   N3   C3   CA2   178.32  30.0  3
- 2NC  Var_02    CD    CG   CB2  CA2   179.68  30.0  3
- 2NC  Var_03    CE    CD   CG   CB2   178.64  30.0  3
- 2NC  Var_04    CD2   CG3  CB3  CA3   178.83  30.0  3
- 2NC  Var_05    CE1   CD2  CG3  CB3  -177.01  30.0  3
- 2NC  Var_06    CD3   CG4  CB4  CA4  -179.20  30.0  3
- 2NC  Var_07    OE1   CD3  CG4  CB4    14.78  30.0  3
- 2NC  Var_08    CD4   CG5  CB5  CA5  -175.84  30.0  3
- 2NC  Var_09    NE    CD4  CG5  CB5   179.69  30.0  3
- 2NC  Var_10    CZ    NE   CD4  CG5   177.39  30.0  3
- 2NC  Var_11    H1    CH3  C    O      70.67  30.0  3
- 2NC  Var_12    HD11  CD1  CG1  CB1  -171.41  30.0  3
- 2NC  Var_13    HE1   CE   CD   CG    179.31  30.0  3
- 2NC  Var_14    HE11  CE1  CD2  CG3   -60.09  30.0  3
+ 2NC  CONST_01  CA    N     C    O       0.00   0.0  0
+ 2NC  CONST_02  CA    N     C    CH3   180.00   0.0  0
+ 2NC  CONST_03  CA1   N1    C1   CA    180.00   0.0  0
+ 2NC  CONST_04  CA1   N1    C1   O1      0.00   0.0  0
+ 2NC  CONST_05  CA2   N2    C2   CA1   180.00   0.0  0
+ 2NC  CONST_06  CA2   N2    C2   O2      0.00   0.0  0
+ 2NC  CONST_07  CA4   N4    C4   CA3   180.00   0.0  0
+ 2NC  CONST_08  CA4   N4    C4   O3      0.00   0.0  0
+ 2NC  CONST_09  CA5   N5    C5   CA4   180.00   0.0  0
+ 2NC  CONST_10  CA5   N5    C5   O4      0.00   0.0  0
+ 2NC  CONST_11  NH1   CZ    NE   CD4     0.00   0.0  0
+ 2NC  CONST_12  NH2   CZ    NE   CD4   180.00   0.0  0
+ 2NC  CONST_13  H     N     C    O     180.00   0.0  0
+ 2NC  CONST_14  H4    N1    C1   CA      0.00   0.0  0
+ 2NC  CONST_15  H5    N2    C2   CA1     0.00   0.0  0
+ 2NC  CONST_16  H7    N4    C4   CA3     0.00   0.0  0
+ 2NC  CONST_17  H8    N5    C5   CA4     0.00   0.0  0
+ 2NC  CONST_18  HE22  NE2   CD3  CG4     0.00   0.0  0
+ 2NC  CONST_19  HE23  NE2   CD3  CG4   180.00   0.0  0
+ 2NC  CONST_20  HN1   N6    C6   CA5     0.00   0.0  0
+ 2NC  CONST_21  HN2   N6    C6   CA5   180.00   0.0  0
+ 2NC  CONST_22  HH11  NH1   CZ   NE      0.00   0.0  0
+ 2NC  CONST_23  HH12  NH1   CZ   NE    180.00   0.0  0
+ 2NC  CONST_24  HH21  NH2   CZ   NE      0.00   0.0  0
+ 2NC  CONST_25  HH22  NH2   CZ   NE    180.00   0.0  0
+ 2NC  CONST_26  HE    NE    CZ   NH1   180.00   0.0  0
+ 2NC  Var_01    CA3   N3    C3   CA2   178.32  30.0  3
+ 2NC  Var_02    CD    CG    CB2  CA2   179.68  30.0  3
+ 2NC  Var_03    CE    CD    CG   CB2   178.64  30.0  3
+ 2NC  Var_04    CD2   CG3   CB3  CA3   178.83  30.0  3
+ 2NC  Var_05    CE1   CD2   CG3  CB3  -177.01  30.0  3
+ 2NC  Var_06    CD3   CG4   CB4  CA4  -179.20  30.0  3
+ 2NC  Var_07    OE1   CD3   CG4  CB4    14.78  30.0  3
+ 2NC  Var_08    CD4   CG5   CB5  CA5  -175.84  30.0  3
+ 2NC  Var_09    NE    CD4   CG5  CB5   179.69  30.0  3
+ 2NC  Var_10    CZ    NE    CD4  CG5   177.39  30.0  3
+ 2NC  Var_11    H1    CH3   C    O      70.67  30.0  3
+ 2NC  Var_12    HD11  CD1   CG1  CB1  -171.41  30.0  3
+ 2NC  Var_13    HE1   CE    CD   CG    179.31  30.0  3
+ 2NC  Var_14    HE11  CE1   CD2  CG3   -60.09  30.0  3
+ 2NC  Var_15    HA    CA    N    C     -13.89  30.0  3
+ 2NC  Var_16    HB    CB    CA   N     179.93  30.0  3
+ 2NC  Var_17    HG1   OG1   CB   CA    -74.29  30.0  3
+ 2NC  Var_18    HG21  CG2   CB   CA     63.28  30.0  3
+ 2NC  Var_19    HG22  CG2   CB   CA   -176.72  30.0  3
+ 2NC  Var_20    HG23  CG2   CB   CA    -56.95  30.0  3
+ 2NC  Var_21    HA1   CA1   N1   C1    -13.97  30.0  3
+ 2NC  Var_22    HB1   CB1   CA1  N1   -178.52  30.0  3
+ 2NC  Var_23    HG12  CG1   CB1  CA1   -59.10  30.0  3
+ 2NC  Var_24    HG13  CG1   CB1  CA1    57.26  30.0  3
+ 2NC  Var_25    HG24  CG21  CB1  CA1  -171.27  30.0  3
+ 2NC  Var_26    HG25  CG21  CB1  CA1   -51.70  30.0  3
+ 2NC  Var_27    HG26  CG21  CB1  CA1    69.11  30.0  3
+ 2NC  Var_28    HA2   CA2   N2   C2    -15.63  30.0  3
+ 2NC  Var_29    HC31  C3    CA2  N2    172.10  30.0  3
+ 2NC  Var_30    HC32  C3    CA2  N2    -73.42  30.0  3
+ 2NC  Var_31    HB2   CB2   CA2  N2     57.68  30.0  3
+ 2NC  Var_32    HB3   CB2   CA2  N2    172.44  30.0  3
+ 2NC  Var_33    HA3   CA3   N3   C3     49.39  30.0  3
+ 2NC  Var_34    HB21  CB3   CA3  N3     56.62  30.0  3
+ 2NC  Var_35    HB31  CB3   CA3  N3    171.91  30.0  3
+ 2NC  Var_36    HA4   CA4   N4   C4     45.68  30.0  3
+ 2NC  Var_37    HB22  CB4   CA4  N4     57.16  30.0  3
+ 2NC  Var_38    HB32  CB4   CA4  N4    172.66  30.0  3
+ 2NC  Var_39    HA5   CA5   N5   C5     47.71  30.0  3
+ 2NC  Var_40    HB23  CB5   CA5  N5     61.26  30.0  3
+ 2NC  Var_41    HB33  CB5   CA5  N5    177.04  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

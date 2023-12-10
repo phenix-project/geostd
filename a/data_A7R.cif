@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A7R  A7R  '[[(2~{S},3~{S},4~{R},5~{S})-5-(3-aminocarbonylpyridin-1-ium-1-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{S},3~{S},4~{R},5~{S})-5-(4-azanyl-2-oxidanylidene-pyrimidin-1-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate'  ligand  68  42  .  2021-08-06  2021-08-06  
+ A7R  A7R  '[[(2~{S},3~{S},4~{R},5~{S})-5-(3-aminocarbonylpyridin-1-ium-1-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{S},3~{S},4~{R},5~{S})-5-(4-azanyl-2-oxidanylidene-pyrimidin-1-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate'  ligand  68  42  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_A7R
@@ -328,37 +329,105 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- A7R  CONST_01  C14  C12  N01  C11    0.00   0.0  0
- A7R  CONST_02  C14  C15  C13  C11    0.00   0.0  0
- A7R  CONST_03  C13  C15  C14  C12    0.00   0.0  0
- A7R  CONST_04  C13  C11  N01  C12    0.00   0.0  0
- A7R  CONST_05  N01  C12  C14  C15    0.00   0.0  0
- A7R  CONST_06  N01  C11  C13  C15    0.00   0.0  0
- A7R  CONST_07  C14  C12  N01  C08  180.00   0.0  0
- A7R  CONST_08  C13  C11  N01  C08  180.00   0.0  0
- A7R  CONST_09  N05  C18  N03  C04  180.00   0.0  0
- A7R  CONST_10  N05  C18  N03  C17    0.00   0.0  0
- A7R  CONST_11  C19  C20  N05  C18    0.00   0.0  0
- A7R  CONST_12  N03  C18  N05  C20    0.00   0.0  0
- A7R  CONST_13  C16  C13  C15  C14  180.00   0.0  0
- A7R  CONST_14  N01  C11  C13  C16  180.00   0.0  0
- A7R  CONST_15  O15  C18  N03  C04    0.00   0.0  0
- A7R  CONST_16  O15  C18  N03  C17  180.00   0.0  0
- A7R  CONST_17  N04  C20  N05  C18  180.00   0.0  0
- A7R  CONST_18  O15  C18  N05  C20  180.00   0.0  0
- A7R  CONST_19  H14  C12  N01  C08    0.00   0.0  0
- A7R  CONST_20  H13  C11  N01  C08    0.00   0.0  0
- A7R  CONST_21  H16  C15  C13  C11  180.00   0.0  0
- A7R  CONST_22  H15  C14  C15  C13  180.00   0.0  0
- A7R  CONST_23  H21  N04  C20  C19    0.00   0.0  0
- A7R  CONST_24  H22  N04  C20  C19  180.00   0.0  0
- A7R  CONST_25  H19  N02  C16  C13    0.00   0.0  0
- A7R  CONST_26  H20  N02  C16  C13  180.00   0.0  0
- A7R  Var_01    O14  C16  C13  C11  -20.66  30.0  2
- A7R  Var_02    O10  P01  O07  C09  -63.58  30.0  2
- A7R  Var_03    O12  P02  O08  C10  148.96  30.0  1
- A7R  Var_04    H9   C09  O07  P01   24.84  30.0  2
- A7R  Var_05    H11  C10  O08  P02  -27.38  30.0  3
+ A7R  CONST_01  C14  C12  N01  C11     0.00   0.0  0
+ A7R  CONST_02  C14  C15  C13  C11     0.00   0.0  0
+ A7R  CONST_03  C13  C15  C14  C12     0.00   0.0  0
+ A7R  CONST_04  C13  C11  N01  C12     0.00   0.0  0
+ A7R  CONST_05  N01  C12  C14  C15     0.00   0.0  0
+ A7R  CONST_06  N01  C11  C13  C15     0.00   0.0  0
+ A7R  CONST_07  C14  C12  N01  C08   180.00   0.0  0
+ A7R  CONST_08  C13  C11  N01  C08   180.00   0.0  0
+ A7R  CONST_09  N05  C18  N03  C04   180.00   0.0  0
+ A7R  CONST_10  N05  C18  N03  C17     0.00   0.0  0
+ A7R  CONST_11  C19  C20  N05  C18     0.00   0.0  0
+ A7R  CONST_12  N03  C18  N05  C20     0.00   0.0  0
+ A7R  CONST_13  C16  C13  C15  C14   180.00   0.0  0
+ A7R  CONST_14  N01  C11  C13  C16   180.00   0.0  0
+ A7R  CONST_15  O15  C18  N03  C04     0.00   0.0  0
+ A7R  CONST_16  O15  C18  N03  C17   180.00   0.0  0
+ A7R  CONST_17  N04  C20  N05  C18   180.00   0.0  0
+ A7R  CONST_18  O15  C18  N05  C20   180.00   0.0  0
+ A7R  CONST_19  H14  C12  N01  C08     0.00   0.0  0
+ A7R  CONST_20  H13  C11  N01  C08     0.00   0.0  0
+ A7R  CONST_21  H16  C15  C13  C11   180.00   0.0  0
+ A7R  CONST_22  H15  C14  C15  C13   180.00   0.0  0
+ A7R  CONST_23  H21  N04  C20  C19     0.00   0.0  0
+ A7R  CONST_24  H22  N04  C20  C19   180.00   0.0  0
+ A7R  CONST_25  H19  N02  C16  C13     0.00   0.0  0
+ A7R  CONST_26  H20  N02  C16  C13   180.00   0.0  0
+ A7R  Var_01    O14  C16  C13  C11   -20.66  30.0  2
+ A7R  Var_02    O10  P01  O07  C09   -63.58  30.0  2
+ A7R  Var_03    O12  P02  O08  C10   148.96  30.0  1
+ A7R  Var_04    H9   C09  O07  P01    24.84  30.0  2
+ A7R  Var_05    H11  C10  O08  P02   -27.38  30.0  3
+ A7R  Var_06    O01  C04  C02  C01    31.86  30.0  1
+ A7R  Var_07    N03  C04  C02  C01   -88.80  30.0  1
+ A7R  Var_08    C04  O01  C03  C01   -10.80  30.0  1
+ A7R  Var_09    O01  C03  C01  C02    30.03  30.0  1
+ A7R  Var_10    C03  O01  C04  C02   -13.34  30.0  1
+ A7R  Var_11    C18  N03  C04  C02   -75.30  30.0  3
+ A7R  Var_12    C17  N03  C04  C02   111.02  30.0  3
+ A7R  Var_13    C04  C02  C01  C03   -36.75  30.0  1
+ A7R  Var_14    N03  C04  O01  C03   110.34  30.0  1
+ A7R  Var_15    N01  C08  C06  C05   -90.13  30.0  1
+ A7R  Var_16    O02  C08  C06  C05    30.24  30.0  1
+ A7R  Var_17    C08  O02  C07  C05   -13.26  30.0  1
+ A7R  Var_18    O02  C07  C05  C06    31.29  30.0  1
+ A7R  Var_19    C12  N01  C08  C06   107.72  30.0  3
+ A7R  Var_20    C11  N01  C08  C06   -72.59  30.0  3
+ A7R  Var_21    C07  O02  C08  C06   -10.90  30.0  1
+ A7R  Var_22    C08  C06  C05  C07   -36.33  30.0  1
+ A7R  Var_23    N01  C08  O02  C07   109.63  30.0  1
+ A7R  Var_24    O02  C08  N01  C11   169.90  30.0  2
+ A7R  Var_25    O02  C08  N01  C12    -9.80  30.0  2
+ A7R  Var_26    O01  C04  N03  C17    -6.92  30.0  1
+ A7R  Var_27    O01  C04  N03  C18   166.76  30.0  1
+ A7R  Var_28    C09  C03  C01  C02   152.91  30.0  1
+ A7R  Var_29    O04  C02  C01  C03  -162.26  30.0  1
+ A7R  Var_30    O03  C01  C02  C04    80.91  30.0  1
+ A7R  Var_31    C09  C03  O01  C04  -135.93  30.0  1
+ A7R  Var_32    C10  C07  C05  C06   153.36  30.0  1
+ A7R  Var_33    O06  C06  C05  C07  -159.69  30.0  1
+ A7R  Var_34    O05  C05  C06  C08    80.34  30.0  1
+ A7R  Var_35    C10  C07  O02  C08  -138.63  30.0  1
+ A7R  Var_36    O06  C06  C08  N01    31.38  30.0  1
+ A7R  Var_37    O04  C02  C04  N03    32.16  30.0  1
+ A7R  Var_38    O03  C01  C03  O01   -87.40  30.0  1
+ A7R  Var_39    O04  C02  C04  O01   152.81  30.0  1
+ A7R  Var_40    O05  C05  C07  O02   -86.08  30.0  1
+ A7R  Var_41    O06  C06  C08  O02   151.74  30.0  1
+ A7R  Var_42    H4   C04  C02  C01   150.35  30.0  1
+ A7R  Var_43    H3   C03  C01  C02   -85.08  30.0  1
+ A7R  Var_44    H2   C02  C01  C03    74.81  30.0  1
+ A7R  Var_45    H1   C01  C02  C04  -154.18  30.0  1
+ A7R  Var_46    H17  C17  N03  C04    -2.90  30.0  1
+ A7R  Var_47    H8   C08  C06  C05   152.35  30.0  1
+ A7R  Var_48    H7   C07  C05  C06   -83.82  30.0  1
+ A7R  Var_49    H6   C06  C05  C07    75.47  30.0  1
+ A7R  Var_50    H5   C05  C06  C08  -154.00  30.0  1
+ A7R  Var_51    H18  C19  C17  N03  -179.62  30.0  1
+ A7R  Var_52    O07  C09  C03  C01  -168.54  30.0  2
+ A7R  Var_53    O08  C10  C07  C05  -177.45  30.0  2
+ A7R  Var_54    O03  C01  C03  C09    35.47  30.0  1
+ A7R  Var_55    O05  C05  C07  C10    35.99  30.0  1
+ A7R  Var_56    O07  C09  C03  O01   -48.52  30.0  2
+ A7R  Var_57    O08  C10  C07  O02   -57.94  30.0  2
+ A7R  Var_58    O04  C02  C01  O03   -44.60  30.0  1
+ A7R  Var_59    O06  C06  C05  O05   -43.03  30.0  1
+ A7R  Var_60    H24  O04  C02  C01   152.50  30.0  3
+ A7R  Var_61    H9   C09  C03  C01   -45.60  30.0  2
+ A7R  Var_62    H10  C09  C03  C01    70.52  30.0  2
+ A7R  Var_63    H23  O03  C01  C02    36.95  30.0  3
+ A7R  Var_64    H26  O06  C06  C05  -136.73  30.0  3
+ A7R  Var_65    H11  C10  C07  C05   -52.44  30.0  2
+ A7R  Var_66    H12  C10  C07  C05    64.61  30.0  2
+ A7R  Var_67    H25  O05  C05  C06    61.93  30.0  3
+ A7R  Var_68    P02  O09  P01  O07   -84.60  30.0  3
+ A7R  Var_69    P01  O09  P02  O08   168.12  30.0  3
+ A7R  Var_70    P02  O09  P01  O10   162.31  30.0  3
+ A7R  Var_71    P02  O09  P01  O11    29.89  30.0  2
+ A7R  Var_72    P01  O09  P02  O12   -82.51  30.0  3
+ A7R  Var_73    P01  O09  P02  O13    53.15  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

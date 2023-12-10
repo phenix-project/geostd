@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 864  864  '(2S)-2-[3-(aminomethyl)phenyl]-3-[(R)-[(1R)-1-{[(benzyloxy)carbonyl]amino}-2-methylpropyl](hydroxy)phosphoryl]propanoic acid'  ligand  60  31  .  2022-03-29  2022-11-17
+ 864  864  '(2S)-2-[3-(aminomethyl)phenyl]-3-[(R)-[(1R)-1-{[(benzyloxy)carbonyl]amino}-2-methylpropyl](hydroxy)phosphoryl]propanoic acid'  ligand  60  31  .  2022-03-29  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_864
@@ -291,42 +292,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 864  CONST_01  C6    C7   C8   C3     0.00   0.0  0
- 864  CONST_02  C6    C5   C4   C3     0.00   0.0  0
- 864  CONST_03  C7    C8   C3   C4     0.00   0.0  0
- 864  CONST_04  C7    C6   C5   C4     0.00   0.0  0
- 864  CONST_05  C8    C3   C4   C5     0.00   0.0  0
- 864  CONST_06  C8    C7   C6   C5     0.00   0.0  0
- 864  CONST_07  C39   C40  C41  C36    0.00   0.0  0
- 864  CONST_08  C39   C38  C37  C36    0.00   0.0  0
- 864  CONST_09  C40   C41  C36  C37    0.00   0.0  0
- 864  CONST_10  C40   C39  C38  C37    0.00   0.0  0
- 864  CONST_11  C41   C36  C37  C38    0.00   0.0  0
- 864  CONST_12  C41   C40  C39  C38    0.00   0.0  0
- 864  CONST_13  C7    C8   C3   C1   180.00   0.0  0
- 864  CONST_14  C5    C4   C3   C1   180.00   0.0  0
- 864  CONST_15  C9    C7   C8   C3   180.00   0.0  0
- 864  CONST_16  C9    C7   C6   C5   180.00   0.0  0
- 864  CONST_17  C40   C41  C36  C33  180.00   0.0  0
- 864  CONST_18  C38   C37  C36  C33  180.00   0.0  0
- 864  CONST_19  H5    C5   C4   C3   180.00   0.0  0
- 864  CONST_20  H8    C8   C3   C4   180.00   0.0  0
- 864  CONST_21  H6    C6   C5   C4   180.00   0.0  0
- 864  CONST_22  H4    C4   C5   C6   180.00   0.0  0
- 864  CONST_23  H40   C40  C41  C36  180.00   0.0  0
- 864  CONST_24  H38   C38  C37  C36  180.00   0.0  0
- 864  CONST_25  H41   C41  C36  C37  180.00   0.0  0
- 864  CONST_26  H39   C39  C38  C37  180.00   0.0  0
- 864  CONST_27  H37   C37  C38  C39  180.00   0.0  0
- 864  CONST_28  HO13  O13  C2   C1   180.00   0.0  0
- 864  Var_01    N10   C9   C7   C6   149.61  30.0  2
- 864  Var_02    C41   C36  C33  O32  -56.93  30.0  2
- 864  Var_03    C36   C33  O32  C30  157.33  30.0  3
- 864  Var_04    H101  N10  C9   C7   171.70  30.0  3
- 864  Var_05    O34   P24  C15  C1   -64.78  30.0  3
- 864  Var_06    O31   C30  N29  C25   -8.78  30.0  2
- 864  Var_07    H271  C27  C26  C25   67.53  30.0  3
- 864  Var_08    H281  C28  C26  C25   66.87  30.0  3
+ 864  CONST_01  C6    C7   C8   C3      0.00   0.0  0
+ 864  CONST_02  C6    C5   C4   C3      0.00   0.0  0
+ 864  CONST_03  C7    C8   C3   C4      0.00   0.0  0
+ 864  CONST_04  C7    C6   C5   C4      0.00   0.0  0
+ 864  CONST_05  C8    C3   C4   C5      0.00   0.0  0
+ 864  CONST_06  C8    C7   C6   C5      0.00   0.0  0
+ 864  CONST_07  C39   C40  C41  C36     0.00   0.0  0
+ 864  CONST_08  C39   C38  C37  C36     0.00   0.0  0
+ 864  CONST_09  C40   C41  C36  C37     0.00   0.0  0
+ 864  CONST_10  C40   C39  C38  C37     0.00   0.0  0
+ 864  CONST_11  C41   C36  C37  C38     0.00   0.0  0
+ 864  CONST_12  C41   C40  C39  C38     0.00   0.0  0
+ 864  CONST_13  C7    C8   C3   C1    180.00   0.0  0
+ 864  CONST_14  C5    C4   C3   C1    180.00   0.0  0
+ 864  CONST_15  C9    C7   C8   C3    180.00   0.0  0
+ 864  CONST_16  C9    C7   C6   C5    180.00   0.0  0
+ 864  CONST_17  C40   C41  C36  C33   180.00   0.0  0
+ 864  CONST_18  C38   C37  C36  C33   180.00   0.0  0
+ 864  CONST_19  H5    C5   C4   C3    180.00   0.0  0
+ 864  CONST_20  H8    C8   C3   C4    180.00   0.0  0
+ 864  CONST_21  H6    C6   C5   C4    180.00   0.0  0
+ 864  CONST_22  H4    C4   C5   C6    180.00   0.0  0
+ 864  CONST_23  H40   C40  C41  C36   180.00   0.0  0
+ 864  CONST_24  H38   C38  C37  C36   180.00   0.0  0
+ 864  CONST_25  H41   C41  C36  C37   180.00   0.0  0
+ 864  CONST_26  H39   C39  C38  C37   180.00   0.0  0
+ 864  CONST_27  H37   C37  C38  C39   180.00   0.0  0
+ 864  CONST_28  HO13  O13  C2   C1    180.00   0.0  0
+ 864  Var_01    N10   C9   C7   C6    149.61  30.0  2
+ 864  Var_02    C41   C36  C33  O32   -56.93  30.0  2
+ 864  Var_03    C36   C33  O32  C30   157.33  30.0  3
+ 864  Var_04    H101  N10  C9   C7    171.70  30.0  3
+ 864  Var_05    O34   P24  C15  C1    -64.78  30.0  3
+ 864  Var_06    O31   C30  N29  C25    -8.78  30.0  2
+ 864  Var_07    H271  C27  C26  C25    67.53  30.0  3
+ 864  Var_08    H281  C28  C26  C25    66.87  30.0  3
+ 864  Var_09    C8    C3   C1   C2     99.24  30.0  2
+ 864  Var_10    C4    C3   C1   C2    -80.05  30.0  2
+ 864  Var_11    C15   C1   C3   C4     46.09  30.0  1
+ 864  Var_12    C15   C1   C3   C8   -134.62  30.0  1
+ 864  Var_13    H1    C1   C3   C4    165.70  30.0  1
+ 864  Var_14    P24   C15  C1   C3    164.28  30.0  3
+ 864  Var_15    O14   C2   C1   C3    -96.78  30.0  3
+ 864  Var_16    O13   C2   C1   C3     79.34  30.0  3
+ 864  Var_17    H151  C15  C1   C3    -70.98  30.0  3
+ 864  Var_18    H152  C15  C1   C3     46.09  30.0  3
+ 864  Var_19    P24   C15  C1   C2    -73.33  30.0  3
+ 864  Var_20    C15   C1   C2   O13   -45.30  30.0  3
+ 864  Var_21    C15   C1   C2   O14   138.58  30.0  3
+ 864  Var_22    C26   C25  P24  C15    86.97  30.0  3
+ 864  Var_23    N29   C25  P24  C15   -40.88  30.0  3
+ 864  Var_24    C27   C26  C25  P24   -59.98  30.0  3
+ 864  Var_25    C28   C26  C25  P24   174.57  30.0  3
+ 864  Var_26    C30   N29  C25  P24   -90.02  30.0  3
+ 864  Var_27    O34   P24  C25  C26   -41.78  30.0  1
+ 864  Var_28    O35   P24  C25  C26  -168.11  30.0  1
+ 864  Var_29    C30   N29  C25  C26   141.27  30.0  3
+ 864  Var_30    N29   C25  C26  C27    66.09  30.0  2
+ 864  Var_31    N29   C25  C26  C28   -59.35  30.0  2
+ 864  Var_32    O34   P24  C25  N29  -169.63  30.0  1
+ 864  Var_33    O35   P24  C25  N29    64.04  30.0  1
+ 864  Var_34    C33   O32  C30  N29  -175.87  30.0  3
+ 864  Var_35    C33   O32  C30  O31     4.45  30.0  3
+ 864  Var_36    H25   C25  P24  C15  -156.29  30.0  3
+ 864  Var_37    HO35  O35  P24  C15   177.59  30.0  3
+ 864  Var_38    H26   C26  C25  P24    58.29  30.0  3
+ 864  Var_39    HN29  N29  C25  P24    80.44  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

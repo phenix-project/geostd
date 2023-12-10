@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 9GN  9GN  '3-iodanyl-2-oxidanyl-5-propylsulfanyl-4-pyrrol-1-yl-benzoic acid'  ligand  33  20  .  2022-07-24  2022-07-26
+ 9GN  9GN  '3-iodanyl-2-oxidanyl-5-propylsulfanyl-4-pyrrol-1-yl-benzoic acid'  ligand  33  20  .  2022-07-24  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_9GN
@@ -188,40 +189,47 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 9GN  CONST_03  C12  C13  N01  C10     0.00   0.0  0
- 9GN  CONST_04  C13  C12  C11  C10     0.00   0.0  0
- 9GN  CONST_07  C11  C10  N01  C13     0.00   0.0  0
- 9GN  CONST_08  C04  C03  C02  C01     0.00   0.0  0
- 9GN  CONST_09  C04  C05  C06  C01     0.00   0.0  0
- 9GN  CONST_10  N01  C04  C03  C02   180.00   0.0  0
- 9GN  CONST_11  C05  C04  C03  C02     0.00   0.0  0
- 9GN  CONST_12  C05  C06  C01  C02     0.00   0.0  0
- 9GN  CONST_13  C06  C01  C02  C03     0.00   0.0  0
- 9GN  CONST_14  C06  C05  C04  C03     0.00   0.0  0
- 9GN  CONST_15  C12  C13  N01  C04   180.00   0.0  0
- 9GN  CONST_16  C11  C10  N01  C04   180.00   0.0  0
- 9GN  CONST_17  N01  C04  C05  C06   180.00   0.0  0
- 9GN  CONST_18  C11  C12  C13  N01     0.00   0.0  0
- 9GN  CONST_19  C12  C11  C10  N01     0.00   0.0  0
- 9GN  CONST_20  S01  C03  C02  C01   180.00   0.0  0
- 9GN  CONST_21  I01  C05  C06  C01   180.00   0.0  0
- 9GN  CONST_22  O01  C06  C01  C02   180.00   0.0  0
- 9GN  CONST_23  C09  C01  C02  C03   180.00   0.0  0
- 9GN  CONST_24  I01  C05  C04  C03   180.00   0.0  0
- 9GN  CONST_25  O01  C06  C05  C04   180.00   0.0  0
- 9GN  CONST_26  S01  C03  C04  C05   180.00   0.0  0
- 9GN  CONST_27  C09  C01  C06  C05   180.00   0.0  0
- 9GN  CONST_28  N01  C04  C05  I01     0.00   0.0  0
- 9GN  CONST_29  N01  C04  C03  S01     0.00   0.0  0
- 9GN  CONST_30  H2   C13  N01  C10   180.00   0.0  0
- 9GN  CONST_31  H11  C12  C11  C10   180.00   0.0  0
- 9GN  CONST_32  H1   C10  N01  C13   180.00   0.0  0
- 9GN  CONST_33  H10  C11  C12  C13   180.00   0.0  0
- 9GN  CONST_34  H3   C02  C03  C04   180.00   0.0  0
+ 9GN  CONST_01  C12  C13  N01  C10     0.00   0.0  0
+ 9GN  CONST_02  C13  C12  C11  C10     0.00   0.0  0
+ 9GN  CONST_03  C11  C10  N01  C13     0.00   0.0  0
+ 9GN  CONST_04  C04  C03  C02  C01     0.00   0.0  0
+ 9GN  CONST_05  C04  C05  C06  C01     0.00   0.0  0
+ 9GN  CONST_06  N01  C04  C03  C02   180.00   0.0  0
+ 9GN  CONST_07  C05  C04  C03  C02     0.00   0.0  0
+ 9GN  CONST_08  C05  C06  C01  C02     0.00   0.0  0
+ 9GN  CONST_09  C06  C01  C02  C03     0.00   0.0  0
+ 9GN  CONST_10  C06  C05  C04  C03     0.00   0.0  0
+ 9GN  CONST_11  C12  C13  N01  C04   180.00   0.0  0
+ 9GN  CONST_12  C11  C10  N01  C04   180.00   0.0  0
+ 9GN  CONST_13  N01  C04  C05  C06   180.00   0.0  0
+ 9GN  CONST_14  C11  C12  C13  N01     0.00   0.0  0
+ 9GN  CONST_15  C12  C11  C10  N01     0.00   0.0  0
+ 9GN  CONST_16  S01  C03  C02  C01   180.00   0.0  0
+ 9GN  CONST_17  I01  C05  C06  C01   180.00   0.0  0
+ 9GN  CONST_18  O01  C06  C01  C02   180.00   0.0  0
+ 9GN  CONST_19  C09  C01  C02  C03   180.00   0.0  0
+ 9GN  CONST_20  I01  C05  C04  C03   180.00   0.0  0
+ 9GN  CONST_21  O01  C06  C05  C04   180.00   0.0  0
+ 9GN  CONST_22  S01  C03  C04  C05   180.00   0.0  0
+ 9GN  CONST_23  C09  C01  C06  C05   180.00   0.0  0
+ 9GN  CONST_24  N01  C04  C05  I01     0.00   0.0  0
+ 9GN  CONST_25  N01  C04  C03  S01     0.00   0.0  0
+ 9GN  CONST_26  H2   C13  N01  C10   180.00   0.0  0
+ 9GN  CONST_27  H11  C12  C11  C10   180.00   0.0  0
+ 9GN  CONST_28  H1   C10  N01  C13   180.00   0.0  0
+ 9GN  CONST_29  H10  C11  C12  C13   180.00   0.0  0
+ 9GN  CONST_30  H3   C02  C03  C04   180.00   0.0  0
  9GN  Var_01    O02  C09  C01  C02  -179.84  30.0  2
  9GN  Var_02    C08  C07  S01  C03  -179.37  30.0  1
  9GN  Var_03    C14  C08  C07  S01  -179.60  30.0  1
  9GN  Var_04    H12  C14  C08  C07   -59.94  30.0  3
+ 9GN  Var_05    C03  C04  N01  C10   -91.08  30.0  2
+ 9GN  Var_06    C05  C04  N01  C10    88.96  30.0  2
+ 9GN  Var_07    C03  C04  N01  C13    90.44  30.0  2
+ 9GN  Var_08    C05  C04  N01  C13   -89.53  30.0  2
+ 9GN  Var_09    C07  S01  C03  C02     1.76  30.0  3
+ 9GN  Var_10    C07  S01  C03  C04  -178.47  30.0  3
+ 9GN  Var_11    H8   O01  C06  C01     0.05  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

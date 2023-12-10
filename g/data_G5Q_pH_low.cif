@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- G5Q  G5Q  '(3~{S})-3-azanyl-4-[[(2~{R},3~{S},4~{R},5~{R})-5-[3-methyl-2,4-bis(oxidanylidene)pyrimidin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methoxysulfonylamino]-4-oxidanylidene-butanoic acid'  ligand  50  30  .  2021-08-10  2022-11-17
+ G5Q  G5Q  '(3~{S})-3-azanyl-4-[[(2~{R},3~{S},4~{R},5~{R})-5-[3-methyl-2,4-bis(oxidanylidene)pyrimidin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methoxysulfonylamino]-4-oxidanylidene-butanoic acid'  ligand  50  30  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_G5Q
@@ -255,27 +256,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- G5Q  CONST_01  N3   C2   N1   C1'  180.00   0.0  0
- G5Q  CONST_02  C5   C4   N3   C2     0.00   0.0  0
- G5Q  CONST_03  N1   C2   N3   C4     0.00   0.0  0
- G5Q  CONST_04  N3   C2   N1   C6     0.00   0.0  0
- G5Q  CONST_05  O2   C2   N1   C1'    0.00   0.0  0
- G5Q  CONST_06  O4   C4   N3   C2   180.00   0.0  0
- G5Q  CONST_07  N1   C2   N3   C3U  180.00   0.0  0
- G5Q  CONST_08  C5   C4   N3   C3U  180.00   0.0  0
- G5Q  CONST_09  O2   C2   N3   C4   180.00   0.0  0
- G5Q  CONST_10  O2   C2   N1   C6   180.00   0.0  0
- G5Q  CONST_11  O2   C2   N3   C3U    0.00   0.0  0
- G5Q  CONST_12  O4   C4   N3   C3U    0.00   0.0  0
- G5Q  CONST_13  S    N3S  C    CA   180.00   0.0  0
- G5Q  CONST_14  S    N3S  C    O      0.00   0.0  0
- G5Q  CONST_15  H19  N3S  C    CA     0.00   0.0  0
- G5Q  CONST_16  H7   OD1  CG   CD   180.00   0.0  0
- G5Q  Var_01    H11  C3U  N3   C2   175.32  30.0  3
- G5Q  Var_02    OD2  CG   CD   CA   123.22  30.0  2
- G5Q  Var_03    O5'  S    N3S  C    -62.55  30.0  3
- G5Q  Var_04    N3S  S    O5'  C5'  -65.79  30.0  3
- G5Q  Var_05    H16  C5'  O5'  S    121.14  30.0  1
+ G5Q  CONST_01  N3   C2   N1   C1'   180.00   0.0  0
+ G5Q  CONST_02  C5   C4   N3   C2      0.00   0.0  0
+ G5Q  CONST_03  N1   C2   N3   C4      0.00   0.0  0
+ G5Q  CONST_04  N3   C2   N1   C6      0.00   0.0  0
+ G5Q  CONST_05  O2   C2   N1   C1'     0.00   0.0  0
+ G5Q  CONST_06  O4   C4   N3   C2    180.00   0.0  0
+ G5Q  CONST_07  N1   C2   N3   C3U   180.00   0.0  0
+ G5Q  CONST_08  C5   C4   N3   C3U   180.00   0.0  0
+ G5Q  CONST_09  O2   C2   N3   C4    180.00   0.0  0
+ G5Q  CONST_10  O2   C2   N1   C6    180.00   0.0  0
+ G5Q  CONST_11  O2   C2   N3   C3U     0.00   0.0  0
+ G5Q  CONST_12  O4   C4   N3   C3U     0.00   0.0  0
+ G5Q  CONST_13  S    N3S  C    CA    180.00   0.0  0
+ G5Q  CONST_14  S    N3S  C    O       0.00   0.0  0
+ G5Q  CONST_15  H19  N3S  C    CA      0.00   0.0  0
+ G5Q  CONST_16  H7   OD1  CG   CD    180.00   0.0  0
+ G5Q  Var_01    H11  C3U  N3   C2    175.32  30.0  3
+ G5Q  Var_02    OD2  CG   CD   CA    123.22  30.0  2
+ G5Q  Var_03    O5'  S    N3S  C     -62.55  30.0  3
+ G5Q  Var_04    N3S  S    O5'  C5'   -65.79  30.0  3
+ G5Q  Var_05    H16  C5'  O5'  S     121.14  30.0  1
+ G5Q  Var_06    C3'  C4'  O4'  C1'    22.83  30.0  1
+ G5Q  Var_07    C4'  C3'  C2'  C1'    37.66  30.0  1
+ G5Q  Var_08    O4'  C1'  N1   C2   -164.46  30.0  2
+ G5Q  Var_09    C2'  C1'  N1   C2     76.97  30.0  2
+ G5Q  Var_10    O4'  C4'  C3'  C2'   -37.90  30.0  1
+ G5Q  Var_11    C4'  O4'  C1'  C2'     2.11  30.0  1
+ G5Q  Var_12    C6   N1   C1'  C2'  -102.83  30.0  3
+ G5Q  Var_13    O4'  C1'  C2'  C3'   -25.72  30.0  1
+ G5Q  Var_14    N1   C1'  C2'  C3'    94.45  30.0  1
+ G5Q  Var_15    N1   C1'  O4'  C4'  -119.55  30.0  1
+ G5Q  Var_16    O4'  C1'  N1   C6     15.74  30.0  2
+ G5Q  Var_17    C5'  C4'  O4'  C1'   149.23  30.0  1
+ G5Q  Var_18    O3'  C3'  C2'  C1'   156.92  30.0  1
+ G5Q  Var_19    C5'  C4'  C3'  C2'  -160.35  30.0  1
+ G5Q  Var_20    O2'  C2'  C3'  C4'   -78.84  30.0  1
+ G5Q  Var_21    O2'  C2'  C1'  N1   -150.95  30.0  1
+ G5Q  Var_22    O4'  C1'  C2'  O2'    88.87  30.0  1
+ G5Q  Var_23    O4'  C4'  C3'  O3'  -161.26  30.0  1
+ G5Q  Var_24    H14  C4'  O4'  C1'   -94.36  30.0  1
+ G5Q  Var_25    H10  C3'  C2'  C1'   -77.01  30.0  1
+ G5Q  Var_26    H18  C6   N1   C1'    -0.90  30.0  1
+ G5Q  Var_27    H8   C1'  N1   C2    -45.50  30.0  2
+ G5Q  Var_28    H9   C2'  C3'  C4'   156.97  30.0  1
+ G5Q  Var_29    H15  C5   C6   N1   -179.83  30.0  1
+ G5Q  Var_30    O5'  C5'  C4'  C3'    60.07  30.0  3
+ G5Q  Var_31    O3'  C3'  C4'  C5'    76.29  30.0  1
+ G5Q  Var_32    O3'  C3'  C2'  O2'    40.41  30.0  1
+ G5Q  Var_33    O5'  C5'  C4'  O4'   -58.98  30.0  3
+ G5Q  Var_34    H20  O2'  C2'  C1'    71.31  30.0  3
+ G5Q  Var_35    H21  O3'  C3'  C2'    83.23  30.0  3
+ G5Q  Var_36    H16  C5'  C4'  C3'   177.98  30.0  3
+ G5Q  Var_37    H17  C5'  C4'  C3'   -63.27  30.0  3
+ G5Q  Var_38    CG   CD   CA   N     -53.11  30.0  1
+ G5Q  Var_39    N3S  C    CA   N     159.94  30.0  3
+ G5Q  Var_40    O    C    CA   N     -22.15  30.0  3
+ G5Q  Var_41    CG   CD   CA   C    -177.51  30.0  1
+ G5Q  Var_42    CD   CA   C    O      99.57  30.0  1
+ G5Q  Var_43    N3S  C    CA   CD    -78.34  30.0  3
+ G5Q  Var_44    H5   CD   CA   N    -174.19  30.0  1
+ G5Q  Var_45    H6   CD   CA   N      66.78  30.0  1
+ G5Q  Var_46    H1   N    CA   C     -64.70  30.0  3
+ G5Q  Var_47    H2   N    CA   C      54.03  30.0  3
+ G5Q  Var_48    H4   CA   C    O    -142.64  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

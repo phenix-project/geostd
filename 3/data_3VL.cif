@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3VL  3VL  'methyl (1R,2R,4S)-2-ethyl-2,5,7-trihydroxy-6,11-dioxo-4-{[2,3,6-trideoxy-3-(dimethylamino)-alpha-L-lyxo-hexopyranosyl]oxy}-1,2,3,4,6,11-hexahydrotetracene-1-carboxylate'  ligand  76  41  .  2022-03-10  2022-03-10
+ 3VL  3VL  'methyl (1R,2R,4S)-2-ethyl-2,5,7-trihydroxy-6,11-dioxo-4-{[2,3,6-trideoxy-3-(dimethylamino)-alpha-L-lyxo-hexopyranosyl]oxy}-1,2,3,4,6,11-hexahydrotetracene-1-carboxylate'  ligand  76  41  .  2022-03-10  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3VL
@@ -366,33 +367,120 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3VL  CONST_01  C19  C10  C9   C8     0.00   0.0  0
- 3VL  CONST_02  C19  C20  C21  C8     0.00   0.0  0
- 3VL  CONST_03  C20  C19  C10  C9     0.00   0.0  0
- 3VL  CONST_04  C20  C21  C8   C9     0.00   0.0  0
- 3VL  CONST_05  C21  C20  C19  C10    0.00   0.0  0
- 3VL  CONST_06  C21  C8   C9   C10    0.00   0.0  0
- 3VL  CONST_07  C15  C14  C13  C12    0.00   0.0  0
- 3VL  CONST_08  C15  C16  C17  C12    0.00   0.0  0
- 3VL  CONST_09  C16  C15  C14  C13    0.00   0.0  0
- 3VL  CONST_10  C16  C17  C12  C13    0.00   0.0  0
- 3VL  CONST_11  C17  C16  C15  C14    0.00   0.0  0
- 3VL  CONST_12  C17  C12  C13  C14    0.00   0.0  0
- 3VL  CONST_13  O7   C20  C21  C8   180.00   0.0  0
- 3VL  CONST_14  O7   C20  C19  C10  180.00   0.0  0
- 3VL  CONST_15  O5   C16  C17  C12  180.00   0.0  0
- 3VL  CONST_16  O5   C16  C15  C14  180.00   0.0  0
- 3VL  CONST_17  C18  C17  C16  O5     0.00   0.0  0
- 3VL  CONST_18  O7   C20  C19  C18    0.00   0.0  0
- 3VL  CONST_19  C22  C21  C20  O7     0.00   0.0  0
- 3VL  CONST_20  H13  C9   C8   C5     0.00   0.0  0
- 3VL  CONST_21  H14  C13  C12  C11    0.00   0.0  0
- 3VL  CONST_22  H15  C14  C13  C12  180.00   0.0  0
- 3VL  CONST_23  H16  C15  C14  C13  180.00   0.0  0
- 3VL  Var_01    H1   C1   C2   C3   175.02  30.0  3
- 3VL  Var_02    H34  C30  N1   C28   66.15  30.0  3
- 3VL  Var_03    H31  C29  N1   C28   61.61  30.0  3
- 3VL  Var_04    H10  C7   O3   C6   -62.08  30.0  3
+ 3VL  CONST_01  C19  C10  C9   C8      0.00   0.0  0
+ 3VL  CONST_02  C19  C20  C21  C8      0.00   0.0  0
+ 3VL  CONST_03  C20  C19  C10  C9      0.00   0.0  0
+ 3VL  CONST_04  C20  C21  C8   C9      0.00   0.0  0
+ 3VL  CONST_05  C21  C20  C19  C10     0.00   0.0  0
+ 3VL  CONST_06  C21  C8   C9   C10     0.00   0.0  0
+ 3VL  CONST_07  C15  C14  C13  C12     0.00   0.0  0
+ 3VL  CONST_08  C15  C16  C17  C12     0.00   0.0  0
+ 3VL  CONST_09  C16  C15  C14  C13     0.00   0.0  0
+ 3VL  CONST_10  C16  C17  C12  C13     0.00   0.0  0
+ 3VL  CONST_11  C17  C16  C15  C14     0.00   0.0  0
+ 3VL  CONST_12  C17  C12  C13  C14     0.00   0.0  0
+ 3VL  CONST_13  O7   C20  C21  C8    180.00   0.0  0
+ 3VL  CONST_14  O7   C20  C19  C10   180.00   0.0  0
+ 3VL  CONST_15  O5   C16  C17  C12   180.00   0.0  0
+ 3VL  CONST_16  O5   C16  C15  C14   180.00   0.0  0
+ 3VL  CONST_17  C18  C17  C16  O5      0.00   0.0  0
+ 3VL  CONST_18  O7   C20  C19  C18     0.00   0.0  0
+ 3VL  CONST_19  C22  C21  C20  O7      0.00   0.0  0
+ 3VL  CONST_20  H13  C9   C8   C5      0.00   0.0  0
+ 3VL  CONST_21  H14  C13  C12  C11     0.00   0.0  0
+ 3VL  CONST_22  H15  C14  C13  C12   180.00   0.0  0
+ 3VL  CONST_23  H16  C15  C14  C13   180.00   0.0  0
+ 3VL  Var_01    H1   C1   C2   C3    175.02  30.0  3
+ 3VL  Var_02    H34  C30  N1   C28    66.15  30.0  3
+ 3VL  Var_03    H31  C29  N1   C28    61.61  30.0  3
+ 3VL  Var_04    H10  C7   O3   C6    -62.08  30.0  3
+ 3VL  CONST_24  C12  C11  C10  C9    180.00   0.0  0
+ 3VL  CONST_25  C13  C12  C11  C10   180.00   0.0  0
+ 3VL  CONST_26  C17  C12  C11  C10     0.00   0.0  0
+ 3VL  CONST_27  C17  C18  C19  C10     0.00   0.0  0
+ 3VL  CONST_28  C19  C18  C17  C12     0.00   0.0  0
+ 3VL  CONST_29  C19  C10  C11  C12     0.00   0.0  0
+ 3VL  CONST_30  C19  C18  C17  C16   180.00   0.0  0
+ 3VL  CONST_31  C20  C19  C18  C17   180.00   0.0  0
+ 3VL  CONST_32  O4   C11  C10  C9      0.00   0.0  0
+ 3VL  CONST_33  O6   C18  C19  C10   180.00   0.0  0
+ 3VL  CONST_34  C13  C12  C11  O4      0.00   0.0  0
+ 3VL  CONST_35  C17  C12  C11  O4    180.00   0.0  0
+ 3VL  CONST_36  C19  C10  C11  O4    180.00   0.0  0
+ 3VL  CONST_37  O6   C18  C17  C12   180.00   0.0  0
+ 3VL  CONST_38  O6   C18  C17  C16     0.00   0.0  0
+ 3VL  CONST_39  C20  C19  C18  O6      0.00   0.0  0
+ 3VL  Var_05    C9   C8   C5   C3   -156.00  30.0  1
+ 3VL  Var_06    C21  C8   C5   C3     24.37  30.0  1
+ 3VL  Var_07    C21  C22  C4   C3    -42.91  30.0  1
+ 3VL  Var_08    C20  C21  C22  C4   -170.68  30.0  1
+ 3VL  Var_09    C8   C21  C22  C4     14.01  30.0  1
+ 3VL  Var_10    C8   C5   C3   C4    -51.02  30.0  1
+ 3VL  Var_11    C22  C4   C3   C5     61.96  30.0  1
+ 3VL  Var_12    C27  C28  C24  C23    54.10  30.0  1
+ 3VL  Var_13    C27  C25  O9   C23   -55.86  30.0  1
+ 3VL  Var_14    C25  C27  C28  C24   -55.65  30.0  1
+ 3VL  Var_15    C25  O9   C23  C24    53.10  30.0  1
+ 3VL  Var_16    C28  C27  C25  O9     56.66  30.0  1
+ 3VL  Var_17    C28  C24  C23  O9    -52.37  30.0  1
+ 3VL  Var_18    C8   C5   C3   C2   -174.29  30.0  1
+ 3VL  Var_19    C22  C4   C3   C2   -175.50  30.0  1
+ 3VL  Var_20    O8   C22  C4   C3     74.72  30.0  1
+ 3VL  Var_21    C23  O8   C22  C4     97.13  30.0  3
+ 3VL  Var_22    C6   C5   C3   C4     71.35  30.0  1
+ 3VL  Var_23    C8   C5   C3   O1     69.30  30.0  1
+ 3VL  Var_24    C22  C4   C3   O1    -55.17  30.0  1
+ 3VL  Var_25    C9   C8   C5   C6     78.81  30.0  1
+ 3VL  Var_26    C21  C8   C5   C6   -100.82  30.0  1
+ 3VL  Var_27    O8   C22  C21  C8   -107.64  30.0  1
+ 3VL  Var_28    O8   C22  C21  C20    67.67  30.0  1
+ 3VL  Var_29    C23  O8   C22  C21  -140.38  30.0  3
+ 3VL  Var_30    C24  C23  O8   C22   159.09  30.0  3
+ 3VL  Var_31    O9   C23  O8   C22   -76.68  30.0  3
+ 3VL  Var_32    C28  C24  C23  O8     71.63  30.0  1
+ 3VL  Var_33    C25  O9   C23  O8    -68.38  30.0  1
+ 3VL  Var_34    N1   C28  C24  C23   178.92  30.0  1
+ 3VL  Var_35    C26  C25  O9   C23  -179.96  30.0  1
+ 3VL  Var_36    O10  C27  C28  C24    67.59  30.0  1
+ 3VL  Var_37    O10  C27  C25  O9    -64.17  30.0  1
+ 3VL  Var_38    N1   C28  C27  C25  -179.28  30.0  1
+ 3VL  Var_39    C28  C27  C25  C26   177.41  30.0  1
+ 3VL  Var_40    H19  C22  C4   C3   -164.62  30.0  1
+ 3VL  Var_41    H9   C5   C3   C4   -169.64  30.0  1
+ 3VL  Var_42    H6   C4   C3   C5   -175.95  30.0  1
+ 3VL  Var_43    H7   C4   C3   C5    -58.87  30.0  1
+ 3VL  Var_44    H29  C28  C24  C23   -60.17  30.0  1
+ 3VL  Var_45    H23  C25  O9   C23    62.76  30.0  1
+ 3VL  Var_46    H27  C27  C28  C24  -170.88  30.0  1
+ 3VL  Var_47    H21  C24  C23  O9     68.31  30.0  1
+ 3VL  Var_48    H22  C24  C23  O9   -176.03  30.0  1
+ 3VL  Var_49    H20  C23  O9   C25   173.08  30.0  1
+ 3VL  Var_50    C5   C3   C2   C1   -174.25  30.0  1
+ 3VL  Var_51    C4   C3   C2   C1     64.59  30.0  1
+ 3VL  Var_52    C6   C5   C3   C2    -51.92  30.0  1
+ 3VL  Var_53    O3   C6   C5   C3    100.15  30.0  3
+ 3VL  Var_54    O2   C6   C5   C3    -79.97  30.0  3
+ 3VL  Var_55    C6   C5   C3   O1   -168.33  30.0  1
+ 3VL  Var_56    C8   C5   C6   O2     44.49  30.0  1
+ 3VL  Var_57    C8   C5   C6   O3   -135.39  30.0  1
+ 3VL  Var_58    C30  N1   C28  C24  -168.91  30.0  1
+ 3VL  Var_59    C29  N1   C28  C24    66.84  30.0  1
+ 3VL  Var_60    O10  C27  C25  C26    56.58  30.0  1
+ 3VL  Var_61    C30  N1   C28  C27   -47.01  30.0  1
+ 3VL  Var_62    C29  N1   C28  C27  -171.26  30.0  1
+ 3VL  Var_63    N1   C28  C27  O10   -56.03  30.0  1
+ 3VL  Var_64    H8   O1   C3   C4     21.31  30.0  3
+ 3VL  Var_65    H4   C2   C3   C4    -57.61  30.0  3
+ 3VL  Var_66    H5   C2   C3   C4   -173.26  30.0  3
+ 3VL  Var_67    H17  O5   C16  C15   179.84  30.0  2
+ 3VL  Var_68    H18  O7   C20  C19    -0.35  30.0  2
+ 3VL  Var_69    H24  C26  C25  O9     57.46  30.0  3
+ 3VL  Var_70    H25  C26  C25  O9    178.24  30.0  3
+ 3VL  Var_71    H26  C26  C25  O9    -62.76  30.0  3
+ 3VL  Var_72    H28  O10  C27  C25   -70.05  30.0  3
+ 3VL  Var_73    O1   C3   C2   C1    -58.26  30.0  1
+ 3VL  Var_74    C7   O3   C6   C5   -178.06  30.0  1
+ 3VL  Var_75    C7   O3   C6   O2      2.06  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

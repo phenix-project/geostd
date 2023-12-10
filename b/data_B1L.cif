@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- B1L  B1L  '(3R,4R)-3-{[(4-hydroxyphenyl)carbonyl]amino}azepan-4-yl 4-hydroxybenzoate'  ligand  49  27  .  2021-08-06  2021-08-06  
+ B1L  B1L  '(3R,4R)-3-{[(4-hydroxyphenyl)carbonyl]amino}azepan-4-yl 4-hydroxybenzoate'  ligand  49  27  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_B1L
@@ -252,40 +253,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- B1L  CONST_01  C4   C3   C2   C1      0.00   0.0  0
- B1L  CONST_02  C4   C5   C6   C1      0.00   0.0  0
- B1L  CONST_03  C5   C6   C1   C2      0.00   0.0  0
- B1L  CONST_04  C5   C4   C3   C2      0.00   0.0  0
- B1L  CONST_05  C6   C1   C2   C3      0.00   0.0  0
- B1L  CONST_06  C6   C5   C4   C3      0.00   0.0  0
- B1L  CONST_07  C19  C18  C17  C16     0.00   0.0  0
- B1L  CONST_08  C19  C20  C21  C16     0.00   0.0  0
- B1L  CONST_09  C20  C21  C16  C17     0.00   0.0  0
- B1L  CONST_10  C20  C19  C18  C17     0.00   0.0  0
- B1L  CONST_11  C21  C16  C17  C18     0.00   0.0  0
- B1L  CONST_12  C21  C20  C19  C18     0.00   0.0  0
- B1L  CONST_13  C3   C2   C1   O1    180.00   0.0  0
- B1L  CONST_14  C5   C6   C1   O1    180.00   0.0  0
- B1L  CONST_15  C7   C4   C3   C2    180.00   0.0  0
- B1L  CONST_16  C7   C4   C5   C6    180.00   0.0  0
- B1L  CONST_17  C18  C17  C16  C15   180.00   0.0  0
- B1L  CONST_18  C20  C21  C16  C15   180.00   0.0  0
- B1L  CONST_19  O19  C19  C18  C17   180.00   0.0  0
- B1L  CONST_20  O19  C19  C20  C21   180.00   0.0  0
- B1L  CONST_21  H3   C3   C2   C1    180.00   0.0  0
- B1L  CONST_22  H5   C5   C6   C1    180.00   0.0  0
- B1L  CONST_23  H6   C6   C1   C2    180.00   0.0  0
- B1L  CONST_24  H2   C2   C3   C4    180.00   0.0  0
- B1L  CONST_25  H18  C18  C17  C16   180.00   0.0  0
- B1L  CONST_26  H20  C20  C21  C16   180.00   0.0  0
- B1L  CONST_27  H21  C21  C16  C17   180.00   0.0  0
- B1L  CONST_28  H17  C17  C18  C19   180.00   0.0  0
- B1L  CONST_29  C8   N8   C7   C4    180.00   0.0  0
- B1L  CONST_30  C8   N8   C7   O7      0.00   0.0  0
- B1L  CONST_31  HN8  N8   C7   C4      0.00   0.0  0
- B1L  Var_01    O7   C7   C4   C3     23.30  30.0  2
- B1L  Var_02    C16  C15  O9   C9   -166.41  30.0  3
- B1L  Var_03    C17  C16  C15  O9      9.11  30.0  2
+ B1L  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ B1L  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ B1L  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ B1L  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ B1L  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ B1L  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ B1L  CONST_07  C19   C18  C17  C16     0.00   0.0  0
+ B1L  CONST_08  C19   C20  C21  C16     0.00   0.0  0
+ B1L  CONST_09  C20   C21  C16  C17     0.00   0.0  0
+ B1L  CONST_10  C20   C19  C18  C17     0.00   0.0  0
+ B1L  CONST_11  C21   C16  C17  C18     0.00   0.0  0
+ B1L  CONST_12  C21   C20  C19  C18     0.00   0.0  0
+ B1L  CONST_13  C3    C2   C1   O1    180.00   0.0  0
+ B1L  CONST_14  C5    C6   C1   O1    180.00   0.0  0
+ B1L  CONST_15  C7    C4   C3   C2    180.00   0.0  0
+ B1L  CONST_16  C7    C4   C5   C6    180.00   0.0  0
+ B1L  CONST_17  C18   C17  C16  C15   180.00   0.0  0
+ B1L  CONST_18  C20   C21  C16  C15   180.00   0.0  0
+ B1L  CONST_19  O19   C19  C18  C17   180.00   0.0  0
+ B1L  CONST_20  O19   C19  C20  C21   180.00   0.0  0
+ B1L  CONST_21  H3    C3   C2   C1    180.00   0.0  0
+ B1L  CONST_22  H5    C5   C6   C1    180.00   0.0  0
+ B1L  CONST_23  H6    C6   C1   C2    180.00   0.0  0
+ B1L  CONST_24  H2    C2   C3   C4    180.00   0.0  0
+ B1L  CONST_25  H18   C18  C17  C16   180.00   0.0  0
+ B1L  CONST_26  H20   C20  C21  C16   180.00   0.0  0
+ B1L  CONST_27  H21   C21  C16  C17   180.00   0.0  0
+ B1L  CONST_28  H17   C17  C18  C19   180.00   0.0  0
+ B1L  CONST_29  C8    N8   C7   C4    180.00   0.0  0
+ B1L  CONST_30  C8    N8   C7   O7      0.00   0.0  0
+ B1L  CONST_31  HN8   N8   C7   C4      0.00   0.0  0
+ B1L  Var_01    O7    C7   C4   C3     23.30  30.0  2
+ B1L  Var_02    C16   C15  O9   C9   -166.41  30.0  3
+ B1L  Var_03    C17   C16  C15  O9      9.11  30.0  2
+ B1L  Var_04    C11   C10  C9   C8    -49.23  30.0  1
+ B1L  Var_05    C12   N13  C14  C8     63.04  30.0  1
+ B1L  Var_06    N13   C14  C8   C9    -72.00  30.0  1
+ B1L  Var_07    C12   C11  C10  C9    -26.19  30.0  1
+ B1L  Var_08    C14   C8   C9   C10    89.12  30.0  1
+ B1L  Var_09    N13   C12  C11  C10    82.01  30.0  1
+ B1L  Var_10    C14   N13  C12  C11   -80.24  30.0  1
+ B1L  Var_11    C10   C9   C8   N8   -150.34  30.0  1
+ B1L  Var_12    N13   C14  C8   N8    165.76  30.0  1
+ B1L  Var_13    O9    C9   C10  C11  -170.12  30.0  1
+ B1L  Var_14    O9    C9   C8   C14  -151.80  30.0  1
+ B1L  Var_15    H101  C10  C9   C8   -171.65  30.0  1
+ B1L  Var_16    H102  C10  C9   C8     73.48  30.0  1
+ B1L  Var_17    H13   N13  C14  C8   -173.90  30.0  1
+ B1L  Var_18    H141  C14  C8   C9     54.24  30.0  1
+ B1L  Var_19    H142  C14  C8   C9    169.24  30.0  1
+ B1L  Var_20    H111  C11  C10  C9   -148.69  30.0  1
+ B1L  Var_21    H112  C11  C10  C9     96.03  30.0  1
+ B1L  Var_22    H8    C8   C9   C10   -31.43  30.0  1
+ B1L  Var_23    H121  C12  C11  C10   -45.44  30.0  1
+ B1L  Var_24    H122  C12  C11  C10  -161.04  30.0  1
+ B1L  Var_25    H9    C9   C10  C11    72.29  30.0  1
+ B1L  Var_26    C9    C8   N8   C7     94.71  30.0  3
+ B1L  Var_27    C14   C8   N8   C7   -143.48  30.0  3
+ B1L  Var_28    O9    C9   C8   N8    -31.26  30.0  1
+ B1L  Var_29    C15   O9   C9   C8     90.45  30.0  3
+ B1L  Var_30    C15   O9   C9   C10  -145.84  30.0  3
+ B1L  Var_31    HO1   O1   C1   C2      0.10  30.0  2
+ B1L  Var_32    HN8   N8   C8   C9    -86.32  30.0  2
+ B1L  Var_33    H19   O19  C19  C18  -179.79  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

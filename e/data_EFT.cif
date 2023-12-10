@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EFT  EFT  (2R)-3-cyclohexyl-2-(6-hydroxy-1H-indazol-3-yl)propanenitrile  ligand  39  20  .  2021-08-08  2021-08-08  
+ EFT  EFT  (2R)-3-cyclohexyl-2-(6-hydroxy-1H-indazol-3-yl)propanenitrile  ligand  39  20  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EFT
@@ -220,36 +221,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EFT  CONST_01  C7   C8   C4   C1   180.00   0.0  0
- EFT  CONST_02  C9   C8   C4   C1     0.00   0.0  0
- EFT  CONST_03  C9   C3   C2   C1     0.00   0.0  0
- EFT  CONST_04  C8   C4   C1   C2     0.00   0.0  0
- EFT  CONST_05  C8   C9   C3   C2     0.00   0.0  0
- EFT  CONST_06  N5   C9   C3   C2   180.00   0.0  0
- EFT  CONST_07  C4   C1   C2   C3     0.00   0.0  0
- EFT  CONST_08  C4   C8   C9   C3     0.00   0.0  0
- EFT  CONST_09  C7   C8   C9   C3   180.00   0.0  0
- EFT  CONST_10  N6   N5   C9   C3   180.00   0.0  0
- EFT  CONST_11  N6   C7   C8   C4   180.00   0.0  0
- EFT  CONST_12  N5   C9   C8   C4   180.00   0.0  0
- EFT  CONST_13  C7   C8   C9   N5     0.00   0.0  0
- EFT  CONST_14  C8   C7   N6   N5     0.00   0.0  0
- EFT  CONST_15  C9   C8   C7   N6     0.00   0.0  0
- EFT  CONST_16  C8   C9   N5   N6     0.00   0.0  0
- EFT  CONST_17  C9   N5   N6   C7     0.00   0.0  0
- EFT  CONST_18  O14  C2   C1   C4   180.00   0.0  0
- EFT  CONST_19  C10  C7   C8   C4     0.00   0.0  0
- EFT  CONST_20  C10  C7   N6   N5   180.00   0.0  0
- EFT  CONST_21  C10  C7   C8   C9   180.00   0.0  0
- EFT  CONST_22  O14  C2   C3   C9   180.00   0.0  0
- EFT  CONST_23  H2   C3   C2   C1   180.00   0.0  0
- EFT  CONST_24  H3   C4   C1   C2   180.00   0.0  0
- EFT  CONST_25  H1   C1   C2   C3   180.00   0.0  0
- EFT  CONST_26  H4   N5   C9   C3     0.00   0.0  0
- EFT  Var_01    C18  C17  C16  C15  -55.52  30.0  1
- EFT  Var_02    C18  C19  C20  C15   55.65  30.0  1
- EFT  Var_03    C19  C18  C17  C16   54.88  30.0  1
- EFT  Var_04    C20  C19  C18  C17  -54.95  30.0  1
+ EFT  CONST_01  C7   C8   C4   C1    180.00   0.0  0
+ EFT  CONST_02  C9   C8   C4   C1      0.00   0.0  0
+ EFT  CONST_03  C9   C3   C2   C1      0.00   0.0  0
+ EFT  CONST_04  C8   C4   C1   C2      0.00   0.0  0
+ EFT  CONST_05  C8   C9   C3   C2      0.00   0.0  0
+ EFT  CONST_06  N5   C9   C3   C2    180.00   0.0  0
+ EFT  CONST_07  C4   C1   C2   C3      0.00   0.0  0
+ EFT  CONST_08  C4   C8   C9   C3      0.00   0.0  0
+ EFT  CONST_09  C7   C8   C9   C3    180.00   0.0  0
+ EFT  CONST_10  N6   N5   C9   C3    180.00   0.0  0
+ EFT  CONST_11  N6   C7   C8   C4    180.00   0.0  0
+ EFT  CONST_12  N5   C9   C8   C4    180.00   0.0  0
+ EFT  CONST_13  C7   C8   C9   N5      0.00   0.0  0
+ EFT  CONST_14  C8   C7   N6   N5      0.00   0.0  0
+ EFT  CONST_15  C9   C8   C7   N6      0.00   0.0  0
+ EFT  CONST_16  C8   C9   N5   N6      0.00   0.0  0
+ EFT  CONST_17  C9   N5   N6   C7      0.00   0.0  0
+ EFT  CONST_18  O14  C2   C1   C4    180.00   0.0  0
+ EFT  CONST_19  C10  C7   C8   C4      0.00   0.0  0
+ EFT  CONST_20  C10  C7   N6   N5    180.00   0.0  0
+ EFT  CONST_21  C10  C7   C8   C9    180.00   0.0  0
+ EFT  CONST_22  O14  C2   C3   C9    180.00   0.0  0
+ EFT  CONST_23  H2   C3   C2   C1    180.00   0.0  0
+ EFT  CONST_24  H3   C4   C1   C2    180.00   0.0  0
+ EFT  CONST_25  H1   C1   C2   C3    180.00   0.0  0
+ EFT  CONST_26  H4   N5   C9   C3      0.00   0.0  0
+ EFT  Var_01    C18  C17  C16  C15   -55.52  30.0  1
+ EFT  Var_02    C18  C19  C20  C15    55.65  30.0  1
+ EFT  Var_03    C19  C18  C17  C16    54.88  30.0  1
+ EFT  Var_04    C20  C19  C18  C17   -54.95  30.0  1
+ EFT  Var_05    C19  C20  C15  C16   -54.90  30.0  1
+ EFT  Var_06    C20  C15  C16  C17    54.83  30.0  1
+ EFT  Var_07    C17  C16  C15  C11   177.62  30.0  1
+ EFT  Var_08    C19  C20  C15  C11  -179.10  30.0  1
+ EFT  Var_09    H18  C20  C15  C16    66.36  30.0  1
+ EFT  Var_10    H19  C20  C15  C16  -177.54  30.0  1
+ EFT  Var_11    H9   C15  C16  C17   -62.31  30.0  1
+ EFT  Var_12    C11  C10  C7   N6    -56.54  30.0  1
+ EFT  Var_13    C12  C10  C7   N6     67.16  30.0  1
+ EFT  Var_14    C15  C11  C10  C7   -174.95  30.0  1
+ EFT  Var_15    C11  C10  C7   C8    122.65  30.0  1
+ EFT  Var_16    C12  C10  C7   C8   -113.65  30.0  1
+ EFT  Var_17    C16  C15  C11  C10    64.32  30.0  3
+ EFT  Var_18    C20  C15  C11  C10  -172.80  30.0  3
+ EFT  Var_19    H8   O14  C2   C1      1.46  30.0  2
+ EFT  Var_20    H5   C10  C7   N6   -177.43  30.0  1
+ EFT  Var_21    H6   C11  C15  C16   -56.01  30.0  1
+ EFT  Var_22    H7   C11  C15  C16  -173.01  30.0  1
+ EFT  Var_23    N13  C12  C10  C7    -71.26  30.0  2
+ EFT  Var_24    C15  C11  C10  C12    61.87  30.0  1
+ EFT  Var_25    N13  C12  C10  C11    53.62  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

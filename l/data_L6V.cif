@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- L6V  L6V  N-{[(4-cyanophenyl)methyl]sulfonyl}-1-(thiophen-3-yl)cyclohexane-1-carboxamide  ligand  46  26  .  2022-08-10  2022-08-10
+ L6V  L6V  N-{[(4-cyanophenyl)methyl]sulfonyl}-1-(thiophen-3-yl)cyclohexane-1-carboxamide  ligand  46  26  .  2022-08-10  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_L6V
@@ -245,40 +246,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- L6V  CONST_01  CAD  CAC  CAB  CAA    0.00   0.0  0
- L6V  CONST_02  CAD  CAE  CAF  CAA    0.00   0.0  0
- L6V  CONST_03  CAE  CAD  CAC  CAB    0.00   0.0  0
- L6V  CONST_04  CAE  CAF  CAA  CAB    0.00   0.0  0
- L6V  CONST_05  CAF  CAA  CAB  CAC    0.00   0.0  0
- L6V  CONST_06  CAF  CAE  CAD  CAC    0.00   0.0  0
- L6V  CONST_07  CAR  SAQ  CAT  CAP    0.00   0.0  0
- L6V  CONST_08  SAQ  CAR  CAS  CAP    0.00   0.0  0
- L6V  CONST_09  CAT  CAP  CAS  CAR    0.00   0.0  0
- L6V  CONST_10  CAT  SAQ  CAR  CAS    0.00   0.0  0
- L6V  CONST_11  SAQ  CAT  CAP  CAS    0.00   0.0  0
- L6V  CONST_12  SAQ  CAT  CAP  CAO  180.00   0.0  0
- L6V  CONST_13  CAR  CAS  CAP  CAO  180.00   0.0  0
- L6V  CONST_14  CAG  CAE  CAF  CAA  180.00   0.0  0
- L6V  CONST_15  CAG  CAE  CAD  CAC  180.00   0.0  0
- L6V  CONST_16  CAI  CAB  CAC  CAD  180.00   0.0  0
- L6V  CONST_17  CAI  CAB  CAA  CAF  180.00   0.0  0
- L6V  CONST_18  H2   CAC  CAB  CAA  180.00   0.0  0
- L6V  CONST_19  H3   CAD  CAC  CAB  180.00   0.0  0
- L6V  CONST_20  H4   CAF  CAA  CAB  180.00   0.0  0
- L6V  CONST_21  H1   CAA  CAB  CAC  180.00   0.0  0
- L6V  CONST_22  H9   CAT  CAP  CAO    0.00   0.0  0
- L6V  CONST_23  H8   CAS  CAP  CAO    0.00   0.0  0
- L6V  CONST_24  H7   CAR  CAS  CAP  180.00   0.0  0
- L6V  CONST_25  SAJ  NAK  CAL  CAO  180.00   0.0  0
- L6V  CONST_26  H20  NAK  CAL  CAO    0.00   0.0  0
- L6V  CONST_27  SAJ  NAK  CAL  OAZ    0.00   0.0  0
- L6V  Var_01    CAU  CAY  CAX  CAO   58.27  30.0  1
- L6V  Var_02    CAU  CAV  CAW  CAO  -53.90  30.0  1
- L6V  Var_03    CAX  CAY  CAU  CAV  -55.64  30.0  1
- L6V  Var_04    CAY  CAU  CAV  CAW   53.48  30.0  1
- L6V  Var_05    SAJ  CAI  CAB  CAA   92.21  30.0  2
- L6V  Var_06    OAM  SAJ  CAI  CAB  -63.28  30.0  3
- L6V  Var_07    CAL  NAK  SAJ  CAI   68.52  30.0  3
+ L6V  CONST_01  CAD  CAC  CAB  CAA     0.00   0.0  0
+ L6V  CONST_02  CAD  CAE  CAF  CAA     0.00   0.0  0
+ L6V  CONST_03  CAE  CAD  CAC  CAB     0.00   0.0  0
+ L6V  CONST_04  CAE  CAF  CAA  CAB     0.00   0.0  0
+ L6V  CONST_05  CAF  CAA  CAB  CAC     0.00   0.0  0
+ L6V  CONST_06  CAF  CAE  CAD  CAC     0.00   0.0  0
+ L6V  CONST_07  CAR  SAQ  CAT  CAP     0.00   0.0  0
+ L6V  CONST_08  SAQ  CAR  CAS  CAP     0.00   0.0  0
+ L6V  CONST_09  CAT  CAP  CAS  CAR     0.00   0.0  0
+ L6V  CONST_10  CAT  SAQ  CAR  CAS     0.00   0.0  0
+ L6V  CONST_11  SAQ  CAT  CAP  CAS     0.00   0.0  0
+ L6V  CONST_12  SAQ  CAT  CAP  CAO   180.00   0.0  0
+ L6V  CONST_13  CAR  CAS  CAP  CAO   180.00   0.0  0
+ L6V  CONST_14  CAG  CAE  CAF  CAA   180.00   0.0  0
+ L6V  CONST_15  CAG  CAE  CAD  CAC   180.00   0.0  0
+ L6V  CONST_16  CAI  CAB  CAC  CAD   180.00   0.0  0
+ L6V  CONST_17  CAI  CAB  CAA  CAF   180.00   0.0  0
+ L6V  CONST_18  H2   CAC  CAB  CAA   180.00   0.0  0
+ L6V  CONST_19  H3   CAD  CAC  CAB   180.00   0.0  0
+ L6V  CONST_20  H4   CAF  CAA  CAB   180.00   0.0  0
+ L6V  CONST_21  H1   CAA  CAB  CAC   180.00   0.0  0
+ L6V  CONST_22  H9   CAT  CAP  CAO     0.00   0.0  0
+ L6V  CONST_23  H8   CAS  CAP  CAO     0.00   0.0  0
+ L6V  CONST_24  H7   CAR  CAS  CAP   180.00   0.0  0
+ L6V  CONST_25  SAJ  NAK  CAL  CAO   180.00   0.0  0
+ L6V  CONST_26  H20  NAK  CAL  CAO     0.00   0.0  0
+ L6V  CONST_27  SAJ  NAK  CAL  OAZ     0.00   0.0  0
+ L6V  Var_01    CAU  CAY  CAX  CAO    58.27  30.0  1
+ L6V  Var_02    CAU  CAV  CAW  CAO   -53.90  30.0  1
+ L6V  Var_03    CAX  CAY  CAU  CAV   -55.64  30.0  1
+ L6V  Var_04    CAY  CAU  CAV  CAW    53.48  30.0  1
+ L6V  Var_05    SAJ  CAI  CAB  CAA    92.21  30.0  2
+ L6V  Var_06    OAM  SAJ  CAI  CAB   -63.28  30.0  3
+ L6V  Var_07    CAL  NAK  SAJ  CAI    68.52  30.0  3
+ L6V  Var_08    CAY  CAX  CAO  CAP  -177.31  30.0  1
+ L6V  Var_09    CAV  CAW  CAO  CAP   176.06  30.0  1
+ L6V  Var_10    CAX  CAO  CAP  CAS    -5.67  30.0  2
+ L6V  Var_11    CAW  CAO  CAP  CAS  -126.01  30.0  2
+ L6V  Var_12    CAX  CAO  CAP  CAT   174.94  30.0  2
+ L6V  Var_13    CAW  CAO  CAP  CAT    54.59  30.0  2
+ L6V  Var_14    CAX  CAO  CAW  CAV    53.62  30.0  1
+ L6V  Var_15    CAY  CAX  CAO  CAW   -55.77  30.0  1
+ L6V  Var_16    CAT  CAP  CAO  CAL   -63.25  30.0  2
+ L6V  Var_17    CAS  CAP  CAO  CAL   116.14  30.0  2
+ L6V  Var_18    CAY  CAX  CAO  CAL    65.30  30.0  1
+ L6V  Var_19    CAV  CAW  CAO  CAL   -69.09  30.0  1
+ L6V  Var_20    H16  CAX  CAO  CAP   -57.58  30.0  1
+ L6V  Var_21    H17  CAX  CAO  CAP    57.61  30.0  1
+ L6V  Var_22    H14  CAW  CAO  CAP   -59.61  30.0  1
+ L6V  Var_23    H15  CAW  CAO  CAP    55.66  30.0  1
+ L6V  Var_24    NAK  CAL  CAO  CAP   -78.89  30.0  1
+ L6V  Var_25    OAZ  CAL  CAO  CAP    98.70  30.0  1
+ L6V  Var_26    NAK  CAL  CAO  CAW   162.83  30.0  1
+ L6V  Var_27    OAZ  CAL  CAO  CAW   -19.59  30.0  1
+ L6V  Var_28    NAK  CAL  CAO  CAX    42.56  30.0  1
+ L6V  Var_29    OAZ  CAL  CAO  CAX  -139.85  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

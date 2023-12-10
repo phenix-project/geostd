@@ -20,11 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SAM  SAM  "S-ADENOSYLMETHIONINE"
-  ligand  49  27  .  2022-08-10  2022-08-10
+ SAM  SAM  S-ADENOSYLMETHIONINE  ligand  49  27  .  2022-08-10  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SAM
@@ -256,43 +256,89 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SAM  CONST_01  C5    N7  C8  N9     0.00   0.0  0
- SAM  CONST_02  N7    C5  C4  N9     0.00   0.0  0
- SAM  CONST_03  C6    C5  C4  N9   180.00   0.0  0
- SAM  CONST_04  C2    N3  C4  N9   180.00   0.0  0
- SAM  CONST_05  C5    C4  N9  C8     0.00   0.0  0
- SAM  CONST_06  N3    C4  N9  C8   180.00   0.0  0
- SAM  CONST_07  C6    C5  N7  C8   180.00   0.0  0
- SAM  CONST_08  C4    C5  N7  C8     0.00   0.0  0
- SAM  CONST_09  C4    N9  C8  N7     0.00   0.0  0
- SAM  CONST_10  N1    C6  C5  N7   180.00   0.0  0
- SAM  CONST_11  N3    C4  C5  N7   180.00   0.0  0
- SAM  CONST_12  C2    N1  C6  C5     0.00   0.0  0
- SAM  CONST_13  C2    N3  C4  C5     0.00   0.0  0
- SAM  CONST_14  N3    C4  C5  C6     0.00   0.0  0
- SAM  CONST_15  N3    C2  N1  C6     0.00   0.0  0
- SAM  CONST_16  C4    C5  C6  N1     0.00   0.0  0
- SAM  CONST_17  C4    N3  C2  N1     0.00   0.0  0
- SAM  CONST_18  N7    C8  N9  C1'  180.00   0.0  0
- SAM  CONST_19  C5    C4  N9  C1'  180.00   0.0  0
- SAM  CONST_20  N3    C4  N9  C1'    0.00   0.0  0
- SAM  CONST_21  N6    C6  C5  N7     0.00   0.0  0
- SAM  CONST_22  C4    C5  C6  N6   180.00   0.0  0
- SAM  CONST_23  C2    N1  C6  N6   180.00   0.0  0
- SAM  CONST_24  H8    C8  N9  C1'    0.00   0.0  0
- SAM  CONST_25  H8    C8  N7  C5   180.00   0.0  0
- SAM  CONST_26  H2    C2  N1  C6   180.00   0.0  0
- SAM  CONST_27  H8    C8  N9  C4   180.00   0.0  0
- SAM  CONST_28  H2    C2  N3  C4   180.00   0.0  0
- SAM  CONST_29  HN61  N6  C6  C5   180.00   0.0  0
- SAM  CONST_30  HN62  N6  C6  C5     0.00   0.0  0
- SAM  CONST_31  HN61  N6  C6  N1     0.00   0.0  0
- SAM  CONST_32  HN62  N6  C6  N1   180.00   0.0  0
- SAM  Var_01    SD    CG  CB  CA    47.84  30.0  3
- SAM  Var_02    HG1   CG  CB  CA   167.93  30.0  3
- SAM  Var_03    HG2   CG  CB  CA   -69.67  30.0  3
- SAM  Var_04    HB1   CB  CG  SD   -75.91  30.0  2
- SAM  Var_05    HB2   CB  CG  SD   169.42  30.0  2
+ SAM  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ SAM  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ SAM  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ SAM  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ SAM  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ SAM  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ SAM  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ SAM  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ SAM  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ SAM  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ SAM  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ SAM  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ SAM  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ SAM  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ SAM  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ SAM  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ SAM  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ SAM  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ SAM  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ SAM  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ SAM  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ SAM  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ SAM  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ SAM  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ SAM  CONST_25  H8    C8   N7   C5    180.00   0.0  0
+ SAM  CONST_26  H2    C2   N1   C6    180.00   0.0  0
+ SAM  CONST_27  H8    C8   N9   C4    180.00   0.0  0
+ SAM  CONST_28  H2    C2   N3   C4    180.00   0.0  0
+ SAM  CONST_29  HN61  N6   C6   C5    180.00   0.0  0
+ SAM  CONST_30  HN62  N6   C6   C5      0.00   0.0  0
+ SAM  CONST_31  HN61  N6   C6   N1      0.00   0.0  0
+ SAM  CONST_32  HN62  N6   C6   N1    180.00   0.0  0
+ SAM  Var_01    SD    CG   CB   CA     47.84  30.0  3
+ SAM  Var_02    HG1   CG   CB   CA    167.93  30.0  3
+ SAM  Var_03    HG2   CG   CB   CA    -69.67  30.0  3
+ SAM  Var_04    HB1   CB   CG   SD    -75.91  30.0  2
+ SAM  Var_05    HB2   CB   CG   SD    169.42  30.0  2
+ SAM  Var_06    C2'   C1'  O4'  C4'     4.93  30.0  1
+ SAM  Var_07    N9    C1'  O4'  C4'  -120.35  30.0  1
+ SAM  Var_08    C1'   C2'  C3'  C4'    33.92  30.0  1
+ SAM  Var_09    C2'   C3'  C4'  O4'   -32.45  30.0  1
+ SAM  Var_10    C3'   C2'  C1'  O4'   -25.08  30.0  1
+ SAM  Var_11    C8    N9   C1'  O4'  -136.08  30.0  2
+ SAM  Var_12    C4    N9   C1'  O4'    42.92  30.0  2
+ SAM  Var_13    C1'   O4'  C4'  C3'    17.66  30.0  1
+ SAM  Var_14    N9    C1'  C2'  C3'    97.05  30.0  1
+ SAM  Var_15    C8    N9   C1'  C2'   103.31  30.0  2
+ SAM  Var_16    C4    N9   C1'  C2'   -77.69  30.0  2
+ SAM  Var_17    C1'   O4'  C4'  C5'   138.56  30.0  1
+ SAM  Var_18    C2'   C3'  C4'  C5'  -151.82  30.0  1
+ SAM  Var_19    O2'   C2'  C3'  C4'   -82.44  30.0  1
+ SAM  Var_20    O3'   C3'  C4'  O4'  -156.01  30.0  1
+ SAM  Var_21    O2'   C2'  C1'  O4'    89.56  30.0  1
+ SAM  Var_22    C1'   C2'  C3'  O3'   153.10  30.0  1
+ SAM  Var_23    N9    C1'  C2'  O2'  -148.31  30.0  1
+ SAM  Var_24    H1'   C1'  O4'  C4'   124.16  30.0  1
+ SAM  Var_25    H2'   C2'  C3'  C4'   152.97  30.0  1
+ SAM  Var_26    H3'   C3'  C4'  O4'    81.21  30.0  1
+ SAM  Var_27    H4'   C4'  C3'  C2'    85.55  30.0  1
+ SAM  Var_28    O4'   C4'  C5'  SD     47.46  30.0  3
+ SAM  Var_29    C3'   C4'  C5'  SD    164.41  30.0  3
+ SAM  Var_30    O3'   C3'  C4'  C5'    84.63  30.0  1
+ SAM  Var_31    O2'   C2'  C3'  O3'    36.74  30.0  1
+ SAM  Var_32    HO3'  O3'  C3'  C4'  -164.75  30.0  3
+ SAM  Var_33    H5'1  C5'  C4'  O4'   -67.94  30.0  2
+ SAM  Var_34    H5'2  C5'  C4'  O4'   170.25  30.0  2
+ SAM  Var_35    HO2'  O2'  C2'  C3'  -176.86  30.0  3
+ SAM  Var_36    C4'   C5'  SD   CG   -172.66  30.0  3
+ SAM  Var_37    C4'   C5'  SD   CE     82.52  30.0  3
+ SAM  Var_38    O     C    CA   N     -21.44  30.0  2
+ SAM  Var_39    OXT   C    CA   N     161.11  30.0  2
+ SAM  Var_40    CG    CB   CA   N     172.97  30.0  3
+ SAM  Var_41    CG    CB   CA   C      47.62  30.0  3
+ SAM  Var_42    CB    CA   C    O     104.19  30.0  3
+ SAM  Var_43    CB    CA   C    OXT   -73.26  30.0  3
+ SAM  Var_44    CE    SD   CG   CB   -157.79  30.0  3
+ SAM  Var_45    C5'   SD   CG   CB     97.19  30.0  3
+ SAM  Var_46    HN1   N    CA   C     171.21  30.0  3
+ SAM  Var_47    HN2   N    CA   C      54.79  30.0  3
+ SAM  Var_48    HA    CA   C    O    -139.13  30.0  3
+ SAM  Var_49    HE1   CE   SD   CG   -170.03  30.0  3
+ SAM  Var_50    HE2   CE   SD   CG    -48.81  30.0  3
+ SAM  Var_51    HE3   CE   SD   CG     71.97  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

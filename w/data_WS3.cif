@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- WS3  WS3  5'-deoxy-5'-[({6-[(alpha-D-galactopyranosyloxy)methyl]pyridin-2-yl}carbonyl)amino]uridine  ligand  66  38  .  2021-08-24  2021-08-24  
+ WS3  WS3  5'-deoxy-5'-[({6-[(alpha-D-galactopyranosyloxy)methyl]pyridin-2-yl}carbonyl)amino]uridine  ligand  66  38  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_WS3
@@ -321,34 +322,102 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- WS3  CONST_01  C17  C18  N19  C14    0.00   0.0  0
- WS3  CONST_02  C17  C16  C15  C14    0.00   0.0  0
- WS3  CONST_03  C18  N19  C14  C15    0.00   0.0  0
- WS3  CONST_04  C18  C17  C16  C15    0.00   0.0  0
- WS3  CONST_05  N19  C14  C15  C16    0.00   0.0  0
- WS3  CONST_06  N19  C18  C17  C16    0.00   0.0  0
- WS3  CONST_07  N1   C2   N3   C4     0.00   0.0  0
- WS3  CONST_08  C11  N1   C2   N3   180.00   0.0  0
- WS3  CONST_09  C6   N1   C2   N3     0.00   0.0  0
- WS3  CONST_10  C5   C4   N3   C2     0.00   0.0  0
- WS3  CONST_11  C18  N19  C14  C12  180.00   0.0  0
- WS3  CONST_12  C16  C15  C14  C12  180.00   0.0  0
- WS3  CONST_13  C20  C18  N19  C14  180.00   0.0  0
- WS3  CONST_14  C20  C18  C17  C16  180.00   0.0  0
- WS3  CONST_15  C2   N3   C4   O4   180.00   0.0  0
- WS3  CONST_16  O2   C2   N3   C4   180.00   0.0  0
- WS3  CONST_17  C11  N1   C2   O2     0.00   0.0  0
- WS3  CONST_18  C6   N1   C2   O2   180.00   0.0  0
- WS3  CONST_19  H14  C16  C15  C14  180.00   0.0  0
- WS3  CONST_20  H15  C17  C16  C15  180.00   0.0  0
- WS3  CONST_21  H13  C15  C16  C17  180.00   0.0  0
- WS3  CONST_22  H1   N3   C4   C5   180.00   0.0  0
- WS3  CONST_23  C14  C12  N11  C55  180.00   0.0  0
- WS3  CONST_24  H12  N11  C12  C14    0.00   0.0  0
- WS3  CONST_25  O13  C12  N11  C55    0.00   0.0  0
- WS3  Var_01    N19  C14  C12  N11    4.53  30.0  2
- WS3  Var_02    O1'  C20  C18  C17  -15.24  30.0  1
- WS3  Var_03    C12  N11  C55  C44   99.15  30.0  3
+ WS3  CONST_01  C17  C18  N19  C14     0.00   0.0  0
+ WS3  CONST_02  C17  C16  C15  C14     0.00   0.0  0
+ WS3  CONST_03  C18  N19  C14  C15     0.00   0.0  0
+ WS3  CONST_04  C18  C17  C16  C15     0.00   0.0  0
+ WS3  CONST_05  N19  C14  C15  C16     0.00   0.0  0
+ WS3  CONST_06  N19  C18  C17  C16     0.00   0.0  0
+ WS3  CONST_07  N1   C2   N3   C4      0.00   0.0  0
+ WS3  CONST_08  C11  N1   C2   N3    180.00   0.0  0
+ WS3  CONST_09  C6   N1   C2   N3      0.00   0.0  0
+ WS3  CONST_10  C5   C4   N3   C2      0.00   0.0  0
+ WS3  CONST_11  C18  N19  C14  C12   180.00   0.0  0
+ WS3  CONST_12  C16  C15  C14  C12   180.00   0.0  0
+ WS3  CONST_13  C20  C18  N19  C14   180.00   0.0  0
+ WS3  CONST_14  C20  C18  C17  C16   180.00   0.0  0
+ WS3  CONST_15  C2   N3   C4   O4    180.00   0.0  0
+ WS3  CONST_16  O2   C2   N3   C4    180.00   0.0  0
+ WS3  CONST_17  C11  N1   C2   O2      0.00   0.0  0
+ WS3  CONST_18  C6   N1   C2   O2    180.00   0.0  0
+ WS3  CONST_19  H14  C16  C15  C14   180.00   0.0  0
+ WS3  CONST_20  H15  C17  C16  C15   180.00   0.0  0
+ WS3  CONST_21  H13  C15  C16  C17   180.00   0.0  0
+ WS3  CONST_22  H1   N3   C4   C5    180.00   0.0  0
+ WS3  CONST_23  C14  C12  N11  C55   180.00   0.0  0
+ WS3  CONST_24  H12  N11  C12  C14     0.00   0.0  0
+ WS3  CONST_25  O13  C12  N11  C55     0.00   0.0  0
+ WS3  Var_01    N19  C14  C12  N11     4.53  30.0  2
+ WS3  Var_02    O1'  C20  C18  C17   -15.24  30.0  1
+ WS3  Var_03    C12  N11  C55  C44    99.15  30.0  3
+ WS3  Var_04    C22  C11  N1   C2     76.73  30.0  2
+ WS3  Var_05    O44  C11  N1   C2   -164.97  30.0  2
+ WS3  Var_06    C22  C11  N1   C6   -104.68  30.0  2
+ WS3  Var_07    O44  C11  N1   C6     13.62  30.0  2
+ WS3  Var_08    C33  C22  C11  N1     92.55  30.0  1
+ WS3  Var_09    C44  O44  C11  N1   -114.10  30.0  1
+ WS3  Var_10    C44  C33  C22  C11    35.98  30.0  1
+ WS3  Var_11    C33  C44  O44  C11    16.75  30.0  1
+ WS3  Var_12    C22  C33  C44  O44   -33.05  30.0  1
+ WS3  Var_13    C33  C22  C11  O44   -27.41  30.0  1
+ WS3  Var_14    C44  O44  C11  C22     7.05  30.0  1
+ WS3  Var_15    C4'  C5'  O5'  C1'    58.96  30.0  1
+ WS3  Var_16    C4'  C3'  C2'  C1'   -54.67  30.0  1
+ WS3  Var_17    C3'  C4'  C5'  O5'   -55.22  30.0  1
+ WS3  Var_18    C3'  C2'  C1'  O5'    55.62  30.0  1
+ WS3  Var_19    C2'  C1'  O5'  C5'   -58.44  30.0  1
+ WS3  Var_20    C2'  C3'  C4'  C5'    54.30  30.0  1
+ WS3  Var_21    O22  C22  C11  N1   -150.89  30.0  1
+ WS3  Var_22    O33  C33  C22  C11   154.53  30.0  1
+ WS3  Var_23    C55  C44  O44  C11   139.39  30.0  1
+ WS3  Var_24    O33  C33  C44  O44  -154.36  30.0  1
+ WS3  Var_25    O22  C22  C11  O44    89.14  30.0  1
+ WS3  Var_26    C55  C44  C33  C22  -153.38  30.0  1
+ WS3  Var_27    C44  C33  C22  O22   -77.94  30.0  1
+ WS3  Var_28    C5'  O5'  C1'  O1'    62.20  30.0  1
+ WS3  Var_29    C3'  C2'  C1'  O1'   -67.79  30.0  1
+ WS3  Var_30    C6'  C5'  O5'  C1'  -177.18  30.0  1
+ WS3  Var_31    O3'  C3'  C2'  C1'  -174.08  30.0  1
+ WS3  Var_32    O4'  C4'  C5'  O5'    66.92  30.0  1
+ WS3  Var_33    O2'  C2'  C1'  O5'   176.10  30.0  1
+ WS3  Var_34    O3'  C3'  C4'  C5'   176.23  30.0  1
+ WS3  Var_35    C3'  C4'  C5'  C6'  -176.39  30.0  1
+ WS3  Var_36    O2'  C2'  C3'  C4'  -177.72  30.0  1
+ WS3  Var_37    C2'  C3'  C4'  O4'   -66.33  30.0  1
+ WS3  Var_38    H3   C6   C5   C4   -178.56  30.0  1
+ WS3  Var_39    H2   C5   C4   N3   -179.01  30.0  1
+ WS3  Var_40    H4   C11  N1   C2    -45.65  30.0  2
+ WS3  Var_41    H5   C22  C11  N1    -27.29  30.0  1
+ WS3  Var_42    H7   C33  C22  C11   -80.15  30.0  1
+ WS3  Var_43    H9   C44  O44  C11  -100.75  30.0  1
+ WS3  Var_44    H19  C5'  O5'  C1'   -59.73  30.0  1
+ WS3  Var_45    H25  C3'  C2'  C1'    63.37  30.0  1
+ WS3  Var_46    H23  C4'  C5'  O5'  -172.66  30.0  1
+ WS3  Var_47    H27  C2'  C1'  O5'   -61.93  30.0  1
+ WS3  Var_48    H18  C1'  O5'  C5'  -177.60  30.0  1
+ WS3  Var_49    N11  C55  C44  O44    60.82  30.0  3
+ WS3  Var_50    O33  C33  C22  O22    40.60  30.0  1
+ WS3  Var_51    N11  C55  C44  C33   177.97  30.0  3
+ WS3  Var_52    C55  C44  C33  O33    85.31  30.0  1
+ WS3  Var_53    C1'  O1'  C20  C18   160.69  30.0  3
+ WS3  Var_54    O5'  C1'  O1'  C20    67.32  30.0  2
+ WS3  Var_55    C2'  C1'  O1'  C20  -170.43  30.0  2
+ WS3  Var_56    O2'  C2'  C1'  O1'    52.69  30.0  1
+ WS3  Var_57    O6'  C6'  C5'  O5'    66.60  30.0  2
+ WS3  Var_58    O4'  C4'  C5'  C6'   -54.25  30.0  1
+ WS3  Var_59    C4'  C5'  C6'  O6'  -170.18  30.0  3
+ WS3  Var_60    O3'  C3'  C4'  O4'    55.60  30.0  1
+ WS3  Var_61    O2'  C2'  C3'  O3'    62.87  30.0  1
+ WS3  Var_62    H6   O22  C22  C11  -149.09  30.0  3
+ WS3  Var_63    H10  C55  C44  O44  -178.01  30.0  3
+ WS3  Var_64    H11  C55  C44  O44   -61.28  30.0  3
+ WS3  Var_65    H8   O33  C33  C22    84.49  30.0  3
+ WS3  Var_66    H28  O2'  C2'  C1'    79.77  30.0  3
+ WS3  Var_67    H20  C6'  C5'  O5'  -172.34  30.0  2
+ WS3  Var_68    H21  C6'  C5'  O5'   -55.87  30.0  2
+ WS3  Var_69    H24  O4'  C4'  C5'  -171.14  30.0  3
+ WS3  Var_70    H26  O3'  C3'  C4'  -166.85  30.0  3
+ WS3  Var_71    H22  O6'  C6'  C5'  -174.30  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

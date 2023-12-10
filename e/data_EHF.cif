@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EHF  EHF  '(2S)-2-hydroxy-2-[8-(hydroxymethyl)-9-oxo-9,11-dihydroindolizino[1,2-b]quinolin-7-yl]butanoic acid'  ligand  44  27  .  2022-03-18  2022-03-18
+ EHF  EHF  '(2S)-2-hydroxy-2-[8-(hydroxymethyl)-9-oxo-9,11-dihydroindolizino[1,2-b]quinolin-7-yl]butanoic acid'  ligand  44  27  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EHF
@@ -237,39 +238,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EHF  CONST_01  C10  C5   C6   C1   180.00   0.0  0
- EHF  CONST_02  C4   C5   C6   C1     0.00   0.0  0
- EHF  CONST_03  C4   C3   C2   C1     0.00   0.0  0
- EHF  CONST_04  C5   C6   C1   C2     0.00   0.0  0
- EHF  CONST_05  C5   C4   C3   C2     0.00   0.0  0
- EHF  CONST_06  N7   C4   C3   C2   180.00   0.0  0
- EHF  CONST_07  C6   C1   C2   C3     0.00   0.0  0
- EHF  CONST_08  C6   C5   C4   C3     0.00   0.0  0
- EHF  CONST_09  C10  C5   C4   C3   180.00   0.0  0
- EHF  CONST_10  C8   N7   C4   C3   180.00   0.0  0
- EHF  CONST_11  C9   C10  C5   C4     0.00   0.0  0
- EHF  CONST_12  C9   C8   N7   C4     0.00   0.0  0
- EHF  CONST_13  C8   C9   C10  C5     0.00   0.0  0
- EHF  CONST_14  C8   N7   C4   C5     0.00   0.0  0
- EHF  CONST_15  C9   C10  C5   C6   180.00   0.0  0
- EHF  CONST_16  N7   C4   C5   C6   180.00   0.0  0
- EHF  CONST_17  C10  C5   C4   N7     0.00   0.0  0
- EHF  CONST_18  C10  C9   C8   N7     0.00   0.0  0
- EHF  CONST_19  C15  C14  C11  C8   180.00   0.0  0
- EHF  CONST_20  C16  C17  N12  C11    0.00   0.0  0
- EHF  CONST_21  C15  C14  C11  N12    0.00   0.0  0
- EHF  CONST_22  C16  C17  N12  C13  180.00   0.0  0
- EHF  CONST_23  O18  C17  N12  C11  180.00   0.0  0
- EHF  CONST_24  O18  C17  N12  C13    0.00   0.0  0
- EHF  CONST_25  H3   C3   C2   C1   180.00   0.0  0
- EHF  CONST_26  H4   C6   C1   C2   180.00   0.0  0
- EHF  CONST_27  H1   C1   C2   C3   180.00   0.0  0
- EHF  CONST_28  H5   C10  C5   C4   180.00   0.0  0
- EHF  CONST_29  H2   C2   C3   C4   180.00   0.0  0
- EHF  CONST_30  H7   C14  C11  C8     0.00   0.0  0
- EHF  Var_01    H6   C13  C9   C8   118.75  30.0  1
- EHF  Var_02    O27  C19  C16  C15  -73.82  30.0  3
- EHF  Var_03    H15  C26  C25  C20   62.29  30.0  3
+ EHF  CONST_01  C10  C5   C6   C1    180.00   0.0  0
+ EHF  CONST_02  C4   C5   C6   C1      0.00   0.0  0
+ EHF  CONST_03  C4   C3   C2   C1      0.00   0.0  0
+ EHF  CONST_04  C5   C6   C1   C2      0.00   0.0  0
+ EHF  CONST_05  C5   C4   C3   C2      0.00   0.0  0
+ EHF  CONST_06  N7   C4   C3   C2    180.00   0.0  0
+ EHF  CONST_07  C6   C1   C2   C3      0.00   0.0  0
+ EHF  CONST_08  C6   C5   C4   C3      0.00   0.0  0
+ EHF  CONST_09  C10  C5   C4   C3    180.00   0.0  0
+ EHF  CONST_10  C8   N7   C4   C3    180.00   0.0  0
+ EHF  CONST_11  C9   C10  C5   C4      0.00   0.0  0
+ EHF  CONST_12  C9   C8   N7   C4      0.00   0.0  0
+ EHF  CONST_13  C8   C9   C10  C5      0.00   0.0  0
+ EHF  CONST_14  C8   N7   C4   C5      0.00   0.0  0
+ EHF  CONST_15  C9   C10  C5   C6    180.00   0.0  0
+ EHF  CONST_16  N7   C4   C5   C6    180.00   0.0  0
+ EHF  CONST_17  C10  C5   C4   N7      0.00   0.0  0
+ EHF  CONST_18  C10  C9   C8   N7      0.00   0.0  0
+ EHF  CONST_19  C15  C14  C11  C8    180.00   0.0  0
+ EHF  CONST_20  C16  C17  N12  C11     0.00   0.0  0
+ EHF  CONST_21  C15  C14  C11  N12     0.00   0.0  0
+ EHF  CONST_22  C16  C17  N12  C13   180.00   0.0  0
+ EHF  CONST_23  O18  C17  N12  C11   180.00   0.0  0
+ EHF  CONST_24  O18  C17  N12  C13     0.00   0.0  0
+ EHF  CONST_25  H3   C3   C2   C1    180.00   0.0  0
+ EHF  CONST_26  H4   C6   C1   C2    180.00   0.0  0
+ EHF  CONST_27  H1   C1   C2   C3    180.00   0.0  0
+ EHF  CONST_28  H5   C10  C5   C4    180.00   0.0  0
+ EHF  CONST_29  H2   C2   C3   C4    180.00   0.0  0
+ EHF  CONST_30  H7   C14  C11  C8      0.00   0.0  0
+ EHF  Var_01    H6   C13  C9   C8    118.75  30.0  1
+ EHF  Var_02    O27  C19  C16  C15   -73.82  30.0  3
+ EHF  Var_03    H15  C26  C25  C20    62.29  30.0  3
+ EHF  Var_04    N12  C11  C8   N7   -179.92  30.0  1
+ EHF  Var_05    C14  C11  C8   N7     -0.01  30.0  1
+ EHF  Var_06    C13  N12  C11  C8      0.12  30.0  1
+ EHF  Var_07    C17  N12  C11  C8    178.72  30.0  1
+ EHF  Var_08    N12  C11  C8   C9     -0.05  30.0  1
+ EHF  Var_09    C14  C11  C8   C9    179.86  30.0  1
+ EHF  Var_10    C11  N12  C13  C9     -0.13  30.0  1
+ EHF  Var_11    C17  N12  C13  C9   -178.74  30.0  1
+ EHF  Var_12    C16  C15  C14  C11     0.33  30.0  1
+ EHF  Var_13    C15  C16  C17  N12    -0.68  30.0  1
+ EHF  Var_14    C14  C11  N12  C13  -179.81  30.0  1
+ EHF  Var_15    C17  N12  C11  C14    -1.21  30.0  1
+ EHF  Var_16    C17  C16  C15  C14    -0.11  30.0  1
+ EHF  Var_17    C20  C15  C14  C11   176.65  30.0  1
+ EHF  Var_18    C19  C16  C17  N12  -176.52  30.0  1
+ EHF  Var_19    C19  C16  C15  C14   175.21  30.0  1
+ EHF  Var_20    O18  C17  C16  C15   179.55  30.0  1
+ EHF  Var_21    C20  C15  C16  C17  -175.84  30.0  1
+ EHF  Var_22    C25  C20  C15  C14   153.08  30.0  3
+ EHF  Var_23    O24  C20  C15  C14    29.92  30.0  3
+ EHF  Var_24    C21  C20  C15  C14   -84.87  30.0  3
+ EHF  Var_25    C25  C20  C15  C16   -30.98  30.0  3
+ EHF  Var_26    O24  C20  C15  C16  -154.14  30.0  3
+ EHF  Var_27    C21  C20  C15  C16    91.07  30.0  3
+ EHF  Var_28    C19  C16  C17  O18     3.71  30.0  1
+ EHF  Var_29    C20  C15  C16  C19    -0.52  30.0  1
+ EHF  Var_30    C26  C25  C20  C15  -172.92  30.0  1
+ EHF  Var_31    O23  C21  C20  C15   -67.12  30.0  2
+ EHF  Var_32    O22  C21  C20  C15   112.64  30.0  2
+ EHF  Var_33    H13  C25  C20  C15   -50.87  30.0  1
+ EHF  Var_34    H14  C25  C20  C15    66.41  30.0  1
+ EHF  Var_35    H12  O24  C20  C15    70.90  30.0  3
+ EHF  Var_36    H18  O27  C19  C16    45.81  30.0  3
+ EHF  Var_37    C26  C25  C20  C21    67.22  30.0  1
+ EHF  Var_38    C25  C20  C21  O22  -120.29  30.0  2
+ EHF  Var_39    O24  C20  C21  O22    -3.03  30.0  2
+ EHF  Var_40    C25  C20  C21  O23    59.95  30.0  2
+ EHF  Var_41    O24  C20  C21  O23   177.21  30.0  2
+ EHF  Var_42    C26  C25  C20  O24   -49.53  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7ES  7ES  4,4'-(thiene-2,3-diyl)bis(3-fluorophenol)  ligand  31  21  .  2021-08-05  2021-08-05  
+ 7ES  7ES  4,4'-(thiene-2,3-diyl)bis(3-fluorophenol)  ligand  31  21  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7ES
@@ -180,50 +181,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 7ES  CONST_01  C08  C07  C06  C02    0.00  0.0  0
- 7ES  CONST_02  C08  C04  C03  C02    0.00  0.0  0
- 7ES  CONST_03  C09  C08  C04  C03  180.00  0.0  0
- 7ES  CONST_04  C07  C08  C04  C03    0.00  0.0  0
- 7ES  CONST_05  C07  C06  C02  C03    0.00  0.0  0
- 7ES  CONST_08  C06  C07  C08  C04    0.00  0.0  0
- 7ES  CONST_09  C06  C02  C03  C04    0.00  0.0  0
- 7ES  CONST_10  C09  C08  C07  C06  180.00  0.0  0
- 7ES  CONST_13  C20  S21  C09  C08  180.00  0.0  0
- 7ES  CONST_14  C19  C10  C09  C08  180.00  0.0  0
- 7ES  CONST_15  C11  C10  C09  C08    0.00  0.0  0
- 7ES  CONST_16  C19  C20  S21  C09    0.00  0.0  0
- 7ES  CONST_17  C20  C19  C10  C09    0.00  0.0  0
- 7ES  CONST_20  S21  C20  C19  C10    0.00  0.0  0
- 7ES  CONST_21  C20  S21  C09  C10    0.00  0.0  0
- 7ES  CONST_22  C14  C12  C11  C10  180.00  0.0  0
- 7ES  CONST_23  C17  C18  C11  C10  180.00  0.0  0
- 7ES  CONST_24  C20  C19  C10  C11  180.00  0.0  0
- 7ES  CONST_25  S21  C09  C10  C11  180.00  0.0  0
- 7ES  CONST_26  C15  C14  C12  C11    0.00  0.0  0
- 7ES  CONST_27  C15  C17  C18  C11    0.00  0.0  0
- 7ES  CONST_28  C17  C15  C14  C12    0.00  0.0  0
- 7ES  CONST_30  C17  C18  C11  C12    0.00  0.0  0
- 7ES  CONST_31  C18  C11  C12  C14    0.00  0.0  0
- 7ES  CONST_32  C18  C17  C15  C14    0.00  0.0  0
- 7ES  CONST_34  S21  C09  C10  C19    0.00  0.0  0
- 7ES  CONST_35  C07  C06  C02  O01  180.00  0.0  0
- 7ES  CONST_36  C04  C03  C02  O01  180.00  0.0  0
- 7ES  CONST_37  F05  C04  C03  C02  180.00  0.0  0
- 7ES  CONST_38  C09  C08  C04  F05    0.00  0.0  0
- 7ES  CONST_39  C07  C08  C04  F05  180.00  0.0  0
- 7ES  CONST_40  F13  C12  C11  C10    0.00  0.0  0
- 7ES  CONST_41  O16  C15  C14  C12  180.00  0.0  0
- 7ES  CONST_42  C15  C14  C12  F13  180.00  0.0  0
- 7ES  CONST_43  C18  C11  C12  F13  180.00  0.0  0
- 7ES  CONST_44  C18  C17  C15  O16  180.00  0.0  0
- 7ES  CONST_45  H4   C07  C06  C02  180.00  0.0  0
- 7ES  CONST_46  H3   C06  C02  C03  180.00  0.0  0
- 7ES  CONST_47  H2   C03  C02  C06  180.00  0.0  0
- 7ES  CONST_48  H10  C20  S21  C09  180.00  0.0  0
- 7ES  CONST_49  H9   C19  C10  C09  180.00  0.0  0
- 7ES  CONST_50  H8   C18  C11  C10    0.00  0.0  0
- 7ES  CONST_51  H5   C14  C12  C11  180.00  0.0  0
- 7ES  CONST_52  H7   C17  C18  C11  180.00  0.0  0
+ 7ES  CONST_01  C08  C07  C06  C02     0.00   0.0  0
+ 7ES  CONST_02  C08  C04  C03  C02     0.00   0.0  0
+ 7ES  CONST_03  C09  C08  C04  C03   180.00   0.0  0
+ 7ES  CONST_04  C07  C08  C04  C03     0.00   0.0  0
+ 7ES  CONST_05  C07  C06  C02  C03     0.00   0.0  0
+ 7ES  CONST_06  C06  C07  C08  C04     0.00   0.0  0
+ 7ES  CONST_07  C06  C02  C03  C04     0.00   0.0  0
+ 7ES  CONST_08  C09  C08  C07  C06   180.00   0.0  0
+ 7ES  CONST_09  C20  S21  C09  C08   180.00   0.0  0
+ 7ES  CONST_10  C19  C10  C09  C08   180.00   0.0  0
+ 7ES  CONST_11  C11  C10  C09  C08     0.00   0.0  0
+ 7ES  CONST_12  C19  C20  S21  C09     0.00   0.0  0
+ 7ES  CONST_13  C20  C19  C10  C09     0.00   0.0  0
+ 7ES  CONST_14  S21  C20  C19  C10     0.00   0.0  0
+ 7ES  CONST_15  C20  S21  C09  C10     0.00   0.0  0
+ 7ES  CONST_16  C14  C12  C11  C10   180.00   0.0  0
+ 7ES  CONST_17  C17  C18  C11  C10   180.00   0.0  0
+ 7ES  CONST_18  C20  C19  C10  C11   180.00   0.0  0
+ 7ES  CONST_19  S21  C09  C10  C11   180.00   0.0  0
+ 7ES  CONST_20  C15  C14  C12  C11     0.00   0.0  0
+ 7ES  CONST_21  C15  C17  C18  C11     0.00   0.0  0
+ 7ES  CONST_22  C17  C15  C14  C12     0.00   0.0  0
+ 7ES  CONST_23  C17  C18  C11  C12     0.00   0.0  0
+ 7ES  CONST_24  C18  C11  C12  C14     0.00   0.0  0
+ 7ES  CONST_25  C18  C17  C15  C14     0.00   0.0  0
+ 7ES  CONST_26  S21  C09  C10  C19     0.00   0.0  0
+ 7ES  CONST_27  C07  C06  C02  O01   180.00   0.0  0
+ 7ES  CONST_28  C04  C03  C02  O01   180.00   0.0  0
+ 7ES  CONST_29  F05  C04  C03  C02   180.00   0.0  0
+ 7ES  CONST_30  C09  C08  C04  F05     0.00   0.0  0
+ 7ES  CONST_31  C07  C08  C04  F05   180.00   0.0  0
+ 7ES  CONST_32  F13  C12  C11  C10     0.00   0.0  0
+ 7ES  CONST_33  O16  C15  C14  C12   180.00   0.0  0
+ 7ES  CONST_34  C15  C14  C12  F13   180.00   0.0  0
+ 7ES  CONST_35  C18  C11  C12  F13   180.00   0.0  0
+ 7ES  CONST_36  C18  C17  C15  O16   180.00   0.0  0
+ 7ES  CONST_37  H4   C07  C06  C02   180.00   0.0  0
+ 7ES  CONST_38  H3   C06  C02  C03   180.00   0.0  0
+ 7ES  CONST_39  H2   C03  C02  C06   180.00   0.0  0
+ 7ES  CONST_40  H10  C20  S21  C09   180.00   0.0  0
+ 7ES  CONST_41  H9   C19  C10  C09   180.00   0.0  0
+ 7ES  CONST_42  H8   C18  C11  C10     0.00   0.0  0
+ 7ES  CONST_43  H5   C14  C12  C11   180.00   0.0  0
+ 7ES  CONST_44  H7   C17  C18  C11   180.00   0.0  0
+ 7ES  Var_01    S21  C09  C08  C04    51.65  30.0  2
+ 7ES  Var_02    C10  C09  C08  C04  -132.87  30.0  2
+ 7ES  Var_03    S21  C09  C08  C07  -129.09  30.0  2
+ 7ES  Var_04    C10  C09  C08  C07    46.39  30.0  2
+ 7ES  Var_05    C12  C11  C10  C09    53.34  30.0  2
+ 7ES  Var_06    C18  C11  C10  C09  -127.90  30.0  2
+ 7ES  Var_07    C19  C10  C11  C12  -127.00  30.0  2
+ 7ES  Var_08    C19  C10  C11  C18    51.76  30.0  2
+ 7ES  Var_09    H1   O01  C02  C03     0.43  30.0  2
+ 7ES  Var_10    H6   O16  C15  C14   179.45  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

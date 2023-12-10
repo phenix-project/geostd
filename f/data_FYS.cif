@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FYS  FYS  4,4',4''-[(2R)-butane-1,1,2-triyl]triphenol  ligand  47  25  .  2021-08-09  2021-08-09  
+ FYS  FYS  4,4',4''-[(2R)-butane-1,1,2-triyl]triphenol  ligand  47  25  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FYS
@@ -242,51 +243,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FYS  CONST_01  CAL  CAY  CAK  CAE    0.00   0.0  0
- FYS  CONST_02  CAL  CAF  CAV  CAE    0.00   0.0  0
- FYS  CONST_03  CAK  CAY  CAL  CAF    0.00   0.0  0
- FYS  CONST_04  CAK  CAE  CAV  CAF    0.00   0.0  0
- FYS  CONST_05  CAN  CAZ  CAM  CAG    0.00   0.0  0
- FYS  CONST_06  CAN  CAH  CAW  CAG    0.00   0.0  0
- FYS  CONST_07  CAM  CAG  CAW  CAH    0.00   0.0  0
- FYS  CONST_08  CAM  CAZ  CAN  CAH    0.00   0.0  0
- FYS  CONST_09  CAP  CAJ  CAX  CAI    0.00   0.0  0
- FYS  CONST_10  CAP  CBA  CAO  CAI    0.00   0.0  0
- FYS  CONST_11  CAO  CBA  CAP  CAJ    0.00   0.0  0
- FYS  CONST_12  CAO  CAI  CAX  CAJ    0.00   0.0  0
- FYS  CONST_13  CAY  CAK  CAE  CAV    0.00   0.0  0
- FYS  CONST_14  CAY  CAL  CAF  CAV    0.00   0.0  0
- FYS  CONST_15  CAZ  CAM  CAG  CAW    0.00   0.0  0
- FYS  CONST_16  CAZ  CAN  CAH  CAW    0.00   0.0  0
- FYS  CONST_17  CBA  CAP  CAJ  CAX    0.00   0.0  0
- FYS  CONST_18  CBA  CAO  CAI  CAX    0.00   0.0  0
- FYS  CONST_19  CAK  CAE  CAV  OAC  180.00   0.0  0
- FYS  CONST_20  CAL  CAF  CAV  OAC  180.00   0.0  0
- FYS  CONST_21  CAM  CAG  CAW  OAD  180.00   0.0  0
- FYS  CONST_22  CAN  CAH  CAW  OAD  180.00   0.0  0
- FYS  CONST_23  CAT  CAY  CAK  CAE  180.00   0.0  0
- FYS  CONST_24  CAT  CAY  CAL  CAF  180.00   0.0  0
- FYS  CONST_25  CAU  CAZ  CAM  CAG  180.00   0.0  0
- FYS  CONST_26  CAU  CAZ  CAN  CAH  180.00   0.0  0
- FYS  CONST_27  CAU  CBA  CAO  CAI  180.00   0.0  0
- FYS  CONST_28  CAU  CBA  CAP  CAJ  180.00   0.0  0
- FYS  CONST_29  OAS  CAX  CAI  CAO  180.00   0.0  0
- FYS  CONST_30  OAS  CAX  CAJ  CAP  180.00   0.0  0
- FYS  CONST_31  H7   CAF  CAV  CAE  180.00   0.0  0
- FYS  CONST_32  H6   CAE  CAV  CAF  180.00   0.0  0
- FYS  CONST_33  H9   CAH  CAW  CAG  180.00   0.0  0
- FYS  CONST_34  H8   CAG  CAW  CAH  180.00   0.0  0
- FYS  CONST_35  H11  CAJ  CAX  CAI  180.00   0.0  0
- FYS  CONST_36  H10  CAI  CAX  CAJ  180.00   0.0  0
- FYS  CONST_37  H13  CAL  CAY  CAK  180.00   0.0  0
- FYS  CONST_38  H12  CAK  CAY  CAL  180.00   0.0  0
- FYS  CONST_39  H15  CAN  CAZ  CAM  180.00   0.0  0
- FYS  CONST_40  H14  CAM  CAZ  CAN  180.00   0.0  0
- FYS  CONST_41  H17  CAP  CBA  CAO  180.00   0.0  0
- FYS  CONST_42  H16  CAO  CBA  CAP  180.00   0.0  0
- FYS  Var_01    CBA  CAU  CAZ  CAM  -60.97  30.0  2
- FYS  Var_02    CAZ  CAU  CBA  CAO   87.33  30.0  2
- FYS  Var_03    H1   CAB  CAR  CAT  176.84  30.0  3
+ FYS  CONST_01  CAL  CAY  CAK  CAE     0.00   0.0  0
+ FYS  CONST_02  CAL  CAF  CAV  CAE     0.00   0.0  0
+ FYS  CONST_03  CAK  CAY  CAL  CAF     0.00   0.0  0
+ FYS  CONST_04  CAK  CAE  CAV  CAF     0.00   0.0  0
+ FYS  CONST_05  CAN  CAZ  CAM  CAG     0.00   0.0  0
+ FYS  CONST_06  CAN  CAH  CAW  CAG     0.00   0.0  0
+ FYS  CONST_07  CAM  CAG  CAW  CAH     0.00   0.0  0
+ FYS  CONST_08  CAM  CAZ  CAN  CAH     0.00   0.0  0
+ FYS  CONST_09  CAP  CAJ  CAX  CAI     0.00   0.0  0
+ FYS  CONST_10  CAP  CBA  CAO  CAI     0.00   0.0  0
+ FYS  CONST_11  CAO  CBA  CAP  CAJ     0.00   0.0  0
+ FYS  CONST_12  CAO  CAI  CAX  CAJ     0.00   0.0  0
+ FYS  CONST_13  CAY  CAK  CAE  CAV     0.00   0.0  0
+ FYS  CONST_14  CAY  CAL  CAF  CAV     0.00   0.0  0
+ FYS  CONST_15  CAZ  CAM  CAG  CAW     0.00   0.0  0
+ FYS  CONST_16  CAZ  CAN  CAH  CAW     0.00   0.0  0
+ FYS  CONST_17  CBA  CAP  CAJ  CAX     0.00   0.0  0
+ FYS  CONST_18  CBA  CAO  CAI  CAX     0.00   0.0  0
+ FYS  CONST_19  CAK  CAE  CAV  OAC   180.00   0.0  0
+ FYS  CONST_20  CAL  CAF  CAV  OAC   180.00   0.0  0
+ FYS  CONST_21  CAM  CAG  CAW  OAD   180.00   0.0  0
+ FYS  CONST_22  CAN  CAH  CAW  OAD   180.00   0.0  0
+ FYS  CONST_23  CAT  CAY  CAK  CAE   180.00   0.0  0
+ FYS  CONST_24  CAT  CAY  CAL  CAF   180.00   0.0  0
+ FYS  CONST_25  CAU  CAZ  CAM  CAG   180.00   0.0  0
+ FYS  CONST_26  CAU  CAZ  CAN  CAH   180.00   0.0  0
+ FYS  CONST_27  CAU  CBA  CAO  CAI   180.00   0.0  0
+ FYS  CONST_28  CAU  CBA  CAP  CAJ   180.00   0.0  0
+ FYS  CONST_29  OAS  CAX  CAI  CAO   180.00   0.0  0
+ FYS  CONST_30  OAS  CAX  CAJ  CAP   180.00   0.0  0
+ FYS  CONST_31  H7   CAF  CAV  CAE   180.00   0.0  0
+ FYS  CONST_32  H6   CAE  CAV  CAF   180.00   0.0  0
+ FYS  CONST_33  H9   CAH  CAW  CAG   180.00   0.0  0
+ FYS  CONST_34  H8   CAG  CAW  CAH   180.00   0.0  0
+ FYS  CONST_35  H11  CAJ  CAX  CAI   180.00   0.0  0
+ FYS  CONST_36  H10  CAI  CAX  CAJ   180.00   0.0  0
+ FYS  CONST_37  H13  CAL  CAY  CAK   180.00   0.0  0
+ FYS  CONST_38  H12  CAK  CAY  CAL   180.00   0.0  0
+ FYS  CONST_39  H15  CAN  CAZ  CAM   180.00   0.0  0
+ FYS  CONST_40  H14  CAM  CAZ  CAN   180.00   0.0  0
+ FYS  CONST_41  H17  CAP  CBA  CAO   180.00   0.0  0
+ FYS  CONST_42  H16  CAO  CBA  CAP   180.00   0.0  0
+ FYS  Var_01    CBA  CAU  CAZ  CAM   -60.97  30.0  2
+ FYS  Var_02    CAZ  CAU  CBA  CAO    87.33  30.0  2
+ FYS  Var_03    H1   CAB  CAR  CAT   176.84  30.0  3
+ FYS  Var_04    CAU  CAT  CAY  CAK   126.68  30.0  2
+ FYS  Var_05    CAR  CAT  CAY  CAK  -109.19  30.0  2
+ FYS  Var_06    CAU  CAT  CAY  CAL   -54.44  30.0  2
+ FYS  Var_07    CAR  CAT  CAY  CAL    69.69  30.0  2
+ FYS  Var_08    CAZ  CAU  CAT  CAY  -174.88  30.0  3
+ FYS  Var_09    CBA  CAU  CAT  CAY   -48.47  30.0  3
+ FYS  Var_10    H4   OAC  CAV  CAE  -179.10  30.0  2
+ FYS  Var_11    H5   OAD  CAW  CAG  -179.64  30.0  2
+ FYS  Var_12    H20  OAS  CAX  CAI   178.75  30.0  2
+ FYS  Var_13    H21  CAT  CAY  CAK     7.75  30.0  2
+ FYS  Var_14    CAY  CAT  CAR  CAB    58.72  30.0  3
+ FYS  Var_15    CAZ  CAU  CAT  CAR    60.78  30.0  3
+ FYS  Var_16    CBA  CAU  CAT  CAR  -172.81  30.0  3
+ FYS  Var_17    H18  CAR  CAT  CAY   -64.03  30.0  1
+ FYS  Var_18    H19  CAR  CAT  CAY  -179.58  30.0  1
+ FYS  Var_19    CAU  CAT  CAR  CAB  -176.58  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

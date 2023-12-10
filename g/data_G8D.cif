@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- G8D  G8D  '[(2~{R},3~{S},4~{R},5~{R})-5-[2-azanyl-6,8-bis(oxidanylidene)-1,7-dihydropurin-9-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl phosphono hydrogen phosphate'  ligand  41  29  .  2022-07-25  2022-07-26
+ G8D  G8D  '[(2~{R},3~{S},4~{R},5~{R})-5-[2-azanyl-6,8-bis(oxidanylidene)-1,7-dihydropurin-9-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl phosphono hydrogen phosphate'  ligand  41  29  .  2022-07-25  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_G8D
@@ -224,32 +225,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- G8D  CONST_01  C5   C4   N9   C1'  180.00   0.0  0
- G8D  CONST_02  N3   C4   N9   C1'    0.00   0.0  0
- G8D  CONST_03  N7   C8   N9   C1'  180.00   0.0  0
- G8D  CONST_04  N7   C5   C4   N9     0.00   0.0  0
- G8D  CONST_05  C2   N3   C4   N9   180.00   0.0  0
- G8D  CONST_06  C5   N7   C8   N9     0.00   0.0  0
- G8D  CONST_07  C4   C5   N7   C8     0.00   0.0  0
- G8D  CONST_08  C5   C4   N9   C8     0.00   0.0  0
- G8D  CONST_09  N3   C4   N9   C8   180.00   0.0  0
- G8D  CONST_10  N1   C2   N3   C4     0.00   0.0  0
- G8D  CONST_11  N7   C8   N9   C4     0.00   0.0  0
- G8D  CONST_12  C6   N1   C2   N3     0.00   0.0  0
- G8D  CONST_13  C5   C6   N1   C2     0.00   0.0  0
- G8D  CONST_14  C5   C4   N3   C2     0.00   0.0  0
- G8D  CONST_15  O8   C8   N9   C1'    0.00   0.0  0
- G8D  CONST_16  C5   N7   C8   O8   180.00   0.0  0
- G8D  CONST_17  C4   N9   C8   O8   180.00   0.0  0
- G8D  CONST_18  N2   C2   N3   C4   180.00   0.0  0
- G8D  CONST_19  O6   C6   N1   C2   180.00   0.0  0
- G8D  CONST_20  C6   N1   C2   N2   180.00   0.0  0
- G8D  CONST_21  H15  N7   C8   N9   180.00   0.0  0
- G8D  CONST_22  H14  N1   C2   N3   180.00   0.0  0
- G8D  CONST_23  H12  N2   C2   N3     0.00   0.0  0
- G8D  CONST_24  H13  N2   C2   N3   180.00   0.0  0
- G8D  Var_01    C4'  C5'  O5'  PA   170.24  30.0  3
- G8D  Var_02    O1A  PA   O3A  PB    52.90  30.0  1
+ G8D  CONST_01  C5   C4   N9   C1'   180.00   0.0  0
+ G8D  CONST_02  N3   C4   N9   C1'     0.00   0.0  0
+ G8D  CONST_03  N7   C8   N9   C1'   180.00   0.0  0
+ G8D  CONST_04  N7   C5   C4   N9      0.00   0.0  0
+ G8D  CONST_05  C2   N3   C4   N9    180.00   0.0  0
+ G8D  CONST_06  C5   N7   C8   N9      0.00   0.0  0
+ G8D  CONST_07  C4   C5   N7   C8      0.00   0.0  0
+ G8D  CONST_08  C5   C4   N9   C8      0.00   0.0  0
+ G8D  CONST_09  N3   C4   N9   C8    180.00   0.0  0
+ G8D  CONST_10  N1   C2   N3   C4      0.00   0.0  0
+ G8D  CONST_11  N7   C8   N9   C4      0.00   0.0  0
+ G8D  CONST_12  C6   N1   C2   N3      0.00   0.0  0
+ G8D  CONST_13  C5   C6   N1   C2      0.00   0.0  0
+ G8D  CONST_14  C5   C4   N3   C2      0.00   0.0  0
+ G8D  CONST_15  O8   C8   N9   C1'     0.00   0.0  0
+ G8D  CONST_16  C5   N7   C8   O8    180.00   0.0  0
+ G8D  CONST_17  C4   N9   C8   O8    180.00   0.0  0
+ G8D  CONST_18  N2   C2   N3   C4    180.00   0.0  0
+ G8D  CONST_19  O6   C6   N1   C2    180.00   0.0  0
+ G8D  CONST_20  C6   N1   C2   N2    180.00   0.0  0
+ G8D  CONST_21  H15  N7   C8   N9    180.00   0.0  0
+ G8D  CONST_22  H14  N1   C2   N3    180.00   0.0  0
+ G8D  CONST_23  H12  N2   C2   N3      0.00   0.0  0
+ G8D  CONST_24  H13  N2   C2   N3    180.00   0.0  0
+ G8D  Var_01    C4'  C5'  O5'  PA    170.24  30.0  3
+ G8D  Var_02    O1A  PA   O3A  PB     52.90  30.0  1
+ G8D  Var_03    C1'  C2'  C3'  C4'   -37.11  30.0  1
+ G8D  Var_04    N9   C1'  O4'  C4'  -140.85  30.0  1
+ G8D  Var_05    C2'  C1'  O4'  C4'   -15.20  30.0  1
+ G8D  Var_06    C4   N9   C1'  O4'  -108.38  30.0  1
+ G8D  Var_07    C8   N9   C1'  O4'    65.61  30.0  1
+ G8D  Var_08    C3'  C2'  C1'  O4'    33.04  30.0  1
+ G8D  Var_09    C2'  C3'  C4'  O4'    29.69  30.0  1
+ G8D  Var_10    N9   C1'  C2'  C3'   155.64  30.0  1
+ G8D  Var_11    C1'  O4'  C4'  C3'    -9.45  30.0  1
+ G8D  Var_12    C4   N9   C1'  C2'   131.21  30.0  1
+ G8D  Var_13    C8   N9   C1'  C2'   -54.80  30.0  1
+ G8D  Var_14    C2'  C3'  C4'  C5'   -92.05  30.0  1
+ G8D  Var_15    C1'  O4'  C4'  C5'   113.67  30.0  1
+ G8D  Var_16    O2'  C2'  C3'  C4'  -154.63  30.0  1
+ G8D  Var_17    O2'  C2'  C1'  O4'   154.11  30.0  1
+ G8D  Var_18    O3'  C3'  C4'  O4'   -87.32  30.0  1
+ G8D  Var_19    C1'  C2'  C3'  O3'    78.51  30.0  1
+ G8D  Var_20    N9   C1'  C2'  O2'   -83.28  30.0  1
+ G8D  Var_21    H9   C2'  C3'  C4'    79.39  30.0  1
+ G8D  Var_22    H11  C1'  O4'  C4'   103.03  30.0  1
+ G8D  Var_23    H7   C3'  C4'  O4'   149.15  30.0  1
+ G8D  Var_24    H6   C4'  C3'  C2'   146.40  30.0  1
+ G8D  Var_25    C3'  C4'  C5'  O5'  -179.90  30.0  1
+ G8D  Var_26    O4'  C4'  C5'  O5'    61.30  30.0  1
+ G8D  Var_27    O3'  C3'  C4'  C5'   150.94  30.0  1
+ G8D  Var_28    O2'  C2'  C3'  O3'   -39.01  30.0  1
+ G8D  Var_29    H8   O3'  C3'  C4'   154.08  30.0  3
+ G8D  Var_30    H4   C5'  C4'  O4'   -60.99  30.0  3
+ G8D  Var_31    H5   C5'  C4'  O4'  -177.99  30.0  3
+ G8D  Var_32    H10  O2'  C2'  C3'   -86.87  30.0  3
+ G8D  Var_33    PA   O3A  PB   O3B   -95.98  30.0  2
+ G8D  Var_34    PA   O3A  PB   O2B   144.85  30.0  2
+ G8D  Var_35    PA   O3A  PB   O1B    25.15  30.0  2
+ G8D  Var_36    C5'  O5'  PA   O3A   174.71  30.0  3
+ G8D  Var_37    C5'  O5'  PA   O1A   -69.40  30.0  3
+ G8D  Var_38    C5'  O5'  PA   O2A    59.62  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

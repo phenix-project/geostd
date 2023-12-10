@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TAT  TAT  5'-O-[(R)-{[(R)-hydroxy(phosphonooxy)phosphoryl]oxy}(sulfanyl)phosphoryl]adenosine  ligand  47  31  .  2022-11-17  2022-11-17
+ TAT  TAT  5'-O-[(R)-{[(R)-hydroxy(phosphonooxy)phosphoryl]oxy}(sulfanyl)phosphoryl]adenosine  ligand  47  31  .  2022-11-17  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TAT
@@ -243,38 +244,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TAT  CONST_01  C4   N3   C2   N1     0.00   0.0  0
- TAT  CONST_02  C4   C5   C6   N1     0.00   0.0  0
- TAT  CONST_03  N7   C5   C6   N1   180.00   0.0  0
- TAT  CONST_04  C5   C6   N1   C2     0.00   0.0  0
- TAT  CONST_05  C5   C4   N3   C2     0.00   0.0  0
- TAT  CONST_06  N9   C4   N3   C2   180.00   0.0  0
- TAT  CONST_07  C6   N1   C2   N3     0.00   0.0  0
- TAT  CONST_08  C6   C5   C4   N3     0.00   0.0  0
- TAT  CONST_09  N7   C5   C4   N3   180.00   0.0  0
- TAT  CONST_10  C8   N9   C4   N3   180.00   0.0  0
- TAT  CONST_11  C8   N7   C5   C4     0.00   0.0  0
- TAT  CONST_12  N7   C8   N9   C4     0.00   0.0  0
- TAT  CONST_13  C8   N9   C4   C5     0.00   0.0  0
- TAT  CONST_14  N9   C8   N7   C5     0.00   0.0  0
- TAT  CONST_15  N9   C4   C5   C6   180.00   0.0  0
- TAT  CONST_16  C8   N7   C5   C6   180.00   0.0  0
- TAT  CONST_17  N9   C4   C5   N7     0.00   0.0  0
- TAT  CONST_18  C1'  N9   C4   N3     0.00   0.0  0
- TAT  CONST_19  C1'  N9   C4   C5   180.00   0.0  0
- TAT  CONST_20  C1'  N9   C8   N7   180.00   0.0  0
- TAT  CONST_21  N6   C6   N1   C2   180.00   0.0  0
- TAT  CONST_22  N6   C6   C5   C4   180.00   0.0  0
- TAT  CONST_23  N7   C5   C6   N6     0.00   0.0  0
- TAT  CONST_24  H1   C2   N3   C4   180.00   0.0  0
- TAT  CONST_25  H4   C8   N9   C4   180.00   0.0  0
- TAT  CONST_26  H2   N6   C6   N1     0.00   0.0  0
- TAT  CONST_27  H3   N6   C6   N1   180.00   0.0  0
- TAT  Var_01    C4'  C5'  O5'  PA   -49.73  30.0  2
- TAT  Var_02    O1B  PB   O3A  PA  -130.41  30.0  3
- TAT  Var_03    O2A  PA   O3A  PB    66.35  30.0  2
- TAT  Var_04    O2G  PG   O3B  PB   151.66  30.0  3
- TAT  Var_05    O3A  PB   O3B  PG   160.06  30.0  1
+ TAT  CONST_01  C4   N3   C2   N1      0.00   0.0  0
+ TAT  CONST_02  C4   C5   C6   N1      0.00   0.0  0
+ TAT  CONST_03  N7   C5   C6   N1    180.00   0.0  0
+ TAT  CONST_04  C5   C6   N1   C2      0.00   0.0  0
+ TAT  CONST_05  C5   C4   N3   C2      0.00   0.0  0
+ TAT  CONST_06  N9   C4   N3   C2    180.00   0.0  0
+ TAT  CONST_07  C6   N1   C2   N3      0.00   0.0  0
+ TAT  CONST_08  C6   C5   C4   N3      0.00   0.0  0
+ TAT  CONST_09  N7   C5   C4   N3    180.00   0.0  0
+ TAT  CONST_10  C8   N9   C4   N3    180.00   0.0  0
+ TAT  CONST_11  C8   N7   C5   C4      0.00   0.0  0
+ TAT  CONST_12  N7   C8   N9   C4      0.00   0.0  0
+ TAT  CONST_13  C8   N9   C4   C5      0.00   0.0  0
+ TAT  CONST_14  N9   C8   N7   C5      0.00   0.0  0
+ TAT  CONST_15  N9   C4   C5   C6    180.00   0.0  0
+ TAT  CONST_16  C8   N7   C5   C6    180.00   0.0  0
+ TAT  CONST_17  N9   C4   C5   N7      0.00   0.0  0
+ TAT  CONST_18  C1'  N9   C4   N3      0.00   0.0  0
+ TAT  CONST_19  C1'  N9   C4   C5    180.00   0.0  0
+ TAT  CONST_20  C1'  N9   C8   N7    180.00   0.0  0
+ TAT  CONST_21  N6   C6   N1   C2    180.00   0.0  0
+ TAT  CONST_22  N6   C6   C5   C4    180.00   0.0  0
+ TAT  CONST_23  N7   C5   C6   N6      0.00   0.0  0
+ TAT  CONST_24  H1   C2   N3   C4    180.00   0.0  0
+ TAT  CONST_25  H4   C8   N9   C4    180.00   0.0  0
+ TAT  CONST_26  H2   N6   C6   N1      0.00   0.0  0
+ TAT  CONST_27  H3   N6   C6   N1    180.00   0.0  0
+ TAT  Var_01    C4'  C5'  O5'  PA    -49.73  30.0  2
+ TAT  Var_02    O1B  PB   O3A  PA   -130.41  30.0  3
+ TAT  Var_03    O2A  PA   O3A  PB     66.35  30.0  2
+ TAT  Var_04    O2G  PG   O3B  PB    151.66  30.0  3
+ TAT  Var_05    O3A  PB   O3B  PG    160.06  30.0  1
+ TAT  Var_06    C2'  C1'  N9   C4    -55.85  30.0  1
+ TAT  Var_07    O4'  C1'  N9   C4     63.26  30.0  1
+ TAT  Var_08    C2'  C1'  N9   C8    126.67  30.0  1
+ TAT  Var_09    O4'  C1'  N9   C8   -114.21  30.0  1
+ TAT  Var_10    C3'  C2'  C1'  N9    152.85  30.0  1
+ TAT  Var_11    C4'  O4'  C1'  N9   -139.32  30.0  1
+ TAT  Var_12    C4'  C3'  C2'  C1'   -34.69  30.0  1
+ TAT  Var_13    C3'  C4'  O4'  C1'    -7.66  30.0  1
+ TAT  Var_14    C4'  O4'  C1'  C2'   -15.44  30.0  1
+ TAT  Var_15    O4'  C4'  C3'  C2'    27.04  30.0  1
+ TAT  Var_16    O4'  C1'  C2'  C3'    31.88  30.0  1
+ TAT  Var_17    O2'  C2'  C1'  N9    -83.46  30.0  1
+ TAT  Var_18    O3'  C3'  C2'  C1'    83.26  30.0  1
+ TAT  Var_19    C5'  C4'  O4'  C1'   115.66  30.0  1
+ TAT  Var_20    C5'  C4'  C3'  C2'   -91.59  30.0  1
+ TAT  Var_21    O4'  C1'  C2'  O2'   155.57  30.0  1
+ TAT  Var_22    C4'  C3'  C2'  O2'  -153.45  30.0  1
+ TAT  Var_23    O4'  C4'  C3'  O3'   -88.78  30.0  1
+ TAT  Var_24    H5   C1'  N9   C4   -176.91  30.0  1
+ TAT  Var_25    H8   C2'  C1'  N9     39.06  30.0  1
+ TAT  Var_26    H11  C3'  C2'  C1'  -153.71  30.0  1
+ TAT  Var_27    H14  C4'  O4'  C1'  -126.07  30.0  1
+ TAT  Var_28    O3'  C3'  C2'  O2'   -35.50  30.0  1
+ TAT  Var_29    O5'  C5'  C4'  C3'   -59.88  30.0  3
+ TAT  Var_30    C5'  C4'  C3'  O3'   152.58  30.0  1
+ TAT  Var_31    O5'  C5'  C4'  O4'  -178.16  30.0  3
+ TAT  Var_32    H9   O2'  C2'  C1'   166.87  30.0  3
+ TAT  Var_33    H12  O3'  C3'  C2'   178.66  30.0  3
+ TAT  Var_34    H15  C5'  C4'  C3'    58.02  30.0  3
+ TAT  Var_35    H16  C5'  C4'  C3'   177.81  30.0  3
+ TAT  Var_36    C5'  O5'  PA   S1G  -160.84  30.0  2
+ TAT  Var_37    C5'  O5'  PA   O2A    72.20  30.0  2
+ TAT  Var_38    C5'  O5'  PA   O3A   -51.37  30.0  2
+ TAT  Var_39    H13  O3G  PG   O1A  -167.01  30.0  3
+ TAT  Var_40    H10  O2B  PB   O1B   -19.62  30.0  3
+ TAT  Var_41    H7   S1G  PA   O2A   -13.62  30.0  3
+ TAT  Var_42    H6   O1A  PG   O2G    21.77  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

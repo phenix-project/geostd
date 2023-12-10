@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1BH  1BH  N-[(benzyloxy)carbonyl]-L-alanyl-N-[(1S,2R)-1-benzyl-2-hydroxypropyl]-L-prolinamide  ligand  67  34  .  2021-08-03  2021-08-03  
+ 1BH  1BH  N-[(benzyloxy)carbonyl]-L-alanyl-N-[(1S,2R)-1-benzyl-2-hydroxypropyl]-L-prolinamide  ligand  67  34  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1BH
@@ -323,47 +324,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 1BH  CONST_01  C24  C23  C22  C21     0.00   0.0  0
- 1BH  CONST_02  C24  C25  C26  C21     0.00   0.0  0
- 1BH  CONST_03  C25  C26  C21  C22     0.00   0.0  0
- 1BH  CONST_04  C25  C24  C23  C22     0.00   0.0  0
- 1BH  CONST_05  C85  C84  C83  C82     0.00   0.0  0
- 1BH  CONST_06  C85  C86  C87  C82     0.00   0.0  0
- 1BH  CONST_07  C86  C87  C82  C83     0.00   0.0  0
- 1BH  CONST_08  C86  C85  C84  C83     0.00   0.0  0
- 1BH  CONST_09  C84  C83  C82  C87     0.00   0.0  0
- 1BH  CONST_10  C84  C85  C86  C87     0.00   0.0  0
- 1BH  CONST_11  C23  C22  C21  C26     0.00   0.0  0
- 1BH  CONST_12  C23  C24  C25  C26     0.00   0.0  0
- 1BH  CONST_13  C23  C22  C21  C1    180.00   0.0  0
- 1BH  CONST_14  C25  C26  C21  C1    180.00   0.0  0
- 1BH  CONST_15  C84  C83  C82  C81   180.00   0.0  0
- 1BH  CONST_16  C86  C87  C82  C81   180.00   0.0  0
- 1BH  CONST_17  H23  C23  C22  C21   180.00   0.0  0
- 1BH  CONST_18  H25  C25  C26  C21   180.00   0.0  0
- 1BH  CONST_19  H26  C26  C21  C22   180.00   0.0  0
- 1BH  CONST_20  H24  C24  C23  C22   180.00   0.0  0
- 1BH  CONST_21  H22  C22  C23  C24   180.00   0.0  0
- 1BH  CONST_22  H84  C84  C83  C82   180.00   0.0  0
- 1BH  CONST_23  H86  C86  C87  C82   180.00   0.0  0
- 1BH  CONST_24  H87  C87  C82  C83   180.00   0.0  0
- 1BH  CONST_25  H85  C85  C84  C83   180.00   0.0  0
- 1BH  CONST_26  H83  C83  C82  C87   180.00   0.0  0
- 1BH  CONST_27  CD   N2   C5   C4      0.00   0.0  0
- 1BH  CONST_28  C6   N2   C5   C4    180.00   0.0  0
- 1BH  CONST_29  CD   N2   C5   O3    180.00   0.0  0
- 1BH  CONST_30  C6   N2   C5   O3      0.00   0.0  0
- 1BH  CONST_31  C6   C7   N3   C8    180.00   0.0  0
- 1BH  CONST_32  HN3  N3   C7   C6      0.00   0.0  0
- 1BH  CONST_33  C8   N3   C7   O4      0.00   0.0  0
- 1BH  Var_01    C61  CG   CD   N2    -36.39  30.0  1
- 1BH  Var_02    C6   C61  CG   CD     35.53  30.0  1
- 1BH  Var_03    CG   CD   N2   C6     24.64  30.0  1
- 1BH  Var_04    C83  C82  C81  C8     81.60  30.0  2
- 1BH  Var_05    O1   C1   C21  C22    86.95  30.0  3
- 1BH  Var_06    C21  C1   O1   C3   -175.58  30.0  2
- 1BH  Var_07    N1   C3   O1   C1   -179.55  30.0  2
- 1BH  Var_08    O1   C3   N1   C4   -176.80  30.0  2
+ 1BH  CONST_01  C24   C23  C22  C21     0.00   0.0  0
+ 1BH  CONST_02  C24   C25  C26  C21     0.00   0.0  0
+ 1BH  CONST_03  C25   C26  C21  C22     0.00   0.0  0
+ 1BH  CONST_04  C25   C24  C23  C22     0.00   0.0  0
+ 1BH  CONST_05  C85   C84  C83  C82     0.00   0.0  0
+ 1BH  CONST_06  C85   C86  C87  C82     0.00   0.0  0
+ 1BH  CONST_07  C86   C87  C82  C83     0.00   0.0  0
+ 1BH  CONST_08  C86   C85  C84  C83     0.00   0.0  0
+ 1BH  CONST_09  C84   C83  C82  C87     0.00   0.0  0
+ 1BH  CONST_10  C84   C85  C86  C87     0.00   0.0  0
+ 1BH  CONST_11  C23   C22  C21  C26     0.00   0.0  0
+ 1BH  CONST_12  C23   C24  C25  C26     0.00   0.0  0
+ 1BH  CONST_13  C23   C22  C21  C1    180.00   0.0  0
+ 1BH  CONST_14  C25   C26  C21  C1    180.00   0.0  0
+ 1BH  CONST_15  C84   C83  C82  C81   180.00   0.0  0
+ 1BH  CONST_16  C86   C87  C82  C81   180.00   0.0  0
+ 1BH  CONST_17  H23   C23  C22  C21   180.00   0.0  0
+ 1BH  CONST_18  H25   C25  C26  C21   180.00   0.0  0
+ 1BH  CONST_19  H26   C26  C21  C22   180.00   0.0  0
+ 1BH  CONST_20  H24   C24  C23  C22   180.00   0.0  0
+ 1BH  CONST_21  H22   C22  C23  C24   180.00   0.0  0
+ 1BH  CONST_22  H84   C84  C83  C82   180.00   0.0  0
+ 1BH  CONST_23  H86   C86  C87  C82   180.00   0.0  0
+ 1BH  CONST_24  H87   C87  C82  C83   180.00   0.0  0
+ 1BH  CONST_25  H85   C85  C84  C83   180.00   0.0  0
+ 1BH  CONST_26  H83   C83  C82  C87   180.00   0.0  0
+ 1BH  CONST_27  CD    N2   C5   C4      0.00   0.0  0
+ 1BH  CONST_28  C6    N2   C5   C4    180.00   0.0  0
+ 1BH  CONST_29  CD    N2   C5   O3    180.00   0.0  0
+ 1BH  CONST_30  C6    N2   C5   O3      0.00   0.0  0
+ 1BH  CONST_31  C6    C7   N3   C8    180.00   0.0  0
+ 1BH  CONST_32  HN3   N3   C7   C6      0.00   0.0  0
+ 1BH  CONST_33  C8    N3   C7   O4      0.00   0.0  0
+ 1BH  Var_01    C61   CG   CD   N2    -36.39  30.0  1
+ 1BH  Var_02    C6    C61  CG   CD     35.53  30.0  1
+ 1BH  Var_03    CG    CD   N2   C6     24.64  30.0  1
+ 1BH  Var_04    C83   C82  C81  C8     81.60  30.0  2
+ 1BH  Var_05    O1    C1   C21  C22    86.95  30.0  3
+ 1BH  Var_06    C21   C1   O1   C3   -175.58  30.0  2
+ 1BH  Var_07    N1    C3   O1   C1   -179.55  30.0  2
+ 1BH  Var_08    O1    C3   N1   C4   -176.80  30.0  2
+ 1BH  Var_09    CG    C61  C6   N2    -20.84  30.0  1
+ 1BH  Var_10    C61   C6   N2   CD     -2.45  30.0  1
+ 1BH  Var_11    CD    N2   C6   C7    115.78  30.0  1
+ 1BH  Var_12    CG    C61  C6   C7   -140.00  30.0  1
+ 1BH  Var_13    C61   C6   N2   C5    175.77  30.0  1
+ 1BH  Var_14    H611  C61  C6   N2     97.00  30.0  1
+ 1BH  Var_15    H612  C61  C6   N2   -143.35  30.0  1
+ 1BH  Var_16    H6    C6   N2   CD   -120.93  30.0  1
+ 1BH  Var_17    N2    C6   C7   O4    -32.38  30.0  3
+ 1BH  Var_18    C61   C6   C7   O4     82.26  30.0  3
+ 1BH  Var_19    C5    N2   C6   C7    -65.99  30.0  1
+ 1BH  Var_20    N3    C7   C6   N2    152.45  30.0  2
+ 1BH  Var_21    N3    C7   C6   C61   -92.91  30.0  2
+ 1BH  Var_22    C82   C81  C8   C9    166.02  30.0  3
+ 1BH  Var_23    N2    C5   C4   N1    164.54  30.0  3
+ 1BH  Var_24    N2    C5   C4   C41   -73.46  30.0  3
+ 1BH  Var_25    N3    C8   C81  C82   -71.43  30.0  2
+ 1BH  Var_26    H4    C4   C5   N2     46.55  30.0  2
+ 1BH  Var_27    H8    C8   C81  C82    46.10  30.0  2
+ 1BH  Var_28    C41   C4   N1   C3     80.71  30.0  3
+ 1BH  Var_29    C5    C4   N1   C3   -158.83  30.0  3
+ 1BH  Var_30    N3    C8   C9   O5   -176.97  30.0  2
+ 1BH  Var_31    C81   C8   C9   O5    -53.81  30.0  2
+ 1BH  Var_32    C9    C8   N3   C7   -117.62  30.0  3
+ 1BH  Var_33    C81   C8   N3   C7    118.12  30.0  3
+ 1BH  Var_34    O3    C5   C4   N1    -17.88  30.0  3
+ 1BH  Var_35    O3    C5   C4   C41   104.13  30.0  3
+ 1BH  Var_36    CC    C9   C8   C81  -178.66  30.0  3
+ 1BH  Var_37    N3    C8   C9   CC     58.17  30.0  2
+ 1BH  Var_38    HC1   CC   C9   O5     52.31  30.0  3
+ 1BH  Var_39    HC2   CC   C9   O5    171.94  30.0  3
+ 1BH  Var_40    HC3   CC   C9   O5    -67.48  30.0  3
+ 1BH  Var_41    HO5   O5   C9   C8    -67.61  30.0  3
+ 1BH  Var_42    H411  C41  C4   N1     61.39  30.0  3
+ 1BH  Var_43    H412  C41  C4   N1   -177.99  30.0  3
+ 1BH  Var_44    H413  C41  C4   N1    -58.38  30.0  3
+ 1BH  Var_45    HN1   N1   C4   C41   -94.62  30.0  1
+ 1BH  Var_46    H9    C9   C8   C81    61.19  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

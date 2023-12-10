@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- B5F  B5F  'biphenyl-2,3',4,5',6-pentayl pentakis[dihydrogen (phosphate)]'  ligand  52  37  .  2021-08-06  2022-11-17
+ B5F  B5F  'biphenyl-2,3',4,5',6-pentayl pentakis[dihydrogen (phosphate)]'  ligand  52  37  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_B5F
@@ -251,48 +252,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- B5F  CONST_01  C5'  C6'  C1'  C1    180.00   0.0  0
- B5F  CONST_02  C3'  C2'  C1'  C1    180.00   0.0  0
- B5F  CONST_03  C4   C3   C2   C1      0.00   0.0  0
- B5F  CONST_04  C4   C5   C6   C1      0.00   0.0  0
- B5F  CONST_07  C5   C6   C1   C2      0.00   0.0  0
- B5F  CONST_08  C5   C4   C3   C2      0.00   0.0  0
- B5F  CONST_09  C1'  C1   C2   C3    180.00   0.0  0
- B5F  CONST_10  C6   C1   C2   C3      0.00   0.0  0
- B5F  CONST_11  C6   C5   C4   C3      0.00   0.0  0
- B5F  CONST_12  C1'  C1   C6   C5    180.00   0.0  0
- B5F  CONST_15  C4'  C5'  C6'  C1'     0.00   0.0  0
- B5F  CONST_16  C4'  C3'  C2'  C1'     0.00   0.0  0
- B5F  CONST_17  C5'  C6'  C1'  C2'     0.00   0.0  0
- B5F  CONST_18  C5'  C4'  C3'  C2'     0.00   0.0  0
- B5F  CONST_19  C6'  C1'  C2'  C3'     0.00   0.0  0
- B5F  CONST_20  C6'  C5'  C4'  C3'     0.00   0.0  0
- B5F  CONST_21  O6   C6   C1   C2    180.00   0.0  0
- B5F  CONST_22  O4   C4   C3   C2    180.00   0.0  0
- B5F  CONST_23  C1'  C1   C2   O2      0.00   0.0  0
- B5F  CONST_24  C6   C1   C2   O2    180.00   0.0  0
- B5F  CONST_25  C4   C3   C2   O2    180.00   0.0  0
- B5F  CONST_26  O6   C6   C5   C4    180.00   0.0  0
- B5F  CONST_27  C6   C5   C4   O4    180.00   0.0  0
- B5F  CONST_28  C1'  C1   C6   O6      0.00   0.0  0
- B5F  CONST_29  O5'  C5'  C6'  C1'   180.00   0.0  0
- B5F  CONST_30  O3'  C3'  C2'  C1'   180.00   0.0  0
- B5F  CONST_31  O5'  C5'  C4'  C3'   180.00   0.0  0
- B5F  CONST_32  C5'  C4'  C3'  O3'   180.00   0.0  0
- B5F  CONST_33  H6'  C6'  C1'  C1      0.00   0.0  0
- B5F  CONST_34  H2'  C2'  C1'  C1      0.00   0.0  0
- B5F  CONST_35  H3   C3   C2   C1    180.00   0.0  0
- B5F  CONST_36  H5   C5   C6   C1    180.00   0.0  0
- B5F  CONST_37  H4'  C4'  C3'  C2'   180.00   0.0  0
- B5F  Var_01    C3   C2   O2   P2     84.58  30.0  2
- B5F  Var_02    C5   C4   O4   P4    -97.13  30.0  3
- B5F  Var_03    C4'  C3'  O3'  P3'    80.45  30.0  2
- B5F  Var_04    C6'  C5'  O5'  P5'    66.42  30.0  2
- B5F  Var_05    O21  P2   O2   C2    168.22  30.0  1
- B5F  Var_06    O42  P4   O4   C4    -50.81  30.0  3
- B5F  Var_07    O63  P6   O6   C6   -150.76  30.0  3
- B5F  Var_08    O32  P3'  O3'  C3'   -51.79  30.0  1
- B5F  Var_09    O51  P5'  O5'  C5'   159.04  30.0  3
+ B5F  CONST_01  C5'   C6'  C1'  C1    180.00   0.0  0
+ B5F  CONST_02  C3'   C2'  C1'  C1    180.00   0.0  0
+ B5F  CONST_03  C4    C3   C2   C1      0.00   0.0  0
+ B5F  CONST_04  C4    C5   C6   C1      0.00   0.0  0
+ B5F  CONST_05  C5    C6   C1   C2      0.00   0.0  0
+ B5F  CONST_06  C5    C4   C3   C2      0.00   0.0  0
+ B5F  CONST_07  C1'   C1   C2   C3    180.00   0.0  0
+ B5F  CONST_08  C6    C1   C2   C3      0.00   0.0  0
+ B5F  CONST_09  C6    C5   C4   C3      0.00   0.0  0
+ B5F  CONST_10  C1'   C1   C6   C5    180.00   0.0  0
+ B5F  CONST_11  C4'   C5'  C6'  C1'     0.00   0.0  0
+ B5F  CONST_12  C4'   C3'  C2'  C1'     0.00   0.0  0
+ B5F  CONST_13  C5'   C6'  C1'  C2'     0.00   0.0  0
+ B5F  CONST_14  C5'   C4'  C3'  C2'     0.00   0.0  0
+ B5F  CONST_15  C6'   C1'  C2'  C3'     0.00   0.0  0
+ B5F  CONST_16  C6'   C5'  C4'  C3'     0.00   0.0  0
+ B5F  CONST_17  O6    C6   C1   C2    180.00   0.0  0
+ B5F  CONST_18  O4    C4   C3   C2    180.00   0.0  0
+ B5F  CONST_19  C1'   C1   C2   O2      0.00   0.0  0
+ B5F  CONST_20  C6    C1   C2   O2    180.00   0.0  0
+ B5F  CONST_21  C4    C3   C2   O2    180.00   0.0  0
+ B5F  CONST_22  O6    C6   C5   C4    180.00   0.0  0
+ B5F  CONST_23  C6    C5   C4   O4    180.00   0.0  0
+ B5F  CONST_24  C1'   C1   C6   O6      0.00   0.0  0
+ B5F  CONST_25  O5'   C5'  C6'  C1'   180.00   0.0  0
+ B5F  CONST_26  O3'   C3'  C2'  C1'   180.00   0.0  0
+ B5F  CONST_27  O5'   C5'  C4'  C3'   180.00   0.0  0
+ B5F  CONST_28  C5'   C4'  C3'  O3'   180.00   0.0  0
+ B5F  CONST_29  H6'   C6'  C1'  C1      0.00   0.0  0
+ B5F  CONST_30  H2'   C2'  C1'  C1      0.00   0.0  0
+ B5F  CONST_31  H3    C3   C2   C1    180.00   0.0  0
+ B5F  CONST_32  H5    C5   C6   C1    180.00   0.0  0
+ B5F  CONST_33  H4'   C4'  C3'  C2'   180.00   0.0  0
+ B5F  Var_01    C3    C2   O2   P2     84.58  30.0  2
+ B5F  Var_02    C5    C4   O4   P4    -97.13  30.0  3
+ B5F  Var_03    C4'   C3'  O3'  P3'    80.45  30.0  2
+ B5F  Var_04    C6'   C5'  O5'  P5'    66.42  30.0  2
+ B5F  Var_05    O21   P2   O2   C2    168.22  30.0  1
+ B5F  Var_06    O42   P4   O4   C4    -50.81  30.0  3
+ B5F  Var_07    O63   P6   O6   C6   -150.76  30.0  3
+ B5F  Var_08    O32   P3'  O3'  C3'   -51.79  30.0  1
+ B5F  Var_09    O51   P5'  O5'  C5'   159.04  30.0  3
+ B5F  Var_10    C6'   C1'  C1   C2    112.57  30.0  2
+ B5F  Var_11    C2'   C1'  C1   C2    -70.11  30.0  2
+ B5F  Var_12    C6'   C1'  C1   C6    -69.43  30.0  2
+ B5F  Var_13    C2'   C1'  C1   C6    107.88  30.0  2
+ B5F  Var_14    P6    O6   C6   C1    119.00  30.0  2
+ B5F  Var_15    P6    O6   C6   C5    -64.81  30.0  2
+ B5F  Var_16    HO23  O23  P2   O2     93.58  30.0  3
+ B5F  Var_17    HO22  O22  P2   O2    -80.91  30.0  3
+ B5F  Var_18    HO43  O43  P4   O4   -155.98  30.0  3
+ B5F  Var_19    HO41  O41  P4   O4     88.41  30.0  3
+ B5F  Var_20    HO61  O61  P6   O6   -109.18  30.0  3
+ B5F  Var_21    HO62  O62  P6   O6     64.47  30.0  3
+ B5F  Var_22    HO31  O31  P3'  O3'    90.07  30.0  3
+ B5F  Var_23    HO33  O33  P3'  O3'  -155.09  30.0  3
+ B5F  Var_24    HO53  O53  P5'  O5'   -99.75  30.0  3
+ B5F  Var_25    HO52  O52  P5'  O5'   -84.00  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

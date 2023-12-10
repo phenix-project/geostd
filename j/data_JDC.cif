@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JDC  JDC  (3R)-7-hydroxy-N-{(2S)-1-[(3R,4R)-4-(3-hydroxyphenyl)-3,4-dimethylpiperidin-1-yl]-3-methylbutan-2-yl}-1,2,3,4-tetrahydroisoquinoline-3-carboxamide  ligand  73  34  .  2021-08-12  2021-08-12  
+ JDC  JDC  (3R)-7-hydroxy-N-{(2S)-1-[(3R,4R)-4-(3-hydroxyphenyl)-3,4-dimethylpiperidin-1-yl]-3-methylbutan-2-yl}-1,2,3,4-tetrahydroisoquinoline-3-carboxamide  ligand  73  34  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JDC
@@ -354,42 +355,96 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JDC  CONST_01  C7   C6   C5   C4A    0.00   0.0  0
- JDC  CONST_02  C7   C8   C8A  C4A    0.00   0.0  0
- JDC  CONST_03  C8   C8A  C4A  C5     0.00   0.0  0
- JDC  CONST_04  C8   C7   C6   C5     0.00   0.0  0
- JDC  CONST_05  C8A  C4A  C5   C6     0.00   0.0  0
- JDC  CONST_06  C8A  C8   C7   C6     0.00   0.0  0
- JDC  CONST_07  C4C  C5C  C6C  C1C    0.00   0.0  0
- JDC  CONST_08  C4C  C3C  C2C  C1C    0.00   0.0  0
- JDC  CONST_09  C5C  C6C  C1C  C2C    0.00   0.0  0
- JDC  CONST_10  C5C  C4C  C3C  C2C    0.00   0.0  0
- JDC  CONST_11  C6C  C1C  C2C  C3C    0.00   0.0  0
- JDC  CONST_12  C6C  C5C  C4C  C3C    0.00   0.0  0
- JDC  CONST_13  C5C  C6C  C1C  C41  180.00   0.0  0
- JDC  CONST_14  C3C  C2C  C1C  C41  180.00   0.0  0
- JDC  CONST_15  O7   C7   C6   C5   180.00   0.0  0
- JDC  CONST_16  C8A  C8   C7   O7   180.00   0.0  0
- JDC  CONST_17  O3C  C3C  C2C  C1C  180.00   0.0  0
- JDC  CONST_18  C5C  C4C  C3C  O3C  180.00   0.0  0
- JDC  CONST_19  H11  C8   C8A  C1     0.00   0.0  0
- JDC  CONST_20  H8   C5   C4A  C4     0.00   0.0  0
- JDC  CONST_21  H9   C6   C5   C4A  180.00   0.0  0
- JDC  CONST_22  H41  C6C  C1C  C41    0.00   0.0  0
- JDC  CONST_23  H37  C2C  C1C  C41    0.00   0.0  0
- JDC  CONST_24  H40  C5C  C6C  C1C  180.00   0.0  0
- JDC  CONST_25  H39  C4C  C3C  C2C  180.00   0.0  0
- JDC  CONST_26  C2A  N2A  C1A  C3   180.00   0.0  0
- JDC  CONST_27  H12  N2A  C1A  C3     0.00   0.0  0
- JDC  CONST_28  C2A  N2A  C1A  O1     0.00   0.0  0
- JDC  Var_01    C4A  C8A  C1   N2   -16.53  30.0  1
- JDC  Var_02    C5   C4A  C4   C3   163.97  30.0  1
- JDC  Var_03    C8A  C1   N2   C3    46.54  30.0  1
- JDC  Var_04    C41  C51  C61  N11   56.28  30.0  1
- JDC  Var_05    C51  C61  N11  C21  -59.71  30.0  1
- JDC  Var_06    C61  N11  C21  C31   61.67  30.0  1
- JDC  Var_07    H18  C3B  C3A  C2A  -61.96  30.0  3
- JDC  Var_08    H15  C3D  C3A  C2A   55.71  30.0  3
+ JDC  CONST_01  C7   C6   C5   C4A     0.00   0.0  0
+ JDC  CONST_02  C7   C8   C8A  C4A     0.00   0.0  0
+ JDC  CONST_03  C8   C8A  C4A  C5      0.00   0.0  0
+ JDC  CONST_04  C8   C7   C6   C5      0.00   0.0  0
+ JDC  CONST_05  C8A  C4A  C5   C6      0.00   0.0  0
+ JDC  CONST_06  C8A  C8   C7   C6      0.00   0.0  0
+ JDC  CONST_07  C4C  C5C  C6C  C1C     0.00   0.0  0
+ JDC  CONST_08  C4C  C3C  C2C  C1C     0.00   0.0  0
+ JDC  CONST_09  C5C  C6C  C1C  C2C     0.00   0.0  0
+ JDC  CONST_10  C5C  C4C  C3C  C2C     0.00   0.0  0
+ JDC  CONST_11  C6C  C1C  C2C  C3C     0.00   0.0  0
+ JDC  CONST_12  C6C  C5C  C4C  C3C     0.00   0.0  0
+ JDC  CONST_13  C5C  C6C  C1C  C41   180.00   0.0  0
+ JDC  CONST_14  C3C  C2C  C1C  C41   180.00   0.0  0
+ JDC  CONST_15  O7   C7   C6   C5    180.00   0.0  0
+ JDC  CONST_16  C8A  C8   C7   O7    180.00   0.0  0
+ JDC  CONST_17  O3C  C3C  C2C  C1C   180.00   0.0  0
+ JDC  CONST_18  C5C  C4C  C3C  O3C   180.00   0.0  0
+ JDC  CONST_19  H11  C8   C8A  C1      0.00   0.0  0
+ JDC  CONST_20  H8   C5   C4A  C4      0.00   0.0  0
+ JDC  CONST_21  H9   C6   C5   C4A   180.00   0.0  0
+ JDC  CONST_22  H41  C6C  C1C  C41     0.00   0.0  0
+ JDC  CONST_23  H37  C2C  C1C  C41     0.00   0.0  0
+ JDC  CONST_24  H40  C5C  C6C  C1C   180.00   0.0  0
+ JDC  CONST_25  H39  C4C  C3C  C2C   180.00   0.0  0
+ JDC  CONST_26  C2A  N2A  C1A  C3    180.00   0.0  0
+ JDC  CONST_27  H12  N2A  C1A  C3      0.00   0.0  0
+ JDC  CONST_28  C2A  N2A  C1A  O1      0.00   0.0  0
+ JDC  Var_01    C4A  C8A  C1   N2    -16.53  30.0  1
+ JDC  Var_02    C5   C4A  C4   C3    163.97  30.0  1
+ JDC  Var_03    C8A  C1   N2   C3     46.54  30.0  1
+ JDC  Var_04    C41  C51  C61  N11    56.28  30.0  1
+ JDC  Var_05    C51  C61  N11  C21   -59.71  30.0  1
+ JDC  Var_06    C61  N11  C21  C31    61.67  30.0  1
+ JDC  Var_07    H18  C3B  C3A  C2A   -61.96  30.0  3
+ JDC  Var_08    H15  C3D  C3A  C2A    55.71  30.0  3
+ JDC  Var_09    C4   C3   N2   C1    -62.94  30.0  1
+ JDC  Var_10    C4A  C4   C3   N2     46.74  30.0  1
+ JDC  Var_11    C41  C31  C21  N11   -58.62  30.0  1
+ JDC  Var_12    C51  C41  C31  C21    52.13  30.0  1
+ JDC  Var_13    C1C  C41  C31  C21   175.07  30.0  1
+ JDC  Var_14    C61  C51  C41  C31   -51.65  30.0  1
+ JDC  Var_15    C6C  C1C  C41  C31  -124.26  30.0  2
+ JDC  Var_16    C2C  C1C  C41  C31    57.08  30.0  2
+ JDC  Var_17    C6C  C1C  C41  C51    -3.93  30.0  2
+ JDC  Var_18    C2C  C1C  C41  C51   177.42  30.0  2
+ JDC  Var_19    C1C  C41  C51  C61  -173.43  30.0  1
+ JDC  Var_20    C1A  C3   N2   C1    174.50  30.0  1
+ JDC  Var_21    C1A  C3   C4   C4A   169.44  30.0  1
+ JDC  Var_22    C34  C31  C21  N11    67.43  30.0  1
+ JDC  Var_23    C4E  C41  C31  C21   -67.04  30.0  1
+ JDC  Var_24    C51  C41  C31  C34   -72.20  30.0  1
+ JDC  Var_25    C1C  C41  C31  C34    50.73  30.0  1
+ JDC  Var_26    C4E  C41  C51  C61    68.49  30.0  1
+ JDC  Var_27    C6C  C1C  C41  C4E   115.52  30.0  2
+ JDC  Var_28    C2C  C1C  C41  C4E   -63.14  30.0  2
+ JDC  Var_29    H5   C3   N2   C1     56.35  30.0  1
+ JDC  Var_30    H6   C4   C3   N2    169.25  30.0  1
+ JDC  Var_31    H7   C4   C3   N2    -74.43  30.0  1
+ JDC  Var_32    H3   N2   C3   C4     58.69  30.0  1
+ JDC  Var_33    H26  C31  C21  N11  -175.98  30.0  1
+ JDC  Var_34    H24  C21  C31  C41  -179.00  30.0  1
+ JDC  Var_35    H25  C21  C31  C41    65.61  30.0  1
+ JDC  Var_36    N2A  C1A  C3   N2   -155.83  30.0  1
+ JDC  Var_37    O1   C1A  C3   N2     26.71  30.0  1
+ JDC  Var_38    N2A  C1A  C3   C4     80.04  30.0  1
+ JDC  Var_39    O1   C1A  C3   C4    -97.42  30.0  1
+ JDC  Var_40    C61  N11  C4D  C2A  -169.24  30.0  3
+ JDC  Var_41    C21  N11  C4D  C2A    65.41  30.0  3
+ JDC  Var_42    C4E  C41  C31  C34   168.62  30.0  1
+ JDC  Var_43    H10  O7   C7   C6     -0.07  30.0  2
+ JDC  Var_44    H21  C4D  N11  C21   -58.26  30.0  1
+ JDC  Var_45    H22  C4D  N11  C21  -174.61  30.0  1
+ JDC  Var_46    H27  C34  C31  C21    58.46  30.0  3
+ JDC  Var_47    H28  C34  C31  C21   178.01  30.0  3
+ JDC  Var_48    H29  C34  C31  C21   -60.68  30.0  3
+ JDC  Var_49    H34  C4E  C41  C31    61.65  30.0  3
+ JDC  Var_50    H35  C4E  C41  C31  -178.65  30.0  3
+ JDC  Var_51    H36  C4E  C41  C31   -58.92  30.0  3
+ JDC  Var_52    H38  O3C  C3C  C2C   179.12  30.0  2
+ JDC  Var_53    N11  C4D  C2A  N2A    38.57  30.0  3
+ JDC  Var_54    N11  C4D  C2A  C3A   162.26  30.0  3
+ JDC  Var_55    H13  C2A  C4D  N11   -78.51  30.0  3
+ JDC  Var_56    C3A  C2A  N2A  C1A   105.19  30.0  2
+ JDC  Var_57    C4D  C2A  N2A  C1A  -131.48  30.0  2
+ JDC  Var_58    C3B  C3A  C2A  N2A   -57.91  30.0  1
+ JDC  Var_59    C3D  C3A  C2A  N2A   178.93  30.0  1
+ JDC  Var_60    C4D  C2A  C3A  C3D    56.81  30.0  3
+ JDC  Var_61    C4D  C2A  C3A  C3B   179.97  30.0  3
+ JDC  Var_62    H14  C3A  C2A  N2A    60.62  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

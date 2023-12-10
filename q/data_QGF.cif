@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QGF  QGF  N-[(2S,4S)-1-({4-[(2,4-dichlorobenzyl)oxy]piperidin-1-yl}sulfonyl)-4-(5-fluoropyrimidin-2-yl)-2-methylpentan-2-yl]-N-hydroxyformamide  ligand  65  36  .  2021-08-20  2021-08-20  
+ QGF  QGF  N-[(2S,4S)-1-({4-[(2,4-dichlorobenzyl)oxy]piperidin-1-yl}sulfonyl)-4-(5-fluoropyrimidin-2-yl)-2-methylpentan-2-yl]-N-hydroxyformamide  ligand  65  36  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QGF
@@ -318,43 +319,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QGF  CONST_01  C21  C20  C19  C18     0.00   0.0  0
- QGF  CONST_02  C21  C23  C24  C18     0.00   0.0  0
- QGF  CONST_03  C23  C24  C18  C19     0.00   0.0  0
- QGF  CONST_04  C23  C21  C20  C19     0.00   0.0  0
- QGF  CONST_05  C24  C18  C19  C20     0.00   0.0  0
- QGF  CONST_06  C24  C23  C21  C20     0.00   0.0  0
- QGF  CONST_07  C33  C32  N31  C30     0.00   0.0  0
- QGF  CONST_08  C33  C35  N36  C30     0.00   0.0  0
- QGF  CONST_09  C35  N36  C30  N31     0.00   0.0  0
- QGF  CONST_10  C35  C33  C32  N31     0.00   0.0  0
- QGF  CONST_11  N36  C30  N31  C32     0.00   0.0  0
- QGF  CONST_12  N36  C35  C33  C32     0.00   0.0  0
- QGF  CONST_13  C19  C20  C21  CL1   180.00   0.0  0
- QGF  CONST_14  C24  C23  C21  CL1   180.00   0.0  0
- QGF  CONST_15  C32  N31  C30  C2    180.00   0.0  0
- QGF  CONST_16  C35  N36  C30  C2    180.00   0.0  0
- QGF  CONST_17  C19  C18  C24  CL2   180.00   0.0  0
- QGF  CONST_18  C21  C23  C24  CL2   180.00   0.0  0
- QGF  CONST_19  C20  C19  C18  C17   180.00   0.0  0
- QGF  CONST_20  C23  C24  C18  C17   180.00   0.0  0
- QGF  CONST_21  F34  C33  C32  N31   180.00   0.0  0
- QGF  CONST_22  N36  C35  C33  F34   180.00   0.0  0
- QGF  CONST_23  H20  C20  C19  C18   180.00   0.0  0
- QGF  CONST_24  H23  C23  C24  C18   180.00   0.0  0
- QGF  CONST_25  H19  C19  C20  C21   180.00   0.0  0
- QGF  CONST_26  H32  C32  N31  C30   180.00   0.0  0
- QGF  CONST_27  H35  C35  N36  C30   180.00   0.0  0
- QGF  CONST_28  O29  C28  N26  C4    180.00   0.0  0
- QGF  CONST_29  O29  C28  N26  O27     0.00   0.0  0
- QGF  Var_01    C13  C12  C11  N10   -53.07  30.0  1
- QGF  Var_02    C13  C14  C15  N10    54.75  30.0  1
- QGF  Var_03    C14  C15  N10  C11   -52.93  30.0  1
- QGF  Var_04    C15  N10  C11  C12    52.06  30.0  1
- QGF  Var_05    C11  N10  S7   C6     74.97  30.0  3
- QGF  Var_06    C18  C17  O16  C13   178.26  30.0  3
- QGF  Var_07    C19  C18  C17  O16    -3.09  30.0  2
- QGF  Var_08    N10  S7   C6   C4   -165.75  30.0  3
+ QGF  CONST_01  C21   C20  C19  C18     0.00   0.0  0
+ QGF  CONST_02  C21   C23  C24  C18     0.00   0.0  0
+ QGF  CONST_03  C23   C24  C18  C19     0.00   0.0  0
+ QGF  CONST_04  C23   C21  C20  C19     0.00   0.0  0
+ QGF  CONST_05  C24   C18  C19  C20     0.00   0.0  0
+ QGF  CONST_06  C24   C23  C21  C20     0.00   0.0  0
+ QGF  CONST_07  C33   C32  N31  C30     0.00   0.0  0
+ QGF  CONST_08  C33   C35  N36  C30     0.00   0.0  0
+ QGF  CONST_09  C35   N36  C30  N31     0.00   0.0  0
+ QGF  CONST_10  C35   C33  C32  N31     0.00   0.0  0
+ QGF  CONST_11  N36   C30  N31  C32     0.00   0.0  0
+ QGF  CONST_12  N36   C35  C33  C32     0.00   0.0  0
+ QGF  CONST_13  C19   C20  C21  CL1   180.00   0.0  0
+ QGF  CONST_14  C24   C23  C21  CL1   180.00   0.0  0
+ QGF  CONST_15  C32   N31  C30  C2    180.00   0.0  0
+ QGF  CONST_16  C35   N36  C30  C2    180.00   0.0  0
+ QGF  CONST_17  C19   C18  C24  CL2   180.00   0.0  0
+ QGF  CONST_18  C21   C23  C24  CL2   180.00   0.0  0
+ QGF  CONST_19  C20   C19  C18  C17   180.00   0.0  0
+ QGF  CONST_20  C23   C24  C18  C17   180.00   0.0  0
+ QGF  CONST_21  F34   C33  C32  N31   180.00   0.0  0
+ QGF  CONST_22  N36   C35  C33  F34   180.00   0.0  0
+ QGF  CONST_23  H20   C20  C19  C18   180.00   0.0  0
+ QGF  CONST_24  H23   C23  C24  C18   180.00   0.0  0
+ QGF  CONST_25  H19   C19  C20  C21   180.00   0.0  0
+ QGF  CONST_26  H32   C32  N31  C30   180.00   0.0  0
+ QGF  CONST_27  H35   C35  N36  C30   180.00   0.0  0
+ QGF  CONST_28  O29   C28  N26  C4    180.00   0.0  0
+ QGF  CONST_29  O29   C28  N26  O27     0.00   0.0  0
+ QGF  Var_01    C13   C12  C11  N10   -53.07  30.0  1
+ QGF  Var_02    C13   C14  C15  N10    54.75  30.0  1
+ QGF  Var_03    C14   C15  N10  C11   -52.93  30.0  1
+ QGF  Var_04    C15   N10  C11  C12    52.06  30.0  1
+ QGF  Var_05    C11   N10  S7   C6     74.97  30.0  3
+ QGF  Var_06    C18   C17  O16  C13   178.26  30.0  3
+ QGF  Var_07    C19   C18  C17  O16    -3.09  30.0  2
+ QGF  Var_08    N10   S7   C6   C4   -165.75  30.0  3
+ QGF  Var_09    C14   C13  C12  C11    55.69  30.0  1
+ QGF  Var_10    C15   C14  C13  C12   -56.61  30.0  1
+ QGF  Var_11    O16   C13  C12  C11   178.57  30.0  1
+ QGF  Var_12    O16   C13  C14  C15  -177.14  30.0  1
+ QGF  Var_13    H13   C13  C12  C11   -62.83  30.0  1
+ QGF  Var_14    N31   C30  C2   C1    124.15  30.0  2
+ QGF  Var_15    N36   C30  C2   C1    -55.36  30.0  2
+ QGF  Var_16    N31   C30  C2   C3   -113.13  30.0  2
+ QGF  Var_17    N36   C30  C2   C3     67.35  30.0  2
+ QGF  Var_18    C17   O16  C13  C12   160.24  30.0  3
+ QGF  Var_19    C17   O16  C13  C14   -78.19  30.0  3
+ QGF  Var_20    H2    C2   C30  N31     6.59  30.0  2
+ QGF  Var_21    C30   C2   C3   C4     58.19  30.0  2
+ QGF  Var_22    H1    C1   C2   C30  -176.94  30.0  3
+ QGF  Var_23    H1A   C1   C2   C30   -57.49  30.0  3
+ QGF  Var_24    H1B   C1   C2   C30    63.02  30.0  3
+ QGF  Var_25    H3    C3   C2   C30   177.95  30.0  3
+ QGF  Var_26    H3A   C3   C2   C30   -68.34  30.0  3
+ QGF  Var_27    C4    C3   C2   C1   -178.25  30.0  3
+ QGF  Var_28    C5    C4   C3   C2     52.24  30.0  3
+ QGF  Var_29    C6    C4   C3   C2    172.04  30.0  3
+ QGF  Var_30    N26   C4   C3   C2    -68.90  30.0  3
+ QGF  Var_31    S7    C6   C4   C3   -178.95  30.0  3
+ QGF  Var_32    O27   N26  C4   C3    138.15  30.0  3
+ QGF  Var_33    C28   N26  C4   C3    -57.59  30.0  3
+ QGF  Var_34    S7    C6   C4   C5    -60.37  30.0  3
+ QGF  Var_35    O27   N26  C4   C5     17.44  30.0  3
+ QGF  Var_36    C28   N26  C4   C5   -178.30  30.0  3
+ QGF  Var_37    O27   N26  C4   C6   -105.62  30.0  3
+ QGF  Var_38    C28   N26  C4   C6     58.64  30.0  3
+ QGF  Var_39    N26   C4   C6   S7     62.01  30.0  1
+ QGF  Var_40    H5    C5   C4   C3     56.05  30.0  3
+ QGF  Var_41    H5A   C5   C4   C3    175.48  30.0  3
+ QGF  Var_42    H5B   C5   C4   C3    -62.69  30.0  3
+ QGF  Var_43    HO27  O27  N26  C4     85.76  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

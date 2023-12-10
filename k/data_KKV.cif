@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KKV  KKV  '4-[2-(4-fluorophenyl)-5-hydroxy-6-oxo-1,6-dihydropyridin-3-yl]benzoic acid'  ligand  35  24  .  2021-08-12  2021-08-12  
+ KKV  KKV  '4-[2-(4-fluorophenyl)-5-hydroxy-6-oxo-1,6-dihydropyridin-3-yl]benzoic acid'  ligand  35  24  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KKV
@@ -195,40 +196,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KKV  CONST_01  C10   C09  C08  C07    0.00   0.0  0
- KKV  CONST_02  C10   C14  C15  C07    0.00   0.0  0
- KKV  CONST_03  C14   C10  C09  C08    0.00   0.0  0
- KKV  CONST_04  C14   C15  C07  C08    0.00   0.0  0
- KKV  CONST_05  C15   C14  C10  C09    0.00   0.0  0
- KKV  CONST_06  C15   C07  C08  C09    0.00   0.0  0
- KKV  CONST_07  C20   C19  C18  C17    0.00   0.0  0
- KKV  CONST_08  C20   C22  C23  C17    0.00   0.0  0
- KKV  CONST_09  C22   C20  C19  C18    0.00   0.0  0
- KKV  CONST_10  C22   C23  C17  C18    0.00   0.0  0
- KKV  CONST_11  C23   C22  C20  C19    0.00   0.0  0
- KKV  CONST_12  C23   C17  C18  C19    0.00   0.0  0
- KKV  CONST_13  C09   C08  C07  C06  180.00   0.0  0
- KKV  CONST_14  C14   C15  C07  C06  180.00   0.0  0
- KKV  CONST_15  C19   C18  C17  C16  180.00   0.0  0
- KKV  CONST_16  C22   C23  C17  C16  180.00   0.0  0
- KKV  CONST_17  C16   N24  C02  C03    0.00   0.0  0
- KKV  CONST_18  C11   C10  C09  C08  180.00   0.0  0
- KKV  CONST_19  C15   C14  C10  C11  180.00   0.0  0
- KKV  CONST_20  F21   C20  C19  C18  180.00   0.0  0
- KKV  CONST_21  C23   C22  C20  F21  180.00   0.0  0
- KKV  CONST_22  C16   N24  C02  O01  180.00   0.0  0
- KKV  CONST_23  H081  C08  C07  C06    0.00   0.0  0
- KKV  CONST_24  H151  C15  C07  C06    0.00   0.0  0
- KKV  CONST_25  H091  C09  C08  C07  180.00   0.0  0
- KKV  CONST_26  H141  C14  C15  C07  180.00   0.0  0
- KKV  CONST_27  H181  C18  C17  C16    0.00   0.0  0
- KKV  CONST_28  H231  C23  C17  C16    0.00   0.0  0
- KKV  CONST_29  H191  C19  C18  C17  180.00   0.0  0
- KKV  CONST_30  H221  C22  C23  C17  180.00   0.0  0
- KKV  CONST_31  H241  N24  C02  C03  180.00   0.0  0
- KKV  Var_01    C08   C07  C06  C05  -53.76  30.0  2
- KKV  Var_02    C18   C17  C16  C06  137.11  30.0  2
- KKV  Var_03    O12   C11  C10  C09    0.82  30.0  2
+ KKV  CONST_01  C10   C09  C08  C07     0.00   0.0  0
+ KKV  CONST_02  C10   C14  C15  C07     0.00   0.0  0
+ KKV  CONST_03  C14   C10  C09  C08     0.00   0.0  0
+ KKV  CONST_04  C14   C15  C07  C08     0.00   0.0  0
+ KKV  CONST_05  C15   C14  C10  C09     0.00   0.0  0
+ KKV  CONST_06  C15   C07  C08  C09     0.00   0.0  0
+ KKV  CONST_07  C20   C19  C18  C17     0.00   0.0  0
+ KKV  CONST_08  C20   C22  C23  C17     0.00   0.0  0
+ KKV  CONST_09  C22   C20  C19  C18     0.00   0.0  0
+ KKV  CONST_10  C22   C23  C17  C18     0.00   0.0  0
+ KKV  CONST_11  C23   C22  C20  C19     0.00   0.0  0
+ KKV  CONST_12  C23   C17  C18  C19     0.00   0.0  0
+ KKV  CONST_13  C09   C08  C07  C06   180.00   0.0  0
+ KKV  CONST_14  C14   C15  C07  C06   180.00   0.0  0
+ KKV  CONST_15  C19   C18  C17  C16   180.00   0.0  0
+ KKV  CONST_16  C22   C23  C17  C16   180.00   0.0  0
+ KKV  CONST_17  C16   N24  C02  C03     0.00   0.0  0
+ KKV  CONST_18  C11   C10  C09  C08   180.00   0.0  0
+ KKV  CONST_19  C15   C14  C10  C11   180.00   0.0  0
+ KKV  CONST_20  F21   C20  C19  C18   180.00   0.0  0
+ KKV  CONST_21  C23   C22  C20  F21   180.00   0.0  0
+ KKV  CONST_22  C16   N24  C02  O01   180.00   0.0  0
+ KKV  CONST_23  H081  C08  C07  C06     0.00   0.0  0
+ KKV  CONST_24  H151  C15  C07  C06     0.00   0.0  0
+ KKV  CONST_25  H091  C09  C08  C07   180.00   0.0  0
+ KKV  CONST_26  H141  C14  C15  C07   180.00   0.0  0
+ KKV  CONST_27  H181  C18  C17  C16     0.00   0.0  0
+ KKV  CONST_28  H231  C23  C17  C16     0.00   0.0  0
+ KKV  CONST_29  H191  C19  C18  C17   180.00   0.0  0
+ KKV  CONST_30  H221  C22  C23  C17   180.00   0.0  0
+ KKV  CONST_31  H241  N24  C02  C03   180.00   0.0  0
+ KKV  Var_01    C08   C07  C06  C05   -53.76  30.0  2
+ KKV  Var_02    C18   C17  C16  C06   137.11  30.0  2
+ KKV  Var_03    O12   C11  C10  C09     0.82  30.0  2
+ KKV  Var_04    C17   C16  N24  C02  -178.89  30.0  1
+ KKV  Var_05    C06   C16  N24  C02     0.33  30.0  1
+ KKV  Var_06    C06   C05  C03  C02    -1.01  30.0  1
+ KKV  Var_07    C07   C06  C05  C03  -176.72  30.0  1
+ KKV  Var_08    C16   C06  C05  C03     2.22  30.0  1
+ KKV  Var_09    C17   C16  C06  C05   177.30  30.0  1
+ KKV  Var_10    N24   C16  C06  C05    -1.84  30.0  1
+ KKV  Var_11    N24   C02  C03  C05    -0.50  30.0  1
+ KKV  Var_12    C17   C16  C06  C07    -3.83  30.0  1
+ KKV  Var_13    N24   C16  C06  C07   177.04  30.0  1
+ KKV  Var_14    C05   C03  C02  O01  -179.64  30.0  1
+ KKV  Var_15    C06   C05  C03  O04   179.15  30.0  1
+ KKV  Var_16    N24   C02  C03  O04   179.35  30.0  1
+ KKV  Var_17    H051  C05  C03  C02   179.93  30.0  1
+ KKV  Var_18    O04   C03  C02  O01     0.21  30.0  1
+ KKV  Var_19    H041  O04  C03  C02     0.24  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RT8  RT8  Nalpha-[(trans-4-methylcyclohexyl)carbonyl]-N-pyridin-4-yl-D-tryptophanamide  ligand  58  30  .  2021-08-23  2021-08-23  
+ RT8  RT8  Nalpha-[(trans-4-methylcyclohexyl)carbonyl]-N-pyridin-4-yl-D-tryptophanamide  ligand  58  30  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RT8
@@ -293,55 +294,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RT8  CONST_01  N1   C3   C4   C5     0.00   0.0  0
- RT8  CONST_02  N1   C2   C1   C5     0.00   0.0  0
- RT8  CONST_03  C2   C1   C5   C4     0.00   0.0  0
- RT8  CONST_04  C2   N1   C3   C4     0.00   0.0  0
- RT8  CONST_05  C1   C5   C4   C3     0.00   0.0  0
- RT8  CONST_06  C1   C2   N1   C3     0.00   0.0  0
- RT8  CONST_07  C22  C21  C20  C17  180.00   0.0  0
- RT8  CONST_08  C24  C19  C20  C17  180.00   0.0  0
- RT8  CONST_09  N4   C19  C20  C17    0.00   0.0  0
- RT8  CONST_10  C19  N4   C18  C17    0.00   0.0  0
- RT8  CONST_11  N4   C18  C17  C20    0.00   0.0  0
- RT8  CONST_12  C23  C22  C21  C20    0.00   0.0  0
- RT8  CONST_13  C23  C24  C19  C20    0.00   0.0  0
- RT8  CONST_14  C18  N4   C19  C20    0.00   0.0  0
- RT8  CONST_15  C18  C17  C20  C21  180.00   0.0  0
- RT8  CONST_16  C24  C19  C20  C21    0.00   0.0  0
- RT8  CONST_17  N4   C19  C20  C21  180.00   0.0  0
- RT8  CONST_18  C24  C23  C22  C21    0.00   0.0  0
- RT8  CONST_19  C19  C20  C21  C22    0.00   0.0  0
- RT8  CONST_20  C19  C24  C23  C22    0.00   0.0  0
- RT8  CONST_21  N4   C19  C24  C23  180.00   0.0  0
- RT8  CONST_22  C18  N4   C19  C24  180.00   0.0  0
- RT8  CONST_23  C18  C17  C20  C19    0.00   0.0  0
- RT8  CONST_24  C3   C4   C5   N2   180.00   0.0  0
- RT8  CONST_25  C2   C1   C5   N2   180.00   0.0  0
- RT8  CONST_26  C21  C20  C17  C16    0.00   0.0  0
- RT8  CONST_27  C19  C20  C17  C16  180.00   0.0  0
- RT8  CONST_28  N4   C18  C17  C16  180.00   0.0  0
- RT8  CONST_29  H3   C3   C4   C5   180.00   0.0  0
- RT8  CONST_30  HA   C2   C1   C5   180.00   0.0  0
- RT8  CONST_31  H1   C1   C5   C4   180.00   0.0  0
- RT8  CONST_32  H4   C4   C3   N1   180.00   0.0  0
- RT8  CONST_33  H21  C21  C20  C17    0.00   0.0  0
- RT8  CONST_34  HC   N4   C18  C17  180.00   0.0  0
- RT8  CONST_35  H18  C18  C17  C20  180.00   0.0  0
- RT8  CONST_36  H22  C22  C21  C20  180.00   0.0  0
- RT8  CONST_37  H24  C24  C19  C20  180.00   0.0  0
- RT8  CONST_38  H23  C23  C22  C21  180.00   0.0  0
- RT8  CONST_39  C4   C5   N2   C6   180.00   0.0  0
- RT8  CONST_40  C1   C5   N2   C6     0.00   0.0  0
- RT8  CONST_41  H2   N2   C5   C4     0.00   0.0  0
- RT8  CONST_42  C5   N2   C6   O2     0.00   0.0  0
- RT8  CONST_43  C7   C6   N2   C5   180.00   0.0  0
- RT8  CONST_44  C9   C8   N3   C7   180.00   0.0  0
- RT8  CONST_45  HB   N3   C8   C9     0.00   0.0  0
- RT8  CONST_46  O1   C8   N3   C7     0.00   0.0  0
- RT8  Var_01    C12  C14  C15  C9    56.61  30.0  1
- RT8  Var_02    C12  C11  C10  C9   -56.06  30.0  1
- RT8  Var_03    C20  C17  C16  C7    70.77  30.0  2
+ RT8  CONST_01  N1    C3   C4   C5      0.00   0.0  0
+ RT8  CONST_02  N1    C2   C1   C5      0.00   0.0  0
+ RT8  CONST_03  C2    C1   C5   C4      0.00   0.0  0
+ RT8  CONST_04  C2    N1   C3   C4      0.00   0.0  0
+ RT8  CONST_05  C1    C5   C4   C3      0.00   0.0  0
+ RT8  CONST_06  C1    C2   N1   C3      0.00   0.0  0
+ RT8  CONST_07  C22   C21  C20  C17   180.00   0.0  0
+ RT8  CONST_08  C24   C19  C20  C17   180.00   0.0  0
+ RT8  CONST_09  N4    C19  C20  C17     0.00   0.0  0
+ RT8  CONST_10  C19   N4   C18  C17     0.00   0.0  0
+ RT8  CONST_11  N4    C18  C17  C20     0.00   0.0  0
+ RT8  CONST_12  C23   C22  C21  C20     0.00   0.0  0
+ RT8  CONST_13  C23   C24  C19  C20     0.00   0.0  0
+ RT8  CONST_14  C18   N4   C19  C20     0.00   0.0  0
+ RT8  CONST_15  C18   C17  C20  C21   180.00   0.0  0
+ RT8  CONST_16  C24   C19  C20  C21     0.00   0.0  0
+ RT8  CONST_17  N4    C19  C20  C21   180.00   0.0  0
+ RT8  CONST_18  C24   C23  C22  C21     0.00   0.0  0
+ RT8  CONST_19  C19   C20  C21  C22     0.00   0.0  0
+ RT8  CONST_20  C19   C24  C23  C22     0.00   0.0  0
+ RT8  CONST_21  N4    C19  C24  C23   180.00   0.0  0
+ RT8  CONST_22  C18   N4   C19  C24   180.00   0.0  0
+ RT8  CONST_23  C18   C17  C20  C19     0.00   0.0  0
+ RT8  CONST_24  C3    C4   C5   N2    180.00   0.0  0
+ RT8  CONST_25  C2    C1   C5   N2    180.00   0.0  0
+ RT8  CONST_26  C21   C20  C17  C16     0.00   0.0  0
+ RT8  CONST_27  C19   C20  C17  C16   180.00   0.0  0
+ RT8  CONST_28  N4    C18  C17  C16   180.00   0.0  0
+ RT8  CONST_29  H3    C3   C4   C5    180.00   0.0  0
+ RT8  CONST_30  HA    C2   C1   C5    180.00   0.0  0
+ RT8  CONST_31  H1    C1   C5   C4    180.00   0.0  0
+ RT8  CONST_32  H4    C4   C3   N1    180.00   0.0  0
+ RT8  CONST_33  H21   C21  C20  C17     0.00   0.0  0
+ RT8  CONST_34  HC    N4   C18  C17   180.00   0.0  0
+ RT8  CONST_35  H18   C18  C17  C20   180.00   0.0  0
+ RT8  CONST_36  H22   C22  C21  C20   180.00   0.0  0
+ RT8  CONST_37  H24   C24  C19  C20   180.00   0.0  0
+ RT8  CONST_38  H23   C23  C22  C21   180.00   0.0  0
+ RT8  CONST_39  C4    C5   N2   C6    180.00   0.0  0
+ RT8  CONST_40  C1    C5   N2   C6      0.00   0.0  0
+ RT8  CONST_41  H2    N2   C5   C4      0.00   0.0  0
+ RT8  CONST_42  C5    N2   C6   O2      0.00   0.0  0
+ RT8  CONST_43  C7    C6   N2   C5    180.00   0.0  0
+ RT8  CONST_44  C9    C8   N3   C7    180.00   0.0  0
+ RT8  CONST_45  HB    N3   C8   C9      0.00   0.0  0
+ RT8  CONST_46  O1    C8   N3   C7      0.00   0.0  0
+ RT8  Var_01    C12   C14  C15  C9     56.61  30.0  1
+ RT8  Var_02    C12   C11  C10  C9    -56.06  30.0  1
+ RT8  Var_03    C20   C17  C16  C7     70.77  30.0  2
+ RT8  Var_04    C11   C10  C9   C15    55.88  30.0  1
+ RT8  Var_05    C11   C12  C14  C15   -55.38  30.0  1
+ RT8  Var_06    C10   C9   C15  C14   -55.99  30.0  1
+ RT8  Var_07    C10   C11  C12  C14    55.10  30.0  1
+ RT8  Var_08    C14   C15  C9   C8   -177.85  30.0  1
+ RT8  Var_09    C11   C10  C9   C8    179.61  30.0  1
+ RT8  Var_10    C13   C12  C14  C15  -179.33  30.0  1
+ RT8  Var_11    C10   C11  C12  C13   179.15  30.0  1
+ RT8  Var_12    H101  C10  C9   C15   178.27  30.0  1
+ RT8  Var_13    H102  C10  C9   C15   -64.84  30.0  1
+ RT8  Var_14    H12   C12  C14  C15    61.76  30.0  1
+ RT8  Var_15    H9    C9   C15  C14    61.96  30.0  1
+ RT8  Var_16    C15   C9   C8   N3   -150.82  30.0  3
+ RT8  Var_17    C10   C9   C8   N3     86.48  30.0  3
+ RT8  Var_18    C15   C9   C8   O1     31.73  30.0  3
+ RT8  Var_19    C10   C9   C8   O1    -90.96  30.0  3
+ RT8  Var_20    H131  C13  C12  C14    62.09  30.0  3
+ RT8  Var_21    H132  C13  C12  C14  -178.00  30.0  3
+ RT8  Var_22    H133  C13  C12  C14   -57.76  30.0  3
+ RT8  Var_23    C17   C16  C7   C6    175.51  30.0  3
+ RT8  Var_24    C17   C16  C7   N3     55.38  30.0  3
+ RT8  Var_25    H7    C7   C16  C17   -65.28  30.0  2
+ RT8  Var_26    N3    C7   C6   O2     40.73  30.0  3
+ RT8  Var_27    C16   C7   C6   O2    -79.49  30.0  3
+ RT8  Var_28    C8    N3   C7   C6     56.43  30.0  3
+ RT8  Var_29    N3    C7   C6   N2   -142.92  30.0  3
+ RT8  Var_30    C16   C7   C6   N2     96.87  30.0  3
+ RT8  Var_31    C16   C7   N3   C8    175.43  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- E3P  E3P  N~2~-[3-(1,1':4',1''-terphenyl-4-yl)propanoyl]-L-alpha-glutamine  ligand  57  32  .  2021-08-08  2021-08-08  
+ E3P  E3P  N~2~-[3-(1,1':4',1''-terphenyl-4-yl)propanoyl]-L-alpha-glutamine  ligand  57  32  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_E3P
@@ -287,50 +288,67 @@ _chem_comp_tor.period
  E3P  CONST_05  C19   C12  C11  C10   180.00   0.0  0
  E3P  CONST_06  C14   C9   C10  C11     0.00   0.0  0
  E3P  CONST_07  C14   C13  C12  C11     0.00   0.0  0
- E3P  CONST_10  C16   C17  C19  C12   180.00   0.0  0
- E3P  CONST_11  C36   C35  C19  C12   180.00   0.0  0
- E3P  CONST_14  C19   C12  C13  C14   180.00   0.0  0
- E3P  CONST_15  C19   C35  C36  C15     0.00   0.0  0
- E3P  CONST_16  C19   C17  C16  C15     0.00   0.0  0
- E3P  CONST_17  C39   C38  C37  C15   180.00   0.0  0
- E3P  CONST_18  C41   C42  C37  C15   180.00   0.0  0
- E3P  CONST_19  C35   C36  C15  C16     0.00   0.0  0
- E3P  CONST_22  C35   C19  C17  C16     0.00   0.0  0
- E3P  CONST_23  C36   C15  C16  C17     0.00   0.0  0
- E3P  CONST_24  C37   C15  C16  C17   180.00   0.0  0
- E3P  CONST_25  C36   C35  C19  C17     0.00   0.0  0
- E3P  CONST_26  C37   C15  C36  C35   180.00   0.0  0
- E3P  CONST_29  C40   C39  C38  C37     0.00   0.0  0
- E3P  CONST_30  C40   C41  C42  C37     0.00   0.0  0
- E3P  CONST_31  C41   C42  C37  C38     0.00   0.0  0
- E3P  CONST_32  C41   C40  C39  C38     0.00   0.0  0
- E3P  CONST_33  C42   C37  C38  C39     0.00   0.0  0
- E3P  CONST_34  C42   C41  C40  C39     0.00   0.0  0
- E3P  CONST_35  C11   C10  C9   C8    180.00   0.0  0
- E3P  CONST_36  C13   C14  C9   C8    180.00   0.0  0
- E3P  CONST_37  H11   C11  C10  C9    180.00   0.0  0
- E3P  CONST_38  H13   C13  C14  C9    180.00   0.0  0
- E3P  CONST_39  H14   C14  C9   C10   180.00   0.0  0
- E3P  CONST_40  H10   C10  C11  C12   180.00   0.0  0
- E3P  CONST_41  H17   C17  C19  C12     0.00   0.0  0
- E3P  CONST_42  H35   C35  C19  C12     0.00   0.0  0
- E3P  CONST_43  H38   C38  C37  C15     0.00   0.0  0
- E3P  CONST_44  H42   C42  C37  C15     0.00   0.0  0
- E3P  CONST_45  H36   C36  C15  C16   180.00   0.0  0
- E3P  CONST_46  H16   C16  C17  C19   180.00   0.0  0
- E3P  CONST_47  H39   C39  C38  C37   180.00   0.0  0
- E3P  CONST_48  H41   C41  C42  C37   180.00   0.0  0
- E3P  CONST_49  H40   C40  C39  C38   180.00   0.0  0
- E3P  CONST_50  C4    N1   C6   O2      0.00   0.0  0
- E3P  CONST_51  C7    C6   N1   C4    180.00   0.0  0
- E3P  CONST_52  HN1   N1   C6   O2    180.00   0.0  0
- E3P  CONST_53  HN3   N3   C5   C4      0.00   0.0  0
- E3P  CONST_54  HN3A  N3   C5   C4    180.00   0.0  0
+ E3P  CONST_08  C16   C17  C19  C12   180.00   0.0  0
+ E3P  CONST_09  C36   C35  C19  C12   180.00   0.0  0
+ E3P  CONST_10  C19   C12  C13  C14   180.00   0.0  0
+ E3P  CONST_11  C19   C35  C36  C15     0.00   0.0  0
+ E3P  CONST_12  C19   C17  C16  C15     0.00   0.0  0
+ E3P  CONST_13  C39   C38  C37  C15   180.00   0.0  0
+ E3P  CONST_14  C41   C42  C37  C15   180.00   0.0  0
+ E3P  CONST_15  C35   C36  C15  C16     0.00   0.0  0
+ E3P  CONST_16  C35   C19  C17  C16     0.00   0.0  0
+ E3P  CONST_17  C36   C15  C16  C17     0.00   0.0  0
+ E3P  CONST_18  C37   C15  C16  C17   180.00   0.0  0
+ E3P  CONST_19  C36   C35  C19  C17     0.00   0.0  0
+ E3P  CONST_20  C37   C15  C36  C35   180.00   0.0  0
+ E3P  CONST_21  C40   C39  C38  C37     0.00   0.0  0
+ E3P  CONST_22  C40   C41  C42  C37     0.00   0.0  0
+ E3P  CONST_23  C41   C42  C37  C38     0.00   0.0  0
+ E3P  CONST_24  C41   C40  C39  C38     0.00   0.0  0
+ E3P  CONST_25  C42   C37  C38  C39     0.00   0.0  0
+ E3P  CONST_26  C42   C41  C40  C39     0.00   0.0  0
+ E3P  CONST_27  C11   C10  C9   C8    180.00   0.0  0
+ E3P  CONST_28  C13   C14  C9   C8    180.00   0.0  0
+ E3P  CONST_29  H11   C11  C10  C9    180.00   0.0  0
+ E3P  CONST_30  H13   C13  C14  C9    180.00   0.0  0
+ E3P  CONST_31  H14   C14  C9   C10   180.00   0.0  0
+ E3P  CONST_32  H10   C10  C11  C12   180.00   0.0  0
+ E3P  CONST_33  H17   C17  C19  C12     0.00   0.0  0
+ E3P  CONST_34  H35   C35  C19  C12     0.00   0.0  0
+ E3P  CONST_35  H38   C38  C37  C15     0.00   0.0  0
+ E3P  CONST_36  H42   C42  C37  C15     0.00   0.0  0
+ E3P  CONST_37  H36   C36  C15  C16   180.00   0.0  0
+ E3P  CONST_38  H16   C16  C17  C19   180.00   0.0  0
+ E3P  CONST_39  H39   C39  C38  C37   180.00   0.0  0
+ E3P  CONST_40  H41   C41  C42  C37   180.00   0.0  0
+ E3P  CONST_41  H40   C40  C39  C38   180.00   0.0  0
+ E3P  CONST_42  C4    N1   C6   O2      0.00   0.0  0
+ E3P  CONST_43  C7    C6   N1   C4    180.00   0.0  0
+ E3P  CONST_44  HN1   N1   C6   O2    180.00   0.0  0
+ E3P  CONST_45  HN3   N3   C5   C4      0.00   0.0  0
+ E3P  CONST_46  HN3A  N3   C5   C4    180.00   0.0  0
  E3P  Var_01    C10   C9   C8   C7    -89.07  30.0  2
  E3P  Var_02    C9    C8   C7   C6    178.52  30.0  3
  E3P  Var_03    C4    C3   C2   C1   -176.44  30.0  1
  E3P  Var_04    C8    C7   C6   N1    133.58  30.0  3
  E3P  Var_05    O6    C1   C2   C3      7.95  30.0  3
+ E3P  Var_06    C17   C19  C12  C11   144.19  30.0  2
+ E3P  Var_07    C35   C19  C12  C11   -35.91  30.0  2
+ E3P  Var_08    C17   C19  C12  C13   -36.19  30.0  2
+ E3P  Var_09    C35   C19  C12  C13   143.71  30.0  2
+ E3P  Var_10    C38   C37  C15  C16    36.22  30.0  2
+ E3P  Var_11    C42   C37  C15  C16  -143.87  30.0  2
+ E3P  Var_12    C38   C37  C15  C36  -143.75  30.0  2
+ E3P  Var_13    C42   C37  C15  C36    36.15  30.0  2
+ E3P  Var_14    C2    C3   C4   N1    -64.05  30.0  3
+ E3P  Var_15    N3    C5   C4   N1    149.46  30.0  1
+ E3P  Var_16    O5    C5   C4   N1    -33.41  30.0  1
+ E3P  Var_17    C5    C4   C3   C2    174.23  30.0  2
+ E3P  Var_18    C6    N1   C4   C3    174.35  30.0  3
+ E3P  Var_19    N3    C5   C4   C3    -88.82  30.0  1
+ E3P  Var_20    O5    C5   C4   C3     88.31  30.0  1
+ E3P  Var_21    C6    N1   C4   C5    -64.47  30.0  3
+ E3P  Var_22    H4    C4   C3   C2     55.30  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

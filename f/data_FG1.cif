@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FG1  FG1  N-(bromoacetyl)-beta-alanyl-N-(2-{4-[(carboxycarbonyl)amino]phenyl}ethyl)-L-serinamide  ligand  52  30  .  2021-08-09  2021-08-09  
+ FG1  FG1  N-(bromoacetyl)-beta-alanyl-N-(2-{4-[(carboxycarbonyl)amino]phenyl}ethyl)-L-serinamide  ligand  52  30  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FG1
@@ -257,40 +258,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FG1  CONST_01  C19  C24  C23  C22     0.00   0.0  0
- FG1  CONST_02  C19  C20  C21  C22     0.00   0.0  0
- FG1  CONST_03  C20  C21  C22  C23     0.00   0.0  0
- FG1  CONST_04  C20  C19  C24  C23     0.00   0.0  0
- FG1  CONST_05  C21  C22  C23  C24     0.00   0.0  0
- FG1  CONST_06  C21  C20  C19  C24     0.00   0.0  0
- FG1  CONST_07  C24  C23  C22  N25   180.00   0.0  0
- FG1  CONST_08  C20  C21  C22  N25   180.00   0.0  0
- FG1  CONST_09  C18  C19  C24  C23   180.00   0.0  0
- FG1  CONST_10  C18  C19  C20  C21   180.00   0.0  0
- FG1  CONST_11  H24  C24  C23  C22   180.00   0.0  0
- FG1  CONST_12  H20  C20  C21  C22   180.00   0.0  0
- FG1  CONST_13  H21  C21  C22  C23   180.00   0.0  0
- FG1  CONST_14  H23  C23  C24  C19   180.00   0.0  0
- FG1  CONST_15  C23  C22  N25  C26     0.00   0.0  0
- FG1  CONST_16  C21  C22  N25  C26   180.00   0.0  0
- FG1  CONST_17  H25  N25  C22  C23   180.00   0.0  0
- FG1  CONST_18  C22  N25  C26  C27   180.00   0.0  0
- FG1  CONST_19  C22  N25  C26  O29     0.00   0.0  0
- FG1  CONST_22  O9   C8   N10  C11     0.00   0.0  0
- FG1  CONST_23  C7   C8   N10  C11   180.00   0.0  0
- FG1  CONST_24  O4   C3   N5   C6      0.00   0.0  0
- FG1  CONST_25  C2   C3   N5   C6    180.00   0.0  0
- FG1  CONST_26  H16  N16  C12  O13   180.00   0.0  0
- FG1  CONST_27  H10  N10  C8   O9    180.00   0.0  0
- FG1  CONST_28  HN5  N5   C3   O4    180.00   0.0  0
- FG1  Var_01    C17  C18  C19  C24  -100.00  30.0  2
- FG1  Var_02    N16  C17  C18  C19    36.99  30.0  3
- FG1  Var_03    O29  C26  C27  O30    -1.06  30.0  2
- FG1  Var_04    C12  N16  C17  C18    61.56  30.0  3
- FG1  Var_05    C6   C7   C8   N10  -147.64  30.0  3
- FG1  Var_06    N5   C6   C7   C8     64.55  30.0  3
- FG1  Var_07    C3   N5   C6   C7     80.23  30.0  3
- FG1  Var_08    BR1  C2   C3   N5    130.36  30.0  3
+ FG1  CONST_01  C19   C24  C23  C22     0.00   0.0  0
+ FG1  CONST_02  C19   C20  C21  C22     0.00   0.0  0
+ FG1  CONST_03  C20   C21  C22  C23     0.00   0.0  0
+ FG1  CONST_04  C20   C19  C24  C23     0.00   0.0  0
+ FG1  CONST_05  C21   C22  C23  C24     0.00   0.0  0
+ FG1  CONST_06  C21   C20  C19  C24     0.00   0.0  0
+ FG1  CONST_07  C24   C23  C22  N25   180.00   0.0  0
+ FG1  CONST_08  C20   C21  C22  N25   180.00   0.0  0
+ FG1  CONST_09  C18   C19  C24  C23   180.00   0.0  0
+ FG1  CONST_10  C18   C19  C20  C21   180.00   0.0  0
+ FG1  CONST_11  H24   C24  C23  C22   180.00   0.0  0
+ FG1  CONST_12  H20   C20  C21  C22   180.00   0.0  0
+ FG1  CONST_13  H21   C21  C22  C23   180.00   0.0  0
+ FG1  CONST_14  H23   C23  C24  C19   180.00   0.0  0
+ FG1  CONST_15  C23   C22  N25  C26     0.00   0.0  0
+ FG1  CONST_16  C21   C22  N25  C26   180.00   0.0  0
+ FG1  CONST_17  H25   N25  C22  C23   180.00   0.0  0
+ FG1  CONST_18  C22   N25  C26  C27   180.00   0.0  0
+ FG1  CONST_19  C22   N25  C26  O29     0.00   0.0  0
+ FG1  CONST_20  O9    C8   N10  C11     0.00   0.0  0
+ FG1  CONST_21  C7    C8   N10  C11   180.00   0.0  0
+ FG1  CONST_22  O4    C3   N5   C6      0.00   0.0  0
+ FG1  CONST_23  C2    C3   N5   C6    180.00   0.0  0
+ FG1  CONST_24  H16   N16  C12  O13   180.00   0.0  0
+ FG1  CONST_25  H10   N10  C8   O9    180.00   0.0  0
+ FG1  CONST_26  HN5   N5   C3   O4    180.00   0.0  0
+ FG1  Var_01    C17   C18  C19  C24  -100.00  30.0  2
+ FG1  Var_02    N16   C17  C18  C19    36.99  30.0  3
+ FG1  Var_03    O29   C26  C27  O30    -1.06  30.0  2
+ FG1  Var_04    C12   N16  C17  C18    61.56  30.0  3
+ FG1  Var_05    C6    C7   C8   N10  -147.64  30.0  3
+ FG1  Var_06    N5    C6   C7   C8     64.55  30.0  3
+ FG1  Var_07    C3    N5   C6   C7     80.23  30.0  3
+ FG1  Var_08    BR1   C2   C3   N5    130.36  30.0  3
+ FG1  Var_09    N10   C11  C12  N16   161.23  30.0  3
+ FG1  Var_10    C14   C11  C12  N16   -75.17  30.0  3
+ FG1  Var_11    C8    N10  C11  C12  -148.30  30.0  3
+ FG1  Var_12    O15   C14  C11  C12   -56.96  30.0  3
+ FG1  Var_13    N10   C11  C12  O13   -18.81  30.0  3
+ FG1  Var_14    C14   C11  C12  O13   104.79  30.0  3
+ FG1  Var_15    O15   C14  C11  N10    64.54  30.0  3
+ FG1  Var_16    C14   C11  N10  C8     88.65  30.0  1
+ FG1  Var_17    H11   C11  C12  N16    43.34  30.0  3
+ FG1  Var_18    H141  C14  C11  C12   178.48  30.0  3
+ FG1  Var_19    H142  C14  C11  C12    62.20  30.0  3
+ FG1  Var_20    H15   O15  C14  C11   -66.51  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

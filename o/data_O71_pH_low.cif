@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- O71  O71  '(4-{6-[(2S)-4-(2,4-diamino-6-ethylpyrimidin-5-yl)but-3-yn-2-yl]-2H-1,3-benzodioxol-4-yl}phenyl)acetic acid'  ligand  57  33  .  2021-08-17  2022-11-17
+ O71  O71  '(4-{6-[(2S)-4-(2,4-diamino-6-ethylpyrimidin-5-yl)but-3-yn-2-yl]-2H-1,3-benzodioxol-4-yl}phenyl)acetic acid'  ligand  57  33  .  2021-08-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_O71
@@ -282,58 +283,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- O71  CONST_01  N1   C6   C5   C4     0.00   0.0  0
- O71  CONST_02  N1   C2   N3   C4     0.00   0.0  0
- O71  CONST_03  C2   N1   C6   C5     0.00   0.0  0
- O71  CONST_04  C2   N3   C4   C5     0.00   0.0  0
- O71  CONST_05  N3   C2   N1   C6     0.00   0.0  0
- O71  CONST_06  N3   C4   C5   C6     0.00   0.0  0
- O71  CONST_07  CAT  CAP  CAO  CAN  180.00   0.0  0
- O71  CONST_08  CAQ  CAP  CAO  CAN    0.00   0.0  0
- O71  CONST_09  CAQ  CAR  CAS  CAN    0.00   0.0  0
- O71  CONST_12  CAR  CAQ  CAP  CAO    0.00   0.0  0
- O71  CONST_13  CAR  CAS  CAN  CAO    0.00   0.0  0
- O71  CONST_14  CAV  CAU  CAT  CAP  180.00   0.0  0
- O71  CONST_15  CAX  CAY  CAT  CAP  180.00   0.0  0
- O71  CONST_16  CAS  CAN  CAO  CAP    0.00   0.0  0
- O71  CONST_17  CAS  CAR  CAQ  CAP    0.00   0.0  0
- O71  CONST_20  CAT  CAP  CAQ  CAR  180.00   0.0  0
- O71  CONST_21  CAW  CAV  CAU  CAT    0.00   0.0  0
- O71  CONST_22  CAW  CAX  CAY  CAT    0.00   0.0  0
- O71  CONST_23  CAX  CAW  CAV  CAU    0.00   0.0  0
- O71  CONST_24  CAX  CAY  CAT  CAU    0.00   0.0  0
- O71  CONST_25  CAY  CAX  CAW  CAV    0.00   0.0  0
- O71  CONST_26  CAY  CAT  CAU  CAV    0.00   0.0  0
- O71  CONST_27  OBD  CAQ  CAP  CAT    0.00   0.0  0
- O71  CONST_28  NAG  C6   C5   C4   180.00   0.0  0
- O71  CONST_29  NAH  C2   N3   C4   180.00   0.0  0
- O71  CONST_30  NAH  C2   N1   C6   180.00   0.0  0
- O71  CONST_31  CAI  C4   C5   C6   180.00   0.0  0
- O71  CONST_32  CAK  C5   C6   N1   180.00   0.0  0
- O71  CONST_33  CAK  C5   C4   N3   180.00   0.0  0
- O71  CONST_34  NAG  C6   N1   C2   180.00   0.0  0
- O71  CONST_35  CAI  C4   N3   C2   180.00   0.0  0
- O71  CONST_36  CAP  CAO  CAN  CAM  180.00   0.0  0
- O71  CONST_37  CAR  CAS  CAN  CAM  180.00   0.0  0
- O71  CONST_38  CAZ  CAW  CAV  CAU  180.00   0.0  0
- O71  CONST_39  CAZ  CAW  CAX  CAY  180.00   0.0  0
- O71  CONST_40  H8   CAS  CAN  CAO  180.00   0.0  0
- O71  CONST_41  H9   CAU  CAT  CAP    0.00   0.0  0
- O71  CONST_42  H12  CAY  CAT  CAP    0.00   0.0  0
- O71  CONST_43  H7   CAO  CAP  CAQ  180.00   0.0  0
- O71  CONST_44  H10  CAV  CAU  CAT  180.00   0.0  0
- O71  CONST_45  H11  CAX  CAY  CAT  180.00   0.0  0
- O71  CONST_46  H20  NAG  C6   C5     0.00   0.0  0
- O71  CONST_47  H21  NAG  C6   C5   180.00   0.0  0
- O71  CONST_48  H22  NAH  C2   N1     0.00   0.0  0
- O71  CONST_49  H23  NAH  C2   N1   180.00   0.0  0
- O71  CONST_50  H24  OBB  CBA  CAZ  180.00   0.0  0
- O71  Var_01    OBF  CBE  OBD  CAQ  -14.64  30.0  1
- O71  Var_02    OBD  CBE  OBF  CAR   14.78  30.0  1
- O71  Var_03    CAJ  CAI  C4   C5    85.61  30.0  2
- O71  Var_04    CBA  CAZ  CAW  CAV   90.68  30.0  2
- O71  Var_05    OBC  CBA  CAZ  CAW    0.98  30.0  1
- O71  Var_06    H3   CAJ  CAI  C4   -62.01  30.0  3
+ O71  CONST_01  N1   C6   C5   C4      0.00   0.0  0
+ O71  CONST_02  N1   C2   N3   C4      0.00   0.0  0
+ O71  CONST_03  C2   N1   C6   C5      0.00   0.0  0
+ O71  CONST_04  C2   N3   C4   C5      0.00   0.0  0
+ O71  CONST_05  N3   C2   N1   C6      0.00   0.0  0
+ O71  CONST_06  N3   C4   C5   C6      0.00   0.0  0
+ O71  CONST_07  CAT  CAP  CAO  CAN   180.00   0.0  0
+ O71  CONST_08  CAQ  CAP  CAO  CAN     0.00   0.0  0
+ O71  CONST_09  CAQ  CAR  CAS  CAN     0.00   0.0  0
+ O71  CONST_10  CAR  CAQ  CAP  CAO     0.00   0.0  0
+ O71  CONST_11  CAR  CAS  CAN  CAO     0.00   0.0  0
+ O71  CONST_12  CAV  CAU  CAT  CAP   180.00   0.0  0
+ O71  CONST_13  CAX  CAY  CAT  CAP   180.00   0.0  0
+ O71  CONST_14  CAS  CAN  CAO  CAP     0.00   0.0  0
+ O71  CONST_15  CAS  CAR  CAQ  CAP     0.00   0.0  0
+ O71  CONST_16  CAT  CAP  CAQ  CAR   180.00   0.0  0
+ O71  CONST_17  CAW  CAV  CAU  CAT     0.00   0.0  0
+ O71  CONST_18  CAW  CAX  CAY  CAT     0.00   0.0  0
+ O71  CONST_19  CAX  CAW  CAV  CAU     0.00   0.0  0
+ O71  CONST_20  CAX  CAY  CAT  CAU     0.00   0.0  0
+ O71  CONST_21  CAY  CAX  CAW  CAV     0.00   0.0  0
+ O71  CONST_22  CAY  CAT  CAU  CAV     0.00   0.0  0
+ O71  CONST_23  OBD  CAQ  CAP  CAT     0.00   0.0  0
+ O71  CONST_24  NAG  C6   C5   C4    180.00   0.0  0
+ O71  CONST_25  NAH  C2   N3   C4    180.00   0.0  0
+ O71  CONST_26  NAH  C2   N1   C6    180.00   0.0  0
+ O71  CONST_27  CAI  C4   C5   C6    180.00   0.0  0
+ O71  CONST_28  CAK  C5   C6   N1    180.00   0.0  0
+ O71  CONST_29  CAK  C5   C4   N3    180.00   0.0  0
+ O71  CONST_30  NAG  C6   N1   C2    180.00   0.0  0
+ O71  CONST_31  CAI  C4   N3   C2    180.00   0.0  0
+ O71  CONST_32  CAP  CAO  CAN  CAM   180.00   0.0  0
+ O71  CONST_33  CAR  CAS  CAN  CAM   180.00   0.0  0
+ O71  CONST_34  CAZ  CAW  CAV  CAU   180.00   0.0  0
+ O71  CONST_35  CAZ  CAW  CAX  CAY   180.00   0.0  0
+ O71  CONST_36  H8   CAS  CAN  CAO   180.00   0.0  0
+ O71  CONST_37  H9   CAU  CAT  CAP     0.00   0.0  0
+ O71  CONST_38  H12  CAY  CAT  CAP     0.00   0.0  0
+ O71  CONST_39  H7   CAO  CAP  CAQ   180.00   0.0  0
+ O71  CONST_40  H10  CAV  CAU  CAT   180.00   0.0  0
+ O71  CONST_41  H11  CAX  CAY  CAT   180.00   0.0  0
+ O71  CONST_42  H20  NAG  C6   C5      0.00   0.0  0
+ O71  CONST_43  H21  NAG  C6   C5    180.00   0.0  0
+ O71  CONST_44  H22  NAH  C2   N1      0.00   0.0  0
+ O71  CONST_45  H23  NAH  C2   N1    180.00   0.0  0
+ O71  CONST_46  H24  OBB  CBA  CAZ   180.00   0.0  0
+ O71  Var_01    OBF  CBE  OBD  CAQ   -14.64  30.0  1
+ O71  Var_02    OBD  CBE  OBF  CAR    14.78  30.0  1
+ O71  Var_03    CAJ  CAI  C4   C5     85.61  30.0  2
+ O71  Var_04    CBA  CAZ  CAW  CAV    90.68  30.0  2
+ O71  Var_05    OBC  CBA  CAZ  CAW     0.98  30.0  1
+ O71  Var_06    H3   CAJ  CAI  C4    -62.01  30.0  3
+ O71  Var_07    CAU  CAT  CAP  CAO   138.94  30.0  2
+ O71  Var_08    CAY  CAT  CAP  CAO   -39.43  30.0  2
+ O71  Var_09    CBE  OBD  CAQ  CAP  -170.80  30.0  1
+ O71  Var_10    CAU  CAT  CAP  CAQ   -41.42  30.0  2
+ O71  Var_11    CAY  CAT  CAP  CAQ   140.21  30.0  2
+ O71  Var_12    CBE  OBF  CAR  CAQ    -9.41  30.0  1
+ O71  Var_13    CBE  OBD  CAQ  CAR     9.04  30.0  1
+ O71  Var_14    CBE  OBF  CAR  CAS   170.95  30.0  1
+ O71  Var_15    CAO  CAN  CAM  CAL   133.93  30.0  2
+ O71  Var_16    CAS  CAN  CAM  CAL   -48.74  30.0  2
+ O71  Var_17    CBG  CAM  CAN  CAO  -101.79  30.0  2
+ O71  Var_18    CBG  CAM  CAN  CAS    75.54  30.0  2
+ O71  Var_19    H6   CAM  CAN  CAO    16.07  30.0  2
+ O71  Var_20    CAM  CAL  CAK  C5    -80.41  30.0  1
+ O71  Var_21    CAN  CAM  CAL  CAK    98.14  30.0  3
+ O71  Var_22    H17  CBG  CAM  CAN    58.27  30.0  3
+ O71  Var_23    H18  CBG  CAM  CAN   177.88  30.0  3
+ O71  Var_24    H19  CBG  CAM  CAN   -61.66  30.0  3
+ O71  Var_25    CBG  CAM  CAL  CAK   -26.02  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

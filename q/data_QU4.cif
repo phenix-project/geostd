@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QU4  QU4  '3,3'-[(3-carboxy-4-oxocyclohexa-2,5-dien-1-ylidene)methylene]bis(6-hydroxybenzoic acid)'  ligand  42  31  .  2022-03-23  2022-03-23
+ QU4  QU4  '3,3'-[(3-carboxy-4-oxocyclohexa-2,5-dien-1-ylidene)methylene]bis(6-hydroxybenzoic acid)'  ligand  42  31  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QU4
@@ -219,40 +220,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QU4  CONST_01  CAP  CAY  CAL  CAJ    0.00   0.0  0
- QU4  CONST_02  CAP  CBA  CAW  CAJ    0.00   0.0  0
- QU4  CONST_03  CAQ  CBB  CAX  CAK    0.00   0.0  0
- QU4  CONST_04  CAQ  CAZ  CAM  CAK    0.00   0.0  0
- QU4  CONST_05  CBA  CAP  CAY  CAL    0.00   0.0  0
- QU4  CONST_06  CBA  CAW  CAJ  CAL    0.00   0.0  0
- QU4  CONST_07  CBB  CAX  CAK  CAM    0.00   0.0  0
- QU4  CONST_08  CBB  CAQ  CAZ  CAM    0.00   0.0  0
- QU4  CONST_09  CAY  CAP  CBA  CAW    0.00   0.0  0
- QU4  CONST_10  CAY  CAL  CAJ  CAW    0.00   0.0  0
- QU4  CONST_11  CAZ  CAM  CAK  CAX    0.00   0.0  0
- QU4  CONST_12  CAZ  CAQ  CBB  CAX    0.00   0.0  0
- QU4  CONST_13  CAV  CAY  CAL  CAJ  180.00   0.0  0
- QU4  CONST_14  CAS  CBA  CAW  CAJ  180.00   0.0  0
- QU4  CONST_15  CAT  CBB  CAX  CAK  180.00   0.0  0
- QU4  CONST_16  CAV  CAZ  CAM  CAK  180.00   0.0  0
- QU4  CONST_17  OAH  CAW  CAJ  CAL  180.00   0.0  0
- QU4  CONST_18  OAI  CAX  CAK  CAM  180.00   0.0  0
- QU4  CONST_19  OAH  CAW  CBA  CAP  180.00   0.0  0
- QU4  CONST_20  OAI  CAX  CBB  CAQ  180.00   0.0  0
- QU4  CONST_21  CAY  CAP  CBA  CAS  180.00   0.0  0
- QU4  CONST_22  CAZ  CAQ  CBB  CAT  180.00   0.0  0
- QU4  CONST_23  CBB  CAQ  CAZ  CAV  180.00   0.0  0
- QU4  CONST_24  CBA  CAP  CAY  CAV  180.00   0.0  0
- QU4  CONST_25  H8   CAP  CAY  CAL  180.00   0.0  0
- QU4  CONST_26  H9   CAQ  CAZ  CAM  180.00   0.0  0
- QU4  CONST_27  H3   CAL  CAY  CAP  180.00   0.0  0
- QU4  CONST_28  H4   CAM  CAZ  CAQ  180.00   0.0  0
- QU4  CONST_29  H1   CAJ  CAL  CAY  180.00   0.0  0
- QU4  CONST_30  H2   CAK  CAM  CAZ  180.00   0.0  0
- QU4  Var_01    CAZ  CAV  CBE  CAO   21.44   0.0  2
- QU4  Var_02    OAA  CAS  CBA  CAP    8.76  30.0  2
- QU4  Var_03    OAF  CAT  CBB  CAQ  179.87  30.0  2
- QU4  Var_04    OAG  CAU  CBC  CAR  147.57  30.0  2
+ QU4  CONST_01  CAP  CAY  CAL  CAJ     0.00   0.0  0
+ QU4  CONST_02  CAP  CBA  CAW  CAJ     0.00   0.0  0
+ QU4  CONST_03  CAQ  CBB  CAX  CAK     0.00   0.0  0
+ QU4  CONST_04  CAQ  CAZ  CAM  CAK     0.00   0.0  0
+ QU4  CONST_05  CBA  CAP  CAY  CAL     0.00   0.0  0
+ QU4  CONST_06  CBA  CAW  CAJ  CAL     0.00   0.0  0
+ QU4  CONST_07  CBB  CAX  CAK  CAM     0.00   0.0  0
+ QU4  CONST_08  CBB  CAQ  CAZ  CAM     0.00   0.0  0
+ QU4  CONST_09  CAY  CAP  CBA  CAW     0.00   0.0  0
+ QU4  CONST_10  CAY  CAL  CAJ  CAW     0.00   0.0  0
+ QU4  CONST_11  CAZ  CAM  CAK  CAX     0.00   0.0  0
+ QU4  CONST_12  CAZ  CAQ  CBB  CAX     0.00   0.0  0
+ QU4  CONST_13  CAV  CAY  CAL  CAJ   180.00   0.0  0
+ QU4  CONST_14  CAS  CBA  CAW  CAJ   180.00   0.0  0
+ QU4  CONST_15  CAT  CBB  CAX  CAK   180.00   0.0  0
+ QU4  CONST_16  CAV  CAZ  CAM  CAK   180.00   0.0  0
+ QU4  CONST_17  OAH  CAW  CAJ  CAL   180.00   0.0  0
+ QU4  CONST_18  OAI  CAX  CAK  CAM   180.00   0.0  0
+ QU4  CONST_19  OAH  CAW  CBA  CAP   180.00   0.0  0
+ QU4  CONST_20  OAI  CAX  CBB  CAQ   180.00   0.0  0
+ QU4  CONST_21  CAY  CAP  CBA  CAS   180.00   0.0  0
+ QU4  CONST_22  CAZ  CAQ  CBB  CAT   180.00   0.0  0
+ QU4  CONST_23  CBB  CAQ  CAZ  CAV   180.00   0.0  0
+ QU4  CONST_24  CBA  CAP  CAY  CAV   180.00   0.0  0
+ QU4  CONST_25  H8   CAP  CAY  CAL   180.00   0.0  0
+ QU4  CONST_26  H9   CAQ  CAZ  CAM   180.00   0.0  0
+ QU4  CONST_27  H3   CAL  CAY  CAP   180.00   0.0  0
+ QU4  CONST_28  H4   CAM  CAZ  CAQ   180.00   0.0  0
+ QU4  CONST_29  H1   CAJ  CAL  CAY   180.00   0.0  0
+ QU4  CONST_30  H2   CAK  CAM  CAZ   180.00   0.0  0
+ QU4  Var_01    CAZ  CAV  CBE  CAO    21.44   0.0  2
+ QU4  Var_02    OAA  CAS  CBA  CAP     8.76  30.0  2
+ QU4  Var_03    OAF  CAT  CBB  CAQ   179.87  30.0  2
+ QU4  Var_04    OAG  CAU  CBC  CAR   147.57  30.0  2
+ QU4  CONST_31  CAR  CBE  CAO  CAN     0.00   0.0  0
+ QU4  CONST_32  CAR  CBC  CBD  CAN     0.00   0.0  0
+ QU4  CONST_33  CBC  CBD  CAN  CAO     0.00   0.0  0
+ QU4  CONST_34  CBC  CAR  CBE  CAO     0.00   0.0  0
+ QU4  CONST_35  CBE  CAO  CAN  CBD     0.00   0.0  0
+ QU4  CONST_36  CBE  CAR  CBC  CBD     0.00   0.0  0
+ QU4  CONST_37  CAV  CBE  CAO  CAN   180.00   0.0  0
+ QU4  CONST_38  CAU  CBC  CBD  CAN   180.00   0.0  0
+ QU4  CONST_39  OAD  CBD  CAN  CAO   180.00   0.0  0
+ QU4  CONST_40  OAD  CBD  CBC  CAR   180.00   0.0  0
+ QU4  CONST_41  CAV  CBE  CAR  CBC   180.00   0.0  0
+ QU4  CONST_42  CAU  CBC  CAR  CBE   180.00   0.0  0
+ QU4  CONST_43  H10  CAR  CBE  CAO   180.00   0.0  0
+ QU4  CONST_44  H7   CAO  CBE  CAR   180.00   0.0  0
+ QU4  CONST_45  H5   CAN  CBD  CBC   180.00   0.0  0
+ QU4  Var_05    CAZ  CAV  CAY  CAL  -138.95  30.0  2
+ QU4  Var_06    CBE  CAV  CAY  CAL    41.16  30.0  2
+ QU4  Var_07    CBE  CAV  CAZ  CAM  -140.21  30.0  2
+ QU4  Var_08    CAY  CAV  CAZ  CAM    39.89  30.0  2
+ QU4  Var_09    CAZ  CAV  CAY  CAP    39.66  30.0  2
+ QU4  Var_10    CBE  CAV  CAY  CAP  -140.23  30.0  2
+ QU4  Var_11    CBE  CAV  CAZ  CAQ    42.15  30.0  2
+ QU4  Var_12    CAY  CAV  CAZ  CAQ  -137.74  30.0  2
+ QU4  Var_13    H15  OAH  CAW  CAJ    -0.81  30.0  2
+ QU4  Var_14    H16  OAI  CAX  CAK  -179.04  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

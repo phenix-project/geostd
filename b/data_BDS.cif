@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BDS  BDS  '(2S,3S)-2,3-bis(1,3-benzodioxol-5-ylmethyl)butanedioic acid'  ligand  44  28  .  2021-08-06  2023-02-02
+ BDS  BDS  '(2S,3S)-2,3-bis(1,3-benzodioxol-5-ylmethyl)butanedioic acid'  ligand  44  28  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BDS
@@ -238,36 +239,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BDS  CONST_01  C9    C8   C7   C6     0.00   0.0  0
- BDS  CONST_02  C9    C13  C14  C6     0.00   0.0  0
- BDS  CONST_03  C13   C14  C6   C7     0.00   0.0  0
- BDS  CONST_04  C13   C9   C8   C7     0.00   0.0  0
- BDS  CONST_05  C14   C6   C7   C8     0.00   0.0  0
- BDS  CONST_06  C14   C13  C9   C8     0.00   0.0  0
- BDS  CONST_07  C23   C22  C21  C20    0.00   0.0  0
- BDS  CONST_08  C23   C27  C28  C20    0.00   0.0  0
- BDS  CONST_09  C27   C28  C20  C21    0.00   0.0  0
- BDS  CONST_10  C27   C23  C22  C21    0.00   0.0  0
- BDS  CONST_11  C28   C20  C21  C22    0.00   0.0  0
- BDS  CONST_12  C28   C27  C23  C22    0.00   0.0  0
- BDS  CONST_13  C8    C7   C6   C5   180.00   0.0  0
- BDS  CONST_14  C13   C14  C6   C5   180.00   0.0  0
- BDS  CONST_15  C22   C21  C20  C19  180.00   0.0  0
- BDS  CONST_16  C27   C28  C20  C19  180.00   0.0  0
- BDS  CONST_17  HC81  C8   C7   C6   180.00   0.0  0
- BDS  CONST_18  H141  C14  C6   C7   180.00   0.0  0
- BDS  CONST_19  HC71  C7   C8   C9   180.00   0.0  0
- BDS  CONST_20  H221  C22  C21  C20  180.00   0.0  0
- BDS  CONST_21  H281  C28  C20  C21  180.00   0.0  0
- BDS  CONST_22  H211  C21  C22  C23  180.00   0.0  0
- BDS  Var_01    O12   C11  O10  C9   -16.55  30.0  1
- BDS  Var_02    C13   C9   O10  C11   10.42  30.0  1
- BDS  Var_03    C14   C13  O12  C11  171.46  30.0  1
- BDS  Var_04    O26   C25  O24  C23  -15.63  30.0  1
- BDS  Var_05    C27   C23  O24  C25    9.81  30.0  1
- BDS  Var_06    C28   C27  O26  C25  171.96  30.0  1
- BDS  Var_07    C7    C6   C5   C1    98.25  30.0  2
- BDS  Var_08    C21   C20  C19  C15   97.92  30.0  2
+ BDS  CONST_01  C9    C8   C7   C6      0.00   0.0  0
+ BDS  CONST_02  C9    C13  C14  C6      0.00   0.0  0
+ BDS  CONST_03  C13   C14  C6   C7      0.00   0.0  0
+ BDS  CONST_04  C13   C9   C8   C7      0.00   0.0  0
+ BDS  CONST_05  C14   C6   C7   C8      0.00   0.0  0
+ BDS  CONST_06  C14   C13  C9   C8      0.00   0.0  0
+ BDS  CONST_07  C23   C22  C21  C20     0.00   0.0  0
+ BDS  CONST_08  C23   C27  C28  C20     0.00   0.0  0
+ BDS  CONST_09  C27   C28  C20  C21     0.00   0.0  0
+ BDS  CONST_10  C27   C23  C22  C21     0.00   0.0  0
+ BDS  CONST_11  C28   C20  C21  C22     0.00   0.0  0
+ BDS  CONST_12  C28   C27  C23  C22     0.00   0.0  0
+ BDS  CONST_13  C8    C7   C6   C5    180.00   0.0  0
+ BDS  CONST_14  C13   C14  C6   C5    180.00   0.0  0
+ BDS  CONST_15  C22   C21  C20  C19   180.00   0.0  0
+ BDS  CONST_16  C27   C28  C20  C19   180.00   0.0  0
+ BDS  CONST_17  HC81  C8   C7   C6    180.00   0.0  0
+ BDS  CONST_18  H141  C14  C6   C7    180.00   0.0  0
+ BDS  CONST_19  HC71  C7   C8   C9    180.00   0.0  0
+ BDS  CONST_20  H221  C22  C21  C20   180.00   0.0  0
+ BDS  CONST_21  H281  C28  C20  C21   180.00   0.0  0
+ BDS  CONST_22  H211  C21  C22  C23   180.00   0.0  0
+ BDS  Var_01    O12   C11  O10  C9    -16.55  30.0  1
+ BDS  Var_02    C13   C9   O10  C11    10.42  30.0  1
+ BDS  Var_03    C14   C13  O12  C11   171.46  30.0  1
+ BDS  Var_04    O26   C25  O24  C23   -15.63  30.0  1
+ BDS  Var_05    C27   C23  O24  C25     9.81  30.0  1
+ BDS  Var_06    C28   C27  O26  C25   171.96  30.0  1
+ BDS  Var_07    C7    C6   C5   C1     98.25  30.0  2
+ BDS  Var_08    C21   C20  C19  C15    97.92  30.0  2
+ BDS  Var_09    C13   O12  C11  O10    16.51  30.0  1
+ BDS  Var_10    C27   O26  C25  O24    15.63  30.0  1
+ BDS  Var_11    C20   C19  C15  C1    176.42  30.0  3
+ BDS  Var_12    C6    C5   C1   C2    -61.68  30.0  3
+ BDS  Var_13    C15   C1   C5   C6    176.24  30.0  1
+ BDS  Var_14    C20   C19  C15  C16   -61.30  30.0  3
+ BDS  Var_15    HC11  C1   C5   C6     57.22  30.0  1
+ BDS  Var_16    H151  C15  C19  C20    57.43  30.0  1
+ BDS  Var_17    O17   C16  C15  C1     69.44  30.0  2
+ BDS  Var_18    O18   C16  C15  C1   -110.16  30.0  2
+ BDS  Var_19    C16   C15  C1   C2     51.92  30.0  3
+ BDS  Var_20    C19   C15  C1   C2    174.12  30.0  3
+ BDS  Var_21    C5    C1   C2   O3    -53.40  30.0  2
+ BDS  Var_22    C15   C1   C2   O3     70.27  30.0  2
+ BDS  Var_23    C5    C1   C2   O4    127.26  30.0  2
+ BDS  Var_24    C15   C1   C2   O4   -109.07  30.0  2
+ BDS  Var_25    C16   C15  C1   C5    174.16  30.0  3
+ BDS  Var_26    C19   C15  C1   C5    -63.63  30.0  3
+ BDS  Var_27    C19   C15  C16  O17   -54.41  30.0  2
+ BDS  Var_28    C19   C15  C16  O18   125.99  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

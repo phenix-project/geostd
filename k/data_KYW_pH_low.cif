@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KYW  KYW  '[[(2~{R},3~{S},4~{R},5~{R})-5-[2-chloranyl-6-[methyl-(phenylmethyl)amino]purin-9-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl]methylphosphonic acid'  ligand  60  36  .  2022-03-22  2022-11-17
+ KYW  KYW  '[[(2~{R},3~{S},4~{R},5~{R})-5-[2-chloranyl-6-[methyl-(phenylmethyl)amino]purin-9-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl]methylphosphonic acid'  ligand  60  36  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KYW
@@ -297,55 +298,91 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KYW  CONST_01  C4   N3   C2   N1      0.00   0.0  0
- KYW  CONST_02  C4   C5   C6   N1      0.00   0.0  0
- KYW  CONST_03  N7   C5   C6   N1    180.00   0.0  0
- KYW  CONST_04  C6   N1   C2   N3      0.00   0.0  0
- KYW  CONST_05  C6   C5   C4   N3      0.00   0.0  0
- KYW  CONST_06  N7   C5   C4   N3    180.00   0.0  0
- KYW  CONST_07  C8   N9   C4   N3    180.00   0.0  0
- KYW  CONST_08  C8   N7   C5   C4      0.00   0.0  0
- KYW  CONST_09  N7   C8   N9   C4      0.00   0.0  0
- KYW  CONST_10  C2   N3   C4   C5      0.00   0.0  0
- KYW  CONST_11  C8   N9   C4   C5      0.00   0.0  0
- KYW  CONST_12  C2   N1   C6   C5      0.00   0.0  0
- KYW  CONST_13  N9   C8   N7   C5      0.00   0.0  0
- KYW  CONST_14  N9   C4   C5   C6    180.00   0.0  0
- KYW  CONST_15  C8   N7   C5   C6    180.00   0.0  0
- KYW  CONST_16  C25  C26  C27  C22     0.00   0.0  0
- KYW  CONST_17  C25  C24  C23  C22     0.00   0.0  0
- KYW  CONST_18  C27  C26  C25  C24     0.00   0.0  0
- KYW  CONST_19  C27  C22  C23  C24     0.00   0.0  0
- KYW  CONST_20  C23  C22  C27  C26     0.00   0.0  0
- KYW  CONST_21  C23  C24  C25  C26     0.00   0.0  0
- KYW  CONST_22  C2   N3   C4   N9    180.00   0.0  0
- KYW  CONST_23  N7   C5   C4   N9      0.00   0.0  0
- KYW  CONST_24  C1'  N9   C4   N3      0.00   0.0  0
- KYW  CONST_25  C1'  N9   C4   C5    180.00   0.0  0
- KYW  CONST_26  N7   C8   N9   C1'   180.00   0.0  0
- KYW  CONST_27  CL2  C2   N3   C4    180.00   0.0  0
- KYW  CONST_28  N6   C6   C5   C4    180.00   0.0  0
- KYW  CONST_29  CL2  C2   N1   C6    180.00   0.0  0
- KYW  CONST_30  C27  C26  C25  C21   180.00   0.0  0
- KYW  CONST_31  C23  C24  C25  C21   180.00   0.0  0
- KYW  CONST_32  N6   C6   C5   N7      0.00   0.0  0
- KYW  CONST_33  C2   N1   C6   N6    180.00   0.0  0
- KYW  CONST_34  H8   C8   N9   C4    180.00   0.0  0
- KYW  CONST_35  H25  C26  C27  C22   180.00   0.0  0
- KYW  CONST_36  H23  C24  C23  C22   180.00   0.0  0
- KYW  CONST_37  H21  C22  C23  C24   180.00   0.0  0
- KYW  CONST_38  H26  C27  C22  C23   180.00   0.0  0
- KYW  CONST_39  H22  C23  C24  C25   180.00   0.0  0
- KYW  CONST_40  C20  N6   C6   N1      0.00   0.0  0
- KYW  CONST_41  C21  N6   C6   N1    180.00   0.0  0
- KYW  CONST_42  C20  N6   C6   C5    180.00   0.0  0
- KYW  CONST_43  C21  N6   C6   C5      0.00   0.0  0
- KYW  Var_01    C25  C21  N6   C6    107.74  30.0  3
- KYW  Var_02    N6   C21  C25  C24   117.72  30.0  3
- KYW  Var_03    C4'  C5'  O5'  PA    158.83  30.0  2
- KYW  Var_04    H1   C20  N6   C6   -173.25  30.0  3
- KYW  Var_05    O5'  PA   C3A  PB     56.25  30.0  1
- KYW  Var_06    PA   C3A  PB   O1B  -179.80  30.0  1
+ KYW  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ KYW  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ KYW  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ KYW  CONST_04  C6    N1   C2   N3      0.00   0.0  0
+ KYW  CONST_05  C6    C5   C4   N3      0.00   0.0  0
+ KYW  CONST_06  N7    C5   C4   N3    180.00   0.0  0
+ KYW  CONST_07  C8    N9   C4   N3    180.00   0.0  0
+ KYW  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ KYW  CONST_09  N7    C8   N9   C4      0.00   0.0  0
+ KYW  CONST_10  C2    N3   C4   C5      0.00   0.0  0
+ KYW  CONST_11  C8    N9   C4   C5      0.00   0.0  0
+ KYW  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ KYW  CONST_13  N9    C8   N7   C5      0.00   0.0  0
+ KYW  CONST_14  N9    C4   C5   C6    180.00   0.0  0
+ KYW  CONST_15  C8    N7   C5   C6    180.00   0.0  0
+ KYW  CONST_16  C25   C26  C27  C22     0.00   0.0  0
+ KYW  CONST_17  C25   C24  C23  C22     0.00   0.0  0
+ KYW  CONST_18  C27   C26  C25  C24     0.00   0.0  0
+ KYW  CONST_19  C27   C22  C23  C24     0.00   0.0  0
+ KYW  CONST_20  C23   C22  C27  C26     0.00   0.0  0
+ KYW  CONST_21  C23   C24  C25  C26     0.00   0.0  0
+ KYW  CONST_22  C2    N3   C4   N9    180.00   0.0  0
+ KYW  CONST_23  N7    C5   C4   N9      0.00   0.0  0
+ KYW  CONST_24  C1'   N9   C4   N3      0.00   0.0  0
+ KYW  CONST_25  C1'   N9   C4   C5    180.00   0.0  0
+ KYW  CONST_26  N7    C8   N9   C1'   180.00   0.0  0
+ KYW  CONST_27  CL2   C2   N3   C4    180.00   0.0  0
+ KYW  CONST_28  N6    C6   C5   C4    180.00   0.0  0
+ KYW  CONST_29  CL2   C2   N1   C6    180.00   0.0  0
+ KYW  CONST_30  C27   C26  C25  C21   180.00   0.0  0
+ KYW  CONST_31  C23   C24  C25  C21   180.00   0.0  0
+ KYW  CONST_32  N6    C6   C5   N7      0.00   0.0  0
+ KYW  CONST_33  C2    N1   C6   N6    180.00   0.0  0
+ KYW  CONST_34  H8    C8   N9   C4    180.00   0.0  0
+ KYW  CONST_35  H25   C26  C27  C22   180.00   0.0  0
+ KYW  CONST_36  H23   C24  C23  C22   180.00   0.0  0
+ KYW  CONST_37  H21   C22  C23  C24   180.00   0.0  0
+ KYW  CONST_38  H26   C27  C22  C23   180.00   0.0  0
+ KYW  CONST_39  H22   C23  C24  C25   180.00   0.0  0
+ KYW  CONST_40  C20   N6   C6   N1      0.00   0.0  0
+ KYW  CONST_41  C21   N6   C6   N1    180.00   0.0  0
+ KYW  CONST_42  C20   N6   C6   C5    180.00   0.0  0
+ KYW  CONST_43  C21   N6   C6   C5      0.00   0.0  0
+ KYW  Var_01    C25   C21  N6   C6    107.74  30.0  3
+ KYW  Var_02    N6    C21  C25  C24   117.72  30.0  3
+ KYW  Var_03    C4'   C5'  O5'  PA    158.83  30.0  2
+ KYW  Var_04    H1    C20  N6   C6   -173.25  30.0  3
+ KYW  Var_05    O5'   PA   C3A  PB     56.25  30.0  1
+ KYW  Var_06    PA    C3A  PB   O1B  -179.80  30.0  1
+ KYW  Var_07    C2'   C1'  N9   C4     66.64  30.0  1
+ KYW  Var_08    O4'   C1'  N9   C4   -175.84  30.0  1
+ KYW  Var_09    C2'   C1'  N9   C8   -118.97  30.0  1
+ KYW  Var_10    O4'   C1'  N9   C8     -1.45  30.0  1
+ KYW  Var_11    C1'   C2'  C3'  C4'    35.69  30.0  1
+ KYW  Var_12    C2'   C1'  O4'  C4'    13.71  30.0  1
+ KYW  Var_13    N9    C1'  O4'  C4'  -106.89  30.0  1
+ KYW  Var_14    C3'   C2'  C1'  O4'   -31.23  30.0  1
+ KYW  Var_15    C2'   C3'  C4'  O4'   -29.11  30.0  1
+ KYW  Var_16    N9    C1'  C2'  C3'    87.68  30.0  1
+ KYW  Var_17    C1'   O4'  C4'  C3'    10.05  30.0  1
+ KYW  Var_18    C2'   C3'  C4'  C5'  -150.05  30.0  1
+ KYW  Var_19    C1'   O4'  C4'  C5'   131.54  30.0  1
+ KYW  Var_20    O2'   C2'  C3'  C4'   -77.90  30.0  1
+ KYW  Var_21    O2'   C2'  C1'  O4'    85.14  30.0  1
+ KYW  Var_22    O3'   C3'  C4'  O4'  -150.34  30.0  1
+ KYW  Var_23    C1'   C2'  C3'  O3'   154.25  30.0  1
+ KYW  Var_24    N9    C1'  C2'  O2'  -155.95  30.0  1
+ KYW  Var_25    H1'   C1'  N9   C4    -56.52  30.0  1
+ KYW  Var_26    H2'   C2'  C3'  C4'   155.76  30.0  1
+ KYW  Var_27    H3'   C3'  C4'  O4'    86.40  30.0  1
+ KYW  Var_28    H4'   C4'  C3'  C2'    88.33  30.0  1
+ KYW  Var_29    O3'   C3'  C4'  C5'    88.73  30.0  1
+ KYW  Var_30    O5'   C5'  C4'  O4'    60.77  30.0  3
+ KYW  Var_31    O5'   C5'  C4'  C3'   178.43  30.0  3
+ KYW  Var_32    O2'   C2'  C3'  O3'    40.66  30.0  1
+ KYW  Var_33    HO3'  O3'  C3'  C4'  -159.52  30.0  3
+ KYW  Var_34    H5'2  C5'  C4'  O4'  -178.09  30.0  3
+ KYW  Var_35    H5'1  C5'  C4'  O4'   -59.98  30.0  3
+ KYW  Var_36    HO2'  O2'  C2'  C3'   -39.48  30.0  3
+ KYW  Var_37    C5'   O5'  PA   O1A   -59.29  30.0  1
+ KYW  Var_38    C5'   O5'  PA   O2A   173.48  30.0  1
+ KYW  Var_39    C5'   O5'  PA   C3A    67.13  30.0  1
+ KYW  Var_40    H7    O3B  PB   O1B   168.48  30.0  3
+ KYW  Var_41    H6    O1B  PB   O2B    41.94  30.0  3
+ KYW  Var_42    H9    O2A  PA   O1A   -39.84  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

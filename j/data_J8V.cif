@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- J8V  J8V  '3-{[2-oxo-4-phenoxy-6-(trifluoromethyl)-1,2-dihydropyridine-3-carbonyl]amino}benzoic acid'  ligand  42  30  .  2021-08-12  2021-08-12  
+ J8V  J8V  '3-{[2-oxo-4-phenoxy-6-(trifluoromethyl)-1,2-dihydropyridine-3-carbonyl]amino}benzoic acid'  ligand  42  30  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_J8V
@@ -221,45 +222,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- J8V  CONST_01  C04  C03  C02  C01    0.00   0.0  0
- J8V  CONST_02  C04  C05  C06  C01    0.00   0.0  0
- J8V  CONST_03  C05  C04  C03  C02    0.00   0.0  0
- J8V  CONST_04  C05  C06  C01  C02    0.00   0.0  0
- J8V  CONST_05  C06  C01  C02  C03    0.00   0.0  0
- J8V  CONST_06  C06  C05  C04  C03    0.00   0.0  0
- J8V  CONST_07  C28  C27  C26  C25    0.00   0.0  0
- J8V  CONST_08  C28  C29  C30  C25    0.00   0.0  0
- J8V  CONST_09  C29  C30  C25  C26    0.00   0.0  0
- J8V  CONST_10  C29  C28  C27  C26    0.00   0.0  0
- J8V  CONST_11  C30  C25  C26  C27    0.00   0.0  0
- J8V  CONST_12  C30  C29  C28  C27    0.00   0.0  0
- J8V  CONST_13  C16  N17  C18  C13    0.00   0.0  0
- J8V  CONST_14  N07  C06  C01  C02  180.00   0.0  0
- J8V  CONST_15  C09  C02  C03  C04  180.00   0.0  0
- J8V  CONST_16  N07  C06  C05  C04  180.00   0.0  0
- J8V  CONST_17  C09  C02  C01  C06  180.00   0.0  0
- J8V  CONST_18  O24  C25  C26  C27  180.00   0.0  0
- J8V  CONST_19  O24  C25  C30  C29  180.00   0.0  0
- J8V  CONST_20  O19  C18  N17  C16  180.00   0.0  0
- J8V  CONST_21  H3   C03  C02  C01  180.00   0.0  0
- J8V  CONST_22  H5   C05  C06  C01  180.00   0.0  0
- J8V  CONST_23  H4   C04  C03  C02  180.00   0.0  0
- J8V  CONST_24  H2   C01  C02  C03  180.00   0.0  0
- J8V  CONST_25  H8   C27  C26  C25  180.00   0.0  0
- J8V  CONST_26  H10  C29  C30  C25  180.00   0.0  0
- J8V  CONST_27  H11  C30  C25  C26  180.00   0.0  0
- J8V  CONST_28  H9   C28  C27  C26  180.00   0.0  0
- J8V  CONST_29  H7   C26  C27  C28  180.00   0.0  0
- J8V  CONST_30  H1   N17  C18  C13  180.00   0.0  0
- J8V  CONST_31  C06  N07  C08  C13  180.00   0.0  0
- J8V  CONST_32  C08  N07  C06  C01  180.00   0.0  0
- J8V  CONST_33  C08  N07  C06  C05    0.00   0.0  0
- J8V  CONST_34  H12  N07  C06  C01    0.00   0.0  0
- J8V  CONST_35  O12  C08  N07  C06    0.00   0.0  0
- J8V  Var_01    C26  C25  O24  C14   73.72  30.0  2
- J8V  Var_02    N07  C08  C13  C14  -80.21  30.0  2
- J8V  Var_03    O11  C09  C02  C01   -0.14  30.0  2
- J8V  Var_04    F21  C20  C16  C15  122.05  30.0  3
+ J8V  CONST_01  C04  C03  C02  C01     0.00   0.0  0
+ J8V  CONST_02  C04  C05  C06  C01     0.00   0.0  0
+ J8V  CONST_03  C05  C04  C03  C02     0.00   0.0  0
+ J8V  CONST_04  C05  C06  C01  C02     0.00   0.0  0
+ J8V  CONST_05  C06  C01  C02  C03     0.00   0.0  0
+ J8V  CONST_06  C06  C05  C04  C03     0.00   0.0  0
+ J8V  CONST_07  C28  C27  C26  C25     0.00   0.0  0
+ J8V  CONST_08  C28  C29  C30  C25     0.00   0.0  0
+ J8V  CONST_09  C29  C30  C25  C26     0.00   0.0  0
+ J8V  CONST_10  C29  C28  C27  C26     0.00   0.0  0
+ J8V  CONST_11  C30  C25  C26  C27     0.00   0.0  0
+ J8V  CONST_12  C30  C29  C28  C27     0.00   0.0  0
+ J8V  CONST_13  C16  N17  C18  C13     0.00   0.0  0
+ J8V  CONST_14  N07  C06  C01  C02   180.00   0.0  0
+ J8V  CONST_15  C09  C02  C03  C04   180.00   0.0  0
+ J8V  CONST_16  N07  C06  C05  C04   180.00   0.0  0
+ J8V  CONST_17  C09  C02  C01  C06   180.00   0.0  0
+ J8V  CONST_18  O24  C25  C26  C27   180.00   0.0  0
+ J8V  CONST_19  O24  C25  C30  C29   180.00   0.0  0
+ J8V  CONST_20  O19  C18  N17  C16   180.00   0.0  0
+ J8V  CONST_21  H3   C03  C02  C01   180.00   0.0  0
+ J8V  CONST_22  H5   C05  C06  C01   180.00   0.0  0
+ J8V  CONST_23  H4   C04  C03  C02   180.00   0.0  0
+ J8V  CONST_24  H2   C01  C02  C03   180.00   0.0  0
+ J8V  CONST_25  H8   C27  C26  C25   180.00   0.0  0
+ J8V  CONST_26  H10  C29  C30  C25   180.00   0.0  0
+ J8V  CONST_27  H11  C30  C25  C26   180.00   0.0  0
+ J8V  CONST_28  H9   C28  C27  C26   180.00   0.0  0
+ J8V  CONST_29  H7   C26  C27  C28   180.00   0.0  0
+ J8V  CONST_30  H1   N17  C18  C13   180.00   0.0  0
+ J8V  CONST_31  C06  N07  C08  C13   180.00   0.0  0
+ J8V  CONST_32  C08  N07  C06  C01   180.00   0.0  0
+ J8V  CONST_33  C08  N07  C06  C05     0.00   0.0  0
+ J8V  CONST_34  H12  N07  C06  C01     0.00   0.0  0
+ J8V  CONST_35  O12  C08  N07  C06     0.00   0.0  0
+ J8V  Var_01    C26  C25  O24  C14    73.72  30.0  2
+ J8V  Var_02    N07  C08  C13  C14   -80.21  30.0  2
+ J8V  Var_03    O11  C09  C02  C01    -0.14  30.0  2
+ J8V  Var_04    F21  C20  C16  C15   122.05  30.0  3
+ J8V  Var_05    N17  C18  C13  C14     0.82  30.0  1
+ J8V  Var_06    N17  C16  C15  C14     0.10  30.0  1
+ J8V  Var_07    C16  C15  C14  C13     0.76  30.0  1
+ J8V  Var_08    C18  C13  C14  C15    -1.24  30.0  1
+ J8V  Var_09    C18  N17  C16  C15    -0.51  30.0  1
+ J8V  Var_10    O19  C18  C13  C14  -179.41  30.0  1
+ J8V  Var_11    C20  C16  C15  C14  -179.64  30.0  1
+ J8V  Var_12    C25  O24  C14  C13  -168.97  30.0  3
+ J8V  Var_13    N17  C18  C13  C08   176.66  30.0  1
+ J8V  Var_14    C15  C14  C13  C08  -176.88  30.0  1
+ J8V  Var_15    C25  O24  C14  C15    12.18  30.0  3
+ J8V  Var_16    O24  C14  C15  C16   179.57  30.0  1
+ J8V  Var_17    O24  C14  C13  C18   179.90  30.0  1
+ J8V  Var_18    C20  C16  N17  C18   179.25  30.0  1
+ J8V  Var_19    H6   C15  C14  C13  -178.26  30.0  1
+ J8V  Var_20    O19  C18  C13  C08    -3.57  30.0  1
+ J8V  Var_21    O24  C14  C13  C08     4.25  30.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HQC  HQC  '(3S)-3-{[(2R)-6-{[(8-hydroxyquinolin-2-yl)carbonyl]amino}-2-thiophen-2-ylhexanoyl]amino}-4-oxobutanoic acid'  ligand  58  34  .  2021-08-11  2021-08-11  
+ HQC  HQC  '(3S)-3-{[(2R)-6-{[(8-hydroxyquinolin-2-yl)carbonyl]amino}-2-thiophen-2-ylhexanoyl]amino}-4-oxobutanoic acid'  ligand  58  34  .  2021-08-11  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_HQC
@@ -285,56 +286,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HQC  CONST_01  C15  C7   S35  C14     0.00   0.0  0
- HQC  CONST_02  C7   C15  C5   C14     0.00   0.0  0
- HQC  CONST_03  C15  C5   C14  S35     0.00   0.0  0
- HQC  CONST_04  C5   C15  C7   S35     0.00   0.0  0
- HQC  CONST_05  C5   C14  S35  C7      0.00   0.0  0
- HQC  CONST_06  C22  C21  N2   C18     0.00   0.0  0
- HQC  CONST_07  C25  C21  N2   C18   180.00   0.0  0
- HQC  CONST_08  C22  C23  C24  C18     0.00   0.0  0
- HQC  CONST_09  C23  C24  C18  N2      0.00   0.0  0
- HQC  CONST_10  C23  C22  C21  N2      0.00   0.0  0
- HQC  CONST_11  C4   C22  C21  N2    180.00   0.0  0
- HQC  CONST_12  C26  C25  C21  N2    180.00   0.0  0
- HQC  CONST_13  C21  N2   C18  C24     0.00   0.0  0
- HQC  CONST_14  C4   C22  C23  C24   180.00   0.0  0
- HQC  CONST_15  C21  C22  C23  C24     0.00   0.0  0
- HQC  CONST_16  C27  C4   C22  C23   180.00   0.0  0
- HQC  CONST_17  C25  C21  C22  C23   180.00   0.0  0
- HQC  CONST_18  C26  C27  C4   C22     0.00   0.0  0
- HQC  CONST_19  C26  C25  C21  C22     0.00   0.0  0
- HQC  CONST_20  C25  C21  C22  C4      0.00   0.0  0
- HQC  CONST_21  C25  C26  C27  C4      0.00   0.0  0
- HQC  CONST_22  C27  C4   C22  C21     0.00   0.0  0
- HQC  CONST_23  C27  C26  C25  C21     0.00   0.0  0
- HQC  CONST_24  C7   S35  C14  C10   180.00   0.0  0
- HQC  CONST_25  C15  C5   C14  C10   180.00   0.0  0
- HQC  CONST_26  C21  N2   C18  C8    180.00   0.0  0
- HQC  CONST_27  C23  C24  C18  C8    180.00   0.0  0
- HQC  CONST_28  O28  C25  C21  N2      0.00   0.0  0
- HQC  CONST_29  O28  C25  C21  C22   180.00   0.0  0
- HQC  CONST_30  C27  C26  C25  O28   180.00   0.0  0
- HQC  CONST_31  H7   C7   S35  C14   180.00   0.0  0
- HQC  CONST_32  H15  C15  C5   C14   180.00   0.0  0
- HQC  CONST_33  H5   C5   C14  S35   180.00   0.0  0
- HQC  CONST_34  H23  C23  C24  C18   180.00   0.0  0
- HQC  CONST_35  H24  C24  C18  N2    180.00   0.0  0
- HQC  CONST_36  H4   C4   C22  C23     0.00   0.0  0
- HQC  CONST_37  H27  C27  C4   C22   180.00   0.0  0
- HQC  CONST_38  H26  C26  C27  C4    180.00   0.0  0
- HQC  CONST_39  C18  C8   N3   C16   180.00   0.0  0
- HQC  CONST_40  HN3  N3   C8   C18     0.00   0.0  0
- HQC  CONST_41  O30  C19  N1   C17     0.00   0.0  0
- HQC  CONST_42  C10  C19  N1   C17   180.00   0.0  0
- HQC  CONST_43  O31  C8   N3   C16     0.00   0.0  0
- HQC  CONST_44  HN1  N1   C19  O30   180.00   0.0  0
- HQC  Var_01    N2   C18  C8   N3     -1.63  30.0  2
- HQC  Var_02    O32  C11  C9   C17   -32.86  30.0  3
- HQC  Var_03    C6   C13  C12  C10   178.41  30.0  3
- HQC  Var_04    C16  C6   C13  C12  -179.87  30.0  3
- HQC  Var_05    N3   C16  C6   C13   178.98  30.0  3
- HQC  Var_06    C8   N3   C16  C6    178.89  30.0  3
+ HQC  CONST_01  C15   C7   S35  C14     0.00   0.0  0
+ HQC  CONST_02  C7    C15  C5   C14     0.00   0.0  0
+ HQC  CONST_03  C15   C5   C14  S35     0.00   0.0  0
+ HQC  CONST_04  C5    C15  C7   S35     0.00   0.0  0
+ HQC  CONST_05  C5    C14  S35  C7      0.00   0.0  0
+ HQC  CONST_06  C22   C21  N2   C18     0.00   0.0  0
+ HQC  CONST_07  C25   C21  N2   C18   180.00   0.0  0
+ HQC  CONST_08  C22   C23  C24  C18     0.00   0.0  0
+ HQC  CONST_09  C23   C24  C18  N2      0.00   0.0  0
+ HQC  CONST_10  C23   C22  C21  N2      0.00   0.0  0
+ HQC  CONST_11  C4    C22  C21  N2    180.00   0.0  0
+ HQC  CONST_12  C26   C25  C21  N2    180.00   0.0  0
+ HQC  CONST_13  C21   N2   C18  C24     0.00   0.0  0
+ HQC  CONST_14  C4    C22  C23  C24   180.00   0.0  0
+ HQC  CONST_15  C21   C22  C23  C24     0.00   0.0  0
+ HQC  CONST_16  C27   C4   C22  C23   180.00   0.0  0
+ HQC  CONST_17  C25   C21  C22  C23   180.00   0.0  0
+ HQC  CONST_18  C26   C27  C4   C22     0.00   0.0  0
+ HQC  CONST_19  C26   C25  C21  C22     0.00   0.0  0
+ HQC  CONST_20  C25   C21  C22  C4      0.00   0.0  0
+ HQC  CONST_21  C25   C26  C27  C4      0.00   0.0  0
+ HQC  CONST_22  C27   C4   C22  C21     0.00   0.0  0
+ HQC  CONST_23  C27   C26  C25  C21     0.00   0.0  0
+ HQC  CONST_24  C7    S35  C14  C10   180.00   0.0  0
+ HQC  CONST_25  C15   C5   C14  C10   180.00   0.0  0
+ HQC  CONST_26  C21   N2   C18  C8    180.00   0.0  0
+ HQC  CONST_27  C23   C24  C18  C8    180.00   0.0  0
+ HQC  CONST_28  O28   C25  C21  N2      0.00   0.0  0
+ HQC  CONST_29  O28   C25  C21  C22   180.00   0.0  0
+ HQC  CONST_30  C27   C26  C25  O28   180.00   0.0  0
+ HQC  CONST_31  H7    C7   S35  C14   180.00   0.0  0
+ HQC  CONST_32  H15   C15  C5   C14   180.00   0.0  0
+ HQC  CONST_33  H5    C5   C14  S35   180.00   0.0  0
+ HQC  CONST_34  H23   C23  C24  C18   180.00   0.0  0
+ HQC  CONST_35  H24   C24  C18  N2    180.00   0.0  0
+ HQC  CONST_36  H4    C4   C22  C23     0.00   0.0  0
+ HQC  CONST_37  H27   C27  C4   C22   180.00   0.0  0
+ HQC  CONST_38  H26   C26  C27  C4    180.00   0.0  0
+ HQC  CONST_39  C18   C8   N3   C16   180.00   0.0  0
+ HQC  CONST_40  HN3   N3   C8   C18     0.00   0.0  0
+ HQC  CONST_41  O30   C19  N1   C17     0.00   0.0  0
+ HQC  CONST_42  C10   C19  N1   C17   180.00   0.0  0
+ HQC  CONST_43  O31   C8   N3   C16     0.00   0.0  0
+ HQC  CONST_44  HN1   N1   C19  O30   180.00   0.0  0
+ HQC  Var_01    N2    C18  C8   N3     -1.63  30.0  2
+ HQC  Var_02    O32   C11  C9   C17   -32.86  30.0  3
+ HQC  Var_03    C6    C13  C12  C10   178.41  30.0  3
+ HQC  Var_04    C16   C6   C13  C12  -179.87  30.0  3
+ HQC  Var_05    N3    C16  C6   C13   178.98  30.0  3
+ HQC  Var_06    C8    N3   C16  C6    178.89  30.0  3
+ HQC  Var_07    S35   C14  C10  C19   -68.45  30.0  2
+ HQC  Var_08    C5    C14  C10  C19   111.96  30.0  2
+ HQC  Var_09    C12   C10  C14  S35    58.52  30.0  2
+ HQC  Var_10    C12   C10  C14  C5   -121.07  30.0  2
+ HQC  Var_11    H10   C10  C14  S35   176.43  30.0  2
+ HQC  Var_12    H28   O28  C25  C21     0.37  30.0  2
+ HQC  Var_13    C14   C10  C19  N1    -36.76  30.0  3
+ HQC  Var_14    C14   C10  C19  O30   146.25  30.0  3
+ HQC  Var_15    C13   C12  C10  C14    59.19  30.0  3
+ HQC  Var_16    H121  C12  C10  C14  -179.53  30.0  3
+ HQC  Var_17    H122  C12  C10  C14   -63.41  30.0  3
+ HQC  Var_18    C9    C17  C20  O33   119.03  30.0  3
+ HQC  Var_19    N1    C17  C20  O33    -4.25  30.0  3
+ HQC  Var_20    C11   C9   C17  C20   167.77  30.0  3
+ HQC  Var_21    C19   N1   C17  C20   -73.56  30.0  3
+ HQC  Var_22    C19   N1   C17  C9    163.79  30.0  3
+ HQC  Var_23    N1    C17  C9   C11   -68.10  30.0  2
+ HQC  Var_24    C12   C10  C19  N1   -164.18  30.0  3
+ HQC  Var_25    C13   C12  C10  C19  -173.43  30.0  3
+ HQC  Var_26    C12   C10  C19  O30    18.83  30.0  3
+ HQC  Var_27    H17   C17  C20  O33  -124.75  30.0  3
+ HQC  Var_28    H91   C9   C17  C20    48.26  30.0  3
+ HQC  Var_29    H92   C9   C17  C20   -67.47  30.0  3
+ HQC  Var_30    H20   C20  C17  C9    -60.48  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

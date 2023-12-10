@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BG0  BG0  (4R)-2,7,8-triamino-4-(3-bromo-4,5-dimethoxyphenyl)-4H-1-benzopyran-3-carbonitrile  ligand  43  26  .  2021-08-06  2021-08-06  
+ BG0  BG0  (4R)-2,7,8-triamino-4-(3-bromo-4,5-dimethoxyphenyl)-4H-1-benzopyran-3-carbonitrile  ligand  43  26  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BG0
@@ -226,43 +227,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BG0  CONST_01  C21  C22  C24  C03    0.00   0.0  0
- BG0  CONST_02  C21  C05  C04  C03    0.00   0.0  0
- BG0  CONST_03  C22  C24  C03  C04    0.00   0.0  0
- BG0  CONST_04  C22  C21  C05  C04    0.00   0.0  0
- BG0  CONST_05  C24  C22  C21  C05    0.00   0.0  0
- BG0  CONST_06  C24  C03  C04  C05    0.00   0.0  0
- BG0  CONST_07  C18  C19  C20  C13    0.00   0.0  0
- BG0  CONST_08  C18  C16  C14  C13    0.00   0.0  0
- BG0  CONST_09  C19  C20  C13  C14    0.00   0.0  0
- BG0  CONST_10  C19  C18  C16  C14    0.00   0.0  0
- BG0  CONST_11  C20  C19  C18  C16    0.00   0.0  0
- BG0  CONST_12  C20  C13  C14  C16    0.00   0.0  0
- BG0  CONST_13  C06  C05  C04  C03  180.00   0.0  0
- BG0  CONST_14  C22  C21  C05  C06  180.00   0.0  0
- BG0  CONST_15  C22  C24  C03  O02  180.00   0.0  0
- BG0  CONST_16  C05  C04  C03  O02  180.00   0.0  0
- BG0  CONST_17  BR   C22  C24  C03  180.00   0.0  0
- BG0  CONST_18  O25  C24  C03  C04  180.00   0.0  0
- BG0  CONST_19  BR   C22  C21  C05  180.00   0.0  0
- BG0  CONST_20  N15  C14  C13  O12    0.00   0.0  0
- BG0  CONST_21  N17  C16  C14  C13  180.00   0.0  0
- BG0  CONST_22  C20  C13  C14  N15  180.00   0.0  0
- BG0  CONST_23  C18  C16  C14  N15  180.00   0.0  0
- BG0  CONST_24  C19  C18  C16  N17  180.00   0.0  0
- BG0  CONST_25  O25  C24  C22  C21  180.00   0.0  0
- BG0  CONST_26  H17  C21  C05  C04  180.00   0.0  0
- BG0  CONST_27  H7   C04  C05  C06    0.00   0.0  0
- BG0  CONST_28  H16  C19  C20  C06    0.00   0.0  0
- BG0  CONST_29  H15  C18  C16  C14  180.00   0.0  0
- BG0  CONST_33  H14  N17  C16  C14  180.00   0.0  0
- BG0  Var_01    O12  C10  C07  C06    6.07  30.0  1
- BG0  Var_02    C20  C13  O12  C10  -10.93  30.0  1
- BG0  Var_03    C24  C03  O02  C01  179.46  30.0  2
- BG0  Var_04    C10  C07  C08  N09  173.36  30.0  3
- BG0  Var_05    H8   N11  C10  C07   -8.41  30.0  2
- BG0  Var_06    H1   C01  O02  C03  -60.82  30.0  3
- BG0  Var_07    H18  C26  O25  C24  -63.26  30.0  3
+ BG0  CONST_01  C21  C22  C24  C03     0.00   0.0  0
+ BG0  CONST_02  C21  C05  C04  C03     0.00   0.0  0
+ BG0  CONST_03  C22  C24  C03  C04     0.00   0.0  0
+ BG0  CONST_04  C22  C21  C05  C04     0.00   0.0  0
+ BG0  CONST_05  C24  C22  C21  C05     0.00   0.0  0
+ BG0  CONST_06  C24  C03  C04  C05     0.00   0.0  0
+ BG0  CONST_07  C18  C19  C20  C13     0.00   0.0  0
+ BG0  CONST_08  C18  C16  C14  C13     0.00   0.0  0
+ BG0  CONST_09  C19  C20  C13  C14     0.00   0.0  0
+ BG0  CONST_10  C19  C18  C16  C14     0.00   0.0  0
+ BG0  CONST_11  C20  C19  C18  C16     0.00   0.0  0
+ BG0  CONST_12  C20  C13  C14  C16     0.00   0.0  0
+ BG0  CONST_13  C06  C05  C04  C03   180.00   0.0  0
+ BG0  CONST_14  C22  C21  C05  C06   180.00   0.0  0
+ BG0  CONST_15  C22  C24  C03  O02   180.00   0.0  0
+ BG0  CONST_16  C05  C04  C03  O02   180.00   0.0  0
+ BG0  CONST_17  BR   C22  C24  C03   180.00   0.0  0
+ BG0  CONST_18  O25  C24  C03  C04   180.00   0.0  0
+ BG0  CONST_19  BR   C22  C21  C05   180.00   0.0  0
+ BG0  CONST_20  N15  C14  C13  O12     0.00   0.0  0
+ BG0  CONST_21  N17  C16  C14  C13   180.00   0.0  0
+ BG0  CONST_22  C20  C13  C14  N15   180.00   0.0  0
+ BG0  CONST_23  C18  C16  C14  N15   180.00   0.0  0
+ BG0  CONST_24  C19  C18  C16  N17   180.00   0.0  0
+ BG0  CONST_25  O25  C24  C22  C21   180.00   0.0  0
+ BG0  CONST_26  H17  C21  C05  C04   180.00   0.0  0
+ BG0  CONST_27  H7   C04  C05  C06     0.00   0.0  0
+ BG0  CONST_28  H16  C19  C20  C06     0.00   0.0  0
+ BG0  CONST_29  H15  C18  C16  C14   180.00   0.0  0
+ BG0  CONST_30  H14  N17  C16  C14   180.00   0.0  0
+ BG0  Var_01    O12  C10  C07  C06     6.07  30.0  1
+ BG0  Var_02    C20  C13  O12  C10   -10.93  30.0  1
+ BG0  Var_03    C24  C03  O02  C01   179.46  30.0  2
+ BG0  Var_04    C10  C07  C08  N09   173.36  30.0  3
+ BG0  Var_05    H8   N11  C10  C07    -8.41  30.0  2
+ BG0  Var_06    H1   C01  O02  C03   -60.82  30.0  3
+ BG0  Var_07    H18  C26  O25  C24   -63.26  30.0  3
+ BG0  Var_08    C07  C06  C05  C04   127.34  30.0  2
+ BG0  Var_09    C20  C06  C05  C04  -109.49  30.0  2
+ BG0  Var_10    C10  C07  C06  C05   106.28  30.0  1
+ BG0  Var_11    C19  C20  C06  C05    69.45  30.0  1
+ BG0  Var_12    C13  C20  C06  C05  -109.24  30.0  1
+ BG0  Var_13    C21  C05  C06  C07   -54.14  30.0  1
+ BG0  Var_14    C19  C20  C06  C07  -165.89  30.0  1
+ BG0  Var_15    C13  C20  C06  C07    15.42  30.0  1
+ BG0  Var_16    C13  O12  C10  C07     9.22  30.0  1
+ BG0  Var_17    C20  C06  C07  C10   -17.40  30.0  1
+ BG0  Var_18    C21  C05  C06  C20    69.03  30.0  1
+ BG0  Var_19    C08  C07  C06  C05   -69.40  30.0  1
+ BG0  Var_20    C20  C06  C07  C08   166.92  30.0  1
+ BG0  Var_21    C13  O12  C10  N11  -172.97  30.0  1
+ BG0  Var_22    H5   C06  C05  C04     8.04  30.0  2
+ BG0  Var_23    C26  O25  C24  C03   -84.02  30.0  2
+ BG0  Var_24    C26  O25  C24  C22    97.40  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- P76  P76  N-[(2S,3R)-3-hydroxy-1-(hydroxyamino)-1-oxobutan-2-yl]-4-[4-(phenylethynyl)phenyl]piperidine-1-carboxamide  ligand  58  31  .  2021-08-19  2021-08-19  
+ P76  P76  N-[(2S,3R)-3-hydroxy-1-(hydroxyamino)-1-oxobutan-2-yl]-4-[4-(phenylethynyl)phenyl]piperidine-1-carboxamide  ligand  58  31  .  2021-08-19  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_P76
@@ -286,43 +287,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- P76  CONST_01  C18  C19  C20  C15    0.00   0.0  0
- P76  CONST_02  C18  C17  C16  C15    0.00   0.0  0
- P76  CONST_03  C19  C20  C15  C16    0.00   0.0  0
- P76  CONST_04  C19  C18  C17  C16    0.00   0.0  0
- P76  CONST_05  C20  C15  C16  C17    0.00   0.0  0
- P76  CONST_06  C20  C19  C18  C17    0.00   0.0  0
- P76  CONST_07  C26  C27  C28  C23    0.00   0.0  0
- P76  CONST_08  C26  C25  C24  C23    0.00   0.0  0
- P76  CONST_09  C27  C28  C23  C24    0.00   0.0  0
- P76  CONST_10  C27  C26  C25  C24    0.00   0.0  0
- P76  CONST_11  C28  C23  C24  C25    0.00   0.0  0
- P76  CONST_12  C28  C27  C26  C25    0.00   0.0  0
- P76  CONST_13  C19  C20  C15  C12  180.00   0.0  0
- P76  CONST_14  C17  C16  C15  C12  180.00   0.0  0
- P76  CONST_15  C21  C18  C17  C16  180.00   0.0  0
- P76  CONST_16  C21  C18  C19  C20  180.00   0.0  0
- P76  CONST_17  C27  C28  C23  C22  180.00   0.0  0
- P76  CONST_18  C25  C24  C23  C22  180.00   0.0  0
- P76  CONST_19  H20  C20  C15  C12    0.00   0.0  0
- P76  CONST_20  H16  C16  C15  C12    0.00   0.0  0
- P76  CONST_21  H19  C19  C20  C15  180.00   0.0  0
- P76  CONST_22  H17  C17  C16  C15  180.00   0.0  0
- P76  CONST_23  H27  C27  C28  C23  180.00   0.0  0
- P76  CONST_24  H25  C25  C24  C23  180.00   0.0  0
- P76  CONST_25  H28  C28  C23  C24  180.00   0.0  0
- P76  CONST_26  H26  C26  C25  C24  180.00   0.0  0
- P76  CONST_27  H24  C24  C25  C26  180.00   0.0  0
- P76  CONST_29  C14  N9   C7   O8     0.00   0.0  0
- P76  CONST_31  C14  N9   C7   N1   180.00   0.0  0
- P76  CONST_32  N9   C7   N1   C2   180.00   0.0  0
- P76  CONST_34  O8   C7   N1   C2     0.00   0.0  0
- P76  CONST_35  O6   N5   C3   C2   180.00   0.0  0
- P76  CONST_36  O6   N5   C3   O4     0.00   0.0  0
- P76  Var_01    C12  C11  C10  N9    55.67  30.0  1
- P76  Var_02    C12  C13  C14  N9   -56.22  30.0  1
- P76  Var_03    C13  C14  N9   C10   59.78  30.0  1
- P76  Var_04    C14  N9   C10  C11  -59.22  30.0  1
+ P76  CONST_01  C18   C19  C20  C15     0.00   0.0  0
+ P76  CONST_02  C18   C17  C16  C15     0.00   0.0  0
+ P76  CONST_03  C19   C20  C15  C16     0.00   0.0  0
+ P76  CONST_04  C19   C18  C17  C16     0.00   0.0  0
+ P76  CONST_05  C20   C15  C16  C17     0.00   0.0  0
+ P76  CONST_06  C20   C19  C18  C17     0.00   0.0  0
+ P76  CONST_07  C26   C27  C28  C23     0.00   0.0  0
+ P76  CONST_08  C26   C25  C24  C23     0.00   0.0  0
+ P76  CONST_09  C27   C28  C23  C24     0.00   0.0  0
+ P76  CONST_10  C27   C26  C25  C24     0.00   0.0  0
+ P76  CONST_11  C28   C23  C24  C25     0.00   0.0  0
+ P76  CONST_12  C28   C27  C26  C25     0.00   0.0  0
+ P76  CONST_13  C19   C20  C15  C12   180.00   0.0  0
+ P76  CONST_14  C17   C16  C15  C12   180.00   0.0  0
+ P76  CONST_15  C21   C18  C17  C16   180.00   0.0  0
+ P76  CONST_16  C21   C18  C19  C20   180.00   0.0  0
+ P76  CONST_17  C27   C28  C23  C22   180.00   0.0  0
+ P76  CONST_18  C25   C24  C23  C22   180.00   0.0  0
+ P76  CONST_19  H20   C20  C15  C12     0.00   0.0  0
+ P76  CONST_20  H16   C16  C15  C12     0.00   0.0  0
+ P76  CONST_21  H19   C19  C20  C15   180.00   0.0  0
+ P76  CONST_22  H17   C17  C16  C15   180.00   0.0  0
+ P76  CONST_23  H27   C27  C28  C23   180.00   0.0  0
+ P76  CONST_24  H25   C25  C24  C23   180.00   0.0  0
+ P76  CONST_25  H28   C28  C23  C24   180.00   0.0  0
+ P76  CONST_26  H26   C26  C25  C24   180.00   0.0  0
+ P76  CONST_27  H24   C24  C25  C26   180.00   0.0  0
+ P76  CONST_28  C14   N9   C7   O8      0.00   0.0  0
+ P76  CONST_29  C14   N9   C7   N1    180.00   0.0  0
+ P76  CONST_30  N9    C7   N1   C2    180.00   0.0  0
+ P76  CONST_31  O8    C7   N1   C2      0.00   0.0  0
+ P76  CONST_32  O6    N5   C3   C2    180.00   0.0  0
+ P76  CONST_33  O6    N5   C3   O4      0.00   0.0  0
+ P76  Var_01    C12   C11  C10  N9     55.67  30.0  1
+ P76  Var_02    C12   C13  C14  N9    -56.22  30.0  1
+ P76  Var_03    C13   C14  N9   C10    59.78  30.0  1
+ P76  Var_04    C14   N9   C10  C11   -59.22  30.0  1
+ P76  Var_05    C15   C12  C11  C10  -178.89  30.0  1
+ P76  Var_06    C13   C12  C11  C10   -53.12  30.0  1
+ P76  Var_07    C20   C15  C12  C11    58.82  30.0  2
+ P76  Var_08    C16   C15  C12  C11  -121.45  30.0  2
+ P76  Var_09    C14   C13  C12  C11    53.13  30.0  1
+ P76  Var_10    C20   C15  C12  C13   -65.88  30.0  2
+ P76  Var_11    C16   C15  C12  C13   113.86  30.0  2
+ P76  Var_12    C15   C12  C13  C14   178.98  30.0  1
+ P76  Var_13    H12   C12  C11  C10    63.06  30.0  1
+ P76  Var_14    C23   C22  C21  C18    80.78  30.0  1
+ P76  Var_15    C30   C29  C2   N1   -178.45  30.0  2
+ P76  Var_16    O31   C29  C2   N1    -58.56  30.0  2
+ P76  Var_17    O4    C3   C2   N1    -51.16  30.0  3
+ P76  Var_18    N5    C3   C2   N1    131.13  30.0  3
+ P76  Var_19    C7    N1   C2   C3    -75.42  30.0  3
+ P76  Var_20    C30   C29  C2   C3     60.25  30.0  2
+ P76  Var_21    O31   C29  C2   C3   -179.85  30.0  2
+ P76  Var_22    C29   C2   C3   O4     69.01  30.0  3
+ P76  Var_23    C29   C2   C3   N5   -108.70  30.0  3
+ P76  Var_24    C29   C2   N1   C7    162.93  30.0  3
+ P76  Var_25    H29   C29  C2   N1     61.98  30.0  2
+ P76  Var_26    H30   C30  C29  C2     56.21  30.0  3
+ P76  Var_27    H30A  C30  C29  C2    176.43  30.0  3
+ P76  Var_28    H30B  C30  C29  C2    -64.66  30.0  3
+ P76  Var_29    HO31  O31  C29  C2     48.33  30.0  3
+ P76  Var_30    HO6   O6   N5   C3   -100.05  30.0  3
+ P76  Var_31    H2    C2   C3   O4   -171.29  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

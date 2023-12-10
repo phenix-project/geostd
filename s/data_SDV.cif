@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SDV  SDV  N-[(4R)-1-(2-fluorophenyl)-4,5,6,7-tetrahydroindazol-4-yl]-2,1-benzoxazole-3-carboxamide  ligand  45  28  .  2021-08-23  2021-08-23  
+ SDV  SDV  N-[(4R)-1-(2-fluorophenyl)-4,5,6,7-tetrahydroindazol-4-yl]-2,1-benzoxazole-3-carboxamide  ligand  45  28  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SDV
@@ -265,39 +266,53 @@ _chem_comp_tor.period
  SDV  CONST_20  C17  C16  C15  N2    180.00   0.0  0
  SDV  CONST_21  C12  C13  C14  N3      0.00   0.0  0
  SDV  CONST_22  C13  C12  N2   N3      0.00   0.0  0
- SDV  CONST_25  C6   O    N    C5      0.00   0.0  0
- SDV  CONST_26  C14  N3   N2   C12     0.00   0.0  0
- SDV  CONST_29  C15  N2   C12  C13   180.00   0.0  0
- SDV  CONST_30  C15  N2   N3   C14   180.00   0.0  0
- SDV  CONST_31  C18  C19  C20  C15     0.00   0.0  0
- SDV  CONST_32  C18  C17  C16  C15     0.00   0.0  0
- SDV  CONST_33  C19  C20  C15  C16     0.00   0.0  0
- SDV  CONST_34  C19  C18  C17  C16     0.00   0.0  0
- SDV  CONST_35  C20  C15  C16  C17     0.00   0.0  0
- SDV  CONST_36  C20  C19  C18  C17     0.00   0.0  0
- SDV  CONST_37  C15  N2   C12  C11     0.00   0.0  0
- SDV  CONST_38  N2   C15  C20  F       0.00   0.0  0
- SDV  CONST_39  C16  C15  C20  F     180.00   0.0  0
- SDV  CONST_40  C18  C19  C20  F     180.00   0.0  0
- SDV  CONST_41  C7   C6   O    N     180.00   0.0  0
- SDV  CONST_42  C7   C6   C4   C3      0.00   0.0  0
- SDV  CONST_43  C7   C6   C4   C5    180.00   0.0  0
- SDV  CONST_44  H2   C2   C1   C     180.00   0.0  0
- SDV  CONST_45  H3   C3   C2   C1    180.00   0.0  0
- SDV  CONST_46  H    C    C5   N       0.00   0.0  0
- SDV  CONST_47  H14  C14  N3   N2    180.00   0.0  0
- SDV  CONST_48  H16  C16  C15  N2      0.00   0.0  0
- SDV  CONST_49  HA   C1   C2   C3    180.00   0.0  0
- SDV  CONST_50  H19  C19  C20  C15   180.00   0.0  0
- SDV  CONST_51  H17  C17  C16  C15   180.00   0.0  0
- SDV  CONST_52  H18  C18  C17  C16   180.00   0.0  0
- SDV  CONST_53  C8   N1   C7   C6    180.00   0.0  0
- SDV  CONST_54  C8   N1   C7   O1      0.00   0.0  0
- SDV  CONST_55  H1   N1   C7   C6      0.00   0.0  0
+ SDV  CONST_23  C6   O    N    C5      0.00   0.0  0
+ SDV  CONST_24  C14  N3   N2   C12     0.00   0.0  0
+ SDV  CONST_25  C15  N2   C12  C13   180.00   0.0  0
+ SDV  CONST_26  C15  N2   N3   C14   180.00   0.0  0
+ SDV  CONST_27  C18  C19  C20  C15     0.00   0.0  0
+ SDV  CONST_28  C18  C17  C16  C15     0.00   0.0  0
+ SDV  CONST_29  C19  C20  C15  C16     0.00   0.0  0
+ SDV  CONST_30  C19  C18  C17  C16     0.00   0.0  0
+ SDV  CONST_31  C20  C15  C16  C17     0.00   0.0  0
+ SDV  CONST_32  C20  C19  C18  C17     0.00   0.0  0
+ SDV  CONST_33  C15  N2   C12  C11     0.00   0.0  0
+ SDV  CONST_34  N2   C15  C20  F       0.00   0.0  0
+ SDV  CONST_35  C16  C15  C20  F     180.00   0.0  0
+ SDV  CONST_36  C18  C19  C20  F     180.00   0.0  0
+ SDV  CONST_37  C7   C6   O    N     180.00   0.0  0
+ SDV  CONST_38  C7   C6   C4   C3      0.00   0.0  0
+ SDV  CONST_39  C7   C6   C4   C5    180.00   0.0  0
+ SDV  CONST_40  H2   C2   C1   C     180.00   0.0  0
+ SDV  CONST_41  H3   C3   C2   C1    180.00   0.0  0
+ SDV  CONST_42  H    C    C5   N       0.00   0.0  0
+ SDV  CONST_43  H14  C14  N3   N2    180.00   0.0  0
+ SDV  CONST_44  H16  C16  C15  N2      0.00   0.0  0
+ SDV  CONST_45  HA   C1   C2   C3    180.00   0.0  0
+ SDV  CONST_46  H19  C19  C20  C15   180.00   0.0  0
+ SDV  CONST_47  H17  C17  C16  C15   180.00   0.0  0
+ SDV  CONST_48  H18  C18  C17  C16   180.00   0.0  0
+ SDV  CONST_49  C8   N1   C7   C6    180.00   0.0  0
+ SDV  CONST_50  C8   N1   C7   O1      0.00   0.0  0
+ SDV  CONST_51  H1   N1   C7   C6      0.00   0.0  0
  SDV  Var_01    C10  C11  C12  N2   -163.91  30.0  1
  SDV  Var_02    C11  C10  C9   C8     64.76  30.0  1
  SDV  Var_03    C12  C11  C10  C9    -45.62  30.0  1
  SDV  Var_04    O1   C7   C6   O     176.88  30.0  2
+ SDV  Var_05    C20  C15  N2   N3    -60.38  30.0  2
+ SDV  Var_06    C16  C15  N2   N3    120.26  30.0  2
+ SDV  Var_07    C12  C13  C8   C9     15.24  30.0  1
+ SDV  Var_08    C14  C13  C8   C9   -166.10  30.0  1
+ SDV  Var_09    C13  C8   C9   C10   -45.95  30.0  1
+ SDV  Var_10    C20  C15  N2   C12   119.16  30.0  2
+ SDV  Var_11    C16  C15  N2   C12   -60.20  30.0  2
+ SDV  Var_12    C10  C9   C8   N1   -169.56  30.0  1
+ SDV  Var_13    C12  C13  C8   N1    137.44  30.0  1
+ SDV  Var_14    C14  C13  C8   N1    -43.90  30.0  1
+ SDV  Var_15    H8   C8   C9   C10    73.72  30.0  1
+ SDV  Var_16    C9   C8   N1   C7   -149.35  30.0  3
+ SDV  Var_17    C13  C8   N1   C7     88.72  30.0  3
+ SDV  Var_18    H1   N1   C8   C9     37.85  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

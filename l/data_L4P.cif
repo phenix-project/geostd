@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- L4P  L4P  '(2R)-2,3-dihydroxypropyl (2S)-2-{[(3R)-3,7,11,15-tetramethylhexadecyl]oxy}-3-{[(3R,7R,11R)-3,7,11,15-tetramethylhexadecyl]oxy}propyl hydrogen (R)-phosphate'  ligand  149  55  .  2021-08-12  2021-08-12  
+ L4P  L4P  '(2R)-2,3-dihydroxypropyl (2S)-2-{[(3R)-3,7,11,15-tetramethylhexadecyl]oxy}-3-{[(3R,7R,11R)-3,7,11,15-tetramethylhexadecyl]oxy}propyl hydrogen (R)-phosphate'  ligand  149  55  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_L4P
@@ -650,32 +651,113 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- L4P  Var_01  C12   C11  O1   C1   -177.20  30.0  3
- L4P  Var_02  C42   C41  O2   C2   -163.42  30.0  3
- L4P  Var_03  O4    P1   O3   C3     69.91  30.0  3
- L4P  Var_04  O3    P1   O4   C4     66.25  30.0  3
- L4P  Var_05  C13   C12  C11  O1   -174.55  30.0  3
- L4P  Var_06  C43   C42  C41  O2   -175.82  30.0  3
- L4P  Var_07  C17   C16  C15  C13  -176.12  30.0  3
- L4P  Var_08  C18   C17  C16  C15  -173.38  30.0  3
- L4P  Var_09  C22   C21  C20  C18    58.56  30.0  3
- L4P  Var_10  C23   C22  C21  C20    59.79  30.0  3
- L4P  Var_11  C27   C26  C25  C23  -177.89  30.0  3
- L4P  Var_12  C28   C27  C26  C25  -179.21  30.0  3
- L4P  Var_13  C29   C28  C27  C26   -64.38  30.0  3
- L4P  Var_14  C47   C46  C45  C43  -178.47  30.0  3
- L4P  Var_15  C48   C47  C46  C45  -172.05  30.0  3
- L4P  Var_16  C52   C51  C50  C48    56.79  30.0  3
- L4P  Var_17  C53   C52  C51  C50    56.08  30.0  3
- L4P  Var_18  C57   C56  C55  C53   173.20  30.0  3
- L4P  Var_19  C58   C57  C56  C55   178.43  30.0  3
- L4P  Var_20  C59   C58  C57  C56   -64.78  30.0  3
- L4P  Var_21  H32   C3   O3   P1    -44.76  30.0  1
- L4P  Var_22  H42   C4   O4   P1    -74.90  30.0  1
- L4P  Var_23  H293  C29  C28  C27  -173.21  30.0  3
- L4P  Var_24  H303  C30  C28  C27   171.31  30.0  3
- L4P  Var_25  H593  C59  C58  C57  -173.05  30.0  3
- L4P  Var_26  H603  C60  C58  C57   173.24  30.0  3
+ L4P  Var_01   C12   C11  O1   C1   -177.20  30.0  3
+ L4P  Var_02   C42   C41  O2   C2   -163.42  30.0  3
+ L4P  Var_03   O4    P1   O3   C3     69.91  30.0  3
+ L4P  Var_04   O3    P1   O4   C4     66.25  30.0  3
+ L4P  Var_05   C13   C12  C11  O1   -174.55  30.0  3
+ L4P  Var_06   C43   C42  C41  O2   -175.82  30.0  3
+ L4P  Var_07   C17   C16  C15  C13  -176.12  30.0  3
+ L4P  Var_08   C18   C17  C16  C15  -173.38  30.0  3
+ L4P  Var_09   C22   C21  C20  C18    58.56  30.0  3
+ L4P  Var_10   C23   C22  C21  C20    59.79  30.0  3
+ L4P  Var_11   C27   C26  C25  C23  -177.89  30.0  3
+ L4P  Var_12   C28   C27  C26  C25  -179.21  30.0  3
+ L4P  Var_13   C29   C28  C27  C26   -64.38  30.0  3
+ L4P  Var_14   C47   C46  C45  C43  -178.47  30.0  3
+ L4P  Var_15   C48   C47  C46  C45  -172.05  30.0  3
+ L4P  Var_16   C52   C51  C50  C48    56.79  30.0  3
+ L4P  Var_17   C53   C52  C51  C50    56.08  30.0  3
+ L4P  Var_18   C57   C56  C55  C53   173.20  30.0  3
+ L4P  Var_19   C58   C57  C56  C55   178.43  30.0  3
+ L4P  Var_20   C59   C58  C57  C56   -64.78  30.0  3
+ L4P  Var_21   H32   C3   O3   P1    -44.76  30.0  1
+ L4P  Var_22   H42   C4   O4   P1    -74.90  30.0  1
+ L4P  Var_23   H293  C29  C28  C27  -173.21  30.0  3
+ L4P  Var_24   H303  C30  C28  C27   171.31  30.0  3
+ L4P  Var_25   H593  C59  C58  C57  -173.05  30.0  3
+ L4P  Var_26   H603  C60  C58  C57   173.24  30.0  3
+ L4P  Var_27   O3    C3   C2   C1    -64.93  30.0  3
+ L4P  Var_28   C41   O2   C2   C1    156.91  30.0  3
+ L4P  Var_29   C11   O1   C1   C2   -179.81  30.0  3
+ L4P  Var_30   O1    C1   C2   C3    175.80  30.0  2
+ L4P  Var_31   C41   O2   C2   C3    -81.13  30.0  3
+ L4P  Var_32   O6    C6   C5   C4   -177.01  30.0  3
+ L4P  Var_33   O4    C4   C5   C6   -179.39  30.0  1
+ L4P  Var_34   O2    C2   C1   O1    -63.11  30.0  3
+ L4P  Var_35   O3    C3   C2   O2    175.51  30.0  3
+ L4P  Var_36   O5    C5   C4   O4    -59.13  30.0  3
+ L4P  Var_37   O6    C6   C5   O5     61.00  30.0  3
+ L4P  Var_38   C14   C13  C12  C11   -62.31  30.0  3
+ L4P  Var_39   C15   C13  C12  C11   171.66  30.0  3
+ L4P  Var_40   C16   C15  C13  C12    66.71  30.0  3
+ L4P  Var_41   C16   C15  C13  C14   -59.70  30.0  3
+ L4P  Var_42   C19   C18  C17  C16   -60.01  30.0  3
+ L4P  Var_43   C20   C18  C17  C16   175.70  30.0  3
+ L4P  Var_44   C21   C20  C18  C17  -174.09  30.0  3
+ L4P  Var_45   C21   C20  C18  C19    61.48  30.0  3
+ L4P  Var_46   C24   C23  C22  C21  -174.32  30.0  3
+ L4P  Var_47   C25   C23  C22  C21    62.70  30.0  3
+ L4P  Var_48   C26   C25  C23  C22   -92.06  30.0  3
+ L4P  Var_49   C26   C25  C23  C24   145.59  30.0  3
+ L4P  Var_50   C44   C43  C42  C41   -65.76  30.0  3
+ L4P  Var_51   C45   C43  C42  C41   168.18  30.0  3
+ L4P  Var_52   C46   C45  C43  C42    65.33  30.0  3
+ L4P  Var_53   C46   C45  C43  C44   -60.96  30.0  3
+ L4P  Var_54   C49   C48  C47  C46   -60.93  30.0  3
+ L4P  Var_55   C50   C48  C47  C46   174.61  30.0  3
+ L4P  Var_56   C51   C50  C48  C47  -174.01  30.0  3
+ L4P  Var_57   C51   C50  C48  C49    61.47  30.0  3
+ L4P  Var_58   C54   C53  C52  C51  -175.20  30.0  3
+ L4P  Var_59   C55   C53  C52  C51    59.87  30.0  3
+ L4P  Var_60   C56   C55  C53  C52  -176.98  30.0  3
+ L4P  Var_61   C56   C55  C53  C54    59.57  30.0  3
+ L4P  Var_62   H31   C3   C2   C1     56.76  30.0  3
+ L4P  Var_63   H12   C1   C2   C3     54.15  30.0  2
+ L4P  Var_64   H11   C1   C2   C3    -62.54  30.0  2
+ L4P  Var_65   H62   C6   C5   C4     63.94  30.0  3
+ L4P  Var_66   H61   C6   C5   C4    -52.30  30.0  3
+ L4P  Var_67   H5O   O5   C5   C4     54.71  30.0  3
+ L4P  Var_68   H6O   O6   C6   C5     63.51  30.0  3
+ L4P  Var_69   H41   C4   C5   C6    -58.38  30.0  1
+ L4P  Var_70   H2    C2   C1   O1     56.27  30.0  3
+ L4P  Var_71   H5    C5   C4   O4     62.66  30.0  3
+ L4P  Var_72   H13   C13  C12  C11    55.66  30.0  3
+ L4P  Var_73   H143  C14  C13  C12  -174.86  30.0  3
+ L4P  Var_74   H142  C14  C13  C12   -54.78  30.0  3
+ L4P  Var_75   H141  C14  C13  C12    65.51  30.0  3
+ L4P  Var_76   H152  C15  C13  C12  -170.84  30.0  3
+ L4P  Var_77   H151  C15  C13  C12   -56.04  30.0  3
+ L4P  Var_78   H18   C18  C17  C16    58.30  30.0  3
+ L4P  Var_79   H193  C19  C18  C17   -60.39  30.0  3
+ L4P  Var_80   H192  C19  C18  C17    59.59  30.0  3
+ L4P  Var_81   H191  C19  C18  C17   179.44  30.0  3
+ L4P  Var_82   H202  C20  C18  C17    63.01  30.0  3
+ L4P  Var_83   H201  C20  C18  C17   -51.07  30.0  3
+ L4P  Var_84   H23   C23  C22  C21   -57.34  30.0  3
+ L4P  Var_85   H243  C24  C23  C22   175.72  30.0  3
+ L4P  Var_86   H242  C24  C23  C22   -64.67  30.0  3
+ L4P  Var_87   H241  C24  C23  C22    55.18  30.0  3
+ L4P  Var_88   H252  C25  C23  C22   146.93  30.0  3
+ L4P  Var_89   H251  C25  C23  C22    32.28  30.0  3
+ L4P  Var_90   H43   C43  C42  C41    52.21  30.0  3
+ L4P  Var_91   H443  C44  C43  C42  -174.68  30.0  3
+ L4P  Var_92   H442  C44  C43  C42   -54.72  30.0  3
+ L4P  Var_93   H441  C44  C43  C42    65.52  30.0  3
+ L4P  Var_94   H452  C45  C43  C42  -172.29  30.0  3
+ L4P  Var_95   H451  C45  C43  C42   -57.59  30.0  3
+ L4P  Var_96   H48   C48  C47  C46    57.27  30.0  3
+ L4P  Var_97   H493  C49  C48  C47   -59.76  30.0  3
+ L4P  Var_98   H492  C49  C48  C47    60.34  30.0  3
+ L4P  Var_99   H491  C49  C48  C47  -179.81  30.0  3
+ L4P  Var_100  H502  C50  C48  C47    63.28  30.0  3
+ L4P  Var_101  H501  C50  C48  C47   -50.85  30.0  3
+ L4P  Var_102  H53   C53  C52  C51   -58.48  30.0  3
+ L4P  Var_103  H543  C54  C53  C52   174.89  30.0  3
+ L4P  Var_104  H542  C54  C53  C52   -64.49  30.0  3
+ L4P  Var_105  H541  C54  C53  C52    54.96  30.0  3
+ L4P  Var_106  H552  C55  C53  C52    59.90  30.0  3
+ L4P  Var_107  H551  C55  C53  C52   -55.55  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

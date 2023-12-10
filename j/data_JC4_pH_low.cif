@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JC4  JC4  '2'-(beta-D-galactopyranosyloxy)-5-nitro[1,1'-biphenyl]-3-carboxylic acid'  ligand  49  30  .  2022-03-22  2022-11-17
+ JC4  JC4  '2'-(beta-D-galactopyranosyloxy)-5-nitro[1,1'-biphenyl]-3-carboxylic acid'  ligand  49  30  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JC4
@@ -250,43 +251,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JC4  CONST_01  C07  C08  C09  C10    0.00   0.0  0
- JC4  CONST_02  C07  C12  C11  C10    0.00   0.0  0
- JC4  CONST_03  C13  C12  C11  C10  180.00   0.0  0
- JC4  CONST_04  C08  C07  C12  C13  180.00   0.0  0
- JC4  CONST_05  C19  C20  C24  C13    0.00   0.0  0
- JC4  CONST_06  C19  C15  C14  C13    0.00   0.0  0
- JC4  CONST_07  C12  C13  C14  C15  180.00   0.0  0
- JC4  CONST_08  C24  C13  C14  C15    0.00   0.0  0
- JC4  CONST_09  C24  C20  C19  C15    0.00   0.0  0
- JC4  CONST_10  C12  C13  C24  C20  180.00   0.0  0
- JC4  CONST_11  C14  C13  C24  C20    0.00   0.0  0
- JC4  CONST_12  C14  C15  C19  C20    0.00   0.0  0
- JC4  CONST_16  C11  C10  C09  C08    0.00   0.0  0
- JC4  CONST_17  C11  C12  C07  C08    0.00   0.0  0
- JC4  CONST_18  C12  C11  C10  C09    0.00   0.0  0
- JC4  CONST_19  C12  C07  C08  C09    0.00   0.0  0
- JC4  CONST_21  O06  C07  C12  C13    0.00   0.0  0
- JC4  CONST_22  N21  C20  C24  C13  180.00   0.0  0
- JC4  CONST_23  C16  C15  C14  C13  180.00   0.0  0
- JC4  CONST_24  N21  C20  C19  C15  180.00   0.0  0
- JC4  CONST_25  C16  C15  C19  C20  180.00   0.0  0
- JC4  CONST_26  C09  C08  C07  O06  180.00   0.0  0
- JC4  CONST_27  C11  C12  C07  O06  180.00   0.0  0
- JC4  CONST_28  H8   C08  C09  C10  180.00   0.0  0
- JC4  CONST_29  H10  C11  C12  C13    0.00   0.0  0
- JC4  CONST_30  H11  C14  C13  C24  180.00   0.0  0
- JC4  CONST_31  H13  C19  C20  C24  180.00   0.0  0
- JC4  CONST_32  H9   C09  C08  C07  180.00   0.0  0
- JC4  CONST_33  H1   C10  C09  C08  180.00   0.0  0
- JC4  CONST_34  H2   C24  C13  C12    0.00   0.0  0
- JC4  CONST_35  O23  N21  C20  C24    0.00   0.0  0
- JC4  CONST_36  O22  N21  C20  C24  180.00   0.0  0
- JC4  CONST_37  O23  N21  C20  C19  180.00   0.0  0
- JC4  CONST_38  O22  N21  C20  C19    0.00   0.0  0
- JC4  CONST_39  H12  O17  C16  C15  180.00   0.0  0
- JC4  Var_01    C08  C07  O06  C05   19.03  30.0  2
- JC4  Var_02    O18  C16  C15  C14  -14.56  30.0  2
+ JC4  CONST_01  C07  C08  C09  C10     0.00   0.0  0
+ JC4  CONST_02  C07  C12  C11  C10     0.00   0.0  0
+ JC4  CONST_03  C13  C12  C11  C10   180.00   0.0  0
+ JC4  CONST_04  C08  C07  C12  C13   180.00   0.0  0
+ JC4  CONST_05  C19  C20  C24  C13     0.00   0.0  0
+ JC4  CONST_06  C19  C15  C14  C13     0.00   0.0  0
+ JC4  CONST_07  C12  C13  C14  C15   180.00   0.0  0
+ JC4  CONST_08  C24  C13  C14  C15     0.00   0.0  0
+ JC4  CONST_09  C24  C20  C19  C15     0.00   0.0  0
+ JC4  CONST_10  C12  C13  C24  C20   180.00   0.0  0
+ JC4  CONST_11  C14  C13  C24  C20     0.00   0.0  0
+ JC4  CONST_12  C14  C15  C19  C20     0.00   0.0  0
+ JC4  CONST_13  C11  C10  C09  C08     0.00   0.0  0
+ JC4  CONST_14  C11  C12  C07  C08     0.00   0.0  0
+ JC4  CONST_15  C12  C11  C10  C09     0.00   0.0  0
+ JC4  CONST_16  C12  C07  C08  C09     0.00   0.0  0
+ JC4  CONST_17  O06  C07  C12  C13     0.00   0.0  0
+ JC4  CONST_18  N21  C20  C24  C13   180.00   0.0  0
+ JC4  CONST_19  C16  C15  C14  C13   180.00   0.0  0
+ JC4  CONST_20  N21  C20  C19  C15   180.00   0.0  0
+ JC4  CONST_21  C16  C15  C19  C20   180.00   0.0  0
+ JC4  CONST_22  C09  C08  C07  O06   180.00   0.0  0
+ JC4  CONST_23  C11  C12  C07  O06   180.00   0.0  0
+ JC4  CONST_24  H8   C08  C09  C10   180.00   0.0  0
+ JC4  CONST_25  H10  C11  C12  C13     0.00   0.0  0
+ JC4  CONST_26  H11  C14  C13  C24   180.00   0.0  0
+ JC4  CONST_27  H13  C19  C20  C24   180.00   0.0  0
+ JC4  CONST_28  H9   C09  C08  C07   180.00   0.0  0
+ JC4  CONST_29  H1   C10  C09  C08   180.00   0.0  0
+ JC4  CONST_30  H2   C24  C13  C12     0.00   0.0  0
+ JC4  CONST_31  O23  N21  C20  C24     0.00   0.0  0
+ JC4  CONST_32  O22  N21  C20  C24   180.00   0.0  0
+ JC4  CONST_33  O23  N21  C20  C19   180.00   0.0  0
+ JC4  CONST_34  O22  N21  C20  C19     0.00   0.0  0
+ JC4  CONST_35  H12  O17  C16  C15   180.00   0.0  0
+ JC4  Var_01    C08  C07  O06  C05    19.03  30.0  2
+ JC4  Var_02    O18  C16  C15  C14   -14.56  30.0  2
+ JC4  Var_03    C11  C12  C13  C24    45.68  30.0  2
+ JC4  Var_04    C07  C12  C13  C24  -133.07  30.0  2
+ JC4  Var_05    C25  C05  O04  C03   -61.01  30.0  1
+ JC4  Var_06    C25  C27  C29  C03    55.42  30.0  1
+ JC4  Var_07    C27  C29  C03  O04   -58.59  30.0  1
+ JC4  Var_08    C27  C25  C05  O04    55.28  30.0  1
+ JC4  Var_09    C29  C03  O04  C05    63.17  30.0  1
+ JC4  Var_10    C29  C27  C25  C05   -53.90  30.0  1
+ JC4  Var_11    C14  C13  C12  C07    47.51  30.0  2
+ JC4  Var_12    C14  C13  C12  C11  -133.75  30.0  2
+ JC4  Var_13    C05  O04  C03  C02  -167.75  30.0  1
+ JC4  Var_14    C27  C29  C03  C02   176.66  30.0  1
+ JC4  Var_15    O06  C05  O04  C03  -178.97  30.0  1
+ JC4  Var_16    O28  C27  C29  C03   177.98  30.0  1
+ JC4  Var_17    O30  C29  C03  O04    63.37  30.0  1
+ JC4  Var_18    C07  O06  C05  O04   -84.36  30.0  3
+ JC4  Var_19    O26  C25  C05  O04   173.91  30.0  1
+ JC4  Var_20    O28  C27  C25  C05  -174.45  30.0  1
+ JC4  Var_21    C25  C05  O06  C07   155.70  30.0  2
+ JC4  Var_22    O30  C29  C27  C25   -65.99  30.0  1
+ JC4  Var_23    C29  C27  C25  O26  -174.28  30.0  1
+ JC4  Var_24    O06  C05  C25  C27   172.77  30.0  1
+ JC4  Var_25    H7   C05  O04  C03    60.58  30.0  1
+ JC4  Var_26    H16  C27  C29  C03   -62.47  30.0  1
+ JC4  Var_27    H18  C29  C03  O04  -174.87  30.0  1
+ JC4  Var_28    H14  C25  C05  O04   -63.07  30.0  1
+ JC4  Var_29    H6   C03  O04  C05   -53.31  30.0  1
+ JC4  Var_30    O04  C03  C02  O01   -57.39  30.0  3
+ JC4  Var_31    C29  C03  C02  O01    68.34  30.0  3
+ JC4  Var_32    O30  C29  C03  C02   -61.38  30.0  1
+ JC4  Var_33    O06  C05  C25  O26   -68.60  30.0  1
+ JC4  Var_34    O28  C27  C25  O26    65.16  30.0  1
+ JC4  Var_35    O30  C29  C27  O28    56.57  30.0  1
+ JC4  Var_36    H19  O30  C29  C03  -168.47  30.0  3
+ JC4  Var_37    H4   C02  C03  O04    65.15  30.0  3
+ JC4  Var_38    H5   C02  C03  O04   179.18  30.0  3
+ JC4  Var_39    H15  O26  C25  C05   104.00  30.0  3
+ JC4  Var_40    H17  O28  C27  C25   -50.71  30.0  3
+ JC4  Var_41    H3   O01  C02  C03   169.03  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

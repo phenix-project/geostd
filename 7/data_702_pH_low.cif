@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 702  702  '(1R)-4-[3-[2-(phenylmethyl)phenoxy]phenyl]-1-phosphono-butane-1-sulfonic acid'  ligand  57  32  .  2021-08-05  2021-08-05  
+ 702  702  '(1R)-4-[3-[2-(phenylmethyl)phenoxy]phenyl]-1-phosphono-butane-1-sulfonic acid'  ligand  57  32  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_702
@@ -281,53 +282,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 702  CONST_01  CAZ  CAM  CAH  CAG     0.00   0.0  0
- 702  CONST_02  CAZ  CAN  CAI  CAG     0.00   0.0  0
- 702  CONST_03  CAN  CAI  CAG  CAH     0.00   0.0  0
- 702  CONST_04  CAN  CAZ  CAM  CAH     0.00   0.0  0
- 702  CONST_05  CAM  CAH  CAG  CAI     0.00   0.0  0
- 702  CONST_06  CAM  CAZ  CAN  CAI     0.00   0.0  0
- 702  CONST_07  CBC  CAR  CAK  CAJ     0.00   0.0  0
- 702  CONST_08  CBC  CBB  CAQ  CAJ     0.00   0.0  0
- 702  CONST_09  CBB  CAQ  CAJ  CAK     0.00   0.0  0
- 702  CONST_10  CBB  CBC  CAR  CAK     0.00   0.0  0
- 702  CONST_11  CAS  CAY  CAO  CAL     0.00   0.0  0
- 702  CONST_12  CAS  CBA  CAP  CAL     0.00   0.0  0
- 702  CONST_13  CBA  CAP  CAL  CAO     0.00   0.0  0
- 702  CONST_14  CBA  CAS  CAY  CAO     0.00   0.0  0
- 702  CONST_15  CAY  CAO  CAL  CAP     0.00   0.0  0
- 702  CONST_16  CAY  CAS  CBA  CAP     0.00   0.0  0
- 702  CONST_17  CAR  CAK  CAJ  CAQ     0.00   0.0  0
- 702  CONST_18  CAR  CBC  CBB  CAQ     0.00   0.0  0
- 702  CONST_19  CAW  CAZ  CAM  CAH   180.00   0.0  0
- 702  CONST_20  CAW  CAZ  CAN  CAI   180.00   0.0  0
- 702  CONST_21  CAW  CBB  CAQ  CAJ   180.00   0.0  0
- 702  CONST_22  OAX  CBC  CAR  CAK   180.00   0.0  0
- 702  CONST_23  CAU  CAY  CAO  CAL   180.00   0.0  0
- 702  CONST_24  OAX  CBA  CAP  CAL   180.00   0.0  0
- 702  CONST_25  OAX  CBC  CBB  CAQ   180.00   0.0  0
- 702  CONST_26  CAW  CBB  CBC  CAR   180.00   0.0  0
- 702  CONST_27  CBA  CAS  CAY  CAU   180.00   0.0  0
- 702  CONST_28  CAY  CAS  CBA  OAX   180.00   0.0  0
- 702  CONST_29  HAM  CAM  CAH  CAG   180.00   0.0  0
- 702  CONST_30  HAN  CAN  CAI  CAG   180.00   0.0  0
- 702  CONST_31  HAI  CAI  CAG  CAH   180.00   0.0  0
- 702  CONST_32  HAH  CAH  CAG  CAI   180.00   0.0  0
- 702  CONST_33  HAR  CAR  CAK  CAJ   180.00   0.0  0
- 702  CONST_34  HAQ  CAQ  CAJ  CAK   180.00   0.0  0
- 702  CONST_35  HAG  CAG  CAH  CAM   180.00   0.0  0
- 702  CONST_36  HAP  CAP  CAL  CAO   180.00   0.0  0
- 702  CONST_37  HAS  CAS  CAY  CAO   180.00   0.0  0
- 702  CONST_38  HAO  CAO  CAL  CAP   180.00   0.0  0
- 702  CONST_39  HAK  CAK  CAJ  CAQ   180.00   0.0  0
- 702  CONST_40  HAJ  CAJ  CAK  CAR   180.00   0.0  0
- 702  CONST_41  HAL  CAL  CAO  CAY   180.00   0.0  0
- 702  Var_01    CBB  CAW  CAZ  CAM    61.20  30.0  3
- 702  Var_02    CAZ  CAW  CBB  CAQ  -110.83  30.0  2
- 702  Var_03    CBB  CBC  OAX  CBA  -106.09  30.0  2
- 702  Var_04    CAT  CAU  CAY  CAO    80.14  30.0  2
- 702  Var_05    CAY  CAU  CAT  CAV   179.77  30.0  3
- 702  Var_06    CBD  CAV  CAT  CAU   178.33  30.0  3
+ 702  CONST_01  CAZ   CAM  CAH  CAG     0.00   0.0  0
+ 702  CONST_02  CAZ   CAN  CAI  CAG     0.00   0.0  0
+ 702  CONST_03  CAN   CAI  CAG  CAH     0.00   0.0  0
+ 702  CONST_04  CAN   CAZ  CAM  CAH     0.00   0.0  0
+ 702  CONST_05  CAM   CAH  CAG  CAI     0.00   0.0  0
+ 702  CONST_06  CAM   CAZ  CAN  CAI     0.00   0.0  0
+ 702  CONST_07  CBC   CAR  CAK  CAJ     0.00   0.0  0
+ 702  CONST_08  CBC   CBB  CAQ  CAJ     0.00   0.0  0
+ 702  CONST_09  CBB   CAQ  CAJ  CAK     0.00   0.0  0
+ 702  CONST_10  CBB   CBC  CAR  CAK     0.00   0.0  0
+ 702  CONST_11  CAS   CAY  CAO  CAL     0.00   0.0  0
+ 702  CONST_12  CAS   CBA  CAP  CAL     0.00   0.0  0
+ 702  CONST_13  CBA   CAP  CAL  CAO     0.00   0.0  0
+ 702  CONST_14  CBA   CAS  CAY  CAO     0.00   0.0  0
+ 702  CONST_15  CAY   CAO  CAL  CAP     0.00   0.0  0
+ 702  CONST_16  CAY   CAS  CBA  CAP     0.00   0.0  0
+ 702  CONST_17  CAR   CAK  CAJ  CAQ     0.00   0.0  0
+ 702  CONST_18  CAR   CBC  CBB  CAQ     0.00   0.0  0
+ 702  CONST_19  CAW   CAZ  CAM  CAH   180.00   0.0  0
+ 702  CONST_20  CAW   CAZ  CAN  CAI   180.00   0.0  0
+ 702  CONST_21  CAW   CBB  CAQ  CAJ   180.00   0.0  0
+ 702  CONST_22  OAX   CBC  CAR  CAK   180.00   0.0  0
+ 702  CONST_23  CAU   CAY  CAO  CAL   180.00   0.0  0
+ 702  CONST_24  OAX   CBA  CAP  CAL   180.00   0.0  0
+ 702  CONST_25  OAX   CBC  CBB  CAQ   180.00   0.0  0
+ 702  CONST_26  CAW   CBB  CBC  CAR   180.00   0.0  0
+ 702  CONST_27  CBA   CAS  CAY  CAU   180.00   0.0  0
+ 702  CONST_28  CAY   CAS  CBA  OAX   180.00   0.0  0
+ 702  CONST_29  HAM   CAM  CAH  CAG   180.00   0.0  0
+ 702  CONST_30  HAN   CAN  CAI  CAG   180.00   0.0  0
+ 702  CONST_31  HAI   CAI  CAG  CAH   180.00   0.0  0
+ 702  CONST_32  HAH   CAH  CAG  CAI   180.00   0.0  0
+ 702  CONST_33  HAR   CAR  CAK  CAJ   180.00   0.0  0
+ 702  CONST_34  HAQ   CAQ  CAJ  CAK   180.00   0.0  0
+ 702  CONST_35  HAG   CAG  CAH  CAM   180.00   0.0  0
+ 702  CONST_36  HAP   CAP  CAL  CAO   180.00   0.0  0
+ 702  CONST_37  HAS   CAS  CAY  CAO   180.00   0.0  0
+ 702  CONST_38  HAO   CAO  CAL  CAP   180.00   0.0  0
+ 702  CONST_39  HAK   CAK  CAJ  CAQ   180.00   0.0  0
+ 702  CONST_40  HAJ   CAJ  CAK  CAR   180.00   0.0  0
+ 702  CONST_41  HAL   CAL  CAO  CAY   180.00   0.0  0
+ 702  Var_01    CBB   CAW  CAZ  CAM    61.20  30.0  3
+ 702  Var_02    CAZ   CAW  CBB  CAQ  -110.83  30.0  2
+ 702  Var_03    CBB   CBC  OAX  CBA  -106.09  30.0  2
+ 702  Var_04    CAT   CAU  CAY  CAO    80.14  30.0  2
+ 702  Var_05    CAY   CAU  CAT  CAV   179.77  30.0  3
+ 702  Var_06    CBD   CAV  CAT  CAU   178.33  30.0  3
+ 702  Var_07    CBC   OAX  CBA  CAP     6.69  30.0  2
+ 702  Var_08    CBC   OAX  CBA  CAS  -175.19  30.0  2
+ 702  Var_09    CAV   CBD  SBF  OAA    54.91  30.0  2
+ 702  Var_10    PBE   CBD  SBF  OAA   -72.28  30.0  2
+ 702  Var_11    CAV   CBD  SBF  OAB   -76.96  30.0  2
+ 702  Var_12    PBE   CBD  SBF  OAB   155.86  30.0  2
+ 702  Var_13    CAV   CBD  SBF  OAC   170.68  30.0  2
+ 702  Var_14    PBE   CBD  SBF  OAC    43.49  30.0  2
+ 702  Var_15    CAV   CBD  PBE  OAD   -86.62  30.0  1
+ 702  Var_16    SBF   CBD  PBE  OAD    37.97  30.0  1
+ 702  Var_17    CAV   CBD  PBE  OAE   160.20  30.0  1
+ 702  Var_18    SBF   CBD  PBE  OAE   -75.20  30.0  1
+ 702  Var_19    CAV   CBD  PBE  OAF    39.07  30.0  1
+ 702  Var_20    SBF   CBD  PBE  OAF   163.67  30.0  1
+ 702  Var_21    CAT   CAV  CBD  PBE   -80.80  30.0  2
+ 702  Var_22    CAT   CAV  CBD  SBF   150.77  30.0  2
+ 702  Var_23    HOAC  OAC  SBF  OAA   -12.26  30.0  3
+ 702  Var_24    HBD   CBD  SBF  OAA   171.43  30.0  2
+ 702  Var_25    HOAE  OAE  PBE  OAD   -49.20  30.0  3
+ 702  Var_26    HOAD  OAD  PBE  OAE   -72.05  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

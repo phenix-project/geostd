@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AR6  AR6  '[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl [(2R,3S,4R,5S)-3,4,5-trihydroxytetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  57  36  .  2021-08-06  2021-08-06  
+ AR6  AR6  '[(2R,3S,4R,5R)-5-(6-amino-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl [(2R,3S,4R,5S)-3,4,5-trihydroxytetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  57  36  .  2021-08-06  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_AR6
@@ -288,37 +289,100 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AR6  CONST_01  C4    N3   C2   N1     0.00   0.0  0
- AR6  CONST_02  C4    C5   C6   N1     0.00   0.0  0
- AR6  CONST_03  N7    C5   C6   N1   180.00   0.0  0
- AR6  CONST_04  C5    C6   N1   C2     0.00   0.0  0
- AR6  CONST_05  C5    C4   N3   C2     0.00   0.0  0
- AR6  CONST_06  N9    C4   N3   C2   180.00   0.0  0
- AR6  CONST_07  C6    N1   C2   N3     0.00   0.0  0
- AR6  CONST_08  C6    C5   C4   N3     0.00   0.0  0
- AR6  CONST_09  N7    C5   C4   N3   180.00   0.0  0
- AR6  CONST_10  C8    N9   C4   N3   180.00   0.0  0
- AR6  CONST_11  C8    N7   C5   C4     0.00   0.0  0
- AR6  CONST_12  N7    C8   N9   C4     0.00   0.0  0
- AR6  CONST_13  C8    N9   C4   C5     0.00   0.0  0
- AR6  CONST_14  N9    C8   N7   C5     0.00   0.0  0
- AR6  CONST_15  N9    C4   C5   C6   180.00   0.0  0
- AR6  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- AR6  CONST_17  N9    C4   C5   N7     0.00   0.0  0
- AR6  CONST_18  C1'   N9   C4   N3     0.00   0.0  0
- AR6  CONST_19  C1'   N9   C4   C5   180.00   0.0  0
- AR6  CONST_20  C1'   N9   C8   N7   180.00   0.0  0
- AR6  CONST_21  N6    C6   N1   C2   180.00   0.0  0
- AR6  CONST_22  N6    C6   C5   C4   180.00   0.0  0
- AR6  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- AR6  CONST_24  H2    C2   N3   C4   180.00   0.0  0
- AR6  CONST_25  H8    C8   N9   C4   180.00   0.0  0
- AR6  CONST_26  HN6   N6   C6   N1     0.00   0.0  0
- AR6  CONST_27  HN6A  N6   C6   N1   180.00   0.0  0
- AR6  Var_01    C4'   C5'  O5'  PA  -151.28  30.0  2
- AR6  Var_02    C4D   C5D  O5D  PB  -159.60  30.0  2
- AR6  Var_03    O1B   PB   O3A  PA   113.03  30.0  1
- AR6  Var_04    O1A   PA   O3A  PB    82.51  30.0  1
+ AR6  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ AR6  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ AR6  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ AR6  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ AR6  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ AR6  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ AR6  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ AR6  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ AR6  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ AR6  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ AR6  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ AR6  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ AR6  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ AR6  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ AR6  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ AR6  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ AR6  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ AR6  CONST_18  C1'   N9   C4   N3      0.00   0.0  0
+ AR6  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ AR6  CONST_20  C1'   N9   C8   N7    180.00   0.0  0
+ AR6  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ AR6  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ AR6  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ AR6  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ AR6  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ AR6  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ AR6  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ AR6  Var_01    C4'   C5'  O5'  PA   -151.28  30.0  2
+ AR6  Var_02    C4D   C5D  O5D  PB   -159.60  30.0  2
+ AR6  Var_03    O1B   PB   O3A  PA    113.03  30.0  1
+ AR6  Var_04    O1A   PA   O3A  PB     82.51  30.0  1
+ AR6  Var_05    C2'   C1'  N9   C4    101.20  30.0  2
+ AR6  Var_06    O4'   C1'  N9   C4   -140.68  30.0  2
+ AR6  Var_07    C2'   C1'  N9   C8    -76.73  30.0  2
+ AR6  Var_08    O4'   C1'  N9   C8     41.40  30.0  2
+ AR6  Var_09    C3'   C2'  C1'  N9    152.74  30.0  1
+ AR6  Var_10    C4'   O4'  C1'  N9   -136.51  30.0  1
+ AR6  Var_11    C4'   C3'  C2'  C1'   -38.09  30.0  1
+ AR6  Var_12    C3'   C4'  O4'  C1'   -11.72  30.0  1
+ AR6  Var_13    C4D   C3D  C2D  C1D    38.71  30.0  1
+ AR6  Var_14    C3D   C4D  O4D  C1D    13.62  30.0  1
+ AR6  Var_15    C4'   O4'  C1'  C2'   -13.58  30.0  1
+ AR6  Var_16    O4'   C4'  C3'  C2'    31.52  30.0  1
+ AR6  Var_17    C4D   O4D  C1D  C2D    11.78  30.0  1
+ AR6  Var_18    O4D   C4D  C3D  C2D   -33.20  30.0  1
+ AR6  Var_19    O4'   C1'  C2'  C3'    32.79  30.0  1
+ AR6  Var_20    O4D   C1D  C2D  C3D   -31.86  30.0  1
+ AR6  Var_21    O2'   C2'  C1'  N9    -85.08  30.0  1
+ AR6  Var_22    O3'   C3'  C2'  C1'    77.27  30.0  1
+ AR6  Var_23    C5'   C4'  O4'  C1'   109.44  30.0  1
+ AR6  Var_24    O3D   C3D  C2D  C1D   158.79  30.0  1
+ AR6  Var_25    C5D   C4D  O4D  C1D   135.08  30.0  1
+ AR6  Var_26    C3D   C2D  C1D  O1D  -152.06  30.0  1
+ AR6  Var_27    C4D   O4D  C1D  O1D   131.43  30.0  1
+ AR6  Var_28    C5'   C4'  C3'  C2'   -89.22  30.0  1
+ AR6  Var_29    O4'   C1'  C2'  O2'   154.97  30.0  1
+ AR6  Var_30    C4'   C3'  C2'  O2'  -156.75  30.0  1
+ AR6  Var_31    C5D   C4D  C3D  C2D  -153.41  30.0  1
+ AR6  Var_32    O4D   C1D  C2D  O2D    83.16  30.0  1
+ AR6  Var_33    C4D   C3D  C2D  O2D   -79.19  30.0  1
+ AR6  Var_34    O4'   C4'  C3'  O3'   -85.39  30.0  1
+ AR6  Var_35    O4D   C4D  C3D  O3D  -157.15  30.0  1
+ AR6  Var_36    H1'   C1'  N9   C4    -20.08  30.0  2
+ AR6  Var_37    H2'   C2'  C1'  N9     37.73  30.0  1
+ AR6  Var_38    H3'   C3'  C2'  C1'  -157.11  30.0  1
+ AR6  Var_39    H4'   C4'  O4'  C1'  -130.72  30.0  1
+ AR6  Var_40    H3D   C3D  C2D  C1D   -75.59  30.0  1
+ AR6  Var_41    H4D   C4D  O4D  C1D  -103.92  30.0  1
+ AR6  Var_42    H1D   C1D  C2D  C3D    85.32  30.0  1
+ AR6  Var_43    H2D   C2D  C3D  C4D   156.63  30.0  1
+ AR6  Var_44    O2D   C2D  C1D  O1D   -37.04  30.0  1
+ AR6  Var_45    O3'   C3'  C2'  O2'   -41.39  30.0  1
+ AR6  Var_46    O3D   C3D  C2D  O2D    40.90  30.0  1
+ AR6  Var_47    O5'   C5'  C4'  C3'   172.81  30.0  3
+ AR6  Var_48    C5'   C4'  C3'  O3'   153.87  30.0  1
+ AR6  Var_49    O5D   C5D  C4D  C3D  -176.80  30.0  3
+ AR6  Var_50    C5D   C4D  C3D  O3D    82.63  30.0  1
+ AR6  Var_51    O5'   C5'  C4'  O4'    55.15  30.0  3
+ AR6  Var_52    O5D   C5D  C4D  O4D    66.34  30.0  3
+ AR6  Var_53    HO2'  O2'  C2'  C1'   160.47  30.0  3
+ AR6  Var_54    HO2D  O2D  C2D  C1D    54.70  30.0  3
+ AR6  Var_55    HO3'  O3'  C3'  C2'    49.18  30.0  3
+ AR6  Var_56    HD1   O1D  C1D  C2D  -159.23  30.0  3
+ AR6  Var_57    HO3D  O3D  C3D  C2D    79.14  30.0  3
+ AR6  Var_58    H5'   C5'  C4'  C3'   -66.19  30.0  3
+ AR6  Var_59    H5'A  C5'  C4'  C3'    50.15  30.0  3
+ AR6  Var_60    H5D   C5D  C4D  C3D   -55.67  30.0  3
+ AR6  Var_61    H5DA  C5D  C4D  C3D    61.02  30.0  3
+ AR6  Var_62    C5'   O5'  PA   O1A   -68.21  30.0  3
+ AR6  Var_63    C5D   O5D  PB   O1B   -61.12  30.0  3
+ AR6  Var_64    C5'   O5'  PA   O2A    65.01  30.0  2
+ AR6  Var_65    C5D   O5D  PB   O2B    73.14  30.0  2
+ AR6  Var_66    C5'   O5'  PA   O3A   178.20  30.0  3
+ AR6  Var_67    C5D   O5D  PB   O3A  -173.29  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

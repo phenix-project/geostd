@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FHM  FHM  (2S)-3-(4-fluorophenoxy)-2-hydroxy-2-methyl-N-[4-nitro-3-(trifluoromethyl)phenyl]propanamide  ligand  42  28  .  2021-08-09  2021-08-09  
+ FHM  FHM  (2S)-3-(4-fluorophenoxy)-2-hydroxy-2-methyl-N-[4-nitro-3-(trifluoromethyl)phenyl]propanamide  ligand  42  28  .  2021-08-09  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FHM
@@ -221,42 +222,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FHM  CONST_01  C20  C19  C18  C17    0.00   0.0  0
- FHM  CONST_02  C20  C21  C16  C17    0.00   0.0  0
- FHM  CONST_03  C21  C16  C17  C18    0.00   0.0  0
- FHM  CONST_04  C21  C20  C19  C18    0.00   0.0  0
- FHM  CONST_05  C16  C17  C18  C19    0.00   0.0  0
- FHM  CONST_06  C16  C21  C20  C19    0.00   0.0  0
- FHM  CONST_07  C3   C4   C5   C6     0.00   0.0  0
- FHM  CONST_08  C3   C2   C1   C6     0.00   0.0  0
- FHM  CONST_09  C2   C1   C6   C5     0.00   0.0  0
- FHM  CONST_10  C2   C3   C4   C5     0.00   0.0  0
- FHM  CONST_11  C4   C5   C6   C1     0.00   0.0  0
- FHM  CONST_12  C4   C3   C2   C1     0.00   0.0  0
- FHM  CONST_13  F19  C19  C18  C17  180.00   0.0  0
- FHM  CONST_14  O14  C16  C17  C18  180.00   0.0  0
- FHM  CONST_15  C21  C20  C19  F19  180.00   0.0  0
- FHM  CONST_16  O14  C16  C21  C20  180.00   0.0  0
- FHM  CONST_17  C4   C5   C6   N9   180.00   0.0  0
- FHM  CONST_18  C2   C1   C6   N9   180.00   0.0  0
- FHM  CONST_19  C7   C4   C5   C6   180.00   0.0  0
- FHM  CONST_20  N8   C3   C4   C5   180.00   0.0  0
- FHM  CONST_21  N8   C3   C2   C1   180.00   0.0  0
- FHM  CONST_22  C7   C4   C3   C2   180.00   0.0  0
- FHM  CONST_23  H21  C21  C16  C17  180.00   0.0  0
- FHM  CONST_24  H20  C20  C19  C18  180.00   0.0  0
- FHM  CONST_25  H17  C17  C18  C19  180.00   0.0  0
- FHM  CONST_26  H18  C18  C19  C20  180.00   0.0  0
- FHM  CONST_27  H2   C2   C1   C6   180.00   0.0  0
- FHM  CONST_28  H1   C1   C6   C5   180.00   0.0  0
- FHM  CONST_29  H5   C5   C6   C1   180.00   0.0  0
- FHM  CONST_30  C5   C6   N9   C10  180.00   0.0  0
- FHM  CONST_31  C1   C6   N9   C10    0.00   0.0  0
- FHM  CONST_36  HN9  N9   C6   C5     0.00   0.0  0
- FHM  CONST_37  C6   N9   C10  C11  180.00   0.0  0
- FHM  CONST_38  C6   N9   C10  O10    0.00   0.0  0
- FHM  Var_01    F2   C7   C4   C5    16.82  30.0  2
- FHM  Var_02    C11  C13  O14  C16  179.48  30.0  3
+ FHM  CONST_01  C20   C19  C18  C17     0.00   0.0  0
+ FHM  CONST_02  C20   C21  C16  C17     0.00   0.0  0
+ FHM  CONST_03  C21   C16  C17  C18     0.00   0.0  0
+ FHM  CONST_04  C21   C20  C19  C18     0.00   0.0  0
+ FHM  CONST_05  C16   C17  C18  C19     0.00   0.0  0
+ FHM  CONST_06  C16   C21  C20  C19     0.00   0.0  0
+ FHM  CONST_07  C3    C4   C5   C6      0.00   0.0  0
+ FHM  CONST_08  C3    C2   C1   C6      0.00   0.0  0
+ FHM  CONST_09  C2    C1   C6   C5      0.00   0.0  0
+ FHM  CONST_10  C2    C3   C4   C5      0.00   0.0  0
+ FHM  CONST_11  C4    C5   C6   C1      0.00   0.0  0
+ FHM  CONST_12  C4    C3   C2   C1      0.00   0.0  0
+ FHM  CONST_13  F19   C19  C18  C17   180.00   0.0  0
+ FHM  CONST_14  O14   C16  C17  C18   180.00   0.0  0
+ FHM  CONST_15  C21   C20  C19  F19   180.00   0.0  0
+ FHM  CONST_16  O14   C16  C21  C20   180.00   0.0  0
+ FHM  CONST_17  C4    C5   C6   N9    180.00   0.0  0
+ FHM  CONST_18  C2    C1   C6   N9    180.00   0.0  0
+ FHM  CONST_19  C7    C4   C5   C6    180.00   0.0  0
+ FHM  CONST_20  N8    C3   C4   C5    180.00   0.0  0
+ FHM  CONST_21  N8    C3   C2   C1    180.00   0.0  0
+ FHM  CONST_22  C7    C4   C3   C2    180.00   0.0  0
+ FHM  CONST_23  H21   C21  C16  C17   180.00   0.0  0
+ FHM  CONST_24  H20   C20  C19  C18   180.00   0.0  0
+ FHM  CONST_25  H17   C17  C18  C19   180.00   0.0  0
+ FHM  CONST_26  H18   C18  C19  C20   180.00   0.0  0
+ FHM  CONST_27  H2    C2   C1   C6    180.00   0.0  0
+ FHM  CONST_28  H1    C1   C6   C5    180.00   0.0  0
+ FHM  CONST_29  H5    C5   C6   C1    180.00   0.0  0
+ FHM  CONST_30  C5    C6   N9   C10   180.00   0.0  0
+ FHM  CONST_31  C1    C6   N9   C10     0.00   0.0  0
+ FHM  CONST_32  HN9   N9   C6   C5      0.00   0.0  0
+ FHM  CONST_33  C6    N9   C10  C11   180.00   0.0  0
+ FHM  CONST_34  C6    N9   C10  O10     0.00   0.0  0
+ FHM  Var_01    F2    C7   C4   C5     16.82  30.0  2
+ FHM  Var_02    C11   C13  O14  C16   179.48  30.0  3
+ FHM  Var_03    C13   O14  C16  C17  -179.32  30.0  2
+ FHM  Var_04    C13   O14  C16  C21     0.65  30.0  2
+ FHM  Var_05    O11   C11  C13  O14   -58.72  30.0  3
+ FHM  Var_06    C12   C11  C13  O14    61.17  30.0  3
+ FHM  Var_07    C10   C11  C13  O14   178.64  30.0  3
+ FHM  Var_08    O10   C10  C11  C13   -43.79  30.0  3
+ FHM  Var_09    N9    C10  C11  C13   138.38  30.0  3
+ FHM  Var_10    O10   C10  C11  O11  -166.26  30.0  3
+ FHM  Var_11    N9    C10  C11  O11    15.90  30.0  3
+ FHM  Var_12    O10   C10  C11  C12    76.76  30.0  3
+ FHM  Var_13    N9    C10  C11  C12  -101.07  30.0  3
+ FHM  Var_14    H11   O11  C11  C13   -41.92  30.0  3
+ FHM  Var_15    H121  C12  C11  C13   -61.39  30.0  3
+ FHM  Var_16    H122  C12  C11  C13    59.05  30.0  3
+ FHM  Var_17    H123  C12  C11  C13   178.93  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

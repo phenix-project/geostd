@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JJN  JJN  (6~{a}~{R},11~{b}~{S})-6~{a}-(1,4-dimethylpiperidin-4-yl)-7,11~{b}-dihydro-6~{H}-indolo[2,3-c]isoquinolin-5-one  ligand  51  26  .  2021-08-12  2022-09-16
+ JJN  JJN  (6~{a}~{R},11~{b}~{S})-6~{a}-(1,4-dimethylpiperidin-4-yl)-7,11~{b}-dihydro-6~{H}-indolo[2,3-c]isoquinolin-5-one  ligand  51  26  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JJN
@@ -273,36 +274,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JJN  CONST_01  C3   C2   C1   C4     0.00   0.0  0
- JJN  CONST_02  C3   C6   C5   C4     0.00   0.0  0
- JJN  CONST_03  C2   C1   C4   C5     0.00   0.0  0
- JJN  CONST_04  C2   C3   C6   C5     0.00   0.0  0
- JJN  CONST_05  C1   C2   C3   C6     0.00   0.0  0
- JJN  CONST_06  C1   C4   C5   C6     0.00   0.0  0
- JJN  CONST_07  C16  C17  C12  C13    0.00   0.0  0
- JJN  CONST_08  C16  C15  C14  C13    0.00   0.0  0
- JJN  CONST_09  C12  C13  C14  C15    0.00   0.0  0
- JJN  CONST_10  C12  C17  C16  C15    0.00   0.0  0
- JJN  CONST_11  C14  C13  C12  C17    0.00   0.0  0
- JJN  CONST_12  C14  C15  C16  C17    0.00   0.0  0
- JJN  CONST_13  C12  C10  N11  C8     0.00   0.0  0
- JJN  CONST_14  O18  C10  N11  C8   180.00   0.0  0
- JJN  CONST_15  H14  C2   C1   C4   180.00   0.0  0
- JJN  CONST_16  H13  C1   C4   C5   180.00   0.0  0
- JJN  CONST_17  H15  C3   C6   C5   180.00   0.0  0
- JJN  CONST_18  H1   C4   C5   C6   180.00   0.0  0
- JJN  CONST_19  H3   C17  C12  C10    0.00   0.0  0
- JJN  CONST_20  H2   C15  C14  C13  180.00   0.0  0
- JJN  CONST_21  H19  C14  C13  C9     0.00   0.0  0
- JJN  CONST_22  H20  C16  C17  C12  180.00   0.0  0
- JJN  CONST_23  H18  N11  C10  C12  180.00   0.0  0
- JJN  Var_01    C8   N7   C5   C4   162.38  30.0  1
- JJN  Var_02    N11  C10  C12  C13  -10.94  30.0  1
- JJN  Var_03    C23  N22  C21  C20   59.40  30.0  1
- JJN  Var_04    C24  C23  N22  C21  -58.90  30.0  1
- JJN  Var_05    N22  C23  C24  C19   55.87  30.0  1
- JJN  Var_06    N22  C21  C20  C19  -56.77  30.0  1
- JJN  Var_07    H10  C26  N22  C21   58.07  30.0  3
+ JJN  CONST_01  C3   C2   C1   C4      0.00   0.0  0
+ JJN  CONST_02  C3   C6   C5   C4      0.00   0.0  0
+ JJN  CONST_03  C2   C1   C4   C5      0.00   0.0  0
+ JJN  CONST_04  C2   C3   C6   C5      0.00   0.0  0
+ JJN  CONST_05  C1   C2   C3   C6      0.00   0.0  0
+ JJN  CONST_06  C1   C4   C5   C6      0.00   0.0  0
+ JJN  CONST_07  C16  C17  C12  C13     0.00   0.0  0
+ JJN  CONST_08  C16  C15  C14  C13     0.00   0.0  0
+ JJN  CONST_09  C12  C13  C14  C15     0.00   0.0  0
+ JJN  CONST_10  C12  C17  C16  C15     0.00   0.0  0
+ JJN  CONST_11  C14  C13  C12  C17     0.00   0.0  0
+ JJN  CONST_12  C14  C15  C16  C17     0.00   0.0  0
+ JJN  CONST_13  C12  C10  N11  C8      0.00   0.0  0
+ JJN  CONST_14  O18  C10  N11  C8    180.00   0.0  0
+ JJN  CONST_15  H14  C2   C1   C4    180.00   0.0  0
+ JJN  CONST_16  H13  C1   C4   C5    180.00   0.0  0
+ JJN  CONST_17  H15  C3   C6   C5    180.00   0.0  0
+ JJN  CONST_18  H1   C4   C5   C6    180.00   0.0  0
+ JJN  CONST_19  H3   C17  C12  C10     0.00   0.0  0
+ JJN  CONST_20  H2   C15  C14  C13   180.00   0.0  0
+ JJN  CONST_21  H19  C14  C13  C9      0.00   0.0  0
+ JJN  CONST_22  H20  C16  C17  C12   180.00   0.0  0
+ JJN  CONST_23  H18  N11  C10  C12   180.00   0.0  0
+ JJN  Var_01    C8   N7   C5   C4    162.38  30.0  1
+ JJN  Var_02    N11  C10  C12  C13   -10.94  30.0  1
+ JJN  Var_03    C23  N22  C21  C20    59.40  30.0  1
+ JJN  Var_04    C24  C23  N22  C21   -58.90  30.0  1
+ JJN  Var_05    N22  C23  C24  C19    55.87  30.0  1
+ JJN  Var_06    N22  C21  C20  C19   -56.77  30.0  1
+ JJN  Var_07    H10  C26  N22  C21    58.07  30.0  3
+ JJN  Var_08    C8   C9   C6   C5     17.79  30.0  1
+ JJN  Var_09    C9   C8   N7   C5     29.19  30.0  1
+ JJN  Var_10    N11  C8   N7   C5    -84.99  30.0  1
+ JJN  Var_11    C19  C8   N7   C5    152.94  30.0  1
+ JJN  Var_12    N7   C8   C9   C6    -27.46  30.0  1
+ JJN  Var_13    N11  C8   C9   C6     86.64  30.0  1
+ JJN  Var_14    C19  C8   C9   C6   -148.58  30.0  1
+ JJN  Var_15    C3   C6   C9   C8   -164.20  30.0  1
+ JJN  Var_16    C12  C13  C9   C8     28.90  30.0  1
+ JJN  Var_17    C14  C13  C9   C8   -153.80  30.0  1
+ JJN  Var_18    C23  C24  C19  C8   -170.97  30.0  1
+ JJN  Var_19    C21  C20  C19  C8    170.66  30.0  1
+ JJN  Var_20    N7   C8   N11  C10   134.75  30.0  1
+ JJN  Var_21    C9   C8   N11  C10    24.78  30.0  1
+ JJN  Var_22    C19  C8   N11  C10  -102.70  30.0  1
+ JJN  Var_23    N7   C8   C9   C13  -150.43  30.0  1
+ JJN  Var_24    N11  C8   C9   C13   -36.33  30.0  1
+ JJN  Var_25    C19  C8   C9   C13    88.45  30.0  1
+ JJN  Var_26    N7   C8   C19  C20   -53.93  30.0  3
+ JJN  Var_27    C9   C8   C19  C20    61.93  30.0  3
+ JJN  Var_28    N11  C8   C19  C20  -174.54  30.0  3
+ JJN  Var_29    C23  C24  C19  C20   -50.66  30.0  1
+ JJN  Var_30    C24  C19  C20  C21    50.98  30.0  1
+ JJN  Var_31    N7   C8   C19  C24    64.46  30.0  3
+ JJN  Var_32    C9   C8   C19  C24  -179.69  30.0  3
+ JJN  Var_33    N11  C8   C19  C24   -56.15  30.0  3
+ JJN  Var_34    C25  C19  C20  C21   -68.15  30.0  1
+ JJN  Var_35    C25  C19  C8   N7   -175.32  30.0  3
+ JJN  Var_36    C25  C19  C8   C9    -59.46  30.0  3
+ JJN  Var_37    C25  C19  C8   N11    64.07  30.0  3
+ JJN  Var_38    C25  C19  C24  C23    68.74  30.0  1
+ JJN  Var_39    H17  C9   C6   C5    -97.05  30.0  1
+ JJN  Var_40    H8   C24  C19  C8    -50.83  30.0  1
+ JJN  Var_41    H9   C24  C19  C8     67.37  30.0  1
+ JJN  Var_42    H4   C20  C19  C8     49.88  30.0  1
+ JJN  Var_43    H5   C20  C19  C8    -67.90  30.0  1
+ JJN  Var_44    H24  C25  C19  C8     61.80  30.0  3
+ JJN  Var_45    H25  C25  C19  C8   -178.94  30.0  3
+ JJN  Var_46    H26  C25  C19  C8    -59.76  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OZE  OZE  '(2~{S})-4-methyl-2-[2-[[oxidanyl-[(1~{R})-2-phenyl-1-(phenylmethoxycarbonylamino)ethyl]phosphoryl]amino]ethanoylamino]pentanoic acid'  ligand  65  35  .  2022-03-23  2022-03-23
+ OZE  OZE  '(2~{S})-4-methyl-2-[2-[[oxidanyl-[(1~{R})-2-phenyl-1-(phenylmethoxycarbonylamino)ethyl]phosphoryl]amino]ethanoylamino]pentanoic acid'  ligand  65  35  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OZE
@@ -311,45 +312,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OZE  CONST_01  C12  C13  C14  C9     0.00   0.0  0
- OZE  CONST_02  C12  C11  C10  C9     0.00   0.0  0
- OZE  CONST_03  C13  C14  C9   C10    0.00   0.0  0
- OZE  CONST_04  C13  C12  C11  C10    0.00   0.0  0
- OZE  CONST_05  C14  C13  C12  C11    0.00   0.0  0
- OZE  CONST_06  C14  C9   C10  C11    0.00   0.0  0
- OZE  CONST_07  C20  C19  C18  C17    0.00   0.0  0
- OZE  CONST_08  C20  C21  C22  C17    0.00   0.0  0
- OZE  CONST_09  C21  C20  C19  C18    0.00   0.0  0
- OZE  CONST_10  C21  C22  C17  C18    0.00   0.0  0
- OZE  CONST_11  C22  C21  C20  C19    0.00   0.0  0
- OZE  CONST_12  C22  C17  C18  C19    0.00   0.0  0
- OZE  CONST_13  C13  C14  C9   C8   180.00   0.0  0
- OZE  CONST_14  C11  C10  C9   C8   180.00   0.0  0
- OZE  CONST_15  C19  C18  C17  C16  180.00   0.0  0
- OZE  CONST_16  C21  C22  C17  C16  180.00   0.0  0
- OZE  CONST_17  H20  C13  C14  C9   180.00   0.0  0
- OZE  CONST_18  H13  C11  C10  C9   180.00   0.0  0
- OZE  CONST_19  H21  C14  C9   C10  180.00   0.0  0
- OZE  CONST_20  H19  C12  C11  C10  180.00   0.0  0
- OZE  CONST_21  H12  C10  C11  C12  180.00   0.0  0
- OZE  CONST_22  H25  C19  C18  C17  180.00   0.0  0
- OZE  CONST_23  H27  C21  C22  C17  180.00   0.0  0
- OZE  CONST_24  H26  C20  C19  C18  180.00   0.0  0
- OZE  CONST_25  H28  C22  C17  C18  180.00   0.0  0
- OZE  CONST_26  H24  C18  C19  C20  180.00   0.0  0
- OZE  CONST_27  C4   N    C5   C6   180.00   0.0  0
- OZE  CONST_28  O    C5   N    C4     0.00   0.0  0
- OZE  CONST_29  H14  N    C5   C6     0.00   0.0  0
- OZE  Var_01    C14  C9   C8   C7   103.75  30.0  3
- OZE  Var_02    O4   C16  C17  C18  -64.15  30.0  2
- OZE  Var_03    C17  C16  O4   C15  165.58  30.0  1
- OZE  Var_04    P    N1   C6   C5   -97.81  30.0  2
- OZE  Var_05    C7   P    N1   C6   174.41  30.0  1
- OZE  Var_06    N    C5   C6   N1    -6.96  30.0  1
- OZE  Var_07    C4   C3   C1   C2   -62.49  30.0  2
- OZE  Var_08    O4   C15  N2   C7   171.21  30.0  1
- OZE  Var_09    H15  C    C1   C2    56.64  30.0  3
- OZE  Var_10    H4   C2   C1   C    -50.96  30.0  3
+ OZE  CONST_01  C12  C13  C14  C9      0.00   0.0  0
+ OZE  CONST_02  C12  C11  C10  C9      0.00   0.0  0
+ OZE  CONST_03  C13  C14  C9   C10     0.00   0.0  0
+ OZE  CONST_04  C13  C12  C11  C10     0.00   0.0  0
+ OZE  CONST_05  C14  C13  C12  C11     0.00   0.0  0
+ OZE  CONST_06  C14  C9   C10  C11     0.00   0.0  0
+ OZE  CONST_07  C20  C19  C18  C17     0.00   0.0  0
+ OZE  CONST_08  C20  C21  C22  C17     0.00   0.0  0
+ OZE  CONST_09  C21  C20  C19  C18     0.00   0.0  0
+ OZE  CONST_10  C21  C22  C17  C18     0.00   0.0  0
+ OZE  CONST_11  C22  C21  C20  C19     0.00   0.0  0
+ OZE  CONST_12  C22  C17  C18  C19     0.00   0.0  0
+ OZE  CONST_13  C13  C14  C9   C8    180.00   0.0  0
+ OZE  CONST_14  C11  C10  C9   C8    180.00   0.0  0
+ OZE  CONST_15  C19  C18  C17  C16   180.00   0.0  0
+ OZE  CONST_16  C21  C22  C17  C16   180.00   0.0  0
+ OZE  CONST_17  H20  C13  C14  C9    180.00   0.0  0
+ OZE  CONST_18  H13  C11  C10  C9    180.00   0.0  0
+ OZE  CONST_19  H21  C14  C9   C10   180.00   0.0  0
+ OZE  CONST_20  H19  C12  C11  C10   180.00   0.0  0
+ OZE  CONST_21  H12  C10  C11  C12   180.00   0.0  0
+ OZE  CONST_22  H25  C19  C18  C17   180.00   0.0  0
+ OZE  CONST_23  H27  C21  C22  C17   180.00   0.0  0
+ OZE  CONST_24  H26  C20  C19  C18   180.00   0.0  0
+ OZE  CONST_25  H28  C22  C17  C18   180.00   0.0  0
+ OZE  CONST_26  H24  C18  C19  C20   180.00   0.0  0
+ OZE  CONST_27  C4   N    C5   C6    180.00   0.0  0
+ OZE  CONST_28  O    C5   N    C4      0.00   0.0  0
+ OZE  CONST_29  H14  N    C5   C6      0.00   0.0  0
+ OZE  Var_01    C14  C9   C8   C7    103.75  30.0  3
+ OZE  Var_02    O4   C16  C17  C18   -64.15  30.0  2
+ OZE  Var_03    C17  C16  O4   C15   165.58  30.0  1
+ OZE  Var_04    P    N1   C6   C5    -97.81  30.0  2
+ OZE  Var_05    C7   P    N1   C6    174.41  30.0  1
+ OZE  Var_06    N    C5   C6   N1     -6.96  30.0  1
+ OZE  Var_07    C4   C3   C1   C2    -62.49  30.0  2
+ OZE  Var_08    O4   C15  N2   C7    171.21  30.0  1
+ OZE  Var_09    H15  C    C1   C2     56.64  30.0  3
+ OZE  Var_10    H4   C2   C1   C     -50.96  30.0  3
+ OZE  Var_11    C9   C8   C7   N2    -58.82  30.0  3
+ OZE  Var_12    P    C7   C8   C9   -178.25  30.0  1
+ OZE  Var_13    H8   C7   C8   C9     59.44  30.0  1
+ OZE  Var_14    C23  C4   N    C5   -151.36  30.0  2
+ OZE  Var_15    C3   C4   N    C5     83.61  30.0  2
+ OZE  Var_16    N2   C7   P    N1   -171.23  30.0  2
+ OZE  Var_17    C8   C7   P    N1    -49.12  30.0  2
+ OZE  Var_18    C16  O4   C15  N2   -178.23  30.0  1
+ OZE  Var_19    O2   P    C7   N2    -58.47  30.0  3
+ OZE  Var_20    O1   P    C7   N2     71.41  30.0  2
+ OZE  Var_21    C15  N2   C7   C8    127.66  30.0  2
+ OZE  Var_22    O2   P    C7   C8     63.64  30.0  3
+ OZE  Var_23    O1   P    C7   C8   -166.48  30.0  2
+ OZE  Var_24    O6   C23  C4   N     -11.01  30.0  1
+ OZE  Var_25    O5   C23  C4   N     170.13  30.0  1
+ OZE  Var_26    C1   C3   C4   N      74.47  30.0  3
+ OZE  Var_27    P    C7   N2   C15  -107.52  30.0  3
+ OZE  Var_28    O3   C15  O4   C16     2.49  30.0  3
+ OZE  Var_29    C1   C3   C4   C23   -50.54  30.0  3
+ OZE  Var_30    O6   C23  C4   C3    115.61  30.0  1
+ OZE  Var_31    O5   C23  C4   C3    -63.25  30.0  1
+ OZE  Var_32    H7   C4   N    C5    -34.14  30.0  2
+ OZE  Var_33    H9   N2   C7   C8    -67.40  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

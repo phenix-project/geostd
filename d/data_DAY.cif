@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DAY  DAY  1-[(1R,2R,3aS,3bS,10aR,10bS,11S,12aS)-1,11-dihydroxy-2,5,10a,12a-tetramethyl-7-phenyl-1,2,3,3a,3b,7,10,10a,10b,11,12,12a-dodecahydrocyclopenta[5,6]naphtho[1,2-f]indazol-1-yl]-2-hydroxyethanone  ligand  72  36  .  2022-03-18  2022-03-18
+ DAY  DAY  1-[(1R,2R,3aS,3bS,10aR,10bS,11S,12aS)-1,11-dihydroxy-2,5,10a,12a-tetramethyl-7-phenyl-1,2,3,3a,3b,7,10,10a,10b,11,12,12a-dodecahydrocyclopenta[5,6]naphtho[1,2-f]indazol-1-yl]-2-hydroxyethanone  ligand  72  36  .  2022-03-18  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DAY
@@ -359,36 +360,126 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DAY  CONST_01  C24  N1   C3   C2    180.00   0.0  0
- DAY  CONST_02  N2   N1   C3   C2      0.00   0.0  0
- DAY  CONST_03  N1   N2   C22  C2      0.00   0.0  0
- DAY  CONST_04  N2   C22  C2   C3      0.00   0.0  0
- DAY  CONST_07  C22  N2   N1   C3      0.00   0.0  0
- DAY  CONST_08  C22  C2   C3   N1      0.00   0.0  0
- DAY  CONST_09  C25  C23  C24  N1    180.00   0.0  0
- DAY  CONST_10  C29  C27  C24  N1    180.00   0.0  0
- DAY  CONST_11  C24  N1   N2   C22   180.00   0.0  0
- DAY  CONST_14  C29  C26  C25  C23     0.00   0.0  0
- DAY  CONST_15  C29  C27  C24  C23     0.00   0.0  0
- DAY  CONST_16  C26  C25  C23  C24     0.00   0.0  0
- DAY  CONST_17  C26  C29  C27  C24     0.00   0.0  0
- DAY  CONST_18  C27  C24  C23  C25     0.00   0.0  0
- DAY  CONST_19  C27  C29  C26  C25     0.00   0.0  0
- DAY  CONST_20  C24  N1   C3   C4      0.00   0.0  0
- DAY  CONST_21  H22  C22  C2   C1      0.00   0.0  0
- DAY  CONST_22  H23  C23  C24  N1      0.00   0.0  0
- DAY  CONST_23  H27  C27  C24  N1      0.00   0.0  0
- DAY  CONST_24  H26  C26  C25  C23   180.00   0.0  0
- DAY  CONST_25  H25  C25  C23  C24   180.00   0.0  0
- DAY  CONST_26  H29  C29  C27  C24   180.00   0.0  0
- DAY  Var_01    C6   C5   C4   C3    175.72   0.0  0
- DAY  Var_02    C5   C4   C3   C2      9.92  30.0  1
- DAY  Var_03    C10  C1   C2   C3    -33.14  30.0  1
- DAY  Var_04    C7   C6   C5   C4   -179.35  30.0  1
- DAY  Var_05    C8   C7   C6   C5     -5.30  30.0  1
- DAY  Var_06    H4   C4   C5   C6     -1.72   0.0  0
- DAY  Var_07    H28  C28  C6   C5     62.23  30.0  3
- DAY  Var_08    O4   C21  C20  C17   169.42  30.0  3
+ DAY  CONST_01  C24   N1   C3   C2    180.00   0.0  0
+ DAY  CONST_02  N2    N1   C3   C2      0.00   0.0  0
+ DAY  CONST_03  N1    N2   C22  C2      0.00   0.0  0
+ DAY  CONST_04  N2    C22  C2   C3      0.00   0.0  0
+ DAY  CONST_05  C22   N2   N1   C3      0.00   0.0  0
+ DAY  CONST_06  C22   C2   C3   N1      0.00   0.0  0
+ DAY  CONST_07  C25   C23  C24  N1    180.00   0.0  0
+ DAY  CONST_08  C29   C27  C24  N1    180.00   0.0  0
+ DAY  CONST_09  C24   N1   N2   C22   180.00   0.0  0
+ DAY  CONST_10  C29   C26  C25  C23     0.00   0.0  0
+ DAY  CONST_11  C29   C27  C24  C23     0.00   0.0  0
+ DAY  CONST_12  C26   C25  C23  C24     0.00   0.0  0
+ DAY  CONST_13  C26   C29  C27  C24     0.00   0.0  0
+ DAY  CONST_14  C27   C24  C23  C25     0.00   0.0  0
+ DAY  CONST_15  C27   C29  C26  C25     0.00   0.0  0
+ DAY  CONST_16  C24   N1   C3   C4      0.00   0.0  0
+ DAY  CONST_17  H22   C22  C2   C1      0.00   0.0  0
+ DAY  CONST_18  H23   C23  C24  N1      0.00   0.0  0
+ DAY  CONST_19  H27   C27  C24  N1      0.00   0.0  0
+ DAY  CONST_20  H26   C26  C25  C23   180.00   0.0  0
+ DAY  CONST_21  H25   C25  C23  C24   180.00   0.0  0
+ DAY  CONST_22  H29   C29  C27  C24   180.00   0.0  0
+ DAY  Var_01    C6    C5   C4   C3    175.72   0.0  0
+ DAY  Var_02    C5    C4   C3   C2      9.92  30.0  1
+ DAY  Var_03    C10   C1   C2   C3    -33.14  30.0  1
+ DAY  Var_04    C7    C6   C5   C4   -179.35  30.0  1
+ DAY  Var_05    C8    C7   C6   C5     -5.30  30.0  1
+ DAY  Var_06    H4    C4   C5   C6     -1.72   0.0  0
+ DAY  Var_07    H28   C28  C6   C5     62.23  30.0  3
+ DAY  Var_08    O4    C21  C20  C17   169.42  30.0  3
+ DAY  Var_09    C4    C5   C10  C1    -29.97  30.0  1
+ DAY  Var_10    C6    C5   C10  C1    157.48  30.0  1
+ DAY  Var_11    C8    C9   C10  C1    179.21  30.0  1
+ DAY  Var_12    C11   C9   C10  C1     46.15  30.0  1
+ DAY  Var_13    C5    C10  C1   C2     42.61  30.0  1
+ DAY  Var_14    C9    C10  C1   C2    161.23  30.0  1
+ DAY  Var_15    C23   C24  N1   C3    -46.95  30.0  2
+ DAY  Var_16    C27   C24  N1   C3    133.67  30.0  2
+ DAY  Var_17    C9    C10  C5   C4   -149.57  30.0  1
+ DAY  Var_18    C8    C9   C10  C5    -59.54  30.0  1
+ DAY  Var_19    C11   C9   C10  C5    167.40  30.0  1
+ DAY  Var_20    C9    C10  C5   C6     37.88  30.0  1
+ DAY  Var_21    C14   C8   C7   C6   -135.61  30.0  1
+ DAY  Var_22    C9    C8   C7   C6    -16.32  30.0  1
+ DAY  Var_23    C13   C14  C8   C7   -179.10  30.0  1
+ DAY  Var_24    C15   C14  C8   C7    -56.13  30.0  1
+ DAY  Var_25    C10   C9   C8   C7     49.19  30.0  1
+ DAY  Var_26    C11   C9   C8   C7   -176.33  30.0  1
+ DAY  Var_27    C12   C13  C14  C8    -60.09  30.0  1
+ DAY  Var_28    C17   C13  C14  C8    178.06  30.0  1
+ DAY  Var_29    C16   C15  C14  C8   -157.21  30.0  1
+ DAY  Var_30    C12   C11  C9   C8     50.75  30.0  1
+ DAY  Var_31    C13   C14  C8   C9     60.48  30.0  1
+ DAY  Var_32    C15   C14  C8   C9   -176.55  30.0  1
+ DAY  Var_33    C13   C12  C11  C9    -50.07  30.0  1
+ DAY  Var_34    C14   C8   C9   C10   170.26  30.0  1
+ DAY  Var_35    C12   C11  C9   C10  -176.94  30.0  1
+ DAY  Var_36    C14   C8   C9   C11   -55.26  30.0  1
+ DAY  Var_37    C14   C13  C12  C11    53.87  30.0  1
+ DAY  Var_38    C17   C13  C12  C11   164.67  30.0  1
+ DAY  Var_39    C15   C14  C13  C12   168.50  30.0  1
+ DAY  Var_40    C16   C17  C13  C12  -160.74  30.0  1
+ DAY  Var_41    C16   C15  C14  C13   -30.32  30.0  1
+ DAY  Var_42    C15   C16  C17  C13    27.10  30.0  1
+ DAY  Var_43    C16   C17  C13  C14   -44.72  30.0  1
+ DAY  Var_44    C17   C16  C15  C14     1.47  30.0  1
+ DAY  Var_45    C17   C13  C14  C15    46.65  30.0  1
+ DAY  Var_46    C23   C24  N1   N2    134.38  30.0  2
+ DAY  Var_47    C27   C24  N1   N2    -45.00  30.0  2
+ DAY  Var_48    C8    C9   C11  O1    -75.25  30.0  1
+ DAY  Var_49    C10   C9   C11  O1     57.06  30.0  1
+ DAY  Var_50    C13   C12  C11  O1     74.56  30.0  1
+ DAY  Var_51    C19   C10  C1   C2    -73.78  30.0  1
+ DAY  Var_52    C19   C10  C5   C4     88.51  30.0  1
+ DAY  Var_53    C19   C10  C5   C6    -84.04  30.0  1
+ DAY  Var_54    C18   C13  C14  C8     62.78  30.0  1
+ DAY  Var_55    C19   C10  C9   C8     57.08  30.0  1
+ DAY  Var_56    C19   C10  C9   C11   -75.98  30.0  1
+ DAY  Var_57    C18   C13  C12  C11   -69.76  30.0  1
+ DAY  Var_58    O2    C17  C13  C12   -41.98  30.0  1
+ DAY  Var_59    C20   C17  C13  C12    77.72  30.0  1
+ DAY  Var_60    C30   C16  C17  C13   153.01  30.0  1
+ DAY  Var_61    O2    C17  C13  C14    74.03  30.0  1
+ DAY  Var_62    C20   C17  C13  C14  -166.26  30.0  1
+ DAY  Var_63    C30   C16  C15  C14  -124.59  30.0  1
+ DAY  Var_64    C18   C13  C14  C15   -68.63  30.0  1
+ DAY  Var_65    O2    C17  C16  C15   -87.96  30.0  1
+ DAY  Var_66    C20   C17  C16  C15   148.54  30.0  1
+ DAY  Var_67    C18   C13  C17  C16    72.82  30.0  1
+ DAY  Var_68    H9    C9   C10  C1   -145.84  30.0  1
+ DAY  Var_69    H8    C8   C7   C6    -25.70  30.0  1
+ DAY  Var_70    H14   C14  C8   C7    167.32  30.0  1
+ DAY  Var_71    H15   C15  C14  C8    171.93  30.0  1
+ DAY  Var_72    H15A  C15  C14  C8    110.73  30.0  1
+ DAY  Var_73    H11   C11  C9   C8    -33.82  30.0  1
+ DAY  Var_74    H12   C12  C11  C9    -54.08  30.0  1
+ DAY  Var_75    H12A  C12  C11  C9    -59.23  30.0  1
+ DAY  Var_76    H16   C16  C17  C13    61.26  30.0  1
+ DAY  Var_77    O3    C20  C17  C13    89.88  30.0  3
+ DAY  Var_78    C21   C20  C17  C13   -89.68  30.0  3
+ DAY  Var_79    O3    C20  C17  C16   -25.49  30.0  3
+ DAY  Var_80    C21   C20  C17  C16   154.94  30.0  3
+ DAY  Var_81    O2    C17  C13  C18  -168.42  30.0  1
+ DAY  Var_82    C20   C17  C13  C18   -48.72  30.0  1
+ DAY  Var_83    C30   C16  C17  C20   -85.55  30.0  1
+ DAY  Var_84    C30   C16  C17  O2     37.95  30.0  1
+ DAY  Var_85    H19   C19  C10  C1   -125.28  30.0  3
+ DAY  Var_86    H19A  C19  C10  C1    -96.24  30.0  3
+ DAY  Var_87    H19B  C19  C10  C1     82.80  30.0  3
+ DAY  Var_88    HO1   O1   C11  C9     96.69  30.0  3
+ DAY  Var_89    H18   C18  C13  C12   150.67  30.0  3
+ DAY  Var_90    H18A  C18  C13  C12  -158.72  30.0  3
+ DAY  Var_91    H18B  C18  C13  C12   104.78  30.0  3
+ DAY  Var_92    HO2   O2   C17  C13   138.17  30.0  3
+ DAY  Var_93    H30   C30  C16  C15    23.90  30.0  3
+ DAY  Var_94    H30A  C30  C16  C15    13.48  30.0  3
+ DAY  Var_95    H30B  C30  C16  C15    77.35  30.0  3
+ DAY  Var_96    O2    C17  C20  C21    29.31  30.0  2
+ DAY  Var_97    O3    C20  C17  O2   -151.13  30.0  3
+ DAY  Var_98    HO4   O4   C21  C20  -125.95  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

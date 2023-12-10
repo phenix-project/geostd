@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- Q15  Q15  4-methyl-6-{[3-(piperidin-4-ylmethoxy)phenoxy]methyl}pyridin-2-amine  ligand  49  24  .  2021-08-20  2021-08-20  
+ Q15  Q15  4-methyl-6-{[3-(piperidin-4-ylmethoxy)phenoxy]methyl}pyridin-2-amine  ligand  49  24  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_Q15
@@ -255,42 +256,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- Q15  CONST_01  C05  C04  C03  C02    0.00   0.0  0
- Q15  CONST_02  C05  C06  N01  C02    0.00   0.0  0
- Q15  CONST_03  C06  C05  C04  C03    0.00   0.0  0
- Q15  CONST_04  C06  N01  C02  C03    0.00   0.0  0
- Q15  CONST_05  N01  C02  C03  C04    0.00   0.0  0
- Q15  CONST_06  N01  C06  C05  C04    0.00   0.0  0
- Q15  CONST_07  C14  C13  C12  C11    0.00   0.0  0
- Q15  CONST_08  C14  C15  C16  C11    0.00   0.0  0
- Q15  CONST_09  C13  C12  C11  C16    0.00   0.0  0
- Q15  CONST_10  C13  C14  C15  C16    0.00   0.0  0
- Q15  CONST_11  C12  C13  C14  C15    0.00   0.0  0
- Q15  CONST_12  C12  C11  C16  C15    0.00   0.0  0
- Q15  CONST_13  C04  C03  C02  N02  180.00   0.0  0
- Q15  CONST_14  C06  N01  C02  N02  180.00   0.0  0
- Q15  CONST_15  C07  C04  C03  C02  180.00   0.0  0
- Q15  CONST_16  C08  C06  N01  C02  180.00   0.0  0
- Q15  CONST_17  C08  C06  C05  C04  180.00   0.0  0
- Q15  CONST_18  C06  C05  C04  C07  180.00   0.0  0
- Q15  CONST_19  C13  C12  C11  O09  180.00   0.0  0
- Q15  CONST_20  C15  C16  C11  O09  180.00   0.0  0
- Q15  CONST_21  O28  C15  C16  C11  180.00   0.0  0
- Q15  CONST_22  O28  C15  C14  C13  180.00   0.0  0
- Q15  CONST_23  H7   C05  C04  C03  180.00   0.0  0
- Q15  CONST_24  H3   C03  C02  N01  180.00   0.0  0
- Q15  CONST_25  H12  C13  C12  C11  180.00   0.0  0
- Q15  CONST_26  H13  C12  C11  C16  180.00   0.0  0
- Q15  CONST_27  H11  C14  C15  C16  180.00   0.0  0
- Q15  CONST_28  H10  C16  C15  C14  180.00   0.0  0
- Q15  Var_01    N21  C26  C25  C24  -57.12  30.0  1
- Q15  Var_02    N21  C22  C23  C24   56.70  30.0  1
- Q15  Var_03    C26  N21  C22  C23  -61.85  30.0  1
- Q15  Var_04    C25  C26  N21  C22   61.99  30.0  1
- Q15  Var_05    O09  C08  C06  N01  176.04  30.0  2
- Q15  Var_06    C12  C11  O09  C08   -1.61  30.0  2
- Q15  Var_07    C24  C27  O28  C15  176.70  30.0  3
- Q15  Var_08    H4   C07  C04  C03  111.27  30.0  2
+ Q15  CONST_01  C05  C04  C03  C02     0.00   0.0  0
+ Q15  CONST_02  C05  C06  N01  C02     0.00   0.0  0
+ Q15  CONST_03  C06  C05  C04  C03     0.00   0.0  0
+ Q15  CONST_04  C06  N01  C02  C03     0.00   0.0  0
+ Q15  CONST_05  N01  C02  C03  C04     0.00   0.0  0
+ Q15  CONST_06  N01  C06  C05  C04     0.00   0.0  0
+ Q15  CONST_07  C14  C13  C12  C11     0.00   0.0  0
+ Q15  CONST_08  C14  C15  C16  C11     0.00   0.0  0
+ Q15  CONST_09  C13  C12  C11  C16     0.00   0.0  0
+ Q15  CONST_10  C13  C14  C15  C16     0.00   0.0  0
+ Q15  CONST_11  C12  C13  C14  C15     0.00   0.0  0
+ Q15  CONST_12  C12  C11  C16  C15     0.00   0.0  0
+ Q15  CONST_13  C04  C03  C02  N02   180.00   0.0  0
+ Q15  CONST_14  C06  N01  C02  N02   180.00   0.0  0
+ Q15  CONST_15  C07  C04  C03  C02   180.00   0.0  0
+ Q15  CONST_16  C08  C06  N01  C02   180.00   0.0  0
+ Q15  CONST_17  C08  C06  C05  C04   180.00   0.0  0
+ Q15  CONST_18  C06  C05  C04  C07   180.00   0.0  0
+ Q15  CONST_19  C13  C12  C11  O09   180.00   0.0  0
+ Q15  CONST_20  C15  C16  C11  O09   180.00   0.0  0
+ Q15  CONST_21  O28  C15  C16  C11   180.00   0.0  0
+ Q15  CONST_22  O28  C15  C14  C13   180.00   0.0  0
+ Q15  CONST_23  H7   C05  C04  C03   180.00   0.0  0
+ Q15  CONST_24  H3   C03  C02  N01   180.00   0.0  0
+ Q15  CONST_25  H12  C13  C12  C11   180.00   0.0  0
+ Q15  CONST_26  H13  C12  C11  C16   180.00   0.0  0
+ Q15  CONST_27  H11  C14  C15  C16   180.00   0.0  0
+ Q15  CONST_28  H10  C16  C15  C14   180.00   0.0  0
+ Q15  Var_01    N21  C26  C25  C24   -57.12  30.0  1
+ Q15  Var_02    N21  C22  C23  C24    56.70  30.0  1
+ Q15  Var_03    C26  N21  C22  C23   -61.85  30.0  1
+ Q15  Var_04    C25  C26  N21  C22    61.99  30.0  1
+ Q15  Var_05    O09  C08  C06  N01   176.04  30.0  2
+ Q15  Var_06    C12  C11  O09  C08    -1.61  30.0  2
+ Q15  Var_07    C24  C27  O28  C15   176.70  30.0  3
+ Q15  Var_08    H4   C07  C04  C03   111.27  30.0  2
+ Q15  Var_09    C26  C25  C24  C23    52.53  30.0  1
+ Q15  Var_10    C25  C24  C23  C22   -52.22  30.0  1
+ Q15  Var_11    C26  C25  C24  C27   176.86  30.0  1
+ Q15  Var_12    C22  C23  C24  C27  -174.49  30.0  1
+ Q15  Var_13    H25  C25  C24  C23   174.35  30.0  1
+ Q15  Var_14    H26  C25  C24  C23   -68.15  30.0  1
+ Q15  Var_15    H16  C24  C23  C22    65.38  30.0  1
+ Q15  Var_16    C11  O09  C08  C06  -178.92  30.0  3
+ Q15  Var_17    C27  O28  C15  C16  -178.07  30.0  2
+ Q15  Var_18    C27  O28  C15  C14     1.97  30.0  2
+ Q15  Var_19    C25  C24  C27  O28   176.47  30.0  3
+ Q15  Var_20    C23  C24  C27  O28   -60.95  30.0  3
+ Q15  Var_21    H14  C27  C24  C23   178.11  30.0  2
+ Q15  Var_22    H15  C27  C24  C23    59.97  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

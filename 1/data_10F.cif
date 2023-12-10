@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 10F  10F  'N-({4-[{[(2R,4S,4aR,6S,8aS)-2-amino-4-hydroxydecahydropteridin-6-yl]methyl}(formyl)amino]phenyl}carbonyl)-D-glutamic acid'  ligand  61  34  .  2021-08-03  2021-08-03  
+ 10F  10F  'N-({4-[{[(2R,4S,4aR,6S,8aS)-2-amino-4-hydroxydecahydropteridin-6-yl]methyl}(formyl)amino]phenyl}carbonyl)-D-glutamic acid'  ligand  61  34  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_10F
@@ -301,31 +302,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 10F  CONST_01  C14  C15  C16  C11     0.00   0.0  0
- 10F  CONST_02  C14  C13  C12  C11     0.00   0.0  0
- 10F  CONST_03  C15  C16  C11  C12     0.00   0.0  0
- 10F  CONST_04  C15  C14  C13  C12     0.00   0.0  0
- 10F  CONST_05  C16  C11  C12  C13     0.00   0.0  0
- 10F  CONST_06  C16  C15  C14  C13     0.00   0.0  0
- 10F  CONST_07  C12  C13  C14  N10   180.00   0.0  0
- 10F  CONST_08  C16  C15  C14  N10   180.00   0.0  0
- 10F  CONST_09  C17  C11  C12  C13   180.00   0.0  0
- 10F  CONST_10  C17  C11  C16  C15   180.00   0.0  0
- 10F  CONST_11  H15  C15  C16  C11   180.00   0.0  0
- 10F  CONST_12  H13  C13  C12  C11   180.00   0.0  0
- 10F  CONST_13  H16  C16  C11  C12   180.00   0.0  0
- 10F  CONST_14  H12  C12  C13  C14   180.00   0.0  0
- 10F  CONST_19  CA   N    C17  C11   180.00   0.0  0
- 10F  CONST_20  O5   C18  N10  C14     0.00   0.0  0
- 10F  CONST_21  HN   N    C17  C11     0.00   0.0  0
- 10F  CONST_22  H18  C18  N10  C14   180.00   0.0  0
- 10F  CONST_23  O5   C18  N10  C9    180.00   0.0  0
- 10F  CONST_24  O    C17  N    CA      0.00   0.0  0
- 10F  Var_01    C8A  N8   C7   C6     58.71  30.0  1
- 10F  Var_02    C14  N10  C9   C6     78.54  30.0  1
- 10F  Var_03    N    C17  C11  C12    35.84  30.0  2
- 10F  Var_04    CD   CG   CB   CA    179.08  30.0  3
- 10F  Var_05    OE1  CD   CG   CB   -179.91  30.0  2
+ 10F  CONST_01  C14   C15  C16  C11     0.00   0.0  0
+ 10F  CONST_02  C14   C13  C12  C11     0.00   0.0  0
+ 10F  CONST_03  C15   C16  C11  C12     0.00   0.0  0
+ 10F  CONST_04  C15   C14  C13  C12     0.00   0.0  0
+ 10F  CONST_05  C16   C11  C12  C13     0.00   0.0  0
+ 10F  CONST_06  C16   C15  C14  C13     0.00   0.0  0
+ 10F  CONST_07  C12   C13  C14  N10   180.00   0.0  0
+ 10F  CONST_08  C16   C15  C14  N10   180.00   0.0  0
+ 10F  CONST_09  C17   C11  C12  C13   180.00   0.0  0
+ 10F  CONST_10  C17   C11  C16  C15   180.00   0.0  0
+ 10F  CONST_11  H15   C15  C16  C11   180.00   0.0  0
+ 10F  CONST_12  H13   C13  C12  C11   180.00   0.0  0
+ 10F  CONST_13  H16   C16  C11  C12   180.00   0.0  0
+ 10F  CONST_14  H12   C12  C13  C14   180.00   0.0  0
+ 10F  CONST_15  CA    N    C17  C11   180.00   0.0  0
+ 10F  CONST_16  O5    C18  N10  C14     0.00   0.0  0
+ 10F  CONST_17  HN    N    C17  C11     0.00   0.0  0
+ 10F  CONST_18  H18   C18  N10  C14   180.00   0.0  0
+ 10F  CONST_19  O5    C18  N10  C9    180.00   0.0  0
+ 10F  CONST_20  O     C17  N    CA      0.00   0.0  0
+ 10F  Var_01    C8A   N8   C7   C6     58.71  30.0  1
+ 10F  Var_02    C14   N10  C9   C6     78.54  30.0  1
+ 10F  Var_03    N     C17  C11  C12    35.84  30.0  2
+ 10F  Var_04    CD    CG   CB   CA    179.08  30.0  3
+ 10F  Var_05    OE1   CD   CG   CB   -179.91  30.0  2
+ 10F  Var_06    C4    C4A  C8A  N1    -57.25  30.0  1
+ 10F  Var_07    N5    C4A  C8A  N1    178.24  30.0  1
+ 10F  Var_08    C7    N8   C8A  N1   -179.79  30.0  1
+ 10F  Var_09    C4    N3   C2   N1     61.83  30.0  1
+ 10F  Var_10    C4A   C8A  N1   C2     62.27  30.0  1
+ 10F  Var_11    N8    C8A  N1   C2   -178.40  30.0  1
+ 10F  Var_12    C4A   C4   N3   C2    -57.47  30.0  1
+ 10F  Var_13    C8A   N1   C2   N3    -63.19  30.0  1
+ 10F  Var_14    C8A   C4A  C4   N3     53.61  30.0  1
+ 10F  Var_15    N5    C4A  C4   N3    177.90  30.0  1
+ 10F  Var_16    N8    C8A  C4A  C4   -177.43  30.0  1
+ 10F  Var_17    C6    N5   C4A  C4   -177.84  30.0  1
+ 10F  Var_18    C7    N8   C8A  C4A   -60.31  30.0  1
+ 10F  Var_19    C7    C6   N5   C4A    53.53  30.0  1
+ 10F  Var_20    N8    C8A  C4A  N5     58.05  30.0  1
+ 10F  Var_21    N8    C7   C6   N5    -54.93  30.0  1
+ 10F  Var_22    C8A   C4A  N5   C6    -54.75  30.0  1
+ 10F  Var_23    O4    C4   N3   C2   -176.58  30.0  1
+ 10F  Var_24    C8A   N1   C2   NA2   179.10  30.0  1
+ 10F  Var_25    C4    N3   C2   NA2   179.77  30.0  1
+ 10F  Var_26    C8A   C4A  C4   O4    173.40  30.0  1
+ 10F  Var_27    N5    C4A  C4   O4    -62.31  30.0  1
+ 10F  Var_28    C9    C6   N5   C4A   178.06  30.0  1
+ 10F  Var_29    C9    C6   C7   N8   -178.66  30.0  1
+ 10F  Var_30    H4A   C4A  C8A  N1     59.97  30.0  1
+ 10F  Var_31    HN8   N8   C8A  N1     59.83  30.0  1
+ 10F  Var_32    HN3   N3   C2   N1   -178.20  30.0  1
+ 10F  Var_33    H8A   C8A  N1   C2    -55.35  30.0  1
+ 10F  Var_34    H4    C4   N3   C2     61.39  30.0  1
+ 10F  Var_35    HN1   N1   C2   N3    177.78  30.0  1
+ 10F  Var_36    H2    C2   N3   C4    -57.97  30.0  1
+ 10F  Var_37    HN5   N5   C4A  C4    -58.02  30.0  1
+ 10F  Var_38    H6    C6   N5   C4A   -64.13  30.0  1
+ 10F  Var_39    H7    C7   C6   N5     68.54  30.0  1
+ 10F  Var_40    H7A   C7   C6   N5   -174.15  30.0  1
+ 10F  Var_41    N10   C9   C6   N5     63.33  30.0  1
+ 10F  Var_42    N10   C9   C6   C7   -171.31  30.0  1
+ 10F  Var_43    HNA2  NA2  C2   N1   -176.06  30.0  3
+ 10F  Var_44    HNAA  NA2  C2   N1    -62.58  30.0  3
+ 10F  Var_45    HO4   O4   C4   N3    -79.65  30.0  3
+ 10F  Var_46    H9    C9   C6   N5   -175.17  30.0  1
+ 10F  Var_47    H9A   C9   C6   N5    -57.95  30.0  1
+ 10F  Var_48    CG    CB   CA   N      60.31  30.0  2
+ 10F  Var_49    O2    CT   CA   N       8.74  30.0  3
+ 10F  Var_50    O1    CT   CA   N    -171.99  30.0  3
+ 10F  Var_51    C17   N    CA   CB   -162.40  30.0  3
+ 10F  Var_52    O2    CT   CA   CB   -114.30  30.0  3
+ 10F  Var_53    O1    CT   CA   CB     64.96  30.0  3
+ 10F  Var_54    CT    CA   CB   CG   -175.27  30.0  3
+ 10F  Var_55    C17   N    CA   CT     73.69  30.0  3
+ 10F  Var_56    HB    CB   CA   N    -177.82  30.0  2
+ 10F  Var_57    HBA   CB   CA   N     -62.90  30.0  2
+ 10F  Var_58    HA    CA   CB   CG    -57.12  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

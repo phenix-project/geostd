@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- G52  G52  '(3R,3aS,3bR,6aS,7aS)-octahydrodifuro[2,3-b:3',2'-d]furan-3-yl [(2S,3R)-3-hydroxy-4-{[(4-methoxyphenyl)sulfonyl](2-methylpropyl)amino}-1-phenylbutan-2-yl]carbamate'  ligand  82  42  .  2022-07-25  2022-07-26
+ G52  G52  '(3R,3aS,3bR,6aS,7aS)-octahydrodifuro[2,3-b:3',2'-d]furan-3-yl [(2S,3R)-3-hydroxy-4-{[(4-methoxyphenyl)sulfonyl](2-methylpropyl)amino}-1-phenylbutan-2-yl]carbamate'  ligand  82  42  .  2022-07-25  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_G52
@@ -392,46 +393,101 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- G52  CONST_01  C5   C4   C3   C2      0.00   0.0  0
- G52  CONST_02  C5   C6   C7   C2      0.00   0.0  0
- G52  CONST_03  C6   C7   C2   C3      0.00   0.0  0
- G52  CONST_04  C6   C5   C4   C3      0.00   0.0  0
- G52  CONST_05  C7   C2   C3   C4      0.00   0.0  0
- G52  CONST_06  C7   C6   C5   C4      0.00   0.0  0
- G52  CONST_07  C36  C35  C34  C33     0.00   0.0  0
- G52  CONST_08  C36  C37  C38  C33     0.00   0.0  0
- G52  CONST_09  C37  C38  C33  C34     0.00   0.0  0
- G52  CONST_10  C37  C36  C35  C34     0.00   0.0  0
- G52  CONST_11  C38  C33  C34  C35     0.00   0.0  0
- G52  CONST_12  C38  C37  C36  C35     0.00   0.0  0
- G52  CONST_13  S8   C5   C4   C3    180.00   0.0  0
- G52  CONST_14  O39  C2   C3   C4    180.00   0.0  0
- G52  CONST_15  O39  C2   C7   C6    180.00   0.0  0
- G52  CONST_16  S8   C5   C6   C7    180.00   0.0  0
- G52  CONST_17  C34  C33  C38  C32   180.00   0.0  0
- G52  CONST_18  C36  C37  C38  C32   180.00   0.0  0
- G52  CONST_19  H4   C4   C3   C2    180.00   0.0  0
- G52  CONST_20  H6   C6   C7   C2    180.00   0.0  0
- G52  CONST_21  H7   C7   C2   C3    180.00   0.0  0
- G52  CONST_22  H3   C3   C4   C5    180.00   0.0  0
- G52  CONST_23  H35  C35  C34  C33   180.00   0.0  0
- G52  CONST_24  H37  C37  C38  C33   180.00   0.0  0
- G52  CONST_25  H36  C36  C35  C34   180.00   0.0  0
- G52  CONST_26  H33  C33  C34  C35   180.00   0.0  0
- G52  CONST_27  H34  C34  C35  C36   180.00   0.0  0
- G52  Var_01    C43  C42  O41  C29    13.22  30.0  1
- G52  Var_02    O41  C42  C43  C30   -27.83  30.0  1
- G52  Var_03    H25  C25  O26  C27   -88.98  30.0  1
- G52  Var_04    O9   S8   C5   C4   -136.96  30.0  2
- G52  Var_05    C33  C38  C32  C19    91.88  30.0  3
- G52  Var_06    C16  N11  S8   C5    136.25  30.0  3
- G52  Var_07    H40  C40  O39  C2    178.27  30.0  3
- G52  Var_08    C17  C16  N11  S8     67.09  30.0  3
- G52  Var_09    C13  C12  N11  S8    140.31  30.0  3
- G52  Var_10    C14  C13  C12  N11  -176.80  30.0  3
- G52  Var_11    O22  C21  N20  C19    16.90  30.0  2
- G52  Var_12    H14  C14  C13  C12    64.59  30.0  3
- G52  Var_13    H15  C15  C13  C12   -57.80  30.0  3
+ G52  CONST_01  C5    C4   C3   C2      0.00   0.0  0
+ G52  CONST_02  C5    C6   C7   C2      0.00   0.0  0
+ G52  CONST_03  C6    C7   C2   C3      0.00   0.0  0
+ G52  CONST_04  C6    C5   C4   C3      0.00   0.0  0
+ G52  CONST_05  C7    C2   C3   C4      0.00   0.0  0
+ G52  CONST_06  C7    C6   C5   C4      0.00   0.0  0
+ G52  CONST_07  C36   C35  C34  C33     0.00   0.0  0
+ G52  CONST_08  C36   C37  C38  C33     0.00   0.0  0
+ G52  CONST_09  C37   C38  C33  C34     0.00   0.0  0
+ G52  CONST_10  C37   C36  C35  C34     0.00   0.0  0
+ G52  CONST_11  C38   C33  C34  C35     0.00   0.0  0
+ G52  CONST_12  C38   C37  C36  C35     0.00   0.0  0
+ G52  CONST_13  S8    C5   C4   C3    180.00   0.0  0
+ G52  CONST_14  O39   C2   C3   C4    180.00   0.0  0
+ G52  CONST_15  O39   C2   C7   C6    180.00   0.0  0
+ G52  CONST_16  S8    C5   C6   C7    180.00   0.0  0
+ G52  CONST_17  C34   C33  C38  C32   180.00   0.0  0
+ G52  CONST_18  C36   C37  C38  C32   180.00   0.0  0
+ G52  CONST_19  H4    C4   C3   C2    180.00   0.0  0
+ G52  CONST_20  H6    C6   C7   C2    180.00   0.0  0
+ G52  CONST_21  H7    C7   C2   C3    180.00   0.0  0
+ G52  CONST_22  H3    C3   C4   C5    180.00   0.0  0
+ G52  CONST_23  H35   C35  C34  C33   180.00   0.0  0
+ G52  CONST_24  H37   C37  C38  C33   180.00   0.0  0
+ G52  CONST_25  H36   C36  C35  C34   180.00   0.0  0
+ G52  CONST_26  H33   C33  C34  C35   180.00   0.0  0
+ G52  CONST_27  H34   C34  C35  C36   180.00   0.0  0
+ G52  Var_01    C43   C42  O41  C29    13.22  30.0  1
+ G52  Var_02    O41   C42  C43  C30   -27.83  30.0  1
+ G52  Var_03    H25   C25  O26  C27   -88.98  30.0  1
+ G52  Var_04    O9    S8   C5   C4   -136.96  30.0  2
+ G52  Var_05    C33   C38  C32  C19    91.88  30.0  3
+ G52  Var_06    C16   N11  S8   C5    136.25  30.0  3
+ G52  Var_07    H40   C40  O39  C2    178.27  30.0  3
+ G52  Var_08    C17   C16  N11  S8     67.09  30.0  3
+ G52  Var_09    C13   C12  N11  S8    140.31  30.0  3
+ G52  Var_10    C14   C13  C12  N11  -176.80  30.0  3
+ G52  Var_11    O22   C21  N20  C19    16.90  30.0  2
+ G52  Var_12    H14   C14  C13  C12    64.59  30.0  3
+ G52  Var_13    H15   C15  C13  C12   -57.80  30.0  3
+ G52  Var_14    O26   C27  C31  C24   -13.03  30.0  1
+ G52  Var_15    O28   C27  C31  C24   105.78  30.0  1
+ G52  Var_16    C29   C30  C31  C24   -88.17  30.0  1
+ G52  Var_17    C43   C30  C31  C24   161.83  30.0  1
+ G52  Var_18    C27   C31  C24  C25    28.87  30.0  1
+ G52  Var_19    C30   C31  C24  C25   142.30  30.0  1
+ G52  Var_20    C31   C27  O26  C25    -9.96  30.0  1
+ G52  Var_21    O28   C27  O26  C25  -126.66  30.0  1
+ G52  Var_22    C31   C24  C25  O26   -35.74  30.0  1
+ G52  Var_23    C30   C31  C27  O26  -136.26  30.0  1
+ G52  Var_24    C29   O28  C27  O26   118.35  30.0  1
+ G52  Var_25    C29   C30  C31  C27    25.28  30.0  1
+ G52  Var_26    C43   C30  C31  C27   -84.72  30.0  1
+ G52  Var_27    O41   C29  O28  C27   131.28  30.0  1
+ G52  Var_28    C30   C29  O28  C27    14.72  30.0  1
+ G52  Var_29    C30   C31  C27  O28   -17.45  30.0  1
+ G52  Var_30    C42   O41  C29  O28  -107.77  30.0  1
+ G52  Var_31    C43   C30  C29  O28    93.57  30.0  1
+ G52  Var_32    C31   C30  C29  O28   -25.00  30.0  1
+ G52  Var_33    C31   C27  O28  C29     1.74  30.0  1
+ G52  Var_34    C42   C43  C30  C29    30.76  30.0  1
+ G52  Var_35    C42   O41  C29  C30     7.35  30.0  1
+ G52  Var_36    O41   C29  C30  C31  -142.90  30.0  1
+ G52  Var_37    C42   C43  C30  C31   142.11  30.0  1
+ G52  Var_38    C43   C30  C29  O41   -24.33  30.0  1
+ G52  Var_39    C27   C31  C24  O23   -88.47  30.0  1
+ G52  Var_40    C30   C31  C24  O23    24.96  30.0  1
+ G52  Var_41    O26   C25  C24  O23    79.52  30.0  1
+ G52  Var_42    H27   C27  C31  C24  -133.90  30.0  1
+ G52  Var_43    H30   C30  C31  C24    33.68  30.0  1
+ G52  Var_44    H31   C31  C24  C25   -89.48  30.0  1
+ G52  Var_45    H24   C24  C25  O26  -155.60  30.0  1
+ G52  Var_46    H29   C29  O28  C27  -109.81  30.0  1
+ G52  Var_47    H43   C43  C30  C29   151.79  30.0  1
+ G52  Var_48    H43A  C43  C30  C29   -87.79  30.0  1
+ G52  Var_49    C40   O39  C2   C3      1.32  30.0  2
+ G52  Var_50    C40   O39  C2   C7   -178.67  30.0  2
+ G52  Var_51    C31   C24  O23  C21  -161.15  30.0  3
+ G52  Var_52    C25   C24  O23  C21    88.16  30.0  3
+ G52  Var_53    C38   C32  C19  C17  -178.34  30.0  2
+ G52  Var_54    C38   C32  C19  N20   -54.99  30.0  2
+ G52  Var_55    C24   O23  C21  N20   175.74  30.0  3
+ G52  Var_56    C24   O23  C21  O22    -5.55  30.0  3
+ G52  Var_57    H19   C19  C32  C38    62.19  30.0  3
+ G52  Var_58    C19   C17  C16  N11  -175.30  30.0  3
+ G52  Var_59    O18   C17  C16  N11    57.52  30.0  3
+ G52  Var_60    C32   C19  C17  C16   -65.37  30.0  2
+ G52  Var_61    N20   C19  C17  C16   170.72  30.0  2
+ G52  Var_62    C21   N20  C19  C17  -141.20  30.0  3
+ G52  Var_63    C32   C19  C17  O18    62.18  30.0  2
+ G52  Var_64    N20   C19  C17  O18   -61.73  30.0  2
+ G52  Var_65    C32   C19  N20  C21    93.16  30.0  2
+ G52  Var_66    H17   C17  C16  N11   -58.97  30.0  3
+ G52  Var_67    HO18  O18  C17  C16    58.44  30.0  3
+ G52  Var_68    HN20  N20  C19  C17    60.32  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 4BC  4BC  '4-(1,3-benzodioxol-5-yl)-3-(5-ethyl-2,4-dihydroxyphenyl)-1H-pyrazole-5-carboxylic acid'  ligand  43  27  .  2021-08-05  2021-08-05  
+ 4BC  4BC  '4-(1,3-benzodioxol-5-yl)-3-(5-ethyl-2,4-dihydroxyphenyl)-1H-pyrazole-5-carboxylic acid'  ligand  43  27  .  2021-08-05  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_4BC
@@ -231,53 +232,64 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  4BC  CONST_01  C22   C16  C12  C15     0.00   0.0  0
  4BC  CONST_02  C22   C20  C8   C15     0.00   0.0  0
- 4BC  CONST_05  C20   C8   C15  C12     0.00   0.0  0
- 4BC  CONST_06  C4    C8   C15  C12   180.00   0.0  0
- 4BC  CONST_07  C20   C22  C16  C12     0.00   0.0  0
- 4BC  CONST_08  C8    C15  C12  C16     0.00   0.0  0
- 4BC  CONST_09  C8    C20  C22  C16     0.00   0.0  0
- 4BC  CONST_10  C4    C8   C20  C22   180.00   0.0  0
- 4BC  CONST_13  N5    C1   C4   C8    180.00   0.0  0
- 4BC  CONST_14  N3    C2   C4   C8    180.00   0.0  0
- 4BC  CONST_15  C6    C2   C4   C8      0.00   0.0  0
- 4BC  CONST_16  N3    N5   C1   C4      0.00   0.0  0
- 4BC  CONST_17  N5    N3   C2   C4      0.00   0.0  0
- 4BC  CONST_20  N3    C2   C4   C1      0.00   0.0  0
- 4BC  CONST_21  C6    C2   C4   C1    180.00   0.0  0
- 4BC  CONST_22  C2    N3   N5   C1      0.00   0.0  0
- 4BC  CONST_23  C2    C4   C1   N5      0.00   0.0  0
- 4BC  CONST_24  C6    C2   N3   N5    180.00   0.0  0
- 4BC  CONST_25  C14   C10  C6   C2    180.00   0.0  0
- 4BC  CONST_26  C11   C9   C6   C2    180.00   0.0  0
- 4BC  CONST_29  C13   C14  C10  C6      0.00   0.0  0
- 4BC  CONST_30  C13   C11  C9   C6      0.00   0.0  0
- 4BC  CONST_31  C11   C9   C6   C10     0.00   0.0  0
- 4BC  CONST_32  C11   C13  C14  C10     0.00   0.0  0
- 4BC  CONST_33  C9    C6   C10  C14     0.00   0.0  0
- 4BC  CONST_34  C9    C11  C13  C14     0.00   0.0  0
- 4BC  CONST_35  C7    C1   C4   C8      0.00   0.0  0
- 4BC  CONST_36  C2    C4   C1   C7    180.00   0.0  0
- 4BC  CONST_37  N3    N5   C1   C7    180.00   0.0  0
- 4BC  CONST_38  O24   C9   C6   C2      0.00   0.0  0
- 4BC  CONST_39  C26   C14  C10  C6    180.00   0.0  0
- 4BC  CONST_40  O24   C9   C6   C10   180.00   0.0  0
- 4BC  CONST_41  O25   C13  C14  C10   180.00   0.0  0
- 4BC  CONST_42  C11   C13  C14  C26   180.00   0.0  0
- 4BC  CONST_43  O24   C9   C11  C13   180.00   0.0  0
- 4BC  CONST_44  C9    C11  C13  O25   180.00   0.0  0
- 4BC  CONST_45  H20   C20  C8   C15   180.00   0.0  0
- 4BC  CONST_46  H22   C22  C16  C12   180.00   0.0  0
- 4BC  CONST_47  H15   C15  C12  O17     0.00   0.0  0
- 4BC  CONST_48  HN5   N5   C1   C4    180.00   0.0  0
- 4BC  CONST_49  H10   C10  C6   C2      0.00   0.0  0
- 4BC  CONST_50  H11   C11  C9   C6    180.00   0.0  0
- 4BC  CONST_51  H21   O21  C7   C1    180.00   0.0  0
+ 4BC  CONST_03  C20   C8   C15  C12     0.00   0.0  0
+ 4BC  CONST_04  C4    C8   C15  C12   180.00   0.0  0
+ 4BC  CONST_05  C20   C22  C16  C12     0.00   0.0  0
+ 4BC  CONST_06  C8    C15  C12  C16     0.00   0.0  0
+ 4BC  CONST_07  C8    C20  C22  C16     0.00   0.0  0
+ 4BC  CONST_08  C4    C8   C20  C22   180.00   0.0  0
+ 4BC  CONST_09  N5    C1   C4   C8    180.00   0.0  0
+ 4BC  CONST_10  N3    C2   C4   C8    180.00   0.0  0
+ 4BC  CONST_11  C6    C2   C4   C8      0.00   0.0  0
+ 4BC  CONST_12  N3    N5   C1   C4      0.00   0.0  0
+ 4BC  CONST_13  N5    N3   C2   C4      0.00   0.0  0
+ 4BC  CONST_14  N3    C2   C4   C1      0.00   0.0  0
+ 4BC  CONST_15  C6    C2   C4   C1    180.00   0.0  0
+ 4BC  CONST_16  C2    N3   N5   C1      0.00   0.0  0
+ 4BC  CONST_17  C2    C4   C1   N5      0.00   0.0  0
+ 4BC  CONST_18  C6    C2   N3   N5    180.00   0.0  0
+ 4BC  CONST_19  C14   C10  C6   C2    180.00   0.0  0
+ 4BC  CONST_20  C11   C9   C6   C2    180.00   0.0  0
+ 4BC  CONST_21  C13   C14  C10  C6      0.00   0.0  0
+ 4BC  CONST_22  C13   C11  C9   C6      0.00   0.0  0
+ 4BC  CONST_23  C11   C9   C6   C10     0.00   0.0  0
+ 4BC  CONST_24  C11   C13  C14  C10     0.00   0.0  0
+ 4BC  CONST_25  C9    C6   C10  C14     0.00   0.0  0
+ 4BC  CONST_26  C9    C11  C13  C14     0.00   0.0  0
+ 4BC  CONST_27  C7    C1   C4   C8      0.00   0.0  0
+ 4BC  CONST_28  C2    C4   C1   C7    180.00   0.0  0
+ 4BC  CONST_29  N3    N5   C1   C7    180.00   0.0  0
+ 4BC  CONST_30  O24   C9   C6   C2      0.00   0.0  0
+ 4BC  CONST_31  C26   C14  C10  C6    180.00   0.0  0
+ 4BC  CONST_32  O24   C9   C6   C10   180.00   0.0  0
+ 4BC  CONST_33  O25   C13  C14  C10   180.00   0.0  0
+ 4BC  CONST_34  C11   C13  C14  C26   180.00   0.0  0
+ 4BC  CONST_35  O24   C9   C11  C13   180.00   0.0  0
+ 4BC  CONST_36  C9    C11  C13  O25   180.00   0.0  0
+ 4BC  CONST_37  H20   C20  C8   C15   180.00   0.0  0
+ 4BC  CONST_38  H22   C22  C16  C12   180.00   0.0  0
+ 4BC  CONST_39  H15   C15  C12  O17     0.00   0.0  0
+ 4BC  CONST_40  HN5   N5   C1   C4    180.00   0.0  0
+ 4BC  CONST_41  H10   C10  C6   C2      0.00   0.0  0
+ 4BC  CONST_42  H11   C11  C9   C6    180.00   0.0  0
+ 4BC  CONST_43  H21   O21  C7   C1    180.00   0.0  0
  4BC  Var_01    O18   C19  O17  C12   -14.41  30.0  1
  4BC  Var_02    C16   C12  O17  C19     9.03  30.0  1
  4BC  Var_03    C22   C16  O18  C19   172.02  30.0  1
  4BC  Var_04    O21   C7   C1   C4   -179.74  30.0  2
  4BC  Var_05    C27   C26  C14  C10    94.01  30.0  2
  4BC  Var_06    H271  C27  C26  C14  -178.89  30.0  3
+ 4BC  Var_07    C1    C4   C8   C15   -58.36  30.0  2
+ 4BC  Var_08    C2    C4   C8   C15   121.56  30.0  2
+ 4BC  Var_09    C16   O18  C19  O17    14.41  30.0  1
+ 4BC  Var_10    C1    C4   C8   C20   124.81  30.0  2
+ 4BC  Var_11    C2    C4   C8   C20   -55.27  30.0  2
+ 4BC  Var_12    C10   C6   C2   C4    -46.27  30.0  2
+ 4BC  Var_13    C9    C6   C2   C4    131.04  30.0  2
+ 4BC  Var_14    C10   C6   C2   N3    132.20  30.0  2
+ 4BC  Var_15    C9    C6   C2   N3    -50.50  30.0  2
+ 4BC  Var_16    H24   O24  C9   C6   -176.33  30.0  2
+ 4BC  Var_17    H25   O25  C13  C14    -5.77  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

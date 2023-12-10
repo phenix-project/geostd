@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- C1Q  C1Q  N-{(1S,2S,3R)-1-[(alpha-D-galactopyranosyloxy)methyl]-2,3-dihydroxyheptadecyl}-10-phenyldecanamide  ligand  121  50  .  2021-08-07  2021-08-07  
+ C1Q  C1Q  N-{(1S,2S,3R)-1-[(alpha-D-galactopyranosyloxy)methyl]-2,3-dihydroxyheptadecyl}-10-phenyldecanamide  ligand  121  50  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_C1Q
@@ -538,46 +539,102 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- C1Q  CONST_01  CL   CK2  CJ2  CI      0.00   0.0  0
- C1Q  CONST_02  CL   CK1  CJ1  CI      0.00   0.0  0
- C1Q  CONST_03  CK1  CJ1  CI   CJ2     0.00   0.0  0
- C1Q  CONST_04  CK1  CL   CK2  CJ2     0.00   0.0  0
- C1Q  CONST_05  CJ1  CI   CJ2  CK2     0.00   0.0  0
- C1Q  CONST_06  CJ1  CK1  CL   CK2     0.00   0.0  0
- C1Q  CONST_07  CK2  CJ2  CI   C34   180.00   0.0  0
- C1Q  CONST_08  CK1  CJ1  CI   C34   180.00   0.0  0
- C1Q  CONST_09  HK2  CK2  CJ2  CI    180.00   0.0  0
- C1Q  CONST_10  HK1  CK1  CJ1  CI    180.00   0.0  0
- C1Q  CONST_11  HJ1  CJ1  CI   CJ2   180.00   0.0  0
- C1Q  CONST_12  HL   CL   CK2  CJ2   180.00   0.0  0
- C1Q  CONST_13  HJ2  CJ2  CK2  CL    180.00   0.0  0
- C1Q  CONST_14  C17  N    C25  O25     0.00   0.0  0
- C1Q  CONST_15  C17  N    C25  C26   180.00   0.0  0
- C1Q  CONST_16  HN   N    C25  O25   180.00   0.0  0
- C1Q  Var_01    CJ2  CI   C34  C33    85.29  30.0  2
- C1Q  Var_02    CI   C34  C33  C32  -179.67  30.0  3
- C1Q  Var_03    H18  C18  O18  C19    72.53  30.0  3
- C1Q  Var_04    C27  C26  C25  O25   -49.03  30.0  3
- C1Q  Var_05    C28  C27  C26  C25   179.64  30.0  3
- C1Q  Var_06    C29  C28  C27  C26  -178.29  30.0  3
- C1Q  Var_07    C30  C29  C28  C27   179.08  30.0  3
- C1Q  Var_08    C31  C30  C29  C28  -178.64  30.0  3
- C1Q  Var_09    C32  C31  C30  C29   178.78  30.0  3
- C1Q  Var_10    C33  C32  C31  C30  -179.09  30.0  3
- C1Q  Var_11    C34  C33  C32  C31   179.16  30.0  3
- C1Q  Var_12    C12  C13  C14  C15   174.01  30.0  3
- C1Q  Var_13    C11  C12  C13  C14  -179.99  30.0  3
- C1Q  Var_14    C10  C11  C12  C13   177.54  30.0  3
- C1Q  Var_15    C9   C10  C11  C12  -179.19  30.0  3
- C1Q  Var_16    C8   C9   C10  C11   178.05  30.0  3
- C1Q  Var_17    C7   C8   C9   C10  -179.06  30.0  3
- C1Q  Var_18    C6   C7   C8   C9    178.58  30.0  3
- C1Q  Var_19    C5   C6   C7   C8   -179.21  30.0  3
- C1Q  Var_20    C4   C5   C6   C7    179.16  30.0  3
- C1Q  Var_21    C3   C4   C5   C6   -179.55  30.0  3
- C1Q  Var_22    C2   C3   C4   C5    179.65  30.0  3
- C1Q  Var_23    C1   C2   C3   C4   -179.99  30.0  3
- C1Q  Var_24    H1   C1   C2   C3    -59.11  30.0  3
+ C1Q  CONST_01  CL    CK2  CJ2  CI      0.00   0.0  0
+ C1Q  CONST_02  CL    CK1  CJ1  CI      0.00   0.0  0
+ C1Q  CONST_03  CK1   CJ1  CI   CJ2     0.00   0.0  0
+ C1Q  CONST_04  CK1   CL   CK2  CJ2     0.00   0.0  0
+ C1Q  CONST_05  CJ1   CI   CJ2  CK2     0.00   0.0  0
+ C1Q  CONST_06  CJ1   CK1  CL   CK2     0.00   0.0  0
+ C1Q  CONST_07  CK2   CJ2  CI   C34   180.00   0.0  0
+ C1Q  CONST_08  CK1   CJ1  CI   C34   180.00   0.0  0
+ C1Q  CONST_09  HK2   CK2  CJ2  CI    180.00   0.0  0
+ C1Q  CONST_10  HK1   CK1  CJ1  CI    180.00   0.0  0
+ C1Q  CONST_11  HJ1   CJ1  CI   CJ2   180.00   0.0  0
+ C1Q  CONST_12  HL    CL   CK2  CJ2   180.00   0.0  0
+ C1Q  CONST_13  HJ2   CJ2  CK2  CL    180.00   0.0  0
+ C1Q  CONST_14  C17   N    C25  O25     0.00   0.0  0
+ C1Q  CONST_15  C17   N    C25  C26   180.00   0.0  0
+ C1Q  CONST_16  HN    N    C25  O25   180.00   0.0  0
+ C1Q  Var_01    CJ2   CI   C34  C33    85.29  30.0  2
+ C1Q  Var_02    CI    C34  C33  C32  -179.67  30.0  3
+ C1Q  Var_03    H18   C18  O18  C19    72.53  30.0  3
+ C1Q  Var_04    C27   C26  C25  O25   -49.03  30.0  3
+ C1Q  Var_05    C28   C27  C26  C25   179.64  30.0  3
+ C1Q  Var_06    C29   C28  C27  C26  -178.29  30.0  3
+ C1Q  Var_07    C30   C29  C28  C27   179.08  30.0  3
+ C1Q  Var_08    C31   C30  C29  C28  -178.64  30.0  3
+ C1Q  Var_09    C32   C31  C30  C29   178.78  30.0  3
+ C1Q  Var_10    C33   C32  C31  C30  -179.09  30.0  3
+ C1Q  Var_11    C34   C33  C32  C31   179.16  30.0  3
+ C1Q  Var_12    C12   C13  C14  C15   174.01  30.0  3
+ C1Q  Var_13    C11   C12  C13  C14  -179.99  30.0  3
+ C1Q  Var_14    C10   C11  C12  C13   177.54  30.0  3
+ C1Q  Var_15    C9    C10  C11  C12  -179.19  30.0  3
+ C1Q  Var_16    C8    C9   C10  C11   178.05  30.0  3
+ C1Q  Var_17    C7    C8   C9   C10  -179.06  30.0  3
+ C1Q  Var_18    C6    C7   C8   C9    178.58  30.0  3
+ C1Q  Var_19    C5    C6   C7   C8   -179.21  30.0  3
+ C1Q  Var_20    C4    C5   C6   C7    179.16  30.0  3
+ C1Q  Var_21    C3    C4   C5   C6   -179.55  30.0  3
+ C1Q  Var_22    C2    C3   C4   C5    179.65  30.0  3
+ C1Q  Var_23    C1    C2   C3   C4   -179.99  30.0  3
+ C1Q  Var_24    H1    C1   C2   C3    -59.11  30.0  3
+ C1Q  Var_25    C22   C21  C20  C19   -55.96  30.0  1
+ C1Q  Var_26    C22   C23  O19  C19    58.77  30.0  1
+ C1Q  Var_27    C23   O19  C19  C20   -59.09  30.0  1
+ C1Q  Var_28    C23   C22  C21  C20    54.45  30.0  1
+ C1Q  Var_29    O19   C19  C20  C21    56.82  30.0  1
+ C1Q  Var_30    O19   C23  C22  C21   -54.56  30.0  1
+ C1Q  Var_31    C21   C20  C19  O18   -66.63  30.0  1
+ C1Q  Var_32    C23   O19  C19  O18    61.59  30.0  1
+ C1Q  Var_33    O21   C21  C20  C19  -175.53  30.0  1
+ C1Q  Var_34    C24   C23  O19  C19  -177.23  30.0  1
+ C1Q  Var_35    O22   C22  C21  C20   -66.22  30.0  1
+ C1Q  Var_36    O19   C19  C20  O20   177.28  30.0  1
+ C1Q  Var_37    C22   C21  C20  O20  -179.17  30.0  1
+ C1Q  Var_38    C24   C23  C22  C21  -175.95  30.0  1
+ C1Q  Var_39    C23   C22  C21  O21   176.48  30.0  1
+ C1Q  Var_40    O19   C23  C22  O22    67.58  30.0  1
+ C1Q  Var_41    H21   C21  C20  C19    61.94  30.0  1
+ C1Q  Var_42    H23   C23  O19  C19   -60.01  30.0  1
+ C1Q  Var_43    H22   C22  C21  C20   171.34  30.0  1
+ C1Q  Var_44    H19   C19  C20  C21   171.97  30.0  1
+ C1Q  Var_45    H20   C20  C21  C22    60.40  30.0  1
+ C1Q  Var_46    C20   C19  O18  C18  -171.75  30.0  3
+ C1Q  Var_47    O19   C19  O18  C18    66.56  30.0  3
+ C1Q  Var_48    O20   C20  C19  O18    53.83  30.0  1
+ C1Q  Var_49    O21   C21  C20  O20    61.25  30.0  1
+ C1Q  Var_50    O22   C22  C21  O21    55.81  30.0  1
+ C1Q  Var_51    O24   C24  C23  C22  -171.72  30.0  3
+ C1Q  Var_52    C24   C23  C22  O22   -53.81  30.0  1
+ C1Q  Var_53    O19   C23  C24  O24    64.85  30.0  2
+ C1Q  Var_54    HO20  O20  C20  C19    81.68  30.0  3
+ C1Q  Var_55    HO21  O21  C21  C20   -45.93  30.0  3
+ C1Q  Var_56    HO22  O22  C22  C21   -51.25  30.0  3
+ C1Q  Var_57    H24   C24  C23  C22   -50.60  30.0  3
+ C1Q  Var_58    H24A  C24  C23  C22    65.93  30.0  3
+ C1Q  Var_59    HO24  O24  C24  C23   179.74  30.0  3
+ C1Q  Var_60    C18   C17  N    C25   108.60  30.0  3
+ C1Q  Var_61    C16   C17  N    C25  -126.27  30.0  3
+ C1Q  Var_62    O18   C18  C17  N      62.27  30.0  3
+ C1Q  Var_63    O16   C16  C17  N    -162.44  30.0  3
+ C1Q  Var_64    C15   C16  C17  N      73.87  30.0  3
+ C1Q  Var_65    O15   C15  C16  C17   -51.58  30.0  3
+ C1Q  Var_66    C14   C15  C16  C17  -178.04  30.0  3
+ C1Q  Var_67    O16   C16  C17  C18   -39.92  30.0  3
+ C1Q  Var_68    C15   C16  C17  C18  -163.61  30.0  3
+ C1Q  Var_69    C16   C17  C18  O18   -61.61  30.0  2
+ C1Q  Var_70    C13   C14  C15  C16  -177.90  30.0  3
+ C1Q  Var_71    O15   C15  C16  O16  -175.85  30.0  3
+ C1Q  Var_72    C14   C15  C16  O16    57.69  30.0  3
+ C1Q  Var_73    C13   C14  C15  O15    55.01  30.0  3
+ C1Q  Var_74    H17   C17  N    C25    -7.03  30.0  3
+ C1Q  Var_75    H16   C16  C17  N     -47.07  30.0  3
+ C1Q  Var_76    HO16  O16  C16  C17   -68.92  30.0  3
+ C1Q  Var_77    H15   C15  C16  C17    63.37  30.0  3
+ C1Q  Var_78    HO15  O15  C15  C16   -65.05  30.0  3
+ C1Q  Var_79    H14   C14  C15  C16   -56.22  30.0  3
+ C1Q  Var_80    H14A  C14  C15  C16    59.31  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- E15  E15  N~2~-[(2S)-2-amino-2-phenylacetyl]-N-{(2S,3S)-4-[(4R)-5,5-dimethyl-4-{[(2R)-3-methylbutan-2-yl]carbamoyl}-1,3-thiazolidin-3-yl]-3-hydroxy-4-oxo-1-phenylbutan-2-yl}-3-methyl-L-valinamide  peptide  97  46  .  2022-07-24  2022-09-22
+ E15  E15  N~2~-[(2S)-2-amino-2-phenylacetyl]-N-{(2S,3S)-4-[(4R)-5,5-dimethyl-4-{[(2R)-3-methylbutan-2-yl]carbamoyl}-1,3-thiazolidin-3-yl]-3-hydroxy-4-oxo-1-phenylbutan-2-yl}-3-methyl-L-valinamide  peptide  97  46  .  2022-07-24  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_E15
@@ -440,55 +441,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- E15  CONST_01  CAQ   CAT  CAX  CBK    0.00   0.0  0
- E15  CONST_02  CAQ   CAU  CAY  CBK    0.00   0.0  0
- E15  CONST_03  CAY   CAU  CAQ  CAT    0.00   0.0  0
- E15  CONST_04  CAY   CBK  CAX  CAT    0.00   0.0  0
- E15  CONST_05  CAX   CAT  CAQ  CAU    0.00   0.0  0
- E15  CONST_06  CAX   CBK  CAY  CAU    0.00   0.0  0
- E15  CONST_07  CAP   CAR  CAV  CBJ    0.00   0.0  0
- E15  CONST_08  CAP   CAS  CAW  CBJ    0.00   0.0  0
- E15  CONST_09  CAS   CAW  CBJ  CAV    0.00   0.0  0
- E15  CONST_10  CAS   CAP  CAR  CAV    0.00   0.0  0
- E15  CONST_11  CAR   CAV  CBJ  CAW    0.00   0.0  0
- E15  CONST_12  CAR   CAP  CAS  CAW    0.00   0.0  0
- E15  CONST_13  CAT   CAX  CBK  CBM  180.00   0.0  0
- E15  CONST_14  CAU   CAY  CBK  CBM  180.00   0.0  0
- E15  CONST_15  CAR   CAV  CBJ  CBA  180.00   0.0  0
- E15  CONST_16  CAS   CAW  CBJ  CBA  180.00   0.0  0
- E15  CONST_17  HAT   CAT  CAX  CBK  180.00   0.0  0
- E15  CONST_18  HAU   CAU  CAY  CBK  180.00   0.0  0
- E15  CONST_19  HAX   CAX  CAT  CAQ  180.00   0.0  0
- E15  CONST_20  HAY   CAY  CAU  CAQ  180.00   0.0  0
- E15  CONST_21  HAQ   CAQ  CAT  CAX  180.00   0.0  0
- E15  CONST_22  HAR   CAR  CAV  CBJ  180.00   0.0  0
- E15  CONST_23  HAS   CAS  CAW  CBJ  180.00   0.0  0
- E15  CONST_24  HAV   CAV  CAR  CAP  180.00   0.0  0
- E15  CONST_25  HAW   CAW  CAS  CAP  180.00   0.0  0
- E15  CONST_26  HAP   CAP  CAR  CAV  180.00   0.0  0
- E15  CONST_27  CBQ   NBR  CBI  OAN    0.00   0.0  0
- E15  CONST_28  CAZ   NBR  CBI  OAN  180.00   0.0  0
- E15  CONST_29  CBQ   NBR  CBI  CBN  180.00   0.0  0
- E15  CONST_30  CAZ   NBR  CBI  CBN    0.00   0.0  0
- E15  CONST_31  CBL   NBB  CBH  CBQ  180.00   0.0  0
- E15  CONST_32  HNBB  NBB  CBH  CBQ    0.00   0.0  0
- E15  CONST_33  CA    N    CBF  OAK    0.00   0.0  0
- E15  CONST_34  CA    N    CBF  CBM  180.00   0.0  0
- E15  CONST_35  CBO   NBC  C    CA   180.00   0.0  0
- E15  CONST_36  CBO   NBC  C    O      0.00   0.0  0
- E15  CONST_37  CBL   NBB  CBH  OAM    0.00   0.0  0
- E15  CONST_38  HN    N    CBF  OAK  180.00   0.0  0
- E15  CONST_39  HNBC  NBC  C    CA     0.00   0.0  0
- E15  Var_01    SBE   CAZ  NBR  CBQ   -8.91  30.0  1
- E15  Var_02    CAI   CBU  SBE  CAZ   78.71  30.0  1
- E15  Var_03    CAV   CBJ  CBA  CBO   85.51  30.0  3
- E15  Var_04    HAI   CAI  CBU  CBQ   53.89  30.0  3
- E15  Var_05    HAH   CAH  CBU  CBQ   62.06  30.0  3
- E15  Var_06    HAG   CAG  CB   CA    63.92  30.0  3
- E15  Var_07    HG1   CG1  CB   CA    55.62  30.0  3
- E15  Var_08    HG2   CG2  CB   CA    63.58  30.0  3
- E15  Var_09    HAB   CAB  CBS  CBL   67.98  30.0  3
- E15  Var_10    HAC   CAC  CBS  CBL   54.50  30.0  3
+ E15  CONST_01  CAQ   CAT  CAX  CBK     0.00   0.0  0
+ E15  CONST_02  CAQ   CAU  CAY  CBK     0.00   0.0  0
+ E15  CONST_03  CAY   CAU  CAQ  CAT     0.00   0.0  0
+ E15  CONST_04  CAY   CBK  CAX  CAT     0.00   0.0  0
+ E15  CONST_05  CAX   CAT  CAQ  CAU     0.00   0.0  0
+ E15  CONST_06  CAX   CBK  CAY  CAU     0.00   0.0  0
+ E15  CONST_07  CAP   CAR  CAV  CBJ     0.00   0.0  0
+ E15  CONST_08  CAP   CAS  CAW  CBJ     0.00   0.0  0
+ E15  CONST_09  CAS   CAW  CBJ  CAV     0.00   0.0  0
+ E15  CONST_10  CAS   CAP  CAR  CAV     0.00   0.0  0
+ E15  CONST_11  CAR   CAV  CBJ  CAW     0.00   0.0  0
+ E15  CONST_12  CAR   CAP  CAS  CAW     0.00   0.0  0
+ E15  CONST_13  CAT   CAX  CBK  CBM   180.00   0.0  0
+ E15  CONST_14  CAU   CAY  CBK  CBM   180.00   0.0  0
+ E15  CONST_15  CAR   CAV  CBJ  CBA   180.00   0.0  0
+ E15  CONST_16  CAS   CAW  CBJ  CBA   180.00   0.0  0
+ E15  CONST_17  HAT   CAT  CAX  CBK   180.00   0.0  0
+ E15  CONST_18  HAU   CAU  CAY  CBK   180.00   0.0  0
+ E15  CONST_19  HAX   CAX  CAT  CAQ   180.00   0.0  0
+ E15  CONST_20  HAY   CAY  CAU  CAQ   180.00   0.0  0
+ E15  CONST_21  HAQ   CAQ  CAT  CAX   180.00   0.0  0
+ E15  CONST_22  HAR   CAR  CAV  CBJ   180.00   0.0  0
+ E15  CONST_23  HAS   CAS  CAW  CBJ   180.00   0.0  0
+ E15  CONST_24  HAV   CAV  CAR  CAP   180.00   0.0  0
+ E15  CONST_25  HAW   CAW  CAS  CAP   180.00   0.0  0
+ E15  CONST_26  HAP   CAP  CAR  CAV   180.00   0.0  0
+ E15  CONST_27  CBQ   NBR  CBI  OAN     0.00   0.0  0
+ E15  CONST_28  CAZ   NBR  CBI  OAN   180.00   0.0  0
+ E15  CONST_29  CBQ   NBR  CBI  CBN   180.00   0.0  0
+ E15  CONST_30  CAZ   NBR  CBI  CBN     0.00   0.0  0
+ E15  CONST_31  CBL   NBB  CBH  CBQ   180.00   0.0  0
+ E15  CONST_32  HNBB  NBB  CBH  CBQ     0.00   0.0  0
+ E15  CONST_33  CA    N    CBF  OAK     0.00   0.0  0
+ E15  CONST_34  CA    N    CBF  CBM   180.00   0.0  0
+ E15  CONST_35  CBO   NBC  C    CA    180.00   0.0  0
+ E15  CONST_36  CBO   NBC  C    O       0.00   0.0  0
+ E15  CONST_37  CBL   NBB  CBH  OAM     0.00   0.0  0
+ E15  CONST_38  HN    N    CBF  OAK   180.00   0.0  0
+ E15  CONST_39  HNBC  NBC  C    CA      0.00   0.0  0
+ E15  Var_01    SBE   CAZ  NBR  CBQ    -8.91  30.0  1
+ E15  Var_02    CAI   CBU  SBE  CAZ    78.71  30.0  1
+ E15  Var_03    CAV   CBJ  CBA  CBO    85.51  30.0  3
+ E15  Var_04    HAI   CAI  CBU  CBQ    53.89  30.0  3
+ E15  Var_05    HAH   CAH  CBU  CBQ    62.06  30.0  3
+ E15  Var_06    HAG   CAG  CB   CA     63.92  30.0  3
+ E15  Var_07    HG1   CG1  CB   CA     55.62  30.0  3
+ E15  Var_08    HG2   CG2  CB   CA     63.58  30.0  3
+ E15  Var_09    HAB   CAB  CBS  CBL    67.98  30.0  3
+ E15  Var_10    HAC   CAC  CBS  CBL    54.50  30.0  3
+ E15  Var_11    HBQ   CBQ  NBR  CAZ  -136.75  30.0  1
+ E15  Var_12    HBM   CBM  CBK  CAX    -8.69  30.0  2
+ E15  Var_13    HNAJ  NAJ  CBM  CBK   -61.61  30.0  3
+ E15  Var_14    HNAA  NAJ  CBM  CBK    55.10  30.0  3
+ E15  Var_15    HBO   CBO  CBA  CBJ    50.96  30.0  3
+ E15  Var_16    HBN   CBN  CBI  NBR    36.13  30.0  3
+ E15  Var_17    HA    CA   N    CBF   -10.41  30.0  3
+ E15  Var_18    HOAO  OAO  CBN  CBI    31.82  30.0  3
+ E15  Var_19    HBL   CBL  NBB  CBH    38.69  30.0  3
+ E15  Var_20    HBS   CBS  CBL  NBB   -49.55  30.0  3
+ E15  Var_21    HAA   CAA  CBL  NBB    60.14  30.0  3
+ E15  Var_22    HAAA  CAA  CBL  NBB   179.39  30.0  3
+ E15  Var_23    HAAB  CAA  CBL  NBB   -59.76  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

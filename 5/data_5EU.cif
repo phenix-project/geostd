@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5EU  5EU  4,4'-(3-methylthiene-2,5-diyl)bis(3-chlorophenol)  ligand  34  22  .  2021-08-04  2022-09-22
+ 5EU  5EU  4,4'-(3-methylthiene-2,5-diyl)bis(3-chlorophenol)  ligand  34  22  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5EU
@@ -192,52 +193,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5EU  CONST_01  C05  C20  C22  C02    0.00   0.0  0
- 5EU  CONST_02  C05  C04  C03  C02    0.00   0.0  0
- 5EU  CONST_03  C20  C22  C02  C03    0.00   0.0  0
- 5EU  CONST_04  C20  C05  C04  C03    0.00   0.0  0
- 5EU  CONST_05  C06  C05  C04  C03  180.00   0.0  0
- 5EU  CONST_06  C22  C02  C03  C04    0.00   0.0  0
- 5EU  CONST_07  C22  C20  C05  C04    0.00   0.0  0
- 5EU  CONST_10  C08  C07  C06  C05  180.00   0.0  0
- 5EU  CONST_11  C10  S19  C06  C05  180.00   0.0  0
- 5EU  CONST_12  C22  C20  C05  C06  180.00   0.0  0
- 5EU  CONST_13  C10  C08  C07  C06    0.00   0.0  0
- 5EU  CONST_14  C08  C10  S19  C06    0.00   0.0  0
- 5EU  CONST_15  C11  C10  S19  C06  180.00   0.0  0
- 5EU  CONST_17  C10  S19  C06  C07    0.00   0.0  0
- 5EU  CONST_18  S19  C10  C08  C07    0.00   0.0  0
- 5EU  CONST_19  C11  C10  C08  C07  180.00   0.0  0
- 5EU  CONST_20  S19  C06  C07  C08    0.00   0.0  0
- 5EU  CONST_23  C14  C12  C11  C10  180.00   0.0  0
- 5EU  CONST_24  C17  C18  C11  C10  180.00   0.0  0
- 5EU  CONST_25  C15  C14  C12  C11    0.00   0.0  0
- 5EU  CONST_26  C15  C17  C18  C11    0.00   0.0  0
- 5EU  CONST_28  C17  C18  C11  C12    0.00   0.0  0
- 5EU  CONST_29  C17  C15  C14  C12    0.00   0.0  0
- 5EU  CONST_30  C18  C11  C12  C14    0.00   0.0  0
- 5EU  CONST_31  C18  C17  C15  C14    0.00   0.0  0
- 5EU  CONST_34  C20  C22  C02  O01  180.00   0.0  0
- 5EU  CONST_35  C04  C03  C02  O01  180.00   0.0  0
- 5EU  CONST_36  CL2  C20  C22  C02  180.00   0.0  0
- 5EU  CONST_37  CL2  C20  C05  C04  180.00   0.0  0
- 5EU  CONST_38  CL2  C20  C05  C06    0.00   0.0  0
- 5EU  CONST_39  C09  C08  C07  C06  180.00   0.0  0
- 5EU  CONST_40  S19  C10  C08  C09  180.00   0.0  0
- 5EU  CONST_41  C11  C10  C08  C09    0.00   0.0  0
- 5EU  CONST_42  CL1  C12  C11  C10    0.00   0.0  0
- 5EU  CONST_43  O16  C15  C14  C12  180.00   0.0  0
- 5EU  CONST_44  C18  C11  C12  CL1  180.00   0.0  0
- 5EU  CONST_45  C15  C14  C12  CL1  180.00   0.0  0
- 5EU  CONST_46  C18  C17  C15  O16  180.00   0.0  0
- 5EU  CONST_47  H3   C04  C03  C02  180.00   0.0  0
- 5EU  CONST_48  H12  C22  C02  C03  180.00   0.0  0
- 5EU  CONST_49  H2   C03  C04  C05  180.00   0.0  0
- 5EU  CONST_50  H4   C07  C06  C05    0.00   0.0  0
- 5EU  CONST_51  H11  C18  C11  C10    0.00   0.0  0
- 5EU  CONST_52  H8   C14  C12  C11  180.00   0.0  0
- 5EU  CONST_53  H10  C17  C18  C11  180.00   0.0  0
- 5EU  Var_01    H5   C09  C08  C07   65.07  30.0  2
+ 5EU  CONST_01  C05  C20  C22  C02     0.00   0.0  0
+ 5EU  CONST_02  C05  C04  C03  C02     0.00   0.0  0
+ 5EU  CONST_03  C20  C22  C02  C03     0.00   0.0  0
+ 5EU  CONST_04  C20  C05  C04  C03     0.00   0.0  0
+ 5EU  CONST_05  C06  C05  C04  C03   180.00   0.0  0
+ 5EU  CONST_06  C22  C02  C03  C04     0.00   0.0  0
+ 5EU  CONST_07  C22  C20  C05  C04     0.00   0.0  0
+ 5EU  CONST_08  C08  C07  C06  C05   180.00   0.0  0
+ 5EU  CONST_09  C10  S19  C06  C05   180.00   0.0  0
+ 5EU  CONST_10  C22  C20  C05  C06   180.00   0.0  0
+ 5EU  CONST_11  C10  C08  C07  C06     0.00   0.0  0
+ 5EU  CONST_12  C08  C10  S19  C06     0.00   0.0  0
+ 5EU  CONST_13  C11  C10  S19  C06   180.00   0.0  0
+ 5EU  CONST_14  C10  S19  C06  C07     0.00   0.0  0
+ 5EU  CONST_15  S19  C10  C08  C07     0.00   0.0  0
+ 5EU  CONST_16  C11  C10  C08  C07   180.00   0.0  0
+ 5EU  CONST_17  S19  C06  C07  C08     0.00   0.0  0
+ 5EU  CONST_18  C14  C12  C11  C10   180.00   0.0  0
+ 5EU  CONST_19  C17  C18  C11  C10   180.00   0.0  0
+ 5EU  CONST_20  C15  C14  C12  C11     0.00   0.0  0
+ 5EU  CONST_21  C15  C17  C18  C11     0.00   0.0  0
+ 5EU  CONST_22  C17  C18  C11  C12     0.00   0.0  0
+ 5EU  CONST_23  C17  C15  C14  C12     0.00   0.0  0
+ 5EU  CONST_24  C18  C11  C12  C14     0.00   0.0  0
+ 5EU  CONST_25  C18  C17  C15  C14     0.00   0.0  0
+ 5EU  CONST_26  C20  C22  C02  O01   180.00   0.0  0
+ 5EU  CONST_27  C04  C03  C02  O01   180.00   0.0  0
+ 5EU  CONST_28  CL2  C20  C22  C02   180.00   0.0  0
+ 5EU  CONST_29  CL2  C20  C05  C04   180.00   0.0  0
+ 5EU  CONST_30  CL2  C20  C05  C06     0.00   0.0  0
+ 5EU  CONST_31  C09  C08  C07  C06   180.00   0.0  0
+ 5EU  CONST_32  S19  C10  C08  C09   180.00   0.0  0
+ 5EU  CONST_33  C11  C10  C08  C09     0.00   0.0  0
+ 5EU  CONST_34  CL1  C12  C11  C10     0.00   0.0  0
+ 5EU  CONST_35  O16  C15  C14  C12   180.00   0.0  0
+ 5EU  CONST_36  C18  C11  C12  CL1   180.00   0.0  0
+ 5EU  CONST_37  C15  C14  C12  CL1   180.00   0.0  0
+ 5EU  CONST_38  C18  C17  C15  O16   180.00   0.0  0
+ 5EU  CONST_39  H3   C04  C03  C02   180.00   0.0  0
+ 5EU  CONST_40  H12  C22  C02  C03   180.00   0.0  0
+ 5EU  CONST_41  H2   C03  C04  C05   180.00   0.0  0
+ 5EU  CONST_42  H4   C07  C06  C05     0.00   0.0  0
+ 5EU  CONST_43  H11  C18  C11  C10     0.00   0.0  0
+ 5EU  CONST_44  H8   C14  C12  C11   180.00   0.0  0
+ 5EU  CONST_45  H10  C17  C18  C11   180.00   0.0  0
+ 5EU  Var_01    H5   C09  C08  C07    65.07  30.0  2
+ 5EU  Var_02    C07  C06  C05  C04   128.86  30.0  2
+ 5EU  Var_03    S19  C06  C05  C04   -48.80  30.0  2
+ 5EU  Var_04    C20  C05  C06  C07   -51.31  30.0  2
+ 5EU  Var_05    C12  C11  C10  C08  -113.61  30.0  2
+ 5EU  Var_06    C18  C11  C10  C08    65.15  30.0  2
+ 5EU  Var_07    S19  C10  C11  C12    68.99  30.0  2
+ 5EU  Var_08    S19  C10  C11  C18  -112.26  30.0  2
+ 5EU  Var_09    C20  C05  C06  S19   131.02  30.0  2
+ 5EU  Var_10    H1   O01  C02  C03     0.02  30.0  2
+ 5EU  Var_11    H9   O16  C15  C14   178.32  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

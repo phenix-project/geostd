@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- YOY  YOY  '[[(2~{S},3~{a}~{S},5~{S},6~{R},6~{a}~{S})-2-dodecyl-6-oxidanyl-3~{a},5,6,6~{a}-tetrahydrofuro[2,3-d][1,3]dioxol-5-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate'  ligand  94  49  .  2022-03-29  2022-03-29
+ YOY  YOY  '[[(2~{S},3~{a}~{S},5~{S},6~{R},6~{a}~{S})-2-dodecyl-6-oxidanyl-3~{a},5,6,6~{a}-tetrahydrofuro[2,3-d][1,3]dioxol-5-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methyl hydrogen phosphate'  ligand  94  49  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_YOY
@@ -441,48 +442,122 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- YOY  CONST_01  C3   N4   C4   C    180.00   0.0  0
- YOY  CONST_02  N3   C2   C4   C    180.00   0.0  0
- YOY  CONST_03  N2   C2   C4   C      0.00   0.0  0
- YOY  CONST_04  N2   C1   N1   C      0.00   0.0  0
- YOY  CONST_05  N3   C2   N2   C1   180.00   0.0  0
- YOY  CONST_06  C4   C2   N2   C1     0.00   0.0  0
- YOY  CONST_07  C4   C    N1   C1     0.00   0.0  0
- YOY  CONST_08  N4   C3   N3   C2     0.00   0.0  0
- YOY  CONST_09  C3   N4   C4   C2     0.00   0.0  0
- YOY  CONST_10  N1   C    C4   C2     0.00   0.0  0
- YOY  CONST_11  N1   C1   N2   C2     0.00   0.0  0
- YOY  CONST_12  C4   C2   N3   C3     0.00   0.0  0
- YOY  CONST_13  N2   C2   N3   C3   180.00   0.0  0
- YOY  CONST_14  N3   C3   N4   C4     0.00   0.0  0
- YOY  CONST_15  N4   C4   C    N1   180.00   0.0  0
- YOY  CONST_16  N4   C4   C2   N2   180.00   0.0  0
- YOY  CONST_17  N4   C4   C2   N3     0.00   0.0  0
- YOY  CONST_18  C5   N3   C2   C4   180.00   0.0  0
- YOY  CONST_19  N4   C3   N3   C5   180.00   0.0  0
- YOY  CONST_20  N2   C2   N3   C5     0.00   0.0  0
- YOY  CONST_21  N4   C4   C    N      0.00   0.0  0
- YOY  CONST_22  C2   C4   C    N    180.00   0.0  0
- YOY  CONST_23  C1   N1   C    N    180.00   0.0  0
- YOY  CONST_24  H3   C1   N1   C    180.00   0.0  0
- YOY  CONST_25  H35  C3   N3   C2   180.00   0.0  0
- YOY  CONST_26  H1   N    C    C4   180.00   0.0  0
- YOY  CONST_27  H2   N    C    C4     0.00   0.0  0
- YOY  Var_01    C14  C13  C12  C11  178.26  30.0  3
- YOY  Var_02    C19  C14  C13  C12  174.56  30.0  2
- YOY  Var_03    C20  C19  C14  C13  177.97  30.0  3
- YOY  Var_04    C21  C20  C19  C14  172.28  30.0  2
- YOY  Var_05    C22  C21  C20  C19   62.62  30.0  3
- YOY  Var_06    C23  C22  C21  C20  175.86  30.0  1
- YOY  Var_07    C24  C23  C22  C21   59.08  30.0  3
- YOY  Var_08    C25  C24  C23  C22   57.56  30.0  3
- YOY  Var_09    C26  C25  C24  C23  174.37  30.0  1
- YOY  Var_10    C27  C26  C25  C24   64.84  30.0  3
- YOY  Var_11    O3   P    O1   C7   -36.08  30.0  1
- YOY  Var_12    O5   P1   O7   C8    80.04  30.0  3
- YOY  Var_13    H32  C27  C26  C25  175.54  30.0  3
- YOY  Var_14    H38  C7   O1   P     29.40  30.0  3
- YOY  Var_15    H40  C8   O7   P1    10.93  30.0  2
+ YOY  CONST_01  C3   N4   C4   C     180.00   0.0  0
+ YOY  CONST_02  N3   C2   C4   C     180.00   0.0  0
+ YOY  CONST_03  N2   C2   C4   C       0.00   0.0  0
+ YOY  CONST_04  N2   C1   N1   C       0.00   0.0  0
+ YOY  CONST_05  N3   C2   N2   C1    180.00   0.0  0
+ YOY  CONST_06  C4   C2   N2   C1      0.00   0.0  0
+ YOY  CONST_07  C4   C    N1   C1      0.00   0.0  0
+ YOY  CONST_08  N4   C3   N3   C2      0.00   0.0  0
+ YOY  CONST_09  C3   N4   C4   C2      0.00   0.0  0
+ YOY  CONST_10  N1   C    C4   C2      0.00   0.0  0
+ YOY  CONST_11  N1   C1   N2   C2      0.00   0.0  0
+ YOY  CONST_12  C4   C2   N3   C3      0.00   0.0  0
+ YOY  CONST_13  N2   C2   N3   C3    180.00   0.0  0
+ YOY  CONST_14  N3   C3   N4   C4      0.00   0.0  0
+ YOY  CONST_15  N4   C4   C    N1    180.00   0.0  0
+ YOY  CONST_16  N4   C4   C2   N2    180.00   0.0  0
+ YOY  CONST_17  N4   C4   C2   N3      0.00   0.0  0
+ YOY  CONST_18  C5   N3   C2   C4    180.00   0.0  0
+ YOY  CONST_19  N4   C3   N3   C5    180.00   0.0  0
+ YOY  CONST_20  N2   C2   N3   C5      0.00   0.0  0
+ YOY  CONST_21  N4   C4   C    N       0.00   0.0  0
+ YOY  CONST_22  C2   C4   C    N     180.00   0.0  0
+ YOY  CONST_23  C1   N1   C    N     180.00   0.0  0
+ YOY  CONST_24  H3   C1   N1   C     180.00   0.0  0
+ YOY  CONST_25  H35  C3   N3   C2    180.00   0.0  0
+ YOY  CONST_26  H1   N    C    C4    180.00   0.0  0
+ YOY  CONST_27  H2   N    C    C4      0.00   0.0  0
+ YOY  Var_01    C14  C13  C12  C11   178.26  30.0  3
+ YOY  Var_02    C19  C14  C13  C12   174.56  30.0  2
+ YOY  Var_03    C20  C19  C14  C13   177.97  30.0  3
+ YOY  Var_04    C21  C20  C19  C14   172.28  30.0  2
+ YOY  Var_05    C22  C21  C20  C19    62.62  30.0  3
+ YOY  Var_06    C23  C22  C21  C20   175.86  30.0  1
+ YOY  Var_07    C24  C23  C22  C21    59.08  30.0  3
+ YOY  Var_08    C25  C24  C23  C22    57.56  30.0  3
+ YOY  Var_09    C26  C25  C24  C23   174.37  30.0  1
+ YOY  Var_10    C27  C26  C25  C24    64.84  30.0  3
+ YOY  Var_11    O3   P    O1   C7    -36.08  30.0  1
+ YOY  Var_12    O5   P1   O7   C8     80.04  30.0  3
+ YOY  Var_13    H32  C27  C26  C25   175.54  30.0  3
+ YOY  Var_14    H38  C7   O1   P      29.40  30.0  3
+ YOY  Var_15    H40  C8   O7   P1     10.93  30.0  2
+ YOY  Var_16    C18  C17  C6   O      30.17  30.0  1
+ YOY  Var_17    C17  C18  C5   O      35.74  30.0  1
+ YOY  Var_18    C3   N3   C5   O      59.14  30.0  2
+ YOY  Var_19    C2   N3   C5   O    -118.98  30.0  2
+ YOY  Var_20    O13  C11  O9   C10    -6.71  30.0  1
+ YOY  Var_21    C16  C9   O8   C10    37.59  30.0  1
+ YOY  Var_22    C11  O13  C15  C10   -24.99  30.0  1
+ YOY  Var_23    C9   C16  C15  C10     2.49  30.0  1
+ YOY  Var_24    O8   C10  O9   C11   104.87  30.0  1
+ YOY  Var_25    C15  C10  O9   C11    -8.56  30.0  1
+ YOY  Var_26    C16  C15  O13  C11  -137.07  30.0  1
+ YOY  Var_27    O9   C11  O13  C15    20.75  30.0  1
+ YOY  Var_28    C9   O8   C10  C15   -35.91  30.0  1
+ YOY  Var_29    O8   C9   C16  C15   -23.25  30.0  1
+ YOY  Var_30    O9   C10  C15  C16   136.43  30.0  1
+ YOY  Var_31    O8   C10  C15  C16    19.19  30.0  1
+ YOY  Var_32    C5   O    C6   C17    -8.12  30.0  1
+ YOY  Var_33    N3   C5   C18  C17   156.26  30.0  1
+ YOY  Var_34    C6   O    C5   C18   -17.60  30.0  1
+ YOY  Var_35    C3   N3   C5   C18   -59.12  30.0  2
+ YOY  Var_36    C2   N3   C5   C18   122.76  30.0  2
+ YOY  Var_37    C6   C17  C18  C5    -38.92  30.0  1
+ YOY  Var_38    N3   C5   O    C6   -141.16  30.0  1
+ YOY  Var_39    O9   C10  O8   C9   -149.75  30.0  1
+ YOY  Var_40    O13  C15  C16  C9    112.73  30.0  1
+ YOY  Var_41    O9   C10  C15  O13    20.24  30.0  1
+ YOY  Var_42    O8   C10  C15  O13   -97.00  30.0  1
+ YOY  Var_43    O15  C17  C6   O     -86.77  30.0  1
+ YOY  Var_44    O16  C18  C5   O     155.50  30.0  1
+ YOY  Var_45    C12  C11  O9   C10  -128.06  30.0  1
+ YOY  Var_46    C8   C9   O8   C10   -85.33  30.0  1
+ YOY  Var_47    O14  C16  C15  C10   125.78  30.0  1
+ YOY  Var_48    C15  O13  C11  C12   142.58  30.0  1
+ YOY  Var_49    C8   C9   C16  C15    98.80  30.0  1
+ YOY  Var_50    C7   C6   C17  C18   -88.46  30.0  1
+ YOY  Var_51    O15  C17  C18  C5     75.76  30.0  1
+ YOY  Var_52    C7   C6   O    C5    114.45  30.0  1
+ YOY  Var_53    O16  C18  C17  C6   -160.54  30.0  1
+ YOY  Var_54    O16  C18  C5   N3    -83.99  30.0  1
+ YOY  Var_55    O14  C16  C15  O13  -123.98  30.0  1
+ YOY  Var_56    O8   C9   C16  O14  -143.41  30.0  1
+ YOY  Var_57    H14  C17  C6   O     149.76  30.0  1
+ YOY  Var_58    H15  C18  C5   O     -78.55  30.0  1
+ YOY  Var_59    H5   C11  O9   C10   111.56  30.0  1
+ YOY  Var_60    H42  C9   O8   C10   155.92  30.0  1
+ YOY  Var_61    H13  C16  C15  C10  -112.55  30.0  1
+ YOY  Var_62    H4   C10  O9   C11  -132.82  30.0  1
+ YOY  Var_63    H12  C15  O13  C11    96.78  30.0  1
+ YOY  Var_64    H36  C5   C18  C17   -84.78  30.0  1
+ YOY  Var_65    H37  C6   C17  C18   147.36  30.0  1
+ YOY  Var_66    O1   C7   C6   O    -179.66  30.0  3
+ YOY  Var_67    O9   C11  C12  C13    56.58  30.0  3
+ YOY  Var_68    O13  C11  C12  C13   -62.16  30.0  3
+ YOY  Var_69    O7   C8   C9   C16  -176.50  30.0  3
+ YOY  Var_70    O1   C7   C6   C17   -62.16  30.0  3
+ YOY  Var_71    O15  C17  C6   C7    154.60  30.0  1
+ YOY  Var_72    O14  C16  C9   C8    -21.36  30.0  1
+ YOY  Var_73    O16  C18  C17  O15   -45.86  30.0  1
+ YOY  Var_74    O8   C9   C8   O7    -58.49  30.0  2
+ YOY  Var_75    H38  C7   C6   O      56.22  30.0  3
+ YOY  Var_76    H39  C7   C6   O     -60.61  30.0  3
+ YOY  Var_77    H43  O14  C16  C15   170.84  30.0  3
+ YOY  Var_78    H40  C8   C9   C16   -53.41  30.0  3
+ YOY  Var_79    H41  C8   C9   C16    64.08  30.0  3
+ YOY  Var_80    H45  O16  C18  C17  -169.11  30.0  3
+ YOY  Var_81    H44  O15  C17  C18    62.41  30.0  3
+ YOY  Var_82    H6   C12  C11  O13   174.92  30.0  2
+ YOY  Var_83    H7   C12  C11  O13    61.49  30.0  2
+ YOY  Var_84    P1   O4   P    O1     76.30  30.0  3
+ YOY  Var_85    P1   O4   P    O2    -35.36  30.0  2
+ YOY  Var_86    P1   O4   P    O3   -169.43  30.0  3
+ YOY  Var_87    P    O4   P1   O5   -160.29  30.0  3
+ YOY  Var_88    P    O4   P1   O6    -27.10  30.0  2
+ YOY  Var_89    P    O4   P1   O7     87.34  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

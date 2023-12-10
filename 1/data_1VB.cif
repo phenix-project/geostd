@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1VB  1VB  3-(4-oxo-3,4-dihydroquinazolin-2-yl)-N-[(1S)-1-(4-sulfamoylphenyl)ethyl]propanamide  ligand  48  28  .  2021-08-03  2021-08-03  
+ 1VB  1VB  3-(4-oxo-3,4-dihydroquinazolin-2-yl)-N-[(1S)-1-(4-sulfamoylphenyl)ethyl]propanamide  ligand  48  28  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1VB
@@ -248,45 +249,56 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 1VB  CONST_01  CAL  CAV  CAK  CAI    0.00   0.0  0
- 1VB  CONST_02  CAL  CAJ  CAU  CAI    0.00   0.0  0
- 1VB  CONST_03  CAJ  CAL  CAV  CAK    0.00   0.0  0
- 1VB  CONST_04  CAJ  CAU  CAI  CAK    0.00   0.0  0
- 1VB  CONST_05  CAU  CAI  CAK  CAV    0.00   0.0  0
- 1VB  CONST_06  CAU  CAJ  CAL  CAV    0.00   0.0  0
- 1VB  CONST_07  CAH  CAN  CAZ  CAY    0.00   0.0  0
- 1VB  CONST_08  CAH  CAG  CAM  CAY    0.00   0.0  0
- 1VB  CONST_09  CAN  CAH  CAG  CAM    0.00   0.0  0
- 1VB  CONST_10  CAN  CAZ  CAY  CAM    0.00   0.0  0
- 1VB  CONST_11  CAZ  CAN  CAH  CAG    0.00   0.0  0
- 1VB  CONST_12  CAZ  CAY  CAM  CAG    0.00   0.0  0
- 1VB  CONST_13  CAZ  CAX  NAS  CAW    0.00   0.0  0
- 1VB  CONST_14  CAX  NAS  CAW  NAQ    0.00   0.0  0
- 1VB  CONST_15  NAS  CAW  NAQ  CAY    0.00   0.0  0
- 1VB  CONST_16  SBB  CAV  CAK  CAI  180.00   0.0  0
- 1VB  CONST_17  CBA  CAU  CAI  CAK  180.00   0.0  0
- 1VB  CONST_18  CAJ  CAL  CAV  SBB  180.00   0.0  0
- 1VB  CONST_19  CBA  CAU  CAJ  CAL  180.00   0.0  0
- 1VB  CONST_20  CAY  NAQ  CAW  CAP  180.00   0.0  0
- 1VB  CONST_21  CAX  NAS  CAW  CAP  180.00   0.0  0
- 1VB  CONST_22  OAD  CAX  NAS  CAW  180.00   0.0  0
- 1VB  CONST_23  H6   CAJ  CAU  CAI  180.00   0.0  0
- 1VB  CONST_24  H5   CAL  CAV  CAK  180.00   0.0  0
- 1VB  CONST_25  H1   CAI  CAK  CAV  180.00   0.0  0
- 1VB  CONST_26  H2   CAK  CAV  CAL  180.00   0.0  0
- 1VB  CONST_27  H16  CAM  CAY  NAQ    0.00   0.0  0
- 1VB  CONST_28  H19  CAN  CAZ  CAY  180.00   0.0  0
- 1VB  CONST_29  H17  CAG  CAM  CAY  180.00   0.0  0
- 1VB  CONST_30  H18  CAH  CAG  CAM  180.00   0.0  0
- 1VB  CONST_31  H20  NAS  CAW  NAQ  180.00   0.0  0
- 1VB  CONST_32  CAO  CAT  NAR  CBA  180.00   0.0  0
- 1VB  CONST_33  OAC  CAT  NAR  CBA    0.00   0.0  0
- 1VB  CONST_34  H11  NAR  CAT  OAC  180.00   0.0  0
- 1VB  Var_01    OAF  SBB  CAV  CAK  -15.84  30.0  2
- 1VB  Var_02    NAQ  CAW  CAP  CAO   -8.76  30.0  3
- 1VB  Var_03    CAW  CAP  CAO  CAT  173.26  30.0  3
- 1VB  Var_04    H3   NAB  SBB  CAV  -74.74  30.0  3
- 1VB  Var_05    CAP  CAO  CAT  NAR  141.95  30.0  1
+ 1VB  CONST_01  CAL  CAV  CAK  CAI     0.00   0.0  0
+ 1VB  CONST_02  CAL  CAJ  CAU  CAI     0.00   0.0  0
+ 1VB  CONST_03  CAJ  CAL  CAV  CAK     0.00   0.0  0
+ 1VB  CONST_04  CAJ  CAU  CAI  CAK     0.00   0.0  0
+ 1VB  CONST_05  CAU  CAI  CAK  CAV     0.00   0.0  0
+ 1VB  CONST_06  CAU  CAJ  CAL  CAV     0.00   0.0  0
+ 1VB  CONST_07  CAH  CAN  CAZ  CAY     0.00   0.0  0
+ 1VB  CONST_08  CAH  CAG  CAM  CAY     0.00   0.0  0
+ 1VB  CONST_09  CAN  CAH  CAG  CAM     0.00   0.0  0
+ 1VB  CONST_10  CAN  CAZ  CAY  CAM     0.00   0.0  0
+ 1VB  CONST_11  CAZ  CAN  CAH  CAG     0.00   0.0  0
+ 1VB  CONST_12  CAZ  CAY  CAM  CAG     0.00   0.0  0
+ 1VB  CONST_13  CAZ  CAX  NAS  CAW     0.00   0.0  0
+ 1VB  CONST_14  CAX  NAS  CAW  NAQ     0.00   0.0  0
+ 1VB  CONST_15  NAS  CAW  NAQ  CAY     0.00   0.0  0
+ 1VB  CONST_16  SBB  CAV  CAK  CAI   180.00   0.0  0
+ 1VB  CONST_17  CBA  CAU  CAI  CAK   180.00   0.0  0
+ 1VB  CONST_18  CAJ  CAL  CAV  SBB   180.00   0.0  0
+ 1VB  CONST_19  CBA  CAU  CAJ  CAL   180.00   0.0  0
+ 1VB  CONST_20  CAY  NAQ  CAW  CAP   180.00   0.0  0
+ 1VB  CONST_21  CAX  NAS  CAW  CAP   180.00   0.0  0
+ 1VB  CONST_22  OAD  CAX  NAS  CAW   180.00   0.0  0
+ 1VB  CONST_23  H6   CAJ  CAU  CAI   180.00   0.0  0
+ 1VB  CONST_24  H5   CAL  CAV  CAK   180.00   0.0  0
+ 1VB  CONST_25  H1   CAI  CAK  CAV   180.00   0.0  0
+ 1VB  CONST_26  H2   CAK  CAV  CAL   180.00   0.0  0
+ 1VB  CONST_27  H16  CAM  CAY  NAQ     0.00   0.0  0
+ 1VB  CONST_28  H19  CAN  CAZ  CAY   180.00   0.0  0
+ 1VB  CONST_29  H17  CAG  CAM  CAY   180.00   0.0  0
+ 1VB  CONST_30  H18  CAH  CAG  CAM   180.00   0.0  0
+ 1VB  CONST_31  H20  NAS  CAW  NAQ   180.00   0.0  0
+ 1VB  CONST_32  CAO  CAT  NAR  CBA   180.00   0.0  0
+ 1VB  CONST_33  OAC  CAT  NAR  CBA     0.00   0.0  0
+ 1VB  CONST_34  H11  NAR  CAT  OAC   180.00   0.0  0
+ 1VB  Var_01    OAF  SBB  CAV  CAK   -15.84  30.0  2
+ 1VB  Var_02    NAQ  CAW  CAP  CAO    -8.76  30.0  3
+ 1VB  Var_03    CAW  CAP  CAO  CAT   173.26  30.0  3
+ 1VB  Var_04    H3   NAB  SBB  CAV   -74.74  30.0  3
+ 1VB  Var_05    CAP  CAO  CAT  NAR   141.95  30.0  1
+ 1VB  Var_06    NAR  CBA  CAU  CAI   134.16  30.0  2
+ 1VB  Var_07    CAA  CBA  CAU  CAI  -103.63  30.0  2
+ 1VB  Var_08    NAR  CBA  CAU  CAJ   -47.84  30.0  2
+ 1VB  Var_09    CAA  CBA  CAU  CAJ    74.38  30.0  2
+ 1VB  Var_10    H7   CBA  CAU  CAI    14.89  30.0  2
+ 1VB  Var_11    CAT  NAR  CBA  CAU   -69.24  30.0  2
+ 1VB  Var_12    H11  NAR  CBA  CAU   108.19  30.0  2
+ 1VB  Var_13    H8   CAA  CBA  CAU   176.67  30.0  3
+ 1VB  Var_14    H9   CAA  CBA  CAU   -62.59  30.0  3
+ 1VB  Var_15    H10  CAA  CBA  CAU    57.11  30.0  3
+ 1VB  Var_16    CAT  NAR  CBA  CAA   167.88  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

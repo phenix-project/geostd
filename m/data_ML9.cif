@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ML9  ML9  2-amino-8-[trans-4-(2-hydroxyethoxy)cyclohexyl]-6-(6-methoxypyridin-3-yl)-4-methylpyrido[2,3-d]pyrimidin-7(8H)-one  ligand  58  31  .  2022-07-25  2022-07-26
+ ML9  ML9  2-amino-8-[trans-4-(2-hydroxyethoxy)cyclohexyl]-6-(6-methoxypyridin-3-yl)-4-methylpyrido[2,3-d]pyrimidin-7(8H)-one  ligand  58  31  .  2022-07-25  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_ML9
@@ -292,44 +293,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ML9  CONST_01  N17   C18  C13  C14     0.00   0.0  0
- ML9  CONST_02  N17   C16  C15  C14     0.00   0.0  0
- ML9  CONST_03  C18   C13  C14  C15     0.00   0.0  0
- ML9  CONST_04  C18   N17  C16  C15     0.00   0.0  0
- ML9  CONST_05  C16   C15  C14  C13     0.00   0.0  0
- ML9  CONST_06  C16   N17  C18  C13     0.00   0.0  0
- ML9  CONST_07  C2    N1   C6   C5      0.00   0.0  0
- ML9  CONST_08  C2    N3   C4   C5      0.00   0.0  0
- ML9  CONST_09  N3    C4   C5   C6      0.00   0.0  0
- ML9  CONST_10  N3    C2   N1   C6      0.00   0.0  0
- ML9  CONST_11  N1    C6   C5   C4      0.00   0.0  0
- ML9  CONST_12  N1    C2   N3   C4      0.00   0.0  0
- ML9  CONST_13  C9    C13  C14  C15   180.00   0.0  0
- ML9  CONST_14  N17   C18  C13  C9    180.00   0.0  0
- ML9  CONST_15  C9    C8   N7   C4      0.00   0.0  0
- ML9  CONST_16  C22   N7   C8   C9    180.00   0.0  0
- ML9  CONST_17  O19   C16  C15  C14   180.00   0.0  0
- ML9  CONST_18  O19   C16  N17  C18   180.00   0.0  0
- ML9  CONST_19  N12   C2   N1   C6    180.00   0.0  0
- ML9  CONST_20  C21   C6   C5   C4    180.00   0.0  0
- ML9  CONST_21  N12   C2   N3   C4    180.00   0.0  0
- ML9  CONST_22  C21   C6   N1   C2    180.00   0.0  0
- ML9  CONST_23  C21   C6   C5   C10     0.00   0.0  0
- ML9  CONST_24  O11   C8   N7   C4    180.00   0.0  0
- ML9  CONST_25  O11   C8   N7   C22     0.00   0.0  0
- ML9  CONST_26  H18   C18  C13  C14   180.00   0.0  0
- ML9  CONST_27  H14   C14  C13  C18   180.00   0.0  0
- ML9  CONST_28  H15   C15  C14  C13   180.00   0.0  0
- ML9  CONST_29  HN12  N12  C2   N1    180.00   0.0  0
- ML9  CONST_30  HN1A  N12  C2   N1      0.00   0.0  0
- ML9  Var_01    C10   C9   C13  C14   -45.16  30.0  2
- ML9  Var_02    C25   C24  C23  C22   -55.65  30.0  1
- ML9  Var_03    C25   C26  C27  C22    57.81  30.0  1
- ML9  Var_04    N17   C16  O19  C20    -0.62  30.0  1
- ML9  Var_05    H21   C21  C6   C5     58.64  30.0  2
- ML9  Var_06    C30   C29  O28  C25  -174.18  30.0  3
- ML9  Var_07    H20   C20  O19  C16   -60.67  30.0  3
- ML9  Var_08    O28   C29  C30  O31    65.18  30.0  2
+ ML9  CONST_01  N17   C18  C13  C14      0.00   0.0  0
+ ML9  CONST_02  N17   C16  C15  C14      0.00   0.0  0
+ ML9  CONST_03  C18   C13  C14  C15      0.00   0.0  0
+ ML9  CONST_04  C18   N17  C16  C15      0.00   0.0  0
+ ML9  CONST_05  C16   C15  C14  C13      0.00   0.0  0
+ ML9  CONST_06  C16   N17  C18  C13      0.00   0.0  0
+ ML9  CONST_07  C2    N1   C6   C5       0.00   0.0  0
+ ML9  CONST_08  C2    N3   C4   C5       0.00   0.0  0
+ ML9  CONST_09  N3    C4   C5   C6       0.00   0.0  0
+ ML9  CONST_10  N3    C2   N1   C6       0.00   0.0  0
+ ML9  CONST_11  N1    C6   C5   C4       0.00   0.0  0
+ ML9  CONST_12  N1    C2   N3   C4       0.00   0.0  0
+ ML9  CONST_13  C9    C13  C14  C15    180.00   0.0  0
+ ML9  CONST_14  N17   C18  C13  C9     180.00   0.0  0
+ ML9  CONST_15  C9    C8   N7   C4       0.00   0.0  0
+ ML9  CONST_16  C22   N7   C8   C9     180.00   0.0  0
+ ML9  CONST_17  O19   C16  C15  C14    180.00   0.0  0
+ ML9  CONST_18  O19   C16  N17  C18    180.00   0.0  0
+ ML9  CONST_19  N12   C2   N1   C6     180.00   0.0  0
+ ML9  CONST_20  C21   C6   C5   C4     180.00   0.0  0
+ ML9  CONST_21  N12   C2   N3   C4     180.00   0.0  0
+ ML9  CONST_22  C21   C6   N1   C2     180.00   0.0  0
+ ML9  CONST_23  C21   C6   C5   C10      0.00   0.0  0
+ ML9  CONST_24  O11   C8   N7   C4     180.00   0.0  0
+ ML9  CONST_25  O11   C8   N7   C22      0.00   0.0  0
+ ML9  CONST_26  H18   C18  C13  C14    180.00   0.0  0
+ ML9  CONST_27  H14   C14  C13  C18    180.00   0.0  0
+ ML9  CONST_28  H15   C15  C14  C13    180.00   0.0  0
+ ML9  CONST_29  HN12  N12  C2   N1     180.00   0.0  0
+ ML9  CONST_30  HN1A  N12  C2   N1       0.00   0.0  0
+ ML9  Var_01    C10   C9   C13  C14    -45.16  30.0  2
+ ML9  Var_02    C25   C24  C23  C22    -55.65  30.0  1
+ ML9  Var_03    C25   C26  C27  C22     57.81  30.0  1
+ ML9  Var_04    N17   C16  O19  C20     -0.62  30.0  1
+ ML9  Var_05    H21   C21  C6   C5      58.64  30.0  2
+ ML9  Var_06    C30   C29  O28  C25   -174.18  30.0  3
+ ML9  Var_07    H20   C20  O19  C16    -60.67  30.0  3
+ ML9  Var_08    O28   C29  C30  O31     65.18  30.0  2
+ ML9  Var_09    C5    C10  C9   C13    178.90  30.0  1
+ ML9  Var_10    N7    C8   C9   C13    177.47  30.0  1
+ ML9  Var_11    C8    N7   C4   C5      -3.17  30.0  1
+ ML9  Var_12    C22   N7   C4   C5     179.00  30.0  1
+ ML9  Var_13    C8    C9   C10  C5       1.03  30.0  1
+ ML9  Var_14    C9    C10  C5   C6    -179.22  30.0  1
+ ML9  Var_15    C9    C10  C5   C4       1.63  30.0  1
+ ML9  Var_16    C23   C22  N7   C4     107.34  30.0  3
+ ML9  Var_17    C27   C22  N7   C4    -123.01  30.0  3
+ ML9  Var_18    N7    C8   C9   C10     -4.59  30.0  1
+ ML9  Var_19    N3    C4   N7   C8     176.78  30.0  1
+ ML9  Var_20    C23   C22  N7   C8     -70.55  30.0  3
+ ML9  Var_21    C27   C22  N7   C8      59.09  30.0  3
+ ML9  Var_22    C26   C27  C22  C23    -58.39  30.0  1
+ ML9  Var_23    C26   C25  C24  C23     56.48  30.0  1
+ ML9  Var_24    C24   C23  C22  C27     57.27  30.0  1
+ ML9  Var_25    C24   C25  C26  C27    -57.62  30.0  1
+ ML9  Var_26    N7    C22  C23  C24   -172.12  30.0  1
+ ML9  Var_27    N7    C22  C27  C26    171.48  30.0  1
+ ML9  Var_28    N3    C4   N7   C22     -1.05  30.0  1
+ ML9  Var_29    O11   C8   C9   C13     -2.66  30.0  1
+ ML9  Var_30    O11   C8   C9   C10    175.27  30.0  1
+ ML9  Var_31    O28   C25  C24  C23    179.89  30.0  1
+ ML9  Var_32    O28   C25  C26  C27   -178.15  30.0  1
+ ML9  Var_33    H10   C10  C9   C13     -1.87  30.0  1
+ ML9  Var_34    H22   C22  N7   C4      -7.98  30.0  3
+ ML9  Var_35    H27   C27  C22  C23   -178.72  30.0  1
+ ML9  Var_36    H27A  C27  C22  C23     62.27  30.0  1
+ ML9  Var_37    H25   C25  C24  C23    -61.95  30.0  1
+ ML9  Var_38    H23   C23  C22  C27    -64.16  30.0  1
+ ML9  Var_39    H23A  C23  C22  C27    177.52  30.0  1
+ ML9  Var_40    H26   C26  C25  C24   -178.75  30.0  1
+ ML9  Var_41    H26A  C26  C25  C24     63.69  30.0  1
+ ML9  Var_42    H24   C24  C25  C26    -64.62  30.0  1
+ ML9  Var_43    H24A  C24  C25  C26    178.36  30.0  1
+ ML9  Var_44    C29   O28  C25  C24    163.08  30.0  3
+ ML9  Var_45    C29   O28  C25  C26    -74.71  30.0  3
+ ML9  Var_46    C29   C30  O31  HO31  -178.58  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- Z7D  Z7D  1-(benzyloxy)-4-{1-[(4-fluorophenyl)sulfonyl]cyclopentyl}benzene  ligand  52  29  .  2022-03-29  2022-03-29
+ Z7D  Z7D  1-(benzyloxy)-4-{1-[(4-fluorophenyl)sulfonyl]cyclopentyl}benzene  ligand  52  29  .  2022-03-29  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_Z7D
@@ -269,53 +270,80 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- Z7D  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- Z7D  CONST_02  C4   C5   C6   C1     0.00   0.0  0
- Z7D  CONST_03  C5   C4   C3   C2     0.00   0.0  0
- Z7D  CONST_04  C5   C6   C1   C2     0.00   0.0  0
- Z7D  CONST_05  C6   C5   C4   C3     0.00   0.0  0
- Z7D  CONST_06  C6   C1   C2   C3     0.00   0.0  0
- Z7D  CONST_07  C13  C14  C15  C10    0.00   0.0  0
- Z7D  CONST_08  C13  C12  C11  C10    0.00   0.0  0
- Z7D  CONST_09  C14  C15  C10  C11    0.00   0.0  0
- Z7D  CONST_10  C14  C13  C12  C11    0.00   0.0  0
- Z7D  CONST_11  C15  C10  C11  C12    0.00   0.0  0
- Z7D  CONST_12  C15  C14  C13  C12    0.00   0.0  0
- Z7D  CONST_13  C27  C26  C25  C24    0.00   0.0  0
- Z7D  CONST_14  C27  C28  C29  C24    0.00   0.0  0
- Z7D  CONST_15  C28  C27  C26  C25    0.00   0.0  0
- Z7D  CONST_16  C28  C29  C24  C25    0.00   0.0  0
- Z7D  CONST_17  C29  C28  C27  C26    0.00   0.0  0
- Z7D  CONST_18  C29  C24  C25  C26    0.00   0.0  0
- Z7D  CONST_19  C8   C5   C6   C1   180.00   0.0  0
- Z7D  CONST_20  C8   C5   C4   C3   180.00   0.0  0
- Z7D  CONST_21  O7   C2   C3   C4   180.00   0.0  0
- Z7D  CONST_22  O7   C2   C1   C6   180.00   0.0  0
- Z7D  CONST_23  C14  C15  C10  S9   180.00   0.0  0
- Z7D  CONST_24  C12  C11  C10  S9   180.00   0.0  0
- Z7D  CONST_25  F18  C13  C12  C11  180.00   0.0  0
- Z7D  CONST_26  F18  C13  C14  C15  180.00   0.0  0
- Z7D  CONST_27  C26  C25  C24  C23  180.00   0.0  0
- Z7D  CONST_28  C28  C29  C24  C23  180.00   0.0  0
- Z7D  CONST_29  H3   C3   C2   C1   180.00   0.0  0
- Z7D  CONST_30  H4   C4   C3   C2   180.00   0.0  0
- Z7D  CONST_31  H6   C6   C1   C2   180.00   0.0  0
- Z7D  CONST_32  H1   C1   C2   C3   180.00   0.0  0
- Z7D  CONST_33  H14  C14  C15  C10  180.00   0.0  0
- Z7D  CONST_34  H12  C12  C11  C10  180.00   0.0  0
- Z7D  CONST_35  H15  C15  C10  C11  180.00   0.0  0
- Z7D  CONST_36  H11  C11  C12  C13  180.00   0.0  0
- Z7D  CONST_37  H26  C26  C25  C24  180.00   0.0  0
- Z7D  CONST_38  H28  C28  C29  C24  180.00   0.0  0
- Z7D  CONST_39  H27  C27  C26  C25  180.00   0.0  0
- Z7D  CONST_40  H29  C29  C24  C25  180.00   0.0  0
- Z7D  CONST_41  H25  C25  C26  C27  180.00   0.0  0
- Z7D  Var_01    C20  C21  C22  C8   -26.07  30.0  1
- Z7D  Var_02    C21  C20  C19  C8    29.44  30.0  1
- Z7D  Var_03    C22  C21  C20  C19   -1.98  30.0  1
- Z7D  Var_04    C15  C10  S9   C8   -89.62  30.0  2
- Z7D  Var_05    C24  C23  O7   C2   -63.62  30.0  1
- Z7D  Var_06    C25  C24  C23  O7   142.45  30.0  3
+ Z7D  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ Z7D  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ Z7D  CONST_03  C5    C4   C3   C2      0.00   0.0  0
+ Z7D  CONST_04  C5    C6   C1   C2      0.00   0.0  0
+ Z7D  CONST_05  C6    C5   C4   C3      0.00   0.0  0
+ Z7D  CONST_06  C6    C1   C2   C3      0.00   0.0  0
+ Z7D  CONST_07  C13   C14  C15  C10     0.00   0.0  0
+ Z7D  CONST_08  C13   C12  C11  C10     0.00   0.0  0
+ Z7D  CONST_09  C14   C15  C10  C11     0.00   0.0  0
+ Z7D  CONST_10  C14   C13  C12  C11     0.00   0.0  0
+ Z7D  CONST_11  C15   C10  C11  C12     0.00   0.0  0
+ Z7D  CONST_12  C15   C14  C13  C12     0.00   0.0  0
+ Z7D  CONST_13  C27   C26  C25  C24     0.00   0.0  0
+ Z7D  CONST_14  C27   C28  C29  C24     0.00   0.0  0
+ Z7D  CONST_15  C28   C27  C26  C25     0.00   0.0  0
+ Z7D  CONST_16  C28   C29  C24  C25     0.00   0.0  0
+ Z7D  CONST_17  C29   C28  C27  C26     0.00   0.0  0
+ Z7D  CONST_18  C29   C24  C25  C26     0.00   0.0  0
+ Z7D  CONST_19  C8    C5   C6   C1    180.00   0.0  0
+ Z7D  CONST_20  C8    C5   C4   C3    180.00   0.0  0
+ Z7D  CONST_21  O7    C2   C3   C4    180.00   0.0  0
+ Z7D  CONST_22  O7    C2   C1   C6    180.00   0.0  0
+ Z7D  CONST_23  C14   C15  C10  S9    180.00   0.0  0
+ Z7D  CONST_24  C12   C11  C10  S9    180.00   0.0  0
+ Z7D  CONST_25  F18   C13  C12  C11   180.00   0.0  0
+ Z7D  CONST_26  F18   C13  C14  C15   180.00   0.0  0
+ Z7D  CONST_27  C26   C25  C24  C23   180.00   0.0  0
+ Z7D  CONST_28  C28   C29  C24  C23   180.00   0.0  0
+ Z7D  CONST_29  H3    C3   C2   C1    180.00   0.0  0
+ Z7D  CONST_30  H4    C4   C3   C2    180.00   0.0  0
+ Z7D  CONST_31  H6    C6   C1   C2    180.00   0.0  0
+ Z7D  CONST_32  H1    C1   C2   C3    180.00   0.0  0
+ Z7D  CONST_33  H14   C14  C15  C10   180.00   0.0  0
+ Z7D  CONST_34  H12   C12  C11  C10   180.00   0.0  0
+ Z7D  CONST_35  H15   C15  C10  C11   180.00   0.0  0
+ Z7D  CONST_36  H11   C11  C12  C13   180.00   0.0  0
+ Z7D  CONST_37  H26   C26  C25  C24   180.00   0.0  0
+ Z7D  CONST_38  H28   C28  C29  C24   180.00   0.0  0
+ Z7D  CONST_39  H27   C27  C26  C25   180.00   0.0  0
+ Z7D  CONST_40  H29   C29  C24  C25   180.00   0.0  0
+ Z7D  CONST_41  H25   C25  C26  C27   180.00   0.0  0
+ Z7D  Var_01    C20   C21  C22  C8    -26.07  30.0  1
+ Z7D  Var_02    C21   C20  C19  C8     29.44  30.0  1
+ Z7D  Var_03    C22   C21  C20  C19    -1.98  30.0  1
+ Z7D  Var_04    C15   C10  S9   C8    -89.62  30.0  2
+ Z7D  Var_05    C24   C23  O7   C2    -63.62  30.0  1
+ Z7D  Var_06    C25   C24  C23  O7    142.45  30.0  3
+ Z7D  Var_07    C22   C8   C5   C4    -45.85  30.0  2
+ Z7D  Var_08    C19   C8   C5   C4   -161.45  30.0  2
+ Z7D  Var_09    C21   C22  C8   C5    -79.25  30.0  1
+ Z7D  Var_10    C20   C19  C8   C5     76.89  30.0  1
+ Z7D  Var_11    C22   C8   C5   C6    138.84  30.0  2
+ Z7D  Var_12    C19   C8   C5   C6     23.24  30.0  2
+ Z7D  Var_13    C21   C22  C8   C19    44.20  30.0  1
+ Z7D  Var_14    C22   C8   C19  C20   -45.65  30.0  1
+ Z7D  Var_15    S9    C8   C5   C4     74.54  30.0  2
+ Z7D  Var_16    C10   S9   C8   C5     51.52  30.0  2
+ Z7D  Var_17    S9    C8   C5   C6   -100.76  30.0  2
+ Z7D  Var_18    C21   C22  C8   S9    161.30  30.0  1
+ Z7D  Var_19    C20   C19  C8   S9   -161.15  30.0  1
+ Z7D  Var_20    C22   C8   S9   C10   174.74  30.0  3
+ Z7D  Var_21    C19   C8   S9   C10   -74.71  30.0  3
+ Z7D  Var_22    H221  C22  C8   C5     43.37  30.0  1
+ Z7D  Var_23    H222  C22  C8   C5    163.63  30.0  1
+ Z7D  Var_24    H191  C19  C8   C5   -166.85  30.0  1
+ Z7D  Var_25    H192  C19  C8   C5    -47.04  30.0  1
+ Z7D  Var_26    C23   O7   C2   C1    165.65  30.0  2
+ Z7D  Var_27    C23   O7   C2   C3    -14.98  30.0  2
+ Z7D  Var_28    O16   S9   C8   C5    -63.52  30.0  2
+ Z7D  Var_29    O17   S9   C8   C5    166.96  30.0  2
+ Z7D  Var_30    C22   C8   S9   O16    59.70  30.0  3
+ Z7D  Var_31    C19   C8   S9   O16   170.26  30.0  3
+ Z7D  Var_32    C22   C8   S9   O17   -69.82  30.0  3
+ Z7D  Var_33    C19   C8   S9   O17    40.73  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

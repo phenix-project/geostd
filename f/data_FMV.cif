@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FMV  FMV  (1S,3R,5Z,7E,14beta,17alpha,20S)-20-[5-(2-hydroxypropan-2-yl)furan-2-yl]-9,10-secopregna-5,7,10-triene-1,3-diol  ligand  72  32  .  2022-07-25  2022-07-26
+ FMV  FMV  (1S,3R,5Z,7E,14beta,17alpha,20S)-20-[5-(2-hydroxypropan-2-yl)furan-2-yl]-9,10-secopregna-5,7,10-triene-1,3-diol  ligand  72  32  .  2022-07-25  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FMV
@@ -354,30 +355,93 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FMV  CONST_01  C24  C25  O22  C22    0.00   0.0  0
- FMV  CONST_02  C25  C24  C23  C22    0.00   0.0  0
- FMV  CONST_03  C24  C23  C22  O22    0.00   0.0  0
- FMV  CONST_04  C23  C24  C25  O22    0.00   0.0  0
- FMV  CONST_05  C25  O22  C22  C23    0.00   0.0  0
- FMV  CONST_06  C25  O22  C22  C20  180.00   0.0  0
- FMV  CONST_07  C24  C23  C22  C20  180.00   0.0  0
- FMV  CONST_08  C26  C25  O22  C22  180.00   0.0  0
- FMV  CONST_09  C26  C25  C24  C23  180.00   0.0  0
- FMV  CONST_10  H24  C24  C23  C22  180.00   0.0  0
- FMV  CONST_11  H23  C23  C22  O22  180.00   0.0  0
- FMV  Var_01    C4   C5   C10  C1   -50.41  30.0  1
- FMV  Var_02    C10  C5   C4   C3    51.63  30.0  1
- FMV  Var_03    C12  C11  C9   C8    50.74  30.0  1
- FMV  Var_04    C13  C12  C11  C9   -52.93  30.0  1
- FMV  Var_05    C14  C8   C9   C11  -53.41  30.0  1
- FMV  Var_06    C17  C16  C15  C14   11.55  30.0  1
- FMV  Var_07    C7   C6   C5   C4   175.31  30.0  2
- FMV  Var_08    C8   C7   C6   C5   174.53  30.0  2
- FMV  Var_09    C9   C8   C7   C6    -3.32  30.0  2
- FMV  Var_10    C27  C26  C25  O22  -66.83  30.0  2
- FMV  Var_11    H19  C19  C10  C1   178.40  30.0  2
- FMV  Var_12    H27  C27  C26  C25   60.74  30.0  3
- FMV  Var_13    H28  C28  C26  C25   59.10  30.0  3
+ FMV  CONST_01  C24   C25  O22  C22     0.00   0.0  0
+ FMV  CONST_02  C25   C24  C23  C22     0.00   0.0  0
+ FMV  CONST_03  C24   C23  C22  O22     0.00   0.0  0
+ FMV  CONST_04  C23   C24  C25  O22     0.00   0.0  0
+ FMV  CONST_05  C25   O22  C22  C23     0.00   0.0  0
+ FMV  CONST_06  C25   O22  C22  C20   180.00   0.0  0
+ FMV  CONST_07  C24   C23  C22  C20   180.00   0.0  0
+ FMV  CONST_08  C26   C25  O22  C22   180.00   0.0  0
+ FMV  CONST_09  C26   C25  C24  C23   180.00   0.0  0
+ FMV  CONST_10  H24   C24  C23  C22   180.00   0.0  0
+ FMV  CONST_11  H23   C23  C22  O22   180.00   0.0  0
+ FMV  Var_01    C4    C5   C10  C1    -50.41  30.0  1
+ FMV  Var_02    C10   C5   C4   C3     51.63  30.0  1
+ FMV  Var_03    C12   C11  C9   C8     50.74  30.0  1
+ FMV  Var_04    C13   C12  C11  C9    -52.93  30.0  1
+ FMV  Var_05    C14   C8   C9   C11   -53.41  30.0  1
+ FMV  Var_06    C17   C16  C15  C14    11.55  30.0  1
+ FMV  Var_07    C7    C6   C5   C4    175.31  30.0  2
+ FMV  Var_08    C8    C7   C6   C5    174.53  30.0  2
+ FMV  Var_09    C9    C8   C7   C6     -3.32  30.0  2
+ FMV  Var_10    C27   C26  C25  O22   -66.83  30.0  2
+ FMV  Var_11    H19   C19  C10  C1    178.40  30.0  2
+ FMV  Var_12    H27   C27  C26  C25    60.74  30.0  3
+ FMV  Var_13    H28   C28  C26  C25    59.10  30.0  3
+ FMV  Var_14    C4    C3   C2   C1     56.14  30.0  1
+ FMV  Var_15    C5    C10  C1   C2     50.50  30.0  1
+ FMV  Var_16    C5    C4   C3   C2    -54.13  30.0  1
+ FMV  Var_17    C10   C1   C2   C3    -53.57  30.0  1
+ FMV  Var_18    C12   C13  C14  C8    -59.17  30.0  1
+ FMV  Var_19    C17   C13  C14  C8    179.30  30.0  1
+ FMV  Var_20    C16   C15  C14  C8   -163.58  30.0  1
+ FMV  Var_21    C13   C14  C8   C9     58.99  30.0  1
+ FMV  Var_22    C15   C14  C8   C9   -177.46  30.0  1
+ FMV  Var_23    C14   C13  C12  C11    55.37  30.0  1
+ FMV  Var_24    C17   C13  C12  C11   166.10  30.0  1
+ FMV  Var_25    C15   C14  C13  C12   168.25  30.0  1
+ FMV  Var_26    C16   C17  C13  C12  -153.74  30.0  1
+ FMV  Var_27    C16   C15  C14  C13   -36.31  30.0  1
+ FMV  Var_28    C15   C16  C17  C13    17.32  30.0  1
+ FMV  Var_29    C16   C17  C13  C14   -38.34  30.0  1
+ FMV  Var_30    C17   C13  C14  C15    46.72  30.0  1
+ FMV  Var_31    O3    C3   C2   C1    178.04  30.0  1
+ FMV  Var_32    C3    C2   C1   O1     67.00  30.0  1
+ FMV  Var_33    C5    C10  C1   O1    -68.48  30.0  1
+ FMV  Var_34    C19   C10  C1   C2   -127.79  30.0  1
+ FMV  Var_35    C5    C4   C3   O3   -173.56  30.0  1
+ FMV  Var_36    C13   C14  C8   C7   -121.12  30.0  1
+ FMV  Var_37    C15   C14  C8   C7      2.43  30.0  1
+ FMV  Var_38    C18   C13  C14  C8     62.30  30.0  1
+ FMV  Var_39    C18   C13  C12  C11   -66.25  30.0  1
+ FMV  Var_40    C20   C17  C13  C12    81.44  30.0  1
+ FMV  Var_41    C22   C20  C17  C13   174.51  30.0  1
+ FMV  Var_42    C20   C17  C13  C14  -163.16  30.0  1
+ FMV  Var_43    C18   C13  C14  C15   -70.28  30.0  1
+ FMV  Var_44    C20   C17  C16  C15   146.02  30.0  1
+ FMV  Var_45    C18   C13  C17  C16    78.71  30.0  1
+ FMV  Var_46    C22   C20  C17  C16    53.60  30.0  1
+ FMV  Var_47    O22   C22  C20  C17    65.46  30.0  2
+ FMV  Var_48    C23   C22  C20  C17  -114.48  30.0  2
+ FMV  Var_49    H3    C3   C2   C1    -62.51  30.0  1
+ FMV  Var_50    H4    C4   C3   C2     66.35  30.0  1
+ FMV  Var_51    H4A   C4   C3   C2   -176.93  30.0  1
+ FMV  Var_52    H1    C1   C2   C3   -173.00  30.0  1
+ FMV  Var_53    H2    C2   C3   C4    -63.78  30.0  1
+ FMV  Var_54    H2A   C2   C3   C4    178.70  30.0  1
+ FMV  Var_55    H15   C15  C14  C8    -44.98  30.0  1
+ FMV  Var_56    H15A  C15  C14  C8     74.51  30.0  1
+ FMV  Var_57    H14   C14  C8   C9    -55.44  30.0  1
+ FMV  Var_58    H17   C17  C13  C12   -39.39  30.0  1
+ FMV  Var_59    H16   C16  C17  C13  -103.94  30.0  1
+ FMV  Var_60    H16A  C16  C17  C13   138.90  30.0  1
+ FMV  Var_61    C19   C10  C1   O1    113.22  30.0  1
+ FMV  Var_62    C21   C20  C17  C13   -60.94  30.0  1
+ FMV  Var_63    C21   C20  C17  C16   178.15  30.0  1
+ FMV  Var_64    C20   C17  C13  C18   -46.12  30.0  1
+ FMV  Var_65    O22   C22  C20  C21   -61.23  30.0  2
+ FMV  Var_66    C23   C22  C20  C21   118.84  30.0  2
+ FMV  Var_67    HO1   O1   C1   C2   -176.87  30.0  3
+ FMV  Var_68    HO3   O3   C3   C2    174.80  30.0  3
+ FMV  Var_69    H18   C18  C13  C12    65.15  30.0  3
+ FMV  Var_70    H18A  C18  C13  C12  -175.02  30.0  3
+ FMV  Var_71    H18B  C18  C13  C12   -54.83  30.0  3
+ FMV  Var_72    H20   C20  C17  C13    59.76  30.0  1
+ FMV  Var_73    H21   C21  C20  C17   -53.22  30.0  3
+ FMV  Var_74    H21A  C21  C20  C17    67.05  30.0  3
+ FMV  Var_75    H21B  C21  C20  C17  -173.60  30.0  3
+ FMV  Var_76    HO26  O26  C26  C25   -67.58  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TA9  TA9  9-oxo-N-{[(2R,3R,4R,5R,6S)-3,4,5-trihydroxy-6-methylpiperidin-2-yl]methyl}-9H-fluorene-1-carboxamide  ligand  50  28  .  2021-08-23  2021-08-23  
+ TA9  TA9  9-oxo-N-{[(2R,3R,4R,5R,6S)-3,4,5-trihydroxy-6-methylpiperidin-2-yl]methyl}-9H-fluorene-1-carboxamide  ligand  50  28  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TA9
@@ -261,43 +262,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TA9  CONST_01  CAN  CAM  CAL  CAK     0.00   0.0  0
- TA9  CONST_02  CAR  CAM  CAL  CAK   180.00   0.0  0
- TA9  CONST_03  CAT  CAO  CAL  CAK     0.00   0.0  0
- TA9  CONST_04  CAT  CAP  CAJ  CAK     0.00   0.0  0
- TA9  CONST_05  CAC  CAH  CAS  CAN     0.00   0.0  0
- TA9  CONST_06  CAC  CAR  CAM  CAN     0.00   0.0  0
- TA9  CONST_07  CAO  CAL  CAM  CAN   180.00   0.0  0
- TA9  CONST_08  CAR  CAM  CAN  CAS     0.00   0.0  0
- TA9  CONST_09  CAL  CAM  CAN  CAS   180.00   0.0  0
- TA9  CONST_10  CAR  CAC  CAH  CAS     0.00   0.0  0
- TA9  CONST_11  CAM  CAN  CAS  CAH     0.00   0.0  0
- TA9  CONST_12  CAM  CAR  CAC  CAH     0.00   0.0  0
- TA9  CONST_13  CAL  CAM  CAR  CAC   180.00   0.0  0
- TA9  CONST_14  CAO  CAL  CAM  CAR     0.00   0.0  0
- TA9  CONST_15  CAJ  CAK  CAL  CAM   180.00   0.0  0
- TA9  CONST_16  CAT  CAO  CAL  CAM   180.00   0.0  0
- TA9  CONST_17  CAP  CAJ  CAK  CAL     0.00   0.0  0
- TA9  CONST_18  CAP  CAT  CAO  CAL     0.00   0.0  0
- TA9  CONST_19  CAJ  CAK  CAL  CAO     0.00   0.0  0
- TA9  CONST_20  CAJ  CAP  CAT  CAO     0.00   0.0  0
- TA9  CONST_21  CAI  CAJ  CAK  CAQ     0.00   0.0  0
- TA9  CONST_22  CAI  CAJ  CAK  CAL   180.00   0.0  0
- TA9  CONST_23  CAI  CAJ  CAP  CAT   180.00   0.0  0
- TA9  CONST_24  HAO  CAO  CAL  CAK   180.00   0.0  0
- TA9  CONST_25  HAP  CAP  CAJ  CAK   180.00   0.0  0
- TA9  CONST_26  HAS  CAS  CAN  CAQ     0.00   0.0  0
- TA9  CONST_27  HAH  CAH  CAS  CAN   180.00   0.0  0
- TA9  CONST_28  HAR  CAR  CAM  CAN   180.00   0.0  0
- TA9  CONST_29  HAC  CAC  CAH  CAS   180.00   0.0  0
- TA9  CONST_30  HAT  CAT  CAO  CAL   180.00   0.0  0
- TA9  CONST_31  CAD  NAV  CAI  CAJ   180.00   0.0  0
- TA9  CONST_32  HAV  NAV  CAI  CAJ     0.00   0.0  0
- TA9  CONST_33  CAD  NAV  CAI  OAZ     0.00   0.0  0
- TA9  Var_01    CAL  CAK  CAQ  OBB  -178.51  30.0  1
- TA9  Var_02    CAS  CAN  CAQ  OBB    -0.92  30.0  1
- TA9  Var_03    OAZ  CAI  CAJ  CAK    83.33  30.0  2
- TA9  Var_04    CAA  CAD  NAV  CAI  -111.64  30.0  3
+ TA9  CONST_01  CAN   CAM  CAL  CAK     0.00   0.0  0
+ TA9  CONST_02  CAR   CAM  CAL  CAK   180.00   0.0  0
+ TA9  CONST_03  CAT   CAO  CAL  CAK     0.00   0.0  0
+ TA9  CONST_04  CAT   CAP  CAJ  CAK     0.00   0.0  0
+ TA9  CONST_05  CAC   CAH  CAS  CAN     0.00   0.0  0
+ TA9  CONST_06  CAC   CAR  CAM  CAN     0.00   0.0  0
+ TA9  CONST_07  CAO   CAL  CAM  CAN   180.00   0.0  0
+ TA9  CONST_08  CAR   CAM  CAN  CAS     0.00   0.0  0
+ TA9  CONST_09  CAL   CAM  CAN  CAS   180.00   0.0  0
+ TA9  CONST_10  CAR   CAC  CAH  CAS     0.00   0.0  0
+ TA9  CONST_11  CAM   CAN  CAS  CAH     0.00   0.0  0
+ TA9  CONST_12  CAM   CAR  CAC  CAH     0.00   0.0  0
+ TA9  CONST_13  CAL   CAM  CAR  CAC   180.00   0.0  0
+ TA9  CONST_14  CAO   CAL  CAM  CAR     0.00   0.0  0
+ TA9  CONST_15  CAJ   CAK  CAL  CAM   180.00   0.0  0
+ TA9  CONST_16  CAT   CAO  CAL  CAM   180.00   0.0  0
+ TA9  CONST_17  CAP   CAJ  CAK  CAL     0.00   0.0  0
+ TA9  CONST_18  CAP   CAT  CAO  CAL     0.00   0.0  0
+ TA9  CONST_19  CAJ   CAK  CAL  CAO     0.00   0.0  0
+ TA9  CONST_20  CAJ   CAP  CAT  CAO     0.00   0.0  0
+ TA9  CONST_21  CAI   CAJ  CAK  CAQ     0.00   0.0  0
+ TA9  CONST_22  CAI   CAJ  CAK  CAL   180.00   0.0  0
+ TA9  CONST_23  CAI   CAJ  CAP  CAT   180.00   0.0  0
+ TA9  CONST_24  HAO   CAO  CAL  CAK   180.00   0.0  0
+ TA9  CONST_25  HAP   CAP  CAJ  CAK   180.00   0.0  0
+ TA9  CONST_26  HAS   CAS  CAN  CAQ     0.00   0.0  0
+ TA9  CONST_27  HAH   CAH  CAS  CAN   180.00   0.0  0
+ TA9  CONST_28  HAR   CAR  CAM  CAN   180.00   0.0  0
+ TA9  CONST_29  HAC   CAC  CAH  CAS   180.00   0.0  0
+ TA9  CONST_30  HAT   CAT  CAO  CAL   180.00   0.0  0
+ TA9  CONST_31  CAD   NAV  CAI  CAJ   180.00   0.0  0
+ TA9  CONST_32  HAV   NAV  CAI  CAJ     0.00   0.0  0
+ TA9  CONST_33  CAD   NAV  CAI  OAZ     0.00   0.0  0
+ TA9  Var_01    CAL   CAK  CAQ  OBB  -178.51  30.0  1
+ TA9  Var_02    CAS   CAN  CAQ  OBB    -0.92  30.0  1
+ TA9  Var_03    OAZ   CAI  CAJ  CAK    83.33  30.0  2
+ TA9  Var_04    CAA   CAD  NAV  CAI  -111.64  30.0  3
+ TA9  Var_05    CAG   CAE  NAW  CAA   -62.00  30.0  1
+ TA9  Var_06    CAG   CAF  CAB  CAA    55.20  30.0  1
+ TA9  Var_07    CAF   CAB  CAA  NAW   -57.29  30.0  1
+ TA9  Var_08    CAF   CAG  CAE  NAW    55.42  30.0  1
+ TA9  Var_09    CAB   CAA  NAW  CAE    62.53  30.0  1
+ TA9  Var_10    CAB   CAF  CAG  CAE   -54.06  30.0  1
+ TA9  Var_11    CAE   NAW  CAA  CAD  -176.39  30.0  1
+ TA9  Var_12    CAF   CAB  CAA  CAD  -177.92  30.0  1
+ TA9  Var_13    CAU   CAE  NAW  CAA   173.92  30.0  1
+ TA9  Var_14    OAY   CAF  CAB  CAA   177.45  30.0  1
+ TA9  Var_15    OBA   CAB  CAA  NAW  -178.62  30.0  1
+ TA9  Var_16    OAX   CAG  CAE  NAW   -67.03  30.0  1
+ TA9  Var_17    OAY   CAF  CAG  CAE  -173.99  30.0  1
+ TA9  Var_18    CAF   CAG  CAE  CAU   178.17  30.0  1
+ TA9  Var_19    OBA   CAB  CAF  CAG   175.01  30.0  1
+ TA9  Var_20    CAB   CAF  CAG  OAX    67.59  30.0  1
+ TA9  Var_21    HAE   CAE  NAW  CAA    54.45  30.0  1
+ TA9  Var_22    HAF   CAF  CAB  CAA   -63.16  30.0  1
+ TA9  Var_23    HAB   CAB  CAA  NAW    61.04  30.0  1
+ TA9  Var_24    HAG   CAG  CAE  NAW   172.50  30.0  1
+ TA9  Var_25    HAA   CAA  NAW  CAE   -56.12  30.0  1
+ TA9  Var_26    HAW   NAW  CAE  CAG   175.90  30.0  1
+ TA9  Var_27    NAW   CAA  CAD  NAV    64.57  30.0  3
+ TA9  Var_28    CAB   CAA  CAD  NAV  -175.62  30.0  3
+ TA9  Var_29    OBA   CAB  CAA  CAD    60.75  30.0  1
+ TA9  Var_30    OAX   CAG  CAE  CAU    55.73  30.0  1
+ TA9  Var_31    OAY   CAF  CAG  OAX   -52.34  30.0  1
+ TA9  Var_32    OBA   CAB  CAF  OAY   -62.73  30.0  1
+ TA9  Var_33    HBA   OBA  CAB  CAA   176.40  30.0  3
+ TA9  Var_34    HAD1  CAD  CAA  NAW   -56.18  30.0  2
+ TA9  Var_35    HAD2  CAD  CAA  NAW  -174.77  30.0  2
+ TA9  Var_36    HAU1  CAU  CAE  NAW    58.62  30.0  3
+ TA9  Var_37    HAU2  CAU  CAE  NAW   179.22  30.0  3
+ TA9  Var_38    HAU3  CAU  CAE  NAW   -61.51  30.0  3
+ TA9  Var_39    HAX   OAX  CAG  CAE   170.15  30.0  3
+ TA9  Var_40    HAY   OAY  CAF  CAG   -79.79  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

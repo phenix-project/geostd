@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QNB  QNB  '(3R)-1-azabicyclo[2.2.2]oct-3-yl hydroxy(diphenyl)acetate'  ligand  48  25  .  2021-08-20  2021-08-20  
+ QNB  QNB  '(3R)-1-azabicyclo[2.2.2]oct-3-yl hydroxy(diphenyl)acetate'  ligand  48  25  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QNB
@@ -256,40 +257,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QNB  CONST_01  C5   C4   C3   C2     0.00   0.0  0
- QNB  CONST_02  C5   C6   C7   C2     0.00   0.0  0
- QNB  CONST_03  C6   C7   C2   C3     0.00   0.0  0
- QNB  CONST_04  C6   C5   C4   C3     0.00   0.0  0
- QNB  CONST_05  C7   C2   C3   C4     0.00   0.0  0
- QNB  CONST_06  C7   C6   C5   C4     0.00   0.0  0
- QNB  CONST_07  C11  C12  C13  C8     0.00   0.0  0
- QNB  CONST_08  C11  C10  C9   C8     0.00   0.0  0
- QNB  CONST_09  C12  C13  C8   C9     0.00   0.0  0
- QNB  CONST_10  C12  C11  C10  C9     0.00   0.0  0
- QNB  CONST_11  C13  C8   C9   C10    0.00   0.0  0
- QNB  CONST_12  C13  C12  C11  C10    0.00   0.0  0
- QNB  CONST_13  C12  C13  C8   C1   180.00   0.0  0
- QNB  CONST_14  C10  C9   C8   C1   180.00   0.0  0
- QNB  CONST_15  C4   C3   C2   C1   180.00   0.0  0
- QNB  CONST_16  C6   C7   C2   C1   180.00   0.0  0
- QNB  CONST_17  H4   C4   C3   C2   180.00   0.0  0
- QNB  CONST_18  H6   C6   C7   C2   180.00   0.0  0
- QNB  CONST_19  H7   C7   C2   C3   180.00   0.0  0
- QNB  CONST_20  H5   C5   C4   C3   180.00   0.0  0
- QNB  CONST_21  H3   C3   C4   C5   180.00   0.0  0
- QNB  CONST_22  H12  C12  C13  C8   180.00   0.0  0
- QNB  CONST_23  H10  C10  C9   C8   180.00   0.0  0
- QNB  CONST_24  H13  C13  C8   C9   180.00   0.0  0
- QNB  CONST_25  H11  C11  C10  C9   180.00   0.0  0
- QNB  CONST_26  H9   C9   C10  C11  180.00   0.0  0
- QNB  Var_01    C21  N20  C19  C18  -60.43  30.0  1
- QNB  Var_02    C22  C21  N20  C19   61.62  30.0  1
- QNB  Var_03    C24  C25  N20  C19  -58.05  30.0  3
- QNB  Var_04    C23  C22  C21  N20   -2.58  30.0  1
- QNB  Var_05    C23  C24  C25  N20   -3.39  30.0  3
- QNB  Var_06    C13  C8   C1   C2   -81.29  30.0  2
- QNB  Var_07    C8   C1   C2   C3   -54.43  30.0  2
- QNB  Var_08    O17  C14  C1   C2   162.61  30.0  3
+ QNB  CONST_01  C5    C4   C3   C2      0.00   0.0  0
+ QNB  CONST_02  C5    C6   C7   C2      0.00   0.0  0
+ QNB  CONST_03  C6    C7   C2   C3      0.00   0.0  0
+ QNB  CONST_04  C6    C5   C4   C3      0.00   0.0  0
+ QNB  CONST_05  C7    C2   C3   C4      0.00   0.0  0
+ QNB  CONST_06  C7    C6   C5   C4      0.00   0.0  0
+ QNB  CONST_07  C11   C12  C13  C8      0.00   0.0  0
+ QNB  CONST_08  C11   C10  C9   C8      0.00   0.0  0
+ QNB  CONST_09  C12   C13  C8   C9      0.00   0.0  0
+ QNB  CONST_10  C12   C11  C10  C9      0.00   0.0  0
+ QNB  CONST_11  C13   C8   C9   C10     0.00   0.0  0
+ QNB  CONST_12  C13   C12  C11  C10     0.00   0.0  0
+ QNB  CONST_13  C12   C13  C8   C1    180.00   0.0  0
+ QNB  CONST_14  C10   C9   C8   C1    180.00   0.0  0
+ QNB  CONST_15  C4    C3   C2   C1    180.00   0.0  0
+ QNB  CONST_16  C6    C7   C2   C1    180.00   0.0  0
+ QNB  CONST_17  H4    C4   C3   C2    180.00   0.0  0
+ QNB  CONST_18  H6    C6   C7   C2    180.00   0.0  0
+ QNB  CONST_19  H7    C7   C2   C3    180.00   0.0  0
+ QNB  CONST_20  H5    C5   C4   C3    180.00   0.0  0
+ QNB  CONST_21  H3    C3   C4   C5    180.00   0.0  0
+ QNB  CONST_22  H12   C12  C13  C8    180.00   0.0  0
+ QNB  CONST_23  H10   C10  C9   C8    180.00   0.0  0
+ QNB  CONST_24  H13   C13  C8   C9    180.00   0.0  0
+ QNB  CONST_25  H11   C11  C10  C9    180.00   0.0  0
+ QNB  CONST_26  H9    C9   C10  C11   180.00   0.0  0
+ QNB  Var_01    C21   N20  C19  C18   -60.43  30.0  1
+ QNB  Var_02    C22   C21  N20  C19    61.62  30.0  1
+ QNB  Var_03    C24   C25  N20  C19   -58.05  30.0  3
+ QNB  Var_04    C23   C22  C21  N20    -2.58  30.0  1
+ QNB  Var_05    C23   C24  C25  N20    -3.39  30.0  3
+ QNB  Var_06    C13   C8   C1   C2    -81.29  30.0  2
+ QNB  Var_07    C8    C1   C2   C3    -54.43  30.0  2
+ QNB  Var_08    O17   C14  C1   C2    162.61  30.0  3
+ QNB  Var_09    C21   C22  C23  C18   -56.64  30.0  1
+ QNB  Var_10    C25   C24  C23  C18    62.09  30.0  3
+ QNB  Var_11    C22   C23  C18  C19    57.84  30.0  1
+ QNB  Var_12    C24   C23  C18  C19   -60.35  30.0  1
+ QNB  Var_13    C23   C18  C19  N20     0.48  30.0  1
+ QNB  Var_14    C24   C23  C22  C21    60.14  30.0  1
+ QNB  Var_15    C25   C24  C23  C22   -56.85  30.0  3
+ QNB  Var_16    C22   C23  C18  O17   -63.74  30.0  1
+ QNB  Var_17    C24   C23  C18  O17   178.07  30.0  1
+ QNB  Var_18    N20   C19  C18  O17   118.65  30.0  1
+ QNB  Var_19    H22   C22  C23  C18  -177.43  30.0  1
+ QNB  Var_20    H22A  C22  C23  C18    65.43  30.0  1
+ QNB  Var_21    H24   C24  C23  C18  -176.48  30.0  3
+ QNB  Var_22    H24A  C24  C23  C18   -59.50  30.0  3
+ QNB  Var_23    H23   C23  C18  C19  -179.74  30.0  1
+ QNB  Var_24    H18   C18  C19  N20  -119.87  30.0  1
+ QNB  Var_25    C23   C18  O17  C14  -169.08  30.0  3
+ QNB  Var_26    C19   C18  O17  C14    72.22  30.0  3
+ QNB  Var_27    C18   O17  C14  C1    177.03  30.0  1
+ QNB  Var_28    C18   O17  C14  O16    -2.15  30.0  1
+ QNB  Var_29    HO15  O15  C1   C2    -61.83  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

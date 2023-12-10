@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A06  A06  '(3S)-4-(5-chloro-1H-benzimidazol-2-yl)-3-(4-chlorophenyl)butanoic acid'  ligand  36  23  .  2021-08-06  2021-08-06  
+ A06  A06  '(3S)-4-(5-chloro-1H-benzimidazol-2-yl)-3-(4-chlorophenyl)butanoic acid'  ligand  36  23  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_A06
@@ -203,47 +204,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- A06  CONST_01  C4   C5   C6   C1      0.00   0.0  0
- A06  CONST_02  C4   C3   C2   C1      0.00   0.0  0
- A06  CONST_03  C3   C2   C1   C6      0.00   0.0  0
- A06  CONST_04  C3   C4   C5   C6      0.00   0.0  0
- A06  CONST_05  C2   C1   C6   C5      0.00   0.0  0
- A06  CONST_06  C2   C3   C4   C5      0.00   0.0  0
- A06  CONST_07  C11  C10  C9   C8      0.00   0.0  0
- A06  CONST_08  C11  C12  C13  C8      0.00   0.0  0
- A06  CONST_09  C15  N14  C13  C8      0.00   0.0  0
- A06  CONST_10  N14  C15  N9   C8      0.00   0.0  0
- A06  CONST_11  C12  C13  C8   C9      0.00   0.0  0
- A06  CONST_12  N14  C13  C8   C9    180.00   0.0  0
- A06  CONST_13  C15  N9   C8   C9    180.00   0.0  0
- A06  CONST_14  C12  C11  C10  C9      0.00   0.0  0
- A06  CONST_15  C13  C8   C9   C10     0.00   0.0  0
- A06  CONST_16  N9   C8   C9   C10   180.00   0.0  0
- A06  CONST_17  C13  C12  C11  C10     0.00   0.0  0
- A06  CONST_18  N14  C13  C12  C11   180.00   0.0  0
- A06  CONST_19  N9   C8   C13  C12   180.00   0.0  0
- A06  CONST_20  C15  N14  C13  C12   180.00   0.0  0
- A06  CONST_21  C15  N9   C8   C13     0.00   0.0  0
- A06  CONST_22  N9   C15  N14  C13     0.00   0.0  0
- A06  CONST_23  N9   C8   C13  N14     0.00   0.0  0
- A06  CONST_24  CL2  C4   C5   C6    180.00   0.0  0
- A06  CONST_25  C14  C1   C6   C5    180.00   0.0  0
- A06  CONST_26  C14  C1   C2   C3    180.00   0.0  0
- A06  CONST_27  CL2  C4   C3   C2    180.00   0.0  0
- A06  CONST_28  C16  C15  N9   C8    180.00   0.0  0
- A06  CONST_29  CL1  C11  C10  C9    180.00   0.0  0
- A06  CONST_30  CL1  C11  C12  C13   180.00   0.0  0
- A06  CONST_31  C16  C15  N14  C13   180.00   0.0  0
- A06  CONST_32  H5   C5   C6   C1    180.00   0.0  0
- A06  CONST_33  H3   C3   C2   C1    180.00   0.0  0
- A06  CONST_34  H2   C2   C1   C6    180.00   0.0  0
- A06  CONST_35  H6   C6   C5   C4    180.00   0.0  0
- A06  CONST_36  H10  C10  C9   C8    180.00   0.0  0
- A06  CONST_37  H12  C12  C13  C8    180.00   0.0  0
- A06  CONST_38  HA   N9   C8   C9      0.00   0.0  0
- A06  CONST_39  H9   C9   C10  C11   180.00   0.0  0
- A06  Var_01    C14  C16  C15  N14  -108.37  30.0  2
- A06  Var_02    O1   C18  C17  C14  -149.25  30.0  3
+ A06  CONST_01  C4    C5   C6   C1      0.00   0.0  0
+ A06  CONST_02  C4    C3   C2   C1      0.00   0.0  0
+ A06  CONST_03  C3    C2   C1   C6      0.00   0.0  0
+ A06  CONST_04  C3    C4   C5   C6      0.00   0.0  0
+ A06  CONST_05  C2    C1   C6   C5      0.00   0.0  0
+ A06  CONST_06  C2    C3   C4   C5      0.00   0.0  0
+ A06  CONST_07  C11   C10  C9   C8      0.00   0.0  0
+ A06  CONST_08  C11   C12  C13  C8      0.00   0.0  0
+ A06  CONST_09  C15   N14  C13  C8      0.00   0.0  0
+ A06  CONST_10  N14   C15  N9   C8      0.00   0.0  0
+ A06  CONST_11  C12   C13  C8   C9      0.00   0.0  0
+ A06  CONST_12  N14   C13  C8   C9    180.00   0.0  0
+ A06  CONST_13  C15   N9   C8   C9    180.00   0.0  0
+ A06  CONST_14  C12   C11  C10  C9      0.00   0.0  0
+ A06  CONST_15  C13   C8   C9   C10     0.00   0.0  0
+ A06  CONST_16  N9    C8   C9   C10   180.00   0.0  0
+ A06  CONST_17  C13   C12  C11  C10     0.00   0.0  0
+ A06  CONST_18  N14   C13  C12  C11   180.00   0.0  0
+ A06  CONST_19  N9    C8   C13  C12   180.00   0.0  0
+ A06  CONST_20  C15   N14  C13  C12   180.00   0.0  0
+ A06  CONST_21  C15   N9   C8   C13     0.00   0.0  0
+ A06  CONST_22  N9    C15  N14  C13     0.00   0.0  0
+ A06  CONST_23  N9    C8   C13  N14     0.00   0.0  0
+ A06  CONST_24  CL2   C4   C5   C6    180.00   0.0  0
+ A06  CONST_25  C14   C1   C6   C5    180.00   0.0  0
+ A06  CONST_26  C14   C1   C2   C3    180.00   0.0  0
+ A06  CONST_27  CL2   C4   C3   C2    180.00   0.0  0
+ A06  CONST_28  C16   C15  N9   C8    180.00   0.0  0
+ A06  CONST_29  CL1   C11  C10  C9    180.00   0.0  0
+ A06  CONST_30  CL1   C11  C12  C13   180.00   0.0  0
+ A06  CONST_31  C16   C15  N14  C13   180.00   0.0  0
+ A06  CONST_32  H5    C5   C6   C1    180.00   0.0  0
+ A06  CONST_33  H3    C3   C2   C1    180.00   0.0  0
+ A06  CONST_34  H2    C2   C1   C6    180.00   0.0  0
+ A06  CONST_35  H6    C6   C5   C4    180.00   0.0  0
+ A06  CONST_36  H10   C10  C9   C8    180.00   0.0  0
+ A06  CONST_37  H12   C12  C13  C8    180.00   0.0  0
+ A06  CONST_38  HA    N9   C8   C9      0.00   0.0  0
+ A06  CONST_39  H9    C9   C10  C11   180.00   0.0  0
+ A06  Var_01    C14   C16  C15  N14  -108.37  30.0  2
+ A06  Var_02    O1    C18  C17  C14  -149.25  30.0  3
+ A06  Var_03    C15   C16  C14  C1   -175.89  30.0  3
+ A06  Var_04    C16   C14  C1   C6    105.45  30.0  2
+ A06  Var_05    C17   C14  C1   C6   -130.30  30.0  2
+ A06  Var_06    C16   C14  C1   C2    -73.27  30.0  2
+ A06  Var_07    C17   C14  C1   C2     50.98  30.0  2
+ A06  Var_08    H14   C14  C1   C6    -11.86  30.0  2
+ A06  Var_09    C18   C17  C14  C1     57.57  30.0  3
+ A06  Var_10    C17   C14  C16  C15    59.73  30.0  1
+ A06  Var_11    H171  C17  C14  C1    177.48  30.0  3
+ A06  Var_12    H172  C17  C14  C1    -67.16  30.0  3
+ A06  Var_13    C18   C17  C14  C16  -179.66  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

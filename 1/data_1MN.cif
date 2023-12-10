@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1MN  1MN  (2S,5R,6S)-2-benzyl-5,6-bis(4-bromophenyl)-4-methylmorpholin-3-one  ligand  50  29  .  2022-07-22  2022-07-26
+ 1MN  1MN  (2S,5R,6S)-2-benzyl-5,6-bis(4-bromophenyl)-4-methylmorpholin-3-one  ligand  50  29  .  2022-07-22  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1MN
@@ -259,53 +260,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 1MN  CONST_01  C4   C5   C6   C3     0.00   0.0  0
- 1MN  CONST_02  C4   C1   C2   C3     0.00   0.0  0
- 1MN  CONST_03  C5   C6   C3   C2     0.00   0.0  0
- 1MN  CONST_04  C5   C4   C1   C2     0.00   0.0  0
- 1MN  CONST_05  C6   C5   C4   C1     0.00   0.0  0
- 1MN  CONST_06  C6   C3   C2   C1     0.00   0.0  0
- 1MN  CONST_07  C15  C16  C17  C12    0.00   0.0  0
- 1MN  CONST_08  C15  C14  C13  C12    0.00   0.0  0
- 1MN  CONST_09  C16  C15  C14  C13    0.00   0.0  0
- 1MN  CONST_10  C16  C17  C12  C13    0.00   0.0  0
- 1MN  CONST_11  C17  C16  C15  C14    0.00   0.0  0
- 1MN  CONST_12  C17  C12  C13  C14    0.00   0.0  0
- 1MN  CONST_13  C22  C23  C24  C19    0.00   0.0  0
- 1MN  CONST_14  C22  C21  C20  C19    0.00   0.0  0
- 1MN  CONST_15  C23  C24  C19  C20    0.00   0.0  0
- 1MN  CONST_16  C23  C22  C21  C20    0.00   0.0  0
- 1MN  CONST_17  C24  C19  C20  C21    0.00   0.0  0
- 1MN  CONST_18  C24  C23  C22  C21    0.00   0.0  0
- 1MN  CONST_19  C7   C6   C3   C2   180.00   0.0  0
- 1MN  CONST_20  C7   C6   C5   C4   180.00   0.0  0
- 1MN  CONST_21  C23  C24  C19  C18  180.00   0.0  0
- 1MN  CONST_22  C21  C20  C19  C18  180.00   0.0  0
- 1MN  CONST_23  C10  C9   N1   C7     0.00   0.0  0
- 1MN  CONST_24  BR1  C1   C2   C3   180.00   0.0  0
- 1MN  CONST_25  C5   C4   C1   BR1  180.00   0.0  0
- 1MN  CONST_26  C16  C17  C12  C11  180.00   0.0  0
- 1MN  CONST_27  C14  C13  C12  C11  180.00   0.0  0
- 1MN  CONST_28  BR2  C22  C21  C20  180.00   0.0  0
- 1MN  CONST_29  C24  C23  C22  BR2  180.00   0.0  0
- 1MN  CONST_30  O1   C9   N1   C7   180.00   0.0  0
- 1MN  CONST_31  C10  C9   N1   C8   180.00   0.0  0
- 1MN  CONST_32  H4   C5   C6   C3   180.00   0.0  0
- 1MN  CONST_33  H3   C4   C1   C2   180.00   0.0  0
- 1MN  CONST_34  H1   C3   C2   C1   180.00   0.0  0
- 1MN  CONST_35  H2   C2   C1   C4   180.00   0.0  0
- 1MN  CONST_36  H15  C16  C17  C12  180.00   0.0  0
- 1MN  CONST_37  H13  C14  C13  C12  180.00   0.0  0
- 1MN  CONST_38  H14  C15  C14  C13  180.00   0.0  0
- 1MN  CONST_39  H16  C17  C12  C13  180.00   0.0  0
- 1MN  CONST_40  H12  C13  C14  C15  180.00   0.0  0
- 1MN  CONST_41  H21  C24  C19  C18    0.00   0.0  0
- 1MN  CONST_42  H18  C20  C19  C18    0.00   0.0  0
- 1MN  CONST_43  H20  C23  C24  C19  180.00   0.0  0
- 1MN  CONST_44  H19  C21  C20  C19  180.00   0.0  0
- 1MN  CONST_45  O1   C9   N1   C8     0.00   0.0  0
- 1MN  Var_01    C17  C12  C11  C10  -84.34  30.0  2
- 1MN  Var_02    H6   C8   N1   C7    91.88  30.0  3
+ 1MN  CONST_01  C4   C5   C6   C3      0.00   0.0  0
+ 1MN  CONST_02  C4   C1   C2   C3      0.00   0.0  0
+ 1MN  CONST_03  C5   C6   C3   C2      0.00   0.0  0
+ 1MN  CONST_04  C5   C4   C1   C2      0.00   0.0  0
+ 1MN  CONST_05  C6   C5   C4   C1      0.00   0.0  0
+ 1MN  CONST_06  C6   C3   C2   C1      0.00   0.0  0
+ 1MN  CONST_07  C15  C16  C17  C12     0.00   0.0  0
+ 1MN  CONST_08  C15  C14  C13  C12     0.00   0.0  0
+ 1MN  CONST_09  C16  C15  C14  C13     0.00   0.0  0
+ 1MN  CONST_10  C16  C17  C12  C13     0.00   0.0  0
+ 1MN  CONST_11  C17  C16  C15  C14     0.00   0.0  0
+ 1MN  CONST_12  C17  C12  C13  C14     0.00   0.0  0
+ 1MN  CONST_13  C22  C23  C24  C19     0.00   0.0  0
+ 1MN  CONST_14  C22  C21  C20  C19     0.00   0.0  0
+ 1MN  CONST_15  C23  C24  C19  C20     0.00   0.0  0
+ 1MN  CONST_16  C23  C22  C21  C20     0.00   0.0  0
+ 1MN  CONST_17  C24  C19  C20  C21     0.00   0.0  0
+ 1MN  CONST_18  C24  C23  C22  C21     0.00   0.0  0
+ 1MN  CONST_19  C7   C6   C3   C2    180.00   0.0  0
+ 1MN  CONST_20  C7   C6   C5   C4    180.00   0.0  0
+ 1MN  CONST_21  C23  C24  C19  C18   180.00   0.0  0
+ 1MN  CONST_22  C21  C20  C19  C18   180.00   0.0  0
+ 1MN  CONST_23  C10  C9   N1   C7      0.00   0.0  0
+ 1MN  CONST_24  BR1  C1   C2   C3    180.00   0.0  0
+ 1MN  CONST_25  C5   C4   C1   BR1   180.00   0.0  0
+ 1MN  CONST_26  C16  C17  C12  C11   180.00   0.0  0
+ 1MN  CONST_27  C14  C13  C12  C11   180.00   0.0  0
+ 1MN  CONST_28  BR2  C22  C21  C20   180.00   0.0  0
+ 1MN  CONST_29  C24  C23  C22  BR2   180.00   0.0  0
+ 1MN  CONST_30  O1   C9   N1   C7    180.00   0.0  0
+ 1MN  CONST_31  C10  C9   N1   C8    180.00   0.0  0
+ 1MN  CONST_32  H4   C5   C6   C3    180.00   0.0  0
+ 1MN  CONST_33  H3   C4   C1   C2    180.00   0.0  0
+ 1MN  CONST_34  H1   C3   C2   C1    180.00   0.0  0
+ 1MN  CONST_35  H2   C2   C1   C4    180.00   0.0  0
+ 1MN  CONST_36  H15  C16  C17  C12   180.00   0.0  0
+ 1MN  CONST_37  H13  C14  C13  C12   180.00   0.0  0
+ 1MN  CONST_38  H14  C15  C14  C13   180.00   0.0  0
+ 1MN  CONST_39  H16  C17  C12  C13   180.00   0.0  0
+ 1MN  CONST_40  H12  C13  C14  C15   180.00   0.0  0
+ 1MN  CONST_41  H21  C24  C19  C18     0.00   0.0  0
+ 1MN  CONST_42  H18  C20  C19  C18     0.00   0.0  0
+ 1MN  CONST_43  H20  C23  C24  C19   180.00   0.0  0
+ 1MN  CONST_44  H19  C21  C20  C19   180.00   0.0  0
+ 1MN  CONST_45  O1   C9   N1   C8      0.00   0.0  0
+ 1MN  Var_01    C17  C12  C11  C10   -84.34  30.0  2
+ 1MN  Var_02    H6   C8   N1   C7     91.88  30.0  3
+ 1MN  Var_03    C18  C7   C6   C3     82.48  30.0  2
+ 1MN  Var_04    N1   C7   C6   C3    -40.86  30.0  2
+ 1MN  Var_05    C18  C7   C6   C5    -95.03  30.0  2
+ 1MN  Var_06    N1   C7   C6   C5    141.63  30.0  2
+ 1MN  Var_07    O2   C18  C7   C6    -70.78  30.0  1
+ 1MN  Var_08    C19  C18  C7   C6     50.85  30.0  1
+ 1MN  Var_09    C9   N1   C7   C6    101.56  30.0  1
+ 1MN  Var_10    C10  O2   C18  C7    -67.03  30.0  1
+ 1MN  Var_11    C24  C19  C18  C7     85.23  30.0  2
+ 1MN  Var_12    C20  C19  C18  C7    -92.27  30.0  2
+ 1MN  Var_13    O2   C10  C9   N1    -10.84  30.0  1
+ 1MN  Var_14    O2   C18  C7   N1     54.46  30.0  1
+ 1MN  Var_15    C19  C18  C7   N1    176.09  30.0  1
+ 1MN  Var_16    C18  O2   C10  C9     44.20  30.0  1
+ 1MN  Var_17    C18  C7   N1   C9    -23.89  30.0  1
+ 1MN  Var_18    C19  C18  O2   C10   169.99  30.0  1
+ 1MN  Var_19    C24  C19  C18  O2   -153.86  30.0  2
+ 1MN  Var_20    C20  C19  C18  O2     28.64  30.0  2
+ 1MN  Var_21    C8   N1   C7   C6    -71.06  30.0  1
+ 1MN  Var_22    C11  C10  C9   N1    116.41  30.0  1
+ 1MN  Var_23    C18  C7   N1   C8    163.49  30.0  1
+ 1MN  Var_24    C12  C11  C10  C9    179.69  30.0  1
+ 1MN  Var_25    O2   C10  C9   O1    169.50  30.0  1
+ 1MN  Var_26    C18  O2   C10  C11   -81.99  30.0  1
+ 1MN  Var_27    O2   C10  C11  C12   -52.06  30.0  3
+ 1MN  Var_28    H5   C7   C6   C3   -159.34  30.0  2
+ 1MN  Var_29    H17  C18  C7   C6    169.29  30.0  1
+ 1MN  Var_30    H9   C10  C9   N1   -126.68  30.0  1
+ 1MN  Var_31    C11  C10  C9   O1    -63.25  30.0  1
+ 1MN  Var_32    H10  C11  C10  C9    -57.63  30.0  1
+ 1MN  Var_33    H11  C11  C10  C9     58.40  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

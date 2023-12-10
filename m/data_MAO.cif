@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MAO  MAO  5'-{[2-(aminooxy)ethyl](methyl)amino}-5'-deoxyadenosine  ligand  45  24  .  2021-08-14  2021-08-14  
+ MAO  MAO  5'-{[2-(aminooxy)ethyl](methyl)amino}-5'-deoxyadenosine  ligand  45  24  .  2021-08-14  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_MAO
@@ -239,39 +240,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MAO  CONST_01  C2    N3   C4  N9    180.00   0.0  0
- MAO  CONST_02  C6    C5   C4  N9    180.00   0.0  0
- MAO  CONST_03  N7    C5   C4  N9      0.00   0.0  0
- MAO  CONST_04  C5    N7   C8  N9      0.00   0.0  0
- MAO  CONST_05  N7    C8   N9  C4      0.00   0.0  0
- MAO  CONST_06  N1    C2   N3  C4      0.00   0.0  0
- MAO  CONST_07  N1    C6   C5  C4      0.00   0.0  0
- MAO  CONST_08  C8    N7   C5  C4      0.00   0.0  0
- MAO  CONST_09  C8    N9   C4  N3    180.00   0.0  0
- MAO  CONST_10  C6    C5   C4  N3      0.00   0.0  0
- MAO  CONST_11  N7    C5   C4  N3    180.00   0.0  0
- MAO  CONST_12  C6    N1   C2  N3      0.00   0.0  0
- MAO  CONST_13  C5    C4   N3  C2      0.00   0.0  0
- MAO  CONST_14  C5    C6   N1  C2      0.00   0.0  0
- MAO  CONST_15  N7    C5   C6  N1    180.00   0.0  0
- MAO  CONST_16  C8    N7   C5  C6    180.00   0.0  0
- MAO  CONST_17  C8    N9   C4  C5      0.00   0.0  0
- MAO  CONST_18  N3    C4   N9  C1'     0.00   0.0  0
- MAO  CONST_19  C5    C4   N9  C1'   180.00   0.0  0
- MAO  CONST_20  N7    C8   N9  C1'   180.00   0.0  0
- MAO  CONST_21  N6    C6   C5  C4    180.00   0.0  0
- MAO  CONST_22  N6    C6   N1  C2    180.00   0.0  0
- MAO  CONST_23  N7    C5   C6  N6      0.00   0.0  0
- MAO  CONST_24  H8    C8   N9  C1'     0.00   0.0  0
- MAO  CONST_25  H2    C2   N3  C4    180.00   0.0  0
- MAO  CONST_26  HN61  N6   C6  N1      0.00   0.0  0
- MAO  CONST_27  HN62  N6   C6  N1    180.00   0.0  0
- MAO  Var_01    C4'   C5'  ND  CG   -175.46  30.0  3
- MAO  Var_02    CG    CB   OA  N    -177.86  30.0  3
- MAO  Var_03    ND    CG   CB  OA     69.32  30.0  3
- MAO  Var_04    CE    ND   CG  CB   -156.62  30.0  3
- MAO  Var_05    HN1   N    OA  CB    122.70  30.0  3
- MAO  Var_06    HE1   CE   ND  CG    172.81  30.0  3
+ MAO  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ MAO  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ MAO  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ MAO  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ MAO  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ MAO  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ MAO  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ MAO  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ MAO  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ MAO  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ MAO  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ MAO  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ MAO  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ MAO  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ MAO  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ MAO  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ MAO  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ MAO  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
+ MAO  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ MAO  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ MAO  CONST_21  N6    C6   C5   C4    180.00   0.0  0
+ MAO  CONST_22  N6    C6   N1   C2    180.00   0.0  0
+ MAO  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ MAO  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ MAO  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ MAO  CONST_26  HN61  N6   C6   N1      0.00   0.0  0
+ MAO  CONST_27  HN62  N6   C6   N1    180.00   0.0  0
+ MAO  Var_01    C4'   C5'  ND   CG   -175.46  30.0  3
+ MAO  Var_02    CG    CB   OA   N    -177.86  30.0  3
+ MAO  Var_03    ND    CG   CB   OA     69.32  30.0  3
+ MAO  Var_04    CE    ND   CG   CB   -156.62  30.0  3
+ MAO  Var_05    HN1   N    OA   CB    122.70  30.0  3
+ MAO  Var_06    HE1   CE   ND   CG    172.81  30.0  3
+ MAO  Var_07    N9    C1'  O4'  C4'  -126.46  30.0  1
+ MAO  Var_08    C2'   C1'  O4'  C4'    -4.42  30.0  1
+ MAO  Var_09    C1'   C2'  C3'  C4'   -36.39  30.0  1
+ MAO  Var_10    C2'   C3'  C4'  O4'    34.94  30.0  1
+ MAO  Var_11    C4    N9   C1'  O4'  -154.77  30.0  2
+ MAO  Var_12    C8    N9   C1'  O4'    29.56  30.0  2
+ MAO  Var_13    C3'   C2'  C1'  O4'    26.26  30.0  1
+ MAO  Var_14    C3'   C4'  O4'  C1'   -19.75  30.0  1
+ MAO  Var_15    C3'   C2'  C1'  N9    145.39  30.0  1
+ MAO  Var_16    C2'   C1'  N9   C4     87.24  30.0  2
+ MAO  Var_17    C2'   C1'  N9   C8    -88.44  30.0  2
+ MAO  Var_18    C1'   O4'  C4'  C5'   101.14  30.0  1
+ MAO  Var_19    C2'   C3'  C4'  C5'   -87.32  30.0  1
+ MAO  Var_20    O2'   C2'  C3'  C4'  -155.19  30.0  1
+ MAO  Var_21    O3'   C3'  C4'  O4'   -81.77  30.0  1
+ MAO  Var_22    O2'   C2'  C1'  O4'   148.02  30.0  1
+ MAO  Var_23    O3'   C3'  C2'  C1'    79.24  30.0  1
+ MAO  Var_24    O2'   C2'  C1'  N9    -92.85  30.0  1
+ MAO  Var_25    H1'   C1'  O4'  C4'   116.21  30.0  1
+ MAO  Var_26    H2'   C2'  C3'  C4'    79.02  30.0  1
+ MAO  Var_27    H3'   C3'  C4'  O4'   153.82  30.0  1
+ MAO  Var_28    H4'   C4'  O4'  C1'  -137.55  30.0  1
+ MAO  Var_29    O4'   C4'  C5'  ND     43.92  30.0  3
+ MAO  Var_30    C3'   C4'  C5'  ND    161.36  30.0  3
+ MAO  Var_31    O3'   C3'  C4'  C5'   155.97  30.0  1
+ MAO  Var_32    O3'   C3'  C2'  O2'   -39.57  30.0  1
+ MAO  Var_33    HO3'  O3'  C3'  C4'   153.31  30.0  3
+ MAO  Var_34    H5'1  C5'  C4'  O4'   -78.43  30.0  3
+ MAO  Var_35    H5'2  C5'  C4'  O4'   167.98  30.0  3
+ MAO  Var_36    HO2'  O2'  C2'  C1'   159.53  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 070  070  2-amino-4,5-anhydro-1,2,6-trideoxy-1,6-diphenyl-D-galactitol  ligand  42  21  .  2022-09-22  2023-02-02
+ 070  070  2-amino-4,5-anhydro-1,2,6-trideoxy-1,6-diphenyl-D-galactitol  ligand  42  21  .  2022-09-22  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_070
@@ -228,36 +229,54 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 070  CONST_01  C30  C29  C28  C27    0.00   0.0  0
- 070  CONST_02  C30  C31  C26  C27    0.00   0.0  0
- 070  CONST_03  C31  C30  C29  C28    0.00   0.0  0
- 070  CONST_04  C31  C26  C27  C28    0.00   0.0  0
- 070  CONST_05  C26  C31  C30  C29    0.00   0.0  0
- 070  CONST_06  C26  C27  C28  C29    0.00   0.0  0
- 070  CONST_07  C19  C18  C17  C16    0.00   0.0  0
- 070  CONST_08  C19  C20  C21  C16    0.00   0.0  0
- 070  CONST_09  C20  C19  C18  C17    0.00   0.0  0
- 070  CONST_10  C20  C21  C16  C17    0.00   0.0  0
- 070  CONST_11  C21  C16  C17  C18    0.00   0.0  0
- 070  CONST_12  C21  C20  C19  C18    0.00   0.0  0
- 070  CONST_13  C25  C26  C27  C28  180.00   0.0  0
- 070  CONST_14  C25  C26  C31  C30  180.00   0.0  0
- 070  CONST_15  C18  C17  C16  C15  180.00   0.0  0
- 070  CONST_16  C20  C21  C16  C15  180.00   0.0  0
- 070  CONST_17  H3   C29  C28  C27  180.00   0.0  0
- 070  CONST_18  H5   C31  C26  C27  180.00   0.0  0
- 070  CONST_19  H4   C30  C29  C28  180.00   0.0  0
- 070  CONST_20  H1   C27  C28  C29  180.00   0.0  0
- 070  CONST_21  H2   C28  C29  C30  180.00   0.0  0
- 070  CONST_22  H16  C18  C17  C16  180.00   0.0  0
- 070  CONST_23  H18  C20  C21  C16  180.00   0.0  0
- 070  CONST_24  H17  C19  C18  C17  180.00   0.0  0
- 070  CONST_25  H19  C21  C16  C17  180.00   0.0  0
- 070  CONST_26  H15  C17  C18  C19  180.00   0.0  0
- 070  Var_01    C24  C25  C26  C27   92.41  30.0  2
- 070  Var_02    O5   C24  C25  C26   72.87  30.0  3
- 070  Var_03    C22  C23  O5   C24  112.91  30.0  1
- 070  Var_04    C17  C16  C15  C14  -83.60  30.0  2
+ 070  CONST_01  C30  C29  C28  C27     0.00   0.0  0
+ 070  CONST_02  C30  C31  C26  C27     0.00   0.0  0
+ 070  CONST_03  C31  C30  C29  C28     0.00   0.0  0
+ 070  CONST_04  C31  C26  C27  C28     0.00   0.0  0
+ 070  CONST_05  C26  C31  C30  C29     0.00   0.0  0
+ 070  CONST_06  C26  C27  C28  C29     0.00   0.0  0
+ 070  CONST_07  C19  C18  C17  C16     0.00   0.0  0
+ 070  CONST_08  C19  C20  C21  C16     0.00   0.0  0
+ 070  CONST_09  C20  C19  C18  C17     0.00   0.0  0
+ 070  CONST_10  C20  C21  C16  C17     0.00   0.0  0
+ 070  CONST_11  C21  C16  C17  C18     0.00   0.0  0
+ 070  CONST_12  C21  C20  C19  C18     0.00   0.0  0
+ 070  CONST_13  C25  C26  C27  C28   180.00   0.0  0
+ 070  CONST_14  C25  C26  C31  C30   180.00   0.0  0
+ 070  CONST_15  C18  C17  C16  C15   180.00   0.0  0
+ 070  CONST_16  C20  C21  C16  C15   180.00   0.0  0
+ 070  CONST_17  H3   C29  C28  C27   180.00   0.0  0
+ 070  CONST_18  H5   C31  C26  C27   180.00   0.0  0
+ 070  CONST_19  H4   C30  C29  C28   180.00   0.0  0
+ 070  CONST_20  H1   C27  C28  C29   180.00   0.0  0
+ 070  CONST_21  H2   C28  C29  C30   180.00   0.0  0
+ 070  CONST_22  H16  C18  C17  C16   180.00   0.0  0
+ 070  CONST_23  H18  C20  C21  C16   180.00   0.0  0
+ 070  CONST_24  H17  C19  C18  C17   180.00   0.0  0
+ 070  CONST_25  H19  C21  C16  C17   180.00   0.0  0
+ 070  CONST_26  H15  C17  C18  C19   180.00   0.0  0
+ 070  Var_01    C24  C25  C26  C27    92.41  30.0  2
+ 070  Var_02    O5   C24  C25  C26    72.87  30.0  3
+ 070  Var_03    C22  C23  O5   C24   112.91  30.0  1
+ 070  Var_04    C17  C16  C15  C14   -83.60  30.0  2
+ 070  Var_05    C23  O5   C24  C25   113.40  30.0  1
+ 070  Var_06    H8   C24  C23  O5    102.86  30.0  1
+ 070  Var_07    C22  C23  C24  C25   152.69  30.0  1
+ 070  Var_08    C14  C22  C23  C24   136.59  30.0  3
+ 070  Var_09    O4   C22  C23  C24   -97.00  30.0  3
+ 070  Var_10    C14  C22  C23  O5     68.13  30.0  3
+ 070  Var_11    O4   C22  C23  O5   -165.46  30.0  3
+ 070  Var_12    H10  C22  C23  C24    18.24  30.0  3
+ 070  Var_13    N2   C14  C22  C23    60.99  30.0  3
+ 070  Var_14    C15  C14  C22  C23  -174.04  30.0  3
+ 070  Var_15    C16  C15  C14  C22   166.69  30.0  3
+ 070  Var_16    N2   C14  C15  C16   -65.02  30.0  1
+ 070  Var_17    H12  C14  C22  C23   -57.65  30.0  3
+ 070  Var_18    H11  O4   C22  C23   -63.88  30.0  3
+ 070  Var_19    N2   C14  C22  O4    -63.48  30.0  3
+ 070  Var_20    C15  C14  C22  O4     61.48  30.0  3
+ 070  Var_21    H20  N2   C14  C22   -57.62  30.0  3
+ 070  Var_22    H21  N2   C14  C22    63.44  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

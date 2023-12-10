@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LSS  LSS  5'-O-(L-leucylsulfamoyl)adenosine  ligand  56  31  .  2022-03-22  2022-03-22
+ LSS  LSS  5'-O-(L-leucylsulfamoyl)adenosine  ligand  56  31  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_LSS
@@ -282,40 +283,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LSS  CONST_01  C4    N3   C2  N1     0.00   0.0  0
- LSS  CONST_02  C4    C5   C6  N1     0.00   0.0  0
- LSS  CONST_03  N7    C5   C6  N1   180.00   0.0  0
- LSS  CONST_04  C5    C6   N1  C2     0.00   0.0  0
- LSS  CONST_05  C5    C4   N3  C2     0.00   0.0  0
- LSS  CONST_06  N9    C4   N3  C2   180.00   0.0  0
- LSS  CONST_07  C6    N1   C2  N3     0.00   0.0  0
- LSS  CONST_08  C6    C5   C4  N3     0.00   0.0  0
- LSS  CONST_09  N7    C5   C4  N3   180.00   0.0  0
- LSS  CONST_10  C8    N9   C4  N3   180.00   0.0  0
- LSS  CONST_11  C8    N7   C5  C4     0.00   0.0  0
- LSS  CONST_12  N7    C8   N9  C4     0.00   0.0  0
- LSS  CONST_13  C8    N9   C4  C5     0.00   0.0  0
- LSS  CONST_14  N9    C8   N7  C5     0.00   0.0  0
- LSS  CONST_15  N9    C4   C5  C6   180.00   0.0  0
- LSS  CONST_16  C8    N7   C5  C6   180.00   0.0  0
- LSS  CONST_17  N9    C4   C5  N7     0.00   0.0  0
- LSS  CONST_18  C21   N9   C4  N3     0.00   0.0  0
- LSS  CONST_19  C21   N9   C4  C5   180.00   0.0  0
- LSS  CONST_20  C21   N9   C8  N7   180.00   0.0  0
- LSS  CONST_21  N6    C6   N1  C2   180.00   0.0  0
- LSS  CONST_22  N6    C6   C5  C4   180.00   0.0  0
- LSS  CONST_23  N7    C5   C6  N6     0.00   0.0  0
- LSS  CONST_24  H2    C2   N3  C4   180.00   0.0  0
- LSS  CONST_25  H8    C8   N9  C4   180.00   0.0  0
- LSS  CONST_26  HN6   N6   C6  N1     0.00   0.0  0
- LSS  CONST_27  HN6A  N6   C6  N1   180.00   0.0  0
- LSS  CONST_28  S1    N2   C1  O1     0.00   0.0  0
- LSS  CONST_30  HN2   N2   C1  O1   180.00   0.0  0
- LSS  Var_01    C24   C25  O5  S1  -171.37  30.0  3
- LSS  Var_02    O5    S1   N2  C1    70.17  30.0  2
- LSS  Var_03    C10   C7   C9  CA   175.02  30.0  2
- LSS  Var_04    H10   C10  C7  C9    62.07  30.0  3
- LSS  Var_05    H11   C11  C7  C9    62.72  30.0  3
+ LSS  CONST_01  C4    N3   C2   N1      0.00   0.0  0
+ LSS  CONST_02  C4    C5   C6   N1      0.00   0.0  0
+ LSS  CONST_03  N7    C5   C6   N1    180.00   0.0  0
+ LSS  CONST_04  C5    C6   N1   C2      0.00   0.0  0
+ LSS  CONST_05  C5    C4   N3   C2      0.00   0.0  0
+ LSS  CONST_06  N9    C4   N3   C2    180.00   0.0  0
+ LSS  CONST_07  C6    N1   C2   N3      0.00   0.0  0
+ LSS  CONST_08  C6    C5   C4   N3      0.00   0.0  0
+ LSS  CONST_09  N7    C5   C4   N3    180.00   0.0  0
+ LSS  CONST_10  C8    N9   C4   N3    180.00   0.0  0
+ LSS  CONST_11  C8    N7   C5   C4      0.00   0.0  0
+ LSS  CONST_12  N7    C8   N9   C4      0.00   0.0  0
+ LSS  CONST_13  C8    N9   C4   C5      0.00   0.0  0
+ LSS  CONST_14  N9    C8   N7   C5      0.00   0.0  0
+ LSS  CONST_15  N9    C4   C5   C6    180.00   0.0  0
+ LSS  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ LSS  CONST_17  N9    C4   C5   N7      0.00   0.0  0
+ LSS  CONST_18  C21   N9   C4   N3      0.00   0.0  0
+ LSS  CONST_19  C21   N9   C4   C5    180.00   0.0  0
+ LSS  CONST_20  C21   N9   C8   N7    180.00   0.0  0
+ LSS  CONST_21  N6    C6   N1   C2    180.00   0.0  0
+ LSS  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ LSS  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ LSS  CONST_24  H2    C2   N3   C4    180.00   0.0  0
+ LSS  CONST_25  H8    C8   N9   C4    180.00   0.0  0
+ LSS  CONST_26  HN6   N6   C6   N1      0.00   0.0  0
+ LSS  CONST_27  HN6A  N6   C6   N1    180.00   0.0  0
+ LSS  CONST_28  S1    N2   C1   O1      0.00   0.0  0
+ LSS  CONST_29  HN2   N2   C1   O1    180.00   0.0  0
+ LSS  Var_01    C24   C25  O5   S1   -171.37  30.0  3
+ LSS  Var_02    O5    S1   N2   C1     70.17  30.0  2
+ LSS  Var_03    C10   C7   C9   CA    175.02  30.0  2
+ LSS  Var_04    H10   C10  C7   C9     62.07  30.0  3
+ LSS  Var_05    H11   C11  C7   C9     62.72  30.0  3
+ LSS  Var_06    O4    C21  N9   C4   -118.30  30.0  2
+ LSS  Var_07    C22   C21  N9   C4    123.56  30.0  2
+ LSS  Var_08    C8    N9   C21  O4     57.64  30.0  1
+ LSS  Var_09    C23   C22  C21  O4     32.86  30.0  1
+ LSS  Var_10    C22   C23  C24  O4     29.61  30.0  1
+ LSS  Var_11    C22   C21  N9   C8    -60.49  30.0  2
+ LSS  Var_12    C24   O4   C21  N9   -137.93  30.0  1
+ LSS  Var_13    C23   C22  C21  N9    152.89  30.0  1
+ LSS  Var_14    C23   C24  O4   C21    -9.61  30.0  1
+ LSS  Var_15    C24   C23  C22  C21   -36.93  30.0  1
+ LSS  Var_16    C24   O4   C21  C22   -14.94  30.0  1
+ LSS  Var_17    O4    C21  C22  O2    154.94  30.0  1
+ LSS  Var_18    N9    C21  C22  O2    -85.03  30.0  1
+ LSS  Var_19    C24   C23  C22  O2   -155.24  30.0  1
+ LSS  Var_20    C21   C22  C23  O3     77.58  30.0  1
+ LSS  Var_21    O4    C24  C23  O3    -87.14  30.0  1
+ LSS  Var_22    C25   C24  O4   C21   112.17  30.0  1
+ LSS  Var_23    C25   C24  C23  C22   -91.22  30.0  1
+ LSS  Var_24    H21   C21  N9   C4      2.11  30.0  2
+ LSS  Var_25    H22   C22  C21  O4    -82.19  30.0  1
+ LSS  Var_26    H23   C23  C24  O4    148.98  30.0  1
+ LSS  Var_27    H24   C24  O4   C21  -128.60  30.0  1
+ LSS  Var_28    O3    C23  C22  O2    -40.72  30.0  1
+ LSS  Var_29    C25   C24  C23  O3    152.02  30.0  1
+ LSS  Var_30    O5    C25  C24  O4     59.80  30.0  3
+ LSS  Var_31    C23   C24  C25  O5    178.11  30.0  2
+ LSS  Var_32    H25   C25  C24  O4    -61.01  30.0  3
+ LSS  Var_33    H25A  C25  C24  O4    178.44  30.0  3
+ LSS  Var_34    HO2   O2   C22  C21   160.04  30.0  3
+ LSS  Var_35    HO3   O3   C23  C22    49.01  30.0  3
+ LSS  Var_36    C7    C9   CA   C1    175.67  30.0  2
+ LSS  Var_37    N4    CA   C1   O1    -23.41  30.0  3
+ LSS  Var_38    C9    CA   C1   O1     99.64  30.0  3
+ LSS  Var_39    N4    CA   C1   N2    158.18  30.0  3
+ LSS  Var_40    C9    CA   C1   N2    -78.77  30.0  3
+ LSS  Var_41    C25   O5   S1   N2     74.93  30.0  3
+ LSS  Var_42    C7    C9   CA   N4    -59.55  30.0  2
+ LSS  Var_43    C25   O5   S1   O1A   -36.99  30.0  2
+ LSS  Var_44    O2A   S1   O5   C25  -169.33  30.0  2
+ LSS  Var_45    HN4   N4   CA   C1    -66.56  30.0  3
+ LSS  Var_46    HN4A  N4   CA   C1     52.18  30.0  3
+ LSS  Var_47    H9    C9   CA   C1     53.11  30.0  2
+ LSS  Var_48    H9A   C9   CA   C1    -62.47  30.0  2
+ LSS  Var_49    HA    CA   C1   O1   -143.27  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

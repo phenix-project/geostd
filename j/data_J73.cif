@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- J73  J73  '4-{2-[4-(hydroxymethyl)-1H-1,2,3-triazol-1-yl]ethyl}phenyl alpha-D-mannopyranoside'  ligand  50  27  .  2022-07-25  2022-07-26
+ J73  J73  '4-{2-[4-(hydroxymethyl)-1H-1,2,3-triazol-1-yl]ethyl}phenyl alpha-D-mannopyranoside'  ligand  50  27  .  2022-07-25  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_J73
@@ -257,34 +258,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- J73  CONST_01  N36  N37  N38  C39     0.00   0.0  0
- J73  CONST_02  N37  N36  C40  C39     0.00   0.0  0
- J73  CONST_03  N36  C40  C39  N38     0.00   0.0  0
- J73  CONST_04  C40  N36  N37  N38     0.00   0.0  0
- J73  CONST_05  C40  C39  N38  N37     0.00   0.0  0
- J73  CONST_06  C13  C18  C17  C16     0.00   0.0  0
- J73  CONST_07  C13  C14  C15  C16     0.00   0.0  0
- J73  CONST_08  C14  C15  C16  C17     0.00   0.0  0
- J73  CONST_09  C14  C13  C18  C17     0.00   0.0  0
- J73  CONST_10  C15  C16  C17  C18     0.00   0.0  0
- J73  CONST_11  C15  C14  C13  C18     0.00   0.0  0
- J73  CONST_12  N37  N38  C39  C41   180.00   0.0  0
- J73  CONST_13  N36  C40  C39  C41   180.00   0.0  0
- J73  CONST_14  C35  N36  C40  C39   180.00   0.0  0
- J73  CONST_15  C35  N36  N37  N38   180.00   0.0  0
- J73  CONST_16  C18  C17  C16  C34   180.00   0.0  0
- J73  CONST_17  C14  C15  C16  C34   180.00   0.0  0
- J73  CONST_18  O1   C13  C18  C17   180.00   0.0  0
- J73  CONST_19  O1   C13  C14  C15   180.00   0.0  0
- J73  CONST_20  H40  C40  C39  N38   180.00   0.0  0
- J73  CONST_21  H18  C18  C17  C16   180.00   0.0  0
- J73  CONST_22  H14  C14  C15  C16   180.00   0.0  0
- J73  CONST_23  H15  C15  C16  C17   180.00   0.0  0
- J73  CONST_24  H17  C17  C18  C13   180.00   0.0  0
- J73  Var_01    N38  C39  C41  O42  -177.91  30.0  2
- J73  Var_02    C34  C35  N36  N37   -82.86  30.0  2
- J73  Var_03    C16  C34  C35  N36  -178.69  30.0  3
- J73  Var_04    C17  C16  C34  C35    81.82  30.0  2
+ J73  CONST_01  N36   N37  N38  C39     0.00   0.0  0
+ J73  CONST_02  N37   N36  C40  C39     0.00   0.0  0
+ J73  CONST_03  N36   C40  C39  N38     0.00   0.0  0
+ J73  CONST_04  C40   N36  N37  N38     0.00   0.0  0
+ J73  CONST_05  C40   C39  N38  N37     0.00   0.0  0
+ J73  CONST_06  C13   C18  C17  C16     0.00   0.0  0
+ J73  CONST_07  C13   C14  C15  C16     0.00   0.0  0
+ J73  CONST_08  C14   C15  C16  C17     0.00   0.0  0
+ J73  CONST_09  C14   C13  C18  C17     0.00   0.0  0
+ J73  CONST_10  C15   C16  C17  C18     0.00   0.0  0
+ J73  CONST_11  C15   C14  C13  C18     0.00   0.0  0
+ J73  CONST_12  N37   N38  C39  C41   180.00   0.0  0
+ J73  CONST_13  N36   C40  C39  C41   180.00   0.0  0
+ J73  CONST_14  C35   N36  C40  C39   180.00   0.0  0
+ J73  CONST_15  C35   N36  N37  N38   180.00   0.0  0
+ J73  CONST_16  C18   C17  C16  C34   180.00   0.0  0
+ J73  CONST_17  C14   C15  C16  C34   180.00   0.0  0
+ J73  CONST_18  O1    C13  C18  C17   180.00   0.0  0
+ J73  CONST_19  O1    C13  C14  C15   180.00   0.0  0
+ J73  CONST_20  H40   C40  C39  N38   180.00   0.0  0
+ J73  CONST_21  H18   C18  C17  C16   180.00   0.0  0
+ J73  CONST_22  H14   C14  C15  C16   180.00   0.0  0
+ J73  CONST_23  H15   C15  C16  C17   180.00   0.0  0
+ J73  CONST_24  H17   C17  C18  C13   180.00   0.0  0
+ J73  Var_01    N38   C39  C41  O42  -177.91  30.0  2
+ J73  Var_02    C34   C35  N36  N37   -82.86  30.0  2
+ J73  Var_03    C16   C34  C35  N36  -178.69  30.0  3
+ J73  Var_04    C17   C16  C34  C35    81.82  30.0  2
+ J73  Var_05    C4    C3   C2   C1    -53.89  30.0  1
+ J73  Var_06    C4    C5   O5   C1     58.27  30.0  1
+ J73  Var_07    C5    O5   C1   C2    -58.28  30.0  1
+ J73  Var_08    C5    C4   C3   C2     54.79  30.0  1
+ J73  Var_09    O5    C1   C2   C3     54.10  30.0  1
+ J73  Var_10    O5    C5   C4   C3    -54.49  30.0  1
+ J73  Var_11    C1    O1   C13  C18   164.71  30.0  2
+ J73  Var_12    C2    C1   O1   C13  -166.00  30.0  3
+ J73  Var_13    O5    C1   O1   C13    71.51  30.0  3
+ J73  Var_14    C1    O1   C13  C14   -15.71  30.0  2
+ J73  Var_15    C3    C2   C1   O1    -69.38  30.0  1
+ J73  Var_16    C5    O5   C1   O1     61.26  30.0  1
+ J73  Var_17    O3    C3   C2   C1   -174.34  30.0  1
+ J73  Var_18    C6    C5   O5   C1   -179.90  30.0  1
+ J73  Var_19    O4    C4   C3   C2    173.49  30.0  1
+ J73  Var_20    O5    C1   C2   O2    -64.84  30.0  1
+ J73  Var_21    C4    C3   C2   O2     65.90  30.0  1
+ J73  Var_22    C6    C5   C4   C3   -173.43  30.0  1
+ J73  Var_23    C5    C4   C3   O3    178.09  30.0  1
+ J73  Var_24    O5    C5   C4   O4   -175.36  30.0  1
+ J73  Var_25    H3    C3   C2   C1     63.51  30.0  1
+ J73  Var_26    H5    C5   O5   C1    -61.59  30.0  1
+ J73  Var_27    H4    C4   C3   C2    -63.94  30.0  1
+ J73  Var_28    H1    C1   C2   C3    171.33  30.0  1
+ J73  Var_29    H2    C2   C3   C4   -172.44  30.0  1
+ J73  Var_30    O2    C2   C1   O1    171.68  30.0  1
+ J73  Var_31    O3    C3   C2   O2    -54.55  30.0  1
+ J73  Var_32    O4    C4   C3   O3    -63.21  30.0  1
+ J73  Var_33    O6    C6   C5   C4   -177.48  30.0  3
+ J73  Var_34    C6    C5   C4   O4     65.70  30.0  1
+ J73  Var_35    O6    C6   C5   O5     61.72  30.0  3
+ J73  Var_36    HA    O2   C2   C1    -72.38  30.0  3
+ J73  Var_37    HB    O3   C3   C2    -79.26  30.0  3
+ J73  Var_38    HC    O4   C4   C3     56.90  30.0  3
+ J73  Var_39    H61C  C6   C5   C4    -55.76  30.0  3
+ J73  Var_40    H62C  C6   C5   C4     60.30  30.0  3
+ J73  Var_41    H42   O42  C41  C39  -177.00  30.0  3
+ J73  Var_42    H6    O6   C6   C5    174.40  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

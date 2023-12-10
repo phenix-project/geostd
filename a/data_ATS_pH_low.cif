@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ATS  ATS  5'-O-[(S)-{[(R)-(arsonomethyl)(hydroxy)phosphoryl]oxy}(hydroxy)phosphoryl]adenosine  ligand  49  31  .  2021-08-06  2022-11-17
+ ATS  ATS  5'-O-[(S)-{[(R)-(arsonomethyl)(hydroxy)phosphoryl]oxy}(hydroxy)phosphoryl]adenosine  ligand  49  31  .  2021-08-06  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_ATS
@@ -252,36 +253,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ATS  CONST_01  C2    N3   C4   N9   180.00   0.0  0
- ATS  CONST_02  C6    C5   C4   N9   180.00   0.0  0
- ATS  CONST_03  N7    C5   C4   N9     0.00   0.0  0
- ATS  CONST_04  C5    N7   C8   N9     0.00   0.0  0
- ATS  CONST_05  N7    C8   N9   C4     0.00   0.0  0
- ATS  CONST_06  N1    C2   N3   C4     0.00   0.0  0
- ATS  CONST_07  N1    C6   C5   C4     0.00   0.0  0
- ATS  CONST_08  C8    N7   C5   C4     0.00   0.0  0
- ATS  CONST_09  C8    N9   C4   N3   180.00   0.0  0
- ATS  CONST_10  C6    C5   C4   N3     0.00   0.0  0
- ATS  CONST_11  N7    C5   C4   N3   180.00   0.0  0
- ATS  CONST_12  C6    N1   C2   N3     0.00   0.0  0
- ATS  CONST_13  C5    C4   N3   C2     0.00   0.0  0
- ATS  CONST_14  C5    C6   N1   C2     0.00   0.0  0
- ATS  CONST_15  N7    C5   C6   N1   180.00   0.0  0
- ATS  CONST_16  C8    N7   C5   C6   180.00   0.0  0
- ATS  CONST_17  C8    N9   C4   C5     0.00   0.0  0
- ATS  CONST_18  N3    C4   N9   C1'    0.00   0.0  0
- ATS  CONST_19  C5    C4   N9   C1'  180.00   0.0  0
- ATS  CONST_20  N7    C8   N9   C1'  180.00   0.0  0
- ATS  CONST_21  N6    C6   C5   C4   180.00   0.0  0
- ATS  CONST_22  N6    C6   N1   C2   180.00   0.0  0
- ATS  CONST_23  N7    C5   C6   N6     0.00   0.0  0
- ATS  CONST_24  H8    C8   N9   C1'    0.00   0.0  0
- ATS  CONST_25  H2    C2   N3   C4   180.00   0.0  0
- ATS  CONST_26  HN61  N6   C6   N1     0.00   0.0  0
- ATS  CONST_27  HN62  N6   C6   N1   180.00   0.0  0
- ATS  Var_01    C4'   C5'  O5'  PA    99.40  30.0  3
- ATS  Var_02    O13   PB   C3B  AS1   63.08  30.0  1
- ATS  Var_03    PB    C3B  AS1  OG2   88.69  30.0  3
+ ATS  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ ATS  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ ATS  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ ATS  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ ATS  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ ATS  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ ATS  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ ATS  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ ATS  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ ATS  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ ATS  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ ATS  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ ATS  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ ATS  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ ATS  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ ATS  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ ATS  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ ATS  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
+ ATS  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ ATS  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ ATS  CONST_21  N6    C6   C5   C4    180.00   0.0  0
+ ATS  CONST_22  N6    C6   N1   C2    180.00   0.0  0
+ ATS  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ ATS  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ ATS  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ ATS  CONST_26  HN61  N6   C6   N1      0.00   0.0  0
+ ATS  CONST_27  HN62  N6   C6   N1    180.00   0.0  0
+ ATS  Var_01    C4'   C5'  O5'  PA     99.40  30.0  3
+ ATS  Var_02    O13   PB   C3B  AS1    63.08  30.0  1
+ ATS  Var_03    PB    C3B  AS1  OG2    88.69  30.0  3
+ ATS  Var_04    C2'   C1'  O4'  C4'   -25.50  30.0  1
+ ATS  Var_05    N9    C1'  O4'  C4'  -148.23  30.0  1
+ ATS  Var_06    C1'   C2'  C3'  C4'   -33.30  30.0  1
+ ATS  Var_07    C2'   C3'  C4'  O4'    19.86  30.0  1
+ ATS  Var_08    C3'   C2'  C1'  O4'    37.00  30.0  1
+ ATS  Var_09    C4    N9   C1'  O4'  -132.30  30.0  2
+ ATS  Var_10    C8    N9   C1'  O4'    49.22  30.0  2
+ ATS  Var_11    C4    N9   C1'  C2'   110.56  30.0  2
+ ATS  Var_12    C8    N9   C1'  C2'   -67.92  30.0  2
+ ATS  Var_13    C1'   O4'  C4'  C3'     3.37  30.0  1
+ ATS  Var_14    N9    C1'  C2'  C3'   156.11  30.0  1
+ ATS  Var_15    C1'   O4'  C4'  C5'   125.23  30.0  1
+ ATS  Var_16    C2'   C3'  C4'  C5'  -100.65  30.0  1
+ ATS  Var_17    O2'   C2'  C3'  C4'  -155.63  30.0  1
+ ATS  Var_18    O3'   C3'  C4'  O4'  -103.17  30.0  1
+ ATS  Var_19    O2'   C2'  C1'  O4'   158.01  30.0  1
+ ATS  Var_20    N9    C1'  C2'  O2'   -82.88  30.0  1
+ ATS  Var_21    C1'   C2'  C3'  O3'    89.34  30.0  1
+ ATS  Var_22    H1'   C1'  O4'  C4'    94.45  30.0  1
+ ATS  Var_23    H2'   C2'  C3'  C4'    80.76  30.0  1
+ ATS  Var_24    H3'   C3'  C4'  O4'   137.86  30.0  1
+ ATS  Var_25    H4'   C4'  C3'  C2'   137.63  30.0  1
+ ATS  Var_26    O4'   C4'  C5'  O5'    60.64  30.0  3
+ ATS  Var_27    C3'   C4'  C5'  O5'   179.77  30.0  3
+ ATS  Var_28    O3'   C3'  C4'  C5'   136.32  30.0  1
+ ATS  Var_29    O3'   C3'  C2'  O2'   -32.99  30.0  1
+ ATS  Var_30    HO3'  O3'  C3'  C4'    58.52  30.0  3
+ ATS  Var_31    H5'1  C5'  C4'  O4'  -175.60  30.0  1
+ ATS  Var_32    H5'2  C5'  C4'  O4'   -57.75  30.0  1
+ ATS  Var_33    HO2'  O2'  C2'  C3'  -164.16  30.0  3
+ ATS  Var_34    OB2   PB   O13  PA    108.00  30.0  3
+ ATS  Var_35    C3B   PB   O13  PA   -129.03  30.0  3
+ ATS  Var_36    OB1   PB   O13  PA    -19.91  30.0  3
+ ATS  Var_37    PB    O13  PA   O5'  -178.79  30.0  3
+ ATS  Var_38    C5'   O5'  PA   O11    46.04  30.0  3
+ ATS  Var_39    PB    O13  PA   O11    68.43  30.0  3
+ ATS  Var_40    C5'   O5'  PA   O13   -63.36  30.0  3
+ ATS  Var_41    C5'   O5'  PA   O12   175.26  30.0  3
+ ATS  Var_42    PB    O13  PA   O12   -59.39  30.0  3
+ ATS  Var_43    HO3   OG3  AS1  OG2    53.59  30.0  3
+ ATS  Var_44    HO2   OG2  AS1  OG3    72.84  30.0  3
+ ATS  Var_45    HOB   O11  PA   O5'   -81.57  30.0  3
+ ATS  Var_46    HB1   OB1  PB   O13   163.69  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- U03  U03  4-hydroxy-7-methoxy-3-[(1S)-1-phenylpropyl]-2H-chromen-2-one  ligand  41  23  .  2021-08-24  2021-08-24  
+ U03  U03  4-hydroxy-7-methoxy-3-[(1S)-1-phenylpropyl]-2H-chromen-2-one  ligand  41  23  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_U03
@@ -221,51 +222,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- U03  CONST_01  CA4   OA3  CA2  CA     0.00   0.0  0
- U03  CONST_02  CA4   CA5  CA6  CA     0.00   0.0  0
- U03  CONST_03  CD4   CA5  CA6  CA   180.00   0.0  0
- U03  CONST_04  CA5   CA6  CA   CA2    0.00   0.0  0
- U03  CONST_05  CA5   CA4  OA3  CA2    0.00   0.0  0
- U03  CONST_06  CD1   CA4  OA3  CA2  180.00   0.0  0
- U03  CONST_07  CD3   CD4  CA5  CA4    0.00   0.0  0
- U03  CONST_08  CD3   CD2  CD1  CA4    0.00   0.0  0
- U03  CONST_09  CD2   CD1  CA4  CA5    0.00   0.0  0
- U03  CONST_10  CD2   CD3  CD4  CA5    0.00   0.0  0
- U03  CONST_11  OA3   CA2  CA   CA6    0.00   0.0  0
- U03  CONST_12  CD1   CA4  CA5  CA6  180.00   0.0  0
- U03  CONST_13  OA3   CA4  CA5  CA6    0.00   0.0  0
- U03  CONST_14  CD3   CD4  CA5  CA6  180.00   0.0  0
- U03  CONST_15  CB4   CB3  CB2  CB1    0.00   0.0  0
- U03  CONST_16  CB4   CB5  CB6  CB1    0.00   0.0  0
- U03  CONST_17  CB5   CB6  CB1  CB2    0.00   0.0  0
- U03  CONST_18  CB5   CB4  CB3  CB2    0.00   0.0  0
- U03  CONST_19  CB6   CB1  CB2  CB3    0.00   0.0  0
- U03  CONST_20  CB6   CB5  CB4  CB3    0.00   0.0  0
- U03  CONST_21  CD4   CA5  CA4  CD1    0.00   0.0  0
- U03  CONST_22  CD4   CD3  CD2  CD1    0.00   0.0  0
- U03  CONST_23  OA3   CA4  CD1  CD2  180.00   0.0  0
- U03  CONST_24  OA3   CA4  CA5  CD4  180.00   0.0  0
- U03  CONST_25  OA6   CA6  CA   CA2  180.00   0.0  0
- U03  CONST_26  OA6   CA6  CA5  CA4  180.00   0.0  0
- U03  CONST_27  OE3   CD2  CD1  CA4  180.00   0.0  0
- U03  CONST_28  OA2   CA2  OA3  CA4  180.00   0.0  0
- U03  CONST_29  CG1   CA   CA6  CA5  180.00   0.0  0
- U03  CONST_30  OA2   CA2  CA   CA6  180.00   0.0  0
- U03  CONST_31  CG1   CB1  CB2  CB3  180.00   0.0  0
- U03  CONST_32  CG1   CB1  CB6  CB5  180.00   0.0  0
- U03  CONST_33  OA3   CA2  CA   CG1  180.00   0.0  0
- U03  CONST_34  OA6   CA6  CA5  CD4    0.00   0.0  0
- U03  CONST_35  OE3   CD2  CD3  CD4  180.00   0.0  0
- U03  CONST_36  HD4   CD4  CA5  CA4  180.00   0.0  0
- U03  CONST_37  HD1   CD1  CA4  CA5  180.00   0.0  0
- U03  CONST_38  HD3   CD3  CD4  CA5  180.00   0.0  0
- U03  CONST_39  HB3   CB3  CB2  CB1  180.00   0.0  0
- U03  CONST_40  HB5   CB5  CB6  CB1  180.00   0.0  0
- U03  CONST_41  HB6   CB6  CB1  CB2  180.00   0.0  0
- U03  CONST_42  HB4   CB4  CB3  CB2  180.00   0.0  0
- U03  CONST_43  HB2   CB2  CB3  CB4  180.00   0.0  0
- U03  Var_01    HE31  CE3  OE3  CD2  179.48  30.0  3
- U03  Var_02    HG31  CG3  CG2  CG1  179.04  30.0  3
+ U03  CONST_01  CA4   OA3  CA2  CA      0.00   0.0  0
+ U03  CONST_02  CA4   CA5  CA6  CA      0.00   0.0  0
+ U03  CONST_03  CD4   CA5  CA6  CA    180.00   0.0  0
+ U03  CONST_04  CA5   CA6  CA   CA2     0.00   0.0  0
+ U03  CONST_05  CA5   CA4  OA3  CA2     0.00   0.0  0
+ U03  CONST_06  CD1   CA4  OA3  CA2   180.00   0.0  0
+ U03  CONST_07  CD3   CD4  CA5  CA4     0.00   0.0  0
+ U03  CONST_08  CD3   CD2  CD1  CA4     0.00   0.0  0
+ U03  CONST_09  CD2   CD1  CA4  CA5     0.00   0.0  0
+ U03  CONST_10  CD2   CD3  CD4  CA5     0.00   0.0  0
+ U03  CONST_11  OA3   CA2  CA   CA6     0.00   0.0  0
+ U03  CONST_12  CD1   CA4  CA5  CA6   180.00   0.0  0
+ U03  CONST_13  OA3   CA4  CA5  CA6     0.00   0.0  0
+ U03  CONST_14  CD3   CD4  CA5  CA6   180.00   0.0  0
+ U03  CONST_15  CB4   CB3  CB2  CB1     0.00   0.0  0
+ U03  CONST_16  CB4   CB5  CB6  CB1     0.00   0.0  0
+ U03  CONST_17  CB5   CB6  CB1  CB2     0.00   0.0  0
+ U03  CONST_18  CB5   CB4  CB3  CB2     0.00   0.0  0
+ U03  CONST_19  CB6   CB1  CB2  CB3     0.00   0.0  0
+ U03  CONST_20  CB6   CB5  CB4  CB3     0.00   0.0  0
+ U03  CONST_21  CD4   CA5  CA4  CD1     0.00   0.0  0
+ U03  CONST_22  CD4   CD3  CD2  CD1     0.00   0.0  0
+ U03  CONST_23  OA3   CA4  CD1  CD2   180.00   0.0  0
+ U03  CONST_24  OA3   CA4  CA5  CD4   180.00   0.0  0
+ U03  CONST_25  OA6   CA6  CA   CA2   180.00   0.0  0
+ U03  CONST_26  OA6   CA6  CA5  CA4   180.00   0.0  0
+ U03  CONST_27  OE3   CD2  CD1  CA4   180.00   0.0  0
+ U03  CONST_28  OA2   CA2  OA3  CA4   180.00   0.0  0
+ U03  CONST_29  CG1   CA   CA6  CA5   180.00   0.0  0
+ U03  CONST_30  OA2   CA2  CA   CA6   180.00   0.0  0
+ U03  CONST_31  CG1   CB1  CB2  CB3   180.00   0.0  0
+ U03  CONST_32  CG1   CB1  CB6  CB5   180.00   0.0  0
+ U03  CONST_33  OA3   CA2  CA   CG1   180.00   0.0  0
+ U03  CONST_34  OA6   CA6  CA5  CD4     0.00   0.0  0
+ U03  CONST_35  OE3   CD2  CD3  CD4   180.00   0.0  0
+ U03  CONST_36  HD4   CD4  CA5  CA4   180.00   0.0  0
+ U03  CONST_37  HD1   CD1  CA4  CA5   180.00   0.0  0
+ U03  CONST_38  HD3   CD3  CD4  CA5   180.00   0.0  0
+ U03  CONST_39  HB3   CB3  CB2  CB1   180.00   0.0  0
+ U03  CONST_40  HB5   CB5  CB6  CB1   180.00   0.0  0
+ U03  CONST_41  HB6   CB6  CB1  CB2   180.00   0.0  0
+ U03  CONST_42  HB4   CB4  CB3  CB2   180.00   0.0  0
+ U03  CONST_43  HB2   CB2  CB3  CB4   180.00   0.0  0
+ U03  Var_01    HE31  CE3  OE3  CD2   179.48  30.0  3
+ U03  Var_02    HG31  CG3  CG2  CG1   179.04  30.0  3
+ U03  Var_03    CB2   CB1  CG1  CA    124.14  30.0  2
+ U03  Var_04    CB6   CB1  CG1  CA    -57.27  30.0  2
+ U03  Var_05    CB1   CG1  CA   CA2   -81.46  30.0  2
+ U03  Var_06    CB1   CG1  CA   CA6    95.69  30.0  2
+ U03  Var_07    CG2   CG1  CA   CA2   149.49  30.0  2
+ U03  Var_08    CG2   CG1  CA   CA6   -33.37  30.0  2
+ U03  Var_09    CG2   CG1  CB1  CB2  -104.16  30.0  2
+ U03  Var_10    CG2   CG1  CB1  CB6    74.43  30.0  2
+ U03  Var_11    CE3   OE3  CD2  CD1  -179.06  30.0  2
+ U03  Var_12    CE3   OE3  CD2  CD3     0.94  30.0  2
+ U03  Var_13    HO6   OA6  CA6  CA   -177.32  30.0  2
+ U03  Var_14    HG1   CG1  CA   CA2    33.26  30.0  2
+ U03  Var_15    CG3   CG2  CG1  CA   -162.41  30.0  3
+ U03  Var_16    CG3   CG2  CG1  CB1    68.78  30.0  3
+ U03  Var_17    HG21  CG2  CG1  CA     75.59  30.0  3
+ U03  Var_18    HG22  CG2  CG1  CA    -41.87  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

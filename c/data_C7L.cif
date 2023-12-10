@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- C7L  C7L  '(3R,3aS,4R,6aR)-4-(2-methoxyethoxy)hexahydrofuro[2,3-b]furan-3-yl [(2S,3R)-4-{[(4-aminophenyl)sulfonyl](2-methylpropyl)amino}-3-hydroxy-1-phenylbutan-2-yl]carbamate'  ligand  86  43  .  2022-07-24  2022-07-26
+ C7L  C7L  '(3R,3aS,4R,6aR)-4-(2-methoxyethoxy)hexahydrofuro[2,3-b]furan-3-yl [(2S,3R)-4-{[(4-aminophenyl)sulfonyl](2-methylpropyl)amino}-3-hydroxy-1-phenylbutan-2-yl]carbamate'  ligand  86  43  .  2022-07-24  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_C7L
@@ -402,48 +403,93 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- C7L  CONST_01  CBJ  CAN  CAL  CAK     0.00   0.0  0
- C7L  CONST_02  CBJ  CAO  CAM  CAK     0.00   0.0  0
- C7L  CONST_03  CAO  CAM  CAK  CAL     0.00   0.0  0
- C7L  CONST_04  CAO  CBJ  CAN  CAL     0.00   0.0  0
- C7L  CONST_05  CAN  CAL  CAK  CAM     0.00   0.0  0
- C7L  CONST_06  CAN  CBJ  CAO  CAM     0.00   0.0  0
- C7L  CONST_07  CBN  CBM  CAQ  CAP     0.00   0.0  0
- C7L  CONST_08  CBN  CAR  CBK  CAP     0.00   0.0  0
- C7L  CONST_09  CAR  CBK  CAP  CAQ     0.00   0.0  0
- C7L  CONST_10  CAR  CBN  CBM  CAQ     0.00   0.0  0
- C7L  CONST_11  CBM  CAQ  CAP  CBK     0.00   0.0  0
- C7L  CONST_12  CBM  CBN  CAR  CBK     0.00   0.0  0
- C7L  CONST_13  CAW  CBJ  CAN  CAL   180.00   0.0  0
- C7L  CONST_14  CAW  CBJ  CAO  CAM   180.00   0.0  0
- C7L  CONST_15  NAZ  CBM  CAQ  CAP   180.00   0.0  0
- C7L  CONST_16  SBW  CBK  CAP  CAQ   180.00   0.0  0
- C7L  CONST_17  NAZ  CBM  CBN  CAR   180.00   0.0  0
- C7L  CONST_18  SBW  CBK  CAR  CBN   180.00   0.0  0
- C7L  CONST_19  HAN  CAN  CAL  CAK   180.00   0.0  0
- C7L  CONST_20  HAO  CAO  CAM  CAK   180.00   0.0  0
- C7L  CONST_21  HAM  CAM  CAK  CAL   180.00   0.0  0
- C7L  CONST_22  HAL  CAL  CAK  CAM   180.00   0.0  0
- C7L  CONST_23  HAK  CAK  CAL  CAN   180.00   0.0  0
- C7L  CONST_24  HAR  CAR  CBK  CAP   180.00   0.0  0
- C7L  CONST_25  HBN  CBN  CBM  CAQ   180.00   0.0  0
- C7L  CONST_26  HAP  CAP  CBK  CAR   180.00   0.0  0
- C7L  CONST_27  HAQ  CAQ  CAP  CBK   180.00   0.0  0
- C7L  Var_01    HAU  CAU  OBE  CBU    84.25  30.0  1
- C7L  Var_02    HAV  CAV  OBF  CBU    83.09  30.0  1
- C7L  Var_03    CAP  CBK  SBW  OAF  -163.67  30.0  2
- C7L  Var_04    CBQ  CAW  CBJ  CAN    86.27  30.0  2
- C7L  Var_05    CBK  SBW  NBT  CAX    90.27  30.0  3
- C7L  Var_06    HAT  CAT  OBD  CBR    53.85  30.0  1
- C7L  Var_07    CAT  CAS  OBC  CAB  -176.70  30.0  1
- C7L  Var_08    NBT  CAX  CBO  CAC  -178.61  30.0  2
- C7L  Var_09    CBQ  NBB  CBI  OAE    12.16  30.0  2
- C7L  Var_10    CBP  CAY  NBT  CAX    83.79  30.0  1
- C7L  Var_11    CBO  CAX  NBT  CAY    99.67  30.0  1
- C7L  Var_12    OBD  CAT  CAS  OBC    63.79  30.0  3
- C7L  Var_13    HAD  CAD  CBO  CAC    60.63  30.0  3
- C7L  Var_14    HAC  CAC  CBO  CAD    57.70  30.0  3
- C7L  Var_15    HAB  CAB  OBC  CAS   -59.44  30.0  3
+ C7L  CONST_01  CBJ   CAN  CAL  CAK     0.00   0.0  0
+ C7L  CONST_02  CBJ   CAO  CAM  CAK     0.00   0.0  0
+ C7L  CONST_03  CAO   CAM  CAK  CAL     0.00   0.0  0
+ C7L  CONST_04  CAO   CBJ  CAN  CAL     0.00   0.0  0
+ C7L  CONST_05  CAN   CAL  CAK  CAM     0.00   0.0  0
+ C7L  CONST_06  CAN   CBJ  CAO  CAM     0.00   0.0  0
+ C7L  CONST_07  CBN   CBM  CAQ  CAP     0.00   0.0  0
+ C7L  CONST_08  CBN   CAR  CBK  CAP     0.00   0.0  0
+ C7L  CONST_09  CAR   CBK  CAP  CAQ     0.00   0.0  0
+ C7L  CONST_10  CAR   CBN  CBM  CAQ     0.00   0.0  0
+ C7L  CONST_11  CBM   CAQ  CAP  CBK     0.00   0.0  0
+ C7L  CONST_12  CBM   CBN  CAR  CBK     0.00   0.0  0
+ C7L  CONST_13  CAW   CBJ  CAN  CAL   180.00   0.0  0
+ C7L  CONST_14  CAW   CBJ  CAO  CAM   180.00   0.0  0
+ C7L  CONST_15  NAZ   CBM  CAQ  CAP   180.00   0.0  0
+ C7L  CONST_16  SBW   CBK  CAP  CAQ   180.00   0.0  0
+ C7L  CONST_17  NAZ   CBM  CBN  CAR   180.00   0.0  0
+ C7L  CONST_18  SBW   CBK  CAR  CBN   180.00   0.0  0
+ C7L  CONST_19  HAN   CAN  CAL  CAK   180.00   0.0  0
+ C7L  CONST_20  HAO   CAO  CAM  CAK   180.00   0.0  0
+ C7L  CONST_21  HAM   CAM  CAK  CAL   180.00   0.0  0
+ C7L  CONST_22  HAL   CAL  CAK  CAM   180.00   0.0  0
+ C7L  CONST_23  HAK   CAK  CAL  CAN   180.00   0.0  0
+ C7L  CONST_24  HAR   CAR  CBK  CAP   180.00   0.0  0
+ C7L  CONST_25  HBN   CBN  CBM  CAQ   180.00   0.0  0
+ C7L  CONST_26  HAP   CAP  CBK  CAR   180.00   0.0  0
+ C7L  CONST_27  HAQ   CAQ  CAP  CBK   180.00   0.0  0
+ C7L  Var_01    HAU   CAU  OBE  CBU    84.25  30.0  1
+ C7L  Var_02    HAV   CAV  OBF  CBU    83.09  30.0  1
+ C7L  Var_03    CAP   CBK  SBW  OAF  -163.67  30.0  2
+ C7L  Var_04    CBQ   CAW  CBJ  CAN    86.27  30.0  2
+ C7L  Var_05    CBK   SBW  NBT  CAX    90.27  30.0  3
+ C7L  Var_06    HAT   CAT  OBD  CBR    53.85  30.0  1
+ C7L  Var_07    CAT   CAS  OBC  CAB  -176.70  30.0  1
+ C7L  Var_08    NBT   CAX  CBO  CAC  -178.61  30.0  2
+ C7L  Var_09    CBQ   NBB  CBI  OAE    12.16  30.0  2
+ C7L  Var_10    CBP   CAY  NBT  CAX    83.79  30.0  1
+ C7L  Var_11    CBO   CAX  NBT  CAY    99.67  30.0  1
+ C7L  Var_12    OBD   CAT  CAS  OBC    63.79  30.0  3
+ C7L  Var_13    HAD   CAD  CBO  CAC    60.63  30.0  3
+ C7L  Var_14    HAC   CAC  CBO  CAD    57.70  30.0  3
+ C7L  Var_15    HAB   CAB  OBC  CAS   -59.44  30.0  3
+ C7L  Var_16    OBF   CBU  OBE  CAU   135.26  30.0  1
+ C7L  Var_17    CBV   CBU  OBE  CAU    18.38  30.0  1
+ C7L  Var_18    CBS   CBV  CBR  CAU  -135.50  30.0  1
+ C7L  Var_19    CBU   CBV  CBR  CAU   -23.93  30.0  1
+ C7L  Var_20    OBE   CBU  OBF  CAV   -98.52  30.0  1
+ C7L  Var_21    CBV   CBU  OBF  CAV    17.90  30.0  1
+ C7L  Var_22    CBR   CBV  CBS  CAV    84.36  30.0  1
+ C7L  Var_23    CBU   CBV  CBS  CAV   -28.37  30.0  1
+ C7L  Var_24    CBV   CBR  CAU  OBE    35.45  30.0  1
+ C7L  Var_25    CBR   CBV  CBU  OBE     5.06  30.0  1
+ C7L  Var_26    CBS   CBV  CBU  OBE   126.51  30.0  1
+ C7L  Var_27    CBV   CBS  CAV  OBF    39.71  30.0  1
+ C7L  Var_28    CBR   CBV  CBU  OBF  -113.42  30.0  1
+ C7L  Var_29    CBS   CBV  CBU  OBF     8.03  30.0  1
+ C7L  Var_30    OBE   CAU  CBR  OBD   154.33  30.0  1
+ C7L  Var_31    CBS   CBV  CBR  OBD   102.72  30.0  1
+ C7L  Var_32    CBU   CBV  CBR  OBD  -145.71  30.0  1
+ C7L  Var_33    OBG   CBS  CAV  OBF   160.50  30.0  1
+ C7L  Var_34    CBR   CBV  CBS  OBG   -35.78  30.0  1
+ C7L  Var_35    CBU   CBV  CBS  OBG  -148.51  30.0  1
+ C7L  Var_36    HBU   CBU  OBE  CAU  -106.45  30.0  1
+ C7L  Var_37    HBV   CBV  CBR  CAU    96.00  30.0  1
+ C7L  Var_38    HBR   CBR  CAU  OBE   -81.99  30.0  1
+ C7L  Var_39    HBS   CBS  CAV  OBF   -76.37  30.0  1
+ C7L  Var_40    CAU   CBR  OBD  CAT    68.48  30.0  3
+ C7L  Var_41    CBV   CBR  OBD  CAT  -177.67  30.0  3
+ C7L  Var_42    CBI   OBG  CBS  CAV   119.84  30.0  2
+ C7L  Var_43    CBV   CBS  OBG  CBI  -125.85  30.0  3
+ C7L  Var_44    CBS   OBG  CBI  OAE    -3.20  30.0  2
+ C7L  Var_45    CBS   OBG  CBI  NBB   178.53  30.0  2
+ C7L  Var_46    CBJ   CAW  CBQ  NBB   -56.82  30.0  2
+ C7L  Var_47    CBP   CBQ  CAW  CBJ  -178.84  30.0  3
+ C7L  Var_48    HBQ   CBQ  CAW  CBJ    61.04  30.0  3
+ C7L  Var_49    NBT   CAY  CBP  OAH    55.75  30.0  2
+ C7L  Var_50    CAW   CBQ  CBP  OAH    64.75  30.0  3
+ C7L  Var_51    NBB   CBQ  CBP  OAH   -58.45  30.0  3
+ C7L  Var_52    CBI   NBB  CBQ  CAW    98.07  30.0  3
+ C7L  Var_53    CAY   CBP  CBQ  CAW   -62.34  30.0  1
+ C7L  Var_54    NBB   CBQ  CBP  CAY   174.46  30.0  3
+ C7L  Var_55    CBP   CBQ  NBB  CBI  -137.11  30.0  3
+ C7L  Var_56    NBT   CAY  CBP  CBQ  -178.41  30.0  2
+ C7L  Var_57    HAY   CAY  CBP  OAH   176.86  30.0  2
+ C7L  Var_58    HAYA  CAY  CBP  OAH   -67.45  30.0  2
+ C7L  Var_59    HBP   CBP  CBQ  CAW  -179.33  30.0  1
+ C7L  Var_60    HOAH  OAH  CBP  CAY    22.03  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

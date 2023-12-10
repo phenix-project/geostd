@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ENM  ENM  '(5S,8R,9S,10S,13R,14S,17S)-13-{2-[(3,5-difluorobenzyl)oxy]ethyl}-17-hydroxy-10-methylhexadecahydro-3H-cyclopenta[a]phenanthren-3-one (non-preferred name)'  ligand  68  32  .  2021-08-08  2021-08-08  
+ ENM  ENM  '(5S,8R,9S,10S,13R,14S,17S)-13-{2-[(3,5-difluorobenzyl)oxy]ethyl}-17-hydroxy-10-methylhexadecahydro-3H-cyclopenta[a]phenanthren-3-one (non-preferred name)'  ligand  68  32  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_ENM
@@ -348,30 +349,107 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ENM  CONST_01  C26  C27  C22  C23     0.00   0.0  0
- ENM  CONST_02  C26  C25  C24  C23     0.00   0.0  0
- ENM  CONST_03  C27  C22  C23  C24     0.00   0.0  0
- ENM  CONST_04  C27  C26  C25  C24     0.00   0.0  0
- ENM  CONST_05  C22  C23  C24  C25     0.00   0.0  0
- ENM  CONST_06  C22  C27  C26  C25     0.00   0.0  0
- ENM  CONST_07  C21  C22  C23  C24   180.00   0.0  0
- ENM  CONST_08  F1   C26  C25  C24   180.00   0.0  0
- ENM  CONST_09  C22  C23  C24  F2    180.00   0.0  0
- ENM  CONST_10  C26  C25  C24  F2    180.00   0.0  0
- ENM  CONST_11  C21  C22  C27  C26   180.00   0.0  0
- ENM  CONST_12  C22  C27  C26  F1    180.00   0.0  0
- ENM  CONST_13  H27  C27  C22  C23   180.00   0.0  0
- ENM  CONST_14  H25  C25  C24  C23   180.00   0.0  0
- ENM  CONST_15  H23  C23  C24  C25   180.00   0.0  0
- ENM  Var_01    C10  C14  C13  C12   -56.90  30.0  1
- ENM  Var_02    C02  C01  C06  C05   -51.03  30.0  1
- ENM  Var_03    C03  C02  C01  C06    46.05  30.0  1
- ENM  Var_04    C04  C03  C02  C01   -48.04  30.0  1
- ENM  Var_05    C09  C08  C07  C04    54.61  30.0  1
- ENM  Var_06    C17  C16  C15  C11     4.14  30.0  1
- ENM  Var_07    O03  C21  C22  C23    85.24  30.0  2
- ENM  Var_08    C12  C19  C20  O03   179.07  30.0  3
- ENM  Var_09    C19  C20  O03  C21  -179.06  30.0  3
+ ENM  CONST_01  C26   C27  C22  C23     0.00   0.0  0
+ ENM  CONST_02  C26   C25  C24  C23     0.00   0.0  0
+ ENM  CONST_03  C27   C22  C23  C24     0.00   0.0  0
+ ENM  CONST_04  C27   C26  C25  C24     0.00   0.0  0
+ ENM  CONST_05  C22   C23  C24  C25     0.00   0.0  0
+ ENM  CONST_06  C22   C27  C26  C25     0.00   0.0  0
+ ENM  CONST_07  C21   C22  C23  C24   180.00   0.0  0
+ ENM  CONST_08  F1    C26  C25  C24   180.00   0.0  0
+ ENM  CONST_09  C22   C23  C24  F2    180.00   0.0  0
+ ENM  CONST_10  C26   C25  C24  F2    180.00   0.0  0
+ ENM  CONST_11  C21   C22  C27  C26   180.00   0.0  0
+ ENM  CONST_12  C22   C27  C26  F1    180.00   0.0  0
+ ENM  CONST_13  H27   C27  C22  C23   180.00   0.0  0
+ ENM  CONST_14  H25   C25  C24  C23   180.00   0.0  0
+ ENM  CONST_15  H23   C23  C24  C25   180.00   0.0  0
+ ENM  Var_01    C10   C14  C13  C12   -56.90  30.0  1
+ ENM  Var_02    C02   C01  C06  C05   -51.03  30.0  1
+ ENM  Var_03    C03   C02  C01  C06    46.05  30.0  1
+ ENM  Var_04    C04   C03  C02  C01   -48.04  30.0  1
+ ENM  Var_05    C09   C08  C07  C04    54.61  30.0  1
+ ENM  Var_06    C17   C16  C15  C11     4.14  30.0  1
+ ENM  Var_07    O03   C21  C22  C23    85.24  30.0  2
+ ENM  Var_08    C12   C19  C20  O03   179.07  30.0  3
+ ENM  Var_09    C19   C20  O03  C21  -179.06  30.0  3
+ ENM  Var_10    C15   C16  C17  C12    25.56  30.0  1
+ ENM  Var_11    C10   C09  C11  C12    57.21  30.0  1
+ ENM  Var_12    C08   C09  C11  C12   179.54  30.0  1
+ ENM  Var_13    C16   C15  C11  C12   -32.38  30.0  1
+ ENM  Var_14    C16   C17  C12  C13  -157.92  30.0  1
+ ENM  Var_15    C09   C11  C12  C13   -60.28  30.0  1
+ ENM  Var_16    C15   C11  C12  C13   167.56  30.0  1
+ ENM  Var_17    C09   C10  C14  C13    53.50  30.0  1
+ ENM  Var_18    C05   C10  C14  C13  -178.08  30.0  1
+ ENM  Var_19    C17   C12  C13  C14   166.08  30.0  1
+ ENM  Var_20    C11   C12  C13  C14    57.55  30.0  1
+ ENM  Var_21    C08   C09  C10  C14  -174.47  30.0  1
+ ENM  Var_22    C11   C09  C10  C14   -51.74  30.0  1
+ ENM  Var_23    C04   C05  C10  C14   174.96  30.0  1
+ ENM  Var_24    C06   C05  C10  C14    58.58  30.0  1
+ ENM  Var_25    C07   C08  C09  C10   -54.00  30.0  1
+ ENM  Var_26    C15   C11  C09  C10  -178.27  30.0  1
+ ENM  Var_27    C03   C04  C05  C10  -175.71  30.0  1
+ ENM  Var_28    C07   C04  C05  C10    57.64  30.0  1
+ ENM  Var_29    C01   C06  C05  C10   172.36  30.0  1
+ ENM  Var_30    C08   C09  C10  C05    56.08  30.0  1
+ ENM  Var_31    C11   C09  C10  C05   178.82  30.0  1
+ ENM  Var_32    C02   C03  C04  C05    54.80  30.0  1
+ ENM  Var_33    C08   C07  C04  C05   -57.41  30.0  1
+ ENM  Var_34    C09   C10  C05  C06  -173.15  30.0  1
+ ENM  Var_35    C03   C04  C05  C06   -57.59  30.0  1
+ ENM  Var_36    C07   C04  C05  C06   175.76  30.0  1
+ ENM  Var_37    C04   C05  C06  C01    55.74  30.0  1
+ ENM  Var_38    C07   C04  C03  C02  -177.86  30.0  1
+ ENM  Var_39    C08   C07  C04  C03   175.16  30.0  1
+ ENM  Var_40    C09   C10  C05  C04   -56.77  30.0  1
+ ENM  Var_41    C11   C09  C08  C07  -175.11  30.0  1
+ ENM  Var_42    C15   C11  C09  C08   -55.93  30.0  1
+ ENM  Var_43    C17   C12  C11  C09   179.67  30.0  1
+ ENM  Var_44    C16   C15  C11  C09  -161.67  30.0  1
+ ENM  Var_45    C16   C17  C12  C11   -44.21  30.0  1
+ ENM  Var_46    C17   C12  C11  C15    47.51  30.0  1
+ ENM  Var_47    C16   C17  C12  C19    72.47  30.0  1
+ ENM  Var_48    C09   C11  C12  C19    62.67  30.0  1
+ ENM  Var_49    C15   C11  C12  C19   -69.49  30.0  1
+ ENM  Var_50    C14   C13  C12  C19   -64.67  30.0  1
+ ENM  Var_51    O01   C17  C12  C13    77.16  30.0  1
+ ENM  Var_52    C18   C05  C10  C14   -62.62  30.0  1
+ ENM  Var_53    C09   C10  C05  C18    65.65  30.0  1
+ ENM  Var_54    C03   C04  C05  C18    62.20  30.0  1
+ ENM  Var_55    C07   C04  C05  C18   -64.46  30.0  1
+ ENM  Var_56    C01   C06  C05  C18   -65.45  30.0  1
+ ENM  Var_57    O01   C17  C12  C11  -169.13  30.0  1
+ ENM  Var_58    O01   C17  C16  C15   149.59  30.0  1
+ ENM  Var_59    H161  C16  C17  C12   -94.55  30.0  1
+ ENM  Var_60    H162  C16  C17  C12   147.67  30.0  1
+ ENM  Var_61    H09   C09  C11  C12   -61.97  30.0  1
+ ENM  Var_62    H151  C15  C11  C12    87.32  30.0  1
+ ENM  Var_63    H152  C15  C11  C12  -153.54  30.0  1
+ ENM  Var_64    H17   C17  C12  C13   -43.40  30.0  1
+ ENM  Var_65    H11   C11  C12  C13    55.61  30.0  1
+ ENM  Var_66    H10   C10  C14  C13   -61.45  30.0  1
+ ENM  Var_67    H081  C08  C09  C10  -176.74  30.0  1
+ ENM  Var_68    H082  C08  C09  C10    66.66  30.0  1
+ ENM  Var_69    H04   C04  C05  C10   -58.89  30.0  1
+ ENM  Var_70    H061  C06  C05  C10   -65.90  30.0  1
+ ENM  Var_71    H062  C06  C05  C10    50.71  30.0  1
+ ENM  Var_72    H031  C03  C04  C05   -65.22  30.0  1
+ ENM  Var_73    H032  C03  C04  C05   177.26  30.0  1
+ ENM  Var_74    H071  C07  C04  C05    65.05  30.0  1
+ ENM  Var_75    H072  C07  C04  C05  -178.82  30.0  1
+ ENM  Var_76    C17   C12  C19  C20    83.77  30.0  3
+ ENM  Var_77    C11   C12  C19  C20  -167.51  30.0  3
+ ENM  Var_78    C13   C12  C19  C20   -47.50  30.0  3
+ ENM  Var_79    O01   C17  C12  C19   -52.46  30.0  1
+ ENM  Var_80    HO01  O01  C17  C12   178.80  30.0  3
+ ENM  Var_81    H191  C19  C12  C13  -170.83  30.0  1
+ ENM  Var_82    H192  C19  C12  C13    73.50  30.0  1
+ ENM  Var_83    H181  C18  C05  C10    62.05  30.0  3
+ ENM  Var_84    H182  C18  C05  C10  -178.61  30.0  3
+ ENM  Var_85    H183  C18  C05  C10   -58.24  30.0  3
+ ENM  Var_86    C20   O03  C21  C22   179.91  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

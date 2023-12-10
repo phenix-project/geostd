@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EKK  EKK  (2~{R},3~{R},4~{S},5~{R})-2-(4-azanyl-5-bromanyl-pyrrolo[2,3-d]pyrimidin-7-yl)-5-(hydroxymethyl)oxolane-3,4-diol  ligand  33  20  .  2022-07-24  2022-07-26
+ EKK  EKK  (2~{R},3~{R},4~{S},5~{R})-2-(4-azanyl-5-bromanyl-pyrrolo[2,3-d]pyrimidin-7-yl)-5-(hydroxymethyl)oxolane-3,4-diol  ligand  33  20  .  2022-07-24  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EKK
@@ -193,36 +194,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EKK  CONST_01  C8   C7   C6   C5   180.00  0.0  0
- EKK  CONST_02  C10  C7   C6   C5     0.00  0.0  0
- EKK  CONST_03  C7   C10  N    C5     0.00  0.0  0
- EKK  CONST_04  N3   C10  N    C5   180.00  0.0  0
- EKK  CONST_05  C10  N    C5   C6     0.00  0.0  0
- EKK  CONST_06  N2   C8   C7   C6   180.00  0.0  0
- EKK  CONST_07  N    C10  C7   C6     0.00  0.0  0
- EKK  CONST_08  N3   C10  C7   C6   180.00  0.0  0
- EKK  CONST_09  N    C5   C6   C7     0.00  0.0  0
- EKK  CONST_10  C9   N2   C8   C7     0.00  0.0  0
- EKK  CONST_11  C9   N3   C10  C7     0.00  0.0  0
- EKK  CONST_12  N    C10  C7   C8   180.00  0.0  0
- EKK  CONST_13  N3   C10  C7   C8     0.00  0.0  0
- EKK  CONST_14  N3   C9   N2   C8     0.00  0.0  0
- EKK  CONST_15  C10  C7   C8   N2     0.00  0.0  0
- EKK  CONST_16  C10  N3   C9   N2     0.00  0.0  0
- EKK  CONST_17  N    C10  N3   C9   180.00  0.0  0
- EKK  CONST_18  C6   C5   N    C4   180.00  0.0  0
- EKK  CONST_19  C7   C10  N    C4   180.00  0.0  0
- EKK  CONST_20  N3   C10  N    C4     0.00  0.0  0
- EKK  CONST_21  N1   C8   C7   C6     0.00  0.0  0
- EKK  CONST_22  C10  C7   C8   N1   180.00  0.0  0
- EKK  CONST_23  C9   N2   C8   N1   180.00  0.0  0
- EKK  CONST_24  BR   C6   C7   C8     0.00  0.0  0
- EKK  CONST_25  BR   C6   C7   C10  180.00  0.0  0
- EKK  CONST_26  N    C5   C6   BR   180.00  0.0  0
- EKK  CONST_27  H3   C5   N    C4     0.00  0.0  0
- EKK  CONST_28  H6   C9   N2   C8   180.00  0.0  0
- EKK  CONST_29  H4   N1   C8   C7     0.00  0.0  0
- EKK  CONST_30  H5   N1   C8   C7   180.00  0.0  0
+ EKK  CONST_01  C8   C7   C6   C5    180.00   0.0  0
+ EKK  CONST_02  C10  C7   C6   C5      0.00   0.0  0
+ EKK  CONST_03  C7   C10  N    C5      0.00   0.0  0
+ EKK  CONST_04  N3   C10  N    C5    180.00   0.0  0
+ EKK  CONST_05  C10  N    C5   C6      0.00   0.0  0
+ EKK  CONST_06  N2   C8   C7   C6    180.00   0.0  0
+ EKK  CONST_07  N    C10  C7   C6      0.00   0.0  0
+ EKK  CONST_08  N3   C10  C7   C6    180.00   0.0  0
+ EKK  CONST_09  N    C5   C6   C7      0.00   0.0  0
+ EKK  CONST_10  C9   N2   C8   C7      0.00   0.0  0
+ EKK  CONST_11  C9   N3   C10  C7      0.00   0.0  0
+ EKK  CONST_12  N    C10  C7   C8    180.00   0.0  0
+ EKK  CONST_13  N3   C10  C7   C8      0.00   0.0  0
+ EKK  CONST_14  N3   C9   N2   C8      0.00   0.0  0
+ EKK  CONST_15  C10  C7   C8   N2      0.00   0.0  0
+ EKK  CONST_16  C10  N3   C9   N2      0.00   0.0  0
+ EKK  CONST_17  N    C10  N3   C9    180.00   0.0  0
+ EKK  CONST_18  C6   C5   N    C4    180.00   0.0  0
+ EKK  CONST_19  C7   C10  N    C4    180.00   0.0  0
+ EKK  CONST_20  N3   C10  N    C4      0.00   0.0  0
+ EKK  CONST_21  N1   C8   C7   C6      0.00   0.0  0
+ EKK  CONST_22  C10  C7   C8   N1    180.00   0.0  0
+ EKK  CONST_23  C9   N2   C8   N1    180.00   0.0  0
+ EKK  CONST_24  BR   C6   C7   C8      0.00   0.0  0
+ EKK  CONST_25  BR   C6   C7   C10   180.00   0.0  0
+ EKK  CONST_26  N    C5   C6   BR    180.00   0.0  0
+ EKK  CONST_27  H3   C5   N    C4      0.00   0.0  0
+ EKK  CONST_28  H6   C9   N2   C8    180.00   0.0  0
+ EKK  CONST_29  H4   N1   C8   C7      0.00   0.0  0
+ EKK  CONST_30  H5   N1   C8   C7    180.00   0.0  0
+ EKK  Var_01    C2   C1   O    C4    -15.66  30.0  1
+ EKK  Var_02    C1   C2   C3   C4    -38.28  30.0  1
+ EKK  Var_03    O    C4   N    C5     39.74  30.0  2
+ EKK  Var_04    C3   C4   N    C5    -78.30  30.0  2
+ EKK  Var_05    O    C4   N    C10  -144.08  30.0  2
+ EKK  Var_06    C3   C4   N    C10    97.89  30.0  2
+ EKK  Var_07    C1   O    C4   N    -132.39  30.0  1
+ EKK  Var_08    C2   C3   C4   N     150.33  30.0  1
+ EKK  Var_09    O    C1   C2   C3     33.87  30.0  1
+ EKK  Var_10    C1   O    C4   C3     -9.72  30.0  1
+ EKK  Var_11    O    C4   C3   C2     30.77  30.0  1
+ EKK  Var_12    C    C1   O    C4    106.24  30.0  1
+ EKK  Var_13    O2   C2   C3   C4     79.75  30.0  1
+ EKK  Var_14    O1   C3   C4   N     -85.59  30.0  1
+ EKK  Var_15    C    C1   C2   C3    -87.75  30.0  1
+ EKK  Var_16    C1   C2   C3   O1   -157.69  30.0  1
+ EKK  Var_17    O    C4   C3   O1    154.85  30.0  1
+ EKK  Var_18    O    C1   C2   O2    -80.57  30.0  1
+ EKK  Var_19    H11  C1   O    C4   -134.61  30.0  1
+ EKK  Var_20    H9   C2   C3   C4   -156.89  30.0  1
+ EKK  Var_21    H2   C4   N    C5    160.15  30.0  2
+ EKK  Var_22    H7   C3   C4   N      36.55  30.0  1
+ EKK  Var_23    O    C1   C    O3     52.40  30.0  3
+ EKK  Var_24    C2   C1   C    O3    170.31  30.0  3
+ EKK  Var_25    O2   C2   C3   O1    -39.66  30.0  1
+ EKK  Var_26    C    C1   C2   O2    157.81  30.0  1
+ EKK  Var_27    H8   O1   C3   C4    169.39  30.0  3
+ EKK  Var_28    H10  O2   C2   C3   -176.82  30.0  3
+ EKK  Var_29    H12  C    C1   C2     47.57  30.0  2
+ EKK  Var_30    H13  C    C1   C2    -68.26  30.0  2
+ EKK  Var_31    H1   O3   C    C1    178.62  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

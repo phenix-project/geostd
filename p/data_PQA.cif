@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PQA  PQA  '[5-amino-1-(4-fluorophenyl)-1H-pyrazol-4-yl][3-(piperidin-4-yloxy)phenyl]methanone'  ligand  49  28  .  2021-08-19  2021-08-19  
+ PQA  PQA  '[5-amino-1-(4-fluorophenyl)-1H-pyrazol-4-yl][3-(piperidin-4-yloxy)phenyl]methanone'  ligand  49  28  .  2021-08-19  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_PQA
@@ -255,54 +256,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PQA  CONST_01  N5   C4   C3   C2     0.00   0.0  0
- PQA  CONST_02  C4   N5   N6   C2     0.00   0.0  0
- PQA  CONST_05  N5   N6   C2   C3     0.00   0.0  0
- PQA  CONST_06  C7   N6   C2   C3   180.00   0.0  0
- PQA  CONST_07  N6   N5   C4   C3     0.00   0.0  0
- PQA  CONST_08  N6   C2   C3   C4     0.00   0.0  0
- PQA  CONST_09  C7   N6   N5   C4   180.00   0.0  0
- PQA  CONST_12  C9   C8   C7   N6   180.00   0.0  0
- PQA  CONST_13  C12  C13  C7   N6   180.00   0.0  0
- PQA  CONST_14  C10  C9   C8   C7     0.00   0.0  0
- PQA  CONST_15  C10  C12  C13  C7     0.00   0.0  0
- PQA  CONST_16  C12  C13  C7   C8     0.00   0.0  0
- PQA  CONST_17  C12  C10  C9   C8     0.00   0.0  0
- PQA  CONST_18  C13  C7   C8   C9     0.00   0.0  0
- PQA  CONST_19  C13  C12  C10  C9     0.00   0.0  0
- PQA  CONST_20  C19  C18  C17  C16    0.00   0.0  0
- PQA  CONST_21  C19  C20  C28  C16    0.00   0.0  0
- PQA  CONST_22  C20  C28  C16  C17    0.00   0.0  0
- PQA  CONST_23  C20  C19  C18  C17    0.00   0.0  0
- PQA  CONST_24  C28  C16  C17  C18    0.00   0.0  0
- PQA  CONST_25  C28  C20  C19  C18    0.00   0.0  0
- PQA  CONST_26  C4   C3   C2   N1   180.00   0.0  0
- PQA  CONST_27  N5   N6   C2   N1   180.00   0.0  0
- PQA  CONST_28  C7   N6   C2   N1     0.00   0.0  0
- PQA  CONST_29  C14  C3   C4   N5   180.00   0.0  0
- PQA  CONST_30  C14  C3   C2   N6   180.00   0.0  0
- PQA  CONST_31  F11  C10  C9   C8   180.00   0.0  0
- PQA  CONST_32  C13  C12  C10  F11  180.00   0.0  0
- PQA  CONST_33  C18  C17  C16  C14  180.00   0.0  0
- PQA  CONST_34  C20  C28  C16  C14  180.00   0.0  0
- PQA  CONST_35  O21  C20  C28  C16  180.00   0.0  0
- PQA  CONST_36  O21  C20  C19  C18  180.00   0.0  0
- PQA  CONST_37  H4   C4   C3   C2   180.00   0.0  0
- PQA  CONST_38  H8   C8   C7   N6     0.00   0.0  0
- PQA  CONST_39  H13  C13  C7   N6     0.00   0.0  0
- PQA  CONST_40  H9   C9   C8   C7   180.00   0.0  0
- PQA  CONST_41  H12  C12  C13  C7   180.00   0.0  0
- PQA  CONST_42  H18  C18  C17  C16  180.00   0.0  0
- PQA  CONST_43  H28  C28  C16  C17  180.00   0.0  0
- PQA  CONST_44  H19  C19  C18  C17  180.00   0.0  0
- PQA  CONST_45  H17  C17  C18  C19  180.00   0.0  0
- PQA  Var_01    N25  C24  C23  C22  -57.28  30.0  1
- PQA  Var_02    N25  C26  C27  C22   57.56  30.0  1
- PQA  Var_03    C26  N25  C24  C23   61.43  30.0  1
- PQA  Var_04    C27  C26  N25  C24  -61.60  30.0  1
- PQA  Var_05    C16  C14  C3   C2   172.94  30.0  2
- PQA  Var_06    C17  C16  C14  C3   -39.02  30.0  2
- PQA  Var_07    C28  C20  O21  C22  172.90  30.0  2
+ PQA  CONST_01  N5    C4   C3   C2      0.00   0.0  0
+ PQA  CONST_02  C4    N5   N6   C2      0.00   0.0  0
+ PQA  CONST_03  N5    N6   C2   C3      0.00   0.0  0
+ PQA  CONST_04  C7    N6   C2   C3    180.00   0.0  0
+ PQA  CONST_05  N6    N5   C4   C3      0.00   0.0  0
+ PQA  CONST_06  N6    C2   C3   C4      0.00   0.0  0
+ PQA  CONST_07  C7    N6   N5   C4    180.00   0.0  0
+ PQA  CONST_08  C9    C8   C7   N6    180.00   0.0  0
+ PQA  CONST_09  C12   C13  C7   N6    180.00   0.0  0
+ PQA  CONST_10  C10   C9   C8   C7      0.00   0.0  0
+ PQA  CONST_11  C10   C12  C13  C7      0.00   0.0  0
+ PQA  CONST_12  C12   C13  C7   C8      0.00   0.0  0
+ PQA  CONST_13  C12   C10  C9   C8      0.00   0.0  0
+ PQA  CONST_14  C13   C7   C8   C9      0.00   0.0  0
+ PQA  CONST_15  C13   C12  C10  C9      0.00   0.0  0
+ PQA  CONST_16  C19   C18  C17  C16     0.00   0.0  0
+ PQA  CONST_17  C19   C20  C28  C16     0.00   0.0  0
+ PQA  CONST_18  C20   C28  C16  C17     0.00   0.0  0
+ PQA  CONST_19  C20   C19  C18  C17     0.00   0.0  0
+ PQA  CONST_20  C28   C16  C17  C18     0.00   0.0  0
+ PQA  CONST_21  C28   C20  C19  C18     0.00   0.0  0
+ PQA  CONST_22  C4    C3   C2   N1    180.00   0.0  0
+ PQA  CONST_23  N5    N6   C2   N1    180.00   0.0  0
+ PQA  CONST_24  C7    N6   C2   N1      0.00   0.0  0
+ PQA  CONST_25  C14   C3   C4   N5    180.00   0.0  0
+ PQA  CONST_26  C14   C3   C2   N6    180.00   0.0  0
+ PQA  CONST_27  F11   C10  C9   C8    180.00   0.0  0
+ PQA  CONST_28  C13   C12  C10  F11   180.00   0.0  0
+ PQA  CONST_29  C18   C17  C16  C14   180.00   0.0  0
+ PQA  CONST_30  C20   C28  C16  C14   180.00   0.0  0
+ PQA  CONST_31  O21   C20  C28  C16   180.00   0.0  0
+ PQA  CONST_32  O21   C20  C19  C18   180.00   0.0  0
+ PQA  CONST_33  H4    C4   C3   C2    180.00   0.0  0
+ PQA  CONST_34  H8    C8   C7   N6      0.00   0.0  0
+ PQA  CONST_35  H13   C13  C7   N6      0.00   0.0  0
+ PQA  CONST_36  H9    C9   C8   C7    180.00   0.0  0
+ PQA  CONST_37  H12   C12  C13  C7    180.00   0.0  0
+ PQA  CONST_38  H18   C18  C17  C16   180.00   0.0  0
+ PQA  CONST_39  H28   C28  C16  C17   180.00   0.0  0
+ PQA  CONST_40  H19   C19  C18  C17   180.00   0.0  0
+ PQA  CONST_41  H17   C17  C18  C19   180.00   0.0  0
+ PQA  Var_01    N25   C24  C23  C22   -57.28  30.0  1
+ PQA  Var_02    N25   C26  C27  C22    57.56  30.0  1
+ PQA  Var_03    C26   N25  C24  C23    61.43  30.0  1
+ PQA  Var_04    C27   C26  N25  C24   -61.60  30.0  1
+ PQA  Var_05    C16   C14  C3   C2    172.94  30.0  2
+ PQA  Var_06    C17   C16  C14  C3    -39.02  30.0  2
+ PQA  Var_07    C28   C20  O21  C22   172.90  30.0  2
+ PQA  Var_08    C8    C7   N6   C2    132.31  30.0  2
+ PQA  Var_09    C13   C7   N6   C2    -48.73  30.0  2
+ PQA  Var_10    C8    C7   N6   N5    -45.48  30.0  2
+ PQA  Var_11    C13   C7   N6   N5    133.48  30.0  2
+ PQA  Var_12    C26   C27  C22  C23   -55.13  30.0  1
+ PQA  Var_13    C27   C22  C23  C24    54.97  30.0  1
+ PQA  Var_14    C23   C22  O21  C20   164.91  30.0  3
+ PQA  Var_15    C27   C22  O21  C20   -74.06  30.0  3
+ PQA  Var_16    C24   C23  C22  O21   177.38  30.0  1
+ PQA  Var_17    C26   C27  C22  O21  -174.55  30.0  1
+ PQA  Var_18    H271  C27  C22  C23    64.74  30.0  1
+ PQA  Var_19    H272  C27  C22  C23  -177.07  30.0  1
+ PQA  Var_20    H22   C22  C23  C24   -64.20  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

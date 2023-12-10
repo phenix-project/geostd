@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FUK  FUK  2-[(2~{R},5~{R})-2-[[(3~{R},5~{R})-3,5-dimethylmorpholin-4-yl]methyl]-5-methyl-piperazin-1-yl]-1-[6-[(~{S})-(4-fluorophenyl)-oxidanyl-methyl]-3,3-dimethyl-2~{H}-pyrrolo[3,2-b]pyridin-1-yl]ethanone  ligand  81  39  .  2022-07-25  2022-07-26
+ FUK  FUK  2-[(2~{R},5~{R})-2-[[(3~{R},5~{R})-3,5-dimethylmorpholin-4-yl]methyl]-5-methyl-piperazin-1-yl]-1-[6-[(~{S})-(4-fluorophenyl)-oxidanyl-methyl]-3,3-dimethyl-2~{H}-pyrrolo[3,2-b]pyridin-1-yl]ethanone  ligand  81  39  .  2022-07-25  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FUK
@@ -390,47 +391,98 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FUK  CONST_01  C16  C17  C18  C13    0.00   0.0  0
- FUK  CONST_02  C16  C15  N14  C13    0.00   0.0  0
- FUK  CONST_03  C18  C17  C16  C15    0.00   0.0  0
- FUK  CONST_04  C18  C13  N14  C15    0.00   0.0  0
- FUK  CONST_05  C24  C26  C27  C21    0.00   0.0  0
- FUK  CONST_06  C24  C23  C22  C21    0.00   0.0  0
- FUK  CONST_07  C26  C27  C21  C22    0.00   0.0  0
- FUK  CONST_08  C26  C24  C23  C22    0.00   0.0  0
- FUK  CONST_09  C27  C26  C24  C23    0.00   0.0  0
- FUK  CONST_10  C27  C21  C22  C23    0.00   0.0  0
- FUK  CONST_11  C17  C18  C13  N14    0.00   0.0  0
- FUK  CONST_12  C17  C16  C15  N14    0.00   0.0  0
- FUK  CONST_13  C18  C17  C16  C19  180.00   0.0  0
- FUK  CONST_14  N14  C15  C16  C19  180.00   0.0  0
- FUK  CONST_15  C26  C27  C21  C19  180.00   0.0  0
- FUK  CONST_16  C23  C22  C21  C19  180.00   0.0  0
- FUK  CONST_17  F25  C24  C23  C22  180.00   0.0  0
- FUK  CONST_18  F25  C24  C26  C27  180.00   0.0  0
- FUK  CONST_19  H57  C17  C18  C13  180.00   0.0  0
- FUK  CONST_20  H56  C15  N14  C13  180.00   0.0  0
- FUK  CONST_21  H62  C26  C27  C21  180.00   0.0  0
- FUK  CONST_22  H61  C23  C22  C21  180.00   0.0  0
- FUK  CONST_23  H63  C27  C21  C22  180.00   0.0  0
- FUK  CONST_24  H60  C22  C23  C24  180.00   0.0  0
- FUK  CONST_25  C9   N8   C6   C5   180.00   0.0  0
- FUK  CONST_26  C18  N8   C6   C5     0.00   0.0  0
- FUK  CONST_27  C9   N8   C6   O7     0.00   0.0  0
- FUK  CONST_28  C18  N8   C6   O7   180.00   0.0  0
- FUK  Var_01    C28  C38  N39  C2   -52.83  30.0  1
- FUK  Var_02    C28  N4   C3   C2    57.87  30.0  1
- FUK  Var_03    C18  N8   C9   C10  -18.30  30.0  1
- FUK  Var_04    C9   N8   C18  C13   11.23  30.0  1
- FUK  Var_05    N8   C9   C10  C13   17.39  30.0  1
- FUK  Var_06    C18  C13  C10  C9   -11.55  30.0  1
- FUK  Var_07    C31  N30  C29  C28  -77.89  30.0  3
- FUK  Var_08    H71  C33  O34  C35  179.19  30.0  1
- FUK  Var_09    H74  C35  O34  C33  -64.54  30.0  1
- FUK  Var_10    C6   C5   N4   C3    81.00  30.0  3
- FUK  Var_11    N8   C6   C5   N4   164.97  30.0  3
- FUK  Var_12    H51  C11  C10  C13   56.25  30.0  3
- FUK  Var_13    H55  C12  C10  C13   62.18  30.0  3
+ FUK  CONST_01  C16  C17  C18  C13     0.00   0.0  0
+ FUK  CONST_02  C16  C15  N14  C13     0.00   0.0  0
+ FUK  CONST_03  C18  C17  C16  C15     0.00   0.0  0
+ FUK  CONST_04  C18  C13  N14  C15     0.00   0.0  0
+ FUK  CONST_05  C24  C26  C27  C21     0.00   0.0  0
+ FUK  CONST_06  C24  C23  C22  C21     0.00   0.0  0
+ FUK  CONST_07  C26  C27  C21  C22     0.00   0.0  0
+ FUK  CONST_08  C26  C24  C23  C22     0.00   0.0  0
+ FUK  CONST_09  C27  C26  C24  C23     0.00   0.0  0
+ FUK  CONST_10  C27  C21  C22  C23     0.00   0.0  0
+ FUK  CONST_11  C17  C18  C13  N14     0.00   0.0  0
+ FUK  CONST_12  C17  C16  C15  N14     0.00   0.0  0
+ FUK  CONST_13  C18  C17  C16  C19   180.00   0.0  0
+ FUK  CONST_14  N14  C15  C16  C19   180.00   0.0  0
+ FUK  CONST_15  C26  C27  C21  C19   180.00   0.0  0
+ FUK  CONST_16  C23  C22  C21  C19   180.00   0.0  0
+ FUK  CONST_17  F25  C24  C23  C22   180.00   0.0  0
+ FUK  CONST_18  F25  C24  C26  C27   180.00   0.0  0
+ FUK  CONST_19  H57  C17  C18  C13   180.00   0.0  0
+ FUK  CONST_20  H56  C15  N14  C13   180.00   0.0  0
+ FUK  CONST_21  H62  C26  C27  C21   180.00   0.0  0
+ FUK  CONST_22  H61  C23  C22  C21   180.00   0.0  0
+ FUK  CONST_23  H63  C27  C21  C22   180.00   0.0  0
+ FUK  CONST_24  H60  C22  C23  C24   180.00   0.0  0
+ FUK  CONST_25  C9   N8   C6   C5    180.00   0.0  0
+ FUK  CONST_26  C18  N8   C6   C5      0.00   0.0  0
+ FUK  CONST_27  C9   N8   C6   O7      0.00   0.0  0
+ FUK  CONST_28  C18  N8   C6   O7    180.00   0.0  0
+ FUK  Var_01    C28  C38  N39  C2    -52.83  30.0  1
+ FUK  Var_02    C28  N4   C3   C2     57.87  30.0  1
+ FUK  Var_03    C18  N8   C9   C10   -18.30  30.0  1
+ FUK  Var_04    C9   N8   C18  C13    11.23  30.0  1
+ FUK  Var_05    N8   C9   C10  C13    17.39  30.0  1
+ FUK  Var_06    C18  C13  C10  C9    -11.55  30.0  1
+ FUK  Var_07    C31  N30  C29  C28   -77.89  30.0  3
+ FUK  Var_08    H71  C33  O34  C35   179.19  30.0  1
+ FUK  Var_09    H74  C35  O34  C33   -64.54  30.0  1
+ FUK  Var_10    C6   C5   N4   C3     81.00  30.0  3
+ FUK  Var_11    N8   C6   C5   N4    164.97  30.0  3
+ FUK  Var_12    H51  C11  C10  C13    56.25  30.0  3
+ FUK  Var_13    H55  C12  C10  C13    62.18  30.0  3
+ FUK  Var_14    C38  N39  C2   C3     51.61  30.0  1
+ FUK  Var_15    C38  C28  N4   C3    -55.54  30.0  1
+ FUK  Var_16    N39  C38  C28  N4     54.61  30.0  1
+ FUK  Var_17    N39  C2   C3   N4    -55.58  30.0  1
+ FUK  Var_18    C35  C36  N30  C31    54.01  30.0  1
+ FUK  Var_19    C33  C31  N30  C36   -57.53  30.0  1
+ FUK  Var_20    O34  C33  C31  N30    59.44  30.0  1
+ FUK  Var_21    O34  C35  C36  N30   -53.52  30.0  1
+ FUK  Var_22    C38  N39  C2   C1    175.62  30.0  1
+ FUK  Var_23    N4   C3   C2   C1   -179.14  30.0  1
+ FUK  Var_24    C29  C28  N4   C3   -178.89  30.0  1
+ FUK  Var_25    N30  C29  C28  N4     68.78  30.0  3
+ FUK  Var_26    C38  C28  N4   C5    178.88  30.0  1
+ FUK  Var_27    C21  C19  C16  C15   128.27  30.0  1
+ FUK  Var_28    C27  C21  C19  C16   -51.37  30.0  2
+ FUK  Var_29    C22  C21  C19  C16   130.36  30.0  2
+ FUK  Var_30    C17  C16  C19  C21   -51.96  30.0  2
+ FUK  Var_31    C37  C36  N30  C31   172.77  30.0  1
+ FUK  Var_32    C29  N30  C36  C35  -171.58  30.0  1
+ FUK  Var_33    C32  C31  N30  C36    66.93  30.0  1
+ FUK  Var_34    O34  C35  C36  C37  -175.98  30.0  1
+ FUK  Var_35    N30  C29  C28  C38   -54.62  30.0  3
+ FUK  Var_36    N39  C38  C28  C29  -177.56  30.0  1
+ FUK  Var_37    C33  C31  N30  C29   167.20  30.0  1
+ FUK  Var_38    C32  C31  C33  O34   -67.84  30.0  1
+ FUK  Var_39    H81  N39  C2   C3    -67.55  30.0  1
+ FUK  Var_40    H64  C28  N4   C3     61.91  30.0  1
+ FUK  Var_41    H43  C2   C3   N4     61.82  30.0  1
+ FUK  Var_42    H75  C36  N30  C31   -65.20  30.0  1
+ FUK  Var_43    H67  C31  N30  C36  -171.66  30.0  1
+ FUK  Var_44    H73  C35  C36  N30  -173.33  30.0  1
+ FUK  Var_45    C29  C28  N4   C5     55.54  30.0  1
+ FUK  Var_46    O20  C19  C16  C15     1.86  30.0  1
+ FUK  Var_47    O20  C19  C21  C22  -102.51  30.0  2
+ FUK  Var_48    O20  C19  C21  C27    75.76  30.0  2
+ FUK  Var_49    C29  N30  C36  C37   -52.82  30.0  1
+ FUK  Var_50    O20  C19  C16  C17  -178.37  30.0  1
+ FUK  Var_51    C32  C31  N30  C29   -68.34  30.0  1
+ FUK  Var_52    H41  C1   C2   C3     63.02  30.0  3
+ FUK  Var_53    H42  C1   C2   C3   -177.03  30.0  3
+ FUK  Var_54    H40  C1   C2   C3    -56.89  30.0  3
+ FUK  Var_55    H65  C29  C28  N4   -172.69  30.0  3
+ FUK  Var_56    H66  C29  C28  N4    -61.73  30.0  3
+ FUK  Var_57    H58  C19  C16  C15  -114.05  30.0  1
+ FUK  Var_58    H76  C37  C36  C35    72.27  30.0  3
+ FUK  Var_59    H77  C37  C36  C35  -165.62  30.0  3
+ FUK  Var_60    H78  C37  C36  C35   -46.89  30.0  3
+ FUK  Var_61    H68  C32  C31  N30   -72.56  30.0  3
+ FUK  Var_62    H69  C32  C31  N30    48.63  30.0  3
+ FUK  Var_63    H70  C32  C31  N30   168.06  30.0  3
+ FUK  Var_64    H59  O20  C19  C16    72.38  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GFB  GFB  '[(2R,3S,4R,5R)-5-(2-amino-6-oxo-1,6-dihydro-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3S,4R,5S,6S)-3,4,5-trihydroxy-6-methyltetrahydro-2H-pyran-2-yl dihydrogen diphosphate (non-preferred name)'  ligand  61  38  .  2021-08-10  2021-08-10  
+ GFB  GFB  '[(2R,3S,4R,5R)-5-(2-amino-6-oxo-1,6-dihydro-9H-purin-9-yl)-3,4-dihydroxytetrahydrofuran-2-yl]methyl (2R,3S,4R,5S,6S)-3,4,5-trihydroxy-6-methyltetrahydro-2H-pyran-2-yl dihydrogen diphosphate (non-preferred name)'  ligand  61  38  .  2021-08-10  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_GFB
@@ -304,26 +305,95 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GFB  CONST_01  N7   C5   C4   N9      0.00   0.0  0
- GFB  CONST_02  C5   N7   C8   N9      0.00   0.0  0
- GFB  CONST_03  C5   C4   N9   C8      0.00   0.0  0
- GFB  CONST_04  C4   C5   N7   C8      0.00   0.0  0
- GFB  CONST_05  N7   C8   N9   C4      0.00   0.0  0
- GFB  CONST_06  N3   C4   N9   C1'     0.00   0.0  0
- GFB  CONST_07  C5   C4   N9   C1'   180.00   0.0  0
- GFB  CONST_08  N7   C8   N9   C1'   180.00   0.0  0
- GFB  CONST_09  N1   C2   N3   C4      0.00   0.0  0
- GFB  CONST_10  C2   N1   C6   C5      0.00   0.0  0
- GFB  CONST_11  N3   C2   N1   C6      0.00   0.0  0
- GFB  CONST_12  N2   C2   N3   C4    180.00   0.0  0
- GFB  CONST_13  N2   C2   N1   C6    180.00   0.0  0
- GFB  CONST_14  C2   N1   C6   O6    180.00   0.0  0
- GFB  CONST_15  H8   C8   N9   C1'     0.00   0.0  0
- GFB  CONST_16  HN1  N1   C6   C5    180.00   0.0  0
- GFB  CONST_17  HN2  N2   C2   N1    180.00   0.0  0
- GFB  Var_01    C4'  C5'  O5'  P    -152.00  30.0  3
- GFB  Var_02    O1X  P1   O1   C1    -42.98  30.0  3
- GFB  Var_03    O1   P1   O2P  P    -114.18  30.0  3
+ GFB  CONST_01  N7    C5   C4   N9      0.00   0.0  0
+ GFB  CONST_02  C5    N7   C8   N9      0.00   0.0  0
+ GFB  CONST_03  C5    C4   N9   C8      0.00   0.0  0
+ GFB  CONST_04  C4    C5   N7   C8      0.00   0.0  0
+ GFB  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ GFB  CONST_06  N3    C4   N9   C1'     0.00   0.0  0
+ GFB  CONST_07  C5    C4   N9   C1'   180.00   0.0  0
+ GFB  CONST_08  N7    C8   N9   C1'   180.00   0.0  0
+ GFB  CONST_09  N1    C2   N3   C4      0.00   0.0  0
+ GFB  CONST_10  C2    N1   C6   C5      0.00   0.0  0
+ GFB  CONST_11  N3    C2   N1   C6      0.00   0.0  0
+ GFB  CONST_12  N2    C2   N3   C4    180.00   0.0  0
+ GFB  CONST_13  N2    C2   N1   C6    180.00   0.0  0
+ GFB  CONST_14  C2    N1   C6   O6    180.00   0.0  0
+ GFB  CONST_15  H8    C8   N9   C1'     0.00   0.0  0
+ GFB  CONST_16  HN1   N1   C6   C5    180.00   0.0  0
+ GFB  CONST_17  HN2   N2   C2   N1    180.00   0.0  0
+ GFB  Var_01    C4'   C5'  O5'  P    -152.00  30.0  3
+ GFB  Var_02    O1X   P1   O1   C1    -42.98  30.0  3
+ GFB  Var_03    O1    P1   O2P  P    -114.18  30.0  3
+ GFB  Var_04    C1'   C2'  C3'  C4'   -37.96  30.0  1
+ GFB  Var_05    C2'   C1'  O4'  C4'   -13.41  30.0  1
+ GFB  Var_06    N9    C1'  O4'  C4'  -136.63  30.0  1
+ GFB  Var_07    C2'   C3'  C4'  O4'    31.50  30.0  1
+ GFB  Var_08    C3'   C2'  C1'  O4'    32.61  30.0  1
+ GFB  Var_09    C4    N9   C1'  O4'  -134.25  30.0  2
+ GFB  Var_10    C8    N9   C1'  O4'    46.06  30.0  2
+ GFB  Var_11    C1'   O4'  C4'  C3'   -11.83  30.0  1
+ GFB  Var_12    N9    C1'  C2'  C3'   152.78  30.0  1
+ GFB  Var_13    C4    N9   C1'  C2'   107.43  30.0  2
+ GFB  Var_14    C8    N9   C1'  C2'   -72.26  30.0  2
+ GFB  Var_15    C4A   C3   C2A  C1     54.66  30.0  1
+ GFB  Var_16    C4A   C5A  O5   C1    -61.86  30.0  1
+ GFB  Var_17    C5A   O5   C1   C2A    61.77  30.0  1
+ GFB  Var_18    C5A   C4A  C3   C2A   -54.37  30.0  1
+ GFB  Var_19    C3    C2A  C1   O5    -57.12  30.0  1
+ GFB  Var_20    C3    C4A  C5A  O5     56.73  30.0  1
+ GFB  Var_21    C2'   C3'  C4'  C5'   -89.26  30.0  1
+ GFB  Var_22    C1'   O4'  C4'  C5'   109.17  30.0  1
+ GFB  Var_23    O2'   C2'  C3'  C4'  -156.34  30.0  1
+ GFB  Var_24    O3'   C3'  C4'  O4'   -85.43  30.0  1
+ GFB  Var_25    O2'   C2'  C1'  O4'   154.63  30.0  1
+ GFB  Var_26    O3'   C3'  C2'  C1'    77.59  30.0  1
+ GFB  Var_27    N9    C1'  C2'  O2'   -85.20  30.0  1
+ GFB  Var_28    O3    C3   C2A  C1    176.92  30.0  1
+ GFB  Var_29    C6A   C5A  O5   C1    173.92  30.0  1
+ GFB  Var_30    O4    C4A  C3   C2A    68.33  30.0  1
+ GFB  Var_31    C3    C2A  C1   O1   -174.05  30.0  1
+ GFB  Var_32    C5A   O5   C1   O1    179.60  30.0  1
+ GFB  Var_33    O2    C2A  C1   O5   -175.42  30.0  1
+ GFB  Var_34    O4    C4A  C5A  O5    -63.46  30.0  1
+ GFB  Var_35    C6A   C5A  C4A  C3    177.84  30.0  1
+ GFB  Var_36    C4A   C3   C2A  O2    175.59  30.0  1
+ GFB  Var_37    C5A   C4A  C3   O3   -178.60  30.0  1
+ GFB  Var_38    H2'   C2'  C3'  C4'    77.41  30.0  1
+ GFB  Var_39    H1'   C1'  O4'  C4'   106.23  30.0  1
+ GFB  Var_40    H3'   C3'  C4'  O4'   150.44  30.0  1
+ GFB  Var_41    H4'   C4'  O4'  C1'  -130.89  30.0  1
+ GFB  Var_42    H3    C3   C2A  C1    -61.10  30.0  1
+ GFB  Var_43    H5A   C5A  O5   C1     55.79  30.0  1
+ GFB  Var_44    H4A   C4A  C3   C2A  -170.86  30.0  1
+ GFB  Var_45    H2A   C2A  C1   O5     61.74  30.0  1
+ GFB  Var_46    H1    C1   C2A  C3     64.11  30.0  1
+ GFB  Var_47    C3'   C4'  C5'  O5'   169.55  30.0  2
+ GFB  Var_48    O4'   C4'  C5'  O5'    51.91  30.0  2
+ GFB  Var_49    C2A   C1   O1   P1   -132.77  30.0  1
+ GFB  Var_50    O5    C1   O1   P1    108.03  30.0  1
+ GFB  Var_51    O3'   C3'  C4'  C5'   153.81  30.0  1
+ GFB  Var_52    O2'   C2'  C3'  O3'   -40.79  30.0  1
+ GFB  Var_53    O2    C2A  C1   O1     67.65  30.0  1
+ GFB  Var_54    O3    C3   C2A  O2    -62.16  30.0  1
+ GFB  Var_55    O4    C4A  C3   O3    -55.89  30.0  1
+ GFB  Var_56    C6A   C5A  C4A  O4     57.65  30.0  1
+ GFB  Var_57    HO3'  O3'  C3'  C4'   157.90  30.0  3
+ GFB  Var_58    H5'A  C5'  C4'  O4'   173.02  30.0  3
+ GFB  Var_59    H5'   C5'  C4'  O4'   -70.50  30.0  3
+ GFB  Var_60    HO2'  O2'  C2'  C3'   -84.72  30.0  3
+ GFB  Var_61    HO2   O2   C2A  C1    -52.29  30.0  3
+ GFB  Var_62    HO3   O3   C3   C2A    59.74  30.0  3
+ GFB  Var_63    H6A   C6A  C5A  O5    -62.56  30.0  3
+ GFB  Var_64    H6AA  C6A  C5A  O5     57.61  30.0  3
+ GFB  Var_65    H6AB  C6A  C5A  O5    178.20  30.0  3
+ GFB  Var_66    HO4   O4   C4A  C3    169.54  30.0  3
+ GFB  Var_67    C5'   O5'  P    O1P    52.06  30.0  3
+ GFB  Var_68    P1    O2P  P    O1P   -73.72  30.0  3
+ GFB  Var_69    C5'   O5'  P    O3P   -81.09  30.0  2
+ GFB  Var_70    P1    O2P  P    O3P    61.87  30.0  2
+ GFB  Var_71    C5'   O5'  P    O2P   164.76  30.0  3
+ GFB  Var_72    P1    O2P  P    O5'   174.36  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

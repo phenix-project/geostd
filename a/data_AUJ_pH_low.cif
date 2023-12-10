@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AUJ  AUJ  '2-[3-[(4-azanyl-2-methyl-pyrimidin-5-yl)methyl]-2-[(1~{S})-1-(dioxidanyl)-1-oxidanyl-ethyl]-4-methyl-1,3-thiazol-5-yl]ethyl phosphono hydrogen phosphate'  ligand  54  31  .  2022-11-17  2022-11-17
+ AUJ  AUJ  '2-[3-[(4-azanyl-2-methyl-pyrimidin-5-yl)methyl]-2-[(1~{S})-1-(dioxidanyl)-1-oxidanyl-ethyl]-4-methyl-1,3-thiazol-5-yl]ethyl phosphono hydrogen phosphate'  ligand  54  31  .  2022-11-17  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_AUJ
@@ -266,39 +267,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AUJ  CONST_01  SAU  CBA  NBB  CAX    0.00   0.0  0
- AUJ  CONST_02  CBA  SAU  CAZ  CAX    0.00   0.0  0
- AUJ  CONST_03  NBB  CBA  SAU  CAZ    0.00   0.0  0
- AUJ  CONST_04  CBA  NBB  CAX  CAZ    0.00   0.0  0
- AUJ  CONST_05  NBB  CAX  CAZ  SAU    0.00   0.0  0
- AUJ  CONST_06  C4   N3   C2   N1     0.00   0.0  0
- AUJ  CONST_07  C4   C5   C6   N1     0.00   0.0  0
- AUJ  CONST_08  C5   C4   N3   C2     0.00   0.0  0
- AUJ  CONST_09  C5   C6   N1   C2     0.00   0.0  0
- AUJ  CONST_10  C6   C5   C4   N3     0.00   0.0  0
- AUJ  CONST_11  C6   N1   C2   N3     0.00   0.0  0
- AUJ  CONST_12  CBA  NBB  CAX  CAB  180.00   0.0  0
- AUJ  CONST_13  SAU  CAZ  CAX  CAB  180.00   0.0  0
- AUJ  CONST_14  C4   N3   C2   CAA  180.00   0.0  0
- AUJ  CONST_15  C6   N1   C2   CAA  180.00   0.0  0
- AUJ  CONST_16  CBA  SAU  CAZ  CAO  180.00   0.0  0
- AUJ  CONST_17  NBB  CAX  CAZ  CAO  180.00   0.0  0
- AUJ  CONST_18  SAU  CBA  NBB  CAP  180.00   0.0  0
- AUJ  CONST_19  CAZ  CAX  NBB  CAP  180.00   0.0  0
- AUJ  CONST_20  N3   C4   C5   CAP  180.00   0.0  0
- AUJ  CONST_21  N1   C6   C5   CAP  180.00   0.0  0
- AUJ  CONST_24  C2   N3   C4   NAD  180.00   0.0  0
- AUJ  CONST_25  C6   C5   C4   NAD  180.00   0.0  0
- AUJ  CONST_26  H23  C6   N1   C2   180.00   0.0  0
- AUJ  CONST_27  H19  NAD  C4   N3     0.00   0.0  0
- AUJ  CONST_28  H20  NAD  C4   N3   180.00   0.0  0
- AUJ  Var_01    C5   CAP  NBB  CAX  -64.48  30.0  2
- AUJ  Var_02    C4   C5   CAP  NBB  -57.09  30.0  2
- AUJ  Var_03    SAU  CAZ  CAO  CAN  -82.78  30.0  2
- AUJ  Var_04    H1   CAB  CAX  CAZ   15.34  30.0  2
- AUJ  Var_05    H10  CAA  C2   N1   171.22  30.0  2
- AUJ  Var_06    OAS  CAN  CAO  CAZ  170.18  30.0  1
- AUJ  Var_07    OAT  PBE  OAS  CAN   72.13  30.0  1
+ AUJ  CONST_01  SAU   CBA   NBB   CAX     0.00   0.0  0
+ AUJ  CONST_02  CBA   SAU   CAZ   CAX     0.00   0.0  0
+ AUJ  CONST_03  NBB   CBA   SAU   CAZ     0.00   0.0  0
+ AUJ  CONST_04  CBA   NBB   CAX   CAZ     0.00   0.0  0
+ AUJ  CONST_05  NBB   CAX   CAZ   SAU     0.00   0.0  0
+ AUJ  CONST_06  C4    N3    C2    N1      0.00   0.0  0
+ AUJ  CONST_07  C4    C5    C6    N1      0.00   0.0  0
+ AUJ  CONST_08  C5    C4    N3    C2      0.00   0.0  0
+ AUJ  CONST_09  C5    C6    N1    C2      0.00   0.0  0
+ AUJ  CONST_10  C6    C5    C4    N3      0.00   0.0  0
+ AUJ  CONST_11  C6    N1    C2    N3      0.00   0.0  0
+ AUJ  CONST_12  CBA   NBB   CAX   CAB   180.00   0.0  0
+ AUJ  CONST_13  SAU   CAZ   CAX   CAB   180.00   0.0  0
+ AUJ  CONST_14  C4    N3    C2    CAA   180.00   0.0  0
+ AUJ  CONST_15  C6    N1    C2    CAA   180.00   0.0  0
+ AUJ  CONST_16  CBA   SAU   CAZ   CAO   180.00   0.0  0
+ AUJ  CONST_17  NBB   CAX   CAZ   CAO   180.00   0.0  0
+ AUJ  CONST_18  SAU   CBA   NBB   CAP   180.00   0.0  0
+ AUJ  CONST_19  CAZ   CAX   NBB   CAP   180.00   0.0  0
+ AUJ  CONST_20  N3    C4    C5    CAP   180.00   0.0  0
+ AUJ  CONST_21  N1    C6    C5    CAP   180.00   0.0  0
+ AUJ  CONST_22  C2    N3    C4    NAD   180.00   0.0  0
+ AUJ  CONST_23  C6    C5    C4    NAD   180.00   0.0  0
+ AUJ  CONST_24  H23   C6    N1    C2    180.00   0.0  0
+ AUJ  CONST_25  H19   NAD   C4    N3      0.00   0.0  0
+ AUJ  CONST_26  H20   NAD   C4    N3    180.00   0.0  0
+ AUJ  Var_01    C5    CAP   NBB   CAX   -64.48  30.0  2
+ AUJ  Var_02    C4    C5    CAP   NBB   -57.09  30.0  2
+ AUJ  Var_03    SAU   CAZ   CAO   CAN   -82.78  30.0  2
+ AUJ  Var_04    H1    CAB   CAX   CAZ    15.34  30.0  2
+ AUJ  Var_05    H10   CAA   C2    N1    171.22  30.0  2
+ AUJ  Var_06    OAS   CAN   CAO   CAZ   170.18  30.0  1
+ AUJ  Var_07    OAT   PBE   OAS   CAN    72.13  30.0  1
+ AUJ  Var_08    SAU   CBA   CBC   OAH   157.48  30.0  2
+ AUJ  Var_09    NBB   CBA   CBC   OAH   -64.70  30.0  2
+ AUJ  Var_10    SAU   CBA   CBC   CAC    33.61  30.0  2
+ AUJ  Var_11    NBB   CBA   CBC   CAC   171.43  30.0  2
+ AUJ  Var_12    OBC1  CBC   CBA   SAU   -88.12  30.0  1
+ AUJ  Var_13    OBC1  CBC   CBA   NBB    49.69  30.0  1
+ AUJ  Var_14    OC11  OBC1  CBC   CBA   178.23  30.0  3
+ AUJ  Var_15    H5    CAC   CBC   CBA   -65.57  30.0  3
+ AUJ  Var_16    H6    CAC   CBC   CBA    54.89  30.0  3
+ AUJ  Var_17    H7    CAC   CBC   CBA   173.78  30.0  3
+ AUJ  Var_18    H4    OAH   CBC   CBA   -74.62  30.0  3
+ AUJ  Var_19    OC11  OBC1  CBC   OAH   -63.19  30.0  3
+ AUJ  Var_20    PBD   OAT   PBE   OAG   170.72  30.0  2
+ AUJ  Var_21    OC11  OBC1  CBC   CAC    57.58  30.0  3
+ AUJ  Var_22    PBE   OAT   PBD   OAI    22.24  30.0  3
+ AUJ  Var_23    PBD   OAT   PBE   OAK   -60.85  30.0  2
+ AUJ  Var_24    PBE   OAS   CAN   CAO  -155.83  30.0  3
+ AUJ  Var_25    PBE   OAT   PBD   OAF   151.59  30.0  3
+ AUJ  Var_26    PBE   OAT   PBD   OAJ   -80.75  30.0  3
+ AUJ  Var_27    PBD   OAT   PBE   OAS    42.97  30.0  2
+ AUJ  Var_28    H9    OAK   PBE   OAG    34.55  30.0  3
+ AUJ  Var_29    H21   OAJ   PBD   OAI   170.05  30.0  3
+ AUJ  Var_30    H8    OAI   PBD   OAF   -36.66  30.0  3
+ AUJ  Var_31    H24   OC11  OBC1  CBC  -103.74  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

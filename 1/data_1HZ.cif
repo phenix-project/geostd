@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1HZ  1HZ  5'-deoxy-5'-({[2-(2,3-dihydroxyphenyl)ethyl]sulfonyl}amino)adenosine  ligand  54  32  .  2021-08-03  2021-08-03  
+ 1HZ  1HZ  5'-deoxy-5'-({[2-(2,3-dihydroxyphenyl)ethyl]sulfonyl}amino)adenosine  ligand  54  32  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_1HZ
@@ -274,53 +275,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 1HZ  CONST_01  C16  C15  C14  C19    0.00   0.0  0
- 1HZ  CONST_02  C16  C17  C18  C19    0.00   0.0  0
- 1HZ  CONST_03  C15  C14  C19  C18    0.00   0.0  0
- 1HZ  CONST_04  C15  C16  C17  C18    0.00   0.0  0
- 1HZ  CONST_05  C14  C19  C18  C17    0.00   0.0  0
- 1HZ  CONST_06  C14  C15  C16  C17    0.00   0.0  0
- 1HZ  CONST_07  C5   N7   C8   N9     0.00   0.0  0
- 1HZ  CONST_08  C2   N3   C4   N9   180.00   0.0  0
- 1HZ  CONST_09  N7   C5   C4   N9     0.00   0.0  0
- 1HZ  CONST_10  C6   C5   C4   N9   180.00   0.0  0
- 1HZ  CONST_11  N3   C4   N9   C8   180.00   0.0  0
- 1HZ  CONST_12  C5   C4   N9   C8     0.00   0.0  0
- 1HZ  CONST_13  C4   C5   N7   C8     0.00   0.0  0
- 1HZ  CONST_14  C6   C5   N7   C8   180.00   0.0  0
- 1HZ  CONST_15  C4   N9   C8   N7     0.00   0.0  0
- 1HZ  CONST_16  N3   C4   C5   N7   180.00   0.0  0
- 1HZ  CONST_17  N1   C6   C5   N7   180.00   0.0  0
- 1HZ  CONST_18  C2   N3   C4   C5     0.00   0.0  0
- 1HZ  CONST_19  C2   N1   C6   C5     0.00   0.0  0
- 1HZ  CONST_20  N3   C4   C5   C6     0.00   0.0  0
- 1HZ  CONST_21  N3   C2   N1   C6     0.00   0.0  0
- 1HZ  CONST_22  C4   N3   C2   N1     0.00   0.0  0
- 1HZ  CONST_23  C4   C5   C6   N1     0.00   0.0  0
- 1HZ  CONST_24  N7   C8   N9   C1'  180.00   0.0  0
- 1HZ  CONST_25  N3   C4   N9   C1'    0.00   0.0  0
- 1HZ  CONST_26  C5   C4   N9   C1'  180.00   0.0  0
- 1HZ  CONST_27  C15  C14  C19  C21  180.00   0.0  0
- 1HZ  CONST_28  C17  C18  C19  C21  180.00   0.0  0
- 1HZ  CONST_29  O15  C15  C14  C19  180.00   0.0  0
- 1HZ  CONST_30  O14  C14  C19  C18  180.00   0.0  0
- 1HZ  CONST_31  O15  C15  C16  C17  180.00   0.0  0
- 1HZ  CONST_32  O14  C14  C15  C16  180.00   0.0  0
- 1HZ  CONST_33  N6   C6   C5   N7     0.00   0.0  0
- 1HZ  CONST_34  C4   C5   C6   N6   180.00   0.0  0
- 1HZ  CONST_35  C2   N1   C6   N6   180.00   0.0  0
- 1HZ  CONST_36  H6   C17  C18  C19  180.00   0.0  0
- 1HZ  CONST_37  H7   C16  C17  C18  180.00   0.0  0
- 1HZ  CONST_38  H5   C18  C17  C16  180.00   0.0  0
- 1HZ  CONST_39  H19  C8   N9   C1'    0.00   0.0  0
- 1HZ  CONST_40  H22  C2   N1   C6   180.00   0.0  0
- 1HZ  CONST_41  H20  N6   C6   C5     0.00   0.0  0
- 1HZ  CONST_42  H21  N6   C6   C5   180.00   0.0  0
- 1HZ  Var_01    C14  C19  C21  C22   78.15  30.0  2
- 1HZ  Var_02    C4'  C5'  N5'  S    165.51  30.0  3
- 1HZ  Var_03    C19  C21  C22  S    178.42  30.0  3
- 1HZ  Var_04    C5'  N5'  S    O1P  -47.74  30.0  1
- 1HZ  Var_05    C21  C22  S    O1P  -63.44  30.0  3
+ 1HZ  CONST_01  C16  C15  C14  C19     0.00   0.0  0
+ 1HZ  CONST_02  C16  C17  C18  C19     0.00   0.0  0
+ 1HZ  CONST_03  C15  C14  C19  C18     0.00   0.0  0
+ 1HZ  CONST_04  C15  C16  C17  C18     0.00   0.0  0
+ 1HZ  CONST_05  C14  C19  C18  C17     0.00   0.0  0
+ 1HZ  CONST_06  C14  C15  C16  C17     0.00   0.0  0
+ 1HZ  CONST_07  C5   N7   C8   N9      0.00   0.0  0
+ 1HZ  CONST_08  C2   N3   C4   N9    180.00   0.0  0
+ 1HZ  CONST_09  N7   C5   C4   N9      0.00   0.0  0
+ 1HZ  CONST_10  C6   C5   C4   N9    180.00   0.0  0
+ 1HZ  CONST_11  N3   C4   N9   C8    180.00   0.0  0
+ 1HZ  CONST_12  C5   C4   N9   C8      0.00   0.0  0
+ 1HZ  CONST_13  C4   C5   N7   C8      0.00   0.0  0
+ 1HZ  CONST_14  C6   C5   N7   C8    180.00   0.0  0
+ 1HZ  CONST_15  C4   N9   C8   N7      0.00   0.0  0
+ 1HZ  CONST_16  N3   C4   C5   N7    180.00   0.0  0
+ 1HZ  CONST_17  N1   C6   C5   N7    180.00   0.0  0
+ 1HZ  CONST_18  C2   N3   C4   C5      0.00   0.0  0
+ 1HZ  CONST_19  C2   N1   C6   C5      0.00   0.0  0
+ 1HZ  CONST_20  N3   C4   C5   C6      0.00   0.0  0
+ 1HZ  CONST_21  N3   C2   N1   C6      0.00   0.0  0
+ 1HZ  CONST_22  C4   N3   C2   N1      0.00   0.0  0
+ 1HZ  CONST_23  C4   C5   C6   N1      0.00   0.0  0
+ 1HZ  CONST_24  N7   C8   N9   C1'   180.00   0.0  0
+ 1HZ  CONST_25  N3   C4   N9   C1'     0.00   0.0  0
+ 1HZ  CONST_26  C5   C4   N9   C1'   180.00   0.0  0
+ 1HZ  CONST_27  C15  C14  C19  C21   180.00   0.0  0
+ 1HZ  CONST_28  C17  C18  C19  C21   180.00   0.0  0
+ 1HZ  CONST_29  O15  C15  C14  C19   180.00   0.0  0
+ 1HZ  CONST_30  O14  C14  C19  C18   180.00   0.0  0
+ 1HZ  CONST_31  O15  C15  C16  C17   180.00   0.0  0
+ 1HZ  CONST_32  O14  C14  C15  C16   180.00   0.0  0
+ 1HZ  CONST_33  N6   C6   C5   N7      0.00   0.0  0
+ 1HZ  CONST_34  C4   C5   C6   N6    180.00   0.0  0
+ 1HZ  CONST_35  C2   N1   C6   N6    180.00   0.0  0
+ 1HZ  CONST_36  H6   C17  C18  C19   180.00   0.0  0
+ 1HZ  CONST_37  H7   C16  C17  C18   180.00   0.0  0
+ 1HZ  CONST_38  H5   C18  C17  C16   180.00   0.0  0
+ 1HZ  CONST_39  H19  C8   N9   C1'     0.00   0.0  0
+ 1HZ  CONST_40  H22  C2   N1   C6    180.00   0.0  0
+ 1HZ  CONST_41  H20  N6   C6   C5      0.00   0.0  0
+ 1HZ  CONST_42  H21  N6   C6   C5    180.00   0.0  0
+ 1HZ  Var_01    C14  C19  C21  C22    78.15  30.0  2
+ 1HZ  Var_02    C4'  C5'  N5'  S     165.51  30.0  3
+ 1HZ  Var_03    C19  C21  C22  S     178.42  30.0  3
+ 1HZ  Var_04    C5'  N5'  S    O1P   -47.74  30.0  1
+ 1HZ  Var_05    C21  C22  S    O1P   -63.44  30.0  3
+ 1HZ  Var_06    C1'  C2'  C3'  C4'   -38.33  30.0  1
+ 1HZ  Var_07    C2'  C1'  O4'  C4'   -13.89  30.0  1
+ 1HZ  Var_08    N9   C1'  O4'  C4'  -137.45  30.0  1
+ 1HZ  Var_09    C2'  C3'  C4'  O4'    31.55  30.0  1
+ 1HZ  Var_10    C3'  C2'  C1'  O4'    33.07  30.0  1
+ 1HZ  Var_11    C8   N9   C1'  O4'    56.83  30.0  2
+ 1HZ  Var_12    C4   N9   C1'  O4'  -121.06  30.0  2
+ 1HZ  Var_13    C3'  C4'  O4'  C1'   -11.52  30.0  1
+ 1HZ  Var_14    C8   N9   C1'  C2'   -61.69  30.0  2
+ 1HZ  Var_15    C4   N9   C1'  C2'   120.42  30.0  2
+ 1HZ  Var_16    N9   C1'  C2'  C3'   153.71  30.0  1
+ 1HZ  Var_17    C2'  C3'  C4'  C5'   -88.46  30.0  1
+ 1HZ  Var_18    C1'  O4'  C4'  C5'   109.80  30.0  1
+ 1HZ  Var_19    O2'  C2'  C3'  C4'  -156.52  30.0  1
+ 1HZ  Var_20    O3'  C3'  C4'  O4'   -85.21  30.0  1
+ 1HZ  Var_21    O2'  C2'  C1'  O4'   155.15  30.0  1
+ 1HZ  Var_22    O3'  C3'  C2'  C1'    76.53  30.0  1
+ 1HZ  Var_23    N9   C1'  C2'  O2'   -84.22  30.0  1
+ 1HZ  Var_24    H15  C2'  C3'  C4'    77.43  30.0  1
+ 1HZ  Var_25    H14  C1'  O4'  C4'   105.61  30.0  1
+ 1HZ  Var_26    H17  C3'  C4'  O4'   150.79  30.0  1
+ 1HZ  Var_27    H13  C4'  O4'  C1'  -131.27  30.0  1
+ 1HZ  Var_28    C3'  C4'  C5'  N5'   173.25  30.0  3
+ 1HZ  Var_29    O4'  C4'  C5'  N5'    55.79  30.0  3
+ 1HZ  Var_30    O3'  C3'  C4'  C5'   154.78  30.0  1
+ 1HZ  Var_31    O3'  C3'  C2'  O2'   -41.65  30.0  1
+ 1HZ  Var_32    H9   O14  C14  C19    39.33  30.0  2
+ 1HZ  Var_33    H8   O15  C15  C16  -176.75  30.0  2
+ 1HZ  Var_34    H18  O3'  C3'  C4'   159.81  30.0  3
+ 1HZ  Var_35    H11  C5'  C4'  O4'   -68.43  30.0  1
+ 1HZ  Var_36    H12  C5'  C4'  O4'   174.24  30.0  1
+ 1HZ  Var_37    H16  O2'  C2'  C1'   161.24  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

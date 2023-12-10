@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DZN  DZN  '3-(4-hydroxyphenyl)-4-oxo-4H-chromen-7-yl beta-D-glucopyranoside'  ligand  50  30  .  2021-08-08  2021-08-08  
+ DZN  DZN  '3-(4-hydroxyphenyl)-4-oxo-4H-chromen-7-yl beta-D-glucopyranoside'  ligand  50  30  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_DZN
@@ -257,51 +258,91 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DZN  CONST_01  C21  C20  C19  C18    0.00   0.0  0
- DZN  CONST_02  C21  C22  C23  C18    0.00   0.0  0
- DZN  CONST_03  O24  C22  C23  C18  180.00   0.0  0
- DZN  CONST_04  C22  C23  C18  C19    0.00   0.0  0
- DZN  CONST_05  C22  C21  C20  C19    0.00   0.0  0
- DZN  CONST_06  C27  C21  C20  C19  180.00   0.0  0
- DZN  CONST_07  C23  C18  C19  C20    0.00   0.0  0
- DZN  CONST_08  C23  C22  C21  C20    0.00   0.0  0
- DZN  CONST_09  O24  C22  C21  C20  180.00   0.0  0
- DZN  CONST_10  C26  C27  C21  C20  180.00   0.0  0
- DZN  CONST_11  C25  O24  C22  C21    0.00   0.0  0
- DZN  CONST_12  C25  C26  C27  C21    0.00   0.0  0
- DZN  CONST_13  C28  C26  C27  C21  180.00   0.0  0
- DZN  CONST_14  C26  C27  C21  C22    0.00   0.0  0
- DZN  CONST_15  C26  C25  O24  C22    0.00   0.0  0
- DZN  CONST_16  C27  C21  C22  C23  180.00   0.0  0
- DZN  CONST_17  C25  O24  C22  C23  180.00   0.0  0
- DZN  CONST_18  C27  C21  C22  O24    0.00   0.0  0
- DZN  CONST_19  C27  C26  C25  O24    0.00   0.0  0
- DZN  CONST_20  C28  C26  C25  O24  180.00   0.0  0
- DZN  CONST_23  C30  C29  C28  C26  180.00   0.0  0
- DZN  CONST_24  C32  C33  C28  C26  180.00   0.0  0
- DZN  CONST_27  C31  C30  C29  C28    0.00   0.0  0
- DZN  CONST_28  C31  C32  C33  C28    0.00   0.0  0
- DZN  CONST_29  C32  C33  C28  C29    0.00   0.0  0
- DZN  CONST_30  C32  C31  C30  C29    0.00   0.0  0
- DZN  CONST_31  C33  C28  C29  C30    0.00   0.0  0
- DZN  CONST_32  C33  C32  C31  C30    0.00   0.0  0
- DZN  CONST_33  C20  C19  C18  O1   180.00   0.0  0
- DZN  CONST_34  C22  C23  C18  O1   180.00   0.0  0
- DZN  CONST_35  O35  C27  C21  C20    0.00   0.0  0
- DZN  CONST_36  O35  C27  C21  C22  180.00   0.0  0
- DZN  CONST_37  O35  C27  C26  C25  180.00   0.0  0
- DZN  CONST_38  C28  C26  C27  O35    0.00   0.0  0
- DZN  CONST_39  O34  C31  C30  C29  180.00   0.0  0
- DZN  CONST_40  C33  C32  C31  O34  180.00   0.0  0
- DZN  CONST_41  H20  C20  C19  C18  180.00   0.0  0
- DZN  CONST_42  H23  C23  C18  C19  180.00   0.0  0
- DZN  CONST_43  H19  C19  C20  C21  180.00   0.0  0
- DZN  CONST_44  H25  C25  O24  C22  180.00   0.0  0
- DZN  CONST_45  H29  C29  C28  C26    0.00   0.0  0
- DZN  CONST_46  H33  C33  C28  C26    0.00   0.0  0
- DZN  CONST_47  H30  C30  C29  C28  180.00   0.0  0
- DZN  CONST_48  H32  C32  C33  C28  180.00   0.0  0
- DZN  Var_01    C19  C18  O1   C1    20.52  30.0  2
+ DZN  CONST_01  C21   C20  C19  C18     0.00   0.0  0
+ DZN  CONST_02  C21   C22  C23  C18     0.00   0.0  0
+ DZN  CONST_03  O24   C22  C23  C18   180.00   0.0  0
+ DZN  CONST_04  C22   C23  C18  C19     0.00   0.0  0
+ DZN  CONST_05  C22   C21  C20  C19     0.00   0.0  0
+ DZN  CONST_06  C27   C21  C20  C19   180.00   0.0  0
+ DZN  CONST_07  C23   C18  C19  C20     0.00   0.0  0
+ DZN  CONST_08  C23   C22  C21  C20     0.00   0.0  0
+ DZN  CONST_09  O24   C22  C21  C20   180.00   0.0  0
+ DZN  CONST_10  C26   C27  C21  C20   180.00   0.0  0
+ DZN  CONST_11  C25   O24  C22  C21     0.00   0.0  0
+ DZN  CONST_12  C25   C26  C27  C21     0.00   0.0  0
+ DZN  CONST_13  C28   C26  C27  C21   180.00   0.0  0
+ DZN  CONST_14  C26   C27  C21  C22     0.00   0.0  0
+ DZN  CONST_15  C26   C25  O24  C22     0.00   0.0  0
+ DZN  CONST_16  C27   C21  C22  C23   180.00   0.0  0
+ DZN  CONST_17  C25   O24  C22  C23   180.00   0.0  0
+ DZN  CONST_18  C27   C21  C22  O24     0.00   0.0  0
+ DZN  CONST_19  C27   C26  C25  O24     0.00   0.0  0
+ DZN  CONST_20  C28   C26  C25  O24   180.00   0.0  0
+ DZN  CONST_21  C30   C29  C28  C26   180.00   0.0  0
+ DZN  CONST_22  C32   C33  C28  C26   180.00   0.0  0
+ DZN  CONST_23  C31   C30  C29  C28     0.00   0.0  0
+ DZN  CONST_24  C31   C32  C33  C28     0.00   0.0  0
+ DZN  CONST_25  C32   C33  C28  C29     0.00   0.0  0
+ DZN  CONST_26  C32   C31  C30  C29     0.00   0.0  0
+ DZN  CONST_27  C33   C28  C29  C30     0.00   0.0  0
+ DZN  CONST_28  C33   C32  C31  C30     0.00   0.0  0
+ DZN  CONST_29  C20   C19  C18  O1    180.00   0.0  0
+ DZN  CONST_30  C22   C23  C18  O1    180.00   0.0  0
+ DZN  CONST_31  O35   C27  C21  C20     0.00   0.0  0
+ DZN  CONST_32  O35   C27  C21  C22   180.00   0.0  0
+ DZN  CONST_33  O35   C27  C26  C25   180.00   0.0  0
+ DZN  CONST_34  C28   C26  C27  O35     0.00   0.0  0
+ DZN  CONST_35  O34   C31  C30  C29   180.00   0.0  0
+ DZN  CONST_36  C33   C32  C31  O34   180.00   0.0  0
+ DZN  CONST_37  H20   C20  C19  C18   180.00   0.0  0
+ DZN  CONST_38  H23   C23  C18  C19   180.00   0.0  0
+ DZN  CONST_39  H19   C19  C20  C21   180.00   0.0  0
+ DZN  CONST_40  H25   C25  O24  C22   180.00   0.0  0
+ DZN  CONST_41  H29   C29  C28  C26     0.00   0.0  0
+ DZN  CONST_42  H33   C33  C28  C26     0.00   0.0  0
+ DZN  CONST_43  H30   C30  C29  C28   180.00   0.0  0
+ DZN  CONST_44  H32   C32  C33  C28   180.00   0.0  0
+ DZN  Var_01    C19   C18  O1   C1     20.52  30.0  2
+ DZN  Var_02    C2    C1   O5   C5    -65.22  30.0  1
+ DZN  Var_03    C2    C3   C4   C5     53.03  30.0  1
+ DZN  Var_04    C3    C4   C5   O5    -56.70  30.0  1
+ DZN  Var_05    C3    C2   C1   O5     57.32  30.0  1
+ DZN  Var_06    C1    O5   C5   C4     64.42  30.0  1
+ DZN  Var_07    C1    C2   C3   C4    -52.53  30.0  1
+ DZN  Var_08    C29   C28  C26  C25    49.68  30.0  2
+ DZN  Var_09    C33   C28  C26  C25  -129.05  30.0  2
+ DZN  Var_10    C29   C28  C26  C27  -128.93  30.0  2
+ DZN  Var_11    C33   C28  C26  C27    52.34  30.0  2
+ DZN  Var_12    C1    O5   C5   C6   -172.85  30.0  1
+ DZN  Var_13    C3    C4   C5   C6   -176.20  30.0  1
+ DZN  Var_14    O1    C1   O5   C5    177.43  30.0  1
+ DZN  Var_15    O3    C3   C4   C5    175.59  30.0  1
+ DZN  Var_16    O4    C4   C5   O5   -178.10  30.0  1
+ DZN  Var_17    O2    C2   C1   O5    176.13  30.0  1
+ DZN  Var_18    C18   O1   C1   O5    -82.20  30.0  3
+ DZN  Var_19    O2    C2   C3   C4   -173.81  30.0  1
+ DZN  Var_20    C2    C3   C4   O4    172.49  30.0  1
+ DZN  Var_21    O1    C1   C2   C3    174.84  30.0  1
+ DZN  Var_22    C1    C2   C3   O3   -172.44  30.0  1
+ DZN  Var_23    C18   O1   C1   C2    158.81  30.0  3
+ DZN  Var_24    H1    C1   O5   C5     56.71  30.0  1
+ DZN  Var_25    H3    C3   C4   C5    -65.07  30.0  1
+ DZN  Var_26    H4    C4   C5   O5     61.35  30.0  1
+ DZN  Var_27    H2    C2   C1   O5    -60.54  30.0  1
+ DZN  Var_28    H5    C5   C4   C3     63.02  30.0  1
+ DZN  Var_29    O5    C5   C6   O6     63.51  30.0  3
+ DZN  Var_30    C4    C5   C6   O6   -176.26  30.0  3
+ DZN  Var_31    O4    C4   C5   C6     62.40  30.0  1
+ DZN  Var_32    O3    C3   C4   O4    -64.96  30.0  1
+ DZN  Var_33    O2    C2   C3   O3     66.28  30.0  1
+ DZN  Var_34    O1    C1   C2   O2    -66.36  30.0  1
+ DZN  Var_35    HA    O4   C4   C5    179.83  30.0  3
+ DZN  Var_36    H6C1  C6   C5   O5    -58.65  30.0  3
+ DZN  Var_37    H6C2  C6   C5   O5   -174.92  30.0  3
+ DZN  Var_38    HB    O3   C3   C4    167.34  30.0  3
+ DZN  Var_39    HC    O2   C2   C3   -164.35  30.0  3
+ DZN  Var_40    H34   O34  C31  C30    -1.82  30.0  2
+ DZN  Var_41    H6    O6   C6   C5    174.78  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

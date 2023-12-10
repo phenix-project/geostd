@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- G3K  G3K  '2-{(2R)-1-[2-(4-chlorophenoxy)-2-methylpropanoyl]pyrrolidin-2-yl}-5-hydroxy-6-oxo-1,6-dihydropyrimidine-4-carboxylic acid'  ligand  48  29  .  2022-03-18  2022-03-18
+ G3K  G3K  '2-{(2R)-1-[2-(4-chlorophenoxy)-2-methylpropanoyl]pyrrolidin-2-yl}-5-hydroxy-6-oxo-1,6-dihydropyrimidine-4-carboxylic acid'  ligand  48  29  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_G3K
@@ -250,37 +251,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- G3K  CONST_01  C17  C18  C19  C14    0.00   0.0  0
- G3K  CONST_02  C17  C16  C15  C14    0.00   0.0  0
- G3K  CONST_03  C18  C19  C14  C15    0.00   0.0  0
- G3K  CONST_04  C18  C17  C16  C15    0.00   0.0  0
- G3K  CONST_05  C19  C18  C17  C16    0.00   0.0  0
- G3K  CONST_06  C19  C14  C15  C16    0.00   0.0  0
- G3K  CONST_07  N1   C5   N3   C1     0.00   0.0  0
- G3K  CONST_08  C6   C5   N3   C1   180.00   0.0  0
- G3K  CONST_09  C5   N3   C1   C2     0.00   0.0  0
- G3K  CONST_10  N3   C5   N1   C3     0.00   0.0  0
- G3K  CONST_11  C6   C5   N1   C3   180.00   0.0  0
- G3K  CONST_12  CL1  C17  C16  C15  180.00   0.0  0
- G3K  CONST_13  O5   C14  C15  C16  180.00   0.0  0
- G3K  CONST_14  O5   C14  C19  C18  180.00   0.0  0
- G3K  CONST_15  CL1  C17  C18  C19  180.00   0.0  0
- G3K  CONST_16  O1   C1   N3   C5   180.00   0.0  0
- G3K  CONST_17  H9   C18  C19  C14  180.00   0.0  0
- G3K  CONST_18  H8   C16  C15  C14  180.00   0.0  0
- G3K  CONST_19  H10  C19  C14  C15  180.00   0.0  0
- G3K  CONST_20  H7   C15  C16  C17  180.00   0.0  0
- G3K  CONST_21  H18  N3   C1   C2   180.00   0.0  0
- G3K  CONST_24  O6   C10  N2   C6     0.00   0.0  0
- G3K  CONST_25  O6   C10  N2   C9   180.00   0.0  0
- G3K  Var_01    C8   C9   N2   C6   -14.99  30.0  1
- G3K  Var_02    C9   C8   C7   C6   -39.14  30.0  1
- G3K  Var_03    N2   C9   C8   C7    33.21  30.0  1
- G3K  Var_04    C19  C14  O5   C11  -12.68  30.0  2
- G3K  Var_05    O4   C4   C3   C2   -62.70  30.0  2
- G3K  Var_06    N2   C10  C11  C12  -45.53  30.0  3
- G3K  Var_07    H4   C13  C11  C10   50.87  30.0  3
- G3K  Var_08    H1   C12  C11  C10   79.92  30.0  3
+ G3K  CONST_01  C17  C18  C19  C14     0.00   0.0  0
+ G3K  CONST_02  C17  C16  C15  C14     0.00   0.0  0
+ G3K  CONST_03  C18  C19  C14  C15     0.00   0.0  0
+ G3K  CONST_04  C18  C17  C16  C15     0.00   0.0  0
+ G3K  CONST_05  C19  C18  C17  C16     0.00   0.0  0
+ G3K  CONST_06  C19  C14  C15  C16     0.00   0.0  0
+ G3K  CONST_07  N1   C5   N3   C1      0.00   0.0  0
+ G3K  CONST_08  C6   C5   N3   C1    180.00   0.0  0
+ G3K  CONST_09  C5   N3   C1   C2      0.00   0.0  0
+ G3K  CONST_10  N3   C5   N1   C3      0.00   0.0  0
+ G3K  CONST_11  C6   C5   N1   C3    180.00   0.0  0
+ G3K  CONST_12  CL1  C17  C16  C15   180.00   0.0  0
+ G3K  CONST_13  O5   C14  C15  C16   180.00   0.0  0
+ G3K  CONST_14  O5   C14  C19  C18   180.00   0.0  0
+ G3K  CONST_15  CL1  C17  C18  C19   180.00   0.0  0
+ G3K  CONST_16  O1   C1   N3   C5    180.00   0.0  0
+ G3K  CONST_17  H9   C18  C19  C14   180.00   0.0  0
+ G3K  CONST_18  H8   C16  C15  C14   180.00   0.0  0
+ G3K  CONST_19  H10  C19  C14  C15   180.00   0.0  0
+ G3K  CONST_20  H7   C15  C16  C17   180.00   0.0  0
+ G3K  CONST_21  H18  N3   C1   C2    180.00   0.0  0
+ G3K  CONST_22  O6   C10  N2   C6      0.00   0.0  0
+ G3K  CONST_23  O6   C10  N2   C9    180.00   0.0  0
+ G3K  Var_01    C8   C9   N2   C6    -14.99  30.0  1
+ G3K  Var_02    C9   C8   C7   C6    -39.14  30.0  1
+ G3K  Var_03    N2   C9   C8   C7     33.21  30.0  1
+ G3K  Var_04    C19  C14  O5   C11   -12.68  30.0  2
+ G3K  Var_05    O4   C4   C3   C2    -62.70  30.0  2
+ G3K  Var_06    N2   C10  C11  C12   -45.53  30.0  3
+ G3K  Var_07    H4   C13  C11  C10    50.87  30.0  3
+ G3K  Var_08    H1   C12  C11  C10    79.92  30.0  3
+ G3K  Var_09    C9   N2   C6   C5   -129.82  30.0  1
+ G3K  Var_10    C8   C7   C6   C5    149.99  30.0  1
+ G3K  Var_11    C9   N2   C6   C7     -9.31  30.0  1
+ G3K  Var_12    N3   C5   C6   C7    102.64  30.0  3
+ G3K  Var_13    N1   C5   C6   C7    -74.43  30.0  3
+ G3K  Var_14    N2   C6   C7   C8     29.82  30.0  1
+ G3K  Var_15    N2   C6   C5   N1     41.01  30.0  3
+ G3K  Var_16    N3   C5   C6   N2   -141.93  30.0  3
+ G3K  Var_17    C4   C3   C2   C1   -177.08  30.0  1
+ G3K  Var_18    C5   C6   N2   C10    50.26  30.0  1
+ G3K  Var_19    C7   C6   N2   C10   170.76  30.0  1
+ G3K  Var_20    C5   N1   C3   C4    177.30  30.0  1
+ G3K  Var_21    O2   C2   C3   N1   -179.95  30.0  1
+ G3K  Var_22    O2   C2   C1   N3   -179.08  30.0  1
+ G3K  Var_23    H12  C7   C6   C5    -87.43  30.0  1
+ G3K  Var_24    H13  C7   C6   C5     32.63  30.0  1
+ G3K  Var_25    H11  C6   C7   C8    -88.28  30.0  1
+ G3K  Var_26    O2   C2   C3   C4      0.84  30.0  1
+ G3K  Var_27    O2   C2   C1   O1      0.64  30.0  1
+ G3K  Var_28    H19  O2   C2   C1      0.55  30.0  3
+ G3K  Var_29    C14  O5   C11  C10    70.98  30.0  3
+ G3K  Var_30    C14  O5   C11  C12   -60.56  30.0  3
+ G3K  Var_31    C14  O5   C11  C13  -177.89  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

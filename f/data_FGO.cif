@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FGO  FGO  '[(1~{S},3~{R},3~{a}~{R},6~{a}~{S})-3-(2-azanyl-6-oxidanylidene-1~{H}-purin-9-yl)-5,5-bis(oxidanyl)-1,3,3~{a},4,6,6~{a}-hexahydrocyclopenta[c]furan-1-yl]methyl [(2~{R},3~{S},4~{R},5~{R})-5-[2,4-bis(oxidanylidene)pyrimidin-1-yl]-2-(hydroxymethyl)-4-oxidanyl-oxolan-3-yl] hydrogen phosphate'  ligand  70  43  .  2022-03-18  2022-03-18
+ FGO  FGO  '[(1~{S},3~{R},3~{a}~{R},6~{a}~{S})-3-(2-azanyl-6-oxidanylidene-1~{H}-purin-9-yl)-5,5-bis(oxidanyl)-1,3,3~{a},4,6,6~{a}-hexahydrocyclopenta[c]furan-1-yl]methyl [(2~{R},3~{S},4~{R},5~{R})-5-[2,4-bis(oxidanylidene)pyrimidin-1-yl]-2-(hydroxymethyl)-4-oxidanyl-oxolan-3-yl] hydrogen phosphate'  ligand  70  43  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_FGO
@@ -346,37 +347,112 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- FGO  CONST_01  N3   C14  N2   C12    0.00   0.0  0
- FGO  CONST_02  C14  N3   C13  C12    0.00   0.0  0
- FGO  CONST_03  C14  N2   C12  C13    0.00   0.0  0
- FGO  CONST_04  N2   C14  N3   C13    0.00   0.0  0
- FGO  CONST_05  N3   C13  C12  N2     0.00   0.0  0
- FGO  CONST_06  N5   C12  N2   C11    0.00   0.0  0
- FGO  CONST_07  C13  C12  N2   C11  180.00   0.0  0
- FGO  CONST_08  N3   C14  N2   C11  180.00   0.0  0
- FGO  CONST_09  N4   C16  N5   C12    0.00   0.0  0
- FGO  CONST_10  C16  N4   C15  C13    0.00   0.0  0
- FGO  CONST_11  N5   C16  N4   C15    0.00   0.0  0
- FGO  CONST_12  N1   C5   N    C2   180.00   0.0  0
- FGO  CONST_13  C6   N1   C5   N      0.00   0.0  0
- FGO  CONST_14  N1   C5   N    C8     0.00   0.0  0
- FGO  CONST_15  C5   N1   C6   C7     0.00   0.0  0
- FGO  CONST_16  N6   C16  N5   C12  180.00   0.0  0
- FGO  CONST_17  N6   C16  N4   C15  180.00   0.0  0
- FGO  CONST_18  O8   C15  N4   C16  180.00   0.0  0
- FGO  CONST_19  O4   C5   N    C2     0.00   0.0  0
- FGO  CONST_20  O4   C5   N    C8   180.00   0.0  0
- FGO  CONST_21  O4   C5   N1   C6   180.00   0.0  0
- FGO  CONST_22  C5   N1   C6   O5   180.00   0.0  0
- FGO  CONST_23  H3   C14  N2   C11    0.00   0.0  0
- FGO  CONST_24  H28  N4   C15  C13  180.00   0.0  0
- FGO  CONST_25  H17  N1   C5   N    180.00   0.0  0
- FGO  CONST_26  H26  N6   C16  N5     0.00   0.0  0
- FGO  CONST_27  H27  N6   C16  N5   180.00   0.0  0
- FGO  Var_01    C19  C20  C21  C17  -35.72  30.0  1
- FGO  Var_02    C21  C20  C19  C18   36.49  30.0  1
- FGO  Var_03    O6   P    O    C    -66.14  30.0  3
- FGO  Var_04    H20  C9   O6   P     -8.83  30.0  1
+ FGO  CONST_01  N3   C14  N2   C12     0.00   0.0  0
+ FGO  CONST_02  C14  N3   C13  C12     0.00   0.0  0
+ FGO  CONST_03  C14  N2   C12  C13     0.00   0.0  0
+ FGO  CONST_04  N2   C14  N3   C13     0.00   0.0  0
+ FGO  CONST_05  N3   C13  C12  N2      0.00   0.0  0
+ FGO  CONST_06  N5   C12  N2   C11     0.00   0.0  0
+ FGO  CONST_07  C13  C12  N2   C11   180.00   0.0  0
+ FGO  CONST_08  N3   C14  N2   C11   180.00   0.0  0
+ FGO  CONST_09  N4   C16  N5   C12     0.00   0.0  0
+ FGO  CONST_10  C16  N4   C15  C13     0.00   0.0  0
+ FGO  CONST_11  N5   C16  N4   C15     0.00   0.0  0
+ FGO  CONST_12  N1   C5   N    C2    180.00   0.0  0
+ FGO  CONST_13  C6   N1   C5   N       0.00   0.0  0
+ FGO  CONST_14  N1   C5   N    C8      0.00   0.0  0
+ FGO  CONST_15  C5   N1   C6   C7      0.00   0.0  0
+ FGO  CONST_16  N6   C16  N5   C12   180.00   0.0  0
+ FGO  CONST_17  N6   C16  N4   C15   180.00   0.0  0
+ FGO  CONST_18  O8   C15  N4   C16   180.00   0.0  0
+ FGO  CONST_19  O4   C5   N    C2      0.00   0.0  0
+ FGO  CONST_20  O4   C5   N    C8    180.00   0.0  0
+ FGO  CONST_21  O4   C5   N1   C6    180.00   0.0  0
+ FGO  CONST_22  C5   N1   C6   O5    180.00   0.0  0
+ FGO  CONST_23  H3   C14  N2   C11     0.00   0.0  0
+ FGO  CONST_24  H28  N4   C15  C13   180.00   0.0  0
+ FGO  CONST_25  H17  N1   C5   N     180.00   0.0  0
+ FGO  CONST_26  H26  N6   C16  N5      0.00   0.0  0
+ FGO  CONST_27  H27  N6   C16  N5    180.00   0.0  0
+ FGO  Var_01    C19  C20  C21  C17   -35.72  30.0  1
+ FGO  Var_02    C21  C20  C19  C18    36.49  30.0  1
+ FGO  Var_03    O6   P    O    C     -66.14  30.0  3
+ FGO  Var_04    H20  C9   O6   P      -8.83  30.0  1
+ FGO  Var_05    C20  C19  C18  C10    90.68  30.0  1
+ FGO  Var_06    C21  C17  C18  C10  -120.41  30.0  1
+ FGO  Var_07    C11  C17  C18  C10     1.33  30.0  1
+ FGO  Var_08    C17  C11  O7   C10   -36.37  30.0  1
+ FGO  Var_09    N2   C11  O7   C10  -159.49  30.0  1
+ FGO  Var_10    C20  C21  C17  C11   -92.47  30.0  1
+ FGO  Var_11    C19  C18  C17  C11   122.81  30.0  1
+ FGO  Var_12    C18  C10  O7   C11    37.15  30.0  1
+ FGO  Var_13    C17  C11  N2   C12   119.10  30.0  1
+ FGO  Var_14    O7   C11  N2   C12  -122.77  30.0  1
+ FGO  Var_15    C17  C11  N2   C14   -61.97  30.0  1
+ FGO  Var_16    O7   C11  N2   C14    56.16  30.0  1
+ FGO  Var_17    C20  C19  C18  C17   -23.34  30.0  1
+ FGO  Var_18    O7   C10  C18  C17   -22.35  30.0  1
+ FGO  Var_19    C20  C21  C17  C18    21.51  30.0  1
+ FGO  Var_20    N2   C11  C17  C18   139.62  30.0  1
+ FGO  Var_21    O7   C11  C17  C18    20.46  30.0  1
+ FGO  Var_22    C19  C18  C17  C21     1.08  30.0  1
+ FGO  Var_23    N2   C11  C17  C21  -104.69  30.0  1
+ FGO  Var_24    O7   C11  C17  C21   136.15  30.0  1
+ FGO  Var_25    N    C2   C1   C     154.72  30.0  1
+ FGO  Var_26    O2   C2   C1   C      35.22  30.0  1
+ FGO  Var_27    C2   O2   C3   C      -0.41  30.0  1
+ FGO  Var_28    N    C2   O2   C3   -144.76  30.0  1
+ FGO  Var_29    C1   C2   O2   C3    -22.20  30.0  1
+ FGO  Var_30    C2   C1   C    C3    -33.72  30.0  1
+ FGO  Var_31    C8   N    C2   O2     50.38  30.0  2
+ FGO  Var_32    C5   N    C2   O2   -129.66  30.0  2
+ FGO  Var_33    C1   C    C3   O2     22.27  30.0  1
+ FGO  Var_34    C1   C2   N    C8    -67.65  30.0  3
+ FGO  Var_35    C1   C2   N    C5    112.31  30.0  3
+ FGO  Var_36    O7   C10  C18  C19  -137.73  30.0  1
+ FGO  Var_37    C9   C10  O7   C11   160.01  30.0  1
+ FGO  Var_38    C9   C10  C18  C17  -143.15  30.0  1
+ FGO  Var_39    C2   C1   C    O      85.03  30.0  1
+ FGO  Var_40    O2   C3   C    O     -93.94  30.0  1
+ FGO  Var_41    O1   C1   C    C3   -153.17  30.0  1
+ FGO  Var_42    C2   O2   C3   C4    124.33  30.0  1
+ FGO  Var_43    C1   C    C3   C4    -99.85  30.0  1
+ FGO  Var_44    O1   C1   C2   O2    160.07  30.0  1
+ FGO  Var_45    O1   C1   C2   N     -80.43  30.0  1
+ FGO  Var_46    C19  C18  C10  C9    101.47  30.0  1
+ FGO  Var_47    H22  C19  C18  C10   -32.94  30.0  1
+ FGO  Var_48    H23  C19  C18  C10  -152.87  30.0  1
+ FGO  Var_49    H4   C17  C18  C10   118.90  30.0  1
+ FGO  Var_50    H2   C11  O7   C10    84.40  30.0  1
+ FGO  Var_51    H6   C21  C17  C11   150.45  30.0  1
+ FGO  Var_52    H7   C21  C17  C11    31.15  30.0  1
+ FGO  Var_53    H5   C18  C17  C11  -116.39  30.0  1
+ FGO  Var_54    H1   C10  O7   C11   -80.73  30.0  1
+ FGO  Var_55    H14  C2   C1   C     -85.92  30.0  1
+ FGO  Var_56    H18  C1   C    C3     80.39  30.0  1
+ FGO  Var_57    H9   C    C3   O2    141.02  30.0  1
+ FGO  Var_58    H15  C8   N    C2     -0.85  30.0  1
+ FGO  Var_59    H10  C3   O2   C2   -118.58  30.0  1
+ FGO  Var_60    H16  C7   C8   N     179.97  30.0  1
+ FGO  Var_61    O6   C9   C10  C18  -176.84  30.0  3
+ FGO  Var_62    C1   C    O    P     165.85  30.0  2
+ FGO  Var_63    C3   C    O    P     -82.12  30.0  2
+ FGO  Var_64    O1   C1   C    O     -34.43  30.0  1
+ FGO  Var_65    C4   C3   C    O     143.94  30.0  1
+ FGO  Var_66    O3   C4   C3   C      54.01  30.0  2
+ FGO  Var_67    O2   C3   C4   O3    -66.13  30.0  3
+ FGO  Var_68    O6   C9   C10  O7     65.02  30.0  3
+ FGO  Var_69    H20  C9   C10  C18   -53.31  30.0  3
+ FGO  Var_70    H21  C9   C10  C18    62.76  30.0  3
+ FGO  Var_71    H25  O10  C20  C21    52.28  30.0  3
+ FGO  Var_72    H24  O9   C20  C21    56.94  30.0  3
+ FGO  Var_73    H19  O1   C1   C     -93.05  30.0  3
+ FGO  Var_74    H11  C4   C3   C     -67.73  30.0  2
+ FGO  Var_75    H12  C4   C3   C     176.77  30.0  2
+ FGO  Var_76    H13  O3   C4   C3    178.82  30.0  3
+ FGO  Var_77    C9   O6   P    O12   176.76  30.0  2
+ FGO  Var_78    C9   O6   P    O11    42.52  30.0  2
+ FGO  Var_79    C9   O6   P    O     -68.28  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

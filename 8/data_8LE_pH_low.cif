@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 8LE  8LE  '[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] 2-methyl-2-oxidanyl-propanoate'  ligand  49  29  .  2021-08-06  2021-08-06  
+ 8LE  8LE  '[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] 2-methyl-2-oxidanyl-propanoate'  ligand  49  29  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_8LE
@@ -253,38 +254,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 8LE  CONST_01  N9   C4   N3   C2   180.00   0.0  0
- 8LE  CONST_02  C5   C4   N3   C2     0.00   0.0  0
- 8LE  CONST_03  C5   C6   N1   C2     0.00   0.0  0
- 8LE  CONST_04  C5   N7   C8   N9     0.00   0.0  0
- 8LE  CONST_05  N7   C5   C4   N9     0.00   0.0  0
- 8LE  CONST_06  C6   C5   C4   N9   180.00   0.0  0
- 8LE  CONST_07  C5   C4   N9   C8     0.00   0.0  0
- 8LE  CONST_08  N3   C4   N9   C8   180.00   0.0  0
- 8LE  CONST_09  C4   C5   N7   C8     0.00   0.0  0
- 8LE  CONST_10  C6   C5   N7   C8   180.00   0.0  0
- 8LE  CONST_11  C4   N9   C8   N7     0.00   0.0  0
- 8LE  CONST_12  N3   C4   C5   N7   180.00   0.0  0
- 8LE  CONST_13  N1   C6   C5   N7   180.00   0.0  0
- 8LE  CONST_14  N1   C6   C5   C4     0.00   0.0  0
- 8LE  CONST_15  N1   C2   N3   C4     0.00   0.0  0
- 8LE  CONST_16  C6   C5   C4   N3     0.00   0.0  0
- 8LE  CONST_17  C6   N1   C2   N3     0.00   0.0  0
- 8LE  CONST_18  N7   C8   N9   C1'  180.00   0.0  0
- 8LE  CONST_19  C5   C4   N9   C1'  180.00   0.0  0
- 8LE  CONST_20  N3   C4   N9   C1'    0.00   0.0  0
- 8LE  CONST_21  N6   C6   N1   C2   180.00   0.0  0
- 8LE  CONST_22  N6   C6   C5   N7     0.00   0.0  0
- 8LE  CONST_23  N6   C6   C5   C4   180.00   0.0  0
- 8LE  CONST_24  H18  C8   N9   C1'    0.00   0.0  0
- 8LE  CONST_25  H1   C2   N3   C4   180.00   0.0  0
- 8LE  CONST_26  H19  N6   C6   C5     0.00   0.0  0
- 8LE  CONST_27  H20  N6   C6   C5   180.00   0.0  0
- 8LE  Var_01    C4'  C5'  O5'  PBC  -98.91  30.0  3
- 8LE  Var_02    OAQ  CAS  CAZ  CAA  -74.54  30.0  2
- 8LE  Var_03    OAE  PBC  OAQ  CAS  -53.92  30.0  2
- 8LE  Var_04    H5   CAB  CAZ  CAA   61.35  30.0  3
- 8LE  Var_05    H2   CAA  CAZ  CAB  -55.51  30.0  3
+ 8LE  CONST_01  N9   C4   N3   C2    180.00   0.0  0
+ 8LE  CONST_02  C5   C4   N3   C2      0.00   0.0  0
+ 8LE  CONST_03  C5   C6   N1   C2      0.00   0.0  0
+ 8LE  CONST_04  C5   N7   C8   N9      0.00   0.0  0
+ 8LE  CONST_05  N7   C5   C4   N9      0.00   0.0  0
+ 8LE  CONST_06  C6   C5   C4   N9    180.00   0.0  0
+ 8LE  CONST_07  C5   C4   N9   C8      0.00   0.0  0
+ 8LE  CONST_08  N3   C4   N9   C8    180.00   0.0  0
+ 8LE  CONST_09  C4   C5   N7   C8      0.00   0.0  0
+ 8LE  CONST_10  C6   C5   N7   C8    180.00   0.0  0
+ 8LE  CONST_11  C4   N9   C8   N7      0.00   0.0  0
+ 8LE  CONST_12  N3   C4   C5   N7    180.00   0.0  0
+ 8LE  CONST_13  N1   C6   C5   N7    180.00   0.0  0
+ 8LE  CONST_14  N1   C6   C5   C4      0.00   0.0  0
+ 8LE  CONST_15  N1   C2   N3   C4      0.00   0.0  0
+ 8LE  CONST_16  C6   C5   C4   N3      0.00   0.0  0
+ 8LE  CONST_17  C6   N1   C2   N3      0.00   0.0  0
+ 8LE  CONST_18  N7   C8   N9   C1'   180.00   0.0  0
+ 8LE  CONST_19  C5   C4   N9   C1'   180.00   0.0  0
+ 8LE  CONST_20  N3   C4   N9   C1'     0.00   0.0  0
+ 8LE  CONST_21  N6   C6   N1   C2    180.00   0.0  0
+ 8LE  CONST_22  N6   C6   C5   N7      0.00   0.0  0
+ 8LE  CONST_23  N6   C6   C5   C4    180.00   0.0  0
+ 8LE  CONST_24  H18  C8   N9   C1'     0.00   0.0  0
+ 8LE  CONST_25  H1   C2   N3   C4    180.00   0.0  0
+ 8LE  CONST_26  H19  N6   C6   C5      0.00   0.0  0
+ 8LE  CONST_27  H20  N6   C6   C5    180.00   0.0  0
+ 8LE  Var_01    C4'  C5'  O5'  PBC   -98.91  30.0  3
+ 8LE  Var_02    OAQ  CAS  CAZ  CAA   -74.54  30.0  2
+ 8LE  Var_03    OAE  PBC  OAQ  CAS   -53.92  30.0  2
+ 8LE  Var_04    H5   CAB  CAZ  CAA    61.35  30.0  3
+ 8LE  Var_05    H2   CAA  CAZ  CAB   -55.51  30.0  3
+ 8LE  Var_06    C1'  C2'  C3'  C4'   -37.26  30.0  1
+ 8LE  Var_07    C2'  C1'  O4'  C4'   -27.02  30.0  1
+ 8LE  Var_08    N9   C1'  O4'  C4'  -150.86  30.0  1
+ 8LE  Var_09    C2'  C3'  C4'  O4'    23.01  30.0  1
+ 8LE  Var_10    C3'  C2'  C1'  O4'    40.19  30.0  1
+ 8LE  Var_11    C8   N9   C1'  O4'    53.07  30.0  2
+ 8LE  Var_12    C4   N9   C1'  O4'  -125.43  30.0  2
+ 8LE  Var_13    C1'  O4'  C4'  C3'     2.21  30.0  1
+ 8LE  Var_14    N9   C1'  C2'  C3'   160.29  30.0  1
+ 8LE  Var_15    C8   N9   C1'  C2'   -64.36  30.0  2
+ 8LE  Var_16    C4   N9   C1'  C2'   117.14  30.0  2
+ 8LE  Var_17    C2'  C3'  C4'  C5'   -97.12  30.0  1
+ 8LE  Var_18    C1'  O4'  C4'  C5'   123.14  30.0  1
+ 8LE  Var_19    O2'  C2'  C3'  C4'  -156.22  30.0  1
+ 8LE  Var_20    O3'  C3'  C4'  O4'   -94.00  30.0  1
+ 8LE  Var_21    O2'  C2'  C1'  O4'   162.11  30.0  1
+ 8LE  Var_22    C1'  C2'  C3'  O3'    77.76  30.0  1
+ 8LE  Var_23    N9   C1'  C2'  O2'   -77.79  30.0  1
+ 8LE  Var_24    H15  C2'  C3'  C4'    77.42  30.0  1
+ 8LE  Var_25    H17  C1'  O4'  C4'    92.27  30.0  1
+ 8LE  Var_26    H13  C3'  C4'  O4'   142.29  30.0  1
+ 8LE  Var_27    H12  C4'  C3'  C2'   141.31  30.0  1
+ 8LE  Var_28    C3'  C4'  C5'  O5'   173.05  30.0  3
+ 8LE  Var_29    O4'  C4'  C5'  O5'    54.97  30.0  3
+ 8LE  Var_30    O3'  C3'  C4'  C5'   145.88  30.0  1
+ 8LE  Var_31    O2'  C2'  C3'  O3'   -41.19  30.0  1
+ 8LE  Var_32    H14  O3'  C3'  C4'   167.03  30.0  3
+ 8LE  Var_33    H10  C5'  C4'  O4'   -68.62  30.0  2
+ 8LE  Var_34    H11  C5'  C4'  O4'   172.04  30.0  2
+ 8LE  Var_35    H16  O2'  C2'  C3'   -91.17  30.0  3
+ 8LE  Var_36    PBC  OAQ  CAS  CAZ   174.63  30.0  1
+ 8LE  Var_37    PBC  OAQ  CAS  OAD    -4.14  30.0  1
+ 8LE  Var_38    C5'  O5'  PBC  OAQ   112.61  30.0  3
+ 8LE  Var_39    C5'  O5'  PBC  OAI  -139.01  30.0  3
+ 8LE  Var_40    C5'  O5'  PBC  OAE   -13.28  30.0  3
+ 8LE  Var_41    H8   OAF  CAZ  CAA  -168.64  30.0  3
+ 8LE  Var_42    H9   OAI  PBC  OAQ    55.09  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

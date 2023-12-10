@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A3S  A3S  3'-deoxy-3'-(L-serylamino)adenosine  ligand  44  25  .  2021-08-06  2021-08-06  
+ A3S  A3S  3'-deoxy-3'-(L-serylamino)adenosine  ligand  44  25  .  2021-08-06  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_A3S
@@ -234,36 +235,81 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- A3S  CONST_01  C2    N3  C4  N9   180.00  0.0  0
- A3S  CONST_02  C6    C5  C4  N9   180.00  0.0  0
- A3S  CONST_03  N7    C5  C4  N9     0.00  0.0  0
- A3S  CONST_04  C5    N7  C8  N9     0.00  0.0  0
- A3S  CONST_05  N7    C8  N9  C4     0.00  0.0  0
- A3S  CONST_06  N1    C2  N3  C4     0.00  0.0  0
- A3S  CONST_07  N1    C6  C5  C4     0.00  0.0  0
- A3S  CONST_08  C8    N7  C5  C4     0.00  0.0  0
- A3S  CONST_09  C8    N9  C4  N3   180.00  0.0  0
- A3S  CONST_10  C6    C5  C4  N3     0.00  0.0  0
- A3S  CONST_11  N7    C5  C4  N3   180.00  0.0  0
- A3S  CONST_12  C6    N1  C2  N3     0.00  0.0  0
- A3S  CONST_13  C5    C4  N3  C2     0.00  0.0  0
- A3S  CONST_14  C5    C6  N1  C2     0.00  0.0  0
- A3S  CONST_15  N7    C5  C6  N1   180.00  0.0  0
- A3S  CONST_16  C8    N7  C5  C6   180.00  0.0  0
- A3S  CONST_17  C8    N9  C4  C5     0.00  0.0  0
- A3S  CONST_18  N3    C4  N9  C1'    0.00  0.0  0
- A3S  CONST_19  C5    C4  N9  C1'  180.00  0.0  0
- A3S  CONST_20  N7    C8  N9  C1'  180.00  0.0  0
- A3S  CONST_21  N6    C6  C5  C4   180.00  0.0  0
- A3S  CONST_22  N6    C6  N1  C2   180.00  0.0  0
- A3S  CONST_23  N7    C5  C6  N6     0.00  0.0  0
- A3S  CONST_24  H8    C8  N9  C1'    0.00  0.0  0
- A3S  CONST_25  H2    C2  N3  C4   180.00  0.0  0
- A3S  CONST_26  HN61  N6  C6  N1   180.00  0.0  0
- A3S  CONST_27  HN62  N6  C6  N1     0.00  0.0  0
- A3S  CONST_28  CA    C   N8  C3'  180.00  0.0  0
- A3S  CONST_29  O     C   N8  C3'    0.00  0.0  0
- A3S  CONST_30  HN8   N8  C   CA     0.00  0.0  0
+ A3S  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ A3S  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ A3S  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ A3S  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ A3S  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ A3S  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ A3S  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ A3S  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ A3S  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ A3S  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ A3S  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ A3S  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ A3S  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ A3S  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ A3S  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ A3S  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ A3S  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ A3S  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
+ A3S  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ A3S  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ A3S  CONST_21  N6    C6   C5   C4    180.00   0.0  0
+ A3S  CONST_22  N6    C6   N1   C2    180.00   0.0  0
+ A3S  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ A3S  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ A3S  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ A3S  CONST_26  HN61  N6   C6   N1    180.00   0.0  0
+ A3S  CONST_27  HN62  N6   C6   N1      0.00   0.0  0
+ A3S  CONST_28  CA    C    N8   C3'   180.00   0.0  0
+ A3S  CONST_29  O     C    N8   C3'     0.00   0.0  0
+ A3S  CONST_30  HN8   N8   C    CA      0.00   0.0  0
+ A3S  Var_01    N9    C1'  O4'  C4'  -114.03  30.0  1
+ A3S  Var_02    C2'   C1'  O4'  C4'     7.06  30.0  1
+ A3S  Var_03    C1'   C2'  C3'  C4'   -32.57  30.0  1
+ A3S  Var_04    C2'   C3'  C4'  O4'    37.92  30.0  1
+ A3S  Var_05    C4    N9   C1'  O4'   176.74  30.0  2
+ A3S  Var_06    C8    N9   C1'  O4'    -7.35  30.0  2
+ A3S  Var_07    C3'   C2'  C1'  O4'    17.28  30.0  1
+ A3S  Var_08    C3'   C4'  O4'  C1'   -28.75  30.0  1
+ A3S  Var_09    C3'   C2'  C1'  N9    137.84  30.0  1
+ A3S  Var_10    C2'   C1'  N9   C4     57.54  30.0  1
+ A3S  Var_11    C2'   C1'  N9   C8   -126.56  30.0  1
+ A3S  Var_12    C1'   O4'  C4'  C5'    93.26  30.0  1
+ A3S  Var_13    C2'   C3'  C4'  C5'   -83.32  30.0  1
+ A3S  Var_14    O2'   C2'  C3'  C4'  -155.15  30.0  1
+ A3S  Var_15    N8    C3'  C4'  O4'   -79.65  30.0  1
+ A3S  Var_16    O2'   C2'  C1'  O4'   139.34  30.0  1
+ A3S  Var_17    N8    C3'  C2'  C1'    86.42  30.0  1
+ A3S  Var_18    O2'   C2'  C1'  N9   -100.10  30.0  1
+ A3S  Var_19    H1'   C1'  O4'  C4'   127.93  30.0  1
+ A3S  Var_20    H2'   C2'  C3'  C4'    81.86  30.0  1
+ A3S  Var_21    H3'   C3'  C4'  O4'   156.36  30.0  1
+ A3S  Var_22    H4'   C4'  O4'  C1'  -147.57  30.0  1
+ A3S  Var_23    O4'   C4'  C5'  O5'    57.48  30.0  3
+ A3S  Var_24    C3'   C4'  C5'  O5'   174.51  30.0  3
+ A3S  Var_25    N8    C3'  C4'  C5'   159.11  30.0  1
+ A3S  Var_26    C     N8   C3'  C4'   -77.62  30.0  3
+ A3S  Var_27    C     N8   C3'  C2'   170.55  30.0  3
+ A3S  Var_28    N8    C3'  C2'  O2'   -36.16  30.0  1
+ A3S  Var_29    HN8   N8   C3'  C4'   111.50  30.0  3
+ A3S  Var_30    H5'1  C5'  C4'  O4'   178.98  30.0  2
+ A3S  Var_31    H5'2  C5'  C4'  O4'   -64.71  30.0  2
+ A3S  Var_32    H1    O2'  C2'  C1'    61.88  30.0  3
+ A3S  Var_33    H5'   O5'  C5'  C4'  -172.34  30.0  3
+ A3S  Var_34    N     CA   C    N8    141.44  30.0  1
+ A3S  Var_35    CB    CA   C    N8    -95.74  30.0  1
+ A3S  Var_36    OG    CB   CA   N     -64.04  30.0  3
+ A3S  Var_37    O     C    CA   N     -40.33  30.0  3
+ A3S  Var_38    O     C    CA   CB     82.49  30.0  3
+ A3S  Var_39    C     CA   CB   OG    171.69  30.0  2
+ A3S  Var_40    HA    CA   C    N8     20.82  30.0  1
+ A3S  Var_41    HB1   CB   CA   N      58.09  30.0  3
+ A3S  Var_42    HB2   CB   CA   N     174.17  30.0  3
+ A3S  Var_43    HOG   OG   CB   CA    178.02  30.0  3
+ A3S  Var_44    HN1   N    CA   CB    172.67  30.0  3
+ A3S  Var_45    HN2   N    CA   CB    -70.90  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

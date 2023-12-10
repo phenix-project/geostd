@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2RG  2RG  '(2S,3R,4S)-4-({(3S,5S)-5-[(3-carboxyphenyl)carbamoyl]pyrrolidin-3-yl}sulfanyl)-2-[(2S,3R)-3-hydroxy-1-oxobutan-2-yl]-3-methyl-3,4-dihydro-2H-pyrrole-5-carboxylic acid'  ligand  58  33  .  2022-09-15  2022-09-16
+ 2RG  2RG  '(2S,3R,4S)-4-({(3S,5S)-5-[(3-carboxyphenyl)carbamoyl]pyrrolidin-3-yl}sulfanyl)-2-[(2S,3R)-3-hydroxy-1-oxobutan-2-yl]-3-methyl-3,4-dihydro-2H-pyrrole-5-carboxylic acid'  ligand  58  33  .  2022-09-15  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_2RG
@@ -291,29 +292,87 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2RG  CONST_01  CBB   CBA  CAZ  CAY    0.00   0.0  0
- 2RG  CONST_02  CBB   CBC  CBD  CAY    0.00   0.0  0
- 2RG  CONST_03  CBC   CBD  CAY  CAZ    0.00   0.0  0
- 2RG  CONST_04  CBC   CBB  CBA  CAZ    0.00   0.0  0
- 2RG  CONST_05  CBD   CAY  CAZ  CBA    0.00   0.0  0
- 2RG  CONST_06  CBD   CBC  CBB  CBA    0.00   0.0  0
- 2RG  CONST_07  CBA   CAZ  CAY  NAX  180.00   0.0  0
- 2RG  CONST_08  CBC   CBD  CAY  NAX  180.00   0.0  0
- 2RG  CONST_09  CBE   CBA  CAZ  CAY  180.00   0.0  0
- 2RG  CONST_10  CBE   CBA  CBB  CBC  180.00   0.0  0
- 2RG  CONST_11  HBC   CBC  CBD  CAY  180.00   0.0  0
- 2RG  CONST_12  HBD   CBD  CAY  CAZ  180.00   0.0  0
- 2RG  CONST_13  HBB   CBB  CBA  CAZ  180.00   0.0  0
- 2RG  CONST_14  HAZ   CAZ  CBA  CBB  180.00   0.0  0
- 2RG  CONST_15  CAY   NAX  C    CA   180.00   0.0  0
- 2RG  CONST_16  CAZ   CAY  NAX  C      0.00   0.0  0
- 2RG  CONST_17  CBD   CAY  NAX  C    180.00   0.0  0
- 2RG  CONST_18  HNAX  NAX  CAY  CAZ  180.00   0.0  0
- 2RG  CONST_19  CAY   NAX  C    O      0.00   0.0  0
- 2RG  Var_01    CG    CD   N    CA   -39.05  30.0  1
- 2RG  Var_02    CAI   CAL  NAJ  CAD   -0.34  30.0  1
- 2RG  Var_03    OAU   CAM  CAL  CAI   10.73  30.0  2
- 2RG  Var_04    OBF   CBE  CBA  CAZ   -1.34  30.0  2
+ 2RG  CONST_01  CBB   CBA  CAZ  CAY     0.00   0.0  0
+ 2RG  CONST_02  CBB   CBC  CBD  CAY     0.00   0.0  0
+ 2RG  CONST_03  CBC   CBD  CAY  CAZ     0.00   0.0  0
+ 2RG  CONST_04  CBC   CBB  CBA  CAZ     0.00   0.0  0
+ 2RG  CONST_05  CBD   CAY  CAZ  CBA     0.00   0.0  0
+ 2RG  CONST_06  CBD   CBC  CBB  CBA     0.00   0.0  0
+ 2RG  CONST_07  CBA   CAZ  CAY  NAX   180.00   0.0  0
+ 2RG  CONST_08  CBC   CBD  CAY  NAX   180.00   0.0  0
+ 2RG  CONST_09  CBE   CBA  CAZ  CAY   180.00   0.0  0
+ 2RG  CONST_10  CBE   CBA  CBB  CBC   180.00   0.0  0
+ 2RG  CONST_11  HBC   CBC  CBD  CAY   180.00   0.0  0
+ 2RG  CONST_12  HBD   CBD  CAY  CAZ   180.00   0.0  0
+ 2RG  CONST_13  HBB   CBB  CBA  CAZ   180.00   0.0  0
+ 2RG  CONST_14  HAZ   CAZ  CBA  CBB   180.00   0.0  0
+ 2RG  CONST_15  CAY   NAX  C    CA    180.00   0.0  0
+ 2RG  CONST_16  CAZ   CAY  NAX  C       0.00   0.0  0
+ 2RG  CONST_17  CBD   CAY  NAX  C     180.00   0.0  0
+ 2RG  CONST_18  HNAX  NAX  CAY  CAZ   180.00   0.0  0
+ 2RG  CONST_19  CAY   NAX  C    O       0.00   0.0  0
+ 2RG  Var_01    CG    CD   N    CA    -39.05  30.0  1
+ 2RG  Var_02    CAI   CAL  NAJ  CAD    -0.34  30.0  1
+ 2RG  Var_03    OAU   CAM  CAL  CAI    10.73  30.0  2
+ 2RG  Var_04    OBF   CBE  CBA  CAZ    -1.34  30.0  2
+ 2RG  Var_05    CB    CG   CD   N      37.04  30.0  1
+ 2RG  Var_06    CG    CB   CA   N      -1.85  30.0  1
+ 2RG  Var_07    CD    CG   CB   CA    -20.55  30.0  1
+ 2RG  Var_08    CD    N    CA   CB     24.99  30.0  1
+ 2RG  Var_09    CAL   CAI  CAH  CAD   -28.12  30.0  1
+ 2RG  Var_10    CAL   NAJ  CAD  CAH   -19.39  30.0  1
+ 2RG  Var_11    NAJ   CAL  CAI  CAH    19.64  30.0  1
+ 2RG  Var_12    NAJ   CAD  CAH  CAI    29.67  30.0  1
+ 2RG  Var_13    CD    N    CA   C     147.21  30.0  1
+ 2RG  Var_14    CG    CB   CA   C    -124.50  30.0  1
+ 2RG  Var_15    SAK   CG   CD   N     -77.15  30.0  1
+ 2RG  Var_16    SAK   CG   CB   CA     97.03  30.0  1
+ 2RG  Var_17    CAI   SAK  CG   CB   -177.34  30.0  3
+ 2RG  Var_18    CAI   SAK  CG   CD    -66.10  30.0  3
+ 2RG  Var_19    CAH   CAI  SAK  CG    175.07  30.0  1
+ 2RG  Var_20    CAL   CAI  SAK  CG    -75.05  30.0  1
+ 2RG  Var_21    CAI   CAH  CAD  CAB   156.07  30.0  1
+ 2RG  Var_22    CAL   NAJ  CAD  CAB  -149.46  30.0  1
+ 2RG  Var_23    SAK   CAI  CAH  CAD    87.98  30.0  1
+ 2RG  Var_24    CAM   CAL  CAI  CAH  -159.11  30.0  1
+ 2RG  Var_25    CAS   CAH  CAD  NAJ   -88.35  30.0  1
+ 2RG  Var_26    SAK   CAI  CAL  NAJ   -94.66  30.0  1
+ 2RG  Var_27    CAS   CAH  CAI  CAL    93.86  30.0  1
+ 2RG  Var_28    HG    CG   CD   N     158.20  30.0  1
+ 2RG  Var_29    HB    CB   CA   N     120.96  30.0  1
+ 2RG  Var_30    HBA   CB   CA   N    -119.70  30.0  1
+ 2RG  Var_31    HN    N    CA   CB    -90.41  30.0  1
+ 2RG  Var_32    HA    CA   N    CD    -92.25  30.0  1
+ 2RG  Var_33    HAI   CAI  CAH  CAD  -150.73  30.0  1
+ 2RG  Var_34    HAD   CAD  CAH  CAI   -84.15  30.0  1
+ 2RG  Var_35    HAH   CAH  CAD  NAJ   148.07  30.0  1
+ 2RG  Var_36    O     C    CA   N     -26.26  30.0  3
+ 2RG  Var_37    NAX   C    CA   N     155.99  30.0  3
+ 2RG  Var_38    CB    CA   C    O      93.94  30.0  2
+ 2RG  Var_39    NAX   C    CA   CB    -83.81  30.0  3
+ 2RG  Var_40    CAS   CAH  CAD  CAB    38.05  30.0  1
+ 2RG  Var_41    CAH   CAD  CAB  CAE   165.66  30.0  3
+ 2RG  Var_42    NAJ   CAD  CAB  CAE   -70.98  30.0  3
+ 2RG  Var_43    CAA   CAB  CAD  CAH   -73.17  30.0  1
+ 2RG  Var_44    CAA   CAB  CAD  NAJ    50.19  30.0  1
+ 2RG  Var_45    CAS   CAH  CAI  SAK  -150.03  30.0  1
+ 2RG  Var_46    CAM   CAL  CAI  SAK    86.59  30.0  1
+ 2RG  Var_47    HAS   CAS  CAH  CAD    55.84  30.0  3
+ 2RG  Var_48    HASA  CAS  CAH  CAD   174.86  30.0  3
+ 2RG  Var_49    HASB  CAS  CAH  CAD   -66.37  30.0  3
+ 2RG  Var_50    HAB   CAB  CAD  CAH    47.05  30.0  1
+ 2RG  Var_51    OAC   CAA  CAB  CAD   136.39  30.0  3
+ 2RG  Var_52    CAF   CAE  CAB  CAD   179.90  30.0  3
+ 2RG  Var_53    OAG   CAE  CAB  CAD   -55.25  30.0  3
+ 2RG  Var_54    HAA   CAA  CAB  CAD   -45.86  30.0  3
+ 2RG  Var_55    HAE   CAE  CAB  CAD    59.52  30.0  3
+ 2RG  Var_56    OAC   CAA  CAB  CAE  -101.45  30.0  3
+ 2RG  Var_57    CAA   CAB  CAE  CAF    56.67  30.0  1
+ 2RG  Var_58    CAA   CAB  CAE  OAG  -178.48  30.0  1
+ 2RG  Var_59    HAF   CAF  CAE  CAB    54.30  30.0  3
+ 2RG  Var_60    HAFA  CAF  CAE  CAB   174.33  30.0  3
+ 2RG  Var_61    HAFB  CAF  CAE  CAB   -66.56  30.0  3
+ 2RG  Var_62    HOAG  OAG  CAE  CAB   -66.97  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

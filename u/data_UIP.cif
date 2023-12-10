@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UIP  UIP  4-[(1R,3aS,4R,8aS,8bR)-2-(1,3-benzodioxol-5-ylmethyl)-1-ethyl-3-oxodecahydropyrrolo[3,4-a]pyrrolizin-4-yl]benzenecarboximidamide  ligand  63  33  .  2021-08-24  2021-08-24  
+ UIP  UIP  4-[(1R,3aS,4R,8aS,8bR)-2-(1,3-benzodioxol-5-ylmethyl)-1-ethyl-3-oxodecahydropyrrolo[3,4-a]pyrrolizin-4-yl]benzenecarboximidamide  ligand  63  33  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_UIP
@@ -322,45 +323,95 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- UIP  CONST_01  C7    C8   C9   C4     0.00   0.0  0
- UIP  CONST_02  C7    C6   C5   C4     0.00   0.0  0
- UIP  CONST_03  C6    C5   C4   C9     0.00   0.0  0
- UIP  CONST_04  C6    C7   C8   C9     0.00   0.0  0
- UIP  CONST_05  C5    C4   C9   C8     0.00   0.0  0
- UIP  CONST_06  C5    C6   C7   C8     0.00   0.0  0
- UIP  CONST_07  C30   C31  C32  C24    0.00   0.0  0
- UIP  CONST_08  C30   C26  C25  C24    0.00   0.0  0
- UIP  CONST_09  C26   C25  C24  C32    0.00   0.0  0
- UIP  CONST_10  C26   C30  C31  C32    0.00   0.0  0
- UIP  CONST_11  C25   C24  C32  C31    0.00   0.0  0
- UIP  CONST_12  C25   C26  C30  C31    0.00   0.0  0
- UIP  CONST_13  C10   C7   C8   C9   180.00   0.0  0
- UIP  CONST_14  C10   C7   C6   C5   180.00   0.0  0
- UIP  CONST_15  C22   C20  N19  C17    0.00   0.0  0
- UIP  CONST_16  C8    C9   C4   C3   180.00   0.0  0
- UIP  CONST_17  C6    C5   C4   C3   180.00   0.0  0
- UIP  CONST_18  C31   C32  C24  C23  180.00   0.0  0
- UIP  CONST_19  C26   C25  C24  C23  180.00   0.0  0
- UIP  CONST_20  O21   C20  N19  C17  180.00   0.0  0
- UIP  CONST_22  H8    C8   C9   C4   180.00   0.0  0
- UIP  CONST_23  H6    C6   C5   C4   180.00   0.0  0
- UIP  CONST_24  H5    C5   C4   C9   180.00   0.0  0
- UIP  CONST_25  H9    C9   C8   C7   180.00   0.0  0
- UIP  CONST_26  H31   C31  C32  C24  180.00   0.0  0
- UIP  CONST_27  H25   C25  C24  C32  180.00   0.0  0
- UIP  CONST_28  H32   C32  C31  C30  180.00   0.0  0
- UIP  CONST_30  HN1   N1   C3   C4   180.00   0.0  0
- UIP  CONST_31  HN21  N2   C3   C4   180.00   0.0  0
- UIP  Var_01    C13   C12  N11  C10  153.79  30.0  1
- UIP  Var_02    C14   C13  C12  N11  -37.89  30.0  1
- UIP  Var_03    C15   C14  C13  C12   36.60  30.0  1
- UIP  Var_04    O27   C28  O29  C30  -13.94  30.0  1
- UIP  Var_05    C26   C30  O29  C28    8.70  30.0  1
- UIP  Var_06    C25   C26  O27  C28  172.50  30.0  1
- UIP  Var_07    C24   C23  N19  C17  -78.29  30.0  3
- UIP  Var_08    C32   C24  C23  N19  102.80  30.0  2
- UIP  Var_09    C9    C4   C3   N1   -24.13  30.0  2
- UIP  Var_10    H421  C42  C18  C17  174.62  30.0  3
+ UIP  CONST_01  C7    C8   C9   C4      0.00   0.0  0
+ UIP  CONST_02  C7    C6   C5   C4      0.00   0.0  0
+ UIP  CONST_03  C6    C5   C4   C9      0.00   0.0  0
+ UIP  CONST_04  C6    C7   C8   C9      0.00   0.0  0
+ UIP  CONST_05  C5    C4   C9   C8      0.00   0.0  0
+ UIP  CONST_06  C5    C6   C7   C8      0.00   0.0  0
+ UIP  CONST_07  C30   C31  C32  C24     0.00   0.0  0
+ UIP  CONST_08  C30   C26  C25  C24     0.00   0.0  0
+ UIP  CONST_09  C26   C25  C24  C32     0.00   0.0  0
+ UIP  CONST_10  C26   C30  C31  C32     0.00   0.0  0
+ UIP  CONST_11  C25   C24  C32  C31     0.00   0.0  0
+ UIP  CONST_12  C25   C26  C30  C31     0.00   0.0  0
+ UIP  CONST_13  C10   C7   C8   C9    180.00   0.0  0
+ UIP  CONST_14  C10   C7   C6   C5    180.00   0.0  0
+ UIP  CONST_15  C22   C20  N19  C17     0.00   0.0  0
+ UIP  CONST_16  C8    C9   C4   C3    180.00   0.0  0
+ UIP  CONST_17  C6    C5   C4   C3    180.00   0.0  0
+ UIP  CONST_18  C31   C32  C24  C23   180.00   0.0  0
+ UIP  CONST_19  C26   C25  C24  C23   180.00   0.0  0
+ UIP  CONST_20  O21   C20  N19  C17   180.00   0.0  0
+ UIP  CONST_21  H8    C8   C9   C4    180.00   0.0  0
+ UIP  CONST_22  H6    C6   C5   C4    180.00   0.0  0
+ UIP  CONST_23  H5    C5   C4   C9    180.00   0.0  0
+ UIP  CONST_24  H9    C9   C8   C7    180.00   0.0  0
+ UIP  CONST_25  H31   C31  C32  C24   180.00   0.0  0
+ UIP  CONST_26  H25   C25  C24  C32   180.00   0.0  0
+ UIP  CONST_27  H32   C32  C31  C30   180.00   0.0  0
+ UIP  CONST_28  HN1   N1   C3   C4    180.00   0.0  0
+ UIP  CONST_29  HN21  N2   C3   C4    180.00   0.0  0
+ UIP  Var_01    C13   C12  N11  C10   153.79  30.0  1
+ UIP  Var_02    C14   C13  C12  N11   -37.89  30.0  1
+ UIP  Var_03    C15   C14  C13  C12    36.60  30.0  1
+ UIP  Var_04    O27   C28  O29  C30   -13.94  30.0  1
+ UIP  Var_05    C26   C30  O29  C28     8.70  30.0  1
+ UIP  Var_06    C25   C26  O27  C28   172.50  30.0  1
+ UIP  Var_07    C24   C23  N19  C17   -78.29  30.0  3
+ UIP  Var_08    C32   C24  C23  N19   102.80  30.0  2
+ UIP  Var_09    C9    C4   C3   N1    -24.13  30.0  2
+ UIP  Var_10    H421  C42  C18  C17   174.62  30.0  3
+ UIP  Var_11    N11   C10  C7   C8     23.01  30.0  2
+ UIP  Var_12    C22   C10  C7   C8    -98.00  30.0  2
+ UIP  Var_13    C12   N11  C10  C7     94.84  30.0  1
+ UIP  Var_14    C15   N11  C10  C7   -137.08  30.0  1
+ UIP  Var_15    C16   C22  C10  C7    150.85  30.0  1
+ UIP  Var_16    C20   C22  C10  C7     37.79  30.0  1
+ UIP  Var_17    N11   C10  C7   C6   -156.59  30.0  2
+ UIP  Var_18    C22   C10  C7   C6     82.40  30.0  2
+ UIP  Var_19    C14   C15  N11  C10  -133.35  30.0  1
+ UIP  Var_20    C16   C15  N11  C10    -8.77  30.0  1
+ UIP  Var_21    C15   C16  C22  C10   -30.20  30.0  1
+ UIP  Var_22    C17   C16  C22  C10  -148.63  30.0  1
+ UIP  Var_23    N19   C20  C22  C10   128.64  30.0  1
+ UIP  Var_24    C16   C22  C10  N11    25.45  30.0  1
+ UIP  Var_25    C20   C22  C10  N11   -87.61  30.0  1
+ UIP  Var_26    C13   C14  C15  N11   -22.05  30.0  1
+ UIP  Var_27    C17   C16  C15  N11   136.54  30.0  1
+ UIP  Var_28    C22   C16  C15  N11    24.20  30.0  1
+ UIP  Var_29    C22   C10  N11  C12  -138.50  30.0  1
+ UIP  Var_30    C14   C15  N11  C12    -1.77  30.0  1
+ UIP  Var_31    C16   C15  N11  C12   122.81  30.0  1
+ UIP  Var_32    C16   C15  C14  C13  -139.65  30.0  1
+ UIP  Var_33    C17   C16  C15  C14  -106.27  30.0  1
+ UIP  Var_34    C22   C16  C15  C14   141.40  30.0  1
+ UIP  Var_35    C22   C10  N11  C15   -10.42  30.0  1
+ UIP  Var_36    N19   C17  C16  C15   -83.25  30.0  1
+ UIP  Var_37    C20   C22  C16  C15    92.01  30.0  1
+ UIP  Var_38    C20   N19  C17  C16   -20.77  30.0  1
+ UIP  Var_39    N19   C20  C22  C16    14.56  30.0  1
+ UIP  Var_40    C20   C22  C16  C17   -26.43  30.0  1
+ UIP  Var_41    C22   C16  C17  N19    28.33  30.0  1
+ UIP  Var_42    C26   O27  C28  O29    13.97  30.0  1
+ UIP  Var_43    O21   C20  C22  C10   -51.96  30.0  1
+ UIP  Var_44    C18   C17  C16  C15   155.44  30.0  1
+ UIP  Var_45    C23   N19  C17  C16   147.13  30.0  1
+ UIP  Var_46    O21   C20  C22  C16  -166.03  30.0  1
+ UIP  Var_47    C18   C17  N19  C20    99.78  30.0  1
+ UIP  Var_48    C18   C17  C16  C22   -92.98  30.0  1
+ UIP  Var_49    H10   C10  C7   C8    144.42  30.0  2
+ UIP  Var_50    H22   C22  C10  C7    -86.64  30.0  1
+ UIP  Var_51    H15   C15  N11  C10   108.70  30.0  1
+ UIP  Var_52    H16   C16  C22  C10    89.60  30.0  1
+ UIP  Var_53    H141  C14  C15  N11    95.39  30.0  1
+ UIP  Var_54    H142  C14  C15  N11  -144.32  30.0  1
+ UIP  Var_55    H17   C17  C16  C15    33.11  30.0  1
+ UIP  Var_56    C42   C18  C17  C16   171.19  30.0  3
+ UIP  Var_57    C42   C18  C17  N19    56.56  30.0  3
+ UIP  Var_58    C18   C17  N19  C23   -92.32  30.0  1
+ UIP  Var_59    H181  C18  C17  C16    47.77  30.0  3
+ UIP  Var_60    H182  C18  C17  C16   -66.80  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ITC  ITC  (4S,4aS,6S,8aS)-6-[(1S)-7-chloro-4-hydroxy-1-methyl-3-oxo-1,3-dihydro-2-benzofuran-1-yl]-4-(dimethylamino)-3,8a-dihydroxy-1,8-dioxo-1,4,4a,5,6,7,8,8a-octahydronaphthalene-2-carboxamide  ligand  56  33  .  2022-03-22  2022-03-22
+ ITC  ITC  (4S,4aS,6S,8aS)-6-[(1S)-7-chloro-4-hydroxy-1-methyl-3-oxo-1,3-dihydro-2-benzofuran-1-yl]-4-(dimethylamino)-3,8a-dihydroxy-1,8-dioxo-1,4,4a,5,6,7,8,8a-octahydronaphthalene-2-carboxamide  ligand  56  33  .  2022-03-22  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_ITC
@@ -286,29 +287,93 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ITC  CONST_01  C9    C8   C7   C6A    0.00   0.0  0
- ITC  CONST_02  C9    C10  C6B  C6A    0.00   0.0  0
- ITC  CONST_03  C10   C6B  C6A  C7     0.00   0.0  0
- ITC  CONST_04  C10   C9   C8   C7     0.00   0.0  0
- ITC  CONST_05  C6B   C6A  C7   C8     0.00   0.0  0
- ITC  CONST_06  C6B   C10  C9   C8     0.00   0.0  0
- ITC  CONST_07  CL7   C7   C6A  C6     0.00   0.0  0
- ITC  CONST_08  O10   C10  C6B  C6A  180.00   0.0  0
- ITC  CONST_09  C6B   C6A  C7   CL7  180.00   0.0  0
- ITC  CONST_10  C9    C8   C7   CL7  180.00   0.0  0
- ITC  CONST_11  O10   C10  C9   C8   180.00   0.0  0
- ITC  CONST_12  C11   C6B  C10  O10    0.00   0.0  0
- ITC  CONST_13  H8    C8   C7   C6A  180.00   0.0  0
- ITC  CONST_14  H9    C9   C8   C7   180.00   0.0  0
- ITC  CONST_16  H2'2  N2'  C2'  C2   180.00   0.0  0
- ITC  Var_01    C4    C3   C2   C1    -3.29  30.0  1
- ITC  Var_02    C4B   C1   C2   C3    10.25  30.0  1
- ITC  Var_03    C4B   C12  C5B  C5A   50.85  30.0  1
- ITC  Var_04    C6B   C11  O6   C6     0.98  30.0  1
- ITC  Var_05    C6A   C6B  C11  O6    -0.32  30.0  1
- ITC  Var_06    O2'   C2'  C2   C1    49.64  30.0  2
- ITC  Var_07    H4'1  C4'  N4   C4    71.58  30.0  3
- ITC  Var_08    H4D1  C4D  N4   C4    46.09  30.0  3
+ ITC  CONST_01  C9    C8   C7   C6A     0.00   0.0  0
+ ITC  CONST_02  C9    C10  C6B  C6A     0.00   0.0  0
+ ITC  CONST_03  C10   C6B  C6A  C7      0.00   0.0  0
+ ITC  CONST_04  C10   C9   C8   C7      0.00   0.0  0
+ ITC  CONST_05  C6B   C6A  C7   C8      0.00   0.0  0
+ ITC  CONST_06  C6B   C10  C9   C8      0.00   0.0  0
+ ITC  CONST_07  CL7   C7   C6A  C6      0.00   0.0  0
+ ITC  CONST_08  O10   C10  C6B  C6A   180.00   0.0  0
+ ITC  CONST_09  C6B   C6A  C7   CL7   180.00   0.0  0
+ ITC  CONST_10  C9    C8   C7   CL7   180.00   0.0  0
+ ITC  CONST_11  O10   C10  C9   C8    180.00   0.0  0
+ ITC  CONST_12  C11   C6B  C10  O10     0.00   0.0  0
+ ITC  CONST_13  H8    C8   C7   C6A   180.00   0.0  0
+ ITC  CONST_14  H9    C9   C8   C7    180.00   0.0  0
+ ITC  CONST_15  H2'2  N2'  C2'  C2    180.00   0.0  0
+ ITC  Var_01    C4    C3   C2   C1     -3.29  30.0  1
+ ITC  Var_02    C4B   C1   C2   C3     10.25  30.0  1
+ ITC  Var_03    C4B   C12  C5B  C5A    50.85  30.0  1
+ ITC  Var_04    C6B   C11  O6   C6      0.98  30.0  1
+ ITC  Var_05    C6A   C6B  C11  O6     -0.32  30.0  1
+ ITC  Var_06    O2'   C2'  C2   C1     49.64  30.0  2
+ ITC  Var_07    H4'1  C4'  N4   C4     71.58  30.0  3
+ ITC  Var_08    H4D1  C4D  N4   C4     46.09  30.0  3
+ ITC  Var_09    C4    C4A  C4B  C1     52.16  30.0  1
+ ITC  Var_10    C5    C4A  C4B  C1    -71.16  30.0  1
+ ITC  Var_11    C5B   C12  C4B  C1     73.68  30.0  1
+ ITC  Var_12    C4A   C4B  C1   C2    -34.68  30.0  1
+ ITC  Var_13    C12   C4B  C1   C2   -156.46  30.0  1
+ ITC  Var_14    C4A   C4   C3   C2     21.04  30.0  1
+ ITC  Var_15    C5    C4A  C4   C3     79.01  30.0  1
+ ITC  Var_16    C4B   C4A  C4   C3    -45.29  30.0  1
+ ITC  Var_17    C5A   C5   C4A  C4    178.73  30.0  1
+ ITC  Var_18    C12   C4B  C4A  C4    171.92  30.0  1
+ ITC  Var_19    C6    C5A  C5   C4A  -175.83  30.0  1
+ ITC  Var_20    C5B   C5A  C5   C4A    58.57  30.0  1
+ ITC  Var_21    C5B   C12  C4B  C4A   -48.31  30.0  1
+ ITC  Var_22    C12   C4B  C4A  C5     48.60  30.0  1
+ ITC  Var_23    O6    C6   C5A  C5    -58.76  30.0  3
+ ITC  Var_24    C6A   C6   C5A  C5   -171.75  30.0  3
+ ITC  Var_25    C12   C5B  C5A  C5    -53.91  30.0  1
+ ITC  Var_26    C4B   C4A  C5   C5A   -56.23  30.0  1
+ ITC  Var_27    C11   O6   C6   C5A  -120.69  30.0  1
+ ITC  Var_28    C7    C6A  C6   C5A   -62.94  30.0  1
+ ITC  Var_29    C6B   C6A  C6   C5A   117.20  30.0  1
+ ITC  Var_30    C12   C5B  C5A  C6   -179.97  30.0  1
+ ITC  Var_31    C5B   C5A  C6   O6     65.87  30.0  2
+ ITC  Var_32    C7    C6A  C6   O6   -179.21  30.0  1
+ ITC  Var_33    C6B   C6A  C6   O6      0.93  30.0  1
+ ITC  Var_34    C5B   C5A  C6   C6A   -47.12  30.0  2
+ ITC  Var_35    C11   O6   C6   C6A    -1.18  30.0  1
+ ITC  Var_36    O12   C12  C4B  C1   -106.84  30.0  1
+ ITC  Var_37    C4A   C4B  C1   O1    147.99  30.0  1
+ ITC  Var_38    C12   C4B  C1   O1     26.21  30.0  1
+ ITC  Var_39    O4B   C4B  C1   C2     85.70  30.0  1
+ ITC  Var_40    N4    C4   C3   C2   -110.05  30.0  1
+ ITC  Var_41    C4A   C4   C3   O3   -161.23  30.0  1
+ ITC  Var_42    O4B   C4B  C4A  C4    -66.04  30.0  1
+ ITC  Var_43    C5    C4A  C4   N4   -150.87  30.0  1
+ ITC  Var_44    C4B   C4A  C4   N4     84.84  30.0  1
+ ITC  Var_45    O12   C12  C4B  C4A   131.17  30.0  1
+ ITC  Var_46    O4B   C4B  C4A  C5    170.64  30.0  1
+ ITC  Var_47    C6'   C6   C5A  C5     60.66  30.0  3
+ ITC  Var_48    C5B   C5A  C6   C6'  -174.71  30.0  2
+ ITC  Var_49    C11   O6   C6   C6'   116.51  30.0  1
+ ITC  Var_50    C7    C6A  C6   C6'    65.64  30.0  1
+ ITC  Var_51    C6B   C6A  C6   C6'  -114.22  30.0  1
+ ITC  Var_52    O4B   C4B  C12  C5B  -170.59  30.0  1
+ ITC  Var_53    H4A   C4A  C4B  C1    170.05  30.0  1
+ ITC  Var_54    H4    C4   C3   C2    134.54  30.0  1
+ ITC  Var_55    H51C  C5   C4A  C4    -57.77  30.0  1
+ ITC  Var_56    H52C  C5   C4A  C4     57.90  30.0  1
+ ITC  Var_57    H5A   C5A  C5   C4A   -59.29  30.0  1
+ ITC  Var_58    H5B1  C5B  C5A  C5     64.91  30.0  1
+ ITC  Var_59    H5B2  C5B  C5A  C5   -175.13  30.0  1
+ ITC  Var_60    O4B   C4B  C1   O1    -91.63  30.0  1
+ ITC  Var_61    C4'   N4   C4   C3   -107.97  30.0  3
+ ITC  Var_62    C4D   N4   C4   C3     25.44  30.0  3
+ ITC  Var_63    N4    C4   C3   O3     67.68  30.0  1
+ ITC  Var_64    C4A   C4   N4   C4'   122.34  30.0  3
+ ITC  Var_65    C4A   C4   N4   C4D  -104.25  30.0  3
+ ITC  Var_66    O4B   C4B  C12  O12     8.89  30.0  1
+ ITC  Var_67    H4B   O4B  C4B  C1     92.44  30.0  3
+ ITC  Var_68    H3    O3   C3   C2     -2.38  30.0  3
+ ITC  Var_69    H6'1  C6'  C6   C5A    58.01  30.0  3
+ ITC  Var_70    H6'2  C6'  C6   C5A   177.48  30.0  3
+ ITC  Var_71    H6'3  C6'  C6   C5A   -62.27  30.0  3
+ ITC  Var_72    H10   O10  C10  C9    179.68  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

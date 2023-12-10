@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- L3U  L3U  '[(2~{R},3~{S},4~{R},5~{R})-5-[3-methyl-2,4-bis(oxidanylidene)pyrimidin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl ~{N}-[(2~{S})-2-azanyl-4-methyl-pentanoyl]sulfamate'  ligand  56  30  .  2021-08-12  2021-08-12  
+ L3U  L3U  '[(2~{R},3~{S},4~{R},5~{R})-5-[3-methyl-2,4-bis(oxidanylidene)pyrimidin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methyl ~{N}-[(2~{S})-2-azanyl-4-methyl-pentanoyl]sulfamate'  ligand  56  30  .  2021-08-12  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_L3U
@@ -281,28 +282,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- L3U  CONST_01  N3   C2   N1   C1'  180.00   0.0  0
- L3U  CONST_02  C5   C4   N3   C2     0.00   0.0  0
- L3U  CONST_03  N1   C2   N3   C4     0.00   0.0  0
- L3U  CONST_04  N3   C2   N1   C6     0.00   0.0  0
- L3U  CONST_05  O2   C2   N1   C1'    0.00   0.0  0
- L3U  CONST_06  O4   C4   N3   C2   180.00   0.0  0
- L3U  CONST_07  N1   C2   N3   C3U  180.00   0.0  0
- L3U  CONST_08  C5   C4   N3   C3U  180.00   0.0  0
- L3U  CONST_09  O2   C2   N3   C4   180.00   0.0  0
- L3U  CONST_10  O2   C2   N1   C6   180.00   0.0  0
- L3U  CONST_11  O2   C2   N3   C3U    0.00   0.0  0
- L3U  CONST_12  O4   C4   N3   C3U    0.00   0.0  0
- L3U  CONST_13  S    N3S  C    CA   180.00   0.0  0
- L3U  CONST_14  S    N3S  C    O      0.00   0.0  0
- L3U  CONST_15  H25  N3S  C    CA     0.00   0.0  0
- L3U  Var_01    H17  C3U  N3   C2    81.34  30.0  3
- L3U  Var_02    CD2  CG   CB   CA   -57.89  30.0  2
- L3U  Var_03    O5'  S    N3S  C     62.39  30.0  3
- L3U  Var_04    N3S  S    O5'  C5'   75.49  30.0  3
- L3U  Var_05    H11  CD2  CG   CB    65.79  30.0  3
- L3U  Var_06    H8   CD1  CG   CB   -57.10  30.0  3
- L3U  Var_07    H22  C5'  O5'  S    101.29  30.0  1
+ L3U  CONST_01  N3   C2   N1   C1'   180.00   0.0  0
+ L3U  CONST_02  C5   C4   N3   C2      0.00   0.0  0
+ L3U  CONST_03  N1   C2   N3   C4      0.00   0.0  0
+ L3U  CONST_04  N3   C2   N1   C6      0.00   0.0  0
+ L3U  CONST_05  O2   C2   N1   C1'     0.00   0.0  0
+ L3U  CONST_06  O4   C4   N3   C2    180.00   0.0  0
+ L3U  CONST_07  N1   C2   N3   C3U   180.00   0.0  0
+ L3U  CONST_08  C5   C4   N3   C3U   180.00   0.0  0
+ L3U  CONST_09  O2   C2   N3   C4    180.00   0.0  0
+ L3U  CONST_10  O2   C2   N1   C6    180.00   0.0  0
+ L3U  CONST_11  O2   C2   N3   C3U     0.00   0.0  0
+ L3U  CONST_12  O4   C4   N3   C3U     0.00   0.0  0
+ L3U  CONST_13  S    N3S  C    CA    180.00   0.0  0
+ L3U  CONST_14  S    N3S  C    O       0.00   0.0  0
+ L3U  CONST_15  H25  N3S  C    CA      0.00   0.0  0
+ L3U  Var_01    H17  C3U  N3   C2     81.34  30.0  3
+ L3U  Var_02    CD2  CG   CB   CA    -57.89  30.0  2
+ L3U  Var_03    O5'  S    N3S  C      62.39  30.0  3
+ L3U  Var_04    N3S  S    O5'  C5'    75.49  30.0  3
+ L3U  Var_05    H11  CD2  CG   CB     65.79  30.0  3
+ L3U  Var_06    H8   CD1  CG   CB    -57.10  30.0  3
+ L3U  Var_07    H22  C5'  O5'  S     101.29  30.0  1
+ L3U  Var_08    C3'  C4'  O4'  C1'     0.16  30.0  1
+ L3U  Var_09    C4'  C3'  C2'  C1'   -35.52  30.0  1
+ L3U  Var_10    O4'  C1'  N1   C2   -119.15  30.0  2
+ L3U  Var_11    C2'  C1'  N1   C2    123.26  30.0  2
+ L3U  Var_12    O4'  C4'  C3'  C2'    23.10  30.0  1
+ L3U  Var_13    C4'  O4'  C1'  C2'   -23.81  30.0  1
+ L3U  Var_14    C6   N1   C1'  C2'   -59.14  30.0  3
+ L3U  Var_15    O4'  C1'  C2'  C3'    37.16  30.0  1
+ L3U  Var_16    N1   C1'  C2'  C3'   156.66  30.0  1
+ L3U  Var_17    N1   C1'  O4'  C4'  -147.03  30.0  1
+ L3U  Var_18    O4'  C1'  N1   C6     58.45  30.0  2
+ L3U  Var_19    C5'  C4'  O4'  C1'   122.78  30.0  1
+ L3U  Var_20    O3'  C3'  C2'  C1'    79.42  30.0  1
+ L3U  Var_21    C5'  C4'  C3'  C2'   -97.66  30.0  1
+ L3U  Var_22    O2'  C2'  C3'  C4'  -153.50  30.0  1
+ L3U  Var_23    O2'  C2'  C1'  N1    -81.70  30.0  1
+ L3U  Var_24    O4'  C1'  C2'  O2'   158.80  30.0  1
+ L3U  Var_25    O4'  C4'  C3'  O3'   -93.97  30.0  1
+ L3U  Var_26    H20  C4'  O4'  C1'  -117.94  30.0  1
+ L3U  Var_27    H16  C3'  C2'  C1'  -155.30  30.0  1
+ L3U  Var_28    H24  C6   N1   C1'     1.61  30.0  1
+ L3U  Var_29    H14  C1'  N1   C2      1.44  30.0  2
+ L3U  Var_30    H15  C2'  C3'  C4'    80.89  30.0  1
+ L3U  Var_31    H21  C5   C6   N1    179.76  30.0  1
+ L3U  Var_32    O5'  C5'  C4'  C3'  -170.30  30.0  3
+ L3U  Var_33    O3'  C3'  C4'  C5'   145.27  30.0  1
+ L3U  Var_34    O3'  C3'  C2'  O2'   -38.55  30.0  1
+ L3U  Var_35    O5'  C5'  C4'  O4'    70.75  30.0  3
+ L3U  Var_36    H26  O2'  C2'  C1'   160.98  30.0  3
+ L3U  Var_37    H27  O3'  C3'  C2'    47.50  30.0  3
+ L3U  Var_38    H22  C5'  C4'  C3'   -53.22  30.0  3
+ L3U  Var_39    H23  C5'  C4'  C3'    67.38  30.0  3
+ L3U  Var_40    CG   CB   CA   N     -56.81  30.0  2
+ L3U  Var_41    N3S  C    CA   N     148.41  30.0  3
+ L3U  Var_42    O    C    CA   N     -32.57  30.0  3
+ L3U  Var_43    CG   CB   CA   C     178.69  30.0  2
+ L3U  Var_44    CB   CA   C    O      90.56  30.0  1
+ L3U  Var_45    N3S  C    CA   CB    -88.46  30.0  3
+ L3U  Var_46    H5   CB   CA   N      65.47  30.0  2
+ L3U  Var_47    H6   CB   CA   N    -179.12  30.0  2
+ L3U  Var_48    H1   N    CA   C     -50.92  30.0  3
+ L3U  Var_49    H2   N    CA   C      66.20  30.0  3
+ L3U  Var_50    H4   CA   C    O    -152.54  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

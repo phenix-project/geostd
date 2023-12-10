@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KUV  KUV  5-amino-N-{5-[(4R,5R)-4-amino-5-fluoroazepan-1-yl]-1-methyl-1H-pyrazol-4-yl}-2-(2,6-difluorophenyl)-1,3-thiazole-4-carboxamide  ligand  54  32  .  2022-07-25  2022-07-26
+ KUV  KUV  5-amino-N-{5-[(4R,5R)-4-amino-5-fluoroazepan-1-yl]-1-methyl-1H-pyrazol-4-yl}-2-(2,6-difluorophenyl)-1,3-thiazole-4-carboxamide  ligand  54  32  .  2022-07-25  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_KUV
@@ -275,56 +276,90 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KUV  CONST_01  C4   C5   N6   N2     0.00   0.0  0
- KUV  CONST_02  C5   C4   C3   N2     0.00   0.0  0
- KUV  CONST_03  C13  S12  C11  C10    0.00   0.0  0
- KUV  CONST_04  S12  C13  N14  C10    0.00   0.0  0
- KUV  CONST_05  C15  C13  N14  C10  180.00   0.0  0
- KUV  CONST_06  N6   N2   C3   C4     0.00   0.0  0
- KUV  CONST_07  C13  N14  C10  C11    0.00   0.0  0
- KUV  CONST_08  N14  C13  S12  C11    0.00   0.0  0
- KUV  CONST_09  C15  C13  S12  C11  180.00   0.0  0
- KUV  CONST_10  C19  C20  C15  C13  180.00   0.0  0
- KUV  CONST_11  C17  C16  C15  C13  180.00   0.0  0
- KUV  CONST_12  C18  C19  C20  C15    0.00   0.0  0
- KUV  CONST_13  C18  C17  C16  C15    0.00   0.0  0
- KUV  CONST_16  C19  C20  C15  C16    0.00   0.0  0
- KUV  CONST_17  C19  C18  C17  C16    0.00   0.0  0
- KUV  CONST_18  C20  C15  C16  C17    0.00   0.0  0
- KUV  CONST_19  C20  C19  C18  C17    0.00   0.0  0
- KUV  CONST_22  N6   C5   C4   C3     0.00   0.0  0
- KUV  CONST_23  C5   N6   N2   C3     0.00   0.0  0
- KUV  CONST_24  S12  C11  C10  N14    0.00   0.0  0
- KUV  CONST_25  N24  C3   C4   C5   180.00   0.0  0
- KUV  CONST_26  N6   N2   C3   N24  180.00   0.0  0
- KUV  CONST_27  N7   C4   C3   N2   180.00   0.0  0
- KUV  CONST_28  C1   N2   C3   C4   180.00   0.0  0
- KUV  CONST_29  C5   N6   N2   C1   180.00   0.0  0
- KUV  CONST_30  N24  C3   N2   C1     0.00   0.0  0
- KUV  CONST_31  N23  C11  S12  C13  180.00   0.0  0
- KUV  CONST_32  C8   C10  N14  C13  180.00   0.0  0
- KUV  CONST_33  F21  C20  C15  C13    0.00   0.0  0
- KUV  CONST_34  F22  C16  C15  C13    0.00   0.0  0
- KUV  CONST_35  F21  C20  C15  C16  180.00   0.0  0
- KUV  CONST_36  F21  C20  C19  C18  180.00   0.0  0
- KUV  CONST_37  F22  C16  C17  C18  180.00   0.0  0
- KUV  CONST_38  F22  C16  C15  C20  180.00   0.0  0
- KUV  CONST_39  S12  C11  C10  C8   180.00   0.0  0
- KUV  CONST_40  N23  C11  C10  N14  180.00   0.0  0
- KUV  CONST_41  N7   C4   C3   N24    0.00   0.0  0
- KUV  CONST_42  N7   C4   C5   N6   180.00   0.0  0
- KUV  CONST_43  H15  C5   N6   N2   180.00   0.0  0
- KUV  CONST_44  H6   C19  C20  C15  180.00   0.0  0
- KUV  CONST_45  H4   C17  C16  C15  180.00   0.0  0
- KUV  CONST_46  H5   C18  C17  C16  180.00   0.0  0
- KUV  CONST_47  C4   N7   C8   C10  180.00   0.0  0
- KUV  CONST_48  C8   N7   C4   C3   180.00   0.0  0
- KUV  CONST_49  C8   N7   C4   C5     0.00   0.0  0
- KUV  CONST_50  H16  N23  C11  C10    0.00   0.0  0
- KUV  CONST_52  H21  N7   C4   C3     0.00   0.0  0
- KUV  CONST_53  O9   C8   N7   C4     0.00   0.0  0
- KUV  Var_01    O9   C8   C10  C11    1.54  30.0  1
- KUV  Var_02    H1   C1   N2   C3    76.15  30.0  2
+ KUV  CONST_01  C4   C5   N6   N2      0.00   0.0  0
+ KUV  CONST_02  C5   C4   C3   N2      0.00   0.0  0
+ KUV  CONST_03  C13  S12  C11  C10     0.00   0.0  0
+ KUV  CONST_04  S12  C13  N14  C10     0.00   0.0  0
+ KUV  CONST_05  C15  C13  N14  C10   180.00   0.0  0
+ KUV  CONST_06  N6   N2   C3   C4      0.00   0.0  0
+ KUV  CONST_07  C13  N14  C10  C11     0.00   0.0  0
+ KUV  CONST_08  N14  C13  S12  C11     0.00   0.0  0
+ KUV  CONST_09  C15  C13  S12  C11   180.00   0.0  0
+ KUV  CONST_10  C19  C20  C15  C13   180.00   0.0  0
+ KUV  CONST_11  C17  C16  C15  C13   180.00   0.0  0
+ KUV  CONST_12  C18  C19  C20  C15     0.00   0.0  0
+ KUV  CONST_13  C18  C17  C16  C15     0.00   0.0  0
+ KUV  CONST_14  C19  C20  C15  C16     0.00   0.0  0
+ KUV  CONST_15  C19  C18  C17  C16     0.00   0.0  0
+ KUV  CONST_16  C20  C15  C16  C17     0.00   0.0  0
+ KUV  CONST_17  C20  C19  C18  C17     0.00   0.0  0
+ KUV  CONST_18  N6   C5   C4   C3      0.00   0.0  0
+ KUV  CONST_19  C5   N6   N2   C3      0.00   0.0  0
+ KUV  CONST_20  S12  C11  C10  N14     0.00   0.0  0
+ KUV  CONST_21  N24  C3   C4   C5    180.00   0.0  0
+ KUV  CONST_22  N6   N2   C3   N24   180.00   0.0  0
+ KUV  CONST_23  N7   C4   C3   N2    180.00   0.0  0
+ KUV  CONST_24  C1   N2   C3   C4    180.00   0.0  0
+ KUV  CONST_25  C5   N6   N2   C1    180.00   0.0  0
+ KUV  CONST_26  N24  C3   N2   C1      0.00   0.0  0
+ KUV  CONST_27  N23  C11  S12  C13   180.00   0.0  0
+ KUV  CONST_28  C8   C10  N14  C13   180.00   0.0  0
+ KUV  CONST_29  F21  C20  C15  C13     0.00   0.0  0
+ KUV  CONST_30  F22  C16  C15  C13     0.00   0.0  0
+ KUV  CONST_31  F21  C20  C15  C16   180.00   0.0  0
+ KUV  CONST_32  F21  C20  C19  C18   180.00   0.0  0
+ KUV  CONST_33  F22  C16  C17  C18   180.00   0.0  0
+ KUV  CONST_34  F22  C16  C15  C20   180.00   0.0  0
+ KUV  CONST_35  S12  C11  C10  C8    180.00   0.0  0
+ KUV  CONST_36  N23  C11  C10  N14   180.00   0.0  0
+ KUV  CONST_37  N7   C4   C3   N24     0.00   0.0  0
+ KUV  CONST_38  N7   C4   C5   N6    180.00   0.0  0
+ KUV  CONST_39  H15  C5   N6   N2    180.00   0.0  0
+ KUV  CONST_40  H6   C19  C20  C15   180.00   0.0  0
+ KUV  CONST_41  H4   C17  C16  C15   180.00   0.0  0
+ KUV  CONST_42  H5   C18  C17  C16   180.00   0.0  0
+ KUV  CONST_43  C4   N7   C8   C10   180.00   0.0  0
+ KUV  CONST_44  C8   N7   C4   C3    180.00   0.0  0
+ KUV  CONST_45  C8   N7   C4   C5      0.00   0.0  0
+ KUV  CONST_46  H16  N23  C11  C10     0.00   0.0  0
+ KUV  CONST_47  H21  N7   C4   C3      0.00   0.0  0
+ KUV  CONST_48  O9   C8   N7   C4      0.00   0.0  0
+ KUV  Var_01    O9   C8   C10  C11     1.54  30.0  1
+ KUV  Var_02    H1   C1   N2   C3     76.15  30.0  2
+ KUV  Var_03    C25  N24  C3   N2    -75.04  30.0  2
+ KUV  Var_04    C32  N24  C3   N2     78.61  30.0  2
+ KUV  Var_05    C25  N24  C3   C4    104.65  30.0  2
+ KUV  Var_06    C32  N24  C3   C4   -101.70  30.0  2
+ KUV  Var_07    S12  C13  C15  C16  -133.09  30.0  2
+ KUV  Var_08    N14  C13  C15  C16    45.16  30.0  2
+ KUV  Var_09    S12  C13  C15  C20    49.06  30.0  2
+ KUV  Var_10    N14  C13  C15  C20  -132.69  30.0  2
+ KUV  Var_11    C31  C32  N24  C25   -74.87  30.0  1
+ KUV  Var_12    C29  C27  C26  C25   -35.23  30.0  1
+ KUV  Var_13    C3   N24  C25  C26  -112.59  30.0  1
+ KUV  Var_14    C32  N24  C25  C26    92.44  30.0  1
+ KUV  Var_15    C31  C29  C27  C26    83.57  30.0  1
+ KUV  Var_16    N24  C25  C26  C27   -40.75  30.0  1
+ KUV  Var_17    C32  C31  C29  C27   -71.92  30.0  1
+ KUV  Var_18    N24  C32  C31  C29    53.39  30.0  1
+ KUV  Var_19    C31  C32  N24  C3    130.21  30.0  1
+ KUV  Var_20    N34  C27  C26  C25  -156.43  30.0  1
+ KUV  Var_21    F33  C29  C27  C26  -159.09  30.0  1
+ KUV  Var_22    N34  C27  C29  C31  -156.64  30.0  1
+ KUV  Var_23    F33  C29  C31  C32   169.72  30.0  1
+ KUV  Var_24    H13  C32  N24  C25   164.78  30.0  1
+ KUV  Var_25    H14  C32  N24  C25    47.98  30.0  1
+ KUV  Var_26    H28  C27  C26  C25    82.92  30.0  1
+ KUV  Var_27    H30  C29  C27  C26   -43.22  30.0  1
+ KUV  Var_28    H7   C25  C26  C27    81.00  30.0  1
+ KUV  Var_29    H8   C25  C26  C27  -163.84  30.0  1
+ KUV  Var_30    H11  C31  C29  C27    51.34  30.0  1
+ KUV  Var_31    H12  C31  C29  C27   167.18  30.0  1
+ KUV  Var_32    H9   C26  C27  C29  -159.31  30.0  1
+ KUV  Var_33    H10  C26  C27  C29    86.12  30.0  1
+ KUV  Var_34    N34  C27  C29  F33   -39.30  30.0  1
+ KUV  Var_35    H18  N34  C27  C26  -163.48  30.0  3
+ KUV  Var_36    H19  N34  C27  C26   -47.98  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

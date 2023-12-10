@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 8LM  8LM  '2,6-anhydro-3,5-dideoxy-5-[(2-methylpropanoyl)amino]-3-(4-phenyl-1H-1,2,3-triazol-1-yl)-D-glycero-D-galacto-non-2-enoni c acid'  D-saccharide  59  33  .  2023-02-16  2023-02-16
+ 8LM  8LM  '2,6-anhydro-3,5-dideoxy-5-[(2-methylpropanoyl)amino]-3-(4-phenyl-1H-1,2,3-triazol-1-yl)-D-glycero-D-galacto-non-2-enoni c acid'  D-saccharide  59  33  .  2023-02-16  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_8LM
@@ -289,43 +290,83 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 8LM  CONST_01  N18   N28  N27  C20    0.00   0.0  0
- 8LM  CONST_02  N28   N18  C19  C20    0.00   0.0  0
- 8LM  CONST_03  C25   C26  C21  C20  180.00   0.0  0
- 8LM  CONST_04  C23   C22  C21  C20  180.00   0.0  0
- 8LM  CONST_05  N28   N27  C20  C21  180.00   0.0  0
- 8LM  CONST_06  N18   C19  C20  C21  180.00   0.0  0
- 8LM  CONST_07  C24   C25  C26  C21    0.00   0.0  0
- 8LM  CONST_08  C24   C23  C22  C21    0.00   0.0  0
- 8LM  CONST_09  N27   C20  C21  C22  180.00   0.0  0
- 8LM  CONST_10  C19   C20  C21  C22    0.00   0.0  0
- 8LM  CONST_11  C25   C26  C21  C22    0.00   0.0  0
- 8LM  CONST_12  C25   C24  C23  C22    0.00   0.0  0
- 8LM  CONST_13  N27   C20  C21  C26    0.00   0.0  0
- 8LM  CONST_14  C19   C20  C21  C26  180.00   0.0  0
- 8LM  CONST_15  C23   C22  C21  C26    0.00   0.0  0
- 8LM  CONST_16  C23   C24  C25  C26    0.00   0.0  0
- 8LM  CONST_17  N27   C20  C19  N18    0.00   0.0  0
- 8LM  CONST_18  N27   N28  N18  C19    0.00   0.0  0
- 8LM  CONST_19  N28   N27  C20  C19    0.00   0.0  0
- 8LM  CONST_20  N27   N28  N18  C3   180.00   0.0  0
- 8LM  CONST_21  C20   C19  N18  C3   180.00   0.0  0
- 8LM  CONST_22  H24   C19  N18  C3     0.00   0.0  0
- 8LM  CONST_23  H23   C26  C21  C20    0.00   0.0  0
- 8LM  CONST_24  H9    C22  C21  C20    0.00   0.0  0
- 8LM  CONST_25  H26   C25  C26  C21  180.00   0.0  0
- 8LM  CONST_26  H25   C23  C22  C21  180.00   0.0  0
- 8LM  CONST_27  H10   C24  C23  C22  180.00   0.0  0
- 8LM  CONST_28  C11   C10  N5   C5   180.00   0.0  0
- 8LM  CONST_29  O10   C10  N5   C5     0.00   0.0  0
- 8LM  CONST_30  HO1B  O1B  C1   C2   180.00   0.0  0
- 8LM  CONST_31  HN5   N5   C10  C11    0.00   0.0  0
- 8LM  Var_01    O6    C2   C3   C4     4.48  30.0  1
- 8LM  Var_02    N28   N18  C3   C4   -94.63  30.0  2
- 8LM  Var_03    O1A   C1   C2   C3    -5.84  30.0  3
- 8LM  Var_04    N5    C10  C11  C13  138.97  30.0  3
- 8LM  Var_05    H20   C12  C11  C10  178.08  30.0  3
- 8LM  Var_06    H1    C13  C11  C10  -58.20  30.0  3
+ 8LM  CONST_01  N18   N28  N27  C20     0.00   0.0  0
+ 8LM  CONST_02  N28   N18  C19  C20     0.00   0.0  0
+ 8LM  CONST_03  C25   C26  C21  C20   180.00   0.0  0
+ 8LM  CONST_04  C23   C22  C21  C20   180.00   0.0  0
+ 8LM  CONST_05  N28   N27  C20  C21   180.00   0.0  0
+ 8LM  CONST_06  N18   C19  C20  C21   180.00   0.0  0
+ 8LM  CONST_07  C24   C25  C26  C21     0.00   0.0  0
+ 8LM  CONST_08  C24   C23  C22  C21     0.00   0.0  0
+ 8LM  CONST_09  N27   C20  C21  C22   180.00   0.0  0
+ 8LM  CONST_10  C19   C20  C21  C22     0.00   0.0  0
+ 8LM  CONST_11  C25   C26  C21  C22     0.00   0.0  0
+ 8LM  CONST_12  C25   C24  C23  C22     0.00   0.0  0
+ 8LM  CONST_13  N27   C20  C21  C26     0.00   0.0  0
+ 8LM  CONST_14  C19   C20  C21  C26   180.00   0.0  0
+ 8LM  CONST_15  C23   C22  C21  C26     0.00   0.0  0
+ 8LM  CONST_16  C23   C24  C25  C26     0.00   0.0  0
+ 8LM  CONST_17  N27   C20  C19  N18     0.00   0.0  0
+ 8LM  CONST_18  N27   N28  N18  C19     0.00   0.0  0
+ 8LM  CONST_19  N28   N27  C20  C19     0.00   0.0  0
+ 8LM  CONST_20  N27   N28  N18  C3    180.00   0.0  0
+ 8LM  CONST_21  C20   C19  N18  C3    180.00   0.0  0
+ 8LM  CONST_22  H24   C19  N18  C3      0.00   0.0  0
+ 8LM  CONST_23  H23   C26  C21  C20     0.00   0.0  0
+ 8LM  CONST_24  H9    C22  C21  C20     0.00   0.0  0
+ 8LM  CONST_25  H26   C25  C26  C21   180.00   0.0  0
+ 8LM  CONST_26  H25   C23  C22  C21   180.00   0.0  0
+ 8LM  CONST_27  H10   C24  C23  C22   180.00   0.0  0
+ 8LM  CONST_28  C11   C10  N5   C5    180.00   0.0  0
+ 8LM  CONST_29  O10   C10  N5   C5      0.00   0.0  0
+ 8LM  CONST_30  HO1B  O1B  C1   C2    180.00   0.0  0
+ 8LM  CONST_31  HN5   N5   C10  C11     0.00   0.0  0
+ 8LM  Var_01    O6    C2   C3   C4      4.48  30.0  1
+ 8LM  Var_02    N28   N18  C3   C4    -94.63  30.0  2
+ 8LM  Var_03    O1A   C1   C2   C3     -5.84  30.0  3
+ 8LM  Var_04    N5    C10  C11  C13   138.97  30.0  3
+ 8LM  Var_05    H20   C12  C11  C10   178.08  30.0  3
+ 8LM  Var_06    H1    C13  C11  C10   -58.20  30.0  3
+ 8LM  Var_07    O6    C6   C5   C4     62.52  30.0  1
+ 8LM  Var_08    C6    O6   C2   C3     12.94  30.0  1
+ 8LM  Var_09    C6    C5   C4   C3    -45.18  30.0  1
+ 8LM  Var_10    C2    O6   C6   C5    -46.09  30.0  1
+ 8LM  Var_11    C2    C3   C4   C5     13.75  30.0  1
+ 8LM  Var_12    N18   C3   C4   C5   -164.38  30.0  1
+ 8LM  Var_13    C7    C6   C5   C4   -177.50  30.0  1
+ 8LM  Var_14    N5    C5   C4   C3   -169.11  30.0  1
+ 8LM  Var_15    C2    O6   C6   C7   -168.88  30.0  1
+ 8LM  Var_16    C1    C2   O6   C6   -168.15  30.0  1
+ 8LM  Var_17    O4    C4   C5   C6   -165.71  30.0  1
+ 8LM  Var_18    O6    C6   C5   N5   -175.47  30.0  1
+ 8LM  Var_19    C2    C3   C4   O4    133.20  30.0  1
+ 8LM  Var_20    N18   C3   C4   O4    -44.92  30.0  1
+ 8LM  Var_21    H6    C6   C5   C4    -55.96  30.0  1
+ 8LM  Var_22    H5    C5   C4   C3     73.27  30.0  1
+ 8LM  Var_23    H4    C4   C5   C6     73.23  30.0  1
+ 8LM  Var_24    C6    C5   N5   C10    99.21  30.0  3
+ 8LM  Var_25    C4    C5   N5   C10  -139.03  30.0  3
+ 8LM  Var_26    O6    C6   C7   C8    -60.67  30.0  3
+ 8LM  Var_27    C5    C6   C7   C8    178.84  30.0  3
+ 8LM  Var_28    N5    C5   C6   C7    -55.49  30.0  1
+ 8LM  Var_29    O6    C6   C7   O7     62.42  30.0  3
+ 8LM  Var_30    C5    C6   C7   O7    -58.06  30.0  3
+ 8LM  Var_31    O4    C4   C5   N5     70.36  30.0  1
+ 8LM  Var_32    HN5   N5   C5   C4     37.88  30.0  2
+ 8LM  Var_33    HO4   O4   C4   C3     97.65  30.0  3
+ 8LM  Var_34    H7    C7   C6   C5     62.68  30.0  1
+ 8LM  Var_35    C6    C7   C8   O8     66.05  30.0  3
+ 8LM  Var_36    C9    C8   C7   C6    -60.49  30.0  1
+ 8LM  Var_37    H8    C8   C7   C6   -173.64  30.0  1
+ 8LM  Var_38    HO7   O7   C7   C6     74.90  30.0  3
+ 8LM  Var_39    O9    C9   C8   O8    -58.77  30.0  2
+ 8LM  Var_40    O7    C7   C8   O8    -59.23  30.0  3
+ 8LM  Var_41    O9    C9   C8   C7     70.48  30.0  2
+ 8LM  Var_42    C9    C8   C7   O7    174.23  30.0  1
+ 8LM  Var_43    HO9   O9   C9   C8   -172.59  30.0  3
+ 8LM  Var_44    H91   C9   C8   O8    177.89  30.0  2
+ 8LM  Var_45    H92   C9   C8   O8     63.45  30.0  2
+ 8LM  Var_46    HO8   O8   C8   C7     43.34  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

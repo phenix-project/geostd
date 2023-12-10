@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5CD  5CD  5'-chloro-5'-deoxyadenosine  ligand  31  19  .  2021-08-04  2021-08-04  
+ 5CD  5CD  5'-chloro-5'-deoxyadenosine  ligand  31  19  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5CD
@@ -186,33 +187,63 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5CD  CONST_01  C5    N7  C8  N9    0.00  0.0  0
- 5CD  CONST_02  N7    C5  C4  N9    0.00  0.0  0
- 5CD  CONST_03  C6    C5  C4  N9  180.00  0.0  0
- 5CD  CONST_04  C2    N3  C4  N9  180.00  0.0  0
- 5CD  CONST_05  C5    C4  N9  C8    0.00  0.0  0
- 5CD  CONST_06  N3    C4  N9  C8  180.00  0.0  0
- 5CD  CONST_07  C4    C5  N7  C8    0.00  0.0  0
- 5CD  CONST_08  C6    C5  N7  C8  180.00  0.0  0
- 5CD  CONST_09  C4    N9  C8  N7    0.00  0.0  0
- 5CD  CONST_10  N3    C4  C5  N7  180.00  0.0  0
- 5CD  CONST_11  N1    C6  C5  N7  180.00  0.0  0
- 5CD  CONST_12  C2    N3  C4  C5    0.00  0.0  0
- 5CD  CONST_13  C2    N1  C6  C5    0.00  0.0  0
- 5CD  CONST_14  N1    C6  C5  C4    0.00  0.0  0
- 5CD  CONST_15  N1    C2  N3  C4    0.00  0.0  0
- 5CD  CONST_16  C6    C5  C4  N3    0.00  0.0  0
- 5CD  CONST_17  C6    N1  C2  N3    0.00  0.0  0
- 5CD  CONST_18  C1'   N9  C8  N7  180.00  0.0  0
- 5CD  CONST_19  C1'   N9  C4  C5  180.00  0.0  0
- 5CD  CONST_20  C1'   N9  C4  N3    0.00  0.0  0
- 5CD  CONST_21  N6    C6  C5  N7    0.00  0.0  0
- 5CD  CONST_22  N6    C6  C5  C4  180.00  0.0  0
- 5CD  CONST_23  N6    C6  N1  C2  180.00  0.0  0
- 5CD  CONST_24  H8    C8  N7  C5  180.00  0.0  0
- 5CD  CONST_25  H2    C2  N3  C4  180.00  0.0  0
- 5CD  CONST_26  H6N1  N6  C6  C5  180.00  0.0  0
- 5CD  CONST_27  H6N2  N6  C6  C5    0.00  0.0  0
+ 5CD  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ 5CD  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ 5CD  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ 5CD  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ 5CD  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ 5CD  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ 5CD  CONST_07  C4    C5   N7   C8      0.00   0.0  0
+ 5CD  CONST_08  C6    C5   N7   C8    180.00   0.0  0
+ 5CD  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ 5CD  CONST_10  N3    C4   C5   N7    180.00   0.0  0
+ 5CD  CONST_11  N1    C6   C5   N7    180.00   0.0  0
+ 5CD  CONST_12  C2    N3   C4   C5      0.00   0.0  0
+ 5CD  CONST_13  C2    N1   C6   C5      0.00   0.0  0
+ 5CD  CONST_14  N1    C6   C5   C4      0.00   0.0  0
+ 5CD  CONST_15  N1    C2   N3   C4      0.00   0.0  0
+ 5CD  CONST_16  C6    C5   C4   N3      0.00   0.0  0
+ 5CD  CONST_17  C6    N1   C2   N3      0.00   0.0  0
+ 5CD  CONST_18  C1'   N9   C8   N7    180.00   0.0  0
+ 5CD  CONST_19  C1'   N9   C4   C5    180.00   0.0  0
+ 5CD  CONST_20  C1'   N9   C4   N3      0.00   0.0  0
+ 5CD  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ 5CD  CONST_22  N6    C6   C5   C4    180.00   0.0  0
+ 5CD  CONST_23  N6    C6   N1   C2    180.00   0.0  0
+ 5CD  CONST_24  H8    C8   N7   C5    180.00   0.0  0
+ 5CD  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ 5CD  CONST_26  H6N1  N6   C6   C5    180.00   0.0  0
+ 5CD  CONST_27  H6N2  N6   C6   C5      0.00   0.0  0
+ 5CD  Var_01    C3'   C2'  C1'  N9     89.68  30.0  1
+ 5CD  Var_02    C4'   O4'  C1'  N9   -111.84  30.0  1
+ 5CD  Var_03    C2'   C1'  N9   C8   -105.43  30.0  2
+ 5CD  Var_04    O4'   C1'  N9   C8     12.49  30.0  2
+ 5CD  Var_05    C2'   C1'  N9   C4     75.37  30.0  2
+ 5CD  Var_06    O4'   C1'  N9   C4   -166.72  30.0  2
+ 5CD  Var_07    O4'   C4'  C3'  C2'   -33.36  30.0  1
+ 5CD  Var_08    C4'   O4'  C1'  C2'     9.05  30.0  1
+ 5CD  Var_09    O4'   C1'  C2'  C3'   -29.57  30.0  1
+ 5CD  Var_10    C1'   O4'  C4'  C3'    15.71  30.0  1
+ 5CD  Var_11    C1'   C2'  C3'  C4'    37.22  30.0  1
+ 5CD  Var_12    O2'   C2'  C1'  N9   -154.02  30.0  1
+ 5CD  Var_13    C4'   C3'  C2'  O2'   -76.40  30.0  1
+ 5CD  Var_14    O4'   C1'  C2'  O2'    86.73  30.0  1
+ 5CD  Var_15    C5'   C4'  C3'  C2'  -153.79  30.0  1
+ 5CD  Var_16    C1'   C2'  C3'  O3'   155.66  30.0  1
+ 5CD  Var_17    O4'   C4'  C3'  O3'  -154.60  30.0  1
+ 5CD  Var_18    C1'   O4'  C4'  C5'   137.57  30.0  1
+ 5CD  Var_19    HA    C2'  C1'  N9    -30.54  30.0  1
+ 5CD  Var_20    H1'   C1'  N9   C8    132.22  30.0  2
+ 5CD  Var_21    H4'   C4'  C3'  C2'    84.25  30.0  1
+ 5CD  Var_22    H3'   C3'  C4'  O4'    81.92  30.0  1
+ 5CD  Var_23    O3'   C3'  C2'  O2'    42.04  30.0  1
+ 5CD  Var_24    CL    C5'  C4'  C3'   178.40  30.0  3
+ 5CD  Var_25    C5'   C4'  C3'  O3'    84.97  30.0  1
+ 5CD  Var_26    O4'   C4'  C5'  CL     61.22  30.0  2
+ 5CD  Var_27    HB    O3'  C3'  C2'    86.18  30.0  3
+ 5CD  Var_28    H2'   O2'  C2'  C3'   -43.57  30.0  3
+ 5CD  Var_29    H5'1  C5'  C4'  C3'   -62.90  30.0  3
+ 5CD  Var_30    H5'2  C5'  C4'  C3'    58.20  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

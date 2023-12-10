@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 91Y  91Y  3-[(cyclohexanecarbonyl)amino]-N-(2,3-dihydro-1H-inden-2-yl)pyrazine-2-carboxamide  ligand  51  27  .  2022-07-24  2022-07-26
+ 91Y  91Y  3-[(cyclohexanecarbonyl)amino]-N-(2,3-dihydro-1H-inden-2-yl)pyrazine-2-carboxamide  ligand  51  27  .  2022-07-24  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_91Y
@@ -268,43 +269,62 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 91Y  CONST_01  C7   C6   N5   C4     0.00   0.0  0
- 91Y  CONST_02  C7   N8   C9   C4     0.00   0.0  0
- 91Y  CONST_03  C9   C4   N5   C6     0.00   0.0  0
- 91Y  CONST_04  C9   N8   C7   C6     0.00   0.0  0
- 91Y  CONST_05  C18  C19  C20  C15    0.00   0.0  0
- 91Y  CONST_06  C18  C17  C16  C15    0.00   0.0  0
- 91Y  CONST_07  C20  C15  C16  C17    0.00   0.0  0
- 91Y  CONST_08  C20  C19  C18  C17    0.00   0.0  0
- 91Y  CONST_09  N8   C7   C6   N5     0.00   0.0  0
- 91Y  CONST_10  N8   C9   C4   N5     0.00   0.0  0
- 91Y  CONST_11  C19  C20  C15  C16    0.00   0.0  0
- 91Y  CONST_12  C19  C18  C17  C16    0.00   0.0  0
- 91Y  CONST_13  C6   N5   C4   N3   180.00   0.0  0
- 91Y  CONST_14  N8   C9   C4   N3   180.00   0.0  0
- 91Y  CONST_15  C10  C9   N8   C7   180.00   0.0  0
- 91Y  CONST_16  N5   C4   C9   C10  180.00   0.0  0
- 91Y  CONST_17  H2   C6   N5   C4   180.00   0.0  0
- 91Y  CONST_18  H18  C19  C20  C15  180.00   0.0  0
- 91Y  CONST_19  H6   C17  C16  C15  180.00   0.0  0
- 91Y  CONST_20  H16  C16  C15  C20  180.00   0.0  0
- 91Y  CONST_21  H17  C18  C19  C20  180.00   0.0  0
- 91Y  CONST_22  H3   C7   C6   N5   180.00   0.0  0
- 91Y  CONST_23  C22  C2   N3   C4   180.00   0.0  0
- 91Y  CONST_24  N12  C10  C9   C4   180.00   0.0  0
- 91Y  CONST_25  C9   C10  N12  C13  180.00   0.0  0
- 91Y  CONST_26  N5   C4   N3   C2     0.00   0.0  0
- 91Y  CONST_27  C9   C4   N3   C2   180.00   0.0  0
- 91Y  CONST_28  H1   N3   C4   N5   180.00   0.0  0
- 91Y  CONST_29  O1   C2   N3   C4     0.00   0.0  0
- 91Y  CONST_30  O11  C10  N12  C13    0.00   0.0  0
- 91Y  CONST_31  H4   N12  C10  C9     0.00   0.0  0
- 91Y  Var_01    C20  C15  C14  C13   18.32  30.0  1
- 91Y  Var_02    C15  C20  C21  C13  -18.51  30.0  1
- 91Y  Var_03    C25  C24  C23  C22   56.43  30.0  1
- 91Y  Var_04    C25  C26  C27  C22  -55.59  30.0  1
- 91Y  Var_05    C27  C26  C25  C24   55.08  30.0  1
- 91Y  Var_06    C23  C24  C25  C26  -55.31  30.0  1
+ 91Y  CONST_01  C7   C6   N5   C4      0.00   0.0  0
+ 91Y  CONST_02  C7   N8   C9   C4      0.00   0.0  0
+ 91Y  CONST_03  C9   C4   N5   C6      0.00   0.0  0
+ 91Y  CONST_04  C9   N8   C7   C6      0.00   0.0  0
+ 91Y  CONST_05  C18  C19  C20  C15     0.00   0.0  0
+ 91Y  CONST_06  C18  C17  C16  C15     0.00   0.0  0
+ 91Y  CONST_07  C20  C15  C16  C17     0.00   0.0  0
+ 91Y  CONST_08  C20  C19  C18  C17     0.00   0.0  0
+ 91Y  CONST_09  N8   C7   C6   N5      0.00   0.0  0
+ 91Y  CONST_10  N8   C9   C4   N5      0.00   0.0  0
+ 91Y  CONST_11  C19  C20  C15  C16     0.00   0.0  0
+ 91Y  CONST_12  C19  C18  C17  C16     0.00   0.0  0
+ 91Y  CONST_13  C6   N5   C4   N3    180.00   0.0  0
+ 91Y  CONST_14  N8   C9   C4   N3    180.00   0.0  0
+ 91Y  CONST_15  C10  C9   N8   C7    180.00   0.0  0
+ 91Y  CONST_16  N5   C4   C9   C10   180.00   0.0  0
+ 91Y  CONST_17  H2   C6   N5   C4    180.00   0.0  0
+ 91Y  CONST_18  H18  C19  C20  C15   180.00   0.0  0
+ 91Y  CONST_19  H6   C17  C16  C15   180.00   0.0  0
+ 91Y  CONST_20  H16  C16  C15  C20   180.00   0.0  0
+ 91Y  CONST_21  H17  C18  C19  C20   180.00   0.0  0
+ 91Y  CONST_22  H3   C7   C6   N5    180.00   0.0  0
+ 91Y  CONST_23  C22  C2   N3   C4    180.00   0.0  0
+ 91Y  CONST_24  N12  C10  C9   C4    180.00   0.0  0
+ 91Y  CONST_25  C9   C10  N12  C13   180.00   0.0  0
+ 91Y  CONST_26  N5   C4   N3   C2      0.00   0.0  0
+ 91Y  CONST_27  C9   C4   N3   C2    180.00   0.0  0
+ 91Y  CONST_28  H1   N3   C4   N5    180.00   0.0  0
+ 91Y  CONST_29  O1   C2   N3   C4      0.00   0.0  0
+ 91Y  CONST_30  O11  C10  N12  C13     0.00   0.0  0
+ 91Y  CONST_31  H4   N12  C10  C9      0.00   0.0  0
+ 91Y  Var_01    C20  C15  C14  C13    18.32  30.0  1
+ 91Y  Var_02    C15  C20  C21  C13   -18.51  30.0  1
+ 91Y  Var_03    C25  C24  C23  C22    56.43  30.0  1
+ 91Y  Var_04    C25  C26  C27  C22   -55.59  30.0  1
+ 91Y  Var_05    C27  C26  C25  C24    55.08  30.0  1
+ 91Y  Var_06    C23  C24  C25  C26   -55.31  30.0  1
+ 91Y  Var_07    C21  C13  C14  C15   -29.05  30.0  1
+ 91Y  Var_08    C14  C13  C21  C20    29.14  30.0  1
+ 91Y  Var_09    C27  C22  C23  C24   -56.38  30.0  1
+ 91Y  Var_10    C23  C22  C27  C26    55.98  30.0  1
+ 91Y  Var_11    C15  C14  C13  N12  -154.23  30.0  1
+ 91Y  Var_12    C20  C21  C13  N12   152.65  30.0  1
+ 91Y  Var_13    C2   C22  C23  C24  -179.31  30.0  1
+ 91Y  Var_14    C2   C22  C27  C26  -179.84  30.0  1
+ 91Y  Var_15    H5   C13  C14  C15    86.40  30.0  1
+ 91Y  Var_16    H9   C22  C23  C24    61.48  30.0  1
+ 91Y  Var_17    H23  C27  C22  C23   177.94  30.0  1
+ 91Y  Var_18    H24  C27  C22  C23   -65.04  30.0  1
+ 91Y  Var_19    C23  C22  C2   N3   -161.04  30.0  2
+ 91Y  Var_20    C27  C22  C2   N3     75.70  30.0  2
+ 91Y  Var_21    C10  N12  C13  C21    83.23  30.0  1
+ 91Y  Var_22    C23  C22  C2   O1     20.53  30.0  2
+ 91Y  Var_23    C27  C22  C2   O1   -102.73  30.0  2
+ 91Y  Var_24    C10  N12  C13  C14  -157.13  30.0  1
+ 91Y  Var_25    H4   N12  C13  C21   -91.03  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

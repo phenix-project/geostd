@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- T3F  T3F  '(2R,3R,4S,5R,6R)-4-amino-3,5-dihydroxy-6-methyltetrahydro-2H-pyran-2-yl [(2R,3S,5R)-3-hydroxy-5-(5-methyl-2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)tetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  60  35  .  2022-03-23  2022-03-23
+ T3F  T3F  '(2R,3R,4S,5R,6R)-4-amino-3,5-dihydroxy-6-methyltetrahydro-2H-pyran-2-yl [(2R,3S,5R)-3-hydroxy-5-(5-methyl-2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)tetrahydrofuran-2-yl]methyl dihydrogen diphosphate (non-preferred name)'  ligand  60  35  .  2022-03-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_T3F
@@ -300,19 +301,89 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- T3F  CONST_01  N3   C2   N1   C1'   180.00   0.0  0
- T3F  CONST_02  C4   N3   C2   N1      0.00   0.0  0
- T3F  CONST_03  C5   C4   N3   C2      0.00   0.0  0
- T3F  CONST_04  C6   N1   C2   N3      0.00   0.0  0
- T3F  CONST_05  O2   C2   N1   C1'     0.00   0.0  0
- T3F  CONST_06  O4   C4   N3   C2    180.00   0.0  0
- T3F  CONST_07  C6   N1   C2   O2    180.00   0.0  0
- T3F  CONST_08  C4   N3   C2   O2    180.00   0.0  0
- T3F  CONST_09  HN3  N3   C2   N1    180.00   0.0  0
- T3F  Var_01    H5M  C5M  C5   C6    119.82  30.0  3
- T3F  Var_02    O3A  PB   O3B  C1Q  -176.78  30.0  3
- T3F  Var_03    C4'  C5'  O5'  PA    160.02  30.0  2
- T3F  Var_04    O5'  PA   O3A  PB    158.08  30.0  3
+ T3F  CONST_01  N3    C2   N1   C1'   180.00   0.0  0
+ T3F  CONST_02  C4    N3   C2   N1      0.00   0.0  0
+ T3F  CONST_03  C5    C4   N3   C2      0.00   0.0  0
+ T3F  CONST_04  C6    N1   C2   N3      0.00   0.0  0
+ T3F  CONST_05  O2    C2   N1   C1'     0.00   0.0  0
+ T3F  CONST_06  O4    C4   N3   C2    180.00   0.0  0
+ T3F  CONST_07  C6    N1   C2   O2    180.00   0.0  0
+ T3F  CONST_08  C4    N3   C2   O2    180.00   0.0  0
+ T3F  CONST_09  HN3   N3   C2   N1    180.00   0.0  0
+ T3F  Var_01    H5M   C5M  C5   C6    119.82  30.0  3
+ T3F  Var_02    O3A   PB   O3B  C1Q  -176.78  30.0  3
+ T3F  Var_03    C4'   C5'  O5'  PA    160.02  30.0  2
+ T3F  Var_04    O5'   PA   O3A  PB    158.08  30.0  3
+ T3F  Var_05    C4Q   C5Q  O5Q  C1Q    56.75  30.0  1
+ T3F  Var_06    C4Q   C3Q  C2Q  C1Q   -55.30  30.0  1
+ T3F  Var_07    C3Q   C2Q  C1Q  O5Q    57.78  30.0  1
+ T3F  Var_08    C3Q   C4Q  C5Q  O5Q   -52.18  30.0  1
+ T3F  Var_09    C2Q   C1Q  O5Q  C5Q   -59.31  30.0  1
+ T3F  Var_10    C2Q   C3Q  C4Q  C5Q    52.88  30.0  1
+ T3F  Var_11    C1'   C2'  C3'  C4'    21.55  30.0  1
+ T3F  Var_12    C2'   C1'  O4'  C4'    -8.99  30.0  1
+ T3F  Var_13    N1    C1'  O4'  C4'  -135.82  30.0  1
+ T3F  Var_14    C2'   C3'  C4'  O4'   -27.39  30.0  1
+ T3F  Var_15    C3'   C2'  C1'  O4'    -8.95  30.0  1
+ T3F  Var_16    C6    N1   C1'  O4'  -112.81  30.0  3
+ T3F  Var_17    C2    N1   C1'  O4'    64.15  30.0  3
+ T3F  Var_18    C1'   O4'  C4'  C3'    23.40  30.0  1
+ T3F  Var_19    N1    C1'  C2'  C3'   113.67  30.0  1
+ T3F  Var_20    C6    N1   C1'  C2'   125.40  30.0  3
+ T3F  Var_21    C2    N1   C1'  C2'   -57.63  30.0  3
+ T3F  Var_22    C5Q   O5Q  C1Q  O3B    62.86  30.0  1
+ T3F  Var_23    C3Q   C2Q  C1Q  O3B   -62.25  30.0  1
+ T3F  Var_24    C6Q   C5Q  O5Q  C1Q  -179.14  30.0  1
+ T3F  Var_25    N3Q   C3Q  C2Q  C1Q  -179.75  30.0  1
+ T3F  Var_26    O2Q   C2Q  C1Q  O5Q  -174.78  30.0  1
+ T3F  Var_27    O4Q   C4Q  C5Q  O5Q    68.11  30.0  1
+ T3F  Var_28    N3Q   C3Q  C4Q  C5Q   179.98  30.0  1
+ T3F  Var_29    C3Q   C4Q  C5Q  C6Q  -172.82  30.0  1
+ T3F  Var_30    O4Q   C4Q  C3Q  C2Q   -70.07  30.0  1
+ T3F  Var_31    C4Q   C3Q  C2Q  O2Q   177.12  30.0  1
+ T3F  Var_32    C2'   C3'  C4'  C5'  -148.00  30.0  1
+ T3F  Var_33    C1'   O4'  C4'  C5'   145.69  30.0  1
+ T3F  Var_34    O3'   C3'  C4'  O4'  -149.38  30.0  1
+ T3F  Var_35    C1'   C2'  C3'  O3'   139.49  30.0  1
+ T3F  Var_36    C5M   C5   C6   N1    179.56  30.0  1
+ T3F  Var_37    C5M   C5   C4   N3    179.72  30.0  1
+ T3F  Var_38    H5Q   C5Q  O5Q  C1Q   -61.95  30.0  1
+ T3F  Var_39    H3Q   C3Q  C2Q  C1Q    60.83  30.0  1
+ T3F  Var_40    H2Q   C2Q  C1Q  O5Q   -58.65  30.0  1
+ T3F  Var_41    H4Q   C4Q  C5Q  O5Q  -170.12  30.0  1
+ T3F  Var_42    H1Q   C1Q  O5Q  C5Q  -178.78  30.0  1
+ T3F  Var_43    H2'   C2'  C3'  C4'   145.73  30.0  1
+ T3F  Var_44    H2'A  C2'  C3'  C4'   -94.38  30.0  1
+ T3F  Var_45    H1'   C1'  O4'  C4'   110.41  30.0  1
+ T3F  Var_46    H3'   C3'  C4'  O4'    89.31  30.0  1
+ T3F  Var_47    H4'   C4'  C3'  C2'    90.57  30.0  1
+ T3F  Var_48    H6    C6   N1   C1'    -2.15  30.0  1
+ T3F  Var_49    O5Q   C1Q  O3B  PB    150.72  30.0  1
+ T3F  Var_50    C2Q   C1Q  O3B  PB    -87.78  30.0  1
+ T3F  Var_51    O2Q   C2Q  C1Q  O3B    65.19  30.0  1
+ T3F  Var_52    O4Q   C4Q  C5Q  C6Q   -52.53  30.0  1
+ T3F  Var_53    N3Q   C3Q  C2Q  O2Q    52.67  30.0  1
+ T3F  Var_54    O4Q   C4Q  C3Q  N3Q    57.03  30.0  1
+ T3F  Var_55    C3'   C4'  C5'  O5'  -178.72  30.0  3
+ T3F  Var_56    O4'   C4'  C5'  O5'    62.70  30.0  3
+ T3F  Var_57    O3'   C3'  C4'  C5'    90.01  30.0  1
+ T3F  Var_58    O4    C4   C5   C5M    -0.22  30.0  1
+ T3F  Var_59    HO2Q  O2Q  C2Q  C1Q   -44.74  30.0  3
+ T3F  Var_60    H6Q   C6Q  C5Q  O5Q    61.59  30.0  3
+ T3F  Var_61    H6QA  C6Q  C5Q  O5Q  -179.66  30.0  3
+ T3F  Var_62    H6QB  C6Q  C5Q  O5Q   -58.96  30.0  3
+ T3F  Var_63    HO4Q  O4Q  C4Q  C5Q    75.63  30.0  3
+ T3F  Var_64    HN3Q  N3Q  C3Q  C2Q   -56.46  30.0  3
+ T3F  Var_65    HN3A  N3Q  C3Q  C2Q    58.90  30.0  3
+ T3F  Var_66    HO3'  O3'  C3'  C4'  -164.39  30.0  3
+ T3F  Var_67    H5'   C5'  C4'  O4'   -59.04  30.0  1
+ T3F  Var_68    H5'A  C5'  C4'  O4'  -175.35  30.0  1
+ T3F  Var_69    PA    O3A  PB   O2B  -104.13  30.0  3
+ T3F  Var_70    PA    O3A  PB   O1B    31.12  30.0  2
+ T3F  Var_71    PA    O3A  PB   O3B   145.35  30.0  3
+ T3F  Var_72    C5'   O5'  PA   O3A   153.71  30.0  3
+ T3F  Var_73    C5'   O5'  PA   O1A    40.89  30.0  2
+ T3F  Var_74    C5'   O5'  PA   O2A   -94.04  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

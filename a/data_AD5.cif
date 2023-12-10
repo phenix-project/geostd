@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AD5  AD5  N~6~-cyclohexyl-N~2~-(4-morpholin-4-ylphenyl)-9H-purine-2,6-diamine  ligand  56  29  .  2021-08-06  2021-08-06  
+ AD5  AD5  N~6~-cyclohexyl-N~2~-(4-morpholin-4-ylphenyl)-9H-purine-2,6-diamine  ligand  56  29  .  2021-08-06  2023-10-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-15
 ;
 
 data_comp_AD5
@@ -290,59 +291,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- AD5  CONST_01  N3   C2   N1   C6      0.00   0.0  0
- AD5  CONST_02  C8   N7   C5   C6    180.00   0.0  0
- AD5  CONST_03  N9   C4   C5   C6    180.00   0.0  0
- AD5  CONST_04  N3   C4   C5   C6      0.00   0.0  0
- AD5  CONST_05  N7   C5   C6   N1    180.00   0.0  0
- AD5  CONST_06  C4   C5   C6   N1      0.00   0.0  0
- AD5  CONST_07  C4   N3   C2   N1      0.00   0.0  0
- AD5  CONST_08  C2   N1   C6   C5      0.00   0.0  0
- AD5  CONST_09  N9   C8   N7   C5      0.00   0.0  0
- AD5  CONST_10  C8   N9   C4   C5      0.00   0.0  0
- AD5  CONST_11  C2   N3   C4   C5      0.00   0.0  0
- AD5  CONST_12  N9   C4   C5   N7      0.00   0.0  0
- AD5  CONST_13  N3   C4   C5   N7    180.00   0.0  0
- AD5  CONST_14  C4   N9   C8   N7      0.00   0.0  0
- AD5  CONST_15  C4   C5   N7   C8      0.00   0.0  0
- AD5  CONST_16  N3   C4   N9   C8    180.00   0.0  0
- AD5  CONST_17  C2   N3   C4   N9    180.00   0.0  0
- AD5  CONST_18  CAW  CAD  CAB  CAV     0.00   0.0  0
- AD5  CONST_19  CAW  CAC  CAA  CAV     0.00   0.0  0
- AD5  CONST_20  CAC  CAA  CAV  CAB     0.00   0.0  0
- AD5  CONST_21  CAC  CAW  CAD  CAB     0.00   0.0  0
- AD5  CONST_22  CAA  CAV  CAB  CAD     0.00   0.0  0
- AD5  CONST_23  CAA  CAC  CAW  CAD     0.00   0.0  0
- AD5  CONST_24  NBC  CAW  CAD  CAB   180.00   0.0  0
- AD5  CONST_25  NBC  CAW  CAC  CAA   180.00   0.0  0
- AD5  CONST_26  C2   N1   C6   N6    180.00   0.0  0
- AD5  CONST_27  N7   C5   C6   N6      0.00   0.0  0
- AD5  CONST_28  C4   C5   C6   N6    180.00   0.0  0
- AD5  CONST_29  N2   C2   N1   C6    180.00   0.0  0
- AD5  CONST_30  N2   C2   N3   C4    180.00   0.0  0
- AD5  CONST_31  CAD  CAB  CAV  N2    180.00   0.0  0
- AD5  CONST_32  CAC  CAA  CAV  N2    180.00   0.0  0
- AD5  CONST_33  N1   C6   N6   CBB     0.00   0.0  0
- AD5  CONST_34  C5   C6   N6   CBB   180.00   0.0  0
- AD5  CONST_35  H8   C8   N7   C5    180.00   0.0  0
- AD5  CONST_36  H9   N9   C4   C5    180.00   0.0  0
- AD5  CONST_37  HAD  CAD  CAB  CAV   180.00   0.0  0
- AD5  CONST_38  HAC  CAC  CAA  CAV   180.00   0.0  0
- AD5  CONST_39  HAA  CAA  CAV  CAB   180.00   0.0  0
- AD5  CONST_40  HAB  CAB  CAV  CAA   180.00   0.0  0
- AD5  CONST_41  H6   N6   C6   N1    180.00   0.0  0
- AD5  Var_01    CAH  CAF  CAG  CAK    31.49  30.0  1
- AD5  Var_02    CAL  CAH  CAF  CAG    30.40  30.0  1
- AD5  Var_03    CBB  CAK  CAG  CAF   -63.27  30.0  1
- AD5  Var_04    CBB  CAL  CAH  CAF   -66.25  30.0  1
- AD5  Var_05    CAM  NBC  CAW  CAD   173.38  30.0  2
- AD5  Var_06    CAI  CAM  NBC  CAW  -167.50  30.0  1
- AD5  Var_07    CAJ  CAN  NBC  CAW   166.93  30.0  1
- AD5  Var_08    OAU  CAI  CAM  NBC   -56.20  30.0  1
- AD5  Var_09    OAU  CAJ  CAN  NBC    56.20  30.0  1
- AD5  Var_10    CAN  CAJ  OAU  CAI   -58.08  30.0  1
- AD5  Var_11    CAV  N2   C2   N1     -1.85  30.0  2
- AD5  Var_12    CAB  CAV  N2   C2   -176.25  30.0  2
+ AD5  CONST_01  N3    C2   N1   C6      0.00   0.0  0
+ AD5  CONST_02  C8    N7   C5   C6    180.00   0.0  0
+ AD5  CONST_03  N9    C4   C5   C6    180.00   0.0  0
+ AD5  CONST_04  N3    C4   C5   C6      0.00   0.0  0
+ AD5  CONST_05  N7    C5   C6   N1    180.00   0.0  0
+ AD5  CONST_06  C4    C5   C6   N1      0.00   0.0  0
+ AD5  CONST_07  C4    N3   C2   N1      0.00   0.0  0
+ AD5  CONST_08  C2    N1   C6   C5      0.00   0.0  0
+ AD5  CONST_09  N9    C8   N7   C5      0.00   0.0  0
+ AD5  CONST_10  C8    N9   C4   C5      0.00   0.0  0
+ AD5  CONST_11  C2    N3   C4   C5      0.00   0.0  0
+ AD5  CONST_12  N9    C4   C5   N7      0.00   0.0  0
+ AD5  CONST_13  N3    C4   C5   N7    180.00   0.0  0
+ AD5  CONST_14  C4    N9   C8   N7      0.00   0.0  0
+ AD5  CONST_15  C4    C5   N7   C8      0.00   0.0  0
+ AD5  CONST_16  N3    C4   N9   C8    180.00   0.0  0
+ AD5  CONST_17  C2    N3   C4   N9    180.00   0.0  0
+ AD5  CONST_18  CAW   CAD  CAB  CAV     0.00   0.0  0
+ AD5  CONST_19  CAW   CAC  CAA  CAV     0.00   0.0  0
+ AD5  CONST_20  CAC   CAA  CAV  CAB     0.00   0.0  0
+ AD5  CONST_21  CAC   CAW  CAD  CAB     0.00   0.0  0
+ AD5  CONST_22  CAA   CAV  CAB  CAD     0.00   0.0  0
+ AD5  CONST_23  CAA   CAC  CAW  CAD     0.00   0.0  0
+ AD5  CONST_24  NBC   CAW  CAD  CAB   180.00   0.0  0
+ AD5  CONST_25  NBC   CAW  CAC  CAA   180.00   0.0  0
+ AD5  CONST_26  C2    N1   C6   N6    180.00   0.0  0
+ AD5  CONST_27  N7    C5   C6   N6      0.00   0.0  0
+ AD5  CONST_28  C4    C5   C6   N6    180.00   0.0  0
+ AD5  CONST_29  N2    C2   N1   C6    180.00   0.0  0
+ AD5  CONST_30  N2    C2   N3   C4    180.00   0.0  0
+ AD5  CONST_31  CAD   CAB  CAV  N2    180.00   0.0  0
+ AD5  CONST_32  CAC   CAA  CAV  N2    180.00   0.0  0
+ AD5  CONST_33  N1    C6   N6   CBB     0.00   0.0  0
+ AD5  CONST_34  C5    C6   N6   CBB   180.00   0.0  0
+ AD5  CONST_35  H8    C8   N7   C5    180.00   0.0  0
+ AD5  CONST_36  H9    N9   C4   C5    180.00   0.0  0
+ AD5  CONST_37  HAD   CAD  CAB  CAV   180.00   0.0  0
+ AD5  CONST_38  HAC   CAC  CAA  CAV   180.00   0.0  0
+ AD5  CONST_39  HAA   CAA  CAV  CAB   180.00   0.0  0
+ AD5  CONST_40  HAB   CAB  CAV  CAA   180.00   0.0  0
+ AD5  CONST_41  H6    N6   C6   N1    180.00   0.0  0
+ AD5  Var_01    CAH   CAF  CAG  CAK    31.49  30.0  1
+ AD5  Var_02    CAL   CAH  CAF  CAG    30.40  30.0  1
+ AD5  Var_03    CBB   CAK  CAG  CAF   -63.27  30.0  1
+ AD5  Var_04    CBB   CAL  CAH  CAF   -66.25  30.0  1
+ AD5  Var_05    CAM   NBC  CAW  CAD   173.38  30.0  2
+ AD5  Var_06    CAI   CAM  NBC  CAW  -167.50  30.0  1
+ AD5  Var_07    CAJ   CAN  NBC  CAW   166.93  30.0  1
+ AD5  Var_08    OAU   CAI  CAM  NBC   -56.20  30.0  1
+ AD5  Var_09    OAU   CAJ  CAN  NBC    56.20  30.0  1
+ AD5  Var_10    CAN   CAJ  OAU  CAI   -58.08  30.0  1
+ AD5  Var_11    CAV   N2   C2   N1     -1.85  30.0  2
+ AD5  Var_12    CAB   CAV  N2   C2   -176.25  30.0  2
+ AD5  Var_13    CAH   CAL  CBB  CAK    34.57  30.0  1
+ AD5  Var_14    CAL   CBB  CAK  CAG    27.71  30.0  1
+ AD5  Var_15    CAJ   OAU  CAI  CAM    58.19  30.0  1
+ AD5  Var_16    C6    N6   CBB  CAK  -160.57  30.0  3
+ AD5  Var_17    N6    CBB  CAK  CAG   -96.62  30.0  1
+ AD5  Var_18    N6    CBB  CAL  CAH   157.88  30.0  1
+ AD5  Var_19    C6    N6   CBB  CAL    75.42  30.0  3
+ AD5  Var_20    HAL1  CAL  CBB  CAK   -85.87  30.0  1
+ AD5  Var_21    HAL2  CAL  CBB  CAK   157.83  30.0  1
+ AD5  Var_22    HBB   CBB  CAK  CAG   146.97  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

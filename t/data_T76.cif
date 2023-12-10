@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- T76  T76  (6R,21aS)-17-chloro-6-cyclohexyl-2,3,6,7,10,11,19,20-octahydro-1H,5H-pyrrolo[1,2-k][1,4,8,11,14]benzoxatetraazacycloheptadecine-5,8,12,21(9H,13H,21aH)-tetrone  ligand  68  35  .  2021-08-23  2021-08-23  
+ T76  T76  (6R,21aS)-17-chloro-6-cyclohexyl-2,3,6,7,10,11,19,20-octahydro-1H,5H-pyrrolo[1,2-k][1,4,8,11,14]benzoxatetraazacycloheptadecine-5,8,12,21(9H,13H,21aH)-tetrone  ligand  68  35  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_T76
@@ -337,44 +338,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- T76  CONST_01  C4    C3   C2   C1     0.00   0.0  0
- T76  CONST_02  C4    C5   C6   C1     0.00   0.0  0
- T76  CONST_03  C5    C6   C1   C2     0.00   0.0  0
- T76  CONST_04  C5    C4   C3   C2     0.00   0.0  0
- T76  CONST_05  C6    C1   C2   C3     0.00   0.0  0
- T76  CONST_06  C6    C5   C4   C3     0.00   0.0  0
- T76  CONST_07  C10   C9   N8   C7   180.00   0.0  0
- T76  CONST_08  C30   C29  N21  C10  180.00   0.0  0
- T76  CONST_09  C30   C29  N21  C20    0.00   0.0  0
- T76  CONST_10  C34   C32  N31  C30  180.00   0.0  0
- T76  CONST_11  C43   C41  N38  C35  180.00   0.0  0
- T76  CONST_12  CL68  C5   C6   C1   180.00   0.0  0
- T76  CONST_13  CL68  C5   C4   C3   180.00   0.0  0
- T76  CONST_14  O11   C9   N8   C7     0.00   0.0  0
- T76  CONST_15  O44   C29  N21  C10    0.00   0.0  0
- T76  CONST_16  O44   C29  N21  C20  180.00   0.0  0
- T76  CONST_17  O33   C32  N31  C30    0.00   0.0  0
- T76  CONST_18  O42   C41  N38  C35    0.00   0.0  0
- T76  CONST_19  H3    C3   C2   C1   180.00   0.0  0
- T76  CONST_20  H6    C6   C1   C2   180.00   0.0  0
- T76  CONST_21  H4    C4   C3   C2   180.00   0.0  0
- T76  CONST_22  H8    N8   C9   C10    0.00   0.0  0
- T76  CONST_23  H31   N31  C32  C34    0.00   0.0  0
- T76  CONST_24  H38   N38  C41  C43    0.00   0.0  0
- T76  Var_01    C9    N8   C7   C1   120.81  30.0  1
- T76  Var_02    N8    C7   C1   C2   -70.45  30.0  1
- T76  Var_03    C41   C43  O12  C2   160.95  30.0  1
- T76  Var_04    C20   C19  C18  C10  -36.82  30.0  1
- T76  Var_05    C19   C20  N21  C10   -9.37  30.0  3
- T76  Var_06    N38   C41  C43  O12   11.81  30.0  1
- T76  Var_07    N21   C20  C19  C18   28.49  30.0  1
- T76  Var_08    C35   C34  C32  N31  103.34  30.0  1
- T76  Var_09    N38   C35  C34  C32  -59.05  30.0  1
- T76  Var_10    C41   N38  C35  C34  -72.76  30.0  1
- T76  Var_11    C49   C48  C47  C45  -55.85  30.0  1
- T76  Var_12    C49   C50  C51  C45   55.32  30.0  1
- T76  Var_13    C50   C49  C48  C47   55.54  30.0  1
- T76  Var_14    C51   C50  C49  C48  -54.97  30.0  1
+ T76  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ T76  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ T76  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ T76  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ T76  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ T76  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ T76  CONST_07  C10   C9   N8   C7    180.00   0.0  0
+ T76  CONST_08  C30   C29  N21  C10   180.00   0.0  0
+ T76  CONST_09  C30   C29  N21  C20     0.00   0.0  0
+ T76  CONST_10  C34   C32  N31  C30   180.00   0.0  0
+ T76  CONST_11  C43   C41  N38  C35   180.00   0.0  0
+ T76  CONST_12  CL68  C5   C6   C1    180.00   0.0  0
+ T76  CONST_13  CL68  C5   C4   C3    180.00   0.0  0
+ T76  CONST_14  O11   C9   N8   C7      0.00   0.0  0
+ T76  CONST_15  O44   C29  N21  C10     0.00   0.0  0
+ T76  CONST_16  O44   C29  N21  C20   180.00   0.0  0
+ T76  CONST_17  O33   C32  N31  C30     0.00   0.0  0
+ T76  CONST_18  O42   C41  N38  C35     0.00   0.0  0
+ T76  CONST_19  H3    C3   C2   C1    180.00   0.0  0
+ T76  CONST_20  H6    C6   C1   C2    180.00   0.0  0
+ T76  CONST_21  H4    C4   C3   C2    180.00   0.0  0
+ T76  CONST_22  H8    N8   C9   C10     0.00   0.0  0
+ T76  CONST_23  H31   N31  C32  C34     0.00   0.0  0
+ T76  CONST_24  H38   N38  C41  C43     0.00   0.0  0
+ T76  Var_01    C9    N8   C7   C1    120.81  30.0  1
+ T76  Var_02    N8    C7   C1   C2    -70.45  30.0  1
+ T76  Var_03    C41   C43  O12  C2    160.95  30.0  1
+ T76  Var_04    C20   C19  C18  C10   -36.82  30.0  1
+ T76  Var_05    C19   C20  N21  C10    -9.37  30.0  3
+ T76  Var_06    N38   C41  C43  O12    11.81  30.0  1
+ T76  Var_07    N21   C20  C19  C18    28.49  30.0  1
+ T76  Var_08    C35   C34  C32  N31   103.34  30.0  1
+ T76  Var_09    N38   C35  C34  C32   -59.05  30.0  1
+ T76  Var_10    C41   N38  C35  C34   -72.76  30.0  1
+ T76  Var_11    C49   C48  C47  C45   -55.85  30.0  1
+ T76  Var_12    C49   C50  C51  C45    55.32  30.0  1
+ T76  Var_13    C50   C49  C48  C47    55.54  30.0  1
+ T76  Var_14    C51   C50  C49  C48   -54.97  30.0  1
+ T76  Var_15    C43   O12  C2   C1   -177.19  30.0  2
+ T76  Var_16    C43   O12  C2   C3      2.65  30.0  2
+ T76  Var_17    C18   C10  C9   N8    -88.69  30.0  3
+ T76  Var_18    N21   C10  C9   N8    156.93  30.0  3
+ T76  Var_19    C19   C18  C10  C9    -87.60  30.0  1
+ T76  Var_20    C20   N21  C10  C9    106.03  30.0  1
+ T76  Var_21    C29   N21  C10  C9    -63.55  30.0  1
+ T76  Var_22    C20   N21  C10  C18   -13.55  30.0  1
+ T76  Var_23    C29   N21  C10  C18   176.88  30.0  1
+ T76  Var_24    N21   C10  C18  C19    30.89  30.0  1
+ T76  Var_25    N31   C30  C29  N21  -127.00  30.0  3
+ T76  Var_26    C45   C30  C29  N21   107.67  30.0  3
+ T76  Var_27    C32   N31  C30  C29    83.95  30.0  3
+ T76  Var_28    C47   C45  C30  C29    66.39  30.0  3
+ T76  Var_29    C51   C45  C30  C29  -168.22  30.0  3
+ T76  Var_30    C48   C47  C45  C30   179.73  30.0  1
+ T76  Var_31    C50   C51  C45  C30   176.91  30.0  1
+ T76  Var_32    C47   C45  C30  N31   -56.18  30.0  3
+ T76  Var_33    C51   C45  C30  N31    69.21  30.0  3
+ T76  Var_34    C45   C30  N31  C32  -150.62  30.0  3
+ T76  Var_35    C50   C51  C45  C47   -54.94  30.0  1
+ T76  Var_36    C51   C45  C47  C48    54.87  30.0  1
+ T76  Var_37    C18   C10  C9   O11    88.59  30.0  3
+ T76  Var_38    N21   C10  C9   O11   -25.80  30.0  3
+ T76  Var_39    O44   C29  C30  N31    52.56  30.0  3
+ T76  Var_40    C45   C30  C29  O44   -72.77  30.0  3
+ T76  Var_41    H10   C10  C9   N8     34.69  30.0  3
+ T76  Var_42    H181  C18  C10  C9    154.89  30.0  1
+ T76  Var_43    H182  C18  C10  C9     35.59  30.0  1
+ T76  Var_44    H30   C30  C29  N21   -11.03  30.0  3
+ T76  Var_45    H45   C45  C30  C29   -52.53  30.0  3
+ T76  Var_46    H471  C47  C45  C30   -57.74  30.0  1
+ T76  Var_47    H472  C47  C45  C30    59.79  30.0  1
+ T76  Var_48    H511  C51  C45  C30   -61.64  30.0  1
+ T76  Var_49    H512  C51  C45  C30    54.70  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

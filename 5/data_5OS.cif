@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5OS  5OS  3-chloranyl-4-[4-(2-chloranyl-4-oxidanyl-phenyl)furan-3-yl]phenol  ligand  31  21  .  2021-08-04  2021-08-04  
+ 5OS  5OS  3-chloranyl-4-[4-(2-chloranyl-4-oxidanyl-phenyl)furan-3-yl]phenol  ligand  31  21  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_5OS
@@ -180,50 +181,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5OS  CONST_01  C05  C04  C03  C02    0.00  0.0  0
- 5OS  CONST_02  C05  C19  C21  C02    0.00  0.0  0
- 5OS  CONST_03  C06  C05  C04  C03  180.00  0.0  0
- 5OS  CONST_04  C19  C05  C04  C03    0.00  0.0  0
- 5OS  CONST_05  C19  C21  C02  C03    0.00  0.0  0
- 5OS  CONST_08  C21  C19  C05  C04    0.00  0.0  0
- 5OS  CONST_09  C21  C02  C03  C04    0.00  0.0  0
- 5OS  CONST_10  O08  C07  C06  C05  180.00  0.0  0
- 5OS  CONST_11  C09  C10  C06  C05  180.00  0.0  0
- 5OS  CONST_12  C11  C10  C06  C05    0.00  0.0  0
- 5OS  CONST_13  C09  O08  C07  C06    0.00  0.0  0
- 5OS  CONST_14  C21  C19  C05  C06  180.00  0.0  0
- 5OS  CONST_15  O08  C09  C10  C06    0.00  0.0  0
- 5OS  CONST_18  C10  C09  O08  C07    0.00  0.0  0
- 5OS  CONST_20  C09  C10  C06  C07    0.00  0.0  0
- 5OS  CONST_21  C11  C10  C06  C07  180.00  0.0  0
- 5OS  CONST_22  C10  C06  C07  O08    0.00  0.0  0
- 5OS  CONST_23  C11  C10  C09  O08  180.00  0.0  0
- 5OS  CONST_27  C16  C17  C11  C10  180.00  0.0  0
- 5OS  CONST_28  C13  C12  C11  C10  180.00  0.0  0
- 5OS  CONST_29  C14  C16  C17  C11    0.00  0.0  0
- 5OS  CONST_30  C14  C13  C12  C11    0.00  0.0  0
- 5OS  CONST_31  C16  C17  C11  C12    0.00  0.0  0
- 5OS  CONST_32  C16  C14  C13  C12    0.00  0.0  0
- 5OS  CONST_33  C17  C11  C12  C13    0.00  0.0  0
- 5OS  CONST_34  C17  C16  C14  C13    0.00  0.0  0
- 5OS  CONST_35  C04  C03  C02  O01  180.00  0.0  0
- 5OS  CONST_36  C19  C21  C02  O01  180.00  0.0  0
- 5OS  CONST_37  CL2  C19  C21  C02  180.00  0.0  0
- 5OS  CONST_38  CL2  C19  C05  C04  180.00  0.0  0
- 5OS  CONST_39  CL2  C19  C05  C06    0.00  0.0  0
- 5OS  CONST_40  CL1  C17  C11  C10    0.00  0.0  0
- 5OS  CONST_41  CL1  C17  C11  C12  180.00  0.0  0
- 5OS  CONST_42  O15  C14  C13  C12  180.00  0.0  0
- 5OS  CONST_43  CL1  C17  C16  C14  180.00  0.0  0
- 5OS  CONST_44  C17  C16  C14  O15  180.00  0.0  0
- 5OS  CONST_45  H3   C04  C03  C02  180.00  0.0  0
- 5OS  CONST_46  H10  C21  C02  C03  180.00  0.0  0
- 5OS  CONST_47  H4   C07  C06  C05    0.00  0.0  0
- 5OS  CONST_48  H2   C03  C04  C05  180.00  0.0  0
- 5OS  CONST_49  H5   C09  C10  C06  180.00  0.0  0
- 5OS  CONST_50  H6   C12  C11  C10    0.00  0.0  0
- 5OS  CONST_51  H9   C16  C17  C11  180.00  0.0  0
- 5OS  CONST_52  H7   C13  C12  C11  180.00  0.0  0
+ 5OS  CONST_01  C05  C04  C03  C02     0.00   0.0  0
+ 5OS  CONST_02  C05  C19  C21  C02     0.00   0.0  0
+ 5OS  CONST_03  C06  C05  C04  C03   180.00   0.0  0
+ 5OS  CONST_04  C19  C05  C04  C03     0.00   0.0  0
+ 5OS  CONST_05  C19  C21  C02  C03     0.00   0.0  0
+ 5OS  CONST_06  C21  C19  C05  C04     0.00   0.0  0
+ 5OS  CONST_07  C21  C02  C03  C04     0.00   0.0  0
+ 5OS  CONST_08  O08  C07  C06  C05   180.00   0.0  0
+ 5OS  CONST_09  C09  C10  C06  C05   180.00   0.0  0
+ 5OS  CONST_10  C11  C10  C06  C05     0.00   0.0  0
+ 5OS  CONST_11  C09  O08  C07  C06     0.00   0.0  0
+ 5OS  CONST_12  C21  C19  C05  C06   180.00   0.0  0
+ 5OS  CONST_13  O08  C09  C10  C06     0.00   0.0  0
+ 5OS  CONST_14  C10  C09  O08  C07     0.00   0.0  0
+ 5OS  CONST_15  C09  C10  C06  C07     0.00   0.0  0
+ 5OS  CONST_16  C11  C10  C06  C07   180.00   0.0  0
+ 5OS  CONST_17  C10  C06  C07  O08     0.00   0.0  0
+ 5OS  CONST_18  C11  C10  C09  O08   180.00   0.0  0
+ 5OS  CONST_19  C16  C17  C11  C10   180.00   0.0  0
+ 5OS  CONST_20  C13  C12  C11  C10   180.00   0.0  0
+ 5OS  CONST_21  C14  C16  C17  C11     0.00   0.0  0
+ 5OS  CONST_22  C14  C13  C12  C11     0.00   0.0  0
+ 5OS  CONST_23  C16  C17  C11  C12     0.00   0.0  0
+ 5OS  CONST_24  C16  C14  C13  C12     0.00   0.0  0
+ 5OS  CONST_25  C17  C11  C12  C13     0.00   0.0  0
+ 5OS  CONST_26  C17  C16  C14  C13     0.00   0.0  0
+ 5OS  CONST_27  C04  C03  C02  O01   180.00   0.0  0
+ 5OS  CONST_28  C19  C21  C02  O01   180.00   0.0  0
+ 5OS  CONST_29  CL2  C19  C21  C02   180.00   0.0  0
+ 5OS  CONST_30  CL2  C19  C05  C04   180.00   0.0  0
+ 5OS  CONST_31  CL2  C19  C05  C06     0.00   0.0  0
+ 5OS  CONST_32  CL1  C17  C11  C10     0.00   0.0  0
+ 5OS  CONST_33  CL1  C17  C11  C12   180.00   0.0  0
+ 5OS  CONST_34  O15  C14  C13  C12   180.00   0.0  0
+ 5OS  CONST_35  CL1  C17  C16  C14   180.00   0.0  0
+ 5OS  CONST_36  C17  C16  C14  O15   180.00   0.0  0
+ 5OS  CONST_37  H3   C04  C03  C02   180.00   0.0  0
+ 5OS  CONST_38  H10  C21  C02  C03   180.00   0.0  0
+ 5OS  CONST_39  H4   C07  C06  C05     0.00   0.0  0
+ 5OS  CONST_40  H2   C03  C04  C05   180.00   0.0  0
+ 5OS  CONST_41  H5   C09  C10  C06   180.00   0.0  0
+ 5OS  CONST_42  H6   C12  C11  C10     0.00   0.0  0
+ 5OS  CONST_43  H9   C16  C17  C11   180.00   0.0  0
+ 5OS  CONST_44  H7   C13  C12  C11   180.00   0.0  0
+ 5OS  Var_01    C07  C06  C05  C04    62.57  30.0  2
+ 5OS  Var_02    C10  C06  C05  C04  -117.16  30.0  2
+ 5OS  Var_03    C17  C11  C10  C06    63.45  30.0  2
+ 5OS  Var_04    C12  C11  C10  C06  -117.46  30.0  2
+ 5OS  Var_05    C19  C05  C06  C07  -116.94  30.0  2
+ 5OS  Var_06    C17  C11  C10  C09  -117.24  30.0  2
+ 5OS  Var_07    C12  C11  C10  C09    61.85  30.0  2
+ 5OS  Var_08    C19  C05  C06  C10    63.33  30.0  2
+ 5OS  Var_09    H1   O01  C02  C03  -179.17  30.0  2
+ 5OS  Var_10    H8   O15  C14  C13    -0.88  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BHY  BHY  N,N'-[biphenyl-4,4'-diyldi(2R)propane-2,1-diyl]dimethanesulfonamide  ligand  56  28  .  2022-03-15  2022-03-15
+ BHY  BHY  N,N'-[biphenyl-4,4'-diyldi(2R)propane-2,1-diyl]dimethanesulfonamide  ligand  56  28  .  2022-03-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BHY
@@ -280,40 +281,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BHY  CONST_01  C5   C6   C1   C2      0.00   0.0  0
- BHY  CONST_02  C5   C4   C3   C2      0.00   0.0  0
- BHY  CONST_03  C10  C4   C3   C2    180.00   0.0  0
- BHY  CONST_04  C1   C2   C3   C4      0.00   0.0  0
- BHY  CONST_05  C1   C6   C5   C4      0.00   0.0  0
- BHY  CONST_06  C8   C9   C10  C4    180.00   0.0  0
- BHY  CONST_07  C12  C11  C10  C4    180.00   0.0  0
- BHY  CONST_08  C3   C2   C1   C6      0.00   0.0  0
- BHY  CONST_09  C3   C4   C5   C6      0.00   0.0  0
- BHY  CONST_10  C10  C4   C5   C6    180.00   0.0  0
- BHY  CONST_11  C10  C9   C8   C7      0.00   0.0  0
- BHY  CONST_12  C10  C11  C12  C7      0.00   0.0  0
- BHY  CONST_17  C11  C12  C7   C8      0.00   0.0  0
- BHY  CONST_18  C11  C10  C9   C8      0.00   0.0  0
- BHY  CONST_19  C12  C7   C8   C9      0.00   0.0  0
- BHY  CONST_20  C12  C11  C10  C9      0.00   0.0  0
- BHY  CONST_21  C14  C1   C2   C3    180.00   0.0  0
- BHY  CONST_22  C14  C1   C6   C5    180.00   0.0  0
- BHY  CONST_23  C13  C7   C8   C9    180.00   0.0  0
- BHY  CONST_24  C13  C7   C12  C11   180.00   0.0  0
- BHY  CONST_25  H6   C6   C1   C2    180.00   0.0  0
- BHY  CONST_26  H2   C2   C3   C4    180.00   0.0  0
- BHY  CONST_27  H9   C9   C10  C4      0.00   0.0  0
- BHY  CONST_28  H11  C11  C10  C4      0.00   0.0  0
- BHY  CONST_29  H3   C3   C2   C1    180.00   0.0  0
- BHY  CONST_30  H5   C5   C6   C1    180.00   0.0  0
- BHY  CONST_31  H12  C12  C7   C8    180.00   0.0  0
- BHY  CONST_32  H8   C8   C9   C10   180.00   0.0  0
- BHY  Var_01    C15  N1   S2   O4   -178.50  30.0  1
- BHY  Var_02    C18  N2   S1   O1   -178.49  30.0  1
- BHY  Var_03    C13  C18  N2   S1    161.56  30.0  3
- BHY  Var_04    C14  C15  N1   S2    161.42  30.0  3
- BHY  Var_05    H20  C20  S2   N1     61.52  30.0  3
- BHY  Var_06    H19  C19  S1   N2     61.46  30.0  3
+ BHY  CONST_01  C5    C6   C1   C2      0.00   0.0  0
+ BHY  CONST_02  C5    C4   C3   C2      0.00   0.0  0
+ BHY  CONST_03  C10   C4   C3   C2    180.00   0.0  0
+ BHY  CONST_04  C1    C2   C3   C4      0.00   0.0  0
+ BHY  CONST_05  C1    C6   C5   C4      0.00   0.0  0
+ BHY  CONST_06  C8    C9   C10  C4    180.00   0.0  0
+ BHY  CONST_07  C12   C11  C10  C4    180.00   0.0  0
+ BHY  CONST_08  C3    C2   C1   C6      0.00   0.0  0
+ BHY  CONST_09  C3    C4   C5   C6      0.00   0.0  0
+ BHY  CONST_10  C10   C4   C5   C6    180.00   0.0  0
+ BHY  CONST_11  C10   C9   C8   C7      0.00   0.0  0
+ BHY  CONST_12  C10   C11  C12  C7      0.00   0.0  0
+ BHY  CONST_13  C11   C12  C7   C8      0.00   0.0  0
+ BHY  CONST_14  C11   C10  C9   C8      0.00   0.0  0
+ BHY  CONST_15  C12   C7   C8   C9      0.00   0.0  0
+ BHY  CONST_16  C12   C11  C10  C9      0.00   0.0  0
+ BHY  CONST_17  C14   C1   C2   C3    180.00   0.0  0
+ BHY  CONST_18  C14   C1   C6   C5    180.00   0.0  0
+ BHY  CONST_19  C13   C7   C8   C9    180.00   0.0  0
+ BHY  CONST_20  C13   C7   C12  C11   180.00   0.0  0
+ BHY  CONST_21  H6    C6   C1   C2    180.00   0.0  0
+ BHY  CONST_22  H2    C2   C3   C4    180.00   0.0  0
+ BHY  CONST_23  H9    C9   C10  C4      0.00   0.0  0
+ BHY  CONST_24  H11   C11  C10  C4      0.00   0.0  0
+ BHY  CONST_25  H3    C3   C2   C1    180.00   0.0  0
+ BHY  CONST_26  H5    C5   C6   C1    180.00   0.0  0
+ BHY  CONST_27  H12   C12  C7   C8    180.00   0.0  0
+ BHY  CONST_28  H8    C8   C9   C10   180.00   0.0  0
+ BHY  Var_01    C15   N1   S2   O4   -178.50  30.0  1
+ BHY  Var_02    C18   N2   S1   O1   -178.49  30.0  1
+ BHY  Var_03    C13   C18  N2   S1    161.56  30.0  3
+ BHY  Var_04    C14   C15  N1   S2    161.42  30.0  3
+ BHY  Var_05    H20   C20  S2   N1     61.52  30.0  3
+ BHY  Var_06    H19   C19  S1   N2     61.46  30.0  3
+ BHY  Var_07    C9    C10  C4   C3    147.53  30.0  2
+ BHY  Var_08    C11   C10  C4   C3    -32.12  30.0  2
+ BHY  Var_09    C9    C10  C4   C5    -32.12  30.0  2
+ BHY  Var_10    C11   C10  C4   C5    148.22  30.0  2
+ BHY  Var_11    C15   C14  C1   C2   -103.41  30.0  2
+ BHY  Var_12    C16   C14  C1   C2    131.82  30.0  2
+ BHY  Var_13    C15   C14  C1   C6     74.64  30.0  2
+ BHY  Var_14    C16   C14  C1   C6    -50.14  30.0  2
+ BHY  Var_15    C17   C13  C7   C8    131.72  30.0  2
+ BHY  Var_16    C18   C13  C7   C8   -103.51  30.0  2
+ BHY  Var_17    C17   C13  C7   C12   -50.21  30.0  2
+ BHY  Var_18    C18   C13  C7   C12    74.56  30.0  2
+ BHY  Var_19    H14   C14  C1   C2     12.61  30.0  2
+ BHY  Var_20    H13   C13  C7   C8     12.50  30.0  2
+ BHY  Var_21    C1    C14  C15  N1    175.96  30.0  2
+ BHY  Var_22    C7    C13  C18  N2    176.13  30.0  1
+ BHY  Var_23    H17   C17  C13  C7   -175.91  30.0  3
+ BHY  Var_24    H17A  C17  C13  C7    -56.03  30.0  3
+ BHY  Var_25    H17B  C17  C13  C7     64.31  30.0  3
+ BHY  Var_26    H18   C18  C13  C7     52.95  30.0  3
+ BHY  Var_27    H18A  C18  C13  C7    -64.62  30.0  3
+ BHY  Var_28    H15   C15  C14  C1     52.77  30.0  3
+ BHY  Var_29    H15A  C15  C14  C1    -64.79  30.0  3
+ BHY  Var_30    H16   C16  C14  C1     64.19  30.0  3
+ BHY  Var_31    H16A  C16  C14  C1   -176.06  30.0  3
+ BHY  Var_32    H16B  C16  C14  C1    -56.17  30.0  3
+ BHY  Var_33    C16   C14  C15  N1    -58.77  30.0  2
+ BHY  Var_34    C17   C13  C18  N2    -58.62  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

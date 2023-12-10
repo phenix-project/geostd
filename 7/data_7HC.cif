@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 7HC  7HC  (2'S,3R,4'S,5'R)-6-chloro-4'-(3-chloro-2-fluorophenyl)-2'-(2,2-dimethylpropyl)-N-(trans-4-hydroxycyclohexyl)-2-oxo-1,2-dihydrospiro[indole-3,3'-pyrrolidine]-5'-carboxamide  ligand  72  38  .  2022-07-23  2022-07-26
+ 7HC  7HC  (2'S,3R,4'S,5'R)-6-chloro-4'-(3-chloro-2-fluorophenyl)-2'-(2,2-dimethylpropyl)-N-(trans-4-hydroxycyclohexyl)-2-oxo-1,2-dihydrospiro[indole-3,3'-pyrrolidine]-5'-carboxamide  ligand  72  38  .  2022-07-23  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_7HC
@@ -355,48 +356,106 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 7HC  CONST_01  C28  C29  C24  C25    0.00   0.0  0
- 7HC  CONST_02  C28  C27  C26  C25    0.00   0.0  0
- 7HC  CONST_03  C29  C24  C25  C26    0.00   0.0  0
- 7HC  CONST_04  C29  C28  C27  C26    0.00   0.0  0
- 7HC  CONST_05  C27  C26  C25  C24    0.00   0.0  0
- 7HC  CONST_06  C27  C28  C29  C24    0.00   0.0  0
- 7HC  CONST_07  C18  C17  C16  C21    0.00   0.0  0
- 7HC  CONST_08  C18  C19  C20  C21    0.00   0.0  0
- 7HC  CONST_09  C16  C17  C18  C19    0.00   0.0  0
- 7HC  CONST_10  C16  C21  C20  C19    0.00   0.0  0
- 7HC  CONST_11  C17  C18  C19  C20    0.00   0.0  0
- 7HC  CONST_12  C17  C16  C21  C20    0.00   0.0  0
- 7HC  CONST_13  C18  C17  C16  C15  180.00   0.0  0
- 7HC  CONST_14  C20  C21  C16  C15  180.00   0.0  0
- 7HC  CONST_15  C22  C29  C24  C25  180.00   0.0  0
- 7HC  CONST_16  N3   C24  C29  C22    0.00   0.0  0
- 7HC  CONST_17  C27  C28  C29  C22  180.00   0.0  0
- 7HC  CONST_18  C22  C23  N3   C24    0.00   0.0  0
- 7HC  CONST_19  F    C21  C16  C15    0.00   0.0  0
- 7HC  CONST_20  CL2  C26  C25  C24  180.00   0.0  0
- 7HC  CONST_21  F    C21  C20  C19  180.00   0.0  0
- 7HC  CONST_22  CL1  C20  C19  C18  180.00   0.0  0
- 7HC  CONST_23  CL1  C20  C21  C16  180.00   0.0  0
- 7HC  CONST_24  CL2  C26  C27  C28  180.00   0.0  0
- 7HC  CONST_25  F    C21  C16  C17  180.00   0.0  0
- 7HC  CONST_26  C24  N3   C23  O3   180.00   0.0  0
- 7HC  CONST_27  H30  C17  C16  C15    0.00   0.0  0
- 7HC  CONST_28  H31  C27  C26  C25  180.00   0.0  0
- 7HC  CONST_29  H28  C28  C27  C26  180.00   0.0  0
- 7HC  CONST_30  H26  C19  C20  C21  180.00   0.0  0
- 7HC  CONST_31  H27  C18  C19  C20  180.00   0.0  0
- 7HC  CONST_32  H24  C25  C24  C29  180.00   0.0  0
- 7HC  CONST_33  H29  N3   C23  C22  180.00   0.0  0
- 7HC  CONST_34  C7   C8   N2   C9   180.00   0.0  0
- 7HC  CONST_35  O1   C8   N2   C9     0.00   0.0  0
- 7HC  CONST_36  H25  N2   C8   C7     0.00   0.0  0
- 7HC  Var_01    C12  C13  C14  C9    57.04  30.0  1
- 7HC  Var_02    C12  C11  C10  C9   -56.20  30.0  1
- 7HC  Var_03    C6   C5   C2   C4    76.03  30.0  2
- 7HC  Var_04    H21  C1   C2   C5    62.39  30.0  3
- 7HC  Var_05    H18  C4   C2   C5    56.26  30.0  3
- 7HC  Var_06    H32  C3   C2   C5    67.70  30.0  3
+ 7HC  CONST_01  C28  C29  C24  C25     0.00   0.0  0
+ 7HC  CONST_02  C28  C27  C26  C25     0.00   0.0  0
+ 7HC  CONST_03  C29  C24  C25  C26     0.00   0.0  0
+ 7HC  CONST_04  C29  C28  C27  C26     0.00   0.0  0
+ 7HC  CONST_05  C27  C26  C25  C24     0.00   0.0  0
+ 7HC  CONST_06  C27  C28  C29  C24     0.00   0.0  0
+ 7HC  CONST_07  C18  C17  C16  C21     0.00   0.0  0
+ 7HC  CONST_08  C18  C19  C20  C21     0.00   0.0  0
+ 7HC  CONST_09  C16  C17  C18  C19     0.00   0.0  0
+ 7HC  CONST_10  C16  C21  C20  C19     0.00   0.0  0
+ 7HC  CONST_11  C17  C18  C19  C20     0.00   0.0  0
+ 7HC  CONST_12  C17  C16  C21  C20     0.00   0.0  0
+ 7HC  CONST_13  C18  C17  C16  C15   180.00   0.0  0
+ 7HC  CONST_14  C20  C21  C16  C15   180.00   0.0  0
+ 7HC  CONST_15  C22  C29  C24  C25   180.00   0.0  0
+ 7HC  CONST_16  N3   C24  C29  C22     0.00   0.0  0
+ 7HC  CONST_17  C27  C28  C29  C22   180.00   0.0  0
+ 7HC  CONST_18  C22  C23  N3   C24     0.00   0.0  0
+ 7HC  CONST_19  F    C21  C16  C15     0.00   0.0  0
+ 7HC  CONST_20  CL2  C26  C25  C24   180.00   0.0  0
+ 7HC  CONST_21  F    C21  C20  C19   180.00   0.0  0
+ 7HC  CONST_22  CL1  C20  C19  C18   180.00   0.0  0
+ 7HC  CONST_23  CL1  C20  C21  C16   180.00   0.0  0
+ 7HC  CONST_24  CL2  C26  C27  C28   180.00   0.0  0
+ 7HC  CONST_25  F    C21  C16  C17   180.00   0.0  0
+ 7HC  CONST_26  C24  N3   C23  O3    180.00   0.0  0
+ 7HC  CONST_27  H30  C17  C16  C15     0.00   0.0  0
+ 7HC  CONST_28  H31  C27  C26  C25   180.00   0.0  0
+ 7HC  CONST_29  H28  C28  C27  C26   180.00   0.0  0
+ 7HC  CONST_30  H26  C19  C20  C21   180.00   0.0  0
+ 7HC  CONST_31  H27  C18  C19  C20   180.00   0.0  0
+ 7HC  CONST_32  H24  C25  C24  C29   180.00   0.0  0
+ 7HC  CONST_33  H29  N3   C23  C22   180.00   0.0  0
+ 7HC  CONST_34  C7   C8   N2   C9    180.00   0.0  0
+ 7HC  CONST_35  O1   C8   N2   C9      0.00   0.0  0
+ 7HC  CONST_36  H25  N2   C8   C7      0.00   0.0  0
+ 7HC  Var_01    C12  C13  C14  C9     57.04  30.0  1
+ 7HC  Var_02    C12  C11  C10  C9    -56.20  30.0  1
+ 7HC  Var_03    C6   C5   C2   C4     76.03  30.0  2
+ 7HC  Var_04    H21  C1   C2   C5     62.39  30.0  3
+ 7HC  Var_05    H18  C4   C2   C5     56.26  30.0  3
+ 7HC  Var_06    H32  C3   C2   C5     67.70  30.0  3
+ 7HC  Var_07    C10  C9   C14  C13   -55.69  30.0  1
+ 7HC  Var_08    C10  C11  C12  C13    56.64  30.0  1
+ 7HC  Var_09    C14  C9   C10  C11    55.35  30.0  1
+ 7HC  Var_10    C14  C13  C12  C11   -57.22  30.0  1
+ 7HC  Var_11    C23  C22  C6   N1    -78.45  30.0  3
+ 7HC  Var_12    C29  C22  C6   N1    165.24  30.0  3
+ 7HC  Var_13    C15  C22  C6   N1     41.16  30.0  3
+ 7HC  Var_14    C22  C15  C7   N1     13.30  30.0  1
+ 7HC  Var_15    C16  C15  C7   N1    141.90  30.0  1
+ 7HC  Var_16    N3   C23  C22  C15   125.12  30.0  1
+ 7HC  Var_17    C24  C29  C22  C15  -123.69  30.0  1
+ 7HC  Var_18    C28  C29  C22  C15    57.27  30.0  1
+ 7HC  Var_19    C6   N1   C7   C15    13.23  30.0  1
+ 7HC  Var_20    C22  C6   N1   C7    -34.55  30.0  1
+ 7HC  Var_21    C23  C22  C15  C7     86.69  30.0  3
+ 7HC  Var_22    C29  C22  C15  C7   -156.01  30.0  3
+ 7HC  Var_23    C6   C22  C15  C7    -31.94  30.0  3
+ 7HC  Var_24    C17  C16  C15  C7    -34.22  30.0  2
+ 7HC  Var_25    C21  C16  C15  C7    146.43  30.0  2
+ 7HC  Var_26    C6   C22  C29  C24   120.74  30.0  1
+ 7HC  Var_27    C16  C15  C22  C23   -42.48  30.0  3
+ 7HC  Var_28    C17  C16  C15  C22    88.26  30.0  2
+ 7HC  Var_29    C21  C16  C15  C22   -91.09  30.0  2
+ 7HC  Var_30    C29  C22  C15  C16    74.82  30.0  3
+ 7HC  Var_31    C6   C22  C15  C16  -161.11  30.0  3
+ 7HC  Var_32    C6   C22  C29  C28   -58.30  30.0  1
+ 7HC  Var_33    C6   C22  C23  N3   -123.31  30.0  1
+ 7HC  Var_34    C6   C22  C23  O3     56.11  30.0  1
+ 7HC  Var_35    C15  C22  C23  O3    -55.46  30.0  1
+ 7HC  Var_36    C6   N1   C7   C8   -103.94  30.0  1
+ 7HC  Var_37    C22  C15  C7   C8    133.47  30.0  1
+ 7HC  Var_38    C16  C15  C7   C8    -97.93  30.0  1
+ 7HC  Var_39    N2   C9   C14  C13  -178.08  30.0  1
+ 7HC  Var_40    N2   C9   C10  C11   179.28  30.0  1
+ 7HC  Var_41    O2   C12  C11  C10   179.74  30.0  1
+ 7HC  Var_42    O2   C12  C13  C14  -177.73  30.0  1
+ 7HC  Var_43    C5   C6   C22  C15   168.15  30.0  3
+ 7HC  Var_44    C5   C6   N1   C7   -161.44  30.0  1
+ 7HC  Var_45    C23  C22  C6   C5     48.54  30.0  3
+ 7HC  Var_46    C29  C22  C6   C5    -67.78  30.0  3
+ 7HC  Var_47    H1   C9   C14  C13    63.21  30.0  1
+ 7HC  Var_48    H2   C12  C11  C10   -60.94  30.0  1
+ 7HC  Var_49    H13  C15  C7   N1    -97.12  30.0  1
+ 7HC  Var_50    H35  C6   C22  C15   -72.70  30.0  3
+ 7HC  Var_51    H9   N1   C7   C15  -105.74  30.0  1
+ 7HC  Var_52    H15  C7   C15  C22  -106.61  30.0  1
+ 7HC  Var_53    C14  C9   N2   C8    -83.96  30.0  3
+ 7HC  Var_54    C10  C9   N2   C8    152.98  30.0  3
+ 7HC  Var_55    N1   C7   C8   O1     27.44  30.0  1
+ 7HC  Var_56    C15  C7   C8   O1    -89.79  30.0  1
+ 7HC  Var_57    C2   C5   C6   N1    -65.11  30.0  2
+ 7HC  Var_58    N2   C8   C7   N1   -156.88  30.0  3
+ 7HC  Var_59    N2   C8   C7   C15    85.89  30.0  3
+ 7HC  Var_60    C22  C6   C5   C2    173.37  30.0  3
+ 7HC  Var_61    H14  O2   C12  C13   -58.02  30.0  3
+ 7HC  Var_62    H25  N2   C9   C10   -31.81  30.0  1
+ 7HC  Var_63    H16  C5   C6   N1    174.53  30.0  2
+ 7HC  Var_64    H17  C5   C6   N1     59.44  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

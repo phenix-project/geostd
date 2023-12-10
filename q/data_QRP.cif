@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QRP  QRP  (3S,8aS)-3-(1H-indol-3-ylmethyl)hexahydropyrrolo[1,2-a]pyrazine-1,4-dione  ligand  38  21  .  2021-08-20  2021-08-20  
+ QRP  QRP  (3S,8aS)-3-(1H-indol-3-ylmethyl)hexahydropyrrolo[1,2-a]pyrazine-1,4-dione  ligand  38  21  .  2021-08-20  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QRP
@@ -219,43 +220,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QRP  CONST_01  CZ3   CE3  CD2  CG   180.00   0.0  0
- QRP  CONST_02  NE1   CE2  CD2  CG     0.00   0.0  0
- QRP  CONST_03  CZ2   CE2  CD2  CG   180.00   0.0  0
- QRP  CONST_04  CE2   NE1  CD1  CG     0.00   0.0  0
- QRP  CONST_05  CE3   CD2  CG   CD1  180.00   0.0  0
- QRP  CONST_06  CE2   CD2  CG   CD1    0.00   0.0  0
- QRP  CONST_07  CD2   CE2  NE1  CD1    0.00   0.0  0
- QRP  CONST_08  CZ2   CE2  NE1  CD1  180.00   0.0  0
- QRP  CONST_09  NE1   CD1  CG   CD2    0.00   0.0  0
- QRP  CONST_10  CH2   CZ3  CE3  CD2    0.00   0.0  0
- QRP  CONST_11  CH2   CZ2  CE2  CD2    0.00   0.0  0
- QRP  CONST_12  CE3   CD2  CE2  NE1  180.00   0.0  0
- QRP  CONST_13  CH2   CZ2  CE2  NE1  180.00   0.0  0
- QRP  CONST_14  CZ3   CE3  CD2  CE2    0.00   0.0  0
- QRP  CONST_15  CZ3   CH2  CZ2  CE2    0.00   0.0  0
- QRP  CONST_16  CZ2   CE2  CD2  CE3    0.00   0.0  0
- QRP  CONST_17  CZ2   CH2  CZ3  CE3    0.00   0.0  0
- QRP  CONST_18  CAJ   NAU  C    CA   180.00   0.0  0
- QRP  CONST_19  CAT   NAU  C    CA     0.00   0.0  0
- QRP  CONST_20  CAT   CAN  N    CA     0.00   0.0  0
- QRP  CONST_21  CE3   CD2  CG   CB     0.00   0.0  0
- QRP  CONST_22  CE2   CD2  CG   CB   180.00   0.0  0
- QRP  CONST_23  NE1   CD1  CG   CB   180.00   0.0  0
- QRP  CONST_24  CAJ   NAU  C    O      0.00   0.0  0
- QRP  CONST_25  CAT   NAU  C    O    180.00   0.0  0
- QRP  CONST_26  OAA   CAN  N    CA   180.00   0.0  0
- QRP  CONST_27  HE3   CE3  CD2  CG     0.00   0.0  0
- QRP  CONST_28  HNE1  NE1  CD1  CG   180.00   0.0  0
- QRP  CONST_29  HD1   CD1  CG   CD2  180.00   0.0  0
- QRP  CONST_30  HZ3   CZ3  CE3  CD2  180.00   0.0  0
- QRP  CONST_31  HZ2   CZ2  CE2  CD2  180.00   0.0  0
- QRP  CONST_32  HH2   CH2  CZ2  CE2  180.00   0.0  0
- QRP  CONST_33  HN    N    CAN  CAT  180.00   0.0  0
- QRP  Var_01    CAH   CAJ  NAU  C    146.67  30.0  1
- QRP  Var_02    NAU   CAJ  CAH  CAI   35.89  30.0  1
- QRP  Var_03    CAT   CAI  CAH  CAJ  -33.86  30.0  1
- QRP  Var_04    CD2   CG   CB   CA    93.11  30.0  2
+ QRP  CONST_01  CZ3   CE3  CD2  CG    180.00   0.0  0
+ QRP  CONST_02  NE1   CE2  CD2  CG      0.00   0.0  0
+ QRP  CONST_03  CZ2   CE2  CD2  CG    180.00   0.0  0
+ QRP  CONST_04  CE2   NE1  CD1  CG      0.00   0.0  0
+ QRP  CONST_05  CE3   CD2  CG   CD1   180.00   0.0  0
+ QRP  CONST_06  CE2   CD2  CG   CD1     0.00   0.0  0
+ QRP  CONST_07  CD2   CE2  NE1  CD1     0.00   0.0  0
+ QRP  CONST_08  CZ2   CE2  NE1  CD1   180.00   0.0  0
+ QRP  CONST_09  NE1   CD1  CG   CD2     0.00   0.0  0
+ QRP  CONST_10  CH2   CZ3  CE3  CD2     0.00   0.0  0
+ QRP  CONST_11  CH2   CZ2  CE2  CD2     0.00   0.0  0
+ QRP  CONST_12  CE3   CD2  CE2  NE1   180.00   0.0  0
+ QRP  CONST_13  CH2   CZ2  CE2  NE1   180.00   0.0  0
+ QRP  CONST_14  CZ3   CE3  CD2  CE2     0.00   0.0  0
+ QRP  CONST_15  CZ3   CH2  CZ2  CE2     0.00   0.0  0
+ QRP  CONST_16  CZ2   CE2  CD2  CE3     0.00   0.0  0
+ QRP  CONST_17  CZ2   CH2  CZ3  CE3     0.00   0.0  0
+ QRP  CONST_18  CAJ   NAU  C    CA    180.00   0.0  0
+ QRP  CONST_19  CAT   NAU  C    CA      0.00   0.0  0
+ QRP  CONST_20  CAT   CAN  N    CA      0.00   0.0  0
+ QRP  CONST_21  CE3   CD2  CG   CB      0.00   0.0  0
+ QRP  CONST_22  CE2   CD2  CG   CB    180.00   0.0  0
+ QRP  CONST_23  NE1   CD1  CG   CB    180.00   0.0  0
+ QRP  CONST_24  CAJ   NAU  C    O       0.00   0.0  0
+ QRP  CONST_25  CAT   NAU  C    O     180.00   0.0  0
+ QRP  CONST_26  OAA   CAN  N    CA    180.00   0.0  0
+ QRP  CONST_27  HE3   CE3  CD2  CG      0.00   0.0  0
+ QRP  CONST_28  HNE1  NE1  CD1  CG    180.00   0.0  0
+ QRP  CONST_29  HD1   CD1  CG   CD2   180.00   0.0  0
+ QRP  CONST_30  HZ3   CZ3  CE3  CD2   180.00   0.0  0
+ QRP  CONST_31  HZ2   CZ2  CE2  CD2   180.00   0.0  0
+ QRP  CONST_32  HH2   CH2  CZ2  CE2   180.00   0.0  0
+ QRP  CONST_33  HN    N    CAN  CAT   180.00   0.0  0
+ QRP  Var_01    CAH   CAJ  NAU  C     146.67  30.0  1
+ QRP  Var_02    NAU   CAJ  CAH  CAI    35.89  30.0  1
+ QRP  Var_03    CAT   CAI  CAH  CAJ   -33.86  30.0  1
+ QRP  Var_04    CD2   CG   CB   CA     93.11  30.0  2
+ QRP  Var_05    CAN   N    CA   C     -44.48  30.0  1
+ QRP  Var_06    CAI   CAT  NAU  C    -167.90  30.0  1
+ QRP  Var_07    CAN   CAT  NAU  C     -43.25  30.0  1
+ QRP  Var_08    NAU   C    CA   N      38.75  30.0  1
+ QRP  Var_09    CAI   CAT  CAN  N     155.52  30.0  1
+ QRP  Var_10    NAU   CAT  CAN  N      37.77  30.0  1
+ QRP  Var_11    CAN   CAT  CAI  CAH  -102.55  30.0  1
+ QRP  Var_12    NAU   CAT  CAI  CAH    18.47  30.0  1
+ QRP  Var_13    CAJ   NAU  CAT  CAI     4.69  30.0  1
+ QRP  Var_14    CAN   CAT  NAU  CAJ   129.34  30.0  1
+ QRP  Var_15    CG    CB   CA   C     179.87  30.0  1
+ QRP  Var_16    O     C    CA   N    -140.78  30.0  1
+ QRP  Var_17    CG    CB   CA   N     -58.65  30.0  1
+ QRP  Var_18    NAU   C    CA   CB    161.13  30.0  1
+ QRP  Var_19    CAN   N    CA   CB   -167.42  30.0  1
+ QRP  Var_20    CAI   CAT  CAN  OAA   -26.11  30.0  1
+ QRP  Var_21    NAU   CAT  CAN  OAA  -143.86  30.0  1
+ QRP  Var_22    HAT   CAT  NAU  C      73.72  30.0  1
+ QRP  Var_23    HA    CA   N    CAN    73.40  30.0  1
+ QRP  Var_24    CB    CA   C    O     -18.40  30.0  1
+ QRP  Var_25    HB    CB   CA   C     -56.99  30.0  1
+ QRP  Var_26    HBA   CB   CA   C      58.34  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

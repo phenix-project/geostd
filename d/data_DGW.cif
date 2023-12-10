@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DGW  DGW  (5S,7S)-7-{[4-(2,6-dichlorophenyl)piperidin-1-yl]methyl}-1-methyl-6,7,8,9-tetrahydro-5H-benzo[7]annulen-5-ol  ligand  57  28  .  2021-08-08  2021-08-08  
+ DGW  DGW  (5S,7S)-7-{[4-(2,6-dichlorophenyl)piperidin-1-yl]methyl}-1-methyl-6,7,8,9-tetrahydro-5H-benzo[7]annulen-5-ol  ligand  57  28  .  2021-08-08  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DGW
@@ -294,43 +295,75 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DGW  CONST_01  CAI   CAU  CAX  CAT     0.00   0.0  0
- DGW  CONST_02  CAI   CAE  CAH  CAT     0.00   0.0  0
- DGW  CONST_03  CAU   CAX  CAT  CAH     0.00   0.0  0
- DGW  CONST_04  CAU   CAI  CAE  CAH     0.00   0.0  0
- DGW  CONST_05  CAX   CAU  CAI  CAE     0.00   0.0  0
- DGW  CONST_06  CAX   CAT  CAH  CAE     0.00   0.0  0
- DGW  CONST_07  CAG   CAS  CAW  CAV     0.00   0.0  0
- DGW  CONST_08  CAG   CAF  CAJ  CAV     0.00   0.0  0
- DGW  CONST_09  CAS   CAG  CAF  CAJ     0.00   0.0  0
- DGW  CONST_10  CAS   CAW  CAV  CAJ     0.00   0.0  0
- DGW  CONST_11  CAW   CAS  CAG  CAF     0.00   0.0  0
- DGW  CONST_12  CAW   CAV  CAJ  CAF     0.00   0.0  0
- DGW  CONST_13  CBA   CAX  CAT  CAH   180.00   0.0  0
- DGW  CONST_14  CBA   CAX  CAU  CAI   180.00   0.0  0
- DGW  CONST_15  CBA   CAX  CAT  CLAC    0.00   0.0  0
- DGW  CONST_16  CAU   CAX  CAT  CLAC  180.00   0.0  0
- DGW  CONST_17  CAE   CAH  CAT  CLAC  180.00   0.0  0
- DGW  CONST_18  CLAD  CAU  CAX  CAT   180.00   0.0  0
- DGW  CONST_19  CLAD  CAU  CAI  CAE   180.00   0.0  0
- DGW  CONST_20  CBA   CAX  CAU  CLAD    0.00   0.0  0
- DGW  CONST_21  CAA   CAS  CAW  CAV   180.00   0.0  0
- DGW  CONST_22  CAA   CAS  CAG  CAF   180.00   0.0  0
- DGW  CONST_23  CAK   CAW  CAS  CAA     0.00   0.0  0
- DGW  CONST_24  H2    CAE  CAH  CAT   180.00   0.0  0
- DGW  CONST_25  H3    CAI  CAE  CAH   180.00   0.0  0
- DGW  CONST_26  H1    CAH  CAE  CAI   180.00   0.0  0
- DGW  CONST_27  H21   CAJ  CAV  CAY     0.00   0.0  0
- DGW  CONST_28  H22   CAF  CAJ  CAV   180.00   0.0  0
- DGW  CONST_29  H23   CAG  CAF  CAJ   180.00   0.0  0
- DGW  Var_01    NBB   CAO  CAM  CBA   -56.58  30.0  1
- DGW  Var_02    NBB   CAP  CAN  CBA    57.21  30.0  1
- DGW  Var_03    CAP   NBB  CAO  CAM    61.01  30.0  1
- DGW  Var_04    CAN   CAP  NBB  CAO   -61.23  30.0  1
- DGW  Var_05    CAW   CAK  CAL  CAZ   -81.25  30.0  1
- DGW  Var_06    CAL   CAK  CAW  CAV    67.24  30.0  1
- DGW  Var_07    CAZ   CAR  NBB  CAO    73.11  30.0  3
- DGW  Var_08    H24   CAA  CAS  CAG   119.18  30.0  2
+ DGW  CONST_01  CAI   CAU  CAX  CAT      0.00   0.0  0
+ DGW  CONST_02  CAI   CAE  CAH  CAT      0.00   0.0  0
+ DGW  CONST_03  CAU   CAX  CAT  CAH      0.00   0.0  0
+ DGW  CONST_04  CAU   CAI  CAE  CAH      0.00   0.0  0
+ DGW  CONST_05  CAX   CAU  CAI  CAE      0.00   0.0  0
+ DGW  CONST_06  CAX   CAT  CAH  CAE      0.00   0.0  0
+ DGW  CONST_07  CAG   CAS  CAW  CAV      0.00   0.0  0
+ DGW  CONST_08  CAG   CAF  CAJ  CAV      0.00   0.0  0
+ DGW  CONST_09  CAS   CAG  CAF  CAJ      0.00   0.0  0
+ DGW  CONST_10  CAS   CAW  CAV  CAJ      0.00   0.0  0
+ DGW  CONST_11  CAW   CAS  CAG  CAF      0.00   0.0  0
+ DGW  CONST_12  CAW   CAV  CAJ  CAF      0.00   0.0  0
+ DGW  CONST_13  CBA   CAX  CAT  CAH    180.00   0.0  0
+ DGW  CONST_14  CBA   CAX  CAU  CAI    180.00   0.0  0
+ DGW  CONST_15  CBA   CAX  CAT  CLAC     0.00   0.0  0
+ DGW  CONST_16  CAU   CAX  CAT  CLAC   180.00   0.0  0
+ DGW  CONST_17  CAE   CAH  CAT  CLAC   180.00   0.0  0
+ DGW  CONST_18  CLAD  CAU  CAX  CAT    180.00   0.0  0
+ DGW  CONST_19  CLAD  CAU  CAI  CAE    180.00   0.0  0
+ DGW  CONST_20  CBA   CAX  CAU  CLAD     0.00   0.0  0
+ DGW  CONST_21  CAA   CAS  CAW  CAV    180.00   0.0  0
+ DGW  CONST_22  CAA   CAS  CAG  CAF    180.00   0.0  0
+ DGW  CONST_23  CAK   CAW  CAS  CAA      0.00   0.0  0
+ DGW  CONST_24  H2    CAE  CAH  CAT    180.00   0.0  0
+ DGW  CONST_25  H3    CAI  CAE  CAH    180.00   0.0  0
+ DGW  CONST_26  H1    CAH  CAE  CAI    180.00   0.0  0
+ DGW  CONST_27  H21   CAJ  CAV  CAY      0.00   0.0  0
+ DGW  CONST_28  H22   CAF  CAJ  CAV    180.00   0.0  0
+ DGW  CONST_29  H23   CAG  CAF  CAJ    180.00   0.0  0
+ DGW  Var_01    NBB   CAO  CAM  CBA    -56.58  30.0  1
+ DGW  Var_02    NBB   CAP  CAN  CBA     57.21  30.0  1
+ DGW  Var_03    CAP   NBB  CAO  CAM     61.01  30.0  1
+ DGW  Var_04    CAN   CAP  NBB  CAO    -61.23  30.0  1
+ DGW  Var_05    CAW   CAK  CAL  CAZ    -81.25  30.0  1
+ DGW  Var_06    CAL   CAK  CAW  CAV     67.24  30.0  1
+ DGW  Var_07    CAZ   CAR  NBB  CAO     73.11  30.0  3
+ DGW  Var_08    H24   CAA  CAS  CAG    119.18  30.0  2
+ DGW  Var_09    CAM   CBA  CAX  CAT    -63.23  30.0  2
+ DGW  Var_10    CAN   CBA  CAX  CAT     65.70  30.0  2
+ DGW  Var_11    CAM   CBA  CAX  CAU    117.22  30.0  2
+ DGW  Var_12    CAN   CBA  CAX  CAU   -113.85  30.0  2
+ DGW  Var_13    CAO   CAM  CBA  CAX   -176.62  30.0  1
+ DGW  Var_14    CAP   CAN  CBA  CAX    175.88  30.0  1
+ DGW  Var_15    CAP   CAN  CBA  CAM    -53.21  30.0  1
+ DGW  Var_16    CAN   CBA  CAM  CAO     52.83  30.0  1
+ DGW  Var_17    CAV   CAY  CAQ  CAZ     83.14  30.0  1
+ DGW  Var_18    CAW   CAV  CAY  CAQ    -69.71  30.0  1
+ DGW  Var_19    CAJ   CAV  CAY  CAQ    108.77  30.0  1
+ DGW  Var_20    CAK   CAL  CAZ  CAQ     59.24  30.0  1
+ DGW  Var_21    CAL   CAZ  CAQ  CAY    -60.53  30.0  1
+ DGW  Var_22    CAL   CAZ  CAR  NBB     55.35  30.0  2
+ DGW  Var_23    CAQ   CAZ  CAR  NBB   -177.25  30.0  2
+ DGW  Var_24    CAK   CAL  CAZ  CAR   -176.88  30.0  1
+ DGW  Var_25    CAY   CAQ  CAZ  CAR    174.54  30.0  1
+ DGW  Var_26    OAB   CAY  CAQ  CAZ   -153.21  30.0  1
+ DGW  Var_27    CAW   CAV  CAY  OAB    169.59  30.0  1
+ DGW  Var_28    CAJ   CAV  CAY  OAB    -11.94  30.0  1
+ DGW  Var_29    H4    CBA  CAX  CAT   -178.77  30.0  2
+ DGW  Var_30    H5    CAM  CBA  CAX    -56.62  30.0  1
+ DGW  Var_31    H6    CAM  CBA  CAX     62.57  30.0  1
+ DGW  Var_32    H9    CAN  CBA  CAX    -63.31  30.0  1
+ DGW  Var_33    H10   CAN  CBA  CAX     55.55  30.0  1
+ DGW  Var_34    H19   CAY  CAQ  CAZ    -35.53  30.0  1
+ DGW  Var_35    H29   CAL  CAZ  CAQ   -179.71  30.0  1
+ DGW  Var_36    H30   CAL  CAZ  CAQ    -64.59  30.0  1
+ DGW  Var_37    H16   CAZ  CAQ  CAY     57.82  30.0  1
+ DGW  Var_38    H17   CAQ  CAY  CAV    -41.71  30.0  1
+ DGW  Var_39    H18   CAQ  CAY  CAV   -157.51  30.0  1
+ DGW  Var_40    H20   OAB  CAY  CAQ    175.32  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

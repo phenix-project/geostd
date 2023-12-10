@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CQ8  CQ8  2-[[5-chloranyl-2-(oxan-4-ylamino)pyridin-4-yl]amino]-N-methyl-benzamide  ligand  46  25  .  2021-08-07  2021-08-07  
+ CQ8  CQ8  2-[[5-chloranyl-2-(oxan-4-ylamino)pyridin-4-yl]amino]-N-methyl-benzamide  ligand  46  25  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CQ8
@@ -242,47 +243,57 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CQ8  CONST_01  C10  C9   C8   C12     0.00   0.0  0
- CQ8  CONST_02  C10  N2   C11  C12     0.00   0.0  0
- CQ8  CONST_03  N2   C11  C12  C8      0.00   0.0  0
- CQ8  CONST_04  N2   C10  C9   C8      0.00   0.0  0
- CQ8  CONST_05  C4   C5   C6   C7      0.00   0.0  0
- CQ8  CONST_06  C4   C3   C2   C7      0.00   0.0  0
- CQ8  CONST_07  C3   C2   C7   C6      0.00   0.0  0
- CQ8  CONST_08  C3   C4   C5   C6      0.00   0.0  0
- CQ8  CONST_09  C2   C7   C6   C5      0.00   0.0  0
- CQ8  CONST_10  C2   C3   C4   C5      0.00   0.0  0
- CQ8  CONST_11  C9   C8   C12  C11     0.00   0.0  0
- CQ8  CONST_12  C9   C10  N2   C11     0.00   0.0  0
- CQ8  CONST_13  C9   C8   C12  CL    180.00   0.0  0
- CQ8  CONST_14  N2   C11  C12  CL    180.00   0.0  0
- CQ8  CONST_15  N3   C10  C9   C8    180.00   0.0  0
- CQ8  CONST_16  C11  C12  C8   N1    180.00   0.0  0
- CQ8  CONST_17  C10  C9   C8   N1    180.00   0.0  0
- CQ8  CONST_18  C5   C6   C7   N1    180.00   0.0  0
- CQ8  CONST_19  C3   C2   C7   N1    180.00   0.0  0
- CQ8  CONST_20  C1   C2   C7   C6    180.00   0.0  0
- CQ8  CONST_21  C1   C2   C3   C4    180.00   0.0  0
- CQ8  CONST_22  N3   C10  N2   C11   180.00   0.0  0
- CQ8  CONST_23  C13  N3   C10  N2    180.00   0.0  0
- CQ8  CONST_24  C13  N3   C10  C9      0.00   0.0  0
- CQ8  CONST_25  H9   C9   C8   C12   180.00   0.0  0
- CQ8  CONST_26  H11  C11  C12  C8    180.00   0.0  0
- CQ8  CONST_27  H5   C5   C6   C7    180.00   0.0  0
- CQ8  CONST_28  H3   C3   C2   C7    180.00   0.0  0
- CQ8  CONST_29  H4   C4   C5   C6    180.00   0.0  0
- CQ8  CONST_30  H6   C6   C5   C4    180.00   0.0  0
- CQ8  CONST_31  HA   N3   C10  N2      0.00   0.0  0
- CQ8  CONST_32  C    N    C1   C2    180.00   0.0  0
- CQ8  CONST_33  H    N    C1   C2      0.00   0.0  0
- CQ8  CONST_34  C    N    C1   O       0.00   0.0  0
- CQ8  Var_01    O1   C16  C17  C13    55.82  30.0  1
- CQ8  Var_02    O1   C15  C14  C13   -56.99  30.0  1
- CQ8  Var_03    C14  C15  O1   C16    59.66  30.0  1
- CQ8  Var_04    C7   N1   C8   C12  -165.84  30.0  2
- CQ8  Var_05    C6   C7   N1   C8   -135.94  30.0  2
- CQ8  Var_06    O    C1   C2   C7     45.73  30.0  2
- CQ8  Var_07    HC1  C    N    C1     57.07  30.0  3
+ CQ8  CONST_01  C10   C9   C8   C12     0.00   0.0  0
+ CQ8  CONST_02  C10   N2   C11  C12     0.00   0.0  0
+ CQ8  CONST_03  N2    C11  C12  C8      0.00   0.0  0
+ CQ8  CONST_04  N2    C10  C9   C8      0.00   0.0  0
+ CQ8  CONST_05  C4    C5   C6   C7      0.00   0.0  0
+ CQ8  CONST_06  C4    C3   C2   C7      0.00   0.0  0
+ CQ8  CONST_07  C3    C2   C7   C6      0.00   0.0  0
+ CQ8  CONST_08  C3    C4   C5   C6      0.00   0.0  0
+ CQ8  CONST_09  C2    C7   C6   C5      0.00   0.0  0
+ CQ8  CONST_10  C2    C3   C4   C5      0.00   0.0  0
+ CQ8  CONST_11  C9    C8   C12  C11     0.00   0.0  0
+ CQ8  CONST_12  C9    C10  N2   C11     0.00   0.0  0
+ CQ8  CONST_13  C9    C8   C12  CL    180.00   0.0  0
+ CQ8  CONST_14  N2    C11  C12  CL    180.00   0.0  0
+ CQ8  CONST_15  N3    C10  C9   C8    180.00   0.0  0
+ CQ8  CONST_16  C11   C12  C8   N1    180.00   0.0  0
+ CQ8  CONST_17  C10   C9   C8   N1    180.00   0.0  0
+ CQ8  CONST_18  C5    C6   C7   N1    180.00   0.0  0
+ CQ8  CONST_19  C3    C2   C7   N1    180.00   0.0  0
+ CQ8  CONST_20  C1    C2   C7   C6    180.00   0.0  0
+ CQ8  CONST_21  C1    C2   C3   C4    180.00   0.0  0
+ CQ8  CONST_22  N3    C10  N2   C11   180.00   0.0  0
+ CQ8  CONST_23  C13   N3   C10  N2    180.00   0.0  0
+ CQ8  CONST_24  C13   N3   C10  C9      0.00   0.0  0
+ CQ8  CONST_25  H9    C9   C8   C12   180.00   0.0  0
+ CQ8  CONST_26  H11   C11  C12  C8    180.00   0.0  0
+ CQ8  CONST_27  H5    C5   C6   C7    180.00   0.0  0
+ CQ8  CONST_28  H3    C3   C2   C7    180.00   0.0  0
+ CQ8  CONST_29  H4    C4   C5   C6    180.00   0.0  0
+ CQ8  CONST_30  H6    C6   C5   C4    180.00   0.0  0
+ CQ8  CONST_31  HA    N3   C10  N2      0.00   0.0  0
+ CQ8  CONST_32  C     N    C1   C2    180.00   0.0  0
+ CQ8  CONST_33  H     N    C1   C2      0.00   0.0  0
+ CQ8  CONST_34  C     N    C1   O       0.00   0.0  0
+ CQ8  Var_01    O1    C16  C17  C13    55.82  30.0  1
+ CQ8  Var_02    O1    C15  C14  C13   -56.99  30.0  1
+ CQ8  Var_03    C14   C15  O1   C16    59.66  30.0  1
+ CQ8  Var_04    C7    N1   C8   C12  -165.84  30.0  2
+ CQ8  Var_05    C6    C7   N1   C8   -135.94  30.0  2
+ CQ8  Var_06    O     C1   C2   C7     45.73  30.0  2
+ CQ8  Var_07    HC1   C    N    C1     57.07  30.0  3
+ CQ8  Var_08    C15   C14  C13  C17    53.46  30.0  1
+ CQ8  Var_09    C15   O1   C16  C17   -59.09  30.0  1
+ CQ8  Var_10    C14   C13  C17  C16   -52.77  30.0  1
+ CQ8  Var_11    C17   C13  N3   C10  -158.15  30.0  3
+ CQ8  Var_12    C14   C13  N3   C10    78.72  30.0  3
+ CQ8  Var_13    C16   C17  C13  N3   -178.57  30.0  1
+ CQ8  Var_14    C15   C14  C13  N3    177.28  30.0  1
+ CQ8  Var_15    H141  C14  C13  C17   174.60  30.0  1
+ CQ8  Var_16    H142  C14  C13  C17   -67.51  30.0  1
+ CQ8  Var_17    H13   C13  C17  C16    64.39  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OPZ  OPZ  ~{N}-[(4~{S},5~{R})-2-[2-(1~{H}-imidazol-4-yl)ethyl]-5-methyl-3-oxidanylidene-1,2-oxazolidin-4-yl]-2,3-bis(oxidanyl)benzamide  ligand  43  25  .  2021-08-17  2021-08-17  
+ OPZ  OPZ  ~{N}-[(4~{S},5~{R})-2-[2-(1~{H}-imidazol-4-yl)ethyl]-5-methyl-3-oxidanylidene-1,2-oxazolidin-4-yl]-2,3-bis(oxidanyl)benzamide  ligand  43  25  .  2021-08-17  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_OPZ
@@ -229,42 +230,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OPZ  CONST_01  NAO  CAI  NAM  CAJ    0.00   0.0  0
- OPZ  CONST_02  CAI  NAO  CAT  CAJ    0.00   0.0  0
- OPZ  CONST_03  NAO  CAT  CAJ  NAM    0.00   0.0  0
- OPZ  CONST_04  CAT  NAO  CAI  NAM    0.00   0.0  0
- OPZ  CONST_05  CAT  CAJ  NAM  CAI    0.00   0.0  0
- OPZ  CONST_06  CAG  CAF  CAH  CAV    0.00   0.0  0
- OPZ  CONST_07  CAG  CAS  CAU  CAV    0.00   0.0  0
- OPZ  CONST_08  CAS  CAU  CAV  CAH    0.00   0.0  0
- OPZ  CONST_09  CAS  CAG  CAF  CAH    0.00   0.0  0
- OPZ  CONST_10  CAU  CAV  CAH  CAF    0.00   0.0  0
- OPZ  CONST_11  CAU  CAS  CAG  CAF    0.00   0.0  0
- OPZ  CONST_12  CA   C    NAY  OG1    0.00   0.0  0
- OPZ  CONST_13  CAK  CAT  CAJ  NAM  180.00   0.0  0
- OPZ  CONST_14  CAK  CAT  NAO  CAI  180.00   0.0  0
- OPZ  CONST_15  CAF  CAH  CAV  CAQ  180.00   0.0  0
- OPZ  CONST_16  CAS  CAU  CAV  CAQ  180.00   0.0  0
- OPZ  CONST_17  OAD  CAS  CAU  CAV  180.00   0.0  0
- OPZ  CONST_18  OAE  CAU  CAV  CAH  180.00   0.0  0
- OPZ  CONST_19  OAD  CAS  CAG  CAF  180.00   0.0  0
- OPZ  CONST_20  OAE  CAU  CAS  CAG  180.00   0.0  0
- OPZ  CONST_21  CA   C    NAY  CAL  180.00   0.0  0
- OPZ  CONST_22  OG1  NAY  C    O    180.00   0.0  0
- OPZ  CONST_23  H3   CAI  NAM  CAJ  180.00   0.0  0
- OPZ  CONST_24  H1   CAJ  NAM  CAI  180.00   0.0  0
- OPZ  CONST_25  H2   NAM  CAI  NAO  180.00   0.0  0
- OPZ  CONST_26  H16  CAF  CAH  CAV  180.00   0.0  0
- OPZ  CONST_27  H17  CAG  CAF  CAH  180.00   0.0  0
- OPZ  CONST_28  H15  CAH  CAF  CAG  180.00   0.0  0
- OPZ  CONST_29  CAV  CAQ  N    CA   180.00   0.0  0
- OPZ  CONST_30  O    C    NAY  CAL    0.00   0.0  0
- OPZ  CONST_31  OAB  CAQ  N    CA     0.00   0.0  0
- OPZ  CONST_32  H14  N    CAQ  CAV    0.00   0.0  0
- OPZ  Var_01    CAL  CAK  CAT  CAJ  109.75  30.0  2
- OPZ  Var_02    NAY  CAL  CAK  CAT  179.85  30.0  3
- OPZ  Var_03    OG1  NAY  CAL  CAK  -68.23  30.0  1
- OPZ  Var_04    CAH  CAV  CAQ  N     11.79  30.0  2
+ OPZ  CONST_01  NAO  CAI  NAM  CAJ     0.00   0.0  0
+ OPZ  CONST_02  CAI  NAO  CAT  CAJ     0.00   0.0  0
+ OPZ  CONST_03  NAO  CAT  CAJ  NAM     0.00   0.0  0
+ OPZ  CONST_04  CAT  NAO  CAI  NAM     0.00   0.0  0
+ OPZ  CONST_05  CAT  CAJ  NAM  CAI     0.00   0.0  0
+ OPZ  CONST_06  CAG  CAF  CAH  CAV     0.00   0.0  0
+ OPZ  CONST_07  CAG  CAS  CAU  CAV     0.00   0.0  0
+ OPZ  CONST_08  CAS  CAU  CAV  CAH     0.00   0.0  0
+ OPZ  CONST_09  CAS  CAG  CAF  CAH     0.00   0.0  0
+ OPZ  CONST_10  CAU  CAV  CAH  CAF     0.00   0.0  0
+ OPZ  CONST_11  CAU  CAS  CAG  CAF     0.00   0.0  0
+ OPZ  CONST_12  CA   C    NAY  OG1     0.00   0.0  0
+ OPZ  CONST_13  CAK  CAT  CAJ  NAM   180.00   0.0  0
+ OPZ  CONST_14  CAK  CAT  NAO  CAI   180.00   0.0  0
+ OPZ  CONST_15  CAF  CAH  CAV  CAQ   180.00   0.0  0
+ OPZ  CONST_16  CAS  CAU  CAV  CAQ   180.00   0.0  0
+ OPZ  CONST_17  OAD  CAS  CAU  CAV   180.00   0.0  0
+ OPZ  CONST_18  OAE  CAU  CAV  CAH   180.00   0.0  0
+ OPZ  CONST_19  OAD  CAS  CAG  CAF   180.00   0.0  0
+ OPZ  CONST_20  OAE  CAU  CAS  CAG   180.00   0.0  0
+ OPZ  CONST_21  CA   C    NAY  CAL   180.00   0.0  0
+ OPZ  CONST_22  OG1  NAY  C    O     180.00   0.0  0
+ OPZ  CONST_23  H3   CAI  NAM  CAJ   180.00   0.0  0
+ OPZ  CONST_24  H1   CAJ  NAM  CAI   180.00   0.0  0
+ OPZ  CONST_25  H2   NAM  CAI  NAO   180.00   0.0  0
+ OPZ  CONST_26  H16  CAF  CAH  CAV   180.00   0.0  0
+ OPZ  CONST_27  H17  CAG  CAF  CAH   180.00   0.0  0
+ OPZ  CONST_28  H15  CAH  CAF  CAG   180.00   0.0  0
+ OPZ  CONST_29  CAV  CAQ  N    CA    180.00   0.0  0
+ OPZ  CONST_30  O    C    NAY  CAL     0.00   0.0  0
+ OPZ  CONST_31  OAB  CAQ  N    CA      0.00   0.0  0
+ OPZ  CONST_32  H14  N    CAQ  CAV     0.00   0.0  0
+ OPZ  Var_01    CAL  CAK  CAT  CAJ   109.75  30.0  2
+ OPZ  Var_02    NAY  CAL  CAK  CAT   179.85  30.0  3
+ OPZ  Var_03    OG1  NAY  CAL  CAK   -68.23  30.0  1
+ OPZ  Var_04    CAH  CAV  CAQ  N      11.79  30.0  2
+ OPZ  Var_05    CA   CB   OG1  NAY    31.26  30.0  1
+ OPZ  Var_06    CB   CA   C    NAY    17.12  30.0  1
+ OPZ  Var_07    OG1  CB   CA   C     -29.21  30.0  1
+ OPZ  Var_08    CB   OG1  NAY  C     -21.73  30.0  1
+ OPZ  Var_09    CB   OG1  NAY  CAL   155.19  30.0  1
+ OPZ  Var_10    CG2  CB   OG1  NAY   157.08  30.0  1
+ OPZ  Var_11    N    CA   C    NAY  -105.73  30.0  1
+ OPZ  Var_12    CG2  CB   CA   C    -150.09  30.0  1
+ OPZ  Var_13    CB   CA   C    O    -163.47  30.0  1
+ OPZ  Var_14    N    CA   CB   OG1    89.60  30.0  1
+ OPZ  Var_15    H9   CB   OG1  NAY   -82.49  30.0  1
+ OPZ  Var_16    H13  CA   C    NAY   134.45  30.0  1
+ OPZ  Var_17    CAQ  N    CA   C    -136.53  30.0  3
+ OPZ  Var_18    N    CA   C    O      73.68  30.0  1
+ OPZ  Var_19    CAQ  N    CA   CB    109.80  30.0  3
+ OPZ  Var_20    N    CA   CB   CG2   -31.29  30.0  1
+ OPZ  Var_21    H14  N    CA   C      42.90  30.0  3
+ OPZ  Var_22    H10  CG2  CB   OG1    62.59  30.0  3
+ OPZ  Var_23    H11  CG2  CB   OG1  -178.92  30.0  3
+ OPZ  Var_24    H12  CG2  CB   OG1   -58.91  30.0  3
+ OPZ  Var_25    H19  OAE  CAU  CAV    -4.95  30.0  2
+ OPZ  Var_26    H18  OAD  CAS  CAG    -0.66  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

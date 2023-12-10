@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MUG  MUG  '4-methyl-2-oxo-2H-chromen-7-yl alpha-D-glucopyranoside'  D-saccharide  42  24  .  2023-02-15  2023-02-15
+ MUG  MUG  '4-methyl-2-oxo-2H-chromen-7-yl alpha-D-glucopyranoside'  D-saccharide  42  24  .  2023-02-15  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_MUG
@@ -227,36 +228,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MUG  CONST_01  C4    C3   C2   O1     0.00   0.0  0
- MUG  CONST_02  C4    C4A  C8A  O1     0.00   0.0  0
- MUG  CONST_03  C5    C4A  C8A  O1   180.00   0.0  0
- MUG  CONST_04  C7    C8   C8A  O1   180.00   0.0  0
- MUG  CONST_05  C4A   C8A  O1   C2     0.00   0.0  0
- MUG  CONST_06  C8    C8A  O1   C2   180.00   0.0  0
- MUG  CONST_07  C4A   C4   C3   C2     0.00   0.0  0
- MUG  CONST_08  C8A   O1   C2   C3     0.00   0.0  0
- MUG  CONST_09  C5    C4A  C4   C3   180.00   0.0  0
- MUG  CONST_10  C8A   C4A  C4   C3     0.00   0.0  0
- MUG  CONST_11  C6    C5   C4A  C4   180.00   0.0  0
- MUG  CONST_12  C8    C8A  C4A  C4   180.00   0.0  0
- MUG  CONST_13  C7    C6   C5   C4A    0.00   0.0  0
- MUG  CONST_14  C7    C8   C8A  C4A    0.00   0.0  0
- MUG  CONST_15  C8    C8A  C4A  C5     0.00   0.0  0
- MUG  CONST_16  C8    C7   C6   C5     0.00   0.0  0
- MUG  CONST_17  C8A   C4A  C5   C6     0.00   0.0  0
- MUG  CONST_18  C8A   C8   C7   C6     0.00   0.0  0
- MUG  CONST_19  CM4   C4   C3   C2   180.00   0.0  0
- MUG  CONST_20  C8A   O1   C2   O2   180.00   0.0  0
- MUG  CONST_21  C4    C3   C2   O2   180.00   0.0  0
- MUG  CONST_22  C5    C4A  C4   CM4    0.00   0.0  0
- MUG  CONST_23  C8A   C4A  C4   CM4  180.00   0.0  0
- MUG  CONST_24  O1'   C7   C6   C5   180.00   0.0  0
- MUG  CONST_25  O1'   C7   C8   C8A  180.00   0.0  0
- MUG  CONST_26  H3    C3   C2   O1   180.00   0.0  0
- MUG  CONST_27  H8    C8   C8A  O1     0.00   0.0  0
- MUG  CONST_28  H5    C5   C4A  C4     0.00   0.0  0
- MUG  CONST_29  H6    C6   C5   C4A  180.00   0.0  0
- MUG  Var_01    HM41  CM4  C4   C3     0.80  30.0  2
+ MUG  CONST_01  C4    C3   C2   O1      0.00   0.0  0
+ MUG  CONST_02  C4    C4A  C8A  O1      0.00   0.0  0
+ MUG  CONST_03  C5    C4A  C8A  O1    180.00   0.0  0
+ MUG  CONST_04  C7    C8   C8A  O1    180.00   0.0  0
+ MUG  CONST_05  C4A   C8A  O1   C2      0.00   0.0  0
+ MUG  CONST_06  C8    C8A  O1   C2    180.00   0.0  0
+ MUG  CONST_07  C4A   C4   C3   C2      0.00   0.0  0
+ MUG  CONST_08  C8A   O1   C2   C3      0.00   0.0  0
+ MUG  CONST_09  C5    C4A  C4   C3    180.00   0.0  0
+ MUG  CONST_10  C8A   C4A  C4   C3      0.00   0.0  0
+ MUG  CONST_11  C6    C5   C4A  C4    180.00   0.0  0
+ MUG  CONST_12  C8    C8A  C4A  C4    180.00   0.0  0
+ MUG  CONST_13  C7    C6   C5   C4A     0.00   0.0  0
+ MUG  CONST_14  C7    C8   C8A  C4A     0.00   0.0  0
+ MUG  CONST_15  C8    C8A  C4A  C5      0.00   0.0  0
+ MUG  CONST_16  C8    C7   C6   C5      0.00   0.0  0
+ MUG  CONST_17  C8A   C4A  C5   C6      0.00   0.0  0
+ MUG  CONST_18  C8A   C8   C7   C6      0.00   0.0  0
+ MUG  CONST_19  CM4   C4   C3   C2    180.00   0.0  0
+ MUG  CONST_20  C8A   O1   C2   O2    180.00   0.0  0
+ MUG  CONST_21  C4    C3   C2   O2    180.00   0.0  0
+ MUG  CONST_22  C5    C4A  C4   CM4     0.00   0.0  0
+ MUG  CONST_23  C8A   C4A  C4   CM4   180.00   0.0  0
+ MUG  CONST_24  O1'   C7   C6   C5    180.00   0.0  0
+ MUG  CONST_25  O1'   C7   C8   C8A   180.00   0.0  0
+ MUG  CONST_26  H3    C3   C2   O1    180.00   0.0  0
+ MUG  CONST_27  H8    C8   C8A  O1      0.00   0.0  0
+ MUG  CONST_28  H5    C5   C4A  C4      0.00   0.0  0
+ MUG  CONST_29  H6    C6   C5   C4A   180.00   0.0  0
+ MUG  Var_01    HM41  CM4  C4   C3      0.80  30.0  2
+ MUG  Var_02    C4'   C3'  C2'  C1'   -53.92  30.0  1
+ MUG  Var_03    C4'   C5'  O5'  C1'    57.88  30.0  1
+ MUG  Var_04    C5'   O5'  C1'  C2'   -58.13  30.0  1
+ MUG  Var_05    C5'   C4'  C3'  C2'    54.24  30.0  1
+ MUG  Var_06    O5'   C1'  C2'  C3'    54.69  30.0  1
+ MUG  Var_07    O5'   C5'  C4'  C3'   -54.19  30.0  1
+ MUG  Var_08    C1'   O1'  C7   C6    -19.71  30.0  2
+ MUG  Var_09    C2'   C1'  O1'  C7   -160.30  30.0  2
+ MUG  Var_10    O5'   C1'  O1'  C7     77.59  30.0  2
+ MUG  Var_11    C1'   O1'  C7   C8    160.88  30.0  2
+ MUG  Var_12    O3'   C3'  C2'  C1'  -172.72  30.0  1
+ MUG  Var_13    C6'   C5'  O5'  C1'   179.52  30.0  1
+ MUG  Var_14    C3'   C2'  C1'  O1'   -68.42  30.0  1
+ MUG  Var_15    C5'   O5'  C1'  O1'    61.72  30.0  1
+ MUG  Var_16    O4'   C4'  C3'  C2'   173.75  30.0  1
+ MUG  Var_17    O5'   C1'  C2'  O2'   175.80  30.0  1
+ MUG  Var_18    C4'   C3'  C2'  O2'  -177.21  30.0  1
+ MUG  Var_19    C6'   C5'  C4'  C3'  -172.84  30.0  1
+ MUG  Var_20    C5'   C4'  C3'  O3'   175.72  30.0  1
+ MUG  Var_21    O5'   C5'  C4'  O4'  -176.04  30.0  1
+ MUG  Var_22    H3'   C3'  C2'  C1'    64.62  30.0  1
+ MUG  Var_23    H5'   C5'  O5'  C1'   -62.26  30.0  1
+ MUG  Var_24    H4'   C4'  C3'  C2'   -63.94  30.0  1
+ MUG  Var_25    H1'   C1'  C2'  C3'   172.11  30.0  1
+ MUG  Var_26    H2'   C2'  C3'  C4'    61.93  30.0  1
+ MUG  Var_27    O2'   C2'  C1'  O1'    52.70  30.0  1
+ MUG  Var_28    O3'   C3'  C2'  O2'    63.99  30.0  1
+ MUG  Var_29    O4'   C4'  C3'  O3'   -64.78  30.0  1
+ MUG  Var_30    O6'   C6'  C5'  C4'  -177.22  30.0  3
+ MUG  Var_31    C6'   C5'  C4'  O4'    65.31  30.0  1
+ MUG  Var_32    O6'   C6'  C5'  O5'    62.21  30.0  3
+ MUG  Var_33    HO2'  O2'  C2'  C1'    80.00  30.0  3
+ MUG  Var_34    HO3'  O3'  C3'  C2'   -68.46  30.0  3
+ MUG  Var_35    HO4'  O4'  C4'  C3'    58.42  30.0  3
+ MUG  Var_36    H6'1  C6'  C5'  C4'   -55.55  30.0  3
+ MUG  Var_37    H6'2  C6'  C5'  C4'    60.55  30.0  3
+ MUG  Var_38    HO6'  O6'  C6'  C5'   175.54  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

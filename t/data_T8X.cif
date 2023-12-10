@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- T8X  T8X  '2-O-sulfo-alpha-D-glucopyranosyl 2-O-hexadecanoyl-3-O-[(2E,4S,6S,8S)-2,4,6,8-tetramethyltetracos-2-enoyl]-alpha-D-glucopyranoside'  ligand  176  73  .  2021-08-23  2021-08-23  
+ T8X  T8X  '2-O-sulfo-alpha-D-glucopyranosyl 2-O-hexadecanoyl-3-O-[(2E,4S,6S,8S)-2,4,6,8-tetramethyltetracos-2-enoyl]-alpha-D-glucopyranoside'  ligand  176  73  .  2021-08-23  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_T8X
@@ -759,42 +760,143 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- T8X  Var_01  C21   C22  O2   C2   -178.41  30.0  3
- T8X  Var_02  C39   C40  O3   C3   -179.85  30.0  3
- T8X  Var_03  O16   S1   O9   C42   -50.51  30.0  3
- T8X  Var_04  C40   C39  C38  C37   179.68   0.0  2
- T8X  Var_05  C20   C21  C22  O2    167.98  30.0  1
- T8X  Var_06  C38   C39  C40  O3    176.69  30.0  1
- T8X  Var_07  C10   C9   C8   C7   -179.90  30.0  1
- T8X  Var_08  C11   C10  C9   C8    179.69  30.0  1
- T8X  Var_09  C12   C11  C10  C9   -179.81  30.0  3
- T8X  Var_10  C13   C12  C11  C10   179.75  30.0  3
- T8X  Var_11  C14   C13  C12  C11  -179.77  30.0  1
- T8X  Var_12  C15   C14  C13  C12   179.76  30.0  3
- T8X  Var_13  C16   C15  C14  C13  -179.64  30.0  1
- T8X  Var_14  C17   C16  C15  C14   179.78  30.0  1
- T8X  Var_15  C18   C17  C16  C15  -179.37  30.0  1
- T8X  Var_16  C19   C18  C17  C16   179.88  30.0  1
- T8X  Var_17  C20   C19  C18  C17  -178.62  30.0  3
- T8X  Var_18  C21   C20  C19  C18   179.74  30.0  3
- T8X  Var_19  C22   C21  C20  C19  -176.31  30.0  3
- T8X  Var_20  C26   C25  C24  C23  -179.74  30.0  1
- T8X  Var_21  C51   C50  C49  C23   179.98  30.0  1
- T8X  Var_22  C50   C49  C23  C24  -179.77  30.0  1
- T8X  Var_23  C27   C26  C25  C24   179.75  30.0  3
- T8X  Var_24  C49   C23  C24  C25   179.88  30.0  1
- T8X  Var_25  C28   C27  C26  C25  -179.69  30.0  1
- T8X  Var_26  C29   C28  C27  C26   179.54  30.0  3
- T8X  Var_27  C30   C29  C28  C27  -179.63  30.0  1
- T8X  Var_28  C31   C30  C29  C28   179.49  30.0  3
- T8X  Var_29  C32   C31  C30  C29  -179.05  30.0  1
- T8X  Var_30  C33   C32  C31  C30  -175.74  30.0  1
- T8X  Var_31  C52   C51  C50  C49  -179.74  30.0  1
- T8X  Var_32  C55   C52  C51  C50  -179.90  30.0  1
- T8X  Var_33  C56   C55  C52  C51  -179.56  30.0  1
- T8X  Var_34  HALA  C7   C8   C9    -59.96  30.0  3
- T8X  Var_35  HCG   C47  C39  C38   119.39  30.0  3
- T8X  Var_36  HCT   C56  C55  C52   -59.52  30.0  3
+ T8X  Var_01   C21   C22  O2   C2   -178.41  30.0  3
+ T8X  Var_02   C39   C40  O3   C3   -179.85  30.0  3
+ T8X  Var_03   O16   S1   O9   C42   -50.51  30.0  3
+ T8X  Var_04   C40   C39  C38  C37   179.68   0.0  2
+ T8X  Var_05   C20   C21  C22  O2    167.98  30.0  1
+ T8X  Var_06   C38   C39  C40  O3    176.69  30.0  1
+ T8X  Var_07   C10   C9   C8   C7   -179.90  30.0  1
+ T8X  Var_08   C11   C10  C9   C8    179.69  30.0  1
+ T8X  Var_09   C12   C11  C10  C9   -179.81  30.0  3
+ T8X  Var_10   C13   C12  C11  C10   179.75  30.0  3
+ T8X  Var_11   C14   C13  C12  C11  -179.77  30.0  1
+ T8X  Var_12   C15   C14  C13  C12   179.76  30.0  3
+ T8X  Var_13   C16   C15  C14  C13  -179.64  30.0  1
+ T8X  Var_14   C17   C16  C15  C14   179.78  30.0  1
+ T8X  Var_15   C18   C17  C16  C15  -179.37  30.0  1
+ T8X  Var_16   C19   C18  C17  C16   179.88  30.0  1
+ T8X  Var_17   C20   C19  C18  C17  -178.62  30.0  3
+ T8X  Var_18   C21   C20  C19  C18   179.74  30.0  3
+ T8X  Var_19   C22   C21  C20  C19  -176.31  30.0  3
+ T8X  Var_20   C26   C25  C24  C23  -179.74  30.0  1
+ T8X  Var_21   C51   C50  C49  C23   179.98  30.0  1
+ T8X  Var_22   C50   C49  C23  C24  -179.77  30.0  1
+ T8X  Var_23   C27   C26  C25  C24   179.75  30.0  3
+ T8X  Var_24   C49   C23  C24  C25   179.88  30.0  1
+ T8X  Var_25   C28   C27  C26  C25  -179.69  30.0  1
+ T8X  Var_26   C29   C28  C27  C26   179.54  30.0  3
+ T8X  Var_27   C30   C29  C28  C27  -179.63  30.0  1
+ T8X  Var_28   C31   C30  C29  C28   179.49  30.0  3
+ T8X  Var_29   C32   C31  C30  C29  -179.05  30.0  1
+ T8X  Var_30   C33   C32  C31  C30  -175.74  30.0  1
+ T8X  Var_31   C52   C51  C50  C49  -179.74  30.0  1
+ T8X  Var_32   C55   C52  C51  C50  -179.90  30.0  1
+ T8X  Var_33   C56   C55  C52  C51  -179.56  30.0  1
+ T8X  Var_34   HALA  C7   C8   C9    -59.96  30.0  3
+ T8X  Var_35   HCG   C47  C39  C38   119.39  30.0  3
+ T8X  Var_36   HCT   C56  C55  C52   -59.52  30.0  3
+ T8X  Var_37   C4    C3   C2   C1    -56.30  30.0  1
+ T8X  Var_38   C4    C5   O5   C1     57.57  30.0  1
+ T8X  Var_39   C5    O5   C1   C2    -59.96  30.0  1
+ T8X  Var_40   C5    C4   C3   C2     54.32  30.0  1
+ T8X  Var_41   O5    C1   C2   C3     57.80  30.0  1
+ T8X  Var_42   O5    C5   C4   C3    -52.90  30.0  1
+ T8X  Var_43   C43   C42  C41  O12    54.12  30.0  1
+ T8X  Var_44   C43   C44  C45  O12   -56.40  30.0  1
+ T8X  Var_45   C44   C45  O12  C41    59.29  30.0  1
+ T8X  Var_46   C44   C43  C42  C41   -53.45  30.0  1
+ T8X  Var_47   C45   O12  C41  C42   -58.09  30.0  1
+ T8X  Var_48   C45   C44  C43  C42    54.99  30.0  1
+ T8X  Var_49   O3    C3   C2   C1   -174.50  30.0  1
+ T8X  Var_50   O12   C41  O1   C1     73.93  30.0  3
+ T8X  Var_51   C42   C41  O1   C1   -164.24  30.0  3
+ T8X  Var_52   C6    C5   O5   C1    177.70  30.0  1
+ T8X  Var_53   C3    C2   C1   O1    -64.73  30.0  1
+ T8X  Var_54   C5    O5   C1   O1     58.64  30.0  1
+ T8X  Var_55   C45   O12  C41  O1     61.44  30.0  1
+ T8X  Var_56   C43   C42  C41  O1    -68.13  30.0  1
+ T8X  Var_57   C41   O1   C1   C2   -164.32  30.0  2
+ T8X  Var_58   O4    C4   C3   C2    176.15  30.0  1
+ T8X  Var_59   O5    C1   C2   O2    176.30  30.0  1
+ T8X  Var_60   C4    C3   C2   O2   -176.76  30.0  1
+ T8X  Var_61   C6    C5   C4   C3   -170.91  30.0  1
+ T8X  Var_62   C5    C4   C3   O3    171.72  30.0  1
+ T8X  Var_63   O5    C5   C4   O4   -172.59  30.0  1
+ T8X  Var_64   C41   O1   C1   O5     75.03  30.0  2
+ T8X  Var_65   O12   C41  C42  O9    174.49  30.0  1
+ T8X  Var_66   C44   C43  C42  O9   -174.51  30.0  1
+ T8X  Var_67   C41   C42  C43  O10  -174.91  30.0  1
+ T8X  Var_68   C45   C44  C43  O10   174.47  30.0  1
+ T8X  Var_69   C42   C43  C44  O11   176.38  30.0  1
+ T8X  Var_70   O12   C45  C44  O11  -175.28  30.0  1
+ T8X  Var_71   C46   C45  O12  C41  -178.17  30.0  1
+ T8X  Var_72   C46   C45  C44  C43  -175.93  30.0  1
+ T8X  Var_73   H3    C3   C2   C1     64.87  30.0  1
+ T8X  Var_74   H6    C5   O5   C1    -63.47  30.0  1
+ T8X  Var_75   H4    C4   C3   C2    -63.71  30.0  1
+ T8X  Var_76   H1    C1   C2   C3    174.03  30.0  1
+ T8X  Var_77   H2    C2   C3   C4     62.72  30.0  1
+ T8X  Var_78   HOCA  C42  C41  O12   -63.72  30.0  1
+ T8X  Var_79   HCC   C44  C45  O12    62.01  30.0  1
+ T8X  Var_80   HCD   C45  O12  C41   -60.02  30.0  1
+ T8X  Var_81   HCB   C43  C42  C41    64.38  30.0  1
+ T8X  Var_82   HOBY  C41  C42  C43   170.91  30.0  1
+ T8X  Var_83   C22   O2   C2   C1     84.56  30.0  3
+ T8X  Var_84   O2    C2   C1   O1     53.77  30.0  1
+ T8X  Var_85   O9    C42  C41  O1     52.24  30.0  1
+ T8X  Var_86   C40   O3   C3   C2   -131.55  30.0  1
+ T8X  Var_87   O3    C3   C2   O2     65.04  30.0  1
+ T8X  Var_88   C22   O2   C2   C3   -155.93  30.0  3
+ T8X  Var_89   O4    C4   C3   O3    -66.45  30.0  1
+ T8X  Var_90   C40   O3   C3   C4    109.80  30.0  1
+ T8X  Var_91   O6    C6   C5   C4   -178.22  30.0  2
+ T8X  Var_92   C6    C5   C4   O4     69.40  30.0  1
+ T8X  Var_93   O6    C6   C5   O5     61.78  30.0  2
+ T8X  Var_94   O10   C43  C42  O9     64.03  30.0  1
+ T8X  Var_95   O11   C44  C43  O10   -64.14  30.0  1
+ T8X  Var_96   C46   C45  C44  O11    65.19  30.0  1
+ T8X  Var_97   O13   C46  C45  O12    64.14  30.0  3
+ T8X  Var_98   S1    O9   C42  C41    98.27  30.0  2
+ T8X  Var_99   S1    O9   C42  C43  -140.30  30.0  2
+ T8X  Var_100  O13   C46  C45  C44  -175.01  30.0  3
+ T8X  Var_101  H5    O4   C4   C3    145.72  30.0  3
+ T8X  Var_102  H6A   C6   C5   C4    -56.51  30.0  2
+ T8X  Var_103  HO6   C6   C5   C4     59.28  30.0  2
+ T8X  Var_104  HCE   C46  C45  O12   -58.19  30.0  3
+ T8X  Var_105  HCF   C46  C45  O12  -174.49  30.0  3
+ T8X  Var_106  HBR   O10  C43  C42  -179.65  30.0  3
+ T8X  Var_107  HBRA  O11  C44  C43   147.03  30.0  3
+ T8X  Var_108  HAL   O6   C6   C5   -179.27  30.0  3
+ T8X  Var_109  HOBX  O13  C46  C45   173.81  30.0  3
+ T8X  Var_110  C35   C34  C33  C32   -58.62  30.0  2
+ T8X  Var_111  C36   C35  C34  C33  -178.61  30.0  1
+ T8X  Var_112  C53   C35  C34  C33   -56.38  30.0  1
+ T8X  Var_113  C31   C32  C33  C34   177.87  30.0  3
+ T8X  Var_114  C37   C36  C35  C34   -63.17  30.0  3
+ T8X  Var_115  C54   C33  C34  C35   177.42  30.0  3
+ T8X  Var_116  C38   C37  C36  C35   175.60  30.0  3
+ T8X  Var_117  C48   C37  C36  C35   -63.75  30.0  3
+ T8X  Var_118  C39   C38  C37  C36  -137.76  30.0  3
+ T8X  Var_119  C53   C35  C36  C37   173.26  30.0  1
+ T8X  Var_120  C39   C38  C37  C48    99.71  30.0  3
+ T8X  Var_121  C31   C32  C33  C54   -59.78  30.0  3
+ T8X  Var_122  HBN   C34  C33  C32    64.71  30.0  2
+ T8X  Var_123  HBNA  C34  C33  C32   178.91  30.0  2
+ T8X  Var_124  HCRA  C54  C33  C32   -58.25  30.0  3
+ T8X  Var_125  HCRB  C54  C33  C32    62.37  30.0  3
+ T8X  Var_126  HCS   C54  C33  C32  -177.53  30.0  3
+ T8X  Var_127  HBO   C35  C34  C33    62.26  30.0  1
+ T8X  Var_128  HBP   C36  C35  C34    59.86  30.0  3
+ T8X  Var_129  HBPA  C36  C35  C34   174.70  30.0  3
+ T8X  Var_130  HCMA  C53  C35  C34    61.45  30.0  3
+ T8X  Var_131  HOCO  C53  C35  C34  -178.45  30.0  3
+ T8X  Var_132  HCR   C53  C35  C34   -58.60  30.0  3
+ T8X  Var_133  HBM   C33  C34  C35    60.29  30.0  3
+ T8X  Var_134  HBQ   C37  C36  C35    56.28  30.0  3
+ T8X  Var_135  HCHA  C48  C37  C36    59.32  30.0  3
+ T8X  Var_136  HCHB  C48  C37  C36   179.21  30.0  3
+ T8X  Var_137  HCI   C48  C37  C36   -60.80  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

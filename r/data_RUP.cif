@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RUP  RUP  3-carbamimidoyl-N-(2-phenylethyl)-Nalpha-[(3S,5S,7S)-tricyclo[3.3.1.1~3,7~]dec-1-ylcarbamoyl]-D-phenylalaninamide  ligand  73  36  .  2021-08-23  2021-08-23  
+ RUP  RUP  3-carbamimidoyl-N-(2-phenylethyl)-Nalpha-[(3S,5S,7S)-tricyclo[3.3.1.1~3,7~]dec-1-ylcarbamoyl]-D-phenylalaninamide  ligand  73  36  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RUP
@@ -357,47 +358,102 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RUP  CONST_01  C34   C35  C36  C30    0.00   0.0  0
- RUP  CONST_02  C34   C33  C32  C30    0.00   0.0  0
- RUP  CONST_03  C33   C32  C30  C36    0.00   0.0  0
- RUP  CONST_04  C33   C34  C35  C36    0.00   0.0  0
- RUP  CONST_05  C32   C30  C36  C35    0.00   0.0  0
- RUP  CONST_06  C32   C33  C34  C35    0.00   0.0  0
- RUP  CONST_07  C20   C21  C22  C16    0.00   0.0  0
- RUP  CONST_08  C20   C19  C18  C16    0.00   0.0  0
- RUP  CONST_09  C19   C18  C16  C22    0.00   0.0  0
- RUP  CONST_10  C19   C20  C21  C22    0.00   0.0  0
- RUP  CONST_11  C18   C16  C22  C21    0.00   0.0  0
- RUP  CONST_12  C18   C19  C20  C21    0.00   0.0  0
- RUP  CONST_13  C35   C36  C30  C29  180.00   0.0  0
- RUP  CONST_14  C33   C32  C30  C29  180.00   0.0  0
- RUP  CONST_15  C21   C22  C16  C15  180.00   0.0  0
- RUP  CONST_16  C19   C18  C16  C15  180.00   0.0  0
- RUP  CONST_17  C23   C19  C18  C16  180.00   0.0  0
- RUP  CONST_18  C23   C19  C20  C21  180.00   0.0  0
- RUP  CONST_19  H35   C35  C36  C30  180.00   0.0  0
- RUP  CONST_20  H33   C33  C32  C30  180.00   0.0  0
- RUP  CONST_21  H32   C32  C30  C36  180.00   0.0  0
- RUP  CONST_22  H34   C34  C35  C36  180.00   0.0  0
- RUP  CONST_23  H36   C36  C35  C34  180.00   0.0  0
- RUP  CONST_24  H21   C21  C22  C16  180.00   0.0  0
- RUP  CONST_25  H18   C18  C16  C22  180.00   0.0  0
- RUP  CONST_26  H20   C20  C21  C22  180.00   0.0  0
- RUP  CONST_27  H22   C22  C21  C20  180.00   0.0  0
- RUP  CONST_28  O17   C12  N10  C9     0.00   0.0  0
- RUP  CONST_29  N13   C12  N10  C9   180.00   0.0  0
- RUP  CONST_30  H251  N25  C23  C19  180.00   0.0  0
- RUP  CONST_32  H24   N24  C23  C19    0.00   0.0  0
- RUP  CONST_34  C28   N27  C26  C14  180.00   0.0  0
- RUP  CONST_35  C28   N27  C26  O31    0.00   0.0  0
- RUP  CONST_37  H10   N10  C12  O17  180.00   0.0  0
- RUP  CONST_38  H13   N13  C12  O17  180.00   0.0  0
- RUP  CONST_39  H27   N27  C26  C14    0.00   0.0  0
- RUP  Var_01    C22   C16  C15  C14   86.87  30.0  2
- RUP  Var_02    C36   C30  C29  C28   90.92  30.0  2
- RUP  Var_03    N25   C23  C19  C20   36.65  30.0  2
- RUP  Var_04    C30   C29  C28  N27  179.58  30.0  3
- RUP  Var_05    C29   C28  N27  C26  141.68  30.0  3
+ RUP  CONST_01  C34   C35  C36  C30     0.00   0.0  0
+ RUP  CONST_02  C34   C33  C32  C30     0.00   0.0  0
+ RUP  CONST_03  C33   C32  C30  C36     0.00   0.0  0
+ RUP  CONST_04  C33   C34  C35  C36     0.00   0.0  0
+ RUP  CONST_05  C32   C30  C36  C35     0.00   0.0  0
+ RUP  CONST_06  C32   C33  C34  C35     0.00   0.0  0
+ RUP  CONST_07  C20   C21  C22  C16     0.00   0.0  0
+ RUP  CONST_08  C20   C19  C18  C16     0.00   0.0  0
+ RUP  CONST_09  C19   C18  C16  C22     0.00   0.0  0
+ RUP  CONST_10  C19   C20  C21  C22     0.00   0.0  0
+ RUP  CONST_11  C18   C16  C22  C21     0.00   0.0  0
+ RUP  CONST_12  C18   C19  C20  C21     0.00   0.0  0
+ RUP  CONST_13  C35   C36  C30  C29   180.00   0.0  0
+ RUP  CONST_14  C33   C32  C30  C29   180.00   0.0  0
+ RUP  CONST_15  C21   C22  C16  C15   180.00   0.0  0
+ RUP  CONST_16  C19   C18  C16  C15   180.00   0.0  0
+ RUP  CONST_17  C23   C19  C18  C16   180.00   0.0  0
+ RUP  CONST_18  C23   C19  C20  C21   180.00   0.0  0
+ RUP  CONST_19  H35   C35  C36  C30   180.00   0.0  0
+ RUP  CONST_20  H33   C33  C32  C30   180.00   0.0  0
+ RUP  CONST_21  H32   C32  C30  C36   180.00   0.0  0
+ RUP  CONST_22  H34   C34  C35  C36   180.00   0.0  0
+ RUP  CONST_23  H36   C36  C35  C34   180.00   0.0  0
+ RUP  CONST_24  H21   C21  C22  C16   180.00   0.0  0
+ RUP  CONST_25  H18   C18  C16  C22   180.00   0.0  0
+ RUP  CONST_26  H20   C20  C21  C22   180.00   0.0  0
+ RUP  CONST_27  H22   C22  C21  C20   180.00   0.0  0
+ RUP  CONST_28  O17   C12  N10  C9      0.00   0.0  0
+ RUP  CONST_29  N13   C12  N10  C9    180.00   0.0  0
+ RUP  CONST_30  H251  N25  C23  C19   180.00   0.0  0
+ RUP  CONST_31  H24   N24  C23  C19     0.00   0.0  0
+ RUP  CONST_32  C28   N27  C26  C14   180.00   0.0  0
+ RUP  CONST_33  C28   N27  C26  O31     0.00   0.0  0
+ RUP  CONST_34  H10   N10  C12  O17   180.00   0.0  0
+ RUP  CONST_35  H13   N13  C12  O17   180.00   0.0  0
+ RUP  CONST_36  H27   N27  C26  C14     0.00   0.0  0
+ RUP  Var_01    C22   C16  C15  C14    86.87  30.0  2
+ RUP  Var_02    C36   C30  C29  C28    90.92  30.0  2
+ RUP  Var_03    N25   C23  C19  C20    36.65  30.0  2
+ RUP  Var_04    C30   C29  C28  N27   179.58  30.0  3
+ RUP  Var_05    C29   C28  N27  C26   141.68  30.0  3
+ RUP  Var_06    C8    C9   C6   C1     59.02  30.0  1
+ RUP  Var_07    C11   C9   C6   C1    -59.85  30.0  1
+ RUP  Var_08    C11   C4   C5   C1     60.04  30.0  3
+ RUP  Var_09    C3    C4   C5   C1    -60.19  30.0  3
+ RUP  Var_10    C8    C7   C2   C1    -60.45  30.0  1
+ RUP  Var_11    C3    C7   C2   C1     59.60  30.0  1
+ RUP  Var_12    C4    C5   C1   C6    -59.56  30.0  3
+ RUP  Var_13    C7    C2   C1   C6     59.74  30.0  1
+ RUP  Var_14    C7    C8   C9   C6    -59.34  30.0  1
+ RUP  Var_15    C4    C11  C9   C6     59.62  30.0  3
+ RUP  Var_16    C5    C1   C6   C9     60.43  30.0  1
+ RUP  Var_17    C2    C1   C6   C9    -59.61  30.0  1
+ RUP  Var_18    C3    C7   C8   C9    -59.33  30.0  1
+ RUP  Var_19    C2    C7   C8   C9     60.70  30.0  1
+ RUP  Var_20    C5    C4   C11  C9    -60.75  30.0  3
+ RUP  Var_21    C3    C4   C11  C9     59.49  30.0  3
+ RUP  Var_22    C4    C11  C9   C8    -58.47  30.0  3
+ RUP  Var_23    C4    C3   C7   C8     60.19  30.0  3
+ RUP  Var_24    C7    C8   C9   C11    58.40  30.0  1
+ RUP  Var_25    C7    C3   C4   C11   -60.27  30.0  3
+ RUP  Var_26    C2    C1   C5   C4     60.26  30.0  3
+ RUP  Var_27    C2    C7   C3   C4    -59.70  30.0  3
+ RUP  Var_28    C7    C2   C1   C5    -60.03  30.0  1
+ RUP  Var_29    C7    C3   C4   C5     60.08  30.0  3
+ RUP  Var_30    N10   C9   C6   C1    179.87  30.0  1
+ RUP  Var_31    C7    C8   C9   N10  -176.47  30.0  1
+ RUP  Var_32    C4    C11  C9   N10   176.27  30.0  3
+ RUP  Var_33    H4    C4   C5   C1    179.66  30.0  3
+ RUP  Var_34    H7    C7   C2   C1    180.00  30.0  1
+ RUP  Var_35    H51   C5   C1   C6     61.46  30.0  3
+ RUP  Var_36    H52   C5   C1   C6    179.09  30.0  3
+ RUP  Var_37    H21A  C2   C1   C6   -178.62  30.0  1
+ RUP  Var_38    H22A  C2   C1   C6    -61.19  30.0  1
+ RUP  Var_39    H81   C8   C9   C6     61.56  30.0  1
+ RUP  Var_40    H82   C8   C9   C6    178.82  30.0  1
+ RUP  Var_41    H111  C11  C9   C6   -178.50  30.0  3
+ RUP  Var_42    H112  C11  C9   C6    -61.75  30.0  3
+ RUP  Var_43    H1    C1   C6   C9   -179.57  30.0  1
+ RUP  Var_44    H61   C6   C9   C8   -179.68  30.0  1
+ RUP  Var_45    H62   C6   C9   C8    -62.43  30.0  1
+ RUP  Var_46    H31   C3   C7   C8    -61.18  30.0  3
+ RUP  Var_47    H32A  C3   C7   C8   -178.67  30.0  3
+ RUP  Var_48    C12   N10  C9   C6    178.98  30.0  3
+ RUP  Var_49    C8    C9   N10  C12   -62.57  30.0  2
+ RUP  Var_50    C11   C9   N10  C12    61.33  30.0  2
+ RUP  Var_51    H10   N10  C9   C6    -11.87  30.0  3
+ RUP  Var_52    C16   C15  C14  N13    55.40  30.0  3
+ RUP  Var_53    C16   C15  C14  C26   176.33  30.0  3
+ RUP  Var_54    H14   C14  C15  C16   -63.50  30.0  2
+ RUP  Var_55    C26   C14  N13  C12   142.59  30.0  3
+ RUP  Var_56    C15   C14  N13  C12   -96.88  30.0  3
+ RUP  Var_57    O31   C26  C14  N13    42.02  30.0  3
+ RUP  Var_58    N27   C26  C14  N13  -140.59  30.0  3
+ RUP  Var_59    C15   C14  C26  O31   -80.67  30.0  1
+ RUP  Var_60    C15   C14  C26  N27    96.72  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

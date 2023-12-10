@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DP0  DP0  (2S)-4-(dipropan-2-ylamino)-2-phenyl-2-(pyridin-2-yl)butanamide  ligand  54  25  .  2022-03-18  2022-03-18
+ DP0  DP0  (2S)-4-(dipropan-2-ylamino)-2-phenyl-2-(pyridin-2-yl)butanamide  ligand  54  25  .  2022-03-18  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_DP0
@@ -271,41 +272,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DP0  CONST_01  C18   C15  C7   N3     0.00   0.0  0
- DP0  CONST_02  C18   C21  C20  N3     0.00   0.0  0
- DP0  CONST_03  C19   C16  C13  C6     0.00   0.0  0
- DP0  CONST_04  C19   C17  C14  C6     0.00   0.0  0
- DP0  CONST_05  C21   C20  N3   C7     0.00   0.0  0
- DP0  CONST_06  C21   C18  C15  C7     0.00   0.0  0
- DP0  CONST_07  C17   C14  C6   C13    0.00   0.0  0
- DP0  CONST_08  C17   C19  C16  C13    0.00   0.0  0
- DP0  CONST_09  C16   C13  C6   C14    0.00   0.0  0
- DP0  CONST_10  C16   C19  C17  C14    0.00   0.0  0
- DP0  CONST_11  C20   N3   C7   C15    0.00   0.0  0
- DP0  CONST_12  C20   C21  C18  C15    0.00   0.0  0
- DP0  CONST_13  C16   C13  C6   C1   180.00   0.0  0
- DP0  CONST_14  C17   C14  C6   C1   180.00   0.0  0
- DP0  CONST_15  C20   N3   C7   C1   180.00   0.0  0
- DP0  CONST_16  C18   C15  C7   C1   180.00   0.0  0
- DP0  CONST_17  H15   C15  C7   N3   180.00   0.0  0
- DP0  CONST_18  H21   C21  C20  N3   180.00   0.0  0
- DP0  CONST_19  H16   C16  C13  C6   180.00   0.0  0
- DP0  CONST_20  H17   C17  C14  C6   180.00   0.0  0
- DP0  CONST_21  H20   C20  N3   C7   180.00   0.0  0
- DP0  CONST_22  H18   C18  C15  C7   180.00   0.0  0
- DP0  CONST_23  H14   C14  C6   C13  180.00   0.0  0
- DP0  CONST_24  H19   C19  C16  C13  180.00   0.0  0
- DP0  CONST_25  H13   C13  C6   C14  180.00   0.0  0
- DP0  CONST_26  HN4   N4   C8   C1     0.00   0.0  0
- DP0  CONST_27  HN4A  N4   C8   C1   180.00   0.0  0
- DP0  Var_01    N2    C3   C2   C1   166.17  30.0  3
- DP0  Var_02    C4    N2   C3   C2    66.33  30.0  2
- DP0  Var_03    C9    C4   N2   C3   -92.51  30.0  3
- DP0  Var_04    C11   C5   N2   C3    27.27  30.0  3
- DP0  Var_05    H9    C9   C4   N2    67.12  30.0  3
- DP0  Var_06    H10   C10  C4   N2    50.47  30.0  3
- DP0  Var_07    H11   C11  C5   N2   174.49  30.0  3
- DP0  Var_08    H12   C12  C5   N2    53.51  30.0  3
+ DP0  CONST_01  C18   C15  C7   N3      0.00   0.0  0
+ DP0  CONST_02  C18   C21  C20  N3      0.00   0.0  0
+ DP0  CONST_03  C19   C16  C13  C6      0.00   0.0  0
+ DP0  CONST_04  C19   C17  C14  C6      0.00   0.0  0
+ DP0  CONST_05  C21   C20  N3   C7      0.00   0.0  0
+ DP0  CONST_06  C21   C18  C15  C7      0.00   0.0  0
+ DP0  CONST_07  C17   C14  C6   C13     0.00   0.0  0
+ DP0  CONST_08  C17   C19  C16  C13     0.00   0.0  0
+ DP0  CONST_09  C16   C13  C6   C14     0.00   0.0  0
+ DP0  CONST_10  C16   C19  C17  C14     0.00   0.0  0
+ DP0  CONST_11  C20   N3   C7   C15     0.00   0.0  0
+ DP0  CONST_12  C20   C21  C18  C15     0.00   0.0  0
+ DP0  CONST_13  C16   C13  C6   C1    180.00   0.0  0
+ DP0  CONST_14  C17   C14  C6   C1    180.00   0.0  0
+ DP0  CONST_15  C20   N3   C7   C1    180.00   0.0  0
+ DP0  CONST_16  C18   C15  C7   C1    180.00   0.0  0
+ DP0  CONST_17  H15   C15  C7   N3    180.00   0.0  0
+ DP0  CONST_18  H21   C21  C20  N3    180.00   0.0  0
+ DP0  CONST_19  H16   C16  C13  C6    180.00   0.0  0
+ DP0  CONST_20  H17   C17  C14  C6    180.00   0.0  0
+ DP0  CONST_21  H20   C20  N3   C7    180.00   0.0  0
+ DP0  CONST_22  H18   C18  C15  C7    180.00   0.0  0
+ DP0  CONST_23  H14   C14  C6   C13   180.00   0.0  0
+ DP0  CONST_24  H19   C19  C16  C13   180.00   0.0  0
+ DP0  CONST_25  H13   C13  C6   C14   180.00   0.0  0
+ DP0  CONST_26  HN4   N4   C8   C1      0.00   0.0  0
+ DP0  CONST_27  HN4A  N4   C8   C1    180.00   0.0  0
+ DP0  Var_01    N2    C3   C2   C1    166.17  30.0  3
+ DP0  Var_02    C4    N2   C3   C2     66.33  30.0  2
+ DP0  Var_03    C9    C4   N2   C3    -92.51  30.0  3
+ DP0  Var_04    C11   C5   N2   C3     27.27  30.0  3
+ DP0  Var_05    H9    C9   C4   N2     67.12  30.0  3
+ DP0  Var_06    H10   C10  C4   N2     50.47  30.0  3
+ DP0  Var_07    H11   C11  C5   N2    174.49  30.0  3
+ DP0  Var_08    H12   C12  C5   N2     53.51  30.0  3
+ DP0  Var_09    C6    C1   C7   N3   -133.01  30.0  2
+ DP0  Var_10    C15   C7   C1   C6     49.24  30.0  2
+ DP0  Var_11    C13   C6   C1   C7   -146.09  30.0  2
+ DP0  Var_12    C14   C6   C1   C7     41.00  30.0  2
+ DP0  Var_13    C13   C6   C1   C2     92.91  30.0  2
+ DP0  Var_14    C14   C6   C1   C2    -80.00  30.0  2
+ DP0  Var_15    N3    C7   C1   C2    -13.82  30.0  2
+ DP0  Var_16    C15   C7   C1   C2    168.43  30.0  2
+ DP0  Var_17    C8    C1   C7   N3    107.32  30.0  2
+ DP0  Var_18    C13   C6   C1   C8    -33.12  30.0  2
+ DP0  Var_19    C14   C6   C1   C8    153.97  30.0  2
+ DP0  Var_20    C15   C7   C1   C8    -70.44  30.0  2
+ DP0  Var_21    C6    C1   C8   O1    -27.15  30.0  2
+ DP0  Var_22    C7    C1   C8   O1     90.90  30.0  2
+ DP0  Var_23    C6    C1   C2   C3    -64.04  30.0  2
+ DP0  Var_24    C7    C1   C2   C3    175.28  30.0  2
+ DP0  Var_25    C6    C1   C8   N4    157.57  30.0  2
+ DP0  Var_26    C7    C1   C8   N4    -84.38  30.0  2
+ DP0  Var_27    H2    C2   C1   C6     56.46  30.0  3
+ DP0  Var_28    H2A   C2   C1   C6    170.01  30.0  3
+ DP0  Var_29    C2    C1   C8   O1   -149.97  30.0  2
+ DP0  Var_30    N4    C8   C1   C2     34.75  30.0  3
+ DP0  Var_31    C8    C1   C2   C3     61.38  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

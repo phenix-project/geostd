@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EGT  EGT  (2R,3R)-2-(3,4,5-trihydroxyphenyl)-3,4-dihydro-2H-chromene-3,5,7-triol  ligand  36  22  .  2022-03-18  2022-03-18
+ EGT  EGT  (2R,3R)-2-(3,4,5-trihydroxyphenyl)-3,4-dihydro-2H-chromene-3,5,7-triol  ligand  36  22  .  2022-03-18  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_EGT
@@ -200,37 +201,59 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- EGT  CONST_01  C8   C7   C6   C5     0.00   0.0  0
- EGT  CONST_02  C8   C9   C10  C5     0.00   0.0  0
- EGT  CONST_03  C9   C10  C5   C6     0.00   0.0  0
- EGT  CONST_04  C9   C8   C7   C6     0.00   0.0  0
- EGT  CONST_05  C10  C5   C6   C7     0.00   0.0  0
- EGT  CONST_06  C10  C9   C8   C7     0.00   0.0  0
- EGT  CONST_07  C14  C13  C12  C11    0.00   0.0  0
- EGT  CONST_08  C14  C15  C16  C11    0.00   0.0  0
- EGT  CONST_09  C15  C16  C11  C12    0.00   0.0  0
- EGT  CONST_10  C15  C14  C13  C12    0.00   0.0  0
- EGT  CONST_11  C16  C11  C12  C13    0.00   0.0  0
- EGT  CONST_12  C16  C15  C14  C13    0.00   0.0  0
- EGT  CONST_13  C13  C12  C11  C2   180.00   0.0  0
- EGT  CONST_14  C15  C16  C11  C2   180.00   0.0  0
- EGT  CONST_15  O18  C6   C5   C4     0.00   0.0  0
- EGT  CONST_16  O19  C8   C7   C6   180.00   0.0  0
- EGT  CONST_17  O18  C6   C7   C8   180.00   0.0  0
- EGT  CONST_18  O18  C6   C5   C10  180.00   0.0  0
- EGT  CONST_19  O19  C8   C9   C10  180.00   0.0  0
- EGT  CONST_20  O20  C13  C12  C11  180.00   0.0  0
- EGT  CONST_21  O22  C15  C16  C11  180.00   0.0  0
- EGT  CONST_22  O21  C14  C13  C12  180.00   0.0  0
- EGT  CONST_23  O22  C15  C14  C13  180.00   0.0  0
- EGT  CONST_24  O20  C13  C14  C15  180.00   0.0  0
- EGT  CONST_25  O21  C14  C15  C16  180.00   0.0  0
- EGT  CONST_26  HC9  C9   C10  O1     0.00   0.0  0
- EGT  CONST_27  H12  C12  C11  C2     0.00   0.0  0
- EGT  CONST_28  H16  C16  C11  C2     0.00   0.0  0
- EGT  CONST_29  HC7  C7   C6   C5   180.00   0.0  0
- EGT  Var_01    C5   C10  O1   C2   -10.61  30.0  1
- EGT  Var_02    C6   C5   C4   C3   159.64  30.0  1
+ EGT  CONST_01  C8    C7   C6   C5      0.00   0.0  0
+ EGT  CONST_02  C8    C9   C10  C5      0.00   0.0  0
+ EGT  CONST_03  C9    C10  C5   C6      0.00   0.0  0
+ EGT  CONST_04  C9    C8   C7   C6      0.00   0.0  0
+ EGT  CONST_05  C10   C5   C6   C7      0.00   0.0  0
+ EGT  CONST_06  C10   C9   C8   C7      0.00   0.0  0
+ EGT  CONST_07  C14   C13  C12  C11     0.00   0.0  0
+ EGT  CONST_08  C14   C15  C16  C11     0.00   0.0  0
+ EGT  CONST_09  C15   C16  C11  C12     0.00   0.0  0
+ EGT  CONST_10  C15   C14  C13  C12     0.00   0.0  0
+ EGT  CONST_11  C16   C11  C12  C13     0.00   0.0  0
+ EGT  CONST_12  C16   C15  C14  C13     0.00   0.0  0
+ EGT  CONST_13  C13   C12  C11  C2    180.00   0.0  0
+ EGT  CONST_14  C15   C16  C11  C2    180.00   0.0  0
+ EGT  CONST_15  O18   C6   C5   C4      0.00   0.0  0
+ EGT  CONST_16  O19   C8   C7   C6    180.00   0.0  0
+ EGT  CONST_17  O18   C6   C7   C8    180.00   0.0  0
+ EGT  CONST_18  O18   C6   C5   C10   180.00   0.0  0
+ EGT  CONST_19  O19   C8   C9   C10   180.00   0.0  0
+ EGT  CONST_20  O20   C13  C12  C11   180.00   0.0  0
+ EGT  CONST_21  O22   C15  C16  C11   180.00   0.0  0
+ EGT  CONST_22  O21   C14  C13  C12   180.00   0.0  0
+ EGT  CONST_23  O22   C15  C14  C13   180.00   0.0  0
+ EGT  CONST_24  O20   C13  C14  C15   180.00   0.0  0
+ EGT  CONST_25  O21   C14  C15  C16   180.00   0.0  0
+ EGT  CONST_26  HC9   C9   C10  O1      0.00   0.0  0
+ EGT  CONST_27  H12   C12  C11  C2      0.00   0.0  0
+ EGT  CONST_28  H16   C16  C11  C2      0.00   0.0  0
+ EGT  CONST_29  HC7   C7   C6   C5    180.00   0.0  0
+ EGT  Var_01    C5    C10  O1   C2    -10.61  30.0  1
+ EGT  Var_02    C6    C5   C4   C3    159.64  30.0  1
+ EGT  Var_03    C4    C3   C2   O1    -62.44  30.0  1
+ EGT  Var_04    C12   C11  C2   O1    149.28  30.0  2
+ EGT  Var_05    C16   C11  C2   O1    -33.05  30.0  2
+ EGT  Var_06    C5    C4   C3   C2     49.04  30.0  1
+ EGT  Var_07    C10   O1   C2   C3     43.33  30.0  1
+ EGT  Var_08    C12   C11  C2   C3    -87.90  30.0  2
+ EGT  Var_09    C16   C11  C2   C3     89.77  30.0  2
+ EGT  Var_10    C11   C2   C3   C4    175.95  30.0  1
+ EGT  Var_11    C11   C2   O1   C10   167.58  30.0  1
+ EGT  Var_12    O17   C3   C2   O1     59.23  30.0  1
+ EGT  Var_13    O17   C3   C4   C5    -69.72  30.0  1
+ EGT  Var_14    O17   C3   C2   C11   -62.37  30.0  1
+ EGT  Var_15    HC3   C3   C2   O1   -179.94  30.0  1
+ EGT  Var_16    HC41  C4   C3   C2    171.49  30.0  1
+ EGT  Var_17    HC42  C4   C3   C2    -73.49  30.0  1
+ EGT  Var_18    HC2   C2   C3   C4     56.41  30.0  1
+ EGT  Var_19    H17   O17  C3   C2    179.61  30.0  3
+ EGT  Var_20    H18   O18  C6   C5      5.02  30.0  2
+ EGT  Var_21    H19   O19  C8   C7     -0.43  30.0  2
+ EGT  Var_22    H20   O20  C13  C12     4.82  30.0  2
+ EGT  Var_23    H21   O21  C14  C13    13.97  30.0  2
+ EGT  Var_24    H22   O22  C15  C14     2.86  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

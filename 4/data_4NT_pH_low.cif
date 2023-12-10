@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 4NT  4NT  '[(4Z)-2-[(1R,2R)-1-amino-2-hydroxypropyl]-4-(3-chloro-4-hydroxybenzylidene)-5-oxo-4,5-dihydro-1H-imidazol-1-yl]acetic acid'  L-peptide  40  24  .  2022-09-22  2022-11-17
+ 4NT  4NT  '[(4Z)-2-[(1R,2R)-1-amino-2-hydroxypropyl]-4-(3-chloro-4-hydroxybenzylidene)-5-oxo-4,5-dihydro-1H-imidazol-1-yl]acetic acid'  L-peptide  40  24  .  2022-09-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_4NT
@@ -213,38 +214,47 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 4NT  CONST_01  CZ   CE2  CD2  CG2    0.00   0.0  0
- 4NT  CONST_02  CZ   CE1  CD1  CG2    0.00   0.0  0
- 4NT  CONST_03  CE2  CD2  CG2  CD1    0.00   0.0  0
- 4NT  CONST_04  CE2  CZ   CE1  CD1    0.00   0.0  0
- 4NT  CONST_05  CE1  CD1  CG2  CD2    0.00   0.0  0
- 4NT  CONST_06  CE1  CZ   CE2  CD2    0.00   0.0  0
- 4NT  CONST_07  CA2  C2   N3   C1     0.00   0.0  0
- 4NT  CONST_08  C2   CA2  N2   C1     0.00   0.0  0
- 4NT  CONST_09  N3   C2   CA2  N2     0.00   0.0  0
- 4NT  CONST_10  C2   N3   C1   N2     0.00   0.0  0
- 4NT  CONST_11  CA2  N2   C1   N3     0.00   0.0  0
- 4NT  CONST_12  CE2  CD2  CG2  CB2  180.00   0.0  0
- 4NT  CONST_13  CE1  CD1  CG2  CB2  180.00   0.0  0
- 4NT  CONST_14  CL1  CE1  CD1  CG2  180.00   0.0  0
- 4NT  CONST_15  OH   CZ   CE1  CD1  180.00   0.0  0
- 4NT  CONST_16  OH   CZ   CE2  CD2  180.00   0.0  0
- 4NT  CONST_17  CL1  CE1  CZ   CE2  180.00   0.0  0
- 4NT  CONST_18  C2   N3   C1   CA1  180.00   0.0  0
- 4NT  CONST_19  CA2  N2   C1   CA1  180.00   0.0  0
- 4NT  CONST_20  O2   C2   N3   C1   180.00   0.0  0
- 4NT  CONST_21  CA3  N3   C1   N2   180.00   0.0  0
- 4NT  CONST_22  CA3  N3   C2   CA2  180.00   0.0  0
- 4NT  CONST_23  H17  CE2  CD2  CG2  180.00   0.0  0
- 4NT  CONST_24  H16  CD2  CG2  CD1  180.00   0.0  0
- 4NT  CONST_25  H15  CD1  CG2  CD2  180.00   0.0  0
- 4NT  CONST_26  CA3  N3   C1   CA1    0.00   0.0  0
- 4NT  CONST_27  CA3  N3   C2   O2     0.00   0.0  0
- 4NT  CONST_28  H12  O1   C3   CA3  180.00   0.0  0
- 4NT  Var_01    CG2  CB2  CA2  N2    -0.45  30.0  2
- 4NT  Var_02    CD2  CG2  CB2  CA2   -1.76  30.0  2
- 4NT  Var_03    C3   CA3  N3   C1   108.25  30.0  1
- 4NT  Var_04    O3   C3   CA3  N3   -10.44  30.0  3
+ 4NT  CONST_01  CZ   CE2  CD2  CG2     0.00   0.0  0
+ 4NT  CONST_02  CZ   CE1  CD1  CG2     0.00   0.0  0
+ 4NT  CONST_03  CE2  CD2  CG2  CD1     0.00   0.0  0
+ 4NT  CONST_04  CE2  CZ   CE1  CD1     0.00   0.0  0
+ 4NT  CONST_05  CE1  CD1  CG2  CD2     0.00   0.0  0
+ 4NT  CONST_06  CE1  CZ   CE2  CD2     0.00   0.0  0
+ 4NT  CONST_07  CA2  C2   N3   C1      0.00   0.0  0
+ 4NT  CONST_08  C2   CA2  N2   C1      0.00   0.0  0
+ 4NT  CONST_09  N3   C2   CA2  N2      0.00   0.0  0
+ 4NT  CONST_10  C2   N3   C1   N2      0.00   0.0  0
+ 4NT  CONST_11  CA2  N2   C1   N3      0.00   0.0  0
+ 4NT  CONST_12  CE2  CD2  CG2  CB2   180.00   0.0  0
+ 4NT  CONST_13  CE1  CD1  CG2  CB2   180.00   0.0  0
+ 4NT  CONST_14  CL1  CE1  CD1  CG2   180.00   0.0  0
+ 4NT  CONST_15  OH   CZ   CE1  CD1   180.00   0.0  0
+ 4NT  CONST_16  OH   CZ   CE2  CD2   180.00   0.0  0
+ 4NT  CONST_17  CL1  CE1  CZ   CE2   180.00   0.0  0
+ 4NT  CONST_18  C2   N3   C1   CA1   180.00   0.0  0
+ 4NT  CONST_19  CA2  N2   C1   CA1   180.00   0.0  0
+ 4NT  CONST_20  O2   C2   N3   C1    180.00   0.0  0
+ 4NT  CONST_21  CA3  N3   C1   N2    180.00   0.0  0
+ 4NT  CONST_22  CA3  N3   C2   CA2   180.00   0.0  0
+ 4NT  CONST_23  H17  CE2  CD2  CG2   180.00   0.0  0
+ 4NT  CONST_24  H16  CD2  CG2  CD1   180.00   0.0  0
+ 4NT  CONST_25  H15  CD1  CG2  CD2   180.00   0.0  0
+ 4NT  CONST_26  CA3  N3   C1   CA1     0.00   0.0  0
+ 4NT  CONST_27  CA3  N3   C2   O2      0.00   0.0  0
+ 4NT  CONST_28  H12  O1   C3   CA3   180.00   0.0  0
+ 4NT  Var_01    CG2  CB2  CA2  N2     -0.45  30.0  2
+ 4NT  Var_02    CD2  CG2  CB2  CA2    -1.76  30.0  2
+ 4NT  Var_03    C3   CA3  N3   C1    108.25  30.0  1
+ 4NT  Var_04    O3   C3   CA3  N3    -10.44  30.0  3
+ 4NT  Var_05    H4   CA1  C1   N2   -138.79  30.0  2
+ 4NT  Var_06    H3   OH   CZ   CE1   179.25  30.0  2
+ 4NT  Var_07    H1   N1   CA1  C1    -86.42  30.0  3
+ 4NT  Var_08    H2   N1   CA1  C1     29.79  30.0  3
+ 4NT  Var_09    H5   CB1  CA1  C1     45.32  30.0  3
+ 4NT  Var_10    H9   OG1  CB1  CA1   -66.60  30.0  3
+ 4NT  Var_11    H6   CG1  CB1  CA1    56.83  30.0  3
+ 4NT  Var_12    H7   CG1  CB1  CA1   177.44  30.0  3
+ 4NT  Var_13    H8   CG1  CB1  CA1   -63.07  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

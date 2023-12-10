@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 77A  77A  1-(5-chloro-2-methoxyphenyl)-3-{6-[(1S)-2-(dimethylamino)-1-methylethoxy]pyrazin-2-yl}urea  ligand  48  26  .  2022-07-23  2022-07-26
+ 77A  77A  1-(5-chloro-2-methoxyphenyl)-3-{6-[(1S)-2-(dimethylamino)-1-methylethoxy]pyrazin-2-yl}urea  ligand  48  26  .  2022-07-23  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_77A
@@ -244,44 +245,58 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 77A  CONST_01  C5    C4   C3   C2     0.00   0.0  0
- 77A  CONST_02  C5    C6   C7   C2     0.00   0.0  0
- 77A  CONST_03  C6    C7   C2   C3     0.00   0.0  0
- 77A  CONST_04  C6    C5   C4   C3     0.00   0.0  0
- 77A  CONST_05  C7    C2   C3   C4     0.00   0.0  0
- 77A  CONST_06  C7    C6   C5   C4     0.00   0.0  0
- 77A  CONST_07  C17   C16  N15  C14    0.00   0.0  0
- 77A  CONST_08  C17   N18  C19  C14    0.00   0.0  0
- 77A  CONST_09  N18   C19  C14  N15    0.00   0.0  0
- 77A  CONST_10  N18   C17  C16  N15    0.00   0.0  0
- 77A  CONST_11  C19   C14  N15  C16    0.00   0.0  0
- 77A  CONST_12  C19   N18  C17  C16    0.00   0.0  0
- 77A  CONST_13  C4    C3   C2   N1   180.00   0.0  0
- 77A  CONST_14  C6    C7   C2   N1   180.00   0.0  0
- 77A  CONST_15  CL10  C4   C3   C2   180.00   0.0  0
- 77A  CONST_16  O8    C7   C2   C3   180.00   0.0  0
- 77A  CONST_17  O8    C7   C6   C5   180.00   0.0  0
- 77A  CONST_18  CL10  C4   C5   C6   180.00   0.0  0
- 77A  CONST_19  C16   N15  C14  N13  180.00   0.0  0
- 77A  CONST_20  N18   C19  C14  N13  180.00   0.0  0
- 77A  CONST_21  O20   C16  N15  C14  180.00   0.0  0
- 77A  CONST_22  O20   C16  C17  N18  180.00   0.0  0
- 77A  CONST_23  H6    C6   C7   C2   180.00   0.0  0
- 77A  CONST_24  H5    C5   C4   C3   180.00   0.0  0
- 77A  CONST_25  H3    C3   C4   C5   180.00   0.0  0
- 77A  CONST_26  H19   C19  C14  N15  180.00   0.0  0
- 77A  CONST_27  H17   C17  C16  N15  180.00   0.0  0
- 77A  CONST_28  C11   N1   C2   C3     0.00   0.0  0
- 77A  CONST_29  C11   N1   C2   C7   180.00   0.0  0
- 77A  CONST_32  HN1   N1   C2   C3   180.00   0.0  0
- 77A  CONST_34  O12   C11  N1   C2     0.00   0.0  0
- 77A  CONST_35  C14   N13  C11  O12    0.00   0.0  0
- 77A  CONST_36  C14   N13  C11  N1   180.00   0.0  0
- 77A  CONST_37  N13   C11  N1   C2   180.00   0.0  0
- 77A  Var_01    H91   C9   O8   C7    61.61  30.0  3
- 77A  Var_02    C26   N23  C22  C21   63.80  30.0  3
- 77A  Var_03    H261  C26  N23  C22   57.45  30.0  3
- 77A  Var_04    H241  C24  N23  C22  -61.87  30.0  3
+ 77A  CONST_01  C5    C4   C3   C2      0.00   0.0  0
+ 77A  CONST_02  C5    C6   C7   C2      0.00   0.0  0
+ 77A  CONST_03  C6    C7   C2   C3      0.00   0.0  0
+ 77A  CONST_04  C6    C5   C4   C3      0.00   0.0  0
+ 77A  CONST_05  C7    C2   C3   C4      0.00   0.0  0
+ 77A  CONST_06  C7    C6   C5   C4      0.00   0.0  0
+ 77A  CONST_07  C17   C16  N15  C14     0.00   0.0  0
+ 77A  CONST_08  C17   N18  C19  C14     0.00   0.0  0
+ 77A  CONST_09  N18   C19  C14  N15     0.00   0.0  0
+ 77A  CONST_10  N18   C17  C16  N15     0.00   0.0  0
+ 77A  CONST_11  C19   C14  N15  C16     0.00   0.0  0
+ 77A  CONST_12  C19   N18  C17  C16     0.00   0.0  0
+ 77A  CONST_13  C4    C3   C2   N1    180.00   0.0  0
+ 77A  CONST_14  C6    C7   C2   N1    180.00   0.0  0
+ 77A  CONST_15  CL10  C4   C3   C2    180.00   0.0  0
+ 77A  CONST_16  O8    C7   C2   C3    180.00   0.0  0
+ 77A  CONST_17  O8    C7   C6   C5    180.00   0.0  0
+ 77A  CONST_18  CL10  C4   C5   C6    180.00   0.0  0
+ 77A  CONST_19  C16   N15  C14  N13   180.00   0.0  0
+ 77A  CONST_20  N18   C19  C14  N13   180.00   0.0  0
+ 77A  CONST_21  O20   C16  N15  C14   180.00   0.0  0
+ 77A  CONST_22  O20   C16  C17  N18   180.00   0.0  0
+ 77A  CONST_23  H6    C6   C7   C2    180.00   0.0  0
+ 77A  CONST_24  H5    C5   C4   C3    180.00   0.0  0
+ 77A  CONST_25  H3    C3   C4   C5    180.00   0.0  0
+ 77A  CONST_26  H19   C19  C14  N15   180.00   0.0  0
+ 77A  CONST_27  H17   C17  C16  N15   180.00   0.0  0
+ 77A  CONST_28  C11   N1   C2   C3      0.00   0.0  0
+ 77A  CONST_29  C11   N1   C2   C7    180.00   0.0  0
+ 77A  CONST_30  HN1   N1   C2   C3    180.00   0.0  0
+ 77A  CONST_31  O12   C11  N1   C2      0.00   0.0  0
+ 77A  CONST_32  C14   N13  C11  O12     0.00   0.0  0
+ 77A  CONST_33  C14   N13  C11  N1    180.00   0.0  0
+ 77A  CONST_34  N13   C11  N1   C2    180.00   0.0  0
+ 77A  Var_01    H91   C9   O8   C7     61.61  30.0  3
+ 77A  Var_02    C26   N23  C22  C21    63.80  30.0  3
+ 77A  Var_03    H261  C26  N23  C22    57.45  30.0  3
+ 77A  Var_04    H241  C24  N23  C22   -61.87  30.0  3
+ 77A  Var_05    C9    O8   C7   C2    178.64  30.0  2
+ 77A  Var_06    C9    O8   C7   C6     -1.25  30.0  2
+ 77A  Var_07    C21   O20  C16  N15    -0.83  30.0  2
+ 77A  Var_08    C21   O20  C16  C17   178.03  30.0  2
+ 77A  Var_09    C25   C21  O20  C16    79.51  30.0  3
+ 77A  Var_10    C22   C21  O20  C16  -159.45  30.0  3
+ 77A  Var_11    H21   C21  O20  C16   -40.53  30.0  3
+ 77A  Var_12    N23   C22  C21  O20    56.90  30.0  3
+ 77A  Var_13    C25   C21  C22  N23   177.88  30.0  2
+ 77A  Var_14    H251  C25  C21  O20   -64.13  30.0  3
+ 77A  Var_15    H252  C25  C21  O20    57.69  30.0  3
+ 77A  Var_16    H253  C25  C21  O20   177.02  30.0  3
+ 77A  Var_17    H221  C22  C21  O20  -178.65  30.0  3
+ 77A  Var_18    H222  C22  C21  O20   -64.29  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

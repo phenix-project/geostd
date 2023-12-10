@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 06S  06S  'O-[(2R,3S,4R,5R)-5-(2-amino-6-oxo-3,6-dihydro-9H-purin-9-yl)-2-({[(S)-({(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-4-hydroxy-2-[(thiophosphonooxy)methyl]tetrahydrofuran-3-yl}oxy)(sulfanyl)phosphoryl]oxy}methyl)-4-hydroxytetrahydrofuran-3-yl] dihydrogen (S)-phosphorothioate (non-preferred name)'  ligand  72  48  .  2021-08-03  2021-08-03  
+ 06S  06S  'O-[(2R,3S,4R,5R)-5-(2-amino-6-oxo-3,6-dihydro-9H-purin-9-yl)-2-({[(S)-({(2R,3S,4R,5R)-5-(2,4-dioxo-3,4-dihydropyrimidin-1(2H)-yl)-4-hydroxy-2-[(thiophosphonooxy)methyl]tetrahydrofuran-3-yl}oxy)(sulfanyl)phosphoryl]oxy}methyl)-4-hydroxytetrahydrofuran-3-yl] dihydrogen (S)-phosphorothioate (non-preferred name)'  ligand  72  48  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_06S
@@ -346,36 +347,109 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 06S  CONST_01  C14  N1   C11  C10    0.00   0.0  0
- 06S  CONST_02  N1   C14  N4   C10    0.00   0.0  0
- 06S  CONST_03  N1   C11  C10  N4     0.00   0.0  0
- 06S  CONST_04  C11  N1   C14  N4     0.00   0.0  0
- 06S  CONST_05  C11  C10  N4   C14    0.00   0.0  0
- 06S  CONST_06  C5   N1   C11  C10  180.00   0.0  0
- 06S  CONST_07  C5   N1   C14  N4   180.00   0.0  0
- 06S  CONST_08  C5   N1   C11  N2     0.00   0.0  0
- 06S  CONST_09  N2   C13  N3   C12    0.00   0.0  0
- 06S  CONST_10  C11  N2   C13  N3     0.00   0.0  0
- 06S  CONST_11  N6   C18  N    C    180.00   0.0  0
- 06S  CONST_12  C17  N6   C18  N      0.00   0.0  0
- 06S  CONST_13  C15  C17  N6   C18    0.00   0.0  0
- 06S  CONST_14  N6   C18  N    C16    0.00   0.0  0
- 06S  CONST_15  N5   C13  N3   C12  180.00   0.0  0
- 06S  CONST_16  C11  N2   C13  N5   180.00   0.0  0
- 06S  CONST_17  O15  C18  N    C      0.00   0.0  0
- 06S  CONST_18  O14  C17  N6   C18  180.00   0.0  0
- 06S  CONST_19  C16  N    C18  O15  180.00   0.0  0
- 06S  CONST_20  C17  N6   C18  O15  180.00   0.0  0
- 06S  CONST_21  H1   C14  N4   C10  180.00   0.0  0
- 06S  CONST_22  H4   N2   C13  N3   180.00   0.0  0
- 06S  CONST_23  H26  N6   C18  N    180.00   0.0  0
- 06S  CONST_24  H2   N5   C13  N3     0.00   0.0  0
- 06S  CONST_25  H3   N5   C13  N3   180.00   0.0  0
- 06S  Var_01    O11  P2   O9   C7   -47.69  30.0  3
- 06S  Var_02    S1   P1   O7   C9   -70.16  30.0  1
- 06S  Var_03    S    P    O1   C4   -64.32  30.0  2
- 06S  Var_04    H12  C9   O7   P1    43.06  30.0  3
- 06S  Var_05    H17  C4   O1   P     -4.80  30.0  2
+ 06S  CONST_01  C14  N1   C11  C10     0.00   0.0  0
+ 06S  CONST_02  N1   C14  N4   C10     0.00   0.0  0
+ 06S  CONST_03  N1   C11  C10  N4      0.00   0.0  0
+ 06S  CONST_04  C11  N1   C14  N4      0.00   0.0  0
+ 06S  CONST_05  C11  C10  N4   C14     0.00   0.0  0
+ 06S  CONST_06  C5   N1   C11  C10   180.00   0.0  0
+ 06S  CONST_07  C5   N1   C14  N4    180.00   0.0  0
+ 06S  CONST_08  C5   N1   C11  N2      0.00   0.0  0
+ 06S  CONST_09  N2   C13  N3   C12     0.00   0.0  0
+ 06S  CONST_10  C11  N2   C13  N3      0.00   0.0  0
+ 06S  CONST_11  N6   C18  N    C     180.00   0.0  0
+ 06S  CONST_12  C17  N6   C18  N       0.00   0.0  0
+ 06S  CONST_13  C15  C17  N6   C18     0.00   0.0  0
+ 06S  CONST_14  N6   C18  N    C16     0.00   0.0  0
+ 06S  CONST_15  N5   C13  N3   C12   180.00   0.0  0
+ 06S  CONST_16  C11  N2   C13  N5    180.00   0.0  0
+ 06S  CONST_17  O15  C18  N    C       0.00   0.0  0
+ 06S  CONST_18  O14  C17  N6   C18   180.00   0.0  0
+ 06S  CONST_19  C16  N    C18  O15   180.00   0.0  0
+ 06S  CONST_20  C17  N6   C18  O15   180.00   0.0  0
+ 06S  CONST_21  H1   C14  N4   C10   180.00   0.0  0
+ 06S  CONST_22  H4   N2   C13  N3    180.00   0.0  0
+ 06S  CONST_23  H26  N6   C18  N     180.00   0.0  0
+ 06S  CONST_24  H2   N5   C13  N3      0.00   0.0  0
+ 06S  CONST_25  H3   N5   C13  N3    180.00   0.0  0
+ 06S  Var_01    O11  P2   O9   C7    -47.69  30.0  3
+ 06S  Var_02    S1   P1   O7   C9    -70.16  30.0  1
+ 06S  Var_03    S    P    O1   C4    -64.32  30.0  2
+ 06S  Var_04    H12  C9   O7   P1     43.06  30.0  3
+ 06S  Var_05    H17  C4   O1   P      -4.80  30.0  2
+ 06S  Var_06    C6   C5   N1   C14  -134.40  30.0  2
+ 06S  Var_07    O6   C5   N1   C14   -17.42  30.0  2
+ 06S  Var_08    C6   C5   N1   C11    51.51  30.0  2
+ 06S  Var_09    O6   C5   N1   C11   168.48  30.0  2
+ 06S  Var_10    C7   C6   C5   N1    146.20  30.0  1
+ 06S  Var_11    C8   O6   C5   N1   -164.36  30.0  1
+ 06S  Var_12    C8   C7   C6   C5     -4.94  30.0  1
+ 06S  Var_13    C7   C8   O6   C5     38.44  30.0  1
+ 06S  Var_14    O6   C8   C7   C6    -18.96  30.0  1
+ 06S  Var_15    C8   O6   C5   C6    -42.19  30.0  1
+ 06S  Var_16    O6   C5   C6   C7     27.97  30.0  1
+ 06S  Var_17    C    O    C3   C2      3.46  30.0  1
+ 06S  Var_18    O    C    C1   C2     36.80  30.0  1
+ 06S  Var_19    N    C    C1   C2    155.64  30.0  1
+ 06S  Var_20    C    C1   C2   C3    -33.54  30.0  1
+ 06S  Var_21    C1   C    O    C3    -25.56  30.0  1
+ 06S  Var_22    N    C    O    C3   -148.09  30.0  1
+ 06S  Var_23    C1   C2   C3   O      20.04  30.0  1
+ 06S  Var_24    C16  N    C    O      53.08  30.0  3
+ 06S  Var_25    C18  N    C    O    -123.92  30.0  3
+ 06S  Var_26    C16  N    C    C1    -63.80  30.0  3
+ 06S  Var_27    C18  N    C    C1    119.21  30.0  3
+ 06S  Var_28    C13  N3   C12  O13   179.42  30.0  1
+ 06S  Var_29    C11  C10  C12  O13  -179.71  30.0  1
+ 06S  Var_30    N4   C10  C12  O13     0.39  30.0  1
+ 06S  Var_31    O8   C6   C5   N1    -90.54  30.0  1
+ 06S  Var_32    O9   C7   C6   C5    113.50  30.0  1
+ 06S  Var_33    C9   C8   O6   C5    160.00  30.0  1
+ 06S  Var_34    C9   C8   C7   C6   -138.94  30.0  1
+ 06S  Var_35    C8   C7   C6   O8   -124.08  30.0  1
+ 06S  Var_36    O6   C5   C6   O8    151.23  30.0  1
+ 06S  Var_37    O6   C8   C7   O9   -141.71  30.0  1
+ 06S  Var_38    O    C3   C2   O3    -95.62  30.0  1
+ 06S  Var_39    C    C1   C2   O3     82.41  30.0  1
+ 06S  Var_40    O2   C1   C2   C3   -156.16  30.0  1
+ 06S  Var_41    C1   C2   C3   C4   -101.36  30.0  1
+ 06S  Var_42    C    O    C3   C4    126.07  30.0  1
+ 06S  Var_43    O2   C1   C    O     158.12  30.0  1
+ 06S  Var_44    N    C    C1   O2    -83.04  30.0  1
+ 06S  Var_45    H5   C5   N1   C14   103.56  30.0  2
+ 06S  Var_46    H6   C6   C5   N1     32.28  30.0  1
+ 06S  Var_47    H8   C7   C6   C5   -121.83  30.0  1
+ 06S  Var_48    H11  C8   O6   C5    -78.57  30.0  1
+ 06S  Var_49    H23  C    C1   C2    -84.06  30.0  1
+ 06S  Var_50    H21  C1   C2   C3     80.65  30.0  1
+ 06S  Var_51    H15  C2   C3   O     140.41  30.0  1
+ 06S  Var_52    H16  C3   C2   C1    137.85  30.0  1
+ 06S  Var_53    H24  C16  N    C       1.46  30.0  1
+ 06S  Var_54    H25  C15  C16  N    -179.99  30.0  1
+ 06S  Var_55    P2   O9   C7   C6     79.23  30.0  3
+ 06S  Var_56    O9   C7   C6   O8     -5.64  30.0  1
+ 06S  Var_57    O7   C9   C8   C7   -174.96  30.0  1
+ 06S  Var_58    C9   C8   C7   O9     98.31  30.0  1
+ 06S  Var_59    C8   C7   O9   P2   -165.22  30.0  1
+ 06S  Var_60    O7   C9   C8   O6     67.74  30.0  1
+ 06S  Var_61    C3   C2   O3   P1   -115.25  30.0  1
+ 06S  Var_62    C1   C2   O3   P1    132.99  30.0  1
+ 06S  Var_63    C4   C3   C2   O3    142.98  30.0  1
+ 06S  Var_64    O2   C1   C2   O3    -40.21  30.0  1
+ 06S  Var_65    O1   C4   C3   C2    178.51  30.0  1
+ 06S  Var_66    O    C3   C4   O1     59.49  30.0  3
+ 06S  Var_67    H7   O8   C6   C5   -169.35  30.0  3
+ 06S  Var_68    H12  C9   C8   C7    -54.59  30.0  1
+ 06S  Var_69    H13  C9   C8   C7     64.13  30.0  1
+ 06S  Var_70    H17  C4   C3   C2    -58.62  30.0  1
+ 06S  Var_71    H18  C4   C3   C2     58.28  30.0  1
+ 06S  Var_72    H22  O2   C1   C2   -154.46  30.0  3
+ 06S  Var_73    C2   O3   P1   O7    167.17  30.0  3
+ 06S  Var_74    C2   O3   P1   O10   -66.64  30.0  3
+ 06S  Var_75    C2   O3   P1   S1     55.73  30.0  3
+ 06S  Var_76    H9   S2   P2   O9    -91.70  30.0  3
+ 06S  Var_77    H14  S1   P1   O7    -55.54  30.0  3
+ 06S  Var_78    H19  S    P    O1    -68.80  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

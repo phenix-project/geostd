@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QKT  QKT  '[(2~{S})-2-(phenylcarbamoyloxy)-3-piperidin-1-yl-propyl] ~{N}-phenylcarbamate'  ligand  56  29  .  2022-03-23  2022-03-23
+ QKT  QKT  '[(2~{S})-2-(phenylcarbamoyloxy)-3-piperidin-1-yl-propyl] ~{N}-phenylcarbamate'  ligand  56  29  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_QKT
@@ -280,44 +281,60 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QKT  CONST_01  C5   C6   C7   C2     0.00   0.0  0
- QKT  CONST_02  C5   C4   C3   C2     0.00   0.0  0
- QKT  CONST_03  C6   C7   C2   C3     0.00   0.0  0
- QKT  CONST_04  C6   C5   C4   C3     0.00   0.0  0
- QKT  CONST_05  C7   C2   C3   C4     0.00   0.0  0
- QKT  CONST_06  C7   C6   C5   C4     0.00   0.0  0
- QKT  CONST_07  C20  C21  C22  C17    0.00   0.0  0
- QKT  CONST_08  C20  C19  C18  C17    0.00   0.0  0
- QKT  CONST_09  C21  C22  C17  C18    0.00   0.0  0
- QKT  CONST_10  C21  C20  C19  C18    0.00   0.0  0
- QKT  CONST_11  C22  C17  C18  C19    0.00   0.0  0
- QKT  CONST_12  C22  C21  C20  C19    0.00   0.0  0
- QKT  CONST_13  N1   C2   C3   C4   180.00   0.0  0
- QKT  CONST_14  N16  C17  C18  C19  180.00   0.0  0
- QKT  CONST_15  N16  C17  C22  C21  180.00   0.0  0
- QKT  CONST_16  N1   C2   C7   C6   180.00   0.0  0
- QKT  CONST_17  H22  C6   C7   C2   180.00   0.0  0
- QKT  CONST_18  H2   C4   C3   C2   180.00   0.0  0
- QKT  CONST_19  H23  C7   C2   C3   180.00   0.0  0
- QKT  CONST_20  H3   C5   C4   C3   180.00   0.0  0
- QKT  CONST_21  H1   C3   C4   C5   180.00   0.0  0
- QKT  CONST_22  H10  C21  C22  C17  180.00   0.0  0
- QKT  CONST_23  H8   C19  C18  C17  180.00   0.0  0
- QKT  CONST_24  H11  C22  C17  C18  180.00   0.0  0
- QKT  CONST_25  H9   C20  C19  C18  180.00   0.0  0
- QKT  CONST_26  H7   C18  C19  C20  180.00   0.0  0
- QKT  CONST_32  H25  N16  C17  C18    0.00   0.0  0
- QKT  CONST_33  O10  C8   N1   C2   180.00   0.0  0
- QKT  CONST_34  O9   C8   N1   C2     0.00   0.0  0
- QKT  CONST_35  O13  C14  N16  C17  180.00   0.0  0
- QKT  CONST_36  O15  C14  N16  C17    0.00   0.0  0
- QKT  Var_01    C28  C27  C26  C25   60.74  30.0  1
- QKT  Var_02    C28  C29  N24  C25   64.84  30.0  1
- QKT  Var_03    C29  C28  C27  C26  -33.66  30.0  1
- QKT  Var_04    C29  N24  C25  C26  -35.90  30.0  1
- QKT  Var_05    N24  C29  C28  C27  -27.17  30.0  1
- QKT  Var_06    N24  C25  C26  C27  -25.14  30.0  1
- QKT  Var_07    H4   C11  O10  C8   151.90  30.0  2
+ QKT  CONST_01  C5   C6   C7   C2      0.00   0.0  0
+ QKT  CONST_02  C5   C4   C3   C2      0.00   0.0  0
+ QKT  CONST_03  C6   C7   C2   C3      0.00   0.0  0
+ QKT  CONST_04  C6   C5   C4   C3      0.00   0.0  0
+ QKT  CONST_05  C7   C2   C3   C4      0.00   0.0  0
+ QKT  CONST_06  C7   C6   C5   C4      0.00   0.0  0
+ QKT  CONST_07  C20  C21  C22  C17     0.00   0.0  0
+ QKT  CONST_08  C20  C19  C18  C17     0.00   0.0  0
+ QKT  CONST_09  C21  C22  C17  C18     0.00   0.0  0
+ QKT  CONST_10  C21  C20  C19  C18     0.00   0.0  0
+ QKT  CONST_11  C22  C17  C18  C19     0.00   0.0  0
+ QKT  CONST_12  C22  C21  C20  C19     0.00   0.0  0
+ QKT  CONST_13  N1   C2   C3   C4    180.00   0.0  0
+ QKT  CONST_14  N16  C17  C18  C19   180.00   0.0  0
+ QKT  CONST_15  N16  C17  C22  C21   180.00   0.0  0
+ QKT  CONST_16  N1   C2   C7   C6    180.00   0.0  0
+ QKT  CONST_17  H22  C6   C7   C2    180.00   0.0  0
+ QKT  CONST_18  H2   C4   C3   C2    180.00   0.0  0
+ QKT  CONST_19  H23  C7   C2   C3    180.00   0.0  0
+ QKT  CONST_20  H3   C5   C4   C3    180.00   0.0  0
+ QKT  CONST_21  H1   C3   C4   C5    180.00   0.0  0
+ QKT  CONST_22  H10  C21  C22  C17   180.00   0.0  0
+ QKT  CONST_23  H8   C19  C18  C17   180.00   0.0  0
+ QKT  CONST_24  H11  C22  C17  C18   180.00   0.0  0
+ QKT  CONST_25  H9   C20  C19  C18   180.00   0.0  0
+ QKT  CONST_26  H7   C18  C19  C20   180.00   0.0  0
+ QKT  CONST_27  H25  N16  C17  C18     0.00   0.0  0
+ QKT  CONST_28  O10  C8   N1   C2    180.00   0.0  0
+ QKT  CONST_29  O9   C8   N1   C2      0.00   0.0  0
+ QKT  CONST_30  O13  C14  N16  C17   180.00   0.0  0
+ QKT  CONST_31  O15  C14  N16  C17     0.00   0.0  0
+ QKT  Var_01    C28  C27  C26  C25    60.74  30.0  1
+ QKT  Var_02    C28  C29  N24  C25    64.84  30.0  1
+ QKT  Var_03    C29  C28  C27  C26   -33.66  30.0  1
+ QKT  Var_04    C29  N24  C25  C26   -35.90  30.0  1
+ QKT  Var_05    N24  C29  C28  C27   -27.17  30.0  1
+ QKT  Var_06    N24  C25  C26  C27   -25.14  30.0  1
+ QKT  Var_07    H4   C11  O10  C8    151.90  30.0  2
+ QKT  Var_08    C29  N24  C23  C12   -85.30  30.0  1
+ QKT  Var_09    C25  N24  C23  C12   142.94  30.0  1
+ QKT  Var_10    H12  C23  N24  C25   -97.23  30.0  3
+ QKT  Var_11    H13  C23  N24  C25    21.00  30.0  3
+ QKT  Var_12    N24  C23  C12  C11  -174.84  30.0  1
+ QKT  Var_13    O13  C12  C23  N24   -46.71  30.0  3
+ QKT  Var_14    H6   C12  C23  N24    66.79  30.0  3
+ QKT  Var_15    C14  O13  C12  C11    70.88  30.0  3
+ QKT  Var_16    O9   C8   O10  C11   -10.34  30.0  3
+ QKT  Var_17    N1   C8   O10  C11   170.34  30.0  3
+ QKT  Var_18    O15  C14  O13  C12     5.80  30.0  3
+ QKT  Var_19    N16  C14  O13  C12  -174.93  30.0  3
+ QKT  Var_20    O10  C11  C12  C23  -173.73  30.0  3
+ QKT  Var_21    C14  O13  C12  C23   -57.17  30.0  3
+ QKT  Var_22    O13  C12  C11  O10    56.38  30.0  1
+ QKT  Var_23    H5   C11  C12  C23    61.35  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

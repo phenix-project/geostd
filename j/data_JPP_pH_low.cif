@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- JPP  JPP  '(2R,4S)-2-[(1R)-1-{[(2R)-2-{[(4-ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}-2-phenylacetyl]amino}-2-oxoethyl]-5,5-dimethyl-1,3-thiazolidine-4-carboxylic acid'  ligand  65  36  .  2022-11-17  2022-11-17
+ JPP  JPP  '(2R,4S)-2-[(1R)-1-{[(2R)-2-{[(4-ethyl-2,3-dioxopiperazin-1-yl)carbonyl]amino}-2-phenylacetyl]amino}-2-oxoethyl]-5,5-dimethyl-1,3-thiazolidine-4-carboxylic acid'  ligand  65  36  .  2022-11-17  2023-10-19
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-19
 ;
 
 data_comp_JPP
@@ -316,47 +317,88 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- JPP  CONST_01  C16  C12  C07  C05    0.00   0.0  0
- JPP  CONST_02  C16  C13  C08  C05    0.00   0.0  0
- JPP  CONST_03  C13  C16  C12  C07    0.00   0.0  0
- JPP  CONST_04  C13  C08  C05  C07    0.00   0.0  0
- JPP  CONST_05  C12  C07  C05  C08    0.00   0.0  0
- JPP  CONST_06  C12  C16  C13  C08    0.00   0.0  0
- JPP  CONST_07  C14  C11  N01  C09    0.00   0.0  0
- JPP  CONST_08  C11  C14  N    C10    0.00   0.0  0
- JPP  CONST_09  C12  C07  C05  CA   180.00   0.0  0
- JPP  CONST_10  C13  C08  C05  CA   180.00   0.0  0
- JPP  CONST_11  C09  N01  C11  O05  180.00   0.0  0
- JPP  CONST_12  C10  N    C14  O    180.00   0.0  0
- JPP  CONST_13  C14  C11  N01  C06  180.00   0.0  0
- JPP  CONST_14  C15  N    C14  C11  180.00   0.0  0
- JPP  CONST_15  H23  C12  C07  C05  180.00   0.0  0
- JPP  CONST_16  H24  C13  C08  C05  180.00   0.0  0
- JPP  CONST_17  H27  C16  C12  C07  180.00   0.0  0
- JPP  CONST_18  H18  C08  C05  C07  180.00   0.0  0
- JPP  CONST_19  H17  C07  C05  C08  180.00   0.0  0
- JPP  CONST_20  C09  N01  C06  O04    0.00   0.0  0
- JPP  CONST_21  C11  N01  C06  O04  180.00   0.0  0
- JPP  CONST_22  C06  N01  C11  O05    0.00   0.0  0
- JPP  CONST_23  C15  N    C14  O      0.00   0.0  0
- JPP  CONST_24  C09  N01  C06  N04  180.00   0.0  0
- JPP  CONST_25  C11  N01  C06  N04    0.00   0.0  0
- JPP  CONST_26  CA   N04  C06  N01  180.00   0.0  0
- JPP  CONST_27  H5   N04  C06  N01    0.00   0.0  0
- JPP  CONST_28  H1   O02  C04  C18  180.00   0.0  0
- JPP  CONST_29  C20  N03  C21  O06    0.00   0.0  0
- JPP  CONST_30  CA   N04  C06  O04    0.00   0.0  0
- JPP  CONST_31  CA   C21  N03  C20  180.00   0.0  0
- JPP  CONST_32  H4   N03  C21  O06  180.00   0.0  0
- JPP  Var_01    N    C10  C09  N01  -58.32  30.0  1
- JPP  Var_02    N    C14  C11  N01  -20.14  30.0  1
- JPP  Var_03    C18  C19  S    C17  -23.42  30.0  1
- JPP  Var_04    C14  N    C10  C09   41.80  30.0  1
- JPP  Var_05    C11  N01  C09  C10   37.65  30.0  1
- JPP  Var_06    C    C15  N    C10  -77.70  30.0  3
- JPP  Var_07    H13  C03  C19  S    -62.47  30.0  3
- JPP  Var_08    H10  C02  C19  S     59.55  30.0  3
- JPP  Var_09    H28  C    C15  N    179.82  30.0  3
+ JPP  CONST_01  C16  C12  C07  C05     0.00   0.0  0
+ JPP  CONST_02  C16  C13  C08  C05     0.00   0.0  0
+ JPP  CONST_03  C13  C16  C12  C07     0.00   0.0  0
+ JPP  CONST_04  C13  C08  C05  C07     0.00   0.0  0
+ JPP  CONST_05  C12  C07  C05  C08     0.00   0.0  0
+ JPP  CONST_06  C12  C16  C13  C08     0.00   0.0  0
+ JPP  CONST_07  C14  C11  N01  C09     0.00   0.0  0
+ JPP  CONST_08  C11  C14  N    C10     0.00   0.0  0
+ JPP  CONST_09  C12  C07  C05  CA    180.00   0.0  0
+ JPP  CONST_10  C13  C08  C05  CA    180.00   0.0  0
+ JPP  CONST_11  C09  N01  C11  O05   180.00   0.0  0
+ JPP  CONST_12  C10  N    C14  O     180.00   0.0  0
+ JPP  CONST_13  C14  C11  N01  C06   180.00   0.0  0
+ JPP  CONST_14  C15  N    C14  C11   180.00   0.0  0
+ JPP  CONST_15  H23  C12  C07  C05   180.00   0.0  0
+ JPP  CONST_16  H24  C13  C08  C05   180.00   0.0  0
+ JPP  CONST_17  H27  C16  C12  C07   180.00   0.0  0
+ JPP  CONST_18  H18  C08  C05  C07   180.00   0.0  0
+ JPP  CONST_19  H17  C07  C05  C08   180.00   0.0  0
+ JPP  CONST_20  C09  N01  C06  O04     0.00   0.0  0
+ JPP  CONST_21  C11  N01  C06  O04   180.00   0.0  0
+ JPP  CONST_22  C06  N01  C11  O05     0.00   0.0  0
+ JPP  CONST_23  C15  N    C14  O       0.00   0.0  0
+ JPP  CONST_24  C09  N01  C06  N04   180.00   0.0  0
+ JPP  CONST_25  C11  N01  C06  N04     0.00   0.0  0
+ JPP  CONST_26  CA   N04  C06  N01   180.00   0.0  0
+ JPP  CONST_27  H5   N04  C06  N01     0.00   0.0  0
+ JPP  CONST_28  H1   O02  C04  C18   180.00   0.0  0
+ JPP  CONST_29  C20  N03  C21  O06     0.00   0.0  0
+ JPP  CONST_30  CA   N04  C06  O04     0.00   0.0  0
+ JPP  CONST_31  CA   C21  N03  C20   180.00   0.0  0
+ JPP  CONST_32  H4   N03  C21  O06   180.00   0.0  0
+ JPP  Var_01    N    C10  C09  N01   -58.32  30.0  1
+ JPP  Var_02    N    C14  C11  N01   -20.14  30.0  1
+ JPP  Var_03    C18  C19  S    C17   -23.42  30.0  1
+ JPP  Var_04    C14  N    C10  C09    41.80  30.0  1
+ JPP  Var_05    C11  N01  C09  C10    37.65  30.0  1
+ JPP  Var_06    C    C15  N    C10   -77.70  30.0  3
+ JPP  Var_07    H13  C03  C19  S     -62.47  30.0  3
+ JPP  Var_08    H10  C02  C19  S      59.55  30.0  3
+ JPP  Var_09    H28  C    C15  N     179.82  30.0  3
+ JPP  Var_10    N02  C18  C19  S      41.24  30.0  1
+ JPP  Var_11    C18  N02  C17  S      23.00  30.0  1
+ JPP  Var_12    C19  S    C17  N02     1.98  30.0  1
+ JPP  Var_13    C19  C18  N02  C17   -43.37  30.0  1
+ JPP  Var_14    C04  C18  C19  S     167.58  30.0  1
+ JPP  Var_15    C03  C19  C18  N02   156.93  30.0  1
+ JPP  Var_16    C02  C19  C18  N02   -76.31  30.0  1
+ JPP  Var_17    C04  C18  N02  C17  -168.75  30.0  1
+ JPP  Var_18    C20  C17  S    C19   125.34  30.0  1
+ JPP  Var_19    C20  C17  N02  C18   -99.77  30.0  1
+ JPP  Var_20    H7   C18  C19  S     -77.00  30.0  1
+ JPP  Var_21    H2   N02  C17  S     -99.63  30.0  1
+ JPP  Var_22    H6   C17  S    C19  -116.57  30.0  1
+ JPP  Var_23    C01  C20  C17  S     176.35  30.0  1
+ JPP  Var_24    N03  C20  C17  S     -60.35  30.0  1
+ JPP  Var_25    N02  C18  C04  O02    21.83  30.0  3
+ JPP  Var_26    C19  C18  C04  O02  -102.32  30.0  3
+ JPP  Var_27    N02  C18  C04  O03  -159.54  30.0  3
+ JPP  Var_28    C19  C18  C04  O03    76.32  30.0  3
+ JPP  Var_29    C01  C20  C17  N02   -62.53  30.0  1
+ JPP  Var_30    N03  C20  C17  N02    60.77  30.0  1
+ JPP  Var_31    C07  C05  CA   N04   146.84  30.0  2
+ JPP  Var_32    C08  C05  CA   N04   -33.79  30.0  2
+ JPP  Var_33    C04  C18  C19  C02    50.03  30.0  1
+ JPP  Var_34    C04  C18  C19  C03   -76.73  30.0  1
+ JPP  Var_35    C07  C05  CA   C21   -93.45  30.0  2
+ JPP  Var_36    C08  C05  CA   C21    85.93  30.0  2
+ JPP  Var_37    H8   C20  C17  S      61.77  30.0  1
+ JPP  Var_38    H16  CA   C05  C07    24.96  30.0  2
+ JPP  Var_39    C17  C20  C01  O01   127.17  30.0  3
+ JPP  Var_40    C05  CA   C21  O06  -100.42  30.0  1
+ JPP  Var_41    C05  CA   C21  N03    79.28  30.0  1
+ JPP  Var_42    C21  N03  C20  C17   106.69  30.0  1
+ JPP  Var_43    C06  N04  CA   C05   -72.74  30.0  3
+ JPP  Var_44    H9   C01  C20  C17   -52.94  30.0  2
+ JPP  Var_45    H4   N03  C20  C17   -86.96  30.0  1
+ JPP  Var_46    N03  C20  C01  O01     1.25  30.0  3
+ JPP  Var_47    N04  CA   C21  O06    23.16  30.0  1
+ JPP  Var_48    N04  CA   C21  N03  -157.15  30.0  1
+ JPP  Var_49    C21  N03  C20  C01  -131.79  30.0  1
+ JPP  Var_50    C06  N04  CA   C21   165.93  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RAB  RAB  9-beta-D-arabinofuranosyl-9H-purin-6-amine  ligand  32  19  .  2022-03-23  2022-03-23
+ RAB  RAB  9-beta-D-arabinofuranosyl-9H-purin-6-amine  ligand  32  19  .  2022-03-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RAB
@@ -189,33 +190,64 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RAB  CONST_01  C2    N3  C4  N9   180.00  0.0  0
- RAB  CONST_02  C6    C5  C4  N9   180.00  0.0  0
- RAB  CONST_03  N7    C5  C4  N9     0.00  0.0  0
- RAB  CONST_04  C5    N7  C8  N9     0.00  0.0  0
- RAB  CONST_05  N7    C8  N9  C4     0.00  0.0  0
- RAB  CONST_06  N1    C2  N3  C4     0.00  0.0  0
- RAB  CONST_07  N1    C6  C5  C4     0.00  0.0  0
- RAB  CONST_08  C8    N7  C5  C4     0.00  0.0  0
- RAB  CONST_09  C8    N9  C4  N3   180.00  0.0  0
- RAB  CONST_10  C6    C5  C4  N3     0.00  0.0  0
- RAB  CONST_11  N7    C5  C4  N3   180.00  0.0  0
- RAB  CONST_12  C6    N1  C2  N3     0.00  0.0  0
- RAB  CONST_13  C5    C4  N3  C2     0.00  0.0  0
- RAB  CONST_14  C5    C6  N1  C2     0.00  0.0  0
- RAB  CONST_15  N7    C5  C6  N1   180.00  0.0  0
- RAB  CONST_16  C8    N7  C5  C6   180.00  0.0  0
- RAB  CONST_17  C8    N9  C4  C5     0.00  0.0  0
- RAB  CONST_18  N3    C4  N9  C1'    0.00  0.0  0
- RAB  CONST_19  C5    C4  N9  C1'  180.00  0.0  0
- RAB  CONST_20  N7    C8  N9  C1'  180.00  0.0  0
- RAB  CONST_21  N6    C6  C5  C4   180.00  0.0  0
- RAB  CONST_22  N6    C6  N1  C2   180.00  0.0  0
- RAB  CONST_23  N7    C5  C6  N6     0.00  0.0  0
- RAB  CONST_24  H8    C8  N9  C1'    0.00  0.0  0
- RAB  CONST_25  H2    C2  N3  C4   180.00  0.0  0
- RAB  CONST_26  HN61  N6  C6  N1     0.00  0.0  0
- RAB  CONST_27  HN62  N6  C6  N1   180.00  0.0  0
+ RAB  CONST_01  C2    N3   C4   N9    180.00   0.0  0
+ RAB  CONST_02  C6    C5   C4   N9    180.00   0.0  0
+ RAB  CONST_03  N7    C5   C4   N9      0.00   0.0  0
+ RAB  CONST_04  C5    N7   C8   N9      0.00   0.0  0
+ RAB  CONST_05  N7    C8   N9   C4      0.00   0.0  0
+ RAB  CONST_06  N1    C2   N3   C4      0.00   0.0  0
+ RAB  CONST_07  N1    C6   C5   C4      0.00   0.0  0
+ RAB  CONST_08  C8    N7   C5   C4      0.00   0.0  0
+ RAB  CONST_09  C8    N9   C4   N3    180.00   0.0  0
+ RAB  CONST_10  C6    C5   C4   N3      0.00   0.0  0
+ RAB  CONST_11  N7    C5   C4   N3    180.00   0.0  0
+ RAB  CONST_12  C6    N1   C2   N3      0.00   0.0  0
+ RAB  CONST_13  C5    C4   N3   C2      0.00   0.0  0
+ RAB  CONST_14  C5    C6   N1   C2      0.00   0.0  0
+ RAB  CONST_15  N7    C5   C6   N1    180.00   0.0  0
+ RAB  CONST_16  C8    N7   C5   C6    180.00   0.0  0
+ RAB  CONST_17  C8    N9   C4   C5      0.00   0.0  0
+ RAB  CONST_18  N3    C4   N9   C1'     0.00   0.0  0
+ RAB  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ RAB  CONST_20  N7    C8   N9   C1'   180.00   0.0  0
+ RAB  CONST_21  N6    C6   C5   C4    180.00   0.0  0
+ RAB  CONST_22  N6    C6   N1   C2    180.00   0.0  0
+ RAB  CONST_23  N7    C5   C6   N6      0.00   0.0  0
+ RAB  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ RAB  CONST_25  H2    C2   N3   C4    180.00   0.0  0
+ RAB  CONST_26  HN61  N6   C6   N1      0.00   0.0  0
+ RAB  CONST_27  HN62  N6   C6   N1    180.00   0.0  0
+ RAB  Var_01    N9    C1'  O4'  C4'  -120.65  30.0  1
+ RAB  Var_02    C2'   C1'  O4'  C4'     1.27  30.0  1
+ RAB  Var_03    C1'   C2'  C3'  C4'    34.24  30.0  1
+ RAB  Var_04    C2'   C3'  C4'  O4'   -34.45  30.0  1
+ RAB  Var_05    C4    N9   C1'  O4'  -148.36  30.0  2
+ RAB  Var_06    C8    N9   C1'  O4'    36.63  30.0  2
+ RAB  Var_07    C3'   C2'  C1'  O4'   -23.16  30.0  1
+ RAB  Var_08    C3'   C4'  O4'  C1'    21.26  30.0  1
+ RAB  Var_09    C3'   C2'  C1'  N9     96.67  30.0  1
+ RAB  Var_10    C2'   C1'  N9   C4     93.29  30.0  1
+ RAB  Var_11    C2'   C1'  N9   C8    -81.73  30.0  1
+ RAB  Var_12    C1'   O4'  C4'  C5'   143.89  30.0  1
+ RAB  Var_13    C2'   C3'  C4'  C5'  -154.84  30.0  1
+ RAB  Var_14    O2'   C2'  C3'  C4'   154.93  30.0  1
+ RAB  Var_15    O3'   C3'  C4'  O4'  -153.46  30.0  1
+ RAB  Var_16    O2'   C2'  C1'  O4'  -147.43  30.0  1
+ RAB  Var_17    O3'   C3'  C2'  C1'   156.05  30.0  1
+ RAB  Var_18    O2'   C2'  C1'  N9    -27.61  30.0  1
+ RAB  Var_19    H1'   C1'  O4'  C4'   122.77  30.0  1
+ RAB  Var_20    H2'   C2'  C3'  C4'   -79.04  30.0  1
+ RAB  Var_21    H3'   C3'  C4'  O4'    80.78  30.0  1
+ RAB  Var_22    H4'   C4'  O4'  C1'   -95.55  30.0  1
+ RAB  Var_23    O4'   C4'  C5'  O5'    65.48  30.0  3
+ RAB  Var_24    C3'   C4'  C5'  O5'  -177.11  30.0  3
+ RAB  Var_25    O3'   C3'  C4'  C5'    86.14  30.0  1
+ RAB  Var_26    O3'   C3'  C2'  O2'   -83.26  30.0  1
+ RAB  Var_27    H3    O3'  C3'  C4'   -79.64  30.0  3
+ RAB  Var_28    H5'1  C5'  C4'  O4'  -172.83  30.0  2
+ RAB  Var_29    H5'2  C5'  C4'  O4'   -57.50  30.0  2
+ RAB  Var_30    H1    O2'  C2'  C1'  -164.56  30.0  3
+ RAB  Var_31    H5'   O5'  C5'  C4'  -178.57  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

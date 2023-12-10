@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 2DS  2DS  N-[(2,3-dihydroxyphenyl)carbonyl]-O-[(2R)-2-{[(2,3-dihydroxyphenyl)carbonyl]amino}-3-hydroxypropanoyl]-L-serine  ligand  52  33  .  2021-08-04  2021-08-04  
+ 2DS  2DS  N-[(2,3-dihydroxyphenyl)carbonyl]-O-[(2R)-2-{[(2,3-dihydroxyphenyl)carbonyl]amino}-3-hydroxypropanoyl]-L-serine  ligand  52  33  .  2021-08-04  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_2DS
@@ -254,45 +255,73 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 2DS  CONST_01  C10  C13  C16  C1      0.00   0.0  0
- 2DS  CONST_02  C10  C7   C4   C1      0.00   0.0  0
- 2DS  CONST_03  C12  C15  C18  C3      0.00   0.0  0
- 2DS  CONST_04  C12  C9   C6   C3      0.00   0.0  0
- 2DS  CONST_05  C13  C16  C1   C4      0.00   0.0  0
- 2DS  CONST_06  C13  C10  C7   C4      0.00   0.0  0
- 2DS  CONST_07  C15  C18  C3   C6      0.00   0.0  0
- 2DS  CONST_08  C15  C12  C9   C6      0.00   0.0  0
- 2DS  CONST_09  C16  C1   C4   C7      0.00   0.0  0
- 2DS  CONST_10  C16  C13  C10  C7      0.00   0.0  0
- 2DS  CONST_11  C18  C3   C6   C9      0.00   0.0  0
- 2DS  CONST_12  C18  C15  C12  C9      0.00   0.0  0
- 2DS  CONST_13  C13  C16  C1   O1    180.00   0.0  0
- 2DS  CONST_14  C7   C4   C1   O1    180.00   0.0  0
- 2DS  CONST_15  C15  C18  C3   O3    180.00   0.0  0
- 2DS  CONST_16  C9   C6   C3   O3    180.00   0.0  0
- 2DS  CONST_17  C19  C16  C1   C4    180.00   0.0  0
- 2DS  CONST_18  C16  C1   C4   O4    180.00   0.0  0
- 2DS  CONST_19  C10  C7   C4   O4    180.00   0.0  0
- 2DS  CONST_20  C21  C18  C3   C6    180.00   0.0  0
- 2DS  CONST_21  C18  C3   C6   O6    180.00   0.0  0
- 2DS  CONST_22  C12  C9   C6   O6    180.00   0.0  0
- 2DS  CONST_23  C19  C16  C13  C10   180.00   0.0  0
- 2DS  CONST_24  C21  C18  C15  C12   180.00   0.0  0
- 2DS  CONST_25  H13  C13  C16  C1    180.00   0.0  0
- 2DS  CONST_26  H7   C7   C4   C1    180.00   0.0  0
- 2DS  CONST_27  H15  C15  C18  C3    180.00   0.0  0
- 2DS  CONST_28  H9   C9   C6   C3    180.00   0.0  0
- 2DS  CONST_29  H10  C10  C7   C4    180.00   0.0  0
- 2DS  CONST_30  H12  C12  C9   C6    180.00   0.0  0
- 2DS  CONST_31  C22  N1   C19  C16   180.00   0.0  0
- 2DS  CONST_32  C24  N3   C21  C18   180.00   0.0  0
- 2DS  CONST_33  HN1  N1   C19  C16     0.00   0.0  0
- 2DS  CONST_34  HN3  N3   C21  C18     0.00   0.0  0
- 2DS  CONST_35  C22  N1   C19  O7      0.00   0.0  0
- 2DS  CONST_36  C24  N3   C21  O9      0.00   0.0  0
- 2DS  Var_01    N1   C19  C16  C1    176.75  30.0  2
- 2DS  Var_02    N3   C21  C18  C3   -173.99  30.0  2
- 2DS  Var_03    H30  C30  O15  C25   -68.40  30.0  1
+ 2DS  CONST_01  C10   C13  C16  C1      0.00   0.0  0
+ 2DS  CONST_02  C10   C7   C4   C1      0.00   0.0  0
+ 2DS  CONST_03  C12   C15  C18  C3      0.00   0.0  0
+ 2DS  CONST_04  C12   C9   C6   C3      0.00   0.0  0
+ 2DS  CONST_05  C13   C16  C1   C4      0.00   0.0  0
+ 2DS  CONST_06  C13   C10  C7   C4      0.00   0.0  0
+ 2DS  CONST_07  C15   C18  C3   C6      0.00   0.0  0
+ 2DS  CONST_08  C15   C12  C9   C6      0.00   0.0  0
+ 2DS  CONST_09  C16   C1   C4   C7      0.00   0.0  0
+ 2DS  CONST_10  C16   C13  C10  C7      0.00   0.0  0
+ 2DS  CONST_11  C18   C3   C6   C9      0.00   0.0  0
+ 2DS  CONST_12  C18   C15  C12  C9      0.00   0.0  0
+ 2DS  CONST_13  C13   C16  C1   O1    180.00   0.0  0
+ 2DS  CONST_14  C7    C4   C1   O1    180.00   0.0  0
+ 2DS  CONST_15  C15   C18  C3   O3    180.00   0.0  0
+ 2DS  CONST_16  C9    C6   C3   O3    180.00   0.0  0
+ 2DS  CONST_17  C19   C16  C1   C4    180.00   0.0  0
+ 2DS  CONST_18  C16   C1   C4   O4    180.00   0.0  0
+ 2DS  CONST_19  C10   C7   C4   O4    180.00   0.0  0
+ 2DS  CONST_20  C21   C18  C3   C6    180.00   0.0  0
+ 2DS  CONST_21  C18   C3   C6   O6    180.00   0.0  0
+ 2DS  CONST_22  C12   C9   C6   O6    180.00   0.0  0
+ 2DS  CONST_23  C19   C16  C13  C10   180.00   0.0  0
+ 2DS  CONST_24  C21   C18  C15  C12   180.00   0.0  0
+ 2DS  CONST_25  H13   C13  C16  C1    180.00   0.0  0
+ 2DS  CONST_26  H7    C7   C4   C1    180.00   0.0  0
+ 2DS  CONST_27  H15   C15  C18  C3    180.00   0.0  0
+ 2DS  CONST_28  H9    C9   C6   C3    180.00   0.0  0
+ 2DS  CONST_29  H10   C10  C7   C4    180.00   0.0  0
+ 2DS  CONST_30  H12   C12  C9   C6    180.00   0.0  0
+ 2DS  CONST_31  C22   N1   C19  C16   180.00   0.0  0
+ 2DS  CONST_32  C24   N3   C21  C18   180.00   0.0  0
+ 2DS  CONST_33  HN1   N1   C19  C16     0.00   0.0  0
+ 2DS  CONST_34  HN3   N3   C21  C18     0.00   0.0  0
+ 2DS  CONST_35  C22   N1   C19  O7      0.00   0.0  0
+ 2DS  CONST_36  C24   N3   C21  O9      0.00   0.0  0
+ 2DS  Var_01    N1    C19  C16  C1    176.75  30.0  2
+ 2DS  Var_02    N3    C21  C18  C3   -173.99  30.0  2
+ 2DS  Var_03    H30   C30  O15  C25   -68.40  30.0  1
+ 2DS  Var_04    HO4   O4   C4   C1      1.05  30.0  2
+ 2DS  Var_05    HO6   O6   C6   C3     -0.08  30.0  2
+ 2DS  Var_06    HO1   O1   C1   C4   -178.22  30.0  2
+ 2DS  Var_07    HO3   O3   C3   C6    176.77  30.0  2
+ 2DS  Var_08    O10   C25  C22  N1      5.96  30.0  3
+ 2DS  Var_09    O15   C25  C22  N1   -174.18  30.0  3
+ 2DS  Var_10    O11   C20  C22  N1    -62.51  30.0  3
+ 2DS  Var_11    O15   C30  C24  N3     64.33  30.0  3
+ 2DS  Var_12    O12   C27  C24  N3     -2.89  30.0  2
+ 2DS  Var_13    O14   C27  C24  N3    177.05  30.0  2
+ 2DS  Var_14    C30   C24  C27  O12   121.16  30.0  2
+ 2DS  Var_15    C30   C24  C27  O14   -58.91  30.0  2
+ 2DS  Var_16    C25   C22  N1   C19    74.44  30.0  3
+ 2DS  Var_17    C20   C22  N1   C19  -162.95  30.0  3
+ 2DS  Var_18    C30   C24  N3   C21   160.22  30.0  3
+ 2DS  Var_19    C27   C24  N3   C21   -75.45  30.0  3
+ 2DS  Var_20    C30   O15  C25  C22  -178.08  30.0  3
+ 2DS  Var_21    O11   C20  C22  C25    59.96  30.0  3
+ 2DS  Var_22    O15   C30  C24  C27   -61.39  30.0  3
+ 2DS  Var_23    O10   C25  O15  C30     1.78  30.0  1
+ 2DS  Var_24    O10   C25  C22  C20  -116.30  30.0  3
+ 2DS  Var_25    O15   C25  C22  C20    63.56  30.0  3
+ 2DS  Var_26    H18   C20  C22  N1     58.92  30.0  3
+ 2DS  Var_27    H19   C20  C22  N1    175.46  30.0  3
+ 2DS  Var_28    H30A  C30  C24  N3   -175.91  30.0  3
+ 2DS  Var_29    H24   C24  C27  O12  -122.90  30.0  2
+ 2DS  Var_30    H22   C22  N1   C19   -44.75  30.0  3
+ 2DS  Var_31    H20   O11  C20  C22   176.43  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

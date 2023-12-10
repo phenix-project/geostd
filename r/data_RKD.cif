@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- RKD  RKD  (2S)-2-(4-chlorophenyl)-2-hydroxy-2-[4-(1H-pyrazol-4-yl)phenyl]ethanaminium  ligand  39  22  .  2021-08-23  2021-08-23  
+ RKD  RKD  (2S)-2-(4-chlorophenyl)-2-hydroxy-2-[4-(1H-pyrazol-4-yl)phenyl]ethanaminium  ligand  39  22  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_RKD
@@ -213,45 +214,67 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- RKD  CONST_01  C7    C6   C5   C4     0.00   0.0  0
- RKD  CONST_02  C7    C9   C10  C4     0.00   0.0  0
- RKD  CONST_03  C9    C10  C4   C5     0.00   0.0  0
- RKD  CONST_04  C9    C7   C6   C5     0.00   0.0  0
- RKD  CONST_05  C10   C4   C5   C6     0.00   0.0  0
- RKD  CONST_06  C10   C9   C7   C6     0.00   0.0  0
- RKD  CONST_07  C14   C13  C12  C11    0.00   0.0  0
- RKD  CONST_08  C14   C15  C16  C11    0.00   0.0  0
- RKD  CONST_09  C15   C16  C11  C12    0.00   0.0  0
- RKD  CONST_10  C15   C14  C13  C12    0.00   0.0  0
- RKD  CONST_11  C17   C14  C13  C12  180.00   0.0  0
- RKD  CONST_12  C16   C11  C12  C13    0.00   0.0  0
- RKD  CONST_13  C16   C15  C14  C13    0.00   0.0  0
- RKD  CONST_16  N19   C18  C17  C14  180.00   0.0  0
- RKD  CONST_17  N20   C21  C17  C14  180.00   0.0  0
- RKD  CONST_20  C17   C14  C15  C16  180.00   0.0  0
- RKD  CONST_21  N20   N19  C18  C17    0.00   0.0  0
- RKD  CONST_22  N19   N20  C21  C17    0.00   0.0  0
- RKD  CONST_23  N20   C21  C17  C18    0.00   0.0  0
- RKD  CONST_24  C21   N20  N19  C18    0.00   0.0  0
- RKD  CONST_25  C21   C17  C18  N19    0.00   0.0  0
- RKD  CONST_26  CL8   C7   C6   C5   180.00   0.0  0
- RKD  CONST_27  C60   C4   C5   C6   180.00   0.0  0
- RKD  CONST_28  C10   C9   C7   CL8  180.00   0.0  0
- RKD  CONST_29  C60   C4   C10  C9   180.00   0.0  0
- RKD  CONST_30  C60   C11  C12  C13  180.00   0.0  0
- RKD  CONST_31  C60   C11  C16  C15  180.00   0.0  0
- RKD  CONST_32  H6    C6   C5   C4   180.00   0.0  0
- RKD  CONST_33  H9    C9   C10  C4   180.00   0.0  0
- RKD  CONST_34  H10   C10  C4   C5   180.00   0.0  0
- RKD  CONST_35  H5    C5   C6   C7   180.00   0.0  0
- RKD  CONST_36  H13   C13  C12  C11  180.00   0.0  0
- RKD  CONST_37  H15   C15  C16  C11  180.00   0.0  0
- RKD  CONST_38  H16   C16  C11  C12  180.00   0.0  0
- RKD  CONST_39  H12   C12  C13  C14  180.00   0.0  0
- RKD  CONST_40  H18   C18  C17  C14    0.00   0.0  0
- RKD  CONST_41  H21   C21  C17  C14    0.00   0.0  0
- RKD  CONST_42  HN20  N20  C21  C17  180.00   0.0  0
- RKD  Var_01    HN1   N1   C2   C60   61.69  30.0  3
+ RKD  CONST_01  C7    C6   C5   C4      0.00   0.0  0
+ RKD  CONST_02  C7    C9   C10  C4      0.00   0.0  0
+ RKD  CONST_03  C9    C10  C4   C5      0.00   0.0  0
+ RKD  CONST_04  C9    C7   C6   C5      0.00   0.0  0
+ RKD  CONST_05  C10   C4   C5   C6      0.00   0.0  0
+ RKD  CONST_06  C10   C9   C7   C6      0.00   0.0  0
+ RKD  CONST_07  C14   C13  C12  C11     0.00   0.0  0
+ RKD  CONST_08  C14   C15  C16  C11     0.00   0.0  0
+ RKD  CONST_09  C15   C16  C11  C12     0.00   0.0  0
+ RKD  CONST_10  C15   C14  C13  C12     0.00   0.0  0
+ RKD  CONST_11  C17   C14  C13  C12   180.00   0.0  0
+ RKD  CONST_12  C16   C11  C12  C13     0.00   0.0  0
+ RKD  CONST_13  C16   C15  C14  C13     0.00   0.0  0
+ RKD  CONST_14  N19   C18  C17  C14   180.00   0.0  0
+ RKD  CONST_15  N20   C21  C17  C14   180.00   0.0  0
+ RKD  CONST_16  C17   C14  C15  C16   180.00   0.0  0
+ RKD  CONST_17  N20   N19  C18  C17     0.00   0.0  0
+ RKD  CONST_18  N19   N20  C21  C17     0.00   0.0  0
+ RKD  CONST_19  N20   C21  C17  C18     0.00   0.0  0
+ RKD  CONST_20  C21   N20  N19  C18     0.00   0.0  0
+ RKD  CONST_21  C21   C17  C18  N19     0.00   0.0  0
+ RKD  CONST_22  CL8   C7   C6   C5    180.00   0.0  0
+ RKD  CONST_23  C60   C4   C5   C6    180.00   0.0  0
+ RKD  CONST_24  C10   C9   C7   CL8   180.00   0.0  0
+ RKD  CONST_25  C60   C4   C10  C9    180.00   0.0  0
+ RKD  CONST_26  C60   C11  C12  C13   180.00   0.0  0
+ RKD  CONST_27  C60   C11  C16  C15   180.00   0.0  0
+ RKD  CONST_28  H6    C6   C5   C4    180.00   0.0  0
+ RKD  CONST_29  H9    C9   C10  C4    180.00   0.0  0
+ RKD  CONST_30  H10   C10  C4   C5    180.00   0.0  0
+ RKD  CONST_31  H5    C5   C6   C7    180.00   0.0  0
+ RKD  CONST_32  H13   C13  C12  C11   180.00   0.0  0
+ RKD  CONST_33  H15   C15  C16  C11   180.00   0.0  0
+ RKD  CONST_34  H16   C16  C11  C12   180.00   0.0  0
+ RKD  CONST_35  H12   C12  C13  C14   180.00   0.0  0
+ RKD  CONST_36  H18   C18  C17  C14     0.00   0.0  0
+ RKD  CONST_37  H21   C21  C17  C14     0.00   0.0  0
+ RKD  CONST_38  HN20  N20  C21  C17   180.00   0.0  0
+ RKD  Var_01    HN1   N1   C2   C60    61.69  30.0  3
+ RKD  Var_02    C18   C17  C14  C13    19.16  30.0  2
+ RKD  Var_03    C21   C17  C14  C13  -160.47  30.0  2
+ RKD  Var_04    C18   C17  C14  C15  -160.72  30.0  2
+ RKD  Var_05    C21   C17  C14  C15    19.64  30.0  2
+ RKD  Var_06    C12   C11  C60  C4   -133.24  30.0  2
+ RKD  Var_07    C16   C11  C60  C4     49.32  30.0  2
+ RKD  Var_08    C11   C60  C4   C5     60.34  30.0  2
+ RKD  Var_09    C11   C60  C4   C10  -120.70  30.0  2
+ RKD  Var_10    C5    C4   C60  C2   -179.20  30.0  2
+ RKD  Var_11    C10   C4   C60  C2     -0.24  30.0  2
+ RKD  Var_12    C12   C11  C60  C2    104.85  30.0  2
+ RKD  Var_13    C16   C11  C60  C2    -72.58  30.0  2
+ RKD  Var_14    O7    C60  C4   C5    -63.96  30.0  2
+ RKD  Var_15    C10   C4   C60  O7    114.99  30.0  2
+ RKD  Var_16    C12   C11  C60  O7     -9.94  30.0  2
+ RKD  Var_17    C16   C11  C60  O7    172.62  30.0  2
+ RKD  Var_18    C4    C60  C2   N1    178.71  30.0  3
+ RKD  Var_19    C11   C60  C2   N1    -60.24  30.0  3
+ RKD  Var_20    H2    C2   C60  C4     60.49  30.0  2
+ RKD  Var_21    H2A   C2   C60  C4    -62.19  30.0  2
+ RKD  Var_22    HO7   O7   C60  C4     65.85  30.0  3
+ RKD  Var_23    O7    C60  C2   N1     59.65  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

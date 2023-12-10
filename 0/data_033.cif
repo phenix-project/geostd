@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 033  033  N-({4'-[(1-benzofuran-2-ylcarbonyl)amino]biphenyl-4-yl}sulfonyl)-L-valine  ligand  58  35  .  2021-08-03  2021-08-03  
+ 033  033  N-({4'-[(1-benzofuran-2-ylcarbonyl)amino]biphenyl-4-yl}sulfonyl)-L-valine  ligand  58  35  .  2021-08-03  2023-10-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-11
 ;
 
 data_comp_033
@@ -311,44 +312,60 @@ _chem_comp_tor.period
  033  CONST_22  C27  C20  C19  C18   180.00   0.0  0
  033  CONST_23  C22  C16  C18  C19     0.00   0.0  0
  033  CONST_24  C22  C21  C20  C19     0.00   0.0  0
- 033  CONST_27  C29  C28  C27  C20   180.00   0.0  0
- 033  CONST_28  C31  C32  C27  C20   180.00   0.0  0
- 033  CONST_31  C27  C20  C21  C22   180.00   0.0  0
- 033  CONST_32  C30  C29  C28  C27     0.00   0.0  0
- 033  CONST_33  C30  C31  C32  C27     0.00   0.0  0
- 033  CONST_34  C31  C32  C27  C28     0.00   0.0  0
- 033  CONST_35  C31  C30  C29  C28     0.00   0.0  0
- 033  CONST_36  C32  C27  C28  C29     0.00   0.0  0
- 033  CONST_37  C32  C31  C30  C29     0.00   0.0  0
- 033  CONST_38  C14  C12  C11  C3    180.00   0.0  0
- 033  CONST_39  C14  C12  O13  C4    180.00   0.0  0
- 033  CONST_40  C19  C18  C16  N15   180.00   0.0  0
- 033  CONST_41  C21  C22  C16  N15   180.00   0.0  0
- 033  CONST_42  S37  C30  C29  C28   180.00   0.0  0
- 033  CONST_43  S37  C30  C31  C32   180.00   0.0  0
- 033  CONST_44  H5   C5   C6   C1    180.00   0.0  0
- 033  CONST_45  H6   C6   C1   C2    180.00   0.0  0
- 033  CONST_46  H11  C11  C3   C2      0.00   0.0  0
- 033  CONST_47  H1   C1   C2   C3    180.00   0.0  0
- 033  CONST_48  H2   C2   C3   C4    180.00   0.0  0
- 033  CONST_49  H19  C19  C18  C16   180.00   0.0  0
- 033  CONST_50  H21  C21  C22  C16   180.00   0.0  0
- 033  CONST_51  H22  C22  C16  C18   180.00   0.0  0
- 033  CONST_52  H18  C18  C19  C20   180.00   0.0  0
- 033  CONST_53  H28  C28  C27  C20     0.00   0.0  0
- 033  CONST_54  H32  C32  C27  C20     0.00   0.0  0
- 033  CONST_55  H29  C29  C28  C27   180.00   0.0  0
- 033  CONST_56  H31  C31  C32  C27   180.00   0.0  0
- 033  CONST_57  C16  N15  C14  C12   180.00   0.0  0
- 033  CONST_58  C18  C16  N15  C14   180.00   0.0  0
- 033  CONST_59  C22  C16  N15  C14     0.00   0.0  0
- 033  CONST_60  H15  N15  C16  C18     0.00   0.0  0
- 033  CONST_61  O17  C14  N15  C16     0.00   0.0  0
+ 033  CONST_25  C29  C28  C27  C20   180.00   0.0  0
+ 033  CONST_26  C31  C32  C27  C20   180.00   0.0  0
+ 033  CONST_27  C27  C20  C21  C22   180.00   0.0  0
+ 033  CONST_28  C30  C29  C28  C27     0.00   0.0  0
+ 033  CONST_29  C30  C31  C32  C27     0.00   0.0  0
+ 033  CONST_30  C31  C32  C27  C28     0.00   0.0  0
+ 033  CONST_31  C31  C30  C29  C28     0.00   0.0  0
+ 033  CONST_32  C32  C27  C28  C29     0.00   0.0  0
+ 033  CONST_33  C32  C31  C30  C29     0.00   0.0  0
+ 033  CONST_34  C14  C12  C11  C3    180.00   0.0  0
+ 033  CONST_35  C14  C12  O13  C4    180.00   0.0  0
+ 033  CONST_36  C19  C18  C16  N15   180.00   0.0  0
+ 033  CONST_37  C21  C22  C16  N15   180.00   0.0  0
+ 033  CONST_38  S37  C30  C29  C28   180.00   0.0  0
+ 033  CONST_39  S37  C30  C31  C32   180.00   0.0  0
+ 033  CONST_40  H5   C5   C6   C1    180.00   0.0  0
+ 033  CONST_41  H6   C6   C1   C2    180.00   0.0  0
+ 033  CONST_42  H11  C11  C3   C2      0.00   0.0  0
+ 033  CONST_43  H1   C1   C2   C3    180.00   0.0  0
+ 033  CONST_44  H2   C2   C3   C4    180.00   0.0  0
+ 033  CONST_45  H19  C19  C18  C16   180.00   0.0  0
+ 033  CONST_46  H21  C21  C22  C16   180.00   0.0  0
+ 033  CONST_47  H22  C22  C16  C18   180.00   0.0  0
+ 033  CONST_48  H18  C18  C19  C20   180.00   0.0  0
+ 033  CONST_49  H28  C28  C27  C20     0.00   0.0  0
+ 033  CONST_50  H32  C32  C27  C20     0.00   0.0  0
+ 033  CONST_51  H29  C29  C28  C27   180.00   0.0  0
+ 033  CONST_52  H31  C31  C32  C27   180.00   0.0  0
+ 033  CONST_53  C16  N15  C14  C12   180.00   0.0  0
+ 033  CONST_54  C18  C16  N15  C14   180.00   0.0  0
+ 033  CONST_55  C22  C16  N15  C14     0.00   0.0  0
+ 033  CONST_56  H15  N15  C16  C18     0.00   0.0  0
+ 033  CONST_57  O17  C14  N15  C16     0.00   0.0  0
  033  Var_01    N15  C14  C12  C11   178.81  30.0  2
  033  Var_02    N38  S37  C30  C29  -117.72  30.0  2
  033  Var_03    C41  N38  S37  C30    54.47  30.0  3
  033  Var_04    H91  C9   C7   C8     59.01  30.0  3
  033  Var_05    H81  C8   C7   C9    -58.70  30.0  3
+ 033  Var_06    C28  C27  C20  C19   142.37  30.0  2
+ 033  Var_07    C32  C27  C20  C19   -37.07  30.0  2
+ 033  Var_08    C28  C27  C20  C21   -37.24  30.0  2
+ 033  Var_09    C32  C27  C20  C21   143.32  30.0  2
+ 033  Var_10    S37  N38  C41  C7    110.98  30.0  1
+ 033  Var_11    O45  C42  C41  C7    114.95  30.0  2
+ 033  Var_12    O50  C42  C41  C7    -64.97  30.0  2
+ 033  Var_13    N38  C41  C7   C8     67.69  30.0  3
+ 033  Var_14    C42  C41  C7   C8    -53.03  30.0  3
+ 033  Var_15    N38  C41  C7   C9   -165.51  30.0  3
+ 033  Var_16    C42  C41  C7   C9     73.77  30.0  3
+ 033  Var_17    C42  C41  N38  S37  -124.51  30.0  3
+ 033  Var_18    O45  C42  C41  N38    -6.96  30.0  2
+ 033  Var_19    O50  C42  C41  N38   173.11  30.0  2
+ 033  Var_20    H41  C41  C7   C8   -171.99  30.0  3
+ 033  Var_21    H7   C7   C41  N38   -49.00  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

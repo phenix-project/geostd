@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TLO  TLO  5'-O-[(S)-hydroxy{[(S)-hydroxy(phenoxy)phosphoryl]oxy}phosphoryl]thymidine  ligand  51  31  .  2021-08-24  2021-08-24  
+ TLO  TLO  5'-O-[(S)-hydroxy{[(S)-hydroxy(phenoxy)phosphoryl]oxy}phosphoryl]thymidine  ligand  51  31  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_TLO
@@ -260,34 +261,69 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- TLO  CONST_01  CZ   CE2  CD2  CG      0.00   0.0  0
- TLO  CONST_02  CZ   CE1  CD1  CG      0.00   0.0  0
- TLO  CONST_03  CE2  CD2  CG   CD1     0.00   0.0  0
- TLO  CONST_04  CE2  CZ   CE1  CD1     0.00   0.0  0
- TLO  CONST_05  CE1  CD1  CG   CD2     0.00   0.0  0
- TLO  CONST_06  CE1  CZ   CE2  CD2     0.00   0.0  0
- TLO  CONST_07  C4   N3   C2   N1      0.00   0.0  0
- TLO  CONST_08  C5   C4   N3   C2      0.00   0.0  0
- TLO  CONST_09  C1'  N1   C2   N3    180.00   0.0  0
- TLO  CONST_10  C6   N1   C2   N3      0.00   0.0  0
- TLO  CONST_11  CE2  CD2  CG   O3B   180.00   0.0  0
- TLO  CONST_12  CE1  CD1  CG   O3B   180.00   0.0  0
- TLO  CONST_13  O4   C4   N3   C2    180.00   0.0  0
- TLO  CONST_14  C1'  N1   C2   O2      0.00   0.0  0
- TLO  CONST_15  C6   N1   C2   O2    180.00   0.0  0
- TLO  CONST_16  C4   N3   C2   O2    180.00   0.0  0
- TLO  CONST_17  HE2  CE2  CD2  CG    180.00   0.0  0
- TLO  CONST_18  HE1  CE1  CD1  CG    180.00   0.0  0
- TLO  CONST_19  HD2  CD2  CE2  CZ    180.00   0.0  0
- TLO  CONST_20  HD1  CD1  CE1  CZ    180.00   0.0  0
- TLO  CONST_21  HZ   CZ   CE1  CD1   180.00   0.0  0
- TLO  CONST_22  HN3  N3   C2   N1    180.00   0.0  0
- TLO  Var_01    CD2  CG   O3B  PB    -82.43  30.0  2
- TLO  Var_02    H5M  C5M  C5   C4     60.92  30.0  3
- TLO  Var_03    C4'  C5'  O5'  PA    169.95  30.0  3
- TLO  Var_04    O2B  PB   O3B  CG     56.83  30.0  3
- TLO  Var_05    O3B  PB   O3A  PA   -160.33  30.0  2
- TLO  Var_06    O2A  PA   O3A  PB    -36.31  30.0  3
+ TLO  CONST_01  CZ    CE2  CD2  CG      0.00   0.0  0
+ TLO  CONST_02  CZ    CE1  CD1  CG      0.00   0.0  0
+ TLO  CONST_03  CE2   CD2  CG   CD1     0.00   0.0  0
+ TLO  CONST_04  CE2   CZ   CE1  CD1     0.00   0.0  0
+ TLO  CONST_05  CE1   CD1  CG   CD2     0.00   0.0  0
+ TLO  CONST_06  CE1   CZ   CE2  CD2     0.00   0.0  0
+ TLO  CONST_07  C4    N3   C2   N1      0.00   0.0  0
+ TLO  CONST_08  C5    C4   N3   C2      0.00   0.0  0
+ TLO  CONST_09  C1'   N1   C2   N3    180.00   0.0  0
+ TLO  CONST_10  C6    N1   C2   N3      0.00   0.0  0
+ TLO  CONST_11  CE2   CD2  CG   O3B   180.00   0.0  0
+ TLO  CONST_12  CE1   CD1  CG   O3B   180.00   0.0  0
+ TLO  CONST_13  O4    C4   N3   C2    180.00   0.0  0
+ TLO  CONST_14  C1'   N1   C2   O2      0.00   0.0  0
+ TLO  CONST_15  C6    N1   C2   O2    180.00   0.0  0
+ TLO  CONST_16  C4    N3   C2   O2    180.00   0.0  0
+ TLO  CONST_17  HE2   CE2  CD2  CG    180.00   0.0  0
+ TLO  CONST_18  HE1   CE1  CD1  CG    180.00   0.0  0
+ TLO  CONST_19  HD2   CD2  CE2  CZ    180.00   0.0  0
+ TLO  CONST_20  HD1   CD1  CE1  CZ    180.00   0.0  0
+ TLO  CONST_21  HZ    CZ   CE1  CD1   180.00   0.0  0
+ TLO  CONST_22  HN3   N3   C2   N1    180.00   0.0  0
+ TLO  Var_01    CD2   CG   O3B  PB    -82.43  30.0  2
+ TLO  Var_02    H5M   C5M  C5   C4     60.92  30.0  3
+ TLO  Var_03    C4'   C5'  O5'  PA    169.95  30.0  3
+ TLO  Var_04    O2B   PB   O3B  CG     56.83  30.0  3
+ TLO  Var_05    O3B   PB   O3A  PA   -160.33  30.0  2
+ TLO  Var_06    O2A   PA   O3A  PB    -36.31  30.0  3
+ TLO  Var_07    C3'   C2'  C1'  N1    113.35  30.0  1
+ TLO  Var_08    C4'   O4'  C1'  N1   -134.37  30.0  1
+ TLO  Var_09    C2'   C1'  N1   C2    -57.23  30.0  2
+ TLO  Var_10    O4'   C1'  N1   C2     64.54  30.0  2
+ TLO  Var_11    C2'   C1'  N1   C6    125.41  30.0  2
+ TLO  Var_12    O4'   C1'  N1   C6   -112.82  30.0  2
+ TLO  Var_13    C4'   C3'  C2'  C1'    20.79  30.0  1
+ TLO  Var_14    C3'   C4'  O4'  C1'    21.51  30.0  1
+ TLO  Var_15    C4'   O4'  C1'  C2'    -7.54  30.0  1
+ TLO  Var_16    O4'   C4'  C3'  C2'   -25.83  30.0  1
+ TLO  Var_17    O4'   C1'  C2'  C3'    -9.34  30.0  1
+ TLO  Var_18    C5M   C5   C6   N1    179.55  30.0  1
+ TLO  Var_19    C5M   C5   C4   N3    179.43  30.0  1
+ TLO  Var_20    O3'   C3'  C2'  C1'   138.46  30.0  1
+ TLO  Var_21    C5'   C4'  O4'  C1'   143.27  30.0  1
+ TLO  Var_22    C5'   C4'  C3'  C2'  -146.21  30.0  1
+ TLO  Var_23    O4'   C4'  C3'  O3'  -147.82  30.0  1
+ TLO  Var_24    H2'   C2'  C1'  N1   -130.13  30.0  1
+ TLO  Var_25    H2'A  C2'  C1'  N1    -10.97  30.0  1
+ TLO  Var_26    H1'   C1'  N1   C2   -178.12  30.0  2
+ TLO  Var_27    H6    C6   N1   C2   -178.66  30.0  1
+ TLO  Var_28    H3'   C3'  C2'  C1'   -96.15  30.0  1
+ TLO  Var_29    H4'   C4'  O4'  C1'   -96.20  30.0  1
+ TLO  Var_30    C5M   C5   C4   O4     -0.36  30.0  1
+ TLO  Var_31    O5'   C5'  C4'  C3'  -176.69  30.0  2
+ TLO  Var_32    C5'   C4'  C3'  O3'    91.79  30.0  1
+ TLO  Var_33    O5'   C5'  C4'  O4'    64.55  30.0  2
+ TLO  Var_34    HO3'  O3'  C3'  C2'    80.22  30.0  3
+ TLO  Var_35    H5'   C5'  C4'  C3'   -56.37  30.0  2
+ TLO  Var_36    H5'A  C5'  C4'  C3'    63.18  30.0  2
+ TLO  Var_37    C5'   O5'  PA   O1A   -78.42  30.0  3
+ TLO  Var_38    C5'   O5'  PA   O2A    49.27  30.0  3
+ TLO  Var_39    C5'   O5'  PA   O3A   172.46  30.0  3
+ TLO  Var_40    HO1A  O1A  PA   O2A  -178.74  30.0  3
+ TLO  Var_41    HO1B  O1B  PB   O2B   177.36  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

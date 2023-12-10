@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3QR  3QR  '[1-(1,1-dioxido-3-oxo-2,3-dihydro-1,2-benzothiazol-6-yl)-1H-1,2,3-triazol-4-yl]methyl alpha-L-idopyranoside'  ligand  48  30  .  2021-08-04  2022-09-22
+ 3QR  3QR  '[1-(1,1-dioxido-3-oxo-2,3-dihydro-1,2-benzothiazol-6-yl)-1H-1,2,3-triazol-4-yl]methyl alpha-L-idopyranoside'  ligand  48  30  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3QR
@@ -255,31 +256,71 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  3QR  CONST_01  CAU  CAV  CAW  CAX     0.00   0.0  0
  3QR  CONST_02  CAU  CAT  CAB  CAX     0.00   0.0  0
- 3QR  CONST_05  CAT  CAB  CAX  CAW     0.00   0.0  0
- 3QR  CONST_06  NAA  CAB  CAX  CAW   180.00   0.0  0
- 3QR  CONST_07  CAT  CAU  CAV  CAW     0.00   0.0  0
- 3QR  CONST_08  NAA  CAB  CAT  CAU   180.00   0.0  0
- 3QR  CONST_11  CAV  CAW  CAX  CAB     0.00   0.0  0
- 3QR  CONST_12  CAV  CAU  CAT  CAB     0.00   0.0  0
- 3QR  CONST_13  CAD  CAC  NAA  CAB   180.00   0.0  0
- 3QR  CONST_14  NAE  NAF  NAA  CAB   180.00   0.0  0
- 3QR  CONST_15  NAE  CAD  CAC  NAA     0.00   0.0  0
- 3QR  CONST_16  CAD  NAE  NAF  NAA     0.00   0.0  0
- 3QR  CONST_17  NAE  NAF  NAA  CAC     0.00   0.0  0
- 3QR  CONST_18  NAF  NAE  CAD  CAC     0.00   0.0  0
- 3QR  CONST_19  CAD  CAC  NAA  NAF     0.00   0.0  0
- 3QR  CONST_20  CAV  CAY  NAZ  SBA     0.00   0.0  0
- 3QR  CONST_21  CAG  CAD  CAC  NAA   180.00   0.0  0
- 3QR  CONST_22  CAG  CAD  NAE  NAF   180.00   0.0  0
- 3QR  CONST_23  OBD  CAY  NAZ  SBA   180.00   0.0  0
- 3QR  CONST_24  H13  CAT  CAB  CAX   180.00   0.0  0
- 3QR  CONST_25  H12  CAU  CAV  CAW   180.00   0.0  0
- 3QR  CONST_26  H6   CAX  CAW  SBA     0.00   0.0  0
- 3QR  CONST_27  H14  CAC  NAA  CAB     0.00   0.0  0
- 3QR  CONST_28  CAV  CAY  NAZ  H7    180.00   0.0  0
+ 3QR  CONST_03  CAT  CAB  CAX  CAW     0.00   0.0  0
+ 3QR  CONST_04  NAA  CAB  CAX  CAW   180.00   0.0  0
+ 3QR  CONST_05  CAT  CAU  CAV  CAW     0.00   0.0  0
+ 3QR  CONST_06  NAA  CAB  CAT  CAU   180.00   0.0  0
+ 3QR  CONST_07  CAV  CAW  CAX  CAB     0.00   0.0  0
+ 3QR  CONST_08  CAV  CAU  CAT  CAB     0.00   0.0  0
+ 3QR  CONST_09  CAD  CAC  NAA  CAB   180.00   0.0  0
+ 3QR  CONST_10  NAE  NAF  NAA  CAB   180.00   0.0  0
+ 3QR  CONST_11  NAE  CAD  CAC  NAA     0.00   0.0  0
+ 3QR  CONST_12  CAD  NAE  NAF  NAA     0.00   0.0  0
+ 3QR  CONST_13  NAE  NAF  NAA  CAC     0.00   0.0  0
+ 3QR  CONST_14  NAF  NAE  CAD  CAC     0.00   0.0  0
+ 3QR  CONST_15  CAD  CAC  NAA  NAF     0.00   0.0  0
+ 3QR  CONST_16  CAV  CAY  NAZ  SBA     0.00   0.0  0
+ 3QR  CONST_17  CAG  CAD  CAC  NAA   180.00   0.0  0
+ 3QR  CONST_18  CAG  CAD  NAE  NAF   180.00   0.0  0
+ 3QR  CONST_19  OBD  CAY  NAZ  SBA   180.00   0.0  0
+ 3QR  CONST_20  H13  CAT  CAB  CAX   180.00   0.0  0
+ 3QR  CONST_21  H12  CAU  CAV  CAW   180.00   0.0  0
+ 3QR  CONST_22  H6   CAX  CAW  SBA     0.00   0.0  0
+ 3QR  CONST_23  H14  CAC  NAA  CAB     0.00   0.0  0
+ 3QR  CONST_24  CAV  CAY  NAZ  H7    180.00   0.0  0
  3QR  Var_01    OBB  SBA  CAW  CAX   -66.32  30.0  1
  3QR  Var_02    CAY  NAZ  SBA  OBB  -113.28  30.0  1
  3QR  Var_03    O1   CAG  CAD  CAC   -19.48  30.0  2
+ 3QR  Var_04    C1   O5   C5   C4    -61.15  30.0  1
+ 3QR  Var_05    C1   C2   C3   C4     45.42  30.0  1
+ 3QR  Var_06    C2   C3   C4   C5    -49.02  30.0  1
+ 3QR  Var_07    C2   C1   O5   C5     56.87  30.0  1
+ 3QR  Var_08    O5   C5   C4   C3     55.15  30.0  1
+ 3QR  Var_09    O5   C1   C2   C3    -47.86  30.0  1
+ 3QR  Var_10    CAC  NAA  CAB  CAX   151.31  30.0  2
+ 3QR  Var_11    NAF  NAA  CAB  CAX   -27.50  30.0  2
+ 3QR  Var_12    CAC  NAA  CAB  CAT   -28.41  30.0  2
+ 3QR  Var_13    NAF  NAA  CAB  CAT   152.79  30.0  2
+ 3QR  Var_14    O2   C2   C3   C4    -75.97  30.0  1
+ 3QR  Var_15    O3   C3   C4   C5     74.06  30.0  1
+ 3QR  Var_16    O1   C1   O5   C5    -63.57  30.0  1
+ 3QR  Var_17    C3   C4   C5   C6    176.02  30.0  1
+ 3QR  Var_18    C1   O5   C5   C6    174.92  30.0  1
+ 3QR  Var_19    O1   C1   C2   C3     76.00  30.0  1
+ 3QR  Var_20    O3   C3   C2   C1    -74.28  30.0  1
+ 3QR  Var_21    O4   C4   C5   O5    -67.97  30.0  1
+ 3QR  Var_22    O2   C2   C1   O5     71.79  30.0  1
+ 3QR  Var_23    C2   C3   C4   O4     71.93  30.0  1
+ 3QR  Var_24    H21  C2   C3   C4    164.46  30.0  1
+ 3QR  Var_25    H5   C3   C4   C5   -167.16  30.0  1
+ 3QR  Var_26    H17  C1   O5   C5    176.11  30.0  1
+ 3QR  Var_27    H2   C5   C4   C3    -65.71  30.0  1
+ 3QR  Var_28    H1   C4   C5   O5    171.68  30.0  1
+ 3QR  Var_29    O6   C6   C5   C4    169.49  30.0  3
+ 3QR  Var_30    O4   C4   C5   C6     52.89  30.0  1
+ 3QR  Var_31    C1   O1   CAG  CAD   156.76  30.0  3
+ 3QR  Var_32    O5   C1   O1   CAG   -58.15  30.0  3
+ 3QR  Var_33    C2   C1   O1   CAG   178.22  30.0  3
+ 3QR  Var_34    O2   C2   C1   O1   -164.35  30.0  1
+ 3QR  Var_35    O6   C6   C5   O5    -67.75  30.0  3
+ 3QR  Var_36    O3   C3   C4   O4   -164.98  30.0  1
+ 3QR  Var_37    O2   C2   C3   O3    164.33  30.0  1
+ 3QR  Var_38    H3   C6   C5   C4    -68.13  30.0  3
+ 3QR  Var_39    H4   C6   C5   C4     48.47  30.0  3
+ 3QR  Var_40    H20  O3   C3   C4   -175.08  30.0  3
+ 3QR  Var_41    H19  O4   C4   C5    176.55  30.0  3
+ 3QR  Var_42    H22  O2   C2   C3   -167.88  30.0  3
+ 3QR  Var_43    H18  O6   C6   C5    173.34  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MTB  MTB  '2-[(E)-(3-tert-butyl-4-hydroxyphenyl)diazenyl]benzoic acid'  ligand  39  22  .  2022-07-25  2022-07-26
+ MTB  MTB  '2-[(E)-(3-tert-butyl-4-hydroxyphenyl)diazenyl]benzoic acid'  ligand  39  22  .  2022-07-25  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_MTB
@@ -210,42 +211,44 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- MTB  CONST_01  C4   C3   C2   C1     0.00   0.0  0
- MTB  CONST_02  C4   C5   C6   C1     0.00   0.0  0
- MTB  CONST_03  C5   C6   C1   C2     0.00   0.0  0
- MTB  CONST_04  C5   C4   C3   C2     0.00   0.0  0
- MTB  CONST_05  C6   C1   C2   C3     0.00   0.0  0
- MTB  CONST_06  C6   C5   C4   C3     0.00   0.0  0
- MTB  CONST_07  C4'  C3'  C2'  C1'    0.00   0.0  0
- MTB  CONST_08  C4'  C5'  C6'  C1'    0.00   0.0  0
- MTB  CONST_09  C5'  C6'  C1'  C2'    0.00   0.0  0
- MTB  CONST_10  C5'  C4'  C3'  C2'    0.00   0.0  0
- MTB  CONST_11  C6'  C1'  C2'  C3'    0.00   0.0  0
- MTB  CONST_12  C6'  C5'  C4'  C3'    0.00   0.0  0
- MTB  CONST_13  N1   C1   C2   C3   180.00   0.0  0
- MTB  CONST_14  C    C2   C3   C4   180.00   0.0  0
- MTB  CONST_15  N1   C1   C6   C5   180.00   0.0  0
- MTB  CONST_16  C    C2   C1   C6   180.00   0.0  0
- MTB  CONST_17  CT3  C3'  C2'  C1'  180.00   0.0  0
- MTB  CONST_18  O4'  C4'  C3'  C2'  180.00   0.0  0
- MTB  CONST_19  N1'  C1'  C2'  C3'  180.00   0.0  0
- MTB  CONST_20  CT3  C3'  C4'  C5'  180.00   0.0  0
- MTB  CONST_21  N1'  C1'  C6'  C5'  180.00   0.0  0
- MTB  CONST_22  O4'  C4'  C5'  C6'  180.00   0.0  0
- MTB  CONST_23  H3   C3   C2   C1   180.00   0.0  0
- MTB  CONST_24  H5   C5   C6   C1   180.00   0.0  0
- MTB  CONST_25  H6   C6   C1   C2   180.00   0.0  0
- MTB  CONST_26  H4   C4   C3   C2   180.00   0.0  0
- MTB  CONST_27  H5'  C5'  C6'  C1'  180.00   0.0  0
- MTB  CONST_28  H6'  C6'  C1'  C2'  180.00   0.0  0
- MTB  CONST_29  H2'  C2'  C3'  C4'  180.00   0.0  0
- MTB  CONST_32  N1   N1'  C1'  C2'  180.00   0.0  0
- MTB  CONST_33  N1   N1'  C1'  C6'    0.00   0.0  0
- MTB  Var_01    O    C    C2   C1   -44.74  30.0  2
- MTB  Var_02    CHV  CT3  C3'  C2'   -0.04  30.0  2
- MTB  Var_03    H11  CHV  CT3  C3'  179.00  30.0  3
- MTB  Var_04    H21  CHW  CT3  C3'   56.72  30.0  3
- MTB  Var_05    H31  CHX  CT3  C3'  -57.66  30.0  3
+ MTB  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ MTB  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ MTB  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ MTB  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ MTB  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ MTB  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ MTB  CONST_07  C4'   C3'  C2'  C1'     0.00   0.0  0
+ MTB  CONST_08  C4'   C5'  C6'  C1'     0.00   0.0  0
+ MTB  CONST_09  C5'   C6'  C1'  C2'     0.00   0.0  0
+ MTB  CONST_10  C5'   C4'  C3'  C2'     0.00   0.0  0
+ MTB  CONST_11  C6'   C1'  C2'  C3'     0.00   0.0  0
+ MTB  CONST_12  C6'   C5'  C4'  C3'     0.00   0.0  0
+ MTB  CONST_13  N1    C1   C2   C3    180.00   0.0  0
+ MTB  CONST_14  C     C2   C3   C4    180.00   0.0  0
+ MTB  CONST_15  N1    C1   C6   C5    180.00   0.0  0
+ MTB  CONST_16  C     C2   C1   C6    180.00   0.0  0
+ MTB  CONST_17  CT3   C3'  C2'  C1'   180.00   0.0  0
+ MTB  CONST_18  O4'   C4'  C3'  C2'   180.00   0.0  0
+ MTB  CONST_19  N1'   C1'  C2'  C3'   180.00   0.0  0
+ MTB  CONST_20  CT3   C3'  C4'  C5'   180.00   0.0  0
+ MTB  CONST_21  N1'   C1'  C6'  C5'   180.00   0.0  0
+ MTB  CONST_22  O4'   C4'  C5'  C6'   180.00   0.0  0
+ MTB  CONST_23  H3    C3   C2   C1    180.00   0.0  0
+ MTB  CONST_24  H5    C5   C6   C1    180.00   0.0  0
+ MTB  CONST_25  H6    C6   C1   C2    180.00   0.0  0
+ MTB  CONST_26  H4    C4   C3   C2    180.00   0.0  0
+ MTB  CONST_27  H5'   C5'  C6'  C1'   180.00   0.0  0
+ MTB  CONST_28  H6'   C6'  C1'  C2'   180.00   0.0  0
+ MTB  CONST_29  H2'   C2'  C3'  C4'   180.00   0.0  0
+ MTB  CONST_30  N1    N1'  C1'  C2'   180.00   0.0  0
+ MTB  CONST_31  N1    N1'  C1'  C6'     0.00   0.0  0
+ MTB  Var_01    O     C    C2   C1    -44.74  30.0  2
+ MTB  Var_02    CHV   CT3  C3'  C2'    -0.04  30.0  2
+ MTB  Var_03    H11   CHV  CT3  C3'   179.00  30.0  3
+ MTB  Var_04    H21   CHW  CT3  C3'    56.72  30.0  3
+ MTB  Var_05    H31   CHX  CT3  C3'   -57.66  30.0  3
+ MTB  Var_06    C1'   N1'  N1   C1    178.69   0.0  2
+ MTB  Var_07    HO4'  O4'  C4'  C3'  -179.64  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id

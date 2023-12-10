@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- XMM  XMM  '5-bromo-4-chloro-1H-indol-3-yl alpha-D-mannopyranoside'  D-saccharide  38  23  .  2023-02-15  2023-02-15
+ XMM  XMM  '5-bromo-4-chloro-1H-indol-3-yl alpha-D-mannopyranoside'  D-saccharide  38  23  .  2023-02-15  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_XMM
@@ -212,36 +213,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- XMM  CONST_01  N1   C9   C8   C7     0.00   0.0  0
- XMM  CONST_02  C12  C9   C8   C7   180.00   0.0  0
- XMM  CONST_03  C13  C10  C8   C7   180.00   0.0  0
- XMM  CONST_04  C9   N1   C11  C7     0.00   0.0  0
- XMM  CONST_05  N1   C11  C7   C8     0.00   0.0  0
- XMM  CONST_06  C11  N1   C9   C8     0.00   0.0  0
- XMM  CONST_07  C14  C12  C9   C8     0.00   0.0  0
- XMM  CONST_08  C14  C13  C10  C8     0.00   0.0  0
- XMM  CONST_09  C11  C7   C8   C9     0.00   0.0  0
- XMM  CONST_10  C13  C10  C8   C9     0.00   0.0  0
- XMM  CONST_11  C13  C14  C12  C9     0.00   0.0  0
- XMM  CONST_12  C10  C8   C9   N1   180.00   0.0  0
- XMM  CONST_13  C14  C12  C9   N1   180.00   0.0  0
- XMM  CONST_14  C10  C8   C7   C11  180.00   0.0  0
- XMM  CONST_15  C12  C9   N1   C11  180.00   0.0  0
- XMM  CONST_16  C12  C9   C8   C10    0.00   0.0  0
- XMM  CONST_17  C12  C14  C13  C10    0.00   0.0  0
- XMM  CONST_18  C9   C8   C7   O1   180.00   0.0  0
- XMM  CONST_19  C10  C8   C7   O1     0.00   0.0  0
- XMM  CONST_20  N1   C11  C7   O1   180.00   0.0  0
- XMM  CONST_21  CL   C10  C8   C7     0.00   0.0  0
- XMM  CONST_22  BR   C13  C10  C8   180.00   0.0  0
- XMM  CONST_23  CL   C10  C8   C9   180.00   0.0  0
- XMM  CONST_24  C14  C13  C10  CL   180.00   0.0  0
- XMM  CONST_25  C12  C14  C13  BR   180.00   0.0  0
- XMM  CONST_26  HN1  N1   C11  C7   180.00   0.0  0
- XMM  CONST_27  H11  C11  C7   C8   180.00   0.0  0
- XMM  CONST_28  H12  C12  C9   C8   180.00   0.0  0
- XMM  CONST_29  H14  C14  C12  C9   180.00   0.0  0
- XMM  Var_01    C8   C7   O1   C1   106.32  30.0  2
+ XMM  CONST_01  N1   C9   C8   C7      0.00   0.0  0
+ XMM  CONST_02  C12  C9   C8   C7    180.00   0.0  0
+ XMM  CONST_03  C13  C10  C8   C7    180.00   0.0  0
+ XMM  CONST_04  C9   N1   C11  C7      0.00   0.0  0
+ XMM  CONST_05  N1   C11  C7   C8      0.00   0.0  0
+ XMM  CONST_06  C11  N1   C9   C8      0.00   0.0  0
+ XMM  CONST_07  C14  C12  C9   C8      0.00   0.0  0
+ XMM  CONST_08  C14  C13  C10  C8      0.00   0.0  0
+ XMM  CONST_09  C11  C7   C8   C9      0.00   0.0  0
+ XMM  CONST_10  C13  C10  C8   C9      0.00   0.0  0
+ XMM  CONST_11  C13  C14  C12  C9      0.00   0.0  0
+ XMM  CONST_12  C10  C8   C9   N1    180.00   0.0  0
+ XMM  CONST_13  C14  C12  C9   N1    180.00   0.0  0
+ XMM  CONST_14  C10  C8   C7   C11   180.00   0.0  0
+ XMM  CONST_15  C12  C9   N1   C11   180.00   0.0  0
+ XMM  CONST_16  C12  C9   C8   C10     0.00   0.0  0
+ XMM  CONST_17  C12  C14  C13  C10     0.00   0.0  0
+ XMM  CONST_18  C9   C8   C7   O1    180.00   0.0  0
+ XMM  CONST_19  C10  C8   C7   O1      0.00   0.0  0
+ XMM  CONST_20  N1   C11  C7   O1    180.00   0.0  0
+ XMM  CONST_21  CL   C10  C8   C7      0.00   0.0  0
+ XMM  CONST_22  BR   C13  C10  C8    180.00   0.0  0
+ XMM  CONST_23  CL   C10  C8   C9    180.00   0.0  0
+ XMM  CONST_24  C14  C13  C10  CL    180.00   0.0  0
+ XMM  CONST_25  C12  C14  C13  BR    180.00   0.0  0
+ XMM  CONST_26  HN1  N1   C11  C7    180.00   0.0  0
+ XMM  CONST_27  H11  C11  C7   C8    180.00   0.0  0
+ XMM  CONST_28  H12  C12  C9   C8    180.00   0.0  0
+ XMM  CONST_29  H14  C14  C12  C9    180.00   0.0  0
+ XMM  Var_01    C8   C7   O1   C1    106.32  30.0  2
+ XMM  Var_02    C5   C4   C3   C2     54.84  30.0  1
+ XMM  Var_03    C5   O5   C1   C2    -57.41  30.0  1
+ XMM  Var_04    O5   C1   C2   C3     53.90  30.0  1
+ XMM  Var_05    O5   C5   C4   C3    -54.54  30.0  1
+ XMM  Var_06    C1   C2   C3   C4    -53.88  30.0  1
+ XMM  Var_07    C1   O5   C5   C4     57.59  30.0  1
+ XMM  Var_08    C4   C3   C2   O2     65.71  30.0  1
+ XMM  Var_09    O5   C1   C2   O2    -64.80  30.0  1
+ XMM  Var_10    O4   C4   C3   C2    173.55  30.0  1
+ XMM  Var_11    C7   O1   C1   C2   -165.12  30.0  3
+ XMM  Var_12    O1   C1   C2   C3    -68.98  30.0  1
+ XMM  Var_13    C6   C5   C4   C3   -174.13  30.0  1
+ XMM  Var_14    C1   C2   C3   O3   -174.24  30.0  1
+ XMM  Var_15    C5   C4   C3   O3    178.14  30.0  1
+ XMM  Var_16    O5   C5   C4   O4   -175.44  30.0  1
+ XMM  Var_17    O1   C1   O5   C5     62.76  30.0  1
+ XMM  Var_18    C7   O1   C1   O5     71.96  30.0  3
+ XMM  Var_19    C1   O5   C5   C6   -179.70  30.0  1
+ XMM  Var_20    H4   C4   C3   C2    -63.94  30.0  1
+ XMM  Var_21    H1   C1   C2   C3    171.48  30.0  1
+ XMM  Var_22    H5   C5   C4   C3     66.66  30.0  1
+ XMM  Var_23    H2   C2   C3   C4   -172.57  30.0  1
+ XMM  Var_24    H3   C3   C4   C5    -62.58  30.0  1
+ XMM  Var_25    O3   C3   C2   O2    -54.65  30.0  1
+ XMM  Var_26    O1   C1   C2   O2    172.32  30.0  1
+ XMM  Var_27    O4   C4   C3   O3    -63.15  30.0  1
+ XMM  Var_28    O6   C6   C5   C4   -174.42  30.0  3
+ XMM  Var_29    C6   C5   C4   O4     64.97  30.0  1
+ XMM  Var_30    O6   C6   C5   O5     63.94  30.0  3
+ XMM  Var_31    HO3  O3   C3   C2    -80.71  30.0  3
+ XMM  Var_32    HO2  O2   C2   C3    166.74  30.0  3
+ XMM  Var_33    HO4  O4   C4   C3     55.96  30.0  3
+ XMM  Var_34    H61  C6   C5   C4     63.47  30.0  3
+ XMM  Var_35    H62  C6   C5   C4    -53.03  30.0  3
+ XMM  Var_36    HO6  O6   C6   C5    172.43  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

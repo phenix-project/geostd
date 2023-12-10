@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 0FG  0FG  D-leucyl-N-(4-fluorobenzyl)-L-phenylalaninamide  peptide  56  28  .  2022-03-08  2022-03-08
+ 0FG  0FG  D-leucyl-N-(4-fluorobenzyl)-L-phenylalaninamide  peptide  56  28  .  2022-03-08  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-30
 ;
 
 data_comp_0FG
@@ -277,45 +278,51 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 0FG  CONST_01  CZ    CE1   CD11  CG1      0.00   0.0  0
- 0FG  CONST_02  CZ    CE2   CD21  CG1      0.00   0.0  0
- 0FG  CONST_03  CE2   CD21  CG1   CD11     0.00   0.0  0
- 0FG  CONST_04  CE2   CZ    CE1   CD11     0.00   0.0  0
- 0FG  CONST_05  CE1   CD11  CG1   CD21     0.00   0.0  0
- 0FG  CONST_06  CE1   CZ    CE2   CD21     0.00   0.0  0
- 0FG  CONST_07  C4    C3    C2    C11      0.00   0.0  0
- 0FG  CONST_08  C4    C5    C6    C11      0.00   0.0  0
- 0FG  CONST_09  C5    C6    C11   C2       0.00   0.0  0
- 0FG  CONST_10  C5    C4    C3    C2       0.00   0.0  0
- 0FG  CONST_11  C6    C11   C2    C3       0.00   0.0  0
- 0FG  CONST_12  C6    C5    C4    C3       0.00   0.0  0
- 0FG  CONST_13  CE1   CD11  CG1   CB1    180.00   0.0  0
- 0FG  CONST_14  CE2   CD21  CG1   CB1    180.00   0.0  0
- 0FG  CONST_15  F     C4    C3    C2     180.00   0.0  0
- 0FG  CONST_16  C7    C11   C2    C3     180.00   0.0  0
- 0FG  CONST_17  C7    C11   C6    C5     180.00   0.0  0
- 0FG  CONST_18  F     C4    C5    C6     180.00   0.0  0
- 0FG  CONST_19  HE1   CE1   CD11  CG1    180.00   0.0  0
- 0FG  CONST_20  HE2   CE2   CD21  CG1    180.00   0.0  0
- 0FG  CONST_21  HD2   CD21  CG1   CD11   180.00   0.0  0
- 0FG  CONST_22  HZ    CZ    CE1   CD11   180.00   0.0  0
- 0FG  CONST_23  HD1   CD11  CG1   CD21   180.00   0.0  0
- 0FG  CONST_24  H3    C3    C2    C11    180.00   0.0  0
- 0FG  CONST_25  H5    C5    C6    C11    180.00   0.0  0
- 0FG  CONST_26  H6    C6    C11   C2     180.00   0.0  0
- 0FG  CONST_27  H21   C2    C3    C4     180.00   0.0  0
- 0FG  CONST_28  CA1   N1    C     CA     180.00   0.0  0
- 0FG  CONST_29  CA1   N1    C     O        0.00   0.0  0
- 0FG  CONST_30  C7    N2    C1    CA1    180.00   0.0  0
- 0FG  CONST_31  C7    N2    C1    O1       0.00   0.0  0
- 0FG  CONST_32  H1    N1    C     CA       0.00   0.0  0
- 0FG  CONST_33  HN2   N2    C1    CA1      0.00   0.0  0
- 0FG  Var_01    CD11  CG1   CB1   CA1    114.16  30.0  2
- 0FG  Var_02    N2    C7    C11   C2      55.04  30.0  2
- 0FG  Var_03    C11   C7    N2    C1    -138.61  30.0  1
- 0FG  Var_04    CD1   CG    CB    CA      60.01  30.0  3
- 0FG  Var_05    HD11  CD1   CG    CB     178.27  30.0  3
- 0FG  Var_06    HD21  CD2   CG    CB      57.34  30.0  3
+ 0FG  CONST_01  CZ    CE1   CD11  CG1      0.00      0.0   0
+ 0FG  CONST_02  CZ    CE2   CD21  CG1      0.00      0.0   0
+ 0FG  CONST_03  CE2   CD21  CG1   CD11     0.00      0.0   0
+ 0FG  CONST_04  CE2   CZ    CE1   CD11     0.00      0.0   0
+ 0FG  CONST_05  CE1   CD11  CG1   CD21     0.00      0.0   0
+ 0FG  CONST_06  CE1   CZ    CE2   CD21     0.00      0.0   0
+ 0FG  CONST_07  C4    C3    C2    C11      0.00      0.0   0
+ 0FG  CONST_08  C4    C5    C6    C11      0.00      0.0   0
+ 0FG  CONST_09  C5    C6    C11   C2       0.00      0.0   0
+ 0FG  CONST_10  C5    C4    C3    C2       0.00      0.0   0
+ 0FG  CONST_11  C6    C11   C2    C3       0.00      0.0   0
+ 0FG  CONST_12  C6    C5    C4    C3       0.00      0.0   0
+ 0FG  CONST_13  CE1   CD11  CG1   CB1    180.00      0.0   0
+ 0FG  CONST_14  CE2   CD21  CG1   CB1    180.00      0.0   0
+ 0FG  CONST_15  F     C4    C3    C2     180.00      0.0   0
+ 0FG  CONST_16  C7    C11   C2    C3     180.00      0.0   0
+ 0FG  CONST_17  C7    C11   C6    C5     180.00      0.0   0
+ 0FG  CONST_18  F     C4    C5    C6     180.00      0.0   0
+ 0FG  CONST_19  HE1   CE1   CD11  CG1    180.00      0.0   0
+ 0FG  CONST_20  HE2   CE2   CD21  CG1    180.00      0.0   0
+ 0FG  CONST_21  HD2   CD21  CG1   CD11   180.00      0.0   0
+ 0FG  CONST_22  HZ    CZ    CE1   CD11   180.00      0.0   0
+ 0FG  CONST_23  HD1   CD11  CG1   CD21   180.00      0.0   0
+ 0FG  CONST_24  H3    C3    C2    C11    180.00      0.0   0
+ 0FG  CONST_25  H5    C5    C6    C11    180.00      0.0   0
+ 0FG  CONST_26  H6    C6    C11   C2     180.00      0.0   0
+ 0FG  CONST_27  H21   C2    C3    C4     180.00      0.0   0
+ 0FG  CONST_28  CA1   N1    C     CA     180.00      0.0   0
+ 0FG  CONST_29  CA1   N1    C     O        0.00      0.0   0
+ 0FG  CONST_30  C7    N2    C1    CA1    180.00      0.0   0
+ 0FG  CONST_31  C7    N2    C1    O1       0.00      0.0   0
+ 0FG  CONST_32  H1    N1    C     CA       0.00      0.0   0
+ 0FG  CONST_33  HN2   N2    C1    CA1      0.00      0.0   0
+ 0FG  Var_01    CD11  CG1   CB1   CA1    114.16     30.0   2
+ 0FG  Var_02    N2    C7    C11   C2      55.04     30.0   2
+ 0FG  Var_03    C11   C7    N2    C1    -138.61     30.0   1
+ 0FG  Var_04    CD1   CG    CB    CA      60.01     30.0   3
+ 0FG  Var_05    HD11  CD1   CG    CB     178.27     30.0   3
+ 0FG  Var_06    HD21  CD2   CG    CB      57.34     30.0   3
+ 0FG  Var_07    HA1   CA1   CB1   CG1     66.94     30.0   3
+ 0FG  Var_08    HB2   CB    CA    N     -177.20     30.0   3
+ 0FG  Var_09    HB3   CB    CA    N      -62.48     30.0   3
+ 0FG  Var_10    C     CA    N     H     170.000  180.000  72
+ 0FG  Var_11    H2    N     CA    CB      54.04     30.0   3
+ 0FG  Var_12    HA    CA    CB    CG     -60.77     30.0   2
 
 loop_
 _chem_comp_chir.comp_id

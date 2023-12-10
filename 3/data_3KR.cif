@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3KR  3KR  1-(2-methoxyethyl)-N-oxo-4-[4-[4-(trifluoromethoxy)phenoxy]phenyl]sulfonyl-piperidine-4-carboxamide  ligand  58  35  .  2021-08-04  2023-02-02
+ 3KR  3KR  1-(2-methoxyethyl)-N-oxo-4-[4-[4-(trifluoromethoxy)phenoxy]phenyl]sulfonyl-piperidine-4-carboxamide  ligand  58  35  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3KR
@@ -289,44 +290,72 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3KR  CONST_01  C5   C4   C3   C2      0.00   0.0  0
- 3KR  CONST_02  C5   C6   C7   C2      0.00   0.0  0
- 3KR  CONST_03  C6   C7   C2   C3      0.00   0.0  0
- 3KR  CONST_04  C6   C5   C4   C3      0.00   0.0  0
- 3KR  CONST_05  C7   C2   C3   C4      0.00   0.0  0
- 3KR  CONST_06  C7   C6   C5   C4      0.00   0.0  0
- 3KR  CONST_07  C28  C27  C26  C25     0.00   0.0  0
- 3KR  CONST_08  C28  C29  C30  C25     0.00   0.0  0
- 3KR  CONST_09  C29  C30  C25  C26     0.00   0.0  0
- 3KR  CONST_10  C29  C28  C27  C26     0.00   0.0  0
- 3KR  CONST_11  C30  C25  C26  C27     0.00   0.0  0
- 3KR  CONST_12  C30  C29  C28  C27     0.00   0.0  0
- 3KR  CONST_13  C4   C3   C2   S1    180.00   0.0  0
- 3KR  CONST_14  C6   C7   C2   S1    180.00   0.0  0
- 3KR  CONST_15  O24  C5   C4   C3    180.00   0.0  0
- 3KR  CONST_16  O24  C5   C6   C7    180.00   0.0  0
- 3KR  CONST_17  C27  C26  C25  O24   180.00   0.0  0
- 3KR  CONST_18  C29  C30  C25  O24   180.00   0.0  0
- 3KR  CONST_19  O31  C28  C27  C26   180.00   0.0  0
- 3KR  CONST_20  O31  C28  C29  C30   180.00   0.0  0
- 3KR  CONST_21  H4   C4   C3   C2    180.00   0.0  0
- 3KR  CONST_22  H6   C6   C7   C2    180.00   0.0  0
- 3KR  CONST_23  H7   C7   C2   C3    180.00   0.0  0
- 3KR  CONST_24  H3   C3   C4   C5    180.00   0.0  0
- 3KR  CONST_25  H27  C27  C26  C25   180.00   0.0  0
- 3KR  CONST_26  H29  C29  C30  C25   180.00   0.0  0
- 3KR  CONST_27  H30  C30  C25  C26   180.00   0.0  0
- 3KR  CONST_28  H26  C26  C27  C28   180.00   0.0  0
- 3KR  Var_01    N17  C16  C15  C8     55.61  30.0  1
- 3KR  Var_02    N17  C18  C19  C8    -51.37  30.0  1
- 3KR  Var_03    C18  N17  C16  C15   -62.87  30.0  1
- 3KR  Var_04    C19  C18  N17  C16    61.13  30.0  1
- 3KR  Var_05    C8   S1   C2   C3     90.50  30.0  2
- 3KR  Var_06    C26  C25  O24  C5     85.55  30.0  2
- 3KR  Var_07    C21  C20  N17  C16  -160.94  30.0  3
- 3KR  Var_08    O22  C21  C20  N17    64.38  30.0  3
- 3KR  Var_09    F33  C32  O31  C28    60.02  30.0  3
- 3KR  Var_10    H23  C23  O22  C21   179.98  30.0  3
+ 3KR  CONST_01  C5    C4   C3   C2      0.00   0.0  0
+ 3KR  CONST_02  C5    C6   C7   C2      0.00   0.0  0
+ 3KR  CONST_03  C6    C7   C2   C3      0.00   0.0  0
+ 3KR  CONST_04  C6    C5   C4   C3      0.00   0.0  0
+ 3KR  CONST_05  C7    C2   C3   C4      0.00   0.0  0
+ 3KR  CONST_06  C7    C6   C5   C4      0.00   0.0  0
+ 3KR  CONST_07  C28   C27  C26  C25     0.00   0.0  0
+ 3KR  CONST_08  C28   C29  C30  C25     0.00   0.0  0
+ 3KR  CONST_09  C29   C30  C25  C26     0.00   0.0  0
+ 3KR  CONST_10  C29   C28  C27  C26     0.00   0.0  0
+ 3KR  CONST_11  C30   C25  C26  C27     0.00   0.0  0
+ 3KR  CONST_12  C30   C29  C28  C27     0.00   0.0  0
+ 3KR  CONST_13  C4    C3   C2   S1    180.00   0.0  0
+ 3KR  CONST_14  C6    C7   C2   S1    180.00   0.0  0
+ 3KR  CONST_15  O24   C5   C4   C3    180.00   0.0  0
+ 3KR  CONST_16  O24   C5   C6   C7    180.00   0.0  0
+ 3KR  CONST_17  C27   C26  C25  O24   180.00   0.0  0
+ 3KR  CONST_18  C29   C30  C25  O24   180.00   0.0  0
+ 3KR  CONST_19  O31   C28  C27  C26   180.00   0.0  0
+ 3KR  CONST_20  O31   C28  C29  C30   180.00   0.0  0
+ 3KR  CONST_21  H4    C4   C3   C2    180.00   0.0  0
+ 3KR  CONST_22  H6    C6   C7   C2    180.00   0.0  0
+ 3KR  CONST_23  H7    C7   C2   C3    180.00   0.0  0
+ 3KR  CONST_24  H3    C3   C4   C5    180.00   0.0  0
+ 3KR  CONST_25  H27   C27  C26  C25   180.00   0.0  0
+ 3KR  CONST_26  H29   C29  C30  C25   180.00   0.0  0
+ 3KR  CONST_27  H30   C30  C25  C26   180.00   0.0  0
+ 3KR  CONST_28  H26   C26  C27  C28   180.00   0.0  0
+ 3KR  Var_01    N17   C16  C15  C8     55.61  30.0  1
+ 3KR  Var_02    N17   C18  C19  C8    -51.37  30.0  1
+ 3KR  Var_03    C18   N17  C16  C15   -62.87  30.0  1
+ 3KR  Var_04    C19   C18  N17  C16    61.13  30.0  1
+ 3KR  Var_05    C8    S1   C2   C3     90.50  30.0  2
+ 3KR  Var_06    C26   C25  O24  C5     85.55  30.0  2
+ 3KR  Var_07    C21   C20  N17  C16  -160.94  30.0  3
+ 3KR  Var_08    O22   C21  C20  N17    64.38  30.0  3
+ 3KR  Var_09    F33   C32  O31  C28    60.02  30.0  3
+ 3KR  Var_10    H23   C23  O22  C21   179.98  30.0  3
+ 3KR  Var_11    C18   C19  C8   C15    42.61  30.0  1
+ 3KR  Var_12    C19   C8   C15  C16   -44.84  30.0  1
+ 3KR  Var_13    C16   C15  C8   S1     77.90  30.0  1
+ 3KR  Var_14    C18   C19  C8   S1    -82.58  30.0  1
+ 3KR  Var_15    C15   C8   S1   C2     49.49  30.0  3
+ 3KR  Var_16    C19   C8   S1   C2    173.09  30.0  3
+ 3KR  Var_17    C25   O24  C5   C4      5.57  30.0  2
+ 3KR  Var_18    C25   O24  C5   C6   -174.54  30.0  2
+ 3KR  Var_19    C16   C15  C8   C9   -167.64  30.0  1
+ 3KR  Var_20    C18   C19  C8   C9    165.53  30.0  1
+ 3KR  Var_21    H19   C19  C8   C15   167.64  30.0  1
+ 3KR  Var_22    H19A  C19  C8   C15   -76.51  30.0  1
+ 3KR  Var_23    C9    C8   S1   C2    -69.81  30.0  3
+ 3KR  Var_24    C15   C8   C9   N10   160.53  30.0  2
+ 3KR  Var_25    C19   C8   C9   N10    37.69  30.0  2
+ 3KR  Var_26    C15   C8   S1   O12   -67.59  30.0  3
+ 3KR  Var_27    C19   C8   S1   O12    56.01  30.0  3
+ 3KR  Var_28    C15   C8   S1   O13   163.58  30.0  3
+ 3KR  Var_29    C19   C8   S1   O13   -72.82  30.0  3
+ 3KR  Var_30    C15   C8   C9   O14   -15.30  30.0  2
+ 3KR  Var_31    C19   C8   C9   O14  -138.14  30.0  2
+ 3KR  Var_32    C32   O31  C28  C27  -177.75  30.0  2
+ 3KR  Var_33    C32   O31  C28  C29     2.56  30.0  2
+ 3KR  Var_34    N10   C9   C8   S1    -78.37  30.0  3
+ 3KR  Var_35    O14   C9   C8   S1    105.80  30.0  3
+ 3KR  Var_36    O12   S1   C8   C9    173.11  30.0  1
+ 3KR  Var_37    O13   S1   C8   C9     44.28  30.0  1
+ 3KR  Var_38    C23   O22  C21  C20  -179.05  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

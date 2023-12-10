@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BTG  BTG  '2'-{[2-(acetylamino)-2-deoxy-beta-D-galactopyranosyl]oxy}[1,1'-biphenyl]-3-carboxylic acid'  D-saccharide  52  30  .  2023-02-15  2023-02-15
+ BTG  BTG  '2'-{[2-(acetylamino)-2-deoxy-beta-D-galactopyranosyl]oxy}[1,1'-biphenyl]-3-carboxylic acid'  D-saccharide  52  30  .  2023-02-15  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_BTG
@@ -263,41 +264,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BTG  CONST_01  C16   C11  C12  C13    0.00   0.0  0
- BTG  CONST_02  C16   C15  C14  C13    0.00   0.0  0
- BTG  CONST_03  C12   C11  C16  C15    0.00   0.0  0
- BTG  CONST_06  C12   C13  C14  C15    0.00   0.0  0
- BTG  CONST_07  C12   C11  C16  C17  180.00   0.0  0
- BTG  CONST_08  C14   C15  C16  C17  180.00   0.0  0
- BTG  CONST_09  C20   C19  C18  C17    0.00   0.0  0
- BTG  CONST_10  C20   C21  C25  C17    0.00   0.0  0
- BTG  CONST_11  C16   C17  C25  C21  180.00   0.0  0
- BTG  CONST_12  C18   C17  C25  C21    0.00   0.0  0
- BTG  CONST_13  C18   C19  C20  C21    0.00   0.0  0
- BTG  CONST_14  C14   C13  C12  C11    0.00   0.0  0
- BTG  CONST_17  C14   C15  C16  C11    0.00   0.0  0
- BTG  CONST_18  C19   C18  C17  C16  180.00   0.0  0
- BTG  CONST_19  C25   C17  C18  C19    0.00   0.0  0
- BTG  CONST_20  C25   C21  C20  C19    0.00   0.0  0
- BTG  CONST_21  O10   C11  C12  C13  180.00   0.0  0
- BTG  CONST_22  O10   C11  C16  C15  180.00   0.0  0
- BTG  CONST_23  O10   C11  C16  C17    0.00   0.0  0
- BTG  CONST_24  C22   C21  C25  C17  180.00   0.0  0
- BTG  CONST_25  C19   C20  C21  C22  180.00   0.0  0
- BTG  CONST_26  H151  C15  C14  C13  180.00   0.0  0
- BTG  CONST_27  H131  C13  C14  C15  180.00   0.0  0
- BTG  CONST_28  H191  C19  C18  C17  180.00   0.0  0
- BTG  CONST_29  H181  C18  C19  C20  180.00   0.0  0
- BTG  CONST_30  H251  C25  C21  C20  180.00   0.0  0
- BTG  CONST_31  H141  C14  C13  C12  180.00   0.0  0
- BTG  CONST_32  H121  C12  C13  C14  180.00   0.0  0
- BTG  CONST_33  H201  C20  C19  C18  180.00   0.0  0
- BTG  CONST_34  O30   C28  N27  C26    0.00   0.0  0
- BTG  CONST_35  C29   C28  N27  C26  180.00   0.0  0
- BTG  CONST_36  H271  N27  C28  C29    0.00   0.0  0
- BTG  Var_01    C12   C11  O10  C09   35.75  30.0  2
- BTG  Var_02    O23   C22  C21  C20  177.28  30.0  2
- BTG  Var_03    H293  C29  C28  N27  -99.65  30.0  3
+ BTG  CONST_01  C16   C11  C12  C13     0.00   0.0  0
+ BTG  CONST_02  C16   C15  C14  C13     0.00   0.0  0
+ BTG  CONST_03  C12   C11  C16  C15     0.00   0.0  0
+ BTG  CONST_04  C12   C13  C14  C15     0.00   0.0  0
+ BTG  CONST_05  C12   C11  C16  C17   180.00   0.0  0
+ BTG  CONST_06  C14   C15  C16  C17   180.00   0.0  0
+ BTG  CONST_07  C20   C19  C18  C17     0.00   0.0  0
+ BTG  CONST_08  C20   C21  C25  C17     0.00   0.0  0
+ BTG  CONST_09  C16   C17  C25  C21   180.00   0.0  0
+ BTG  CONST_10  C18   C17  C25  C21     0.00   0.0  0
+ BTG  CONST_11  C18   C19  C20  C21     0.00   0.0  0
+ BTG  CONST_12  C14   C13  C12  C11     0.00   0.0  0
+ BTG  CONST_13  C14   C15  C16  C11     0.00   0.0  0
+ BTG  CONST_14  C19   C18  C17  C16   180.00   0.0  0
+ BTG  CONST_15  C25   C17  C18  C19     0.00   0.0  0
+ BTG  CONST_16  C25   C21  C20  C19     0.00   0.0  0
+ BTG  CONST_17  O10   C11  C12  C13   180.00   0.0  0
+ BTG  CONST_18  O10   C11  C16  C15   180.00   0.0  0
+ BTG  CONST_19  O10   C11  C16  C17     0.00   0.0  0
+ BTG  CONST_20  C22   C21  C25  C17   180.00   0.0  0
+ BTG  CONST_21  C19   C20  C21  C22   180.00   0.0  0
+ BTG  CONST_22  H151  C15  C14  C13   180.00   0.0  0
+ BTG  CONST_23  H131  C13  C14  C15   180.00   0.0  0
+ BTG  CONST_24  H191  C19  C18  C17   180.00   0.0  0
+ BTG  CONST_25  H181  C18  C19  C20   180.00   0.0  0
+ BTG  CONST_26  H251  C25  C21  C20   180.00   0.0  0
+ BTG  CONST_27  H141  C14  C13  C12   180.00   0.0  0
+ BTG  CONST_28  H121  C12  C13  C14   180.00   0.0  0
+ BTG  CONST_29  H201  C20  C19  C18   180.00   0.0  0
+ BTG  CONST_30  O30   C28  N27  C26     0.00   0.0  0
+ BTG  CONST_31  C29   C28  N27  C26   180.00   0.0  0
+ BTG  CONST_32  H271  N27  C28  C29     0.00   0.0  0
+ BTG  Var_01    C12   C11  O10  C09    35.75  30.0  2
+ BTG  Var_02    O23   C22  C21  C20   177.28  30.0  2
+ BTG  Var_03    H293  C29  C28  N27   -99.65  30.0  3
+ BTG  Var_04    C18   C17  C16  C15   131.12  30.0  2
+ BTG  Var_05    C25   C17  C16  C15   -46.64  30.0  2
+ BTG  Var_06    C05   C03  C02  C26    55.09  30.0  1
+ BTG  Var_07    C05   O08  C09  C26   -64.01  30.0  1
+ BTG  Var_08    O08   C05  C03  C02   -57.56  30.0  1
+ BTG  Var_09    O08   C09  C26  C02    58.56  30.0  1
+ BTG  Var_10    C09   O08  C05  C03    63.30  30.0  1
+ BTG  Var_11    C09   C26  C02  C03   -54.96  30.0  1
+ BTG  Var_12    C18   C17  C16  C11   -50.77  30.0  2
+ BTG  Var_13    C25   C17  C16  C11   131.46  30.0  2
+ BTG  Var_14    O04   C03  C02  C26   -66.63  30.0  1
+ BTG  Var_15    C11   O10  C09  C26   152.27  30.0  3
+ BTG  Var_16    C05   C03  C02  O01   176.11  30.0  1
+ BTG  Var_17    C09   C26  C02  O01  -178.82  30.0  1
+ BTG  Var_18    C06   C05  C03  C02  -178.35  30.0  1
+ BTG  Var_19    O10   C09  C26  C02   177.89  30.0  1
+ BTG  Var_20    N27   C26  C02  C03  -176.60  30.0  1
+ BTG  Var_21    O08   C05  C03  O04    62.07  30.0  1
+ BTG  Var_22    O10   C09  O08  C05   177.03  30.0  1
+ BTG  Var_23    C09   O08  C05  C06  -172.79  30.0  1
+ BTG  Var_24    N27   C26  C09  O08  -178.45  30.0  1
+ BTG  Var_25    C11   O10  C09  O08   -87.40  30.0  3
+ BTG  Var_26    H031  C03  C02  C26   172.44  30.0  1
+ BTG  Var_27    H051  C05  C03  C02    62.20  30.0  1
+ BTG  Var_28    H091  C09  C26  C02   -62.45  30.0  1
+ BTG  Var_29    H261  C26  C02  C03    63.29  30.0  1
+ BTG  Var_30    H021  C02  C03  C05   -61.73  30.0  1
+ BTG  Var_31    O04   C03  C02  O01    54.39  30.0  1
+ BTG  Var_32    N27   C26  C02  O01    59.53  30.0  1
+ BTG  Var_33    C28   N27  C26  C02  -116.94  30.0  3
+ BTG  Var_34    O07   C06  C05  C03  -172.81  30.0  2
+ BTG  Var_35    C06   C05  C03  O04   -58.72  30.0  1
+ BTG  Var_36    O08   C05  C06  O07    65.33  30.0  3
+ BTG  Var_37    C28   N27  C26  C09   122.65  30.0  3
+ BTG  Var_38    N27   C26  C09  O10   -59.12  30.0  1
+ BTG  Var_39    H011  O01  C02  C26  -171.87  30.0  3
+ BTG  Var_40    H041  O04  C03  C02  -149.03  30.0  3
+ BTG  Var_41    H271  N27  C26  C02    68.56  30.0  3
+ BTG  Var_42    H062  C06  C05  C03   -51.47  30.0  2
+ BTG  Var_43    H061  C06  C05  C03    64.98  30.0  2
+ BTG  Var_44    H071  O07  C06  C05  -178.05  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

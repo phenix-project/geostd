@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3RE  3RE  2-amino-8-(trans-4-methoxycyclohexyl)-4-methyl-6-(1H-pyrazol-3-yl)pyrido[2,3-d]pyrimidin-7(8H)-one  ligand  48  26  .  2021-08-04  2022-09-16
+ 3RE  3RE  2-amino-8-(trans-4-methoxycyclohexyl)-4-methyl-6-(1H-pyrazol-3-yl)pyrido[2,3-d]pyrimidin-7(8H)-one  ligand  48  26  .  2021-08-04  2023-10-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-10-12
 ;
 
 data_comp_3RE
@@ -255,38 +256,71 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3RE  CONST_01  C4    C5   C6   N1     0.00   0.0  0
- 3RE  CONST_02  C4    N3   C2   N1     0.00   0.0  0
- 3RE  CONST_03  C5    C6   N1   C2     0.00   0.0  0
- 3RE  CONST_04  C5    C4   N3   C2     0.00   0.0  0
- 3RE  CONST_05  C6    N1   C2   N3     0.00   0.0  0
- 3RE  CONST_06  C6    C5   C4   N3     0.00   0.0  0
- 3RE  CONST_07  N24   C23  C22  C21    0.00   0.0  0
- 3RE  CONST_08  C23   N24  N25  C21    0.00   0.0  0
- 3RE  CONST_09  N24   N25  C21  C22    0.00   0.0  0
- 3RE  CONST_10  N25   N24  C23  C22    0.00   0.0  0
- 3RE  CONST_11  N25   C21  C22  C23    0.00   0.0  0
- 3RE  CONST_12  C23   C22  C21  C9   180.00   0.0  0
- 3RE  CONST_13  N24   N25  C21  C9   180.00   0.0  0
- 3RE  CONST_14  C9    C8   N7   C4     0.00   0.0  0
- 3RE  CONST_15  C14   N7   C8   C9   180.00   0.0  0
- 3RE  CONST_16  C12   C6   N1   C2   180.00   0.0  0
- 3RE  CONST_17  N11   C2   N3   C4   180.00   0.0  0
- 3RE  CONST_18  C12   C6   C5   C4   180.00   0.0  0
- 3RE  CONST_19  N11   C2   N1   C6   180.00   0.0  0
- 3RE  CONST_20  C12   C6   C5   C10    0.00   0.0  0
- 3RE  CONST_21  O13   C8   N7   C4   180.00   0.0  0
- 3RE  CONST_22  C14   N7   C8   O13    0.00   0.0  0
- 3RE  CONST_23  H22   C22  C21  C9     0.00   0.0  0
- 3RE  CONST_24  H23   C23  C22  C21  180.00   0.0  0
- 3RE  CONST_25  HN24  N24  N25  C21  180.00   0.0  0
- 3RE  CONST_26  HN11  N11  C2   N1     0.00   0.0  0
- 3RE  CONST_27  HN1A  N11  C2   N1   180.00   0.0  0
- 3RE  Var_01    C22   C21  C9   C8   139.61  30.0  2
- 3RE  Var_02    C17   C18  C19  C14  -56.54  30.0  1
- 3RE  Var_03    C17   C16  C15  C14   56.54  30.0  1
- 3RE  Var_04    H12   C12  C6   N1   117.24  30.0  2
- 3RE  Var_05    H26   C26  O20  C17  -67.88  30.0  3
+ 3RE  CONST_01  C4    C5   C6   N1      0.00   0.0  0
+ 3RE  CONST_02  C4    N3   C2   N1      0.00   0.0  0
+ 3RE  CONST_03  C5    C6   N1   C2      0.00   0.0  0
+ 3RE  CONST_04  C5    C4   N3   C2      0.00   0.0  0
+ 3RE  CONST_05  C6    N1   C2   N3      0.00   0.0  0
+ 3RE  CONST_06  C6    C5   C4   N3      0.00   0.0  0
+ 3RE  CONST_07  N24   C23  C22  C21     0.00   0.0  0
+ 3RE  CONST_08  C23   N24  N25  C21     0.00   0.0  0
+ 3RE  CONST_09  N24   N25  C21  C22     0.00   0.0  0
+ 3RE  CONST_10  N25   N24  C23  C22     0.00   0.0  0
+ 3RE  CONST_11  N25   C21  C22  C23     0.00   0.0  0
+ 3RE  CONST_12  C23   C22  C21  C9    180.00   0.0  0
+ 3RE  CONST_13  N24   N25  C21  C9    180.00   0.0  0
+ 3RE  CONST_14  C9    C8   N7   C4      0.00   0.0  0
+ 3RE  CONST_15  C14   N7   C8   C9    180.00   0.0  0
+ 3RE  CONST_16  C12   C6   N1   C2    180.00   0.0  0
+ 3RE  CONST_17  N11   C2   N3   C4    180.00   0.0  0
+ 3RE  CONST_18  C12   C6   C5   C4    180.00   0.0  0
+ 3RE  CONST_19  N11   C2   N1   C6    180.00   0.0  0
+ 3RE  CONST_20  C12   C6   C5   C10     0.00   0.0  0
+ 3RE  CONST_21  O13   C8   N7   C4    180.00   0.0  0
+ 3RE  CONST_22  C14   N7   C8   O13     0.00   0.0  0
+ 3RE  CONST_23  H22   C22  C21  C9      0.00   0.0  0
+ 3RE  CONST_24  H23   C23  C22  C21   180.00   0.0  0
+ 3RE  CONST_25  HN24  N24  N25  C21   180.00   0.0  0
+ 3RE  CONST_26  HN11  N11  C2   N1      0.00   0.0  0
+ 3RE  CONST_27  HN1A  N11  C2   N1    180.00   0.0  0
+ 3RE  Var_01    C22   C21  C9   C8    139.61  30.0  2
+ 3RE  Var_02    C17   C18  C19  C14   -56.54  30.0  1
+ 3RE  Var_03    C17   C16  C15  C14    56.54  30.0  1
+ 3RE  Var_04    H12   C12  C6   N1    117.24  30.0  2
+ 3RE  Var_05    H26   C26  O20  C17   -67.88  30.0  3
+ 3RE  Var_06    C8    N7   C4   N3    179.96  30.0  1
+ 3RE  Var_07    C14   N7   C4   N3      0.84  30.0  1
+ 3RE  Var_08    C9    C10  C5   C4      0.57  30.0  1
+ 3RE  Var_09    C19   C14  N7   C4    113.83  30.0  3
+ 3RE  Var_10    C15   C14  N7   C4   -116.55  30.0  3
+ 3RE  Var_11    C8    N7   C4   C5      0.09  30.0  1
+ 3RE  Var_12    C14   N7   C4   C5   -179.04  30.0  1
+ 3RE  Var_13    C8    C9   C10  C5      0.88  30.0  1
+ 3RE  Var_14    C21   C9   C10  C5    178.69  30.0  1
+ 3RE  Var_15    C9    C10  C5   C6    179.78  30.0  1
+ 3RE  Var_16    C10   C9   C8   N7     -1.80  30.0  1
+ 3RE  Var_17    C21   C9   C8   N7   -179.63  30.0  1
+ 3RE  Var_18    C18   C19  C14  N7   -171.99  30.0  1
+ 3RE  Var_19    C16   C15  C14  N7    172.05  30.0  1
+ 3RE  Var_20    C19   C14  N7   C8    -65.32  30.0  3
+ 3RE  Var_21    C15   C14  N7   C8     64.29  30.0  3
+ 3RE  Var_22    C18   C19  C14  C15    57.67  30.0  1
+ 3RE  Var_23    C18   C17  C16  C15   -56.85  30.0  1
+ 3RE  Var_24    C19   C14  C15  C16   -57.61  30.0  1
+ 3RE  Var_25    C19   C18  C17  C16    56.86  30.0  1
+ 3RE  Var_26    O13   C8   C9   C10   177.72  30.0  1
+ 3RE  Var_27    C21   C9   C8   O13    -0.11  30.0  1
+ 3RE  Var_28    O20   C17  C16  C15   179.55  30.0  1
+ 3RE  Var_29    O20   C17  C18  C19   177.60  30.0  1
+ 3RE  Var_30    H10   C10  C5   C4   -178.41  30.0  1
+ 3RE  Var_31    H14   C14  N7   C4     -1.35  30.0  3
+ 3RE  Var_32    H19   C19  C14  N7    -51.62  30.0  1
+ 3RE  Var_33    H19A  C19  C14  N7     66.87  30.0  1
+ 3RE  Var_34    H15   C15  C14  N7    -66.90  30.0  1
+ 3RE  Var_35    H15A  C15  C14  N7     51.58  30.0  1
+ 3RE  Var_36    H17   C17  C16  C15    61.38  30.0  1
+ 3RE  Var_37    C26   O20  C17  C16  -163.17  30.0  3
+ 3RE  Var_38    C26   O20  C17  C18    74.35  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

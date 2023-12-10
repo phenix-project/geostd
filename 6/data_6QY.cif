@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 6QY  6QY  ~{N}4,~{N}4-dimethyl-~{N}1-[5-(oxan-4-yl)-7~{H}-pyrrolo[2,3-d]pyrimidin-4-yl]cyclohexane-1,4-diamine  ligand  54  25  .  2021-08-05  2021-08-05  
+ 6QY  6QY  ~{N}4,~{N}4-dimethyl-~{N}1-[5-(oxan-4-yl)-7~{H}-pyrrolo[2,3-d]pyrimidin-4-yl]cyclohexane-1,4-diamine  ligand  54  25  .  2021-08-05  2023-10-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-13
 ;
 
 data_comp_6QY
@@ -284,42 +285,76 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 6QY  CONST_01  N3   C8   N2   C7     0.00   0.0  0
- 6QY  CONST_02  N3   C9   C10  C7     0.00   0.0  0
- 6QY  CONST_03  N4   C9   C10  C7   180.00   0.0  0
- 6QY  CONST_04  C12  C11  C10  C7   180.00   0.0  0
- 6QY  CONST_05  C10  C7   N2   C8     0.00   0.0  0
- 6QY  CONST_06  C10  C9   N3   C8     0.00   0.0  0
- 6QY  CONST_07  N4   C9   N3   C8   180.00   0.0  0
- 6QY  CONST_08  N2   C8   N3   C9     0.00   0.0  0
- 6QY  CONST_09  N2   C7   C10  C9     0.00   0.0  0
- 6QY  CONST_10  C12  C11  C10  C9     0.00   0.0  0
- 6QY  CONST_11  C11  C12  N4   C9     0.00   0.0  0
- 6QY  CONST_12  C12  N4   C9   C10    0.00   0.0  0
- 6QY  CONST_13  N4   C12  C11  C10    0.00   0.0  0
- 6QY  CONST_14  N2   C7   C10  C11  180.00   0.0  0
- 6QY  CONST_15  N3   C9   C10  C11  180.00   0.0  0
- 6QY  CONST_16  N4   C9   C10  C11    0.00   0.0  0
- 6QY  CONST_17  N3   C9   N4   C12  180.00   0.0  0
- 6QY  CONST_18  C13  C11  C10  C7     0.00   0.0  0
- 6QY  CONST_19  C13  C11  C10  C9   180.00   0.0  0
- 6QY  CONST_20  N4   C12  C11  C13  180.00   0.0  0
- 6QY  CONST_21  N1   C7   N2   C8   180.00   0.0  0
- 6QY  CONST_22  N1   C7   C10  C9   180.00   0.0  0
- 6QY  CONST_23  N1   C7   C10  C11    0.00   0.0  0
- 6QY  CONST_24  C4   N1   C7   C10  180.00   0.0  0
- 6QY  CONST_25  N2   C7   N1   C4     0.00   0.0  0
- 6QY  CONST_26  H6   C8   N2   C7   180.00   0.0  0
- 6QY  CONST_27  H7   C12  N4   C9   180.00   0.0  0
- 6QY  CONST_28  H28  N4   C9   C10  180.00   0.0  0
- 6QY  CONST_29  H27  N1   C7   C10    0.00   0.0  0
- 6QY  Var_01    C4   C3   C2   C1   -56.44  30.0  1
- 6QY  Var_02    C4   C5   C6   C1    57.56  30.0  1
- 6QY  Var_03    O    C16  C17  C13   56.47  30.0  1
- 6QY  Var_04    O    C15  C14  C13  -57.49  30.0  1
- 6QY  Var_05    C17  C16  O    C15  -58.81  30.0  1
- 6QY  Var_06    H15  C18  N    C1    56.68  30.0  3
- 6QY  Var_07    H19  C    N    C1   -60.63  30.0  3
+ 6QY  CONST_01  N3   C8   N2   C7      0.00   0.0  0
+ 6QY  CONST_02  N3   C9   C10  C7      0.00   0.0  0
+ 6QY  CONST_03  N4   C9   C10  C7    180.00   0.0  0
+ 6QY  CONST_04  C12  C11  C10  C7    180.00   0.0  0
+ 6QY  CONST_05  C10  C7   N2   C8      0.00   0.0  0
+ 6QY  CONST_06  C10  C9   N3   C8      0.00   0.0  0
+ 6QY  CONST_07  N4   C9   N3   C8    180.00   0.0  0
+ 6QY  CONST_08  N2   C8   N3   C9      0.00   0.0  0
+ 6QY  CONST_09  N2   C7   C10  C9      0.00   0.0  0
+ 6QY  CONST_10  C12  C11  C10  C9      0.00   0.0  0
+ 6QY  CONST_11  C11  C12  N4   C9      0.00   0.0  0
+ 6QY  CONST_12  C12  N4   C9   C10     0.00   0.0  0
+ 6QY  CONST_13  N4   C12  C11  C10     0.00   0.0  0
+ 6QY  CONST_14  N2   C7   C10  C11   180.00   0.0  0
+ 6QY  CONST_15  N3   C9   C10  C11   180.00   0.0  0
+ 6QY  CONST_16  N4   C9   C10  C11     0.00   0.0  0
+ 6QY  CONST_17  N3   C9   N4   C12   180.00   0.0  0
+ 6QY  CONST_18  C13  C11  C10  C7      0.00   0.0  0
+ 6QY  CONST_19  C13  C11  C10  C9    180.00   0.0  0
+ 6QY  CONST_20  N4   C12  C11  C13   180.00   0.0  0
+ 6QY  CONST_21  N1   C7   N2   C8    180.00   0.0  0
+ 6QY  CONST_22  N1   C7   C10  C9    180.00   0.0  0
+ 6QY  CONST_23  N1   C7   C10  C11     0.00   0.0  0
+ 6QY  CONST_24  C4   N1   C7   C10   180.00   0.0  0
+ 6QY  CONST_25  N2   C7   N1   C4      0.00   0.0  0
+ 6QY  CONST_26  H6   C8   N2   C7    180.00   0.0  0
+ 6QY  CONST_27  H7   C12  N4   C9    180.00   0.0  0
+ 6QY  CONST_28  H28  N4   C9   C10   180.00   0.0  0
+ 6QY  CONST_29  H27  N1   C7   C10     0.00   0.0  0
+ 6QY  Var_01    C4   C3   C2   C1    -56.44  30.0  1
+ 6QY  Var_02    C4   C5   C6   C1     57.56  30.0  1
+ 6QY  Var_03    O    C16  C17  C13    56.47  30.0  1
+ 6QY  Var_04    O    C15  C14  C13   -57.49  30.0  1
+ 6QY  Var_05    C17  C16  O    C15   -58.81  30.0  1
+ 6QY  Var_06    H15  C18  N    C1     56.68  30.0  3
+ 6QY  Var_07    H19  C    N    C1    -60.63  30.0  3
+ 6QY  Var_08    C5   C6   C1   C2    -55.57  30.0  1
+ 6QY  Var_09    C5   C4   C3   C2     55.35  30.0  1
+ 6QY  Var_10    C6   C1   C2   C3     54.87  30.0  1
+ 6QY  Var_11    C6   C5   C4   C3    -55.83  30.0  1
+ 6QY  Var_12    C17  C13  C11  C10   -72.26  30.0  2
+ 6QY  Var_13    C14  C13  C11  C10   165.19  30.0  2
+ 6QY  Var_14    C16  C17  C13  C11  -179.26  30.0  1
+ 6QY  Var_15    C15  C14  C13  C11   178.47  30.0  1
+ 6QY  Var_16    C17  C13  C11  C12   103.77  30.0  2
+ 6QY  Var_17    C14  C13  C11  C12   -18.79  30.0  2
+ 6QY  Var_18    C16  C17  C13  C14   -53.62  30.0  1
+ 6QY  Var_19    C16  O    C15  C14    59.43  30.0  1
+ 6QY  Var_20    C17  C13  C14  C15    53.89  30.0  1
+ 6QY  Var_21    N1   C4   C3   C2    178.73  30.0  1
+ 6QY  Var_22    N    C1   C2   C3    177.77  30.0  1
+ 6QY  Var_23    C7   N1   C4   C3    158.89  30.0  3
+ 6QY  Var_24    C5   C4   N1   C7    -79.17  30.0  2
+ 6QY  Var_25    C5   C6   C1   N    -179.18  30.0  1
+ 6QY  Var_26    N1   C4   C5   C6   -177.65  30.0  1
+ 6QY  Var_27    H22  C6   C1   C2     65.98  30.0  1
+ 6QY  Var_28    H23  C6   C1   C2   -176.99  30.0  1
+ 6QY  Var_29    H26  C4   C3   C2    -63.35  30.0  1
+ 6QY  Var_30    H1   C1   C2   C3    -61.60  30.0  1
+ 6QY  Var_31    H8   C13  C11  C10    46.99  30.0  2
+ 6QY  Var_32    H29  C17  C13  C11   -58.40  30.0  1
+ 6QY  Var_33    H30  C17  C13  C11    59.08  30.0  1
+ 6QY  Var_34    H9   C14  C13  C11   -60.48  30.0  1
+ 6QY  Var_35    H10  C14  C13  C11    58.04  30.0  1
+ 6QY  Var_36    H2   C2   C1   C6    175.54  30.0  1
+ 6QY  Var_37    H3   C2   C1   C6    -67.21  30.0  1
+ 6QY  Var_38    C18  N    C1   C2     49.07  30.0  1
+ 6QY  Var_39    C    N    C1   C2    172.78  30.0  1
+ 6QY  Var_40    C6   C1   N    C18   170.66  30.0  3
+ 6QY  Var_41    C6   C1   N    C     -65.63  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

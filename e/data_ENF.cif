@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ENF  ENF  N-{(5E)-10-[(9E)-tetradec-9-enoylamino]dec-5-enoyl}-L-seryl-N-(2-cyclohexylethyl)-L-lysinamide  ligand  130  51  .  2021-08-08  2021-08-08  
+ ENF  ENF  N-{(5E)-10-[(9E)-tetradec-9-enoylamino]dec-5-enoyl}-L-seryl-N-(2-cyclohexylethyl)-L-lysinamide  ligand  130  51  .  2021-08-08  2023-10-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-10-17
 ;
 
 data_comp_ENF
@@ -575,51 +576,85 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ENF  CONST_01  C29  C27  N    C     180.00   0.0  0
- ENF  CONST_02  O28  C27  N    C       0.00   0.0  0
- ENF  CONST_03  C10  N1   C9   O       0.00   0.0  0
- ENF  CONST_04  C13  N2   C12  O2      0.00   0.0  0
- ENF  CONST_05  C19  N4   C18  O3      0.00   0.0  0
- ENF  CONST_06  C10  N1   C9   C8    180.00   0.0  0
- ENF  CONST_07  C13  N2   C12  C10   180.00   0.0  0
- ENF  CONST_08  C19  N4   C18  C13   180.00   0.0  0
- ENF  CONST_09  HN1  N1   C9   O     180.00   0.0  0
- ENF  CONST_10  HN2  N2   C12  O2    180.00   0.0  0
- ENF  CONST_11  HN4  N4   C18  O3    180.00   0.0  0
- ENF  CONST_12  HN   N    C27  O28   180.00   0.0  0
- ENF  Var_01    C24  C23  C22  C21   -55.57  30.0  1
- ENF  Var_02    C24  C25  C26  C21    55.77  30.0  1
- ENF  Var_03    C25  C24  C23  C22    55.01  30.0  1
- ENF  Var_04    C26  C25  C24  C23   -55.00  30.0  1
- ENF  Var_05    C21  C20  C19  N4    176.17  30.0  3
- ENF  Var_06    C3   C2   C1   C    -180.00  30.0  1
- ENF  Var_07    C2   C1   C    N     179.78  30.0  3
- ENF  Var_08    C30  C29  C27  N     144.56  30.0  1
- ENF  Var_09    C7   C8   C9   O      10.60  30.0  3
- ENF  Var_10    C27  N    C    C1   -147.68  30.0  1
- ENF  Var_11    C4   C3   C2   C1    178.83  30.0  3
- ENF  Var_12    C5   C4   C3   C2   -179.99  30.0  1
- ENF  Var_13    C6   C5   C4   C3    179.11  30.0  3
- ENF  Var_14    C15  C16  C17  N3    179.50  30.0  3
- ENF  Var_15    C7   C6   C5   C4    179.88  30.0  3
- ENF  Var_16    C8   C7   C6   C5    178.96  30.0  3
- ENF  Var_17    C9   C8   C7   C6    179.81  30.0  3
- ENF  Var_18    C16  C15  C14  C13  -179.05  30.0  2
- ENF  Var_19    C17  C16  C15  C14  -179.32  30.0  3
- ENF  Var_20    C20  C19  N4   C18  -148.43  30.0  1
- ENF  Var_21    C31  C30  C29  C27   175.20  30.0  1
- ENF  Var_22    C32  C31  C30  C29  -179.56  30.0  1
- ENF  Var_23    C33  C32  C31  C30   178.73  30.0  1
- ENF  Var_24    C34  C33  C32  C31  -179.62  30.0  1
- ENF  Var_25    C35  C34  C33  C32   179.46  30.0  1
- ENF  Var_26    C36  C35  C34  C33  -179.63  30.0  1
- ENF  Var_27    C37  C36  C35  C34   179.76  30.0  1
- ENF  Var_28    C38  C37  C36  C35  -179.60  30.0  3
- ENF  Var_29    C39  C38  C37  C36   179.88  30.0  1
- ENF  Var_30    C40  C39  C38  C37  -179.58  30.0  1
- ENF  Var_31    C41  C40  C39  C38   179.92  30.0  1
- ENF  Var_32    HN3  N3   C17  C16   177.42  30.0  3
- ENF  Var_33    H41  C41  C40  C39   -59.45  30.0  3
+ ENF  CONST_01  C29   C27  N    C     180.00   0.0  0
+ ENF  CONST_02  O28   C27  N    C       0.00   0.0  0
+ ENF  CONST_03  C10   N1   C9   O       0.00   0.0  0
+ ENF  CONST_04  C13   N2   C12  O2      0.00   0.0  0
+ ENF  CONST_05  C19   N4   C18  O3      0.00   0.0  0
+ ENF  CONST_06  C10   N1   C9   C8    180.00   0.0  0
+ ENF  CONST_07  C13   N2   C12  C10   180.00   0.0  0
+ ENF  CONST_08  C19   N4   C18  C13   180.00   0.0  0
+ ENF  CONST_09  HN1   N1   C9   O     180.00   0.0  0
+ ENF  CONST_10  HN2   N2   C12  O2    180.00   0.0  0
+ ENF  CONST_11  HN4   N4   C18  O3    180.00   0.0  0
+ ENF  CONST_12  HN    N    C27  O28   180.00   0.0  0
+ ENF  Var_01    C24   C23  C22  C21   -55.57  30.0  1
+ ENF  Var_02    C24   C25  C26  C21    55.77  30.0  1
+ ENF  Var_03    C25   C24  C23  C22    55.01  30.0  1
+ ENF  Var_04    C26   C25  C24  C23   -55.00  30.0  1
+ ENF  Var_05    C21   C20  C19  N4    176.17  30.0  3
+ ENF  Var_06    C3    C2   C1   C    -180.00  30.0  1
+ ENF  Var_07    C2    C1   C    N     179.78  30.0  3
+ ENF  Var_08    C30   C29  C27  N     144.56  30.0  1
+ ENF  Var_09    C7    C8   C9   O      10.60  30.0  3
+ ENF  Var_10    C27   N    C    C1   -147.68  30.0  1
+ ENF  Var_11    C4    C3   C2   C1    178.83  30.0  3
+ ENF  Var_12    C5    C4   C3   C2   -179.99  30.0  1
+ ENF  Var_13    C6    C5   C4   C3    179.11  30.0  3
+ ENF  Var_14    C15   C16  C17  N3    179.50  30.0  3
+ ENF  Var_15    C7    C6   C5   C4    179.88  30.0  3
+ ENF  Var_16    C8    C7   C6   C5    178.96  30.0  3
+ ENF  Var_17    C9    C8   C7   C6    179.81  30.0  3
+ ENF  Var_18    C16   C15  C14  C13  -179.05  30.0  2
+ ENF  Var_19    C17   C16  C15  C14  -179.32  30.0  3
+ ENF  Var_20    C20   C19  N4   C18  -148.43  30.0  1
+ ENF  Var_21    C31   C30  C29  C27   175.20  30.0  1
+ ENF  Var_22    C32   C31  C30  C29  -179.56  30.0  1
+ ENF  Var_23    C33   C32  C31  C30   178.73  30.0  1
+ ENF  Var_24    C34   C33  C32  C31  -179.62  30.0  1
+ ENF  Var_25    C35   C34  C33  C32   179.46  30.0  1
+ ENF  Var_26    C36   C35  C34  C33  -179.63  30.0  1
+ ENF  Var_27    C37   C36  C35  C34   179.76  30.0  1
+ ENF  Var_28    C38   C37  C36  C35  -179.60  30.0  3
+ ENF  Var_29    C39   C38  C37  C36   179.88  30.0  1
+ ENF  Var_30    C40   C39  C38  C37  -179.58  30.0  1
+ ENF  Var_31    C41   C40  C39  C38   179.92  30.0  1
+ ENF  Var_32    HN3   N3   C17  C16   177.42  30.0  3
+ ENF  Var_33    H41   C41  C40  C39   -59.45  30.0  3
+ ENF  Var_34    C25   C26  C21  C22   -54.90  30.0  1
+ ENF  Var_35    C26   C21  C22  C23    54.68  30.0  1
+ ENF  Var_36    C23   C22  C21  C20   178.03  30.0  1
+ ENF  Var_37    C25   C26  C21  C20  -179.80  30.0  1
+ ENF  Var_38    H26   C26  C21  C22    66.32  30.0  1
+ ENF  Var_39    H26A  C26  C21  C22  -177.64  30.0  1
+ ENF  Var_40    H21   C21  C22  C23   -62.71  30.0  1
+ ENF  Var_41    C22   C21  C20  C19    64.42  30.0  2
+ ENF  Var_42    C26   C21  C20  C19  -172.35  30.0  2
+ ENF  Var_43    H20   C20  C21  C22   -58.55  30.0  3
+ ENF  Var_44    H20A  C20  C21  C22  -174.48  30.0  3
+ ENF  Var_45    O1    C11  C10  N1     65.61  30.0  1
+ ENF  Var_46    N2    C12  C10  N1    164.33  30.0  3
+ ENF  Var_47    O2    C12  C10  N1    -16.43  30.0  3
+ ENF  Var_48    C11   C10  C12  N2    -71.83  30.0  1
+ ENF  Var_49    O3    C18  C13  N2    -32.11  30.0  1
+ ENF  Var_50    N4    C18  C13  N2    151.23  30.0  1
+ ENF  Var_51    C15   C14  C13  N2    -60.64  30.0  3
+ ENF  Var_52    C11   C10  N1   C9     83.63  30.0  1
+ ENF  Var_53    C12   C10  N1   C9   -154.21  30.0  1
+ ENF  Var_54    O2    C12  C10  C11   107.41  30.0  3
+ ENF  Var_55    C18   C13  N2   C12  -135.20  30.0  3
+ ENF  Var_56    C14   C13  N2   C12   104.62  30.0  3
+ ENF  Var_57    O1    C11  C10  C12   -55.78  30.0  1
+ ENF  Var_58    O3    C18  C13  C14    90.17  30.0  1
+ ENF  Var_59    N4    C18  C13  C14   -86.49  30.0  1
+ ENF  Var_60    C18   C13  C14  C15   179.26  30.0  3
+ ENF  Var_61    H11   C11  C10  N1    -56.36  30.0  1
+ ENF  Var_62    H11A  C11  C10  N1   -172.20  30.0  1
+ ENF  Var_63    H10   C10  C12  N2     45.68  30.0  1
+ ENF  Var_64    H14   C14  C13  N2     62.05  30.0  3
+ ENF  Var_65    H14A  C14  C13  N2    177.46  30.0  3
+ ENF  Var_66    HO1   O1   C11  C10  -179.97  30.0  3
+ ENF  Var_67    H13   C13  N2   C12   -15.60  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

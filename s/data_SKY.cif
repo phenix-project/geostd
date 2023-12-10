@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SKY  SKY  1-beta-D-glucopyranosyl-4-naphthalen-2-yl-1H-1,2,3-triazole  ligand  45  26  .  2021-08-23  2021-08-23  
+ SKY  SKY  1-beta-D-glucopyranosyl-4-naphthalen-2-yl-1H-1,2,3-triazole  ligand  45  26  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SKY
@@ -240,47 +241,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SKY  CONST_01  C17  C18  C9   C10    0.00  0.0  0
- SKY  CONST_02  C7   C8   C9   C10  180.00  0.0  0
- SKY  CONST_03  N3   C8   C9   C10    0.00  0.0  0
- SKY  CONST_04  C15  C16  C11  C10  180.00  0.0  0
- SKY  CONST_05  C17  C16  C11  C10    0.00  0.0  0
- SKY  CONST_06  C13  C12  C11  C10  180.00  0.0  0
- SKY  CONST_07  C18  C9   C10  C11    0.00  0.0  0
- SKY  CONST_08  C8   C9   C10  C11  180.00  0.0  0
- SKY  CONST_09  C14  C15  C16  C11    0.00  0.0  0
- SKY  CONST_10  C18  C17  C16  C11    0.00  0.0  0
- SKY  CONST_11  C14  C13  C12  C11    0.00  0.0  0
- SKY  CONST_12  C9   C10  C11  C12  180.00  0.0  0
- SKY  CONST_13  C15  C16  C11  C12    0.00  0.0  0
- SKY  CONST_14  C17  C16  C11  C12  180.00  0.0  0
- SKY  CONST_15  C15  C14  C13  C12    0.00  0.0  0
- SKY  CONST_16  C16  C11  C12  C13    0.00  0.0  0
- SKY  CONST_17  C16  C15  C14  C13    0.00  0.0  0
- SKY  CONST_18  C17  C16  C15  C14  180.00  0.0  0
- SKY  CONST_19  C18  C17  C16  C15  180.00  0.0  0
- SKY  CONST_20  C9   C10  C11  C16    0.00  0.0  0
- SKY  CONST_21  C9   C18  C17  C16    0.00  0.0  0
- SKY  CONST_22  C8   C9   C18  C17  180.00  0.0  0
- SKY  CONST_23  C7   C8   C9   C18    0.00  0.0  0
- SKY  CONST_24  N3   C8   C9   C18  180.00  0.0  0
- SKY  CONST_25  N1   C7   C8   C9   180.00  0.0  0
- SKY  CONST_26  N2   N3   C8   C9   180.00  0.0  0
- SKY  CONST_27  N2   N1   C7   C8     0.00  0.0  0
- SKY  CONST_28  N1   N2   N3   C8     0.00  0.0  0
- SKY  CONST_29  N2   N3   C8   C7     0.00  0.0  0
- SKY  CONST_30  N3   N2   N1   C7     0.00  0.0  0
- SKY  CONST_31  N1   C7   C8   N3     0.00  0.0  0
- SKY  CONST_32  C1   N1   C7   C8   180.00  0.0  0
- SKY  CONST_33  C1   N1   N2   N3   180.00  0.0  0
- SKY  CONST_34  H18  C18  C9   C10  180.00  0.0  0
- SKY  CONST_35  H12  C12  C11  C10    0.00  0.0  0
- SKY  CONST_36  H15  C15  C16  C11  180.00  0.0  0
- SKY  CONST_37  H17  C17  C16  C11  180.00  0.0  0
- SKY  CONST_38  H13  C13  C12  C11  180.00  0.0  0
- SKY  CONST_39  H10  C10  C11  C12    0.00  0.0  0
- SKY  CONST_40  H14  C14  C13  C12  180.00  0.0  0
- SKY  CONST_41  H7   C7   C8   C9     0.00  0.0  0
+ SKY  CONST_01  C17  C18  C9   C10     0.00   0.0  0
+ SKY  CONST_02  C7   C8   C9   C10   180.00   0.0  0
+ SKY  CONST_03  N3   C8   C9   C10     0.00   0.0  0
+ SKY  CONST_04  C15  C16  C11  C10   180.00   0.0  0
+ SKY  CONST_05  C17  C16  C11  C10     0.00   0.0  0
+ SKY  CONST_06  C13  C12  C11  C10   180.00   0.0  0
+ SKY  CONST_07  C18  C9   C10  C11     0.00   0.0  0
+ SKY  CONST_08  C8   C9   C10  C11   180.00   0.0  0
+ SKY  CONST_09  C14  C15  C16  C11     0.00   0.0  0
+ SKY  CONST_10  C18  C17  C16  C11     0.00   0.0  0
+ SKY  CONST_11  C14  C13  C12  C11     0.00   0.0  0
+ SKY  CONST_12  C9   C10  C11  C12   180.00   0.0  0
+ SKY  CONST_13  C15  C16  C11  C12     0.00   0.0  0
+ SKY  CONST_14  C17  C16  C11  C12   180.00   0.0  0
+ SKY  CONST_15  C15  C14  C13  C12     0.00   0.0  0
+ SKY  CONST_16  C16  C11  C12  C13     0.00   0.0  0
+ SKY  CONST_17  C16  C15  C14  C13     0.00   0.0  0
+ SKY  CONST_18  C17  C16  C15  C14   180.00   0.0  0
+ SKY  CONST_19  C18  C17  C16  C15   180.00   0.0  0
+ SKY  CONST_20  C9   C10  C11  C16     0.00   0.0  0
+ SKY  CONST_21  C9   C18  C17  C16     0.00   0.0  0
+ SKY  CONST_22  C8   C9   C18  C17   180.00   0.0  0
+ SKY  CONST_23  C7   C8   C9   C18     0.00   0.0  0
+ SKY  CONST_24  N3   C8   C9   C18   180.00   0.0  0
+ SKY  CONST_25  N1   C7   C8   C9    180.00   0.0  0
+ SKY  CONST_26  N2   N3   C8   C9    180.00   0.0  0
+ SKY  CONST_27  N2   N1   C7   C8      0.00   0.0  0
+ SKY  CONST_28  N1   N2   N3   C8      0.00   0.0  0
+ SKY  CONST_29  N2   N3   C8   C7      0.00   0.0  0
+ SKY  CONST_30  N3   N2   N1   C7      0.00   0.0  0
+ SKY  CONST_31  N1   C7   C8   N3      0.00   0.0  0
+ SKY  CONST_32  C1   N1   C7   C8    180.00   0.0  0
+ SKY  CONST_33  C1   N1   N2   N3    180.00   0.0  0
+ SKY  CONST_34  H18  C18  C9   C10   180.00   0.0  0
+ SKY  CONST_35  H12  C12  C11  C10     0.00   0.0  0
+ SKY  CONST_36  H15  C15  C16  C11   180.00   0.0  0
+ SKY  CONST_37  H17  C17  C16  C11   180.00   0.0  0
+ SKY  CONST_38  H13  C13  C12  C11   180.00   0.0  0
+ SKY  CONST_39  H10  C10  C11  C12     0.00   0.0  0
+ SKY  CONST_40  H14  C14  C13  C12   180.00   0.0  0
+ SKY  CONST_41  H7   C7   C8   C9      0.00   0.0  0
+ SKY  Var_01    C2   C1   N1   C7    139.36  30.0  1
+ SKY  Var_02    O5   C1   N1   C7    -99.07  30.0  1
+ SKY  Var_03    C2   C1   N1   N2    -43.55  30.0  1
+ SKY  Var_04    O5   C1   N1   N2     78.01  30.0  1
+ SKY  Var_05    C3   C2   C1   N1    178.84  30.0  1
+ SKY  Var_06    C5   O5   C1   N1    173.48  30.0  1
+ SKY  Var_07    C4   C3   C2   C1    -54.67  30.0  1
+ SKY  Var_08    C4   C5   O5   C1     61.27  30.0  1
+ SKY  Var_09    C3   C2   C1   O5     59.24  30.0  1
+ SKY  Var_10    C3   C4   C5   O5    -54.92  30.0  1
+ SKY  Var_11    C2   C1   O5   C5    -64.28  30.0  1
+ SKY  Var_12    C2   C3   C4   C5     53.76  30.0  1
+ SKY  Var_13    O2   C2   C1   N1    -62.25  30.0  1
+ SKY  Var_14    O3   C3   C2   C1   -174.26  30.0  1
+ SKY  Var_15    C6   C5   O5   C1   -176.56  30.0  1
+ SKY  Var_16    O2   C2   C1   O5    178.15  30.0  1
+ SKY  Var_17    O4   C4   C5   O5   -176.47  30.0  1
+ SKY  Var_18    O3   C3   C4   C5    175.85  30.0  1
+ SKY  Var_19    C3   C4   C5   C6   -174.39  30.0  1
+ SKY  Var_20    O2   C2   C3   C4   -175.21  30.0  1
+ SKY  Var_21    C2   C3   C4   O4    173.12  30.0  1
+ SKY  Var_22    H1   C1   N1   C7     20.11  30.0  1
+ SKY  Var_23    H2   C2   C1   N1     61.26  30.0  1
+ SKY  Var_24    H3   C3   C2   C1     63.30  30.0  1
+ SKY  Var_25    H5   C5   O5   C1    -57.93  30.0  1
+ SKY  Var_26    H4   C4   C5   O5     63.16  30.0  1
+ SKY  Var_27    O6   C6   C5   O5     63.49  30.0  3
+ SKY  Var_28    O4   C4   C5   C6     64.07  30.0  1
+ SKY  Var_29    C4   C5   C6   O6   -175.76  30.0  3
+ SKY  Var_30    O3   C3   C4   O4    -64.80  30.0  1
+ SKY  Var_31    O2   C2   C3   O3     65.20  30.0  1
+ SKY  Var_32    HO2  O2   C2   C1     88.83  30.0  3
+ SKY  Var_33    H6   C6   C5   O5   -174.75  30.0  3
+ SKY  Var_34    H6A  C6   C5   O5    -58.63  30.0  3
+ SKY  Var_35    HO4  O4   C4   C5   -177.15  30.0  3
+ SKY  Var_36    HO3  O3   C3   C4    169.27  30.0  3
+ SKY  Var_37    HO6  O6   C6   C5   -178.11  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

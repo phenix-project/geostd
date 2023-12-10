@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CLL  CLL  '(3alpha,8alpha,17alpha)-cholest-5-en-3-yl (9Z,12Z)-octadeca-9,12-dienoate'  ligand  123  47  .  2021-08-07  2021-08-07  
+ CLL  CLL  '(3alpha,8alpha,17alpha)-cholest-5-en-3-yl (9Z,12Z)-octadeca-9,12-dienoate'  ligand  123  47  .  2021-08-07  2023-10-16
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-10-16
 ;
 
 data_comp_CLL
@@ -564,34 +565,121 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CLL  Var_01  C10   C1   C2   C3    -57.73  30.0  1
- CLL  Var_02  C6    C5   C4   C3   -127.59  30.0  1
- CLL  Var_03  C7    C6   C5   C4   -177.01  30.0  1
- CLL  Var_04  C8    C7   C6   C5     13.17  30.0  1
- CLL  Var_05  C13   C12  C11  C9    -55.51  30.0  1
- CLL  Var_06  C17   C16  C15  C14     8.50  30.0  1
- CLL  Var_07  C29   C28  O2   C3    178.19  30.0  2
- CLL  Var_08  C38   C37  C36  C35     2.74   0.0  2
- CLL  Var_09  C41   C40  C39  C38     2.62   0.0  2
- CLL  Var_10  C24   C23  C22  C20   177.50  30.0  3
- CLL  Var_11  C25   C24  C23  C22  -174.73  30.0  3
- CLL  Var_12  C26   C25  C24  C23   173.26  30.0  3
- CLL  Var_13  C31   C30  C29  C28   179.20  30.0  3
- CLL  Var_14  C32   C31  C30  C29  -179.36  30.0  3
- CLL  Var_15  C33   C32  C31  C30  -179.44  30.0  3
- CLL  Var_16  C34   C33  C32  C31  -178.55  30.0  3
- CLL  Var_17  C35   C34  C33  C32  -178.30  30.0  3
- CLL  Var_18  C36   C35  C34  C33  -179.45  30.0  3
- CLL  Var_19  C37   C36  C35  C34   124.09  30.0  3
- CLL  Var_20  C39   C38  C37  C36   114.87  30.0  3
- CLL  Var_21  C40   C39  C38  C37   117.74  30.0  3
- CLL  Var_22  C42   C41  C40  C39   121.52  30.0  3
- CLL  Var_23  C43   C42  C41  C40   179.16  30.0  3
- CLL  Var_24  C44   C43  C42  C41  -178.29  30.0  3
- CLL  Var_25  C45   C44  C43  C42  -179.35  30.0  3
- CLL  Var_26  H261  C26  C25  C24  -177.20  30.0  3
- CLL  Var_27  H271  C27  C25  C24   -61.39  30.0  3
- CLL  Var_28  H451  C45  C44  C43  -178.91  30.0  3
+ CLL  Var_01   C10   C1   C2   C3    -57.73  30.0  1
+ CLL  Var_02   C6    C5   C4   C3   -127.59  30.0  1
+ CLL  Var_03   C7    C6   C5   C4   -177.01  30.0  1
+ CLL  Var_04   C8    C7   C6   C5     13.17  30.0  1
+ CLL  Var_05   C13   C12  C11  C9    -55.51  30.0  1
+ CLL  Var_06   C17   C16  C15  C14     8.50  30.0  1
+ CLL  Var_07   C29   C28  O2   C3    178.19  30.0  2
+ CLL  Var_08   C38   C37  C36  C35     2.74   0.0  2
+ CLL  Var_09   C41   C40  C39  C38     2.62   0.0  2
+ CLL  Var_10   C24   C23  C22  C20   177.50  30.0  3
+ CLL  Var_11   C25   C24  C23  C22  -174.73  30.0  3
+ CLL  Var_12   C26   C25  C24  C23   173.26  30.0  3
+ CLL  Var_13   C31   C30  C29  C28   179.20  30.0  3
+ CLL  Var_14   C32   C31  C30  C29  -179.36  30.0  3
+ CLL  Var_15   C33   C32  C31  C30  -179.44  30.0  3
+ CLL  Var_16   C34   C33  C32  C31  -178.55  30.0  3
+ CLL  Var_17   C35   C34  C33  C32  -178.30  30.0  3
+ CLL  Var_18   C36   C35  C34  C33  -179.45  30.0  3
+ CLL  Var_19   C37   C36  C35  C34   124.09  30.0  3
+ CLL  Var_20   C39   C38  C37  C36   114.87  30.0  3
+ CLL  Var_21   C40   C39  C38  C37   117.74  30.0  3
+ CLL  Var_22   C42   C41  C40  C39   121.52  30.0  3
+ CLL  Var_23   C43   C42  C41  C40   179.16  30.0  3
+ CLL  Var_24   C44   C43  C42  C41  -178.29  30.0  3
+ CLL  Var_25   C45   C44  C43  C42  -179.35  30.0  3
+ CLL  Var_26   H261  C26  C25  C24  -177.20  30.0  3
+ CLL  Var_27   H271  C27  C25  C24   -61.39  30.0  3
+ CLL  Var_28   H451  C45  C44  C43  -178.91  30.0  3
+ CLL  Var_29   C4    C3   C2   C1     57.14  30.0  1
+ CLL  Var_30   C4    C5   C10  C1    -49.23  30.0  1
+ CLL  Var_31   C6    C5   C10  C1    130.87  30.0  1
+ CLL  Var_32   C8    C9   C10  C1   -161.28  30.0  1
+ CLL  Var_33   C11   C9   C10  C1     71.20  30.0  1
+ CLL  Var_34   C5    C10  C1   C2     51.57  30.0  1
+ CLL  Var_35   C9    C10  C1   C2    171.31  30.0  1
+ CLL  Var_36   C5    C4   C3   C2    -54.40  30.0  1
+ CLL  Var_37   C9    C10  C5   C4   -167.75  30.0  1
+ CLL  Var_38   C8    C9   C10  C5    -43.38  30.0  1
+ CLL  Var_39   C11   C9   C10  C5   -170.90  30.0  1
+ CLL  Var_40   C9    C10  C5   C6     12.35  30.0  1
+ CLL  Var_41   C9    C8   C7   C6    -43.12  30.0  1
+ CLL  Var_42   C14   C8   C7   C6   -164.25  30.0  1
+ CLL  Var_43   C10   C9   C8   C7     59.90  30.0  1
+ CLL  Var_44   C11   C9   C8   C7   -171.88  30.0  1
+ CLL  Var_45   C13   C14  C8   C7    178.83  30.0  1
+ CLL  Var_46   C15   C14  C8   C7    -57.21  30.0  1
+ CLL  Var_47   C12   C11  C9   C8     51.17  30.0  1
+ CLL  Var_48   C12   C13  C14  C8    -60.19  30.0  1
+ CLL  Var_49   C17   C13  C14  C8    178.02  30.0  1
+ CLL  Var_50   C16   C15  C14  C8   -163.58  30.0  1
+ CLL  Var_51   C13   C14  C8   C9     57.37  30.0  1
+ CLL  Var_52   C15   C14  C8   C9   -178.67  30.0  1
+ CLL  Var_53   C14   C8   C9   C10  -178.26  30.0  1
+ CLL  Var_54   C12   C11  C9   C10   179.19  30.0  1
+ CLL  Var_55   C14   C8   C9   C11   -50.04  30.0  1
+ CLL  Var_56   C14   C13  C12  C11    56.69  30.0  1
+ CLL  Var_57   C17   C13  C12  C11   167.30  30.0  1
+ CLL  Var_58   C15   C14  C13  C12   168.68  30.0  1
+ CLL  Var_59   C16   C17  C13  C12  -154.52  30.0  1
+ CLL  Var_60   C16   C15  C14  C13   -34.49  30.0  1
+ CLL  Var_61   C15   C16  C17  C13    20.11  30.0  1
+ CLL  Var_62   C16   C17  C13  C14   -40.21  30.0  1
+ CLL  Var_63   C17   C13  C14  C15    46.89  30.0  1
+ CLL  Var_64   O2    C3   C2   C1    177.65  30.0  1
+ CLL  Var_65   C19   C10  C1   C2    -66.61  30.0  1
+ CLL  Var_66   C19   C10  C5   C4     69.62  30.0  1
+ CLL  Var_67   O2    C3   C4   C5   -172.95  30.0  1
+ CLL  Var_68   C19   C10  C5   C6   -110.28  30.0  1
+ CLL  Var_69   C19   C10  C9   C8     77.66  30.0  1
+ CLL  Var_70   C18   C13  C14  C8     61.30  30.0  1
+ CLL  Var_71   C19   C10  C9   C11   -49.87  30.0  1
+ CLL  Var_72   C18   C13  C12  C11   -65.58  30.0  1
+ CLL  Var_73   C20   C17  C13  C12    80.51  30.0  1
+ CLL  Var_74   C20   C17  C13  C14  -165.17  30.0  1
+ CLL  Var_75   C18   C13  C14  C15   -69.83  30.0  1
+ CLL  Var_76   C20   C17  C16  C15   149.68  30.0  1
+ CLL  Var_77   C18   C13  C17  C16    77.98  30.0  1
+ CLL  Var_78   H3    C3   C2   C1    -63.84  30.0  1
+ CLL  Var_79   H9    C9   C10  C1    -45.84  30.0  1
+ CLL  Var_80   H41   C4   C3   C2     66.86  30.0  1
+ CLL  Var_81   H42   C4   C3   C2   -176.52  30.0  1
+ CLL  Var_82   H21   C2   C3   C4    177.64  30.0  1
+ CLL  Var_83   H22   C2   C3   C4    -65.08  30.0  1
+ CLL  Var_84   H8    C8   C7   C6     76.11  30.0  1
+ CLL  Var_85   H14   C14  C8   C7     62.74  30.0  1
+ CLL  Var_86   H111  C11  C9   C8    173.31  30.0  1
+ CLL  Var_87   H112  C11  C9   C8    -70.83  30.0  1
+ CLL  Var_88   H151  C15  C14  C8     74.99  30.0  1
+ CLL  Var_89   H152  C15  C14  C8    -44.19  30.0  1
+ CLL  Var_90   H17   C17  C13  C12   -40.77  30.0  1
+ CLL  Var_91   H161  C16  C17  C13   141.91  30.0  1
+ CLL  Var_92   H162  C16  C17  C13  -100.66  30.0  1
+ CLL  Var_93   C28   O2   C3   C2    158.75  30.0  3
+ CLL  Var_94   C28   O2   C3   C4    -80.67  30.0  3
+ CLL  Var_95   C21   C20  C17  C13   -55.79  30.0  3
+ CLL  Var_96   C22   C20  C17  C13  -179.56  30.0  3
+ CLL  Var_97   C21   C20  C17  C16  -176.37  30.0  3
+ CLL  Var_98   C22   C20  C17  C16    59.86  30.0  3
+ CLL  Var_99   C20   C17  C13  C18   -46.98  30.0  1
+ CLL  Var_100  H191  C19  C10  C1     69.17  30.0  3
+ CLL  Var_101  H192  C19  C10  C1   -171.22  30.0  3
+ CLL  Var_102  H193  C19  C10  C1    -50.59  30.0  3
+ CLL  Var_103  H181  C18  C13  C12    61.71  30.0  3
+ CLL  Var_104  H182  C18  C13  C12  -177.60  30.0  3
+ CLL  Var_105  H183  C18  C13  C12   -58.00  30.0  3
+ CLL  Var_106  H20   C20  C17  C13    63.76  30.0  3
+ CLL  Var_107  C23   C22  C20  C17  -166.25  30.0  3
+ CLL  Var_108  H211  C21  C20  C17   -52.85  30.0  3
+ CLL  Var_109  H212  C21  C20  C17    67.86  30.0  3
+ CLL  Var_110  H213  C21  C20  C17  -172.66  30.0  3
+ CLL  Var_111  H221  C22  C20  C17   -44.91  30.0  3
+ CLL  Var_112  H222  C22  C20  C17    70.36  30.0  3
+ CLL  Var_113  C23   C22  C20  C21    68.30  30.0  3
+ CLL  Var_114  O1    C28  C29  C30     3.26  30.0  2
+ CLL  Var_115  O2    C28  C29  C30  -176.89  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VAK  VAK  'methyl (1R,2R,4S)-2-ethyl-2,4,5,7-tetrahydroxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracene-1-carboxylate'  ligand  50  30  .  2021-08-24  2021-08-24  
+ VAK  VAK  'methyl (1R,2R,4S)-2-ethyl-2,4,5,7-tetrahydroxy-6,11-dioxo-1,2,3,4,6,11-hexahydrotetracene-1-carboxylate'  ligand  50  30  .  2021-08-24  2023-10-24
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-24
 ;
 
 data_comp_VAK
@@ -260,32 +261,84 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- VAK  CONST_01  C4   C16  C21  C1     0.00   0.0  0
- VAK  CONST_02  C4   C3   C2   C1     0.00   0.0  0
- VAK  CONST_03  C16  C21  C1   C2     0.00   0.0  0
- VAK  CONST_04  C16  C4   C3   C2     0.00   0.0  0
- VAK  CONST_05  C21  C1   C2   C3     0.00   0.0  0
- VAK  CONST_06  C21  C16  C4   C3     0.00   0.0  0
- VAK  CONST_07  C11  C19  C20  C6     0.00   0.0  0
- VAK  CONST_08  C11  C18  C17  C6     0.00   0.0  0
- VAK  CONST_09  C19  C20  C6   C17    0.00   0.0  0
- VAK  CONST_10  C19  C11  C18  C17    0.00   0.0  0
- VAK  CONST_11  C20  C19  C11  C18    0.00   0.0  0
- VAK  CONST_12  C20  C6   C17  C18    0.00   0.0  0
- VAK  CONST_13  O19  C4   C3   C2   180.00   0.0  0
- VAK  CONST_14  O21  C6   C17  C5     0.00   0.0  0
- VAK  CONST_15  O19  C4   C16  C5     0.00   0.0  0
- VAK  CONST_16  O21  C6   C20  C7     0.00   0.0  0
- VAK  CONST_17  O21  C6   C17  C18  180.00   0.0  0
- VAK  CONST_18  O21  C6   C20  C19  180.00   0.0  0
- VAK  CONST_19  C21  C16  C4   O19  180.00   0.0  0
- VAK  CONST_20  H3   C3   C2   C1   180.00   0.0  0
- VAK  CONST_21  H1   C1   C2   C3   180.00   0.0  0
- VAK  CONST_22  H2   C2   C3   C4   180.00   0.0  0
- VAK  CONST_23  H11  C11  C19  C10    0.00   0.0  0
- VAK  Var_01    H22  C22  C13  C9   -62.62  30.0  3
- VAK  Var_02    O17  C14  O16  C15    2.10  30.0  2
- VAK  Var_03    H15  C15  O16  C14  177.38  30.0  3
+ VAK  CONST_01  C4    C16  C21  C1      0.00   0.0  0
+ VAK  CONST_02  C4    C3   C2   C1      0.00   0.0  0
+ VAK  CONST_03  C16   C21  C1   C2      0.00   0.0  0
+ VAK  CONST_04  C16   C4   C3   C2      0.00   0.0  0
+ VAK  CONST_05  C21   C1   C2   C3      0.00   0.0  0
+ VAK  CONST_06  C21   C16  C4   C3      0.00   0.0  0
+ VAK  CONST_07  C11   C19  C20  C6      0.00   0.0  0
+ VAK  CONST_08  C11   C18  C17  C6      0.00   0.0  0
+ VAK  CONST_09  C19   C20  C6   C17     0.00   0.0  0
+ VAK  CONST_10  C19   C11  C18  C17     0.00   0.0  0
+ VAK  CONST_11  C20   C19  C11  C18     0.00   0.0  0
+ VAK  CONST_12  C20   C6   C17  C18     0.00   0.0  0
+ VAK  CONST_13  O19   C4   C3   C2    180.00   0.0  0
+ VAK  CONST_14  O21   C6   C17  C5      0.00   0.0  0
+ VAK  CONST_15  O19   C4   C16  C5      0.00   0.0  0
+ VAK  CONST_16  O21   C6   C20  C7      0.00   0.0  0
+ VAK  CONST_17  O21   C6   C17  C18   180.00   0.0  0
+ VAK  CONST_18  O21   C6   C20  C19   180.00   0.0  0
+ VAK  CONST_19  C21   C16  C4   O19   180.00   0.0  0
+ VAK  CONST_20  H3    C3   C2   C1    180.00   0.0  0
+ VAK  CONST_21  H1    C1   C2   C3    180.00   0.0  0
+ VAK  CONST_22  H2    C2   C3   C4    180.00   0.0  0
+ VAK  CONST_23  H11   C11  C19  C10     0.00   0.0  0
+ VAK  Var_01    H22   C22  C13  C9    -62.62  30.0  3
+ VAK  Var_02    O17   C14  O16  C15     2.10  30.0  2
+ VAK  Var_03    H15   C15  O16  C14   177.38  30.0  3
+ VAK  CONST_24  C18   C12  C21  C1    180.00   0.0  0
+ VAK  CONST_25  C17   C5   C16  C4    180.00   0.0  0
+ VAK  CONST_26  C16   C5   C17  C6    180.00   0.0  0
+ VAK  CONST_27  C21   C12  C18  C11   180.00   0.0  0
+ VAK  CONST_28  C18   C17  C5   C16     0.00   0.0  0
+ VAK  CONST_29  C18   C12  C21  C16     0.00   0.0  0
+ VAK  CONST_30  C21   C16  C5   C17     0.00   0.0  0
+ VAK  CONST_31  C21   C12  C18  C17     0.00   0.0  0
+ VAK  CONST_32  O18   C12  C21  C1      0.00   0.0  0
+ VAK  CONST_33  O20   C5   C16  C4      0.00   0.0  0
+ VAK  CONST_34  O20   C5   C17  C6      0.00   0.0  0
+ VAK  CONST_35  O18   C12  C18  C11     0.00   0.0  0
+ VAK  CONST_36  O18   C12  C21  C16   180.00   0.0  0
+ VAK  CONST_37  O18   C12  C18  C17   180.00   0.0  0
+ VAK  CONST_38  O20   C5   C17  C18   180.00   0.0  0
+ VAK  CONST_39  C21   C16  C5   O20   180.00   0.0  0
+ VAK  Var_04    C8    C7   C20  C6   -173.20  30.0  1
+ VAK  Var_05    C10   C9   C8   C7     59.69  30.0  1
+ VAK  Var_06    C19   C20  C7   C8      9.24  30.0  1
+ VAK  Var_07    C19   C10  C9   C8    -51.58  30.0  1
+ VAK  Var_08    C20   C7   C8   C9    -37.74  30.0  1
+ VAK  Var_09    C11   C19  C10  C9   -155.87  30.0  1
+ VAK  Var_10    C20   C19  C10  C9     25.44  30.0  1
+ VAK  Var_11    O22   C7   C20  C6     65.33  30.0  1
+ VAK  Var_12    C13   C9   C8   C7   -177.30  30.0  1
+ VAK  Var_13    O23   C9   C8   C7    -53.57  30.0  1
+ VAK  Var_14    C14   C10  C9   C8     70.76  30.0  1
+ VAK  Var_15    O22   C7   C8   C9     84.99  30.0  1
+ VAK  Var_16    C14   C10  C19  C11    79.46  30.0  1
+ VAK  Var_17    C19   C10  C9   C13  -174.83  30.0  1
+ VAK  Var_18    C20   C19  C10  C14   -99.24  30.0  1
+ VAK  Var_19    O23   C9   C10  C19    66.80  30.0  1
+ VAK  Var_20    O22   C7   C20  C19  -112.23  30.0  1
+ VAK  Var_21    H7    C7   C20  C6    -55.03  30.0  1
+ VAK  Var_22    H10   C10  C9   C8   -170.41  30.0  1
+ VAK  Var_23    H8    C8   C9   C10   -63.06  30.0  1
+ VAK  Var_24    H8A   C8   C9   C10  -178.81  30.0  1
+ VAK  Var_25    C22   C13  C9   C8     68.54  30.0  1
+ VAK  Var_26    O17   C14  C10  C9    -81.70  30.0  2
+ VAK  Var_27    O16   C14  C10  C9     98.82  30.0  2
+ VAK  Var_28    C22   C13  C9   C10  -169.57  30.0  1
+ VAK  Var_29    C14   C10  C9   C13   -52.49  30.0  1
+ VAK  Var_30    O23   C9   C10  C14  -170.86  30.0  1
+ VAK  Var_31    C19   C10  C14  O16  -137.07  30.0  3
+ VAK  Var_32    C19   C10  C14  O17    42.40  30.0  3
+ VAK  Var_33    HO19  O19  C4   C3    179.92  30.0  2
+ VAK  Var_34    HO22  O22  C7   C8    162.38  30.0  3
+ VAK  Var_35    H13   C13  C9   C8   -169.66  30.0  1
+ VAK  Var_36    H13A  C13  C9   C8    -53.68  30.0  1
+ VAK  Var_37    HO23  O23  C9   C8    -37.39  30.0  3
+ VAK  Var_38    HO21  O21  C6   C17     0.80  30.0  2
+ VAK  Var_39    O23   C9   C13  C22   -55.64  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

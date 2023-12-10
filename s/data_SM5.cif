@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SM5  SM5  '(1E)-5-(1-piperidin-4-yl-3-pyridin-4-yl-1H-pyrazol-4-yl)-2,3-dihydro-1H-inden-1-one oxime'  ligand  51  28  .  2021-08-23  2021-08-23  
+ SM5  SM5  '(1E)-5-(1-piperidin-4-yl-3-pyridin-4-yl-1H-pyrazol-4-yl)-2,3-dihydro-1H-inden-1-one oxime'  ligand  51  28  .  2021-08-23  2023-10-20
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-10-20
 ;
 
 data_comp_SM5
@@ -268,50 +269,74 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SM5  CONST_01  C12  C1   C5   N4    180.00   0.0  0
- SM5  CONST_02  C2   C1   C5   N4      0.00   0.0  0
- SM5  CONST_03  C6   C2   N3   N4    180.00   0.0  0
- SM5  CONST_04  C1   C2   N3   N4      0.00   0.0  0
- SM5  CONST_05  C17  C12  C13  C14     0.00   0.0  0
- SM5  CONST_06  C1   C12  C13  C14   180.00   0.0  0
- SM5  CONST_07  C17  C16  C15  C14     0.00   0.0  0
- SM5  CONST_08  C16  C15  C14  C13     0.00   0.0  0
- SM5  CONST_09  C16  C17  C12  C13     0.00   0.0  0
- SM5  CONST_12  C15  C14  C13  C12     0.00   0.0  0
- SM5  CONST_13  C15  C16  C17  C12     0.00   0.0  0
- SM5  CONST_14  N3   C2   C1   C12   180.00   0.0  0
- SM5  CONST_15  C6   C2   C1   C12     0.00   0.0  0
- SM5  CONST_18  C1   C12  C17  C16   180.00   0.0  0
- SM5  CONST_19  C8   N9   C10  C11     0.00   0.0  0
- SM5  CONST_20  C8   C7   C6   C11     0.00   0.0  0
- SM5  CONST_24  C5   C1   C2   N3      0.00   0.0  0
- SM5  CONST_25  C1   C5   N4   N3      0.00   0.0  0
- SM5  CONST_26  C7   C6   C11  C10     0.00   0.0  0
- SM5  CONST_27  C2   C6   C11  C10   180.00   0.0  0
- SM5  CONST_28  C7   C8   N9   C10     0.00   0.0  0
- SM5  CONST_29  C2   C6   C7   C8    180.00   0.0  0
- SM5  CONST_31  C2   N3   N4   C5      0.00   0.0  0
- SM5  CONST_32  C6   C2   C1   C5    180.00   0.0  0
- SM5  CONST_33  N9   C8   C7   C6      0.00   0.0  0
- SM5  CONST_34  N9   C10  C11  C6      0.00   0.0  0
- SM5  CONST_35  C1   C5   N4   C18   180.00   0.0  0
- SM5  CONST_36  C2   N3   N4   C18   180.00   0.0  0
- SM5  CONST_37  H5   C5   N4   C18     0.00   0.0  0
- SM5  CONST_38  H17  C17  C12  C13   180.00   0.0  0
- SM5  CONST_39  H14  C14  C13  C12   180.00   0.0  0
- SM5  CONST_40  H13  C13  C12  C17   180.00   0.0  0
- SM5  CONST_41  H7   C7   C6   C11   180.00   0.0  0
- SM5  CONST_42  H8   C8   N9   C10   180.00   0.0  0
- SM5  CONST_43  H10  C10  N9   C8    180.00   0.0  0
- SM5  CONST_44  H11  C11  C6   C7    180.00   0.0  0
- SM5  Var_01    N21  C20  C19  C18   -54.26  30.0  1
- SM5  Var_02    N21  C22  C23  C18    55.04  30.0  1
- SM5  Var_03    C25  C26  C15  C14   179.10  30.0  1
- SM5  Var_04    C25  C24  C16  C17  -178.40  30.0  1
- SM5  Var_05    C26  C25  C24  C16    -1.67  30.0  1
- SM5  Var_06    C24  C25  C26  C15     1.61  30.0  1
- SM5  Var_07    C19  C20  N21  C22    53.47  30.0  1
- SM5  Var_08    C23  C22  N21  C20   -53.98  30.0  1
+ SM5  CONST_01  C12   C1   C5   N4    180.00   0.0  0
+ SM5  CONST_02  C2    C1   C5   N4      0.00   0.0  0
+ SM5  CONST_03  C6    C2   N3   N4    180.00   0.0  0
+ SM5  CONST_04  C1    C2   N3   N4      0.00   0.0  0
+ SM5  CONST_05  C17   C12  C13  C14     0.00   0.0  0
+ SM5  CONST_06  C1    C12  C13  C14   180.00   0.0  0
+ SM5  CONST_07  C17   C16  C15  C14     0.00   0.0  0
+ SM5  CONST_08  C16   C15  C14  C13     0.00   0.0  0
+ SM5  CONST_09  C16   C17  C12  C13     0.00   0.0  0
+ SM5  CONST_10  C15   C14  C13  C12     0.00   0.0  0
+ SM5  CONST_11  C15   C16  C17  C12     0.00   0.0  0
+ SM5  CONST_12  N3    C2   C1   C12   180.00   0.0  0
+ SM5  CONST_13  C6    C2   C1   C12     0.00   0.0  0
+ SM5  CONST_14  C1    C12  C17  C16   180.00   0.0  0
+ SM5  CONST_15  C8    N9   C10  C11     0.00   0.0  0
+ SM5  CONST_16  C8    C7   C6   C11     0.00   0.0  0
+ SM5  CONST_17  C5    C1   C2   N3      0.00   0.0  0
+ SM5  CONST_18  C1    C5   N4   N3      0.00   0.0  0
+ SM5  CONST_19  C7    C6   C11  C10     0.00   0.0  0
+ SM5  CONST_20  C2    C6   C11  C10   180.00   0.0  0
+ SM5  CONST_21  C7    C8   N9   C10     0.00   0.0  0
+ SM5  CONST_22  C2    C6   C7   C8    180.00   0.0  0
+ SM5  CONST_23  C2    N3   N4   C5      0.00   0.0  0
+ SM5  CONST_24  C6    C2   C1   C5    180.00   0.0  0
+ SM5  CONST_25  N9    C8   C7   C6      0.00   0.0  0
+ SM5  CONST_26  N9    C10  C11  C6      0.00   0.0  0
+ SM5  CONST_27  C1    C5   N4   C18   180.00   0.0  0
+ SM5  CONST_28  C2    N3   N4   C18   180.00   0.0  0
+ SM5  CONST_29  H5    C5   N4   C18     0.00   0.0  0
+ SM5  CONST_30  H17   C17  C12  C13   180.00   0.0  0
+ SM5  CONST_31  H14   C14  C13  C12   180.00   0.0  0
+ SM5  CONST_32  H13   C13  C12  C17   180.00   0.0  0
+ SM5  CONST_33  H7    C7   C6   C11   180.00   0.0  0
+ SM5  CONST_34  H8    C8   N9   C10   180.00   0.0  0
+ SM5  CONST_35  H10   C10  N9   C8    180.00   0.0  0
+ SM5  CONST_36  H11   C11  C6   C7    180.00   0.0  0
+ SM5  Var_01    N21   C20  C19  C18   -54.26  30.0  1
+ SM5  Var_02    N21   C22  C23  C18    55.04  30.0  1
+ SM5  Var_03    C25   C26  C15  C14   179.10  30.0  1
+ SM5  Var_04    C25   C24  C16  C17  -178.40  30.0  1
+ SM5  Var_05    C26   C25  C24  C16    -1.67  30.0  1
+ SM5  Var_06    C24   C25  C26  C15     1.61  30.0  1
+ SM5  Var_07    C19   C20  N21  C22    53.47  30.0  1
+ SM5  Var_08    C23   C22  N21  C20   -53.98  30.0  1
+ SM5  Var_09    C20   C19  C18  N4    179.97  30.0  1
+ SM5  Var_10    C22   C23  C18  N4   -179.90  30.0  1
+ SM5  Var_11    C5    C1   C12  C13   133.60  30.0  2
+ SM5  Var_12    C2    C1   C12  C13   -43.71  30.0  2
+ SM5  Var_13    C5    C1   C12  C17   -44.89  30.0  2
+ SM5  Var_14    C2    C1   C12  C17   137.81  30.0  2
+ SM5  Var_15    N3    C2   C6   C11   144.24  30.0  2
+ SM5  Var_16    C1    C2   C6   C11   -33.93  30.0  2
+ SM5  Var_17    C7    C6   C2   N3    -34.26  30.0  2
+ SM5  Var_18    C19   C18  N4   N3    101.59  30.0  2
+ SM5  Var_19    C23   C18  N4   N3   -133.92  30.0  2
+ SM5  Var_20    C19   C18  C23  C22   -54.93  30.0  1
+ SM5  Var_21    C1    C2   C6   C7    147.57  30.0  2
+ SM5  Var_22    C19   C18  N4   C5    -74.37  30.0  2
+ SM5  Var_23    C23   C18  N4   C5     50.11  30.0  2
+ SM5  Var_24    C23   C18  C19  C20    54.72  30.0  1
+ SM5  Var_25    H119  C19  C18  N4    -58.35  30.0  1
+ SM5  Var_26    H219  C19  C18  N4     59.70  30.0  1
+ SM5  Var_27    H123  C23  C18  N4    -59.89  30.0  1
+ SM5  Var_28    H223  C23  C18  N4     58.60  30.0  1
+ SM5  Var_29    H18   C18  N4   N3    -16.20  30.0  2
+ SM5  Var_30    O28   N27  C26  C15   179.90   0.0  2
+ SM5  Var_31    O28   N27  C26  C25     0.08   0.0  2
+ SM5  Var_32    HO28  O28  N27  C26   179.32  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
