@@ -3,6 +3,13 @@
 filename=$1
 res=${filename:0:3}
 
+echo "Residue $res"
+
+if [ -f "$res.lib" ]; then
+      echo "    already done: skipping"
+      exit 0
+fi
+
 cat <<EOF > tleap.in
 mxx = loadMol2 $res.mol2
 saveOff mxx mxx.lib
