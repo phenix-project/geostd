@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CXR  CXR  "CYCLIC ADENOSINE DIPHOSPHATE-RIBOSE"  ligand  54  35  .  2023-12-07  2023-12-07
+ CXR  CXR  'CYCLIC ADENOSINE DIPHOSPHATE-RIBOSE'  ligand  54  35  .  2023-12-07  2023-12-11
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-12-11
 ;
 
 data_comp_CXR
@@ -290,9 +291,15 @@ _chem_comp_tor.period
  CXR  CONST_05  C4    C5   N7   C8      0.00   0.0  0
  CXR  CONST_06  H8    C8   N7   C5    180.00   0.0  0
  CXR  CONST_07  H8    C8   N9   C4    180.00   0.0  0
- CXR  CONST_08  H8    C8   N9   C1'     0.00   0.0  0
- CXR  CONST_09  HN6   N6   C6   N1    180.00   0.0  0
- CXR  CONST_10  HN6   N6   C6   C5      0.00   0.0  0
+ CXR  CONST_08  C5    C6   N1   C1D   180.00   0.0  0
+ CXR  CONST_09  H8    C8   N9   C1'     0.00   0.0  0
+ CXR  CONST_10  N3    C2   N1   C1D   180.00   0.0  0
+ CXR  CONST_11  HN6   N6   C6   N1    180.00   0.0  0
+ CXR  CONST_12  N3    C2   N1   C6      0.00   0.0  0
+ CXR  CONST_13  HN6   N6   C6   C5      0.00   0.0  0
+ CXR  CONST_14  C2    N1   C6   C5      0.00   0.0  0
+ CXR  CONST_15  N6    C6   N1   C1D     0.00   0.0  0
+ CXR  CONST_16  C2    N1   C6   N6    180.00   0.0  0
  CXR  Var_01    O5'   PA   O3A  PB   -151.06  30.0  1
  CXR  Var_02    C4D   C5D  O5D  PB   -114.37  30.0  1
  CXR  Var_03    C5D   O5D  PB   O3A   119.86  30.0  1
@@ -300,25 +307,81 @@ _chem_comp_tor.period
  CXR  Var_05    PA    O3A  PB   O5D  -167.78  30.0  1
  CXR  Var_06    N7    C5   C6   N1    176.01  30.0  1
  CXR  Var_07    C4    C5   C6   N1      1.79  30.0  1
- CXR  Var_08    C4    N3   C2   N1     -0.47  30.0  1
- CXR  Var_09    C2    N3   C4   C5      3.34  30.0  1
- CXR  Var_10    N9    C4   N3   C2   -175.37  30.0  1
- CXR  Var_11    PA    O5'  C5'  C4'   166.21  30.0  1
- CXR  Var_12    PA    O3A  PB   O2B   -53.22  30.0  1
- CXR  Var_13    C5D   O5D  PB   O2B     5.52  30.0  1
- CXR  Var_14    O2A   PA   O3A  PB     98.24  30.0  1
- CXR  Var_15    O1A   PA   O3A  PB    -35.58  30.0  1
- CXR  Var_16    PA    O3A  PB   O1B    80.99  30.0  1
- CXR  Var_17    C5D   O5D  PB   O1B  -127.40  30.0  1
- CXR  Var_18    N7    C5   C6   N6     -1.47  30.0  1
- CXR  Var_19    C4    C5   C6   N6   -175.69  30.0  1
- CXR  Var_20    O2A   PA   O5'  C5'   173.64  30.0  1
- CXR  Var_21    O1A   PA   O5'  C5'   -54.35  30.0  1
- CXR  Var_22    H11   C5D  O5D  PB      6.56  30.0  1
- CXR  Var_23    H12   C5D  O5D  PB    125.21  30.0  1
- CXR  Var_24    H3    C2   N3   C4    179.04  30.0  1
- CXR  Var_25    H5'1  C5'  O5'  PA     47.21  30.0  1
- CXR  Var_26    H5'2  C5'  O5'  PA    -72.58  30.0  1
+ CXR  Var_08    C3D   C4D  C5D  O5D    58.47  30.0  3
+ CXR  Var_09    C4    N3   C2   N1     -0.47  30.0  1
+ CXR  Var_10    O4D   C4D  C5D  O5D   -60.27  30.0  3
+ CXR  Var_11    C2    N3   C4   C5      3.34  30.0  1
+ CXR  Var_12    C2D   C3D  C4D  C5D  -158.10  30.0  1
+ CXR  Var_13    N9    C4   N3   C2   -175.37  30.0  1
+ CXR  Var_14    C1D   O4D  C4D  C5D   146.41  30.0  1
+ CXR  Var_15    PA    O5'  C5'  C4'   166.21  30.0  1
+ CXR  Var_16    C1D   C2D  C3D  C4D    37.26  30.0  1
+ CXR  Var_17    PA    O3A  PB   O2B   -53.22  30.0  1
+ CXR  Var_18    C2D   C1D  O4D  C4D     4.14  30.0  1
+ CXR  Var_19    C5D   O5D  PB   O2B     5.52  30.0  1
+ CXR  Var_20    N1    C1D  O4D  C4D  -117.12  30.0  1
+ CXR  Var_21    O2A   PA   O3A  PB     98.24  30.0  1
+ CXR  Var_22    C1D   O4D  C4D  C3D    20.31  30.0  1
+ CXR  Var_23    O1A   PA   O3A  PB    -35.58  30.0  1
+ CXR  Var_24    O4D   C1D  C2D  C3D   -26.38  30.0  1
+ CXR  Var_25    PA    O3A  PB   O1B    80.99  30.0  1
+ CXR  Var_26    N1    C1D  C2D  C3D    94.71  30.0  1
+ CXR  Var_27    C5D   O5D  PB   O1B  -127.40  30.0  1
+ CXR  Var_28    O4D   C4D  C3D  C2D   -36.03  30.0  1
+ CXR  Var_29    N7    C5   C6   N6     -1.47  30.0  1
+ CXR  Var_30    C6    N1   C1D  C2D    80.84  30.0  3
+ CXR  Var_31    C4    C5   C6   N6   -175.69  30.0  1
+ CXR  Var_32    C2    N1   C1D  C2D   -94.41  30.0  3
+ CXR  Var_33    O2A   PA   O5'  C5'   173.64  30.0  1
+ CXR  Var_34    C6    N1   C1D  O4D  -160.31  30.0  3
+ CXR  Var_35    O1A   PA   O5'  C5'   -54.35  30.0  1
+ CXR  Var_36    C2    N1   C1D  O4D    24.44  30.0  3
+ CXR  Var_37    H11   C5D  O5D  PB      6.56  30.0  1
+ CXR  Var_38    O4'   C1'  N9   C8   -102.65  30.0  2
+ CXR  Var_39    H12   C5D  O5D  PB    125.21  30.0  1
+ CXR  Var_40    C2'   C1'  N9   C8    137.99  30.0  2
+ CXR  Var_41    H3    C2   N3   C4    179.04  30.0  1
+ CXR  Var_42    O4'   C1'  N9   C4     60.85  30.0  2
+ CXR  Var_43    H5'1  C5'  O5'  PA     47.21  30.0  1
+ CXR  Var_44    C2'   C1'  N9   C4    -58.51  30.0  2
+ CXR  Var_45    H5'2  C5'  O5'  PA    -72.58  30.0  1
+ CXR  Var_46    C4'   O4'  C1'  N9   -134.92  30.0  1
+ CXR  Var_47    C3'   C2'  C1'  N9    151.24  30.0  1
+ CXR  Var_48    C3'   C4'  O4'  C1'   -14.73  30.0  1
+ CXR  Var_49    C5'   C4'  O4'  C1'   107.73  30.0  1
+ CXR  Var_50    C4'   C3'  C2'  C1'   -37.75  30.0  1
+ CXR  Var_51    C3'   C2'  C1'  O4'    30.36  30.0  1
+ CXR  Var_52    C2'   C3'  C4'  O4'    32.80  30.0  1
+ CXR  Var_53    O5'   C5'  C4'  O4'    53.14  30.0  3
+ CXR  Var_54    C4'   O4'  C1'  C2'   -10.06  30.0  1
+ CXR  Var_55    C5'   C4'  C3'  C2'   -89.22  30.0  1
+ CXR  Var_56    O5'   C5'  C4'  C3'   171.21  30.0  3
+ CXR  Var_57    O3D   C3D  C4D  C5D    78.35  30.0  1
+ CXR  Var_58    O2D   C2D  C3D  C4D   -79.44  30.0  1
+ CXR  Var_59    O4D   C4D  C3D  O3D  -159.58  30.0  1
+ CXR  Var_60    C1D   C2D  C3D  O3D   157.11  30.0  1
+ CXR  Var_61    O4D   C1D  C2D  O2D    89.04  30.0  1
+ CXR  Var_62    N1    C1D  C2D  O2D  -149.87  30.0  1
+ CXR  Var_63    O2'   C2'  C1'  N9    -84.79  30.0  1
+ CXR  Var_64    O3'   C3'  C2'  C1'    80.09  30.0  1
+ CXR  Var_65    O2'   C2'  C1'  O4'   154.33  30.0  1
+ CXR  Var_66    O3'   C3'  C4'  O4'   -82.45  30.0  1
+ CXR  Var_67    C4'   C3'  C2'  O2'  -156.68  30.0  1
+ CXR  Var_68    O3'   C3'  C4'  C5'   155.54  30.0  1
+ CXR  Var_69    H4'   C4D  C5D  O5D  -179.06  30.0  3
+ CXR  Var_70    H3'   C3D  C4D  C5D   -43.52  30.0  1
+ CXR  Var_71    H1    C2D  C3D  C4D   156.42  30.0  1
+ CXR  Var_72    H1'   C1D  O4D  C4D   125.31  30.0  1
+ CXR  Var_73    H4    C1'  N9   C8     16.41  30.0  2
+ CXR  Var_74    H9    C2'  C1'  N9     36.95  30.0  1
+ CXR  Var_75    H5    C4'  O4'  C1'  -132.48  30.0  1
+ CXR  Var_76    H6    C3'  C2'  C1'  -157.35  30.0  1
+ CXR  Var_77    O2D   C2D  C3D  O3D    40.40  30.0  1
+ CXR  Var_78    O3'   C3'  C2'  O2'   -38.83  30.0  1
+ CXR  Var_79    H2    O3D  C3D  C4D  -156.87  30.0  3
+ CXR  Var_80    H2'   O2D  C2D  C3D  -178.45  30.0  3
+ CXR  Var_81    H10   O2'  C2'  C1'   163.88  30.0  3
+ CXR  Var_82    H7    O3'  C3'  C2'  -177.92  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 67O  67O  "(2R,15R)-2-[(1-aminoisoquinolin-6-yl)amino]-8-fluoro-7-hydroxy-4,15,17-trimethyl-13-oxa-4,11-diazatricyclo[14.2.2.1~6,10~]henicosa-1(18),6(21),7,9,16,19-hexaene-3,12-dione"  ligand  70  40  .  2023-12-07  2023-12-07
+ 67O  67O  (2R,15R)-2-[(1-aminoisoquinolin-6-yl)amino]-8-fluoro-7-hydroxy-4,15,17-trimethyl-13-oxa-4,11-diazatricyclo[14.2.2.1~6,10~]henicosa-1(18),6(21),7,9,16,19-hexaene-3,12-dione  ligand  70  40  .  2023-12-07  2023-12-11
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-12-11
 ;
 
 data_comp_67O
@@ -367,7 +368,7 @@ _chem_comp_tor.period
  67O  CONST_29  C32  C31  C30  C29     0.00   0.0  0
  67O  CONST_30  C32  C27  C28  C29     0.00   0.0  0
  67O  CONST_31  C26  N25  C13  C10   180.00   0.0  0
- 67O  CONST_33  O34  C35  N33  C31   180.00   0.0  0
+ 67O  CONST_32  O34  C35  N33  C31   180.00   0.0  0
  67O  CONST_35  N12  C14  C19  C18   180.00   0.0  0
  67O  CONST_36  N40  C23  C17  C18     0.00   0.0  0
  67O  CONST_37  N12  C14  C15  C16   180.00   0.0  0
@@ -397,62 +398,84 @@ _chem_comp_tor.period
  67O  CONST_61  H55  C15  C16  C20     0.00   0.0  0
  67O  CONST_62  H56  C18  C17  C23     0.00   0.0  0
  67O  CONST_63  H59  C21  N22  C23   180.00   0.0  0
- 67O  CONST_64  H44  C4   C3   C1      0.00   0.0  0
- 67O  CONST_65  H46  C7   C8   C3    180.00   0.0  0
- 67O  CONST_66  H45  C5   C4   C3    180.00   0.0  0
- 67O  CONST_67  H46  C7   C6   C5    180.00   0.0  0
- 67O  CONST_68  H44  C4   C5   C6    180.00   0.0  0
- 67O  CONST_69  H45  C5   C6   C7    180.00   0.0  0
- 67O  CONST_70  H44  C4   C3   C8    180.00   0.0  0
- 67O  CONST_71  H46  C7   C6   C10     0.00   0.0  0
- 67O  CONST_72  H45  C5   C6   C10     0.00   0.0  0
- 67O  CONST_73  H56  C18  C19  C14   180.00   0.0  0
- 67O  CONST_74  H58  C20  C21  N22   180.00   0.0  0
- 67O  CONST_75  H63  C32  C27  C26     0.00   0.0  0
- 67O  CONST_76  H62  C30  C29  C28   180.00   0.0  0
- 67O  CONST_77  H63  C32  C27  C28   180.00   0.0  0
- 67O  CONST_78  H63  C32  C31  C30   180.00   0.0  0
- 67O  CONST_79  H62  C30  C31  C32   180.00   0.0  0
- 67O  CONST_80  H62  C30  C31  N33     0.00   0.0  0
- 67O  CONST_81  H63  C32  C31  N33     0.00   0.0  0
- 67O  CONST_84  C37  N25  C13  O24   180.00   0.0  0
- 67O  CONST_85  H70  N40  C23  C17   180.00   0.0  0
- 67O  CONST_86  H69  N40  C23  C17     0.00   0.0  0
- 67O  CONST_87  H54  N12  C14  C15   180.00   0.0  0
- 67O  CONST_88  H54  N12  C14  C19     0.00   0.0  0
- 67O  CONST_89  H70  N40  C23  N22     0.00   0.0  0
- 67O  CONST_90  H69  N40  C23  N22   180.00   0.0  0
+ 67O  CONST_65  H44  C4   C3   C1      0.00   0.0  0
+ 67O  CONST_66  H46  C7   C8   C3    180.00   0.0  0
+ 67O  CONST_67  H45  C5   C4   C3    180.00   0.0  0
+ 67O  CONST_68  H46  C7   C6   C5    180.00   0.0  0
+ 67O  CONST_69  H44  C4   C5   C6    180.00   0.0  0
+ 67O  CONST_70  H45  C5   C6   C7    180.00   0.0  0
+ 67O  CONST_71  H44  C4   C3   C8    180.00   0.0  0
+ 67O  CONST_72  H46  C7   C6   C10     0.00   0.0  0
+ 67O  CONST_73  H45  C5   C6   C10     0.00   0.0  0
+ 67O  CONST_74  H56  C18  C19  C14   180.00   0.0  0
+ 67O  CONST_75  H58  C20  C21  N22   180.00   0.0  0
+ 67O  CONST_76  H63  C32  C27  C26     0.00   0.0  0
+ 67O  CONST_77  H62  C30  C29  C28   180.00   0.0  0
+ 67O  CONST_78  H63  C32  C27  C28   180.00   0.0  0
+ 67O  CONST_79  H63  C32  C31  C30   180.00   0.0  0
+ 67O  CONST_80  H62  C30  C31  C32   180.00   0.0  0
+ 67O  CONST_81  H62  C30  C31  N33     0.00   0.0  0
+ 67O  CONST_82  H63  C32  C31  N33     0.00   0.0  0
+ 67O  CONST_83  C37  N25  C13  O24   180.00   0.0  0
+ 67O  CONST_84  H70  N40  C23  C17   180.00   0.0  0
+ 67O  CONST_85  H69  N40  C23  C17     0.00   0.0  0
+ 67O  CONST_86  H54  N12  C14  C15   180.00   0.0  0
+ 67O  CONST_87  H54  N12  C14  C19     0.00   0.0  0
+ 67O  CONST_88  H70  N40  C23  N22     0.00   0.0  0
+ 67O  CONST_89  H69  N40  C23  N22   180.00   0.0  0
  67O  Var_01    C27  C26  N25  C13    86.15  30.0  1
  67O  Var_02    C35  O34  C2   C1    -96.50  30.0  1
  67O  Var_03    N33  C35  O34  C2    166.25  30.0  1
  67O  Var_04    C28  C27  C26  N25  -178.77  30.0  1
  67O  Var_05    C32  C27  C26  N25     0.06  30.0  1
  67O  Var_06    C37  N25  C26  C27   -87.43  30.0  1
- 67O  Var_07    O36  C35  O34  C2    -14.94  30.0  1
- 67O  Var_08    H61  C26  N25  C13   -36.02  30.0  1
- 67O  Var_09    H60  C26  N25  C13  -151.88  30.0  1
- 67O  Var_10    H61  C26  C27  C28   -57.37  30.0  1
- 67O  Var_11    H60  C26  C27  C28    60.65  30.0  1
- 67O  Var_12    H61  C26  C27  C32   121.45  30.0  1
- 67O  Var_13    H60  C26  C27  C32  -120.53  30.0  1
- 67O  Var_14    H64  N33  C35  O34     3.84  30.0  1
- 67O  Var_15    H42  C2   O34  C35    26.38  30.0  1
- 67O  Var_16    H43  C2   O34  C35   144.13  30.0  1
- 67O  Var_17    H67  C37  N25  C13    29.47  30.0  3
- 67O  Var_18    H66  C37  N25  C13   148.00  30.0  3
- 67O  Var_19    H65  C37  N25  C13   -92.30  30.0  3
- 67O  Var_20    H49  C9   C8   C3    -58.52  30.0  2
- 67O  Var_21    H48  C9   C8   C3     61.25  30.0  2
- 67O  Var_22    H47  C9   C8   C3   -178.58  30.0  2
- 67O  Var_23    H49  C9   C8   C7    121.98  30.0  2
- 67O  Var_24    H48  C9   C8   C7   -118.25  30.0  2
- 67O  Var_25    H47  C9   C8   C7      1.92  30.0  2
- 67O  Var_26    H67  C37  N25  C26  -157.52  30.0  3
- 67O  Var_27    H66  C37  N25  C26   -38.99  30.0  3
- 67O  Var_28    H65  C37  N25  C26    80.71  30.0  3
- 67O  Var_29    H64  N33  C35  O36  -174.96  30.0  1
- 67O  Var_30    H61  C26  N25  C37   150.40  30.0  1
- 67O  Var_31    H60  C26  N25  C37    34.54  30.0  1
+ 67O  Var_07    C7   C6   C10  C13    64.25  30.0  2
+ 67O  Var_08    O36  C35  O34  C2    -14.94  30.0  1
+ 67O  Var_09    C5   C6   C10  C13  -115.56  30.0  2
+ 67O  Var_10    H61  C26  N25  C13   -36.02  30.0  1
+ 67O  Var_11    C8   C3   C1   C2   -100.19  30.0  2
+ 67O  Var_12    H60  C26  N25  C13  -151.88  30.0  1
+ 67O  Var_13    C4   C3   C1   C2     76.79  30.0  2
+ 67O  Var_14    H61  C26  C27  C28   -57.37  30.0  1
+ 67O  Var_15    O34  C2   C1   C3     59.63  30.0  3
+ 67O  Var_16    H60  C26  C27  C28    60.65  30.0  1
+ 67O  Var_17    N25  C13  C10  C6     78.80  30.0  3
+ 67O  Var_18    H61  C26  C27  C32   121.45  30.0  1
+ 67O  Var_19    H60  C26  C27  C32  -120.53  30.0  1
+ 67O  Var_20    H64  N33  C35  O34     3.84  30.0  1
+ 67O  Var_21    C14  N12  C10  C13   179.10  30.0  2
+ 67O  Var_22    H42  C2   O34  C35    26.38  30.0  1
+ 67O  Var_23    O34  C2   C1   C11  -174.32  30.0  3
+ 67O  Var_24    H43  C2   O34  C35   144.13  30.0  1
+ 67O  Var_25    C8   C3   C1   C11   136.43  30.0  2
+ 67O  Var_26    H67  C37  N25  C13    29.47  30.0  3
+ 67O  Var_27    C4   C3   C1   C11   -46.60  30.0  2
+ 67O  Var_28    H66  C37  N25  C13   148.00  30.0  3
+ 67O  Var_29    N12  C10  C6   C5    125.83  30.0  2
+ 67O  Var_30    H65  C37  N25  C13   -92.30  30.0  3
+ 67O  Var_31    O24  C13  C10  C6    -97.80  30.0  3
+ 67O  Var_32    H49  C9   C8   C3    -58.52  30.0  2
+ 67O  Var_33    C14  N12  C10  C6    -61.66  30.0  2
+ 67O  Var_34    H48  C9   C8   C3     61.25  30.0  2
+ 67O  Var_35    N12  C10  C6   C7    -54.36  30.0  2
+ 67O  Var_36    H47  C9   C8   C3   -178.58  30.0  2
+ 67O  Var_37    N25  C13  C10  N12  -158.43  30.0  3
+ 67O  Var_38    H49  C9   C8   C7    121.98  30.0  2
+ 67O  Var_39    H48  C9   C8   C7   -118.25  30.0  2
+ 67O  Var_40    H47  C9   C8   C7      1.92  30.0  2
+ 67O  Var_41    H67  C37  N25  C26  -157.52  30.0  3
+ 67O  Var_42    H66  C37  N25  C26   -38.99  30.0  3
+ 67O  Var_43    H41  C1   C3   C4   -166.16  30.0  2
+ 67O  Var_44    H65  C37  N25  C26    80.71  30.0  3
+ 67O  Var_45    H50  C10  C6   C5      4.19  30.0  2
+ 67O  Var_46    H64  N33  C35  O36  -174.96  30.0  1
+ 67O  Var_47    O24  C13  C10  N12    24.97  30.0  3
+ 67O  Var_48    H61  C26  N25  C37   150.40  30.0  1
+ 67O  Var_49    H60  C26  N25  C37    34.54  30.0  1
+ 67O  Var_50    H68  O38  C28  C27    -0.51  30.0  2
+ 67O  Var_51    H53  C11  C1   C2    179.86  30.0  3
+ 67O  Var_52    H52  C11  C1   C2    -59.61  30.0  3
+ 67O  Var_53    H51  C11  C1   C2     60.29  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 48W  48W  "6-chloro-N-{(3S)-1-[(2S)-1-(4-methyl-5-oxo-1,4-diazepan-1-yl)-1-oxopropan-2-yl]-2-oxopyrrolidin-3-yl}naphthalene-2-sulfonamide"  ligand  61  34  .  2023-12-07  2023-12-07
+ 48W  48W  6-chloro-N-{(3S)-1-[(2S)-1-(4-methyl-5-oxo-1,4-diazepan-1-yl)-1-oxopropan-2-yl]-2-oxopyrrolidin-3-yl}naphthalene-2-sulfonamide  ligand  61  34  .  2023-12-07  2023-12-11
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-12-11
 ;
 
 data_comp_48W
@@ -327,52 +328,103 @@ _chem_comp_tor.period
  48W  CONST_17  C20  C19  C18  C16     0.00   0.0  0
  48W  CONST_18  C21  C20  C19  C18   180.00   0.0  0
  48W  CONST_19  C6   C22  N3   C4      0.00   0.0  0
- 48W  CONST_20  C13  C12  C11  S8    180.00   0.0  0
- 48W  CONST_21  C20  C21  C11  S8    180.00   0.0  0
- 48W  CONST_22  CL1  C16  C15  C14   180.00   0.0  0
- 48W  CONST_23  C19  C18  C16  CL1   180.00   0.0  0
- 48W  CONST_24  C6   C22  N3   C2    180.00   0.0  0
- 48W  CONST_25  O23  C22  N3   C4    180.00   0.0  0
- 48W  CONST_26  H12  C13  C12  C11   180.00   0.0  0
- 48W  CONST_27  H16  C21  C11  C12   180.00   0.0  0
- 48W  CONST_28  H13  C15  C14  C13     0.00   0.0  0
- 48W  CONST_29  H11  C12  C13  C14   180.00   0.0  0
- 48W  CONST_30  H16  C21  C20  C14   180.00   0.0  0
- 48W  CONST_31  H15  C19  C20  C14   180.00   0.0  0
- 48W  CONST_32  H12  C13  C14  C15     0.00   0.0  0
- 48W  CONST_33  H14  C18  C16  C15   180.00   0.0  0
- 48W  CONST_34  H15  C19  C18  C16   180.00   0.0  0
- 48W  CONST_35  H13  C15  C16  C18   180.00   0.0  0
- 48W  CONST_36  H16  C21  C20  C19     0.00   0.0  0
- 48W  CONST_37  H12  C13  C14  C20   180.00   0.0  0
- 48W  CONST_38  H13  C15  C14  C20   180.00   0.0  0
- 48W  CONST_39  H14  C18  C19  C20   180.00   0.0  0
- 48W  CONST_40  H11  C12  C11  C21   180.00   0.0  0
- 48W  CONST_41  H15  C19  C20  C21     0.00   0.0  0
- 48W  CONST_42  O23  C22  N3   C2      0.00   0.0  0
+ 48W  CONST_20  C33  C31  N29  C28     0.00   0.0  0
+ 48W  CONST_21  C13  C12  C11  S8    180.00   0.0  0
+ 48W  CONST_22  C20  C21  C11  S8    180.00   0.0  0
+ 48W  CONST_23  CL1  C16  C15  C14   180.00   0.0  0
+ 48W  CONST_24  C19  C18  C16  CL1   180.00   0.0  0
+ 48W  CONST_25  C6   C22  N3   C2    180.00   0.0  0
+ 48W  CONST_26  O23  C22  N3   C4    180.00   0.0  0
+ 48W  CONST_27  O32  C31  N29  C28   180.00   0.0  0
+ 48W  CONST_28  H12  C13  C12  C11   180.00   0.0  0
+ 48W  CONST_29  C33  C31  N29  C30   180.00   0.0  0
+ 48W  CONST_30  H16  C21  C11  C12   180.00   0.0  0
+ 48W  CONST_31  H13  C15  C14  C13     0.00   0.0  0
+ 48W  CONST_32  H11  C12  C13  C14   180.00   0.0  0
+ 48W  CONST_33  H16  C21  C20  C14   180.00   0.0  0
+ 48W  CONST_34  H15  C19  C20  C14   180.00   0.0  0
+ 48W  CONST_35  H12  C13  C14  C15     0.00   0.0  0
+ 48W  CONST_36  H14  C18  C16  C15   180.00   0.0  0
+ 48W  CONST_37  H15  C19  C18  C16   180.00   0.0  0
+ 48W  CONST_38  H13  C15  C16  C18   180.00   0.0  0
+ 48W  CONST_39  C34  N26  C24  C2    180.00   0.0  0
+ 48W  CONST_40  H16  C21  C20  C19     0.00   0.0  0
+ 48W  CONST_41  C27  N26  C24  C2      0.00   0.0  0
+ 48W  CONST_42  H12  C13  C14  C20   180.00   0.0  0
+ 48W  CONST_43  C34  N26  C24  O25     0.00   0.0  0
+ 48W  CONST_44  H13  C15  C14  C20   180.00   0.0  0
+ 48W  CONST_45  C27  N26  C24  O25   180.00   0.0  0
+ 48W  CONST_46  H14  C18  C19  C20   180.00   0.0  0
+ 48W  CONST_47  O32  C31  N29  C30     0.00   0.0  0
+ 48W  CONST_48  H11  C12  C11  C21   180.00   0.0  0
+ 48W  CONST_49  H15  C19  C20  C21     0.00   0.0  0
+ 48W  CONST_50  O23  C22  N3   C2      0.00   0.0  0
  48W  Var_01    C6   C5   C4   N3    -27.42  30.0  1
  48W  Var_02    C22  N3   C4   C5     15.11  30.0  1
  48W  Var_03    C5   C4   N3   C2   -163.73  30.0  1
- 48W  Var_04    H7   C5   C4   N3     88.65  30.0  1
- 48W  Var_05    H8   C5   C4   N3   -149.71  30.0  1
- 48W  Var_06    H5   C4   C5   C6   -146.26  30.0  1
- 48W  Var_07    H6   C4   C5   C6     91.01  30.0  1
- 48W  Var_08    H5   C4   N3   C22   135.37  30.0  1
- 48W  Var_09    H6   C4   N3   C22  -104.39  30.0  1
- 48W  Var_10    C11  S8   N7   C6     58.43  30.0  3
- 48W  Var_11    C12  C11  S8   N7     77.16  30.0  2
- 48W  Var_12    C21  C11  S8   N7    -99.05  30.0  2
- 48W  Var_13    C12  C11  S8   O9   -168.19  30.0  2
- 48W  Var_14    C21  C11  S8   O9     15.61  30.0  2
- 48W  Var_15    C12  C11  S8   O10   -36.52  30.0  2
- 48W  Var_16    C21  C11  S8   O10   147.28  30.0  2
- 48W  Var_17    H5   C4   N3   C2    -43.47  30.0  1
- 48W  Var_18    H6   C4   N3   C2     76.77  30.0  1
- 48W  Var_19    O10  S8   N7   C6    174.06  30.0  3
- 48W  Var_20    O9   S8   N7   C6    -57.05  30.0  3
- 48W  Var_21    H10  N7   S8   C11   -73.63  30.0  2
- 48W  Var_22    H10  N7   S8   O9    170.89  30.0  2
- 48W  Var_23    H10  N7   S8   O10    42.00  30.0  2
+ 48W  Var_04    C5   C6   C22  N3    -21.76  30.0  1
+ 48W  Var_05    H7   C5   C4   N3     88.65  30.0  1
+ 48W  Var_06    C22  C6   C5   C4     29.74  30.0  1
+ 48W  Var_07    H8   C5   C4   N3   -149.71  30.0  1
+ 48W  Var_08    C31  C33  C34  N26    -9.90  30.0  1
+ 48W  Var_09    H5   C4   C5   C6   -146.26  30.0  1
+ 48W  Var_10    N29  C28  C27  N26   -50.42  30.0  1
+ 48W  Var_11    H6   C4   C5   C6     91.01  30.0  1
+ 48W  Var_12    C31  N29  C28  C27    75.81  30.0  1
+ 48W  Var_13    H5   C4   N3   C22   135.37  30.0  1
+ 48W  Var_14    C33  C34  N26  C27    81.91  30.0  1
+ 48W  Var_15    H6   C4   N3   C22  -104.39  30.0  1
+ 48W  Var_16    C34  N26  C27  C28   -44.41  30.0  1
+ 48W  Var_17    C11  S8   N7   C6     58.43  30.0  3
+ 48W  Var_18    C34  C33  C31  N29   -46.14  30.0  1
+ 48W  Var_19    C12  C11  S8   N7     77.16  30.0  2
+ 48W  Var_20    C21  C11  S8   N7    -99.05  30.0  2
+ 48W  Var_21    N7   C6   C22  N3   -145.97  30.0  1
+ 48W  Var_22    C12  C11  S8   O9   -168.19  30.0  2
+ 48W  Var_23    N7   C6   C5   C4    148.61  30.0  1
+ 48W  Var_24    C21  C11  S8   O9     15.61  30.0  2
+ 48W  Var_25    O23  C22  C6   C5    158.74  30.0  1
+ 48W  Var_26    C12  C11  S8   O10   -36.52  30.0  2
+ 48W  Var_27    C33  C34  N26  C24   -90.49  30.0  1
+ 48W  Var_28    C21  C11  S8   O10   147.28  30.0  2
+ 48W  Var_29    C28  C27  N26  C24   127.33  30.0  1
+ 48W  Var_30    H5   C4   N3   C2    -43.47  30.0  1
+ 48W  Var_31    C30  N29  C28  C27  -101.21  30.0  1
+ 48W  Var_32    H6   C4   N3   C2     76.77  30.0  1
+ 48W  Var_33    C34  C33  C31  O32   135.44  30.0  1
+ 48W  Var_34    O10  S8   N7   C6    174.06  30.0  3
+ 48W  Var_35    O9   S8   N7   C6    -57.05  30.0  3
+ 48W  Var_36    H10  N7   S8   C11   -73.63  30.0  2
+ 48W  Var_37    H10  N7   S8   O9    170.89  30.0  2
+ 48W  Var_38    H10  N7   S8   O10    42.00  30.0  2
+ 48W  Var_39    H9   C6   C22  N3     94.54  30.0  1
+ 48W  Var_40    H24  C33  C34  N26   109.92  30.0  1
+ 48W  Var_41    H25  C33  C34  N26  -132.87  30.0  1
+ 48W  Var_42    H19  C28  C27  N26  -170.39  30.0  1
+ 48W  Var_43    H20  C28  C27  N26    72.35  30.0  1
+ 48W  Var_44    H26  C34  N26  C27   -40.64  30.0  1
+ 48W  Var_45    H27  C34  N26  C27  -156.82  30.0  1
+ 48W  Var_46    H17  C27  C28  N29    70.81  30.0  1
+ 48W  Var_47    H18  C27  C28  N29  -171.00  30.0  1
+ 48W  Var_48    C4   N3   C2   C1    -34.11  30.0  3
+ 48W  Var_49    C22  N3   C2   C1    147.15  30.0  3
+ 48W  Var_50    N26  C24  C2   N3    147.79  30.0  3
+ 48W  Var_51    C24  C2   N3   C4     88.56  30.0  1
+ 48W  Var_52    S8   N7   C6   C5     84.49  30.0  2
+ 48W  Var_53    O23  C22  C6   N7     34.53  30.0  1
+ 48W  Var_54    C22  C6   N7   S8   -159.62  30.0  3
+ 48W  Var_55    C24  C2   N3   C22   -90.18  30.0  1
+ 48W  Var_56    H4   C2   N3   C4   -153.38  30.0  1
+ 48W  Var_57    H10  N7   C6   C5   -143.51  30.0  2
+ 48W  Var_58    H21  C30  N29  C28    38.57  30.0  3
+ 48W  Var_59    H22  C30  N29  C28   158.39  30.0  3
+ 48W  Var_60    H23  C30  N29  C28   -81.26  30.0  3
+ 48W  Var_61    N26  C24  C2   C1    -88.95  30.0  3
+ 48W  Var_62    O25  C24  C2   N3    -32.40  30.0  3
+ 48W  Var_63    H1   C1   C2   N3    -55.87  30.0  3
+ 48W  Var_64    H2   C1   C2   N3     64.94  30.0  3
+ 48W  Var_65    H3   C1   C2   N3   -175.37  30.0  3
+ 48W  Var_66    O25  C24  C2   C1     90.87  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

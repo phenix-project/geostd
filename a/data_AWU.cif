@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- AWU  AWU  "[[(2~{R},3~{S},4~{R},5~{R})-5-[2,4-bis(oxidanylidene)pyrimidin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{R},4~{R},5~{R},6~{S})-6-methyl-3,4,5-tris(oxidanyl)oxan-2-yl] hydrogen phosphate"  ligand  57  35  .  2023-12-07  2023-12-07
+ AWU  AWU  '[[(2~{R},3~{S},4~{R},5~{R})-5-[2,4-bis(oxidanylidene)pyrimidin-1-yl]-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{R},3~{R},4~{R},5~{R},6~{S})-6-methyl-3,4,5-tris(oxidanyl)oxan-2-yl] hydrogen phosphate'  ligand  57  35  .  2023-12-07  2023-12-11
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-12-11
 ;
 
 data_comp_AWU
@@ -301,26 +302,89 @@ _chem_comp_tor.period
  AWU  CONST_11  H10  N3   C2   O2      0.00   0.0  0
  AWU  CONST_12  H10  N3   C4   O4      0.00   0.0  0
  AWU  Var_01    H11  C5   C6   N1    179.84  30.0  1
- AWU  Var_02    H12  C6   N1   C2    178.26  30.0  1
- AWU  Var_03    H11  C5   C4   N3   -179.25  30.0  1
- AWU  Var_04    H12  C6   C5   C4   -179.15  30.0  1
- AWU  Var_05    H12  C6   N1   C1C    -0.26  30.0  1
- AWU  Var_06    H11  C5   C4   O4      0.66  30.0  1
- AWU  Var_07    C4C  C5C  O5C  PA    164.27  30.0  2
- AWU  Var_08    C1'  O3B  PB   O3A   -66.80  30.0  1
- AWU  Var_09    C1'  O3B  PB   O1B    46.56  30.0  1
- AWU  Var_10    C1'  O3B  PB   O2B   178.00  30.0  1
- AWU  Var_11    O1B  PB   O3A  PA     83.29  30.0  3
- AWU  Var_12    O3B  PB   O3A  PA   -162.86  30.0  3
- AWU  Var_13    O2B  PB   O3A  PA    -52.54  30.0  3
- AWU  Var_14    C5C  O5C  PA   O1A  -173.51  30.0  1
- AWU  Var_15    PB   O3A  PA   O1A  -176.73  30.0  1
- AWU  Var_16    C5C  O5C  PA   O2A   -41.18  30.0  1
- AWU  Var_17    PB   O3A  PA   O2A    51.11  30.0  1
- AWU  Var_18    C5C  O5C  PA   O3A    75.80  30.0  1
- AWU  Var_19    O5C  PA   O3A  PB    -65.92  30.0  3
- AWU  Var_20    H17  C5C  O5C  PA     43.14  30.0  2
- AWU  Var_21    H18  C5C  O5C  PA    -76.97  30.0  2
+ AWU  Var_02    C2'  C3'  C4'  C5'   -52.25  30.0  1
+ AWU  Var_03    H12  C6   N1   C2    178.26  30.0  1
+ AWU  Var_04    C2'  C1'  O5'  C5'    61.77  30.0  1
+ AWU  Var_05    H11  C5   C4   N3   -179.25  30.0  1
+ AWU  Var_06    C3'  C4'  C5'  O5'    55.28  30.0  1
+ AWU  Var_07    H12  C6   C5   C4   -179.15  30.0  1
+ AWU  Var_08    C3'  C2'  C1'  O5'   -56.16  30.0  1
+ AWU  Var_09    H12  C6   N1   C1C    -0.26  30.0  1
+ AWU  Var_10    C1'  C2'  C3'  C4'    52.43  30.0  1
+ AWU  Var_11    H11  C5   C4   O4      0.66  30.0  1
+ AWU  Var_12    C1'  O5'  C5'  C4'   -61.10  30.0  1
+ AWU  Var_13    C4C  C5C  O5C  PA    164.27  30.0  2
+ AWU  Var_14    C4C  O4C  C1C  N1   -145.56  30.0  1
+ AWU  Var_15    C1'  O3B  PB   O3A   -66.80  30.0  1
+ AWU  Var_16    C3C  C2C  C1C  N1    156.14  30.0  1
+ AWU  Var_17    C1'  O3B  PB   O1B    46.56  30.0  1
+ AWU  Var_18    O4C  C1C  N1   C2   -125.14  30.0  2
+ AWU  Var_19    C1'  O3B  PB   O2B   178.00  30.0  1
+ AWU  Var_20    C2C  C1C  N1   C2    117.27  30.0  2
+ AWU  Var_21    O1B  PB   O3A  PA     83.29  30.0  3
+ AWU  Var_22    O4C  C1C  N1   C6     53.42  30.0  2
+ AWU  Var_23    O3B  PB   O3A  PA   -162.86  30.0  3
+ AWU  Var_24    C2C  C1C  N1   C6    -64.17  30.0  2
+ AWU  Var_25    O2B  PB   O3A  PA    -52.54  30.0  3
+ AWU  Var_26    C3C  C4C  O4C  C1C    -1.65  30.0  1
+ AWU  Var_27    C5C  O5C  PA   O1A  -173.51  30.0  1
+ AWU  Var_28    C4C  C3C  C2C  C1C   -36.22  30.0  1
+ AWU  Var_29    PB   O3A  PA   O1A  -176.73  30.0  1
+ AWU  Var_30    O4C  C4C  C3C  C2C    24.47  30.0  1
+ AWU  Var_31    C5C  O5C  PA   O2A   -41.18  30.0  1
+ AWU  Var_32    C4C  O4C  C1C  C2C   -22.08  30.0  1
+ AWU  Var_33    PB   O3A  PA   O2A    51.11  30.0  1
+ AWU  Var_34    O4C  C1C  C2C  C3C    36.48  30.0  1
+ AWU  Var_35    C5C  O5C  PA   O3A    75.80  30.0  1
+ AWU  Var_36    C3'  C2'  C1'  O3B  -172.76  30.0  1
+ AWU  Var_37    O5C  PA   O3A  PB    -65.92  30.0  3
+ AWU  Var_38    C5'  O5'  C1'  O3B   179.64  30.0  1
+ AWU  Var_39    H17  C5C  O5C  PA     43.14  30.0  2
+ AWU  Var_40    O3'  C3'  C4'  C5'  -176.14  30.0  1
+ AWU  Var_41    H18  C5C  O5C  PA    -76.97  30.0  2
+ AWU  Var_42    O4'  C4'  C5'  O5'   173.95  30.0  1
+ AWU  Var_43    O2'  C2'  C1'  O5'    64.88  30.0  1
+ AWU  Var_44    O2'  C2'  C3'  C4'   -69.34  30.0  1
+ AWU  Var_45    C2'  C3'  C4'  O4'  -172.48  30.0  1
+ AWU  Var_46    C6'  C5'  C4'  C3'   175.05  30.0  1
+ AWU  Var_47    C1'  C2'  C3'  O3'   174.43  30.0  1
+ AWU  Var_48    C6'  C5'  O5'  C1'   175.65  30.0  1
+ AWU  Var_49    O2C  C2C  C1C  N1    -84.71  30.0  1
+ AWU  Var_50    C5C  C4C  O4C  C1C   121.49  30.0  1
+ AWU  Var_51    O3C  C3C  C2C  C1C    79.69  30.0  1
+ AWU  Var_52    C5C  C4C  C3C  C2C   -94.81  30.0  1
+ AWU  Var_53    O2C  C2C  C3C  C4C  -157.61  30.0  1
+ AWU  Var_54    O4C  C1C  C2C  O2C   155.63  30.0  1
+ AWU  Var_55    O4C  C4C  C3C  O3C   -93.04  30.0  1
+ AWU  Var_56    H6   C3'  C4'  C5'    64.88  30.0  1
+ AWU  Var_57    H9   C1'  O5'  C5'   -60.00  30.0  1
+ AWU  Var_58    H4   C4'  C5'  O5'   -64.63  30.0  1
+ AWU  Var_59    H8   C2'  C1'  O5'  -174.46  30.0  1
+ AWU  Var_60    H3   C5'  C4'  C3'   -63.53  30.0  1
+ AWU  Var_61    H14  C2C  C1C  N1     40.75  30.0  1
+ AWU  Var_62    H13  C1C  N1   C2     -4.64  30.0  2
+ AWU  Var_63    H16  C4C  O4C  C1C  -119.79  30.0  1
+ AWU  Var_64    H15  C3C  C2C  C1C  -155.89  30.0  1
+ AWU  Var_65    C2'  C1'  O3B  PB   -128.30  30.0  1
+ AWU  Var_66    O5'  C1'  O3B  PB    112.24  30.0  1
+ AWU  Var_67    O2'  C2'  C1'  O3B   -51.72  30.0  1
+ AWU  Var_68    O3'  C3'  C4'  O4'    63.63  30.0  1
+ AWU  Var_69    C6'  C5'  C4'  O4'   -66.28  30.0  1
+ AWU  Var_70    O2'  C2'  C3'  O3'    52.67  30.0  1
+ AWU  Var_71    O5C  C5C  C4C  C3C   -75.59  30.0  3
+ AWU  Var_72    O3C  C3C  C4C  C5C   147.68  30.0  1
+ AWU  Var_73    O3C  C3C  C2C  O2C   -41.70  30.0  1
+ AWU  Var_74    O5C  C5C  C4C  O4C   166.11  30.0  3
+ AWU  Var_75    H5   O4'  C4'  C5'    78.75  30.0  3
+ AWU  Var_76    H19  C6'  C5'  O5'   -58.26  30.0  3
+ AWU  Var_77    H20  C6'  C5'  O5'    61.79  30.0  3
+ AWU  Var_78    H21  C6'  C5'  O5'  -177.74  30.0  3
+ AWU  Var_79    H7   O3'  C3'  C4'  -176.47  30.0  3
+ AWU  Var_80    H22  O2'  C2'  C3'   167.62  30.0  3
+ AWU  Var_81    H23  O2C  C2C  C1C    81.34  30.0  3
+ AWU  Var_82    H24  O3C  C3C  C2C    51.77  30.0  3
+ AWU  Var_83    H17  C5C  C4C  C3C    45.08  30.0  3
+ AWU  Var_84    H18  C5C  C4C  C3C   165.30  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

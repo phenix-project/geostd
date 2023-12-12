@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HRK  HRK  "(2~{R},3~{S},4~{S},5~{R},6~{S})-2-(hydroxymethyl)-6-[(2~{S},3~{R},4~{S},5~{R},6~{R})-6-(hydroxymethyl)-3,5-bis(oxidanyl)-4-(4-phenyl-1,2,3-triazol-1-yl)oxan-2-yl]sulfanyl-oxane-3,4,5-triol"  ligand  60  33  .  2023-12-10  2023-12-10
+ HRK  HRK  (2~{R},3~{S},4~{S},5~{R},6~{S})-2-(hydroxymethyl)-6-[(2~{S},3~{R},4~{S},5~{R},6~{R})-6-(hydroxymethyl)-3,5-bis(oxidanyl)-4-(4-phenyl-1,2,3-triazol-1-yl)oxan-2-yl]sulfanyl-oxane-3,4,5-triol  ligand  60  33  .  2023-12-10  2023-12-11
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-12-11
 ;
 
 data_comp_HRK
@@ -300,43 +301,116 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HRK  CONST_01  N32   N33  N23  C24    0.00  0.0  0
- HRK  CONST_02  N33   N32  C25  C24    0.00  0.0  0
- HRK  CONST_03  C31   C26  C25  C24  180.00  0.0  0
- HRK  CONST_04  C27   C26  C25  C24    0.00  0.0  0
- HRK  CONST_05  N23   N33  N32  C25    0.00  0.0  0
- HRK  CONST_06  N33   N23  C24  C25    0.00  0.0  0
- HRK  CONST_07  C30   C31  C26  C25  180.00  0.0  0
- HRK  CONST_08  C28   C27  C26  C25  180.00  0.0  0
- HRK  CONST_09  N33   N32  C25  C26  180.00  0.0  0
- HRK  CONST_10  N23   C24  C25  C26  180.00  0.0  0
- HRK  CONST_11  C29   C30  C31  C26    0.00  0.0  0
- HRK  CONST_12  C29   C28  C27  C26    0.00  0.0  0
- HRK  CONST_13  N32   C25  C26  C27  180.00  0.0  0
- HRK  CONST_14  C30   C31  C26  C27    0.00  0.0  0
- HRK  CONST_15  C30   C29  C28  C27    0.00  0.0  0
- HRK  CONST_16  C31   C26  C27  C28    0.00  0.0  0
- HRK  CONST_17  C31   C30  C29  C28    0.00  0.0  0
- HRK  CONST_18  N32   C25  C26  C31    0.00  0.0  0
- HRK  CONST_19  N32   C25  C24  N23    0.00  0.0  0
- HRK  CONST_20  N32   N33  N23  C22  180.00  0.0  0
- HRK  CONST_21  C25   C24  N23  C22  180.00  0.0  0
- HRK  CONST_22  H241  C24  N23  C22    0.00  0.0  0
- HRK  CONST_23  H311  C31  C26  C25    0.00  0.0  0
- HRK  CONST_24  H271  C27  C26  C25    0.00  0.0  0
- HRK  CONST_25  H241  C24  C25  C26    0.00  0.0  0
- HRK  CONST_26  H301  C30  C31  C26  180.00  0.0  0
- HRK  CONST_27  H281  C28  C27  C26  180.00  0.0  0
- HRK  CONST_28  H311  C31  C26  C27  180.00  0.0  0
- HRK  CONST_29  H291  C29  C28  C27  180.00  0.0  0
- HRK  CONST_30  H301  C30  C29  C28  180.00  0.0  0
- HRK  CONST_31  H311  C31  C30  C29  180.00  0.0  0
- HRK  CONST_32  H271  C27  C28  C29  180.00  0.0  0
- HRK  CONST_33  H281  C28  C29  C30  180.00  0.0  0
- HRK  CONST_34  H271  C27  C26  C31  180.00  0.0  0
- HRK  CONST_35  H291  C29  C30  C31  180.00  0.0  0
- HRK  CONST_36  H241  C24  C25  N32  180.00  0.0  0
- HRK  CONST_37  H241  C24  N23  N33  180.00  0.0  0
+ HRK  CONST_01  N32   N33  N23  C24     0.00   0.0  0
+ HRK  CONST_02  N33   N32  C25  C24     0.00   0.0  0
+ HRK  CONST_03  C31   C26  C25  C24   180.00   0.0  0
+ HRK  CONST_04  C27   C26  C25  C24     0.00   0.0  0
+ HRK  CONST_05  N23   N33  N32  C25     0.00   0.0  0
+ HRK  CONST_06  N33   N23  C24  C25     0.00   0.0  0
+ HRK  CONST_07  C30   C31  C26  C25   180.00   0.0  0
+ HRK  CONST_08  C28   C27  C26  C25   180.00   0.0  0
+ HRK  CONST_09  N33   N32  C25  C26   180.00   0.0  0
+ HRK  CONST_10  N23   C24  C25  C26   180.00   0.0  0
+ HRK  CONST_11  C29   C30  C31  C26     0.00   0.0  0
+ HRK  CONST_12  C29   C28  C27  C26     0.00   0.0  0
+ HRK  CONST_13  N32   C25  C26  C27   180.00   0.0  0
+ HRK  CONST_14  C30   C31  C26  C27     0.00   0.0  0
+ HRK  CONST_15  C30   C29  C28  C27     0.00   0.0  0
+ HRK  CONST_16  C31   C26  C27  C28     0.00   0.0  0
+ HRK  CONST_17  C31   C30  C29  C28     0.00   0.0  0
+ HRK  CONST_18  N32   C25  C26  C31     0.00   0.0  0
+ HRK  CONST_19  N32   C25  C24  N23     0.00   0.0  0
+ HRK  CONST_20  N32   N33  N23  C22   180.00   0.0  0
+ HRK  CONST_21  C25   C24  N23  C22   180.00   0.0  0
+ HRK  CONST_22  H241  C24  N23  C22     0.00   0.0  0
+ HRK  CONST_23  H311  C31  C26  C25     0.00   0.0  0
+ HRK  CONST_24  H271  C27  C26  C25     0.00   0.0  0
+ HRK  CONST_25  H241  C24  C25  C26     0.00   0.0  0
+ HRK  CONST_26  H301  C30  C31  C26   180.00   0.0  0
+ HRK  CONST_27  H281  C28  C27  C26   180.00   0.0  0
+ HRK  CONST_28  H311  C31  C26  C27   180.00   0.0  0
+ HRK  CONST_29  H291  C29  C28  C27   180.00   0.0  0
+ HRK  CONST_30  H301  C30  C29  C28   180.00   0.0  0
+ HRK  CONST_31  H311  C31  C30  C29   180.00   0.0  0
+ HRK  CONST_32  H271  C27  C28  C29   180.00   0.0  0
+ HRK  CONST_33  H281  C28  C29  C30   180.00   0.0  0
+ HRK  CONST_34  H271  C27  C26  C31   180.00   0.0  0
+ HRK  CONST_35  H291  C29  C30  C31   180.00   0.0  0
+ HRK  CONST_36  H241  C24  C25  N32   180.00   0.0  0
+ HRK  CONST_37  H241  C24  N23  N33   180.00   0.0  0
+ HRK  Var_01    N33   N23  C22  C02   109.40  30.0  2
+ HRK  Var_02    C24   N23  C22  C02   -70.70  30.0  2
+ HRK  Var_03    C07   C20  C22  C02   -52.04  30.0  1
+ HRK  Var_04    C07   O06  C03  C02    63.81  30.0  1
+ HRK  Var_05    N23   C22  C02  C03  -179.63  30.0  1
+ HRK  Var_06    C20   C22  C02  C03    54.38  30.0  1
+ HRK  Var_07    C20   C07  O06  C03   -62.00  30.0  1
+ HRK  Var_08    N23   C22  C20  C07  -178.31  30.0  1
+ HRK  Var_09    C14   C16  O19  C09    62.70  30.0  1
+ HRK  Var_10    C14   C12  C10  C09   -54.00  30.0  1
+ HRK  Var_11    C16   O19  C09  C10   -62.97  30.0  1
+ HRK  Var_12    C16   C14  C12  C10    54.95  30.0  1
+ HRK  Var_13    O19   C16  C14  C12   -56.86  30.0  1
+ HRK  Var_14    O19   C09  C10  C12    56.34  30.0  1
+ HRK  Var_15    N33   N23  C22  C20  -124.27  30.0  2
+ HRK  Var_16    C24   N23  C22  C20    55.64  30.0  2
+ HRK  Var_17    O06   C07  C20  C22    54.50  30.0  1
+ HRK  Var_18    O06   C03  C02  C22   -58.17  30.0  1
+ HRK  Var_19    O21   C20  C22  C02  -172.35  30.0  1
+ HRK  Var_20    S08   C07  O06  C03   177.39  30.0  1
+ HRK  Var_21    C22   C02  C03  C04  -178.59  30.0  1
+ HRK  Var_22    C07   O06  C03  C04  -173.15  30.0  1
+ HRK  Var_23    O19   C09  S08  C07   -76.32  30.0  1
+ HRK  Var_24    C10   C09  S08  C07   162.85  30.0  1
+ HRK  Var_25    C17   C16  O19  C09  -172.89  30.0  1
+ HRK  Var_26    C20   C07  S08  C09   148.93  30.0  1
+ HRK  Var_27    O06   C07  S08  C09   -89.16  30.0  1
+ HRK  Var_28    O13   C12  C10  C09  -174.80  30.0  1
+ HRK  Var_29    O15   C14  C12  C10   174.63  30.0  1
+ HRK  Var_30    C17   C16  C14  C12  -177.49  30.0  1
+ HRK  Var_31    S08   C09  C10  C12   176.04  30.0  1
+ HRK  Var_32    O11   C10  C12  C14  -173.66  30.0  1
+ HRK  Var_33    S08   C09  O19  C16   175.89  30.0  1
+ HRK  Var_34    O13   C12  C14  C16   176.00  30.0  1
+ HRK  Var_35    O01   C02  C22  C20   -66.59  30.0  1
+ HRK  Var_36    S08   C07  C20  C22   174.73  30.0  1
+ HRK  Var_37    O21   C20  C22  N23    61.37  30.0  1
+ HRK  Var_38    O01   C02  C22  N23    59.40  30.0  1
+ HRK  Var_39    O06   C03  C02  O01    62.43  30.0  1
+ HRK  Var_40    O21   C20  C07  O06   172.05  30.0  1
+ HRK  Var_41    O19   C09  C10  O11   177.27  30.0  1
+ HRK  Var_42    O19   C16  C14  O15  -178.00  30.0  1
+ HRK  Var_43    H201  C20  C22  C02    66.88  30.0  1
+ HRK  Var_44    H221  C22  C02  C03   -64.37  30.0  1
+ HRK  Var_45    H071  C07  O06  C03    58.92  30.0  1
+ HRK  Var_46    H031  C03  O06  C07   -54.82  30.0  1
+ HRK  Var_47    H161  C16  O19  C09   -56.16  30.0  1
+ HRK  Var_48    H121  C12  C10  C09    65.61  30.0  1
+ HRK  Var_49    H141  C14  C12  C10   -63.67  30.0  1
+ HRK  Var_50    H091  C09  C10  C12   -65.31  30.0  1
+ HRK  Var_51    H101  C10  C12  C14    64.42  30.0  1
+ HRK  Var_52    H021  C02  C22  C20   172.57  30.0  1
+ HRK  Var_53    O05   C04  C03  C02  -168.52  30.0  3
+ HRK  Var_54    O01   C02  C03  C04   -57.99  30.0  1
+ HRK  Var_55    O18   C17  C16  C14    56.02  30.0  2
+ HRK  Var_56    O15   C14  C16  C17    61.37  30.0  1
+ HRK  Var_57    O06   C03  C04  O05    70.12  30.0  3
+ HRK  Var_58    S08   C09  C10  O11   -63.03  30.0  1
+ HRK  Var_59    O13   C12  C10  O11    65.54  30.0  1
+ HRK  Var_60    O15   C14  C12  O13   -64.32  30.0  1
+ HRK  Var_61    O19   C16  C17  O18   -65.07  30.0  3
+ HRK  Var_62    S08   C07  C20  O21   -67.72  30.0  1
+ HRK  Var_63    H042  C04  C03  C02   -48.05  30.0  3
+ HRK  Var_64    H041  C04  C03  C02    70.16  30.0  3
+ HRK  Var_65    H011  O01  C02  C03   116.77  30.0  3
+ HRK  Var_66    H211  O21  C20  C07    59.85  30.0  3
+ HRK  Var_67    H111  O11  C10  C09  -174.76  30.0  3
+ HRK  Var_68    H131  O13  C12  C10  -112.70  30.0  3
+ HRK  Var_69    H151  O15  C14  C12    52.84  30.0  3
+ HRK  Var_70    H172  C17  C16  C14   -65.35  30.0  2
+ HRK  Var_71    H171  C17  C16  C14   177.23  30.0  2
+ HRK  Var_72    H051  O05  C04  C03  -173.11  30.0  3
+ HRK  Var_73    H181  O18  C17  C16  -177.47  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

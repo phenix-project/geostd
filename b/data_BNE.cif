@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BNE  BNE  "2-[3-(3-ETHYL-1-METHYL-2-OXO-AZEPAN-3-YL)-PHENOXY]-4-[1-AMINO-1-(1-METHYL-1H-IMIDIZOL-5-YL)-ETHYL]-BENZONITRILE"  ligand  68  35  .  2023-12-07  2023-12-07
+ BNE  BNE  2-[3-(3-ETHYL-1-METHYL-2-OXO-AZEPAN-3-YL)-PHENOXY]-4-[1-AMINO-1-(1-METHYL-1H-IMIDIZOL-5-YL)-ETHYL]-BENZONITRILE  ligand  68  35  .  2023-12-07  2023-12-11
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-12-11
 ;
 
 data_comp_BNE
@@ -351,50 +352,107 @@ _chem_comp_tor.period
  BNE  CONST_18  C12   C6   C2   C1    180.00   0.0  0
  BNE  CONST_19  C13   C7   C2   C1    180.00   0.0  0
  BNE  CONST_20  O17   C12  C6   C2    180.00   0.0  0
- BNE  CONST_21  O17   C12  C18  C13   180.00   0.0  0
- BNE  CONST_22  C22   C20  C19  O17   180.00   0.0  0
- BNE  CONST_23  C24   C21  C19  O17   180.00   0.0  0
- BNE  CONST_24  C27   C24  C21  C19   180.00   0.0  0
- BNE  CONST_25  C23   C20  C19  C21   180.00   0.0  0
- BNE  CONST_26  C27   C24  C25  C22   180.00   0.0  0
- BNE  CONST_27  C25   C22  C20  C23   180.00   0.0  0
- BNE  CONST_28  C33   N31  C28  C27   180.00   0.0  0
- BNE  CONST_29  NZ    C32  C28  C27   180.00   0.0  0
- BNE  CONST_30  C34   N31  C28  C32   180.00   0.0  0
- BNE  CONST_31  NZ    C33  N31  C34   180.00   0.0  0
- BNE  CONST_32  H61   C6   C2   C1      0.00   0.0  0
- BNE  CONST_33  H71   C7   C2   C1      0.00   0.0  0
- BNE  CONST_34  H131  C13  C7   C2    180.00   0.0  0
- BNE  CONST_35  H71   C7   C2   C6    180.00   0.0  0
- BNE  CONST_36  H181  C18  C12  C6    180.00   0.0  0
- BNE  CONST_37  H61   C6   C2   C7    180.00   0.0  0
- BNE  CONST_38  H181  C18  C13  C7    180.00   0.0  0
- BNE  CONST_39  H131  C13  C18  C12   180.00   0.0  0
- BNE  CONST_40  H61   C6   C12  C18   180.00   0.0  0
- BNE  CONST_41  H71   C7   C13  C18   180.00   0.0  0
- BNE  CONST_42  H221  C22  C20  C19   180.00   0.0  0
- BNE  CONST_43  H211  C21  C19  C20   180.00   0.0  0
- BNE  CONST_44  H251  C25  C22  C20   180.00   0.0  0
- BNE  CONST_45  H251  C25  C24  C21   180.00   0.0  0
- BNE  CONST_46  H221  C22  C25  C24   180.00   0.0  0
- BNE  CONST_47  H211  C21  C24  C25   180.00   0.0  0
- BNE  CONST_48  H331  C33  N31  C28   180.00   0.0  0
- BNE  CONST_49  H321  C32  C28  N31   180.00   0.0  0
- BNE  CONST_50  H331  C33  NZ   C32   180.00   0.0  0
- BNE  CONST_51  H321  C32  NZ   C33   180.00   0.0  0
+ BNE  CONST_21  C14   N8   C3   C1      0.00   0.0  0
+ BNE  CONST_22  O17   C12  C18  C13   180.00   0.0  0
+ BNE  CONST_23  C22   C20  C19  O17   180.00   0.0  0
+ BNE  CONST_24  C24   C21  C19  O17   180.00   0.0  0
+ BNE  CONST_25  C27   C24  C21  C19   180.00   0.0  0
+ BNE  CONST_26  C23   C20  C19  C21   180.00   0.0  0
+ BNE  CONST_27  C27   C24  C25  C22   180.00   0.0  0
+ BNE  CONST_28  C25   C22  C20  C23   180.00   0.0  0
+ BNE  CONST_29  C33   N31  C28  C27   180.00   0.0  0
+ BNE  CONST_30  NZ    C32  C28  C27   180.00   0.0  0
+ BNE  CONST_31  C34   N31  C28  C32   180.00   0.0  0
+ BNE  CONST_32  NZ    C33  N31  C34   180.00   0.0  0
+ BNE  CONST_33  H61   C6   C2   C1      0.00   0.0  0
+ BNE  CONST_34  H71   C7   C2   C1      0.00   0.0  0
+ BNE  CONST_35  C15   N8   C3   C1    180.00   0.0  0
+ BNE  CONST_36  H131  C13  C7   C2    180.00   0.0  0
+ BNE  CONST_37  C14   N8   C3   O9    180.00   0.0  0
+ BNE  CONST_38  H71   C7   C2   C6    180.00   0.0  0
+ BNE  CONST_39  H181  C18  C12  C6    180.00   0.0  0
+ BNE  CONST_40  H61   C6   C2   C7    180.00   0.0  0
+ BNE  CONST_41  H181  C18  C13  C7    180.00   0.0  0
+ BNE  CONST_42  H131  C13  C18  C12   180.00   0.0  0
+ BNE  CONST_43  H61   C6   C12  C18   180.00   0.0  0
+ BNE  CONST_44  H71   C7   C13  C18   180.00   0.0  0
+ BNE  CONST_45  H221  C22  C20  C19   180.00   0.0  0
+ BNE  CONST_46  H211  C21  C19  C20   180.00   0.0  0
+ BNE  CONST_47  H251  C25  C22  C20   180.00   0.0  0
+ BNE  CONST_48  C15   N8   C3   O9      0.00   0.0  0
+ BNE  CONST_49  H251  C25  C24  C21   180.00   0.0  0
+ BNE  CONST_50  H221  C22  C25  C24   180.00   0.0  0
+ BNE  CONST_51  H211  C21  C24  C25   180.00   0.0  0
+ BNE  CONST_52  H331  C33  N31  C28   180.00   0.0  0
+ BNE  CONST_53  H321  C32  C28  N31   180.00   0.0  0
+ BNE  CONST_54  H331  C33  NZ   C32   180.00   0.0  0
+ BNE  CONST_55  H321  C32  NZ   C33   180.00   0.0  0
  BNE  Var_01    C19   O17  C12  C6     -7.00  30.0  2
- BNE  Var_02    C20   C19  O17  C12   -83.35  30.0  2
- BNE  Var_03    C21   C19  O17  C12    96.35  30.0  2
- BNE  Var_04    C19   O17  C12  C18   173.13  30.0  2
- BNE  Var_05    H341  C34  N31  C28    46.79  30.0  2
- BNE  Var_06    H342  C34  N31  C28   166.60  30.0  2
- BNE  Var_07    H343  C34  N31  C28   -73.74  30.0  2
- BNE  Var_08    H341  C34  N31  C33  -136.19  30.0  2
- BNE  Var_09    H342  C34  N31  C33   -16.38  30.0  2
- BNE  Var_10    H343  C34  N31  C33   103.28  30.0  2
- BNE  Var_11    H111  C11  C5   C1     56.13  30.0  3
- BNE  Var_12    H112  C11  C5   C1    175.84  30.0  3
- BNE  Var_13    H113  C11  C5   C1    -65.01  30.0  3
+ BNE  Var_02    C16   C10  C4   C1    -58.90  30.0  1
+ BNE  Var_03    C20   C19  O17  C12   -83.35  30.0  2
+ BNE  Var_04    N8    C3   C1   C2     54.61  30.0  1
+ BNE  Var_05    C21   C19  O17  C12    96.35  30.0  2
+ BNE  Var_06    C10   C4   C1   C2    -49.31  30.0  1
+ BNE  Var_07    C19   O17  C12  C18   173.13  30.0  2
+ BNE  Var_08    C6    C2   C1   C3     23.99  30.0  2
+ BNE  Var_09    H341  C34  N31  C28    46.79  30.0  2
+ BNE  Var_10    C7    C2   C1   C3   -161.16  30.0  2
+ BNE  Var_11    H342  C34  N31  C28   166.60  30.0  2
+ BNE  Var_12    C10   C4   C1   C3     76.42  30.0  1
+ BNE  Var_13    H343  C34  N31  C28   -73.74  30.0  2
+ BNE  Var_14    C16   C14  N8   C3     59.24  30.0  1
+ BNE  Var_15    H341  C34  N31  C33  -136.19  30.0  2
+ BNE  Var_16    C6    C2   C1   C4    147.33  30.0  2
+ BNE  Var_17    H342  C34  N31  C33   -16.38  30.0  2
+ BNE  Var_18    C7    C2   C1   C4    -37.83  30.0  2
+ BNE  Var_19    H343  C34  N31  C33   103.28  30.0  2
+ BNE  Var_20    N8    C3   C1   C4    -71.97  30.0  1
+ BNE  Var_21    H111  C11  C5   C1     56.13  30.0  3
+ BNE  Var_22    C14   C16  C10  C4     60.27  30.0  1
+ BNE  Var_23    H112  C11  C5   C1    175.84  30.0  3
+ BNE  Var_24    C10   C16  C14  N8    -80.57  30.0  1
+ BNE  Var_25    H113  C11  C5   C1    -65.01  30.0  3
+ BNE  Var_26    O9    C3   C1   C2   -125.79  30.0  1
+ BNE  Var_27    O9    C3   C1   C4    107.63  30.0  1
+ BNE  Var_28    C6    C2   C1   C5    -95.47  30.0  2
+ BNE  Var_29    C7    C2   C1   C5     79.37  30.0  2
+ BNE  Var_30    N8    C3   C1   C5    173.19  30.0  1
+ BNE  Var_31    C10   C4   C1   C5   -167.10  30.0  1
+ BNE  Var_32    C16   C14  N8   C15  -109.38  30.0  1
+ BNE  Var_33    C28   C27  C24  C21    49.90  30.0  2
+ BNE  Var_34    N31   C28  C27  C24    57.47  30.0  2
+ BNE  Var_35    C32   C28  C27  C24  -123.23  30.0  2
+ BNE  Var_36    C28   C27  C24  C25  -133.26  30.0  2
+ BNE  Var_37    H101  C10  C4   C1    178.86  30.0  1
+ BNE  Var_38    H102  C10  C4   C1     63.82  30.0  1
+ BNE  Var_39    H41   C4   C1   C2   -173.29  30.0  1
+ BNE  Var_40    H42   C4   C1   C2     73.44  30.0  1
+ BNE  Var_41    H141  C14  N8   C3    -65.31  30.0  1
+ BNE  Var_42    H142  C14  N8   C3    179.70  30.0  1
+ BNE  Var_43    H161  C16  C10  C4    -62.54  30.0  1
+ BNE  Var_44    H162  C16  C10  C4   -179.67  30.0  1
+ BNE  Var_45    C11   C5   C1   C2     52.58  30.0  3
+ BNE  Var_46    C11   C5   C1   C3    -69.27  30.0  3
+ BNE  Var_47    C11   C5   C1   C4    174.74  30.0  3
+ BNE  Var_48    O9    C3   C1   C5     -7.21  30.0  1
+ BNE  Var_49    C29   C27  C24  C21   -69.56  30.0  2
+ BNE  Var_50    N30   C27  C24  C21   169.18  30.0  2
+ BNE  Var_51    C29   C27  C24  C25   107.28  30.0  2
+ BNE  Var_52    N30   C27  C24  C25   -13.98  30.0  2
+ BNE  Var_53    N31   C28  C27  C29   175.32  30.0  2
+ BNE  Var_54    C32   C28  C27  C29    -5.38  30.0  2
+ BNE  Var_55    N31   C28  C27  N30   -63.19  30.0  2
+ BNE  Var_56    C32   C28  C27  N30   116.10  30.0  2
+ BNE  Var_57    H51   C5   C1   C2    -68.96  30.0  3
+ BNE  Var_58    H52   C5   C1   C2    176.65  30.0  3
+ BNE  Var_59    H151  C15  N8   C3     29.14  30.0  3
+ BNE  Var_60    H152  C15  N8   C3    148.68  30.0  3
+ BNE  Var_61    H153  C15  N8   C3    -91.32  30.0  3
+ BNE  Var_62    H291  C29  C27  C24    59.69  30.0  3
+ BNE  Var_63    H292  C29  C27  C24  -179.00  30.0  3
+ BNE  Var_64    H293  C29  C27  C24   -60.12  30.0  3
+ BNE  Var_65    H301  N30  C27  C24    71.09  30.0  3
+ BNE  Var_66    H302  N30  C27  C24  -173.84  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

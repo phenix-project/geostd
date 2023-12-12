@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 6KJ  6KJ  "(5E)-5-[(N-tert-butoxycarbamimidoyl)imino]-L-norvaline"  ligand  36  17  .  2023-12-07  2023-12-07
+ 6KJ  6KJ  (5E)-5-[(N-tert-butoxycarbamimidoyl)imino]-L-norvaline  ligand  36  17  .  2023-12-07  2023-12-11
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-12-11
 ;
 
 data_comp_6KJ
@@ -197,8 +198,8 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 6KJ  CONST_03  OH   NH1  CZ   NE      0.00   0.0  0
- 6KJ  CONST_04  OH   NH1  CZ   NH2   180.00   0.0  0
+ 6KJ  CONST_01  OH   NH1  CZ   NE      0.00   0.0  0
+ 6KJ  CONST_03  OH   NH1  CZ   NH2   180.00   0.0  0
  6KJ  CONST_05  H12  NH1  CZ   NE    180.00   0.0  0
  6KJ  CONST_06  H11  NH2  CZ   NE      0.00   0.0  0
  6KJ  CONST_07  H12  NH1  CZ   NH2     0.00   0.0  0
@@ -211,41 +212,50 @@ _chem_comp_tor.period
  6KJ  Var_06    C3   C1   OH   NH1   -63.88  30.0  3
  6KJ  Var_07    C2   C1   OH   NH1    59.52  30.0  3
  6KJ  Var_08    H10  CD   NE   CZ      2.26   0.0  2
- 6KJ  Var_09    H8   CG   CB   CA    -59.64  30.0  3
- 6KJ  Var_10    H9   CG   CB   CA     55.89  30.0  3
- 6KJ  Var_11    H10  CD   CG   CB    178.31  30.0  1
- 6KJ  Var_12    H6   CB   CG   CD    -59.53  30.0  2
- 6KJ  Var_13    H7   CB   CG   CD     57.37  30.0  2
- 6KJ  Var_14    H8   CG   CD   NE   -124.34  30.0  3
- 6KJ  Var_15    H9   CG   CD   NE    123.65  30.0  3
- 6KJ  Var_16    H13  C4   C1   OH    -60.71  30.0  3
- 6KJ  Var_17    H14  C4   C1   OH     59.94  30.0  3
- 6KJ  Var_18    H15  C4   C1   OH    179.54  30.0  3
- 6KJ  Var_19    H16  C3   C1   OH     61.93  30.0  3
- 6KJ  Var_20    H17  C3   C1   OH   -178.75  30.0  3
- 6KJ  Var_21    H18  C3   C1   OH    -59.17  30.0  3
- 6KJ  Var_22    H19  C2   C1   OH    -66.59  30.0  3
- 6KJ  Var_23    H20  C2   C1   OH     54.33  30.0  3
- 6KJ  Var_24    H21  C2   C1   OH    173.93  30.0  3
- 6KJ  Var_25    H12  NH1  OH   C1   -102.48  30.0  3
- 6KJ  Var_26    H16  C3   C1   C4    174.80  30.0  3
- 6KJ  Var_27    H17  C3   C1   C4    -65.88  30.0  3
- 6KJ  Var_28    H18  C3   C1   C4     53.70  30.0  3
- 6KJ  Var_29    H19  C2   C1   C4   -179.07  30.0  3
- 6KJ  Var_30    H20  C2   C1   C4    -58.14  30.0  3
- 6KJ  Var_31    H21  C2   C1   C4     61.46  30.0  3
- 6KJ  Var_32    H13  C4   C1   C3   -178.66  30.0  3
- 6KJ  Var_33    H14  C4   C1   C3    -58.01  30.0  3
- 6KJ  Var_34    H15  C4   C1   C3     61.59  30.0  3
- 6KJ  Var_35    H19  C2   C1   C3     56.19  30.0  3
- 6KJ  Var_36    H20  C2   C1   C3    177.11  30.0  3
- 6KJ  Var_37    H21  C2   C1   C3    -63.29  30.0  3
- 6KJ  Var_38    H13  C4   C1   C2     56.35  30.0  3
- 6KJ  Var_39    H14  C4   C1   C2    177.00  30.0  3
- 6KJ  Var_40    H15  C4   C1   C2    -63.40  30.0  3
- 6KJ  Var_41    H16  C3   C1   C2    -60.38  30.0  3
- 6KJ  Var_42    H17  C3   C1   C2     58.94  30.0  3
- 6KJ  Var_43    H18  C3   C1   C2    178.52  30.0  3
+ 6KJ  Var_09    CB   CA   C    OA2   -79.93  30.0  2
+ 6KJ  Var_10    H8   CG   CB   CA    -59.64  30.0  3
+ 6KJ  Var_11    N    CA   C    OA2   156.54  30.0  2
+ 6KJ  Var_12    H9   CG   CB   CA     55.89  30.0  3
+ 6KJ  Var_13    CG   CB   CA   C     170.19  30.0  1
+ 6KJ  Var_14    H10  CD   CG   CB    178.31  30.0  1
+ 6KJ  Var_15    CB   CA   C    OA1    98.38  30.0  2
+ 6KJ  Var_16    H6   CB   CG   CD    -59.53  30.0  2
+ 6KJ  Var_17    N    CA   C    OA1   -25.15  30.0  2
+ 6KJ  Var_18    H7   CB   CG   CD     57.37  30.0  2
+ 6KJ  Var_19    CG   CB   CA   N     -63.68  30.0  1
+ 6KJ  Var_20    H8   CG   CD   NE   -124.34  30.0  3
+ 6KJ  Var_21    H9   CG   CD   NE    123.65  30.0  3
+ 6KJ  Var_22    H13  C4   C1   OH    -60.71  30.0  3
+ 6KJ  Var_23    H14  C4   C1   OH     59.94  30.0  3
+ 6KJ  Var_24    H15  C4   C1   OH    179.54  30.0  3
+ 6KJ  Var_25    H16  C3   C1   OH     61.93  30.0  3
+ 6KJ  Var_26    H17  C3   C1   OH   -178.75  30.0  3
+ 6KJ  Var_27    H18  C3   C1   OH    -59.17  30.0  3
+ 6KJ  Var_28    H19  C2   C1   OH    -66.59  30.0  3
+ 6KJ  Var_29    H20  C2   C1   OH     54.33  30.0  3
+ 6KJ  Var_30    H21  C2   C1   OH    173.93  30.0  3
+ 6KJ  Var_31    H12  NH1  OH   C1   -102.48  30.0  3
+ 6KJ  Var_32    H16  C3   C1   C4    174.80  30.0  3
+ 6KJ  Var_33    H17  C3   C1   C4    -65.88  30.0  3
+ 6KJ  Var_34    H18  C3   C1   C4     53.70  30.0  3
+ 6KJ  Var_35    H2   CA   C    OA2    36.89  30.0  2
+ 6KJ  Var_36    H19  C2   C1   C4   -179.07  30.0  3
+ 6KJ  Var_37    H3   N    CA   C     -69.81  30.0  3
+ 6KJ  Var_38    H20  C2   C1   C4    -58.14  30.0  3
+ 6KJ  Var_39    H4   N    CA   C      42.89  30.0  3
+ 6KJ  Var_40    H21  C2   C1   C4     61.46  30.0  3
+ 6KJ  Var_41    H13  C4   C1   C3   -178.66  30.0  3
+ 6KJ  Var_42    H14  C4   C1   C3    -58.01  30.0  3
+ 6KJ  Var_43    H15  C4   C1   C3     61.59  30.0  3
+ 6KJ  Var_44    H19  C2   C1   C3     56.19  30.0  3
+ 6KJ  Var_45    H20  C2   C1   C3    177.11  30.0  3
+ 6KJ  Var_46    H21  C2   C1   C3    -63.29  30.0  3
+ 6KJ  Var_47    H13  C4   C1   C2     56.35  30.0  3
+ 6KJ  Var_48    H14  C4   C1   C2    177.00  30.0  3
+ 6KJ  Var_49    H15  C4   C1   C2    -63.40  30.0  3
+ 6KJ  Var_50    H16  C3   C1   C2    -60.38  30.0  3
+ 6KJ  Var_51    H17  C3   C1   C2     58.94  30.0  3
+ 6KJ  Var_52    H18  C3   C1   C2    178.52  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

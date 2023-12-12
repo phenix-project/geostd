@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- HBC  HBC  "(2-AMINO-3-PHENYL-BICYCLO[2.2.1]HEPT-2-YL)-PHENYL-METHANONE"  ligand  43  22  .  2023-12-10  2023-12-10
+ HBC  HBC  (2-AMINO-3-PHENYL-BICYCLO[2.2.1]HEPT-2-YL)-PHENYL-METHANONE  ligand  43  22  .  2023-12-10  2023-12-11
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2023-12-11
 ;
 
 data_comp_HBC
@@ -239,53 +240,94 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- HBC  CONST_01  C4   C3   C2   C1      0.00   0.0  0
- HBC  CONST_02  C4   C5   C6   C1      0.00   0.0  0
- HBC  CONST_03  C5   C6   C1   C2      0.00   0.0  0
- HBC  CONST_04  C5   C4   C3   C2      0.00   0.0  0
- HBC  CONST_05  C6   C1   C2   C3      0.00   0.0  0
- HBC  CONST_06  C6   C5   C4   C3      0.00   0.0  0
- HBC  CONST_07  C18  C17  C16  C15     0.00   0.0  0
- HBC  CONST_08  C18  C19  C20  C15     0.00   0.0  0
- HBC  CONST_09  C19  C20  C15  C16     0.00   0.0  0
- HBC  CONST_10  C19  C18  C17  C16     0.00   0.0  0
- HBC  CONST_11  C20  C15  C16  C17     0.00   0.0  0
- HBC  CONST_12  C20  C19  C18  C17     0.00   0.0  0
- HBC  CONST_13  C20  C15  C16  C12   180.00   0.0  0
- HBC  CONST_14  C18  C17  C16  C12   180.00   0.0  0
- HBC  CONST_15  C14  C1   C2   C3    180.00   0.0  0
- HBC  CONST_16  C14  C1   C6   C5    180.00   0.0  0
- HBC  CONST_17  H31  C3   C2   C1    180.00   0.0  0
- HBC  CONST_18  H51  C5   C6   C1    180.00   0.0  0
- HBC  CONST_19  H61  C6   C1   C2    180.00   0.0  0
- HBC  CONST_20  H41  C4   C3   C2    180.00   0.0  0
- HBC  CONST_21  H51  C5   C4   C3    180.00   0.0  0
- HBC  CONST_22  H21  C2   C3   C4    180.00   0.0  0
- HBC  CONST_23  H61  C6   C5   C4    180.00   0.0  0
- HBC  CONST_24  H31  C3   C4   C5    180.00   0.0  0
- HBC  CONST_25  H21  C2   C1   C6    180.00   0.0  0
- HBC  CONST_26  H41  C4   C5   C6    180.00   0.0  0
- HBC  CONST_27  H15  C15  C16  C12     0.00   0.0  0
- HBC  CONST_28  H17  C17  C16  C12     0.00   0.0  0
- HBC  CONST_29  H17  C17  C16  C15   180.00   0.0  0
- HBC  CONST_30  H19  C19  C20  C15   180.00   0.0  0
- HBC  CONST_31  H20  C20  C15  C16   180.00   0.0  0
- HBC  CONST_32  H18  C18  C17  C16   180.00   0.0  0
- HBC  CONST_33  H15  C15  C16  C17   180.00   0.0  0
- HBC  CONST_34  H19  C19  C18  C17   180.00   0.0  0
- HBC  CONST_35  H20  C20  C19  C18   180.00   0.0  0
- HBC  CONST_36  H17  C17  C18  C19   180.00   0.0  0
- HBC  CONST_37  H15  C15  C20  C19   180.00   0.0  0
- HBC  CONST_38  H18  C18  C19  C20   180.00   0.0  0
- HBC  Var_01    C10  C9   C8   C7     -2.13  30.0  1
- HBC  Var_02    C13  C14  C1   C2    123.43  30.0  2
- HBC  Var_03    C13  C14  C1   C6    -61.73  30.0  2
- HBC  Var_04    H91  C9   C8   C7   -120.57  30.0  1
- HBC  Var_05    H92  C9   C8   C7    118.53  30.0  1
- HBC  Var_06    H81  C8   C9   C10   114.03  30.0  1
- HBC  Var_07    H82  C8   C9   C10  -126.17  30.0  1
- HBC  Var_08    O1   C14  C1   C2    -53.24  30.0  2
- HBC  Var_09    O1   C14  C1   C6    121.60  30.0  2
+ HBC  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ HBC  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ HBC  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ HBC  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ HBC  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ HBC  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ HBC  CONST_07  C18   C17  C16  C15     0.00   0.0  0
+ HBC  CONST_08  C18   C19  C20  C15     0.00   0.0  0
+ HBC  CONST_09  C19   C20  C15  C16     0.00   0.0  0
+ HBC  CONST_10  C19   C18  C17  C16     0.00   0.0  0
+ HBC  CONST_11  C20   C15  C16  C17     0.00   0.0  0
+ HBC  CONST_12  C20   C19  C18  C17     0.00   0.0  0
+ HBC  CONST_13  C20   C15  C16  C12   180.00   0.0  0
+ HBC  CONST_14  C18   C17  C16  C12   180.00   0.0  0
+ HBC  CONST_15  C14   C1   C2   C3    180.00   0.0  0
+ HBC  CONST_16  C14   C1   C6   C5    180.00   0.0  0
+ HBC  CONST_17  H31   C3   C2   C1    180.00   0.0  0
+ HBC  CONST_18  H51   C5   C6   C1    180.00   0.0  0
+ HBC  CONST_19  H61   C6   C1   C2    180.00   0.0  0
+ HBC  CONST_20  H41   C4   C3   C2    180.00   0.0  0
+ HBC  CONST_21  H51   C5   C4   C3    180.00   0.0  0
+ HBC  CONST_22  H21   C2   C3   C4    180.00   0.0  0
+ HBC  CONST_23  H61   C6   C5   C4    180.00   0.0  0
+ HBC  CONST_24  H31   C3   C4   C5    180.00   0.0  0
+ HBC  CONST_25  H21   C2   C1   C6    180.00   0.0  0
+ HBC  CONST_26  H41   C4   C5   C6    180.00   0.0  0
+ HBC  CONST_27  H15   C15  C16  C12     0.00   0.0  0
+ HBC  CONST_28  H17   C17  C16  C12     0.00   0.0  0
+ HBC  CONST_29  H17   C17  C16  C15   180.00   0.0  0
+ HBC  CONST_30  H19   C19  C20  C15   180.00   0.0  0
+ HBC  CONST_31  H20   C20  C15  C16   180.00   0.0  0
+ HBC  CONST_32  H18   C18  C17  C16   180.00   0.0  0
+ HBC  CONST_33  H15   C15  C16  C17   180.00   0.0  0
+ HBC  CONST_34  H19   C19  C18  C17   180.00   0.0  0
+ HBC  CONST_35  H20   C20  C19  C18   180.00   0.0  0
+ HBC  CONST_36  H17   C17  C18  C19   180.00   0.0  0
+ HBC  CONST_37  H15   C15  C20  C19   180.00   0.0  0
+ HBC  CONST_38  H18   C18  C19  C20   180.00   0.0  0
+ HBC  Var_01    C10   C9   C8   C7     -2.13  30.0  1
+ HBC  Var_02    C13   C14  C1   C2    123.43  30.0  2
+ HBC  Var_03    C9    C10  C11  C7     56.50  30.0  3
+ HBC  Var_04    C13   C14  C1   C6    -61.73  30.0  2
+ HBC  Var_05    C12   C10  C11  C7    -55.13  30.0  3
+ HBC  Var_06    H91   C9   C8   C7   -120.57  30.0  1
+ HBC  Var_07    C10   C12  C13  C7      1.52  30.0  1
+ HBC  Var_08    H92   C9   C8   C7    118.53  30.0  1
+ HBC  Var_09    C16   C12  C13  C7    130.31  30.0  1
+ HBC  Var_10    H81   C8   C9   C10   114.03  30.0  1
+ HBC  Var_11    C10   C11  C7   C8    -57.60  30.0  3
+ HBC  Var_12    H82   C8   C9   C10  -126.17  30.0  1
+ HBC  Var_13    C12   C13  C7   C8     69.98  30.0  1
+ HBC  Var_14    O1    C14  C1   C2    -53.24  30.0  2
+ HBC  Var_15    C11   C10  C9   C8    -34.09  30.0  1
+ HBC  Var_16    O1    C14  C1   C6    121.60  30.0  2
+ HBC  Var_17    C12   C10  C9   C8     73.96  30.0  1
+ HBC  Var_18    C11   C7   C8   C9     37.53  30.0  1
+ HBC  Var_19    C13   C7   C8   C9    -70.46  30.0  1
+ HBC  Var_20    C13   C12  C10  C9    -72.91  30.0  1
+ HBC  Var_21    C16   C12  C10  C9    157.94  30.0  1
+ HBC  Var_22    C13   C7   C11  C10    56.20  30.0  3
+ HBC  Var_23    C15   C16  C12  C10  -144.93  30.0  2
+ HBC  Var_24    C17   C16  C12  C10    35.06  30.0  2
+ HBC  Var_25    C12   C13  C7   C11   -36.24  30.0  1
+ HBC  Var_26    C13   C12  C10  C11    33.70  30.0  1
+ HBC  Var_27    C16   C12  C10  C11   -95.46  30.0  1
+ HBC  Var_28    C15   C16  C12  C13    93.34  30.0  2
+ HBC  Var_29    C17   C16  C12  C13   -86.66  30.0  2
+ HBC  Var_30    C7    C13  C14  C1    159.76  30.0  2
+ HBC  Var_31    C12   C13  C14  C1    -88.57  30.0  2
+ HBC  Var_32    N1    C13  C7   C8    -51.13  30.0  1
+ HBC  Var_33    C14   C13  C7   C8   -172.26  30.0  1
+ HBC  Var_34    N1    C13  C12  C10   121.83  30.0  1
+ HBC  Var_35    C14   C13  C12  C10  -115.80  30.0  1
+ HBC  Var_36    N1    C13  C7   C11  -157.36  30.0  1
+ HBC  Var_37    C14   C13  C7   C11    81.51  30.0  1
+ HBC  Var_38    C16   C12  C13  N1   -109.38  30.0  1
+ HBC  Var_39    C16   C12  C13  C14    12.99  30.0  1
+ HBC  Var_40    H10   C10  C11  C7   -179.54  30.0  3
+ HBC  Var_41    H12   C12  C13  C7   -112.60  30.0  1
+ HBC  Var_42    H111  C11  C7   C8   -176.91  30.0  3
+ HBC  Var_43    H112  C11  C7   C8     58.80  30.0  3
+ HBC  Var_44    H71   C7   C8   C9    162.60  30.0  1
+ HBC  Var_45    N1    C13  C14  C1     36.52  30.0  2
+ HBC  Var_46    O1    C14  C13  C7    -23.69  30.0  3
+ HBC  Var_47    O1    C14  C13  C12    87.97  30.0  3
+ HBC  Var_48    HN11  N1   C13  C7     59.18  30.0  3
+ HBC  Var_49    HN12  N1   C13  C7    174.84  30.0  3
+ HBC  Var_50    O1    C14  C13  N1   -146.94  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
