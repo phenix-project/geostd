@@ -20,11 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5DW  5DW  4-ethynyl-L-phenylalanine  L-peptide  24  14  .  2019-03-22  2023-10-30
+ 5DW  5DW  4-ethynyl-L-phenylalanine  L-peptide  24  14  .  2019-03-22  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
 Added dihedrals for adding hydrogens : 2023-10-30
+Removed H2 atom : 2024-04-10
 ;
 
 data_comp_5DW
@@ -53,7 +54,6 @@ _chem_comp_atom.z
  5DW  CZ   C  CR6    0  -0.074  -51.6319   -9.0990  16.1643
  5DW  O1   O  OC    -1  -0.596  -45.4023   -5.5440  17.9604
  5DW  H1   H  H      0   0.281  -54.1107  -11.0387  14.2251
- 5DW  H2   H  HNH2   0   0.333  -47.4770   -7.6785  15.9791
  5DW  H3   H  HNH2   0   0.335  -46.0531   -7.0513  16.4580
  5DW  H5   H  HCH1   0   0.202  -48.1152   -5.6058  16.7520
  5DW  H6   H  HCH2   0   0.227  -48.2534   -7.4557  19.1597
@@ -86,7 +86,6 @@ _chem_comp_bond.value_dist_neutron
  5DW  C    O    deloc     1.231  0.020  1.231
  5DW  C    O1   deloc     1.247  0.020  1.247
  5DW  C2   H1   single    0.913  0.020  1.066
- 5DW  N    H2   single    0.868  0.020  1.013
  5DW  N    H3   single    0.868  0.020  1.013
  5DW  CA   H5   single    0.939  0.020  1.096
  5DW  CB   H6   single    0.939  0.020  1.096
@@ -105,9 +104,7 @@ _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
  5DW  CZ   C1   C2   180.00  3.000
  5DW  H1   C2   C1   180.00  3.000
- 5DW  H3   N    H2   107.19  3.000
  5DW  H3   N    CA   108.12  3.000
- 5DW  H2   N    CA   110.36  3.000
  5DW  H5   CA   CB   106.71  3.000
  5DW  H5   CA   C    105.35  3.000
  5DW  CB   CA   C    110.50  1.500
@@ -152,25 +149,24 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5DW  CONST_01  CZ   CE1  CD1  CG      0.00   0.0  0
- 5DW  CONST_02  CZ   CE2  CD2  CG      0.00   0.0  0
- 5DW  CONST_03  CE2  CZ   CE1  CD1     0.00   0.0  0
- 5DW  CONST_04  CE2  CD2  CG   CD1     0.00   0.0  0
- 5DW  CONST_05  CE1  CZ   CE2  CD2     0.00   0.0  0
- 5DW  CONST_06  CE1  CD1  CG   CD2     0.00   0.0  0
- 5DW  CONST_07  CD1  CE1  CZ   C1    180.00   0.0  0
- 5DW  CONST_08  CD2  CE2  CZ   C1    180.00   0.0  0
- 5DW  CONST_09  CE1  CD1  CG   CB    180.00   0.0  0
- 5DW  CONST_10  CE2  CD2  CG   CB    180.00   0.0  0
- 5DW  CONST_11  H10  CE1  CD1  CG    180.00   0.0  0
- 5DW  CONST_12  H11  CE2  CD2  CG    180.00   0.0  0
- 5DW  CONST_13  H9   CD2  CG   CD1   180.00   0.0  0
- 5DW  CONST_14  H8   CD1  CG   CD2   180.00   0.0  0
- 5DW  Var_01    CD1  CG   CB   CA    -83.00  30.0  2
- 5DW  Var_02    H5   CA   CB   CG     62.62  30.0  2
- 5DW  Var_03    H1   C2   C1   CZ    173.20  30.0  1
- 5DW  Var_04    H2   N    CA   C    -153.49  30.0  3
- 5DW  Var_05    H3   N    CA   C     -36.55  30.0  3
+ 5DW  CONST_01  CZ   CE1  CD1  CG     0.00   0.0  0
+ 5DW  CONST_02  CZ   CE2  CD2  CG     0.00   0.0  0
+ 5DW  CONST_03  CE2  CZ   CE1  CD1    0.00   0.0  0
+ 5DW  CONST_04  CE2  CD2  CG   CD1    0.00   0.0  0
+ 5DW  CONST_05  CE1  CZ   CE2  CD2    0.00   0.0  0
+ 5DW  CONST_06  CE1  CD1  CG   CD2    0.00   0.0  0
+ 5DW  CONST_07  CD1  CE1  CZ   C1   180.00   0.0  0
+ 5DW  CONST_08  CD2  CE2  CZ   C1   180.00   0.0  0
+ 5DW  CONST_09  CE1  CD1  CG   CB   180.00   0.0  0
+ 5DW  CONST_10  CE2  CD2  CG   CB   180.00   0.0  0
+ 5DW  CONST_11  H10  CE1  CD1  CG   180.00   0.0  0
+ 5DW  CONST_12  H11  CE2  CD2  CG   180.00   0.0  0
+ 5DW  CONST_13  H9   CD2  CG   CD1  180.00   0.0  0
+ 5DW  CONST_14  H8   CD1  CG   CD2  180.00   0.0  0
+ 5DW  Var_01    CD1  CG   CB   CA   -83.00  30.0  2
+ 5DW  Var_02    H5   CA   CB   CG    62.62  30.0  2
+ 5DW  Var_03    H1   C2   C1   CZ   173.20  30.0  1
+ 5DW  Var_04    H3   N    CA   C    -36.55  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
