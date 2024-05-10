@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DAH  DAH  '3-hydroxy-L-tyrosine     '  L-peptide  25  14  .  2012-08-28  2023-10-30
+ DAH  DAH  '3-hydroxy-L-tyrosine     '  L-peptide  25  14  .  2012-08-28  2024-04-10
 ;
 CIF prepared directly in eLBOW
 Added dihedrals for adding hydrogens : 2023-10-30
+Removed H2 atom : 2024-04-10
 ;
 
 data_comp_DAH
@@ -51,7 +52,6 @@ _chem_comp_atom.z
  DAH  OZ   O  OH1   .  -4.3073   0.1747   0.3365
  DAH  OXT  O  OH1   .   3.6985  -1.5759   0.3670
  DAH  H    H  HNH2  .   2.0145   2.2369   0.2359
- DAH  H2   H  HNH2  .   1.4361   1.6358   1.6453
  DAH  HA   H  HCH1  .   1.6532  -0.4753   1.1683
  DAH  HB2  H  HCH2  .   1.4778   0.8642  -1.6335
  DAH  HB3  H  HCH2  .   1.4691  -0.9309  -1.3792
@@ -71,7 +71,6 @@ _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
  DAH  N    CA   single    1.446  0.020
  DAH  N    H    single    1.002  0.020
- DAH  N    H2   single    1.002  0.020
  DAH  CA   C    single    1.520  0.020
  DAH  CA   CB   single    1.545  0.020
  DAH  CA   HA   single    1.133  0.020
@@ -102,8 +101,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- DAH  H2   N    H    109.63  3.000
- DAH  H2   N    CA   109.72  3.000
  DAH  H    N    CA   111.06  3.000
  DAH  HA   CA   CB   108.10  3.000
  DAH  HA   CA   C    108.26  3.000
@@ -152,28 +149,27 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DAH  CONST_01  CZ   CE1  CD1  CG      0.00   0.0  0
- DAH  CONST_02  CZ   CE2  CD2  CG      0.00   0.0  0
- DAH  CONST_03  CE2  CD2  CG   CD1     0.00   0.0  0
- DAH  CONST_04  CE2  CZ   CE1  CD1     0.00   0.0  0
- DAH  CONST_05  CE1  CD1  CG   CD2     0.00   0.0  0
- DAH  CONST_06  CE1  CZ   CE2  CD2     0.00   0.0  0
- DAH  CONST_07  CE1  CD1  CG   CB    180.00   0.0  0
- DAH  CONST_08  CE2  CD2  CG   CB    180.00   0.0  0
- DAH  CONST_09  OE2  CE2  CD2  CG    180.00   0.0  0
- DAH  CONST_10  OZ   CZ   CE1  CD1   180.00   0.0  0
- DAH  CONST_11  OZ   CZ   CE2  CD2   180.00   0.0  0
- DAH  CONST_12  OE2  CE2  CZ   CE1   180.00   0.0  0
- DAH  CONST_13  HE1  CE1  CD1  CG    180.00   0.0  0
- DAH  CONST_14  HD2  CD2  CG   CD1   180.00   0.0  0
- DAH  CONST_15  HD1  CD1  CG   CD2   180.00   0.0  0
- DAH  CONST_16  HXT  OXT  C    CA    180.00   0.0  0
- DAH  Var_01    CD1  CG   CB   CA     91.09  30.0  2
- DAH  Var_02    HE2  OE2  CE2  CD2   177.09  30.0  2
- DAH  Var_03    HZ   OZ   CZ   CE1    10.07  30.0  2
- DAH  Var_04    HA   CA   CB   CG     46.53  30.0  1
- DAH  Var_05    H    N    CA   C      93.39  30.0  3
- DAH  Var_06    H2   N    CA   C    -145.25  30.0  3
+ DAH  CONST_01  CZ   CE1  CD1  CG     0.00   0.0  0
+ DAH  CONST_02  CZ   CE2  CD2  CG     0.00   0.0  0
+ DAH  CONST_03  CE2  CD2  CG   CD1    0.00   0.0  0
+ DAH  CONST_04  CE2  CZ   CE1  CD1    0.00   0.0  0
+ DAH  CONST_05  CE1  CD1  CG   CD2    0.00   0.0  0
+ DAH  CONST_06  CE1  CZ   CE2  CD2    0.00   0.0  0
+ DAH  CONST_07  CE1  CD1  CG   CB   180.00   0.0  0
+ DAH  CONST_08  CE2  CD2  CG   CB   180.00   0.0  0
+ DAH  CONST_09  OE2  CE2  CD2  CG   180.00   0.0  0
+ DAH  CONST_10  OZ   CZ   CE1  CD1  180.00   0.0  0
+ DAH  CONST_11  OZ   CZ   CE2  CD2  180.00   0.0  0
+ DAH  CONST_12  OE2  CE2  CZ   CE1  180.00   0.0  0
+ DAH  CONST_13  HE1  CE1  CD1  CG   180.00   0.0  0
+ DAH  CONST_14  HD2  CD2  CG   CD1  180.00   0.0  0
+ DAH  CONST_15  HD1  CD1  CG   CD2  180.00   0.0  0
+ DAH  CONST_16  HXT  OXT  C    CA   180.00   0.0  0
+ DAH  Var_01    CD1  CG   CB   CA    91.09  30.0  2
+ DAH  Var_02    HE2  OE2  CE2  CD2  177.09  30.0  2
+ DAH  Var_03    HZ   OZ   CZ   CE1   10.07  30.0  2
+ DAH  Var_04    HA   CA   CB   CG    46.53  30.0  1
+ DAH  Var_05    H    N    CA   C     93.39  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

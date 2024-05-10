@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- C2N  C2N  '3-chloro-D-alanine       '  D-peptide  12  7  .  2016-04-22  2022-09-22
+ C2N  C2N  '3-chloro-D-alanine       '  D-peptide  12  7  .  2016-04-22  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2023-12-12
+Removed H2 atom : 2024-04-10
 ;
 
 data_comp_C2N
@@ -48,7 +50,6 @@ _chem_comp_atom.z
  C2N  HB2  H   HCH2   0   0.266  12.3393  33.5379  110.9964
  C2N  HA   H   HCH1   0   0.198   9.3507  32.9431  111.0731
  C2N  H    H   HNH2   0   0.342   9.8171  32.4328  108.6904
- C2N  H2   H   HNH2   0   0.343   9.8526  34.0070  109.0464
 
 loop_
 _chem_comp_bond.comp_id
@@ -68,7 +69,6 @@ _chem_comp_bond.value_dist_neutron
  C2N  CB  HB2  single  0.970  0.020  1.090
  C2N  CA  HA   single  0.970  0.020  0.970
  C2N  N   H    single  0.860  0.020  0.860
- C2N  N   H2   single  0.890  0.020  1.040
 
 loop_
 _chem_comp_angle.comp_id
@@ -92,8 +92,6 @@ _chem_comp_angle.value_angle_esd
  C2N  O    C   OXT  127.44  3.000
  C2N  O    C   CA   120.80  1.700
  C2N  OXT  C   CA   120.80  1.700
- C2N  H2   N   H    105.70  3.000
- C2N  H2   N   CA   109.59  3.000
  C2N  H    N   CA   114.00  3.000
 
 loop_
@@ -115,4 +113,25 @@ _chem_comp_plane_atom.dist_esd
  C2N  plan-1  C    0.020
  C2N  plan-1  OXT  0.020
  C2N  plan-1  O    0.020
+
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ C2N  Var_01  C    CA  CB  CL   -68.76  30.0  3
+ C2N  Var_02  N    CA  CB  CL   172.57  30.0  3
+ C2N  Var_03  OXT  C   CA  CB   166.12  30.0  2
+ C2N  Var_04  O    C   CA  CB   -16.17  30.0  2
+ C2N  Var_05  N    CA  C   OXT  -75.59  30.0  3
+ C2N  Var_06  N    CA  C   O    102.12  30.0  3
+ C2N  Var_07  HA   CA  CB  CL    51.52  30.0  3
+ C2N  Var_08  H    N   CA  CB   171.32  30.0  3
+ C2N  Var_09  HB1  CB  CA  C    173.48  30.0  2
+ C2N  Var_10  HB2  CB  CA  C     50.78  30.0  2
 

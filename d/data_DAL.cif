@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DAL  DAL  'D-alanine                '  D-peptide  12  6  .  2022-03-18  2022-09-22
+ DAL  DAL  'D-alanine                '  D-peptide  12  6  .  2022-03-18  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2023-12-12
+Removed H2 atom : 2024-04-10
 ;
 
 data_comp_DAL
@@ -44,7 +46,6 @@ _chem_comp_atom.z
  DAL  O    O  O      0  -0.614   1.0480  -1.4142   0.0107
  DAL  OXT  O  OC    -1  -0.615   1.5642   0.7505  -0.0415
  DAL  H    H  HNH2   0   0.331  -1.1535  -1.8012   0.4023
- DAL  H2   H  HNH2   0   0.329  -2.4512  -0.8477   0.6151
  DAL  HA   H  HCH1   0   0.195  -0.7203   0.4332   1.4494
  DAL  HB1  H  HCH3   0   0.206  -1.0965   1.2344  -1.4711
  DAL  HB2  H  HCH3   0   0.208  -2.1984   1.6449  -0.1583
@@ -60,7 +61,6 @@ _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  DAL  N   CA   single  1.458  0.019  1.458
  DAL  N   H    single  0.860  0.020  0.860
- DAL  N   H2   single  0.890  0.020  1.040
  DAL  CA  CB   single  1.521  0.033  1.521
  DAL  CA  C    single  1.525  0.021  1.525
  DAL  CA  HA   single  0.970  0.020  0.970
@@ -77,8 +77,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- DAL  H2   N   H    106.80  3.000
- DAL  H2   N   CA   109.62  3.000
  DAL  H    N   CA   114.00  3.000
  DAL  HA   CA  C    110.00  3.000
  DAL  HA   CA  CB   109.00  3.000
@@ -115,4 +113,24 @@ _chem_comp_plane_atom.dist_esd
  DAL  plan-1  C    0.020
  DAL  plan-1  O    0.020
  DAL  plan-1  OXT  0.020
+
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ DAL  Var_01  O    C   CA  N    -19.76  30.0  2
+ DAL  Var_02  OXT  C   CA  N    162.51  30.0  2
+ DAL  Var_03  O    C   CA  CB  -142.87  30.0  2
+ DAL  Var_04  OXT  C   CA  CB    39.40  30.0  2
+ DAL  Var_05  HB1  CB  CA  N    -63.00  30.0  3
+ DAL  Var_06  HB2  CB  CA  N     56.52  30.0  3
+ DAL  Var_07  HB3  CB  CA  N    176.47  30.0  3
+ DAL  Var_08  H    N   CA  CB   165.51  30.0  3
+ DAL  Var_09  HA   CA  C   O    101.13  30.0  2
 

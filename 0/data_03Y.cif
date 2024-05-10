@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 03Y  03Y  '2-methyl-L-cysteine      '  L-peptide  16  8  .  2012-08-28  2022-03-09
+ 03Y  03Y  '2-methyl-L-cysteine      '  L-peptide  16  8  .  2012-08-28  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2023-12-12
+Removed H2 atom : 2024-04-10
 ;
 
 data_comp_03Y
@@ -50,7 +52,6 @@ _chem_comp_atom.z
  03Y  H21A  H  HCH3   0   0.215  -4.0990  -38.9887  20.9616
  03Y  H21B  H  HCH3   0   0.223  -3.3660  -39.0196  22.5704
  03Y  H     H  HNH2   0   0.329  -1.7248  -38.1851  19.4745
- 03Y  H2    H  HNH2   0   0.329  -1.0325  -39.5962  19.1788
  03Y  HG    H  HSH1   0   0.214  -1.5836  -43.1831  20.3122
  03Y  OXT   O  OC    -1  -0.592   0.3229  -38.9624  21.1741
 
@@ -73,7 +74,6 @@ _chem_comp_bond.value_dist_neutron
  03Y  CM  H21B  single  0.970  0.020  1.090
  03Y  N   CA    single  1.458  0.019  1.458
  03Y  N   H     single  0.860  0.020  0.860
- 03Y  N   H2    single  0.890  0.020  1.040
  03Y  SG  CB    single  1.834  0.020  1.834
  03Y  SG  HG    single  1.200  0.020  1.300
  03Y  C   OXT   deloc   1.246  0.020  1.246
@@ -106,8 +106,6 @@ _chem_comp_angle.value_angle_esd
  03Y  H21B  CM  CA    111.48  3.000
  03Y  H21A  CM  CA    110.56  3.000
  03Y  H21   CM  CA    110.76  3.000
- 03Y  H2    N   H     104.17  3.000
- 03Y  H2    N   CA    108.54  3.000
  03Y  H     N   CA    114.00  3.000
  03Y  HG    SG  CB     97.08  3.000
 
@@ -130,4 +128,31 @@ _chem_comp_plane_atom.dist_esd
  03Y  plan-1  CA   0.020
  03Y  plan-1  O    0.020
  03Y  plan-1  OXT  0.020
+
+loop_
+_chem_comp_tor.comp_id
+_chem_comp_tor.id
+_chem_comp_tor.atom_id_1
+_chem_comp_tor.atom_id_2
+_chem_comp_tor.atom_id_3
+_chem_comp_tor.atom_id_4
+_chem_comp_tor.value_angle
+_chem_comp_tor.value_angle_esd
+_chem_comp_tor.period
+ 03Y  Var_01  O     C   CA  CB   -68.59  30.0  2
+ 03Y  Var_02  OXT   C   CA  CB   109.85  30.0  2
+ 03Y  Var_03  SG    CB  CA  C    -58.35  30.0  3
+ 03Y  Var_04  SG    CB  CA  CM  -177.34  30.0  3
+ 03Y  Var_05  O     C   CA  CM    48.66  30.0  2
+ 03Y  Var_06  OXT   C   CA  CM  -132.90  30.0  2
+ 03Y  Var_07  SG    CB  CA  N     66.34  30.0  3
+ 03Y  Var_08  O     C   CA  N    170.40  30.0  2
+ 03Y  Var_09  OXT   C   CA  N    -11.15  30.0  2
+ 03Y  Var_10  H21   CM  CA  CB  -179.70  30.0  3
+ 03Y  Var_11  H21A  CM  CA  CB   -60.43  30.0  3
+ 03Y  Var_12  H21B  CM  CA  CB    60.29  30.0  3
+ 03Y  Var_13  H     N   CA  CB   176.95  30.0  3
+ 03Y  Var_14  HB2   CB  CA  C     62.36  30.0  3
+ 03Y  Var_15  HB3   CB  CA  C   -177.96  30.0  3
+ 03Y  Var_16  HG    SG  CB  CA  -162.93  30.0  3
 
