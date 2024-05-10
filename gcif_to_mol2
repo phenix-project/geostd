@@ -5,13 +5,13 @@ res=${filename:5:3}
 
 echo "Residue $res"
 
-if [ -f "$res.mol2" ]; then
+#if [ -f "$res.mol2" ]; then
 #  skip modification date check, since Nigel's changes are not key here
 #   if [ "$filename" -ot "$res.mol2" ]; then
-      echo "    already done: skipping"
-      exit 0
+#      echo "    already done: skipping"
+#      exit 0
 #   fi
-fi
+#fi
 
 # Check if PBEh-3c method was used:
 grep PBEh-3c $filename > /dev/null
@@ -33,7 +33,7 @@ fi
 #   this to work.
 $AMBERHOME/bin/antechamber -i $filename -fi ccif -o $res.mol2 -fo mol2  \
     -bk comp_$res -s 0 -dr no \
-   -at gaff2 -c bcc -ek 'qm_theory="AM1", maxcyc=0, ndiis_attempts=700,'
+   -at gaff2 -c abcg2 -ek 'qm_theory="AM1", maxcyc=0, ndiis_attempts=700,'
 
 status=$?
 if [ "$status" == 0 ]; then
