@@ -1,0 +1,16 @@
+#!/bin/bash
+
+filename=$1
+res=${filename:5:3}
+
+echo "Residue $res"
+
+# N.B.: right now (Nov. 22) one needs to be on the "geostd" branch for
+#   this to work.
+$AMBERHOME/bin/antechamber -i $filename -fi ccif -o $res.prepi -fo prepi  \
+    -bk comp_$res -s 0 -dr no \
+   -at amber -c bcc -ek 'qm_theory="AM1", maxcyc=0, ndiis_attempts=700,'
+
+status=$?
+
+/bin/rm -f ANTECH* ATOMTYP* sqm.*
