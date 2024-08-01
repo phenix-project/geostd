@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CB7  CB7  '(1R,4S,5R)-3-(1-benzothiophen-5-ylmethoxy)-2-(1-benzothiophen-5-ylmethyl)-1,4,5-trihydroxy-cyclohex-2-ene-1-carboxylic acid'  ligand  54  33  .  2024-05-30  2024-05-30
+ CB7  CB7  '(1R,4S,5R)-3-(1-benzothiophen-5-ylmethoxy)-2-(1-benzothiophen-5-ylmethyl)-1,4,5-trihydroxy-cyclohex-2-ene-1-carboxylic acid'  ligand  54  33  .  2024-05-30  2024-07-31
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2024-07-31
 ;
 
 data_comp_CB7
@@ -276,59 +277,93 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CB7  CONST_01  CAG  CAK  CBB  CAO   180.00   0.0  0
- CB7  CONST_02  SAU  CBD  CBB  CAO   180.00   0.0  0
- CB7  CONST_03  CAM  CBD  CBB  CAO     0.00   0.0  0
- CB7  CONST_04  CAM  CAI  CAZ  CAO     0.00   0.0  0
- CB7  CONST_05  CAI  CAZ  CAO  CBB     0.00   0.0  0
- CB7  CONST_06  SAU  CAG  CAK  CBB     0.00   0.0  0
- CB7  CONST_07  CAG  SAU  CBD  CBB     0.00   0.0  0
- CB7  CONST_08  CAI  CAM  CBD  CBB     0.00   0.0  0
- CB7  CONST_09  CAZ  CAO  CBB  CAK   180.00   0.0  0
- CB7  CONST_10  SAU  CBD  CBB  CAK     0.00   0.0  0
- CB7  CONST_11  CAM  CBD  CBB  CAK   180.00   0.0  0
- CB7  CONST_12  CBD  SAU  CAG  CAK     0.00   0.0  0
- CB7  CONST_13  CBD  CBB  CAK  CAG     0.00   0.0  0
- CB7  CONST_14  CAM  CBD  SAU  CAG   180.00   0.0  0
- CB7  CONST_15  CAI  CAM  CBD  SAU   180.00   0.0  0
- CB7  CONST_16  CAZ  CAO  CBB  CBD     0.00   0.0  0
- CB7  CONST_17  CAZ  CAI  CAM  CBD     0.00   0.0  0
- CB7  CONST_18  CAJ  CBA  CAN  CAY   180.00   0.0  0
- CB7  CONST_19  CBC  CBA  CAN  CAY     0.00   0.0  0
- CB7  CONST_20  CBC  CAL  CAH  CAY     0.00   0.0  0
- CB7  CONST_21  CAL  CAH  CAY  CAN     0.00   0.0  0
- CB7  CONST_22  CAF  CAJ  CBA  CAN   180.00   0.0  0
- CB7  CONST_23  SAT  CBC  CBA  CAN   180.00   0.0  0
- CB7  CONST_24  CAL  CBC  CBA  CAN     0.00   0.0  0
- CB7  CONST_25  CAH  CAY  CAN  CBA     0.00   0.0  0
- CB7  CONST_26  SAT  CAF  CAJ  CBA     0.00   0.0  0
- CB7  CONST_27  CAF  SAT  CBC  CBA     0.00   0.0  0
- CB7  CONST_28  CAH  CAL  CBC  CBA     0.00   0.0  0
- CB7  CONST_29  SAT  CBC  CBA  CAJ     0.00   0.0  0
- CB7  CONST_30  CAL  CBC  CBA  CAJ   180.00   0.0  0
- CB7  CONST_31  CBC  SAT  CAF  CAJ     0.00   0.0  0
- CB7  CONST_32  CBC  CBA  CAJ  CAF     0.00   0.0  0
- CB7  CONST_33  CAL  CBC  SAT  CAF   180.00   0.0  0
- CB7  CONST_34  CAH  CAL  CBC  SAT   180.00   0.0  0
- CB7  CONST_35  CAQ  CAZ  CAO  CBB   180.00   0.0  0
- CB7  CONST_36  CAQ  CAZ  CAI  CAM   180.00   0.0  0
- CB7  CONST_37  CBA  CAN  CAY  CAP   180.00   0.0  0
- CB7  CONST_38  CAL  CAH  CAY  CAP   180.00   0.0  0
- CB7  CONST_39  HAK  CAK  CBB  CAO     0.00   0.0  0
- CB7  CONST_40  HAI  CAI  CAZ  CAO   180.00   0.0  0
- CB7  CONST_41  HAG  CAG  CAK  CBB   180.00   0.0  0
- CB7  CONST_42  HAM  CAM  CBD  CBB   180.00   0.0  0
- CB7  CONST_43  HAO  CAO  CBB  CAK     0.00   0.0  0
- CB7  CONST_44  HAL  CAL  CAH  CAY   180.00   0.0  0
- CB7  CONST_45  HAH  CAH  CAY  CAN   180.00   0.0  0
- CB7  CONST_46  HAJ  CAJ  CBA  CAN     0.00   0.0  0
- CB7  CONST_47  HAF  CAF  CAJ  CBA   180.00   0.0  0
- CB7  CONST_48  HAN  CAN  CBA  CAJ     0.00   0.0  0
- CB7  Var_01    CBF  CAX  CAW  CBG     1.48  30.0  1
- CB7  Var_02    CAW  CAQ  CAZ  CAO    77.73  30.0  2
- CB7  Var_03    CBG  CAW  CAQ  CAZ    77.38  30.0  3
- CB7  Var_04    CAY  CAP  OAS  CAX  -179.56  30.0  3
- CB7  Var_05    CAN  CAY  CAP  OAS   115.89  30.0  2
+ CB7  CONST_01  CAG   CAK  CBB  CAO   180.00   0.0  0
+ CB7  CONST_02  SAU   CBD  CBB  CAO   180.00   0.0  0
+ CB7  CONST_03  CAM   CBD  CBB  CAO     0.00   0.0  0
+ CB7  CONST_04  CAM   CAI  CAZ  CAO     0.00   0.0  0
+ CB7  CONST_05  CAI   CAZ  CAO  CBB     0.00   0.0  0
+ CB7  CONST_06  SAU   CAG  CAK  CBB     0.00   0.0  0
+ CB7  CONST_07  CAG   SAU  CBD  CBB     0.00   0.0  0
+ CB7  CONST_08  CAI   CAM  CBD  CBB     0.00   0.0  0
+ CB7  CONST_09  CAZ   CAO  CBB  CAK   180.00   0.0  0
+ CB7  CONST_10  SAU   CBD  CBB  CAK     0.00   0.0  0
+ CB7  CONST_11  CAM   CBD  CBB  CAK   180.00   0.0  0
+ CB7  CONST_12  CBD   SAU  CAG  CAK     0.00   0.0  0
+ CB7  CONST_13  CBD   CBB  CAK  CAG     0.00   0.0  0
+ CB7  CONST_14  CAM   CBD  SAU  CAG   180.00   0.0  0
+ CB7  CONST_15  CAI   CAM  CBD  SAU   180.00   0.0  0
+ CB7  CONST_16  CAZ   CAO  CBB  CBD     0.00   0.0  0
+ CB7  CONST_17  CAZ   CAI  CAM  CBD     0.00   0.0  0
+ CB7  CONST_18  CAJ   CBA  CAN  CAY   180.00   0.0  0
+ CB7  CONST_19  CBC   CBA  CAN  CAY     0.00   0.0  0
+ CB7  CONST_20  CBC   CAL  CAH  CAY     0.00   0.0  0
+ CB7  CONST_21  CAL   CAH  CAY  CAN     0.00   0.0  0
+ CB7  CONST_22  CAF   CAJ  CBA  CAN   180.00   0.0  0
+ CB7  CONST_23  SAT   CBC  CBA  CAN   180.00   0.0  0
+ CB7  CONST_24  CAL   CBC  CBA  CAN     0.00   0.0  0
+ CB7  CONST_25  CAH   CAY  CAN  CBA     0.00   0.0  0
+ CB7  CONST_26  SAT   CAF  CAJ  CBA     0.00   0.0  0
+ CB7  CONST_27  CAF   SAT  CBC  CBA     0.00   0.0  0
+ CB7  CONST_28  CAH   CAL  CBC  CBA     0.00   0.0  0
+ CB7  CONST_29  SAT   CBC  CBA  CAJ     0.00   0.0  0
+ CB7  CONST_30  CAL   CBC  CBA  CAJ   180.00   0.0  0
+ CB7  CONST_31  CBC   SAT  CAF  CAJ     0.00   0.0  0
+ CB7  CONST_32  CBC   CBA  CAJ  CAF     0.00   0.0  0
+ CB7  CONST_33  CAL   CBC  SAT  CAF   180.00   0.0  0
+ CB7  CONST_34  CAH   CAL  CBC  SAT   180.00   0.0  0
+ CB7  CONST_35  CAQ   CAZ  CAO  CBB   180.00   0.0  0
+ CB7  CONST_36  CAQ   CAZ  CAI  CAM   180.00   0.0  0
+ CB7  CONST_37  CBA   CAN  CAY  CAP   180.00   0.0  0
+ CB7  CONST_38  CAL   CAH  CAY  CAP   180.00   0.0  0
+ CB7  CONST_39  HAK   CAK  CBB  CAO     0.00   0.0  0
+ CB7  CONST_40  HAI   CAI  CAZ  CAO   180.00   0.0  0
+ CB7  CONST_41  HAG   CAG  CAK  CBB   180.00   0.0  0
+ CB7  CONST_42  HAM   CAM  CBD  CBB   180.00   0.0  0
+ CB7  CONST_43  HAO   CAO  CBB  CAK     0.00   0.0  0
+ CB7  CONST_44  HAL   CAL  CAH  CAY   180.00   0.0  0
+ CB7  CONST_45  HAH   CAH  CAY  CAN   180.00   0.0  0
+ CB7  CONST_46  HAJ   CAJ  CBA  CAN     0.00   0.0  0
+ CB7  CONST_47  HAF   CAF  CAJ  CBA   180.00   0.0  0
+ CB7  CONST_48  HAN   CAN  CBA  CAJ     0.00   0.0  0
+ CB7  Var_01    CBF   CAX  CAW  CBG     1.48  30.0  1
+ CB7  Var_02    CAW   CAQ  CAZ  CAO    77.73  30.0  2
+ CB7  Var_03    CBE   CAR  CBG  CAW    49.56  30.0  1
+ CB7  Var_04    CBG   CAW  CAQ  CAZ    77.38  30.0  3
+ CB7  Var_05    CBE   CBF  CAX  CAW   -17.19  30.0  1
+ CB7  Var_06    CAY   CAP  OAS  CAX  -179.56  30.0  3
+ CB7  Var_07    CBF   CBE  CAR  CBG   -66.09  30.0  1
+ CB7  Var_08    CAN   CAY  CAP  OAS   115.89  30.0  2
+ CB7  Var_09    CAX   CAW  CBG  CAR   -17.29  30.0  1
+ CB7  Var_10    CAX   CBF  CBE  CAR    47.73  30.0  1
+ CB7  Var_11    CAR   CBG  CAW  CAQ   166.42  30.0  1
+ CB7  Var_12    OAD   CBF  CAX  CAW  -136.94  30.0  1
+ CB7  Var_13    OAC   CBE  CAR  CBG   171.96  30.0  1
+ CB7  Var_14    CAX   CAW  CBG  CAV  -137.20  30.0  1
+ CB7  Var_15    CBE   CAR  CBG  CAV   170.68  30.0  1
+ CB7  Var_16    CAX   CAW  CBG  OAE   104.37  30.0  1
+ CB7  Var_17    CBE   CAR  CBG  OAE   -71.29  30.0  1
+ CB7  Var_18    OAD   CBF  CBE  CAR   169.73  30.0  1
+ CB7  Var_19    OAS   CAX  CBF  CBE   162.08  30.0  1
+ CB7  Var_20    CAX   CBF  CBE  OAC   168.03  30.0  1
+ CB7  Var_21    HAR1  CAR  CBG  CAW   171.22  30.0  1
+ CB7  Var_22    HAR2  CAR  CBG  CAW   -71.40  30.0  1
+ CB7  Var_23    HBF   CBF  CAX  CAW   101.20  30.0  1
+ CB7  Var_24    HBE   CBE  CAR  CBG    51.13  30.0  1
+ CB7  Var_25    CAV   CBG  CAW  CAQ    46.51  30.0  1
+ CB7  Var_26    OAE   CBG  CAW  CAQ   -71.92  30.0  1
+ CB7  Var_27    OAB   CAV  CBG  CAW    58.56  30.0  2
+ CB7  Var_28    OAA   CAV  CBG  CAW  -121.89  30.0  2
+ CB7  Var_29    CAP   OAS  CAX  CAW   -95.26  30.0  3
+ CB7  Var_30    CAR   CBG  CAV  OAB   -63.09  30.0  3
+ CB7  Var_31    CAR   CBG  CAV  OAA   116.46  30.0  3
+ CB7  Var_32    OAD   CBF  CBE  OAC   -69.97  30.0  1
+ CB7  Var_33    CAP   OAS  CAX  CBF    85.44  30.0  3
+ CB7  Var_34    OAS   CAX  CBF  OAD    42.33  30.0  1
+ CB7  Var_35    HAE   OAE  CBG  CAW   120.34  30.0  3
+ CB7  Var_36    HAC   OAC  CBE  CAR  -178.63  30.0  3
+ CB7  Var_37    HAD   OAD  CBF  CBE   177.17  30.0  3
+ CB7  Var_38    OAE   CBG  CAV  OAB   177.50  30.0  3
+ CB7  Var_39    OAE   CBG  CAV  OAA    -2.95  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

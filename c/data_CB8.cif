@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CB8  CB8  '(1R,4S,5R)-3-(1-benzothiophen-2-ylmethoxy)-1,4,5-trihydroxy-2-(thiophen-2-ylmethyl)cyclohex-2-ene-1-carboxylic acid'  ligand  48  29  .  2024-05-30  2024-05-30
+ CB8  CB8  '(1R,4S,5R)-3-(1-benzothiophen-2-ylmethoxy)-1,4,5-trihydroxy-2-(thiophen-2-ylmethyl)cyclohex-2-ene-1-carboxylic acid'  ligand  48  29  .  2024-05-30  2024-07-31
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2024-07-31
 ;
 
 data_comp_CB8
@@ -251,45 +252,79 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- CB8  CONST_01  CAF  CAK  CAY  CAM  180.00   0.0  0
- CB8  CONST_02  CAL  CAZ  CAY  CAM  180.00   0.0  0
- CB8  CONST_03  SAS  CAZ  CAY  CAM    0.00   0.0  0
- CB8  CONST_04  CAZ  SAS  CAX  CAM    0.00   0.0  0
- CB8  CONST_05  SAS  CAX  CAM  CAY    0.00   0.0  0
- CB8  CONST_06  CAG  CAF  CAK  CAY    0.00   0.0  0
- CB8  CONST_07  CAG  CAL  CAZ  CAY    0.00   0.0  0
- CB8  CONST_08  CAX  SAS  CAZ  CAY    0.00   0.0  0
- CB8  CONST_09  CAX  CAM  CAY  CAK  180.00   0.0  0
- CB8  CONST_10  CAL  CAZ  CAY  CAK    0.00   0.0  0
- CB8  CONST_11  SAS  CAZ  CAY  CAK  180.00   0.0  0
- CB8  CONST_12  CAL  CAG  CAF  CAK    0.00   0.0  0
- CB8  CONST_13  CAZ  CAY  CAK  CAF    0.00   0.0  0
- CB8  CONST_14  CAZ  CAL  CAG  CAF    0.00   0.0  0
- CB8  CONST_15  SAS  CAZ  CAL  CAG  180.00   0.0  0
- CB8  CONST_16  CAX  SAS  CAZ  CAL  180.00   0.0  0
- CB8  CONST_17  CAX  CAM  CAY  CAZ    0.00   0.0  0
- CB8  CONST_18  CAI  CAH  CAJ  CAW    0.00   0.0  0
- CB8  CONST_19  CAH  CAI  SAR  CAW    0.00   0.0  0
- CB8  CONST_20  CAI  SAR  CAW  CAJ    0.00   0.0  0
- CB8  CONST_21  SAR  CAI  CAH  CAJ    0.00   0.0  0
- CB8  CONST_22  SAR  CAW  CAJ  CAH    0.00   0.0  0
- CB8  CONST_23  CAN  CAX  CAM  CAY  180.00   0.0  0
- CB8  CONST_24  CAN  CAX  SAS  CAZ  180.00   0.0  0
- CB8  CONST_25  CAH  CAJ  CAW  CAO  180.00   0.0  0
- CB8  CONST_26  CAI  SAR  CAW  CAO  180.00   0.0  0
- CB8  CONST_27  HAK  CAK  CAY  CAM    0.00   0.0  0
- CB8  CONST_28  HAF  CAF  CAK  CAY  180.00   0.0  0
- CB8  CONST_29  HAL  CAL  CAZ  CAY  180.00   0.0  0
- CB8  CONST_30  HAM  CAM  CAY  CAK    0.00   0.0  0
- CB8  CONST_31  HAG  CAG  CAF  CAK  180.00   0.0  0
- CB8  CONST_32  HAH  CAH  CAJ  CAW  180.00   0.0  0
- CB8  CONST_33  HAI  CAI  SAR  CAW  180.00   0.0  0
- CB8  CONST_34  HAJ  CAJ  CAH  CAI  180.00   0.0  0
- CB8  Var_01    CBC  CAU  CAV  CBB   -1.48  30.0  1
- CB8  Var_02    CAW  CAO  CAU  CAV  -70.38  30.0  3
- CB8  Var_03    CAJ  CAW  CAO  CAU  123.93  30.0  2
- CB8  Var_04    CAX  CAN  OAQ  CAV  163.60  30.0  3
- CB8  Var_05    OAQ  CAN  CAX  CAM  124.03  30.0  2
+ CB8  CONST_01  CAF   CAK  CAY  CAM   180.00   0.0  0
+ CB8  CONST_02  CAL   CAZ  CAY  CAM   180.00   0.0  0
+ CB8  CONST_03  SAS   CAZ  CAY  CAM     0.00   0.0  0
+ CB8  CONST_04  CAZ   SAS  CAX  CAM     0.00   0.0  0
+ CB8  CONST_05  SAS   CAX  CAM  CAY     0.00   0.0  0
+ CB8  CONST_06  CAG   CAF  CAK  CAY     0.00   0.0  0
+ CB8  CONST_07  CAG   CAL  CAZ  CAY     0.00   0.0  0
+ CB8  CONST_08  CAX   SAS  CAZ  CAY     0.00   0.0  0
+ CB8  CONST_09  CAX   CAM  CAY  CAK   180.00   0.0  0
+ CB8  CONST_10  CAL   CAZ  CAY  CAK     0.00   0.0  0
+ CB8  CONST_11  SAS   CAZ  CAY  CAK   180.00   0.0  0
+ CB8  CONST_12  CAL   CAG  CAF  CAK     0.00   0.0  0
+ CB8  CONST_13  CAZ   CAY  CAK  CAF     0.00   0.0  0
+ CB8  CONST_14  CAZ   CAL  CAG  CAF     0.00   0.0  0
+ CB8  CONST_15  SAS   CAZ  CAL  CAG   180.00   0.0  0
+ CB8  CONST_16  CAX   SAS  CAZ  CAL   180.00   0.0  0
+ CB8  CONST_17  CAX   CAM  CAY  CAZ     0.00   0.0  0
+ CB8  CONST_18  CAI   CAH  CAJ  CAW     0.00   0.0  0
+ CB8  CONST_19  CAH   CAI  SAR  CAW     0.00   0.0  0
+ CB8  CONST_20  CAI   SAR  CAW  CAJ     0.00   0.0  0
+ CB8  CONST_21  SAR   CAI  CAH  CAJ     0.00   0.0  0
+ CB8  CONST_22  SAR   CAW  CAJ  CAH     0.00   0.0  0
+ CB8  CONST_23  CAN   CAX  CAM  CAY   180.00   0.0  0
+ CB8  CONST_24  CAN   CAX  SAS  CAZ   180.00   0.0  0
+ CB8  CONST_25  CAH   CAJ  CAW  CAO   180.00   0.0  0
+ CB8  CONST_26  CAI   SAR  CAW  CAO   180.00   0.0  0
+ CB8  CONST_27  HAK   CAK  CAY  CAM     0.00   0.0  0
+ CB8  CONST_28  HAF   CAF  CAK  CAY   180.00   0.0  0
+ CB8  CONST_29  HAL   CAL  CAZ  CAY   180.00   0.0  0
+ CB8  CONST_30  HAM   CAM  CAY  CAK     0.00   0.0  0
+ CB8  CONST_31  HAG   CAG  CAF  CAK   180.00   0.0  0
+ CB8  CONST_32  HAH   CAH  CAJ  CAW   180.00   0.0  0
+ CB8  CONST_33  HAI   CAI  SAR  CAW   180.00   0.0  0
+ CB8  CONST_34  HAJ   CAJ  CAH  CAI   180.00   0.0  0
+ CB8  Var_01    CBC   CAU  CAV  CBB    -1.48  30.0  1
+ CB8  Var_02    CAW   CAO  CAU  CAV   -70.38  30.0  3
+ CB8  Var_03    CAP   CBA  CBB  CAV    51.24  30.0  1
+ CB8  Var_04    CAJ   CAW  CAO  CAU   123.93  30.0  2
+ CB8  Var_05    CAP   CBC  CAU  CAV   -11.33  30.0  1
+ CB8  Var_06    CAX   CAN  OAQ  CAV   163.60  30.0  3
+ CB8  Var_07    CBC   CAP  CBA  CBB   -66.26  30.0  1
+ CB8  Var_08    OAQ   CAN  CAX  CAM   124.03  30.0  2
+ CB8  Var_09    CAU   CAV  CBB  CBA   -18.93  30.0  1
+ CB8  Var_10    CAU   CBC  CAP  CBA    44.81  30.0  1
+ CB8  Var_11    OAC   CBA  CBB  CAV   171.88  30.0  1
+ CB8  Var_12    CAT   CBC  CAU  CAV  -131.30  30.0  1
+ CB8  Var_13    OAE   CBC  CAU  CAV   111.36  30.0  1
+ CB8  Var_14    CAU   CAV  CBB  OAD  -139.28  30.0  1
+ CB8  Var_15    CAP   CBA  CBB  OAD   171.75  30.0  1
+ CB8  Var_16    OAQ   CAV  CBB  CBA   158.26  30.0  1
+ CB8  Var_17    CAT   CBC  CAP  CBA   165.43  30.0  1
+ CB8  Var_18    OAE   CBC  CAP  CBA   -76.42  30.0  1
+ CB8  Var_19    CBC   CAP  CBA  OAC   171.95  30.0  1
+ CB8  Var_20    CAO   CAU  CBC  CAP   173.27  30.0  1
+ CB8  Var_21    HBA   CBA  CBB  CAV   -66.82  30.0  1
+ CB8  Var_22    HAP1  CAP  CBA  CBB    54.44  30.0  1
+ CB8  Var_23    HAP2  CAP  CBA  CBB   172.63  30.0  1
+ CB8  Var_24    HBB   CBB  CBA  CAP   -68.36  30.0  1
+ CB8  Var_25    CAN   OAQ  CAV  CBB    55.58  30.0  3
+ CB8  Var_26    OAQ   CAV  CBB  OAD    37.90  30.0  1
+ CB8  Var_27    OAC   CBA  CBB  OAD   -67.61  30.0  1
+ CB8  Var_28    OAB   CAT  CBC  CAP   114.59  30.0  2
+ CB8  Var_29    OAA   CAT  CBC  CAP   -65.00  30.0  2
+ CB8  Var_30    CAO   CAU  CBC  CAT    53.31  30.0  1
+ CB8  Var_31    CAU   CBC  CAT  OAB  -123.52  30.0  2
+ CB8  Var_32    CAU   CBC  CAT  OAA    56.89  30.0  2
+ CB8  Var_33    CAO   CAU  CBC  OAE   -64.04  30.0  1
+ CB8  Var_34    CAN   OAQ  CAV  CAU  -127.08  30.0  3
+ CB8  Var_35    HAD   OAD  CBB  CAV  -123.77  30.0  3
+ CB8  Var_36    HAC   OAC  CBA  CBB    62.51  30.0  3
+ CB8  Var_37    HAE   OAE  CBC  CAP  -114.51  30.0  3
+ CB8  Var_38    OAE   CBC  CAT  OAB    -5.67  30.0  2
+ CB8  Var_39    OAE   CBC  CAT  OAA   174.74  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

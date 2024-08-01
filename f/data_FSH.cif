@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FSH  FSH  "(2R,3S,4S)-5-[(4R)-6',7'-dimethyl-2,3',5-trioxo-1'H-spiro[imidazolidine-4,2'-quinoxalin]-4'(3'H)-yl]-2,3,4-trihydroxypentyl-adenosine diphosphate"  ligand  87  54  .  2024-04-18  2024-04-18
+ FSH  FSH  '(2R,3S,4S)-5-[(4R)-6',7'-dimethyl-2,3',5-trioxo-1'H-spiro[imidazolidine-4,2'-quinoxalin]-4'(3'H)-yl]-2,3,4-trihydroxypentyl-adenosine diphosphate'  ligand  87  54  .  2024-04-18  2024-07-31
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2024-07-31
 ;
 
 data_comp_FSH
@@ -438,83 +439,148 @@ _chem_comp_tor.period
  FSH  CONST_29  C4X   N1   C2   N3      0.00   0.0  0
  FSH  CONST_30  C9A   N10  C10  C4X     0.00   0.0  0
  FSH  CONST_31  C7M   C7   C6   C5X   180.00   0.0  0
- FSH  CONST_32  C8M   C8   C7   C6    180.00   0.0  0
- FSH  CONST_33  C9    C8   C7   C7M   180.00   0.0  0
- FSH  CONST_34  C9A   C9   C8   C8M   180.00   0.0  0
- FSH  CONST_35  N6A   C6A  C5A  N7A     0.00   0.0  0
- FSH  CONST_36  C4A   C5A  C6A  N6A   180.00   0.0  0
- FSH  CONST_37  C2A   N1A  C6A  N6A   180.00   0.0  0
- FSH  CONST_38  C9A   N10  C10  O10   180.00   0.0  0
- FSH  CONST_39  O4    C4   N3   C2    180.00   0.0  0
- FSH  CONST_40  C4X   N1   C2   O2    180.00   0.0  0
- FSH  CONST_41  C4    N3   C2   O2    180.00   0.0  0
- FSH  CONST_42  C1'   N10  C10  C4X   180.00   0.0  0
- FSH  CONST_43  H8A   C8A  N9A  C1B     0.00   0.0  0
- FSH  CONST_44  H6    C6   C5X  N5      0.00   0.0  0
- FSH  CONST_45  H9    C9   C9A  C5X   180.00   0.0  0
- FSH  CONST_46  H9    C9   C8   C7    180.00   0.0  0
- FSH  CONST_47  H6    C6   C7   C8    180.00   0.0  0
- FSH  CONST_48  H6    C6   C5X  C9A   180.00   0.0  0
- FSH  CONST_49  H9    C9   C9A  N10     0.00   0.0  0
- FSH  CONST_50  H8A   C8A  N7A  C5A   180.00   0.0  0
- FSH  CONST_51  H2A   C2A  N1A  C6A   180.00   0.0  0
- FSH  CONST_52  H8A   C8A  N9A  C4A   180.00   0.0  0
- FSH  CONST_53  H2A   C2A  N3A  C4A   180.00   0.0  0
- FSH  CONST_54  HN3   N3   C2   N1    180.00   0.0  0
- FSH  CONST_55  HN1   N1   C2   N3    180.00   0.0  0
- FSH  CONST_56  HN3   N3   C4   C4X   180.00   0.0  0
- FSH  CONST_57  C1'   N10  C10  O10     0.00   0.0  0
- FSH  CONST_58  HN6A  N6A  C6A  C5A     0.00   0.0  0
- FSH  CONST_59  HN6B  N6A  C6A  C5A   180.00   0.0  0
- FSH  CONST_60  HN6A  N6A  C6A  N1A   180.00   0.0  0
- FSH  CONST_61  HN6B  N6A  C6A  N1A     0.00   0.0  0
- FSH  CONST_62  HN1   N1   C2   O2      0.00   0.0  0
- FSH  CONST_63  HN3   N3   C2   O2      0.00   0.0  0
- FSH  CONST_64  HN3   N3   C4   O4      0.00   0.0  0
+ FSH  CONST_32  N3    C4   C4X  N1      0.00   0.0  0
+ FSH  CONST_33  C8M   C8   C7   C6    180.00   0.0  0
+ FSH  CONST_34  C4    C4X  N1   C2      0.00   0.0  0
+ FSH  CONST_35  C9    C8   C7   C7M   180.00   0.0  0
+ FSH  CONST_36  C9A   C9   C8   C8M   180.00   0.0  0
+ FSH  CONST_37  N6A   C6A  C5A  N7A     0.00   0.0  0
+ FSH  CONST_38  C4A   C5A  C6A  N6A   180.00   0.0  0
+ FSH  CONST_39  C2A   N1A  C6A  N6A   180.00   0.0  0
+ FSH  CONST_40  C9A   N10  C10  O10   180.00   0.0  0
+ FSH  CONST_41  O4    C4   N3   C2    180.00   0.0  0
+ FSH  CONST_42  C4X   N1   C2   O2    180.00   0.0  0
+ FSH  CONST_43  C4    N3   C2   O2    180.00   0.0  0
+ FSH  CONST_44  C1'   N10  C10  C4X   180.00   0.0  0
+ FSH  CONST_45  H8A   C8A  N9A  C1B     0.00   0.0  0
+ FSH  CONST_46  H6    C6   C5X  N5      0.00   0.0  0
+ FSH  CONST_47  H9    C9   C9A  C5X   180.00   0.0  0
+ FSH  CONST_48  H9    C9   C8   C7    180.00   0.0  0
+ FSH  CONST_49  H6    C6   C7   C8    180.00   0.0  0
+ FSH  CONST_50  H6    C6   C5X  C9A   180.00   0.0  0
+ FSH  CONST_51  H9    C9   C9A  N10     0.00   0.0  0
+ FSH  CONST_52  H8A   C8A  N7A  C5A   180.00   0.0  0
+ FSH  CONST_53  H2A   C2A  N1A  C6A   180.00   0.0  0
+ FSH  CONST_54  H8A   C8A  N9A  C4A   180.00   0.0  0
+ FSH  CONST_55  H2A   C2A  N3A  C4A   180.00   0.0  0
+ FSH  CONST_56  HN3   N3   C2   N1    180.00   0.0  0
+ FSH  CONST_57  HN1   N1   C2   N3    180.00   0.0  0
+ FSH  CONST_58  HN3   N3   C4   C4X   180.00   0.0  0
+ FSH  CONST_59  C1'   N10  C10  O10     0.00   0.0  0
+ FSH  CONST_60  HN6A  N6A  C6A  C5A     0.00   0.0  0
+ FSH  CONST_61  HN6B  N6A  C6A  C5A   180.00   0.0  0
+ FSH  CONST_62  HN6A  N6A  C6A  N1A   180.00   0.0  0
+ FSH  CONST_63  HN6B  N6A  C6A  N1A     0.00   0.0  0
+ FSH  CONST_64  HN1   N1   C2   O2      0.00   0.0  0
+ FSH  CONST_65  HN3   N3   C2   O2      0.00   0.0  0
+ FSH  CONST_66  HN3   N3   C4   O4      0.00   0.0  0
  FSH  Var_01    C9A   C5X  N5   C4X   -33.24  30.0  1
  FSH  Var_02    C6    C5X  N5   C4X   149.44  30.0  1
  FSH  Var_03    C10   N10  C9A  C5X    17.06  30.0  1
  FSH  Var_04    C10   N10  C9A  C9   -163.04  30.0  1
  FSH  Var_05    C1'   N10  C9A  C5X  -162.72  30.0  1
- FSH  Var_06    C1'   N10  C9A  C9     17.17  30.0  1
- FSH  Var_07    HN5   N5   C5X  C6     12.57  30.0  1
- FSH  Var_08    HN5   N5   C5X  C9A  -170.11  30.0  1
- FSH  Var_09    C2'   C1'  N10  C9A   -95.78  30.0  2
- FSH  Var_10    C2'   C1'  N10  C10    84.43  30.0  2
- FSH  Var_11    H7M   C7M  C7   C6   -119.69  30.0  2
- FSH  Var_12    H7MA  C7M  C7   C6      0.92  30.0  2
- FSH  Var_13    H7MB  C7M  C7   C6    121.57  30.0  2
- FSH  Var_14    H8M   C8M  C8   C7   -179.49  30.0  2
- FSH  Var_15    H8MA  C8M  C8   C7    -58.99  30.0  2
- FSH  Var_16    H8MB  C8M  C8   C7     60.05  30.0  2
- FSH  Var_17    H7M   C7M  C7   C8     59.55  30.0  2
- FSH  Var_18    H7MA  C7M  C7   C8   -179.84  30.0  2
- FSH  Var_19    H7MB  C7M  C7   C8    -59.18  30.0  2
- FSH  Var_20    H8M   C8M  C8   C9      0.26  30.0  2
- FSH  Var_21    H8MA  C8M  C8   C9    120.76  30.0  2
- FSH  Var_22    H8MB  C8M  C8   C9   -120.19  30.0  2
- FSH  Var_23    H1'   C1'  N10  C9A    26.40  30.0  2
- FSH  Var_24    H1'A  C1'  N10  C9A   142.85  30.0  2
- FSH  Var_25    H1'   C1'  N10  C10  -153.40  30.0  2
- FSH  Var_26    H1'A  C1'  N10  C10   -36.95  30.0  2
- FSH  Var_27    PA    O5B  C5B  C4B  -174.28  30.0  1
- FSH  Var_28    P     O3P  PA   O5B   -47.01  30.0  3
- FSH  Var_29    O2A   PA   O5B  C5B   170.99  30.0  3
- FSH  Var_30    O1A   PA   O5B  C5B    38.91  30.0  3
- FSH  Var_31    O3P   PA   O5B  C5B   -73.16  30.0  3
- FSH  Var_32    P     O5'  C5'  C4'   173.71  30.0  1
- FSH  Var_33    O3P   P    O5'  C5'    68.90  30.0  2
- FSH  Var_34    O1P   P    O5'  C5'  -174.86  30.0  2
- FSH  Var_35    O2P   P    O5'  C5'   -43.01  30.0  2
- FSH  Var_36    PA    O3P  P    O5'    94.11  30.0  2
- FSH  Var_37    O2A   PA   O3P  P      65.78  30.0  1
- FSH  Var_38    O1A   PA   O3P  P    -162.64  30.0  1
- FSH  Var_39    O1P   P    O3P  PA    -18.14  30.0  3
- FSH  Var_40    O2P   P    O3P  PA   -151.10  30.0  3
- FSH  Var_41    H5'   C5'  O5'  P      53.31  30.0  3
- FSH  Var_42    H5'A  C5'  O5'  P     -65.67  30.0  3
- FSH  Var_43    H5B   C5B  O5B  PA    -54.89  30.0  3
- FSH  Var_44    H5BA  C5B  O5B  PA     65.41  30.0  3
+ FSH  Var_06    C1B   C2B  C3B  C4B   -36.52  30.0  1
+ FSH  Var_07    C1'   N10  C9A  C9     17.17  30.0  1
+ FSH  Var_08    C2B   C1B  O4B  C4B   -26.94  30.0  1
+ FSH  Var_09    HN5   N5   C5X  C6     12.57  30.0  1
+ FSH  Var_10    N9A   C1B  O4B  C4B  -150.21  30.0  1
+ FSH  Var_11    HN5   N5   C5X  C9A  -170.11  30.0  1
+ FSH  Var_12    C2B   C3B  C4B  O4B    21.95  30.0  1
+ FSH  Var_13    C2'   C1'  N10  C9A   -95.78  30.0  2
+ FSH  Var_14    C3B   C2B  C1B  O4B    39.87  30.0  1
+ FSH  Var_15    C2'   C1'  N10  C10    84.43  30.0  2
+ FSH  Var_16    C4A   N9A  C1B  O4B  -134.20  30.0  2
+ FSH  Var_17    H7M   C7M  C7   C6   -119.69  30.0  2
+ FSH  Var_18    C8A   N9A  C1B  O4B    48.67  30.0  2
+ FSH  Var_19    H7MA  C7M  C7   C6      0.92  30.0  2
+ FSH  Var_20    C1B   O4B  C4B  C3B     3.06  30.0  1
+ FSH  Var_21    H7MB  C7M  C7   C6    121.57  30.0  2
+ FSH  Var_22    N9A   C1B  C2B  C3B   159.74  30.0  1
+ FSH  Var_23    H8M   C8M  C8   C7   -179.49  30.0  2
+ FSH  Var_24    C4A   N9A  C1B  C2B   108.65  30.0  2
+ FSH  Var_25    H8MA  C8M  C8   C7    -58.99  30.0  2
+ FSH  Var_26    C8A   N9A  C1B  C2B   -68.49  30.0  2
+ FSH  Var_27    H8MB  C8M  C8   C7     60.05  30.0  2
+ FSH  Var_28    N10   C10  C4X  N1   -150.41  30.0  3
+ FSH  Var_29    H7M   C7M  C7   C8     59.55  30.0  2
+ FSH  Var_30    C5X   N5   C4X  N1    168.84  30.0  3
+ FSH  Var_31    H7MA  C7M  C7   C8   -179.84  30.0  2
+ FSH  Var_32    C10   C4X  N1   C2   -108.30  30.0  1
+ FSH  Var_33    H7MB  C7M  C7   C8    -59.18  30.0  2
+ FSH  Var_34    N5    C4X  N1   C2    127.62  30.0  1
+ FSH  Var_35    H8M   C8M  C8   C9      0.26  30.0  2
+ FSH  Var_36    C10   C4X  C4   N3    113.68  30.0  1
+ FSH  Var_37    H8MA  C8M  C8   C9    120.76  30.0  2
+ FSH  Var_38    N5    C4X  C4   N3   -122.93  30.0  1
+ FSH  Var_39    H8MB  C8M  C8   C9   -120.19  30.0  2
+ FSH  Var_40    N10   C10  C4X  C4     99.64  30.0  3
+ FSH  Var_41    H1'   C1'  N10  C9A    26.40  30.0  2
+ FSH  Var_42    C5X   N5   C4X  C4    -77.69  30.0  3
+ FSH  Var_43    H1'A  C1'  N10  C9A   142.85  30.0  2
+ FSH  Var_44    N10   C10  C4X  N5    -25.98  30.0  3
+ FSH  Var_45    H1'   C1'  N10  C10  -153.40  30.0  2
+ FSH  Var_46    C10   C4X  N5   C5X    44.16  30.0  3
+ FSH  Var_47    H1'A  C1'  N10  C10   -36.95  30.0  2
+ FSH  Var_48    PA    O5B  C5B  C4B  -174.28  30.0  1
+ FSH  Var_49    P     O3P  PA   O5B   -47.01  30.0  3
+ FSH  Var_50    C2B   C3B  C4B  C5B  -100.63  30.0  1
+ FSH  Var_51    O2A   PA   O5B  C5B   170.99  30.0  3
+ FSH  Var_52    C1B   O4B  C4B  C5B   128.60  30.0  1
+ FSH  Var_53    O1A   PA   O5B  C5B    38.91  30.0  3
+ FSH  Var_54    O2B   C2B  C3B  C4B  -159.00  30.0  1
+ FSH  Var_55    O3P   PA   O5B  C5B   -73.16  30.0  3
+ FSH  Var_56    O3B   C3B  C4B  O4B   -93.64  30.0  1
+ FSH  Var_57    P     O5'  C5'  C4'   173.71  30.0  1
+ FSH  Var_58    O2B   C2B  C1B  O4B   161.81  30.0  1
+ FSH  Var_59    O3P   P    O5'  C5'    68.90  30.0  2
+ FSH  Var_60    C1B   C2B  C3B  O3B    81.62  30.0  1
+ FSH  Var_61    O1P   P    O5'  C5'  -174.86  30.0  2
+ FSH  Var_62    N9A   C1B  C2B  O2B   -78.31  30.0  1
+ FSH  Var_63    O2P   P    O5'  C5'   -43.01  30.0  2
+ FSH  Var_64    N1    C4X  C10  O10    31.12  30.0  3
+ FSH  Var_65    PA    O3P  P    O5'    94.11  30.0  2
+ FSH  Var_66    C4    C4X  C10  O10   -78.84  30.0  3
+ FSH  Var_67    O2A   PA   O3P  P      65.78  30.0  1
+ FSH  Var_68    N5    C4X  C10  O10   155.55  30.0  3
+ FSH  Var_69    O1A   PA   O3P  P    -162.64  30.0  1
+ FSH  Var_70    C10   C4X  C4   O4    -67.06  30.0  1
+ FSH  Var_71    O1P   P    O3P  PA    -18.14  30.0  3
+ FSH  Var_72    N5    C4X  C4   O4     56.33  30.0  1
+ FSH  Var_73    O2P   P    O3P  PA   -151.10  30.0  3
+ FSH  Var_74    H5'   C5'  O5'  P      53.31  30.0  3
+ FSH  Var_75    H2B   C2B  C3B  C4B    77.17  30.0  1
+ FSH  Var_76    H5'A  C5'  O5'  P     -65.67  30.0  3
+ FSH  Var_77    H1B   C1B  O4B  C4B    92.09  30.0  1
+ FSH  Var_78    H5B   C5B  O5B  PA    -54.89  30.0  3
+ FSH  Var_79    H3B   C3B  C4B  O4B   141.69  30.0  1
+ FSH  Var_80    H5BA  C5B  O5B  PA     65.41  30.0  3
+ FSH  Var_81    H4B   C4B  C3B  C2B   138.13  30.0  1
+ FSH  Var_82    C3B   C4B  C5B  O5B    49.30  30.0  2
+ FSH  Var_83    O4B   C4B  C5B  O5B   -71.16  30.0  2
+ FSH  Var_84    O3B   C3B  C4B  C5B   143.77  30.0  1
+ FSH  Var_85    O2B   C2B  C3B  O3B   -40.86  30.0  1
+ FSH  Var_86    HO3B  O3B  C3B  C4B   -67.38  30.0  3
+ FSH  Var_87    H5B   C5B  C4B  O4B   168.72  30.0  3
+ FSH  Var_88    H5BA  C5B  C4B  O4B    49.90  30.0  3
+ FSH  Var_89    HO2B  O2B  C2B  C3B  -162.14  30.0  3
+ FSH  Var_90    C3'   C2'  C1'  N10   164.32  30.0  1
+ FSH  Var_91    O2'   C2'  C1'  N10   -75.26  30.0  1
+ FSH  Var_92    H2'   C2'  C1'  N10    45.49  30.0  1
+ FSH  Var_93    O3'   C3'  C2'  C1'   -64.24  30.0  2
+ FSH  Var_94    C4'   C3'  C2'  C1'   172.61  30.0  2
+ FSH  Var_95    O4'   C4'  C3'  C2'  -179.57  30.0  1
+ FSH  Var_96    C5'   C4'  C3'  C2'    61.31  30.0  1
+ FSH  Var_97    O3'   C3'  C2'  O2'   173.16  30.0  2
+ FSH  Var_98    C4'   C3'  C2'  O2'    50.00  30.0  2
+ FSH  Var_99    O5'   C5'  C4'  C3'  -169.80  30.0  1
+ FSH  Var_100   O4'   C4'  C3'  O3'    59.15  30.0  1
+ FSH  Var_101   C5'   C4'  C3'  O3'   -59.98  30.0  1
+ FSH  Var_102   O5'   C5'  C4'  O4'    70.64  30.0  1
+ FSH  Var_103   H3'   C3'  C2'  C1'    54.06  30.0  2
+ FSH  Var_104   HO2'  O2'  C2'  C1'    14.03  30.0  3
+ FSH  Var_105   HO3'  O3'  C3'  C2'  -172.47  30.0  3
+ FSH  Var_106   H4'   C4'  C3'  C2'   -59.91  30.0  1
+ FSH  Var_107   HO4'  O4'  C4'  C3'    75.44  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
