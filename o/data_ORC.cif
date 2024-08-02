@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ORC  ORC  "(R)-N-[1-[4-(3,5-DIMETHYLISOXAZOL-4-YL)PHENYL]ETHYL]-3,5-DIMETHYLISOXAZOLE-4-SULFONAMIDE"  ligand  47  26  .  2024-04-18  2024-04-18
+ ORC  ORC  (R)-N-[1-[4-(3,5-DIMETHYLISOXAZOL-4-YL)PHENYL]ETHYL]-3,5-DIMETHYLISOXAZOLE-4-SULFONAMIDE  ligand  47  26  .  2024-04-18  2024-08-01
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2024-08-01
 ;
 
 data_comp_ORC
@@ -259,74 +260,88 @@ _chem_comp_tor.period
  ORC  CONST_10  C20   C2   C1   C6    180.00   0.0  0
  ORC  CONST_11  C4    C5   C6   C1      0.00   0.0  0
  ORC  CONST_12  C4    C3   C2   C1      0.00   0.0  0
- ORC  CONST_15  C20   C2   C3   C4    180.00   0.0  0
- ORC  CONST_18  O23   C24  C20  C2    180.00   0.0  0
- ORC  CONST_19  N22   C21  C20  C2    180.00   0.0  0
- ORC  CONST_20  N22   O23  C24  C20     0.00   0.0  0
- ORC  CONST_21  O23   N22  C21  C20     0.00   0.0  0
- ORC  CONST_22  N22   C21  C20  C24     0.00   0.0  0
- ORC  CONST_23  C21   N22  O23  C24     0.00   0.0  0
- ORC  CONST_24  C21   C20  C24  O23     0.00   0.0  0
- ORC  CONST_25  N16   C17  C12  S10   180.00   0.0  0
- ORC  CONST_26  O15   C14  C12  S10   180.00   0.0  0
- ORC  CONST_27  C18   C14  C12  C17   180.00   0.0  0
- ORC  CONST_28  C14   C12  C17  C19   180.00   0.0  0
- ORC  CONST_29  O15   N16  C17  C19   180.00   0.0  0
- ORC  CONST_30  C18   C14  O15  N16   180.00   0.0  0
- ORC  CONST_31  C1    C6   C5   C7    180.00   0.0  0
- ORC  CONST_32  C3    C4   C5   C7    180.00   0.0  0
- ORC  CONST_33  C26   C24  C20  C2      0.00   0.0  0
- ORC  CONST_34  C25   C21  C20  C2      0.00   0.0  0
- ORC  CONST_35  C25   C21  C20  C24   180.00   0.0  0
- ORC  CONST_36  C21   C20  C24  C26   180.00   0.0  0
- ORC  CONST_37  N22   O23  C24  C26   180.00   0.0  0
- ORC  CONST_38  C25   C21  N22  O23   180.00   0.0  0
- ORC  CONST_39  H1    C1   C6   C5    180.00   0.0  0
- ORC  CONST_40  H3    C3   C4   C5    180.00   0.0  0
- ORC  CONST_41  H4    C4   C5   C6    180.00   0.0  0
- ORC  CONST_42  H3    C3   C2   C1    180.00   0.0  0
- ORC  CONST_43  H6    C6   C5   C4    180.00   0.0  0
- ORC  CONST_44  H1    C1   C2   C3    180.00   0.0  0
- ORC  CONST_45  H6    C6   C1   C2    180.00   0.0  0
- ORC  CONST_46  H4    C4   C3   C2    180.00   0.0  0
- ORC  CONST_47  H1    C1   C2   C20     0.00   0.0  0
- ORC  CONST_48  H3    C3   C2   C20     0.00   0.0  0
+ ORC  CONST_13  C20   C2   C3   C4    180.00   0.0  0
+ ORC  CONST_14  O23   C24  C20  C2    180.00   0.0  0
+ ORC  CONST_15  N22   C21  C20  C2    180.00   0.0  0
+ ORC  CONST_16  N22   O23  C24  C20     0.00   0.0  0
+ ORC  CONST_17  O23   N22  C21  C20     0.00   0.0  0
+ ORC  CONST_18  N22   C21  C20  C24     0.00   0.0  0
+ ORC  CONST_19  C21   N22  O23  C24     0.00   0.0  0
+ ORC  CONST_20  C21   C20  C24  O23     0.00   0.0  0
+ ORC  CONST_21  N16   C17  C12  S10   180.00   0.0  0
+ ORC  CONST_22  O15   C14  C12  S10   180.00   0.0  0
+ ORC  CONST_23  C18   C14  C12  C17   180.00   0.0  0
+ ORC  CONST_24  C14   C12  C17  C19   180.00   0.0  0
+ ORC  CONST_25  O15   N16  C17  C19   180.00   0.0  0
+ ORC  CONST_26  C18   C14  O15  N16   180.00   0.0  0
+ ORC  CONST_27  C1    C6   C5   C7    180.00   0.0  0
+ ORC  CONST_28  C3    C4   C5   C7    180.00   0.0  0
+ ORC  CONST_29  C26   C24  C20  C2      0.00   0.0  0
+ ORC  CONST_30  C25   C21  C20  C2      0.00   0.0  0
+ ORC  CONST_31  C25   C21  C20  C24   180.00   0.0  0
+ ORC  CONST_32  C21   C20  C24  C26   180.00   0.0  0
+ ORC  CONST_33  N22   O23  C24  C26   180.00   0.0  0
+ ORC  CONST_34  C25   C21  N22  O23   180.00   0.0  0
+ ORC  CONST_35  H1    C1   C6   C5    180.00   0.0  0
+ ORC  CONST_36  H3    C3   C4   C5    180.00   0.0  0
+ ORC  CONST_37  H4    C4   C5   C6    180.00   0.0  0
+ ORC  CONST_38  H3    C3   C2   C1    180.00   0.0  0
+ ORC  CONST_39  H6    C6   C5   C4    180.00   0.0  0
+ ORC  CONST_40  H1    C1   C2   C3    180.00   0.0  0
+ ORC  CONST_41  H6    C6   C1   C2    180.00   0.0  0
+ ORC  CONST_42  H4    C4   C3   C2    180.00   0.0  0
+ ORC  CONST_43  H1    C1   C2   C20     0.00   0.0  0
+ ORC  CONST_44  H3    C3   C2   C20     0.00   0.0  0
  ORC  Var_01    C17   C12  S10  O13   174.61  30.0  2
- ORC  Var_02    C14   C12  S10  O13    -5.71  30.0  2
- ORC  Var_03    C17   C12  S10  O11    44.68  30.0  2
- ORC  Var_04    C14   C12  S10  O11  -135.65  30.0  2
- ORC  Var_05    N8    S10  C12  C17   -69.57  30.0  2
- ORC  Var_06    N8    S10  C12  C14   110.11  30.0  2
- ORC  Var_07    H191  C19  C17  C12   179.69  30.0  2
- ORC  Var_08    H192  C19  C17  C12   -59.34  30.0  2
- ORC  Var_09    H193  C19  C17  C12    59.59  30.0  2
- ORC  Var_10    H181  C18  C14  C12  -144.66  30.0  2
- ORC  Var_11    H182  C18  C14  C12   -23.25  30.0  2
- ORC  Var_12    H183  C18  C14  C12    96.40  30.0  2
- ORC  Var_13    H191  C19  C17  N16     0.14  30.0  2
- ORC  Var_14    H192  C19  C17  N16   121.11  30.0  2
- ORC  Var_15    H193  C19  C17  N16  -119.96  30.0  2
- ORC  Var_16    H181  C18  C14  O15    36.65  30.0  2
- ORC  Var_17    H182  C18  C14  O15   158.06  30.0  2
- ORC  Var_18    H183  C18  C14  O15   -82.29  30.0  2
- ORC  Var_19    H261  C26  C24  C20   133.07  30.0  2
- ORC  Var_20    H262  C26  C24  C20  -107.32  30.0  2
- ORC  Var_21    H263  C26  C24  C20    12.61  30.0  2
- ORC  Var_22    H251  C25  C21  C20   166.90  30.0  2
- ORC  Var_23    H252  C25  C21  C20   -72.88  30.0  2
- ORC  Var_24    H253  C25  C21  C20    46.09  30.0  2
- ORC  Var_25    H261  C26  C24  O23   -45.45  30.0  2
- ORC  Var_26    H262  C26  C24  O23    74.16  30.0  2
- ORC  Var_27    H263  C26  C24  O23  -165.90  30.0  2
- ORC  Var_28    H251  C25  C21  N22   -11.64  30.0  2
- ORC  Var_29    H252  C25  C21  N22   108.58  30.0  2
- ORC  Var_30    H253  C25  C21  N22  -132.45  30.0  2
- ORC  Var_31    C7    N8   S10  C12   -69.16  30.0  3
- ORC  Var_32    H8    N8   S10  C12    75.95  30.0  3
- ORC  Var_33    C7    N8   S10  O13    46.74  30.0  3
- ORC  Var_34    C7    N8   S10  O11   175.74  30.0  3
- ORC  Var_35    H8    N8   S10  O13  -168.14  30.0  3
- ORC  Var_36    H8    N8   S10  O11   -39.14  30.0  3
+ ORC  Var_02    C24   C20  C2   C1   -133.55  30.0  2
+ ORC  Var_03    C14   C12  S10  O13    -5.71  30.0  2
+ ORC  Var_04    C21   C20  C2   C1     47.66  30.0  2
+ ORC  Var_05    C17   C12  S10  O11    44.68  30.0  2
+ ORC  Var_06    C24   C20  C2   C3     47.00  30.0  2
+ ORC  Var_07    C14   C12  S10  O11  -135.65  30.0  2
+ ORC  Var_08    C21   C20  C2   C3   -131.79  30.0  2
+ ORC  Var_09    N8    S10  C12  C17   -69.57  30.0  2
+ ORC  Var_10    N8    S10  C12  C14   110.11  30.0  2
+ ORC  Var_11    H191  C19  C17  C12   179.69  30.0  2
+ ORC  Var_12    H192  C19  C17  C12   -59.34  30.0  2
+ ORC  Var_13    H193  C19  C17  C12    59.59  30.0  2
+ ORC  Var_14    H181  C18  C14  C12  -144.66  30.0  2
+ ORC  Var_15    H182  C18  C14  C12   -23.25  30.0  2
+ ORC  Var_16    C6    C5   C7   N8   -120.74  30.0  2
+ ORC  Var_17    H183  C18  C14  C12    96.40  30.0  2
+ ORC  Var_18    C4    C5   C7   N8     57.41  30.0  2
+ ORC  Var_19    H191  C19  C17  N16     0.14  30.0  2
+ ORC  Var_20    C6    C5   C7   C9    116.91  30.0  2
+ ORC  Var_21    H192  C19  C17  N16   121.11  30.0  2
+ ORC  Var_22    C4    C5   C7   C9    -64.94  30.0  2
+ ORC  Var_23    H193  C19  C17  N16  -119.96  30.0  2
+ ORC  Var_24    H181  C18  C14  O15    36.65  30.0  2
+ ORC  Var_25    H182  C18  C14  O15   158.06  30.0  2
+ ORC  Var_26    H183  C18  C14  O15   -82.29  30.0  2
+ ORC  Var_27    H261  C26  C24  C20   133.07  30.0  2
+ ORC  Var_28    H262  C26  C24  C20  -107.32  30.0  2
+ ORC  Var_29    H263  C26  C24  C20    12.61  30.0  2
+ ORC  Var_30    H251  C25  C21  C20   166.90  30.0  2
+ ORC  Var_31    H252  C25  C21  C20   -72.88  30.0  2
+ ORC  Var_32    H253  C25  C21  C20    46.09  30.0  2
+ ORC  Var_33    H261  C26  C24  O23   -45.45  30.0  2
+ ORC  Var_34    H262  C26  C24  O23    74.16  30.0  2
+ ORC  Var_35    H263  C26  C24  O23  -165.90  30.0  2
+ ORC  Var_36    H7    C7   C5   C6     -3.64  30.0  2
+ ORC  Var_37    H251  C25  C21  N22   -11.64  30.0  2
+ ORC  Var_38    H252  C25  C21  N22   108.58  30.0  2
+ ORC  Var_39    C5    C7   N8   S10    68.34  30.0  3
+ ORC  Var_40    H253  C25  C21  N22  -132.45  30.0  2
+ ORC  Var_41    C7    N8   S10  C12   -69.16  30.0  3
+ ORC  Var_42    H91C  C9   C7   C5    -57.13  30.0  3
+ ORC  Var_43    H8    N8   S10  C12    75.95  30.0  3
+ ORC  Var_44    H92C  C9   C7   C5     62.18  30.0  3
+ ORC  Var_45    C7    N8   S10  O13    46.74  30.0  3
+ ORC  Var_46    H93C  C9   C7   C5   -177.27  30.0  3
+ ORC  Var_47    C7    N8   S10  O11   175.74  30.0  3
+ ORC  Var_48    H8    N8   S10  O13  -168.14  30.0  3
+ ORC  Var_49    H8    N8   S10  O11   -39.14  30.0  3
+ ORC  Var_50    C9    C7   N8   S10  -166.59  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

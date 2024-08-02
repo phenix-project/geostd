@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- M5P  M5P  "(S)-2-(MERCAPTOMETHYL)-5-PHENYLPENTANOIC ACID"  ligand  30  15  .  2024-04-18  2024-04-18
+ M5P  M5P  '(S)-2-(MERCAPTOMETHYL)-5-PHENYLPENTANOIC ACID'  ligand  30  15  .  2024-04-18  2024-08-01
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2024-08-01
 ;
 
 data_comp_M5P
@@ -178,40 +179,52 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- M5P  CONST_01  C4   C3  C2  C1      0.00   0.0  0
- M5P  CONST_02  C4   C5  C6  C1      0.00   0.0  0
- M5P  CONST_03  C5   C6  C1  C2      0.00   0.0  0
- M5P  CONST_04  C5   C4  C3  C2      0.00   0.0  0
- M5P  CONST_05  C6   C1  C2  C3      0.00   0.0  0
- M5P  CONST_06  C6   C5  C4  C3      0.00   0.0  0
- M5P  CONST_07  C7   C6  C1  C2    180.00   0.0  0
- M5P  CONST_08  C7   C6  C5  C4    180.00   0.0  0
- M5P  CONST_09  H3   C3  C2  C1    180.00   0.0  0
- M5P  CONST_10  H5   C5  C6  C1    180.00   0.0  0
- M5P  CONST_11  H4   C4  C3  C2    180.00   0.0  0
- M5P  CONST_12  H1   C1  C2  C3    180.00   0.0  0
- M5P  CONST_13  H5   C5  C4  C3    180.00   0.0  0
- M5P  CONST_14  H2   C2  C3  C4    180.00   0.0  0
- M5P  CONST_15  H3   C3  C4  C5    180.00   0.0  0
- M5P  CONST_16  H1   C1  C6  C5    180.00   0.0  0
- M5P  CONST_17  H2   C2  C1  C6    180.00   0.0  0
- M5P  CONST_18  H4   C4  C5  C6    180.00   0.0  0
- M5P  Var_01    C8   C7  C6  C1    -97.83  30.0  2
- M5P  Var_02    C8   C7  C6  C5     79.67  30.0  2
- M5P  Var_03    H71  C7  C6  C1     23.62  30.0  2
- M5P  Var_04    H72  C7  C6  C1    140.94  30.0  2
- M5P  Var_05    H71  C7  C6  C5   -158.87  30.0  2
- M5P  Var_06    H72  C7  C6  C5    -41.55  30.0  2
- M5P  Var_07    C9   C8  C7  C6    177.40  30.0  3
- M5P  Var_08    H81  C8  C7  C6    -59.97  30.0  3
- M5P  Var_09    H82  C8  C7  C6     55.62  30.0  3
- M5P  Var_10    C10  C9  C8  C7   -178.08  30.0  3
- M5P  Var_11    H91  C9  C8  C7    -56.47  30.0  3
- M5P  Var_12    H92  C9  C8  C7     59.38  30.0  3
- M5P  Var_13    H71  C7  C8  C9     55.76  30.0  1
- M5P  Var_14    H72  C7  C8  C9    -60.84  30.0  1
- M5P  Var_15    H81  C8  C9  C10    60.36  30.0  2
- M5P  Var_16    H82  C8  C9  C10   -56.56  30.0  2
+ M5P  CONST_01  C4    C3   C2   C1      0.00   0.0  0
+ M5P  CONST_02  C4    C5   C6   C1      0.00   0.0  0
+ M5P  CONST_03  C5    C6   C1   C2      0.00   0.0  0
+ M5P  CONST_04  C5    C4   C3   C2      0.00   0.0  0
+ M5P  CONST_05  C6    C1   C2   C3      0.00   0.0  0
+ M5P  CONST_06  C6    C5   C4   C3      0.00   0.0  0
+ M5P  CONST_07  C7    C6   C1   C2    180.00   0.0  0
+ M5P  CONST_08  C7    C6   C5   C4    180.00   0.0  0
+ M5P  CONST_09  H3    C3   C2   C1    180.00   0.0  0
+ M5P  CONST_10  H5    C5   C6   C1    180.00   0.0  0
+ M5P  CONST_11  H4    C4   C3   C2    180.00   0.0  0
+ M5P  CONST_12  H1    C1   C2   C3    180.00   0.0  0
+ M5P  CONST_13  H5    C5   C4   C3    180.00   0.0  0
+ M5P  CONST_14  H2    C2   C3   C4    180.00   0.0  0
+ M5P  CONST_15  H3    C3   C4   C5    180.00   0.0  0
+ M5P  CONST_16  H1    C1   C6   C5    180.00   0.0  0
+ M5P  CONST_17  H2    C2   C1   C6    180.00   0.0  0
+ M5P  CONST_18  H4    C4   C5   C6    180.00   0.0  0
+ M5P  Var_01    C8    C7   C6   C1    -97.83  30.0  2
+ M5P  Var_02    C8    C7   C6   C5     79.67  30.0  2
+ M5P  Var_03    H71   C7   C6   C1     23.62  30.0  2
+ M5P  Var_04    H72   C7   C6   C1    140.94  30.0  2
+ M5P  Var_05    H71   C7   C6   C5   -158.87  30.0  2
+ M5P  Var_06    H72   C7   C6   C5    -41.55  30.0  2
+ M5P  Var_07    C9    C8   C7   C6    177.40  30.0  3
+ M5P  Var_08    H81   C8   C7   C6    -59.97  30.0  3
+ M5P  Var_09    H82   C8   C7   C6     55.62  30.0  3
+ M5P  Var_10    C12   C10  C9   C8    172.64  30.0  3
+ M5P  Var_11    C10   C9   C8   C7   -178.08  30.0  3
+ M5P  Var_12    C11   C10  C9   C8    -64.01  30.0  3
+ M5P  Var_13    H91   C9   C8   C7    -56.47  30.0  3
+ M5P  Var_14    O2    C12  C10  C9    -89.57  30.0  2
+ M5P  Var_15    H92   C9   C8   C7     59.38  30.0  3
+ M5P  Var_16    O1    C12  C10  C9     88.48  30.0  2
+ M5P  Var_17    H71   C7   C8   C9     55.76  30.0  1
+ M5P  Var_18    S1    C11  C10  C9     90.30  30.0  3
+ M5P  Var_19    H72   C7   C8   C9    -60.84  30.0  1
+ M5P  Var_20    S1    C11  C10  C12  -148.42  30.0  3
+ M5P  Var_21    H81   C8   C9   C10    60.36  30.0  2
+ M5P  Var_22    C11   C10  C12  O2    145.93  30.0  3
+ M5P  Var_23    H82   C8   C9   C10   -56.56  30.0  2
+ M5P  Var_24    C11   C10  C12  O1    -36.03  30.0  3
+ M5P  Var_25    H10   C10  C9   C8     57.17  30.0  3
+ M5P  Var_26    H111  C11  C10  C9   -147.74  30.0  3
+ M5P  Var_27    H112  C11  C10  C9    -28.72  30.0  3
+ M5P  Var_28    HS1   S1   C11  C10    69.80  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
