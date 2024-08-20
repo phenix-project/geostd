@@ -26,11 +26,11 @@ int main( int argc, char *argv[] )
 
    xmin_opt_init( &xo );  // sets the default parameters;
 
-   xo.maxiter = 50;                  // non-default minimization options:
+   xo.maxiter = 100;                  // non-default minimization options:
    xo.grms_tol = 0.0005;
    xo.ls_maxatmov = 0.15;
    xo.print_level = 1;
-   xo.method = 2;
+   xo.method = 3;
 
 //   read in the prmtop file and the coordinates:
 
