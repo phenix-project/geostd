@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# echo $1
+echo $1
 
 #============================================================================
 #  Use tleap to create the Amber prmtop file:
@@ -22,12 +22,12 @@ if [ ! -s $1.parm7 ]; then
    exit 1
 fi
 echo "====== tleap.out =====================================================" \
-     >> $1.geom.log
+     > $1.geom.log
 cat tleap.out >> $1.geom.log
 /bin/rm leap.in tleap.out leap.log
 
 #============================================================================
-#  Do a constrained minimization to regularize the local geometries:
+#  Do a full minimization
 #============================================================================
 
 ../txmin $1.parm7 $1.x $1.min.x > $1.min.o
@@ -41,9 +41,12 @@ echo "====== min.o =========================================================" \
 cat $1.min.o >> $1.geom.log
 /bin/rm -f $1.min.o
 
-#  TODO: only make pdb files if there is a large RMS shift
-#  ambpdb -p $1.parm7 -c $1.min.x > $1.min.pdb
+#  make mol2 file with the minimized coordinates:
+#ambpdb -p $1.parm7 -c $1.min.x > $1.min.pdb
+antechamber -i $1.mol2 -fi mol2 -o $1.min.mol2 -fo mol2 \
+   -a $1.min.x -fa rst -ao crd -at gaff2 -dr no -s 0
 
+/bin/rm -f ANTECH* ATOMTYPE.INF
 
 #============================================================================
 #  Check how far the struture has moved from the initial conformation:
@@ -68,5 +71,8 @@ else
    echo "rms.dat missing for $1"
 fi
 
+# create a summary file with initial and final energies and rms deviation:
+awk 'BEGIN{printf("'$1'\t")}/Total:/{printf("%8.2f\t",$2)}' $1.geom.log >> ../amber_geom.dat
+awk 'NR==2{printf("%8.3f\n",$2)}' rms.dat >> ../amber_geom.dat
 
-/bin/rm -f cpptraj.out rms.dat $1.parm7 $1.min.x
+/bin/rm -f cpptraj.out rms.dat $1.parm7 $1.x $1.min.x
