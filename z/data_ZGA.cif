@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZGA  ZGA  '(1S,3S,4S,5R,6R,7R)-1-[(4S,5R)-4-(acetyloxy)-5-methyl-3-methylidene-6-phenylhexyl]-6-{[(2E,4S,6S)-4,6-dimethyloct-2-enoyl]oxy}-4,7-dihydroxy-2,8-dioxabicyclo[3.2.1]octane-3,4,5-tricarboxylic acid (non-preferred name)'  ligand  92  49  .  2024-06-01  2024-06-01
+ ZGA  ZGA  '(1S,3S,4S,5R,6R,7R)-1-[(4S,5R)-4-(acetyloxy)-5-methyl-3-methylidene-6-phenylhexyl]-6-{[(2E,4S,6S)-4,6-dimethyloct-2-enoyl]oxy}-4,7-dihydroxy-2,8-dioxabicyclo[3.2.1]octane-3,4,5-tricarboxylic acid (non-preferred name)'  ligand  92  49  .  2024-06-01  2024-08-02
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2024-08-02
 ;
 
 data_comp_ZGA
@@ -422,27 +423,138 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- ZGA  CONST_01  CBM  CAV  CAT  CAS     0.00   0.0  0
- ZGA  CONST_02  CBM  CAW  CAU  CAS     0.00   0.0  0
- ZGA  CONST_03  CAW  CAU  CAS  CAT     0.00   0.0  0
- ZGA  CONST_04  CAW  CBM  CAV  CAT     0.00   0.0  0
- ZGA  CONST_05  CAV  CAT  CAS  CAU     0.00   0.0  0
- ZGA  CONST_06  CAV  CBM  CAW  CAU     0.00   0.0  0
- ZGA  CONST_07  CBA  CBM  CAV  CAT   180.00   0.0  0
- ZGA  CONST_08  CBA  CBM  CAW  CAU   180.00   0.0  0
- ZGA  CONST_09  HAV  CAV  CAT  CAS   180.00   0.0  0
- ZGA  CONST_10  HAW  CAW  CAU  CAS   180.00   0.0  0
- ZGA  CONST_11  HAU  CAU  CAS  CAT   180.00   0.0  0
- ZGA  CONST_12  HAT  CAT  CAS  CAU   180.00   0.0  0
- ZGA  CONST_13  HAS  CAS  CAT  CAV   180.00   0.0  0
- ZGA  Var_01    CBP  CBA  CBM  CAV    62.45  30.0  2
- ZGA  Var_02    CBV  CAZ  CAY  CBI   166.39  30.0  3
- ZGA  Var_03    CBN  CAR  CAQ  CBH  -178.66   0.0  2
- ZGA  Var_04    CAZ  CAY  CBI  CAA   124.30  30.0  2
- ZGA  Var_05    CAR  CAQ  CBH  OAH    -1.65  30.0  1
- ZGA  Var_06    HAA  CAA  CBI  CAY   177.45   0.0  2
- ZGA  Var_07    HAC  CAC  CBG  OAG    -6.09  30.0  3
- ZGA  Var_08    HAB  CAB  CAX  CBO   -52.34  30.0  3
+ ZGA  CONST_01  CBM   CAV  CAT  CAS     0.00   0.0  0
+ ZGA  CONST_02  CBM   CAW  CAU  CAS     0.00   0.0  0
+ ZGA  CONST_03  CAW   CAU  CAS  CAT     0.00   0.0  0
+ ZGA  CONST_04  CAW   CBM  CAV  CAT     0.00   0.0  0
+ ZGA  CONST_05  CAV   CAT  CAS  CAU     0.00   0.0  0
+ ZGA  CONST_06  CAV   CBM  CAW  CAU     0.00   0.0  0
+ ZGA  CONST_07  CBA   CBM  CAV  CAT   180.00   0.0  0
+ ZGA  CONST_08  CBA   CBM  CAW  CAU   180.00   0.0  0
+ ZGA  CONST_09  HAV   CAV  CAT  CAS   180.00   0.0  0
+ ZGA  CONST_10  HAW   CAW  CAU  CAS   180.00   0.0  0
+ ZGA  CONST_11  HAU   CAU  CAS  CAT   180.00   0.0  0
+ ZGA  CONST_12  HAT   CAT  CAS  CAU   180.00   0.0  0
+ ZGA  CONST_13  HAS   CAS  CAT  CAV   180.00   0.0  0
+ ZGA  Var_01    CBP   CBA  CBM  CAV    62.45  30.0  2
+ ZGA  Var_02    CBW   CBU  CBS  OBE   -41.74  30.0  1
+ ZGA  Var_03    CBV   CAZ  CAY  CBI   166.39  30.0  3
+ ZGA  Var_04    CBW   OBF  CBV  OBE    71.17  30.0  1
+ ZGA  Var_05    CBN   CAR  CAQ  CBH  -178.66   0.0  2
+ ZGA  Var_06    CBT   CBQ  CBV  OBE   -85.71  30.0  3
+ ZGA  Var_07    CAZ   CAY  CBI  CAA   124.30  30.0  2
+ ZGA  Var_08    CBS   OBE  CBV  OBF   -55.87  30.0  1
+ ZGA  Var_09    CAR   CAQ  CBH  OAH    -1.65  30.0  1
+ ZGA  Var_10    CBT   CBQ  CBV  OBF    33.55  30.0  3
+ ZGA  Var_11    HAA   CAA  CBI  CAY   177.45   0.0  2
+ ZGA  Var_12    CBQ   CBT  CBW  OBF   -20.84  30.0  3
+ ZGA  Var_13    HAC   CAC  CBG  OAG    -6.09  30.0  3
+ ZGA  Var_14    CBS   CBU  CBW  OBF    58.16  30.0  1
+ ZGA  Var_15    HAB   CAB  CAX  CBO   -52.34  30.0  3
+ ZGA  Var_16    CBU   CBW  CBT  CBQ    92.71  30.0  3
+ ZGA  Var_17    CBS   OBE  CBV  CBQ    57.91  30.0  1
+ ZGA  Var_18    CBW   OBF  CBV  CBQ   -49.30  30.0  1
+ ZGA  Var_19    CBN   CBB  CBO  CAX  -173.36  30.0  1
+ ZGA  Var_20    OBC   CBR  CBI  CAY  -178.68  30.0  3
+ ZGA  Var_21    CBP   CBR  CBI  CAY   -57.33  30.0  3
+ ZGA  Var_22    OBC   CBR  CBP  CBA   -68.08  30.0  3
+ ZGA  Var_23    CBI   CBR  CBP  CBA   168.27  30.0  3
+ ZGA  Var_24    CBI   CBR  OBC  CBG   -91.51  30.0  3
+ ZGA  Var_25    CBP   CBR  OBC  CBG   144.00  30.0  3
+ ZGA  Var_26    CBT   CBW  CBU  CBS   -53.67  30.0  1
+ ZGA  Var_27    HBR   CBR  CBI  CAA  -119.47  30.0  3
+ ZGA  Var_28    HBO   CBO  CAX  CAB    57.72  30.0  3
+ ZGA  Var_29    HBB   CBB  CBN  CAD   -57.02  30.0  2
+ ZGA  Var_30    HBBA  CBB  CBN  CAD    57.36  30.0  2
+ ZGA  Var_31    HAX   CAX  CBO  CAE   177.70  30.0  3
+ ZGA  Var_32    HAXA  CAX  CBO  CAE    62.89  30.0  3
+ ZGA  Var_33    CBV   OBF  CBW  CBT    44.70  30.0  1
+ ZGA  Var_34    HBN   CBN  CAR  CAQ    -4.20  30.0  3
+ ZGA  Var_35    HAD   CAD  CBN  CAR   -60.40  30.0  3
+ ZGA  Var_36    HADA  CAD  CBN  CAR    60.13  30.0  3
+ ZGA  Var_37    HADB  CAD  CBN  CAR   179.52  30.0  3
+ ZGA  Var_38    HAE   CAE  CBO  CAX   174.97  30.0  3
+ ZGA  Var_39    HAEA  CAE  CBO  CAX   -64.89  30.0  3
+ ZGA  Var_40    HAEB  CAE  CBO  CAX    55.22  30.0  3
+ ZGA  Var_41    HAF   CAF  CBP  CBA   178.59  30.0  3
+ ZGA  Var_42    CBV   OBE  CBS  CBU    41.13  30.0  1
+ ZGA  Var_43    HAFA  CAF  CBP  CBA   -61.69  30.0  3
+ ZGA  Var_44    HAFB  CAF  CBP  CBA    57.86  30.0  3
+ ZGA  Var_45    CBV   OBF  CBW  CBU   -72.23  30.0  1
+ ZGA  Var_46    CBW   CBT  CBQ  CBV    -7.25  30.0  3
+ ZGA  Var_47    CBW   CBT  CBQ  OAO  -129.10  30.0  3
+ ZGA  Var_48    OBE   CBV  CBQ  OAO    39.42  30.0  3
+ ZGA  Var_49    OBF   CBV  CBQ  OAO   158.69  30.0  3
+ ZGA  Var_50    OBE   CBS  CBU  OAP    75.41  30.0  1
+ ZGA  Var_51    OBF   CBW  CBU  OAP   -61.08  30.0  1
+ ZGA  Var_52    CBT   CBW  CBU  OAP  -172.91  30.0  1
+ ZGA  Var_53    CBS   OBE  CBV  CAZ  -175.83  30.0  1
+ ZGA  Var_54    CBW   OBF  CBV  CAZ  -169.93  30.0  1
+ ZGA  Var_55    CBT   CBQ  CBV  CAZ   151.26  30.0  3
+ ZGA  Var_56    CBV   CBQ  CBT  OBD  -124.47  30.0  3
+ ZGA  Var_57    OBF   CBW  CBT  OBD    97.93  30.0  3
+ ZGA  Var_58    CBU   CBW  CBT  OBD  -148.51  30.0  3
+ ZGA  Var_59    CBK   CBU  CBS  OBE  -166.28  30.0  1
+ ZGA  Var_60    CBK   CBU  CBW  OBF  -179.62  30.0  1
+ ZGA  Var_61    CBV   OBF  CBW  CBL   166.57  30.0  1
+ ZGA  Var_62    CBQ   CBT  CBW  CBL  -140.67  30.0  3
+ ZGA  Var_63    CBS   CBU  CBW  CBL   178.66  30.0  1
+ ZGA  Var_64    CBK   CBU  CBW  CBT    68.55  30.0  1
+ ZGA  Var_65    CBJ   CBS  OBE  CBV   165.03  30.0  1
+ ZGA  Var_66    CBJ   CBS  CBU  CBW  -164.01  30.0  1
+ ZGA  Var_67    HBQ   CBQ  CBV  OBE   160.79  30.0  3
+ ZGA  Var_68    HBT   CBT  CBW  OBF  -141.74  30.0  3
+ ZGA  Var_69    HBS   CBS  OBE  CBV   -78.49  30.0  1
+ ZGA  Var_70    OBE   CBS  CBJ  OAI   176.89  30.0  2
+ ZGA  Var_71    CBU   CBS  CBJ  OAI   -58.82  30.0  2
+ ZGA  Var_72    CBS   CBU  CBK  OAJ  -123.25  30.0  2
+ ZGA  Var_73    CBW   CBU  CBK  OAJ   115.50  30.0  2
+ ZGA  Var_74    OBF   CBW  CBL  OAK   177.72  30.0  2
+ ZGA  Var_75    CBT   CBW  CBL  OAK   -66.51  30.0  2
+ ZGA  Var_76    CBU   CBW  CBL  OAK    59.76  30.0  2
+ ZGA  Var_77    OBE   CBS  CBJ  OAL    -1.57  30.0  2
+ ZGA  Var_78    CBU   CBS  CBJ  OAL   122.72  30.0  2
+ ZGA  Var_79    CBS   CBU  CBK  OAM    55.33  30.0  2
+ ZGA  Var_80    CBW   CBU  CBK  OAM   -65.92  30.0  2
+ ZGA  Var_81    OBF   CBW  CBL  OAN    -2.87  30.0  2
+ ZGA  Var_82    CBT   CBW  CBL  OAN   112.90  30.0  2
+ ZGA  Var_83    CBU   CBW  CBL  OAN  -120.82  30.0  2
+ ZGA  Var_84    OBD   CBT  CBQ  OAO   113.67  30.0  3
+ ZGA  Var_85    CAZ   CBV  CBQ  OAO   -83.60  30.0  3
+ ZGA  Var_86    CBJ   CBS  CBU  OAP   -46.86  30.0  1
+ ZGA  Var_87    CBL   CBW  CBU  OAP    59.42  30.0  1
+ ZGA  Var_88    OBE   CBV  CAZ  CAY    49.22  30.0  3
+ ZGA  Var_89    OBF   CBV  CAZ  CAY   -71.77  30.0  3
+ ZGA  Var_90    CBQ   CBV  CAZ  CAY   175.00  30.0  3
+ ZGA  Var_91    CBL   CBW  CBT  OBD   -21.89  30.0  3
+ ZGA  Var_92    CBQ   CBT  OBD  CBH   -72.02  30.0  3
+ ZGA  Var_93    CBW   CBT  OBD  CBH   174.44  30.0  3
+ ZGA  Var_94    CBK   CBU  CBW  CBL   -59.13  30.0  1
+ ZGA  Var_95    CBK   CBU  CBS  CBJ    71.45  30.0  1
+ ZGA  Var_96    HAZ   CAZ  CBV  OBE   -73.47  30.0  1
+ ZGA  Var_97    HAZA  CAZ  CBV  OBE   172.05  30.0  1
+ ZGA  Var_98    HOAP  OAP  CBU  CBS   120.67  30.0  3
+ ZGA  Var_99    HOAO  OAO  CBQ  CBT   -58.76  30.0  3
+ ZGA  Var_100   CBM   CBA  CBP  CAF    64.74  30.0  1
+ ZGA  Var_101   CBT   OBD  CBH  OAH     3.44  30.0  1
+ ZGA  Var_102   OAP   CBU  CBK  OAJ    -2.99  30.0  2
+ ZGA  Var_103   OAP   CBU  CBK  OAM   175.58  30.0  2
+ ZGA  Var_104   CBT   OBD  CBH  CAQ  -176.57  30.0  1
+ ZGA  Var_105   CBR   CBP  CBA  CBM  -168.16  30.0  3
+ ZGA  Var_106   HBP   CBP  CBA  CBM   -53.70  30.0  3
+ ZGA  Var_107   OBC   CBR  CBI  CAA     0.02  30.0  3
+ ZGA  Var_108   CBP   CBR  CBI  CAA   121.37  30.0  3
+ ZGA  Var_109   CAE   CBO  CAX  CAB   -60.69  30.0  3
+ ZGA  Var_110   CBB   CBO  CAX  CAB   174.97  30.0  3
+ ZGA  Var_111   CBR   OBC  CBG  CAC   179.43  30.0  1
+ ZGA  Var_112   CAQ   CAR  CBN  CAD   113.98  30.0  2
+ ZGA  Var_113   CBO   CBB  CBN  CAD  -179.88  30.0  2
+ ZGA  Var_114   CBN   CBB  CBO  CAE    61.90  30.0  1
+ ZGA  Var_115   OBC   CBR  CBP  CAF    58.71  30.0  3
+ ZGA  Var_116   CBI   CBR  CBP  CAF   -64.93  30.0  3
+ ZGA  Var_117   CBR   OBC  CBG  OAG    -0.16  30.0  1
+ ZGA  Var_118   CBB   CBN  CAR  CAQ  -124.64  30.0  3
+ ZGA  Var_119   CBO   CBB  CBN  CAR    59.20  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LN1  LN1  (3R)-4-{[(3,4-dihydroxyphenyl)acetyl]oxy}-N-(2-formylindolizin-3-yl)-3-sulfino-D-valine  ligand  55  34  .  2024-05-30  2024-05-30
+ LN1  LN1  (3R)-4-{[(3,4-dihydroxyphenyl)acetyl]oxy}-N-(2-formylindolizin-3-yl)-3-sulfino-D-valine  ligand  55  34  .  2024-05-30  2024-08-01
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2024-08-01
 ;
 
 data_comp_LN1
@@ -271,53 +272,82 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LN1  CONST_01  CD1  CG   C9   C6   180.00   0.0  0
- LN1  CONST_02  ND2  CG   C9   C6     0.00   0.0  0
- LN1  CONST_03  CE2  ND2  C5   C6   180.00   0.0  0
- LN1  CONST_04  CG   ND2  C5   C6     0.00   0.0  0
- LN1  CONST_05  ND2  C5   C6   C9     0.00   0.0  0
- LN1  CONST_06  CE1  CD1  CG   C9   180.00   0.0  0
- LN1  CONST_07  CE2  ND2  CG   C9   180.00   0.0  0
- LN1  CONST_08  C5   ND2  CG   C9     0.00   0.0  0
- LN1  CONST_09  C5   C6   C9   CG     0.00   0.0  0
- LN1  CONST_10  CZ   CE1  CD1  CG     0.00   0.0  0
- LN1  CONST_11  CZ   CE2  ND2  CG     0.00   0.0  0
- LN1  CONST_12  CE2  ND2  CG   CD1    0.00   0.0  0
- LN1  CONST_13  C5   ND2  CG   CD1  180.00   0.0  0
- LN1  CONST_14  CE2  CZ   CE1  CD1    0.00   0.0  0
- LN1  CONST_15  ND2  CG   CD1  CE1    0.00   0.0  0
- LN1  CONST_16  ND2  CE2  CZ   CE1    0.00   0.0  0
- LN1  CONST_17  C5   ND2  CE2  CZ   180.00   0.0  0
- LN1  CONST_18  CAZ  CAN  CAM  CAY    0.00   0.0  0
- LN1  CONST_19  CAZ  CBA  CAQ  CAY    0.00   0.0  0
- LN1  CONST_20  CAN  CAM  CAY  CAQ    0.00   0.0  0
- LN1  CONST_21  CAN  CAZ  CBA  CAQ    0.00   0.0  0
- LN1  CONST_22  CBA  CAQ  CAY  CAM    0.00   0.0  0
- LN1  CONST_23  CBA  CAZ  CAN  CAM    0.00   0.0  0
- LN1  CONST_24  CG   C9   C6   C7   180.00   0.0  0
- LN1  CONST_25  ND2  C5   C6   C7   180.00   0.0  0
- LN1  CONST_26  N4   C5   C6   C9   180.00   0.0  0
- LN1  CONST_27  N4   C5   ND2  CG   180.00   0.0  0
- LN1  CONST_28  N4   C5   ND2  CE2    0.00   0.0  0
- LN1  CONST_29  CAN  CAM  CAY  CAS  180.00   0.0  0
- LN1  CONST_30  CBA  CAQ  CAY  CAS  180.00   0.0  0
- LN1  CONST_31  OAI  CBA  CAQ  CAY  180.00   0.0  0
- LN1  CONST_32  OAH  CAZ  CBA  CAQ  180.00   0.0  0
- LN1  CONST_33  OAH  CAZ  CAN  CAM  180.00   0.0  0
- LN1  CONST_34  OAI  CBA  CAZ  CAN  180.00   0.0  0
- LN1  CONST_35  HD1  CD1  CG   C9     0.00   0.0  0
- LN1  CONST_36  HE1  CE1  CD1  CG   180.00   0.0  0
- LN1  CONST_37  HE2  CE2  ND2  CG   180.00   0.0  0
- LN1  CONST_38  H9   C9   CG   CD1    0.00   0.0  0
- LN1  CONST_39  HZ   CZ   CE1  CD1  180.00   0.0  0
- LN1  CONST_40  HAN  CAN  CAM  CAY  180.00   0.0  0
- LN1  CONST_41  HAM  CAM  CAY  CAQ  180.00   0.0  0
- LN1  CONST_42  HAQ  CAQ  CAY  CAM  180.00   0.0  0
- LN1  Var_01    C9   C6   C7   O8     1.79  30.0  2
- LN1  Var_02    CAM  CAY  CAS  CAX   87.21  30.0  2
- LN1  Var_03    CAY  CAS  CAX  OAV  174.24  30.0  2
- LN1  Var_04    OAD  CAX  OAV  CG1   -0.78  30.0  1
- LN1  Var_05    HG1  CG1  OAV  CAX   57.97  30.0  2
+ LN1  CONST_01  CD1   CG   C9   C6    180.00   0.0  0
+ LN1  CONST_02  ND2   CG   C9   C6      0.00   0.0  0
+ LN1  CONST_03  CE2   ND2  C5   C6    180.00   0.0  0
+ LN1  CONST_04  CG    ND2  C5   C6      0.00   0.0  0
+ LN1  CONST_05  ND2   C5   C6   C9      0.00   0.0  0
+ LN1  CONST_06  CE1   CD1  CG   C9    180.00   0.0  0
+ LN1  CONST_07  CE2   ND2  CG   C9    180.00   0.0  0
+ LN1  CONST_08  C5    ND2  CG   C9      0.00   0.0  0
+ LN1  CONST_09  C5    C6   C9   CG      0.00   0.0  0
+ LN1  CONST_10  CZ    CE1  CD1  CG      0.00   0.0  0
+ LN1  CONST_11  CZ    CE2  ND2  CG      0.00   0.0  0
+ LN1  CONST_12  CE2   ND2  CG   CD1     0.00   0.0  0
+ LN1  CONST_13  C5    ND2  CG   CD1   180.00   0.0  0
+ LN1  CONST_14  CE2   CZ   CE1  CD1     0.00   0.0  0
+ LN1  CONST_15  ND2   CG   CD1  CE1     0.00   0.0  0
+ LN1  CONST_16  ND2   CE2  CZ   CE1     0.00   0.0  0
+ LN1  CONST_17  C5    ND2  CE2  CZ    180.00   0.0  0
+ LN1  CONST_18  CAZ   CAN  CAM  CAY     0.00   0.0  0
+ LN1  CONST_19  CAZ   CBA  CAQ  CAY     0.00   0.0  0
+ LN1  CONST_20  CAN   CAM  CAY  CAQ     0.00   0.0  0
+ LN1  CONST_21  CAN   CAZ  CBA  CAQ     0.00   0.0  0
+ LN1  CONST_22  CBA   CAQ  CAY  CAM     0.00   0.0  0
+ LN1  CONST_23  CBA   CAZ  CAN  CAM     0.00   0.0  0
+ LN1  CONST_24  CG    C9   C6   C7    180.00   0.0  0
+ LN1  CONST_25  ND2   C5   C6   C7    180.00   0.0  0
+ LN1  CONST_26  N4    C5   C6   C9    180.00   0.0  0
+ LN1  CONST_27  N4    C5   ND2  CG    180.00   0.0  0
+ LN1  CONST_28  N4    C5   ND2  CE2     0.00   0.0  0
+ LN1  CONST_29  CAN   CAM  CAY  CAS   180.00   0.0  0
+ LN1  CONST_30  CBA   CAQ  CAY  CAS   180.00   0.0  0
+ LN1  CONST_31  OAI   CBA  CAQ  CAY   180.00   0.0  0
+ LN1  CONST_32  OAH   CAZ  CBA  CAQ   180.00   0.0  0
+ LN1  CONST_33  OAH   CAZ  CAN  CAM   180.00   0.0  0
+ LN1  CONST_34  OAI   CBA  CAZ  CAN   180.00   0.0  0
+ LN1  CONST_35  HD1   CD1  CG   C9      0.00   0.0  0
+ LN1  CONST_36  HE1   CE1  CD1  CG    180.00   0.0  0
+ LN1  CONST_37  HE2   CE2  ND2  CG    180.00   0.0  0
+ LN1  CONST_38  H9    C9   CG   CD1     0.00   0.0  0
+ LN1  CONST_39  HZ    CZ   CE1  CD1   180.00   0.0  0
+ LN1  CONST_40  HAN   CAN  CAM  CAY   180.00   0.0  0
+ LN1  CONST_41  HAM   CAM  CAY  CAQ   180.00   0.0  0
+ LN1  CONST_42  HAQ   CAQ  CAY  CAM   180.00   0.0  0
+ LN1  Var_01    C9    C6   C7   O8      1.79  30.0  2
+ LN1  Var_02    CAM   CAY  CAS  CAX    87.21  30.0  2
+ LN1  Var_03    CAY   CAS  CAX  OAV   174.24  30.0  2
+ LN1  Var_04    OAD   CAX  OAV  CG1    -0.78  30.0  1
+ LN1  Var_05    HG1   CG1  OAV  CAX    57.97  30.0  2
+ LN1  Var_06    HOAI  OAI  CBA  CAQ   178.51  30.0  2
+ LN1  Var_07    HOAH  OAH  CAZ  CAN    -2.42  30.0  2
+ LN1  Var_08    C3A   C3   N4   C5    135.30  30.0  3
+ LN1  Var_09    C2    C3   N4   C5   -102.18  30.0  3
+ LN1  Var_10    H3    C3   N4   C5     18.04  30.0  3
+ LN1  Var_11    O3A   C3A  C3   N4   -158.92  30.0  2
+ LN1  Var_12    O3B   C3A  C3   N4     20.59  30.0  2
+ LN1  Var_13    CG2   C2   C3   N4    -58.56  30.0  1
+ LN1  Var_14    S1    C2   C3   N4     60.71  30.0  1
+ LN1  Var_15    CG1   C2   C3   N4    176.09  30.0  1
+ LN1  Var_16    O12   S1   C2   C3     34.56  30.0  3
+ LN1  Var_17    O13   S1   C2   C3    -78.04  30.0  3
+ LN1  Var_18    OAV   CG1  C2   C3   -175.81  30.0  1
+ LN1  Var_19    CG2   C2   C3   C3A    62.96  30.0  1
+ LN1  Var_20    S1    C2   C3   C3A  -177.78  30.0  1
+ LN1  Var_21    CG1   C2   C3   C3A   -62.40  30.0  1
+ LN1  Var_22    C2    C3   C3A  O3A    77.14  30.0  2
+ LN1  Var_23    C2    C3   C3A  O3B  -103.36  30.0  2
+ LN1  Var_24    OAV   CG1  C2   S1    -54.72  30.0  1
+ LN1  Var_25    CG2   C2   S1   O12   157.26  30.0  3
+ LN1  Var_26    CG1   C2   S1   O12   -84.80  30.0  3
+ LN1  Var_27    CG2   C2   S1   O13    44.67  30.0  3
+ LN1  Var_28    CG1   C2   S1   O13   162.61  30.0  3
+ LN1  Var_29    OAV   CG1  C2   CG2    58.88  30.0  1
+ LN1  Var_30    HG2   CG2  C2   C3     50.64  30.0  3
+ LN1  Var_31    HG2A  CG2  C2   C3    171.99  30.0  3
+ LN1  Var_32    HG2B  CG2  C2   C3    -68.43  30.0  3
+ LN1  Var_33    HG1A  CG1  C2   C3     64.38  30.0  1
+ LN1  Var_34    HO12  O12  S1   C2    148.00  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
