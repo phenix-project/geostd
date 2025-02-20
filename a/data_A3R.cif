@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A3R  A3R  '[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{S},4~{R})-4-oxidanylpyrrolidin-2-yl]methyl hydrogen phosphate'  ligand  56  34  .  2025-02-12  2025-02-12
+ A3R  A3R  '[[(2~{R},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methoxy-oxidanyl-phosphoryl] [(2~{S},4~{R})-4-oxidanylpyrrolidin-2-yl]methyl hydrogen phosphate'  ligand  56  34  .  2025-02-12  2025-02-14
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-14
 ;
 
 data_comp_A3R
@@ -286,38 +287,94 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- A3R  CONST_01  C2   N3   C4   N9   180.00   0.0  0
- A3R  CONST_02  C6   C5   C4   N9   180.00   0.0  0
- A3R  CONST_03  N7   C5   C4   N9     0.00   0.0  0
- A3R  CONST_04  C5   N7   C8   N9     0.00   0.0  0
- A3R  CONST_05  C6   C5   N7   C8   180.00   0.0  0
- A3R  CONST_06  C4   C5   N7   C8     0.00   0.0  0
- A3R  CONST_07  N3   C4   N9   C8   180.00   0.0  0
- A3R  CONST_08  C5   C4   N9   C8     0.00   0.0  0
- A3R  CONST_09  N1   C6   C5   N7   180.00   0.0  0
- A3R  CONST_10  N3   C4   C5   N7   180.00   0.0  0
- A3R  CONST_11  C4   N9   C8   N7     0.00   0.0  0
- A3R  CONST_12  C2   N1   C6   C5     0.00   0.0  0
- A3R  CONST_13  C2   N3   C4   C5     0.00   0.0  0
- A3R  CONST_14  N1   C2   N3   C4     0.00   0.0  0
- A3R  CONST_15  N1   C6   C5   C4     0.00   0.0  0
- A3R  CONST_16  C6   N1   C2   N3     0.00   0.0  0
- A3R  CONST_17  C6   C5   C4   N3     0.00   0.0  0
- A3R  CONST_18  N3   C4   N9   C1'    0.00   0.0  0
- A3R  CONST_19  C5   C4   N9   C1'  180.00   0.0  0
- A3R  CONST_20  N7   C8   N9   C1'  180.00   0.0  0
- A3R  CONST_21  N6   C6   C5   N7     0.00   0.0  0
- A3R  CONST_22  N6   C6   C5   C4   180.00   0.0  0
- A3R  CONST_23  N6   C6   N1   C2   180.00   0.0  0
- A3R  CONST_24  H22  C8   N9   C1'    0.00   0.0  0
- A3R  CONST_25  H23  C2   N3   C4   180.00   0.0  0
- A3R  CONST_26  H24  N6   C6   C5   180.00   0.0  0
- A3R  CONST_27  H25  N6   C6   C5     0.00   0.0  0
- A3R  Var_01    C4N  N4N  C1N  C2N  -40.08  30.0  1
- A3R  Var_02    C4'  C5'  O5'  PA   168.95  30.0  1
- A3R  Var_03    O1B  PB   O5N  C5N  -80.77  30.0  1
- A3R  Var_04    O5'  PA   O3A  PB   165.57  30.0  2
- A3R  Var_05    H10  C5N  O5N  PB    50.01  30.0  1
+ A3R  CONST_01  C2   N3   C4   N9    180.00   0.0  0
+ A3R  CONST_02  C6   C5   C4   N9    180.00   0.0  0
+ A3R  CONST_03  N7   C5   C4   N9      0.00   0.0  0
+ A3R  CONST_04  C5   N7   C8   N9      0.00   0.0  0
+ A3R  CONST_05  C6   C5   N7   C8    180.00   0.0  0
+ A3R  CONST_06  C4   C5   N7   C8      0.00   0.0  0
+ A3R  CONST_07  N3   C4   N9   C8    180.00   0.0  0
+ A3R  CONST_08  C5   C4   N9   C8      0.00   0.0  0
+ A3R  CONST_09  N1   C6   C5   N7    180.00   0.0  0
+ A3R  CONST_10  N3   C4   C5   N7    180.00   0.0  0
+ A3R  CONST_11  C4   N9   C8   N7      0.00   0.0  0
+ A3R  CONST_12  C2   N1   C6   C5      0.00   0.0  0
+ A3R  CONST_13  C2   N3   C4   C5      0.00   0.0  0
+ A3R  CONST_14  N1   C2   N3   C4      0.00   0.0  0
+ A3R  CONST_15  N1   C6   C5   C4      0.00   0.0  0
+ A3R  CONST_16  C6   N1   C2   N3      0.00   0.0  0
+ A3R  CONST_17  C6   C5   C4   N3      0.00   0.0  0
+ A3R  CONST_18  N3   C4   N9   C1'     0.00   0.0  0
+ A3R  CONST_19  C5   C4   N9   C1'   180.00   0.0  0
+ A3R  CONST_20  N7   C8   N9   C1'   180.00   0.0  0
+ A3R  CONST_21  N6   C6   C5   N7      0.00   0.0  0
+ A3R  CONST_22  N6   C6   C5   C4    180.00   0.0  0
+ A3R  CONST_23  N6   C6   N1   C2    180.00   0.0  0
+ A3R  CONST_24  H22  C8   N9   C1'     0.00   0.0  0
+ A3R  CONST_25  H23  C2   N3   C4    180.00   0.0  0
+ A3R  CONST_26  H24  N6   C6   C5    180.00   0.0  0
+ A3R  CONST_27  H25  N6   C6   C5      0.00   0.0  0
+ A3R  Var_01    C4N  N4N  C1N  C2N   -40.08  30.0  1
+ A3R  Var_02    C4'  C5'  O5'  PA    168.95  30.0  1
+ A3R  Var_03    C1N  N4N  C4N  C3N    29.80  30.0  1
+ A3R  Var_04    O1B  PB   O5N  C5N   -80.77  30.0  1
+ A3R  Var_05    N4N  C1N  C2N  C3N    34.14  30.0  1
+ A3R  Var_06    O5'  PA   O3A  PB    165.57  30.0  2
+ A3R  Var_07    N4N  C4N  C3N  C2N    -8.28  30.0  1
+ A3R  Var_08    H10  C5N  O5N  PB     50.01  30.0  1
+ A3R  Var_09    C4N  C3N  C2N  C1N   -15.05  30.0  1
+ A3R  Var_10    N9   C1'  O4'  C4'  -110.07  30.0  1
+ A3R  Var_11    C2'  C1'  O4'  C4'    10.50  30.0  1
+ A3R  Var_12    C1'  C2'  C3'  C4'    37.06  30.0  1
+ A3R  Var_13    C4   N9   C1'  O4'  -167.94  30.0  2
+ A3R  Var_14    C8   N9   C1'  O4'     9.74  30.0  2
+ A3R  Var_15    C3'  C2'  C1'  O4'   -30.19  30.0  1
+ A3R  Var_16    C2'  C3'  C4'  O4'   -32.30  30.0  1
+ A3R  Var_17    N9   C1'  C2'  C3'    89.14  30.0  1
+ A3R  Var_18    C1'  O4'  C4'  C3'    14.11  30.0  1
+ A3R  Var_19    C4   N9   C1'  C2'    74.22  30.0  2
+ A3R  Var_20    C8   N9   C1'  C2'  -108.10  30.0  2
+ A3R  Var_21    C5N  C4N  C3N  C2N  -132.33  30.0  1
+ A3R  Var_22    N4N  C1N  C2N  O2N   154.81  30.0  1
+ A3R  Var_23    C4N  C3N  C2N  O2N  -138.39  30.0  1
+ A3R  Var_24    C5N  C4N  N4N  C1N   153.13  30.0  1
+ A3R  Var_25    C1'  O4'  C4'  C5'   136.32  30.0  1
+ A3R  Var_26    C2'  C3'  C4'  C5'  -153.07  30.0  1
+ A3R  Var_27    O2'  C2'  C3'  C4'   -76.57  30.0  1
+ A3R  Var_28    O2'  C2'  C1'  O4'    86.37  30.0  1
+ A3R  Var_29    O3'  C3'  C4'  O4'  -153.76  30.0  1
+ A3R  Var_30    C1'  C2'  C3'  O3'   155.81  30.0  1
+ A3R  Var_31    N9   C1'  C2'  O2'  -154.30  30.0  1
+ A3R  Var_32    H7   N4N  C4N  C3N   -86.46  30.0  1
+ A3R  Var_33    H5   C1N  C2N  C3N   156.31  30.0  1
+ A3R  Var_34    H6   C1N  C2N  C3N   -83.66  30.0  1
+ A3R  Var_35    H9   C4N  C3N  C2N   107.77  30.0  1
+ A3R  Var_36    H1   C3N  C2N  C1N   104.78  30.0  1
+ A3R  Var_37    H2   C3N  C2N  C1N  -136.08  30.0  1
+ A3R  Var_38    H3   C2N  C1N  N4N   -81.34  30.0  1
+ A3R  Var_39    H21  C1'  O4'  C4'   132.19  30.0  1
+ A3R  Var_40    H19  C2'  C3'  C4'   156.75  30.0  1
+ A3R  Var_41    H17  C3'  C4'  O4'    82.84  30.0  1
+ A3R  Var_42    H16  C4'  C3'  C2'    84.64  30.0  1
+ A3R  Var_43    O5N  C5N  C4N  C3N   179.69  30.0  1
+ A3R  Var_44    O5N  C5N  C4N  N4N    58.97  30.0  1
+ A3R  Var_45    O4'  C4'  C5'  O5'    63.56  30.0  2
+ A3R  Var_46    C3'  C4'  C5'  O5'  -179.07  30.0  2
+ A3R  Var_47    O3'  C3'  C4'  C5'    85.47  30.0  1
+ A3R  Var_48    O2'  C2'  C3'  O3'    42.18  30.0  1
+ A3R  Var_49    H10  C5N  C4N  C3N   -58.24  30.0  1
+ A3R  Var_50    H11  C5N  C4N  C3N    57.98  30.0  1
+ A3R  Var_51    H4   O2N  C2N  C3N  -174.22  30.0  3
+ A3R  Var_52    H18  O3'  C3'  C4'  -163.12  30.0  3
+ A3R  Var_53    H14  C5'  C4'  O4'   -58.97  30.0  3
+ A3R  Var_54    H15  C5'  C4'  O4'  -175.01  30.0  3
+ A3R  Var_55    H20  O2'  C2'  C3'   -42.88  30.0  3
+ A3R  Var_56    PA   O3A  PB   O5N   -89.53  30.0  2
+ A3R  Var_57    PA   O3A  PB   O2B    24.91  30.0  2
+ A3R  Var_58    PA   O3A  PB   O1B   157.81  30.0  2
+ A3R  Var_59    C5'  O5'  PA   O3A   174.48  30.0  1
+ A3R  Var_60    C5'  O5'  PA   O1A    61.75  30.0  1
+ A3R  Var_61    C5'  O5'  PA   O2A   -71.79  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

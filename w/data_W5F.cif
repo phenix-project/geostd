@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- W5F  W5F  "ALX5407"  ligand  52  29  .  2025-02-12  2025-02-12
+ W5F  W5F  ALX5407  ligand  52  29  .  2025-02-12  2025-02-18
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-18
 ;
 
 data_comp_W5F
@@ -278,58 +279,62 @@ _chem_comp_tor.period
  W5F  CONST_14  C22  C17  C14  C18     0.00   0.0  0
  W5F  CONST_15  C28  C26  C24  C19   180.00   0.0  0
  W5F  CONST_16  C27  C25  C24  C19   180.00   0.0  0
- W5F  CONST_21  C29  C28  C26  C24     0.00   0.0  0
- W5F  CONST_22  C29  C27  C25  C24     0.00   0.0  0
- W5F  CONST_23  C28  C26  C24  C25     0.00   0.0  0
- W5F  CONST_24  C28  C29  C27  C25     0.00   0.0  0
- W5F  CONST_25  C27  C25  C24  C26     0.00   0.0  0
- W5F  CONST_26  C27  C29  C28  C26     0.00   0.0  0
- W5F  CONST_27  C16  C13  C09  C07   180.00   0.0  0
- W5F  CONST_28  C15  C12  C09  C07   180.00   0.0  0
- W5F  CONST_29  F01  C20  C15  C12   180.00   0.0  0
- W5F  CONST_30  F01  C20  C16  C13   180.00   0.0  0
- W5F  CONST_31  O02  C14  C17  C22   180.00   0.0  0
- W5F  CONST_32  O02  C14  C18  C23   180.00   0.0  0
- W5F  CONST_33  H14  C16  C13  C09   180.00   0.0  0
- W5F  CONST_34  H13  C15  C12  C09   180.00   0.0  0
- W5F  CONST_35  H12  C13  C09  C12   180.00   0.0  0
- W5F  CONST_36  H11  C12  C09  C13   180.00   0.0  0
- W5F  CONST_37  H18  C23  C18  C14   180.00   0.0  0
- W5F  CONST_38  H17  C22  C17  C14   180.00   0.0  0
- W5F  CONST_39  H16  C18  C14  C17   180.00   0.0  0
- W5F  CONST_40  H15  C17  C14  C18   180.00   0.0  0
- W5F  CONST_41  H20  C26  C24  C19     0.00   0.0  0
- W5F  CONST_42  H19  C25  C24  C19     0.00   0.0  0
- W5F  CONST_43  H22  C28  C26  C24   180.00   0.0  0
- W5F  CONST_44  H21  C27  C25  C24   180.00   0.0  0
- W5F  CONST_45  H23  C29  C27  C25   180.00   0.0  0
+ W5F  CONST_17  C29  C28  C26  C24     0.00   0.0  0
+ W5F  CONST_18  C29  C27  C25  C24     0.00   0.0  0
+ W5F  CONST_19  C28  C26  C24  C25     0.00   0.0  0
+ W5F  CONST_20  C28  C29  C27  C25     0.00   0.0  0
+ W5F  CONST_21  C27  C25  C24  C26     0.00   0.0  0
+ W5F  CONST_22  C27  C29  C28  C26     0.00   0.0  0
+ W5F  CONST_23  C16  C13  C09  C07   180.00   0.0  0
+ W5F  CONST_24  C15  C12  C09  C07   180.00   0.0  0
+ W5F  CONST_25  F01  C20  C15  C12   180.00   0.0  0
+ W5F  CONST_26  F01  C20  C16  C13   180.00   0.0  0
+ W5F  CONST_27  O02  C14  C17  C22   180.00   0.0  0
+ W5F  CONST_28  O02  C14  C18  C23   180.00   0.0  0
+ W5F  CONST_29  H14  C16  C13  C09   180.00   0.0  0
+ W5F  CONST_30  H13  C15  C12  C09   180.00   0.0  0
+ W5F  CONST_31  H12  C13  C09  C12   180.00   0.0  0
+ W5F  CONST_32  H11  C12  C09  C13   180.00   0.0  0
+ W5F  CONST_33  H18  C23  C18  C14   180.00   0.0  0
+ W5F  CONST_34  H17  C22  C17  C14   180.00   0.0  0
+ W5F  CONST_35  H16  C18  C14  C17   180.00   0.0  0
+ W5F  CONST_36  H15  C17  C14  C18   180.00   0.0  0
+ W5F  CONST_37  H20  C26  C24  C19     0.00   0.0  0
+ W5F  CONST_38  H19  C25  C24  C19     0.00   0.0  0
+ W5F  CONST_39  H22  C28  C26  C24   180.00   0.0  0
+ W5F  CONST_40  H21  C27  C25  C24   180.00   0.0  0
+ W5F  CONST_41  H23  C29  C27  C25   180.00   0.0  0
  W5F  Var_01    C13  C09  C07  C06    72.58  30.0  2
- W5F  Var_02    C12  C09  C07  C06  -106.60  30.0  2
- W5F  Var_03    C18  C14  O02  C07    -8.71  30.0  2
- W5F  Var_04    C17  C14  O02  C07   172.45  30.0  2
- W5F  Var_05    C14  O02  C07  C09   158.78  30.0  3
- W5F  Var_06    O02  C07  C09  C12    16.40  30.0  2
- W5F  Var_07    O02  C07  C09  C13  -164.42  30.0  2
- W5F  Var_08    H3   C07  C09  C12   134.58  30.0  2
- W5F  Var_09    C14  O02  C07  C06   -77.33  30.0  3
- W5F  Var_10    C09  C07  C06  C08    58.86  30.0  3
- W5F  Var_11    H1   C06  C07  C09   -62.53  30.0  3
- W5F  Var_12    H2   C06  C07  C09  -176.94  30.0  3
- W5F  Var_13    C11  N05  C08  C06   -70.62  30.0  2
- W5F  Var_14    C10  N05  C08  C06   165.76  30.0  2
- W5F  Var_15    N05  C08  C06  C07  -177.13  30.0  3
- W5F  Var_16    C21  C10  N05  C08  -165.80  30.0  3
- W5F  Var_17    O02  C07  C06  C08   -62.14  30.0  3
- W5F  Var_18    C21  C10  N05  C11    69.91  30.0  3
- W5F  Var_19    O04  C21  C10  N05    16.69  30.0  2
- W5F  Var_20    O03  C21  C10  N05  -165.70  30.0  2
- W5F  Var_21    H4   C08  C06  C07    57.72  30.0  3
- W5F  Var_22    H5   C08  C06  C07   -58.15  30.0  3
- W5F  Var_23    H8   C11  N05  C08    61.66  30.0  3
- W5F  Var_24    H9   C11  N05  C08  -179.80  30.0  3
- W5F  Var_25    H10  C11  N05  C08   -59.20  30.0  3
- W5F  Var_26    H6   C10  N05  C08    68.92  30.0  3
- W5F  Var_27    H7   C10  N05  C08   -46.62  30.0  3
+ W5F  Var_02    C26  C24  C19  C22   141.37  30.0  2
+ W5F  Var_03    C12  C09  C07  C06  -106.60  30.0  2
+ W5F  Var_04    C25  C24  C19  C22   -38.62  30.0  2
+ W5F  Var_05    C18  C14  O02  C07    -8.71  30.0  2
+ W5F  Var_06    C26  C24  C19  C23   -38.61  30.0  2
+ W5F  Var_07    C17  C14  O02  C07   172.45  30.0  2
+ W5F  Var_08    C25  C24  C19  C23   141.40  30.0  2
+ W5F  Var_09    C14  O02  C07  C09   158.78  30.0  3
+ W5F  Var_10    O02  C07  C09  C12    16.40  30.0  2
+ W5F  Var_11    O02  C07  C09  C13  -164.42  30.0  2
+ W5F  Var_12    H3   C07  C09  C12   134.58  30.0  2
+ W5F  Var_13    C14  O02  C07  C06   -77.33  30.0  3
+ W5F  Var_14    C09  C07  C06  C08    58.86  30.0  3
+ W5F  Var_15    H1   C06  C07  C09   -62.53  30.0  3
+ W5F  Var_16    H2   C06  C07  C09  -176.94  30.0  3
+ W5F  Var_17    C11  N05  C08  C06   -70.62  30.0  2
+ W5F  Var_18    C10  N05  C08  C06   165.76  30.0  2
+ W5F  Var_19    N05  C08  C06  C07  -177.13  30.0  3
+ W5F  Var_20    C21  C10  N05  C08  -165.80  30.0  3
+ W5F  Var_21    O02  C07  C06  C08   -62.14  30.0  3
+ W5F  Var_22    C21  C10  N05  C11    69.91  30.0  3
+ W5F  Var_23    O04  C21  C10  N05    16.69  30.0  2
+ W5F  Var_24    O03  C21  C10  N05  -165.70  30.0  2
+ W5F  Var_25    H4   C08  C06  C07    57.72  30.0  3
+ W5F  Var_26    H5   C08  C06  C07   -58.15  30.0  3
+ W5F  Var_27    H8   C11  N05  C08    61.66  30.0  3
+ W5F  Var_28    H9   C11  N05  C08  -179.80  30.0  3
+ W5F  Var_29    H10  C11  N05  C08   -59.20  30.0  3
+ W5F  Var_30    H6   C10  N05  C08    68.92  30.0  3
+ W5F  Var_31    H7   C10  N05  C08   -46.62  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BYG  BYG  L-gamma-glutamyl-S-{(4R)-4-[(6-hydroxyhexyl)sulfanyl]-7-nitro-4,5-dihydro-2,1,3-benzoxadiazol-4-yl}-L-cysteinylglycine  ligand  70  40  .  2025-02-12  2025-02-12
+ BYG  BYG  L-gamma-glutamyl-S-{(4R)-4-[(6-hydroxyhexyl)sulfanyl]-7-nitro-4,5-dihydro-2,1,3-benzoxadiazol-4-yl}-L-cysteinylglycine  ligand  70  40  .  2025-02-12  2025-02-14
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-14
 ;
 
 data_comp_BYG
@@ -332,32 +333,70 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BYG  CONST_01  OA2  NA3  CL   CI      0.00   0.0  0
- BYG  CONST_02  NA3  OA2  NA1  CI      0.00   0.0  0
- BYG  CONST_03  OA2  NA1  CI   CL      0.00   0.0  0
- BYG  CONST_04  NA1  OA2  NA3  CL      0.00   0.0  0
- BYG  CONST_05  NA3  CL   CI   NA1     0.00   0.0  0
- BYG  CONST_06  CA3  N3   C2   O2      0.00   0.0  0
- BYG  CONST_07  CA3  N3   C2   CA2   180.00   0.0  0
- BYG  CONST_08  OE1  CD1  N2   CA2     0.00   0.0  0
- BYG  CONST_09  CG1  CD1  N2   CA2   180.00   0.0  0
- BYG  CONST_10  HN3  N3   C2   O2    180.00   0.0  0
- BYG  CONST_11  HN2  N2   CD1  OE1   180.00   0.0  0
- BYG  Var_01    CF5  CF6  CF7  CI      2.28  30.0  1
- BYG  Var_02    CF6  CF7  CI   CL     11.86  30.0  1
- BYG  Var_03    CF7  CF6  CF5  CF4   -31.33  30.0  1
- BYG  Var_04    OA3  NA4  CF7  CI    179.47  30.0  2
- BYG  Var_05    HE6  CE6  S1   CF4   -63.06  30.0  3
- BYG  Var_06    HB2  CB2  SG2  CF4    67.13  30.0  1
- BYG  Var_07    CE4  CE5  CE6  S1   -179.02  30.0  1
- BYG  Var_08    C3   CA3  N3   C2   -178.24  30.0  3
- BYG  Var_09    CB1  CG1  CD1  N2    134.51  30.0  3
- BYG  Var_10    O31  C3   CA3  N3     -0.69  30.0  3
- BYG  Var_11    CD1  CG1  CB1  CA1   179.94  30.0  3
- BYG  Var_12    CE3  CE2  CE1  OA5  -179.68  30.0  3
- BYG  Var_13    CE4  CE3  CE2  CE1  -179.77  30.0  3
- BYG  Var_14    CE5  CE4  CE3  CE2  -179.65  30.0  3
- BYG  Var_15    CE6  CE5  CE4  CE3  -179.54  30.0  3
+ BYG  CONST_01  OA2   NA3  CL   CI      0.00   0.0  0
+ BYG  CONST_02  NA3   OA2  NA1  CI      0.00   0.0  0
+ BYG  CONST_03  OA2   NA1  CI   CL      0.00   0.0  0
+ BYG  CONST_04  NA1   OA2  NA3  CL      0.00   0.0  0
+ BYG  CONST_05  NA3   CL   CI   NA1     0.00   0.0  0
+ BYG  CONST_06  CA3   N3   C2   O2      0.00   0.0  0
+ BYG  CONST_07  CA3   N3   C2   CA2   180.00   0.0  0
+ BYG  CONST_08  OE1   CD1  N2   CA2     0.00   0.0  0
+ BYG  CONST_09  CG1   CD1  N2   CA2   180.00   0.0  0
+ BYG  CONST_10  HN3   N3   C2   O2    180.00   0.0  0
+ BYG  CONST_11  HN2   N2   CD1  OE1   180.00   0.0  0
+ BYG  Var_01    CF5   CF6  CF7  CI      2.28  30.0  1
+ BYG  Var_02    CF6   CF7  CI   CL     11.86  30.0  1
+ BYG  Var_03    CF7   CF6  CF5  CF4   -31.33  30.0  1
+ BYG  Var_04    OA3   NA4  CF7  CI    179.47  30.0  2
+ BYG  Var_05    CF5   CF4  CL   CI    -31.26  30.0  1
+ BYG  Var_06    HE6   CE6  S1   CF4   -63.06  30.0  3
+ BYG  Var_07    CF6   CF5  CF4  CL     42.36  30.0  1
+ BYG  Var_08    HB2   CB2  SG2  CF4    67.13  30.0  1
+ BYG  Var_09    CE4   CE5  CE6  S1   -179.02  30.0  1
+ BYG  Var_10    CF5   CF4  CL   NA3   152.16  30.0  1
+ BYG  Var_11    C3    CA3  N3   C2   -178.24  30.0  3
+ BYG  Var_12    CI    CL   CF4  S1   -153.75  30.0  1
+ BYG  Var_13    CB1   CG1  CD1  N2    134.51  30.0  3
+ BYG  Var_14    NA3   CL   CF4  S1     29.67  30.0  1
+ BYG  Var_15    O31   C3   CA3  N3     -0.69  30.0  3
+ BYG  Var_16    CF6   CF5  CF4  S1    162.40  30.0  1
+ BYG  Var_17    CD1   CG1  CB1  CA1   179.94  30.0  3
+ BYG  Var_18    SG2   CF4  CL   CI     82.09  30.0  1
+ BYG  Var_19    CE3   CE2  CE1  OA5  -179.68  30.0  3
+ BYG  Var_20    CE4   CE3  CE2  CE1  -179.77  30.0  3
+ BYG  Var_21    CE5   CE4  CE3  CE2  -179.65  30.0  3
+ BYG  Var_22    SG2   CF4  CL   NA3   -94.49  30.0  1
+ BYG  Var_23    CE6   CE5  CE4  CE3  -179.54  30.0  3
+ BYG  Var_24    SG2   CF4  CF5  CF6   -72.34  30.0  1
+ BYG  Var_25    HF5   CF5  CF4  CL    166.47  30.0  1
+ BYG  Var_26    HF5A  CF5  CF4  CL    -77.33  30.0  1
+ BYG  Var_27    CE6   S1   CF4  CL   -175.66  30.0  1
+ BYG  Var_28    CB2   SG2  CF4  CL     69.47  30.0  3
+ BYG  Var_29    CF5   CF4  SG2  CB2  -175.67  30.0  3
+ BYG  Var_30    CF5   CF4  S1   CE6    64.88  30.0  3
+ BYG  Var_31    CB2   SG2  CF4  S1    -51.34  30.0  3
+ BYG  Var_32    SG2   CF4  S1   CE6   -55.52  30.0  3
+ BYG  Var_33    CG1   CB1  CA1  C1    174.38  30.0  3
+ BYG  Var_34    O11   C1   CA1  N1    159.83  30.0  2
+ BYG  Var_35    O12   C1   CA1  N1    -22.38  30.0  2
+ BYG  Var_36    CG1   CB1  CA1  N1    -61.26  30.0  3
+ BYG  Var_37    CD1   N2   CA2  C2    -68.37  30.0  1
+ BYG  Var_38    SG2   CB2  CA2  C2   -178.33  30.0  3
+ BYG  Var_39    O2    C2   CA2  N2    -28.56  30.0  1
+ BYG  Var_40    N3    C2   CA2  N2    153.74  30.0  1
+ BYG  Var_41    SG2   CB2  CA2  N2    -56.33  30.0  3
+ BYG  Var_42    CB1   CA1  C1   O11   -73.42  30.0  2
+ BYG  Var_43    CB1   CA1  C1   O12   104.37  30.0  2
+ BYG  Var_44    O2    C2   CA2  CB2    92.85  30.0  1
+ BYG  Var_45    N3    C2   CA2  CB2   -84.85  30.0  1
+ BYG  Var_46    CD1   N2   CA2  CB2   171.30  30.0  1
+ BYG  Var_47    HN1   N1   CA1  C1     53.89  30.0  3
+ BYG  Var_48    HN1A  N1   CA1  C1    171.29  30.0  3
+ BYG  Var_49    HB1   CB1  CA1  C1    -63.24  30.0  3
+ BYG  Var_50    HB1A  CB1  CA1  C1     53.19  30.0  3
+ BYG  Var_51    HA1   CA1  C1   O11    42.16  30.0  2
+ BYG  Var_52    HA2   CA2  N2   CD1    52.17  30.0  3
+ BYG  Var_53    HOA5  OA5  CE1  CE2  -179.37  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

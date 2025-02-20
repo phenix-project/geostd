@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MWX  MWX  "Fradafiban"  ligand  47  27  .  2025-02-12  2025-02-12
+ MWX  MWX  Fradafiban  ligand  47  27  .  2025-02-12  2025-02-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-15
 ;
 
 data_comp_MWX
@@ -251,64 +252,90 @@ _chem_comp_tor.period
  MWX  CONST_05  C15  C12  C11  C10   180.00   0.0  0
  MWX  CONST_06  C14  C09  C10  C11     0.00   0.0  0
  MWX  CONST_07  C14  C13  C12  C11     0.00   0.0  0
- MWX  CONST_10  C19  C20  C15  C12   180.00   0.0  0
- MWX  CONST_11  C17  C16  C15  C12   180.00   0.0  0
- MWX  CONST_14  C15  C12  C13  C14   180.00   0.0  0
- MWX  CONST_15  C18  C19  C20  C15     0.00   0.0  0
- MWX  CONST_16  C18  C17  C16  C15     0.00   0.0  0
- MWX  CONST_17  C19  C20  C15  C16     0.00   0.0  0
- MWX  CONST_18  C19  C18  C17  C16     0.00   0.0  0
- MWX  CONST_19  C20  C19  C18  C17     0.00   0.0  0
- MWX  CONST_20  C20  C15  C16  C17     0.00   0.0  0
- MWX  CONST_21  C06  N05  C03  C02     0.00   0.0  0
- MWX  CONST_22  O08  C09  C10  C11   180.00   0.0  0
- MWX  CONST_23  O08  C09  C14  C13   180.00   0.0  0
- MWX  CONST_24  C21  C18  C17  C16   180.00   0.0  0
- MWX  CONST_25  C21  C18  C19  C20   180.00   0.0  0
- MWX  CONST_26  O04  C03  N05  C06   180.00   0.0  0
- MWX  CONST_27  H9   C13  C14  C09   180.00   0.0  0
- MWX  CONST_28  H8   C11  C10  C09   180.00   0.0  0
- MWX  CONST_29  H10  C14  C09  C10   180.00   0.0  0
- MWX  CONST_30  H9   C13  C12  C11   180.00   0.0  0
- MWX  CONST_31  H10  C14  C13  C12   180.00   0.0  0
- MWX  CONST_32  H7   C10  C11  C12   180.00   0.0  0
- MWX  CONST_33  H14  C20  C15  C12     0.00   0.0  0
- MWX  CONST_34  H11  C16  C15  C12     0.00   0.0  0
- MWX  CONST_35  H8   C11  C12  C13   180.00   0.0  0
- MWX  CONST_36  H7   C10  C09  C14   180.00   0.0  0
- MWX  CONST_37  H13  C19  C20  C15   180.00   0.0  0
- MWX  CONST_38  H9   C13  C12  C15     0.00   0.0  0
- MWX  CONST_39  H8   C11  C12  C15     0.00   0.0  0
- MWX  CONST_40  H12  C17  C16  C15   180.00   0.0  0
- MWX  CONST_41  H14  C20  C15  C16   180.00   0.0  0
- MWX  CONST_42  H13  C19  C18  C17   180.00   0.0  0
- MWX  CONST_43  H14  C20  C19  C18   180.00   0.0  0
- MWX  CONST_44  H11  C16  C17  C18   180.00   0.0  0
- MWX  CONST_45  H12  C17  C18  C19   180.00   0.0  0
- MWX  CONST_46  H11  C16  C15  C20   180.00   0.0  0
- MWX  CONST_47  H17  N05  C03  C02   180.00   0.0  0
- MWX  CONST_48  H17  N05  C03  O04     0.00   0.0  0
- MWX  CONST_49  H18  N22  C21  C18   180.00   0.0  0
- MWX  CONST_50  H19  N23  C21  C18     0.00   0.0  0
- MWX  CONST_51  H20  N23  C21  C18   180.00   0.0  0
- MWX  CONST_52  H19  N23  C21  N22   180.00   0.0  0
- MWX  CONST_53  H20  N23  C21  N22     0.00   0.0  0
- MWX  CONST_54  H18  N22  C21  N23     0.00   0.0  0
+ MWX  CONST_08  C19  C20  C15  C12   180.00   0.0  0
+ MWX  CONST_09  C17  C16  C15  C12   180.00   0.0  0
+ MWX  CONST_10  C15  C12  C13  C14   180.00   0.0  0
+ MWX  CONST_11  C18  C19  C20  C15     0.00   0.0  0
+ MWX  CONST_12  C18  C17  C16  C15     0.00   0.0  0
+ MWX  CONST_13  C19  C20  C15  C16     0.00   0.0  0
+ MWX  CONST_14  C19  C18  C17  C16     0.00   0.0  0
+ MWX  CONST_15  C20  C19  C18  C17     0.00   0.0  0
+ MWX  CONST_16  C20  C15  C16  C17     0.00   0.0  0
+ MWX  CONST_17  C06  N05  C03  C02     0.00   0.0  0
+ MWX  CONST_18  O08  C09  C10  C11   180.00   0.0  0
+ MWX  CONST_19  O08  C09  C14  C13   180.00   0.0  0
+ MWX  CONST_20  C21  C18  C17  C16   180.00   0.0  0
+ MWX  CONST_21  C21  C18  C19  C20   180.00   0.0  0
+ MWX  CONST_22  O04  C03  N05  C06   180.00   0.0  0
+ MWX  CONST_23  H9   C13  C14  C09   180.00   0.0  0
+ MWX  CONST_24  H8   C11  C10  C09   180.00   0.0  0
+ MWX  CONST_25  H10  C14  C09  C10   180.00   0.0  0
+ MWX  CONST_26  H9   C13  C12  C11   180.00   0.0  0
+ MWX  CONST_27  H10  C14  C13  C12   180.00   0.0  0
+ MWX  CONST_28  H7   C10  C11  C12   180.00   0.0  0
+ MWX  CONST_29  H14  C20  C15  C12     0.00   0.0  0
+ MWX  CONST_30  H11  C16  C15  C12     0.00   0.0  0
+ MWX  CONST_31  H8   C11  C12  C13   180.00   0.0  0
+ MWX  CONST_32  H7   C10  C09  C14   180.00   0.0  0
+ MWX  CONST_33  H13  C19  C20  C15   180.00   0.0  0
+ MWX  CONST_34  H9   C13  C12  C15     0.00   0.0  0
+ MWX  CONST_35  H8   C11  C12  C15     0.00   0.0  0
+ MWX  CONST_36  H12  C17  C16  C15   180.00   0.0  0
+ MWX  CONST_37  H14  C20  C15  C16   180.00   0.0  0
+ MWX  CONST_38  H13  C19  C18  C17   180.00   0.0  0
+ MWX  CONST_39  H14  C20  C19  C18   180.00   0.0  0
+ MWX  CONST_40  H11  C16  C17  C18   180.00   0.0  0
+ MWX  CONST_41  H12  C17  C18  C19   180.00   0.0  0
+ MWX  CONST_42  H11  C16  C15  C20   180.00   0.0  0
+ MWX  CONST_43  H17  N05  C03  C02   180.00   0.0  0
+ MWX  CONST_44  H17  N05  C03  O04     0.00   0.0  0
+ MWX  CONST_45  H18  N22  C21  C18   180.00   0.0  0
+ MWX  CONST_46  H19  N23  C21  C18     0.00   0.0  0
+ MWX  CONST_47  H20  N23  C21  C18   180.00   0.0  0
+ MWX  CONST_48  H19  N23  C21  N22   180.00   0.0  0
+ MWX  CONST_49  H20  N23  C21  N22     0.00   0.0  0
+ MWX  CONST_50  H18  N22  C21  N23     0.00   0.0  0
  MWX  Var_01    C09  O08  C07  C06   174.29  30.0  3
- MWX  Var_02    C14  C09  O08  C07  -174.38  30.0  2
- MWX  Var_03    C10  C09  O08  C07     5.59  30.0  2
- MWX  Var_04    N22  C21  C18  C17   154.91  30.0  2
- MWX  Var_05    N23  C21  C18  C17   -22.44  30.0  2
- MWX  Var_06    N22  C21  C18  C19   -24.13  30.0  2
- MWX  Var_07    N23  C21  C18  C19   158.52  30.0  2
- MWX  Var_08    O26  C25  C24  C02   168.56  30.0  2
- MWX  Var_09    O27  C25  C24  C02   -12.99  30.0  2
- MWX  Var_10    H5   C07  O08  C09    53.57  30.0  2
- MWX  Var_11    H6   C07  O08  C09   -65.62  30.0  2
- MWX  Var_12    H15  C24  C25  O26   -69.52  30.0  3
- MWX  Var_13    H16  C24  C25  O26    44.10  30.0  3
- MWX  Var_14    H15  C24  C25  O27   108.93  30.0  3
- MWX  Var_15    H16  C24  C25  O27  -137.45  30.0  3
+ MWX  Var_02    C03  N05  C06  C01    17.32  30.0  1
+ MWX  Var_03    C14  C09  O08  C07  -174.38  30.0  2
+ MWX  Var_04    N05  C03  C02  C01   -14.80  30.0  1
+ MWX  Var_05    C10  C09  O08  C07     5.59  30.0  2
+ MWX  Var_06    N05  C06  C01  C02   -25.17  30.0  1
+ MWX  Var_07    N22  C21  C18  C17   154.91  30.0  2
+ MWX  Var_08    C06  C01  C02  C03    24.50  30.0  1
+ MWX  Var_09    N23  C21  C18  C17   -22.44  30.0  2
+ MWX  Var_10    C20  C15  C12  C11   144.10  30.0  2
+ MWX  Var_11    N22  C21  C18  C19   -24.13  30.0  2
+ MWX  Var_12    C16  C15  C12  C11   -35.88  30.0  2
+ MWX  Var_13    N23  C21  C18  C19   158.52  30.0  2
+ MWX  Var_14    C20  C15  C12  C13   -36.13  30.0  2
+ MWX  Var_15    O26  C25  C24  C02   168.56  30.0  2
+ MWX  Var_16    C16  C15  C12  C13   143.89  30.0  2
+ MWX  Var_17    O27  C25  C24  C02   -12.99  30.0  2
+ MWX  Var_18    O04  C03  C02  C01   167.20  30.0  1
+ MWX  Var_19    H5   C07  O08  C09    53.57  30.0  2
+ MWX  Var_20    C07  C06  C01  C02  -148.03  30.0  1
+ MWX  Var_21    H6   C07  O08  C09   -65.62  30.0  2
+ MWX  Var_22    C07  C06  N05  C03   142.02  30.0  1
+ MWX  Var_23    H15  C24  C25  O26   -69.52  30.0  3
+ MWX  Var_24    C24  C02  C01  C06   -93.89  30.0  1
+ MWX  Var_25    H16  C24  C25  O26    44.10  30.0  3
+ MWX  Var_26    N05  C03  C02  C24   106.74  30.0  1
+ MWX  Var_27    H15  C24  C25  O27   108.93  30.0  3
+ MWX  Var_28    H4   C06  C01  C02    92.36  30.0  1
+ MWX  Var_29    H16  C24  C25  O27  -137.45  30.0  3
+ MWX  Var_30    H1   C01  C02  C03   -93.87  30.0  1
+ MWX  Var_31    H2   C01  C02  C03   145.98  30.0  1
+ MWX  Var_32    H3   C02  C01  C06   142.20  30.0  1
+ MWX  Var_33    O08  C07  C06  C01    59.77  30.0  3
+ MWX  Var_34    C25  C24  C02  C01   -71.12  30.0  1
+ MWX  Var_35    C25  C24  C02  C03   173.94  30.0  1
+ MWX  Var_36    O04  C03  C02  C24   -71.26  30.0  1
+ MWX  Var_37    O08  C07  C06  N05   -57.39  30.0  3
+ MWX  Var_38    H5   C07  C06  C01  -179.11  30.0  3
+ MWX  Var_39    H6   C07  C06  C01   -61.83  30.0  3
+ MWX  Var_40    H15  C24  C02  C01   167.98  30.0  1
+ MWX  Var_41    H16  C24  C02  C01    52.72  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

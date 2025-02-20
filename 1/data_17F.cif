@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 17F  17F  O-[(S)-({(2R)-2,3-bis[(9Z)-octadec-9-enoyloxy]propyl}oxy)(hydroxy)phosphoryl]-L-serine  ligand  130  54  .  2025-02-12  2025-02-12
+ 17F  17F  O-[(S)-({(2R)-2,3-bis[(9Z)-octadec-9-enoyloxy]propyl}oxy)(hydroxy)phosphoryl]-L-serine  ligand  130  54  .  2025-02-12  2025-02-13
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-13
 ;
 
 data_comp_17F
@@ -568,46 +569,68 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 17F  Var_01  C23  C22  C21  C2X     1.99   0.0  2
- 17F  Var_02  C35  C34  C33  C32     2.23   0.0  2
- 17F  Var_03  O1   P1   O3   C1     73.43  30.0  3
- 17F  Var_04  C5   C4   O6   P1   -163.20  30.0  3
- 17F  Var_05  C2   C1   O3   P1    150.11  30.0  2
- 17F  Var_06  O10  C17  O9   C5      1.61  30.0  3
- 17F  Var_07  C8   C7   O7   C6    172.96  30.0  3
- 17F  Var_08  C10  C9   C8   C7   -179.64  30.0  3
- 17F  Var_09  C9   C8   C7   O7    171.06  30.0  3
- 17F  Var_10  C11  C10  C9   C8   -179.39  30.0  3
- 17F  Var_11  C12  C11  C10  C9    176.19  30.0  3
- 17F  Var_12  C19  C18  C17  O9   -159.93  30.0  3
- 17F  Var_13  C1X  C12  C11  C10   177.04  30.0  3
- 17F  Var_14  C2X  C1X  C12  C11  -179.93  30.0  3
- 17F  Var_15  C21  C2X  C1X  C12   173.74  30.0  3
- 17F  Var_16  C20  C19  C18  C17   179.68  30.0  3
- 17F  Var_17  C1Y  C20  C19  C18  -176.73  30.0  3
- 17F  Var_18  C1Z  C1Y  C20  C19   179.76  30.0  3
- 17F  Var_19  C31  C1Z  C1Y  C20  -176.29  30.0  3
- 17F  Var_20  C22  C21  C2X  C1X   114.90  30.0  3
- 17F  Var_21  C32  C31  C1Z  C1Y   179.98  30.0  3
- 17F  Var_22  C33  C32  C31  C1Z   179.95  30.0  3
- 17F  Var_23  C24  C23  C22  C21   110.01  30.0  3
- 17F  Var_24  C25  C24  C23  C22   173.67  30.0  3
- 17F  Var_25  C26  C25  C24  C23   179.63  30.0  3
- 17F  Var_26  C27  C26  C25  C24   177.65  30.0  3
- 17F  Var_27  C28  C27  C26  C25   179.99  30.0  3
- 17F  Var_28  C29  C28  C27  C26   178.61  30.0  3
- 17F  Var_29  C30  C29  C28  C27  -179.96  30.0  3
- 17F  Var_30  C34  C33  C32  C31   112.66  30.0  3
- 17F  Var_31  C36  C35  C34  C33   111.35  30.0  3
- 17F  Var_32  C37  C36  C35  C34  -179.58  30.0  3
- 17F  Var_33  C38  C37  C36  C35  -179.67  30.0  3
- 17F  Var_34  C39  C38  C37  C36  -177.96  30.0  3
- 17F  Var_35  C40  C39  C38  C37  -179.82  30.0  3
- 17F  Var_36  C41  C40  C39  C38  -179.15  30.0  3
- 17F  Var_37  C42  C41  C40  C39  -179.90  30.0  3
- 17F  Var_38  H6   C6   O7   C7    141.64  30.0  2
- 17F  Var_39  H53  C30  C29  C28   -60.82  30.0  3
- 17F  Var_40  H76  C42  C41  C40   -59.26  30.0  3
+ 17F  Var_01  C23   C22  C21  C2X     1.99   0.0  2
+ 17F  Var_02  C35   C34  C33  C32     2.23   0.0  2
+ 17F  Var_03  O1    P1   O3   C1     73.43  30.0  3
+ 17F  Var_04  C5    C4   O6   P1   -163.20  30.0  3
+ 17F  Var_05  C2    C1   O3   P1    150.11  30.0  2
+ 17F  Var_06  O10   C17  O9   C5      1.61  30.0  3
+ 17F  Var_07  C8    C7   O7   C6    172.96  30.0  3
+ 17F  Var_08  C10   C9   C8   C7   -179.64  30.0  3
+ 17F  Var_09  C9    C8   C7   O7    171.06  30.0  3
+ 17F  Var_10  C11   C10  C9   C8   -179.39  30.0  3
+ 17F  Var_11  C12   C11  C10  C9    176.19  30.0  3
+ 17F  Var_12  C19   C18  C17  O9   -159.93  30.0  3
+ 17F  Var_13  C1X   C12  C11  C10   177.04  30.0  3
+ 17F  Var_14  C2X   C1X  C12  C11  -179.93  30.0  3
+ 17F  Var_15  C21   C2X  C1X  C12   173.74  30.0  3
+ 17F  Var_16  C20   C19  C18  C17   179.68  30.0  3
+ 17F  Var_17  C1Y   C20  C19  C18  -176.73  30.0  3
+ 17F  Var_18  C1Z   C1Y  C20  C19   179.76  30.0  3
+ 17F  Var_19  C31   C1Z  C1Y  C20  -176.29  30.0  3
+ 17F  Var_20  C22   C21  C2X  C1X   114.90  30.0  3
+ 17F  Var_21  C32   C31  C1Z  C1Y   179.98  30.0  3
+ 17F  Var_22  C33   C32  C31  C1Z   179.95  30.0  3
+ 17F  Var_23  C24   C23  C22  C21   110.01  30.0  3
+ 17F  Var_24  C25   C24  C23  C22   173.67  30.0  3
+ 17F  Var_25  C26   C25  C24  C23   179.63  30.0  3
+ 17F  Var_26  C27   C26  C25  C24   177.65  30.0  3
+ 17F  Var_27  C28   C27  C26  C25   179.99  30.0  3
+ 17F  Var_28  C29   C28  C27  C26   178.61  30.0  3
+ 17F  Var_29  C30   C29  C28  C27  -179.96  30.0  3
+ 17F  Var_30  C34   C33  C32  C31   112.66  30.0  3
+ 17F  Var_31  C36   C35  C34  C33   111.35  30.0  3
+ 17F  Var_32  C37   C36  C35  C34  -179.58  30.0  3
+ 17F  Var_33  C38   C37  C36  C35  -179.67  30.0  3
+ 17F  Var_34  C39   C38  C37  C36  -177.96  30.0  3
+ 17F  Var_35  C40   C39  C38  C37  -179.82  30.0  3
+ 17F  Var_36  C41   C40  C39  C38  -179.15  30.0  3
+ 17F  Var_37  C42   C41  C40  C39  -179.90  30.0  3
+ 17F  Var_38  H6    C6   O7   C7    141.64  30.0  2
+ 17F  Var_39  H53   C30  C29  C28   -60.82  30.0  3
+ 17F  Var_40  H76   C42  C41  C40   -59.26  30.0  3
+ 17F  Var_41  O5    C3   C2   C1    -67.48  30.0  2
+ 17F  Var_42  O4    C3   C2   C1    110.77  30.0  2
+ 17F  Var_43  O3    C1   C2   N1    -59.07  30.0  3
+ 17F  Var_44  O5    C3   C2   N1    166.65  30.0  2
+ 17F  Var_45  O4    C3   C2   N1    -15.11  30.0  2
+ 17F  Var_46  C4    O6   P1   O1    -32.43  30.0  3
+ 17F  Var_47  C4    O6   P1   O2    100.79  30.0  2
+ 17F  Var_48  O3    C1   C2   C3    176.00  30.0  3
+ 17F  Var_49  C4    O6   P1   O3   -146.20  30.0  3
+ 17F  Var_50  O7    C6   C5   C4     64.35  30.0  3
+ 17F  Var_51  C17   O9   C5   C4     83.11  30.0  3
+ 17F  Var_52  O6    C4   C5   C6    -67.29  30.0  1
+ 17F  Var_53  C17   O9   C5   C6   -149.96  30.0  3
+ 17F  Var_54  O9    C5   C4   O6     54.56  30.0  3
+ 17F  Var_55  O9    C5   C6   O7    -59.55  30.0  3
+ 17F  Var_56  HN1   N1   C2   C1    -77.38  30.0  3
+ 17F  Var_57  HN1A  N1   C2   C1     39.08  30.0  3
+ 17F  Var_58  H1    C1   C2   N1     62.16  30.0  3
+ 17F  Var_59  H1A   C1   C2   N1   -179.77  30.0  3
+ 17F  Var_60  H2    C2   C1   O3     60.61  30.0  1
+ 17F  Var_61  H6A   C6   C5   C4    -60.05  30.0  3
+ 17F  Var_62  H5    C5   C4   O6    174.94  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

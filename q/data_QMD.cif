@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- QMD  QMD  5-O-[(S)-[(1-carboxyethenyl)oxy](hydroxy)phosphoryl]-1-deoxy-1-(8-hydroxy-2,4-dioxo-3,4-dihydropyrimido[4,5-b]quinolin-10(2H)-yl)-D-ribitol  ligand  53  35  .  2025-02-12  2025-02-12
+ QMD  QMD  5-O-[(S)-[(1-carboxyethenyl)oxy](hydroxy)phosphoryl]-1-deoxy-1-(8-hydroxy-2,4-dioxo-3,4-dihydropyrimido[4,5-b]quinolin-10(2H)-yl)-D-ribitol  ligand  53  35  .  2025-02-12  2025-02-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-15
 ;
 
 data_comp_QMD
@@ -264,36 +265,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- QMD  CONST_01  C15  C16  C17  C12    0.00   0.0  0
- QMD  CONST_02  C15  C14  C13  C12    0.00   0.0  0
- QMD  CONST_03  C16  C17  C12  C13    0.00   0.0  0
- QMD  CONST_04  C16  C15  C14  C13    0.00   0.0  0
- QMD  CONST_05  C17  C16  C15  C14    0.00   0.0  0
- QMD  CONST_06  C17  C12  C13  C14    0.00   0.0  0
- QMD  CONST_07  N2   C19  N3   C9     0.00   0.0  0
- QMD  CONST_08  C19  N3   C9   C10    0.00   0.0  0
- QMD  CONST_09  C17  N1   C9   C10    0.00   0.0  0
- QMD  CONST_10  C19  N2   C18  C10    0.00   0.0  0
- QMD  CONST_11  N3   C9   N1   C17  180.00   0.0  0
- QMD  CONST_12  N3   C19  N2   C18    0.00   0.0  0
- QMD  CONST_13  N1   C9   N3   C19  180.00   0.0  0
- QMD  CONST_14  O10  C15  C14  C13  180.00   0.0  0
- QMD  CONST_15  O10  C15  C16  C17  180.00   0.0  0
- QMD  CONST_16  N3   C9   N1   C8     0.00   0.0  0
- QMD  CONST_17  C10  C9   N1   C8   180.00   0.0  0
- QMD  CONST_18  O12  C19  N3   C9   180.00   0.0  0
- QMD  CONST_19  O12  C19  N2   C18  180.00   0.0  0
- QMD  CONST_20  O11  C18  N2   C19  180.00   0.0  0
- QMD  CONST_21  H14  C13  C12  C11    0.00   0.0  0
- QMD  CONST_22  H16  C16  C17  C12  180.00   0.0  0
- QMD  CONST_23  H15  C14  C13  C12  180.00   0.0  0
- QMD  CONST_24  H17  N2   C18  C10  180.00   0.0  0
- QMD  Var_01    C12  C11  C10  C9     1.50   0.0  0
- QMD  Var_02    C9   N1   C8   C7    83.75  30.0  3
- QMD  Var_03    O5   P1   O2   C2   165.69  30.0  1
- QMD  Var_04    O6   C5   C3   C4     0.28  30.0  3
- QMD  Var_05    H6   C4   C3   C5   179.58   0.0  2
- QMD  Var_06    H4   C2   O2   P1    26.11  30.0  3
+ QMD  CONST_01  C15  C16  C17  C12     0.00   0.0  0
+ QMD  CONST_02  C15  C14  C13  C12     0.00   0.0  0
+ QMD  CONST_03  C16  C17  C12  C13     0.00   0.0  0
+ QMD  CONST_04  C16  C15  C14  C13     0.00   0.0  0
+ QMD  CONST_05  C17  C16  C15  C14     0.00   0.0  0
+ QMD  CONST_06  C17  C12  C13  C14     0.00   0.0  0
+ QMD  CONST_07  N2   C19  N3   C9      0.00   0.0  0
+ QMD  CONST_08  C19  N3   C9   C10     0.00   0.0  0
+ QMD  CONST_09  C17  N1   C9   C10     0.00   0.0  0
+ QMD  CONST_10  C19  N2   C18  C10     0.00   0.0  0
+ QMD  CONST_11  N3   C9   N1   C17   180.00   0.0  0
+ QMD  CONST_12  N3   C19  N2   C18     0.00   0.0  0
+ QMD  CONST_13  N1   C9   N3   C19   180.00   0.0  0
+ QMD  CONST_14  O10  C15  C14  C13   180.00   0.0  0
+ QMD  CONST_15  O10  C15  C16  C17   180.00   0.0  0
+ QMD  CONST_16  N3   C9   N1   C8      0.00   0.0  0
+ QMD  CONST_17  C10  C9   N1   C8    180.00   0.0  0
+ QMD  CONST_18  O12  C19  N3   C9    180.00   0.0  0
+ QMD  CONST_19  O12  C19  N2   C18   180.00   0.0  0
+ QMD  CONST_20  O11  C18  N2   C19   180.00   0.0  0
+ QMD  CONST_21  H14  C13  C12  C11     0.00   0.0  0
+ QMD  CONST_22  H16  C16  C17  C12   180.00   0.0  0
+ QMD  CONST_23  H15  C14  C13  C12   180.00   0.0  0
+ QMD  CONST_24  H17  N2   C18  C10   180.00   0.0  0
+ QMD  Var_01    C12  C11  C10  C9      1.50   0.0  0
+ QMD  Var_02    C9   N1   C8   C7     83.75  30.0  3
+ QMD  Var_03    O5   P1   O2   C2    165.69  30.0  1
+ QMD  Var_04    O6   C5   C3   C4      0.28  30.0  3
+ QMD  Var_05    H6   C4   C3   C5    179.58   0.0  2
+ QMD  Var_06    H4   C2   O2   P1     26.11  30.0  3
+ QMD  Var_07    H18  O10  C15  C14    -0.82  30.0  2
+ QMD  Var_08    N1   C8   C7   C6    145.10  30.0  1
+ QMD  Var_09    O9   C7   C8   N1    -90.05  30.0  3
+ QMD  Var_10    H9   C7   C8   N1     30.57  30.0  3
+ QMD  Var_11    C8   C7   C6   C1     72.76  30.0  3
+ QMD  Var_12    O9   C7   C6   C1    -53.80  30.0  3
+ QMD  Var_13    O2   C2   C1   O1     69.55  30.0  2
+ QMD  Var_14    O8   C6   C1   O1   -171.55  30.0  3
+ QMD  Var_15    C7   C6   C1   O1    -49.86  30.0  3
+ QMD  Var_16    O8   C6   C1   C2     64.88  30.0  3
+ QMD  Var_17    C7   C6   C1   C2   -173.43  30.0  3
+ QMD  Var_18    C3   O5   P1   O2    -71.38  30.0  1
+ QMD  Var_19    C6   C1   C2   O2   -169.42  30.0  3
+ QMD  Var_20    O4   P1   O5   C3     41.92  30.0  3
+ QMD  Var_21    O3   P1   O5   C3    174.09  30.0  2
+ QMD  Var_22    P1   O5   C3   C4      8.03  30.0  3
+ QMD  Var_23    P1   O5   C3   C5   -172.34  30.0  3
+ QMD  Var_24    O8   C6   C7   C8   -167.23  30.0  2
+ QMD  Var_25    O9   C7   C6   O8     66.22  30.0  3
+ QMD  Var_26    H8   O8   C6   C1   -166.32  30.0  3
+ QMD  Var_27    H3   C2   C1   O1   -172.14  30.0  2
+ QMD  Var_28    H7   C6   C1   O1     69.59  30.0  3
+ QMD  Var_29    H1   O1   C1   C2    -20.31  30.0  3
+ QMD  Var_30    H2   C1   C2   O2    -52.47  30.0  3
+ QMD  Var_31    H10  O9   C7   C6    156.40  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

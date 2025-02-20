@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NZ0  NZ0  "(3P)-4-[4-(hydroxymethyl)phenyl]-3-(2H-tetrazol-5-yl)pyridine-2-sulfonamide"  ligand  35  23  .  2025-02-12  2025-02-12
+ NZ0  NZ0  (3P)-4-[4-(hydroxymethyl)phenyl]-3-(2H-tetrazol-5-yl)pyridine-2-sulfonamide  ligand  35  23  .  2025-02-12  2025-02-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-15
 ;
 
 data_comp_NZ0
@@ -196,57 +197,65 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- NZ0  CONST_03  C10  C9   C2   C1      0.00   0.0  0
- NZ0  CONST_04  C10  C11  C    C1      0.00   0.0  0
- NZ0  CONST_05  C7   C8   C3   C2    180.00   0.0  0
- NZ0  CONST_06  C6   C4   C3   C2    180.00   0.0  0
- NZ0  CONST_07  C5   C4   C3   C2      0.00   0.0  0
- NZ0  CONST_08  C11  C10  C9   C2      0.00   0.0  0
- NZ0  CONST_09  C11  C    C1   C2      0.00   0.0  0
- NZ0  CONST_10  N5   C7   C8   C3      0.00   0.0  0
- NZ0  CONST_11  N5   C6   C4   C3      0.00   0.0  0
- NZ0  CONST_14  C10  C9   C2   C3    180.00   0.0  0
- NZ0  CONST_15  C    C1   C2   C3    180.00   0.0  0
- NZ0  CONST_16  C7   N5   C6   C4      0.00   0.0  0
- NZ0  CONST_17  C7   C8   C3   C4      0.00   0.0  0
- NZ0  CONST_19  N1   N    C5   C4    180.00   0.0  0
- NZ0  CONST_20  N2   N3   C5   C4    180.00   0.0  0
- NZ0  CONST_22  C    C1   C2   C9      0.00   0.0  0
- NZ0  CONST_23  C    C11  C10  C9      0.00   0.0  0
- NZ0  CONST_24  C6   N5   C7   C8      0.00   0.0  0
- NZ0  CONST_25  C6   C4   C3   C8      0.00   0.0  0
- NZ0  CONST_26  C5   C4   C3   C8    180.00   0.0  0
- NZ0  CONST_27  N3   C5   N    N1      0.00   0.0  0
- NZ0  CONST_28  C5   N3   N2   N1      0.00   0.0  0
- NZ0  CONST_29  N    C5   N3   N2      0.00   0.0  0
- NZ0  CONST_30  C5   N    N1   N2      0.00   0.0  0
- NZ0  CONST_32  N    N1   N2   N3      0.00   0.0  0
- NZ0  CONST_34  N5   C6   C4   C5    180.00   0.0  0
- NZ0  CONST_35  C12  C11  C    C1    180.00   0.0  0
- NZ0  CONST_36  S    C6   C4   C3    180.00   0.0  0
- NZ0  CONST_37  C12  C11  C10  C9    180.00   0.0  0
- NZ0  CONST_38  C7   N5   C6   S     180.00   0.0  0
- NZ0  CONST_39  C5   C4   C6   S       0.00   0.0  0
- NZ0  CONST_40  H2   C9   C2   C1    180.00   0.0  0
- NZ0  CONST_41  H3   C8   C3   C2      0.00   0.0  0
- NZ0  CONST_42  H11  C10  C9   C2    180.00   0.0  0
- NZ0  CONST_43  H12  C    C1   C2    180.00   0.0  0
- NZ0  CONST_44  H10  C7   C8   C3    180.00   0.0  0
- NZ0  CONST_45  H1   C1   C2   C3      0.00   0.0  0
- NZ0  CONST_46  H5   N1   N2   N3    180.00   0.0  0
+ NZ0  CONST_01  C10  C9   C2   C1      0.00   0.0  0
+ NZ0  CONST_02  C10  C11  C    C1      0.00   0.0  0
+ NZ0  CONST_03  C7   C8   C3   C2    180.00   0.0  0
+ NZ0  CONST_04  C6   C4   C3   C2    180.00   0.0  0
+ NZ0  CONST_05  C5   C4   C3   C2      0.00   0.0  0
+ NZ0  CONST_06  C11  C10  C9   C2      0.00   0.0  0
+ NZ0  CONST_07  C11  C    C1   C2      0.00   0.0  0
+ NZ0  CONST_08  N5   C7   C8   C3      0.00   0.0  0
+ NZ0  CONST_09  N5   C6   C4   C3      0.00   0.0  0
+ NZ0  CONST_10  C10  C9   C2   C3    180.00   0.0  0
+ NZ0  CONST_11  C    C1   C2   C3    180.00   0.0  0
+ NZ0  CONST_12  C7   N5   C6   C4      0.00   0.0  0
+ NZ0  CONST_13  C7   C8   C3   C4      0.00   0.0  0
+ NZ0  CONST_14  N1   N    C5   C4    180.00   0.0  0
+ NZ0  CONST_15  N2   N3   C5   C4    180.00   0.0  0
+ NZ0  CONST_16  C    C1   C2   C9      0.00   0.0  0
+ NZ0  CONST_17  C    C11  C10  C9      0.00   0.0  0
+ NZ0  CONST_18  C6   N5   C7   C8      0.00   0.0  0
+ NZ0  CONST_19  C6   C4   C3   C8      0.00   0.0  0
+ NZ0  CONST_20  C5   C4   C3   C8    180.00   0.0  0
+ NZ0  CONST_21  N3   C5   N    N1      0.00   0.0  0
+ NZ0  CONST_22  C5   N3   N2   N1      0.00   0.0  0
+ NZ0  CONST_23  N    C5   N3   N2      0.00   0.0  0
+ NZ0  CONST_24  C5   N    N1   N2      0.00   0.0  0
+ NZ0  CONST_25  N    N1   N2   N3      0.00   0.0  0
+ NZ0  CONST_26  N5   C6   C4   C5    180.00   0.0  0
+ NZ0  CONST_27  C12  C11  C    C1    180.00   0.0  0
+ NZ0  CONST_28  S    C6   C4   C3    180.00   0.0  0
+ NZ0  CONST_29  C12  C11  C10  C9    180.00   0.0  0
+ NZ0  CONST_30  C7   N5   C6   S     180.00   0.0  0
+ NZ0  CONST_31  C5   C4   C6   S       0.00   0.0  0
+ NZ0  CONST_32  H2   C9   C2   C1    180.00   0.0  0
+ NZ0  CONST_33  H3   C8   C3   C2      0.00   0.0  0
+ NZ0  CONST_34  H11  C10  C9   C2    180.00   0.0  0
+ NZ0  CONST_35  H12  C    C1   C2    180.00   0.0  0
+ NZ0  CONST_36  H10  C7   C8   C3    180.00   0.0  0
+ NZ0  CONST_37  H1   C1   C2   C3      0.00   0.0  0
+ NZ0  CONST_38  H5   N1   N2   N3    180.00   0.0  0
  NZ0  Var_01    O1   S    C6   C4    167.29  30.0  1
- NZ0  Var_02    O    S    C6   C4     38.13  30.0  1
- NZ0  Var_03    N4   S    C6   C4    -80.89  30.0  1
- NZ0  Var_04    C10  C11  C12  O2     37.87  30.0  2
- NZ0  Var_05    C    C11  C12  O2   -144.04  30.0  2
- NZ0  Var_06    N5   C6   S    O1    -10.62  30.0  2
- NZ0  Var_07    N5   C6   S    O    -139.78  30.0  2
- NZ0  Var_08    N5   C6   S    N4    101.20  30.0  2
- NZ0  Var_09    H6   C12  C11  C10   160.81  30.0  2
- NZ0  Var_10    H7   C12  C11  C10   -83.84  30.0  2
- NZ0  Var_11    H8   N4   S    C6     75.70  30.0  3
- NZ0  Var_12    H9   N4   S    C6   -156.68  30.0  3
- NZ0  Var_13    H4   O2   C12  C11  -164.51  30.0  3
+ NZ0  Var_02    C8   C3   C2   C1   -122.91  30.0  2
+ NZ0  Var_03    O    S    C6   C4     38.13  30.0  1
+ NZ0  Var_04    C4   C3   C2   C1     56.37  30.0  2
+ NZ0  Var_05    N4   S    C6   C4    -80.89  30.0  1
+ NZ0  Var_06    N    C5   C4   C3     57.17  30.0  2
+ NZ0  Var_07    C10  C11  C12  O2     37.87  30.0  2
+ NZ0  Var_08    N3   C5   C4   C3   -121.53  30.0  2
+ NZ0  Var_09    C    C11  C12  O2   -144.04  30.0  2
+ NZ0  Var_10    C9   C2   C3   C4   -125.55  30.0  2
+ NZ0  Var_11    N5   C6   S    O1    -10.62  30.0  2
+ NZ0  Var_12    C8   C3   C2   C9     55.16  30.0  2
+ NZ0  Var_13    N5   C6   S    O    -139.78  30.0  2
+ NZ0  Var_14    C6   C4   C5   N3     58.59  30.0  2
+ NZ0  Var_15    N5   C6   S    N4    101.20  30.0  2
+ NZ0  Var_16    N    C5   C4   C6   -122.72  30.0  2
+ NZ0  Var_17    H6   C12  C11  C10   160.81  30.0  2
+ NZ0  Var_18    H7   C12  C11  C10   -83.84  30.0  2
+ NZ0  Var_19    H8   N4   S    C6     75.70  30.0  3
+ NZ0  Var_20    H9   N4   S    C6   -156.68  30.0  3
+ NZ0  Var_21    H4   O2   C12  C11  -164.51  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

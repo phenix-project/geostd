@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SA8  SA8  5'-{[(3S)-3-amino-3-carboxypropyl](methyl)amino}-5'-deoxyadenosine  ligand  49  27  .  2025-02-12  2025-02-12
+ SA8  SA8  5'-{[(3S)-3-amino-3-carboxypropyl](methyl)amino}-5'-deoxyadenosine  ligand  49  27  .  2025-02-12  2025-02-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-15
 ;
 
 data_comp_SA8
@@ -255,37 +256,78 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SA8  CONST_01  C5    N7   C8  N9      0.00   0.0  0
- SA8  CONST_02  N7    C5   C4  N9      0.00   0.0  0
- SA8  CONST_03  C6    C5   C4  N9    180.00   0.0  0
- SA8  CONST_04  C2    N3   C4  N9    180.00   0.0  0
- SA8  CONST_05  C5    C4   N9  C8      0.00   0.0  0
- SA8  CONST_06  N3    C4   N9  C8    180.00   0.0  0
- SA8  CONST_07  C6    C5   N7  C8    180.00   0.0  0
- SA8  CONST_08  C4    C5   N7  C8      0.00   0.0  0
- SA8  CONST_09  C4    N9   C8  N7      0.00   0.0  0
- SA8  CONST_10  N1    C6   C5  N7    180.00   0.0  0
- SA8  CONST_11  N3    C4   C5  N7    180.00   0.0  0
- SA8  CONST_12  C2    N1   C6  C5      0.00   0.0  0
- SA8  CONST_13  C2    N3   C4  C5      0.00   0.0  0
- SA8  CONST_14  N3    C4   C5  C6      0.00   0.0  0
- SA8  CONST_15  N3    C2   N1  C6      0.00   0.0  0
- SA8  CONST_16  C4    C5   C6  N1      0.00   0.0  0
- SA8  CONST_17  C4    N3   C2  N1      0.00   0.0  0
- SA8  CONST_18  N7    C8   N9  C1'   180.00   0.0  0
- SA8  CONST_19  C5    C4   N9  C1'   180.00   0.0  0
- SA8  CONST_20  N3    C4   N9  C1'     0.00   0.0  0
- SA8  CONST_21  N6    C6   C5  N7      0.00   0.0  0
- SA8  CONST_22  C4    C5   C6  N6    180.00   0.0  0
- SA8  CONST_23  C2    N1   C6  N6    180.00   0.0  0
- SA8  CONST_24  H8    C8   N9  C1'     0.00   0.0  0
- SA8  CONST_25  H3    C2   N1  C6    180.00   0.0  0
- SA8  CONST_26  HN61  N6   C6  C5      0.00   0.0  0
- SA8  CONST_27  HN62  N6   C6  C5    180.00   0.0  0
- SA8  Var_01    C4'   C5'  ND  CG   -173.22  30.0  3
- SA8  Var_02    ND    CG   CB  CA   -174.61  30.0  3
- SA8  Var_03    CE    ND   CG  CB    -70.29  30.0  3
- SA8  Var_04    HE1   CE   ND  CG    175.03  30.0  3
+ SA8  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ SA8  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ SA8  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ SA8  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ SA8  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ SA8  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ SA8  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ SA8  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ SA8  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ SA8  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ SA8  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ SA8  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ SA8  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ SA8  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ SA8  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ SA8  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ SA8  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ SA8  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ SA8  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ SA8  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ SA8  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ SA8  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ SA8  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ SA8  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ SA8  CONST_25  H3    C2   N1   C6    180.00   0.0  0
+ SA8  CONST_26  HN61  N6   C6   C5      0.00   0.0  0
+ SA8  CONST_27  HN62  N6   C6   C5    180.00   0.0  0
+ SA8  Var_01    C4'   C5'  ND   CG   -173.22  30.0  3
+ SA8  Var_02    C2'   C1'  O4'  C4'     0.97  30.0  1
+ SA8  Var_03    ND    CG   CB   CA   -174.61  30.0  3
+ SA8  Var_04    N9    C1'  O4'  C4'  -121.60  30.0  1
+ SA8  Var_05    CE    ND   CG   CB    -70.29  30.0  3
+ SA8  Var_06    C1'   C2'  C3'  C4'   -35.33  30.0  1
+ SA8  Var_07    HE1   CE   ND   CG    175.03  30.0  3
+ SA8  Var_08    C2'   C3'  C4'  O4'    36.98  30.0  1
+ SA8  Var_09    C3'   C2'  C1'  O4'    22.42  30.0  1
+ SA8  Var_10    C8    N9   C1'  O4'    26.94  30.0  2
+ SA8  Var_11    C4    N9   C1'  O4'  -155.61  30.0  2
+ SA8  Var_12    C1'   O4'  C4'  C3'   -24.47  30.0  1
+ SA8  Var_13    N9    C1'  C2'  C3'   142.23  30.0  1
+ SA8  Var_14    C8    N9   C1'  C2'   -91.77  30.0  2
+ SA8  Var_15    C4    N9   C1'  C2'    85.68  30.0  2
+ SA8  Var_16    C1'   O4'  C4'  C5'    96.37  30.0  1
+ SA8  Var_17    C2'   C3'  C4'  C5'   -84.87  30.0  1
+ SA8  Var_18    O2'   C2'  C3'  C4'  -154.14  30.0  1
+ SA8  Var_19    O3'   C3'  C4'  O4'   -79.83  30.0  1
+ SA8  Var_20    O2'   C2'  C1'  O4'   144.13  30.0  1
+ SA8  Var_21    C1'   C2'  C3'  O3'    80.01  30.0  1
+ SA8  Var_22    N9    C1'  C2'  O2'   -96.06  30.0  1
+ SA8  Var_23    H1'   C1'  O4'  C4'   121.18  30.0  1
+ SA8  Var_24    H2'   C2'  C3'  C4'    80.59  30.0  1
+ SA8  Var_25    H3'   C3'  C4'  O4'   155.86  30.0  1
+ SA8  Var_26    H4'   C4'  C3'  C2'   152.14  30.0  1
+ SA8  Var_27    O4'   C4'  C5'  ND     46.85  30.0  3
+ SA8  Var_28    C3'   C4'  C5'  ND    163.80  30.0  3
+ SA8  Var_29    O3'   C3'  C4'  C5'   158.32  30.0  1
+ SA8  Var_30    O2'   C2'  C3'  O3'   -38.80  30.0  1
+ SA8  Var_31    H2    O3'  C3'  C4'   154.69  30.0  3
+ SA8  Var_32    H5'1  C5'  C4'  O4'   -73.85  30.0  3
+ SA8  Var_33    H5'2  C5'  C4'  O4'   171.84  30.0  3
+ SA8  Var_34    H1    O2'  C2'  C3'   -87.76  30.0  3
+ SA8  Var_35    OXT   C    CA   N     153.69  30.0  2
+ SA8  Var_36    O     C    CA   N     -28.80  30.0  2
+ SA8  Var_37    CG    CB   CA   N     -64.62  30.0  3
+ SA8  Var_38    CG    CB   CA   C     171.63  30.0  3
+ SA8  Var_39    CB    CA   C    OXT   -79.88  30.0  3
+ SA8  Var_40    CB    CA   C    O      97.63  30.0  3
+ SA8  Var_41    HB1   CB   CA   N     175.06  30.0  3
+ SA8  Var_42    HB2   CB   CA   N      58.89  30.0  3
+ SA8  Var_43    HN1   N    CA   C      51.44  30.0  3
+ SA8  Var_44    HN2   N    CA   C     168.62  30.0  3
+ SA8  Var_45    HA    CA   C    OXT    35.91  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

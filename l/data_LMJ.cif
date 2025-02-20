@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LMJ  LMJ  (5aS,12aS,13aS)-9-bromo-8-chloro-12,12-dimethyl-2,3,11,12,12a,13-hexahydro-1H,5H,6H-5a,13a-(epiminomethano)indolizino[7,6-b]carbazol-14-one  ligand  50  27  .  2025-02-12  2025-02-12
+ LMJ  LMJ  (5aS,12aS,13aS)-9-bromo-8-chloro-12,12-dimethyl-2,3,11,12,12a,13-hexahydro-1H,5H,6H-5a,13a-(epiminomethano)indolizino[7,6-b]carbazol-14-one  ligand  50  27  .  2025-02-12  2025-02-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-15
 ;
 
 data_comp_LMJ
@@ -278,39 +279,90 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LMJ  CONST_01  C05   C06  C07  C02    0.00   0.0  0
- LMJ  CONST_02  C05   C04  C03  C02    0.00   0.0  0
- LMJ  CONST_03  N27   C04  C03  C02  180.00   0.0  0
- LMJ  CONST_04  C06   C07  C02  C03    0.00   0.0  0
- LMJ  CONST_05  C06   C05  C04  C03    0.00   0.0  0
- LMJ  CONST_06  C09   C05  C04  C03  180.00   0.0  0
- LMJ  CONST_07  C10   N27  C04  C03  180.00   0.0  0
- LMJ  CONST_08  C07   C02  C03  C04    0.00   0.0  0
- LMJ  CONST_09  C07   C06  C05  C04    0.00   0.0  0
- LMJ  CONST_10  C10   C09  C05  C04    0.00   0.0  0
- LMJ  CONST_11  C09   C10  N27  C04    0.00   0.0  0
- LMJ  CONST_12  C10   N27  C04  C05    0.00   0.0  0
- LMJ  CONST_13  N27   C10  C09  C05    0.00   0.0  0
- LMJ  CONST_14  N27   C04  C05  C06  180.00   0.0  0
- LMJ  CONST_15  C10   C09  C05  C06  180.00   0.0  0
- LMJ  CONST_16  C09   C05  C06  C07  180.00   0.0  0
- LMJ  CONST_17  N27   C04  C05  C09    0.00   0.0  0
- LMJ  CONST_18  CL08  C07  C02  C03  180.00   0.0  0
- LMJ  CONST_19  BR01  C02  C03  C04  180.00   0.0  0
- LMJ  CONST_20  CL08  C07  C06  C05  180.00   0.0  0
- LMJ  CONST_21  BR01  C02  C07  C06  180.00   0.0  0
- LMJ  CONST_22  H24   N27  C10  C11    0.00   0.0  0
- LMJ  CONST_23  H18   C06  C07  C02  180.00   0.0  0
- LMJ  CONST_24  H17   C03  C04  C05  180.00   0.0  0
- LMJ  Var_01    N27   C10  C11  C14  171.71  30.0  1
- LMJ  Var_02    C05   C09  C17  C16  160.89  30.0  1
- LMJ  Var_03    C20   N24  C25  C16   11.42  30.0  1
- LMJ  Var_04    C20   C19  N18  C16    4.72  30.0  2
- LMJ  Var_05    C22   C23  N24  C20  -20.32  30.0  1
- LMJ  Var_06    C23   C22  C21  C20   25.09  30.0  1
- LMJ  Var_07    N24   C23  C22  C21   -3.72  30.0  1
- LMJ  Var_08    H1    C12  C11  C14  177.53  30.0  3
- LMJ  Var_09    H4    C13  C11  C14   54.31  30.0  3
+ LMJ  CONST_01  C05   C06  C07  C02     0.00   0.0  0
+ LMJ  CONST_02  C05   C04  C03  C02     0.00   0.0  0
+ LMJ  CONST_03  N27   C04  C03  C02   180.00   0.0  0
+ LMJ  CONST_04  C06   C07  C02  C03     0.00   0.0  0
+ LMJ  CONST_05  C06   C05  C04  C03     0.00   0.0  0
+ LMJ  CONST_06  C09   C05  C04  C03   180.00   0.0  0
+ LMJ  CONST_07  C10   N27  C04  C03   180.00   0.0  0
+ LMJ  CONST_08  C07   C02  C03  C04     0.00   0.0  0
+ LMJ  CONST_09  C07   C06  C05  C04     0.00   0.0  0
+ LMJ  CONST_10  C10   C09  C05  C04     0.00   0.0  0
+ LMJ  CONST_11  C09   C10  N27  C04     0.00   0.0  0
+ LMJ  CONST_12  C10   N27  C04  C05     0.00   0.0  0
+ LMJ  CONST_13  N27   C10  C09  C05     0.00   0.0  0
+ LMJ  CONST_14  N27   C04  C05  C06   180.00   0.0  0
+ LMJ  CONST_15  C10   C09  C05  C06   180.00   0.0  0
+ LMJ  CONST_16  C09   C05  C06  C07   180.00   0.0  0
+ LMJ  CONST_17  N27   C04  C05  C09     0.00   0.0  0
+ LMJ  CONST_18  CL08  C07  C02  C03   180.00   0.0  0
+ LMJ  CONST_19  BR01  C02  C03  C04   180.00   0.0  0
+ LMJ  CONST_20  CL08  C07  C06  C05   180.00   0.0  0
+ LMJ  CONST_21  BR01  C02  C07  C06   180.00   0.0  0
+ LMJ  CONST_22  H24   N27  C10  C11     0.00   0.0  0
+ LMJ  CONST_23  H18   C06  C07  C02   180.00   0.0  0
+ LMJ  CONST_24  H17   C03  C04  C05   180.00   0.0  0
+ LMJ  Var_01    N27   C10  C11  C14   171.71  30.0  1
+ LMJ  Var_02    C05   C09  C17  C16   160.89  30.0  1
+ LMJ  Var_03    C20   N24  C25  C16    11.42  30.0  1
+ LMJ  Var_04    C20   C19  N18  C16     4.72  30.0  2
+ LMJ  Var_05    C22   C23  N24  C20   -20.32  30.0  1
+ LMJ  Var_06    C23   C22  C21  C20    25.09  30.0  1
+ LMJ  Var_07    N24   C23  C22  C21    -3.72  30.0  1
+ LMJ  Var_08    H1    C12  C11  C14   177.53  30.0  3
+ LMJ  Var_09    C17   C16  C14  C11   -57.65  30.0  1
+ LMJ  Var_10    H4    C13  C11  C14    54.31  30.0  3
+ LMJ  Var_11    C25   C16  C14  C11    68.98  30.0  1
+ LMJ  Var_12    N18   C16  C14  C11  -176.77  30.0  1
+ LMJ  Var_13    C20   C15  C14  C11  -125.45  30.0  1
+ LMJ  Var_14    C09   C17  C16  C14    44.93  30.0  1
+ LMJ  Var_15    N24   C25  C16  C14    52.56  30.0  1
+ LMJ  Var_16    C19   N18  C16  C14   -63.24  30.0  3
+ LMJ  Var_17    N24   C20  C15  C14    55.30  30.0  1
+ LMJ  Var_18    C19   C20  C15  C14   -62.05  30.0  1
+ LMJ  Var_19    C21   C20  C15  C14   169.94  30.0  1
+ LMJ  Var_20    C10   C11  C14  C15   163.32  30.0  1
+ LMJ  Var_21    C17   C16  C14  C15   172.46  30.0  1
+ LMJ  Var_22    C25   C16  C14  C15   -60.90  30.0  1
+ LMJ  Var_23    N18   C16  C14  C15    53.35  30.0  1
+ LMJ  Var_24    C25   N24  C20  C15   -67.58  30.0  1
+ LMJ  Var_25    C23   N24  C20  C15   159.59  30.0  1
+ LMJ  Var_26    N18   C19  C20  C15    58.59  30.0  3
+ LMJ  Var_27    C22   C21  C20  C15  -154.82  30.0  1
+ LMJ  Var_28    C10   C11  C14  C16    36.83  30.0  1
+ LMJ  Var_29    C20   C15  C14  C16     5.29  30.0  1
+ LMJ  Var_30    N24   C25  C16  C17   178.86  30.0  1
+ LMJ  Var_31    C19   N18  C16  C17   176.04  30.0  3
+ LMJ  Var_32    C09   C17  C16  N18   162.22  30.0  1
+ LMJ  Var_33    N24   C25  C16  N18   -62.22  30.0  1
+ LMJ  Var_34    N24   C20  C19  N18   -58.21  30.0  3
+ LMJ  Var_35    C21   C20  C19  N18  -171.99  30.0  3
+ LMJ  Var_36    C25   C16  N18  C19    55.07  30.0  3
+ LMJ  Var_37    C25   N24  C20  C19    48.16  30.0  1
+ LMJ  Var_38    C23   N24  C20  C19   -84.67  30.0  1
+ LMJ  Var_39    C22   C21  C20  C19    80.75  30.0  1
+ LMJ  Var_40    C25   N24  C20  C21   169.07  30.0  1
+ LMJ  Var_41    C23   N24  C20  C21    36.24  30.0  1
+ LMJ  Var_42    C25   C16  C17  C09   -81.17  30.0  1
+ LMJ  Var_43    N24   C20  C21  C22   -36.93  30.0  1
+ LMJ  Var_44    C16   C14  C11  C12   154.99  30.0  1
+ LMJ  Var_45    C15   C14  C11  C12   -78.52  30.0  1
+ LMJ  Var_46    C16   C14  C11  C13   -84.73  30.0  1
+ LMJ  Var_47    C15   C14  C11  C13    41.75  30.0  1
+ LMJ  Var_48    O26   C19  C20  C15  -121.39  30.0  3
+ LMJ  Var_49    O26   C19  C20  C21     8.03  30.0  3
+ LMJ  Var_50    O26   C19  C20  N24   121.81  30.0  3
+ LMJ  Var_51    H8    C15  C14  C11    -6.19  30.0  1
+ LMJ  Var_52    H9    C15  C14  C11   112.85  30.0  1
+ LMJ  Var_53    H10   C17  C16  C14   167.57  30.0  1
+ LMJ  Var_54    H11   C17  C16  C14   -76.32  30.0  1
+ LMJ  Var_55    H21   C25  C16  C14   173.01  30.0  1
+ LMJ  Var_56    H22   C25  C16  C14   -70.46  30.0  1
+ LMJ  Var_57    H12   N18  C16  C14   125.21  30.0  3
+ LMJ  Var_58    H13   C21  C20  C15   -36.95  30.0  1
+ LMJ  Var_59    H14   C21  C20  C15    82.25  30.0  1
+ LMJ  Var_60    H7    C14  C16  C17    57.71  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MRT  MRT  '(5R,9S,12S,15S,18S,21S)-21-benzyl-12,18-bis(carboxymethyl)-15-cyclohexyl-1-(9H-fluoren-9-yl)-4-methyl-9-(2-methylpropyl)-3,6,10,13,16,19-hexaoxo-5-phenyl-2-oxa-4,8,11,14,17,20-hexaazadocosan-22-oic acid (non-preferred name)'  ligand  138  75  .  2025-02-12  2025-02-12
+ MRT  MRT  '(5R,9S,12S,15S,18S,21S)-21-benzyl-12,18-bis(carboxymethyl)-15-cyclohexyl-1-(9H-fluoren-9-yl)-4-methyl-9-(2-methylpropyl)-3,6,10,13,16,19-hexaoxo-5-phenyl-2-oxa-4,8,11,14,17,20-hexaazadocosan-22-oic acid (non-preferred name)'  ligand  138  75  .  2025-02-12  2025-02-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-15
 ;
 
 data_comp_MRT
@@ -635,55 +636,142 @@ _chem_comp_tor.period
  MRT  CONST_31  C75   C70  C71  C72     0.00   0.0  0
  MRT  CONST_32  C75   C74  C73  C72     0.00   0.0  0
  MRT  CONST_33  C24   C23  C22  C21   180.00   0.0  0
- MRT  CONST_34  C26   C27  C22  C21   180.00   0.0  0
- MRT  CONST_35  C72   C71  C70  C69   180.00   0.0  0
- MRT  CONST_36  C74   C75  C70  C69   180.00   0.0  0
- MRT  CONST_37  H6    C6   C5   C4      0.00   0.0  0
- MRT  CONST_38  H10   C10  C9   C4      0.00   0.0  0
- MRT  CONST_39  H7    C7   C6   C5    180.00   0.0  0
- MRT  CONST_40  H16   C16  C15  C5    180.00   0.0  0
- MRT  CONST_41  H8    C8   C7   C6    180.00   0.0  0
- MRT  CONST_42  H11   C11  C10  C9    180.00   0.0  0
- MRT  CONST_43  H13   C13  C14  C9    180.00   0.0  0
- MRT  CONST_44  H12   C12  C11  C10   180.00   0.0  0
- MRT  CONST_45  H24   C24  C23  C22   180.00   0.0  0
- MRT  CONST_46  H26   C26  C27  C22   180.00   0.0  0
- MRT  CONST_47  H27   C27  C22  C23   180.00   0.0  0
- MRT  CONST_48  H25   C25  C24  C23   180.00   0.0  0
- MRT  CONST_49  H23   C23  C24  C25   180.00   0.0  0
- MRT  CONST_50  H72   C72  C71  C70   180.00   0.0  0
- MRT  CONST_51  H74   C74  C75  C70   180.00   0.0  0
- MRT  CONST_52  H75   C75  C70  C71   180.00   0.0  0
- MRT  CONST_53  H73   C73  C72  C71   180.00   0.0  0
- MRT  CONST_54  H71   C71  C72  C73   180.00   0.0  0
- MRT  CONST_55  C39   N38  C31  O30     0.00   0.0  0
- MRT  CONST_56  C39   N38  C31  C32   180.00   0.0  0
- MRT  CONST_57  C47   N46  C44  C39   180.00   0.0  0
- MRT  CONST_58  C47   N46  C44  O45     0.00   0.0  0
- MRT  CONST_59  C57   N56  C54  C47   180.00   0.0  0
- MRT  CONST_60  C57   N56  C54  O55     0.00   0.0  0
- MRT  CONST_61  C65   N64  C62  C57   180.00   0.0  0
- MRT  CONST_62  C65   N64  C62  O63     0.00   0.0  0
- MRT  CONST_63  HN38  N38  C31  O30   180.00   0.0  0
- MRT  CONST_64  HN46  N46  C44  C39     0.00   0.0  0
- MRT  CONST_65  HN56  N56  C54  C47     0.00   0.0  0
- MRT  CONST_66  HN64  N64  C62  C57     0.00   0.0  0
+ MRT  CONST_34  C10   C9   C4   C5    180.00   0.0  0
+ MRT  CONST_35  C26   C27  C22  C21   180.00   0.0  0
+ MRT  CONST_36  C14   C9   C4   C5      0.00   0.0  0
+ MRT  CONST_37  C72   C71  C70  C69   180.00   0.0  0
+ MRT  CONST_38  C9    C4   C5   C6    180.00   0.0  0
+ MRT  CONST_39  C74   C75  C70  C69   180.00   0.0  0
+ MRT  CONST_40  C15   C5   C4   C9      0.00   0.0  0
+ MRT  CONST_41  H6    C6   C5   C4      0.00   0.0  0
+ MRT  CONST_42  H10   C10  C9   C4      0.00   0.0  0
+ MRT  CONST_43  H7    C7   C6   C5    180.00   0.0  0
+ MRT  CONST_44  H16   C16  C15  C5    180.00   0.0  0
+ MRT  CONST_45  H8    C8   C7   C6    180.00   0.0  0
+ MRT  CONST_46  H11   C11  C10  C9    180.00   0.0  0
+ MRT  CONST_47  H13   C13  C14  C9    180.00   0.0  0
+ MRT  CONST_48  H12   C12  C11  C10   180.00   0.0  0
+ MRT  CONST_49  H24   C24  C23  C22   180.00   0.0  0
+ MRT  CONST_50  H26   C26  C27  C22   180.00   0.0  0
+ MRT  CONST_51  H27   C27  C22  C23   180.00   0.0  0
+ MRT  CONST_52  H25   C25  C24  C23   180.00   0.0  0
+ MRT  CONST_53  H23   C23  C24  C25   180.00   0.0  0
+ MRT  CONST_54  H72   C72  C71  C70   180.00   0.0  0
+ MRT  CONST_55  H74   C74  C75  C70   180.00   0.0  0
+ MRT  CONST_56  H75   C75  C70  C71   180.00   0.0  0
+ MRT  CONST_57  H73   C73  C72  C71   180.00   0.0  0
+ MRT  CONST_58  H71   C71  C72  C73   180.00   0.0  0
+ MRT  CONST_59  C39   N38  C31  O30     0.00   0.0  0
+ MRT  CONST_60  C39   N38  C31  C32   180.00   0.0  0
+ MRT  CONST_61  C47   N46  C44  C39   180.00   0.0  0
+ MRT  CONST_62  C47   N46  C44  O45     0.00   0.0  0
+ MRT  CONST_63  C57   N56  C54  C47   180.00   0.0  0
+ MRT  CONST_64  C57   N56  C54  O55     0.00   0.0  0
+ MRT  CONST_65  C65   N64  C62  C57   180.00   0.0  0
+ MRT  CONST_66  C65   N64  C62  O63     0.00   0.0  0
+ MRT  CONST_67  HN38  N38  C31  O30   180.00   0.0  0
+ MRT  CONST_68  HN46  N46  C44  C39     0.00   0.0  0
+ MRT  CONST_69  HN56  N56  C54  C47     0.00   0.0  0
+ MRT  CONST_70  HN64  N64  C62  C57     0.00   0.0  0
  MRT  Var_01    C51   C50  C49  C48   -56.33  30.0  1
  MRT  Var_02    C51   C52  C53  C48    55.44  30.0  1
  MRT  Var_03    C52   C51  C50  C49    55.54  30.0  1
  MRT  Var_04    C53   C52  C51  C50   -55.36  30.0  1
  MRT  Var_05    C71   C70  C69  C65    88.52  30.0  2
- MRT  Var_06    C21   N28  C17  O1      8.27  30.0  2
- MRT  Var_07    N28   C17  O2   C3   -177.89  30.0  3
- MRT  Var_08    C32   N37  C18  C19   156.92  30.0  3
- MRT  Var_09    N37   C18  C19  O20    60.63  30.0  1
- MRT  Var_10    C35   C34  C33  C32    60.44  30.0  3
- MRT  Var_11    O42   C41  C40  C39   140.60  30.0  3
- MRT  Var_12    O60   C59  C58  C57   145.43  30.0  3
- MRT  Var_13    H3    C3   O2   C17   -62.17  30.0  3
- MRT  Var_14    H29   C29  N28  C17    51.66  30.0  3
- MRT  Var_15    H35   C35  C34  C33   176.44  30.0  3
- MRT  Var_16    H36   C36  C34  C33    58.27  30.0  3
+ MRT  Var_06    C52   C53  C48  C49   -55.50  30.0  1
+ MRT  Var_07    C21   N28  C17  O1      8.27  30.0  2
+ MRT  Var_08    C53   C48  C49  C50    56.21  30.0  1
+ MRT  Var_09    N28   C17  O2   C3   -177.89  30.0  3
+ MRT  Var_10    C6    C5   C4   C3     59.99  30.0  1
+ MRT  Var_11    C32   N37  C18  C19   156.92  30.0  3
+ MRT  Var_12    C15   C5   C4   C3   -119.23  30.0  1
+ MRT  Var_13    N37   C18  C19  O20    60.63  30.0  1
+ MRT  Var_14    C10   C9   C4   C3    -63.82  30.0  1
+ MRT  Var_15    C35   C34  C33  C32    60.44  30.0  3
+ MRT  Var_16    C14   C9   C4   C3    116.58  30.0  1
+ MRT  Var_17    C62   C57  C58  C59   172.22  30.0  2
+ MRT  Var_18    C66   C65  N64  C62  -137.05  30.0  3
+ MRT  Var_19    C69   C65  N64  C62   101.46  30.0  3
+ MRT  Var_20    O67   C66  C65  N64   -12.04  30.0  2
+ MRT  Var_21    O68   C66  C65  N64   169.49  30.0  2
+ MRT  Var_22    C69   C65  C66  O67   111.21  30.0  3
+ MRT  Var_23    C69   C65  C66  O68   -67.26  30.0  3
+ MRT  Var_24    O42   C41  C40  C39   140.60  30.0  3
+ MRT  Var_25    C50   C49  C48  C47  -177.50  30.0  1
+ MRT  Var_26    H33   C33  C32  C31  -179.41  30.0  3
+ MRT  Var_27    H33A  C33  C32  C31   -64.56  30.0  3
+ MRT  Var_28    H39   C39  N38  C31    55.42  30.0  3
+ MRT  Var_29    O60   C59  C58  C57   145.43  30.0  3
+ MRT  Var_30    C52   C53  C48  C47   179.00  30.0  1
+ MRT  Var_31    H32   C32  C33  C34   -62.12  30.0  2
+ MRT  Var_32    H40   C40  C39  N38    56.97  30.0  3
+ MRT  Var_33    H40A  C40  C39  N38   172.56  30.0  3
+ MRT  Var_34    H57   C57  N56  C54    49.04  30.0  3
+ MRT  Var_35    H58   C58  C57  N56    58.19  30.0  3
+ MRT  Var_36    H58A  C58  C57  N56   173.64  30.0  3
+ MRT  Var_37    H3    C3   O2   C17   -62.17  30.0  3
+ MRT  Var_38    H4    C4   C5   C6    -60.21  30.0  1
+ MRT  Var_39    H29   C29  N28  C17    51.66  30.0  3
+ MRT  Var_40    H35   C35  C34  C33   176.44  30.0  3
+ MRT  Var_41    H36   C36  C34  C33    58.27  30.0  3
+ MRT  Var_42    H53   C53  C48  C49    65.05  30.0  1
+ MRT  Var_43    H53A  C53  C48  C49  -177.39  30.0  1
+ MRT  Var_44    H48   C48  C49  C50   -60.91  30.0  1
+ MRT  Var_45    C5    C4   C3   O2   -178.62  30.0  3
+ MRT  Var_46    C9    C4   C3   O2     67.48  30.0  3
+ MRT  Var_47    C23   C22  C21  C19    31.05  30.0  2
+ MRT  Var_48    C27   C22  C21  C19  -148.89  30.0  2
+ MRT  Var_49    N28   C21  C22  C23   -96.64  30.0  2
+ MRT  Var_50    N28   C21  C22  C27    83.43  30.0  2
+ MRT  Var_51    C49   C48  C47  N46   -59.56  30.0  3
+ MRT  Var_52    C53   C48  C47  N46    65.64  30.0  3
+ MRT  Var_53    C54   C47  C48  C49   178.00  30.0  2
+ MRT  Var_54    C54   C47  C48  C53   -56.81  30.0  2
+ MRT  Var_55    H3    C3   C4   C5     60.57  30.0  1
+ MRT  Var_56    H3A   C3   C4   C5    -58.69  30.0  1
+ MRT  Var_57    H21   C21  C22  C23   145.18  30.0  2
+ MRT  Var_58    H47   C47  C48  C49    59.09  30.0  2
+ MRT  Var_59    C22   C21  N28  C17  -152.60  30.0  1
+ MRT  Var_60    C22   C21  C19  O20  -122.86  30.0  3
+ MRT  Var_61    C18   C19  C21  C22    58.01  30.0  1
+ MRT  Var_62    C29   N28  C21  C22    45.51  30.0  3
+ MRT  Var_63    C48   C47  N46  C44   103.35  30.0  3
+ MRT  Var_64    O55   C54  C47  C48   117.03  30.0  3
+ MRT  Var_65    N56   C54  C47  C48   -63.36  30.0  3
+ MRT  Var_66    C70   C69  C65  N64   -61.23  30.0  3
+ MRT  Var_67    C70   C69  C65  C66   176.49  30.0  3
+ MRT  Var_68    HN46  N46  C47  C48   -82.87  30.0  1
+ MRT  Var_69    H65   C65  C69  C70    58.36  30.0  2
+ MRT  Var_70    C19   C21  N28  C17    80.09  30.0  1
+ MRT  Var_71    C29   N28  C21  C19   -81.80  30.0  3
+ MRT  Var_72    N28   C21  C19  O20     5.35  30.0  3
+ MRT  Var_73    C18   C19  C21  N28  -173.78  30.0  1
+ MRT  Var_74    C34   C33  C32  C31    57.87  30.0  3
+ MRT  Var_75    C18   N37  C32  C31  -161.88  30.0  3
+ MRT  Var_76    C40   C39  N38  C31   174.48  30.0  3
+ MRT  Var_77    C44   C39  N38  C31   -65.75  30.0  3
+ MRT  Var_78    O30   C31  C32  C33    62.33  30.0  1
+ MRT  Var_79    N38   C31  C32  C33  -117.48  30.0  1
+ MRT  Var_80    C18   N37  C32  C33    75.71  30.0  3
+ MRT  Var_81    N37   C32  C33  C34   178.78  30.0  2
+ MRT  Var_82    O30   C31  C32  N37   -62.36  30.0  1
+ MRT  Var_83    N38   C31  C32  N37   117.82  30.0  1
+ MRT  Var_84    C41   C40  C39  N38   -68.17  30.0  3
+ MRT  Var_85    O45   C44  C39  N38   -43.09  30.0  3
+ MRT  Var_86    N46   C44  C39  N38   139.97  30.0  3
+ MRT  Var_87    O45   C44  C39  C40    77.44  30.0  3
+ MRT  Var_88    N46   C44  C39  C40   -99.50  30.0  3
+ MRT  Var_89    C44   C39  C40  C41   171.34  30.0  3
+ MRT  Var_90    C54   C47  N46  C44  -132.33  30.0  3
+ MRT  Var_91    O55   C54  C47  N46    -7.79  30.0  3
+ MRT  Var_92    N56   C54  C47  N46   171.82  30.0  3
+ MRT  Var_93    C58   C57  N56  C54   167.30  30.0  3
+ MRT  Var_94    C62   C57  N56  C54   -72.24  30.0  3
+ MRT  Var_95    C59   C58  C57  N56   -66.43  30.0  3
+ MRT  Var_96    O63   C62  C57  N56   -37.39  30.0  3
+ MRT  Var_97    N64   C62  C57  N56   146.02  30.0  3
+ MRT  Var_98    O63   C62  C57  C58    83.07  30.0  3
+ MRT  Var_99    N64   C62  C57  C58   -93.53  30.0  3
 
 loop_
 _chem_comp_chir.comp_id

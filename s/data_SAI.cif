@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SAI  SAI  5'-Se-[(3S)-3-amino-3-carboxypropyl]-5'-selenoadenosine  ligand  45  26  .  2025-02-12  2025-02-12
+ SAI  SAI  5'-Se-[(3S)-3-amino-3-carboxypropyl]-5'-selenoadenosine  ligand  45  26  .  2025-02-12  2025-02-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-15
 ;
 
 data_comp_SAI
@@ -239,35 +240,77 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SAI  CONST_01  C5    N7   C8  N9      0.00   0.0  0
- SAI  CONST_02  N7    C5   C4  N9      0.00   0.0  0
- SAI  CONST_03  C6    C5   C4  N9    180.00   0.0  0
- SAI  CONST_04  C2    N3   C4  N9    180.00   0.0  0
- SAI  CONST_05  C5    C4   N9  C8      0.00   0.0  0
- SAI  CONST_06  N3    C4   N9  C8    180.00   0.0  0
- SAI  CONST_07  C6    C5   N7  C8    180.00   0.0  0
- SAI  CONST_08  C4    C5   N7  C8      0.00   0.0  0
- SAI  CONST_09  C4    N9   C8  N7      0.00   0.0  0
- SAI  CONST_10  N1    C6   C5  N7    180.00   0.0  0
- SAI  CONST_11  N3    C4   C5  N7    180.00   0.0  0
- SAI  CONST_12  C2    N1   C6  C5      0.00   0.0  0
- SAI  CONST_13  C2    N3   C4  C5      0.00   0.0  0
- SAI  CONST_14  N3    C4   C5  C6      0.00   0.0  0
- SAI  CONST_15  N3    C2   N1  C6      0.00   0.0  0
- SAI  CONST_16  C4    C5   C6  N1      0.00   0.0  0
- SAI  CONST_17  C4    N3   C2  N1      0.00   0.0  0
- SAI  CONST_18  N7    C8   N9  C1'   180.00   0.0  0
- SAI  CONST_19  C5    C4   N9  C1'   180.00   0.0  0
- SAI  CONST_20  N3    C4   N9  C1'     0.00   0.0  0
- SAI  CONST_21  N6    C6   C5  N7      0.00   0.0  0
- SAI  CONST_22  C4    C5   C6  N6    180.00   0.0  0
- SAI  CONST_23  C2    N1   C6  N6    180.00   0.0  0
- SAI  CONST_24  H8    C8   N9  C1'     0.00   0.0  0
- SAI  CONST_25  H2    C2   N1  C6    180.00   0.0  0
- SAI  CONST_26  HN61  N6   C6  C5    180.00   0.0  0
- SAI  CONST_27  HN62  N6   C6  C5      0.00   0.0  0
- SAI  Var_01    C4'   C5'  SE  CG    165.58  30.0  3
- SAI  Var_02    SE    CG   CB  CA   -177.93  30.0  3
+ SAI  CONST_01  C5    N7   C8   N9      0.00   0.0  0
+ SAI  CONST_02  N7    C5   C4   N9      0.00   0.0  0
+ SAI  CONST_03  C6    C5   C4   N9    180.00   0.0  0
+ SAI  CONST_04  C2    N3   C4   N9    180.00   0.0  0
+ SAI  CONST_05  C5    C4   N9   C8      0.00   0.0  0
+ SAI  CONST_06  N3    C4   N9   C8    180.00   0.0  0
+ SAI  CONST_07  C6    C5   N7   C8    180.00   0.0  0
+ SAI  CONST_08  C4    C5   N7   C8      0.00   0.0  0
+ SAI  CONST_09  C4    N9   C8   N7      0.00   0.0  0
+ SAI  CONST_10  N1    C6   C5   N7    180.00   0.0  0
+ SAI  CONST_11  N3    C4   C5   N7    180.00   0.0  0
+ SAI  CONST_12  C2    N1   C6   C5      0.00   0.0  0
+ SAI  CONST_13  C2    N3   C4   C5      0.00   0.0  0
+ SAI  CONST_14  N3    C4   C5   C6      0.00   0.0  0
+ SAI  CONST_15  N3    C2   N1   C6      0.00   0.0  0
+ SAI  CONST_16  C4    C5   C6   N1      0.00   0.0  0
+ SAI  CONST_17  C4    N3   C2   N1      0.00   0.0  0
+ SAI  CONST_18  N7    C8   N9   C1'   180.00   0.0  0
+ SAI  CONST_19  C5    C4   N9   C1'   180.00   0.0  0
+ SAI  CONST_20  N3    C4   N9   C1'     0.00   0.0  0
+ SAI  CONST_21  N6    C6   C5   N7      0.00   0.0  0
+ SAI  CONST_22  C4    C5   C6   N6    180.00   0.0  0
+ SAI  CONST_23  C2    N1   C6   N6    180.00   0.0  0
+ SAI  CONST_24  H8    C8   N9   C1'     0.00   0.0  0
+ SAI  CONST_25  H2    C2   N1   C6    180.00   0.0  0
+ SAI  CONST_26  HN61  N6   C6   C5    180.00   0.0  0
+ SAI  CONST_27  HN62  N6   C6   C5      0.00   0.0  0
+ SAI  Var_01    C4'   C5'  SE   CG    165.58  30.0  3
+ SAI  Var_02    C2'   C1'  O4'  C4'   -10.92  30.0  1
+ SAI  Var_03    SE    CG   CB   CA   -177.93  30.0  3
+ SAI  Var_04    N9    C1'  O4'  C4'  -134.33  30.0  1
+ SAI  Var_05    C1'   C2'  C3'  C4'   -38.25  30.0  1
+ SAI  Var_06    C2'   C3'  C4'  O4'    33.14  30.0  1
+ SAI  Var_07    C3'   C2'  C1'  O4'    31.30  30.0  1
+ SAI  Var_08    C8    N9   C1'  O4'    50.86  30.0  2
+ SAI  Var_09    C4    N9   C1'  O4'  -128.03  30.0  2
+ SAI  Var_10    C1'   O4'  C4'  C3'   -14.41  30.0  1
+ SAI  Var_11    N9    C1'  C2'  C3'   151.89  30.0  1
+ SAI  Var_12    C8    N9   C1'  C2'   -67.78  30.0  2
+ SAI  Var_13    C4    N9   C1'  C2'   113.32  30.0  2
+ SAI  Var_14    C1'   O4'  C4'  C5'   107.02  30.0  1
+ SAI  Var_15    C2'   C3'  C4'  C5'   -87.89  30.0  1
+ SAI  Var_16    O2'   C2'  C3'  C4'  -156.33  30.0  1
+ SAI  Var_17    O3'   C3'  C4'  O4'   -83.51  30.0  1
+ SAI  Var_18    O2'   C2'  C1'  O4'   153.14  30.0  1
+ SAI  Var_19    C1'   C2'  C3'  O3'    76.97  30.0  1
+ SAI  Var_20    N9    C1'  C2'  O2'   -86.27  30.0  1
+ SAI  Var_21    H1'   C1'  O4'  C4'   108.65  30.0  1
+ SAI  Var_22    H2'   C2'  C3'  C4'    77.59  30.0  1
+ SAI  Var_23    H3'   C3'  C4'  O4'   152.33  30.0  1
+ SAI  Var_24    H4'   C4'  C3'  C2'   149.61  30.0  1
+ SAI  Var_25    O4'   C4'  C5'  SE     47.09  30.0  3
+ SAI  Var_26    C3'   C4'  C5'  SE    164.59  30.0  3
+ SAI  Var_27    O3'   C3'  C4'  C5'   155.45  30.0  1
+ SAI  Var_28    O2'   C2'  C3'  O3'   -41.11  30.0  1
+ SAI  Var_29    HO3'  O3'  C3'  C4'   156.15  30.0  3
+ SAI  Var_30    H5'1  C5'  C4'  O4'   -75.05  30.0  2
+ SAI  Var_31    H5'2  C5'  C4'  O4'   166.34  30.0  2
+ SAI  Var_32    HO2'  O2'  C2'  C3'   -86.22  30.0  3
+ SAI  Var_33    CG    CB   CA   N     -62.35  30.0  3
+ SAI  Var_34    O     C    CA   N     -23.72  30.0  2
+ SAI  Var_35    OXT   C    CA   N     158.57  30.0  2
+ SAI  Var_36    O     C    CA   CB    102.85  30.0  2
+ SAI  Var_37    OXT   C    CA   CB    -74.87  30.0  2
+ SAI  Var_38    C5'   SE   CG   CB   -179.25  30.0  3
+ SAI  Var_39    C     CA   CB   CG    173.64  30.0  1
+ SAI  Var_40    HB1   CB   CA   N      60.11  30.0  3
+ SAI  Var_41    HB2   CB   CA   N     176.40  30.0  3
+ SAI  Var_42    HN1   N    CA   CB    -70.05  30.0  3
+ SAI  Var_43    HN2   N    CA   CB     47.09  30.0  3
+ SAI  Var_44    HA    CA   CB   CG     57.83  30.0  1
 
 loop_
 _chem_comp_chir.comp_id

@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- GDN  GDN  L-gamma-glutamyl-S-(2,4-dinitrophenyl)-L-cysteinylglycine  ligand  49  32  .  2025-02-12  2025-02-12
+ GDN  GDN  L-gamma-glutamyl-S-(2,4-dinitrophenyl)-L-cysteinylglycine  ligand  49  32  .  2025-02-12  2025-02-14
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2025-02-14
 ;
 
 data_comp_GDN
@@ -245,41 +246,61 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- GDN  CONST_01  C4'   C3'  C2'  C1'    0.00   0.0  0
- GDN  CONST_02  C4'   C5'  C6'  C1'    0.00   0.0  0
- GDN  CONST_03  C5'   C6'  C1'  C2'    0.00   0.0  0
- GDN  CONST_04  C5'   C4'  C3'  C2'    0.00   0.0  0
- GDN  CONST_05  C6'   C1'  C2'  C3'    0.00   0.0  0
- GDN  CONST_06  C6'   C5'  C4'  C3'    0.00   0.0  0
- GDN  CONST_07  C3'   C2'  C1'  SG2  180.00   0.0  0
- GDN  CONST_08  C5'   C6'  C1'  SG2  180.00   0.0  0
- GDN  CONST_09  N4'   C4'  C3'  C2'  180.00   0.0  0
- GDN  CONST_10  N2'   C2'  C3'  C4'  180.00   0.0  0
- GDN  CONST_11  N2'   C2'  C1'  C6'  180.00   0.0  0
- GDN  CONST_12  N4'   C4'  C5'  C6'  180.00   0.0  0
- GDN  CONST_13  H3'   C3'  C2'  C1'  180.00   0.0  0
- GDN  CONST_14  H5'   C5'  C6'  C1'  180.00   0.0  0
- GDN  CONST_15  H6'   C6'  C1'  C2'  180.00   0.0  0
- GDN  CONST_16  O2A   N2'  C2'  C1'  180.00   0.0  0
- GDN  CONST_17  O2B   N2'  C2'  C1'    0.00   0.0  0
- GDN  CONST_18  O2A   N2'  C2'  C3'    0.00   0.0  0
- GDN  CONST_19  O2B   N2'  C2'  C3'  180.00   0.0  0
- GDN  CONST_20  O4A   N4'  C4'  C3'  180.00   0.0  0
- GDN  CONST_21  O4B   N4'  C4'  C3'    0.00   0.0  0
- GDN  CONST_22  O4A   N4'  C4'  C5'    0.00   0.0  0
- GDN  CONST_23  O4B   N4'  C4'  C5'  180.00   0.0  0
- GDN  CONST_24  CA2   N2   CD1  CG1  180.00   0.0  0
- GDN  CONST_25  CA2   N2   CD1  OE1    0.00   0.0  0
- GDN  CONST_26  CA3   N3   C2   CA2  180.00   0.0  0
- GDN  CONST_27  CA3   N3   C2   O2     0.00   0.0  0
- GDN  CONST_28  HN2   N2   CD1  CG1    0.00   0.0  0
- GDN  CONST_29  HN3   N3   C2   CA2    0.00   0.0  0
- GDN  Var_01    C2'   C1'  SG2  CB2  155.82  30.0  2
- GDN  Var_02    HB21  CB2  SG2  C1'  107.42  30.0  2
- GDN  Var_03    CD1   CG1  CB1  CA1  -57.52  30.0  3
- GDN  Var_04    OE1   CD1  CG1  CB1  -58.79  30.0  3
- GDN  Var_05    C3    CA3  N3   C2   -67.76  30.0  3
- GDN  Var_06    O31   C3   CA3  N3    -2.55  30.0  3
+ GDN  CONST_01  C4'   C3'  C2'  C1'     0.00   0.0  0
+ GDN  CONST_02  C4'   C5'  C6'  C1'     0.00   0.0  0
+ GDN  CONST_03  C5'   C6'  C1'  C2'     0.00   0.0  0
+ GDN  CONST_04  C5'   C4'  C3'  C2'     0.00   0.0  0
+ GDN  CONST_05  C6'   C1'  C2'  C3'     0.00   0.0  0
+ GDN  CONST_06  C6'   C5'  C4'  C3'     0.00   0.0  0
+ GDN  CONST_07  C3'   C2'  C1'  SG2   180.00   0.0  0
+ GDN  CONST_08  C5'   C6'  C1'  SG2   180.00   0.0  0
+ GDN  CONST_09  N4'   C4'  C3'  C2'   180.00   0.0  0
+ GDN  CONST_10  N2'   C2'  C3'  C4'   180.00   0.0  0
+ GDN  CONST_11  N2'   C2'  C1'  C6'   180.00   0.0  0
+ GDN  CONST_12  N4'   C4'  C5'  C6'   180.00   0.0  0
+ GDN  CONST_13  H3'   C3'  C2'  C1'   180.00   0.0  0
+ GDN  CONST_14  H5'   C5'  C6'  C1'   180.00   0.0  0
+ GDN  CONST_15  H6'   C6'  C1'  C2'   180.00   0.0  0
+ GDN  CONST_16  O2A   N2'  C2'  C1'   180.00   0.0  0
+ GDN  CONST_17  O2B   N2'  C2'  C1'     0.00   0.0  0
+ GDN  CONST_18  O2A   N2'  C2'  C3'     0.00   0.0  0
+ GDN  CONST_19  O2B   N2'  C2'  C3'   180.00   0.0  0
+ GDN  CONST_20  O4A   N4'  C4'  C3'   180.00   0.0  0
+ GDN  CONST_21  O4B   N4'  C4'  C3'     0.00   0.0  0
+ GDN  CONST_22  O4A   N4'  C4'  C5'     0.00   0.0  0
+ GDN  CONST_23  O4B   N4'  C4'  C5'   180.00   0.0  0
+ GDN  CONST_24  CA2   N2   CD1  CG1   180.00   0.0  0
+ GDN  CONST_25  CA2   N2   CD1  OE1     0.00   0.0  0
+ GDN  CONST_26  CA3   N3   C2   CA2   180.00   0.0  0
+ GDN  CONST_27  CA3   N3   C2   O2      0.00   0.0  0
+ GDN  CONST_28  HN2   N2   CD1  CG1     0.00   0.0  0
+ GDN  CONST_29  HN3   N3   C2   CA2     0.00   0.0  0
+ GDN  Var_01    C2'   C1'  SG2  CB2   155.82  30.0  2
+ GDN  Var_02    HB21  CB2  SG2  C1'   107.42  30.0  2
+ GDN  Var_03    CD1   CG1  CB1  CA1   -57.52  30.0  3
+ GDN  Var_04    OE1   CD1  CG1  CB1   -58.79  30.0  3
+ GDN  Var_05    C3    CA3  N3   C2    -67.76  30.0  3
+ GDN  Var_06    O31   C3   CA3  N3     -2.55  30.0  3
+ GDN  Var_07    O11   C1   CA1  N1    -22.66  30.0  2
+ GDN  Var_08    O12   C1   CA1  N1    159.51  30.0  2
+ GDN  Var_09    CG1   CB1  CA1  N1    -55.86  30.0  3
+ GDN  Var_10    CG1   CB1  CA1  C1    179.64  30.0  3
+ GDN  Var_11    CB1   CA1  C1   O11   104.28  30.0  2
+ GDN  Var_12    CB1   CA1  C1   O12   -73.54  30.0  2
+ GDN  Var_13    C2    CA2  N2   CD1  -162.81  30.0  3
+ GDN  Var_14    CB2   CA2  N2   CD1    74.30  30.0  3
+ GDN  Var_15    O2    C2   CA2  N2    -24.87  30.0  3
+ GDN  Var_16    N3    C2   CA2  N2    155.50  30.0  3
+ GDN  Var_17    SG2   CB2  CA2  N2     58.21  30.0  3
+ GDN  Var_18    SG2   CB2  CA2  C2    -63.84  30.0  3
+ GDN  Var_19    CB2   CA2  C2   O2     99.17  30.0  2
+ GDN  Var_20    N3    C2   CA2  CB2   -80.46  30.0  3
+ GDN  Var_21    HB11  CB1  CA1  N1     65.56  30.0  3
+ GDN  Var_22    HB12  CB1  CA1  N1   -177.92  30.0  3
+ GDN  Var_23    HN1   N1   CA1  C1    163.04  30.0  3
+ GDN  Var_24    HN2A  N1   CA1  C1     43.59  30.0  3
+ GDN  Var_25    HA1   CA1  C1   O11  -140.58  30.0  2
+ GDN  Var_26    HA2   CA2  N2   CD1   -43.37  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
