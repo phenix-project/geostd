@@ -1,0 +1,47 @@
+#!/bin/bash
+
+filename=$1
+res=${filename:5:5}
+
+echo "Residue $res"
+
+if [ -f "$res.mol2" ]; then
+#  skip modification date check, since Nigel's changes are not key here
+#   if [ "$filename" -ot "$res.mol2" ]; then
+      echo "    already done: skipping"
+      exit 0
+#   fi
+fi
+
+# Check if PBEh-3c method was used:
+egrep '(PBEh-3c|def2-TZVP|def2-QZVP)' $filename > /dev/null
+status=$?
+if [ "$status" != 0 ]; then
+   echo "    does not use PBEh-3c, def2-TZVP, or def2-QZVP"
+   exit 0
+fi
+
+# Check for fullerenes
+grep fullerene $filename > /dev/null
+status=$?
+if [ "$status" == 0 ]; then
+   echo "    contains fullerene"
+   exit 0
+fi
+
+$AMBERHOME/bin/antechamber -i $filename -fi ccif -o $res.mol2 -fo mol2  \
+    -bk comp_$res -s 0 -dr no \
+   -at gaff2 -c abcg2 -ek 'qm_theory="AM1", maxcyc=0, ndiis_attempts=700,'
+
+status=$?
+/bin/rm -f ANTECH* ATOMTYP* sqm.*
+
+if [ "$status" == 0 ]; then
+    $AMBERHOME/bin/parmchk2 -s 2 -i $res.mol2 -f mol2 -o $res.frcmod
+else
+   exit 0
+fi
+
+# do Amber geometry minimization:
+../check_geom $res
+
