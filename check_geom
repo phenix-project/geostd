@@ -16,7 +16,7 @@ saveamberparm x $1.parm7 $1.x
 quit
 EOF
 
-tleap -f leap.in > tleap.out
+$AMBERHOME/bin/tleap -f leap.in > tleap.out
 if [ ! -s $1.parm7 ]; then 
    echo "Error in tleap for $1: check tleap.out or leap.log "
    exit 1
@@ -43,7 +43,7 @@ cat $1.min.o >> $1.geom.log
 
 #  make mol2 file with the minimized coordinates:
 #ambpdb -p $1.parm7 -c $1.min.x > $1.min.pdb
-antechamber -i $1.mol2 -fi mol2 -o $1.min.mol2 -fo mol2 \
+$AMBERHOME/bin/antechamber -i $1.mol2 -fi mol2 -o $1.min.mol2 -fo mol2 \
    -a $1.min.x -fa rst -ao crd -at gaff2 -dr no -s 0
 
 /bin/rm -f ANTECH* ATOMTYPE.INF
@@ -52,7 +52,7 @@ antechamber -i $1.mol2 -fi mol2 -o $1.min.mol2 -fo mol2 \
 #  Check how far the struture has moved from the initial conformation:
 #============================================================================
 
-cpptraj $1.parm7 <<EOF > cpptraj.out
+$AMBERHOME/bin/cpptraj $1.parm7 <<EOF > cpptraj.out
 reference $1.x
 trajin $1.min.x
 rms all_heavy reference !@H= out rms.dat
