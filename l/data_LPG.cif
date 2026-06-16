@@ -1,10 +1,10 @@
 # electronic Ligand Builder and Optimisation Workbench (eLBOW)
-#   - a module of PHENIX version dev-1137 (Mon Aug 22 05:16:00 2012)
-#   - file written: Tue Aug 28 15:13:11 2012
+#   - a module of PHENIX version dev-svn-
+#   - file written: Tue Jul  1 10:57:52 2025
 #   Inital geometry file: a 40 line input string
 #   Ligand name: (2S)-2-aminobut-3-ynoic acid
 #   Quantum optimisation: True
-#   Method: AM1
+#   Method: PBEh-3c
 #   Random seed: 3628800
 #   SMILES string: N[C@@H](C#C)C(O)=O
 #
@@ -20,11 +20,10 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LPG  LPG  '(2S)-2-aminobut-3-ynoic acid'  L-peptide  12  7  .  2012-08-28  2024-04-11
+LPG LPG "(2S)-2-aminobut-3-ynoic acid" L-peptide 11 7 . 2012-08-28 2026-06-15
 ;
-CIF prepared directly in eLBOW
-Added dihedrals for adding hydrogens : 2023-10-30
-Removed H2 atom : 2024-04-11
+Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
+Validated by Mogul as PERFECT
 ;
 
 data_comp_LPG
@@ -33,21 +32,22 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
+_chem_comp_atom.charge
 _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- LPG  CB   C  CSP   .   2.1308  -0.1801   0.2899
- LPG  C    C  C     .   0.4733  -1.7109   1.1663
- LPG  O    O  O     .   0.3575  -2.1698   2.3059
- LPG  OXT  O  OH1   .   0.3341  -2.5714   0.1263
- LPG  N    N  NH2   .   0.4576   0.6995   1.7985
- LPG  CA   C  CH1   .   0.7612  -0.2600   0.7560
- LPG  CG   C  CSP1  .   3.2604  -0.1142  -0.0946
- LPG  HXT  H  HOH1  .   0.1547  -3.4655   0.4627
- LPG  H    H  HNH2  .  -0.4453   0.5104   2.1898
- LPG  HCA  H  HCH1  .   0.0696  -0.0331  -0.1201
- LPG  HCG  H  H     .   4.2633  -0.0557  -0.4359
+ LPG  CB   C  CSP    0   0.245  -1.4505   0.4334  -0.0603
+ LPG  C    C  C      0   0.402   0.9801   0.1374   0.0464
+ LPG  O    O  O      0  -0.582   1.4898  -0.5701   0.9291
+ LPG  OXT  O  OC    -1  -0.593   1.3670   1.2340  -0.3880
+ LPG  N    N  NH2    0  -0.780  -0.5338  -1.8150  -0.3536
+ LPG  CA   C  CH1    0  -0.350  -0.3543  -0.3927  -0.5834
+ LPG  CG   C  CSP1   0  -0.543  -2.3600   1.0781   0.3965
+ LPG  H    H  HNH2   0   0.336  -0.3788  -2.0042   0.6284
+ LPG  H2   H  HNH2   0   0.341  -1.4850  -2.0894  -0.5641
+ LPG  HCA  H  HCH1   0   0.251  -0.2974  -0.2158  -1.6622
+ LPG  HCG  H  H      0   0.275  -3.1609   1.6577   0.7945
 
 loop_
 _chem_comp_bond.comp_id
@@ -56,16 +56,17 @@ _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- LPG  CB   CA   single  1.449  0.020
- LPG  CB   CG   triple  1.195  0.020
- LPG  C    O    double  1.234  0.020
- LPG  C    OXT  single  1.357  0.020
- LPG  C    CA   single  1.535  0.020
- LPG  OXT  HXT  single  0.972  0.020
- LPG  N    CA   single  1.449  0.020
- LPG  N    H    single  1.002  0.020
- LPG  CA   HCA  single  1.139  0.020
- LPG  CG   HCG  single  1.061  0.020
+_chem_comp_bond.value_dist_neutron
+ LPG  CB  CA   single  1.469  0.020  1.469
+ LPG  CB  CG   triple  1.205  0.020  1.205
+ LPG  C   O    deloc   1.241  0.020  1.241
+ LPG  C   OXT  deloc   1.241  0.020  1.241
+ LPG  C   CA   single  1.568  0.020  1.568
+ LPG  N   CA   single  1.452  0.020  1.452
+ LPG  N   H    single  0.868  0.020  1.013
+ LPG  N   H2   single  0.868  0.020  1.013
+ LPG  CA  HCA  single  0.939  0.020  1.096
+ LPG  CG  HCG  single  0.913  0.020  1.066
 
 loop_
 _chem_comp_angle.comp_id
@@ -74,19 +75,20 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- LPG  CG   CB   CA   180.00  3.000
- LPG  CA   C    OXT  114.44  3.000
- LPG  CA   C    O    128.02  3.000
- LPG  OXT  C    O    117.53  3.000
- LPG  HXT  OXT  C    109.70  3.000
- LPG  H    N    CA   110.17  3.000
- LPG  HCA  CA   N    107.11  3.000
- LPG  HCA  CA   C    106.26  3.000
- LPG  N    CA   C    113.22  3.000
- LPG  HCA  CA   CB   108.39  3.000
- LPG  N    CA   CB   113.14  3.000
- LPG  C    CA   CB   108.38  3.000
- LPG  HCG  CG   CB   180.00  3.000
+ LPG  CG   CB  CA   180.00  3.000
+ LPG  CA   C   OXT  115.05  3.000
+ LPG  CA   C   O    116.27  3.000
+ LPG  OXT  C   O    128.65  3.000
+ LPG  H2   N   H    107.16  3.000
+ LPG  H2   N   CA   110.42  3.000
+ LPG  H    N   CA   108.52  3.000
+ LPG  HCA  CA  N    108.70  3.000
+ LPG  HCA  CA  C    107.28  3.000
+ LPG  N    CA  C    111.90  3.000
+ LPG  HCA  CA  CB   107.39  3.000
+ LPG  N    CA  CB   113.72  3.000
+ LPG  C    CA  CB   107.57  3.000
+ LPG  HCG  CG  CB   180.00  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -98,10 +100,16 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LPG  CONST_01  HXT  OXT  C   O      0.00      0.0   0
- LPG  Var_01    C    CA   N   H   170.000  180.000  72
- LPG  Var_02    HCA  CA   C   O   -137.21     30.0   3
- LPG  Var_03    HCG  CG   CB  CA  -173.98     30.0   1
+ LPG  Var_01  O    C   CA  CB    106.32  30.0  2
+ LPG  Var_02  OXT  C   CA  CB    -71.97  30.0  2
+ LPG  Var_03  CG   CB  CA  C    -102.33  30.0  2
+ LPG  Var_04  N    CA  C   O     -19.27  30.0  3
+ LPG  Var_05  N    CA  C   OXT   162.44  30.0  3
+ LPG  Var_06  CG   CB  CA  N      22.17  30.0  2
+ LPG  Var_07  H    N   CA  CB    -72.99  30.0  3
+ LPG  Var_08  H2   N   CA  CB     44.18  30.0  3
+ LPG  Var_09  HCA  CA  C   O    -138.41  30.0  3
+ LPG  Var_10  HCG  CG  CB  CA    172.23  30.0  1
 
 loop_
 _chem_comp_chir.comp_id
@@ -122,5 +130,4 @@ _chem_comp_plane_atom.dist_esd
  LPG  plan-1  O    0.020
  LPG  plan-1  OXT  0.020
  LPG  plan-1  CA   0.020
- LPG  plan-1  HXT  0.020
 

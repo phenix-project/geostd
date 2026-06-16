@@ -1,10 +1,10 @@
 # electronic Ligand Builder and Optimisation Workbench (eLBOW)
-#   - a module of PHENIX version dev-1137 (Mon Aug 22 05:16:00 2012)
-#   - file written: Tue Aug 28 15:27:39 2012
+#   - a module of PHENIX version dev-svn-
+#   - file written: Mon Jul 22 12:47:58 2024
 #   Inital geometry file: a 43 line input string
 #   Ligand name: S-nitroso-L-cysteine
 #   Quantum optimisation: True
-#   Method: AM1
+#   Method: PBEh-3c
 #   Random seed: 3628800
 #   SMILES string: N[C@@H](CSN=O)C(O)=O
 #
@@ -20,11 +20,10 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SNC  SNC  'S-nitroso-L-cysteine     '  L-peptide  15  9  .  2012-08-28  2024-04-14
+SNC SNC "S-NITROSO-CYSTEINE" L-peptide 14 9 . 2012-08-28 2026-06-15
 ;
-CIF prepared directly in eLBOW
-Added dihedrals for adding hydrogens : 2023-10-30
-Removed H2 atom : 2024-04-14
+Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
+Validated by Mogul as PERFECT
 ;
 
 data_comp_SNC
@@ -33,24 +32,25 @@ _chem_comp_atom.comp_id
 _chem_comp_atom.atom_id
 _chem_comp_atom.type_symbol
 _chem_comp_atom.type_energy
+_chem_comp_atom.charge
 _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- SNC  N    N  NH2   .   1.6946   0.2201   0.9227
- SNC  CA   C  CH1   .   0.2750   0.4477   1.0466
- SNC  CB   C  CH2   .  -0.6163  -0.1170  -0.0682
- SNC  SG   S  S2    .  -0.1893   0.6825  -1.6025
- SNC  ND   N  N     .  -0.1412  -0.6144  -2.6943
- SNC  OE   O  O     .   0.0871  -0.4433  -3.8053
- SNC  C    C  C     .  -0.2369  -0.1592   2.3462
- SNC  O    O  O     .  -0.0669  -1.2983   2.7836
- SNC  OXT  O  OH1   .  -0.9746   0.7043   3.0927
- SNC  H    H  HNH2  .   2.0331   0.5974   0.0596
- SNC  HA   H  HCH1  .   0.1179   1.5697   1.0951
- SNC  HB2  H  HCH2  .  -0.5152  -1.2275  -0.1339
- SNC  HB3  H  HCH2  .  -1.6848   0.1266   0.1529
- SNC  HXT  H  HOH1  .  -1.2722   0.2626   3.9058
+ SNC  N    N  NH2    0  -0.806  38.0766  60.9039  19.8103
+ SNC  CA   C  CH1    0  -0.165  39.0667  60.4247  18.8491
+ SNC  CB   C  CH2    0  -0.607  38.3709  59.5756  17.7928
+ SNC  SG   S  S2     0   0.193  37.5611  58.0996  18.4600
+ SNC  ND   N  N      0  -0.026  38.8355  56.9130  18.5815
+ SNC  OE   O  O      0  -0.252  39.9199  57.2308  18.2239
+ SNC  C    C  C      0   0.403  39.7425  61.6415  18.1536
+ SNC  O    O  O      0  -0.596  40.9424  61.8348  18.4222
+ SNC  OXT  O  OC    -1  -0.598  39.0167  62.3157  17.3988
+ SNC  H    H  HNH2   0   0.344  38.5273  61.5251  20.4714
+ SNC  H2   H  HNH2   0   0.338  37.7477  60.1235  20.3676
+ SNC  HA   H  HCH1   0   0.196  39.8542  59.8226  19.3194
+ SNC  HB2  H  HCH2   0   0.289  37.5752  60.1478  17.3150
+ SNC  HB3  H  HCH2   0   0.287  39.0626  59.2516  17.0122
 
 loop_
 _chem_comp_bond.comp_id
@@ -59,19 +59,20 @@ _chem_comp_bond.atom_id_2
 _chem_comp_bond.type
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
- SNC  N    CA   single  1.443  0.020
- SNC  N    H    single  1.001  0.020
- SNC  CA   CB   single  1.535  0.020
- SNC  CA   C    single  1.523  0.020
- SNC  CA   HA   single  1.134  0.020
- SNC  CB   SG   single  1.782  0.020
- SNC  CB   HB2  single  1.117  0.020
- SNC  CB   HB3  single  1.118  0.020
- SNC  SG   ND   single  1.696  0.020
- SNC  ND   OE   double  1.147  0.020
- SNC  C    O    double  1.232  0.020
- SNC  C    OXT  single  1.359  0.020
- SNC  OXT  HXT  single  0.972  0.020
+_chem_comp_bond.value_dist_neutron
+ SNC  N   CA   single  1.458  0.019  1.458
+ SNC  N   H    single  0.860  0.020  0.860
+ SNC  N   H2   single  0.890  0.020  1.040
+ SNC  CA  CB   single  1.530  0.020  1.530
+ SNC  CA  C    single  1.525  0.021  1.525
+ SNC  CA  HA   single  0.970  0.020  0.970
+ SNC  CB  SG   single  1.811  0.020  1.811
+ SNC  CB  HB2  single  0.970  0.020  1.090
+ SNC  CB  HB3  single  0.970  0.020  1.090
+ SNC  SG  ND   single  1.746  0.020  1.746
+ SNC  ND  OE   double  1.185  0.020  1.185
+ SNC  C   O    deloc   1.231  0.020  1.231
+ SNC  C   OXT  deloc   1.245  0.020  1.245
 
 loop_
 _chem_comp_angle.comp_id
@@ -80,25 +81,26 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- SNC  H    N    CA   110.32  3.000
- SNC  HA   CA   C    108.13  3.000
- SNC  HA   CA   CB   108.34  3.000
- SNC  C    CA   CB   106.14  3.000
- SNC  HA   CA   N    107.22  3.000
- SNC  C    CA   N    109.94  3.000
- SNC  CB   CA   N    116.80  3.000
- SNC  HB3  CB   HB2  108.35  3.000
- SNC  HB3  CB   SG   107.55  3.000
- SNC  HB2  CB   SG   111.95  3.000
- SNC  HB3  CB   CA   109.34  3.000
- SNC  HB2  CB   CA   110.85  3.000
- SNC  SG   CB   CA   108.73  3.000
- SNC  ND   SG   CB   102.59  3.000
- SNC  OE   ND   SG   121.00  3.000
- SNC  OXT  C    O    117.86  3.000
- SNC  OXT  C    CA   113.45  3.000
- SNC  O    C    CA   128.68  3.000
- SNC  HXT  OXT  C    109.69  3.000
+ SNC  H2   N   H    104.93  3.000
+ SNC  H2   N   CA   109.21  3.000
+ SNC  H    N   CA   114.00  3.000
+ SNC  HA   CA  C    109.00  3.000
+ SNC  HA   CA  CB   109.00  3.000
+ SNC  C    CA  CB   110.10  1.900
+ SNC  HA   CA  N    110.00  3.000
+ SNC  C    CA  N    111.00  2.800
+ SNC  CB   CA  N    110.50  1.700
+ SNC  HB3  CB  HB2  107.73  3.000
+ SNC  HB3  CB  SG   107.74  3.000
+ SNC  HB2  CB  SG   105.24  3.000
+ SNC  HB3  CB  CA   111.82  3.000
+ SNC  HB2  CB  CA   110.17  3.000
+ SNC  SG   CB  CA   113.77  3.000
+ SNC  ND   SG  CB   104.67  3.000
+ SNC  OE   ND  SG   117.69  3.000
+ SNC  OXT  C   O    127.48  3.000
+ SNC  OXT  C   CA   116.18  3.000
+ SNC  O    C   CA   120.80  1.700
 
 loop_
 _chem_comp_tor.comp_id
@@ -110,11 +112,19 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SNC  CONST_01  HXT  OXT  C   CA   180.00      0.0   0
- SNC  Var_01    HB2  CB   SG  ND    12.98     30.0   1
- SNC  Var_02    HB3  CB   CA  N    179.83     30.0   3
- SNC  Var_03    C    CA   N   H   170.000  180.000  72
- SNC  Var_04    HA   CA   CB  SG    58.11     30.0   3
+ SNC  Var_01  SG   CB  CA  N    -61.60  30.0  3
+ SNC  Var_02  O    C   CA  N    111.74  30.0  3
+ SNC  Var_03  OXT  C   CA  N    -67.77  30.0  3
+ SNC  Var_04  ND   SG  CB  CA   -83.20  30.0  3
+ SNC  Var_05  O    C   CA  CB  -128.92  30.0  3
+ SNC  Var_06  OXT  C   CA  CB    51.56  30.0  3
+ SNC  Var_07  OE   ND  SG  CB    -0.90  30.0  3
+ SNC  Var_08  C    CA  CB  SG   178.97  30.0  2
+ SNC  Var_09  HB2  CB  CA  N     56.28  30.0  3
+ SNC  Var_10  HB3  CB  CA  N    176.06  30.0  3
+ SNC  Var_11  H    N   CA  CB  -175.74  30.0  3
+ SNC  Var_12  H2   N   CA  CB    70.03  30.0  3
+ SNC  Var_13  HA   CA  CB  SG    61.57  30.0  2
 
 loop_
 _chem_comp_chir.comp_id
@@ -135,5 +145,7 @@ _chem_comp_plane_atom.dist_esd
  SNC  plan-1  C    0.020
  SNC  plan-1  O    0.020
  SNC  plan-1  OXT  0.020
- SNC  plan-1  HXT  0.020
+ SNC  plan-2  SG   0.020
+ SNC  plan-2  ND   0.020
+ SNC  plan-2  OE   0.020
 
