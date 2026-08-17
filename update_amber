@@ -4,7 +4,9 @@
 #    suggestion: first do this in the "amber" branch; then if everything
 #    looks OK, merge into master
 
-# for i in a b c d e f g h i j k l m n o p q r s t u v w x y z; do
+if false; then
+
+for i in a b c d e f g h i j k l m n o p q r s t u v w x y z; do
 
   cd $i
   for j in data_???.cif; do
@@ -13,3 +15,28 @@
   cd ..
 
 done
+
+# extra step needed for directories that begin with a digit:
+
+for i in 0 1 2 3 4 5 6 7 8 9; do
+
+  cd $i
+  for j in data_???.cif; do
+    ../gcif_to_mol2 $j
+    ../mol2_to_lib $j
+  done
+  cd ..
+
+done
+
+fi
+
+# we also need to process 5-character components; right now, these are only
+# in the "a" folder:
+
+  cd a
+  for j in data_?????.cif; do
+    ../gcif_to_mol25 $j
+  done
+  cd ..
+

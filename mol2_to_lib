@@ -1,12 +1,19 @@
 #!/bin/bash
 
 filename=$1
-res=${filename:0:3}
+res=${filename:5:3}
 
 echo "Residue $res"
 
-if [ -f "$res.lib" ]; then
+if [[ -s "$res.lib" ]]; then
       echo "    already done: skipping"
+      exit 0
+else
+      /bin/rm -f $res.lib
+fi
+
+if [ ! -f "$res.mol2" ]; then
+      echo "    no mol2 file: skipping"
       exit 0
 fi
 
