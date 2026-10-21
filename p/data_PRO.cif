@@ -18,6 +18,7 @@ endo and exo. chi1 and chi2 esd increased to account for deviation
 from ideal.
 Added neutron distances
 Added dihedrals for adding hydrogens : 2023-10-30
+Updated atom names : 2026-10-21
 ;
 
 data_comp_PRO
@@ -31,14 +32,14 @@ _chem_comp_atom.partial_charge
  PRO  CA   C  CH1    0.038
  PRO  HA   H  HCH1   0.048
  PRO  CB   C  CH2   -0.076
- PRO  HB1  H  HCH2   0.038
  PRO  HB2  H  HCH2   0.038
+ PRO  HB3  H  HCH2   0.038
  PRO  CG   C  CH2   -0.076
- PRO  HG1  H  HCH2   0.038
  PRO  HG2  H  HCH2   0.038
+ PRO  HG3  H  HCH2   0.038
  PRO  CD   C  CH2   -0.030
- PRO  HD1  H  HCH2   0.047
  PRO  HD2  H  HCH2   0.047
+ PRO  HD3  H  HCH2   0.047
  PRO  C    C  C      0.323
  PRO  O    O  O     -0.425
 
@@ -52,14 +53,14 @@ _chem_comp_tree.connect_type
  PRO  CA   N    C    .
  PRO  HA   CA   .    .
  PRO  CB   CA   CG   .
- PRO  HB1  CB   .    .
  PRO  HB2  CB   .    .
+ PRO  HB3  CB   .    .
  PRO  CG   CB   CD   .
- PRO  HG1  CG   .    .
  PRO  HG2  CG   .    .
+ PRO  HG3  CG   .    .
  PRO  CD   CG   HD2  .
- PRO  HD1  CD   .    .
  PRO  HD2  CD   .    .
+ PRO  HD3  CD   .    .
  PRO  C    CA   .    END
  PRO  O    C    .    .
  PRO  CD   N    .    ADD
@@ -75,14 +76,14 @@ _chem_comp_bond.value_dist_neutron
  PRO  N   CA   coval  1.466  0.015  1.466
  PRO  CA  HA   coval  0.970  0.020  1.090
  PRO  CA  CB   coval  1.530  0.020  1.530
- PRO  CB  HB1  coval  0.970  0.020  1.090
  PRO  CB  HB2  coval  0.970  0.020  1.090
+ PRO  CB  HB3  coval  0.970  0.020  1.090
  PRO  CB  CG   coval  1.492  0.050  1.492
- PRO  CG  HG1  coval  0.970  0.020  1.090
  PRO  CG  HG2  coval  0.970  0.020  1.090
+ PRO  CG  HG3  coval  0.970  0.020  1.090
  PRO  CG  CD   coval  1.503  0.034  1.503
- PRO  CD  HD1  coval  0.970  0.020  1.090
  PRO  CD  HD2  coval  0.970  0.020  1.090
+ PRO  CD  HD3  coval  0.970  0.020  1.090
  PRO  CD  N    coval  1.473  0.014  1.473
  PRO  CA  C    coval  1.525  0.021  1.525
  PRO  C   O    coval  1.231  0.020  1.231
@@ -100,24 +101,24 @@ _chem_comp_angle.value_angle_esd
  PRO  HA   CA  C    109.000  3.000
  PRO  N    CA  HA   110.000  3.000
  PRO  N    CA  CB   103.000  1.100
- PRO  HB1  CB  HB2  110.000  3.000
+ PRO  HB2  CB  HB3  110.000  3.000
+ PRO  HB3  CB  CG   110.000  3.000
  PRO  HB2  CB  CG   110.000  3.000
- PRO  HB1  CB  CG   110.000  3.000
- PRO  CA   CB  HB1  109.000  3.000
  PRO  CA   CB  HB2  109.000  3.000
+ PRO  CA   CB  HB3  109.000  3.000
  PRO  CA   CB  CG   104.500  1.900
- PRO  HG1  CG  HG2  110.000  3.000
+ PRO  HG2  CG  HG3  110.000  3.000
+ PRO  HG3  CG  CD   110.000  3.000
  PRO  HG2  CG  CD   110.000  3.000
- PRO  HG1  CG  CD   110.000  3.000
- PRO  CB   CG  HG1  109.000  3.000
  PRO  CB   CG  HG2  109.000  3.000
+ PRO  CB   CG  HG3  109.000  3.000
  PRO  CB   CG  CD   106.100  3.200
- PRO  HD1  CD  HD2  110.000  3.000
- PRO  CG   CD  HD1  109.000  3.000
+ PRO  HD2  CD  HD3  110.000  3.000
  PRO  CG   CD  HD2  109.000  3.000
+ PRO  CG   CD  HD3  109.000  3.000
  PRO  N    CD  CG   103.200  1.500
- PRO  N    CD  HD1  109.000  3.000
  PRO  N    CD  HD2  109.000  3.000
+ PRO  N    CD  HD3  109.000  3.000
  PRO  N    CA  C    112.100  2.500
  PRO  CA   C   O    119.000  3.000
 
@@ -135,8 +136,8 @@ _chem_comp_tor.period
  PRO  chi1    N    CA  CB  CG  -30.000   30  20.000  1
  PRO  chi2    CA   CB  CG  CD   38.000  -38  20.000  1
  PRO  chi3    CB   CG  CD  N   -30.000   30  15.000  1
- PRO  Var_01  HD1  CD  N   CA     7.29    .    30.0  3
- PRO  Var_02  HD2  CD  N   CA   -25.94    .    30.0  3
+ PRO  Var_01  HD2  CD  N   CA     7.29    .    30.0  3
+ PRO  Var_02  HD3  CD  N   CA   -25.94    .    30.0  3
  PRO  Var_03  CD   N   CA  HA    18.32    .    30.0  3
 
 loop_
