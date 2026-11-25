@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
 Added dihedrals for adding hydrogens : 2023-10-30
+Updated atom names : 2026-11-25
 ;
 
 data_comp_WVL
@@ -49,8 +50,8 @@ _chem_comp_atom.z
  WVL  CE2  C  CH3    0  -0.719  -26.1002  16.4166  -4.4773
  WVL  N    N  NH2    0  -0.817  -22.5050  13.4957  -2.0152
  WVL  OXT  O  OC    -1  -0.608  -24.8327  11.8311  -3.8499
- WVL  H1   H  HCH1   0   0.163  -24.4842  12.7994  -1.6270
- WVL  H2   H  HCH1   0   0.217  -24.0260  15.4638  -2.9897
+ WVL  HA   H  HCH1   0   0.163  -24.4842  12.7994  -1.6270
+ WVL  H1   H  HCH1   0   0.217  -24.0260  15.4638  -2.9897
  WVL  H3   H  HCH3   0   0.222  -23.3026  15.5990  -0.6204
  WVL  H4   H  HCH3   0   0.229  -24.8078  16.4754  -0.8414
  WVL  H5   H  HCH3   0   0.211  -24.8276  14.8806  -0.0926
@@ -61,7 +62,7 @@ _chem_comp_atom.z
  WVL  H10  H  HCH3   0   0.239  -25.0305  16.5633  -4.3481
  WVL  H11  H  HCH3   0   0.230  -26.2713  16.0889  -5.5061
  WVL  H12  H  HCH3   0   0.229  -26.5843  17.3919  -4.3817
- WVL  H13  H  HNH2   0   0.337  -22.3907  13.6647  -1.0233
+ WVL  H    H  HNH2   0   0.337  -22.3907  13.6647  -1.0233
  WVL  H14  H  HNH2   0   0.337  -22.0927  12.5836  -2.1709
 
 loop_
@@ -82,8 +83,8 @@ _chem_comp_bond.value_dist_neutron
  WVL  CA   CB   single  1.540  0.027  1.540
  WVL  CA   N    single  1.458  0.019  1.458
  WVL  CB   CG2  single  1.531  0.020  1.531
- WVL  CA   H1   single  0.970  0.020  1.090
- WVL  CB   H2   single  0.970  0.020  1.090
+ WVL  CA   HA   single  0.970  0.020  1.090
+ WVL  CB   H1   single  0.970  0.020  1.090
  WVL  CG2  H3   single  0.970  0.020  1.090
  WVL  CG2  H4   single  0.970  0.020  1.090
  WVL  CG2  H5   single  0.970  0.020  1.090
@@ -94,7 +95,7 @@ _chem_comp_bond.value_dist_neutron
  WVL  CE2  H10  single  0.970  0.020  1.090
  WVL  CE2  H11  single  0.970  0.020  1.090
  WVL  CE2  H12  single  0.970  0.020  1.090
- WVL  N    H13  single  0.890  0.020  1.040
+ WVL  N    H    single  0.890  0.020  1.040
  WVL  N    H14  single  0.890  0.020  1.040
 
 loop_
@@ -107,16 +108,16 @@ _chem_comp_angle.value_angle_esd
  WVL  OXT  C    O    126.63  3.000
  WVL  OXT  C    CA   116.78  3.000
  WVL  O    C    CA   120.80  1.700
- WVL  H1   CA   N    111.83  3.000
- WVL  H1   CA   CB   107.36  3.000
+ WVL  HA   CA   N    111.83  3.000
+ WVL  HA   CA   CB   107.36  3.000
  WVL  N    CA   CB   111.50  1.700
- WVL  H1   CA   C    107.80  3.000
+ WVL  HA   CA   C    107.80  3.000
  WVL  N    CA   C    111.00  2.800
  WVL  CB   CA   C    111.40  1.900
- WVL  H2   CB   CG1  110.50  3.000
- WVL  H2   CB   CG2  108.24  3.000
+ WVL  H1   CB   CG1  110.50  3.000
+ WVL  H1   CB   CG2  108.24  3.000
  WVL  CG1  CB   CG2  109.40  3.000
- WVL  H2   CB   CA   106.91  3.000
+ WVL  H1   CB   CA   106.91  3.000
  WVL  CG2  CB   CA   112.11  3.000
  WVL  CG1  CB   CA   109.65  3.000
  WVL  H5   CG2  H4   107.57  3.000
@@ -143,9 +144,9 @@ _chem_comp_angle.value_angle_esd
  WVL  H12  CE2  CD   110.45  3.000
  WVL  H11  CE2  CD   110.54  3.000
  WVL  H10  CE2  CD   113.66  3.000
- WVL  H14  N    H13  104.77  3.000
+ WVL  H14  N    H    104.77  3.000
  WVL  H14  N    CA   109.22  3.000
- WVL  H13  N    CA   109.22  3.000
+ WVL  H    N    CA   109.22  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -160,13 +161,13 @@ _chem_comp_tor.period
  WVL  Var_01  CE2  CD   CG1  CB      0.81   0.0  2
  WVL  Var_02  H10  CE2  CD   CG1    -0.90  30.0  3
  WVL  Var_03  H7   CE1  CD   CG1    -0.47  30.0  3
- WVL  Var_04  H2   CB   CA   C     -60.47  30.0  3
- WVL  Var_05  H13  N    CA   C    -166.72  30.0  3
+ WVL  Var_04  H1   CB   CA   C     -60.47  30.0  3
+ WVL  Var_05  H    N    CA   C    -166.72  30.0  3
  WVL  Var_06  H14  N    CA   C     -52.67  30.0  3
  WVL  Var_07  H3   CG2  CB   CA     60.87  30.0  3
  WVL  Var_08  H4   CG2  CB   CA   -179.60  30.0  3
  WVL  Var_09  H5   CG2  CB   CA    -60.05  30.0  3
- WVL  Var_10  H1   CA   C    O     179.81  30.0  2
+ WVL  Var_10  HA   CA   C    O     179.81  30.0  2
 
 loop_
 _chem_comp_chir.comp_id

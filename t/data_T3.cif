@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
 Added dihedrals for adding hydrogens : 2023-10-24
+Updated atom names : 2026-11-25
 ;
 
 data_comp_T3
@@ -51,16 +52,16 @@ _chem_comp_atom.z
  T3  C11   C  CR16   0  -0.286  -1.2329  -0.4077   2.1756
  T3  C12   C  CR16   0  -0.310   0.1616   2.1550  -2.8087
  T3  C13   C  CH2    0  -0.535  -0.1127  -1.7517   3.9707
- T3  C15   C  CH1    0  -0.191  -0.2189  -0.9138   5.2676
- T3  C17   C  C      0   0.407  -0.3786  -1.8930   6.4510
+ T3  CA    C  CH1    0  -0.191  -0.2189  -0.9138   5.2676
+ T3  C     C  C      0   0.407  -0.3786  -1.8930   6.4510
  T3  I1    I  I      0   0.101   3.0464   0.9410   0.3062
  T3  I2    I  I      0   0.073  -0.0166  -2.5806  -3.8833
  T3  I3    I  I      0   0.099  -2.9699   1.1480   0.2349
- T3  N1    N  NH2    0  -0.794   0.9127  -0.0379   5.5092
+ T3  N     N  NH2    0  -0.794   0.9127  -0.0379   5.5092
  T3  O1    O  OH1    0  -0.615   0.1599  -0.0521  -5.7285
  T3  O2    O  O2     0  -0.491   0.0675   1.7027  -0.5101
- T3  O3    O  OC    -1  -0.610  -1.5278  -2.0648   6.8996
- T3  O4    O  O      0  -0.613   0.6665  -2.4576   6.8325
+ T3  OXT   O  OC    -1  -0.610  -1.5278  -2.0648   6.8996
+ T3  O     O  O      0  -0.613   0.6665  -2.4576   6.8325
  T3  HC3   H  HCR6   0   0.285   2.0823  -0.8700   2.6281
  T3  HC4   H  HCR6   0   0.301  -0.0214  -0.8821  -1.3108
  T3  HC10  H  HCR6   0   0.288   0.2433   2.4855  -4.9139
@@ -68,9 +69,9 @@ _chem_comp_atom.z
  T3  HC12  H  HCR6   0   0.284   0.2016   3.2103  -2.5723
  T3  H131  H  HCH2   0   0.248   0.7796  -2.3799   4.0289
  T3  H132  H  HCH2   0   0.251  -0.9757  -2.4197   3.9049
- T3  HC15  H  HCH1   0   0.215  -1.1189  -0.2951   5.1933
- T3  HN11  H  HNH2   0   0.331   1.7451  -0.6039   5.6215
- T3  HN12  H  HNH2   0   0.340   1.0759   0.5687   4.7142
+ T3  HA    H  HCH1   0   0.215  -1.1189  -0.2951   5.1933
+ T3  H2    H  HNH2   0   0.331   1.7451  -0.6039   5.6215
+ T3  H     H  HNH2   0   0.340   1.0759   0.5687   4.7142
  T3  HO1   H  HOH1   0   0.482   0.2365   0.6877  -6.3420
 
 loop_
@@ -105,16 +106,16 @@ _chem_comp_bond.value_dist_neutron
  T3  C10  HC10  single    0.930  0.020  1.080
  T3  C11  HC11  single    0.930  0.020  1.080
  T3  C12  HC12  single    0.930  0.020  1.080
- T3  C13  C15   single    1.548  0.020  1.548
+ T3  C13  CA    single    1.548  0.020  1.548
  T3  C13  H131  single    0.970  0.020  1.090
  T3  C13  H132  single    0.970  0.020  1.090
- T3  C15  C17   single    1.544  0.020  1.544
- T3  C15  N1    single    1.451  0.020  1.451
- T3  C15  HC15  single    0.970  0.020  1.090
- T3  C17  O3    deloc     1.246  0.020  1.246
- T3  C17  O4    deloc     1.248  0.020  1.248
- T3  N1   HN11  single    0.890  0.020  1.040
- T3  N1   HN12  single    0.890  0.020  1.040
+ T3  CA   C     single    1.544  0.020  1.544
+ T3  CA   N     single    1.451  0.020  1.451
+ T3  CA   HA    single    0.970  0.020  1.090
+ T3  C    OXT   deloc     1.246  0.020  1.246
+ T3  C    O     deloc     1.248  0.020  1.248
+ T3  N    H2    single    0.890  0.020  1.040
+ T3  N    H     single    0.890  0.020  1.040
  T3  O1   HO1   single    0.850  0.020  0.980
 
 loop_
@@ -161,23 +162,23 @@ _chem_comp_angle.value_angle_esd
  T3  HC12  C12  C2    120.23  3.000
  T3  C10   C12  C2    119.84  3.000
  T3  H132  C13  H131  107.24  3.000
- T3  H132  C13  C15   109.09  3.000
- T3  H131  C13  C15   108.82  3.000
+ T3  H132  C13  CA    109.09  3.000
+ T3  H131  C13  CA    108.82  3.000
  T3  H132  C13  C1    109.38  3.000
  T3  H131  C13  C1    110.12  3.000
- T3  C15   C13  C1    112.07  3.000
- T3  HC15  C15  N1    108.13  3.000
- T3  HC15  C15  C17   108.99  3.000
- T3  N1    C15  C17   109.62  3.000
- T3  HC15  C15  C13   107.79  3.000
- T3  N1    C15  C13   114.38  3.000
- T3  C17   C15  C13   107.82  3.000
- T3  O4    C17  O3    126.90  3.000
- T3  O4    C17  C15   115.76  3.000
- T3  O3    C17  C15   117.31  3.000
- T3  HN12  N1   HN11  106.81  3.000
- T3  HN12  N1   C15   110.87  3.000
- T3  HN11  N1   C15   108.78  3.000
+ T3  CA    C13  C1    112.07  3.000
+ T3  HA    CA   N     108.13  3.000
+ T3  HA    CA   C     108.99  3.000
+ T3  N     CA   C     109.62  3.000
+ T3  HA    CA   C13   107.79  3.000
+ T3  N     CA   C13   114.38  3.000
+ T3  C     CA   C13   107.82  3.000
+ T3  O     C    OXT   126.90  3.000
+ T3  O     C    CA    115.76  3.000
+ T3  OXT   C    CA    117.31  3.000
+ T3  H     N    H2    106.81  3.000
+ T3  H     N    CA    110.87  3.000
+ T3  H2    N    CA    108.78  3.000
  T3  HO1   O1   C8    110.49  3.000
  T3  C7    O2   C2    119.21  3.000
 
@@ -224,17 +225,17 @@ _chem_comp_tor.period
  T3  CONST_31  HC4   C4   C6   C8    180.00   0.0  0
  T3  Var_01    C5    C7   O2   C2     90.01  30.0  2
  T3  Var_02    C12   C2   O2   C7   -178.40  30.0  1
- T3  Var_03    C15   C13  C1   C3     93.08  30.0  2
+ T3  Var_03    CA    C13  C1   C3     93.08  30.0  2
  T3  Var_04    HO1   O1   C8   C6   -178.57  30.0  2
- T3  Var_05    C17   C15  C13  C1    175.73  30.0  3
- T3  Var_06    N1    C15  C13  C1    -62.07  30.0  3
- T3  Var_07    HC15  C15  C13  C1     58.21  30.0  3
- T3  Var_08    O3    C17  C15  C13  -100.22  30.0  2
- T3  Var_09    O4    C17  C15  C13    77.93  30.0  2
- T3  Var_10    O3    C17  C15  N1    134.70  30.0  2
- T3  Var_11    O4    C17  C15  N1    -47.15  30.0  2
- T3  Var_12    HN11  N1   C15  C13   -62.44  30.0  3
- T3  Var_13    HN12  N1   C15  C13    54.73  30.0  3
+ T3  Var_05    C     CA   C13  C1    175.73  30.0  3
+ T3  Var_06    N     CA   C13  C1    -62.07  30.0  3
+ T3  Var_07    HA    CA   C13  C1     58.21  30.0  3
+ T3  Var_08    OXT   C    CA   C13  -100.22  30.0  2
+ T3  Var_09    O     C    CA   C13    77.93  30.0  2
+ T3  Var_10    OXT   C    CA   N     134.70  30.0  2
+ T3  Var_11    O     C    CA   N     -47.15  30.0  2
+ T3  Var_12    H2    N    CA   C13   -62.44  30.0  3
+ T3  Var_13    H     N    CA   C13    54.73  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -244,7 +245,7 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- T3  chir_01  C15  C13  C17  N1  negativ
+ T3  chir_01  CA  C13  C  N  negativ
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -275,8 +276,8 @@ _chem_comp_plane_atom.dist_esd
  T3  plan-2  HC4   0.020
  T3  plan-2  HC10  0.020
  T3  plan-2  HC12  0.020
- T3  plan-3  C15   0.020
- T3  plan-3  C17   0.020
- T3  plan-3  O3    0.020
- T3  plan-3  O4    0.020
+ T3  plan-3  CA    0.020
+ T3  plan-3  C     0.020
+ T3  plan-3  OXT   0.020
+ T3  plan-3  O     0.020
 

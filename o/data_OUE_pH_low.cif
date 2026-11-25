@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
 Added dihedrals for adding hydrogens : 2023-10-20
+Updated atom names : 2026-11-25
 ;
 
 data_comp_OUE
@@ -49,7 +50,7 @@ _chem_comp_atom.z
  OUE  OE2  O  O     0  -0.445  -3.8512  -1.4114  -0.2359
  OUE  CM   C  CH2   0  -0.225   1.2506  -0.4317  -0.0788
  OUE  N2   N  NH1   0  -0.641   2.4674   0.3229   0.0963
- OUE  H1   H  HNH2  0   0.346  -0.0535   1.4988  -1.5869
+ OUE  H2   H  HNH2  0   0.346  -0.0535   1.4988  -1.5869
  OUE  H    H  HNH2  0   0.361  -0.4398   2.4060  -0.2948
  OUE  HA   H  HCH1  0   0.240   0.0885   0.7857   1.2303
  OUE  HB3  H  HCH2  0   0.230  -1.2633  -0.6950  -1.0665
@@ -60,8 +61,8 @@ _chem_comp_atom.z
  OUE  HM2  H  HCH2  0   0.244   1.2305  -1.2734   0.6144
  OUE  HM3  H  HCH2  0   0.224   1.1857  -0.8458  -1.0930
  OUE  HN2  H  HNH1  0   0.395   2.3916   1.3107  -0.1045
- OUE  O1   O  OH1   0  -0.626   4.6559   0.6531   0.2089
- OUE  H2   H  HOH1  0   0.479   5.5037   0.1946   0.2701
+ OUE  OXT  O  OH1   0  -0.626   4.6559   0.6531   0.2089
+ OUE  HXT  H  HOH1  0   0.479   5.5037   0.1946   0.2701
 
 loop_
 _chem_comp_bond.comp_id
@@ -81,7 +82,7 @@ _chem_comp_bond.value_dist_neutron
  OUE  CM   N2   single  1.443  0.020  1.443
  OUE  N2   C    single  1.339  0.020  1.339
  OUE  C    O    double  1.217  0.020  1.217
- OUE  N    H1   single  0.890  0.020  1.040
+ OUE  N    H2   single  0.890  0.020  1.040
  OUE  N    H    single  0.860  0.020  1.020
  OUE  CA   HA   single  0.970  0.020  1.090
  OUE  CB   HB3  single  0.970  0.020  1.090
@@ -92,8 +93,8 @@ _chem_comp_bond.value_dist_neutron
  OUE  CM   HM2  single  0.970  0.020  1.090
  OUE  CM   HM3  single  0.970  0.020  1.090
  OUE  N2   HN2  single  0.860  0.020  1.020
- OUE  C    O1   single  1.341  0.020  1.341
- OUE  O1   H2   single  0.850  0.020  0.980
+ OUE  C    OXT  single  1.341  0.020  1.341
+ OUE  OXT  HXT  single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -102,17 +103,17 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- OUE  H    N    H1   106.73  3.000
+ OUE  H    N    H2   106.73  3.000
  OUE  H    N    CA   110.98  3.000
- OUE  H1   N    CA   110.54  3.000
+ OUE  H2   N    CA   110.54  3.000
  OUE  HA   CA   CM   107.66  3.000
  OUE  HA   CA   CB   108.41  3.000
  OUE  CM   CA   CB   109.51  3.000
  OUE  HA   CA   N    106.67  3.000
  OUE  CM   CA   N    108.89  3.000
  OUE  CB   CA   N    115.42  3.000
- OUE  O1   C    N2   111.58  3.000
- OUE  O1   C    O    123.12  3.000
+ OUE  OXT  C    N2   111.58  3.000
+ OUE  OXT  C    O    123.12  3.000
  OUE  N2   C    O    125.29  3.000
  OUE  HB2  CB   HB3  106.62  3.000
  OUE  HB2  CB   CG   109.66  3.000
@@ -139,7 +140,7 @@ _chem_comp_angle.value_angle_esd
  OUE  HN2  N2   CM   115.07  3.000
  OUE  HN2  N2   C    120.19  3.000
  OUE  CM   N2   C    122.67  3.000
- OUE  H2   O1   C    108.89  3.000
+ OUE  HXT  OXT  C    108.89  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -151,7 +152,7 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OUE  CONST_01  H2   O1   C   O      0.00   0.0  0
+ OUE  CONST_01  HXT  OXT  C   O      0.00   0.0  0
  OUE  CONST_02  H4   OE1  CD  CG   180.00   0.0  0
  OUE  Var_01    CD   CG   CB  CA  -177.49  30.0  3
  OUE  Var_02    C    N2   CM  CA   167.19  30.0  3
@@ -165,7 +166,7 @@ _chem_comp_tor.period
  OUE  Var_10    HB2  CB   CA  N   -179.45  30.0  1
  OUE  Var_11    HM2  CM   CA  N    172.17  30.0  3
  OUE  Var_12    HM3  CM   CA  N    -70.53  30.0  3
- OUE  Var_13    H1   N    CA  CB   -46.38  30.0  3
+ OUE  Var_13    H2   N    CA  CB   -46.38  30.0  3
  OUE  Var_14    H    N    CA  CB    71.85  30.0  3
  OUE  Var_15    HA   CA   CB  CG    61.70  30.0  3
 
@@ -187,8 +188,8 @@ _chem_comp_plane_atom.dist_esd
  OUE  plan-1  C    0.020
  OUE  plan-1  O    0.020
  OUE  plan-1  N2   0.020
- OUE  plan-1  O1   0.020
- OUE  plan-1  H2   0.020
+ OUE  plan-1  OXT  0.020
+ OUE  plan-1  HXT  0.020
  OUE  plan-2  CG   0.020
  OUE  plan-2  CD   0.020
  OUE  plan-2  OE1  0.020

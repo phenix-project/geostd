@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
 Added dihedrals for adding hydrogens : 2023-10-30
+Updated atom names : 2026-11-25
 ;
 
 data_comp_LBZ
@@ -56,7 +57,7 @@ _chem_comp_atom.z
  LBZ  O1   O  O      0  -0.489  10.6637  -3.5889  17.2214
  LBZ  O2   O  OC    -1  -0.610   2.9412  -2.3720  16.1286
  LBZ  H1   H  HCR6   0   0.262  12.4861   1.7756  16.5731
- LBZ  H2   H  HCR6   0   0.261  14.1152   0.8506  14.9555
+ LBZ  H20  H  HCR6   0   0.261  14.1152   0.8506  14.9555
  LBZ  H3   H  HCR6   0   0.260  14.0376  -1.5548  14.3753
  LBZ  H4   H  HCH2   0   0.215   5.5750  -1.6918  15.1809
  LBZ  H5   H  HCH2   0   0.214   6.9479  -2.6677  15.6407
@@ -68,9 +69,9 @@ _chem_comp_atom.z
  LBZ  H11  H  HCH2   0   0.229   5.4476  -0.6621  17.3980
  LBZ  H12  H  HNH1   0   0.407   9.1078  -0.8680  17.4030
  LBZ  H13  H  HCR6   0   0.257  10.8000   0.3350  17.5907
- LBZ  H14  H  HNH2   0   0.332   4.3810  -5.0566  15.5471
+ LBZ  H    H  HNH2   0   0.332   4.3810  -5.0566  15.5471
  LBZ  H15  H  HNH2   0   0.321   4.3161  -3.7573  14.6058
- LBZ  H17  H  HCH1   0   0.201   5.5594  -3.9586  17.2129
+ LBZ  HA   H  HCH1   0   0.201   5.5594  -3.9586  17.2129
  LBZ  H18  H  HCR6   0   0.257  12.3442  -3.0175  15.3991
  LBZ  C7   C  C      0   0.530  10.4295  -2.3896  17.1369
 
@@ -101,7 +102,7 @@ _chem_comp_bond.value_dist_neutron
  LBZ  CA   N    single    1.458  0.019  1.458
  LBZ  C    O2   deloc     1.250  0.020  1.250
  LBZ  C4   H1   single    0.930  0.020  1.080
- LBZ  C5   H2   single    0.930  0.020  1.080
+ LBZ  C5   H20  single    0.930  0.020  1.080
  LBZ  C6   H3   single    0.930  0.020  1.080
  LBZ  C11  H4   single    0.970  0.020  1.090
  LBZ  C11  H5   single    0.970  0.020  1.090
@@ -113,9 +114,9 @@ _chem_comp_bond.value_dist_neutron
  LBZ  C10  H11  single    0.970  0.020  1.090
  LBZ  N1   H12  single    0.860  0.020  1.020
  LBZ  C3   H13  single    0.930  0.020  1.080
- LBZ  N    H14  single    0.890  0.020  1.040
+ LBZ  N    H    single    0.890  0.020  1.040
  LBZ  N    H15  single    0.890  0.020  1.040
- LBZ  CA   H17  single    0.970  0.020  1.090
+ LBZ  CA   HA   single    0.970  0.020  1.090
  LBZ  C1   H18  single    0.930  0.020  1.080
 
 loop_
@@ -128,8 +129,8 @@ _chem_comp_angle.value_angle_esd
  LBZ  H1   C4   C3   119.65  3.000
  LBZ  H1   C4   C5   120.18  3.000
  LBZ  C3   C4   C5   120.17  3.000
- LBZ  H2   C5   C6   120.15  3.000
- LBZ  H2   C5   C4   120.12  3.000
+ LBZ  H20  C5   C6   120.15  3.000
+ LBZ  H20  C5   C4   120.12  3.000
  LBZ  C6   C5   C4   119.72  3.000
  LBZ  H3   C6   C1   119.77  3.000
  LBZ  H3   C6   C5   120.11  3.000
@@ -164,13 +165,13 @@ _chem_comp_angle.value_angle_esd
  LBZ  H13  C3   C2   121.04  3.000
  LBZ  H13  C3   C4   118.51  3.000
  LBZ  C2   C3   C4   120.43  3.000
- LBZ  H15  N    H14  104.68  3.000
+ LBZ  H15  N    H    104.68  3.000
  LBZ  H15  N    CA   107.37  3.000
- LBZ  H14  N    CA   108.86  3.000
- LBZ  H17  CA   C    108.66  3.000
- LBZ  H17  CA   N    107.12  3.000
+ LBZ  H    N    CA   108.86  3.000
+ LBZ  HA   CA   C    108.66  3.000
+ LBZ  HA   CA   N    107.12  3.000
  LBZ  C    CA   N    111.00  2.800
- LBZ  H17  CA   C11  108.82  3.000
+ LBZ  HA   CA   C11  108.82  3.000
  LBZ  N    CA   C11  107.94  3.000
  LBZ  C    CA   C11  109.98  3.000
  LBZ  O2   C    O    126.50  3.000
@@ -208,7 +209,7 @@ _chem_comp_tor.period
  LBZ  CONST_10  H18  C1   C6   C5    180.00   0.0  0
  LBZ  CONST_11  H13  C3   C4   C5    180.00   0.0  0
  LBZ  CONST_12  H1   C4   C5   C6    180.00   0.0  0
- LBZ  CONST_13  H2   C5   C4   C3    180.00   0.0  0
+ LBZ  CONST_13  H20  C5   C4   C3    180.00   0.0  0
  LBZ  CONST_14  C2   C7   N1   C8    180.00   0.0  0
  LBZ  CONST_15  H12  N1   C7   C2      0.00   0.0  0
  LBZ  CONST_16  O1   C7   N1   C8      0.00   0.0  0
@@ -217,9 +218,9 @@ _chem_comp_tor.period
  LBZ  Var_03    C9   C8   N1   C7   -173.28  30.0  3
  LBZ  Var_04    CA   C11  C10  C9     57.27  30.0  2
  LBZ  Var_05    N1   C8   C9   C10    60.32  30.0  1
- LBZ  Var_06    H14  N    CA   C11   173.50  30.0  3
+ LBZ  Var_06    H    N    CA   C11   173.50  30.0  3
  LBZ  Var_07    H15  N    CA   C11   -73.69  30.0  3
- LBZ  Var_08    H17  CA   C11  C10   -62.93  30.0  3
+ LBZ  Var_08    HA   CA   C11  C10   -62.93  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -243,7 +244,7 @@ _chem_comp_plane_atom.dist_esd
  LBZ  plan-1  C1   0.020
  LBZ  plan-1  C2   0.020
  LBZ  plan-1  H1   0.020
- LBZ  plan-1  H2   0.020
+ LBZ  plan-1  H20  0.020
  LBZ  plan-1  H3   0.020
  LBZ  plan-1  H13  0.020
  LBZ  plan-1  H18  0.020

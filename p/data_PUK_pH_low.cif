@@ -26,6 +26,7 @@ Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent mode
 Validated by Mogul as GRAND
 Added dihedrals for adding hydrogens : 2023-10-30
 Removed H2 atom : 2024-04-11
+Updated atom names : 2026-11-25
 ;
 
 data_comp_PUK
@@ -40,7 +41,7 @@ _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
  PUK  N    N  NH2   0  -0.783   1.3029   1.0980  -0.0661
- PUK  C1   C  CH1   0  -0.114   1.4041  -0.3424   0.0972
+ PUK  CA   C  CH1   0  -0.114   1.4041  -0.3424   0.0972
  PUK  C2   C  CH2   0  -0.268   0.1320  -1.0175   0.6158
  PUK  C3   C  CH2   0  -0.517   2.5674  -0.6734   1.0386
  PUK  C4   C  CR6   0   0.171   3.8896  -0.1714   0.5361
@@ -62,7 +63,7 @@ _chem_comp_atom.z
  PUK  C18  C  CR16  0  -0.267  -3.5173   3.5795  -0.1807
  PUK  OXT  O  OH1   0  -0.594  -3.2170  -3.3422   0.8603
  PUK  H    H  HNH2  0   0.345   0.6656   1.3428  -0.8121
- PUK  H1   H  HCH1  0   0.235   1.6291  -0.7628  -0.8889
+ PUK  HA   H  HCH1  0   0.235   1.6291  -0.7628  -0.8889
  PUK  H3   H  HCH2  0   0.227   0.3124  -2.0927   0.6914
  PUK  H4   H  HCH2  0   0.192  -0.0679  -0.6596   1.6409
  PUK  H5   H  HCH2  0   0.240   2.3566  -0.2475   2.0248
@@ -91,11 +92,11 @@ _chem_comp_bond.type
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
- PUK  N    C1   single    1.453  0.020  1.453
+ PUK  N    CA   single    1.453  0.020  1.453
  PUK  N    H    single    0.860  0.020  0.860
- PUK  C1   C2   single    1.531  0.020  1.531
- PUK  C1   C3   single    1.533  0.020  1.533
- PUK  C1   H1   single    0.970  0.020  1.090
+ PUK  CA   C2   single    1.531  0.020  1.531
+ PUK  CA   C3   single    1.533  0.020  1.533
+ PUK  CA   HA   single    0.970  0.020  1.090
  PUK  C2   H3   single    0.970  0.020  1.090
  PUK  C2   H4   single    0.970  0.020  1.090
  PUK  C2   N2   single    1.451  0.020  1.451
@@ -143,25 +144,25 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- PUK  H    N    C1   111.51  3.000
- PUK  H1   C1   C3   108.31  3.000
- PUK  H1   C1   C2   107.85  3.000
- PUK  C3   C1   C2   109.11  3.000
- PUK  H1   C1   N    107.07  3.000
- PUK  C3   C1   N    109.63  3.000
- PUK  C2   C1   N    114.67  3.000
+ PUK  H    N    CA   111.51  3.000
+ PUK  HA   CA   C3   108.31  3.000
+ PUK  HA   CA   C2   107.85  3.000
+ PUK  C3   CA   C2   109.11  3.000
+ PUK  HA   CA   N    107.07  3.000
+ PUK  C3   CA   N    109.63  3.000
+ PUK  C2   CA   N    114.67  3.000
  PUK  H4   C2   H3   106.54  3.000
  PUK  H4   C2   N2   112.24  3.000
  PUK  H3   C2   N2   109.00  3.000
- PUK  N2   C2   C1   111.42  3.000
- PUK  H4   C2   C1   108.79  3.000
- PUK  H3   C2   C1   108.68  3.000
+ PUK  N2   C2   CA   111.42  3.000
+ PUK  H4   C2   CA   108.79  3.000
+ PUK  H3   C2   CA   108.68  3.000
  PUK  H6   C3   H5   106.47  3.000
  PUK  H6   C3   C4   109.76  3.000
  PUK  H5   C3   C4   109.94  3.000
- PUK  H6   C3   C1   108.59  3.000
- PUK  H5   C3   C1   108.85  3.000
- PUK  C4   C3   C1   113.00  3.000
+ PUK  H6   C3   CA   108.59  3.000
+ PUK  H5   C3   CA   108.85  3.000
+ PUK  C4   C3   CA   113.00  3.000
  PUK  C6   C4   C5   118.31  3.000
  PUK  C6   C4   C3   120.47  3.000
  PUK  C5   C4   C3   121.21  3.000
@@ -255,14 +256,14 @@ _chem_comp_tor.period
  PUK  CONST_25  H20  C18  C16  C14   180.00   0.0  0
  PUK  CONST_26  H16  C14  C13  C15   180.00   0.0  0
  PUK  CONST_27  HXT  OXT  C    C10   180.00   0.0  0
- PUK  Var_01    C5   C4   C3   C1     98.57  30.0  2
+ PUK  Var_01    C5   C4   C3   CA     98.57  30.0  2
  PUK  Var_02    C14  C13  C12  C10   100.60  30.0  2
- PUK  Var_03    C10  N2   C2   C1   -174.92  30.0  3
- PUK  Var_04    H1   C1   C3   C4     56.94  30.0  2
+ PUK  Var_03    C10  N2   C2   CA   -174.92  30.0  3
+ PUK  Var_04    HA   CA   C3   C4     56.94  30.0  2
  PUK  Var_05    H13  C10  C12  C13    62.14  30.0  2
- PUK  Var_06    H3   C2   C1   N     179.42  30.0  3
- PUK  Var_07    H4   C2   C1   N     -64.97  30.0  3
- PUK  Var_08    H    N    C1   C2    -67.75  30.0  3
+ PUK  Var_06    H3   C2   CA   N     179.42  30.0  3
+ PUK  Var_07    H4   C2   CA   N     -64.97  30.0  3
+ PUK  Var_08    H    N    CA   C2    -67.75  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -272,7 +273,7 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- PUK  chir_01  C1   N   C2   C3  positiv
+ PUK  chir_01  CA   N   C2   C3  positiv
  PUK  chir_02  C10  N2  C12  C   negativ
 
 loop_

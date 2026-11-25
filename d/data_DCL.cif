@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
 Added dihedrals for adding hydrogens : 2023-10-30
+Updated atom names : 2026-11-25
 ;
 
 data_comp_DCL
@@ -45,8 +46,8 @@ _chem_comp_atom.z
  DCL  CG    C  CH1   0  -0.239  -1.7955   0.0813   0.1793
  DCL  CD1   C  CH3   0  -0.646  -2.9806   0.7166  -0.5415
  DCL  CD2   C  CH3   0  -0.657  -2.0060  -1.4221   0.3327
- DCL  OXT   O  OH1   0  -0.671   3.1566  -0.2859  -0.2822
- DCL  HN1   H  HNH2  0   0.332   0.8777   1.2871   1.5575
+ DCL  O     O  OH1   0  -0.671   3.1566  -0.2859  -0.2822
+ DCL  H     H  HNH2  0   0.332   0.8777   1.2871   1.5575
  DCL  HN2   H  HNH2  0   0.346   0.2480  -0.1142   2.0507
  DCL  HA    H  HCH1  0   0.223   0.7665  -1.2103   0.0639
  DCL  HC1   H  HCH2  0   0.193   1.7827   0.0784  -1.7966
@@ -60,7 +61,7 @@ _chem_comp_atom.z
  DCL  HD21  H  HCH3  0   0.225  -1.2240  -1.8949   0.9293
  DCL  HD22  H  HCH3  0   0.227  -2.9573  -1.6342   0.8237
  DCL  HD23  H  HCH3  0   0.213  -2.0211  -1.9187  -0.6409
- DCL  HXT   H  HOH1  0   0.450   3.8756  -0.0218  -0.8627
+ DCL  HO    H  HOH1  0   0.450   3.8756  -0.0218  -0.8627
 
 loop_
 _chem_comp_bond.comp_id
@@ -71,12 +72,12 @@ _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  DCL  N    CA    single  1.458  0.019  1.458
- DCL  N    HN1   single  0.890  0.020  1.040
+ DCL  N    H     single  0.890  0.020  1.040
  DCL  N    HN2   single  0.890  0.020  1.040
  DCL  CA   C     single  1.525  0.021  1.525
  DCL  CA   CB    single  1.521  0.033  1.521
  DCL  CA   HA    single  0.970  0.020  0.970
- DCL  C    OXT   single  1.409  0.020  1.409
+ DCL  C    O     single  1.409  0.020  1.409
  DCL  C    HC1   single  0.970  0.020  1.090
  DCL  C    HC2   single  0.970  0.020  1.090
  DCL  CB   CG    single  1.529  0.020  1.529
@@ -91,7 +92,7 @@ _chem_comp_bond.value_dist_neutron
  DCL  CD2  HD21  single  0.970  0.020  1.090
  DCL  CD2  HD22  single  0.970  0.020  1.090
  DCL  CD2  HD23  single  0.970  0.020  1.090
- DCL  OXT  HXT   single  0.850  0.020  0.980
+ DCL  O    HO    single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -100,9 +101,9 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- DCL  HN2   N    HN1   105.49  3.000
+ DCL  HN2   N    H     105.49  3.000
  DCL  HN2   N    CA    109.78  3.000
- DCL  HN1   N    CA    109.39  3.000
+ DCL  H     N    CA    109.39  3.000
  DCL  HA    CA   CB    109.00  3.000
  DCL  HA    CA   C     110.00  3.000
  DCL  CB    CA   C     110.50  1.500
@@ -110,11 +111,11 @@ _chem_comp_angle.value_angle_esd
  DCL  CB    CA   N     110.40  1.500
  DCL  C     CA   N     111.00  2.800
  DCL  HC2   C    HC1   106.51  3.000
- DCL  HC2   C    OXT   111.45  3.000
- DCL  HC1   C    OXT   111.33  3.000
+ DCL  HC2   C    O     111.45  3.000
+ DCL  HC1   C    O     111.33  3.000
  DCL  HC2   C    CA    108.70  3.000
  DCL  HC1   C    CA    108.54  3.000
- DCL  OXT   C    CA    120.80  1.700
+ DCL  O     C    CA    120.80  1.700
  DCL  HB2   CB   HB1   106.06  3.000
  DCL  HB2   CB   CG    108.57  3.000
  DCL  HB1   CB   CG    108.52  3.000
@@ -139,7 +140,7 @@ _chem_comp_angle.value_angle_esd
  DCL  HD23  CD2  CG    111.10  3.000
  DCL  HD22  CD2  CG    110.92  3.000
  DCL  HD21  CD2  CG    112.52  3.000
- DCL  HXT   OXT  C     107.84  3.000
+ DCL  HO    O    C     107.84  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -158,8 +159,8 @@ _chem_comp_tor.period
  DCL  Var_05  HC2   C    CA  N    -61.03  30.0  3
  DCL  Var_06  HB1   CB   CA  N     66.88  30.0  3
  DCL  Var_07  HB2   CB   CA  N   -178.02  30.0  3
- DCL  Var_08  HXT   OXT  C   CA   176.74  30.0  3
- DCL  Var_09  HN1   N    CA  C     71.64  30.0  3
+ DCL  Var_08  HO    O    C   CA   176.74  30.0  3
+ DCL  Var_09  H     N    CA  C     71.64  30.0  3
  DCL  Var_10  HN2   N    CA  C   -173.05  30.0  3
  DCL  Var_11  HA    CA   CB  CG    64.67  30.0  1
 

@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
 Added dihedrals for adding hydrogens : 2023-10-16
+Updated atom names : 2026-11-25
 ;
 
 data_comp_C1J
@@ -57,9 +58,9 @@ _chem_comp_atom.z
  C1J  C06  C  CH2   0  -0.407   8.3079   0.5846  -0.3510
  C1J  C07  C  CH2   0  -0.419   9.6509   0.1028   0.1843
  C1J  C08  C  CH3   0  -0.663  10.8336   0.8240  -0.4469
- C1J  H1   H  HNH2  0   0.355  -6.8839   2.6427   0.6709
+ C1J  H    H  HNH2  0   0.355  -6.8839   2.6427   0.6709
  C1J  H2   H  HNH2  0   0.343  -6.4321   1.5063   1.7351
- C1J  H4   H  HCH1  0   0.268  -6.2251   1.3658  -1.1713
+ C1J  HA   H  HCH1  0   0.268  -6.2251   1.3658  -1.1713
  C1J  H6   H  HCH2  0   0.233  -5.3364  -0.6522   0.9302
  C1J  H7   H  HCH2  0   0.245  -5.4087  -0.9656  -0.7939
  C1J  H8   H  HCH2  0   0.231  -3.7632   0.8371  -1.2287
@@ -86,8 +87,8 @@ _chem_comp_atom.z
  C1J  H29  H  HCH3  0   0.226  11.7826   0.4650  -0.0473
  C1J  H30  H  HCH3  0   0.216  10.8537   0.6764  -1.5284
  C1J  H31  H  HCH3  0   0.216  10.7830   1.8989  -0.2637
- C1J  O1   O  OH1   0  -0.594  -7.9264  -0.4743  -1.3236
- C1J  H3   H  HOH1  0   0.481  -8.7852  -0.9219  -1.2866
+ C1J  OXT  O  OH1   0  -0.594  -7.9264  -0.4743  -1.3236
+ C1J  HXT  H  HOH1  0   0.481  -8.7852  -0.9219  -1.2866
 
 loop_
 _chem_comp_bond.comp_id
@@ -115,9 +116,9 @@ _chem_comp_bond.value_dist_neutron
  C1J  C05  C06  single  1.523  0.020  1.523
  C1J  C06  C07  single  1.524  0.020  1.524
  C1J  C07  C08  single  1.522  0.020  1.522
- C1J  N    H1   single  0.890  0.020  1.040
+ C1J  N    H    single  0.890  0.020  1.040
  C1J  N    H2   single  0.890  0.020  1.040
- C1J  CA   H4   single  0.970  0.020  1.090
+ C1J  CA   HA   single  0.970  0.020  1.090
  C1J  CB   H6   single  0.970  0.020  1.090
  C1J  CB   H7   single  0.970  0.020  1.090
  C1J  CG   H8   single  0.970  0.020  1.090
@@ -144,8 +145,8 @@ _chem_comp_bond.value_dist_neutron
  C1J  C08  H29  single  0.970  0.020  1.090
  C1J  C08  H30  single  0.970  0.020  1.090
  C1J  C08  H31  single  0.970  0.020  1.090
- C1J  C    O1   single  1.328  0.020  1.328
- C1J  O1   H3   single  0.850  0.020  0.980
+ C1J  C    OXT  single  1.328  0.020  1.328
+ C1J  OXT  HXT  single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -154,17 +155,17 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- C1J  H2   N    H1   106.36  3.000
+ C1J  H2   N    H    106.36  3.000
  C1J  H2   N    CA   110.21  3.000
- C1J  H1   N    CA   110.41  3.000
- C1J  H4   CA   CB   107.72  3.000
- C1J  H4   CA   C    107.10  3.000
+ C1J  H    N    CA   110.41  3.000
+ C1J  HA   CA   CB   107.72  3.000
+ C1J  HA   CA   C    107.10  3.000
  C1J  CB   CA   C    109.22  3.000
- C1J  H4   CA   N    108.22  3.000
+ C1J  HA   CA   N    108.22  3.000
  C1J  C    CA   N    113.51  3.000
  C1J  CB   CA   N    110.84  3.000
- C1J  O1   C    O    123.24  3.000
- C1J  O1   C    CA   112.14  3.000
+ C1J  OXT  C    O    123.24  3.000
+ C1J  OXT  C    CA   112.14  3.000
  C1J  O    C    CA   124.62  3.000
  C1J  H7   CB   H6   106.59  3.000
  C1J  H7   CB   CG   109.17  3.000
@@ -242,7 +243,7 @@ _chem_comp_angle.value_angle_esd
  C1J  H31  C08  C07  111.16  3.000
  C1J  H30  C08  C07  111.16  3.000
  C1J  H29  C08  C07  111.61  3.000
- C1J  H3   O1   C    110.28  3.000
+ C1J  HXT  OXT  C    110.28  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -257,7 +258,7 @@ _chem_comp_tor.period
  C1J  CONST_01  NH1  CZ   NE   CD      0.00   0.0  0
  C1J  CONST_02  NH2  CZ   NE   CD    180.00   0.0  0
  C1J  CONST_03  C02  NH2  CZ   NE    180.00   0.0  0
- C1J  CONST_04  H3   O1   C    CA    180.00   0.0  0
+ C1J  CONST_04  HXT  OXT  C    CA    180.00   0.0  0
  C1J  CONST_05  H13  NH1  CZ   NE      0.00   0.0  0
  C1J  Var_01    CD   CG   CB   CA    178.24  30.0  3
  C1J  Var_02    NE   CD   CG   CB    177.13  30.0  1
@@ -272,15 +273,15 @@ _chem_comp_tor.period
  C1J  Var_11    H29  C08  C07  C06   179.86  30.0  3
  C1J  Var_12    CG   CB   CA   N     -62.05  30.0  2
  C1J  Var_13    O    C    CA   N     -16.01  30.0  2
- C1J  Var_14    O1   C    CA   N     164.68  30.0  2
+ C1J  Var_14    OXT  C    CA   N     164.68  30.0  2
  C1J  Var_15    CG   CB   CA   C     172.17  30.0  2
  C1J  Var_16    CB   CA   C    O     108.22  30.0  3
- C1J  Var_17    O1   C    CA   CB    -71.09  30.0  2
+ C1J  Var_17    OXT  C    CA   CB    -71.09  30.0  2
  C1J  Var_18    H6   CB   CA   N      60.09  30.0  2
  C1J  Var_19    H7   CB   CA   N     176.35  30.0  2
- C1J  Var_20    H1   N    CA   C     -62.43  30.0  3
+ C1J  Var_20    H    N    CA   C     -62.43  30.0  3
  C1J  Var_21    H2   N    CA   C      54.79  30.0  3
- C1J  Var_22    H4   CA   C    O    -135.39  30.0  3
+ C1J  Var_22    HA   CA   C    O    -135.39  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -309,6 +310,6 @@ _chem_comp_plane_atom.dist_esd
  C1J  plan-2  CA   0.020
  C1J  plan-2  C    0.020
  C1J  plan-2  O    0.020
- C1J  plan-2  O1   0.020
- C1J  plan-2  H3   0.020
+ C1J  plan-2  OXT  0.020
+ C1J  plan-2  HXT  0.020
 

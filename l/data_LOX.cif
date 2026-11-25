@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
 Added dihedrals for adding hydrogens : 2023-10-19
+Updated atom names : 2026-11-25
 ;
 
 data_comp_LOX
@@ -43,9 +44,9 @@ _chem_comp_atom.z
  LOX  C3    C  CH1   0   0.027  -1.2150   0.5599   0.2371
  LOX  C4    C  CH1   0   0.024  -1.5804  -0.8242  -0.2692
  LOX  C5    C  CH2   0  -0.293  -0.4777  -1.8040   0.1258
- LOX  N1    N  NH1   0  -0.646   0.8237  -1.3532  -0.3291
- LOX  O22   O  OH1   0  -0.563   3.2999  -0.5600   0.1271
- LOX  N2    N  N     0  -0.254   2.3475   0.4260  -0.0330
+ LOX  N5    N  NH1   0  -0.646   0.8237  -1.3532  -0.3291
+ LOX  ON1   O  OH1   0  -0.563   3.2999  -0.5600   0.1271
+ LOX  N1    N  N     0  -0.254   2.3475   0.4260  -0.0330
  LOX  O2    O  OH1   0  -0.668   0.4739   2.2480   0.0351
  LOX  O3    O  OH1   0  -0.649  -2.2471   1.4525  -0.0806
  LOX  O4    O  OH1   0  -0.640  -2.8091  -1.2080   0.2914
@@ -54,8 +55,8 @@ _chem_comp_atom.z
  LOX  H4    H  HCH1  0   0.212  -1.6435  -0.7876  -1.3664
  LOX  H51   H  HCH2  0   0.240  -0.6744  -2.7789  -0.3221
  LOX  H52   H  HCH2  0   0.226  -0.4990  -1.9372   1.2140
- LOX  HN1   H  HNH1  0   0.381   1.5687  -2.0152  -0.1812
- LOX  HO22  H  HOH1  0   0.454   4.1224  -0.0734   0.2102
+ LOX  HN5   H  HNH1  0   0.381   1.5687  -2.0152  -0.1812
+ LOX  HON1  H  HOH1  0   0.454   4.1224  -0.0734   0.2102
  LOX  HO2   H  HOH1  0   0.440   1.4297   2.2182   0.1816
  LOX  HO3   H  HOH1  0   0.437  -2.0095   2.3155   0.2703
  LOX  HO4   H  HOH1  0   0.431  -3.1251  -1.9777  -0.1879
@@ -69,8 +70,8 @@ _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  LOX  C1   C2    single  1.510  0.020  1.510
- LOX  C1   N1    single  1.359  0.020  1.359
- LOX  C1   N2    double  1.275  0.020  1.275
+ LOX  C1   N5    single  1.359  0.020  1.359
+ LOX  C1   N1    double  1.275  0.020  1.275
  LOX  C2   C3    single  1.528  0.020  1.528
  LOX  C2   O2    single  1.399  0.020  1.399
  LOX  C2   H2    single  0.970  0.020  1.090
@@ -80,12 +81,12 @@ _chem_comp_bond.value_dist_neutron
  LOX  C4   C5    single  1.527  0.020  1.527
  LOX  C4   O4    single  1.404  0.020  1.404
  LOX  C4   H4    single  0.970  0.020  1.090
- LOX  C5   N1    single  1.450  0.020  1.450
+ LOX  C5   N5    single  1.450  0.020  1.450
  LOX  C5   H51   single  0.970  0.020  1.090
  LOX  C5   H52   single  0.970  0.020  1.090
- LOX  N1   HN1   single  0.890  0.020  1.040
- LOX  O22  N2    single  1.380  0.020  1.380
- LOX  O22  HO22  single  0.850  0.020  0.980
+ LOX  N5   HN5   single  0.890  0.020  1.040
+ LOX  ON1  N1    single  1.380  0.020  1.380
+ LOX  ON1  HON1  single  0.850  0.020  0.980
  LOX  O2   HO2   single  0.850  0.020  0.980
  LOX  O3   HO3   single  0.850  0.020  0.980
  LOX  O4   HO4   single  0.850  0.020  0.980
@@ -97,9 +98,9 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- LOX  N2    C1   N1   127.36  3.000
- LOX  N2    C1   C2   115.18  3.000
- LOX  N1    C1   C2   117.23  3.000
+ LOX  N1    C1   N5   127.36  3.000
+ LOX  N1    C1   C2   115.18  3.000
+ LOX  N5    C1   C2   117.23  3.000
  LOX  H2    C2   O2   110.03  3.000
  LOX  H2    C2   C3   107.20  3.000
  LOX  O2    C2   C3   109.87  3.000
@@ -119,16 +120,16 @@ _chem_comp_angle.value_angle_esd
  LOX  O4    C4   C3   109.07  3.000
  LOX  C5    C4   C3   108.95  3.000
  LOX  H52   C5   H51  107.19  3.000
- LOX  H52   C5   N1   111.50  3.000
- LOX  H51   C5   N1   108.11  3.000
+ LOX  H52   C5   N5   111.50  3.000
+ LOX  H51   C5   N5   108.11  3.000
  LOX  H52   C5   C4   108.69  3.000
  LOX  H51   C5   C4   109.69  3.000
- LOX  N1    C5   C4   111.56  3.000
- LOX  HN1   N1   C5   114.41  3.000
- LOX  HN1   N1   C1   115.29  3.000
- LOX  C5    N1   C1   120.26  3.000
- LOX  HO22  O22  N2   103.85  3.000
- LOX  O22   N2   C1   112.65  3.000
+ LOX  N5    C5   C4   111.56  3.000
+ LOX  HN5   N5   C5   114.41  3.000
+ LOX  HN5   N5   C1   115.29  3.000
+ LOX  C5    N5   C1   120.26  3.000
+ LOX  HON1  ON1  N1   103.85  3.000
+ LOX  ON1   N1   C1   112.65  3.000
  LOX  HO2   O2   C2   106.91  3.000
  LOX  HO3   O3   C3   107.88  3.000
  LOX  HO4   O4   C4   107.93  3.000
@@ -143,31 +144,31 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- LOX  CONST_01  HN1   N1   C1  C2   180.00   0.0  0
- LOX  CONST_02  O22   N2   C1  C2   180.00   0.0  0
- LOX  CONST_03  O22   N2   C1  N1     0.00   0.0  0
- LOX  Var_01    C4    C5   N1  C1    42.51  30.0  1
+ LOX  CONST_01  HN5   N5   C1  C2   180.00   0.0  0
+ LOX  CONST_02  ON1   N1   C1  C2   180.00   0.0  0
+ LOX  CONST_03  ON1   N1   C1  N5     0.00   0.0  0
+ LOX  Var_01    C4    C5   N5  C1    42.51  30.0  1
  LOX  Var_02    C4    C3   C2  C1   -54.43  30.0  1
  LOX  Var_03    C5    C4   C3  C2    61.40  30.0  1
- LOX  Var_04    N1    C1   C2  C3    41.99  30.0  1
- LOX  Var_05    N1    C5   C4  C3   -54.25  30.0  1
+ LOX  Var_04    N5    C1   C2  C3    41.99  30.0  1
+ LOX  Var_05    N5    C5   C4  C3   -54.25  30.0  1
  LOX  Var_06    O3    C3   C2  C1  -174.12  30.0  1
  LOX  Var_07    O4    C4   C3  C2  -177.68  30.0  1
- LOX  Var_08    N2    C1   C2  C3  -143.20  30.0  1
+ LOX  Var_08    N1    C1   C2  C3  -143.20  30.0  1
  LOX  Var_09    O2    C2   C3  C4  -178.94  30.0  1
  LOX  Var_10    O3    C3   C4  C5  -177.87  30.0  1
- LOX  Var_11    O2    C2   C1  N1   165.31  30.0  1
- LOX  Var_12    O4    C4   C5  N1  -174.17  30.0  1
+ LOX  Var_11    O2    C2   C1  N5   165.31  30.0  1
+ LOX  Var_12    O4    C4   C5  N5  -174.17  30.0  1
  LOX  Var_13    H3    C3   C2  C1    63.61  30.0  1
  LOX  Var_14    H4    C4   C3  C2   -56.78  30.0  1
  LOX  Var_15    H2    C2   C3  C4    61.51  30.0  1
- LOX  Var_16    O2    C2   C1  N2   -19.88  30.0  1
+ LOX  Var_16    O2    C2   C1  N1   -19.88  30.0  1
  LOX  Var_17    O3    C3   C2  O2    61.37  30.0  1
  LOX  Var_18    O4    C4   C3  O3   -56.94  30.0  1
  LOX  Var_19    HO2   O2   C2  C1    14.34  30.0  3
  LOX  Var_20    HO3   O3   C3  C2   -62.47  30.0  3
  LOX  Var_21    HO4   O4   C4  C3   166.88  30.0  3
- LOX  Var_22    HO22  O22  N2  C1   177.64  30.0  3
+ LOX  Var_22    HON1  ON1  N1  C1   177.64  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -189,8 +190,8 @@ _chem_comp_plane_atom.dist_esd
  LOX  plan-1  C1   0.020
  LOX  plan-1  C2   0.020
  LOX  plan-1  C5   0.020
+ LOX  plan-1  N5   0.020
+ LOX  plan-1  ON1  0.020
  LOX  plan-1  N1   0.020
- LOX  plan-1  O22  0.020
- LOX  plan-1  N2   0.020
- LOX  plan-1  HN1  0.020
+ LOX  plan-1  HN5  0.020
 

@@ -26,6 +26,7 @@ Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent mode
 Validated by Mogul as PERFECT
 Added dihedrals for adding hydrogens : 2023-12-07
 Removed H2 atom : 2024-04-11
+Updated atom names : 2026-11-25
 ;
 
 data_comp_OPR
@@ -48,12 +49,12 @@ _chem_comp_atom.z
  OPR  CZ    C  C      0   0.532  -5.3097  -0.8967   0.0061
  OPR  NH1   N  N      0  -0.731  -6.2870  -1.0013   0.8352
  OPR  NH2   N  NH2    0  -0.840  -5.3018  -1.3771  -1.2817
- OPR  C     C  C      0   0.392   1.8353   1.2658  -0.2388
- OPR  O     O  O      0  -0.409   2.2431   1.9296  -1.1669
- OPR  C1    C  CH2    0  -0.561   2.6192   0.1412   0.3765
- OPR  C2    C  CH2    0  -0.584   3.8782  -0.2607  -0.3657
- OPR  C3    C  C      0   0.418   4.7026  -1.3682   0.3167
- OPR  O3    O  O      0  -0.608   4.3863  -1.7003   1.4759
+ OPR  C3    C  C      0   0.392   1.8353   1.2658  -0.2388
+ OPR  O1    O  O      0  -0.409   2.2431   1.9296  -1.1669
+ OPR  C2    C  CH2    0  -0.561   2.6192   0.1412   0.3765
+ OPR  C1    C  CH2    0  -0.584   3.8782  -0.2607  -0.3657
+ OPR  C     C  C      0   0.418   4.7026  -1.3682   0.3167
+ OPR  O     O  O      0  -0.608   4.3863  -1.7003   1.4759
  OPR  H     H  HNH2   0   0.350   0.6708   3.5170   0.8161
  OPR  HA    H  HCH1   0   0.247   0.5111   1.2730   1.4370
  OPR  HB2   H  HCH2   0   0.231  -0.6612   0.9198  -1.3511
@@ -83,7 +84,7 @@ _chem_comp_bond.value_dist_neutron
  OPR  N    CA    single  1.458  0.019  1.458
  OPR  N    H     single  0.860  0.020  0.860
  OPR  CA   CB    single  1.521  0.033  1.521
- OPR  CA   C     single  1.525  0.021  1.525
+ OPR  CA   C3    single  1.525  0.021  1.525
  OPR  CA   HA    single  0.970  0.020  0.970
  OPR  CB   CG    single  1.522  0.020  1.522
  OPR  CB   HB2   single  0.970  0.020  1.090
@@ -101,16 +102,16 @@ _chem_comp_bond.value_dist_neutron
  OPR  NH1  HH1   single  0.890  0.020  1.040
  OPR  NH2  HH21  single  0.890  0.020  1.040
  OPR  NH2  HH22  single  0.890  0.020  1.040
- OPR  C    O     double  1.231  0.020  1.231
- OPR  C    C1    single  1.503  0.020  1.503
- OPR  C1   C2    single  1.516  0.020  1.516
- OPR  C1   H11   single  0.970  0.020  1.090
- OPR  C1   H12   single  0.970  0.020  1.090
- OPR  C2   C3    single  1.540  0.020  1.540
- OPR  C2   H21   single  0.970  0.020  1.090
- OPR  C2   H22   single  0.970  0.020  1.090
- OPR  C3   O3    deloc   1.247  0.020  1.247
- OPR  C3   O31   deloc   1.249  0.020  1.249
+ OPR  C3   O1    double  1.231  0.020  1.231
+ OPR  C3   C2    single  1.503  0.020  1.503
+ OPR  C2   C1    single  1.516  0.020  1.516
+ OPR  C2   H11   single  0.970  0.020  1.090
+ OPR  C2   H12   single  0.970  0.020  1.090
+ OPR  C1   C     single  1.540  0.020  1.540
+ OPR  C1   H21   single  0.970  0.020  1.090
+ OPR  C1   H22   single  0.970  0.020  1.090
+ OPR  C    O     deloc   1.247  0.020  1.247
+ OPR  C    O31   deloc   1.249  0.020  1.249
 
 loop_
 _chem_comp_angle.comp_id
@@ -120,11 +121,11 @@ _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
  OPR  H     N    CA    114.00  3.000
- OPR  HA    CA   C     110.00  3.000
+ OPR  HA    CA   C3    110.00  3.000
  OPR  HA    CA   CB    109.00  3.000
- OPR  C     CA   CB    110.50  1.500
+ OPR  C3    CA   CB    110.50  1.500
  OPR  HA    CA   N     110.00  3.000
- OPR  C     CA   N     111.00  2.800
+ OPR  C3    CA   N     111.00  2.800
  OPR  CB    CA   N     110.40  1.500
  OPR  HB3   CB   HB2   106.37  3.000
  OPR  HB3   CB   CG    109.34  3.000
@@ -154,24 +155,24 @@ _chem_comp_angle.value_angle_esd
  OPR  HH22  NH2  HH21  112.09  3.000
  OPR  HH22  NH2  CZ    115.27  3.000
  OPR  HH21  NH2  CZ    118.63  3.000
- OPR  C1    C    O     123.24  3.000
- OPR  C1    C    CA    116.12  3.000
- OPR  O     C    CA    120.80  1.700
- OPR  H12   C1   H11   104.04  3.000
- OPR  H12   C1   C2    111.16  3.000
- OPR  H11   C1   C2    110.73  3.000
- OPR  H12   C1   C     108.32  3.000
- OPR  H11   C1   C     106.31  3.000
- OPR  C2    C1   C     115.55  3.000
- OPR  H22   C2   H21   105.24  3.000
- OPR  H22   C2   C3    107.75  3.000
- OPR  H21   C2   C3    108.63  3.000
- OPR  H22   C2   C1    109.85  3.000
- OPR  H21   C2   C1    110.19  3.000
- OPR  C3    C2   C1    114.73  3.000
- OPR  O31   C3   O3    126.38  3.000
- OPR  O31   C3   C2    115.73  3.000
- OPR  O3    C3   C2    117.89  3.000
+ OPR  C2    C3   O1    123.24  3.000
+ OPR  C2    C3   CA    116.12  3.000
+ OPR  O1    C3   CA    120.80  1.700
+ OPR  H12   C2   H11   104.04  3.000
+ OPR  H12   C2   C1    111.16  3.000
+ OPR  H11   C2   C1    110.73  3.000
+ OPR  H12   C2   C3    108.32  3.000
+ OPR  H11   C2   C3    106.31  3.000
+ OPR  C1    C2   C3    115.55  3.000
+ OPR  H22   C1   H21   105.24  3.000
+ OPR  H22   C1   C     107.75  3.000
+ OPR  H21   C1   C     108.63  3.000
+ OPR  H22   C1   C2    109.85  3.000
+ OPR  H21   C1   C2    110.19  3.000
+ OPR  C     C1   C2    114.73  3.000
+ OPR  O31   C    O     126.38  3.000
+ OPR  O31   C    C1    115.73  3.000
+ OPR  O     C    C1    117.89  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -187,14 +188,14 @@ _chem_comp_tor.period
  OPR  CONST_02  HH22  NH2  CZ  NE    180.00      0.0   0
  OPR  CONST_03  HE    NE   CZ  NH1     0.00      0.0   0
  OPR  Var_01    CD    CG   CB  CA   -179.29     30.0   3
- OPR  Var_02    C2    C1   C   CA    171.33     30.0   3
+ OPR  Var_02    C1    C2   C3  CA    171.33     30.0   3
  OPR  Var_03    NE    CD   CG  CB   -179.53     30.0   3
  OPR  Var_04    CZ    NE   CD  CG   -179.65     30.0   3
- OPR  Var_05    C3    C2   C1  C     177.18     30.0   3
- OPR  Var_06    O3    C3   C2  C1     -9.79     30.0   3
+ OPR  Var_05    C     C1   C2  C3    177.18     30.0   3
+ OPR  Var_06    O     C    C1  C2     -9.79     30.0   3
  OPR  Var_07    HB2   CB   CA  N      59.23     30.0   3
  OPR  Var_08    HB3   CB   CA  N     175.22     30.0   3
- OPR  Var_09    C     CA   N   H    170.000  180.000  72
+ OPR  Var_09    C3    CA   N   H    170.000  180.000  72
  OPR  Var_10    HA    CA   CB  CG     55.08     30.0   1
 
 loop_
@@ -205,7 +206,7 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- OPR  chir_01  CA  N  CB  C  negativ
+ OPR  chir_01  CA  N  CB  C3  negativ
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -213,9 +214,9 @@ _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
  OPR  plan-1  CA    0.020
- OPR  plan-1  C     0.020
- OPR  plan-1  O     0.020
- OPR  plan-1  C1    0.020
+ OPR  plan-1  C3    0.020
+ OPR  plan-1  O1    0.020
+ OPR  plan-1  C2    0.020
  OPR  plan-2  CD    0.020
  OPR  plan-2  NE    0.020
  OPR  plan-2  CZ    0.020
@@ -225,8 +226,8 @@ _chem_comp_plane_atom.dist_esd
  OPR  plan-2  HH1   0.020
  OPR  plan-2  HH21  0.020
  OPR  plan-2  HH22  0.020
- OPR  plan-3  C2    0.020
- OPR  plan-3  C3    0.020
- OPR  plan-3  O3    0.020
+ OPR  plan-3  C1    0.020
+ OPR  plan-3  C     0.020
+ OPR  plan-3  O     0.020
  OPR  plan-3  O31   0.020
 

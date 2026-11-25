@@ -26,6 +26,7 @@ Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent mode
 Validated by Mogul as PERFECT
 Added dihedrals for adding hydrogens : 2023-10-30
 Removed H2 atom : 2024-04-11
+Updated atom names : 2026-11-25
 ;
 
 data_comp_HAQ
@@ -43,8 +44,8 @@ _chem_comp_atom.z
  HAQ  CA    C  CH1    0  -0.193  42.5137  61.2114  18.6799
  HAQ  CB    C  CH2    0  -0.473  44.0302  61.4311  18.6310
  HAQ  CG    C  CH2    0  -0.496  44.3941  62.6846  17.8636
- HAQ  C     C  C      0   0.480  42.0958  60.3183  17.5186
- HAQ  O     O  O      0  -0.477  41.5168  59.2595  17.7109
+ HAQ  C2    C  C      0   0.480  42.0958  60.3183  17.5186
+ HAQ  O2    O  O      0  -0.477  41.5168  59.2595  17.7109
  HAQ  N2    N  NT     0  -0.576  42.3744  60.7369  16.2620
  HAQ  CA2   C  CH1    0  -0.233  41.9564  59.9152  15.1242
  HAQ  CB2   C  CH2    0  -0.479  41.8502  60.9304  13.9786
@@ -54,11 +55,11 @@ _chem_comp_atom.z
  HAQ  CE1   C  CR6    0   0.100  43.9127  62.7652  16.4386
  HAQ  CE2   C  CR16   0  -0.249  44.0984  63.9979  14.3329
  HAQ  CZ    C  CR16   0  -0.314  44.4071  63.8273  15.6687
- HAQ  C2    C  C      0   0.418  42.9722  58.7887  14.8045
- HAQ  O2    O  O      0  -0.583  44.0631  58.8007  15.3978
+ HAQ  C     C  C      0   0.418  42.9722  58.7887  14.8045
+ HAQ  O     O  O      0  -0.583  44.0631  58.8007  15.3978
  HAQ  OXT   O  OC    -1  -0.606  42.5738  57.9813  13.9432
  HAQ  H     H  HNH2   0   0.345  41.1085  60.5328  19.9738
- HAQ  HA1   H  HCH1   0   0.259  42.0222  62.1830  18.5409
+ HAQ  HA    H  HCH1   0   0.259  42.0222  62.1830  18.5409
  HAQ  HB2   H  HCH2   0   0.255  44.3923  61.5376  19.6546
  HAQ  HB3   H  HCH2   0   0.241  44.5368  60.5574  18.2102
  HAQ  HG2   H  HCH2   0   0.250  44.0077  63.5501  18.4119
@@ -81,20 +82,20 @@ _chem_comp_bond.value_dist_neutron
  HAQ  N    CA    single    1.458  0.019  1.458
  HAQ  N    H     single    0.860  0.020  0.860
  HAQ  CA   CB    single    1.521  0.033  1.521
- HAQ  CA   C     single    1.525  0.021  1.525
- HAQ  CA   HA1   single    0.970  0.020  1.090
+ HAQ  CA   C2    single    1.525  0.021  1.525
+ HAQ  CA   HA    single    0.970  0.020  1.090
  HAQ  CB   CG    single    1.514  0.020  1.514
  HAQ  CB   HB2   single    0.970  0.020  1.090
  HAQ  CB   HB3   single    0.970  0.020  1.090
  HAQ  CG   CE1   single    1.506  0.020  1.506
  HAQ  CG   HG2   single    0.970  0.020  1.090
  HAQ  CG   HG3   single    0.970  0.020  1.090
- HAQ  C    O     double    1.231  0.020  1.231
- HAQ  C    N2    single    1.354  0.020  1.354
+ HAQ  C2   O2    double    1.231  0.020  1.231
+ HAQ  C2   N2    single    1.354  0.020  1.354
  HAQ  N2   CA2   single    1.464  0.020  1.464
  HAQ  N2   CD1   single    1.406  0.020  1.406
  HAQ  CA2  CB2   single    1.534  0.020  1.534
- HAQ  CA2  C2    single    1.550  0.020  1.550
+ HAQ  CA2  C     single    1.550  0.020  1.550
  HAQ  CA2  HA2   single    0.970  0.020  1.090
  HAQ  CB2  CG2   single    1.497  0.020  1.497
  HAQ  CB2  HB23  single    0.970  0.020  1.090
@@ -108,8 +109,8 @@ _chem_comp_bond.value_dist_neutron
  HAQ  CE2  CZ    aromatic  1.382  0.020  1.382
  HAQ  CE2  HE2   single    0.930  0.020  1.080
  HAQ  CZ   HZ    single    0.930  0.020  1.080
- HAQ  C2   O2    deloc     1.242  0.020  1.242
- HAQ  C2   OXT   deloc     1.246  0.020  1.246
+ HAQ  C    O     deloc     1.242  0.020  1.242
+ HAQ  C    OXT   deloc     1.246  0.020  1.246
 
 loop_
 _chem_comp_angle.comp_id
@@ -119,11 +120,11 @@ _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
  HAQ  H     N    CA    114.00  3.000
- HAQ  HA1   CA   C     107.43  3.000
- HAQ  HA1   CA   CB    108.18  3.000
- HAQ  C     CA   CB    110.50  1.500
- HAQ  HA1   CA   N     107.29  3.000
- HAQ  C     CA   N     111.00  2.800
+ HAQ  HA    CA   C2    107.43  3.000
+ HAQ  HA    CA   CB    108.18  3.000
+ HAQ  C2    CA   CB    110.50  1.500
+ HAQ  HA    CA   N     107.29  3.000
+ HAQ  C2    CA   N     111.00  2.800
  HAQ  CB    CA   N     110.40  1.500
  HAQ  HB3   CB   HB2   106.56  3.000
  HAQ  HB3   CB   CG    110.79  3.000
@@ -137,17 +138,17 @@ _chem_comp_angle.value_angle_esd
  HAQ  HG3   CG   CB    109.13  3.000
  HAQ  HG2   CG   CB    108.41  3.000
  HAQ  CE1   CG   CB    116.55  3.000
- HAQ  N2    C    O     120.77  3.000
- HAQ  N2    C    CA    118.03  3.000
- HAQ  O     C    CA    120.80  1.700
+ HAQ  N2    C2   O2    120.77  3.000
+ HAQ  N2    C2   CA    118.03  3.000
+ HAQ  O2    C2   CA    120.80  1.700
  HAQ  CD1   N2   CA2   109.62  3.000
- HAQ  CD1   N2   C     131.09  3.000
- HAQ  CA2   N2   C     119.28  3.000
- HAQ  HA2   CA2  C2    108.83  3.000
+ HAQ  CD1   N2   C2    131.09  3.000
+ HAQ  CA2   N2   C2    119.28  3.000
+ HAQ  HA2   CA2  C     108.83  3.000
  HAQ  HA2   CA2  CB2   110.97  3.000
- HAQ  C2    CA2  CB2   111.85  3.000
+ HAQ  C     CA2  CB2   111.85  3.000
  HAQ  HA2   CA2  N2    109.50  3.000
- HAQ  C2    CA2  N2    112.39  3.000
+ HAQ  C     CA2  N2    112.39  3.000
  HAQ  CB2   CA2  N2    103.22  3.000
  HAQ  HB22  CB2  HB23  106.98  3.000
  HAQ  HB22  CB2  CG2   110.56  3.000
@@ -173,9 +174,9 @@ _chem_comp_angle.value_angle_esd
  HAQ  HZ    CZ   CE2   119.15  3.000
  HAQ  HZ    CZ   CE1   117.77  3.000
  HAQ  CE2   CZ   CE1   123.07  3.000
- HAQ  OXT   C2   O2    128.12  3.000
- HAQ  OXT   C2   CA2   113.83  3.000
- HAQ  O2    C2   CA2   118.04  3.000
+ HAQ  OXT   C    O     128.12  3.000
+ HAQ  OXT   C    CA2   113.83  3.000
+ HAQ  O     C    CA2   118.04  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -196,13 +197,13 @@ _chem_comp_tor.period
  HAQ  Var_01    CD1   CG2  CB2  CA2   -14.94     30.0   1
  HAQ  Var_02    HG2   CG   CB   CA     65.20     30.0   1
  HAQ  Var_03    HG3   CG   CB   CA    179.63     30.0   1
- HAQ  Var_04    HA1   CA   CB   CG    -23.98     30.0   1
- HAQ  Var_05    HB2   CB   CA   C    -147.99     30.0   1
- HAQ  Var_06    HB3   CB   CA   C     -31.48     30.0   1
- HAQ  Var_07    HA2   CA2  N2   C      37.12     30.0   1
+ HAQ  Var_04    HA    CA   CB   CG    -23.98     30.0   1
+ HAQ  Var_05    HB2   CB   CA   C2   -147.99     30.0   1
+ HAQ  Var_06    HB3   CB   CA   C2    -31.48     30.0   1
+ HAQ  Var_07    HA2   CA2  N2   C2     37.12     30.0   1
  HAQ  Var_08    HB23  CB2  CA2  N2    145.30     30.0   1
  HAQ  Var_09    HB22  CB2  CA2  N2    -94.81     30.0   1
- HAQ  Var_10    C     CA   N    H    170.000  180.000  72
+ HAQ  Var_10    C2    CA   N    H    170.000  180.000  72
 
 loop_
 _chem_comp_chir.comp_id
@@ -212,8 +213,8 @@ _chem_comp_chir.atom_id_1
 _chem_comp_chir.atom_id_2
 _chem_comp_chir.atom_id_3
 _chem_comp_chir.volume_sign
- HAQ  chir_01  CA   N   CB  C    negativ
- HAQ  chir_02  CA2  N2  C2  CB2  positiv
+ HAQ  chir_01  CA   N   CB  C2   negativ
+ HAQ  chir_02  CA2  N2  C   CB2  positiv
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -221,8 +222,8 @@ _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
  HAQ  plan-1  CA   0.020
- HAQ  plan-1  C    0.020
- HAQ  plan-1  O    0.020
+ HAQ  plan-1  C2   0.020
+ HAQ  plan-1  O2   0.020
  HAQ  plan-1  N2   0.020
  HAQ  plan-1  CA2  0.020
  HAQ  plan-1  CD1  0.020
@@ -239,7 +240,7 @@ _chem_comp_plane_atom.dist_esd
  HAQ  plan-2  HE2  0.020
  HAQ  plan-2  HZ   0.020
  HAQ  plan-3  CA2  0.020
- HAQ  plan-3  C2   0.020
- HAQ  plan-3  O2   0.020
+ HAQ  plan-3  C    0.020
+ HAQ  plan-3  O    0.020
  HAQ  plan-3  OXT  0.020
 

@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
 Added dihedrals for adding hydrogens : 2024-07-31
+Updated atom names : 2026-11-25
 ;
 
 data_comp_IEY
@@ -56,10 +57,10 @@ _chem_comp_atom.z
  IEY  CE2   C  CR16   0  -0.325  2.7237  -2.7419   1.7515
  IEY  CZ    C  CR6    0   0.333  2.2737  -1.6908   2.5484
  IEY  OH    O  OH1    0  -0.637  2.3858  -1.8201   3.8888
- IEY  C     C  C      0   0.478  7.0659  -2.6443  -4.0148
- IEY  O     O  O      0  -0.615  6.3914  -3.6079  -3.5491
+ IEY  C3    C  C      0   0.478  7.0659  -2.6443  -4.0148
+ IEY  O3    O  O      0  -0.615  6.3914  -3.6079  -3.5491
  IEY  CD3   C  CR15   0  -0.099  6.5622   4.7352  -1.4666
- IEY  NE1   N  NR15   0  -0.565  7.6788   5.4551  -1.7591
+ IEY  NE    N  NR15   0  -0.565  7.6788   5.4551  -1.7591
  IEY  N21   N  N      0  -0.463  7.9082   3.5359  -2.8017
  IEY  C22   C  CR15   0   0.095  8.4546   4.6968  -2.5603
  IEY  OXT   O  OC    -1  -0.552  8.2710  -2.6582  -4.2596
@@ -76,7 +77,7 @@ _chem_comp_atom.z
  IEY  HE2   H  HCR6   0   0.258  3.1453  -3.6254   2.2146
  IEY  HO1   H  HOH1   0   0.472  2.0440  -1.0345   4.3290
  IEY  HD3   H  HCR5   0   0.288  5.7735   5.1147  -0.8393
- IEY  HA    H  HNR5   0   0.423  7.8886   6.3859  -1.4365
+ IEY  HNE   H  HNR5   0   0.423  7.8886   6.3859  -1.4365
  IEY  H22   H  HCR5   0   0.280  9.4052   5.0416  -2.9366
 
 loop_
@@ -103,7 +104,7 @@ _chem_comp_bond.value_dist_neutron
  IEY  C2   CA2   aromatic  1.372  0.020  1.372
  IEY  O2   H2    single    0.850  0.020  0.980
  IEY  CA2  CB2   single    1.493  0.020  1.493
- IEY  CA3  C     single    1.542  0.020  1.542
+ IEY  CA3  C3    single    1.542  0.020  1.542
  IEY  CA3  HA31  single    0.970  0.020  1.090
  IEY  CA3  HA32  single    0.970  0.020  1.090
  IEY  CB2  CG2   single    1.508  0.020  1.508
@@ -121,12 +122,12 @@ _chem_comp_bond.value_dist_neutron
  IEY  CE2  HE2   single    0.930  0.020  1.080
  IEY  CZ   OH    single    1.351  0.020  1.351
  IEY  OH   HO1   single    0.850  0.020  0.980
- IEY  C    O     deloc     1.265  0.020  1.265
- IEY  C    OXT   deloc     1.230  0.020  1.230
- IEY  CD3  NE1   aromatic  1.360  0.020  1.360
+ IEY  C3   O3    deloc     1.265  0.020  1.265
+ IEY  C3   OXT   deloc     1.230  0.020  1.230
+ IEY  CD3  NE    aromatic  1.360  0.020  1.360
  IEY  CD3  HD3   single    0.930  0.020  1.080
- IEY  NE1  C22   aromatic  1.349  0.020  1.349
- IEY  NE1  HA    single    0.860  0.020  1.020
+ IEY  NE   C22   aromatic  1.349  0.020  1.349
+ IEY  NE   HNE   single    0.860  0.020  1.020
  IEY  N21  C22   aromatic  1.306  0.020  1.306
  IEY  C22  H22   single    0.930  0.020  1.080
 
@@ -161,11 +162,11 @@ _chem_comp_angle.value_angle_esd
  IEY  CB2   CA2  N2    122.67  3.000
  IEY  C2    CA2  N2    109.22  3.000
  IEY  HA32  CA3  HA31  106.49  3.000
- IEY  HA32  CA3  C     107.97  3.000
- IEY  HA31  CA3  C     109.09  3.000
+ IEY  HA32  CA3  C3    107.97  3.000
+ IEY  HA31  CA3  C3    109.09  3.000
  IEY  HA32  CA3  N3    108.91  3.000
  IEY  HA31  CA3  N3    108.83  3.000
- IEY  C     CA3  N3    115.20  3.000
+ IEY  C3    CA3  N3    115.20  3.000
  IEY  HB22  CB2  HB21  106.31  3.000
  IEY  HB22  CB2  CG2   109.10  3.000
  IEY  HB21  CB2  CG2   109.87  3.000
@@ -191,19 +192,19 @@ _chem_comp_angle.value_angle_esd
  IEY  OH    CZ   CE1   122.82  3.000
  IEY  CE2   CZ   CE1   119.26  3.000
  IEY  HO1   OH   CZ    110.23  3.000
- IEY  OXT   C    O     125.95  3.000
- IEY  OXT   C    CA3   117.02  3.000
- IEY  O     C    CA3   116.96  3.000
- IEY  HD3   CD3  NE1   122.67  3.000
+ IEY  OXT   C3   O3    125.95  3.000
+ IEY  OXT   C3   CA3   117.02  3.000
+ IEY  O3    C3   CA3   116.96  3.000
+ IEY  HD3   CD3  NE    122.67  3.000
  IEY  HD3   CD3  CG1   131.82  3.000
- IEY  NE1   CD3  CG1   105.51  3.000
- IEY  HA    NE1  C22   126.17  3.000
- IEY  HA    NE1  CD3   126.24  3.000
- IEY  C22   NE1  CD3   107.59  3.000
+ IEY  NE    CD3  CG1   105.51  3.000
+ IEY  HNE   NE   C22   126.17  3.000
+ IEY  HNE   NE   CD3   126.24  3.000
+ IEY  C22   NE   CD3   107.59  3.000
  IEY  C22   N21  CG1   105.78  3.000
  IEY  H22   C22  N21   126.05  3.000
- IEY  H22   C22  NE1   122.29  3.000
- IEY  N21   C22  NE1   111.66  3.000
+ IEY  H22   C22  NE    122.29  3.000
+ IEY  N21   C22  NE    111.66  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -215,8 +216,8 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- IEY  CONST_01  C22  NE1  CD3  CG1    0.00   0.0  0
- IEY  CONST_02  NE1  C22  N21  CG1    0.00   0.0  0
+ IEY  CONST_01  C22  NE   CD3  CG1    0.00   0.0  0
+ IEY  CONST_02  NE   C22  N21  CG1    0.00   0.0  0
  IEY  CONST_03  C2   CA2  N2   C1     0.00   0.0  0
  IEY  CONST_04  CA2  C2   N3   C1     0.00   0.0  0
  IEY  CONST_05  C2   N3   C1   N2     0.00   0.0  0
@@ -229,11 +230,11 @@ _chem_comp_tor.period
  IEY  CONST_12  CE1  CD1  CG2  CD2    0.00   0.0  0
  IEY  CONST_13  CE1  CZ   CE2  CD2    0.00   0.0  0
  IEY  CONST_14  C22  N21  CG1  CD3    0.00   0.0  0
- IEY  CONST_15  N21  C22  NE1  CD3    0.00   0.0  0
- IEY  CONST_16  N21  CG1  CD3  NE1    0.00   0.0  0
+ IEY  CONST_15  N21  C22  NE   CD3    0.00   0.0  0
+ IEY  CONST_16  N21  CG1  CD3  NE     0.00   0.0  0
  IEY  CONST_17  CA2  N2   C1   CA1  180.00   0.0  0
  IEY  CONST_18  C2   N3   C1   CA1  180.00   0.0  0
- IEY  CONST_19  NE1  CD3  CG1  CB1  180.00   0.0  0
+ IEY  CONST_19  NE   CD3  CG1  CB1  180.00   0.0  0
  IEY  CONST_20  C22  N21  CG1  CB1  180.00   0.0  0
  IEY  CONST_21  CB2  CA2  N2   C1   180.00   0.0  0
  IEY  CONST_22  O2   C2   N3   C1   180.00   0.0  0
@@ -245,7 +246,7 @@ _chem_comp_tor.period
  IEY  CONST_28  CE2  CD2  CG2  CB2  180.00   0.0  0
  IEY  CONST_29  OH   CZ   CE1  CD1  180.00   0.0  0
  IEY  CONST_30  OH   CZ   CE2  CD2  180.00   0.0  0
- IEY  CONST_31  HA   NE1  CD3  CG1  180.00   0.0  0
+ IEY  CONST_31  HNE  NE   CD3  CG1  180.00   0.0  0
  IEY  CONST_32  H22  C22  N21  CG1  180.00   0.0  0
  IEY  CONST_33  HE1  CE1  CD1  CG2  180.00   0.0  0
  IEY  CONST_34  HE2  CE2  CD2  CG2  180.00   0.0  0
@@ -257,8 +258,8 @@ _chem_comp_tor.period
  IEY  Var_03    C1   CA1  CB1  CG1  179.98   0.0  2
  IEY  Var_04    CD3  CG1  CB1  CA1  179.74  30.0  2
  IEY  Var_05    N2   C1   CA1  CB1   -0.16  30.0  2
- IEY  Var_06    C    CA3  N3   C1   125.26  30.0  2
- IEY  Var_07    O    C    CA3  N3    38.52  30.0  3
+ IEY  Var_06    C3   CA3  N3   C1   125.26  30.0  2
+ IEY  Var_07    O3   C3   CA3  N3    38.52  30.0  3
  IEY  Var_08    H2   O2   C2   N3    37.85  30.0  2
  IEY  Var_09    HO1  OH   CZ   CE1   -0.12  30.0  2
 
@@ -270,11 +271,11 @@ _chem_comp_plane_atom.dist_esd
  IEY  plan-1  CB1  0.020
  IEY  plan-1  CG1  0.020
  IEY  plan-1  CD3  0.020
- IEY  plan-1  NE1  0.020
+ IEY  plan-1  NE   0.020
  IEY  plan-1  N21  0.020
  IEY  plan-1  C22  0.020
  IEY  plan-1  HD3  0.020
- IEY  plan-1  HA   0.020
+ IEY  plan-1  HNE  0.020
  IEY  plan-1  H22  0.020
  IEY  plan-2  CA1  0.020
  IEY  plan-2  C1   0.020
@@ -298,8 +299,8 @@ _chem_comp_plane_atom.dist_esd
  IEY  plan-3  HE1  0.020
  IEY  plan-3  HE2  0.020
  IEY  plan-4  CA3  0.020
- IEY  plan-4  C    0.020
- IEY  plan-4  O    0.020
+ IEY  plan-4  C3   0.020
+ IEY  plan-4  O3   0.020
  IEY  plan-4  OXT  0.020
  IEY  plan-5  CA1  0.020
  IEY  plan-5  CB1  0.020
