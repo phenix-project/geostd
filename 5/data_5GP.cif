@@ -26,6 +26,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK
 Added dihedrals for adding hydrogens : 2023-12-11
+Updated atom names : 2026-11-25
 ;
 
 data_comp_5GP
@@ -40,9 +41,9 @@ _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
  5GP  P     P  P      0   0.803  29.1312  69.1722  26.0712
- 5GP  O1P   O  O      0  -0.809  30.1057  68.1363  25.5406
- 5GP  O2P   O  OP    -1  -0.812  28.1653  68.6824  27.1398
- 5GP  O3P   O  OP    -1  -0.770  29.7982  70.5081  26.4331
+ 5GP  OP1   O  O      0  -0.809  30.1057  68.1363  25.5406
+ 5GP  OP3   O  OP    -1  -0.812  28.1653  68.6824  27.1398
+ 5GP  OP2   O  OP    -1  -0.770  29.7982  70.5081  26.4331
  5GP  O5'   O  O2     0  -0.450  28.1923  69.4907  24.7169
  5GP  C5'   C  CH2    0  -0.034  27.1182  70.4018  24.8575
  5GP  C4'   C  CH1    0   0.189  27.0070  71.2474  23.5987
@@ -72,7 +73,7 @@ _chem_comp_atom.z
  5GP  HO2'  H  HOH1   0   0.357  27.4039  74.0716  20.8974
  5GP  H1'   H  HCH1   0   0.116  25.5448  73.8656  22.6835
  5GP  H8    H  HCR5   0   0.185  24.7759  75.8079  23.7496
- 5GP  HN1   H  HNR6   0   0.260  28.3540  74.8225  28.9945
+ 5GP  H1    H  HNR6   0   0.260  28.3540  74.8225  28.9945
  5GP  HN21  H  HNH2   0   0.299  29.3430  71.8549  27.2864
  5GP  HN22  H  HNH2   0   0.268  29.4663  72.8373  28.7624
 
@@ -84,9 +85,9 @@ _chem_comp_bond.type
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
- 5GP  P    O1P   deloc     1.518  0.020  1.518
- 5GP  P    O2P   deloc     1.521  0.020  1.521
- 5GP  P    O3P   deloc     1.536  0.020  1.536
+ 5GP  P    OP1   deloc     1.518  0.020  1.518
+ 5GP  P    OP3   deloc     1.521  0.020  1.521
+ 5GP  P    OP2   deloc     1.536  0.020  1.536
  5GP  P    O5'   single    1.678  0.020  1.678
  5GP  O5'  C5'   single    1.415  0.020  1.415
  5GP  C5'  C4'   single    1.520  0.020  1.520
@@ -116,7 +117,7 @@ _chem_comp_bond.value_dist_neutron
  5GP  C6   O6    double    1.232  0.020  1.232
  5GP  C6   N1    single    1.407  0.020  1.407
  5GP  N1   C2    single    1.378  0.020  1.378
- 5GP  N1   HN1   single    0.860  0.020  1.020
+ 5GP  N1   H1    single    0.860  0.020  1.020
  5GP  C2   N2    single    1.335  0.020  1.335
  5GP  C2   N3    double    1.324  0.020  1.324
  5GP  N2   HN21  single    0.860  0.020  1.020
@@ -130,12 +131,12 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- 5GP  O5'   P    O3P   105.54  3.000
- 5GP  O5'   P    O2P   105.82  3.000
- 5GP  O3P   P    O2P   112.96  3.000
- 5GP  O5'   P    O1P   101.92  3.000
- 5GP  O3P   P    O1P   113.39  3.000
- 5GP  O2P   P    O1P   115.68  3.000
+ 5GP  O5'   P    OP2   105.54  3.000
+ 5GP  O5'   P    OP3   105.82  3.000
+ 5GP  OP2   P    OP3   112.96  3.000
+ 5GP  O5'   P    OP1   101.92  3.000
+ 5GP  OP2   P    OP1   113.39  3.000
+ 5GP  OP3   P    OP1   115.68  3.000
  5GP  C5'   O5'  P     117.81  3.000
  5GP  H5'2  C5'  H5'1  108.56  3.000
  5GP  H5'2  C5'  C4'   107.72  3.000
@@ -183,8 +184,8 @@ _chem_comp_angle.value_angle_esd
  5GP  N1    C6   O6    119.92  3.000
  5GP  N1    C6   C5    111.17  3.000
  5GP  O6    C6   C5    128.91  3.000
- 5GP  HN1   N1   C2    118.72  3.000
- 5GP  HN1   N1   C6    115.07  3.000
+ 5GP  H1    N1   C2    118.72  3.000
+ 5GP  H1    N1   C6    115.07  3.000
  5GP  C2    N1   C6    126.20  3.000
  5GP  N3    C2   N2    119.71  3.000
  5GP  N3    C2   N1    121.68  3.000
@@ -224,21 +225,21 @@ _chem_comp_tor.period
  5GP  CONST_15  H8    C8   N9   C1'     0.00   0.0  0
  5GP  CONST_16  H8    C8   N7   C5    180.00   0.0  0
  5GP  CONST_17  H8    C8   N9   C4    180.00   0.0  0
- 5GP  CONST_18  HN1   N1   C6   C5    180.00   0.0  0
- 5GP  CONST_19  HN1   N1   C2   N3    180.00   0.0  0
- 5GP  CONST_20  HN1   N1   C6   O6      0.00   0.0  0
+ 5GP  CONST_18  H1    N1   C6   C5    180.00   0.0  0
+ 5GP  CONST_19  H1    N1   C2   N3    180.00   0.0  0
+ 5GP  CONST_20  H1    N1   C6   O6      0.00   0.0  0
  5GP  CONST_21  HN21  N2   C2   N1    180.00   0.0  0
  5GP  CONST_22  HN22  N2   C2   N1      0.00   0.0  0
- 5GP  CONST_23  HN1   N1   C2   N2      0.00   0.0  0
+ 5GP  CONST_23  H1    N1   C2   N2      0.00   0.0  0
  5GP  CONST_24  HN21  N2   C2   N3      0.00   0.0  0
  5GP  CONST_25  HN22  N2   C2   N3    180.00   0.0  0
  5GP  Var_01    C4'   C5'  O5'  P     142.25  30.0  3
  5GP  Var_02    C2'   C1'  O4'  C4'     7.20  30.0  1
- 5GP  Var_03    C5'   O5'  P    O1P   177.70  30.0  3
+ 5GP  Var_03    C5'   O5'  P    OP1   177.70  30.0  3
  5GP  Var_04    N9    C1'  O4'  C4'  -118.53  30.0  1
- 5GP  Var_05    C5'   O5'  P    O2P    56.36  30.0  3
+ 5GP  Var_05    C5'   O5'  P    OP3    56.36  30.0  3
  5GP  Var_06    C1'   C2'  C3'  C4'    27.85  30.0  1
- 5GP  Var_07    C5'   O5'  P    O3P   -63.62  30.0  3
+ 5GP  Var_07    C5'   O5'  P    OP2   -63.62  30.0  3
  5GP  Var_08    C2'   C3'  C4'  O4'   -24.26  30.0  1
  5GP  Var_09    H5'1  C5'  O5'  P     -97.28  30.0  3
  5GP  Var_10    C3'   C2'  C1'  O4'   -22.31  30.0  1
@@ -300,7 +301,7 @@ _chem_comp_plane_atom.dist_esd
  5GP  plan-1  N3    0.020
  5GP  plan-1  C4    0.020
  5GP  plan-1  H8    0.020
- 5GP  plan-1  HN1   0.020
+ 5GP  plan-1  H1    0.020
  5GP  plan-1  HN21  0.020
  5GP  plan-1  HN22  0.020
 

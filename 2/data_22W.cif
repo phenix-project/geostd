@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
 Added dihedrals for adding hydrogens : 2023-10-11
+Updated atom names : 2026-11-25
 ;
 
 data_comp_22W
@@ -40,7 +41,7 @@ _chem_comp_atom.y
 _chem_comp_atom.z
  22W  C     C  CSP   0   0.088  -2.8649   0.0399   0.7027
  22W  N     N  NH2   0  -0.768   1.7862   2.1359  -0.7769
- 22W  O     O  O     0  -0.456  -0.1444  -0.8487  -1.3112
+ 22W  O1    O  O     0  -0.456  -0.1444  -0.8487  -1.3112
  22W  S     S  S1    0   0.076  -4.2108   0.1614   1.4150
  22W  CA    C  CH1   0  -0.197   1.6954   0.6913  -0.7719
  22W  CB    C  CH1   0  -0.222   2.6215   0.0948   0.3114
@@ -50,8 +51,8 @@ _chem_comp_atom.z
  22W  C83   C  CR5   0   0.512  -1.4406  -1.1084  -0.9490
  22W  CG1   C  CH2   0  -0.417   4.0791   0.4451   0.0021
  22W  CG2   C  CH3   0  -0.682   2.4338  -1.4120   0.4638
- 22W  HN    H  HNH2  0   0.358   1.2130   2.5225  -1.5158
- 22W  HNA   H  HNH2  0   0.350   1.4293   2.5105   0.0939
+ 22W  H     H  HNH2  0   0.358   1.2130   2.5225  -1.5158
+ 22W  H2    H  HNH2  0   0.350   1.4293   2.5105   0.0939
  22W  HA    H  HCH1  0   0.270   2.0302   0.3233  -1.7474
  22W  HB    H  HCH1  0   0.227   2.3434   0.5727   1.2602
  22W  HD1   H  HCH3  0   0.231   6.0432   0.5007   0.9084
@@ -74,10 +75,10 @@ _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  22W  C    S     double  1.528  0.020  1.528
- 22W  N    HN    single  0.890  0.020  1.040
- 22W  N    HNA   single  0.890  0.020  1.040
- 22W  O    C83   single  1.371  0.020  1.371
- 22W  O    CE    single  1.363  0.020  1.363
+ 22W  N    H     single  0.890  0.020  1.040
+ 22W  N    H2    single  0.890  0.020  1.040
+ 22W  O1   C83   single  1.371  0.020  1.371
+ 22W  O1   CE    single  1.363  0.020  1.363
  22W  CA   N     single  1.447  0.020  1.447
  22W  CA   HA    single  0.970  0.020  1.090
  22W  CB   CA    single  1.545  0.020  1.545
@@ -108,10 +109,10 @@ _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
  22W  CF    C    S     178.48  3.000
- 22W  HNA   N    HN    106.67  3.000
- 22W  HNA   N    CA    110.13  3.000
- 22W  HN    N    CA    110.38  3.000
- 22W  C83   O    CE    107.59  3.000
+ 22W  H2    N    H     106.67  3.000
+ 22W  H2    N    CA    110.13  3.000
+ 22W  H     N    CA    110.38  3.000
+ 22W  C83   O1   CE    107.59  3.000
  22W  HA    CA   CE    107.35  3.000
  22W  CE    CA   CB    110.28  3.000
  22W  HA    CA   CB    108.16  3.000
@@ -126,14 +127,14 @@ _chem_comp_angle.value_angle_esd
  22W  CG1   CB   CA    109.92  3.000
  22W  CF    NB   CE    104.82  3.000
  22W  NB    CE   CA    126.49  3.000
- 22W  NB    CE   O     115.36  3.000
- 22W  CA    CE   O     118.14  3.000
+ 22W  NB    CE   O1    115.36  3.000
+ 22W  CA    CE   O1    118.14  3.000
  22W  C83   CF   NB    109.17  3.000
  22W  C83   CF   C     124.28  3.000
  22W  NB    CF   C     126.54  3.000
  22W  O26   C83  CF    133.83  3.000
- 22W  CF    C83  O     103.06  3.000
- 22W  O26   C83  O     123.11  3.000
+ 22W  CF    C83  O1    103.06  3.000
+ 22W  O26   C83  O1    123.11  3.000
  22W  HG1A  CG1  HG1   106.38  3.000
  22W  HG1A  CG1  CD1   108.98  3.000
  22W  HG1   CG1  CD1   109.68  3.000
@@ -165,26 +166,26 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  22W  Var_01    NB    CF   C    S     170.78  30.0  2
  22W  Var_02    HD1   CD1  CG1  CB   -174.91  30.0  3
- 22W  CONST_01  NB    CF   C83  O       0.00   0.0  0
- 22W  CONST_02  CF    NB   CE   O       0.00   0.0  0
- 22W  CONST_03  C83   O    CE   NB      0.00   0.0  0
- 22W  CONST_04  CF    C83  O    CE      0.00   0.0  0
+ 22W  CONST_01  NB    CF   C83  O1      0.00   0.0  0
+ 22W  CONST_02  CF    NB   CE   O1      0.00   0.0  0
+ 22W  CONST_03  C83   O1   CE   NB      0.00   0.0  0
+ 22W  CONST_04  CF    C83  O1   CE      0.00   0.0  0
  22W  CONST_05  C83   CF   NB   CE      0.00   0.0  0
  22W  CONST_06  CE    NB   CF   C     180.00   0.0  0
- 22W  CONST_07  O     C83  CF   C     180.00   0.0  0
- 22W  CONST_08  C83   O    CE   CA    180.00   0.0  0
+ 22W  CONST_07  O1    C83  CF   C     180.00   0.0  0
+ 22W  CONST_08  C83   O1   CE   CA    180.00   0.0  0
  22W  CONST_09  CF    NB   CE   CA    180.00   0.0  0
  22W  CONST_10  O26   C83  CF   NB    180.00   0.0  0
- 22W  CONST_11  O26   C83  O    CE    180.00   0.0  0
- 22W  Var_03    O     CE   CA   N     139.13  30.0  2
+ 22W  CONST_11  O26   C83  O1   CE    180.00   0.0  0
+ 22W  Var_03    O1    CE   CA   N     139.13  30.0  2
  22W  Var_04    NB    CE   CA   N     -41.15  30.0  2
- 22W  Var_05    CB    CA   CE   O     -97.26  30.0  2
+ 22W  Var_05    CB    CA   CE   O1    -97.26  30.0  2
  22W  Var_06    NB    CE   CA   CB     82.45  30.0  2
- 22W  Var_07    HA    CA   CE   O      20.35  30.0  2
+ 22W  Var_07    HA    CA   CE   O1     20.35  30.0  2
  22W  Var_08    CG1   CB   CA   CE    173.05  30.0  1
  22W  Var_09    CG2   CB   CA   CE     48.64  30.0  1
- 22W  Var_10    HN    N    CA   CE    -59.20  30.0  3
- 22W  Var_11    HNA   N    CA   CE     58.32  30.0  3
+ 22W  Var_10    H     N    CA   CE    -59.20  30.0  3
+ 22W  Var_11    H2    N    CA   CE     58.32  30.0  3
  22W  Var_12    HB    CB   CA   CE    -69.62  30.0  1
  22W  Var_13    CG1   CB   CA   N     -62.39  30.0  1
  22W  Var_14    CG2   CB   CA   N     173.21  30.0  1
@@ -213,7 +214,7 @@ _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
  22W  plan-1  C    0.020
- 22W  plan-1  O    0.020
+ 22W  plan-1  O1   0.020
  22W  plan-1  CA   0.020
  22W  plan-1  NB   0.020
  22W  plan-1  CE   0.020

@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
 Added dihedrals for adding hydrogens : 2023-10-30
+Updated atom names : 2026-11-25
 ;
 
 data_comp_60F
@@ -56,17 +57,17 @@ _chem_comp_atom.z
  60F  C    C  C      0   0.385  10.8651   7.2427  -19.2037
  60F  O    O  O      0  -0.610   9.8157   7.2646  -18.5277
  60F  H1   H  H      0   0.277  13.5368   2.4658  -18.0350
- 60F  H2   H  H      0   0.268  13.8904   0.9154  -20.6568
+ 60F  H10  H  H      0   0.268  13.8904   0.9154  -20.6568
  60F  H3   H  HCR6   0   0.263  15.0849   1.2714  -17.0372
  60F  H4   H  HCR6   0   0.278  16.7282  -0.2219  -16.0478
  60F  H5   H  HOH1   0   0.478  18.0802  -2.0485  -16.4048
  60F  H6   H  HCR6   0   0.269  16.9978  -2.4011  -19.7357
  60F  H7   H  HCR6   0   0.263  15.3401  -0.8913  -20.7336
- 60F  H11  H  HCH1   0   0.238  10.0443   6.6636  -21.0987
+ 60F  HA   H  HCH1   0   0.238  10.0443   6.6636  -21.0987
  60F  H12  H  HCH2   0   0.279   9.4459   4.9238  -19.5286
  60F  H13  H  HCH2   0   0.281  10.3238   4.2381  -20.8995
  60F  O2   O  OC    -1  -0.593  11.9042   7.8965  -19.0014
- 60F  H8   H  HNH2   0   0.337  12.2838   7.1752  -21.5399
+ 60F  H    H  HNH2   0   0.337  12.2838   7.1752  -21.5399
  60F  H9   H  HNH2   0   0.326  12.8274   5.9875  -20.6198
 
 loop_
@@ -95,15 +96,15 @@ _chem_comp_bond.value_dist_neutron
  60F  C4'  C5'  aromatic  1.398  0.020  1.398
  60F  C6'  C5'  aromatic  1.380  0.020  1.380
  60F  C2   H1   single    0.930  0.020  1.080
- 60F  C3   H2   single    0.930  0.020  1.080
+ 60F  C3   H10  single    0.930  0.020  1.080
  60F  C6'  H3   single    0.930  0.020  1.080
  60F  C5'  H4   single    0.930  0.020  1.080
  60F  O4'  H5   single    0.850  0.020  0.980
  60F  C3'  H6   single    0.930  0.020  1.080
  60F  C2'  H7   single    0.930  0.020  1.080
- 60F  N    H8   single    0.890  0.020  1.040
+ 60F  N    H    single    0.890  0.020  1.040
  60F  N    H9   single    0.890  0.020  1.040
- 60F  CA   H11  single    0.970  0.020  1.090
+ 60F  CA   HA   single    0.970  0.020  1.090
  60F  CB   H12  single    0.970  0.020  1.090
  60F  CB   H13  single    0.970  0.020  1.090
  60F  C    O2   deloc     1.244  0.020  1.244
@@ -121,8 +122,8 @@ _chem_comp_angle.value_angle_esd
  60F  H1   C2   C3   122.05  3.000
  60F  H1   C2   C1   117.42  3.000
  60F  C3   C2   C1   120.52  3.000
- 60F  H2   C3   C1'  114.94  3.000
- 60F  H2   C3   C2   117.59  3.000
+ 60F  H10  C3   C1'  114.94  3.000
+ 60F  H10  C3   C2   117.59  3.000
  60F  C1'  C3   C2   127.47  3.000
  60F  C2'  C1'  C6'  117.64  3.000
  60F  C6'  C1'  C3   123.67  3.000
@@ -143,13 +144,13 @@ _chem_comp_angle.value_angle_esd
  60F  H7   C2'  C3'  118.95  3.000
  60F  H7   C2'  C1'  119.24  3.000
  60F  C3'  C2'  C1'  121.81  3.000
- 60F  H9   N    H8   104.03  3.000
+ 60F  H9   N    H    104.03  3.000
  60F  H9   N    CA   108.36  3.000
- 60F  H8   N    CA   108.26  3.000
- 60F  H11  CA   C    106.53  3.000
- 60F  H11  CA   CB   105.08  3.000
+ 60F  H    N    CA   108.26  3.000
+ 60F  HA   CA   C    106.53  3.000
+ 60F  HA   CA   CB   105.08  3.000
  60F  C    CA   CB   110.10  1.900
- 60F  H11  CA   N    107.14  3.000
+ 60F  HA   CA   N    107.14  3.000
  60F  C    CA   N    111.00  2.800
  60F  CB   CA   N    110.50  1.700
  60F  H13  CB   H12  108.50  3.000
@@ -192,9 +193,9 @@ _chem_comp_tor.period
  60F  Var_03    CA   CB   SG   C1   -106.14  30.0  1
  60F  Var_04    O1   C1   C2   C3     -3.07  30.0  1
  60F  Var_05    H5   O4'  C4'  C5'     0.00  30.0  2
- 60F  Var_06    H8   N    CA   CB    176.11  30.0  3
+ 60F  Var_06    H    N    CA   CB    176.11  30.0  3
  60F  Var_07    H9   N    CA   CB    -71.65  30.0  3
- 60F  Var_08    H11  CA   CB   SG   -177.52  30.0  3
+ 60F  Var_08    HA   CA   CB   SG   -177.52  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -236,5 +237,5 @@ _chem_comp_plane_atom.dist_esd
  60F  plan-4  C3   0.020
  60F  plan-4  C1'  0.020
  60F  plan-4  H1   0.020
- 60F  plan-4  H2   0.020
+ 60F  plan-4  H10  0.020
 
