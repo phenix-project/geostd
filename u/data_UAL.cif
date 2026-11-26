@@ -20,11 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UAL  UAL  '(Z)-3-(aminocarbonylamino)-2-azanyl-prop-2-enoic acid'  peptide  16  10  .  2016-04-26  2024-04-17
+ UAL  UAL  '(Z)-3-(aminocarbonylamino)-2-azanyl-prop-2-enoic acid'  peptide  15  9  .  2016-04-26  2024-04-17
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
 Updated atom names : 2026-11-25
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_UAL
@@ -38,22 +40,21 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- UAL  C     C  C      0   0.390  104.6395  6.9016  24.9796
- UAL  N     N  NH2    0  -0.849  106.8810  6.5809  23.9362
- UAL  O     O  O      0  -0.590  103.6833  6.3956  25.5970
- UAL  C1    C  C      0   0.665  106.6902  2.4463  24.7133
- UAL  N1    N  NH1    0  -0.686  106.7903  3.8018  24.5829
- UAL  N2    N  NH2    0  -0.848  107.8339  1.7641  24.4268
- UAL  O2    O  O      0  -0.527  105.6457  1.8863  25.0211
- UAL  CA    C  C      0  -0.050  105.7843  5.9846  24.5750
- UAL  CB    C  C1     0  -0.043  105.7434  4.6769  24.8655
- UAL  OXT   O  OC    -1  -0.606  104.7705  8.0983  24.6441
- UAL  H     H  HNH2   0   0.352  107.1726  6.1010  23.0951
- UAL  HN2   H  HNH2   0   0.394  107.8634  0.7967  24.7008
- UAL  HN2A  H  HNH2   0   0.393  108.7246  2.2326  24.4168
- UAL  HB    H  H      0   0.255  104.8823  4.2487  25.3522
- UAL  H5    H  HNH2   0   0.354  106.6511  7.5387  23.7087
- UAL  H6    H  HNH1   0   0.396  107.6863  4.2035  24.3504
+ UAL  C     C  C     0   0.390  104.6395  6.9016  24.9796
+ UAL  N     N  NH2   0  -0.849  106.8810  6.5809  23.9362
+ UAL  O     O  O     0  -0.590  103.6833  6.3956  25.5970
+ UAL  C1    C  C     0   0.665  106.6902  2.4463  24.7133
+ UAL  N1    N  NH1   0  -0.686  106.7903  3.8018  24.5829
+ UAL  N2    N  NH2   0  -0.848  107.8339  1.7641  24.4268
+ UAL  O2    O  O     0  -0.527  105.6457  1.8863  25.0211
+ UAL  CA    C  C     0  -0.050  105.7843  5.9846  24.5750
+ UAL  CB    C  C1    0  -0.043  105.7434  4.6769  24.8655
+ UAL  H     H  HNH2  0   0.352  107.1726  6.1010  23.0951
+ UAL  HN2   H  HNH2  0   0.394  107.8634  0.7967  24.7008
+ UAL  HN2A  H  HNH2  0   0.393  108.7246  2.2326  24.4168
+ UAL  HB    H  H     0   0.255  104.8823  4.2487  25.3522
+ UAL  H5    H  HNH2  0   0.354  106.6511  7.5387  23.7087
+ UAL  H6    H  HNH1  0   0.396  107.6863  4.2035  24.3504
 
 loop_
 _chem_comp_bond.comp_id
@@ -64,7 +65,6 @@ _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  UAL  C   O     deloc   1.246  0.020  1.246
- UAL  C   OXT   deloc   1.250  0.020  1.250
  UAL  N   CA    single  1.402  0.020  1.402
  UAL  N   H     single  0.890  0.020  1.040
  UAL  C1  O2    double  1.224  0.020  1.224
@@ -86,9 +86,7 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- UAL  OXT   C   CA   115.27  3.000
  UAL  CA    C   O    117.69  3.000
- UAL  OXT   C   O    127.05  3.000
  UAL  H5    N   H    109.14  3.000
  UAL  H5    N   CA   109.12  3.000
  UAL  H     N   CA   113.74  3.000
@@ -120,13 +118,13 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  UAL  CONST_01  CB    N1  C1  O2     0.00   0.0  0
  UAL  CONST_02  CB    N1  C1  N2   180.00   0.0  0
- UAL  CONST_03  H6    N1  C1  O2   180.00   0.0  0
- UAL  CONST_04  HN2   N2  C1  O2     0.00   0.0  0
- UAL  CONST_05  HN2A  N2  C1  O2   180.00   0.0  0
- UAL  Var_01    N1    CB  CA  C   -176.57   0.0  2
- UAL  Var_02    O     C   CA  N   -177.10  30.0  2
- UAL  Var_03    CA    CB  N1  C1  -171.11  30.0  2
- UAL  Var_04    H     N   CA  C   -131.59  30.0  2
+ UAL  Var_01    H6    N1  C1  O2   180.00  10.0  1
+ UAL  Var_02    HN2   N2  C1  O2     0.00  10.0  1
+ UAL  Var_03    HN2A  N2  C1  O2   180.00  10.0  1
+ UAL  Var_04    N1    CB  CA  C   -176.57   0.0  2
+ UAL  Var_05    O     C   CA  N   -177.10  30.0  2
+ UAL  Var_06    CA    CB  N1  C1  -171.11  30.0  2
+ UAL  Var_07    H     N   CA  C   -131.59  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -144,7 +142,6 @@ _chem_comp_plane_atom.dist_esd
  UAL  plan-2  C     0.020
  UAL  plan-2  O     0.020
  UAL  plan-2  CA    0.020
- UAL  plan-2  OXT   0.020
  UAL  plan-3  C     0.020
  UAL  plan-3  N     0.020
  UAL  plan-3  N1    0.020

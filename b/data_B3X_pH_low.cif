@@ -20,13 +20,14 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- B3X  B3X  '(3S)-3,5-diamino-5-oxopentanoic acid'  L-peptide  20  10  .  2022-03-15  2024-04-10
+ B3X  B3X  '(3S)-3,5-diamino-5-oxopentanoic acid'  L-peptide  17  9  .  2022-03-15  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-10
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_B3X
@@ -49,7 +50,6 @@ _chem_comp_atom.z
  B3X  CB    C  CH2   0  -0.581   2.6099  -0.4637   1.0052
  B3X  C     C  C     0   0.551   3.5093  -0.7564  -0.1629
  B3X  O     O  O     0  -0.445   3.4442  -1.7353  -0.8652
- B3X  OXT   O  OH1   0  -0.594   4.4357   0.1839  -0.3179
  B3X  HE21  H  HNH2  0   0.406  -1.9355  -0.1259  -0.8570
  B3X  HE22  H  HNH2  0   0.398  -2.8278  -1.5889  -0.7135
  B3X  HG3   H  HCH2  0   0.277   0.9032  -1.0345  -1.0711
@@ -58,7 +58,6 @@ _chem_comp_atom.z
  B3X  H     H  HNH2  0   0.350  -0.0411  -1.7653   2.4751
  B3X  HB1   H  HCH2  0   0.298   3.1889  -0.6761   1.9103
  B3X  HB2   H  HCH2  0   0.269   2.3896   0.6073   1.0392
- B3X  HXT   H  HOH1  0   0.478   5.0306  -0.0525  -1.0456
 
 loop_
 _chem_comp_bond.comp_id
@@ -83,9 +82,7 @@ _chem_comp_bond.value_dist_neutron
  B3X  CB   C     single  1.525  0.021  1.525
  B3X  CB   HB1   single  0.970  0.020  1.090
  B3X  CB   HB2   single  0.970  0.020  1.090
- B3X  C    OXT   single  1.329  0.020  1.329
  B3X  C    O     double  1.231  0.020  1.231
- B3X  OXT  HXT   single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -119,10 +116,7 @@ _chem_comp_angle.value_angle_esd
  B3X  HB2   CB   CA    110.81  3.000
  B3X  HB1   CB   CA    108.65  3.000
  B3X  C     CB   CA    110.10  1.900
- B3X  OXT   C    O     122.94  3.000
  B3X  O     C    CB    120.80  1.700
- B3X  OXT   C    CB    111.71  3.000
- B3X  HXT   OXT  C     110.05  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -134,15 +128,13 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- B3X  CONST_01  HE21  NE2  CD  OE1  180.00   0.0  0
- B3X  CONST_02  HE22  NE2  CD  OE1    0.00   0.0  0
- B3X  CONST_03  HXT   OXT  C   CB   180.00   0.0  0
- B3X  Var_01    CA    CG   CD  OE1  -34.75  30.0  3
- B3X  Var_02    OXT   C    CB  CA   165.25  30.0  3
- B3X  Var_03    HA    CA   CG  CD    58.00  30.0  3
- B3X  Var_04    H     N    CA  CG    66.32  30.0  3
- B3X  Var_05    HB1   CB   CA  CG   173.07  30.0  3
- B3X  Var_06    HB2   CB   CA  CG    57.36  30.0  3
+ B3X  Var_01  HE21  NE2  CD  OE1  180.00  10.0  1
+ B3X  Var_02  HE22  NE2  CD  OE1    0.00  10.0  1
+ B3X  Var_03  CA    CG   CD  OE1  -34.75  30.0  3
+ B3X  Var_04  HA    CA   CG  CD    58.00  30.0  3
+ B3X  Var_05  H     N    CA  CG    66.32  30.0  3
+ B3X  Var_06  HB1   CB   CA  CG   173.07  30.0  3
+ B3X  Var_07  HB2   CB   CA  CG    57.36  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -168,6 +160,4 @@ _chem_comp_plane_atom.dist_esd
  B3X  plan-2  CB    0.020
  B3X  plan-2  C     0.020
  B3X  plan-2  O     0.020
- B3X  plan-2  OXT   0.020
- B3X  plan-2  HXT   0.020
 

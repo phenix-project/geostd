@@ -20,11 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5X8  5X8  '(2~{R})-3-[[(2~{S},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methylsulfanyl]-2-azanyl-propanoic acid'  L-peptide  42  25  .  2022-07-23  2023-10-30
+ 5X8  5X8  '(2~{R})-3-[[(2~{S},3~{S},4~{R},5~{R})-5-(6-aminopurin-9-yl)-3,4-bis(oxidanyl)oxolan-2-yl]methylsulfanyl]-2-azanyl-propanoic acid'  L-peptide  41  24  .  2022-07-23  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_5X8
@@ -79,7 +80,6 @@ _chem_comp_atom.z
  5X8  H18  H  HNH2   0   0.402  -4.9602  -4.2054   0.1983
  5X8  H19  H  HNH2   0   0.410  -3.2426  -4.2020   0.3157
  5X8  C5'  C  CH2    0  -0.580   1.7836   1.7786   0.2721
- 5X8  OXT  O  OC     0  -0.615   6.4553  -1.3744   0.1695
 
 loop_
 _chem_comp_bond.comp_id
@@ -92,7 +92,6 @@ _chem_comp_bond.value_dist_neutron
  5X8  N    CA   single    1.458  0.019  1.458
  5X8  O    C    deloc     1.231  0.020  1.231
  5X8  C    CA   single    1.525  0.021  1.525
- 5X8  C    OXT  deloc     1.247  0.020  1.247
  5X8  CA   CB   single    1.521  0.033  1.521
  5X8  SG   CB   single    1.819  0.020  1.819
  5X8  SG   C5'  single    1.813  0.020  1.813
@@ -159,8 +158,6 @@ _chem_comp_angle.value_angle_esd
  5X8  N9   C4   C5   105.12  3.000
  5X8  N3   C4   C5   126.42  3.000
  5X8  CA   C    O    120.80  1.700
- 5X8  CA   C    OXT  120.80  1.700
- 5X8  O    C    OXT  127.09  3.000
  5X8  H4   CA   CB   107.55  3.000
  5X8  H4   CA   N    108.34  3.000
  5X8  CB   CA   N    110.40  1.500
@@ -251,24 +248,24 @@ _chem_comp_tor.period
  5X8  CONST_21  N6   C6   N1   C2    180.00   0.0  0
  5X8  CONST_22  N6   C6   C5   C4    180.00   0.0  0
  5X8  CONST_23  N6   C6   C5   N7      0.00   0.0  0
- 5X8  CONST_24  H1   C8   N7   C5    180.00   0.0  0
- 5X8  CONST_25  H2   C2   N1   C6    180.00   0.0  0
- 5X8  CONST_26  H18  N6   C6   N1      0.00   0.0  0
- 5X8  CONST_27  H19  N6   C6   N1    180.00   0.0  0
  5X8  Var_01    C4'  C5'  SG   CB    176.73  30.0  3
  5X8  Var_02    H8   CB   SG   C5'    39.85  30.0  3
- 5X8  Var_03    H17  C1'  N9   C8    159.78  30.0  2
- 5X8  Var_04    H15  C2'  C3'  C4'    77.60  30.0  1
- 5X8  Var_05    H13  C3'  C4'  O4'   153.96  30.0  1
- 5X8  Var_06    H12  C4'  C3'  C2'   151.04  30.0  1
- 5X8  Var_07    H14  O3'  C3'  C4'   157.44  30.0  3
- 5X8  Var_08    H10  C5'  C4'  O4'   -73.89  30.0  2
- 5X8  Var_09    H11  C5'  C4'  O4'   167.87  30.0  2
- 5X8  Var_10    H16  O2'  C2'  C3'   -86.50  30.0  3
- 5X8  Var_11    H5   N    CA   C      51.25  30.0  3
- 5X8  Var_12    H6   N    CA   C     168.71  30.0  3
- 5X8  Var_13    H9   CB   CA   C      52.60  30.0  3
- 5X8  Var_14    H4   CA   C    O    -134.77  30.0  2
+ 5X8  Var_03    H1   C8   N7   C5    180.00  10.0  1
+ 5X8  Var_04    H2   C2   N1   C6    180.00  10.0  1
+ 5X8  Var_05    H18  N6   C6   N1      0.00  10.0  1
+ 5X8  Var_06    H19  N6   C6   N1    180.00  10.0  1
+ 5X8  Var_07    H17  C1'  N9   C8    159.78  30.0  2
+ 5X8  Var_08    H15  C2'  C3'  C4'    77.60  30.0  1
+ 5X8  Var_09    H13  C3'  C4'  O4'   153.96  30.0  1
+ 5X8  Var_10    H12  C4'  C3'  C2'   151.04  30.0  1
+ 5X8  Var_11    H14  O3'  C3'  C4'   157.44  30.0  3
+ 5X8  Var_12    H10  C5'  C4'  O4'   -73.89  30.0  2
+ 5X8  Var_13    H11  C5'  C4'  O4'   167.87  30.0  2
+ 5X8  Var_14    H16  O2'  C2'  C3'   -86.50  30.0  3
+ 5X8  Var_15    H5   N    CA   C      51.25  30.0  3
+ 5X8  Var_16    H6   N    CA   C     168.71  30.0  3
+ 5X8  Var_17    H9   CB   CA   C      52.60  30.0  3
+ 5X8  Var_18    H4   CA   C    O    -134.77  30.0  2
 
 loop_
 _chem_comp_chir.comp_id
@@ -309,5 +306,4 @@ _chem_comp_plane_atom.dist_esd
  5X8  plan-3  C    0.020
  5X8  plan-3  O    0.020
  5X8  plan-3  CA   0.020
- 5X8  plan-3  OXT  0.020
 

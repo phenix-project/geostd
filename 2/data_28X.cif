@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 28X  28X  "O-[(R)-{[(3R)-3,4-dihydroxybutyl]oxy}(hydroxy)phosphoryl]-L-threonine"  L-peptide  34  18  .  2016-04-22  2026-03-30
+ 28X  28X  O-[(R)-{[(3R)-3,4-dihydroxybutyl]oxy}(hydroxy)phosphoryl]-L-threonine  L-peptide  33  17  .  2016-04-22  2026-03-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_28X
@@ -70,7 +71,6 @@ _chem_comp_atom.z
  28X  H71   H  HCH2   0   0.194  -5.0185   1.8081   1.2406
  28X  H72   H  HOH1   0   0.451  -7.2808   1.2148   1.2425
  28X  H     H  HNH2   0   0.331   3.6656  -0.7583   2.6042
- 28X  OXT   O  OC    -1  -0.617   4.1944   1.5715  -1.0640
 
 loop_
 _chem_comp_bond.comp_id
@@ -112,7 +112,6 @@ _chem_comp_bond.value_dist_neutron
  28X  C67  H71   single  0.970  0.020  1.090
  28X  O68  H72   single  0.850  0.020  0.980
  28X  N    H     single  0.860  0.020  0.860
- 28X  C    OXT   deloc   1.249  0.020  1.249
 
 loop_
 _chem_comp_angle.comp_id
@@ -121,8 +120,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- 28X  OXT   C    O     126.91  3.000
- 28X  OXT   C    CA    115.22  3.000
  28X  O     C    CA    120.80  1.700
  28X  HA    CA   CB    109.00  3.000
  28X  HA    CA   N     110.00  3.000
@@ -194,40 +191,38 @@ _chem_comp_tor.period
  28X  Var_02  CG2   CB   CA   C     173.07  30.0  3
  28X  Var_03  P59   OG1  CB   CA    140.90  30.0  3
  28X  Var_04  O     C    CA   N     -14.17  30.0  2
- 28X  Var_05  OXT   C    CA   N     166.49  30.0  2
- 28X  Var_06  OG1   CB   CA   N      60.98  30.0  3
- 28X  Var_07  CG2   CB   CA   N     -60.64  30.0  3
- 28X  Var_08  O     C    CA   CB    114.15  30.0  2
- 28X  Var_09  OXT   C    CA   CB    -65.19  30.0  2
- 28X  Var_10  O60   P59  OG1  CB     52.36  30.0  3
- 28X  Var_11  O69   P59  OG1  CB    -82.47  30.0  3
- 28X  Var_12  O61   P59  OG1  CB    165.26  30.0  3
- 28X  Var_13  C62   O61  P59  OG1  -173.68  30.0  3
- 28X  Var_14  CG2   CB   OG1  P59   -95.60  30.0  1
- 28X  Var_15  C63   C62  O61  P59  -166.05  30.0  3
- 28X  Var_16  C62   O61  P59  O60   -59.81  30.0  3
- 28X  Var_17  C62   O61  P59  O69    73.46  30.0  3
- 28X  Var_18  C64   C63  C62  O61  -179.54  30.0  1
- 28X  Var_19  C67   C64  C63  C62  -175.04  30.0  1
- 28X  Var_20  O66   C64  C63  C62    59.21  30.0  1
- 28X  Var_21  O68   C67  C64  C63   175.25  30.0  2
- 28X  Var_22  O68   C67  C64  O66   -58.81  30.0  2
- 28X  Var_23  H2    N    CA   C      56.23  30.0  3
- 28X  Var_24  H     N    CA   C     173.25  30.0  3
- 28X  Var_25  HB    CB   CA   C      54.02  30.0  3
- 28X  Var_26  HG21  CG2  CB   CA   -176.24  30.0  3
- 28X  Var_27  HG22  CG2  CB   CA    -56.61  30.0  3
- 28X  Var_28  HG23  CG2  CB   CA     63.68  30.0  3
- 28X  Var_29  HA    CA   CB   OG1   179.86  30.0  2
- 28X  Var_30  H64   C62  O61  P59   -45.96  30.0  3
- 28X  Var_31  H65   C62  O61  P59    72.89  30.0  3
- 28X  Var_32  H66   C63  C62  O61   -57.03  30.0  1
- 28X  Var_33  H67   C63  C62  O61    59.39  30.0  1
- 28X  Var_34  H68   C64  C63  C62   -56.82  30.0  1
- 28X  Var_35  H70   C67  C64  C63   -62.37  30.0  2
- 28X  Var_36  H71   C67  C64  C63    53.25  30.0  2
- 28X  Var_37  H69   O66  C64  C63    60.22  30.0  3
- 28X  Var_38  H72   O68  C67  C64   177.58  30.0  3
+ 28X  Var_05  OG1   CB   CA   N      60.98  30.0  3
+ 28X  Var_06  CG2   CB   CA   N     -60.64  30.0  3
+ 28X  Var_07  O     C    CA   CB    114.15  30.0  2
+ 28X  Var_08  O60   P59  OG1  CB     52.36  30.0  3
+ 28X  Var_09  O69   P59  OG1  CB    -82.47  30.0  3
+ 28X  Var_10  O61   P59  OG1  CB    165.26  30.0  3
+ 28X  Var_11  C62   O61  P59  OG1  -173.68  30.0  3
+ 28X  Var_12  CG2   CB   OG1  P59   -95.60  30.0  1
+ 28X  Var_13  C63   C62  O61  P59  -166.05  30.0  3
+ 28X  Var_14  C62   O61  P59  O60   -59.81  30.0  3
+ 28X  Var_15  C62   O61  P59  O69    73.46  30.0  3
+ 28X  Var_16  C64   C63  C62  O61  -179.54  30.0  1
+ 28X  Var_17  C67   C64  C63  C62  -175.04  30.0  1
+ 28X  Var_18  O66   C64  C63  C62    59.21  30.0  1
+ 28X  Var_19  O68   C67  C64  C63   175.25  30.0  2
+ 28X  Var_20  O68   C67  C64  O66   -58.81  30.0  2
+ 28X  Var_21  H2    N    CA   C      56.23  30.0  3
+ 28X  Var_22  H     N    CA   C     173.25  30.0  3
+ 28X  Var_23  HB    CB   CA   C      54.02  30.0  3
+ 28X  Var_24  HG21  CG2  CB   CA   -176.24  30.0  3
+ 28X  Var_25  HG22  CG2  CB   CA    -56.61  30.0  3
+ 28X  Var_26  HG23  CG2  CB   CA     63.68  30.0  3
+ 28X  Var_27  HA    CA   CB   OG1   179.86  30.0  2
+ 28X  Var_28  H64   C62  O61  P59   -45.96  30.0  3
+ 28X  Var_29  H65   C62  O61  P59    72.89  30.0  3
+ 28X  Var_30  H66   C63  C62  O61   -57.03  30.0  1
+ 28X  Var_31  H67   C63  C62  O61    59.39  30.0  1
+ 28X  Var_32  H68   C64  C63  C62   -56.82  30.0  1
+ 28X  Var_33  H70   C67  C64  C63   -62.37  30.0  2
+ 28X  Var_34  H71   C67  C64  C63    53.25  30.0  2
+ 28X  Var_35  H69   O66  C64  C63    60.22  30.0  3
+ 28X  Var_36  H72   O68  C67  C64   177.58  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -246,8 +241,7 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- 28X  plan-1  C    0.020
- 28X  plan-1  CA   0.020
- 28X  plan-1  O    0.020
- 28X  plan-1  OXT  0.020
+ 28X  plan-1  C   0.020
+ 28X  plan-1  CA  0.020
+ 28X  plan-1  O   0.020
 

@@ -21,10 +21,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- VNW  VNW  "8-azanyl-4-methylselanyl-quinoline-2-carboxylic acid"  peptide  26  16  .  2026-04-06  2026-04-13
+ VNW  VNW  '8-azanyl-4-methylselanyl-quinoline-2-carboxylic acid'  peptide  24  15  .  2026-04-06  2026-04-13
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_VNW
@@ -62,8 +64,6 @@ _chem_comp_atom.z
  VNW  H15  H   HCH3  0   0.163  22.9777  -10.7938  4.0269
  VNW  H16  H   HCH3  0   0.163  22.6378  -10.1396  5.6627
  VNW  H17  H   HCR6  0   0.151  23.8550  -12.1250  5.7128
- VNW  OXT  O   OH1   0  -0.384  25.3339  -15.4154  7.3575
- VNW  HXT  H   HOH1  0   0.365  24.7040  -16.1436  7.4934
 
 loop_
 _chem_comp_bond.comp_id
@@ -98,8 +98,6 @@ _chem_comp_bond.value_dist_neutron
  VNW  C14  H15  single    0.970  0.020  1.090
  VNW  C14  H16  single    0.970  0.020  1.090
  VNW  C15  H17  single    0.930  0.020  1.080
- VNW  C    OXT  single    1.339  0.020  1.339
- VNW  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -114,8 +112,6 @@ _chem_comp_angle.value_angle_esd
  VNW  C15  CA   NB   123.68  3.000
  VNW  C15  CA   C    117.80  3.000
  VNW  NB   CA   C    118.52  3.000
- VNW  OXT  C    O    122.80  3.000
- VNW  OXT  C    CA   113.83  3.000
  VNW  O    C    CA   123.37  3.000
  VNW  CG   NB   CA   118.33  3.000
  VNW  C06  CG   CD   119.78  3.000
@@ -149,7 +145,6 @@ _chem_comp_angle.value_angle_esd
  VNW  H17  C15  CA   118.39  3.000
  VNW  C12  C15  CA   119.19  3.000
  VNW  C14  SE1  C12  100.20  3.000
- VNW  HXT  OXT  C    107.90  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -187,22 +182,19 @@ _chem_comp_tor.period
  VNW  CONST_24  C12  C15  CA   C     180.00   0.0  0
  VNW  CONST_25  SE1  C12  C06  CG    180.00   0.0  0
  VNW  CONST_26  SE1  C12  C06  C07     0.00   0.0  0
- VNW  CONST_27  H17  C15  CA   NB    180.00   0.0  0
- VNW  CONST_28  H07  C07  C06  CG    180.00   0.0  0
- VNW  CONST_29  H09  C09  CD   CG    180.00   0.0  0
- VNW  CONST_30  H08  C08  C09  CD    180.00   0.0  0
- VNW  CONST_31  H2   N    CD   CG      0.00   0.0  0
- VNW  CONST_32  H    N    CD   CG    180.00   0.0  0
- VNW  CONST_33  HXT  OXT  C    CA    180.00   0.0  0
  VNW  Var_01    NB   CA   C    O    -178.57  30.0  3
  VNW  Var_02    C15  CA   C    O       1.21  30.0  3
- VNW  Var_03    OXT  C    CA   NB      1.40  30.0  2
- VNW  Var_04    C14  SE1  C12  C06  -179.55  30.0  2
- VNW  Var_05    C15  C12  SE1  C14     0.63  30.0  2
- VNW  Var_06    OXT  C    CA   C15  -178.82  30.0  2
- VNW  Var_07    H14  C14  SE1  C12   179.72  30.0  3
- VNW  Var_08    H15  C14  SE1  C12   -61.88  30.0  3
- VNW  Var_09    H16  C14  SE1  C12    61.38  30.0  3
+ VNW  Var_03    H17  C15  CA   NB    180.00  10.0  1
+ VNW  Var_04    H07  C07  C06  CG    180.00  10.0  1
+ VNW  Var_05    H09  C09  CD   CG    180.00  10.0  1
+ VNW  Var_06    H08  C08  C09  CD    180.00  10.0  1
+ VNW  Var_07    H2   N    CD   CG      0.00  10.0  1
+ VNW  Var_08    H    N    CD   CG    180.00  10.0  1
+ VNW  Var_09    C14  SE1  C12  C06  -179.55  30.0  2
+ VNW  Var_10    C15  C12  SE1  C14     0.63  30.0  2
+ VNW  Var_11    H14  C14  SE1  C12   179.72  30.0  3
+ VNW  Var_12    H15  C14  SE1  C12   -61.88  30.0  3
+ VNW  Var_13    H16  C14  SE1  C12    61.38  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -233,6 +225,4 @@ _chem_comp_plane_atom.dist_esd
  VNW  plan-3  CA   0.020
  VNW  plan-3  C    0.020
  VNW  plan-3  O    0.020
- VNW  plan-3  OXT  0.020
- VNW  plan-3  HXT  0.020
 

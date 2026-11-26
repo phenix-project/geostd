@@ -20,11 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- V6W  V6W  NE-Acetyl-L-tryptophan  L-peptide  31  19  .  2024-05-31  2024-08-02
+ V6W  V6W  NE-Acetyl-L-tryptophan  L-peptide  29  18  .  2024-05-31  2024-08-02
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
 Removed H2 atom : 2024-08-02
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_V6W
@@ -66,7 +68,6 @@ _chem_comp_atom.z
  V6W  HH2  H  HCR6   0   0.240  -7.7565   -8.5352  17.9156
  V6W  HZ2  H  HCR6   0   0.254  -7.0059  -10.0075  19.7462
  V6W  H    H  HNH2   0   0.334  -2.4132  -13.4948  13.4795
- V6W  OXT  O  OC    -1  -0.609  -2.0495  -11.8468  16.5895
  V6W  C24  C  CH2    0  -0.467  -5.7150  -12.4731  20.6059
 
 loop_
@@ -107,7 +108,6 @@ _chem_comp_bond.value_dist_neutron
  V6W  CH2  HH2  single    0.930  0.020  1.080
  V6W  CZ2  HZ2  single    0.930  0.020  1.080
  V6W  N    H    single    0.860  0.020  0.860
- V6W  OXT  C    deloc     1.247  0.020  1.247
 
 loop_
 _chem_comp_angle.comp_id
@@ -116,8 +116,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- V6W  OXT  C    O    126.75  3.000
- V6W  OXT  C    CA   117.73  3.000
  V6W  O    C    CA   120.80  1.700
  V6W  HA   CA   N    110.00  3.000
  V6W  HA   CA   CB   109.00  3.000
@@ -202,29 +200,27 @@ _chem_comp_tor.period
  V6W  CONST_21  C24  NE1  CD1  CG    180.00   0.0  0
  V6W  CONST_22  CD2  CE2  NE1  C24   180.00   0.0  0
  V6W  CONST_23  CZ2  CE2  NE1  C24     0.00   0.0  0
- V6W  CONST_24  HE3  CE3  CD2  CG      0.00   0.0  0
- V6W  CONST_25  HH2  CH2  CZ2  CE2   180.00   0.0  0
- V6W  CONST_26  HD1  CD1  NE1  CE2   180.00   0.0  0
- V6W  CONST_27  HZ2  CZ2  CE2  NE1     0.00   0.0  0
- V6W  CONST_28  HZ3  CZ3  CE3  CD2   180.00   0.0  0
  V6W  Var_01    CD2  CG   CB   CA     70.60  30.0  2
  V6W  Var_02    CD1  CG   CB   CA   -106.93  30.0  2
- V6W  Var_03    C25  C24  NE1  CD1   -95.39  30.0  2
- V6W  Var_04    C25  C24  NE1  CE2    78.10  30.0  2
- V6W  Var_05    HB2  CB   CG   CD1   131.36  30.0  2
- V6W  Var_06    HB3  CB   CG   CD1    14.62  30.0  2
- V6W  Var_07    H6   C24  NE1  CD1    26.39  30.0  2
- V6W  Var_08    H7   C24  NE1  CD1   141.07  30.0  2
- V6W  Var_09    CG   CB   CA   C      58.28  30.0  3
- V6W  Var_10    N    CA   CB   CG   -176.98  30.0  1
- V6W  Var_11    O26  C25  C24  NE1     6.16  30.0  3
- V6W  Var_12    O27  C25  C24  NE1  -174.63  30.0  3
- V6W  Var_13    HA   CA   CB   CG    -60.75  30.0  1
- V6W  Var_14    O    C    CA   CB     71.55  30.0  3
- V6W  Var_15    OXT  C    CA   CB   -108.05  30.0  3
- V6W  Var_16    N    CA   C    O     -49.78  30.0  2
- V6W  Var_17    OXT  C    CA   N     130.62  30.0  3
- V6W  Var_18    H    N    CA   C     -65.14  30.0  3
+ V6W  Var_03    HE3  CE3  CD2  CG      0.00  10.0  1
+ V6W  Var_04    HH2  CH2  CZ2  CE2   180.00  10.0  1
+ V6W  Var_05    HD1  CD1  NE1  CE2   180.00  10.0  1
+ V6W  Var_06    HZ2  CZ2  CE2  NE1     0.00  10.0  1
+ V6W  Var_07    HZ3  CZ3  CE3  CD2   180.00  10.0  1
+ V6W  Var_08    C25  C24  NE1  CD1   -95.39  30.0  2
+ V6W  Var_09    C25  C24  NE1  CE2    78.10  30.0  2
+ V6W  Var_10    HB2  CB   CG   CD1   131.36  30.0  2
+ V6W  Var_11    HB3  CB   CG   CD1    14.62  30.0  2
+ V6W  Var_12    H6   C24  NE1  CD1    26.39  30.0  2
+ V6W  Var_13    H7   C24  NE1  CD1   141.07  30.0  2
+ V6W  Var_14    CG   CB   CA   C      58.28  30.0  3
+ V6W  Var_15    N    CA   CB   CG   -176.98  30.0  1
+ V6W  Var_16    O26  C25  C24  NE1     6.16  30.0  3
+ V6W  Var_17    O27  C25  C24  NE1  -174.63  30.0  3
+ V6W  Var_18    HA   CA   CB   CG    -60.75  30.0  1
+ V6W  Var_19    O    C    CA   CB     71.55  30.0  3
+ V6W  Var_20    N    CA   C    O     -49.78  30.0  2
+ V6W  Var_21    H    N    CA   C     -65.14  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -260,7 +256,6 @@ _chem_comp_plane_atom.dist_esd
  V6W  plan-2  C    0.020
  V6W  plan-2  CA   0.020
  V6W  plan-2  O    0.020
- V6W  plan-2  OXT  0.020
  V6W  plan-3  C25  0.020
  V6W  plan-3  O26  0.020
  V6W  plan-3  O27  0.020

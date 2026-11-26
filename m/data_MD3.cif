@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MD3  MD3  N-(carboxycarbonyl)-S-(naphthalen-2-ylmethyl)-L-cysteine  L-peptide  36  23  .  2022-03-22  2024-04-11
+ MD3  MD3  N-(carboxycarbonyl)-S-(naphthalen-2-ylmethyl)-L-cysteine  L-peptide  34  22  .  2022-03-22  2024-04-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-11
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_MD3
@@ -44,7 +45,6 @@ _chem_comp_atom.z
  MD3  O05   O  O      0  -0.593   3.5303  -2.7037   1.1504
  MD3  SG    S  S2     0  -0.018   0.2008   0.6425  -0.0993
  MD3  C01   C  C      0   0.329   4.0626  -2.5528   0.0340
- MD3  OXT   O  OC    -1  -0.615   4.0397   3.1375  -0.2685
  MD3  C02   C  C      0   0.361   3.8852  -1.1519  -0.6235
  MD3  O     O  O      0  -0.585   5.0536   1.4305   0.7529
  MD3  CA    C  CH1    0  -0.194   2.9119   1.0578  -0.2644
@@ -93,7 +93,6 @@ _chem_comp_bond.value_dist_neutron
  MD3  SG   C06   single    1.822  0.020  1.822
  MD3  C02  C01   single    1.558  0.020  1.558
  MD3  C01  O04   deloc     1.237  0.020  1.237
- MD3  OXT  C     deloc     1.247  0.020  1.247
  MD3  C02  O03   double    1.224  0.020  1.224
  MD3  O    C     deloc     1.231  0.020  1.231
  MD3  C    CA    single    1.525  0.021  1.525
@@ -145,8 +144,6 @@ _chem_comp_angle.value_angle_esd
  MD3  CB    CA   N    110.50  1.700
  MD3  C     CA   N    111.00  2.800
  MD3  CA    C    O    120.80  1.700
- MD3  CA    C    OXT  114.50  3.000
- MD3  O     C    OXT  127.81  3.000
  MD3  HB3   CB   HB2  108.02  3.000
  MD3  HB3   CB   CA   110.71  3.000
  MD3  HB2   CB   CA   109.30  3.000
@@ -217,21 +214,21 @@ _chem_comp_tor.period
  MD3  CONST_18  C14  C13  C10  C12    0.00   0.0  0
  MD3  CONST_19  C09  C08  C07  C06  180.00   0.0  0
  MD3  CONST_20  C12  C11  C07  C06  180.00   0.0  0
- MD3  CONST_21  H11  C11  C12  C16    0.00   0.0  0
- MD3  CONST_22  H14  C14  C15  C16  180.00   0.0  0
- MD3  CONST_23  H09  C09  C08  C07  180.00   0.0  0
- MD3  CONST_24  H13  C13  C10  C09    0.00   0.0  0
- MD3  CONST_25  H08  C08  C09  C10  180.00   0.0  0
- MD3  CONST_26  H16  C16  C12  C10  180.00   0.0  0
- MD3  CONST_27  H15  C15  C16  C12  180.00   0.0  0
- MD3  CONST_28  CA   N    C02  C01  180.00   0.0  0
- MD3  CONST_29  O03  C02  N    CA     0.00   0.0  0
+ MD3  CONST_21  CA   N    C02  C01  180.00   0.0  0
+ MD3  CONST_22  O03  C02  N    CA     0.00   0.0  0
  MD3  Var_01    C08  C07  C06  SG   -79.15  30.0  2
  MD3  Var_02    C07  C06  SG   CB   170.59  30.0  3
- MD3  Var_03    O05  C01  C02  N     -4.71  30.0  2
- MD3  Var_04    HB2  CB   SG   C06  -56.96  30.0  3
- MD3  Var_05    HB3  CB   CA   N     62.37  30.0  3
- MD3  Var_06    HA   CA   CB   SG    59.52  30.0  1
+ MD3  Var_03    H11  C11  C12  C16    0.00  10.0  1
+ MD3  Var_04    H14  C14  C15  C16  180.00  10.0  1
+ MD3  Var_05    H09  C09  C08  C07  180.00  10.0  1
+ MD3  Var_06    H13  C13  C10  C09    0.00  10.0  1
+ MD3  Var_07    H08  C08  C09  C10  180.00  10.0  1
+ MD3  Var_08    H16  C16  C12  C10  180.00  10.0  1
+ MD3  Var_09    H15  C15  C16  C12  180.00  10.0  1
+ MD3  Var_10    O05  C01  C02  N     -4.71  30.0  2
+ MD3  Var_11    HB2  CB   SG   C06  -56.96  30.0  3
+ MD3  Var_12    HB3  CB   CA   N     62.37  30.0  3
+ MD3  Var_13    HA   CA   CB   SG    59.52  30.0  1
 
 loop_
 _chem_comp_chir.comp_id
@@ -275,7 +272,6 @@ _chem_comp_plane_atom.dist_esd
  MD3  plan-3  C01  0.020
  MD3  plan-3  C02  0.020
  MD3  plan-3  O04  0.020
- MD3  plan-4  OXT  0.020
  MD3  plan-4  O    0.020
  MD3  plan-4  CA   0.020
  MD3  plan-4  C    0.020

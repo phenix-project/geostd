@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SUI  SUI  '[(3S)-3-amino-2,5-dioxopyrrolidin-1-yl]acetic acid'  L-peptide  20  12  .  2022-07-22  2023-10-30
+ SUI  SUI  '[(3S)-3-amino-2,5-dioxopyrrolidin-1-yl]acetic acid'  L-peptide  18  11  .  2022-07-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
 Added dihedrals for adding hydrogens : 2023-10-30
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_SUI
@@ -50,7 +51,6 @@ _chem_comp_atom.z
  SUI  C2A  C  CH2   0  -0.457  -0.0790  -0.9863  -1.3678
  SUI  C    C  C     0   0.551   0.1452   0.2368  -2.2309
  SUI  O    O  O     0  -0.427   0.1560   1.3633  -1.8122
- SUI  OXT  O  OH1   0  -0.585   0.3195  -0.1038  -3.4958
  SUI  HN   H  HNH2  0   0.353   1.1908   1.7736   2.3888
  SUI  H    H  HNH2  0   0.362   2.0311   0.6075   3.1467
  SUI  HA   H  HCR5  0   0.308   0.4049  -1.0050   2.8021
@@ -58,7 +58,6 @@ _chem_comp_atom.z
  SUI  HB2  H  HCH2  0   0.304  -1.2453   1.3673   1.9638
  SUI  H2A  H  HCH2  0   0.321   0.7482  -1.6862  -1.4916
  SUI  H2B  H  HCH2  0   0.324  -0.9839  -1.5018  -1.6930
- SUI  HXT  H  HOH1  0   0.489   0.4589   0.6835  -4.0439
 
 loop_
 _chem_comp_bond.comp_id
@@ -86,8 +85,6 @@ _chem_comp_bond.value_dist_neutron
  SUI  C2A  H2A  single  0.970  0.020  1.090
  SUI  C2A  H2B  single  0.970  0.020  1.090
  SUI  C    O    double  1.202  0.020  1.202
- SUI  C    OXT  single  1.322  0.020  1.322
- SUI  OXT  HXT  single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -126,10 +123,7 @@ _chem_comp_angle.value_angle_esd
  SUI  H2B  C2A  N2   109.70  3.000
  SUI  H2A  C2A  N2   109.89  3.000
  SUI  C    C2A  N2   110.67  3.000
- SUI  OXT  C    O    125.02  3.000
- SUI  OXT  C    C2A  110.92  3.000
  SUI  O    C    C2A  124.06  3.000
- SUI  HXT  OXT  C    110.54  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -141,19 +135,18 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SUI  CONST_01  C1   N2   CG   CB      0.00   0.0  0
- SUI  CONST_02  C2A  N2   CG   CB    180.00   0.0  0
- SUI  CONST_03  C1   N2   CG   OD    180.00   0.0  0
- SUI  CONST_04  C2A  N2   CG   OD      0.00   0.0  0
- SUI  CONST_05  HXT  OXT  C    C2A   180.00   0.0  0
- SUI  Var_01    N2   CG   CB   CA     -9.71  30.0  1
- SUI  Var_02    C    C2A  N2   CG     86.08  30.0  3
- SUI  Var_03    O    C    C2A  N2     -3.07  30.0  3
- SUI  Var_04    HA   CA   CB   CG    -97.31  30.0  1
- SUI  Var_05    HB1  CB   CA   C1    136.77  30.0  1
- SUI  Var_06    HB2  CB   CA   C1   -101.67  30.0  1
- SUI  Var_07    HN   N    CA   CB    -66.39  30.0  3
- SUI  Var_08    H    N    CA   CB    175.53  30.0  3
+ SUI  CONST_01  C1   N2   CG   CB     0.00   0.0  0
+ SUI  CONST_02  C2A  N2   CG   CB   180.00   0.0  0
+ SUI  CONST_03  C1   N2   CG   OD   180.00   0.0  0
+ SUI  CONST_04  C2A  N2   CG   OD     0.00   0.0  0
+ SUI  Var_01    N2   CG   CB   CA    -9.71  30.0  1
+ SUI  Var_02    C    C2A  N2   CG    86.08  30.0  3
+ SUI  Var_03    O    C    C2A  N2    -3.07  30.0  3
+ SUI  Var_04    HA   CA   CB   CG   -97.31  30.0  1
+ SUI  Var_05    HB1  CB   CA   C1   136.77  30.0  1
+ SUI  Var_06    HB2  CB   CA   C1  -101.67  30.0  1
+ SUI  Var_07    HN   N    CA   CB   -66.39  30.0  3
+ SUI  Var_08    H    N    CA   CB   175.53  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -183,6 +176,4 @@ _chem_comp_plane_atom.dist_esd
  SUI  plan-3  C2A  0.020
  SUI  plan-3  C    0.020
  SUI  plan-3  O    0.020
- SUI  plan-3  OXT  0.020
- SUI  plan-3  HXT  0.020
 

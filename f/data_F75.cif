@@ -20,12 +20,14 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- F75  F75  '2-(aminomethyl)-1,3-thiazole-4-carboxylic acid'  peptide  15  10  .  2022-07-25  2024-04-11
+ F75  F75  '2-(aminomethyl)-1,3-thiazole-4-carboxylic acid'  peptide  13  9  .  2022-07-25  2024-04-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
 Removed H2 atom : 2024-04-11
 Updated atom names : 2026-11-25
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_F75
@@ -39,20 +41,19 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- F75  N    N  NH2    0  -0.799  -3.4819   0.7394  -0.4416
- F75  CA1  C  CH2    0  -0.352  -2.4254   1.2154   0.4259
- F75  C2   C  C      0   0.059  -1.1509   0.4922   0.1268
- F75  N2   N  N      0  -0.395   0.0338   0.8666   0.4708
- F75  CA2  C  C      0   0.137   0.9873  -0.0425   0.0880
- F75  C    C  C      0   0.361   2.4547   0.1815   0.3856
- F75  O    O  O      0  -0.598   3.2302  -0.7088  -0.0140
- F75  C5   C  C1     0  -0.534   0.4947  -1.1281  -0.5696
- F75  S1   S  S2     0   0.205  -1.2087  -1.0190  -0.7184
- F75  H    H  HNH2   0   0.365  -4.3838   0.9741  -0.0512
- F75  H4   H  HCH2   0   0.238  -2.2312   2.2935   0.3771
- F75  H5   H  HCH2   0   0.263  -2.7052   1.0004   1.4606
- F75  H7   H  H      0   0.290   1.0450  -1.9625  -0.9732
- F75  OXT  O  OC    -1  -0.595   2.7449   1.2233   0.9977
+ F75  N    N  NH2   0  -0.799  -3.4819   0.7394  -0.4416
+ F75  CA1  C  CH2   0  -0.352  -2.4254   1.2154   0.4259
+ F75  C2   C  C     0   0.059  -1.1509   0.4922   0.1268
+ F75  N2   N  N     0  -0.395   0.0338   0.8666   0.4708
+ F75  CA2  C  C     0   0.137   0.9873  -0.0425   0.0880
+ F75  C    C  C     0   0.361   2.4547   0.1815   0.3856
+ F75  O    O  O     0  -0.598   3.2302  -0.7088  -0.0140
+ F75  C5   C  C1    0  -0.534   0.4947  -1.1281  -0.5696
+ F75  S1   S  S2    0   0.205  -1.2087  -1.0190  -0.7184
+ F75  H    H  HNH2  0   0.365  -4.3838   0.9741  -0.0512
+ F75  H4   H  HCH2  0   0.238  -2.2312   2.2935   0.3771
+ F75  H5   H  HCH2  0   0.263  -2.7052   1.0004   1.4606
+ F75  H7   H  H     0   0.290   1.0450  -1.9625  -0.9732
 
 loop_
 _chem_comp_bond.comp_id
@@ -75,7 +76,6 @@ _chem_comp_bond.value_dist_neutron
  F75  CA1  H4   single    0.970  0.020  1.090
  F75  CA1  H5   single    0.970  0.020  1.090
  F75  C5   H7   single    0.930  0.020  1.080
- F75  C    OXT  deloc     1.243  0.020  1.243
 
 loop_
 _chem_comp_angle.comp_id
@@ -98,8 +98,6 @@ _chem_comp_angle.value_angle_esd
  F75  C5   CA2  C    124.30  3.000
  F75  C    CA2  N2   121.38  3.000
  F75  C5   CA2  N2   114.31  3.000
- F75  OXT  C    O    127.69  3.000
- F75  OXT  C    CA2  116.56  3.000
  F75  O    C    CA2  115.75  3.000
  F75  H7   C5   S1   121.62  3.000
  F75  H7   C5   CA2  127.83  3.000
@@ -125,10 +123,10 @@ _chem_comp_tor.period
  F75  CONST_07  CA2  N2   C2   CA1   180.00   0.0  0
  F75  CONST_08  C    CA2  N2   C2    180.00   0.0  0
  F75  CONST_09  S1   C5   CA2  C     180.00   0.0  0
- F75  CONST_10  H7   C5   S1   C2    180.00   0.0  0
  F75  Var_01    S1   C2   CA1  N     -19.37  30.0  2
- F75  Var_02    O    C    CA2  N2   -179.74  30.0  2
- F75  Var_03    H    N    CA1  C2    160.66  30.0  3
+ F75  Var_02    H7   C5   S1   C2    180.00  10.0  1
+ F75  Var_03    O    C    CA2  N2   -179.74  30.0  2
+ F75  Var_04    H    N    CA1  C2    160.66  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -146,5 +144,4 @@ _chem_comp_plane_atom.dist_esd
  F75  plan-2  CA2  0.020
  F75  plan-2  C    0.020
  F75  plan-2  O    0.020
- F75  plan-2  OXT  0.020
 

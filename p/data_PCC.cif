@@ -20,11 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PCC  PCC  '5-oxo-L-proline          '  L-peptide  15  9  .  2022-03-23  2023-10-30
+ PCC  PCC  '5-oxo-L-proline          '  L-peptide  14  8  .  2022-03-23  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_PCC
@@ -38,21 +39,20 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- PCC  N    N  NH1    0  -0.597  -0.7141   0.4159  -0.9796
- PCC  CA   C  CH1    0  -0.211   0.4875  -0.3677  -0.7962
- PCC  CB   C  CH2    0  -0.464  -0.0692  -1.5935  -0.0487
- PCC  CG   C  CH2    0  -0.583  -1.2195  -1.0079   0.7645
- PCC  CD   C  C      0   0.508  -1.6483   0.2063  -0.0358
- PCC  C    C  C      0   0.410   1.5594   0.3435   0.0609
- PCC  O    O  O      0  -0.595   1.1807   1.2866   0.7774
- PCC  OE1  O  O      0  -0.507  -2.6578   0.8722   0.1401
- PCC  OXT  O  OC    -1  -0.617   2.7057  -0.1398  -0.0188
- PCC  H    H  HNH1   0   0.384  -0.6966   1.2825  -1.4956
- PCC  HA   H  HCH1   0   0.245   0.9118  -0.6515  -1.7612
- PCC  HB2  H  HCH2   0   0.248  -0.4508  -2.3216  -0.7669
- PCC  HB3  H  HCH2   0   0.249   0.6875  -2.0910   0.5554
- PCC  HG2  H  HCH2   0   0.264  -2.0521  -1.6937   0.9192
- PCC  HG3  H  HCH2   0   0.267  -0.8905  -0.6645   1.7485
+ PCC  N    N  NH1   0  -0.597  -0.7141   0.4159  -0.9796
+ PCC  CA   C  CH1   0  -0.211   0.4875  -0.3677  -0.7962
+ PCC  CB   C  CH2   0  -0.464  -0.0692  -1.5935  -0.0487
+ PCC  CG   C  CH2   0  -0.583  -1.2195  -1.0079   0.7645
+ PCC  CD   C  C     0   0.508  -1.6483   0.2063  -0.0358
+ PCC  C    C  C     0   0.410   1.5594   0.3435   0.0609
+ PCC  O    O  O     0  -0.595   1.1807   1.2866   0.7774
+ PCC  OE1  O  O     0  -0.507  -2.6578   0.8722   0.1401
+ PCC  H    H  HNH1  0   0.384  -0.6966   1.2825  -1.4956
+ PCC  HA   H  HCH1  0   0.245   0.9118  -0.6515  -1.7612
+ PCC  HB2  H  HCH2  0   0.248  -0.4508  -2.3216  -0.7669
+ PCC  HB3  H  HCH2  0   0.249   0.6875  -2.0910   0.5554
+ PCC  HG2  H  HCH2  0   0.264  -2.0521  -1.6937   0.9192
+ PCC  HG3  H  HCH2  0   0.267  -0.8905  -0.6645   1.7485
 
 loop_
 _chem_comp_bond.comp_id
@@ -76,7 +76,6 @@ _chem_comp_bond.value_dist_neutron
  PCC  CG  HG3  single  0.970  0.020  1.090
  PCC  CD  OE1  double  1.222  0.020  1.222
  PCC  C   O    deloc   1.231  0.020  1.231
- PCC  C   OXT  deloc   1.247  0.020  1.247
 
 loop_
 _chem_comp_angle.comp_id
@@ -109,8 +108,6 @@ _chem_comp_angle.value_angle_esd
  PCC  OE1  CD  CG   126.44  3.000
  PCC  OE1  CD  N    126.16  3.000
  PCC  CG   CD  N    103.20  1.500
- PCC  OXT  C   O    127.66  3.000
- PCC  OXT  C   CA   115.08  3.000
  PCC  O    C   CA   119.00  3.000
 
 loop_
@@ -125,12 +122,12 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  PCC  CONST_01  CG   CD  N   CA     0.00   0.0  0
  PCC  CONST_02  OE1  CD  N   CA   180.00   0.0  0
- PCC  CONST_03  H    N   CD  CG   180.00   0.0  0
- PCC  Var_01    CB   CG  CD  N    -10.91  30.0  1
- PCC  Var_02    CD   CG  CB  CA    26.63  30.0  1
- PCC  Var_03    HB2  CB  CA  N     85.18  30.0  1
- PCC  Var_04    HB3  CB  CA  N   -155.01  30.0  1
- PCC  Var_05    HA   CA  CB  CG  -149.49  30.0  1
+ PCC  Var_01    H    N   CD  CG   180.00  10.0  1
+ PCC  Var_02    CB   CG  CD  N    -10.91  30.0  1
+ PCC  Var_03    CD   CG  CB  CA    26.63  30.0  1
+ PCC  Var_04    HB2  CB  CA  N     85.18  30.0  1
+ PCC  Var_05    HB3  CB  CA  N   -155.01  30.0  1
+ PCC  Var_06    HA   CA  CB  CG  -149.49  30.0  1
 
 loop_
 _chem_comp_chir.comp_id
@@ -156,5 +153,4 @@ _chem_comp_plane_atom.dist_esd
  PCC  plan-2  CA   0.020
  PCC  plan-2  C    0.020
  PCC  plan-2  O    0.020
- PCC  plan-2  OXT  0.020
 

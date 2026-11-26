@@ -20,11 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PE1  PE1  N~2~-({3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methyl)-L-lysine  L-peptide  46  25  .  2012-08-28  2023-10-30
+ PE1  PE1  N~2~-({3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methyl)-L-lysine  L-peptide  45  24  .  2012-08-28  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_PE1
@@ -56,7 +57,6 @@ _chem_comp_atom.z
  PE1  N     N  NH1    0  -0.585   0.5925  60.3052  -10.0212
  PE1  CA    C  CH1    0  -0.196  -0.7511  59.7980  -10.2295
  PE1  C     C  C      0   0.398  -1.5067  59.7031   -8.8802
- PE1  OXT   O  OC     0  -0.600  -0.8274  59.7281   -7.8344
  PE1  CB    C  CH2    0  -0.454  -0.8381  58.4500  -10.9653
  PE1  CG    C  CH2    0  -0.445  -0.1314  57.2958  -10.2632
  PE1  CD    C  CH2    0  -0.425  -0.2166  55.9754  -11.0225
@@ -112,7 +112,6 @@ _chem_comp_bond.value_dist_neutron
  PE1  N    CA    single    1.458  0.019  1.458
  PE1  CA   C     single    1.525  0.021  1.525
  PE1  CA   CB    single    1.530  0.020  1.530
- PE1  C    OXT   deloc     1.247  0.020  1.247
  PE1  C    O     deloc     1.231  0.020  1.231
  PE1  CB   CG    single    1.525  0.020  1.525
  PE1  CG   CD    single    1.526  0.020  1.526
@@ -198,9 +197,7 @@ _chem_comp_angle.value_angle_esd
  PE1  HA    CA   N     110.00  3.000
  PE1  CB    CA   N     110.50  1.700
  PE1  C     CA   N     111.00  2.800
- PE1  O     C    OXT   126.84  3.000
  PE1  O     C    CA    120.80  1.700
- PE1  OXT   C    CA    117.61  3.000
  PE1  HB2C  CB   HB1C  105.49  3.000
  PE1  HB2C  CB   CG    109.84  3.000
  PE1  HB1C  CB   CG    109.41  3.000
@@ -253,20 +250,20 @@ _chem_comp_tor.period
  PE1  CONST_12  C5A   C5   C4   C3    180.00   0.0  0
  PE1  CONST_13  C5    C4   C3   O3    180.00   0.0  0
  PE1  CONST_14  C6    C5   C4   C4A   180.00   0.0  0
- PE1  CONST_15  H6    C6   N1   C2    180.00   0.0  0
  PE1  Var_01    N     C4A  C4   C3     92.58  30.0  2
- PE1  Var_02    O4P   C5A  C5   C4    177.47  30.0  2
- PE1  Var_03    H2A1  C2A  C2   N1     -0.49  30.0  2
- PE1  Var_04    CA    N    C4A  C4    167.64  30.0  3
- PE1  Var_05    O1P   P    O4P  C5A    62.10  30.0  3
- PE1  Var_06    CD    CG   CB   CA   -179.22  30.0  3
- PE1  Var_07    CE    CD   CG   CB     65.25  30.0  3
- PE1  Var_08    NZ    CE   CD   CG    175.77  30.0  3
- PE1  Var_09    HZ1N  NZ   CE   CD    178.02  30.0  3
- PE1  Var_10    H3    O3   C3   C2   -177.93  30.0  2
- PE1  Var_11    HA    CA   N    C4A   -70.76  30.0  3
- PE1  Var_12    HB1C  CB   CA   N    -177.49  30.0  3
- PE1  Var_13    HB2C  CB   CA   N     -63.33  30.0  3
+ PE1  Var_02    H6    C6   N1   C2    180.00  10.0  1
+ PE1  Var_03    O4P   C5A  C5   C4    177.47  30.0  2
+ PE1  Var_04    H2A1  C2A  C2   N1     -0.49  30.0  2
+ PE1  Var_05    CA    N    C4A  C4    167.64  30.0  3
+ PE1  Var_06    O1P   P    O4P  C5A    62.10  30.0  3
+ PE1  Var_07    CD    CG   CB   CA   -179.22  30.0  3
+ PE1  Var_08    CE    CD   CG   CB     65.25  30.0  3
+ PE1  Var_09    NZ    CE   CD   CG    175.77  30.0  3
+ PE1  Var_10    HZ1N  NZ   CE   CD    178.02  30.0  3
+ PE1  Var_11    H3    O3   C3   C2   -177.93  30.0  2
+ PE1  Var_12    HA    CA   N    C4A   -70.76  30.0  3
+ PE1  Var_13    HB1C  CB   CA   N    -177.49  30.0  3
+ PE1  Var_14    HB2C  CB   CA   N     -63.33  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -296,6 +293,5 @@ _chem_comp_plane_atom.dist_esd
  PE1  plan-1  H6   0.020
  PE1  plan-2  CA   0.020
  PE1  plan-2  C    0.020
- PE1  plan-2  OXT  0.020
  PE1  plan-2  O    0.020
 

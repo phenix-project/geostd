@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 1JM  1JM  "4-carboxy-N-methyl-D-phenylalanine"  D-peptide  27  16  .  2026-06-07  2026-06-07
+ 1JM  1JM  4-carboxy-N-methyl-D-phenylalanine  D-peptide  26  15  .  2026-06-07  2026-06-07
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_1JM
@@ -41,7 +43,6 @@ _chem_comp_atom.z
  1JM  N    N  NH1    0  -0.591  -1.9996   1.4195   0.3323
  1JM  CA   C  CH1    0  -0.155  -2.3113   0.0084   0.2342
  1JM  C    C  C      0   0.392  -3.8032  -0.2728  -0.0909
- 1JM  OXT  O  OC    -1  -0.612  -4.2202  -1.3914   0.2733
  1JM  CB   C  CH2    0  -0.514  -1.4651  -0.6364  -0.8756
  1JM  CG   C  C      0   0.097   0.0142  -0.4989  -0.6466
  1JM  CD1  C  C1     0  -0.289   0.6527  -1.2231   0.3607
@@ -81,7 +82,6 @@ _chem_comp_bond.value_dist_neutron
  1JM  CAL  OAB  deloc     1.247  0.020  1.247
  1JM  CZ   CE1  aromatic  1.395  0.020  1.395
  1JM  C    CA   single    1.525  0.021  1.525
- 1JM  C    OXT  deloc     1.248  0.020  1.248
  1JM  CA   N    single    1.458  0.019  1.458
  1JM  CA   CB   single    1.521  0.033  1.521
  1JM  CG   CB   single    1.503  0.020  1.503
@@ -123,9 +123,7 @@ _chem_comp_angle.value_angle_esd
  1JM  HA   CA   N    110.00  3.000
  1JM  CB   CA   N    110.40  1.500
  1JM  C    CA   N    111.00  2.800
- 1JM  O    C    OXT  127.01  3.000
  1JM  O    C    CA   120.80  1.700
- 1JM  OXT  C    CA   120.80  1.700
  1JM  H11  CB   H10  107.20  3.000
  1JM  H11  CB   CG   109.65  3.000
  1JM  H10  CB   CG   109.76  3.000
@@ -174,31 +172,29 @@ _chem_comp_tor.period
  1JM  CONST_08  CE1  CD1  CG   CB    180.00   0.0  0
  1JM  CONST_09  CAL  CZ   CE1  CD1   180.00   0.0  0
  1JM  CONST_10  CD2  CE2  CZ   CAL   180.00   0.0  0
- 1JM  CONST_11  H15  CE2  CD2  CG    180.00   0.0  0
- 1JM  CONST_12  H13  CE1  CD1  CG    180.00   0.0  0
- 1JM  CONST_13  H16  CD2  CG   CD1   180.00   0.0  0
- 1JM  CONST_14  H12  CD1  CE1  CZ    180.00   0.0  0
  1JM  Var_01    CD2  CG   CB   CA   -107.08  30.0  2
- 1JM  Var_02    CD1  CG   CB   CA     71.28  30.0  2
- 1JM  Var_03    OAD  CAL  CZ   CE1    -2.49  30.0  3
- 1JM  Var_04    OAB  CAL  CZ   CE1   177.63  30.0  3
- 1JM  Var_05    CE2  CZ   CAL  OAB    -2.49  30.0  2
- 1JM  Var_06    CE2  CZ   CAL  OAD   177.39  30.0  2
- 1JM  Var_07    H10  CB   CG   CD1   -49.44  30.0  2
- 1JM  Var_08    H11  CB   CG   CD1  -166.95  30.0  2
- 1JM  Var_09    CG   CB   CA   N      59.07  30.0  3
- 1JM  Var_10    CG   CB   CA   C    -177.07  30.0  3
- 1JM  Var_11    HA   CA   CB   CG    -62.01  30.0  1
- 1JM  Var_12    C    CA   N    CAA    69.65  30.0  1
- 1JM  Var_13    CB   CA   N    CAA  -169.97  30.0  1
- 1JM  Var_14    OXT  C    CA   N    -155.59  30.0  2
- 1JM  Var_15    O    C    CA   N      27.14  30.0  2
- 1JM  Var_16    CB   CA   C    OXT    82.77  30.0  3
- 1JM  Var_17    O    C    CA   CB    -94.50  30.0  2
- 1JM  Var_18    H1   CAA  N    CA    -68.46  30.0  3
- 1JM  Var_19    H4   CAA  N    CA     52.54  30.0  3
- 1JM  Var_20    H3   CAA  N    CA    173.32  30.0  3
- 1JM  Var_21    H    N    CA   C    -170.54  30.0  3
+ 1JM  Var_02    H15  CE2  CD2  CG    180.00  10.0  1
+ 1JM  Var_03    H13  CE1  CD1  CG    180.00  10.0  1
+ 1JM  Var_04    H16  CD2  CG   CD1   180.00  10.0  1
+ 1JM  Var_05    H12  CD1  CE1  CZ    180.00  10.0  1
+ 1JM  Var_06    CD1  CG   CB   CA     71.28  30.0  2
+ 1JM  Var_07    OAD  CAL  CZ   CE1    -2.49  30.0  3
+ 1JM  Var_08    OAB  CAL  CZ   CE1   177.63  30.0  3
+ 1JM  Var_09    CE2  CZ   CAL  OAB    -2.49  30.0  2
+ 1JM  Var_10    CE2  CZ   CAL  OAD   177.39  30.0  2
+ 1JM  Var_11    H10  CB   CG   CD1   -49.44  30.0  2
+ 1JM  Var_12    H11  CB   CG   CD1  -166.95  30.0  2
+ 1JM  Var_13    CG   CB   CA   N      59.07  30.0  3
+ 1JM  Var_14    CG   CB   CA   C    -177.07  30.0  3
+ 1JM  Var_15    HA   CA   CB   CG    -62.01  30.0  1
+ 1JM  Var_16    C    CA   N    CAA    69.65  30.0  1
+ 1JM  Var_17    CB   CA   N    CAA  -169.97  30.0  1
+ 1JM  Var_18    O    C    CA   N      27.14  30.0  2
+ 1JM  Var_19    O    C    CA   CB    -94.50  30.0  2
+ 1JM  Var_20    H1   CAA  N    CA    -68.46  30.0  3
+ 1JM  Var_21    H4   CAA  N    CA     52.54  30.0  3
+ 1JM  Var_22    H3   CAA  N    CA    173.32  30.0  3
+ 1JM  Var_23    H    N    CA   C    -170.54  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -229,7 +225,6 @@ _chem_comp_plane_atom.dist_esd
  1JM  plan-1  H16  0.020
  1JM  plan-2  CA   0.020
  1JM  plan-2  C    0.020
- 1JM  plan-2  OXT  0.020
  1JM  plan-2  O    0.020
  1JM  plan-3  CZ   0.020
  1JM  plan-3  CAL  0.020

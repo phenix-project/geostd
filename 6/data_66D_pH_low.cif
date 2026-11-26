@@ -20,13 +20,14 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 66D  66D  (4R)-2,4-dimethyl-L-norleucine  L-peptide  28  11  .  2022-03-10  2024-04-10
+ 66D  66D  (4R)-2,4-dimethyl-L-norleucine  L-peptide  25  10  .  2022-03-10  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
 Added dihedrals for adding hydrogens : 2023-10-30
 Removed H2 atom : 2024-04-10
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_66D
@@ -50,7 +51,6 @@ _chem_comp_atom.z
  66D  CB2  C  CH3   0  -0.657  -0.7068  -0.5265   1.8061
  66D  C    C  C     0   0.546  -2.2168   0.3477   0.0611
  66D  O    O  O     0  -0.452  -2.6079   1.3192   0.6631
- 66D  OXT  O  OH1   0  -0.584  -2.9371  -0.2419  -0.8836
  66D  H    H  HNH2  0   0.348  -1.4257  -2.2321  -0.0980
  66D  H4   H  HCH2  0   0.228   0.1175   0.7406  -1.3247
  66D  H5   H  HCH2  0   0.237  -0.1134   1.6922   0.1222
@@ -66,7 +66,6 @@ _chem_comp_atom.z
  66D  H15  H  HCH3  0   0.235  -0.7622   0.4106   2.3574
  66D  H16  H  HCH3  0   0.240  -1.4938  -1.1846   2.1807
  66D  H17  H  HCH3  0   0.244   0.2487  -0.9980   2.0290
- 66D  HXT  H  HOH1  0   0.479  -3.7779   0.2282  -0.9914
 
 loop_
 _chem_comp_bond.comp_id
@@ -85,7 +84,6 @@ _chem_comp_bond.value_dist_neutron
  66D  C    CA   single  1.525  0.021  1.525
  66D  CA   CB   single  1.540  0.027  1.540
  66D  CA   N    single  1.458  0.019  1.458
- 66D  C    OXT  single  1.326  0.020  1.326
  66D  N    H    single  0.890  0.020  1.040
  66D  CB   H4   single  0.970  0.020  1.090
  66D  CB   H5   single  0.970  0.020  1.090
@@ -101,7 +99,6 @@ _chem_comp_bond.value_dist_neutron
  66D  CB2  H15  single  0.970  0.020  1.090
  66D  CB2  H16  single  0.970  0.020  1.090
  66D  CB2  H17  single  0.970  0.020  1.090
- 66D  OXT  HXT  single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -153,10 +150,7 @@ _chem_comp_angle.value_angle_esd
  66D  H17  CB2  CA   109.97  3.000
  66D  H16  CB2  CA   110.93  3.000
  66D  H15  CB2  CA   112.01  3.000
- 66D  OXT  C    O    122.46  3.000
- 66D  OXT  C    CA   113.71  3.000
  66D  O    C    CA   120.80  1.700
- 66D  HXT  OXT  C    109.56  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -168,20 +162,19 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 66D  CONST_01  HXT  OXT  C   CA   180.00   0.0  0
- 66D  Var_01    H12  CE   CD  CC   -66.38  30.0  3
- 66D  Var_02    H15  CB2  CA  N    176.88  30.0  3
- 66D  Var_03    H16  CB2  CA  N    -62.41  30.0  3
- 66D  Var_04    H17  CB2  CA  N     56.41  30.0  3
- 66D  Var_05    H4   CB   CA  N     53.39  30.0  3
- 66D  Var_06    H5   CB   CA  N    167.25  30.0  3
- 66D  Var_07    H6   CC   CB  CA   -53.83  30.0  3
- 66D  Var_08    H10  CD   CC  CB   -55.76  30.0  1
- 66D  Var_09    H11  CD   CC  CB    59.17  30.0  1
- 66D  Var_10    H7   CD2  CC  CB    56.08  30.0  3
- 66D  Var_11    H8   CD2  CC  CB   176.26  30.0  3
- 66D  Var_12    H9   CD2  CC  CB   -63.66  30.0  3
- 66D  Var_13    H    N    CA  CB  -173.74  30.0  3
+ 66D  Var_01  H12  CE   CD  CC   -66.38  30.0  3
+ 66D  Var_02  H15  CB2  CA  N    176.88  30.0  3
+ 66D  Var_03  H16  CB2  CA  N    -62.41  30.0  3
+ 66D  Var_04  H17  CB2  CA  N     56.41  30.0  3
+ 66D  Var_05  H4   CB   CA  N     53.39  30.0  3
+ 66D  Var_06  H5   CB   CA  N    167.25  30.0  3
+ 66D  Var_07  H6   CC   CB  CA   -53.83  30.0  3
+ 66D  Var_08  H10  CD   CC  CB   -55.76  30.0  1
+ 66D  Var_09  H11  CD   CC  CB    59.17  30.0  1
+ 66D  Var_10  H7   CD2  CC  CB    56.08  30.0  3
+ 66D  Var_11  H8   CD2  CC  CB   176.26  30.0  3
+ 66D  Var_12  H9   CD2  CC  CB   -63.66  30.0  3
+ 66D  Var_13  H    N    CA  CB  -173.74  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -199,9 +192,7 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- 66D  plan-1  CA   0.020
- 66D  plan-1  C    0.020
- 66D  plan-1  O    0.020
- 66D  plan-1  OXT  0.020
- 66D  plan-1  HXT  0.020
+ 66D  plan-1  CA  0.020
+ 66D  plan-1  C   0.020
+ 66D  plan-1  O   0.020
 

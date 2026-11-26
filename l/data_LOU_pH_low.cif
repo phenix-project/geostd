@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LOU  LOU  3-[(3aR,4S,7S,7aS)-2-(carboxymethyl)-1,3-dioxooctahydro-4H-4,7-epoxyisoindol-4-yl]-L-alanine  L-peptide  38  22  .  2022-03-22  2023-10-30
+ LOU  LOU  3-[(3aR,4S,7S,7aS)-2-(carboxymethyl)-1,3-dioxooctahydro-4H-4,7-epoxyisoindol-4-yl]-L-alanine  L-peptide  36  21  .  2022-03-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_LOU
@@ -74,8 +75,6 @@ _chem_comp_atom.z
  LOU  O31  O  OH1   0  -0.585  -5.1176   2.0239  -0.1206
  LOU  H31  H  HOH1  0   0.489  -5.5613   2.4922  -0.8441
  LOU  H2   H  HNH2  0   0.347   3.7362  -1.1186  -1.3096
- LOU  OXT  O  OH1   0  -0.593   4.1289   2.3077   0.7257
- LOU  HXT  H  HOH1  0   0.483   4.9739   2.7061   0.9833
  LOU  H    H  HNH2  0   0.354   3.6521   0.1128  -2.3644
 
 loop_
@@ -124,8 +123,6 @@ _chem_comp_bond.value_dist_neutron
  LOU  C21  O31  single  1.321  0.020  1.321
  LOU  O31  H31  single  0.850  0.020  0.980
  LOU  N    H2   single  0.890  0.020  1.040
- LOU  C    OXT  single  1.328  0.020  1.328
- LOU  OXT  HXT  single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -204,11 +201,8 @@ _chem_comp_angle.value_angle_esd
  LOU  H49  C59  C55  113.69  3.000
  LOU  H48  C59  C55  109.07  3.000
  LOU  C58  C59  C55  102.18  3.000
- LOU  OXT  C    O    123.45  3.000
- LOU  OXT  C    CA   112.02  3.000
  LOU  O    C    CA   124.53  3.000
  LOU  H31  O31  C21  110.55  3.000
- LOU  HXT  OXT  C    110.28  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -224,24 +218,23 @@ _chem_comp_tor.period
  LOU  CONST_02  C28  C24  N23  C22   180.00   0.0  0
  LOU  CONST_03  C26  N23  C24  O25   180.00   0.0  0
  LOU  CONST_04  O25  C24  N23  C22     0.00   0.0  0
- LOU  CONST_05  H31  O31  C21  C22   180.00   0.0  0
- LOU  CONST_06  HXT  OXT  C    CA    180.00   0.0  0
- LOU  Var_01    C27  C26  N23  C24    -5.85  30.0  1
- LOU  Var_02    C57  C58  C59  C55    -1.40  30.0  3
- LOU  Var_03    C26  N23  C22  C21    88.04  30.0  3
- LOU  Var_04    O30  C21  C22  N23    -0.98  30.0  2
- LOU  Var_05    H21  C27  C26  N23   125.35  30.0  1
- LOU  Var_06    H22  C28  C24  N23  -124.70  30.0  1
- LOU  Var_07    H45  C57  C28  C24    93.95  30.0  1
- LOU  Var_08    H48  C59  C55  C27  -168.70  30.0  3
- LOU  Var_09    H49  C59  C55  C27   -50.29  30.0  3
- LOU  Var_10    H46  C58  C57  C28    50.38  30.0  3
- LOU  Var_11    H47  C58  C57  C28   170.19  30.0  3
- LOU  Var_12    HB1  CB   C55  C27  -161.86  30.0  1
- LOU  Var_13    HB2  CB   C55  C27    84.63  30.0  1
- LOU  Var_14    HA   CA   CB   C55    68.27  30.0  1
- LOU  Var_15    H    N    CA   CB   -175.31  30.0  3
- LOU  Var_16    H2   N    CA   CB    -57.24  30.0  3
+ LOU  Var_01    H31  O31  C21  C22   180.00  10.0  1
+ LOU  Var_02    C27  C26  N23  C24    -5.85  30.0  1
+ LOU  Var_03    C57  C58  C59  C55    -1.40  30.0  3
+ LOU  Var_04    C26  N23  C22  C21    88.04  30.0  3
+ LOU  Var_05    O30  C21  C22  N23    -0.98  30.0  2
+ LOU  Var_06    H21  C27  C26  N23   125.35  30.0  1
+ LOU  Var_07    H22  C28  C24  N23  -124.70  30.0  1
+ LOU  Var_08    H45  C57  C28  C24    93.95  30.0  1
+ LOU  Var_09    H48  C59  C55  C27  -168.70  30.0  3
+ LOU  Var_10    H49  C59  C55  C27   -50.29  30.0  3
+ LOU  Var_11    H46  C58  C57  C28    50.38  30.0  3
+ LOU  Var_12    H47  C58  C57  C28   170.19  30.0  3
+ LOU  Var_13    HB1  CB   C55  C27  -161.86  30.0  1
+ LOU  Var_14    HB2  CB   C55  C27    84.63  30.0  1
+ LOU  Var_15    HA   CA   CB   C55    68.27  30.0  1
+ LOU  Var_16    H    N    CA   CB   -175.31  30.0  3
+ LOU  Var_17    H2   N    CA   CB    -57.24  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -280,6 +273,4 @@ _chem_comp_plane_atom.dist_esd
  LOU  plan-4  CA   0.020
  LOU  plan-4  C    0.020
  LOU  plan-4  O    0.020
- LOU  plan-4  OXT  0.020
- LOU  plan-4  HXT  0.020
 

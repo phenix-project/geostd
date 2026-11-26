@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZJU  ZJU  "N-SUCCINYL-ASPARTIC ACID"  L-peptide  24  16  .  2024-05-28  2024-05-28
+ ZJU  ZJU  'N-SUCCINYL-ASPARTIC ACID'  L-peptide  23  15  .  2024-05-28  2024-05-28
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_ZJU
@@ -51,7 +53,6 @@ _chem_comp_atom.z
  ZJU  OD2  O  OC    -1  -0.617  -4.1594  -0.8659  -1.7343
  ZJU  OD1  O  O      0  -0.615  -4.4648  -2.3948  -0.1405
  ZJU  C    C  C      0   0.398  -2.0020   0.1370   1.0778
- ZJU  OXT  O  OC    -1  -0.607  -3.1260   0.6708   1.1619
  ZJU  O    O  O      0  -0.605  -1.2056  -0.0869   2.0081
  ZJU  H6   H  HCH2   0   0.215   2.6011   0.8109   1.5091
  ZJU  H3   H  HCH2   0   0.227   2.6459   2.1698   0.4201
@@ -83,7 +84,6 @@ _chem_comp_bond.value_dist_neutron
  ZJU  CG  OD2  deloc   1.248  0.020  1.248
  ZJU  CG  OD1  deloc   1.247  0.020  1.247
  ZJU  CA  C    single  1.525  0.021  1.525
- ZJU  C   OXT  deloc   1.247  0.020  1.247
  ZJU  C   O    deloc   1.231  0.020  1.231
  ZJU  C2  H6   single  0.970  0.020  1.090
  ZJU  C2  H3   single  0.970  0.020  1.090
@@ -137,9 +137,7 @@ _chem_comp_angle.value_angle_esd
  ZJU  OD1  CG  OD2  126.62  3.000
  ZJU  OD1  CG  CB   117.15  3.000
  ZJU  OD2  CG  CB   116.19  3.000
- ZJU  O    C   OXT  127.10  3.000
  ZJU  O    C   CA   120.80  1.700
- ZJU  OXT  C   CA   115.63  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -153,29 +151,27 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  ZJU  CONST_01  CA   N   C4  C3   180.00   0.0  0
  ZJU  CONST_02  CA   N   C4  O3     0.00   0.0  0
- ZJU  CONST_03  H    N   C4  C3     0.00   0.0  0
- ZJU  Var_01    C3   C2  C1  O1    21.85  30.0  3
- ZJU  Var_02    C4   C3  C2  C1  -172.28  30.0  3
- ZJU  Var_03    C3   C2  C1  O2  -159.84  30.0  3
- ZJU  Var_04    O3   C4  C3  C2    50.49  30.0  3
- ZJU  Var_05    N    C4  C3  C2  -131.74  30.0  3
- ZJU  Var_06    CB   CA  N   C4   169.95  30.0  3
- ZJU  Var_07    C    CA  N   C4   -67.92  30.0  3
- ZJU  Var_08    CG   CB  CA  N   -165.58  30.0  3
- ZJU  Var_09    OXT  C   CA  N    157.25  30.0  3
+ ZJU  Var_01    H    N   C4  C3     0.00  10.0  1
+ ZJU  Var_02    C3   C2  C1  O1    21.85  30.0  3
+ ZJU  Var_03    C4   C3  C2  C1  -172.28  30.0  3
+ ZJU  Var_04    C3   C2  C1  O2  -159.84  30.0  3
+ ZJU  Var_05    O3   C4  C3  C2    50.49  30.0  3
+ ZJU  Var_06    N    C4  C3  C2  -131.74  30.0  3
+ ZJU  Var_07    CB   CA  N   C4   169.95  30.0  3
+ ZJU  Var_08    C    CA  N   C4   -67.92  30.0  3
+ ZJU  Var_09    CG   CB  CA  N   -165.58  30.0  3
  ZJU  Var_10    O    C   CA  N    -25.20  30.0  3
  ZJU  Var_11    OD2  CG  CB  CA    55.79  30.0  3
  ZJU  Var_12    OD1  CG  CB  CA  -126.28  30.0  3
- ZJU  Var_13    OXT  C   CA  CB   -81.10  30.0  3
- ZJU  Var_14    O    C   CA  CB    96.45  30.0  3
- ZJU  Var_15    C    CA  CB  CG    70.72  30.0  1
- ZJU  Var_16    H6   C2  C1  O1   146.18  30.0  3
- ZJU  Var_17    H3   C2  C1  O1   -99.82  30.0  3
- ZJU  Var_18    H4   C3  C2  C1   -52.90  30.0  3
- ZJU  Var_19    H5   C3  C2  C1    63.47  30.0  3
- ZJU  Var_20    HA   CA  N   C4    52.79  30.0  3
- ZJU  Var_21    HB2  CB  CA  N    -45.97  30.0  3
- ZJU  Var_22    HB3  CB  CA  N     69.86  30.0  3
+ ZJU  Var_13    O    C   CA  CB    96.45  30.0  3
+ ZJU  Var_14    C    CA  CB  CG    70.72  30.0  1
+ ZJU  Var_15    H6   C2  C1  O1   146.18  30.0  3
+ ZJU  Var_16    H3   C2  C1  O1   -99.82  30.0  3
+ ZJU  Var_17    H4   C3  C2  C1   -52.90  30.0  3
+ ZJU  Var_18    H5   C3  C2  C1    63.47  30.0  3
+ ZJU  Var_19    HA   CA  N   C4    52.79  30.0  3
+ ZJU  Var_20    HB2  CB  CA  N    -45.97  30.0  3
+ ZJU  Var_21    HB3  CB  CA  N     69.86  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -208,6 +204,5 @@ _chem_comp_plane_atom.dist_esd
  ZJU  plan-3  OD1  0.020
  ZJU  plan-4  CA   0.020
  ZJU  plan-4  C    0.020
- ZJU  plan-4  OXT  0.020
  ZJU  plan-4  O    0.020
 

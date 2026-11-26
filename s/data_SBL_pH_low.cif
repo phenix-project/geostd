@@ -21,10 +21,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SBL  SBL  "L-NAPHTHYL-1-ACETAMIDO BORONIC ACID ALANINE"  L-peptide  48  26  .  2016-05-13  2026-04-13
+ SBL  SBL  'L-NAPHTHYL-1-ACETAMIDO BORONIC ACID ALANINE'  L-peptide  46  25  .  2016-05-13  2026-04-13
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_SBL
@@ -44,7 +46,6 @@ _chem_comp_atom.z
  SBL  O3    O  OC2    0  -0.492  17.5385   2.8807  23.8127
  SBL  C     C  C      0   0.285  19.1653   3.0558  27.1288
  SBL  O     O  O      0  -0.402  19.6857   2.0111  27.4616
- SBL  OXT   O  OH1    0  -0.387  19.6320   4.2464  27.5342
  SBL  N13   N  NH1    0  -0.289  16.5479   2.1866  20.9335
  SBL  C12   C  CH1    0   0.019  15.9419   3.1628  21.8652
  SBL  C11   C  CH2    0  -0.203  14.7501   2.6178  22.6429
@@ -68,7 +69,6 @@ _chem_comp_atom.z
  SBL  HA    H  HCH1   0   0.081  17.4977   2.1518  26.2591
  SBL  HB2   H  HCH2   0   0.072  18.9511   4.2057  24.5727
  SBL  HB3   H  HCH2   0   0.091  19.3715   2.4866  24.6423
- SBL  HXT   H  HOH1   0   0.358  20.4107   4.0883  28.0955
  SBL  HN3   H  HNH1   0   0.235  17.0442   2.6133  20.1688
  SBL  H12   H  HCH1   0   0.069  15.5743   3.9601  21.2072
  SBL  H111  H  HCH2   0   0.093  15.0917   1.8343  23.3147
@@ -106,8 +106,6 @@ _chem_comp_bond.value_dist_neutron
  SBL  CB   HB3   single    0.970  0.020  1.090
  SBL  O3   B     single    1.480  0.020  1.480
  SBL  C    O     double    1.231  0.020  1.231
- SBL  C    OXT   single    1.342  0.020  1.342
- SBL  OXT  HXT   single    0.850  0.020  0.980
  SBL  N13  C12   single    1.479  0.020  1.479
  SBL  N13  C14   single    1.338  0.020  1.338
  SBL  N13  HN3   single    0.860  0.020  1.020
@@ -168,10 +166,7 @@ _chem_comp_angle.value_angle_esd
  SBL  HB2   CB   CA    108.06  3.000
  SBL  O3    CB   CA    110.14  3.000
  SBL  B     O3   CB    120.69  3.000
- SBL  OXT   C    O     122.13  3.000
- SBL  OXT   C    CA    114.75  3.000
  SBL  O     C    CA    120.80  1.700
- SBL  HXT   OXT  C     107.97  3.000
  SBL  HN3   N13  C14   115.26  3.000
  SBL  HN3   N13  C12   113.62  3.000
  SBL  C14   N13  C12   130.68  3.000
@@ -266,52 +261,49 @@ _chem_comp_tor.period
  SBL  CONST_19  C5    C10  C1   C11   180.00   0.0  0
  SBL  CONST_20  C9    C10  C1   C11     0.00   0.0  0
  SBL  CONST_21  C3    C2   C1   C11   180.00   0.0  0
- SBL  CONST_22  H9    C9   C10  C1      0.00   0.0  0
- SBL  CONST_23  H3    C3   C2   C1    180.00   0.0  0
- SBL  CONST_24  HC2   C2   C1   C10   180.00   0.0  0
- SBL  CONST_25  H4    C4   C5   C10   180.00   0.0  0
- SBL  CONST_26  H6    C6   C5   C10   180.00   0.0  0
- SBL  CONST_27  H8    C8   C9   C10   180.00   0.0  0
- SBL  CONST_28  H7    C7   C6   C5    180.00   0.0  0
- SBL  CONST_29  O15   C14  N13  C12     0.00   0.0  0
- SBL  CONST_30  C16   C14  N13  C12   180.00   0.0  0
- SBL  CONST_31  HN3   N13  C14  O15   180.00   0.0  0
- SBL  CONST_32  HXT   OXT  C    CA    180.00   0.0  0
+ SBL  CONST_22  O15   C14  N13  C12     0.00   0.0  0
+ SBL  CONST_23  C16   C14  N13  C12   180.00   0.0  0
  SBL  Var_01    C10   C1   C11  C12   170.84  30.0  2
  SBL  Var_02    C2    C1   C11  C12   -10.08  30.0  2
- SBL  Var_03    H111  C11  C1   C10    45.91  30.0  3
- SBL  Var_04    H112  C11  C1   C10   -68.80  30.0  3
- SBL  Var_05    C1    C11  C12  N13   -58.53  30.0  3
- SBL  Var_06    B     C12  C11  C1    171.99  30.0  2
- SBL  Var_07    H12   C12  C11  C1     56.07  30.0  2
- SBL  Var_08    O3    CB   CA   N     -71.97  30.0  3
- SBL  Var_09    O     C    CA   N     149.10  30.0  3
- SBL  Var_10    OXT   C    CA   N     -33.95  30.0  3
- SBL  Var_11    B     O3   CB   CA    116.81  30.0  3
- SBL  Var_12    O     C    CA   CB    -87.99  30.0  3
- SBL  Var_13    OXT   C    CA   CB     88.97  30.0  3
- SBL  Var_14    C12   B    O3   CB    177.50  30.0  3
- SBL  Var_15    O1    B    O3   CB     59.29  30.0  3
- SBL  Var_16    O2    B    O3   CB    -62.45  30.0  3
- SBL  Var_17    C     CA   CB   O3    162.97  30.0  1
- SBL  Var_18    N13   C12  B    O3    -72.01  30.0  2
- SBL  Var_19    C11   C12  B    O3     58.46  30.0  2
- SBL  Var_20    O1    B    C12  N13    50.19  30.0  3
- SBL  Var_21    O2    B    C12  N13   170.40  30.0  3
- SBL  Var_22    C14   N13  C12  C11   -32.47  30.0  2
- SBL  Var_23    O1    B    C12  C11  -179.34  30.0  3
- SBL  Var_24    O2    B    C12  C11   -59.13  30.0  3
- SBL  Var_25    C14   N13  C12  B      97.61  30.0  2
- SBL  Var_26    HB2   CB   CA   N      51.27  30.0  3
- SBL  Var_27    HB3   CB   CA   N     167.65  30.0  3
- SBL  Var_28    H     N    CA   CB    150.15  30.0  3
- SBL  Var_29    H2    N    CA   CB     31.36  30.0  3
- SBL  Var_30    HA    CA   CB   O3     50.92  30.0  1
- SBL  Var_31    HO1   O1   B    O3    -74.01  30.0  3
- SBL  Var_32    HO2   O2   B    O3    171.34  30.0  3
- SBL  Var_33    H161  C16  C14  N13  -118.93  30.0  3
- SBL  Var_34    H162  C16  C14  N13     2.43  30.0  3
- SBL  Var_35    H163  C16  C14  N13   124.16  30.0  3
+ SBL  Var_03    H9    C9   C10  C1      0.00  10.0  1
+ SBL  Var_04    H3    C3   C2   C1    180.00  10.0  1
+ SBL  Var_05    HC2   C2   C1   C10   180.00  10.0  1
+ SBL  Var_06    H4    C4   C5   C10   180.00  10.0  1
+ SBL  Var_07    H6    C6   C5   C10   180.00  10.0  1
+ SBL  Var_08    H8    C8   C9   C10   180.00  10.0  1
+ SBL  Var_09    H7    C7   C6   C5    180.00  10.0  1
+ SBL  Var_10    H111  C11  C1   C10    45.91  30.0  3
+ SBL  Var_11    HN3   N13  C14  O15   180.00  10.0  1
+ SBL  Var_12    H112  C11  C1   C10   -68.80  30.0  3
+ SBL  Var_13    C1    C11  C12  N13   -58.53  30.0  3
+ SBL  Var_14    B     C12  C11  C1    171.99  30.0  2
+ SBL  Var_15    H12   C12  C11  C1     56.07  30.0  2
+ SBL  Var_16    O3    CB   CA   N     -71.97  30.0  3
+ SBL  Var_17    O     C    CA   N     149.10  30.0  3
+ SBL  Var_18    B     O3   CB   CA    116.81  30.0  3
+ SBL  Var_19    O     C    CA   CB    -87.99  30.0  3
+ SBL  Var_20    C12   B    O3   CB    177.50  30.0  3
+ SBL  Var_21    O1    B    O3   CB     59.29  30.0  3
+ SBL  Var_22    O2    B    O3   CB    -62.45  30.0  3
+ SBL  Var_23    C     CA   CB   O3    162.97  30.0  1
+ SBL  Var_24    N13   C12  B    O3    -72.01  30.0  2
+ SBL  Var_25    C11   C12  B    O3     58.46  30.0  2
+ SBL  Var_26    O1    B    C12  N13    50.19  30.0  3
+ SBL  Var_27    O2    B    C12  N13   170.40  30.0  3
+ SBL  Var_28    C14   N13  C12  C11   -32.47  30.0  2
+ SBL  Var_29    O1    B    C12  C11  -179.34  30.0  3
+ SBL  Var_30    O2    B    C12  C11   -59.13  30.0  3
+ SBL  Var_31    C14   N13  C12  B      97.61  30.0  2
+ SBL  Var_32    HB2   CB   CA   N      51.27  30.0  3
+ SBL  Var_33    HB3   CB   CA   N     167.65  30.0  3
+ SBL  Var_34    H     N    CA   CB    150.15  30.0  3
+ SBL  Var_35    H2    N    CA   CB     31.36  30.0  3
+ SBL  Var_36    HA    CA   CB   O3     50.92  30.0  1
+ SBL  Var_37    HO1   O1   B    O3    -74.01  30.0  3
+ SBL  Var_38    HO2   O2   B    O3    171.34  30.0  3
+ SBL  Var_39    H161  C16  C14  N13  -118.93  30.0  3
+ SBL  Var_40    H162  C16  C14  N13     2.43  30.0  3
+ SBL  Var_41    H163  C16  C14  N13   124.16  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -356,6 +348,4 @@ _chem_comp_plane_atom.dist_esd
  SBL  plan-3  CA   0.020
  SBL  plan-3  C    0.020
  SBL  plan-3  O    0.020
- SBL  plan-3  OXT  0.020
- SBL  plan-3  HXT  0.020
 

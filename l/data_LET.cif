@@ -20,10 +20,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LET  LET  "(Z)-N^6-{3-CARBOXY-1-[(4-CARBOXY-2-OXOBUTOXY)METHYL]PROPYLIDENE}-L-LYSINE"  L-peptide  49  26  .  2012-08-28  2026-04-01
+ LET  LET  (Z)-N^6-{3-CARBOXY-1-[(4-CARBOXY-2-OXOBUTOXY)METHYL]PROPYLIDENE}-L-LYSINE  L-peptide  48  25  .  2012-08-28  2026-04-01
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_LET
@@ -62,7 +63,6 @@ _chem_comp_atom.z
  LET  N     N  NH2    0  -0.806  -5.1534  -2.2269  -1.4848
  LET  C     C  C      0   0.406  -7.0701  -1.5989  -0.0350
  LET  O     O  O      0  -0.604  -7.1676  -0.6012  -0.7781
- LET  OXT   O  OC    -1  -0.610  -7.7317  -1.8235   0.9982
  LET  H101  H  HCH2   0   0.225   3.0316   5.2300   0.6792
  LET  H102  H  HCH2   0   0.227   2.1807   5.0183  -0.8204
  LET  H9C1  H  HCH2   0   0.257   3.0506   2.6405  -0.9691
@@ -142,7 +142,6 @@ _chem_comp_bond.value_dist_neutron
  LET  N    H     single  0.860  0.020  0.860
  LET  N    H2    single  0.890  0.020  1.040
  LET  C    O     deloc   1.231  0.020  1.231
- LET  C    OXT   deloc   1.247  0.020  1.247
 
 loop_
 _chem_comp_angle.comp_id
@@ -234,8 +233,6 @@ _chem_comp_angle.value_angle_esd
  LET  H2    N    H     107.06  3.000
  LET  H2    N    CA    109.66  3.000
  LET  H     N    CA    114.00  3.000
- LET  OXT   C    O     126.57  3.000
- LET  OXT   C    CA    116.13  3.000
  LET  O     C    CA    120.80  1.700
 
 loop_
@@ -273,32 +270,30 @@ _chem_comp_tor.period
  LET  Var_23  N     CA   CB   CG     62.89  30.0  3
  LET  Var_24  C     CA   CB   CG    -62.28  30.0  3
  LET  Var_25  O     C    CA   CB    139.88  30.0  3
- LET  Var_26  OXT   C    CA   CB    -42.65  30.0  3
- LET  Var_27  O     C    CA   N      15.26  30.0  3
- LET  Var_28  OXT   C    CA   N    -167.27  30.0  3
- LET  Var_29  H9C1  C9   C8   O7   -127.57  30.0  2
- LET  Var_30  H9C2  C9   C8   O7    120.59  30.0  2
- LET  Var_31  H7C1  C7   C8   O7    119.80  30.0  3
- LET  Var_32  H7C2  C7   C8   O7   -125.90  30.0  3
- LET  Var_33  H101  C10  C11  O4    -53.48  30.0  3
- LET  Var_34  H102  C10  C11  O4     59.67  30.0  3
- LET  Var_35  H5C1  C5   O6   C7    -64.74  30.0  3
- LET  Var_36  H5C2  C5   O6   C7     54.55  30.0  3
- LET  Var_37  H3C1  C3   C4   C5   -142.19  30.0  3
- LET  Var_38  H3C2  C3   C4   C5    -25.74  30.0  3
- LET  Var_39  H2C1  C2   C3   C4    -58.96  30.0  3
- LET  Var_40  H2C2  C2   C3   C4     56.32  30.0  3
- LET  Var_41  HEC1  CE   NZ   C4     53.67  30.0  3
- LET  Var_42  HEC2  CE   NZ   C4    -63.73  30.0  3
- LET  Var_43  HDC1  CD   CE   NZ    171.09  30.0  3
- LET  Var_44  HDC2  CD   CE   NZ     55.80  30.0  3
- LET  Var_45  HGC1  CG   CD   CE     54.09  30.0  3
- LET  Var_46  HGC2  CG   CD   CE    -61.75  30.0  3
- LET  Var_47  HBC1  CB   CG   CD     58.15  30.0  3
- LET  Var_48  HBC2  CB   CG   CD    -57.02  30.0  3
- LET  Var_49  HA    CA   CB   CG   -176.32  30.0  3
- LET  Var_50  H     N    CA   CB   -165.69  30.0  3
- LET  Var_51  H2    N    CA   CB     77.65  30.0  3
+ LET  Var_26  O     C    CA   N      15.26  30.0  3
+ LET  Var_27  H9C1  C9   C8   O7   -127.57  30.0  2
+ LET  Var_28  H9C2  C9   C8   O7    120.59  30.0  2
+ LET  Var_29  H7C1  C7   C8   O7    119.80  30.0  3
+ LET  Var_30  H7C2  C7   C8   O7   -125.90  30.0  3
+ LET  Var_31  H101  C10  C11  O4    -53.48  30.0  3
+ LET  Var_32  H102  C10  C11  O4     59.67  30.0  3
+ LET  Var_33  H5C1  C5   O6   C7    -64.74  30.0  3
+ LET  Var_34  H5C2  C5   O6   C7     54.55  30.0  3
+ LET  Var_35  H3C1  C3   C4   C5   -142.19  30.0  3
+ LET  Var_36  H3C2  C3   C4   C5    -25.74  30.0  3
+ LET  Var_37  H2C1  C2   C3   C4    -58.96  30.0  3
+ LET  Var_38  H2C2  C2   C3   C4     56.32  30.0  3
+ LET  Var_39  HEC1  CE   NZ   C4     53.67  30.0  3
+ LET  Var_40  HEC2  CE   NZ   C4    -63.73  30.0  3
+ LET  Var_41  HDC1  CD   CE   NZ    171.09  30.0  3
+ LET  Var_42  HDC2  CD   CE   NZ     55.80  30.0  3
+ LET  Var_43  HGC1  CG   CD   CE     54.09  30.0  3
+ LET  Var_44  HGC2  CG   CD   CE    -61.75  30.0  3
+ LET  Var_45  HBC1  CB   CG   CD     58.15  30.0  3
+ LET  Var_46  HBC2  CB   CG   CD    -57.02  30.0  3
+ LET  Var_47  HA    CA   CB   CG   -176.32  30.0  3
+ LET  Var_48  H     N    CA   CB   -165.69  30.0  3
+ LET  Var_49  H2    N    CA   CB     77.65  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -330,7 +325,6 @@ _chem_comp_plane_atom.dist_esd
  LET  plan-4  CA   0.020
  LET  plan-4  C    0.020
  LET  plan-4  O    0.020
- LET  plan-4  OXT  0.020
  LET  plan-5  C5   0.020
  LET  plan-5  C4   0.020
  LET  plan-5  C3   0.020

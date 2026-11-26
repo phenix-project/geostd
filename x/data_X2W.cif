@@ -20,11 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- X2W  X2W  'N-ACETYL-L-GLUTAMYL 5-PHOSPHATE'  L-peptide  26  17  .  2022-09-22  2023-10-30
+ X2W  X2W  'N-ACETYL-L-GLUTAMYL 5-PHOSPHATE'  L-peptide  25  16  .  2022-09-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_X2W
@@ -44,7 +45,6 @@ _chem_comp_atom.z
  X2W  C3    C  C      0   0.567  -1.4598   0.3474   0.0791
  X2W  C     C  C      0   0.412   3.4968   1.5069   0.0374
  X2W  O     O  O      0  -0.596   4.3861   1.2057   0.8503
- X2W  OXT   O  OC    -1  -0.617   3.3468   2.5966  -0.5513
  X2W  C1    C  C      0   0.520   3.6872  -1.6653  -0.1996
  X2W  O1    O  O      0  -0.523   4.2715  -1.4630  -1.2588
  X2W  P     P  P      0   1.225  -4.1184  -0.3703  -0.0301
@@ -78,7 +78,6 @@ _chem_comp_bond.value_dist_neutron
  X2W  CA  N1    single  1.444  0.020  1.444
  X2W  CB  CG    single  1.520  0.020  1.520
  X2W  C   O     deloc   1.231  0.020  1.231
- X2W  C   OXT   deloc   1.248  0.020  1.248
  X2W  C1  O1    double  1.226  0.020  1.226
  X2W  C1  N1    single  1.340  0.020  1.340
  X2W  C1  C2    single  1.510  0.020  1.510
@@ -127,8 +126,6 @@ _chem_comp_angle.value_angle_esd
  X2W  OE2   C3   O2    125.76  3.000
  X2W  OE2   C3   CG    111.77  3.000
  X2W  O2    C3   CG    122.47  3.000
- X2W  OXT   C    O     127.36  3.000
- X2W  OXT   C    CA    114.76  3.000
  X2W  O     C    CA    120.80  1.700
  X2W  C2    C1   N1    115.40  3.000
  X2W  C2    C1   O1    121.46  3.000
@@ -162,31 +159,31 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  X2W  CONST_01  O1    C1   N1   CA      0.00   0.0  0
  X2W  CONST_02  C2    C1   N1   CA    180.00   0.0  0
- X2W  CONST_03  H1    N1   C1   O1    180.00   0.0  0
- X2W  CONST_04  H1    N1   C1   C2      0.00   0.0  0
- X2W  Var_01    C3    CG   CB   CA   -179.91  30.0  3
- X2W  Var_02    O2    C3   CG   CB      0.87  30.0  2
- X2W  Var_03    OE2   C3   CG   CB   -179.05  30.0  2
- X2W  Var_04    P     OE2  C3   CG    179.28  30.0  3
- X2W  Var_05    O3P   P    OE2  C3    -60.94  30.0  2
- X2W  Var_06    O2P   P    OE2  C3   -179.76  30.0  2
- X2W  Var_07    O1P   P    OE2  C3     61.39  30.0  2
- X2W  Var_08    O2    C3   OE2  P      -0.64  30.0  2
- X2W  Var_09    HG1C  CG   CB   CA    -58.04  30.0  3
- X2W  Var_10    HG2C  CG   CB   CA     57.65  30.0  3
- X2W  Var_11    HB1C  CB   CG   C3     57.55  30.0  1
- X2W  Var_12    HB2C  CB   CG   C3    -59.48  30.0  1
- X2W  Var_13    H21C  C2   C1   O1     69.12  30.0  3
- X2W  Var_14    H22C  C2   C1   O1   -170.15  30.0  3
- X2W  Var_15    H23C  C2   C1   O1    -48.34  30.0  3
- X2W  Var_16    H21C  C2   C1   N1   -111.76  30.0  3
- X2W  Var_17    H22C  C2   C1   N1      8.97  30.0  3
- X2W  Var_18    H23C  C2   C1   N1    130.78  30.0  3
- X2W  Var_19    HG1C  CG   C3   O2   -121.83  30.0  3
- X2W  Var_20    HG2C  CG   C3   O2    124.89  30.0  3
- X2W  Var_21    HG1C  CG   C3   OE2    58.25  30.0  3
- X2W  Var_22    HG2C  CG   C3   OE2   -55.03  30.0  3
- X2W  Var_23    HA    CA   CB   CG     54.87  30.0  2
+ X2W  Var_01    H1    N1   C1   O1    180.00  10.0  1
+ X2W  Var_02    H1    N1   C1   C2      0.00  10.0  1
+ X2W  Var_03    C3    CG   CB   CA   -179.91  30.0  3
+ X2W  Var_04    O2    C3   CG   CB      0.87  30.0  2
+ X2W  Var_05    OE2   C3   CG   CB   -179.05  30.0  2
+ X2W  Var_06    P     OE2  C3   CG    179.28  30.0  3
+ X2W  Var_07    O3P   P    OE2  C3    -60.94  30.0  2
+ X2W  Var_08    O2P   P    OE2  C3   -179.76  30.0  2
+ X2W  Var_09    O1P   P    OE2  C3     61.39  30.0  2
+ X2W  Var_10    O2    C3   OE2  P      -0.64  30.0  2
+ X2W  Var_11    HG1C  CG   CB   CA    -58.04  30.0  3
+ X2W  Var_12    HG2C  CG   CB   CA     57.65  30.0  3
+ X2W  Var_13    HB1C  CB   CG   C3     57.55  30.0  1
+ X2W  Var_14    HB2C  CB   CG   C3    -59.48  30.0  1
+ X2W  Var_15    H21C  C2   C1   O1     69.12  30.0  3
+ X2W  Var_16    H22C  C2   C1   O1   -170.15  30.0  3
+ X2W  Var_17    H23C  C2   C1   O1    -48.34  30.0  3
+ X2W  Var_18    H21C  C2   C1   N1   -111.76  30.0  3
+ X2W  Var_19    H22C  C2   C1   N1      8.97  30.0  3
+ X2W  Var_20    H23C  C2   C1   N1    130.78  30.0  3
+ X2W  Var_21    HG1C  CG   C3   O2   -121.83  30.0  3
+ X2W  Var_22    HG2C  CG   C3   O2    124.89  30.0  3
+ X2W  Var_23    HG1C  CG   C3   OE2    58.25  30.0  3
+ X2W  Var_24    HG2C  CG   C3   OE2   -55.03  30.0  3
+ X2W  Var_25    HA    CA   CB   CG     54.87  30.0  2
 
 loop_
 _chem_comp_chir.comp_id
@@ -212,7 +209,6 @@ _chem_comp_plane_atom.dist_esd
  X2W  plan-2  CA   0.020
  X2W  plan-2  C    0.020
  X2W  plan-2  O    0.020
- X2W  plan-2  OXT  0.020
  X2W  plan-3  CG   0.020
  X2W  plan-3  C3   0.020
  X2W  plan-3  O2   0.020

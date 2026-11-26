@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- TSQ  TSQ  4-(trimethylsilyl)-L-phenylalanine  L-peptide  35  16  .  2022-09-22  2023-10-30
+ TSQ  TSQ  4-(trimethylsilyl)-L-phenylalanine  L-peptide  33  15  .  2022-09-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_TSQ
@@ -53,7 +54,6 @@ _chem_comp_atom.z
  TSQ  CD2  C   CR16  0  -0.281   5.1261  13.8613  35.6407
  TSQ  N    N   NH2   0  -0.794   4.3318  10.1885  36.1465
  TSQ  O    O   O     0  -0.433   6.4060   8.4823  36.5651
- TSQ  OXT  O   OH1   0  -0.595   7.9055   9.9737  35.8563
  TSQ  SI1  SI  SI    0   1.015   1.9447  16.5252  36.0084
  TSQ  H1   H   HCR6  0   0.245   4.3675  15.5508  34.5897
  TSQ  H4   H   HCH2  0   0.258   5.8844  11.4774  37.9381
@@ -73,7 +73,6 @@ _chem_comp_atom.z
  TSQ  H16  H   HCR6  0   0.246   5.9541  13.7337  34.9519
  TSQ  H    H   HNH2  0   0.358   3.6668  10.9202  35.9292
  TSQ  H18  H   HNH2  0   0.353   4.1374   9.4385  35.4953
- TSQ  HXT  H   HOH1  0   0.483   8.5343   9.2562  36.0259
 
 loop_
 _chem_comp_bond.comp_id
@@ -95,7 +94,6 @@ _chem_comp_bond.value_dist_neutron
  TSQ  SI1  C2   single    1.882  0.020  1.882
  TSQ  CZ   CE1  aromatic  1.395  0.020  1.395
  TSQ  O    C    double    1.231  0.020  1.231
- TSQ  C    OXT  single    1.328  0.020  1.328
  TSQ  CG   CB   single    1.503  0.020  1.503
  TSQ  CG   CD1  aromatic  1.391  0.020  1.391
  TSQ  CE1  CD1  aromatic  1.390  0.020  1.390
@@ -117,7 +115,6 @@ _chem_comp_bond.value_dist_neutron
  TSQ  CD2  H16  single    0.930  0.020  1.080
  TSQ  N    H    single    0.890  0.020  1.040
  TSQ  N    H18  single    0.890  0.020  1.040
- TSQ  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -141,8 +138,6 @@ _chem_comp_angle.value_angle_esd
  TSQ  HA   CA   CB   107.41  3.000
  TSQ  C    CA   CB   110.10  1.900
  TSQ  N    CA   CB   110.50  1.700
- TSQ  OXT  C    O    123.42  3.000
- TSQ  OXT  C    CA   111.50  3.000
  TSQ  O    C    CA   120.80  1.700
  TSQ  H7   C1   H6   107.56  3.000
  TSQ  H7   C1   H5   107.70  3.000
@@ -180,7 +175,6 @@ _chem_comp_angle.value_angle_esd
  TSQ  H18  N    H    105.75  3.000
  TSQ  H18  N    CA   110.22  3.000
  TSQ  H    N    CA   108.78  3.000
- TSQ  HXT  OXT  C    110.20  3.000
  TSQ  CZ   SI1  C3   108.68  3.000
  TSQ  CZ   SI1  C2   109.57  3.000
  TSQ  C3   SI1  C2   110.07  3.000
@@ -208,19 +202,18 @@ _chem_comp_tor.period
  TSQ  CONST_08  CE1  CD1  CG   CB   180.00   0.0  0
  TSQ  CONST_09  SI1  CZ   CE1  CD1  180.00   0.0  0
  TSQ  CONST_10  SI1  CZ   CE2  CD2  180.00   0.0  0
- TSQ  CONST_11  H14  CE1  CZ   CE2  180.00   0.0  0
- TSQ  CONST_12  H16  CD2  CE2  CZ   180.00   0.0  0
- TSQ  CONST_13  H15  CD1  CE1  CZ   180.00   0.0  0
- TSQ  CONST_14  H1   CE2  CZ   CE1  180.00   0.0  0
- TSQ  CONST_15  HXT  OXT  C    CA   180.00   0.0  0
  TSQ  Var_01    C1   SI1  CZ   CE2   57.65  30.0  2
- TSQ  Var_02    CD2  CG   CB   CA   -76.28  30.0  3
- TSQ  Var_03    H5   C1   SI1  CZ    60.86  30.0  3
- TSQ  Var_04    H11  C3   SI1  CZ   -61.81  30.0  3
- TSQ  Var_05    H8   C2   SI1  CZ    59.05  30.0  3
- TSQ  Var_06    HA   CA   CB   CG    64.25  30.0  1
- TSQ  Var_07    H    N    CA   CB    63.51  30.0  3
- TSQ  Var_08    H18  N    CA   CB   179.01  30.0  3
+ TSQ  Var_02    H14  CE1  CZ   CE2  180.00  10.0  1
+ TSQ  Var_03    H16  CD2  CE2  CZ   180.00  10.0  1
+ TSQ  Var_04    H15  CD1  CE1  CZ   180.00  10.0  1
+ TSQ  Var_05    H1   CE2  CZ   CE1  180.00  10.0  1
+ TSQ  Var_06    CD2  CG   CB   CA   -76.28  30.0  3
+ TSQ  Var_07    H5   C1   SI1  CZ    60.86  30.0  3
+ TSQ  Var_08    H11  C3   SI1  CZ   -61.81  30.0  3
+ TSQ  Var_09    H8   C2   SI1  CZ    59.05  30.0  3
+ TSQ  Var_10    HA   CA   CB   CG    64.25  30.0  1
+ TSQ  Var_11    H    N    CA   CB    63.51  30.0  3
+ TSQ  Var_12    H18  N    CA   CB   179.01  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -252,6 +245,4 @@ _chem_comp_plane_atom.dist_esd
  TSQ  plan-2  CA   0.020
  TSQ  plan-2  C    0.020
  TSQ  plan-2  O    0.020
- TSQ  plan-2  OXT  0.020
- TSQ  plan-2  HXT  0.020
 

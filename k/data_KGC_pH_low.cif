@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- KGC  KGC  N~6~-[(2R)-2-carboxy-5-oxotetrahydrofuran-2-yl]-L-lysine  L-peptide  37  19  .  2022-09-22  2024-04-11
+ KGC  KGC  N~6~-[(2R)-2-carboxy-5-oxotetrahydrofuran-2-yl]-L-lysine  L-peptide  34  18  .  2022-09-22  2024-04-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-11
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_KGC
@@ -57,7 +58,6 @@ _chem_comp_atom.z
  KGC  C12   C  CH2   0  -0.526  -2.9059  -0.4794   1.3276
  KGC  C     C  C     0   0.546   5.8720  -0.7037  -0.0348
  KGC  O1    O  O     0  -0.441   6.7181  -0.2678  -0.7737
- KGC  OXT   O  OH1   0  -0.595   5.8471  -1.9660   0.3794
  KGC  H     H  HNH2  0   0.344   4.9858   1.8039  -0.5623
  KGC  HA    H  HCH1  0   0.267   4.5757  -0.1595   1.5533
  KGC  HB2   H  HCH2  0   0.230   3.5315  -0.1567  -1.3132
@@ -74,7 +74,6 @@ _chem_comp_atom.z
  KGC  H272  H  HCH2  0   0.305  -4.3698  -2.0034   1.9303
  KGC  H121  H  HCH2  0   0.289  -2.1474  -1.2570   1.4325
  KGC  H122  H  HCH2  0   0.291  -2.7496   0.2567   2.1135
- KGC  HXT   H  HOH1  0   0.481   6.5744  -2.4619  -0.0252
 
 loop_
 _chem_comp_bond.comp_id
@@ -118,8 +117,6 @@ _chem_comp_bond.value_dist_neutron
  KGC  C12  H121  single  0.970  0.020  1.090
  KGC  C12  H122  single  0.970  0.020  1.090
  KGC  C    O1    double  1.205  0.020  1.205
- KGC  C    OXT   single  1.329  0.020  1.329
- KGC  OXT  HXT   single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -188,10 +185,7 @@ _chem_comp_angle.value_angle_esd
  KGC  H122  C12  C11   113.45  3.000
  KGC  H121  C12  C11   108.70  3.000
  KGC  C27   C12  C11   102.34  3.000
- KGC  OXT   C    O1    123.23  3.000
- KGC  OXT   C    CA    111.98  3.000
  KGC  O1    C    CA    124.76  3.000
- KGC  HXT   OXT  C     110.00  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -203,22 +197,21 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- KGC  CONST_01  HO14  O14  C13  C11   180.00      0.0   0
- KGC  CONST_02  HXT   OXT  C    CA    180.00      0.0   0
- KGC  Var_01    C28   C27  C12  C11    25.96     30.0   1
- KGC  Var_02    C27   C28  O30  C11    -5.11     30.0   1
- KGC  Var_03    C12   C27  C28  O30   -14.23     30.0   1
- KGC  Var_04    C11   NZ   CE   CD    157.03     30.0   3
- KGC  Var_05    CD    CG   CB   CA   -179.44     30.0   3
- KGC  Var_06    CE    CD   CG   CB    177.86     30.0   3
- KGC  Var_07    NZ    CE   CD   CG    176.00     30.0   3
- KGC  Var_08    H121  C12  C11  O30    87.40     30.0   1
- KGC  Var_09    H122  C12  C11  O30  -152.16     30.0   1
- KGC  Var_10    HZ    NZ   C11  O30    68.65     30.0   3
- KGC  Var_11    HB2   CB   CA   N      61.18     30.0   3
- KGC  Var_12    HB3   CB   CA   N     177.53     30.0   3
- KGC  Var_13    C     CA   N    H    170.000  180.000  72
- KGC  Var_14    HA    CA   CB   CG     59.69     30.0   1
+ KGC  Var_01  HO14  O14  C13  C11   180.00     10.0   1
+ KGC  Var_02  C28   C27  C12  C11    25.96     30.0   1
+ KGC  Var_03  C27   C28  O30  C11    -5.11     30.0   1
+ KGC  Var_04  C12   C27  C28  O30   -14.23     30.0   1
+ KGC  Var_05  C11   NZ   CE   CD    157.03     30.0   3
+ KGC  Var_06  CD    CG   CB   CA   -179.44     30.0   3
+ KGC  Var_07  CE    CD   CG   CB    177.86     30.0   3
+ KGC  Var_08  NZ    CE   CD   CG    176.00     30.0   3
+ KGC  Var_09  H121  C12  C11  O30    87.40     30.0   1
+ KGC  Var_10  H122  C12  C11  O30  -152.16     30.0   1
+ KGC  Var_11  HZ    NZ   C11  O30    68.65     30.0   3
+ KGC  Var_12  HB2   CB   CA   N      61.18     30.0   3
+ KGC  Var_13  HB3   CB   CA   N     177.53     30.0   3
+ KGC  Var_14  C     CA   N    H    170.000  180.000  72
+ KGC  Var_15  HA    CA   CB   CG     59.69     30.0   1
 
 loop_
 _chem_comp_chir.comp_id
@@ -244,8 +237,6 @@ _chem_comp_plane_atom.dist_esd
  KGC  plan-2  CA    0.020
  KGC  plan-2  C     0.020
  KGC  plan-2  O1    0.020
- KGC  plan-2  OXT   0.020
- KGC  plan-2  HXT   0.020
  KGC  plan-3  O30   0.020
  KGC  plan-3  C28   0.020
  KGC  plan-3  O29   0.020

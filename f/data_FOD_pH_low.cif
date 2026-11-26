@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FOD  FOD  '(2S)-2-amino-4-[1-(trans-4-hydroxycyclohexyl)-1H-1,2,3-triazol-4-yl]butanoic acid'  L-peptide  39  19  .  2022-09-22  2024-04-11
+ FOD  FOD  '(2S)-2-amino-4-[1-(trans-4-hydroxycyclohexyl)-1H-1,2,3-triazol-4-yl]butanoic acid'  L-peptide  36  18  .  2022-09-22  2024-04-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-11
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_FOD
@@ -75,8 +76,6 @@ _chem_comp_atom.z
  FOD  HG2  H  HCH2  0   0.253  -2.0014   0.5062  -1.8598
  FOD  H21  H  HOH1  0   0.447   7.0736  -0.9698  -0.9579
  FOD  O    O  O     0  -0.439  -6.1349  -0.6669   0.9432
- FOD  HXT  H  HOH1  0   0.481  -5.3189  -2.8330   0.7204
- FOD  OXT  O  OH1   0  -0.594  -4.8169  -2.2652   0.1167
 
 loop_
 _chem_comp_bond.comp_id
@@ -100,7 +99,6 @@ _chem_comp_bond.value_dist_neutron
  FOD  CG   C5   single    1.489  0.020  1.489
  FOD  CG   CB   single    1.529  0.020  1.529
  FOD  C5   N2   aromatic  1.351  0.020  1.351
- FOD  OXT  C    single    1.328  0.020  1.328
  FOD  CA   CB   single    1.521  0.033  1.521
  FOD  CA   C    single    1.525  0.021  1.525
  FOD  C9   C8   single    1.525  0.020  1.525
@@ -124,7 +122,6 @@ _chem_comp_bond.value_dist_neutron
  FOD  CG   HG2  single    0.970  0.020  1.090
  FOD  O2   H21  single    0.850  0.020  0.980
  FOD  C    O    double    1.231  0.020  1.231
- FOD  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -200,10 +197,7 @@ _chem_comp_angle.value_angle_esd
  FOD  HG1  CG   C5   109.36  3.000
  FOD  CB   CG   C5   111.78  3.000
  FOD  H21  O2   C10  108.24  3.000
- FOD  O    C    OXT  123.34  3.000
  FOD  O    C    CA   120.80  1.700
- FOD  OXT  C    CA   120.80  1.700
- FOD  HXT  OXT  C    110.08  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -224,19 +218,18 @@ _chem_comp_tor.period
  FOD  CONST_07  N2   N3   N4   C7   180.00      0.0   0
  FOD  CONST_08  CG   C5   N2   N3   180.00      0.0   0
  FOD  CONST_09  CG   C5   C6   N4   180.00      0.0   0
- FOD  CONST_10  H1   C6   N4   C7     0.00      0.0   0
- FOD  CONST_11  HXT  OXT  C    CA   180.00      0.0   0
  FOD  Var_01    C10  C11  C12  C7    57.09     30.0   1
- FOD  Var_02    C10  C9   C8   C7   -56.66     30.0   1
- FOD  Var_03    CB   CG   C5   C6   103.55     30.0   2
- FOD  Var_04    CA   CB   CG   C5  -177.94     30.0   3
- FOD  Var_05    H12  C7   N4   C6  -179.79     30.0   2
- FOD  Var_06    H10  C12  C7   C8    63.60     30.0   1
- FOD  Var_07    H11  C12  C7   C8  -178.83     30.0   1
- FOD  Var_08    H7   C10  C9   C8   -61.23     30.0   1
- FOD  Var_09    H21  O2   C10  C9  -178.78     30.0   3
- FOD  Var_10    C    CA   N    H   170.000  180.000  72
- FOD  Var_11    HA   CA   CB   CG    59.59     30.0   1
+ FOD  Var_02    H1   C6   N4   C7     0.00     10.0   1
+ FOD  Var_03    C10  C9   C8   C7   -56.66     30.0   1
+ FOD  Var_04    CB   CG   C5   C6   103.55     30.0   2
+ FOD  Var_05    CA   CB   CG   C5  -177.94     30.0   3
+ FOD  Var_06    H12  C7   N4   C6  -179.79     30.0   2
+ FOD  Var_07    H10  C12  C7   C8    63.60     30.0   1
+ FOD  Var_08    H11  C12  C7   C8  -178.83     30.0   1
+ FOD  Var_09    H7   C10  C9   C8   -61.23     30.0   1
+ FOD  Var_10    H21  O2   C10  C9  -178.78     30.0   3
+ FOD  Var_11    C    CA   N    H   170.000  180.000  72
+ FOD  Var_12    HA   CA   CB   CG    59.59     30.0   1
 
 loop_
 _chem_comp_chir.comp_id
@@ -255,17 +248,15 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- FOD  plan-1  C5   0.020
- FOD  plan-1  C6   0.020
- FOD  plan-1  C7   0.020
- FOD  plan-1  N2   0.020
- FOD  plan-1  N3   0.020
- FOD  plan-1  N4   0.020
- FOD  plan-1  CG   0.020
- FOD  plan-1  H1   0.020
- FOD  plan-2  CA   0.020
- FOD  plan-2  C    0.020
- FOD  plan-2  O    0.020
- FOD  plan-2  HXT  0.020
- FOD  plan-2  OXT  0.020
+ FOD  plan-1  C5  0.020
+ FOD  plan-1  C6  0.020
+ FOD  plan-1  C7  0.020
+ FOD  plan-1  N2  0.020
+ FOD  plan-1  N3  0.020
+ FOD  plan-1  N4  0.020
+ FOD  plan-1  CG  0.020
+ FOD  plan-1  H1  0.020
+ FOD  plan-2  CA  0.020
+ FOD  plan-2  C   0.020
+ FOD  plan-2  O   0.020
 

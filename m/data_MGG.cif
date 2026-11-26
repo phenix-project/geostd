@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- MGG  MGG  "2-(2-CARBOXY-ACETYLAMINO)-5-GUANIDINO-PENTANOIC ACID"  L-peptide  33  18  .  2012-08-28  2026-04-01
+ MGG  MGG  '2-(2-CARBOXY-ACETYLAMINO)-5-GUANIDINO-PENTANOIC ACID'  L-peptide  32  17  .  2012-08-28  2026-04-01
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_MGG
@@ -54,7 +56,6 @@ _chem_comp_atom.z
  MGG  O1    O  OC    -1  -0.603   5.7457   2.6010  -2.0116
  MGG  C     C  C      0   0.411  -0.8363   0.9923  -2.3516
  MGG  O     O  O      0  -0.599  -2.0554   1.0188  -2.1056
- MGG  OXT   O  OC    -1  -0.594  -0.2029   0.1045  -2.9561
  MGG  H     H  HNH1   0   0.377   1.6108   1.2712  -2.7005
  MGG  HA    H  HCH1   0   0.237  -0.5137   3.1147  -2.1487
  MGG  HB2   H  HCH2   0   0.223  -1.0725   2.3401   0.0655
@@ -110,7 +111,6 @@ _chem_comp_bond.value_dist_neutron
  MGG  C1   O12   deloc   1.246  0.020  1.246
  MGG  C1   O1    deloc   1.243  0.020  1.243
  MGG  C    O     deloc   1.231  0.020  1.231
- MGG  C    OXT   deloc   1.247  0.020  1.247
 
 loop_
 _chem_comp_angle.comp_id
@@ -170,8 +170,6 @@ _chem_comp_angle.value_angle_esd
  MGG  O1    C1   O12   127.62  3.000
  MGG  O1    C1   C2    115.42  3.000
  MGG  O12   C1   C2    116.96  3.000
- MGG  OXT   C    O     127.51  3.000
- MGG  OXT   C    CA    117.25  3.000
  MGG  O     C    CA    120.80  1.700
 
 loop_
@@ -188,36 +186,34 @@ _chem_comp_tor.period
  MGG  CONST_02  C2    C3   N   CA    180.00   0.0  0
  MGG  CONST_03  NH1   CZ   NE  CD    180.00   0.0  0
  MGG  CONST_04  NH2   CZ   NE  CD      0.00   0.0  0
- MGG  CONST_05  H     N    C3  O3    180.00   0.0  0
- MGG  CONST_06  HH11  NH1  CZ  NE    180.00   0.0  0
- MGG  CONST_07  HH12  NH1  CZ  NE      0.00   0.0  0
- MGG  CONST_08  HH21  NH2  CZ  NE      0.00   0.0  0
- MGG  CONST_09  HH22  NH2  CZ  NE    180.00   0.0  0
- MGG  CONST_10  HE    NE   CZ  NH1     0.00   0.0  0
- MGG  Var_01    CG    CB   CA  N     -64.26  30.0  3
- MGG  Var_02    O     C    CA  N    -171.19  30.0  3
- MGG  Var_03    OXT   C    CA  N      10.11  30.0  3
- MGG  Var_04    C1    C2   C3  N     -98.16  30.0  3
- MGG  Var_05    CD    CG   CB  CA    172.43  30.0  3
- MGG  Var_06    C3    N    CA  CB    -75.41  30.0  2
- MGG  Var_07    O     C    CA  CB     65.17  30.0  3
- MGG  Var_08    OXT   C    CA  CB   -113.53  30.0  3
- MGG  Var_09    NE    CD   CG  CB    -67.13  30.0  3
- MGG  Var_10    C     CA   CB  CG     58.45  30.0  1
- MGG  Var_11    CZ    NE   CD  CG    -83.00  30.0  3
- MGG  Var_12    C     CA   N   C3    161.76  30.0  3
- MGG  Var_13    O12   C1   C2  C3      9.62  30.0  3
- MGG  Var_14    O1    C1   C2  C3   -171.16  30.0  3
- MGG  Var_15    C1    C2   C3  O3     81.25  30.0  3
- MGG  Var_16    HB2   CB   CA  N     173.62  30.0  3
- MGG  Var_17    HB3   CB   CA  N      58.35  30.0  3
- MGG  Var_18    H21   C2   C3  N      23.48  30.0  3
- MGG  Var_19    H22   C2   C3  N     141.04  30.0  3
- MGG  Var_20    HG2   CG   CB  CA     49.43  30.0  3
- MGG  Var_21    HG3   CG   CB  CA    -67.68  30.0  3
- MGG  Var_22    HD2   CD   CG  CB     52.26  30.0  3
- MGG  Var_23    HD3   CD   CG  CB    169.16  30.0  3
- MGG  Var_24    HA    CA   CB  CG    176.22  30.0  1
+ MGG  Var_01    H     N    C3  O3    180.00  10.0  1
+ MGG  Var_02    HH11  NH1  CZ  NE    180.00  10.0  1
+ MGG  Var_03    HH12  NH1  CZ  NE      0.00  10.0  1
+ MGG  Var_04    HH21  NH2  CZ  NE      0.00  10.0  1
+ MGG  Var_05    HH22  NH2  CZ  NE    180.00  10.0  1
+ MGG  Var_06    CG    CB   CA  N     -64.26  30.0  3
+ MGG  Var_07    HE    NE   CZ  NH1     0.00  10.0  1
+ MGG  Var_08    O     C    CA  N    -171.19  30.0  3
+ MGG  Var_09    C1    C2   C3  N     -98.16  30.0  3
+ MGG  Var_10    CD    CG   CB  CA    172.43  30.0  3
+ MGG  Var_11    C3    N    CA  CB    -75.41  30.0  2
+ MGG  Var_12    O     C    CA  CB     65.17  30.0  3
+ MGG  Var_13    NE    CD   CG  CB    -67.13  30.0  3
+ MGG  Var_14    C     CA   CB  CG     58.45  30.0  1
+ MGG  Var_15    CZ    NE   CD  CG    -83.00  30.0  3
+ MGG  Var_16    C     CA   N   C3    161.76  30.0  3
+ MGG  Var_17    O12   C1   C2  C3      9.62  30.0  3
+ MGG  Var_18    O1    C1   C2  C3   -171.16  30.0  3
+ MGG  Var_19    C1    C2   C3  O3     81.25  30.0  3
+ MGG  Var_20    HB2   CB   CA  N     173.62  30.0  3
+ MGG  Var_21    HB3   CB   CA  N      58.35  30.0  3
+ MGG  Var_22    H21   C2   C3  N      23.48  30.0  3
+ MGG  Var_23    H22   C2   C3  N     141.04  30.0  3
+ MGG  Var_24    HG2   CG   CB  CA     49.43  30.0  3
+ MGG  Var_25    HG3   CG   CB  CA    -67.68  30.0  3
+ MGG  Var_26    HD2   CD   CG  CB     52.26  30.0  3
+ MGG  Var_27    HD3   CD   CG  CB    169.16  30.0  3
+ MGG  Var_28    HA    CA   CB  CG    176.22  30.0  1
 
 loop_
 _chem_comp_chir.comp_id
@@ -257,5 +253,4 @@ _chem_comp_plane_atom.dist_esd
  MGG  plan-4  CA    0.020
  MGG  plan-4  C     0.020
  MGG  plan-4  O     0.020
- MGG  plan-4  OXT   0.020
 

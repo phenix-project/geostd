@@ -20,11 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- X2W  X2W  N-acetyl-5-oxo-5-(phosphonooxy)-L-norvaline  L-peptide  29  17  .  2022-09-22  2023-10-30
+ X2W  X2W  N-acetyl-5-oxo-5-(phosphonooxy)-L-norvaline  L-peptide  27  16  .  2022-09-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_X2W
@@ -44,7 +45,6 @@ _chem_comp_atom.z
  X2W  C3    C  C     0   0.615  -1.4455   0.4727   0.0322
  X2W  C     C  C     0   0.550   3.4736   1.4460   0.0989
  X2W  O     O  O     0  -0.428   4.2735   1.2790   0.9807
- X2W  OXT   O  OH1   0  -0.590   3.3959   2.5439  -0.6385
  X2W  C1    C  C     0   0.534   3.6649  -1.6433  -0.1746
  X2W  O1    O  O     0  -0.498   4.3267  -1.3582  -1.1616
  X2W  P     P  P     0   1.457  -3.9879  -0.1720  -0.0699
@@ -61,7 +61,6 @@ _chem_comp_atom.z
  X2W  H1    H  HNH1  0   0.407   2.2530  -1.0624   1.1692
  X2W  HG1C  H  HCH2  0   0.302  -0.0734  -0.0286  -1.4748
  X2W  HG2C  H  HCH2  0   0.296   0.0562  -1.0131  -0.0432
- X2W  HXT   H  HOH1  0   0.486   4.0527   3.1942  -0.3467
  X2W  H21C  H  HCH3  0   0.270   4.8830  -2.8896   1.0513
  X2W  H22C  H  HCH3  0   0.251   3.1601  -3.0623   1.4033
  X2W  H23C  H  HCH3  0   0.268   3.8489  -3.7657  -0.0660
@@ -81,7 +80,6 @@ _chem_comp_bond.value_dist_neutron
  X2W  CA   N1    single  1.435  0.020  1.435
  X2W  CB   CG    single  1.520  0.020  1.520
  X2W  C    O     double  1.231  0.020  1.231
- X2W  C    OXT   single  1.325  0.020  1.325
  X2W  C1   O1    double  1.222  0.020  1.222
  X2W  C1   N1    single  1.348  0.020  1.348
  X2W  C1   C2    single  1.506  0.020  1.506
@@ -98,7 +96,6 @@ _chem_comp_bond.value_dist_neutron
  X2W  N1   H1    single  0.860  0.020  1.020
  X2W  CG   HG1C  single  0.970  0.020  1.090
  X2W  CG   HG2C  single  0.970  0.020  1.090
- X2W  OXT  HXT   single  0.850  0.020  0.980
  X2W  C2   H21C  single  0.970  0.020  1.090
  X2W  C2   H22C  single  0.970  0.020  1.090
  X2W  C2   H23C  single  0.970  0.020  1.090
@@ -133,10 +130,7 @@ _chem_comp_angle.value_angle_esd
  X2W  OE2   C3   O2    122.27  3.000
  X2W  OE2   C3   CG    111.00  3.000
  X2W  O2    C3   CG    126.74  3.000
- X2W  OXT   C    O     124.22  3.000
- X2W  OXT   C    CA    111.19  3.000
  X2W  O     C    CA    120.80  1.700
- X2W  HXT   OXT  C     110.41  3.000
  X2W  C2    C1   N1    115.47  3.000
  X2W  C2    C1   O1    122.43  3.000
  X2W  N1    C1   O1    122.10  3.000
@@ -171,15 +165,14 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  X2W  CONST_01  O1    C1   N1   CA     0.00   0.0  0
  X2W  CONST_02  C2    C1   N1   CA   180.00   0.0  0
- X2W  CONST_03  H1    N1   C1   O1   180.00   0.0  0
- X2W  CONST_04  HXT   OXT  C    CA   180.00   0.0  0
- X2W  Var_01    C3    CG   CB   CA   179.54  30.0  3
- X2W  Var_02    O2    C3   CG   CB     5.81  30.0  1
- X2W  Var_03    O3P   P    OE2  C3   -63.20  30.0  2
- X2W  Var_04    H21C  C2   C1   O1    64.14  30.0  3
- X2W  Var_05    HA    CA   CB   CG    56.27  30.0  1
- X2W  Var_06    H3P   O3P  P    O2P   41.51  30.0  3
- X2W  Var_07    H2P   O2P  P    O1P  -46.68  30.0  3
+ X2W  Var_01    H1    N1   C1   O1   180.00  10.0  1
+ X2W  Var_02    C3    CG   CB   CA   179.54  30.0  3
+ X2W  Var_03    O2    C3   CG   CB     5.81  30.0  1
+ X2W  Var_04    O3P   P    OE2  C3   -63.20  30.0  2
+ X2W  Var_05    H21C  C2   C1   O1    64.14  30.0  3
+ X2W  Var_06    HA    CA   CB   CG    56.27  30.0  1
+ X2W  Var_07    H3P   O3P  P    O2P   41.51  30.0  3
+ X2W  Var_08    H2P   O2P  P    O1P  -46.68  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -205,8 +198,6 @@ _chem_comp_plane_atom.dist_esd
  X2W  plan-2  CA   0.020
  X2W  plan-2  C    0.020
  X2W  plan-2  O    0.020
- X2W  plan-2  OXT  0.020
- X2W  plan-2  HXT  0.020
  X2W  plan-3  CG   0.020
  X2W  plan-3  C3   0.020
  X2W  plan-3  O2   0.020

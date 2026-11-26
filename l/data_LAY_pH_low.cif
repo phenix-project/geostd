@@ -20,11 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LAY  LAY  'N-acetyl-L-leucine       '  L-peptide  27  12  .  2022-03-22  2023-10-30
+ LAY  LAY  'N-acetyl-L-leucine       '  L-peptide  25  11  .  2022-03-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_LAY
@@ -49,7 +50,6 @@ _chem_comp_atom.z
  LAY  CG    C  CH1   0  -0.237  -2.2960   0.7564  -0.1631
  LAY  CD1   C  CH3   0  -0.652  -3.6538   0.5527  -0.8273
  LAY  CD2   C  CH3   0  -0.663  -2.4589   1.0174   1.3300
- LAY  OXT   O  OH1   0  -0.592   0.4350  -2.6476   0.6418
  LAY  HH31  H  HCH3  0   0.263   3.3178   2.7195   0.1330
  LAY  HH32  H  HCH3  0   0.272   3.0411   1.9566  -1.4332
  LAY  HH33  H  HCH3  0   0.257   1.8364   3.0607  -0.7795
@@ -57,7 +57,6 @@ _chem_comp_atom.z
  LAY  HA    H  HCH1  0   0.282  -0.0963  -0.3316   1.2536
  LAY  HB1C  H  HCH2  0   0.250  -1.3232  -0.6056  -1.5264
  LAY  HB2C  H  HCH2  0   0.253  -1.9069  -1.3532  -0.0515
- LAY  HXT   H  HOH1  0   0.483   0.8836  -3.4629   0.3716
  LAY  HG    H  HCH1  0   0.224  -1.8357   1.6414  -0.6158
  LAY  HD11  H  HCH3  0   0.228  -3.5515   0.3716  -1.8986
  LAY  HD12  H  HCH3  0   0.217  -4.1770  -0.3033  -0.3942
@@ -81,7 +80,6 @@ _chem_comp_bond.value_dist_neutron
  LAY  CA   C     single  1.525  0.021  1.525
  LAY  CA   CB    single  1.530  0.020  1.530
  LAY  C    ON    double  1.203  0.020  1.203
- LAY  C    OXT   single  1.326  0.020  1.326
  LAY  CB   CG    single  1.531  0.020  1.531
  LAY  CG   CD1   single  1.525  0.020  1.525
  LAY  CG   CD2   single  1.524  0.020  1.524
@@ -92,7 +90,6 @@ _chem_comp_bond.value_dist_neutron
  LAY  CA   HA    single  0.970  0.020  0.970
  LAY  CB   HB1C  single  0.970  0.020  1.090
  LAY  CB   HB2C  single  0.970  0.020  1.090
- LAY  OXT  HXT   single  0.850  0.020  0.980
  LAY  CG   HG    single  0.970  0.020  1.090
  LAY  CD1  HD11  single  0.970  0.020  1.090
  LAY  CD1  HD12  single  0.970  0.020  1.090
@@ -126,8 +123,6 @@ _chem_comp_angle.value_angle_esd
  LAY  HA    CA   N     110.00  3.000
  LAY  CB    CA   N     110.50  1.700
  LAY  C     CA   N     111.00  2.800
- LAY  OXT   C    ON    123.98  3.000
- LAY  OXT   C    CA    111.30  3.000
  LAY  ON    C    CA    124.67  3.000
  LAY  HB2C  CB   HB1C  106.52  3.000
  LAY  HB2C  CB   CG    108.70  3.000
@@ -153,7 +148,6 @@ _chem_comp_angle.value_angle_esd
  LAY  HD23  CD2  CG    111.00  3.000
  LAY  HD22  CD2  CG    110.67  3.000
  LAY  HD21  CD2  CG    112.40  3.000
- LAY  HXT   OXT  C     110.16  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -167,15 +161,14 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  LAY  CONST_01  CA    N    CN  O      0.00   0.0  0
  LAY  CONST_02  CA    N    CN  CH3  180.00   0.0  0
- LAY  CONST_03  H     N    CN  O    180.00   0.0  0
- LAY  CONST_04  HXT   OXT  C   CA   180.00   0.0  0
- LAY  Var_01    CD1   CG   CB  CA   179.82  30.0  3
- LAY  Var_02    HH31  CH3  CN  O    -21.18  30.0  3
- LAY  Var_03    HD11  CD1  CG  CB   -56.38  30.0  3
- LAY  Var_04    HD21  CD2  CG  CB    64.83  30.0  3
- LAY  Var_05    HA    CA   N   CN    53.98  30.0  3
- LAY  Var_06    HB1C  CB   CA  N     64.41  30.0  3
- LAY  Var_07    HB2C  CB   CA  N    179.88  30.0  3
+ LAY  Var_01    H     N    CN  O    180.00  10.0  1
+ LAY  Var_02    CD1   CG   CB  CA   179.82  30.0  3
+ LAY  Var_03    HH31  CH3  CN  O    -21.18  30.0  3
+ LAY  Var_04    HD11  CD1  CG  CB   -56.38  30.0  3
+ LAY  Var_05    HD21  CD2  CG  CB    64.83  30.0  3
+ LAY  Var_06    HA    CA   N   CN    53.98  30.0  3
+ LAY  Var_07    HB1C  CB   CA  N     64.41  30.0  3
+ LAY  Var_08    HB2C  CB   CA  N    179.88  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -201,6 +194,4 @@ _chem_comp_plane_atom.dist_esd
  LAY  plan-2  CA   0.020
  LAY  plan-2  C    0.020
  LAY  plan-2  ON   0.020
- LAY  plan-2  OXT  0.020
- LAY  plan-2  HXT  0.020
 

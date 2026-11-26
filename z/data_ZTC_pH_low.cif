@@ -21,10 +21,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZTC  ZTC  "(2S)-amino(3,5-dimethoxyphenyl)acetic acid"  D-peptide  28  15  .  2024-07-12  2026-04-13
+ ZTC  ZTC  '(2S)-amino(3,5-dimethoxyphenyl)acetic acid'  D-peptide  26  14  .  2024-07-12  2026-04-13
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_ZTC
@@ -64,8 +66,6 @@ _chem_comp_atom.z
  ZTC  H22   H  HCH3  0   0.151   5.7184  14.4212  13.4838
  ZTC  H23   H  HCH3  0   0.138   7.2101  13.7631  14.2014
  ZTC  H21   H  HCH3  0   0.138   7.2360  14.4442  12.5518
- ZTC  OXT   O  OH1   0  -0.397   6.9912   7.1165  13.0731
- ZTC  HXT   H  HOH1  0   0.363   6.3773   6.7131  13.7110
 
 loop_
 _chem_comp_bond.comp_id
@@ -101,8 +101,6 @@ _chem_comp_bond.value_dist_neutron
  ZTC  C2   H22   single    0.970  0.020  1.090
  ZTC  C2   H23   single    0.970  0.020  1.090
  ZTC  C2   H21   single    0.970  0.020  1.090
- ZTC  C    OXT   single    1.342  0.020  1.342
- ZTC  OXT  HXT   single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -120,8 +118,6 @@ _chem_comp_angle.value_angle_esd
  ZTC  HA    CA   N    108.33  3.000
  ZTC  C     CA   N    113.78  3.000
  ZTC  CB    CA   N    111.04  3.000
- ZTC  OXT   C    O2   123.18  3.000
- ZTC  OXT   C    CA   111.62  3.000
  ZTC  O2    C    CA   125.20  3.000
  ZTC  CG2   CB   CG1  120.40  3.000
  ZTC  CG2   CB   CA   119.74  3.000
@@ -155,7 +151,6 @@ _chem_comp_angle.value_angle_esd
  ZTC  H21   C2   OD2  111.09  3.000
  ZTC  H23   C2   OD2  111.05  3.000
  ZTC  H22   C2   OD2  105.83  3.000
- ZTC  HXT   OXT  C    108.93  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -179,31 +174,28 @@ _chem_comp_tor.period
  ZTC  CONST_10  OD2   CD2  CG2  CB    180.00   0.0  0
  ZTC  CONST_11  OD2   CD2  CZ   CD1   180.00   0.0  0
  ZTC  CONST_12  CD2   CZ   CD1  OD1   180.00   0.0  0
- ZTC  CONST_13  HG21  CG2  CB   CG1   180.00   0.0  0
- ZTC  CONST_14  HZ1   CZ   CD1  CG1   180.00   0.0  0
- ZTC  CONST_15  H4    CG1  CB   CG2   180.00   0.0  0
- ZTC  CONST_16  HXT   OXT  C    CA    180.00   0.0  0
  ZTC  Var_01    CG1   CB   CA   N    -111.53  30.0  2
- ZTC  Var_02    CG2   CB   CA   N      67.83  30.0  2
- ZTC  Var_03    CG1   CB   CA   C     122.23  30.0  2
- ZTC  Var_04    CG2   CB   CA   C     -58.41  30.0  2
- ZTC  Var_05    C1    OD1  CD1  CG1  -179.62  30.0  2
- ZTC  Var_06    C2    OD2  CD2  CG2   179.27  30.0  2
- ZTC  Var_07    C1    OD1  CD1  CZ      0.40  30.0  2
- ZTC  Var_08    C2    OD2  CD2  CZ     -0.51  30.0  2
- ZTC  Var_09    HA    CA   CB   CG1     7.14  30.0  2
- ZTC  Var_10    O2    C    CA   CB    110.84  30.0  3
- ZTC  Var_11    OXT   C    CA   CB    -69.18  30.0  3
- ZTC  Var_12    H2    N    CA   CB   -179.77  30.0  3
- ZTC  Var_13    H     N    CA   CB    -63.00  30.0  3
- ZTC  Var_14    H12   C1   OD1  CD1  -179.99  30.0  3
- ZTC  Var_15    H13   C1   OD1  CD1   -61.07  30.0  3
- ZTC  Var_16    H11   C1   OD1  CD1    61.11  30.0  3
- ZTC  Var_17    H22   C2   OD2  CD2  -179.77  30.0  3
- ZTC  Var_18    H23   C2   OD2  CD2   -60.87  30.0  3
- ZTC  Var_19    H21   C2   OD2  CD2    61.32  30.0  3
- ZTC  Var_20    O2    C    CA   N     -13.81  30.0  3
- ZTC  Var_21    OXT   C    CA   N     166.17  30.0  3
+ ZTC  Var_02    HG21  CG2  CB   CG1   180.00  10.0  1
+ ZTC  Var_03    HZ1   CZ   CD1  CG1   180.00  10.0  1
+ ZTC  Var_04    H4    CG1  CB   CG2   180.00  10.0  1
+ ZTC  Var_05    CG2   CB   CA   N      67.83  30.0  2
+ ZTC  Var_06    CG1   CB   CA   C     122.23  30.0  2
+ ZTC  Var_07    CG2   CB   CA   C     -58.41  30.0  2
+ ZTC  Var_08    C1    OD1  CD1  CG1  -179.62  30.0  2
+ ZTC  Var_09    C2    OD2  CD2  CG2   179.27  30.0  2
+ ZTC  Var_10    C1    OD1  CD1  CZ      0.40  30.0  2
+ ZTC  Var_11    C2    OD2  CD2  CZ     -0.51  30.0  2
+ ZTC  Var_12    HA    CA   CB   CG1     7.14  30.0  2
+ ZTC  Var_13    O2    C    CA   CB    110.84  30.0  3
+ ZTC  Var_14    H2    N    CA   CB   -179.77  30.0  3
+ ZTC  Var_15    H     N    CA   CB    -63.00  30.0  3
+ ZTC  Var_16    H12   C1   OD1  CD1  -179.99  30.0  3
+ ZTC  Var_17    H13   C1   OD1  CD1   -61.07  30.0  3
+ ZTC  Var_18    H11   C1   OD1  CD1    61.11  30.0  3
+ ZTC  Var_19    H22   C2   OD2  CD2  -179.77  30.0  3
+ ZTC  Var_20    H23   C2   OD2  CD2   -60.87  30.0  3
+ ZTC  Var_21    H21   C2   OD2  CD2    61.32  30.0  3
+ ZTC  Var_22    O2    C    CA   N     -13.81  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -235,6 +227,4 @@ _chem_comp_plane_atom.dist_esd
  ZTC  plan-2  CA    0.020
  ZTC  plan-2  C     0.020
  ZTC  plan-2  O2    0.020
- ZTC  plan-2  OXT   0.020
- ZTC  plan-2  HXT   0.020
 

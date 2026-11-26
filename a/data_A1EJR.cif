@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A1EJR  A1EJR  "(2S)-2-azanyl-6-[6-[[(2R)-1-[4-[2-[3-bromanyl-2-(2-hydroxy-2-oxoethyloxy)-5-methyl-phenyl]ethynyl]phenyl]-4-(methylamino)-4-oxidanylidene-butan-2-yl]carbamoyl]-3-oxidanylidene-1H-indazol-2-yl]hexanoic acid"  L-peptide  86  50  .  2026-03-31  2026-03-31
+ A1EJR  A1EJR  '(2S)-2-azanyl-6-[6-[[(2R)-1-[4-[2-[3-bromanyl-2-(2-hydroxy-2-oxoethyloxy)-5-methyl-phenyl]ethynyl]phenyl]-4-(methylamino)-4-oxidanylidene-butan-2-yl]carbamoyl]-3-oxidanylidene-1H-indazol-2-yl]hexanoic acid'  L-peptide  85  49  .  2026-03-31  2026-03-31
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_A1EJR
@@ -115,7 +117,6 @@ _chem_comp_atom.z
  A1EJR  H331  H   HNH1   0   0.411  -2.2647  -0.2018  -2.4748
  A1EJR  H2    H   HNH2   0   0.324  -5.3008  -6.1836   2.2597
  A1EJR  H     H   HNH2   0   0.331  -5.4174  -6.0726   0.6427
- A1EJR  OXT   O   OC    -1  -0.601  -1.4996  -6.3457   2.5698
  A1EJR  C29   C   C      0   0.525  -1.2487   4.6536  -0.7488
  A1EJR  CE    C   CH2    0  -0.298  -4.2901  -1.8604  -1.6198
  A1EJR  C19   C   C      0   0.386   5.1989  -0.1836   0.8161
@@ -220,7 +221,6 @@ _chem_comp_bond.value_dist_neutron
  A1EJR  N33   H331  single    0.890  0.020  1.040
  A1EJR  N     H2    single    0.890  0.020  1.040
  A1EJR  N     H     single    0.860  0.020  0.860
- A1EJR  C     OXT   deloc     1.250  0.020  1.250
 
 loop_
 _chem_comp_angle.comp_id
@@ -336,8 +336,6 @@ _chem_comp_angle.value_angle_esd
  A1EJR  HA    CA   CB    109.00  3.000
  A1EJR  C     CA   CB    110.10  1.900
  A1EJR  N     CA   CB    110.50  1.700
- A1EJR  OXT   C    O     126.39  3.000
- A1EJR  OXT   C    CA    116.40  3.000
  A1EJR  O     C    CA    120.80  1.700
  A1EJR  C46   C43  C44   131.92  3.000
  A1EJR  C44   C43  C32   120.93  3.000
@@ -428,78 +426,76 @@ _chem_comp_tor.period
  A1EJR  CONST_33  C32   C31  C30  C29   180.00   0.0  0
  A1EJR  CONST_34  C43   C46  NZ   CE    180.00   0.0  0
  A1EJR  CONST_35  O47   C46  NZ   N33   180.00   0.0  0
- A1EJR  CONST_36  H081  C08  C07  C10   180.00   0.0  0
- A1EJR  CONST_37  H091  C09  C08  C07   180.00   0.0  0
- A1EJR  CONST_38  H111  C11  C10  C07   180.00   0.0  0
- A1EJR  CONST_39  H101  C10  C07  C08   180.00   0.0  0
- A1EJR  CONST_40  H241  C24  C22  C16   180.00   0.0  0
- A1EJR  CONST_41  H271  C27  C15  C16   180.00   0.0  0
- A1EJR  CONST_42  H441  C44  C45  C30   180.00   0.0  0
- A1EJR  CONST_43  H451  C45  C30  C31   180.00   0.0  0
- A1EJR  CONST_44  H311  C31  C32  C43   180.00   0.0  0
- A1EJR  CONST_45  O47   C46  NZ   CE      0.00   0.0  0
- A1EJR  CONST_46  C30   C29  N28  C05   180.00   0.0  0
- A1EJR  CONST_47  H281  N28  C29  C30     0.00   0.0  0
- A1EJR  CONST_48  C01   N02  C03  C04   180.00   0.0  0
- A1EJR  CONST_49  O48   C29  N28  C05     0.00   0.0  0
- A1EJR  CONST_50  O49   C03  N02  C01     0.00   0.0  0
- A1EJR  CONST_51  H021  N02  C03  C04     0.00   0.0  0
+ A1EJR  CONST_36  O47   C46  NZ   CE      0.00   0.0  0
+ A1EJR  CONST_37  C30   C29  N28  C05   180.00   0.0  0
+ A1EJR  CONST_38  C01   N02  C03  C04   180.00   0.0  0
+ A1EJR  CONST_39  O48   C29  N28  C05     0.00   0.0  0
+ A1EJR  CONST_40  O49   C03  N02  C01     0.00   0.0  0
  A1EJR  Var_01    H331  N33  C32  C31   -48.26  30.0  1
  A1EJR  Var_02    C05   C06  C07  C10    84.10  30.0  2
  A1EJR  Var_03    C18   O17  C16  C15    83.39  30.0  2
- A1EJR  Var_04    C12   C13  C14  C15    57.76  30.0  1
- A1EJR  Var_05    C08   C07  C06  C05   -91.63  30.0  2
- A1EJR  Var_06    C22   C16  O17  C18   -99.48  30.0  2
- A1EJR  Var_07    O48   C29  C30  C31    36.19  30.0  2
- A1EJR  Var_08    N28   C29  C30  C31  -141.30  30.0  2
- A1EJR  Var_09    C46   NZ   CE   CD    -87.41  30.0  3
- A1EJR  Var_10    N33   NZ   CE   CD     63.43  30.0  3
- A1EJR  Var_11    O48   C29  C30  C45  -146.94  30.0  2
- A1EJR  Var_12    N28   C29  C30  C45    35.57  30.0  2
- A1EJR  Var_13    H062  C06  C07  C10   -36.43  30.0  2
- A1EJR  Var_14    H061  C06  C07  C10  -154.60  30.0  2
- A1EJR  Var_15    H261  C26  C25  C24   110.78  30.0  2
- A1EJR  Var_16    H263  C26  C25  C24  -130.25  30.0  2
- A1EJR  Var_17    H262  C26  C25  C24    -9.85  30.0  2
- A1EJR  Var_18    HE2   CE   NZ   C46   149.83  30.0  2
- A1EJR  Var_19    HE3   CE   NZ   C46    34.90  30.0  2
- A1EJR  Var_20    C07   C06  C05  C04   173.37  30.0  3
- A1EJR  Var_21    N28   C05  C06  C07    50.83  30.0  1
- A1EJR  Var_22    C16   O17  C18  C19  -159.08  30.0  3
- A1EJR  Var_23    NZ    CE   CD   CG   -178.30  30.0  1
- A1EJR  Var_24    H051  C05  C06  C07   -66.84  30.0  1
- A1EJR  Var_25    H181  C18  O17  C16    79.31  30.0  1
- A1EJR  Var_26    H182  C18  O17  C16   -38.48  30.0  1
- A1EJR  Var_27    HD3   CD   CE   NZ    -56.66  30.0  3
- A1EJR  Var_28    HD2   CD   CE   NZ     59.61  30.0  3
- A1EJR  Var_29    C29   N28  C05  C04   138.04  30.0  2
- A1EJR  Var_30    N02   C03  C04  C05   127.92  30.0  2
- A1EJR  Var_31    O49   C03  C04  C05   -52.22  30.0  2
- A1EJR  Var_32    C29   N28  C05  C06   -98.83  30.0  2
- A1EJR  Var_33    C03   C04  C05  C06   174.43  30.0  3
- A1EJR  Var_34    N28   C05  C04  C03   -62.82  30.0  3
- A1EJR  Var_35    CB    CG   CD   CE    176.74  30.0  2
- A1EJR  Var_36    CA    CB   CG   CD   -179.12  30.0  1
- A1EJR  Var_37    N     CA   CB   CG    -64.46  30.0  2
- A1EJR  Var_38    C     CA   CB   CG    171.51  30.0  2
- A1EJR  Var_39    O     C    CA   CB     98.89  30.0  3
- A1EJR  Var_40    OXT   C    CA   CB    -78.55  30.0  3
- A1EJR  Var_41    O     C    CA   N     -27.52  30.0  3
- A1EJR  Var_42    OXT   C    CA   N     155.05  30.0  3
- A1EJR  Var_43    O21   C19  C18  O17     6.26  30.0  3
- A1EJR  Var_44    O20   C19  C18  O17  -174.58  30.0  3
- A1EJR  Var_45    H042  C04  C05  C06   -61.43  30.0  3
- A1EJR  Var_46    H041  C04  C05  C06    55.35  30.0  3
- A1EJR  Var_47    H013  C01  N02  C03   -60.37  30.0  3
- A1EJR  Var_48    H011  C01  N02  C03    60.97  30.0  3
- A1EJR  Var_49    H012  C01  N02  C03  -179.70  30.0  3
- A1EJR  Var_50    HG3   CG   CD   CE    -60.55  30.0  2
- A1EJR  Var_51    HG2   CG   CD   CE     55.55  30.0  2
- A1EJR  Var_52    HB2   CB   CG   CD    -57.37  30.0  1
- A1EJR  Var_53    HB3   CB   CG   CD     58.23  30.0  1
- A1EJR  Var_54    HA    CA   CB   CG     55.30  30.0  2
- A1EJR  Var_55    H2    N    CA   CB    -70.41  30.0  3
- A1EJR  Var_56    H     N    CA   CB     46.21  30.0  3
+ A1EJR  Var_04    H081  C08  C07  C10   180.00  10.0  1
+ A1EJR  Var_05    H091  C09  C08  C07   180.00  10.0  1
+ A1EJR  Var_06    H111  C11  C10  C07   180.00  10.0  1
+ A1EJR  Var_07    H101  C10  C07  C08   180.00  10.0  1
+ A1EJR  Var_08    C12   C13  C14  C15    57.76  30.0  1
+ A1EJR  Var_09    H241  C24  C22  C16   180.00  10.0  1
+ A1EJR  Var_10    H271  C27  C15  C16   180.00  10.0  1
+ A1EJR  Var_11    H441  C44  C45  C30   180.00  10.0  1
+ A1EJR  Var_12    H451  C45  C30  C31   180.00  10.0  1
+ A1EJR  Var_13    H311  C31  C32  C43   180.00  10.0  1
+ A1EJR  Var_14    H281  N28  C29  C30     0.00  10.0  1
+ A1EJR  Var_15    C08   C07  C06  C05   -91.63  30.0  2
+ A1EJR  Var_16    H021  N02  C03  C04     0.00  10.0  1
+ A1EJR  Var_17    C22   C16  O17  C18   -99.48  30.0  2
+ A1EJR  Var_18    O48   C29  C30  C31    36.19  30.0  2
+ A1EJR  Var_19    N28   C29  C30  C31  -141.30  30.0  2
+ A1EJR  Var_20    C46   NZ   CE   CD    -87.41  30.0  3
+ A1EJR  Var_21    N33   NZ   CE   CD     63.43  30.0  3
+ A1EJR  Var_22    O48   C29  C30  C45  -146.94  30.0  2
+ A1EJR  Var_23    N28   C29  C30  C45    35.57  30.0  2
+ A1EJR  Var_24    H062  C06  C07  C10   -36.43  30.0  2
+ A1EJR  Var_25    H061  C06  C07  C10  -154.60  30.0  2
+ A1EJR  Var_26    H261  C26  C25  C24   110.78  30.0  2
+ A1EJR  Var_27    H263  C26  C25  C24  -130.25  30.0  2
+ A1EJR  Var_28    H262  C26  C25  C24    -9.85  30.0  2
+ A1EJR  Var_29    HE2   CE   NZ   C46   149.83  30.0  2
+ A1EJR  Var_30    HE3   CE   NZ   C46    34.90  30.0  2
+ A1EJR  Var_31    C07   C06  C05  C04   173.37  30.0  3
+ A1EJR  Var_32    N28   C05  C06  C07    50.83  30.0  1
+ A1EJR  Var_33    C16   O17  C18  C19  -159.08  30.0  3
+ A1EJR  Var_34    NZ    CE   CD   CG   -178.30  30.0  1
+ A1EJR  Var_35    H051  C05  C06  C07   -66.84  30.0  1
+ A1EJR  Var_36    H181  C18  O17  C16    79.31  30.0  1
+ A1EJR  Var_37    H182  C18  O17  C16   -38.48  30.0  1
+ A1EJR  Var_38    HD3   CD   CE   NZ    -56.66  30.0  3
+ A1EJR  Var_39    HD2   CD   CE   NZ     59.61  30.0  3
+ A1EJR  Var_40    C29   N28  C05  C04   138.04  30.0  2
+ A1EJR  Var_41    N02   C03  C04  C05   127.92  30.0  2
+ A1EJR  Var_42    O49   C03  C04  C05   -52.22  30.0  2
+ A1EJR  Var_43    C29   N28  C05  C06   -98.83  30.0  2
+ A1EJR  Var_44    C03   C04  C05  C06   174.43  30.0  3
+ A1EJR  Var_45    N28   C05  C04  C03   -62.82  30.0  3
+ A1EJR  Var_46    CB    CG   CD   CE    176.74  30.0  2
+ A1EJR  Var_47    CA    CB   CG   CD   -179.12  30.0  1
+ A1EJR  Var_48    N     CA   CB   CG    -64.46  30.0  2
+ A1EJR  Var_49    C     CA   CB   CG    171.51  30.0  2
+ A1EJR  Var_50    O     C    CA   CB     98.89  30.0  3
+ A1EJR  Var_51    O     C    CA   N     -27.52  30.0  3
+ A1EJR  Var_52    O21   C19  C18  O17     6.26  30.0  3
+ A1EJR  Var_53    O20   C19  C18  O17  -174.58  30.0  3
+ A1EJR  Var_54    H042  C04  C05  C06   -61.43  30.0  3
+ A1EJR  Var_55    H041  C04  C05  C06    55.35  30.0  3
+ A1EJR  Var_56    H013  C01  N02  C03   -60.37  30.0  3
+ A1EJR  Var_57    H011  C01  N02  C03    60.97  30.0  3
+ A1EJR  Var_58    H012  C01  N02  C03  -179.70  30.0  3
+ A1EJR  Var_59    HG3   CG   CD   CE    -60.55  30.0  2
+ A1EJR  Var_60    HG2   CG   CD   CE     55.55  30.0  2
+ A1EJR  Var_61    HB2   CB   CG   CD    -57.37  30.0  1
+ A1EJR  Var_62    HB3   CB   CG   CD     58.23  30.0  1
+ A1EJR  Var_63    HA    CA   CB   CG     55.30  30.0  2
+ A1EJR  Var_64    H2    N    CA   CB    -70.41  30.0  3
+ A1EJR  Var_65    H     N    CA   CB     46.21  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -577,5 +573,4 @@ _chem_comp_plane_atom.dist_esd
  A1EJR  plan-7  CA    0.020
  A1EJR  plan-7  C     0.020
  A1EJR  plan-7  O     0.020
- A1EJR  plan-7  OXT   0.020
 

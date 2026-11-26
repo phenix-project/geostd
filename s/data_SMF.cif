@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
-SMF SMF "4-SULFOMETHYL-L-PHENYLALANINE" L-peptide 28 17 . 2016-04-26 2026-06-15
+ SMF  SMF  4-SULFOMETHYL-L-PHENYLALANINE  L-peptide  27  16  .  2016-04-26  2026-06-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_SMF
@@ -53,7 +55,6 @@ _chem_comp_atom.z
  SMF  O3   O  OS    -1  -0.762   9.2094  -2.7311   3.3883
  SMF  C    C  C      0   0.412   1.2467  -3.4459   1.5826
  SMF  O    O  O      0  -0.613   0.5114  -3.6588   2.5712
- SMF  OXT  O  OC    -1  -0.602   2.1142  -4.2089   1.1189
  SMF  H    H  HNH2   0   0.333  -0.5205  -1.0398   0.1010
  SMF  H2   H  HNH2   0   0.326  -0.9368  -2.0791   1.2701
  SMF  HA   H  HCH1   0   0.198   1.6781  -2.0422  -0.0061
@@ -101,7 +102,6 @@ _chem_comp_bond.value_dist_neutron
  SMF  S    O2   deloc     1.475  0.020  1.475
  SMF  S    O3   deloc     1.477  0.020  1.477
  SMF  C    O    deloc     1.231  0.020  1.231
- SMF  C    OXT  deloc     1.245  0.020  1.245
 
 loop_
 _chem_comp_angle.comp_id
@@ -155,8 +155,6 @@ _chem_comp_angle.value_angle_esd
  SMF  O3   S    CH   104.51  3.000
  SMF  O2   S    CH   105.87  3.000
  SMF  O1   S    CH   105.68  3.000
- SMF  OXT  C    O    126.87  3.000
- SMF  OXT  C    CA   117.66  3.000
  SMF  O    C    CA   120.80  1.700
 
 loop_
@@ -179,30 +177,28 @@ _chem_comp_tor.period
  SMF  CONST_08  CE2  CD2  CG   CB    180.00   0.0  0
  SMF  CONST_09  CH   CZ   CE1  CD1   180.00   0.0  0
  SMF  CONST_10  CH   CZ   CE2  CD2   180.00   0.0  0
- SMF  CONST_11  HE1  CE1  CD1  CG    180.00   0.0  0
- SMF  CONST_12  HE2  CE2  CD2  CG    180.00   0.0  0
- SMF  CONST_13  HD2  CD2  CG   CD1   180.00   0.0  0
- SMF  CONST_14  HD1  CD1  CG   CD2   180.00   0.0  0
  SMF  Var_01    CD1  CG   CB   CA    -96.14  30.0  2
- SMF  Var_02    CD2  CG   CB   CA     82.53  30.0  2
- SMF  Var_03    S    CH   CZ   CE1    87.98  30.0  2
- SMF  Var_04    S    CH   CZ   CE2   -91.24  30.0  2
- SMF  Var_05    HB2  CB   CG   CD1   142.59  30.0  2
- SMF  Var_06    HB3  CB   CG   CD1    25.41  30.0  2
- SMF  Var_07    HH2  CH   CZ   CE1   -31.78  30.0  2
- SMF  Var_08    HH3  CH   CZ   CE1  -152.47  30.0  2
- SMF  Var_09    CG   CB   CA   N    -178.78  30.0  3
- SMF  Var_10    C    CA   CB   CG     59.31  30.0  1
- SMF  Var_11    O1   S    CH   CZ     57.99  30.0  3
- SMF  Var_12    O2   S    CH   CZ    -62.44  30.0  3
- SMF  Var_13    O3   S    CH   CZ    177.79  30.0  3
- SMF  Var_14    HA   CA   CB   CG    -59.59  30.0  1
- SMF  Var_15    O    C    CA   N     -57.98  30.0  3
- SMF  Var_16    OXT  C    CA   N     122.38  30.0  3
- SMF  Var_17    O    C    CA   CB     66.14  30.0  3
- SMF  Var_18    OXT  C    CA   CB   -113.49  30.0  3
- SMF  Var_19    H    N    CA   CB     50.18  30.0  3
- SMF  Var_20    H2   N    CA   CB    -64.93  30.0  3
+ SMF  Var_02    HE1  CE1  CD1  CG    180.00  10.0  1
+ SMF  Var_03    HE2  CE2  CD2  CG    180.00  10.0  1
+ SMF  Var_04    HD2  CD2  CG   CD1   180.00  10.0  1
+ SMF  Var_05    HD1  CD1  CG   CD2   180.00  10.0  1
+ SMF  Var_06    CD2  CG   CB   CA     82.53  30.0  2
+ SMF  Var_07    S    CH   CZ   CE1    87.98  30.0  2
+ SMF  Var_08    S    CH   CZ   CE2   -91.24  30.0  2
+ SMF  Var_09    HB2  CB   CG   CD1   142.59  30.0  2
+ SMF  Var_10    HB3  CB   CG   CD1    25.41  30.0  2
+ SMF  Var_11    HH2  CH   CZ   CE1   -31.78  30.0  2
+ SMF  Var_12    HH3  CH   CZ   CE1  -152.47  30.0  2
+ SMF  Var_13    CG   CB   CA   N    -178.78  30.0  3
+ SMF  Var_14    C    CA   CB   CG     59.31  30.0  1
+ SMF  Var_15    O1   S    CH   CZ     57.99  30.0  3
+ SMF  Var_16    O2   S    CH   CZ    -62.44  30.0  3
+ SMF  Var_17    O3   S    CH   CZ    177.79  30.0  3
+ SMF  Var_18    HA   CA   CB   CG    -59.59  30.0  1
+ SMF  Var_19    O    C    CA   N     -57.98  30.0  3
+ SMF  Var_20    O    C    CA   CB     66.14  30.0  3
+ SMF  Var_21    H    N    CA   CB     50.18  30.0  3
+ SMF  Var_22    H2   N    CA   CB    -64.93  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -234,5 +230,4 @@ _chem_comp_plane_atom.dist_esd
  SMF  plan-2  CA   0.020
  SMF  plan-2  C    0.020
  SMF  plan-2  O    0.020
- SMF  plan-2  OXT  0.020
 

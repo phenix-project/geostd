@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZKO  ZKO  "N-SUCCINYL-GLUTAMINE"  L-peptide  29  17  .  2024-07-12  2024-07-12
+ ZKO  ZKO  N-SUCCINYL-GLUTAMINE  L-peptide  28  16  .  2024-07-12  2024-07-12
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_ZKO
@@ -52,7 +54,6 @@ _chem_comp_atom.z
  ZKO  O3    O  OC    -1  -0.604  -5.4015  -0.9113  -1.5699
  ZKO  O4    O  O      0  -0.618  -6.2438  -0.4213   0.4369
  ZKO  C     C  C      0   0.400   1.3300   1.5075  -1.0974
- ZKO  OXT   O  OC    -1  -0.606   2.0091   2.4901  -0.7397
  ZKO  O     O  O      0  -0.601   1.0894   1.1338  -2.2592
  ZKO  HE21  H  HNH2   0   0.394   5.9460  -1.7578   1.4046
  ZKO  HE22  H  HNH2   0   0.403   5.6547  -0.2590   0.6127
@@ -89,7 +90,6 @@ _chem_comp_bond.value_dist_neutron
  ZKO  C8   O3    deloc   1.247  0.020  1.247
  ZKO  C8   O4    deloc   1.247  0.020  1.247
  ZKO  CA   C     single  1.525  0.021  1.525
- ZKO  C    OXT   deloc   1.247  0.020  1.247
  ZKO  C    O     deloc   1.231  0.020  1.231
  ZKO  NE2  HE21  single  0.860  0.020  1.020
  ZKO  NE2  HE22  single  0.860  0.020  1.020
@@ -156,9 +156,7 @@ _chem_comp_angle.value_angle_esd
  ZKO  O4    C8   O3    126.85  3.000
  ZKO  O4    C8   C7    115.51  3.000
  ZKO  O3    C8   C7    117.63  3.000
- ZKO  O     C    OXT   127.60  3.000
  ZKO  O     C    CA    120.80  1.700
- ZKO  OXT   C    CA    115.70  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -172,34 +170,32 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  ZKO  CONST_01  O2    C5   N   CA      0.00   0.0  0
  ZKO  CONST_02  C6    C5   N   CA    180.00   0.0  0
- ZKO  CONST_03  HE21  NE2  CD  OE1     0.00   0.0  0
- ZKO  CONST_04  HE22  NE2  CD  OE1   180.00   0.0  0
- ZKO  CONST_05  H     N    C5  O2    180.00   0.0  0
- ZKO  Var_01    CB    CG   CD  NE2   145.31  30.0  3
- ZKO  Var_02    CA    CB   CG  CD    172.46  30.0  3
- ZKO  Var_03    CB    CG   CD  OE1   -35.92  30.0  3
- ZKO  Var_04    N     CA   CB  CG   -173.57  30.0  3
- ZKO  Var_05    C     CA   CB  CG     62.99  30.0  3
- ZKO  Var_06    C5    N    CA  CB    174.89  30.0  3
- ZKO  Var_07    OXT   C    CA  CB    -92.52  30.0  3
- ZKO  Var_08    O     C    CA  CB     84.81  30.0  3
- ZKO  Var_09    OXT   C    CA  N     147.03  30.0  3
- ZKO  Var_10    O     C    CA  N     -35.64  30.0  3
- ZKO  Var_11    C7    C6   C5  N     126.31  30.0  3
- ZKO  Var_12    C     CA   N   C5    -62.90  30.0  1
- ZKO  Var_13    C8    C7   C6  C5    177.75  30.0  3
- ZKO  Var_14    C7    C6   C5  O2    -52.96  30.0  3
- ZKO  Var_15    O3    C8   C7  C6    -15.89  30.0  3
- ZKO  Var_16    O4    C8   C7  C6    165.25  30.0  3
- ZKO  Var_17    HG2   CG   CD  NE2   -94.28  30.0  3
- ZKO  Var_18    HG3   CG   CD  NE2    20.66  30.0  3
- ZKO  Var_19    HB2   CB   CG  CD    -65.23  30.0  3
- ZKO  Var_20    HB3   CB   CG  CD     51.31  30.0  3
- ZKO  Var_21    HA    CA   CB  CG    -56.09  30.0  3
- ZKO  Var_22    H9    C6   C5  N    -112.94  30.0  3
- ZKO  Var_23    H10   C6   C5  N       2.81  30.0  3
- ZKO  Var_24    H11   C7   C6  C5    -59.16  30.0  3
- ZKO  Var_25    H12   C7   C6  C5     56.13  30.0  3
+ ZKO  Var_01    HE21  NE2  CD  OE1     0.00  10.0  1
+ ZKO  Var_02    HE22  NE2  CD  OE1   180.00  10.0  1
+ ZKO  Var_03    H     N    C5  O2    180.00  10.0  1
+ ZKO  Var_04    CB    CG   CD  NE2   145.31  30.0  3
+ ZKO  Var_05    CA    CB   CG  CD    172.46  30.0  3
+ ZKO  Var_06    CB    CG   CD  OE1   -35.92  30.0  3
+ ZKO  Var_07    N     CA   CB  CG   -173.57  30.0  3
+ ZKO  Var_08    C     CA   CB  CG     62.99  30.0  3
+ ZKO  Var_09    C5    N    CA  CB    174.89  30.0  3
+ ZKO  Var_10    O     C    CA  CB     84.81  30.0  3
+ ZKO  Var_11    O     C    CA  N     -35.64  30.0  3
+ ZKO  Var_12    C7    C6   C5  N     126.31  30.0  3
+ ZKO  Var_13    C     CA   N   C5    -62.90  30.0  1
+ ZKO  Var_14    C8    C7   C6  C5    177.75  30.0  3
+ ZKO  Var_15    C7    C6   C5  O2    -52.96  30.0  3
+ ZKO  Var_16    O3    C8   C7  C6    -15.89  30.0  3
+ ZKO  Var_17    O4    C8   C7  C6    165.25  30.0  3
+ ZKO  Var_18    HG2   CG   CD  NE2   -94.28  30.0  3
+ ZKO  Var_19    HG3   CG   CD  NE2    20.66  30.0  3
+ ZKO  Var_20    HB2   CB   CG  CD    -65.23  30.0  3
+ ZKO  Var_21    HB3   CB   CG  CD     51.31  30.0  3
+ ZKO  Var_22    HA    CA   CB  CG    -56.09  30.0  3
+ ZKO  Var_23    H9    C6   C5  N    -112.94  30.0  3
+ ZKO  Var_24    H10   C6   C5  N       2.81  30.0  3
+ ZKO  Var_25    H11   C7   C6  C5    -59.16  30.0  3
+ ZKO  Var_26    H12   C7   C6  C5     56.13  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -234,6 +230,5 @@ _chem_comp_plane_atom.dist_esd
  ZKO  plan-3  O4    0.020
  ZKO  plan-4  CA    0.020
  ZKO  plan-4  C     0.020
- ZKO  plan-4  OXT   0.020
  ZKO  plan-4  O     0.020
 

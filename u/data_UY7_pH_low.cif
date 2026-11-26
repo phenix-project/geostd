@@ -20,11 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- UY7  UY7  '(4S)-4-hydroxy-D-proline '  D-peptide  18  9  .  2022-08-11  2023-10-30
+ UY7  UY7  '(4S)-4-hydroxy-D-proline '  D-peptide  16  8  .  2022-08-11  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
 Added dihedrals for adding hydrogens : 2023-10-30
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_UY7
@@ -44,7 +45,6 @@ _chem_comp_atom.z
  UY7  CA   C  CH1   0  -0.161  -22.1622  73.6073  102.5836
  UY7  C    C  C     0   0.509  -22.2472  74.1074  101.1560
  UY7  N    N  NH1   0  -0.613  -23.0359  74.2368  103.5525
- UY7  OXT  O  OH1   0  -0.584  -22.7204  75.3419  101.0562
  UY7  O    O  O     0  -0.452  -21.8864  73.4553  100.2064
  UY7  O09  O  OH1   0  -0.674  -20.9789  73.4981  105.4549
  UY7  HB2  H  HCH2  0   0.269  -20.1265  72.9769  103.1662
@@ -54,7 +54,6 @@ _chem_comp_atom.z
  UY7  HD3  H  HCH2  0   0.237  -22.7618  75.4526  105.2556
  UY7  HA   H  HCH1  0   0.270  -22.3489  72.5306  102.5360
  UY7  H    H  HNH1  0   0.358  -23.8973  74.5947  103.1663
- UY7  HXT  H  HOH1  0   0.482  -22.7257  75.6201  100.1280
  UY7  H10  H  HOH1  0   0.449  -21.1723  73.8983  106.3082
 
 loop_
@@ -66,7 +65,6 @@ _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  UY7  O    C    double  1.231  0.020  1.231
- UY7  OXT  C    single  1.326  0.020  1.326
  UY7  C    CA   single  1.525  0.021  1.525
  UY7  CA   CB   single  1.521  0.033  1.521
  UY7  CA   N    single  1.458  0.019  1.458
@@ -81,7 +79,6 @@ _chem_comp_bond.value_dist_neutron
  UY7  CD   HD3  single  0.970  0.020  1.090
  UY7  CA   HA   single  0.970  0.020  0.970
  UY7  N    H    single  0.860  0.020  0.860
- UY7  OXT  HXT  single  0.850  0.020  0.980
  UY7  O09  H10  single  0.850  0.020  0.980
 
 loop_
@@ -115,13 +112,10 @@ _chem_comp_angle.value_angle_esd
  UY7  HA   CA   CB   109.00  3.000
  UY7  N    CA   CB   110.40  1.500
  UY7  C    CA   CB   110.50  1.500
- UY7  O    C    OXT  123.40  3.000
- UY7  OXT  C    CA   120.80  1.700
  UY7  O    C    CA   120.80  1.700
  UY7  H    N    CA   114.00  3.000
  UY7  H    N    CD   113.84  3.000
  UY7  CA   N    CD   108.98  3.000
- UY7  HXT  OXT  C    109.96  3.000
  UY7  H10  O09  CG   108.28  3.000
 
 loop_
@@ -134,16 +128,15 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- UY7  CONST_01  HXT  OXT  C   CA   180.00      0.0   0
- UY7  Var_01    CA   N    CD  CG   -38.84     30.0   1
- UY7  Var_02    C    CA   N   H   170.000  180.000  72
- UY7  Var_03    HD2  CD   CG  CB   -80.37     30.0   1
- UY7  Var_04    HD3  CD   CG  CB   160.67     30.0   1
- UY7  Var_05    HA   CA   CB  CG  -111.97     30.0   1
- UY7  Var_06    HB2  CB   CG  CD  -151.51     30.0   1
- UY7  Var_07    HB3  CB   CG  CD    90.01     30.0   1
- UY7  Var_08    HG2  CG   CB  CA  -147.67     30.0   1
- UY7  Var_09    H10  O09  CG  CB  -175.99     30.0   3
+ UY7  Var_01  CA   N    CD  CG   -38.84     30.0   1
+ UY7  Var_02  C    CA   N   H   170.000  180.000  72
+ UY7  Var_03  HD2  CD   CG  CB   -80.37     30.0   1
+ UY7  Var_04  HD3  CD   CG  CB   160.67     30.0   1
+ UY7  Var_05  HA   CA   CB  CG  -111.97     30.0   1
+ UY7  Var_06  HB2  CB   CG  CD  -151.51     30.0   1
+ UY7  Var_07  HB3  CB   CG  CD    90.01     30.0   1
+ UY7  Var_08  HG2  CG   CB  CA  -147.67     30.0   1
+ UY7  Var_09  H10  O09  CG  CB  -175.99     30.0   3
 
 loop_
 _chem_comp_chir.comp_id
@@ -161,9 +154,7 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- UY7  plan-1  CA   0.020
- UY7  plan-1  C    0.020
- UY7  plan-1  OXT  0.020
- UY7  plan-1  O    0.020
- UY7  plan-1  HXT  0.020
+ UY7  plan-1  CA  0.020
+ UY7  plan-1  C   0.020
+ UY7  plan-1  O   0.020
 

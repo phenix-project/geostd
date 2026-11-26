@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- B3Q  B3Q  '(3S)-3,6-diamino-6-oxohexanoic acid'  L-peptide  23  11  .  2022-03-15  2023-10-30
+ B3Q  B3Q  '(3S)-3,6-diamino-6-oxohexanoic acid'  L-peptide  21  10  .  2022-03-15  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_B3Q
@@ -53,11 +54,9 @@ _chem_comp_atom.z
  B3Q  HB2  H  HCH2  0   0.255  -1.6752  -1.2983   0.9948
  B3Q  HNA  H  HNH2  0   0.354  -0.2386   2.0644   0.6089
  B3Q  CD   C  CH2   0  -0.591   1.9086   0.4707  -0.2433
- B3Q  OXT  O  OH1   0  -0.591  -3.9271  -0.4419   0.7831
  B3Q  CE   C  C     0   0.530   3.2716  -0.1891  -0.1756
  B3Q  H8   H  HCH2  0   0.273   1.8132   0.9231  -1.2372
  B3Q  H9   H  HCH2  0   0.251   1.8834   1.3033   0.4649
- B3Q  HXT  H  HOH1  0   0.476  -4.7842  -0.0344   0.5856
  B3Q  NF2  N  NH2   0  -0.806   4.2982   0.6650  -0.0327
  B3Q  OF1  O  O     0  -0.495   3.4270  -1.3991  -0.2588
  B3Q  H11  H  HNH2  0   0.405   4.1579   1.6594   0.0095
@@ -81,14 +80,12 @@ _chem_comp_bond.value_dist_neutron
  B3Q  CB   CA   single  1.521  0.033  1.521
  B3Q  CB   HB1  single  0.970  0.020  0.970
  B3Q  C    CB   single  1.525  0.021  1.525
- B3Q  C    OXT  single  1.328  0.020  1.328
  B3Q  O    C    double  1.231  0.020  1.231
  B3Q  HA   CA   single  0.970  0.020  1.090
  B3Q  HB2  CB   single  0.970  0.020  1.090
  B3Q  CD   CE   single  1.516  0.020  1.516
  B3Q  CD   H8   single  0.970  0.020  1.090
  B3Q  CD   H9   single  0.970  0.020  1.090
- B3Q  OXT  HXT  single  0.850  0.020  0.980
  B3Q  CE   NF2  single  1.343  0.020  1.343
  B3Q  CE   OF1  double  1.223  0.020  1.223
  B3Q  NF2  H11  single  0.860  0.020  1.020
@@ -122,16 +119,13 @@ _chem_comp_angle.value_angle_esd
  B3Q  HB2  CB   CA   110.17  3.000
  B3Q  C    CB   CA   110.50  1.500
  B3Q  HB1  CB   CA   109.00  3.000
- B3Q  OXT  C    O    122.81  3.000
  B3Q  O    C    CB   120.80  1.700
- B3Q  OXT  C    CB   120.80  1.700
  B3Q  H9   CD   H8   105.72  3.000
  B3Q  H9   CD   CE   108.86  3.000
  B3Q  H8   CD   CE   107.36  3.000
  B3Q  H9   CD   CG   110.92  3.000
  B3Q  H8   CD   CG   109.79  3.000
  B3Q  CE   CD   CG   113.83  3.000
- B3Q  HXT  OXT  C    109.77  3.000
  B3Q  OF1  CE   NF2  122.64  3.000
  B3Q  OF1  CE   CD   122.81  3.000
  B3Q  NF2  CE   CD   114.54  3.000
@@ -149,19 +143,17 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- B3Q  CONST_01  H11  NF2  CE  CD     0.00   0.0  0
- B3Q  CONST_02  H12  NF2  CE  CD   180.00   0.0  0
- B3Q  CONST_03  HXT  OXT  C   CB   180.00   0.0  0
- B3Q  Var_01    CE   CD   CG  CA  -177.18  30.0  3
- B3Q  Var_02    OXT  C    CB  CA  -127.77  30.0  2
- B3Q  Var_03    NF2  CE   CD  CG  -163.20  30.0  3
- B3Q  Var_04    HG   CG   CA  N     60.81  30.0  3
- B3Q  Var_05    HGA  CG   CA  N    176.78  30.0  3
- B3Q  Var_06    HB1  CB   CA  N    175.89  30.0  2
- B3Q  Var_07    HB2  CB   CA  N    -66.29  30.0  2
- B3Q  Var_08    H    N    CA  CG   -50.47  30.0  3
- B3Q  Var_09    HNA  N    CA  CG    66.48  30.0  3
- B3Q  Var_10    HA   CA   CB  C    -58.94  30.0  3
+ B3Q  Var_01  H11  NF2  CE  CD     0.00  10.0  1
+ B3Q  Var_02  H12  NF2  CE  CD   180.00  10.0  1
+ B3Q  Var_03  CE   CD   CG  CA  -177.18  30.0  3
+ B3Q  Var_04  NF2  CE   CD  CG  -163.20  30.0  3
+ B3Q  Var_05  HG   CG   CA  N     60.81  30.0  3
+ B3Q  Var_06  HGA  CG   CA  N    176.78  30.0  3
+ B3Q  Var_07  HB1  CB   CA  N    175.89  30.0  2
+ B3Q  Var_08  HB2  CB   CA  N    -66.29  30.0  2
+ B3Q  Var_09  H    N    CA  CG   -50.47  30.0  3
+ B3Q  Var_10  HNA  N    CA  CG    66.48  30.0  3
+ B3Q  Var_11  HA   CA   CB  C    -58.94  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -187,6 +179,4 @@ _chem_comp_plane_atom.dist_esd
  B3Q  plan-2  CB   0.020
  B3Q  plan-2  C    0.020
  B3Q  plan-2  O    0.020
- B3Q  plan-2  OXT  0.020
- B3Q  plan-2  HXT  0.020
 

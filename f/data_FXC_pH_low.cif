@@ -21,10 +21,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FXC  FXC  "(2R)-2-azanyl-3-[3-(trifluoromethyl)phenyl]propanoic acid"  D-peptide  26  16  .  2024-05-30  2026-04-13
+ FXC  FXC  '(2R)-2-azanyl-3-[3-(trifluoromethyl)phenyl]propanoic acid'  D-peptide  24  15  .  2024-05-30  2026-04-13
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_FXC
@@ -52,7 +54,6 @@ _chem_comp_atom.z
  FXC  F11  F  F     0  -0.190  -39.5313  30.9977  -10.3438
  FXC  F12  F  F     0  -0.194  -38.5048  29.1351  -10.7732
  FXC  N    N  NH2   0  -0.574  -32.4502  28.2173   -7.3378
- FXC  OXT  O  OH1   0  -0.391  -34.6515  30.5570   -5.8614
  FXC  O    O  O     0  -0.374  -32.4515  30.8251   -6.1913
  FXC  HA   H  HCH1  0   0.114  -34.5617  28.5622   -7.1621
  FXC  HB2  H  HCH2  0   0.136  -33.7912  28.7784   -9.5110
@@ -63,7 +64,6 @@ _chem_comp_atom.z
  FXC  HD2  H  HCR6  0   0.150  -36.2811  28.8814   -9.4527
  FXC  H    H  HNH2  0   0.242  -32.3960  27.7685   -6.4289
  FXC  H2   H  HNH2  0   0.245  -32.5482  27.4728   -8.0206
- FXC  HXT  H  HOH1  0   0.361  -34.5189  31.3371   -5.2947
 
 loop_
 _chem_comp_bond.comp_id
@@ -88,7 +88,6 @@ _chem_comp_bond.value_dist_neutron
  FXC  N    CA   single    1.458  0.019  1.458
  FXC  CA   C    single    1.525  0.021  1.525
  FXC  C    O    double    1.231  0.020  1.231
- FXC  C    OXT  single    1.342  0.020  1.342
  FXC  CA   HA   single    0.970  0.020  0.970
  FXC  CB   HB2  single    0.970  0.020  1.090
  FXC  CB   HB3  single    0.970  0.020  1.090
@@ -98,7 +97,6 @@ _chem_comp_bond.value_dist_neutron
  FXC  CD2  HD2  single    0.930  0.020  1.080
  FXC  N    H    single    0.860  0.020  0.860
  FXC  N    H2   single    0.890  0.020  1.040
- FXC  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -143,13 +141,10 @@ _chem_comp_angle.value_angle_esd
  FXC  HD2  CD2  CE2  119.96  3.000
  FXC  HD2  CD2  CG   119.58  3.000
  FXC  CE2  CD2  CG   120.46  3.000
- FXC  O    C    OXT  122.85  3.000
- FXC  OXT  C    CA   120.80  1.700
  FXC  O    C    CA   120.80  1.700
  FXC  H2   N    H    106.45  3.000
  FXC  H2   N    CA   108.84  3.000
  FXC  H    N    CA   114.00  3.000
- FXC  HXT  OXT  C    108.64  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -171,30 +166,27 @@ _chem_comp_tor.period
  FXC  CONST_08  CE2  CD2  CG   CB    180.00   0.0  0
  FXC  CONST_09  C09  CE2  CD2  CG    180.00   0.0  0
  FXC  CONST_10  C09  CE2  CZ   CE1   180.00   0.0  0
- FXC  CONST_11  HE1  CE1  CD1  CG    180.00   0.0  0
- FXC  CONST_12  HZ   CZ   CE1  CD1   180.00   0.0  0
- FXC  CONST_13  HD2  CD2  CG   CD1   180.00   0.0  0
- FXC  CONST_14  HD1  CD1  CE1  CZ    180.00   0.0  0
- FXC  CONST_15  HXT  OXT  C    CA    180.00   0.0  0
  FXC  Var_01    CD1  CG   CB   CA     95.58  30.0  3
- FXC  Var_02    CD2  CG   CB   CA    -83.51  30.0  3
- FXC  Var_03    F12  C09  CE2  CZ    137.30  30.0  2
- FXC  Var_04    F10  C09  CE2  CZ   -103.60  30.0  2
- FXC  Var_05    F11  C09  CE2  CZ     16.60  30.0  2
- FXC  Var_06    F12  C09  CE2  CD2   -43.45  30.0  2
- FXC  Var_07    F10  C09  CE2  CD2    75.66  30.0  2
- FXC  Var_08    F11  C09  CE2  CD2  -164.14  30.0  2
- FXC  Var_09    HB2  CB   CG   CD1  -144.95  30.0  2
- FXC  Var_10    HB3  CB   CG   CD1   -26.30  30.0  2
- FXC  Var_11    N    CA   CB   CG    178.26  30.0  3
- FXC  Var_12    C    CA   CB   CG    -62.02  30.0  3
- FXC  Var_13    HA   CA   CB   CG     54.51  30.0  3
- FXC  Var_14    O    C    CA   CB    -80.78  30.0  3
- FXC  Var_15    OXT  C    CA   CB     97.47  30.0  3
- FXC  Var_16    O    C    CA   N      38.29  30.0  3
- FXC  Var_17    OXT  C    CA   N    -143.46  30.0  3
- FXC  Var_18    H    N    CA   CB   -174.89  30.0  3
- FXC  Var_19    H2   N    CA   CB    -58.48  30.0  3
+ FXC  Var_02    HE1  CE1  CD1  CG    180.00  10.0  1
+ FXC  Var_03    HZ   CZ   CE1  CD1   180.00  10.0  1
+ FXC  Var_04    HD2  CD2  CG   CD1   180.00  10.0  1
+ FXC  Var_05    HD1  CD1  CE1  CZ    180.00  10.0  1
+ FXC  Var_06    CD2  CG   CB   CA    -83.51  30.0  3
+ FXC  Var_07    F12  C09  CE2  CZ    137.30  30.0  2
+ FXC  Var_08    F10  C09  CE2  CZ   -103.60  30.0  2
+ FXC  Var_09    F11  C09  CE2  CZ     16.60  30.0  2
+ FXC  Var_10    F12  C09  CE2  CD2   -43.45  30.0  2
+ FXC  Var_11    F10  C09  CE2  CD2    75.66  30.0  2
+ FXC  Var_12    F11  C09  CE2  CD2  -164.14  30.0  2
+ FXC  Var_13    HB2  CB   CG   CD1  -144.95  30.0  2
+ FXC  Var_14    HB3  CB   CG   CD1   -26.30  30.0  2
+ FXC  Var_15    N    CA   CB   CG    178.26  30.0  3
+ FXC  Var_16    C    CA   CB   CG    -62.02  30.0  3
+ FXC  Var_17    HA   CA   CB   CG     54.51  30.0  3
+ FXC  Var_18    O    C    CA   CB    -80.78  30.0  3
+ FXC  Var_19    O    C    CA   N      38.29  30.0  3
+ FXC  Var_20    H    N    CA   CB   -174.89  30.0  3
+ FXC  Var_21    H2   N    CA   CB    -58.48  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -225,7 +217,5 @@ _chem_comp_plane_atom.dist_esd
  FXC  plan-1  HD2  0.020
  FXC  plan-2  CA   0.020
  FXC  plan-2  C    0.020
- FXC  plan-2  OXT  0.020
  FXC  plan-2  O    0.020
- FXC  plan-2  HXT  0.020
 

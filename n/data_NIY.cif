@@ -21,10 +21,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NIY  NIY  "META-NITRO-TYROSINE"  L-peptide  25  16  .  2026-09-15  2026-09-15
+ NIY  NIY  META-NITRO-TYROSINE  L-peptide  24  15  .  2026-09-15  2026-09-15
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_NIY
@@ -53,7 +55,6 @@ _chem_comp_atom.z
  NIY  NN   N  N      1   0.435   6.1027  -0.1137   0.7156
  NIY  O1   O  O     -1  -0.370   5.6579   0.6971  -0.0948
  NIY  O2   O  O      0  -0.349   7.2614  -0.5128   0.6932
- NIY  OXT  O  OC    -1  -0.565   2.1367   2.0829   3.0189
  NIY  H    H  HNH2   0   0.224  -1.1256  -0.7069   2.4751
  NIY  H2   H  HNH2   0   0.217  -0.8220   0.4716   1.3870
  NIY  HA   H  HCH1   0   0.059   0.8279   0.1172   3.7613
@@ -79,7 +80,6 @@ _chem_comp_bond.value_dist_neutron
  NIY  CA   CB   single    1.530  0.020  1.530
  NIY  CA   HA   single    0.970  0.020  0.970
  NIY  C    O    deloc     1.231  0.020  1.231
- NIY  C    OXT  deloc     1.256  0.020  1.256
  NIY  CB   CG   single    1.502  0.020  1.502
  NIY  CB   HB2  single    0.970  0.020  1.090
  NIY  CB   HB3  single    0.970  0.020  1.090
@@ -114,8 +114,6 @@ _chem_comp_angle.value_angle_esd
  NIY  HA   CA   N    110.00  3.000
  NIY  CB   CA   N    110.50  1.700
  NIY  C    CA   N    111.00  2.800
- NIY  OXT  C    O    126.46  3.000
- NIY  OXT  C    CA   117.22  3.000
  NIY  O    C    CA   120.80  1.700
  NIY  HB3  CB   HB2  107.70  3.000
  NIY  HB3  CB   CG   109.89  3.000
@@ -168,27 +166,25 @@ _chem_comp_tor.period
  NIY  CONST_10  OH   CZ   CE1  CD1   180.00   0.0  0
  NIY  CONST_11  OH   CZ   CE2  CD2   180.00   0.0  0
  NIY  CONST_12  NN   CE1  CZ   CE2   180.00   0.0  0
- NIY  CONST_13  HE2  CE2  CD2  CG    180.00   0.0  0
- NIY  CONST_14  HD2  CD2  CG   CD1   180.00   0.0  0
- NIY  CONST_15  HD1  CD1  CG   CD2   180.00   0.0  0
- NIY  CONST_16  O1   NN   CE1  CD1     0.00   0.0  0
- NIY  CONST_17  O2   NN   CE1  CD1   180.00   0.0  0
- NIY  CONST_18  O1   NN   CE1  CZ    180.00   0.0  0
- NIY  CONST_19  O2   NN   CE1  CZ      0.00   0.0  0
+ NIY  CONST_13  O1   NN   CE1  CD1     0.00   0.0  0
+ NIY  CONST_14  O2   NN   CE1  CD1   180.00   0.0  0
+ NIY  CONST_15  O1   NN   CE1  CZ    180.00   0.0  0
+ NIY  CONST_16  O2   NN   CE1  CZ      0.00   0.0  0
  NIY  Var_01    CD1  CG   CB   CA    -98.12  30.0  2
- NIY  Var_02    CD2  CG   CB   CA     79.22  30.0  2
- NIY  Var_03    HB2  CB   CG   CD1   141.21  30.0  2
- NIY  Var_04    HB3  CB   CG   CD1    22.95  30.0  2
- NIY  Var_05    HH   OH   CZ   CE1   174.37  30.0  2
- NIY  Var_06    CG   CB   CA   N    -179.73  30.0  3
- NIY  Var_07    CG   CB   CA   C      58.20  30.0  3
- NIY  Var_08    HA   CA   CB   CG    -59.57  30.0  1
- NIY  Var_09    O    C    CA   N     -48.00  30.0  3
- NIY  Var_10    OXT  C    CA   N     133.49  30.0  3
- NIY  Var_11    CB   CA   C    O      75.82  30.0  2
- NIY  Var_12    OXT  C    CA   CB   -102.69  30.0  3
- NIY  Var_13    H    N    CA   C     167.45  30.0  3
- NIY  Var_14    H2   N    CA   C      51.33  30.0  3
+ NIY  Var_02    HE2  CE2  CD2  CG    180.00  10.0  1
+ NIY  Var_03    HD2  CD2  CG   CD1   180.00  10.0  1
+ NIY  Var_04    HD1  CD1  CG   CD2   180.00  10.0  1
+ NIY  Var_05    CD2  CG   CB   CA     79.22  30.0  2
+ NIY  Var_06    HB2  CB   CG   CD1   141.21  30.0  2
+ NIY  Var_07    HB3  CB   CG   CD1    22.95  30.0  2
+ NIY  Var_08    HH   OH   CZ   CE1   174.37  30.0  2
+ NIY  Var_09    CG   CB   CA   N    -179.73  30.0  3
+ NIY  Var_10    CG   CB   CA   C      58.20  30.0  3
+ NIY  Var_11    HA   CA   CB   CG    -59.57  30.0  1
+ NIY  Var_12    O    C    CA   N     -48.00  30.0  3
+ NIY  Var_13    CB   CA   C    O      75.82  30.0  2
+ NIY  Var_14    H    N    CA   C     167.45  30.0  3
+ NIY  Var_15    H2   N    CA   C      51.33  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -224,5 +220,4 @@ _chem_comp_plane_atom.dist_esd
  NIY  plan-3  CA   0.020
  NIY  plan-3  C    0.020
  NIY  plan-3  O    0.020
- NIY  plan-3  OXT  0.020
 

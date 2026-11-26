@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- Q3S  Q3S  '(2R,3S)-2,3-diaminobutanoic acid'  L-peptide  18  8  .  2022-09-22  2023-10-30
+ Q3S  Q3S  '(2R,3S)-2,3-diaminobutanoic acid'  L-peptide  16  7  .  2022-09-22  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
 Added dihedrals for adding hydrogens : 2023-10-30
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_Q3S
@@ -45,14 +46,12 @@ _chem_comp_atom.z
  Q3S  O     O  O     0  -0.443   1.8240   0.3212   1.0248
  Q3S  C02   C  CH1   0  -0.110  -1.1945  -0.2401   0.3615
  Q3S  N2    N  NH2   0  -0.785  -2.4658   0.3117  -0.0876
- Q3S  OXT   O  OH1   0  -0.587   1.8010  -0.9031  -0.8389
  Q3S  H1    H  HNH2  0   0.351  -1.0393   2.2359  -0.4640
  Q3S  H     H  HNH2  0   0.340   0.0883   2.1642   0.6867
  Q3S  HA    H  HCH1  0   0.251  -0.2156   0.2438  -1.4892
  Q3S  H021  H  HCH1  0   0.230  -1.0749   0.0398   1.4136
  Q3S  H3    H  HNH2  0   0.341  -2.7049  -0.0883  -0.9888
  Q3S  H4    H  HNH2  0   0.354  -3.1998   0.0183   0.5450
- Q3S  HXT   H  HOH1  0   0.480   2.6506  -1.2266  -0.5013
  Q3S  C01   C  CH3   0  -0.677  -1.1214  -1.7611   0.2488
  Q3S  H011  H  HCH3  0   0.237  -1.9699  -2.2105   0.7665
  Q3S  H013  H  HCH3  0   0.222  -1.1618  -2.0799  -0.7956
@@ -72,7 +71,6 @@ _chem_comp_bond.value_dist_neutron
  Q3S  C02  CA    single  1.547  0.020  1.547
  Q3S  C02  C01   single  1.527  0.020  1.527
  Q3S  CA   N     single  1.458  0.019  1.458
- Q3S  C    OXT   single  1.325  0.020  1.325
  Q3S  N    H1    single  0.890  0.020  1.040
  Q3S  N    H     single  0.860  0.020  0.860
  Q3S  CA   HA    single  0.970  0.020  0.970
@@ -82,7 +80,6 @@ _chem_comp_bond.value_dist_neutron
  Q3S  C02  H021  single  0.970  0.020  1.090
  Q3S  N2   H3    single  0.890  0.020  1.040
  Q3S  N2   H4    single  0.890  0.020  1.040
- Q3S  OXT  HXT   single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -100,8 +97,6 @@ _chem_comp_angle.value_angle_esd
  Q3S  HA    CA   N     110.00  3.000
  Q3S  C02   CA   N     114.02  3.000
  Q3S  C     CA   N     111.00  2.800
- Q3S  OXT   C    O     123.40  3.000
- Q3S  OXT   C    CA    120.80  1.700
  Q3S  O     C    CA    120.80  1.700
  Q3S  H021  C02  N2    107.14  3.000
  Q3S  H021  C02  C01   108.67  3.000
@@ -112,7 +107,6 @@ _chem_comp_angle.value_angle_esd
  Q3S  H4    N2   H3    105.66  3.000
  Q3S  H4    N2   C02   109.28  3.000
  Q3S  H3    N2   C02   109.28  3.000
- Q3S  HXT   OXT  C     110.14  3.000
  Q3S  H012  C01  H013  107.92  3.000
  Q3S  H012  C01  H011  107.10  3.000
  Q3S  H013  C01  H011  107.74  3.000
@@ -130,15 +124,14 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- Q3S  CONST_01  HXT   OXT  C    CA   180.00   0.0  0
- Q3S  Var_01    H021  C02  CA   N    -57.47  30.0  2
- Q3S  Var_02    H3    N2   C02  CA    77.37  30.0  3
- Q3S  Var_03    H4    N2   C02  CA  -167.46  30.0  3
- Q3S  Var_04    H011  C01  C02  CA  -176.05  30.0  3
- Q3S  Var_05    H013  C01  C02  CA   -57.03  30.0  3
- Q3S  Var_06    H012  C01  C02  CA    64.45  30.0  3
- Q3S  Var_07    H1    N    CA   C   -172.95  30.0  3
- Q3S  Var_08    H     N    CA   C    -59.35  30.0  3
+ Q3S  Var_01  H021  C02  CA   N    -57.47  30.0  2
+ Q3S  Var_02  H3    N2   C02  CA    77.37  30.0  3
+ Q3S  Var_03  H4    N2   C02  CA  -167.46  30.0  3
+ Q3S  Var_04  H011  C01  C02  CA  -176.05  30.0  3
+ Q3S  Var_05  H013  C01  C02  CA   -57.03  30.0  3
+ Q3S  Var_06  H012  C01  C02  CA    64.45  30.0  3
+ Q3S  Var_07  H1    N    CA   C   -172.95  30.0  3
+ Q3S  Var_08  H     N    CA   C    -59.35  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -156,9 +149,7 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- Q3S  plan-1  CA   0.020
- Q3S  plan-1  C    0.020
- Q3S  plan-1  O    0.020
- Q3S  plan-1  OXT  0.020
- Q3S  plan-1  HXT  0.020
+ Q3S  plan-1  CA  0.020
+ Q3S  plan-1  C   0.020
+ Q3S  plan-1  O   0.020
 

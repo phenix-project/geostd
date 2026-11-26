@@ -20,11 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ZV4  ZV4  '(2S)-2-azanyl-3-(4-phosphonophenyl)propanoic acid'  L-peptide  25  16  .  2024-07-12  2024-08-02
+ ZV4  ZV4  '(2S)-2-azanyl-3-(4-phosphonophenyl)propanoic acid'  L-peptide  23  15  .  2024-07-12  2024-08-02
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
 Removed H2 atom : 2024-08-02
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_ZV4
@@ -61,7 +63,6 @@ _chem_comp_atom.z
  ZV4  HD2  H  HCR6   0   0.192  -2.5717   7.1338  -13.4391
  ZV4  HE1  H  HCR6   0   0.211  -7.1151   7.7537  -11.6611
  ZV4  HE2  H  HCR6   0   0.217  -4.1704   5.2762  -13.5040
- ZV4  OXT  O  OC    -1  -0.000  -1.7459  11.2013   -8.8674
 
 loop_
 _chem_comp_bond.comp_id
@@ -94,7 +95,6 @@ _chem_comp_bond.value_dist_neutron
  ZV4  CD2  HD2  single    0.930  0.020  1.080
  ZV4  CE1  HE1  single    0.930  0.020  1.080
  ZV4  CE2  HE2  single    0.930  0.020  1.080
- ZV4  C    OXT  deloc     2.373  0.020  2.373
 
 loop_
 _chem_comp_angle.comp_id
@@ -140,8 +140,6 @@ _chem_comp_angle.value_angle_esd
  ZV4  O1P  PZ   CZ   104.44  3.000
  ZV4  O3P  PZ   CZ   105.29  3.000
  ZV4  O2P  PZ   CZ   102.69  3.000
- ZV4  OXT  C    O     30.65  3.000
- ZV4  OXT  C    CA    85.29  3.000
  ZV4  O    C    CA   120.80  1.700
 
 loop_
@@ -164,28 +162,26 @@ _chem_comp_tor.period
  ZV4  CONST_08  CE2  CD2  CG   CB    180.00   0.0  0
  ZV4  CONST_09  PZ   CZ   CE1  CD1   180.00   0.0  0
  ZV4  CONST_10  PZ   CZ   CE2  CD2   180.00   0.0  0
- ZV4  CONST_11  HE1  CE1  CD1  CG    180.00   0.0  0
- ZV4  CONST_12  HE2  CE2  CD2  CG    180.00   0.0  0
- ZV4  CONST_13  HD2  CD2  CG   CD1   180.00   0.0  0
- ZV4  CONST_14  HD1  CD1  CG   CD2   180.00   0.0  0
  ZV4  Var_01    CD1  CG   CB   CA     57.28  30.0  2
- ZV4  Var_02    CD2  CG   CB   CA   -125.33  30.0  2
- ZV4  Var_03    O2P  PZ   CZ   CE1    84.81  30.0  2
- ZV4  Var_04    O3P  PZ   CZ   CE1   -34.72  30.0  2
- ZV4  Var_05    O1P  PZ   CZ   CE1  -156.06  30.0  2
- ZV4  Var_06    O2P  PZ   CZ   CE2   -87.98  30.0  2
- ZV4  Var_07    O3P  PZ   CZ   CE2   152.49  30.0  2
- ZV4  Var_08    O1P  PZ   CZ   CE2    31.14  30.0  2
- ZV4  Var_09    H2B  CB   CG   CD1  -179.45  30.0  2
- ZV4  Var_10    H1B  CB   CG   CD1   -64.10  30.0  2
- ZV4  Var_11    CG   CB   CA   N    -176.03  30.0  2
- ZV4  Var_12    C    CA   CB   CG     56.56  30.0  3
- ZV4  Var_13    HA   CA   CB   CG    -59.22  30.0  3
- ZV4  Var_14    O    C    CA   N      51.08  30.0  3
- ZV4  Var_15    OXT  C    CA   N      52.48  30.0  3
- ZV4  Var_16    O    C    CA   CB    173.79  30.0  3
- ZV4  Var_17    OXT  C    CA   CB    175.20  30.0  3
- ZV4  Var_18    H    N    CA   CB   -172.87  30.0  3
+ ZV4  Var_02    HE1  CE1  CD1  CG    180.00  10.0  1
+ ZV4  Var_03    HE2  CE2  CD2  CG    180.00  10.0  1
+ ZV4  Var_04    HD2  CD2  CG   CD1   180.00  10.0  1
+ ZV4  Var_05    HD1  CD1  CG   CD2   180.00  10.0  1
+ ZV4  Var_06    CD2  CG   CB   CA   -125.33  30.0  2
+ ZV4  Var_07    O2P  PZ   CZ   CE1    84.81  30.0  2
+ ZV4  Var_08    O3P  PZ   CZ   CE1   -34.72  30.0  2
+ ZV4  Var_09    O1P  PZ   CZ   CE1  -156.06  30.0  2
+ ZV4  Var_10    O2P  PZ   CZ   CE2   -87.98  30.0  2
+ ZV4  Var_11    O3P  PZ   CZ   CE2   152.49  30.0  2
+ ZV4  Var_12    O1P  PZ   CZ   CE2    31.14  30.0  2
+ ZV4  Var_13    H2B  CB   CG   CD1  -179.45  30.0  2
+ ZV4  Var_14    H1B  CB   CG   CD1   -64.10  30.0  2
+ ZV4  Var_15    CG   CB   CA   N    -176.03  30.0  2
+ ZV4  Var_16    C    CA   CB   CG     56.56  30.0  3
+ ZV4  Var_17    HA   CA   CB   CG    -59.22  30.0  3
+ ZV4  Var_18    O    C    CA   N      51.08  30.0  3
+ ZV4  Var_19    O    C    CA   CB    173.79  30.0  3
+ ZV4  Var_20    H    N    CA   CB   -172.87  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -217,5 +213,4 @@ _chem_comp_plane_atom.dist_esd
  ZV4  plan-2  CA   0.020
  ZV4  plan-2  C    0.020
  ZV4  plan-2  O    0.020
- ZV4  plan-2  OXT  0.020
 

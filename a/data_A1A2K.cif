@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A1A2K  A1A2K  "3-[1-(carboxymethyl)-1H-1,2,3-triazol-4-yl]-D-alanine"  D-peptide  23  15  .  2026-03-30  2026-03-30
+ A1A2K  A1A2K  3-[1-(carboxymethyl)-1H-1,2,3-triazol-4-yl]-D-alanine  D-peptide  22  14  .  2026-03-30  2026-03-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_A1A2K
@@ -46,7 +48,6 @@ _chem_comp_atom.z
  A1A2K  C     C  C      0   0.399  1.3589  4.6996  -5.5175
  A1A2K  N43   N  NR5    0  -0.220  4.9303  2.6126  -1.3684
  A1A2K  N     N  NH2    0  -0.795  2.2629  5.4482  -3.3388
- A1A2K  OXT   O  OC    -1  -0.600  1.6768  5.8233  -5.9540
  A1A2K  N85   N  N      0  -0.329  3.2981  1.8202  -2.4508
  A1A2K  N86   N  N      0  -0.120  3.9934  1.6848  -1.3705
  A1A2K  O41   O  O      0  -0.582  4.2842  4.5943   0.3569
@@ -69,7 +70,6 @@ _chem_comp_bond.type
 _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
- A1A2K  OXT  C     deloc     1.247  0.020  1.247
  A1A2K  O    C     deloc     1.231  0.020  1.231
  A1A2K  C    CA    single    1.525  0.021  1.525
  A1A2K  CB   CA    single    1.521  0.033  1.521
@@ -127,9 +127,7 @@ _chem_comp_angle.value_angle_esd
  A1A2K  HA    CA   CB    109.00  3.000
  A1A2K  N     CA   CB    110.40  1.500
  A1A2K  C     CA   CB    110.50  1.500
- A1A2K  O     C    OXT   127.10  3.000
  A1A2K  O     C    CA    120.80  1.700
- A1A2K  OXT   C    CA    120.80  1.700
  A1A2K  N86   N43  C44   110.73  3.000
  A1A2K  N86   N43  C42   121.11  3.000
  A1A2K  C44   N43  C42   127.63  3.000
@@ -158,26 +156,24 @@ _chem_comp_tor.period
  A1A2K  CONST_07  N85   N86  N43  C42   180.00   0.0  0
  A1A2K  CONST_08  N43   C44  C45  CB    180.00   0.0  0
  A1A2K  CONST_09  N86   N85  C45  CB    180.00   0.0  0
- A1A2K  CONST_10  H441  C44  C45  N85   180.00   0.0  0
  A1A2K  Var_01    C44   N43  C42  C40    74.21  30.0  3
- A1A2K  Var_02    N86   N43  C42  C40   -96.64  30.0  3
- A1A2K  Var_03    CA    CB   C45  C44   -92.96  30.0  1
- A1A2K  Var_04    N85   C45  CB   CA     81.60  30.0  2
- A1A2K  Var_05    HB2   CB   C45  C44   145.60  30.0  1
- A1A2K  Var_06    HB1   CB   C45  C44    28.15  30.0  1
- A1A2K  Var_07    H422  C42  N43  C44  -163.65  30.0  2
- A1A2K  Var_08    H421  C42  N43  C44   -47.89  30.0  2
- A1A2K  Var_09    C     CA   CB   C45  -178.69  30.0  3
- A1A2K  Var_10    N     CA   CB   C45    57.15  30.0  3
- A1A2K  Var_11    O41   C40  C42  N43    -2.64  30.0  3
- A1A2K  Var_12    O100  C40  C42  N43   177.65  30.0  3
- A1A2K  Var_13    HA    CA   CB   C45   -62.68  30.0  3
- A1A2K  Var_14    OXT   C    CA   CB   -100.09  30.0  2
+ A1A2K  Var_02    H441  C44  C45  N85   180.00  10.0  1
+ A1A2K  Var_03    N86   N43  C42  C40   -96.64  30.0  3
+ A1A2K  Var_04    CA    CB   C45  C44   -92.96  30.0  1
+ A1A2K  Var_05    N85   C45  CB   CA     81.60  30.0  2
+ A1A2K  Var_06    HB2   CB   C45  C44   145.60  30.0  1
+ A1A2K  Var_07    HB1   CB   C45  C44    28.15  30.0  1
+ A1A2K  Var_08    H422  C42  N43  C44  -163.65  30.0  2
+ A1A2K  Var_09    H421  C42  N43  C44   -47.89  30.0  2
+ A1A2K  Var_10    C     CA   CB   C45  -178.69  30.0  3
+ A1A2K  Var_11    N     CA   CB   C45    57.15  30.0  3
+ A1A2K  Var_12    O41   C40  C42  N43    -2.64  30.0  3
+ A1A2K  Var_13    O100  C40  C42  N43   177.65  30.0  3
+ A1A2K  Var_14    HA    CA   CB   C45   -62.68  30.0  3
  A1A2K  Var_15    O     C    CA   CB     77.28  30.0  2
- A1A2K  Var_16    OXT   C    CA   N      26.03  30.0  2
- A1A2K  Var_17    O     C    CA   N    -156.60  30.0  2
- A1A2K  Var_18    H     N    CA   CB    -47.34  30.0  3
- A1A2K  Var_19    H2    N    CA   CB     69.93  30.0  3
+ A1A2K  Var_16    O     C    CA   N    -156.60  30.0  2
+ A1A2K  Var_17    H     N    CA   CB    -47.34  30.0  3
+ A1A2K  Var_18    H2    N    CA   CB     69.93  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -208,6 +204,5 @@ _chem_comp_plane_atom.dist_esd
  A1A2K  plan-2  O100  0.020
  A1A2K  plan-3  CA    0.020
  A1A2K  plan-3  C     0.020
- A1A2K  plan-3  OXT   0.020
  A1A2K  plan-3  O     0.020
 

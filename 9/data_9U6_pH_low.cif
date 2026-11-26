@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 9U6  9U6  3-[(2-{[(benzyloxy)carbonyl]amino}ethyl)selanyl]-L-alanine  peptide  38  20  .  2022-07-24  2024-04-10
+ 9U6  9U6  3-[(2-{[(benzyloxy)carbonyl]amino}ethyl)selanyl]-L-alanine  peptide  35  19  .  2022-07-24  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-10
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_9U6
@@ -74,8 +75,6 @@ _chem_comp_atom.z
  9U6  H19  H   HCR6  0   0.258   7.1023   2.6029   1.6847
  9U6  H    H   HNH2  0   0.349  -5.1640   0.0461  -2.1071
  9U6  H10  H   HNH1  0   0.405   1.3615   0.4017  -0.0241
- 9U6  HXT  H   HOH1  0   0.484  -6.6155   2.9994   1.0981
- 9U6  OXT  O   OH1   0  -0.591  -6.1628   2.1429   1.1249
 
 loop_
 _chem_comp_bond.comp_id
@@ -104,7 +103,6 @@ _chem_comp_bond.value_dist_neutron
  9U6  O    C    double    1.231  0.020  1.231
  9U6  CA   C    single    1.525  0.021  1.525
  9U6  CA   N    single    1.458  0.019  1.458
- 9U6  C    OXT  single    1.327  0.020  1.327
  9U6  C17  H17  single    0.930  0.020  1.080
  9U6  C20  H20  single    0.930  0.020  1.080
  9U6  CA   HA   single    0.970  0.020  0.970
@@ -121,7 +119,6 @@ _chem_comp_bond.value_dist_neutron
  9U6  C19  H19  single    0.930  0.020  1.080
  9U6  N    H    single    0.860  0.020  0.860
  9U6  N10  H10  single    0.860  0.020  1.020
- 9U6  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -139,8 +136,6 @@ _chem_comp_angle.value_angle_esd
  9U6  H20  C20  C19  119.67  3.000
  9U6  H20  C20  C15  119.84  3.000
  9U6  C19  C20  C15  120.49  3.000
- 9U6  O    C    OXT  123.76  3.000
- 9U6  OXT  C    CA   120.80  1.700
  9U6  O    C    CA   120.80  1.700
  9U6  HA   CA   N    110.00  3.000
  9U6  HA   CA   CB   109.00  3.000
@@ -190,7 +185,6 @@ _chem_comp_angle.value_angle_esd
  9U6  C11  N10  C9   121.58  3.000
  9U6  C14  O13  C11  116.98  3.000
  9U6  C8   SE7  CB    95.89  3.000
- 9U6  HXT  OXT  C    110.24  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -210,21 +204,20 @@ _chem_comp_tor.period
  9U6  CONST_06  C19  C20  C15  C16     0.00   0.0  0
  9U6  CONST_07  C14  C15  C16  C17   180.00   0.0  0
  9U6  CONST_08  C19  C20  C15  C14   180.00   0.0  0
- 9U6  CONST_09  H17  C17  C16  C15   180.00   0.0  0
- 9U6  CONST_10  H19  C19  C20  C15   180.00   0.0  0
- 9U6  CONST_11  H16  C16  C15  C20   180.00   0.0  0
- 9U6  CONST_12  H18  C18  C19  C20   180.00   0.0  0
- 9U6  CONST_13  H20  C20  C15  C16   180.00   0.0  0
- 9U6  CONST_14  HXT  OXT  C    CA    180.00   0.0  0
- 9U6  Var_01    O13  C14  C15  C20    71.71  30.0  2
- 9U6  Var_02    C9   C8   SE7  CB   -176.59  30.0  1
- 9U6  Var_03    C11  N10  C9   C8    177.93  30.0  3
- 9U6  Var_04    O13  C11  N10  C9    179.62  30.0  2
- 9U6  Var_05    N10  C11  O13  C14   177.97  30.0  3
- 9U6  Var_06    SE7  C8   C9   N10  -179.91  30.0  1
- 9U6  Var_07    HB2  CB   SE7  C8     45.15  30.0  3
- 9U6  Var_08    HB3  CB   CA   C      53.05  30.0  2
- 9U6  Var_09    H    N    CA   C      72.12  30.0  3
+ 9U6  Var_01    H17  C17  C16  C15   180.00  10.0  1
+ 9U6  Var_02    O13  C14  C15  C20    71.71  30.0  2
+ 9U6  Var_03    H19  C19  C20  C15   180.00  10.0  1
+ 9U6  Var_04    H16  C16  C15  C20   180.00  10.0  1
+ 9U6  Var_05    H18  C18  C19  C20   180.00  10.0  1
+ 9U6  Var_06    H20  C20  C15  C16   180.00  10.0  1
+ 9U6  Var_07    C9   C8   SE7  CB   -176.59  30.0  1
+ 9U6  Var_08    C11  N10  C9   C8    177.93  30.0  3
+ 9U6  Var_09    O13  C11  N10  C9    179.62  30.0  2
+ 9U6  Var_10    N10  C11  O13  C14   177.97  30.0  3
+ 9U6  Var_11    SE7  C8   C9   N10  -179.91  30.0  1
+ 9U6  Var_12    HB2  CB   SE7  C8     45.15  30.0  3
+ 9U6  Var_13    HB3  CB   CA   C      53.05  30.0  2
+ 9U6  Var_14    H    N    CA   C      72.12  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -256,8 +249,6 @@ _chem_comp_plane_atom.dist_esd
  9U6  plan-2  C    0.020
  9U6  plan-2  CA   0.020
  9U6  plan-2  O    0.020
- 9U6  plan-2  HXT  0.020
- 9U6  plan-2  OXT  0.020
  9U6  plan-3  C11  0.020
  9U6  plan-3  N10  0.020
  9U6  plan-3  O12  0.020

@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
-F0G F0G "(E)-N-({3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methylidene)-L-alanine" L-peptide 33 21 . 2019-03-22 2026-06-15
+ F0G  F0G  (E)-N-({3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methylidene)-L-alanine  L-peptide  32  20  .  2019-03-22  2026-06-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_F0G
@@ -55,7 +57,6 @@ _chem_comp_atom.z
  F0G  CA   C  CH1    0  -0.237  -3.2668   1.6591  -0.4705
  F0G  C    C  C      0   0.418  -4.2491   1.8778   0.7177
  F0G  CB   C  CH3    0  -0.651  -4.0066   1.6908  -1.8046
- F0G  OXT  O  OC    -1  -0.602  -4.9101   2.9312   0.6560
  F0G  O    O  O      0  -0.588  -4.2765   1.0110   1.6062
  F0G  P10  P  P      0   1.226   4.0793   1.2773   0.0332
  F0G  H1   H  HCH3   0   0.242  -2.0410  -4.6021   1.1920
@@ -97,7 +98,6 @@ _chem_comp_bond.value_dist_neutron
  F0G  O3P  P10  deloc     1.526  0.020  1.526
  F0G  CA   C    single    1.557  0.020  1.557
  F0G  CA   CB   single    1.526  0.020  1.526
- F0G  C    OXT  deloc     1.245  0.020  1.245
  F0G  P10  O2P  deloc     1.522  0.020  1.522
  F0G  P10  O1P  deloc     1.526  0.020  1.526
  F0G  C2A  H1   single    0.970  0.020  1.090
@@ -160,8 +160,6 @@ _chem_comp_angle.value_angle_esd
  F0G  H11  CA   N    110.09  3.000
  F0G  CB   CA   N    108.95  3.000
  F0G  C    CA   N    111.07  3.000
- F0G  O    C    OXT  127.91  3.000
- F0G  OXT  C    CA   114.58  3.000
  F0G  O    C    CA   117.51  3.000
  F0G  H14  CB   H13  108.19  3.000
  F0G  H14  CB   H12  108.15  3.000
@@ -200,33 +198,31 @@ _chem_comp_tor.period
  F0G  CONST_12  C5A  C5   C4   C3    180.00   0.0  0
  F0G  CONST_13  C5   C4   C3   O3    180.00   0.0  0
  F0G  CONST_14  C6   C5   C4   C4A   180.00   0.0  0
- F0G  CONST_15  H6   C6   N1   C2    180.00   0.0  0
  F0G  Var_01    N    C4A  C4   C3     -4.19  30.0  2
- F0G  Var_02    O4P  C5A  C5   C4   -179.20  30.0  2
- F0G  Var_03    N    C4A  C4   C5    176.40  30.0  2
- F0G  Var_04    O4P  C5A  C5   C6     -0.48  30.0  2
- F0G  Var_05    H1   C2A  C2   N1    118.30  30.0  2
- F0G  Var_06    H2   C2A  C2   N1   -122.04  30.0  2
- F0G  Var_07    H3   C2A  C2   N1     -1.80  30.0  2
- F0G  Var_08    H4   O3   C3   C2   -179.11  30.0  2
- F0G  Var_09    H5   C4A  C4   C3    175.22  30.0  2
- F0G  Var_10    H7   C5A  C5   C4    -55.92  30.0  2
- F0G  Var_11    H8   C5A  C5   C4     57.91  30.0  2
- F0G  Var_12    CA   N    C4A  C4    179.19   0.0  2
- F0G  Var_13    P10  O4P  C5A  C5   -162.95  30.0  3
- F0G  Var_14    C    CA   N    C4A  -119.88  30.0  3
- F0G  Var_15    CB   CA   N    C4A   117.55  30.0  3
- F0G  Var_16    O3P  P10  O4P  C5A   -59.79  30.0  3
- F0G  Var_17    O2P  P10  O4P  C5A  -179.60  30.0  3
- F0G  Var_18    O1P  P10  O4P  C5A    60.48  30.0  3
- F0G  Var_19    O    C    CA   N       2.70  30.0  3
- F0G  Var_20    OXT  C    CA   N    -177.99  30.0  3
+ F0G  Var_02    H6   C6   N1   C2    180.00  10.0  1
+ F0G  Var_03    O4P  C5A  C5   C4   -179.20  30.0  2
+ F0G  Var_04    N    C4A  C4   C5    176.40  30.0  2
+ F0G  Var_05    O4P  C5A  C5   C6     -0.48  30.0  2
+ F0G  Var_06    H1   C2A  C2   N1    118.30  30.0  2
+ F0G  Var_07    H2   C2A  C2   N1   -122.04  30.0  2
+ F0G  Var_08    H3   C2A  C2   N1     -1.80  30.0  2
+ F0G  Var_09    H4   O3   C3   C2   -179.11  30.0  2
+ F0G  Var_10    H5   C4A  C4   C3    175.22  30.0  2
+ F0G  Var_11    H7   C5A  C5   C4    -55.92  30.0  2
+ F0G  Var_12    H8   C5A  C5   C4     57.91  30.0  2
+ F0G  Var_13    CA   N    C4A  C4    179.19   0.0  2
+ F0G  Var_14    P10  O4P  C5A  C5   -162.95  30.0  3
+ F0G  Var_15    C    CA   N    C4A  -119.88  30.0  3
+ F0G  Var_16    CB   CA   N    C4A   117.55  30.0  3
+ F0G  Var_17    O3P  P10  O4P  C5A   -59.79  30.0  3
+ F0G  Var_18    O2P  P10  O4P  C5A  -179.60  30.0  3
+ F0G  Var_19    O1P  P10  O4P  C5A    60.48  30.0  3
+ F0G  Var_20    O    C    CA   N       2.70  30.0  3
  F0G  Var_21    O    C    CA   CB    124.08  30.0  3
- F0G  Var_22    OXT  C    CA   CB    -56.61  30.0  3
- F0G  Var_23    H11  CA   N    C4A    -1.13  30.0  3
- F0G  Var_24    H12  CB   CA   N     -59.70  30.0  3
- F0G  Var_25    H13  CB   CA   N      60.61  30.0  3
- F0G  Var_26    H14  CB   CA   N    -179.53  30.0  3
+ F0G  Var_22    H11  CA   N    C4A    -1.13  30.0  3
+ F0G  Var_23    H12  CB   CA   N     -59.70  30.0  3
+ F0G  Var_24    H13  CB   CA   N      60.61  30.0  3
+ F0G  Var_25    H14  CB   CA   N    -179.53  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -256,7 +252,6 @@ _chem_comp_plane_atom.dist_esd
  F0G  plan-1  H6   0.020
  F0G  plan-2  CA   0.020
  F0G  plan-2  C    0.020
- F0G  plan-2  OXT  0.020
  F0G  plan-2  O    0.020
  F0G  plan-3  C4   0.020
  F0G  plan-3  C4A  0.020
