@@ -20,10 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
-PTM PTM "ALPHA-METHYL-O-PHOSPHOTYROSINE" L-peptide 29 18 . 2012-08-28 2026-06-15
+ PTM  PTM  ALPHA-METHYL-O-PHOSPHOTYROSINE  L-peptide  28  17  .  2012-08-28  2026-06-15
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_PTM
@@ -54,7 +56,6 @@ _chem_comp_atom.z
  PTM  O1P   O  O      0  -0.881  -2.8109   8.0053  -3.3153
  PTM  O2P   O  OP    -1  -0.876  -0.5402   8.7103  -2.3377
  PTM  O3P   O  OP    -1  -0.867  -1.1248   9.2957  -4.7727
- PTM  OXT   O  OC    -1  -0.593   2.1813   2.6099  -0.6407
  PTM  H     H  HNH2   0   0.329   1.2039  -0.6641  -0.8143
  PTM  H2    H  HNH2   0   0.325   0.0405  -0.8315  -1.9112
  PTM  HC31  H  HCH3   0   0.210   2.5158   0.6394  -2.5088
@@ -85,7 +86,6 @@ _chem_comp_bond.value_dist_neutron
  PTM  CH3  HC32  single    0.970  0.020  1.090
  PTM  CH3  HC33  single    0.970  0.020  1.090
  PTM  C    O     deloc     1.248  0.020  1.248
- PTM  C    OXT   deloc     1.246  0.020  1.246
  PTM  CB   CG    single    1.503  0.020  1.503
  PTM  CB   HB2   single    0.970  0.020  1.090
  PTM  CB   HB3   single    0.970  0.020  1.090
@@ -127,8 +127,6 @@ _chem_comp_angle.value_angle_esd
  PTM  HC33  CH3  CA    110.25  3.000
  PTM  HC32  CH3  CA    113.13  3.000
  PTM  HC31  CH3  CA    110.65  3.000
- PTM  OXT   C    O     126.29  3.000
- PTM  OXT   C    CA    117.29  3.000
  PTM  O     C    CA    116.41  3.000
  PTM  HB3   CB   HB2   106.57  3.000
  PTM  HB3   CB   CG    110.08  3.000
@@ -182,33 +180,30 @@ _chem_comp_tor.period
  PTM  CONST_08  CE2   CD2  CG   CB    180.00   0.0  0
  PTM  CONST_09  OH    CZ   CE1  CD1   180.00   0.0  0
  PTM  CONST_10  OH    CZ   CE2  CD2   180.00   0.0  0
- PTM  CONST_11  HE1   CE1  CD1  CG    180.00   0.0  0
- PTM  CONST_12  HE2   CE2  CD2  CG    180.00   0.0  0
- PTM  CONST_13  HD2   CD2  CG   CD1   180.00   0.0  0
- PTM  CONST_14  HD1   CD1  CG   CD2   180.00   0.0  0
  PTM  Var_01    CD1   CG   CB   CA    -86.95  30.0  2
- PTM  Var_02    CD2   CG   CB   CA     92.76  30.0  2
- PTM  Var_03    P     OH   CZ   CE1   -27.11  30.0  2
- PTM  Var_04    P     OH   CZ   CE2   153.82  30.0  2
- PTM  Var_05    HB2   CB   CG   CD1   151.67  30.0  2
- PTM  Var_06    HB3   CB   CG   CD1    35.23  30.0  2
- PTM  Var_07    CG    CB   CA   N     179.51  30.0  3
- PTM  Var_08    CG    CB   CA   CH3   -60.23  30.0  3
- PTM  Var_09    CG    CB   CA   C      63.19  30.0  3
- PTM  Var_10    O1P   P    OH   CZ    -51.66  30.0  3
- PTM  Var_11    O2P   P    OH   CZ     69.52  30.0  3
- PTM  Var_12    O3P   P    OH   CZ   -171.12  30.0  3
- PTM  Var_13    O     C    CA   N     -51.46  30.0  3
- PTM  Var_14    OXT   C    CA   N     129.02  30.0  3
- PTM  Var_15    O     C    CA   CH3  -174.16  30.0  3
- PTM  Var_16    OXT   C    CA   CH3     6.32  30.0  3
- PTM  Var_17    CB    CA   C    O      63.26  30.0  2
- PTM  Var_18    OXT   C    CA   CB   -116.25  30.0  3
- PTM  Var_19    HC31  CH3  CA   N     -59.97  30.0  3
- PTM  Var_20    HC32  CH3  CA   N     179.29  30.0  3
- PTM  Var_21    HC33  CH3  CA   N      58.83  30.0  3
- PTM  Var_22    H     N    CA   CH3    60.57  30.0  3
- PTM  Var_23    H2    N    CA   CH3   -52.96  30.0  3
+ PTM  Var_02    HE1   CE1  CD1  CG    180.00  10.0  1
+ PTM  Var_03    HE2   CE2  CD2  CG    180.00  10.0  1
+ PTM  Var_04    HD2   CD2  CG   CD1   180.00  10.0  1
+ PTM  Var_05    HD1   CD1  CG   CD2   180.00  10.0  1
+ PTM  Var_06    CD2   CG   CB   CA     92.76  30.0  2
+ PTM  Var_07    P     OH   CZ   CE1   -27.11  30.0  2
+ PTM  Var_08    P     OH   CZ   CE2   153.82  30.0  2
+ PTM  Var_09    HB2   CB   CG   CD1   151.67  30.0  2
+ PTM  Var_10    HB3   CB   CG   CD1    35.23  30.0  2
+ PTM  Var_11    CG    CB   CA   N     179.51  30.0  3
+ PTM  Var_12    CG    CB   CA   CH3   -60.23  30.0  3
+ PTM  Var_13    CG    CB   CA   C      63.19  30.0  3
+ PTM  Var_14    O1P   P    OH   CZ    -51.66  30.0  3
+ PTM  Var_15    O2P   P    OH   CZ     69.52  30.0  3
+ PTM  Var_16    O3P   P    OH   CZ   -171.12  30.0  3
+ PTM  Var_17    O     C    CA   N     -51.46  30.0  3
+ PTM  Var_18    O     C    CA   CH3  -174.16  30.0  3
+ PTM  Var_19    CB    CA   C    O      63.26  30.0  2
+ PTM  Var_20    HC31  CH3  CA   N     -59.97  30.0  3
+ PTM  Var_21    HC32  CH3  CA   N     179.29  30.0  3
+ PTM  Var_22    HC33  CH3  CA   N      58.83  30.0  3
+ PTM  Var_23    H     N    CA   CH3    60.57  30.0  3
+ PTM  Var_24    H2    N    CA   CH3   -52.96  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -240,5 +235,4 @@ _chem_comp_plane_atom.dist_esd
  PTM  plan-2  CA   0.020
  PTM  plan-2  C    0.020
  PTM  plan-2  O    0.020
- PTM  plan-2  OXT  0.020
 

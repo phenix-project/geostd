@@ -21,10 +21,11 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- T3R  T3R  "N,5-dimethyl-L-norleucine"  L-peptide  28  11  .  2024-05-31  2026-04-13
+ T3R  T3R  N,5-dimethyl-L-norleucine  L-peptide  26  10  .  2024-05-31  2026-04-13
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as PERFECT
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_T3R
@@ -64,8 +65,6 @@ _chem_comp_atom.z
  T3R  H741  H  HCH3  0   0.115  121.8133  126.9040  113.8042
  T3R  H742  H  HCH3  0   0.114  123.3020  126.3545  114.5819
  T3R  H     H  HNH1  0   0.226  122.4340  124.5547  109.9873
- T3R  OXT   O  OH1   0  -0.390  125.2163  122.1384  110.2565
- T3R  HXT   H  HOH1  0   0.359  125.6646  121.3262  110.5498
 
 loop_
 _chem_comp_bond.comp_id
@@ -100,8 +99,6 @@ _chem_comp_bond.value_dist_neutron
  T3R  C74  H741  single  0.970  0.020  1.090
  T3R  C74  H742  single  0.970  0.020  1.090
  T3R  N    H     single  0.860  0.020  0.860
- T3R  C    OXT   single  1.343  0.020  1.343
- T3R  OXT  HXT   single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -122,8 +119,6 @@ _chem_comp_angle.value_angle_esd
  T3R  HA    CA   C     109.00  3.000
  T3R  C70   CA   C     111.09  3.000
  T3R  N     CA   C     111.00  2.800
- T3R  OXT   C    O     122.30  3.000
- T3R  OXT   C    CA    112.15  3.000
  T3R  O     C    CA    120.80  1.700
  T3R  H701  C70  H702  106.29  3.000
  T3R  H701  C70  C71   110.18  3.000
@@ -158,7 +153,6 @@ _chem_comp_angle.value_angle_esd
  T3R  H     N    CA    114.00  3.000
  T3R  H     N    C52   109.96  3.000
  T3R  CA    N    C52   115.54  3.000
- T3R  HXT   OXT  C     108.51  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -170,34 +164,31 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- T3R  CONST_01  HXT   OXT  C    CA    180.00   0.0  0
- T3R  Var_01    C     CA   N    C52    74.68  30.0  1
- T3R  Var_02    C70   CA   N    C52   -51.25  30.0  1
- T3R  Var_03    C72   C71  C70  CA    179.96  30.0  1
- T3R  Var_04    C71   C70  CA   C     176.02  30.0  3
- T3R  Var_05    O     C    CA   C70    19.84  30.0  3
- T3R  Var_06    OXT   C    CA   C70  -160.41  30.0  3
- T3R  Var_07    C74   C72  C71  C70   -63.78  30.0  3
- T3R  Var_08    C73   C72  C71  C70    62.38  30.0  3
- T3R  Var_09    N     CA   C70  C71   -59.65  30.0  1
- T3R  Var_10    O     C    CA   N    -109.34  30.0  3
- T3R  Var_11    OXT   C    CA   N      70.41  30.0  3
- T3R  Var_12    HA    CA   N    C52  -172.22  30.0  1
- T3R  Var_13    H521  C52  N    CA   -179.12  30.0  3
- T3R  Var_14    H522  C52  N    CA    -61.49  30.0  3
- T3R  Var_15    H523  C52  N    CA     59.95  30.0  3
- T3R  Var_16    H711  C71  C70  CA    -57.75  30.0  1
- T3R  Var_17    H712  C71  C70  CA     58.01  30.0  1
- T3R  Var_18    H     N    CA   C    -161.21  30.0  3
- T3R  Var_19    H702  C70  CA   C     -60.64  30.0  3
- T3R  Var_20    H701  C70  CA   C      54.64  30.0  3
- T3R  Var_21    H721  C72  C71  C70   179.38  30.0  3
- T3R  Var_22    H743  C74  C72  C71  -173.46  30.0  3
- T3R  Var_23    H741  C74  C72  C71   -53.37  30.0  3
- T3R  Var_24    H742  C74  C72  C71    67.02  30.0  3
- T3R  Var_25    H733  C73  C72  C71   172.93  30.0  3
- T3R  Var_26    H731  C73  C72  C71   -67.49  30.0  3
- T3R  Var_27    H732  C73  C72  C71    52.88  30.0  3
+ T3R  Var_01  C     CA   N    C52    74.68  30.0  1
+ T3R  Var_02  C70   CA   N    C52   -51.25  30.0  1
+ T3R  Var_03  C72   C71  C70  CA    179.96  30.0  1
+ T3R  Var_04  C71   C70  CA   C     176.02  30.0  3
+ T3R  Var_05  O     C    CA   C70    19.84  30.0  3
+ T3R  Var_06  C74   C72  C71  C70   -63.78  30.0  3
+ T3R  Var_07  C73   C72  C71  C70    62.38  30.0  3
+ T3R  Var_08  N     CA   C70  C71   -59.65  30.0  1
+ T3R  Var_09  O     C    CA   N    -109.34  30.0  3
+ T3R  Var_10  HA    CA   N    C52  -172.22  30.0  1
+ T3R  Var_11  H521  C52  N    CA   -179.12  30.0  3
+ T3R  Var_12  H522  C52  N    CA    -61.49  30.0  3
+ T3R  Var_13  H523  C52  N    CA     59.95  30.0  3
+ T3R  Var_14  H711  C71  C70  CA    -57.75  30.0  1
+ T3R  Var_15  H712  C71  C70  CA     58.01  30.0  1
+ T3R  Var_16  H     N    CA   C    -161.21  30.0  3
+ T3R  Var_17  H702  C70  CA   C     -60.64  30.0  3
+ T3R  Var_18  H701  C70  CA   C      54.64  30.0  3
+ T3R  Var_19  H721  C72  C71  C70   179.38  30.0  3
+ T3R  Var_20  H743  C74  C72  C71  -173.46  30.0  3
+ T3R  Var_21  H741  C74  C72  C71   -53.37  30.0  3
+ T3R  Var_22  H742  C74  C72  C71    67.02  30.0  3
+ T3R  Var_23  H733  C73  C72  C71   172.93  30.0  3
+ T3R  Var_24  H731  C73  C72  C71   -67.49  30.0  3
+ T3R  Var_25  H732  C73  C72  C71    52.88  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -214,9 +205,7 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- T3R  plan-1  CA   0.020
- T3R  plan-1  C    0.020
- T3R  plan-1  O    0.020
- T3R  plan-1  OXT  0.020
- T3R  plan-1  HXT  0.020
+ T3R  plan-1  CA  0.020
+ T3R  plan-1  C   0.020
+ T3R  plan-1  O   0.020
 

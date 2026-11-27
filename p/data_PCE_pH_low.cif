@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PCE  PCE  '(2R,4R,5S)-5-amino-6-cyclohexyl-4-hydroxy-2-prop-2-yn-1-ylhexanoic acid'  L-peptide  44  19  .  2022-03-23  2024-04-11
+ PCE  PCE  '(2R,4R,5S)-5-amino-6-cyclohexyl-4-hydroxy-2-prop-2-yn-1-ylhexanoic acid'  L-peptide  41  18  .  2022-03-23  2024-04-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
 Added dihedrals for adding hydrogens : 2023-10-30
 Removed H2 atom : 2024-04-11
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_PCE
@@ -57,7 +58,6 @@ _chem_comp_atom.z
  PCE  CD3   C  CSP1  0  -0.566   2.1686   0.5964   5.8163
  PCE  C     C  C     0   0.557  -1.0670  -0.3209   4.0907
  PCE  O     O  O     0  -0.438  -1.4988   0.5854   4.7584
- PCE  OXT   O  OH1   0  -0.591  -1.5655  -1.5513   4.1242
  PCE  H     H  HNH2  0   0.339   0.6099   2.0873  -0.9126
  PCE  HA    H  HCH1  0   0.222  -1.1279  -0.2358  -0.8974
  PCE  HB2   H  HCH2  0   0.210   1.7775   0.0242  -1.7914
@@ -81,7 +81,6 @@ _chem_comp_atom.z
  PCE  HB21  H  HCH2  0   0.288   1.7565   1.0712   2.6988
  PCE  HB22  H  HCH2  0   0.277   0.4254   1.9019   3.4687
  PCE  HD31  H  H     0   0.278   2.6362   0.4445   6.7618
- PCE  HXT   H  HOH1  0   0.481  -2.3254  -1.5866   4.7247
 
 loop_
 _chem_comp_bond.comp_id
@@ -132,8 +131,6 @@ _chem_comp_bond.value_dist_neutron
  PCE  CG2  CD3   triple  1.202  0.020  1.202
  PCE  CD3  HD31  single  0.913  0.020  1.066
  PCE  C    O     double  1.231  0.020  1.231
- PCE  C    OXT   single  1.328  0.020  1.328
- PCE  OXT  HXT   single  0.832  0.020  0.971
 
 loop_
 _chem_comp_angle.comp_id
@@ -218,10 +215,7 @@ _chem_comp_angle.value_angle_esd
  PCE  CG2   CB2  CA2   112.79  3.000
  PCE  CD3   CG2  CB2   180.00  3.000
  PCE  HD31  CD3  CG2   180.00  3.000
- PCE  OXT   C    O     123.23  3.000
- PCE  OXT   C    CA2   111.86  3.000
  PCE  O     C    CA2   124.87  3.000
- PCE  HXT   OXT  C     110.11  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -233,29 +227,28 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- PCE  CONST_01  HXT   OXT  C    CA2   180.00      0.0   0
- PCE  Var_01    CZ    CE1  CD1  CG    -55.62     30.0   1
- PCE  Var_02    CZ    CE2  CD2  CG     55.41     30.0   1
- PCE  Var_03    CE1   CZ   CE2  CD2   -54.60     30.0   1
- PCE  Var_04    HB21  CB2  CG2  CD3   -92.29     30.0   1
- PCE  Var_05    HD23  CD2  CG   CD1    66.15     30.0   1
- PCE  Var_06    HD22  CD2  CG   CD1  -177.45     30.0   1
- PCE  Var_07    HZ2   CZ   CE1  CD1   177.19     30.0   1
- PCE  Var_08    HZ3   CZ   CE1  CD1   -66.08     30.0   1
- PCE  Var_09    HD12  CD1  CG   CD2   177.77     30.0   1
- PCE  Var_10    HD13  CD1  CG   CD2   -66.27     30.0   1
- PCE  Var_11    HG    CG   CD1  CE1   -61.81     30.0   1
- PCE  Var_12    HB2   CB   CG   CD1    52.83     30.0   2
- PCE  Var_13    HB3   CB   CG   CD1   -62.04     30.0   2
- PCE  Var_14    HA    CA   CB   CG     64.81     30.0   1
- PCE  Var_15    HH    CH   CA   N     -55.49     30.0   3
- PCE  Var_16    HO    OH   CH   CA    -64.73     30.0   3
- PCE  Var_17    HM1   CM   CH   CA    -46.67     30.0   3
- PCE  Var_18    HM2   CM   CH   CA     68.83     30.0   3
- PCE  Var_19    C     CA   N    H    170.000  180.000  72
- PCE  Var_20    HA2   CA2  CM   CH    -45.40     30.0   3
- PCE  Var_21    HB22  CB2  CA2  CM     60.50     30.0   3
- PCE  Var_22    HD31  CD3  CG2  CB2  -130.26     30.0   1
+ PCE  Var_01  CZ    CE1  CD1  CG    -55.62     30.0   1
+ PCE  Var_02  CZ    CE2  CD2  CG     55.41     30.0   1
+ PCE  Var_03  CE1   CZ   CE2  CD2   -54.60     30.0   1
+ PCE  Var_04  HB21  CB2  CG2  CD3   -92.29     30.0   1
+ PCE  Var_05  HD23  CD2  CG   CD1    66.15     30.0   1
+ PCE  Var_06  HD22  CD2  CG   CD1  -177.45     30.0   1
+ PCE  Var_07  HZ2   CZ   CE1  CD1   177.19     30.0   1
+ PCE  Var_08  HZ3   CZ   CE1  CD1   -66.08     30.0   1
+ PCE  Var_09  HD12  CD1  CG   CD2   177.77     30.0   1
+ PCE  Var_10  HD13  CD1  CG   CD2   -66.27     30.0   1
+ PCE  Var_11  HG    CG   CD1  CE1   -61.81     30.0   1
+ PCE  Var_12  HB2   CB   CG   CD1    52.83     30.0   2
+ PCE  Var_13  HB3   CB   CG   CD1   -62.04     30.0   2
+ PCE  Var_14  HA    CA   CB   CG     64.81     30.0   1
+ PCE  Var_15  HH    CH   CA   N     -55.49     30.0   3
+ PCE  Var_16  HO    OH   CH   CA    -64.73     30.0   3
+ PCE  Var_17  HM1   CM   CH   CA    -46.67     30.0   3
+ PCE  Var_18  HM2   CM   CH   CA     68.83     30.0   3
+ PCE  Var_19  C     CA   N    H    170.000  180.000  72
+ PCE  Var_20  HA2   CA2  CM   CH    -45.40     30.0   3
+ PCE  Var_21  HB22  CB2  CA2  CM     60.50     30.0   3
+ PCE  Var_22  HD31  CD3  CG2  CB2  -130.26     30.0   1
 
 loop_
 _chem_comp_chir.comp_id
@@ -278,6 +271,4 @@ _chem_comp_plane_atom.dist_esd
  PCE  plan-1  CA2  0.020
  PCE  plan-1  C    0.020
  PCE  plan-1  O    0.020
- PCE  plan-1  OXT  0.020
- PCE  plan-1  HXT  0.020
 

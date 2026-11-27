@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- DLE  DLE  'D-leucine                '  D-peptide  22  9  .  2022-07-24  2024-04-10
+ DLE  DLE  'D-leucine                '  D-peptide  19  8  .  2022-07-24  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
 Added dihedrals for adding hydrogens : 2023-10-30
 Removed H2 atom : 2024-04-10
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_DLE
@@ -47,7 +48,6 @@ _chem_comp_atom.z
  DLE  CD2   C  CH3   0  -0.651  -0.0040  -1.1478   2.9861
  DLE  C     C  C     0   0.526  -0.1586  -0.1784  -1.8904
  DLE  O     O  O     0  -0.443   0.6655  -0.5175  -2.7033
- DLE  OXT   O  OH1   0  -0.595  -1.4646  -0.3553  -2.0620
  DLE  H     H  HNH2  0   0.353   1.6331   1.7204  -1.2013
  DLE  HA    H  HCH1  0   0.268  -0.5544   1.2942  -0.4220
  DLE  HB2   H  HCH2  0   0.232   0.6041  -1.4057   0.3890
@@ -59,7 +59,6 @@ _chem_comp_atom.z
  DLE  HD21  H  HCH3  0   0.212  -1.0261  -1.5345   2.9702
  DLE  HD22  H  HCH3  0   0.223   0.6675  -1.9814   2.7721
  DLE  HD23  H  HCH3  0   0.226   0.2045  -0.8054   4.0008
- DLE  HXT   H  HOH1  0   0.480  -1.6325  -0.8054  -2.9035
 
 loop_
 _chem_comp_bond.comp_id
@@ -87,8 +86,6 @@ _chem_comp_bond.value_dist_neutron
  DLE  CD2  HD22  single  0.970  0.020  1.090
  DLE  CD2  HD23  single  0.970  0.020  1.090
  DLE  C    O     double  1.231  0.020  1.231
- DLE  C    OXT   single  1.329  0.020  1.329
- DLE  OXT  HXT   single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -128,10 +125,7 @@ _chem_comp_angle.value_angle_esd
  DLE  HD23  CD2  CG    111.16  3.000
  DLE  HD22  CD2  CG    111.35  3.000
  DLE  HD21  CD2  CG    111.18  3.000
- DLE  OXT   C    O     123.16  3.000
- DLE  OXT   C    CA    120.80  1.700
  DLE  O     C    CA    120.80  1.700
- DLE  HXT   OXT  C     110.13  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -143,14 +137,13 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- DLE  CONST_01  HXT   OXT  C   CA   180.00      0.0   0
- DLE  Var_01    CD1   CG   CB  CA    59.84     30.0   3
- DLE  Var_02    HD11  CD1  CG  CB   177.49     30.0   3
- DLE  Var_03    HD21  CD2  CG  CB   -62.72     30.0   3
- DLE  Var_04    HB2   CB   CA  N    -65.20     30.0   3
- DLE  Var_05    HB3   CB   CA  N    179.04     30.0   3
- DLE  Var_06    C     CA   N   H   170.000  180.000  72
- DLE  Var_07    HA    CA   CB  CG   -62.09     30.0   2
+ DLE  Var_01  CD1   CG   CB  CA    59.84     30.0   3
+ DLE  Var_02  HD11  CD1  CG  CB   177.49     30.0   3
+ DLE  Var_03  HD21  CD2  CG  CB   -62.72     30.0   3
+ DLE  Var_04  HB2   CB   CA  N    -65.20     30.0   3
+ DLE  Var_05  HB3   CB   CA  N    179.04     30.0   3
+ DLE  Var_06  C     CA   N   H   170.000  180.000  72
+ DLE  Var_07  HA    CA   CB  CG   -62.09     30.0   2
 
 loop_
 _chem_comp_chir.comp_id
@@ -167,9 +160,7 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- DLE  plan-1  CA   0.020
- DLE  plan-1  C    0.020
- DLE  plan-1  O    0.020
- DLE  plan-1  OXT  0.020
- DLE  plan-1  HXT  0.020
+ DLE  plan-1  CA  0.020
+ DLE  plan-1  C   0.020
+ DLE  plan-1  O   0.020
 

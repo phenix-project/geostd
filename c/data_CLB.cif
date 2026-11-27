@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CLB  CLB  '[(1R)-1-(acetylamino)-2-(4-chlorophenyl)ethyl](dihydroxy)(L-serinato-kappaO~3~)borate(1-)'  D-peptide  41  23  .  2016-05-13  2024-04-10
+ CLB  CLB  '[(1R)-1-(acetylamino)-2-(4-chlorophenyl)ethyl](dihydroxy)(L-serinato-kappaO~3~)borate(1-)'  D-peptide  39  22  .  2016-05-13  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-10
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_CLB
@@ -45,7 +46,6 @@ _chem_comp_atom.z
  CLB  OB3   O   OC2    0  -0.572  17.1953   3.4292  24.2244
  CLB  C     C   C      0   0.397  19.7979   3.2168  26.9358
  CLB  O     O   O      0  -0.614  20.8230   3.5012  26.2811
- CLB  OXT   O   OC    -1  -0.604  19.7052   3.1638  28.1783
  CLB  N9    N   NH1    0  -0.629  16.0662   1.7370  22.2741
  CLB  C8    C   CH1    0  -0.262  15.6380   3.1275  22.3196
  CLB  C7    C   CH2    0  -0.524  14.3437   3.2572  23.1427
@@ -98,7 +98,6 @@ _chem_comp_bond.value_dist_neutron
  CLB  CB   HB3   single    0.970  0.020  1.090
  CLB  OB3  B     single    1.475  0.020  1.475
  CLB  C    O     deloc     1.231  0.020  1.231
- CLB  C    OXT   deloc     1.247  0.020  1.247
  CLB  N9   C8    single    1.456  0.020  1.456
  CLB  N9   C10   single    1.337  0.020  1.337
  CLB  N9   HN9   single    0.860  0.020  1.020
@@ -150,8 +149,6 @@ _chem_comp_angle.value_angle_esd
  CLB  HB2   CB   CA    108.21  3.000
  CLB  OB3   CB   CA    109.56  3.000
  CLB  B     OB3  CB    120.96  3.000
- CLB  OXT   C    O     126.37  3.000
- CLB  OXT   C    CA    120.80  1.700
  CLB  O     C    CA    120.80  1.700
  CLB  HN9   N9   C10   117.57  3.000
  CLB  HN9   N9   C8    114.97  3.000
@@ -224,23 +221,23 @@ _chem_comp_tor.period
  CLB  CONST_08  C5    C6   C1   C7    180.00      0.0   0
  CLB  CONST_09  CL4   C4   C3   C2    180.00      0.0   0
  CLB  CONST_10  CL4   C4   C5   C6    180.00      0.0   0
- CLB  CONST_11  H3    C3   C2   C1    180.00      0.0   0
- CLB  CONST_12  H5    C5   C6   C1    180.00      0.0   0
- CLB  CONST_13  H6    C6   C1   C2    180.00      0.0   0
- CLB  CONST_14  HC2   C2   C1   C6    180.00      0.0   0
- CLB  CONST_15  O10   C10  N9   C8      0.00      0.0   0
- CLB  CONST_16  C11   C10  N9   C8    180.00      0.0   0
- CLB  CONST_17  HN9   N9   C10  O10   180.00      0.0   0
+ CLB  CONST_11  O10   C10  N9   C8      0.00      0.0   0
+ CLB  CONST_12  C11   C10  N9   C8    180.00      0.0   0
  CLB  Var_01    C2    C1   C7   C8    -87.41     30.0   2
- CLB  Var_02    C8    B    OB3  CB    172.85     30.0   3
- CLB  Var_03    H111  C11  C10  N9    118.50     30.0   3
- CLB  Var_04    HB2   CB   OB3  B      71.85     30.0   2
- CLB  Var_05    H8    C8   C7   C1     61.27     30.0   2
- CLB  Var_06    HB3   CB   CA   N     178.85     30.0   3
- CLB  Var_07    C     CA   N    H    170.000  180.000  72
- CLB  Var_08    HA    CA   CB   OB3    62.72     30.0   1
- CLB  Var_09    HOB1  OB1  B    OB3   178.01     30.0   3
- CLB  Var_10    HOB2  OB2  B    OB3    72.16     30.0   3
+ CLB  Var_02    H3    C3   C2   C1    180.00     10.0   1
+ CLB  Var_03    H5    C5   C6   C1    180.00     10.0   1
+ CLB  Var_04    H6    C6   C1   C2    180.00     10.0   1
+ CLB  Var_05    HC2   C2   C1   C6    180.00     10.0   1
+ CLB  Var_06    HN9   N9   C10  O10   180.00     10.0   1
+ CLB  Var_07    C8    B    OB3  CB    172.85     30.0   3
+ CLB  Var_08    H111  C11  C10  N9    118.50     30.0   3
+ CLB  Var_09    HB2   CB   OB3  B      71.85     30.0   2
+ CLB  Var_10    H8    C8   C7   C1     61.27     30.0   2
+ CLB  Var_11    HB3   CB   CA   N     178.85     30.0   3
+ CLB  Var_12    C     CA   N    H    170.000  180.000  72
+ CLB  Var_13    HA    CA   CB   OB3    62.72     30.0   1
+ CLB  Var_14    HOB1  OB1  B    OB3   178.01     30.0   3
+ CLB  Var_15    HOB2  OB2  B    OB3    72.16     30.0   3
 
 loop_
 _chem_comp_chir.comp_id
@@ -279,5 +276,4 @@ _chem_comp_plane_atom.dist_esd
  CLB  plan-3  CA   0.020
  CLB  plan-3  C    0.020
  CLB  plan-3  O    0.020
- CLB  plan-3  OXT  0.020
 

@@ -20,12 +20,14 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- F75  F75  '2-(aminomethyl)-1,3-thiazole-4-carboxylic acid'  peptide  16  10  .  2022-07-25  2024-04-11
+ F75  F75  '2-(aminomethyl)-1,3-thiazole-4-carboxylic acid'  peptide  13  9  .  2022-07-25  2024-04-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
 Removed H2 atom : 2024-04-11
 Updated atom names : 2026-11-25
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_F75
@@ -52,8 +54,6 @@ _chem_comp_atom.z
  F75  H4   H  HCH2  0   0.180  -2.2504   2.0147   0.7999
  F75  H5   H  HCH2  0   0.266  -3.0079   0.5065   1.2877
  F75  H7   H  HCR5  0   0.318   1.1117  -2.1862  -0.5974
- F75  OXT  O  OH1   0  -0.667   2.5888   1.5327   0.4230
- F75  HXT  H  HOH1  0   0.487   3.5392   1.7214   0.4376
 
 loop_
 _chem_comp_bond.comp_id
@@ -76,8 +76,6 @@ _chem_comp_bond.value_dist_neutron
  F75  CA1  H4   single    0.970  0.020  1.090
  F75  CA1  H5   single    0.970  0.020  1.090
  F75  C5   H7   single    0.930  0.020  1.080
- F75  C    OXT  single    1.322  0.020  1.322
- F75  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -100,14 +98,11 @@ _chem_comp_angle.value_angle_esd
  F75  C5   CA2  C    122.58  3.000
  F75  C    CA2  N2   121.92  3.000
  F75  C5   CA2  N2   115.50  3.000
- F75  OXT  C    O    124.20  3.000
- F75  OXT  C    CA2  112.63  3.000
  F75  O    C    CA2  123.17  3.000
  F75  H7   C5   S1   122.11  3.000
  F75  H7   C5   CA2  128.26  3.000
  F75  S1   C5   CA2  109.63  3.000
  F75  C5   S1   C2    89.58  3.000
- F75  HXT  OXT  C    109.73  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -128,11 +123,10 @@ _chem_comp_tor.period
  F75  CONST_07  CA2  N2   C2   CA1   180.00   0.0  0
  F75  CONST_08  C    CA2  N2   C2    180.00   0.0  0
  F75  CONST_09  S1   C5   CA2  C     180.00   0.0  0
- F75  CONST_10  H7   C5   S1   C2    180.00   0.0  0
- F75  CONST_11  HXT  OXT  C    CA2   180.00   0.0  0
  F75  Var_01    S1   C2   CA1  N     -55.58  30.0  1
- F75  Var_02    O    C    CA2  N2   -178.52  30.0  3
- F75  Var_03    H    N    CA1  C2    168.34  30.0  3
+ F75  Var_02    H7   C5   S1   C2    180.00  10.0  1
+ F75  Var_03    O    C    CA2  N2   -178.52  30.0  3
+ F75  Var_04    H    N    CA1  C2    168.34  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -150,6 +144,4 @@ _chem_comp_plane_atom.dist_esd
  F75  plan-2  CA2  0.020
  F75  plan-2  C    0.020
  F75  plan-2  O    0.020
- F75  plan-2  OXT  0.020
- F75  plan-2  HXT  0.020
 

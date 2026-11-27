@@ -20,13 +20,14 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- E03  E03  '(2~{R})-2-azanyl-3-(6-fluoranyl-1~{H}-indol-3-yl)propanoic acid'  D-peptide  27  16  .  2022-09-22  2024-04-11
+ E03  E03  '(2~{R})-2-azanyl-3-(6-fluoranyl-1~{H}-indol-3-yl)propanoic acid'  D-peptide  24  15  .  2022-09-22  2024-04-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-11
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_E03
@@ -55,7 +56,6 @@ _chem_comp_atom.z
  E03  CZ2  C  CR16  0  -0.464   3.2173   0.6615   0.1407
  E03  C    C  C     0   0.542  -3.6872  -0.7297   0.1178
  E03  O    O  O     0  -0.438  -4.7384  -0.1856   0.3429
- E03  OXT  O  OH1   0  -0.594  -3.5887  -1.9173  -0.4677
  E03  HA   H  HCH1  0   0.275  -1.7051  -0.9335   0.8398
  E03  H5   H  HCH2  0   0.253  -1.6312  -0.5147  -1.6122
  E03  H6   H  HCH2  0   0.258  -2.3122   1.0852  -1.3708
@@ -64,7 +64,6 @@ _chem_comp_atom.z
  E03  H9   H  HCR6  0   0.251   0.3678  -1.9827  -0.3823
  E03  H10  H  HCR6  0   0.270   2.6660  -2.6998   0.1841
  E03  H11  H  HCR6  0   0.281   4.0177   1.3746   0.2892
- E03  HXT  H  HOH1  0   0.482  -4.4699  -2.2535  -0.6902
  E03  H    H  HNH2  0   0.357  -1.5431   1.2528   1.6432
 
 loop_
@@ -91,7 +90,6 @@ _chem_comp_bond.value_dist_neutron
  E03  N    CA   single    1.458  0.019  1.458
  E03  CA   C    single    1.525  0.021  1.525
  E03  C    O    double    1.231  0.020  1.231
- E03  C    OXT  single    1.328  0.020  1.328
  E03  N    H    single    0.860  0.020  0.860
  E03  CA   HA   single    0.970  0.020  1.090
  E03  CB   H5   single    0.970  0.020  1.090
@@ -101,7 +99,6 @@ _chem_comp_bond.value_dist_neutron
  E03  CE3  H9   single    0.930  0.020  1.080
  E03  CZ3  H10  single    0.930  0.020  1.080
  E03  CZ2  H11  single    0.930  0.020  1.080
- E03  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -150,10 +147,7 @@ _chem_comp_angle.value_angle_esd
  E03  H11  CZ2  CH2  121.63  3.000
  E03  H11  CZ2  CE2  122.44  3.000
  E03  CH2  CZ2  CE2  115.93  3.000
- E03  OXT  C    O    123.43  3.000
- E03  OXT  C    CA   120.80  1.700
  E03  O    C    CA   120.80  1.700
- E03  HXT  OXT  C    110.13  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -187,15 +181,14 @@ _chem_comp_tor.period
  E03  CONST_20  NE1  CD1  CG   CB    180.00      0.0   0
  E03  CONST_21  CE2  CD2  CG   CB    180.00      0.0   0
  E03  CONST_22  CE3  CD2  CG   CB      0.00      0.0   0
- E03  CONST_23  H8   NE1  CD1  CG    180.00      0.0   0
- E03  CONST_24  H9   CE3  CD2  CG      0.00      0.0   0
- E03  CONST_25  H11  CZ2  CE2  NE1     0.00      0.0   0
- E03  CONST_26  H7   CD1  NE1  CE2   180.00      0.0   0
- E03  CONST_27  H10  CZ3  CE3  CD2   180.00      0.0   0
- E03  CONST_28  HXT  OXT  C    CA    180.00      0.0   0
  E03  Var_01    CD1  CG   CB   CA   -102.81     30.0   2
  E03  Var_02    HA   CA   CB   CG    -61.50     30.0   3
- E03  Var_03    C    CA   N    H    170.000  180.000  72
+ E03  Var_03    H8   NE1  CD1  CG    180.00     10.0   1
+ E03  Var_04    H9   CE3  CD2  CG      0.00     10.0   1
+ E03  Var_05    H11  CZ2  CE2  NE1     0.00     10.0   1
+ E03  Var_06    H7   CD1  NE1  CE2   180.00     10.0   1
+ E03  Var_07    H10  CZ3  CE3  CD2   180.00     10.0   1
+ E03  Var_08    C    CA   N    H    170.000  180.000  72
 
 loop_
 _chem_comp_chir.comp_id
@@ -231,6 +224,4 @@ _chem_comp_plane_atom.dist_esd
  E03  plan-2  CA   0.020
  E03  plan-2  C    0.020
  E03  plan-2  O    0.020
- E03  plan-2  OXT  0.020
- E03  plan-2  HXT  0.020
 

@@ -20,13 +20,14 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A30  A30  O-ethyl-L-tyrosine  L-peptide  30  15  .  2022-09-16  2024-04-10
+ A30  A30  O-ethyl-L-tyrosine  L-peptide  27  14  .  2022-09-16  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-10
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_A30
@@ -67,8 +68,6 @@ _chem_comp_atom.z
  A30  HD2  H  HCR6  0   0.249   7.6362  -16.0221   1.9944
  A30  HE1  H  HCR6  0   0.275   9.0627  -14.4904  -2.4745
  A30  HE2  H  HCR6  0   0.255   6.2508  -16.5471   0.0386
- A30  HXT  H  HOH1  0   0.478   6.8387  -13.2056   3.8058
- A30  OXT  O  OH1   0  -0.593   7.7767  -13.4367   3.7261
 
 loop_
 _chem_comp_bond.comp_id
@@ -92,7 +91,6 @@ _chem_comp_bond.value_dist_neutron
  A30  CB   CA   single    1.530  0.020  1.530
  A30  C    CA   single    1.525  0.021  1.525
  A30  CA   N    single    1.458  0.019  1.458
- A30  C    OXT  single    1.330  0.020  1.330
  A30  C1   H1   single    0.970  0.020  1.090
  A30  C1   H6   single    0.970  0.020  1.090
  A30  C2   H7   single    0.970  0.020  1.090
@@ -106,7 +104,6 @@ _chem_comp_bond.value_dist_neutron
  A30  CD2  HD2  single    0.930  0.020  1.080
  A30  CE1  HE1  single    0.930  0.020  1.080
  A30  CE2  HE2  single    0.930  0.020  1.080
- A30  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -134,8 +131,6 @@ _chem_comp_angle.value_angle_esd
  A30  HA   CA   N    110.00  3.000
  A30  C    CA   N    111.00  2.800
  A30  CB   CA   N    110.50  1.700
- A30  OXT  C    O    123.08  3.000
- A30  OXT  C    CA   112.21  3.000
  A30  O    C    CA   120.80  1.700
  A30  HB3  CB   HB2  106.75  3.000
  A30  HB3  CB   CG   110.69  3.000
@@ -162,7 +157,6 @@ _chem_comp_angle.value_angle_esd
  A30  CE2  CZ   CE1  119.01  3.000
  A30  OH   CZ   CE1  124.58  3.000
  A30  CZ   OH   C1   118.98  3.000
- A30  HXT  OXT  C    110.04  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -184,32 +178,30 @@ _chem_comp_tor.period
  A30  CONST_08  CE2  CD2  CG   CB    180.00   0.0  0
  A30  CONST_09  OH   CZ   CE1  CD1   180.00   0.0  0
  A30  CONST_10  OH   CZ   CE2  CD2   180.00   0.0  0
- A30  CONST_11  HE1  CE1  CD1  CG    180.00   0.0  0
- A30  CONST_12  HE2  CE2  CD2  CG    180.00   0.0  0
- A30  CONST_13  HD2  CD2  CG   CD1   180.00   0.0  0
- A30  CONST_14  HD1  CD1  CG   CD2   180.00   0.0  0
- A30  CONST_15  HE2  CE2  CZ   CE1   180.00   0.0  0
- A30  CONST_16  HE1  CE1  CZ   CE2   180.00   0.0  0
- A30  CONST_17  HD1  CD1  CE1  CZ    180.00   0.0  0
- A30  CONST_18  HD2  CD2  CE2  CZ    180.00   0.0  0
- A30  CONST_19  HXT  OXT  C    CA    180.00   0.0  0
- A30  CONST_20  HXT  OXT  C    O       0.00   0.0  0
  A30  Var_01    CE1  CZ   OH   C1      0.03  30.0  2
- A30  Var_02    CE2  CZ   OH   C1   -179.88  30.0  2
- A30  Var_03    CD1  CG   CB   CA     75.76  30.0  2
- A30  Var_04    CD2  CG   CB   CA   -102.52  30.0  2
- A30  Var_05    HB2  CB   CG   CD1  -161.90  30.0  2
- A30  Var_06    HB3  CB   CG   CD1   -44.15  30.0  2
- A30  Var_07    HB2  CB   CG   CD2    19.82  30.0  2
- A30  Var_08    HB3  CB   CG   CD2   137.57  30.0  2
- A30  Var_09    CZ   OH   C1   C2   -179.77  30.0  3
- A30  Var_10    H1   C1   OH   CZ     59.46  30.0  1
- A30  Var_11    H6   C1   OH   CZ    -59.10  30.0  1
- A30  Var_12    H7   C2   C1   OH    179.85  30.0  3
- A30  Var_13    H4   C2   C1   OH    -60.91  30.0  3
- A30  Var_14    H5   C2   C1   OH     60.67  30.0  3
- A30  Var_15    HA   CA   CB   CG    -63.38  30.0  3
- A30  Var_16    H    N    CA   C     -58.71  30.0  3
+ A30  Var_02    HE1  CE1  CD1  CG    180.00  10.0  1
+ A30  Var_03    HE2  CE2  CD2  CG    180.00  10.0  1
+ A30  Var_04    HD2  CD2  CG   CD1   180.00  10.0  1
+ A30  Var_05    HD1  CD1  CG   CD2   180.00  10.0  1
+ A30  Var_06    HE2  CE2  CZ   CE1   180.00  10.0  1
+ A30  Var_07    HE1  CE1  CZ   CE2   180.00  10.0  1
+ A30  Var_08    HD1  CD1  CE1  CZ    180.00  10.0  1
+ A30  Var_09    HD2  CD2  CE2  CZ    180.00  10.0  1
+ A30  Var_10    CE2  CZ   OH   C1   -179.88  30.0  2
+ A30  Var_11    CD1  CG   CB   CA     75.76  30.0  2
+ A30  Var_12    CD2  CG   CB   CA   -102.52  30.0  2
+ A30  Var_13    HB2  CB   CG   CD1  -161.90  30.0  2
+ A30  Var_14    HB3  CB   CG   CD1   -44.15  30.0  2
+ A30  Var_15    HB2  CB   CG   CD2    19.82  30.0  2
+ A30  Var_16    HB3  CB   CG   CD2   137.57  30.0  2
+ A30  Var_17    CZ   OH   C1   C2   -179.77  30.0  3
+ A30  Var_18    H1   C1   OH   CZ     59.46  30.0  1
+ A30  Var_19    H6   C1   OH   CZ    -59.10  30.0  1
+ A30  Var_20    H7   C2   C1   OH    179.85  30.0  3
+ A30  Var_21    H4   C2   C1   OH    -60.91  30.0  3
+ A30  Var_22    H5   C2   C1   OH     60.67  30.0  3
+ A30  Var_23    HA   CA   CB   CG    -63.38  30.0  3
+ A30  Var_24    H    N    CA   C     -58.71  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -241,6 +233,4 @@ _chem_comp_plane_atom.dist_esd
  A30  plan-2  CA   0.020
  A30  plan-2  C    0.020
  A30  plan-2  O    0.020
- A30  plan-2  HXT  0.020
- A30  plan-2  OXT  0.020
 

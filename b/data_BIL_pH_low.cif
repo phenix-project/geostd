@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- BIL  BIL  '(3R,4S)-3-amino-4-methylhexanoic acid'  L-peptide  25  10  .  2022-03-15  2023-10-30
+ BIL  BIL  '(3R,4S)-3-amino-4-methylhexanoic acid'  L-peptide  23  9  .  2022-03-15  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
 Added dihedrals for adding hydrogens : 2023-10-30
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_BIL
@@ -61,9 +62,7 @@ _chem_comp_atom.z
  BIL  H3E1  H  HCH3  0   0.216  -3.9985   0.1346   1.3179
  BIL  H2E1  H  HCH3  0   0.222  -4.2876   0.7144  -0.3194
  BIL  H1E1  H  HCH3  0   0.230  -4.6742  -0.9439   0.1027
- BIL  OXT   O  OH1   0  -0.591   3.2135  -0.0823   0.9610
  BIL  HNA   H  HNH2  0   0.355  -0.3620  -2.1878  -0.1380
- BIL  HXT   H  HOH1  0   0.475   4.0555  -0.4396   0.6400
 
 loop_
 _chem_comp_bond.comp_id
@@ -74,7 +73,6 @@ _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  BIL  C     O     double  1.231  0.020  1.231
- BIL  C     OXT   single  1.328  0.020  1.328
  BIL  CA    C     single  1.525  0.021  1.525
  BIL  CA    CB    single  1.521  0.033  1.521
  BIL  CA    HA    single  0.970  0.020  0.970
@@ -96,7 +94,6 @@ _chem_comp_bond.value_dist_neutron
  BIL  H1D1  CD1   single  0.970  0.020  1.090
  BIL  H2D1  CD1   single  0.970  0.020  1.090
  BIL  H1E1  CE1   single  0.970  0.020  1.090
- BIL  OXT   HXT   single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -105,9 +102,7 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- BIL  OXT   C    CA    120.80  1.700
  BIL  CA    C    O     120.80  1.700
- BIL  OXT   C    O     122.75  3.000
  BIL  HAA   CA   HA    107.19  3.000
  BIL  HAA   CA   CB    111.28  3.000
  BIL  HA    CA   CB    109.00  3.000
@@ -147,7 +142,6 @@ _chem_comp_angle.value_angle_esd
  BIL  H1E1  CE1  CD1   110.65  3.000
  BIL  H3E1  CE1  CD1   111.27  3.000
  BIL  H2E1  CE1  CD1   112.45  3.000
- BIL  HXT   OXT  C     109.79  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -159,18 +153,17 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- BIL  CONST_01  HXT   OXT  C    O      0.00   0.0  0
- BIL  Var_01    CB    CA   C    O     58.83  30.0  1
- BIL  Var_02    H2E1  CE1  CD1  CG    67.20  30.0  3
- BIL  Var_03    HB    CB   CA   C    -60.59  30.0  3
- BIL  Var_04    HNA   N    CB   CA  -167.70  30.0  3
- BIL  Var_05    H     N    CB   CA    75.46  30.0  3
- BIL  Var_06    HG    CG   CB   CA   -54.97  30.0  1
- BIL  Var_07    H1D1  CD1  CG   CB   -59.05  30.0  3
- BIL  Var_08    H2D1  CD1  CG   CB    56.60  30.0  3
- BIL  Var_09    H1D2  CD2  CG   CB   -58.98  30.0  3
- BIL  Var_10    H3D2  CD2  CG   CB    61.49  30.0  3
- BIL  Var_11    H2D2  CD2  CG   CB  -178.73  30.0  3
+ BIL  Var_01  CB    CA   C    O     58.83  30.0  1
+ BIL  Var_02  H2E1  CE1  CD1  CG    67.20  30.0  3
+ BIL  Var_03  HB    CB   CA   C    -60.59  30.0  3
+ BIL  Var_04  HNA   N    CB   CA  -167.70  30.0  3
+ BIL  Var_05  H     N    CB   CA    75.46  30.0  3
+ BIL  Var_06  HG    CG   CB   CA   -54.97  30.0  1
+ BIL  Var_07  H1D1  CD1  CG   CB   -59.05  30.0  3
+ BIL  Var_08  H2D1  CD1  CG   CB    56.60  30.0  3
+ BIL  Var_09  H1D2  CD2  CG   CB   -58.98  30.0  3
+ BIL  Var_10  H3D2  CD2  CG   CB    61.49  30.0  3
+ BIL  Var_11  H2D2  CD2  CG   CB  -178.73  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -188,9 +181,7 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- BIL  plan-1  C    0.020
- BIL  plan-1  O    0.020
- BIL  plan-1  CA   0.020
- BIL  plan-1  OXT  0.020
- BIL  plan-1  HXT  0.020
+ BIL  plan-1  C   0.020
+ BIL  plan-1  O   0.020
+ BIL  plan-1  CA  0.020
 

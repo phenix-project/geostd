@@ -20,13 +20,14 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EXA  EXA  N~6~-[(R)-[(1-carboxyethenyl)amino]{3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methyl]-L-lysine  peptide  58  31  .  2022-09-22  2024-04-11
+ EXA  EXA  N~6~-[(R)-[(1-carboxyethenyl)amino]{3-hydroxy-2-methyl-5-[(phosphonooxy)methyl]pyridin-4-yl}methyl]-L-lysine  peptide  55  30  .  2022-09-22  2024-04-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-11
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_EXA
@@ -70,7 +71,6 @@ _chem_comp_atom.z
  EXA  C9   C  C2    0  -0.631   0.4173  -0.7844  -2.9211
  EXA  O10  O  O     0  -0.443   1.4470  -4.1177  -2.1615
  EXA  O11  O  OH1   0  -0.583   1.2427  -3.0813  -4.1240
- EXA  OXT  O  OH1   0  -0.595  -8.4245  -0.2182   0.8102
  EXA  H    H  HNH2  0   0.344  -6.2529   2.8018  -0.6415
  EXA  HA   H  HCH1  0   0.268  -6.8757   0.0024  -1.1527
  EXA  HB2  H  HCH2  0   0.229  -5.4352   1.2578   1.2263
@@ -95,7 +95,6 @@ _chem_comp_atom.z
  EXA  H25  H  H     0   0.263   0.5494  -0.7989  -3.9903
  EXA  H26  H  H     0   0.254   0.0356   0.1343  -2.4992
  EXA  H28  H  HOH1  0   0.491   1.5517  -3.9307  -4.4729
- EXA  HXT  H  HOH1  0   0.481  -9.2089  -0.1014   1.3669
  EXA  H3   H  HNH1  0   0.390   0.8898  -2.8595  -0.4256
 
 loop_
@@ -136,7 +135,6 @@ _chem_comp_bond.value_dist_neutron
  EXA  C6   N1   aromatic  1.327  0.020  1.327
  EXA  C2   N1   aromatic  1.323  0.020  1.323
  EXA  C2   C2'  single    1.499  0.020  1.499
- EXA  C    OXT  single    1.329  0.020  1.329
  EXA  N    H    single    0.890  0.020  1.040
  EXA  CA   HA   single    0.970  0.020  1.090
  EXA  CB   HB2  single    0.970  0.020  1.090
@@ -161,7 +159,6 @@ _chem_comp_bond.value_dist_neutron
  EXA  C9   H25  single    0.930  0.020  1.080
  EXA  C9   H26  single    0.930  0.020  1.080
  EXA  O11  H28  single    0.850  0.020  0.980
- EXA  OXT  HXT  single    0.850  0.020  0.980
  EXA  N3   H3   single    0.860  0.020  1.020
 
 loop_
@@ -249,8 +246,6 @@ _chem_comp_angle.value_angle_esd
  EXA  OP1  P    OP4  116.11  3.000
  EXA  H23  OP2  P    115.94  3.000
  EXA  H24  OP3  P    114.15  3.000
- EXA  OXT  C    O    123.24  3.000
- EXA  OXT  C    CA   111.93  3.000
  EXA  O    C    CA   124.81  3.000
  EXA  H3   N3   C7   115.55  3.000
  EXA  H3   N3   C4'  117.60  3.000
@@ -265,7 +260,6 @@ _chem_comp_angle.value_angle_esd
  EXA  H26  C9   C7   122.58  3.000
  EXA  H25  C9   C7   121.16  3.000
  EXA  H28  O11  C8   109.95  3.000
- EXA  HXT  OXT  C    110.09  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -291,29 +285,28 @@ _chem_comp_tor.period
  EXA  CONST_12  N1   C2   C3   O3    180.00   0.0  0
  EXA  CONST_13  C6   N1   C2   C2'   180.00   0.0  0
  EXA  CONST_14  C5'  C5   C6   N1    180.00   0.0  0
- EXA  CONST_15  H20  C6   C5   C4    180.00   0.0  0
- EXA  CONST_16  HXT  OXT  C    CA    180.00   0.0  0
- EXA  CONST_17  H28  O11  C8   C7    180.00   0.0  0
  EXA  Var_01    OP4  C5'  C5   C4    179.76  30.0  1
- EXA  Var_02    H17  C2'  C2   C3     60.87  30.0  2
- EXA  Var_03    CD   CG   CB   CA   -179.39  30.0  1
- EXA  Var_04    CE   CD   CG   CB    179.10  30.0  3
- EXA  Var_05    NZ   CE   CD   CG    177.15  30.0  1
- EXA  Var_06    C4'  NZ   CE   CD   -179.86  30.0  3
- EXA  Var_07    C8   C7   N3   C4'   162.44  30.0  2
- EXA  Var_08    OP1  P    OP4  C5'   -49.67  30.0  2
- EXA  Var_09    O10  C8   C7   N3     -1.13  30.0  2
- EXA  Var_10    H25  C9   C7   N3    178.36   0.0  2
- EXA  Var_11    H16  O3   C3   C4    178.04  30.0  2
- EXA  Var_12    H15  C4'  C4   C3   -179.03  30.0  2
- EXA  Var_13    H3   N3   C4'  C4     37.77  30.0  3
- EXA  Var_14    HZ1  NZ   C4'  C4    -66.22  30.0  3
- EXA  Var_15    HB2  CB   CA   N      62.87  30.0  3
- EXA  Var_16    HB3  CB   CA   N     179.37  30.0  3
- EXA  Var_17    H    N    CA   CB    -49.37  30.0  3
- EXA  Var_18    HA   CA   CB   CG     61.32  30.0  1
- EXA  Var_19    H23  OP2  P    OP4    57.59  30.0  3
- EXA  Var_20    H24  OP3  P    OP4   173.25  30.0  3
+ EXA  Var_02    H20  C6   C5   C4    180.00  10.0  1
+ EXA  Var_03    H28  O11  C8   C7    180.00  10.0  1
+ EXA  Var_04    H17  C2'  C2   C3     60.87  30.0  2
+ EXA  Var_05    CD   CG   CB   CA   -179.39  30.0  1
+ EXA  Var_06    CE   CD   CG   CB    179.10  30.0  3
+ EXA  Var_07    NZ   CE   CD   CG    177.15  30.0  1
+ EXA  Var_08    C4'  NZ   CE   CD   -179.86  30.0  3
+ EXA  Var_09    C8   C7   N3   C4'   162.44  30.0  2
+ EXA  Var_10    OP1  P    OP4  C5'   -49.67  30.0  2
+ EXA  Var_11    O10  C8   C7   N3     -1.13  30.0  2
+ EXA  Var_12    H25  C9   C7   N3    178.36   0.0  2
+ EXA  Var_13    H16  O3   C3   C4    178.04  30.0  2
+ EXA  Var_14    H15  C4'  C4   C3   -179.03  30.0  2
+ EXA  Var_15    H3   N3   C4'  C4     37.77  30.0  3
+ EXA  Var_16    HZ1  NZ   C4'  C4    -66.22  30.0  3
+ EXA  Var_17    HB2  CB   CA   N      62.87  30.0  3
+ EXA  Var_18    HB3  CB   CA   N     179.37  30.0  3
+ EXA  Var_19    H    N    CA   CB    -49.37  30.0  3
+ EXA  Var_20    HA   CA   CB   CG     61.32  30.0  1
+ EXA  Var_21    H23  OP2  P    OP4    57.59  30.0  3
+ EXA  Var_22    H24  OP3  P    OP4   173.25  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -345,8 +338,6 @@ _chem_comp_plane_atom.dist_esd
  EXA  plan-2  CA   0.020
  EXA  plan-2  C    0.020
  EXA  plan-2  O    0.020
- EXA  plan-2  OXT  0.020
- EXA  plan-2  HXT  0.020
  EXA  plan-3  C7   0.020
  EXA  plan-3  C8   0.020
  EXA  plan-3  O10  0.020

@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CSE  CSE  '3-selanyl-L-alanine      '  L-peptide  13  7  .  2022-07-24  2024-04-10
+ CSE  CSE  '3-selanyl-L-alanine      '  L-peptide  11  6  .  2022-07-24  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
 Added dihedrals for adding hydrogens : 2023-12-12
 Removed H2 atom : 2024-04-10
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_CSE
@@ -39,18 +40,17 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- CSE  N    N   NH2    0  -0.778  -0.6518   1.6378  -0.3343
- CSE  CA   C   CH1    0  -0.213  -0.9168   0.2111  -0.3508
- CSE  CB   C   CH2    0  -0.561   0.0548  -0.4966   0.5847
- CSE  SE   SE  SE     0  -0.217   1.8789   0.1490   0.2090
- CSE  C    C   C      0   0.393  -2.3593  -0.2226   0.0312
- CSE  O    O   O      0  -0.600  -3.1147   0.6460   0.5050
- CSE  OXT  O   OC    -1  -0.617  -2.6253  -1.4266  -0.1587
- CSE  H    H   HNH2   0   0.345  -1.1661   2.0808  -1.0856
- CSE  HA   H   HCH1   0   0.230  -0.7207  -0.1470  -1.3668
- CSE  HB2  H   HCH2   0   0.255  -0.1797  -0.2790   1.6296
- CSE  HB3  H   HCH2   0   0.270   0.0177  -1.5749   0.4422
- CSE  HE   H   H      0   0.163   2.5510  -1.0324   0.7388
+ CSE  N    N   NH2   0  -0.778  -0.6518   1.6378  -0.3343
+ CSE  CA   C   CH1   0  -0.213  -0.9168   0.2111  -0.3508
+ CSE  CB   C   CH2   0  -0.561   0.0548  -0.4966   0.5847
+ CSE  SE   SE  SE    0  -0.217   1.8789   0.1490   0.2090
+ CSE  C    C   C     0   0.393  -2.3593  -0.2226   0.0312
+ CSE  O    O   O     0  -0.600  -3.1147   0.6460   0.5050
+ CSE  H    H   HNH2  0   0.345  -1.1661   2.0808  -1.0856
+ CSE  HA   H   HCH1  0   0.230  -0.7207  -0.1470  -1.3668
+ CSE  HB2  H   HCH2  0   0.255  -0.1797  -0.2790   1.6296
+ CSE  HB3  H   HCH2  0   0.270   0.0177  -1.5749   0.4422
+ CSE  HE   H   H     0   0.163   2.5510  -1.0324   0.7388
 
 loop_
 _chem_comp_bond.comp_id
@@ -70,7 +70,6 @@ _chem_comp_bond.value_dist_neutron
  CSE  CB  HB3  single  0.939  0.020  1.096
  CSE  SE  HE   single  1.444  0.020  1.444
  CSE  C   O    deloc   1.231  0.020  1.231
- CSE  C   OXT  deloc   1.248  0.020  1.248
 
 loop_
 _chem_comp_angle.comp_id
@@ -93,8 +92,6 @@ _chem_comp_angle.value_angle_esd
  CSE  HB2  CB  CA   110.97  3.000
  CSE  SE   CB  CA   108.73  3.000
  CSE  HE   SE  CB    95.27  3.000
- CSE  OXT  C   O    127.00  3.000
- CSE  OXT  C   CA   115.46  3.000
  CSE  O    C   CA   120.80  1.700
 
 loop_
@@ -112,10 +109,9 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- CSE  plan-1  CA   0.020
- CSE  plan-1  C    0.020
- CSE  plan-1  O    0.020
- CSE  plan-1  OXT  0.020
+ CSE  plan-1  CA  0.020
+ CSE  plan-1  C   0.020
+ CSE  plan-1  O   0.020
 
 loop_
 _chem_comp_tor.comp_id
@@ -129,13 +125,11 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  CSE  Var_01  SE   CB  CA  N    -48.14  30.0  3
  CSE  Var_02  O    C   CA  N    -10.18  30.0  2
- CSE  Var_03  OXT  C   CA  N    170.78  30.0  2
- CSE  Var_04  O    C   CA  CB   113.32  30.0  2
- CSE  Var_05  OXT  C   CA  CB   -65.72  30.0  2
- CSE  Var_06  C    CA  CB  SE  -175.60  30.0  3
- CSE  Var_07  HB2  CB  CA  N     70.99  30.0  3
- CSE  Var_08  HB3  CB  CA  N   -168.44  30.0  3
- CSE  Var_09  HE   SE  CB  CA  -156.33  30.0  3
- CSE  Var_10  H    N   CA  CB   168.80  30.0  3
- CSE  Var_11  HA   CA  CB  SE    68.34  30.0  3
+ CSE  Var_03  O    C   CA  CB   113.32  30.0  2
+ CSE  Var_04  C    CA  CB  SE  -175.60  30.0  3
+ CSE  Var_05  HB2  CB  CA  N     70.99  30.0  3
+ CSE  Var_06  HB3  CB  CA  N   -168.44  30.0  3
+ CSE  Var_07  HE   SE  CB  CA  -156.33  30.0  3
+ CSE  Var_08  H    N   CA  CB   168.80  30.0  3
+ CSE  Var_09  HA   CA  CB  SE    68.34  30.0  3
 

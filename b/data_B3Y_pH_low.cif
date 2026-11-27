@@ -20,13 +20,14 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- B3Y  B3Y  '(3S)-3-amino-4-(4-hydroxyphenyl)butanoic acid'  L-peptide  27  14  .  2022-03-15  2024-04-10
+ B3Y  B3Y  '(3S)-3-amino-4-(4-hydroxyphenyl)butanoic acid'  L-peptide  24  13  .  2022-03-15  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
-Added dihedrals for adding hydrogens : 2024-04-10
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-10
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_B3Y
@@ -53,8 +54,6 @@ _chem_comp_atom.z
  B3Y  OH   O  OH1   0  -0.636  -4.5335   0.8831   3.7666
  B3Y  CF1  C  CR16  0  -0.323  -2.2654   0.2642   3.7786
  B3Y  CE1  C  CR16  0  -0.294  -1.0884  -0.0108   3.1028
- B3Y  OXT  O  OH1   0  -0.594  -2.4010  -2.8257  -1.0000
- B3Y  HXT  H  HOH1  0   0.477  -2.7041  -2.6616  -1.9058
  B3Y  HB1  H  HCH2  0   0.294  -0.3388  -3.6965   0.5430
  B3Y  HB2  H  HCH2  0   0.272  -1.4485  -2.5615   1.2544
  B3Y  HA   H  HCH1  0   0.241   0.7429  -2.0874   2.0216
@@ -77,7 +76,6 @@ _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  B3Y  O    C    double    1.231  0.020  1.231
  B3Y  C    CB   single    1.525  0.021  1.525
- B3Y  C    OXT  single    1.330  0.020  1.330
  B3Y  CB   CA   single    1.530  0.020  1.530
  B3Y  CB   HB1  single    0.970  0.020  1.090
  B3Y  CB   HB2  single    0.970  0.020  1.090
@@ -100,7 +98,6 @@ _chem_comp_bond.value_dist_neutron
  B3Y  CF1  CE1  aromatic  1.385  0.020  1.385
  B3Y  CF1  HF1  single    0.930  0.020  1.080
  B3Y  CE1  HE1  single    0.930  0.020  1.080
- B3Y  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -109,8 +106,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- B3Y  OXT  C    CB   111.67  3.000
- B3Y  OXT  C    O    122.43  3.000
  B3Y  CB   C    O    120.80  1.700
  B3Y  HB2  CB   HB1  105.30  3.000
  B3Y  HB2  CB   CA   110.31  3.000
@@ -150,7 +145,6 @@ _chem_comp_angle.value_angle_esd
  B3Y  HE1  CE1  CF1  118.76  3.000
  B3Y  HE1  CE1  CD   119.57  3.000
  B3Y  CF1  CE1  CD   121.67  3.000
- B3Y  HXT  OXT  C    109.88  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -172,16 +166,15 @@ _chem_comp_tor.period
  B3Y  CONST_08  CF1  CE1  CD   CG    180.00   0.0  0
  B3Y  CONST_09  OH   CZ   CF2  CE2   180.00   0.0  0
  B3Y  CONST_10  CE1  CF1  CZ   OH    180.00   0.0  0
- B3Y  CONST_11  HF2  CF2  CE2  CD    180.00   0.0  0
- B3Y  CONST_12  HF1  CF1  CE1  CD    180.00   0.0  0
- B3Y  CONST_13  HE1  CE1  CD   CE2   180.00   0.0  0
- B3Y  CONST_14  HE2  CE2  CF2  CZ    180.00   0.0  0
- B3Y  CONST_15  HXT  OXT  C    O       0.00   0.0  0
  B3Y  Var_01    CE2  CD   CG   CA   -105.77  30.0  2
- B3Y  Var_02    CA   CB   C    O      19.69  30.0  3
- B3Y  Var_03    HOH  OH   CZ   CF2     1.41  30.0  2
- B3Y  Var_04    HA   CA   CG   CD    -65.15  30.0  2
- B3Y  Var_05    H    N    CA   CB     59.49  30.0  3
+ B3Y  Var_02    HF2  CF2  CE2  CD    180.00  10.0  1
+ B3Y  Var_03    HF1  CF1  CE1  CD    180.00  10.0  1
+ B3Y  Var_04    HE1  CE1  CD   CE2   180.00  10.0  1
+ B3Y  Var_05    HE2  CE2  CF2  CZ    180.00  10.0  1
+ B3Y  Var_06    CA   CB   C    O      19.69  30.0  3
+ B3Y  Var_07    HOH  OH   CZ   CF2     1.41  30.0  2
+ B3Y  Var_08    HA   CA   CG   CD    -65.15  30.0  2
+ B3Y  Var_09    H    N    CA   CB     59.49  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -213,6 +206,4 @@ _chem_comp_plane_atom.dist_esd
  B3Y  plan-2  O    0.020
  B3Y  plan-2  C    0.020
  B3Y  plan-2  CB   0.020
- B3Y  plan-2  OXT  0.020
- B3Y  plan-2  HXT  0.020
 

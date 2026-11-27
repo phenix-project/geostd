@@ -21,10 +21,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- T7Q  T7Q  "(2~{S})-2-azanyl-3-(9-oxidanylidene-10~{H}-acridin-2-yl)propanoic acid"  peptide  36  21  .  2024-05-31  2026-04-13
+ T7Q  T7Q  '(2~{S})-2-azanyl-3-(9-oxidanylidene-10~{H}-acridin-2-yl)propanoic acid'  peptide  34  20  .  2024-05-31  2026-04-13
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_T7Q
@@ -58,7 +60,6 @@ _chem_comp_atom.z
  T7Q  N     N  NT3   1  -0.257  27.0152  42.3200  -11.7581
  T7Q  O01   O  O     0  -0.455  22.4193  45.0892  -15.5537
  T7Q  O     O  O     0  -0.338  26.4693  42.4725  -15.3325
- T7Q  OXT   O  OH1   0  -0.382  27.0600  43.9774  -13.7652
  T7Q  H121  H  HCR6  0   0.132  23.7117  43.1607  -14.6044
  T7Q  H141  H  HCR6  0   0.158  24.2283  42.3662  -10.4232
  T7Q  H151  H  HCR6  0   0.149  22.9098  44.3617   -9.8727
@@ -72,7 +73,6 @@ _chem_comp_atom.z
  T7Q  H091  H  HNR6  0   0.263  21.6886  46.2413  -10.6504
  T7Q  H     H  HNT3  0   0.340  26.9294  41.6213  -11.0147
  T7Q  HN2   H  HNT3  0   0.338  28.0083  42.5456  -11.8481
- T7Q  HXT   H  HOH1  0   0.378  27.1616  44.5763  -14.5267
  T7Q  HN3   H  HNT3  0   0.333  26.5357  43.1688  -11.4484
 
 loop_
@@ -90,7 +90,6 @@ _chem_comp_bond.value_dist_neutron
  T7Q  C05  C06   aromatic  1.405  0.020  1.405
  T7Q  C02  C03   single    1.465  0.020  1.465
  T7Q  C02  C11   single    1.467  0.020  1.467
- T7Q  C    OXT   single    1.333  0.020  1.333
  T7Q  C    CA    single    1.525  0.021  1.525
  T7Q  C03  C08   aromatic  1.410  0.020  1.410
  T7Q  C12  C11   aromatic  1.402  0.020  1.402
@@ -119,7 +118,6 @@ _chem_comp_bond.value_dist_neutron
  T7Q  N09  H091  single    0.860  0.020  1.020
  T7Q  N    H     single    0.860  0.020  0.860
  T7Q  N    HN2   single    0.890  0.020  1.040
- T7Q  OXT  HXT   single    0.850  0.020  0.980
  T7Q  N    HN3   single    0.890  0.020  1.040
 
 loop_
@@ -159,8 +157,6 @@ _chem_comp_angle.value_angle_esd
  T7Q  HA    CA   CB   109.00  3.000
  T7Q  N     CA   CB   110.40  1.500
  T7Q  C     CA   CB   110.50  1.500
- T7Q  OXT   C    O    125.12  3.000
- T7Q  OXT   C    CA   120.80  1.700
  T7Q  O     C    CA   120.80  1.700
  T7Q  O01   C02  C03  122.28  3.000
  T7Q  C03   C02  C11  115.68  3.000
@@ -192,7 +188,6 @@ _chem_comp_angle.value_angle_esd
  T7Q  HN3   N    CA   112.10  3.000
  T7Q  HN2   N    CA   111.51  3.000
  T7Q  H     N    CA   114.00  3.000
- T7Q  HXT   OXT  C    109.84  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -230,29 +225,26 @@ _chem_comp_tor.period
  T7Q  CONST_24  CB    C13  C14  C15   180.00   0.0  0
  T7Q  CONST_25  O01   C02  C03  C04     0.00   0.0  0
  T7Q  CONST_26  O01   C02  C03  C08   180.00   0.0  0
- T7Q  CONST_27  H121  C12  C11  C10   180.00   0.0  0
- T7Q  CONST_28  H141  C14  C15  C10   180.00   0.0  0
- T7Q  CONST_29  H091  N09  C10  C11   180.00   0.0  0
- T7Q  CONST_30  H151  C15  C10  C11   180.00   0.0  0
- T7Q  CONST_31  H041  C04  C03  C02     0.00   0.0  0
- T7Q  CONST_32  H051  C05  C04  C03   180.00   0.0  0
- T7Q  CONST_33  H071  C07  C08  C03   180.00   0.0  0
- T7Q  CONST_34  H061  C06  C05  C04   180.00   0.0  0
- T7Q  CONST_35  HXT   OXT  C    CA    180.00   0.0  0
  T7Q  Var_01    CA    CB   C13  C12    87.57  30.0  2
  T7Q  Var_02    CA    CB   C13  C14   -90.61  30.0  2
- T7Q  Var_03    HB3   CB   C13  C12   -31.90  30.0  2
- T7Q  Var_04    HB2   CB   C13  C12  -151.14  30.0  2
- T7Q  Var_05    C     CA   CB   C13   -61.35  30.0  2
- T7Q  Var_06    N     CA   CB   C13    62.89  30.0  2
- T7Q  Var_07    HA    CA   CB   C13  -179.99  30.0  2
- T7Q  Var_08    O     C    CA   CB    -66.92  30.0  3
- T7Q  Var_09    OXT   C    CA   CB    111.89  30.0  3
- T7Q  Var_10    O     C    CA   N     168.99  30.0  3
- T7Q  Var_11    OXT   C    CA   N     -12.20  30.0  3
- T7Q  Var_12    H     N    CA   CB     60.11  30.0  3
- T7Q  Var_13    HN2   N    CA   CB    179.27  30.0  3
- T7Q  Var_14    HN3   N    CA   CB    -60.29  30.0  3
+ T7Q  Var_03    H121  C12  C11  C10   180.00  10.0  1
+ T7Q  Var_04    H141  C14  C15  C10   180.00  10.0  1
+ T7Q  Var_05    H091  N09  C10  C11   180.00  10.0  1
+ T7Q  Var_06    HB3   CB   C13  C12   -31.90  30.0  2
+ T7Q  Var_07    H151  C15  C10  C11   180.00  10.0  1
+ T7Q  Var_08    H041  C04  C03  C02     0.00  10.0  1
+ T7Q  Var_09    H051  C05  C04  C03   180.00  10.0  1
+ T7Q  Var_10    H071  C07  C08  C03   180.00  10.0  1
+ T7Q  Var_11    H061  C06  C05  C04   180.00  10.0  1
+ T7Q  Var_12    HB2   CB   C13  C12  -151.14  30.0  2
+ T7Q  Var_13    C     CA   CB   C13   -61.35  30.0  2
+ T7Q  Var_14    N     CA   CB   C13    62.89  30.0  2
+ T7Q  Var_15    HA    CA   CB   C13  -179.99  30.0  2
+ T7Q  Var_16    O     C    CA   CB    -66.92  30.0  3
+ T7Q  Var_17    O     C    CA   N     168.99  30.0  3
+ T7Q  Var_18    H     N    CA   CB     60.11  30.0  3
+ T7Q  Var_19    HN2   N    CA   CB    179.27  30.0  3
+ T7Q  Var_20    HN3   N    CA   CB    -60.29  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -300,6 +292,4 @@ _chem_comp_plane_atom.dist_esd
  T7Q  plan-4  CA    0.020
  T7Q  plan-4  C     0.020
  T7Q  plan-4  O     0.020
- T7Q  plan-4  OXT   0.020
- T7Q  plan-4  HXT   0.020
 

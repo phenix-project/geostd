@@ -21,10 +21,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- V4F  V4F  "8-(aminomethyl)-4-(phosphonomethoxy)quinoline-2-carboxylic acid"  peptide  34  21  .  2024-05-31  2026-04-13
+ V4F  V4F  '8-(aminomethyl)-4-(phosphonomethoxy)quinoline-2-carboxylic acid'  peptide  32  20  .  2024-05-31  2026-04-13
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_V4F
@@ -68,9 +70,7 @@ _chem_comp_atom.z
  V4F  H2    H  HNH2  0   0.235  -11.3701  -16.7803  16.5522
  V4F  HPO3  H  HOH1  0   0.385  -10.4605  -26.4670  22.1709
  V4F  HPO2  H  HOH1  0   0.386  -13.7353  -25.1442  20.8864
- V4F  OXT   O  OH1   0  -0.379   -6.9485  -18.4609  19.8000
  V4F  H1    H  HCH2  0   0.167  -10.7025  -23.0556  21.5894
- V4F  HXT   H  HOH1  0   0.367   -6.2483  -18.1574  20.4030
  V4F  O01   O  O2    0  -0.273  -10.8803  -22.9985  19.5113
 
 loop_
@@ -113,9 +113,7 @@ _chem_comp_bond.value_dist_neutron
  V4F  N    H2    single    0.890  0.020  1.040
  V4F  O3   HPO3  single    0.850  0.020  0.980
  V4F  O2   HPO2  single    0.850  0.020  0.980
- V4F  C    OXT   single    1.337  0.020  1.337
  V4F  C01  H1    single    0.970  0.020  1.090
- V4F  OXT  HXT   single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -124,8 +122,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- V4F  OXT   C    O    123.05  3.000
- V4F  OXT   C    CAE  113.69  3.000
  V4F  O     C    CAE  123.26  3.000
  V4F  O01   CAF  CAL  115.77  3.000
  V4F  O01   CAF  CAD  124.63  3.000
@@ -178,7 +174,6 @@ _chem_comp_angle.value_angle_esd
  V4F  O2    P    C01  101.80  3.000
  V4F  O3    P    C01  103.25  3.000
  V4F  O1    P    C01  115.23  3.000
- V4F  HXT   OXT  C    108.09  3.000
  V4F  C01   O01  CAF  118.55  3.000
 
 loop_
@@ -217,31 +212,28 @@ _chem_comp_tor.period
  V4F  CONST_24  CA    CAJ  CAK  CAG   180.00   0.0  0
  V4F  CONST_25  O01   CAF  CAL  CAI     0.00   0.0  0
  V4F  CONST_26  NAH   CAM  CAJ  CA      0.00   0.0  0
- V4F  CONST_27  HAI   CAI  CAL  CAF     0.00   0.0  0
- V4F  CONST_28  HAG   CAG  CAI  CAL   180.00   0.0  0
- V4F  CONST_29  HAD   CAD  CAF  CAL   180.00   0.0  0
- V4F  CONST_30  HAK   CAK  CAJ  CAM   180.00   0.0  0
- V4F  CONST_31  HXT   OXT  C    CAE   180.00   0.0  0
  V4F  Var_01    C01   O01  CAF  CAD     1.48  30.0  2
  V4F  Var_02    O     C    CAE  CAD    -4.34  30.0  2
- V4F  Var_03    OXT   C    CAE  CAD   175.53  30.0  2
- V4F  Var_04    C01   O01  CAF  CAL  -178.56  30.0  2
- V4F  Var_05    N     CA   CAJ  CAM   -81.78  30.0  2
- V4F  Var_06    N     CA   CAJ  CAK    96.53  30.0  2
- V4F  Var_07    O     C    CAE  NAH   175.66  30.0  2
- V4F  Var_08    OXT   C    CAE  NAH    -4.47  30.0  2
- V4F  Var_09    HA1   CA   CAJ  CAM    36.87  30.0  2
- V4F  Var_10    HA2   CA   CAJ  CAM   154.39  30.0  2
- V4F  Var_11    P     C01  O01  CAF  -179.43  30.0  3
- V4F  Var_12    H3    C01  O01  CAF   -61.41  30.0  3
- V4F  Var_13    H1    C01  O01  CAF    60.39  30.0  3
- V4F  Var_14    H     N    CA   CAJ   177.94  30.0  3
- V4F  Var_15    H2    N    CA   CAJ   -66.36  30.0  3
- V4F  Var_16    O1    P    C01  O01    57.05  30.0  2
- V4F  Var_17    O3    P    C01  O01  -176.35  30.0  2
- V4F  Var_18    O2    P    C01  O01   -70.00  30.0  2
- V4F  Var_19    HPO3  O3   P    C01   -93.97  30.0  3
- V4F  Var_20    HPO2  O2   P    C01   159.70  30.0  3
+ V4F  Var_03    HAI   CAI  CAL  CAF     0.00  10.0  1
+ V4F  Var_04    HAG   CAG  CAI  CAL   180.00  10.0  1
+ V4F  Var_05    HAD   CAD  CAF  CAL   180.00  10.0  1
+ V4F  Var_06    HAK   CAK  CAJ  CAM   180.00  10.0  1
+ V4F  Var_07    C01   O01  CAF  CAL  -178.56  30.0  2
+ V4F  Var_08    N     CA   CAJ  CAM   -81.78  30.0  2
+ V4F  Var_09    N     CA   CAJ  CAK    96.53  30.0  2
+ V4F  Var_10    O     C    CAE  NAH   175.66  30.0  2
+ V4F  Var_11    HA1   CA   CAJ  CAM    36.87  30.0  2
+ V4F  Var_12    HA2   CA   CAJ  CAM   154.39  30.0  2
+ V4F  Var_13    P     C01  O01  CAF  -179.43  30.0  3
+ V4F  Var_14    H3    C01  O01  CAF   -61.41  30.0  3
+ V4F  Var_15    H1    C01  O01  CAF    60.39  30.0  3
+ V4F  Var_16    H     N    CA   CAJ   177.94  30.0  3
+ V4F  Var_17    H2    N    CA   CAJ   -66.36  30.0  3
+ V4F  Var_18    O1    P    C01  O01    57.05  30.0  2
+ V4F  Var_19    O3    P    C01  O01  -176.35  30.0  2
+ V4F  Var_20    O2    P    C01  O01   -70.00  30.0  2
+ V4F  Var_21    HPO3  O3   P    C01   -93.97  30.0  3
+ V4F  Var_22    HPO2  O2   P    C01   159.70  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -268,6 +260,4 @@ _chem_comp_plane_atom.dist_esd
  V4F  plan-2  C    0.020
  V4F  plan-2  CAE  0.020
  V4F  plan-2  O    0.020
- V4F  plan-2  OXT  0.020
- V4F  plan-2  HXT  0.020
 

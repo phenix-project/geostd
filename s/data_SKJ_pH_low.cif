@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- SKJ  SKJ  '(2~{S},3~{R})-2-azanyl-3-methyl-hexanoic acid'  L-peptide  25  10  .  2022-08-11  2024-04-14
+ SKJ  SKJ  '(2~{S},3~{R})-2-azanyl-3-methyl-hexanoic acid'  L-peptide  22  9  .  2022-08-11  2024-04-14
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
 Added dihedrals for adding hydrogens : 2023-10-30
 Removed H2 atom : 2024-04-14
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_SKJ
@@ -46,7 +47,6 @@ _chem_comp_atom.z
  SKJ  CB   C  CH1   0  -0.248   3.1328  -31.6008  8.7776
  SKJ  CG1  C  CH3   0  -0.665   3.4169  -33.0294  9.2292
  SKJ  CG2  C  CH2   0  -0.408   2.0176  -31.5351  7.7321
- SKJ  OXT  O  OH1   0  -0.589   5.4772  -32.4770  6.9920
  SKJ  CAA  C  CH3   0  -0.659  -0.4510  -31.7650  7.2189
  SKJ  CAB  C  CH2   0  -0.426   0.6326  -31.8551  8.2848
  SKJ  H1   H  HNH2  0   0.351   3.8897  -29.1164  9.2102
@@ -57,7 +57,6 @@ _chem_comp_atom.z
  SKJ  H8   H  HCH3  0   0.224   3.6915  -33.6775  8.3967
  SKJ  H9   H  HCH2  0   0.208   2.2423  -32.2313  6.9147
  SKJ  H10  H  HCH2  0   0.226   1.9980  -30.5339  7.2932
- SKJ  HXT  H  HOH1  0   0.478   5.7188  -32.7544  6.0954
  SKJ  H12  H  HCH3  0   0.226  -1.4376  -31.9798  7.6312
  SKJ  H13  H  HCH3  0   0.216  -0.4884  -30.7677  6.7763
  SKJ  H14  H  HCH3  0   0.216  -0.2682  -32.4756  6.4109
@@ -73,7 +72,6 @@ _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  SKJ  O    C    double  1.231  0.020  1.231
- SKJ  OXT  C    single  1.329  0.020  1.329
  SKJ  C    CA   single  1.525  0.021  1.525
  SKJ  CAA  CAB  single  1.523  0.020  1.523
  SKJ  CG2  CAB  single  1.525  0.020  1.525
@@ -89,7 +87,6 @@ _chem_comp_bond.value_dist_neutron
  SKJ  CG1  H8   single  0.970  0.020  1.090
  SKJ  CG2  H9   single  0.970  0.020  1.090
  SKJ  CG2  H10  single  0.970  0.020  1.090
- SKJ  OXT  HXT  single  0.850  0.020  0.980
  SKJ  CAA  H12  single  0.970  0.020  1.090
  SKJ  CAA  H13  single  0.970  0.020  1.090
  SKJ  CAA  H14  single  0.970  0.020  1.090
@@ -110,8 +107,6 @@ _chem_comp_angle.value_angle_esd
  SKJ  H4   CA   N    113.03  3.000
  SKJ  CB   CA   N    110.40  1.500
  SKJ  C    CA   N    111.00  2.800
- SKJ  OXT  C    O    122.90  3.000
- SKJ  OXT  C    CA   120.80  1.700
  SKJ  O    C    CA   120.80  1.700
  SKJ  H5   CB   CG2  107.96  3.000
  SKJ  H5   CB   CG1  106.82  3.000
@@ -131,7 +126,6 @@ _chem_comp_angle.value_angle_esd
  SKJ  H10  CG2  CB   109.07  3.000
  SKJ  H9   CG2  CB   109.43  3.000
  SKJ  CAB  CG2  CB   113.90  3.000
- SKJ  HXT  OXT  C    109.82  3.000
  SKJ  H14  CAA  H13  107.49  3.000
  SKJ  H14  CAA  H12  107.65  3.000
  SKJ  H13  CAA  H12  107.59  3.000
@@ -155,17 +149,16 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- SKJ  CONST_01  HXT  OXT  C    CA    180.00   0.0  0
- SKJ  Var_01    CAA  CAB  CG2  CB    179.39  30.0  3
- SKJ  Var_02    H12  CAA  CAB  CG2  -179.05  30.0  3
- SKJ  Var_03    H5   CB   CA   N     -48.38  30.0  3
- SKJ  Var_04    H9   CG2  CB   CA     76.43  30.0  1
- SKJ  Var_05    H10  CG2  CB   CA    -39.83  30.0  1
- SKJ  Var_06    H6   CG1  CB   CA     51.06  30.0  3
- SKJ  Var_07    H7   CG1  CB   CA    170.15  30.0  3
- SKJ  Var_08    H8   CG1  CB   CA    -70.12  30.0  3
- SKJ  Var_09    H1   N    CA   C    -176.30  30.0  3
- SKJ  Var_10    H4   CA   C    O    -139.78  30.0  3
+ SKJ  Var_01  CAA  CAB  CG2  CB    179.39  30.0  3
+ SKJ  Var_02  H12  CAA  CAB  CG2  -179.05  30.0  3
+ SKJ  Var_03  H5   CB   CA   N     -48.38  30.0  3
+ SKJ  Var_04  H9   CG2  CB   CA     76.43  30.0  1
+ SKJ  Var_05  H10  CG2  CB   CA    -39.83  30.0  1
+ SKJ  Var_06  H6   CG1  CB   CA     51.06  30.0  3
+ SKJ  Var_07  H7   CG1  CB   CA    170.15  30.0  3
+ SKJ  Var_08  H8   CG1  CB   CA    -70.12  30.0  3
+ SKJ  Var_09  H1   N    CA   C    -176.30  30.0  3
+ SKJ  Var_10  H4   CA   C    O    -139.78  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -183,9 +176,7 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- SKJ  plan-1  CA   0.020
- SKJ  plan-1  C    0.020
- SKJ  plan-1  O    0.020
- SKJ  plan-1  OXT  0.020
- SKJ  plan-1  HXT  0.020
+ SKJ  plan-1  CA  0.020
+ SKJ  plan-1  C   0.020
+ SKJ  plan-1  O   0.020
 

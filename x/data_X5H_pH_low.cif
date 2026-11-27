@@ -21,10 +21,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- X5H  X5H  "(~{E})-6-(2-hydroxy-2-oxoethylamino)hex-4-enoic acid"  peptide  26  13  .  2024-07-12  2026-04-13
+ X5H  X5H  '(~{E})-6-(2-hydroxy-2-oxoethylamino)hex-4-enoic acid'  peptide  24  12  .  2024-07-12  2026-04-13
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_X5H
@@ -49,7 +51,6 @@ _chem_comp_atom.z
  X5H  C    C  C     0   0.335  25.7003  -4.7211  16.9860
  X5H  O    O  O     0  -0.396  24.6406  -5.0925  16.5328
  X5H  C31  C  CH2   0  -0.089  29.3205  -5.8124  17.4433
- X5H  OXT  O  OH1   0  -0.391  25.8462  -3.5597  17.6371
  X5H  O3   O  OH1   0  -0.395  27.9279  -7.1635  21.9702
  X5H  H1   H  H     0   0.125  30.7385  -6.9029  19.4893
  X5H  H7   H  HCH2  0   0.109  29.2462  -9.5844  19.1361
@@ -62,7 +63,6 @@ _chem_comp_atom.z
  X5H  HA3  H  HCH2  0   0.124  27.2165  -5.4868  15.7554
  X5H  H11  H  HCH2  0   0.100  29.5416  -5.8961  16.3666
  X5H  H12  H  HCH2  0   0.124  30.1355  -5.2523  17.9037
- X5H  HXT  H  HOH1  0   0.362  24.9852  -3.1065  17.6590
  X5H  H14  H  HOH1  0   0.358  27.0064  -6.8501  21.9530
 
 loop_
@@ -83,7 +83,6 @@ _chem_comp_bond.value_dist_neutron
  X5H  C2   C3   single  1.541  0.020  1.541
  X5H  C3   C4   single  1.507  0.020  1.507
  X5H  O2   C4   double  1.211  0.020  1.211
- X5H  C    OXT  single  1.340  0.020  1.340
  X5H  C4   O3   single  1.344  0.020  1.344
  X5H  C1   H1   single  0.930  0.020  1.080
  X5H  C2   H7   single  0.970  0.020  1.090
@@ -96,7 +95,6 @@ _chem_comp_bond.value_dist_neutron
  X5H  CA   HA3  single  0.970  0.020  1.090
  X5H  C31  H11  single  0.970  0.020  1.090
  X5H  C31  H12  single  0.970  0.020  1.090
- X5H  OXT  HXT  single  0.850  0.020  0.980
  X5H  O3   H14  single  0.850  0.020  0.980
 
 loop_
@@ -136,8 +134,6 @@ _chem_comp_angle.value_angle_esd
  X5H  HA3  CA   N    113.29  3.000
  X5H  HA2  CA   N    110.08  3.000
  X5H  C    CA   N    114.87  3.000
- X5H  OXT  C    O    122.90  3.000
- X5H  OXT  C    CA   113.99  3.000
  X5H  O    C    CA   123.09  3.000
  X5H  H12  C31  H11  107.54  3.000
  X5H  H12  C31  N    107.33  3.000
@@ -145,7 +141,6 @@ _chem_comp_angle.value_angle_esd
  X5H  H12  C31  C11  109.41  3.000
  X5H  H11  C31  C11  109.39  3.000
  X5H  N    C31  C11  112.11  3.000
- X5H  HXT  OXT  C    108.56  3.000
  X5H  H14  O3   C4   108.54  3.000
 
 loop_
@@ -158,29 +153,27 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- X5H  CONST_01  H14  O3   C4   C3    180.00   0.0  0
- X5H  CONST_02  HXT  OXT  C    CA    180.00   0.0  0
- X5H  Var_01    C31  C11  C1   C2    177.18   0.0  2
- X5H  Var_02    N    C31  C11  C1   -114.14  30.0  1
- X5H  Var_03    C4   C3   C2   C1     62.89  30.0  3
- X5H  Var_04    O2   C4   C3   C2     56.20  30.0  3
- X5H  Var_05    O3   C4   C3   C2   -123.41  30.0  3
- X5H  Var_06    C11  C1   C2   C3   -113.03  30.0  1
- X5H  Var_07    CA   N    C31  C11   -74.10  30.0  3
- X5H  Var_08    O    C    CA   N    -167.89  30.0  3
- X5H  Var_09    OXT  C    CA   N      13.81  30.0  3
- X5H  Var_10    C31  N    CA   C    -177.80  30.0  3
- X5H  Var_11    H6   C11  C1   C2     -2.46   0.0  2
- X5H  Var_12    H1   C1   C11  C31     0.04   0.0  2
- X5H  Var_13    H11  C31  C11  C1    122.38  30.0  1
- X5H  Var_14    H12  C31  C11  C1      4.82  30.0  1
- X5H  Var_15    H4   C3   C2   C1   -178.78  30.0  3
- X5H  Var_16    H5   C3   C2   C1    -59.50  30.0  3
- X5H  Var_17    H7   C2   C3   C4    -59.33  30.0  1
- X5H  Var_18    H3   C2   C3   C4   -175.96  30.0  1
- X5H  Var_19    H    N    C31  C11   165.29  30.0  3
- X5H  Var_20    HA2  CA   C    O     -45.98  30.0  1
- X5H  Var_21    HA3  CA   C    O      66.43  30.0  1
+ X5H  Var_01  H14  O3   C4   C3    180.00  10.0  1
+ X5H  Var_02  C31  C11  C1   C2    177.18   0.0  2
+ X5H  Var_03  N    C31  C11  C1   -114.14  30.0  1
+ X5H  Var_04  C4   C3   C2   C1     62.89  30.0  3
+ X5H  Var_05  O2   C4   C3   C2     56.20  30.0  3
+ X5H  Var_06  O3   C4   C3   C2   -123.41  30.0  3
+ X5H  Var_07  C11  C1   C2   C3   -113.03  30.0  1
+ X5H  Var_08  CA   N    C31  C11   -74.10  30.0  3
+ X5H  Var_09  O    C    CA   N    -167.89  30.0  3
+ X5H  Var_10  C31  N    CA   C    -177.80  30.0  3
+ X5H  Var_11  H6   C11  C1   C2     -2.46   0.0  2
+ X5H  Var_12  H1   C1   C11  C31     0.04   0.0  2
+ X5H  Var_13  H11  C31  C11  C1    122.38  30.0  1
+ X5H  Var_14  H12  C31  C11  C1      4.82  30.0  1
+ X5H  Var_15  H4   C3   C2   C1   -178.78  30.0  3
+ X5H  Var_16  H5   C3   C2   C1    -59.50  30.0  3
+ X5H  Var_17  H7   C2   C3   C4    -59.33  30.0  1
+ X5H  Var_18  H3   C2   C3   C4   -175.96  30.0  1
+ X5H  Var_19  H    N    C31  C11   165.29  30.0  3
+ X5H  Var_20  HA2  CA   C    O     -45.98  30.0  1
+ X5H  Var_21  HA3  CA   C    O      66.43  30.0  1
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -195,8 +188,6 @@ _chem_comp_plane_atom.dist_esd
  X5H  plan-2  CA   0.020
  X5H  plan-2  C    0.020
  X5H  plan-2  O    0.020
- X5H  plan-2  OXT  0.020
- X5H  plan-2  HXT  0.020
  X5H  plan-3  C1   0.020
  X5H  plan-3  C2   0.020
  X5H  plan-3  C11  0.020

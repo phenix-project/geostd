@@ -21,10 +21,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- LYX  LYX  "N''-(2-COENZYME A)-PROPANOYL-LYSINE"  L-peptide  114  62  .  2019-03-22  2026-04-13
+ LYX  LYX  'N''-(2-COENZYME A)-PROPANOYL-LYSINE'  L-peptide  112  61  .  2019-03-22  2026-04-13
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as OK
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_LYX
@@ -99,7 +101,6 @@ _chem_comp_atom.z
  LYX  C59   C  CR6   0   0.145  -1.2585   -6.3357  -7.7771
  LYX  N60   N  NH2   0  -0.395  -2.0570   -7.1446  -8.4885
  LYX  O61   O  O2    0  -0.349   2.6050   -6.2687  -3.8816
- LYX  OXT   O  OH1   0  -0.399  -3.8898  -17.1225  -2.9164
  LYX  H61   H  HCH2  0   0.152   0.0011   -3.0222   0.5657
  LYX  H62   H  HCH2  0   0.156  -0.0984   -2.5327   2.2739
  LYX  H81   H  HCH3  0   0.126   1.9620    0.5769   1.8778
@@ -151,7 +152,6 @@ _chem_comp_atom.z
  LYX  H57   H  HCR6  0   0.149  -1.2209   -3.2568  -6.6726
  LYX  H601  H  HNH2  0   0.276  -1.7790   -8.0888  -8.6944
  LYX  H602  H  HNH2  0   0.269  -2.9086   -6.7852  -8.8867
- LYX  HXT   H  HOH1  0   0.362  -4.6888  -17.3410  -3.4257
 
 loop_
 _chem_comp_bond.comp_id
@@ -235,7 +235,6 @@ _chem_comp_bond.value_dist_neutron
  LYX  N    H     single    0.860  0.020  0.860
  LYX  N    H2    single    0.890  0.020  1.040
  LYX  C    O     double    1.231  0.020  1.231
- LYX  C    OXT   single    1.344  0.020  1.344
  LYX  O37  H37   single    0.850  0.020  0.980
  LYX  O38  H38   single    0.850  0.020  0.980
  LYX  O39  C40   single    1.446  0.020  1.446
@@ -276,7 +275,6 @@ _chem_comp_bond.value_dist_neutron
  LYX  C59  N60   single    1.341  0.020  1.341
  LYX  N60  H601  single    0.860  0.020  1.020
  LYX  N60  H602  single    0.860  0.020  1.020
- LYX  OXT  HXT   single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -418,8 +416,6 @@ _chem_comp_angle.value_angle_esd
  LYX  H2    N    H     106.87  3.000
  LYX  H2    N    CA    108.77  3.000
  LYX  H     N    CA    114.00  3.000
- LYX  OXT   C    O     122.66  3.000
- LYX  OXT   C    CA    111.46  3.000
  LYX  O     C    CA    120.80  1.700
  LYX  H37   O37  P4    114.02  3.000
  LYX  H38   O38  P2    115.09  3.000
@@ -489,7 +485,6 @@ _chem_comp_angle.value_angle_esd
  LYX  H602  N60  C59   119.89  3.000
  LYX  H601  N60  C59   120.69  3.000
  LYX  C50   O61  C41   110.98  3.000
- LYX  HXT   OXT  C     108.61  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -524,141 +519,138 @@ _chem_comp_tor.period
  LYX  CONST_21  N60   C59  C54  N53     0.00   0.0  0
  LYX  CONST_22  N60   C59  C54  C55   180.00   0.0  0
  LYX  CONST_23  N60   C59  N58  C57   180.00   0.0  0
- LYX  CONST_24  H52   C52  N51  C50     0.00   0.0  0
- LYX  CONST_25  H57   C57  N56  C55   180.00   0.0  0
- LYX  CONST_26  H601  N60  C59  C54     0.00   0.0  0
- LYX  CONST_27  H602  N60  C59  C54   180.00   0.0  0
- LYX  CONST_28  C14   N13  C12  C10   180.00   0.0  0
- LYX  CONST_29  O35   C12  N13  C14     0.00   0.0  0
- LYX  CONST_30  C18   N17  C16  C15   180.00   0.0  0
- LYX  CONST_31  O34   C16  N17  C18     0.00   0.0  0
- LYX  CONST_32  CE    NZ   C23  C21   180.00   0.0  0
- LYX  CONST_33  O33   C23  NZ   CE      0.00   0.0  0
- LYX  CONST_34  H13   N13  C12  C10     0.00   0.0  0
- LYX  CONST_35  H17   N17  C16  C15     0.00   0.0  0
- LYX  CONST_36  HZ    NZ   C23  C21     0.00   0.0  0
- LYX  CONST_37  HXT   OXT  C    CA    180.00   0.0  0
+ LYX  CONST_24  C14   N13  C12  C10   180.00   0.0  0
+ LYX  CONST_25  O35   C12  N13  C14     0.00   0.0  0
+ LYX  CONST_26  C18   N17  C16  C15   180.00   0.0  0
+ LYX  CONST_27  O34   C16  N17  C18     0.00   0.0  0
+ LYX  CONST_28  CE    NZ   C23  C21   180.00   0.0  0
+ LYX  CONST_29  O33   C23  NZ   CE      0.00   0.0  0
  LYX  Var_01    C50   C48  C42  C41    34.71  30.0  1
  LYX  Var_02    C48   C50  O61  C41    -1.61  30.0  1
- LYX  Var_03    N51   C50  O61  C41  -127.06  30.0  1
- LYX  Var_04    C50   O61  C41  C42    24.13  30.0  1
- LYX  Var_05    N51   C50  C48  C42   101.00  30.0  1
- LYX  Var_06    O61   C50  C48  C42   -21.15  30.0  1
- LYX  Var_07    O61   C41  C42  C48   -36.67  30.0  1
- LYX  Var_08    C52   N51  C50  C48   149.75  30.0  2
- LYX  Var_09    C55   N51  C50  C48   -34.99  30.0  2
- LYX  Var_10    O61   C50  N51  C52   -89.66  30.0  1
- LYX  Var_11    O61   C50  N51  C55    85.60  30.0  1
- LYX  Var_12    C48   C42  C41  C40  -155.31  30.0  1
- LYX  Var_13    C50   O61  C41  C40   145.22  30.0  1
- LYX  Var_14    O49   C48  C42  C41   -85.66  30.0  1
- LYX  Var_15    O61   C41  C42  O43  -159.37  30.0  1
- LYX  Var_16    C50   C48  C42  O43   154.88  30.0  1
- LYX  Var_17    N51   C50  C48  O49  -137.41  30.0  1
- LYX  Var_18    O61   C50  C48  O49   100.44  30.0  1
- LYX  Var_19    H48   C48  C42  C41   153.92  30.0  1
- LYX  Var_20    H50   C50  O61  C41   116.82  30.0  1
- LYX  Var_21    H41   C41  C42  C48    81.36  30.0  1
- LYX  Var_22    H42   C42  C48  C50   -81.46  30.0  1
- LYX  Var_23    C42   C41  C40  O39   178.36  30.0  3
- LYX  Var_24    O61   C41  C40  O39    63.14  30.0  3
- LYX  Var_25    O43   C42  C41  C40    81.99  30.0  1
- LYX  Var_26    P44   O43  C42  C41  -158.76  30.0  3
- LYX  Var_27    O49   C48  C42  O43    34.52  30.0  1
- LYX  Var_28    C48   C42  O43  P44    85.48  30.0  2
- LYX  Var_29    H401  C40  C41  C42    58.81  30.0  1
- LYX  Var_30    H402  C40  C41  C42   -62.58  30.0  1
- LYX  Var_31    H49   O49  C48  C42    49.77  30.0  3
- LYX  Var_32    C41   C40  O39  P2   -166.61  30.0  3
- LYX  Var_33    O45   P44  O43  C42   -65.27  30.0  3
- LYX  Var_34    O46   P44  O43  C42   169.45  30.0  3
- LYX  Var_35    O47   P44  O43  C42    60.80  30.0  3
- LYX  Var_36    P4    O3   P2   O1     52.21  30.0  3
- LYX  Var_37    C40   O39  P2   O1    174.27  30.0  3
- LYX  Var_38    O5    P4   O3   P2    125.87  30.0  3
- LYX  Var_39    O36   P4   O3   P2      2.67  30.0  3
- LYX  Var_40    O37   P4   O3   P2   -123.19  30.0  3
- LYX  Var_41    C40   O39  P2   O3    -61.77  30.0  3
- LYX  Var_42    C6    O5   P4   O3     47.61  30.0  3
- LYX  Var_43    O38   P2   O3   P4    178.25  30.0  2
- LYX  Var_44    O39   P2   O3   P4    -69.98  30.0  2
- LYX  Var_45    C7    C6   O5   P4   -177.87  30.0  3
- LYX  Var_46    C8    C7   C6   O5    -58.36  30.0  3
- LYX  Var_47    C9    C7   C6   O5     63.20  30.0  3
- LYX  Var_48    C10   C7   C6   O5   -175.18  30.0  3
- LYX  Var_49    O36   P4   O5   C6    173.56  30.0  2
- LYX  Var_50    O37   P4   O5   C6    -56.14  30.0  2
- LYX  Var_51    O11   C10  C7   C6    177.54  30.0  3
- LYX  Var_52    C12   C10  C7   C6    -61.28  30.0  3
- LYX  Var_53    N13   C12  C10  C7     86.66  30.0  3
- LYX  Var_54    O35   C12  C10  C7    -92.76  30.0  3
- LYX  Var_55    O11   C10  C7   C8     59.31  30.0  3
- LYX  Var_56    C12   C10  C7   C8   -179.51  30.0  3
- LYX  Var_57    O11   C10  C7   C9    -61.64  30.0  3
- LYX  Var_58    C12   C10  C7   C9     59.53  30.0  3
- LYX  Var_59    N13   C12  C10  O11  -150.34  30.0  3
- LYX  Var_60    O35   C12  C10  O11    30.25  30.0  3
- LYX  Var_61    C15   C14  N13  C12    81.24  30.0  3
- LYX  Var_62    C16   C15  C14  N13   169.58  30.0  3
- LYX  Var_63    N17   C16  C15  C14   132.98  30.0  3
- LYX  Var_64    O34   C16  C15  C14   -48.61  30.0  3
- LYX  Var_65    C19   C18  N17  C16   -79.73  30.0  3
- LYX  Var_66    S20   C19  C18  N17   -52.82  30.0  3
- LYX  Var_67    C21   S20  C19  C18  -165.28  30.0  3
- LYX  Var_68    C22   C21  S20  C19  -176.30  30.0  3
- LYX  Var_69    C23   C21  S20  C19   -54.83  30.0  3
- LYX  Var_70    NZ    C23  C21  S20   114.61  30.0  3
- LYX  Var_71    O33   C23  C21  S20   -65.06  30.0  3
- LYX  Var_72    NZ    C23  C21  C22  -125.72  30.0  3
- LYX  Var_73    O33   C23  C21  C22    54.61  30.0  3
- LYX  Var_74    CD    CE   NZ   C23   -84.57  30.0  3
- LYX  Var_75    CG    CD   CE   NZ    -64.04  30.0  3
- LYX  Var_76    CB    CG   CD   CE    178.00  30.0  3
- LYX  Var_77    CA    CB   CG   CD   -178.91  30.0  3
- LYX  Var_78    N     CA   CB   CG     64.76  30.0  3
- LYX  Var_79    C     CA   CB   CG    -57.59  30.0  3
- LYX  Var_80    O     C    CA   CB    120.94  30.0  3
- LYX  Var_81    OXT   C    CA   CB    -60.00  30.0  3
- LYX  Var_82    O     C    CA   N      -2.03  30.0  3
- LYX  Var_83    OXT   C    CA   N     177.04  30.0  3
- LYX  Var_84    C40   O39  P2   O38    42.39  30.0  3
- LYX  Var_85    H38   O38  P2   O1    -76.22  30.0  3
- LYX  Var_86    H37   O37  P4   O3    175.82  30.0  3
- LYX  Var_87    H61   C6   O5   P4    -57.20  30.0  3
- LYX  Var_88    H62   C6   O5   P4     60.94  30.0  3
- LYX  Var_89    H81   C8   C7   C6   -177.63  30.0  3
- LYX  Var_90    H82   C8   C7   C6     62.61  30.0  3
- LYX  Var_91    H83   C8   C7   C6    -57.47  30.0  3
- LYX  Var_92    H91   C9   C7   C6    -63.72  30.0  3
- LYX  Var_93    H92   C9   C7   C6    177.02  30.0  3
- LYX  Var_94    H93   C9   C7   C6     56.32  30.0  3
- LYX  Var_95    H10   C10  C7   C6     59.81  30.0  3
- LYX  Var_96    H11   O11  C10  C7     97.29  30.0  3
- LYX  Var_97    H141  C14  N13  C12  -158.00  30.0  3
- LYX  Var_98    H142  C14  N13  C12   -40.62  30.0  3
- LYX  Var_99    H151  C15  C14  N13    52.50  30.0  3
- LYX  Var_100   H152  C15  C14  N13   -65.24  30.0  3
- LYX  Var_101   H181  C18  N17  C16    41.03  30.0  3
- LYX  Var_102   H182  C18  N17  C16   158.00  30.0  3
- LYX  Var_103   H191  C19  C18  N17    67.98  30.0  3
- LYX  Var_104   H192  C19  C18  N17  -171.72  30.0  3
- LYX  Var_105   H211  C21  S20  C19    65.15  30.0  3
- LYX  Var_106   H221  C22  C21  S20    63.23  30.0  3
- LYX  Var_107   H222  C22  C21  S20  -176.95  30.0  3
- LYX  Var_108   H223  C22  C21  S20   -57.45  30.0  3
- LYX  Var_109   HE3   CE   NZ   C23   153.59  30.0  3
- LYX  Var_110   HE2   CE   NZ   C23    37.40  30.0  3
- LYX  Var_111   HD3   CD   CE   NZ     58.53  30.0  3
- LYX  Var_112   HD2   CD   CE   NZ    174.14  30.0  3
- LYX  Var_113   HG3   CG   CD   CE    -60.17  30.0  3
- LYX  Var_114   HG2   CG   CD   CE     56.22  30.0  3
- LYX  Var_115   HB3   CB   CG   CD     58.50  30.0  3
- LYX  Var_116   HB2   CB   CG   CD    -58.51  30.0  3
- LYX  Var_117   HA    CA   CB   CG   -171.82  30.0  3
- LYX  Var_118   H     N    CA   CB   -179.08  30.0  3
- LYX  Var_119   H2    N    CA   CB     63.99  30.0  3
- LYX  Var_120   H46   O46  P44  O43   162.36  30.0  3
- LYX  Var_121   H47   O47  P44  O43  -128.16  30.0  3
+ LYX  Var_03    H52   C52  N51  C50     0.00  10.0  1
+ LYX  Var_04    H57   C57  N56  C55   180.00  10.0  1
+ LYX  Var_05    H601  N60  C59  C54     0.00  10.0  1
+ LYX  Var_06    H602  N60  C59  C54   180.00  10.0  1
+ LYX  Var_07    N51   C50  O61  C41  -127.06  30.0  1
+ LYX  Var_08    H13   N13  C12  C10     0.00  10.0  1
+ LYX  Var_09    H17   N17  C16  C15     0.00  10.0  1
+ LYX  Var_10    HZ    NZ   C23  C21     0.00  10.0  1
+ LYX  Var_11    C50   O61  C41  C42    24.13  30.0  1
+ LYX  Var_12    N51   C50  C48  C42   101.00  30.0  1
+ LYX  Var_13    O61   C50  C48  C42   -21.15  30.0  1
+ LYX  Var_14    O61   C41  C42  C48   -36.67  30.0  1
+ LYX  Var_15    C52   N51  C50  C48   149.75  30.0  2
+ LYX  Var_16    C55   N51  C50  C48   -34.99  30.0  2
+ LYX  Var_17    O61   C50  N51  C52   -89.66  30.0  1
+ LYX  Var_18    H152  C15  C14  N13   -65.24  30.0  3
+ LYX  Var_19    H181  C18  N17  C16    41.03  30.0  3
+ LYX  Var_20    H182  C18  N17  C16   158.00  30.0  3
+ LYX  Var_21    H191  C19  C18  N17    67.98  30.0  3
+ LYX  Var_22    H192  C19  C18  N17  -171.72  30.0  3
+ LYX  Var_23    H211  C21  S20  C19    65.15  30.0  3
+ LYX  Var_24    H221  C22  C21  S20    63.23  30.0  3
+ LYX  Var_25    H222  C22  C21  S20  -176.95  30.0  3
+ LYX  Var_26    H223  C22  C21  S20   -57.45  30.0  3
+ LYX  Var_27    HE3   CE   NZ   C23   153.59  30.0  3
+ LYX  Var_28    O61   C50  N51  C55    85.60  30.0  1
+ LYX  Var_29    HE2   CE   NZ   C23    37.40  30.0  3
+ LYX  Var_30    HD3   CD   CE   NZ     58.53  30.0  3
+ LYX  Var_31    HD2   CD   CE   NZ    174.14  30.0  3
+ LYX  Var_32    HG3   CG   CD   CE    -60.17  30.0  3
+ LYX  Var_33    HG2   CG   CD   CE     56.22  30.0  3
+ LYX  Var_34    HB3   CB   CG   CD     58.50  30.0  3
+ LYX  Var_35    HB2   CB   CG   CD    -58.51  30.0  3
+ LYX  Var_36    HA    CA   CB   CG   -171.82  30.0  3
+ LYX  Var_37    H     N    CA   CB   -179.08  30.0  3
+ LYX  Var_38    H2    N    CA   CB     63.99  30.0  3
+ LYX  Var_39    C48   C42  C41  C40  -155.31  30.0  1
+ LYX  Var_40    H46   O46  P44  O43   162.36  30.0  3
+ LYX  Var_41    H47   O47  P44  O43  -128.16  30.0  3
+ LYX  Var_42    C50   O61  C41  C40   145.22  30.0  1
+ LYX  Var_43    O49   C48  C42  C41   -85.66  30.0  1
+ LYX  Var_44    O61   C41  C42  O43  -159.37  30.0  1
+ LYX  Var_45    C50   C48  C42  O43   154.88  30.0  1
+ LYX  Var_46    N51   C50  C48  O49  -137.41  30.0  1
+ LYX  Var_47    O61   C50  C48  O49   100.44  30.0  1
+ LYX  Var_48    H48   C48  C42  C41   153.92  30.0  1
+ LYX  Var_49    H50   C50  O61  C41   116.82  30.0  1
+ LYX  Var_50    H41   C41  C42  C48    81.36  30.0  1
+ LYX  Var_51    H42   C42  C48  C50   -81.46  30.0  1
+ LYX  Var_52    C42   C41  C40  O39   178.36  30.0  3
+ LYX  Var_53    O61   C41  C40  O39    63.14  30.0  3
+ LYX  Var_54    O43   C42  C41  C40    81.99  30.0  1
+ LYX  Var_55    P44   O43  C42  C41  -158.76  30.0  3
+ LYX  Var_56    O49   C48  C42  O43    34.52  30.0  1
+ LYX  Var_57    C48   C42  O43  P44    85.48  30.0  2
+ LYX  Var_58    H401  C40  C41  C42    58.81  30.0  1
+ LYX  Var_59    H402  C40  C41  C42   -62.58  30.0  1
+ LYX  Var_60    H49   O49  C48  C42    49.77  30.0  3
+ LYX  Var_61    C41   C40  O39  P2   -166.61  30.0  3
+ LYX  Var_62    O45   P44  O43  C42   -65.27  30.0  3
+ LYX  Var_63    O46   P44  O43  C42   169.45  30.0  3
+ LYX  Var_64    O47   P44  O43  C42    60.80  30.0  3
+ LYX  Var_65    P4    O3   P2   O1     52.21  30.0  3
+ LYX  Var_66    C40   O39  P2   O1    174.27  30.0  3
+ LYX  Var_67    O5    P4   O3   P2    125.87  30.0  3
+ LYX  Var_68    O36   P4   O3   P2      2.67  30.0  3
+ LYX  Var_69    O37   P4   O3   P2   -123.19  30.0  3
+ LYX  Var_70    C40   O39  P2   O3    -61.77  30.0  3
+ LYX  Var_71    C6    O5   P4   O3     47.61  30.0  3
+ LYX  Var_72    O38   P2   O3   P4    178.25  30.0  2
+ LYX  Var_73    O39   P2   O3   P4    -69.98  30.0  2
+ LYX  Var_74    C7    C6   O5   P4   -177.87  30.0  3
+ LYX  Var_75    C8    C7   C6   O5    -58.36  30.0  3
+ LYX  Var_76    C9    C7   C6   O5     63.20  30.0  3
+ LYX  Var_77    C10   C7   C6   O5   -175.18  30.0  3
+ LYX  Var_78    O36   P4   O5   C6    173.56  30.0  2
+ LYX  Var_79    O37   P4   O5   C6    -56.14  30.0  2
+ LYX  Var_80    O11   C10  C7   C6    177.54  30.0  3
+ LYX  Var_81    C12   C10  C7   C6    -61.28  30.0  3
+ LYX  Var_82    N13   C12  C10  C7     86.66  30.0  3
+ LYX  Var_83    O35   C12  C10  C7    -92.76  30.0  3
+ LYX  Var_84    O11   C10  C7   C8     59.31  30.0  3
+ LYX  Var_85    C12   C10  C7   C8   -179.51  30.0  3
+ LYX  Var_86    O11   C10  C7   C9    -61.64  30.0  3
+ LYX  Var_87    C12   C10  C7   C9     59.53  30.0  3
+ LYX  Var_88    N13   C12  C10  O11  -150.34  30.0  3
+ LYX  Var_89    O35   C12  C10  O11    30.25  30.0  3
+ LYX  Var_90    C15   C14  N13  C12    81.24  30.0  3
+ LYX  Var_91    C16   C15  C14  N13   169.58  30.0  3
+ LYX  Var_92    N17   C16  C15  C14   132.98  30.0  3
+ LYX  Var_93    O34   C16  C15  C14   -48.61  30.0  3
+ LYX  Var_94    C19   C18  N17  C16   -79.73  30.0  3
+ LYX  Var_95    S20   C19  C18  N17   -52.82  30.0  3
+ LYX  Var_96    C21   S20  C19  C18  -165.28  30.0  3
+ LYX  Var_97    C22   C21  S20  C19  -176.30  30.0  3
+ LYX  Var_98    C23   C21  S20  C19   -54.83  30.0  3
+ LYX  Var_99    NZ    C23  C21  S20   114.61  30.0  3
+ LYX  Var_100   O33   C23  C21  S20   -65.06  30.0  3
+ LYX  Var_101   NZ    C23  C21  C22  -125.72  30.0  3
+ LYX  Var_102   O33   C23  C21  C22    54.61  30.0  3
+ LYX  Var_103   CD    CE   NZ   C23   -84.57  30.0  3
+ LYX  Var_104   CG    CD   CE   NZ    -64.04  30.0  3
+ LYX  Var_105   CB    CG   CD   CE    178.00  30.0  3
+ LYX  Var_106   CA    CB   CG   CD   -178.91  30.0  3
+ LYX  Var_107   N     CA   CB   CG     64.76  30.0  3
+ LYX  Var_108   C     CA   CB   CG    -57.59  30.0  3
+ LYX  Var_109   O     C    CA   CB    120.94  30.0  3
+ LYX  Var_110   O     C    CA   N      -2.03  30.0  3
+ LYX  Var_111   C40   O39  P2   O38    42.39  30.0  3
+ LYX  Var_112   H38   O38  P2   O1    -76.22  30.0  3
+ LYX  Var_113   H37   O37  P4   O3    175.82  30.0  3
+ LYX  Var_114   H61   C6   O5   P4    -57.20  30.0  3
+ LYX  Var_115   H62   C6   O5   P4     60.94  30.0  3
+ LYX  Var_116   H81   C8   C7   C6   -177.63  30.0  3
+ LYX  Var_117   H82   C8   C7   C6     62.61  30.0  3
+ LYX  Var_118   H83   C8   C7   C6    -57.47  30.0  3
+ LYX  Var_119   H91   C9   C7   C6    -63.72  30.0  3
+ LYX  Var_120   H92   C9   C7   C6    177.02  30.0  3
+ LYX  Var_121   H93   C9   C7   C6     56.32  30.0  3
+ LYX  Var_122   H10   C10  C7   C6     59.81  30.0  3
+ LYX  Var_123   H11   O11  C10  C7     97.29  30.0  3
+ LYX  Var_124   H141  C14  N13  C12  -158.00  30.0  3
+ LYX  Var_125   H142  C14  N13  C12   -40.62  30.0  3
+ LYX  Var_126   H151  C15  C14  N13    52.50  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -686,8 +678,6 @@ _chem_comp_plane_atom.dist_esd
  LYX  plan-1  CA    0.020
  LYX  plan-1  C     0.020
  LYX  plan-1  O     0.020
- LYX  plan-1  OXT   0.020
- LYX  plan-1  HXT   0.020
  LYX  plan-2  C50   0.020
  LYX  plan-2  N51   0.020
  LYX  plan-2  C52   0.020

@@ -20,11 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- CDV  CDV  'N-carbamoyl-D-valine     '  L-peptide  23  11  .  2022-03-15  2023-12-07
+ CDV  CDV  'N-carbamoyl-D-valine     '  L-peptide  21  10  .  2022-03-15  2023-12-07
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
-Added dihedrals for adding hydrogens : 2023-12-07
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_CDV
@@ -48,7 +49,6 @@ _chem_comp_atom.z
  CDV  CG2   C  CH3   0  -0.656   1.5013  -1.1466   1.7263
  CDV  C     C  C     0   0.535  -1.1746  -0.0689   0.6421
  CDV  O     O  O     0  -0.447  -2.0203   0.5491   1.2412
- CDV  OXT   O  OH1   0  -0.583  -1.3122  -1.3377   0.2891
  CDV  HT1   H  HNH2  0   0.397   0.0229  -0.4758  -4.0487
  CDV  HT2   H  HNH2  0   0.396   1.3766  -0.9869  -3.1565
  CDV  HN1   H  HNH1  0   0.399   1.6019  -0.4366  -0.9654
@@ -60,7 +60,6 @@ _chem_comp_atom.z
  CDV  HG21  H  HCH3  0   0.227   0.6494  -1.6333   2.2024
  CDV  HG22  H  HCH3  0   0.230   1.7697  -1.7328   0.8464
  CDV  HG23  H  HCH3  0   0.238   2.3400  -1.2075   2.4204
- CDV  HXT   H  HOH1  0   0.479  -2.1790  -1.6631   0.5753
 
 loop_
 _chem_comp_bond.comp_id
@@ -90,8 +89,6 @@ _chem_comp_bond.value_dist_neutron
  CDV  CG2  HG22  single  0.970  0.020  1.090
  CDV  CG2  HG23  single  0.970  0.020  1.090
  CDV  C    O     double  1.231  0.020  1.231
- CDV  C    OXT   single  1.324  0.020  1.324
- CDV  OXT  HXT   single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -133,10 +130,7 @@ _chem_comp_angle.value_angle_esd
  CDV  HG23  CG2  CB    109.56  3.000
  CDV  HG22  CG2  CB    112.95  3.000
  CDV  HG21  CG2  CB    111.89  3.000
- CDV  OXT   C    O     123.39  3.000
- CDV  OXT   C    CA    120.80  1.700
  CDV  O     C    CA    120.80  1.700
- CDV  HXT   OXT  C     109.63  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -150,14 +144,13 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  CDV  CONST_01  CA    N    CT  OT     0.00   0.0  0
  CDV  CONST_02  CA    N    CT  NT   180.00   0.0  0
- CDV  CONST_03  HN1   N    CT  OT   180.00   0.0  0
- CDV  CONST_04  HXT   OXT  C   CA   180.00   0.0  0
- CDV  CONST_05  HT1   NT   CT  OT     0.00   0.0  0
- CDV  CONST_06  HT2   NT   CT  OT   180.00   0.0  0
- CDV  Var_01    HG11  CG1  CB  CA  -171.73  30.0  3
- CDV  Var_02    HG21  CG2  CB  CA   -69.38  30.0  3
- CDV  Var_03    HA    CA   N   CT   -58.61  30.0  3
- CDV  Var_04    HB    CB   CA  N     54.26  30.0  3
+ CDV  Var_01    HN1   N    CT  OT   180.00  10.0  1
+ CDV  Var_02    HT1   NT   CT  OT     0.00  10.0  1
+ CDV  Var_03    HT2   NT   CT  OT   180.00  10.0  1
+ CDV  Var_04    HG11  CG1  CB  CA  -171.73  30.0  3
+ CDV  Var_05    HG21  CG2  CB  CA   -69.38  30.0  3
+ CDV  Var_06    HA    CA   N   CT   -58.61  30.0  3
+ CDV  Var_07    HB    CB   CA  N     54.26  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -185,6 +178,4 @@ _chem_comp_plane_atom.dist_esd
  CDV  plan-2  CA   0.020
  CDV  plan-2  C    0.020
  CDV  plan-2  O    0.020
- CDV  plan-2  OXT  0.020
- CDV  plan-2  HXT  0.020
 

@@ -20,11 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A1LTQ  A1LTQ  'ADP-RIBOXANATED ARGININE'  L-peptide  75  46  .  2024-08-26  2024-09-03
+ A1LTQ  A1LTQ  'ADP-RIBOXANATED ARGININE'  L-peptide  73  45  .  2024-08-26  2024-09-03
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
 Removed H2 atom : 2024-09-03
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_A1LTQ
@@ -49,7 +51,6 @@ _chem_comp_atom.z
  A1LTQ  CA    C  CH1    0  -0.217   6.0644  -3.3724   1.4904
  A1LTQ  N     N  NH2    0  -0.786   5.0311  -4.1758   2.1279
  A1LTQ  C     C  C      0   0.387   7.5238  -3.7969   1.7952
- A1LTQ  OXT   O  OC    -1  -0.617   8.3885  -3.3896   0.9911
  A1LTQ  O     O  O      0  -0.604   7.7196  -4.4713   2.8262
  A1LTQ  C8    C  C      0   0.235   2.9329   0.8999  -0.2158
  A1LTQ  O4    O  O      0  -0.500   3.6529   1.6241  -1.1819
@@ -131,7 +132,6 @@ _chem_comp_bond.value_dist_neutron
  A1LTQ  CB   CA    single    1.530  0.020  1.530
  A1LTQ  CA   N     single    1.458  0.019  1.458
  A1LTQ  CA   C     single    1.525  0.021  1.525
- A1LTQ  C    OXT   deloc     1.249  0.020  1.249
  A1LTQ  C    O     deloc     1.231  0.020  1.231
  A1LTQ  NE   C8    single    1.427  0.020  1.427
  A1LTQ  C8   O4    single    1.406  0.020  1.406
@@ -246,9 +246,7 @@ _chem_comp_angle.value_angle_esd
  A1LTQ  C     CA   CB   110.10  1.900
  A1LTQ  N     CA   CB   110.50  1.700
  A1LTQ  H     N    CA   114.00  3.000
- A1LTQ  O     C    OXT  126.85  3.000
  A1LTQ  O     C    CA   120.80  1.700
- A1LTQ  OXT   C    CA   115.84  3.000
  A1LTQ  H13   C8   O4   108.53  3.000
  A1LTQ  H13   C8   NE   111.80  3.000
  A1LTQ  O4    C8   NE   113.40  3.000
@@ -384,107 +382,105 @@ _chem_comp_tor.period
  A1LTQ  CONST_24  N8    C20  N7   C19   180.00   0.0  0
  A1LTQ  CONST_25  CD    NE   CZ   O1    180.00   0.0  0
  A1LTQ  CONST_26  C8    NE   CZ   NH1   180.00   0.0  0
- A1LTQ  CONST_27  H27   C16  N4   C13     0.00   0.0  0
- A1LTQ  CONST_28  H28   C19  N6   C18   180.00   0.0  0
- A1LTQ  CONST_29  CD    NE   CZ   NH1     0.00   0.0  0
- A1LTQ  CONST_30  H29   N8   C20  C17   180.00   0.0  0
- A1LTQ  CONST_31  H30   N8   C20  C17     0.00   0.0  0
- A1LTQ  CONST_32  HH11  NH1  CZ   O1      0.00   0.0  0
+ A1LTQ  CONST_27  CD    NE   CZ   NH1     0.00   0.0  0
  A1LTQ  Var_01    NE    CZ   O1   C1      4.96  30.0  1
  A1LTQ  Var_02    CZ    NE   C8   C1    -10.79  30.0  1
- A1LTQ  Var_03    C9    O4   C8   C1      8.84  30.0  1
- A1LTQ  Var_04    O4    C9   C21  C1     35.03  30.0  1
- A1LTQ  Var_05    NE    C8   C1   O1     13.03  30.0  1
- A1LTQ  Var_06    O4    C8   C1   O1    132.18  30.0  1
- A1LTQ  Var_07    C9    C21  C1   O1   -142.45  30.0  1
- A1LTQ  Var_08    C8    C1   O1   CZ    -11.48  30.0  1
- A1LTQ  Var_09    C21   C1   O1   CZ    100.90  30.0  1
- A1LTQ  Var_10    O4    C8   NE   CZ   -125.51  30.0  1
- A1LTQ  Var_11    C9    O4   C8   NE    119.94  30.0  1
- A1LTQ  Var_12    C21   C1   C8   NE   -105.43  30.0  1
- A1LTQ  Var_13    C21   C9   O4   C8    -28.34  30.0  1
- A1LTQ  Var_14    C9    C21  C1   C8    -28.94  30.0  1
- A1LTQ  Var_15    C21   C1   C8   O4     13.73  30.0  1
- A1LTQ  Var_16    C14   C13  O12  C12   -14.82  30.0  1
- A1LTQ  Var_17    N4    C13  O12  C12  -137.73  30.0  1
- A1LTQ  Var_18    C13   C14  C15  C12   -38.36  30.0  1
- A1LTQ  Var_19    C14   C15  C12  O12    31.10  30.0  1
- A1LTQ  Var_20    C15   C14  C13  O12    33.89  30.0  1
- A1LTQ  Var_21    C16   N4   C13  O12    46.74  30.0  2
- A1LTQ  Var_22    C18   N4   C13  O12  -134.08  30.0  2
- A1LTQ  Var_23    C15   C12  O12  C13   -10.65  30.0  1
- A1LTQ  Var_24    C16   N4   C13  C14   -71.37  30.0  2
- A1LTQ  Var_25    C18   N4   C13  C14   107.81  30.0  2
- A1LTQ  Var_26    N4    C13  C14  C15   153.89  30.0  1
- A1LTQ  Var_27    NH1   CZ   O1   C1   -176.25  30.0  1
- A1LTQ  Var_28    CD    NE   C8   C1   -173.18  30.0  1
- A1LTQ  Var_29    C10   C9   C21  C1    -84.68  30.0  1
- A1LTQ  Var_30    O15   C21  C1   O1    -27.03  30.0  1
- A1LTQ  Var_31    O4    C8   NE   CD     72.10  30.0  1
- A1LTQ  Var_32    C10   C9   O4   C8     93.79  30.0  1
- A1LTQ  Var_33    O15   C21  C1   C8     86.48  30.0  1
- A1LTQ  Var_34    O15   C21  C9   O4    -82.91  30.0  1
- A1LTQ  Var_35    C13   O12  C12  C11   112.59  30.0  1
- A1LTQ  Var_36    C14   C15  C12  C11   -88.83  30.0  1
- A1LTQ  Var_37    O13   C14  C15  C12  -157.29  30.0  1
- A1LTQ  Var_38    O14   C15  C12  O12   -83.45  30.0  1
- A1LTQ  Var_39    O13   C14  C13  O12   158.18  30.0  1
- A1LTQ  Var_40    O14   C15  C14  C13    79.63  30.0  1
- A1LTQ  Var_41    N4    C13  C14  O13   -81.83  30.0  1
- A1LTQ  Var_42    H14   C9   C21  C1    151.93  30.0  1
- A1LTQ  Var_43    H13   C8   C1   O1   -107.40  30.0  1
- A1LTQ  Var_44    H31   C21  C1   O1     98.64  30.0  1
- A1LTQ  Var_45    H1    C1   O1   CZ   -134.42  30.0  1
- A1LTQ  Var_46    H22   C13  O12  C12   105.13  30.0  1
- A1LTQ  Var_47    H23   C14  C15  C12    75.88  30.0  1
- A1LTQ  Var_48    H25   C15  C12  O12   150.22  30.0  1
- A1LTQ  Var_49    H21   C12  O12  C13  -129.51  30.0  1
- A1LTQ  Var_50    CG    CD   NE   CZ    -86.86  30.0  3
- A1LTQ  Var_51    C8    NE   CD   CG     73.65  30.0  3
- A1LTQ  Var_52    O5    C10  C9   O4    170.56  30.0  3
- A1LTQ  Var_53    O15   C21  C9   C10   157.38  30.0  1
- A1LTQ  Var_54    C21   C9   C10  O5    -72.05  30.0  1
- A1LTQ  Var_55    O12   C12  C11  O11   172.23  30.0  3
- A1LTQ  Var_56    C15   C12  C11  O11   -69.64  30.0  3
- A1LTQ  Var_57    O14   C15  C12  C11   156.62  30.0  1
- A1LTQ  Var_58    O14   C15  C14  O13   -39.30  30.0  1
- A1LTQ  Var_59    H32   O15  C21  C1     73.26  30.0  3
- A1LTQ  Var_60    HD2   CD   NE   CZ     35.87  30.0  3
- A1LTQ  Var_61    HD3   CD   NE   CZ    150.63  30.0  3
- A1LTQ  Var_62    H15   C10  C9   O4    -66.15  30.0  3
- A1LTQ  Var_63    H16   C10  C9   O4     51.09  30.0  3
- A1LTQ  Var_64    H26   O14  C15  C12   -65.97  30.0  3
- A1LTQ  Var_65    H19   C11  C12  O12    51.03  30.0  1
- A1LTQ  Var_66    H20   C11  C12  O12   -66.25  30.0  1
- A1LTQ  Var_67    H24   O13  C14  C13   167.94  30.0  3
- A1LTQ  Var_68    CB    CG   CD   NE   -175.59  30.0  3
- A1LTQ  Var_69    P1    O5   C10  C9    141.51  30.0  3
- A1LTQ  Var_70    C12   C11  O11  P2   -163.53  30.0  3
- A1LTQ  Var_71    HG2   CG   CD   NE    -55.01  30.0  3
- A1LTQ  Var_72    HG3   CG   CD   NE     61.53  30.0  3
- A1LTQ  Var_73    CA    CB   CG   CD    -65.37  30.0  3
- A1LTQ  Var_74    N     CA   CB   CG    -58.54  30.0  3
- A1LTQ  Var_75    C     CA   CB   CG    174.55  30.0  3
- A1LTQ  Var_76    OXT   C    CA   CB    -76.10  30.0  3
- A1LTQ  Var_77    O     C    CA   CB    101.99  30.0  3
- A1LTQ  Var_78    OXT   C    CA   N     160.45  30.0  3
- A1LTQ  Var_79    O     C    CA   N     -21.46  30.0  3
- A1LTQ  Var_80    O6    P1   O5   C10   169.46  30.0  3
- A1LTQ  Var_81    O7    P1   O5   C10    35.51  30.0  3
- A1LTQ  Var_82    O8    P1   O5   C10   -80.38  30.0  3
- A1LTQ  Var_83    P2    O8   P1   O5    103.57  30.0  3
- A1LTQ  Var_84    O9    P2   O8   P1    -45.85  30.0  3
- A1LTQ  Var_85    O10   P2   O8   P1     90.14  30.0  3
- A1LTQ  Var_86    O11   P2   O8   P1   -157.73  30.0  3
- A1LTQ  Var_87    P2    O8   P1   O6   -147.25  30.0  3
- A1LTQ  Var_88    P2    O8   P1   O7    -12.77  30.0  3
- A1LTQ  Var_89    C11   O11  P2   O8    158.63  30.0  3
- A1LTQ  Var_90    C11   O11  P2   O9     43.45  30.0  3
- A1LTQ  Var_91    C11   O11  P2   O10   -89.62  30.0  3
- A1LTQ  Var_92    HB2   CB   CG   CD     57.38  30.0  3
- A1LTQ  Var_93    HB3   CB   CG   CD    172.71  30.0  3
- A1LTQ  Var_94    HA    CA   CB   CG     58.47  30.0  3
- A1LTQ  Var_95    H     N    CA   CB    172.81  30.0  3
+ A1LTQ  Var_03    H27   C16  N4   C13     0.00  10.0  1
+ A1LTQ  Var_04    H28   C19  N6   C18   180.00  10.0  1
+ A1LTQ  Var_05    C9    O4   C8   C1      8.84  30.0  1
+ A1LTQ  Var_06    H29   N8   C20  C17   180.00  10.0  1
+ A1LTQ  Var_07    H30   N8   C20  C17     0.00  10.0  1
+ A1LTQ  Var_08    HH11  NH1  CZ   O1      0.00  10.0  1
+ A1LTQ  Var_09    O4    C9   C21  C1     35.03  30.0  1
+ A1LTQ  Var_10    NE    C8   C1   O1     13.03  30.0  1
+ A1LTQ  Var_11    O4    C8   C1   O1    132.18  30.0  1
+ A1LTQ  Var_12    C9    C21  C1   O1   -142.45  30.0  1
+ A1LTQ  Var_13    C8    C1   O1   CZ    -11.48  30.0  1
+ A1LTQ  Var_14    C21   C1   O1   CZ    100.90  30.0  1
+ A1LTQ  Var_15    O4    C8   NE   CZ   -125.51  30.0  1
+ A1LTQ  Var_16    C9    O4   C8   NE    119.94  30.0  1
+ A1LTQ  Var_17    C21   C1   C8   NE   -105.43  30.0  1
+ A1LTQ  Var_18    C21   C9   O4   C8    -28.34  30.0  1
+ A1LTQ  Var_19    C9    C21  C1   C8    -28.94  30.0  1
+ A1LTQ  Var_20    C21   C1   C8   O4     13.73  30.0  1
+ A1LTQ  Var_21    C14   C13  O12  C12   -14.82  30.0  1
+ A1LTQ  Var_22    N4    C13  O12  C12  -137.73  30.0  1
+ A1LTQ  Var_23    C13   C14  C15  C12   -38.36  30.0  1
+ A1LTQ  Var_24    C14   C15  C12  O12    31.10  30.0  1
+ A1LTQ  Var_25    C15   C14  C13  O12    33.89  30.0  1
+ A1LTQ  Var_26    C16   N4   C13  O12    46.74  30.0  2
+ A1LTQ  Var_27    C18   N4   C13  O12  -134.08  30.0  2
+ A1LTQ  Var_28    C15   C12  O12  C13   -10.65  30.0  1
+ A1LTQ  Var_29    C16   N4   C13  C14   -71.37  30.0  2
+ A1LTQ  Var_30    C18   N4   C13  C14   107.81  30.0  2
+ A1LTQ  Var_31    N4    C13  C14  C15   153.89  30.0  1
+ A1LTQ  Var_32    NH1   CZ   O1   C1   -176.25  30.0  1
+ A1LTQ  Var_33    CD    NE   C8   C1   -173.18  30.0  1
+ A1LTQ  Var_34    C10   C9   C21  C1    -84.68  30.0  1
+ A1LTQ  Var_35    O15   C21  C1   O1    -27.03  30.0  1
+ A1LTQ  Var_36    O4    C8   NE   CD     72.10  30.0  1
+ A1LTQ  Var_37    C10   C9   O4   C8     93.79  30.0  1
+ A1LTQ  Var_38    O15   C21  C1   C8     86.48  30.0  1
+ A1LTQ  Var_39    O15   C21  C9   O4    -82.91  30.0  1
+ A1LTQ  Var_40    C13   O12  C12  C11   112.59  30.0  1
+ A1LTQ  Var_41    C14   C15  C12  C11   -88.83  30.0  1
+ A1LTQ  Var_42    O13   C14  C15  C12  -157.29  30.0  1
+ A1LTQ  Var_43    O14   C15  C12  O12   -83.45  30.0  1
+ A1LTQ  Var_44    O13   C14  C13  O12   158.18  30.0  1
+ A1LTQ  Var_45    O14   C15  C14  C13    79.63  30.0  1
+ A1LTQ  Var_46    N4    C13  C14  O13   -81.83  30.0  1
+ A1LTQ  Var_47    H14   C9   C21  C1    151.93  30.0  1
+ A1LTQ  Var_48    H13   C8   C1   O1   -107.40  30.0  1
+ A1LTQ  Var_49    H31   C21  C1   O1     98.64  30.0  1
+ A1LTQ  Var_50    H1    C1   O1   CZ   -134.42  30.0  1
+ A1LTQ  Var_51    H22   C13  O12  C12   105.13  30.0  1
+ A1LTQ  Var_52    H23   C14  C15  C12    75.88  30.0  1
+ A1LTQ  Var_53    H25   C15  C12  O12   150.22  30.0  1
+ A1LTQ  Var_54    H21   C12  O12  C13  -129.51  30.0  1
+ A1LTQ  Var_55    CG    CD   NE   CZ    -86.86  30.0  3
+ A1LTQ  Var_56    C8    NE   CD   CG     73.65  30.0  3
+ A1LTQ  Var_57    O5    C10  C9   O4    170.56  30.0  3
+ A1LTQ  Var_58    O15   C21  C9   C10   157.38  30.0  1
+ A1LTQ  Var_59    C21   C9   C10  O5    -72.05  30.0  1
+ A1LTQ  Var_60    O12   C12  C11  O11   172.23  30.0  3
+ A1LTQ  Var_61    C15   C12  C11  O11   -69.64  30.0  3
+ A1LTQ  Var_62    O14   C15  C12  C11   156.62  30.0  1
+ A1LTQ  Var_63    O14   C15  C14  O13   -39.30  30.0  1
+ A1LTQ  Var_64    H32   O15  C21  C1     73.26  30.0  3
+ A1LTQ  Var_65    HD2   CD   NE   CZ     35.87  30.0  3
+ A1LTQ  Var_66    HD3   CD   NE   CZ    150.63  30.0  3
+ A1LTQ  Var_67    H15   C10  C9   O4    -66.15  30.0  3
+ A1LTQ  Var_68    H16   C10  C9   O4     51.09  30.0  3
+ A1LTQ  Var_69    H26   O14  C15  C12   -65.97  30.0  3
+ A1LTQ  Var_70    H19   C11  C12  O12    51.03  30.0  1
+ A1LTQ  Var_71    H20   C11  C12  O12   -66.25  30.0  1
+ A1LTQ  Var_72    H24   O13  C14  C13   167.94  30.0  3
+ A1LTQ  Var_73    CB    CG   CD   NE   -175.59  30.0  3
+ A1LTQ  Var_74    P1    O5   C10  C9    141.51  30.0  3
+ A1LTQ  Var_75    C12   C11  O11  P2   -163.53  30.0  3
+ A1LTQ  Var_76    HG2   CG   CD   NE    -55.01  30.0  3
+ A1LTQ  Var_77    HG3   CG   CD   NE     61.53  30.0  3
+ A1LTQ  Var_78    CA    CB   CG   CD    -65.37  30.0  3
+ A1LTQ  Var_79    N     CA   CB   CG    -58.54  30.0  3
+ A1LTQ  Var_80    C     CA   CB   CG    174.55  30.0  3
+ A1LTQ  Var_81    O     C    CA   CB    101.99  30.0  3
+ A1LTQ  Var_82    O     C    CA   N     -21.46  30.0  3
+ A1LTQ  Var_83    O6    P1   O5   C10   169.46  30.0  3
+ A1LTQ  Var_84    O7    P1   O5   C10    35.51  30.0  3
+ A1LTQ  Var_85    O8    P1   O5   C10   -80.38  30.0  3
+ A1LTQ  Var_86    P2    O8   P1   O5    103.57  30.0  3
+ A1LTQ  Var_87    O9    P2   O8   P1    -45.85  30.0  3
+ A1LTQ  Var_88    O10   P2   O8   P1     90.14  30.0  3
+ A1LTQ  Var_89    O11   P2   O8   P1   -157.73  30.0  3
+ A1LTQ  Var_90    P2    O8   P1   O6   -147.25  30.0  3
+ A1LTQ  Var_91    P2    O8   P1   O7    -12.77  30.0  3
+ A1LTQ  Var_92    C11   O11  P2   O8    158.63  30.0  3
+ A1LTQ  Var_93    C11   O11  P2   O9     43.45  30.0  3
+ A1LTQ  Var_94    C11   O11  P2   O10   -89.62  30.0  3
+ A1LTQ  Var_95    HB2   CB   CG   CD     57.38  30.0  3
+ A1LTQ  Var_96    HB3   CB   CG   CD    172.71  30.0  3
+ A1LTQ  Var_97    HA    CA   CB   CG     58.47  30.0  3
+ A1LTQ  Var_98    H     N    CA   CB    172.81  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -535,6 +531,5 @@ _chem_comp_plane_atom.dist_esd
  A1LTQ  plan-3  HH11  0.020
  A1LTQ  plan-4  CA    0.020
  A1LTQ  plan-4  C     0.020
- A1LTQ  plan-4  OXT   0.020
  A1LTQ  plan-4  O     0.020
 

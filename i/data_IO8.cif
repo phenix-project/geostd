@@ -25,6 +25,7 @@ _chem_comp.source
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
 Updated atom names : 2026-11-25
+Added dihedrals for adding hydrogens : 2026-11-26
 ;
 
 data_comp_IO8
@@ -228,50 +229,50 @@ _chem_comp_tor.period
  IO8  CONST_27  CA1   C1   N3   C2    180.00   0.0  0
  IO8  CONST_28  CA1   C1   N2   CA2   180.00   0.0  0
  IO8  CONST_29  CA3   N3   C2   CA2   180.00   0.0  0
- IO8  CONST_31  H12   CZ3  CE3  CD2   180.00   0.0  0
- IO8  CONST_32  H6    CD1  CG   CD2   180.00   0.0  0
- IO8  CONST_33  H4    CZ2  CE2  CD2   180.00   0.0  0
- IO8  CONST_34  H5    NE1  CE2  CD2   180.00   0.0  0
- IO8  CONST_35  H3    CH2  CZ3  CE3   180.00   0.0  0
- IO8  CONST_36  H4    CZ2  CH2  CZ3   180.00   0.0  0
- IO8  CONST_37  H1    CE3  CZ3  CH2   180.00   0.0  0
- IO8  CONST_38  H12   CZ3  CH2  CZ2   180.00   0.0  0
- IO8  CONST_39  H5    NE1  CE2  CZ2     0.00   0.0  0
- IO8  CONST_40  H1    CE3  CD2  CE2   180.00   0.0  0
- IO8  CONST_41  H3    CH2  CZ2  CE2   180.00   0.0  0
- IO8  CONST_42  H6    CD1  NE1  CE2   180.00   0.0  0
- IO8  CONST_43  H4    CZ2  CE2  NE1     0.00   0.0  0
- IO8  CONST_44  H1    CE3  CD2  CG      0.00   0.0  0
- IO8  CONST_45  H5    NE1  CD1  CG    180.00   0.0  0
- IO8  CONST_46  CA3   N3   C2   O2      0.00   0.0  0
+ IO8  CONST_30  CA3   N3   C2   O2      0.00   0.0  0
  IO8  Var_01    CG    CB   CA2  C2    179.46   0.0  2
  IO8  Var_02    N2    CA2  CB   CG      0.18   0.0  2
  IO8  Var_03    CA2   CB   CG   CD2     0.46  30.0  3
- IO8  Var_04    CA2   CB   CG   CD1  -179.21  30.0  3
- IO8  Var_05    C3    CA3  N3   C1     74.02  30.0  1
- IO8  Var_06    C3    CA3  N3   C2    -84.59  30.0  1
- IO8  Var_07    N1    CA1  C1   N2   -100.59  30.0  2
- IO8  Var_08    N1    CA1  C1   N3     76.02  30.0  2
- IO8  Var_09    H7    CB   CA2  C2     -0.26   0.0  2
- IO8  Var_10    H7    CB   CA2  N2   -179.54   0.0  2
- IO8  Var_11    HA31  CA3  N3   C1    -48.85  30.0  1
- IO8  Var_12    HA32  CA3  N3   C1   -164.07  30.0  1
- IO8  Var_13    HA31  CA3  N3   C2    152.54  30.0  1
- IO8  Var_14    HA32  CA3  N3   C2     37.32  30.0  1
- IO8  Var_15    H7    CB   CG   CD2  -179.82  30.0  3
- IO8  Var_16    H7    CB   CG   CD1     0.51  30.0  3
- IO8  Var_17    HA1   CA1  C1   N2     17.20  30.0  2
- IO8  Var_18    H13   CA1  C1   N2    132.67  30.0  2
- IO8  Var_19    HA1   CA1  C1   N3   -166.19  30.0  2
- IO8  Var_20    H13   CA1  C1   N3    -50.71  30.0  2
- IO8  Var_21    O3    C3   CA3  N3    176.12  30.0  3
- IO8  Var_22    OXT   C3   CA3  N3     -4.31  30.0  3
- IO8  Var_23    H     N1   CA1  C1    171.74  30.0  3
- IO8  Var_24    HN2   N1   CA1  C1    -73.27  30.0  3
- IO8  Var_25    HA31  CA3  C3   O3    -60.88  30.0  3
- IO8  Var_26    HA32  CA3  C3   O3     55.13  30.0  3
- IO8  Var_27    HA31  CA3  C3   OXT   118.69  30.0  3
- IO8  Var_28    HA32  CA3  C3   OXT  -125.30  30.0  3
+ IO8  Var_04    H12   CZ3  CE3  CD2   180.00  10.0  1
+ IO8  Var_05    H6    CD1  CG   CD2   180.00  10.0  1
+ IO8  Var_06    H4    CZ2  CE2  CD2   180.00  10.0  1
+ IO8  Var_07    H5    NE1  CE2  CD2   180.00  10.0  1
+ IO8  Var_08    H3    CH2  CZ3  CE3   180.00  10.0  1
+ IO8  Var_09    H4    CZ2  CH2  CZ3   180.00  10.0  1
+ IO8  Var_10    H1    CE3  CZ3  CH2   180.00  10.0  1
+ IO8  Var_11    H12   CZ3  CH2  CZ2   180.00  10.0  1
+ IO8  Var_12    H5    NE1  CE2  CZ2     0.00  10.0  1
+ IO8  Var_13    H1    CE3  CD2  CE2   180.00  10.0  1
+ IO8  Var_14    CA2   CB   CG   CD1  -179.21  30.0  3
+ IO8  Var_15    H3    CH2  CZ2  CE2   180.00  10.0  1
+ IO8  Var_16    H6    CD1  NE1  CE2   180.00  10.0  1
+ IO8  Var_17    H4    CZ2  CE2  NE1     0.00  10.0  1
+ IO8  Var_18    H1    CE3  CD2  CG      0.00  10.0  1
+ IO8  Var_19    H5    NE1  CD1  CG    180.00  10.0  1
+ IO8  Var_20    C3    CA3  N3   C1     74.02  30.0  1
+ IO8  Var_21    C3    CA3  N3   C2    -84.59  30.0  1
+ IO8  Var_22    N1    CA1  C1   N2   -100.59  30.0  2
+ IO8  Var_23    N1    CA1  C1   N3     76.02  30.0  2
+ IO8  Var_24    H7    CB   CA2  C2     -0.26   0.0  2
+ IO8  Var_25    H7    CB   CA2  N2   -179.54   0.0  2
+ IO8  Var_26    HA31  CA3  N3   C1    -48.85  30.0  1
+ IO8  Var_27    HA32  CA3  N3   C1   -164.07  30.0  1
+ IO8  Var_28    HA31  CA3  N3   C2    152.54  30.0  1
+ IO8  Var_29    HA32  CA3  N3   C2     37.32  30.0  1
+ IO8  Var_30    H7    CB   CG   CD2  -179.82  30.0  3
+ IO8  Var_31    H7    CB   CG   CD1     0.51  30.0  3
+ IO8  Var_32    HA1   CA1  C1   N2     17.20  30.0  2
+ IO8  Var_33    H13   CA1  C1   N2    132.67  30.0  2
+ IO8  Var_34    HA1   CA1  C1   N3   -166.19  30.0  2
+ IO8  Var_35    H13   CA1  C1   N3    -50.71  30.0  2
+ IO8  Var_36    O3    C3   CA3  N3    176.12  30.0  3
+ IO8  Var_37    OXT   C3   CA3  N3     -4.31  30.0  3
+ IO8  Var_38    H     N1   CA1  C1    171.74  30.0  3
+ IO8  Var_39    HN2   N1   CA1  C1    -73.27  30.0  3
+ IO8  Var_40    HA31  CA3  C3   O3    -60.88  30.0  3
+ IO8  Var_41    HA32  CA3  C3   O3     55.13  30.0  3
+ IO8  Var_42    HA31  CA3  C3   OXT   118.69  30.0  3
+ IO8  Var_43    HA32  CA3  C3   OXT  -125.30  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id

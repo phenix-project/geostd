@@ -20,13 +20,14 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- PTR  PTR  'O-phosphono-L-tyrosine   '  L-peptide  26  17  .  2011-11-15  2024-08-01
+ PTR  PTR  'O-phosphono-L-tyrosine   '  L-peptide  24  16  .  2011-11-15  2024-08-01
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Updated atom names
 Removed H2 atom : 2024-08-01
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_PTR
@@ -44,7 +45,6 @@ _chem_comp_atom.z
  PTR  CA   C  CH1    0  -0.199  45.0181  11.6394  -0.7142
  PTR  C    C  C      0   0.411  44.8516  13.0056  -1.4207
  PTR  O    O  O      0  -0.617  43.6833  13.3050  -1.7452
- PTR  OXT  O  OC    -1  -0.599  45.8744  13.6959  -1.5920
  PTR  CB   C  CH2    0  -0.522  44.3063  11.6630   0.6562
  PTR  CG   C  CR6    0   0.112  44.8681  12.6519   1.6379
  PTR  CD1  C  CR16   0  -0.319  45.8834  12.3084   2.5283
@@ -80,7 +80,6 @@ _chem_comp_bond.value_dist_neutron
  PTR  CA   CB   single    1.530  0.020  1.530
  PTR  CA   HA   single    0.970  0.020  0.970
  PTR  C    O    aromatic  1.231  0.020  1.231
- PTR  C    OXT  aromatic  1.246  0.020  1.246
  PTR  CB   CG   single    1.502  0.020  1.502
  PTR  CB   HB2  single    0.970  0.020  1.090
  PTR  CB   HB3  single    0.970  0.020  1.090
@@ -115,8 +114,6 @@ _chem_comp_angle.value_angle_esd
  PTR  C    CA   HA   107.06  3.000
  PTR  CB   CA   HA   105.83  3.000
  PTR  CA   C    O    115.53  3.000
- PTR  CA   C    OXT  117.63  3.000
- PTR  O    C    OXT  126.83  3.000
  PTR  CA   CB   CG   114.68  3.000
  PTR  CA   CB   HB2  108.62  3.000
  PTR  CA   CB   HB3  108.02  3.000
@@ -169,27 +166,25 @@ _chem_comp_tor.period
  PTR  CONST_08  CB   CG   CD2  CE2   180.00   0.0  0
  PTR  CONST_09  CD1  CE1  CZ   OH    180.00   0.0  0
  PTR  CONST_10  CD2  CE2  CZ   OH    180.00   0.0  0
- PTR  CONST_11  CG   CD1  CE1  HE1   180.00   0.0  0
- PTR  CONST_12  CG   CD2  CE2  HE2   180.00   0.0  0
- PTR  CONST_13  CD1  CG   CD2  HD2   180.00   0.0  0
- PTR  CONST_14  CD2  CG   CD1  HD1   180.00   0.0  0
  PTR  Var_01    CA   CB   CG   CD1   -90.53  30.0  2
- PTR  Var_02    CD2  CG   CB   CA     89.41  30.0  2
- PTR  Var_03    P    OH   CZ   CE1  -110.52  30.0  2
- PTR  Var_04    P    OH   CZ   CE2    70.49  30.0  2
- PTR  Var_05    HB2  CB   CG   CD1   146.96  30.0  2
- PTR  Var_06    HB3  CB   CG   CD1    30.92  30.0  2
- PTR  Var_07    CZ   OH   P    O1P   -65.82  30.0  3
- PTR  Var_08    CG   CB   CA   N      63.19  30.0  3
- PTR  Var_09    CG   CB   CA   C     -63.16  30.0  3
- PTR  Var_10    O2P  P    OH   CZ    174.58  30.0  2
- PTR  Var_11    O3P  P    OH   CZ     54.55  30.0  2
- PTR  Var_12    CG   CB   CA   HA   -178.49  30.0  3
- PTR  Var_13    O    C    CA   N     166.88  30.0  2
- PTR  Var_14    OXT  C    CA   N     -14.03  30.0  2
- PTR  Var_15    CB   CA   C    O     -65.49  30.0  3
- PTR  Var_16    CB   CA   C    OXT   113.60  30.0  3
- PTR  Var_17    C    CA   N    H     166.37  30.0  3
+ PTR  Var_02    CG   CD1  CE1  HE1   180.00  10.0  1
+ PTR  Var_03    CG   CD2  CE2  HE2   180.00  10.0  1
+ PTR  Var_04    CD1  CG   CD2  HD2   180.00  10.0  1
+ PTR  Var_05    CD2  CG   CD1  HD1   180.00  10.0  1
+ PTR  Var_06    CD2  CG   CB   CA     89.41  30.0  2
+ PTR  Var_07    P    OH   CZ   CE1  -110.52  30.0  2
+ PTR  Var_08    P    OH   CZ   CE2    70.49  30.0  2
+ PTR  Var_09    HB2  CB   CG   CD1   146.96  30.0  2
+ PTR  Var_10    HB3  CB   CG   CD1    30.92  30.0  2
+ PTR  Var_11    CZ   OH   P    O1P   -65.82  30.0  3
+ PTR  Var_12    CG   CB   CA   N      63.19  30.0  3
+ PTR  Var_13    CG   CB   CA   C     -63.16  30.0  3
+ PTR  Var_14    O2P  P    OH   CZ    174.58  30.0  2
+ PTR  Var_15    O3P  P    OH   CZ     54.55  30.0  2
+ PTR  Var_16    CG   CB   CA   HA   -178.49  30.0  3
+ PTR  Var_17    O    C    CA   N     166.88  30.0  2
+ PTR  Var_18    CB   CA   C    O     -65.49  30.0  3
+ PTR  Var_19    C    CA   N    H     166.37  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -221,5 +216,4 @@ _chem_comp_plane_atom.dist_esd
  PTR  plan-2  CA   0.020
  PTR  plan-2  C    0.020
  PTR  plan-2  O    0.020
- PTR  plan-2  OXT  0.020
 

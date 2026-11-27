@@ -20,11 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 23F  23F  '(2Z)-2-amino-3-phenylprop-2-enoic acid'  peptide  20  12  .  2016-04-22  2024-04-10
+ 23F  23F  '(2Z)-2-amino-3-phenylprop-2-enoic acid'  peptide  18  11  .  2016-04-22  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK (reasonable std)
 Removed H2 atom : 2024-04-10
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_23F
@@ -38,25 +40,24 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- 23F  N    N  NH2    0  -0.836  26.2421  17.4951  5.9405
- 23F  CA   C  C      0   0.087  26.9398  16.5322  5.2604
- 23F  C    C  C      0   0.402  27.9551  17.0975  4.2481
- 23F  OXT  O  OC    -1  -0.573  28.4985  16.2959  3.4710
- 23F  CB   C  C1     0  -0.407  26.8078  15.1936  5.4012
- 23F  CG   C  CR6    0   0.175  25.9179  14.4412  6.2741
- 23F  CD1  C  CR16   0  -0.355  24.7190  14.9346  6.8117
- 23F  CD2  C  CR16   0  -0.323  26.2488  13.1091  6.5734
- 23F  CE1  C  CR16   0  -0.231  23.9141  14.1438  7.6206
- 23F  CE2  C  CR16   0  -0.238  25.4477  12.3221  7.3826
- 23F  CZ   C  CR16   0  -0.285  24.2728  12.8368  7.9199
- 23F  O    O  O      0  -0.597  28.1349  18.3302  4.3149
- 23F  H    H  HNH2   0   0.368  25.9185  17.2752  6.8690
- 23F  HB   H  H      0   0.224  27.4793  14.5946  4.8001
- 23F  HD1  H  HCR6   0   0.241  24.3795  15.9331  6.5708
- 23F  HD2  H  HCR6   0   0.239  27.1595  12.6912  6.1593
- 23F  HE1  H  HCR6   0   0.247  22.9924  14.5549  8.0133
- 23F  HE2  H  HCR6   0   0.246  25.7399  11.3010  7.5940
- 23F  HZ   H  HCR6   0   0.246  23.6437  12.2253  8.5535
+ 23F  N    N  NH2   0  -0.836  26.2421  17.4951  5.9405
+ 23F  CA   C  C     0   0.087  26.9398  16.5322  5.2604
+ 23F  C    C  C     0   0.402  27.9551  17.0975  4.2481
+ 23F  CB   C  C1    0  -0.407  26.8078  15.1936  5.4012
+ 23F  CG   C  CR6   0   0.175  25.9179  14.4412  6.2741
+ 23F  CD1  C  CR16  0  -0.355  24.7190  14.9346  6.8117
+ 23F  CD2  C  CR16  0  -0.323  26.2488  13.1091  6.5734
+ 23F  CE1  C  CR16  0  -0.231  23.9141  14.1438  7.6206
+ 23F  CE2  C  CR16  0  -0.238  25.4477  12.3221  7.3826
+ 23F  CZ   C  CR16  0  -0.285  24.2728  12.8368  7.9199
+ 23F  O    O  O     0  -0.597  28.1349  18.3302  4.3149
+ 23F  H    H  HNH2  0   0.368  25.9185  17.2752  6.8690
+ 23F  HB   H  H     0   0.224  27.4793  14.5946  4.8001
+ 23F  HD1  H  HCR6  0   0.241  24.3795  15.9331  6.5708
+ 23F  HD2  H  HCR6  0   0.239  27.1595  12.6912  6.1593
+ 23F  HE1  H  HCR6  0   0.247  22.9924  14.5549  8.0133
+ 23F  HE2  H  HCR6  0   0.246  25.7399  11.3010  7.5940
+ 23F  HZ   H  HCR6  0   0.246  23.6437  12.2253  8.5535
 
 loop_
 _chem_comp_bond.comp_id
@@ -70,7 +71,6 @@ _chem_comp_bond.value_dist_neutron
  23F  N    H    single    0.860  0.020  1.020
  23F  CA   C    single    1.541  0.020  1.541
  23F  CA   CB   double    1.352  0.020  1.352
- 23F  C    OXT  deloc     1.242  0.020  1.242
  23F  C    O    deloc     1.248  0.020  1.248
  23F  CB   CG   single    1.456  0.020  1.456
  23F  CB   HB   single    0.930  0.020  1.080
@@ -97,9 +97,7 @@ _chem_comp_angle.value_angle_esd
  23F  CB   CA   C    119.72  3.000
  23F  CB   CA   N    126.46  3.000
  23F  C    CA   N    113.82  3.000
- 23F  O    C    OXT  127.47  3.000
  23F  O    C    CA   114.98  3.000
- 23F  OXT  C    CA   117.56  3.000
  23F  HB   CB   CG   115.23  3.000
  23F  HB   CB   CA   115.43  3.000
  23F  CG   CB   CA   129.31  3.000
@@ -140,15 +138,14 @@ _chem_comp_tor.period
  23F  CONST_06  CE1  CZ   CE2  CD2     0.00   0.0  0
  23F  CONST_07  CE1  CD1  CG   CB    180.00   0.0  0
  23F  CONST_08  CE2  CD2  CG   CB    180.00   0.0  0
- 23F  CONST_09  HE1  CE1  CD1  CG    180.00   0.0  0
- 23F  CONST_10  HE2  CE2  CD2  CG    180.00   0.0  0
- 23F  CONST_11  HD2  CD2  CG   CD1   180.00   0.0  0
- 23F  CONST_12  HZ   CZ   CE1  CD1   180.00   0.0  0
- 23F  CONST_13  HD1  CD1  CG   CD2   180.00   0.0  0
- 23F  Var_01    CD1  CG   CB   CA     22.84  30.0  2
- 23F  Var_02    CG   CB   CA   N       0.37   0.0  2
- 23F  Var_03    OXT  C    CA   N    -170.79  30.0  2
- 23F  Var_04    H    N    CA   C    -151.13  30.0  2
+ 23F  Var_01    HE1  CE1  CD1  CG    180.00  10.0  1
+ 23F  Var_02    CD1  CG   CB   CA     22.84  30.0  2
+ 23F  Var_03    HE2  CE2  CD2  CG    180.00  10.0  1
+ 23F  Var_04    HD2  CD2  CG   CD1   180.00  10.0  1
+ 23F  Var_05    HZ   CZ   CE1  CD1   180.00  10.0  1
+ 23F  Var_06    HD1  CD1  CG   CD2   180.00  10.0  1
+ 23F  Var_07    CG   CB   CA   N       0.37   0.0  2
+ 23F  Var_08    H    N    CA   C    -151.13  30.0  2
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -169,7 +166,6 @@ _chem_comp_plane_atom.dist_esd
  23F  plan-1  HZ   0.020
  23F  plan-2  CA   0.020
  23F  plan-2  C    0.020
- 23F  plan-2  OXT  0.020
  23F  plan-2  O    0.020
  23F  plan-3  N    0.020
  23F  plan-3  CA   0.020

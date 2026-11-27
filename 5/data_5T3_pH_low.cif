@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 5T3  5T3  N~6~-ethyl-N~6~-propan-2-yl-L-lysine  L-peptide  39  15  .  2022-09-22  2024-04-10
+ 5T3  5T3  N~6~-ethyl-N~6~-propan-2-yl-L-lysine  L-peptide  36  14  .  2022-09-22  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
 Added dihedrals for adding hydrogens : 2023-10-30
 Removed H2 atom : 2024-04-10
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_5T3
@@ -75,8 +76,6 @@ _chem_comp_atom.z
  5T3  H24  H  HCH3  0   0.225  -3.9507   1.1719  -2.0877
  5T3  H25  H  HCH3  0   0.219  -4.9497   2.2416  -1.0985
  5T3  H26  H  HCH3  0   0.215  -3.1979   2.3162  -0.9764
- 5T3  OXT  O  OH1   0  -0.596   4.6683  -1.5610   0.1059
- 5T3  HXT  H  HOH1  0   0.480   5.4148  -1.9762  -0.3511
 
 loop_
 _chem_comp_bond.comp_id
@@ -121,8 +120,6 @@ _chem_comp_bond.value_dist_neutron
  5T3  CT3  H24  single  0.970  0.020  1.090
  5T3  CT3  H25  single  0.970  0.020  1.090
  5T3  CT3  H26  single  0.970  0.020  1.090
- 5T3  C    OXT  single  1.329  0.020  1.329
- 5T3  OXT  HXT  single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -138,8 +135,6 @@ _chem_comp_angle.value_angle_esd
  5T3  HA   CA   N    110.00  3.000
  5T3  C    CA   N    111.00  2.800
  5T3  CB   CA   N    110.50  1.700
- 5T3  OXT  C    O    123.21  3.000
- 5T3  OXT  C    CA   111.88  3.000
  5T3  O    C    CA   120.80  1.700
  5T3  HB3  CB   HB2  106.52  3.000
  5T3  HB3  CB   CG   108.79  3.000
@@ -198,7 +193,6 @@ _chem_comp_angle.value_angle_esd
  5T3  H26  CT3  CH1  111.99  3.000
  5T3  H25  CT3  CH1  110.65  3.000
  5T3  H24  CT3  CH1  110.73  3.000
- 5T3  HXT  OXT  C    110.04  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -210,19 +204,18 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 5T3  CONST_01  HXT  OXT  C    CA   180.00   0.0  0
- 5T3  Var_01    CD   CG   CB   CA  -177.38  30.0  1
- 5T3  Var_02    CE   CD   CG   CB   178.31  30.0  3
- 5T3  Var_03    NZ   CE   CD   CG  -179.42  30.0  3
- 5T3  Var_04    CH2  NZ   CE   CD    78.32  30.0  3
- 5T3  Var_05    CT2  CH2  NZ   CE  -148.08  30.0  1
- 5T3  Var_06    CT3  CH1  NZ   CE    76.89  30.0  3
- 5T3  Var_07    H21  CT2  CH2  NZ   -60.08  30.0  3
- 5T3  Var_08    H24  CT3  CH1  NZ    56.60  30.0  3
- 5T3  Var_09    H18  CT1  CH1  NZ    70.45  30.0  3
- 5T3  Var_10    HB2  CB   CA   N     62.32  30.0  3
- 5T3  Var_11    HB3  CB   CA   N    178.66  30.0  3
- 5T3  Var_12    H    N    CA   C     72.04  30.0  3
+ 5T3  Var_01  CD   CG   CB   CA  -177.38  30.0  1
+ 5T3  Var_02  CE   CD   CG   CB   178.31  30.0  3
+ 5T3  Var_03  NZ   CE   CD   CG  -179.42  30.0  3
+ 5T3  Var_04  CH2  NZ   CE   CD    78.32  30.0  3
+ 5T3  Var_05  CT2  CH2  NZ   CE  -148.08  30.0  1
+ 5T3  Var_06  CT3  CH1  NZ   CE    76.89  30.0  3
+ 5T3  Var_07  H21  CT2  CH2  NZ   -60.08  30.0  3
+ 5T3  Var_08  H24  CT3  CH1  NZ    56.60  30.0  3
+ 5T3  Var_09  H18  CT1  CH1  NZ    70.45  30.0  3
+ 5T3  Var_10  HB2  CB   CA   N     62.32  30.0  3
+ 5T3  Var_11  HB3  CB   CA   N    178.66  30.0  3
+ 5T3  Var_12  H    N    CA   C     72.04  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -239,9 +232,7 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- 5T3  plan-1  CA   0.020
- 5T3  plan-1  C    0.020
- 5T3  plan-1  O    0.020
- 5T3  plan-1  OXT  0.020
- 5T3  plan-1  HXT  0.020
+ 5T3  plan-1  CA  0.020
+ 5T3  plan-1  C   0.020
+ 5T3  plan-1  O   0.020
 

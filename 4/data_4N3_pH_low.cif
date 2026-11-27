@@ -20,11 +20,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 4N3  4N3  'N-octanoyl-D-valine      '  D-peptide  42  17  .  2022-03-10  2023-10-30
+ 4N3  4N3  'N-octanoyl-D-valine      '  D-peptide  40  16  .  2022-03-10  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_4N3
@@ -63,7 +64,6 @@ _chem_comp_atom.z
  4N3  HG22  H  HCH3  0   0.232  -2.5268  -2.6887   1.1134
  4N3  HG23  H  HCH3  0   0.238  -3.0044  -3.5184  -0.3666
  4N3  HG21  H  HCH3  0   0.222  -1.6422  -2.4052  -0.3875
- 4N3  OXT   O  OH1   0  -0.589  -5.2544   0.7739   0.6288
  4N3  HD2   H  HCH2  0   0.250   0.4825   0.6068  -1.1326
  4N3  HD1   H  HCH2  0   0.269   0.6531   1.8320   0.1030
  4N3  HE1   H  HCH2  0   0.224   1.8869   0.2074   1.5555
@@ -79,7 +79,6 @@ _chem_comp_atom.z
  4N3  HK3   H  HCH3  0   0.216   8.1384   0.0791  -1.5284
  4N3  HK2   H  HCH3  0   0.215   8.2640   1.3126  -0.2794
  4N3  HK1   H  HCH3  0   0.226   9.0363  -0.2540  -0.0504
- 4N3  HXT   H  HOH1  0   0.486  -5.8786   1.4887   0.4313
 
 loop_
 _chem_comp_bond.comp_id
@@ -113,7 +112,6 @@ _chem_comp_bond.value_dist_neutron
  4N3  CG2  HG22  single  0.970  0.020  1.090
  4N3  CG2  HG23  single  0.970  0.020  1.090
  4N3  CG2  HG21  single  0.970  0.020  1.090
- 4N3  C    OXT   single  1.325  0.020  1.325
  4N3  CD   HD2   single  0.970  0.020  1.090
  4N3  CD   HD1   single  0.970  0.020  1.090
  4N3  CE   HE1   single  0.970  0.020  1.090
@@ -129,7 +127,6 @@ _chem_comp_bond.value_dist_neutron
  4N3  CK   HK3   single  0.970  0.020  1.090
  4N3  CK   HK2   single  0.970  0.020  1.090
  4N3  CK   HK1   single  0.970  0.020  1.090
- 4N3  OXT  HXT   single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -165,8 +162,6 @@ _chem_comp_angle.value_angle_esd
  4N3  HG21  CG2  CB    111.55  3.000
  4N3  HG23  CG2  CB    110.20  3.000
  4N3  HG22  CG2  CB    111.64  3.000
- 4N3  OXT   C    O     123.82  3.000
- 4N3  OXT   C    CA    120.80  1.700
  4N3  O     C    CA    120.80  1.700
  4N3  CD    CO1  O2    122.28  3.000
  4N3  O2    CO1  N     122.96  3.000
@@ -213,7 +208,6 @@ _chem_comp_angle.value_angle_esd
  4N3  HK1   CK   CJ    111.60  3.000
  4N3  HK2   CK   CJ    111.14  3.000
  4N3  HK3   CK   CJ    111.22  3.000
- 4N3  HXT   OXT  C     110.32  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -227,19 +221,18 @@ _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  4N3  CONST_01  CD    CO1  N    CA    180.00   0.0  0
  4N3  CONST_02  O2    CO1  N    CA      0.00   0.0  0
- 4N3  CONST_03  H1    N    CO1  O2    180.00   0.0  0
- 4N3  CONST_04  HXT   OXT  C    CA    180.00   0.0  0
- 4N3  Var_01    CE    CD   CO1  N    -145.41  30.0  2
- 4N3  Var_02    CF    CE   CD   CO1  -177.66  30.0  3
- 4N3  Var_03    CH    CF   CE   CD    179.87  30.0  1
- 4N3  Var_04    CI    CH   CF   CE   -179.35  30.0  3
- 4N3  Var_05    CJ    CI   CH   CF    179.57  30.0  1
- 4N3  Var_06    CK    CJ   CI   CH   -179.47  30.0  3
- 4N3  Var_07    HG22  CG2  CB   CA     57.45  30.0  3
- 4N3  Var_08    HG13  CG1  CB   CA     60.62  30.0  3
- 4N3  Var_09    HK3   CK   CJ   CI    -60.18  30.0  3
- 4N3  Var_10    HB    CB   CA   N     176.69  30.0  3
- 4N3  Var_11    HA    CA   CB   CG1   177.18  30.0  3
+ 4N3  Var_01    H1    N    CO1  O2    180.00  10.0  1
+ 4N3  Var_02    CE    CD   CO1  N    -145.41  30.0  2
+ 4N3  Var_03    CF    CE   CD   CO1  -177.66  30.0  3
+ 4N3  Var_04    CH    CF   CE   CD    179.87  30.0  1
+ 4N3  Var_05    CI    CH   CF   CE   -179.35  30.0  3
+ 4N3  Var_06    CJ    CI   CH   CF    179.57  30.0  1
+ 4N3  Var_07    CK    CJ   CI   CH   -179.47  30.0  3
+ 4N3  Var_08    HG22  CG2  CB   CA     57.45  30.0  3
+ 4N3  Var_09    HG13  CG1  CB   CA     60.62  30.0  3
+ 4N3  Var_10    HK3   CK   CJ   CI    -60.18  30.0  3
+ 4N3  Var_11    HB    CB   CA   N     176.69  30.0  3
+ 4N3  Var_12    HA    CA   CB   CG1   177.18  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -265,6 +258,4 @@ _chem_comp_plane_atom.dist_esd
  4N3  plan-2  CA   0.020
  4N3  plan-2  C    0.020
  4N3  plan-2  O    0.020
- 4N3  plan-2  OXT  0.020
- 4N3  plan-2  HXT  0.020
 

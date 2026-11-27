@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NA8  NA8  (1S)-1-carboxy-2-naphthalen-2-ylethanaminium  L-peptide  30  16  .  2022-03-23  2023-10-30
+ NA8  NA8  (1S)-1-carboxy-2-naphthalen-2-ylethanaminium  L-peptide  28  15  .  2022-03-23  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_NA8
@@ -54,9 +55,7 @@ _chem_comp_atom.z
  NA8  C8A   C  CR66  0   0.138   2.0483  -0.4970  -0.4166
  NA8  C9    C  CH2   0  -0.533  -1.6669   0.2290  -0.8684
  NA8  CA    C  CH1   0  -0.242  -2.5406   0.0652   0.3804
- NA8  OXT   O  OH1   0  -0.573  -4.4943   0.9316  -0.5560
  NA8  HA    H  HCH1  0   0.362  -2.4402   0.9376   1.0292
- NA8  HXT   H  HOH1  0   0.501  -5.4242   0.7966  -0.7981
  NA8  H     H  HNT3  0   0.475  -2.2219  -1.9875   0.6832
  NA8  HN2   H  HNT3  0   0.481  -1.1004  -1.0271   1.4080
  NA8  H3    H  HNT3  0   0.485  -2.5926  -1.1790   2.0628
@@ -80,7 +79,6 @@ _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  NA8  C    O     double    1.202  0.020  1.202
  NA8  C    CA    single    1.517  0.020  1.517
- NA8  C    OXT   single    1.314  0.020  1.314
  NA8  N    CA    single    1.482  0.020  1.482
  NA8  C1   C2    aromatic  1.371  0.020  1.371
  NA8  C1   C8A   aromatic  1.415  0.020  1.415
@@ -96,7 +94,6 @@ _chem_comp_bond.value_dist_neutron
  NA8  C8   C8A   aromatic  1.414  0.020  1.414
  NA8  C9   CA    single    1.533  0.020  1.533
  NA8  CA   HA    single    0.970  0.020  1.090
- NA8  OXT  HXT   single    0.850  0.020  0.980
  NA8  N    H     single    0.890  0.020  1.040
  NA8  N    HN2   single    0.890  0.020  1.040
  NA8  N    H3    single    0.890  0.020  1.040
@@ -117,8 +114,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- NA8  OXT   C    CA    110.79  3.000
- NA8  OXT   C    O     125.82  3.000
  NA8  CA    C    O     123.39  3.000
  NA8  H3    N    HN2   106.45  3.000
  NA8  H3    N    H     106.98  3.000
@@ -168,7 +163,6 @@ _chem_comp_angle.value_angle_esd
  NA8  HA    CA   C     109.18  3.000
  NA8  C9    CA   C     112.31  3.000
  NA8  N     CA   C     108.03  3.000
- NA8  HXT   OXT  C     110.90  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -200,19 +194,18 @@ _chem_comp_tor.period
  NA8  CONST_18  C8A  C8   C7   C6     0.00   0.0  0
  NA8  CONST_19  C9   C2   C3   C4   180.00   0.0  0
  NA8  CONST_20  C9   C2   C1   C8A  180.00   0.0  0
- NA8  CONST_21  H9   C3   C2   C1   180.00   0.0  0
- NA8  CONST_22  H8   C8   C8A  C1     0.00   0.0  0
- NA8  CONST_23  H4   C4   C3   C2   180.00   0.0  0
- NA8  CONST_24  H1   C1   C2   C3   180.00   0.0  0
- NA8  CONST_25  H5   C5   C4A  C4     0.00   0.0  0
- NA8  CONST_26  H6   C6   C5   C4A  180.00   0.0  0
- NA8  CONST_27  H7   C7   C6   C5   180.00   0.0  0
- NA8  CONST_28  HXT  OXT  C    O      0.00   0.0  0
  NA8  Var_01    CA   C9   C2   C1   107.63  30.0  2
  NA8  Var_02    HA   CA   C9   C2    59.82  30.0  3
- NA8  Var_03    H    N    CA   C     58.03  30.0  3
- NA8  Var_04    HN2  N    CA   C    178.26  30.0  3
- NA8  Var_05    H3   N    CA   C    -62.82  30.0  3
+ NA8  Var_03    H9   C3   C2   C1   180.00  10.0  1
+ NA8  Var_04    H8   C8   C8A  C1     0.00  10.0  1
+ NA8  Var_05    H4   C4   C3   C2   180.00  10.0  1
+ NA8  Var_06    H1   C1   C2   C3   180.00  10.0  1
+ NA8  Var_07    H5   C5   C4A  C4     0.00  10.0  1
+ NA8  Var_08    H6   C6   C5   C4A  180.00  10.0  1
+ NA8  Var_09    H7   C7   C6   C5   180.00  10.0  1
+ NA8  Var_10    H    N    CA   C     58.03  30.0  3
+ NA8  Var_11    HN2  N    CA   C    178.26  30.0  3
+ NA8  Var_12    H3   N    CA   C    -62.82  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -250,6 +243,4 @@ _chem_comp_plane_atom.dist_esd
  NA8  plan-2  C    0.020
  NA8  plan-2  O    0.020
  NA8  plan-2  CA   0.020
- NA8  plan-2  OXT  0.020
- NA8  plan-2  HXT  0.020
 

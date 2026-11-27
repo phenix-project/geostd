@@ -20,11 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- OWF  OWF  (3S)-3-hydroxy-D-asparagine  D-peptide  17  10  .  2024-05-31  2024-08-01
+ OWF  OWF  (3S)-3-hydroxy-D-asparagine  D-peptide  15  9  .  2024-05-31  2024-08-01
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
 Removed H2 atom : 2024-08-01
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_OWF
@@ -38,22 +40,21 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- OWF  N     N  NH2    0  -0.813  4.8327  18.9110  8.4349
- OWF  CA    C  CH1    0  -0.243  3.7724  17.9620  8.1409
- OWF  C     C  C      0   0.429  2.3789  18.5339  8.5004
- OWF  O     O  O      0  -0.589  1.4069  17.9642  7.9696
- OWF  CB    C  CH1    0  -0.034  3.8463  17.5568  6.6661
- OWF  OB1   O  OH1    0  -0.674  3.5943  18.6509  5.8312
- OWF  CG    C  C      0   0.487  2.9162  16.4095  6.2744
- OWF  OD1   O  O      0  -0.504  2.1932  16.5222  5.2909
- OWF  ND2   N  NH2    0  -0.806  3.0293  15.2723  6.9702
- OWF  OXT   O  OC    -1  -0.595  2.3486  19.4681  9.3223
- OWF  H     H  HNH2   0   0.337  4.5499  19.4415  9.2486
- OWF  HA    H  HCH1   0   0.207  3.8759  17.0466  8.7477
- OWF  HB1   H  HCH1   0   0.230  4.8669  17.1809  6.4818
- OWF  H3    H  HOH1   0   0.433  2.8822  18.3648  5.2393
- OWF  HD22  H  HNH2   0   0.398  2.4458  14.4828  6.7472
- OWF  HD21  H  HNH2   0   0.404  3.6137  15.1958  7.7842
+ OWF  N     N  NH2   0  -0.813  4.8327  18.9110  8.4349
+ OWF  CA    C  CH1   0  -0.243  3.7724  17.9620  8.1409
+ OWF  C     C  C     0   0.429  2.3789  18.5339  8.5004
+ OWF  O     O  O     0  -0.589  1.4069  17.9642  7.9696
+ OWF  CB    C  CH1   0  -0.034  3.8463  17.5568  6.6661
+ OWF  OB1   O  OH1   0  -0.674  3.5943  18.6509  5.8312
+ OWF  CG    C  C     0   0.487  2.9162  16.4095  6.2744
+ OWF  OD1   O  O     0  -0.504  2.1932  16.5222  5.2909
+ OWF  ND2   N  NH2   0  -0.806  3.0293  15.2723  6.9702
+ OWF  H     H  HNH2  0   0.337  4.5499  19.4415  9.2486
+ OWF  HA    H  HCH1  0   0.207  3.8759  17.0466  8.7477
+ OWF  HB1   H  HCH1  0   0.230  4.8669  17.1809  6.4818
+ OWF  H3    H  HOH1  0   0.433  2.8822  18.3648  5.2393
+ OWF  HD22  H  HNH2  0   0.398  2.4458  14.4828  6.7472
+ OWF  HD21  H  HNH2  0   0.404  3.6137  15.1958  7.7842
 
 loop_
 _chem_comp_bond.comp_id
@@ -71,7 +72,6 @@ _chem_comp_bond.value_dist_neutron
  OWF  O    C     deloc   1.231  0.020  1.231
  OWF  CA   C     single  1.525  0.021  1.525
  OWF  CA   N     single  1.458  0.019  1.458
- OWF  C    OXT   deloc   1.245  0.020  1.245
  OWF  N    H     single  0.860  0.020  0.860
  OWF  CA   HA    single  0.970  0.020  0.970
  OWF  CB   HB1   single  0.970  0.020  1.090
@@ -93,8 +93,6 @@ _chem_comp_angle.value_angle_esd
  OWF  HA    CA   N     110.00  3.000
  OWF  C     CA   N     111.00  2.800
  OWF  CB    CA   N     110.40  1.500
- OWF  OXT   C    O     127.28  3.000
- OWF  OXT   C    CA    120.80  1.700
  OWF  O     C    CA    120.80  1.700
  OWF  HB1   CB   CG    105.33  3.000
  OWF  HB1   CB   OB1   109.47  3.000
@@ -120,24 +118,22 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- OWF  CONST_01  HD22  ND2  CG  CB    180.00   0.0  0
- OWF  CONST_02  HD21  ND2  CG  CB      0.00   0.0  0
- OWF  Var_01    OB1   CB   CA  N     -64.57  30.0  2
- OWF  Var_02    CG    CB   CA  N     171.47  30.0  2
- OWF  Var_03    O     C    CA  N     161.58  30.0  3
- OWF  Var_04    OXT   C    CA  N     -21.24  30.0  3
- OWF  Var_05    OD1   CG   CB  CA    130.57  30.0  1
- OWF  Var_06    ND2   CG   CB  CA    -55.36  30.0  1
- OWF  Var_07    OB1   CB   CA  C      59.33  30.0  2
- OWF  Var_08    CG    CB   CA  C     -64.63  30.0  2
- OWF  Var_09    CB    CA   C   O      38.94  30.0  2
- OWF  Var_10    OXT   C    CA  CB   -143.88  30.0  3
- OWF  Var_11    OD1   CG   CB  OB1     5.49  30.0  1
- OWF  Var_12    ND2   CG   CB  OB1   179.57  30.0  1
- OWF  Var_13    HB1   CB   CA  N      54.98  30.0  2
- OWF  Var_14    H3    OB1  CB  CA   -126.52  30.0  3
- OWF  Var_15    H     N    CA  C      33.07  30.0  3
- OWF  Var_16    HA    CA   C   O     -77.62  30.0  2
+ OWF  Var_01  HD22  ND2  CG  CB    180.00  10.0  1
+ OWF  Var_02  HD21  ND2  CG  CB      0.00  10.0  1
+ OWF  Var_03  OB1   CB   CA  N     -64.57  30.0  2
+ OWF  Var_04  CG    CB   CA  N     171.47  30.0  2
+ OWF  Var_05  O     C    CA  N     161.58  30.0  3
+ OWF  Var_06  OD1   CG   CB  CA    130.57  30.0  1
+ OWF  Var_07  ND2   CG   CB  CA    -55.36  30.0  1
+ OWF  Var_08  OB1   CB   CA  C      59.33  30.0  2
+ OWF  Var_09  CG    CB   CA  C     -64.63  30.0  2
+ OWF  Var_10  CB    CA   C   O      38.94  30.0  2
+ OWF  Var_11  OD1   CG   CB  OB1     5.49  30.0  1
+ OWF  Var_12  ND2   CG   CB  OB1   179.57  30.0  1
+ OWF  Var_13  HB1   CB   CA  N      54.98  30.0  2
+ OWF  Var_14  H3    OB1  CB  CA   -126.52  30.0  3
+ OWF  Var_15  H     N    CA  C      33.07  30.0  3
+ OWF  Var_16  HA    CA   C   O     -77.62  30.0  2
 
 loop_
 _chem_comp_chir.comp_id
@@ -164,5 +160,4 @@ _chem_comp_plane_atom.dist_esd
  OWF  plan-2  CA    0.020
  OWF  plan-2  C     0.020
  OWF  plan-2  O     0.020
- OWF  plan-2  OXT   0.020
 

@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- NHL  NHL  '(4S)-4-(naphthalen-2-ylmethyl)-D-glutamic acid'  D-peptide  38  21  .  2022-09-15  2024-04-11
+ NHL  NHL  '(4S)-4-(naphthalen-2-ylmethyl)-D-glutamic acid'  D-peptide  35  20  .  2022-09-15  2024-04-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-11
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_NHL
@@ -58,7 +59,6 @@ _chem_comp_atom.z
  NHL  CA    C  CH1   0  -0.221  -0.0774  -0.6819   3.6559
  NHL  N     N  NH2   0  -0.774  -1.1174  -0.8603   4.6366
  NHL  C     C  C     0   0.525   1.3200  -0.5760   4.2543
- NHL  OXT   O  OH1   0  -0.593   2.2134  -0.1599   3.3644
  NHL  O     O  O     0  -0.437   1.5975  -0.8451   5.3960
  NHL  H8    H  HCR6  0   0.250  -3.4185  -4.6075   2.0946
  NHL  H7    H  HCR6  0   0.253  -5.5614  -5.2089   1.0775
@@ -75,7 +75,6 @@ _chem_comp_atom.z
  NHL  HB2   H  HCH2  0   0.255   0.6109  -1.5919   1.8198
  NHL  H15   H  HCH1  0   0.277  -0.2667   0.2594   3.1306
  NHL  H     H  HNH2  0   0.357  -1.1501  -0.0680   5.2648
- NHL  HXT   H  HOH1  0   0.482   3.0954  -0.1296   3.7650
 
 loop_
 _chem_comp_bond.comp_id
@@ -121,8 +120,6 @@ _chem_comp_bond.value_dist_neutron
  NHL  CA   H15   single    0.970  0.020  1.090
  NHL  N    H     single    0.860  0.020  0.860
  NHL  C    O     double    1.231  0.020  1.231
- NHL  C    OXT   single    1.328  0.020  1.328
- NHL  OXT  HXT   single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -190,10 +187,7 @@ _chem_comp_angle.value_angle_esd
  NHL  C     CA   CB    110.50  1.500
  NHL  N     CA   CB    110.40  1.500
  NHL  H     N    CA    114.00  3.000
- NHL  O     C    OXT   123.35  3.000
- NHL  OXT   C    CA    120.80  1.700
  NHL  O     C    CA    120.80  1.700
- NHL  HXT   OXT  C     110.19  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -225,21 +219,20 @@ _chem_comp_tor.period
  NHL  CONST_18  C9   C10  C4   C5    180.00      0.0   0
  NHL  CONST_19  C11  C9   C8   C7    180.00      0.0   0
  NHL  CONST_20  C11  C9   C10  C4    180.00      0.0   0
- NHL  CONST_21  H10  C10  C9   C8    180.00      0.0   0
- NHL  CONST_22  HC2  C2   C3   C7      0.00      0.0   0
- NHL  CONST_23  H8   C8   C7   C3    180.00      0.0   0
- NHL  CONST_24  H1   C1   C2   C3    180.00      0.0   0
- NHL  CONST_25  H5   C5   C4   C3    180.00      0.0   0
- NHL  CONST_26  H7   C7   C3   C2      0.00      0.0   0
- NHL  CONST_27  H6   C6   C1   C2    180.00      0.0   0
- NHL  CONST_28  HE2  OE2  CD   CG    180.00      0.0   0
- NHL  CONST_29  HXT  OXT  C    CA    180.00      0.0   0
  NHL  Var_01    CG   C11  C9   C8    -72.19     30.0   2
  NHL  Var_02    HG   CG   C11  C9     61.27     30.0   3
- NHL  Var_03    HB3  CB   CG   C11   -61.17     30.0   3
- NHL  Var_04    HB2  CB   CG   C11    54.31     30.0   3
- NHL  Var_05    H15  CA   CB   CG    -69.93     30.0   3
- NHL  Var_06    C    CA   N    H    170.000  180.000  72
+ NHL  Var_03    H10  C10  C9   C8    180.00     10.0   1
+ NHL  Var_04    HC2  C2   C3   C7      0.00     10.0   1
+ NHL  Var_05    H8   C8   C7   C3    180.00     10.0   1
+ NHL  Var_06    H1   C1   C2   C3    180.00     10.0   1
+ NHL  Var_07    H5   C5   C4   C3    180.00     10.0   1
+ NHL  Var_08    H7   C7   C3   C2      0.00     10.0   1
+ NHL  Var_09    H6   C6   C1   C2    180.00     10.0   1
+ NHL  Var_10    HE2  OE2  CD   CG    180.00     10.0   1
+ NHL  Var_11    HB3  CB   CG   C11   -61.17     30.0   3
+ NHL  Var_12    HB2  CB   CG   C11    54.31     30.0   3
+ NHL  Var_13    H15  CA   CB   CG    -69.93     30.0   3
+ NHL  Var_14    C    CA   N    H    170.000  180.000  72
 
 loop_
 _chem_comp_chir.comp_id
@@ -282,7 +275,5 @@ _chem_comp_plane_atom.dist_esd
  NHL  plan-2  HE2  0.020
  NHL  plan-3  CA   0.020
  NHL  plan-3  C    0.020
- NHL  plan-3  OXT  0.020
  NHL  plan-3  O    0.020
- NHL  plan-3  HXT  0.020
 

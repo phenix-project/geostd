@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 9TR  9TR  N~6~-{[(3-azidophenyl)methoxy]carbonyl}-L-lysine  peptide  41  23  .  2019-07-05  2024-04-10
+ 9TR  9TR  N~6~-{[(3-azidophenyl)methoxy]carbonyl}-L-lysine  peptide  39  22  .  2019-07-05  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND (side chain)
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Removed H2 atom : 2024-04-10
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_9TR
@@ -44,7 +45,6 @@ _chem_comp_atom.z
  9TR  C21  C  CR16   0  -0.311  263.8636  47.1218  137.1367
  9TR  C22  C  CR16   0  -0.231  263.9632  46.0941  138.0578
  9TR  C    C  C      0   0.387  257.1113  49.4342  146.6194
- 9TR  OXT  O  OC    -1  -0.610  257.9869  50.3211  146.5466
  9TR  CA   C  CH1    0  -0.193  257.5428  47.9760  146.3374
  9TR  N    N  NH2    0  -0.795  257.0429  47.0094  147.3156
  9TR  CB   C  CH2    0  -0.418  257.0537  47.5433  144.9531
@@ -109,7 +109,6 @@ _chem_comp_bond.value_dist_neutron
  9TR  O    C    deloc     1.231  0.020  1.231
  9TR  CB   CA   single    1.530  0.020  1.530
  9TR  C    CA   single    1.525  0.021  1.525
- 9TR  C    OXT  deloc     1.248  0.020  1.248
  9TR  CA   N    single    1.458  0.019  1.458
  9TR  C21  H21  single    0.930  0.020  1.080
  9TR  C22  H22  single    0.930  0.020  1.080
@@ -148,8 +147,6 @@ _chem_comp_angle.value_angle_esd
  9TR  H22  C22  C23  119.98  3.000
  9TR  H22  C22  C21  119.52  3.000
  9TR  C23  C22  C21  120.50  3.000
- 9TR  CA   C    OXT  117.61  3.000
- 9TR  OXT  C    O    126.54  3.000
  9TR  CA   C    O    120.80  1.700
  9TR  H4   CA   CB   108.79  3.000
  9TR  H4   CA   N    107.10  3.000
@@ -224,22 +221,21 @@ _chem_comp_tor.period
  9TR  CONST_08  C14  C15  C16  C17   180.00   0.0  0
  9TR  CONST_09  N18  C17  C21  C22   180.00   0.0  0
  9TR  CONST_10  C14  C15  C23  C22   180.00   0.0  0
- 9TR  CONST_11  H22  C22  C23  C15   180.00   0.0  0
- 9TR  CONST_12  H23  C23  C22  C21   180.00   0.0  0
- 9TR  CONST_13  H19  C16  C17  C21   180.00   0.0  0
- 9TR  CONST_14  H21  C21  C17  C16   180.00   0.0  0
- 9TR  CONST_15  N19  N18  C17  C21   180.00   0.0  0
- 9TR  CONST_16  N19  N18  C17  C16     0.00   0.0  0
+ 9TR  CONST_11  N19  N18  C17  C21   180.00   0.0  0
+ 9TR  CONST_12  N19  N18  C17  C16     0.00   0.0  0
  9TR  Var_01    C23  C15  C14  O13  -136.64  30.0  3
- 9TR  Var_02    CD   CG   CB   CA     59.21  30.0  1
- 9TR  Var_03    CE   CD   CG   CB    172.06  30.0  2
- 9TR  Var_04    NZ   CE   CD   CG    176.83  30.0  1
- 9TR  Var_05    C11  NZ   CE   CD     77.04  30.0  1
- 9TR  Var_06    O13  C11  NZ   CE   -175.64  30.0  2
- 9TR  Var_07    H8   CB   CA   C     -66.67  30.0  2
- 9TR  Var_08    H9   CB   CA   C     178.62  30.0  2
- 9TR  Var_09    H    N    CA   C     -64.51  30.0  3
- 9TR  Var_10    H4   CA   C    OXT    14.27  30.0  2
+ 9TR  Var_02    H22  C22  C23  C15   180.00  10.0  1
+ 9TR  Var_03    H23  C23  C22  C21   180.00  10.0  1
+ 9TR  Var_04    H19  C16  C17  C21   180.00  10.0  1
+ 9TR  Var_05    H21  C21  C17  C16   180.00  10.0  1
+ 9TR  Var_06    CD   CG   CB   CA     59.21  30.0  1
+ 9TR  Var_07    CE   CD   CG   CB    172.06  30.0  2
+ 9TR  Var_08    NZ   CE   CD   CG    176.83  30.0  1
+ 9TR  Var_09    C11  NZ   CE   CD     77.04  30.0  1
+ 9TR  Var_10    O13  C11  NZ   CE   -175.64  30.0  2
+ 9TR  Var_11    H8   CB   CA   C     -66.67  30.0  2
+ 9TR  Var_12    H9   CB   CA   C     178.62  30.0  2
+ 9TR  Var_13    H    N    CA   C     -64.51  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -271,7 +267,6 @@ _chem_comp_plane_atom.dist_esd
  9TR  plan-1  H19  0.020
  9TR  plan-1  H23  0.020
  9TR  plan-2  C    0.020
- 9TR  plan-2  OXT  0.020
  9TR  plan-2  CA   0.020
  9TR  plan-2  O    0.020
  9TR  plan-3  NZ   0.020

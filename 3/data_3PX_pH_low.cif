@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 3PX  3PX  (3S)-3-(propan-2-yloxy)-L-proline  L-peptide  27  12  .  2022-03-10  2023-10-30
+ 3PX  3PX  (3S)-3-(propan-2-yloxy)-L-proline  L-peptide  25  11  .  2022-03-10  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
 Added dihedrals for adding hydrogens : 2023-10-30
 Updated atom names : 2026-11-25
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_3PX
@@ -50,7 +51,6 @@ _chem_comp_atom.z
  3PX  CB2   C  CH1   0   0.034   2.3749  -0.0884  -0.3030
  3PX  CB3   C  CH3   0  -0.669   2.4010   1.2318  -1.0605
  3PX  CB4   C  CH3   0  -0.675   3.5592  -0.2171   0.6363
- 3PX  OXT   O  OH1   0  -0.581  -0.7860   2.0890   1.1481
  3PX  HA    H  HCH1  0   0.274  -1.0727  -0.3310   1.6228
  3PX  HB    H  HCH1  0   0.220   0.0196  -0.1550  -1.2062
  3PX  HD    H  HCH2  0   0.230  -1.8799  -2.9136   0.7632
@@ -64,7 +64,6 @@ _chem_comp_atom.z
  3PX  HB4   H  HCH3  0   0.234   3.5428  -1.1711   1.1645
  3PX  HB4A  H  HCH3  0   0.227   4.4929  -0.1610   0.0768
  3PX  HB4B  H  HCH3  0   0.224   3.5632   0.5863   1.3755
- 3PX  HXT   H  HOH1  0   0.483  -0.9406   3.0244   0.9459
  3PX  H     H  HNH1  0   0.349  -2.5745  -0.6269  -0.8570
 
 loop_
@@ -76,7 +75,6 @@ _chem_comp_bond.value_dist
 _chem_comp_bond.value_dist_esd
 _chem_comp_bond.value_dist_neutron
  3PX  C    O     double  1.231  0.020  1.231
- 3PX  C    OXT   single  1.323  0.020  1.323
  3PX  N    CD    single  1.473  0.014  1.473
  3PX  N    CA    single  1.466  0.015  1.466
  3PX  N    H     single  0.890  0.020  1.040
@@ -101,7 +99,6 @@ _chem_comp_bond.value_dist_neutron
  3PX  CB4  HB4   single  0.970  0.020  1.090
  3PX  CB4  HB4A  single  0.970  0.020  1.090
  3PX  CB4  HB4B  single  0.970  0.020  1.090
- 3PX  OXT  HXT   single  0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -110,9 +107,7 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- 3PX  OXT   C    CA    112.12  3.000
  3PX  CA    C    O     119.00  3.000
- 3PX  OXT   C    O     123.76  3.000
  3PX  H     N    CD    109.09  3.000
  3PX  H     N    CA    108.69  3.000
  3PX  CD    N    CA    105.25  3.000
@@ -159,7 +154,6 @@ _chem_comp_angle.value_angle_esd
  3PX  HB4B  CB4  CB2   111.08  3.000
  3PX  HB4A  CB4  CB2   110.27  3.000
  3PX  HB4   CB4  CB2   111.25  3.000
- 3PX  HXT   OXT  C     110.17  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -171,15 +165,14 @@ _chem_comp_tor.atom_id_4
 _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
- 3PX  CONST_01  HXT  OXT  C    CA    180.00   0.0  0
- 3PX  Var_01    CB   CG   CD   N       1.18  30.0  1
- 3PX  Var_02    CG   CD   N    CA    -24.56  30.0  1
- 3PX  Var_03    CB4  CB2  OB1  CB   -157.59  30.0  1
- 3PX  Var_04    HB4  CB4  CB2  OB1    59.01  30.0  3
- 3PX  Var_05    HB3  CB3  CB2  OB1   179.01  30.0  3
- 3PX  Var_06    HB   CB   CA   N      78.03  30.0  1
- 3PX  Var_07    H    N    CA   CB    -78.39  30.0  1
- 3PX  Var_08    HA   CA   N    CD    -77.96  30.0  1
+ 3PX  Var_01  CB   CG   CD   N       1.18  30.0  1
+ 3PX  Var_02  CG   CD   N    CA    -24.56  30.0  1
+ 3PX  Var_03  CB4  CB2  OB1  CB   -157.59  30.0  1
+ 3PX  Var_04  HB4  CB4  CB2  OB1    59.01  30.0  3
+ 3PX  Var_05  HB3  CB3  CB2  OB1   179.01  30.0  3
+ 3PX  Var_06  HB   CB   CA   N      78.03  30.0  1
+ 3PX  Var_07  H    N    CA   CB    -78.39  30.0  1
+ 3PX  Var_08  HA   CA   N    CD    -77.96  30.0  1
 
 loop_
 _chem_comp_chir.comp_id
@@ -197,9 +190,7 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- 3PX  plan-1  C    0.020
- 3PX  plan-1  O    0.020
- 3PX  plan-1  CA   0.020
- 3PX  plan-1  OXT  0.020
- 3PX  plan-1  HXT  0.020
+ 3PX  plan-1  C   0.020
+ 3PX  plan-1  O   0.020
+ 3PX  plan-1  CA  0.020
 

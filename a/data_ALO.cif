@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- ALO  ALO  'L-allothreonine          '  L-peptide  16  8  .  2012-08-28  2024-04-10
+ ALO  ALO  'L-allothreonine          '  L-peptide  14  7  .  2012-08-28  2024-04-10
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
 Added dihedrals for adding hydrogens : 2023-12-12
 Removed H2 atom : 2024-04-10
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_ALO
@@ -39,21 +40,20 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- ALO  N     N  NH2    0  -0.818  12.0289  36.9670  3.0776
- ALO  CA    C  CH1    0  -0.186  10.6231  36.5661  3.0384
- ALO  CB    C  CH1    0   0.069   9.7503  37.8179  3.0740
- ALO  CG2   C  CH3    0  -0.701   9.9582  38.6509  4.3309
- ALO  OG1   O  OH1    0  -0.675   8.4059  37.3785  2.9725
- ALO  C     C  C      0   0.390  10.3528  35.7560  1.7439
- ALO  O     O  O      0  -0.609  10.5789  36.3443  0.6683
- ALO  OXT   O  OC    -1  -0.607   9.9493  34.5847  1.8869
- ALO  H     H  HNH2   0   0.340  12.6147  36.1619  2.8935
- ALO  HA    H  HCH1   0   0.170  10.3460  35.9396  3.9010
- ALO  HB    H  HCH1   0   0.177  10.0231  38.4289  2.2027
- ALO  HG21  H  HCH3   0   0.230   9.2870  39.5131  4.3425
- ALO  HG22  H  HCH3   0   0.218   9.7689  38.0639  5.2323
- ALO  HG23  H  HCH3   0   0.222  10.9735  39.0451  4.3863
- ALO  HG1   H  HOH1   0   0.442   7.8386  38.1552  2.9634
+ ALO  N     N  NH2   0  -0.818  12.0289  36.9670  3.0776
+ ALO  CA    C  CH1   0  -0.186  10.6231  36.5661  3.0384
+ ALO  CB    C  CH1   0   0.069   9.7503  37.8179  3.0740
+ ALO  CG2   C  CH3   0  -0.701   9.9582  38.6509  4.3309
+ ALO  OG1   O  OH1   0  -0.675   8.4059  37.3785  2.9725
+ ALO  C     C  C     0   0.390  10.3528  35.7560  1.7439
+ ALO  O     O  O     0  -0.609  10.5789  36.3443  0.6683
+ ALO  H     H  HNH2  0   0.340  12.6147  36.1619  2.8935
+ ALO  HA    H  HCH1  0   0.170  10.3460  35.9396  3.9010
+ ALO  HB    H  HCH1  0   0.177  10.0231  38.4289  2.2027
+ ALO  HG21  H  HCH3  0   0.230   9.2870  39.5131  4.3425
+ ALO  HG22  H  HCH3  0   0.218   9.7689  38.0639  5.2323
+ ALO  HG23  H  HCH3  0   0.222  10.9735  39.0451  4.3863
+ ALO  HG1   H  HOH1  0   0.442   7.8386  38.1552  2.9634
 
 loop_
 _chem_comp_bond.comp_id
@@ -76,7 +76,6 @@ _chem_comp_bond.value_dist_neutron
  ALO  CG2  HG23  single  0.970  0.020  1.090
  ALO  OG1  HG1   single  0.850  0.020  0.980
  ALO  C    O     deloc   1.231  0.020  1.231
- ALO  C    OXT   deloc   1.247  0.020  1.247
 
 loop_
 _chem_comp_angle.comp_id
@@ -105,8 +104,6 @@ _chem_comp_angle.value_angle_esd
  ALO  HG22  CG2  CB    111.33  3.000
  ALO  HG21  CG2  CB    110.90  3.000
  ALO  HG1   OG1  CB    108.04  3.000
- ALO  OXT   C    O     126.93  3.000
- ALO  OXT   C    CA    116.83  3.000
  ALO  O     C    CA    120.80  1.700
 
 loop_
@@ -125,10 +122,9 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- ALO  plan-1  CA   0.020
- ALO  plan-1  C    0.020
- ALO  plan-1  O    0.020
- ALO  plan-1  OXT  0.020
+ ALO  plan-1  CA  0.020
+ ALO  plan-1  C   0.020
+ ALO  plan-1  O   0.020
 
 loop_
 _chem_comp_tor.comp_id
@@ -143,16 +139,14 @@ _chem_comp_tor.period
  ALO  Var_01  CG2   CB   CA  N     -60.43  30.0  3
  ALO  Var_02  OG1   CB   CA  N     177.40  30.0  3
  ALO  Var_03  O     C    CA  N     -59.61  30.0  2
- ALO  Var_04  OXT   C    CA  N     119.56  30.0  2
- ALO  Var_05  O     C    CA  CB     60.26  30.0  2
- ALO  Var_06  OXT   C    CA  CB   -120.57  30.0  2
- ALO  Var_07  C     CA   CB  CG2   179.38  30.0  2
- ALO  Var_08  C     CA   CB  OG1    57.20  30.0  2
- ALO  Var_09  HB    CB   CA  N      58.98  30.0  3
- ALO  Var_10  HG21  CG2  CB  CA   -177.50  30.0  3
- ALO  Var_11  HG22  CG2  CB  CA    -57.24  30.0  3
- ALO  Var_12  HG23  CG2  CB  CA     63.83  30.0  3
- ALO  Var_13  HG1   OG1  CB  CA   -178.14  30.0  3
- ALO  Var_14  H     N    CA  CB   -170.26  30.0  3
- ALO  Var_15  HA    CA   CB  CG2    61.41  30.0  2
+ ALO  Var_04  O     C    CA  CB     60.26  30.0  2
+ ALO  Var_05  C     CA   CB  CG2   179.38  30.0  2
+ ALO  Var_06  C     CA   CB  OG1    57.20  30.0  2
+ ALO  Var_07  HB    CB   CA  N      58.98  30.0  3
+ ALO  Var_08  HG21  CG2  CB  CA   -177.50  30.0  3
+ ALO  Var_09  HG22  CG2  CB  CA    -57.24  30.0  3
+ ALO  Var_10  HG23  CG2  CB  CA     63.83  30.0  3
+ ALO  Var_11  HG1   OG1  CB  CA   -178.14  30.0  3
+ ALO  Var_12  H     N    CA  CB   -170.26  30.0  3
+ ALO  Var_13  HA    CA   CB  CG2    61.41  30.0  2
 

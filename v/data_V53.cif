@@ -20,11 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- V53  V53  '8-azanyl-4-(phosphonomethoxy)quinoline-2-carboxylic acid'  peptide  28  20  .  2024-05-31  2024-08-02
+ V53  V53  '8-azanyl-4-(phosphonomethoxy)quinoline-2-carboxylic acid'  peptide  26  19  .  2024-05-31  2024-08-02
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
 Removed H2 atom : 2024-08-02
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_V53
@@ -60,7 +62,6 @@ _chem_comp_atom.z
  V53  HAG  H  HCR6   0   0.246  -4.3933  -16.3589  22.7557
  V53  HAI  H  HCR6   0   0.242  -3.1537  -15.1979  20.9794
  V53  H    H  HNH2   0   0.377  -7.7880  -18.6844  20.4777
- V53  OXT  O  OC    -1  -0.584  -6.7053  -17.5347  15.2553
  V53  HAD  H  HCR6   0   0.265  -3.6463  -15.2269  16.1536
  V53  H1   H  HCH2   0   0.193  -2.6926  -13.3118  17.0047
  V53  H3   H  HCH2   0   0.193  -1.4666  -14.5765  16.9605
@@ -98,7 +99,6 @@ _chem_comp_bond.value_dist_neutron
  V53  CAG  HAG  single    0.930  0.020  1.080
  V53  CAI  HAI  single    0.930  0.020  1.080
  V53  N    H    single    0.860  0.020  1.020
- V53  C    OXT  deloc     1.241  0.020  1.241
  V53  CAD  HAD  single    0.930  0.020  1.080
  V53  C01  H1   single    0.970  0.020  1.090
  V53  C01  H3   single    0.970  0.020  1.090
@@ -110,8 +110,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- V53  OXT  C    O    127.55  3.000
- V53  OXT  C    CAJ  116.81  3.000
  V53  O    C    CAJ  115.64  3.000
  V53  O01  CAF  CAL  115.41  3.000
  V53  CAL  CAF  CAD  118.80  3.000
@@ -192,23 +190,21 @@ _chem_comp_tor.period
  V53  CONST_24  N    CA   CAK  CAG   180.00   0.0  0
  V53  CONST_25  O01  CAF  CAL  CAI     0.00   0.0  0
  V53  CONST_26  N    CA   CAM  NAH     0.00   0.0  0
- V53  CONST_27  HAI  CAI  CAL  CAF     0.00   0.0  0
- V53  CONST_28  HAD  CAD  CAF  CAL   180.00   0.0  0
- V53  CONST_29  HAG  CAG  CAI  CAL   180.00   0.0  0
- V53  CONST_30  HAK  CAK  CA   CAM   180.00   0.0  0
- V53  CONST_31  H    N    CA   CAM   180.00   0.0  0
  V53  Var_01    O    C    CAJ  CAD     3.33  30.0  2
- V53  Var_02    OXT  C    CAJ  CAD  -176.39  30.0  2
- V53  Var_03    C01  O01  CAF  CAD     1.18  30.0  2
- V53  Var_04    C01  O01  CAF  CAL  -178.54  30.0  2
- V53  Var_05    O    C    CAJ  NAH  -177.13  30.0  2
- V53  Var_06    OXT  C    CAJ  NAH     3.15  30.0  2
- V53  Var_07    P    C01  O01  CAF   174.96  30.0  2
- V53  Var_08    H1   C01  O01  CAF    53.59  30.0  2
- V53  Var_09    H3   C01  O01  CAF   -62.82  30.0  2
- V53  Var_10    O1   P    C01  O01   179.52  30.0  3
- V53  Var_11    O3   P    C01  O01    59.73  30.0  3
- V53  Var_12    O2   P    C01  O01   -60.75  30.0  3
+ V53  Var_02    HAI  CAI  CAL  CAF     0.00  10.0  1
+ V53  Var_03    HAD  CAD  CAF  CAL   180.00  10.0  1
+ V53  Var_04    HAG  CAG  CAI  CAL   180.00  10.0  1
+ V53  Var_05    C01  O01  CAF  CAD     1.18  30.0  2
+ V53  Var_06    HAK  CAK  CA   CAM   180.00  10.0  1
+ V53  Var_07    H    N    CA   CAM   180.00  10.0  1
+ V53  Var_08    C01  O01  CAF  CAL  -178.54  30.0  2
+ V53  Var_09    O    C    CAJ  NAH  -177.13  30.0  2
+ V53  Var_10    P    C01  O01  CAF   174.96  30.0  2
+ V53  Var_11    H1   C01  O01  CAF    53.59  30.0  2
+ V53  Var_12    H3   C01  O01  CAF   -62.82  30.0  2
+ V53  Var_13    O1   P    C01  O01   179.52  30.0  3
+ V53  Var_14    O3   P    C01  O01    59.73  30.0  3
+ V53  Var_15    O2   P    C01  O01   -60.75  30.0  3
 
 loop_
 _chem_comp_plane_atom.comp_id
@@ -238,5 +234,4 @@ _chem_comp_plane_atom.dist_esd
  V53  plan-3  C    0.020
  V53  plan-3  CAJ  0.020
  V53  plan-3  O    0.020
- V53  plan-3  OXT  0.020
 

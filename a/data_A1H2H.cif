@@ -20,11 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- A1H2H  A1H2H  '(2~{S})-2-azanyl-3-(3-fluoranyl-4-nitro-phenyl)propanoic acid'  L-peptide  24  16  .  2024-05-29  2024-07-31
+ A1H2H  A1H2H  '(2~{S})-2-azanyl-3-(3-fluoranyl-4-nitro-phenyl)propanoic acid'  L-peptide  22  15  .  2024-05-29  2024-07-31
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as GRAND
 Removed H2 atom : 2024-07-31
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_A1H2H
@@ -58,7 +60,6 @@ _chem_comp_atom.z
  A1H2H  HA   H  HCH1   0   0.211  58.3261  -133.8467  33.3096
  A1H2H  H    H  HNH2   0   0.334  56.8788  -135.6208  33.2750
  A1H2H  HD2  H  HCR6   0   0.286  56.7533  -131.7856  34.0837
- A1H2H  OXT  O  OC    -1  -0.599  60.5829  -133.9396  34.8698
  A1H2H  HE1  H  HCR6   0   0.300  53.2753  -134.7375  35.9646
  A1H2H  HD1  H  HCR6   0   0.267  55.6404  -135.2962  36.2781
 
@@ -92,7 +93,6 @@ _chem_comp_bond.value_dist_neutron
  A1H2H  CA   HA   single    0.970  0.020  0.970
  A1H2H  N    H    single    0.860  0.020  0.860
  A1H2H  CD2  HD2  single    0.930  0.020  1.080
- A1H2H  C    OXT  deloc     1.245  0.020  1.245
 
 loop_
 _chem_comp_angle.comp_id
@@ -101,8 +101,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- A1H2H  OXT  C    CA   116.21  3.000
- A1H2H  OXT  C    O    127.09  3.000
  A1H2H  CA   C    O    120.80  1.700
  A1H2H  HE1  CE1  CZ   119.82  3.000
  A1H2H  HE1  CE1  CD1  119.99  3.000
@@ -161,25 +159,23 @@ _chem_comp_tor.period
  A1H2H  CONST_10  CE2  CD2  CG   CB    180.00   0.0  0
  A1H2H  CONST_11  F19  CE2  CD2  CG    180.00   0.0  0
  A1H2H  CONST_12  N33  CZ   CE2  CD2   180.00   0.0  0
- A1H2H  CONST_13  HD2  CD2  CG   CD1   180.00   0.0  0
- A1H2H  CONST_14  HE1  CE1  CD1  CG    180.00   0.0  0
- A1H2H  CONST_15  HD1  CD1  CG   CD2   180.00   0.0  0
- A1H2H  CONST_16  O35  N33  CZ   CE1   180.00   0.0  0
- A1H2H  CONST_17  O34  N33  CZ   CE1     0.00   0.0  0
- A1H2H  CONST_18  O35  N33  CZ   CE2     0.00   0.0  0
- A1H2H  CONST_19  O34  N33  CZ   CE2   180.00   0.0  0
+ A1H2H  CONST_13  O35  N33  CZ   CE1   180.00   0.0  0
+ A1H2H  CONST_14  O34  N33  CZ   CE1     0.00   0.0  0
+ A1H2H  CONST_15  O35  N33  CZ   CE2     0.00   0.0  0
+ A1H2H  CONST_16  O34  N33  CZ   CE2   180.00   0.0  0
  A1H2H  Var_01    CA   CB   CG   CD1    98.87  30.0  2
- A1H2H  Var_02    CD2  CG   CB   CA    -79.43  30.0  3
- A1H2H  Var_03    HB2  CB   CG   CD1   -22.19  30.0  2
- A1H2H  Var_04    HB3  CB   CG   CD1  -140.07  30.0  2
- A1H2H  Var_05    CG   CB   CA   C     176.27  30.0  3
- A1H2H  Var_06    CG   CB   CA   N     -59.91  30.0  3
- A1H2H  Var_07    HA   CA   CB   CG     62.02  30.0  2
- A1H2H  Var_08    N    CA   C    O      19.65  30.0  3
- A1H2H  Var_09    CB   CA   C    O     142.91  30.0  3
- A1H2H  Var_10    OXT  C    CA   CB    -39.37  30.0  3
- A1H2H  Var_11    OXT  C    CA   N    -162.63  30.0  3
- A1H2H  Var_12    H    N    CA   C    -150.41  30.0  3
+ A1H2H  Var_02    HD2  CD2  CG   CD1   180.00  10.0  1
+ A1H2H  Var_03    HE1  CE1  CD1  CG    180.00  10.0  1
+ A1H2H  Var_04    HD1  CD1  CG   CD2   180.00  10.0  1
+ A1H2H  Var_05    CD2  CG   CB   CA    -79.43  30.0  3
+ A1H2H  Var_06    HB2  CB   CG   CD1   -22.19  30.0  2
+ A1H2H  Var_07    HB3  CB   CG   CD1  -140.07  30.0  2
+ A1H2H  Var_08    CG   CB   CA   C     176.27  30.0  3
+ A1H2H  Var_09    CG   CB   CA   N     -59.91  30.0  3
+ A1H2H  Var_10    HA   CA   CB   CG     62.02  30.0  2
+ A1H2H  Var_11    N    CA   C    O      19.65  30.0  3
+ A1H2H  Var_12    CB   CA   C    O     142.91  30.0  3
+ A1H2H  Var_13    H    N    CA   C    -150.41  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -215,5 +211,4 @@ _chem_comp_plane_atom.dist_esd
  A1H2H  plan-3  C    0.020
  A1H2H  plan-3  O    0.020
  A1H2H  plan-3  CA   0.020
- A1H2H  plan-3  OXT  0.020
 

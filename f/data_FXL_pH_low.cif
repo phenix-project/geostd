@@ -21,10 +21,12 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- FXL  FXL  "(2R)-2-azanyl-3-(3-chlorophenyl)propanoic acid"  D-peptide  23  13  .  2024-05-30  2026-04-13
+ FXL  FXL  '(2R)-2-azanyl-3-(3-chlorophenyl)propanoic acid'  D-peptide  21  12  .  2024-05-30  2026-04-13
 ;
 Directly from eLBOW using geometry from QM method B3-LYP-D3BJ / def2-TZVP with CPCM solvent model
 Validated by Mogul as GRAND
+Added dihedrals for adding hydrogens : 2026-11-26
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_FXL
@@ -49,7 +51,6 @@ _chem_comp_atom.z
  FXL  C    C   C     0   0.281   -9.5750  136.8904  10.1413
  FXL  N    N   NH2   0  -0.575  -10.5622  135.3015  11.7720
  FXL  O    O   O     0  -0.387   -9.5557  137.5432   9.1211
- FXL  OXT  O   OH1   0  -0.385   -8.6775  137.0503  11.1211
  FXL  CL1  CL  CL    0  -0.147   -7.5678  130.8209  11.3539
  FXL  HD1  H   HCR6  0   0.136   -9.8164  132.4872  10.8529
  FXL  HA   H   HCH1  0   0.119  -11.5755  136.3256  10.1884
@@ -60,7 +61,6 @@ _chem_comp_atom.z
  FXL  HZ   H   HCR6  0   0.147   -5.7323  132.1323   9.6019
  FXL  H2   H   HNH2  0   0.239  -10.6970  136.0464  12.4467
  FXL  H9   H   HNH2  0   0.243  -11.3226  134.6434  11.9063
- FXL  HXT  H   HOH1  0   0.362   -8.0617  137.7568  10.8583
 
 loop_
 _chem_comp_bond.comp_id
@@ -82,7 +82,6 @@ _chem_comp_bond.value_dist_neutron
  FXL  CA   C    single    1.520  0.020  1.520
  FXL  CA   N    single    1.457  0.020  1.457
  FXL  O    C    double    1.211  0.020  1.211
- FXL  C    OXT  single    1.338  0.020  1.338
  FXL  CD1  HD1  single    0.930  0.020  1.080
  FXL  CA   HA   single    0.970  0.020  1.090
  FXL  CB   HB2  single    0.970  0.020  1.090
@@ -92,7 +91,6 @@ _chem_comp_bond.value_dist_neutron
  FXL  CZ   HZ   single    0.930  0.020  1.080
  FXL  N    H2   single    0.890  0.020  1.040
  FXL  N    H9   single    0.890  0.020  1.040
- FXL  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -131,13 +129,10 @@ _chem_comp_angle.value_angle_esd
  FXL  CL1  CE1  CZ   119.13  3.000
  FXL  CL1  CE1  CD1  118.98  3.000
  FXL  CZ   CE1  CD1  121.89  3.000
- FXL  OXT  C    O    122.79  3.000
- FXL  OXT  C    CA   114.55  3.000
  FXL  O    C    CA   122.66  3.000
  FXL  H9   N    H2   106.78  3.000
  FXL  H9   N    CA   108.95  3.000
  FXL  H2   N    CA   110.51  3.000
- FXL  HXT  OXT  C    108.26  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -159,24 +154,21 @@ _chem_comp_tor.period
  FXL  CONST_08  CE1  CD1  CG   CB    180.00   0.0  0
  FXL  CONST_09  CL1  CE1  CD1  CG    180.00   0.0  0
  FXL  CONST_10  CL1  CE1  CZ   CE2   180.00   0.0  0
- FXL  CONST_11  HD2  CD2  CG   CD1   180.00   0.0  0
- FXL  CONST_12  HZ   CZ   CE1  CD1   180.00   0.0  0
- FXL  CONST_13  HE2  CE2  CD2  CG    180.00   0.0  0
- FXL  CONST_14  HD1  CD1  CG   CD2   180.00   0.0  0
- FXL  CONST_15  HXT  OXT  C    CA    180.00   0.0  0
  FXL  Var_01    CA   CB   CG   CD1    89.49  30.0  2
- FXL  Var_02    CD2  CG   CB   CA    -89.63  30.0  2
- FXL  Var_03    HB2  CB   CG   CD1  -149.02  30.0  2
- FXL  Var_04    HB3  CB   CG   CD1   -30.64  30.0  2
- FXL  Var_05    C    CA   CB   CG     62.00  30.0  3
- FXL  Var_06    N    CA   CB   CG    -63.24  30.0  3
- FXL  Var_07    HA   CA   CB   CG    173.72  30.0  3
- FXL  Var_08    O    C    CA   CB     64.02  30.0  3
- FXL  Var_09    OXT  C    CA   CB   -116.17  30.0  3
- FXL  Var_10    O    C    CA   N    -172.04  30.0  3
- FXL  Var_11    OXT  C    CA   N       7.77  30.0  3
- FXL  Var_12    H2   N    CA   CB   -177.35  30.0  3
- FXL  Var_13    H9   N    CA   CB    -60.32  30.0  3
+ FXL  Var_02    HD2  CD2  CG   CD1   180.00  10.0  1
+ FXL  Var_03    HZ   CZ   CE1  CD1   180.00  10.0  1
+ FXL  Var_04    HE2  CE2  CD2  CG    180.00  10.0  1
+ FXL  Var_05    HD1  CD1  CG   CD2   180.00  10.0  1
+ FXL  Var_06    CD2  CG   CB   CA    -89.63  30.0  2
+ FXL  Var_07    HB2  CB   CG   CD1  -149.02  30.0  2
+ FXL  Var_08    HB3  CB   CG   CD1   -30.64  30.0  2
+ FXL  Var_09    C    CA   CB   CG     62.00  30.0  3
+ FXL  Var_10    N    CA   CB   CG    -63.24  30.0  3
+ FXL  Var_11    HA   CA   CB   CG    173.72  30.0  3
+ FXL  Var_12    O    C    CA   CB     64.02  30.0  3
+ FXL  Var_13    O    C    CA   N    -172.04  30.0  3
+ FXL  Var_14    H2   N    CA   CB   -177.35  30.0  3
+ FXL  Var_15    H9   N    CA   CB    -60.32  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -208,6 +200,4 @@ _chem_comp_plane_atom.dist_esd
  FXL  plan-2  CA   0.020
  FXL  plan-2  C    0.020
  FXL  plan-2  O    0.020
- FXL  plan-2  OXT  0.020
- FXL  plan-2  HXT  0.020
 

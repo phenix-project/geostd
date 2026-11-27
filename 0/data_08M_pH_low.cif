@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- 08M  08M  N~5~-(pyrazin-2-ylcarbonyl)-L-ornithine  L-peptide  31  17  .  2022-08-09  2023-10-30
+ 08M  08M  N~5~-(pyrazin-2-ylcarbonyl)-L-ornithine  L-peptide  29  16  .  2022-08-09  2023-10-30
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as OK
-Added dihedrals for adding hydrogens : 2023-10-30
+Added dihedrals for adding hydrogens : 2026-11-26
 Updated atom names : 2026-10-20
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_08M
@@ -68,8 +69,6 @@ _chem_comp_atom.z
  08M  H32  H  HCR6  0   0.288  -6.5685   1.6020   0.3165
  08M  H33  H  HCR6  0   0.283  -4.5974  -1.9834  -0.1526
  08M  H2   H  HNH2  0   0.344   4.0483   1.5670  -1.6244
- 08M  OXT  O  OH1   0  -0.594   5.4788  -0.7739   1.2097
- 08M  HXT  H  HOH1  0   0.481   6.3392  -1.2147   1.1411
 
 loop_
 _chem_comp_bond.comp_id
@@ -108,8 +107,6 @@ _chem_comp_bond.value_dist_neutron
  08M  C40  H32  single    0.930  0.020  1.080
  08M  C42  H33  single    0.930  0.020  1.080
  08M  N    H2   single    0.890  0.020  1.040
- 08M  C    OXT  single    1.328  0.020  1.328
- 08M  OXT  HXT  single    0.850  0.020  0.980
 
 loop_
 _chem_comp_angle.comp_id
@@ -118,8 +115,6 @@ _chem_comp_angle.atom_id_2
 _chem_comp_angle.atom_id_3
 _chem_comp_angle.value_angle
 _chem_comp_angle.value_angle_esd
- 08M  OXT  C    CA   112.13  3.000
- 08M  OXT  C    O    123.29  3.000
  08M  CA   C    O    124.58  3.000
  08M  HA   CA   C31  107.76  3.000
  08M  HA   CA   N    108.20  3.000
@@ -168,7 +163,6 @@ _chem_comp_angle.value_angle_esd
  08M  H33  C42  N41  117.46  3.000
  08M  H33  C42  C37  121.13  3.000
  08M  N41  C42  C37  121.41  3.000
- 08M  HXT  OXT  C    110.26  3.000
 
 loop_
 _chem_comp_tor.comp_id
@@ -188,22 +182,21 @@ _chem_comp_tor.period
  08M  CONST_06  C42  N41  C40  C39     0.00   0.0  0
  08M  CONST_07  C39  N38  C37  C35   180.00   0.0  0
  08M  CONST_08  N41  C42  C37  C35   180.00   0.0  0
- 08M  CONST_09  H31  C39  N38  C37   180.00   0.0  0
- 08M  CONST_10  H32  C40  C39  N38   180.00   0.0  0
- 08M  CONST_11  H33  C42  C37  N38   180.00   0.0  0
- 08M  CONST_12  C37  C35  N34  C33   180.00   0.0  0
- 08M  CONST_13  H30  N34  C35  C37     0.00   0.0  0
- 08M  CONST_14  O36  C35  N34  C33     0.00   0.0  0
- 08M  CONST_15  HXT  OXT  C    O       0.00   0.0  0
- 08M  Var_01    N38  C37  C35  N34     0.76  30.0  2
- 08M  Var_02    C33  C32  C31  CA   -176.62  30.0  3
- 08M  Var_03    N34  C33  C32  C31  -179.21  30.0  3
- 08M  Var_04    C35  N34  C33  C32  -174.99  30.0  3
- 08M  Var_05    H    N    CA   C     -61.59  30.0  3
- 08M  Var_06    H2   N    CA   C      55.69  30.0  3
- 08M  Var_07    H24  C31  CA   C     -62.53  30.0  3
- 08M  Var_08    H25  C31  CA   C      53.69  30.0  3
- 08M  Var_09    HA   CA   C    O    -135.79  30.0  3
+ 08M  CONST_09  C37  C35  N34  C33   180.00   0.0  0
+ 08M  CONST_10  O36  C35  N34  C33     0.00   0.0  0
+ 08M  Var_01    H31  C39  N38  C37   180.00  10.0  1
+ 08M  Var_02    N38  C37  C35  N34     0.76  30.0  2
+ 08M  Var_03    H32  C40  C39  N38   180.00  10.0  1
+ 08M  Var_04    H33  C42  C37  N38   180.00  10.0  1
+ 08M  Var_05    H30  N34  C35  C37     0.00  10.0  1
+ 08M  Var_06    C33  C32  C31  CA   -176.62  30.0  3
+ 08M  Var_07    N34  C33  C32  C31  -179.21  30.0  3
+ 08M  Var_08    C35  N34  C33  C32  -174.99  30.0  3
+ 08M  Var_09    H    N    CA   C     -61.59  30.0  3
+ 08M  Var_10    H2   N    CA   C      55.69  30.0  3
+ 08M  Var_11    H24  C31  CA   C     -62.53  30.0  3
+ 08M  Var_12    H25  C31  CA   C      53.69  30.0  3
+ 08M  Var_13    HA   CA   C    O    -135.79  30.0  3
 
 loop_
 _chem_comp_chir.comp_id
@@ -239,6 +232,4 @@ _chem_comp_plane_atom.dist_esd
  08M  plan-3  C    0.020
  08M  plan-3  O    0.020
  08M  plan-3  CA   0.020
- 08M  plan-3  OXT  0.020
- 08M  plan-3  HXT  0.020
 

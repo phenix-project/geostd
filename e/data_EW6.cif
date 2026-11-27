@@ -20,12 +20,13 @@ _chem_comp.desc_level
 _chem_comp.initial_date
 _chem_comp.modified_date
 _chem_comp.source
- EW6  EW6  '(2~{S})-2-azanyl-2-methyl-3-oxidanyl-propanoic acid'  L-peptide  16  8  .  2022-03-18  2024-04-11
+ EW6  EW6  '(2~{S})-2-azanyl-2-methyl-3-oxidanyl-propanoic acid'  L-peptide  14  7  .  2022-03-18  2024-04-11
 ;
 Directly from eLBOW using geometry from QM method PBEh-3c with CPCM solvent model
 Validated by Mogul as PERFECT
 Added dihedrals for adding hydrogens : 2023-12-12
 Removed H2 atom : 2024-04-11
+Removed OXT atom : 2026-11-26
 ;
 
 data_comp_EW6
@@ -39,21 +40,20 @@ _chem_comp_atom.partial_charge
 _chem_comp_atom.x
 _chem_comp_atom.y
 _chem_comp_atom.z
- EW6  N    N  NH2    0  -0.800  -103.3586  54.8769  155.1346
- EW6  CA   C  CT     0  -0.080  -103.4458  53.4821  155.5563
- EW6  C    C  C      0   0.428  -103.0602  52.5655  154.3586
- EW6  O    O  O      0  -0.601  -102.2383  53.0308  153.5446
- EW6  CB   C  CH2    0  -0.112  -104.8793  53.1954  155.9877
- EW6  C4   C  CH3    0  -0.660  -102.4688  53.1568  156.6996
- EW6  OG   O  OH1    0  -0.678  -105.2357  54.0739  157.0395
- EW6  H    H  HNH2   0   0.324  -103.3372  55.4794  155.9484
- EW6  HB2  H  HCH2   0   0.179  -105.5447  53.3312  155.1237
- EW6  HB3  H  HCH2   0   0.182  -104.9640  52.1506  156.3015
- EW6  H7   H  HCH3   0   0.219  -102.6594  53.7831  157.5729
- EW6  H8   H  HCH3   0   0.210  -102.5427  52.1133  157.0131
- EW6  H9   H  HCH3   0   0.217  -101.4403  53.3370  156.3801
- EW6  HG   H  HOH1   0   0.446  -106.1154  53.8334  157.3413
- EW6  OXT  O  OC    -1  -0.600  -103.5606  51.4238  154.3380
+ EW6  N    N  NH2   0  -0.800  -103.3586  54.8769  155.1346
+ EW6  CA   C  CT    0  -0.080  -103.4458  53.4821  155.5563
+ EW6  C    C  C     0   0.428  -103.0602  52.5655  154.3586
+ EW6  O    O  O     0  -0.601  -102.2383  53.0308  153.5446
+ EW6  CB   C  CH2   0  -0.112  -104.8793  53.1954  155.9877
+ EW6  C4   C  CH3   0  -0.660  -102.4688  53.1568  156.6996
+ EW6  OG   O  OH1   0  -0.678  -105.2357  54.0739  157.0395
+ EW6  H    H  HNH2  0   0.324  -103.3372  55.4794  155.9484
+ EW6  HB2  H  HCH2  0   0.179  -105.5447  53.3312  155.1237
+ EW6  HB3  H  HCH2  0   0.182  -104.9640  52.1506  156.3015
+ EW6  H7   H  HCH3  0   0.219  -102.6594  53.7831  157.5729
+ EW6  H8   H  HCH3  0   0.210  -102.5427  52.1133  157.0131
+ EW6  H9   H  HCH3  0   0.217  -101.4403  53.3370  156.3801
+ EW6  HG   H  HOH1  0   0.446  -106.1154  53.8334  157.3413
 
 loop_
 _chem_comp_bond.comp_id
@@ -76,7 +76,6 @@ _chem_comp_bond.value_dist_neutron
  EW6  C4  H8   single  0.970  0.020  1.090
  EW6  C4  H9   single  0.970  0.020  1.090
  EW6  OG  HG   single  0.850  0.020  0.980
- EW6  C   OXT  deloc   1.247  0.020  1.247
 
 loop_
 _chem_comp_angle.comp_id
@@ -92,8 +91,6 @@ _chem_comp_angle.value_angle_esd
  EW6  C4   CA  N    112.25  3.000
  EW6  CB   CA  N    110.50  1.700
  EW6  C    CA  N    111.00  2.800
- EW6  OXT  C   O    126.55  3.000
- EW6  OXT  C   CA   116.91  3.000
  EW6  O    C   CA   120.80  1.700
  EW6  HB3  CB  HB2  107.25  3.000
  EW6  HB3  CB  OG   111.09  3.000
@@ -124,10 +121,9 @@ _chem_comp_plane_atom.comp_id
 _chem_comp_plane_atom.plane_id
 _chem_comp_plane_atom.atom_id
 _chem_comp_plane_atom.dist_esd
- EW6  plan-1  CA   0.020
- EW6  plan-1  C    0.020
- EW6  plan-1  O    0.020
- EW6  plan-1  OXT  0.020
+ EW6  plan-1  CA  0.020
+ EW6  plan-1  C   0.020
+ EW6  plan-1  O   0.020
 
 loop_
 _chem_comp_tor.comp_id
@@ -140,19 +136,16 @@ _chem_comp_tor.value_angle
 _chem_comp_tor.value_angle_esd
 _chem_comp_tor.period
  EW6  Var_01  O    C   CA  N     30.44  30.0  2
- EW6  Var_02  OXT  C   CA  N   -152.35  30.0  2
- EW6  Var_03  OG   CB  CA  N    -58.47  30.0  3
- EW6  Var_04  OG   CB  CA  C   -177.56  30.0  3
- EW6  Var_05  CB   CA  C   O    149.24  30.0  2
- EW6  Var_06  C4   CA  C   O    -91.08  30.0  2
- EW6  Var_07  OXT  C   CA  CB   -33.55  30.0  2
- EW6  Var_08  OXT  C   CA  C4    86.13  30.0  2
- EW6  Var_09  OG   CB  CA  C4    64.89  30.0  3
- EW6  Var_10  HB2  CB  CA  N     62.67  30.0  3
- EW6  Var_11  HB3  CB  CA  N    179.65  30.0  3
- EW6  Var_12  H7   C4  CA  N     59.03  30.0  3
- EW6  Var_13  H8   C4  CA  N    179.73  30.0  3
- EW6  Var_14  H9   C4  CA  N    -60.36  30.0  3
- EW6  Var_15  HG   OG  CB  CA  -175.75  30.0  3
- EW6  Var_16  H    N   CA  C   -163.50  30.0  3
+ EW6  Var_02  OG   CB  CA  N    -58.47  30.0  3
+ EW6  Var_03  OG   CB  CA  C   -177.56  30.0  3
+ EW6  Var_04  CB   CA  C   O    149.24  30.0  2
+ EW6  Var_05  C4   CA  C   O    -91.08  30.0  2
+ EW6  Var_06  OG   CB  CA  C4    64.89  30.0  3
+ EW6  Var_07  HB2  CB  CA  N     62.67  30.0  3
+ EW6  Var_08  HB3  CB  CA  N    179.65  30.0  3
+ EW6  Var_09  H7   C4  CA  N     59.03  30.0  3
+ EW6  Var_10  H8   C4  CA  N    179.73  30.0  3
+ EW6  Var_11  H9   C4  CA  N    -60.36  30.0  3
+ EW6  Var_12  HG   OG  CB  CA  -175.75  30.0  3
+ EW6  Var_13  H    N   CA  C   -163.50  30.0  3
 
